@@ -24,7 +24,7 @@
    0.283
   ]
  ],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -32,19 +32,24 @@
   "2026-11-01T15:05:27Z write: done",
   "2026-11-01T15:14:45Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T06:20:33Z review: rejected, to be written again"
+  "2026-11-02T06:20:33Z review: rejected, to be written again",
+  "2026-11-03T10:25:23Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: flagged",
+  "2026-11-03T11:40:49Z fix: suggested",
+  "2026-11-03T12:06:38Z review: approved with the fix"
  ],
  "sent": {
   "match": 1,
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 2
  },
  "usd": {
   "match": 0.00023,
   "write": 0.00542,
   "check": 0.01731,
-  "fix": 0.04296
+  "fix": 0.07151
  },
  "match": {
   "verdict": "new",
@@ -97,5 +102,208 @@
    "clue": "Look at what Dale lives far from."
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:23Z",
+   "step": "write",
+   "version": {
+    "title": "Variations in health between groups",
+    "card": [
+     "Health is not equal across Australia. Some groups have poorer outcomes on average, such as a lower life expectancy and higher rates of chronic disease.",
+     "Aboriginal and Torres Strait Islander peoples have a lower life expectancy on average than other Australians. The gap is linked to the ongoing effects of colonisation and racism, and to unequal access to services.",
+     "People in rural and remote areas have poorer health on average than people in cities. They often live far from doctors and hospitals, and face higher rates of injury.",
+     "People on low incomes have poorer health on average than people on high incomes. They may find it harder to afford healthy food, good housing and health care."
+    ],
+    "remember": "History, where people live and how much they earn can all shape health, so averages differ between groups.",
+    "a": {
+     "q": "Australian data show people on low incomes have a lower life expectancy on average than people on high incomes. Which explanation fits best?",
+     "opts": [
+      "They may struggle to afford what supports health",
+      "They are certain to make poorer health choices",
+      "They have no access to Medicare or public hospitals",
+      "Their lower life expectancy is caused by genetics"
+     ],
+     "why": "Healthy food, good housing and health care cost money, so a low income can make them harder to reach. Medicare is open to eligible Australians whatever their income, so lack of access to it is not the reason.",
+     "clue": "Think about what a low income makes harder to pay for."
+    },
+    "b": {
+     "d": 2,
+     "q": "Dale lives on a farm 400 km from the nearest large hospital and has a long-term heart condition. Which reason best explains poorer health outcomes for people like Dale?",
+     "opts": [
+      "Doctors and specialists are far away",
+      "Rural people have no right to Medicare",
+      "Farm life protects against chronic disease",
+      "City hospitals do not treat heart disease"
+     ],
+     "why": "Living far from doctors, specialists and hospitals makes care harder to reach, which is one reason rural Australians have poorer health on average. Medicare covers rural and city people alike.",
+     "clue": "Look at what Dale lives far from."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "They may struggle to afford what supports health",
+     "also_right": []
+    },
+    "b": {
+     "best": "Doctors and specialists are far away",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "wording",
+      "detail": "The right option is the only hedged one (\"may\"), while the wrong ones are absolute (\"caused by genetics\", \"certain to\", \"no access\"), so a student could pick it by test sense alone without knowing the idea."
+     },
+     {
+      "part": "b",
+      "kind": "level",
+      "detail": "Two wrong options are plainly absurd for Year 12 (\"Farm life protects against chronic disease\", \"City hospitals do not treat heart disease\"), and the question names the distance in its stem, so it tests little beyond reading the stem."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "first-nations",
+    "summary": "The facts are right and both intended answers are correct. Question a's right option stands out as the only hedged one, and question b is too easy for Year 12 because two of its wrong options are absurd."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Variations in health between groups",
+  "card": [
+   "Health is not equal across Australia. Some groups have poorer outcomes on average, such as a lower life expectancy and higher rates of chronic disease.",
+   "Aboriginal and Torres Strait Islander peoples have a lower life expectancy on average than other Australians. The gap is linked to the ongoing effects of colonisation and racism, and to unequal access to services.",
+   "People in rural and remote areas have poorer health on average than people in cities. They often live far from doctors and hospitals, and face higher rates of injury.",
+   "People on low incomes have poorer health on average than people on high incomes. They may find it harder to afford healthy food, good housing and health care."
+  ],
+  "remember": "History, where people live and how much they earn can all shape health, so averages differ between groups.",
+  "a": {
+   "q": "Australian data show people on low incomes have a lower life expectancy on average than people on high incomes. Which explanation fits best?",
+   "opts": [
+    "They may struggle to afford what supports health",
+    "They are certain to make poorer health choices",
+    "They have no access to Medicare or public hospitals",
+    "Their lower life expectancy is caused by genetics"
+   ],
+   "why": "Healthy food, good housing and health care cost money, so a low income can make them harder to reach. Medicare is open to eligible Australians whatever their income, so lack of access to it is not the reason.",
+   "clue": "Think about what a low income makes harder to pay for."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dale lives on a farm 400 km from the nearest large hospital and has a long-term heart condition. Which reason best explains poorer health outcomes for people like Dale?",
+   "opts": [
+    "Doctors and specialists are far away",
+    "Rural people have no right to Medicare",
+    "Farm life protects against chronic disease",
+    "City hospitals do not treat heart disease"
+   ],
+   "why": "Living far from doctors, specialists and hospitals makes care harder to reach, which is one reason rural Australians have poorer health on average. Medicare covers rural and city people alike.",
+   "clue": "Look at what Dale lives far from."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They may struggle to afford what supports health",
+   "also_right": []
+  },
+  "b": {
+   "best": "Doctors and specialists are far away",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one (\"may\"), while the wrong ones are absolute (\"caused by genetics\", \"certain to\", \"no access\"), so a student could pick it by test sense alone without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Two wrong options are plainly absurd for Year 12 (\"Farm life protects against chronic disease\", \"City hospitals do not treat heart disease\"), and the question names the distance in its stem, so it tests little beyond reading the stem."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts are right and both intended answers are correct. Question a's right option stands out as the only hedged one, and question b is too easy for Year 12 because two of its wrong options are absurd."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question a, wording: The right option is the only hedged one (\"may\"), while the wrong ones are absolute (\"caused by genetics\", \"certain to\", \"no access\"), so a student could pick it by test sense alone without knowing the idea.",
+  "Question b, level: Two wrong options are plainly absurd for Year 12 (\"Farm life protects against chronic disease\", \"City hospitals do not treat heart disease\"), and the question names the distance in its stem, so it tests little beyond reading the stem."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Variations in health between groups",
+  "card": [
+   "Health is not equal across Australia. Some groups have a lower life expectancy and more chronic disease on average, mostly because of the conditions they live in rather than biology.",
+   "Aboriginal and Torres Strait Islander peoples have a lower life expectancy on average than other Australians. The gap is linked to the ongoing effects of colonisation and racism, and to unequal access to services.",
+   "People in rural and remote areas have poorer health on average than people in cities. They often live far from doctors, specialists and hospitals, and face higher rates of injury.",
+   "People on low incomes have poorer health on average. Medicare covers all eligible Australians, including free public hospital care, but healthy food, good housing and some health costs can still be hard to afford."
+  ],
+  "remember": "Gaps in health between groups come mostly from living conditions, such as history, place and income.",
+  "a": {
+   "q": "Australian data show people on low incomes have a lower life expectancy on average than people on high incomes. Which explanation fits best?",
+   "opts": [
+    "Healthy food, housing and care are harder to afford",
+    "Their genes tend to give them shorter lives",
+    "Medicare charges them higher fees than others",
+    "Public hospitals turn away people who cannot pay"
+   ],
+   "why": "Living costs such as healthy food, good housing and some health costs take a bigger share of a low income, so they are harder to reach. Medicare covers all eligible Australians, including free public hospital care, so higher fees or being turned away are not the reason. The gaps are linked mostly to living conditions, not genes.",
+   "clue": "Think about what a small income has to stretch to cover."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dale runs a cattle station in remote Queensland and has a long-term heart condition. Which factor best explains why people like Dale have poorer health on average?",
+   "opts": [
+    "Specialist care is often a long way from home",
+    "Rural people tend to carry genes for heart disease",
+    "Medicare does not cover care in remote areas",
+    "Heart disease is far less common outside cities"
+   ],
+   "why": "Remote Australians often live far from doctors, specialists and hospitals, which makes ongoing care harder to get. Medicare covers eligible people wherever they live, and the gaps between groups are linked mostly to living conditions rather than genes.",
+   "clue": "Think about what is hard to reach from a remote cattle station."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Variations in health between groups",
+  "card": [
+   "Health is not equal across Australia. Some groups have a lower life expectancy and more chronic disease on average, mostly because of the conditions they live in rather than biology.",
+   "Aboriginal and Torres Strait Islander peoples have a lower life expectancy on average than other Australians. The gap is linked to the ongoing effects of colonisation and racism, and to unequal access to services.",
+   "People in rural and remote areas have poorer health on average than people in cities. They often live far from doctors, specialists and hospitals, and face higher rates of injury.",
+   "People on low incomes have poorer health on average. Medicare covers all eligible Australians, including free public hospital care, but healthy food, good housing and some health costs can still be hard to afford."
+  ],
+  "remember": "Gaps in health between groups come mostly from living conditions, such as history, place and income.",
+  "a": {
+   "q": "Australian data show people on low incomes have a lower life expectancy on average than people on high incomes. Which explanation fits best?",
+   "opts": [
+    "Healthy food, housing and care are harder to afford",
+    "Their genes tend to give them shorter lives",
+    "Medicare charges them higher fees than others",
+    "Public hospitals turn away people who cannot pay"
+   ],
+   "why": "Living costs such as healthy food, good housing and some health costs take a bigger share of a low income, so they are harder to reach. Medicare covers all eligible Australians, including free public hospital care, so higher fees or being turned away are not the reason. The gaps are linked mostly to living conditions, not genes.",
+   "clue": "Think about what a small income has to stretch to cover."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dale runs a cattle station in remote Queensland and has a long-term heart condition. Which factor best explains why people like Dale have poorer health on average?",
+   "opts": [
+    "Specialist care is often a long way from home",
+    "Rural people tend to carry genes for heart disease",
+    "Medicare does not cover care in remote areas",
+    "Heart disease is far less common outside cities"
+   ],
+   "why": "Remote Australians often live far from doctors, specialists and hospitals, which makes ongoing care harder to get. Medicare covers eligible people wherever they live, and the gaps between groups are linked mostly to living conditions rather than genes.",
+   "clue": "Think about what is hard to reach from a remote cattle station."
+  }
+ },
+ "cleared_by": "owner"
 }

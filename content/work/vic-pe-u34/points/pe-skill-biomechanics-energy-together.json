@@ -12,7 +12,7 @@
    0.212
   ]
  ],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:28Z new, match",
   "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -22,20 +22,22 @@
   "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b wording)",
   "2026-11-02T04:50:15Z write: done",
-  "2026-11-02T04:56:46Z check: flagged"
+  "2026-11-02T04:56:46Z check: flagged",
+  "2026-11-03T11:40:50Z fix: suggested",
+  "2026-11-03T11:56:01Z autoreview: cleared with the fix (card wording)"
  ],
  "sent": {
   "match": 1,
   "write": 2,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 0.00014,
   "write": 0.01178,
   "check": 0.03569,
-  "fix": 0.04066,
+  "fix": 0.06029,
   "recheck": 0.01671
  },
  "match": {
@@ -81,7 +83,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "auto",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -285,5 +287,90 @@
  "sensitive": "none",
  "flags": [
   "Card, wording: \"A well-learned skill with poor technique wastes force\" is confusing, because a skill performed with poor technique would not usually be called well learned. Students may struggle to tell skill apart from technique here."
- ]
+ ],
+ "proposal": {
+  "title": "Skill, biomechanics and energy together",
+  "card": [
+   "A skill is learned through practice and feedback. Technique is how the skill is performed, and biomechanics analyses it using ideas such as force, balance and levers. Energy systems and fitness supply the fuel and capacity for the movement.",
+   "These three parts depend on each other. Inefficient technique, such as a poor body position, wastes force and limits the result. Good technique that cannot be repeated when tired breaks down.",
+   "Fatigue is a common link. It can come from fuel running low, a build-up of by-products such as hydrogen ions (H+), or the body overheating. As muscles tire, movement becomes less accurate and technique can change, even though the skill is still learned.",
+   "To improve performance, a coach looks at all three. Skill practice can be done in a game-like, tiring setting, and fitness training can be matched to the movements of the sport."
+  ],
+  "remember": "Performance depends on skill, technique and energy working together, so improving one can mean checking the others.",
+  "a": {
+   "q": "Late in a match, a netballer's passes become less accurate and her footwork changes. Which explanation best links the three parts?",
+   "opts": [
+    "Fatigue has reduced her control and changed her technique",
+    "Her skill has been unlearned since the start of the match",
+    "Her technique has improved because she is moving less",
+    "Her fitness plays no part, as accuracy comes from skill"
+   ],
+   "why": "As muscles tire, movement becomes less accurate and technique can change, which matches what happens to her passes and footwork. Skill is not unlearned during a single match, so the idea that she has lost the skill is the tempting wrong answer.",
+   "clue": "What happens to movement when muscles tire?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam is a swimmer whose stroke technique is sound, but his stroke length shortens in the last 50 m of a 200 m race. Which plan best links skill, technique and energy?",
+   "opts": [
+    "Practise his stroke when tired and train to delay fatigue",
+    "Train to delay fatigue, with stroke drills done when fresh",
+    "Rebuild his stroke when fresh and keep fitness the same",
+    "Add fitness work and drop his technique sessions for now"
+   ],
+   "why": "His technique is sound when fresh but changes late in the race, which points to fatigue. Fitness work can delay fatigue, and practising the stroke in a tiring setting links skill to that fatigue. Drilling only when fresh is tempting, but it does not link his stroke to the tired state where it changes.",
+   "clue": "His technique is fine early in the race."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-03T11:56:01Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"A well-learned skill with poor technique wastes force\" is confusing, because a skill performed with poor technique would not usually be called well learned. Students may struggle to tell skill apart from technique here."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"A well-learned skill with poor technique wastes force\" is confusing, because a skill performed with poor technique would not usually be called well learned. Students may struggle to tell skill apart from technique here."
+  ]
+ },
+ "final": {
+  "title": "Skill, biomechanics and energy together",
+  "card": [
+   "A skill is learned through practice and feedback. Technique is how the skill is performed, and biomechanics analyses it using ideas such as force, balance and levers. Energy systems and fitness supply the fuel and capacity for the movement.",
+   "These three parts depend on each other. Inefficient technique, such as a poor body position, wastes force and limits the result. Good technique that cannot be repeated when tired breaks down.",
+   "Fatigue is a common link. It can come from fuel running low, a build-up of by-products such as hydrogen ions (H+), or the body overheating. As muscles tire, movement becomes less accurate and technique can change, even though the skill is still learned.",
+   "To improve performance, a coach looks at all three. Skill practice can be done in a game-like, tiring setting, and fitness training can be matched to the movements of the sport."
+  ],
+  "remember": "Performance depends on skill, technique and energy working together, so improving one can mean checking the others.",
+  "a": {
+   "q": "Late in a match, a netballer's passes become less accurate and her footwork changes. Which explanation best links the three parts?",
+   "opts": [
+    "Fatigue has reduced her control and changed her technique",
+    "Her skill has been unlearned since the start of the match",
+    "Her technique has improved because she is moving less",
+    "Her fitness plays no part, as accuracy comes from skill"
+   ],
+   "why": "As muscles tire, movement becomes less accurate and technique can change, which matches what happens to her passes and footwork. Skill is not unlearned during a single match, so the idea that she has lost the skill is the tempting wrong answer.",
+   "clue": "What happens to movement when muscles tire?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam is a swimmer whose stroke technique is sound, but his stroke length shortens in the last 50 m of a 200 m race. Which plan best links skill, technique and energy?",
+   "opts": [
+    "Practise his stroke when tired and train to delay fatigue",
+    "Train to delay fatigue, with stroke drills done when fresh",
+    "Rebuild his stroke when fresh and keep fitness the same",
+    "Add fitness work and drop his technique sessions for now"
+   ],
+   "why": "His technique is sound when fresh but changes late in the race, which points to fatigue. Fitness work can delay fatigue, and practising the stroke in a tiring setting links skill to that fatigue. Drilling only when fresh is tempting, but it does not link his stroke to the tired state where it changes.",
+   "clue": "His technique is fine early in the race."
+  }
+ }
 }

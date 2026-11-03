@@ -3,21 +3,28 @@
  "title": "Psychological factors in specific phobia",
  "brief": "7e3a14d1820d",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:29Z new, write",
   "2026-11-01T14:46:42Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T14:56:07Z write: done",
   "2026-11-01T15:05:31Z check: for review (mental-health)",
-  "2026-11-02T06:25:47Z review: rejected, to be written again"
+  "2026-11-02T06:25:47Z review: rejected, to be written again",
+  "2026-11-03T10:25:24Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: flagged",
+  "2026-11-03T11:40:50Z fix: suggested",
+  "2026-11-03T12:06:47Z review: approved with the fix"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "fix": 1
  },
  "usd": {
   "write": 0.00516,
-  "check": 0.01242
+  "check": 0.01242,
+  "fix": 0.017
  },
  "note": "",
  "rejected": {
@@ -62,5 +69,233 @@
    "clue": "What does Priya get after avoiding the lift?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:24Z",
+   "step": "write",
+   "version": {
+    "title": "Psychological factors in specific phobia",
+    "card": [
+     [
+      "Classical conditioning",
+      "a phobia can be learned when a neutral stimulus is paired with something that already causes fear. The neutral stimulus then triggers fear on its own: it is now a conditioned stimulus."
+     ],
+     [
+      "Operant conditioning",
+      "avoiding the feared thing takes the fear away, and that relief is negative reinforcement. It makes avoiding more likely next time, so the phobia is kept going."
+     ],
+     [
+      "Catastrophic thinking",
+      "expecting the worst outcome and believing it is very likely. It makes the feared thing seem more dangerous than it is, so fear stays high."
+     ],
+     "Avoidance also means the person never finds out the feared thing may be safe, which helps the fear last."
+    ],
+    "remember": "Classical conditioning can start a phobia, relief from avoiding keeps it, and catastrophic thinking feeds it.",
+    "a": {
+     "q": "Ana got stuck in a lift during a blackout and was terrified. Now the sight of any lift makes her afraid. In classical conditioning terms, what is a lift now?",
+     "opts": [
+      "A conditioned stimulus",
+      "An unconditioned stimulus",
+      "A conditioned response",
+      "A neutral stimulus"
+     ],
+     "why": "Before the blackout a lift was neutral. Paired with the frightening event, it now triggers fear on its own, so it is a conditioned stimulus. Being trapped in the dark was the unconditioned stimulus, and the fear is the response.",
+     "clue": "Was a lift frightening before that day?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Josh fears dogs. When he sees one, he is sure it will attack and badly hurt him, so he crosses the street and feels relief. Which part best shows catastrophic thinking?",
+     "opts": [
+      "Being sure the dog will attack and badly hurt him",
+      "Crossing the street to get away from the dog",
+      "Feeling relief once he is on the other side",
+      "Noticing the dog from far down the street"
+     ],
+     "why": "Catastrophic thinking is expecting the worst and believing it is likely, as Josh does when he is sure he will be badly hurt. Crossing the street and the relief after it are avoidance and negative reinforcement, which keep the phobia going.",
+     "clue": "Which part is a thought about what will happen?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A conditioned stimulus",
+     "also_right": []
+    },
+    "b": {
+     "best": "Being sure the dog will attack and badly hurt him",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "wording",
+      "detail": "The right option is clearly the longest (49 characters against 41 to 44) and repeats the stem's own words \"sure\" and \"attack and badly hurt him\", so a student can pick it by matching words without knowing what catastrophic thinking is. Shorten it (for example \"Expecting the dog to attack him\") or give the wrong options similar detail."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "mental-health",
+    "summary": "The card and question a are accurate for VCE Psychology. In question b the right option is the longest and echoes the stem's words, which gives it away."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Psychological factors in specific phobia",
+  "card": [
+   [
+    "Classical conditioning",
+    "a phobia can be learned when a neutral stimulus is paired with something that already causes fear. The neutral stimulus then triggers fear on its own: it is now a conditioned stimulus."
+   ],
+   [
+    "Operant conditioning",
+    "avoiding the feared thing takes the fear away, and that relief is negative reinforcement. It makes avoiding more likely next time, so the phobia is kept going."
+   ],
+   [
+    "Catastrophic thinking",
+    "expecting the worst outcome and believing it is very likely. It makes the feared thing seem more dangerous than it is, so fear stays high."
+   ],
+   "Avoidance also means the person never finds out the feared thing may be safe, which helps the fear last."
+  ],
+  "remember": "Classical conditioning can start a phobia, relief from avoiding keeps it, and catastrophic thinking feeds it.",
+  "a": {
+   "q": "Ana got stuck in a lift during a blackout and was terrified. Now the sight of any lift makes her afraid. In classical conditioning terms, what is a lift now?",
+   "opts": [
+    "A conditioned stimulus",
+    "An unconditioned stimulus",
+    "A conditioned response",
+    "A neutral stimulus"
+   ],
+   "why": "Before the blackout a lift was neutral. Paired with the frightening event, it now triggers fear on its own, so it is a conditioned stimulus. Being trapped in the dark was the unconditioned stimulus, and the fear is the response.",
+   "clue": "Was a lift frightening before that day?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Josh fears dogs. When he sees one, he is sure it will attack and badly hurt him, so he crosses the street and feels relief. Which part best shows catastrophic thinking?",
+   "opts": [
+    "Being sure the dog will attack and badly hurt him",
+    "Crossing the street to get away from the dog",
+    "Feeling relief once he is on the other side",
+    "Noticing the dog from far down the street"
+   ],
+   "why": "Catastrophic thinking is expecting the worst and believing it is likely, as Josh does when he is sure he will be badly hurt. Crossing the street and the relief after it are avoidance and negative reinforcement, which keep the phobia going.",
+   "clue": "Which part is a thought about what will happen?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A conditioned stimulus",
+   "also_right": []
+  },
+  "b": {
+   "best": "Being sure the dog will attack and badly hurt him",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest (49 characters against 41 to 44) and repeats the stem's own words \"sure\" and \"attack and badly hurt him\", so a student can pick it by matching words without knowing what catastrophic thinking is. Shorten it (for example \"Expecting the dog to attack him\") or give the wrong options similar detail."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "mental-health",
+  "summary": "The card and question a are accurate for VCE Psychology. In question b the right option is the longest and echoes the stem's words, which gives it away."
+ },
+ "sensitive": "mental-health",
+ "flags": [
+  "Question b, wording: The right option is clearly the longest (49 characters against 41 to 44) and repeats the stem's own words \"sure\" and \"attack and badly hurt him\", so a student can pick it by matching words without knowing what catastrophic thinking is. Shorten it (for example \"Expecting the dog to attack him\") or give the wrong options similar detail."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Psychological factors in specific phobia",
+  "card": [
+   [
+    "Classical conditioning",
+    "a phobia can be learned when a neutral stimulus is paired with something that already causes fear. The neutral stimulus then triggers fear on its own: it is now a conditioned stimulus."
+   ],
+   [
+    "Operant conditioning",
+    "avoiding the feared thing takes the fear away, and that relief is negative reinforcement. It makes avoiding more likely next time, so the phobia is kept going."
+   ],
+   [
+    "Catastrophic thinking",
+    "expecting the worst outcome and believing it is very likely. It makes the feared thing seem more dangerous than it is, so fear stays high."
+   ],
+   "Avoidance also means the person never finds out the feared thing may be safe, which helps the fear last."
+  ],
+  "remember": "Classical conditioning can start a phobia, relief from avoiding keeps it, and catastrophic thinking feeds it.",
+  "a": {
+   "q": "Ana got stuck in a lift during a blackout and was terrified. Now the sight of any lift makes her afraid. In classical conditioning terms, what is a lift now?",
+   "opts": [
+    "A conditioned stimulus",
+    "An unconditioned stimulus",
+    "A conditioned response",
+    "A neutral stimulus"
+   ],
+   "why": "Before the blackout a lift was neutral. Paired with the frightening event, it now triggers fear on its own, so it is a conditioned stimulus. Being trapped in the dark was the unconditioned stimulus, and the fear is the response.",
+   "clue": "Was a lift frightening before that day?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Josh has a phobia of dogs. Which of these best shows catastrophic thinking by Josh?",
+   "opts": [
+    "Expecting any dog he passes to maul him",
+    "Crossing the road each time he sees a dog",
+    "Feeling relieved once a dog is out of sight",
+    "Getting a racing heart when a dog barks"
+   ],
+   "why": "Catastrophic thinking is a thought: expecting the worst outcome and believing it is very likely, such as being mauled by any dog. Crossing the road is avoidance, and the relief after it is negative reinforcement. Both keep the phobia going, but neither is a thought about what will happen.",
+   "clue": "Look for the option that is a belief about the future."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Psychological factors in specific phobia",
+  "card": [
+   [
+    "Classical conditioning",
+    "a phobia can be learned when a neutral stimulus is paired with something that already causes fear. The neutral stimulus then triggers fear on its own: it is now a conditioned stimulus."
+   ],
+   [
+    "Operant conditioning",
+    "avoiding the feared thing takes the fear away, and that relief is negative reinforcement. It makes avoiding more likely next time, so the phobia is kept going."
+   ],
+   [
+    "Catastrophic thinking",
+    "expecting the worst outcome and believing it is very likely. It makes the feared thing seem more dangerous than it is, so fear stays high."
+   ],
+   "Avoidance also means the person never finds out the feared thing may be safe, which helps the fear last."
+  ],
+  "remember": "Classical conditioning can start a phobia, relief from avoiding keeps it, and catastrophic thinking feeds it.",
+  "a": {
+   "q": "Ana got stuck in a lift during a blackout and was terrified. Now the sight of any lift makes her afraid. In classical conditioning terms, what is a lift now?",
+   "opts": [
+    "A conditioned stimulus",
+    "An unconditioned stimulus",
+    "A conditioned response",
+    "A neutral stimulus"
+   ],
+   "why": "Before the blackout a lift was neutral. Paired with the frightening event, it now triggers fear on its own, so it is a conditioned stimulus. Being trapped in the dark was the unconditioned stimulus, and the fear is the response.",
+   "clue": "Was a lift frightening before that day?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Josh has a phobia of dogs. Which of these best shows catastrophic thinking by Josh?",
+   "opts": [
+    "Expecting any dog he passes to maul him",
+    "Crossing the road each time he sees a dog",
+    "Feeling relieved once a dog is out of sight",
+    "Getting a racing heart when a dog barks"
+   ],
+   "why": "Catastrophic thinking is a thought: expecting the worst outcome and believing it is very likely, such as being mauled by any dog. Crossing the road is avoidance, and the relief after it is negative reinforcement. Both keep the phobia going, but neither is a thought about what will happen.",
+   "clue": "Look for the option that is a belief about the future."
+  }
+ },
+ "cleared_by": "owner"
 }

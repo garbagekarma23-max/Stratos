@@ -136,7 +136,19 @@ MADE_COURSES.push({
             "chem-determining-concentration"
           ]
         },
-        {"id": "vic-chem-u34-2-4", "title": "Instrumental analysis", "check": "checked", "points": []},
+        {
+          "id": "vic-chem-u34-2-4",
+          "title": "Instrumental analysis",
+          "check": "checked",
+          "points": [
+            "chem-mass-spectrometry",
+            "chem-infrared-spectroscopy",
+            "chem-proton-nmr-spectroscopy",
+            "chem-carbon-13-nmr",
+            "chem-chromatography-2",
+            "chem-combining-techniques"
+          ]
+        },
         {
           "id": "vic-chem-u34-2-5",
           "title": "Medicinal chemistry",
@@ -149,7 +161,12 @@ MADE_COURSES.push({
             "chem-enzyme-inhibitors"
           ]
         },
-        {"id": "vic-chem-u34-2-6", "title": "Science skills: the investigation", "check": "checked", "points": []}
+        {
+          "id": "vic-chem-u34-2-6",
+          "title": "Science skills: the investigation",
+          "check": "checked",
+          "points": ["chem-variables-controlled-experiments", "chem-measurement-quality-unit-4", "chem-reporting-findings"]
+        }
       ]
     }
   ]

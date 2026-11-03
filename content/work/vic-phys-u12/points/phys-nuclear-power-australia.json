@@ -3,13 +3,16 @@
  "title": "Nuclear power for Australia",
  "brief": "1d883bd50ffb",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:21Z new, write",
   "2026-11-01T08:04:36Z write: done",
   "2026-11-01T08:14:09Z check: flagged",
   "2026-11-01T08:24:35Z fix: suggested",
-  "2026-11-02T06:24:51Z review: rejected, to be written again"
+  "2026-11-02T06:24:51Z review: rejected, to be written again",
+  "2026-11-03T10:25:24Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: passed, cleared"
  ],
  "sent": {
   "write": 1,
@@ -64,5 +67,176 @@
    "clue": "Which statement could not be settled by measurement alone?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:24Z",
+   "step": "write",
+   "version": {
+    "title": "Nuclear power for Australia",
+    "card": [
+     "A nuclear power station uses fission to heat water into steam, which turns turbines. It gives off very little carbon dioxide while running, and it can supply steady power day and night.",
+     [
+      "Costs",
+      "nuclear stations cost a lot and take many years to build. Australian law bans nuclear power stations now, so Australia would also need law changes, trained staff and regulators."
+     ],
+     [
+      "Risks",
+      "used fuel stays dangerously radioactive for thousands of years and needs secure long-term storage. Rare accidents can release radioactive material."
+     ],
+     [
+      "Weighing up",
+      "physics can measure costs, risks and benefits. Whether Australia should build nuclear power also depends on values, such as how much risk people accept."
+     ]
+    ],
+    "remember": "Steady, low-carbon power on one side; high cost, long build times, waste and accident risk on the other.",
+    "a": {
+     "q": "Compared with a coal power station, what is a benefit of a nuclear power station while it runs?",
+     "opts": [
+      "It gives off very little carbon dioxide",
+      "It produces no radioactive waste at all",
+      "It needs no fuel once it starts running",
+      "It can only supply power in the daytime"
+     ],
+     "why": "Fission heats the water without burning fuel, so very little carbon dioxide is released while it runs. It still makes used fuel that stays radioactive for a very long time.",
+     "clue": "What does burning coal release that fission does not?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Ming says nuclear waste would be left for future Australians to deal with. Which statement rests on a value judgement rather than physics?",
+     "opts": [
+      "Leaving waste to future Australians is unfair",
+      "Used fuel stays radioactive for a very long time",
+      "Nuclear stations release little carbon dioxide",
+      "Fission in a reactor heats water into steam"
+     ],
+     "why": "Unfair is a value word: people can agree on every fact and still disagree about what is fair. The other three are facts about how nuclear power works, which can be tested by measurement.",
+     "clue": "Which statement could measurement never settle?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It gives off very little carbon dioxide",
+     "also_right": []
+    },
+    "b": {
+     "best": "Leaving waste to future Australians is unfair",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Nuclear power for Australia",
+  "card": [
+   "A nuclear power station uses fission to heat water into steam, which turns turbines. It gives off very little carbon dioxide while running, and it can supply steady power day and night.",
+   [
+    "Costs",
+    "nuclear stations cost a lot and take many years to build. Australian law bans nuclear power stations now, so Australia would also need law changes, trained staff and regulators."
+   ],
+   [
+    "Risks",
+    "used fuel stays dangerously radioactive for thousands of years and needs secure long-term storage. Rare accidents can release radioactive material."
+   ],
+   [
+    "Weighing up",
+    "physics can measure costs, risks and benefits. Whether Australia should build nuclear power also depends on values, such as how much risk people accept."
+   ]
+  ],
+  "remember": "Steady, low-carbon power on one side; high cost, long build times, waste and accident risk on the other.",
+  "a": {
+   "q": "Compared with a coal power station, what is a benefit of a nuclear power station while it runs?",
+   "opts": [
+    "It gives off very little carbon dioxide",
+    "It produces no radioactive waste at all",
+    "It needs no fuel once it starts running",
+    "It can only supply power in the daytime"
+   ],
+   "why": "Fission heats the water without burning fuel, so very little carbon dioxide is released while it runs. It still makes used fuel that stays radioactive for a very long time.",
+   "clue": "What does burning coal release that fission does not?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ming says nuclear waste would be left for future Australians to deal with. Which statement rests on a value judgement rather than physics?",
+   "opts": [
+    "Leaving waste to future Australians is unfair",
+    "Used fuel stays radioactive for a very long time",
+    "Nuclear stations release little carbon dioxide",
+    "Fission in a reactor heats water into steam"
+   ],
+   "why": "Unfair is a value word: people can agree on every fact and still disagree about what is fair. The other three are facts about how nuclear power works, which can be tested by measurement.",
+   "clue": "Which statement could measurement never settle?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It gives off very little carbon dioxide",
+   "also_right": []
+  },
+  "b": {
+   "best": "Leaving waste to future Australians is unfair",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Nuclear power for Australia",
+  "card": [
+   "A nuclear power station uses fission to heat water into steam, which turns turbines. It gives off very little carbon dioxide while running, and it can supply steady power day and night.",
+   [
+    "Costs",
+    "nuclear stations cost a lot and take many years to build. Australian law bans nuclear power stations now, so Australia would also need law changes, trained staff and regulators."
+   ],
+   [
+    "Risks",
+    "used fuel stays dangerously radioactive for thousands of years and needs secure long-term storage. Rare accidents can release radioactive material."
+   ],
+   [
+    "Weighing up",
+    "physics can measure costs, risks and benefits. Whether Australia should build nuclear power also depends on values, such as how much risk people accept."
+   ]
+  ],
+  "remember": "Steady, low-carbon power on one side; high cost, long build times, waste and accident risk on the other.",
+  "a": {
+   "q": "Compared with a coal power station, what is a benefit of a nuclear power station while it runs?",
+   "opts": [
+    "It gives off very little carbon dioxide",
+    "It produces no radioactive waste at all",
+    "It needs no fuel once it starts running",
+    "It can only supply power in the daytime"
+   ],
+   "why": "Fission heats the water without burning fuel, so very little carbon dioxide is released while it runs. It still makes used fuel that stays radioactive for a very long time.",
+   "clue": "What does burning coal release that fission does not?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ming says nuclear waste would be left for future Australians to deal with. Which statement rests on a value judgement rather than physics?",
+   "opts": [
+    "Leaving waste to future Australians is unfair",
+    "Used fuel stays radioactive for a very long time",
+    "Nuclear stations release little carbon dioxide",
+    "Fission in a reactor heats water into steam"
+   ],
+   "why": "Unfair is a value word: people can agree on every fact and still disagree about what is fair. The other three are facts about how nuclear power works, which can be tested by measurement.",
+   "clue": "Which statement could measurement never settle?"
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
 }

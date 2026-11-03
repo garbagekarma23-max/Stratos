@@ -12,21 +12,31 @@
    0.236
   ]
  ],
- "stage": "adapt",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:19Z new, match",
   "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt e-positive, but is not highly sure, so to the Opus match check",
   "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 may adapt e-positive, but is not highly sure, so it is for you to review",
   "2026-11-02T06:18:47Z match: owner says adapt e-positive (2 changes)",
-  "2026-11-02T06:18:47Z review: adapting e-positive on the next run"
+  "2026-11-02T06:18:47Z review: adapting e-positive on the next run",
+  "2026-11-03T11:40:49Z adapt: done",
+  "2026-11-03T11:44:03Z check: flagged",
+  "2026-11-03T11:48:29Z fix: suggested",
+  "2026-11-03T12:05:59Z review: approved with the fix"
  ],
  "sent": {
   "match": 1,
-  "confirm": 1
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
  },
  "usd": {
   "match": 0.00023,
-  "confirm": 0.00647
+  "confirm": 0.00647,
+  "adapt": 0.00344,
+  "check": 0.01497,
+  "fix": 0.02506
  },
  "match": {
   "verdict": "adapt",
@@ -55,6 +65,145 @@
    "Replace the India and Mumbai examples in question a with Australian ones, such as unemployment in Australia or rents in Melbourne.",
    "Replace the Brazil examples in question b with Australian ones, such as a tobacco excise in Australia."
   ],
-  "by": "owner"
- }
+  "by": "owner",
+  "parts": [
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Positive and normative economics",
+  "card": [
+   "A positive statement is about what is, was or will be. It can be tested against evidence, even if it turns out to be false.",
+   "A normative statement is about what should be. It rests on a value judgement, so evidence alone cannot settle it.",
+   "Words such as should, ought, fair and too much are signs of a normative statement.",
+   "Economists use positive analysis to show the likely effects of a policy. Deciding whether to adopt it is a normative choice."
+  ],
+  "remember": "Positive can be checked against evidence. Normative needs a value judgement.",
+  "a": {
+   "q": "Which of these statements is positive?",
+   "opts": [
+    "Unemployment in Australia fell over the last year",
+    "Australia ought to spend more on public schools",
+    "Petrol taxes in Australia are far too high",
+    "It is unfair that rents rose so fast in Melbourne"
+   ],
+   "why": "Whether unemployment fell can be checked against the data. The other three use ought, too high and unfair, which are value judgements.",
+   "clue": "Which one could you prove right or wrong with data?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these statements is normative?",
+   "opts": [
+    "Australia should raise its tobacco excise",
+    "A higher tobacco excise would cut smoking in Australia",
+    "Most Australians think tobacco excise is fair",
+    "Tobacco excise raises money for the Australian government"
+   ],
+   "why": "Should signals a value judgement. The prediction about smoking can be tested. A survey of what people think is positive too: it reports a fact about opinions, and it can be checked.",
+   "clue": "A statement about what people believe can still be checked."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Unemployment in Australia fell over the last year",
+   "also_right": []
+  },
+  "b": {
+   "best": "Australia should raise its tobacco excise",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The option 'Most Australians think tobacco excise is fair' contains 'fair', which the card lists as a sign of a normative statement. The card never teaches that a statement reporting what people believe is positive; only the clue and the why explain this. A student applying the card's sign-word rule could think two options are normative. The card should add a line saying that reporting an opinion can be checked, so it is positive."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and intended answers are correct. Question b's survey option uses 'fair', which the card calls a normative sign, but the card never explains that reported opinions are positive, so students may be misled unless the card adds this."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The option 'Most Australians think tobacco excise is fair' contains 'fair', which the card lists as a sign of a normative statement. The card never teaches that a statement reporting what people believe is positive; only the clue and the why explain this. A student applying the card's sign-word rule could think two options are normative. The card should add a line saying that reporting an opinion can be checked, so it is positive."
+ ],
+ "proposal": {
+  "title": "Positive and normative statements",
+  "card": [
+   "A positive statement is about what is, was or will be. It can be tested against evidence, even if it turns out to be false.",
+   "A normative statement is about what should be. It rests on a value judgement, so evidence alone cannot settle it.",
+   "Words such as should, ought, fair and too much are signs of a normative statement. But a statement that reports what people believe, such as a survey result, is positive, because it can be checked.",
+   "Economists use positive analysis to show the likely effects of a policy. Deciding whether to adopt it is a normative choice."
+  ],
+  "remember": "Positive can be checked against evidence. Normative needs a value judgement.",
+  "a": {
+   "q": "Which of these statements is positive?",
+   "opts": [
+    "Unemployment in Australia fell over the last year",
+    "Australia ought to spend more on public schools",
+    "Petrol taxes in Australia are far too high",
+    "It is unfair that rents rose so fast in Melbourne"
+   ],
+   "why": "Whether unemployment fell can be checked against the data. The other three use ought, too high and unfair, which are value judgements.",
+   "clue": "Which one could you prove right or wrong with data?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these statements is normative?",
+   "opts": [
+    "Australia should raise its tobacco excise",
+    "A higher tobacco excise would cut smoking in Australia",
+    "Most Australians think tobacco excise is fair",
+    "Tobacco excise raises money for the Australian government"
+   ],
+   "why": "Should signals a value judgement about what ought to happen. The survey option uses the word fair, but it only reports what people believe, and a survey can check that, so it is positive. The other two are a testable prediction and a checkable fact.",
+   "clue": "A statement about what people believe can still be checked."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Positive and normative statements",
+  "card": [
+   "A positive statement is about what is, was or will be. It can be tested against evidence, even if it turns out to be false.",
+   "A normative statement is about what should be. It rests on a value judgement, so evidence alone cannot settle it.",
+   "Words such as should, ought, fair and too much are signs of a normative statement. But a statement that reports what people believe, such as a survey result, is positive, because it can be checked.",
+   "Economists use positive analysis to show the likely effects of a policy. Deciding whether to adopt it is a normative choice."
+  ],
+  "remember": "Positive can be checked against evidence. Normative needs a value judgement.",
+  "a": {
+   "q": "Which of these statements is positive?",
+   "opts": [
+    "Unemployment in Australia fell over the last year",
+    "Australia ought to spend more on public schools",
+    "Petrol taxes in Australia are far too high",
+    "It is unfair that rents rose so fast in Melbourne"
+   ],
+   "why": "Whether unemployment fell can be checked against the data. The other three use ought, too high and unfair, which are value judgements.",
+   "clue": "Which one could you prove right or wrong with data?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these statements is normative?",
+   "opts": [
+    "Australia should raise its tobacco excise",
+    "A higher tobacco excise would cut smoking in Australia",
+    "Most Australians think tobacco excise is fair",
+    "Tobacco excise raises money for the Australian government"
+   ],
+   "why": "Should signals a value judgement about what ought to happen. The survey option uses the word fair, but it only reports what people believe, and a survey can check that, so it is positive. The other two are a testable prediction and a checkable fact.",
+   "clue": "A statement about what people believe can still be checked."
+  }
+ },
+ "cleared_by": "owner"
 }

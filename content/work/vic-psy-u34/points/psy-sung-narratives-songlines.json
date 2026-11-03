@@ -3,14 +3,18 @@
  "title": "Sung narratives and songlines",
  "brief": "91779c97a1c5",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:28Z new, write",
   "2026-11-01T14:46:42Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T14:56:07Z write: failed the content check, writing again",
   "2026-11-01T15:05:31Z write: done",
   "2026-11-01T17:33:07Z check: for review (first-nations)",
-  "2026-11-02T06:25:32Z review: rejected, to be written again"
+  "2026-11-02T06:25:32Z review: rejected, to be written again",
+  "2026-11-03T10:25:24Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: for review (first-nations)",
+  "2026-11-03T11:27:49Z review: approved as written"
  ],
  "sent": {
   "write": 3,
@@ -54,5 +58,149 @@
    "clue": "Look at what a songline joins together, not only the song."
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:24Z",
+   "step": "write",
+   "version": {
+    "title": "Sung narratives and songlines",
+    "card": [
+     "Aboriginal and Torres Strait Islander peoples have held and passed on knowledge across many generations through songs, stories, dance and places on Country.",
+     "A songline follows a route across Country. Each place along it is tied to part of a song or story, so reaching one place cues the next part.",
+     "Songlines can hold knowledge of water and food sources, seasons, law, kinship and history. Each people holds its own songs and stories, and some knowledge is shared only with certain people.",
+     "This works as a powerful memory system. Rhythm, melody, story and place act as linked cues, so a large body of knowledge can be recalled in order."
+    ],
+    "remember": "Song, story and place work as linked cues, so knowledge can be held and passed on over generations.",
+    "a": {
+     "q": "Why can a songline hold so much knowledge in a set order?",
+     "opts": [
+      "Each place along the route cues the next part",
+      "Knowledge is cut down to one short rhyming phrase",
+      "It is written down so no one needs to recall it",
+      "Each person learns one place and never the rest"
+     ],
+     "why": "A songline ties parts of a song or story to places in order, so arriving at each place cues what comes next. It is held by singing and telling, not in written records.",
+     "clue": "Think about what the places do for the song."
+    },
+    "b": {
+     "d": 3,
+     "q": "A student says a songline is just a song, so it cannot be a memory system. Which reply best corrects the student?",
+     "opts": [
+      "It joins melody, story and place as recall cues",
+      "It only holds facts about where to find water",
+      "It works because it was written for school use",
+      "It needs no cues, as the words are memorised"
+     ],
+     "why": "A songline links rhythm and melody with story and places on Country, and these linked cues help people recall large amounts of knowledge in order. It holds far more than water sources, including law, kinship and history.",
+     "clue": "Look at what a songline joins together."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Each place along the route cues the next part",
+     "also_right": []
+    },
+    "b": {
+     "best": "It joins melody, story and place as recall cues",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "first-nations",
+    "summary": "No problems found. The point is about Aboriginal and Torres Strait Islander knowledge systems, so it is marked first-nations for the owner's review."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Sung narratives and songlines",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have held and passed on knowledge across many generations through songs, stories, dance and places on Country.",
+   "A songline follows a route across Country. Each place along it is tied to part of a song or story, so reaching one place cues the next part.",
+   "Songlines can hold knowledge of water and food sources, seasons, law, kinship and history. Each people holds its own songs and stories, and some knowledge is shared only with certain people.",
+   "This works as a powerful memory system. Rhythm, melody, story and place act as linked cues, so a large body of knowledge can be recalled in order."
+  ],
+  "remember": "Song, story and place work as linked cues, so knowledge can be held and passed on over generations.",
+  "a": {
+   "q": "Why can a songline hold so much knowledge in a set order?",
+   "opts": [
+    "Each place along the route cues the next part",
+    "Knowledge is cut down to one short rhyming phrase",
+    "It is written down so no one needs to recall it",
+    "Each person learns one place and never the rest"
+   ],
+   "why": "A songline ties parts of a song or story to places in order, so arriving at each place cues what comes next. It is held by singing and telling, not in written records.",
+   "clue": "Think about what the places do for the song."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says a songline is just a song, so it cannot be a memory system. Which reply best corrects the student?",
+   "opts": [
+    "It joins melody, story and place as recall cues",
+    "It only holds facts about where to find water",
+    "It works because it was written for school use",
+    "It needs no cues, as the words are memorised"
+   ],
+   "why": "A songline links rhythm and melody with story and places on Country, and these linked cues help people recall large amounts of knowledge in order. It holds far more than water sources, including law, kinship and history.",
+   "clue": "Look at what a songline joins together."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Each place along the route cues the next part",
+   "also_right": []
+  },
+  "b": {
+   "best": "It joins melody, story and place as recall cues",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "No problems found. The point is about Aboriginal and Torres Strait Islander knowledge systems, so it is marked first-nations for the owner's review."
+ },
+ "sensitive": "first-nations",
+ "flags": [],
+ "checked_by": "claude-code",
+ "final": {
+  "title": "Sung narratives and songlines",
+  "card": [
+   "Aboriginal and Torres Strait Islander peoples have held and passed on knowledge across many generations through songs, stories, dance and places on Country.",
+   "A songline follows a route across Country. Each place along it is tied to part of a song or story, so reaching one place cues the next part.",
+   "Songlines can hold knowledge of water and food sources, seasons, law, kinship and history. Each people holds its own songs and stories, and some knowledge is shared only with certain people.",
+   "This works as a powerful memory system. Rhythm, melody, story and place act as linked cues, so a large body of knowledge can be recalled in order."
+  ],
+  "remember": "Song, story and place work as linked cues, so knowledge can be held and passed on over generations.",
+  "a": {
+   "q": "Why can a songline hold so much knowledge in a set order?",
+   "opts": [
+    "Each place along the route cues the next part",
+    "Knowledge is cut down to one short rhyming phrase",
+    "It is written down so no one needs to recall it",
+    "Each person learns one place and never the rest"
+   ],
+   "why": "A songline ties parts of a song or story to places in order, so arriving at each place cues what comes next. It is held by singing and telling, not in written records.",
+   "clue": "Think about what the places do for the song."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says a songline is just a song, so it cannot be a memory system. Which reply best corrects the student?",
+   "opts": [
+    "It joins melody, story and place as recall cues",
+    "It only holds facts about where to find water",
+    "It works because it was written for school use",
+    "It needs no cues, as the words are memorised"
+   ],
+   "why": "A songline links rhythm and melody with story and places on Country, and these linked cues help people recall large amounts of knowledge in order. It holds far more than water sources, including law, kinship and history.",
+   "clue": "Look at what a songline joins together."
+  }
+ },
+ "cleared_by": "owner"
 }

@@ -6427,5 +6427,219 @@ MADE_BANKS.chem = {
       "why": "A drug that fits the active site occupies it, so the viral substrate cannot bind and the reaction slows. It does not speed the reaction up, because a bound inhibitor blocks the substrate rather than helping it.",
       "clue": "What happens to the substrate when the active site is already occupied?"
     }
+  },
+  "chem-proton-nmr-spectroscopy": {
+    "title": "Proton NMR spectroscopy",
+    "card": [
+      "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogen atoms in the same surroundings are one environment and give one peak, so the number of peaks is the number of hydrogen environments.",
+      "The area under a peak (shown by the integration trace) is proportional to the number of hydrogen atoms in that environment. A peak with twice the area comes from twice as many hydrogens.",
+      "The chemical shift of a peak, in ppm, shows what is near the hydrogens. For example, hydrogens near an electronegative atom or a C=O group appear at a different shift from those in a plain alkyl group.",
+      "Splitting shows neighbours. A peak splits into n + 1 lines, where n is the number of hydrogens on the carbon atoms adjacent to the carbon holding those hydrogens. Two neighbouring hydrogens give a triplet."
+    ],
+    "remember": "Peaks count environments, area counts hydrogens, shift shows surroundings, and splitting (n + 1) shows neighbours.",
+    "a": {
+      "q": "A proton NMR spectrum has three peaks with relative areas 3 : 2 : 1. What does this area ratio tell you?",
+      "opts": [
+        "The relative number of hydrogens in each environment",
+        "The relative number of neighbours for each environment",
+        "The relative chemical shift of each environment",
+        "The relative number of lines in each split peak"
+      ],
+      "why": "Peak area is proportional to the number of hydrogens in each environment, so the areas give a ratio of hydrogens, not exact counts. Neighbours and the number of lines come from splitting, and shift is read from the position of the peak, not its area.",
+      "clue": "Think about what the integration trace measures."
+    },
+    "b": {
+      "d": 3,
+      "q": "In the proton NMR spectrum of a compound, one peak is a triplet. How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?",
+      "opts": ["Two", "Three", "One", "Four"],
+      "why": "A peak splits into n + 1 lines, so a triplet (3 lines) means n = 2. A student who picks three has counted the lines instead of using n + 1.",
+      "clue": "Lines in the peak = n + 1."
+    }
+  },
+  "chem-chromatography-2": {
+    "title": "Chromatography",
+    "card": [
+      "High performance liquid chromatography (HPLC) separates a mixture. A liquid carries the sample through a column packed with a solid. Each component sticks to the solid to a different extent, so the components move at different speeds.",
+      "Retention time is the time a component takes to pass through the column and reach the detector. Under the same conditions, a component has the same retention time each run.",
+      "A peak that matches a known standard's retention time is likely that compound. It is not proof, because different compounds can share a retention time.",
+      "Peak area grows with the amount of a component. Run standards of known concentration and plot peak area against concentration to make a calibration curve. Then read the unknown's concentration at its peak area."
+    ],
+    "remember": "Retention time suggests what a component is. Peak area, read off a calibration curve, shows how much.",
+    "a": {
+      "q": "An HPLC run of a soft drink shows a peak at the same retention time as a caffeine standard. What can you conclude?",
+      "opts": [
+        "The peak is likely caffeine",
+        "The peak is certainly caffeine and no other compound",
+        "The drink contains a known amount of caffeine",
+        "The peak is not caffeine unless its area matches"
+      ],
+      "why": "Under the same conditions a compound has the same retention time, so the peak is likely caffeine. It is not certain, because another compound could share that retention time. The amount needs peak area and a calibration curve, so a matching retention time does not give a known amount.",
+      "clue": "Can two compounds have the same retention time?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev runs four standards of a dye through HPLC and plots peak area against concentration. His unknown sample's peak area falls between two standards. How does he find its concentration?",
+      "opts": [
+        "Read the concentration at his sample's peak area",
+        "Read the concentration at his sample's retention time",
+        "Divide his sample's peak area by its retention time",
+        "Average the peak areas of the two nearest standards"
+      ],
+      "why": "Dev's graph links peak area to concentration, so he reads the concentration at his sample's peak area. Retention time is not on the graph, and it suggests which compound a peak is, not how much is present.",
+      "clue": "What did Dev put on each axis?"
+    }
+  },
+  "chem-combining-techniques": {
+    "title": "Combining techniques",
+    "card": [
+      "No single technique gives a whole structure. Each one answers a different question about an unknown organic compound, so chemists use them together.",
+      "Mass spectrometry gives the mass of the molecular ion, which is the molar mass. Infrared spectroscopy shows which functional groups are present, such as O-H or C=O.",
+      "Carbon-13 NMR shows how many different carbon environments there are. Proton NMR shows the hydrogen environments and, by splitting, how many neighbouring hydrogens each one has.",
+      "A common method is to find the molar mass, list the functional groups, then fit the NMR data to a structure. Isomers can share a molar mass and functional groups, so NMR often tells them apart."
+    ],
+    "remember": "Each technique answers a different question. The right structure must fit all of the data.",
+    "a": {
+      "q": "An unknown compound has a molecular ion at m/z 74 and an infrared peak for C=O. What does each result tell you?",
+      "opts": [
+        "Molar mass is 74 and a C=O bond is present",
+        "Molar mass is 74 and there are 74 carbon environments",
+        "Molar mass is 74 and C=O has two hydrogen neighbours",
+        "Molar mass is unknown but a C=O bond is present"
+      ],
+      "why": "The molecular ion peak gives the molar mass, and the infrared peak shows a C=O bond. The number of carbon environments needs carbon-13 NMR, and hydrogen neighbours need proton NMR, so those options are wrong.",
+      "clue": "Which technique gives mass, and which gives bonds?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has an unknown compound. Its mass spectrum and infrared spectrum suggest a carboxylic acid with molar mass 88. Which extra data would best help her decide between the possible structures that fit these data?",
+      "opts": [
+        "Proton NMR splitting patterns showing hydrogen neighbours",
+        "A second infrared spectrum showing the same O-H peak",
+        "The molecular ion mass again from a repeat run",
+        "A calibration curve showing its concentration"
+      ],
+      "why": "Isomers can share the same molar mass and functional groups. Proton NMR splitting shows how the hydrogens are arranged, so it can tell them apart. Repeating the mass or infrared data adds nothing new, and a concentration says nothing about structure.",
+      "clue": "Which technique shows how the atoms are arranged, not just what is present?"
+    }
+  },
+  "chem-variables-controlled-experiments": {
+    "title": "Variables and controlled experiments",
+    "card": [
+      [
+        "Independent variable",
+        "the one factor the experimenter deliberately changes, such as the temperature of a reaction mixture."
+      ],
+      [
+        "Dependent variable",
+        "the factor that is measured to see the effect, such as the time taken for a reaction to finish. It may change because of the independent variable."
+      ],
+      [
+        "Controlled variables",
+        "all other factors that could affect the result, such as concentration and volume. They are kept the same in every trial."
+      ],
+      "If only the independent variable changes, any change in the dependent variable can be linked to it. This is how a controlled experiment shows cause and effect."
+    ],
+    "remember": "Change one thing, measure the result, and keep everything else the same.",
+    "a": {
+      "q": "A student heats the same acid at different temperatures and times how long a piece of magnesium ribbon takes to dissolve. What is the dependent variable?",
+      "opts": [
+        "The time taken for the magnesium to dissolve",
+        "The temperature of the acid",
+        "The mass of the magnesium ribbon",
+        "The concentration of the acid"
+      ],
+      "why": "The dependent variable is what is measured to see the effect, which is the dissolving time. The temperature is tempting, but the student deliberately changes it, so it is the independent variable.",
+      "clue": "Which quantity is measured as the outcome, not set by the student?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam tests how the concentration of hydrochloric acid affects the rate of gas production from marble chips. He uses large chips in the weakest acid and powdered chips in the strongest acid. Why can he not conclude that concentration caused the change in rate?",
+      "opts": [
+        "Chip size also changed, so it was not controlled",
+        "Gas production is not a suitable dependent variable",
+        "He changed concentration, which is the dependent variable",
+        "He used more than one concentration of acid"
+      ],
+      "why": "Chip size changed along with concentration, so a difference in rate could come from either. Only the independent variable should change, with other factors controlled. Using several concentrations is needed to test the effect, so it is not a flaw.",
+      "clue": "Count how many factors differ between the trials."
+    }
+  },
+  "chem-measurement-quality-unit-4": {
+    "title": "Measurement quality",
+    "card": [
+      [
+        "Accuracy and precision",
+        "accuracy is how close a measurement is to the true value. Precision is how close repeated measurements are to each other."
+      ],
+      [
+        "Repeatability and reproducibility",
+        "repeatability is when the same person, using the same method and equipment, gets close results again. Reproducibility is when a different person or lab gets close results."
+      ],
+      [
+        "Resolution",
+        "the smallest change an instrument can show, such as 0.01 g on a balance. A smaller step means a finer resolution."
+      ],
+      [
+        "Validity",
+        "an investigation is valid when it measures what it claims to and controls other variables. Good results can still be invalid if the method tests the wrong thing."
+      ]
+    ],
+    "remember": "Close to the true value is accuracy. Close to each other is precision. Same person is repeatable, different person is reproducible.",
+    "a": {
+      "q": "Four titration results for a hydrochloric acid sample are 20.12, 20.14, 20.13 and 20.12 mL. The true value is 21.50 mL. How can the results be described?",
+      "opts": [
+        "Precise but not accurate",
+        "Accurate but not precise",
+        "Both accurate and precise",
+        "Neither accurate nor precise"
+      ],
+      "why": "The results are close to each other, so they are precise. They are all well away from 21.50 mL, so they are not accurate. Closeness of repeats does not show closeness to the true value.",
+      "clue": "Compare the results to each other, then to the true value."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya measures the enthalpy of combustion of ethanol with a spirit burner. Her teacher then follows Priya's method and gets results close to hers. What does the teacher's agreement with Priya show?",
+      "opts": [
+        "Reproducibility of the results",
+        "Repeatability of the results",
+        "Accuracy of the results",
+        "Resolution of the thermometer"
+      ],
+      "why": "A different person using the method gets close results, which is reproducibility. Repeatability would need the same person to repeat the work, but here the results come from two people. Close agreement alone does not show accuracy, because both could be far from the true value.",
+      "clue": "Are the two sets of results from the same person?"
+    }
+  },
+  "chem-reporting-findings": {
+    "title": "Reporting findings",
+    "card": [
+      "A scientific report or poster presents what was done, what was found and what the findings mean. Readers should be able to follow it without the author there.",
+      "Use correct scientific terms and symbols. Write the unit with every measured quantity that has one, such as 25.0 mL or 0.100 mol L⁻¹. Some quantities, such as pH, have no unit.",
+      "Show data clearly. In a graph, put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label both axes with quantity and unit.",
+      "Link the conclusion to the data. State what the results show for the aim, and what they imply. A claim should reach only as far as the evidence supports, so name the conditions that were tested."
+    ],
+    "remember": "A good report uses correct terms and units, shows data clearly, and draws conclusions that the data supports.",
+    "a": {
+      "q": "A student graphs the volume of gas produced against time. Which presentation follows scientific conventions?",
+      "opts": [
+        "Time on the x-axis, volume on the y-axis, both with units",
+        "Volume on the x-axis, time on the y-axis, units in the title",
+        "Time on the x-axis, volume on the y-axis, no units shown",
+        "Both axes labelled with units, but in a random order"
+      ],
+      "why": "Time is the independent variable, so it goes on the horizontal axis, and the measured volume goes on the vertical axis. Each axis needs its quantity and unit. Putting units only in the title leaves the axes incomplete.",
+      "clue": "Which variable did the student choose, and which did they measure?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs one reaction three times with a catalyst and three times without, at one temperature, keeping all else the same. The catalysed trials are faster. Which conclusion is best supported for her report?",
+      "opts": [
+        "This catalyst sped up this reaction at that one temperature",
+        "This catalyst speeds up all reactions at every temperature",
+        "This catalyst is the best one for this reaction at any heat",
+        "This catalyst sped up this reaction in only some conditions"
+      ],
+      "why": "The evidence covers one catalyst, one reaction and one temperature, so the claim should reach only as far as those conditions. Claiming all reactions or every temperature goes beyond the data. Saying it worked only in some conditions is not supported either, as she tested one set of conditions and the catalysed trials were faster.",
+      "clue": "What did the data actually test, and how far can the claim reach?"
+    }
   }
 };

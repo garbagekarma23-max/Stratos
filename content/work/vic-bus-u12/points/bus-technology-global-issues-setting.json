@@ -8,7 +8,7 @@
    0.201
   ]
  ],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:18Z new, match",
   "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -17,7 +17,10 @@
   "2026-11-01T08:33:48Z write: done",
   "2026-11-01T08:42:05Z check: flagged",
   "2026-11-01T08:44:26Z fix: suggested",
-  "2026-11-02T06:18:11Z review: rejected, to be written again"
+  "2026-11-02T06:18:11Z review: rejected, to be written again",
+  "2026-11-03T10:25:22Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: passed, cleared"
  ],
  "sent": {
   "match": 1,
@@ -73,5 +76,149 @@
    "clue": "The supplier is paid in another country's money."
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:22Z",
+   "step": "write",
+   "version": {
+    "title": "Technology and global issues in setting up",
+    "card": [
+     "A customer database is a stored record of customer details, such as names, emails and past orders. Software lets a new business build one to contact customers and see what they buy.",
+     "Holding personal details brings choices about data: what to collect, how to store it securely and how to protect customers' privacy. A data breach can harm customers and the business's reputation.",
+     "Dealing with overseas suppliers or retailers can cut the cost of stock or reach more customers. Shipping adds time and cost, and quality is harder to check from far away.",
+     "Overseas deals are often priced in another currency, so exchange rates add risk. If a buyer's currency falls against the Australian dollar, each sale there earns fewer dollars."
+    ],
+    "remember": "A database and overseas deals can help a new business, but each brings choices about data, cost and risk.",
+    "a": {
+     "q": "Lena starts an online plant shop in Ballarat and saves each buyer's name, address and order history. What choice does this mainly raise for her?",
+     "opts": [
+      "How to protect the personal details she holds",
+      "How to cope when exchange rates move suddenly",
+      "How to set the steps her staff follow each day",
+      "How to compare the prices of two plant growers"
+     ],
+     "why": "A customer database holds personal details, so Lena has to decide how to keep them secure and private. Exchange rates matter when trading overseas, not when storing local customers' details.",
+     "clue": "Think about what the database holds."
+    },
+    "b": {
+     "d": 3,
+     "q": "Jack's Bendigo clothing label agrees to sell through a retailer in Japan and will be paid in yen. Which statement about this deal is correct?",
+     "opts": [
+      "A fall in the yen could cut what each sale earns",
+      "A rise in the yen could cut what each sale earns",
+      "Shipping to Japan adds no extra time or cost",
+      "Selling overseas lowers what his stock costs"
+     ],
+     "why": "Jack is paid in yen, so he changes it into Australian dollars. If the yen falls against the dollar, each sale converts to fewer dollars. A rising yen would do the opposite and earn him more.",
+     "clue": "He has to change the yen into Australian dollars."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "How to protect the personal details she holds",
+     "also_right": []
+    },
+    "b": {
+     "best": "A fall in the yen could cut what each sale earns",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Technology and global issues in setting up",
+  "card": [
+   "A customer database is a stored record of customer details, such as names, emails and past orders. Software lets a new business build one to contact customers and see what they buy.",
+   "Holding personal details brings choices about data: what to collect, how to store it securely and how to protect customers' privacy. A data breach can harm customers and the business's reputation.",
+   "Dealing with overseas suppliers or retailers can cut the cost of stock or reach more customers. Shipping adds time and cost, and quality is harder to check from far away.",
+   "Overseas deals are often priced in another currency, so exchange rates add risk. If a buyer's currency falls against the Australian dollar, each sale there earns fewer dollars."
+  ],
+  "remember": "A database and overseas deals can help a new business, but each brings choices about data, cost and risk.",
+  "a": {
+   "q": "Lena starts an online plant shop in Ballarat and saves each buyer's name, address and order history. What choice does this mainly raise for her?",
+   "opts": [
+    "How to protect the personal details she holds",
+    "How to cope when exchange rates move suddenly",
+    "How to set the steps her staff follow each day",
+    "How to compare the prices of two plant growers"
+   ],
+   "why": "A customer database holds personal details, so Lena has to decide how to keep them secure and private. Exchange rates matter when trading overseas, not when storing local customers' details.",
+   "clue": "Think about what the database holds."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack's Bendigo clothing label agrees to sell through a retailer in Japan and will be paid in yen. Which statement about this deal is correct?",
+   "opts": [
+    "A fall in the yen could cut what each sale earns",
+    "A rise in the yen could cut what each sale earns",
+    "Shipping to Japan adds no extra time or cost",
+    "Selling overseas lowers what his stock costs"
+   ],
+   "why": "Jack is paid in yen, so he changes it into Australian dollars. If the yen falls against the dollar, each sale converts to fewer dollars. A rising yen would do the opposite and earn him more.",
+   "clue": "He has to change the yen into Australian dollars."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "How to protect the personal details she holds",
+   "also_right": []
+  },
+  "b": {
+   "best": "A fall in the yen could cut what each sale earns",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Technology and global issues in setting up",
+  "card": [
+   "A customer database is a stored record of customer details, such as names, emails and past orders. Software lets a new business build one to contact customers and see what they buy.",
+   "Holding personal details brings choices about data: what to collect, how to store it securely and how to protect customers' privacy. A data breach can harm customers and the business's reputation.",
+   "Dealing with overseas suppliers or retailers can cut the cost of stock or reach more customers. Shipping adds time and cost, and quality is harder to check from far away.",
+   "Overseas deals are often priced in another currency, so exchange rates add risk. If a buyer's currency falls against the Australian dollar, each sale there earns fewer dollars."
+  ],
+  "remember": "A database and overseas deals can help a new business, but each brings choices about data, cost and risk.",
+  "a": {
+   "q": "Lena starts an online plant shop in Ballarat and saves each buyer's name, address and order history. What choice does this mainly raise for her?",
+   "opts": [
+    "How to protect the personal details she holds",
+    "How to cope when exchange rates move suddenly",
+    "How to set the steps her staff follow each day",
+    "How to compare the prices of two plant growers"
+   ],
+   "why": "A customer database holds personal details, so Lena has to decide how to keep them secure and private. Exchange rates matter when trading overseas, not when storing local customers' details.",
+   "clue": "Think about what the database holds."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack's Bendigo clothing label agrees to sell through a retailer in Japan and will be paid in yen. Which statement about this deal is correct?",
+   "opts": [
+    "A fall in the yen could cut what each sale earns",
+    "A rise in the yen could cut what each sale earns",
+    "Shipping to Japan adds no extra time or cost",
+    "Selling overseas lowers what his stock costs"
+   ],
+   "why": "Jack is paid in yen, so he changes it into Australian dollars. If the yen falls against the dollar, each sale converts to fewer dollars. A rising yen would do the opposite and earn him more.",
+   "clue": "He has to change the yen into Australian dollars."
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
 }

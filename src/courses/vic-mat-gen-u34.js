@@ -55,7 +55,19 @@ MADE_COURSES.push({
             "mat-data-transformations"
           ]
         },
-        {"id": "vic-mat-gen-u34-1-3", "title": "Time series", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-gen-u34-1-3",
+          "title": "Time series",
+          "check": "checked",
+          "points": [
+            "mat-features-time-series",
+            "mat-smoothing-with-moving-means",
+            "mat-median-smoothing",
+            "mat-seasonal-indices",
+            "mat-deseasonalising-data",
+            "mat-forecasting-from-trend"
+          ]
+        },
         {
           "id": "vic-mat-gen-u34-1-4",
           "title": "Depreciation and interest",
@@ -126,7 +138,18 @@ MADE_COURSES.push({
             "mat-maximum-flow-minimum-cut"
           ]
         },
-        {"id": "vic-mat-gen-u34-2-3", "title": "Decision mathematics", "check": "checked", "points": []}
+        {
+          "id": "vic-mat-gen-u34-2-3",
+          "title": "Decision mathematics",
+          "check": "checked",
+          "points": [
+            "mat-hungarian-algorithm",
+            "mat-activity-networks-2",
+            "mat-earliest-latest-start-times",
+            "mat-critical-path",
+            "mat-crashing-project"
+          ]
+        }
       ]
     }
   ]

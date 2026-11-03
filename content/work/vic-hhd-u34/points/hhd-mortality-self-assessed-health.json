@@ -24,7 +24,7 @@
    0.2
   ]
  ],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -35,20 +35,22 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording)",
   "2026-11-02T04:50:14Z write: done",
-  "2026-11-02T04:56:45Z check: flagged"
+  "2026-11-02T04:56:45Z check: flagged",
+  "2026-11-03T11:40:49Z fix: suggested",
+  "2026-11-03T11:56:00Z autoreview: cleared with the fix (a wording)"
  ],
  "sent": {
   "match": 1,
   "write": 3,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 0.00022,
   "write": 0.01074,
   "check": 0.03031,
-  "fix": 0.02009,
+  "fix": 0.03418,
   "recheck": 0.0156
  },
  "match": {
@@ -106,7 +108,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "auto",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -341,5 +343,114 @@
  "sensitive": "none",
  "flags": [
   "Question a, wording: The stem is hard to parse: '30 of every 1,000 live births end in a death at age 3 and 20 at age 4 months' reads oddly, and the why then speaks of 'the death at 4 months and the death at age 3' as if there were single deaths. Clearer: 'In a region, for every 1,000 live births, 30 children die at age 3 and 20 babies die at 4 months old.'"
- ]
+ ],
+ "proposal": {
+  "title": "Mortality and self-assessed health",
+  "card": [
+   [
+    "Maternal mortality",
+    "the number of women who die from causes linked to pregnancy or childbirth, compared with the number of live births. It is usually shown per 100,000 live births."
+   ],
+   [
+    "Infant mortality",
+    "the number of babies who die before their first birthday, shown per 1,000 live births."
+   ],
+   [
+    "Under-five mortality",
+    "the number of children who die before their fifth birthday, shown per 1,000 live births. It includes infant deaths."
+   ],
+   [
+    "Self-assessed health",
+    "how people rate their own health, often from excellent to poor, in a survey. It is a personal view, so it can show how people feel about their health when death rates cannot."
+   ]
+  ],
+  "remember": "Maternal, infant and under-five rates count deaths in mothers and young children. Self-assessed health shows how people rate their own health.",
+  "a": {
+   "q": "In a region, for every 1,000 live births, 30 children die at age 3 and 20 babies die at 4 months old. A health report wants one rate that includes both groups of deaths. Which rate should it use?",
+   "opts": [
+    "Under-five mortality rate",
+    "Infant mortality rate",
+    "Maternal mortality rate",
+    "Self-assessed health status"
+   ],
+   "why": "The under-five rate covers deaths from birth to the fifth birthday, so it includes both the babies who died at 4 months and the children who died at age 3. Infant mortality is the tempting option, but it stops at the first birthday and would miss the deaths at age 3.",
+   "clue": "Check the age of each group who died, then see which rate covers both."
+  },
+  "b": {
+   "d": 3,
+   "q": "A researcher studying a Bendigo community has its infant mortality data. Why might she also collect self-assessed health data?",
+   "opts": [
+    "It shows how people feel about their own health",
+    "It gives a more objective measure than death rates",
+    "It counts the deaths that infant mortality misses",
+    "It shows how many children die before age five"
+   ],
+   "why": "Self-assessed health is a personal rating from a survey, so it can show how people feel about their health, which death rates cannot. The objective option is tempting, but a personal view is not more objective than a count of deaths. It also counts no deaths at all.",
+   "clue": "Think about what a count of deaths cannot tell you."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-03T11:56:00Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem is hard to parse: '30 of every 1,000 live births end in a death at age 3 and 20 at age 4 months' reads oddly, and the why then speaks of 'the death at 4 months and the death at age 3' as if there were single deaths. Clearer: 'In a region, for every 1,000 live births, 30 children die at age 3 and 20 babies die at 4 months old.'"
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem is hard to parse: '30 of every 1,000 live births end in a death at age 3 and 20 at age 4 months' reads oddly, and the why then speaks of 'the death at 4 months and the death at age 3' as if there were single deaths. Clearer: 'In a region, for every 1,000 live births, 30 children die at age 3 and 20 babies die at 4 months old.'"
+  ]
+ },
+ "final": {
+  "title": "Mortality and self-assessed health",
+  "card": [
+   [
+    "Maternal mortality",
+    "the number of women who die from causes linked to pregnancy or childbirth, compared with the number of live births. It is usually shown per 100,000 live births."
+   ],
+   [
+    "Infant mortality",
+    "the number of babies who die before their first birthday, shown per 1,000 live births."
+   ],
+   [
+    "Under-five mortality",
+    "the number of children who die before their fifth birthday, shown per 1,000 live births. It includes infant deaths."
+   ],
+   [
+    "Self-assessed health",
+    "how people rate their own health, often from excellent to poor, in a survey. It is a personal view, so it can show how people feel about their health when death rates cannot."
+   ]
+  ],
+  "remember": "Maternal, infant and under-five rates count deaths in mothers and young children. Self-assessed health shows how people rate their own health.",
+  "a": {
+   "q": "In a region, for every 1,000 live births, 30 children die at age 3 and 20 babies die at 4 months old. A health report wants one rate that includes both groups of deaths. Which rate should it use?",
+   "opts": [
+    "Under-five mortality rate",
+    "Infant mortality rate",
+    "Maternal mortality rate",
+    "Self-assessed health status"
+   ],
+   "why": "The under-five rate covers deaths from birth to the fifth birthday, so it includes both the babies who died at 4 months and the children who died at age 3. Infant mortality is the tempting option, but it stops at the first birthday and would miss the deaths at age 3.",
+   "clue": "Check the age of each group who died, then see which rate covers both."
+  },
+  "b": {
+   "d": 3,
+   "q": "A researcher studying a Bendigo community has its infant mortality data. Why might she also collect self-assessed health data?",
+   "opts": [
+    "It shows how people feel about their own health",
+    "It gives a more objective measure than death rates",
+    "It counts the deaths that infant mortality misses",
+    "It shows how many children die before age five"
+   ],
+   "why": "Self-assessed health is a personal rating from a survey, so it can show how people feel about their health, which death rates cannot. The objective option is tempting, but a personal view is not more objective than a count of deaths. It also counts no deaths at all.",
+   "clue": "Think about what a count of deaths cannot tell you."
+  }
+ }
 }

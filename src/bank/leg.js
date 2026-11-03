@@ -6394,5 +6394,168 @@ MADE_BANKS.leg = {
       "why": "The 1967 referendum passed with a very large Yes vote. The 2023 Voice referendum did not pass. Reversing the two results is the common mistake.",
       "clue": "One result was a clear Yes and the other was a No."
     }
+  },
+  "leg-police-enforcement-bodies": {
+    "title": "Police and enforcement bodies",
+    "card": [
+      "Victoria Police is the main body that investigates crime and enforces criminal law in Victoria. Its officers can patrol, question people, collect evidence and charge people with offences.",
+      "Parliament can also give powers to other bodies by law. Examples are authorised officers on public transport and officers who enforce fishing rules.",
+      "These bodies only have the powers that the law gives them. Their powers are usually narrower than those of police.",
+      "Enforcing the law helps keep order and protect the community. Those who investigate do not decide guilt: that is for a court."
+    ],
+    "remember": "Victoria Police lead enforcement, and other bodies act only with powers the law gives them.",
+    "a": {
+      "q": "Which body is the main one that investigates crime in Victoria?",
+      "opts": ["Victoria Police", "A jury", "The Magistrates' Court", "A transport officer"],
+      "why": "Victoria Police investigate crime and enforce criminal law across the state. A transport officer has enforcement powers, but they are limited to public transport rules and are not the main body.",
+      "clue": "Think of the body that patrols, collects evidence and lays charges."
+    },
+    "b": {
+      "d": 3,
+      "q": "An authorised officer on a Melbourne tram checks Jai's ticket and finds he has none. Where does the officer's power to act come from?",
+      "opts": [
+        "A law that gives the officer set powers",
+        "The officer's job title alone",
+        "Court approval given for each ticket check",
+        "Being a member of Victoria Police"
+      ],
+      "why": "Parliament can give certain bodies powers by law, and the officer can use only those powers. A job title does not create power, and the officer is not police just because they enforce rules.",
+      "clue": "Enforcement bodies other than police still need something to back them."
+    }
+  },
+  "leg-police-powers-individual-rights": {
+    "title": "Police powers and individual rights",
+    "card": [
+      "Police have powers set by law, such as to arrest a person, to search a person or place, and to question a suspect.",
+      "Individuals have rights that limit those powers. Two are the right to silence and the right to contact a lawyer.",
+      [
+        "Right to silence",
+        "a suspect does not have to answer most police questions. Staying silent is not an admission of guilt."
+      ],
+      [
+        "Balance",
+        "The law tries to let police do their job while protecting people from unfair treatment. Police powers must be used within the law."
+      ]
+    ],
+    "remember": "Police powers are balanced by rights, so the law can protect the community and the individual.",
+    "a": {
+      "q": "Police question Lena about a theft, and she chooses not to answer. Which right is she using?",
+      "opts": ["The right to silence", "The right to a jury", "The right to appeal", "The right to a search warrant"],
+      "why": "The right to silence means a suspect does not have to answer most questions. A jury and an appeal belong to court processes, not to police questioning.",
+      "clue": "Look at what Lena is choosing not to do."
+    },
+    "b": {
+      "d": 3,
+      "q": "Why does the law give suspects rights such as access to a lawyer when police hold wide powers?",
+      "opts": [
+        "To balance police powers and protect individuals",
+        "To stop police from investigating crime",
+        "To decide whether the suspect is guilty",
+        "To replace the need for a court hearing"
+      ],
+      "why": "Rights act as a balance so that powers to arrest, search and question are not used unfairly. They do not stop police investigating, and guilt is decided by a court, not by rights.",
+      "clue": "Think about fairness on both sides."
+    }
+  },
+  "leg-courts-criminal-cases": {
+    "title": "Courts in criminal cases",
+    "card": [
+      "Criminal cases in Victoria are heard in different courts, depending on how serious the offence is.",
+      [
+        "Magistrates' Court",
+        "hears summary offences, which are less serious, such as minor theft or some driving offences. It also handles early steps in more serious cases."
+      ],
+      ["County Court", "hears most indictable offences, which are serious offences such as armed robbery."],
+      ["Supreme Court", "hears the most serious indictable offences, such as murder."]
+    ],
+    "remember": "The more serious the offence, the higher the court that hears it.",
+    "a": {
+      "q": "Which court hears a trial for murder in Victoria?",
+      "opts": ["The Supreme Court", "The Magistrates' Court", "The County Court", "A transport tribunal"],
+      "why": "Murder is among the most serious offences, so it is heard in the Supreme Court. The County Court hears most indictable offences, but not the most serious ones such as murder.",
+      "clue": "Choose the court for the most serious cases."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam is charged with a minor summary offence of wilful damage to a bus shelter. Which court will most likely hear the case?",
+      "opts": ["The Magistrates' Court", "The County Court", "The Supreme Court", "The High Court"],
+      "why": "Summary offences are less serious and are heard in the Magistrates' Court. The County Court hears most indictable offences, which are more serious than this one.",
+      "clue": "Minor offences go to the lowest court in the list."
+    }
+  },
+  "leg-jury-criminal-trial": {
+    "title": "The jury in a criminal trial",
+    "card": [
+      "A jury is a group of ordinary citizens who decide the facts in a criminal trial. In Victoria, a jury of 12 is used in indictable trials in the County Court and the Supreme Court.",
+      "The jury decides whether the accused is guilty or not guilty. The judge runs the trial and directs the jury on the law, but the jury decides guilt.",
+      "The jury can find the accused guilty only if the prosecution proves guilt beyond reasonable doubt. A jury is first asked to reach a unanimous verdict, where all 12 agree.",
+      "Under the Juries Act 2000 (Vic), a majority verdict of 11 to 1 may be accepted after at least six hours of deliberation (the jury's private discussion). It is not allowed for murder, treason or certain serious drug offences."
+    ],
+    "remember": "The jury of 12 decides guilt beyond reasonable doubt. After six hours, 11 to 1 may be accepted, except for some of the most serious offences.",
+    "a": {
+      "q": "A person is on trial for an indictable offence in the County Court of Victoria. Who decides whether the accused is guilty?",
+      "opts": [
+        "The jury of 12 citizens",
+        "The judge who runs the trial",
+        "The prosecutor for the state",
+        "The defence lawyer for the accused"
+      ],
+      "why": "The jury decides the facts and reaches the verdict. The judge is the most tempting wrong answer because the judge runs the trial and directs the jury on the law, but the judge does not decide guilt.",
+      "clue": "Think about who weighs the evidence, not who runs the court."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Victorian jury in an armed robbery trial has deliberated for seven hours. It is split 11 to 1 for guilty. Which verdict may the court accept?",
+      "opts": [
+        "An 11 to 1 verdict of guilty",
+        "Only a unanimous verdict of guilty",
+        "A guilty verdict given by the judge alone",
+        "No verdict, since a retrial is required"
+      ],
+      "why": "The Juries Act 2000 (Vic) allows an 11 to 1 majority verdict after at least six hours of deliberation, and armed robbery is not one of the excluded offences. Requiring a unanimous verdict is tempting, but that applies only to offences such as murder and treason.",
+      "clue": "Check how long the jury has talked and which offences are excluded."
+    }
+  },
+  "leg-groups-facing-difficulties": {
+    "title": "Groups facing difficulties",
+    "card": [
+      "Some groups can face extra barriers in the criminal system. A barrier is something that makes it harder to understand the process, use rights or get a fair outcome.",
+      [
+        "First Nations people",
+        "may face barriers from past and present distrust of police and courts, and from a lack of culturally safe services. Courts can use Koori Court processes, where Elders and respected persons take part, for some offences."
+      ],
+      [
+        "Young people",
+        "may find it hard to understand questions, charges or court steps. In Victoria, the Children's Court hears most cases involving children, with processes made for their age."
+      ],
+      [
+        "Other groups",
+        "People who speak little English may need an interpreter to follow the process. People with mental illness or disability may need support to understand and take part."
+      ]
+    ],
+    "remember": "Some groups can face extra barriers, so the system may need changes such as interpreters, support and special courts.",
+    "a": {
+      "q": "Which situation best shows an extra barrier faced by a group in the criminal system?",
+      "opts": [
+        "A newly arrived migrant cannot follow English questions",
+        "An adult is nervous because they have never been to court",
+        "A witness must wait in a corridor before giving evidence",
+        "A person charged with theft needs time to find a lawyer"
+      ],
+      "why": "The migrant faces a barrier linked to language and culture, and an interpreter may be needed. Nervousness or waiting can affect anyone, so they do not show a barrier faced by a particular group.",
+      "clue": "Look for a difficulty tied to belonging to a particular group."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam, 15, is charged with an offence and does not understand the court steps. Which response best deals with the barrier he faces?",
+      "opts": [
+        "Use the Children's Court, with processes made for his age",
+        "Let Sam work out the steps and skip any support",
+        "Move the case to a jury so that more people hear it",
+        "Treat his case exactly as an adult's case is treated"
+      ],
+      "why": "The Children's Court has processes made for young people, which helps with the barrier of not understanding the system. Treating Sam exactly as an adult would leave the barrier in place. A jury does not address his difficulty in following the steps.",
+      "clue": "Which response changes the process to suit his age?"
+    }
   }
 };

@@ -118,7 +118,17 @@ MADE_COURSES.push({
             "pe-reliable-valid-assessment"
           ]
         },
-        {"id": "vic-pe-u12-2-2", "title": "Intrapersonal issues in sport", "check": "checked", "points": []},
+        {
+          "id": "vic-pe-u12-2-2",
+          "title": "Intrapersonal issues in sport",
+          "check": "checked",
+          "points": [
+            "pe-hormones-physical-activity",
+            "pe-injury-concussion-safety",
+            "pe-psychological-skills-sleep",
+            "pe-mental-fitness-sport"
+          ]
+        },
         {
           "id": "vic-pe-u12-2-5",
           "title": "Interpersonal and structural issues in sport",

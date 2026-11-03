@@ -3,7 +3,7 @@
  "title": "Change and continuity in France",
  "brief": "d36969878d31",
  "shortlist": [],
- "stage": "check",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:29Z new, write",
   "2026-11-01T14:46:43Z write: the API refused it in the chapter request, so it is written on its own next",
@@ -13,18 +13,21 @@
   "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording, b wording, a level)",
   "2026-11-02T04:50:16Z write: failed the content check, writing again",
-  "2026-11-02T04:56:46Z write: done"
+  "2026-11-02T04:56:46Z write: done",
+  "2026-11-03T11:40:51Z check: flagged",
+  "2026-11-03T11:44:03Z fix: suggested",
+  "2026-11-03T12:02:57Z claude-code review: approved with the fix"
  ],
  "sent": {
   "write": 4,
-  "check": 1,
-  "fix": 1,
+  "check": 2,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "write": 0.0187,
-  "check": 0.0205,
-  "fix": 0.02666,
+  "check": 0.03999,
+  "fix": 0.06227,
   "recheck": 0.01806
  },
  "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The three wrong options all contain \"still\", so the right option is the only one without it. A student could pick it as the odd one out without knowing the difference between change and continuity.\n- Question b, wording: The right option is the only one with \"still\", the reverse of question a's pattern. Along with the clue, this lets a student spot it by the word alone.\n- Question a, level: Both questions are very easy for Year 12 VCE Revolutions. They test only whether a statement says something ended or stayed, not any judgement about change and continuity.",
@@ -68,7 +71,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "claude-code",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -282,5 +285,495 @@
   }
  },
  "redone": true,
- "local": []
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Law and government changed, but equality was not fully won",
+   "also_right": []
+  },
+  "b": {
+   "best": "Women did not gain political rights despite the new laws",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to options by position ('the second option', 'the third and fourth'), but the options are shown in random order. As displayed, the option treating legal change as proof of equality is first, and the right answer is fourth. The why therefore names the wrong options."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which evidence shows a group left out of the new equality?' gives the answer away, because only one option names a group left out. The right option is also the only one stating something that did not change, so it stands out from the three changes."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The argument is about equality in daily life, but the right option is about political rights in law. Women were excluded by the new laws themselves, so 'despite the new laws' is confusing. The option challenges the premise of equal rights in law rather than showing that legal equality failed to reach daily life."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line splits the ideas more neatly than the card does: change is 'in law and government' and continuity is 'in people's lives'. The card's own continuity example, women not gaining political rights, is a continuity in law, so the line misrepresents the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are sound, but the why for (a) names options by position and these do not match the displayed order. Question b's clue and structure give the answer away and its wording mixes law with daily life, and the remember line sorts change and continuity more neatly than the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why refers to options by position ('the second option', 'the third and fourth'), but the options are shown in random order. As displayed, the option treating legal change as proof of equality is first, and the right answer is fourth. The why therefore names the wrong options.",
+  "Question b, other: The clue 'Which evidence shows a group left out of the new equality?' gives the answer away, because only one option names a group left out. The right option is also the only one stating something that did not change, so it stands out from the three changes.",
+  "Question b, wording: The argument is about equality in daily life, but the right option is about political rights in law. Women were excluded by the new laws themselves, so 'despite the new laws' is confusing. The option challenges the premise of equal rights in law rather than showing that legal equality failed to reach daily life.",
+  "Remember, other: The remember line splits the ideas more neatly than the card does: change is 'in law and government' and continuity is 'in people's lives'. The card's own continuity example, women not gaining political rights, is a continuity in law, so the line misrepresents the card."
+ ],
+ "proposal": {
+  "title": "Change and continuity in France",
+  "card": [
+   [
+    "Change",
+    "Something that was different by 1795 from how it was in 1774. Feudal dues and noble privileges were abolished, and absolute monarchy ended."
+   ],
+   [
+    "Continuity",
+    "Something that stayed the same, or that the revolution failed to alter. Many people remained poor, and women did not gain political rights."
+   ],
+   "A hope is an aim of the revolution, such as equality. A change in law does not prove the hope was met, because people's lives may stay much the same.",
+   "A historian judges the revolution by weighing evidence of both change and continuity between 1774 and 1795. Real change can sit alongside unmet hopes."
+  ],
+  "remember": "Weigh what changed against what stayed the same: ending privilege did not meet every hope for equality.",
+  "a": {
+   "q": "Which statement is the soundest judgement about France between 1774 and 1795?",
+   "opts": [
+    "Law and government changed, but equality was not fully won",
+    "Law and government changed, so equality was fully achieved",
+    "Little changed, as the poor stayed poor under the new laws",
+    "Almost nothing changed, as privilege and monarchy survived"
+   ],
+   "why": "Privilege and absolute monarchy ended, which is change, but many hopes for equality were not met, which is continuity. The claim that equality was fully achieved treats a change in law as proof that the hope was met. The claims that little or nothing changed ignore the real end of privilege and absolute monarchy.",
+   "clue": "A sound judgement weighs evidence of both."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student argues that new laws brought equality to daily life in France by 1795. Which evidence best challenges this argument?",
+   "opts": [
+    "Many people stayed poor though their rights in law changed",
+    "Nobles kept their legal privileges right through to 1795",
+    "The king kept absolute power for the whole of the period",
+    "Feudal dues were abolished, so peasants owed lords nothing"
+   ],
+   "why": "Many people stayed poor after the law changed, so legal change did not bring equality to daily life. The claims that nobles kept their privileges and the king kept absolute power are false, because both ended. The end of feudal dues is a real change, so it supports the argument rather than challenging it.",
+   "clue": "First rule out any claim that is not true."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Change and continuity in France",
+  "card": [
+   [
+    "Change",
+    "Something that was different by 1795 from how it was in 1774. Feudal dues and noble privileges were abolished, and absolute monarchy ended."
+   ],
+   [
+    "Continuity",
+    "Something that stayed the same, or that the revolution failed to alter. Many people remained poor, and women did not gain political rights."
+   ],
+   "A hope is an aim of the revolution, such as equality. A change in law does not prove the hope was met, because people's lives may stay much the same.",
+   "A historian judges the revolution by weighing evidence of both change and continuity between 1774 and 1795. Real change can sit alongside unmet hopes."
+  ],
+  "remember": "Weigh what changed against what stayed the same: ending privilege did not meet every hope for equality.",
+  "a": {
+   "q": "Which statement is the soundest judgement about France between 1774 and 1795?",
+   "opts": [
+    "Law and government changed, but equality was not fully won",
+    "Law and government changed, so equality was fully achieved",
+    "Little changed, as the poor stayed poor under the new laws",
+    "Almost nothing changed, as privilege and monarchy survived"
+   ],
+   "why": "Privilege and absolute monarchy ended, which is change, but many hopes for equality were not met, which is continuity. The claim that equality was fully achieved treats a change in law as proof that the hope was met. The claims that little or nothing changed ignore the real end of privilege and absolute monarchy.",
+   "clue": "A sound judgement weighs evidence of both."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student argues that new laws brought equality to daily life in France by 1795. Which evidence best challenges this argument?",
+   "opts": [
+    "Many people stayed poor though their rights in law changed",
+    "Nobles kept their legal privileges right through to 1795",
+    "The king kept absolute power for the whole of the period",
+    "Feudal dues were abolished, so peasants owed lords nothing"
+   ],
+   "why": "Many people stayed poor after the law changed, so legal change did not bring equality to daily life. The claims that nobles kept their privileges and the king kept absolute power are false, because both ended. The end of feudal dues is a real change, so it supports the argument rather than challenging it.",
+   "clue": "First rule out any claim that is not true."
+  }
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-03T12:02:57Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix removes the why's references to option positions, rewrites question b so it is about daily life and its clue no longer gives the answer away, and gives a remember line that no longer splits law from lives more neatly than the card. Each question has one right answer.",
+   "item": "f9fefc95c1d5c795",
+   "result": "decided",
+   "saved": {
+    "id": "mod-change-continuity-france",
+    "title": "Change and continuity in France",
+    "brief": "d36969878d31",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 4,
+     "check": 2,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.0187,
+     "check": 0.03999,
+     "fix": 0.06227,
+     "recheck": 0.01806
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The three wrong options all contain \"still\", so the right option is the only one without it. A student could pick it as the odd one out without knowing the difference between change and continuity.\n- Question b, wording: The right option is the only one with \"still\", the reverse of question a's pattern. Along with the clue, this lets a student spot it by the word alone.\n- Question a, level: Both questions are very easy for Year 12 VCE Revolutions. They test only whether a statement says something ended or stayed, not any judgement about change and continuity.",
+    "rejected": {
+     "title": "Change and continuity in France",
+     "card": [
+      [
+       "Change",
+       "Something that was different by 1795 from how it was in 1774. The privileges of the nobility and clergy were abolished, and the absolute monarchy ended."
+      ],
+      [
+       "Continuity",
+       "Something that stayed the same, or that the revolution failed to alter. Many people stayed poor, and women did not gain political rights."
+      ],
+      "Historians weigh both. A hope is an aim of the revolution, such as equality. An unmet hope points to continuity, but it can sit alongside real change.",
+      "A judgement about the revolution uses evidence of both change and continuity across the period 1774 to 1795."
+     ],
+     "remember": "Between 1774 and 1795 France changed in its laws and government, but many hopes for equality went unmet.",
+     "a": {
+      "q": "Which of these is an example of change in France between 1774 and 1795?",
+      "opts": [
+       "Noble and clergy privileges were abolished",
+       "Women still had no political rights",
+       "Many poor families still struggled for food",
+       "Equality was still out of reach for many"
+      ],
+      "why": "The abolition of privileges made France different from how it was in 1774, so it is change. The other three describe things that stayed the same or hopes that went unmet, which point to continuity.",
+      "clue": "Which one describes something that ended, not something that stayed?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A student says the revolution brought only change to France by 1795. Which evidence from the period best challenges this claim?",
+      "opts": [
+       "Women still lacked political rights in 1795",
+       "The absolute monarchy had ended by 1795",
+       "Nobles no longer held legal privileges",
+       "Louis XVI was no longer ruling France"
+      ],
+      "why": "Women still lacking political rights shows something that stayed the same, so it is continuity and challenges the claim. The end of the absolute monarchy and the other two options are real changes, so they support the claim instead.",
+      "clue": "Look for the option that shows something that did not change."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-02T04:43:11Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question a, wording: The three wrong options all contain \"still\", so the right option is the only one without it. A student could pick it as the odd one out without knowing the difference between change and continuity.",
+       "Question b, wording: The right option is the only one with \"still\", the reverse of question a's pattern. Along with the clue, this lets a student spot it by the word alone.",
+       "Question a, level: Both questions are very easy for Year 12 VCE Revolutions. They test only whether a statement says something ended or stayed, not any judgement about change and continuity."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Change and continuity in France",
+        "card": [
+         [
+          "Change",
+          "Something that was different by 1795 from how it was in 1774. The privileges of the nobility and clergy were abolished, and the absolute monarchy ended."
+         ],
+         [
+          "Continuity",
+          "Something that stayed the same, or that the revolution failed to alter. Many people stayed poor, and most women did not gain political rights."
+         ],
+         "Historians weigh both. A hope is a promise or aim of the revolution, such as equality. Where a hope was not met, the result was continuity, not change.",
+         "A judgement about the revolution uses evidence of both change and continuity across the period 1774 to 1795."
+        ],
+        "remember": "Between 1774 and 1795 France changed in its laws and rulers, but many hopes for equality were not met.",
+        "a": {
+         "q": "Which of these is an example of change in France between 1774 and 1795?",
+         "opts": [
+          "Noble and clergy privileges were abolished",
+          "Most women still had no political rights",
+          "Many poor families still struggled for food",
+          "Hopes for equality were left unmet by many"
+         ],
+         "why": "The abolition of privileges was a difference from 1774, so it is change. The other three describe things that stayed the same or hopes that were not met, which are continuity.",
+         "clue": "Which one describes something that ended, not something that stayed?"
+        },
+        "b": {
+         "d": 3,
+         "q": "A student says the revolution brought only change to France by 1795. Which evidence from the period best challenges this claim?",
+         "opts": [
+          "Women still lacked political rights in 1795",
+          "The absolute monarchy had ended by 1795",
+          "Nobles no longer held legal privileges",
+          "Louis XVI was no longer ruling France"
+         ],
+         "why": "Women still lacking political rights shows something that stayed the same, so it is continuity and challenges the claim. The other three are real changes, so they support the claim instead.",
+         "clue": "Look for the option that shows something that did not change."
+        }
+       },
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Noble and clergy privileges were abolished",
+         "also_right": []
+        },
+        "b": {
+         "best": "Women still lacked political rights in 1795",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "card",
+          "kind": "fact",
+          "detail": "'Most women did not gain political rights' suggests some women did. No French women gained formal political rights such as the vote in this period, and women's political clubs were banned in 1793. 'Women did not gain political rights' would be accurate."
+         },
+         {
+          "part": "a",
+          "kind": "wording",
+          "detail": "'Hopes for equality were left unmet by many' is awkward. It reads as if many people left the hopes unmet, rather than that the hopes went unmet for many people."
+         },
+         {
+          "part": "card",
+          "kind": "other",
+          "detail": "'Where a hope was not met, the result was continuity, not change' is too absolute. An unmet hope can still sit alongside real change, so this oversimplifies how historians weigh change and continuity."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "Both intended answers are correct. The card wrongly implies some women gained political rights ('most women did not'), one distractor in question a is awkwardly worded, and the card's rule that an unmet hope always means continuity is oversimplified."
+       },
+       "flags": [
+        "Card, fact: 'Most women did not gain political rights' suggests some women did. No French women gained formal political rights such as the vote in this period, and women's political clubs were banned in 1793. 'Women did not gain political rights' would be accurate.",
+        "Question a, wording: 'Hopes for equality were left unmet by many' is awkward. It reads as if many people left the hopes unmet, rather than that the hopes went unmet for many people.",
+        "Card, other: 'Where a hope was not met, the result was continuity, not change' is too absolute. An unmet hope can still sit alongside real change, so this oversimplifies how historians weigh change and continuity."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Change and continuity in France",
+        "card": [
+         [
+          "Change",
+          "Something that was different by 1795 from how it was in 1774. The privileges of the nobility and clergy were abolished, and the absolute monarchy ended."
+         ],
+         [
+          "Continuity",
+          "Something that stayed the same, or that the revolution failed to alter. Many people stayed poor, and women did not gain political rights."
+         ],
+         "Historians weigh both. A hope is an aim of the revolution, such as equality. An unmet hope points to continuity, but it can sit alongside real change.",
+         "A judgement about the revolution uses evidence of both change and continuity across the period 1774 to 1795."
+        ],
+        "remember": "Between 1774 and 1795 France changed in its laws and government, but many hopes for equality went unmet.",
+        "a": {
+         "q": "Which of these is an example of change in France between 1774 and 1795?",
+         "opts": [
+          "Noble and clergy privileges were abolished",
+          "Women still had no political rights",
+          "Many poor families still struggled for food",
+          "Equality was still out of reach for many"
+         ],
+         "why": "The abolition of privileges made France different from how it was in 1774, so it is change. The other three describe things that stayed the same or hopes that went unmet, which point to continuity.",
+         "clue": "Which one describes something that ended, not something that stayed?"
+        },
+        "b": {
+         "d": 3,
+         "q": "A student says the revolution brought only change to France by 1795. Which evidence from the period best challenges this claim?",
+         "opts": [
+          "Women still lacked political rights in 1795",
+          "The absolute monarchy had ended by 1795",
+          "Nobles no longer held legal privileges",
+          "Louis XVI was no longer ruling France"
+         ],
+         "why": "Women still lacking political rights shows something that stayed the same, so it is continuity and challenges the claim. The end of the absolute monarchy and the other two options are real changes, so they support the claim instead.",
+         "clue": "Look for the option that shows something that did not change."
+        }
+       },
+       "proposal_problems": [],
+       "alone": true,
+       "recheck": {
+        "at": "2026-11-02T04:41:52Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Noble and clergy privileges were abolished",
+          "also_right": []
+         },
+         "b": {
+          "best": "Women still lacked political rights in 1795",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "a",
+           "kind": "wording",
+           "detail": "The three wrong options all contain \"still\", so the right option is the only one without it. A student could pick it as the odd one out without knowing the difference between change and continuity."
+          },
+          {
+           "part": "b",
+           "kind": "wording",
+           "detail": "The right option is the only one with \"still\", the reverse of question a's pattern. Along with the clue, this lets a student spot it by the word alone."
+          },
+          {
+           "part": "a",
+           "kind": "level",
+           "detail": "Both questions are very easy for Year 12 VCE Revolutions. They test only whether a statement says something ended or stayed, not any judgement about change and continuity."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The facts and intended answers are correct. In both questions the word \"still\" sets the right option apart, so students could answer by spotting the word, and the questions are easy for Year 12."
+        },
+        "flags": [
+         "Question a, wording: The three wrong options all contain \"still\", so the right option is the only one without it. A student could pick it as the odd one out without knowing the difference between change and continuity.",
+         "Question b, wording: The right option is the only one with \"still\", the reverse of question a's pattern. Along with the clue, this lets a student spot it by the word alone.",
+         "Question a, level: Both questions are very easy for Year 12 VCE Revolutions. They test only whether a statement says something ended or stayed, not any judgement about change and continuity."
+        ]
+       }
+      }
+     }
+    ],
+    "draft": {
+     "title": "Change and continuity in France",
+     "card": [
+      [
+       "Change",
+       "Something that was different by 1795 from how it was in 1774. Feudal dues and noble privileges were abolished, and absolute monarchy ended."
+      ],
+      [
+       "Continuity",
+       "Something that stayed the same, or that the revolution failed to alter. Many people remained poor, and women did not gain political rights."
+      ],
+      "A hope is an aim of the revolution, such as equality. A change in law does not prove the hope was met, because people's lives may stay much the same.",
+      "A historian judges the revolution by weighing evidence of both change and continuity between 1774 and 1795. Real change can sit alongside unmet hopes."
+     ],
+     "remember": "Judge the revolution by weighing both: what changed in law and government, and what stayed the same in people's lives.",
+     "a": {
+      "q": "Which statement is the soundest judgement about France between 1774 and 1795?",
+      "opts": [
+       "Law and government changed, but equality was not fully won",
+       "Law and government changed, so equality was fully achieved",
+       "Little changed, as the poor stayed poor under the new laws",
+       "Almost nothing changed, as privilege and monarchy survived"
+      ],
+      "why": "Privilege and absolute monarchy ended, which is change, but many hopes for equality were not met, which is continuity. The second option treats a change in law as proof that the hope was met. The third and fourth ignore the real change in law and government.",
+      "clue": "A sound judgement weighs evidence of both, and a change in law does not prove a hope was met."
+     },
+     "b": {
+      "d": 3,
+      "q": "A student argues that equal rights in law meant equality in daily life by 1795. Which point best challenges this argument?",
+      "opts": [
+       "Women did not gain political rights despite the new laws",
+       "Noble and clergy privileges were abolished in law",
+       "Feudal dues ended, so peasants owed nothing to lords",
+       "Absolute monarchy gave way to a republic in 1792"
+      ],
+      "why": "Women not gaining political rights shows that new laws did not give everyone equality, which is continuity. The other options are real changes in law and government, so they support the argument instead of challenging it.",
+      "clue": "Which evidence shows a group left out of the new equality?"
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Law and government changed, but equality was not fully won",
+      "also_right": []
+     },
+     "b": {
+      "best": "Women did not gain political rights despite the new laws",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The why refers to options by position ('the second option', 'the third and fourth'), but the options are shown in random order. As displayed, the option treating legal change as proof of equality is first, and the right answer is fourth. The why therefore names the wrong options."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Which evidence shows a group left out of the new equality?' gives the answer away, because only one option names a group left out. The right option is also the only one stating something that did not change, so it stands out from the three changes."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The argument is about equality in daily life, but the right option is about political rights in law. Women were excluded by the new laws themselves, so 'despite the new laws' is confusing. The option challenges the premise of equal rights in law rather than showing that legal equality failed to reach daily life."
+      },
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line splits the ideas more neatly than the card does: change is 'in law and government' and continuity is 'in people's lives'. The card's own continuity example, women not gaining political rights, is a continuity in law, so the line misrepresents the card."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are sound, but the why for (a) names options by position and these do not match the displayed order. Question b's clue and structure give the answer away and its wording mixes law with daily life, and the remember line sorts change and continuity more neatly than the card."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, other: The why refers to options by position ('the second option', 'the third and fourth'), but the options are shown in random order. As displayed, the option treating legal change as proof of equality is first, and the right answer is fourth. The why therefore names the wrong options.",
+     "Question b, other: The clue 'Which evidence shows a group left out of the new equality?' gives the answer away, because only one option names a group left out. The right option is also the only one stating something that did not change, so it stands out from the three changes.",
+     "Question b, wording: The argument is about equality in daily life, but the right option is about political rights in law. Women were excluded by the new laws themselves, so 'despite the new laws' is confusing. The option challenges the premise of equal rights in law rather than showing that legal equality failed to reach daily life.",
+     "Remember, other: The remember line splits the ideas more neatly than the card does: change is 'in law and government' and continuity is 'in people's lives'. The card's own continuity example, women not gaining political rights, is a continuity in law, so the line misrepresents the card."
+    ],
+    "proposal": {
+     "title": "Change and continuity in France",
+     "card": [
+      [
+       "Change",
+       "Something that was different by 1795 from how it was in 1774. Feudal dues and noble privileges were abolished, and absolute monarchy ended."
+      ],
+      [
+       "Continuity",
+       "Something that stayed the same, or that the revolution failed to alter. Many people remained poor, and women did not gain political rights."
+      ],
+      "A hope is an aim of the revolution, such as equality. A change in law does not prove the hope was met, because people's lives may stay much the same.",
+      "A historian judges the revolution by weighing evidence of both change and continuity between 1774 and 1795. Real change can sit alongside unmet hopes."
+     ],
+     "remember": "Weigh what changed against what stayed the same: ending privilege did not meet every hope for equality.",
+     "a": {
+      "q": "Which statement is the soundest judgement about France between 1774 and 1795?",
+      "opts": [
+       "Law and government changed, but equality was not fully won",
+       "Law and government changed, so equality was fully achieved",
+       "Little changed, as the poor stayed poor under the new laws",
+       "Almost nothing changed, as privilege and monarchy survived"
+      ],
+      "why": "Privilege and absolute monarchy ended, which is change, but many hopes for equality were not met, which is continuity. The claim that equality was fully achieved treats a change in law as proof that the hope was met. The claims that little or nothing changed ignore the real end of privilege and absolute monarchy.",
+      "clue": "A sound judgement weighs evidence of both."
+     },
+     "b": {
+      "d": 3,
+      "q": "A student argues that new laws brought equality to daily life in France by 1795. Which evidence best challenges this argument?",
+      "opts": [
+       "Many people stayed poor though their rights in law changed",
+       "Nobles kept their legal privileges right through to 1795",
+       "The king kept absolute power for the whole of the period",
+       "Feudal dues were abolished, so peasants owed lords nothing"
+      ],
+      "why": "Many people stayed poor after the law changed, so legal change did not bring equality to daily life. The claims that nobles kept their privileges and the king kept absolute power are false, because both ended. The end of feudal dues is a real change, so it supports the argument rather than challenging it.",
+      "clue": "First rule out any claim that is not true."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "ee9d0e30f10a4f62"
+  }
+ ]
 }

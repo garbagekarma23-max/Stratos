@@ -3,7 +3,7 @@
  "title": "Reporting findings",
  "brief": "6f304bc871fd",
  "shortlist": [],
- "stage": "check",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:25Z new, write",
   "2026-11-01T14:46:37Z write: failed the content check, writing again",
@@ -13,18 +13,21 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b wording, card fact)",
   "2026-11-02T04:50:13Z write: failed the content check, writing again",
-  "2026-11-02T04:56:45Z write: done (still fails the content check)"
+  "2026-11-02T04:56:45Z write: done (still fails the content check)",
+  "2026-11-03T11:40:49Z check: flagged",
+  "2026-11-03T11:44:03Z fix: suggested",
+  "2026-11-03T12:02:57Z claude-code review: approved with the fix"
  ],
  "sent": {
   "write": 4,
-  "check": 1,
-  "fix": 1,
+  "check": 2,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "write": 0.03076,
-  "check": 0.01665,
-  "fix": 0.01731,
+  "check": 0.02624,
+  "fix": 0.04689,
   "recheck": 0.01604
  },
  "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one with a hedging qualifier ('under the conditions tested'), while every distractor uses an absolute ('every', 'best', 'cannot'). A test-wise student could pick it without understanding the idea.\n- Card, fact: 'Write units with every measured value' and 'A number without a unit is incomplete' overstate the rule. Some measured quantities in VCE Chemistry, such as pH and absorbance, have no units. Wording such as 'with every measured quantity that has a unit' would be accurate.",
@@ -62,7 +65,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "claude-code",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -247,5 +250,408 @@
  "redone": true,
  "local": [
   "chem-reporting-findingsb option is 61 characters: This catalyst sped up this reaction at the temperature tested"
+ ],
+ "check": {
+  "a": {
+   "best": "Time on the x-axis, volume on the y-axis, both with units",
+   "also_right": []
+  },
+  "b": {
+   "best": "This catalyst sped up this reaction at the temperature tested",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says the conclusion 'must stay inside that', but the card says a claim 'should reach only as far as the evidence supports'. The why should match the card's 'should'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the facts check out. The only problem is that why (b) uses 'must' where the card says 'should'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) says the conclusion 'must stay inside that', but the card says a claim 'should reach only as far as the evidence supports'. The why should match the card's 'should'.",
+  "Content check: chem-reporting-findingsb option is 61 characters: This catalyst sped up this reaction at the temperature tested"
+ ],
+ "proposal": {
+  "title": "Reporting findings",
+  "card": [
+   "A scientific report or poster presents what was done, what was found and what the findings mean. Readers should be able to follow it without the author there.",
+   "Use correct scientific terms and symbols. Write the unit with every measured quantity that has one, such as 25.0 mL or 0.100 mol L⁻¹. Some quantities, such as pH, have no unit.",
+   "Show data clearly. In a graph, put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label both axes with quantity and unit.",
+   "Link the conclusion to the data. State what the results show for the aim, and what they imply. A claim should reach only as far as the evidence supports, so name the conditions that were tested."
+  ],
+  "remember": "A good report uses correct terms and units, shows data clearly, and draws conclusions that the data supports.",
+  "a": {
+   "q": "A student graphs the volume of gas produced against time. Which presentation follows scientific conventions?",
+   "opts": [
+    "Time on the x-axis, volume on the y-axis, both with units",
+    "Volume on the x-axis, time on the y-axis, units in the title",
+    "Time on the x-axis, volume on the y-axis, no units shown",
+    "Both axes labelled with units, but in a random order"
+   ],
+   "why": "Time is the independent variable, so it goes on the horizontal axis, and the measured volume goes on the vertical axis. Each axis needs its quantity and unit. Putting units only in the title leaves the axes incomplete.",
+   "clue": "Which variable did the student choose, and which did they measure?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs one reaction three times with a catalyst and three times without, at one temperature, keeping all else the same. The catalysed trials are faster. Which conclusion is best supported for her report?",
+   "opts": [
+    "This catalyst sped up this reaction at that one temperature",
+    "This catalyst speeds up all reactions at every temperature",
+    "This catalyst is the best one for this reaction at any heat",
+    "This catalyst sped up this reaction in only some conditions"
+   ],
+   "why": "The evidence covers one catalyst, one reaction and one temperature, so the claim should reach only as far as those conditions. Claiming all reactions or every temperature goes beyond the data. Saying it worked only in some conditions is not supported either, as she tested one set of conditions and the catalysed trials were faster.",
+   "clue": "What did the data actually test, and how far can the claim reach?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Reporting findings",
+  "card": [
+   "A scientific report or poster presents what was done, what was found and what the findings mean. Readers should be able to follow it without the author there.",
+   "Use correct scientific terms and symbols. Write the unit with every measured quantity that has one, such as 25.0 mL or 0.100 mol L⁻¹. Some quantities, such as pH, have no unit.",
+   "Show data clearly. In a graph, put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label both axes with quantity and unit.",
+   "Link the conclusion to the data. State what the results show for the aim, and what they imply. A claim should reach only as far as the evidence supports, so name the conditions that were tested."
+  ],
+  "remember": "A good report uses correct terms and units, shows data clearly, and draws conclusions that the data supports.",
+  "a": {
+   "q": "A student graphs the volume of gas produced against time. Which presentation follows scientific conventions?",
+   "opts": [
+    "Time on the x-axis, volume on the y-axis, both with units",
+    "Volume on the x-axis, time on the y-axis, units in the title",
+    "Time on the x-axis, volume on the y-axis, no units shown",
+    "Both axes labelled with units, but in a random order"
+   ],
+   "why": "Time is the independent variable, so it goes on the horizontal axis, and the measured volume goes on the vertical axis. Each axis needs its quantity and unit. Putting units only in the title leaves the axes incomplete.",
+   "clue": "Which variable did the student choose, and which did they measure?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs one reaction three times with a catalyst and three times without, at one temperature, keeping all else the same. The catalysed trials are faster. Which conclusion is best supported for her report?",
+   "opts": [
+    "This catalyst sped up this reaction at that one temperature",
+    "This catalyst speeds up all reactions at every temperature",
+    "This catalyst is the best one for this reaction at any heat",
+    "This catalyst sped up this reaction in only some conditions"
+   ],
+   "why": "The evidence covers one catalyst, one reaction and one temperature, so the claim should reach only as far as those conditions. Claiming all reactions or every temperature goes beyond the data. Saying it worked only in some conditions is not supported either, as she tested one set of conditions and the catalysed trials were faster.",
+   "clue": "What did the data actually test, and how far can the claim reach?"
+  }
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-03T12:02:57Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix shortens question b's right option to fit the length limit without changing its meaning, and its why now says 'should', as the card does. The right option no longer stands out by length.",
+   "item": "4f2354e1039d0457",
+   "result": "decided",
+   "saved": {
+    "id": "chem-reporting-findings",
+    "title": "Reporting findings",
+    "brief": "6f304bc871fd",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 4,
+     "check": 2,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.03076,
+     "check": 0.02624,
+     "fix": 0.04689,
+     "recheck": 0.01604
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one with a hedging qualifier ('under the conditions tested'), while every distractor uses an absolute ('every', 'best', 'cannot'). A test-wise student could pick it without understanding the idea.\n- Card, fact: 'Write units with every measured value' and 'A number without a unit is incomplete' overstate the rule. Some measured quantities in VCE Chemistry, such as pH and absorbance, have no units. Wording such as 'with every measured quantity that has a unit' would be accurate.",
+    "rejected": {
+     "title": "Reporting findings",
+     "card": [
+      "A scientific report or poster presents what was done, what was found and what the findings mean. Readers should be able to follow it without the author there.",
+      "Use correct scientific terms and symbols. Write units with every measured value, such as 25.0 mL or 0.100 mol L⁻¹. A number without a unit is incomplete.",
+      "Show data clearly. In a graph, put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label both axes with quantity and unit.",
+      "Link the conclusion to the data. State what the results show for the aim, and what they imply. Claims must not go beyond what the evidence supports."
+     ],
+     "remember": "A good report uses correct terms and units, shows data clearly, and draws conclusions that the data supports.",
+     "a": {
+      "q": "A student graphs the volume of gas produced against time. Which presentation follows scientific conventions?",
+      "opts": [
+       "Time on the x-axis, volume on the y-axis, both with units",
+       "Volume on the x-axis, time on the y-axis, units in the title",
+       "Time on the x-axis, volume on the y-axis, no units shown",
+       "Both axes labelled with units, but in a random order"
+      ],
+      "why": "Time is the independent variable, so it goes on the horizontal axis, and the measured volume goes on the vertical axis. Each axis needs its quantity and unit. Putting units only in the title leaves the axes incomplete.",
+      "clue": "Which variable did the student choose, and which did they measure?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya runs one reaction three times with a catalyst and three times without, keeping all other conditions the same. The catalysed trials are faster. Which conclusion is best supported for her report?",
+      "opts": [
+       "The catalyst increased the rate under the conditions tested",
+       "The catalyst will increase the rate of every reaction",
+       "The catalyst is proven to be the best one available",
+       "The results cannot show whether the catalyst had an effect"
+      ],
+      "why": "The conclusion should match the evidence: one catalyst, one reaction, the conditions tested. Claiming every reaction or the best catalyst goes beyond the data. Saying the results show nothing ignores that she compared trials with and without the catalyst while keeping everything else the same.",
+      "clue": "What did the data actually test, and how far can the claim reach?"
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-02T04:43:11Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question b, wording: The right option is the only one with a hedging qualifier ('under the conditions tested'), while every distractor uses an absolute ('every', 'best', 'cannot'). A test-wise student could pick it without understanding the idea.",
+       "Card, fact: 'Write units with every measured value' and 'A number without a unit is incomplete' overstate the rule. Some measured quantities in VCE Chemistry, such as pH and absorbance, have no units. Wording such as 'with every measured quantity that has a unit' would be accurate."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Reporting findings",
+        "card": [
+         "A scientific report or poster presents what was done, what was found and what the findings mean. Readers should be able to follow it without the author there.",
+         "Use correct scientific terms and symbols. Write units with every measured value, such as 25.0 mL or 0.100 mol L⁻¹. A number without a unit is incomplete.",
+         "Show data clearly. In a graph, put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label both axes with quantity and unit.",
+         "Link the conclusion to the data. State what the results show for the aim, and what they imply. Claims must not go beyond what the evidence supports."
+        ],
+        "remember": "A good report uses correct terms and units, shows data clearly, and draws conclusions that the data supports.",
+        "a": {
+         "q": "A student graphs the volume of gas produced against time. Which presentation follows scientific conventions?",
+         "opts": [
+          "Time on the x-axis, volume on the y-axis, both with units",
+          "Volume on the x-axis, time on the y-axis, units in the title",
+          "Time on the x-axis, volume on the y-axis, no units shown",
+          "Both axes labelled with units, but in a random order"
+         ],
+         "why": "Time is the independent variable, so it goes on the horizontal axis, and the measured volume goes on the vertical axis. Each axis needs its quantity and unit. Putting units only in the title leaves the axes incomplete.",
+         "clue": "Which variable did the student choose, and which did they measure?"
+        },
+        "b": {
+         "d": 3,
+         "q": "Priya tests one catalyst on the rate of a reaction in three trials. Her results show a faster rate. Which conclusion is best supported for her report?",
+         "opts": [
+          "The catalyst increased the rate in this reaction only",
+          "The catalyst will increase the rate of every reaction",
+          "The catalyst is proven to be the best one available",
+          "The catalyst changed the rate, but the cause is unknown"
+         ],
+         "why": "The conclusion should match the evidence: one catalyst, one reaction, the conditions tested. Claiming every reaction or the best catalyst goes beyond the data. Saying the cause is unknown ignores that her experiment changed only the catalyst.",
+         "clue": "What did the data actually test, and how far can the claim reach?"
+        }
+       },
+       "redone": true,
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Time on the x-axis, volume on the y-axis, both with units",
+         "also_right": []
+        },
+        "b": {
+         "best": "The catalyst increased the rate in this reaction only",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "b",
+          "kind": "wording",
+          "detail": "The intended answer uses \"only\" (\"increased the rate in this reaction only\"). Read literally, it claims the catalyst works in no other reaction, which also goes beyond the evidence. Better: \"The catalyst increased the rate of this reaction under the conditions tested.\""
+         },
+         {
+          "part": "b",
+          "kind": "wording",
+          "detail": "The stem says her results \"show a faster rate\" but never says faster than what. No uncatalysed control or controlled variables are mentioned, so a careful student could argue the cause really is not established. State that she compared trials with and without the catalyst, keeping other conditions the same."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "Question a is sound. Question b's intended answer uses \"only\", which reads as an overclaim of its own. The stem also omits the comparison or control needed to rule out the \"cause is unknown\" option."
+       },
+       "flags": [
+        "Question b, wording: The intended answer uses \"only\" (\"increased the rate in this reaction only\"). Read literally, it claims the catalyst works in no other reaction, which also goes beyond the evidence. Better: \"The catalyst increased the rate of this reaction under the conditions tested.\"",
+        "Question b, wording: The stem says her results \"show a faster rate\" but never says faster than what. No uncatalysed control or controlled variables are mentioned, so a careful student could argue the cause really is not established. State that she compared trials with and without the catalyst, keeping other conditions the same."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Reporting findings",
+        "card": [
+         "A scientific report or poster presents what was done, what was found and what the findings mean. Readers should be able to follow it without the author there.",
+         "Use correct scientific terms and symbols. Write units with every measured value, such as 25.0 mL or 0.100 mol L⁻¹. A number without a unit is incomplete.",
+         "Show data clearly. In a graph, put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label both axes with quantity and unit.",
+         "Link the conclusion to the data. State what the results show for the aim, and what they imply. Claims must not go beyond what the evidence supports."
+        ],
+        "remember": "A good report uses correct terms and units, shows data clearly, and draws conclusions that the data supports.",
+        "a": {
+         "q": "A student graphs the volume of gas produced against time. Which presentation follows scientific conventions?",
+         "opts": [
+          "Time on the x-axis, volume on the y-axis, both with units",
+          "Volume on the x-axis, time on the y-axis, units in the title",
+          "Time on the x-axis, volume on the y-axis, no units shown",
+          "Both axes labelled with units, but in a random order"
+         ],
+         "why": "Time is the independent variable, so it goes on the horizontal axis, and the measured volume goes on the vertical axis. Each axis needs its quantity and unit. Putting units only in the title leaves the axes incomplete.",
+         "clue": "Which variable did the student choose, and which did they measure?"
+        },
+        "b": {
+         "d": 3,
+         "q": "Priya runs one reaction three times with a catalyst and three times without, keeping all other conditions the same. The catalysed trials are faster. Which conclusion is best supported for her report?",
+         "opts": [
+          "The catalyst increased the rate under the conditions tested",
+          "The catalyst will increase the rate of every reaction",
+          "The catalyst is proven to be the best one available",
+          "The results cannot show whether the catalyst had an effect"
+         ],
+         "why": "The conclusion should match the evidence: one catalyst, one reaction, the conditions tested. Claiming every reaction or the best catalyst goes beyond the data. Saying the results show nothing ignores that she compared trials with and without the catalyst while keeping everything else the same.",
+         "clue": "What did the data actually test, and how far can the claim reach?"
+        }
+       },
+       "proposal_problems": [],
+       "recheck": {
+        "at": "2026-11-02T04:41:50Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Time on the x-axis, volume on the y-axis, both with units",
+          "also_right": []
+         },
+         "b": {
+          "best": "The catalyst increased the rate under the conditions tested",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "b",
+           "kind": "wording",
+           "detail": "The right option is the only one with a hedging qualifier ('under the conditions tested'), while every distractor uses an absolute ('every', 'best', 'cannot'). A test-wise student could pick it without understanding the idea."
+          },
+          {
+           "part": "card",
+           "kind": "fact",
+           "detail": "'Write units with every measured value' and 'A number without a unit is incomplete' overstate the rule. Some measured quantities in VCE Chemistry, such as pH and absorbance, have no units. Wording such as 'with every measured quantity that has a unit' would be accurate."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "Both questions have one clear correct answer. In question b, the right option is the only hedged one, so it stands out. The card's claim that every measured value needs a unit ignores unitless quantities such as pH and absorbance."
+        },
+        "flags": [
+         "Question b, wording: The right option is the only one with a hedging qualifier ('under the conditions tested'), while every distractor uses an absolute ('every', 'best', 'cannot'). A test-wise student could pick it without understanding the idea.",
+         "Card, fact: 'Write units with every measured value' and 'A number without a unit is incomplete' overstate the rule. Some measured quantities in VCE Chemistry, such as pH and absorbance, have no units. Wording such as 'with every measured quantity that has a unit' would be accurate."
+        ]
+       }
+      }
+     }
+    ],
+    "draft": {
+     "title": "Reporting findings",
+     "card": [
+      "A scientific report or poster presents what was done, what was found and what the findings mean. Readers should be able to follow it without the author there.",
+      "Use correct scientific terms and symbols. Write the unit with every measured quantity that has one, such as 25.0 mL or 0.100 mol L⁻¹. Some quantities, such as pH, have no unit.",
+      "Show data clearly. In a graph, put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label both axes with quantity and unit.",
+      "Link the conclusion to the data. State what the results show for the aim, and what they imply. A claim should reach only as far as the evidence supports, so name the conditions that were tested."
+     ],
+     "remember": "A good report uses correct terms and units, shows data clearly, and draws conclusions that the data supports.",
+     "a": {
+      "q": "A student graphs the volume of gas produced against time. Which presentation follows scientific conventions?",
+      "opts": [
+       "Time on the x-axis, volume on the y-axis, both with units",
+       "Volume on the x-axis, time on the y-axis, units in the title",
+       "Time on the x-axis, volume on the y-axis, no units shown",
+       "Both axes labelled with units, but in a random order"
+      ],
+      "why": "Time is the independent variable, so it goes on the horizontal axis, and the measured volume goes on the vertical axis. Each axis needs its quantity and unit. Putting units only in the title leaves the axes incomplete.",
+      "clue": "Which variable did the student choose, and which did they measure?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya runs one reaction three times with a catalyst and three times without, at one temperature, keeping all else the same. The catalysed trials are faster. Which conclusion is best supported for her report?",
+      "opts": [
+       "This catalyst sped up this reaction at the temperature tested",
+       "This catalyst speeds up all reactions at every temperature",
+       "This catalyst is the best one for this reaction at any heat",
+       "This catalyst sped up this reaction in only some conditions"
+      ],
+      "why": "The evidence covers one catalyst, one reaction and one temperature, so the conclusion must stay inside that. Claiming all reactions or every temperature goes beyond the data. Saying it worked only in some conditions is not what she tested, as she used one set of conditions and the catalysed trials were faster.",
+      "clue": "What did the data actually test, and how far can the claim reach?"
+     }
+    },
+    "redone": true,
+    "local": [
+     "chem-reporting-findingsb option is 61 characters: This catalyst sped up this reaction at the temperature tested"
+    ],
+    "check": {
+     "a": {
+      "best": "Time on the x-axis, volume on the y-axis, both with units",
+      "also_right": []
+     },
+     "b": {
+      "best": "This catalyst sped up this reaction at the temperature tested",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Why (b) says the conclusion 'must stay inside that', but the card says a claim 'should reach only as far as the evidence supports'. The why should match the card's 'should'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer, and the facts check out. The only problem is that why (b) uses 'must' where the card says 'should'."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, wording: Why (b) says the conclusion 'must stay inside that', but the card says a claim 'should reach only as far as the evidence supports'. The why should match the card's 'should'.",
+     "Content check: chem-reporting-findingsb option is 61 characters: This catalyst sped up this reaction at the temperature tested"
+    ],
+    "proposal": {
+     "title": "Reporting findings",
+     "card": [
+      "A scientific report or poster presents what was done, what was found and what the findings mean. Readers should be able to follow it without the author there.",
+      "Use correct scientific terms and symbols. Write the unit with every measured quantity that has one, such as 25.0 mL or 0.100 mol L⁻¹. Some quantities, such as pH, have no unit.",
+      "Show data clearly. In a graph, put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label both axes with quantity and unit.",
+      "Link the conclusion to the data. State what the results show for the aim, and what they imply. A claim should reach only as far as the evidence supports, so name the conditions that were tested."
+     ],
+     "remember": "A good report uses correct terms and units, shows data clearly, and draws conclusions that the data supports.",
+     "a": {
+      "q": "A student graphs the volume of gas produced against time. Which presentation follows scientific conventions?",
+      "opts": [
+       "Time on the x-axis, volume on the y-axis, both with units",
+       "Volume on the x-axis, time on the y-axis, units in the title",
+       "Time on the x-axis, volume on the y-axis, no units shown",
+       "Both axes labelled with units, but in a random order"
+      ],
+      "why": "Time is the independent variable, so it goes on the horizontal axis, and the measured volume goes on the vertical axis. Each axis needs its quantity and unit. Putting units only in the title leaves the axes incomplete.",
+      "clue": "Which variable did the student choose, and which did they measure?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya runs one reaction three times with a catalyst and three times without, at one temperature, keeping all else the same. The catalysed trials are faster. Which conclusion is best supported for her report?",
+      "opts": [
+       "This catalyst sped up this reaction at that one temperature",
+       "This catalyst speeds up all reactions at every temperature",
+       "This catalyst is the best one for this reaction at any heat",
+       "This catalyst sped up this reaction in only some conditions"
+      ],
+      "why": "The evidence covers one catalyst, one reaction and one temperature, so the claim should reach only as far as those conditions. Claiming all reactions or every temperature goes beyond the data. Saying it worked only in some conditions is not supported either, as she tested one set of conditions and the catalysed trials were faster.",
+      "clue": "What did the data actually test, and how far can the claim reach?"
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "adc8baece9342b56"
+  }
  ]
 }

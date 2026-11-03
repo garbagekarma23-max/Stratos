@@ -3257,5 +3257,2026 @@ MADE_BANKS.mod = {
       "why": "Mao proclaimed the People's Republic in Beijing after the Communists won the mainland, and Jiang Jieshi's Nationalists withdrew to Taiwan. A north and south split is tempting, but the Nationalists did not keep a part of the mainland.",
       "clue": "Which side proclaimed a new state, and where did the other side go?"
     }
+  },
+  "mod-liberal-democracy": {
+    "title": "Liberal democracy",
+    "card": [
+      "In a liberal democracy, citizens vote in free elections for representatives who make the laws and form the government.",
+      "Individual rights are protected, such as free speech, a free press and freedom to meet and to worship.",
+      "The rule of law means everyone, including the government, must obey the law. Independent courts decide cases. Several parties compete, so voters have a real choice.",
+      "In the interwar years, war debts, unemployment and the Great Depression put these systems under strain. Some voters lost faith and turned to extreme movements."
+    ],
+    "remember": "Liberal democracy combines elected government with rights, law and choice, and hard times tested it.",
+    "a": {
+      "q": "Which feature best shows the rule of law in a liberal democracy?",
+      "opts": [
+        "Independent courts can rule against the government",
+        "Voters choose between several parties at elections",
+        "Newspapers can print criticism of the government",
+        "Citizens are free to worship as they choose"
+      ],
+      "why": "The rule of law means the government must obey the law too, and independent courts can enforce this. Party choice, a free press and freedom of worship are also features of liberal democracy, but they belong to elections and rights.",
+      "clue": "Think about who must obey the law."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1931, a country's voters face mass unemployment. Many say they no longer trust elected leaders. Which statement best explains why liberal democracy was under strain?",
+      "opts": [
+        "Hardship made some voters doubt it could solve problems",
+        "Its courts had been placed under the control of one party",
+        "Its citizens had lost the right to vote in elections",
+        "Its parliament had been replaced by a single ruling party"
+      ],
+      "why": "The Depression led some voters to doubt that elected governments could fix their problems. The other options describe a country that has already stopped being a liberal democracy, not the strain on one that still is.",
+      "clue": "Look at what the voters in 1931 have actually lost."
+    }
+  },
+  "mod-communism-soviet-union": {
+    "title": "Communism in the Soviet Union",
+    "card": [
+      [
+        "One-party rule",
+        "after the Bolsheviks seized power in 1917, Lenin's Communist Party ruled alone. Other parties were banned, and elections offered no real choice."
+      ],
+      [
+        "Stalin",
+        "after Lenin died in 1924, Stalin outmanoeuvred his rivals in the party. By the late 1920s he held supreme power."
+      ],
+      [
+        "State control",
+        "the state took over large industry, and from 1928 Stalin's five-year plans set what factories made. Collectivisation forced peasants onto collective farms run under state control."
+      ],
+      [
+        "Terror",
+        "the secret police, show trials and labour camps known as the Gulag were used against opponents. In the Great Terror of 1936 to 1938, hundreds of thousands were executed."
+      ]
+    ],
+    "remember": "Soviet communism meant one party, state control of the economy and terror against opponents.",
+    "a": {
+      "q": "What did collectivisation change about farming in the Soviet Union?",
+      "opts": [
+        "Private farms were merged into state-controlled farms",
+        "Peasants were given bigger plots to farm for profit",
+        "Farms were handed to councils chosen in free votes",
+        "Landowners were paid a fair price to sell to the state"
+      ],
+      "why": "Collectivisation took farmland out of private hands and forced peasants onto collective farms under state control. Farming for private profit was the opposite of what Stalin wanted.",
+      "clue": "Who controlled the land afterwards?"
+    },
+    "b": {
+      "d": 2,
+      "q": "In 1937 a factory manager in Leningrad is arrested by the secret police, confesses at a staged trial and is sent to a labour camp. What does this show about Stalin's rule?",
+      "opts": [
+        "Terror was used to remove possible opponents",
+        "Courts were free to rule against the state",
+        "Rival parties could still compete for power",
+        "Managers were chosen through free elections"
+      ],
+      "why": "Arrests by the secret police, staged trials and labour camps were tools of terror. A trial with its result decided beforehand shows that courts were not free to rule against the state.",
+      "clue": "Was the trial a real test of guilt?"
+    }
+  },
+  "mod-fascism-italy-2": {
+    "title": "Fascism in Italy",
+    "card": [
+      "After the First World War, Italy faced unemployment, rising prices and strikes. Many Italians felt cheated by the peace settlement, feared communism and saw elected governments as weak.",
+      "Benito Mussolini's Fascist Party promised order at home and national glory abroad. Its armed squads, the Blackshirts, attacked socialists and trade unionists, which won support from people who feared revolution.",
+      "In October 1922 the Fascists marched on Rome and demanded power. King Victor Emmanuel III did not use the army against them and asked Mussolini to form a government.",
+      "As prime minister, Mussolini built a one-party state. He took the title Il Duce (the leader), gained wide powers by law and banned other parties, so by the late 1920s Italy was a dictatorship."
+    ],
+    "remember": "Fascists won support by promising order and glory, took office through the king under threat of force, then removed all rival parties.",
+    "a": {
+      "q": "By what route did Mussolini come to hold office as Italy's prime minister in 1922?",
+      "opts": [
+        "The king asked him to form a government after the march",
+        "He won a majority of seats in a national election",
+        "The army overthrew the government and put him in charge",
+        "The Blackshirts seized Rome and removed the old government"
+      ],
+      "why": "The March on Rome was a threat, and the king responded by asking Mussolini to form a government rather than using the army. The Blackshirts did not seize Rome by force, and Mussolini did not win an election or come to power in an army coup.",
+      "clue": "Did the march itself take power, or did it pressure someone else to act?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1921 an Italian factory owner fears strikes and a communist revolution. Why might he support the Fascists?",
+      "opts": [
+        "They attacked socialists and promised to restore order",
+        "They promised to give factories to the workers who ran them",
+        "They pledged to keep many parties competing in elections",
+        "They backed strikes as a way to raise workers' wages"
+      ],
+      "why": "The Blackshirts attacked socialists and trade unionists, and the Fascists promised order, which appealed to people who feared revolution. Handing factories to workers is a communist aim, the opposite of what Fascists offered. The Fascists later banned other parties rather than protecting party competition.",
+      "clue": "Think about what this owner most wants to stop."
+    }
+  },
+  "mod-nazism-germany": {
+    "title": "Nazism in Germany",
+    "card": [
+      "The Nazi Party, led by Adolf Hitler, was a small party in the 1920s. The Great Depression brought mass unemployment and anger, and many Germans voted for it.",
+      "In January 1933, President Hindenburg made Hitler chancellor. Hitler used that office to end democracy.",
+      "After the Reichstag fire in February 1933, rights were suspended. The Enabling Act let Hitler make laws without the Reichstag. Other parties were banned and Germany became a one-party state.",
+      "The Nazis blamed Jews for Germany's problems and persecuted them, with laws such as the Nuremberg Laws of 1935. Others, including political opponents, were also persecuted."
+    ],
+    "remember": "Nazis used the Depression to win support, gained office in 1933, then ended democracy and persecuted Jews.",
+    "a": {
+      "q": "How did Hitler become leader of Germany in 1933?",
+      "opts": [
+        "He was appointed chancellor, then ended democracy",
+        "He won a civil war against the elected government",
+        "He was elected president by a clear majority",
+        "He seized power in a coup against Hindenburg"
+      ],
+      "why": "Hindenburg appointed Hitler chancellor in January 1933, and Hitler then used that office to end democracy. He did not take power by a coup or a civil war. Hindenburg, not Hitler, was the president who gave him the job.",
+      "clue": "Someone else gave him the office."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which event best shows the Nazis ending democracy after taking office?",
+      "opts": [
+        "The Enabling Act let Hitler make laws without the Reichstag",
+        "The Depression caused mass unemployment across Germany",
+        "Hindenburg appointed Hitler as chancellor in January",
+        "The Nuremberg Laws took citizenship rights from Jews"
+      ],
+      "why": "The Enabling Act removed the Reichstag's power over lawmaking, which ended democratic government. The Depression and the appointment came before the Nazis took office. The Nuremberg Laws were persecution of Jews, not the step that ended lawmaking by parliament.",
+      "clue": "Look for the step that removed parliament's power."
+    }
+  },
+  "mod-colonies-before-1763": {
+    "title": "The colonies before 1763",
+    "card": [
+      "Before 1763, Britain ruled thirteen colonies along the Atlantic coast of North America. The colonies were grouped into three regions: New England, the Middle colonies and the Southern colonies.",
+      "Each colony had a governor, usually appointed from Britain, and an elected assembly. The assembly was chosen by male property owners and made local laws and decided local taxes.",
+      "Britain was far away and busy with other matters, so it left most daily decisions to the colonies. This gave colonists years of practice at governing themselves.",
+      "The colonies grew wealthy by trading farm goods, timber, fish and tobacco across the Atlantic and with the Caribbean. Britain expected this trade to follow British rules, but it was not always strictly enforced."
+    ],
+    "remember": "Before 1763 the colonies ran their own local affairs through assemblies and prospered from trade.",
+    "a": {
+      "q": "Which feature of colonial government gave colonists experience in governing themselves before 1763?",
+      "opts": [
+        "Elected assemblies that made local laws and set taxes",
+        "Governors appointed from Britain to run each colony",
+        "A single colonial government for all thirteen colonies",
+        "Governors chosen by colonists to replace royal rule"
+      ],
+      "why": "Each colony's assembly was elected by local voters and made local laws and taxes, so colonists practised self-government. Governors were usually appointed from Britain, not chosen by colonists, so they did not give colonists this experience.",
+      "clue": "Which part of each colony's government did colonists themselves choose?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Why were the colonies able to govern most local matters themselves before 1763?",
+      "opts": [
+        "Britain was distant and left daily decisions to them",
+        "Britain had granted the colonies legal independence",
+        "Colonists elected every governor in all the colonies",
+        "Britain had stopped trading with the colonies entirely"
+      ],
+      "why": "Britain was far away and busy with other matters, so colonial assemblies handled most daily decisions. The colonies were still ruled by Britain and were not independent, and most governors were appointed from Britain rather than elected.",
+      "clue": "Consider what Britain did, or did not do, about daily colonial affairs."
+    }
+  },
+  "mod-seven-years-war-debt": {
+    "title": "The French and Indian War",
+    "card": [
+      "The French and Indian War was fought in North America from 1754 to 1763. It was part of a wider war between Britain and France, called the Seven Years' War in Europe.",
+      "Britain won. By the peace treaty of 1763, France gave up most of its land in mainland North America, which removed a major rival from beside the colonies.",
+      "The war was costly. Britain finished it with a very large national debt, and troops were still needed in North America to defend the larger territory.",
+      "British leaders argued that the colonies had gained from the victory and should help pay for their defence. This led Britain to look to the colonies for money."
+    ],
+    "remember": "Victory over France left Britain in debt, so it turned to the colonies for money.",
+    "a": {
+      "q": "Why did the end of the French and Indian War lead Britain to look to the colonies for money?",
+      "opts": [
+        "It had a large debt and thought colonies should share costs",
+        "It had lost land and wanted the colonies to repay the loss",
+        "It wanted to punish colonies for fighting against Britain",
+        "It had no troops left and needed colonists to form an army"
+      ],
+      "why": "Britain won the war but ended it with a large debt and troops still needed to defend the territory. Its leaders said the colonies had gained from the victory. The option about lost land is wrong because Britain was the winner, and France was the side that gave up land.",
+      "clue": "Think about who won and what the war cost."
+    },
+    "b": {
+      "d": 2,
+      "q": "A British official in 1764 says, 'The colonies are safer now, so they should help pay for the war.' Which fact about the war best supports his view?",
+      "opts": [
+        "France gave up most of its mainland North American land",
+        "Britain had lost the war and needed money to rebuild",
+        "The colonies had refused to send any help to Britain",
+        "France had taken over the colonies' elected assemblies"
+      ],
+      "why": "Britain's win removed France as a rival beside the colonies, so the colonies were safer. This was the basis for asking them to share the cost. The option about losing the war is wrong because Britain won.",
+      "clue": "Which fact shows the colonies gained from the result?"
+    }
+  },
+  "mod-british-policy-after-1763": {
+    "title": "British policy after 1763",
+    "card": [
+      "Before 1763, Britain left the colonies to manage most of their own affairs. After 1763, it began to tighten its control.",
+      [
+        "Trade rules",
+        "Britain enforced laws on colonial trade more strictly, so colonists had less freedom over what they sold and where."
+      ],
+      [
+        "Proclamation line",
+        "In 1763 the king banned settlement west of a line along the Appalachian Mountains. This limited where colonists could claim land."
+      ],
+      [
+        "New taxes",
+        "Parliament passed new taxes on the colonies, such as the Stamp Act of 1765. They were set in London, not by colonial assemblies."
+      ]
+    ],
+    "remember": "After 1763, Britain moved from loose oversight to firmer control through trade rules, a settlement limit and taxes.",
+    "a": {
+      "q": "Which change after 1763 best shows Britain tightening its control of the colonies?",
+      "opts": [
+        "Britain limited where colonists could settle in the west",
+        "Britain let colonial assemblies set all trade rules",
+        "Britain removed all British officials from the colonies",
+        "Britain gave the colonies seats in the British parliament"
+      ],
+      "why": "Banning settlement west of a set line was a rule made in London that limited what colonists could do. The other options would give the colonies more freedom or a bigger say, not less.",
+      "clue": "Which option takes a choice away from colonists?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Britain passed a new tax on printed items in the colonies in 1765. How does this fit British policy after 1763?",
+      "opts": [
+        "It was one of several steps to tighten British control",
+        "It was a return to the loose control of earlier years",
+        "It was a reward for colonial help in the war with France",
+        "It was a law passed by colonial assemblies to fund defence"
+      ],
+      "why": "The tax was set by Britain and added to trade rules and the settlement limit as a sign of firmer control. It was not a reward or a colonial law, because colonial assemblies did not pass it.",
+      "clue": "Who made this law, and did it give colonists more or less say?"
+    }
+  },
+  "mod-taxation-without-representation": {
+    "title": "Taxation without representation",
+    "card": [
+      "Colonists were British subjects, but they elected no members to the British Parliament in London. They did elect their own colonial assemblies.",
+      "The Stamp Act of 1765 taxed printed items such as newspapers, legal papers and playing cards. It was passed by Parliament to raise money from the colonies.",
+      "Many colonists said only their own assemblies had the right to tax them. They argued that a tax passed by a body they had no say in broke the rights of British subjects.",
+      "The complaint was about who made the decision, not only about the cost. Colonists organised protests and boycotts, and Parliament repealed the Stamp Act in 1766."
+    ],
+    "remember": "The objection was to being taxed by a parliament where colonists had no vote or members.",
+    "a": {
+      "q": "What was the main objection colonists made to the Stamp Act?",
+      "opts": [
+        "It was a tax made by a parliament they did not sit in",
+        "It was a tax that was too high for any colonist to pay",
+        "It was a tax made by their own colonial assemblies",
+        "It was a tax that only applied to British-born colonists"
+      ],
+      "why": "Colonists argued that only their own assemblies could tax them, and the Stamp Act came from Parliament in London, where they had no members. The cost mattered, but the main complaint was about who had the right to impose the tax.",
+      "clue": "Think about who passed the tax, not how much it cost."
+    },
+    "b": {
+      "d": 3,
+      "q": "Daniel, a printer in Boston in 1765, says: 'I would pay this tax gladly if my own assembly had voted for it.' What does his view show?",
+      "opts": [
+        "His objection is to who made the tax, not to the tax itself",
+        "His objection is to the cost, not to who passed the tax",
+        "He supports Parliament's right to tax the colonies directly",
+        "He opposes all taxes of any kind, whoever passes them"
+      ],
+      "why": "Daniel would pay the same tax if his own assembly passed it, so his complaint is about who has the authority to tax him, not the cost. This matches the colonial argument. He does not reject all taxes, and he does not accept Parliament's right to tax the colonies.",
+      "clue": "He would accept the same tax if a different body passed it."
+    }
+  },
+  "mod-boston-tea-party-coercive": {
+    "title": "The Boston Tea Party and the Coercive Acts",
+    "card": [
+      "In December 1773, colonists in Boston boarded ships carrying East India Company tea and threw chests of the taxed tea into the harbour. They were protesting the tax on tea and the Tea Act.",
+      "Britain saw the destruction of property as lawless defiance. In 1774 Parliament passed the Coercive Acts to punish Massachusetts and restore order.",
+      "One of these laws closed Boston's port until the tea was paid for. Others reduced self-government in Massachusetts, which had elected its council and run its own town meetings.",
+      "Colonists called these laws the Intolerable Acts. Many in other colonies saw the punishment as a threat to their own rights, so resistance spread beyond Massachusetts."
+    ],
+    "remember": "Colonists destroyed tea, Britain punished Massachusetts, and the punishment pushed other colonies towards resistance.",
+    "a": {
+      "q": "Why did the Coercive Acts make colonists in other colonies more willing to resist Britain?",
+      "opts": [
+        "They feared the same punishment could be used on them",
+        "They had already been told to pay for the destroyed tea",
+        "They were pleased that Britain had restored order in Boston",
+        "They had all taken part in the destruction of the tea"
+      ],
+      "why": "The Acts cut self-government and closed a port in one colony, so others feared their own rights were at risk. It is wrong to say they all took part: the tea was destroyed in Boston, and the Acts were a response to it.",
+      "clue": "Think about what the punishment suggested for colonies not yet punished."
+    },
+    "b": {
+      "d": 3,
+      "q": "Daniel lives in a Virginia town in 1774 and did not join the Boston protest. He reads that Britain has closed Boston's port and cut Massachusetts self-government. Which view did many colonists like Daniel come to hold?",
+      "opts": [
+        "Britain's response to one colony threatens colonial rights",
+        "The Acts were a fair answer to Boston's lawless defiance",
+        "Closing one port will not affect any other colony",
+        "The Acts show Britain wants to lower taxes on tea"
+      ],
+      "why": "Daniel sees that Britain was willing to remove self-government in one colony, so his own colony could be next. Calling the Acts a fair answer to lawless defiance was Britain's view, not that of colonists who called them the Intolerable Acts. The Acts punished Massachusetts rather than cutting taxes.",
+      "clue": "Ask what Britain's punishment of one colony might mean for the others."
+    }
+  },
+  "mod-enlightenment-ideas-america": {
+    "title": "Enlightenment ideas in America",
+    "card": [
+      "The Enlightenment was a European movement of the 1600s and 1700s. It said that reason could be used to understand people and to improve government.",
+      [
+        "Natural rights",
+        "rights that people have by birth, not by gift of a ruler. John Locke named them as life, liberty and property."
+      ],
+      [
+        "Consent",
+        "government gets its authority from the agreement of the people it governs. If a government abuses their rights, Locke argued, the people may replace it."
+      ],
+      "Educated colonists read Locke and, from 1776, Thomas Paine's pamphlet Common Sense. They used these ideas to argue that British rule over them was unjust."
+    ],
+    "remember": "Natural rights and consent gave colonists a way to argue that British rule was unjust.",
+    "a": {
+      "q": "A colonist says: 'Government has no right to rule us without our agreement.' Which Enlightenment idea is this?",
+      "opts": [
+        "Government by consent",
+        "Natural rights of birth",
+        "The divine right of kings",
+        "Trade regulation by Parliament"
+      ],
+      "why": "The idea that a government's authority comes from the agreement of the governed is government by consent. Natural rights are about what people hold from birth, such as life and liberty, not about where a government's authority comes from.",
+      "clue": "Where does a government's authority come from?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1774, Hannah, a printer in Philadelphia, reads Locke and argues that Britain's actions break the rights colonists hold from birth. How does this reading shape her thinking?",
+      "opts": [
+        "It gives her a principle to call British rule unjust",
+        "It proves that Parliament has no legal power at all",
+        "It teaches her that rulers grant rights to their people",
+        "It shows her that Britain will soon grant independence"
+      ],
+      "why": "Locke's ideas gave colonists like Hannah a principle: rights come from birth, so a government that ignores them can be judged unjust. Locke said rights are not a gift from a ruler, and his ideas shaped arguments rather than proving a legal point about Parliament.",
+      "clue": "Think about what an idea can add to an argument."
+    }
+  },
+  "mod-leaders-american-cause": {
+    "title": "Leaders of the American cause",
+    "card": [
+      [
+        "George III",
+        "King of Britain from 1760, he backed Parliament's right to tax the colonies and declared them in rebellion in 1775. He opposed independence, and the Declaration of Independence blamed him for the colonists' grievances."
+      ],
+      [
+        "Samuel Adams and John Hancock",
+        "Adams was a Boston organiser who led protests against British rule from the 1760s. Hancock was a wealthy Boston merchant who funded the cause and became president of the Continental Congress in 1775."
+      ],
+      [
+        "Thomas Paine and Thomas Jefferson",
+        "Paine's pamphlet Common Sense, published in January 1776, attacked monarchy itself and sold widely, turning many colonists toward independence. Jefferson wrote the first draft of the Declaration of Independence in June 1776, before Congress adopted it on 4 July."
+      ],
+      [
+        "George Washington",
+        "A Virginian chosen by the Continental Congress in 1775 to command the Continental Army against British forces."
+      ]
+    ],
+    "remember": "Each figure shaped independence differently: by opposing it, organising, funding, persuading, drafting or commanding.",
+    "a": {
+      "q": "Which figure shaped the road to independence by opposing it?",
+      "opts": ["George III", "John Hancock", "Samuel Adams", "George Washington"],
+      "why": "George III opposed independence and declared the colonies in rebellion in 1775, and the Declaration blamed him for their grievances, so his stance pushed colonists toward a break. Hancock is tempting as a wealthy, established figure, but he funded the cause and led the Continental Congress.",
+      "clue": "Think about who the colonists blamed."
+    },
+    "b": {
+      "d": 3,
+      "q": "A historian argues one figure did most to win public opinion over to independence in early 1776. Which figure best fits this argument?",
+      "opts": [
+        "Thomas Paine, through Common Sense",
+        "Thomas Jefferson, through the Declaration",
+        "Samuel Adams, through protests in Boston",
+        "George Washington, through his army command"
+      ],
+      "why": "Common Sense came out in January 1776, attacked monarchy and sold widely, so it shifted many colonists toward independence. Jefferson is tempting, but his draft was written in June and adopted by Congress on 4 July, so it was a formal statement from Congress, not a widely sold pamphlet that changed opinion in early 1776.",
+      "clue": "Which work was published in January 1776 and sold widely?"
+    }
+  },
+  "mod-colonial-resistance": {
+    "title": "Popular movements in America",
+    "card": [
+      [
+        "Patriots",
+        "Colonists who opposed British rule and, in time, backed independence. Not all colonists were Patriots, as Loyalists stayed loyal to Britain."
+      ],
+      [
+        "Sons and Daughters of Liberty",
+        "Groups that protested British measures. They organised boycotts of British goods, and some Sons of Liberty also used crowd action against officials."
+      ],
+      [
+        "Committees of Correspondence",
+        "Networks that shared news and plans by letter between towns and colonies. They helped colonists act together."
+      ],
+      [
+        "Provincial Congresses",
+        "Colonial bodies that met outside the royal governors' control. They made decisions for the colony and took over its government."
+      ]
+    ],
+    "remember": "Local protest groups, letter networks and new congresses turned scattered anger into organised action.",
+    "a": {
+      "q": "Which group's main job was to share news and plans between towns and colonies?",
+      "opts": ["Committees of Correspondence", "Sons of Liberty", "Provincial Congresses", "Loyalists"],
+      "why": "The Committees of Correspondence passed on news and plans by letter so that colonies could act together. The Sons of Liberty are the tempting choice, but they were known for protests and boycotts, not for running a letter network.",
+      "clue": "Think about which group worked by writing letters."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1774 a colony's elected leaders meet without the royal governor's approval and begin making decisions for the colony. Which body does this describe?",
+      "opts": ["A Provincial Congress", "A Committee of Correspondence", "The Sons of Liberty", "The Loyalists"],
+      "why": "A Provincial Congress met outside the governor's control and made decisions for the colony. A Committee of Correspondence is tempting, but it shared news between places and did not take over government.",
+      "clue": "Which body took over running the colony rather than sharing news or protesting?"
+    }
+  },
+  "mod-declaration-independence": {
+    "title": "The Declaration of Independence",
+    "card": [
+      "On 4 July 1776 the Continental Congress, made up of delegates from the thirteen colonies, adopted the Declaration of Independence. It stated that the colonies were now free and independent states.",
+      "Drafted mainly by Thomas Jefferson, it opens with ideas of rights and consent. It then argues that a people may break from a government that abuses its power.",
+      "Most of the document is a list of grievances, or complaints, against King George III, such as keeping soldiers in the colonies in peacetime and taxing colonists without their consent.",
+      "The grievances blamed the king, presenting the break as a response to tyranny. The Declaration did not end the war: major fighting ended at Yorktown in 1781, and Britain recognised independence in 1783."
+    ],
+    "remember": "The Declaration announced the break and used a list of the king's wrongs to justify it.",
+    "a": {
+      "q": "What was the main purpose of the long list of grievances in the Declaration?",
+      "opts": [
+        "To justify breaking away from British rule",
+        "To ask Parliament to repeal the colonial taxes",
+        "To set out the laws of the new United States",
+        "To offer peace terms the king could accept"
+      ],
+      "why": "The grievances were the reasons for independence: they argued the king had abused his power, so the colonists were right to break away. It was not a request for repeal, because the document already declared the colonies independent.",
+      "clue": "Think about what the colonists needed to show the world."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says the Declaration of Independence won the colonies their freedom in 1776. Which reply best corrects the student?",
+      "opts": [
+        "It declared independence, but war decided it later",
+        "It ended the war, as Britain accepted it at once",
+        "It was a petition asking the king for more rights",
+        "It was signed by Britain as a peace treaty in 1776"
+      ],
+      "why": "The Declaration stated that the colonies were independent and gave reasons, but Britain did not accept it. Major fighting ended at Yorktown in 1781, and Britain recognised independence only in 1783.",
+      "clue": "Did Britain accept the Declaration?"
+    }
+  },
+  "mod-winning-war": {
+    "title": "Winning the war",
+    "card": [
+      "The Continental Army, led by George Washington, fought the British army and navy for years. It was often short of money, food and supplies.",
+      "France joined the war on the American side after the American win at Saratoga in 1777. It sent money, soldiers and a navy.",
+      "In 1781 a French fleet blocked the sea route at Yorktown, Virginia. British general Cornwallis was trapped by American and French armies and surrendered.",
+      "Britain then agreed to peace. In the Treaty of Paris in 1783, it recognised the United States as an independent nation."
+    ],
+    "remember": "French help, especially at Yorktown, let the Americans win, and Britain accepted independence in 1783.",
+    "a": {
+      "q": "Why was French help so important at Yorktown in 1781?",
+      "opts": [
+        "Its fleet blocked the sea, so Cornwallis could not escape",
+        "Its fleet carried Washington's army north to New York",
+        "Its fleet attacked Britain's coast to force a peace",
+        "Its army took over command from Washington"
+      ],
+      "why": "The French fleet blocked the sea route, while American and French armies surrounded Cornwallis on land. With no way out by sea, he was trapped and surrendered. The fleet's work was at Yorktown itself, not along Britain's coast or in New York.",
+      "clue": "Where was Cornwallis when he surrendered?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Which event in 1783 ended the war and gave Britain's formal recognition of American independence?",
+      "opts": ["The Treaty of Paris", "The surrender at Yorktown", "The battle of Saratoga", "The French alliance"],
+      "why": "In the Treaty of Paris, Britain formally recognised the United States as independent. Yorktown in 1781 was the last major surrender, but it did not itself set out the terms of peace.",
+      "clue": "Which event was an agreement between governments, not a battle?"
+    }
+  },
+  "mod-articles-confederation": {
+    "title": "The Articles of Confederation",
+    "card": [
+      "The Articles of Confederation were the first constitution of the United States. They were written during the war and took effect in 1781.",
+      "The states had just broken from a distant, powerful government. They feared another one, so they kept most power for themselves and made the national government weak.",
+      "Congress could not tax. It could only ask the states for money, and they often did not pay. It also could not control trade between states or with other countries.",
+      "Congress struggled to pay its debts or deal firmly with other nations. Many leaders came to believe that the national government needed more power, and this led to calls for change."
+    ],
+    "remember": "The Articles gave the states the power and left Congress too weak to run the nation.",
+    "a": {
+      "q": "Why did the Articles of Confederation give the national government so little power?",
+      "opts": [
+        "States feared a strong central government after Britain",
+        "States wanted Congress to control trade between them",
+        "Leaders believed a weak government could raise taxes easily",
+        "Britain required the new nation to have a weak government"
+      ],
+      "why": "The states had just broken away from a powerful distant government and feared creating another one, so they kept power for themselves. The option about Britain is tempting, but the weakness was the states' own choice, not a British demand.",
+      "clue": "Think about what the states had just escaped."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1785, Congress needed money to repay its war debts. Under the Articles, what could it do?",
+      "opts": [
+        "Ask the states to give money, which they might refuse",
+        "Collect a tax directly from citizens in every state",
+        "Charge duties on goods moving between the states",
+        "Order the states to pay and fine any that refused"
+      ],
+      "why": "Congress could only request money from the states, and they often did not pay. It could not tax people or trade. Ordering the states to pay is tempting, but Congress had no power to force them, a weakness that led to calls for change.",
+      "clue": "Think about how much power the states kept for themselves."
+    }
+  },
+  "mod-shays-rebellion": {
+    "title": "Shays' Rebellion",
+    "card": [
+      "After the war, many farmers in western Massachusetts were in debt. Money was scarce, and state taxes and court orders forced some to lose their farms.",
+      "In 1786 and 1787, farmers led by Daniel Shays, a former Continental Army captain, shut courts and marched on a federal arsenal at Springfield. The state raised its own militia to end the revolt.",
+      "The national government could not help. It had no money to raise a strong army and no power to tax, so Massachusetts had to deal with the revolt on its own.",
+      "Many leaders feared more disorder. The revolt convinced them that the national government needed more power, which pushed them towards changing it."
+    ],
+    "remember": "A local revolt by indebted farmers showed that the national government was too weak to keep order.",
+    "a": {
+      "q": "Why did Shays' Rebellion alarm many American leaders about the national government?",
+      "opts": [
+        "It showed the government could not deal with unrest",
+        "It showed the government was using too much power",
+        "It showed the states wanted to rejoin Britain",
+        "It showed the army had turned against the states"
+      ],
+      "why": "The national government had no power to tax and no money for a strong army, so Massachusetts had to put the revolt down itself. This made leaders fear disorder. The idea that the government held too much power is wrong, as the problem was its weakness.",
+      "clue": "Think about who ended the revolt, and why."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which statement best describes the effect of Shays' Rebellion?",
+      "opts": [
+        "It pushed leaders to want a stronger national government",
+        "It pushed leaders to want a weaker national government",
+        "It led Massachusetts to cancel all debts owed by farmers",
+        "It forced the national government to end the state militias"
+      ],
+      "why": "Leaders feared more disorder and saw that a government with no power to tax and no money for a strong army could not keep order. This pushed them towards change. It did not lead them to weaken the government, because the revolt exposed weakness, not excess power.",
+      "clue": "Ask what the revolt revealed about the national government."
+    }
+  },
+  "mod-constitution-1787": {
+    "title": "The Constitution of 1787",
+    "card": [
+      "The Articles of Confederation left the national government weak. In 1787, delegates met in Philadelphia and wrote a new constitution to replace them.",
+      [
+        "Federalism",
+        "power is shared between a national government and the state governments. The national government gained powers the Articles had denied it, such as taxing."
+      ],
+      [
+        "Separation of powers",
+        "the framers feared any one group holding all power, so they split it among three branches. Congress makes laws, the president carries them out, and the courts judge disputes under the law."
+      ],
+      [
+        "Checks and balances",
+        "each branch can limit the others. For example, the president can veto a law passed by Congress, and the Senate must approve top officials."
+      ]
+    ],
+    "remember": "The Constitution shared power between nation and states, and split and checked power inside the national government.",
+    "a": {
+      "q": "Why did the Constitution divide power among three branches?",
+      "opts": [
+        "So that no single group could hold all national power",
+        "So that the states could no longer have any powers",
+        "So that the national government could stay weak",
+        "So that the president could make laws without Congress"
+      ],
+      "why": "The framers feared any one group holding all power, so they split it among Congress, the president and the courts. The states kept some powers, so the aim was not to remove them, and the new government gained powers such as taxing, so it was not meant to stay weak.",
+      "clue": "Look at what the card says the framers wanted to avoid."
+    },
+    "b": {
+      "d": 3,
+      "q": "Congress passes a law and the president vetoes it. Which feature of the Constitution does this show?",
+      "opts": [
+        "Checks and balances, as one branch limits another",
+        "Federalism, as the states limit the national government",
+        "Separation of powers only, as the branches never overlap",
+        "The Articles of Confederation, as Congress had no power"
+      ],
+      "why": "The president is using a power to limit what Congress has done, which is a check by one branch on another. It is not federalism, because no state government is involved in the veto.",
+      "clue": "Which two parts of government are pulling against each other?"
+    }
+  },
+  "mod-bill-rights": {
+    "title": "The Bill of Rights",
+    "card": [
+      "Many people feared the new national government could threaten freedoms, as Britain's rule had. Some states hesitated to accept the Constitution without protections.",
+      "To answer this, Congress proposed amendments (formal changes to the Constitution). The first ten, adopted in 1791, are called the Bill of Rights.",
+      "They protect rights such as freedom of speech, freedom of religion and a fair trial by jury. They limit what the national government can do to people.",
+      "The Bill of Rights was added after the Constitution was written, as a written guard against government overreach."
+    ],
+    "remember": "The Bill of Rights is the first ten amendments, added to guard individual freedoms from the national government.",
+    "a": {
+      "q": "Why was the Bill of Rights added to the Constitution?",
+      "opts": [
+        "To protect freedoms from the national government",
+        "To give the national government new powers over states",
+        "To set up the three branches of the national government",
+        "To bring the war with Britain to a formal end"
+      ],
+      "why": "People worried a strong national government might threaten freedoms, so written protections were added. The three branches were already in the original Constitution, so they were not the reason.",
+      "clue": "Think about what people feared from a strong national government."
+    },
+    "b": {
+      "d": 2,
+      "q": "Congress passes a law banning a newspaper from printing criticism of the president. Which protection in the Bill of Rights does this go against?",
+      "opts": ["Freedom of speech", "Trial by jury", "Freedom of religion", "The power to tax"],
+      "why": "Printing criticism is a form of free expression, and the Bill of Rights limits the national government, including Congress, from restricting it. Freedom of religion covers beliefs and worship, so it does not fit this case.",
+      "clue": "The newspaper is expressing its views."
+    }
+  },
+  "mod-leaders-new-nation": {
+    "title": "Leaders of the new nation",
+    "card": [
+      [
+        "George Washington",
+        "Presided over the Constitutional Convention in 1787 and became the first president in 1789. He usually sided with Hamilton, and set examples for the office, such as serving only two terms."
+      ],
+      [
+        "James Madison",
+        "Did much to plan the Constitution, then wrote essays with Hamilton and John Jay urging the states to ratify it. In the 1790s he opposed Hamilton's plans as giving the national government too much power."
+      ],
+      [
+        "Alexander Hamilton",
+        "Wanted a strong national government and urged ratification. As Washington's first Treasury secretary, he got it to take on the states' war debts and to set up a national bank."
+      ],
+      [
+        "Patrick Henry",
+        "A Virginian who led the fight against ratification in his state in 1788. He feared a strong national government would threaten the liberty of the states and their people."
+      ]
+    ],
+    "remember": "The leaders argued over the national government's power, first over ratifying the Constitution, then over Hamilton's plans.",
+    "a": {
+      "q": "In the 1788 debate over ratifying the Constitution, what was Patrick Henry's main objection to it?",
+      "opts": [
+        "He feared it gave the national government too much power",
+        "He feared it gave the national government too little power",
+        "He thought it gave the state governments too much power",
+        "He thought it gave the president too little power to act"
+      ],
+      "why": "Henry feared that a strong national government would threaten the liberty of the states and their people. The opposite worry, that the national government was too weak, is what led Madison and Hamilton to back the Constitution.",
+      "clue": "Think about what he wanted to protect."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student writes that Madison and Hamilton were on opposite sides from the start. Which fact from 1787 and 1788 shows this is wrong?",
+      "opts": [
+        "Both wrote essays that urged ratifying the Constitution",
+        "Both feared a strong national government, as Henry did",
+        "Both refused to take part in the Constitutional Convention",
+        "Both called for keeping the Articles of Confederation"
+      ],
+      "why": "In 1787 and 1788 Madison and Hamilton were allies who wrote essays urging the states to ratify the Constitution. Their split came later, in the 1790s, over Hamilton's plans as Treasury secretary. It was Henry, not they, who feared a strong national government.",
+      "clue": "Their split came in the 1790s. What were they doing before it?"
+    }
+  },
+  "mod-who-revolution-left-out": {
+    "title": "Who the revolution left out",
+    "card": [
+      [
+        "Loyalists",
+        "Loyalists stayed loyal to Britain. Many lost homes and land, and tens of thousands left the new United States for Britain, Canada or elsewhere."
+      ],
+      [
+        "Enslaved people",
+        "Slavery continued in much of the new nation. Some northern states began to end it, but most enslaved people stayed in bondage, mainly in the South."
+      ],
+      [
+        "Women",
+        "Women were praised for supporting the cause, but they gained few new legal or political rights. Most could not vote, and married women had little legal control over property."
+      ],
+      [
+        "Native Americans",
+        "Native nations gained little. Many had sided with Britain, and the new nation's growth westward put pressure on their lands."
+      ]
+    ],
+    "remember": "Loyalists lost out, while enslaved people, women and Native Americans gained little from the revolution.",
+    "a": {
+      "q": "What happened to most enslaved people in the new United States after the revolution?",
+      "opts": [
+        "They stayed enslaved, mainly in the South",
+        "They were freed across the whole nation",
+        "They gained the vote in the northern states",
+        "They were sent to Canada with the loyalists"
+      ],
+      "why": "Slavery continued in much of the new nation, and most enslaved people stayed in bondage. Some northern states began to end slavery, but that did not free people across the whole nation.",
+      "clue": "Only some northern states began to act."
+    },
+    "b": {
+      "d": 3,
+      "q": "Hannah lived in Massachusetts in 1785. She was married, had supported the patriot cause and helped her husband run their farm. Which statement best describes how the revolution affected women like her?",
+      "opts": [
+        "She was honoured for her support but gained few new rights",
+        "She gained full political rights through her wartime support",
+        "She lost her land because she backed the patriot cause",
+        "She was treated as a loyalist because she was a woman"
+      ],
+      "why": "Women were praised for backing the cause but gained few new legal or political rights, and as a married woman she had little legal control over property. Her support did not lead to the vote, so the option claiming full political rights is wrong, even though her role was valued.",
+      "clue": "Praise and new rights are not the same thing."
+    }
+  },
+  "mod-change-continuity-america": {
+    "title": "Change and continuity in America",
+    "card": [
+      "Change means something was different at the end of a period from the start. Continuity means something stayed much the same. Historians judge both by comparing two dates, here 1754 and 1789.",
+      [
+        "Change",
+        "In 1754 the colonies were ruled by Britain and its king. By 1789 the United States was a republic with its own constitution, elected leaders and separated powers."
+      ],
+      [
+        "Continuity",
+        "Slavery continued in much of the new nation. Women still had few political rights, and wealthy white men still held most power in society."
+      ],
+      "A revolution can change government greatly and leave much of society as it was. Judging it means weighing both, not choosing one."
+    ],
+    "remember": "Between 1754 and 1789 government changed greatly, but much of society, including slavery, stayed the same.",
+    "a": {
+      "q": "Which of these is an example of continuity between 1754 and 1789?",
+      "opts": [
+        "Wealthy white men held most power in society",
+        "The nation was a republic with no king at its head",
+        "The nation was governed under its own constitution",
+        "Power was split between separate branches"
+      ],
+      "why": "Wealthy white men held most power in 1754 and still did in 1789, so this stayed the same. A republic, a national constitution and separated powers were all new by 1789, so they show change, not continuity.",
+      "clue": "Which one was true in 1754 as well as in 1789?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A student claims the American Revolution changed everything in colonial life. Which reply best uses the idea of change and continuity?",
+      "opts": [
+        "Government changed greatly, but slavery largely remained",
+        "Society changed greatly, but Britain still ruled",
+        "Government and society both stayed much the same",
+        "Government changed little, but slavery ended everywhere"
+      ],
+      "why": "By 1789 government had changed from British rule to a republic, yet slavery remained in much of the nation. The reply that society changed while Britain still ruled reverses this: Britain no longer ruled by 1789, and much of society stayed the same.",
+      "clue": "Check which parts of America were different in 1789 and which were not."
+    }
+  },
+  "mod-old-regime": {
+    "title": "The Old Regime",
+    "card": [
+      "The Old Regime is the name given to France's system of rule and society before 1789. The king held absolute power, and society was divided into three orders called estates.",
+      [
+        "First and Second Estates",
+        "the clergy and the nobles. They held privileges, which were special rights and exemptions, and they paid little of the main direct tax, the taille."
+      ],
+      [
+        "Third Estate",
+        "everyone else, from peasants and city workers to lawyers and merchants. It was by far the largest estate and paid most of the taxes, and even its rich members lacked privileges."
+      ],
+      "People joined the clergy by becoming priests, monks or nuns. Most nobles inherited their rank, but some rich commoners bought offices that made them noble."
+    ],
+    "remember": "The clergy and nobles held privileges, while the tax burden fell mainly on the Third Estate.",
+    "a": {
+      "q": "What mainly set the First and Second Estates apart from the Third Estate under the Old Regime?",
+      "opts": [
+        "They held privileges and paid little of the main direct tax",
+        "They were richer than every member of the Third Estate",
+        "They made up most of the French population",
+        "They chose the king's ministers by vote"
+      ],
+      "why": "The clergy and nobles held special rights and exemptions, including from most direct tax. The option about wealth is tempting, but some Third Estate members were rich, so wealth was not what divided the estates.",
+      "clue": "Which difference held for every member, not just some?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Antoine is a wealthy merchant in Lyon in 1788. He owns several ships and a large house. He is not a priest and holds no noble rank or office. Which estate is he in, and why?",
+      "opts": [
+        "Third Estate, as he is neither a cleric nor a noble",
+        "Second Estate, as his wealth gives him noble rights",
+        "First Estate, as merchants paid taxes to the church",
+        "Second Estate, as merchants were exempt from the taille"
+      ],
+      "why": "Antoine is not a member of the clergy and has no noble rank, so he belongs to the Third Estate and lacks the privileges of the first two. The wealth option is tempting, but his money did not by itself make him noble. He would first need to gain noble status, for example by buying an office that made him noble.",
+      "clue": "Look at how people joined the first two estates."
+    }
+  },
+  "mod-royal-debt-financial-crisis": {
+    "title": "Royal debt and financial crisis",
+    "card": [
+      "By the 1780s the French crown spent much more than it earned. It had borrowed heavily to cover the gap.",
+      "Wars were the main cause of the debt. France fought several costly wars in the 1700s, including the Seven Years' War, which it lost.",
+      "France also helped the American colonists against Britain, with money, supplies, soldiers and a navy. This war added a very large sum to the debt.",
+      "Much of the crown's income then went to paying interest on past loans. The crown was close to bankruptcy, which meant it needed new ways to raise money."
+    ],
+    "remember": "Costly wars, including aid to America, left the crown close to bankruptcy.",
+    "a": {
+      "q": "Which statement best explains why the French crown was close to bankruptcy in the 1780s?",
+      "opts": [
+        "It had borrowed to pay for costly wars and owed interest",
+        "It had spent most of its income on royal palaces and feasts",
+        "It had spent its savings on rebuilding Paris after a fire",
+        "It had paid huge sums to Britain after winning a war"
+      ],
+      "why": "Wars were the main cause of the debt, and the crown borrowed to fund them. The interest on those loans then took much of its income. Court spending on palaces is a common belief, but the card names wars as the main cause.",
+      "clue": "Think about how the crown paid for its wars."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says France's help to the American colonists gave it glory at little cost. What is the best reply?",
+      "opts": [
+        "The aid added a very large sum to an already heavy debt",
+        "The aid was cheap, as France sent only money and supplies",
+        "The aid cost little, as Britain repaid France after the war",
+        "The aid mattered little, as France had no debts before it"
+      ],
+      "why": "France sent money, supplies, soldiers and a navy, and this war added a very large sum to a debt already built up by earlier wars. The claim that France sent only money and supplies is tempting, but France also sent soldiers and a navy.",
+      "clue": "Recall what France sent and what the war did to the debt."
+    }
+  },
+  "mod-crisis-1787-1788": {
+    "title": "The crisis of 1787 and 1788",
+    "card": [
+      "By 1787 the crown was short of money. Finance minister Calonne proposed a tax on land that nobles and clergy would also have to pay.",
+      "Calonne first called an Assembly of Notables, a hand-picked group of nobles and clergy, to approve the plan. They refused. The Parlements, the high law courts staffed by nobles, later also refused to register new taxes.",
+      "This was a revolt by the privileged orders, who wanted to protect their own tax exemptions. Many of them said only the Estates-General, a national assembly of the three estates, could approve new taxes.",
+      "On 7 June 1788, in the Day of Tiles at Grenoble, townspeople threw roof tiles at royal troops to back their Parlement. In August 1788 the king agreed to call the Estates-General, which had not met since 1614, for May 1789."
+    ],
+    "remember": "The privileged orders resisted tax reform and crowds backed a Parlement, and then the king agreed to call the Estates-General.",
+    "a": {
+      "q": "Why did the Assembly of Notables and the Parlements resist the crown's tax plans in 1787 and 1788?",
+      "opts": [
+        "They wanted to keep their own exemptions from tax",
+        "They wanted the Third Estate to gain equal votes",
+        "They believed the crown had no need for more money",
+        "They wanted the king replaced by a republic"
+      ],
+      "why": "The plan would have made nobles and clergy pay a land tax, so they defended their privileges. They did not deny the crown's money problems, and they were not seeking to help the Third Estate or end the monarchy.",
+      "clue": "Who would have paid the new land tax?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1788 a crowd in Grenoble threw roof tiles at royal troops. What does this Day of Tiles show about the crisis?",
+      "opts": [
+        "Opposition to the crown had spread beyond the nobles",
+        "The nobles had accepted the crown's tax reform",
+        "Peasants had begun attacking noble estates",
+        "The king had already called the Estates-General"
+      ],
+      "why": "Townspeople backed their Parlement against the crown's troops, so resistance was no longer limited to nobles. The crowd was supporting a noble court, not attacking nobles, and the nobles were still refusing the tax plan. The king agreed to call the Estates-General in August, after the Day of Tiles, not before.",
+      "clue": "Think about who threw the tiles and whom they supported."
+    }
+  },
+  "mod-enlightenment-ideas-france": {
+    "title": "Enlightenment ideas in France",
+    "card": [
+      "The Enlightenment was an 18th-century movement that used reason to question traditional authority. In France its writers were called philosophes.",
+      [
+        "Voltaire",
+        "attacked the power and intolerance of the Catholic Church and argued for freedom of speech and religious toleration."
+      ],
+      [
+        "Rousseau",
+        "argued in The Social Contract that power comes from the people, so a ruler is legitimate only with the people's consent."
+      ],
+      "These ideas spread through books, salons and cafés to educated readers beyond the nobles and clergy. They did not cause the revolution on their own, but gave critics of absolute monarchy and privilege arguments that the old order was unjust."
+    ],
+    "remember": "Philosophes used reason to challenge the king, privilege and the church, and gave critics ideas to argue with.",
+    "a": {
+      "q": "Which idea from Rousseau's The Social Contract challenged absolute monarchy?",
+      "opts": [
+        "A ruler's authority depends on the consent of the people",
+        "A king rules because he has been chosen by God",
+        "Nobles should rule because of their birth and experience",
+        "Freedom of the press matters more than who governs"
+      ],
+      "why": "Rousseau argued that power comes from the people, so a king without their consent has no rightful claim. The divine right claim is the very idea that absolute monarchy relied on, so it is the opposite of his view.",
+      "clue": "Where did Rousseau say a ruler's power comes from?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A Paris lawyer in 1780 reads Voltaire and begins to criticise church power and religious intolerance. Which statement best describes the effect of such ideas?",
+      "opts": [
+        "They gave critics reasons to question long-held authority",
+        "They caused the revolution directly by themselves",
+        "They made readers more loyal to the Catholic Church",
+        "They were read only by nobles and clergy in Paris"
+      ],
+      "why": "Enlightenment writing gave people like the lawyer arguments against traditional authority, including the church. It did not cause the revolution on its own: ideas shaped how critics argued, but they did not make events happen by themselves. The ideas also reached educated readers beyond the nobles and clergy.",
+      "clue": "Ideas change how people argue. Can they make events happen alone?"
+    }
+  },
+  "mod-leaders-before-revolution": {
+    "title": "Leaders before the revolution",
+    "card": [
+      [
+        "The king and queen",
+        "Louis XVI, king from 1774, held absolute power but was indecisive. He often backed down when nobles resisted reform. Marie Antoinette, his Austrian-born queen, was distrusted as a foreigner and blamed for court spending."
+      ],
+      [
+        "Necker",
+        "A Swiss-born banker who served as finance minister. He borrowed heavily instead of raising taxes, and in 1781 he published accounts that made the crown's finances look healthier than they were."
+      ],
+      [
+        "Sieyès",
+        "A priest and writer. In his 1789 pamphlet What Is the Third Estate? he argued that the Third Estate was the true nation."
+      ],
+      [
+        "Lafayette",
+        "A noble who had fought for the Americans in their revolution. He returned to France as a supporter of reform and of limits on royal power."
+      ]
+    ],
+    "remember": "Some leaders shaped the crisis by weakness or poor choices. Others gave the reformers ideas and support.",
+    "a": {
+      "q": "Why did Sieyès matter in the lead-up to the revolution?",
+      "opts": [
+        "He argued the Third Estate was the true nation",
+        "He ran the crown's finances and borrowed for wars",
+        "He was a noble who had fought in the American Revolution",
+        "He published accounts that made the finances look healthy"
+      ],
+      "why": "Sieyès wrote What Is the Third Estate?, which gave the Third Estate a case for its claim to power. Running the finances and publishing the 1781 accounts were Necker's work, and Lafayette was the noble who fought in America.",
+      "clue": "Think about what Sieyès wrote in his pamphlet."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says Necker made the crown's money problems worse before 1789. Which fact from his time as finance minister best supports this?",
+      "opts": [
+        "He borrowed heavily instead of raising taxes",
+        "He raised taxes on the Third Estate to pay for wars",
+        "He wrote a pamphlet calling the Third Estate the nation",
+        "He fought in the American Revolution and returned home"
+      ],
+      "why": "Necker relied on loans rather than taxes, so the crown's debt kept growing. He did not raise taxes to pay for wars: he borrowed instead. The pamphlet was Sieyès's work, and fighting in America was Lafayette's.",
+      "clue": "Ask whether Necker paid for things with loans or with taxes."
+    }
+  },
+  "mod-estates-general-1789": {
+    "title": "The Estates-General of 1789",
+    "card": [
+      "The Estates-General was an assembly of deputies from the three estates: clergy, nobles and the Third Estate. It had not met since 1614.",
+      "Louis XVI called it to solve the crisis, and it opened at Versailles in May 1789. The Third Estate had about as many deputies as the other two estates combined.",
+      "It deadlocked over voting. One vote per estate let the clergy and nobles outvote the Third Estate two to one, while one vote per deputy, in a joint meeting, would give the Third Estate half the votes.",
+      "In June 1789, after weeks of stalemate, the Third Estate declared itself the National Assembly. It claimed to speak for the whole nation and acted without waiting for the other estates or the king."
+    ],
+    "remember": "A deadlock over voting led the Third Estate to claim power for the nation as the National Assembly.",
+    "a": {
+      "q": "Why did the Third Estate want one vote per deputy, not one vote per estate?",
+      "opts": [
+        "It would hold half the votes instead of one in three",
+        "It had fewer deputies than the other two estates combined",
+        "It wanted each estate to meet and vote on its own",
+        "It would let the king break deadlocks between estates"
+      ],
+      "why": "With one vote per estate, the Third Estate held one vote in three, so the clergy and nobles could outvote it. Its deputies matched the other two estates combined, so one vote per deputy would give it half the votes. It did not have fewer deputies, which is why the method mattered so much.",
+      "clue": "Count its share of the votes each way."
+    },
+    "b": {
+      "d": 3,
+      "q": "On 17 June 1789 the Third Estate declared itself the National Assembly. Why do historians see this as a revolutionary step?",
+      "opts": [
+        "It claimed to speak for the nation, not just one estate",
+        "It accepted that each estate would vote on its own",
+        "It handed the voting dispute back to the king to settle",
+        "It let the clergy and nobles block whatever it decided"
+      ],
+      "why": "The deputies claimed authority from the whole nation and acted without the other estates or the king, which broke with the old order. They did not accept voting by estate, and they did not hand the dispute back to the king to settle.",
+      "clue": "Whose approval did it stop waiting for?"
+    }
+  },
+  "mod-fall-bastille": {
+    "title": "The fall of the Bastille",
+    "card": [
+      "The Bastille was a royal fortress and prison in Paris. It stood for the king's power, but it held only a few prisoners in 1789.",
+      "By July 1789 the Estates-General had already met and become the National Assembly. The king then moved troops towards Paris and dismissed the minister Necker, so many Parisians feared the crown would use force.",
+      "On 14 July a crowd searched for weapons and gunpowder. It first took muskets from the Invalides, then attacked the Bastille, where the governor surrendered after fighting.",
+      "The crown had lost control of the capital. The event showed that Parisians would act by force, and 14 July became a symbol of the revolution."
+    ],
+    "remember": "Fear of royal troops and a hunt for gunpowder led to the attack, and its success showed the king no longer held Paris.",
+    "a": {
+      "q": "Why was the fall of the Bastille important for the crown?",
+      "opts": [
+        "It showed the crown had lost control of Paris",
+        "It showed most Parisians still backed the king",
+        "It freed many political prisoners held in Paris",
+        "It forced the king to call the Estates-General"
+      ],
+      "why": "A crowd took a royal fortress by force, and the king's authority in the capital failed. Freeing prisoners is tempting, but the Bastille held only a few. The Estates-General had already met before July 1789.",
+      "clue": "Check the order of events in 1789, and what the fortress held."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which best explains why the crowd attacked the Bastille on 14 July 1789?",
+      "opts": [
+        "They sought gunpowder and feared an attack by royal troops",
+        "They sought to free the many political prisoners held there",
+        "They sought to stop the Assembly and feared losing the king",
+        "They sought to punish nobles and feared losing their land"
+      ],
+      "why": "The king had moved troops near Paris and dismissed Necker, so Parisians feared force and hunted for weapons and gunpowder. Freeing many prisoners is the tempting wrong choice, as the Bastille held only a few. The crowd was defending the Assembly, not trying to stop it.",
+      "clue": "What had the crowd already taken earlier that same day?"
+    }
+  },
+  "mod-peasants-workers-great-fear": {
+    "title": "Peasants, workers and the Great Fear",
+    "card": [
+      "In 1788 and 1789, poor harvests pushed up the price of bread. Bread was the main food of poor families, so many Parisian workers went hungry and angry.",
+      "In the countryside, peasants still paid dues and taxes to lords and the church. In mid-1789 many peasants attacked noble estates, and some burned records of the dues they owed.",
+      "Rumours spread that nobles had hired armed men to crush the peasants. Fear moved quickly from village to village and led to more attacks. This panic in the countryside is called the Great Fear.",
+      "These actions came from ordinary people, not from the Assembly. They showed that the revolution could not be controlled from above, and they pushed the new National Assembly to act on privilege."
+    ],
+    "remember": "Hunger and anger among workers and peasants moved the revolution beyond politicians.",
+    "a": {
+      "q": "Why was the Great Fear important to the course of the revolution?",
+      "opts": [
+        "Peasant action pushed the Assembly to act on privilege",
+        "It was a plan by the Assembly to remove the king from power",
+        "It ended the unrest as peasants began to trust their lords",
+        "It was a revolt by Paris workers against high bread prices"
+      ],
+      "why": "Attacks on estates and fear across the countryside showed that ordinary people were acting on their own, and this pushed the Assembly to act on privilege. The option saying it was an Assembly plan is wrong, because these actions came from ordinary people, not the Assembly. The Great Fear was a panic among rural peasants, not a revolt by Paris workers.",
+      "clue": "Who acted in the Great Fear, and who then had to respond?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In July 1789, villagers near Lyon burn the records of dues they owe to a local lord after hearing a rumour of hired armed men. What does this best show?",
+      "opts": [
+        "Peasants acted on their own grievances and fears",
+        "The Assembly had ordered peasants to attack nobles",
+        "Bread prices had fallen, so peasants felt confident",
+        "Nobles had given up their dues of their own free will"
+      ],
+      "why": "Burning the records targets the dues peasants resented, and the rumour of armed men shows the fear that drove the Great Fear. Both point to action by peasants themselves. The option saying the Assembly ordered the attacks is wrong, because these actions came from ordinary people, not from the Assembly.",
+      "clue": "Think about who started the attacks and what they were angry about."
+    }
+  },
+  "mod-end-feudal-privilege": {
+    "title": "The end of feudal privilege",
+    "card": [
+      "Before 1789, peasants owed feudal dues to their lords, such as payments in money or crops and unpaid labour. Nobles and clergy also held privileges, such as exemption from some taxes.",
+      "In the summer of 1789, peasants in many regions attacked manor houses and burned records of dues. This panic is called the Great Fear. It pushed the National Constituent Assembly to act.",
+      "On the night of 4 August 1789, liberal nobles proposed giving up their dues and privileges, and the Assembly voted to abolish them. Later decrees made some dues payable by buying them out, so peasants did not gain at once in every case.",
+      "The decision ended the legal ranks of the old order, where birth gave some people special rights. Careers were to be open to talent, and everyone was to pay taxes on the same terms."
+    ],
+    "remember": "Under pressure from peasant unrest, the Assembly abolished birth-based privilege in August 1789, though some dues still had to be bought out.",
+    "a": {
+      "q": "Why did the Assembly vote to end feudal dues and privileges in August 1789?",
+      "opts": [
+        "Rural revolts against lords alarmed the deputies",
+        "The king ordered reform to win back public trust",
+        "Foreign rulers demanded reform as a condition of peace",
+        "Town workers went on strike for lower taxes"
+      ],
+      "why": "During the Great Fear, attacks on manor houses and the burning of records of dues alarmed the Assembly, and liberal nobles then proposed giving up their privileges. The king did not order the change, and the push came from the countryside, not from foreign rulers or town strikes.",
+      "clue": "Where was the unrest that worried the deputies happening?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Before August 1789, Marc, a peasant in Burgundy, paid his lord part of every harvest. After the vote of 4 August, what was the change in principle?",
+      "opts": [
+        "His dues to the lord were abolished by law",
+        "His dues went to the state instead of the lord",
+        "His lord lost tax exemptions but kept his dues",
+        "All his dues ended at once with nothing to pay"
+      ],
+      "why": "In principle the Assembly abolished feudal dues and noble privileges together, not just one of them, and the dues were ended rather than passed to the state. It is tempting to think every due ended at once for free, but later decrees made some dues payable by buying them out.",
+      "clue": "Separate what the vote said from what peasants had to do later."
+    }
+  },
+  "mod-declaration-rights-man": {
+    "title": "The Declaration of the Rights of Man",
+    "card": [
+      "The National Assembly passed the Declaration of the Rights of Man and of the Citizen in August 1789. It set out the principles the new France would be built on.",
+      [
+        "Liberty",
+        "people have natural rights, such as freedom of speech and freedom from arbitrary arrest. Liberty is limited only by the rights of others."
+      ],
+      [
+        "Equality before the law",
+        "the law is the same for everyone, and public office is open to people on merit, not birth. This ended the idea that nobles and commoners are judged differently."
+      ],
+      [
+        "Sovereignty of the nation",
+        "final authority belongs to the nation, not to the king. The king's power now came from the people and the law."
+      ]
+    ],
+    "remember": "The declaration put rights and the nation above birth and the king.",
+    "a": {
+      "q": "Which idea in the declaration challenged the king's claim to rule by his own right?",
+      "opts": ["Sovereignty of the nation", "Equality before the law", "Liberty of speech", "Public office open on merit"],
+      "why": "Sovereignty of the nation placed final authority in the nation, so the king's power came from the people and the law. Equality before the law is tempting, but it is about how people are treated by the law, not about who holds final authority.",
+      "clue": "Think about who holds final authority."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1790 a court in Lyon gives a noble and a baker the same punishment for the same theft. Which principle of the declaration does this show?",
+      "opts": [
+        "Equality before the law",
+        "Sovereignty of the nation",
+        "Liberty from arbitrary arrest",
+        "Natural rights limited by others"
+      ],
+      "why": "The same law is applied to both people whatever their birth, which is equality before the law. Liberty from arbitrary arrest is tempting, but the case is about equal treatment, not about being detained without lawful reason.",
+      "clue": "Focus on the noble and the baker receiving the same treatment."
+    }
+  },
+  "mod-october-days": {
+    "title": "The October Days",
+    "card": [
+      "By October 1789 Paris had a bread shortage and prices were high. Many women who bought and sold food in the markets were angry and hungry.",
+      "On 5 October thousands of Parisian women marched about 20 kilometres to Versailles, where the king lived. They demanded bread and were joined by National Guardsmen under Lafayette.",
+      "The crowd also pressed the king to accept the August decrees and the Declaration of the Rights of Man. Some crowd members broke into the palace. Under this pressure, on 6 October the royal family agreed to move to Paris.",
+      "The royal family settled in the Tuileries Palace. The king was now close to the people of Paris, and the Assembly soon followed him there."
+    ],
+    "remember": "Hunger drove Parisian women to Versailles, and pressure from the crowd moved the king and the Assembly to Paris.",
+    "a": {
+      "q": "What was the main cause of the women's march to Versailles on 5 October 1789?",
+      "opts": [
+        "Scarce, costly bread that left many families hungry",
+        "Anger that the king had shut down the National Assembly",
+        "Fear that the king was about to flee from Paris",
+        "A plan to end the monarchy and set up a republic"
+      ],
+      "why": "The march grew out of a bread shortage and high prices, and the women went to demand bread. The Assembly still existed and soon followed the king to Paris, so it had not been shut down. The king lived at Versailles, not Paris, and he stayed king after the move.",
+      "clue": "Think about conditions in Paris before the march."
+    },
+    "b": {
+      "d": 3,
+      "q": "Marie says the October Days were only a food protest with no political result. Which fact from the events best challenges her view?",
+      "opts": [
+        "The royal family was brought from Versailles to Paris",
+        "The crowd marched about 20 kilometres to Versailles",
+        "The women were joined by National Guardsmen",
+        "The march began over a shortage of bread"
+      ],
+      "why": "Moving the royal family to Paris placed the king near the people and the Assembly followed, which changed the balance of power. Bread shortages were the cause of the march, so they support Marie's view rather than challenge it.",
+      "clue": "Look for an outcome, not a cause."
+    }
+  },
+  "mod-civil-constitution-clergy": {
+    "title": "The Civil Constitution of the Clergy",
+    "card": [
+      "The Civil Constitution of the Clergy was passed in July 1790. It reorganised the Catholic Church in France under the control of the state.",
+      "Dioceses were redrawn to match the new departments. Bishops and parish priests were to be elected by voters, and the state would pay their salaries.",
+      "In November 1790 the Assembly required clergy to swear an oath of loyalty to the constitution. The Pope condemned the reform in 1791.",
+      "Clergy who took the oath were called jurors. Those who refused were called non-jurors. About half of the parish clergy refused, so the clergy split and many Catholics came to oppose the revolution."
+    ],
+    "remember": "The state took control of the church, the clergy split over the oath, and many Catholics turned against the revolution.",
+    "a": {
+      "q": "Why did the Civil Constitution of the Clergy divide the clergy?",
+      "opts": [
+        "It made them swear an oath to a state-controlled church",
+        "It ended their salaries and left them to live on tithes",
+        "It banned the Catholic faith and closed all parish churches",
+        "It made the Pope the head of the church in place of the king"
+      ],
+      "why": "The reform placed the church under state control and required an oath to the constitution. Many priests accepted this, while many refused, which split the clergy. It did not ban Catholicism or end their pay: the state paid the clergy's salaries.",
+      "clue": "Did the reform end the church, or change who it answered to?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1791 Father Luc, a village priest in western France, refuses the oath, and most of his parishioners support him. What does this best show about the reform?",
+      "opts": [
+        "It turned many ordinary Catholics against the revolution",
+        "It was welcomed by most clergy and by most Catholics",
+        "It was rejected by the clergy but accepted by villagers",
+        "It ended the Pope's influence over French Catholics"
+      ],
+      "why": "Father Luc is a non-juror, and his parishioners back him. This shows how a reform of the church led many ordinary Catholics to oppose the revolution. The reform was not widely welcomed: about half of the parish clergy refused the oath, and the Pope condemned it.",
+      "clue": "Consider whose side the parishioners took."
+    }
+  },
+  "mod-end-monarchy": {
+    "title": "The end of the monarchy",
+    "card": [
+      "In June 1791 Louis XVI and his family tried to flee Paris in secret, but they were stopped at Varennes and brought back. Many French people now doubted that the king supported the revolution.",
+      "In April 1792 France declared war on Austria. Early defeats led many to suspect the king and queen of siding with the enemy.",
+      "On 10 August 1792 a Parisian crowd attacked the Tuileries palace, and the Assembly suspended the king. The monarchy fell and France became a republic a few weeks later.",
+      "Louis XVI was put on trial as a traitor to the nation. He was found guilty and executed by guillotine in January 1793."
+    ],
+    "remember": "The flight cost the king trust, the war turned distrust into attack, and the new republic executed him.",
+    "a": {
+      "q": "Why did the king's attempted flight in 1791 weaken the monarchy?",
+      "opts": [
+        "It made many people doubt he backed the revolution",
+        "It showed that he had joined the Austrian army",
+        "It led the Assembly to abolish the monarchy at once",
+        "It caused France to declare war on Austria that week"
+      ],
+      "why": "By trying to escape in secret, Louis made many French people doubt his loyalty to the revolution. The monarchy did not end at once: it fell over a year later, after the war began and the Tuileries was attacked.",
+      "clue": "Think about what secret flight suggested about his loyalty."
+    },
+    "b": {
+      "d": 3,
+      "q": "Why did France's early defeats in the war with Austria in 1792 help bring down the monarchy?",
+      "opts": [
+        "They made many suspect the king and queen backed the enemy",
+        "They forced the king to give up his throne to Austria",
+        "They showed that a republic could not win a war",
+        "They led the Assembly to put the king on trial that month"
+      ],
+      "why": "Defeats fed suspicion that the royal family sided with Austria, which led to the attack on the Tuileries on 10 August 1792. The trial came later, after the monarchy had already fallen.",
+      "clue": "Ask who people blamed for the defeats."
+    }
+  },
+  "mod-terror": {
+    "title": "The Terror",
+    "card": [
+      "The Terror was a period in 1793 and 1794 when the government used fear and force to defend the revolution. France was at war with other European powers and faced revolt at home.",
+      "The Committee of Public Safety, a small group of leaders, held great power. It was backed by the Convention, the elected assembly.",
+      "The Law of Suspects of September 1793 allowed the arrest of people thought to be enemies of the revolution. Revolutionary tribunals tried them, and many were executed, some by the guillotine.",
+      "Its supporters said these measures were needed to save the republic from invasion and civil war. Tens of thousands died, and many more were held in prison."
+    ],
+    "remember": "The Terror used arrests and executions to defend a republic under threat from war and revolt.",
+    "a": {
+      "q": "Which statement best describes the purpose of the Terror, as its supporters saw it?",
+      "opts": [
+        "To defend the republic from enemies at home and abroad",
+        "To punish the nobles for their past feudal privileges",
+        "To spread the revolution by conquering nearby states",
+        "To replace the elected Convention with a small committee"
+      ],
+      "why": "Its supporters argued that war abroad and revolt at home meant harsh measures were needed to save the republic. Some nobles were among the victims, but supporters justified the Terror as defence, not as punishment for the past. The Committee worked with the backing of the Convention rather than replacing it.",
+      "clue": "Look at the dangers the card says France faced in 1793."
+    },
+    "b": {
+      "d": 2,
+      "q": "In November 1793 Henri, a shopkeeper in Paris, is arrested because neighbours say he opposes the revolution. Which measure allowed this?",
+      "opts": [
+        "The Law of Suspects",
+        "The abolition of feudal dues",
+        "The Declaration of the Rights of Man",
+        "The Civil Constitution of the Clergy"
+      ],
+      "why": "The Law of Suspects, passed in September 1793, allowed people thought to be enemies of the revolution to be arrested and tried. The Declaration of the Rights of Man is a tempting choice because it is a famous revolutionary text, but it dates from 1789 and did not set up arrests of suspects.",
+      "clue": "Which measure was passed during the Terror itself?"
+    }
+  },
+  "mod-robespierre": {
+    "title": "Leaders of the revolution",
+    "card": [
+      [
+        "Danton",
+        "A lawyer and powerful speaker who helped form the Paris Commune's radical politics in 1792. He joined the first Committee of Public Safety in 1793, later argued for an end to the harsh measures, and was executed in April 1794."
+      ],
+      [
+        "Marat",
+        "A journalist whose paper, L'Ami du peuple, attacked the king, nobles and officials he saw as enemies of the people. Charlotte Corday, who opposed the Jacobins, stabbed him in July 1793."
+      ],
+      [
+        "Robespierre",
+        "A lawyer and Jacobin who sat on the Committee of Public Safety from July 1793. He pushed for the Terror as a way to defend the republic and its virtue."
+      ],
+      "In July 1794 the Convention turned on Robespierre. He was arrested and guillotined, and the Terror ended soon after."
+    ],
+    "remember": "All three pushed the radical revolution, but only Robespierre drove the Terror until it destroyed him.",
+    "a": {
+      "q": "Which statement about Robespierre is correct?",
+      "opts": [
+        "He drove the Terror and was executed in July 1794",
+        "He was killed by Charlotte Corday in July 1793",
+        "He was executed in April 1794 for urging less harshness",
+        "He led the Paris Commune and wrote L'Ami du peuple"
+      ],
+      "why": "Robespierre was on the Committee of Public Safety, pushed the Terror and was guillotined in July 1794 after the Convention turned on him. The Corday option describes Marat, and the April 1794 option describes Danton.",
+      "clue": "Think of who was on the Committee and who fell after the Convention turned on him."
+    },
+    "b": {
+      "d": 3,
+      "q": "In early 1794 a deputy argues that the harsh measures have gone far enough and should ease. He is arrested and executed that April. Which leader does this describe?",
+      "opts": ["Danton", "Marat", "Robespierre", "Charlotte Corday"],
+      "why": "Danton called for an end to the harsh measures and was executed in April 1794. Marat was already dead, killed in July 1793. Robespierre drove the Terror and fell in July 1794.",
+      "clue": "Who was already dead by 1794, and who pushed the Terror on?"
+    }
+  },
+  "mod-revolution-ordinary-people": {
+    "title": "The revolution and ordinary people",
+    "card": [
+      [
+        "Peasants",
+        "most people in France worked the land. In 1789 many rose against landlords, and they gained when feudal dues were abolished. Some still had to pay to be freed from them or had little land."
+      ],
+      [
+        "Sans-culottes",
+        "Paris workers, craftsmen and shopkeepers. They joined marches and took part in local politics, and they pressed for lower bread prices and harsh measures against enemies."
+      ],
+      [
+        "Women",
+        "women marched to Versailles, joined clubs and petitioned for their rights. They did not win the vote or the right to hold office."
+      ],
+      "Ordinary people shaped events and were changed by them, but the gains were uneven. Many hopes for a fairer life were not met."
+    ],
+    "remember": "Ordinary people helped drive the revolution, but some groups gained more than others.",
+    "a": {
+      "q": "Which statement best describes how ordinary people were affected by the revolution?",
+      "opts": [
+        "They took part in events, but their gains differed by group",
+        "All groups gained equal rights and power",
+        "They played no part, as politicians made every decision",
+        "They gained nothing, because feudal dues stayed in place"
+      ],
+      "why": "Peasants, sans-culottes and women all took part, but peasants gained from the end of feudal dues while women did not win political rights. So gains were uneven rather than equal.",
+      "clue": "Compare what peasants and women won."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1793 Claudine, a Parisian woman, joins a club and petitions for women's rights, but cannot vote. What does her case show?",
+      "opts": [
+        "Women took part but did not gain equal political rights",
+        "Women held the same political rights as men by 1793",
+        "Women stayed away from politics in the revolution",
+        "Women gained more from the revolution than peasants did"
+      ],
+      "why": "Claudine acted politically, yet she could not vote, so participation did not bring equal rights. The claim that women had the same rights as men is wrong because she was excluded from voting.",
+      "clue": "Notice both what she did and what she could not do."
+    }
+  },
+  "mod-change-continuity-france": {
+    "title": "Change and continuity in France",
+    "card": [
+      [
+        "Change",
+        "Something that was different by 1795 from how it was in 1774. Feudal dues and noble privileges were abolished, and absolute monarchy ended."
+      ],
+      [
+        "Continuity",
+        "Something that stayed the same, or that the revolution failed to alter. Many people remained poor, and women did not gain political rights."
+      ],
+      "A hope is an aim of the revolution, such as equality. A change in law does not prove the hope was met, because people's lives may stay much the same.",
+      "A historian judges the revolution by weighing evidence of both change and continuity between 1774 and 1795. Real change can sit alongside unmet hopes."
+    ],
+    "remember": "Weigh what changed against what stayed the same: ending privilege did not meet every hope for equality.",
+    "a": {
+      "q": "Which statement is the soundest judgement about France between 1774 and 1795?",
+      "opts": [
+        "Law and government changed, but equality was not fully won",
+        "Law and government changed, so equality was fully achieved",
+        "Little changed, as the poor stayed poor under the new laws",
+        "Almost nothing changed, as privilege and monarchy survived"
+      ],
+      "why": "Privilege and absolute monarchy ended, which is change, but many hopes for equality were not met, which is continuity. The claim that equality was fully achieved treats a change in law as proof that the hope was met. The claims that little or nothing changed ignore the real end of privilege and absolute monarchy.",
+      "clue": "A sound judgement weighs evidence of both."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student argues that new laws brought equality to daily life in France by 1795. Which evidence best challenges this argument?",
+      "opts": [
+        "Many people stayed poor though their rights in law changed",
+        "Nobles kept their legal privileges right through to 1795",
+        "The king kept absolute power for the whole of the period",
+        "Feudal dues were abolished, so peasants owed lords nothing"
+      ],
+      "why": "Many people stayed poor after the law changed, so legal change did not bring equality to daily life. The claims that nobles kept their privileges and the king kept absolute power are false, because both ended. The end of feudal dues is a real change, so it supports the argument rather than challenging it.",
+      "clue": "First rule out any claim that is not true."
+    }
+  },
+  "mod-tsarist-autocracy": {
+    "title": "Tsarist autocracy",
+    "card": [
+      "Autocracy is rule by one person whose power is not limited by a parliament or a constitution. In Russia this person was the tsar.",
+      "Nicholas II became tsar in 1894. Until 1905 he had no parliament to share power with, and he held that his right to rule came from God.",
+      "The army put down protests and strikes. The Orthodox Church taught that obeying the tsar was a religious duty.",
+      "The Okhrana, the secret police, watched critics and arrested them. Censorship also limited what people could read and say."
+    ],
+    "remember": "The tsar claimed his right to rule came from God, and the army, the Church, the Okhrana and censorship upheld it.",
+    "a": {
+      "q": "Which description best fits Nicholas II's rule in Russia before 1905?",
+      "opts": [
+        "One ruler whose power had no legal limit",
+        "One ruler whose power was checked by an elected body",
+        "A ruler chosen by the army to serve for a set term",
+        "A ruler who shared power equally with the Church"
+      ],
+      "why": "Autocracy means one person holds power that no parliament or constitution limits. Before 1905 Nicholas II had no parliament, so no elected body checked his power. The Church supported him but did not share power with him.",
+      "clue": "Think about who could limit the tsar's decisions."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Russian priest in 1900 tells his village that disobeying the tsar is a sin. Which support for the tsar's rule does this show?",
+      "opts": [
+        "The Church teaching obedience as a religious duty",
+        "The Okhrana watching and arresting critics",
+        "The army putting down protests by force",
+        "Censorship limiting what people could read"
+      ],
+      "why": "The priest speaks for the Orthodox Church, which taught that obeying the tsar was a religious duty. The Okhrana and the army used watching and force, not religious teaching. Censorship limited what people could read, not what they believed was a sin.",
+      "clue": "Look at who is speaking and what kind of authority they use."
+    }
+  },
+  "mod-social-economic-conditions": {
+    "title": "Social and economic conditions",
+    "card": [
+      "In 1900 most people in the Russian Empire were peasants who worked the land. Most were poor and had little land of their own.",
+      "Serfdom ended in 1861, but peasants still made redemption payments, a long-term debt for the land they received. Land was short and farming methods were old-fashioned, so harvests were low and famine was a risk.",
+      "From the 1890s the government pushed fast industrial growth, building railways and factories in cities such as St Petersburg and Moscow. Peasants moved to the cities for work, and many kept close ties to their villages.",
+      "City workers lived in crowded housing and worked long hours for low pay. Until 1906 trade unions were illegal and strikes were banned, so anger over pay and conditions had no legal outlet."
+    ],
+    "remember": "Land-hungry, indebted peasants and crowded, badly paid workers both had reasons for anger.",
+    "a": {
+      "q": "Why did many Russian peasants stay poor after serfdom ended in 1861?",
+      "opts": [
+        "They paid redemption debts on too little land",
+        "Landlords still legally owned them as serfs",
+        "Factory work had drawn most of them off the land",
+        "They farmed huge plots with too few workers"
+      ],
+      "why": "Freed peasants still owed redemption payments, and land was short while farming methods were old, so harvests stayed low. Saying landlords still owned them is tempting, but serfdom had legally ended in 1861. The problem was debt and land shortage, not serfdom itself.",
+      "clue": "Freedom in 1861 came with a cost attached."
+    },
+    "b": {
+      "d": 3,
+      "q": "Anya leaves her village to work in a St Petersburg factory in 1900. Which best describes her situation?",
+      "opts": [
+        "Long hours and low pay, with no legal trade union",
+        "Long hours and low pay, but a legal trade union",
+        "Crowded housing, but the legal right to strike",
+        "Short hours and good housing, but very low pay"
+      ],
+      "why": "Factory workers faced crowded housing, long hours and low pay, and before 1906 unions were illegal and strikes were banned. The option with a legal union is tempting because it gets the hours and pay right, but in 1900 unions were not yet legal.",
+      "clue": "Check what the law allowed workers before 1906."
+    }
+  },
+  "mod-1905-revolution": {
+    "title": "The 1905 Revolution",
+    "card": [
+      "In 1904 and 1905, Russia lost a war against Japan. Defeats such as the fall of Port Arthur and the loss of the fleet at Tsushima shamed the tsar's government and showed how weak it was.",
+      "On 9 January 1905 (Old Style), troops fired on a peaceful march of workers in St Petersburg, led by the priest Father Gapon. The workers had come to petition the tsar for better conditions, and many were killed or wounded on what became known as Bloody Sunday.",
+      "Bloody Sunday broke trust in the tsar as the protector of his people. Strikes, peasant revolts and mutinies, such as on the battleship Potemkin, followed across the empire, and in October a general strike spread.",
+      "In the October Manifesto, Nicholas II promised civil freedoms and an elected Duma, a national parliament. The Fundamental Laws of 1906 then limited the Duma, keeping the tsar's control of ministers and the army."
+    ],
+    "remember": "Defeat and Bloody Sunday sparked unrest. The tsar offered a Duma, then limited it.",
+    "a": {
+      "q": "Why did Bloody Sunday help spark the unrest of 1905?",
+      "opts": [
+        "Troops shot peaceful petitioners, breaking trust in the tsar",
+        "Workers learned that Japan had defeated the Russian fleet",
+        "The tsar refused to create an elected Duma for Russia",
+        "Peasants were angered when the army seized their land"
+      ],
+      "why": "The workers marched to ask the tsar for help, and troops shot them. This broke the belief that the tsar cared for his people, and strikes and revolts followed. The defeat by Japan was a separate cause and did not happen on that day.",
+      "clue": "Think about who was marching and who fired on them."
+    },
+    "b": {
+      "d": 3,
+      "q": "After the October Manifesto of 1905, Nicholas II issued the Fundamental Laws of 1906. What did they show about the Duma?",
+      "opts": [
+        "The tsar kept real power and limited what the Duma could do",
+        "The tsar handed control of the army to the Duma",
+        "The Duma gained the power to choose and dismiss ministers",
+        "The tsar abolished the Duma soon after it was created"
+      ],
+      "why": "The Duma was created, but the Fundamental Laws left the tsar in control of ministers and the army, so its power was limited. It was not abolished, so the option about abolition is wrong: it still met, with less power than many had hoped.",
+      "clue": "The Duma existed, but who still controlled the ministers and the army?"
+    }
+  },
+  "mod-reform-reaction": {
+    "title": "Reform and reaction",
+    "card": [
+      "Pyotr Stolypin was prime minister from 1906 to 1911. He wanted to calm unrest by strengthening the empire, using both reform and force.",
+      [
+        "Reform",
+        "Stolypin's land reforms let peasants leave the village commune and farm their own plots. He hoped a class of prosperous, loyal farmers would support the tsar."
+      ],
+      [
+        "Reaction",
+        "Special military courts quickly tried people accused of revolt, and many were hanged, so the noose became known as 'Stolypin's necktie'. The government also policed the press and political groups."
+      ],
+      "The reforms helped some peasants, but most stayed poor and land hunger remained. Stolypin was shot in 1911 and died days later, and by 1914 strikes were growing again."
+    ],
+    "remember": "Stolypin tried to win loyalty with land reform and to crush protest with force, and neither settled the empire.",
+    "a": {
+      "q": "What was the main aim of Stolypin's land reforms?",
+      "opts": [
+        "To create loyal, well-off farmers who would back the tsar",
+        "To hand all noble estates over to the village communes",
+        "To move peasants into factories in the growing cities",
+        "To give peasants a say in the running of the Duma"
+      ],
+      "why": "Stolypin hoped that peasants who owned their own farms would care about order and support the tsar. The reforms let peasants leave the commune, so they did not strengthen it. They were about land, not about political power in the Duma.",
+      "clue": "Think about who Stolypin hoped would become loyal to the tsar."
+    },
+    "b": {
+      "d": 3,
+      "q": "By 1914, why had Stolypin's mix of reform and repression failed to settle the empire?",
+      "opts": [
+        "Most peasants stayed poor and strikes were rising again",
+        "Stolypin's courts were ended and unrest quickly faded",
+        "Peasants were given plenty of land but still wanted more",
+        "The Duma was closed and then ruled without any limits"
+      ],
+      "why": "The land reforms helped only some peasants, and repression did not remove the causes of anger. Strikes grew again by 1914, so the empire was still unsettled. The reforms did not leave peasants with plenty of land: most stayed poor and land hunger remained.",
+      "clue": "Ask whether the causes of anger had actually gone away."
+    }
+  },
+  "mod-revolutionary-ideas": {
+    "title": "Revolutionary ideas",
+    "card": [
+      [
+        "Liberalism",
+        "Liberals wanted a constitution, an elected parliament and legal rights such as free speech. They wanted to curb the tsar's power, not end the monarchy."
+      ],
+      [
+        "Marxism",
+        "Marxists followed Karl Marx. They said history is a struggle between classes, and that industrial workers (the proletariat) would overthrow the owners of factories and land and build a society without private ownership of them."
+      ],
+      [
+        "Lenin's party",
+        "Lenin argued that workers alone would only fight for better wages. He said a small, disciplined party of dedicated revolutionaries must lead them."
+      ],
+      "All three ideas challenged the tsar's rule, but they asked for different things: limits on the tsar, rule by workers, or rule led by a party."
+    ],
+    "remember": "Liberals wanted limits on the tsar. Marxists wanted workers to rule. Lenin wanted a party to lead them.",
+    "a": {
+      "q": "Which belief was part of Russian liberalism?",
+      "opts": [
+        "An elected parliament should hold back the tsar's rule",
+        "The proletariat should overthrow factory and land owners",
+        "A disciplined party of revolutionaries should lead workers",
+        "Workers should win only better wages from factory owners"
+      ],
+      "why": "Liberals wanted a constitution and an elected parliament to curb the tsar. Overthrowing owners is a Marxist idea, and leadership by a disciplined party is Lenin's idea, so neither describes liberalism.",
+      "clue": "Think about which group wanted the monarchy to stay, but with rules."
+    },
+    "b": {
+      "d": 3,
+      "q": "Anna, a factory worker in St Petersburg in 1903, says: 'Left to ourselves, we workers will only strike for higher pay. Dedicated revolutionaries must direct us.' Whose idea does she repeat?",
+      "opts": [
+        "Lenin's idea that a party must lead the workers",
+        "The liberal idea that a parliament should limit the tsar",
+        "Marx's idea that a class struggle drives history",
+        "The tsar's idea that all power must stay with him"
+      ],
+      "why": "Anna repeats Lenin's argument that workers alone only fight for better wages, so committed revolutionaries must lead them. Marx's idea is tempting because Lenin was a Marxist, but Marx's view of class struggle does not say workers need a small group to direct them.",
+      "clue": "Which thinker doubted workers would go beyond pay demands unaided?"
+    }
+  },
+  "mod-revolutionary-parties": {
+    "title": "Revolutionary parties",
+    "card": [
+      "Three main revolutionary parties opposed the tsar, but they disagreed about who should lead change and how. The two Marxist parties formed when one party split in 1903.",
+      [
+        "Bolsheviks",
+        "a Marxist party led by Lenin. They wanted a small, disciplined party of committed revolutionaries to lead the industrial workers."
+      ],
+      [
+        "Mensheviks",
+        "a Marxist party that wanted a larger, more open membership. They believed Russia must first pass through a middle-class stage of development before socialism."
+      ],
+      [
+        "Socialist Revolutionaries",
+        "a party that looked to the peasants, who were most of the population. They wanted land taken from large landowners and shared among peasants."
+      ]
+    ],
+    "remember": "Bolsheviks: a tight party leading workers. Mensheviks: a broad party. SRs: peasants and land.",
+    "a": {
+      "q": "In 1905 a peasant hoped his landlord's estate would be divided among his village. Which party's aims best matched his hopes?",
+      "opts": ["Socialist Revolutionaries", "Bolsheviks", "Mensheviks", "The Duma"],
+      "why": "The Socialist Revolutionaries built their appeal on the peasants and on taking land from large landowners to share among them. The Bolsheviks are the tempting choice, but they were a Marxist party that looked to the industrial workers. The Duma was not a revolutionary party.",
+      "clue": "Two of these parties grew out of one Marxist party."
+    },
+    "b": {
+      "d": 3,
+      "q": "At a meeting in 1903, one group argued for a small party of committed revolutionaries, and another for a larger, more open party. Which pairing is correct?",
+      "opts": [
+        "Bolsheviks wanted the small party, Mensheviks the larger one",
+        "Mensheviks wanted the small party, Bolsheviks the larger one",
+        "Bolsheviks wanted the small party, SRs the larger one",
+        "SRs wanted the small party, Mensheviks the larger one"
+      ],
+      "why": "Lenin's Bolsheviks wanted a small, disciplined party to lead the workers, while the Mensheviks wanted a broader membership. The reversed pairing is tempting, but it swaps the two Marxist parties. The SRs were a separate party focused on the peasants, not one side of the 1903 split.",
+      "clue": "Which party did Lenin lead, and what did he want?"
+    }
+  },
+  "mod-first-world-war-russia": {
+    "title": "The First World War and Russia",
+    "card": [
+      "Russia entered the First World War in 1914 against Germany and Austria-Hungary. At first, patriotic crowds backed the tsar.",
+      [
+        "Defeats and losses",
+        "Russian armies lost major battles, such as Tannenberg in 1914. Millions of soldiers were killed, wounded or captured, and many lacked enough rifles, boots and shells."
+      ],
+      [
+        "Shortages",
+        "Farm workers and horses went to the army, and the railways were clogged with military traffic. Food and fuel reached the cities in small amounts, so prices rose and queues grew."
+      ],
+      [
+        "Loss of support",
+        "In 1915 Nicholas II took personal command of the army. After that, the tsar was blamed for each defeat and for the hardship at home."
+      ]
+    ],
+    "remember": "War losses and shortages turned early support for the tsar into blame.",
+    "a": {
+      "q": "Why did the war cost Nicholas II support from ordinary Russians?",
+      "opts": [
+        "Defeats and shortages were blamed on his rule",
+        "Victories made the army more powerful than him",
+        "Peasants refused to pay tax to fund the war",
+        "Russia's allies demanded that he give up power"
+      ],
+      "why": "Heavy losses at the front and hunger at home were blamed on the tsar, especially after he took command of the army in 1915. The tempting option about victories is wrong because Russia suffered major defeats.",
+      "clue": "Think about who was blamed when things went wrong."
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena lives in Petrograd in 1916. Bread is scarce and her brother was killed at the front. Which fact about the tsar most directly links her two troubles to him?",
+      "opts": [
+        "He had taken personal command of the army in 1915",
+        "He had called an election for the Duma in 1906",
+        "He had signed a peace treaty with Germany in 1914",
+        "He had sold farmland to peasants in 1910"
+      ],
+      "why": "Once Nicholas II led the army himself, he could be blamed for the defeats and losses, and for a war that strained food supplies. The other options do not match the card: Russia was still fighting Germany, and the card does not link land sales or the Duma to the war.",
+      "clue": "Which choice ties the tsar to the war itself?"
+    }
+  },
+  "mod-tsar-tsarina-rasputin": {
+    "title": "The tsar, the tsarina and Rasputin",
+    "card": [
+      "In September 1915 Nicholas II took personal command of the army and left for the front. He was then blamed for Russia's defeats.",
+      "Alexandra, the tsarina, was German-born, and many Russians distrusted her during a war with Germany. With Nicholas away, she had a large say in running the government.",
+      "Rasputin was a peasant holy man who seemed able to ease the illness of Alexei, the heir. Alexandra trusted him and listened to his advice.",
+      "Rumours spread that Rasputin controlled the court and that ministers were being picked and sacked on his word. Many Russians, including nobles, lost respect for the monarchy. Nobles killed Rasputin in December 1916."
+    ],
+    "remember": "With the tsar at the front, Alexandra and Rasputin's influence made the monarchy look weak and out of touch.",
+    "a": {
+      "q": "Why did Nicholas II's decision to command the army in 1915 harm his standing?",
+      "opts": [
+        "He was tied directly to the army's defeats at the front",
+        "He handed control of the army to Rasputin while away",
+        "He gave up the throne to Alexandra while he was away",
+        "He was seen as a coward for staying far from the fighting"
+      ],
+      "why": "Once Nicholas commanded the army himself, its defeats were linked to him, so the blame landed on him. He went to the front rather than staying away, he stayed tsar, and Rasputin's influence was at court, not over the army.",
+      "clue": "What changed about his link to the war once he took command?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Why did Alexandra's role in government during the war add to distrust of the monarchy?",
+      "opts": [
+        "She was German-born and relied on Rasputin's advice",
+        "She was German-born but left decisions to the ministers",
+        "She was British-born and refused to listen to Rasputin",
+        "She was Russian-born but sided against Nicholas"
+      ],
+      "why": "Many Russians distrusted a German-born tsarina in a war with Germany, and her trust in Rasputin fed rumours that he controlled the court. The option saying she left decisions to ministers is tempting because she was German-born, but she had a large say in government and listened to Rasputin.",
+      "clue": "Both parts of the answer must match what the card says about her."
+    }
+  },
+  "mod-february-revolution": {
+    "title": "The February Revolution",
+    "card": [
+      "In February 1917 (March in the Western calendar), wartime shortages left Petrograd, the capital, short of bread. International Women's Day protests on 23 February grew into a general strike within days.",
+      "No party planned or led the rising. It grew from the streets, and revolutionary leaders were taken by surprise.",
+      "Nicholas II, away at army headquarters, ordered the Petrograd troops to restore order by force. Many soldiers were conscripted peasants and workers, and whole units mutinied and joined the crowds.",
+      "Without loyal troops, the tsar could not enforce his rule. Urged by Duma leaders and his generals, he abdicated on 2 March for himself and his son, and Romanov rule ended when his brother Michael refused the throne."
+    ],
+    "remember": "The tsar fell when the Petrograd soldiers sided with the strikers in a rising that no party had planned.",
+    "a": {
+      "q": "Why did the mutiny of soldiers in Petrograd decide the outcome of the February Revolution?",
+      "opts": [
+        "The tsar could no longer use the army to crush the crowds",
+        "The soldiers took over the government on behalf of one party",
+        "The soldiers forced the tsar to hand power to the Duma",
+        "The mutiny ended the food shortages in the capital"
+      ],
+      "why": "Autocratic rule depended on force, and once units of the garrison joined the protesters the tsar could not put down the unrest. The soldiers did not act for a party, since no party led the rising: they stopped obeying orders to fire.",
+      "clue": "Think about what the tsar needed from the troops."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which statement best explains why the February 1917 protests in Petrograd became a revolution, rather than ending like other protests?",
+      "opts": [
+        "Troops sent to stop the crowds joined them instead",
+        "A single party organised the strikes from the start",
+        "The tsar chose to leave Petrograd and give up power",
+        "Food prices fell, so workers demanded political change"
+      ],
+      "why": "The protests began over bread and grew into a general strike. They became a revolution because soldiers mutinied, which removed the force the tsar relied on. No party planned or led the rising, and the tsar abdicated only after his troops had deserted him.",
+      "clue": "Look for what changed between the strikes and the tsar's fall."
+    }
+  },
+  "mod-provisional-government-soviets": {
+    "title": "The Provisional Government and the Soviets",
+    "card": [
+      "After Nicholas II gave up the throne in March 1917 (new style), a Provisional Government took over. It was formed by members of the old Duma, and its leaders were mostly liberals and moderates. It was meant to rule until an elected assembly could decide Russia's future.",
+      [
+        "Provisional Government",
+        "it held official authority and ran the ministries, but it had not been elected and had little means of enforcing its orders."
+      ],
+      [
+        "Petrograd Soviet",
+        "a council of elected delegates from workers and soldiers. It did not rule formally, but workers and soldiers in the capital listened to it."
+      ],
+      "The Soviet's Order No. 1 told soldiers to obey the Provisional Government only when the Soviet agreed. This split is called dual power: the government had the legal right to rule, and the Soviet had much of the real support. The two often clashed, so the arrangement was uneasy."
+    ],
+    "remember": "Dual power: the government held formal authority, but the Soviet held much of the real support.",
+    "a": {
+      "q": "Why is the situation in Russia in 1917 called dual power?",
+      "opts": [
+        "Two bodies each held part of the power, and often clashed",
+        "Nicholas II and the Duma ruled the empire together",
+        "Two Soviets in different cities each ruled their own region",
+        "The government and the Soviet agreed on every policy"
+      ],
+      "why": "The Provisional Government had official authority, while the Petrograd Soviet had the support of workers and soldiers. Neither could fully control the other. The option about agreement is wrong because the two often clashed.",
+      "clue": "Think about who had the legal right to rule and who had the support."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1917, a Provisional Government minister orders troops in Petrograd to move to the front. Why might the order fail?",
+      "opts": [
+        "Soldiers were told to obey it only if the Soviet agreed",
+        "The government had been elected to rule only the Duma",
+        "The Soviet had formally replaced the government as ruler",
+        "All the soldiers had gone home when the tsar abdicated"
+      ],
+      "why": "Order No. 1 told soldiers to obey the government only when the Soviet agreed. So the government held formal authority but could not rely on its orders being followed. The Soviet had not formally replaced the government, which is why the power was shared.",
+      "clue": "Recall what Order No. 1 told soldiers to do."
+    }
+  },
+  "mod-land-reform": {
+    "title": "Land reform",
+    "card": [
+      "Before 1949, much of China's farmland was owned by landlords. Many peasants rented land and paid a large share of their crop as rent.",
+      "After the Communist victory, the new government took land from landlords without paying for it and divided it among peasants. The Agrarian Reform Law of 1950 set out the process.",
+      "Peasants were encouraged to hold public meetings to accuse landlords. Many landlords were beaten, and many were killed.",
+      "Land reform gave the Communist Party strong support among poor peasants. It also broke the power of the landlord class in the villages."
+    ],
+    "remember": "Land moved from landlords to peasants, and violence helped end landlord power.",
+    "a": {
+      "q": "Why did land reform help the Communist Party win support in the villages?",
+      "opts": [
+        "It gave land to poor peasants who had rented it",
+        "It let landlords keep their land and pay lower taxes",
+        "It ended all farming by individual families at once",
+        "It gave peasants a vote for the national leader"
+      ],
+      "why": "Poor peasants who had paid heavy rent now held land of their own, so they backed the party. Letting landlords keep land would not have won peasant support.",
+      "clue": "Think about who received the land."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1951, peasants in a village in Hunan gather to accuse their landlord, Mr Zhao, at a public meeting. What does this show about land reform?",
+      "opts": [
+        "It combined land transfer with attacks on landlords",
+        "It was carried out quietly through payments to landlords",
+        "It was led by landlords who chose to give up land",
+        "It was a plan to build heavy industry in cities"
+      ],
+      "why": "Land reform involved meetings where peasants accused landlords, and beatings and killings often followed. Land was taken without payment, so it was not a quiet, paid or voluntary process. Heavy industry belongs to a different policy.",
+      "clue": "Recall how landlords were often treated after such meetings."
+    }
+  },
+  "mod-thought-reform-mass-campaigns": {
+    "title": "Thought reform and mass campaigns",
+    "card": [
+      "After 1949 the Chinese Communist Party (CCP) used mass campaigns to build support, remove opponents and control how people thought. Ordinary people were urged to join in, often through public meetings.",
+      [
+        "Three Antis",
+        "launched in 1951 against corruption, waste and bureaucracy among officials and managers. It aimed to make the new state's workers loyal and honest."
+      ],
+      [
+        "Five Antis",
+        "launched in 1952 against bribery, tax evasion, theft of state property, cheating on government contracts and stealing economic secrets. It mainly targeted business owners."
+      ],
+      [
+        "Thought reform",
+        "meant forcing people, such as teachers and writers, to study CCP ideas, confess their faults in public and criticise their old views. Fear of being denounced pushed many to conform."
+      ]
+    ],
+    "remember": "Early 1950s campaigns used public pressure to punish officials and business owners and to make people follow CCP ideas.",
+    "a": {
+      "q": "Which target best matches the Five Antis campaign of 1952?",
+      "opts": [
+        "Business owners accused of bribery and tax evasion",
+        "Landlords accused of owning too much farmland",
+        "Soldiers accused of disobeying orders in Korea",
+        "Peasants accused of leaving their communes"
+      ],
+      "why": "The Five Antis aimed mainly at business owners, over matters such as bribery and tax evasion. Landlords are a tempting answer, but they were the target of land reform, not this campaign.",
+      "clue": "Recall the list of wrongs the 1952 campaign named."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1952 a Shanghai teacher is made to confess his old views in public and promise to study CCP ideas. What was the main aim of this treatment?",
+      "opts": [
+        "To change how he thought and make him conform",
+        "To give his school land to local peasants",
+        "To raise output in the nation's heavy industry",
+        "To punish him for cheating on a state contract"
+      ],
+      "why": "Public confession and forced study are marks of thought reform, which aimed to change beliefs and secure conformity. Cheating on a state contract fits the Five Antis, which targeted business owners, and a teacher's confession is not about that.",
+      "clue": "Which campaign on the card used public confession?"
+    }
+  },
+  "mod-first-five-year-plan": {
+    "title": "The first Five-Year Plan",
+    "card": [
+      "The first Five-Year Plan ran from 1953 to 1957. The state set output targets for the whole economy, a method called central planning.",
+      "The plan copied the Soviet Union's model. It put most investment into heavy industry, such as steel, coal and machinery.",
+      "The Soviet Union sent advisers and equipment, and many large factories were built or expanded with its help. Farming and light industry, such as textiles and other consumer goods, received far less investment.",
+      "Industrial output grew quickly. Most new investment went to cities, and the plan did little to raise farm output."
+    ],
+    "remember": "The plan used Soviet-style central planning to put investment into heavy industry.",
+    "a": {
+      "q": "Which choice best describes the main aim of the first Five-Year Plan?",
+      "opts": [
+        "Build heavy industry through central planning",
+        "Hand land from landlords to peasants",
+        "Invite public criticism of the party",
+        "Form farming communes across the country"
+      ],
+      "why": "The plan set state targets and put most investment into heavy industry. Land transfer to peasants was land reform, which was a different policy.",
+      "clue": "Think about steel, coal and machinery."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1955 Chinese planners can fund one project: expanding the Anshan steelworks, a new textile factory, or farm irrigation. Under the first Five-Year Plan, which was most likely to be funded?",
+      "opts": [
+        "The steelworks expansion, as heavy industry came first",
+        "The textile factory, as light industry came first",
+        "The farm irrigation, as food supply came first",
+        "The project that private investors chose to back"
+      ],
+      "why": "The plan put most investment into heavy industry such as steel, so the steelworks came first. Irrigation is tempting because most Chinese people were peasants, but farming received far less investment and the plan did little to raise farm output.",
+      "clue": "Which kind of industry did the plan rank above all others?"
+    }
+  },
+  "mod-hundred-flowers-campaign": {
+    "title": "The Hundred Flowers Campaign",
+    "card": [
+      "In 1956 and 1957 Mao Zedong invited people to speak out. The slogan said to let a hundred flowers bloom and a hundred schools of thought contend.",
+      "At first few people responded. By May 1957 many intellectuals, teachers and students were criticising the Communist Party and its officials.",
+      "The criticism went further than Mao had expected. Some people questioned the Party's right to rule.",
+      "From mid-1957 the Anti-Rightist Campaign targeted those labelled rightists. Many critics lost their jobs, were sent to labour camps or were sent to work in the countryside."
+    ],
+    "remember": "Mao invited criticism, then punished many who gave it.",
+    "a": {
+      "q": "What happened to many of the people who criticised the Party during the Hundred Flowers Campaign?",
+      "opts": [
+        "They were labelled rightists and punished",
+        "They were given posts in the Party leadership",
+        "They were praised and their ideas became policy",
+        "They were ignored and faced no consequences"
+      ],
+      "why": "After the criticism grew, the Anti-Rightist Campaign targeted those who had spoken out, and many lost jobs or were sent to labour camps. Being ignored is tempting, but the Party acted against critics.",
+      "clue": "What followed the campaign in mid-1957?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lin is a university lecturer in Beijing. In May 1957 she publicly criticises local Party officials, as Mao had invited. What is most likely to happen to her later in 1957?",
+      "opts": [
+        "She is labelled a rightist and loses her job",
+        "She is promoted for being honest and loyal",
+        "She is protected because Mao asked for criticism",
+        "She is asked to lead a new Party committee"
+      ],
+      "why": "Many intellectuals who spoke out were targeted in the Anti-Rightist Campaign, so Lin is likely to be labelled a rightist and lose her job. Mao's invitation is the tempting reason for safety, but the campaign turned on those who had accepted it.",
+      "clue": "Think about what came after the criticism grew."
+    }
+  },
+  "mod-great-leap-forward": {
+    "title": "The Great Leap Forward",
+    "card": [
+      "The Great Leap Forward began in 1958. Mao Zedong wanted China to industrialise and raise farm output fast, using mass labour instead of costly machines.",
+      "Villages were merged into huge people's communes, which ran farming, local industry, communal kitchens and schools. Private plots were taken away.",
+      "Millions of peasants were sent to make steel in backyard furnaces or work on big projects, leaving fewer to farm, and much of the steel was useless. Officials, afraid to admit failure, claimed false record harvests.",
+      "The state took grain based on those false figures, leaving villages short. A famine followed from 1959 to 1961 in which millions died. Estimates vary widely, mostly from about 15 to 45 million."
+    ],
+    "remember": "A rush to industrialise pulled labour off farms, false harvest reports hid the shortfall, and millions died in famine.",
+    "a": {
+      "q": "What turned the Great Leap Forward into a famine?",
+      "opts": [
+        "Less farm labour and grain taken on false figures",
+        "Landlords taking back land and hoarding grain",
+        "Foreign countries blocking all grain imports",
+        "Communes closing and peasants leaving the land"
+      ],
+      "why": "Peasants were pulled off the fields for steel and other projects, and officials overstated harvests, so the state took too much grain. Landlords had already lost their land and power in land reform, so they played no part.",
+      "clue": "Think about where workers went and what officials reported."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1959 a commune leader in Henan, fearing punishment, reports a record harvest that never happened. What is the most likely result for the villagers?",
+      "opts": [
+        "The state takes more grain than they can spare",
+        "The state sends extra grain to help the village",
+        "The commune is let off its grain quota that year",
+        "The leader is punished for reporting a failure"
+      ],
+      "why": "The state set its grain demands from reported harvests. An inflated figure meant it took grain the village could not spare, leaving too little to eat. Extra help would follow a bad report, not a record one.",
+      "clue": "What did the state use to decide how much grain to take?"
+    }
+  },
+  "mod-cultural-revolution": {
+    "title": "The Cultural Revolution",
+    "card": [
+      "In 1966 Mao Zedong launched the Cultural Revolution. He said China's revolution was under threat from officials who had taken the capitalist road, and from old ideas and habits.",
+      "Mao encouraged students and young people to form Red Guard groups. They were urged to attack officials, teachers and anyone seen as an enemy of the revolution.",
+      "Red Guards also attacked the Four Olds: old customs, old culture, old habits and old ideas. Temples, books and art were destroyed.",
+      "Many people were publicly humiliated, beaten, jailed or driven to suicide. Schools closed, normal government broke down, and the army was later used to restore order."
+    ],
+    "remember": "Mao used young Red Guards to attack officials and old culture, and the result was chaos and persecution.",
+    "a": {
+      "q": "Which statement best describes the role of the Red Guards in the Cultural Revolution?",
+      "opts": [
+        "Young people Mao urged to attack officials and old culture",
+        "Army units Mao sent to shield officials from public attack",
+        "Peasant groups formed to take land from village landlords",
+        "Party officials who ran the communes during the revolution"
+      ],
+      "why": "Mao encouraged students and young people to form Red Guard groups and attack officials and the Four Olds. The army was used later to restore order, so it was not the group that carried out the attacks.",
+      "clue": "Think about who Mao urged to act, and who they targeted."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1967 a Red Guard group in a Chinese city seizes a school's old books and humiliates its head teacher in public. Which reason for this fits the aims of the Cultural Revolution?",
+      "opts": [
+        "The books stood for old ideas and the teacher was an enemy",
+        "The books were said to hold plans for an invasion of China",
+        "The teacher was said to have broken a national school law",
+        "The school was being closed to make room for a new factory"
+      ],
+      "why": "Red Guards were urged to attack the Four Olds and people seen as enemies of the revolution, so old books and a teacher fit those targets. The other options give reasons that the Cultural Revolution did not rest on.",
+      "clue": "Look for the option that matches who and what the Red Guards were told to attack."
+    }
+  },
+  "mod-leaders-people-s-republic": {
+    "title": "Leaders of the People's Republic",
+    "card": [
+      [
+        "Mao Zedong",
+        "Chairman of the Communist Party and the most powerful leader of the People's Republic. He put class struggle and constant revolution first."
+      ],
+      [
+        "Liu Shaoqi",
+        "Head of state in the early 1960s. After the Great Leap Forward he backed more practical, planned measures to rebuild the economy. Mao saw this as a retreat from revolution."
+      ],
+      [
+        "Lin Biao",
+        "Head of the army who built up Mao's personal standing. He was named Mao's successor in 1969. He died in 1971 after an apparent attempt to flee China."
+      ],
+      [
+        "Jiang Qing",
+        "Mao's wife. She led attacks on culture and on officials in the Cultural Revolution. She was arrested soon after Mao died in 1976."
+      ]
+    ],
+    "remember": "Mao dominated. Lin and Jiang promoted him and his campaigns, while Liu's practical rebuilding put him at odds with Mao.",
+    "a": {
+      "q": "Why did Mao and Liu Shaoqi come into conflict in the early 1960s?",
+      "opts": [
+        "Liu backed practical rebuilding, and Mao saw a retreat",
+        "Liu wanted to end Communist rule, and Mao wanted it kept",
+        "Liu wanted to lead the army, and Mao wanted it for himself",
+        "Liu opposed Lin Biao as Mao's chosen successor in 1969"
+      ],
+      "why": "After the Great Leap Forward, Liu backed practical measures to rebuild the economy. Mao saw these as a retreat from revolution. Liu did not want to end Communist rule: he was a senior Communist leader.",
+      "clue": "Think about what Liu wanted to do after the Great Leap Forward."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which leader is correctly matched with their role in the struggle over the new state's direction?",
+      "opts": [
+        "Lin Biao: army head who built up Mao's personal standing",
+        "Jiang Qing: head of state who backed practical rebuilding",
+        "Liu Shaoqi: army head who built up Mao's personal standing",
+        "Lin Biao: head of state who backed practical rebuilding"
+      ],
+      "why": "Lin Biao led the army and promoted Mao's standing. Liu Shaoqi, not Jiang Qing or Lin Biao, was head of state and backed practical rebuilding. Jiang Qing is tempting as a radical figure, but she led attacks on culture and officials.",
+      "clue": "Match each person to the job named on the card."
+    }
+  },
+  "mod-change-continuity-china": {
+    "title": "Change and continuity in China",
+    "card": [
+      "Change is what was different in 1976 from how it was in 1912. Continuity is what stayed much the same, even if its form shifted.",
+      [
+        "Change",
+        "the Qing emperor gave up the throne in 1912. By the 1950s landlords and the old gentry elite had also lost their power, through land reform and other campaigns."
+      ],
+      [
+        "Continuity",
+        "for most of the period, rulers did not allow open opposition. Warlords divided China from 1916 to 1928, the Guomindang ran a one-party state from 1928, and the Communist Party did from 1949."
+      ],
+      "Hardship for many also carried on in new forms. Before 1949 it came from war, poverty and unrest. After 1949 it came from campaigns, the famine of the Great Leap Forward and the Cultural Revolution."
+    ],
+    "remember": "The old elite lost power, but rule without open opposition and hardship for many carried on for most of the period.",
+    "a": {
+      "q": "Which of these is a change between 1912 and 1976, not a continuity?",
+      "opts": [
+        "Landlords and the gentry lost their power in the villages",
+        "Many ordinary people faced hunger, poverty and violence",
+        "Rulers put down open opposition to their rule",
+        "Ordinary people had little say in who ruled them"
+      ],
+      "why": "Landlords and the gentry held power in 1912 but had lost it by the 1950s, so their position was different. The other three describe things found under warlords, the Guomindang and the Communist Party alike. Little say in who ruled is tempting because rulers changed, but people's lack of a say did not.",
+      "clue": "Which group was in a very different position by 1976?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says the 1949 revolution changed everything for ordinary Chinese people. Which fact from the 1950s to 1970s best shows continuity?",
+      "opts": [
+        "Millions died in the famine after the Great Leap Forward",
+        "Peasants were given land taken from landlords",
+        "Landlords no longer ran life in the villages",
+        "Old gentry families lost their place in society"
+      ],
+      "why": "Hunger and suffering were common before 1949, and the famine shows they carried on in a new form after it. Peasants getting land is tempting because it affected ordinary people, but it was something new, so it is a change.",
+      "clue": "Which fact describes something people also faced before 1949?"
+    }
   }
 };

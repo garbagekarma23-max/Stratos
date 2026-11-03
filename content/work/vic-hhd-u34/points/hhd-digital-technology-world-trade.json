@@ -16,7 +16,7 @@
    0.207
   ]
  ],
- "stage": "check",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -28,19 +28,20 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording, b wording)",
   "2026-11-02T04:50:14Z write: failed the content check, writing again",
-  "2026-11-02T04:56:46Z write: done"
+  "2026-11-02T04:56:46Z write: done",
+  "2026-11-03T11:40:49Z check: passed, cleared"
  ],
  "sent": {
   "match": 1,
   "write": 5,
-  "check": 1,
+  "check": 2,
   "fix": 1,
   "recheck": 1
  },
  "usd": {
   "match": 0.00014,
   "write": 0.02844,
-  "check": 0.016,
+  "check": 0.02735,
   "fix": 0.02995,
   "recheck": 0.01603
  },
@@ -93,7 +94,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "checker",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -313,5 +314,60 @@
   }
  },
  "redone": true,
- "local": []
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Weak internet coverage or devices people cannot afford",
+   "also_right": []
+  },
+  "b": {
+   "best": "Video care may be harder for him, a divide within Australia",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Digital technologies and health",
+  "card": [
+   "Digital technologies include the internet, mobile phones, apps and video calls. They can carry health information, services and education across long distances quickly.",
+   [
+    "Telehealth",
+    "health care given by phone or video, so a person can see a doctor or nurse without travelling. It can help people in remote areas."
+   ],
+   "Digital tools can also teach health workers and the public, for example through online courses or text message advice on pregnancy and child health.",
+   [
+    "Digital divide",
+    "the gap between people who have good access to digital technology and those who do not. It exists between countries and within them, as access depends on things like income, location and internet coverage."
+   ]
+  ],
+  "remember": "Digital tools can spread health care, information and education, but access to them is uneven.",
+  "a": {
+   "q": "Why might a digital health program fail to reach some people in a low-income country?",
+   "opts": [
+    "Weak internet coverage or devices people cannot afford",
+    "Health messages lose their meaning when sent by phone",
+    "Telehealth is designed for city hospitals, not rural areas",
+    "The digital divide is a gap found in wealthy countries"
+   ],
+   "why": "Access to digital technology is uneven, and it depends on things like income and internet coverage. Health messages sent by phone can still be understood, and the digital divide is not limited to wealthy countries.",
+   "clue": "Think about what shapes who can use digital tools."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tane lives on a remote farm in Western Australia with weak internet. How might this affect his health care compared with a person in Perth?",
+   "opts": [
+    "Video care may be harder for him, a divide within Australia",
+    "He may have equal access, as the divide is between countries",
+    "His care may be easier, as remote areas get faster internet",
+    "He may get no telehealth, as it is run from city clinics"
+   ],
+   "why": "Weak internet can make video consults harder for Tane, which is an example of the digital divide within a country. The divide is not just a gap between countries, as it exists within them too. Telehealth by phone may still work for him.",
+   "clue": "Where can the digital divide exist?"
+  }
+ }
 }

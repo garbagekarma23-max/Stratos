@@ -3,7 +3,7 @@
  "title": "The Estates-General of 1789",
  "brief": "05a31838ab51",
  "shortlist": [],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:29Z new, write",
   "2026-11-01T14:46:42Z write: the API refused it in the chapter request, so it is written on its own next",
@@ -13,30 +13,35 @@
   "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b wording)",
   "2026-11-02T04:50:16Z write: done",
-  "2026-11-02T04:56:46Z check: flagged"
+  "2026-11-02T04:56:46Z check: flagged",
+  "2026-11-03T11:40:51Z fix: suggested",
+  "2026-11-03T12:08:34Z review: rejected, to be written again",
+  "2026-11-03T12:13:26Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T12:15:29Z claude-code check: answered by a separate subagent",
+  "2026-11-03T12:15:29Z check: passed, cleared"
  ],
  "sent": {
   "write": 3,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "write": 0.01233,
   "check": 0.03194,
-  "fix": 0.02746,
+  "fix": 0.04407,
   "recheck": 0.01555
  },
- "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one that uses the word 'nation', which echoes the stem ('National Assembly') and the clue. The distractors (going home, being dissolved) are implausible, so a student can pick the answer without knowing the idea.",
+ "note": "",
  "rejected": {
   "title": "The Estates-General of 1789",
   "card": [
-   "The Estates-General was an assembly of representatives of the three estates: clergy, nobles and the Third Estate. Louis XVI agreed in 1788 to call it to deal with the financial crisis. It met at Versailles in May 1789.",
+   "The Estates-General was an assembly of representatives of the three estates: clergy, nobles and the Third Estate. Louis XVI agreed to call it to deal with the financial crisis. It met at Versailles in May 1789.",
    "The Third Estate sent about as many deputies as the other two estates combined. Many of these deputies were lawyers and other educated men.",
    "The assembly deadlocked over how to vote. The clergy and nobles wanted one vote per estate, so they could outvote the Third Estate two to one. The Third Estate wanted one vote per deputy, with the three estates meeting together.",
-   "After weeks of stalemate, the Third Estate declared itself the National Assembly in June 1789. It claimed to speak for the nation, and it acted without needing the approval of the other estates."
+   "After weeks of stalemate, the Third Estate declared itself the National Assembly in June 1789. It claimed to speak for the whole French people, and it acted without waiting for the approval of the other estates."
   ],
-  "remember": "A fight over how to vote led the Third Estate to claim the nation's voice as the National Assembly.",
+  "remember": "A fight over how to vote led the Third Estate to claim the right to speak for the people as the National Assembly.",
   "a": {
    "q": "Why did the voting method matter so much to the Third Estate?",
    "opts": [
@@ -50,19 +55,18 @@
   },
   "b": {
    "d": 3,
-   "q": "In June 1789 the Third Estate named itself the National Assembly. What did this step show?",
+   "q": "In June 1789 the Third Estate declared itself the National Assembly. What was the main meaning of this step?",
    "opts": [
-    "It claimed to speak for the nation without the other estates",
-    "It accepted the king's rule on voting by estate",
-    "It had been dissolved by the clergy and nobles",
-    "It was ending the meetings at Versailles to go home"
+    "It claimed authority to act without the other two estates",
+    "It gave in to the demand for one vote for each estate",
+    "It handed the deadlock to the king to settle for it",
+    "It agreed to wait for the clergy and nobles to join it"
    ],
-   "why": "By taking the name National Assembly, the Third Estate claimed to represent the whole nation and to act without the approval of the other estates. It did not accept voting by estate, which was the cause of the deadlock.",
-   "clue": "Think about what the word nation claims about who the deputies speak for."
+   "why": "By renaming itself, the Third Estate claimed to speak for the whole French people and to act without the approval of the other estates. It did not accept voting by estate, which had caused the deadlock, and it did not ask the king to settle the matter.",
+   "clue": "Ask who the deputies were still waiting for, if anyone."
   }
  },
- "rewrites": 1,
- "cleared_by": "autoreject",
+ "rewrites": 2,
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -210,62 +214,148 @@
    }
   }
  ],
+ "claude_code": [
+  {
+   "at": "2026-11-03T12:13:26Z",
+   "step": "write",
+   "version": {
+    "title": "The Estates-General of 1789",
+    "card": [
+     "The Estates-General was an assembly of deputies from the three estates: clergy, nobles and the Third Estate. It had not met since 1614.",
+     "Louis XVI called it to solve the crisis, and it opened at Versailles in May 1789. The Third Estate had about as many deputies as the other two estates combined.",
+     "It deadlocked over voting. One vote per estate let the clergy and nobles outvote the Third Estate two to one, while one vote per deputy, in a joint meeting, would give the Third Estate half the votes.",
+     "In June 1789, after weeks of stalemate, the Third Estate declared itself the National Assembly. It claimed to speak for the whole nation and acted without waiting for the other estates or the king."
+    ],
+    "remember": "A deadlock over voting led the Third Estate to claim power for the nation as the National Assembly.",
+    "a": {
+     "q": "Why did the Third Estate want one vote per deputy, not one vote per estate?",
+     "opts": [
+      "It would hold half the votes instead of one in three",
+      "It had fewer deputies than the other two estates combined",
+      "It wanted each estate to meet and vote on its own",
+      "It would let the king break deadlocks between estates"
+     ],
+     "why": "With one vote per estate, the Third Estate held one vote in three, so the clergy and nobles could outvote it. Its deputies matched the other two estates combined, so one vote per deputy would give it half the votes. It did not have fewer deputies, which is why the method mattered so much.",
+     "clue": "Count its share of the votes each way."
+    },
+    "b": {
+     "d": 3,
+     "q": "On 17 June 1789 the Third Estate declared itself the National Assembly. Why do historians see this as a revolutionary step?",
+     "opts": [
+      "It claimed to speak for the nation, not just one estate",
+      "It accepted that each estate would vote on its own",
+      "It handed the voting dispute back to the king to settle",
+      "It let the clergy and nobles block whatever it decided"
+     ],
+     "why": "The deputies claimed authority from the whole nation and acted without the other estates or the king, which broke with the old order. They did not accept voting by estate, and they did not hand the dispute back to the king to settle.",
+     "clue": "Whose approval did it stop waiting for?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T12:15:29Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It would hold half the votes instead of one in three",
+     "also_right": []
+    },
+    "b": {
+     "best": "It claimed to speak for the nation, not just one estate",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
  "draft": {
   "title": "The Estates-General of 1789",
   "card": [
-   "The Estates-General was an assembly of representatives of the three estates: clergy, nobles and the Third Estate. Louis XVI agreed to call it to deal with the financial crisis. It met at Versailles in May 1789.",
-   "The Third Estate sent about as many deputies as the other two estates combined. Many of these deputies were lawyers and other educated men.",
-   "The assembly deadlocked over how to vote. The clergy and nobles wanted one vote per estate, so they could outvote the Third Estate two to one. The Third Estate wanted one vote per deputy, with the three estates meeting together.",
-   "After weeks of stalemate, the Third Estate declared itself the National Assembly in June 1789. It claimed to speak for the whole French people, and it acted without waiting for the approval of the other estates."
+   "The Estates-General was an assembly of deputies from the three estates: clergy, nobles and the Third Estate. It had not met since 1614.",
+   "Louis XVI called it to solve the crisis, and it opened at Versailles in May 1789. The Third Estate had about as many deputies as the other two estates combined.",
+   "It deadlocked over voting. One vote per estate let the clergy and nobles outvote the Third Estate two to one, while one vote per deputy, in a joint meeting, would give the Third Estate half the votes.",
+   "In June 1789, after weeks of stalemate, the Third Estate declared itself the National Assembly. It claimed to speak for the whole nation and acted without waiting for the other estates or the king."
   ],
-  "remember": "A fight over how to vote led the Third Estate to claim the right to speak for the people as the National Assembly.",
+  "remember": "A deadlock over voting led the Third Estate to claim power for the nation as the National Assembly.",
   "a": {
-   "q": "Why did the voting method matter so much to the Third Estate?",
+   "q": "Why did the Third Estate want one vote per deputy, not one vote per estate?",
    "opts": [
-    "Voting by estate let the clergy and nobles outvote it",
-    "Voting by deputy let the nobles outvote it",
-    "Voting by estate gave the king the deciding vote",
-    "Voting by deputy removed its right to send deputies"
+    "It would hold half the votes instead of one in three",
+    "It had fewer deputies than the other two estates combined",
+    "It wanted each estate to meet and vote on its own",
+    "It would let the king break deadlocks between estates"
    ],
-   "why": "If each estate had one vote, the clergy and nobles could combine to outvote the Third Estate two to one, even though it had about as many deputies as both of them together. Voting by deputy would have given each of its many deputies a vote of equal weight, which is why it wanted that method.",
-   "clue": "Count the votes if each estate gets only one."
+   "why": "With one vote per estate, the Third Estate held one vote in three, so the clergy and nobles could outvote it. Its deputies matched the other two estates combined, so one vote per deputy would give it half the votes. It did not have fewer deputies, which is why the method mattered so much.",
+   "clue": "Count its share of the votes each way."
   },
   "b": {
    "d": 3,
-   "q": "In June 1789 the Third Estate declared itself the National Assembly. What was the main meaning of this step?",
+   "q": "On 17 June 1789 the Third Estate declared itself the National Assembly. Why do historians see this as a revolutionary step?",
    "opts": [
-    "It claimed authority to act without the other two estates",
-    "It gave in to the demand for one vote for each estate",
-    "It handed the deadlock to the king to settle for it",
-    "It agreed to wait for the clergy and nobles to join it"
+    "It claimed to speak for the nation, not just one estate",
+    "It accepted that each estate would vote on its own",
+    "It handed the voting dispute back to the king to settle",
+    "It let the clergy and nobles block whatever it decided"
    ],
-   "why": "By renaming itself, the Third Estate claimed to speak for the whole French people and to act without the approval of the other estates. It did not accept voting by estate, which had caused the deadlock, and it did not ask the king to settle the matter.",
-   "clue": "Ask who the deputies were still waiting for, if anyone."
+   "why": "The deputies claimed authority from the whole nation and acted without the other estates or the king, which broke with the old order. They did not accept voting by estate, and they did not hand the dispute back to the king to settle.",
+   "clue": "Whose approval did it stop waiting for?"
   }
  },
  "local": [],
  "check": {
   "a": {
-   "best": "Voting by estate let the clergy and nobles outvote it",
+   "best": "It would hold half the votes instead of one in three",
    "also_right": []
   },
   "b": {
-   "best": "It claimed authority to act without the other two estates",
+   "best": "It claimed to speak for the nation, not just one estate",
    "also_right": []
   },
-  "problems": [
-   {
-    "part": "card",
-    "kind": "fact",
-    "detail": "The card says the clergy wanted one vote per estate. That held for the nobility and the higher clergy, but the clergy were divided. Many parish priests sided with the Third Estate, and some clergy deputies joined it in mid-June 1789. 'The nobles and most higher clergy' would be more accurate at Year 12 level."
-   }
-  ],
+  "problems": [],
   "sure": "high",
   "sensitive": "none",
-  "summary": "The facts and both questions are sound, and each question has one clearly right answer. One small issue: the card presents the clergy as united behind voting by estate, when many parish clergy backed the Third Estate."
+  "summary": "No problems found."
  },
  "sensitive": "none",
- "flags": [
-  "Card, fact: The card says the clergy wanted one vote per estate. That held for the nobility and the higher clergy, but the clergy were divided. Many parish priests sided with the Third Estate, and some clergy deputies joined it in mid-June 1789. 'The nobles and most higher clergy' would be more accurate at Year 12 level."
- ]
+ "flags": [],
+ "final": {
+  "title": "The Estates-General of 1789",
+  "card": [
+   "The Estates-General was an assembly of deputies from the three estates: clergy, nobles and the Third Estate. It had not met since 1614.",
+   "Louis XVI called it to solve the crisis, and it opened at Versailles in May 1789. The Third Estate had about as many deputies as the other two estates combined.",
+   "It deadlocked over voting. One vote per estate let the clergy and nobles outvote the Third Estate two to one, while one vote per deputy, in a joint meeting, would give the Third Estate half the votes.",
+   "In June 1789, after weeks of stalemate, the Third Estate declared itself the National Assembly. It claimed to speak for the whole nation and acted without waiting for the other estates or the king."
+  ],
+  "remember": "A deadlock over voting led the Third Estate to claim power for the nation as the National Assembly.",
+  "a": {
+   "q": "Why did the Third Estate want one vote per deputy, not one vote per estate?",
+   "opts": [
+    "It would hold half the votes instead of one in three",
+    "It had fewer deputies than the other two estates combined",
+    "It wanted each estate to meet and vote on its own",
+    "It would let the king break deadlocks between estates"
+   ],
+   "why": "With one vote per estate, the Third Estate held one vote in three, so the clergy and nobles could outvote it. Its deputies matched the other two estates combined, so one vote per deputy would give it half the votes. It did not have fewer deputies, which is why the method mattered so much.",
+   "clue": "Count its share of the votes each way."
+  },
+  "b": {
+   "d": 3,
+   "q": "On 17 June 1789 the Third Estate declared itself the National Assembly. Why do historians see this as a revolutionary step?",
+   "opts": [
+    "It claimed to speak for the nation, not just one estate",
+    "It accepted that each estate would vote on its own",
+    "It handed the voting dispute back to the king to settle",
+    "It let the clergy and nobles block whatever it decided"
+   ],
+   "why": "The deputies claimed authority from the whole nation and acted without the other estates or the king, which broke with the old order. They did not accept voting by estate, and they did not hand the dispute back to the king to settle.",
+   "clue": "Whose approval did it stop waiting for?"
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
 }

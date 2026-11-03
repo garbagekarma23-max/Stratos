@@ -5241,5 +5241,577 @@ MADE_BANKS.bio = {
       "why": "Fewer mtDNA differences mean a more recent shared ancestor, and mtDNA follows the female line, not the male line. mtDNA alone does not give dates, so it cannot show how long a group lived somewhere or when it left Africa.",
       "clue": "mtDNA follows one parent only, and it shows relatedness, not timing."
     }
+  },
+  "bio-structure-dna-rna": {
+    "title": "The structure of DNA and RNA",
+    "card": [
+      "Nucleic acids are long chains of small units called nucleotides. Each nucleotide has a sugar, a phosphate group and a nitrogenous base.",
+      [
+        "DNA",
+        "has two strands twisted into a double helix. Its sugar is deoxyribose, and its bases are adenine (A), thymine (T), cytosine (C) and guanine (G)."
+      ],
+      [
+        "RNA",
+        "has one strand. Its sugar is ribose, and it has uracil (U) in place of thymine. Its other bases are A, C and G."
+      ],
+      "In DNA the two strands are held together by hydrogen bonds between bases. A pairs with T, and C pairs with G."
+    ],
+    "remember": "DNA: two strands, deoxyribose, thymine. RNA: one strand, ribose, uracil.",
+    "a": {
+      "q": "A molecule is found to contain uracil. Which conclusion is best supported?",
+      "opts": [
+        "It is RNA, because RNA has uracil in place of thymine",
+        "It is DNA, because DNA has uracil in place of thymine",
+        "It is RNA, because uracil is the sugar in RNA",
+        "It is DNA, because DNA has uracil in place of cytosine"
+      ],
+      "why": "DNA has thymine where RNA has uracil, so uracil points to RNA. Uracil is a base, not a sugar: the sugar in RNA is ribose.",
+      "clue": "Which base does RNA use in place of thymine?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A sample of nucleic acid is a single strand and has ribose as its sugar. Which set of bases would you expect it to contain?",
+      "opts": ["A, U, C and G", "A, T, C and G", "A, T, U and G", "A, U, C and T"],
+      "why": "A single strand with ribose is RNA, and RNA has A, U, C and G. The set A, T, C and G belongs to DNA, which uses thymine rather than uracil. The other sets drop cytosine or guanine, which RNA also has.",
+      "clue": "Decide if the sample is DNA or RNA first, then check each base."
+    }
+  },
+  "bio-genetic-code": {
+    "title": "The genetic code",
+    "card": [
+      "The genetic code is the set of rules that turns the order of bases in a gene into the order of amino acids in a polypeptide.",
+      "The code is read in triplets. Each group of three bases in mRNA is a codon, and a codon codes for one amino acid or for a stop signal.",
+      "Most amino acids are coded for by more than one codon. This is called redundancy, and it means different codons can give the same amino acid.",
+      "The code is the same in almost all living things. This is called being universal, so a bacterium can translate human mRNA codons into the same amino acids."
+    ],
+    "remember": "Three bases make a codon, and the same code is used by nearly all life.",
+    "a": {
+      "q": "A section of mRNA has 18 bases in a row, all read as codons. How many codons does it contain?",
+      "opts": ["6", "3", "9", "18"],
+      "why": "Each codon is three bases, so 18 ÷ 3 = 6 codons. Choosing 18 treats each base as its own codon, but the code is read in triplets.",
+      "clue": "Divide the number of bases by the size of one codon."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two mRNA codons differ by one base but both code for the amino acid leucine. Which feature of the code does this show?",
+      "opts": [
+        "More than one codon can code for one amino acid",
+        "Each codon codes for more than one amino acid",
+        "Each base on its own codes for one amino acid",
+        "The code differs between species of organism"
+      ],
+      "why": "Two different codons giving the same amino acid shows that the code has more than one codon for most amino acids. It is not the reverse: each codon still codes for just one amino acid.",
+      "clue": "Two different codons give the same result."
+    }
+  },
+  "bio-gene-structure": {
+    "title": "Gene structure",
+    "card": [
+      "A gene is a section of DNA that carries the instructions for making a polypeptide or a functional RNA. It has a start region and a body made of different parts.",
+      [
+        "Promoter",
+        "a DNA sequence at the start of a gene. RNA polymerase binds here to begin copying the gene. The promoter is not part of the coding body."
+      ],
+      [
+        "Exon",
+        "a part of the gene that codes for the polypeptide. Exons stay in the final mRNA and are read in triplets."
+      ],
+      [
+        "Intron",
+        "a part of the gene that does not code for the polypeptide. Introns are copied at first, then removed from the RNA before it is read."
+      ]
+    ],
+    "remember": "Promoter: where copying starts. Exons code and stay. Introns are removed.",
+    "a": {
+      "q": "Which part of a gene is the site where RNA polymerase binds to begin copying?",
+      "opts": ["The promoter", "An exon", "An intron", "The start codon"],
+      "why": "RNA polymerase binds to the promoter, which sits at the start of the gene. Exons are the coding parts that stay in the final mRNA, so they are not the binding site.",
+      "clue": "Think of the region at the start that is not part of the coding body."
+    },
+    "b": {
+      "d": 3,
+      "q": "A gene in a human cell has three exons and two introns. Which statement about the finished RNA that is read to make the polypeptide is correct?",
+      "opts": [
+        "It contains the three exons but not the two introns",
+        "It contains the two introns but not the three exons",
+        "It contains all five sections of the gene",
+        "It contains the promoter and the three exons"
+      ],
+      "why": "Exons code for the polypeptide and stay in the final RNA. Introns are removed before the RNA is read. The promoter only helps start copying and is not part of the coding body.",
+      "clue": "Which sections code, and which are removed?"
+    }
+  },
+  "bio-transcription": {
+    "title": "Transcription",
+    "card": [
+      "Transcription is the first step in making a protein from a gene. It copies the gene's DNA message into RNA. In eukaryotic cells it happens in the nucleus.",
+      "The enzyme RNA polymerase binds to the start of the gene. It unwinds the DNA and reads one strand, called the template strand.",
+      "RNA polymerase adds RNA nucleotides that pair with the template strand: A pairs with U, T with A, C with G and G with C. This builds a single strand of RNA.",
+      "The new strand is pre-mRNA. Its base sequence matches the other DNA strand, except that it has uracil in place of thymine. The DNA itself is not changed."
+    ],
+    "remember": "RNA polymerase reads the template strand and builds pre-mRNA whose bases pair with it.",
+    "a": {
+      "q": "What does RNA polymerase do during transcription?",
+      "opts": [
+        "Builds pre-mRNA by pairing bases to the template strand",
+        "Joins amino acids together to build a polypeptide",
+        "Copies both DNA strands to make new double-stranded DNA",
+        "Removes the template strand from the nucleus"
+      ],
+      "why": "RNA polymerase adds RNA nucleotides that pair with the template strand, making pre-mRNA. Joining amino acids is a different step, which happens later. The DNA is not copied into new DNA, and it is not removed from the nucleus.",
+      "clue": "The enzyme's name tells you what it builds."
+    },
+    "b": {
+      "d": 3,
+      "q": "A section of template strand reads TACGGA. Which pre-mRNA sequence is made from it?",
+      "opts": ["AUGCCU", "ATGCCT", "AUGGCU", "UACGGA"],
+      "why": "Each template base pairs with an RNA base: T with A, A with U, C with G, G with C, G with C, A with U. This gives AUGCCU. ATGCCT is wrong because RNA has uracil, not thymine. UACGGA copies the template instead of pairing with it.",
+      "clue": "Pair each base, and remember RNA has no thymine."
+    }
+  },
+  "bio-rna-processing": {
+    "title": "RNA processing",
+    "card": [
+      "In eukaryotes, transcription makes pre-mRNA in the nucleus. Pre-mRNA is a copy of the transcribed part of the gene, including both its exons and its introns.",
+      [
+        "Splicing",
+        "introns are cut out and the exons are joined together. Only the exons stay in the finished message."
+      ],
+      [
+        "Cap and tail",
+        "a cap is added to the start of the RNA and a poly-A tail, a string of adenine nucleotides, is added to the end. These help protect the mRNA and let the cell use it."
+      ],
+      "The result is mature mRNA. It leaves the nucleus through a nuclear pore and goes to the cytoplasm for translation."
+    ],
+    "remember": "Pre-mRNA is edited before use: introns out, cap and tail on.",
+    "a": {
+      "q": "Which change turns pre-mRNA into mature mRNA in a human cell?",
+      "opts": [
+        "Introns are removed and a cap and tail are added",
+        "Exons are removed and a cap and tail are added",
+        "Introns are joined and the promoter is added",
+        "Uracil is swapped for thymine and introns are kept"
+      ],
+      "why": "Pre-mRNA contains introns, and splicing cuts them out so only the exons remain. A cap and a poly-A tail are also added. Removing exons would delete the parts that stay in the finished message.",
+      "clue": "Which parts of the gene stay in the finished message?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A mutation stops a cell from adding a poly-A tail to its mRNA, but splicing works normally. Which statement fits this cell?",
+      "opts": [
+        "Its mRNA has no introns and no poly-A tail",
+        "Its mRNA still contains all of its introns",
+        "Its mRNA has a poly-A tail but no introns",
+        "Its mRNA has no exons and no poly-A tail"
+      ],
+      "why": "Splicing still works, so the introns are cut out and the exons are kept. Only the poly-A tail is missing, because splicing and adding the tail are separate changes. The mRNA would still contain its introns only if splicing had failed.",
+      "clue": "Splicing and adding the tail are separate changes."
+    }
+  },
+  "bio-translation": {
+    "title": "Translation",
+    "card": [
+      "Translation is the making of a polypeptide using the information in mature mRNA. It happens at a ribosome, in the cytoplasm or on the rough ER.",
+      "The ribosome reads the mRNA one codon at a time. A codon is a set of three bases that stands for one amino acid or a stop signal.",
+      "Each tRNA carries one amino acid. Its anticodon is three bases that pair with a matching mRNA codon, so the right amino acid is placed at each step.",
+      "The ribosome joins the amino acids with peptide bonds and moves along the mRNA. The chain grows until a stop codon is reached, then the polypeptide is released."
+    ],
+    "remember": "The mRNA codon sets the order. tRNA anticodons match each codon to its amino acid.",
+    "a": {
+      "q": "What is the job of a tRNA molecule during translation?",
+      "opts": [
+        "It carries an amino acid and pairs with a codon",
+        "It copies the gene into pre-mRNA in the nucleus",
+        "It joins amino acids together with peptide bonds",
+        "It carries the gene's code from the nucleus to the ribosome"
+      ],
+      "why": "A tRNA carries one amino acid and its anticodon pairs with the matching mRNA codon. The ribosome, not tRNA, joins the amino acids with peptide bonds, and mRNA is what carries the gene's code to the ribosome.",
+      "clue": "Each wrong option is the job of a different molecule."
+    },
+    "b": {
+      "d": 3,
+      "q": "A tRNA has the anticodon UAC. Which mRNA codon will it pair with, and what does it deliver to the ribosome?",
+      "opts": [
+        "The codon AUG, and the amino acid it carries",
+        "The codon UAC, and the amino acid it carries",
+        "The codon AUG, and a stop signal to end the chain",
+        "The codon UAC, and a copy of the gene's DNA"
+      ],
+      "why": "The anticodon pairs with the mRNA codon by matching bases: U with A, A with U and C with G. So UAC pairs with AUG, and the tRNA delivers its amino acid. The codon UAC is tempting, but an anticodon pairs with a complementary codon, not an identical one.",
+      "clue": "Pair each anticodon base with its partner base."
+    }
+  },
+  "bio-gene-regulation-trp-operon": {
+    "title": "Gene regulation and the trp operon",
+    "card": [
+      "Bacteria can switch genes on or off, so they only make proteins they need. Making unneeded proteins wastes energy.",
+      "The trp operon is a group of genes in bacteria such as E. coli. The genes code for enzymes that make the amino acid tryptophan.",
+      [
+        "Low tryptophan",
+        "the repressor protein is inactive and cannot bind the operator, a DNA section next to the genes. RNA polymerase can transcribe the genes, so tryptophan is made."
+      ],
+      [
+        "High tryptophan",
+        "tryptophan binds the repressor and activates it. The repressor binds the operator and blocks RNA polymerase, so the genes are switched off and energy is saved."
+      ]
+    ],
+    "remember": "Plenty of tryptophan activates the repressor, which blocks transcription of the trp genes.",
+    "a": {
+      "q": "What does tryptophan do in the trp operon when it is plentiful in the bacterial cell?",
+      "opts": [
+        "Binds the repressor so it blocks the operator",
+        "Binds RNA polymerase so it copies the genes faster",
+        "Destroys the operator so the genes cannot be read",
+        "Stops the repressor being made in the cell"
+      ],
+      "why": "Tryptophan binds the repressor and activates it, so it sits on the operator and blocks transcription. It does not speed up RNA polymerase, because the genes are switched off.",
+      "clue": "Tryptophan acts on the repressor protein."
+    },
+    "b": {
+      "d": 3,
+      "q": "A mutant E. coli has a repressor that cannot bind the operator, even with tryptophan present. What happens to its trp genes in a tryptophan-rich medium?",
+      "opts": [
+        "They keep being transcribed, wasting energy",
+        "They are switched off, as in normal E. coli",
+        "They are never transcribed, so tryptophan runs out",
+        "They are transcribed only when tryptophan is low"
+      ],
+      "why": "The repressor cannot block the operator, so RNA polymerase keeps transcribing the genes even though tryptophan is plentiful. Enzymes are made that are not needed, which wastes energy.",
+      "clue": "Without a working block, what stops RNA polymerase?"
+    }
+  },
+  "bio-protein-structure": {
+    "title": "Protein structure",
+    "card": [
+      "Amino acids join by peptide bonds to form a chain called a polypeptide. The order of amino acids in the chain is the primary structure.",
+      "Parts of the chain fold into coils (alpha helices) and pleats (beta pleated sheets), held by hydrogen bonds. This is the secondary structure.",
+      "The whole chain then folds into a 3D shape, the tertiary structure. Bonds and attractions between the side groups of amino acids hold this shape.",
+      "Some proteins have two or more polypeptides joined together. This is the quaternary structure. All of an organism's proteins together make its proteome."
+    ],
+    "remember": "Sequence, then coils and pleats, then 3D fold, then joined chains. All proteins together form the proteome.",
+    "a": {
+      "q": "What is the primary structure of a protein?",
+      "opts": [
+        "The sequence of amino acids in a polypeptide",
+        "The coils and pleats in part of a polypeptide",
+        "The 3D shape of one whole polypeptide",
+        "Two or more polypeptides joined together"
+      ],
+      "why": "Primary structure is only the order of amino acids in the chain. Coils and pleats are secondary structure, and the 3D fold of the whole chain is tertiary.",
+      "clue": "Think about the first level, before any folding."
+    },
+    "b": {
+      "d": 3,
+      "q": "A protein is made of four separate polypeptides that join to work as one unit. Which level of structure does this joining describe?",
+      "opts": ["Quaternary structure", "Tertiary structure", "Secondary structure", "Primary structure"],
+      "why": "Quaternary structure is the joining of two or more polypeptides. Tertiary structure is tempting, but it describes the fold of a single polypeptide chain.",
+      "clue": "Count how many chains are involved."
+    }
+  },
+  "bio-protein-secretory-pathway": {
+    "title": "The protein secretory pathway",
+    "card": [
+      "Some proteins are made to leave the cell, such as the hormone insulin and digestive enzymes. They follow the secretory pathway.",
+      "These proteins are made by ribosomes on the rough endoplasmic reticulum (rough ER). They enter the ER and are folded there. The ER then packs them into vesicles, small sacs made of membrane.",
+      "The vesicles travel to the Golgi apparatus and fuse with it. The Golgi modifies the proteins, sorts them and packs them into new vesicles.",
+      "A vesicle moves to the cell surface membrane and fuses with it. The protein is released outside the cell. This is exocytosis."
+    ],
+    "remember": "Rough ER, vesicle, Golgi, vesicle, then exocytosis out of the cell.",
+    "a": {
+      "q": "In which order does a secreted protein pass through these structures?",
+      "opts": [
+        "Rough ER, Golgi apparatus, cell surface membrane",
+        "Golgi apparatus, rough ER, cell surface membrane",
+        "Rough ER, cell surface membrane, Golgi apparatus",
+        "Cell surface membrane, Golgi apparatus, rough ER"
+      ],
+      "why": "The protein is made at the rough ER, then modified and sorted in the Golgi, then released at the cell surface membrane. Putting the Golgi first is tempting, but the protein is made on the rough ER.",
+      "clue": "Start where the ribosomes make the protein."
+    },
+    "b": {
+      "d": 2,
+      "q": "Cells in a gland make a digestive enzyme for release outside the cell. A drug stops vesicles from fusing with the cell surface membrane. What happens to the enzyme?",
+      "opts": [
+        "It builds up in vesicles inside the cell",
+        "It is made but released by the rough ER",
+        "It is no longer made on the rough ER",
+        "It is released through the Golgi apparatus"
+      ],
+      "why": "Exocytosis needs vesicles to fuse with the cell surface membrane. If they cannot, the enzyme stays inside the vesicles. Making the enzyme on the rough ER happens earlier, so it is not stopped.",
+      "clue": "Which step happens at the cell surface membrane?"
+    }
+  },
+  "bio-pathogens-antigens": {
+    "title": "Pathogens and antigens",
+    "card": [
+      [
+        "Antigen",
+        "a molecule, often a protein, that the immune system can recognise. Your own cells carry self antigens. Foreign cells and viruses carry non-self antigens."
+      ],
+      ["Cellular pathogen", "a disease-causing organism made of cells, such as a bacterium, fungus or protist."],
+      [
+        "Non-cellular pathogen",
+        "a disease-causing agent with no cell structure, such as a virus or a prion. A virus must use a host cell to reproduce."
+      ],
+      [
+        "Allergen",
+        "a harmless substance, such as pollen, that triggers an immune response in some people. It acts as an antigen, even though it is not a pathogen."
+      ]
+    ],
+    "remember": "Antigens tell the immune system self from non-self. Pathogens cause disease, and allergens set off a response without being pathogens.",
+    "a": {
+      "q": "What does the immune system use antigens for?",
+      "opts": [
+        "To recognise cells and particles as self or non-self",
+        "To destroy any cell that carries a protein on its surface",
+        "To make a cell divide when it is infected by a virus",
+        "To carry oxygen to cells that are under attack"
+      ],
+      "why": "Antigens are molecules that the immune system can recognise, so they mark a cell as self or non-self. Having a protein on the surface does not mean a cell is destroyed, because all your own cells carry self antigens.",
+      "clue": "Think about how the body tells its own cells from foreign ones."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam sneezes and has itchy eyes near flowering grass. The immune system is responding to grass pollen. Which statement is correct?",
+      "opts": [
+        "Pollen is an allergen, and it is not a pathogen",
+        "Pollen is a cellular pathogen, because it comes from a plant",
+        "Pollen is a non-cellular pathogen, like a virus",
+        "Pollen is a self antigen, so it should not cause a response"
+      ],
+      "why": "Pollen is a harmless substance that triggers an immune response in some people, which makes it an allergen. It does not cause infectious disease, so it is not a pathogen of either type. Coming from a plant does not make it a cellular pathogen.",
+      "clue": "Does pollen cause an infection, or only trigger a response?"
+    }
+  },
+  "bio-physical-chemical-microbiological-barriers": {
+    "title": "Physical, chemical and microbiological barriers",
+    "card": [
+      [
+        "Physical",
+        "a barrier that blocks entry. Intact skin is a tough layer pathogens cannot easily cross. Mucus in the airways traps them, and cilia (tiny hairs) sweep it out."
+      ],
+      [
+        "Chemical",
+        "a substance that kills or harms pathogens. Stomach acid destroys many swallowed microbes. Lysozyme, an enzyme in tears and saliva, breaks down bacterial cell walls."
+      ],
+      [
+        "Microbiological",
+        "normal bacteria living on the skin and in the gut. They use up food and space, so harmful microbes struggle to settle."
+      ],
+      "These barriers work first and work on any pathogen. They stop most pathogens getting in, but a cut or a damaged surface can let some through."
+    ],
+    "remember": "Barriers stop entry by blocking, by harming, or by crowding out pathogens.",
+    "a": {
+      "q": "Which of these is a chemical barrier against pathogens?",
+      "opts": [
+        "Lysozyme in tears breaking down bacterial cell walls",
+        "Cilia sweeping mucus out of the airways",
+        "Skin cells forming a tough outer layer",
+        "Normal gut bacteria competing for food and space"
+      ],
+      "why": "Lysozyme is an enzyme that harms bacteria, so it is a chemical barrier. Cilia and skin block or remove pathogens, and gut bacteria crowd them out, so they are not chemical.",
+      "clue": "Which one is a substance that damages the pathogen?"
+    },
+    "b": {
+      "d": 3,
+      "q": "After a course of antibiotics, Sam gets a fungal infection in his gut. Which barrier has most likely been weakened?",
+      "opts": [
+        "The microbiological barrier of normal gut bacteria",
+        "The physical barrier of skin on his body",
+        "The chemical barrier of lysozyme in his tears",
+        "The physical barrier of mucus in his airways"
+      ],
+      "why": "Antibiotics can kill the normal bacteria in the gut. With fewer of them using up food and space, a harmful fungus can settle more easily. The other barriers are not in the gut or are not affected by antibiotics in this way.",
+      "clue": "Which barrier is made of living microbes that antibiotics can kill?"
+    }
+  },
+  "bio-barriers-plants": {
+    "title": "Barriers in plants",
+    "card": [
+      "Plants have no skin or mucus. Their first defence is a set of barriers on the outside that stop pathogens getting in. These barriers work against many kinds of pathogen, not one type.",
+      [
+        "Physical",
+        "a waxy cuticle covers the leaf surface and repels water, which makes it hard for pathogens to stick. Thick cell walls, and bark on woody stems, form a tough layer that is hard to break through."
+      ],
+      [
+        "Chemical",
+        "plants make chemicals that harm pathogens, such as antimicrobial compounds and toxins. Some are always present and some are made after an attack starts."
+      ],
+      "Pathogens can still get past these barriers through wounds or through the small pores in leaves. This is why plants rely on both barriers and chemicals."
+    ],
+    "remember": "Plants block pathogens with tough outer layers and harm them with chemicals.",
+    "a": {
+      "q": "A fungal spore lands on a leaf but cannot stick, and it is washed off before it grows. Which defence stopped it?",
+      "opts": [
+        "The waxy cuticle on the leaf surface",
+        "The thick cell walls inside the leaf",
+        "Chemicals the leaf makes after an attack",
+        "The bark that covers the woody stem"
+      ],
+      "why": "The waxy cuticle repels water, so the spore cannot stick to the surface. Thick cell walls are tempting, but they resist being broken through, and the spore never got that far. No attack started, so chemicals made after an attack were not involved.",
+      "clue": "The spore never got inside the leaf."
+    },
+    "b": {
+      "d": 3,
+      "q": "A fungus lands on a tree in Gippsland and cannot get into the trunk, but it enters through a deep crack where a branch has broken off. What does this show?",
+      "opts": [
+        "A break in the bark lets pathogens past this barrier",
+        "Pathogens can only get into plants through leaf pores",
+        "The waxy cuticle guards the trunk but not the branches",
+        "Bark blocks only one kind of pathogen, not others"
+      ],
+      "why": "Bark and thick cell walls blocked the fungus where the trunk was intact. The broken branch left a wound, which gave the fungus a way in. The cuticle option is tempting, but the cuticle covers leaves, and the fungus got in through damaged bark, not a leaf.",
+      "clue": "Compare the intact trunk with the spot where the branch broke."
+    }
+  },
+  "bio-innate-immune-response-2": {
+    "title": "The innate immune response",
+    "card": [
+      "The innate immune response starts within minutes to hours of a pathogen getting past the barriers. It is non-specific: it reacts the same way to many different pathogens and does not need to have met them before.",
+      [
+        "Inflammation",
+        "Damaged cells and mast cells release chemicals such as histamine. Blood vessels widen and become leakier, so more fluid and white blood cells reach the site. This causes redness, heat, swelling and pain."
+      ],
+      [
+        "Phagocytes and NK cells",
+        "Phagocytes, such as neutrophils and macrophages, engulf and digest pathogens. Natural killer (NK) cells destroy body cells that are infected by viruses or have become cancerous, by triggering them to die."
+      ],
+      [
+        "Complement proteins",
+        "Complement proteins circulate in the blood. When activated, they can coat pathogens so phagocytes engulf them more easily, and some can make holes in pathogen membranes."
+      ]
+    ],
+    "remember": "Innate immunity is fast and non-specific: inflammation brings cells in, and phagocytes, NK cells and complement proteins attack.",
+    "a": {
+      "q": "A student says the innate response is non-specific. What does this mean?",
+      "opts": [
+        "It acts in a similar way against many different pathogens",
+        "It only acts on pathogens the body has met before",
+        "It only works against one type of pathogen at a time",
+        "It is activated only after antibodies have been made"
+      ],
+      "why": "Innate responses do not depend on recognising one particular pathogen or on earlier exposure, so they act in a similar way against many. The option about pathogens met before describes a response that depends on memory, which innate immunity does not need.",
+      "clue": "Think about whether the response needs to have met the pathogen before."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam gets a splinter in his finger. Within an hour the area is red, warm and swollen. What is the main reason the area becomes swollen?",
+      "opts": [
+        "Blood vessels become leakier, so fluid enters the tissue",
+        "NK cells release fluid as they destroy the splinter",
+        "Complement proteins swell as they coat the splinter",
+        "Phagocytes swell as they engulf bacteria on the splinter"
+      ],
+      "why": "Chemicals such as histamine widen blood vessels and make them leakier, so fluid and white blood cells move into the tissue and cause swelling. NK cells target infected or cancerous body cells, not splinters, so they are not the cause of the swelling.",
+      "clue": "Swelling means extra fluid has built up. Where does it come from?"
+    }
+  },
+  "bio-variables-controlled-experiments-biology": {
+    "title": "Variables and controlled experiments",
+    "card": [
+      ["Independent variable", "the one factor the investigator changes on purpose. Only one is changed at a time."],
+      ["Dependent variable", "the factor that is measured, to see whether it responds to the change."],
+      [
+        "Controlled variables",
+        "all other factors that could affect the result. They are kept the same in every group, so they cannot explain any difference."
+      ],
+      "A control group is treated the same way but without the change. Comparing it with the treated group shows whether the independent variable caused the difference."
+    ],
+    "remember": "Change one thing, measure the result, keep everything else the same.",
+    "a": {
+      "q": "Which describes the dependent variable in an experiment?",
+      "opts": [
+        "The factor that is measured to see if it responds",
+        "The factor that the investigator changes on purpose",
+        "A factor that is kept the same in every group",
+        "The group that receives no treatment at all"
+      ],
+      "why": "The dependent variable is what is measured, because its value may depend on the change made. The independent variable is the factor changed on purpose, so it is the most tempting wrong option.",
+      "clue": "Which variable depends on the change?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Leila grows bean plants at 15, 20 and 25 degrees Celsius and measures the height of each plant after two weeks. All plants get the same light, water and soil. Which is a controlled variable?",
+      "opts": [
+        "The amount of water each plant receives",
+        "The temperature of each group",
+        "The height of the plants after two weeks",
+        "The number of groups of plants used"
+      ],
+      "why": "Water could affect growth, so it is kept the same for every plant. Temperature is the independent variable, because Leila changes it. Height is the dependent variable, because she measures it.",
+      "clue": "Look for a factor Leila keeps the same in every group."
+    }
+  },
+  "bio-evidence-against-hypothesis": {
+    "title": "Evidence for and against a hypothesis",
+    "card": [
+      "A hypothesis is a tentative, testable explanation. From it you make a prediction of what the results should show. Results that match the prediction support the hypothesis. Results that clearly do not are evidence against it, and may refute it.",
+      "Support is not proof. New evidence could still disagree, so a hypothesis, model or theory is judged by how well all the evidence fits it.",
+      [
+        "Systematic error",
+        "a consistent shift in every reading in the same direction, such as a balance that always reads 2 g too high. It affects accuracy, and repeats do not remove it."
+      ],
+      [
+        "Random error",
+        "unpredictable variation between readings, such as natural differences between plants. It creates uncertainty, so a small sample or a large spread makes support weaker. More repeats reduce its effect."
+      ]
+    ],
+    "remember": "Results can support or count against a hypothesis, but error and uncertainty limit how strongly.",
+    "a": {
+      "q": "A well-controlled study gives results that do not match the prediction made from a hypothesis. What does this mean for the hypothesis?",
+      "opts": [
+        "It has evidence against it, and it may be refuted",
+        "It is supported, because the method was well controlled",
+        "It is unaffected, because only the prediction failed",
+        "It is proven true, because the method had no error"
+      ],
+      "why": "The prediction comes from the hypothesis, so results that clearly disagree with it count as evidence against the hypothesis. Saying it is unaffected is tempting, but a failed prediction reflects back on the explanation it came from.",
+      "clue": "Where did the prediction come from?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom hypothesises that a fertiliser increases tomato plant mass. Three treated plants end up heavier on average than three untreated ones, but masses vary a lot. What do the results give?",
+      "opts": [
+        "Weak support, limited mainly by random error",
+        "Weak support, limited mainly by systematic error",
+        "Strong support, because a control group was used",
+        "Evidence against it, because the masses vary widely"
+      ],
+      "why": "The treated plants were heavier, which matches the prediction, so the results support the hypothesis. With only three plants per group and a large spread, random error makes the support weak. Systematic error is tempting, but it is a consistent shift in every reading, not variation between plants.",
+      "clue": "Is the variation consistent or unpredictable?"
+    }
+  },
+  "bio-presenting-biology-poster": {
+    "title": "Presenting a biology poster",
+    "card": [
+      "A scientific poster presents an investigation briefly, using short text, tables and graphs. Its sections are title, introduction (with the aim), methodology, results, discussion, conclusion and references.",
+      "Use correct scientific terms and units. Write units such as mL, °C or mg/L with every measured value, and put them in table headings and graph axis labels.",
+      "Present results in tables and graphs with clear titles. The conclusion should answer the aim or research question using only what the results show.",
+      "Acknowledge sources. Cite the ideas, data and images taken from other people in the text, and list them in the references. This shows where the information came from and lets readers check it."
+    ],
+    "remember": "A poster is brief, uses correct terms and units, and credits every source.",
+    "a": {
+      "q": "Sam's poster has a titled graph of his own enzyme data. The axes read 'Temperature' (10 to 40) and 'Rate of reaction' (0.5 to 2.0). What should he fix?",
+      "opts": [
+        "Add units to both axis labels, such as °C or mL/min",
+        "Rename the axes 'independent' and 'dependent variable'",
+        "Add a table of the same data, with a title, beside it",
+        "Add a reference list entry for the data, such as his notes"
+      ],
+      "why": "Without units, a reader cannot tell what 30 or 1.5 means, such as whether temperature is in °C or what the rate measures. Renaming the axes by variable type removes what was measured, and the data are Sam's own, so they need no reference.",
+      "clue": "Could a reader tell what each number on the axes stands for?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's poster on yeast respiration uses a photo she found online and a rate of 4.2 from her own results. She lists the photo's source in her references. What else should she do?",
+      "opts": [
+        "Add a unit to the rate and cite the photo in the text",
+        "Cite her own results in the text and the references",
+        "Add a unit to the rate in the conclusion section only",
+        "Nothing more, since the references credit the photo"
+      ],
+      "why": "A value such as 4.2 needs a unit wherever it appears, and someone else's image should be cited in the text as well as listed. Listing the photo alone is only half of acknowledging it, and her own results need no reference.",
+      "clue": "Check what is missing from the number and from the photo's credit."
+    }
   }
 };

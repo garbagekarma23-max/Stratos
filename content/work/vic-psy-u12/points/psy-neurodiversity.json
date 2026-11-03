@@ -3,21 +3,28 @@
  "title": "Neurodiversity",
  "brief": "fdb1c60210bf",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:21Z new, write",
   "2026-11-01T08:04:36Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:11Z write: done",
   "2026-11-01T08:24:35Z check: for review (mental-health)",
-  "2026-11-02T06:25:11Z review: rejected, to be written again"
+  "2026-11-02T06:25:11Z review: rejected, to be written again",
+  "2026-11-03T10:25:24Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: flagged",
+  "2026-11-03T11:40:50Z fix: suggested",
+  "2026-11-03T12:06:45Z review: approved with the fix"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "fix": 1
  },
  "usd": {
   "write": 0.00478,
-  "check": 0.01106
+  "check": 0.01106,
+  "fix": 0.0131
  },
  "note": "",
  "rejected": {
@@ -53,5 +60,208 @@
    "clue": "Does the support change her brain, or the setting around her?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:24Z",
+   "step": "write",
+   "version": {
+    "title": "Neurodiversity",
+    "card": [
+     "Neurodiversity is the idea that human brains develop and work in many different ways, and that this range is a normal part of any population.",
+     "Autism and ADHD are examples. Autistic people and people with ADHD may think, learn, focus or communicate differently from most people.",
+     "The neurodiversity view treats these differences as natural variation, as people vary in height or handedness, rather than as faults to be cured.",
+     "A person may still need support, such as a quieter space or more time. On this view, support changes the setting so the person can take part, not the person's brain."
+    ],
+    "remember": "Brain differences are part of normal human variation, and support adjusts the setting around a person.",
+    "a": {
+     "q": "Which statement best matches the neurodiversity view of autism?",
+     "opts": [
+      "It is one of many normal ways a brain can develop",
+      "It is a fault in the brain that needs to be cured",
+      "It is caused by poor habits learned in childhood",
+      "It is too rare to count as part of human variation"
+     ],
+     "why": "The neurodiversity view sees autism as one of the many ways brains develop, part of normal human variation. It does not treat it as a fault to be cured.",
+     "clue": "Think about how people vary in height or handedness."
+    },
+    "b": {
+     "d": 3,
+     "q": "Tom has ADHD and finds it hard to focus through long exams. His school gives him short rest breaks. How does the neurodiversity view see this?",
+     "opts": [
+      "The breaks adjust the setting so he can take part",
+      "The breaks correct a fault in the way his brain works",
+      "The breaks show his brain works like everyone else's",
+      "The breaks show he is unable to do well at school"
+     ],
+     "why": "On the neurodiversity view, support changes the setting so a person can take part, and leaves their brain as it is. The breaks do not fix a fault, because the difference is not seen as a fault.",
+     "clue": "Does the support change Tom's brain, or the setting around him?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It is one of many normal ways a brain can develop",
+     "also_right": []
+    },
+    "b": {
+     "best": "The breaks adjust the setting so he can take part",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "other",
+      "detail": "The clue asks whether the support changes Tom's brain or 'the setting around him', and 'setting' appears only in the right option, so the clue all but gives the answer away."
+     },
+     {
+      "part": "remember",
+      "kind": "other",
+      "detail": "The card frames support adjusting the setting as what happens 'on this view', but the remember line states it as a plain fact, which could suggest all support (for example ADHD medication) only changes the setting. Adding 'on this view' would keep it in line with the card."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "mental-health",
+    "summary": "The facts and both right answers are sound. The clue on question b points straight at the right option's wording, and the remember line drops the card's 'on this view' framing about support."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Neurodiversity",
+  "card": [
+   "Neurodiversity is the idea that human brains develop and work in many different ways, and that this range is a normal part of any population.",
+   "Autism and ADHD are examples. Autistic people and people with ADHD may think, learn, focus or communicate differently from most people.",
+   "The neurodiversity view treats these differences as natural variation, as people vary in height or handedness, rather than as faults to be cured.",
+   "A person may still need support, such as a quieter space or more time. On this view, support changes the setting so the person can take part, not the person's brain."
+  ],
+  "remember": "Brain differences are part of normal human variation, and support adjusts the setting around a person.",
+  "a": {
+   "q": "Which statement best matches the neurodiversity view of autism?",
+   "opts": [
+    "It is one of many normal ways a brain can develop",
+    "It is a fault in the brain that needs to be cured",
+    "It is caused by poor habits learned in childhood",
+    "It is too rare to count as part of human variation"
+   ],
+   "why": "The neurodiversity view sees autism as one of the many ways brains develop, part of normal human variation. It does not treat it as a fault to be cured.",
+   "clue": "Think about how people vary in height or handedness."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom has ADHD and finds it hard to focus through long exams. His school gives him short rest breaks. How does the neurodiversity view see this?",
+   "opts": [
+    "The breaks adjust the setting so he can take part",
+    "The breaks correct a fault in the way his brain works",
+    "The breaks show his brain works like everyone else's",
+    "The breaks show he is unable to do well at school"
+   ],
+   "why": "On the neurodiversity view, support changes the setting so a person can take part, and leaves their brain as it is. The breaks do not fix a fault, because the difference is not seen as a fault.",
+   "clue": "Does the support change Tom's brain, or the setting around him?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is one of many normal ways a brain can develop",
+   "also_right": []
+  },
+  "b": {
+   "best": "The breaks adjust the setting so he can take part",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue asks whether the support changes Tom's brain or 'the setting around him', and 'setting' appears only in the right option, so the clue all but gives the answer away."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card frames support adjusting the setting as what happens 'on this view', but the remember line states it as a plain fact, which could suggest all support (for example ADHD medication) only changes the setting. Adding 'on this view' would keep it in line with the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "mental-health",
+  "summary": "The facts and both right answers are sound. The clue on question b points straight at the right option's wording, and the remember line drops the card's 'on this view' framing about support."
+ },
+ "sensitive": "mental-health",
+ "flags": [
+  "Question b, other: The clue asks whether the support changes Tom's brain or 'the setting around him', and 'setting' appears only in the right option, so the clue all but gives the answer away.",
+  "Remember, other: The card frames support adjusting the setting as what happens 'on this view', but the remember line states it as a plain fact, which could suggest all support (for example ADHD medication) only changes the setting. Adding 'on this view' would keep it in line with the card."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Neurodiversity",
+  "card": [
+   "Neurodiversity is the idea that human brains develop and work in many different ways, and that this range is a normal part of any population.",
+   "Autism and ADHD are examples. Autistic people and people with ADHD may think, learn, focus or communicate differently from most people.",
+   "The neurodiversity view treats these differences as natural variation, as people vary in height or handedness, rather than as faults to be cured.",
+   "A person may still need support, such as a quieter space or more time. On this view, support changes the setting so the person can take part, not the person's brain."
+  ],
+  "remember": "On the neurodiversity view, brain differences are normal human variation, and support can adjust the setting around a person.",
+  "a": {
+   "q": "Which statement best matches the neurodiversity view of autism?",
+   "opts": [
+    "It is one of many normal ways a brain can develop",
+    "It is a fault in the brain that needs to be cured",
+    "It is caused by poor habits learned in childhood",
+    "It is too rare to count as part of human variation"
+   ],
+   "why": "The neurodiversity view sees autism as one of the many ways brains develop, part of normal human variation. It does not treat it as a fault to be cured.",
+   "clue": "Think about how people vary in height or handedness."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom has ADHD and finds it hard to focus through long exams. His school gives him short rest breaks. How does the neurodiversity view see this?",
+   "opts": [
+    "The breaks adjust the setting so he can take part",
+    "The breaks correct a fault in the way his brain works",
+    "The breaks show his brain works like everyone else's",
+    "The breaks show he is unable to do well at school"
+   ],
+   "why": "On the neurodiversity view, support changes the setting so a person can take part, and leaves their brain as it is. The breaks do not fix a fault, because the difference is not seen as a fault.",
+   "clue": "Does this view see Tom's difference as something to fix?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Neurodiversity",
+  "card": [
+   "Neurodiversity is the idea that human brains develop and work in many different ways, and that this range is a normal part of any population.",
+   "Autism and ADHD are examples. Autistic people and people with ADHD may think, learn, focus or communicate differently from most people.",
+   "The neurodiversity view treats these differences as natural variation, as people vary in height or handedness, rather than as faults to be cured.",
+   "A person may still need support, such as a quieter space or more time. On this view, support changes the setting so the person can take part, not the person's brain."
+  ],
+  "remember": "On the neurodiversity view, brain differences are normal human variation, and support can adjust the setting around a person.",
+  "a": {
+   "q": "Which statement best matches the neurodiversity view of autism?",
+   "opts": [
+    "It is one of many normal ways a brain can develop",
+    "It is a fault in the brain that needs to be cured",
+    "It is caused by poor habits learned in childhood",
+    "It is too rare to count as part of human variation"
+   ],
+   "why": "The neurodiversity view sees autism as one of the many ways brains develop, part of normal human variation. It does not treat it as a fault to be cured.",
+   "clue": "Think about how people vary in height or handedness."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom has ADHD and finds it hard to focus through long exams. His school gives him short rest breaks. How does the neurodiversity view see this?",
+   "opts": [
+    "The breaks adjust the setting so he can take part",
+    "The breaks correct a fault in the way his brain works",
+    "The breaks show his brain works like everyone else's",
+    "The breaks show he is unable to do well at school"
+   ],
+   "why": "On the neurodiversity view, support changes the setting so a person can take part, and leaves their brain as it is. The breaks do not fix a fault, because the difference is not seen as a fault.",
+   "clue": "Does this view see Tom's difference as something to fix?"
+  }
+ },
+ "cleared_by": "owner"
 }

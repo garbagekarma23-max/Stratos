@@ -24,14 +24,17 @@
    0.227
   ]
  ],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:01Z write: done",
   "2026-11-01T15:05:26Z check: flagged",
   "2026-11-01T15:14:46Z fix: suggested",
-  "2026-11-02T06:22:08Z review: rejected, to be written again"
+  "2026-11-02T06:22:08Z review: rejected, to be written again",
+  "2026-11-03T10:25:23Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: passed, cleared"
  ],
  "sent": {
   "match": 1,
@@ -87,5 +90,149 @@
    "clue": "Think about what education can lead to later in life."
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:23Z",
+   "step": "write",
+   "version": {
+    "title": "Poverty",
+    "card": [
+     "Poverty means lacking the resources to meet basic needs. It is often measured by income, but its effects reach well beyond money.",
+     "Poverty limits access to nutritious food, safe housing, health care and education. Without them, illness is more likely and harder to treat.",
+     "Missing out on education limits later work and income. So poverty lowers human development as well as health.",
+     "These limits can pass on. A parent with little education and income may not afford food or school for their children, so poverty can continue across generations."
+    ],
+    "remember": "Poverty cuts off the basics, so health and development both suffer, often for the next generation too.",
+    "a": {
+     "q": "A family in a low-income country cannot afford enough food or a visit to a clinic. How does this most directly harm the children's health?",
+     "opts": [
+      "It limits their nutrition and their care when ill",
+      "It makes them less interested in eating well",
+      "It means the family chooses to avoid health care",
+      "It affects their education but not their health"
+     ],
+     "why": "Without enough food the children are poorly nourished, and without a clinic visit an illness may go untreated. The problem is lack of access, not a choice to avoid care.",
+     "clue": "Think about what the family cannot pay for."
+    },
+    "b": {
+     "d": 3,
+     "q": "Amara's parents in rural Malawi cannot pay for her school uniform and books, so she leaves school early. How could this keep her future children in poverty?",
+     "opts": [
+      "Less education can limit her income as a parent",
+      "Her children are certain to fall ill as a result",
+      "Her children will need less food as they grow up",
+      "Her family will gain better housing straight away"
+     ],
+     "why": "With less education, Amara may earn less as an adult, so she may struggle to afford food, health care and school for her own children. Poverty raises risks, but it does not make illness certain.",
+     "clue": "Follow the link from education to income to the next generation."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It limits their nutrition and their care when ill",
+     "also_right": []
+    },
+    "b": {
+     "best": "Less education can limit her income as a parent",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Poverty",
+  "card": [
+   "Poverty means lacking the resources to meet basic needs. It is often measured by income, but its effects reach well beyond money.",
+   "Poverty limits access to nutritious food, safe housing, health care and education. Without them, illness is more likely and harder to treat.",
+   "Missing out on education limits later work and income. So poverty lowers human development as well as health.",
+   "These limits can pass on. A parent with little education and income may not afford food or school for their children, so poverty can continue across generations."
+  ],
+  "remember": "Poverty cuts off the basics, so health and development both suffer, often for the next generation too.",
+  "a": {
+   "q": "A family in a low-income country cannot afford enough food or a visit to a clinic. How does this most directly harm the children's health?",
+   "opts": [
+    "It limits their nutrition and their care when ill",
+    "It makes them less interested in eating well",
+    "It means the family chooses to avoid health care",
+    "It affects their education but not their health"
+   ],
+   "why": "Without enough food the children are poorly nourished, and without a clinic visit an illness may go untreated. The problem is lack of access, not a choice to avoid care.",
+   "clue": "Think about what the family cannot pay for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Amara's parents in rural Malawi cannot pay for her school uniform and books, so she leaves school early. How could this keep her future children in poverty?",
+   "opts": [
+    "Less education can limit her income as a parent",
+    "Her children are certain to fall ill as a result",
+    "Her children will need less food as they grow up",
+    "Her family will gain better housing straight away"
+   ],
+   "why": "With less education, Amara may earn less as an adult, so she may struggle to afford food, health care and school for her own children. Poverty raises risks, but it does not make illness certain.",
+   "clue": "Follow the link from education to income to the next generation."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It limits their nutrition and their care when ill",
+   "also_right": []
+  },
+  "b": {
+   "best": "Less education can limit her income as a parent",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Poverty",
+  "card": [
+   "Poverty means lacking the resources to meet basic needs. It is often measured by income, but its effects reach well beyond money.",
+   "Poverty limits access to nutritious food, safe housing, health care and education. Without them, illness is more likely and harder to treat.",
+   "Missing out on education limits later work and income. So poverty lowers human development as well as health.",
+   "These limits can pass on. A parent with little education and income may not afford food or school for their children, so poverty can continue across generations."
+  ],
+  "remember": "Poverty cuts off the basics, so health and development both suffer, often for the next generation too.",
+  "a": {
+   "q": "A family in a low-income country cannot afford enough food or a visit to a clinic. How does this most directly harm the children's health?",
+   "opts": [
+    "It limits their nutrition and their care when ill",
+    "It makes them less interested in eating well",
+    "It means the family chooses to avoid health care",
+    "It affects their education but not their health"
+   ],
+   "why": "Without enough food the children are poorly nourished, and without a clinic visit an illness may go untreated. The problem is lack of access, not a choice to avoid care.",
+   "clue": "Think about what the family cannot pay for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Amara's parents in rural Malawi cannot pay for her school uniform and books, so she leaves school early. How could this keep her future children in poverty?",
+   "opts": [
+    "Less education can limit her income as a parent",
+    "Her children are certain to fall ill as a result",
+    "Her children will need less food as they grow up",
+    "Her family will gain better housing straight away"
+   ],
+   "why": "With less education, Amara may earn less as an adult, so she may struggle to afford food, health care and school for her own children. Poverty raises risks, but it does not make illness certain.",
+   "clue": "Follow the link from education to income to the next generation."
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
 }

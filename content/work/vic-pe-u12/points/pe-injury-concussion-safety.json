@@ -3,24 +3,29 @@
  "title": "Injury, concussion and safety",
  "brief": "f20755a318f0",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:09Z write: done",
   "2026-11-01T08:24:34Z check: flagged",
   "2026-11-01T08:33:53Z fix: suggested",
-  "2026-11-02T06:24:24Z review: rejected, to be written again"
+  "2026-11-02T06:24:24Z review: rejected, to be written again",
+  "2026-11-03T10:25:23Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: flagged",
+  "2026-11-03T11:40:50Z fix: suggested",
+  "2026-11-03T11:56:01Z autoreview: cleared with the fix (b other)"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 2
  },
  "usd": {
   "write": 0.00491,
   "check": 0.01143,
-  "fix": 0.01986
+  "fix": 0.0331
  },
  "note": "",
  "rejected": {
@@ -62,5 +67,239 @@
    "clue": "Which option follows the protocol rather than just reducing risk?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:23Z",
+   "step": "write",
+   "version": {
+    "title": "Injury, concussion and safety",
+    "card": [
+     "Concussion and knee injuries are common in sport. Concussion is a brain injury from a knock to the head or a jolt to the body. A common knee injury is a tear of the anterior cruciate ligament (ACL).",
+     [
+      "Rules and equipment",
+      "rules such as bans on high tackles, and gear such as mouthguards and padding, lower the risk of injury. Neither removes it."
+     ],
+     "A player with a suspected concussion should leave the game at once and not return that day, even if they feel fine.",
+     [
+      "Return-to-play protocol",
+      "a set of steps back to sport: rest, then a gradual increase in activity, moving on only without symptoms, and a doctor's clearance before full contact."
+     ]
+    ],
+    "remember": "Rules and gear lower the risk, and a step-by-step protocol guides a safe return after an injury.",
+    "a": {
+     "q": "Why does a return-to-play protocol build activity up in stages after a concussion?",
+     "opts": [
+      "To check the athlete copes before the next step",
+      "To stop other players in the team being concussed",
+      "To keep the athlete fit enough to be picked again",
+      "To replace rules and protective gear in the sport"
+     ],
+     "why": "Each stage adds a little more activity, and the athlete moves on only without symptoms, with a doctor's clearance before full contact. Protecting other players is the job of rules and equipment, not the protocol.",
+     "clue": "Think about what happens after the injury has occurred."
+    },
+    "b": {
+     "d": 2,
+     "q": "Kirra, a footballer in Ballarat, takes a hard knock to the head in the second quarter and feels dizzy. What should her coach do?",
+     "opts": [
+      "Take her off and keep her out for the day",
+      "Rest her for a quarter, then let her play on",
+      "Fit a mouthguard and send her straight back",
+      "Move her to a spot with less body contact"
+     ],
+     "why": "A player with a suspected concussion should leave the game at once and not return that day. A short rest is tempting, but feeling fine later does not make it safe to go back on.",
+     "clue": "A suspected concussion ends the player's game."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "To check the athlete copes before the next step",
+     "also_right": []
+    },
+    "b": {
+     "best": "Take her off and keep her out for the day",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "other",
+      "detail": "The clue \"A suspected concussion ends the player's game.\" states the rule the question tests, so it rules out every option but the right one without the student applying the idea."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The facts and both answers check out. The clue on question b gives the answer away by stating the rule outright."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Injury, concussion and safety",
+  "card": [
+   "Concussion and knee injuries are common in sport. Concussion is a brain injury from a knock to the head or a jolt to the body. A common knee injury is a tear of the anterior cruciate ligament (ACL).",
+   [
+    "Rules and equipment",
+    "rules such as bans on high tackles, and gear such as mouthguards and padding, lower the risk of injury. Neither removes it."
+   ],
+   "A player with a suspected concussion should leave the game at once and not return that day, even if they feel fine.",
+   [
+    "Return-to-play protocol",
+    "a set of steps back to sport: rest, then a gradual increase in activity, moving on only without symptoms, and a doctor's clearance before full contact."
+   ]
+  ],
+  "remember": "Rules and gear lower the risk, and a step-by-step protocol guides a safe return after an injury.",
+  "a": {
+   "q": "Why does a return-to-play protocol build activity up in stages after a concussion?",
+   "opts": [
+    "To check the athlete copes before the next step",
+    "To stop other players in the team being concussed",
+    "To keep the athlete fit enough to be picked again",
+    "To replace rules and protective gear in the sport"
+   ],
+   "why": "Each stage adds a little more activity, and the athlete moves on only without symptoms, with a doctor's clearance before full contact. Protecting other players is the job of rules and equipment, not the protocol.",
+   "clue": "Think about what happens after the injury has occurred."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kirra, a footballer in Ballarat, takes a hard knock to the head in the second quarter and feels dizzy. What should her coach do?",
+   "opts": [
+    "Take her off and keep her out for the day",
+    "Rest her for a quarter, then let her play on",
+    "Fit a mouthguard and send her straight back",
+    "Move her to a spot with less body contact"
+   ],
+   "why": "A player with a suspected concussion should leave the game at once and not return that day. A short rest is tempting, but feeling fine later does not make it safe to go back on.",
+   "clue": "A suspected concussion ends the player's game."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To check the athlete copes before the next step",
+   "also_right": []
+  },
+  "b": {
+   "best": "Take her off and keep her out for the day",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue \"A suspected concussion ends the player's game.\" states the rule the question tests, so it rules out every option but the right one without the student applying the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers check out. The clue on question b gives the answer away by stating the rule outright."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue \"A suspected concussion ends the player's game.\" states the rule the question tests, so it rules out every option but the right one without the student applying the idea."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Injury, concussion and safety",
+  "card": [
+   "Concussion and knee injuries are common in sport. Concussion is a brain injury from a knock to the head or a jolt to the body. A common knee injury is a tear of the anterior cruciate ligament (ACL).",
+   [
+    "Rules and equipment",
+    "rules such as bans on high tackles, and gear such as mouthguards and padding, lower the risk of injury. Neither removes it."
+   ],
+   "A player with a suspected concussion should leave the game at once and not return that day, even if they feel fine.",
+   [
+    "Return-to-play protocol",
+    "a set of steps back to sport: rest, then a gradual increase in activity, moving on only without symptoms, and a doctor's clearance before full contact."
+   ]
+  ],
+  "remember": "Rules and gear lower the risk, and a step-by-step protocol guides a safe return after an injury.",
+  "a": {
+   "q": "Why does a return-to-play protocol build activity up in stages after a concussion?",
+   "opts": [
+    "To check the athlete copes before the next step",
+    "To stop other players in the team being concussed",
+    "To keep the athlete fit enough to be picked again",
+    "To replace rules and protective gear in the sport"
+   ],
+   "why": "Each stage adds a little more activity, and the athlete moves on only without symptoms, with a doctor's clearance before full contact. Protecting other players is the job of rules and equipment, not the protocol.",
+   "clue": "Think about what happens after the injury has occurred."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kirra, a footballer in Ballarat, takes a hard knock to the head in the second quarter and feels dizzy. What should her coach do?",
+   "opts": [
+    "Take her off and keep her out for the day",
+    "Rest her for a quarter, then let her play on",
+    "Fit a mouthguard and send her straight back",
+    "Move her to a spot with less body contact"
+   ],
+   "why": "A player with a suspected concussion should leave the game at once and not return that day. A short rest is tempting, but feeling fine later does not make it safe to go back on.",
+   "clue": "Does feeling better soon mean the brain has recovered?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-03T11:56:01Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue \"A suspected concussion ends the player's game.\" states the rule the question tests, so it rules out every option but the right one without the student applying the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue \"A suspected concussion ends the player's game.\" states the rule the question tests, so it rules out every option but the right one without the student applying the idea."
+  ]
+ },
+ "final": {
+  "title": "Injury, concussion and safety",
+  "card": [
+   "Concussion and knee injuries are common in sport. Concussion is a brain injury from a knock to the head or a jolt to the body. A common knee injury is a tear of the anterior cruciate ligament (ACL).",
+   [
+    "Rules and equipment",
+    "rules such as bans on high tackles, and gear such as mouthguards and padding, lower the risk of injury. Neither removes it."
+   ],
+   "A player with a suspected concussion should leave the game at once and not return that day, even if they feel fine.",
+   [
+    "Return-to-play protocol",
+    "a set of steps back to sport: rest, then a gradual increase in activity, moving on only without symptoms, and a doctor's clearance before full contact."
+   ]
+  ],
+  "remember": "Rules and gear lower the risk, and a step-by-step protocol guides a safe return after an injury.",
+  "a": {
+   "q": "Why does a return-to-play protocol build activity up in stages after a concussion?",
+   "opts": [
+    "To check the athlete copes before the next step",
+    "To stop other players in the team being concussed",
+    "To keep the athlete fit enough to be picked again",
+    "To replace rules and protective gear in the sport"
+   ],
+   "why": "Each stage adds a little more activity, and the athlete moves on only without symptoms, with a doctor's clearance before full contact. Protecting other players is the job of rules and equipment, not the protocol.",
+   "clue": "Think about what happens after the injury has occurred."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kirra, a footballer in Ballarat, takes a hard knock to the head in the second quarter and feels dizzy. What should her coach do?",
+   "opts": [
+    "Take her off and keep her out for the day",
+    "Rest her for a quarter, then let her play on",
+    "Fit a mouthguard and send her straight back",
+    "Move her to a spot with less body contact"
+   ],
+   "why": "A player with a suspected concussion should leave the game at once and not return that day. A short rest is tempting, but feeling fine later does not make it safe to go back on.",
+   "clue": "Does feeling better soon mean the brain has recovered?"
+  }
+ },
+ "cleared_by": "auto"
 }

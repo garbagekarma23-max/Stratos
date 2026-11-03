@@ -24,7 +24,7 @@
    0.202
   ]
  ],
- "stage": "check",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -36,19 +36,20 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other, a wording)",
   "2026-11-02T04:50:14Z write: failed the content check, writing again",
-  "2026-11-02T04:56:45Z write: done"
+  "2026-11-02T04:56:45Z write: done",
+  "2026-11-03T11:40:49Z check: passed, cleared"
  ],
  "sent": {
   "match": 1,
   "write": 5,
-  "check": 1,
+  "check": 2,
   "fix": 1,
   "recheck": 1
  },
  "usd": {
   "match": 0.00032,
   "write": 0.03168,
-  "check": 0.01196,
+  "check": 0.02825,
   "fix": 0.02761,
   "recheck": 0.01747
  },
@@ -95,7 +96,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "checker",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -290,5 +291,54 @@
   }
  },
  "redone": true,
- "local": []
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The metaphor \"drowning\" implies danger, so readers may worry",
+   "also_right": []
+  },
+  "b": {
+   "best": "\"Quiet and hope\" stir warmth, so readers may oppose closure",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Analysing language for persuasive effect",
+  "card": [
+   "A persuasive technique is a choice of language meant to influence the reader, such as emotive words, a statistic or a rhetorical question.",
+   "Good analysis names the technique and quotes a few of the writer's words. Keep the quote short and fit it into your own sentence.",
+   "Then it explains the effect: how the technique is meant to make the audience feel or think, so that they lean towards the writer's side.",
+   "Example: a writer calls a new road \"a scar across the valley\". The metaphor suggests harm and damage, so readers may feel protective of the valley and oppose the road."
+  ],
+  "remember": "Name the technique, quote the words, then explain how they position the reader.",
+  "a": {
+   "q": "A writer tells readers that teenagers are \"drowning in screens\". Which sentence is the best analysis of this language?",
+   "opts": [
+    "The metaphor \"drowning\" implies danger, so readers may worry",
+    "The metaphor \"drowning\" is used about teenagers and screens",
+    "The writer says teenagers spend far too long on screens",
+    "The writer shows dislike of phones by saying \"drowning\""
+   ],
+   "why": "It names the metaphor, quotes \"drowning\" and explains the effect: readers who see danger may feel worried and want change. The option that only says the metaphor is used about teenagers names and quotes, but it stops before the effect, so it is not full analysis.",
+   "clue": "Check which options go beyond naming, quoting or restating the point."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia writes that her town's library, \"a place of quiet and hope\", is being shut. Which analysis best explains the persuasive effect of the emotive words?",
+   "opts": [
+    "\"Quiet and hope\" stir warmth, so readers may oppose closure",
+    "\"Quiet and hope\" are two nouns that describe the library",
+    "\"Quiet and hope\" show how much Mia herself loves the library",
+    "\"Quiet and hope\" are facts, so readers will trust Mia"
+   ],
+   "why": "The right analysis links the words to a feeling in the reader and to the stance they may take on the closure. The option about how much Mia loves the library is tempting, but it explains the writer's feelings, not how the audience is positioned. Calling the words two nouns only describes them and never reaches an effect.",
+   "clue": "Effect is about the audience, not the writer."
+  }
+ }
 }

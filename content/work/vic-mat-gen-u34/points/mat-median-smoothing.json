@@ -24,7 +24,7 @@
    0.202
   ]
  ],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -34,20 +34,22 @@
   "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (remember wording)",
   "2026-11-02T04:50:15Z write: done",
-  "2026-11-02T04:56:46Z check: flagged"
+  "2026-11-02T04:56:46Z check: flagged",
+  "2026-11-03T11:40:50Z fix: suggested",
+  "2026-11-03T11:56:00Z autoreview: cleared with the fix (card wording)"
  ],
  "sent": {
   "match": 1,
   "write": 2,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 0.00021,
   "write": 0.0112,
   "check": 0.02607,
-  "fix": 0.02352,
+  "fix": 0.04867,
   "recheck": 0.01303
  },
  "match": {
@@ -93,7 +95,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "auto",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -285,5 +287,90 @@
  "sensitive": "none",
  "flags": [
   "Card, wording: The card defines the median as 'the middle value when they are put in order', then in the example calls 20 'the middle value' (meaning the middle position). Using 'middle value' for both the median and the middle position could confuse students. Saying 'the middle point's value 20' would avoid this."
- ]
+ ],
+ "proposal": {
+  "title": "Median smoothing",
+  "card": [
+   "Median smoothing replaces each value with the median of it and its neighbours. The median is the number in the middle once they are put in order of size.",
+   "For 3-median smoothing, take a value and the one before and after it. Put the three in order of size and pick the one in the middle.",
+   "Example: values 4, 20, 6. In order of size they are 4, 6, 20. The median is 6, so the middle point's value, 20, is replaced by 6.",
+   "A single extreme value ends up at one end of the ordered list, so it does not become the median. This is why median smoothing resists outliers. It can also be done on the graph by eye."
+  ],
+  "remember": "Sort each group by size and keep the one in the middle, so a single outlier has little effect.",
+  "a": {
+   "q": "Three consecutive values in a time series are 12, 9 and 21. What is the 3-median smoothed value for the middle point?",
+   "opts": [
+    "12",
+    "9",
+    "14",
+    "21"
+   ],
+   "why": "In order of size the values are 9, 12, 21, so the median is 12. The middle point's own value, 9, is not the median, because the median is found after putting the three in order. The mean of the three is 14, but median smoothing does not use the mean.",
+   "clue": "Put the three values in order of size first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Daily sales at a Ballarat bakery are 30, 32, 95, 31, 33. What is the 3-median smoothed value for the day with 95?",
+   "opts": [
+    "32",
+    "31",
+    "53",
+    "95"
+   ],
+   "why": "The three values are 32, 95 and 31. In order of size: 31, 32, 95, so the median is 32. A 3-mean would give about 53, because the outlier pulls it up.",
+   "clue": "Use the 95 and the two values beside it."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-03T11:56:00Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card defines the median as 'the middle value when they are put in order', then in the example calls 20 'the middle value' (meaning the middle position). Using 'middle value' for both the median and the middle position could confuse students. Saying 'the middle point's value 20' would avoid this."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card defines the median as 'the middle value when they are put in order', then in the example calls 20 'the middle value' (meaning the middle position). Using 'middle value' for both the median and the middle position could confuse students. Saying 'the middle point's value 20' would avoid this."
+  ]
+ },
+ "final": {
+  "title": "Median smoothing",
+  "card": [
+   "Median smoothing replaces each value with the median of it and its neighbours. The median is the number in the middle once they are put in order of size.",
+   "For 3-median smoothing, take a value and the one before and after it. Put the three in order of size and pick the one in the middle.",
+   "Example: values 4, 20, 6. In order of size they are 4, 6, 20. The median is 6, so the middle point's value, 20, is replaced by 6.",
+   "A single extreme value ends up at one end of the ordered list, so it does not become the median. This is why median smoothing resists outliers. It can also be done on the graph by eye."
+  ],
+  "remember": "Sort each group by size and keep the one in the middle, so a single outlier has little effect.",
+  "a": {
+   "q": "Three consecutive values in a time series are 12, 9 and 21. What is the 3-median smoothed value for the middle point?",
+   "opts": [
+    "12",
+    "9",
+    "14",
+    "21"
+   ],
+   "why": "In order of size the values are 9, 12, 21, so the median is 12. The middle point's own value, 9, is not the median, because the median is found after putting the three in order. The mean of the three is 14, but median smoothing does not use the mean.",
+   "clue": "Put the three values in order of size first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Daily sales at a Ballarat bakery are 30, 32, 95, 31, 33. What is the 3-median smoothed value for the day with 95?",
+   "opts": [
+    "32",
+    "31",
+    "53",
+    "95"
+   ],
+   "why": "The three values are 32, 95 and 31. In order of size: 31, 32, 95, so the median is 32. A 3-mean would give about 53, because the outlier pulls it up.",
+   "clue": "Use the 95 and the two values beside it."
+  }
+ }
 }

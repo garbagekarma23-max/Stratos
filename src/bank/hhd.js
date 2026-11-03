@@ -2107,5 +2107,1308 @@ MADE_BANKS.hhd = {
       "why": "The stall raises money for the cause, so it is fundraising. Volunteering is tempting because the class gives time to run the stall, but the card shows that an event raising money for a cause counts as fundraising even when people give time to run it.",
       "clue": "Think about what the stall produces for the charity."
     }
+  },
+  "hhd-areas-needing-action": {
+    "title": "Areas needing action",
+    "card": [
+      "Health data counts how many young people have a health problem, are hurt by it or die from it. Researchers use it to see which problems affect the most young people.",
+      "Data can also show which problems are growing, which groups are hit hardest and which cause the most harm, such as death or lasting injury.",
+      "In Australia, areas often named for young people include mental health, injury and alcohol use. Governments and health groups can change their priorities as the data changes.",
+      "Action is aimed where the data shows the greatest need. No single measure decides this: how common, how fast-growing and how harmful a problem is are weighed together."
+    ],
+    "remember": "Priorities come from evidence: how many young people a problem affects, how it is changing and how much harm it does.",
+    "a": {
+      "q": "Why does a health agency use data to choose areas of youth health to act on?",
+      "opts": [
+        "It shows which problems affect and harm many young people",
+        "It shows which problems get the most attention in the media",
+        "It shows which problems young people find most interesting",
+        "It shows which problems adults say they worry about most"
+      ],
+      "why": "Data counts how many young people are affected and how badly, so it points to the greatest need. Media attention, interest and worry reflect what people talk about, not how many young people are actually harmed.",
+      "clue": "Think about what the numbers count."
+    },
+    "b": {
+      "d": 3,
+      "q": "A report finds alcohol-related harm among young Victorians has fallen slightly, but it still affects far more of them than any other problem in the report. What does this mean for action?",
+      "opts": [
+        "It can stay a priority, as it still harms many young people",
+        "It can be dropped, as a falling trend means it is solved",
+        "It should wait for action until the trend rises again",
+        "It ranks below any problem that is rising, however small"
+      ],
+      "why": "Priorities weigh how common, how fast-growing and how harmful a problem is together. A slight fall does not change the fact that this problem still harms more young people than any other. Dropping it confuses a falling trend with a solved problem.",
+      "clue": "Does a small fall change how many are still affected?"
+    }
+  },
+  "hhd-health-promotion-young-people": {
+    "title": "Programs for youth health",
+    "card": [
+      "A health program is a planned set of actions that aims to improve the health of a group. Youth health programs aim at young people, for example by cutting road injuries or supporting mental health.",
+      [
+        "Government program",
+        "run by a government department or agency, such as a state road safety campaign. Governments can reach large numbers of people, and they draw on public money."
+      ],
+      [
+        "Non-government program",
+        "run by a group outside government, such as a charity or community organisation. It may be funded by donations or by government grants. Who runs a program, not who pays, decides its type."
+      ],
+      "Programs often target an area where health data shows young people need help. A program can be judged by asking who it aims to reach and whether it improves health for them."
+    ],
+    "remember": "Government or non-government depends on who runs the program, and either kind aims to improve young people's health.",
+    "a": {
+      "q": "Which of these is a non-government youth health program?",
+      "opts": [
+        "A charity runs free mental health talks at local schools",
+        "A state agency airs a TV ad about drink driving",
+        "A state education department adds health to school classes",
+        "A council uses its own funds to build a youth clinic"
+      ],
+      "why": "A charity is outside government, so its program is non-government. The other three are run by a government body, including a local council, so they are government programs.",
+      "clue": "Look for who runs the program, not who it helps."
+    },
+    "b": {
+      "d": 3,
+      "q": "A state government pays a youth charity to run a peer-led mental health program in country towns. What is the best description of this program?",
+      "opts": [
+        "A non-government program, as the charity runs it",
+        "A government program, as the government pays for it",
+        "A government program, as it is aimed at young people",
+        "A non-government program, as it is aimed at country towns"
+      ],
+      "why": "The charity runs the program, so it is a non-government program. Government funding does not change the type, because non-government programs may be paid for by government grants. Who the program is aimed at does not decide the type either.",
+      "clue": "Two groups are involved here. Which detail sets the type?"
+    }
+  },
+  "hhd-youth-health-focus": {
+    "title": "A youth health focus",
+    "card": [
+      "A youth health focus means studying one issue in depth, such as mental health or body image, rather than youth health in general.",
+      "One issue can affect each dimension of health: physical, social, emotional, mental and spiritual. Poor mental health, for example, can affect sleep (physical) and time with friends (social).",
+      "Data show trends, which are patterns over time. A trend shows whether an issue is becoming more common, less common or staying about the same.",
+      "Together, the dimensions show how the issue affects young people's lives, and the trends show whether it is growing or easing."
+    ],
+    "remember": "Pick one issue: trace its effects on each dimension, then check its trend in the data.",
+    "a": {
+      "q": "A student studying body image notes it can lead to skipping meals, avoiding friends and feeling ashamed. What is the student describing?",
+      "opts": [
+        "The issue's effects across dimensions of health",
+        "The issue's trend in the data over many years",
+        "The causes of the issue in young people's lives",
+        "The issue's effect on one dimension of health"
+      ],
+      "why": "Skipping meals is physical, avoiding friends is social and feeling ashamed is emotional, so the student is describing effects across several dimensions. Nothing here is measured over time, so it is not a trend.",
+      "clue": "Sort each effect into a dimension of health."
+    },
+    "b": {
+      "d": 2,
+      "q": "Survey figures show the share of young Victorians with high psychological distress has risen over ten years. What does this tell a student about the issue?",
+      "opts": [
+        "How common it is becoming over time",
+        "How it affects each dimension of health",
+        "What protects young people from it",
+        "How much it costs to treat each year"
+      ],
+      "why": "A change in a figure over ten years is a trend: it shows whether the issue is becoming more or less common. The figures say nothing about its effect on each dimension or its cost.",
+      "clue": "Ten years of figures show a pattern over time."
+    }
+  },
+  "hhd-risk-protective-factors": {
+    "title": "Risk and protective factors",
+    "card": [
+      [
+        "Risk factor",
+        "Something that makes a health problem more likely to happen. Examples are smoking, social isolation and a poor diet."
+      ],
+      [
+        "Protective factor",
+        "Something that makes a health problem less likely, or softens its effects if it does happen. Examples are supportive friends, regular exercise and access to health care."
+      ],
+      "Factors can be biological, such as genes or a family history of a disease. They can be personal, such as habits and beliefs, or come from a person's surroundings, such as school and income.",
+      "A risk factor makes a problem more likely, not certain. A protective factor lowers the chance but does not remove it. A person can have both kinds at the same time."
+    ],
+    "remember": "Risk factors raise the chance of a health problem. Protective factors lower the chance or soften the effects.",
+    "a": {
+      "q": "Which of these is a protective factor for a young person's mental health?",
+      "opts": [
+        "Having close friends who offer support",
+        "Spending most days alone at home",
+        "Often skipping meals and sleep",
+        "Having no one to talk to about worries"
+      ],
+      "why": "Supportive friends make poor mental health less likely and can ease its effects if it does occur. The other three make problems more likely, so they are risk factors.",
+      "clue": "Which one lowers the chance of a problem or softens it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi, 16, lives in Bendigo. He has a family history of heart disease and eats few vegetables. He also plays football twice a week. Which statement is correct?",
+      "opts": [
+        "Football protects him; diet and family history are risks",
+        "Football and his diet both protect his heart health",
+        "His two risk factors mean he will get heart disease",
+        "Playing football removes all of his heart disease risk"
+      ],
+      "why": "Regular exercise lowers the chance of heart disease, so it is protective. A poor diet and a family history of the disease raise the chance, so they are risk factors. Risk factors do not make the disease certain, and a protective factor lowers risk without removing it.",
+      "clue": "Sort each factor by whether it raises or lowers the chance, and remember neither is a guarantee."
+    }
+  },
+  "hhd-costs-health-issue": {
+    "title": "The costs of a health issue",
+    "card": [
+      "A health issue costs more than the bill for treatment. Costs fall on the person, their family, employers and the community.",
+      [
+        "Direct costs",
+        "money spent on dealing with the issue itself, such as hospital care, medicines, GP visits and ambulance trips."
+      ],
+      [
+        "Indirect costs",
+        "money lost because of the issue, though not spent on it directly, such as lost work, lost income and a carer taking time off."
+      ],
+      [
+        "Intangible costs",
+        "effects that are real but hard to put a dollar value on, such as pain, stress, grief and a lower quality of life."
+      ]
+    ],
+    "remember": "Direct costs are spent on care. Indirect costs are income and work lost. Intangible costs are felt, not priced.",
+    "a": {
+      "q": "Sam breaks his leg playing football and needs surgery. Which is a direct cost of his injury?",
+      "opts": [
+        "The hospital bill for his surgery",
+        "The wages he loses while off work",
+        "The pain he feels in his leg",
+        "The stress his parents feel about it"
+      ],
+      "why": "A hospital bill is money spent on treating the injury, so it is a direct cost. Lost wages are tempting, but they are money lost because of the injury, not spent on treating it, so they are indirect.",
+      "clue": "Which one is money spent on treating the injury itself?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has anxiety and often misses school and her part-time job. Which of her costs is an indirect cost?",
+      "opts": [
+        "The wages she loses on shifts she cannot work",
+        "The fees for her visits to a psychologist",
+        "The constant worry she feels each day",
+        "The medicine her doctor prescribes for her"
+      ],
+      "why": "Lost wages are money lost because of the issue, not spent on treating it, so they are indirect costs. Her constant worry is real, but it is hard to give a dollar value, so it is intangible. Fees and medicine are spent on care, so they are direct.",
+      "clue": "Look for the money she loses, not the money spent on care."
+    }
+  },
+  "hhd-youth-advocacy": {
+    "title": "Youth advocacy",
+    "card": [
+      "Advocacy is speaking up for a cause or for other people. In health, it aims to bring about better and fairer health for a person or a group.",
+      "Advocacy means raising your voice so others hear. Reading about an issue or making a quiet healthy choice can be a good start, but it is not advocacy on its own.",
+      [
+        "Personal action",
+        "speaking up in your own life for your own health, such as asking a doctor questions or saying no to peer pressure."
+      ],
+      [
+        "Community action",
+        "speaking up with or for others, such as joining a youth council, running a school awareness campaign or writing to a local member of parliament."
+      ]
+    ],
+    "remember": "Advocacy is speaking up so others hear, for your own health or for your community's.",
+    "a": {
+      "q": "Which action is an example of youth advocacy for health?",
+      "opts": [
+        "Starting a petition for safer bike paths near the school",
+        "Reading a news story about a new youth health program",
+        "Quietly choosing water instead of soft drink at lunch",
+        "Waiting for the council to decide on new bike paths"
+      ],
+      "why": "A petition speaks up to decision makers for better and fairer health, so it is advocacy. Choosing water is a healthy choice, but it is made quietly and no one is asked to change anything, so it is not advocacy on its own.",
+      "clue": "Which one makes someone else hear a call for change?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya, 16, tells her friends about the health risks of vaping and asks her school to hold a student-led talk on it. What kind of action is the request to the school?",
+      "opts": [
+        "Community action, because it speaks up for a group",
+        "Personal action, because Priya made the request herself",
+        "Not advocacy, because it is only about one health issue",
+        "Not advocacy, because Priya is not an adult"
+      ],
+      "why": "The request asks the school to act for all students, so it is community action. It is tempting to choose personal, because Priya acted herself, but personal action is about speaking up for your own health. What matters is who the action is for.",
+      "clue": "Think about who the request is meant to help."
+    }
+  },
+  "hhd-healthy-respectful-relationships": {
+    "title": "Healthy and respectful relationships",
+    "card": [
+      "A healthy relationship is one where each person feels valued and safe. It can be a friendship, a family bond or a romantic relationship.",
+      [
+        "Respect and trust",
+        "respect means treating the other person's views, feelings and choices as important, even in a disagreement. Trust means relying on each other to keep promises and to care."
+      ],
+      [
+        "Honesty and safety",
+        "honesty means telling the truth and being open about feelings. Safety means being free from fear, harm and pressure, in body and mind."
+      ],
+      "Relationships with these features can support health and development. They can build self-esteem, a sense of belonging and the confidence to cope with problems."
+    ],
+    "remember": "Respect, trust, honesty and safety make a relationship healthy, and a healthy relationship can help a person grow.",
+    "a": {
+      "q": "Ava and Noor disagree about which subjects to take next year. Which response by Ava shows respect?",
+      "opts": [
+        "Ava listens to Noor's reasons and accepts her choice",
+        "Ava agrees with Noor just to avoid an argument",
+        "Ava tells Noor which subjects she should choose",
+        "Ava stops talking to Noor until she changes her mind"
+      ],
+      "why": "Respect means treating the other person's views and choices as important, even in a disagreement. Agreeing just to avoid an argument is tempting, but it hides Ava's real view rather than valuing both.",
+      "clue": "Respect still works when two people disagree."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jordan's friend says Jordan will be dropped from the group for spending time with anyone else. Jordan feels too afraid to say no. Which feature of a healthy relationship is most clearly missing?",
+      "opts": ["Safety", "Honesty", "Humour", "Shared hobbies"],
+      "why": "Jordan feels afraid and pressured, so Jordan is not free from fear or pressure, which means safety is missing. Nothing suggests the friend is lying, so honesty is not the clearest gap.",
+      "clue": "Look at how Jordan feels about saying no."
+    }
+  },
+  "hhd-becoming-parent": {
+    "title": "Becoming a parent",
+    "card": [
+      "Becoming a parent is a major life change. It can affect a person's responsibilities, relationships and finances.",
+      [
+        "Responsibilities",
+        "parents become responsible for the care, safety and daily needs of a child, such as feeding and health."
+      ],
+      [
+        "Relationships",
+        "time and attention shift to the child. The couple's relationship and contact with friends may change."
+      ],
+      [
+        "Finances",
+        "costs can rise for items such as food and childcare. Income may fall if a parent works fewer hours. These changes can add stress."
+      ]
+    ],
+    "remember": "Parenthood brings change that can add stress.",
+    "a": {
+      "q": "Which is a change in a parent's responsibilities after a baby is born?",
+      "opts": [
+        "Meeting the baby's daily care and safety needs",
+        "Paying for items such as nappies and childcare",
+        "Having less time to spend with friends",
+        "Feeling stress because of the new demands"
+      ],
+      "why": "Responsibilities are about caring for the child's needs, such as feeding and safety. Paying for items is a finance change. Less time with friends is a relationship change.",
+      "clue": "Think about who now looks after the child's needs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jess cuts her work hours so she can care for her new baby at home. Which area of change does her smaller pay packet show?",
+      "opts": [
+        "A change in finances",
+        "A change in relationships",
+        "A change in responsibilities",
+        "A change in stress levels"
+      ],
+      "why": "A smaller pay packet means less income, which is a change in finances. Responsibilities is tempting because Jess cut her hours to care for the baby, but that care is the reason, not the pay change itself. Stress can follow from these changes, but it is not the change the pay packet shows.",
+      "clue": "Look at the effect the question asks about, not its cause."
+    }
+  },
+  "hhd-support-parents": {
+    "title": "Support for parents",
+    "card": [
+      "New parents can get help from many places. Support can be practical, such as meals or babysitting, or emotional, such as someone to listen.",
+      [
+        "Family and friends",
+        "informal support. They can help with daily tasks, give advice from their own experience and offer company."
+      ],
+      [
+        "Maternal and child health nurses",
+        "nurses in Victoria's free Maternal and Child Health Service. They check a baby's growth and development and give advice on feeding, sleep and parent wellbeing."
+      ],
+      [
+        "Parenting services",
+        "organisations such as helplines, parenting groups and early parenting centres. They offer advice and programs to help parents build skills and confidence."
+      ]
+    ],
+    "remember": "Support can come from people close to parents or from trained services, and both can help parents cope.",
+    "a": {
+      "q": "Which is an example of practical support for a new parent?",
+      "opts": [
+        "A neighbour cooks dinner for the family twice a week",
+        "A friend says they understand how tiring it feels",
+        "A relative tells the parent they are doing well",
+        "A cousin phones each night to ask how the day went"
+      ],
+      "why": "Cooking meals is practical help because it takes a daily task off the parent. The other options are mainly emotional support, such as listening and encouragement.",
+      "clue": "Which one helps by doing a task for the parent?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is worried that her baby in Bendigo is not feeding well. She wants advice from someone trained to check the baby's growth. Who is the best source?",
+      "opts": [
+        "A maternal and child health nurse",
+        "A friend who has two young children",
+        "Her parents, who raised three children",
+        "A parenting group on a social media page"
+      ],
+      "why": "Maternal and child health nurses are trained to check growth and development and to advise on feeding. Friends and family can give comfort and experience, but they are not trained to assess the baby, so they are not the best fit here.",
+      "clue": "Look for the person trained to check a baby's growth."
+    }
+  },
+  "hhd-prenatal-development": {
+    "title": "Prenatal development",
+    "card": [
+      "Prenatal development is the growth that happens before birth. It begins at fertilisation, when a sperm joins an egg, and lasts about 38 weeks from fertilisation (about 40 weeks of pregnancy).",
+      [
+        "Germinal stage",
+        "the first two weeks or so after fertilisation. The fertilised egg divides into a ball of cells, travels to the uterus and attaches to its wall."
+      ],
+      [
+        "Embryonic stage",
+        "from about week 3 to week 8 after fertilisation. The main organs and body systems begin to form, including the heart, brain and spinal cord."
+      ],
+      [
+        "Fetal stage",
+        "from about week 9 after fertilisation until birth. The organs mature, the body grows quickly and the baby gains weight."
+      ]
+    ],
+    "remember": "Prenatal development runs from fertilisation to birth in three stages: germinal, embryonic, fetal.",
+    "a": {
+      "q": "During which stage do the main organs and body systems first begin to form?",
+      "opts": ["Embryonic stage", "Germinal stage", "Fetal stage", "Postnatal stage"],
+      "why": "The embryonic stage, from about week 3 to week 8, is when the heart, brain and spinal cord start to form. The germinal stage is tempting, but it is only the early cell division and attachment to the uterus wall.",
+      "clue": "Organs start forming after the egg has attached to the uterus."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's baby was conceived 14 weeks ago. Which stage of prenatal development is the baby in, and why?",
+      "opts": [
+        "Fetal, because the embryonic stage ends at about week 8",
+        "Embryonic, because that stage lasts until about week 16",
+        "Germinal, because that stage lasts until about week 14",
+        "Embryonic, because organs keep forming until about week 20"
+      ],
+      "why": "The embryonic stage ends at about week 8 after fertilisation, and the fetal stage runs from about week 9 until birth. At week 14 the baby is in the fetal stage. Embryonic is tempting because it is the stage linked to organs, but it is already over by week 14.",
+      "clue": "Compare week 14 with the week where the embryonic stage ends."
+    }
+  },
+  "hhd-risks-before-birth": {
+    "title": "Risks before birth",
+    "card": [
+      "What a mother eats, drinks and breathes in can reach her baby through the placenta. Good nutrition and regular antenatal check-ups (health checks during pregnancy) help protect the baby.",
+      [
+        "Diet",
+        "Too little folate or iron can affect development. Folate helps prevent neural tube defects, which are problems with the baby's spine and brain."
+      ],
+      [
+        "Smoking",
+        "Smoking can reduce the oxygen the baby receives. It is linked to low birth weight and premature birth."
+      ],
+      [
+        "Alcohol",
+        "Alcohol crosses the placenta at any stage of pregnancy and can harm the baby's brain and body, causing fetal alcohol spectrum disorder. No amount is known to be safe."
+      ]
+    ],
+    "remember": "Folate and iron help the baby grow. Smoking and alcohol can harm it.",
+    "a": {
+      "q": "Which statement about risks before birth is correct?",
+      "opts": [
+        "Smoking can cut the oxygen reaching the baby",
+        "Low iron can cause fetal alcohol spectrum disorder",
+        "Iron can prevent neural tube defects in the spine",
+        "The placenta can filter alcohol out of the blood"
+      ],
+      "why": "Smoking can reduce the oxygen the baby receives, which is linked to low birth weight. Folate, not iron, helps prevent neural tube defects, and fetal alcohol spectrum disorder comes from alcohol, which crosses the placenta.",
+      "clue": "Match each nutrient or substance to its own effect."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is 8 weeks pregnant. She says a drink on weekends is fine because the placenta protects the baby. What is wrong with her reasoning?",
+      "opts": [
+        "Alcohol crosses the placenta and can reach the baby",
+        "Alcohol is only a risk in the last months of pregnancy",
+        "The placenta blocks alcohol but lets nicotine through",
+        "Only heavy drinking can affect the baby's development"
+      ],
+      "why": "Alcohol crosses the placenta at any stage and can harm the baby's brain and body. Saying only heavy drinking matters is tempting, but no amount of alcohol is known to be safe in pregnancy.",
+      "clue": "Think about what the placenta lets through, and when."
+    }
+  },
+  "hhd-development-infancy-early-childhood": {
+    "title": "Development in infancy and early childhood",
+    "card": [
+      "Infancy runs from birth to about 2 years. Early childhood runs from 2 to about 6 years. Development is very rapid in both stages.",
+      [
+        "Physical",
+        "growth in size and in movement skills. A baby learns to hold up its head, then to sit, crawl, walk and later to run and use a pencil."
+      ],
+      [
+        "Social and emotional",
+        "social development is learning to relate to others, such as playing with other children. Emotional development is learning to express and manage feelings, such as showing joy or calming down with help."
+      ],
+      [
+        "Intellectual",
+        "growth in thinking, language and memory. A baby babbles, then speaks single words, then puts words into sentences and asks questions."
+      ]
+    ],
+    "remember": "In the early years, a child grows quickly in body, relationships, feelings and thinking.",
+    "a": {
+      "q": "A two-year-old starts joining words into short sentences such as \"want more milk\". Which type of development is this?",
+      "opts": ["Intellectual development", "Physical development", "Social development", "Emotional development"],
+      "why": "Learning to use language is growth in how the mind works, so it is intellectual development. Social development is tempting because talking happens with other people, but the card places language under intellectual growth.",
+      "clue": "Is this a change in the body, in relationships, in feelings or in the mind?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom, aged 4, used to scream when his dad left him at kindergarten. Now he still feels sad, but he takes deep breaths and calms down with a teacher's help. What development does this show?",
+      "opts": [
+        "Emotional, as he is learning to cope with being upset",
+        "Social, as he is learning to share and play with others",
+        "Intellectual, as he is learning to use new words",
+        "Physical, as he is growing stronger and taller"
+      ],
+      "why": "Tom is learning to manage his sadness when his dad leaves, which is emotional development. Social development is tempting because a teacher is involved, but nothing in the case shows him sharing or playing with others.",
+      "clue": "Compare what Tom did before with what he does now."
+    }
+  },
+  "hhd-early-life-experiences": {
+    "title": "Early life experiences",
+    "card": [
+      "Experiences in the first years of life can shape health and development for decades, because the brain is developing quickly then.",
+      [
+        "Care",
+        "warm, responsive care, such as comforting a baby and talking and playing with them, supports brain growth and a sense of security."
+      ],
+      [
+        "Nutrition",
+        "enough healthy food supports growth and learning. Poor nutrition early on can hold back growth and raise the risk of illness later in life."
+      ],
+      [
+        "Stress",
+        "ongoing stress, such as neglect or constant conflict at home, can affect how the brain develops, with effects on learning, behaviour and health later."
+      ]
+    ],
+    "remember": "Early care, food and stress can make good or poor health more likely well into adult life.",
+    "a": {
+      "q": "Kai is a toddler who is fed well but is rarely comforted, talked to or played with. Which statement about Kai is most accurate?",
+      "opts": [
+        "The lack of care can still affect his development",
+        "Good food alone makes up for the lack of care",
+        "Care matters only once a child starts school",
+        "Care shapes feelings but not how the brain grows"
+      ],
+      "why": "Responsive care supports brain growth and security, so missing it can affect Kai's development even though he eats well. Good food is tempting, but it does not replace care.",
+      "clue": "Food and care each do their own job."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two cousins grow up apart. Ruby has warm care and good food in her first years. Theo faces ongoing neglect. Which prediction is best?",
+      "opts": [
+        "Ruby is more likely to have good health later",
+        "Theo is certain to have poor health as an adult",
+        "Their early years will make no lasting difference",
+        "Ruby's food will matter later, but her care will not"
+      ],
+      "why": "Good care and nutrition make healthy development more likely, so Ruby is more likely to have good health later. Early stress raises the risk for Theo, but it does not make poor health certain.",
+      "clue": "Early experiences change how likely an outcome is."
+    }
+  },
+  "hhd-health-across-generations": {
+    "title": "Health across generations",
+    "card": [
+      "A parent's health and circumstances can affect their children's health. These effects can continue to the next generation.",
+      "Some effects are biological. Parents can pass on genes that raise the risk of some conditions, and a mother's health in pregnancy can affect her baby.",
+      "Some effects come from circumstances. Income, housing, education and health habits shape the home a child grows up in.",
+      "A child raised with these advantages or disadvantages may then pass similar ones to their own children. This does not make poor health certain, since support and change can break the pattern."
+    ],
+    "remember": "Parents' health and circumstances can shape their children's health, and those children may pass it on.",
+    "a": {
+      "q": "Which example shows parents' circumstances affecting a child's health?",
+      "opts": [
+        "A family on a low income can afford less nutritious food",
+        "A child is born with the same eye colour as a parent",
+        "A child breaks an arm while playing at school",
+        "A child catches a cold from a classmate"
+      ],
+      "why": "Income is a circumstance that shapes the food and housing a child has, so it can affect health. Eye colour is inherited but is not a health circumstance. A broken arm and a cold are not caused by parents' circumstances.",
+      "clue": "Look for something about the home the child grows up in."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom's parents both had poor health habits, and Tom now has them. Which statement about Tom's own children is best?",
+      "opts": [
+        "They may be affected, but support or change can reduce this",
+        "They may be affected, but only through Tom's genes",
+        "They may be affected, and support can do little to change it",
+        "They are unlikely to be affected, as habits stop with Tom"
+      ],
+      "why": "Tom's habits shape the home his children grow up in, so they may be affected, but support and change can break the pattern. Saying it is only through genes ignores circumstances such as health habits. Saying support can do little is wrong, as the card says the pattern can be broken.",
+      "clue": "Think about both ways effects pass on, and whether the pattern can change."
+    }
+  },
+  "hhd-gps-allied-alternative-health": {
+    "title": "GPs, allied and alternative health",
+    "card": [
+      [
+        "GP",
+        "a general practitioner, a doctor who treats common problems and checks overall health. A GP is usually the first stop and can refer a patient to a specialist or another health professional."
+      ],
+      [
+        "Allied health",
+        "university-trained professionals who each work in one area of care, such as physiotherapists, psychologists and dietitians. Many are registered with a national regulator, and they use treatments backed by scientific evidence."
+      ],
+      [
+        "Alternative health",
+        "practices outside conventional medicine, such as naturopathy and homeopathy. Their treatments often have limited scientific evidence of working."
+      ],
+      "People may use these services together. For example, a GP may suggest a physiotherapist for an injury, while a person may choose to see a naturopath on their own."
+    ],
+    "remember": "GPs are usually the first stop, allied health adds focused care, and alternative health sits outside conventional medicine.",
+    "a": {
+      "q": "Which health professional is an example of allied health?",
+      "opts": ["A psychologist", "A naturopath", "A general practitioner", "A homeopath"],
+      "why": "A psychologist is trained in one area of care, mental health, and uses evidence-based methods, so is allied health. A naturopath is the most tempting wrong answer, but naturopathy is an alternative health practice outside conventional medicine.",
+      "clue": "Look for a university-trained professional who works in one area of care."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi hurts his knee playing netball in Geelong. He books a visit with his local doctor, who sends him to a physiotherapist. Which describes these two services?",
+      "opts": [
+        "A GP as first stop, then allied health",
+        "Allied health first, then a GP referral",
+        "Alternative health first, then a GP referral",
+        "A GP as first stop, then alternative health"
+      ],
+      "why": "The doctor is a GP, who is usually the first stop and can refer a patient on. A physiotherapist works in one area of care and uses evidence-based treatment, so is allied health, not alternative health.",
+      "clue": "Name each person's role, then check the order Ravi saw them."
+    }
+  },
+  "hhd-medicare": {
+    "title": "Medicare",
+    "card": [
+      "Medicare is Australia's public health insurance scheme. It is run by the Australian Government and is open to citizens, permanent residents and some others.",
+      "It is funded from taxes, including the Medicare levy, a small extra charge on most taxpayers' taxable income.",
+      "Medicare covers or subsidises many services: visits to doctors, tests such as blood tests and X-rays, and free care as a public patient in a public hospital.",
+      "For a doctor's visit or test, Medicare pays a set benefit. If the doctor bulk bills, that benefit is the whole payment. If the doctor charges more, the patient pays the gap."
+    ],
+    "remember": "Medicare is tax-funded public insurance that helps pay for doctors, tests and public hospital care.",
+    "a": {
+      "q": "Where does most of the money for Medicare come from?",
+      "opts": [
+        "Taxes, including a levy on income",
+        "Fees patients pay at each doctor visit",
+        "Premiums paid to private health funds",
+        "Donations made to public hospitals"
+      ],
+      "why": "Medicare is funded from taxes, and the Medicare levy on taxable income is part of that. Premiums go to private health insurers, which is a separate scheme.",
+      "clue": "Think about what people pay through the tax system."
+    },
+    "b": {
+      "d": 3,
+      "q": "Nadia's GP in Shepparton charges more than the Medicare benefit for her visit. What happens with the cost?",
+      "opts": [
+        "Medicare pays its benefit and Nadia pays the gap",
+        "Medicare pays nothing because the fee is higher",
+        "Medicare pays the whole fee, however high it is",
+        "Medicare pays only if Nadia has private cover"
+      ],
+      "why": "Medicare pays its set benefit towards the visit, and Nadia pays the rest, called the gap. Medicare's benefit would be the whole payment only if the GP bulk billed. It does not depend on private cover.",
+      "clue": "The benefit is a set amount, whatever the doctor charges."
+    }
+  },
+  "hhd-pharmaceutical-benefits-scheme": {
+    "title": "The Pharmaceutical Benefits Scheme",
+    "card": [
+      "The Pharmaceutical Benefits Scheme (PBS) is an Australian Government program. It subsidises many prescription medicines, which means the government pays part of the cost.",
+      "For most listed medicines, the patient pays a set amount per script, called a co-payment, and the government pays the rest. If a medicine costs less than the co-payment, the patient just pays its price.",
+      "Concession card holders pay a lower co-payment again. Concession cards are for groups such as pensioners and some people on low incomes.",
+      "Only listed medicines are subsidised, and a doctor or other authorised prescriber must prescribe them. For medicines not listed, the patient usually pays the full price."
+    ],
+    "remember": "The PBS usually cuts the cost of listed medicines, and cuts it further for concession card holders.",
+    "a": {
+      "q": "What does the PBS do for a patient prescribed an expensive listed medicine?",
+      "opts": [
+        "The government covers part of the price, so they pay less",
+        "The medicine is free, so the patient pays nothing at all",
+        "The patient pays full price, then claims it all back later",
+        "The government picks which pharmacy the patient must use"
+      ],
+      "why": "For an expensive listed medicine, the patient pays a co-payment and the government pays the rest, so the patient pays less than the full price. It is not free, because the patient still pays the co-payment at the pharmacy.",
+      "clue": "Think about what happens at the pharmacy counter."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam and Jo are each prescribed the same expensive PBS-listed medicine at a pharmacy in Bendigo. Sam holds a concession card and Jo does not. Which statement is correct?",
+      "opts": [
+        "Both pay less than full price, and Sam pays less than Jo",
+        "Both pay the same, because the medicine is the same",
+        "Only Sam pays less than full price, as Jo has no card",
+        "Jo pays less than Sam, as general patients get more help"
+      ],
+      "why": "For an expensive listed medicine, the government pays part for every patient, so Jo pays the general co-payment and Sam pays the lower concession co-payment. The tempting wrong answer says only card holders are helped, but the concession card only adds a further reduction.",
+      "clue": "Work out what a general patient pays first, then the card holder."
+    }
+  },
+  "hhd-private-health-insurance": {
+    "title": "Private health insurance",
+    "card": [
+      "Private health insurance is optional. A person pays a premium, a regular fee, to an insurer, which then pays part or all of some health costs.",
+      [
+        "Hospital cover",
+        "pays towards treatment as a private patient, such as choosing your doctor or a shorter wait for some surgery. Medicare still covers public hospital care for eligible people."
+      ],
+      [
+        "Extras cover",
+        "pays part of services Medicare mostly does not cover, such as dental, physiotherapy and glasses."
+      ],
+      "The government encourages cover. A rebate lowers premiums for many people, and the Medicare levy surcharge is an extra tax on higher earners with no hospital cover."
+    ],
+    "remember": "Private cover is a choice, and the government uses a rebate and a surcharge to encourage it.",
+    "a": {
+      "q": "Ella wants help paying for her dentist visits and new glasses. What would pay towards these?",
+      "opts": [
+        "Extras cover from a private insurer",
+        "Hospital cover from a private insurer",
+        "Medicare, which pays for all dental care",
+        "The PBS, which subsidises medicines"
+      ],
+      "why": "Dental care and glasses are extras, which Medicare mostly does not cover. Extras cover pays part of them. Hospital cover pays towards treatment as a private patient in hospital, not the dentist.",
+      "clue": "Medicare mostly leaves these services out."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jonas earns a high income in Geelong and has no private hospital cover. Which measure charges him extra tax for not having it?",
+      "opts": [
+        "The Medicare levy surcharge",
+        "The private health insurance rebate",
+        "A fee for each public hospital stay",
+        "The Pharmaceutical Benefits Scheme"
+      ],
+      "why": "The Medicare levy surcharge is an extra tax on higher earners with no hospital cover, which gives them a reason to buy it. The rebate lowers premiums for people who hold cover, so it adds nothing to Jonas's tax.",
+      "clue": "Which measure is an extra charge on higher earners?"
+    }
+  },
+  "hhd-health-wellbeing-illness": {
+    "title": "Health, wellbeing and illness",
+    "card": [
+      [
+        "Health and wellbeing",
+        "Health and wellbeing have five dimensions: physical, social, emotional, mental and spiritual. A person's health in one dimension can affect the others."
+      ],
+      [
+        "Illness",
+        "Illness is a person's own experience of being unwell. It can be felt even when a doctor finds no disease."
+      ],
+      [
+        "Dynamic",
+        "Health, wellbeing and illness change over time, sometimes within a day. A person can move up or down in each dimension."
+      ],
+      [
+        "Subjective",
+        "They are also subjective, which means they depend on a person's own view and experience. Two people in the same situation may judge their health differently."
+      ]
+    ],
+    "remember": "Health, wellbeing and illness change over time and depend on the person's own view.",
+    "a": {
+      "q": "Which statement best shows that health and wellbeing are dynamic?",
+      "opts": [
+        "A student feels well on Monday but unwell by Friday",
+        "A student rates their health higher than a friend does",
+        "A student has both physical and social dimensions of health",
+        "A student feels unwell although tests show no disease"
+      ],
+      "why": "Dynamic means changing over time, and a shift from well to unwell during a week shows this. Rating health differently from a friend shows subjectivity, not change, and it is the most tempting wrong option.",
+      "clue": "Dynamic is about change across time."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has a cold and says she feels terrible. Her brother had the same cold last week and says it was barely noticeable. Which idea does this best show?",
+      "opts": [
+        "Illness is subjective, as it depends on the person",
+        "Illness is dynamic, as it changes from week to week",
+        "Illness is objective, as the same cold affects all alike",
+        "Illness is set by a doctor's diagnosis of a disease"
+      ],
+      "why": "Two people with the same cold describe it very differently, so the experience depends on the person. That is subjectivity. The dynamic option is tempting, but the scenario compares how two people felt, not how one person's health changed over time.",
+      "clue": "Compare how two people see the same cold."
+    }
+  },
+  "hhd-health-as-resource": {
+    "title": "Health as a resource",
+    "card": [
+      "A resource is something people draw on to do things. Good health is a resource because it gives people the capacity to work, learn and take part. Hospitals, doctors and insurance support health, but here health itself is the thing being used.",
+      [
+        "Individuals",
+        "Good health lets a person work, study, care for others and spend time with family and friends. Poor health can limit these things."
+      ],
+      [
+        "Communities",
+        "When many people are healthy, more can volunteer, join clubs and support each other. This builds stronger, more connected communities."
+      ],
+      [
+        "Australia and the world",
+        "A healthy population misses less work and study, so a country produces more and can spend less on treating illness. Healthier nations can also trade, share knowledge and work together on global problems."
+      ]
+    ],
+    "remember": "Health is the cause here: being healthy is what lets people, communities and nations do more.",
+    "a": {
+      "q": "Which example shows good health acting as a resource for an individual?",
+      "opts": [
+        "Sam stays well, so he can keep working and studying",
+        "Sam's family pays for private health insurance",
+        "Sam's local clinic hires two more doctors",
+        "Sam lives close to a large public hospital"
+      ],
+      "why": "Sam's good health is what lets him keep working and studying, so health itself is the resource being used. Insurance, clinics and hospitals are tempting, but they are things that support health, not health being drawn on to do things.",
+      "clue": "Is health itself being used, or is something supporting health?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Which outcome best shows health acting as a resource for Australia as a nation?",
+      "opts": [
+        "Fewer workers take sick leave, so more goods are produced",
+        "A stronger economy lets more people pay for health care",
+        "Government builds new hospitals in regional areas",
+        "More money is spent treating chronic illness each year"
+      ],
+      "why": "A healthier workforce misses less work, so the country produces more. Health is the cause and the national benefit is the result. The stronger economy option is tempting, but it reverses this: there, money is supporting health rather than health supporting the nation.",
+      "clue": "Check which way it runs: is health the cause or the result?"
+    }
+  },
+  "hhd-health-status-indicators": {
+    "title": "Health status indicators",
+    "card": [
+      "A health status indicator is a measure that describes how healthy a population is. Governments use indicators to see how health is changing and where help is needed.",
+      [
+        "Life expectancy",
+        "the average number of years a person born in a given period could expect to live, if current death rates stayed the same."
+      ],
+      [
+        "Mortality",
+        "deaths in a population. It is often given as a rate, such as deaths per 1000 people, so groups of different sizes can be compared."
+      ],
+      [
+        "Morbidity",
+        "the amount of illness, disease or injury in a population. Self-assessed health status is how people rate their own health, for example as excellent, good or poor."
+      ]
+    ],
+    "remember": "Indicators measure a population's health by length of life, deaths, illness and how people rate their own health.",
+    "a": {
+      "q": "Which health status indicator describes how much illness, disease or injury is in a population?",
+      "opts": ["Morbidity", "Mortality", "Life expectancy", "Self-assessed health status"],
+      "why": "Morbidity is the amount of illness, disease or injury. Mortality is the tempting wrong answer, because it also describes poor health, but it counts deaths and not illness.",
+      "clue": "Think about illness, not death."
+    },
+    "b": {
+      "d": 3,
+      "q": "A health report in Victoria says that 70% of adults in a town rate their own health as good or better. Which indicator does this show?",
+      "opts": ["Self-assessed health status", "Life expectancy", "Mortality rate", "Morbidity"],
+      "why": "The adults are rating their own health, which is self-assessed health status. Morbidity is tempting because the report is about health, but morbidity counts illness, disease or injury and does not come from people's own ratings.",
+      "clue": "Who is judging the health in this report?"
+    }
+  },
+  "hhd-incidence-prevalence": {
+    "title": "Incidence and prevalence",
+    "card": [
+      ["Morbidity", "how much illness there is in a population. Incidence and prevalence are two ways to measure it."],
+      [
+        "Incidence",
+        "the number of new cases of a condition that start in a set period, such as one year. A person is counted when they first get the condition."
+      ],
+      [
+        "Prevalence",
+        "the number of all existing cases, new and old, at one point in time or over a period. A person is counted for as long as they have the condition."
+      ],
+      "Incidence shows how fast a condition is spreading. Prevalence shows how many people are living with it and how much care they may need."
+    ],
+    "remember": "Incidence is new cases in a period. Prevalence is all cases, new and old.",
+    "a": {
+      "q": "A report says 8000 Victorians were newly diagnosed with type 2 diabetes last year. Which measure is this?",
+      "opts": [
+        "Incidence, because it counts only new cases in a year",
+        "Prevalence, because it counts only new cases in a year",
+        "Incidence, because it counts all cases in the population",
+        "Prevalence, because it counts all cases in the population"
+      ],
+      "why": "Only people newly diagnosed in a set period are counted, so this is incidence. Prevalence would also include people diagnosed in earlier years who still have the condition.",
+      "clue": "Are people diagnosed in earlier years counted here?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In Bendigo, a new treatment lets people with a long-term lung condition live many more years. The number of new cases each year stays the same. What happens to prevalence?",
+      "opts": [
+        "It rises, because people stay in the count for longer",
+        "It stays the same, because new cases have not changed",
+        "It falls, because the treatment improves people's health",
+        "It falls, because prevalence counts only new cases"
+      ],
+      "why": "Prevalence counts all existing cases, so people who live longer with the condition stay in the count while new cases keep being added. Incidence stays the same, but prevalence rises. Better treatment does not remove people from the count unless they no longer have the condition.",
+      "clue": "Think about how long each person stays in the count."
+    }
+  },
+  "hhd-mortality-self-assessed-health": {
+    "title": "Mortality and self-assessed health",
+    "card": [
+      [
+        "Maternal mortality",
+        "the number of women who die from causes linked to pregnancy or childbirth, compared with the number of live births. It is usually shown per 100,000 live births."
+      ],
+      ["Infant mortality", "the number of babies who die before their first birthday, shown per 1,000 live births."],
+      [
+        "Under-five mortality",
+        "the number of children who die before their fifth birthday, shown per 1,000 live births. It includes infant deaths."
+      ],
+      [
+        "Self-assessed health",
+        "how people rate their own health, often from excellent to poor, in a survey. It is a personal view, so it can show how people feel about their health when death rates cannot."
+      ]
+    ],
+    "remember": "Maternal, infant and under-five rates count deaths in mothers and young children. Self-assessed health shows how people rate their own health.",
+    "a": {
+      "q": "In a region, for every 1,000 live births, 30 children die at age 3 and 20 babies die at 4 months old. A health report wants one rate that includes both groups of deaths. Which rate should it use?",
+      "opts": ["Under-five mortality rate", "Infant mortality rate", "Maternal mortality rate", "Self-assessed health status"],
+      "why": "The under-five rate covers deaths from birth to the fifth birthday, so it includes both the babies who died at 4 months and the children who died at age 3. Infant mortality is the tempting option, but it stops at the first birthday and would miss the deaths at age 3.",
+      "clue": "Check the age of each group who died, then see which rate covers both."
+    },
+    "b": {
+      "d": 3,
+      "q": "A researcher studying a Bendigo community has its infant mortality data. Why might she also collect self-assessed health data?",
+      "opts": [
+        "It shows how people feel about their own health",
+        "It gives a more objective measure than death rates",
+        "It counts the deaths that infant mortality misses",
+        "It shows how many children die before age five"
+      ],
+      "why": "Self-assessed health is a personal rating from a survey, so it can show how people feel about their health, which death rates cannot. The objective option is tempting, but a personal view is not more objective than a count of deaths. It also counts no deaths at all.",
+      "clue": "Think about what a count of deaths cannot tell you."
+    }
+  },
+  "hhd-variations-health-between-groups": {
+    "title": "Variations in health between groups",
+    "card": [
+      "Health is not equal across Australia. Some groups have a lower life expectancy and more chronic disease on average, mostly because of the conditions they live in rather than biology.",
+      "Aboriginal and Torres Strait Islander peoples have a lower life expectancy on average than other Australians. The gap is linked to the ongoing effects of colonisation and racism, and to unequal access to services.",
+      "People in rural and remote areas have poorer health on average than people in cities. They often live far from doctors, specialists and hospitals, and face higher rates of injury.",
+      "People on low incomes have poorer health on average. Medicare covers all eligible Australians, including free public hospital care, but healthy food, good housing and some health costs can still be hard to afford."
+    ],
+    "remember": "Gaps in health between groups come mostly from living conditions, such as history, place and income.",
+    "a": {
+      "q": "Australian data show people on low incomes have a lower life expectancy on average than people on high incomes. Which explanation fits best?",
+      "opts": [
+        "Healthy food, housing and care are harder to afford",
+        "Their genes tend to give them shorter lives",
+        "Medicare charges them higher fees than others",
+        "Public hospitals turn away people who cannot pay"
+      ],
+      "why": "Living costs such as healthy food, good housing and some health costs take a bigger share of a low income, so they are harder to reach. Medicare covers all eligible Australians, including free public hospital care, so higher fees or being turned away are not the reason. The gaps are linked mostly to living conditions, not genes.",
+      "clue": "Think about what a small income has to stretch to cover."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dale runs a cattle station in remote Queensland and has a long-term heart condition. Which factor best explains why people like Dale have poorer health on average?",
+      "opts": [
+        "Specialist care is often a long way from home",
+        "Rural people tend to carry genes for heart disease",
+        "Medicare does not cover care in remote areas",
+        "Heart disease is far less common outside cities"
+      ],
+      "why": "Remote Australians often live far from doctors, specialists and hospitals, which makes ongoing care harder to get. Medicare covers eligible people wherever they live, and the gaps between groups are linked mostly to living conditions rather than genes.",
+      "clue": "Think about what is hard to reach from a remote cattle station."
+    }
+  },
+  "hhd-smoking-vaping-alcohol": {
+    "title": "Smoking, vaping and alcohol",
+    "card": [
+      "Tobacco, vaping and alcohol are behavioural risk factors: things people do that raise their risk of poor health. Each adds to Australia's burden of disease.",
+      [
+        "Tobacco",
+        "Smoking is a major cause of many cancers, especially lung cancer. It also damages blood vessels and the heart, so it raises the risk of heart disease."
+      ],
+      [
+        "Vaping",
+        "Vapes deliver nicotine, which is addictive, and other chemicals into the lungs. Young people who vape are more likely to go on to smoke."
+      ],
+      [
+        "Alcohol",
+        "Over many years, alcohol raises the risk of some cancers and heart disease. It can also cause injury straight away, because it slows reactions and judgement, for example in road crashes and falls."
+      ]
+    ],
+    "remember": "Tobacco and alcohol both raise the risk of cancers and heart disease. Alcohol can also cause injury, and vapes add nicotine addiction.",
+    "a": {
+      "q": "Which pair of health effects is linked to both tobacco use and alcohol use?",
+      "opts": [
+        "Cancers and heart disease",
+        "Injury and lung cancer",
+        "Heart disease and road crashes",
+        "Cancers and addiction to nicotine"
+      ],
+      "why": "Both tobacco and alcohol raise the risk of cancers and heart disease. Injury, such as road crashes, comes from alcohol slowing reactions and judgement, not from tobacco. Nicotine addiction comes from tobacco and vapes, not alcohol.",
+      "clue": "Look for harms shared by smoking and drinking."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam, 19, has a few drinks at a party in Geelong and then falls down the stairs and breaks his arm. Which harm from alcohol does this show?",
+      "opts": [
+        "Injury, as alcohol slows reactions and judgement",
+        "Cancer, as alcohol damages cells over many years",
+        "Heart disease, as alcohol damages blood vessels",
+        "Addiction, as alcohol delivers nicotine to the body"
+      ],
+      "why": "A fall soon after drinking is an injury, and alcohol can cause injury by slowing reactions and judgement. Cancer and heart disease are also linked to alcohol, but their risk builds up over many years, so they do not fit a single fall.",
+      "clue": "Think about what happened straight after the drinks, not years later."
+    }
+  },
+  "hhd-overweight-obesity": {
+    "title": "Overweight and obesity",
+    "card": [
+      "Overweight and obesity mean having more body fat than is healthy. Body mass index (BMI) compares weight with height. For adults, 25 to under 30 is overweight and 30 or more is obese.",
+      "Excess body weight raises the risk of type 2 diabetes, heart disease and some cancers. A higher risk does not mean a person will get these conditions.",
+      "Excess fat can make the body respond less to insulin, the hormone that moves sugar out of the blood and into cells, so sugar builds up in the blood. Type 1 diabetes is different: the immune system destroys the cells that make insulin.",
+      "Because these conditions are common in Australia, excess body weight adds to Australia's burden of disease."
+    ],
+    "remember": "Excess weight makes type 2 diabetes, heart disease and some cancers more likely, not certain.",
+    "a": {
+      "q": "Which change in the body links excess body fat to a higher risk of type 2 diabetes?",
+      "opts": [
+        "Cells become less responsive to insulin",
+        "The immune system destroys insulin-making cells",
+        "Blood sugar falls too low after eating",
+        "Cells take in too much sugar from the blood"
+      ],
+      "why": "Cells that respond less to insulin do not take in sugar well, so sugar builds up in the blood. The immune system destroying insulin-making cells describes type 1 diabetes, which is not the link with body weight.",
+      "clue": "Type 2 and type 1 diabetes go wrong in different ways."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev is an adult with a BMI of 31. Which statement about his health is most accurate?",
+      "opts": [
+        "He is in the obese range, so heart disease is more likely",
+        "He is in the overweight range, so he will get heart disease",
+        "He is in the obese range, so he will get type 2 diabetes",
+        "He is in the overweight range, so cancer is more likely"
+      ],
+      "why": "A BMI of 30 or more is classed as obese, and excess weight raises the risk of heart disease. The options saying he will get heart disease or type 2 diabetes treat a raised risk as a certainty. The options placing him in the overweight range are wrong, as that range ends below 30.",
+      "clue": "Check which range 31 falls in, then check whether a condition is said to be certain."
+    }
+  },
+  "hhd-nutritional-imbalance": {
+    "title": "Nutritional imbalance",
+    "card": [
+      "Nutritional imbalance means the foods a person eats do not match what the body needs. It can be too little of some foods, too much of others, or both.",
+      [
+        "Too little",
+        "Many Australians eat too little fruit, vegetables, dairy foods and fibre. These foods supply vitamins, minerals, calcium and fibre."
+      ],
+      [
+        "Too much",
+        "Many Australians eat too much fat, salt and sugar. These are often found in processed foods, takeaway meals and sugary drinks."
+      ],
+      "Over time, nutritional imbalance can raise the risk of heart disease, type 2 diabetes, some cancers and tooth decay. It can also contribute to excess body weight."
+    ],
+    "remember": "Too little, too much or both: any mismatch with the body's needs can raise the risk of disease over time.",
+    "a": {
+      "q": "Which description is an example of nutritional imbalance?",
+      "opts": [
+        "Eating few vegetables and often eating salty takeaway",
+        "Eating a wide range of foods in sensible amounts",
+        "Eating plenty of fibre and drinking mostly water",
+        "Eating dairy foods and fruit every day"
+      ],
+      "why": "Eating few vegetables means too little of a needed food, and salty takeaway means too much salt. The foods do not match what the body needs. The other options describe eating that meets the body's needs.",
+      "clue": "Which option has a mismatch with what the body needs?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam is 17 and eats little fruit or fibre. Most days he has sugary drinks and hot chips. Which change would help with both parts of his imbalance?",
+      "opts": [
+        "Swap sugary drinks for water and eat fruit each day",
+        "Keep sugary drinks but take a daily fibre supplement",
+        "Cut out dairy foods so that he eats less fat each day",
+        "Swap hot chips for salty crisps from a packet each day"
+      ],
+      "why": "Sam eats too little fruit and fibre and too much sugar, fat and salt. A helpful change adds a food he lacks and cuts something he has too much of. Swapping sugary drinks for water and adding fruit does both, though his chips would still need attention. A fibre supplement helps only the too little part and leaves the sugar. Cutting dairy removes a food many Australians already eat too little of.",
+      "clue": "Sam has a too little part and a too much part."
+    }
+  },
+  "hhd-safe-water-sanitation": {
+    "title": "Safe water and sanitation",
+    "card": [
+      "Safe water is water free from germs and harmful chemicals. Sanitation means safe toilets and the safe disposal of human waste.",
+      "Without them, germs from faeces can get into drinking water, food and hands. This spreads diseases such as diarrhoea and cholera.",
+      "Diarrhoea is a leading cause of death in children under five in poorer countries. It causes a loss of body fluids, and young children are less able to cope with that loss.",
+      "Repeated illness also lowers development. Children miss school, and adults miss work. Time spent collecting water is also lost to other activities."
+    ],
+    "remember": "Unsafe water and poor sanitation spread disease, which harms both health and development.",
+    "a": {
+      "q": "A village has no toilets, so people relieve themselves near the stream they drink from. Why does diarrhoea spread?",
+      "opts": [
+        "Germs from faeces reach drinking water, food and hands",
+        "Open waste breeds mosquitoes that carry diarrhoea germs",
+        "People there drink too little and become dehydrated",
+        "Diarrhoea germs pass mainly through coughs and sneezes"
+      ],
+      "why": "Without toilets, faeces are not kept apart from water and food, so germs reach people's mouths. Dehydration is an effect of diarrhoea, not the way it spreads. Mosquitoes spread other diseases, such as malaria, not diarrhoea.",
+      "clue": "Follow the path from the waste to someone's mouth."
+    },
+    "b": {
+      "d": 3,
+      "q": "A school in rural Malawi gets a bore with safe water and new toilets. Absences fall. Which is the best explanation?",
+      "opts": [
+        "Fewer children are ill from water-borne disease",
+        "Children drink more water, so they focus better in class",
+        "Teachers now offer lessons that are more interesting",
+        "Families now earn more money from selling water"
+      ],
+      "why": "Safe water and toilets cut the spread of germs from faeces, so fewer children are sick and miss school. Drinking more water may help focus, but it does not explain why children stopped staying home. Better attendance supports development.",
+      "clue": "Think about what kept children at home before the change."
+    }
+  },
+  "hhd-poverty-inequality": {
+    "title": "Poverty",
+    "card": [
+      "Poverty means lacking the resources to meet basic needs. It is often measured by income, but its effects reach well beyond money.",
+      "Poverty limits access to nutritious food, safe housing, health care and education. Without them, illness is more likely and harder to treat.",
+      "Missing out on education limits later work and income. So poverty lowers human development as well as health.",
+      "These limits can pass on. A parent with little education and income may not afford food or school for their children, so poverty can continue across generations."
+    ],
+    "remember": "Poverty cuts off the basics, so health and development both suffer, often for the next generation too.",
+    "a": {
+      "q": "A family in a low-income country cannot afford enough food or a visit to a clinic. How does this most directly harm the children's health?",
+      "opts": [
+        "It limits their nutrition and their care when ill",
+        "It makes them less interested in eating well",
+        "It means the family chooses to avoid health care",
+        "It affects their education but not their health"
+      ],
+      "why": "Without enough food the children are poorly nourished, and without a clinic visit an illness may go untreated. The problem is lack of access, not a choice to avoid care.",
+      "clue": "Think about what the family cannot pay for."
+    },
+    "b": {
+      "d": 3,
+      "q": "Amara's parents in rural Malawi cannot pay for her school uniform and books, so she leaves school early. How could this keep her future children in poverty?",
+      "opts": [
+        "Less education can limit her income as a parent",
+        "Her children are certain to fall ill as a result",
+        "Her children will need less food as they grow up",
+        "Her family will gain better housing straight away"
+      ],
+      "why": "With less education, Amara may earn less as an adult, so she may struggle to afford food, health care and school for her own children. Poverty raises risks, but it does not make illness certain.",
+      "clue": "Follow the link from education to income to the next generation."
+    }
+  },
+  "hhd-discrimination-health": {
+    "title": "Discrimination and health",
+    "card": [
+      "Discrimination is unfair treatment of people because of a trait such as gender, ethnicity or disability.",
+      "It can block access to education, work and health care. For example, girls may be kept out of school, or a person with a disability may be refused a job.",
+      "Less education and work can mean lower income. Reduced access to health care can mean illnesses go untreated.",
+      "Groups that face discrimination can therefore have poorer health and less opportunity to develop. Fair access helps reduce these gaps."
+    ],
+    "remember": "Discrimination can block access to education, work and health care, which harms health and development.",
+    "a": {
+      "q": "What is discrimination, as it affects health and development?",
+      "opts": [
+        "Unfair treatment based on gender, ethnicity or disability",
+        "Differences in income that arise from personal choices",
+        "A shortage of clean water and toilets in a region",
+        "Treating every person the same, whatever their traits"
+      ],
+      "why": "Discrimination is unfair treatment because of a trait such as gender, ethnicity or disability. A shortage of clean water is a different factor, because it is about services, not about how people are treated.",
+      "clue": "Focus on unfair treatment linked to who a person is."
+    },
+    "b": {
+      "d": 2,
+      "q": "In a country where clinics turn away women unless a male relative comes with them, how might health be affected?",
+      "opts": [
+        "Women may get less care, and illness may go untreated",
+        "Women may get better care, as relatives check on them",
+        "Men may lose access to care, as clinics favour women",
+        "Everyone may get equal care, as one rule covers all"
+      ],
+      "why": "The rule is a barrier: a woman without a male relative is turned away, so she may miss care and her illness may go untreated. It does not improve women's care, and it does not limit men's access, because the rule is aimed only at women.",
+      "clue": "Who is being blocked, and from what service?"
+    }
+  },
+  "hhd-climate-change-health": {
+    "title": "Climate change and health",
+    "card": [
+      "Climate change is a long-term shift in temperatures and weather patterns, mostly driven by greenhouse gases from human activity. Global temperatures are rising as a result, and this affects health in several ways.",
+      [
+        "Heat and extreme weather",
+        "Heatwaves can cause heat stress and death, especially for older people. Floods, fires and storms can injure people and damage homes, water supplies and food crops."
+      ],
+      [
+        "Disease patterns",
+        "Warmer and wetter conditions can let disease-carrying mosquitoes live in new areas. Disease risk can then change in places where it was once low."
+      ],
+      [
+        "Unequal effects",
+        "Poorer countries tend to be hit hardest. They often have fewer resources to prepare, to rebuild and to run health services, even though they usually add less to the problem."
+      ]
+    ],
+    "remember": "Heat, extreme weather and shifting disease can all harm health, and poorer countries tend to suffer most.",
+    "a": {
+      "q": "Why do poorer countries tend to be hit hardest by the health effects of climate change?",
+      "opts": [
+        "They often have fewer resources to prepare and rebuild",
+        "They often produce most of the world's greenhouse gases",
+        "They often face global warming while rich nations do not",
+        "They often have older populations more prone to heat stress"
+      ],
+      "why": "Poorer countries often lack the money and health services to prepare for floods or heatwaves and to rebuild afterwards. The option about producing most greenhouse gases is tempting, but poorer countries usually add less to the problem.",
+      "clue": "Think about what a country needs when a disaster strikes."
+    },
+    "b": {
+      "d": 3,
+      "q": "A warming climate lets mosquitoes survive in a highland region where they could not live before. What is the most likely health effect of this change?",
+      "opts": [
+        "Mosquito-borne disease may spread to people there",
+        "Heat stress may become the main new risk there",
+        "Food crops may fail and cause undernutrition there",
+        "Disease risk may stay limited to the lowlands below"
+      ],
+      "why": "Mosquitoes carry disease, so when they can live in a new area, disease risk can rise where it was once low. Heat stress and crop failure are real effects of climate change, but they do not come from the mosquitoes arriving, which is the change the question asks about.",
+      "clue": "Ask what the mosquitoes themselves bring with them."
+    }
+  },
+  "hhd-conflict-migration": {
+    "title": "Conflict and migration",
+    "card": [
+      "Conflict is armed fighting within or between countries. Forced migration is when people must leave their homes to stay safe, such as refugees who cross a border and people displaced inside their own country.",
+      "War can destroy hospitals, clinics and supply lines, and health workers may be killed or flee. Vaccination and care for pregnancy and chronic illness can then stop or fall.",
+      "Fighting damages farms, markets and water supplies, so food and clean water become scarce. Malnutrition and disease can follow. Homes may also be destroyed, and people may shelter in crowded camps.",
+      "Displaced people can face violence, injury and trauma on their journey and in camps. Crowding and poor sanitation can help diseases such as cholera and measles spread."
+    ],
+    "remember": "Conflict and forced migration damage the services and basics people need for health, and can expose them to violence and disease.",
+    "a": {
+      "q": "Why can a war raise the risk of disease in a country, even among people far from the fighting?",
+      "opts": [
+        "Health services and clean water supplies break down",
+        "People stop moving, so diseases stay in one place",
+        "Fewer people are born, so there is less to treat",
+        "Soldiers carry diseases that civilians cannot catch"
+      ],
+      "why": "War can destroy clinics, supply lines and water systems, so prevention and treatment fall away. People far from the fighting can still be at risk, because they lose care and clean water too. War does not keep people in one place: it often forces them to leave their homes.",
+      "clue": "Think about what people far from the fighting still rely on each day."
+    },
+    "b": {
+      "d": 3,
+      "q": "Thousands of people flee a war and settle in a crowded camp with few toilets. Which outcome is most directly linked to the camp conditions?",
+      "opts": [
+        "Faster spread of infectious diseases such as cholera",
+        "Better access to long-term care for chronic illness",
+        "Lower risk of malnutrition as food is shared",
+        "Fewer injuries because people are away from the fighting"
+      ],
+      "why": "Crowding and poor sanitation help infectious diseases such as cholera spread quickly. Leaving the fighting may cut some injuries, but injury and trauma can still occur on the journey and in camps. This is not the outcome linked to the camp conditions.",
+      "clue": "Ask what can happen when many people share very few toilets."
+    }
+  },
+  "hhd-tobacco-alcohol-processed-food": {
+    "title": "World trade and health",
+    "card": [
+      "Global trade is the movement of goods, services and money between countries. It can lift incomes and give people access to more products.",
+      "Trade also carries the marketing of products that harm health, such as tobacco, e-cigarettes and processed foods high in sugar, salt and unhealthy fat.",
+      "As these products become cheaper and easier to get, more people use or eat them. This can raise rates of chronic disease, such as heart disease, type 2 diabetes and some cancers.",
+      "Low and middle income countries are often targeted as markets grow. They may have weaker rules on advertising, and health systems that struggle with the extra burden of chronic disease."
+    ],
+    "remember": "Trade spreads harmful products and their marketing, which can raise chronic disease.",
+    "a": {
+      "q": "How can global trade lead to more chronic disease in a country?",
+      "opts": [
+        "It spreads marketing of harmful products across borders",
+        "It spreads infectious disease between travellers",
+        "It lowers incomes so people cannot afford health care",
+        "It makes fresh fruit and vegetables cheaper to import"
+      ],
+      "why": "Trade carries tobacco, e-cigarettes and processed foods and the marketing for them, so more people use them, and chronic disease can rise. Spread of infectious disease is a different pathway and is not the link taught here.",
+      "clue": "Think about what products and advertising cross borders."
+    },
+    "b": {
+      "d": 3,
+      "q": "A fast food company based overseas opens outlets across a middle income country and advertises heavily to children. Which health effect is most likely to follow over time?",
+      "opts": [
+        "A rise in type 2 diabetes and heart disease",
+        "A fall in rates of chronic disease from higher incomes",
+        "A rise in injuries from violence in the country",
+        "A fall in the use of processed foods"
+      ],
+      "why": "Trade brings cheap processed food and its marketing, so more people eat it, and chronic diseases such as type 2 diabetes and heart disease can rise. Higher incomes from trade can help, but the card links this marketing to more chronic disease, not less.",
+      "clue": "Consider what the advertised food is high in and what disease it is linked to."
+    }
+  },
+  "hhd-tourism-health": {
+    "title": "Tourism and health",
+    "card": [
+      "Tourism is travel to other places for leisure or business. It is one of the world's largest industries, and it affects the health of people living in the places visitors go to.",
+      [
+        "Benefits",
+        "Tourism brings income and jobs. Through wages and taxes, it can help fund better housing, food, sanitation, schools and health care."
+      ],
+      [
+        "Risks",
+        "Travellers can carry infectious diseases, such as measles, between countries within hours. Large numbers of visitors can also strain local water, food supplies and health services."
+      ],
+      "The benefits depend on who gains. If hotels are owned overseas, much of the profit can leave the country, so locals may gain little and still bear the risks."
+    ],
+    "remember": "Tourism's effect on health depends on who keeps the income and how well local resources cope with visitors.",
+    "a": {
+      "q": "A beach resort in a low-income country is owned by an overseas company. Why might local people gain little health benefit from it?",
+      "opts": [
+        "Much of the profit may flow overseas, not to local people",
+        "Overseas owners may pay higher wages than local businesses",
+        "Resort taxes may be spent on schools rather than on clinics",
+        "Visitors may use local clinics less often than residents do"
+      ],
+      "why": "When the owner is overseas, much of the profit can leave the country, so less money funds local housing, food and health care. Higher wages would add to the benefit, not reduce it, and spending on schools still supports health.",
+      "clue": "Think about who ends up with the resort's earnings."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a mountain town in Nepal, trekking tourism paid for a new clinic. In peak season, visitor numbers double and the clinic fills with injured trekkers, so local patients wait much longer. Which statement best describes the effect of tourism on local health here?",
+      "opts": [
+        "Tourism funded a health service and also strained it",
+        "Tourism strained the health service but did not fund it",
+        "Tourism funded a health service and did not strain it",
+        "Tourism spread infection and did not fund any services"
+      ],
+      "why": "Tourism income paid for the clinic, which is a benefit. Crowding in peak season, with locals waiting longer, is a strain on a local service, so both effects are present. The case describes injuries, not infectious disease, so spread of infection is not shown.",
+      "clue": "Check what the clinic's funding and its crowding each show."
+    }
+  },
+  "hhd-digital-technology-world-trade": {
+    "title": "Digital technologies and health",
+    "card": [
+      "Digital technologies include the internet, mobile phones, apps and video calls. They can carry health information, services and education across long distances quickly.",
+      [
+        "Telehealth",
+        "health care given by phone or video, so a person can see a doctor or nurse without travelling. It can help people in remote areas."
+      ],
+      "Digital tools can also teach health workers and the public, for example through online courses or text message advice on pregnancy and child health.",
+      [
+        "Digital divide",
+        "the gap between people who have good access to digital technology and those who do not. It exists between countries and within them, as access depends on things like income, location and internet coverage."
+      ]
+    ],
+    "remember": "Digital tools can spread health care, information and education, but access to them is uneven.",
+    "a": {
+      "q": "Why might a digital health program fail to reach some people in a low-income country?",
+      "opts": [
+        "Weak internet coverage or devices people cannot afford",
+        "Health messages lose their meaning when sent by phone",
+        "Telehealth is designed for city hospitals, not rural areas",
+        "The digital divide is a gap found in wealthy countries"
+      ],
+      "why": "Access to digital technology is uneven, and it depends on things like income and internet coverage. Health messages sent by phone can still be understood, and the digital divide is not limited to wealthy countries.",
+      "clue": "Think about what shapes who can use digital tools."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tane lives on a remote farm in Western Australia with weak internet. How might this affect his health care compared with a person in Perth?",
+      "opts": [
+        "Video care may be harder for him, a divide within Australia",
+        "He may have equal access, as the divide is between countries",
+        "His care may be easier, as remote areas get faster internet",
+        "He may get no telehealth, as it is run from city clinics"
+      ],
+      "why": "Weak internet can make video consults harder for Tane, which is an example of the digital divide within a country. The divide is not just a gap between countries, as it exists within them too. Telehealth by phone may still work for him.",
+      "clue": "Where can the digital divide exist?"
+    }
   }
 };

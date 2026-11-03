@@ -58,7 +58,18 @@ MADE_COURSES.push({
             "leg-trends-impact-offence"
           ]
         },
-        {"id": "vic-leg-u12-1-4", "title": "The criminal justice system", "check": "checked", "points": []},
+        {
+          "id": "vic-leg-u12-1-4",
+          "title": "The criminal justice system",
+          "check": "checked",
+          "points": [
+            "leg-police-enforcement-bodies",
+            "leg-police-powers-individual-rights",
+            "leg-courts-criminal-cases",
+            "leg-jury-criminal-trial",
+            "leg-groups-facing-difficulties"
+          ]
+        },
         {
           "id": "vic-leg-u12-1-3",
           "title": "Sentencing",

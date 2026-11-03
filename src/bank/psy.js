@@ -2998,5 +2998,1054 @@ MADE_BANKS.psy = {
       "why": "An outlier should be kept and noted, not removed to make the data look tidy. With only 12 students, the result cannot be claimed for everyone, so that limit should be stated. Keeping the score but claiming the program helps all students ignores the limit.",
       "clue": "There are two choices here: what to do with the odd score, and how far to claim."
     }
+  },
+  "psy-criteria-typical-behaviour": {
+    "title": "Criteria for typical behaviour",
+    "card": [
+      "Psychologists judge whether behaviour is typical by testing it against criteria, which are standards for comparison. Cultural perspective asks: is the behaviour accepted within the person's own culture?",
+      "Social norms ask: does the behaviour follow the unwritten rules of a group or society about how to act in a setting?",
+      "Statistical rarity asks: is the behaviour uncommon, far from the average in the population? Personal distress asks: does it cause the person ongoing suffering or upset?",
+      "The maladaptive criterion asks: does the behaviour get in the way of daily life, such as study, work, relationships or self-care?"
+    ],
+    "remember": "Typical behaviour is judged by culture, norms, rarity, distress and how well the person can function.",
+    "a": {
+      "q": "Hana avoids school, work and friends because she feels constant fear. Her fear stops her from caring for herself. Which criterion does this show most directly?",
+      "opts": [
+        "The behaviour is maladaptive",
+        "The behaviour is statistically rare",
+        "The behaviour breaks a social norm",
+        "The behaviour is culturally unacceptable"
+      ],
+      "why": "Her behaviour interferes with study, relationships and self-care, so it is maladaptive. Rarity is tempting, but the case says nothing about how common her fear is in the population.",
+      "clue": "Think about what her fear stops her doing."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom sings loudly on a quiet train. Other passengers frown, because people are expected to keep quiet there. Which criterion are they using to judge him?",
+      "opts": [
+        "Social norms about behaviour in public",
+        "Statistical rarity in the population",
+        "Personal distress felt by Tom",
+        "Maladaptive effect on Tom's daily life"
+      ],
+      "why": "The passengers are reacting to an unwritten rule about how to act on a quiet train, so the social norm criterion applies. Rarity is tempting, but they are judging him against an expectation, not against how common singing is.",
+      "clue": "What are the passengers comparing his behaviour with?"
+    }
+  },
+  "psy-limits-each-criterion": {
+    "title": "Limits of each criterion",
+    "card": [
+      "Each way of judging behaviour has a weakness. That is why a single test is not enough to decide if behaviour is typical.",
+      [
+        "Statistical rarity",
+        "it only counts how uncommon a behaviour is, not whether it causes harm. Being a gifted musician is rare, and it is healthy."
+      ],
+      [
+        "Social norms and culture",
+        "norms differ between cultures and change over time. A behaviour can be accepted in one place or decade and not in another."
+      ],
+      [
+        "Distress and maladaptive",
+        "some conditions cause little distress to the person, and distress can be a normal reaction, such as grief. Whether behaviour is maladaptive depends on the person and their situation."
+      ]
+    ],
+    "remember": "Every criterion can mislead on its own, so psychologists weigh several together.",
+    "a": {
+      "q": "Why is statistical rarity, on its own, a weak test of whether behaviour is atypical?",
+      "opts": [
+        "It counts how uncommon a behaviour is, not whether it harms",
+        "It treats common behaviour as a likely sign of a problem",
+        "It relies on how upset the person feels about the behaviour",
+        "It judges behaviour by whether it helps the person cope"
+      ],
+      "why": "Statistical rarity measures only how uncommon a behaviour is. A rare behaviour, such as great musical talent, can be healthy, so rarity alone cannot show a problem. Judging by how upset the person feels is the distress criterion, not rarity.",
+      "clue": "What does rarity measure, and what does it leave out?"
+    },
+    "b": {
+      "d": 2,
+      "q": "In Mei's country, it is polite to greet elders by bowing. Visiting another country, she is told that bowing seems odd. Which weakness of judging by social norms does this show?",
+      "opts": [
+        "Norms differ between cultures",
+        "Norms are always set by a small group",
+        "Norms only apply to rare behaviour",
+        "Norms cannot change over time"
+      ],
+      "why": "The same bow is polite in one culture and odd in another, so judging by one set of norms can give a wrong result. The option saying norms cannot change is wrong, as the card says norms change across cultures and over time.",
+      "clue": "The same behaviour is judged differently in two places."
+    }
+  },
+  "psy-neurotypical-neurodivergent": {
+    "title": "Neurotypical and neurodivergent",
+    "card": [
+      [
+        "Neurotypical",
+        "describes a person whose brain develops and works in ways that most people's do. Their thinking, learning and behaviour fit what is usual in the population."
+      ],
+      [
+        "Neurodivergent",
+        "describes a person whose brain works in ways that differ from what is usual. Autism and ADHD are examples. Being neurodivergent is a difference, not a sign of illness."
+      ],
+      [
+        "Adaptive",
+        "an emotion, behaviour or thought that helps a person cope, function and reach their goals in daily life."
+      ],
+      [
+        "Maladaptive",
+        "an emotion, behaviour or thought that gets in the way of coping or functioning for that person. It depends on its effect on the person, not on whether it is common."
+      ]
+    ],
+    "remember": "Neurotypical and neurodivergent compare a brain with most people's. Adaptive or maladaptive depends on whether an emotion, behaviour or thought helps that person function.",
+    "a": {
+      "q": "Which statement best describes a neurodivergent person?",
+      "opts": [
+        "Their brain works in ways that differ from what is usual",
+        "Their brain has an illness that must be treated",
+        "Their thoughts and behaviours are maladaptive",
+        "Their brain works in the same way as most people's"
+      ],
+      "why": "Neurodivergent describes a brain that works differently from what is usual. It does not mean illness or maladaptive behaviour, because it describes a difference and not how well the person functions.",
+      "clue": "Is the term a judgement of health, or a comparison?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is neurotypical. Before exams she avoids all study and stays awake all night worrying, and this stops her from sitting the papers. How should her behaviour be described?",
+      "opts": [
+        "Maladaptive, because it stops her from functioning",
+        "Adaptive, because most students feel nervous",
+        "Adaptive, because she is neurotypical",
+        "Maladaptive, because she is neurotypical"
+      ],
+      "why": "Her behaviour is maladaptive because it stops her from coping with a task she needs to do. Being neurotypical says how her brain compares with most, not whether her behaviour helps her, so it cannot make the behaviour adaptive.",
+      "clue": "Ask what the behaviour does to her ability to function."
+    }
+  },
+  "psy-neurodiversity": {
+    "title": "Neurodiversity",
+    "card": [
+      "Neurodiversity is the idea that human brains develop and work in many different ways, and that this range is a normal part of any population.",
+      "Autism and ADHD are examples. Autistic people and people with ADHD may think, learn, focus or communicate differently from most people.",
+      "The neurodiversity view treats these differences as natural variation, as people vary in height or handedness, rather than as faults to be cured.",
+      "A person may still need support, such as a quieter space or more time. On this view, support changes the setting so the person can take part, not the person's brain."
+    ],
+    "remember": "On the neurodiversity view, brain differences are normal human variation, and support can adjust the setting around a person.",
+    "a": {
+      "q": "Which statement best matches the neurodiversity view of autism?",
+      "opts": [
+        "It is one of many normal ways a brain can develop",
+        "It is a fault in the brain that needs to be cured",
+        "It is caused by poor habits learned in childhood",
+        "It is too rare to count as part of human variation"
+      ],
+      "why": "The neurodiversity view sees autism as one of the many ways brains develop, part of normal human variation. It does not treat it as a fault to be cured.",
+      "clue": "Think about how people vary in height or handedness."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom has ADHD and finds it hard to focus through long exams. His school gives him short rest breaks. How does the neurodiversity view see this?",
+      "opts": [
+        "The breaks adjust the setting so he can take part",
+        "The breaks correct a fault in the way his brain works",
+        "The breaks show his brain works like everyone else's",
+        "The breaks show he is unable to do well at school"
+      ],
+      "why": "On the neurodiversity view, support changes the setting so a person can take part, and leaves their brain as it is. The breaks do not fix a fault, because the difference is not seen as a fault.",
+      "clue": "Does this view see Tom's difference as something to fix?"
+    }
+  },
+  "psy-who-supports-mental-wellbeing": {
+    "title": "Who supports mental wellbeing",
+    "card": [
+      [
+        "Psychologist",
+        "a professional trained in the study of behaviour and mental processes. They assess, diagnose and treat mental health conditions, mainly with talk-based therapies, and they cannot prescribe medication."
+      ],
+      [
+        "Psychiatrist",
+        "a medical doctor who has specialised in mental health. They also assess and diagnose conditions, and they can prescribe medication as well as offer therapy."
+      ],
+      [
+        "Mental health worker",
+        "a worker such as a mental health nurse, social worker or support worker. They help people manage everyday life, such as keeping a routine and getting to appointments, often as part of a team."
+      ],
+      "Organisations such as Beyond Blue, headspace and Lifeline support wellbeing through information, counselling and referral to other services. Many people use a mix of these supports."
+    ],
+    "remember": "Psychologists and psychiatrists can both diagnose. Psychiatrists are doctors, so they can also prescribe medication.",
+    "a": {
+      "q": "What can a psychiatrist do that a psychologist cannot?",
+      "opts": [
+        "Prescribe medication for a condition",
+        "Diagnose a mental health condition",
+        "Treat a condition with talk therapy",
+        "Assess a person's symptoms"
+      ],
+      "why": "A psychiatrist is a medical doctor, so they can prescribe medication, and a psychologist cannot. Diagnosis is the most tempting wrong option, but psychologists also assess and diagnose mental health conditions.",
+      "clue": "Which task needs a medical degree?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Jack is recovering from a mental health condition. His care team wants someone to help him keep a routine and get to his appointments. Which role fits best?",
+      "opts": ["A mental health support worker", "A psychiatrist", "A psychologist", "A crisis helpline counsellor"],
+      "why": "Support workers help people manage everyday life, such as routines and appointments, often as part of a team. A psychologist is tempting, but their role is to assess, diagnose and treat through talk-based therapy, not to give practical day to day help.",
+      "clue": "Which role is about help with everyday life?"
+    }
+  },
+  "psy-stress-stressors": {
+    "title": "Stress and stressors",
+    "card": [
+      "Stress is a state of psychological and physiological arousal. It is the person's response, not the event that causes it.",
+      ["Stressor", "anything that triggers stress. The stressor is the cause, and stress is the response."],
+      ["Internal stressor", "comes from within the person, such as worry, self-doubt or pain."],
+      ["External stressor", "comes from the environment, such as an exam, a loud room or an argument."]
+    ],
+    "remember": "A stressor is the trigger. Stress is the arousal it produces in the person.",
+    "a": {
+      "q": "Which of these is a stressor rather than stress?",
+      "opts": [
+        "A looming deadline for a major assignment",
+        "A racing heart before the assignment is due",
+        "Feeling tense and on edge about the assignment",
+        "Sweaty palms while handing in the assignment"
+      ],
+      "why": "The deadline is the trigger from outside the person, so it is the stressor. The racing heart, tension and sweaty palms are the body and mind responding, which is stress.",
+      "clue": "Which one is the cause, not the response?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam often tells himself he is less clever than his friends, even on quiet days with nothing due. These thoughts leave him tense, with a tight chest. Which is correct?",
+      "opts": [
+        "The thoughts are an internal stressor, the tension is stress",
+        "The thoughts are an external stressor, the tension is stress",
+        "The thoughts are stress, the tension is an internal stressor",
+        "The tension is an external stressor, the thoughts are stress"
+      ],
+      "why": "Liam's self-doubt comes from within him and triggers his tension, so the thoughts are an internal stressor and the tension is stress. Calling the thoughts external is tempting, but nothing in his environment is causing them.",
+      "clue": "Which comes first, and does it start inside Liam or around him?"
+    }
+  },
+  "psy-fight-flight-or-freeze": {
+    "title": "Fight, flight or freeze",
+    "card": [
+      "Fight, flight or freeze is an acute stress response: a sudden, short reaction to a threat happening now. The sympathetic nervous system, part of the autonomic nervous system, prepares the body to act, for example with a faster heart rate and breathing.",
+      ["Fight", "face the threat and confront it directly."],
+      ["Flight", "run or move away from the threat to escape it."],
+      [
+        "Freeze",
+        "stay very still, which can help avoid being noticed. The sympathetic system stays active, and the parasympathetic system also becomes active, which can slow the heart rate and keep the body still."
+      ]
+    ],
+    "remember": "A sudden threat triggers sympathetic arousal. Freeze also brings in the parasympathetic system.",
+    "a": {
+      "q": "Which event is an example of the acute stress response?",
+      "opts": [
+        "A student's heart pounds as a car swerves towards her",
+        "A student feels low after weeks of study pressure",
+        "A student sleeps deeply after a long day at school",
+        "A student slowly gets used to a noisy new classroom"
+      ],
+      "why": "A car swerving is a sudden, present threat, so the sympathetic system prepares the body to act. Weeks of study pressure is tempting, but it is a long stressor, not a sudden one.",
+      "clue": "Look for a sudden threat happening right now."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo is walking in bushland and sees a snake on the track. He stops and stays completely still, hoping it does not notice him. What best describes his response?",
+      "opts": [
+        "Freeze, with sympathetic and parasympathetic activity",
+        "Freeze, with only the parasympathetic system active",
+        "Flight, because he stopped moving towards the snake",
+        "Fight, because he stood his ground facing the snake"
+      ],
+      "why": "Staying still to avoid notice is the freeze response. The sympathetic system stays active while the parasympathetic system also becomes active, so it is not parasympathetic alone. Flight would mean moving away, which Leo did not do.",
+      "clue": "In freeze, does the sympathetic system switch off?"
+    }
+  },
+  "psy-cortisol": {
+    "title": "Cortisol",
+    "card": [
+      "Cortisol is a hormone released by the adrenal glands when the body faces a stressor. It is often called a stress hormone.",
+      "Cortisol acts more slowly than adrenaline and its effects last longer. It helps keep energy available, by raising blood glucose, while a stressor continues.",
+      "In the short term, this helps the body cope with a demand. If cortisol stays high for a long time, it weakens the immune system.",
+      "A weaker immune system means the body is less able to fight infection, so a person under long stress may get sick more often."
+    ],
+    "remember": "Cortisol helps the body cope over time, but long-term high levels weaken the immune system.",
+    "a": {
+      "q": "What is the main role of cortisol during a stressor that lasts for hours or days?",
+      "opts": [
+        "Keeping energy available while the stressor continues",
+        "Giving a brief burst of energy that fades within seconds",
+        "Strengthening the immune system as the stressor continues",
+        "Slowing the body down so that it can rest and recover"
+      ],
+      "why": "Cortisol acts slowly and lasts, so it keeps energy available while a stressor continues. It does not strengthen the immune system: if levels stay high for long, it weakens it.",
+      "clue": "Think about what the body needs over a long stressor, not a few seconds."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has studied under heavy pressure for many weeks and has caught several colds. Which explanation fits best?",
+      "opts": [
+        "Long-term high cortisol has weakened her immune system",
+        "Cortisol has run out, so she has no energy to fight germs",
+        "Cortisol has raised her immune response too much",
+        "A brief rise in cortisol has weakened her immune system"
+      ],
+      "why": "Weeks of stress can keep cortisol high, and long-term high cortisol weakens the immune system, so she is less able to fight infection. A brief rise is not the cause, because in the short term cortisol helps the body cope.",
+      "clue": "Ask how long her cortisol has likely stayed high."
+    }
+  },
+  "psy-general-adaptation-syndrome": {
+    "title": "General adaptation syndrome",
+    "card": [
+      "General adaptation syndrome (GAS) is Hans Selye's model of how the body responds to a long-lasting stressor. It has three stages in a set order.",
+      [
+        "Alarm reaction",
+        "the body first goes into shock, and resistance to the stressor drops. Then countershock follows, as the body starts to fight back and arousal rises."
+      ],
+      [
+        "Resistance",
+        "the body works to cope with a stressor that continues. Arousal stays raised, and the body uses up its energy to keep going."
+      ],
+      [
+        "Exhaustion",
+        "if the stressor lasts too long, the body's resources run low. Resistance falls, and the person becomes more open to illness."
+      ]
+    ],
+    "remember": "GAS runs in order: alarm reaction, resistance, then exhaustion. Resources are used up over time.",
+    "a": {
+      "q": "Which description fits the resistance stage of the GAS?",
+      "opts": [
+        "The body keeps coping with a stressor that is still there",
+        "The body first drops into shock when the stressor appears",
+        "The body's resources run low and illness becomes more likely",
+        "The stressor is gone and the body returns to normal"
+      ],
+      "why": "In resistance, the stressor continues and the body keeps working to cope with it. Shock belongs to the alarm reaction, and running out of resources is exhaustion.",
+      "clue": "Think about what comes after the alarm, before the body wears down."
+    },
+    "b": {
+      "d": 3,
+      "q": "For months, Priya has worked two jobs to pay off a debt. She now catches colds often and feels drained. Which stage is she most likely in, and why?",
+      "opts": [
+        "Exhaustion, as the long stressor has used up her resources",
+        "Resistance, as her body is still coping with the stressor",
+        "Countershock, as her body has only just begun to fight back",
+        "Alarm reaction, as she is feeling the first shock of stress"
+      ],
+      "why": "Months of stress, frequent illness and feeling drained show that her resources are running low, which is exhaustion. Resistance is tempting because the stressor continues, but in that stage the body is still coping, not wearing down.",
+      "clue": "What does getting sick often say about her body's defences?"
+    }
+  },
+  "psy-transactional-model-stress": {
+    "title": "The transactional model of stress",
+    "card": [
+      "Lazarus and Folkman's transactional model says stress is not just the event itself. It depends on how a person judges the event and whether they believe they can cope.",
+      [
+        "Primary appraisal",
+        "the person judges what the event means for them. They may see it as irrelevant, positive, or stressful because it is a harm, a threat or a challenge."
+      ],
+      [
+        "Secondary appraisal",
+        "the person judges whether they have the resources to cope, such as skills, time, money or support from others."
+      ],
+      "Stress is more likely when the event is seen as a threat and the person believes their resources are not enough. Two people can face the same event and respond differently."
+    ],
+    "remember": "Stress depends on the person's appraisal of the event and of their ability to cope.",
+    "a": {
+      "q": "In the transactional model, what does secondary appraisal involve?",
+      "opts": [
+        "Judging whether one has the resources to cope",
+        "Judging whether an event is harmful or a threat",
+        "Reacting to an event with a rush of arousal",
+        "Using a strategy to deal with the stressor directly"
+      ],
+      "why": "Secondary appraisal is the judgement about coping resources, such as skills, time or support. Judging whether an event is a threat is primary appraisal, which is the tempting wrong option because it is also a judgement.",
+      "clue": "It comes after the person has sized up what the event means."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two students in Geelong each get the same exam timetable. Priya thinks, \"This is a chance to show what I know, and I have studied well.\" Sam thinks, \"This will go badly and I have no one to help.\" Which best explains why Sam is more likely to feel stressed?",
+      "opts": [
+        "Sam sees a threat and believes his resources are too low",
+        "Sam has a harder exam timetable than Priya has",
+        "Sam has a stronger fight or flight response than Priya",
+        "Sam avoids the exam while Priya approaches it"
+      ],
+      "why": "In the model, stress depends on appraisal, not only the event. Sam sees a threat and believes he lacks resources to cope. The timetable is the same for both, so a harder exam cannot explain the difference.",
+      "clue": "Compare what each student thinks about the exam and about help."
+    }
+  },
+  "psy-gut-brain-axis": {
+    "title": "The gut-brain axis",
+    "card": [
+      "The gut-brain axis is the two-way communication between the gut and the brain. The brain sends signals to the gut, and the gut sends signals to the brain.",
+      "One pathway is the vagus nerve, a long nerve running between the brainstem and the gut. Gut microbes, the trillions of bacteria and other microorganisms living in the gut, also send signals through chemicals they make.",
+      "Stress can change the mix of gut microbes and how the gut works, such as causing an upset stomach before a big event.",
+      "Gut health can affect mood. A change in gut microbes can change the signals reaching the brain, which may influence how a person feels."
+    ],
+    "remember": "Brain and gut talk both ways: stress can upset the gut, and an upset gut can lower mood.",
+    "a": {
+      "q": "Which example shows a signal travelling from the gut to the brain?",
+      "opts": [
+        "Changed gut microbes lead to a lower mood",
+        "Exam worry leads to an upset stomach",
+        "A frightening noise speeds up the heart",
+        "Stress hormones change the mix of microbes"
+      ],
+      "why": "When gut microbes change, the signals they send to the brain can change and affect mood, so the signal starts in the gut. Worry causing an upset stomach runs the other way, from brain to gut.",
+      "clue": "Where does the change start, and where does it end up?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In an experiment, calm mice are given gut microbes taken from stressed mice. Afterwards, the calm mice act more anxious. What does this suggest?",
+      "opts": [
+        "Gut microbes can send signals that affect the brain",
+        "The mice's anxiety came first and changed their microbes",
+        "Signals in the axis travel only from the brain to the gut",
+        "The vagus nerve is the only link between gut and brain"
+      ],
+      "why": "The mice were calm until their gut microbes changed, so the change started in the gut and then affected behaviour. This shows signals can travel from gut to brain. The anxiety could not have come first, because the mice were calm before they got the new microbes.",
+      "clue": "Which changed first in the calm mice, their gut or their behaviour?"
+    }
+  },
+  "psy-approach-avoidance-coping": {
+    "title": "Approach and avoidance coping",
+    "card": [
+      "Coping strategies are the things a person does to manage a stressor. They fall into two broad types: approach and avoidance.",
+      [
+        "Approach",
+        "a strategy that deals with the stressor directly. Examples are making a study plan for an exam or talking to a teacher about a problem."
+      ],
+      [
+        "Avoidance",
+        "a strategy that keeps away from the stressor or from thinking about it. Examples are putting off the study or pretending the exam is not happening."
+      ],
+      "Avoidance can bring brief relief from the stress. It often leaves the problem in place, so the stressor is still there later and can grow."
+    ],
+    "remember": "Approach faces the stressor. Avoidance steps away from it, and the problem often stays.",
+    "a": {
+      "q": "Which of these is an example of an approach coping strategy?",
+      "opts": [
+        "Asking a boss to explain an unclear work task",
+        "Watching a series to stop thinking about the task",
+        "Telling friends the task does not matter",
+        "Staying home on the day the task is due"
+      ],
+      "why": "Asking the boss deals with the stressor directly by clearing up what the task needs. The other three keep away from the task or from thinking about it, so they are avoidance. Watching a series may feel like action, but it does nothing about the task.",
+      "clue": "Which one acts on the stressor itself?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has a maths test next week. She keeps scrolling her phone each night so she does not think about it. She feels calmer each evening. What best describes her strategy?",
+      "opts": [
+        "Avoidance, which gives brief relief but leaves the test",
+        "Approach, because it lowers her stress each evening",
+        "Approach, because she is doing something about the test",
+        "Avoidance, because it removes the test as a stressor"
+      ],
+      "why": "Scrolling keeps her away from thinking about the test, so it is avoidance. The calm she feels is the brief relief avoidance can give, but the test is still coming. Feeling calmer does not make it approach, because approach deals with the stressor directly.",
+      "clue": "Does the strategy do anything about the test itself?"
+    }
+  },
+  "psy-coping-flexibility-exercise": {
+    "title": "Coping flexibility",
+    "card": [
+      "Coping flexibility is the ability to notice when a coping strategy is not working and to switch to a different one.",
+      "No single strategy suits every stressor. A strategy that helps in one situation may not help in another.",
+      "A flexible coper checks the result of what they are doing. If the stress stays high, they try something else that fits the situation.",
+      "A person who keeps using the same strategy, even when it is not working, has low coping flexibility."
+    ],
+    "remember": "Coping well means checking if a strategy works and changing it when it does not.",
+    "a": {
+      "q": "Which person is showing coping flexibility?",
+      "opts": [
+        "Ravi sees extra study is not helping and asks his teacher",
+        "Ravi uses one study timetable every term, whatever happens",
+        "Ravi picks the strategy his friend says works best for him",
+        "Ravi avoids thinking about his exam until the night before"
+      ],
+      "why": "Ravi notices that his strategy is not working and switches to a different one. Using the same timetable regardless of results is the opposite, because it ignores whether the strategy helps.",
+      "clue": "Look for noticing a strategy is failing, then changing it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mei calms herself before swimming races by going for a long run. When a knee injury stops her running, she still tries to run and her stress rises. What does this show?",
+      "opts": [
+        "Low coping flexibility, as she did not switch strategy",
+        "High coping flexibility, as she kept her strategy",
+        "Running is always a poor way to cope with stress",
+        "Mei has no stress response to a change in her situation"
+      ],
+      "why": "A strategy that worked before no longer suits her situation, and Mei did not switch to another. That is low coping flexibility. Running is not poor in itself: it helped her before, so it is wrong to say it never works.",
+      "clue": "Did Mei change her strategy when the situation changed?"
+    }
+  },
+  "psy-autobiographical-memory-imagining-future": {
+    "title": "Autobiographical memory and imagining the future",
+    "card": [
+      "Autobiographical memory is memory of your own life. It draws on episodic memory (specific events, with when and where) and semantic memory (facts, such as the name of your school).",
+      "Imagining a future event also uses both systems. Episodic memory supplies details from past events to build a new scene. Semantic memory supplies facts and knowledge about the people and places involved.",
+      "Because recalling the past and imagining the future share these systems, damage to them often affects both. A person who cannot recall past events in detail may also struggle to imagine detailed future ones.",
+      "This is a link, not a rule. Imagining the future is not simply recalling the past, but it relies on the same stored material."
+    ],
+    "remember": "Recalling the past and imagining the future share the same systems, so losing the ability to recall the past in detail often weakens imagining the future.",
+    "a": {
+      "q": "Why might a person with damaged episodic memory also find it hard to imagine a future holiday in detail?",
+      "opts": [
+        "Both tasks draw on episodic memory for details",
+        "Imagining the future uses semantic, not episodic, memory",
+        "Future events are stored as past events in memory",
+        "Episodic memory stores future plans, not past events"
+      ],
+      "why": "Imagining a future event builds a new scene from details of past events, which come from episodic memory. Semantic memory helps too, but it is not used instead of episodic memory, so damage to episodic memory can weaken both tasks.",
+      "clue": "Where do the details for a new imagined scene come from?"
+    },
+    "b": {
+      "d": 3,
+      "q": "After a brain injury, Liam can name every street in his town but cannot recall his last birthday party or picture his next one in detail. What best explains this?",
+      "opts": [
+        "Episodic memory is affected, which both tasks rely on",
+        "Semantic memory is affected, which both tasks rely on",
+        "Past and future events are stored in different systems",
+        "Imagining the future does not draw on past events"
+      ],
+      "why": "Liam still has facts about streets, so semantic memory is working. He struggles with recalling and imagining specific events, which both depend on episodic memory. Blaming semantic memory is tempting, but his facts are intact.",
+      "clue": "Which of his abilities still works, and which has been lost?"
+    }
+  },
+  "psy-alzheimer-s-disease-memory": {
+    "title": "Alzheimer's disease and memory",
+    "card": [
+      "Alzheimer's disease is a disease of the brain that destroys neurons (nerve cells) over time. Memory problems are often the first sign.",
+      [
+        "Amyloid plaques",
+        "sticky clumps of a protein called beta-amyloid that build up between neurons and disrupt how they communicate."
+      ],
+      [
+        "Tangles",
+        "twisted strands of a protein called tau that build up inside neurons. They stop the neuron working and it eventually dies."
+      ],
+      "The damage often starts in the hippocampus, which is needed to form new memories. So episodic memory, for personal events, is often lost first. Semantic memory, for facts, is often kept longer, so a person may forget this morning's visit but still know a well-known fact."
+    ],
+    "remember": "Plaques sit outside neurons, tangles sit inside them, and both damage neurons. Episodic memory is often lost first.",
+    "a": {
+      "q": "Which description matches the tangles seen in Alzheimer's disease?",
+      "opts": [
+        "Twisted tau protein inside neurons that stops them working",
+        "Clumps of beta-amyloid between neurons that disrupt signals",
+        "Twisted beta-amyloid inside neurons that stops them working",
+        "Clumps of tau protein between neurons that disrupt signals"
+      ],
+      "why": "Tangles are twisted strands of tau protein inside neurons. The option about clumps of beta-amyloid between neurons describes plaques, which sit outside neurons.",
+      "clue": "Think about where tangles sit and which protein forms them."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom, aged 74, is in the early stage of Alzheimer's disease. He cannot recall his grandson's birthday party last weekend, but he can still say that Canberra is the capital of Australia. Which explanation fits best?",
+      "opts": [
+        "Episodic memory is often affected first, before facts",
+        "Semantic memory is often affected first, before events",
+        "Episodic and semantic memory are often lost together",
+        "Old memories are often lost first, before recent ones"
+      ],
+      "why": "The party is a personal event, so it is episodic memory, which is often lost first because the hippocampus is damaged early. Knowing the capital is semantic memory, which is often kept longer. The idea that semantic memory goes first reverses this, and Tom has lost a recent memory, not an old one.",
+      "clue": "Which type of memory holds personal events, and which holds facts?"
+    }
+  },
+  "psy-aphantasia": {
+    "title": "Aphantasia",
+    "card": [
+      "Aphantasia is the inability to form mental images. A person with it cannot picture a scene, face or object in their mind's eye.",
+      "It is not a loss of memory. People with aphantasia can still learn, store and recall facts, such as the capital of France or the date of Anzac Day.",
+      "Many people with aphantasia recall past personal events with less detail. They may know what happened but cannot replay it as a picture.",
+      "Recalling an event often draws on visual detail, so having no mental pictures can leave the memory thinner."
+    ],
+    "remember": "Aphantasia takes away mental pictures, not memory itself. Facts stay, but event memories are often less detailed.",
+    "a": {
+      "q": "Which description best fits a person with aphantasia?",
+      "opts": [
+        "Cannot picture images, but can still recall facts",
+        "Cannot store new facts, but can picture images",
+        "Cannot recall facts or picture images in the mind",
+        "Pictures images clearly but cannot recall events"
+      ],
+      "why": "Aphantasia is about mental imagery, not memory storage, so facts can still be recalled. The tempting option about losing both facts and pictures treats it as general memory loss, which it is not.",
+      "clue": "Think about what the mind's eye does."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila has aphantasia. She is asked about her last birthday party and about the rules of netball. Which result is most likely?",
+      "opts": [
+        "She gives few vivid party details but states the rules",
+        "She states the rules poorly but gives vivid party details",
+        "She recalls both with little detail because memory is weaker",
+        "She cannot recall that the party took place at all"
+      ],
+      "why": "Netball rules are facts, which people with aphantasia can still recall. The party is a personal event, which is often recalled with less detail without mental images. The option claiming weaker memory overall is tempting but treats aphantasia as general memory loss.",
+      "clue": "Separate memory for facts from memory for personal events."
+    }
+  },
+  "psy-mnemonics": {
+    "title": "Mnemonics",
+    "card": [
+      "A mnemonic is a memory aid. It links new information to a cue that is easier to recall, so the cue can bring the information back.",
+      [
+        "Acronym",
+        "a word made from the first letters of items to remember. ROY G BIV stands for the colours of the rainbow."
+      ],
+      [
+        "Acrostic",
+        "a sentence where the first letter of each word stands for an item. The words are chosen to make a phrase that is easy to recall."
+      ],
+      [
+        "Method of loci",
+        "the student pictures a familiar route or place and puts each item at a stop along it. To recall the items, they walk through the route in their mind."
+      ]
+    ],
+    "remember": "A mnemonic ties new information to an easier cue, such as a word, a sentence or a place.",
+    "a": {
+      "q": "Which of these is an example of the method of loci?",
+      "opts": [
+        "Placing each item to learn at a stop on a route through home",
+        "Making a word from the first letters of the items to learn",
+        "Writing a sentence whose words start with each item's letter",
+        "Repeating the list aloud many times until it is familiar"
+      ],
+      "why": "The method of loci uses a familiar place as the cue, with one item at each stop. Making a word from first letters is an acronym, and a sentence of first letters is an acrostic. Repeating a list does not link the items to any cue, so it is not a mnemonic.",
+      "clue": "Which option uses a familiar place as its cue?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya must learn the order of the planets. She remembers the sentence 'My Very Easy Method Just Speeds Up Naming', where each word starts with the first letter of a planet, in order. Which mnemonic is this, and what is the cue?",
+      "opts": [
+        "An acrostic, and the cue is the sentence",
+        "An acronym, and the cue is the sentence",
+        "An acrostic, and the cue is a familiar place",
+        "An acronym, and the cue is a single made-up word"
+      ],
+      "why": "The first letters are used to build a whole sentence, so this is an acrostic. The sentence is the cue that brings back each planet's first letter. An acronym would be a single word made from the letters, not a sentence.",
+      "clue": "Is the memory aid a single word or a full sentence?"
+    }
+  },
+  "psy-sung-narratives-songlines": {
+    "title": "Sung narratives and songlines",
+    "card": [
+      "Aboriginal and Torres Strait Islander peoples have held and passed on knowledge across many generations through songs, stories, dance and places on Country.",
+      "A songline follows a route across Country. Each place along it is tied to part of a song or story, so reaching one place cues the next part.",
+      "Songlines can hold knowledge of water and food sources, seasons, law, kinship and history. Each people holds its own songs and stories, and some knowledge is shared only with certain people.",
+      "This works as a powerful memory system. Rhythm, melody, story and place act as linked cues, so a large body of knowledge can be recalled in order."
+    ],
+    "remember": "Song, story and place work as linked cues, so knowledge can be held and passed on over generations.",
+    "a": {
+      "q": "Why can a songline hold so much knowledge in a set order?",
+      "opts": [
+        "Each place along the route cues the next part",
+        "Knowledge is cut down to one short rhyming phrase",
+        "It is written down so no one needs to recall it",
+        "Each person learns one place and never the rest"
+      ],
+      "why": "A songline ties parts of a song or story to places in order, so arriving at each place cues what comes next. It is held by singing and telling, not in written records.",
+      "clue": "Think about what the places do for the song."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says a songline is just a song, so it cannot be a memory system. Which reply best corrects the student?",
+      "opts": [
+        "It joins melody, story and place as recall cues",
+        "It only holds facts about where to find water",
+        "It works because it was written for school use",
+        "It needs no cues, as the words are memorised"
+      ],
+      "why": "A songline links rhythm and melody with story and places on Country, and these linked cues help people recall large amounts of knowledge in order. It holds far more than water sources, including law, kinship and history.",
+      "clue": "Look at what a songline joins together."
+    }
+  },
+  "psy-mental-wellbeing-continuum": {
+    "title": "The mental wellbeing continuum",
+    "card": [
+      "Mental wellbeing is not an on and off switch. It is a continuum, a line from mentally healthy, through a mental health problem, to a mental health disorder, and a person can move either way along it over time.",
+      ["Mentally healthy", "a person copes with everyday demands and can take part in daily life."],
+      [
+        "Mental health problem",
+        "a person has some distress or difficulty, often linked to a stressor. It affects daily life less than a disorder does and may pass with time or support."
+      ],
+      [
+        "Mental health disorder",
+        "a person has a pattern of symptoms that a health professional diagnoses. It is more severe, lasts longer and affects daily life more."
+      ]
+    ],
+    "remember": "Where a person sits on the continuum can change, toward health or toward disorder.",
+    "a": {
+      "q": "Which statement best fits the idea of a mental wellbeing continuum?",
+      "opts": [
+        "A person's mental wellbeing can shift along a line over time",
+        "A person is either mentally healthy or has a disorder",
+        "A person who has a disorder will stay at that point for life",
+        "A person moves along the line only when they get treatment"
+      ],
+      "why": "The continuum shows a range, and people can move along it. The statement that a person is either healthy or has a disorder is tempting, but it treats wellbeing as an on and off switch, which the continuum does not.",
+      "clue": "Think of a line, not a switch."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's grandmother died two months ago. Since then she has felt low and has struggled to focus on homework, but she still goes to school and sees her friends. She has not been diagnosed with a disorder. Where is Priya best placed on the continuum?",
+      "opts": [
+        "Mental health problem, and she may move back toward healthy",
+        "Mental health disorder, because she has felt low for weeks",
+        "Mentally healthy, because she still attends school",
+        "Mental health problem, and she cannot move from this point"
+      ],
+      "why": "Priya has distress linked to a stressor and some difficulty, but no diagnosis, and she still takes part in daily life. That fits a mental health problem, and she can move along the line. Calling it a disorder is tempting because of the weeks of low mood, but a disorder is a diagnosed pattern of symptoms that affects daily life more.",
+      "clue": "Is there distress, and is there a diagnosis?"
+    }
+  },
+  "psy-ways-describing-mental-wellbeing": {
+    "title": "Ways of describing mental wellbeing",
+    "card": [
+      "Mental wellbeing is more than the absence of a mental health disorder. It can be shown in more than one way.",
+      [
+        "Functioning",
+        "how well a person manages daily life, such as study, work, relationships and self-care. High functioning means they do these things well, day to day."
+      ],
+      [
+        "Resilience",
+        "the ability to cope with and adapt to stress or setbacks, then return to normal or better. It shows in how a person recovers over time, even if they struggle at first."
+      ],
+      [
+        "Social and emotional wellbeing",
+        "a third way, which takes a holistic view of wellbeing. It draws on Aboriginal and Torres Strait Islander understandings of wellbeing."
+      ]
+    ],
+    "remember": "High wellbeing can show in daily functioning, in bouncing back from setbacks, and in social and emotional wellbeing.",
+    "a": {
+      "q": "Which of these best shows high functioning in a student?",
+      "opts": [
+        "Keeps up with study, work and self-care each week",
+        "Bounces back quickly each time she fails an exam",
+        "Never feels any stress, even during exam weeks",
+        "Has never been diagnosed with a mental health disorder"
+      ],
+      "why": "Functioning is how well a person manages daily life, such as study, work and self-care. Bouncing back after failing is resilience, which is about recovering from setbacks, not managing everyday tasks.",
+      "clue": "Think about managing ordinary daily tasks."
+    },
+    "b": {
+      "d": 3,
+      "q": "After his family moved interstate, Tom struggled for a few weeks. He then joined a new club, changed his study routine and settled in. What does this show?",
+      "opts": [
+        "High resilience, as he adapted and settled after the move",
+        "High functioning, as he managed daily life well throughout",
+        "Low wellbeing, as he struggled in the first few weeks",
+        "Low resilience, as he was upset by the move at first"
+      ],
+      "why": "Tom faced a setback, adapted and recovered over time, which is resilience. High functioning throughout is wrong, because he struggled to manage at first. Struggling early does not mean low resilience, since resilience shows in how a person recovers.",
+      "clue": "Look at what happened after the hard first weeks."
+    }
+  },
+  "psy-social-emotional-wellbeing": {
+    "title": "Social and emotional wellbeing",
+    "card": [
+      "Social and emotional wellbeing is a holistic view of health held by many Aboriginal and Torres Strait Islander peoples. Holistic means the whole person and their connections are seen together.",
+      "It links body and mind with family and kin, community, culture, Country and spirituality. Country means the land, waters and skies a people belong to and care for.",
+      "These parts are connected, so strength or harm in one can flow to the others. Strong ties to family and culture can support wellbeing.",
+      "This differs from views that treat mental health mainly as something inside one person. Different communities hold their own understandings of wellbeing."
+    ],
+    "remember": "Wellbeing is the whole person in connection: body, mind, kin, community, culture, Country and spirit.",
+    "a": {
+      "q": "How does a social and emotional wellbeing view differ from a view of mental health focused on the individual?",
+      "opts": [
+        "It sees wellbeing through a person's connections",
+        "It looks only at whether illness is present",
+        "It treats body and mind as separate systems",
+        "It rests mainly on a person's own coping skills"
+      ],
+      "why": "Social and emotional wellbeing is holistic: it sees a person through their links to family, community, culture, Country and spirituality. Looking only at illness, or at one person's coping, is closer to an individual view.",
+      "clue": "Think about what holistic includes."
+    },
+    "b": {
+      "d": 3,
+      "q": "A community health service in Victoria wants to support the social and emotional wellbeing of Aboriginal young people. Which approach best fits this view?",
+      "opts": [
+        "Include family, culture and time on Country",
+        "Treat each young person's mind on its own",
+        "Treat physical health as a separate issue",
+        "Measure wellbeing by test results at school"
+      ],
+      "why": "Social and emotional wellbeing joins body and mind with family, community, culture, Country and spirituality, so support draws on those connections. Treating the mind on its own, or the body apart, leaves those connections out.",
+      "clue": "Which approach keeps the young person's connections in view?"
+    }
+  },
+  "psy-stress-anxiety-phobia-compared": {
+    "title": "Stress, anxiety and phobia compared",
+    "card": [
+      [
+        "Stress",
+        "a response to a stressor, which is something that puts demands on a person. It usually passes once the stressor is gone or has been dealt with."
+      ],
+      [
+        "Anxiety",
+        "worry and tension that continues after the stressor has gone, or that occurs without any clear stressor."
+      ],
+      [
+        "Phobia",
+        "an intense, irrational fear of a specific object, animal or situation, such as spiders or heights. The fear is far greater than the real danger."
+      ],
+      "To tell them apart, ask two questions. Is there a stressor, and does the reaction pass? Is the fear tied to one specific thing?"
+    ],
+    "remember": "Stress usually eases when the stressor ends. Anxiety lingers or has no clear cause. A phobia is intense fear of one specific thing.",
+    "a": {
+      "q": "Which description best fits stress rather than anxiety?",
+      "opts": [
+        "Tension about an exam that eases once the exam is over",
+        "Constant worry that has no clear cause",
+        "Tension that carries on weeks after a problem is solved",
+        "An intense fear of a single object that is not dangerous"
+      ],
+      "why": "Stress is a response to a stressor and usually passes when the stressor ends. Constant worry without a cause, or worry that lasts after the stressor has gone, is anxiety. Intense fear of one harmless object is a phobia.",
+      "clue": "Which reaction eases when the demand is gone?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila is calm in everyday life away from heights. On any balcony, even a safe one with a high rail, she freezes and panics. The panic fades soon after she steps back inside. Which term fits best?",
+      "opts": [
+        "A phobia, as the fear is intense and tied to one thing",
+        "Stress, as the panic ends once she leaves the balcony",
+        "Anxiety, as the fear has no clear cause",
+        "Anxiety, as the worry continues long after she leaves"
+      ],
+      "why": "Her fear is intense, far greater than the real danger of a safe balcony, and tied to one specific situation, which makes it a phobia. Her panic fading when she leaves is tempting as a sign of stress, but it does not explain fear so out of proportion to a specific, safe situation. It is not anxiety, as the fear has a clear cause and does not linger.",
+      "clue": "Is the fear in proportion to the danger, and aimed at one thing?"
+    }
+  },
+  "psy-protective-factors-wellbeing": {
+    "title": "Protective factors for wellbeing",
+    "card": [
+      "A protective factor is something that helps keep mental wellbeing high and lowers the chance of problems developing. It helps a person cope with stress rather than removing it, and it does not guarantee good mental health.",
+      "Biological factors include good food and enough sleep. They help the body and brain work well, which supports mood and concentration.",
+      "Psychological factors include coping strategies and mindfulness. Coping strategies are ways to deal with a stressful situation. Mindfulness is paying attention to the present moment without judging it.",
+      "Social factors include support from family, friends and community. Having people to turn to helps a person manage hard times."
+    ],
+    "remember": "Biological, psychological and social protective factors help a person cope and keep wellbeing high.",
+    "a": {
+      "q": "Which of these is best described as a protective factor for mental wellbeing?",
+      "opts": [
+        "Having friends and family to turn to in hard times",
+        "Being free of any stressful events in life",
+        "Staying up late to study before every exam",
+        "Avoiding all contact with other people when upset"
+      ],
+      "why": "Support from family and friends is a social protective factor because it helps a person manage hard times. Being free of stress is not what protective factors do: they help a person cope with stress, and they do not remove it.",
+      "clue": "Protective factors help a person manage problems, not remove them."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is in Year 12 in Geelong. She sleeps eight hours most nights and uses breathing exercises when exams worry her. Which pair of protective factors does she show?",
+      "opts": [
+        "A biological factor and a psychological factor",
+        "A biological factor and a second biological factor",
+        "A psychological factor and a social factor",
+        "A biological factor and a social factor"
+      ],
+      "why": "Enough sleep is a biological factor. Breathing exercises used to manage worry are a psychological coping or mindfulness strategy, not a biological one. No one else is involved in her routine, so no social factor is shown.",
+      "clue": "Sort sleep and breathing exercises into the three types on the card."
+    }
+  },
+  "psy-cultural-determinants-wellbeing": {
+    "title": "Cultural determinants of wellbeing",
+    "card": [
+      "Cultural determinants are parts of culture and community that support the social and emotional wellbeing of Aboriginal and Torres Strait Islander peoples. They are strengths that help wellbeing, not only risks to avoid.",
+      [
+        "Self-determination",
+        "communities having the right and the power to make decisions about matters that affect their own lives, services and futures."
+      ],
+      [
+        "Connection",
+        "links to culture, Country and community, such as language, kinship, ceremony, stories and time spent on Country. These links support a strong sense of identity and belonging."
+      ],
+      "When services are designed and led by community members, they can better fit the needs and values of that community. This can support wellbeing."
+    ],
+    "remember": "Self-determination and strong connection to culture, Country and community support wellbeing.",
+    "a": {
+      "q": "Which example best shows self-determination in a community?",
+      "opts": [
+        "An Aboriginal community controls the health service it uses",
+        "A government office plans a health service for a community",
+        "A hospital runs a cultural awareness day for its staff",
+        "A school teaches students about a community's history"
+      ],
+      "why": "Self-determination means a community has the power to make decisions about matters that affect it. A community controlling its own health service is an example. A government office planning the service for the community is tempting, but the decisions are made by others.",
+      "clue": "Who holds the decision-making power?"
+    },
+    "b": {
+      "d": 3,
+      "q": "With family support, a Torres Strait Islander teenager moves to a large city for school. There, they are cut off from kin, language and island life. Which cultural determinant has been weakened?",
+      "opts": [
+        "Connection to culture, Country and community",
+        "The community's power to make its own decisions",
+        "Community control of local health services",
+        "Community-led design of school programs"
+      ],
+      "why": "The teenager has lost contact with kin, language and Country, which are forms of connection that support identity and belonging. The other three options describe self-determination, a community's power over its decisions and services. Nothing in the case takes that power away from the community, so those options do not fit.",
+      "clue": "Compare what the teenager has lost with each definition on the card."
+    }
+  },
+  "psy-biological-factors-specific-phobia": {
+    "title": "Biological factors in specific phobia",
+    "card": [
+      "A specific phobia is an intense, irrational fear of one object or situation, such as heights. Biological factors can help it develop and keep it going.",
+      [
+        "GABA",
+        "the brain's main inhibitory neurotransmitter, which calms neural activity. Low GABA activity means fear circuits are calmed less, so fear responses can be stronger."
+      ],
+      [
+        "Long-term potentiation",
+        "LTP is the lasting strengthening of a connection between neurons that fire together often. When a fear is learned, LTP can strengthen the fear pathway."
+      ],
+      "Each time the feared thing is met and the fear pathway fires, it can grow stronger. The fear is then triggered more easily, and the phobia stays."
+    ],
+    "remember": "Weak calming from GABA and a fear pathway strengthened by LTP can build a phobia and hold it in place.",
+    "a": {
+      "q": "Which change in the brain could make a fear response stronger?",
+      "opts": [
+        "Lower GABA activity in fear circuits",
+        "Higher GABA activity in fear circuits",
+        "Weaker links in the fear pathway through LTP",
+        "Less firing between neurons in fear circuits"
+      ],
+      "why": "GABA calms neural activity, so lower GABA activity means fear circuits are calmed less and fear can be stronger. Higher GABA would calm them more, and LTP strengthens a pathway rather than weakening it.",
+      "clue": "GABA calms the brain, so think about what less of it does."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo fell from a ladder as a child. Now he fears heights, and his fear comes faster each time he is up high. Which biological process best explains the fear becoming easier to trigger?",
+      "opts": [
+        "LTP strengthening the neural fear pathway",
+        "Rising GABA activity calming fear circuits",
+        "Avoidance of heights bringing him relief",
+        "Stigma stopping him from seeking help"
+      ],
+      "why": "Each time the fear pathway fires, LTP can strengthen the connections between its neurons, so the fear is triggered more easily. Relief from avoidance is a psychological factor, not a change in the brain's connections.",
+      "clue": "Which option is a change in the links between neurons?"
+    }
+  },
+  "psy-psychological-factors-specific-phobia": {
+    "title": "Psychological factors in specific phobia",
+    "card": [
+      [
+        "Classical conditioning",
+        "a phobia can be learned when a neutral stimulus is paired with something that already causes fear. The neutral stimulus then triggers fear on its own: it is now a conditioned stimulus."
+      ],
+      [
+        "Operant conditioning",
+        "avoiding the feared thing takes the fear away, and that relief is negative reinforcement. It makes avoiding more likely next time, so the phobia is kept going."
+      ],
+      [
+        "Catastrophic thinking",
+        "expecting the worst outcome and believing it is very likely. It makes the feared thing seem more dangerous than it is, so fear stays high."
+      ],
+      "Avoidance also means the person never finds out the feared thing may be safe, which helps the fear last."
+    ],
+    "remember": "Classical conditioning can start a phobia, relief from avoiding keeps it, and catastrophic thinking feeds it.",
+    "a": {
+      "q": "Ana got stuck in a lift during a blackout and was terrified. Now the sight of any lift makes her afraid. In classical conditioning terms, what is a lift now?",
+      "opts": ["A conditioned stimulus", "An unconditioned stimulus", "A conditioned response", "A neutral stimulus"],
+      "why": "Before the blackout a lift was neutral. Paired with the frightening event, it now triggers fear on its own, so it is a conditioned stimulus. Being trapped in the dark was the unconditioned stimulus, and the fear is the response.",
+      "clue": "Was a lift frightening before that day?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Josh has a phobia of dogs. Which of these best shows catastrophic thinking by Josh?",
+      "opts": [
+        "Expecting any dog he passes to maul him",
+        "Crossing the road each time he sees a dog",
+        "Feeling relieved once a dog is out of sight",
+        "Getting a racing heart when a dog barks"
+      ],
+      "why": "Catastrophic thinking is a thought: expecting the worst outcome and believing it is very likely, such as being mauled by any dog. Crossing the road is avoidance, and the relief after it is negative reinforcement. Both keep the phobia going, but neither is a thought about what will happen.",
+      "clue": "Look for the option that is a belief about the future."
+    }
+  },
+  "psy-social-factors-specific-phobia": {
+    "title": "Social factors in specific phobia",
+    "card": [
+      "Social factors are about a person's experiences with other people and their surroundings. They can add to a specific phobia, which is an intense, lasting fear of one object or situation.",
+      [
+        "Frightening event",
+        "a scary experience linked to the object or situation, such as being bitten by a dog. The fear can then spread to all dogs."
+      ],
+      [
+        "Learning from others",
+        "fear can be picked up by watching or hearing others. A child who sees a parent panic at spiders may come to fear them too."
+      ],
+      [
+        "Stigma",
+        "negative judgement from others about mental health problems. It can make a person feel shame and delay seeking help, so the phobia may last longer."
+      ]
+    ],
+    "remember": "Social factors can add to a phobia through a scary event, fear learned from others, and stigma that delays help.",
+    "a": {
+      "q": "Ravi was stuck in a lift for an hour as a child. He now has an intense fear of lifts. Which social factor best fits this?",
+      "opts": [
+        "A frightening event linked to the situation",
+        "Learning fear by watching other people",
+        "Stigma around seeking help",
+        "Delaying help because of shame"
+      ],
+      "why": "Ravi's fear follows a scary experience of his own in a lift. Nobody else showed him the fear, so learning from others is not the best fit. Nothing in the case mentions help or shame.",
+      "clue": "Did Ravi's fear start from his own experience or from watching someone?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mei has feared birds since she was small. She saw her older brother scream and run from pigeons, though she was never hurt by one. Which social factor best explains her fear?",
+      "opts": [
+        "Learning fear from watching her brother",
+        "A frightening event involving a bird",
+        "Stigma around seeking help for fear",
+        "Fear spreading after a bird once bit her"
+      ],
+      "why": "Mei was never hurt, but she watched her brother react with fear. That is learning fear from others. A frightening event, or fear spreading after a bite, needs a scary experience of her own, which the case rules out.",
+      "clue": "Was Mei ever hurt by a bird herself?"
+    }
+  },
+  "psy-evidence-based-treatments-phobia": {
+    "title": "Evidence-based treatments for phobia",
+    "card": [
+      [
+        "CBT",
+        "Cognitive behavioural therapy helps a person spot and challenge catastrophic thoughts about the feared thing. They also practise new, less fearful behaviours."
+      ],
+      [
+        "Systematic desensitisation",
+        "The person learns to relax, then faces the feared thing in small steps, from least to most frightening. Relaxation cannot easily happen alongside fear, so the fear response weakens."
+      ],
+      [
+        "Other supports",
+        "Breathing retraining slows breathing to calm the body when fear rises. Regular exercise can lower general anxiety."
+      ],
+      [
+        "Medication",
+        "Benzodiazepines can reduce anxiety for a short time. They are used briefly and carefully, as they do not remove the cause of the phobia."
+      ]
+    ],
+    "remember": "Psychological treatments help the person manage and face the fear. Medication can ease anxiety for a short time but does not remove the cause.",
+    "a": {
+      "q": "Which description fits systematic desensitisation?",
+      "opts": [
+        "Gradual exposure to the feared thing while relaxed",
+        "Challenging catastrophic thoughts about the feared thing",
+        "Slowing breathing to calm the body during fear",
+        "Taking a drug to reduce anxiety for a short time"
+      ],
+      "why": "Systematic desensitisation pairs relaxation with small, step-by-step exposure. Challenging catastrophic thoughts describes CBT, which is a different treatment.",
+      "clue": "Think of steps from least to most frightening."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq fears dogs. His psychologist teaches him to relax, then shows him a dog photo, then a dog behind glass, then a calm dog in the room. Which treatment is this, and why does it work?",
+      "opts": [
+        "Systematic desensitisation, as relaxation weakens his fear",
+        "Systematic desensitisation, as it removes all his thoughts",
+        "CBT, as it mainly changes his catastrophic thinking",
+        "Medication, as it lowers his anxiety for a short time"
+      ],
+      "why": "Tariq relaxes and meets the feared thing in graded steps, which is systematic desensitisation. Relaxation cannot easily happen alongside fear, so the fear response weakens. CBT is tempting, but the case describes gradual exposure rather than challenging thoughts.",
+      "clue": "Look at the order of steps and what he does first."
+    }
   }
 };

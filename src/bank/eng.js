@@ -4086,5 +4086,761 @@ MADE_BANKS.eng = {
       "why": "A short, vivid story suits young listeners and leads into his view. The list of figures is tempting because evidence matters, but detailed figures suit an expert audience and can lose a Year 7 crowd at the start.",
       "clue": "Match the technique to the age of the listeners."
     }
+  },
+  "eng-making-personal-response": {
+    "title": "Making a personal response",
+    "card": [
+      "A personal response links a text to your own experience, feelings and views. It says what the text made you think or feel, and why.",
+      "It stays grounded in the text. Point to something the text shows, such as an event, a character's choice or a detail of the setting.",
+      "A strong personal response joins the two: what you noticed in the text, then how it connects to your life or beliefs.",
+      "A story about yourself with no link to the text does not respond to it. A retelling of the plot with no view of your own is not personal."
+    ],
+    "remember": "Your view and the text's evidence belong together in a personal response.",
+    "a": {
+      "q": "Which sentence about a novel best shows a personal response?",
+      "opts": [
+        "Ivy's silence at the party felt like my first week here",
+        "I once moved schools and it took me months to make friends",
+        "Ivy goes to a party, says nothing and walks home alone",
+        "The novel is set in a coastal town during one hot summer"
+      ],
+      "why": "It names something the novel shows, Ivy's silence, and links it to the reader's own experience. The sentence about moving schools has experience only, with no link to the text, and the party sentence only retells it.",
+      "clue": "Look for the sentence with both the text and the reader in it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq writes about a short story: 'I loved this story because I love dogs. My dog Biscuit is my best friend.' What does his response need?",
+      "opts": [
+        "A link to something the story itself shows",
+        "More detail about his own dog and feelings",
+        "A retelling of the whole plot of the story",
+        "Fewer of his own views and feelings in it"
+      ],
+      "why": "Tariq gives his feelings and his own experience, but nothing from the story. He needs to point to an event, character or detail in it and connect that to his view. More about his dog would still leave the story out.",
+      "clue": "What does Tariq say about the story itself?"
+    }
+  },
+  "eng-reading-inference": {
+    "title": "Reading for inference",
+    "card": [
+      "An inference is something a text suggests but does not state. The reader works it out from clues and adds it to what the text says.",
+      "Clues can be word choice, detail and what is left out. A character who \"slams\" a door shows more anger than one who \"closes\" it.",
+      "Example: Sam checks the clock three times, then drops his bag by the door and stares at the empty driveway. A reader can infer that he is anxious and waiting for someone.",
+      "A sound inference is backed by clues in the text. A guess with no clue behind it is not an inference. Name the clue when you explain the inference."
+    ],
+    "remember": "An inference is an idea you work out from clues the text gives, not one it states.",
+    "a": {
+      "q": "A story says: Lena walks home slowly, kicking at stones, and does not answer when a friend calls her name. Which is an inference?",
+      "opts": [
+        "Lena is troubled by something",
+        "Lena walks slowly and kicks stones",
+        "Lena failed a test at school today",
+        "Lena does not answer when called"
+      ],
+      "why": "Her slow walk, the kicked stones and her silence are clues that suggest she is troubled, though the text never says so. Walking slowly and not answering are stated outright, so they are not inferences. Nothing in the passage points to a failed test, so that is a guess.",
+      "clue": "Find the idea the text suggests but never says, with clues behind it."
+    },
+    "b": {
+      "d": 3,
+      "q": "A story says: Mia's mother asks how the match went. Mia says \"Fine\" and goes straight to her room. What is the best inference, and why?",
+      "opts": [
+        "Mia is upset, because her short reply and exit hint at it",
+        "Mia is upset, because the text says she lost the match",
+        "Mia is tired, because her mother asks about the match",
+        "Mia is happy, because she says the word \"Fine\""
+      ],
+      "why": "The short answer and leaving at once are clues that suggest Mia is upset. The text never says she lost, so that reason is made up. The word \"Fine\" alone does not show she is happy, because her actions point the other way.",
+      "clue": "Look for the option that names a clue actually in the passage."
+    }
+  },
+  "eng-ideas-themes": {
+    "title": "Ideas, concerns and tensions",
+    "card": [
+      [
+        "Idea",
+        "a big concept a text explores, such as belonging, power or freedom. It is usually named in a word or short phrase."
+      ],
+      [
+        "Concern",
+        "something the text seems worried about or wants readers to think about, such as how a community treats outsiders."
+      ],
+      [
+        "Tension",
+        "a clash between people, groups or values, such as loyalty to family against a wish for independence. Tensions often drive what happens."
+      ],
+      "To find them, ask what the characters want, what stands in their way, and which values pull in different directions."
+    ],
+    "remember": "A text explores ideas and concerns, and clashes between people or values often drive what happens.",
+    "a": {
+      "q": "In a novel, Priya wants to leave her small town for university, but her parents need her to run the family shop. Which is the tension?",
+      "opts": [
+        "Her ambition clashes with her family's needs",
+        "The story is set in a quiet small town",
+        "Priya enjoys studying and wants good marks",
+        "The family shop is one of the novel's settings"
+      ],
+      "why": "A tension is a clash between people or values. Priya's wish to leave clashes with what her parents need from her. The small town and the shop are only details of setting and show no clash.",
+      "clue": "Which option has someone wanting something that is blocked?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A short story shows a new student, Tomas, eating alone while other students laugh together. Which idea does this scene most clearly explore?",
+      "opts": [
+        "Belonging and being left out",
+        "Power and the control of others",
+        "Freedom and the wish to travel",
+        "Memory and the passing of time"
+      ],
+      "why": "The scene shows Tomas apart from a group that is close, which points to belonging. Power is a tempting answer, but nothing shows anyone controlling anyone else.",
+      "clue": "An idea is a big concept. Which one fits what the scene shows happening to Tomas?"
+    }
+  },
+  "eng-world-text": {
+    "title": "The world of a text",
+    "card": [
+      "Every text builds its own world. It is made from the places, people, time and values that the writer chooses to show.",
+      "Setting is the place and time. A story set in a fishing town in the 1950s has different limits and chances from one set in a city today.",
+      "Values are what the people in that world treat as right, normal or important. A text can show them through what characters praise, fear or punish.",
+      "Readers enter this world as they read. They can understand its rules and values even when they differ from their own."
+    ],
+    "remember": "A text's world is made of its places, people, time and values, and readers learn its rules as they read.",
+    "a": {
+      "q": "Which sentence best describes the world of a text?",
+      "opts": [
+        "The places, people, time and values the writer builds",
+        "The real events that happened when the author was alive",
+        "The opinion a reader forms after finishing the text",
+        "The list of techniques the writer uses in each paragraph"
+      ],
+      "why": "A text's world is what the writer builds from setting, people, time and values. A reader's opinion comes after entering that world, and a list of techniques describes how it is built, not the world itself.",
+      "clue": "Think of what a writer creates for the reader to step into."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a novel, a village punishes anyone who leaves the family farm. Neil, a teenager, is shamed for wanting to study in the city. What does this show about the world of the text?",
+      "opts": [
+        "It values staying loyal to family and place",
+        "It values education above all other goals",
+        "It shows that Neil is a careless person",
+        "It shows that the village is a modern city"
+      ],
+      "why": "The village punishes leaving, so its values favour loyalty to family and place. Neil's wish to study shows a different want, but the village's reaction, not Neil's wish, shows the values of that world.",
+      "clue": "Look at how the village reacts, not at what Neil wants."
+    }
+  },
+  "eng-characters-their-choices": {
+    "title": "Characters and their choices",
+    "card": [
+      "Writers often show what a character is like rather than simply state it. They do this through four things: what the character does, says and thinks, and how others react to them.",
+      "Actions and speech show a character from the outside. Thoughts take us inside, and can show a gap between what a character says and what they truly feel.",
+      "The reactions of other characters give a second view. If a crowd goes quiet when someone enters, we learn how that person is seen.",
+      "A choice is a strong clue to character. When a character picks one option over another, especially at a cost, it shows what they value most."
+    ],
+    "remember": "Read what a character does, says and thinks, and how others react. Their choices show what they value.",
+    "a": {
+      "q": "Priya is given a prize she did not earn. She hands it back and says the winner is her friend Sam. What does this choice most clearly show?",
+      "opts": [
+        "She values honesty over reward",
+        "She dislikes prizes in general",
+        "She is jealous of her friend Sam",
+        "She wants the teacher to praise her"
+      ],
+      "why": "Giving up a prize at a cost shows that Priya values honesty more than winning. Jealousy is tempting, but nothing in her choice suggests it, and handing the prize to Sam points the other way.",
+      "clue": "Ask what she gave up, and what that tells you she cares about."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a story, Leo says he does not mind being left out of the team. Alone, he thinks about the team list and kicks a locker. Which reading is best supported?",
+      "opts": [
+        "His thoughts and actions show he is hurt",
+        "His speech shows he does not care",
+        "The locker shows he is a violent person",
+        "His speech and thoughts agree with each other"
+      ],
+      "why": "Leo's words say one thing, but his thoughts and his action show another. The gap shows he is hurt. Taking his speech at face value is tempting, but thoughts can reveal a gap between what a character says and what they feel.",
+      "clue": "Compare what Leo says with what he thinks and does."
+    }
+  },
+  "eng-point-view-narration": {
+    "title": "Point of view and narration",
+    "card": [
+      [
+        "First person",
+        "The narrator is a character who says I or we. Readers see events only through that character's eyes and know only what they know or choose to tell."
+      ],
+      [
+        "Third person",
+        "The narrator stands outside the story and says he, she or they. Some third-person narrators stay close to one character. Others move between many characters' thoughts."
+      ],
+      "A first-person narrator may be mistaken or may hide things, so readers can doubt what they are told.",
+      "The writer's choice of narrator shapes what readers know, how close they feel to a character and how far they trust the telling."
+    ],
+    "remember": "The narrator a writer picks decides whose view readers get and how much they know.",
+    "a": {
+      "q": "Which sentence shows a third-person narrator moving between characters' minds?",
+      "opts": [
+        "Nina feared Dad forgot her, and Dad feared she was cross",
+        "I feared Dad forgot me, and he looked anxious in the car",
+        "Nina feared Dad forgot her, and she kept watching the road",
+        "Nina stood by the gate, and Dad's car turned into the road"
+      ],
+      "why": "This sentence tells us what both Nina and Dad are thinking, so the narrator moves between minds. The sentence where Nina keeps watching the road is tempting, but it gives only Nina's thoughts, so that narrator stays close to one character.",
+      "clue": "Whose thoughts does each sentence let you into?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a novel, a first-person narrator describes a quarrel between two friends. The narrator was not in the room for the end of it. What does this mean for readers?",
+      "opts": [
+        "They only know what the narrator saw, heard or was told",
+        "They can read the thoughts of both friends in the room",
+        "They know more than the narrator does about the quarrel",
+        "They must accept the narrator's account as the full truth"
+      ],
+      "why": "A first-person narrator gives one view from inside, so readers know only what that narrator knows or says. The last option is tempting, but a first-person narrator may be mistaken or hide things, so readers can doubt the account.",
+      "clue": "Think about what one character inside the story can know."
+    }
+  },
+  "eng-writing-about-text": {
+    "title": "Writing about a text",
+    "card": [
+      [
+        "Claim",
+        "A claim is the point you argue about the text. It answers the question and says something specific, not just what happens."
+      ],
+      [
+        "Evidence",
+        "Evidence is a short detail from the text that supports the claim. A few well-chosen words, or a brief description of a moment, work better than a long passage."
+      ],
+      [
+        "Explanation",
+        "Explanation shows how the evidence proves the claim. It says what the detail suggests and why that matters to the claim."
+      ],
+      "A strong paragraph uses all three. Evidence with no explanation leaves the reader to guess your point, and a claim with no evidence is only an opinion."
+    ],
+    "remember": "Claim what you think, show it with short evidence, then explain how the evidence proves it.",
+    "a": {
+      "q": "What is the job of explanation in a paragraph about a text?",
+      "opts": [
+        "It shows how the evidence supports the claim",
+        "It retells the events around the evidence",
+        "It repeats the claim in the same words",
+        "It adds a second quote to fill the space"
+      ],
+      "why": "Explanation links the evidence back to the claim by saying what the detail suggests. Retelling events is tempting, but it only repeats what happens and does not show how the evidence proves anything.",
+      "clue": "Think about what connects evidence to the claim."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya writes: 'Mara is lonely.' She then describes how Mara eats dinner alone each night in the novel. She stops there. What is the main weakness in her paragraph?",
+      "opts": [
+        "She has not explained how the detail shows loneliness",
+        "She has used evidence that is too short",
+        "She has not made a claim about the character",
+        "She has used a detail instead of a long passage"
+      ],
+      "why": "Priya has a claim and a detail, but she never says how eating alone shows loneliness. Short evidence is not a fault, because the card says brief details work better than long ones.",
+      "clue": "Check which of the three parts is missing."
+    }
+  },
+  "eng-writing-with-clear-purpose": {
+    "title": "Writing with a clear purpose",
+    "card": [
+      "Every piece of writing has a main aim. Writers often aim to express, reflect, explain or argue, and they shape their language to serve that aim.",
+      ["Express", "to show a feeling, a voice or an experience, often with vivid, sensory language."],
+      ["Reflect", "to look back and think about what an experience meant, often in a thoughtful, questioning voice."],
+      [
+        "Explain or argue",
+        "to explain is to make something clear, using plain, ordered language. To argue is to persuade a reader to accept a view, using reasons and evidence."
+      ]
+    ],
+    "remember": "Decide the aim first, then pick the language that serves it.",
+    "a": {
+      "q": "Which sentence shows the writer's aim is to explain?",
+      "opts": [
+        "Soaking seeds overnight softens their coats so they sprout",
+        "Every gardener in this town should stop wasting water",
+        "The garden hummed with heat and the smell of tomato leaves",
+        "Looking back, that summer of weeding taught me patience"
+      ],
+      "why": "The sentence about soaking seeds makes a process clear in plain words, which is explaining. The sentence with should is pushing readers to accept a view, so its aim is to argue.",
+      "clue": "Which sentence helps a reader understand how something works?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya writes about her first night in a new city. Most of the piece is the sound of trams, the smell of rain on hot pavement and her racing heart, in vivid detail. Which aim does it mainly serve?",
+      "opts": [
+        "To express, as it makes the reader feel the moment",
+        "To reflect, as it weighs what the move meant to her",
+        "To explain, as it makes city life clear in ordered steps",
+        "To argue, as it persuades readers to accept a view"
+      ],
+      "why": "The piece is built from sensory detail that lets the reader feel the moment, which is expressing. Reflecting is the tempting answer because it is a personal experience, but Priya is not looking back to work out what it meant.",
+      "clue": "Look at what the language is mostly made of."
+    }
+  },
+  "eng-language-modes-unit-3": {
+    "title": "Language modes in Unit 3",
+    "card": [
+      "A mode is the way a piece reaches its audience: it is read, heard or watched. The mode shapes how the writer builds the piece.",
+      [
+        "Read",
+        "The reader controls the pace and can reread. Writers can use longer sentences, paragraphs, layout and punctuation to guide meaning."
+      ],
+      [
+        "Heard",
+        "The listener cannot go back. Writers use short sentences, repetition, signposting and rhythm, and the speaker adds pace, tone and pauses."
+      ],
+      [
+        "Watched",
+        "Meaning comes from images, movement, sound and words together. Writers choose what the audience sees as well as what they are told."
+      ]
+    ],
+    "remember": "The mode a piece is made for changes how the writer structures it and makes meaning.",
+    "a": {
+      "q": "Why might a speech to be heard repeat its main point in different words?",
+      "opts": [
+        "Listeners cannot reread, so repetition helps them follow",
+        "Listeners can reread, so repetition shows the layout",
+        "Repetition replaces the need for a clear structure",
+        "Repetition lets the speaker avoid using tone and pauses"
+      ],
+      "why": "A listener hears the speech once and cannot go back, so repeating a main point helps it stay clear. The option about rereading is wrong because rereading belongs to a piece that is read.",
+      "clue": "Think about what a listener cannot do."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya turns her written essay on a bushfire into a short film. Which change best suits the new mode?",
+      "opts": [
+        "Show the burnt street in an image instead of describing it",
+        "Add long paragraphs so viewers can reread the argument",
+        "Add headings and punctuation to guide each viewer's pace",
+        "Keep every sentence unchanged and read it aloud in full"
+      ],
+      "why": "In a watched piece, images carry meaning with words and sound, so showing the street can do the work of a description. Long paragraphs, headings and punctuation suit a piece that is read. Reading the essay aloud unchanged ignores the new mode.",
+      "clue": "In a film, what can the audience see instead of being told?"
+    }
+  },
+  "eng-standard-non-standard-language": {
+    "title": "Standard and non-standard language",
+    "card": [
+      [
+        "Standard",
+        "language that follows accepted grammar and spelling, and is common in formal writing, such as \"We are going to the beach.\""
+      ],
+      [
+        "Non-standard",
+        "language that departs from this, such as slang (\"arvo\"), dialect (\"we was going\") or deliberately broken rules, such as a sentence fragment."
+      ],
+      "Non-standard language is not a mistake when a writer chooses it. It can build a voice, show a character's background or fit an audience.",
+      "In any form, from a story to a speech, a writer picks standard or non-standard language to suit the voice, audience and context of the piece."
+    ],
+    "remember": "Non-standard language works when it is chosen on purpose to suit voice, audience and context.",
+    "a": {
+      "q": "A writer has a teenage narrator say \"Nah, we was just hanging at the servo.\" What is the most likely purpose of this language?",
+      "opts": [
+        "To build a casual, believable voice for the narrator",
+        "To show the writer does not know the grammar rules",
+        "To make the piece sound formal and academic",
+        "To explain a process to the reader step by step"
+      ],
+      "why": "Slang and non-standard grammar can make a narrator sound real and casual. It is not a mistake when chosen on purpose, and it does not make writing formal.",
+      "clue": "Think about who is speaking and how they would talk."
+    },
+    "b": {
+      "d": 3,
+      "q": "For a school assembly, with the principal and visiting parents listening, Dan deliberately fills his speech with slang and broken grammar. What is the best criticism of this choice?",
+      "opts": [
+        "It may not suit the audience and context of the assembly",
+        "It may be an error, because he did not check the grammar",
+        "It may weaken the voice, because slang rarely sounds natural",
+        "It may blur the topic, because speeches need a clear thesis"
+      ],
+      "why": "Writers choose language to suit audience and context, and heavy slang may not fit an assembly with the principal and parents. It is not an error, because Dan chose it deliberately. Slang can also build a natural voice, so voice is not the problem here.",
+      "clue": "Recall what a writer chooses language to suit."
+    }
+  },
+  "eng-comparing-ideas-across-text": {
+    "title": "Comparing ideas across a text",
+    "card": [
+      "A strong text response follows one idea from the start of a text to the end. It shows how the idea changes, rather than staying inside one scene or just listing moments.",
+      [
+        "Develops",
+        "the idea grows deeper or clearer as the text goes on, such as a character's guilt becoming harder to hide."
+      ],
+      ["Shifts", "the idea changes direction, such as trust turning into suspicion."],
+      [
+        "Contrasts",
+        "two parts of the text treat the idea in opposite ways, such as an early scene of safety set against a late scene of danger."
+      ]
+    ],
+    "remember": "Follow one idea from start to end and show how it changes or contrasts.",
+    "a": {
+      "q": "Which sentence from an essay best compares an idea across a text?",
+      "opts": [
+        "At first Mara trusts the town, but by the end she fears it",
+        "In the first chapter, Mara describes the town as friendly",
+        "Mara is the main character and tells the story herself",
+        "The town is described in detail by Mara in chapter one"
+      ],
+      "why": "The sentence about Mara trusting the town at first and fearing it by the end links an early view to a later one, so it shows the idea shifting. The sentence about the town seeming friendly in the first chapter is tempting, but it covers only one chapter. The others describe the text without tracing any change.",
+      "clue": "Look for the sentence that links the start to the end."
+    },
+    "b": {
+      "d": 3,
+      "q": "In an invented novel, Tom's father praises hard work in chapter two. In chapter nine, the same work leaves him exhausted and unwell. Which approach compares the idea best?",
+      "opts": [
+        "Set the praise of work in chapter two against its cost later",
+        "Explain closely how Tom's father speaks about work early on",
+        "Argue that chapter nine matters more than chapter two does",
+        "List every mention of work in the order it appears"
+      ],
+      "why": "Setting the early praise against the later cost is a contrast across the text, so it shows how the idea changes. Explaining how the father speaks early on is tempting, but it stays in one part of the novel. Listing every mention gathers moments without showing any change.",
+      "clue": "Which choice puts two parts of the text side by side?"
+    }
+  },
+  "eng-embedding-evidence-2": {
+    "title": "Embedding evidence",
+    "card": [
+      "Embedding means building a short quotation into your own sentence, so your sentence still reads smoothly. Keep the writer's exact words in quotation marks, and quote only the few words you need.",
+      ["Example", "The narrator calls the harbour \"a grey mouth\", which makes the water seem hungry."],
+      "Do not drop a long quotation in on its own line or leave it unexplained. Do not let the quotation do the work that your analysis should do.",
+      "After the quotation, analyse its language. Name a word or technique, such as a metaphor, and explain the effect on the reader."
+    ],
+    "remember": "Quote a few words inside your sentence, then analyse the language.",
+    "a": {
+      "q": "A student writes about an invented poem. Which sentence embeds evidence best?",
+      "opts": [
+        "The street becomes \"a river of rust\", implying decay",
+        "The street is shown. \"A river of rust\". It implies decay",
+        "The street becomes a rusty river, implying decay",
+        "The poem implies decay, as the street is a river of rust"
+      ],
+      "why": "The sentence where the street becomes \"a river of rust\", implying decay, keeps the poet's exact words in quotation marks inside one smooth sentence, then gives the effect. The version that sets \"A river of rust\" apart as its own fragment is not built into the student's sentence. The two versions without quotation marks, such as the rusty river, do not show which words are the poet's.",
+      "clue": "Look for the poet's marked words inside one smooth sentence."
+    },
+    "b": {
+      "d": 2,
+      "q": "A student quotes \"the clock ticked like a warning\" from an invented story. What should come next?",
+      "opts": [
+        "Analysis of the simile and how it creates a sense of threat",
+        "Another quotation from a different scene about the clock",
+        "A retelling of the whole scene in which the clock appears",
+        "A statement that the quotation proves the story is good"
+      ],
+      "why": "Close reading needs analysis of the language right after the quotation, here the simile and its effect. Adding another quotation or retelling the scene does not explain how the words work, so the quotation is left to do the work alone.",
+      "clue": "What must follow a quotation to show close reading?"
+    }
+  },
+  "eng-discussing-different-readings": {
+    "title": "Discussing different readings",
+    "card": [
+      "A moment in a text can often be read in more than one way. Writers may leave room for different responses.",
+      "Show you see this with phrases such as \"on one reading\" or \"alternatively\". Then explain the other reading fairly.",
+      "Next, argue for the reading you find more convincing. Give a reason based on the text, such as its language or its context.",
+      "Do not just list readings and stop, or call them all equally valid. Do not invent a reading that the text cannot support."
+    ],
+    "remember": "Show that a moment can be read in more than one way, then argue for the reading you find stronger.",
+    "a": {
+      "q": "In an invented story, a girl leaves her home town at night without a word. Which paragraph plan shows the most depth?",
+      "opts": [
+        "Set out two readings, then back one using the text's words",
+        "Set out two readings, then call both of them just as valid",
+        "Set out one reading, then call it the only possible one",
+        "Set out three readings, then stop without choosing one"
+      ],
+      "why": "Naming two readings and then backing one with the text's words shows depth and makes a clear argument. Calling both readings just as valid is tempting, but it avoids taking a position.",
+      "clue": "Noticing other readings is not the whole task."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student writes that the ending can be read as hopeful, and that another reader might find it bleak. What should the student add to show depth?",
+      "opts": [
+        "A reason from the text for preferring one reading",
+        "A third reading that has no support in the text",
+        "A claim that both readings are equally correct",
+        "A summary of the plot before the ending"
+      ],
+      "why": "The student has named two readings but has not argued for either. A reason from the text turns a list into an argument. Saying both are equally correct avoids taking a position.",
+      "clue": "Naming readings is only half the task."
+    }
+  },
+  "eng-identifying-contention-tone": {
+    "title": "Identifying the contention and tone",
+    "card": [
+      [
+        "Contention",
+        "The main point the writer wants the audience to accept. It is the answer to the question: what is this writer arguing?"
+      ],
+      [
+        "Audience",
+        "The people the writer is trying to persuade. Clues include where the piece appears and the words it uses to address readers."
+      ],
+      [
+        "Tone",
+        "The attitude the writer takes, such as urgent, sarcastic, calm or indignant. It is shown through word choices and the way sentences are shaped."
+      ],
+      [
+        "Context",
+        "The time, place and issue the piece responds to. Together with audience, it helps explain why the writer argues in this tone."
+      ]
+    ],
+    "remember": "Before analysing methods, work out what is argued, to whom, in what tone and why now.",
+    "a": {
+      "q": "Which of these is a contention?",
+      "opts": [
+        "Councils should ban cars from city centres",
+        "Cars are a common sight in many city centres",
+        "The writer describes traffic in a worried voice",
+        "The piece appears in a newspaper opinion section"
+      ],
+      "why": "A contention is the main point the writer wants accepted, and it says what should be believed or done. The tone option describes an attitude, not the point itself, and the other two give facts without arguing a position.",
+      "clue": "Which one is a position the writer wants others to accept?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya, a Melbourne student, writes a piece for the newsletter her school sends home each week. She mocks the idea that homework builds character and says it should be cut back. Which pairing of tone and audience fits?",
+      "opts": [
+        "Sarcastic tone, aimed at families at her school",
+        "Calm tone, aimed at families at her school",
+        "Sarcastic tone, aimed at state politicians",
+        "Calm tone, aimed at state politicians"
+      ],
+      "why": "Mocking an idea is a sarcastic tone, and a newsletter sent home each week is read by the school's families, so they are the audience. The calm option with families gets the readers right but ignores the mockery, and the politicians options ignore where the piece appears.",
+      "clue": "Mockery shows the tone. Ask who reads what the school sends home."
+    }
+  },
+  "eng-analysing-language-persuasive-effect": {
+    "title": "Analysing language for persuasive effect",
+    "card": [
+      "A persuasive technique is a choice of language meant to influence the reader, such as emotive words, a statistic or a rhetorical question.",
+      "Good analysis names the technique and quotes a few of the writer's words. Keep the quote short and fit it into your own sentence.",
+      "Then it explains the effect: how the technique is meant to make the audience feel or think, so that they lean towards the writer's side.",
+      "Example: a writer calls a new road \"a scar across the valley\". The metaphor suggests harm and damage, so readers may feel protective of the valley and oppose the road."
+    ],
+    "remember": "Name the technique, quote the words, then explain how they position the reader.",
+    "a": {
+      "q": "A writer tells readers that teenagers are \"drowning in screens\". Which sentence is the best analysis of this language?",
+      "opts": [
+        "The metaphor \"drowning\" implies danger, so readers may worry",
+        "The metaphor \"drowning\" is used about teenagers and screens",
+        "The writer says teenagers spend far too long on screens",
+        "The writer shows dislike of phones by saying \"drowning\""
+      ],
+      "why": "It names the metaphor, quotes \"drowning\" and explains the effect: readers who see danger may feel worried and want change. The option that only says the metaphor is used about teenagers names and quotes, but it stops before the effect, so it is not full analysis.",
+      "clue": "Check which options go beyond naming, quoting or restating the point."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia writes that her town's library, \"a place of quiet and hope\", is being shut. Which analysis best explains the persuasive effect of the emotive words?",
+      "opts": [
+        "\"Quiet and hope\" stir warmth, so readers may oppose closure",
+        "\"Quiet and hope\" are two nouns that describe the library",
+        "\"Quiet and hope\" show how much Mia herself loves the library",
+        "\"Quiet and hope\" are facts, so readers will trust Mia"
+      ],
+      "why": "The right analysis links the words to a feeling in the reader and to the stance they may take on the closure. The option about how much Mia loves the library is tempting, but it explains the writer's feelings, not how the audience is positioned. Calling the words two nouns only describes them and never reaches an effect.",
+      "clue": "Effect is about the audience, not the writer."
+    }
+  },
+  "eng-arguments-are-structured": {
+    "title": "How arguments are structured",
+    "card": [
+      "Writers order the parts of an argument on purpose, so each part builds on the last. One common pattern is anecdote, then evidence, then a call to action, but structures vary. Some pieces open with a statistic or a rebuttal instead.",
+      [
+        "Anecdote",
+        "a short story or personal case. Placed at the start, it makes the issue feel real and gets the reader to care before any facts appear."
+      ],
+      [
+        "Evidence",
+        "facts, statistics or expert views. Placed after an anecdote, they give an interested reader reasons to accept the contention."
+      ],
+      [
+        "Call to action",
+        "a closing appeal that tells the reader what to do or think. It turns the feeling and reasons built earlier into a response."
+      ]
+    ],
+    "remember": "Ask why each part sits where it does, and how it builds on the part before.",
+    "a": {
+      "q": "A writer opens an article on bus cuts with a story about Ayesha, who now walks two hours to work. What is the main reason for starting this way?",
+      "opts": [
+        "To make the issue personal before the facts arrive",
+        "To prove the cuts have harmed most commuters",
+        "To tell readers exactly what action to take",
+        "To show that the writer has expert knowledge"
+      ],
+      "why": "An anecdote at the start makes the reader care about the issue, which prepares them for the evidence that follows. One person's story cannot prove that most commuters are harmed, so that option is the tempting wrong answer.",
+      "clue": "Think about what the reader feels before any facts are given."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's opinion piece on school start times ends with the line: 'Write to your local MP this week and demand later starts.' What does this closing part do within the structure of her argument?",
+      "opts": [
+        "It turns the reader's agreement into a response",
+        "It gives the main statistics that support her case",
+        "It introduces a personal story to engage the reader",
+        "It states the opposing view so she can reject it"
+      ],
+      "why": "The line is a call to action: it asks the reader to act on what the earlier parts of the piece have built. It gives no statistics, tells no personal story and does not set out an opposing view, so it is not evidence, an anecdote or a rebuttal.",
+      "clue": "The line tells the reader to do something, and it comes last."
+    }
+  },
+  "eng-analysing-visual-material": {
+    "title": "Analysing visual material",
+    "card": [
+      "A visual is an image, photo, cartoon or graph that appears with a written argument. Analyse it like the words: name what the viewer notices, then explain how it positions them.",
+      [
+        "Support",
+        "the image repeats the writer's point in a picture. A photo of a dry, cracked dam beside an article on water shortages backs up the claim."
+      ],
+      [
+        "Sharpen",
+        "the image makes the point stronger or clearer. A close-up of one child's worried face can turn a general claim about stress into something personal."
+      ],
+      [
+        "Add",
+        "the image brings in something the words do not say, such as irony, humour or a new angle on the issue."
+      ]
+    ],
+    "remember": "Ask what the image does for the argument: support it, sharpen it or add to it.",
+    "a": {
+      "q": "An article claims that city buses are too crowded. Beside it is a cartoon of passengers squashed against the windows. How does the cartoon work?",
+      "opts": [
+        "It supports the claim by showing crowding in a picture",
+        "It adds a new claim that buses should be free",
+        "It replaces the written argument with a joke",
+        "It proves the claim with statistics about passengers"
+      ],
+      "why": "The cartoon shows the same point as the words, so it supports the claim. It adds no new claim about fares, and a cartoon does not give statistics, so it does not prove anything in that way.",
+      "clue": "Does the picture repeat the writer's point or bring in a new one?"
+    },
+    "b": {
+      "d": 3,
+      "q": "An opinion piece argues that a town should protect its old library. Beside it is a photo of an empty reading chair in a dim room, with a single lit lamp. What is the most likely effect of the photo?",
+      "opts": [
+        "It sharpens the argument by making the loss feel personal",
+        "It supports the argument by listing the library's costs",
+        "It adds a new contention about the town's budget",
+        "It weakens the argument by showing nobody uses the library"
+      ],
+      "why": "The lone lamp and empty chair invite the reader to picture what would be lost, which makes the call to protect the library stronger and more personal. An empty room might seem to suggest the library is unused, but the photo was chosen to persuade, and the lit lamp suggests the place is still cared for. The photo shows no costs and raises no budget claim.",
+      "clue": "Does the photo make the writer's point feel stronger, or bring in a new point?"
+    }
+  },
+  "eng-argument-audio-video": {
+    "title": "Argument in audio and video",
+    "card": [
+      "Audio and video texts persuade with more than words. Voice, sound, images and editing all work with the script to position the audience.",
+      [
+        "Voice",
+        "the speaker's pace, pitch, volume and pauses. A slow, low voice can sound serious. A fast, rising voice can sound urgent or excited."
+      ],
+      [
+        "Sound and images",
+        "music, sound effects, colour, framing and what is shown on screen. Soft piano over an empty classroom can create sadness or concern."
+      ],
+      [
+        "Editing",
+        "the order and length of shots and sounds. Quick cuts can build pressure. A long shot held on one face can invite sympathy."
+      ]
+    ],
+    "remember": "Analyse how voice, sound, images and editing work with the words to shape the audience's response.",
+    "a": {
+      "q": "In a podcast, a presenter slows down and lowers her voice as she says the town's last library may close. What is the likely effect?",
+      "opts": [
+        "It signals seriousness and invites concern",
+        "It signals excitement and invites celebration",
+        "It shows the presenter is unsure of her facts",
+        "It makes the audience focus on the music instead"
+      ],
+      "why": "A slow, low voice usually sounds serious, so listeners are positioned to treat the closure as a real loss. Excitement is tempting, but that is more often shown by a fast, rising voice.",
+      "clue": "Think about what a slow, low voice sounds like."
+    },
+    "b": {
+      "d": 3,
+      "q": "A video against litter shows a calm beach, then cuts rapidly between plastic bags, a gull's nest and a turtle, with a harsh drumbeat getting faster. How does the editing help the argument?",
+      "opts": [
+        "Fast cuts build urgency and pressure to act",
+        "Fast cuts make the beach seem calm and safe",
+        "Fast cuts show the filmmaker has no clear view",
+        "Fast cuts give the audience time to reflect slowly"
+      ],
+      "why": "Rapid cuts, with the quickening drumbeat, create a sense of pressure and alarm, which can push viewers toward acting on the problem. A calm effect is wrong because the pace is fast, and reflection comes more from long, held shots.",
+      "clue": "What does a rising pace of cuts do to the mood?"
+    }
+  },
+  "eng-context-writer-s-identity": {
+    "title": "Context and the writer's identity",
+    "card": [
+      "Context is where and when a piece appears, and who it is meant for. A newspaper opinion page, a school assembly and a social media post can each shape how the same words are heard.",
+      "The writer's identity is who they are and what they do, such as a doctor, a politician or a teenager. It can affect how far an audience trusts or accepts what they say.",
+      "A writer's identity can give the argument authority, as when a nurse writes about hospital staffing. It can also make an audience doubt the writer's motives, as when a company owner argues for lower company taxes.",
+      "In an analysis, name the publication or setting and the writer's role. Then explain how each is likely to position the intended audience."
+    ],
+    "remember": "Where a piece appears and who wrote it can shape how the audience responds.",
+    "a": {
+      "q": "A piece about ambulance delays is written by a long-serving paramedic. How might her identity affect readers?",
+      "opts": [
+        "It may lead readers to trust her view on ambulance care",
+        "It may tell readers where and when the piece appeared",
+        "It may turn her contention into a proven fact for readers",
+        "It may stop readers seeing the piece as an argument"
+      ],
+      "why": "Years of work as a paramedic can give her authority on ambulance care, so readers may be more willing to trust her. Where and when a piece appears is its context, not the writer's identity. Her role can shape how readers react, but her contention is still an argument, not a proven fact.",
+      "clue": "Think about how readers respond to someone with experience in the topic."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev owns a chain of gyms. In a local paper's opinion piece, he argues that councils should cut the licence fees they charge gym operators. How might his identity affect some readers?",
+      "opts": [
+        "Some may doubt his motives, as he could gain from the change",
+        "Some may find the argument stronger, as he is not affected",
+        "Some may see the piece as neutral, as it is in a newspaper",
+        "Some may ignore the contention, as he is a business owner"
+      ],
+      "why": "A gym owner who pays council fees could save money if they were cut, so some readers may suspect self-interest. The newspaper setting does not make the piece neutral, because an opinion page presents a personal view. His role may lead readers to question him, but it does not make them ignore the contention.",
+      "clue": "Ask who might gain if the audience agrees with Dev."
+    }
+  },
+  "eng-writing-argument-analysis": {
+    "title": "Writing the argument analysis",
+    "card": [
+      "An argument analysis is about how a text persuades, not whether you agree with it. Write about the writer's choices and their effect on the audience.",
+      [
+        "Introduction",
+        "names the issue, the text, the writer, the form and the audience. It states the contention and the tone, and sums up how the writer tries to persuade."
+      ],
+      [
+        "Body paragraphs",
+        "follow the order of the argument, usually from start to finish. Each one covers a part of the argument, such as the opening, the evidence or the ending."
+      ],
+      [
+        "Inside a paragraph",
+        "name a technique, quote a few of the writer's words, then explain how it is meant to position the reader. Link back to the contention."
+      ]
+    ],
+    "remember": "Introduce the issue and text, then follow the argument's order, explaining how each part persuades.",
+    "a": {
+      "q": "Which sentence from an argument analysis does the job of explaining persuasion?",
+      "opts": [
+        "The vivid word \"choked\" is meant to make readers feel alarm",
+        "The writer says that city councils have ignored cyclists",
+        "The article was published in a newspaper on a Saturday",
+        "I disagree with the writer because bike lanes cost too much"
+      ],
+      "why": "This sentence names a choice, uses the writer's word and says how readers are meant to feel. The sentence about councils only retells what the writer says. The disagreement is the student's own opinion, which is not the task.",
+      "clue": "Look for the choice and its effect on the reader."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi is analysing an opinion piece. It opens with a story about a local pool, then gives figures, then ends with a call to sign a petition. How should his body paragraphs be ordered?",
+      "opts": [
+        "Story, then figures, then the call to sign the petition",
+        "Figures, then the story, then the call, strongest first",
+        "One paragraph on all the techniques, then one on the tone",
+        "A paragraph on each technique, from his most to least liked"
+      ],
+      "why": "Body paragraphs follow the order of the argument, so each part is explained as the reader meets it. Putting the figures first because they seem strongest, or grouping by technique, loses the way the argument builds.",
+      "clue": "Which order matches how the reader meets the argument?"
+    }
   }
 };

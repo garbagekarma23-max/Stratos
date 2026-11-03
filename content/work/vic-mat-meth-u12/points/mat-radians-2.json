@@ -16,21 +16,27 @@
    0.2
   ]
  ],
- "stage": "adapt",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 says reuse mat-radians, so to the Opus match check, as every reuse is",
   "2026-11-01T08:14:07Z confirm: Claude Opus 5.5 may adapt mat-radians, but is not highly sure, so it is for you to review",
   "2026-11-02T06:23:18Z match: owner says adapt mat-radians (2 changes)",
-  "2026-11-02T06:23:18Z review: adapting mat-radians on the next run"
+  "2026-11-02T06:23:18Z review: adapting mat-radians on the next run",
+  "2026-11-03T11:40:50Z adapt: done",
+  "2026-11-03T11:44:03Z check: passed, cleared"
  ],
  "sent": {
   "match": 1,
-  "confirm": 1
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
  },
  "usd": {
   "match": 0.00024,
-  "confirm": 0.0096
+  "confirm": 0.0096,
+  "adapt": 0.00471,
+  "check": 0.00964
  },
  "match": {
   "verdict": "reuse",
@@ -57,6 +63,112 @@
    "Define the radian through arc length on the unit circle, as the Victorian Mathematical Methods course does, rather than only through a general circle where the arc equals the radius.",
    "Add a line stating that arc length equals radius times angle in radians (l = rθ). The card's own definition already implies this."
   ],
-  "by": "owner"
- }
+  "by": "owner",
+  "parts": [
+   "card1",
+   "card2",
+   "card3 label",
+   "card3",
+   "card4 label",
+   "card4",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Radians",
+  "card": [
+   "On a unit circle (radius 1), the angle at the centre in radians equals the arc length it cuts off. So an arc of length 1 gives an angle of 1 radian.",
+   "The unit circle has circumference 2π, so a full turn is 2π radians. This means π radians = 180°.",
+   [
+    "Arc length",
+    "on a circle of radius r, arc length = radius × angle in radians, so l = rθ. Example: r = 4 and θ = π/3 give l = 4π/3."
+   ],
+   [
+    "Change units",
+    "degrees × π/180 gives radians. Radians × 180/π gives degrees. Example: 60° × π/180 = π/3."
+   ]
+  ],
+  "remember": "π radians is 180°. Use π/180 to go to radians and 180/π to go to degrees.",
+  "a": {
+   "q": "Convert 150° to radians.",
+   "opts": [
+    "5π/6",
+    "6π/5",
+    "5π/3",
+    "3π/4"
+   ],
+   "why": "150 × π/180 = 150π/180 = 5π/6. The option 6π/5 turns the fraction upside down, which would come from using 180/150 instead of 150/180.",
+   "clue": "Multiply by π/180, then simplify the fraction."
+  },
+  "b": {
+   "d": 2,
+   "q": "A dial is turned through 5π/4 radians. What is this angle in degrees?",
+   "opts": [
+    "225°",
+    "240°",
+    "150°",
+    "200°"
+   ],
+   "why": "5π/4 × 180/π = 5 × 45 = 225°. The option 150° comes from using 5π/6, a different fraction, and 240° is 4π/3, so neither fits 5π/4.",
+   "clue": "Multiply by 180/π so that π cancels."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5π/6",
+   "also_right": []
+  },
+  "b": {
+   "best": "225°",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: 150° is 5π/6 and 5π/4 radians is 225°. The card's facts and examples are correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Radians",
+  "card": [
+   "On a unit circle (radius 1), the angle at the centre in radians equals the arc length it cuts off. So an arc of length 1 gives an angle of 1 radian.",
+   "The unit circle has circumference 2π, so a full turn is 2π radians. This means π radians = 180°.",
+   [
+    "Arc length",
+    "on a circle of radius r, arc length = radius × angle in radians, so l = rθ. Example: r = 4 and θ = π/3 give l = 4π/3."
+   ],
+   [
+    "Change units",
+    "degrees × π/180 gives radians. Radians × 180/π gives degrees. Example: 60° × π/180 = π/3."
+   ]
+  ],
+  "remember": "π radians is 180°. Use π/180 to go to radians and 180/π to go to degrees.",
+  "a": {
+   "q": "Convert 150° to radians.",
+   "opts": [
+    "5π/6",
+    "6π/5",
+    "5π/3",
+    "3π/4"
+   ],
+   "why": "150 × π/180 = 150π/180 = 5π/6. The option 6π/5 turns the fraction upside down, which would come from using 180/150 instead of 150/180.",
+   "clue": "Multiply by π/180, then simplify the fraction."
+  },
+  "b": {
+   "d": 2,
+   "q": "A dial is turned through 5π/4 radians. What is this angle in degrees?",
+   "opts": [
+    "225°",
+    "240°",
+    "150°",
+    "200°"
+   ],
+   "why": "5π/4 × 180/π = 5 × 45 = 225°. The option 150° comes from using 5π/6, a different fraction, and 240° is 4π/3, so neither fits 5π/4.",
+   "clue": "Multiply by 180/π so that π cancels."
+  }
+ },
+ "cleared_by": "checker"
 }

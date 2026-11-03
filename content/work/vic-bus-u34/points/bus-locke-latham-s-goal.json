@@ -8,7 +8,7 @@
    0.225
   ]
  ],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:25Z new, match",
   "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -20,20 +20,22 @@
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording)",
   "2026-11-02T04:50:13Z write: failed the content check, writing again",
   "2026-11-02T04:56:45Z write: done",
-  "2026-11-02T04:58:59Z check: flagged"
+  "2026-11-02T04:58:59Z check: flagged",
+  "2026-11-03T11:40:49Z fix: suggested",
+  "2026-11-03T11:56:00Z autoreview: cleared with the fix (a other, b other)"
  ],
  "sent": {
   "match": 1,
   "write": 4,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 9e-05,
   "write": 0.02504,
   "check": 0.03276,
-  "fix": 0.01821,
+  "fix": 0.03289,
   "recheck": 0.01584
  },
  "match": {
@@ -88,7 +90,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "auto",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -330,5 +332,114 @@
  "flags": [
   "Question a, other: The why calls the vague goal 'the last option', but options are shown in random order. Here 'Sell more plans each week than before' appears first, so the why would confuse students. Name the option instead of its position.",
   "Question b, other: The clue ('do the bakers believe they can reach it?') points straight at the 'seems reachable' option, so it gives the answer away rather than prompting thought."
- ]
+ ],
+ "proposal": {
+  "title": "Locke and Latham's goal-setting theory",
+  "card": [
+   "Locke and Latham said that goals motivate staff when they are set well. A goal gives a worker a target to aim at and a way to judge their own progress.",
+   [
+    "Clarity and challenge",
+    "A goal should be specific, so the worker knows what to do. It should also be hard enough to stretch the worker, but not so hard that it seems out of reach."
+   ],
+   [
+    "Commitment and feedback",
+    "Workers need to accept the goal and care about reaching it. Feedback on progress lets them see how they are going and adjust their effort."
+   ],
+   [
+    "Task complexity",
+    "For a complex task, the goal needs more time and support, so workers are not overwhelmed. A worker can then learn and plan as they go."
+   ]
+  ],
+  "remember": "Motivating goals are clear, challenging, accepted, tracked with feedback and matched to the task.",
+  "a": {
+   "q": "Which goal for a phone shop sales team is specific and also suitably challenging?",
+   "opts": [
+    "Sell 45 plans a week, up from the usual 35",
+    "Sell 35 plans a week, as the team usually does",
+    "Sell 120 plans a week, up from the usual 35",
+    "Sell more plans each week than before"
+   ],
+   "why": "A rise from 35 to 45 is specific and stretches staff without being out of reach. The goal of 35 is specific but gives no stretch, and the goal of 120 is specific but far too hard. The goal to sell more plans each week than before is not specific, so staff cannot tell what counts as success.",
+   "clue": "A goal can be specific and still be too easy or too hard."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya manages a bakery in Geelong. She sets each baker a target of 300 loaves a day, up from 120, and posts each baker's daily count on a board. Staff say the target is impossible. Which part of the theory is most clearly missing?",
+   "opts": [
+    "A goal that is challenging but seems reachable",
+    "A goal that is specific enough to be measured",
+    "Feedback given to staff on how they are tracking",
+    "A goal with extra time and support for complexity"
+   ],
+   "why": "The target is a specific number, and the daily board shows each baker how they are going, so clarity and feedback are in place. Feedback is the tempting answer, but the board already gives it. What is missing is a fair challenge: a goal should stretch workers without seeming out of reach, and staff see this one as impossible.",
+   "clue": "Rule out each part that Priya has already put in place."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-03T11:56:00Z",
+  "rules": 1,
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why calls the vague goal 'the last option', but options are shown in random order. Here 'Sell more plans each week than before' appears first, so the why would confuse students. Name the option instead of its position."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('do the bakers believe they can reach it?') points straight at the 'seems reachable' option, so it gives the answer away rather than prompting thought."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why calls the vague goal 'the last option', but options are shown in random order. Here 'Sell more plans each week than before' appears first, so the why would confuse students. Name the option instead of its position.",
+   "Question b, other: The clue ('do the bakers believe they can reach it?') points straight at the 'seems reachable' option, so it gives the answer away rather than prompting thought."
+  ]
+ },
+ "final": {
+  "title": "Locke and Latham's goal-setting theory",
+  "card": [
+   "Locke and Latham said that goals motivate staff when they are set well. A goal gives a worker a target to aim at and a way to judge their own progress.",
+   [
+    "Clarity and challenge",
+    "A goal should be specific, so the worker knows what to do. It should also be hard enough to stretch the worker, but not so hard that it seems out of reach."
+   ],
+   [
+    "Commitment and feedback",
+    "Workers need to accept the goal and care about reaching it. Feedback on progress lets them see how they are going and adjust their effort."
+   ],
+   [
+    "Task complexity",
+    "For a complex task, the goal needs more time and support, so workers are not overwhelmed. A worker can then learn and plan as they go."
+   ]
+  ],
+  "remember": "Motivating goals are clear, challenging, accepted, tracked with feedback and matched to the task.",
+  "a": {
+   "q": "Which goal for a phone shop sales team is specific and also suitably challenging?",
+   "opts": [
+    "Sell 45 plans a week, up from the usual 35",
+    "Sell 35 plans a week, as the team usually does",
+    "Sell 120 plans a week, up from the usual 35",
+    "Sell more plans each week than before"
+   ],
+   "why": "A rise from 35 to 45 is specific and stretches staff without being out of reach. The goal of 35 is specific but gives no stretch, and the goal of 120 is specific but far too hard. The goal to sell more plans each week than before is not specific, so staff cannot tell what counts as success.",
+   "clue": "A goal can be specific and still be too easy or too hard."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya manages a bakery in Geelong. She sets each baker a target of 300 loaves a day, up from 120, and posts each baker's daily count on a board. Staff say the target is impossible. Which part of the theory is most clearly missing?",
+   "opts": [
+    "A goal that is challenging but seems reachable",
+    "A goal that is specific enough to be measured",
+    "Feedback given to staff on how they are tracking",
+    "A goal with extra time and support for complexity"
+   ],
+   "why": "The target is a specific number, and the daily board shows each baker how they are going, so clarity and feedback are in place. Feedback is the tempting answer, but the board already gives it. What is missing is a fair challenge: a goal should stretch workers without seeming out of reach, and staff see this one as impossible.",
+   "clue": "Rule out each part that Priya has already put in place."
+  }
+ }
 }

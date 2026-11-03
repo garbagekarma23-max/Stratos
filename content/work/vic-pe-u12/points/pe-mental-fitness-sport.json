@@ -3,22 +3,29 @@
  "title": "Mental fitness in sport",
  "brief": "3cd02e0e199b",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:09Z write: failed the content check, writing again",
   "2026-11-01T08:24:34Z write: done",
   "2026-11-01T08:33:53Z check: for review (mental-health)",
-  "2026-11-02T06:24:27Z review: rejected, to be written again"
+  "2026-11-02T06:24:27Z review: rejected, to be written again",
+  "2026-11-03T10:25:23Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: flagged",
+  "2026-11-03T11:40:50Z fix: suggested",
+  "2026-11-03T12:06:44Z review: approved with the fix"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "fix": 1
  },
  "usd": {
   "write": 0.01112,
-  "check": 0.00797
+  "check": 0.00797,
+  "fix": 0.01428
  },
  "note": "",
  "rejected": {
@@ -54,5 +61,197 @@
    "clue": "Which option actively supports the athlete rather than ignoring or removing him?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:23Z",
+   "step": "write",
+   "version": {
+    "title": "Mental fitness in sport",
+    "card": [
+     "Mental fitness is the ability to cope with stress, manage emotions and keep a balanced outlook. Like physical fitness, it can be built up and kept.",
+     "Regular physical activity can support mental fitness. It can lift mood, ease stress and build a sense of belonging when done with others.",
+     "Elite sport adds pressures, such as selection, public criticism, injury and the end of a career. These can harm an athlete's mental health.",
+     "Elite sport pathways, such as academies and professional clubs, have a duty of care for athletes' mental health. This can include access to psychologists, wellbeing education and a culture where asking for help is safe."
+    ],
+    "remember": "Activity can build mental fitness. Elite pathways have a duty to care for athletes' mental health under pressure.",
+    "a": {
+     "q": "Sienna joins a weekend netball team and finds she feels calmer and more connected after games. What does this show?",
+     "opts": [
+      "Physical activity can support mental fitness",
+      "Elite sport pressures can harm mental health",
+      "Mental fitness means never feeling stress",
+      "Only elite athletes gain mental benefits"
+     ],
+     "why": "Regular activity can lift mood, ease stress and build belonging, which supports mental fitness. Sienna plays for fun on weekends, so elite sport pressures do not apply here.",
+     "clue": "Think about what regular activity can do for mood and belonging."
+    },
+    "b": {
+     "d": 3,
+     "q": "Ravi, 17, has joined a state talent academy and is anxious about an upcoming selection. Which action by the academy best meets its duty of care?",
+     "opts": [
+      "Link him with its psychologist and check in often",
+      "Tell him to push through it and keep it to himself",
+      "Drop him from the squad until he feels less anxious",
+      "Ask him to stop talking about it with his team"
+     ],
+     "why": "A duty of care means actively supporting the athlete's mental health, such as access to a psychologist and regular check-ins. Dropping him adds to the selection pressure rather than supporting him.",
+     "clue": "Which option supports Ravi rather than ignoring or removing him?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Physical activity can support mental fitness",
+     "also_right": []
+    },
+    "b": {
+     "best": "Link him with its psychologist and check in often",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "other",
+      "detail": "The clue \"Which option supports Ravi rather than ignoring or removing him?\" rules out the three wrong options by describing them, so a student can pick the answer without knowing what a duty of care involves."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "mental-health",
+    "summary": "The facts and both answers check out. The clue for question b describes the wrong options as ignoring or removing him, which gives the answer away."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Mental fitness in sport",
+  "card": [
+   "Mental fitness is the ability to cope with stress, manage emotions and keep a balanced outlook. Like physical fitness, it can be built up and kept.",
+   "Regular physical activity can support mental fitness. It can lift mood, ease stress and build a sense of belonging when done with others.",
+   "Elite sport adds pressures, such as selection, public criticism, injury and the end of a career. These can harm an athlete's mental health.",
+   "Elite sport pathways, such as academies and professional clubs, have a duty of care for athletes' mental health. This can include access to psychologists, wellbeing education and a culture where asking for help is safe."
+  ],
+  "remember": "Activity can build mental fitness. Elite pathways have a duty to care for athletes' mental health under pressure.",
+  "a": {
+   "q": "Sienna joins a weekend netball team and finds she feels calmer and more connected after games. What does this show?",
+   "opts": [
+    "Physical activity can support mental fitness",
+    "Elite sport pressures can harm mental health",
+    "Mental fitness means never feeling stress",
+    "Only elite athletes gain mental benefits"
+   ],
+   "why": "Regular activity can lift mood, ease stress and build belonging, which supports mental fitness. Sienna plays for fun on weekends, so elite sport pressures do not apply here.",
+   "clue": "Think about what regular activity can do for mood and belonging."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi, 17, has joined a state talent academy and is anxious about an upcoming selection. Which action by the academy best meets its duty of care?",
+   "opts": [
+    "Link him with its psychologist and check in often",
+    "Tell him to push through it and keep it to himself",
+    "Drop him from the squad until he feels less anxious",
+    "Ask him to stop talking about it with his team"
+   ],
+   "why": "A duty of care means actively supporting the athlete's mental health, such as access to a psychologist and regular check-ins. Dropping him adds to the selection pressure rather than supporting him.",
+   "clue": "Which option supports Ravi rather than ignoring or removing him?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Physical activity can support mental fitness",
+   "also_right": []
+  },
+  "b": {
+   "best": "Link him with its psychologist and check in often",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue \"Which option supports Ravi rather than ignoring or removing him?\" rules out the three wrong options by describing them, so a student can pick the answer without knowing what a duty of care involves."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "mental-health",
+  "summary": "The facts and both answers check out. The clue for question b describes the wrong options as ignoring or removing him, which gives the answer away."
+ },
+ "sensitive": "mental-health",
+ "flags": [
+  "Question b, other: The clue \"Which option supports Ravi rather than ignoring or removing him?\" rules out the three wrong options by describing them, so a student can pick the answer without knowing what a duty of care involves."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Mental fitness in sport",
+  "card": [
+   "Mental fitness is the ability to cope with stress, manage emotions and keep a balanced outlook. Like physical fitness, it can be built up and kept.",
+   "Regular physical activity can support mental fitness. It can lift mood, ease stress and build a sense of belonging when done with others.",
+   "Elite sport adds pressures, such as selection, public criticism, injury and the end of a career. These can harm an athlete's mental health.",
+   "Elite sport pathways, such as academies and professional clubs, have a duty of care for athletes' mental health. This can include access to psychologists, wellbeing education and a culture where asking for help is safe."
+  ],
+  "remember": "Activity can build mental fitness. Elite pathways have a duty to care for athletes' mental health under pressure.",
+  "a": {
+   "q": "Sienna joins a weekend netball team and finds she feels calmer and more connected after games. What does this show?",
+   "opts": [
+    "Physical activity can support mental fitness",
+    "Elite sport pressures can harm mental health",
+    "Mental fitness means never feeling stress",
+    "Only elite athletes gain mental benefits"
+   ],
+   "why": "Regular activity can lift mood, ease stress and build belonging, which supports mental fitness. Sienna plays for fun on weekends, so elite sport pressures do not apply here.",
+   "clue": "Think about what regular activity can do for mood and belonging."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi, 17, has joined a state talent academy and is anxious about an upcoming selection. Which action by the academy best meets its duty of care?",
+   "opts": [
+    "Link him with its psychologist and check in often",
+    "Tell him to push through it and keep it to himself",
+    "Drop him from the squad until he feels less anxious",
+    "Ask him to stop talking about it with his team"
+   ],
+   "why": "A duty of care means actively supporting the athlete's mental health, such as access to a psychologist and a culture where asking for help is safe. Dropping him adds to the selection pressure rather than supporting him.",
+   "clue": "Recall what a pathway can provide to protect athletes' mental health."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Mental fitness in sport",
+  "card": [
+   "Mental fitness is the ability to cope with stress, manage emotions and keep a balanced outlook. Like physical fitness, it can be built up and kept.",
+   "Regular physical activity can support mental fitness. It can lift mood, ease stress and build a sense of belonging when done with others.",
+   "Elite sport adds pressures, such as selection, public criticism, injury and the end of a career. These can harm an athlete's mental health.",
+   "Elite sport pathways, such as academies and professional clubs, have a duty of care for athletes' mental health. This can include access to psychologists, wellbeing education and a culture where asking for help is safe."
+  ],
+  "remember": "Activity can build mental fitness. Elite pathways have a duty to care for athletes' mental health under pressure.",
+  "a": {
+   "q": "Sienna joins a weekend netball team and finds she feels calmer and more connected after games. What does this show?",
+   "opts": [
+    "Physical activity can support mental fitness",
+    "Elite sport pressures can harm mental health",
+    "Mental fitness means never feeling stress",
+    "Only elite athletes gain mental benefits"
+   ],
+   "why": "Regular activity can lift mood, ease stress and build belonging, which supports mental fitness. Sienna plays for fun on weekends, so elite sport pressures do not apply here.",
+   "clue": "Think about what regular activity can do for mood and belonging."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi, 17, has joined a state talent academy and is anxious about an upcoming selection. Which action by the academy best meets its duty of care?",
+   "opts": [
+    "Link him with its psychologist and check in often",
+    "Tell him to push through it and keep it to himself",
+    "Drop him from the squad until he feels less anxious",
+    "Ask him to stop talking about it with his team"
+   ],
+   "why": "A duty of care means actively supporting the athlete's mental health, such as access to a psychologist and a culture where asking for help is safe. Dropping him adds to the selection pressure rather than supporting him.",
+   "clue": "Recall what a pathway can provide to protect athletes' mental health."
+  }
+ },
+ "cleared_by": "owner"
 }

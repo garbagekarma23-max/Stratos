@@ -51,7 +51,18 @@ MADE_COURSES.push({
             "eng-writing-about-play"
           ]
         },
-        {"id": "vic-eng-u34-1-4", "title": "Crafting your own writing", "check": "checked", "points": []}
+        {
+          "id": "vic-eng-u34-1-4",
+          "title": "Crafting your own writing",
+          "check": "checked",
+          "points": [
+            "eng-choosing-form-audience",
+            "eng-writing-with-clear-purpose",
+            "eng-language-modes-unit-3",
+            "eng-standard-non-standard-language",
+            "eng-reflection-statements"
+          ]
+        }
       ]
     },
     {
@@ -61,9 +72,27 @@ MADE_COURSES.push({
           "id": "vic-eng-u34-2-1",
           "title": "Reading and responding to a second text",
           "check": "checked",
-          "points": []
+          "points": [
+            "eng-comparing-ideas-across-text",
+            "eng-developing-argument-across-paragraphs",
+            "eng-embedding-evidence-2",
+            "eng-discussing-different-readings"
+          ]
         },
-        {"id": "vic-eng-u34-2-2", "title": "Analysing argument", "check": "checked", "points": []},
+        {
+          "id": "vic-eng-u34-2-2",
+          "title": "Analysing argument",
+          "check": "checked",
+          "points": [
+            "eng-identifying-contention-tone",
+            "eng-analysing-language-persuasive-effect",
+            "eng-arguments-are-structured",
+            "eng-analysing-visual-material",
+            "eng-argument-audio-video",
+            "eng-context-writer-s-identity",
+            "eng-writing-argument-analysis"
+          ]
+        },
         {
           "id": "vic-eng-u34-2-3",
           "title": "Presenting a point of view",

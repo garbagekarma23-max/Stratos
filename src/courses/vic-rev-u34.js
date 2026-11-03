@@ -18,26 +18,96 @@ MADE_COURSES.push({
     {
       "title": "The American Revolution",
       "chapters": [
-        {"id": "vic-rev-u34-1-1", "title": "Causes of the American Revolution", "check": "checked", "points": []},
+        {
+          "id": "vic-rev-u34-1-1",
+          "title": "Causes of the American Revolution",
+          "check": "checked",
+          "points": [
+            "mod-colonies-before-1763",
+            "mod-seven-years-war-debt",
+            "mod-british-policy-after-1763",
+            "mod-taxation-without-representation",
+            "mod-boston-tea-party-coercive",
+            "mod-enlightenment-ideas-america",
+            "mod-leaders-american-cause",
+            "mod-colonial-resistance",
+            "mod-declaration-independence"
+          ]
+        },
         {
           "id": "vic-rev-u34-1-2",
           "title": "Consequences of the American Revolution",
           "check": "checked",
-          "points": []
+          "points": [
+            "mod-winning-war",
+            "mod-articles-confederation",
+            "mod-shays-rebellion",
+            "mod-constitution-1787",
+            "mod-bill-rights",
+            "mod-leaders-new-nation",
+            "mod-who-revolution-left-out",
+            "mod-change-continuity-america"
+          ]
         }
       ]
     },
     {
       "title": "The French Revolution",
       "chapters": [
-        {"id": "vic-rev-u34-2-1", "title": "Causes of the French Revolution", "check": "checked", "points": []},
-        {"id": "vic-rev-u34-2-2", "title": "Consequences of the French Revolution", "check": "checked", "points": []}
+        {
+          "id": "vic-rev-u34-2-1",
+          "title": "Causes of the French Revolution",
+          "check": "checked",
+          "points": [
+            "mod-old-regime",
+            "mod-royal-debt-financial-crisis",
+            "mod-crisis-1787-1788",
+            "mod-enlightenment-ideas-france",
+            "mod-leaders-before-revolution",
+            "mod-estates-general-1789",
+            "mod-fall-bastille",
+            "mod-peasants-workers-great-fear"
+          ]
+        },
+        {
+          "id": "vic-rev-u34-2-2",
+          "title": "Consequences of the French Revolution",
+          "check": "checked",
+          "points": [
+            "mod-end-feudal-privilege",
+            "mod-declaration-rights-man",
+            "mod-october-days",
+            "mod-civil-constitution-clergy",
+            "mod-end-monarchy",
+            "mod-terror",
+            "mod-robespierre",
+            "mod-revolution-ordinary-people",
+            "mod-change-continuity-france"
+          ]
+        }
       ]
     },
     {
       "title": "The Russian Revolution",
       "chapters": [
-        {"id": "vic-rev-u34-3-1", "title": "Causes of the Russian Revolution", "check": "checked", "points": []},
+        {
+          "id": "vic-rev-u34-3-1",
+          "title": "Causes of the Russian Revolution",
+          "check": "checked",
+          "points": [
+            "mod-tsarist-autocracy",
+            "mod-social-economic-conditions",
+            "mod-1905-revolution",
+            "mod-reform-reaction",
+            "mod-revolutionary-ideas",
+            "mod-revolutionary-parties",
+            "mod-first-world-war-russia",
+            "mod-tsar-tsarina-rasputin",
+            "mod-february-revolution",
+            "mod-provisional-government-soviets",
+            "mod-october-revolution"
+          ]
+        },
         {
           "id": "vic-rev-u34-3-2",
           "title": "Consequences of the Russian Revolution",
@@ -74,7 +144,21 @@ MADE_COURSES.push({
             "mod-civil-war-1949"
           ]
         },
-        {"id": "vic-rev-u34-4-2", "title": "Consequences of the Chinese Revolution", "check": "checked", "points": []}
+        {
+          "id": "vic-rev-u34-4-2",
+          "title": "Consequences of the Chinese Revolution",
+          "check": "checked",
+          "points": [
+            "mod-land-reform",
+            "mod-thought-reform-mass-campaigns",
+            "mod-first-five-year-plan",
+            "mod-hundred-flowers-campaign",
+            "mod-great-leap-forward",
+            "mod-cultural-revolution",
+            "mod-leaders-people-s-republic",
+            "mod-change-continuity-china"
+          ]
+        }
       ]
     }
   ]

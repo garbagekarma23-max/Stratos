@@ -18,14 +18,36 @@ MADE_COURSES.push({
     {
       "title": "Unit 3: Australia's health in a globalised world",
       "chapters": [
-        {"id": "vic-hhd-u34-1-1", "title": "Concepts and measures of health", "check": "checked", "points": []},
+        {
+          "id": "vic-hhd-u34-1-1",
+          "title": "Concepts and measures of health",
+          "check": "checked",
+          "points": [
+            "hhd-health-wellbeing-illness",
+            "hhd-health-as-resource",
+            "hhd-health-status-indicators",
+            "hhd-incidence-prevalence",
+            "hhd-mortality-self-assessed-health"
+          ]
+        },
         {
           "id": "vic-hhd-u34-1-2-2",
           "title": "Burden of disease",
           "check": "checked",
           "points": ["hhd-burden-disease", "hhd-years-life-lost-years", "hhd-health-adjusted-life-expectancy"]
         },
-        {"id": "vic-hhd-u34-1-3", "title": "Australia's health", "check": "checked", "points": []},
+        {
+          "id": "vic-hhd-u34-1-3",
+          "title": "Australia's health",
+          "check": "checked",
+          "points": [
+            "hms-australia-s-health-status",
+            "hhd-variations-health-between-groups",
+            "hhd-smoking-vaping-alcohol",
+            "hhd-overweight-obesity",
+            "hhd-nutritional-imbalance"
+          ]
+        },
         {
           "id": "vic-hhd-u34-1-2",
           "title": "Improvements in Australia's health",
@@ -68,8 +90,24 @@ MADE_COURSES.push({
             "hhd-sustainability-health"
           ]
         },
-        {"id": "vic-hhd-u34-2-2-2", "title": "Factors in health and development", "check": "checked", "points": []},
-        {"id": "vic-hhd-u34-2-3-2", "title": "Global trends", "check": "checked", "points": []},
+        {
+          "id": "vic-hhd-u34-2-2-2",
+          "title": "Factors in health and development",
+          "check": "checked",
+          "points": ["hhd-safe-water-sanitation", "hhd-poverty-inequality", "hhd-discrimination-health"]
+        },
+        {
+          "id": "vic-hhd-u34-2-3-2",
+          "title": "Global trends",
+          "check": "checked",
+          "points": [
+            "hhd-climate-change-health",
+            "hhd-conflict-migration",
+            "hhd-tobacco-alcohol-processed-food",
+            "hhd-tourism-health",
+            "hhd-digital-technology-world-trade"
+          ]
+        },
         {
           "id": "vic-hhd-u34-2-2",
           "title": "The Sustainable Development Goals",

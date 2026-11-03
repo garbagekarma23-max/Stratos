@@ -13762,5 +13762,659 @@ MADE_BANKS.mat = {
       "why": "The true mean is below 700 g, so H₀ is false. Mia did not reject it, which is a type II error. A type I error needs a true H₀ to be rejected, and that did not happen here.",
       "clue": "First decide whether H₀ is true, then whether Mia rejected it."
     }
+  },
+  "mat-vertices-edges-degree": {
+    "title": "Vertices, edges and degree",
+    "card": [
+      ["Vertex", "a point on a graph, drawn as a dot. It can stand for a place, a person or a team."],
+      ["Edge", "a line joining two vertices. It can stand for a road, a friendship or a game between two teams."],
+      [
+        "Degree",
+        "the number of edges that meet a vertex. With edges AB, AC, AD and BC, vertex A has degree 3 and D has degree 1."
+      ],
+      "Each edge adds 1 to the degree at each of its two ends. So the degrees of all the vertices add up to twice the number of edges."
+    ],
+    "remember": "Degree counts the edges at one vertex. All the degrees together make twice the number of edges.",
+    "a": {
+      "q": "A graph has vertices P, Q, R, S and T, with edges PQ, QR, QS, RS and ST. What is the degree of vertex S?",
+      "opts": ["3", "2", "5", "4"],
+      "why": "The edges that meet S are QS, RS and ST, so its degree is 3. The answer 5 is the number of edges in the whole graph, not the edges at S.",
+      "clue": "List only the edges that include the letter S."
+    },
+    "b": {
+      "d": 3,
+      "q": "A network of 6 towns has roads joining them. The towns have degrees 4, 3, 3, 2, 2 and 2. How many roads are in the network?",
+      "opts": ["8", "16", "6", "32"],
+      "why": "The degrees add to 4 + 3 + 3 + 2 + 2 + 2 = 16. Each road adds 1 to the degree at both of its ends, so it is counted twice: 16 ÷ 2 = 8 roads. The answer 16 forgets to halve.",
+      "clue": "Each road is counted once at each end."
+    }
+  },
+  "mat-types-graphs-adjacency-matrix": {
+    "title": "Types of graphs and the adjacency matrix",
+    "card": [
+      [
+        "Connected",
+        "a graph where you can get from any vertex to any other by following edges. If one vertex is cut off, the graph is not connected."
+      ],
+      [
+        "Loops and multiple edges",
+        "a loop is an edge that starts and ends at the same vertex. Multiple edges are two or more edges joining the same pair of vertices."
+      ],
+      [
+        "Isomorphic",
+        "two graphs are isomorphic if they have the same structure: the same number of vertices and the same connections, even if they are drawn differently."
+      ],
+      [
+        "Adjacency matrix",
+        "a square table with one row and one column for each vertex. The entry is the number of edges joining the row vertex to the column vertex. A loop counts as 1 in this course. Example: if A and B are joined by 2 edges, both the A-B and B-A entries are 2."
+      ]
+    ],
+    "remember": "An adjacency matrix counts the edges between each pair of vertices, and it is the same either side of the diagonal.",
+    "a": {
+      "q": "A graph has vertices A, B and C. A and B are joined by one edge, and B and C are joined by two edges. What is the entry in row C, column B of its adjacency matrix?",
+      "opts": ["2", "1", "0", "3"],
+      "why": "Row C, column B counts the edges joining C and B, which is 2. The answer 1 comes from counting the A-B edge or from treating multiple edges as one connection.",
+      "clue": "Count every edge between C and B."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia draws a graph with 4 vertices. Vertex P has a loop and one edge to Q. Q has one edge to R. R has one edge to S. What is the sum of all the entries in its adjacency matrix?",
+      "opts": ["7", "6", "8", "4"],
+      "why": "Each of the 3 edges between different vertices appears twice in the matrix, giving 6. The loop is entered once, as 1, so the total is 7. Answering 6 forgets the loop, and 8 counts the loop twice.",
+      "clue": "Edges between two vertices appear on both sides of the diagonal."
+    }
+  },
+  "mat-planar-graphs-euler-s": {
+    "title": "Planar graphs and Euler's formula",
+    "card": [
+      "A graph is planar if it can be drawn on a flat page with no edges crossing. Edges may only meet at vertices.",
+      "A planar graph divides the page into regions called faces. The area outside the graph also counts as one face.",
+      "For a connected planar graph, v − e + f = 2. Here v is the number of vertices, e the number of edges and f the number of faces.",
+      "Example: a triangle has v = 3 and e = 3. Its faces are the inside and the outside, so f = 2. Check: 3 − 3 + 2 = 2."
+    ],
+    "remember": "For a connected planar graph, vertices − edges + faces = 2, and the outside counts as a face.",
+    "a": {
+      "q": "A connected planar graph has 6 vertices and 9 edges. How many faces does it have?",
+      "opts": ["5", "3", "1", "17"],
+      "why": "v − e + f = 2, so 6 − 9 + f = 2. This gives f − 3 = 2, so f = 5. Choosing 3 comes from working out 9 − 6 and leaving out the 2 on the right side.",
+      "clue": "Put v and e into v − e + f = 2, then solve for f."
+    },
+    "b": {
+      "d": 3,
+      "q": "A connected planar graph has 8 faces and 12 edges. How many vertices does it have?",
+      "opts": ["6", "18", "2", "8"],
+      "why": "v − e + f = 2, so v − 12 + 8 = 2. This gives v − 4 = 2, so v = 6. Choosing 18 comes from writing v = e + f − 2, which mixes up the signs of e and f: 12 + 8 − 2 = 18.",
+      "clue": "Write the formula with e = 12 and f = 8, then find v."
+    }
+  },
+  "mat-walks-trails-paths-circuits": {
+    "title": "Walks, trails, paths and circuits",
+    "card": [
+      ["Walk", "any route along edges from one vertex to another. It may repeat edges and vertices."],
+      ["Trail", "a walk that repeats no edge. It may pass through the same vertex more than once."],
+      ["Path", "a walk that repeats no vertex. This means it repeats no edge either."],
+      [
+        "Circuit and cycle",
+        "a circuit is a trail that starts and ends at the same vertex. A cycle is a circuit that repeats no vertex, except the start and end."
+      ]
+    ],
+    "remember": "Trail: no repeated edge. Path: no repeated vertex. Circuit and cycle: end where they began.",
+    "a": {
+      "q": "A route on a graph goes A-B-C-B-D. It uses edges AB, BC, CB and BD, with BC and CB being the same edge. What is the best name for it?",
+      "opts": [
+        "A walk only, as an edge is repeated",
+        "A trail, as no vertex is repeated",
+        "A path, as it ends at a new vertex",
+        "A circuit, as it passes through B twice"
+      ],
+      "why": "The edge between B and C is used twice, so the route is not a trail or a path. It is a walk only. A circuit needs to end where it began, and this route starts at A and ends at D.",
+      "clue": "Check whether any edge is used twice."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a graph, Priya travels P-Q-R-S-Q-T using each edge once only. Which description is correct?",
+      "opts": [
+        "A trail, but not a path",
+        "A path, but not a trail",
+        "A circuit, as it passes Q twice",
+        "A cycle, as no edge is repeated"
+      ],
+      "why": "No edge is repeated, so it is a trail. Vertex Q is visited twice, so it is not a path. It is not a circuit or cycle, as it starts at P and ends at T. Not repeating an edge does not make it a cycle.",
+      "clue": "Look for a repeated vertex, then check where the route starts and ends."
+    }
+  },
+  "mat-trees-minimum-spanning-trees": {
+    "title": "Trees and minimum spanning trees",
+    "card": [
+      ["Tree", "a connected graph with no cycles. A tree with v vertices always has v − 1 edges."],
+      [
+        "Spanning tree",
+        "a tree that reaches every vertex of a connected graph, using only edges from that graph. A weighted graph can have many spanning trees."
+      ],
+      [
+        "Minimum spanning tree",
+        "the spanning tree with the smallest total weight. Use Prim's algorithm: start at any vertex, then keep adding the lightest edge that joins a new vertex to the tree."
+      ],
+      "Example: edges AB = 2, BC = 3, AC = 4 and CD = 5. Take AB (2), then BC (3), then CD (5). AC is skipped because it would make a cycle. Total weight = 2 + 3 + 5 = 10."
+    ],
+    "remember": "A minimum spanning tree reaches every vertex with v − 1 edges and the least total weight.",
+    "a": {
+      "q": "A connected graph has 7 vertices. How many edges does a spanning tree of this graph have?",
+      "opts": ["6", "7", "8", "5"],
+      "why": "A tree with v vertices has v − 1 edges, so 7 − 1 = 6. Choosing 7 would mean one edge too many, and that edge would make a cycle.",
+      "clue": "Take one away from the number of vertices."
+    },
+    "b": {
+      "d": 3,
+      "q": "Roads join four towns: P to Q is 6 km, Q to R is 3 km, P to R is 5 km, R to S is 4 km and Q to S is 7 km. Cables must link all four towns using the least total length. What is that length?",
+      "opts": ["12 km", "13 km", "14 km", "15 km"],
+      "why": "Start at Q and take QR (3), then RS (4), then PR (5). Total = 3 + 4 + 5 = 12 km. Adding PQ (6) or QS (7) would make a cycle. Picking 13 km comes from taking PQ (6) instead of PR (5), which is heavier.",
+      "clue": "A tree on 4 towns uses 3 roads. Add the lightest edge that reaches a new town each time."
+    }
+  },
+  "mat-features-time-series": {
+    "title": "Features of a time series",
+    "card": [
+      "A time series is data recorded over time, plotted with time on the horizontal axis. We look at the plot for patterns.",
+      [
+        "Trend",
+        "a long-term rise or fall in the values. Seasonality is a pattern that repeats at a fixed, known period, such as every year or every week."
+      ],
+      [
+        "Cycles",
+        "rises and falls that repeat, but not at a fixed period, so their timing cannot be predicted exactly. Irregular fluctuations are random ups and downs with no pattern."
+      ],
+      [
+        "Other features",
+        "Structural change is a sudden, lasting shift, such as a new road changing visitor numbers for good. An outlier is a single value far from the rest."
+      ]
+    ],
+    "remember": "Trend is long-term, seasonality repeats on a fixed period, and a cycle repeats without one.",
+    "a": {
+      "q": "Ice cream sales at a kiosk in Geelong peak every summer and drop every winter, year after year. Which feature is this?",
+      "opts": ["Seasonality", "A cycle", "Structural change", "An outlier"],
+      "why": "The peaks come at the same time each year, which is a fixed period, so this is seasonality. It is not a cycle, because a cycle has no fixed period.",
+      "clue": "Look at whether the pattern repeats on a fixed schedule."
+    },
+    "b": {
+      "d": 3,
+      "q": "Monthly visitors to a Bendigo museum were steady for years. After a new wing opened, they jumped by about 30% and stayed there. Which feature is this?",
+      "opts": ["Structural change", "An outlier", "Seasonality", "Irregular fluctuation"],
+      "why": "The values shifted suddenly and stayed at the new level, which is structural change. An outlier is a single value far from the rest, so it is the tempting wrong answer, but here the shift lasted.",
+      "clue": "Does the change last, or is it only one point?"
+    }
+  },
+  "mat-smoothing-with-moving-means": {
+    "title": "Smoothing with moving means",
+    "card": [
+      "Smoothing replaces each value in a time series with the mean of it and the values next to it. This evens out short-term ups and downs so the overall pattern is easier to see.",
+      "For a 3-point moving mean, average a value with the one before and the one after. Example: for 10, 14, 12, the smoothed middle value is (10 + 14 + 12) ÷ 3 = 12.",
+      "An odd-point mean lines up with a real data point. Values without a full set of neighbours get no smoothed value: the first and last for a 3-point mean, the first two and last two for a 5-point mean.",
+      "An even-point mean, such as 4-point, falls halfway between two time points. Centre it by averaging two neighbouring 4-point means. The result lines up with a real time point."
+    ],
+    "remember": "Average each value with its neighbours. Even-point means need a second averaging to centre them.",
+    "a": {
+      "q": "A 3-point moving mean is used on the values 8, 11, 17, 14. What is the smoothed value for the second point?",
+      "opts": ["12", "11", "14", "9.5"],
+      "why": "The second point is averaged with its neighbours: (8 + 11 + 17) ÷ 3 = 36 ÷ 3 = 12. Answering 14 smooths the third point instead: (11 + 17 + 14) ÷ 3 = 14.",
+      "clue": "Add the second value and the two beside it, then divide by 3."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sales at a kiosk in Ballarat are 20, 26, 22, 28, 30 in five time periods. A 4-point moving mean gives 24 (between periods 2 and 3) and 26.5 (between periods 3 and 4). What is the centred 4-point mean for period 3?",
+      "opts": ["25.25", "24", "26.5", "50.5"],
+      "why": "Centre it by averaging the two 4-point means: (24 + 26.5) ÷ 2 = 25.25. Giving 50.5 adds the two means but forgets to divide by 2.",
+      "clue": "Average the two means that sit either side of period 3."
+    }
+  },
+  "mat-median-smoothing": {
+    "title": "Median smoothing",
+    "card": [
+      "Median smoothing replaces each value with the median of it and its neighbours. The median is the number in the middle once they are put in order of size.",
+      "For 3-median smoothing, take a value and the one before and after it. Put the three in order of size and pick the one in the middle.",
+      "Example: values 4, 20, 6. In order of size they are 4, 6, 20. The median is 6, so the middle point's value, 20, is replaced by 6.",
+      "A single extreme value ends up at one end of the ordered list, so it does not become the median. This is why median smoothing resists outliers. It can also be done on the graph by eye."
+    ],
+    "remember": "Sort each group by size and keep the one in the middle, so a single outlier has little effect.",
+    "a": {
+      "q": "Three consecutive values in a time series are 12, 9 and 21. What is the 3-median smoothed value for the middle point?",
+      "opts": ["12", "9", "14", "21"],
+      "why": "In order of size the values are 9, 12, 21, so the median is 12. The middle point's own value, 9, is not the median, because the median is found after putting the three in order. The mean of the three is 14, but median smoothing does not use the mean.",
+      "clue": "Put the three values in order of size first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Daily sales at a Ballarat bakery are 30, 32, 95, 31, 33. What is the 3-median smoothed value for the day with 95?",
+      "opts": ["32", "31", "53", "95"],
+      "why": "The three values are 32, 95 and 31. In order of size: 31, 32, 95, so the median is 32. A 3-mean would give about 53, because the outlier pulls it up.",
+      "clue": "Use the 95 and the two values beside it."
+    }
+  },
+  "mat-seasonal-indices": {
+    "title": "Seasonal indices",
+    "card": [
+      "A seasonal index shows how one season (such as a quarter, month or day) compares with the average season. An index of 1 means that season is average.",
+      "An index above 1 means the season is above average. An index of 1.2 means 20% above average. An index below 1 means below average, so 0.9 means 10% below average.",
+      "Over a full cycle, the seasonal indices add up to the number of seasons. With 4 quarters, the indices add to 4. With 12 months, they add to 12.",
+      "Example: if the indices for three quarters are 1.3, 0.8 and 1.1, the fourth must be 4 − (1.3 + 0.8 + 1.1) = 0.8."
+    ],
+    "remember": "Index 1 is average. Above 1 is above average. The indices add to the number of seasons.",
+    "a": {
+      "q": "A café in Geelong has a seasonal index of 0.85 for Mondays. What does this tell us about Monday sales?",
+      "opts": [
+        "15% below the average day",
+        "85% above the average day",
+        "15% above the average day",
+        "85% below the average day"
+      ],
+      "why": "An index of 0.85 is 1 − 0.85 = 0.15 below 1, so sales are 15% below average. Saying 85% below confuses the index with the size of the gap.",
+      "clue": "Compare 0.85 with 1, which is average."
+    },
+    "b": {
+      "d": 3,
+      "q": "A pool in Mildura has seasonal indices of 1.45 for summer, 0.85 for autumn and 1.05 for spring. What is the seasonal index for winter?",
+      "opts": ["0.65", "0.35", "1.35", "1.00"],
+      "why": "Four seasons means the indices add to 4. The three given add to 3.35, so winter is 4 − 3.35 = 0.65. The answer 0.35 is how far winter sits below average, not the index itself.",
+      "clue": "How many seasons are there, and what must the indices add to?"
+    }
+  },
+  "mat-deseasonalising-data": {
+    "title": "Deseasonalising data",
+    "card": [
+      "Seasonal effects can hide the trend. Deseasonalising removes them so we can see whether values are really rising or falling.",
+      "To deseasonalise, divide each value by the seasonal index for its season. Deseasonalised value = actual value ÷ seasonal index.",
+      "Example: sales are 120 in a season with index 1.2. The deseasonalised value is 120 ÷ 1.2 = 100. This is what sales would be in an average season.",
+      "A season with an index below 1 gets adjusted upwards. Sales of 72 with index 0.8 give 72 ÷ 0.8 = 90."
+    ],
+    "remember": "Divide by the seasonal index to take the season out and reveal the trend.",
+    "a": {
+      "q": "Ice cream sales in Cairns are 150 boxes in a quarter with a seasonal index of 1.25. What is the deseasonalised value?",
+      "opts": ["120", "187.5", "148.75", "151.25"],
+      "why": "Deseasonalised value = 150 ÷ 1.25 = 120. Multiplying gives 187.5, which adds the seasonal effect instead of removing it.",
+      "clue": "Removing a season's effect means dividing, not multiplying."
+    },
+    "b": {
+      "d": 2,
+      "q": "A bookshop in Bendigo sells 210 books in a month with seasonal index 0.70. After deseasonalising, what does this value show?",
+      "opts": [
+        "300, above the 210 actually sold",
+        "300, below the 210 actually sold",
+        "147, below the 210 actually sold",
+        "147, above the 210 actually sold"
+      ],
+      "why": "210 ÷ 0.70 = 300. The month is below average, so removing the season raises the value above 210. The 147 comes from multiplying by 0.70 instead.",
+      "clue": "An index below 1 means the month was weaker than average."
+    }
+  },
+  "mat-forecasting-from-trend": {
+    "title": "Forecasting from a trend",
+    "card": [
+      "Seasonal data has a repeating pattern that can hide the trend. To forecast, start with the deseasonalised data, where the seasonal effect has been taken out.",
+      "Fit a least squares line to the deseasonalised data, with time as the explanatory variable. Substitute the future time period to predict a deseasonalised value.",
+      "Then reseasonalise by multiplying the prediction by the seasonal index for that season. This puts the seasonal pattern back.",
+      "Example: the line gives 200 for a quarter with index 1.2. The forecast is 200 × 1.2 = 240."
+    ],
+    "remember": "Predict from the line, then multiply by the seasonal index.",
+    "a": {
+      "q": "A least squares line fitted to deseasonalised data predicts 150 for a season with seasonal index 0.8. What is the forecast?",
+      "opts": ["120", "187.5", "150", "149.2"],
+      "why": "Reseasonalising means multiplying: 150 × 0.8 = 120. Dividing gives 187.5, which does the reverse of putting the season back. Leaving 150 skips the reseasonalising step.",
+      "clue": "Putting the season back means multiplying."
+    },
+    "b": {
+      "d": 3,
+      "q": "A café in Mildura has the deseasonalised line sales = 400 + 12t. For t = 10, the seasonal index is 1.25. What is the forecast?",
+      "opts": ["650", "416", "520", "550"],
+      "why": "The line gives 400 + 12 × 10 = 520. Multiply the whole prediction by the index: 520 × 1.25 = 650. Stopping at 520 skips reseasonalising, and 550 comes from multiplying only the 12t part by the index.",
+      "clue": "Find the line's full value first, then adjust for the season."
+    }
+  },
+  "mat-hungarian-algorithm": {
+    "title": "The Hungarian algorithm",
+    "card": [
+      "A bipartite graph has two groups, such as workers and tasks, with edges only between the groups. A cost table shows the same thing. Each worker gets exactly one task, and the aim is the least total cost.",
+      "Subtract the smallest number in each row from every number in that row. Then subtract the smallest number in each column from every number in that column. This makes zeros.",
+      "Cover all the zeros with as few lines as possible. If the number of lines equals the number of rows, assign using the zeros. If there are fewer lines, subtract the smallest uncovered number from every uncovered number, add it to numbers covered twice, and cover again.",
+      "Example: workers A, B, C cost 9, 7, 8 / 6, 5, 9 / 8, 4, 6 for tasks 1, 2, 3. Both steps give 1, 0, 0 / 0, 0, 3 / 3, 0, 1, which needs 3 lines. C has one zero, so C does task 2, B does 1 and A does 3. Add the original costs: 8 + 6 + 4 = 18."
+    ],
+    "remember": "Reduce rows then columns, cover the zeros, and assign only when the lines equal the rows.",
+    "a": {
+      "q": "The first row of a cost table is 12, 9, 15. What does this row become after the row step?",
+      "opts": ["3, 0, 6", "-3, -6, 0", "0, -3, 3", "12, 0, 15"],
+      "why": "The smallest number in the row is 9, so subtract 9 from every number: 3, 0, 6. Changing only the smallest number to zero is tempting, but every number in the row must change.",
+      "clue": "Find the smallest number in the row, then subtract it from all three."
+    },
+    "b": {
+      "d": 3,
+      "q": "After reducing rows and columns, a 3×3 table has all its zeros covered by 2 lines. What happens next?",
+      "opts": [
+        "Adjust the table using the smallest uncovered number",
+        "Assign using the zeros, as the table is now optimal",
+        "Add a dummy row of zeros and cover again",
+        "Reduce the rows again and then stop"
+      ],
+      "why": "A 3×3 table needs 3 lines before an assignment can be made. With only 2 lines, subtract the smallest uncovered number from the uncovered numbers, add it to those covered twice, then cover again. Assigning now is tempting because zeros exist, but there are not enough of them in the right places.",
+      "clue": "Compare the number of lines with the number of rows."
+    }
+  },
+  "mat-activity-networks-2": {
+    "title": "Activity networks",
+    "card": [
+      "In an activity network, each activity is an arrow labelled with its letter and time, and each node is an event. A precedence table lists the activities that must finish right before each one can start.",
+      "A dummy activity is a dotted arrow with zero time. It shows that one activity must wait for another, without adding any time.",
+      [
+        "Some, not all",
+        "use a dummy when an activity needs only some of another's predecessors. If C needs A, and D needs A and B, a dummy runs from the end of A to the start of D."
+      ],
+      [
+        "Same two nodes",
+        "two activities must not both start and end at the same pair of nodes, or they cannot be told apart. End one at a new node, then add a dummy from there."
+      ]
+    ],
+    "remember": "A dummy adds a link without adding time: use it for a partial overlap of predecessors, or to keep two activities off the same pair of nodes.",
+    "a": {
+      "q": "In a precedence table, Q and R both need only P, and S needs both Q and R. Why is a dummy activity needed?",
+      "opts": [
+        "Q and R would share the same start and end nodes",
+        "S could start before both Q and R are finished",
+        "R would have to wait until Q is finished",
+        "The project would take longer to complete"
+      ],
+      "why": "Q and R both start at the end of P and both end at the start of S, so without a dummy they would run between the same pair of nodes. S already waits for both, because both arrows end at its start node, so S starting early is not the problem.",
+      "clue": "Find the node where Q starts and ends, then do the same for R."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya renovates a kitchen. A has no predecessors. B and C each need A. D needs B. E needs B and C. F needs D and E. How many dummy activities are needed?",
+      "opts": ["One", "None", "Two", "Three"],
+      "why": "D needs only B, but E needs B and C, so a dummy runs from the end of B to the node where C ends and E starts. D and E both end where F starts, but they start at different nodes, so no second dummy is needed.",
+      "clue": "Check both reasons for a dummy, one at a time."
+    }
+  },
+  "mat-earliest-latest-start-times": {
+    "title": "Earliest and latest start times",
+    "card": [
+      "The earliest start time (EST) is the soonest an activity can begin. Scan forward from the start, where the first activities have EST 0.",
+      "EST of an activity = the largest of (EST + duration) over all its predecessors. It must wait for the one that finishes last.",
+      "The latest start time (LST) is the last time an activity can begin without delaying the project. Scan backward from the finish, which is the project time.",
+      "LST = the smallest LST of its successors − its own duration. Example: A (3 days) then B (4) and C (2), then D (5). D has EST 7, so the project takes 12 days and D has LST 12 − 5 = 7."
+    ],
+    "remember": "Forward scan: take the largest. Backward scan: take the smallest, then subtract.",
+    "a": {
+      "q": "P (4 days) and Q (6 days) have no predecessors. R (3 days) needs P. S (5 days) needs P and Q. What is the EST of S?",
+      "opts": ["6", "4", "10", "11"],
+      "why": "S cannot start until both P and Q are done. P finishes at 0 + 4 = 4 and Q finishes at 0 + 6 = 6, so the largest is 6. Taking 4 ignores that Q is still running.",
+      "clue": "S waits for whichever predecessor finishes last."
+    },
+    "b": {
+      "d": 3,
+      "q": "A (2 days) has no predecessors. B (5 days) and C (3 days) both need A. D (4 days) needs B and C. The project takes 11 days. What is the LST of C?",
+      "opts": ["4", "2", "5", "8"],
+      "why": "D must start by 11 − 4 = 7. C takes 3 days, so its LST is 7 − 3 = 4. The value 8 comes from forgetting that D takes time, and 2 is C's earliest start.",
+      "clue": "Work back from the finish, finding D's LST first."
+    }
+  },
+  "mat-crashing-project": {
+    "title": "Crashing a project",
+    "card": [
+      "Crashing means shortening an activity by spending extra money. Each activity has a crash cost for every time unit saved.",
+      "The project time falls only if you crash an activity on the critical path, the longest path through the network.",
+      "To cut the time at least cost, crash the cheapest critical activity first. Once a path is shortened to match another path, both paths are critical.",
+      "Example: path 1 takes 9 days and path 2 takes 8. Crashing a path 1 activity by 1 day gives 8 days. Now both paths are critical, so any further cut needs both paths shortened."
+    ],
+    "remember": "Crash only critical activities, cheapest first, and check if the critical path changes.",
+    "a": {
+      "q": "The critical path is A, C, E (14 days). Path B, D takes 10 days. Crash costs per day: A $300, C $500, D $100, E $400. Which activity should be crashed to cut 1 day at least cost?",
+      "opts": [
+        "Activity A, at $300 a day",
+        "Activity D, at $100 a day",
+        "Activity C, at $500 a day",
+        "Activity E, at $400 a day"
+      ],
+      "why": "Only activities on the critical path can shorten the project. Of A, C and E, activity A is cheapest. D costs less but is not critical, so crashing it does not shorten the project.",
+      "clue": "Cross out any activity that is not on the critical path."
+    },
+    "b": {
+      "d": 3,
+      "q": "Path X takes 12 days and path Y takes 11 days. An activity only on X can be crashed by up to 3 days, at $200 a day. If all 3 days are crashed, how many days does the project time fall by?",
+      "opts": ["1 day", "3 days", "2 days", "0 days"],
+      "why": "After 1 day, X takes 11 days and matches Y. Y is now critical and still takes 11 days, so the project time stays at 11. The other 2 days of crashing cost money but save no time.",
+      "clue": "Which path sets the time once X becomes shorter than Y?"
+    }
+  },
+  "mat-radians-2": {
+    "title": "Radians",
+    "card": [
+      "On a unit circle (radius 1), the angle at the centre in radians equals the arc length it cuts off. So an arc of length 1 gives an angle of 1 radian.",
+      "The unit circle has circumference 2π, so a full turn is 2π radians. This means π radians = 180°.",
+      [
+        "Arc length",
+        "on a circle of radius r, arc length = radius × angle in radians, so l = rθ. Example: r = 4 and θ = π/3 give l = 4π/3."
+      ],
+      ["Change units", "degrees × π/180 gives radians. Radians × 180/π gives degrees. Example: 60° × π/180 = π/3."]
+    ],
+    "remember": "π radians is 180°. Use π/180 to go to radians and 180/π to go to degrees.",
+    "a": {
+      "q": "Convert 150° to radians.",
+      "opts": ["5π/6", "6π/5", "5π/3", "3π/4"],
+      "why": "150 × π/180 = 150π/180 = 5π/6. The option 6π/5 turns the fraction upside down, which would come from using 180/150 instead of 150/180.",
+      "clue": "Multiply by π/180, then simplify the fraction."
+    },
+    "b": {
+      "d": 2,
+      "q": "A dial is turned through 5π/4 radians. What is this angle in degrees?",
+      "opts": ["225°", "240°", "150°", "200°"],
+      "why": "5π/4 × 180/π = 5 × 45 = 225°. The option 150° comes from using 5π/6, a different fraction, and 240° is 4π/3, so neither fits 5π/4.",
+      "clue": "Multiply by 180/π so that π cancels."
+    }
+  },
+  "mat-exact-values-2": {
+    "title": "Exact values",
+    "card": [
+      [
+        "π/4 triangle",
+        "Half a square with side 1 has angles π/4, π/4 and π/2. By Pythagoras the hypotenuse is √2. So sin(π/4) = 1/√2, cos(π/4) = 1/√2 and tan(π/4) = 1."
+      ],
+      [
+        "π/6 and π/3 triangle",
+        "Half an equilateral triangle with side 2 has angles π/6, π/3 and π/2. Its short side is 1 and its other side is √3, by Pythagoras."
+      ],
+      [
+        "Reading it off",
+        "Opposite π/6 is 1, so sin(π/6) = 1/2, cos(π/6) = √3/2 and tan(π/6) = 1/√3. Opposite π/3 is √3, so sin(π/3) = √3/2, cos(π/3) = 1/2 and tan(π/3) = √3."
+      ],
+      "Leave answers as surds, not decimals. Example: sin(π/3) × cos(π/6) = (√3/2) × (√3/2) = 3/4."
+    ],
+    "remember": "Draw the special triangle, then read the ratio from its sides.",
+    "a": {
+      "q": "Find the exact value of cos(π/3).",
+      "opts": ["1/2", "√3/2", "1/√2", "√3"],
+      "why": "In the π/6, π/3, π/2 triangle, the side next to π/3 is 1 and the hypotenuse is 2, so cos(π/3) = 1/2. The value √3/2 is tempting, but that is sin(π/3) and cos(π/6).",
+      "clue": "Which side is next to the angle π/3?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Evaluate sin(π/6) + tan(π/4) exactly.",
+      "opts": ["3/2", "1/2", "√3/2 + 1", "1 + 1/√2"],
+      "why": "sin(π/6) = 1/2 and tan(π/4) = 1, so the sum is 1/2 + 1 = 3/2. The option 1/2 is tempting, but it leaves out the tan(π/4) term.",
+      "clue": "Find each value from its triangle, then add."
+    }
+  },
+  "mat-symmetry-periodicity": {
+    "title": "Symmetry and periodicity",
+    "card": [
+      "Sine and cosine repeat every 2π, so sin(θ + 2π) = sin θ and cos(θ + 2π) = cos θ. Tangent repeats every π, so tan(θ + π) = tan θ.",
+      "Reflecting an angle in the y-axis gives π − θ: sin(π − θ) = sin θ and cos(π − θ) = −cos θ.",
+      "Going half a turn round gives π + θ: sin(π + θ) = −sin θ and cos(π + θ) = −cos θ. Reflecting in the x-axis gives −θ or 2π − θ: sin(−θ) = −sin θ and cos(−θ) = cos θ.",
+      "Worked example: sin(5π/6) = sin(π − π/6) = sin(π/6) = 1/2. The angle 5π/6 is in quadrant 2, where sine is positive."
+    ],
+    "remember": "Find the matching angle in quadrant 1, then fix the sign using the quadrant.",
+    "a": {
+      "q": "Which expression is equal to cos(π − θ)?",
+      "opts": ["−cos θ", "cos θ", "−sin θ", "sin θ"],
+      "why": "Reflecting in the y-axis keeps the height but flips the x-coordinate, so cosine changes sign: cos(π − θ) = −cos θ. The option cos θ is tempting, but that is the rule for sine, which keeps its sign.",
+      "clue": "Reflecting in the y-axis changes the x-coordinate."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is the value of cos(4π/3)?",
+      "opts": ["−1/2", "1/2", "−√3/2", "√3/2"],
+      "why": "4π/3 = π + π/3, which is in quadrant 3, where cosine is negative. So cos(4π/3) = −cos(π/3) = −1/2. The option −√3/2 is tempting, but it is the value of sin(4π/3) and cos(7π/6), not of cos(4π/3).",
+      "clue": "Write 4π/3 as π + π/3, then check the quadrant."
+    }
+  },
+  "mat-antiderivatives-unit-3": {
+    "title": "Antiderivatives",
+    "card": [
+      "An antiderivative of f(x) is a function whose derivative is f(x). A constant disappears when we differentiate, so the general antiderivative, written ∫f(x) dx, includes + c, where c is any constant.",
+      [
+        "Powers",
+        "∫xⁿ dx = xⁿ⁺¹/(n + 1) + c, for n ≠ −1. Add 1 to the power, then divide by the new power. For 1/x, ∫1/x dx = loge|x| + c."
+      ],
+      ["Exponential", "∫e^(kx) dx = (1/k)e^(kx) + c, for k ≠ 0. Divide by the number k in front of x."],
+      [
+        "Trig",
+        "∫sin(kx) dx = −(1/k)cos(kx) + c and ∫cos(kx) dx = (1/k)sin(kx) + c. Example: ∫cos(2x) dx = (1/2)sin(2x) + c."
+      ]
+    ],
+    "remember": "Raise the power and divide by the new power, or divide by k. The general antiderivative adds + c.",
+    "a": {
+      "q": "What is ∫6x² dx?",
+      "opts": ["2x³ + c", "3x³ + c", "12x + c", "6x³ + c"],
+      "why": "Add 1 to the power to get x³, then divide by the new power 3: 6x³/3 = 2x³. The option 12x comes from differentiating instead: multiplying by the power and lowering it by 1. The option 3x³ divides by the old power 2, and 6x³ forgets to divide at all.",
+      "clue": "Raise the power by 1, then divide by the new power."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is ∫(e^(3x) + sin(2x)) dx?",
+      "opts": [
+        "(1/3)e^(3x) − (1/2)cos(2x) + c",
+        "(1/3)e^(3x) + (1/2)cos(2x) + c",
+        "3e^(3x) − 2cos(2x) + c",
+        "(1/3)e^(3x) − 2cos(2x) + c"
+      ],
+      "why": "Integrate each term. e^(3x) gives (1/3)e^(3x), and sin(2x) gives −(1/2)cos(2x). The sign is negative because the derivative of cos is −sin, and multiplying by k instead of dividing is a common slip.",
+      "clue": "Divide by k in each term, and check the sign for sin."
+    }
+  },
+  "mat-definite-integrals": {
+    "title": "Definite integrals",
+    "card": [
+      "Split the area under y = f(x) from x = a to x = b into thin strips of height f(x) and width Δx. The definite integral is the limit of the sum of their areas as the strips get thinner.",
+      "It is written ∫ from a to b of f(x) dx and gives a number, not a function. Area above the x-axis counts as positive, and area below the axis counts as negative.",
+      "Splitting: for c between a and b, ∫ from a to b of f(x) dx = ∫ from a to c of f(x) dx + ∫ from c to b of f(x) dx. Example: if ∫ from 0 to 2 of f(x) dx = 5 and ∫ from 2 to 6 of f(x) dx = 3, then ∫ from 0 to 6 of f(x) dx = 8.",
+      "Swapping the limits reverses the sign: ∫ from b to a of f(x) dx = −∫ from a to b of f(x) dx. Example: if ∫ from 0 to 6 of f(x) dx = 8, then ∫ from 6 to 0 of f(x) dx = −8."
+    ],
+    "remember": "Join pieces across an interval by adding them with their signs. Swap the limits and the sign flips.",
+    "a": {
+      "q": "Given ∫ from 1 to 4 of f(x) dx = 7 and ∫ from 4 to 9 of f(x) dx = −2, what is ∫ from 1 to 9 of f(x) dx?",
+      "opts": ["5", "9", "−5", "14"],
+      "why": "Splitting at x = 4 gives 7 + (−2) = 5. The answer 9 comes from ignoring the negative sign, which treats the negative integral as positive.",
+      "clue": "Add the two pieces, keeping their signs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Given ∫ from 2 to 8 of f(x) dx = 10 and ∫ from 2 to 5 of f(x) dx = 6, what is ∫ from 8 to 5 of f(x) dx?",
+      "opts": ["−4", "4", "16", "−16"],
+      "why": "Splitting at 5 gives 10 = 6 + ∫ from 5 to 8, so ∫ from 5 to 8 of f(x) dx = 4. The required integral runs from 8 to 5, so the limits are swapped and the sign reverses to −4. The answer 4 forgets this swap.",
+      "clue": "Find the piece from 5 to 8 first, then check the direction of the limits."
+    }
+  },
+  "mat-fundamental-theorem-calculus": {
+    "title": "The fundamental theorem of calculus",
+    "card": [
+      "Differentiating and integrating undo each other. If F′(x) = f(x), then F is an antiderivative of f.",
+      "To find a definite integral, find an antiderivative F, then work out F(b) − F(a). The constant of integration cancels, so leave it out.",
+      "Worked example: ∫ from 1 to 3 of 2x dx. An antiderivative of 2x is x². So the integral = 3² − 1² = 9 − 1 = 8.",
+      "The same rule works the other way. The derivative of ∫ from a to x of f(t) dt is f(x). Where f is positive, the integral is the area under the curve."
+    ],
+    "remember": "Integral from a to b of f = F(b) − F(a), where F′ = f.",
+    "a": {
+      "q": "What is the value of ∫ from 0 to 2 of 3x² dx?",
+      "opts": ["8", "6", "12", "4"],
+      "why": "An antiderivative of 3x² is x³. The integral is 2³ − 0³ = 8. Using the value 3x² = 12 at x = 2 is the tempting mistake, because that is the function's value, not F(2) − F(0).",
+      "clue": "Find F first, then use its values at both limits."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia finds that an antiderivative of 2x + 1 is F(x) = x² + x. What is ∫ from 1 to 4 of (2x + 1) dx?",
+      "opts": ["18", "22", "20", "−18"],
+      "why": "F(4) = 16 + 4 = 20 and F(1) = 1 + 1 = 2, so the integral is 20 − 2 = 18. Adding the two values gives 22, and using F(4) alone gives 20. Working out F(1) − F(4) gives −18, but the rule is F(b) − F(a).",
+      "clue": "Both limits are needed, and the order matters."
+    }
+  },
+  "mat-finding-function-from-rate": {
+    "title": "Finding a function from its rate of change",
+    "card": [
+      "If you know f'(x), the rate of change, you can find f(x) by antidifferentiating. The answer has a constant: f(x) = ∫f'(x) dx + c.",
+      "One rate fits many functions, because each value of c gives a different curve. A known point on the curve, called a boundary condition, fixes c.",
+      "Substitute the point into f(x) and solve for c. Then write the full function with c in place.",
+      "Example: f'(x) = 6x² − 2 and f(1) = 5. Then f(x) = 2x³ − 2x + c. Putting in x = 1: 2 − 2 + c = 5, so c = 5 and f(x) = 2x³ − 2x + 5."
+    ],
+    "remember": "Antidifferentiate the rate, then use the known point to find c.",
+    "a": {
+      "q": "f'(x) = 4x − 3 and f(2) = 1. What is f(x)?",
+      "opts": ["2x² − 3x − 1", "2x² − 3x + 1", "2x² − 3x + 3", "4x² − 3x − 9"],
+      "why": "Antidifferentiating gives f(x) = 2x² − 3x + c. Then f(2) = 8 − 6 + c = 1, so c = −1. The option with +1 uses the value of f(2) as c without working it out.",
+      "clue": "Find c by putting x = 2 into 2x² − 3x + c."
+    },
+    "b": {
+      "d": 3,
+      "q": "A tank's volume V litres changes at dV/dt = 6t − 12 litres per minute. At t = 0 the tank holds 20 litres. What is V at t = 4?",
+      "opts": ["20 litres", "0 litres", "12 litres", "32 litres"],
+      "why": "V = 3t² − 12t + c. At t = 0, V = 20, so c = 20, and V(4) = 48 − 48 + 20 = 20 litres. The 12 litres option is the rate dV/dt at t = 4, not the volume, and 0 litres leaves out c.",
+      "clue": "Antidifferentiate first, then use t = 0 to find c."
+    }
+  },
+  "mat-area-under-between-curves": {
+    "title": "Area under and between curves",
+    "card": [
+      "The area between two curves from x = a to x = b is the integral of (top curve − bottom curve). Area = ∫ from a to b of [f(x) − g(x)] dx, where f(x) ≥ g(x) on [a, b].",
+      "For the area between a curve and the x-axis, the axis is the bottom curve (g(x) = 0). Where the curve is below the axis, the integral is negative, so take the positive size of that part.",
+      "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top − bottom each time.",
+      "Example: f(x) = x and g(x) = x² between x = 0 and x = 1. They meet where x = x², at x = 0 and x = 1, and x ≥ x² between them. Area = ∫ from 0 to 1 of (x − x²) dx = 1/2 − 1/3 = 1/6."
+    ],
+    "remember": "Area = integral of top − bottom, and split at every crossing.",
+    "a": {
+      "q": "Between x = 0 and x = 2, the line y = 4 lies above the curve y = x². Which integral gives the area between them?",
+      "opts": [
+        "∫ from 0 to 2 of (4 − x²) dx",
+        "∫ from 0 to 2 of (x² − 4) dx",
+        "∫ from 0 to 2 of (4 + x²) dx",
+        "∫ from 0 to 4 of (4 − x²) dx"
+      ],
+      "why": "The top curve is y = 4, so the integrand is top − bottom = 4 − x², over the x-values 0 to 2. Using x² − 4 reverses the order and gives a negative number, which is not an area.",
+      "clue": "Subtract the lower curve from the upper curve."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is the total area enclosed between y = x² − 4 and the x-axis, from x = 0 to x = 3?",
+      "opts": ["23/3", "5/3", "−23/3", "7/3"],
+      "why": "The curve crosses the axis at x = 2, so split there. From 0 to 2 the integral is [x³/3 − 4x] = 8/3 − 8 = −16/3, so that area is 16/3. From 2 to 3 it is (9 − 12) − (8/3 − 8) = −3 + 16/3 = 7/3. The total is 16/3 + 7/3 = 23/3. Integrating straight from 0 to 3 gives −16/3 + 7/3 = −3, which cancels the parts instead of adding them.",
+      "clue": "Find where the curve crosses the axis, and add the two areas as positive numbers."
+    }
+  },
+  "mat-average-value-function": {
+    "title": "Average value of a function",
+    "card": [
+      "The average value of f on [a, b] is 1/(b − a) × the definite integral of f(x) from a to b. In words: integrate, then divide by the width b − a.",
+      "When f(x) ≥ 0 on [a, b], the average value is the height of a rectangle on [a, b] with the same area as the region under the curve.",
+      "The integral is signed: parts of the graph below the x-axis count as negative. So use the definite integral itself, not the total area.",
+      "Example: for f(x) = x² on [0, 3], the integral is [x³/3] from 0 to 3 = 9 − 0 = 9. Dividing by the width 3 − 0 gives 9 ÷ 3 = 3."
+    ],
+    "remember": "Find the signed integral first, then divide by the width b − a.",
+    "a": {
+      "q": "The integral of f(x) from 1 to 5 is 20. What is the average value of f on [1, 5]?",
+      "opts": ["5", "4", "20", "80"],
+      "why": "The width is 5 − 1 = 4, so the average value is 20 ÷ 4 = 5. Dividing by 5, the end value, gives 4, which is a mistake: the width is b − a, not b.",
+      "clue": "Divide the integral by the width of the interval."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is the average value of f(x) = 2x on [1, 4]?",
+      "opts": ["5", "15", "3", "7.5"],
+      "why": "The integral of 2x from 1 to 4 is [x²] from 1 to 4 = 16 − 1 = 15. The width is 3, so the average is 15 ÷ 3 = 5. The answer 15 is only the integral, and has not been divided by the width.",
+      "clue": "Find the integral first, then divide by 4 − 1."
+    }
   }
 };

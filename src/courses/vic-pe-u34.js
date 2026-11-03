@@ -18,8 +18,34 @@ MADE_COURSES.push({
     {
       "title": "Unit 3: Movement skills and energy for physical activity, sport and exercise",
       "chapters": [
-        {"id": "vic-pe-u34-1-1", "title": "Learning movement skills", "check": "checked", "points": []},
-        {"id": "vic-pe-u34-1-2", "title": "Biomechanics", "check": "checked", "points": []},
+        {
+          "id": "vic-pe-u34-1-1",
+          "title": "Learning movement skills",
+          "check": "checked",
+          "points": [
+            "pe-classifying-movement-skills",
+            "pe-skills-participation-performance",
+            "pe-influences-skill-learning",
+            "pe-stages-learning",
+            "pe-direct-constraints-led-coaching",
+            "pe-psychological-skills",
+            "pe-practice-schedules",
+            "pe-feedback"
+          ]
+        },
+        {
+          "id": "vic-pe-u34-1-2",
+          "title": "Biomechanics",
+          "check": "checked",
+          "points": [
+            "pe-momentum-impulse",
+            "pe-newton-s-laws-motion",
+            "pe-projectile-motion",
+            "pe-levers-body-2",
+            "hms-balance-stability",
+            "pe-qualitative-movement-analysis"
+          ]
+        },
         {
           "id": "vic-pe-u34-1-3",
           "title": "Producing energy",
@@ -60,9 +86,35 @@ MADE_COURSES.push({
             "pe-reliable-valid-assessment"
           ]
         },
-        {"id": "vic-pe-u34-2-2", "title": "Implementing training", "check": "checked", "points": []},
-        {"id": "vic-pe-u34-2-3-2", "title": "Chronic adaptations", "check": "checked", "points": []},
-        {"id": "vic-pe-u34-2-3", "title": "Putting it together", "check": "checked", "points": []}
+        {
+          "id": "vic-pe-u34-2-2",
+          "title": "Implementing training",
+          "check": "checked",
+          "points": [
+            "pe-monitoring-training",
+            "pe-training-session",
+            "pe-principles-training",
+            "pe-detraining-plateaus",
+            "pe-training-methods"
+          ]
+        },
+        {
+          "id": "vic-pe-u34-2-3-2",
+          "title": "Chronic adaptations",
+          "check": "checked",
+          "points": [
+            "pe-chronic-cardiovascular-adaptations",
+            "pe-chronic-respiratory-adaptations",
+            "pe-chronic-muscular-adaptations",
+            "pe-adaptations-improve"
+          ]
+        },
+        {
+          "id": "vic-pe-u34-2-3",
+          "title": "Putting it together",
+          "check": "checked",
+          "points": ["pe-skill-biomechanics-energy-together", "pe-designing-program-athlete"]
+        }
       ]
     }
   ]

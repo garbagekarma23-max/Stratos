@@ -8,7 +8,7 @@
    0.511
   ]
  ],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:25Z new, match",
   "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -18,20 +18,23 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
   "2026-11-02T04:50:13Z write: done",
-  "2026-11-02T04:56:45Z check: flagged"
+  "2026-11-02T04:56:45Z check: flagged",
+  "2026-11-03T11:40:49Z fix: suggested",
+  "2026-11-03T11:56:00Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording)",
+  "2026-11-03T12:02:57Z claude-code review: approved with the fix (a spot check)"
  ],
  "sent": {
   "match": 1,
   "write": 2,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 0.00023,
   "write": 0.01375,
   "check": 0.03069,
-  "fix": 0.02054,
+  "fix": 0.03498,
   "recheck": 0.01492
  },
  "match": {
@@ -77,7 +80,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "claude-code",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -269,5 +272,417 @@
  "sensitive": "none",
  "flags": [
   "Question b, wording: \"the carbons next to those hydrogens\" is loose: the carbon the hydrogens sit on is itself next to them. The card says \"adjacent carbon atoms\" (carbons next to the carbon holding those hydrogens). Better: \"How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?\""
+ ],
+ "proposal": {
+  "title": "Proton NMR spectroscopy",
+  "card": [
+   "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogen atoms in the same surroundings are one environment and give one peak, so the number of peaks is the number of hydrogen environments.",
+   "The area under a peak (shown by the integration trace) is proportional to the number of hydrogen atoms in that environment. A peak with twice the area comes from twice as many hydrogens.",
+   "The chemical shift of a peak, in ppm, shows what is near the hydrogens. For example, hydrogens near an electronegative atom or a C=O group appear at a different shift from those in a plain alkyl group.",
+   "Splitting shows neighbours. A peak splits into n + 1 lines, where n is the number of hydrogens on the carbon atoms adjacent to the carbon holding those hydrogens. Two neighbouring hydrogens give a triplet."
+  ],
+  "remember": "Peaks count environments, area counts hydrogens, shift shows surroundings, and splitting (n + 1) shows neighbours.",
+  "a": {
+   "q": "A proton NMR spectrum has three peaks with relative areas 3 : 2 : 1. What does this area ratio tell you?",
+   "opts": [
+    "The relative number of hydrogens in each environment",
+    "The relative number of neighbours for each environment",
+    "The relative chemical shift of each environment",
+    "The relative number of lines in each split peak"
+   ],
+   "why": "Peak area is proportional to the number of hydrogens in each environment, so the areas give a ratio of hydrogens, not exact counts. Neighbours and the number of lines come from splitting, and shift is read from the position of the peak, not its area.",
+   "clue": "Think about what the integration trace measures."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the proton NMR spectrum of a compound, one peak is a triplet. How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?",
+   "opts": [
+    "Two",
+    "Three",
+    "One",
+    "Four"
+   ],
+   "why": "A peak splits into n + 1 lines, so a triplet (3 lines) means n = 2. A student who picks three has counted the lines instead of using n + 1.",
+   "clue": "Lines in the peak = n + 1."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-03T11:56:00Z",
+  "rules": 1,
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"the carbons next to those hydrogens\" is loose: the carbon the hydrogens sit on is itself next to them. The card says \"adjacent carbon atoms\" (carbons next to the carbon holding those hydrogens). Better: \"How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?\""
+   }
+  ],
+  "flags": [
+   "Question b, wording: \"the carbons next to those hydrogens\" is loose: the carbon the hydrogens sit on is itself next to them. The card says \"adjacent carbon atoms\" (carbons next to the carbon holding those hydrogens). Better: \"How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?\""
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Proton NMR spectroscopy",
+  "card": [
+   "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogen atoms in the same surroundings are one environment and give one peak, so the number of peaks is the number of hydrogen environments.",
+   "The area under a peak (shown by the integration trace) is proportional to the number of hydrogen atoms in that environment. A peak with twice the area comes from twice as many hydrogens.",
+   "The chemical shift of a peak, in ppm, shows what is near the hydrogens. For example, hydrogens near an electronegative atom or a C=O group appear at a different shift from those in a plain alkyl group.",
+   "Splitting shows neighbours. A peak splits into n + 1 lines, where n is the number of hydrogens on the carbon atoms adjacent to the carbon holding those hydrogens. Two neighbouring hydrogens give a triplet."
+  ],
+  "remember": "Peaks count environments, area counts hydrogens, shift shows surroundings, and splitting (n + 1) shows neighbours.",
+  "a": {
+   "q": "A proton NMR spectrum has three peaks with relative areas 3 : 2 : 1. What does this area ratio tell you?",
+   "opts": [
+    "The relative number of hydrogens in each environment",
+    "The relative number of neighbours for each environment",
+    "The relative chemical shift of each environment",
+    "The relative number of lines in each split peak"
+   ],
+   "why": "Peak area is proportional to the number of hydrogens in each environment, so the areas give a ratio of hydrogens, not exact counts. Neighbours and the number of lines come from splitting, and shift is read from the position of the peak, not its area.",
+   "clue": "Think about what the integration trace measures."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the proton NMR spectrum of a compound, one peak is a triplet. How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?",
+   "opts": [
+    "Two",
+    "Three",
+    "One",
+    "Four"
+   ],
+   "why": "A peak splits into n + 1 lines, so a triplet (3 lines) means n = 2. A student who picks three has counted the lines instead of using n + 1.",
+   "clue": "Lines in the peak = n + 1."
+  }
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-03T12:02:57Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix words question b and the card's splitting line precisely: n counts hydrogens on the carbons next to the carbon holding the hydrogens. The answer, two, is unchanged and right by the n + 1 rule.",
+   "item": "1839c0710acaaad7",
+   "result": "decided",
+   "saved": {
+    "id": "chem-proton-nmr-spectroscopy",
+    "title": "Proton NMR spectroscopy",
+    "brief": "0e1184203e6e",
+    "shortlist": [
+     [
+      "chem-proton-nmr",
+      0.511
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 2,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00023,
+     "write": 0.01375,
+     "check": 0.03069,
+     "fix": 0.03498,
+     "recheck": 0.01492
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank card covers hydrogen environments, integration and n+1 splitting, but it never teaches chemical shift, which is the 'surroundings' part of the new brief, so adding that idea is more than a small change.",
+     "model": "claude-haiku-5-5"
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue says area 'counts something about hydrogens', and the right option is the only one that mentions hydrogens. A student can match the word without knowing the idea.",
+    "rejected": {
+     "title": "Proton NMR spectroscopy",
+     "card": [
+      "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogen atoms in the same surroundings are one environment and give one peak, so the number of peaks is the number of hydrogen environments.",
+      "The area under a peak (shown by the integration trace) is proportional to the number of hydrogen atoms in that environment. A peak with twice the area comes from twice as many hydrogens.",
+      "The chemical shift of a peak, in ppm, shows what the hydrogens are bonded near. For example, hydrogens next to an electronegative atom or a C=O group appear at a different shift from those in a plain alkyl group.",
+      "Splitting shows neighbours. A peak splits into n + 1 lines, where n is the number of hydrogens on the adjacent carbon atoms. Two neighbouring hydrogens give a triplet."
+     ],
+     "remember": "Peaks count environments, area counts hydrogens, shift shows surroundings, and splitting (n + 1) shows neighbours.",
+     "a": {
+      "q": "A proton NMR spectrum has three peaks with relative areas 3 : 2 : 1. What does the area ratio tell you?",
+      "opts": [
+       "The environments hold hydrogens in the ratio 3 : 2 : 1",
+       "The environments have neighbours in the ratio 3 : 2 : 1",
+       "The peaks have chemical shifts in the ratio 3 : 2 : 1",
+       "The peaks are split into lines in the ratio 3 : 2 : 1"
+      ],
+      "why": "Peak area is proportional to the number of hydrogens in each environment, so the areas give the ratio of hydrogens, not exact counts. Neighbours and the number of lines come from splitting, not from area.",
+      "clue": "Area under a peak counts something about hydrogens."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the spectrum of a compound, one peak is a triplet. How many hydrogens in total are on the carbons next to these hydrogens?",
+      "opts": [
+       "Two",
+       "Three",
+       "One",
+       "Four"
+      ],
+      "why": "A peak splits into n + 1 lines, so a triplet (3 lines) means n = 2. A student who picks three has counted the lines instead of using n + 1.",
+      "clue": "Lines in the peak = n + 1."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-02T04:43:11Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question a, other: The clue says area 'counts something about hydrogens', and the right option is the only one that mentions hydrogens. A student can match the word without knowing the idea."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Proton NMR spectroscopy",
+        "card": [
+         "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogen atoms in the same surroundings are one environment and give one peak, so the number of peaks is the number of hydrogen environments.",
+         "The area under a peak (shown by the integration trace) is proportional to the number of hydrogen atoms in that environment. A peak with twice the area comes from twice as many hydrogens.",
+         "The chemical shift of a peak, in ppm, shows what the hydrogens are bonded near. For example, hydrogens next to an electronegative atom or a C=O group appear at a different shift from those in a plain alkyl group.",
+         "Splitting shows neighbours. A peak splits into n + 1 lines, where n is the number of hydrogens on the adjacent carbon atoms. Two neighbouring hydrogens give a triplet."
+        ],
+        "remember": "Peaks count environments, area counts hydrogens, shift shows surroundings, and splitting (n + 1) shows neighbours.",
+        "a": {
+         "q": "A proton NMR spectrum has three peaks with relative areas 3 : 2 : 1. What does the area ratio tell you?",
+         "opts": [
+          "The three environments hold 3, 2 and 1 hydrogens",
+          "The three environments have 3, 2 and 1 neighbours",
+          "The three peaks are at 3, 2 and 1 ppm",
+          "The three environments are 3, 2 and 1 bonds from C=O"
+         ],
+         "why": "Peak area is proportional to the number of hydrogens in each environment, so the ratio 3 : 2 : 1 matches the hydrogen counts. Neighbours are shown by splitting, not by area.",
+         "clue": "Area under a peak counts something about hydrogens."
+        },
+        "b": {
+         "d": 3,
+         "q": "In the spectrum of a compound, one peak is a triplet. The hydrogens giving this peak sit on a carbon next to a carbon with how many hydrogens?",
+         "opts": [
+          "Two",
+          "Three",
+          "One",
+          "Four"
+         ],
+         "why": "A peak splits into n + 1 lines, so a triplet (3 lines) means n = 2. A student who picks three has counted the lines instead of using n + 1.",
+         "clue": "Lines in the peak = n + 1."
+        }
+       },
+       "local": [],
+       "check": {
+        "a": {
+         "best": "The three environments hold 3, 2 and 1 hydrogens",
+         "also_right": []
+        },
+        "b": {
+         "best": "Two",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "a",
+          "kind": "wording",
+          "detail": "A 3 : 2 : 1 area ratio gives only the relative numbers of hydrogens. The right option says the environments 'hold 3, 2 and 1 hydrogens', which reads as exact counts, but 6 : 4 : 2 gives the same ratio. Better wording would be 'hold hydrogens in the ratio 3 : 2 : 1'."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "The card, both questions and both explanations are correct. Question a's right option states exact hydrogen counts, but an area ratio only gives relative numbers, so the wording should say 'in the ratio 3 : 2 : 1'."
+       },
+       "flags": [
+        "Question a, wording: A 3 : 2 : 1 area ratio gives only the relative numbers of hydrogens. The right option says the environments 'hold 3, 2 and 1 hydrogens', which reads as exact counts, but 6 : 4 : 2 gives the same ratio. Better wording would be 'hold hydrogens in the ratio 3 : 2 : 1'."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Proton NMR spectroscopy",
+        "card": [
+         "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogen atoms in the same surroundings are one environment and give one peak, so the number of peaks is the number of hydrogen environments.",
+         "The area under a peak (shown by the integration trace) is proportional to the number of hydrogen atoms in that environment. A peak with twice the area comes from twice as many hydrogens.",
+         "The chemical shift of a peak, in ppm, shows what the hydrogens are bonded near. For example, hydrogens next to an electronegative atom or a C=O group appear at a different shift from those in a plain alkyl group.",
+         "Splitting shows neighbours. A peak splits into n + 1 lines, where n is the number of hydrogens on the adjacent carbon atoms. Two neighbouring hydrogens give a triplet."
+        ],
+        "remember": "Peaks count environments, area counts hydrogens, shift shows surroundings, and splitting (n + 1) shows neighbours.",
+        "a": {
+         "q": "A proton NMR spectrum has three peaks with relative areas 3 : 2 : 1. What does the area ratio tell you?",
+         "opts": [
+          "The environments hold hydrogens in the ratio 3 : 2 : 1",
+          "The environments have neighbours in the ratio 3 : 2 : 1",
+          "The peaks have chemical shifts in the ratio 3 : 2 : 1",
+          "The peaks are split into lines in the ratio 3 : 2 : 1"
+         ],
+         "why": "Peak area is proportional to the number of hydrogens in each environment, so the areas give the ratio of hydrogens, not exact counts. Neighbours and the number of lines come from splitting, not from area.",
+         "clue": "Area under a peak counts something about hydrogens."
+        },
+        "b": {
+         "d": 3,
+         "q": "In the spectrum of a compound, one peak is a triplet. How many hydrogens in total are on the carbons next to these hydrogens?",
+         "opts": [
+          "Two",
+          "Three",
+          "One",
+          "Four"
+         ],
+         "why": "A peak splits into n + 1 lines, so a triplet (3 lines) means n = 2. A student who picks three has counted the lines instead of using n + 1.",
+         "clue": "Lines in the peak = n + 1."
+        }
+       },
+       "proposal_problems": [],
+       "recheck": {
+        "at": "2026-11-02T04:41:50Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "The environments hold hydrogens in the ratio 3 : 2 : 1",
+          "also_right": []
+         },
+         "b": {
+          "best": "Two",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "a",
+           "kind": "other",
+           "detail": "The clue says area 'counts something about hydrogens', and the right option is the only one that mentions hydrogens. A student can match the word without knowing the idea."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The card, questions and explanations are accurate for VCE proton NMR. The only issue is that question a's clue points straight to the one option that uses the word 'hydrogens', which gives the answer away."
+        },
+        "flags": [
+         "Question a, other: The clue says area 'counts something about hydrogens', and the right option is the only one that mentions hydrogens. A student can match the word without knowing the idea."
+        ]
+       }
+      }
+     }
+    ],
+    "draft": {
+     "title": "Proton NMR spectroscopy",
+     "card": [
+      "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogen atoms in the same surroundings are one environment and give one peak, so the number of peaks is the number of hydrogen environments.",
+      "The area under a peak (shown by the integration trace) is proportional to the number of hydrogen atoms in that environment. A peak with twice the area comes from twice as many hydrogens.",
+      "The chemical shift of a peak, in ppm, shows what the hydrogens are bonded near. For example, hydrogens next to an electronegative atom or a C=O group appear at a different shift from those in a plain alkyl group.",
+      "Splitting shows neighbours. A peak splits into n + 1 lines, where n is the number of hydrogens on the adjacent carbon atoms. Two neighbouring hydrogens give a triplet."
+     ],
+     "remember": "Peaks count environments, area counts hydrogens, shift shows surroundings, and splitting (n + 1) shows neighbours.",
+     "a": {
+      "q": "A proton NMR spectrum has three peaks with relative areas 3 : 2 : 1. What does this area ratio tell you?",
+      "opts": [
+       "The relative number of hydrogens in each environment",
+       "The relative number of neighbours for each environment",
+       "The relative chemical shift of each environment",
+       "The relative number of lines in each split peak"
+      ],
+      "why": "Peak area is proportional to the number of hydrogens in each environment, so the areas give a ratio of hydrogens, not exact counts. Neighbours and the number of lines come from splitting, and shift is read from the position of the peak, not its area.",
+      "clue": "Think about what the integration trace measures."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the proton NMR spectrum of a compound, one peak is a triplet. How many hydrogens in total are on the carbons next to those hydrogens?",
+      "opts": [
+       "Two",
+       "Three",
+       "One",
+       "Four"
+      ],
+      "why": "A peak splits into n + 1 lines, so a triplet (3 lines) means n = 2. A student who picks three has counted the lines instead of using n + 1.",
+      "clue": "Lines in the peak = n + 1."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The relative number of hydrogens in each environment",
+      "also_right": []
+     },
+     "b": {
+      "best": "Two",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "\"the carbons next to those hydrogens\" is loose: the carbon the hydrogens sit on is itself next to them. The card says \"adjacent carbon atoms\" (carbons next to the carbon holding those hydrogens). Better: \"How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?\""
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. Question b's wording (\"carbons next to those hydrogens\") could be read as including the carbon the hydrogens are on, so it should say \"adjacent carbons\" as the card does."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, wording: \"the carbons next to those hydrogens\" is loose: the carbon the hydrogens sit on is itself next to them. The card says \"adjacent carbon atoms\" (carbons next to the carbon holding those hydrogens). Better: \"How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?\""
+    ],
+    "proposal": {
+     "title": "Proton NMR spectroscopy",
+     "card": [
+      "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogen atoms in the same surroundings are one environment and give one peak, so the number of peaks is the number of hydrogen environments.",
+      "The area under a peak (shown by the integration trace) is proportional to the number of hydrogen atoms in that environment. A peak with twice the area comes from twice as many hydrogens.",
+      "The chemical shift of a peak, in ppm, shows what is near the hydrogens. For example, hydrogens near an electronegative atom or a C=O group appear at a different shift from those in a plain alkyl group.",
+      "Splitting shows neighbours. A peak splits into n + 1 lines, where n is the number of hydrogens on the carbon atoms adjacent to the carbon holding those hydrogens. Two neighbouring hydrogens give a triplet."
+     ],
+     "remember": "Peaks count environments, area counts hydrogens, shift shows surroundings, and splitting (n + 1) shows neighbours.",
+     "a": {
+      "q": "A proton NMR spectrum has three peaks with relative areas 3 : 2 : 1. What does this area ratio tell you?",
+      "opts": [
+       "The relative number of hydrogens in each environment",
+       "The relative number of neighbours for each environment",
+       "The relative chemical shift of each environment",
+       "The relative number of lines in each split peak"
+      ],
+      "why": "Peak area is proportional to the number of hydrogens in each environment, so the areas give a ratio of hydrogens, not exact counts. Neighbours and the number of lines come from splitting, and shift is read from the position of the peak, not its area.",
+      "clue": "Think about what the integration trace measures."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the proton NMR spectrum of a compound, one peak is a triplet. How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?",
+      "opts": [
+       "Two",
+       "Three",
+       "One",
+       "Four"
+      ],
+      "why": "A peak splits into n + 1 lines, so a triplet (3 lines) means n = 2. A student who picks three has counted the lines instead of using n + 1.",
+      "clue": "Lines in the peak = n + 1."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-03T11:56:00Z",
+     "rules": 1,
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "\"the carbons next to those hydrogens\" is loose: the carbon the hydrogens sit on is itself next to them. The card says \"adjacent carbon atoms\" (carbons next to the carbon holding those hydrogens). Better: \"How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?\""
+      }
+     ],
+     "flags": [
+      "Question b, wording: \"the carbons next to those hydrogens\" is loose: the carbon the hydrogens sit on is itself next to them. The card says \"adjacent carbon atoms\" (carbons next to the carbon holding those hydrogens). Better: \"How many hydrogens in total are on the carbon atoms adjacent to the carbon bearing those hydrogens?\""
+     ]
+    }
+   },
+   "after": "f709e8f56287ab21"
+  }
  ]
 }

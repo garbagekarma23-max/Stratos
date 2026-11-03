@@ -3,24 +3,29 @@
  "title": "The gut-brain axis",
  "brief": "9c3654ddcae7",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:28Z new, write",
   "2026-11-01T14:46:42Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T14:56:07Z write: done",
   "2026-11-01T15:05:31Z check: flagged",
   "2026-11-01T17:33:07Z fix: suggested",
-  "2026-11-02T06:25:26Z review: rejected, to be written again"
+  "2026-11-02T06:25:26Z review: rejected, to be written again",
+  "2026-11-03T10:25:24Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: flagged",
+  "2026-11-03T11:40:51Z fix: suggested",
+  "2026-11-03T12:06:46Z review: approved with the fix"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 2
  },
  "usd": {
   "write": 0.00517,
   "check": 0.02131,
-  "fix": 0.03527
+  "fix": 0.05673
  },
  "note": "",
  "rejected": {
@@ -56,5 +61,197 @@
    "clue": "Follow the order of events in the scenario, starting with the stress."
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:24Z",
+   "step": "write",
+   "version": {
+    "title": "The gut-brain axis",
+    "card": [
+     "The gut-brain axis is the two-way communication between the gut and the brain. The brain sends signals to the gut, and the gut sends signals to the brain.",
+     "One pathway is the vagus nerve, a long nerve running between the brainstem and the gut. Gut microbes, the trillions of bacteria and other microorganisms living in the gut, also send signals through chemicals they make.",
+     "Stress can change the mix of gut microbes and how the gut works, such as causing an upset stomach before a big event.",
+     "Gut health can affect mood. A change in gut microbes can change the signals reaching the brain, which may influence how a person feels."
+    ],
+    "remember": "Brain and gut talk both ways: stress can upset the gut, and an upset gut can lower mood.",
+    "a": {
+     "q": "Which example shows a signal travelling from the gut to the brain?",
+     "opts": [
+      "Changed gut microbes lead to a lower mood",
+      "Exam worry leads to an upset stomach",
+      "A frightening noise speeds up the heart",
+      "Stress hormones change the mix of microbes"
+     ],
+     "why": "When gut microbes change, the signals they send to the brain can change and affect mood, so the signal starts in the gut. Worry causing an upset stomach runs the other way, from brain to gut.",
+     "clue": "Where does the change start, and where does it end up?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Mai has weeks of exam stress. Her gut microbes change, and soon after she feels low. Which explanation fits the gut-brain axis?",
+     "opts": [
+      "Stress changed her microbes, which can affect mood",
+      "Her low mood came first and caused the stress",
+      "Signals can only travel from her brain to her gut",
+      "Gut microbes have no link to how a person feels"
+     ],
+     "why": "Stress can change gut microbes, and the changed microbes can alter the signals reaching the brain and affect mood. Signals travel both ways along the axis, not only from brain to gut.",
+     "clue": "Follow the order of events, starting with the stress."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Changed gut microbes lead to a lower mood",
+     "also_right": []
+    },
+    "b": {
+     "best": "Stress changed her microbes, which can affect mood",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "level",
+      "detail": "The stem already gives the whole chain (stress, then changed microbes, then low mood), and the right option restates it, while two wrong options contradict the stem outright. A Year 12 student can answer without knowing the idea."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The facts and both answers are right. Question b is too easy, because its right option repeats the order of events the stem gives."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The gut-brain axis",
+  "card": [
+   "The gut-brain axis is the two-way communication between the gut and the brain. The brain sends signals to the gut, and the gut sends signals to the brain.",
+   "One pathway is the vagus nerve, a long nerve running between the brainstem and the gut. Gut microbes, the trillions of bacteria and other microorganisms living in the gut, also send signals through chemicals they make.",
+   "Stress can change the mix of gut microbes and how the gut works, such as causing an upset stomach before a big event.",
+   "Gut health can affect mood. A change in gut microbes can change the signals reaching the brain, which may influence how a person feels."
+  ],
+  "remember": "Brain and gut talk both ways: stress can upset the gut, and an upset gut can lower mood.",
+  "a": {
+   "q": "Which example shows a signal travelling from the gut to the brain?",
+   "opts": [
+    "Changed gut microbes lead to a lower mood",
+    "Exam worry leads to an upset stomach",
+    "A frightening noise speeds up the heart",
+    "Stress hormones change the mix of microbes"
+   ],
+   "why": "When gut microbes change, the signals they send to the brain can change and affect mood, so the signal starts in the gut. Worry causing an upset stomach runs the other way, from brain to gut.",
+   "clue": "Where does the change start, and where does it end up?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mai has weeks of exam stress. Her gut microbes change, and soon after she feels low. Which explanation fits the gut-brain axis?",
+   "opts": [
+    "Stress changed her microbes, which can affect mood",
+    "Her low mood came first and caused the stress",
+    "Signals can only travel from her brain to her gut",
+    "Gut microbes have no link to how a person feels"
+   ],
+   "why": "Stress can change gut microbes, and the changed microbes can alter the signals reaching the brain and affect mood. Signals travel both ways along the axis, not only from brain to gut.",
+   "clue": "Follow the order of events, starting with the stress."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Changed gut microbes lead to a lower mood",
+   "also_right": []
+  },
+  "b": {
+   "best": "Stress changed her microbes, which can affect mood",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The stem already gives the whole chain (stress, then changed microbes, then low mood), and the right option restates it, while two wrong options contradict the stem outright. A Year 12 student can answer without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are right. Question b is too easy, because its right option repeats the order of events the stem gives."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The stem already gives the whole chain (stress, then changed microbes, then low mood), and the right option restates it, while two wrong options contradict the stem outright. A Year 12 student can answer without knowing the idea."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "The gut-brain axis",
+  "card": [
+   "The gut-brain axis is the two-way communication between the gut and the brain. The brain sends signals to the gut, and the gut sends signals to the brain.",
+   "One pathway is the vagus nerve, a long nerve running between the brainstem and the gut. Gut microbes, the trillions of bacteria and other microorganisms living in the gut, also send signals through chemicals they make.",
+   "Stress can change the mix of gut microbes and how the gut works, such as causing an upset stomach before a big event.",
+   "Gut health can affect mood. A change in gut microbes can change the signals reaching the brain, which may influence how a person feels."
+  ],
+  "remember": "Brain and gut talk both ways: stress can upset the gut, and an upset gut can lower mood.",
+  "a": {
+   "q": "Which example shows a signal travelling from the gut to the brain?",
+   "opts": [
+    "Changed gut microbes lead to a lower mood",
+    "Exam worry leads to an upset stomach",
+    "A frightening noise speeds up the heart",
+    "Stress hormones change the mix of microbes"
+   ],
+   "why": "When gut microbes change, the signals they send to the brain can change and affect mood, so the signal starts in the gut. Worry causing an upset stomach runs the other way, from brain to gut.",
+   "clue": "Where does the change start, and where does it end up?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In an experiment, calm mice are given gut microbes taken from stressed mice. Afterwards, the calm mice act more anxious. What does this suggest?",
+   "opts": [
+    "Gut microbes can send signals that affect the brain",
+    "The mice's anxiety came first and changed their microbes",
+    "Signals in the axis travel only from the brain to the gut",
+    "The vagus nerve is the only link between gut and brain"
+   ],
+   "why": "The mice were calm until their gut microbes changed, so the change started in the gut and then affected behaviour. This shows signals can travel from gut to brain. The anxiety could not have come first, because the mice were calm before they got the new microbes.",
+   "clue": "Which changed first in the calm mice, their gut or their behaviour?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The gut-brain axis",
+  "card": [
+   "The gut-brain axis is the two-way communication between the gut and the brain. The brain sends signals to the gut, and the gut sends signals to the brain.",
+   "One pathway is the vagus nerve, a long nerve running between the brainstem and the gut. Gut microbes, the trillions of bacteria and other microorganisms living in the gut, also send signals through chemicals they make.",
+   "Stress can change the mix of gut microbes and how the gut works, such as causing an upset stomach before a big event.",
+   "Gut health can affect mood. A change in gut microbes can change the signals reaching the brain, which may influence how a person feels."
+  ],
+  "remember": "Brain and gut talk both ways: stress can upset the gut, and an upset gut can lower mood.",
+  "a": {
+   "q": "Which example shows a signal travelling from the gut to the brain?",
+   "opts": [
+    "Changed gut microbes lead to a lower mood",
+    "Exam worry leads to an upset stomach",
+    "A frightening noise speeds up the heart",
+    "Stress hormones change the mix of microbes"
+   ],
+   "why": "When gut microbes change, the signals they send to the brain can change and affect mood, so the signal starts in the gut. Worry causing an upset stomach runs the other way, from brain to gut.",
+   "clue": "Where does the change start, and where does it end up?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In an experiment, calm mice are given gut microbes taken from stressed mice. Afterwards, the calm mice act more anxious. What does this suggest?",
+   "opts": [
+    "Gut microbes can send signals that affect the brain",
+    "The mice's anxiety came first and changed their microbes",
+    "Signals in the axis travel only from the brain to the gut",
+    "The vagus nerve is the only link between gut and brain"
+   ],
+   "why": "The mice were calm until their gut microbes changed, so the change started in the gut and then affected behaviour. This shows signals can travel from gut to brain. The anxiety could not have come first, because the mice were calm before they got the new microbes.",
+   "clue": "Which changed first in the calm mice, their gut or their behaviour?"
+  }
+ },
+ "cleared_by": "owner"
 }

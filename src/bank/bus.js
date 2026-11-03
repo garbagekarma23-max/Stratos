@@ -9149,5 +9149,358 @@ MADE_BANKS.bus = {
       "why": "The aim was to cut complaints, and the starting point was 40 a month. Measuring complaints again compares the same indicator before and after. Comparing online orders with sales is tempting, but it uses two different measures and does not show whether complaints fell.",
       "clue": "Match the review to the indicator Hana set out to improve."
     }
+  },
+  "bus-keeping-financial-records": {
+    "title": "Bank accounts and record keeping",
+    "card": [
+      "A business should open its own bank account and keep it separate from the owner's personal money. Mixing the two makes it hard to see what the business has earned and spent.",
+      "Financial controls are checks that protect the business's money. Examples are having two people approve large payments and matching bank statements to the records.",
+      "A business records its sales, its payments to suppliers and others, and the wages it pays staff. Each record should be accurate and kept up to date.",
+      "Accurate records are used to work out tax and to meet legal duties. They also show owners how the business is going, so they can decide on prices, stock and hiring."
+    ],
+    "remember": "Keep business money separate, check it, and record every sale, payment and wage accurately.",
+    "a": {
+      "q": "Tariq runs a bike repair shop in Geelong. He pays for his groceries from the shop's takings. What problem is this most likely to cause?",
+      "opts": [
+        "It becomes hard to see what the shop really earned and spent",
+        "It stops the shop from paying wages to its staff",
+        "It means the shop no longer has to keep sales records",
+        "It lets the shop pay less tax without any checks"
+      ],
+      "why": "Mixing personal and business money blurs the business's real income and spending, which weakens tax records and decisions. It does not remove the need for sales records, which are still needed.",
+      "clue": "Think about what a separate account makes clear."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a bakery in Ballarat. Her records of sales and wages are accurate and current. Which is the best example of how she can use them for a decision?",
+      "opts": [
+        "Check which products sell best before choosing what to bake",
+        "Pay herself from the till so the records stay simple",
+        "Keep one account for the bakery and her home bills",
+        "Ask staff to approve their own wage payments"
+      ],
+      "why": "Accurate sales records show what customers buy, so Priya can plan her baking from evidence. The other options mix money or weaken controls, which are the problems that good records and controls are meant to prevent.",
+      "clue": "Which option uses the records to guide a choice about the business?"
+    }
+  },
+  "bus-choosing-suppliers": {
+    "title": "Choosing suppliers",
+    "card": [
+      "A supplier sells a business the goods or services it needs, such as ingredients, fabric or packaging. A business weighs several factors when it picks one.",
+      [
+        "Price and quality",
+        "Price is what the business pays. Quality is how well the goods meet the standard its customers expect. The cheapest supplier may deliver poorer quality."
+      ],
+      [
+        "Reliability",
+        "A reliable supplier delivers the right goods on time, every time. Late or missing orders can leave a business unable to serve its customers."
+      ],
+      [
+        "Social and environmental standards",
+        "Some businesses also check whether a supplier treats workers fairly and limits harm to the environment. Customers may care about this, so it can affect the business's reputation."
+      ]
+    ],
+    "remember": "Weigh price, quality and reliability. Some businesses also check a supplier's social and environmental standards.",
+    "a": {
+      "q": "A bakery owner is choosing a flour supplier. Which choice shows she is weighing reliability?",
+      "opts": [
+        "She checks whether its orders arrive on time each week",
+        "She compares delivery fees across three suppliers",
+        "She checks whether delivered flour meets her recipe standard",
+        "She asks whether its delivery trucks cut their emissions"
+      ],
+      "why": "Reliability means the right goods arrive on time, every time, so checking weekly arrival times tests it. Delivery fees are about price, the flour's standard is about quality, and truck emissions are an environmental standard.",
+      "clue": "Which factor is about the supplier doing what it promised, every time?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a clothing store in Geelong. Supplier A is cheapest and always on time, but uses factories with unsafe conditions. Supplier B costs more and meets fair work standards. Her customers care about ethical clothing. Which reason best supports choosing B?",
+      "opts": [
+        "Supplier A's standards could harm her store's reputation",
+        "Supplier B could deliver more reliably than Supplier A",
+        "Supplier B's higher price could raise her profit per item",
+        "Supplier B could cost her less once delivery is counted"
+      ],
+      "why": "Her customers care about ethics, so using unsafe factories could make them think less of her store. Reliability is not a reason, because Supplier A is always on time. Paying more for stock lowers her profit per item rather than raising it, and Supplier A is the cheapest.",
+      "clue": "Check each reason against the facts given about A and B."
+    }
+  },
+  "bus-policies-procedures": {
+    "title": "Policies and procedures",
+    "card": [
+      [
+        "Policy",
+        "a rule or guide for decisions, such as a bullying policy. It says what the business expects and what is not allowed."
+      ],
+      ["Procedure", "the steps to follow to carry out a policy or a task. It says who does what, and in what order."],
+      "A bullying policy might state that bullying is not tolerated. Its procedure might set the steps for making a complaint, such as who to report to and how the report is handled.",
+      "Both help a business obey the law and set routines, so staff handle the same situation in the same way."
+    ],
+    "remember": "A policy guides decisions. A procedure sets the steps to follow.",
+    "a": {
+      "q": "Which of these is a procedure rather than a policy?",
+      "opts": [
+        "Tell a manager, then fill in an injury form by end of shift",
+        "The business will keep its workplace safe for all staff",
+        "Discrimination of any kind is not allowed in the business",
+        "Staff are expected to treat every customer with respect"
+      ],
+      "why": "This option tells staff who to go to and what to do in order, which is what a procedure does. The safe workplace statement is tempting because it is about injuries too, but it only states an expectation, so it is a policy.",
+      "clue": "A policy says what is expected. What does a procedure add?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev runs a bakery in Geelong. He wants staff to handle food the same safe way every day, and to help the bakery obey food safety law. Which choice does this best?",
+      "opts": [
+        "Write a food safety policy and a procedure to carry it out",
+        "Write a food safety policy and let each worker choose how",
+        "Write cleaning steps only, with no stated food safety aims",
+        "Tell staff in person each morning what the day's rules are"
+      ],
+      "why": "A policy states what the bakery expects, and a procedure sets the steps, so staff follow the same routine every day. A policy alone is tempting, but if each worker chooses how to meet it, routines may differ from person to person.",
+      "clue": "Think about what makes every worker act the same way."
+    }
+  },
+  "bus-technology-global-issues-setting": {
+    "title": "Technology and global issues in setting up",
+    "card": [
+      "A customer database is a stored record of customer details, such as names, emails and past orders. Software lets a new business build one to contact customers and see what they buy.",
+      "Holding personal details brings choices about data: what to collect, how to store it securely and how to protect customers' privacy. A data breach can harm customers and the business's reputation.",
+      "Dealing with overseas suppliers or retailers can cut the cost of stock or reach more customers. Shipping adds time and cost, and quality is harder to check from far away.",
+      "Overseas deals are often priced in another currency, so exchange rates add risk. If a buyer's currency falls against the Australian dollar, each sale there earns fewer dollars."
+    ],
+    "remember": "A database and overseas deals can help a new business, but each brings choices about data, cost and risk.",
+    "a": {
+      "q": "Lena starts an online plant shop in Ballarat and saves each buyer's name, address and order history. What choice does this mainly raise for her?",
+      "opts": [
+        "How to protect the personal details she holds",
+        "How to cope when exchange rates move suddenly",
+        "How to set the steps her staff follow each day",
+        "How to compare the prices of two plant growers"
+      ],
+      "why": "A customer database holds personal details, so Lena has to decide how to keep them secure and private. Exchange rates matter when trading overseas, not when storing local customers' details.",
+      "clue": "Think about what the database holds."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jack's Bendigo clothing label agrees to sell through a retailer in Japan and will be paid in yen. Which statement about this deal is correct?",
+      "opts": [
+        "A fall in the yen could cut what each sale earns",
+        "A rise in the yen could cut what each sale earns",
+        "Shipping to Japan adds no extra time or cost",
+        "Selling overseas lowers what his stock costs"
+      ],
+      "why": "Jack is paid in yen, so he changes it into Australian dollars. If the yen falls against the dollar, each sale converts to fewer dollars. A rising yen would do the opposite and earn him more.",
+      "clue": "He has to change the yen into Australian dollars."
+    }
+  },
+  "bus-maslow-s-hierarchy-needs": {
+    "title": "Maslow's hierarchy of needs",
+    "card": [
+      "Abraham Maslow said people have five levels of needs. From the bottom up they are physiological, safety, social, esteem and self-actualisation.",
+      "Physiological needs are basics such as food, water and rest. Safety needs include job security and a safe workplace.",
+      "Social needs are belonging and friendship. Esteem needs are respect and recognition. Self-actualisation is reaching one's full potential.",
+      "Maslow said people move up to the next level once the level below is met. A need that is met no longer motivates, so a manager looks at which level staff are on."
+    ],
+    "remember": "Staff are motivated by the lowest level of need not yet met, then move up.",
+    "a": {
+      "q": "Which need is at the very top of Maslow's hierarchy?",
+      "opts": ["Self-actualisation", "Esteem", "Social", "Safety"],
+      "why": "Self-actualisation, reaching one's full potential, is the highest level. Esteem is the tempting wrong answer, because it is the level just below and covers respect and recognition.",
+      "clue": "List the five levels from the bottom up. Which comes last?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya works at a Geelong warehouse on short contracts that may not be renewed. She worries about paying rent. Which offer would best motivate her, by Maslow's theory?",
+      "opts": [
+        "A permanent contract with a steady income",
+        "A staff award for the best idea of the month",
+        "A place on a team that meets for Friday lunch",
+        "A chance to design her own project"
+      ],
+      "why": "Her worry about income and job security is a safety need, and it is not yet met. Awards and projects target higher levels, so they would motivate her less until safety is met. The Friday lunch is a social need, which sits above safety.",
+      "clue": "Find the lowest level of need she has not yet met."
+    }
+  },
+  "bus-locke-latham-s-goal": {
+    "title": "Locke and Latham's goal-setting theory",
+    "card": [
+      "Locke and Latham said that goals motivate staff when they are set well. A goal gives a worker a target to aim at and a way to judge their own progress.",
+      [
+        "Clarity and challenge",
+        "A goal should be specific, so the worker knows what to do. It should also be hard enough to stretch the worker, but not so hard that it seems out of reach."
+      ],
+      [
+        "Commitment and feedback",
+        "Workers need to accept the goal and care about reaching it. Feedback on progress lets them see how they are going and adjust their effort."
+      ],
+      [
+        "Task complexity",
+        "For a complex task, the goal needs more time and support, so workers are not overwhelmed. A worker can then learn and plan as they go."
+      ]
+    ],
+    "remember": "Motivating goals are clear, challenging, accepted, tracked with feedback and matched to the task.",
+    "a": {
+      "q": "Which goal for a phone shop sales team is specific and also suitably challenging?",
+      "opts": [
+        "Sell 45 plans a week, up from the usual 35",
+        "Sell 35 plans a week, as the team usually does",
+        "Sell 120 plans a week, up from the usual 35",
+        "Sell more plans each week than before"
+      ],
+      "why": "A rise from 35 to 45 is specific and stretches staff without being out of reach. The goal of 35 is specific but gives no stretch, and the goal of 120 is specific but far too hard. The goal to sell more plans each week than before is not specific, so staff cannot tell what counts as success.",
+      "clue": "A goal can be specific and still be too easy or too hard."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a bakery in Geelong. She sets each baker a target of 300 loaves a day, up from 120, and posts each baker's daily count on a board. Staff say the target is impossible. Which part of the theory is most clearly missing?",
+      "opts": [
+        "A goal that is challenging but seems reachable",
+        "A goal that is specific enough to be measured",
+        "Feedback given to staff on how they are tracking",
+        "A goal with extra time and support for complexity"
+      ],
+      "why": "The target is a specific number, and the daily board shows each baker how they are going, so clarity and feedback are in place. Feedback is the tempting answer, but the board already gives it. What is missing is a fair challenge: a goal should stretch workers without seeming out of reach, and staff see this one as impossible.",
+      "clue": "Rule out each part that Priya has already put in place."
+    }
+  },
+  "bus-lawrence-nohria-s-four": {
+    "title": "Lawrence and Nohria's four drive theory",
+    "card": [
+      "Lawrence and Nohria said four drives shape how people act at work: the drives to acquire, to bond, to learn and to defend.",
+      "The drive to acquire is to gain things, such as pay, status and rewards. The drive to bond is to form connections with others, such as teammates and the business itself.",
+      "The drive to learn is to understand the world and grow through challenging, meaningful work. The drive to defend is to protect oneself and others, and to see fairness and security at work.",
+      "Lawrence and Nohria said a workplace that meets all four drives motivates staff best. Meeting only one or two, such as through pay alone, leaves motivation weaker."
+    ],
+    "remember": "Motivation is strongest when a workplace meets all four drives, not just one.",
+    "a": {
+      "q": "Which drive is met when a business gives staff clear and fair rules, and a secure job?",
+      "opts": ["Defend", "Acquire", "Bond", "Learn"],
+      "why": "The drive to defend covers security and fairness. Acquire is the tempting wrong answer, but it is about gaining rewards such as pay, not about protection or fair treatment.",
+      "clue": "Think about protection and fairness."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's Bendigo firm pays high bonuses and gives staff big status titles. Staff still seem flat. Teams rarely meet and the work is repetitive. What does the theory suggest?",
+      "opts": [
+        "Bond and learn drives are unmet, so motivation is weaker",
+        "The acquire drive is unmet, so bonuses should rise",
+        "All four drives are met, because pay is high",
+        "Only the defend drive matters, so job security is needed"
+      ],
+      "why": "Bonuses and titles meet the drive to acquire, but rare team contact leaves bond unmet and repetitive work leaves learn unmet. The theory says motivation is best when all four are met, so high pay alone is not enough.",
+      "clue": "Which drives do pay and titles not meet?"
+    }
+  },
+  "bus-performance-related-pay": {
+    "title": "Performance-related pay",
+    "card": [
+      "Performance-related pay links part of an employee's pay to results. The results may be those of the employee, a team or the whole business.",
+      "A bonus is a one-off payment for reaching a target, such as a set level of sales. A commission is a payment worked out as a share of what the employee sells.",
+      "A profit share pays staff a share of the business's profit, so it rewards the results of the whole business.",
+      "All three types can lift effort, because extra work can lead to extra pay. But they may push staff to compete instead of cooperating."
+    ],
+    "remember": "Pay tied to results can lift effort, but it may also reduce teamwork.",
+    "a": {
+      "q": "Which of these is an example of performance-related pay?",
+      "opts": [
+        "A real estate agent is paid a share of each home sold",
+        "A cleaner is paid the same wage for every hour worked",
+        "A nurse is given a free course on first aid",
+        "A clerk is given a warning for being late"
+      ],
+      "why": "The agent's pay rises with the sales made, so it is linked to results. A fixed hourly wage does not change with results. A free course is training, not pay for results.",
+      "clue": "Which payment changes depending on what the worker achieves?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a car yard in Geelong. She pays each salesperson a commission on their own sales only. Which problem is most likely to result?",
+      "opts": [
+        "Salespeople may compete and not help each other",
+        "Salespeople may lose all reason to sell more cars",
+        "Salespeople may share leads more often than before",
+        "Salespeople may be paid even when they sell no cars"
+      ],
+      "why": "Commission on individual sales rewards each person's own results, so staff may guard customers and leads instead of cooperating. The pay still rewards extra sales, so it does not remove the reason to sell more.",
+      "clue": "Think about who gains when a colleague makes the sale."
+    }
+  },
+  "bus-career-advancement-training-as": {
+    "title": "Career advancement and training",
+    "card": [
+      [
+        "Career advancement",
+        "the chance to move up to a higher role with more responsibility, and usually more pay. It shows staff that effort can lead to a future in the business."
+      ],
+      [
+        "Training",
+        "the business pays for staff to build skills, through courses, mentoring or time on the job. Staff become better at their work and more able to take on new tasks."
+      ],
+      "Both can motivate because staff see that the business is investing in them. A person who sees a path ahead has a reason to stay and to work well.",
+      "Promotion works only if staff believe it is open to them. If senior roles always go to outsiders, the chance to advance may not motivate anyone."
+    ],
+    "remember": "Showing staff a path to a better role, and building their skills, gives them reasons to work well and stay.",
+    "a": {
+      "q": "Why can a business paying for staff to complete training courses motivate those staff?",
+      "opts": [
+        "It builds their skills and shows it sees a future for them",
+        "It gives them a bonus that rises with each sale they make",
+        "It removes the need for them to receive any feedback at work",
+        "It lets managers punish staff who do not finish the courses"
+      ],
+      "why": "Training builds skills and signals that the business sees a future for the staff member. A bonus linked to sales is a different method, based on paying for results. Training does not replace feedback and is not a form of punishment.",
+      "clue": "Think about what the business is showing the worker by spending money on them."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya manages a bakery in Geelong. She wants staff to see a future at the bakery. Which action fits this aim best?",
+      "opts": [
+        "Fund a trainee's cake course, then offer a senior baker role",
+        "Pay each baker a bonus for the most loaves sold each week",
+        "Ask bakers to work flexible hours around their family needs",
+        "Send a written warning to any baker who arrives late"
+      ],
+      "why": "A course followed by a path to a senior role builds skills and shows a future in the business. A bonus for loaves sold rewards results instead. Flexible hours and warnings are about support and sanctions, which are not the aim here.",
+      "clue": "Look for the option that builds skills and points to a higher role."
+    }
+  },
+  "bus-support-sanction-strategies": {
+    "title": "Support and sanction strategies",
+    "card": [
+      "Managers can use support and sanction strategies to influence how staff behave and perform. One helps staff. The other uses the threat of a loss.",
+      [
+        "Support strategy",
+        "help given to staff to deal with a problem, so they can keep working well. Examples are counselling, flexible work hours and extra coaching."
+      ],
+      [
+        "Sanction strategy",
+        "a penalty, or the threat of one, if staff do not meet expected standards. Examples are a formal warning, a demotion or losing a bonus."
+      ],
+      "Support aims to remove what is holding a worker back. A sanction aims to stop unwanted behaviour by making staff worry about losing something they value."
+    ],
+    "remember": "Support helps staff past a problem. A sanction warns of a loss if standards are not met.",
+    "a": {
+      "q": "Which action is an example of a sanction strategy?",
+      "opts": [
+        "A written warning that a worker may lose their job",
+        "Letting a worker start later while they care for a parent",
+        "Paying for a worker to see a counsellor",
+        "Offering a worker coaching to learn a new system"
+      ],
+      "why": "A written warning uses the threat of losing something, in this case the job, to push a worker to meet standards. The other three help the worker deal with a problem, so they are support strategies.",
+      "clue": "Which one works by threatening a loss?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a warehouse in Geelong. Tom is often late because his child's school starts after his shift does. Priya moves his start time by one hour. Which describes her action?",
+      "opts": [
+        "A support strategy, as it removes the cause of his lateness",
+        "A sanction strategy, as it punishes him for being late",
+        "A sanction strategy, as it responds to his lateness",
+        "A support strategy, as it gives him a reward for being late"
+      ],
+      "why": "Moving Tom's hours helps him deal with the problem that causes the lateness, so it is a support strategy. It is not a sanction, because nothing is threatened or taken away. It is also not a reward for lateness, as it fixes the cause.",
+      "clue": "Does Priya threaten a loss, or help with the problem?"
+    }
   }
 };

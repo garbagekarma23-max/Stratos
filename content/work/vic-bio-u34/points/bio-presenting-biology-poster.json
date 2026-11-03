@@ -3,7 +3,7 @@
  "title": "Presenting a biology poster",
  "brief": "1f742ec28937",
  "shortlist": [],
- "stage": "check",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:25Z new, write",
   "2026-11-01T14:46:35Z write: done",
@@ -12,18 +12,22 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other, a wording)",
   "2026-11-02T04:50:13Z write: failed the content check, writing again",
-  "2026-11-02T04:56:45Z write: done"
+  "2026-11-02T04:56:45Z write: done",
+  "2026-11-03T11:40:48Z check: flagged",
+  "2026-11-03T11:44:03Z fix: suggested",
+  "2026-11-03T12:02:57Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-03T12:06:04Z review: approved with the fix"
  ],
  "sent": {
   "write": 3,
-  "check": 1,
-  "fix": 1,
+  "check": 2,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "write": 0.01909,
-  "check": 0.01384,
-  "fix": 0.03358,
+  "check": 0.03311,
+  "fix": 0.06165,
   "recheck": 0.01711
  },
  "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue ('A source is credited in two places, and a value needs a unit everywhere') states both parts of the right option, so a student can match it without understanding the idea.\n- Question a, wording: The right option is the only one with a precise detail ('such as °C'), which matches the card's wording and makes it stand out from the distractors.",
@@ -61,7 +65,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "owner",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -237,5 +241,107 @@
   }
  },
  "redone": true,
- "local": []
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Add units to both axis labels, such as °C or mL/min",
+   "also_right": []
+  },
+  "b": {
+   "best": "Add a unit to the rate and cite the photo in the text",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The list of poster sections leaves out the introduction and the discussion. Both are standard sections of the VCE Biology scientific poster template (title, introduction, methodology, results, discussion, conclusion, references). Year 12 VCE students could come away with an incomplete idea of the required structure."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are sound, each with a single clearly correct answer, and the explanations match the card. The only issue is that the card's list of poster sections omits the introduction and discussion, which the VCE poster template includes."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The list of poster sections leaves out the introduction and the discussion. Both are standard sections of the VCE Biology scientific poster template (title, introduction, methodology, results, discussion, conclusion, references). Year 12 VCE students could come away with an incomplete idea of the required structure."
+ ],
+ "proposal": {
+  "title": "Presenting a biology poster",
+  "card": [
+   "A scientific poster presents an investigation briefly, using short text, tables and graphs. Its sections are title, introduction (with the aim), methodology, results, discussion, conclusion and references.",
+   "Use correct scientific terms and units. Write units such as mL, °C or mg/L with every measured value, and put them in table headings and graph axis labels.",
+   "Present results in tables and graphs with clear titles. The conclusion should answer the aim or research question using only what the results show.",
+   "Acknowledge sources. Cite the ideas, data and images taken from other people in the text, and list them in the references. This shows where the information came from and lets readers check it."
+  ],
+  "remember": "A poster is brief, uses correct terms and units, and credits every source.",
+  "a": {
+   "q": "Sam's poster has a titled graph of his own enzyme data. The axes read 'Temperature' (10 to 40) and 'Rate of reaction' (0.5 to 2.0). What should he fix?",
+   "opts": [
+    "Add units to both axis labels, such as °C or mL/min",
+    "Rename the axes 'independent' and 'dependent variable'",
+    "Add a table of the same data, with a title, beside it",
+    "Add a reference list entry for the data, such as his notes"
+   ],
+   "why": "Without units, a reader cannot tell what 30 or 1.5 means, such as whether temperature is in °C or what the rate measures. Renaming the axes by variable type removes what was measured, and the data are Sam's own, so they need no reference.",
+   "clue": "Could a reader tell what each number on the axes stands for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's poster on yeast respiration uses a photo she found online and a rate of 4.2 from her own results. She lists the photo's source in her references. What else should she do?",
+   "opts": [
+    "Add a unit to the rate and cite the photo in the text",
+    "Cite her own results in the text and the references",
+    "Add a unit to the rate in the conclusion section only",
+    "Nothing more, since the references credit the photo"
+   ],
+   "why": "A value such as 4.2 needs a unit wherever it appears, and someone else's image should be cited in the text as well as listed. Listing the photo alone is only half of acknowledging it, and her own results need no reference.",
+   "clue": "Check what is missing from the number and from the photo's credit."
+  }
+ },
+ "proposal_problems": [],
+ "claude_code": [
+  {
+   "at": "2026-11-03T12:02:57Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix lists the poster's sections as a closed list. I cannot confirm it matches the current VCAA poster template exactly (it may also have a communication statement and 'references and acknowledgements'), so please check it against the study design.",
+   "item": "e65c9c341f113bf9",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Presenting a biology poster",
+  "card": [
+   "A scientific poster presents an investigation briefly, using short text, tables and graphs. Its sections are title, introduction (with the aim), methodology, results, discussion, conclusion and references.",
+   "Use correct scientific terms and units. Write units such as mL, °C or mg/L with every measured value, and put them in table headings and graph axis labels.",
+   "Present results in tables and graphs with clear titles. The conclusion should answer the aim or research question using only what the results show.",
+   "Acknowledge sources. Cite the ideas, data and images taken from other people in the text, and list them in the references. This shows where the information came from and lets readers check it."
+  ],
+  "remember": "A poster is brief, uses correct terms and units, and credits every source.",
+  "a": {
+   "q": "Sam's poster has a titled graph of his own enzyme data. The axes read 'Temperature' (10 to 40) and 'Rate of reaction' (0.5 to 2.0). What should he fix?",
+   "opts": [
+    "Add units to both axis labels, such as °C or mL/min",
+    "Rename the axes 'independent' and 'dependent variable'",
+    "Add a table of the same data, with a title, beside it",
+    "Add a reference list entry for the data, such as his notes"
+   ],
+   "why": "Without units, a reader cannot tell what 30 or 1.5 means, such as whether temperature is in °C or what the rate measures. Renaming the axes by variable type removes what was measured, and the data are Sam's own, so they need no reference.",
+   "clue": "Could a reader tell what each number on the axes stands for?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's poster on yeast respiration uses a photo she found online and a rate of 4.2 from her own results. She lists the photo's source in her references. What else should she do?",
+   "opts": [
+    "Add a unit to the rate and cite the photo in the text",
+    "Cite her own results in the text and the references",
+    "Add a unit to the rate in the conclusion section only",
+    "Nothing more, since the references credit the photo"
+   ],
+   "why": "A value such as 4.2 needs a unit wherever it appears, and someone else's image should be cited in the text as well as listed. Listing the photo alone is only half of acknowledging it, and her own results need no reference.",
+   "clue": "Check what is missing from the number and from the photo's credit."
+  }
+ }
 }

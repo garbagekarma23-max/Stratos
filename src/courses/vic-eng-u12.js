@@ -18,7 +18,21 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: Reading and crafting texts",
       "chapters": [
-        {"id": "vic-eng-u12-1-1", "title": "Reading and exploring texts", "check": "checked", "points": []},
+        {
+          "id": "vic-eng-u12-1-1",
+          "title": "Reading and exploring texts",
+          "check": "checked",
+          "points": [
+            "eng-making-personal-response",
+            "eng-reading-inference",
+            "eng-ideas-themes",
+            "eng-world-text",
+            "eng-characters-their-choices",
+            "eng-point-view-narration",
+            "eng-structure-across-whole-text",
+            "eng-writing-about-text"
+          ]
+        },
         {
           "id": "vic-eng-u12-1-2",
           "title": "Crafting texts",
