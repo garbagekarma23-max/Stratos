@@ -185,6 +185,7 @@ function render() {
         it.recheck.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('') +
         (it.recheck.summary ? '<p>' + esc(it.recheck.summary) + '</p>' : '') + (it.recheck.sure ? '<p class="small">Sure: ' + esc(it.recheck.sure) + '</p>' : '');
     }
+    if (it.writtenBy === 'claude-code' || it.checkedBy === 'claude-code') side += '<p class="small">' + (it.writtenBy === 'claude-code' ? 'Written by Claude Code. ' : '') + (it.checkedBy === 'claude-code' ? 'Checked by a Claude Code subagent.' : '') + '</p>';
     if (it.error) side += '<div class="label">What happened</div><div class="flag">' + esc(it.error) + '</div>';
     if (it.flags.length) side += '<div class="label">Checker</div>' + it.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('');
     if (it.summary) side += '<div class="label">Summary</div><p>' + esc(it.summary) + '</p>';
@@ -195,6 +196,11 @@ function render() {
       '<button type="button" data-act="fix"' + (it.proposal ? '' : ' disabled') + '>Use the fix</button>' +
       '<button type="button" data-act="edit">Edit</button>' +
       '<input id="note" placeholder="Note for the writer (optional)" aria-label="Note for the writer"><button type="button" data-act="reject">Reject and rewrite</button>';
+  }
+  if (!editing && it.claudeCode) {
+    const c = it.claudeCode, would = ({fix: 'use the fix', approve: 'approve it as written', reject: 'reject it', reuse: 'reuse the bank point', adapt: 'adapt the bank point', new: 'write a new point'})[c.decision];
+    side += '<div class="note">' + (c.decision === 'leave' ? 'Claude Code looked at this and left it for you: ' : c.why ? 'Claude Code would ' + would + ', but could not: ' + esc(c.why) + ' Its reason: ' :
+      'Claude Code would ' + would + ', but was not highly sure, so it left it for you: ') + esc(c.reason) + '</div>';
   }
   if (message) acts += '<p class="msg' + (message.bad ? ' bad' : '') + '">' + esc(message.text) + (message.problems ? '<br>' + message.problems.map(esc).join('<br>') : '') + '</p>';
   $('#main').innerHTML = '<nav>' + nav + '</nav><section>' + mid + '</section><section class="pane">' + side + '</section><div class="actions">' + acts + '</div>';
@@ -210,7 +216,7 @@ function sideHtml(s, shown) {
   let out = pointHtml(s.point);
   if (shown) {
     out += '<p class="small">' + esc(({final: 'Final version', 'the fix': 'The suggested fix', draft: 'Draft'})[s.which]) + ', ' +
-      (s.clearedBy ? 'cleared by ' + esc(({screen: 'the Haiku screen', checker: 'the Opus checker', owner: 'you', auto: 'autoreview'})[s.clearedBy] || s.clearedBy) : esc(s.stage)) +
+      (s.clearedBy ? 'cleared by ' + esc(({screen: 'the Haiku screen', checker: 'the Opus checker', owner: 'you', auto: 'autoreview', recheck: 'recheck', 'claude-code': 'Claude Code'})[s.clearedBy] || s.clearedBy) : esc(s.stage)) +
       (s.usd != null ? '. Cost ' + (s.usd * 100).toFixed(1) + ' cents' : '') + '.</p>';
     if (s.screen) out += '<p class="small"><b>Haiku:</b> ' + esc(s.screen) + (s.toOpus ? ' Sent to Opus: ' + esc(s.toOpus) + '.' : '') + '</p>';
     if (s.summary) out += '<p class="small"><b>Opus:</b> ' + esc(s.summary) + '</p>';

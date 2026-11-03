@@ -13,6 +13,10 @@ Run it from the repository folder. On Windows, type py where this says python3.
   python3 content/pipeline.py autoreject                                  sends them, with no API calls
   python3 content/pipeline.py rebalance --dry-run                        which questions have a right option that stands out by length
   python3 content/pipeline.py rebalance --max-new-dollars 3               rewrites their wrong options to match it, and checks them
+  python3 content/pipeline.py cc-write export                             Claude Code steps, with no API calls (README, step 11):
+  python3 content/pipeline.py cc-write import                               rewrites written by a Claude Code session,
+  python3 content/pipeline.py cc-check export (then import)                 each checked by a separate subagent,
+  python3 content/pipeline.py cc-review export (then import, or --undo)     and some review list decisions
   python3 content/pipeline.py review                                      the review page, at http://localhost:8765
   python3 content/pipeline.py publish content/outlines/nsw-bus-11.yaml    writes the cleared points into src/
 content/README.md walks through each step.
@@ -51,6 +55,10 @@ How a point goes through it:
            change. A rewrite that passes the content check and no longer has the right option clearly the longest
            goes to the course's checker (Opus) as a new point. Only if the check agrees with it on every count are the
            new options used. Otherwise the point keeps its old options.
+  claude code  only when the owner runs the Claude Code steps: a Claude Code session writes the points waiting for a
+           rewrite with the writer's prompt, a separate subagent checks each one with only the checker's prompt (its
+           answer is kept as an Opus check is), and a reviewer decides spot checks, possible matches and clear fixes,
+           leaving sensitive topics and anything it is not highly sure of. No API call, and no key.
   review   you approve it, use the fix, edit it, or reject it with a note (it is then written again).
   cleared  ready to publish. A point the checker passed is cleared at once.
 Each step is one Message Batch for every point that needs it, which costs half the normal price. estimate and run
@@ -63,7 +71,7 @@ Running the same command again carries on from there. Nothing is sent twice unle
 
 The API key is read from the ANTHROPIC_API_KEY environment variable and never written anywhere or printed.
 """
-import argparse, hashlib, http.server, json, math, os, queue, random, re, secrets, subprocess, sys, threading, time, urllib.parse
+import argparse, copy, hashlib, http.server, json, math, os, queue, random, re, secrets, shutil, subprocess, sys, threading, time, urllib.parse
 from datetime import datetime, timezone
 from types import SimpleNamespace as NS
 
@@ -691,7 +699,7 @@ def candidates(course, d, pt):
 # What a point's record holds from its last writing and checking. A fresh start or a rejection clears these.
 DRAFT_KEYS = ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'error', 'tries', 'adapt',
               'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone', 'auto', 'auto_undone', 'recheck', 'recheck_tries',
-              'rebalance', 'rebalance_tries']
+              'rebalance', 'rebalance_tries', 'written_by', 'checked_by']
 
 def rewrites(rec):
     """How many times a point has been rejected and sent to be written again, by the owner or by autoreject. A point
@@ -908,6 +916,7 @@ def collect(work, course, d, batch, results, repo, cfg, at_now=False):
     problems = check_points({pid: p for pid, (p, _) in written.items()}, course['kind'], repo, work.dir, course['subject'])
     for pid, (p, stage) in written.items():
         rec, probs = work.load(pid), problems.get(pid, [])
+        if stage != 'fix': rec.pop('written_by', None)   # written by the API this time, not by Claude Code
         if stage == 'fix':
             rec.update(stage='review', proposal=p, proposal_problems=probs); log(rec, 'fix: suggested')
         elif probs and not rec.get('redone'):
@@ -1200,7 +1209,8 @@ def counts(work, course):
 STAGE_WORDS = {'match': 'waiting to be matched', 'confirm': 'waiting for the Opus match check', 'adapt': 'waiting to be adapted from a bank point',
                'match-review': 'a possible match, for you to review', 'write': 'waiting to be written',
                'screen': 'waiting for the Haiku screen', 'check': 'waiting to be checked', 'fix': 'waiting for a fix', 'review': 'for you to review',
-               'failed': 'could not be written, for you to review', 'cleared': 'cleared', 'reuse': 'reusing a bank point'}
+               'failed': 'could not be written, for you to review', 'cleared': 'cleared', 'reuse': 'reusing a bank point',
+               'cc-check': 'waiting for the Claude Code check'}
 
 def split(work, course):
     """How a course's points divide: reused as they are (named in the outline, or matched), adapted from a bank point,
@@ -1230,8 +1240,9 @@ def stats(work, points):
     recs = [r for r in (work.load(p['id']) for p in points) if r]
     written = [r for r in recs if r['stage'] != 'reuse' and (r.get('draft') or r.get('final'))]
     checked = [r for r in written if r.get('check') or r.get('screen') or r.get('cleared_by') in ('checker', 'screen')]
-    opus = [r for r in written if r.get('check')]
-    flagged = [r for r in checked if r.get('flags') or (r.get('sensitive') or 'none') != 'none' or r['stage'] in ('fix', 'review') or r.get('cleared_by') in ('owner', 'auto', 'recheck')]
+    opus = [r for r in written if r.get('check') and r.get('checked_by') != 'claude-code']
+    flagged = [r for r in checked if r.get('flags') or (r.get('sensitive') or 'none') != 'none' or r['stage'] in ('fix', 'review') or
+               r.get('cleared_by') in ('owner', 'auto', 'recheck', 'claude-code')]
     why = {}
     for r in opus:
         k = r.get('to_opus') or 'every point'
@@ -1753,10 +1764,10 @@ def auto_state(work):
     answer to each spot check. It is kept apart from state.json, so a run and the review page never write over each other."""
     return read_json(auto_path(work), {'decided': 0, 'spot_answers': []})
 
-def auto_answer(work, pid, action):
-    """Saves the owner's decision on a spot check."""
+def auto_answer(work, pid, action, by='owner'):
+    """Saves the decision on a spot check: the owner's, or Claude Code's (by)."""
     st = auto_state(work)
-    st['spot_answers'].append({'id': pid, 'action': action, 'at': now()})
+    st['spot_answers'].append(dict({'id': pid, 'action': action, 'at': now()}, **({'by': by} if by != 'owner' else {})))
     write_json(auto_path(work), st)
 
 def auto_problems(rec):
@@ -1825,15 +1836,18 @@ def auto_lines(work, recs):
     out += recheck_lines(recs)
     out += autoreject_lines(recs)
     out += rebalance_lines(recs)
-    answers = auto_state(work)['spot_answers']
-    if answers:
+    out += cc_lines(recs)
+    every = [a for a in auto_state(work)['spot_answers'] if not a.get('undone')]
+    for who, name in [('owner', 'you'), ('claude-code', 'Claude Code')]:
+        answers = [a for a in every if a.get('by', 'owner') == who]
+        if not answers: continue
         words = {'fix': 'used the fix', 'approve': 'approved as written', 'edit': 'edited', 'reject': 'rejected'}
         tally = {}
         for a in answers: tally[a['action']] = tally.get(a['action'], 0) + 1
-        out.append('Spot checks you decided: ' + str(len(answers)) + ' (' + ', '.join(words.get(k, k) + ' ' + str(n) for k, n in tally.items()) + ').')
+        out.append('Spot checks ' + name + ' decided: ' + str(len(answers)) + ' (' + ', '.join(words.get(k, k) + ' ' + str(n) for k, n in tally.items()) + ').')
         rejected = list(dict.fromkeys(a['id'] for a in answers if a['action'] == 'reject'))
         if rejected:
-            out.append('Warning: you rejected ' + many_of(len(rejected), 'spot check') + ' (' + ', '.join(rejected) + '), so the automatic decisions '
+            out.append('Warning: ' + name + ' rejected ' + many_of(len(rejected), 'spot check') + ' (' + ', '.join(rejected) + '), so the automatic decisions '
                        'may not hold up. Look over the points cleared automatically, or send them all back to you with autoreview --undo.')
     return out
 
@@ -1897,7 +1911,7 @@ def autoreview(work, meta, repo, dry):
         for w in why: reasons[w] = reasons.get(w, 0) + 1
     say('  Left for you in the review list' + (' after this' if dry else '') + ': ' + str(left) + '.' + (' Why (a point can have more than one reason):' if reasons else ''))
     for w, k in sorted(reasons.items(), key=lambda x: -x[1]): say('    ' + w + ': ' + str(k))
-    later = len([r for r in recs if r['stage'] in WAITING])
+    later = len([r for r in recs if r['stage'] in WAITING + CC_STAGES])
     if later: say('  Not checked yet: ' + str(later) + '. Run autoreview again after the run finishes.')
     for line in auto_lines(work, recs): say('  ' + line)
     if dry:
@@ -2516,10 +2530,18 @@ def review_items(root, repo):
                                   'spot': bool(rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')),
                                   'spotBy': (rec.get('auto') or {}).get('by', 'autoreview'),
                                   'recheck': recheck_item(rec.get('recheck')),
+                                  'writtenBy': rec.get('written_by'), 'checkedBy': rec.get('checked_by'),
+                                  'claudeCode': cc_left_item(rec),
                                   'match': dict(match, point=bank_point(d, match['same']), usedIn=used_text(d, match['same']),
                                                 by=MODEL_NAMES.get(match.get('model'), '')) if match.get('same') else None})
         courses.append({'id': cid, 'name': meta['name'], 'counts': tally})
     return {'courses': courses, 'items': items, 'trials': len(trials(root))}
+
+def cc_left_item(rec):
+    """What the review page shows when the Claude Code reviewer looked at a point and left it for the owner."""
+    e = cc_last(rec)
+    if not e or e.get('result') != 'left': return None
+    return {'decision': e['decision'], 'sure': e['sure'], 'reason': e['reason'], 'why': e.get('why')}
 
 def recheck_item(rc):
     """What the review page shows of a fresh check of the fix."""
@@ -2527,8 +2549,9 @@ def recheck_item(rc):
     c = rc.get('check') or {}
     return {'result': rc['result'], 'why': rc['why'], 'flags': rc.get('flags') or [], 'summary': c.get('summary'), 'sure': c.get('sure')}
 
-def decide(root, repo, body):
-    """Saves one decision from the review page. Returns {ok, message, problems}."""
+def decide(root, repo, body, by='owner'):
+    """Saves one decision from the review page (by the owner) or from the Claude Code reviewer (by claude-code).
+    Returns {ok, message, problems}."""
     cid, pid, action = body.get('course'), body.get('id'), body.get('action')
     if not cid or cid not in os.listdir(root) or not re.fullmatch(r'[a-z0-9-]+', pid or ''): return {'ok': False, 'message': 'Unknown point.'}
     meta = read_json(os.path.join(root, cid, 'course.json'))
@@ -2537,43 +2560,59 @@ def decide(root, repo, body):
     rec = work.load(pid)
     if not rec or rec['stage'] not in ('review', 'match-review', 'failed'): return {'ok': False, 'message': 'This point is not waiting for review.'}
     spot = rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')
+    res = decide_rec(rec, body, by, lambda p: check_points({pid: p}, meta['kind'], repo, work.dir, meta.get('subject')).get(pid, []))
+    if res['ok']:
+        work.put(rec)
+        if spot: auto_answer(work, pid, action, by)
+    return res
+
+def decide_rec(rec, body, by='owner', content_check=None):
+    """Makes one review decision on a point's record, without saving it. by is owner or claude-code: the point is
+    marked cleared_by it, and its log says who decided. content_check runs the content check on an edited point."""
+    action = body.get('action')
+    spot = rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')
     def done(text):
-        if spot and rec.get('auto'): rec['auto']['owner'] = action
-        log(rec, 'review: ' + text + (' (a spot check)' if spot else '')); work.put(rec)
-        if spot: auto_answer(work, pid, action)
+        if spot and rec.get('auto'): rec['auto']['owner' if by == 'owner' else 'claude_code'] = action
+        log(rec, ('review: ' if by == 'owner' else 'claude-code review: ') + text + (' (a spot check)' if spot else ''))
         return {'ok': True, 'message': text}
     if rec['stage'] == 'match-review':
         m = rec.get('confirm') or rec.get('match') or {}
         if action == 'reuse':
-            rec.update(stage='reuse', reuse=m['same'], matched={'verdict': 'reuse', 'from': m['same'], 'by': 'owner', 'at': now()})
+            rec.update(stage='reuse', reuse=m['same'], matched={'verdict': 'reuse', 'from': m['same'], 'by': by, 'at': now()})
+            if by != 'owner': rec['cleared_by'] = by
             return done('reusing ' + m['same'])
         if action == 'adapt':
-            start_adapt(rec, m['same'], m.get('changes'), 'owner'); return done('adapting ' + m['same'] + ' on the next run')
+            start_adapt(rec, m['same'], body.get('changes') or m.get('changes'), by)
+            if by != 'owner': rec['cleared_by'] = by
+            return done('adapting ' + m['same'] + ' on the next run')
         if action == 'reject':
-            rec.update(stage='write', match_rejected=True); return done('match rejected, to be written')
+            rec.update(stage='write', match_rejected=True)
+            if by != 'owner': rec['cleared_by'] = by
+            return done('match rejected, to be written')
         return {'ok': False, 'message': 'Reuse, adapt or reject this match.'}
     if action == 'approve':
         if not rec.get('draft'): return {'ok': False, 'message': 'There is nothing written to approve. Edit it, or reject it with a note.'}
         if rec.get('local'): return {'ok': False, 'message': 'This version fails the content check. Use Edit to fix it first.', 'problems': rec['local']}
-        rec.update(stage='cleared', final=rec['draft'], cleared_by='owner'); return done('approved as written')
+        rec.update(stage='cleared', final=rec['draft'], cleared_by=by); return done('approved as written')
     if action == 'fix':
         if not rec.get('proposal'): return {'ok': False, 'message': 'There is no suggested fix.'}
         if rec.get('proposal_problems'): return {'ok': False, 'message': 'The fix fails the content check. Use Edit to fix it first.', 'problems': rec['proposal_problems']}
-        rec.update(stage='cleared', final=rec['proposal'], cleared_by='owner'); return done('approved with the fix')
-    if action == 'edit':
+        rec.update(stage='cleared', final=rec['proposal'], cleared_by=by); return done('approved with the fix')
+    if action == 'edit' and by == 'owner':
         p = body.get('point')
         try:
             p = {'title': p['title'], 'card': p['card'], 'remember': p['remember'], 'a': {k: p['a'][k] for k in ['q', 'opts', 'why', 'clue']},
                  'b': {k: p['b'][k] for k in ['d', 'q', 'opts', 'why', 'clue']}}
         except (KeyError, TypeError):
             return {'ok': False, 'message': 'The edited point is missing a part.'}
-        probs = check_points({pid: p}, meta['kind'], repo, work.dir, meta.get('subject')).get(pid, [])
+        probs = content_check(p)
         if probs: return {'ok': False, 'message': 'The content check found problems. Fix them and save again.', 'problems': probs}
         rec.update(stage='cleared', final=p, cleared_by='owner', edited=True); return done('edited and approved')
     if action == 'reject':
         note = (body.get('note') or '').strip()[:1000]
         reject(rec, rec.get('draft'), note)
         rec.pop('cleared_by', None)   # a rewrite autoreject asked for is decided now, so --undo leaves it
+        if by != 'owner': rec['cleared_by'] = by
         return done('rejected, to be written again' + (' with a note' if note else ''))
     return {'ok': False, 'message': 'Unknown action.'}
 
@@ -2673,6 +2712,492 @@ def cmd_review(args):
         say('\nStopped the review page. Your decisions are saved.')
 
 
+# ---------- Claude Code: steps a Claude Code session does instead of the API ----------
+# These use the owner's Claude plan, not the API key, and make no API calls. Each step has two commands: export writes a
+# task file for each point into content/work/_claude-code/<step>/, a Claude Code session answers each task with a JSON
+# file next to it, and import reads the answers and puts each point back into the normal flow.
+#   write   the points waiting for a rewrite (rejected by the owner, by autoreject or by the Claude Code reviewer, or
+#           failing the content check), with the same prompt the API writer would get. Import runs the content check,
+#           records the version as written by claude-code, and sends the point to the Claude Code check. run leaves it.
+#   check   the points Claude Code wrote, with the same prompt the API checker gets. A separate subagent answers each
+#           task, seeing only its task file: never the writer's reasoning, and never told the point was rewritten.
+#           Import records the answer as an Opus check is recorded, so autoreview, recheck and autoreject work as usual.
+#   review  the points in the review list it may decide: spot checks, possible matches and flagged points with a fix
+#           that passes the content check. Never a sensitive topic, an English course, or a point the owner sent back.
+#           Import applies only highly sure decisions, as the review page would, marked cleared_by claude-code.
+CC_DIR = '_claude-code'          # a folder name no course id can have, so the commands that read every course skip it
+CC_STAGES = ('cc-check',)        # waiting for a Claude Code step: run never sends these to the API
+REVIEW_SCHEMA = obj({'decision': {'type': 'string', 'enum': ['fix', 'approve', 'reject', 'reuse', 'adapt', 'new', 'leave']},
+                     'sure': {'type': 'string', 'enum': ['high', 'medium', 'low']}, 'reason': STR, 'note': STR,
+                     'changes': {'type': 'array', 'items': STR}})
+CC_ALLOWED = {'review': ['fix', 'approve', 'reject', 'leave'], 'match-review': ['reuse', 'adapt', 'new', 'leave']}
+CC_DECISION = {'fix': 'used the fix', 'approve': 'approved as written', 'reject': 'rejected, to be written again', 'reuse': 'reused the bank point',
+               'adapt': 'adapted the bank point', 'new': 'wrote a new point'}
+
+def fits(data, schema, where='the answer'):
+    """What is wrong with some data against one of the JSON shapes above. An empty list means it fits. The API holds
+    its answers to the shape; a Claude Code answer is held to it here."""
+    t, out = schema.get('type'), []
+    if t == 'object':
+        if not isinstance(data, dict): return [where + ' must be a JSON object']
+        out += [where + ' is missing ' + k for k in schema.get('required', []) if k not in data]
+        out += [where + ' has ' + k + ', which is not part of the shape' for k in data if k not in schema['properties']]
+        for k, s in schema['properties'].items():
+            if k in data: out += fits(data[k], s, where + '.' + k)
+        return out
+    if t == 'array':
+        if not isinstance(data, list): return [where + ' must be a list']
+        return [p for i, x in enumerate(data) for p in fits(x, schema['items'], where + '[' + str(i) + ']')]
+    if t == 'string' and not isinstance(data, str): return [where + ' must be text']
+    if t == 'integer' and (not isinstance(data, int) or isinstance(data, bool)): return [where + ' must be a whole number']
+    if 'enum' in schema and data not in schema['enum']: return [where + ' must be one of ' + ', '.join(map(str, schema['enum']))]
+    return []
+
+def cc_hash(*texts):
+    return hashlib.sha1('\n\0\n'.join(texts).encode('utf-8')).hexdigest()[:16]
+
+def cc_state(rec):
+    """A point's record as a hash, leaving out its log and its Claude Code history, to tell whether it changed."""
+    return cc_hash(json.dumps({k: v for k, v in rec.items() if k not in ('log', 'claude_code')}, ensure_ascii=False, sort_keys=True))
+
+def cc_folder(args, repo, step):
+    return os.path.join(work_root(args, repo), CC_DIR, step)
+
+def shown(path):
+    """A path to print: from the current folder when it is inside it, with forward slashes, which every shell takes."""
+    p = os.path.relpath(path)
+    return (path if p.startswith('..') else p).replace(os.sep, '/')
+
+def cc_job(work, meta, args, repo, d):
+    """A Job for one course from its work folder, as recheck makes one, with the banks for the writer's examples."""
+    course = dict(meta, points=[pt for u in meta['units'] for c in u['chapters'] for pt in c['points']])
+    if 'syllabus' not in meta: course['syllabus'] = outline_syllabus(meta['id'], args, repo)
+    name = work.state.get('settings') or OLD_COURSE
+    return Job(repo, d, course, work, dict(SETTINGS[name], trial=False), name)
+
+def cc_tasks(folder):
+    return read_json(os.path.join(folder, 'tasks.json'))
+
+def cc_start(folder, step):
+    """Empties a step's folder for a new export. Stops if answers are waiting to be imported, so none is lost."""
+    t = cc_tasks(folder) or {}
+    waiting = [x for x in t.get('tasks', []) if os.path.exists(os.path.join(folder, x['answer']))]
+    if waiting:
+        raise Stop(many_of(len(waiting), 'answer') + ' in ' + shown(folder) + ' ' + ('is' if len(waiting) == 1 else 'are') + ' waiting to be imported. '
+                   'Run py content/pipeline.py cc-' + step + ' import first. To throw them away instead, delete that folder.')
+    if os.path.isdir(folder): shutil.rmtree(folder)
+
+def cc_read(path):
+    """A JSON answer, allowing for a ```json fence around it. Returns (data, problems)."""
+    with open(path, encoding='utf-8') as f: text = f.read().strip()
+    text = re.sub(r'^```(?:json)?\s*|\s*```$', '', text)
+    try:
+        return json.loads(text), []
+    except ValueError as e:
+        return None, ['the answer is not valid JSON: ' + str(e)]
+
+def point_md(p, right=True):
+    """A point as plain text lines, with the right option marked, for a review task."""
+    out = ['Title: ' + p['title'], 'Card:'] + ['- ' + (l[0] + ': ' + l[1] if isinstance(l, list) else l) for l in p['card']] + ['Remember: ' + p['remember']]
+    for k in 'ab':
+        q = p[k]
+        out += ['', 'Question ' + k + (' (difficulty ' + str(q['d']) + ')' if 'd' in q else '') + ': ' + q['q']]
+        out += ['- ' + o + (' (right)' if right and i == 0 else '') for i, o in enumerate(q['opts'])]
+        out += ['Why: ' + q['why'], 'Clue: ' + q['clue']]
+    return out
+
+def answer_md(answer, schema, what):
+    return ['## Your answer', '', what, '', 'Write it, as JSON only with no other text, to:', answer, '', 'The shape, as a JSON schema:', '',
+            json.dumps(schema, ensure_ascii=False, separators=(',', ':'))]
+
+def cc_rewrite(rec):
+    """True for a point waiting for a rewrite: rejected, or written again because its last version failed the content check."""
+    return rec['stage'] == 'write' and ('rejected' in rec or bool(rec.get('redo')))
+
+def cc_ask(job, step, pt, rec):
+    """The system prompt and the request the API would get for this point at this step: (system, user)."""
+    if step == 'write':
+        sib = siblings(job.course, job.work, pt) if job.cfg['chapters'] else None
+        p = request('write', job.course, pt, rec, job.d, 'x', job.cfg, siblings=sib)['params']
+    else:
+        p = request('check', job.course, pt, rec, None, 'x', job.cfg)['params']
+    return p['system'][0]['text'], p['messages'][0]['content']
+
+def cc_courses(args, repo, step):
+    """The courses a step looks at, as autoreview does. A course with a run's batch open is left until it is collected."""
+    out = []
+    for work, meta in auto_courses(args, work_root(args, repo)):
+        if step == 'write' and run_open(work):
+            say(meta['name'] + ' (' + meta['id'] + '): a run\'s batch is still open, so its rewrites are left. Run the run command to collect it first.'); continue
+        out.append((work, meta))
+    return out
+
+def cc_save_tasks(folder, step, tasks):
+    """Saves the tasks still waiting. With none, the step's folder goes, and _claude-code too once it is empty."""
+    if tasks: return write_json(os.path.join(folder, 'tasks.json'), {'step': step, 'made': now(), 'tasks': tasks})
+    if os.path.isdir(folder): shutil.rmtree(folder)
+    parent = os.path.dirname(folder)
+    if os.path.isdir(parent) and not os.listdir(parent): os.rmdir(parent)
+
+def cc_export(args, repo):
+    """Writes a task file for each point the step has work for. The only change to a point is the review step saving
+    that a fix now fails the content check, as autoreview does."""
+    step = args.step
+    folder = cc_folder(args, repo, step)
+    cc_start(folder, step)
+    d = dump(repo)
+    tasks, left = [], {}
+    for work, meta in cc_courses(args, repo, step):
+        job = cc_job(work, meta, args, repo, d)
+        recs = [(pt, work.load(pt['id'])) for pt in job.course['points']]
+        recs = [(pt, r) for pt, r in recs if r]
+        if step == 'write': todo = [(pt, r) for pt, r in recs if cc_rewrite(r)]
+        elif step == 'check': todo = [(pt, r) for pt, r in recs if r['stage'] == 'cc-check']
+        else:
+            todo = []
+            for pt, r in recs:
+                if r['stage'] not in ('review', 'match-review', 'failed'): continue
+                why = cc_review_skip(r, pt, meta, d)
+                if why: left[why] = left.get(why, 0) + 1
+                else: todo.append((pt, r))
+            # The fix passed the content check when it was written. It runs again, in case the check has changed since.
+            probs = check_points({r['id']: r['proposal'] for _, r in todo if r['stage'] == 'review'}, meta['kind'], repo, work.dir, meta.get('subject'))
+            for pt, r in [x for x in todo if probs.get(x[1]['id'])]:
+                todo.remove((pt, r)); r['proposal_problems'] = probs[r['id']]; work.put(r)
+                left['the fix fails the content check'] = left.get('the fix fails the content check', 0) + 1
+        if not todo: continue
+        here = os.path.join(folder, meta['id'])
+        if step == 'write': write_text(os.path.join(here, '_writer.md'), writer_system(job.course, d) + '\n')
+        for pt, rec in todo:
+            task, answer = os.path.join(here, rec['id'] + '.md'), os.path.join(here, rec['id'] + '.json')
+            if step == 'review':
+                kind = rec['stage']
+                text = '\n'.join(cc_review_md(rec, pt, meta, d) + [''] + answer_md(shown(answer), REVIEW_SCHEMA, 'Decide as _reviewer.md in the folder above says. '
+                                                                                  'You may answer: ' + ', '.join(CC_ALLOWED[kind]) + '.')) + '\n'
+            else:
+                system, user = cc_ask(job, step, pt, rec)
+                if step == 'write':
+                    text = '\n'.join(['# Write a point: ' + pt['title'], '', 'Course: ' + meta['name'] + '. Point id: ' + rec['id'] + '.', '',
+                                      'The writer\'s rules and examples are in _writer.md, in this folder. Follow them exactly: they are what the API writer is told.',
+                                      '', '## The request', '', user, ''] +
+                                     answer_md(shown(answer), POINT_SCHEMA, 'The point, in the JSON shape the rules describe. The right answer is always the first option.')) + '\n'
+                else:
+                    # Only what the API checker gets: its instructions and the point, with the options in a random order.
+                    text = '\n'.join([system, '', '---', '', user, '', '---', '',
+                                      'Read no other file and run no command. Copy each option exactly as it is written above.', ''] +
+                                     answer_md(shown(answer), CHECK_SCHEMA, 'Your check, in this shape.')) + '\n'
+            write_text(task, text)
+            tasks.append({'course': meta['id'], 'id': rec['id'], 'hash': cc_state(rec), 'task': os.path.relpath(task, folder).replace(os.sep, '/'),
+                          'answer': os.path.relpath(answer, folder).replace(os.sep, '/')})
+    if step == 'review' and tasks: write_text(os.path.join(folder, '_reviewer.md'), prompt('reviewer.md') + '\n')
+    cc_save_tasks(folder, step, tasks)
+    what = {'write': 'rewrites', 'check': 'checks', 'review': 'review decisions'}[step]
+    if not tasks:
+        say('Nothing to ' + {'write': 'rewrite', 'check': 'check', 'review': 'review'}[step] + ' with Claude Code.')
+    else:
+        say('Exported ' + many_of(len(tasks), 'task') + ' for Claude Code (' + what + ') in ' + shown(folder) + ':')
+        for t in tasks: say('  ' + shown(os.path.join(folder, t['task'])) + '  ->  ' + shown(os.path.join(folder, t['answer'])))
+    if left:
+        say('Left for you, and not exported:')
+        for w, n in sorted(left.items(), key=lambda x: -x[1]): say('  ' + w + ': ' + str(n))
+    if tasks:
+        say('Next: answer each task with its JSON file, then run py content/pipeline.py cc-' + step + ' import (content/README.md, Claude Code instead of the API).')
+
+def cc_import(args, repo):
+    """Reads the answers waiting in a step's folder and puts each point back into the normal flow. A task with no answer
+    yet, or an answer with a problem, stays in the folder. A task whose point has moved on since the export is dropped."""
+    step, dry = args.step, args.dry_run
+    folder = cc_folder(args, repo, step)
+    t = cc_tasks(folder)
+    if not t or not t.get('tasks'):
+        say('Nothing to import: no tasks in ' + shown(folder) + '. Run py content/pipeline.py cc-' + step + ' export first.'); return
+    if dry: say('Dry run: nothing is changed.')
+    root, d = work_root(args, repo), dump(repo)
+    only = {m['id'] for _, m in auto_courses(args, root)} if args.outline else None
+    keep, done, stale, waiting, bad = [], [], [], [], []
+    by_course = {}
+    for task in t['tasks']:
+        if only is not None and task['course'] not in only: keep.append(task); continue
+        by_course.setdefault(task['course'], []).append(task)
+    lines = []
+    for cid, tasks in by_course.items():
+        meta = read_json(os.path.join(root, cid, 'course.json'))
+        if not meta:
+            stale += tasks; continue
+        work = Work(root, cid)
+        job = cc_job(work, meta, args, repo, d)
+        got = {}
+        for task in tasks:
+            rec, pt = work.load(task['id']), next((p for p in job.course['points'] if p['id'] == task['id']), None)
+            if not rec or not pt or cc_moved(step, pt, rec, meta, d, task):
+                stale.append(task); continue
+            path = os.path.join(folder, task['answer'])
+            if not os.path.exists(path):
+                waiting.append(task); keep.append(task); continue
+            data, probs = cc_read(path)
+            if not probs: probs = fits(data, {'write': POINT_SCHEMA, 'check': CHECK_SCHEMA, 'review': REVIEW_SCHEMA}[step])
+            if not probs and step == 'check': probs = cc_check_problems(rec, data)
+            if not probs and step == 'review': probs = cc_review_problems(rec, data)
+            if not probs and step == 'write':
+                try: data = to_bank(data)
+                except (KeyError, TypeError, AttributeError): probs = ['the answer is not in the right shape']
+            if probs:
+                bad.append((task, probs)); keep.append(task); continue
+            got[task['id']] = (rec, pt, data, task)
+        if not got: continue
+        if step == 'write': lines += cc_import_write(work, meta, repo, got, dry)
+        elif step == 'check': lines += cc_import_check(work, got, dry)
+        else: lines += cc_import_review(work, meta, root, repo, got, dry)
+        done += [x[3] for x in got.values()]
+    for line in lines: say(line)
+    if not dry:
+        for task in stale + done:
+            for k in ('task', 'answer'):
+                p = os.path.join(folder, task[k])
+                if os.path.exists(p): os.remove(p)
+        cc_save_tasks(folder, step, keep)
+    if stale:
+        say(('Would drop' if dry else 'Dropped') + ' ' + many_of(len(stale), 'task') + ' whose point changed since the export: ' + ', '.join(x['id'] for x in stale) + '.')
+    if waiting: say('Not answered yet: ' + ', '.join(x['id'] for x in waiting) + '.')
+    if bad:
+        say('Answers with a problem, kept in the folder. ' + ('Fix each one and import again:' if step != 'check' else
+            'Delete each one, have a fresh subagent check it again, and import again:'))
+        for task, probs in bad: say('  ' + shown(os.path.join(folder, task['answer'])) + ': ' + '; '.join(probs))
+    if not dry and step == 'write' and any('to be written once more' in l for l in lines):
+        say('Next: py content/pipeline.py cc-write export, to write the ones that failed the content check once more.')
+    elif not dry and step == 'write' and done:
+        say('Next: py content/pipeline.py cc-check export, so a separate subagent checks each one.')
+
+def cc_moved(step, pt, rec, meta, d, task):
+    """True when a point changed since its task was exported: its answer would be about a version that is gone. Only the
+    point's own record counts, so a change to another point in the chapter never throws an answer away."""
+    if cc_state(rec) != task['hash']: return True
+    if step == 'write': return not cc_rewrite(rec)
+    if step == 'check': return rec['stage'] != 'cc-check'
+    return rec['stage'] not in ('review', 'match-review') or cc_review_skip(rec, pt, meta, d) is not None
+
+def cc_import_write(work, meta, repo, got, dry):
+    """Each new version gets the content check. One that fails is written once more, as the API writer's is. The rest go
+    to the Claude Code check, never to the API."""
+    probs = check_points({pid: data for pid, (_, _, data, _) in got.items()}, meta['kind'], repo, work.dir, meta.get('subject'))
+    out, n, again = [], 0, []
+    for pid, (rec, pt, p, _) in got.items():
+        pr = probs.get(pid, [])
+        rec.setdefault('claude_code', []).append({'at': now(), 'step': 'write', 'version': p, 'problems': pr})
+        rec['written_by'] = 'claude-code'
+        if pr and not rec.get('redone'):
+            rec.update(draft=p, redo=pr, redone=True); again.append(pid)
+            log(rec, 'claude-code write: failed the content check, to be written once more')
+        else:
+            rec.update(draft=p, local=pr, stage='cc-check'); rec.pop('redo', None); n += 1
+            log(rec, 'claude-code write: done' + (' (still fails the content check)' if pr else '') + ', waiting for the Claude Code check')
+        if not dry: work.put(rec)
+    out.append(meta['name'] + ' (' + meta['id'] + '): ' + ('would import ' if dry else 'imported ') + many_of(len(got), 'rewrite') + '.')
+    if n: out.append('  Waiting for the Claude Code check: ' + str(n) + '.')
+    if again: out.append('  Failed the content check, to be written once more: ' + ', '.join(again) + '.')
+    return out
+
+def cc_check_problems(rec, data):
+    """A check whose picks are not the point's options can't be read the way the API checker's is."""
+    norm = lambda s: re.sub(r'\s+', ' ', s.strip().lower())
+    out = []
+    for k in 'ab':
+        opts = {norm(o) for o in rec['draft'][k]['opts']}
+        for o in [data[k]['best']] + data[k]['also_right']:
+            if norm(o) not in opts: out.append('question ' + k + ': “' + o + '” is not one of its options, copied exactly')
+    return out
+
+def cc_import_check(work, got, dry):
+    """Records each check as the Opus checker's answer is recorded: cleared, to the fix, or to the owner."""
+    tally, out = {}, []
+    for pid, (rec, pt, data, _) in got.items():
+        log(rec, 'claude-code check: answered by a separate subagent')
+        checked(rec, data)
+        rec['checked_by'] = 'claude-code'
+        rec.setdefault('claude_code', []).append({'at': now(), 'step': 'check', 'check': data})
+        res = {'cleared': 'cleared', 'fix': 'flagged, waiting for a fix', 'review': 'for you to review'}[rec['stage']]
+        tally[res] = tally.get(res, 0) + 1
+        if not dry: work.put(rec)
+    meta = read_json(os.path.join(work.dir, 'course.json'))
+    out.append(meta['name'] + ' (' + meta['id'] + '): ' + ('would import ' if dry else 'imported ') + many_of(len(got), 'check') + ': ' +
+               ', '.join(str(n) + ' ' + k for k, n in tally.items()) + '.')
+    if tally.get('flagged, waiting for a fix'):
+        out.append('  A flagged point gets its fix from the API: run the course in the key window (content/README.md, step 7), then review.')
+    return out
+
+# ---------- the Claude Code reviewer ----------
+def cc_last(rec, step='review'):
+    return next((e for e in reversed(rec.get('claude_code', [])) if e['step'] == step), None)
+
+def cc_review_skip(rec, pt, meta, d):
+    """Why a point in the review list stays with the owner, or None if the Claude Code reviewer may decide it."""
+    if rec['stage'] == 'failed': return 'not written'
+    if meta['kind'] == 'english': return 'an English course, whose points always come to you'
+    if rec.get('auto_undone'): return 'you undid an automatic decision on it'
+    if topic_named(rec): return 'a sensitive topic'
+    m = rec.get('confirm') or rec.get('match') or {}
+    bank = bank_point(d, m['same']) if rec['stage'] == 'match-review' and m.get('same') else None
+    if SENSITIVE.search(pt['title'] + ' ' + pt['brief'] + ' ' + json.dumps([rec.get('draft'), rec.get('proposal'), bank], ensure_ascii=False)):
+        return 'a word that may mean a sensitive topic'
+    if rec['stage'] == 'match-review':
+        if not bank: return 'no bank point to compare'
+    elif not rec.get('proposal'): return 'no fix'
+    elif rec.get('proposal_problems'): return 'the fix fails the content check'
+    last = cc_last(rec)
+    if last and last.get('result') == 'left' and last.get('item') == cc_state(rec):
+        return 'Claude Code left it for you already'
+    return None
+
+def cc_review_md(rec, pt, meta, d):
+    """What the reviewer reads about one point: the point, the checker's flags, the fix and any fresh check, or the
+    possible match."""
+    spot = rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')
+    kind = 'Spot check' if spot else 'Possible match' if rec['stage'] == 'match-review' else 'Flagged'
+    ui, ci = pt['unit'], pt['chapter']
+    u = meta['units'][ui]; ch = u['chapters'][ci]
+    out = ['# ' + kind + ': ' + pt['title'], '', 'Course: ' + meta['name'] + ' (' + meta.get('about', '') + '). Unit ' + str(ui + 1) + ': ' + u['title'] +
+           '. Chapter ' + str(ci + 1) + ': ' + ch['title'] + '.', 'Point id: ' + rec['id'] + '.', '', 'The owner\'s brief: ' + pt['brief'], '',
+           'The other points in this chapter:'] + ['- ' + p['title'] + ': ' + p['brief'] for p in ch['points'] if p['id'] != pt['id']]
+    if rec['stage'] == 'match-review':
+        m = rec.get('confirm') or rec.get('match') or {}
+        out += ['', '## The possible match', '', 'The bank point ' + m['same'] + ', used in ' + used_text(d, m['same']) + '.',
+                (MODEL_NAMES.get(m.get('model'), 'The matcher')) + ' said ' + str(m.get('verdict') or 'reuse') + ', ' + str(m.get('sure') or 'not') + ' sure: ' + (m.get('reason') or '')]
+        if m.get('changes'): out += ['Changes it named for this course:'] + ['- ' + c for c in m['changes']]
+        out += ['', '## The bank point, as students see it now', ''] + point_md(bank_point(d, m['same']))
+        return out
+    if spot:
+        out += ['', 'A spot check: ' + ('a fresh check of the fix agreed with it, so recheck would have cleared this point with the fix.'
+                                        if (rec.get('auto') or {}).get('by') == 'recheck' else 'autoreview would have cleared this point with the fix.') +
+                ' Decide it as the owner would decide any other point.']
+    out += ['', '## The point as written', ''] + point_md(rec['draft'])
+    if rec.get('local'): out += ['', 'It fails the content check: ' + '; '.join(rec['local'])]
+    c = rec.get('check') or {}
+    out += ['', '## What the checker said', ''] + ['- ' + f for f in rec.get('flags') or []] + ['Summary: ' + (c.get('summary') or ''), 'Sure: ' + (c.get('sure') or '')]
+    out += ['', '## The fix', ''] + point_md(rec['proposal'])
+    rc = rec.get('recheck')
+    if rc:
+        out += ['', '## A fresh check of the fix', '', 'Result: ' + rc['result'] + ('. Kept because: ' + '; '.join(rc['why']) if rc.get('why') else '') + '.']
+        out += ['- ' + f for f in rc.get('flags') or []] + (['Summary: ' + rc['check'].get('summary', '')] if rc.get('check') else [])
+    return out
+
+def cc_review_problems(rec, data):
+    """An answer the reviewer may not give for this point."""
+    kind = rec['stage']
+    if data['decision'] not in CC_ALLOWED[kind]:
+        return ['decision ' + data['decision'] + ' is not one of ' + ', '.join(CC_ALLOWED[kind]) + ' for this point']
+    if data['decision'] == 'reject' and not data['note'].strip(): return ['a reject needs a note for the writer, naming each problem']
+    if data['decision'] == 'approve' and rec.get('local'): return ['this version fails the content check, so it cannot be approved as written']
+    return []
+
+def cc_import_review(work, meta, root, repo, got, dry):
+    """Applies each decision the reviewer was highly sure of, as the review page would. Anything else stays with the
+    owner, with the reviewer's reason. Each decision keeps a copy of the point as it was, for --undo."""
+    out, tally, left = [], {}, []
+    for pid, (rec, pt, data, task) in got.items():
+        entry = {'at': now(), 'step': 'review', 'decision': data['decision'], 'sure': data['sure'], 'reason': data['reason'].strip(), 'item': task['hash']}
+        if data['note'].strip(): entry['note'] = data['note'].strip()[:1000]
+        if data['decision'] == 'leave' or data['sure'] != 'high':
+            entry['result'] = 'left'; left.append(pid)
+            rec.setdefault('claude_code', []).append(entry)
+            log(rec, 'claude-code review: left for you (' + ('not highly sure' if data['decision'] != 'leave' else 'it chose to leave it') + ')')
+            if not dry: work.put(rec)
+            continue
+        saved = {k: v for k, v in copy.deepcopy(rec).items() if k not in ('log', 'claude_code')}
+        saved['rewrites'] = rewrites(rec)   # kept as a number, so the log line of this decision is never counted after an undo
+        spot = rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')
+        action = 'reject' if data['decision'] == 'new' else data['decision']
+        res = decide_rec(rec, {'action': action, 'note': data['note'], 'changes': data['changes'] if data['decision'] == 'adapt' else None}, 'claude-code')
+        if not res['ok']:
+            entry.update(result='left', why=res['message']); left.append(pid)
+            rec.setdefault('claude_code', []).append(entry)
+            log(rec, 'claude-code review: left for you (' + res['message'] + ')')
+            if not dry: work.put(rec)
+            continue
+        entry.update(result='decided', saved=saved, after=cc_state(rec))
+        rec.setdefault('claude_code', []).append(entry)
+        tally[data['decision']] = tally.get(data['decision'], 0) + 1
+        if not dry:
+            work.put(rec)
+            if spot: auto_answer(work, pid, action, 'claude-code')
+    out.append(meta['name'] + ' (' + meta['id'] + '): ' + ('would decide ' if dry else 'decided ') + str(sum(tally.values())) + ' and ' +
+               ('would leave ' if dry else 'left ') + str(len(left)) + ' for you.')
+    for k, n in tally.items(): out.append('  ' + CC_DECISION[k][0].upper() + CC_DECISION[k][1:] + ': ' + str(n) + '.')
+    if left: out.append('  Left for you: ' + ', '.join(left) + '.')
+    return out
+
+def cc_undo(args, repo):
+    """Sends the points the Claude Code reviewer decided back to the review list, as they were. A point that has moved on
+    since (written again, or adapted) stands. These points are never decided automatically again."""
+    root = work_root(args, repo)
+    if args.dry_run: say('Dry run: nothing is changed.')
+    courses = auto_courses(args, root)
+    if args.point and len(courses) != 1: raise Stop('--point needs the one outline its point is in.')
+    for work, meta in courses:
+        if run_open(work):
+            say(meta['name'] + ' (' + meta['id'] + '): a run\'s batch is still open. Run the run command to collect it, then undo.'); continue
+        recs = []
+        for r in meta_recs(work, meta):
+            e = cc_last(r)   # only its last look: an older decision was replaced by what came after it
+            if e and e.get('result') == 'decided' and not e.get('undone') and (not args.point or r['id'] == args.point): recs.append((r, e))
+        if args.point and not recs: raise Stop(args.point + ' has no Claude Code review decision to undo in ' + meta['name'] + '.')
+        back, stays = [], []
+        for r, e in recs:
+            mine = r.get('cleared_by') == 'claude-code' and (r['stage'] == 'cleared' or r['stage'] == 'reuse' or cc_state(r) == e['after'])
+            (back if mine else stays).append((r, e))
+        say(meta['name'] + ' (' + meta['id'] + '): ' + str(len(back)) + (' would go' if args.dry_run else ' went') + ' back to the review list.')
+        for r, e in back: say('    ' + r['id'] + ' (' + CC_DECISION[e['decision']] + ')')
+        if stays:
+            say('  Moved on since, so ' + ('they stand' if len(stays) > 1 else 'it stands') + '. Decide the new version in the review list:')
+            for r, e in stays: say('    ' + r['id'] + ' (' + CC_DECISION[e['decision']] + ')')
+        if args.dry_run: continue
+        st, spots = auto_state(work), False
+        for r, e in back:
+            history, lines = r.get('claude_code', []), r.get('log', [])
+            saved = e.pop('saved')
+            e['undone'] = now()
+            r.clear(); r.update(saved, claude_code=history, log=lines, auto_undone={'by': 'claude-code', 'undone': now()})
+            log(r, 'claude-code review: undone, back to the review list')
+            work.put(r)
+            for a in st['spot_answers']:
+                if a['id'] == r['id'] and a.get('by') == 'claude-code' and not a.get('undone'): a['undone'] = now(); spots = True
+        if spots: write_json(auto_path(work), st)
+        if back: say('  If this course was published, run publish again: a chapter with a point waiting for you shows as Coming soon until you clear it.')
+
+def cc_lines(recs):
+    """Lines for a course's summary: what Claude Code wrote, checked and decided in review."""
+    out = []
+    wrote = sum(1 for r in recs for e in r.get('claude_code', []) if e['step'] == 'write')
+    checks = sum(1 for r in recs for e in r.get('claude_code', []) if e['step'] == 'check')
+    waiting = len([r for r in recs if r['stage'] == 'cc-check'])
+    if wrote or checks or waiting:
+        out.append('Claude Code wrote ' + many_of(wrote, 'version') + ' and checked ' + many_of(checks, 'point') + '.' +
+                   (' Waiting for the Claude Code check: ' + str(waiting) + '.' if waiting else ''))
+    decided = [e for r in recs for e in r.get('claude_code', []) if e['step'] == 'review' and e.get('result') == 'decided' and not e.get('undone')]
+    left = [r for r in recs if r['stage'] in ('review', 'match-review') and (cc_last(r) or {}).get('result') == 'left']
+    if decided or left:
+        tally = {}
+        for e in decided: tally[e['decision']] = tally.get(e['decision'], 0) + 1
+        out.append('Decided by Claude Code in review: ' + str(len(decided)) + (' (' + ', '.join(CC_DECISION[k] + ' ' + str(n) for k, n in tally.items()) + ')' if tally else '') +
+                   '. Left for you after its look: ' + str(len(left)) + '.')
+    return out
+
+def cmd_cc(args):
+    words = list(args.words)
+    step = args.cmd[3:]
+    action = words.pop(0) if words and words[0] in ('export', 'import') else None
+    args.step, args.outline = step, words
+    repo = args.repo or REPO
+    if getattr(args, 'undo', False):
+        if action: raise Stop('--undo works on its own: py content/pipeline.py cc-review --undo')
+        return cc_undo(args, repo)
+    if getattr(args, 'point', None): raise Stop('--point works with --undo.')
+    if not action: raise Stop('Say export or import, such as: py content/pipeline.py cc-' + step + ' export')
+    if action == 'export':
+        if args.dry_run: raise Stop('--dry-run works with import' + (' and --undo' if step == 'review' else '') + '. Export changes no point.')
+        return cc_export(args, repo)
+    return cc_import(args, repo)
+
+
 def main(argv=None):
     if hasattr(sys.stdout, 'reconfigure'):
         sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -2719,13 +3244,24 @@ def main(argv=None):
     rb.add_argument('--dry-run', action='store_true', help='show which questions it would rewrite and the estimate, and send nothing')
     rb.add_argument('--no-wait', action='store_true', help='send or collect once, then stop instead of waiting for the batch')
     rb.set_defaults(now=False)
+    for name, text in [('cc-write', 'Claude Code writes the points waiting for a rewrite, with no API calls'),
+                       ('cc-check', 'a separate Claude Code subagent checks each point Claude Code wrote, with no API calls'),
+                       ('cc-review', 'Claude Code decides the review list\'s spot checks, possible matches and clear fixes, with no API calls')]:
+        c = sub.add_parser(name, help=text)
+        c.add_argument('words', nargs='*', metavar='export|import [outline ...]',
+                       help='export writes the tasks, import reads the answers. Then outline files or folders; with none, every course in content/work')
+        c.add_argument('--dry-run', action='store_true', help='with import' + (' or --undo' if name == 'cc-review' else '') + ', show what it would do, and change nothing')
+        if name == 'cc-review':
+            c.add_argument('--undo', action='store_true', help='send the points it decided back to the review list')
+            c.add_argument('--point', help='with --undo, only this point id')
     r = sub.add_parser('review', help='the review page, on this computer only')
     r.add_argument('--port', type=int, default=8765)
     r.add_argument('--no-browser', action='store_true')
     args = ap.parse_args(argv)
     try:
         {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review,
-         'autoreview': cmd_autoreview, 'recheck': cmd_recheck, 'autoreject': cmd_autoreject, 'rebalance': cmd_rebalance}[args.cmd](args)
+         'autoreview': cmd_autoreview, 'recheck': cmd_recheck, 'autoreject': cmd_autoreject, 'rebalance': cmd_rebalance,
+         'cc-write': cmd_cc, 'cc-check': cmd_cc, 'cc-review': cmd_cc}[args.cmd](args)
     except Stop as e:
         say(str(e))
         return 1

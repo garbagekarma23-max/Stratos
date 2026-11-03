@@ -28,7 +28,12 @@ new, a reuse with nothing written, a bank point reused twice, an
 adapt with only the changes, a question kept word for word caught and adapted again, the adapted point checked and
 flagged like any other, a possible match adapted from the review page, a reuse that fails the content check adapted,
 a sensitive or English reuse sent to the owner, and two Victorian courses published with their units, written to
-tests/units/); and the API key never printed or saved.
+tests/units/); the Claude Code steps (rewrites exported with exactly the API writer's prompt, the shape and content
+checks on import, a failure written once more, run leaving the points Claude Code wrote, checks with exactly the API
+checker's prompt and nothing about the rewrite, picks that are not options refused, a check recorded as an Opus check
+with autoreview, recheck and the fix carrying on, and the reviewer: what it may decide and what always stays, only highly
+sure decisions applied as the review page would, cleared_by claude-code, spot check answers, the dry run, nothing twice,
+and undo); and the API key never printed or saved.
 """
 import _thread, contextlib, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
 from types import SimpleNamespace as NS
@@ -1096,6 +1101,291 @@ def states_tests(tmp, repo, printed, api):
     return {os.path.join(dd, f): open(os.path.join(repo_s, 'src', dd, f), encoding='utf-8').read()
             for dd, f in [('bank', 'tst.js'), ('bank', 'tsv.js'), ('courses', 'tsv-units-12.js'), ('courses', 'tsv-units-34.js')]}
 
+CLAUDE_CODE = """id: tst-cc
+subject: Testing
+bank: tcc
+name: Testing Claude Code, Year 9
+about: NSW, Handover topic
+years: [9]
+place: nsw
+kind: standard
+note: A made course for the tests of the Claude Code steps.
+units:
+  - title: Handover unit
+    chapters:
+      - title: Rewrites chapter
+        points:
+          - title: Flag cc one
+            brief: The checker flags it, and the owner rejects it.
+          - title: Flag cc two
+            brief: The checker flags it, and the owner rejects it too.
+          - title: Flag cc three
+            brief: The checker flags it, and the owner rejects it once more.
+          - title: Plain cc four
+            brief: The checker passes it.
+"""
+
+def claude_code_tests(tmp, printed, api):
+    """The Claude Code steps on a course run here: rewrites exported with the writer's prompt and imported through the
+    content check, the check of each by a separate subagent with only the checker's prompt, recorded as an Opus check,
+    and the rest of the flow carrying on. No API call and no key."""
+    repo_c, work_c = os.path.join(tmp, 'repo-cc'), os.path.join(tmp, 'work-cc')
+    copy_repo(repo_c)
+    outline = os.path.join(tmp, 'tst-cc.yaml')
+    with open(outline, 'w', encoding='utf-8') as f: f.write(CLAUDE_CODE)
+    def go(*argv):
+        code, out = run(['--repo', repo_c, '--work', work_c] + list(argv)); printed.append(out); return code, out
+    go('run', outline, '--max-dollars', '5')
+    W = pipeline.Work(work_c, 'tst-cc')
+    ids = ['tcc-flag-cc-one', 'tcc-flag-cc-two', 'tcc-flag-cc-three']
+    check(all(W.load(i)['stage'] == 'review' for i in ids) and W.load('tcc-plain-cc-four')['stage'] == 'cleared', 'a course for the Claude Code steps is written and checked')
+    for n, i in enumerate(ids):
+        pipeline.decide(work_c, repo_c, {'course': 'tst-cc', 'id': i, 'action': 'reject', 'note': 'NOTE' + str(n) + ': say it more plainly.'})
+    folder = os.path.join(work_c, pipeline.CC_DIR, 'write')
+    files = lambda: {os.path.join(r_, f): open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(work_c) for f in fs}
+    answer = lambda pid, data, step='write': pipeline.write_json(os.path.join(work_c, pipeline.CC_DIR, step, 'tst-cc', pid + '.json'), data)
+    task = lambda pid, step='write': open(os.path.join(work_c, pipeline.CC_DIR, step, 'tst-cc', pid + '.md'), encoding='utf-8').read()
+    calls = lambda: (api.created, len(api.streamed), api.billed)
+    def mine(title, n, dash=False):
+        # A version of the session's own: none of the rejected version's words.
+        p = fake_point(title); p['remember'] = 'A new line for point ' + n + ('— always' if dash else '.'); return p
+    del os.environ['ANTHROPIC_API_KEY']
+    first = calls()
+
+    code, out = go('cc-write', 'import')
+    check(code == 0 and 'Nothing to import' in out, 'import before an export says there is nothing to import')
+    code, out = go('cc-write')
+    check(code == 1 and 'Say export or import' in out, 'a Claude Code step needs export or import')
+    code, out = go('cc-write', 'export', '--dry-run')
+    check(code == 1 and '--dry-run works with import' in out, 'and --dry-run goes with import')
+
+    # ---------- write ----------
+    code, out = go('cc-write', 'export')
+    check(code == 0 and 'Exported 3 tasks for Claude Code (rewrites)' in out and calls() == first, 'cc-write exports the 3 rejected points, with no key and no API call')
+    job = pipeline.setup(NS(repo=repo_c, work=work_c, outline=outline))
+    reqs, items = pipeline.next_requests(job.work, job.course, job.d, job.cfg)
+    sent = {items[r['custom_id']]['pid']: r['params'] for r in reqs if items[r['custom_id']]['stage'] == 'write'}
+    writer = open(os.path.join(folder, 'tst-cc', '_writer.md'), encoding='utf-8').read()
+    check(sorted(sent) == sorted(ids) and all(writer.strip() == p['system'][0]['text'].strip() and p['messages'][0]['content'] in task(i) for i, p in sent.items()),
+          'each task has exactly what the API writer would get: the writer\'s rules and examples, and the request')
+    check(all('NOTE' + str(n) in task(i) and 'The owner rejected this earlier version' in task(i) and 'Hold on to flag cc' in task(i) for n, i in enumerate(ids)),
+          'which shows the rejected version and the owner\'s note')
+    check(all(os.path.join(work_c, pipeline.CC_DIR, 'write', 'tst-cc', i + '.json').replace(os.sep, '/') in task(i).replace(os.sep, '/') for i in ids), 'and names the answer file')
+    good = fake_point('Clean cc one'); good['remember'] = 'A new remember line for the first point.'
+    answer(ids[0], good)
+    answer(ids[1], mine('Flag cc two', 'two', dash=True))
+    bad = mine('Flag cc three', 'three'); del bad['remember']
+    answer(ids[2], bad)
+    code, out = go('cc-write', 'export')
+    check(code == 1 and 'waiting to be imported' in out, 'export again refuses while answers wait to be imported, so none is lost')
+    before = files()
+    code, out = go('cc-write', 'import', '--dry-run')
+    check(code == 0 and 'Dry run' in out and 'would import 2 rewrites' in out and files() == before, 'the import\'s dry run changes nothing')
+    code, out = go('cc-write', 'import')
+    a, b, c = (W.load(i) for i in ids)
+    check(code == 0 and a['stage'] == 'cc-check' and a['written_by'] == 'claude-code' and a['draft'] == pipeline.to_bank(good) and
+          a['claude_code'][-1]['version'] == a['draft'] and any('claude-code write: done, waiting for the Claude Code check' in l for l in a['log']),
+          'a rewrite that passes the content check is recorded as written by claude-code, and waits for the Claude Code check')
+    check(b['stage'] == 'write' and b['redo'] and b['written_by'] == 'claude-code' and 'Failed the content check, to be written once more: ' + ids[1] in out,
+          'one that fails the content check is to be written once more, as the API writer\'s is')
+    check(c['stage'] == 'write' and 'is missing remember' in out and os.path.exists(os.path.join(folder, 'tst-cc', ids[2] + '.json')) and
+          not os.path.exists(os.path.join(folder, 'tst-cc', ids[0] + '.json')), 'an answer not in the point\'s shape stays in the folder with what is wrong, and the others are taken out')
+    reqs, items = pipeline.next_requests(W, job.course, job.d, job.cfg)
+    code, out = go('status', outline)
+    check(ids[0] not in [it.get('pid') for it in items.values()] and 'waiting for the Claude Code check' in out and 'Claude Code wrote 2 versions' in out,
+          'run never sends a point Claude Code wrote to the API checker, and status says where it is')
+    answer(ids[2], mine('Flag cc three', 'three'))
+    code, out = go('cc-write', 'import')
+    check(W.load(ids[2])['stage'] == 'cc-check' and not os.path.exists(os.path.join(folder, 'tasks.json')), 'the fixed answer goes in, and the folder is emptied')
+    code, out = go('cc-write', 'export')
+    check('Exported 1 task' in out and 'Your last version failed the content check' in task(ids[1]) and 'A new line for point two— always' in task(ids[1]),
+          'export again gives the point that failed the content check, with the problems')
+    answer(ids[1], mine('Flag cc two', 'two', dash=True))
+    go('cc-write', 'import')
+    b = W.load(ids[1])
+    check(b['stage'] == 'cc-check' and b['local'] and any('(still fails the content check)' in l for l in b['log']), 'a second failure goes on to the check, as the API writer\'s does')
+    code, out = go('cc-write', 'export')
+    check('Nothing to rewrite' in out and calls() == first, 'then there is nothing left to rewrite, and still no API call')
+
+    # ---------- check ----------
+    code, out = go('cc-check', 'export')
+    check('Exported 3 tasks for Claude Code (checks)' in out, 'cc-check exports each point Claude Code wrote')
+    checker = pipeline.prompt('checker.md')
+    users = {i: pipeline.check_user(job.course, pipeline.point_of(job.course, i), W.load(i)) for i in ids}
+    check(all(checker in task(i, 'check') and users[i] in task(i, 'check') for i in ids), 'each check task has exactly what the API checker gets, with the options in a random order')
+    # The answer file's path names the folder, _claude-code, which says nothing about who wrote the point.
+    told = lambda i: task(i, 'check').replace(os.path.join(work_c, pipeline.CC_DIR, 'check', 'tst-cc', i + '.json').replace(os.sep, '/'), '')
+    check(not any(w in told(i) for i in ids for w in ['NOTE', 'Hold on to flag cc', 'rejected', 'rewrit', 'Claude Code', 'claude-code', 'failed the content check']),
+          'and nothing more: not the note, the rejected version, the content check\'s problems, or that it was rewritten or by whom')
+    def reply(i):
+        return api.reply({'model': pipeline.OPUS, 'system': [{'text': checker}], 'messages': [{'content': users[i]}]})[1]
+    wrong = reply(ids[0]); wrong['a']['best'] = 'Right: not one of them'
+    answer(ids[0], wrong, 'check')
+    for i in ids[1:]: answer(i, reply(i), 'check')
+    code, out = go('cc-check', 'import')
+    check(W.load(ids[0])['stage'] == 'cc-check' and 'is not one of its options' in out and 'fresh subagent' in out, 'a check whose pick is not one of the options is kept, to be checked again')
+    answer(ids[0], reply(ids[0]), 'check')
+    code, out = go('cc-check', 'import')
+    a, b = W.load(ids[0]), W.load(ids[1])
+    check(a['stage'] == 'cleared' and a['cleared_by'] == 'checker' and a['checked_by'] == 'claude-code' and a['final'] == a['draft'] and a['check'] == reply(ids[0]),
+          'a check that passes clears the point, recorded as an Opus check is, marked checked by claude-code')
+    check(b['stage'] == 'fix' and b['flags'] and b['claude_code'][-1]['check'] == b['check'] and any('claude-code check: answered by a separate subagent' in l for l in b['log']),
+          'a flagged one goes to the fix, with its flags')
+    seen = len([r for bb in api.batches.values() for r in bb['requests']])
+    os.environ['ANTHROPIC_API_KEY'] = KEY
+    code, out = go('run', outline, '--max-dollars', '5')
+    new = [r for bb in api.batches.values() for r in bb['requests']][seen:]
+    check(new and all(stage_of(r['params']) == 'fix' for r in new) and W.load(ids[1])['stage'] == 'review' and W.load(ids[1])['proposal'],
+          'the next run sends only the fixes, and the flagged points reach the review list')
+    check('Claude Code wrote 4 versions and checked 3 points.' in out and 'Sent to the Opus checker: 1 of 4 points checked' in out,
+          'the summary counts what Claude Code wrote and checked, apart from the Opus checker')
+    code, out = go('autoreview', outline, '--dry-run')
+    check('Left for you in the review list after this: 2.' in out and 'a possible factual error: 2' in out, 'autoreview reads a Claude Code check as it reads an Opus one')
+    code, out = go('recheck', outline, '--dry-run')
+    check('Fixes to recheck: 2.' in out, 'and recheck sends the fixes of points Claude Code checked')
+    items_ = {i['id']: i for i in pipeline.review_items(work_c, repo_c)['items']}
+    check(items_[ids[1]]['writtenBy'] == 'claude-code' and items_[ids[1]]['checkedBy'] == 'claude-code', 'the review page says who wrote and checked it')
+    r = W.load(ids[1]); pipeline.decide(work_c, repo_c, {'course': 'tst-cc', 'id': ids[1], 'action': 'reject', 'note': 'Again.'})
+    check('written_by' not in W.load(ids[1]) and 'checked_by' not in W.load(ids[1]), 'a rejection clears who wrote and checked the last version')
+
+CCR_COURSE = {'id': 'tst-ccr', 'subject': 'Testing', 'name': 'Testing Review, Year 9', 'about': 'NSW, Review topic', 'kind': 'standard', 'years': [9]}
+
+def cc_review_tests(tmp, repo, printed, api):
+    """The Claude Code reviewer, on a work folder of points waiting for the owner made here: which points it may decide
+    and which stay, highly sure decisions only, cleared_by claude-code, the dry run, undo, and never twice."""
+    work = os.path.join(tmp, 'work-ccr')
+    def go(*argv):
+        code, out = run(['--repo', repo, '--work', work, 'cc-review'] + list(argv)); printed.append(out); return code, out
+    pts = []
+    def point(name, stage='review', fix=True, brief=None, **extra):
+        pid = 'tcr-' + name
+        draft = pipeline.to_bank(fake_point('Review ' + name))
+        c = {'a': {'best': draft['a']['opts'][0], 'also_right': []}, 'b': {'best': draft['b']['opts'][0], 'also_right': []}, 'sure': 'high', 'sensitive': 'none',
+             'summary': 'Problems found.', 'problems': [{'part': 'card', 'kind': 'wording', 'detail': 'CHECKERSAID: say it more plainly.'}]}
+        rec = {'id': pid, 'title': draft['title'], 'brief': 'x', 'stage': stage, 'log': []}
+        if stage in ('review', 'failed'):
+            rec.update(draft=draft, check=c, sensitive='none', local=[])
+            rec['flags'], _ = pipeline.flags_for(rec)
+            if fix:
+                p = json.loads(json.dumps(draft)); p['remember'] = 'THEFIX: a clearer remember line.'
+                rec.update(proposal=p, proposal_problems=[])
+        else:
+            rec.update(match={'verdict': 'adapt', 'same': 'e-scarcity', 'changes': ['A change Haiku named.'], 'sure': 'medium', 'reason': 'MATCHREASON', 'model': pipeline.HAIKU},
+                       shortlist=[['e-scarcity', 0.5]])
+        rec.update(extra)
+        pts.append({'id': pid, 'title': draft['title'], 'brief': brief or 'The brief of ' + name + '.', 'codes': [], 'reuse': None, 'unit': 0, 'chapter': 0})
+        return rec
+    decide = {'tcr-spot': ('fix', 'high'), 'tcr-fix': ('fix', 'high'), 'tcr-unsure': ('approve', 'medium'), 'tcr-reject': ('reject', 'high'), 'tcr-leave': ('leave', 'high'),
+              'tcr-reuse': ('reuse', 'high'), 'tcr-adapt': ('adapt', 'high'), 'tcr-new': ('new', 'high'), 'tcr-wrongkind': ('reuse', 'high'), 'tcr-nonote': ('reject', 'high'),
+              'tcr-stale': ('fix', 'high')}
+    recs = [point('spot', auto={'spot': True, 'by': 'autoreview', 'n': 1}), point('fix'), point('unsure'), point('reject'), point('leave'), point('wrongkind'), point('nonote'),
+            point('stale'), point('reuse', 'match-review'), point('adapt', 'match-review'), point('new', 'match-review')]
+    stay = {'tcr-nofix': (point('nofix', fix=False), 'no fix'), 'tcr-topic': (point('topic', sensitive='drugs'), 'a sensitive topic'),
+            'tcr-word': (point('word', brief='How vaping harms the lungs.'), 'a word that may mean a sensitive topic'),
+            'tcr-undone': (point('undone', auto_undone={'by': 'autoreview', 'undone': pipeline.now()}), 'you undid an automatic decision on it'),
+            'tcr-failed': (point('failed', 'failed'), 'not written')}
+    bad = point('badfix'); bad['proposal']['remember'] = 'A dash — in the fix'
+    stay['tcr-badfix'] = (bad, 'the fix fails the content check')
+    W = pipeline.Work(work, 'tst-ccr')
+    for r in recs + [r for r, _ in stay.values()]: W.put(r)
+    pipeline.write_json(os.path.join(W.dir, 'course.json'), dict(CCR_COURSE, units=[{'title': 'A unit', 'chapters': [{'id': 'tcr-1-1', 'title': 'A chapter', 'points': pts}]}]))
+    E = pipeline.Work(work, 'tst-ccr-eng')
+    eng = point('english'); pts_e = [pts.pop()]
+    E.put(eng)
+    pipeline.write_json(os.path.join(E.dir, 'course.json'), dict(CCR_COURSE, id='tst-ccr-eng', name='Testing English', kind='english',
+                        units=[{'title': 'A unit', 'chapters': [{'id': 'tcr-e-1', 'title': 'A chapter', 'points': pts_e}]}]))
+    T = pipeline.Work(work, 'tst-ccr-t')
+    T.put(point('trial')); pts.pop()
+    pipeline.write_json(os.path.join(T.dir, 'course.json'), dict(CCR_COURSE, id='tst-ccr-t', name='Trial', trial_of='tst-ccr',
+                        units=[{'title': 'A unit', 'chapters': [{'id': 'tcr-t-1', 'title': 'A chapter', 'points': [{'id': 'tcr-trial', 'title': 'T', 'brief': 'x', 'unit': 0, 'chapter': 0}]}]}]))
+    outline = os.path.join(tmp, 'tst-ccr.yaml')
+    with open(outline, 'w', encoding='utf-8') as f: f.write('id: tst-ccr\nsubject: Testing\n')
+    folder = os.path.join(work, pipeline.CC_DIR, 'review')
+    files = lambda: {os.path.join(r_, f): open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(work) for f in fs}
+    task = lambda pid: open(os.path.join(folder, 'tst-ccr', pid + '.md'), encoding='utf-8').read()
+    def answer(pid, decision, sure='high', note='', changes=()):
+        pipeline.write_json(os.path.join(folder, 'tst-ccr', pid + '.json'), {'decision': decision, 'sure': sure, 'reason': 'REASON for ' + pid + '.',
+                            'note': note, 'changes': list(changes)})
+    st = lambda pid: W.load(pid)['stage']
+    calls = (api.created, len(api.streamed), api.billed)
+    del os.environ['ANTHROPIC_API_KEY']
+
+    code, out = go('export')
+    exported = sorted(r['id'] for r in recs)
+    listed = sorted(t['id'] for t in pipeline.read_json(os.path.join(folder, 'tasks.json'))['tasks'])
+    check(code == 0 and listed == exported, 'cc-review exports spot checks, possible matches and flagged points with a fix')
+    check(all('    ' + w + ': 1' in out.replace('  ' + w, '    ' + w) or w + ': 1' in out for _, w in stay.values()) and 'an English course, whose points always come to you: 1' in out and
+          'tst-ccr-t' not in out and not os.path.exists(os.path.join(folder, 'tst-ccr-t')), 'and leaves the rest for you, with each reason, and trials out')
+    check(W.load('tcr-badfix')['proposal_problems'], 'a fix that fails the content check has its problems saved, as autoreview does')
+    rules = open(os.path.join(folder, '_reviewer.md'), encoding='utf-8').read()
+    check(rules.strip() == pipeline.prompt('reviewer.md') and 'Always leave for the owner' in rules, 'the reviewer\'s rules are in the folder')
+    check('CHECKERSAID' in task('tcr-fix') and 'THEFIX' in task('tcr-fix') and 'You may answer: fix, approve, reject, leave.' in task('tcr-fix') and
+          'autoreview would have cleared this point with the fix' in task('tcr-spot'), 'a flagged point\'s task has the point, the checker\'s flags, the fix and its choices')
+    check('MATCHREASON' in task('tcr-reuse') and 'The bank point e-scarcity' in task('tcr-reuse') and 'You may answer: reuse, adapt, new, leave.' in task('tcr-reuse'),
+          'a possible match\'s task has the bank point, what the matcher said and its choices')
+    for pid, (dec, sure) in decide.items():
+        answer(pid, dec, sure, note='WRITERNOTE: fix the card.' if pid == 'tcr-reject' else '', changes=['Use this state\'s term.'] if dec == 'adapt' else ())
+    r = W.load('tcr-stale'); r['proposal']['remember'] = 'Changed since the export.'; W.put(r)
+    before = files()
+    code, out = go('import', '--dry-run')
+    check(code == 0 and 'Testing Review, Year 9 (tst-ccr): would decide 6 and would leave 2 for you.' in out and files() == before, 'the dry run says what it would decide, and changes nothing')
+    code, out = go('import')
+    check(code == 0 and 'decided 6 and left 2 for you' in out and (api.created, len(api.streamed), api.billed) == calls, 'import decides them, with no key and no API call')
+    s = W.load('tcr-spot'); f = W.load('tcr-fix')
+    check(all(x['stage'] == 'cleared' and x['cleared_by'] == 'claude-code' and x['final'] == x['proposal'] for x in [s, f]) and
+          any('claude-code review: approved with the fix' in l for l in f['log']), 'a highly sure fix is used, marked cleared_by claude-code')
+    ans = pipeline.read_json(pipeline.auto_path(W))['spot_answers']
+    check(s['auto']['claude_code'] == 'fix' and ans == [dict(ans[0], id='tcr-spot', action='fix', by='claude-code')], 'a spot check it decides is recorded as Claude Code\'s answer')
+    j = W.load('tcr-reject')
+    check(j['stage'] == 'write' and j['cleared_by'] == 'claude-code' and j['note'] == 'WRITERNOTE: fix the card.' and j['rewrites'] == 1 and pipeline.cc_rewrite(j),
+          'a rejection sends it to be written again with the note, ready for cc-write')
+    u, v, n_ = W.load('tcr-reuse'), W.load('tcr-adapt'), W.load('tcr-new')
+    check(u['stage'] == 'reuse' and u['reuse'] == 'e-scarcity' and u['matched']['by'] == 'claude-code' and v['stage'] == 'adapt' and
+          v['adapt']['changes'] == ['Use this state\'s term.'] and n_['stage'] == 'write' and n_['match_rejected'], 'a possible match is reused, adapted with its changes, or written new')
+    check(st('tcr-unsure') == 'review' and st('tcr-leave') == 'review' and W.load('tcr-unsure')['claude_code'][-1]['result'] == 'left', 'anything it is not highly sure of stays with you')
+    item = {i['id']: i for i in pipeline.review_items(work, repo)['items']}['tcr-unsure']
+    check(item['claudeCode'] == {'decision': 'approve', 'sure': 'medium', 'reason': 'REASON for tcr-unsure.', 'why': None}, 'and the review page says what it would have done')
+    check(st('tcr-wrongkind') == 'review' and st('tcr-nonote') == 'review' and 'decision reuse is not one of fix, approve, reject, leave' in out and
+          'a reject needs a note' in out, 'an answer it may not give is kept, with what is wrong')
+    check('changed since the export: tcr-stale' in out and st('tcr-stale') == 'review', 'a point that changed since the export is dropped, not decided')
+    check(all(W.load(i) == r for i, (r, _) in stay.items() if i != 'tcr-badfix') and E.load('tcr-english') == eng, 'the others are not touched')
+    answer('tcr-wrongkind', 'leave'); answer('tcr-nonote', 'reject', note='Say what is wrong.')
+    go('import')
+    code, out = go('export')
+    listed = [t['id'] for t in pipeline.read_json(os.path.join(folder, 'tasks.json'))['tasks']]
+    check(listed == ['tcr-stale'] and 'Claude Code left it for you already: 3' in out, 'running it again decides nothing twice: only the changed point is new')
+    shutil.rmtree(os.path.join(work, pipeline.CC_DIR))
+    lines = pipeline.auto_lines(W, pipeline.meta_recs(W, pipeline.read_json(os.path.join(W.dir, 'course.json'))))
+    check('Decided by Claude Code in review: 7 (used the fix 2, rejected, to be written again 2, reused the bank point 1, adapted the bank point 1, wrote a new point 1). Left for you after its look: 3.' in lines and
+          'Spot checks Claude Code decided: 1 (used the fix 1).' in lines, 'the summary counts its decisions, apart from yours')
+    pipeline.decide(work, repo, {'course': 'tst-ccr', 'id': 'tcr-leave', 'action': 'reject', 'note': 'x'})
+    check(W.load('tcr-leave')['stage'] == 'write' and 'cleared_by' not in W.load('tcr-leave'), 'your own decision on a point it left is yours, as before')
+
+    # Undo.
+    before = files()
+    code, out = go('--undo', '--dry-run')
+    check(code == 0 and 'would go back' in out and files() == before, 'undo has a dry run that changes nothing')
+    code, out = go('--point', 'tcr-fix')
+    check(code == 1 and '--point works with --undo' in out, '--point works only with --undo')
+    code, out = go(outline, '--undo', '--point', 'tcr-fix')
+    f = W.load('tcr-fix')
+    check(code == 0 and f['stage'] == 'review' and 'final' not in f and 'cleared_by' not in f and f['auto_undone']['by'] == 'claude-code' and f['proposal'] and
+          f['claude_code'][-1]['undone'] and 'saved' not in f['claude_code'][-1], 'undo for one point puts it back in the review list as it was')
+    check(pipeline.auto_problems(f) == ['you undid its automatic decision'] and pipeline.cc_review_skip(f, pts[1], dict(CCR_COURSE), pipeline.dump(repo)) == 'you undid an automatic decision on it',
+          'and it is never cleared automatically again, by autoreview, recheck or Claude Code')
+    r = W.load('tcr-new'); r.update(stage='cc-check', draft=pipeline.to_bank(fake_point('Review new'))); W.put(r)
+    code, out = go(outline, '--undo')
+    check(st('tcr-spot') == 'review' and W.load('tcr-spot')['auto']['spot'] and st('tcr-reuse') == 'match-review' and st('tcr-adapt') == 'match-review' and
+          'reuse' not in W.load('tcr-reuse') and st('tcr-reject') == 'review' and W.load('tcr-reject')['draft'] and pipeline.rewrites(W.load('tcr-reject')) == 0,
+          'undo sends back the spot check, the reuse, the adapt and the rejection, as they were')
+    check(st('tcr-new') == 'cc-check' and 'Moved on since' in out and 'tcr-new' in out.split('Moved on since')[1], 'a point that has moved on since stands')
+    lines = pipeline.auto_lines(W, pipeline.meta_recs(W, pipeline.read_json(os.path.join(W.dir, 'course.json'))))
+    check(not any('Spot checks Claude Code decided' in l for l in lines), 'and an undone spot check answer no longer counts')
+    code, out = go(outline, '--undo', '--point', 'tcr-fix')
+    check(code == 1 and 'no Claude Code review decision to undo' in out, 'and there is nothing left to undo on it')
+    os.environ['ANTHROPIC_API_KEY'] = KEY
+
+
 def main():
     tmp = tempfile.mkdtemp(prefix='stratos-pipeline-')
     repo, work = os.path.join(tmp, 'repo'), os.path.join(tmp, 'work')
@@ -1448,6 +1738,10 @@ def main():
     recheck_tests(tmp, repo, printed, api)
     autoreject_tests(tmp, repo, printed, api)
     rebalance_tests(tmp, printed, api)
+
+    # ---------- Claude Code instead of the API ----------
+    claude_code_tests(tmp, printed, api)
+    cc_review_tests(tmp, repo, printed, api)
 
     # ---------- the key ----------
     saved =''.join(open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(tmp) for f in fs if f.endswith(('.json', '.js', '.sql', '.yaml')))
