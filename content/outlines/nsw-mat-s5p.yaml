@@ -1,0 +1,422 @@
+# NSW Mathematics, Stage 5 paths (Years 9 and 10): all 22 Stage 5 path focus areas, 76 points.
+# Follows NESA's Mathematics K-10 Syllabus (2022), Stage 5 path content, checked on the NSW Curriculum website
+# (curriculum.nsw.edu.au) in November 2026. It replaced the 2012 syllabus and has been taught in Years 7 to 10 since
+# 2024 (the department's staggered start: Years 7 and 9 in 2024, Years 8 and 10 in 2025). NESA's curriculum reform
+# timeline names no replacement. Its only change since was a glossary fix in August 2026.
+# Stage 5 has core focus areas, which every student studies (the course nsw-mat-s5), and path focus areas, which
+# schools choose for their students. Paths lead on to the Stage 6 Mathematics Advanced and Extension courses. This
+# course has every path focus area, so a student skips the chapters their school does not teach.
+# Structure: each path focus area is a chapter, except that Variation and rates of change A and B share one, and
+# so do Indices B and C. The chapters are grouped into three units: number and algebra, measurement and
+# space, and statistics and probability. Each point lists its focus area's outcome code. The working mathematically
+# outcome (MAO-WM-01) is not listed on each point. To keep the size down, line and rotational symmetry (in Linear
+# relationships C) and completing the square (one of Equations C's methods for quadratics) are left out for now and
+# can be added. Every brief is in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths). Maths Lab templates can come later, per topic.
+
+id: nsw-mat-s5p
+subject: Mathematics
+bank: mat
+name: Mathematics, Stage 5 paths
+about: NSW Stage 5 paths, Years 9 and 10
+short: Mathematics
+years: [9, 10]
+level: Stage 5 paths
+place: nsw
+kind: maths
+syllabus: NSW Mathematics K-10 Syllabus (2022), Stage 5 paths
+note: Follows the NSW Mathematics syllabus. Not made or endorsed by NESA.
+chips: [factorising, surds, quadratic formula, polynomials, logarithms, circle geometry]
+
+units:
+  - title: Number and algebra
+    chapters:
+      - title: Variation and rates of change
+        id: nsw-mat-s5p-1-1
+        points:
+          - title: Direct variation
+            id: mat-direct-variation-2
+            brief: When y varies directly with x, y = kx, so doubling x doubles y and the graph is a straight line through the origin. Finding k from one pair of values.
+            codes: [MA5-RAT-P-01]
+          - title: Inverse variation
+            id: mat-inverse-variation
+            brief: When y varies inversely with x, y = k/x, so doubling x halves y. The graph is a hyperbola, and xy stays the same.
+            codes: [MA5-RAT-P-01]
+          - title: Constant rates of change
+            id: mat-constant-rates-change
+            brief: A straight-line graph shows a constant rate of change, and its gradient is the rate, such as litres per minute filling a tank.
+            codes: [MA5-RAT-P-02]
+          - title: Variable rates of change
+            id: mat-variable-rates-change
+            brief: On a curved graph the rate changes. Where the curve is steeper the quantity is changing faster, and the rate at a moment is the gradient of the tangent there.
+            codes: [MA5-RAT-P-02]
+
+      - title: Expanding and factorising
+        id: nsw-mat-s5p-1-2
+        points:
+          - title: Expanding binomial products
+            id: mat-expanding-binomial-products-nsw
+            brief: Multiplying two brackets by multiplying every term in the first by every term in the second, so (x + 3)(x - 5) = x² - 2x - 15.
+            codes: [MA5-ALG-P-01]
+          - title: Factorising out an algebraic factor
+            id: mat-factorising-out-algebraic-factor
+            brief: Taking out a common factor that includes pronumerals, such as 6x²y - 9xy = 3xy(2x - 3), and checking by expanding.
+            codes: [MA5-ALG-P-01]
+          - title: Factorising monic quadratics
+            id: mat-factorising-monic-quadratics-nsw
+            brief: To factorise x² + bx + c, find two numbers that multiply to c and add to b, so x² + 7x + 12 = (x + 3)(x + 4).
+            codes: [MA5-ALG-P-01]
+          - title: Algebraic fractions with pronumeral denominators
+            id: mat-algebraic-fractions-with-pronumeral
+            brief: Adding, subtracting, multiplying and dividing fractions such as 3/x + 2/(5x), using a common denominator that includes the pronumeral.
+            codes: [MA5-ALG-P-01]
+
+      - title: Special products and harder factorising
+        id: nsw-mat-s5p-1-3
+        points:
+          - title: Perfect squares and difference of two squares
+            id: mat-perfect-squares-difference-two-nsw
+            brief: (a + b)² = a² + 2ab + b² and (a + b)(a - b) = a² - b², used to expand quickly and to spot expressions that factorise this way.
+            codes: [MA5-ALG-P-02]
+          - title: Factorising non-monic quadratics
+            id: mat-factorising-non-monic-quadratics
+            brief: Factorising expressions such as 2x² + 7x + 3 when the x² term has a coefficient other than 1, by splitting the middle term or the cross method.
+            codes: [MA5-ALG-P-02]
+          - title: Factorising by grouping in pairs
+            id: mat-factorising-by-grouping-pairs
+            brief: Grouping four terms into two pairs, factorising each pair, then taking out the common bracket, such as ax + ay + bx + by = (a + b)(x + y).
+            codes: [MA5-ALG-P-02]
+          - title: Algebraic fractions with binomial numerators
+            id: mat-algebraic-fractions-with-binomial
+            brief: Simplifying fractions such as (x + 2)/3 - (x - 1)/4, putting the numerators in brackets so the subtraction applies to every term.
+            codes: [MA5-ALG-P-02]
+
+      - title: Surds and indices
+        id: nsw-mat-s5p-1-4
+        points:
+          - title: Negative indices with pronumerals
+            id: mat-negative-indices-with-pronumerals
+            brief: Rewriting terms such as 3x⁻² as 3/x², and using the index laws on expressions with negative indices, giving answers with positive indices.
+            codes: [MA5-IND-P-01]
+          - title: Fractional indices
+            id: mat-fractional-indices
+            brief: A power of 1/2 is a square root and 1/3 a cube root, so 8^(2/3) = 4. Moving between fractional index form and root form.
+            codes: [MA5-IND-P-02]
+          - title: Simplifying surds
+            id: mat-simplifying-surds
+            brief: A surd is a root that is irrational, such as √5. Simplifying by taking out a square factor, so √50 = 5√2.
+            codes: [MA5-IND-P-02]
+          - title: Operations with surds
+            id: mat-operations-with-surds
+            brief: Only like surds can be added or subtracted, but any surds can be multiplied, √a × √b = √(ab). Expanding brackets that contain surds.
+            codes: [MA5-IND-P-02]
+          - title: Rationalising the denominator
+            id: mat-rationalising-denominator
+            brief: Multiplying the top and bottom of a fraction by the surd in the denominator so the denominator becomes a whole number, so 6/√3 = 2√3.
+            codes: [MA5-IND-P-02]
+
+      - title: Quadratic equations and inequalities
+        id: nsw-mat-s5p-1-5
+        points:
+          - title: Solving quadratics by factorising
+            id: mat-solving-quadratics-by-factorising-nsw
+            brief: Rearrange to equal zero, factorise, then set each factor to zero, because if a product is zero one of its factors must be zero.
+            codes: [MA5-EQU-P-01]
+          - title: Simple cubic equations
+            id: mat-simple-cubic-equations
+            brief: Solving equations such as 2x³ = 54 by isolating x³ and taking the cube root. Unlike squares, there is only one real answer.
+            codes: [MA5-EQU-P-01]
+          - title: Linear inequalities
+            id: mat-linear-inequalities
+            brief: Solving inequalities like equations, except that multiplying or dividing both sides by a negative number reverses the inequality sign. Showing the answer on a number line.
+            codes: [MA5-EQU-P-01]
+
+      - title: Harder equations
+        id: nsw-mat-s5p-1-6
+        points:
+          - title: Equations with algebraic fractions
+            id: mat-equations-with-algebraic-fractions-nsw
+            brief: Multiply every term by the lowest common denominator to clear the fractions, then solve, such as x/3 - (x - 2)/5 = 2.
+            codes: [MA5-EQU-P-02]
+          - title: Changing the subject of a formula
+            id: mat-changing-subject-formula-2
+            brief: Rearranging a formula so another pronumeral is on its own, using the same inverse steps as solving an equation, such as making r the subject of A = πr².
+            codes: [MA5-EQU-P-02]
+          - title: The quadratic formula
+            id: mat-quadratic-formula
+            brief: Any quadratic ax² + bx + c = 0 can be solved with x = (-b ± √(b² - 4ac))/2a. Using it when the expression will not factorise.
+            codes: [MA5-EQU-P-02]
+          - title: Simultaneous equations
+            id: mat-simultaneous-equations-2
+            brief: Two equations with two unknowns, solved by substitution or elimination, or by finding where their two lines cross on a graph.
+            codes: [MA5-EQU-P-02]
+
+      - title: Lines and transformations
+        id: nsw-mat-s5p-1-7
+        points:
+          - title: Coordinate geometry formulas
+            id: mat-coordinate-geometry-formulas
+            brief: The formulas for the gradient, midpoint and distance between two points, and using them to show facts about shapes, such as that a quadrilateral is a parallelogram.
+            codes: [MA5-LIN-P-01]
+          - title: Point-gradient and general form
+            id: mat-point-gradient-general-form
+            brief: Finding a line from a point and the gradient with y - y₁ = m(x - x₁), and moving between gradient-intercept form and the general form ax + by + c = 0.
+            codes: [MA5-LIN-P-01]
+          - title: Transformations on the Cartesian plane
+            id: mat-transformations-cartesian-plane
+            brief: How coordinates change in a translation, a reflection in either axis and a rotation of 90°, 180° or 270° about the origin.
+            codes: [MA5-LIN-P-01]
+
+      - title: Graphs of curves
+        id: nsw-mat-s5p-1-8
+        points:
+          - title: Transforming parabolas
+            id: mat-transforming-parabolas
+            brief: In y = a(x - h)² + k the vertex is (h, k). Changing h moves the parabola sideways, k moves it up or down, and a stretches or flips it.
+            codes: [MA5-NLI-P-01]
+          - title: Hyperbolas
+            id: mat-hyperbolas-2
+            brief: The graph of y = k/x has two branches and gets close to both axes without touching them. A negative k puts the branches in the other two quadrants.
+            codes: [MA5-NLI-P-01]
+          - title: Circles on the Cartesian plane
+            id: mat-circles-cartesian-plane
+            brief: A circle with centre (0, 0) and radius r has equation x² + y² = r², and centre (h, k) gives (x - h)² + (y - k)² = r².
+            codes: [MA5-NLI-P-01]
+          - title: Matching equations to graphs
+            id: mat-matching-equations-graphs
+            brief: Telling lines, parabolas, cubics, hyperbolas, circles and exponentials apart from their equations, and matching each to its graph.
+            codes: [MA5-NLI-P-01]
+
+      - title: Polynomials
+        id: nsw-mat-s5p-1-9
+        points:
+          - title: The language of polynomials
+            id: mat-language-polynomials
+            brief: A polynomial is a sum of terms with whole-number powers of x. Its degree is the highest power, and the leading coefficient and constant term name its first and last terms.
+            codes: [MA5-POL-P-01]
+          - title: Dividing polynomials
+            id: mat-dividing-polynomials-2
+            brief: Long division of a polynomial by a linear expression such as x - 2, giving a quotient and a remainder.
+            codes: [MA5-POL-P-01]
+          - title: The remainder and factor theorems
+            id: mat-remainder-factor-theorems-2
+            brief: When P(x) is divided by x - a, the remainder is P(a). If P(a) = 0, then x - a is a factor, which helps factorise and solve polynomials.
+            codes: [MA5-POL-P-01]
+          - title: Graphs of polynomials
+            id: mat-graphs-polynomials
+            brief: Sketching a polynomial from its factors. Each factor gives an x-intercept, the curve crosses at a single root and touches at a double root.
+            codes: [MA5-POL-P-01]
+
+      - title: Logarithms
+        id: nsw-mat-s5p-1-10
+        points:
+          - title: What a logarithm is
+            id: mat-logarithm-2
+            brief: A logarithm is an index. log base a of y = x means aˣ = y, so log base 2 of 8 = 3. Moving between index form and log form.
+            codes: [MA5-LOG-P-01]
+          - title: The laws of logarithms
+            id: mat-laws-logarithms
+            brief: The log of a product is the sum of the logs, the log of a quotient is the difference, and the log of a power is the power times the log.
+            codes: [MA5-LOG-P-01]
+          - title: Solving exponential equations
+            id: mat-solving-exponential-equations-2-nsw
+            brief: Solving equations such as 3ˣ = 20 by taking logs of both sides, and seeing that a log graph is the exponential graph reflected in y = x.
+            codes: [MA5-LOG-P-01]
+
+      - title: Functions and regions
+        id: nsw-mat-s5p-1-11
+        points:
+          - title: Relations and functions
+            id: mat-relations-functions-2
+            brief: A function gives exactly one output for each input, which the vertical line test checks on a graph. Function notation f(x), and evaluating f(3).
+            codes: [MA5-FNC-P-01]
+          - title: Domain and range of a function
+            id: mat-domain-range-function
+            brief: The domain is every x value allowed and the range is every y value produced, read from a graph or worked out from the rule.
+            codes: [MA5-FNC-P-01]
+          - title: Graphing regions for inequalities
+            id: mat-graphing-regions-inequalities
+            brief: An inequality such as y > 2x + 1 is shown by drawing the line, dashed if the line itself is not included, and shading the side where the inequality is true.
+            codes: [MA5-FNC-P-01]
+
+  - title: Measurement and space
+    chapters:
+      - title: Sine and cosine rules
+        id: nsw-mat-s5p-2-1
+        points:
+          - title: Trigonometry in three dimensions
+            id: mat-trigonometry-three-dimensions
+            brief: Finding the right-angled triangles inside a solid, such as the diagonal of a box, and solving them one at a time.
+            codes: [MA5-TRG-P-01]
+          - title: The sine rule
+            id: mat-sine-rule-2
+            brief: In any triangle, each side divided by the sine of its opposite angle gives the same value. Used when a side and its opposite angle are known.
+            codes: [MA5-TRG-P-01]
+          - title: The cosine rule
+            id: mat-cosine-rule-2
+            brief: c² = a² + b² - 2ab cos C, used to find a side from two sides and the angle between them, or an angle from all three sides.
+            codes: [MA5-TRG-P-01]
+          - title: Area of any triangle
+            id: mat-area-any-triangle-2
+            brief: The area of a triangle is half the product of two sides and the sine of the angle between them, ½ab sin C.
+            codes: [MA5-TRG-P-01]
+
+      - title: The unit circle
+        id: nsw-mat-s5p-2-2
+        points:
+          - title: Trigonometry on the unit circle
+            id: mat-trigonometry-unit-circle
+            brief: For a point on a circle of radius 1 at angle θ from the positive x-axis, the x-coordinate is cos θ and the y-coordinate is sin θ. This defines the ratios for any angle up to 360°.
+            codes: [MA5-TRG-P-02]
+          - title: Exact values
+            id: mat-exact-values-3
+            brief: The exact sine, cosine and tangent of 30°, 45° and 60°, found from half an equilateral triangle and a right isosceles triangle.
+            codes: [MA5-TRG-P-02]
+          - title: Obtuse angles and supplementary angles
+            id: mat-obtuse-angles-supplementary-angles
+            brief: sin(180° - θ) = sin θ and cos(180° - θ) = -cos θ, so an obtuse angle has a positive sine and a negative cosine. Also sin θ = cos(90° - θ).
+            codes: [MA5-TRG-P-02]
+          - title: Graphs of sine and cosine
+            id: mat-graphs-sine-cosine-2
+            brief: Sketching y = sin x and y = cos x from 0° to 360°, their shape, highest and lowest values of 1 and -1, and where they cross the axis.
+            codes: [MA5-TRG-P-02]
+          - title: Solving trigonometric equations
+            id: mat-solving-trigonometric-equations-2-nsw
+            brief: Finding every angle from 0° to 360° that solves an equation such as sin x = 1/2, using exact values and the quadrant signs.
+            codes: [MA5-TRG-P-02]
+
+      - title: Pyramids, cones and spheres
+        id: nsw-mat-s5p-2-3
+        points:
+          - title: Surface area of pyramids and cones
+            id: mat-surface-area-pyramids-cones
+            brief: A pyramid's surface area is its base plus its triangular faces. A cone's curved surface is πrl, where l is the slant height found with Pythagoras' theorem.
+            codes: [MA5-ARE-P-01]
+          - title: Surface area of a sphere
+            id: mat-surface-area-sphere
+            brief: The surface area of a sphere is 4πr², and a hemisphere's curved surface is half of it.
+            codes: [MA5-ARE-P-01]
+          - title: Volume of pyramids and cones
+            id: mat-volume-pyramids-cones
+            brief: A pyramid or cone has one third of the volume of the prism or cylinder with the same base and height, V = ⅓Ah.
+            codes: [MA5-VOL-P-01]
+          - title: Volume of a sphere
+            id: mat-volume-sphere
+            brief: The volume of a sphere is 4/3 times π times r³. Using it alone and in solids built from spheres, cones and cylinders.
+            codes: [MA5-VOL-P-01]
+
+      - title: Congruence and similarity
+        id: nsw-mat-s5p-2-4
+        points:
+          - title: Congruent triangles
+            id: mat-congruent-triangles
+            brief: Congruent figures are the same shape and size. Two triangles are congruent by SSS, SAS, AAS or RHS, and not by AAA or two sides with an angle that is not between them.
+            codes: [MA5-GEO-P-01]
+          - title: Tests for similar triangles
+            id: mat-tests-similar-triangles
+            brief: Triangles are similar if their angles are equal, their three sides are in proportion, two sides are in proportion with the angle between equal, or the right-angled version.
+            codes: [MA5-GEO-P-01]
+          - title: Area and volume of similar figures
+            id: mat-area-volume-similar-figures
+            brief: If lengths are multiplied by k, areas are multiplied by k² and volumes by k³, so a model at a scale of 1 to 10 has one thousandth of the volume.
+            codes: [MA5-GEO-P-01]
+          - title: Angles of polygons
+            id: mat-angles-polygons
+            brief: The interior angles of an n-sided polygon add to (n - 2) × 180°, and the exterior angles of any convex polygon add to 360°.
+            codes: [MA5-GEO-P-01]
+
+      - title: Geometric proof
+        id: nsw-mat-s5p-2-5
+        points:
+          - title: Writing a congruence proof
+            id: mat-writing-congruence-proof
+            brief: Setting out a proof that two triangles are congruent, with each matching side or angle given a reason, then naming the test used.
+            codes: [MA5-GEO-P-02]
+          - title: Proving properties of quadrilaterals
+            id: mat-proving-properties-quadrilaterals
+            brief: Using congruent triangles to prove facts, such as that the opposite sides of a parallelogram are equal or that its diagonals bisect each other.
+            codes: [MA5-GEO-P-02]
+          - title: Similar triangle proofs
+            id: mat-similar-triangle-proofs
+            brief: Proving two triangles similar with reasons, then using the matching sides in proportion to find a length or prove a result.
+            codes: [MA5-GEO-P-02]
+
+      - title: Circle geometry
+        id: nsw-mat-s5p-2-6
+        points:
+          - title: Angles at the centre and circumference
+            id: mat-angles-at-centre-circumference
+            brief: The angle at the centre is twice the angle at the circumference on the same arc. The angle in a semicircle is a right angle, and angles on the same arc are equal.
+            codes: [MA5-CIR-P-01]
+          - title: Cyclic quadrilaterals
+            id: mat-cyclic-quadrilaterals
+            brief: A cyclic quadrilateral has all four vertices on a circle. Its opposite angles add to 180°, and an exterior angle equals the opposite interior angle.
+            codes: [MA5-CIR-P-01]
+          - title: Chord properties
+            id: mat-chord-properties
+            brief: A line from the centre perpendicular to a chord bisects it. Equal chords are the same distance from the centre, and for two chords crossing inside a circle the products of their parts are equal.
+            codes: [MA5-CIR-P-01]
+          - title: Tangent properties
+            id: mat-tangent-properties
+            brief: A tangent is perpendicular to the radius at the point it touches, and two tangents from an outside point are equal in length.
+            codes: [MA5-CIR-P-01]
+          - title: The alternate segment theorem and secants
+            id: mat-alternate-segment-theorem-secants
+            brief: The angle between a tangent and a chord equals the angle in the alternate segment. For a tangent and a secant from the same point, the square of the tangent equals the whole secant times its part outside the circle.
+            codes: [MA5-CIR-P-01]
+
+  - title: Statistics and probability
+    chapters:
+      - title: Networks
+        id: nsw-mat-s5p-3-1
+        points:
+          - title: Vertices, edges and degree
+            id: mat-vertices-edges-degree-2
+            brief: A network is made of vertices joined by edges. The degree of a vertex is the number of edges that meet there, and the degrees add to twice the number of edges.
+            codes: [MA5-NET-P-01]
+          - title: Planar graphs and Euler's formula
+            id: mat-planar-graphs-euler-s-3
+            brief: A planar graph can be drawn with no edges crossing. For a connected planar graph, vertices minus edges plus faces equals 2.
+            codes: [MA5-NET-P-01]
+          - title: Eulerian trails and circuits
+            id: mat-eulerian-trails-circuits
+            brief: An Eulerian trail uses every edge once. It exists when 0 or 2 vertices have odd degree, which is why the Königsberg bridges walk is impossible.
+            codes: [MA5-NET-P-01]
+
+      - title: Statistical inquiry
+        id: nsw-mat-s5p-3-2
+        points:
+          - title: The statistical inquiry process
+            id: mat-statistical-inquiry-process
+            brief: Posing a question, planning how to collect data, collecting it, analysing it and reporting a conclusion that answers the question.
+            codes: [MA5-DAT-P-01]
+          - title: Samples and bias
+            id: mat-samples-bias
+            brief: A census asks everyone and a sample asks some. Random sampling and a large enough sample reduce bias, and a sample of volunteers or friends may not represent the population.
+            codes: [MA5-DAT-P-01]
+          - title: Judging statistics in the media
+            id: mat-judging-statistics-media
+            brief: Checking a reported study for who was asked, how many, who paid for it and whether its claims go further than its data.
+            codes: [MA5-DAT-P-01]
+
+      - title: Venn diagrams and conditional probability
+        id: nsw-mat-s5p-3-3
+        points:
+          - title: Venn diagrams
+            id: mat-venn-diagrams-nsw
+            brief: Placing outcomes in overlapping circles to show and, or and not, and reading probabilities from them, including the region outside every circle.
+            codes: [MA5-PRO-P-01]
+          - title: Two-way tables
+            id: mat-two-way-tables-2-nsw
+            brief: Recording two categories at once in rows and columns with totals, and finding probabilities from the table.
+            codes: [MA5-PRO-P-01]
+          - title: Conditional probability
+            id: mat-conditional-probability-3
+            brief: The probability of A given B uses only the outcomes where B happened as the total. Reading phrases such as given, if then, and knowing that, and the common mistake of reversing them.
+            codes: [MA5-PRO-P-01]
+          - title: Mutually exclusive events
+            id: mat-mutually-exclusive-events
+            brief: Mutually exclusive events cannot happen together, so P(A or B) = P(A) + P(B). If they can, subtract the overlap so it is not counted twice.
+            codes: [MA5-PRO-P-01]

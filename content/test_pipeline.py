@@ -1412,6 +1412,18 @@ def main():
     bad(OUTLINE.replace('            brief: A plain point.\n', ''), 'a point needs a brief or reuse', 'Plain one needs a brief')
     bad(OUTLINE.replace('brief: A plain point.', 'brief: Two kinds: goods and services.'), 'a colon in a brief gets the hint about quote marks', 'needs quote marks')
     bad(OUTLINE.replace('reuse: e-ped', 'reuse: e-nothing'), 'reusing a point that is not in a bank is refused', 'not in any bank')
+    # One outline can name several states that teach the same curriculum, such as the Australian Curriculum.
+    for places, what in [('[qld]', 'a list of places needs two or more states'), ('[qld, international]', 'and only states'),
+                         ('[qld, qld]', 'and different ones'), ('[qld, nowhere]', 'and states that exist')]:
+        bad(OUTLINE.replace('place: nsw', 'place: ' + places), what, 'two or more different states')
+    with open(outline, 'w', encoding='utf-8') as f: f.write(OUTLINE.replace('place: nsw', 'place: [qld, tas, nt]'))
+    code, out = go('status', outline)
+    names = {'placeNames': {'qld': 'Queensland', 'tas': 'Tasmania', 'nt': 'Northern Territory'}}
+    many = pipeline.read_outline(outline, dict(pipeline.dump(repo), **names))
+    check(code == 0 and many['place'] == ['qld', 'tas', 'nt'] and pipeline.where_text(many) == 'Queensland, Tasmania and Northern Territory, Australia',
+          'a list of states is accepted, and the writer is told every one of them')
+    check(pipeline.used_text({'used': {'x': [{'course': 'k', 'subject': 'Science', 'years': [7], 'place': ['qld', 'tas']}]}, **names}, 'x') == 'Science, Year 7 (Queensland and Tasmania)' and
+          pipeline.place_name('international', names, 'international') == 'international', 'and the matcher is told where a bank point is used')
 
     # ---------- the content check is told the course's subject ----------
     geo = pipeline.to_bank(fake_point('Glaciers'))

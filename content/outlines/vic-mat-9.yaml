@@ -1,0 +1,237 @@
+# Victorian Curriculum Mathematics, Level 9 (Year 9): number, algebra, measurement, space, statistics and probability, 42 points.
+# Follows the Victorian Curriculum F-10 Version 2.0: Mathematics, Level 9, checked on the VCAA's Version 2.0 website
+# (f10.vcaa.vic.edu.au) in November 2026. VC2.0 Mathematics was published in July 2023, schools began using it from
+# 2024, and it is fully in place in government schools from 2025. It replaced Mathematics in the Victorian Curriculum
+# F-10 Version 1.0 (taught from 2017). No newer version is announced; the Version 1.0 website closes on 31 December 2026.
+# VC2.0 sets Mathematics by single levels (7, 8, 9, 10 and 10A), in six strands. The strands are paired into three
+# units here (Number and algebra, Measurement and space, Statistics and probability), and each chapter is one strand
+# or part of one. Scientific notation (a Measurement content description) sits with the number chapter. Content
+# descriptions on running investigations, simulations, modelling cycles and designing algorithms are covered only as
+# the ideas behind them. Every brief is in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths).
+
+id: vic-mat-9
+subject: Mathematics
+bank: mat
+name: Mathematics, Year 9
+about: Victorian Curriculum 2.0, Level 9
+short: Mathematics
+years: [9]
+place: vic
+kind: maths
+syllabus: "Victorian Curriculum F-10 Version 2.0: Mathematics, Level 9"
+note: Follows the Victorian Curriculum 2.0. Not made or endorsed by the VCAA.
+chips: [scientific notation, binomial, gradient, quadratic, trigonometry, histogram]
+
+units:
+  - title: Number and algebra
+    chapters:
+      - title: Real numbers and indices
+        id: vic-mat-9-1-1
+        points:
+          - title: The real number system
+            id: mat-real-number-system-vic
+            brief: Natural numbers sit inside the integers, which sit inside the rationals, and the rationals and irrationals together make the real numbers.
+            codes: [VC2M9N01]
+          - title: Negative indices
+            id: mat-negative-indices-vic
+            brief: A negative index means the reciprocal, so 2⁻³ = 1/2³ = 1/8.
+            codes: [VC2M9A01]
+          - title: Index laws with variables
+            id: mat-index-laws-with-variables-vic
+            brief: The index laws work with letters too, so 3x² × 4x³ = 12x⁵ and (2a³)² = 4a⁶.
+            codes: [VC2M9A01]
+          - title: Scientific notation for large numbers
+            id: mat-scientific-notation-large-numbers-vic
+            brief: A large number is written as a number from 1 to less than 10 times a power of 10, such as 384,000 = 3.84 × 10⁵.
+            codes: [VC2M9M02]
+          - title: Scientific notation for small numbers
+            id: mat-scientific-notation-small-numbers-vic
+            brief: A small number uses a negative power of 10, such as 0.00052 = 5.2 × 10⁻⁴.
+            codes: [VC2M9M02]
+
+      - title: Expanding and factorising
+        id: vic-mat-9-1-2
+        points:
+          - title: Expanding binomial products
+            id: mat-expanding-binomial-products-vic
+            brief: Multiply each term in the first bracket by each term in the second, such as (x + 3)(x + 5) = x² + 8x + 15.
+            codes: [VC2M9A02]
+          - title: Perfect squares and the difference of two squares
+            id: mat-perfect-squares-difference-two-vic
+            brief: (a + b)² = a² + 2ab + b², and (a + b)(a - b) = a² - b², where the middle terms cancel.
+            codes: [VC2M9A02]
+          - title: Factorising monic quadratics
+            id: mat-factorising-monic-quadratics-vic
+            brief: For x² + bx + c, find two numbers that multiply to c and add to b, such as x² + 7x + 12 = (x + 3)(x + 4).
+            codes: [VC2M9A02]
+          - title: Factorising a difference of two squares
+            id: mat-factorising-difference-two-squares
+            brief: Spot two perfect squares with a minus between them and write the pair of brackets, such as x² - 25 = (x + 5)(x - 5).
+            codes: [VC2M9A02]
+
+      - title: Linear graphs and coordinate geometry
+        id: vic-mat-9-1-3
+        points:
+          - title: Gradient of a line
+            id: mat-gradient-line
+            brief: Gradient is rise over run. It is positive going up to the right, negative going down, zero for a flat line and undefined for a vertical one.
+            codes: [VC2M9A04]
+          - title: Gradient-intercept form
+            id: mat-gradient-intercept-form-vic
+            brief: In y = mx + c, m is the gradient and c is where the line crosses the y-axis.
+            codes: [VC2M9A03, VC2M9A07]
+          - title: Sketching a line from its intercepts
+            id: mat-sketching-line-from-intercepts
+            brief: Set x = 0 to find the y-intercept and y = 0 to find the x-intercept, then draw the line through the two points.
+            codes: [VC2M9A03]
+          - title: Midpoint of an interval
+            id: mat-midpoint-interval-vic
+            brief: The midpoint's coordinates are the averages of the two x values and of the two y values.
+            codes: [VC2M9A04]
+          - title: Distance between two points
+            id: mat-distance-between-two-points-vic
+            brief: Use Pythagoras on the horizontal and vertical gaps between the points, d = √((x₂ - x₁)² + (y₂ - y₁)²).
+            codes: [VC2M9A04]
+
+      - title: Parabolas and simple interest
+        id: vic-mat-9-1-4
+        points:
+          - title: Graphs of quadratic functions
+            id: mat-graphs-quadratic-functions
+            brief: A quadratic makes a parabola with a turning point and an axis of symmetry. A positive x² term opens upwards, a negative one downwards.
+            codes: [VC2M9A05]
+          - title: Changing a and c in y = ax² + c
+            id: mat-changing-c-y-ax
+            brief: A larger a makes the parabola narrower, a negative a flips it, and c moves it up or down.
+            codes: [VC2M9A07]
+          - title: The null factor law
+            id: mat-null-factor-law
+            brief: If two factors multiply to zero, one of them must be zero, so (x - 2)(x + 5) = 0 gives x = 2 or x = -5.
+            codes: [VC2M9A05]
+          - title: Solving quadratics from a graph
+            id: mat-solving-quadratics-from-graph-vic
+            brief: The solutions of ax² + bx + c = 0 are the x-intercepts of the parabola, which may be two, one or none.
+            codes: [VC2M9A05]
+          - title: Simple interest
+            id: mat-simple-interest-3-vic
+            brief: Interest on the starting amount only, I = Prn, so it grows by the same amount each year.
+            codes: [VC2M9A06]
+
+  - title: Measurement and space
+    chapters:
+      - title: Surface area and volume
+        id: vic-mat-9-2-1
+        points:
+          - title: Surface area of a prism
+            id: mat-surface-area-prism-vic
+            brief: Add the areas of all the faces, which a net shows laid flat.
+            codes: [VC2M9M01]
+          - title: Volume of a cylinder
+            id: mat-volume-cylinder-vic
+            brief: A cylinder is a prism with a circle as its cross-section, so V = πr²h.
+            codes: [VC2M9M01]
+          - title: Surface area of a cylinder
+            id: mat-surface-area-cylinder-vic
+            brief: Two circles and a curved rectangle whose length is the circumference, so SA = 2πr² + 2πrh.
+            codes: [VC2M9M01]
+          - title: Volume of composite solids
+            id: mat-volume-composite-solids-vic
+            brief: Split a solid into prisms and cylinders, find each volume, and add them, or subtract a hole.
+            codes: [VC2M9M01]
+
+      - title: Right-angled trigonometry
+        id: vic-mat-9-2-2
+        points:
+          - title: Naming the sides of a right-angled triangle
+            id: mat-naming-sides-right-angled-vic
+            brief: The hypotenuse is opposite the right angle. The opposite and adjacent sides are named from the angle being used.
+            codes: [VC2M9M03]
+          - title: Sine, cosine and tangent ratios
+            id: mat-sine-cosine-tangent-ratios-2
+            brief: sin is opposite over hypotenuse, cos is adjacent over hypotenuse and tan is opposite over adjacent, the same for every triangle with that angle.
+            codes: [VC2M9SP01]
+          - title: Finding a side with trigonometry
+            id: mat-finding-side-with-trigonometry-vic
+            brief: Choose the ratio linking the known side and the unknown side to the angle, then rearrange to find the unknown.
+            codes: [VC2M9M03]
+          - title: Finding an angle with trigonometry
+            id: mat-finding-angle-with-trigonometry-vic
+            brief: Work out the ratio of two sides, then use the inverse function on a calculator, such as tan⁻¹, to find the angle.
+            codes: [VC2M9M03]
+
+      - title: Similarity, scale and error
+        id: vic-mat-9-2-3
+        points:
+          - title: Enlargements
+            id: mat-enlargements-vic
+            brief: An enlargement multiplies every length by the scale factor but keeps the angles and the shape the same.
+            codes: [VC2M9SP02]
+          - title: Using similar triangles
+            id: mat-using-similar-triangles
+            brief: Matching sides of similar triangles are in the same ratio, so a known pair gives the scale factor to find an unknown side.
+            codes: [VC2M9M03]
+          - title: Scale drawings and maps
+            id: mat-scale-drawings-maps-vic
+            brief: A scale such as 1:50,000 means 1 cm on the map is 50,000 cm, or 500 m, on the ground.
+            codes: [VC2M9M05]
+          - title: Direct proportion
+            id: mat-direct-proportion-vic
+            brief: Two quantities are in direct proportion when one is always a fixed multiple of the other, y = kx, so the graph is a straight line through the origin.
+            codes: [VC2M9M05]
+          - title: Absolute error of a measurement
+            id: mat-absolute-error-measurement
+            brief: A measurement is only as exact as its smallest unit, so the absolute error is half that unit, such as ±0.5 cm for a length to the nearest cm.
+            codes: [VC2M9M04]
+
+  - title: Statistics and probability
+    chapters:
+      - title: Comparing data
+        id: vic-mat-9-3-1
+        points:
+          - title: Histograms
+            id: mat-histograms
+            brief: A histogram groups numerical data into equal class intervals, with bars that touch to show the frequency in each.
+            codes: [VC2M9ST03]
+          - title: Back-to-back stem-and-leaf plots
+            id: mat-back-back-stem-leaf
+            brief: Two data sets share one stem, with leaves going left and right, so their centres and spreads can be compared.
+            codes: [VC2M9ST03]
+          - title: Skewed, symmetric and bimodal shapes
+            id: mat-skewed-symmetric-bimodal-shapes
+            brief: Symmetric data is balanced, skewed data has a long tail to one side, and bimodal data has two peaks.
+            codes: [VC2M9ST03]
+          - title: Comparing two distributions
+            id: mat-comparing-two-distributions
+            brief: Compare data sets by their centre (mean or median), their spread (range) and their shape, and say what the differences mean.
+            codes: [VC2M9ST03, VC2M9ST05]
+          - title: Choosing a display for data
+            id: mat-choosing-display-data
+            brief: Column graphs suit categories, histograms and stem-and-leaf plots suit numerical data, and line graphs suit change over time.
+            codes: [VC2M9ST04]
+          - title: Misleading surveys and graphs
+            id: mat-misleading-surveys-graphs
+            brief: How a biased sample, a leading question or an axis that does not start at zero can make results look stronger than they are.
+            codes: [VC2M9ST01, VC2M9ST02]
+
+      - title: Two-step chance experiments
+        id: vic-mat-9-3-2
+        points:
+          - title: Outcomes of two-step experiments
+            id: mat-outcomes-two-step-experiments
+            brief: List every outcome of two steps, such as rolling two dice, in a table or tree diagram, and count to find probabilities.
+            codes: [VC2M9P01]
+          - title: With and without replacement
+            id: mat-with-without-replacement-vic
+            brief: Without replacement, the first pick changes what is left, so the probabilities on the second branch change.
+            codes: [VC2M9P01]
+          - title: And, inclusive or, exclusive or
+            id: mat-inclusive-or-exclusive-or-vic
+            brief: With "and", both events happen. With inclusive "or", either or both happen. With exclusive "or", one happens but not both.
+            codes: [VC2M9P02]
+          - title: Estimating probability by simulation
+            id: mat-estimating-probability-by-simulation
+            brief: When a probability cannot be worked out exactly, repeat a model of the situation many times and use the relative frequency.
+            codes: [VC2M9P03]

@@ -1,0 +1,259 @@
+# Victorian Curriculum Mathematics, Level 10A (Year 10 extension): surds, logarithms, polynomials, graphs, circle geometry, trigonometry, spread and counting, 45 points.
+# Follows the Victorian Curriculum F-10 Version 2.0: Mathematics, Level 10A, checked on the VCAA's Version 2.0 website
+# (f10.vcaa.vic.edu.au) in November 2026. VC2.0 keeps Level 10A as optional extra content alongside Level 10, for
+# students heading to Mathematical Methods and Specialist Mathematics. VC2.0 Mathematics was published in July 2023,
+# schools began using it from 2024, and it is fully in place in government schools from 2025. It replaced Mathematics
+# in the Victorian Curriculum F-10 Version 1.0 (taught from 2017). No newer version is announced; the Version 1.0
+# website closes on 31 December 2026.
+# Level 10A has content in all six strands. They are paired into three units here (Number and algebra, Measurement and
+# space, Statistics and probability), and each chapter is one strand or part of one. It assumes Level 10 (vic-mat-10).
+# Content descriptions on devising algorithms, simulations and experimenting with digital tools are covered only as
+# the ideas behind them. Every brief is in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths).
+
+id: vic-mat-10a
+subject: Mathematics
+bank: mat
+name: Mathematics, Level 10A
+about: Victorian Curriculum 2.0, Level 10A
+short: Mathematics
+years: [10]
+level: Level 10A
+place: vic
+kind: maths
+syllabus: "Victorian Curriculum F-10 Version 2.0: Mathematics, Level 10A"
+note: Follows the Victorian Curriculum 2.0. Not made or endorsed by the VCAA.
+chips: [surds, logarithms, polynomials, quadratic formula, sine rule, standard deviation]
+
+units:
+  - title: Number and algebra
+    chapters:
+      - title: Surds and fractional indices
+        id: vic-mat-10a-1-1
+        points:
+          - title: Surds
+            id: mat-surds
+            brief: A surd is a root that cannot be simplified to a rational number, such as √2 or ∛5, while √9 = 3 is not a surd.
+            codes: [VC2M10AN01]
+          - title: Simplifying surds
+            id: mat-simplifying-surds-vic
+            brief: Take out the largest square factor, such as √50 = √25 × √2 = 5√2.
+            codes: [VC2M10AN01, VC2M10AN02]
+          - title: Adding, subtracting and multiplying surds
+            id: mat-adding-subtracting-multiplying-surds
+            brief: Only like surds can be added or subtracted, such as 3√2 + 5√2 = 8√2, while √a × √b = √(ab).
+            codes: [VC2M10AN02]
+          - title: Rationalising the denominator
+            id: mat-rationalising-denominator-vic
+            brief: Multiply the top and bottom by the surd in the denominator so it becomes rational, such as 6/√3 = 6√3/3 = 2√3.
+            codes: [VC2M10AN02]
+          - title: Fractional indices
+            id: mat-fractional-indices-vic
+            brief: A fractional index means a root, so a^(1/n) is the nth root of a and a^(m/n) is that root raised to the power m, such as 8^(2/3) = 4.
+            codes: [VC2M10AN01, VC2M10AN02]
+
+      - title: Logarithms
+        id: vic-mat-10a-1-2
+        points:
+          - title: What a logarithm is
+            id: mat-logarithm-2-vic
+            brief: A logarithm is an index. log₂ 8 = 3 because 2³ = 8, so logarithms and exponentials undo each other.
+            codes: [VC2M10AN03, VC2M10AA04]
+          - title: Laws of logarithms
+            id: mat-laws-logarithms-vic
+            brief: Logs of a product add, logs of a quotient subtract, and a power comes out the front, so log(a³) = 3 log a.
+            codes: [VC2M10AN03]
+          - title: Solving exponential equations with logarithms
+            id: mat-solving-exponential-equations-with
+            brief: When the bases cannot be matched, take logs of both sides, such as 3ˣ = 20 giving x = log 20 ÷ log 3.
+            codes: [VC2M10AA04]
+
+      - title: Polynomials
+        id: vic-mat-10a-1-3
+        points:
+          - title: Polynomials and their degree
+            id: mat-polynomials-their-degree
+            brief: A polynomial is a sum of terms with whole-number powers of x. Its degree is the highest power, and the leading coefficient goes with it.
+            codes: [VC2M10AA01]
+          - title: The remainder theorem
+            id: mat-remainder-theorem
+            brief: When P(x) is divided by (x - a), the remainder is P(a), so substituting gives the remainder without dividing.
+            codes: [VC2M10AA01]
+          - title: The factor theorem
+            id: mat-factor-theorem
+            brief: If P(a) = 0, then (x - a) is a factor of P(x), which helps factorise a cubic by testing small whole numbers.
+            codes: [VC2M10AA01]
+          - title: Sketching cubics from factors
+            id: mat-sketching-cubics-from-factors
+            brief: The factors give the x-intercepts, the constant term gives the y-intercept, and the sign of the x³ term sets which way the curve ends.
+            codes: [VC2M10AA06]
+
+      - title: Quadratic equations and functions
+        id: vic-mat-10a-1-4
+        points:
+          - title: Factorising non-monic quadratics
+            id: mat-factorising-non-monic-quadratics-vic
+            brief: For ax² + bx + c, find two numbers that multiply to ac and add to b, split the middle term, and factorise in pairs.
+            codes: [VC2M10AA07]
+          - title: The quadratic formula and the discriminant
+            id: mat-quadratic-formula-discriminant
+            brief: x = (-b ± √(b² - 4ac)) / 2a solves any quadratic, and b² - 4ac tells whether there are two, one or no real solutions.
+            codes: [VC2M10AA07]
+          - title: Function notation
+            id: mat-function-notation-2
+            brief: f(x) names a rule, and f(3) means the output when the input is 3, such as f(x) = 2x + 1 giving f(3) = 7.
+            codes: [VC2M10AA08]
+          - title: Where a line meets a parabola
+            id: mat-where-line-meets-parabola
+            brief: Substitute the line into the quadratic and solve, giving two, one or no points where they meet.
+            codes: [VC2M10AA09]
+
+      - title: Graphs and transformations
+        id: vic-mat-10a-1-5
+        points:
+          - title: Turning point form of a parabola
+            id: mat-turning-point-form-parabola
+            brief: y = a(x - h)² + k has its turning point at (h, k), and completing the square puts a quadratic into this form.
+            codes: [VC2M10AA05, VC2M10AA03]
+          - title: Hyperbolas and asymptotes
+            id: mat-hyperbolas-asymptotes
+            brief: y = a/(x - h) + k is a hyperbola with a vertical asymptote at x = h and a horizontal asymptote at y = k.
+            codes: [VC2M10AA05]
+          - title: Equations of circles
+            id: mat-equations-circles
+            brief: (x - h)² + (y - k)² = r² is a circle with centre (h, k) and radius r.
+            codes: [VC2M10AA05]
+          - title: Transforming exponential graphs
+            id: mat-transforming-exponential-graphs
+            brief: y = aˣ passes through (0, 1) with the x-axis as an asymptote, and adding k moves the asymptote to y = k.
+            codes: [VC2M10AA05, VC2M10AA10]
+
+  - title: Measurement and space
+    chapters:
+      - title: Pyramids, cones and spheres
+        id: vic-mat-10a-2-1
+        points:
+          - title: Volume of pyramids and cones
+            id: mat-volume-pyramids-cones-vic
+            brief: A pyramid or cone holds one third of the prism or cylinder with the same base and height, V = ⅓Ah.
+            codes: [VC2M10AM01]
+          - title: Surface area of a cone
+            id: mat-surface-area-cone
+            brief: The curved surface is πrs, where s is the slant height, so a closed cone has SA = πr² + πrs.
+            codes: [VC2M10AM01]
+          - title: Surface area and volume of a sphere
+            id: mat-surface-area-volume-sphere
+            brief: A sphere's surface area is 4πr² and its volume is (4/3)πr³.
+            codes: [VC2M10AM01]
+          - title: Average rate of change
+            id: mat-average-rate-change-2-vic
+            brief: The gradient of the line between two points on a curve. As the points move closer, it approaches the rate of change at a single point.
+            codes: [VC2M10AM02]
+
+      - title: Circle geometry
+        id: vic-mat-10a-2-2
+        points:
+          - title: Angle at the centre and the circumference
+            id: mat-angle-at-centre-circumference
+            brief: The angle at the centre is twice the angle at the circumference standing on the same arc.
+            codes: [VC2M10ASP01]
+          - title: Angles in a semicircle and the same segment
+            id: mat-angles-semicircle-same-segment
+            brief: An angle in a semicircle is 90°, and angles standing on the same arc in the same segment are equal.
+            codes: [VC2M10ASP01]
+          - title: Cyclic quadrilaterals
+            id: mat-cyclic-quadrilaterals-vic
+            brief: A quadrilateral with all four vertices on a circle has opposite angles that add to 180°.
+            codes: [VC2M10ASP01]
+          - title: Tangents to a circle
+            id: mat-tangents-circle
+            brief: A tangent meets the radius at 90°, and two tangents drawn from the same outside point are equal in length.
+            codes: [VC2M10ASP01]
+          - title: Chords and the centre
+            id: mat-chords-centre
+            brief: A line from the centre perpendicular to a chord cuts it in half, and equal chords are the same distance from the centre.
+            codes: [VC2M10ASP01]
+
+      - title: Non-right-angled triangles
+        id: vic-mat-10a-2-3
+        points:
+          - title: The sine rule
+            id: mat-sine-rule-2-vic
+            brief: In any triangle, a/sin A = b/sin B = c/sin C, used when you know a side and its opposite angle.
+            codes: [VC2M10ASP02]
+          - title: The cosine rule
+            id: mat-cosine-rule-2-vic
+            brief: c² = a² + b² - 2ab cos C, used with two sides and the angle between them, or with all three sides to find an angle.
+            codes: [VC2M10ASP02]
+          - title: Area of a triangle with sine
+            id: mat-area-triangle-with-sine-vic
+            brief: Area is half the product of two sides times the sine of the angle between them, ½ab sin C.
+            codes: [VC2M10ASP02]
+          - title: Trigonometry in three dimensions
+            id: mat-trigonometry-three-dimensions-vic
+            brief: Find a right-angled triangle inside a 3D shape, such as a box's diagonal, and use Pythagoras and trigonometry step by step.
+            codes: [VC2M10ASP05]
+
+      - title: The unit circle and trigonometric graphs
+        id: vic-mat-10a-2-4
+        points:
+          - title: The unit circle
+            id: mat-unit-circle-2-vic
+            brief: For an angle on a circle of radius 1, the point's x-coordinate is the cosine and its y-coordinate is the sine, which defines them for any angle.
+            codes: [VC2M10ASP03]
+          - title: Graphs of sine and cosine
+            id: mat-graphs-sine-cosine-2-vic
+            brief: y = sin x and y = cos x are waves between -1 and 1 that repeat every 360°, with cosine starting at its highest point.
+            codes: [VC2M10ASP03]
+          - title: The graph of tangent
+            id: mat-graph-tangent
+            brief: y = tan x repeats every 180° and has vertical asymptotes at 90°, 270° and so on, where cosine is zero.
+            codes: [VC2M10ASP03]
+          - title: Solving simple trigonometric equations
+            id: mat-solving-simple-trigonometric-equations
+            brief: An equation such as sin x = 0.5 has more than one solution from 0° to 360°, found with the calculator and the unit circle's symmetry.
+            codes: [VC2M10ASP04]
+
+  - title: Statistics and probability
+    chapters:
+      - title: Standard deviation and bivariate data
+        id: vic-mat-10a-3-1
+        points:
+          - title: Standard deviation
+            id: mat-standard-deviation-vic
+            brief: Standard deviation measures how far values typically sit from the mean. A larger one means the data is more spread out.
+            codes: [VC2M10AST01]
+          - title: Outliers and standard deviation
+            id: mat-outliers-standard-deviation
+            brief: Because it uses every value, standard deviation grows a lot with one outlier, just as the mean is pulled towards it.
+            codes: [VC2M10AST01]
+          - title: Choosing a measure of spread
+            id: mat-choosing-measure-spread
+            brief: Standard deviation suits symmetric data without outliers. The interquartile range suits skewed data or data with outliers.
+            codes: [VC2M10AST02]
+          - title: Interpolation and extrapolation
+            id: mat-interpolation-extrapolation-3
+            brief: Predicting with a fitted line inside the range of the data is interpolation and fairly safe. Going beyond it is extrapolation and less reliable.
+            codes: [VC2M10AST03]
+
+      - title: Counting and probability
+        id: vic-mat-10a-3-2
+        points:
+          - title: The multiplication principle
+            id: mat-multiplication-principle
+            brief: If one choice can be made in m ways and a second in n ways, together there are m × n ways, such as 3 shirts and 4 pants giving 12 outfits.
+            codes: [VC2M10AP01]
+          - title: Factorial notation
+            id: mat-factorial-notation
+            brief: n! is the product of every whole number from n down to 1, and counts the ways to arrange n different things in a row, such as 4! = 24.
+            codes: [VC2M10AP01]
+          - title: Probability by counting arrangements
+            id: mat-probability-by-counting-arrangements
+            brief: Count the favourable arrangements and all the arrangements with the multiplication principle, then divide.
+            codes: [VC2M10AP01]
+          - title: Judging how a study was run
+            id: mat-judging-study-was-run
+            brief: Ask how a study chose its sample, whether it had a control group, and how big it was, before trusting its findings.
+            codes: [VC2M10AP02]

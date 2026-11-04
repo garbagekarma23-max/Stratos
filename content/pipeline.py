@@ -258,8 +258,15 @@ def level_text(course):
     """How the course names its level: "Units 1 and 2 (Year 11)" for an outline with a level line, or "Year 11"."""
     return course['level'] + ' (' + year_text(course['years']) + ')' if course.get('level') else year_text(course['years'])
 
+def place_name(place, d, none=None):
+    """A place's name: a state's, such as Victoria, or every state's for an outline that lists several ("Queensland,
+    Tasmania and Northern Territory"). none for international."""
+    names = d.get('placeNames') or {}
+    got = [names[p] for p in (place if isinstance(place, list) else [place]) if p in names]
+    return (', '.join(got[:-1]) + ' and ' + got[-1] if len(got) > 1 else got[0]) if got else none
+
 def where_text(course):
-    """Where the students are: their state for a state's course, or Australia."""
+    """Where the students are: their state or states for a state's course, or Australia."""
     name = course.get('placeName')
     return name + ', Australia' if name else 'Australia'
 
@@ -290,7 +297,8 @@ def read_outline(path, d):
     bad = []
     need = lambda k: o.get(k) if isinstance(o.get(k), str) and o.get(k).strip() else bad.append('the outline needs ' + k)
     if not isinstance(o, dict): raise Stop('The outline must start with id, subject and the other course lines.')
-    for k in ['id', 'subject', 'bank', 'name', 'about', 'place', 'kind', 'note']: need(k)
+    for k in ['id', 'subject', 'bank', 'name', 'about', 'kind', 'note']: need(k)
+    if not isinstance(o.get('place'), list): need('place')
     if bad: raise Stop('\n'.join(bad))
     if not re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', o['id']): bad.append('id must be lower-case letters and numbers joined by dashes, like nsw-bus-11')
     if not re.fullmatch(r'[a-z]{2,4}', o['bank']) or o['bank'] == 'e': bad.append('bank must be 2 to 4 lower-case letters, and not e (the Economics bank takes no new points)')
@@ -301,11 +309,17 @@ def read_outline(path, d):
     if level is not None and (not isinstance(level, str) or not re.fullmatch(r'[A-Z][A-Za-z0-9 ]{1,29}', level)):
         bad.append('level must be a short heading in sentence case, such as Units 1 and 2, or left out for a course named by its years')
     if o['kind'] not in KINDS: bad.append('kind must be one of ' + ', '.join(KINDS))
-    if o['place'] not in d['places']: bad.append('place must be one of ' + ', '.join(d['places']))
+    # place is one curriculum, or a list of states that teach the same curriculum (the Australian Curriculum in
+    # Queensland, South Australia and the rest), so one outline makes one course listed under each of them.
+    states = [p for p in d['places'] if p != 'international']
+    if isinstance(o['place'], list):
+        if len(o['place']) < 2 or len(set(o['place'])) < len(o['place']) or any(p not in states for p in o['place']):
+            bad.append('place as a list must name two or more different states, from ' + ', '.join(states))
+    elif o['place'] not in d['places']: bad.append('place must be one of ' + ', '.join(d['places']) + ', or a list of states')
     also = o.get('also_match') or []
     if not isinstance(also, list) or any(b not in d['banks'] for b in also): bad.append('also_match must list banks that exist: ' + ', '.join(sorted(d['banks'])))
     course = {k: o.get(k) for k in ['id', 'subject', 'bank', 'name', 'about', 'place', 'kind', 'note', 'syllabus', 'short', 'level']}
-    course.update({'years': years, 'placeName': (d.get('placeNames') or {}).get(o['place']), 'also_match': also, 'chips': o.get('chips') or [], 'units': [], 'points': []})
+    course.update({'years': years, 'placeName': place_name(o['place'], d), 'also_match': also, 'chips': o.get('chips') or [], 'units': [], 'points': []})
     titles = set()
     for ui, u in enumerate(o.get('units') or []):
         if not isinstance(u, dict) or not u.get('title'): bad.append('unit ' + str(ui + 1) + ' needs a title'); continue
@@ -530,7 +544,7 @@ def used_text(d, pid):
     out = []
     for u in d['used'].get(pid, []):
         level = u.get('level') or (year_text(u['years']) if u.get('years') else '')
-        place = (d.get('placeNames') or {}).get(u.get('place'), 'international')
+        place = place_name(u.get('place'), d, 'international')
         out.append((u.get('subject') or u['course']) + (', ' + level if level else '') + ' (' + place + ')')
     return '; '.join(dict.fromkeys(out)) or 'no course yet'
 
