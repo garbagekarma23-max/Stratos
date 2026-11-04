@@ -1,5 +1,6 @@
 // The banned words in check_content.mjs, with no browser. They are a style rule, not a ban on subject vocabulary:
-// the names New Testament and Old Testament pass in any subject, and landscape passes in Geography only. Every other
+// the names New Testament and Old Testament pass in any subject, landscape passes in Geography only, and the terms
+// dichotomous key and enhanced greenhouse effect pass in Science only. Every other
 // use is still caught. Each case runs check_content.mjs --json, the way content/pipeline.py does.
 import fs from 'fs';
 import os from 'os';
@@ -49,6 +50,16 @@ check(caught('The political landscape shifted in 1933.', 'Modern History'), 'lan
 check(caught('The poem paints a landscape of grief.', 'English', 'english'), 'landscape is still caught in English', R);
 check(caught('The landscape of the plain was flat.', undefined), 'landscape is caught when no subject is given', R);
 check(caught('The council landscaped the park.', 'Geography'), 'landscaped (the verb) is still caught in Geography', R);
+
+// In Science, two names of things students are taught pass: the dichotomous key and the enhanced greenhouse effect.
+check(passes('A dichotomous key sorts living things with two-way choices.', 'Science'), 'dichotomous key passes in Science', R);
+check(passes('Dichotomous keys use visible features.', 'Science'), 'Dichotomous keys with a capital passes in Science', R);
+check(passes('Burning coal adds to the enhanced greenhouse effect.', 'Science'), 'enhanced greenhouse effect passes in Science', R);
+check(caught('The key step is to observe the leaf.', 'Science'), 'key on its own is still caught in Science', R);
+check(caught('A dichotomous key gave a key result.', 'Science'), 'a banned key is caught next to an allowed one', R);
+check(caught('Fertiliser can enhance growth.', 'Science'), 'enhance on its own is still caught in Science', R);
+check(caught('A dichotomous key sorts the invertebrates.', 'Biology'), 'dichotomous key is still caught outside Science', R);
+check(caught('The enhanced greenhouse effect warms the planet.', 'Geography'), 'enhanced greenhouse effect is still caught outside Science', R);
 
 // The rest of the list is unchanged, Geography and Studies of Religion included.
 check(caught('This is a crucial step in erosion.', 'Geography'), 'other banned words are still caught in Geography', R);

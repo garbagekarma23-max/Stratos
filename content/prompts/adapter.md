@@ -18,7 +18,7 @@ A point has a title, a card of 3 or 4 lines (each with an optional label), a rem
 - Short, direct sentences. Plain words that a student in the years given can read on a phone.
 - Australian spelling: organisation, labour, program, centre, licence (the noun), analyse.
 - Sentence case. Never use an em dash or an en dash. No double spaces. Options are 60 characters or fewer, with no full stop at the end.
-- Never use these words, in any form: crucial, delve, enhance, foster, garner, highlight, interplay, intricate, key, landscape, meticulous, pivotal, showcase, tapestry, testament, underscore, valuable, vibrant, groundbreaking, renowned. (The economist Keynes is fine, and so are the names New Testament and Old Testament, and landscape in its literal sense in a Geography course.)
+- Never use these words, in any form: crucial, delve, enhance, foster, garner, highlight, interplay, intricate, key, landscape, meticulous, pivotal, showcase, tapestry, testament, underscore, valuable, vibrant, groundbreaking, renowned. (The economist Keynes is fine, and so are the names New Testament and Old Testament, landscape in its literal sense in a Geography course, and the terms dichotomous key and enhanced greenhouse effect in a Science course.)
 - Write fresh. Never copy a syllabus document, textbook, past paper or marking guideline.
 - Keep everything suitable for a school classroom.
 

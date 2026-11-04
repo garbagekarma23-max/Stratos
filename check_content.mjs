@@ -25,9 +25,11 @@ const BANNED = /\b(crucial|delve|enhance|foster|garner|highlight|interplay|intri
 /* The banned words are a style rule, not a ban on subject vocabulary. These names and terms are taken out of the
    text before the check, so every other use is still caught: "testament" on its own, or "landscape" outside Geography.
    ALLOWED holds proper nouns, allowed in any subject. ALLOWED_IN holds a subject's literal terms, by the subject's name
-   (a made course's course line, or the subject in a --json file). */
+   (a made course's course line, or the subject in a --json file): landscape in Geography, and in Science the names of
+   two things students are taught, the dichotomous key (a chart for identifying living things) and the enhanced
+   greenhouse effect. */
 const ALLOWED = [/\b(?:New|Old) Testaments?\b/g];
-const ALLOWED_IN = {Geography: [/\blandscapes?\b/gi]};
+const ALLOWED_IN = {Geography: [/\blandscapes?\b/gi], Science: [/\bdichotomous keys?\b/gi, /\benhanced greenhouse effect\b/gi]};
 const banned = (t, subject) => BANNED.test([...ALLOWED, ...(ALLOWED_IN[subject] || [])].reduce((s, r) => s.replace(r, ''), t));
 let problems = [];
 const wordCheck = (id, t, subject) => {
