@@ -73,6 +73,16 @@ export async function open(o = {}) {
   return {b, ctx, p, errs};
 }
 export const shot = (p, name) => p.screenshot({path: SHOTS + name + '.png'});
+// Every Australian state has courses of its own now (the Australian Curriculum courses are listed under six of them),
+// so a state with none no longer happens on the real page. Pass this as open()'s route to serve the page with one
+// state taken out of every made course's list of places, so the tests can still check what a state with no courses
+// shows. It works on v2.html and on the other builds (v2-units.html).
+export const noCoursesIn = state => ctx => ctx.route(/\/v2(-[a-z]+)?\.html/, async r => {
+  const res = await r.fetch(), body = await res.text();
+  const out = body.replace(/"place": \[([^\]]*)\]/g, (m, list) =>
+    '"place": [' + list.split(',').map(s => s.trim()).filter(s => s !== '"' + state + '"').join(', ') + ']');
+  await r.fulfill({response: res, body: out});
+});
 export const tab = async (p, t) => { await p.click('.tab[data-tab="' + t + '"]'); await p.waitForTimeout(150); };
 export const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('stratos2.v1') || '{}'));
 // The question waiting in a feed (#learnFeed or #feed).
