@@ -59,8 +59,8 @@ const wide = p => p.evaluate(() => document.documentElement.scrollWidth - window
   check((await text(p, '#sheetBody .choice[data-v="AU"] small')) === 'NSW, VIC, QLD, WA, SA, TAS, ACT and NT courses and international courses', 'Australia\'s line names every state with courses', R);
   await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
   const states = await p.locator('#sheetBody .choice .t').allTextContents();
-  check(JSON.stringify(states) === JSON.stringify(['New South WalesHSC', 'VictoriaVCE', 'QueenslandQCE', 'Western AustraliaWACE', 'South AustraliaSACE', 'TasmaniaTCE', 'Australian Capital TerritoryACT Senior Secondary Certificate', 'Northern TerritoryNTCET']),
-    'Victoria says VCE now it has courses, as does every state with courses', R);
+  check(JSON.stringify(states) === JSON.stringify(['New South WalesHSC', 'VictoriaVCE', 'QueenslandYears 7 to 10', 'Western AustraliaYears 7 to 10', 'South AustraliaYears 7 to 10', 'TasmaniaYears 7 to 10', 'Australian Capital TerritoryYears 7 to 10', 'Northern TerritoryYears 7 to 10']),
+    'Victoria says VCE now it has Units courses, and the six with only Years 7 to 10 courses say so', R);
   check((await p.locator('#sheetBody [aria-checked="true"]').textContent()).startsWith('Victoria'), 'a phone in Melbourne has Victoria picked', R);
   await p.click('[data-act="placedone"]'); await p.waitForTimeout(100);
   const g = await grouped(p, '#sheetBody');

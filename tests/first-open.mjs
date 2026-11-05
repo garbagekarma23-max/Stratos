@@ -23,8 +23,11 @@ const NONE = 'My course isn’t here yet';
 const TRY = 'Try this one while we add yours.';
 // Every Australian state has courses of its own now: NSW and Victoria theirs, the other six the Australian Curriculum.
 const AU_LINE = 'NSW, VIC, QLD, WA, SA, TAS, ACT and NT courses and international courses';
-const STATES = ['New South WalesHSC', 'VictoriaVCE', 'QueenslandQCE', 'Western AustraliaWACE', 'South AustraliaSACE', 'TasmaniaTCE',
-  'Australian Capital TerritoryACT Senior Secondary Certificate', 'Northern TerritoryNTCET'];
+// NSW and Victoria name their certificate, since each has Year 11 and 12 courses. The other six have only the Australian
+// Curriculum's Years 7 to 10 courses, so they say Years 7 to 10.
+const Y = 'Years 7 to 10';
+const STATES = ['New South WalesHSC', 'VictoriaVCE', 'Queensland' + Y, 'Western Australia' + Y, 'South Australia' + Y, 'Tasmania' + Y,
+  'Australian Capital Territory' + Y, 'Northern Territory' + Y];
 async function close(d) { errsAll.push(...d.errs); await d.b.close(); }
 // Every request the page makes beyond the test server, so a test can check nothing is sent.
 function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(127\.0\.0\.1|localhost)/.test(r.url()) && !/fonts\.(googleapis|gstatic)\.com/.test(r.url())) seen.push(r.url()); }); return seen; }
@@ -50,7 +53,7 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   await tap(d.p, '#setup [data-act="placenext"]');
   check((await title(d.p)) === 'Which state or territory?' && (await d.p.locator('#setup .rule').textContent()) === 'Pick yours to see its courses.', 'Next shows Which state or territory?', R);
   const states = await d.p.locator('#setup .choice').allTextContents();
-  check(JSON.stringify(states) === JSON.stringify(STATES), 'the eight, each with its certificate now that each has courses', R);
+  check(JSON.stringify(states) === JSON.stringify(STATES), 'the eight: NSW and Victoria with their certificate, the six with only Years 7 to 10 courses saying so', R);
   check((await checked(d.p))[0] === 'New South WalesHSC', 'NSW is picked, from the time zone', R);
   check((await d.p.locator('#setup .cta .primary').textContent()) === 'Show courses' && (await d.p.locator('#setup .cta .ghost').textContent()) === 'Back', 'with Show courses and Back', R);
   await tap(d.p, '#setup [data-act="placeback"]');
@@ -141,7 +144,7 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   // isn’t here yet picks Queensland's first course.
   const d = await open({setup: true, tz: 'Australia/Brisbane'});
   await tap(d.p, '#setup [data-act="placenext"]');
-  check((await checked(d.p))[0] === 'QueenslandQCE', 'a Brisbane phone guesses Queensland, which says QCE', R);
+  check((await checked(d.p))[0] === 'Queensland' + Y, 'a Brisbane phone guesses Queensland, which says Years 7 to 10', R);
   await tap(d.p, '#setup [data-act="placedone"]');
   const qld = loadContent().CURRICULA.qld.courses;
   const subs = await d.p.locator('#setup .pick[data-sub]').evaluateAll(b => b.map(x => x.dataset.sub));

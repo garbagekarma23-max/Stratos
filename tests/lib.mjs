@@ -83,6 +83,15 @@ export const noCoursesIn = state => ctx => ctx.route(/\/v2(-[a-z]+)?\.html/, asy
     '"place": [' + list.split(',').map(s => s.trim()).filter(s => s !== '"' + state + '"').join(', ') + ']');
   await r.fulfill({response: res, body: out});
 });
+// The six states on the Australian Curriculum have only Years 7 to 10 courses, so the state step says "Years 7 to 10"
+// for them. Pass this as open()'s route to serve the page with one of those courses (Economics and Business, Year 10)
+// marked Year 11, so the tests can check a state names its certificate (QCE, WACE and so on) once it has a senior course.
+export const seniorAc = ctx => ctx.route(/\/v2(-[a-z]+)?\.html/, async r => {
+  const res = await r.fetch(), body = await res.text();
+  const out = body.replace(/("id": "ac-ecb-10",[\s\S]*?"years": )\[10\]/, '$1[11]');
+  if (out === body) throw new Error('seniorAc found no Year 10 course to change');
+  await r.fulfill({response: res, body: out});
+});
 export const tab = async (p, t) => { await p.click('.tab[data-tab="' + t + '"]'); await p.waitForTimeout(150); };
 export const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('stratos2.v1') || '{}'));
 // The question waiting in a feed (#learnFeed or #feed).

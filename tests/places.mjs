@@ -3,15 +3,18 @@
 // the international courses showing in every country, and switching courses with each one's progress kept apart.
 // Nothing may be sent and the location feature may never be asked for.
 // Run: node places.mjs. Pass "shots" to also save each step at 390 by 844, light and dark, to tests/shots/.
-import { open, shot, saved, check, noCoursesIn } from './lib.mjs';
+import { open, shot, saved, check, noCoursesIn, seniorAc } from './lib.mjs';
 import { loadContent } from '../content/load.mjs';
 const R = [], errsAll = [], shots = process.argv[2] === 'shots';
 const text = (p, sel) => p.locator(sel).first().textContent();
 const COMING = c => 'Courses for ' + c + ' are coming. The international courses below work anywhere.';
 // Every Australian state has courses of its own now: NSW and Victoria theirs, the other six the Australian Curriculum.
 const AU_LINE = 'NSW, VIC, QLD, WA, SA, TAS, ACT and NT courses and international courses';
-const STATES = ['New South WalesHSC', 'VictoriaVCE', 'QueenslandQCE', 'Western AustraliaWACE', 'South AustraliaSACE', 'TasmaniaTCE',
-  'Australian Capital TerritoryACT Senior Secondary Certificate', 'Northern TerritoryNTCET'];
+// NSW and Victoria name their certificate, since each has Year 11 and 12 courses. The other six have only the Australian
+// Curriculum's Years 7 to 10 courses, so they say Years 7 to 10.
+const Y = 'Years 7 to 10';
+const STATES = ['New South WalesHSC', 'VictoriaVCE', 'Queensland' + Y, 'Western Australia' + Y, 'South Australia' + Y, 'Tasmania' + Y,
+  'Australian Capital Territory' + Y, 'Northern Territory' + Y];
 // A state's own made courses, read from the content files. A course for several states lists them all in its place.
 const madeIn = st => loadContent().MADE_COURSES.filter(c => [].concat(c.place).includes(st)).map(c => c.id).sort();
 // Count every call to the location feature, so a test can show there were none.
@@ -138,7 +141,7 @@ for (const [locale, tz, code, name, state, what] of cases) {
   check((await text(p, '[data-act="placenext"]')) === 'Next', 'Australia has states, so the button says Next', R);
   await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
   const states = await p.locator('#sheetBody .choice .t').allTextContents();
-  check(JSON.stringify(states) === JSON.stringify(STATES), 'the state step lists the eight states and territories, each with its certificate now that each has courses: ' + states.join(', '), R);
+  check(JSON.stringify(states) === JSON.stringify(STATES), 'the state step lists the eight states and territories: NSW and Victoria with their certificate, the six with only Years 7 to 10 courses saying so: ' + states.join(', '), R);
   check((await checked(p).allTextContents())[0].startsWith('New South Wales'), 'Sydney\'s time zone picks New South Wales', R);
   await p.click('[data-act="placeback"]'); await p.waitForTimeout(80);
   check((await text(p, '#sheetTitle')) === 'Where do you study?' && (await checked(p).allTextContents()).join().startsWith('Australia'), 'Back goes to the country step, still on Australia', R);
@@ -172,6 +175,20 @@ for (const [locale, tz, code, name, state, what] of cases) {
   await p.click('#sheetBody .choice[data-v="qld"]'); await p.waitForTimeout(60);
   await p.click('[data-act="placedone"]'); await p.waitForTimeout(100);
   check((await text(p, '#sheetBody .place .t')) === 'Queensland, Australia' && (await text(p, '#sheetBody > .sub')) === COMING('Queensland'), 'Queensland says its courses are coming', R);
+  errsAll.push(...errs); await b.close();
+}
+
+// ---------- 2c. a state names its certificate once it has a Year 11 or 12 course ----------
+// Served with the Australian Curriculum's Year 10 Economics and Business marked Year 11, the six states that list it
+// name their certificate in place of Years 7 to 10.
+{
+  const {b, p, errs} = await open({route: seniorAc});
+  await p.click('.subject'); await p.waitForTimeout(100);
+  await p.click('#sheetBody .choice[data-v="AU"]'); await p.waitForTimeout(60);
+  await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
+  const states = await p.locator('#sheetBody .choice .t').allTextContents();
+  check(JSON.stringify(states) === JSON.stringify(['New South WalesHSC', 'VictoriaVCE', 'QueenslandQCE', 'Western AustraliaWACE', 'South AustraliaSACE', 'TasmaniaTCE', 'Australian Capital TerritoryACT Senior Secondary Certificate', 'Northern TerritoryNTCET']),
+    'with one Year 11 course, each of the six names its certificate: ' + states.join(', '), R);
   errsAll.push(...errs); await b.close();
 }
 
