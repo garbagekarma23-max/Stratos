@@ -3,15 +3,15 @@
 // content/pipeline.py publish wrote for two test courses for Victoria (content/test_pipeline.py checks they are still
 // what it writes): Units 1 and 2 (Year 11) and Units 3 and 4 (Year 12), the first reusing a point from the test course's
 // bank and one from the Economics bank. This builds v2-units.html with them added (python3 build.py --extra tests/units
-// --out v2-units.html) and checks: Australia's line naming NSW and VIC; Victoria saying VCE on the state step now it
-// has courses, while the states with none still say Courses coming; the courses for Victoria under Units 1 and 2, then
+// --out v2-units.html) and checks: Australia's line naming every state with courses; Victoria saying VCE on the state
+// step now it has courses, while a state with none (Queensland, served with its courses taken out) says Courses coming; the courses for Victoria under Units 1 and 2, then
 // Units 3 and 4, then the international courses; Home naming a course by its units; New South Wales still grouped by
 // year, with no Victorian course; the first-open course step grouped the same way; and the courses step at 360 px in
 // light and dark with no sideways scroll.
 // Run: node units.mjs. Pass "shots" to also save the courses for Victoria at 390 by 844, light and dark, to tests/shots/.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-import { open, shot, check, saved } from './lib.mjs';
+import { open, shot, check, saved, noCoursesIn } from './lib.mjs';
 import { loadContent } from '../content/load.mjs';
 const R = [], ROOT = fileURLToPath(new URL('..', import.meta.url)), shots = process.argv[2] === 'shots';
 const build = spawnSync(process.platform === 'win32' ? 'py' : 'python3', ['build.py', '--extra', 'tests/units', '--out', 'v2-units.html'], {cwd: ROOT, encoding: 'utf8'});
@@ -36,16 +36,31 @@ const grouped = (p, root) => p.evaluate(r => {
 }, root);
 const wide = p => p.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
 
+// ---------- a state with no courses still says Courses coming ----------
+// No real state is without courses now, so this serves v2-units.html with Queensland taken out of the Australian
+// Curriculum courses' places.
+{
+  const {b, p, errs} = await open({page: 'v2-units.html', tz: 'Australia/Melbourne', route: noCoursesIn('qld')});
+  await p.click('.subject'); await p.waitForTimeout(100);
+  check((await text(p, '#sheetBody .choice[data-v="AU"] small')) === 'NSW, VIC, WA, SA, TAS, ACT and NT courses and international courses', 'with Queensland\'s courses taken out, Australia\'s line leaves QLD out', R);
+  await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
+  const states = await p.locator('#sheetBody .choice .t').allTextContents();
+  check(states[0] === 'New South WalesHSC' && states[1] === 'VictoriaVCE' && states[2] === 'QueenslandCourses coming' && states.filter(s => s.endsWith('Courses coming')).length === 1,
+    'Victoria says VCE, and Queensland, with none, says Courses coming', R);
+  check(errs.length === 0, 'no script errors' + (errs.length ? ': ' + errs.join(' | ') : ''), R);
+  await b.close();
+}
+
 // ---------- the subject sheet on a phone in Melbourne ----------
 {
   check(VIC.join(',') === 'tsv-units-12,tsv-units-34', 'the fixture has two courses for Victoria', R);
   const {b, p, errs} = await open({page: 'v2-units.html', tz: 'Australia/Melbourne'});
   await p.click('.subject'); await p.waitForTimeout(100);
-  check((await text(p, '#sheetBody .choice[data-v="AU"] small')) === 'NSW and VIC courses and international courses', 'Australia\'s line names both states with courses', R);
+  check((await text(p, '#sheetBody .choice[data-v="AU"] small')) === 'NSW, VIC, QLD, WA, SA, TAS, ACT and NT courses and international courses', 'Australia\'s line names every state with courses', R);
   await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
   const states = await p.locator('#sheetBody .choice .t').allTextContents();
-  check(states[0] === 'New South WalesHSC' && states[1] === 'VictoriaVCE' && states.slice(2).every(s => s.endsWith('Courses coming')),
-    'Victoria says VCE now it has courses, and the states with none still say Courses coming', R);
+  check(JSON.stringify(states) === JSON.stringify(['New South WalesHSC', 'VictoriaVCE', 'QueenslandQCE', 'Western AustraliaWACE', 'South AustraliaSACE', 'TasmaniaTCE', 'Australian Capital TerritoryACT Senior Secondary Certificate', 'Northern TerritoryNTCET']),
+    'Victoria says VCE now it has courses, as does every state with courses', R);
   check((await p.locator('#sheetBody [aria-checked="true"]').textContent()).startsWith('Victoria'), 'a phone in Melbourne has Victoria picked', R);
   await p.click('[data-act="placedone"]'); await p.waitForTimeout(100);
   const g = await grouped(p, '#sheetBody');

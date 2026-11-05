@@ -6,7 +6,7 @@
 // node first-open.mjs shots also saves first-intro, first-country, first-state, first-course, first-welcome and
 // first-home, light and dark, at 390 by 844.
 import fs from 'fs';
-import { open, saved, shot, check } from './lib.mjs';
+import { open, saved, shot, check, noCoursesIn } from './lib.mjs';
 import { loadContent } from '../content/load.mjs';
 // What goes to an account (src/84-merge.js), to check the place and the pick stay on the device.
 const {syncPart} = new Function(fs.readFileSync(new URL('../src/84-merge.js', import.meta.url), 'utf8') + '; return {syncPart};')();
@@ -21,6 +21,10 @@ const GUESS = 'Pick your country to see its courses. We guessed from your phone\
 const FINE = 'You can switch courses any time from Home. Each course keeps its own progress, saved on this device only.';
 const NONE = 'My course isn’t here yet';
 const TRY = 'Try this one while we add yours.';
+// Every Australian state has courses of its own now: NSW and Victoria theirs, the other six the Australian Curriculum.
+const AU_LINE = 'NSW, VIC, QLD, WA, SA, TAS, ACT and NT courses and international courses';
+const STATES = ['New South WalesHSC', 'VictoriaVCE', 'QueenslandQCE', 'Western AustraliaWACE', 'South AustraliaSACE', 'TasmaniaTCE',
+  'Australian Capital TerritoryACT Senior Secondary Certificate', 'Northern TerritoryNTCET'];
 async function close(d) { errsAll.push(...d.errs); await d.b.close(); }
 // Every request the page makes beyond the test server, so a test can check nothing is sent.
 function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(127\.0\.0\.1|localhost)/.test(r.url()) && !/fonts\.(googleapis|gstatic)\.com/.test(r.url())) seen.push(r.url()); }); return seen; }
@@ -35,7 +39,7 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   check(await shown(d.p, '#setup') && !(await shown(d.p, '#welcome')) && !(await shown(d.p, '#sheet')), 'the intro fades into the country step, full screen, not the sheet', R);
   check((await title(d.p)) === 'Where do you study?' && (await d.p.locator('#setup .rule').textContent()) === GUESS, 'Where do you study?, with the line about the guess', R);
   check((await checked(d.p))[0].startsWith('Australia') && (await d.p.locator('#setup .places .choice').first().textContent()).startsWith('Australia'), 'Australia is guessed, picked and first', R);
-  check((await d.p.locator('#setup .places .choice').first().locator('small').textContent()) === 'NSW and VIC courses and international courses', 'with its line under it, naming the states with courses', R);
+  check((await d.p.locator('#setup .places .choice').first().locator('small').textContent()) === AU_LINE, 'with its line under it, naming the states with courses', R);
   check((await d.p.locator('#placeIn').getAttribute('placeholder')) === 'Search countries' && await d.p.evaluate(() => document.activeElement.id !== 'placeIn'), 'the search box is there, but not focused, so no keyboard comes up', R);
   check((await d.p.locator('#setup .fine').textContent()) === 'This uses no location, and nothing is sent anywhere.', 'and the line that nothing is sent', R);
   check((await d.p.locator('#setup [data-act="placenext"]').textContent()) === 'Next', 'the button says Next, for a country with states', R);
@@ -46,7 +50,7 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   await tap(d.p, '#setup [data-act="placenext"]');
   check((await title(d.p)) === 'Which state or territory?' && (await d.p.locator('#setup .rule').textContent()) === 'Pick yours to see its courses.', 'Next shows Which state or territory?', R);
   const states = await d.p.locator('#setup .choice').allTextContents();
-  check(states.length === 8 && states[0] === 'New South WalesHSC' && states[1] === 'VictoriaVCE' && states.slice(2).every(t => t.endsWith('Courses coming')), 'the eight, with NSW saying HSC, Victoria VCE and the others Courses coming', R);
+  check(JSON.stringify(states) === JSON.stringify(STATES), 'the eight, each with its certificate now that each has courses', R);
   check((await checked(d.p))[0] === 'New South WalesHSC', 'NSW is picked, from the time zone', R);
   check((await d.p.locator('#setup .cta .primary').textContent()) === 'Show courses' && (await d.p.locator('#setup .cta .ghost').textContent()) === 'Back', 'with Show courses and Back', R);
   await tap(d.p, '#setup [data-act="placeback"]');
@@ -133,8 +137,24 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   await close(d);
 }
 {
-  // Queensland has no courses of its own yet: the first international course.
+  // Queensland has the Australian Curriculum courses: they come first, then the international one, and My course
+  // isn’t here yet picks Queensland's first course.
   const d = await open({setup: true, tz: 'Australia/Brisbane'});
+  await tap(d.p, '#setup [data-act="placenext"]');
+  check((await checked(d.p))[0] === 'QueenslandQCE', 'a Brisbane phone guesses Queensland, which says QCE', R);
+  await tap(d.p, '#setup [data-act="placedone"]');
+  const qld = loadContent().CURRICULA.qld.courses;
+  const subs = await d.p.locator('#setup .pick[data-sub]').evaluateAll(b => b.map(x => x.dataset.sub));
+  check(qld.length > 0 && subs.length === qld.length + 1 && subs[subs.length - 1] === 'edexcel' && qld.every(id => subs.includes(id)) && (await d.p.locator('#setup .p-in > .sub').first().textContent()) === 'More Queensland subjects are coming.', 'Queensland lists its ' + qld.length + ' courses, its line, then the international course', R);
+  await tap(d.p, '#setup [data-act="firstnone"]', 200);
+  const s = await saved(d.p);
+  check(s.subject === qld[0] && s.picked === 1 && (await toastText(d.p)) === TRY, 'My course isn’t here yet opens Home on Queensland\'s first course, with the toast', R);
+  await close(d);
+}
+{
+  // A state with no courses of its own: the first international course. No real state is without courses now, so
+  // this serves the page with Queensland taken out of the Australian Curriculum courses' places.
+  const d = await open({setup: true, tz: 'Australia/Brisbane', route: noCoursesIn('qld')});
   await tap(d.p, '#setup [data-act="placenext"]');
   check((await checked(d.p))[0] === 'QueenslandCourses coming', 'a Brisbane phone guesses Queensland', R);
   await tap(d.p, '#setup [data-act="placedone"]');

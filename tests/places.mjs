@@ -3,11 +3,17 @@
 // the international courses showing in every country, and switching courses with each one's progress kept apart.
 // Nothing may be sent and the location feature may never be asked for.
 // Run: node places.mjs. Pass "shots" to also save each step at 390 by 844, light and dark, to tests/shots/.
-import { open, shot, saved, check } from './lib.mjs';
+import { open, shot, saved, check, noCoursesIn } from './lib.mjs';
 import { loadContent } from '../content/load.mjs';
 const R = [], errsAll = [], shots = process.argv[2] === 'shots';
 const text = (p, sel) => p.locator(sel).first().textContent();
 const COMING = c => 'Courses for ' + c + ' are coming. The international courses below work anywhere.';
+// Every Australian state has courses of its own now: NSW and Victoria theirs, the other six the Australian Curriculum.
+const AU_LINE = 'NSW, VIC, QLD, WA, SA, TAS, ACT and NT courses and international courses';
+const STATES = ['New South WalesHSC', 'VictoriaVCE', 'QueenslandQCE', 'Western AustraliaWACE', 'South AustraliaSACE', 'TasmaniaTCE',
+  'Australian Capital TerritoryACT Senior Secondary Certificate', 'Northern TerritoryNTCET'];
+// A state's own made courses, read from the content files. A course for several states lists them all in its place.
+const madeIn = st => loadContent().MADE_COURSES.filter(c => [].concat(c.place).includes(st)).map(c => c.id).sort();
 // Count every call to the location feature, so a test can show there were none.
 const spyLocation = () => {
   window.__loc = 0;
@@ -85,7 +91,7 @@ for (const [locale, tz, code, name, state, what] of cases) {
   check(named && all.every(x => x.n !== x.c), 'each is named by the browser, never shown as a bare code', R);
   const rest = all.slice(1).map(x => x.n);
   check(all[0].c === 'AU' && rest.join('|') === rest.slice().sort((a, b) => a.localeCompare(b, 'en')).join('|'), 'Australia comes first, then every other country A to Z', R);
-  check((await text(p, '#sheetBody .choice[data-v="AU"] small')) === 'NSW and VIC courses and international courses' && (await p.locator('#sheetBody .choice[data-v="FR"] small').count()) === 0, 'only a country with courses of its own has a line under its name, naming its states with courses', R);
+  check((await text(p, '#sheetBody .choice[data-v="AU"] small')) === AU_LINE && (await p.locator('#sheetBody .choice[data-v="FR"] small').count()) === 0, 'only a country with courses of its own has a line under its name, naming its states with courses', R);
 
   // Search filters as you type, ignoring capitals and accents.
   const shown = () => rows.evaluateAll(els => els.filter(e => !e.hidden).map(e => e.dataset.v));
@@ -127,19 +133,20 @@ for (const [locale, tz, code, name, state, what] of cases) {
   await p.click('[data-act="placechange"]'); await p.waitForTimeout(100);
   check((await text(p, '#sheetTitle')) === 'Where do you study?' && (await checked(p).allTextContents()).join() === 'France' && (await p.locator('#sheetBody .places .choice').first().getAttribute('data-v')) === 'FR', 'Change goes back to the country step, with France picked at the top', R);
   check((await p.locator('#sheetBody .rule').textContent()).indexOf('guessed') < 0, 'and no longer says it guessed', R);
-  // Back to Australia, Queensland, a state with no courses yet.
+  // Back to Australia, then Queensland, which has the Australian Curriculum courses.
   await p.click('#sheetBody .choice[data-v="AU"]'); await p.waitForTimeout(60);
   check((await text(p, '[data-act="placenext"]')) === 'Next', 'Australia has states, so the button says Next', R);
   await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
   const states = await p.locator('#sheetBody .choice .t').allTextContents();
-  check(states.length === 8 && states[0] === 'New South WalesHSC' && states[1] === 'VictoriaVCE' && states.slice(2).every(s => s.endsWith('Courses coming')), 'the state step lists the eight states and territories, NSW with the HSC, Victoria with the VCE, the others coming', R);
+  check(JSON.stringify(states) === JSON.stringify(STATES), 'the state step lists the eight states and territories, each with its certificate now that each has courses: ' + states.join(', '), R);
   check((await checked(p).allTextContents())[0].startsWith('New South Wales'), 'Sydney\'s time zone picks New South Wales', R);
   await p.click('[data-act="placeback"]'); await p.waitForTimeout(80);
   check((await text(p, '#sheetTitle')) === 'Where do you study?' && (await checked(p).allTextContents()).join().startsWith('Australia'), 'Back goes to the country step, still on Australia', R);
   await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
   await p.click('#sheetBody .choice[data-v="qld"]'); await p.waitForTimeout(60);
   await p.click('[data-act="placedone"]'); await p.waitForTimeout(100);
-  check((await text(p, '#sheetBody .place .t')) === 'Queensland, Australia' && (await text(p, '#sheetBody > .sub')) === COMING('Queensland'), 'Queensland says its courses are coming', R);
+  const qld = madeIn('qld'), qldOn = (await p.locator('#sheetBody .pick[data-sub]:not([data-sub="edexcel"]):not([data-sub="eco"])').evaluateAll(bs => bs.map(b => b.dataset.sub))).sort();
+  check((await text(p, '#sheetBody .place .t')) === 'Queensland, Australia' && qld.length > 0 && (await p.locator('#sheetBody .pick[data-sub="eco"]').count()) === 1 && (await headings(p)).join('|') === 'Queensland|International courses|Open now' && JSON.stringify(qldOn) === JSON.stringify(qld) && (await text(p, '#sheetBody > .sub')) === 'More Queensland subjects are coming.', 'Queensland shows its ' + qld.length + ' courses, then More Queensland subjects are coming, and NSW Economics under Open now', R);
   check(JSON.stringify((await saved(p)).place) === JSON.stringify({country: 'AU', state: 'qld'}), 'Australia, Queensland is saved', R);
   await p.reload(); await p.waitForTimeout(300);
   sent.length = 0;      // the reload itself loads the page and its typefaces; only what the sheet does counts
@@ -151,26 +158,46 @@ for (const [locale, tz, code, name, state, what] of cases) {
   errsAll.push(...errs); await b.close();
 }
 
+// ---------- 2b. a state with no courses of its own ----------
+// No real state is without courses now, so this serves the page with Queensland taken out of the Australian
+// Curriculum courses' places: Australia's line leaves QLD out, and Queensland says Courses coming on the state step.
+{
+  const {b, p, errs} = await open({route: noCoursesIn('qld')});
+  await p.click('.subject'); await p.waitForTimeout(100);
+  check((await text(p, '#sheetBody .choice[data-v="AU"] small')) === 'NSW, VIC, WA, SA, TAS, ACT and NT courses and international courses', 'Australia\'s line names only the states with courses, leaving QLD out', R);
+  await p.click('#sheetBody .choice[data-v="AU"]'); await p.waitForTimeout(60);
+  await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
+  const states = await p.locator('#sheetBody .choice .t').allTextContents();
+  check(JSON.stringify(states) === JSON.stringify(STATES.map(s => s.startsWith('Queensland') ? 'QueenslandCourses coming' : s)), 'the state step says Courses coming for Queensland only: ' + states.join(', '), R);
+  await p.click('#sheetBody .choice[data-v="qld"]'); await p.waitForTimeout(60);
+  await p.click('[data-act="placedone"]'); await p.waitForTimeout(100);
+  check((await text(p, '#sheetBody .place .t')) === 'Queensland, Australia' && (await text(p, '#sheetBody > .sub')) === COMING('Queensland'), 'Queensland says its courses are coming', R);
+  errsAll.push(...errs); await b.close();
+}
+
 // ---------- 3. the international courses show in every country ----------
-for (const [place, own, line] of [
+for (const [place, own, line, route] of [
   [{country: 'AU', state: 'nsw'}, 'New South Wales', null],
   [{country: 'AU', state: 'vic'}, 'Victoria', null],
-  [{country: 'AU', state: 'qld'}, null, COMING('Queensland')],
-  [{country: 'AU', state: 'nt'}, null, COMING('Northern Territory')],
+  [{country: 'AU', state: 'qld'}, 'Queensland', null],
+  [{country: 'AU', state: 'nt'}, 'Northern Territory', null],
+  // A state with no courses of its own, served with Queensland taken out of the Australian Curriculum courses' places.
+  [{country: 'AU', state: 'qld'}, null, COMING('Queensland'), noCoursesIn('qld')],
   [{country: 'GB', state: null}, null, COMING('United Kingdom')],
   [{country: 'FR', state: null}, null, COMING('France')],
   [{country: 'AE', state: null}, null, COMING('United Arab Emirates')]
 ]) {
-  const {b, p, errs} = await open({seed: {place: place, subject: 'edexcel'}});
+  const {b, p, errs} = await open({seed: {place: place, subject: 'edexcel'}, route: route});
   await p.click('.subject'); await p.waitForTimeout(100);
   const hs = await headings(p), name = await text(p, '#sheetBody .place .t');
   check(hs.includes('International courses') && (await p.locator('#sheetBody .pick[data-sub="edexcel"]').count()) === 1, name + ': the international courses show', R);
   check((await p.locator('#sheetBody .picks + .sub').last().textContent()) === 'Taught in schools around the world.', name + ': under them, Taught in schools around the world.', R);
-  if (own === 'Victoria') {
-    // Victoria's own courses are the VCE courses the pipeline made, each listed once, with no NSW course among them.
-    const vic = loadContent().MADE_COURSES.filter(c => c.place === 'vic').map(c => c.id).sort();
+  if (own && own !== 'New South Wales') {
+    // Victoria's own courses are the VCE courses the pipeline made; Queensland's and the NT's the Australian Curriculum
+    // courses. Each is listed once, with no NSW course among them.
+    const st = place.state, mine = madeIn(st), more = {vic: 'More Victorian subjects are coming.', qld: 'More Queensland subjects are coming.', nt: 'More Northern Territory subjects are coming.'}[st];
     const listed = (await p.locator('#sheetBody .pick[data-sub]:not([data-sub="edexcel"])').evaluateAll(bs => bs.map(b => b.dataset.sub))).sort();
-    check(vic.length > 0 && hs[0] === own && JSON.stringify(listed) === JSON.stringify(vic) && (await p.locator('#sheetBody .pick[data-sub="eco"], #sheetBody .pick[data-sub="maths"]').count()) === 0 && (await p.locator('#sheetBody > .sub').first().textContent()) === 'More Victorian subjects are coming.', name + ': its ' + vic.length + ' VCE courses come first, then More Victorian subjects are coming.', R);
+    check(mine.length > 0 && hs[0] === own && JSON.stringify(listed) === JSON.stringify(mine) && (await p.locator('#sheetBody .pick[data-sub="eco"], #sheetBody .pick[data-sub="maths"]').count()) === 0 && (await p.locator('#sheetBody > .sub').first().textContent()) === more, name + ': its ' + mine.length + ' courses come first, then ' + more, R);
   } else if (own) {
     check(hs[0] === own && (await p.locator('#sheetBody .pick[data-sub="eco"], #sheetBody .pick[data-sub="maths"]').count()) === 2 && (await p.locator('#sheetBody > .sub').first().textContent()) === 'More NSW subjects are coming.', name + ': NSW Economics and Maths come first, then More NSW subjects are coming.', R);
   } else {
