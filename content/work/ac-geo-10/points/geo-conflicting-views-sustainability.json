@@ -1,0 +1,256 @@
+{
+ "id": "geo-conflicting-views-sustainability",
+ "title": "Conflicting views on sustainability",
+ "brief": "b2ba5ff4cbc2",
+ "shortlist": [
+  [
+   "eco-views-sustainability",
+   0.22
+  ],
+  [
+   "geo-sustainability-means",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:31Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 may adapt eco-views-sustainability, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:46:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:25Z write: failed the content check, writing again",
+  "2026-11-04T10:08:00Z write: done",
+  "2026-11-04T10:10:49Z check: flagged",
+  "2026-11-04T10:14:00Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "confirm": 0.00879,
+  "write": 0.01086,
+  "check": 0.01707,
+  "fix": 0.01621,
+  "recheck": 0.00872
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eco-views-sustainability",
+  "changes": [
+   "Replace the Ballarat bakery example with a place and business that is local to students in the non-Victorian states and territories covered by this course.",
+   "Reframe the card's examples around the sustainable use of environments, such as land, water or resources, rather than only household and business energy choices, so it matches the Year 10 environmental change and management focus.",
+   "Remove the Economics Victoria course framing so the card reads as Year 10 Geography content."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of conflicting views on sustainability at about the right depth, but its Victorian example and energy-focused framing need localising and reframing for this Australian Curriculum Year 10 Geography course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The economics point is close, but it frames differing views around cutting emissions and household costs, while this geography point centres on communities, businesses and governments disagreeing over protecting environments because of short-term job and profit losses, so reworking it would change its focus and examples throughout.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Conflicting views on sustainability",
+  "card": [
+   "Sustainable use means using an environment in a way that meets today's needs without harming its ability to meet future needs.",
+   "Communities, businesses and governments often disagree about what sustainable use looks like. Each group has different interests and priorities.",
+   "A common cause is cost. Protecting an environment can cost jobs or profits in the short term, such as when fishing or logging is limited.",
+   "The benefits of protection, such as healthy fish stocks or forests, often come later. So people who lose income now may oppose limits, while others support them."
+  ],
+  "remember": "Groups can disagree because protecting an environment may cost jobs or profits now, while the benefits come later.",
+  "a": {
+   "q": "Why do businesses and conservation groups often disagree about limits on using an environment?",
+   "opts": [
+    "Limits can cost jobs or profits now, but benefits come later",
+    "Limits always stop a business from earning any income",
+    "Only conservation groups care about future generations",
+    "Governments have no say in how an environment is used"
+   ],
+   "why": "Protection can mean lost income in the short term, while benefits such as healthy forests come later. The option saying income stops completely is wrong, because the card says limits can cost jobs or profits, not remove all income.",
+   "clue": "Think about when the costs and the benefits of protection arrive."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Tasmania plans to limit the number of fishing boats in a bay to protect fish stocks. Which response best shows why some local people might oppose the plan?",
+   "opts": [
+    "Boat owners fear lost income before fish stocks recover",
+    "Boat owners want the fish stocks to run out sooner",
+    "Boat owners think the bay has no value to the community",
+    "Boat owners believe fish stocks will recover without limits"
+   ],
+   "why": "Limits can cost jobs or profits in the short term, while the benefit of recovered stocks comes later. Opposing the plan does not mean people want the environment harmed, so the option about running out is wrong.",
+   "clue": "Ask what the boat owners lose first, and when the benefit arrives."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Limits can cost jobs or profits now, but benefits come later",
+   "also_right": []
+  },
+  "b": {
+   "best": "Boat owners fear lost income before fish stocks recover",
+   "also_right": [
+    "Boat owners believe fish stocks will recover without limits"
+   ]
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the only one with a hedge ('can'). Every wrong option uses an absolute ('always', 'Only', 'no say'), so a student can pick the answer by spotting the qualifier without knowing the idea. It is also slightly the longest."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "In Tasmania, commercial and recreational fishing is managed by the state government (NRE Tas), not local councils. A council limiting the number of fishing boats in a bay is not realistic in Australia. Change it to 'The Tasmanian Government'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Boat owners believe fish stocks will recover without limits' is a real and defensible reason some local people oppose fishing limits, because they dispute the need for limits. The intended answer is the best fit to the card, but this distractor is not clearly wrong. Replace it with a clearly wrong option."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is set up wrongly: Tasmanian fisheries are managed by the state government, not councils, and one distractor (stocks will recover without limits) is a defensible reason for opposition. In question a, the right option is the only hedged one among absolute-worded distractors, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Boat owners believe fish stocks will recover without limits” could also be right.",
+  "Question a, wording: The right option stands out. It is the only one with a hedge ('can'). Every wrong option uses an absolute ('always', 'Only', 'no say'), so a student can pick the answer by spotting the qualifier without knowing the idea. It is also slightly the longest.",
+  "Question b, fact: In Tasmania, commercial and recreational fishing is managed by the state government (NRE Tas), not local councils. A council limiting the number of fishing boats in a bay is not realistic in Australia. Change it to 'The Tasmanian Government'.",
+  "Question b, wording: 'Boat owners believe fish stocks will recover without limits' is a real and defensible reason some local people oppose fishing limits, because they dispute the need for limits. The intended answer is the best fit to the card, but this distractor is not clearly wrong. Replace it with a clearly wrong option."
+ ],
+ "proposal": {
+  "title": "Conflicting views on sustainability",
+  "card": [
+   "Sustainable use means using an environment in a way that meets today's needs without harming its ability to meet future needs.",
+   "Communities, businesses and governments often disagree about what sustainable use looks like. Each group has different interests and priorities.",
+   "A common cause is cost. Protecting an environment can cost jobs or profits in the short term, such as when fishing or logging is limited.",
+   "The benefits of protection, such as healthy fish stocks or forests, often come later. So people who lose income now may oppose limits, while others support them."
+  ],
+  "remember": "Groups can disagree because protecting an environment may cost jobs or profits now, while the benefits come later.",
+  "a": {
+   "q": "Why do businesses and conservation groups often disagree about limits on using an environment?",
+   "opts": [
+    "Limits may cut income now, while the benefits come later",
+    "Limits may raise income now, while the costs come later",
+    "Limits may harm the environment now, but help it later",
+    "Limits may help businesses now, but harm communities later"
+   ],
+   "why": "Protection can mean lost jobs or profits in the short term, while benefits such as healthy forests come later. The option saying limits raise income now reverses this: the cost of protection comes first, not the gain.",
+   "clue": "Think about when the costs and the benefits of protection arrive."
+  },
+  "b": {
+   "d": 3,
+   "q": "The Tasmanian Government plans to limit the number of fishing boats in a bay to protect fish stocks. Which response best shows why some local people might oppose the plan?",
+   "opts": [
+    "Boat owners fear lost income before fish stocks recover",
+    "Boat owners want the fish stocks to run out sooner",
+    "Boat owners think the bay has no value to the community",
+    "Boat owners expect the limits to raise their catch this year"
+   ],
+   "why": "Limits can cost jobs or profits in the short term, while the benefit of recovered stocks comes later. Opposing the plan does not mean people want the environment harmed, so the option about stocks running out is wrong. Limits cut the catch now, so they would not raise it this year.",
+   "clue": "Ask what the boat owners lose first, and when the benefit arrives."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Limits may cut income now, while the benefits come later",
+    "also_right": []
+   },
+   "b": {
+    "best": "Boat owners fear lost income before fish stocks recover",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the only one with a hedge ('can'). Every wrong option uses an absolute ('always', 'Only', 'no say'), so a student can pick the answer by spotting the qualifier without knowing the idea. It is also slightly the longest."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "In Tasmania, commercial and recreational fishing is managed by the state government (NRE Tas), not local councils. A council limiting the number of fishing boats in a bay is not realistic in Australia. Change it to 'The Tasmanian Government'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Boat owners believe fish stocks will recover without limits' is a real and defensible reason some local people oppose fishing limits, because they dispute the need for limits. The intended answer is the best fit to the card, but this distractor is not clearly wrong. Replace it with a clearly wrong option."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “Boat owners believe fish stocks will recover without limits” could also be right.",
+   "Question a, wording: The right option stands out. It is the only one with a hedge ('can'). Every wrong option uses an absolute ('always', 'Only', 'no say'), so a student can pick the answer by spotting the qualifier without knowing the idea. It is also slightly the longest.",
+   "Question b, fact: In Tasmania, commercial and recreational fishing is managed by the state government (NRE Tas), not local councils. A council limiting the number of fishing boats in a bay is not realistic in Australia. Change it to 'The Tasmanian Government'.",
+   "Question b, wording: 'Boat owners believe fish stocks will recover without limits' is a real and defensible reason some local people oppose fishing limits, because they dispute the need for limits. The intended answer is the best fit to the card, but this distractor is not clearly wrong. Replace it with a clearly wrong option."
+  ]
+ },
+ "final": {
+  "title": "Conflicting views on sustainability",
+  "card": [
+   "Sustainable use means using an environment in a way that meets today's needs without harming its ability to meet future needs.",
+   "Communities, businesses and governments often disagree about what sustainable use looks like. Each group has different interests and priorities.",
+   "A common cause is cost. Protecting an environment can cost jobs or profits in the short term, such as when fishing or logging is limited.",
+   "The benefits of protection, such as healthy fish stocks or forests, often come later. So people who lose income now may oppose limits, while others support them."
+  ],
+  "remember": "Groups can disagree because protecting an environment may cost jobs or profits now, while the benefits come later.",
+  "a": {
+   "q": "Why do businesses and conservation groups often disagree about limits on using an environment?",
+   "opts": [
+    "Limits may cut income now, while the benefits come later",
+    "Limits may raise income now, while the costs come later",
+    "Limits may harm the environment now, but help it later",
+    "Limits may help businesses now, but harm communities later"
+   ],
+   "why": "Protection can mean lost jobs or profits in the short term, while benefits such as healthy forests come later. The option saying limits raise income now reverses this: the cost of protection comes first, not the gain.",
+   "clue": "Think about when the costs and the benefits of protection arrive."
+  },
+  "b": {
+   "d": 3,
+   "q": "The Tasmanian Government plans to limit the number of fishing boats in a bay to protect fish stocks. Which response best shows why some local people might oppose the plan?",
+   "opts": [
+    "Boat owners fear lost income before fish stocks recover",
+    "Boat owners want the fish stocks to run out sooner",
+    "Boat owners think the bay has no value to the community",
+    "Boat owners expect the limits to raise their catch this year"
+   ],
+   "why": "Limits can cost jobs or profits in the short term, while the benefit of recovered stocks comes later. Opposing the plan does not mean people want the environment harmed, so the option about stocks running out is wrong. Limits cut the catch now, so they would not raise it this year.",
+   "clue": "Ask what the boat owners lose first, and when the benefit arrives."
+  }
+ },
+ "cleared_by": "recheck"
+}

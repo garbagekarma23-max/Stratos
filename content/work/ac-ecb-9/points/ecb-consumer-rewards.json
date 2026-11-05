@@ -1,0 +1,399 @@
+{
+ "id": "ecb-consumer-rewards",
+ "title": "Consumer rewards",
+ "brief": "bf29788a4334",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, write",
+  "2026-11-04T09:36:48Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:46:55Z write: done",
+  "2026-11-04T09:58:21Z check: flagged",
+  "2026-11-04T10:07:58Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (remember wording)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00466,
+  "check": 0.00971,
+  "fix": 0.01446,
+  "recheck": 0.00966
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, wording: The remember line says rewards 'pay people for... investing' without the card's caveat that investment returns are not guaranteed and may be a loss. Students could take away that investing always pays.",
+ "rejected": {
+  "title": "Consumer rewards",
+  "card": [
+   [
+    "Loyalty program",
+    "a scheme where a business gives points, discounts or free items to customers who keep buying from it."
+   ],
+   [
+    "Interest",
+    "money a bank or other financial institution pays you for keeping your savings with it."
+   ],
+   [
+    "Investment return",
+    "money gained from something you put money into, such as shares. Returns can be higher than interest, but they are not guaranteed and may be a loss."
+   ],
+   "Loyalty programs also have a cost. Businesses use them to collect data on what you buy, and the rewards can encourage you to spend more than you planned."
+  ],
+  "remember": "Rewards pay people for saving, investing or staying loyal, and loyalty schemes also gather data and nudge spending.",
+  "a": {
+   "q": "Which is a way that a loyalty program benefits the business that runs it?",
+   "opts": [
+    "It records what customers buy",
+    "It pays customers interest on savings",
+    "It guarantees customers a return",
+    "It stops customers spending too much"
+   ],
+   "why": "Loyalty programs collect data on what customers buy, which the business can use to plan offers. Paying interest is what a bank does for savings, not what a loyalty program does.",
+   "clue": "Think about what the business learns about each member."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya joins a bookshop's loyalty program and gets a free book after ten purchases. She now buys books she did not plan to get so she can reach ten sooner. Which idea does this best show?",
+   "opts": [
+    "The reward led her to spend more than planned",
+    "The reward earned her interest on her savings",
+    "The reward gave her a guaranteed return",
+    "The reward stopped the shop collecting her data"
+   ],
+   "why": "Priya spends more than she planned in order to earn the free book, so the program has encouraged her spending. A free book is not interest, which a bank pays on savings, and it is not an investment return. Loyalty programs collect data rather than stop it.",
+   "clue": "Ask why Priya bought books she had not planned to buy."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, wording: The remember line says rewards 'pay people for... investing' without the card's caveat that investment returns are not guaranteed and may be a loss. Students could take away that investing always pays."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Consumer rewards",
+     "card": [
+      [
+       "Loyalty program",
+       "a scheme where a business gives points, discounts or free items to customers who keep buying from it."
+      ],
+      [
+       "Interest",
+       "money a bank or other financial institution pays you for keeping your savings with it."
+      ],
+      [
+       "Investment return",
+       "money gained from something you put money into, such as shares. Returns can be higher than interest, but they are not guaranteed and may be a loss."
+      ],
+      "Loyalty programs also have a cost. Businesses use them to collect data on what you buy, and the rewards can encourage you to spend more than you planned."
+     ],
+     "remember": "Rewards pay people for saving, investing or staying loyal, and loyalty schemes also gather data and nudge spending.",
+     "a": {
+      "q": "Which is a way that a loyalty program benefits the business that runs it?",
+      "opts": [
+       "It records what customers buy",
+       "It pays customers interest on savings",
+       "It guarantees customers a return",
+       "It lowers the prices of all products"
+      ],
+      "why": "Loyalty programs collect data on what customers buy, which the business can use to plan offers. Paying interest is what a bank does for savings, not what a loyalty program does.",
+      "clue": "Think about what the business learns about each member."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya joins a bookshop's loyalty program and gets a free book after ten purchases. She now buys books she did not plan to get so she can reach ten sooner. Which idea does this best show?",
+      "opts": [
+       "Rewards can encourage extra spending",
+       "Rewards are a guaranteed return",
+       "Rewards are interest paid on savings",
+       "Rewards stop the shop collecting data"
+      ],
+      "why": "Priya spends more than she planned in order to earn the reward, so the program encourages spending. A free book is not interest or a guaranteed return, and loyalty programs usually collect data rather than stop it.",
+      "clue": "Ask why Priya bought books she had not planned to buy."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It records what customers buy",
+      "also_right": []
+     },
+     "b": {
+      "best": "Rewards can encourage extra spending",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a hedge ('can'). The wrong options use flat claims ('stop', 'are', 'guaranteed'), so a test-wise student could pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the intended answers are correct. In question b, the right option stands out as the only hedged statement, so the wrong options could be reworded to match its tone."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one with a hedge ('can'). The wrong options use flat claims ('stop', 'are', 'guaranteed'), so a test-wise student could pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Consumer rewards",
+     "card": [
+      [
+       "Loyalty program",
+       "a scheme where a business gives points, discounts or free items to customers who keep buying from it."
+      ],
+      [
+       "Interest",
+       "money a bank or other financial institution pays you for keeping your savings with it."
+      ],
+      [
+       "Investment return",
+       "money gained from something you put money into, such as shares. Returns can be higher than interest, but they are not guaranteed and may be a loss."
+      ],
+      "Loyalty programs also have a cost. Businesses use them to collect data on what you buy, and the rewards can encourage you to spend more than you planned."
+     ],
+     "remember": "Rewards pay people for saving, investing or staying loyal, and loyalty schemes also gather data and nudge spending.",
+     "a": {
+      "q": "Which is a way that a loyalty program benefits the business that runs it?",
+      "opts": [
+       "It records what customers buy",
+       "It pays customers interest on savings",
+       "It guarantees customers a return",
+       "It stops customers spending too much"
+      ],
+      "why": "Loyalty programs collect data on what customers buy, which the business can use to plan offers. Paying interest is what a bank does for savings, not what a loyalty program does.",
+      "clue": "Think about what the business learns about each member."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya joins a bookshop's loyalty program and gets a free book after ten purchases. She now buys books she did not plan to get so she can reach ten sooner. Which idea does this best show?",
+      "opts": [
+       "The reward led her to spend more than planned",
+       "The reward earned her interest on her savings",
+       "The reward gave her a guaranteed return",
+       "The reward stopped the shop collecting her data"
+      ],
+      "why": "Priya spends more than she planned in order to earn the free book, so the program has encouraged her spending. A free book is not interest, which a bank pays on savings, and it is not an investment return. Loyalty programs collect data rather than stop it.",
+      "clue": "Ask why Priya bought books she had not planned to buy."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It records what customers buy",
+       "also_right": []
+      },
+      "b": {
+       "best": "The reward led her to spend more than planned",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "wording",
+        "detail": "The remember line says rewards 'pay people for... investing' without the card's caveat that investment returns are not guaranteed and may be a loss. Students could take away that investing always pays."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear right answer. One small issue: the remember line implies investing always pays, which drops the card's warning that returns can be a loss."
+     },
+     "flags": [
+      "Remember, wording: The remember line says rewards 'pay people for... investing' without the card's caveat that investment returns are not guaranteed and may be a loss. Students could take away that investing always pays."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Consumer rewards",
+    "card": [
+     [
+      "Loyalty program",
+      "a scheme where a business gives points, discounts or free items to customers who keep buying from it."
+     ],
+     [
+      "Interest",
+      "money a bank or other financial institution pays you for keeping your savings with it."
+     ],
+     [
+      "Investment return",
+      "money gained from something you put money into, such as shares. Returns can be higher than interest, but they are not guaranteed and may be a loss."
+     ],
+     "Loyalty programs also have a cost. Businesses use them to collect data on what you buy, and the rewards can encourage you to spend more than you planned."
+    ],
+    "remember": "Saving, investing and loyalty can bring rewards, but investment returns are not guaranteed, and loyalty schemes collect data and encourage spending.",
+    "a": {
+     "q": "How can a loyalty program help the business that runs it?",
+     "opts": [
+      "It records what each customer buys",
+      "It pays customers interest on savings",
+      "It guarantees customers a return",
+      "It stops customers spending too much"
+     ],
+     "why": "Loyalty programs collect data on what customers buy, which the business can use to plan offers. Paying interest is what a bank does for savings, not what a loyalty program does.",
+     "clue": "Think about what the business learns about each member."
+    },
+    "b": {
+     "d": 3,
+     "q": "Tom joins a café's loyalty card and gets a free coffee after nine purchases. He starts buying extra coffees he had not planned on, so he reaches nine sooner. Which idea does this show?",
+     "opts": [
+      "The reward led him to spend more than planned",
+      "The reward earned him interest on his savings",
+      "The reward is a guaranteed investment return",
+      "The reward stopped the café collecting data"
+     ],
+     "why": "Tom spends more than he planned in order to earn the free coffee, so the program has encouraged his spending. A free coffee is not interest, which a bank pays on savings, and it is not an investment return. Loyalty programs collect data rather than stop it.",
+     "clue": "Ask why Tom bought coffees he had not planned to buy."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It records what each customer buys",
+     "also_right": []
+    },
+    "b": {
+     "best": "The reward led him to spend more than planned",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Consumer rewards",
+  "card": [
+   [
+    "Loyalty program",
+    "a scheme where a business gives points, discounts or free items to customers who keep buying from it."
+   ],
+   [
+    "Interest",
+    "money a bank or other financial institution pays you for keeping your savings with it."
+   ],
+   [
+    "Investment return",
+    "money gained from something you put money into, such as shares. Returns can be higher than interest, but they are not guaranteed and may be a loss."
+   ],
+   "Loyalty programs also have a cost. Businesses use them to collect data on what you buy, and the rewards can encourage you to spend more than you planned."
+  ],
+  "remember": "Saving, investing and loyalty can bring rewards, but investment returns are not guaranteed, and loyalty schemes collect data and encourage spending.",
+  "a": {
+   "q": "How can a loyalty program help the business that runs it?",
+   "opts": [
+    "It records what each customer buys",
+    "It pays customers interest on savings",
+    "It guarantees customers a return",
+    "It stops customers spending too much"
+   ],
+   "why": "Loyalty programs collect data on what customers buy, which the business can use to plan offers. Paying interest is what a bank does for savings, not what a loyalty program does.",
+   "clue": "Think about what the business learns about each member."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom joins a café's loyalty card and gets a free coffee after nine purchases. He starts buying extra coffees he had not planned on, so he reaches nine sooner. Which idea does this show?",
+   "opts": [
+    "The reward led him to spend more than planned",
+    "The reward earned him interest on his savings",
+    "The reward is a guaranteed investment return",
+    "The reward stopped the café collecting data"
+   ],
+   "why": "Tom spends more than he planned in order to earn the free coffee, so the program has encouraged his spending. A free coffee is not interest, which a bank pays on savings, and it is not an investment return. Loyalty programs collect data rather than stop it.",
+   "clue": "Ask why Tom bought coffees he had not planned to buy."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It records what each customer buys",
+   "also_right": []
+  },
+  "b": {
+   "best": "The reward led him to spend more than planned",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Consumer rewards",
+  "card": [
+   [
+    "Loyalty program",
+    "a scheme where a business gives points, discounts or free items to customers who keep buying from it."
+   ],
+   [
+    "Interest",
+    "money a bank or other financial institution pays you for keeping your savings with it."
+   ],
+   [
+    "Investment return",
+    "money gained from something you put money into, such as shares. Returns can be higher than interest, but they are not guaranteed and may be a loss."
+   ],
+   "Loyalty programs also have a cost. Businesses use them to collect data on what you buy, and the rewards can encourage you to spend more than you planned."
+  ],
+  "remember": "Saving, investing and loyalty can bring rewards, but investment returns are not guaranteed, and loyalty schemes collect data and encourage spending.",
+  "a": {
+   "q": "How can a loyalty program help the business that runs it?",
+   "opts": [
+    "It records what each customer buys",
+    "It pays customers interest on savings",
+    "It guarantees customers a return",
+    "It stops customers spending too much"
+   ],
+   "why": "Loyalty programs collect data on what customers buy, which the business can use to plan offers. Paying interest is what a bank does for savings, not what a loyalty program does.",
+   "clue": "Think about what the business learns about each member."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom joins a café's loyalty card and gets a free coffee after nine purchases. He starts buying extra coffees he had not planned on, so he reaches nine sooner. Which idea does this show?",
+   "opts": [
+    "The reward led him to spend more than planned",
+    "The reward earned him interest on his savings",
+    "The reward is a guaranteed investment return",
+    "The reward stopped the café collecting data"
+   ],
+   "why": "Tom spends more than he planned in order to earn the free coffee, so the program has encouraged his spending. A free coffee is not interest, which a bank pays on savings, and it is not an investment return. Loyalty programs collect data rather than stop it.",
+   "clue": "Ask why Tom bought coffees he had not planned to buy."
+  }
+ },
+ "checked_by": "claude-code"
+}

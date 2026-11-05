@@ -1,0 +1,203 @@
+{
+ "id": "mat-tree-diagrams-two-events",
+ "title": "Tree diagrams for two events",
+ "brief": "0f637cec0b39",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, write",
+  "2026-11-04T09:36:56Z write: done",
+  "2026-11-04T09:47:08Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00701,
+  "check": 0.01123,
+  "fix": 0.01344,
+  "recheck": 0.00676
+ },
+ "draft": {
+  "title": "Tree diagrams for two events",
+  "card": [
+   "A tree diagram shows the outcomes of one step as branches. Each outcome then splits into new branches for the second step.",
+   "Follow one path from the start to the end of the branches. That path is one combined outcome, such as red then green.",
+   "To list every combined outcome, follow every path. The number of paths is the number of outcomes in the first step × the number in the second.",
+   "Example: a bag has a red and a blue counter. Pick one, put it back, and pick again. The paths are RR, RB, BR and BB, so there are 2 × 2 = 4 outcomes."
+  ],
+  "remember": "Each path through the branches is one combined outcome.",
+  "a": {
+   "q": "Ava tosses a coin, then rolls a 3-sided spinner. How many paths are there on the tree diagram?",
+   "opts": [
+    "6",
+    "5",
+    "3",
+    "9"
+   ],
+   "why": "The coin has 2 branches, and each one splits into 3 for the spinner. That gives 2 × 3 = 6 paths. Adding 2 + 3 = 5 counts the branches in the diagram, not the paths.",
+   "clue": "Each first branch splits into the same number of new branches."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam picks a card from A, B, C, then tosses a coin. Which list shows all the outcomes on the tree?",
+   "opts": [
+    "AH, AT, BH, BT, CH, CT",
+    "AH, AT, BH, BT",
+    "AH, BT, CH",
+    "AA, BB, CC, HH, TT, HT"
+   ],
+   "why": "Each of the 3 cards splits into heads and tails, giving 6 paths. The list with only 4 outcomes leaves out card C. A path must have one card result then one coin result.",
+   "clue": "Follow each card's branches to both coin results."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "AH, AT, BH, BT, CH, CT",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 2 + 3 = 5 'counts the branches in the diagram'. It doesn't: the tree has 2 first branches plus 6 second branches, so 8 branches in all. The why should just say that adding is the wrong operation."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Rolls a 3-sided spinner' is a wrong verb, since a spinner is spun, not rolled. It could confuse students about what device is meant."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer. The why for (a) wrongly says 2 + 3 = 5 is the number of branches in the diagram (there are 8), and question (a) says a spinner is 'rolled' instead of spun."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says 2 + 3 = 5 'counts the branches in the diagram'. It doesn't: the tree has 2 first branches plus 6 second branches, so 8 branches in all. The why should just say that adding is the wrong operation.",
+  "Question a, wording: 'Rolls a 3-sided spinner' is a wrong verb, since a spinner is spun, not rolled. It could confuse students about what device is meant."
+ ],
+ "proposal": {
+  "title": "Tree diagrams for two events",
+  "card": [
+   "A tree diagram shows the outcomes of one step as branches. Each outcome then splits into new branches for the second step.",
+   "Follow one path from the start to the end of the branches. That path is one combined outcome, such as red then blue.",
+   "To list every combined outcome, follow every path. The number of paths is the number of outcomes in the first step × the number in the second.",
+   "Example: a bag has a red and a blue counter. Pick one, put it back, and pick again. The paths are RR, RB, BR and BB, so there are 2 × 2 = 4 outcomes."
+  ],
+  "remember": "Each path through the branches is one combined outcome.",
+  "a": {
+   "q": "Ava tosses a coin, then spins a spinner with 3 equal sections. How many paths are there on the tree diagram?",
+   "opts": [
+    "6",
+    "5",
+    "3",
+    "9"
+   ],
+   "why": "The coin has 2 branches, and each one splits into 3 for the spinner. That gives 2 × 3 = 6 paths. Adding 2 + 3 = 5 is the wrong operation, because every coin branch splits into 3 new branches.",
+   "clue": "Each first branch splits into the same number of new branches."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam picks one of three cards marked A, B and C, then tosses a coin. Which list shows all the outcomes on the tree?",
+   "opts": [
+    "AH, AT, BH, BT, CH, CT",
+    "AH, AT, BH, BT",
+    "AH, BT, CH",
+    "AA, BB, CC, HH, TT, HT"
+   ],
+   "why": "Each of the 3 cards splits into heads and tails, giving 3 × 2 = 6 paths. The list with only 4 outcomes leaves out card C. Each path must have one card result then one coin result.",
+   "clue": "Follow each card's branches to both coin results."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6",
+    "also_right": []
+   },
+   "b": {
+    "best": "AH, AT, BH, BT, CH, CT",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 2 + 3 = 5 'counts the branches in the diagram'. It doesn't: the tree has 2 first branches plus 6 second branches, so 8 branches in all. The why should just say that adding is the wrong operation."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Rolls a 3-sided spinner' is a wrong verb, since a spinner is spun, not rolled. It could confuse students about what device is meant."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says 2 + 3 = 5 'counts the branches in the diagram'. It doesn't: the tree has 2 first branches plus 6 second branches, so 8 branches in all. The why should just say that adding is the wrong operation.",
+   "Question a, wording: 'Rolls a 3-sided spinner' is a wrong verb, since a spinner is spun, not rolled. It could confuse students about what device is meant."
+  ]
+ },
+ "final": {
+  "title": "Tree diagrams for two events",
+  "card": [
+   "A tree diagram shows the outcomes of one step as branches. Each outcome then splits into new branches for the second step.",
+   "Follow one path from the start to the end of the branches. That path is one combined outcome, such as red then blue.",
+   "To list every combined outcome, follow every path. The number of paths is the number of outcomes in the first step × the number in the second.",
+   "Example: a bag has a red and a blue counter. Pick one, put it back, and pick again. The paths are RR, RB, BR and BB, so there are 2 × 2 = 4 outcomes."
+  ],
+  "remember": "Each path through the branches is one combined outcome.",
+  "a": {
+   "q": "Ava tosses a coin, then spins a spinner with 3 equal sections. How many paths are there on the tree diagram?",
+   "opts": [
+    "6",
+    "5",
+    "3",
+    "9"
+   ],
+   "why": "The coin has 2 branches, and each one splits into 3 for the spinner. That gives 2 × 3 = 6 paths. Adding 2 + 3 = 5 is the wrong operation, because every coin branch splits into 3 new branches.",
+   "clue": "Each first branch splits into the same number of new branches."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam picks one of three cards marked A, B and C, then tosses a coin. Which list shows all the outcomes on the tree?",
+   "opts": [
+    "AH, AT, BH, BT, CH, CT",
+    "AH, AT, BH, BT",
+    "AH, BT, CH",
+    "AA, BB, CC, HH, TT, HT"
+   ],
+   "why": "Each of the 3 cards splits into heads and tails, giving 3 × 2 = 6 paths. The list with only 4 outcomes leaves out card C. Each path must have one card result then one coin result.",
+   "clue": "Follow each card's branches to both coin results."
+  }
+ },
+ "cleared_by": "recheck"
+}

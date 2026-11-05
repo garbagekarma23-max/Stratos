@@ -1,0 +1,124 @@
+{
+ "id": "mat-surface-area-cylinders",
+ "title": "Surface area of cylinders",
+ "brief": "e3caa6b05eb9",
+ "shortlist": [
+  [
+   "mat-surface-area",
+   0.364
+  ],
+  [
+   "mat-surface-area-volume",
+   0.253
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00598,
+  "check": 0.00878
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-surface-area, covers surface area in general, with cylinders only as one bullet and questions on boxes and cubes, so it is broader than this point's cylinder formula and is pitched at Year 11 rather than Year 9.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Surface area of cylinders",
+  "card": [
+   "A closed cylinder has 2 circles, one at the top and one at the bottom, and one curved surface around the side.",
+   "The two circles each have area πr². Together they give 2πr².",
+   "The curved surface unrolls into a rectangle. Its width is the circle's circumference, 2πr, and its height is h. Its area is 2πrh.",
+   "SA = 2πr² + 2πrh. Example: r = 2 cm and h = 5 cm. SA = 2π × 4 + 2π × 2 × 5 = 8π + 20π = 28π, which is about 88 cm²."
+  ],
+  "remember": "Add the two circles to the unrolled rectangle.",
+  "a": {
+   "q": "A closed cylinder has radius 3 cm and height 4 cm. What is its surface area, in terms of π?",
+   "opts": [
+    "42π cm²",
+    "24π cm²",
+    "30π cm²",
+    "66π cm²"
+   ],
+   "why": "The circles give 2π × 9 = 18π. The curved part gives 2π × 3 × 4 = 24π. The total is 42π cm². 24π is only the curved part, so it leaves out the two circles.",
+   "clue": "Find the circles and the curved part separately."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed tin has diameter 10 cm and height 8 cm. What is its surface area, to the nearest square centimetre?",
+   "opts": [
+    "408 cm²",
+    "565 cm²",
+    "251 cm²",
+    "816 cm²"
+   ],
+   "why": "The radius is 5 cm. The circles give 2π × 25 = 50π and the side gives 2π × 5 × 8 = 80π. The total is 130π, about 408 cm². Using 10 as the radius gives a much larger wrong answer.",
+   "clue": "Halve the diameter first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "42π cm²",
+   "also_right": []
+  },
+  "b": {
+   "best": "408 cm²",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: 18π + 24π = 42π, and 50π + 80π = 130π, which is about 408 cm²."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Surface area of cylinders",
+  "card": [
+   "A closed cylinder has 2 circles, one at the top and one at the bottom, and one curved surface around the side.",
+   "The two circles each have area πr². Together they give 2πr².",
+   "The curved surface unrolls into a rectangle. Its width is the circle's circumference, 2πr, and its height is h. Its area is 2πrh.",
+   "SA = 2πr² + 2πrh. Example: r = 2 cm and h = 5 cm. SA = 2π × 4 + 2π × 2 × 5 = 8π + 20π = 28π, which is about 88 cm²."
+  ],
+  "remember": "Add the two circles to the unrolled rectangle.",
+  "a": {
+   "q": "A closed cylinder has radius 3 cm and height 4 cm. What is its surface area, in terms of π?",
+   "opts": [
+    "42π cm²",
+    "24π cm²",
+    "30π cm²",
+    "66π cm²"
+   ],
+   "why": "The circles give 2π × 9 = 18π. The curved part gives 2π × 3 × 4 = 24π. The total is 42π cm². 24π is only the curved part, so it leaves out the two circles.",
+   "clue": "Find the circles and the curved part separately."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed tin has diameter 10 cm and height 8 cm. What is its surface area, to the nearest square centimetre?",
+   "opts": [
+    "408 cm²",
+    "565 cm²",
+    "251 cm²",
+    "816 cm²"
+   ],
+   "why": "The radius is 5 cm. The circles give 2π × 25 = 50π and the side gives 2π × 5 × 8 = 80π. The total is 130π, about 408 cm². Using 10 as the radius gives a much larger wrong answer.",
+   "clue": "Halve the diameter first."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,219 @@
+{
+ "id": "mat-finding-angle-with-trigonometry",
+ "title": "Finding an angle with trigonometry",
+ "brief": "bf8fc67dad0c",
+ "shortlist": [
+  [
+   "mat-right-angled-trigonometry",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: flagged",
+  "2026-11-04T10:08:05Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.01123,
+  "check": 0.01395,
+  "fix": 0.01879,
+  "recheck": 0.00939
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card is a broader right-angled trigonometry card covering all three ratios and finding sides, and its angle example uses sin⁻¹ with a given ratio rather than finding a ratio from two sides and applying tan⁻¹, so it is close but not the same point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Finding an angle with trigonometry",
+  "card": [
+   "Label the sides of the right-angled triangle from the angle you want. Opposite is across from it, adjacent is next to it, and the hypotenuse is the longest side.",
+   "Pick the ratio that uses your two known sides: sin = opposite ÷ hypotenuse, cos = adjacent ÷ hypotenuse, tan = opposite ÷ adjacent. Divide to get a number.",
+   "Then use the inverse function on a calculator (sin⁻¹, cos⁻¹ or tan⁻¹) to turn that number into the angle. Use the one that matches the ratio you chose.",
+   "Example: opposite = 3 and adjacent = 4. tan θ = 3/4 = 0.75, so θ = tan⁻¹(0.75) ≈ 36.9°."
+  ],
+  "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
+  "a": {
+   "q": "A 10 m ladder leans on a wall and reaches 5 m up. What is the angle between the ladder and the ground?",
+   "opts": [
+    "30°",
+    "60°",
+    "26.6°",
+    "63.4°"
+   ],
+   "why": "The wall height is opposite the angle and the ladder is the hypotenuse. sin θ = 5/10 = 0.5, so θ = sin⁻¹(0.5) = 30°. Using tan⁻¹(0.5) gives 26.6°, which uses a ratio that does not match the two known sides.",
+   "clue": "Which two sides do you know, relative to the angle at the ground?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A wheelchair ramp in Hobart rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
+   "opts": [
+    "13.5°",
+    "13.9°",
+    "76.5°",
+    "76.1°"
+   ],
+   "why": "The rise is opposite the angle and the flat distance is adjacent. tan θ = 1.2/5 = 0.24, so θ = tan⁻¹(0.24) ≈ 13.5°. Using sin⁻¹(0.24) gives 13.9°, but the 5 m is not the hypotenuse.",
+   "clue": "The rise and the flat distance are opposite and adjacent."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "30°",
+   "also_right": []
+  },
+  "b": {
+   "best": "13.5°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card re-teaches side labelling and the three ratio definitions (sin = opposite ÷ hypotenuse, and so on). These belong to point 1, The trigonometric ratios. This point should only mention them, not define them again."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "A ramp rising 1.2 m over 5 m (about 1:4, roughly 13.5°) is far steeper than Australian access standards allow for wheelchair ramps (AS 1428.1, max 1:14). Calling it a wheelchair ramp gives students a misleading picture. Use a generic ramp or a driveway instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: 30° for the ladder and 13.5° for the ramp. The card re-defines the ratios from point 1, and the 'wheelchair ramp' in question b is unrealistically steep for Australian standards."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card re-teaches side labelling and the three ratio definitions (sin = opposite ÷ hypotenuse, and so on). These belong to point 1, The trigonometric ratios. This point should only mention them, not define them again.",
+  "Question b, fact: A ramp rising 1.2 m over 5 m (about 1:4, roughly 13.5°) is far steeper than Australian access standards allow for wheelchair ramps (AS 1428.1, max 1:14). Calling it a wheelchair ramp gives students a misleading picture. Use a generic ramp or a driveway instead."
+ ],
+ "proposal": {
+  "title": "Finding an angle with trigonometry",
+  "card": [
+   "When you know two sides of a right-angled triangle, you can find an angle. Start by naming the two known sides from the angle you want: opposite, adjacent or hypotenuse.",
+   "Choose sin, cos or tan, whichever ratio uses both of your known sides. Divide one side by the other to get a number.",
+   "Then use the inverse function on a calculator (sin⁻¹, cos⁻¹ or tan⁻¹) to turn that number into the angle. It must match the ratio you chose.",
+   "Example: opposite = 3 and adjacent = 4, so use tan. tan θ = 3/4 = 0.75, so θ = tan⁻¹(0.75) ≈ 36.9°."
+  ],
+  "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
+  "a": {
+   "q": "A 10 m ladder leans on a wall and reaches 5 m up. What is the angle between the ladder and the ground?",
+   "opts": [
+    "30°",
+    "60°",
+    "26.6°",
+    "63.4°"
+   ],
+   "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. sin θ = 5/10 = 0.5, so θ = sin⁻¹(0.5) = 30°. Using tan⁻¹(0.5) gives 26.6°, but tan needs the adjacent side, which is not given.",
+   "clue": "Which two sides do you know, seen from the angle at the ground?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A steep driveway in Hobart rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
+   "opts": [
+    "13.5°",
+    "13.9°",
+    "76.5°",
+    "76.1°"
+   ],
+   "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. tan θ = 1.2/5 = 0.24, so θ = tan⁻¹(0.24) ≈ 13.5°. Using sin⁻¹(0.24) gives 13.9°, but the 5 m is not the hypotenuse.",
+   "clue": "The rise and the flat distance are opposite and adjacent."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "30°",
+    "also_right": []
+   },
+   "b": {
+    "best": "13.5°",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: sin⁻¹(0.5) = 30° and tan⁻¹(0.24) ≈ 13.5°, and each distractor comes from a plausible wrong ratio or the complementary angle."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card re-teaches side labelling and the three ratio definitions (sin = opposite ÷ hypotenuse, and so on). These belong to point 1, The trigonometric ratios. This point should only mention them, not define them again."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "A ramp rising 1.2 m over 5 m (about 1:4, roughly 13.5°) is far steeper than Australian access standards allow for wheelchair ramps (AS 1428.1, max 1:14). Calling it a wheelchair ramp gives students a misleading picture. Use a generic ramp or a driveway instead."
+   }
+  ],
+  "flags": [
+   "Card, other: The card re-teaches side labelling and the three ratio definitions (sin = opposite ÷ hypotenuse, and so on). These belong to point 1, The trigonometric ratios. This point should only mention them, not define them again.",
+   "Question b, fact: A ramp rising 1.2 m over 5 m (about 1:4, roughly 13.5°) is far steeper than Australian access standards allow for wheelchair ramps (AS 1428.1, max 1:14). Calling it a wheelchair ramp gives students a misleading picture. Use a generic ramp or a driveway instead."
+  ]
+ },
+ "final": {
+  "title": "Finding an angle with trigonometry",
+  "card": [
+   "When you know two sides of a right-angled triangle, you can find an angle. Start by naming the two known sides from the angle you want: opposite, adjacent or hypotenuse.",
+   "Choose sin, cos or tan, whichever ratio uses both of your known sides. Divide one side by the other to get a number.",
+   "Then use the inverse function on a calculator (sin⁻¹, cos⁻¹ or tan⁻¹) to turn that number into the angle. It must match the ratio you chose.",
+   "Example: opposite = 3 and adjacent = 4, so use tan. tan θ = 3/4 = 0.75, so θ = tan⁻¹(0.75) ≈ 36.9°."
+  ],
+  "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
+  "a": {
+   "q": "A 10 m ladder leans on a wall and reaches 5 m up. What is the angle between the ladder and the ground?",
+   "opts": [
+    "30°",
+    "60°",
+    "26.6°",
+    "63.4°"
+   ],
+   "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. sin θ = 5/10 = 0.5, so θ = sin⁻¹(0.5) = 30°. Using tan⁻¹(0.5) gives 26.6°, but tan needs the adjacent side, which is not given.",
+   "clue": "Which two sides do you know, seen from the angle at the ground?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A steep driveway in Hobart rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
+   "opts": [
+    "13.5°",
+    "13.9°",
+    "76.5°",
+    "76.1°"
+   ],
+   "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. tan θ = 1.2/5 = 0.24, so θ = tan⁻¹(0.24) ≈ 13.5°. Using sin⁻¹(0.24) gives 13.9°, but the 5 m is not the hypotenuse.",
+   "clue": "The rise and the flat distance are opposite and adjacent."
+  }
+ },
+ "cleared_by": "recheck"
+}

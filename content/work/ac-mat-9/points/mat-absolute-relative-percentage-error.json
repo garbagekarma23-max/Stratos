@@ -1,0 +1,142 @@
+{
+ "id": "mat-absolute-relative-percentage-error",
+ "title": "Absolute, relative and percentage error",
+ "brief": "ece6b9b83aaf",
+ "shortlist": [
+  [
+   "mat-accuracy-measurements",
+   0.282
+  ],
+  [
+   "mat-percentage-error",
+   0.261
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01123,
+  "check": 0.00839
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, mat-percentage-error, covers only percentage error and never teaches relative error as its own step, while mat-accuracy-measurements defines absolute error as half the smallest unit, which conflicts with this brief, so no bank point teaches the same three-part idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Absolute, relative and percentage error",
+  "card": [
+   "Every measurement is an estimate, so it can differ from the actual value. Error describes how far off it is.",
+   [
+    "Absolute error",
+    "the gap between the measured value and the actual value, with no negative sign. It has the same units as the measurement."
+   ],
+   [
+    "Relative error",
+    "absolute error ÷ actual value. It has no units, so it shows how big the gap is compared with the size of the thing measured."
+   ],
+   [
+    "Percentage error",
+    "relative error × 100. Example: measured 52 cm, actual 50 cm. Absolute error = 2 cm, relative error = 2 ÷ 50 = 0.04, percentage error = 4%."
+   ]
+  ],
+  "remember": "Gap first, then divide by the actual value, then multiply by 100 for a percentage.",
+  "a": {
+   "q": "A scale reads 84 g for an object that actually has a mass of 80 g. What is the relative error?",
+   "opts": [
+    "0.05",
+    "0.048",
+    "5",
+    "4"
+   ],
+   "why": "The absolute error is 4 g. Relative error = 4 ÷ 80 = 0.05. Dividing by the measured value, 84, gives 0.048, but the actual value is the one to divide by.",
+   "clue": "Divide the gap by the actual value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava estimates a tree in Perth is 9.5 m tall. Its actual height is 8 m. What is her percentage error?",
+   "opts": [
+    "18.75%",
+    "15.8%",
+    "1.5%",
+    "0.1875%"
+   ],
+   "why": "The absolute error is 1.5 m. Relative error = 1.5 ÷ 8 = 0.1875, and × 100 gives 18.75%. Dividing by her estimate of 9.5 gives 15.8%, which uses the wrong value.",
+   "clue": "Divide by the actual height, then turn it into a percentage."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.05",
+   "also_right": []
+  },
+  "b": {
+   "best": "18.75%",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: 4 ÷ 80 = 0.05 and 1.5 ÷ 8 × 100 = 18.75%, and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Absolute, relative and percentage error",
+  "card": [
+   "Every measurement is an estimate, so it can differ from the actual value. Error describes how far off it is.",
+   [
+    "Absolute error",
+    "the gap between the measured value and the actual value, with no negative sign. It has the same units as the measurement."
+   ],
+   [
+    "Relative error",
+    "absolute error ÷ actual value. It has no units, so it shows how big the gap is compared with the size of the thing measured."
+   ],
+   [
+    "Percentage error",
+    "relative error × 100. Example: measured 52 cm, actual 50 cm. Absolute error = 2 cm, relative error = 2 ÷ 50 = 0.04, percentage error = 4%."
+   ]
+  ],
+  "remember": "Gap first, then divide by the actual value, then multiply by 100 for a percentage.",
+  "a": {
+   "q": "A scale reads 84 g for an object that actually has a mass of 80 g. What is the relative error?",
+   "opts": [
+    "0.05",
+    "0.048",
+    "5",
+    "4"
+   ],
+   "why": "The absolute error is 4 g. Relative error = 4 ÷ 80 = 0.05. Dividing by the measured value, 84, gives 0.048, but the actual value is the one to divide by.",
+   "clue": "Divide the gap by the actual value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava estimates a tree in Perth is 9.5 m tall. Its actual height is 8 m. What is her percentage error?",
+   "opts": [
+    "18.75%",
+    "15.8%",
+    "1.5%",
+    "0.1875%"
+   ],
+   "why": "The absolute error is 1.5 m. Relative error = 1.5 ÷ 8 = 0.1875, and × 100 gives 18.75%. Dividing by her estimate of 9.5 gives 15.8%, which uses the wrong value.",
+   "clue": "Divide by the actual height, then turn it into a percentage."
+  }
+ },
+ "cleared_by": "checker"
+}

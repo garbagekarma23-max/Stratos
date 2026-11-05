@@ -1,0 +1,351 @@
+{
+ "id": "his-populate-or-perish",
+ "title": "Populate or perish",
+ "brief": "8f030d26a458",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:35Z new, write",
+  "2026-11-04T09:36:53Z write: failed the content check, writing again",
+  "2026-11-04T09:47:02Z write: done",
+  "2026-11-04T09:58:27Z check: flagged",
+  "2026-11-04T10:08:02Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01259,
+  "check": 0.01448,
+  "fix": 0.0265,
+  "recheck": 0.01155
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option repeats the card's definition of a displaced person almost word for word ('could not safely return home'), and the clue ('no safe home left to go back to') echoes that phrase. A student can match words rather than apply the idea.",
+ "rejected": {
+  "title": "Populate or perish",
+  "card": [
+   "After World War II, many Australians feared the country's small population would be too hard to defend. Japan's attacks on northern Australia in 1942 had made this fear worse.",
+   "In 1945, Arthur Calwell became the first Minister for Immigration. His program aimed to grow the population and supply workers for factories and big projects, under the slogan \"populate or perish\".",
+   "Calwell hoped most migrants would be British. From 1947, Britons could come on assisted passages, paying a small fare while the government covered the rest.",
+   "Not enough Britons came, so the program also took displaced persons: Europeans who lost their homes in the war and could not safely go back, such as many Poles and Latvians. Large numbers of Italians and Greeks came later."
+  ],
+  "remember": "Calwell's program brought British and European migrants to build a bigger population and workforce.",
+  "a": {
+   "q": "Why did the Australian government start a large immigration program after World War II?",
+   "opts": [
+    "To grow the population and workforce",
+    "To replace Australian workers sent overseas",
+    "To meet the terms of a peace treaty",
+    "To bring in skilled workers from Asia"
+   ],
+   "why": "Leaders feared a small population was hard to defend and could not fill the jobs a growing economy needed. The program was not a treaty duty, and it drew its migrants from Britain and Europe, not Asia.",
+   "clue": "Think about what the slogan \"populate or perish\" says Australia was afraid of."
+  },
+  "b": {
+   "d": 3,
+   "q": "All of these people arrived in Australia in 1949. Which one was most likely a displaced person?",
+   "opts": [
+    "A Latvian who could not safely return home after the war",
+    "A Londoner whose fare was mostly paid by Australia",
+    "An Italian who chose to move to earn better wages",
+    "A Scottish builder hired to work on a big project"
+   ],
+   "why": "A displaced person lost their home in the war and could not safely go back, like the Latvian. The Londoner is tempting because the government paid the fare, but that was an assisted British migrant who chose to come and had a home to return to.",
+   "clue": "Which person had no safe home left to go back to?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option repeats the card's definition of a displaced person almost word for word ('could not safely return home'), and the clue ('no safe home left to go back to') echoes that phrase. A student can match words rather than apply the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Populate or perish",
+     "card": [
+      "After World War II, many Australians feared the country was too empty and too small to defend. Japan's attacks on northern Australia in 1942 had made this fear worse.",
+      "The government set up a Department of Immigration in 1945. Arthur Calwell, the first Minister for Immigration, led the program. The slogan was \"populate or perish\".",
+      "The first large groups were displaced persons, people from Europe who had lost their homes in the war. Later, many migrants came from Britain, Italy, Greece and other European countries.",
+      "The program aimed to grow the population and supply workers for factories and big projects such as the Snowy Mountains Scheme."
+     ],
+     "remember": "Calwell's program brought migrants to build a bigger population and workforce.",
+     "a": {
+      "q": "Why did the Australian government start a large immigration program after World War II?",
+      "opts": [
+       "To grow the population and workforce",
+       "To replace Australian workers sent overseas",
+       "To meet the terms of a peace treaty",
+       "To bring in skilled workers from Asia"
+      ],
+      "why": "Leaders feared a small population was hard to defend and could not fill the jobs a growing economy needed. The program was not a treaty duty, and it did not aim to bring in workers from Asia.",
+      "clue": "Think about what the slogan \"populate or perish\" says Australia was afraid of."
+     },
+     "b": {
+      "d": 2,
+      "q": "In 1949, Jan arrives in Australia from a camp in Europe. He lost his home in the war and gets a job on the Snowy Mountains Scheme. What was Jan's status in the immigration program?",
+      "opts": [
+       "A displaced person who helped build the workforce",
+       "A refugee who fled the Vietnam War",
+       "A British migrant who paid his own fare",
+       "A migrant who came to Australia in the 1980s"
+      ],
+      "why": "Jan had lost his home in Europe because of the war, so he was a displaced person. His work on the Snowy Mountains Scheme shows how migrants filled jobs. Vietnam refugees came much later, after 1975.",
+      "clue": "Look at the year and where Jan came from."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "To grow the population and workforce",
+      "also_right": []
+     },
+     "b": {
+      "best": "A displaced person who helped build the workforce",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'Later, many migrants came from Britain' implies British migrants came after the displaced persons. In fact, assisted British migration ran from 1947 alongside the displaced persons program, and Calwell's aim was for most migrants to be British. Only the Italian and Greek waves came mainly later."
+      },
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "Every wrong option can be ruled out by the year 1949 or the European camp alone (1980s, Vietnam War, British who paid his own fare), so a student can answer without understanding what a displaced person was. The question is too easy for Year 10."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card wrongly suggests British migrants came only after the displaced persons, when assisted British migration ran from 1947. Question b is too easy, because every wrong option is ruled out by the date or place alone."
+    },
+    "flags": [
+     "Card, fact: 'Later, many migrants came from Britain' implies British migrants came after the displaced persons. In fact, assisted British migration ran from 1947 alongside the displaced persons program, and Calwell's aim was for most migrants to be British. Only the Italian and Greek waves came mainly later.",
+     "Question b, level: Every wrong option can be ruled out by the year 1949 or the European camp alone (1980s, Vietnam War, British who paid his own fare), so a student can answer without understanding what a displaced person was. The question is too easy for Year 10."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Populate or perish",
+     "card": [
+      "After World War II, many Australians feared the country's small population would be too hard to defend. Japan's attacks on northern Australia in 1942 had made this fear worse.",
+      "In 1945, Arthur Calwell became the first Minister for Immigration. His program aimed to grow the population and supply workers for factories and big projects, under the slogan \"populate or perish\".",
+      "Calwell hoped most migrants would be British. From 1947, Britons could come on assisted passages, paying a small fare while the government covered the rest.",
+      "Not enough Britons came, so the program also took displaced persons: Europeans who lost their homes in the war and could not safely go back, such as many Poles and Latvians. Large numbers of Italians and Greeks came later."
+     ],
+     "remember": "Calwell's program brought British and European migrants to build a bigger population and workforce.",
+     "a": {
+      "q": "Why did the Australian government start a large immigration program after World War II?",
+      "opts": [
+       "To grow the population and workforce",
+       "To replace Australian workers sent overseas",
+       "To meet the terms of a peace treaty",
+       "To bring in skilled workers from Asia"
+      ],
+      "why": "Leaders feared a small population was hard to defend and could not fill the jobs a growing economy needed. The program was not a treaty duty, and it drew its migrants from Britain and Europe, not Asia.",
+      "clue": "Think about what the slogan \"populate or perish\" says Australia was afraid of."
+     },
+     "b": {
+      "d": 3,
+      "q": "All of these people arrived in Australia in 1949. Which one was most likely a displaced person?",
+      "opts": [
+       "A Latvian who could not safely return home after the war",
+       "A Londoner whose fare was mostly paid by Australia",
+       "An Italian who chose to move to earn better wages",
+       "A Scottish builder hired to work on a big project"
+      ],
+      "why": "A displaced person lost their home in the war and could not safely go back, like the Latvian. The Londoner is tempting because the government paid the fare, but that was an assisted British migrant who chose to come and had a home to return to.",
+      "clue": "Which person had no safe home left to go back to?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "To grow the population and workforce",
+       "also_right": []
+      },
+      "b": {
+       "best": "A Latvian who could not safely return home after the war",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option repeats the card's definition of a displaced person almost word for word ('could not safely return home'), and the clue ('no safe home left to go back to') echoes that phrase. A student can match words rather than apply the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Facts check out: Calwell became the first Immigration Minister in 1945, assisted passages for Britons began in 1947, and displaced persons such as Latvians and Poles followed. One minor issue: in question b the right option and the clue echo the card's definition, so students can pick the answer by matching words."
+     },
+     "flags": [
+      "Question b, wording: The right option repeats the card's definition of a displaced person almost word for word ('could not safely return home'), and the clue ('no safe home left to go back to') echoes that phrase. A student can match words rather than apply the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Populate or perish",
+    "card": [
+     "After World War II, many Australians feared the country's small population would be too hard to defend. Japan's attacks on northern Australia in 1942 had made this fear worse.",
+     "In 1945, Arthur Calwell became the first Minister for Immigration. His program aimed to grow the population and supply workers for factories and big projects, under the slogan \"populate or perish\".",
+     "Calwell hoped most migrants would be British. From 1947, Britons could come on assisted passages, paying a small fare while the government covered the rest.",
+     "Not enough Britons came, so the program also took displaced persons: Europeans who lost their homes in the war, could not safely go back, and often waited in camps. Many were Poles and Latvians. Large numbers of Italians and Greeks came later."
+    ],
+    "remember": "Calwell's program brought British and European migrants to build a bigger population and workforce.",
+    "a": {
+     "q": "What was the main aim of Arthur Calwell's immigration program after World War II?",
+     "opts": [
+      "To grow the population and workforce",
+      "To replace Australian workers sent overseas",
+      "To meet the terms of a peace treaty",
+      "To bring in skilled workers from Asia"
+     ],
+     "why": "Leaders feared a small population was hard to defend and could not fill the jobs a growing economy needed. The program was not a treaty duty, and it drew its migrants from Britain and Europe, not Asia.",
+     "clue": "Think about what the slogan \"populate or perish\" says Australia was afraid of."
+    },
+    "b": {
+     "d": 3,
+     "q": "Each of these people reached Australia in 1949. Which one was most likely a displaced person?",
+     "opts": [
+      "A Pole who had lived in a German camp since 1945",
+      "A Londoner whose fare was mostly paid by Australia",
+      "An Italian who chose to move to earn better wages",
+      "A Scottish builder hired to work on a big project"
+     ],
+     "why": "Displaced persons were Europeans who lost their homes in the war, could not safely go back, and often waited in camps, like the Pole. The Londoner is tempting because the government paid most of the fare, but that was an assisted British migrant who chose to come.",
+     "clue": "Which person's move began with the war, not with a job or a better wage?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "To grow the population and workforce",
+     "also_right": []
+    },
+    "b": {
+     "best": "A Pole who had lived in a German camp since 1945",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Populate or perish",
+  "card": [
+   "After World War II, many Australians feared the country's small population would be too hard to defend. Japan's attacks on northern Australia in 1942 had made this fear worse.",
+   "In 1945, Arthur Calwell became the first Minister for Immigration. His program aimed to grow the population and supply workers for factories and big projects, under the slogan \"populate or perish\".",
+   "Calwell hoped most migrants would be British. From 1947, Britons could come on assisted passages, paying a small fare while the government covered the rest.",
+   "Not enough Britons came, so the program also took displaced persons: Europeans who lost their homes in the war, could not safely go back, and often waited in camps. Many were Poles and Latvians. Large numbers of Italians and Greeks came later."
+  ],
+  "remember": "Calwell's program brought British and European migrants to build a bigger population and workforce.",
+  "a": {
+   "q": "What was the main aim of Arthur Calwell's immigration program after World War II?",
+   "opts": [
+    "To grow the population and workforce",
+    "To replace Australian workers sent overseas",
+    "To meet the terms of a peace treaty",
+    "To bring in skilled workers from Asia"
+   ],
+   "why": "Leaders feared a small population was hard to defend and could not fill the jobs a growing economy needed. The program was not a treaty duty, and it drew its migrants from Britain and Europe, not Asia.",
+   "clue": "Think about what the slogan \"populate or perish\" says Australia was afraid of."
+  },
+  "b": {
+   "d": 3,
+   "q": "Each of these people reached Australia in 1949. Which one was most likely a displaced person?",
+   "opts": [
+    "A Pole who had lived in a German camp since 1945",
+    "A Londoner whose fare was mostly paid by Australia",
+    "An Italian who chose to move to earn better wages",
+    "A Scottish builder hired to work on a big project"
+   ],
+   "why": "Displaced persons were Europeans who lost their homes in the war, could not safely go back, and often waited in camps, like the Pole. The Londoner is tempting because the government paid most of the fare, but that was an assisted British migrant who chose to come.",
+   "clue": "Which person's move began with the war, not with a job or a better wage?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To grow the population and workforce",
+   "also_right": []
+  },
+  "b": {
+   "best": "A Pole who had lived in a German camp since 1945",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Populate or perish",
+  "card": [
+   "After World War II, many Australians feared the country's small population would be too hard to defend. Japan's attacks on northern Australia in 1942 had made this fear worse.",
+   "In 1945, Arthur Calwell became the first Minister for Immigration. His program aimed to grow the population and supply workers for factories and big projects, under the slogan \"populate or perish\".",
+   "Calwell hoped most migrants would be British. From 1947, Britons could come on assisted passages, paying a small fare while the government covered the rest.",
+   "Not enough Britons came, so the program also took displaced persons: Europeans who lost their homes in the war, could not safely go back, and often waited in camps. Many were Poles and Latvians. Large numbers of Italians and Greeks came later."
+  ],
+  "remember": "Calwell's program brought British and European migrants to build a bigger population and workforce.",
+  "a": {
+   "q": "What was the main aim of Arthur Calwell's immigration program after World War II?",
+   "opts": [
+    "To grow the population and workforce",
+    "To replace Australian workers sent overseas",
+    "To meet the terms of a peace treaty",
+    "To bring in skilled workers from Asia"
+   ],
+   "why": "Leaders feared a small population was hard to defend and could not fill the jobs a growing economy needed. The program was not a treaty duty, and it drew its migrants from Britain and Europe, not Asia.",
+   "clue": "Think about what the slogan \"populate or perish\" says Australia was afraid of."
+  },
+  "b": {
+   "d": 3,
+   "q": "Each of these people reached Australia in 1949. Which one was most likely a displaced person?",
+   "opts": [
+    "A Pole who had lived in a German camp since 1945",
+    "A Londoner whose fare was mostly paid by Australia",
+    "An Italian who chose to move to earn better wages",
+    "A Scottish builder hired to work on a big project"
+   ],
+   "why": "Displaced persons were Europeans who lost their homes in the war, could not safely go back, and often waited in camps, like the Pole. The Londoner is tempting because the government paid most of the fare, but that was an assisted British migrant who chose to come.",
+   "clue": "Which person's move began with the war, not with a job or a better wage?"
+  }
+ },
+ "checked_by": "claude-code"
+}

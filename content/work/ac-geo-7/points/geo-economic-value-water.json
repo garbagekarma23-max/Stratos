@@ -1,0 +1,343 @@
+{
+ "id": "geo-economic-value-water",
+ "title": "The economic value of water",
+ "brief": "8b84699502aa",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, write",
+  "2026-11-04T09:36:51Z write: done",
+  "2026-11-04T09:46:59Z check: flagged",
+  "2026-11-04T09:58:25Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.006,
+  "check": 0.00971,
+  "fix": 0.01477,
+  "recheck": 0.00966
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one with a hedge ('may'), and the other options are plainly absurd ('rice needs no water'). A student could pick it without knowing the idea.",
+ "rejected": {
+  "title": "The economic value of water",
+  "card": [
+   "Water has economic value because people use it to earn a living and to run towns. Farms, factories and homes all depend on it.",
+   "Irrigation means supplying water to crops by channels, pipes or sprinklers. It lets farmers grow crops where rain alone is not enough.",
+   "The Murrumbidgee Irrigation Area in New South Wales grows rice with irrigation water. The Mekong Delta in Vietnam also grows rice with irrigation.",
+   "Towns grow where water is reliable, because workers, shops and services need it. If water supply drops, farm output and local jobs can be affected."
+  ],
+  "remember": "Water has economic value because it helps people earn money and keeps farms and towns running.",
+  "a": {
+   "q": "Why does a river's water have economic value for a farming district?",
+   "opts": [
+    "It lets farmers grow crops that they can sell",
+    "It makes the district look more attractive",
+    "It is a place with cultural meaning for locals",
+    "It stops any need for farmers to plan ahead"
+   ],
+   "why": "Irrigation water helps farmers grow crops to sell, and this earns money for the district. Beauty and cultural meaning are real values, but they are not the economic value described here.",
+   "clue": "Think about how water helps people earn a living."
+  },
+  "b": {
+   "d": 2,
+   "q": "A dry spell cuts the irrigation water for a rice-growing town in the Murrumbidgee Irrigation Area. What is the most likely effect on the town?",
+   "opts": [
+    "Less rice is grown, so local farm work may fall",
+    "More rice is grown, because farmers work harder",
+    "Nothing changes, because rice needs no water",
+    "The town gains jobs, because rice is cheaper"
+   ],
+   "why": "Rice grown with irrigation needs a reliable water supply. With less water, less rice is grown and there may be less farm work. Working harder cannot make up for less water.",
+   "clue": "What happens to crops when irrigation water falls?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the only one with a hedge ('may'), and the other options are plainly absurd ('rice needs no water'). A student could pick it without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The economic value of water",
+     "card": [
+      "Water has economic value because people use it to earn a living and to run towns. Farms, factories and homes all depend on it.",
+      "Irrigation means supplying water to crops by channels, pipes or sprinklers. It lets farmers grow crops where rain alone is not enough.",
+      "The Murrumbidgee Irrigation Area in New South Wales grows rice with irrigation water. The Mekong Delta in Vietnam also grows rice with irrigation.",
+      "Towns grow where water is reliable, because workers, shops and services need it. If water supply drops, farm output and local jobs can be affected."
+     ],
+     "remember": "Water has economic value because it helps people earn money and keeps farms and towns running.",
+     "a": {
+      "q": "Why does a river's water have economic value for a farming district?",
+      "opts": [
+       "It lets farmers grow crops that they can sell",
+       "It makes the district look more attractive",
+       "It is a place with cultural meaning for locals",
+       "It stops any need for farmers to plan ahead"
+      ],
+      "why": "Irrigation water helps farmers grow crops to sell, and this earns money for the district. Beauty and cultural meaning are real values, but they are not the economic value described here.",
+      "clue": "Think about how water helps people earn a living."
+     },
+     "b": {
+      "d": 2,
+      "q": "A dry spell cuts the irrigation water for a rice-growing town in the Murrumbidgee Irrigation Area. What is the most likely effect on the town?",
+      "opts": [
+       "Less rice is grown, so local farm work may fall",
+       "More rice is grown, because farmers work harder",
+       "Nothing changes, because rice needs no water",
+       "The town gains jobs, because rice is cheaper"
+      ],
+      "why": "Rice grown with irrigation needs a reliable water supply. With less water, less rice is grown and there may be less farm work. The option about more rice reverses cause and effect.",
+      "clue": "What happens to crops when irrigation water falls?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It lets farmers grow crops that they can sell",
+      "also_right": []
+     },
+     "b": {
+      "best": "Less rice is grown, so local farm work may fall",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The why says the 'more rice' option 'reverses cause and effect'. It does not. It gives a wrong cause, harder work, rather than reversing anything, so the explanation could confuse students. Better: 'Working harder cannot make up for less water.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, remember line and questions are accurate and clear, and each question has one right answer. One small fix: the why for question b wrongly says the 'more rice' option reverses cause and effect."
+    },
+    "flags": [
+     "Question b, wording: The why says the 'more rice' option 'reverses cause and effect'. It does not. It gives a wrong cause, harder work, rather than reversing anything, so the explanation could confuse students. Better: 'Working harder cannot make up for less water.'"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The economic value of water",
+     "card": [
+      "Water has economic value because people use it to earn a living and to run towns. Farms, factories and homes all depend on it.",
+      "Irrigation means supplying water to crops by channels, pipes or sprinklers. It lets farmers grow crops where rain alone is not enough.",
+      "The Murrumbidgee Irrigation Area in New South Wales grows rice with irrigation water. The Mekong Delta in Vietnam also grows rice with irrigation.",
+      "Towns grow where water is reliable, because workers, shops and services need it. If water supply drops, farm output and local jobs can be affected."
+     ],
+     "remember": "Water has economic value because it helps people earn money and keeps farms and towns running.",
+     "a": {
+      "q": "Why does a river's water have economic value for a farming district?",
+      "opts": [
+       "It lets farmers grow crops that they can sell",
+       "It makes the district look more attractive",
+       "It is a place with cultural meaning for locals",
+       "It stops any need for farmers to plan ahead"
+      ],
+      "why": "Irrigation water helps farmers grow crops to sell, and this earns money for the district. Beauty and cultural meaning are real values, but they are not the economic value described here.",
+      "clue": "Think about how water helps people earn a living."
+     },
+     "b": {
+      "d": 2,
+      "q": "A dry spell cuts the irrigation water for a rice-growing town in the Murrumbidgee Irrigation Area. What is the most likely effect on the town?",
+      "opts": [
+       "Less rice is grown, so local farm work may fall",
+       "More rice is grown, because farmers work harder",
+       "Nothing changes, because rice needs no water",
+       "The town gains jobs, because rice is cheaper"
+      ],
+      "why": "Rice grown with irrigation needs a reliable water supply. With less water, less rice is grown and there may be less farm work. Working harder cannot make up for less water.",
+      "clue": "What happens to crops when irrigation water falls?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It lets farmers grow crops that they can sell",
+       "also_right": []
+      },
+      "b": {
+       "best": "Less rice is grown, so local farm work may fall",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one with a hedge ('may'), and the other options are plainly absurd ('rice needs no water'). A student could pick it without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts check out and both questions have one clear answer. Question b's right option stands out because it is the only hedged choice among implausible distractors."
+     },
+     "flags": [
+      "Question b, wording: The right option is the only one with a hedge ('may'), and the other options are plainly absurd ('rice needs no water'). A student could pick it without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "The economic value of water",
+    "card": [
+     "Water has economic value because people use it to earn a living and to run towns. Farms, factories and homes all depend on it.",
+     "Irrigation means supplying water to crops by channels, pipes or sprinklers. It lets farmers grow crops where rain alone is not enough.",
+     "The Murrumbidgee Irrigation Area in New South Wales grows rice with irrigation water. The Mekong Delta in Vietnam also grows rice with irrigation.",
+     "Towns grow where water is reliable, because workers, shops and services need it. If water supply drops, farm output and local jobs can be affected."
+    ],
+    "remember": "Water has economic value because it helps people earn money and keeps farms and towns running.",
+    "a": {
+     "q": "What gives a river's water economic value to a farming district?",
+     "opts": [
+      "It lets farmers grow crops that they can sell",
+      "It makes the district look more attractive",
+      "It holds cultural meaning for people there",
+      "It cools the district on hot summer days"
+     ],
+     "why": "Irrigation water helps farmers grow crops to sell, and this earns money for the district. Beauty and cultural meaning are real values, but they are not the economic value described here.",
+     "clue": "Think about how water helps people earn a living."
+    },
+    "b": {
+     "d": 3,
+     "q": "In a dry year, less irrigation water is sent to rice farms in the Murrumbidgee Irrigation Area. What is the most likely effect on the nearby towns?",
+     "opts": [
+      "Smaller rice harvests mean less farm work in town",
+      "Bigger rice harvests, as dry weather suits rice",
+      "More farm jobs, as extra workers carry water",
+      "No effect, since most of the rice is sold overseas"
+     ],
+     "why": "The rice there is grown with irrigation, so less water means less rice. Smaller harvests mean less farm work, which affects jobs in nearby towns. Selling rice overseas does not protect the towns, because the money and jobs still depend on how much rice is grown.",
+     "clue": "Follow the water to the crop, then to the workers."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It lets farmers grow crops that they can sell",
+     "also_right": []
+    },
+    "b": {
+     "best": "Smaller rice harvests mean less farm work in town",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The economic value of water",
+  "card": [
+   "Water has economic value because people use it to earn a living and to run towns. Farms, factories and homes all depend on it.",
+   "Irrigation means supplying water to crops by channels, pipes or sprinklers. It lets farmers grow crops where rain alone is not enough.",
+   "The Murrumbidgee Irrigation Area in New South Wales grows rice with irrigation water. The Mekong Delta in Vietnam also grows rice with irrigation.",
+   "Towns grow where water is reliable, because workers, shops and services need it. If water supply drops, farm output and local jobs can be affected."
+  ],
+  "remember": "Water has economic value because it helps people earn money and keeps farms and towns running.",
+  "a": {
+   "q": "What gives a river's water economic value to a farming district?",
+   "opts": [
+    "It lets farmers grow crops that they can sell",
+    "It makes the district look more attractive",
+    "It holds cultural meaning for people there",
+    "It cools the district on hot summer days"
+   ],
+   "why": "Irrigation water helps farmers grow crops to sell, and this earns money for the district. Beauty and cultural meaning are real values, but they are not the economic value described here.",
+   "clue": "Think about how water helps people earn a living."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a dry year, less irrigation water is sent to rice farms in the Murrumbidgee Irrigation Area. What is the most likely effect on the nearby towns?",
+   "opts": [
+    "Smaller rice harvests mean less farm work in town",
+    "Bigger rice harvests, as dry weather suits rice",
+    "More farm jobs, as extra workers carry water",
+    "No effect, since most of the rice is sold overseas"
+   ],
+   "why": "The rice there is grown with irrigation, so less water means less rice. Smaller harvests mean less farm work, which affects jobs in nearby towns. Selling rice overseas does not protect the towns, because the money and jobs still depend on how much rice is grown.",
+   "clue": "Follow the water to the crop, then to the workers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It lets farmers grow crops that they can sell",
+   "also_right": []
+  },
+  "b": {
+   "best": "Smaller rice harvests mean less farm work in town",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The economic value of water",
+  "card": [
+   "Water has economic value because people use it to earn a living and to run towns. Farms, factories and homes all depend on it.",
+   "Irrigation means supplying water to crops by channels, pipes or sprinklers. It lets farmers grow crops where rain alone is not enough.",
+   "The Murrumbidgee Irrigation Area in New South Wales grows rice with irrigation water. The Mekong Delta in Vietnam also grows rice with irrigation.",
+   "Towns grow where water is reliable, because workers, shops and services need it. If water supply drops, farm output and local jobs can be affected."
+  ],
+  "remember": "Water has economic value because it helps people earn money and keeps farms and towns running.",
+  "a": {
+   "q": "What gives a river's water economic value to a farming district?",
+   "opts": [
+    "It lets farmers grow crops that they can sell",
+    "It makes the district look more attractive",
+    "It holds cultural meaning for people there",
+    "It cools the district on hot summer days"
+   ],
+   "why": "Irrigation water helps farmers grow crops to sell, and this earns money for the district. Beauty and cultural meaning are real values, but they are not the economic value described here.",
+   "clue": "Think about how water helps people earn a living."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a dry year, less irrigation water is sent to rice farms in the Murrumbidgee Irrigation Area. What is the most likely effect on the nearby towns?",
+   "opts": [
+    "Smaller rice harvests mean less farm work in town",
+    "Bigger rice harvests, as dry weather suits rice",
+    "More farm jobs, as extra workers carry water",
+    "No effect, since most of the rice is sold overseas"
+   ],
+   "why": "The rice there is grown with irrigation, so less water means less rice. Smaller harvests mean less farm work, which affects jobs in nearby towns. Selling rice overseas does not protect the towns, because the money and jobs still depend on how much rice is grown.",
+   "clue": "Follow the water to the crop, then to the workers."
+  }
+ },
+ "checked_by": "claude-code"
+}

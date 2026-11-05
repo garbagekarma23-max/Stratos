@@ -1,0 +1,212 @@
+{
+ "id": "ecb-exports-imports",
+ "title": "Exports and imports",
+ "brief": "85137af172d9",
+ "shortlist": [
+  [
+   "e-govtrade",
+   0.262
+  ],
+  [
+   "eco-australia-exports-imports",
+   0.259
+  ],
+  [
+   "e-ad",
+   0.244
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, match",
+  "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:22Z write: done",
+  "2026-11-04T10:07:57Z check: flagged",
+  "2026-11-04T10:10:48Z fix: suggested",
+  "2026-11-04T17:58:50Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00491,
+  "check": 0.01,
+  "fix": 0.01275
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card, eco-australia-exports-imports, is a Year 12 profile of Australia's specific trade mix with questions on fuel imports, which is deeper and broader than the Year 9 definition this point needs, and the other two cards cover government spending and aggregate demand.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Exports and imports",
+  "card": [
+   [
+    "Export",
+    "a good or service sold to buyers in another country. The money comes into the seller's country."
+   ],
+   [
+    "Import",
+    "a good or service bought from sellers in another country. The money goes out to the foreign seller."
+   ],
+   "Services count too, not only goods. A tourist from abroad who stays at a hotel in Cairns is buying an export. An Australian who pays a foreign company for a streaming subscription is buying an import.",
+   "The same item is an export for one country and an import for another. Ask who is selling and who is buying: the seller's country exports, and the buyer's country imports."
+  ],
+  "remember": "Exports are sold out to other countries. Imports are bought in from them.",
+  "a": {
+   "q": "A winery in the Barossa Valley sells wine to a shop in Singapore. What is this sale for Australia?",
+   "opts": [
+    "An export",
+    "An import",
+    "A domestic sale",
+    "A service import"
+   ],
+   "why": "The wine is sold by an Australian business to a buyer in another country, so it is an export for Australia. It is not an import, because Australia is the seller, not the buyer.",
+   "clue": "Is Australia the seller or the buyer here?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya, who lives in Perth, pays a software company in Ireland for a design app. Another student, Tom, visits Perth from Japan and pays for a tour. Which pair is correct for Australia?",
+   "opts": [
+    "Priya's payment is an import, Tom's tour is an export",
+    "Priya's payment is an export, Tom's tour is an import",
+    "Both are imports, as money crosses the border each time",
+    "Both are exports, as both are services and not goods"
+   ],
+   "why": "Priya buys from a foreign seller, so for Australia it is an import, even though it is a service. Tom is a foreign buyer of an Australian service, so it is an export. Which way the money moves, not whether it is a good or service, decides the label.",
+   "clue": "Check who is buying in each case, and where they live."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An export",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya's payment is an import, Tom's tour is an export",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem calls Tom 'another student', but Priya is never described as a student. This is a small inconsistency that could briefly confuse a reader. It does not change the answer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clearly right answer. The only issue is minor: question b calls Tom 'another student' even though Priya is not described as a student."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem calls Tom 'another student', but Priya is never described as a student. This is a small inconsistency that could briefly confuse a reader. It does not change the answer."
+ ],
+ "proposal": {
+  "title": "Exports and imports",
+  "card": [
+   [
+    "Export",
+    "a good or service sold to buyers in another country. The money comes into the seller's country."
+   ],
+   [
+    "Import",
+    "a good or service bought from sellers in another country. The money goes out to the foreign seller."
+   ],
+   "Services count too, not only goods. A tourist from abroad who stays at a hotel in Cairns is buying an export. An Australian who pays a foreign company for a streaming subscription is buying an import.",
+   "The same item is an export for one country and an import for another. Ask who is selling and who is buying: the seller's country exports, and the buyer's country imports."
+  ],
+  "remember": "Exports are sold out to other countries. Imports are bought in from them.",
+  "a": {
+   "q": "A winery in the Barossa Valley sells wine to a shop in Singapore. What is this sale for Australia?",
+   "opts": [
+    "An export",
+    "An import",
+    "A domestic sale",
+    "A service import"
+   ],
+   "why": "The wine is sold by an Australian business to a buyer in another country, so it is an export for Australia. It is not an import, because Australia is the seller, not the buyer.",
+   "clue": "Is Australia the seller or the buyer here?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya, who lives in Perth, pays a software company in Ireland for a design app. Tom, a tourist from Japan, visits Perth and pays for a tour. Which pair is correct for Australia?",
+   "opts": [
+    "Priya's payment is an import, Tom's tour is an export",
+    "Priya's payment is an export, Tom's tour is an import",
+    "Both are imports, as money crosses the border each time",
+    "Both are exports, as both are services and not goods"
+   ],
+   "why": "Priya buys from a foreign seller, so for Australia it is an import, even though it is a service. Tom is a foreign buyer of an Australian service, so it is an export. Who sells and who buys decides the label, not whether it is a good or a service.",
+   "clue": "Check who is buying in each case, and where they live."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:50Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem calls Tom 'another student', but Priya is never described as a student. This is a small inconsistency that could briefly confuse a reader. It does not change the answer."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem calls Tom 'another student', but Priya is never described as a student. This is a small inconsistency that could briefly confuse a reader. It does not change the answer."
+  ]
+ },
+ "final": {
+  "title": "Exports and imports",
+  "card": [
+   [
+    "Export",
+    "a good or service sold to buyers in another country. The money comes into the seller's country."
+   ],
+   [
+    "Import",
+    "a good or service bought from sellers in another country. The money goes out to the foreign seller."
+   ],
+   "Services count too, not only goods. A tourist from abroad who stays at a hotel in Cairns is buying an export. An Australian who pays a foreign company for a streaming subscription is buying an import.",
+   "The same item is an export for one country and an import for another. Ask who is selling and who is buying: the seller's country exports, and the buyer's country imports."
+  ],
+  "remember": "Exports are sold out to other countries. Imports are bought in from them.",
+  "a": {
+   "q": "A winery in the Barossa Valley sells wine to a shop in Singapore. What is this sale for Australia?",
+   "opts": [
+    "An export",
+    "An import",
+    "A domestic sale",
+    "A service import"
+   ],
+   "why": "The wine is sold by an Australian business to a buyer in another country, so it is an export for Australia. It is not an import, because Australia is the seller, not the buyer.",
+   "clue": "Is Australia the seller or the buyer here?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya, who lives in Perth, pays a software company in Ireland for a design app. Tom, a tourist from Japan, visits Perth and pays for a tour. Which pair is correct for Australia?",
+   "opts": [
+    "Priya's payment is an import, Tom's tour is an export",
+    "Priya's payment is an export, Tom's tour is an import",
+    "Both are imports, as money crosses the border each time",
+    "Both are exports, as both are services and not goods"
+   ],
+   "why": "Priya buys from a foreign seller, so for Australia it is an import, even though it is a service. Tom is a foreign buyer of an Australian service, so it is an export. Who sells and who buys decides the label, not whether it is a good or a service.",
+   "clue": "Check who is buying in each case, and where they live."
+  }
+ },
+ "cleared_by": "auto"
+}

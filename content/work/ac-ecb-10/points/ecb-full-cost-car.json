@@ -1,0 +1,480 @@
+{
+ "id": "ecb-full-cost-car",
+ "title": "The full cost of a car",
+ "brief": "f03e1dbd2a4e",
+ "shortlist": [
+  [
+   "acc-identified-cost-method",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: done",
+  "2026-11-04T09:58:19Z check: flagged",
+  "2026-11-04T10:07:56Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00608,
+  "check": 0.01844,
+  "fix": 0.01951,
+  "recheck": 0.01207
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches inventory costing in Accounting, which is a different idea from the full cost of owning a car (registration, insurance, fuel, servicing and depreciation) in Year 10 Economics and Business.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The full cost of a car",
+  "card": [
+   "The price you pay for a car is only the start. Owning it brings running costs that continue for as long as you have it.",
+   [
+    "Registration and insurance",
+    "registration is a regular fee to keep a car legal on the road. Insurance is a payment that covers repair or replacement costs after a crash or theft."
+   ],
+   [
+    "Fuel and servicing",
+    "fuel is used with every trip. Servicing is regular maintenance, such as oil changes and checks, and repairs add to it as the car ages."
+   ],
+   [
+    "Depreciation",
+    "the fall in a car's value over time. It is not a bill you pay, but it is a real cost because the car will sell for less than you paid."
+   ]
+  ],
+  "remember": "A car's full cost is its price plus registration, insurance, fuel, servicing and depreciation.",
+  "a": {
+   "q": "Which of these is depreciation of a car?",
+   "opts": [
+    "Its value falling as it gets older and is used",
+    "A yearly fee to keep it legal on the road",
+    "A payment that covers the cost of a crash",
+    "The cost of regular oil changes and checks"
+   ],
+   "why": "Depreciation is the fall in the car's value over time. The yearly fee is registration, which is a bill paid, and that is the tempting mistake because both are costs of owning a car.",
+   "clue": "It is about the car's value, not a bill."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jess buys a used car for $12,000. A year later she says the car cost her only $12,000. Why is she wrong?",
+   "opts": [
+    "She has also paid for fuel, insurance and servicing",
+    "She will get the $12,000 back when she sells it",
+    "Registration is the only cost besides the price",
+    "Depreciation means the car now costs her nothing"
+   ],
+   "why": "Running costs such as fuel, insurance and servicing add to the price. Selling the car later will not return the full $12,000 either, because depreciation lowers its value.",
+   "clue": "Think about what she pays after driving away."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Its value falling as it gets older and is used",
+   "also_right": []
+  },
+  "b": {
+   "best": "She has also paid for fuel, insurance and servicing",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Price plus ... depreciation' double counts. Depreciation is the part of the price lost when the car is sold, not a cost added on top of it. The card itself frames it as the car selling for less than you paid. Better: the full cost is the running costs plus the value lost to depreciation."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line leaves out repairs, which the card lists as an added cost as the car ages."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'It is about the car's value, not a bill' hands over the answer, because only one option mentions value."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer. However, the remember line says full cost is 'price plus depreciation', which double counts the value lost, and it drops repairs. The clue for question a also gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, fact: 'Price plus ... depreciation' double counts. Depreciation is the part of the price lost when the car is sold, not a cost added on top of it. The card itself frames it as the car selling for less than you paid. Better: the full cost is the running costs plus the value lost to depreciation.",
+  "Remember, other: The remember line leaves out repairs, which the card lists as an added cost as the car ages.",
+  "Question a, other: The clue 'It is about the car's value, not a bill' hands over the answer, because only one option mentions value."
+ ],
+ "proposal": {
+  "title": "The full cost of a car",
+  "card": [
+   "The price you pay for a car is only the start. Owning it brings running costs that continue for as long as you have it.",
+   [
+    "Registration and insurance",
+    "registration is a regular fee to keep a car legal on the road. Insurance is a payment that covers repair or replacement costs after a crash or theft."
+   ],
+   [
+    "Fuel and servicing",
+    "fuel is used with every trip. Servicing is regular maintenance, such as oil changes and checks, and repairs add to it as the car ages."
+   ],
+   [
+    "Depreciation",
+    "the fall in a car's value over time. It is not a bill you pay, but it is a real cost because the car will sell for less than you paid. The full cost of owning a car is its running costs plus the value it loses."
+   ]
+  ],
+  "remember": "Owning a car costs its running costs, such as registration, insurance, fuel, servicing and repairs, plus the value lost to depreciation.",
+  "a": {
+   "q": "Which of these is depreciation of a car?",
+   "opts": [
+    "Its value falling as it gets older and is used",
+    "A yearly fee to keep it legal on the road",
+    "A payment that covers the cost of a crash",
+    "The cost of regular oil changes and checks"
+   ],
+   "why": "Depreciation is the fall in the car's value over time. The yearly fee is registration, which is a bill paid, and that is the tempting mistake because both are costs of owning a car.",
+   "clue": "Which cost do you only notice when you sell?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jess buys a used car for $12,000. She says the price is the only cost of owning it. Why is she wrong?",
+   "opts": [
+    "She also pays for fuel, insurance and servicing",
+    "She will get the $12,000 back when she sells it",
+    "Registration is the only cost besides the price",
+    "Depreciation means the car now costs her nothing"
+   ],
+   "why": "Running costs such as fuel, insurance and servicing keep adding up while she owns the car. Selling it later will not return the full $12,000 either, because depreciation lowers its value.",
+   "clue": "Think about what she pays after driving away."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Its value falling as it gets older and is used",
+    "also_right": []
+   },
+   "b": {
+    "best": "She also pays for fuel, insurance and servicing",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Price plus ... depreciation' double counts. Depreciation is the part of the price lost when the car is sold, not a cost added on top of it. The card itself frames it as the car selling for less than you paid. Better: the full cost is the running costs plus the value lost to depreciation."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line leaves out repairs, which the card lists as an added cost as the car ages."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'It is about the car's value, not a bill' hands over the answer, because only one option mentions value."
+   }
+  ],
+  "flags": [
+   "Remember, fact: 'Price plus ... depreciation' double counts. Depreciation is the part of the price lost when the car is sold, not a cost added on top of it. The card itself frames it as the car selling for less than you paid. Better: the full cost is the running costs plus the value lost to depreciation.",
+   "Remember, other: The remember line leaves out repairs, which the card lists as an added cost as the car ages.",
+   "Question a, other: The clue 'It is about the car's value, not a bill' hands over the answer, because only one option mentions value."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "The full cost of a car",
+  "card": [
+   "The price you pay for a car is only the start. Owning it brings running costs that continue for as long as you have it.",
+   [
+    "Registration and insurance",
+    "registration is a regular fee to keep a car legal on the road. Insurance is a payment that covers repair or replacement costs after a crash or theft."
+   ],
+   [
+    "Fuel and servicing",
+    "fuel is used with every trip. Servicing is regular maintenance, such as oil changes and checks, and repairs add to it as the car ages."
+   ],
+   [
+    "Depreciation",
+    "the fall in a car's value over time. It is not a bill you pay, but it is a real cost because the car will sell for less than you paid. The full cost of owning a car is its running costs plus the value it loses."
+   ]
+  ],
+  "remember": "Owning a car costs its running costs, such as registration, insurance, fuel, servicing and repairs, plus the value lost to depreciation.",
+  "a": {
+   "q": "Which of these is depreciation of a car?",
+   "opts": [
+    "Its value falling as it gets older and is used",
+    "A yearly fee to keep it legal on the road",
+    "A payment that covers the cost of a crash",
+    "The cost of regular oil changes and checks"
+   ],
+   "why": "Depreciation is the fall in the car's value over time. The yearly fee is registration, which is a bill paid, and that is the tempting mistake because both are costs of owning a car.",
+   "clue": "Which cost do you only notice when you sell?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jess buys a used car for $12,000. She says the price is the only cost of owning it. Why is she wrong?",
+   "opts": [
+    "She also pays for fuel, insurance and servicing",
+    "She will get the $12,000 back when she sells it",
+    "Registration is the only cost besides the price",
+    "Depreciation means the car now costs her nothing"
+   ],
+   "why": "Running costs such as fuel, insurance and servicing keep adding up while she owns the car. Selling it later will not return the full $12,000 either, because depreciation lowers its value.",
+   "clue": "Think about what she pays after driving away."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The checker was right that price plus depreciation counts the lost value twice. The fix says the full cost is running costs plus the value lost, adds repairs, and gives a clue that no longer names the answer.",
+   "item": "cb8e59ecae79edb9",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-full-cost-car",
+    "title": "The full cost of a car",
+    "brief": "f03e1dbd2a4e",
+    "shortlist": [
+     [
+      "acc-identified-cost-method",
+      0.23
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 9e-05,
+     "write": 0.00608,
+     "check": 0.01844,
+     "fix": 0.01951,
+     "recheck": 0.01207
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches inventory costing in Accounting, which is a different idea from the full cost of owning a car (registration, insurance, fuel, servicing and depreciation) in Year 10 Economics and Business.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "The full cost of a car",
+     "card": [
+      "The price you pay for a car is only the start. Owning it brings running costs that continue for as long as you have it.",
+      [
+       "Registration and insurance",
+       "registration is a regular fee to keep a car legal on the road. Insurance is a payment that covers repair or replacement costs after a crash or theft."
+      ],
+      [
+       "Fuel and servicing",
+       "fuel is used with every trip. Servicing is regular maintenance, such as oil changes and checks, and repairs add to it as the car ages."
+      ],
+      [
+       "Depreciation",
+       "the fall in a car's value over time. It is not a bill you pay, but it is a real cost because the car will sell for less than you paid."
+      ]
+     ],
+     "remember": "A car's full cost is its price plus registration, insurance, fuel, servicing and depreciation.",
+     "a": {
+      "q": "Which of these is depreciation of a car?",
+      "opts": [
+       "Its value falling as it gets older and is used",
+       "A yearly fee to keep it legal on the road",
+       "A payment that covers the cost of a crash",
+       "The cost of regular oil changes and checks"
+      ],
+      "why": "Depreciation is the fall in the car's value over time. The yearly fee is registration, which is a bill paid, and that is the tempting mistake because both are costs of owning a car.",
+      "clue": "It is about the car's value, not a bill."
+     },
+     "b": {
+      "d": 2,
+      "q": "Jess buys a used car for $12,000. A year later she says the car cost her only $12,000. Why is she wrong?",
+      "opts": [
+       "She has also paid for fuel, insurance and servicing",
+       "She will get the $12,000 back when she sells it",
+       "Registration is the only cost besides the price",
+       "Depreciation means the car now costs her nothing"
+      ],
+      "why": "Running costs such as fuel, insurance and servicing add to the price. Selling the car later will not return the full $12,000 either, because depreciation lowers its value.",
+      "clue": "Think about what she pays after driving away."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Its value falling as it gets older and is used",
+      "also_right": []
+     },
+     "b": {
+      "best": "She has also paid for fuel, insurance and servicing",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "fact",
+       "detail": "'Price plus ... depreciation' double counts. Depreciation is the part of the price lost when the car is sold, not a cost added on top of it. The card itself frames it as the car selling for less than you paid. Better: the full cost is the running costs plus the value lost to depreciation."
+      },
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line leaves out repairs, which the card lists as an added cost as the car ages."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'It is about the car's value, not a bill' hands over the answer, because only one option mentions value."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer. However, the remember line says full cost is 'price plus depreciation', which double counts the value lost, and it drops repairs. The clue for question a also gives the answer away."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Remember, fact: 'Price plus ... depreciation' double counts. Depreciation is the part of the price lost when the car is sold, not a cost added on top of it. The card itself frames it as the car selling for less than you paid. Better: the full cost is the running costs plus the value lost to depreciation.",
+     "Remember, other: The remember line leaves out repairs, which the card lists as an added cost as the car ages.",
+     "Question a, other: The clue 'It is about the car's value, not a bill' hands over the answer, because only one option mentions value."
+    ],
+    "proposal": {
+     "title": "The full cost of a car",
+     "card": [
+      "The price you pay for a car is only the start. Owning it brings running costs that continue for as long as you have it.",
+      [
+       "Registration and insurance",
+       "registration is a regular fee to keep a car legal on the road. Insurance is a payment that covers repair or replacement costs after a crash or theft."
+      ],
+      [
+       "Fuel and servicing",
+       "fuel is used with every trip. Servicing is regular maintenance, such as oil changes and checks, and repairs add to it as the car ages."
+      ],
+      [
+       "Depreciation",
+       "the fall in a car's value over time. It is not a bill you pay, but it is a real cost because the car will sell for less than you paid. The full cost of owning a car is its running costs plus the value it loses."
+      ]
+     ],
+     "remember": "Owning a car costs its running costs, such as registration, insurance, fuel, servicing and repairs, plus the value lost to depreciation.",
+     "a": {
+      "q": "Which of these is depreciation of a car?",
+      "opts": [
+       "Its value falling as it gets older and is used",
+       "A yearly fee to keep it legal on the road",
+       "A payment that covers the cost of a crash",
+       "The cost of regular oil changes and checks"
+      ],
+      "why": "Depreciation is the fall in the car's value over time. The yearly fee is registration, which is a bill paid, and that is the tempting mistake because both are costs of owning a car.",
+      "clue": "Which cost do you only notice when you sell?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Jess buys a used car for $12,000. She says the price is the only cost of owning it. Why is she wrong?",
+      "opts": [
+       "She also pays for fuel, insurance and servicing",
+       "She will get the $12,000 back when she sells it",
+       "Registration is the only cost besides the price",
+       "Depreciation means the car now costs her nothing"
+      ],
+      "why": "Running costs such as fuel, insurance and servicing keep adding up while she owns the car. Selling it later will not return the full $12,000 either, because depreciation lowers its value.",
+      "clue": "Think about what she pays after driving away."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Its value falling as it gets older and is used",
+       "also_right": []
+      },
+      "b": {
+       "best": "She also pays for fuel, insurance and servicing",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:11Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "fact",
+       "detail": "'Price plus ... depreciation' double counts. Depreciation is the part of the price lost when the car is sold, not a cost added on top of it. The card itself frames it as the car selling for less than you paid. Better: the full cost is the running costs plus the value lost to depreciation."
+      },
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line leaves out repairs, which the card lists as an added cost as the car ages."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'It is about the car's value, not a bill' hands over the answer, because only one option mentions value."
+      }
+     ],
+     "flags": [
+      "Remember, fact: 'Price plus ... depreciation' double counts. Depreciation is the part of the price lost when the car is sold, not a cost added on top of it. The card itself frames it as the car selling for less than you paid. Better: the full cost is the running costs plus the value lost to depreciation.",
+      "Remember, other: The remember line leaves out repairs, which the card lists as an added cost as the car ages.",
+      "Question a, other: The clue 'It is about the car's value, not a bill' hands over the answer, because only one option mentions value."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "438b47382b774681"
+  }
+ ]
+}

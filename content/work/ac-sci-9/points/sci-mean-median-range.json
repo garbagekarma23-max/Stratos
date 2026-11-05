@@ -1,0 +1,234 @@
+{
+ "id": "sci-mean-median-range",
+ "title": "Mean, median and range",
+ "brief": "08b8cfc99060",
+ "shortlist": [
+  [
+   "mat-mean-median-range-context",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, match",
+  "2026-11-04T09:36:58Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:14Z write: done",
+  "2026-11-04T09:58:33Z check: flagged",
+  "2026-11-04T10:08:06Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00448,
+  "check": 0.00995,
+  "fix": 0.01536,
+  "recheck": 0.00645
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches mean, median and range but also teaches the interquartile range, which goes beyond this brief, and it is written as a mathematics point, so it is not an exact match for this Year 9 science point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Mean, median and range",
+  "card": [
+   [
+    "Mean",
+    "Add up all the results, then divide by the number of results. It is the usual 'average'."
+   ],
+   [
+    "Median",
+    "Put the results in order from smallest to largest. The median is the middle one. With an even number of results, it is halfway between the two middle ones."
+   ],
+   [
+    "Range",
+    "Subtract the smallest result from the largest. It shows how spread out the results are."
+   ],
+   "One very high or very low result can pull the mean towards it. The median is affected much less."
+  ],
+  "remember": "Mean is total divided by count, median is the middle, range is largest minus smallest.",
+  "a": {
+   "q": "A student times a toy car over five runs: 4, 6, 5, 9 and 6 seconds. What is the range?",
+   "opts": [
+    "5 seconds",
+    "6 seconds",
+    "9 seconds",
+    "30 seconds"
+   ],
+   "why": "The range is the largest minus the smallest: 9 - 4 = 5 seconds. The 6 seconds option is tempting because it is the mean and also the median, but the range measures spread, not the centre.",
+   "clue": "Subtract the smallest from the largest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures the height of a bean plant in cm on five days: 2, 3, 3, 4 and 18. The 18 was a typing mistake for 8. Which is affected most by this mistake?",
+   "opts": [
+    "The mean, which is pulled up by the high result",
+    "The median, which moves to the largest result",
+    "The median, which is pulled up by the high result",
+    "The mean, which stays the same as the middle result"
+   ],
+   "why": "The mean uses every result in its total, so 18 pulls it up well above the typical value. The median is the middle result after ordering, which is 3 either way, so it barely changes.",
+   "clue": "Which measure uses every result in its sum?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5 seconds",
+   "also_right": []
+  },
+  "b": {
+   "best": "The mean, which is pulled up by the high result",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says the median 'barely changes' but also says it is 3 either way. It does not change at all, so 'barely changes' contradicts itself and could confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct: the range is 9 − 4 = 5 s, and the mean (6 vs 4) is affected while the median stays at 3. One small fix: why (b) says the median 'barely changes' when it does not change at all."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) says the median 'barely changes' but also says it is 3 either way. It does not change at all, so 'barely changes' contradicts itself and could confuse students."
+ ],
+ "proposal": {
+  "title": "Mean, median and range",
+  "card": [
+   [
+    "Mean",
+    "Add up all the results, then divide by the number of results. It is the usual 'average'."
+   ],
+   [
+    "Median",
+    "Put the results in order from smallest to largest. The median is the middle one. With an even number of results, it is halfway between the two middle ones."
+   ],
+   [
+    "Range",
+    "Subtract the smallest result from the largest. It shows how spread out the results are."
+   ],
+   "One very high or very low result can pull the mean towards it. The median is affected much less."
+  ],
+  "remember": "Mean is total divided by count, median is the middle, range is largest minus smallest.",
+  "a": {
+   "q": "A student times a toy car over five runs: 4, 6, 5, 9 and 6 seconds. What is the range?",
+   "opts": [
+    "5 seconds",
+    "6 seconds",
+    "9 seconds",
+    "30 seconds"
+   ],
+   "why": "The range is the largest minus the smallest: 9 - 4 = 5 seconds. The 6 seconds option is tempting because it is the mean and also the median, but the range measures spread, not the centre.",
+   "clue": "Subtract the smallest from the largest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures the height of a bean plant in cm on five days: 2, 3, 3, 4 and 18. The 18 was a typing mistake for 8. How does this mistake affect the mean and the median?",
+   "opts": [
+    "The mean rises, but the median stays the same",
+    "The median rises, but the mean stays the same",
+    "Both the mean and the median rise",
+    "Neither the mean nor the median changes"
+   ],
+   "why": "The mean uses every result in its total, so it is 30 ÷ 5 = 6 with the mistake instead of 20 ÷ 5 = 4. The median is the middle result after ordering, which is 3 either way, so it does not change. Thinking both rise is tempting, but the high result only moves the end of the ordered list, not the middle.",
+   "clue": "Find the middle result with 18 and then with 8."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "5 seconds",
+    "also_right": []
+   },
+   "b": {
+    "best": "The mean rises, but the median stays the same",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says the median 'barely changes' but also says it is 3 either way. It does not change at all, so 'barely changes' contradicts itself and could confuse students."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) says the median 'barely changes' but also says it is 3 either way. It does not change at all, so 'barely changes' contradicts itself and could confuse students."
+  ]
+ },
+ "final": {
+  "title": "Mean, median and range",
+  "card": [
+   [
+    "Mean",
+    "Add up all the results, then divide by the number of results. It is the usual 'average'."
+   ],
+   [
+    "Median",
+    "Put the results in order from smallest to largest. The median is the middle one. With an even number of results, it is halfway between the two middle ones."
+   ],
+   [
+    "Range",
+    "Subtract the smallest result from the largest. It shows how spread out the results are."
+   ],
+   "One very high or very low result can pull the mean towards it. The median is affected much less."
+  ],
+  "remember": "Mean is total divided by count, median is the middle, range is largest minus smallest.",
+  "a": {
+   "q": "A student times a toy car over five runs: 4, 6, 5, 9 and 6 seconds. What is the range?",
+   "opts": [
+    "5 seconds",
+    "6 seconds",
+    "9 seconds",
+    "30 seconds"
+   ],
+   "why": "The range is the largest minus the smallest: 9 - 4 = 5 seconds. The 6 seconds option is tempting because it is the mean and also the median, but the range measures spread, not the centre.",
+   "clue": "Subtract the smallest from the largest."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures the height of a bean plant in cm on five days: 2, 3, 3, 4 and 18. The 18 was a typing mistake for 8. How does this mistake affect the mean and the median?",
+   "opts": [
+    "The mean rises, but the median stays the same",
+    "The median rises, but the mean stays the same",
+    "Both the mean and the median rise",
+    "Neither the mean nor the median changes"
+   ],
+   "why": "The mean uses every result in its total, so it is 30 ÷ 5 = 6 with the mistake instead of 20 ÷ 5 = 4. The median is the middle result after ordering, which is 3 either way, so it does not change. Thinking both rise is tempting, but the high result only moves the end of the ordered list, not the middle.",
+   "clue": "Find the middle result with 18 and then with 8."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,494 @@
+{
+ "id": "geo-strategies-improve-liveability",
+ "title": "Strategies to improve liveability",
+ "brief": "12cf5256cbd6",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, write",
+  "2026-11-04T09:36:51Z write: done",
+  "2026-11-04T09:46:59Z check: flagged",
+  "2026-11-04T09:58:25Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check was not highly sure; the fresh check found a problem)",
+  "2026-11-05T06:08:56Z claude-code review: rejected, to be written again with a note",
+  "2026-11-05T06:26:26Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T06:32:24Z claude-code check: answered by a separate subagent",
+  "2026-11-05T06:32:24Z check: flagged",
+  "2026-11-05T06:46:37Z fix: suggested",
+  "2026-11-05T07:03:38Z review: approved with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00575,
+  "check": 0.0102,
+  "fix": 0.04357,
+  "recheck": 0.01377
+ },
+ "note": "Do not say local councils run bus or train services: in Australia state and territory governments run or contract public transport (Brisbane City Council's buses are the main exception). Councils build footpaths, cycling paths, bus shelters and local roads, and can plan for or push for better transport links. Question b, set in Tasmania, must use a strategy a council really carries out, such as building footpaths or a cycling path to the shops, or asking the state for a bus route. The right option must not be the only one that repeats words from the question.",
+ "rejected": {
+  "title": "Strategies to improve liveability",
+  "card": [
+   "Liveability is how well a place meets the needs of the people who live there. Local councils run many services that shape it.",
+   [
+    "Public spaces",
+    "Parks, playgrounds and town squares give people places to meet, play and relax."
+   ],
+   [
+    "Paths and transport",
+    "Walking and cycling paths and bus or train links help people get to work, school and shops."
+   ],
+   [
+    "Waste services",
+    "Rubbish collection and recycling keep streets clean and cut the waste sent to landfill."
+   ]
+  ],
+  "remember": "Councils can lift liveability by improving spaces, paths, transport links and waste services.",
+  "a": {
+   "q": "Which action by a council is a strategy to improve liveability?",
+   "opts": [
+    "Building a cycling path that links a suburb to the station",
+    "Closing a library to save money on staff",
+    "Removing all the bins from a local park",
+    "Cutting the number of buses on a busy route"
+   ],
+   "why": "A cycling path to the station helps people reach transport and travel safely. The other options remove services, which would usually make the place less liveable.",
+   "clue": "Which option adds something people can use to get around?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Residents of a town in Tasmania say they cannot reach the shops without a car. Which council strategy best deals with this problem?",
+   "opts": [
+    "Building footpaths and a regular bus link to the shops",
+    "Adding a second recycling bin to every home",
+    "Planting more trees in the town square",
+    "Running a weekly rubbish collection"
+   ],
+   "why": "Footpaths and a bus link help people reach the shops without a car. Recycling bins, trees and rubbish collection are useful, but they do not fix the travel problem.",
+   "clue": "Match the strategy to the problem the residents describe."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "reject",
+   "sure": "high",
+   "reason": "Both versions say councils run bus and train links, but in Australia, Tasmania included, state governments run or contract trains and almost all buses. Question b's right answer in the fix also repeats 'to the shops' from the question.",
+   "item": "afc014049d490ed4",
+   "note": "Do not say local councils run bus or train services: in Australia state and territory governments run or contract public transport (Brisbane City Council's buses are the main exception). Councils build footpaths, cycling paths, bus shelters and local roads, and can plan for or push for better transport links. Question b, set in Tasmania, must use a strategy a council really carries out, such as building footpaths or a cycling path to the shops, or asking the state for a bus route. The right option must not be the only one that repeats words from the question.",
+   "result": "decided",
+   "saved": {
+    "id": "geo-strategies-improve-liveability",
+    "title": "Strategies to improve liveability",
+    "brief": "12cf5256cbd6",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.00575,
+     "check": 0.0102,
+     "fix": 0.01603,
+     "recheck": 0.01377
+    },
+    "draft": {
+     "title": "Strategies to improve liveability",
+     "card": [
+      "Liveability is how well a place meets the needs of the people who live there. Local councils run many services that shape it.",
+      [
+       "Public spaces",
+       "Parks, playgrounds and town squares give people places to meet, play and relax."
+      ],
+      [
+       "Paths and transport",
+       "Walking and cycling paths and bus or train links help people get to work, school and shops."
+      ],
+      [
+       "Waste services",
+       "Rubbish collection and recycling keep streets clean and cut the waste sent to landfill."
+      ]
+     ],
+     "remember": "Councils can lift liveability by improving spaces, paths, transport links and waste services.",
+     "a": {
+      "q": "Which action by a council is a strategy to improve liveability?",
+      "opts": [
+       "Building a cycling path that links a suburb to the station",
+       "Closing a library to save money on staff",
+       "Removing all the bins from a local park",
+       "Cutting the number of buses on a busy route"
+      ],
+      "why": "A cycling path to the station helps people reach transport and travel safely. The other options remove services, which would usually make the place less liveable.",
+      "clue": "Which option adds something people can use to get around?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Residents of a town in Tasmania say they cannot reach the shops without a car. Which council strategy best deals with this problem?",
+      "opts": [
+       "Building footpaths and a regular bus link to the shops",
+       "Adding a second recycling bin to every home",
+       "Planting more trees in the town square",
+       "Running a weekly rubbish collection"
+      ],
+      "why": "Footpaths and a bus link help people reach the shops without a car. Recycling bins, trees and rubbish collection are useful, but they do not fix the travel problem.",
+      "clue": "Match the strategy to the problem the residents describe."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Building a cycling path that links a suburb to the station",
+      "also_right": []
+     },
+     "b": {
+      "best": "Building footpaths and a regular bus link to the shops",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is clearly the longest and the only one with a precise detail ('links a suburb to the station'). It is also the only option that adds a service, so a student could pick it without knowing the idea."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue ('adds something people can use to get around') points straight at the cycling path, because it is the only option that adds a way to get around. The clue gives the answer away rather than hinting."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and answers are accurate. In question a, the right option stands out by length and detail, and the clue almost names the answer, so both should be revised."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The right option is clearly the longest and the only one with a precise detail ('links a suburb to the station'). It is also the only option that adds a service, so a student could pick it without knowing the idea.",
+     "Question a, other: The clue ('adds something people can use to get around') points straight at the cycling path, because it is the only option that adds a way to get around. The clue gives the answer away rather than hinting."
+    ],
+    "proposal": {
+     "title": "Strategies to improve liveability",
+     "card": [
+      "Liveability is how well a place meets the needs of the people who live there. Local councils run many services that shape it.",
+      [
+       "Public spaces",
+       "Parks, playgrounds and town squares give people places to meet, play and relax."
+      ],
+      [
+       "Paths and transport",
+       "Walking and cycling paths and bus or train links help people get to work, school and shops."
+      ],
+      [
+       "Waste services",
+       "Rubbish collection and recycling keep streets clean and cut the waste sent to landfill."
+      ]
+     ],
+     "remember": "Councils can lift liveability by improving spaces, paths, transport links and waste services.",
+     "a": {
+      "q": "A council gives every home a bin for cans and bottles and a green-waste pickup. What type of liveability strategy is this?",
+      "opts": [
+       "A waste and recycling strategy",
+       "A public space strategy",
+       "A transport link strategy",
+       "A walking and cycling path strategy"
+      ],
+      "why": "Bins for cans and bottles and a green-waste pickup are recycling and rubbish services. They keep streets clean and cut waste sent to landfill. They do not create a place to meet or a way to travel, so they are not public space or transport strategies.",
+      "clue": "Think about what happens to the cans, bottles and garden clippings."
+     },
+     "b": {
+      "d": 2,
+      "q": "Residents of a town in Tasmania say they cannot reach the shops without a car. Which council strategy best deals with this problem?",
+      "opts": [
+       "Starting a regular bus link to the shops",
+       "Adding a second recycling bin to every home",
+       "Planting shade trees in the town square",
+       "Running a weekly rubbish collection for homes"
+      ],
+      "why": "A bus link helps people reach the shops without a car. Recycling bins, trees and rubbish collection can make a place more liveable, but they do not fix the travel problem the residents describe.",
+      "clue": "Match the strategy to the problem the residents describe."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check was not highly sure",
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A waste and recycling strategy",
+       "also_right": []
+      },
+      "b": {
+       "best": "Starting a regular bus link to the shops",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card says local councils run many services and then lists bus or train links. In Australia, train services and most bus services are run by state or territory governments, not local councils. Brisbane City Council and a few community buses are exceptions. The card could say councils plan for or push for transport links."
+       },
+       {
+        "part": "b",
+        "kind": "fact",
+        "detail": "In Tasmania, regular bus services are run or contracted by the state government (for example Metro Tasmania), not by local councils. Calling a new bus link a 'council strategy' in a Tasmanian town may mislead students about who provides public transport."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one that repeats 'to the shops' from the question stem. A student could pick it by matching words without understanding the idea."
+       }
+      ],
+      "sure": "medium",
+      "sensitive": "none",
+      "summary": "Both questions work and the intended answers are right. The card and question b suggest local councils run bus and train links, which in Australia (including Tasmania) are mostly state-run. Question b's right option also echoes 'to the shops' from the stem, which gives the answer away."
+     },
+     "flags": [
+      "Card, fact: The card says local councils run many services and then lists bus or train links. In Australia, train services and most bus services are run by state or territory governments, not local councils. Brisbane City Council and a few community buses are exceptions. The card could say councils plan for or push for transport links.",
+      "Question b, fact: In Tasmania, regular bus services are run or contracted by the state government (for example Metro Tasmania), not by local councils. Calling a new bus link a 'council strategy' in a Tasmanian town may mislead students about who provides public transport.",
+      "Question b, wording: The right option is the only one that repeats 'to the shops' from the question stem. A student could pick it by matching words without understanding the idea."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "bf164085a7b5639f"
+  },
+  {
+   "at": "2026-11-05T06:26:26Z",
+   "step": "write",
+   "version": {
+    "title": "Strategies to improve liveability",
+    "card": [
+     "Liveability is how well a place meets the needs of the people who live there. Local councils can make a place more liveable in several ways.",
+     [
+      "Public spaces",
+      "building and looking after parks, playgrounds, libraries and town squares where people meet and relax."
+     ],
+     [
+      "Paths and links",
+      "building footpaths, cycling paths, bus shelters and local roads. State governments run most buses and trains, but councils can plan for, and ask for, better links."
+     ],
+     [
+      "Waste services",
+      "collecting rubbish and recycling, which keeps streets clean and sends less waste to landfill."
+     ]
+    ],
+    "remember": "Councils lift liveability through public spaces, paths and links, and waste services.",
+    "a": {
+     "q": "Which council action would most likely make a suburb more liveable?",
+     "opts": [
+      "Building a cycling path from homes to the shops",
+      "Closing the local library to cut staff costs",
+      "Removing the rubbish bins from a busy park",
+      "Selling a park so a car park can be built"
+     ],
+     "why": "A cycling path helps people get around safely without a car. Closing a library, removing bins and selling a park all take away services or spaces that people use.",
+     "clue": "Which action adds something people can use?"
+    },
+    "b": {
+     "d": 3,
+     "q": "People in a small Tasmanian town say they cannot walk safely from their homes to the shops. Which council strategy fits this problem best?",
+     "opts": [
+      "Build a footpath along the main street",
+      "Run a new council train line to the shops",
+      "Add a second recycling bin for each home",
+      "Plant shade trees in the town square"
+     ],
+     "why": "A footpath gives people a safe place to walk, and building footpaths is council work. A train line is tempting, but state governments run most trains, so a council would not run its own line.",
+     "clue": "Think about what a council builds."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T06:32:24Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Building a cycling path from homes to the shops",
+     "also_right": []
+    },
+    "b": {
+     "best": "Build a footpath along the main street",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "level",
+      "detail": "The three wrong options all take something away (close the library, sell a park, remove bins), and the clue asks which action adds something, so a student can pick the right answer by common sense without knowing the council strategies on the card. Wrong options that are also improvements, but less fitting or not council work, would test the idea."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The facts and both right answers check out. Question a is too easy: every wrong option removes a service, so it can be answered without the card."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Strategies to improve liveability",
+  "card": [
+   "Liveability is how well a place meets the needs of the people who live there. Local councils can make a place more liveable in several ways.",
+   [
+    "Public spaces",
+    "building and looking after parks, playgrounds, libraries and town squares where people meet and relax."
+   ],
+   [
+    "Paths and links",
+    "building footpaths, cycling paths, bus shelters and local roads. State governments run most buses and trains, but councils can plan for, and ask for, better links."
+   ],
+   [
+    "Waste services",
+    "collecting rubbish and recycling, which keeps streets clean and sends less waste to landfill."
+   ]
+  ],
+  "remember": "Councils lift liveability through public spaces, paths and links, and waste services.",
+  "a": {
+   "q": "Which council action would most likely make a suburb more liveable?",
+   "opts": [
+    "Building a cycling path from homes to the shops",
+    "Closing the local library to cut staff costs",
+    "Removing the rubbish bins from a busy park",
+    "Selling a park so a car park can be built"
+   ],
+   "why": "A cycling path helps people get around safely without a car. Closing a library, removing bins and selling a park all take away services or spaces that people use.",
+   "clue": "Which action adds something people can use?"
+  },
+  "b": {
+   "d": 3,
+   "q": "People in a small Tasmanian town say they cannot walk safely from their homes to the shops. Which council strategy fits this problem best?",
+   "opts": [
+    "Build a footpath along the main street",
+    "Run a new council train line to the shops",
+    "Add a second recycling bin for each home",
+    "Plant shade trees in the town square"
+   ],
+   "why": "A footpath gives people a safe place to walk, and building footpaths is council work. A train line is tempting, but state governments run most trains, so a council would not run its own line.",
+   "clue": "Think about what a council builds."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Building a cycling path from homes to the shops",
+   "also_right": []
+  },
+  "b": {
+   "best": "Build a footpath along the main street",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "The three wrong options all take something away (close the library, sell a park, remove bins), and the clue asks which action adds something, so a student can pick the right answer by common sense without knowing the council strategies on the card. Wrong options that are also improvements, but less fitting or not council work, would test the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both right answers check out. Question a is too easy: every wrong option removes a service, so it can be answered without the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: The three wrong options all take something away (close the library, sell a park, remove bins), and the clue asks which action adds something, so a student can pick the right answer by common sense without knowing the council strategies on the card. Wrong options that are also improvements, but less fitting or not council work, would test the idea."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Strategies to improve liveability",
+  "card": [
+   "Liveability is how well a place meets the needs of the people who live there. Local councils can make a place more liveable in several ways.",
+   [
+    "Public spaces",
+    "building and looking after parks, playgrounds, libraries and town squares where people meet and relax."
+   ],
+   [
+    "Paths and links",
+    "building footpaths, cycling paths, bus shelters and local roads. State governments run most buses and trains, but councils can plan for, and ask for, better links."
+   ],
+   [
+    "Waste services",
+    "collecting rubbish and recycling, which keeps streets clean and sends less waste to landfill."
+   ]
+  ],
+  "remember": "Councils lift liveability through public spaces, paths and links, and waste services.",
+  "a": {
+   "q": "Residents in a Darwin suburb say overflowing bins are leaving rubbish in their streets. Which council strategy fits this problem best?",
+   "opts": [
+    "Collect rubbish and recycling more often",
+    "Build a new playground in the local park",
+    "Add a cycling path from homes to the shops",
+    "Open a bigger library in the town centre"
+   ],
+   "why": "The problem is about waste, so collecting rubbish and recycling more often keeps the streets clean. A playground, cycling path or library could make the suburb more liveable in other ways, but none of them deals with the rubbish.",
+   "clue": "Match the problem to the type of council service."
+  },
+  "b": {
+   "d": 3,
+   "q": "People in a small Tasmanian town say they cannot walk safely from their homes to the shops. Which council strategy fits this problem best?",
+   "opts": [
+    "Build a footpath along the main street",
+    "Run a new council train line to the shops",
+    "Add a second recycling bin for each home",
+    "Plant shade trees in the town square"
+   ],
+   "why": "A footpath gives people a safe place to walk, and building footpaths is council work. A train line is tempting, but state governments run most trains, so a council would not run its own line.",
+   "clue": "Think about what a council builds."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Strategies to improve liveability",
+  "card": [
+   "Liveability is how well a place meets the needs of the people who live there. Local councils can make a place more liveable in several ways.",
+   [
+    "Public spaces",
+    "building and looking after parks, playgrounds, libraries and town squares where people meet and relax."
+   ],
+   [
+    "Paths and links",
+    "building footpaths, cycling paths, bus shelters and local roads. State governments run most buses and trains, but councils can plan for, and ask for, better links."
+   ],
+   [
+    "Waste services",
+    "collecting rubbish and recycling, which keeps streets clean and sends less waste to landfill."
+   ]
+  ],
+  "remember": "Councils lift liveability through public spaces, paths and links, and waste services.",
+  "a": {
+   "q": "Residents in a Darwin suburb say overflowing bins are leaving rubbish in their streets. Which council strategy fits this problem best?",
+   "opts": [
+    "Collect rubbish and recycling more often",
+    "Build a new playground in the local park",
+    "Add a cycling path from homes to the shops",
+    "Open a bigger library in the town centre"
+   ],
+   "why": "The problem is about waste, so collecting rubbish and recycling more often keeps the streets clean. A playground, cycling path or library could make the suburb more liveable in other ways, but none of them deals with the rubbish.",
+   "clue": "Match the problem to the type of council service."
+  },
+  "b": {
+   "d": 3,
+   "q": "People in a small Tasmanian town say they cannot walk safely from their homes to the shops. Which council strategy fits this problem best?",
+   "opts": [
+    "Build a footpath along the main street",
+    "Run a new council train line to the shops",
+    "Add a second recycling bin for each home",
+    "Plant shade trees in the town square"
+   ],
+   "why": "A footpath gives people a safe place to walk, and building footpaths is council work. A train line is tempting, but state governments run most trains, so a council would not run its own line.",
+   "clue": "Think about what a council builds."
+  }
+ }
+}

@@ -1,0 +1,391 @@
+{
+ "id": "mat-rational-irrational-numbers",
+ "title": "Rational and irrational numbers",
+ "brief": "973246a8f2ba",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:56Z write: done",
+  "2026-11-04T09:47:08Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.006,
+  "check": 0.01649,
+  "fix": 0.01754,
+  "recheck": 0.01231
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: \"√10 is not a whole number, so it is irrational\" gives the wrong reason. Many numbers that are not whole are rational, such as 3/4 or 2.6363..., and the card itself says so. The reason should be that 10 is not a perfect square. As written, it supports the wrong option in question b, \"irrational, because it is not a whole number\".",
+ "rejected": {
+  "title": "Rational and irrational numbers",
+  "card": [
+   [
+    "Rational",
+    "a number that can be written as a fraction of two integers, such as 3/4 or 5/1. Whole numbers, negative integers such as −6 and fractions such as −2/3 are all rational."
+   ],
+   [
+    "Irrational",
+    "a number that cannot be written as a fraction of two integers. Examples are π and √2."
+   ],
+   "The decimal of an irrational number never ends and never repeats in a pattern. The decimal of a rational number either ends or repeats, and any decimal that ends or repeats can be written as a fraction.",
+   "For a whole number, its square root is rational only when the number is a perfect square. √49 = 7, which is 7/1, so it is rational. √10 is not a whole number, so it is irrational."
+  ],
+  "remember": "If it can be a fraction of integers, it is rational. If its decimal never ends or repeats, it is irrational.",
+  "a": {
+   "q": "Which of these numbers is irrational?",
+   "opts": [
+    "√7",
+    "√81",
+    "0.25",
+    "−6"
+   ],
+   "why": "7 is a whole number but not a perfect square, so √7 is irrational and its decimal never ends or repeats. √81 = 9 = 9/1, 0.25 = 1/4 and −6 = −6/1 are all fractions of integers, so they are rational.",
+   "clue": "Try to write each number as a fraction of two integers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia says a number is irrational because its decimal has many digits. Her calculator shows 2.636363... with the 63 repeating. What is true?",
+   "opts": [
+    "It is rational, because a repeating decimal is a fraction",
+    "It is irrational, because the decimal is very long",
+    "It is irrational, because it is not a whole number",
+    "It is rational, because it has only two repeating digits"
+   ],
+   "why": "A decimal that repeats in a pattern can be written as a fraction of two integers, so the number is rational. In fact 2.636363... = 29/11. Length does not matter, and neither does how many digits repeat: an irrational decimal must never repeat at all.",
+   "clue": "Does the decimal repeat in a pattern or not?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: \"√10 is not a whole number, so it is irrational\" gives the wrong reason. Many numbers that are not whole are rational, such as 3/4 or 2.6363..., and the card itself says so. The reason should be that 10 is not a perfect square. As written, it supports the wrong option in question b, \"irrational, because it is not a whole number\"."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Rational and irrational numbers",
+     "card": [
+      [
+       "Rational",
+       "a number that can be written as a fraction of two integers, such as 3/4 or 5/1. Whole numbers, negatives and fractions are all rational."
+      ],
+      [
+       "Irrational",
+       "a number that cannot be written as a fraction of two integers. Examples are π and √2."
+      ],
+      "The decimal of an irrational number never ends and never repeats in a pattern. The decimal of a rational number either ends or repeats.",
+      "A square root is rational only when the number is a perfect square. √49 = 7, which is 7/1, so it is rational. √10 is not a whole number and is irrational."
+     ],
+     "remember": "Rational numbers are fractions of integers. Irrational decimals never end and never repeat.",
+     "a": {
+      "q": "Which of these numbers is irrational?",
+      "opts": [
+       "√7",
+       "√81",
+       "0.25",
+       "−6"
+      ],
+      "why": "7 is not a perfect square, so √7 has a decimal that never ends or repeats. √81 = 9, 0.25 = 1/4 and −6 = −6/1 are all fractions of integers.",
+      "clue": "Which one is a square root of a number that is not a perfect square?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia says a number is irrational because its decimal has many digits. Her calculator shows 2.636363... with the 63 repeating. What is true?",
+      "opts": [
+       "It is rational, because a repeating decimal is a fraction",
+       "It is irrational, because the decimal is very long",
+       "It is irrational, because it is not a whole number",
+       "It is rational, because it has only two repeating digits"
+      ],
+      "why": "A decimal that repeats in a pattern can be written as a fraction of two integers, so the number is rational. Length does not matter: an irrational decimal must never repeat.",
+      "clue": "Does the decimal repeat in a pattern or not?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "√7",
+      "also_right": []
+     },
+     "b": {
+      "best": "It is rational, because a repeating decimal is a fraction",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"Whole numbers, negatives and fractions are all rational\" is false as written: negative numbers such as −√2 or −π are irrational. It should say negative integers or negative fractions."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"A square root is rational only when the number is a perfect square\" is false for non-integers: √0.25 = 0.5 and √(4/9) = 2/3 are rational. Question a even uses 0.25 as an option. Limit the rule to whole numbers."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue all but gives the answer away. Only two options are square roots, and the clue points straight to the one that is not a perfect square."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer, but the card overstates two things. It says all negatives are rational, though −√2 is irrational. It says a square root is rational only for perfect squares, though √0.25 = 0.5; that rule should be limited to whole numbers. The clue for question a also nearly gives the answer away."
+    },
+    "flags": [
+     "Card, fact: \"Whole numbers, negatives and fractions are all rational\" is false as written: negative numbers such as −√2 or −π are irrational. It should say negative integers or negative fractions.",
+     "Card, fact: \"A square root is rational only when the number is a perfect square\" is false for non-integers: √0.25 = 0.5 and √(4/9) = 2/3 are rational. Question a even uses 0.25 as an option. Limit the rule to whole numbers.",
+     "Question a, other: The clue all but gives the answer away. Only two options are square roots, and the clue points straight to the one that is not a perfect square."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Rational and irrational numbers",
+     "card": [
+      [
+       "Rational",
+       "a number that can be written as a fraction of two integers, such as 3/4 or 5/1. Whole numbers, negative integers such as −6 and fractions such as −2/3 are all rational."
+      ],
+      [
+       "Irrational",
+       "a number that cannot be written as a fraction of two integers. Examples are π and √2."
+      ],
+      "The decimal of an irrational number never ends and never repeats in a pattern. The decimal of a rational number either ends or repeats, and any decimal that ends or repeats can be written as a fraction.",
+      "For a whole number, its square root is rational only when the number is a perfect square. √49 = 7, which is 7/1, so it is rational. √10 is not a whole number, so it is irrational."
+     ],
+     "remember": "If it can be a fraction of integers, it is rational. If its decimal never ends or repeats, it is irrational.",
+     "a": {
+      "q": "Which of these numbers is irrational?",
+      "opts": [
+       "√7",
+       "√81",
+       "0.25",
+       "−6"
+      ],
+      "why": "7 is a whole number but not a perfect square, so √7 is irrational and its decimal never ends or repeats. √81 = 9 = 9/1, 0.25 = 1/4 and −6 = −6/1 are all fractions of integers, so they are rational.",
+      "clue": "Try to write each number as a fraction of two integers."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia says a number is irrational because its decimal has many digits. Her calculator shows 2.636363... with the 63 repeating. What is true?",
+      "opts": [
+       "It is rational, because a repeating decimal is a fraction",
+       "It is irrational, because the decimal is very long",
+       "It is irrational, because it is not a whole number",
+       "It is rational, because it has only two repeating digits"
+      ],
+      "why": "A decimal that repeats in a pattern can be written as a fraction of two integers, so the number is rational. In fact 2.636363... = 29/11. Length does not matter, and neither does how many digits repeat: an irrational decimal must never repeat at all.",
+      "clue": "Does the decimal repeat in a pattern or not?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "√7",
+       "also_right": []
+      },
+      "b": {
+       "best": "It is rational, because a repeating decimal is a fraction",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "\"√10 is not a whole number, so it is irrational\" gives the wrong reason. Many numbers that are not whole are rational, such as 3/4 or 2.6363..., and the card itself says so. The reason should be that 10 is not a perfect square. As written, it supports the wrong option in question b, \"irrational, because it is not a whole number\"."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The questions and explanations are correct (2.6363... = 29/11). The card's √10 line wrongly suggests that not being a whole number makes a number irrational; it should say 10 is not a perfect square."
+     },
+     "flags": [
+      "Card, wording: \"√10 is not a whole number, so it is irrational\" gives the wrong reason. Many numbers that are not whole are rational, such as 3/4 or 2.6363..., and the card itself says so. The reason should be that 10 is not a perfect square. As written, it supports the wrong option in question b, \"irrational, because it is not a whole number\"."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Rational and irrational numbers",
+    "card": [
+     [
+      "Rational",
+      "a number that can be written as a fraction of two integers, such as 3/4 or 5/1. Whole numbers, negative integers such as −6 and fractions such as −2/3 are all rational."
+     ],
+     [
+      "Irrational",
+      "a number that cannot be written as a fraction of two integers. Examples are π and √2."
+     ],
+     "The decimal of an irrational number never ends and never repeats in a pattern. The decimal of a rational number either ends or repeats, and any decimal that ends or repeats can be written as a fraction.",
+     "For a whole number, its square root is rational only when the number is a perfect square. √49 = 7, which is 7/1, so it is rational. 10 is not a perfect square, so √10 is irrational."
+    ],
+    "remember": "If it can be a fraction of integers, it is rational. If its decimal never ends or repeats, it is irrational.",
+    "a": {
+     "q": "Which number below is irrational?",
+     "opts": [
+      "√7",
+      "√81",
+      "0.25",
+      "−6"
+     ],
+     "why": "7 is not a perfect square, so √7 is irrational and its decimal never ends or repeats. √81 = 9 = 9/1, 0.25 = 1/4 and −6 = −6/1 are all fractions of integers, so they are rational.",
+     "clue": "Try to write each number as a fraction of two integers."
+    },
+    "b": {
+     "d": 3,
+     "q": "Mia works out a number as 2.636363..., with the 63 repeating forever. She says it is irrational because it has so many digits. Which statement is correct?",
+     "opts": [
+      "It is rational, as a repeating decimal is a fraction",
+      "It is irrational, because the decimal is very long",
+      "It is irrational, because it is not a whole number",
+      "It is rational, because it has only two repeating digits"
+     ],
+     "why": "A decimal that repeats in a pattern can be written as a fraction of two integers, so the number is rational. In fact 2.636363... = 29/11. Length does not matter, and neither does how many digits repeat: an irrational decimal does not repeat at all.",
+     "clue": "Does the decimal repeat in a pattern or not?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "√7",
+     "also_right": []
+    },
+    "b": {
+     "best": "It is rational, as a repeating decimal is a fraction",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Rational and irrational numbers",
+  "card": [
+   [
+    "Rational",
+    "a number that can be written as a fraction of two integers, such as 3/4 or 5/1. Whole numbers, negative integers such as −6 and fractions such as −2/3 are all rational."
+   ],
+   [
+    "Irrational",
+    "a number that cannot be written as a fraction of two integers. Examples are π and √2."
+   ],
+   "The decimal of an irrational number never ends and never repeats in a pattern. The decimal of a rational number either ends or repeats, and any decimal that ends or repeats can be written as a fraction.",
+   "For a whole number, its square root is rational only when the number is a perfect square. √49 = 7, which is 7/1, so it is rational. 10 is not a perfect square, so √10 is irrational."
+  ],
+  "remember": "If it can be a fraction of integers, it is rational. If its decimal never ends or repeats, it is irrational.",
+  "a": {
+   "q": "Which number below is irrational?",
+   "opts": [
+    "√7",
+    "√81",
+    "0.25",
+    "−6"
+   ],
+   "why": "7 is not a perfect square, so √7 is irrational and its decimal never ends or repeats. √81 = 9 = 9/1, 0.25 = 1/4 and −6 = −6/1 are all fractions of integers, so they are rational.",
+   "clue": "Try to write each number as a fraction of two integers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works out a number as 2.636363..., with the 63 repeating forever. She says it is irrational because it has so many digits. Which statement is correct?",
+   "opts": [
+    "It is rational, as a repeating decimal is a fraction",
+    "It is irrational, because the decimal is very long",
+    "It is irrational, because it is not a whole number",
+    "It is rational, because it has only two repeating digits"
+   ],
+   "why": "A decimal that repeats in a pattern can be written as a fraction of two integers, so the number is rational. In fact 2.636363... = 29/11. Length does not matter, and neither does how many digits repeat: an irrational decimal does not repeat at all.",
+   "clue": "Does the decimal repeat in a pattern or not?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "√7",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is rational, as a repeating decimal is a fraction",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Rational and irrational numbers",
+  "card": [
+   [
+    "Rational",
+    "a number that can be written as a fraction of two integers, such as 3/4 or 5/1. Whole numbers, negative integers such as −6 and fractions such as −2/3 are all rational."
+   ],
+   [
+    "Irrational",
+    "a number that cannot be written as a fraction of two integers. Examples are π and √2."
+   ],
+   "The decimal of an irrational number never ends and never repeats in a pattern. The decimal of a rational number either ends or repeats, and any decimal that ends or repeats can be written as a fraction.",
+   "For a whole number, its square root is rational only when the number is a perfect square. √49 = 7, which is 7/1, so it is rational. 10 is not a perfect square, so √10 is irrational."
+  ],
+  "remember": "If it can be a fraction of integers, it is rational. If its decimal never ends or repeats, it is irrational.",
+  "a": {
+   "q": "Which number below is irrational?",
+   "opts": [
+    "√7",
+    "√81",
+    "0.25",
+    "−6"
+   ],
+   "why": "7 is not a perfect square, so √7 is irrational and its decimal never ends or repeats. √81 = 9 = 9/1, 0.25 = 1/4 and −6 = −6/1 are all fractions of integers, so they are rational.",
+   "clue": "Try to write each number as a fraction of two integers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works out a number as 2.636363..., with the 63 repeating forever. She says it is irrational because it has so many digits. Which statement is correct?",
+   "opts": [
+    "It is rational, as a repeating decimal is a fraction",
+    "It is irrational, because the decimal is very long",
+    "It is irrational, because it is not a whole number",
+    "It is rational, because it has only two repeating digits"
+   ],
+   "why": "A decimal that repeats in a pattern can be written as a fraction of two integers, so the number is rational. In fact 2.636363... = 29/11. Length does not matter, and neither does how many digits repeat: an irrational decimal does not repeat at all.",
+   "clue": "Does the decimal repeat in a pattern or not?"
+  }
+ },
+ "checked_by": "claude-code"
+}

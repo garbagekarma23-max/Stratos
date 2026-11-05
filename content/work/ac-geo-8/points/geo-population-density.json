@@ -1,0 +1,186 @@
+{
+ "id": "geo-population-density",
+ "title": "Population density",
+ "brief": "157d263de7ce",
+ "shortlist": [
+  [
+   "geo-population-distribution-density",
+   0.315
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:33Z new, match",
+  "2026-11-04T09:36:51Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:01Z write: failed the content check, writing again",
+  "2026-11-04T09:58:26Z write: done",
+  "2026-11-04T10:08:01Z check: flagged",
+  "2026-11-04T10:10:49Z fix: suggested",
+  "2026-11-04T17:58:52Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.01016,
+  "check": 0.00844,
+  "fix": 0.01465
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The only close bank point, geo-population-distribution-density, is written for Year 11 and covers distribution, clustering causes and averaging across regions, which is broader and deeper than the Year 8 point on density and shading maps, and its questions test distribution rather than density.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Population density",
+  "card": [
+   "Population density is the number of people living in each square kilometre of an area. Density = population ÷ area in square kilometres.",
+   "A place with many people in a small area has a high density. A place with few people in a large area has a low density.",
+   "A map can shade each area by its density. Darker shading usually shows a higher density, and a legend explains each shade.",
+   "Density is an average for the whole area. It does not show where people live inside that area."
+  ],
+  "remember": "Density is people divided by area, and shading on a map shows where it is high or low.",
+  "a": {
+   "q": "Town A has 5000 people in 10 square kilometres. Town B has 5000 people in 50 square kilometres. How do their densities compare?",
+   "opts": [
+    "Town A is higher, as its people share a smaller area",
+    "Town B is higher, as its people have a larger area",
+    "They are equal, as both towns have 5000 people",
+    "Town B is higher, as it has more room for people"
+   ],
+   "why": "Town A has 500 people per square kilometre and Town B has 100. The same population in a smaller area gives a higher density. Equal populations do not mean equal densities, because area matters too.",
+   "clue": "Divide each population by its area."
+  },
+  "b": {
+   "d": 3,
+   "q": "A map of Western Australia shades the Perth region dark and the Kimberley region very pale. What does this show?",
+   "opts": [
+    "More people per square kilometre live around Perth",
+    "The Kimberley has a larger total population than Perth",
+    "The Kimberley has more people per square kilometre",
+    "Everyone in the Perth region lives in the same spot"
+   ],
+   "why": "Dark shading usually means a higher density, so Perth has more people per square kilometre. Pale shading shows few people per square kilometre, not a larger total. Density is an average, so the map cannot show exactly where people live inside the Perth region.",
+   "clue": "Check what darker shading usually shows on a density map."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Town A is higher, as its people share a smaller area",
+   "also_right": []
+  },
+  "b": {
+   "best": "More people per square kilometre live around Perth",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question never says the map shows population density. Only the clue mentions a density map. The stem should say 'A population density map of Western Australia…' so students know what the shading measures."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the answers and the explanations are accurate. The one problem is that question b should state that the map is a population density map, instead of leaving that detail to the clue."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question never says the map shows population density. Only the clue mentions a density map. The stem should say 'A population density map of Western Australia…' so students know what the shading measures."
+ ],
+ "proposal": {
+  "title": "Population density",
+  "card": [
+   "Population density is the number of people living in each square kilometre of an area. Density = population ÷ area in square kilometres.",
+   "A place with many people in a small area has a high density. A place with few people in a large area has a low density.",
+   "A map can shade each area by its density. Darker shading usually shows a higher density, and a legend explains each shade.",
+   "Density is an average for the whole area. It does not show where people live inside that area."
+  ],
+  "remember": "Density is people divided by area, and shading on a map shows where it is high or low.",
+  "a": {
+   "q": "Town A has 5000 people in 10 square kilometres. Town B has 5000 people in 50 square kilometres. How do their densities compare?",
+   "opts": [
+    "Town A is higher, as its people share a smaller area",
+    "Town B is higher, as its people have a larger area",
+    "They are equal, as both towns have 5000 people",
+    "Town B is higher, as it has more room for people"
+   ],
+   "why": "Town A has 500 people per square kilometre and Town B has 100. The same population in a smaller area gives a higher density. Equal populations do not mean equal densities, because area matters too.",
+   "clue": "Divide each population by its area."
+  },
+  "b": {
+   "d": 3,
+   "q": "A population density map of Western Australia shades the Perth region dark and the Kimberley region very pale. What does this show?",
+   "opts": [
+    "More people per square kilometre live around Perth",
+    "The Kimberley has a larger total population than Perth",
+    "The Kimberley has more people per square kilometre",
+    "Perth's people are spread evenly across its whole region"
+   ],
+   "why": "Dark shading usually means a higher density, so Perth has more people per square kilometre. Pale shading shows few people per square kilometre, not a larger total. Density is an average, so the map cannot show how people are spread inside the Perth region.",
+   "clue": "Check what darker shading usually shows."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:52Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question never says the map shows population density. Only the clue mentions a density map. The stem should say 'A population density map of Western Australia…' so students know what the shading measures."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question never says the map shows population density. Only the clue mentions a density map. The stem should say 'A population density map of Western Australia…' so students know what the shading measures."
+  ]
+ },
+ "final": {
+  "title": "Population density",
+  "card": [
+   "Population density is the number of people living in each square kilometre of an area. Density = population ÷ area in square kilometres.",
+   "A place with many people in a small area has a high density. A place with few people in a large area has a low density.",
+   "A map can shade each area by its density. Darker shading usually shows a higher density, and a legend explains each shade.",
+   "Density is an average for the whole area. It does not show where people live inside that area."
+  ],
+  "remember": "Density is people divided by area, and shading on a map shows where it is high or low.",
+  "a": {
+   "q": "Town A has 5000 people in 10 square kilometres. Town B has 5000 people in 50 square kilometres. How do their densities compare?",
+   "opts": [
+    "Town A is higher, as its people share a smaller area",
+    "Town B is higher, as its people have a larger area",
+    "They are equal, as both towns have 5000 people",
+    "Town B is higher, as it has more room for people"
+   ],
+   "why": "Town A has 500 people per square kilometre and Town B has 100. The same population in a smaller area gives a higher density. Equal populations do not mean equal densities, because area matters too.",
+   "clue": "Divide each population by its area."
+  },
+  "b": {
+   "d": 3,
+   "q": "A population density map of Western Australia shades the Perth region dark and the Kimberley region very pale. What does this show?",
+   "opts": [
+    "More people per square kilometre live around Perth",
+    "The Kimberley has a larger total population than Perth",
+    "The Kimberley has more people per square kilometre",
+    "Perth's people are spread evenly across its whole region"
+   ],
+   "why": "Dark shading usually means a higher density, so Perth has more people per square kilometre. Pale shading shows few people per square kilometre, not a larger total. Density is an average, so the map cannot show how people are spread inside the Perth region.",
+   "clue": "Check what darker shading usually shows."
+  }
+ },
+ "cleared_by": "auto"
+}

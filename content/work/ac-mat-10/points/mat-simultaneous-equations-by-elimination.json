@@ -1,0 +1,225 @@
+{
+ "id": "mat-simultaneous-equations-by-elimination",
+ "title": "Simultaneous equations by elimination",
+ "brief": "9c10194e652f",
+ "shortlist": [
+  [
+   "mat-simultaneous-equations",
+   0.551
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.529
+  ],
+  [
+   "mat-simultaneous-linear-equations",
+   0.322
+  ],
+  [
+   "mat-parametric-equations",
+   0.295
+  ],
+  [
+   "mat-writing-equations-from-words",
+   0.246
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:03Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00475,
+  "check": 0.01185,
+  "fix": 0.01551,
+  "recheck": 0.01071
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank points teach elimination only by adding or subtracting directly, with no step where one equation is multiplied first so the variables can cancel, which the new point requires, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Simultaneous equations by elimination",
+  "card": [
+   "Simultaneous equations are two equations with the same two unknowns. Elimination adds or subtracts the equations so that one unknown cancels out.",
+   "If the matching terms have the same sign, subtract the equations. If they have opposite signs, add them. If no pair matches, multiply one or both equations first to make a pair match.",
+   "Example: x + y = 11 and x − y = 3. The y terms have opposite signs, so add: 2x = 14, so x = 7.",
+   "Then put x = 7 into x + y = 11 to get y = 4. Check in the other equation: 7 − 4 = 3, which is true."
+  ],
+  "remember": "Make one pair of terms match, add or subtract to cancel it, then solve and substitute back.",
+  "a": {
+   "q": "To solve 3x + y = 14 and x + y = 6 by elimination, which step cancels y?",
+   "opts": [
+    "Subtract the second equation from the first",
+    "Add the two equations together",
+    "Multiply the second equation by 3, then subtract",
+    "Subtract the first equation from the second, then add 6"
+   ],
+   "why": "Both y terms are +y, so they have the same sign and subtracting cancels them, leaving 2x = 8. Adding would give 4x + 2y = 20, which still has y in it.",
+   "clue": "Both y terms have the same sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve 2x + 3y = 12 and 5x − y = 13 by elimination. What is the value of x?",
+   "opts": [
+    "3",
+    "2",
+    "15",
+    "−3"
+   ],
+   "why": "Multiply the second equation by 3 to get 15x − 3y = 39. Add it to the first: 17x = 51, so x = 3. Then y = 2. The value 2 is y, not x.",
+   "clue": "Multiply the second equation by 3 so the y terms are opposites."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Subtract the second equation from the first",
+   "also_right": []
+  },
+  "b": {
+   "best": "3",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'Subtract the first equation from the second, then add 6' begins with a step that does cancel y (it gives −2x = −8). Only the arbitrary 'then add 6' makes it wrong. A student who knows that subtracting in either order works may be confused about why it is wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, worked examples and both answers (a: subtract the second from the first; b: x = 3) are correct. One distractor in question a contains a valid y-cancelling step with an odd 'then add 6' tacked on, which could confuse students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The distractor 'Subtract the first equation from the second, then add 6' begins with a step that does cancel y (it gives −2x = −8). Only the arbitrary 'then add 6' makes it wrong. A student who knows that subtracting in either order works may be confused about why it is wrong."
+ ],
+ "proposal": {
+  "title": "Simultaneous equations by elimination",
+  "card": [
+   "Simultaneous equations are two equations with the same two unknowns. Elimination adds or subtracts the equations so that one unknown cancels out.",
+   "If the matching terms have the same sign, subtract the equations. If they have opposite signs, add them. If no pair matches, multiply one or both equations first to make a pair match.",
+   "Example: x + y = 11 and x − y = 3. The y terms have opposite signs, so add: 2x = 14, so x = 7.",
+   "Then put x = 7 into x + y = 11 to get y = 4. Check in the other equation: 7 − 4 = 3, which is true."
+  ],
+  "remember": "Make one pair of terms match, add or subtract to cancel it, then solve and substitute back.",
+  "a": {
+   "q": "To solve 3x + y = 14 and x + y = 6 by elimination, which step cancels y?",
+   "opts": [
+    "Subtract the second equation from the first",
+    "Add the two equations together",
+    "Multiply the second equation by 3, then subtract",
+    "Multiply the first equation by 3, then add"
+   ],
+   "why": "Both y terms are +y, so they have the same sign and subtracting cancels them, leaving 2x = 8. Adding gives 4x + 2y = 20, which still has y in it. Multiplying the second by 3 and subtracting cancels x, not y.",
+   "clue": "Both y terms have the same sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve 2x + 3y = 12 and 5x − y = 13 by elimination. What is the value of x?",
+   "opts": [
+    "3",
+    "2",
+    "15",
+    "−3"
+   ],
+   "why": "Multiply the second equation by 3 to get 15x − 3y = 39. Add it to the first: 17x = 51, so x = 3. Then y = 2. The value 2 is y, not x.",
+   "clue": "Multiply the second equation by 3 so the y terms are opposites."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Subtract the second equation from the first",
+    "also_right": []
+   },
+   "b": {
+    "best": "3",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: subtracting gives 2x = 8 in (a), and in (b) x = 3, y = 2 satisfies both equations."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'Subtract the first equation from the second, then add 6' begins with a step that does cancel y (it gives −2x = −8). Only the arbitrary 'then add 6' makes it wrong. A student who knows that subtracting in either order works may be confused about why it is wrong."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The distractor 'Subtract the first equation from the second, then add 6' begins with a step that does cancel y (it gives −2x = −8). Only the arbitrary 'then add 6' makes it wrong. A student who knows that subtracting in either order works may be confused about why it is wrong."
+  ]
+ },
+ "final": {
+  "title": "Simultaneous equations by elimination",
+  "card": [
+   "Simultaneous equations are two equations with the same two unknowns. Elimination adds or subtracts the equations so that one unknown cancels out.",
+   "If the matching terms have the same sign, subtract the equations. If they have opposite signs, add them. If no pair matches, multiply one or both equations first to make a pair match.",
+   "Example: x + y = 11 and x − y = 3. The y terms have opposite signs, so add: 2x = 14, so x = 7.",
+   "Then put x = 7 into x + y = 11 to get y = 4. Check in the other equation: 7 − 4 = 3, which is true."
+  ],
+  "remember": "Make one pair of terms match, add or subtract to cancel it, then solve and substitute back.",
+  "a": {
+   "q": "To solve 3x + y = 14 and x + y = 6 by elimination, which step cancels y?",
+   "opts": [
+    "Subtract the second equation from the first",
+    "Add the two equations together",
+    "Multiply the second equation by 3, then subtract",
+    "Multiply the first equation by 3, then add"
+   ],
+   "why": "Both y terms are +y, so they have the same sign and subtracting cancels them, leaving 2x = 8. Adding gives 4x + 2y = 20, which still has y in it. Multiplying the second by 3 and subtracting cancels x, not y.",
+   "clue": "Both y terms have the same sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve 2x + 3y = 12 and 5x − y = 13 by elimination. What is the value of x?",
+   "opts": [
+    "3",
+    "2",
+    "15",
+    "−3"
+   ],
+   "why": "Multiply the second equation by 3 to get 15x − 3y = 39. Add it to the first: 17x = 51, so x = 3. Then y = 2. The value 2 is y, not x.",
+   "clue": "Multiply the second equation by 3 so the y terms are opposites."
+  }
+ },
+ "cleared_by": "recheck"
+}

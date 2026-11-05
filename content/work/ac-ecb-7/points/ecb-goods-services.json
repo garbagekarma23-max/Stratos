@@ -1,0 +1,213 @@
+{
+ "id": "ecb-goods-services",
+ "title": "Goods and services",
+ "brief": "a7a490510d4b",
+ "shortlist": [
+  [
+   "bus-goods-services",
+   0.242
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:24Z new, match",
+  "2026-11-04T09:36:47Z match: Claude Haiku 5.5 may adapt bus-goods-services, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:46:53Z confirm: Claude Opus 5.5 may adapt bus-goods-services, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt bus-goods-services (1 change)",
+  "2026-11-05T06:08:56Z claude-code review: adapting bus-goods-services on the next run",
+  "2026-11-05T06:46:36Z adapt: done",
+  "2026-11-05T06:53:50Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.00546,
+  "adapt": 0.0035,
+  "check": 0.01161
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-goods-services",
+  "changes": [
+   "Replace the Ballarat, Victoria bike shop example in question b with a business in a town in one of the course's jurisdictions, since Victoria is not in the course's listed states."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same goods and services idea at a suitable basic depth, but its question b uses a Victorian place that is not local to this course's listed states.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "bus-goods-services",
+  "changes": [
+   "Move Priya's bike shop from Ballarat, in Victoria, to a town in one of the course's states or territories, such as Townsville or Hobart."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches goods and services simply enough for Year 7, and its questions are fair; only the Victorian town in the example should be changed to a place in the course's own states.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "bus-goods-services",
+  "changes": [
+   "Move Priya's bike shop in question b from Ballarat, in Victoria, to a town in one of the course's states or territories, such as Townsville in Queensland."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches goods and services simply enough for Year 7 and matches the brief. Only its Victorian town should become one in this course's states.",
+   "item": "e3e3c655b79a7d51",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-goods-services",
+    "title": "Goods and services",
+    "brief": "a7a490510d4b",
+    "shortlist": [
+     [
+      "bus-goods-services",
+      0.242
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.0003,
+     "confirm": 0.00546
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "bus-goods-services",
+     "changes": [
+      "Replace the Ballarat, Victoria bike shop example in question b with a business in a town in one of the course's jurisdictions, since Victoria is not in the course's listed states."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same goods and services idea at a suitable basic depth, but its question b uses a Victorian place that is not local to this course's listed states.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "bus-goods-services",
+     "changes": [
+      "Move Priya's bike shop from Ballarat, in Victoria, to a town in one of the course's states or territories, such as Townsville or Hobart."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches goods and services simply enough for Year 7, and its questions are fair; only the Victorian town in the example should be changed to a place in the course's own states.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "3d5364ef443b2a2a"
+  }
+ ],
+ "draft": {
+  "title": "Goods and services",
+  "card": [
+   [
+    "Goods",
+    "physical things a customer can see, touch and own, such as a phone or a loaf of bread. Once bought, the good belongs to the customer."
+   ],
+   [
+    "Services",
+    "actions or work done for a customer, such as a haircut or a music lesson. The customer gets the result but does not take home a physical item."
+   ],
+   "Many businesses sell both. A café sells food, which is a good, and table service, which is a service.",
+   "To tell them apart, ask: does the customer leave owning a physical item, or did someone do work for them? A service can be done on something the customer already owns, such as a car service."
+  ],
+  "remember": "A good is a thing you own. A service is work done for you.",
+  "a": {
+   "q": "Why is a haircut a service and not a good?",
+   "opts": [
+    "It is work done for the customer, not an item they own",
+    "It costs less than the physical items most shops sell",
+    "It is usually sold by a small business and not a big firm",
+    "It is paid for straight after the work has been done"
+   ],
+   "why": "A haircut is work done for the customer, and they do not take home a physical item to own. Price, business size and when it is paid for do not decide whether something is a good or a service.",
+   "clue": "Does the customer walk out owning a new thing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike shop in Townsville, Queensland. She sells new bikes and also tunes up bikes by adjusting the gears and brakes. Which is correct?",
+   "opts": [
+    "The bikes are goods and the tune-ups are a service",
+    "The bikes are a service and the tune-ups are goods",
+    "Both are services, as staff help customers choose",
+    "Both are goods, as tune-ups are done on a bike"
+   ],
+   "why": "A new bike is a physical item the customer owns, so it is a good. A tune-up is work done on a bike the customer already owns, so it is a service. Being done on a physical item does not turn a tune-up into a good.",
+   "clue": "What does the customer own after each sale that they did not own before?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is work done for the customer, not an item they own",
+   "also_right": []
+  },
+  "b": {
+   "best": "The bikes are goods and the tune-ups are a service",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Goods and services",
+  "card": [
+   [
+    "Goods",
+    "physical things a customer can see, touch and own, such as a phone or a loaf of bread. Once bought, the good belongs to the customer."
+   ],
+   [
+    "Services",
+    "actions or work done for a customer, such as a haircut or a music lesson. The customer gets the result but does not take home a physical item."
+   ],
+   "Many businesses sell both. A café sells food, which is a good, and table service, which is a service.",
+   "To tell them apart, ask: does the customer leave owning a physical item, or did someone do work for them? A service can be done on something the customer already owns, such as a car service."
+  ],
+  "remember": "A good is a thing you own. A service is work done for you.",
+  "a": {
+   "q": "Why is a haircut a service and not a good?",
+   "opts": [
+    "It is work done for the customer, not an item they own",
+    "It costs less than the physical items most shops sell",
+    "It is usually sold by a small business and not a big firm",
+    "It is paid for straight after the work has been done"
+   ],
+   "why": "A haircut is work done for the customer, and they do not take home a physical item to own. Price, business size and when it is paid for do not decide whether something is a good or a service.",
+   "clue": "Does the customer walk out owning a new thing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike shop in Townsville, Queensland. She sells new bikes and also tunes up bikes by adjusting the gears and brakes. Which is correct?",
+   "opts": [
+    "The bikes are goods and the tune-ups are a service",
+    "The bikes are a service and the tune-ups are goods",
+    "Both are services, as staff help customers choose",
+    "Both are goods, as tune-ups are done on a bike"
+   ],
+   "why": "A new bike is a physical item the customer owns, so it is a good. A tune-up is work done on a bike the customer already owns, so it is a service. Being done on a physical item does not turn a tune-up into a good.",
+   "clue": "What does the customer own after each sale that they did not own before?"
+  }
+ }
+}

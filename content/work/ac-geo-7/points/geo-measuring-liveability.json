@@ -1,0 +1,202 @@
+{
+ "id": "geo-measuring-liveability",
+ "title": "Measuring liveability",
+ "brief": "9b76f38dadf8",
+ "shortlist": [
+  [
+   "geo-liveability",
+   0.252
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:00Z write: done",
+  "2026-11-04T09:58:25Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-04T17:58:51Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00476,
+  "check": 0.01159,
+  "fix": 0.01438
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point defines liveability across several measures at a Year 12 depth, but it does not teach the distinction between objective and subjective measures that this Year 7 point is about.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Measuring liveability",
+  "card": [
+   "Geographers can measure how liveable a place is in two ways. Both give useful information.",
+   [
+    "Objective measure",
+    "counts or records facts that can be checked, such as the number of hospitals, the length of bike paths or the average travel time to work."
+   ],
+   [
+    "Subjective measure",
+    "asks people how they feel about a place, such as in a survey on how safe or happy they feel. It is based on opinion."
+   ],
+   "People have different needs and views, so a place can score well on one subjective measure and poorly on another. Counted facts stay the same no matter who checks them."
+  ],
+  "remember": "Objective measures count facts. Subjective measures record opinions, which differ from person to person.",
+  "a": {
+   "q": "Which of these is a subjective measure of liveability?",
+   "opts": [
+    "A survey asking residents how safe they feel at night",
+    "The number of libraries in a town",
+    "The number of train stations in a suburb",
+    "The average length of a trip to the nearest hospital"
+   ],
+   "why": "How safe people feel is an opinion, so it is subjective and can differ between residents. The other three are counts or recorded facts that anyone could check, so they are objective.",
+   "clue": "Which one depends on what people feel, not on a count?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Tasmania counts 12 parks in a town. A survey finds that teenagers rate the town's things to do lower than retirees do. What do these two results show?",
+   "opts": [
+    "The count is objective, and the survey is subjective",
+    "Both results are objective, because both use numbers",
+    "The count is subjective, and the survey is objective",
+    "Both results are subjective, because people use the parks"
+   ],
+   "why": "Counting parks records a fact that can be checked, so it is objective. The survey records opinions, and the opinions differ between groups, which is why it is subjective. A survey can produce numbers, but it is still subjective because it measures feelings.",
+   "clue": "Does the result record a checkable fact or a feeling?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A survey asking residents how safe they feel at night",
+   "also_right": []
+  },
+  "b": {
+   "best": "The count is objective, and the survey is subjective",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The last bullet says that because people have different views, 'a place can score well on one subjective measure and poorly on another'. This muddles the idea. The point is that different people can rate the same place differently on the same subjective measure, as the remember line and question b show. A clearer line would be: 'so different people can rate the same place differently'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and each has one clear answer. One card line is muddled: it says a place can score differently on different subjective measures, when the idea is that different people rate the same place differently."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The last bullet says that because people have different views, 'a place can score well on one subjective measure and poorly on another'. This muddles the idea. The point is that different people can rate the same place differently on the same subjective measure, as the remember line and question b show. A clearer line would be: 'so different people can rate the same place differently'."
+ ],
+ "proposal": {
+  "title": "Measuring liveability",
+  "card": [
+   "Geographers can measure how liveable a place is in two ways. Both give useful information.",
+   [
+    "Objective measure",
+    "counts or records facts that can be checked, such as the number of hospitals, the length of bike paths or the average travel time to work."
+   ],
+   [
+    "Subjective measure",
+    "asks people how they feel about a place, such as in a survey on how safe or happy they feel. It is based on opinion, even when the results are given as numbers."
+   ],
+   "People have different needs and views, so different people can rate the same place differently. Counted facts stay the same no matter who checks them."
+  ],
+  "remember": "Objective measures count facts. Subjective measures record opinions, which differ from person to person.",
+  "a": {
+   "q": "Which of these is a subjective measure of liveability?",
+   "opts": [
+    "A survey asking residents how safe they feel at night",
+    "The number of libraries and public pools in each town",
+    "The number of trains that stop at a station each day",
+    "The average length of a trip to the nearest hospital"
+   ],
+   "why": "How safe people feel is an opinion, so it is subjective and can differ between residents. The other three are counts or recorded facts that anyone could check, so they are objective.",
+   "clue": "Which one depends on what people feel, not on a count?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Tasmania counts 12 parks in a town. A survey finds that teenagers rate the town's things to do lower than retirees do. What do these two results show?",
+   "opts": [
+    "The count is objective, and the survey is subjective",
+    "Both results are objective, because both use numbers",
+    "The count is subjective, and the survey is objective",
+    "Both results are subjective, because people use the parks"
+   ],
+   "why": "Counting parks records a fact that can be checked, so it is objective. The survey records opinions, and the opinions differ between groups, which is why it is subjective. A survey can produce numbers, but it is still subjective because it measures feelings.",
+   "clue": "Does the result record a checkable fact or a feeling?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:51Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The last bullet says that because people have different views, 'a place can score well on one subjective measure and poorly on another'. This muddles the idea. The point is that different people can rate the same place differently on the same subjective measure, as the remember line and question b show. A clearer line would be: 'so different people can rate the same place differently'."
+   }
+  ],
+  "flags": [
+   "Card, wording: The last bullet says that because people have different views, 'a place can score well on one subjective measure and poorly on another'. This muddles the idea. The point is that different people can rate the same place differently on the same subjective measure, as the remember line and question b show. A clearer line would be: 'so different people can rate the same place differently'."
+  ]
+ },
+ "final": {
+  "title": "Measuring liveability",
+  "card": [
+   "Geographers can measure how liveable a place is in two ways. Both give useful information.",
+   [
+    "Objective measure",
+    "counts or records facts that can be checked, such as the number of hospitals, the length of bike paths or the average travel time to work."
+   ],
+   [
+    "Subjective measure",
+    "asks people how they feel about a place, such as in a survey on how safe or happy they feel. It is based on opinion, even when the results are given as numbers."
+   ],
+   "People have different needs and views, so different people can rate the same place differently. Counted facts stay the same no matter who checks them."
+  ],
+  "remember": "Objective measures count facts. Subjective measures record opinions, which differ from person to person.",
+  "a": {
+   "q": "Which of these is a subjective measure of liveability?",
+   "opts": [
+    "A survey asking residents how safe they feel at night",
+    "The number of libraries and public pools in each town",
+    "The number of trains that stop at a station each day",
+    "The average length of a trip to the nearest hospital"
+   ],
+   "why": "How safe people feel is an opinion, so it is subjective and can differ between residents. The other three are counts or recorded facts that anyone could check, so they are objective.",
+   "clue": "Which one depends on what people feel, not on a count?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Tasmania counts 12 parks in a town. A survey finds that teenagers rate the town's things to do lower than retirees do. What do these two results show?",
+   "opts": [
+    "The count is objective, and the survey is subjective",
+    "Both results are objective, because both use numbers",
+    "The count is subjective, and the survey is objective",
+    "Both results are subjective, because people use the parks"
+   ],
+   "why": "Counting parks records a fact that can be checked, so it is objective. The survey records opinions, and the opinions differ between groups, which is why it is subjective. A survey can produce numbers, but it is still subjective because it measures feelings.",
+   "clue": "Does the result record a checkable fact or a feeling?"
+  }
+ },
+ "cleared_by": "auto"
+}

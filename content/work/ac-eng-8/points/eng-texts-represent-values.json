@@ -1,0 +1,345 @@
+{
+ "id": "eng-texts-represent-values",
+ "title": "Texts represent values",
+ "brief": "5e39c05d2c21",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:29Z new, write",
+  "2026-11-04T09:36:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:46:58Z write: done",
+  "2026-11-04T09:58:23Z check: flagged",
+  "2026-11-04T10:07:59Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00448,
+  "check": 0.00941,
+  "fix": 0.01594,
+  "recheck": 0.00932
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The scenario is a little illogical: Leo hides his teammates' mistake to protect them, yet 'the whole team', including the teammates he protected, stops trusting him. Saying who loses trust in him (for example the coach or the rest of the team) would make the story's consequence clearer.",
+ "rejected": {
+  "title": "Texts represent values",
+  "card": [
+   "Values are what a person or group believes is right, fair or important. Examples include honesty, loyalty, fairness and care for others.",
+   "A literary text can show values through what characters do and say, and through what the story rewards or punishes.",
+   "The ideas and points of view in a text can also show the values of a character, a group or the author. These may differ from each other.",
+   "To find a value, ask what the text treats as good or bad, and what evidence in the text supports your reading."
+  ],
+  "remember": "Look at what a text rewards, punishes and treats as important to find its values.",
+  "a": {
+   "q": "In a story, Priya returns a lost wallet and is thanked by the whole town. Which value does the story show as important?",
+   "opts": [
+    "Honesty",
+    "Wealth",
+    "Popularity",
+    "Luck"
+   ],
+   "why": "Priya is rewarded for doing the right thing with something that is not hers, which shows the story treats honesty as important. Popularity is tempting because the town thanks her, but that is the result of her act, not the value being shown.",
+   "clue": "What does Priya do with the wallet, and how does the story treat it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a short story, Leo hides a mistake his teammates made, to protect them. When the truth comes out, the whole team stops trusting him. What value does the story most likely suggest?",
+   "opts": [
+    "Honesty matters more than covering for friends",
+    "Covering for friends matters more than honesty",
+    "Protecting the team matters more than the truth",
+    "Hiding mistakes is the best way to keep trust"
+   ],
+   "why": "The story punishes Leo's choice to hide the mistake: he loses the team's trust. That suggests the story treats honesty as more important. Putting loyalty first is tempting because Leo acts to protect his friends, but the ending shows the story does not reward that choice.",
+   "clue": "Look at what happens to Leo at the end, not just what he does."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The scenario is a little illogical: Leo hides his teammates' mistake to protect them, yet 'the whole team', including the teammates he protected, stops trusting him. Saying who loses trust in him (for example the coach or the rest of the team) would make the story's consequence clearer."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Texts represent values",
+     "card": [
+      "Values are what a person or group believes is right, fair or important. Examples include honesty, loyalty, fairness and care for others.",
+      "A literary text can show values through what characters do and say, and through what the story rewards or punishes.",
+      "The ideas and points of view in a text can also show the values of a character, a group or the author. These may differ from each other.",
+      "To find a value, ask what the text treats as good or bad, and what evidence in the text supports your reading."
+     ],
+     "remember": "Look at what a text rewards, punishes and treats as important to find its values.",
+     "a": {
+      "q": "In a story, Priya returns a lost wallet and is thanked by the whole town. Which value does the story show as important?",
+      "opts": [
+       "Honesty",
+       "Wealth",
+       "Popularity",
+       "Luck"
+      ],
+      "why": "Priya is rewarded for doing the right thing with something that is not hers, which shows the story treats honesty as important. Popularity is tempting because the town thanks her, but that is the result of her act, not the value being shown.",
+      "clue": "What does Priya do with the wallet, and how does the story treat it?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In a short story, Leo hides a team's mistake to protect his friends. The story ends with the team losing trust in him. What value does the story most likely suggest?",
+      "opts": [
+       "Honesty matters more than covering for friends",
+       "Friends should always protect each other",
+       "Winning matters more than anything else",
+       "Mistakes should never be talked about"
+      ],
+      "why": "The story punishes Leo's hiding of the mistake with lost trust, which suggests honesty is treated as more important. The loyalty option is tempting because Leo acts to protect friends, but the ending shows the story does not reward that choice.",
+      "clue": "Look at what happens to Leo at the end, not just what he does."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Honesty",
+      "also_right": []
+     },
+     "b": {
+      "best": "Honesty matters more than covering for friends",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Every wrong option uses an absolute ('anything else', 'always', 'never'), while the right option is the only one without one. A student who has learned to avoid absolutes could pick it without understanding how the ending shows values. The card does not use these absolutes."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, remember line and question a are accurate and on-point. In question b, only the right option lacks an absolute word ('always', 'never', 'anything else'), which gives the answer away."
+    },
+    "flags": [
+     "Question b, wording: Every wrong option uses an absolute ('anything else', 'always', 'never'), while the right option is the only one without one. A student who has learned to avoid absolutes could pick it without understanding how the ending shows values. The card does not use these absolutes."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Texts represent values",
+     "card": [
+      "Values are what a person or group believes is right, fair or important. Examples include honesty, loyalty, fairness and care for others.",
+      "A literary text can show values through what characters do and say, and through what the story rewards or punishes.",
+      "The ideas and points of view in a text can also show the values of a character, a group or the author. These may differ from each other.",
+      "To find a value, ask what the text treats as good or bad, and what evidence in the text supports your reading."
+     ],
+     "remember": "Look at what a text rewards, punishes and treats as important to find its values.",
+     "a": {
+      "q": "In a story, Priya returns a lost wallet and is thanked by the whole town. Which value does the story show as important?",
+      "opts": [
+       "Honesty",
+       "Wealth",
+       "Popularity",
+       "Luck"
+      ],
+      "why": "Priya is rewarded for doing the right thing with something that is not hers, which shows the story treats honesty as important. Popularity is tempting because the town thanks her, but that is the result of her act, not the value being shown.",
+      "clue": "What does Priya do with the wallet, and how does the story treat it?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In a short story, Leo hides a mistake his teammates made, to protect them. When the truth comes out, the whole team stops trusting him. What value does the story most likely suggest?",
+      "opts": [
+       "Honesty matters more than covering for friends",
+       "Covering for friends matters more than honesty",
+       "Protecting the team matters more than the truth",
+       "Hiding mistakes is the best way to keep trust"
+      ],
+      "why": "The story punishes Leo's choice to hide the mistake: he loses the team's trust. That suggests the story treats honesty as more important. Putting loyalty first is tempting because Leo acts to protect his friends, but the ending shows the story does not reward that choice.",
+      "clue": "Look at what happens to Leo at the end, not just what he does."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Honesty",
+       "also_right": []
+      },
+      "b": {
+       "best": "Honesty matters more than covering for friends",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The scenario is a little illogical: Leo hides his teammates' mistake to protect them, yet 'the whole team', including the teammates he protected, stops trusting him. Saying who loses trust in him (for example the coach or the rest of the team) would make the story's consequence clearer."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer, and the card, remember line and explanations agree. One small issue: in question b it is unclear why the teammates Leo protected would stop trusting him, so the scenario could be tightened."
+     },
+     "flags": [
+      "Question b, wording: The scenario is a little illogical: Leo hides his teammates' mistake to protect them, yet 'the whole team', including the teammates he protected, stops trusting him. Saying who loses trust in him (for example the coach or the rest of the team) would make the story's consequence clearer."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Texts represent values",
+    "card": [
+     "Values are what a person or group believes is right, fair or important. Examples include honesty, loyalty, fairness and care for others.",
+     "A literary text can show values through what characters do and say, and through what the story rewards or punishes.",
+     "The ideas and points of view in a text can also show the values of a character, a group or the author. These may differ from each other.",
+     "To find a value, ask what the text treats as good or bad, and what evidence in the text supports your reading."
+    ],
+    "remember": "Look at what a text rewards, punishes and treats as important to find its values.",
+    "a": {
+     "q": "In a story, Priya finds a lost wallet and hands it back to its owner, and the whole town thanks her. Which value does the story present as important?",
+     "opts": [
+      "Honesty",
+      "Wealth",
+      "Popularity",
+      "Luck"
+     ],
+     "why": "Priya is rewarded for doing the right thing with something that is not hers, which shows the story treats honesty as important. Popularity is tempting because the town thanks her, but that is the result of her act, not the value being shown.",
+     "clue": "What does Priya do, and how does the story respond to it?"
+    },
+    "b": {
+     "d": 3,
+     "q": "In a short story, Leo secretly covers up a mistake his teammates made, to protect them. When the coach learns the truth, she stops trusting Leo and makes someone else captain. What value does the story most likely suggest?",
+     "opts": [
+      "Honesty matters more than covering for friends",
+      "Covering for friends matters more than honesty",
+      "Protecting the team matters more than the truth",
+      "Hiding mistakes is the best way to keep trust"
+     ],
+     "why": "The story punishes Leo's choice to hide the mistake: the coach stops trusting him and he loses the captaincy. That suggests the story treats honesty as more important. Putting loyalty first is tempting because Leo acts to protect his friends, but the ending shows the story does not reward that choice.",
+     "clue": "Look at what happens to Leo at the end, not just at what he does."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Honesty",
+     "also_right": []
+    },
+    "b": {
+     "best": "Honesty matters more than covering for friends",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Texts represent values",
+  "card": [
+   "Values are what a person or group believes is right, fair or important. Examples include honesty, loyalty, fairness and care for others.",
+   "A literary text can show values through what characters do and say, and through what the story rewards or punishes.",
+   "The ideas and points of view in a text can also show the values of a character, a group or the author. These may differ from each other.",
+   "To find a value, ask what the text treats as good or bad, and what evidence in the text supports your reading."
+  ],
+  "remember": "Look at what a text rewards, punishes and treats as important to find its values.",
+  "a": {
+   "q": "In a story, Priya finds a lost wallet and hands it back to its owner, and the whole town thanks her. Which value does the story present as important?",
+   "opts": [
+    "Honesty",
+    "Wealth",
+    "Popularity",
+    "Luck"
+   ],
+   "why": "Priya is rewarded for doing the right thing with something that is not hers, which shows the story treats honesty as important. Popularity is tempting because the town thanks her, but that is the result of her act, not the value being shown.",
+   "clue": "What does Priya do, and how does the story respond to it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a short story, Leo secretly covers up a mistake his teammates made, to protect them. When the coach learns the truth, she stops trusting Leo and makes someone else captain. What value does the story most likely suggest?",
+   "opts": [
+    "Honesty matters more than covering for friends",
+    "Covering for friends matters more than honesty",
+    "Protecting the team matters more than the truth",
+    "Hiding mistakes is the best way to keep trust"
+   ],
+   "why": "The story punishes Leo's choice to hide the mistake: the coach stops trusting him and he loses the captaincy. That suggests the story treats honesty as more important. Putting loyalty first is tempting because Leo acts to protect his friends, but the ending shows the story does not reward that choice.",
+   "clue": "Look at what happens to Leo at the end, not just at what he does."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Honesty",
+   "also_right": []
+  },
+  "b": {
+   "best": "Honesty matters more than covering for friends",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Texts represent values",
+  "card": [
+   "Values are what a person or group believes is right, fair or important. Examples include honesty, loyalty, fairness and care for others.",
+   "A literary text can show values through what characters do and say, and through what the story rewards or punishes.",
+   "The ideas and points of view in a text can also show the values of a character, a group or the author. These may differ from each other.",
+   "To find a value, ask what the text treats as good or bad, and what evidence in the text supports your reading."
+  ],
+  "remember": "Look at what a text rewards, punishes and treats as important to find its values.",
+  "a": {
+   "q": "In a story, Priya finds a lost wallet and hands it back to its owner, and the whole town thanks her. Which value does the story present as important?",
+   "opts": [
+    "Honesty",
+    "Wealth",
+    "Popularity",
+    "Luck"
+   ],
+   "why": "Priya is rewarded for doing the right thing with something that is not hers, which shows the story treats honesty as important. Popularity is tempting because the town thanks her, but that is the result of her act, not the value being shown.",
+   "clue": "What does Priya do, and how does the story respond to it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a short story, Leo secretly covers up a mistake his teammates made, to protect them. When the coach learns the truth, she stops trusting Leo and makes someone else captain. What value does the story most likely suggest?",
+   "opts": [
+    "Honesty matters more than covering for friends",
+    "Covering for friends matters more than honesty",
+    "Protecting the team matters more than the truth",
+    "Hiding mistakes is the best way to keep trust"
+   ],
+   "why": "The story punishes Leo's choice to hide the mistake: the coach stops trusting him and he loses the captaincy. That suggests the story treats honesty as more important. Putting loyalty first is tempting because Leo acts to protect his friends, but the ending shows the story does not reward that choice.",
+   "clue": "Look at what happens to Leo at the end, not just at what he does."
+  }
+ },
+ "checked_by": "claude-code"
+}

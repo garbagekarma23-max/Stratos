@@ -1,0 +1,227 @@
+{
+ "id": "mat-sampling-methods-bias",
+ "title": "Sampling methods and bias",
+ "brief": "97dea1eae6d3",
+ "shortlist": [
+  [
+   "mat-sampling-methods",
+   0.219
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 may adapt mat-sampling-methods, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:10Z confirm: Claude Opus 5.5 may adapt mat-sampling-methods, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt mat-sampling-methods (1 change)",
+  "2026-11-05T06:08:56Z claude-code review: adapting mat-sampling-methods on the next run",
+  "2026-11-05T06:46:38Z adapt: done",
+  "2026-11-05T06:53:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.00635,
+  "adapt": 0.00233,
+  "check": 0.00959
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-sampling-methods",
+  "changes": [
+   "Replace the Wagga Wagga, NSW council example in question b with a council or place in one of the listed Australian states or territories, so the example is local to the course.",
+   "Explain the systematic sampling step \"every kth member\" in plain words, or with the worked example, so it suits Year 9 notation."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same sampling methods and bias idea at a suitable depth, but its NSW example and some notation need small local changes for this Year 9 course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-sampling-methods",
+  "changes": [
+   "Replace the Wagga Wagga council in Question b with a town in one of the course's states or territories, such as Toowoomba in Queensland, because Wagga Wagga is in New South Wales and the course does not cover New South Wales."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches random, systematic and stratified sampling and the bias from an online poll at a depth that suits Year 9, but its bus timetable question uses a New South Wales town, which is not local to this course.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-sampling-methods",
+  "changes": [
+   "Replace the Wagga Wagga council in question b with a town in one of the course's states or territories, such as Toowoomba in Queensland."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches random, systematic, stratified and self-selected samples and the bias from an online poll, exactly at this depth. Only its New South Wales town should become one in this course's states.",
+   "item": "78614912b900243e",
+   "result": "decided",
+   "saved": {
+    "id": "mat-sampling-methods-bias",
+    "title": "Sampling methods and bias",
+    "brief": "97dea1eae6d3",
+    "shortlist": [
+     [
+      "mat-sampling-methods",
+      0.219
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00022,
+     "confirm": 0.00635
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-sampling-methods",
+     "changes": [
+      "Replace the Wagga Wagga, NSW council example in question b with a council or place in one of the listed Australian states or territories, so the example is local to the course.",
+      "Explain the systematic sampling step \"every kth member\" in plain words, or with the worked example, so it suits Year 9 notation."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same sampling methods and bias idea at a suitable depth, but its NSW example and some notation need small local changes for this Year 9 course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-sampling-methods",
+     "changes": [
+      "Replace the Wagga Wagga council in Question b with a town in one of the course's states or territories, such as Toowoomba in Queensland, because Wagga Wagga is in New South Wales and the course does not cover New South Wales."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches random, systematic and stratified sampling and the bias from an online poll at a depth that suits Year 9, but its bus timetable question uses a New South Wales town, which is not local to this course.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "8fe0fe6229adb070"
+  }
+ ],
+ "draft": {
+  "title": "Sampling methods",
+  "card": [
+   [
+    "Random",
+    "every member of the population, the whole group being studied, has an equal chance of being in the sample, such as drawing names from a hat."
+   ],
+   [
+    "Systematic",
+    "choose every kth member from a list, after a random start. For 500 students and a sample of 50, take every 10th name."
+   ],
+   [
+    "Stratified",
+    "split the population into groups, such as year groups, then take a random sample from each group in proportion to its size."
+   ],
+   [
+    "Self-selected",
+    "people choose to take part, such as in an online poll. People with strong views are more likely to reply, so the sample can be biased: its results may not match the population."
+   ]
+  ],
+  "remember": "A fair sample gives every member an equal chance of being chosen. A sample whose members choose themselves can be biased.",
+  "a": {
+   "q": "A school keeps a numbered list of its 500 students. The principal picks a random start, then surveys every 10th student on the list. Which sampling method is this?",
+   "opts": [
+    "Systematic",
+    "Stratified",
+    "Self-selected",
+    "Random"
+   ],
+   "why": "Choosing every kth name from a list after a random start is systematic sampling. It is not stratified, because the students are not split into groups first.",
+   "clue": "Look at how the students are picked from the list."
+  },
+  "b": {
+   "d": 3,
+   "q": "The council in Toowoomba wants to know if residents like a new bus timetable. It posts a survey link on its Facebook page and uses the first 200 replies. Why might the results be biased?",
+   "opts": [
+    "Residents chose to reply, so they may not match the town",
+    "Residents were split into groups, so some may be left out",
+    "Every resident had an equal chance, so some may be missed",
+    "Every 10th reply was used, so some groups may be skipped"
+   ],
+   "why": "This is a self-selected sample. Only residents who see the page and choose to reply take part, so their views may not match the whole town. The council did not split residents into groups or take every 10th reply, and not every resident had an equal chance of being chosen.",
+   "clue": "Who decided which residents took part?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Systematic",
+   "also_right": []
+  },
+  "b": {
+   "best": "Residents chose to reply, so they may not match the town",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sampling methods",
+  "card": [
+   [
+    "Random",
+    "every member of the population, the whole group being studied, has an equal chance of being in the sample, such as drawing names from a hat."
+   ],
+   [
+    "Systematic",
+    "choose every kth member from a list, after a random start. For 500 students and a sample of 50, take every 10th name."
+   ],
+   [
+    "Stratified",
+    "split the population into groups, such as year groups, then take a random sample from each group in proportion to its size."
+   ],
+   [
+    "Self-selected",
+    "people choose to take part, such as in an online poll. People with strong views are more likely to reply, so the sample can be biased: its results may not match the population."
+   ]
+  ],
+  "remember": "A fair sample gives every member an equal chance of being chosen. A sample whose members choose themselves can be biased.",
+  "a": {
+   "q": "A school keeps a numbered list of its 500 students. The principal picks a random start, then surveys every 10th student on the list. Which sampling method is this?",
+   "opts": [
+    "Systematic",
+    "Stratified",
+    "Self-selected",
+    "Random"
+   ],
+   "why": "Choosing every kth name from a list after a random start is systematic sampling. It is not stratified, because the students are not split into groups first.",
+   "clue": "Look at how the students are picked from the list."
+  },
+  "b": {
+   "d": 3,
+   "q": "The council in Toowoomba wants to know if residents like a new bus timetable. It posts a survey link on its Facebook page and uses the first 200 replies. Why might the results be biased?",
+   "opts": [
+    "Residents chose to reply, so they may not match the town",
+    "Residents were split into groups, so some may be left out",
+    "Every resident had an equal chance, so some may be missed",
+    "Every 10th reply was used, so some groups may be skipped"
+   ],
+   "why": "This is a self-selected sample. Only residents who see the page and choose to reply take part, so their views may not match the whole town. The council did not split residents into groups or take every 10th reply, and not every resident had an equal chance of being chosen.",
+   "clue": "Who decided which residents took part?"
+  }
+ }
+}

@@ -1,0 +1,429 @@
+{
+ "id": "mat-choosing-linear-quadratic-or",
+ "title": "Choosing a linear, quadratic or exponential model",
+ "brief": "7c8bb05db16a",
+ "shortlist": [
+  [
+   "mat-exponential-models-2",
+   0.346
+  ],
+  [
+   "mat-linear-models-context",
+   0.332
+  ],
+  [
+   "mat-linear-models",
+   0.322
+  ],
+  [
+   "mat-exponential-models",
+   0.248
+  ],
+  [
+   "mat-modelling-with-functions",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00695,
+  "check": 0.01539,
+  "fix": 0.01565,
+  "recheck": 0.01352
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-modelling-with-functions, covers choosing a model but is broader, adding trigonometric models and choosing from described situations rather than from equal differences or equal ratios in data, and it is pitched at Year 12 rather than Year 10, so it would need more than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card presents 'rise then fall, or fall then rise' as what makes data quadratic. A quadratic table need not show a turning point within its x values (e.g. 1, 4, 9, 16), and many non-quadratic patterns also rise then fall. The card should say a turn 'suggests' a quadratic, as the chapter point does, rather than define it that way.",
+ "rejected": {
+  "title": "Choosing a linear, quadratic or exponential model",
+  "card": [
+   [
+    "Linear",
+    "the difference between each y value is equal when x goes up by 1. Example: 4, 7, 10, 13 adds 3 each step."
+   ],
+   [
+    "Exponential",
+    "the ratio between each y value is equal when x goes up by 1. Example: 3, 6, 12, 24 multiplies by 2 each step."
+   ],
+   [
+    "Quadratic",
+    "the values rise then fall, or fall then rise, making a curve with one turning point. Example: 2, 5, 6, 5, 2."
+   ],
+   "To choose a model, check the differences first, then the ratios, then look for a turn in the values."
+  ],
+  "remember": "Equal differences: linear. Equal ratios: exponential. Rise then fall: quadratic.",
+  "a": {
+   "q": "A table shows y values 5, 10, 20, 40 as x goes 0, 1, 2, 3. Which model fits best?",
+   "opts": [
+    "Exponential, as each value doubles",
+    "Linear, as each value rises by a similar amount",
+    "Quadratic, as the values keep rising",
+    "Linear, as the values keep rising"
+   ],
+   "why": "Each value is 2 times the one before, so the ratio is equal and the model is exponential. The differences are 5, 10, 20, which are not equal, so it is not linear.",
+   "clue": "Divide each value by the one before it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A ball's height in metres at seconds 0 to 4 is 2, 8, 10, 8, 2. Which model fits, and why?",
+   "opts": [
+    "Quadratic, as the heights rise then fall",
+    "Linear, as the differences are all the same size",
+    "Exponential, as the heights change every second",
+    "Exponential, as the heights repeat in pairs"
+   ],
+   "why": "The heights rise to 10 then fall, which suggests a quadratic with one turning point. The differences are 6, 2, −2, −6, so they are not equal and it is not linear, and the ratios are not equal either.",
+   "clue": "Look at what the heights do over time."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card presents 'rise then fall, or fall then rise' as what makes data quadratic. A quadratic table need not show a turning point within its x values (e.g. 1, 4, 9, 16), and many non-quadratic patterns also rise then fall. The card should say a turn 'suggests' a quadratic, as the chapter point does, rather than define it that way."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Choosing a linear, quadratic or exponential model",
+     "card": [
+      [
+       "Linear",
+       "the difference between each y value is equal when x goes up by 1. Example: 4, 7, 10, 13 adds 3 each step."
+      ],
+      [
+       "Exponential",
+       "the ratio between each y value is equal when x goes up by 1. Example: 3, 6, 12, 24 multiplies by 2 each step."
+      ],
+      [
+       "Quadratic",
+       "the values rise then fall, or fall then rise, making a curve with one turning point. Example: 2, 5, 6, 5, 2."
+      ],
+      "To choose a model, check the differences first, then the ratios, then look for a turn in the values."
+     ],
+     "remember": "Equal differences: linear. Equal ratios: exponential. Rise then fall: quadratic.",
+     "a": {
+      "q": "A table shows y values 5, 10, 20, 40 as x goes 0, 1, 2, 3. Which model fits best?",
+      "opts": [
+       "Exponential, as each value doubles",
+       "Linear, as each value rises by a similar amount",
+       "Quadratic, as the values keep rising",
+       "Linear, as the values keep rising"
+      ],
+      "why": "Each value is 2 times the one before, so the ratio is equal and the model is exponential. The differences are 5, 10, 20, which are not equal, so it is not linear.",
+      "clue": "Divide each value by the one before it."
+     },
+     "b": {
+      "d": 3,
+      "q": "A ball's height in metres at seconds 0 to 4 is 1, 8, 11, 8, 1. Which model fits, and why?",
+      "opts": [
+       "Quadratic, as the heights rise then fall",
+       "Linear, as the differences are all the same size",
+       "Exponential, as the heights change every second",
+       "Exponential, as the heights repeat in pairs"
+      ],
+      "why": "The heights rise to 11 then fall, which suggests a quadratic. The differences are 7, 3, −3, −7, so they are not equal, and the ratios are not equal either.",
+      "clue": "Look at what the heights do over time."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Exponential, as each value doubles",
+      "also_right": []
+     },
+     "b": {
+      "best": "Quadratic, as the heights rise then fall",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The heights 1, 8, 11, 8, 1 are not exactly quadratic. The first differences are 7, 3, −3, −7, so the second differences are −4, −6, −4, not constant. A true quadratic with a peak of 11 and values of 8 one second either side would give −1 at seconds 0 and 4, not 1. Use data such as 2, 8, 10, 8, 2, which has constant second differences of −4."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer. However, the ball-height data in question b is not exactly quadratic (its second differences are not constant), so it should be changed to genuinely quadratic values such as 2, 8, 10, 8, 2."
+    },
+    "flags": [
+     "Question b, fact: The heights 1, 8, 11, 8, 1 are not exactly quadratic. The first differences are 7, 3, −3, −7, so the second differences are −4, −6, −4, not constant. A true quadratic with a peak of 11 and values of 8 one second either side would give −1 at seconds 0 and 4, not 1. Use data such as 2, 8, 10, 8, 2, which has constant second differences of −4."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Choosing a linear, quadratic or exponential model",
+     "card": [
+      [
+       "Linear",
+       "the difference between each y value is equal when x goes up by 1. Example: 4, 7, 10, 13 adds 3 each step."
+      ],
+      [
+       "Exponential",
+       "the ratio between each y value is equal when x goes up by 1. Example: 3, 6, 12, 24 multiplies by 2 each step."
+      ],
+      [
+       "Quadratic",
+       "the values rise then fall, or fall then rise, making a curve with one turning point. Example: 2, 5, 6, 5, 2."
+      ],
+      "To choose a model, check the differences first, then the ratios, then look for a turn in the values."
+     ],
+     "remember": "Equal differences: linear. Equal ratios: exponential. Rise then fall: quadratic.",
+     "a": {
+      "q": "A table shows y values 5, 10, 20, 40 as x goes 0, 1, 2, 3. Which model fits best?",
+      "opts": [
+       "Exponential, as each value doubles",
+       "Linear, as each value rises by a similar amount",
+       "Quadratic, as the values keep rising",
+       "Linear, as the values keep rising"
+      ],
+      "why": "Each value is 2 times the one before, so the ratio is equal and the model is exponential. The differences are 5, 10, 20, which are not equal, so it is not linear.",
+      "clue": "Divide each value by the one before it."
+     },
+     "b": {
+      "d": 3,
+      "q": "A ball's height in metres at seconds 0 to 4 is 2, 8, 10, 8, 2. Which model fits, and why?",
+      "opts": [
+       "Quadratic, as the heights rise then fall",
+       "Linear, as the differences are all the same size",
+       "Exponential, as the heights change every second",
+       "Exponential, as the heights repeat in pairs"
+      ],
+      "why": "The heights rise to 10 then fall, which suggests a quadratic with one turning point. The differences are 6, 2, −2, −6, so they are not equal and it is not linear, and the ratios are not equal either.",
+      "clue": "Look at what the heights do over time."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Exponential, as each value doubles",
+       "also_right": []
+      },
+      "b": {
+       "best": "Quadratic, as the heights rise then fall",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card presents 'rise then fall, or fall then rise' as what makes data quadratic. A quadratic table need not show a turning point within its x values (e.g. 1, 4, 9, 16), and many non-quadratic patterns also rise then fall. The card should say a turn 'suggests' a quadratic, as the chapter point does, rather than define it that way."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct and their explanations match the card. One minor issue: the card treats a rise then fall as the defining feature of quadratic data, when a turn only suggests a quadratic."
+     },
+     "flags": [
+      "Card, fact: The card presents 'rise then fall, or fall then rise' as what makes data quadratic. A quadratic table need not show a turning point within its x values (e.g. 1, 4, 9, 16), and many non-quadratic patterns also rise then fall. The card should say a turn 'suggests' a quadratic, as the chapter point does, rather than define it that way."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Choosing a linear, quadratic or exponential model",
+    "card": [
+     [
+      "Linear",
+      "the difference between each y value is equal when x goes up by 1. Example: 4, 7, 10, 13 adds 3 each step."
+     ],
+     [
+      "Exponential",
+      "the ratio between each y value is equal when x goes up by 1. Example: 3, 6, 12, 24 multiplies by 2 each step."
+     ],
+     [
+      "Quadratic",
+      "values that rise then fall, or fall then rise, suggest a quadratic: a curve with one turning point. Example: 2, 5, 6, 5, 2. A table may not show the turn, so a turn is a sign, not a test."
+     ],
+     "To choose a model, check the differences first, then the ratios, then look for a turn in the values."
+    ],
+    "remember": "Equal differences suggest linear, equal ratios suggest exponential, and a rise then fall suggests quadratic.",
+    "a": {
+     "q": "As x goes 0, 1, 2, 3, the y values in a table are 5, 10, 20, 40. Which model suits the data best?",
+     "opts": [
+      "Exponential, as each value doubles",
+      "Linear, as each value rises by a similar amount",
+      "Quadratic, as the values rise then fall",
+      "Linear, as the values keep rising"
+     ],
+     "why": "Each value is 2 times the one before, so the ratio is equal and the model is exponential. The differences are 5, 10, 20, which are not equal, so it is not linear. The values never fall, so there is no turn.",
+     "clue": "Divide each value by the one before it."
+    },
+    "b": {
+     "d": 3,
+     "q": "A ball is thrown up. Its height in metres after 0, 1, 2, 3 and 4 seconds is 2, 8, 10, 8, 2. Which model suits it, and why?",
+     "opts": [
+      "Quadratic, as the heights rise then fall",
+      "Linear, as the differences are all the same size",
+      "Exponential, as the heights change every second",
+      "Exponential, as the heights repeat in pairs"
+     ],
+     "why": "The heights rise to 10 then fall, which suggests a quadratic with one turning point. The differences are 6, 2, −2, −6, so they are not equal and it is not linear, and the ratios are not equal either.",
+     "clue": "Check the differences and ratios, then look at what the heights do."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Exponential, as each value doubles",
+     "also_right": []
+    },
+    "b": {
+     "best": "Quadratic, as the heights rise then fall",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Choosing a linear, quadratic or exponential model",
+  "card": [
+   [
+    "Linear",
+    "the difference between each y value is equal when x goes up by 1. Example: 4, 7, 10, 13 adds 3 each step."
+   ],
+   [
+    "Exponential",
+    "the ratio between each y value is equal when x goes up by 1. Example: 3, 6, 12, 24 multiplies by 2 each step."
+   ],
+   [
+    "Quadratic",
+    "values that rise then fall, or fall then rise, suggest a quadratic: a curve with one turning point. Example: 2, 5, 6, 5, 2. A table may not show the turn, so a turn is a sign, not a test."
+   ],
+   "To choose a model, check the differences first, then the ratios, then look for a turn in the values."
+  ],
+  "remember": "Equal differences suggest linear, equal ratios suggest exponential, and a rise then fall suggests quadratic.",
+  "a": {
+   "q": "As x goes 0, 1, 2, 3, the y values in a table are 5, 10, 20, 40. Which model suits the data best?",
+   "opts": [
+    "Exponential, as each value doubles",
+    "Linear, as each value rises by a similar amount",
+    "Quadratic, as the values rise then fall",
+    "Linear, as the values keep rising"
+   ],
+   "why": "Each value is 2 times the one before, so the ratio is equal and the model is exponential. The differences are 5, 10, 20, which are not equal, so it is not linear. The values never fall, so there is no turn.",
+   "clue": "Divide each value by the one before it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A ball is thrown up. Its height in metres after 0, 1, 2, 3 and 4 seconds is 2, 8, 10, 8, 2. Which model suits it, and why?",
+   "opts": [
+    "Quadratic, as the heights rise then fall",
+    "Linear, as the differences are all the same size",
+    "Exponential, as the heights change every second",
+    "Exponential, as the heights repeat in pairs"
+   ],
+   "why": "The heights rise to 10 then fall, which suggests a quadratic with one turning point. The differences are 6, 2, −2, −6, so they are not equal and it is not linear, and the ratios are not equal either.",
+   "clue": "Check the differences and ratios, then look at what the heights do."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Exponential, as each value doubles",
+   "also_right": []
+  },
+  "b": {
+   "best": "Quadratic, as the heights rise then fall",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Choosing a linear, quadratic or exponential model",
+  "card": [
+   [
+    "Linear",
+    "the difference between each y value is equal when x goes up by 1. Example: 4, 7, 10, 13 adds 3 each step."
+   ],
+   [
+    "Exponential",
+    "the ratio between each y value is equal when x goes up by 1. Example: 3, 6, 12, 24 multiplies by 2 each step."
+   ],
+   [
+    "Quadratic",
+    "values that rise then fall, or fall then rise, suggest a quadratic: a curve with one turning point. Example: 2, 5, 6, 5, 2. A table may not show the turn, so a turn is a sign, not a test."
+   ],
+   "To choose a model, check the differences first, then the ratios, then look for a turn in the values."
+  ],
+  "remember": "Equal differences suggest linear, equal ratios suggest exponential, and a rise then fall suggests quadratic.",
+  "a": {
+   "q": "As x goes 0, 1, 2, 3, the y values in a table are 5, 10, 20, 40. Which model suits the data best?",
+   "opts": [
+    "Exponential, as each value doubles",
+    "Linear, as each value rises by a similar amount",
+    "Quadratic, as the values rise then fall",
+    "Linear, as the values keep rising"
+   ],
+   "why": "Each value is 2 times the one before, so the ratio is equal and the model is exponential. The differences are 5, 10, 20, which are not equal, so it is not linear. The values never fall, so there is no turn.",
+   "clue": "Divide each value by the one before it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A ball is thrown up. Its height in metres after 0, 1, 2, 3 and 4 seconds is 2, 8, 10, 8, 2. Which model suits it, and why?",
+   "opts": [
+    "Quadratic, as the heights rise then fall",
+    "Linear, as the differences are all the same size",
+    "Exponential, as the heights change every second",
+    "Exponential, as the heights repeat in pairs"
+   ],
+   "why": "The heights rise to 10 then fall, which suggests a quadratic with one turning point. The differences are 6, 2, −2, −6, so they are not equal and it is not linear, and the ratios are not equal either.",
+   "clue": "Check the differences and ratios, then look at what the heights do."
+  }
+ },
+ "checked_by": "claude-code"
+}

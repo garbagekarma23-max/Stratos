@@ -1,0 +1,124 @@
+{
+ "id": "mat-percentage-quantity",
+ "title": "Percentage of a quantity",
+ "brief": "229f7c1126a4",
+ "shortlist": [
+  [
+   "mat-percentages-amounts",
+   0.301
+  ],
+  [
+   "mat-fractions-decimals-percentages",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:08Z write: done",
+  "2026-11-04T09:58:30Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00688,
+  "check": 0.00679
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches percentage of an amount but also covers percentage increase and decrease, and its second question tests a discount, which goes beyond this narrower Year 7 point, so a new point is the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Percentage of a quantity",
+  "card": [
+   "Per cent means out of 100. So 15% means 15/100, or 0.15.",
+   "To find a percentage of an amount, change the percentage to a decimal or fraction. Then multiply by the amount.",
+   "Example: 15% of $80 = 0.15 × 80 = $12.",
+   "For 10%, you can divide by 10. For 50%, divide by 2. Add these parts to build other percentages, such as 30% = 3 × 10%."
+  ],
+  "remember": "Turn the percentage into a decimal or fraction, then multiply by the amount.",
+  "a": {
+   "q": "What is 20% of 60 kg?",
+   "opts": [
+    "12 kg",
+    "3 kg",
+    "20 kg",
+    "120 kg"
+   ],
+   "why": "20% = 0.2, and 0.2 × 60 = 12 kg. Another way: 10% of 60 is 6, so 20% is 12. 3 kg comes from dividing 60 by 20, which is a different calculation.",
+   "clue": "Write 20% as a decimal, then multiply."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi has $240 and spends 35% of it on a bike helmet. How much does the helmet cost?",
+   "opts": [
+    "$84",
+    "$8.40",
+    "$205",
+    "$156"
+   ],
+   "why": "35% = 0.35, and 0.35 × 240 = $84. Check: 10% is $24, so 30% is $72 and 5% is $12, giving $84. $156 is what is left after spending, not the cost of the helmet.",
+   "clue": "The question asks for the amount spent, not the amount left."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "12 kg",
+   "also_right": []
+  },
+  "b": {
+   "best": "$84",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers are correct: 20% of 60 kg = 12 kg and 35% of $240 = $84, and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Percentage of a quantity",
+  "card": [
+   "Per cent means out of 100. So 15% means 15/100, or 0.15.",
+   "To find a percentage of an amount, change the percentage to a decimal or fraction. Then multiply by the amount.",
+   "Example: 15% of $80 = 0.15 × 80 = $12.",
+   "For 10%, you can divide by 10. For 50%, divide by 2. Add these parts to build other percentages, such as 30% = 3 × 10%."
+  ],
+  "remember": "Turn the percentage into a decimal or fraction, then multiply by the amount.",
+  "a": {
+   "q": "What is 20% of 60 kg?",
+   "opts": [
+    "12 kg",
+    "3 kg",
+    "20 kg",
+    "120 kg"
+   ],
+   "why": "20% = 0.2, and 0.2 × 60 = 12 kg. Another way: 10% of 60 is 6, so 20% is 12. 3 kg comes from dividing 60 by 20, which is a different calculation.",
+   "clue": "Write 20% as a decimal, then multiply."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi has $240 and spends 35% of it on a bike helmet. How much does the helmet cost?",
+   "opts": [
+    "$84",
+    "$8.40",
+    "$205",
+    "$156"
+   ],
+   "why": "35% = 0.35, and 0.35 × 240 = $84. Check: 10% is $24, so 30% is $72 and 5% is $12, giving $84. $156 is what is left after spending, not the cost of the helmet.",
+   "clue": "The question asks for the amount spent, not the amount left."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,386 @@
+{
+ "id": "mat-corresponding-alternate-angles",
+ "title": "Corresponding and alternate angles",
+ "brief": "fbb35a4d54d3",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:55Z write: done",
+  "2026-11-04T09:47:07Z check: flagged",
+  "2026-11-04T09:58:30Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00582,
+  "check": 0.01048,
+  "fix": 0.01182,
+  "recheck": 0.00744
+ },
+ "draft": {
+  "title": "Corresponding and alternate angles",
+  "card": [
+   "A transversal is a line that crosses two or more other lines. Here the two lines it crosses are parallel, which means they stay the same distance apart and never meet.",
+   [
+    "Corresponding",
+    "angles in matching positions at the two crossings, forming an F shape. They are equal."
+   ],
+   [
+    "Alternate",
+    "angles on opposite sides of the transversal and between the parallel lines, forming a Z shape. They are equal."
+   ],
+   "Example: one angle is 65°. The corresponding angle is 65°. The alternate angle is also 65°. These rules only work when the lines are parallel."
+  ],
+  "remember": "Parallel lines: F shape angles are equal and Z shape angles are equal.",
+  "a": {
+   "q": "A transversal crosses two parallel lines. One angle at the top crossing is 70°. What is the alternate angle at the lower crossing?",
+   "opts": [
+    "70°",
+    "110°",
+    "20°",
+    "180°"
+   ],
+   "why": "Alternate angles (Z shape) between parallel lines are equal, so the angle is 70°. 110° is 180° − 70°, which is not the rule for alternate angles.",
+   "clue": "Trace a Z shape. Are the two angles equal or different?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Two parallel fence rails are crossed by a diagonal brace. At the top rail, the angle is 48°. What is the corresponding angle at the bottom rail?",
+   "opts": [
+    "48°",
+    "132°",
+    "42°",
+    "96°"
+   ],
+   "why": "Corresponding angles (F shape) between parallel lines are equal, so the angle is 48°. 132° comes from subtracting from 180°, which is a different rule.",
+   "clue": "Corresponding angles sit in matching positions, like an F."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "70°",
+   "also_right": []
+  },
+  "b": {
+   "best": "48°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says corresponding angles are 'between parallel lines', but they are not both between the lines: one sits between them and one sits outside. This clashes with the card, which keeps 'between the parallel lines' for alternate angles only. Reword to 'when a transversal crosses parallel lines'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer (70° and 48°). The only issue is that why (b) says corresponding angles lie 'between' the parallel lines, which is wrong and blurs the card's distinction from alternate angles."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says corresponding angles are 'between parallel lines', but they are not both between the lines: one sits between them and one sits outside. This clashes with the card, which keeps 'between the parallel lines' for alternate angles only. Reword to 'when a transversal crosses parallel lines'."
+ ],
+ "proposal": {
+  "title": "Corresponding and alternate angles",
+  "card": [
+   "A transversal is a line that crosses two or more other lines. Here the two lines it crosses are parallel, which means they stay the same distance apart and never meet.",
+   [
+    "Corresponding",
+    "angles in matching positions at the two crossings, forming an F shape. They are equal."
+   ],
+   [
+    "Alternate",
+    "angles on opposite sides of the transversal and between the parallel lines, forming a Z shape. They are equal."
+   ],
+   "Example: one angle is 65°. The corresponding angle is 65°. The alternate angle is also 65°. These rules only work when the lines are parallel."
+  ],
+  "remember": "Parallel lines: F shape angles are equal and Z shape angles are equal.",
+  "a": {
+   "q": "A transversal crosses two parallel lines. One angle at the top crossing is 70°. What is the alternate angle at the lower crossing?",
+   "opts": [
+    "70°",
+    "110°",
+    "20°",
+    "180°"
+   ],
+   "why": "Alternate angles (Z shape) between parallel lines are equal, so the angle is 70°. 110° is 180° − 70°, which is not the rule for alternate angles.",
+   "clue": "Trace a Z shape. Are the two angles equal or different?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Two parallel fence rails are crossed by a diagonal brace. At the top rail, the angle is 48°. What is the corresponding angle at the bottom rail?",
+   "opts": [
+    "48°",
+    "132°",
+    "42°",
+    "96°"
+   ],
+   "why": "When a transversal crosses parallel lines, corresponding angles (F shape) are equal, so the angle is 48°. 132° is 180° − 48°, which is not the rule for corresponding angles.",
+   "clue": "Corresponding angles sit in matching positions, like an F."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "70°",
+    "also_right": []
+   },
+   "b": {
+    "best": "48°",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says corresponding angles are 'between parallel lines', but they are not both between the lines: one sits between them and one sits outside. This clashes with the card, which keeps 'between the parallel lines' for alternate angles only. Reword to 'when a transversal crosses parallel lines'."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says corresponding angles are 'between parallel lines', but they are not both between the lines: one sits between them and one sits outside. This clashes with the card, which keeps 'between the parallel lines' for alternate angles only. Reword to 'when a transversal crosses parallel lines'."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Corresponding and alternate angles",
+  "card": [
+   "A transversal is a line that crosses two or more other lines. Here the two lines it crosses are parallel, which means they stay the same distance apart and never meet.",
+   [
+    "Corresponding",
+    "angles in matching positions at the two crossings, forming an F shape. They are equal."
+   ],
+   [
+    "Alternate",
+    "angles on opposite sides of the transversal and between the parallel lines, forming a Z shape. They are equal."
+   ],
+   "Example: one angle is 65°. The corresponding angle is 65°. The alternate angle is also 65°. These rules only work when the lines are parallel."
+  ],
+  "remember": "Parallel lines: F shape angles are equal and Z shape angles are equal.",
+  "a": {
+   "q": "A transversal crosses two parallel lines. One angle at the top crossing is 70°. What is the alternate angle at the lower crossing?",
+   "opts": [
+    "70°",
+    "110°",
+    "20°",
+    "180°"
+   ],
+   "why": "Alternate angles (Z shape) between parallel lines are equal, so the angle is 70°. 110° is 180° − 70°, which is not the rule for alternate angles.",
+   "clue": "Trace a Z shape. Are the two angles equal or different?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Two parallel fence rails are crossed by a diagonal brace. At the top rail, the angle is 48°. What is the corresponding angle at the bottom rail?",
+   "opts": [
+    "48°",
+    "132°",
+    "42°",
+    "96°"
+   ],
+   "why": "When a transversal crosses parallel lines, corresponding angles (F shape) are equal, so the angle is 48°. 132° is 180° − 48°, which is not the rule for corresponding angles.",
+   "clue": "Corresponding angles sit in matching positions, like an F."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix stops why (b) saying corresponding angles both lie between the parallel lines, which was wrong. Nothing else changes.",
+   "item": "c33dd8e6b61b34d5",
+   "result": "decided",
+   "saved": {
+    "id": "mat-corresponding-alternate-angles",
+    "title": "Corresponding and alternate angles",
+    "brief": "fbb35a4d54d3",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.00582,
+     "check": 0.01048,
+     "fix": 0.01182,
+     "recheck": 0.00744
+    },
+    "draft": {
+     "title": "Corresponding and alternate angles",
+     "card": [
+      "A transversal is a line that crosses two or more other lines. Here the two lines it crosses are parallel, which means they stay the same distance apart and never meet.",
+      [
+       "Corresponding",
+       "angles in matching positions at the two crossings, forming an F shape. They are equal."
+      ],
+      [
+       "Alternate",
+       "angles on opposite sides of the transversal and between the parallel lines, forming a Z shape. They are equal."
+      ],
+      "Example: one angle is 65°. The corresponding angle is 65°. The alternate angle is also 65°. These rules only work when the lines are parallel."
+     ],
+     "remember": "Parallel lines: F shape angles are equal and Z shape angles are equal.",
+     "a": {
+      "q": "A transversal crosses two parallel lines. One angle at the top crossing is 70°. What is the alternate angle at the lower crossing?",
+      "opts": [
+       "70°",
+       "110°",
+       "20°",
+       "180°"
+      ],
+      "why": "Alternate angles (Z shape) between parallel lines are equal, so the angle is 70°. 110° is 180° − 70°, which is not the rule for alternate angles.",
+      "clue": "Trace a Z shape. Are the two angles equal or different?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Two parallel fence rails are crossed by a diagonal brace. At the top rail, the angle is 48°. What is the corresponding angle at the bottom rail?",
+      "opts": [
+       "48°",
+       "132°",
+       "42°",
+       "96°"
+      ],
+      "why": "Corresponding angles (F shape) between parallel lines are equal, so the angle is 48°. 132° comes from subtracting from 180°, which is a different rule.",
+      "clue": "Corresponding angles sit in matching positions, like an F."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "70°",
+      "also_right": []
+     },
+     "b": {
+      "best": "48°",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says corresponding angles are 'between parallel lines', but they are not both between the lines: one sits between them and one sits outside. This clashes with the card, which keeps 'between the parallel lines' for alternate angles only. Reword to 'when a transversal crosses parallel lines'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer (70° and 48°). The only issue is that why (b) says corresponding angles lie 'between' the parallel lines, which is wrong and blurs the card's distinction from alternate angles."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, fact: The why says corresponding angles are 'between parallel lines', but they are not both between the lines: one sits between them and one sits outside. This clashes with the card, which keeps 'between the parallel lines' for alternate angles only. Reword to 'when a transversal crosses parallel lines'."
+    ],
+    "proposal": {
+     "title": "Corresponding and alternate angles",
+     "card": [
+      "A transversal is a line that crosses two or more other lines. Here the two lines it crosses are parallel, which means they stay the same distance apart and never meet.",
+      [
+       "Corresponding",
+       "angles in matching positions at the two crossings, forming an F shape. They are equal."
+      ],
+      [
+       "Alternate",
+       "angles on opposite sides of the transversal and between the parallel lines, forming a Z shape. They are equal."
+      ],
+      "Example: one angle is 65°. The corresponding angle is 65°. The alternate angle is also 65°. These rules only work when the lines are parallel."
+     ],
+     "remember": "Parallel lines: F shape angles are equal and Z shape angles are equal.",
+     "a": {
+      "q": "A transversal crosses two parallel lines. One angle at the top crossing is 70°. What is the alternate angle at the lower crossing?",
+      "opts": [
+       "70°",
+       "110°",
+       "20°",
+       "180°"
+      ],
+      "why": "Alternate angles (Z shape) between parallel lines are equal, so the angle is 70°. 110° is 180° − 70°, which is not the rule for alternate angles.",
+      "clue": "Trace a Z shape. Are the two angles equal or different?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Two parallel fence rails are crossed by a diagonal brace. At the top rail, the angle is 48°. What is the corresponding angle at the bottom rail?",
+      "opts": [
+       "48°",
+       "132°",
+       "42°",
+       "96°"
+      ],
+      "why": "When a transversal crosses parallel lines, corresponding angles (F shape) are equal, so the angle is 48°. 132° is 180° − 48°, which is not the rule for corresponding angles.",
+      "clue": "Corresponding angles sit in matching positions, like an F."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "70°",
+       "also_right": []
+      },
+      "b": {
+       "best": "48°",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:13Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says corresponding angles are 'between parallel lines', but they are not both between the lines: one sits between them and one sits outside. This clashes with the card, which keeps 'between the parallel lines' for alternate angles only. Reword to 'when a transversal crosses parallel lines'."
+      }
+     ],
+     "flags": [
+      "Question b, fact: The why says corresponding angles are 'between parallel lines', but they are not both between the lines: one sits between them and one sits outside. This clashes with the card, which keeps 'between the parallel lines' for alternate angles only. Reword to 'when a transversal crosses parallel lines'."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "b4be19fa2254c745"
+  }
+ ]
+}

@@ -1,0 +1,209 @@
+{
+ "id": "mat-sample-spaces-probability-2",
+ "title": "Sample spaces and probability",
+ "brief": "15c0ed303800",
+ "shortlist": [
+  [
+   "mat-sample-spaces-probability",
+   0.351
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 may adapt mat-sample-spaces-probability, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:07Z confirm: Claude Opus 5.5 may adapt mat-sample-spaces-probability, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt mat-sample-spaces-probability (1 change)",
+  "2026-11-05T06:08:56Z claude-code review: adapting mat-sample-spaces-probability on the next run",
+  "2026-11-05T06:46:38Z adapt: done",
+  "2026-11-05T06:53:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "confirm": 0.0061,
+  "adapt": 0.00316,
+  "check": 0.00604
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-sample-spaces-probability",
+  "changes": [
+   "Replace the P(event) notation with plain wording, such as 'the chance is the number of favourable outcomes divided by the total number of outcomes', because Year 7 students are not expected to use probability notation.",
+   "Keep the fractions, decimals and percentages link to the 0 to 1 scale that Year 7 covers, so the card matches the Year 7 Australian Curriculum wording."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of sample spaces and equally likely outcomes at a suitable level, but its probability notation and framing are written for Year 11, so it needs small wording changes for Year 7.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-sample-spaces-probability",
+  "changes": [
+   "Replace question b (two coins tossed, a two-step experiment) with a single-stage question, such as drawing one marble from a bag or spinning one spinner, because AC9M7P01 covers only single-stage events."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same sample-space and equally-likely probability idea at a depth that suits Year 7, but its second question uses a two-step experiment, which is beyond the Year 7 single-stage focus.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-sample-spaces-probability",
+  "changes": [
+   "Replace question b with a single-stage question, such as drawing one marble from a bag or spinning one spinner, because Year 7 covers single-stage events only."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "a.q",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches sample spaces and equally likely probability at a Year 7 depth, but question b tosses two coins, a two-step experiment that Year 7 does not cover.",
+   "item": "ddf7db7e704fd489",
+   "result": "decided",
+   "saved": {
+    "id": "mat-sample-spaces-probability-2",
+    "title": "Sample spaces and probability",
+    "brief": "15c0ed303800",
+    "shortlist": [
+     [
+      "mat-sample-spaces-probability",
+      0.351
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00029,
+     "confirm": 0.0061
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-sample-spaces-probability",
+     "changes": [
+      "Replace the P(event) notation with plain wording, such as 'the chance is the number of favourable outcomes divided by the total number of outcomes', because Year 7 students are not expected to use probability notation.",
+      "Keep the fractions, decimals and percentages link to the 0 to 1 scale that Year 7 covers, so the card matches the Year 7 Australian Curriculum wording."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same idea of sample spaces and equally likely outcomes at a suitable level, but its probability notation and framing are written for Year 11, so it needs small wording changes for Year 7.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-sample-spaces-probability",
+     "changes": [
+      "Replace question b (two coins tossed, a two-step experiment) with a single-stage question, such as drawing one marble from a bag or spinning one spinner, because AC9M7P01 covers only single-stage events."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same sample-space and equally-likely probability idea at a depth that suits Year 7, but its second question uses a two-step experiment, which is beyond the Year 7 single-stage focus.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "7c22945ead01f045"
+  }
+ ],
+ "draft": {
+  "title": "Sample spaces and probability",
+  "card": [
+   "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives {1, 2, 3, 4, 5, 6}.",
+   "An event is a set of outcomes we care about, such as rolling an even number: {2, 4, 6}.",
+   "If all outcomes are equally likely, P(event) = number of favourable outcomes ÷ total number of outcomes. For an even number, P = 3/6 = 1/2.",
+   "Every probability is between 0 and 1. An impossible event has probability 0 and a certain event has probability 1."
+  ],
+  "remember": "List equally likely outcomes, count the ones you want, then divide by the total.",
+  "a": {
+   "q": "One fair die is rolled. What is the probability of getting a number more than 4?",
+   "opts": [
+    "1/3",
+    "1/6",
+    "2/3",
+    "5/6"
+   ],
+   "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and 2/6 = 1/3. The option 1/6 is tempting, but it counts only one outcome, forgetting that 6 is also greater than 4.",
+   "clue": "Count the outcomes that are above 4, not including 4."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bag has 3 red, 2 blue and 5 green marbles. One marble is drawn without looking. What is the probability it is green?",
+   "opts": [
+    "1/2",
+    "1/3",
+    "1/5",
+    "5/6"
+   ],
+   "why": "The bag has 3 + 2 + 5 = 10 marbles, and all are equally likely to be drawn. There are 5 green marbles, so P = 5/10 = 1/2. The answer 1/3 comes from treating the 3 colours as equally likely outcomes. They are not, because there are different numbers of each colour.",
+   "clue": "Add up all the marbles first, then count the green ones."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1/3",
+   "also_right": []
+  },
+  "b": {
+   "best": "1/2",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sample spaces and probability",
+  "card": [
+   "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives {1, 2, 3, 4, 5, 6}.",
+   "An event is a set of outcomes we care about, such as rolling an even number: {2, 4, 6}.",
+   "If all outcomes are equally likely, P(event) = number of favourable outcomes ÷ total number of outcomes. For an even number, P = 3/6 = 1/2.",
+   "Every probability is between 0 and 1. An impossible event has probability 0 and a certain event has probability 1."
+  ],
+  "remember": "List equally likely outcomes, count the ones you want, then divide by the total.",
+  "a": {
+   "q": "One fair die is rolled. What is the probability of getting a number more than 4?",
+   "opts": [
+    "1/3",
+    "1/6",
+    "2/3",
+    "5/6"
+   ],
+   "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and 2/6 = 1/3. The option 1/6 is tempting, but it counts only one outcome, forgetting that 6 is also greater than 4.",
+   "clue": "Count the outcomes that are above 4, not including 4."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bag has 3 red, 2 blue and 5 green marbles. One marble is drawn without looking. What is the probability it is green?",
+   "opts": [
+    "1/2",
+    "1/3",
+    "1/5",
+    "5/6"
+   ],
+   "why": "The bag has 3 + 2 + 5 = 10 marbles, and all are equally likely to be drawn. There are 5 green marbles, so P = 5/10 = 1/2. The answer 1/3 comes from treating the 3 colours as equally likely outcomes. They are not, because there are different numbers of each colour.",
+   "clue": "Add up all the marbles first, then count the green ones."
+  }
+ }
+}

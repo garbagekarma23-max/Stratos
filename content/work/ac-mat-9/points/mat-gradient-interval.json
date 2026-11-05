@@ -1,0 +1,144 @@
+{
+ "id": "mat-gradient-interval",
+ "title": "Gradient of an interval",
+ "brief": "83f0ef6db323",
+ "shortlist": [
+  [
+   "mat-gradient-as-rate-change",
+   0.352
+  ],
+  [
+   "mat-linear-functions",
+   0.334
+  ],
+  [
+   "mat-number-e",
+   0.249
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 may adapt mat-gradient-as-rate-change, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:10Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:31Z write: done",
+  "2026-11-04T10:08:04Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "confirm": 0.00578,
+  "write": 0.0071,
+  "check": 0.00529
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-gradient-as-rate-change",
+  "changes": [
+   "Add a sentence that a line sloping down to the right has a negative gradient, as the brief requires; the card only covers lines that go up.",
+   "Remove or simplify the in-context rate-of-change paragraph and the $ per hour example, which go beyond the Year 9 gradient-of-an-interval point.",
+   "Replace question b, which relies on the rate-of-filling context, with a question on finding the gradient of a line that slopes down, so both questions suit Year 9.",
+   "Adjust the Remember line to match the simpler rise-over-run focus."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same rise-over-run idea, but it is written at Year 11 depth with a rate-of-change focus and does not cover downward slopes, so it needs small changes to fit this Year 9 point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches gradient as a rate of change in context and never covers negative gradients, while the other is a broader Year 11 card on line equations and perpendicular lines, so neither matches this Year 9 point on rise over run and negative slope.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Gradient of an interval",
+  "card": [
+   "Gradient measures how steep a line is. Gradient = rise ÷ run, where rise is the change in y and run is the change in x.",
+   "For two points (x₁, y₁) and (x₂, y₂), the gradient is (y₂ − y₁) ÷ (x₂ − x₁). Subtract the coordinates in the same order on top and bottom.",
+   "A line that slopes up to the right has a positive gradient. A line that slopes down to the right has a negative gradient.",
+   "Example: from (1, 7) to (4, 1), rise = 1 − 7 = −6 and run = 4 − 1 = 3. Gradient = −6 ÷ 3 = −2."
+  ],
+  "remember": "Gradient is change in y over change in x, and it is negative when the line goes down to the right.",
+  "a": {
+   "q": "What is the gradient of the interval from (2, 3) to (6, 11)?",
+   "opts": [
+    "2",
+    "1/2",
+    "−2",
+    "8"
+   ],
+   "why": "Rise = 11 − 3 = 8 and run = 6 − 2 = 4, so the gradient is 8 ÷ 4 = 2. The option 1/2 turns the fraction upside down by putting run over rise.",
+   "clue": "Put the change in y on top."
+  },
+  "b": {
+   "d": 3,
+   "q": "A walking track on a map runs from A(1, 9) to B(5, 3). What is its gradient?",
+   "opts": [
+    "−3/2",
+    "3/2",
+    "−2/3",
+    "2/3"
+   ],
+   "why": "Rise = 3 − 9 = −6 and run = 5 − 1 = 4, so the gradient is −6/4 = −3/2. The track slopes down to the right, so the gradient is negative. The option 3/2 loses the sign.",
+   "clue": "Does the line go up or down as x increases?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2",
+   "also_right": []
+  },
+  "b": {
+   "best": "−3/2",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Gradient of an interval",
+  "card": [
+   "Gradient measures how steep a line is. Gradient = rise ÷ run, where rise is the change in y and run is the change in x.",
+   "For two points (x₁, y₁) and (x₂, y₂), the gradient is (y₂ − y₁) ÷ (x₂ − x₁). Subtract the coordinates in the same order on top and bottom.",
+   "A line that slopes up to the right has a positive gradient. A line that slopes down to the right has a negative gradient.",
+   "Example: from (1, 7) to (4, 1), rise = 1 − 7 = −6 and run = 4 − 1 = 3. Gradient = −6 ÷ 3 = −2."
+  ],
+  "remember": "Gradient is change in y over change in x, and it is negative when the line goes down to the right.",
+  "a": {
+   "q": "What is the gradient of the interval from (2, 3) to (6, 11)?",
+   "opts": [
+    "2",
+    "1/2",
+    "−2",
+    "8"
+   ],
+   "why": "Rise = 11 − 3 = 8 and run = 6 − 2 = 4, so the gradient is 8 ÷ 4 = 2. The option 1/2 turns the fraction upside down by putting run over rise.",
+   "clue": "Put the change in y on top."
+  },
+  "b": {
+   "d": 3,
+   "q": "A walking track on a map runs from A(1, 9) to B(5, 3). What is its gradient?",
+   "opts": [
+    "−3/2",
+    "3/2",
+    "−2/3",
+    "2/3"
+   ],
+   "why": "Rise = 3 − 9 = −6 and run = 5 − 1 = 4, so the gradient is −6/4 = −3/2. The track slopes down to the right, so the gradient is negative. The option 3/2 loses the sign.",
+   "clue": "Does the line go up or down as x increases?"
+  }
+ },
+ "cleared_by": "checker"
+}

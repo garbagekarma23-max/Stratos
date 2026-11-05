@@ -1,0 +1,244 @@
+{
+ "id": "sci-atomic-number-mass-number",
+ "title": "Atomic number, mass number and isotopes",
+ "brief": "40b16f265fb1",
+ "shortlist": [
+  [
+   "chem-isotopes",
+   0.266
+  ],
+  [
+   "chem-atomic-structure",
+   0.242
+  ],
+  [
+   "chem-atomic-structure-2",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, match",
+  "2026-11-04T09:36:58Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:14Z write: failed the content check, writing again",
+  "2026-11-04T09:58:34Z write: done",
+  "2026-11-04T10:08:05Z check: flagged",
+  "2026-11-04T10:10:51Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01096,
+  "check": 0.00865,
+  "fix": 0.01189,
+  "recheck": 0.00608
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank cards are written for Year 11 chemistry and cover much more than this narrow Year 9 point, including relative atomic mass, radioactivity or ions, so none fits at the right depth without a change of depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Atomic number, mass number and isotopes",
+  "card": [
+   [
+    "Atomic number",
+    "the number of protons in an atom. It decides which element the atom is."
+   ],
+   [
+    "Mass number",
+    "the number of protons plus the number of neutrons in the nucleus."
+   ],
+   [
+    "Isotopes",
+    "atoms of the same element with the same number of protons but different numbers of neutrons. They have different mass numbers."
+   ],
+   "To find the neutrons in an atom, subtract the atomic number from the mass number."
+  ],
+  "remember": "Protons name the element. Neutrons can vary, and that makes isotopes.",
+  "a": {
+   "q": "An atom has 6 protons and 8 neutrons. What is its mass number?",
+   "opts": [
+    "14",
+    "6",
+    "8",
+    "2"
+   ],
+   "why": "Mass number is protons plus neutrons, so 6 + 8 = 14. The number 6 is the atomic number, and 2 comes from wrongly subtracting.",
+   "clue": "Add the particles in the nucleus."
+  },
+  "b": {
+   "d": 3,
+   "q": "A lab tests two samples of neon. Atoms in sample P have 10 protons and 10 neutrons. Atoms in sample Q have 10 protons and 12 neutrons. What is true of P and Q?",
+   "opts": [
+    "They are isotopes of the same element",
+    "They are two different elements",
+    "They have different atomic numbers",
+    "They have the same mass number"
+   ],
+   "why": "Both have 10 protons, so they are the same element. Their neutrons differ, so they are isotopes with mass numbers 20 and 22. A different number of neutrons does not make a different element.",
+   "clue": "Compare the protons first, then the neutrons."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "14",
+   "also_right": []
+  },
+  "b": {
+   "best": "They are isotopes of the same element",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem calls both samples 'neon', which tells students they are the same element. That rules out 'different atomic numbers' and 'two different elements' without any need to compare protons. Describe them as 'two samples of a gas' or 'two atoms' instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. In question b, calling both samples 'neon' reveals that they are the same element and makes two distractors too easy to rule out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem calls both samples 'neon', which tells students they are the same element. That rules out 'different atomic numbers' and 'two different elements' without any need to compare protons. Describe them as 'two samples of a gas' or 'two atoms' instead."
+ ],
+ "proposal": {
+  "title": "Atomic number, mass number and isotopes",
+  "card": [
+   [
+    "Atomic number",
+    "the number of protons in an atom. It decides which element the atom is."
+   ],
+   [
+    "Mass number",
+    "the number of protons plus the number of neutrons in the nucleus."
+   ],
+   [
+    "Isotopes",
+    "atoms of the same element with the same number of protons but different numbers of neutrons. They have different mass numbers."
+   ],
+   "To find the neutrons in an atom, subtract the atomic number from the mass number."
+  ],
+  "remember": "Protons name the element. Neutrons can vary, and that makes isotopes.",
+  "a": {
+   "q": "An atom has 6 protons and 8 neutrons. What is its mass number?",
+   "opts": [
+    "14",
+    "6",
+    "8",
+    "2"
+   ],
+   "why": "Mass number is protons plus neutrons, so 6 + 8 = 14. The number 6 is the atomic number, and 2 comes from wrongly subtracting.",
+   "clue": "Add the particles in the nucleus."
+  },
+  "b": {
+   "d": 3,
+   "q": "A lab tests two samples of a gas. Atoms in sample P have 10 protons and 10 neutrons. Atoms in sample Q have 10 protons and 12 neutrons. What is true of the atoms in P and Q?",
+   "opts": [
+    "They are isotopes of one element",
+    "They are two different elements",
+    "They have different atomic numbers",
+    "They have the same mass number"
+   ],
+   "why": "Both have 10 protons, so they have the same atomic number and are the same element. Their neutrons differ, so they are isotopes with mass numbers 20 and 22. A different number of neutrons does not make a different element.",
+   "clue": "Compare the protons first, then the neutrons."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "14",
+    "also_right": []
+   },
+   "b": {
+    "best": "They are isotopes of one element",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem calls both samples 'neon', which tells students they are the same element. That rules out 'different atomic numbers' and 'two different elements' without any need to compare protons. Describe them as 'two samples of a gas' or 'two atoms' instead."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem calls both samples 'neon', which tells students they are the same element. That rules out 'different atomic numbers' and 'two different elements' without any need to compare protons. Describe them as 'two samples of a gas' or 'two atoms' instead."
+  ]
+ },
+ "final": {
+  "title": "Atomic number, mass number and isotopes",
+  "card": [
+   [
+    "Atomic number",
+    "the number of protons in an atom. It decides which element the atom is."
+   ],
+   [
+    "Mass number",
+    "the number of protons plus the number of neutrons in the nucleus."
+   ],
+   [
+    "Isotopes",
+    "atoms of the same element with the same number of protons but different numbers of neutrons. They have different mass numbers."
+   ],
+   "To find the neutrons in an atom, subtract the atomic number from the mass number."
+  ],
+  "remember": "Protons name the element. Neutrons can vary, and that makes isotopes.",
+  "a": {
+   "q": "An atom has 6 protons and 8 neutrons. What is its mass number?",
+   "opts": [
+    "14",
+    "6",
+    "8",
+    "2"
+   ],
+   "why": "Mass number is protons plus neutrons, so 6 + 8 = 14. The number 6 is the atomic number, and 2 comes from wrongly subtracting.",
+   "clue": "Add the particles in the nucleus."
+  },
+  "b": {
+   "d": 3,
+   "q": "A lab tests two samples of a gas. Atoms in sample P have 10 protons and 10 neutrons. Atoms in sample Q have 10 protons and 12 neutrons. What is true of the atoms in P and Q?",
+   "opts": [
+    "They are isotopes of one element",
+    "They are two different elements",
+    "They have different atomic numbers",
+    "They have the same mass number"
+   ],
+   "why": "Both have 10 protons, so they have the same atomic number and are the same element. Their neutrons differ, so they are isotopes with mass numbers 20 and 22. A different number of neutrons does not make a different element.",
+   "clue": "Compare the protons first, then the neutrons."
+  }
+ },
+ "cleared_by": "recheck"
+}

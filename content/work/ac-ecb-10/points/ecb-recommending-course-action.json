@@ -1,0 +1,715 @@
+{
+ "id": "ecb-recommending-course-action",
+ "title": "Recommending a course of action",
+ "brief": "e75cbc936931",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, write",
+  "2026-11-04T09:36:47Z write: failed the content check, writing again",
+  "2026-11-04T09:46:53Z write: done",
+  "2026-11-04T09:58:20Z check: flagged",
+  "2026-11-04T10:07:56Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (b wording, b other)",
+  "2026-11-05T02:27:40Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: flagged",
+  "2026-11-05T03:14:56Z fix: suggested",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01204,
+  "check": 0.0124,
+  "fix": 0.02744,
+  "recheck": 0.01131
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the longest and the only two-part answer, and it echoes the remember line ('cost and who is affected'). A student could pick it without knowing the idea.\n- Question b, other: The why says Sam 'has already compared it with the other options'. He only claimed it beats them, with one reason, while the card says a recommendation judges each option against criteria. The why overstates what Sam did. This makes the 'list of options that he rejected' distractor arguable.",
+ "rejected": {
+  "title": "Recommending a course of action",
+  "card": [
+   "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+   "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+   "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+   "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+  ],
+  "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+  "a": {
+   "q": "A school can spend its grant on a new oval or a new library. Which sentence is a full recommendation?",
+   "opts": [
+    "Build the library: it helps more students but costs the oval",
+    "Build the library, because libraries are good things",
+    "The oval and the library each have some real strengths",
+    "Most students would probably like a new library more"
+   ],
+   "why": "The sentence about helping more students names an option, gives a reason on a criterion, says who gains and states what is given up: the oval. Saying libraries are good things gives only a vague reason and no cost. The other two sentences do not choose an option.",
+   "clue": "A recommendation chooses, reasons and counts the cost."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam recommends that a Darwin café switch to reusable cups. He says it beats the other options because it cuts waste. What is still missing?",
+   "opts": [
+    "The cost of the switch and who it will affect",
+    "A statement of which option he chose",
+    "A reason why the option is better",
+    "A list of options that he rejected"
+   ],
+   "why": "Sam has named his option and given a reason about waste. He has not said what the switch will cost or who it will affect, such as customers and staff. He has already compared it with the other options, so a list of rejected options is not the missing part.",
+   "clue": "Check each part of a recommendation against what Sam said."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "claude-code",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the longest and the only two-part answer, and it echoes the remember line ('cost and who is affected'). A student could pick it without knowing the idea.",
+    "Question b, other: The why says Sam 'has already compared it with the other options'. He only claimed it beats them, with one reason, while the card says a recommendation judges each option against criteria. The why overstates what Sam did. This makes the 'list of options that he rejected' distractor arguable."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Recommending a course of action",
+     "card": [
+      "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+      "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+      "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+      "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+     ],
+     "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+     "a": {
+      "q": "A school can spend its grant on a new oval or a new library. Which sentence is a full recommendation?",
+      "opts": [
+       "Build the library: it helps more students but costs the oval",
+       "Build the library, because libraries are good things",
+       "The oval and the library each have some real strengths",
+       "Most students would probably like a new library more"
+      ],
+      "why": "The first sentence names an option, gives a reason on a criterion (more students helped), and states what is given up. The second gives only a vague reason. The others do not choose an option.",
+      "clue": "A recommendation chooses, reasons and counts the cost."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam recommends that a Darwin café switch to reusable cups. He says it beats the other options because it cuts waste. What is still missing?",
+      "opts": [
+       "The cost of the switch and who it will affect",
+       "A statement of which option he chose",
+       "A reason why the option is better",
+       "A list of options that he rejected"
+      ],
+      "why": "Sam has named his option and given a reason about waste. He has not said what the switch will cost or who it will affect, such as customers and staff.",
+      "clue": "He has a choice and a reason but no cost."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Build the library: it helps more students but costs the oval",
+      "also_right": []
+     },
+     "b": {
+      "best": "The cost of the switch and who it will affect",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The why refers to options by position ('The first sentence', 'The second'), but the options are shuffled. In the order shown, the right option is second, so the why points students to the wrong sentence."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue ('He has a choice and a reason but no cost') gives the answer away. It also mentions only cost, not who is affected, so it does not fully match the right option or the why."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer that matches the card. Two problems: the why for (a) names options by position even though the order is shuffled, and the clue for (b) gives the answer away."
+    },
+    "flags": [
+     "Question a, other: The why refers to options by position ('The first sentence', 'The second'), but the options are shuffled. In the order shown, the right option is second, so the why points students to the wrong sentence.",
+     "Question b, other: The clue ('He has a choice and a reason but no cost') gives the answer away. It also mentions only cost, not who is affected, so it does not fully match the right option or the why."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Recommending a course of action",
+     "card": [
+      "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+      "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+      "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+      "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+     ],
+     "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+     "a": {
+      "q": "A school can spend its grant on a new oval or a new library. Which sentence is a full recommendation?",
+      "opts": [
+       "Build the library: it helps more students but costs the oval",
+       "Build the library, because libraries are good things",
+       "The oval and the library each have some real strengths",
+       "Most students would probably like a new library more"
+      ],
+      "why": "The sentence about helping more students names an option, gives a reason on a criterion, says who gains and states what is given up: the oval. Saying libraries are good things gives only a vague reason and no cost. The other two sentences do not choose an option.",
+      "clue": "A recommendation chooses, reasons and counts the cost."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam recommends that a Darwin café switch to reusable cups. He says it beats the other options because it cuts waste. What is still missing?",
+      "opts": [
+       "The cost of the switch and who it will affect",
+       "A statement of which option he chose",
+       "A reason why the option is better",
+       "A list of options that he rejected"
+      ],
+      "why": "Sam has named his option and given a reason about waste. He has not said what the switch will cost or who it will affect, such as customers and staff. He has already compared it with the other options, so a list of rejected options is not the missing part.",
+      "clue": "Check each part of a recommendation against what Sam said."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Build the library: it helps more students but costs the oval",
+       "also_right": []
+      },
+      "b": {
+       "best": "The cost of the switch and who it will affect",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the longest and the only two-part answer, and it echoes the remember line ('cost and who is affected'). A student could pick it without knowing the idea."
+       },
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The why says Sam 'has already compared it with the other options'. He only claimed it beats them, with one reason, while the card says a recommendation judges each option against criteria. The why overstates what Sam did. This makes the 'list of options that he rejected' distractor arguable."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and question a are sound. In question b the right option stands out as the longest two-part answer that echoes the remember line, and the why overstates how fully Sam compared the options."
+     },
+     "flags": [
+      "Question b, wording: The right option is the longest and the only two-part answer, and it echoes the remember line ('cost and who is affected'). A student could pick it without knowing the idea.",
+      "Question b, other: The why says Sam 'has already compared it with the other options'. He only claimed it beats them, with one reason, while the card says a recommendation judges each option against criteria. The why overstates what Sam did. This makes the 'list of options that he rejected' distractor arguable."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:40Z",
+   "step": "write",
+   "version": {
+    "title": "Recommending a course of action",
+    "card": [
+     "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+     "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+     "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+     "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+    ],
+    "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+    "a": {
+     "q": "A school's grant will pay for either a new oval or a new library. Which sentence is the most complete recommendation?",
+     "opts": [
+      "Pick the library: more students gain, but the oval is lost",
+      "Build the library, because libraries are good for a school",
+      "The oval and the library both have strengths for students",
+      "Most students would probably prefer the library to the oval"
+     ],
+     "why": "The first sentence names an option, gives a reason on a criterion, says who gains and states what is given up: the oval. Saying libraries are good for a school gives a vague reason and no cost. The other two sentences do not choose an option.",
+     "clue": "A recommendation chooses, reasons and counts the cost."
+    },
+    "b": {
+     "d": 2,
+     "q": "Sam recommends that a Darwin café switch to reusable cups. He judges reusable, paper and compostable cups on cost and waste, explains why reusable cups do best, and says the switch will cost $3,000 for cups and a dishwasher. What has he left out?",
+     "opts": [
+      "Who the switch will affect",
+      "Which option he has chosen",
+      "Why it beats the other options",
+      "What the switch will cost"
+     ],
+     "why": "Sam names his choice, judges each option against criteria and states the cost. He does not say who will be affected, such as customers who bring their own cups or staff who wash them. The cost is not missing, because he gave the $3,000 figure.",
+     "clue": "Tick off each part of a recommendation against what Sam said."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Pick the library: more students gain, but the oval is lost",
+     "also_right": []
+    },
+    "b": {
+     "best": "Who the switch will affect",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "other",
+      "detail": "The why for question a calls the right answer \"The first sentence\". Students see the options in a shuffled order, so the right option may not be first, and the why would point them at the wrong sentence. Name it by its words instead, such as \"Pick the library: more students gain, but the oval is lost\"."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Both questions have one clear right answer and the card is accurate. The why for question a refers to \"the first sentence\", which will be wrong once the options are shuffled, so it should quote the option instead."
+   }
+  },
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix only names the options in why (a) by their words, so it still works once the options are shuffled.",
+   "item": "c2f2c13958eb6a65",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-recommending-course-action",
+    "title": "Recommending a course of action",
+    "brief": "e75cbc936931",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 2,
+     "check": 1,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.01204,
+     "check": 0.0124,
+     "fix": 0.02744,
+     "recheck": 0.01131
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the longest and the only two-part answer, and it echoes the remember line ('cost and who is affected'). A student could pick it without knowing the idea.\n- Question b, other: The why says Sam 'has already compared it with the other options'. He only claimed it beats them, with one reason, while the card says a recommendation judges each option against criteria. The why overstates what Sam did. This makes the 'list of options that he rejected' distractor arguable.",
+    "rejected": {
+     "title": "Recommending a course of action",
+     "card": [
+      "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+      "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+      "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+      "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+     ],
+     "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+     "a": {
+      "q": "A school can spend its grant on a new oval or a new library. Which sentence is a full recommendation?",
+      "opts": [
+       "Build the library: it helps more students but costs the oval",
+       "Build the library, because libraries are good things",
+       "The oval and the library each have some real strengths",
+       "Most students would probably like a new library more"
+      ],
+      "why": "The sentence about helping more students names an option, gives a reason on a criterion, says who gains and states what is given up: the oval. Saying libraries are good things gives only a vague reason and no cost. The other two sentences do not choose an option.",
+      "clue": "A recommendation chooses, reasons and counts the cost."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam recommends that a Darwin café switch to reusable cups. He says it beats the other options because it cuts waste. What is still missing?",
+      "opts": [
+       "The cost of the switch and who it will affect",
+       "A statement of which option he chose",
+       "A reason why the option is better",
+       "A list of options that he rejected"
+      ],
+      "why": "Sam has named his option and given a reason about waste. He has not said what the switch will cost or who it will affect, such as customers and staff. He has already compared it with the other options, so a list of rejected options is not the missing part.",
+      "clue": "Check each part of a recommendation against what Sam said."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-05T02:17:40Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question b, wording: The right option is the longest and the only two-part answer, and it echoes the remember line ('cost and who is affected'). A student could pick it without knowing the idea.",
+       "Question b, other: The why says Sam 'has already compared it with the other options'. He only claimed it beats them, with one reason, while the card says a recommendation judges each option against criteria. The why overstates what Sam did. This makes the 'list of options that he rejected' distractor arguable."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Recommending a course of action",
+        "card": [
+         "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+         "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+         "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+         "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+        ],
+        "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+        "a": {
+         "q": "A school can spend its grant on a new oval or a new library. Which sentence is a full recommendation?",
+         "opts": [
+          "Build the library: it helps more students but costs the oval",
+          "Build the library, because libraries are good things",
+          "The oval and the library each have some real strengths",
+          "Most students would probably like a new library more"
+         ],
+         "why": "The first sentence names an option, gives a reason on a criterion (more students helped), and states what is given up. The second gives only a vague reason. The others do not choose an option.",
+         "clue": "A recommendation chooses, reasons and counts the cost."
+        },
+        "b": {
+         "d": 2,
+         "q": "Sam recommends that a Darwin café switch to reusable cups. He says it beats the other options because it cuts waste. What is still missing?",
+         "opts": [
+          "The cost of the switch and who it will affect",
+          "A statement of which option he chose",
+          "A reason why the option is better",
+          "A list of options that he rejected"
+         ],
+         "why": "Sam has named his option and given a reason about waste. He has not said what the switch will cost or who it will affect, such as customers and staff.",
+         "clue": "He has a choice and a reason but no cost."
+        }
+       },
+       "redone": true,
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Build the library: it helps more students but costs the oval",
+         "also_right": []
+        },
+        "b": {
+         "best": "The cost of the switch and who it will affect",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "a",
+          "kind": "other",
+          "detail": "The why refers to options by position ('The first sentence', 'The second'), but the options are shuffled. In the order shown, the right option is second, so the why points students to the wrong sentence."
+         },
+         {
+          "part": "b",
+          "kind": "other",
+          "detail": "The clue ('He has a choice and a reason but no cost') gives the answer away. It also mentions only cost, not who is affected, so it does not fully match the right option or the why."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "Both questions have one clear right answer that matches the card. Two problems: the why for (a) names options by position even though the order is shuffled, and the clue for (b) gives the answer away."
+       },
+       "flags": [
+        "Question a, other: The why refers to options by position ('The first sentence', 'The second'), but the options are shuffled. In the order shown, the right option is second, so the why points students to the wrong sentence.",
+        "Question b, other: The clue ('He has a choice and a reason but no cost') gives the answer away. It also mentions only cost, not who is affected, so it does not fully match the right option or the why."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Recommending a course of action",
+        "card": [
+         "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+         "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+         "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+         "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+        ],
+        "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+        "a": {
+         "q": "A school can spend its grant on a new oval or a new library. Which sentence is a full recommendation?",
+         "opts": [
+          "Build the library: it helps more students but costs the oval",
+          "Build the library, because libraries are good things",
+          "The oval and the library each have some real strengths",
+          "Most students would probably like a new library more"
+         ],
+         "why": "The sentence about helping more students names an option, gives a reason on a criterion, says who gains and states what is given up: the oval. Saying libraries are good things gives only a vague reason and no cost. The other two sentences do not choose an option.",
+         "clue": "A recommendation chooses, reasons and counts the cost."
+        },
+        "b": {
+         "d": 2,
+         "q": "Sam recommends that a Darwin café switch to reusable cups. He says it beats the other options because it cuts waste. What is still missing?",
+         "opts": [
+          "The cost of the switch and who it will affect",
+          "A statement of which option he chose",
+          "A reason why the option is better",
+          "A list of options that he rejected"
+         ],
+         "why": "Sam has named his option and given a reason about waste. He has not said what the switch will cost or who it will affect, such as customers and staff. He has already compared it with the other options, so a list of rejected options is not the missing part.",
+         "clue": "Check each part of a recommendation against what Sam said."
+        }
+       },
+       "proposal_problems": [],
+       "recheck": {
+        "at": "2026-11-04T18:10:11Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Build the library: it helps more students but costs the oval",
+          "also_right": []
+         },
+         "b": {
+          "best": "The cost of the switch and who it will affect",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "b",
+           "kind": "wording",
+           "detail": "The right option is the longest and the only two-part answer, and it echoes the remember line ('cost and who is affected'). A student could pick it without knowing the idea."
+          },
+          {
+           "part": "b",
+           "kind": "other",
+           "detail": "The why says Sam 'has already compared it with the other options'. He only claimed it beats them, with one reason, while the card says a recommendation judges each option against criteria. The why overstates what Sam did. This makes the 'list of options that he rejected' distractor arguable."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The card and question a are sound. In question b the right option stands out as the longest two-part answer that echoes the remember line, and the why overstates how fully Sam compared the options."
+        },
+        "flags": [
+         "Question b, wording: The right option is the longest and the only two-part answer, and it echoes the remember line ('cost and who is affected'). A student could pick it without knowing the idea.",
+         "Question b, other: The why says Sam 'has already compared it with the other options'. He only claimed it beats them, with one reason, while the card says a recommendation judges each option against criteria. The why overstates what Sam did. This makes the 'list of options that he rejected' distractor arguable."
+        ]
+       }
+      }
+     }
+    ],
+    "written_by": "claude-code",
+    "draft": {
+     "title": "Recommending a course of action",
+     "card": [
+      "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+      "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+      "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+      "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+     ],
+     "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+     "a": {
+      "q": "A school's grant will pay for either a new oval or a new library. Which sentence is the most complete recommendation?",
+      "opts": [
+       "Pick the library: more students gain, but the oval is lost",
+       "Build the library, because libraries are good for a school",
+       "The oval and the library both have strengths for students",
+       "Most students would probably prefer the library to the oval"
+      ],
+      "why": "The first sentence names an option, gives a reason on a criterion, says who gains and states what is given up: the oval. Saying libraries are good for a school gives a vague reason and no cost. The other two sentences do not choose an option.",
+      "clue": "A recommendation chooses, reasons and counts the cost."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam recommends that a Darwin café switch to reusable cups. He judges reusable, paper and compostable cups on cost and waste, explains why reusable cups do best, and says the switch will cost $3,000 for cups and a dishwasher. What has he left out?",
+      "opts": [
+       "Who the switch will affect",
+       "Which option he has chosen",
+       "Why it beats the other options",
+       "What the switch will cost"
+      ],
+      "why": "Sam names his choice, judges each option against criteria and states the cost. He does not say who will be affected, such as customers who bring their own cups or staff who wash them. The cost is not missing, because he gave the $3,000 figure.",
+      "clue": "Tick off each part of a recommendation against what Sam said."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Pick the library: more students gain, but the oval is lost",
+      "also_right": []
+     },
+     "b": {
+      "best": "Who the switch will affect",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The why for question a calls the right answer \"The first sentence\". Students see the options in a shuffled order, so the right option may not be first, and the why would point them at the wrong sentence. Name it by its words instead, such as \"Pick the library: more students gain, but the oval is lost\"."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer and the card is accurate. The why for question a refers to \"the first sentence\", which will be wrong once the options are shuffled, so it should quote the option instead."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, other: The why for question a calls the right answer \"The first sentence\". Students see the options in a shuffled order, so the right option may not be first, and the why would point them at the wrong sentence. Name it by its words instead, such as \"Pick the library: more students gain, but the oval is lost\"."
+    ],
+    "checked_by": "claude-code",
+    "proposal": {
+     "title": "Recommending a course of action",
+     "card": [
+      "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+      "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+      "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+      "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+     ],
+     "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+     "a": {
+      "q": "A school's grant will pay for either a new oval or a new library. Which sentence is the most complete recommendation?",
+      "opts": [
+       "Pick the library: more students gain, but the oval is lost",
+       "Build the library, because libraries are good for a school",
+       "The oval and the library both have strengths for students",
+       "Most students would probably prefer the library to the oval"
+      ],
+      "why": "\"Pick the library: more students gain, but the oval is lost\" names an option, gives a reason, says who gains and states what is given up. \"Build the library, because libraries are good for a school\" gives only a vague reason and no cost. The other two sentences do not choose an option at all.",
+      "clue": "A recommendation chooses, reasons and counts the cost."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam recommends that a Darwin café switch to reusable cups. He judges reusable, paper and compostable cups on cost and waste, explains why reusable cups do best, and says the switch will cost $3,000 for cups and a dishwasher. What has he left out?",
+      "opts": [
+       "Who the switch will affect",
+       "Which option he has chosen",
+       "Why it beats the other options",
+       "What the switch will cost"
+      ],
+      "why": "Sam names his choice, judges each option against criteria and states the cost. He does not say who will be affected, such as customers who bring their own cups or staff who wash them. The cost is not missing, because he gave the $3,000 figure.",
+      "clue": "Tick off each part of a recommendation against what Sam said."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "380877ec2565eb09"
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Recommending a course of action",
+  "card": [
+   "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+   "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+   "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+   "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+  ],
+  "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+  "a": {
+   "q": "A school's grant will pay for either a new oval or a new library. Which sentence is the most complete recommendation?",
+   "opts": [
+    "Pick the library: more students gain, but the oval is lost",
+    "Build the library, because libraries are good for a school",
+    "The oval and the library both have strengths for students",
+    "Most students would probably prefer the library to the oval"
+   ],
+   "why": "The first sentence names an option, gives a reason on a criterion, says who gains and states what is given up: the oval. Saying libraries are good for a school gives a vague reason and no cost. The other two sentences do not choose an option.",
+   "clue": "A recommendation chooses, reasons and counts the cost."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam recommends that a Darwin café switch to reusable cups. He judges reusable, paper and compostable cups on cost and waste, explains why reusable cups do best, and says the switch will cost $3,000 for cups and a dishwasher. What has he left out?",
+   "opts": [
+    "Who the switch will affect",
+    "Which option he has chosen",
+    "Why it beats the other options",
+    "What the switch will cost"
+   ],
+   "why": "Sam names his choice, judges each option against criteria and states the cost. He does not say who will be affected, such as customers who bring their own cups or staff who wash them. The cost is not missing, because he gave the $3,000 figure.",
+   "clue": "Tick off each part of a recommendation against what Sam said."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pick the library: more students gain, but the oval is lost",
+   "also_right": []
+  },
+  "b": {
+   "best": "Who the switch will affect",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why for question a calls the right answer \"The first sentence\". Students see the options in a shuffled order, so the right option may not be first, and the why would point them at the wrong sentence. Name it by its words instead, such as \"Pick the library: more students gain, but the oval is lost\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the card is accurate. The why for question a refers to \"the first sentence\", which will be wrong once the options are shuffled, so it should quote the option instead."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why for question a calls the right answer \"The first sentence\". Students see the options in a shuffled order, so the right option may not be first, and the why would point them at the wrong sentence. Name it by its words instead, such as \"Pick the library: more students gain, but the oval is lost\"."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Recommending a course of action",
+  "card": [
+   "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+   "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+   "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+   "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+  ],
+  "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+  "a": {
+   "q": "A school's grant will pay for either a new oval or a new library. Which sentence is the most complete recommendation?",
+   "opts": [
+    "Pick the library: more students gain, but the oval is lost",
+    "Build the library, because libraries are good for a school",
+    "The oval and the library both have strengths for students",
+    "Most students would probably prefer the library to the oval"
+   ],
+   "why": "\"Pick the library: more students gain, but the oval is lost\" names an option, gives a reason, says who gains and states what is given up. \"Build the library, because libraries are good for a school\" gives only a vague reason and no cost. The other two sentences do not choose an option at all.",
+   "clue": "A recommendation chooses, reasons and counts the cost."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam recommends that a Darwin café switch to reusable cups. He judges reusable, paper and compostable cups on cost and waste, explains why reusable cups do best, and says the switch will cost $3,000 for cups and a dishwasher. What has he left out?",
+   "opts": [
+    "Who the switch will affect",
+    "Which option he has chosen",
+    "Why it beats the other options",
+    "What the switch will cost"
+   ],
+   "why": "Sam names his choice, judges each option against criteria and states the cost. He does not say who will be affected, such as customers who bring their own cups or staff who wash them. The cost is not missing, because he gave the $3,000 figure.",
+   "clue": "Tick off each part of a recommendation against what Sam said."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Recommending a course of action",
+  "card": [
+   "A recommendation is a clear choice of the best option from the ones being considered. It states the choice plainly.",
+   "It explains why that option beats the others. To do this, it judges each option against criteria, such as cost, fairness or effect on the environment.",
+   "It says what the option will cost. A cost includes money and also what is given up, such as time or another use of the funds.",
+   "It says who will be affected, such as customers, workers or the community. Some may gain while others lose."
+  ],
+  "remember": "Name the best option, give reasons using criteria, and state the cost and who is affected.",
+  "a": {
+   "q": "A school's grant will pay for either a new oval or a new library. Which sentence is the most complete recommendation?",
+   "opts": [
+    "Pick the library: more students gain, but the oval is lost",
+    "Build the library, because libraries are good for a school",
+    "The oval and the library both have strengths for students",
+    "Most students would probably prefer the library to the oval"
+   ],
+   "why": "\"Pick the library: more students gain, but the oval is lost\" names an option, gives a reason, says who gains and states what is given up. \"Build the library, because libraries are good for a school\" gives only a vague reason and no cost. The other two sentences do not choose an option at all.",
+   "clue": "A recommendation chooses, reasons and counts the cost."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam recommends that a Darwin café switch to reusable cups. He judges reusable, paper and compostable cups on cost and waste, explains why reusable cups do best, and says the switch will cost $3,000 for cups and a dishwasher. What has he left out?",
+   "opts": [
+    "Who the switch will affect",
+    "Which option he has chosen",
+    "Why it beats the other options",
+    "What the switch will cost"
+   ],
+   "why": "Sam names his choice, judges each option against criteria and states the cost. He does not say who will be affected, such as customers who bring their own cups or staff who wash them. The cost is not missing, because he gave the $3,000 figure.",
+   "clue": "Tick off each part of a recommendation against what Sam said."
+  }
+ }
+}

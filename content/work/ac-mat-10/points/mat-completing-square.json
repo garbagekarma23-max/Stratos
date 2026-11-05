@@ -1,0 +1,126 @@
+{
+ "id": "mat-completing-square",
+ "title": "Completing the square",
+ "brief": "61e15262ea39",
+ "shortlist": [
+  [
+   "mat-circles",
+   0.217
+  ],
+  [
+   "mat-pythagoras-theorem",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:03Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00511,
+  "check": 0.01048
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Circles, teaches circle equations and only uses completing the square as a step within that topic, so it is related rather than the same idea as completing the square for a monic quadratic.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Completing the square",
+  "card": [
+   "A monic quadratic has x² with a coefficient of 1, such as x² + 6x + 2. Completed square form looks like (x + p)² + q.",
+   "Take half the coefficient of x, then square it. Add that square and take it away, so the value of the expression does not change.",
+   "The x² term, the x term and the added square make a perfect square: x² + 6x + 9 = (x + 3)². Whatever is left over goes outside the bracket.",
+   "Example: x² + 6x + 2. Half of 6 is 3, and 3² = 9. So x² + 6x + 9 − 9 + 2 = (x + 3)² − 7."
+  ],
+  "remember": "Halve the x coefficient, square it, add it and take it away.",
+  "a": {
+   "q": "Which is x² + 10x + 3 in completed square form?",
+   "opts": [
+    "(x + 5)² − 22",
+    "(x + 5)² + 28",
+    "(x + 10)² − 97",
+    "(x + 5)² − 25"
+   ],
+   "why": "Half of 10 is 5, and 5² = 25. So x² + 10x + 25 − 25 + 3 = (x + 5)² − 22. Taking away 25 but forgetting to add the 3 gives (x + 5)² − 25, which is wrong.",
+   "clue": "Half of 10 goes inside the bracket. Then use its square."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia writes x² − 8x + 5 in completed square form. What does she get?",
+   "opts": [
+    "(x − 4)² − 11",
+    "(x − 4)² + 21",
+    "(x + 4)² − 11",
+    "(x − 8)² − 59"
+   ],
+   "why": "Half of −8 is −4, and (−4)² = 16. So x² − 8x + 16 − 16 + 5 = (x − 4)² − 11. Using +21 comes from adding 16 instead of taking it away. Check by expanding: (x − 4)² − 11 = x² − 8x + 16 − 11 = x² − 8x + 5.",
+   "clue": "Half of a negative number is still negative, and the bracket keeps that sign."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(x + 5)² − 22",
+   "also_right": []
+  },
+  "b": {
+   "best": "(x − 4)² − 11",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both questions have exactly one correct option, and the card, remember line, clues and explanations agree."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Completing the square",
+  "card": [
+   "A monic quadratic has x² with a coefficient of 1, such as x² + 6x + 2. Completed square form looks like (x + p)² + q.",
+   "Take half the coefficient of x, then square it. Add that square and take it away, so the value of the expression does not change.",
+   "The x² term, the x term and the added square make a perfect square: x² + 6x + 9 = (x + 3)². Whatever is left over goes outside the bracket.",
+   "Example: x² + 6x + 2. Half of 6 is 3, and 3² = 9. So x² + 6x + 9 − 9 + 2 = (x + 3)² − 7."
+  ],
+  "remember": "Halve the x coefficient, square it, add it and take it away.",
+  "a": {
+   "q": "Which is x² + 10x + 3 in completed square form?",
+   "opts": [
+    "(x + 5)² − 22",
+    "(x + 5)² + 28",
+    "(x + 10)² − 97",
+    "(x + 5)² − 25"
+   ],
+   "why": "Half of 10 is 5, and 5² = 25. So x² + 10x + 25 − 25 + 3 = (x + 5)² − 22. Taking away 25 but forgetting to add the 3 gives (x + 5)² − 25, which is wrong.",
+   "clue": "Half of 10 goes inside the bracket. Then use its square."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia writes x² − 8x + 5 in completed square form. What does she get?",
+   "opts": [
+    "(x − 4)² − 11",
+    "(x − 4)² + 21",
+    "(x + 4)² − 11",
+    "(x − 8)² − 59"
+   ],
+   "why": "Half of −8 is −4, and (−4)² = 16. So x² − 8x + 16 − 16 + 5 = (x − 4)² − 11. Using +21 comes from adding 16 instead of taking it away. Check by expanding: (x − 4)² − 11 = x² − 8x + 16 − 11 = x² − 8x + 5.",
+   "clue": "Half of a negative number is still negative, and the bracket keeps that sign."
+  }
+ },
+ "cleared_by": "checker"
+}

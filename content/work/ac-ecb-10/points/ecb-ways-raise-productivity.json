@@ -1,0 +1,440 @@
+{
+ "id": "ecb-ways-raise-productivity",
+ "title": "Ways to raise productivity",
+ "brief": "e16be8ac439c",
+ "shortlist": [
+  [
+   "eco-aggregate-supply",
+   0.306
+  ],
+  [
+   "eco-aggregate-supply-productivity",
+   0.238
+  ],
+  [
+   "eco-research-development",
+   0.222
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:20Z write: failed the content check, writing again",
+  "2026-11-04T10:07:56Z write: done",
+  "2026-11-04T10:10:47Z check: flagged",
+  "2026-11-04T10:14:00Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (card other)",
+  "2026-11-05T02:27:40Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.01131,
+  "check": 0.01274,
+  "fix": 0.01875,
+  "recheck": 0.01014
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "None of the bank points covers the Year 10 business idea of firm-level ways to raise productivity: the aggregate supply cards are macroeconomic and senior-level, and the R&D card covers only research, not training, equipment or waste-cutting methods.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: The first bullet defines productivity (more output from the same inputs, and why extra hours or workers do not raise it). That definition belongs to point 1, 'What productivity is', so this card should only mention it rather than explain it.",
+ "rejected": {
+  "title": "Ways to raise productivity",
+  "card": [
+   "A business raises productivity when it makes more from the same inputs, or the same output from fewer inputs. Adding more hours or more workers can raise output, but not productivity on its own.",
+   [
+    "Training and equipment",
+    "Training gives workers more skill, so they work faster and make fewer errors. New equipment and technology can let each worker make more in the same time."
+   ],
+   [
+    "Research",
+    "Research can find better products and faster ways to work. A business may spend money on it now and gain higher productivity later."
+   ],
+   [
+    "Cutting waste",
+    "Methods such as just-in-time stock cut waste. The business orders materials to arrive just as they are needed, so less is stored, spoiled or left unused."
+   ]
+  ],
+  "remember": "Training, equipment, research and less waste all help each input make more.",
+  "a": {
+   "q": "A bakery wants to raise its productivity. Which change would do that?",
+   "opts": [
+    "Buying an oven that bakes twice as many trays at once",
+    "Raising the price of every loaf the shop sells",
+    "Opening the shop for two extra hours each day",
+    "Hiring two more bakers to make the same loaves"
+   ],
+   "why": "A bigger oven is new equipment, so the same bakers make more bread in the same time. Opening longer is tempting because it adds output, but it adds hours too, so each hour makes no more than before.",
+   "clue": "Which change gets more from the same workers and time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike repair shop in Hobart. She keeps few spare parts and orders each one only when a customer's repair needs it, so fewer parts sit unused or get damaged. Which method is she using?",
+   "opts": [
+    "Just-in-time stock, which cuts waste",
+    "Staff training, which builds worker skill",
+    "Research, which finds new products",
+    "New technology, which speeds up each task"
+   ],
+   "why": "Ordering parts only when they are needed is just-in-time stock, and it cuts waste from unused or damaged parts. Training is tempting because it also lifts productivity, but nothing in the case involves teaching staff new skills.",
+   "clue": "Think about when the parts are ordered."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, other: The first bullet defines productivity (more output from the same inputs, and why extra hours or workers do not raise it). That definition belongs to point 1, 'What productivity is', so this card should only mention it rather than explain it."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Ways to raise productivity",
+     "card": [
+      "Productivity is the output made from the resources used, such as output per hour worked. A business raises it by making more from the same inputs, or the same output from fewer inputs.",
+      [
+       "Training and equipment",
+       "Training gives workers more skill, so they work faster and make fewer errors. New equipment and technology can let each worker make more in an hour."
+      ],
+      [
+       "Research",
+       "Research can find better products and faster ways to work. A business may spend money on it now and gain higher productivity later."
+      ],
+      [
+       "Cutting waste",
+       "Methods such as just-in-time stock cut waste. The business orders materials to arrive just as they are needed, so less is stored, spoiled or left unused."
+      ]
+     ],
+     "remember": "Productivity rises when workers or methods get more output from the same resources.",
+     "a": {
+      "q": "Which change is most likely to raise a bakery's productivity?",
+      "opts": [
+       "Buying a mixer so each baker makes more loaves per hour",
+       "Raising the price of every loaf sold at the shop",
+       "Opening the shop for two extra hours each day",
+       "Hiring two more bakers to make the same number of loaves"
+      ],
+      "why": "A faster mixer lets each baker make more from each hour worked, so output per hour rises. Opening longer adds hours but does not raise output per hour, which is why it is tempting but wrong.",
+      "clue": "Look for more output from each hour or each input."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya runs a bike repair shop in Hobart. She keeps few spare parts and orders each one only when a customer's repair needs it, so fewer parts sit unused or get damaged. Which method is she using?",
+      "opts": [
+       "Just-in-time stock, which cuts waste",
+       "Staff training, which builds worker skill",
+       "Research, which finds new products",
+       "New technology, which speeds up each task"
+      ],
+      "why": "Ordering parts only when they are needed is just-in-time stock, and it cuts waste from unused or damaged parts. Training is tempting because it also lifts productivity, but nothing in the case involves teaching staff new skills.",
+      "clue": "Think about when the parts are ordered."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Buying a mixer so each baker makes more loaves per hour",
+      "also_right": []
+     },
+     "b": {
+      "best": "Just-in-time stock, which cuts waste",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The first bullet defines productivity ('the output made from the resources used, such as output per hour worked'), which is point 1's idea. This point should only mention productivity, not define it again."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option says 'more loaves per hour', repeating the card's 'output per hour' and the clue's 'more output from each hour'. A student could match the words without understanding the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer. The card re-defines productivity, which belongs to point 1, and question a's right option echoes the definition and clue so closely that it gives the answer away."
+    },
+    "flags": [
+     "Card, other: The first bullet defines productivity ('the output made from the resources used, such as output per hour worked'), which is point 1's idea. This point should only mention productivity, not define it again.",
+     "Question a, wording: The right option says 'more loaves per hour', repeating the card's 'output per hour' and the clue's 'more output from each hour'. A student could match the words without understanding the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Ways to raise productivity",
+     "card": [
+      "A business raises productivity when it makes more from the same inputs, or the same output from fewer inputs. Adding more hours or more workers can raise output, but not productivity on its own.",
+      [
+       "Training and equipment",
+       "Training gives workers more skill, so they work faster and make fewer errors. New equipment and technology can let each worker make more in the same time."
+      ],
+      [
+       "Research",
+       "Research can find better products and faster ways to work. A business may spend money on it now and gain higher productivity later."
+      ],
+      [
+       "Cutting waste",
+       "Methods such as just-in-time stock cut waste. The business orders materials to arrive just as they are needed, so less is stored, spoiled or left unused."
+      ]
+     ],
+     "remember": "Training, equipment, research and less waste all help each input make more.",
+     "a": {
+      "q": "A bakery wants to raise its productivity. Which change would do that?",
+      "opts": [
+       "Buying an oven that bakes twice as many trays at once",
+       "Raising the price of every loaf the shop sells",
+       "Opening the shop for two extra hours each day",
+       "Hiring two more bakers to make the same loaves"
+      ],
+      "why": "A bigger oven is new equipment, so the same bakers make more bread in the same time. Opening longer is tempting because it adds output, but it adds hours too, so each hour makes no more than before.",
+      "clue": "Which change gets more from the same workers and time?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya runs a bike repair shop in Hobart. She keeps few spare parts and orders each one only when a customer's repair needs it, so fewer parts sit unused or get damaged. Which method is she using?",
+      "opts": [
+       "Just-in-time stock, which cuts waste",
+       "Staff training, which builds worker skill",
+       "Research, which finds new products",
+       "New technology, which speeds up each task"
+      ],
+      "why": "Ordering parts only when they are needed is just-in-time stock, and it cuts waste from unused or damaged parts. Training is tempting because it also lifts productivity, but nothing in the case involves teaching staff new skills.",
+      "clue": "Think about when the parts are ordered."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Buying an oven that bakes twice as many trays at once",
+       "also_right": []
+      },
+      "b": {
+       "best": "Just-in-time stock, which cuts waste",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "The first bullet defines productivity (more output from the same inputs, and why extra hours or workers do not raise it). That definition belongs to point 1, 'What productivity is', so this card should only mention it rather than explain it."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and have one clear right answer each. The only issue is that the card's first bullet re-teaches the definition of productivity, which belongs to point 1."
+     },
+     "flags": [
+      "Card, other: The first bullet defines productivity (more output from the same inputs, and why extra hours or workers do not raise it). That definition belongs to point 1, 'What productivity is', so this card should only mention it rather than explain it."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:40Z",
+   "step": "write",
+   "version": {
+    "title": "Ways to raise productivity",
+    "card": [
+     [
+      "Training",
+      "gives workers more skill, so they work faster and make fewer errors."
+     ],
+     [
+      "Equipment and technology",
+      "new machines and software can let each worker make more in the same time."
+     ],
+     [
+      "Research",
+      "can find better products and faster ways to work. A business may spend money on it now and gain higher productivity later."
+     ],
+     [
+      "Cutting waste",
+      "methods such as just-in-time stock order materials to arrive just as they are needed, so less is stored, spoiled or left unused."
+     ]
+    ],
+    "remember": "Training, equipment, research and less waste all help each input make more.",
+    "a": {
+     "q": "A small software firm spends money on research this year, though its output has not risen yet. Why might it do this?",
+     "opts": [
+      "Research can find faster ways to work later on",
+      "Research cuts the stock the firm has to store",
+      "Research gives staff new skills straight away",
+      "Research lowers the firm's costs this same year"
+     ],
+     "why": "Research can find better products and faster ways to work, so spending on it now may lift productivity later. Cutting stock is what just-in-time methods do, and building staff skills is what training does.",
+     "clue": "When does spending on research tend to pay off?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya runs a bike repair shop in Hobart. Instead of keeping shelves of spare parts, she orders each part when a repair calls for it, so fewer parts sit unused or get damaged. Which method is this?",
+     "opts": [
+      "Just-in-time stock, which cuts waste",
+      "Staff training, which builds worker skill",
+      "Research, which finds new products",
+      "New technology, which speeds up each task"
+     ],
+     "why": "Ordering parts as they are needed is just-in-time stock, and it cuts waste from unused or damaged parts. Training is tempting because it also lifts productivity, but nothing in the case involves teaching staff new skills.",
+     "clue": "Think about when the parts are ordered."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Research can find faster ways to work later on",
+     "also_right": []
+    },
+    "b": {
+     "best": "Just-in-time stock, which cuts waste",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Ways to raise productivity",
+  "card": [
+   [
+    "Training",
+    "gives workers more skill, so they work faster and make fewer errors."
+   ],
+   [
+    "Equipment and technology",
+    "new machines and software can let each worker make more in the same time."
+   ],
+   [
+    "Research",
+    "can find better products and faster ways to work. A business may spend money on it now and gain higher productivity later."
+   ],
+   [
+    "Cutting waste",
+    "methods such as just-in-time stock order materials to arrive just as they are needed, so less is stored, spoiled or left unused."
+   ]
+  ],
+  "remember": "Training, equipment, research and less waste all help each input make more.",
+  "a": {
+   "q": "A small software firm spends money on research this year, though its output has not risen yet. Why might it do this?",
+   "opts": [
+    "Research can find faster ways to work later on",
+    "Research cuts the stock the firm has to store",
+    "Research gives staff new skills straight away",
+    "Research lowers the firm's costs this same year"
+   ],
+   "why": "Research can find better products and faster ways to work, so spending on it now may lift productivity later. Cutting stock is what just-in-time methods do, and building staff skills is what training does.",
+   "clue": "When does spending on research tend to pay off?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike repair shop in Hobart. Instead of keeping shelves of spare parts, she orders each part when a repair calls for it, so fewer parts sit unused or get damaged. Which method is this?",
+   "opts": [
+    "Just-in-time stock, which cuts waste",
+    "Staff training, which builds worker skill",
+    "Research, which finds new products",
+    "New technology, which speeds up each task"
+   ],
+   "why": "Ordering parts as they are needed is just-in-time stock, and it cuts waste from unused or damaged parts. Training is tempting because it also lifts productivity, but nothing in the case involves teaching staff new skills.",
+   "clue": "Think about when the parts are ordered."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Research can find faster ways to work later on",
+   "also_right": []
+  },
+  "b": {
+   "best": "Just-in-time stock, which cuts waste",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Ways to raise productivity",
+  "card": [
+   [
+    "Training",
+    "gives workers more skill, so they work faster and make fewer errors."
+   ],
+   [
+    "Equipment and technology",
+    "new machines and software can let each worker make more in the same time."
+   ],
+   [
+    "Research",
+    "can find better products and faster ways to work. A business may spend money on it now and gain higher productivity later."
+   ],
+   [
+    "Cutting waste",
+    "methods such as just-in-time stock order materials to arrive just as they are needed, so less is stored, spoiled or left unused."
+   ]
+  ],
+  "remember": "Training, equipment, research and less waste all help each input make more.",
+  "a": {
+   "q": "A small software firm spends money on research this year, though its output has not risen yet. Why might it do this?",
+   "opts": [
+    "Research can find faster ways to work later on",
+    "Research cuts the stock the firm has to store",
+    "Research gives staff new skills straight away",
+    "Research lowers the firm's costs this same year"
+   ],
+   "why": "Research can find better products and faster ways to work, so spending on it now may lift productivity later. Cutting stock is what just-in-time methods do, and building staff skills is what training does.",
+   "clue": "When does spending on research tend to pay off?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike repair shop in Hobart. Instead of keeping shelves of spare parts, she orders each part when a repair calls for it, so fewer parts sit unused or get damaged. Which method is this?",
+   "opts": [
+    "Just-in-time stock, which cuts waste",
+    "Staff training, which builds worker skill",
+    "Research, which finds new products",
+    "New technology, which speeds up each task"
+   ],
+   "why": "Ordering parts as they are needed is just-in-time stock, and it cuts waste from unused or damaged parts. Training is tempting because it also lifts productivity, but nothing in the case involves teaching staff new skills.",
+   "clue": "Think about when the parts are ordered."
+  }
+ },
+ "checked_by": "claude-code"
+}

@@ -1,0 +1,381 @@
+{
+ "id": "sci-peer-review-publication",
+ "title": "Peer review and publication",
+ "brief": "07a0752cf0ea",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, write",
+  "2026-11-04T09:36:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:14Z write: done",
+  "2026-11-04T09:58:33Z check: flagged",
+  "2026-11-04T10:08:06Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00462,
+  "check": 0.00958,
+  "fix": 0.01881,
+  "recheck": 0.00886
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: The remember line says science 'is validated' by review and repetition. The card only says checking 'helps validate' knowledge and that even well-checked findings can change, so the remember line makes validation sound more final than the card does.",
+ "rejected": {
+  "title": "Peer review and publication",
+  "card": [
+   "Scientists publish their methods and results in journals. Other people can then see exactly what was done and how the conclusions were reached.",
+   [
+    "Peer review",
+    "before a journal publishes a study, independent experts in the same field read it. They check whether the methods suit the question and whether the results support the conclusions."
+   ],
+   [
+    "Replication",
+    "after publication, other scientists repeat the investigation using the published methods. If they get similar results, confidence in the finding grows."
+   ],
+   "Checking before and after publication helps validate scientific knowledge. Even a well-checked finding can change if new evidence appears."
+  ],
+  "remember": "Science is validated when other experts check it, first in review and then by repeating it.",
+  "a": {
+   "q": "Why do scientists publish the methods they used, as well as their results?",
+   "opts": [
+    "So other scientists can check and repeat the work",
+    "So other scientists can claim the findings as their own",
+    "So the results do not need to be tested any further",
+    "So the journal can decide which topics get studied"
+   ],
+   "why": "Published methods let other experts judge whether the work was sound and repeat it to see if they get similar results. Publishing does not end testing: even well-checked findings can change when new evidence appears.",
+   "clue": "Think about what another scientist needs in order to repeat a study."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Lee in Perth publishes a study showing a new fertiliser makes tomato plants grow taller. Another team follows her published methods and gets similar results. Which step is this, and what does it do?",
+   "opts": [
+    "Replication, which builds confidence in her finding",
+    "Peer review, which builds confidence in her finding",
+    "Replication, which means no more testing is needed",
+    "Peer review, which means no more testing is needed"
+   ],
+   "why": "Repeating a published study with similar results is replication, and it builds confidence in the finding. Peer review is the check by experts before publication, so it is a different step. No check ends testing, because new evidence can still change a finding.",
+   "clue": "Did the second team check the work before or after it was published?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: The remember line says science 'is validated' by review and repetition. The card only says checking 'helps validate' knowledge and that even well-checked findings can change, so the remember line makes validation sound more final than the card does."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Peer review and publication",
+     "card": [
+      "Scientists publish their methods and results in journals. Other people can then see exactly what was done and how the conclusions were reached.",
+      [
+       "Peer review",
+       "before a journal publishes a study, independent experts in the same field read it. They check whether the methods suit the question and whether the results support the conclusions."
+      ],
+      [
+       "Replication",
+       "after publication, other scientists repeat the investigation using the published methods. If they get similar results, confidence in the finding grows."
+      ],
+      "Checking before and after publication helps validate scientific knowledge. A claim that has not been checked by others is not yet well supported."
+     ],
+     "remember": "Science is validated when other experts check it, first in review and then by repeating it.",
+     "a": {
+      "q": "Why do scientists publish the methods they used, as well as their results?",
+      "opts": [
+       "So other scientists can check and repeat the work",
+       "So other scientists can claim the findings as their own",
+       "So the results do not need to be tested any further",
+       "So the journal can decide which topics get studied"
+      ],
+      "why": "Published methods let other experts judge whether the work was sound and repeat it to see if they get similar results. Publishing results alone would not allow this. Publishing does not mean the findings need no further testing.",
+      "clue": "Think about what another scientist needs in order to repeat a study."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dr Lee in Perth finds that a new fertiliser makes tomato plants grow taller. Another team follows her published methods and gets similar results. What does this show?",
+      "opts": [
+       "Her finding is more likely to be reliable",
+       "Her finding has now been peer reviewed",
+       "Her finding is proven to be true forever",
+       "Her finding must apply to every type of plant"
+      ],
+      "why": "Repeating a study with similar results builds confidence in the finding. This is replication, which happens after publication. Peer review is the check by experts before publication, so it is a different step.",
+      "clue": "Did the second team check the work before or after it was published?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "So other scientists can check and repeat the work",
+      "also_right": []
+     },
+     "b": {
+      "best": "Her finding is more likely to be reliable",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a hedge ('more likely'). The others are absolutes ('must apply to every type', 'proven to be true forever') or a flat claim, so a test-savvy student could pick it without understanding replication."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the intended answers are correct. In question b, the right option is the only hedged one among absolute-sounding distractors, which may give it away."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one with a hedge ('more likely'). The others are absolutes ('must apply to every type', 'proven to be true forever') or a flat claim, so a test-savvy student could pick it without understanding replication."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Peer review and publication",
+     "card": [
+      "Scientists publish their methods and results in journals. Other people can then see exactly what was done and how the conclusions were reached.",
+      [
+       "Peer review",
+       "before a journal publishes a study, independent experts in the same field read it. They check whether the methods suit the question and whether the results support the conclusions."
+      ],
+      [
+       "Replication",
+       "after publication, other scientists repeat the investigation using the published methods. If they get similar results, confidence in the finding grows."
+      ],
+      "Checking before and after publication helps validate scientific knowledge. Even a well-checked finding can change if new evidence appears."
+     ],
+     "remember": "Science is validated when other experts check it, first in review and then by repeating it.",
+     "a": {
+      "q": "Why do scientists publish the methods they used, as well as their results?",
+      "opts": [
+       "So other scientists can check and repeat the work",
+       "So other scientists can claim the findings as their own",
+       "So the results do not need to be tested any further",
+       "So the journal can decide which topics get studied"
+      ],
+      "why": "Published methods let other experts judge whether the work was sound and repeat it to see if they get similar results. Publishing does not end testing: even well-checked findings can change when new evidence appears.",
+      "clue": "Think about what another scientist needs in order to repeat a study."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dr Lee in Perth publishes a study showing a new fertiliser makes tomato plants grow taller. Another team follows her published methods and gets similar results. Which step is this, and what does it do?",
+      "opts": [
+       "Replication, which builds confidence in her finding",
+       "Peer review, which builds confidence in her finding",
+       "Replication, which means no more testing is needed",
+       "Peer review, which means no more testing is needed"
+      ],
+      "why": "Repeating a published study with similar results is replication, and it builds confidence in the finding. Peer review is the check by experts before publication, so it is a different step. No check ends testing, because new evidence can still change a finding.",
+      "clue": "Did the second team check the work before or after it was published?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "So other scientists can check and repeat the work",
+       "also_right": []
+      },
+      "b": {
+       "best": "Replication, which builds confidence in her finding",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The remember line says science 'is validated' by review and repetition. The card only says checking 'helps validate' knowledge and that even well-checked findings can change, so the remember line makes validation sound more final than the card does."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, each with one clear right answer. The only issue is that the remember line says science 'is validated', which overstates the card's 'helps validate'."
+     },
+     "flags": [
+      "Remember, other: The remember line says science 'is validated' by review and repetition. The card only says checking 'helps validate' knowledge and that even well-checked findings can change, so the remember line makes validation sound more final than the card does."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "Peer review and publication",
+    "card": [
+     "Scientists publish their methods and results in journals. Other people can then see exactly what was done and how the conclusions were reached.",
+     [
+      "Peer review",
+      "before a journal publishes a study, independent experts in the same field read it. They check whether the methods suit the question and whether the results support the conclusions."
+     ],
+     [
+      "Replication",
+      "after publication, other scientists repeat the investigation using the published methods. If they get similar results, confidence in the finding grows."
+     ],
+     "Checking before and after publication helps validate scientific knowledge. Even a well-checked finding can change if new evidence appears."
+    ],
+    "remember": "Checks by other experts, in review and by repeating the work, build confidence in a finding, but it can still change.",
+    "a": {
+     "q": "Why does a scientist include the methods in a published paper, and not just the results?",
+     "opts": [
+      "So other scientists can check and repeat the work",
+      "So other scientists can claim the findings as theirs",
+      "So the results can skip any further testing",
+      "So the journal can decide which topics get studied"
+     ],
+     "why": "Published methods let other experts judge whether the work was sound and repeat it to see if they get similar results. Publishing does not end testing: even well-checked findings can change when new evidence appears.",
+     "clue": "Think about what another scientist needs in order to repeat a study."
+    },
+    "b": {
+     "d": 3,
+     "q": "Dr Nguyen in Hobart publishes a study finding that a new feed helps hens lay more eggs. A team in Darwin follows her published methods and gets similar results. Which step is this, and what does it do?",
+     "opts": [
+      "Replication, which builds confidence in her finding",
+      "Peer review, which builds confidence in her finding",
+      "Replication, which means no more testing is needed",
+      "Peer review, which means no more testing is needed"
+     ],
+     "why": "Repeating a published study with similar results is replication, and it builds confidence in the finding. Peer review is the check by experts before publication, so it is a different step. No check ends testing, because new evidence can still change a finding.",
+     "clue": "Did the Darwin team check the work before or after it was published?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "So other scientists can check and repeat the work",
+     "also_right": []
+    },
+    "b": {
+     "best": "Replication, which builds confidence in her finding",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Peer review and publication",
+  "card": [
+   "Scientists publish their methods and results in journals. Other people can then see exactly what was done and how the conclusions were reached.",
+   [
+    "Peer review",
+    "before a journal publishes a study, independent experts in the same field read it. They check whether the methods suit the question and whether the results support the conclusions."
+   ],
+   [
+    "Replication",
+    "after publication, other scientists repeat the investigation using the published methods. If they get similar results, confidence in the finding grows."
+   ],
+   "Checking before and after publication helps validate scientific knowledge. Even a well-checked finding can change if new evidence appears."
+  ],
+  "remember": "Checks by other experts, in review and by repeating the work, build confidence in a finding, but it can still change.",
+  "a": {
+   "q": "Why does a scientist include the methods in a published paper, and not just the results?",
+   "opts": [
+    "So other scientists can check and repeat the work",
+    "So other scientists can claim the findings as theirs",
+    "So the results can skip any further testing",
+    "So the journal can decide which topics get studied"
+   ],
+   "why": "Published methods let other experts judge whether the work was sound and repeat it to see if they get similar results. Publishing does not end testing: even well-checked findings can change when new evidence appears.",
+   "clue": "Think about what another scientist needs in order to repeat a study."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Nguyen in Hobart publishes a study finding that a new feed helps hens lay more eggs. A team in Darwin follows her published methods and gets similar results. Which step is this, and what does it do?",
+   "opts": [
+    "Replication, which builds confidence in her finding",
+    "Peer review, which builds confidence in her finding",
+    "Replication, which means no more testing is needed",
+    "Peer review, which means no more testing is needed"
+   ],
+   "why": "Repeating a published study with similar results is replication, and it builds confidence in the finding. Peer review is the check by experts before publication, so it is a different step. No check ends testing, because new evidence can still change a finding.",
+   "clue": "Did the Darwin team check the work before or after it was published?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "So other scientists can check and repeat the work",
+   "also_right": []
+  },
+  "b": {
+   "best": "Replication, which builds confidence in her finding",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Peer review and publication",
+  "card": [
+   "Scientists publish their methods and results in journals. Other people can then see exactly what was done and how the conclusions were reached.",
+   [
+    "Peer review",
+    "before a journal publishes a study, independent experts in the same field read it. They check whether the methods suit the question and whether the results support the conclusions."
+   ],
+   [
+    "Replication",
+    "after publication, other scientists repeat the investigation using the published methods. If they get similar results, confidence in the finding grows."
+   ],
+   "Checking before and after publication helps validate scientific knowledge. Even a well-checked finding can change if new evidence appears."
+  ],
+  "remember": "Checks by other experts, in review and by repeating the work, build confidence in a finding, but it can still change.",
+  "a": {
+   "q": "Why does a scientist include the methods in a published paper, and not just the results?",
+   "opts": [
+    "So other scientists can check and repeat the work",
+    "So other scientists can claim the findings as theirs",
+    "So the results can skip any further testing",
+    "So the journal can decide which topics get studied"
+   ],
+   "why": "Published methods let other experts judge whether the work was sound and repeat it to see if they get similar results. Publishing does not end testing: even well-checked findings can change when new evidence appears.",
+   "clue": "Think about what another scientist needs in order to repeat a study."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Nguyen in Hobart publishes a study finding that a new feed helps hens lay more eggs. A team in Darwin follows her published methods and gets similar results. Which step is this, and what does it do?",
+   "opts": [
+    "Replication, which builds confidence in her finding",
+    "Peer review, which builds confidence in her finding",
+    "Replication, which means no more testing is needed",
+    "Peer review, which means no more testing is needed"
+   ],
+   "why": "Repeating a published study with similar results is replication, and it builds confidence in the finding. Peer review is the check by experts before publication, so it is a different step. No check ends testing, because new evidence can still change a finding.",
+   "clue": "Did the Darwin team check the work before or after it was published?"
+  }
+ },
+ "checked_by": "claude-code"
+}

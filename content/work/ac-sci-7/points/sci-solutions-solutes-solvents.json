@@ -1,0 +1,381 @@
+{
+ "id": "sci-solutions-solutes-solvents",
+ "title": "Solutions, solutes and solvents",
+ "brief": "1b3485563026",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:43Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:12Z write: done",
+  "2026-11-04T09:58:32Z check: flagged",
+  "2026-11-04T14:58:53Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00438,
+  "check": 0.01019,
+  "fix": 0.0166,
+  "recheck": 0.01151
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only hedged one ('many ... but not all'), while every distractor is an absolute ('every', 'only'). A test-wise student could pick it without knowing the idea. Consider adding a hedged but wrong distractor.",
+ "rejected": {
+  "title": "Solutions, solutes and solvents",
+  "card": [
+   "A solution is a mixture in which one substance dissolves in another and spreads out evenly. You cannot see separate parts in it.",
+   [
+    "Solute",
+    "the substance that dissolves, such as salt in salty water."
+   ],
+   [
+    "Solvent",
+    "the substance that does the dissolving, such as the water in salty water."
+   ],
+   "Water dissolves so many substances, including some gases such as oxygen, that it is called the universal solvent. This does not mean it dissolves everything."
+  ],
+  "remember": "Solute + solvent = solution. Water dissolves a lot, so it is the universal solvent.",
+  "a": {
+   "q": "Mia stirs sugar into hot tea until it disappears. Which part of this is the solute?",
+   "opts": [
+    "The sugar",
+    "The tea",
+    "The sweet tea",
+    "The steam"
+   ],
+   "why": "The sugar dissolves and spreads out evenly, so it is the solute. The tea is the solvent because it does the dissolving, so calling it the solute reverses the two roles. The sweet tea is the whole solution.",
+   "clue": "Which substance is the one that dissolves?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam stirs a spoon of salt into water and the salt disappears. A student says the water must be able to dissolve everything. Which reply is correct?",
+   "opts": [
+    "Water dissolves many substances, but not all of them",
+    "Water dissolves every substance, so it is universal",
+    "Water dissolves only solids, such as salt and sugar",
+    "Only salt dissolves in water, not other substances"
+   ],
+   "why": "Water is called the universal solvent because it dissolves so many substances, not all of them. The reply that water dissolves every substance misreads the name as meaning everything. Water also dissolves some gases, so it does not dissolve only solids.",
+   "clue": "Think about what universal means in this name."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the only hedged one ('many ... but not all'), while every distractor is an absolute ('every', 'only'). A test-wise student could pick it without knowing the idea. Consider adding a hedged but wrong distractor."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Solutions, solutes and solvents",
+     "card": [
+      "A solution is a mixture in which one substance dissolves in another and spreads out evenly. You cannot see separate parts in it.",
+      [
+       "Solute",
+       "the substance that dissolves, such as salt in salty water."
+      ],
+      [
+       "Solvent",
+       "the substance that does the dissolving, such as the water in salty water."
+      ],
+      "Water dissolves so many substances that it is called the universal solvent. This does not mean it dissolves everything."
+     ],
+     "remember": "Solute + solvent = solution. Water dissolves a lot, so it is the universal solvent.",
+     "a": {
+      "q": "Mia stirs sugar into hot tea until it disappears. Which part of this is the solute?",
+      "opts": [
+       "The sugar",
+       "The tea",
+       "The spoon",
+       "The cup"
+      ],
+      "why": "The sugar dissolves and spreads out evenly, so it is the solute. The tea is the solvent because it does the dissolving, so calling it the solute reverses the two roles.",
+      "clue": "Which substance is the one that dissolves?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Liam stirs a spoon of salt into water and the salt disappears. A student says the water must be able to dissolve everything. Which reply is correct?",
+      "opts": [
+       "Water dissolves a lot, but not everything",
+       "Water dissolves everything, so it is the universal solvent",
+       "Water dissolves only solids such as salt",
+       "Water dissolves nothing until it is heated"
+      ],
+      "why": "Water is called the universal solvent because it dissolves so many substances, not all of them. The second option misreads the name as meaning everything.",
+      "clue": "Think about what universal means in this name."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The sugar",
+      "also_right": []
+     },
+     "b": {
+      "best": "Water dissolves a lot, but not everything",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says 'The second option misreads the name as meaning everything', but options are shown in random order. In this list, 'Water dissolves everything, so it is the universal solvent' comes first, so the explanation points students to the wrong option. Name the option by its wording, not its position."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate and clear. The one problem is that the explanation for question b refers to 'the second option' by position, which will not match the shuffled order students see."
+    },
+    "flags": [
+     "Question b, other: Why (b) says 'The second option misreads the name as meaning everything', but options are shown in random order. In this list, 'Water dissolves everything, so it is the universal solvent' comes first, so the explanation points students to the wrong option. Name the option by its wording, not its position."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Solutions, solutes and solvents",
+     "card": [
+      "A solution is a mixture in which one substance dissolves in another and spreads out evenly. You cannot see separate parts in it.",
+      [
+       "Solute",
+       "the substance that dissolves, such as salt in salty water."
+      ],
+      [
+       "Solvent",
+       "the substance that does the dissolving, such as the water in salty water."
+      ],
+      "Water dissolves so many substances, including some gases such as oxygen, that it is called the universal solvent. This does not mean it dissolves everything."
+     ],
+     "remember": "Solute + solvent = solution. Water dissolves a lot, so it is the universal solvent.",
+     "a": {
+      "q": "Mia stirs sugar into hot tea until it disappears. Which part of this is the solute?",
+      "opts": [
+       "The sugar",
+       "The tea",
+       "The sweet tea",
+       "The steam"
+      ],
+      "why": "The sugar dissolves and spreads out evenly, so it is the solute. The tea is the solvent because it does the dissolving, so calling it the solute reverses the two roles. The sweet tea is the whole solution.",
+      "clue": "Which substance is the one that dissolves?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Liam stirs a spoon of salt into water and the salt disappears. A student says the water must be able to dissolve everything. Which reply is correct?",
+      "opts": [
+       "Water dissolves many substances, but not all of them",
+       "Water dissolves every substance, so it is universal",
+       "Water dissolves only solids, such as salt and sugar",
+       "Only salt dissolves in water, not other substances"
+      ],
+      "why": "Water is called the universal solvent because it dissolves so many substances, not all of them. The reply that water dissolves every substance misreads the name as meaning everything. Water also dissolves some gases, so it does not dissolve only solids.",
+      "clue": "Think about what universal means in this name."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The sugar",
+       "also_right": []
+      },
+      "b": {
+       "best": "Water dissolves many substances, but not all of them",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only hedged one ('many ... but not all'), while every distractor is an absolute ('every', 'only'). A test-wise student could pick it without knowing the idea. Consider adding a hedged but wrong distractor."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and answers are correct. In question b, the right option is the only hedged choice, so it stands out from the absolute distractors."
+     },
+     "flags": [
+      "Question b, wording: The right option is the only hedged one ('many ... but not all'), while every distractor is an absolute ('every', 'only'). A test-wise student could pick it without knowing the idea. Consider adding a hedged but wrong distractor."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Solutions, solutes and solvents",
+    "card": [
+     "A solution is a mixture in which one substance dissolves in another and spreads out evenly. You cannot see separate parts in it.",
+     [
+      "Solute",
+      "the substance that dissolves, such as salt in salty water."
+     ],
+     [
+      "Solvent",
+      "the substance that does the dissolving, such as the water in salty water."
+     ],
+     "Water dissolves so many substances, including some gases such as oxygen, that it is called the universal solvent. This does not mean it dissolves everything."
+    ],
+    "remember": "Solute + solvent = solution. Water dissolves a lot, so it is the universal solvent.",
+    "a": {
+     "q": "Ava stirs cordial powder into cold water until she can no longer see it. In this solution, which is the solvent?",
+     "opts": [
+      "The water",
+      "The cordial powder",
+      "The finished cordial",
+      "The colour in the drink"
+     ],
+     "why": "The water does the dissolving, so it is the solvent. The powder is the solute, because it is the substance that dissolves, so picking it reverses the two roles. The finished cordial is the whole solution.",
+     "clue": "Which substance dissolves the other one?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Noah reads that water is called the universal solvent. Which statement explains the name correctly?",
+     "opts": [
+      "It dissolves a great many substances, though not all",
+      "It dissolves almost every solid, though not any gases",
+      "It is found in most places on Earth, so it is common",
+      "It dissolves every substance if stirred long enough"
+     ],
+     "why": "Water is called the universal solvent because it dissolves so many substances, but it does not dissolve everything. It also dissolves some gases, such as oxygen, so the option about no gases is wrong. The name is about dissolving, not about where water is found.",
+     "clue": "The name comes from what water does to other substances."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The water",
+     "also_right": []
+    },
+    "b": {
+     "best": "It dissolves a great many substances, though not all",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Solutions, solutes and solvents",
+  "card": [
+   "A solution is a mixture in which one substance dissolves in another and spreads out evenly. You cannot see separate parts in it.",
+   [
+    "Solute",
+    "the substance that dissolves, such as salt in salty water."
+   ],
+   [
+    "Solvent",
+    "the substance that does the dissolving, such as the water in salty water."
+   ],
+   "Water dissolves so many substances, including some gases such as oxygen, that it is called the universal solvent. This does not mean it dissolves everything."
+  ],
+  "remember": "Solute + solvent = solution. Water dissolves a lot, so it is the universal solvent.",
+  "a": {
+   "q": "Ava stirs cordial powder into cold water until she can no longer see it. In this solution, which is the solvent?",
+   "opts": [
+    "The water",
+    "The cordial powder",
+    "The finished cordial",
+    "The colour in the drink"
+   ],
+   "why": "The water does the dissolving, so it is the solvent. The powder is the solute, because it is the substance that dissolves, so picking it reverses the two roles. The finished cordial is the whole solution.",
+   "clue": "Which substance dissolves the other one?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Noah reads that water is called the universal solvent. Which statement explains the name correctly?",
+   "opts": [
+    "It dissolves a great many substances, though not all",
+    "It dissolves almost every solid, though not any gases",
+    "It is found in most places on Earth, so it is common",
+    "It dissolves every substance if stirred long enough"
+   ],
+   "why": "Water is called the universal solvent because it dissolves so many substances, but it does not dissolve everything. It also dissolves some gases, such as oxygen, so the option about no gases is wrong. The name is about dissolving, not about where water is found.",
+   "clue": "The name comes from what water does to other substances."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The water",
+   "also_right": []
+  },
+  "b": {
+   "best": "It dissolves a great many substances, though not all",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Solutions, solutes and solvents",
+  "card": [
+   "A solution is a mixture in which one substance dissolves in another and spreads out evenly. You cannot see separate parts in it.",
+   [
+    "Solute",
+    "the substance that dissolves, such as salt in salty water."
+   ],
+   [
+    "Solvent",
+    "the substance that does the dissolving, such as the water in salty water."
+   ],
+   "Water dissolves so many substances, including some gases such as oxygen, that it is called the universal solvent. This does not mean it dissolves everything."
+  ],
+  "remember": "Solute + solvent = solution. Water dissolves a lot, so it is the universal solvent.",
+  "a": {
+   "q": "Ava stirs cordial powder into cold water until she can no longer see it. In this solution, which is the solvent?",
+   "opts": [
+    "The water",
+    "The cordial powder",
+    "The finished cordial",
+    "The colour in the drink"
+   ],
+   "why": "The water does the dissolving, so it is the solvent. The powder is the solute, because it is the substance that dissolves, so picking it reverses the two roles. The finished cordial is the whole solution.",
+   "clue": "Which substance dissolves the other one?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Noah reads that water is called the universal solvent. Which statement explains the name correctly?",
+   "opts": [
+    "It dissolves a great many substances, though not all",
+    "It dissolves almost every solid, though not any gases",
+    "It is found in most places on Earth, so it is common",
+    "It dissolves every substance if stirred long enough"
+   ],
+   "why": "Water is called the universal solvent because it dissolves so many substances, but it does not dissolve everything. It also dissolves some gases, such as oxygen, so the option about no gases is wrong. The name is about dissolving, not about where water is found.",
+   "clue": "The name comes from what water does to other substances."
+  }
+ },
+ "checked_by": "claude-code"
+}

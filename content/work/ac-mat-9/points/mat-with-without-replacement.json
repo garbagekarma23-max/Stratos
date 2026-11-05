@@ -1,0 +1,221 @@
+{
+ "id": "mat-with-without-replacement",
+ "title": "With and without replacement",
+ "brief": "526f8f2209f5",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, write",
+  "2026-11-04T09:36:57Z write: done",
+  "2026-11-04T09:47:09Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00676,
+  "check": 0.01221,
+  "fix": 0.0151,
+  "recheck": 0.00652
+ },
+ "draft": {
+  "title": "With and without replacement",
+  "card": [
+   [
+    "With replacement",
+    "The item is put back after each pick. The total and the counts stay the same, so the probability is the same for every pick."
+   ],
+   [
+    "Without replacement",
+    "The item is kept out after each pick. The total drops by 1, and the count of the picked type drops by 1 as well."
+   ],
+   "Example: a bag has 3 red and 2 blue counters. P(red) = 3/5 on the first pick.",
+   "If a red is kept out, 2 red and 2 blue are left, so P(red) on the second pick = 2/4. If the red is put back, it is still 3/5."
+  ],
+  "remember": "Replace it and the chances stay put. Keep it out and the counts and the total change.",
+  "a": {
+   "q": "A bag has 4 green and 6 yellow marbles. One green marble is picked and kept out. What is P(green) on the next pick?",
+   "opts": [
+    "3/9",
+    "4/9",
+    "3/10",
+    "4/10"
+   ],
+   "why": "Without replacement, 9 marbles are left and 3 are green, so P = 3/9. The answer 3/10 is tempting, but the total must drop to 9 as well.",
+   "clue": "Both the green count and the total change."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a box of 5 red pens and 3 black pens. She picks two pens without replacement. What is P(both red)?",
+   "opts": [
+    "5/8 × 4/7",
+    "5/8 × 5/8",
+    "5/8 × 4/8",
+    "4/8 × 4/7"
+   ],
+   "why": "The first pick is 5/8. With one red pen kept out, 4 red are left among 7 pens, so the second pick is 4/7. Using 5/8 again would only be right with replacement.",
+   "clue": "After the first pick, count the reds and the pens left."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3/9",
+   "also_right": []
+  },
+  "b": {
+   "best": "5/8 × 4/7",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question asks for P(both red), which means multiplying the two pick probabilities. The card never teaches this. It only shows how the probability changes on the second pick, so students must already know the multiplication rule."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue says both the green count and the total change. 3/9 is the only option where both have changed, so the clue gives the answer away without any calculation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. Question b needs the multiplication rule for compound events, which the card does not teach, and question a's clue points straight to the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The question asks for P(both red), which means multiplying the two pick probabilities. The card never teaches this. It only shows how the probability changes on the second pick, so students must already know the multiplication rule.",
+  "Question a, other: The clue says both the green count and the total change. 3/9 is the only option where both have changed, so the clue gives the answer away without any calculation."
+ ],
+ "proposal": {
+  "title": "With and without replacement",
+  "card": [
+   [
+    "With replacement",
+    "The item is put back after each pick. The total and the counts stay the same, so the probability is the same for every pick."
+   ],
+   [
+    "Without replacement",
+    "The item is kept out after each pick. The total drops by 1, and the count of the picked type drops by 1. The counts of other types stay the same."
+   ],
+   "Example: a bag has 3 red and 2 blue counters. P(red) = 3/5 on the first pick.",
+   "If a red is kept out, 2 red and 2 blue are left, so P(red) on the second pick = 2/4. If the red is put back, it is still 3/5."
+  ],
+  "remember": "Replace it and the chances stay put. Keep it out and the counts and the total change.",
+  "a": {
+   "q": "A bag has 4 green and 6 yellow marbles. One green marble is picked and kept out. What is P(green) on the next pick?",
+   "opts": [
+    "3/9",
+    "4/9",
+    "3/10",
+    "4/10"
+   ],
+   "why": "Without replacement, 9 marbles are left and 3 of them are green, so P(green) = 3/9. The answer 4/9 is tempting, but the green marble taken out also lowers the green count.",
+   "clue": "Count what is left in the bag after the pick."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has 5 red pens and 3 black pens in a box. She takes out a black pen and keeps it, then takes out a red pen and keeps it. What is P(black) on her next pick?",
+   "opts": [
+    "2/6",
+    "3/6",
+    "2/7",
+    "3/8"
+   ],
+   "why": "Two pens are kept out, so 6 are left: 4 red and 2 black. P(black) = 2/6. The answer 3/6 is tempting, but it forgets that the first black pen was also kept out.",
+   "clue": "Each pen kept out changes the total and one of the counts."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "3/9",
+    "also_right": []
+   },
+   "b": {
+    "best": "2/6",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question asks for P(both red), which means multiplying the two pick probabilities. The card never teaches this. It only shows how the probability changes on the second pick, so students must already know the multiplication rule."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue says both the green count and the total change. 3/9 is the only option where both have changed, so the clue gives the answer away without any calculation."
+   }
+  ],
+  "flags": [
+   "Question b, level: The question asks for P(both red), which means multiplying the two pick probabilities. The card never teaches this. It only shows how the probability changes on the second pick, so students must already know the multiplication rule.",
+   "Question a, other: The clue says both the green count and the total change. 3/9 is the only option where both have changed, so the clue gives the answer away without any calculation."
+  ]
+ },
+ "final": {
+  "title": "With and without replacement",
+  "card": [
+   [
+    "With replacement",
+    "The item is put back after each pick. The total and the counts stay the same, so the probability is the same for every pick."
+   ],
+   [
+    "Without replacement",
+    "The item is kept out after each pick. The total drops by 1, and the count of the picked type drops by 1. The counts of other types stay the same."
+   ],
+   "Example: a bag has 3 red and 2 blue counters. P(red) = 3/5 on the first pick.",
+   "If a red is kept out, 2 red and 2 blue are left, so P(red) on the second pick = 2/4. If the red is put back, it is still 3/5."
+  ],
+  "remember": "Replace it and the chances stay put. Keep it out and the counts and the total change.",
+  "a": {
+   "q": "A bag has 4 green and 6 yellow marbles. One green marble is picked and kept out. What is P(green) on the next pick?",
+   "opts": [
+    "3/9",
+    "4/9",
+    "3/10",
+    "4/10"
+   ],
+   "why": "Without replacement, 9 marbles are left and 3 of them are green, so P(green) = 3/9. The answer 4/9 is tempting, but the green marble taken out also lowers the green count.",
+   "clue": "Count what is left in the bag after the pick."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has 5 red pens and 3 black pens in a box. She takes out a black pen and keeps it, then takes out a red pen and keeps it. What is P(black) on her next pick?",
+   "opts": [
+    "2/6",
+    "3/6",
+    "2/7",
+    "3/8"
+   ],
+   "why": "Two pens are kept out, so 6 are left: 4 red and 2 black. P(black) = 2/6. The answer 3/6 is tempting, but it forgets that the first black pen was also kept out.",
+   "clue": "Each pen kept out changes the total and one of the counts."
+  }
+ },
+ "cleared_by": "recheck"
+}

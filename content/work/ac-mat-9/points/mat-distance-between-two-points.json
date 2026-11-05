@@ -1,0 +1,126 @@
+{
+ "id": "mat-distance-between-two-points",
+ "title": "Distance between two points",
+ "brief": "31e491017fe6",
+ "shortlist": [
+  [
+   "mat-pythagoras-theorem",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00432,
+  "check": 0.00813
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card teaches Pythagoras' theorem in general, including a 3D box example, but not applying it to coordinates to find the distance between two points, which is the new point's idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Distance between two points",
+  "card": [
+   "The distance between two points is the length of the straight interval joining them. Find the change in x and the change in y between the points.",
+   "These two changes are the two shorter sides of a right-angled triangle. The interval is the longest side, the hypotenuse.",
+   "Pythagoras' theorem gives the formula: distance = √(change in x² + change in y²). Square each change, add, then take the square root.",
+   [
+    "Example",
+    "From (1, 2) to (4, 6): change in x = 3, change in y = 4. Distance = √(9 + 16) = √25 = 5."
+   ]
+  ],
+  "remember": "Square the change in x and the change in y, add them, then take the square root.",
+  "a": {
+   "q": "What is the distance from (2, 1) to (5, 5)?",
+   "opts": [
+    "5",
+    "7",
+    "25",
+    "3.5"
+   ],
+   "why": "Change in x = 3 and change in y = 4, so distance = √(9 + 16) = √25 = 5. The answer 25 is tempting, but it skips the final square root step.",
+   "clue": "Square both changes, add, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "A park map uses a grid in metres. A path runs from (−3, 2) to (5, −4). How long is the path?",
+   "opts": [
+    "10 m",
+    "14 m",
+    "100 m",
+    "2 m"
+   ],
+   "why": "Change in x = 5 − (−3) = 8 and change in y = −4 − 2 = −6. Distance = √(64 + 36) = √100 = 10 m. The answer 14 comes from adding the changes instead of using Pythagoras' theorem.",
+   "clue": "Take care with the negative numbers when finding each change."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5",
+   "also_right": []
+  },
+  "b": {
+   "best": "10 m",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: (2, 1) to (5, 5) is 5, and (−3, 2) to (5, −4) is 10 m. The explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Distance between two points",
+  "card": [
+   "The distance between two points is the length of the straight interval joining them. Find the change in x and the change in y between the points.",
+   "These two changes are the two shorter sides of a right-angled triangle. The interval is the longest side, the hypotenuse.",
+   "Pythagoras' theorem gives the formula: distance = √(change in x² + change in y²). Square each change, add, then take the square root.",
+   [
+    "Example",
+    "From (1, 2) to (4, 6): change in x = 3, change in y = 4. Distance = √(9 + 16) = √25 = 5."
+   ]
+  ],
+  "remember": "Square the change in x and the change in y, add them, then take the square root.",
+  "a": {
+   "q": "What is the distance from (2, 1) to (5, 5)?",
+   "opts": [
+    "5",
+    "7",
+    "25",
+    "3.5"
+   ],
+   "why": "Change in x = 3 and change in y = 4, so distance = √(9 + 16) = √25 = 5. The answer 25 is tempting, but it skips the final square root step.",
+   "clue": "Square both changes, add, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "A park map uses a grid in metres. A path runs from (−3, 2) to (5, −4). How long is the path?",
+   "opts": [
+    "10 m",
+    "14 m",
+    "100 m",
+    "2 m"
+   ],
+   "why": "Change in x = 5 − (−3) = 8 and change in y = −4 − 2 = −6. Distance = √(64 + 36) = √100 = 10 m. The answer 14 comes from adding the changes instead of using Pythagoras' theorem.",
+   "clue": "Take care with the negative numbers when finding each change."
+  }
+ },
+ "cleared_by": "checker"
+}

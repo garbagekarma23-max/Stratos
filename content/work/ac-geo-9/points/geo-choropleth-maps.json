@@ -1,0 +1,334 @@
+{
+ "id": "geo-choropleth-maps",
+ "title": "Choropleth maps",
+ "brief": "62b787b1e577",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:34Z new, write",
+  "2026-11-04T09:36:52Z write: done",
+  "2026-11-04T09:47:01Z check: flagged",
+  "2026-11-04T09:58:27Z fix: suggested",
+  "2026-11-04T17:58:52Z autoreview: picked as a spot check. It would have been cleared with the fix (remember wording, b wording)",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.00612,
+  "check": 0.01118,
+  "fix": 0.01321
+ },
+ "draft": {
+  "title": "Choropleth maps",
+  "card": [
+   "A choropleth map shades whole areas, such as states, regions or countries. Each area gets one shade.",
+   "The shades run from light to dark. Darker usually means more of the thing being mapped, and lighter means less.",
+   "The legend tells you what each shade stands for, often as a range of values. Always read the legend and the title first.",
+   "A shade covers a whole area, so it does not show differences inside that area. A dark region can still have some places with low values."
+  ],
+  "remember": "On a choropleth map, darker shading means a higher value for that whole area, as the legend shows.",
+  "a": {
+   "q": "On a choropleth map of internet access by region, one region is shaded much darker than the others. What does this show?",
+   "opts": [
+    "That region has a higher level of internet access",
+    "That region has a larger area than the others",
+    "That region has more people than the others",
+    "That region has slower internet than the others"
+   ],
+   "why": "Darker shading shows a higher value of the thing mapped, here internet access. Shading does not show the size of the area or its population. The legend would confirm what the shades mean.",
+   "clue": "Shade shows the amount of the thing in the title."
+  },
+  "b": {
+   "d": 3,
+   "q": "A choropleth map of wheat yield per hectare shades Region X dark. A student says every farm in Region X has a high yield. Why is this claim not safe?",
+   "opts": [
+    "The shade covers the whole region, not each farm",
+    "The darkest shade always means the lowest yield",
+    "The map shows the size of each farm, not yield",
+    "The map only shows the regions with the most farms"
+   ],
+   "why": "Each region has one shade, so it hides differences between farms inside it. Some farms in Region X could have low yields. Darker shading means a higher value, not a lower one, so that option is wrong.",
+   "clue": "Think about how many shades each region gets."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "That region has a higher level of internet access",
+   "also_right": []
+  },
+  "b": {
+   "best": "The shade covers the whole region, not each farm",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The card says darker 'usually' means more, but the remember line states flatly that darker shading means a higher value. It drops the hedge, though 'as the legend shows' partly softens this."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) states 'Darker shading means a higher value, not a lower one' as a rule. The card only says darker usually means more and that the legend sets the meaning, so the why should rule out the option by appeal to the legend."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer that matches the card. The remember line and why (b) state 'darker means higher' more absolutely than the card's 'usually', so they should be softened to point to the legend."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The card says darker 'usually' means more, but the remember line states flatly that darker shading means a higher value. It drops the hedge, though 'as the legend shows' partly softens this.",
+  "Question b, wording: Why (b) states 'Darker shading means a higher value, not a lower one' as a rule. The card only says darker usually means more and that the legend sets the meaning, so the why should rule out the option by appeal to the legend."
+ ],
+ "proposal": {
+  "title": "Choropleth maps",
+  "card": [
+   "A choropleth map shades whole areas, such as states, regions or countries. Each area gets one shade.",
+   "The shades run from light to dark. Darker usually means more of the thing being mapped, and lighter means less.",
+   "The legend tells you what each shade stands for, often as a range of values. Always read the legend and the title first.",
+   "A shade covers a whole area, so it does not show differences inside that area. A dark region can still have some places with low values."
+  ],
+  "remember": "Check the legend to see what each shade means. Darker usually means more, but only for the area as a whole.",
+  "a": {
+   "q": "On a choropleth map of internet access by region, the legend shows darker shades mean more access. One region is much darker than the others. What does this show?",
+   "opts": [
+    "That region has a higher level of internet access",
+    "That region has a larger area than the others",
+    "That region has more people than the others",
+    "That region has slower internet than the others"
+   ],
+   "why": "The legend says darker means more access, so the dark region has a higher level of internet access. Shading shows the amount of the thing in the title, not the size of the area or how many people live there.",
+   "clue": "Shade shows the amount of the thing in the title."
+  },
+  "b": {
+   "d": 3,
+   "q": "A choropleth map of wheat yield per hectare shades Region X dark. A student says every farm in Region X has a high yield. Why is this claim not safe?",
+   "opts": [
+    "The shade covers the whole region, not each farm",
+    "The darkest shade always means the lowest yield",
+    "The map shows the size of each farm, not yield",
+    "The map only shows the regions with the most farms"
+   ],
+   "why": "Each region has one shade, so it hides differences between farms inside it. Some farms in Region X could have low yields. No shade always means the lowest value: the legend sets what each shade means, so that option is wrong.",
+   "clue": "Think about how many shades each region gets."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:52Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The card says darker 'usually' means more, but the remember line states flatly that darker shading means a higher value. It drops the hedge, though 'as the legend shows' partly softens this."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) states 'Darker shading means a higher value, not a lower one' as a rule. The card only says darker usually means more and that the legend sets the meaning, so the why should rule out the option by appeal to the legend."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The card says darker 'usually' means more, but the remember line states flatly that darker shading means a higher value. It drops the hedge, though 'as the legend shows' partly softens this.",
+   "Question b, wording: Why (b) states 'Darker shading means a higher value, not a lower one' as a rule. The card only says darker usually means more and that the legend sets the meaning, so the why should rule out the option by appeal to the legend."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Choropleth maps",
+  "card": [
+   "A choropleth map shades whole areas, such as states, regions or countries. Each area gets one shade.",
+   "The shades run from light to dark. Darker usually means more of the thing being mapped, and lighter means less.",
+   "The legend tells you what each shade stands for, often as a range of values. Always read the legend and the title first.",
+   "A shade covers a whole area, so it does not show differences inside that area. A dark region can still have some places with low values."
+  ],
+  "remember": "Check the legend to see what each shade means. Darker usually means more, but only for the area as a whole.",
+  "a": {
+   "q": "On a choropleth map of internet access by region, the legend shows darker shades mean more access. One region is much darker than the others. What does this show?",
+   "opts": [
+    "That region has a higher level of internet access",
+    "That region has a larger area than the others",
+    "That region has more people than the others",
+    "That region has slower internet than the others"
+   ],
+   "why": "The legend says darker means more access, so the dark region has a higher level of internet access. Shading shows the amount of the thing in the title, not the size of the area or how many people live there.",
+   "clue": "Shade shows the amount of the thing in the title."
+  },
+  "b": {
+   "d": 3,
+   "q": "A choropleth map of wheat yield per hectare shades Region X dark. A student says every farm in Region X has a high yield. Why is this claim not safe?",
+   "opts": [
+    "The shade covers the whole region, not each farm",
+    "The darkest shade always means the lowest yield",
+    "The map shows the size of each farm, not yield",
+    "The map only shows the regions with the most farms"
+   ],
+   "why": "Each region has one shade, so it hides differences between farms inside it. Some farms in Region X could have low yields. No shade always means the lowest value: the legend sets what each shade means, so that option is wrong.",
+   "clue": "Think about how many shades each region gets."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix keeps the card's 'usually' in the remember line and why (b), and question a now gives the legend, so nothing says darker always means more.",
+   "item": "9563d80a3aa12a0d",
+   "result": "decided",
+   "saved": {
+    "id": "geo-choropleth-maps",
+    "title": "Choropleth maps",
+    "brief": "62b787b1e577",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "write": 0.00612,
+     "check": 0.01118,
+     "fix": 0.01321
+    },
+    "draft": {
+     "title": "Choropleth maps",
+     "card": [
+      "A choropleth map shades whole areas, such as states, regions or countries. Each area gets one shade.",
+      "The shades run from light to dark. Darker usually means more of the thing being mapped, and lighter means less.",
+      "The legend tells you what each shade stands for, often as a range of values. Always read the legend and the title first.",
+      "A shade covers a whole area, so it does not show differences inside that area. A dark region can still have some places with low values."
+     ],
+     "remember": "On a choropleth map, darker shading means a higher value for that whole area, as the legend shows.",
+     "a": {
+      "q": "On a choropleth map of internet access by region, one region is shaded much darker than the others. What does this show?",
+      "opts": [
+       "That region has a higher level of internet access",
+       "That region has a larger area than the others",
+       "That region has more people than the others",
+       "That region has slower internet than the others"
+      ],
+      "why": "Darker shading shows a higher value of the thing mapped, here internet access. Shading does not show the size of the area or its population. The legend would confirm what the shades mean.",
+      "clue": "Shade shows the amount of the thing in the title."
+     },
+     "b": {
+      "d": 3,
+      "q": "A choropleth map of wheat yield per hectare shades Region X dark. A student says every farm in Region X has a high yield. Why is this claim not safe?",
+      "opts": [
+       "The shade covers the whole region, not each farm",
+       "The darkest shade always means the lowest yield",
+       "The map shows the size of each farm, not yield",
+       "The map only shows the regions with the most farms"
+      ],
+      "why": "Each region has one shade, so it hides differences between farms inside it. Some farms in Region X could have low yields. Darker shading means a higher value, not a lower one, so that option is wrong.",
+      "clue": "Think about how many shades each region gets."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "That region has a higher level of internet access",
+      "also_right": []
+     },
+     "b": {
+      "best": "The shade covers the whole region, not each farm",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "The card says darker 'usually' means more, but the remember line states flatly that darker shading means a higher value. It drops the hedge, though 'as the legend shows' partly softens this."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Why (b) states 'Darker shading means a higher value, not a lower one' as a rule. The card only says darker usually means more and that the legend sets the meaning, so the why should rule out the option by appeal to the legend."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer that matches the card. The remember line and why (b) state 'darker means higher' more absolutely than the card's 'usually', so they should be softened to point to the legend."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Remember, wording: The card says darker 'usually' means more, but the remember line states flatly that darker shading means a higher value. It drops the hedge, though 'as the legend shows' partly softens this.",
+     "Question b, wording: Why (b) states 'Darker shading means a higher value, not a lower one' as a rule. The card only says darker usually means more and that the legend sets the meaning, so the why should rule out the option by appeal to the legend."
+    ],
+    "proposal": {
+     "title": "Choropleth maps",
+     "card": [
+      "A choropleth map shades whole areas, such as states, regions or countries. Each area gets one shade.",
+      "The shades run from light to dark. Darker usually means more of the thing being mapped, and lighter means less.",
+      "The legend tells you what each shade stands for, often as a range of values. Always read the legend and the title first.",
+      "A shade covers a whole area, so it does not show differences inside that area. A dark region can still have some places with low values."
+     ],
+     "remember": "Check the legend to see what each shade means. Darker usually means more, but only for the area as a whole.",
+     "a": {
+      "q": "On a choropleth map of internet access by region, the legend shows darker shades mean more access. One region is much darker than the others. What does this show?",
+      "opts": [
+       "That region has a higher level of internet access",
+       "That region has a larger area than the others",
+       "That region has more people than the others",
+       "That region has slower internet than the others"
+      ],
+      "why": "The legend says darker means more access, so the dark region has a higher level of internet access. Shading shows the amount of the thing in the title, not the size of the area or how many people live there.",
+      "clue": "Shade shows the amount of the thing in the title."
+     },
+     "b": {
+      "d": 3,
+      "q": "A choropleth map of wheat yield per hectare shades Region X dark. A student says every farm in Region X has a high yield. Why is this claim not safe?",
+      "opts": [
+       "The shade covers the whole region, not each farm",
+       "The darkest shade always means the lowest yield",
+       "The map shows the size of each farm, not yield",
+       "The map only shows the regions with the most farms"
+      ],
+      "why": "Each region has one shade, so it hides differences between farms inside it. Some farms in Region X could have low yields. No shade always means the lowest value: the legend sets what each shade means, so that option is wrong.",
+      "clue": "Think about how many shades each region gets."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-04T17:58:52Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "The card says darker 'usually' means more, but the remember line states flatly that darker shading means a higher value. It drops the hedge, though 'as the legend shows' partly softens this."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Why (b) states 'Darker shading means a higher value, not a lower one' as a rule. The card only says darker usually means more and that the legend sets the meaning, so the why should rule out the option by appeal to the legend."
+      }
+     ],
+     "flags": [
+      "Remember, wording: The card says darker 'usually' means more, but the remember line states flatly that darker shading means a higher value. It drops the hedge, though 'as the legend shows' partly softens this.",
+      "Question b, wording: Why (b) states 'Darker shading means a higher value, not a lower one' as a rule. The card only says darker usually means more and that the legend sets the meaning, so the why should rule out the option by appeal to the legend."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "8f574fcf1badeceb"
+  }
+ ]
+}

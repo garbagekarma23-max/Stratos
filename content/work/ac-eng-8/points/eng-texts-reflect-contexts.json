@@ -1,0 +1,424 @@
+{
+ "id": "eng-texts-reflect-contexts",
+ "title": "Texts reflect contexts",
+ "brief": "615061e8cd3d",
+ "shortlist": [
+  [
+   "eng-context-text",
+   0.235
+  ],
+  [
+   "eng-context-values-paired-texts",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:29Z new, match",
+  "2026-11-04T09:36:49Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:58Z write: done",
+  "2026-11-04T09:58:23Z check: flagged",
+  "2026-11-04T10:07:59Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (a other, b other)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00717,
+  "check": 0.01187,
+  "fix": 0.01539,
+  "recheck": 0.01047
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eng-context-text, covers the same broad idea that context shapes texts, but it is written for senior VCE Units 1 and 2 and centres on reader context and historical events, while this Year 8 point asks students to see time, place and society in a text's language, attitudes and assumptions, so it needs a new card at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Think about what the story treats as ordinary' uses the same word, 'ordinary', as the right option, so a student can match the words without understanding the idea.\n- Question b, other: The clue 'One text shows an attitude of its time, but not everyone's' nearly restates the right option and rules out the 'every person' option, which gives the answer away.",
+ "rejected": {
+  "title": "Texts reflect contexts",
+  "card": [
+   "Context is the time, place and society in which a text is made. A text carries signs of that context, even when it is not about it.",
+   [
+    "Language",
+    "the words and phrases a writer uses can belong to one period or place. A word that was common long ago may sound odd or out of date now."
+   ],
+   [
+    "Attitudes",
+    "a text can show what many people in its society believed or valued. It does not prove that every person then agreed."
+   ],
+   [
+    "Taken for granted",
+    "a text may treat something as normal without explaining it, because its first readers already knew it. Details such as travel by horse and cart, or no mention of phones, can show when a text was made."
+   ]
+  ],
+  "remember": "A text shows its context in its words, its attitudes and what it treats as normal.",
+  "a": {
+   "q": "A story written about 100 years ago has characters who send news by telegram and never question it. What does this most clearly show?",
+   "opts": [
+    "Telegrams were an ordinary part of life when it was written",
+    "The writer disliked all forms of modern technology",
+    "The story is mainly about the history of the telegram",
+    "The writer wanted to teach readers how telegrams work"
+   ],
+   "why": "The characters treat telegrams as normal, so the story reflects a time when they were part of everyday life. It is not about the history of telegrams or a dislike of technology, because the writer simply takes them for granted.",
+   "clue": "Think about what the story treats as ordinary."
+  },
+  "b": {
+   "d": 3,
+   "q": "A newspaper article from long ago says girls should leave school early to help at home, and treats this as common sense. What does this show about its context?",
+   "opts": [
+    "It reflects an attitude common in the society of its time",
+    "It proves that every person at that time agreed with it",
+    "It shows the writer was unusually unkind to girls",
+    "It tells us nothing, as articles do not reflect their time"
+   ],
+   "why": "The article treats the idea as common sense, so it shows an attitude held in its society then. One article cannot prove that every person agreed, because a text reflects a context rather than speaking for everyone in it.",
+   "clue": "One text shows an attitude of its time, but not everyone's."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Think about what the story treats as ordinary' uses the same word, 'ordinary', as the right option, so a student can match the words without understanding the idea.",
+    "Question b, other: The clue 'One text shows an attitude of its time, but not everyone's' nearly restates the right option and rules out the 'every person' option, which gives the answer away."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Texts reflect contexts",
+     "card": [
+      "Context is the time, place and society in which a text is made. A text carries signs of that context, even when it is not about it.",
+      [
+       "Language",
+       "the words and phrases a writer uses can belong to one period or place. A word that was common long ago may sound odd or out of date now."
+      ],
+      [
+       "Attitudes",
+       "a text can show what people in its society believed or valued. These may differ from what many people believe today."
+      ],
+      [
+       "Taken for granted",
+       "a text may treat something as normal without explaining it, because its first readers already knew it. Details such as travel by horse and cart, or no mention of phones, can show when a text was made."
+      ]
+     ],
+     "remember": "A text shows its context in its words, its attitudes and what it treats as normal.",
+     "a": {
+      "q": "A story has characters who send news by telegram and never question it. What does this most clearly show?",
+      "opts": [
+       "The story was made in a time when telegrams were in use",
+       "The writer disliked all forms of modern technology",
+       "The story is about the history of the telegram",
+       "The writer wanted to teach readers how telegrams work"
+      ],
+      "why": "The characters treat telegrams as normal, so the story reflects a time when they were in use. It is not necessarily about telegrams or a dislike of newer technology, because the writer simply takes them for granted.",
+      "clue": "Think about what the story treats as ordinary."
+     },
+     "b": {
+      "d": 3,
+      "q": "A newspaper article from long ago says girls should leave school early to help at home, and treats this as common sense. What does this show about its context?",
+      "opts": [
+       "It reflects an attitude common in the society of its time",
+       "It proves that every person at that time agreed with it",
+       "It shows the writer was unusually unkind",
+       "It tells us nothing, as articles do not reflect their time"
+      ],
+      "why": "The article treats the idea as common sense, so it shows an attitude held in its society then. One article cannot prove that every person agreed, because a text reflects a context rather than speaking for everyone in it.",
+      "clue": "One text shows an attitude of its time, but not everyone's."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The story was made in a time when telegrams were in use",
+      "also_right": []
+     },
+     "b": {
+      "best": "It reflects an attitude common in the society of its time",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "A story set in the past, such as historical fiction, can show telegrams as ordinary without being made in that time. The right option says the story was 'made' then, which a careful student could question. Saying 'set in or made in', or describing the story as an old one, would remove the doubt."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Card and questions are accurate and match the point. One small wording issue: question a ignores historical fiction, where a modern story can treat telegrams as normal."
+    },
+    "flags": [
+     "Question a, wording: A story set in the past, such as historical fiction, can show telegrams as ordinary without being made in that time. The right option says the story was 'made' then, which a careful student could question. Saying 'set in or made in', or describing the story as an old one, would remove the doubt."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Texts reflect contexts",
+     "card": [
+      "Context is the time, place and society in which a text is made. A text carries signs of that context, even when it is not about it.",
+      [
+       "Language",
+       "the words and phrases a writer uses can belong to one period or place. A word that was common long ago may sound odd or out of date now."
+      ],
+      [
+       "Attitudes",
+       "a text can show what many people in its society believed or valued. It does not prove that every person then agreed."
+      ],
+      [
+       "Taken for granted",
+       "a text may treat something as normal without explaining it, because its first readers already knew it. Details such as travel by horse and cart, or no mention of phones, can show when a text was made."
+      ]
+     ],
+     "remember": "A text shows its context in its words, its attitudes and what it treats as normal.",
+     "a": {
+      "q": "A story written about 100 years ago has characters who send news by telegram and never question it. What does this most clearly show?",
+      "opts": [
+       "Telegrams were an ordinary part of life when it was written",
+       "The writer disliked all forms of modern technology",
+       "The story is mainly about the history of the telegram",
+       "The writer wanted to teach readers how telegrams work"
+      ],
+      "why": "The characters treat telegrams as normal, so the story reflects a time when they were part of everyday life. It is not about the history of telegrams or a dislike of technology, because the writer simply takes them for granted.",
+      "clue": "Think about what the story treats as ordinary."
+     },
+     "b": {
+      "d": 3,
+      "q": "A newspaper article from long ago says girls should leave school early to help at home, and treats this as common sense. What does this show about its context?",
+      "opts": [
+       "It reflects an attitude common in the society of its time",
+       "It proves that every person at that time agreed with it",
+       "It shows the writer was unusually unkind to girls",
+       "It tells us nothing, as articles do not reflect their time"
+      ],
+      "why": "The article treats the idea as common sense, so it shows an attitude held in its society then. One article cannot prove that every person agreed, because a text reflects a context rather than speaking for everyone in it.",
+      "clue": "One text shows an attitude of its time, but not everyone's."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Telegrams were an ordinary part of life when it was written",
+       "also_right": []
+      },
+      "b": {
+       "best": "It reflects an attitude common in the society of its time",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Think about what the story treats as ordinary' uses the same word, 'ordinary', as the right option, so a student can match the words without understanding the idea."
+       },
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue 'One text shows an attitude of its time, but not everyone's' nearly restates the right option and rules out the 'every person' option, which gives the answer away."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and answers are accurate. Both clues echo the wording of the right option closely enough to give the answer away, so they should be reworded to prompt thinking rather than match words."
+     },
+     "flags": [
+      "Question a, other: The clue 'Think about what the story treats as ordinary' uses the same word, 'ordinary', as the right option, so a student can match the words without understanding the idea.",
+      "Question b, other: The clue 'One text shows an attitude of its time, but not everyone's' nearly restates the right option and rules out the 'every person' option, which gives the answer away."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Texts reflect contexts",
+    "card": [
+     "Context is the time, place and society in which a text is made. A text carries signs of that context, even when it is not about it.",
+     [
+      "Language",
+      "the words and phrases a writer uses can belong to one period or place. A word that was common long ago may sound odd or out of date now."
+     ],
+     [
+      "Attitudes",
+      "a text can show what many people in its society believed or valued. It does not prove that every person then agreed."
+     ],
+     [
+      "Taken for granted",
+      "a text may treat something as normal without explaining it, because its first readers already knew it. Details such as travel by horse and cart, or no mention of phones, can show when a text was made."
+     ]
+    ],
+    "remember": "A text shows its context in its words, its attitudes and what it treats as normal.",
+    "a": {
+     "q": "In a story written about 100 years ago, characters send news by telegram, and nobody in it finds this strange. What does this most clearly show?",
+     "opts": [
+      "Telegrams were common when the story was written",
+      "The writer disliked all forms of modern technology",
+      "The story is mainly about the history of the telegram",
+      "The writer wanted to teach readers how telegrams work"
+     ],
+     "why": "Nobody in the story questions telegrams, so it reflects a time when they were part of everyday life. It is not about the history of telegrams or a dislike of technology, because the writer simply takes them for granted.",
+     "clue": "What does the story take for granted?"
+    },
+    "b": {
+     "d": 3,
+     "q": "An old newspaper article says girls should leave school early to help at home, and presents this as plain common sense. What does this suggest about its context?",
+     "opts": [
+      "It reflects an attitude held in its society at the time",
+      "It proves that every person at that time agreed with it",
+      "It shows the writer was unusually unkind to girls",
+      "It tells us nothing, as articles do not reflect their time"
+     ],
+     "why": "The article presents the idea as common sense, so it shows an attitude many people held in its society then. One article cannot prove that every person agreed, because a text reflects its context without speaking for everyone in it.",
+     "clue": "Look at how the article treats the idea."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Telegrams were common when the story was written",
+     "also_right": []
+    },
+    "b": {
+     "best": "It reflects an attitude held in its society at the time",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Texts reflect contexts",
+  "card": [
+   "Context is the time, place and society in which a text is made. A text carries signs of that context, even when it is not about it.",
+   [
+    "Language",
+    "the words and phrases a writer uses can belong to one period or place. A word that was common long ago may sound odd or out of date now."
+   ],
+   [
+    "Attitudes",
+    "a text can show what many people in its society believed or valued. It does not prove that every person then agreed."
+   ],
+   [
+    "Taken for granted",
+    "a text may treat something as normal without explaining it, because its first readers already knew it. Details such as travel by horse and cart, or no mention of phones, can show when a text was made."
+   ]
+  ],
+  "remember": "A text shows its context in its words, its attitudes and what it treats as normal.",
+  "a": {
+   "q": "In a story written about 100 years ago, characters send news by telegram, and nobody in it finds this strange. What does this most clearly show?",
+   "opts": [
+    "Telegrams were common when the story was written",
+    "The writer disliked all forms of modern technology",
+    "The story is mainly about the history of the telegram",
+    "The writer wanted to teach readers how telegrams work"
+   ],
+   "why": "Nobody in the story questions telegrams, so it reflects a time when they were part of everyday life. It is not about the history of telegrams or a dislike of technology, because the writer simply takes them for granted.",
+   "clue": "What does the story take for granted?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An old newspaper article says girls should leave school early to help at home, and presents this as plain common sense. What does this suggest about its context?",
+   "opts": [
+    "It reflects an attitude held in its society at the time",
+    "It proves that every person at that time agreed with it",
+    "It shows the writer was unusually unkind to girls",
+    "It tells us nothing, as articles do not reflect their time"
+   ],
+   "why": "The article presents the idea as common sense, so it shows an attitude many people held in its society then. One article cannot prove that every person agreed, because a text reflects its context without speaking for everyone in it.",
+   "clue": "Look at how the article treats the idea."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Telegrams were common when the story was written",
+   "also_right": []
+  },
+  "b": {
+   "best": "It reflects an attitude held in its society at the time",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Texts reflect contexts",
+  "card": [
+   "Context is the time, place and society in which a text is made. A text carries signs of that context, even when it is not about it.",
+   [
+    "Language",
+    "the words and phrases a writer uses can belong to one period or place. A word that was common long ago may sound odd or out of date now."
+   ],
+   [
+    "Attitudes",
+    "a text can show what many people in its society believed or valued. It does not prove that every person then agreed."
+   ],
+   [
+    "Taken for granted",
+    "a text may treat something as normal without explaining it, because its first readers already knew it. Details such as travel by horse and cart, or no mention of phones, can show when a text was made."
+   ]
+  ],
+  "remember": "A text shows its context in its words, its attitudes and what it treats as normal.",
+  "a": {
+   "q": "In a story written about 100 years ago, characters send news by telegram, and nobody in it finds this strange. What does this most clearly show?",
+   "opts": [
+    "Telegrams were common when the story was written",
+    "The writer disliked all forms of modern technology",
+    "The story is mainly about the history of the telegram",
+    "The writer wanted to teach readers how telegrams work"
+   ],
+   "why": "Nobody in the story questions telegrams, so it reflects a time when they were part of everyday life. It is not about the history of telegrams or a dislike of technology, because the writer simply takes them for granted.",
+   "clue": "What does the story take for granted?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An old newspaper article says girls should leave school early to help at home, and presents this as plain common sense. What does this suggest about its context?",
+   "opts": [
+    "It reflects an attitude held in its society at the time",
+    "It proves that every person at that time agreed with it",
+    "It shows the writer was unusually unkind to girls",
+    "It tells us nothing, as articles do not reflect their time"
+   ],
+   "why": "The article presents the idea as common sense, so it shows an attitude many people held in its society then. One article cannot prove that every person agreed, because a text reflects its context without speaking for everyone in it.",
+   "clue": "Look at how the article treats the idea."
+  }
+ },
+ "checked_by": "claude-code"
+}

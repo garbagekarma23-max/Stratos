@@ -1,0 +1,244 @@
+{
+ "id": "mat-sample-size-variation",
+ "title": "Sample size and variation",
+ "brief": "7e897ee0b0ad",
+ "shortlist": [
+  [
+   "mat-sample-means-vary",
+   0.266
+  ],
+  [
+   "mat-populations-samples",
+   0.251
+  ],
+  [
+   "mat-distribution-sample-means",
+   0.235
+  ],
+  [
+   "mat-simulating-samples",
+   0.223
+  ],
+  [
+   "mat-distributions-sample-means",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 may adapt mat-sample-means-vary, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:08Z confirm: Claude Opus 5.5 may adapt mat-sample-means-vary, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt mat-sample-means-vary (1 change)",
+  "2026-11-05T06:08:56Z claude-code review: adapting mat-sample-means-vary on the next run",
+  "2026-11-05T06:46:38Z adapt: done",
+  "2026-11-05T06:53:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.01152,
+  "adapt": 0.00428,
+  "check": 0.01203
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-sample-means-vary",
+  "changes": [
+   "Add a sentence that a larger sample gives a better estimate of the population mean, since the brief's second claim is missing from the card.",
+   "Check the wording and depth of the card against the Year 8 Australian Curriculum code AC9M8ST03, since the card is written for Victorian Units 1 and 2."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches that sample means vary and that larger samples vary less, which matches the core of the new point, but it does not yet say that larger samples estimate the population better, and its framing is for a different level and state.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-sample-means-vary",
+  "changes": [
+   "Add a plain line saying that because larger samples vary less, their results tend to be closer to the population value and so estimate it better."
+  ],
+  "sure": "medium",
+  "reason": "This card already teaches that random samples give different results and that larger samples vary less, at a level suited to Year 8, but it should say outright that larger samples estimate the population better, as the brief asks.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-sample-means-vary",
+  "changes": [
+   "Add a plain line that, because larger samples vary less, their results tend to be closer to the population value and so estimate it better."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4",
+   "card3",
+   "remember",
+   "a.q",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches that random samples vary and larger ones vary less, at a Year 8 depth, but it never says larger samples estimate the population better, which the brief asks for.",
+   "item": "a8a04ef41149a28e",
+   "result": "decided",
+   "saved": {
+    "id": "mat-sample-size-variation",
+    "title": "Sample size and variation",
+    "brief": "7e897ee0b0ad",
+    "shortlist": [
+     [
+      "mat-sample-means-vary",
+      0.266
+     ],
+     [
+      "mat-populations-samples",
+      0.251
+     ],
+     [
+      "mat-distribution-sample-means",
+      0.235
+     ],
+     [
+      "mat-simulating-samples",
+      0.223
+     ],
+     [
+      "mat-distributions-sample-means",
+      0.216
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00036,
+     "confirm": 0.01152
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-sample-means-vary",
+     "changes": [
+      "Add a sentence that a larger sample gives a better estimate of the population mean, since the brief's second claim is missing from the card.",
+      "Check the wording and depth of the card against the Year 8 Australian Curriculum code AC9M8ST03, since the card is written for Victorian Units 1 and 2."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches that sample means vary and that larger samples vary less, which matches the core of the new point, but it does not yet say that larger samples estimate the population better, and its framing is for a different level and state.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-sample-means-vary",
+     "changes": [
+      "Add a plain line saying that because larger samples vary less, their results tend to be closer to the population value and so estimate it better."
+     ],
+     "sure": "medium",
+     "reason": "This card already teaches that random samples give different results and that larger samples vary less, at a level suited to Year 8, but it should say outright that larger samples estimate the population better, as the brief asks.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "8adec603ef2c67d8"
+  }
+ ],
+ "draft": {
+  "title": "Sample means vary",
+  "card": [
+   "A sample is a group taken from a larger population. Its mean is found by adding the values and dividing by the number of values.",
+   "Different samples contain different values, so their means usually differ, even when each sample is taken and worked out correctly. This is called sample variation.",
+   "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are 510 ÷ 3 = 170 and 525 ÷ 3 = 175.",
+   "Larger samples tend to have means that vary less from sample to sample. A single extreme value has less pull on a big sample."
+  ],
+  "remember": "Sample means usually differ from sample to sample. Larger samples vary less, so their results tend to be closer to the population value.",
+  "a": {
+   "q": "Mia and Jo each take a correctly chosen random sample of 10 from the same population. Their sample means are different. What does this show?",
+   "opts": [
+    "Sample means vary from one sample to the next",
+    "One of the two samples was chosen wrongly",
+    "The population mean changed between samples",
+    "One of the means was calculated incorrectly"
+   ],
+   "why": "Each sample holds different values, so their means usually differ even when nothing has gone wrong. A difference does not mean a sample was chosen badly or a mean was worked out wrongly, and the population itself stays the same.",
+   "clue": "Do two samples usually contain the same values?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam repeatedly takes random samples of 5 students from a school, and Lee repeatedly takes random samples of 50. Whose sample means will tend to be closer to the school's true mean?",
+   "opts": [
+    "Lee's, because larger samples vary less",
+    "Sam's, because smaller samples vary less",
+    "Both the same, because the school is the same",
+    "Sam's, because there are fewer values to add"
+   ],
+   "why": "Larger samples vary less, so their means tend to sit closer to the population mean and estimate it better. Lee's samples are larger, so Lee's means tend to be closer. Using the same school does not make the variation equal.",
+   "clue": "Which samples vary less, and so land closer to the true mean?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sample means vary from one sample to the next",
+   "also_right": []
+  },
+  "b": {
+   "best": "Lee's, because larger samples vary less",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sample means vary",
+  "card": [
+   "A sample is a group taken from a larger population. Its mean is found by adding the values and dividing by the number of values.",
+   "Different samples contain different values, so their means usually differ, even when each sample is taken and worked out correctly. This is called sample variation.",
+   "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are 510 ÷ 3 = 170 and 525 ÷ 3 = 175.",
+   "Larger samples tend to have means that vary less from sample to sample. A single extreme value has less pull on a big sample."
+  ],
+  "remember": "Sample means usually differ from sample to sample. Larger samples vary less, so their results tend to be closer to the population value.",
+  "a": {
+   "q": "Mia and Jo each take a correctly chosen random sample of 10 from the same population. Their sample means are different. What does this show?",
+   "opts": [
+    "Sample means vary from one sample to the next",
+    "One of the two samples was chosen wrongly",
+    "The population mean changed between samples",
+    "One of the means was calculated incorrectly"
+   ],
+   "why": "Each sample holds different values, so their means usually differ even when nothing has gone wrong. A difference does not mean a sample was chosen badly or a mean was worked out wrongly, and the population itself stays the same.",
+   "clue": "Do two samples usually contain the same values?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam repeatedly takes random samples of 5 students from a school, and Lee repeatedly takes random samples of 50. Whose sample means will tend to be closer to the school's true mean?",
+   "opts": [
+    "Lee's, because larger samples vary less",
+    "Sam's, because smaller samples vary less",
+    "Both the same, because the school is the same",
+    "Sam's, because there are fewer values to add"
+   ],
+   "why": "Larger samples vary less, so their means tend to sit closer to the population mean and estimate it better. Lee's samples are larger, so Lee's means tend to be closer. Using the same school does not make the variation equal.",
+   "clue": "Which samples vary less, and so land closer to the true mean?"
+  }
+ }
+}

@@ -1,0 +1,397 @@
+{
+ "id": "geo-floods-tropical-cyclones",
+ "title": "Floods and tropical cyclones",
+ "brief": "72d5e72e9a08",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, write",
+  "2026-11-04T09:36:51Z write: done",
+  "2026-11-04T09:46:59Z check: flagged",
+  "2026-11-04T09:58:25Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00626,
+  "check": 0.01211,
+  "fix": 0.01544,
+  "recheck": 0.0127
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The flood line says a flood 'happens when heavy rain overfills rivers or drains', which reads as the only cause. The next line says a storm surge can also flood coastal land with seawater. Saying 'often happens' or 'can happen' would avoid the clash.",
+ "rejected": {
+  "title": "Floods and tropical cyclones",
+  "card": [
+   [
+    "Flood",
+    "water covers land that is normally dry. It happens when heavy rain overfills rivers or drains, so the water spills out."
+   ],
+   [
+    "Tropical cyclone",
+    "a large, spinning storm that forms over warm seas. It brings destructive winds, heavy rain and storm surges."
+   ],
+   [
+    "Storm surge",
+    "a rise in sea level pushed onto the coast by a cyclone. It can flood low coastal land with seawater."
+   ],
+   "A cyclone's heavy rain can also cause river floods inland. So one cyclone can bring several dangers at once."
+  ],
+  "remember": "A flood is too much water on dry land. A cyclone is a warm-sea storm with wind, rain and surge.",
+  "a": {
+   "q": "How can a tropical cyclone flood a coastal town with seawater?",
+   "opts": [
+    "A storm surge pushes the sea onto low coastal land",
+    "Its heavy rain overfills the town's street drains",
+    "Its winds dry out the soil and empty nearby dams",
+    "It forms over cold seas and sends meltwater inland"
+   ],
+   "why": "A cyclone's storm surge raises the sea and pushes it over the coast, so the flood water is seawater. Heavy rain overfilling drains can also flood a town, but that water is rain, not seawater.",
+   "clue": "Think about what a cyclone does to the sea."
+  },
+  "b": {
+   "d": 3,
+   "q": "Heavy rain falls on Townsville, Queensland, in a few hours. Street drains cannot cope and water fills the roads, yet no cyclone is nearby. How is this event best described?",
+   "opts": [
+    "A flood, because drains were overfilled by heavy rain",
+    "A tropical cyclone, because heavy rain fell on the town",
+    "A storm surge, because water covered the roads",
+    "A drought, because the drains stopped working"
+   ],
+   "why": "Floods happen when heavy rain overfills rivers or drains. Heavy rain alone does not make a cyclone, which is a large spinning storm over warm seas, and the water came from rain, not the sea, so it was not a storm surge.",
+   "clue": "Where did the water come from, and was there a spinning storm?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The flood line says a flood 'happens when heavy rain overfills rivers or drains', which reads as the only cause. The next line says a storm surge can also flood coastal land with seawater. Saying 'often happens' or 'can happen' would avoid the clash."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Floods and tropical cyclones",
+     "card": [
+      [
+       "Flood",
+       "water covers land that is normally dry. It happens when heavy rain overfills rivers or drains, so the water spills out."
+      ],
+      [
+       "Tropical cyclone",
+       "a large, spinning storm that forms over warm seas. It brings destructive winds, heavy rain and storm surges."
+      ],
+      [
+       "Storm surge",
+       "a rise in sea level pushed onto the coast by a cyclone. It can flood low coastal land with seawater."
+      ],
+      "A cyclone's heavy rain can also cause river floods inland. So one cyclone can bring several dangers at once."
+     ],
+     "remember": "A flood is too much water on dry land. A cyclone is a warm-sea storm with wind, rain and surge.",
+     "a": {
+      "q": "Why can a tropical cyclone flood a coastal town even if no river nearby overflows?",
+      "opts": [
+       "A storm surge pushes seawater onto low coastal land",
+       "Its winds dry out the soil and empty nearby dams",
+       "It forms over cold seas and sends meltwater inland",
+       "Its drains are blocked by the long dry weather before it"
+      ],
+      "why": "A cyclone's storm surge raises the sea and pushes it over the coast. Drought dries out soil and dams, and cyclones form over warm seas, not cold ones.",
+      "clue": "Think about what a cyclone does to the sea."
+     },
+     "b": {
+      "d": 3,
+      "q": "Heavy rain falls on Townsville, Queensland, in a few hours. Street drains cannot cope and water fills the roads, yet no cyclone is nearby. How is this event best described?",
+      "opts": [
+       "A flood, because drains were overfilled by heavy rain",
+       "A tropical cyclone, because heavy rain fell on the town",
+       "A storm surge, because water covered the roads",
+       "A drought, because the drains stopped working"
+      ],
+      "why": "Floods happen when heavy rain overfills rivers or drains. Heavy rain alone does not make a cyclone, which needs a large spinning storm over warm seas, and the water came from rain, not the sea.",
+      "clue": "Where did the water come from, and was there a spinning storm?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A storm surge pushes seawater onto low coastal land",
+      "also_right": []
+     },
+     "b": {
+      "best": "A flood, because drains were overfilled by heavy rain",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The distractor 'Its drains are blocked by the long dry weather before it' uses 'Its', which refers to the cyclone. A cyclone has no drains, so the option reads oddly and could confuse students."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are accurate and both questions have one clear right answer. The only issue is a minor grammar slip in a question (a) distractor, where 'Its drains' refers to the cyclone."
+    },
+    "flags": [
+     "Question a, wording: The distractor 'Its drains are blocked by the long dry weather before it' uses 'Its', which refers to the cyclone. A cyclone has no drains, so the option reads oddly and could confuse students."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Floods and tropical cyclones",
+     "card": [
+      [
+       "Flood",
+       "water covers land that is normally dry. It happens when heavy rain overfills rivers or drains, so the water spills out."
+      ],
+      [
+       "Tropical cyclone",
+       "a large, spinning storm that forms over warm seas. It brings destructive winds, heavy rain and storm surges."
+      ],
+      [
+       "Storm surge",
+       "a rise in sea level pushed onto the coast by a cyclone. It can flood low coastal land with seawater."
+      ],
+      "A cyclone's heavy rain can also cause river floods inland. So one cyclone can bring several dangers at once."
+     ],
+     "remember": "A flood is too much water on dry land. A cyclone is a warm-sea storm with wind, rain and surge.",
+     "a": {
+      "q": "How can a tropical cyclone flood a coastal town with seawater?",
+      "opts": [
+       "A storm surge pushes the sea onto low coastal land",
+       "Its heavy rain overfills the town's street drains",
+       "Its winds dry out the soil and empty nearby dams",
+       "It forms over cold seas and sends meltwater inland"
+      ],
+      "why": "A cyclone's storm surge raises the sea and pushes it over the coast, so the flood water is seawater. Heavy rain overfilling drains can also flood a town, but that water is rain, not seawater.",
+      "clue": "Think about what a cyclone does to the sea."
+     },
+     "b": {
+      "d": 3,
+      "q": "Heavy rain falls on Townsville, Queensland, in a few hours. Street drains cannot cope and water fills the roads, yet no cyclone is nearby. How is this event best described?",
+      "opts": [
+       "A flood, because drains were overfilled by heavy rain",
+       "A tropical cyclone, because heavy rain fell on the town",
+       "A storm surge, because water covered the roads",
+       "A drought, because the drains stopped working"
+      ],
+      "why": "Floods happen when heavy rain overfills rivers or drains. Heavy rain alone does not make a cyclone, which is a large spinning storm over warm seas, and the water came from rain, not the sea, so it was not a storm surge.",
+      "clue": "Where did the water come from, and was there a spinning storm?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A storm surge pushes the sea onto low coastal land",
+       "also_right": []
+      },
+      "b": {
+       "best": "A flood, because drains were overfilled by heavy rain",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The flood line says a flood 'happens when heavy rain overfills rivers or drains', which reads as the only cause. The next line says a storm surge can also flood coastal land with seawater. Saying 'often happens' or 'can happen' would avoid the clash."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and each has one clear right answer. One small wording fix: the card's flood definition implies heavy rain is the only cause, yet the card later says storm surge can also flood land."
+     },
+     "flags": [
+      "Card, wording: The flood line says a flood 'happens when heavy rain overfills rivers or drains', which reads as the only cause. The next line says a storm surge can also flood coastal land with seawater. Saying 'often happens' or 'can happen' would avoid the clash."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Floods and tropical cyclones",
+    "card": [
+     [
+      "Flood",
+      "water covers land that is normally dry. It often happens when heavy rain overfills rivers or drains, so the water spills out."
+     ],
+     [
+      "Tropical cyclone",
+      "a large, spinning storm that forms over warm seas. It brings destructive winds, heavy rain and storm surges."
+     ],
+     [
+      "Storm surge",
+      "a rise in sea level pushed onto the coast by a cyclone. It can flood low coastal land with seawater."
+     ],
+     "A cyclone's heavy rain can also cause river floods inland. So one cyclone can bring several dangers at once."
+    ],
+    "remember": "A flood is too much water on dry land. A cyclone is a warm-sea storm with wind, rain and surge.",
+    "a": {
+     "q": "A tropical cyclone nears the coast, and seawater floods a low-lying town. What caused this flood?",
+     "opts": [
+      "A storm surge pushed the sea onto the land",
+      "Heavy rain overfilled the town's street drains",
+      "Strong winds dried out soil and emptied dams",
+      "Meltwater ran down from nearby mountains"
+     ],
+     "why": "A storm surge is a rise in sea level that a cyclone pushes onto the coast, so its flood water is seawater. Heavy rain overfilling drains can also flood a town, but that water is rain, not seawater.",
+     "clue": "Ask where salty flood water could come from."
+    },
+    "b": {
+     "d": 3,
+     "q": "In Townsville, Queensland, a few hours of very heavy rain overload the street drains and water covers the roads. No cyclone is near. What is this event?",
+     "opts": [
+      "A flood, because heavy rain overfilled the drains",
+      "A tropical cyclone, because heavy rain fell",
+      "A storm surge, because water covered the roads",
+      "A drought, because the drains stopped working"
+     ],
+     "why": "Heavy rain that overfills rivers or drains is a common cause of floods. Heavy rain alone does not make a cyclone, which is a large spinning storm over warm seas, and the water came from rain, not the sea, so it was not a storm surge.",
+     "clue": "Where did the water come from, and was there a spinning storm?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A storm surge pushed the sea onto the land",
+     "also_right": []
+    },
+    "b": {
+     "best": "A flood, because heavy rain overfilled the drains",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Floods and tropical cyclones",
+  "card": [
+   [
+    "Flood",
+    "water covers land that is normally dry. It often happens when heavy rain overfills rivers or drains, so the water spills out."
+   ],
+   [
+    "Tropical cyclone",
+    "a large, spinning storm that forms over warm seas. It brings destructive winds, heavy rain and storm surges."
+   ],
+   [
+    "Storm surge",
+    "a rise in sea level pushed onto the coast by a cyclone. It can flood low coastal land with seawater."
+   ],
+   "A cyclone's heavy rain can also cause river floods inland. So one cyclone can bring several dangers at once."
+  ],
+  "remember": "A flood is too much water on dry land. A cyclone is a warm-sea storm with wind, rain and surge.",
+  "a": {
+   "q": "A tropical cyclone nears the coast, and seawater floods a low-lying town. What caused this flood?",
+   "opts": [
+    "A storm surge pushed the sea onto the land",
+    "Heavy rain overfilled the town's street drains",
+    "Strong winds dried out soil and emptied dams",
+    "Meltwater ran down from nearby mountains"
+   ],
+   "why": "A storm surge is a rise in sea level that a cyclone pushes onto the coast, so its flood water is seawater. Heavy rain overfilling drains can also flood a town, but that water is rain, not seawater.",
+   "clue": "Ask where salty flood water could come from."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Townsville, Queensland, a few hours of very heavy rain overload the street drains and water covers the roads. No cyclone is near. What is this event?",
+   "opts": [
+    "A flood, because heavy rain overfilled the drains",
+    "A tropical cyclone, because heavy rain fell",
+    "A storm surge, because water covered the roads",
+    "A drought, because the drains stopped working"
+   ],
+   "why": "Heavy rain that overfills rivers or drains is a common cause of floods. Heavy rain alone does not make a cyclone, which is a large spinning storm over warm seas, and the water came from rain, not the sea, so it was not a storm surge.",
+   "clue": "Where did the water come from, and was there a spinning storm?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A storm surge pushed the sea onto the land",
+   "also_right": []
+  },
+  "b": {
+   "best": "A flood, because heavy rain overfilled the drains",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Floods and tropical cyclones",
+  "card": [
+   [
+    "Flood",
+    "water covers land that is normally dry. It often happens when heavy rain overfills rivers or drains, so the water spills out."
+   ],
+   [
+    "Tropical cyclone",
+    "a large, spinning storm that forms over warm seas. It brings destructive winds, heavy rain and storm surges."
+   ],
+   [
+    "Storm surge",
+    "a rise in sea level pushed onto the coast by a cyclone. It can flood low coastal land with seawater."
+   ],
+   "A cyclone's heavy rain can also cause river floods inland. So one cyclone can bring several dangers at once."
+  ],
+  "remember": "A flood is too much water on dry land. A cyclone is a warm-sea storm with wind, rain and surge.",
+  "a": {
+   "q": "A tropical cyclone nears the coast, and seawater floods a low-lying town. What caused this flood?",
+   "opts": [
+    "A storm surge pushed the sea onto the land",
+    "Heavy rain overfilled the town's street drains",
+    "Strong winds dried out soil and emptied dams",
+    "Meltwater ran down from nearby mountains"
+   ],
+   "why": "A storm surge is a rise in sea level that a cyclone pushes onto the coast, so its flood water is seawater. Heavy rain overfilling drains can also flood a town, but that water is rain, not seawater.",
+   "clue": "Ask where salty flood water could come from."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Townsville, Queensland, a few hours of very heavy rain overload the street drains and water covers the roads. No cyclone is near. What is this event?",
+   "opts": [
+    "A flood, because heavy rain overfilled the drains",
+    "A tropical cyclone, because heavy rain fell",
+    "A storm surge, because water covered the roads",
+    "A drought, because the drains stopped working"
+   ],
+   "why": "Heavy rain that overfills rivers or drains is a common cause of floods. Heavy rain alone does not make a cyclone, which is a large spinning storm over warm seas, and the water came from rain, not the sea, so it was not a storm surge.",
+   "clue": "Where did the water come from, and was there a spinning storm?"
+  }
+ },
+ "checked_by": "claude-code"
+}

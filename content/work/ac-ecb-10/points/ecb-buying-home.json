@@ -1,0 +1,225 @@
+{
+ "id": "ecb-buying-home",
+ "title": "Buying a home",
+ "brief": "ebd0237b79d4",
+ "shortlist": [
+  [
+   "leg-buying-home",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: done",
+  "2026-11-04T09:58:19Z check: flagged",
+  "2026-11-04T10:07:56Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00608,
+  "check": 0.01237,
+  "fix": 0.01822,
+  "recheck": 0.00978
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, a Year 12 Legal Studies card, covers mortgages as legal security and default but does not teach the deposit or the ongoing costs of rates, insurance and repairs that this Year 10 Economics and Business point is about, and its depth and legal framing differ.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Buying a home",
+  "card": [
+   [
+    "Deposit",
+    "money the buyer pays upfront from savings, usually a share of the home's price. A bigger deposit means a smaller loan."
+   ],
+   [
+    "Mortgage",
+    "a loan used to buy a home, repaid over many years. The home is security for the lender, who may sell it if repayments stop."
+   ],
+   "Because a mortgage lasts so long, interest can add up to a large amount over the life of the loan.",
+   "Owning a home also brings ongoing costs. These include council rates, home insurance and repairs and maintenance."
+  ],
+  "remember": "Buyers pay a deposit and borrow the rest with a mortgage, then keep paying rates, insurance and repairs.",
+  "a": {
+   "q": "Which describes a mortgage?",
+   "opts": [
+    "A loan to buy a home, repaid over many years",
+    "The savings a buyer pays upfront for a home",
+    "A yearly charge from the council on a home",
+    "A payment that covers damage to a home"
+   ],
+   "why": "A mortgage is the loan used to buy a home. The upfront savings are the deposit, which is the tempting mistake because both help pay for the home.",
+   "clue": "It is money borrowed, not money saved."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom buys a house for $600,000 with a $120,000 deposit. After settlement, which cost is he still likely to pay?",
+   "opts": [
+    "Council rates and home insurance",
+    "A second deposit each year",
+    "The $120,000 deposit again",
+    "Nothing, as the mortgage covers all costs"
+   ],
+   "why": "Owners keep paying rates, insurance and repairs after buying. The mortgage covers only the loan for the price, so thinking it covers all costs is the tempting mistake.",
+   "clue": "Think about what owners pay each year besides the loan."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A loan to buy a home, repaid over many years",
+   "also_right": []
+  },
+  "b": {
+   "best": "Council rates and home insurance",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Two distractors ('A second deposit each year' and 'The $120,000 deposit again') are nearly the same idea and clearly absurd. That leaves only one plausible wrong option, so a Year 10 student can pick the answer without knowing about ongoing ownership costs."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the remember line and question a are accurate. In question b, two distractors are near-duplicates and implausible, which makes the question too easy."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: Two distractors ('A second deposit each year' and 'The $120,000 deposit again') are nearly the same idea and clearly absurd. That leaves only one plausible wrong option, so a Year 10 student can pick the answer without knowing about ongoing ownership costs."
+ ],
+ "proposal": {
+  "title": "Buying a home",
+  "card": [
+   [
+    "Deposit",
+    "money the buyer pays upfront from savings, usually a share of the home's price. A bigger deposit means a smaller loan."
+   ],
+   [
+    "Mortgage",
+    "a loan used to buy a home, repaid over many years. The home is security for the lender, who may sell it if repayments stop."
+   ],
+   "Because a mortgage lasts so long, interest can add up to a large amount over the life of the loan. The total repaid is more than the amount borrowed.",
+   "Owning a home also brings ongoing costs, such as council rates, home insurance and repairs. These are paid on top of mortgage repayments, for as long as you own the home."
+  ],
+  "remember": "Buyers pay a deposit and borrow the rest with a mortgage, then keep paying rates, insurance and repairs.",
+  "a": {
+   "q": "Which describes a mortgage?",
+   "opts": [
+    "A loan to buy a home, repaid over many years",
+    "The savings a buyer pays upfront for a home",
+    "A yearly charge from the council on a home",
+    "A payment that covers damage to a home"
+   ],
+   "why": "A mortgage is the loan used to buy a home. The upfront savings are the deposit, which is the tempting mistake because both help pay for the home.",
+   "clue": "It is money borrowed, not money saved."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom buys a $600,000 house with a $120,000 deposit and a mortgage for the rest. What is he likely to pay in the years after?",
+   "opts": [
+    "Rates and insurance on top of his loan repayments",
+    "Loan repayments that also cover rates and insurance",
+    "Repayments adding up to exactly $480,000 in total",
+    "Rates and insurance, but only until the loan is repaid"
+   ],
+   "why": "Rates, insurance and repairs are paid on top of mortgage repayments for as long as Tom owns the home. Repayments will total more than $480,000 because of interest. Thinking these costs end with the loan is the tempting mistake, but they come with owning the home, not with borrowing.",
+   "clue": "Are rates and insurance a cost of the loan or of owning the home?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A loan to buy a home, repaid over many years",
+    "also_right": []
+   },
+   "b": {
+    "best": "Rates and insurance on top of his loan repayments",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Two distractors ('A second deposit each year' and 'The $120,000 deposit again') are nearly the same idea and clearly absurd. That leaves only one plausible wrong option, so a Year 10 student can pick the answer without knowing about ongoing ownership costs."
+   }
+  ],
+  "flags": [
+   "Question b, level: Two distractors ('A second deposit each year' and 'The $120,000 deposit again') are nearly the same idea and clearly absurd. That leaves only one plausible wrong option, so a Year 10 student can pick the answer without knowing about ongoing ownership costs."
+  ]
+ },
+ "final": {
+  "title": "Buying a home",
+  "card": [
+   [
+    "Deposit",
+    "money the buyer pays upfront from savings, usually a share of the home's price. A bigger deposit means a smaller loan."
+   ],
+   [
+    "Mortgage",
+    "a loan used to buy a home, repaid over many years. The home is security for the lender, who may sell it if repayments stop."
+   ],
+   "Because a mortgage lasts so long, interest can add up to a large amount over the life of the loan. The total repaid is more than the amount borrowed.",
+   "Owning a home also brings ongoing costs, such as council rates, home insurance and repairs. These are paid on top of mortgage repayments, for as long as you own the home."
+  ],
+  "remember": "Buyers pay a deposit and borrow the rest with a mortgage, then keep paying rates, insurance and repairs.",
+  "a": {
+   "q": "Which describes a mortgage?",
+   "opts": [
+    "A loan to buy a home, repaid over many years",
+    "The savings a buyer pays upfront for a home",
+    "A yearly charge from the council on a home",
+    "A payment that covers damage to a home"
+   ],
+   "why": "A mortgage is the loan used to buy a home. The upfront savings are the deposit, which is the tempting mistake because both help pay for the home.",
+   "clue": "It is money borrowed, not money saved."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom buys a $600,000 house with a $120,000 deposit and a mortgage for the rest. What is he likely to pay in the years after?",
+   "opts": [
+    "Rates and insurance on top of his loan repayments",
+    "Loan repayments that also cover rates and insurance",
+    "Repayments adding up to exactly $480,000 in total",
+    "Rates and insurance, but only until the loan is repaid"
+   ],
+   "why": "Rates, insurance and repairs are paid on top of mortgage repayments for as long as Tom owns the home. Repayments will total more than $480,000 because of interest. Thinking these costs end with the loan is the tempting mistake, but they come with owning the home, not with borrowing.",
+   "clue": "Are rates and insurance a cost of the loan or of owning the home?"
+  }
+ },
+ "cleared_by": "recheck"
+}

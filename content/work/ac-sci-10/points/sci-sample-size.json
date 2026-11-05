@@ -1,0 +1,188 @@
+{
+ "id": "sci-sample-size",
+ "title": "Sample size",
+ "brief": "b1fc9b3b3fa3",
+ "shortlist": [
+  [
+   "mat-sample-means-vary",
+   0.282
+  ],
+  [
+   "mat-distributions-sample-means",
+   0.24
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:11Z write: done",
+  "2026-11-04T09:58:32Z check: flagged",
+  "2026-11-04T10:08:05Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00439,
+  "check": 0.00935,
+  "fix": 0.01193
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank cards teach sample-mean variation as a statistics concept, which is broader than the new point's claim that a larger sample makes science results more reliable, so no card matches it exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Sample size",
+  "card": [
+   "A sample is the group of people, plants or objects that a study actually measures. It is used to learn about a much larger group.",
+   "A larger sample gives more reliable results. Reliable means that repeating the study would give similar results.",
+   "In a small sample, one unusual result can pull the average a long way. In a large sample, that same result is outweighed by many ordinary ones.",
+   "A large sample does not fix a badly designed test. It does reduce the effect of chance on the average."
+  ],
+  "remember": "More measurements means one odd result matters less, so the average is more reliable.",
+  "a": {
+   "q": "Why does a larger sample give a more reliable average than a smaller one?",
+   "opts": [
+    "One unusual result has less effect on the average",
+    "Unusual results are removed before the average is found",
+    "Every result in a large sample is measured more accurately",
+    "A large sample cannot contain any unusual results"
+   ],
+   "why": "With more results, one unusual value is outweighed by many ordinary ones, so the average moves less. It does not remove unusual results or make each measurement more accurate, because those depend on the test and the equipment.",
+   "clue": "Think about how far one odd value can shift an average."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya tests how far paper planes fly. Which plan gives the most reliable average distance for her design?",
+   "opts": [
+    "Throw one design 30 times and average the distances",
+    "Throw one design 3 times and average the distances",
+    "Throw one design once and use that distance",
+    "Throw one design twice and use the longer distance"
+   ],
+   "why": "Thirty throws means one lucky or unlucky throw has little effect on the average. Three throws is better than one, but a single odd throw can still shift the average a lot.",
+   "clue": "Which plan has the most results to spread out one odd throw?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "One unusual result has less effect on the average",
+   "also_right": []
+  },
+  "b": {
+   "best": "Throw one design 30 times and average the distances",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which plan has the most results…' all but names the answer. A student can pick the 30-throw option just by finding the biggest number, without understanding why a larger sample is more reliable."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line, questions and explanations are accurate and stay within this point. The only issue is that question b's clue points almost directly to the 30-throw answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Which plan has the most results…' all but names the answer. A student can pick the 30-throw option just by finding the biggest number, without understanding why a larger sample is more reliable."
+ ],
+ "proposal": {
+  "title": "Sample size",
+  "card": [
+   "A sample is the group of people, plants or objects that a study actually measures. It is used to learn about a much larger group.",
+   "A larger sample gives more reliable results. Reliable means that repeating the study would give similar results.",
+   "In a small sample, one unusual result can pull the average a long way. In a large sample, that same result is outweighed by many ordinary ones.",
+   "A large sample does not fix a badly designed test. It does reduce the effect of chance on the average."
+  ],
+  "remember": "More measurements means one odd result matters less, so the average is more reliable.",
+  "a": {
+   "q": "Why does a larger sample give a more reliable average than a smaller one?",
+   "opts": [
+    "One unusual result has less effect on the average",
+    "Unusual results are removed before the average is found",
+    "Every result in a large sample is measured more accurately",
+    "A large sample cannot contain any unusual results"
+   ],
+   "why": "With more results, one unusual value is outweighed by many ordinary ones, so the average moves less. It does not remove unusual results or make each measurement more accurate, because those depend on the test and the equipment.",
+   "clue": "Think about how far one odd value can shift an average."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya tests how far paper planes fly. Which plan gives the most reliable average distance for her design?",
+   "opts": [
+    "Throw one design 30 times and average the distances",
+    "Throw one design 3 times and average the distances",
+    "Throw one design once and use that distance",
+    "Throw one design twice and use the longer distance"
+   ],
+   "why": "Thirty throws means one lucky or unlucky throw has little effect on the average. Three throws is better than one, but a single odd throw can still shift the average a lot.",
+   "clue": "Picture a sudden gust of wind on one throw. In which plan would it matter least?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which plan has the most results…' all but names the answer. A student can pick the 30-throw option just by finding the biggest number, without understanding why a larger sample is more reliable."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Which plan has the most results…' all but names the answer. A student can pick the 30-throw option just by finding the biggest number, without understanding why a larger sample is more reliable."
+  ]
+ },
+ "final": {
+  "title": "Sample size",
+  "card": [
+   "A sample is the group of people, plants or objects that a study actually measures. It is used to learn about a much larger group.",
+   "A larger sample gives more reliable results. Reliable means that repeating the study would give similar results.",
+   "In a small sample, one unusual result can pull the average a long way. In a large sample, that same result is outweighed by many ordinary ones.",
+   "A large sample does not fix a badly designed test. It does reduce the effect of chance on the average."
+  ],
+  "remember": "More measurements means one odd result matters less, so the average is more reliable.",
+  "a": {
+   "q": "Why does a larger sample give a more reliable average than a smaller one?",
+   "opts": [
+    "One unusual result has less effect on the average",
+    "Unusual results are removed before the average is found",
+    "Every result in a large sample is measured more accurately",
+    "A large sample cannot contain any unusual results"
+   ],
+   "why": "With more results, one unusual value is outweighed by many ordinary ones, so the average moves less. It does not remove unusual results or make each measurement more accurate, because those depend on the test and the equipment.",
+   "clue": "Think about how far one odd value can shift an average."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya tests how far paper planes fly. Which plan gives the most reliable average distance for her design?",
+   "opts": [
+    "Throw one design 30 times and average the distances",
+    "Throw one design 3 times and average the distances",
+    "Throw one design once and use that distance",
+    "Throw one design twice and use the longer distance"
+   ],
+   "why": "Thirty throws means one lucky or unlucky throw has little effect on the average. Three throws is better than one, but a single odd throw can still shift the average a lot.",
+   "clue": "Picture a sudden gust of wind on one throw. In which plan would it matter least?"
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,150 @@
+{
+ "id": "mat-gradient-y-intercept",
+ "title": "Gradient and y-intercept",
+ "brief": "9c309e73f89a",
+ "shortlist": [
+  [
+   "mat-equation-y-mx-c",
+   0.368
+  ],
+  [
+   "mat-linear-functions",
+   0.341
+  ],
+  [
+   "mat-y-intercept-context",
+   0.272
+  ],
+  [
+   "mat-gradient-as-rate-change",
+   0.225
+  ],
+  [
+   "mat-systems-linear-equations",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 may adapt mat-equation-y-mx-c, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:09Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:31Z write: done",
+  "2026-11-04T10:08:04Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00045,
+  "confirm": 0.00973,
+  "write": 0.0071,
+  "check": 0.00746
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-equation-y-mx-c",
+  "changes": [
+   "Add a line stating that changing m tilts the line while changing c shifts it up or down, as the brief requires, since the card does not say this explicitly.",
+   "Check that the graphing and writing steps suit the Year 9 Australian Curriculum depth, and trim them if the point should teach only the meaning of m and c."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of m as gradient and c as y-intercept at about the right depth for Year 9, but it needs a sentence on how changing m and c affects the line, and its extra graphing steps may go beyond this point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-equation-y-mx-c, teaches how to write, graph and read y = mx + c, but it never shows how changing m tilts the line and changing c shifts it up or down, which is the heart of this brief, so covering that would need a new step.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Gradient and y-intercept",
+  "card": [
+   "A straight line can be written as y = mx + c. In this form, m is the gradient and c is the y-intercept.",
+   "The y-intercept is the point where the line cuts the y-axis. It is the point (0, c), because x is 0 there.",
+   "Changing m tilts the line, making it steeper or flatter. Changing c shifts the whole line up or down without tilting it.",
+   "Example: y = −3x + 5 has gradient −3 and cuts the y-axis at (0, 5). It slopes down to the right."
+  ],
+  "remember": "In y = mx + c, m sets the tilt and c sets where the line meets the y-axis.",
+  "a": {
+   "q": "A line has the equation y = 4x − 7. What are its gradient and y-intercept?",
+   "opts": [
+    "Gradient 4, y-intercept −7",
+    "Gradient −7, y-intercept 4",
+    "Gradient 4, y-intercept 7",
+    "Gradient −4, y-intercept 7"
+   ],
+   "why": "The number multiplying x is the gradient, 4. The number added on its own is the y-intercept, which is −7 here. Swapping the two numbers is a common mistake.",
+   "clue": "The gradient is the number multiplying x."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line y = 2x + 1 is changed to y = 2x + 6. What happens to the line?",
+   "opts": [
+    "It shifts up 5 units and stays parallel",
+    "It becomes steeper and keeps its y-intercept",
+    "It shifts up 6 units and stays parallel",
+    "It becomes flatter and cuts the axis higher"
+   ],
+   "why": "The gradient m stays at 2, so the tilt does not change. The y-intercept goes from 1 to 6, which moves the line up by 6 − 1 = 5 units. Shifting by 6 units forgets that the line started at 1.",
+   "clue": "Which number changed, m or c, and by how much?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Gradient 4, y-intercept −7",
+   "also_right": []
+  },
+  "b": {
+   "best": "It shifts up 5 units and stays parallel",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Gradient and y-intercept",
+  "card": [
+   "A straight line can be written as y = mx + c. In this form, m is the gradient and c is the y-intercept.",
+   "The y-intercept is the point where the line cuts the y-axis. It is the point (0, c), because x is 0 there.",
+   "Changing m tilts the line, making it steeper or flatter. Changing c shifts the whole line up or down without tilting it.",
+   "Example: y = −3x + 5 has gradient −3 and cuts the y-axis at (0, 5). It slopes down to the right."
+  ],
+  "remember": "In y = mx + c, m sets the tilt and c sets where the line meets the y-axis.",
+  "a": {
+   "q": "A line has the equation y = 4x − 7. What are its gradient and y-intercept?",
+   "opts": [
+    "Gradient 4, y-intercept −7",
+    "Gradient −7, y-intercept 4",
+    "Gradient 4, y-intercept 7",
+    "Gradient −4, y-intercept 7"
+   ],
+   "why": "The number multiplying x is the gradient, 4. The number added on its own is the y-intercept, which is −7 here. Swapping the two numbers is a common mistake.",
+   "clue": "The gradient is the number multiplying x."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line y = 2x + 1 is changed to y = 2x + 6. What happens to the line?",
+   "opts": [
+    "It shifts up 5 units and stays parallel",
+    "It becomes steeper and keeps its y-intercept",
+    "It shifts up 6 units and stays parallel",
+    "It becomes flatter and cuts the axis higher"
+   ],
+   "why": "The gradient m stays at 2, so the tilt does not change. The y-intercept goes from 1 to 6, which moves the line up by 6 − 1 = 5 units. Shifting by 6 units forgets that the line started at 1.",
+   "clue": "Which number changed, m or c, and by how much?"
+  }
+ },
+ "cleared_by": "checker"
+}

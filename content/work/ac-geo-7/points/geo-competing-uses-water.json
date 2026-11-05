@@ -1,0 +1,207 @@
+{
+ "id": "geo-competing-uses-water",
+ "title": "Competing uses of water",
+ "brief": "a332eecb75e2",
+ "shortlist": [
+  [
+   "geo-managing-water",
+   0.224
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, match",
+  "2026-11-04T09:36:51Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:00Z write: done",
+  "2026-11-04T09:58:25Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00474,
+  "check": 0.01132,
+  "fix": 0.01727,
+  "recheck": 0.00812
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point 'Managing water' covers the same broad idea of competing demands, but it is written for Year 11 and goes well beyond the Year 7 point with water trading, licence entitlements and Murray-Darling Basin detail, so it is at a clearly different depth and needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Competing uses of water",
+  "card": [
+   "Water is used by farms, towns, industry and rivers themselves. Farms use it to grow crops and water animals. Towns use it for homes, schools and parks. Industry uses it to make things and to run mines.",
+   "Rivers and wetlands need water too. It keeps fish, plants and birds alive. This is called the environmental use of water.",
+   "These uses compete when there is not enough water for all of them. Water taken out of a river for one use cannot stay in the river for another.",
+   "Sharing is hardest in dry years. Less rain means less water in rivers and dams, but every user still needs some."
+  ],
+  "remember": "One lot of water cannot do every job, so uses compete, most of all in dry years.",
+  "a": {
+   "q": "Why do farms, towns and rivers compete for water in a dry year?",
+   "opts": [
+    "Less water is available, but each still needs some",
+    "Each of them needs a different kind of water",
+    "Dry years make farms and towns use no water",
+    "Rivers can only use water that farms have used"
+   ],
+   "why": "In a dry year there is less water in rivers and dams, but every user still needs some. Water taken by one user is not left for the others. They do not need different kinds of water, so that option is wrong.",
+   "clue": "Think about what happens to the total amount of water."
+  },
+  "b": {
+   "d": 3,
+   "q": "A dry year hits a town in Queensland. A farm upstream takes more river water for its crops. What is the most likely effect on the river?",
+   "opts": [
+    "Less water flows on for fish, plants and the town",
+    "The river gets more water from the farm",
+    "The town and river both gain from the farm's use",
+    "Nothing changes, as farms do not use river water"
+   ],
+   "why": "Water that the farm takes out of the river cannot flow on to the town or stay in the river. This leaves less for fish, plants and people downstream. The river does not gain water from the farm.",
+   "clue": "Where does the water go once the farm takes it?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Less water is available, but each still needs some",
+   "also_right": []
+  },
+  "b": {
+   "best": "Less water flows on for fish, plants and the town",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) flatly states 'They do not need different kinds of water'. Towns need treated drinking water while farms and rivers do not, so this is not strictly true and the card never says it. The option is wrong because a different kind of water would not explain why users compete, and the why should say that instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and fit Year 7, and each question has one clear answer. One small fix: why (a) wrongly claims users do not need different kinds of water, when the real reason that option fails is that it does not explain competition."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: Why (a) flatly states 'They do not need different kinds of water'. Towns need treated drinking water while farms and rivers do not, so this is not strictly true and the card never says it. The option is wrong because a different kind of water would not explain why users compete, and the why should say that instead."
+ ],
+ "proposal": {
+  "title": "Competing uses of water",
+  "card": [
+   "Farms, towns and industry all use water. Farms grow crops and water animals, towns supply homes, schools and parks, and industry runs factories and mines.",
+   "Rivers and wetlands need water too, to keep fish, plants and birds alive. This is called the environmental use of water.",
+   "These uses compete when there is not enough water for all of them. Water taken out of a river for one use cannot stay in the river for another.",
+   "Sharing is hardest in dry years. Less rain means less water in rivers and dams, but every user still needs some."
+  ],
+  "remember": "One lot of water cannot do every job, so uses compete, most of all in dry years.",
+  "a": {
+   "q": "Why do farms, towns and rivers compete for water in a dry year?",
+   "opts": [
+    "Less water is available, but each still needs some",
+    "Each of them needs a different kind of water",
+    "Dry years make farms and towns use no water",
+    "Rivers can only use water that farms have used"
+   ],
+   "why": "In a dry year there is less water in rivers and dams, but every user still needs some. Water taken by one user is not left for the others. Needing different kinds of water would not explain why they compete, because competing is about too little water to share.",
+   "clue": "Think about what happens to the total amount of water."
+  },
+  "b": {
+   "d": 3,
+   "q": "A dry year hits a town in Queensland. A farm upstream takes more river water for its crops. What is the most likely effect on the river?",
+   "opts": [
+    "Less water flows on for fish, plants and the town",
+    "The river gets more water from the farm",
+    "The town and river both gain from the farm's use",
+    "Nothing changes, as farms do not use river water"
+   ],
+   "why": "Water that the farm takes out of the river cannot flow on to the town or stay in the river. This leaves less for fish, plants and people downstream. The river does not gain water from the farm, because the farm is taking water out.",
+   "clue": "Where does the water go once the farm takes it?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Less water is available, but each still needs some",
+    "also_right": []
+   },
+   "b": {
+    "best": "Less water flows on for fish, plants and the town",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) flatly states 'They do not need different kinds of water'. Towns need treated drinking water while farms and rivers do not, so this is not strictly true and the card never says it. The option is wrong because a different kind of water would not explain why users compete, and the why should say that instead."
+   }
+  ],
+  "flags": [
+   "Question a, fact: Why (a) flatly states 'They do not need different kinds of water'. Towns need treated drinking water while farms and rivers do not, so this is not strictly true and the card never says it. The option is wrong because a different kind of water would not explain why users compete, and the why should say that instead."
+  ]
+ },
+ "final": {
+  "title": "Competing uses of water",
+  "card": [
+   "Farms, towns and industry all use water. Farms grow crops and water animals, towns supply homes, schools and parks, and industry runs factories and mines.",
+   "Rivers and wetlands need water too, to keep fish, plants and birds alive. This is called the environmental use of water.",
+   "These uses compete when there is not enough water for all of them. Water taken out of a river for one use cannot stay in the river for another.",
+   "Sharing is hardest in dry years. Less rain means less water in rivers and dams, but every user still needs some."
+  ],
+  "remember": "One lot of water cannot do every job, so uses compete, most of all in dry years.",
+  "a": {
+   "q": "Why do farms, towns and rivers compete for water in a dry year?",
+   "opts": [
+    "Less water is available, but each still needs some",
+    "Each of them needs a different kind of water",
+    "Dry years make farms and towns use no water",
+    "Rivers can only use water that farms have used"
+   ],
+   "why": "In a dry year there is less water in rivers and dams, but every user still needs some. Water taken by one user is not left for the others. Needing different kinds of water would not explain why they compete, because competing is about too little water to share.",
+   "clue": "Think about what happens to the total amount of water."
+  },
+  "b": {
+   "d": 3,
+   "q": "A dry year hits a town in Queensland. A farm upstream takes more river water for its crops. What is the most likely effect on the river?",
+   "opts": [
+    "Less water flows on for fish, plants and the town",
+    "The river gets more water from the farm",
+    "The town and river both gain from the farm's use",
+    "Nothing changes, as farms do not use river water"
+   ],
+   "why": "Water that the farm takes out of the river cannot flow on to the town or stay in the river. This leaves less for fish, plants and people downstream. The river does not gain water from the farm, because the farm is taking water out.",
+   "clue": "Where does the water go once the farm takes it?"
+  }
+ },
+ "cleared_by": "recheck"
+}

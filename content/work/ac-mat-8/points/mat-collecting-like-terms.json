@@ -1,0 +1,217 @@
+{
+ "id": "mat-collecting-like-terms",
+ "title": "Collecting like terms",
+ "brief": "49c95bbf16c8",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:09Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00471,
+  "check": 0.01434,
+  "fix": 0.01604,
+  "recheck": 0.00786
+ },
+ "draft": {
+  "title": "Collecting like terms",
+  "card": [
+   "A term is a number, a variable, or a number times a variable, such as 7, y or 3x. The number in front of a variable is its coefficient.",
+   "Like terms have the same variables with the same powers. 3x and −5x are like terms. 3x and 3x² are not, because the powers differ. 3x and 3y are not, because the variables differ.",
+   "Only like terms can be added or subtracted. Add or subtract the coefficients and keep the variable part the same. The sign in front of a term belongs to that term.",
+   "Example: 5x + 2y − 3x + 4y. The x terms give 5x − 3x = 2x. The y terms give 2y + 4y = 6y. So the answer is 2x + 6y."
+  ],
+  "remember": "Add or subtract the coefficients of like terms, and leave unlike terms apart.",
+  "a": {
+   "q": "Which expression is 7a + 2b − 4a + b simplified?",
+   "opts": [
+    "3a + 3b",
+    "3a + b",
+    "11a + 3b",
+    "6ab"
+   ],
+   "why": "The a terms give 7a − 4a = 3a. The b terms give 2b + b = 3b, because b means 1b. Writing 3a + b forgets the 1 in front of the last b.",
+   "clue": "A lone b has a coefficient of 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara simplifies 6m² + 4m − 2m² + m. What is the correct answer?",
+   "opts": [
+    "4m² + 5m",
+    "4m² + 3m",
+    "8m² + 5m",
+    "9m²"
+   ],
+   "why": "The m² terms give 6m² − 2m² = 4m². The m terms give 4m + m = 5m. m² and m are not like terms, so 4m² and 5m cannot be combined. Giving 4m² + 3m wrongly takes 2m² as a plain m term.",
+   "clue": "Check the power on each variable before combining."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3a + 3b",
+   "also_right": []
+  },
+  "b": {
+   "best": "4m² + 5m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines a term as 'a number, a variable, or a number times a variable', which leaves out terms like 3x² and ab. The card itself then treats 3x² as a term, and question b uses 6m². The definition should cover products of numbers, variables and powers."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says 4m² + 3m comes from 'wrongly taking 2m² as a plain m term'. That error would give 6m² + 3m, not 4m² + 3m. The distractor 4m² + 3m actually comes from a sign slip in the m terms (4m − m = 3m)."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 3a + b 'forgets the 1 in front of the last b'. Treating the lone b as having no coefficient would give 2b, not b, so this explanation does not match the distractor."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct (3a + 3b and 4m² + 5m). The card's definition of a term is too narrow for the x² and m² terms it uses, and both whys misdescribe how their distractors arise."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines a term as 'a number, a variable, or a number times a variable', which leaves out terms like 3x² and ab. The card itself then treats 3x² as a term, and question b uses 6m². The definition should cover products of numbers, variables and powers.",
+  "Question b, other: The why says 4m² + 3m comes from 'wrongly taking 2m² as a plain m term'. That error would give 6m² + 3m, not 4m² + 3m. The distractor 4m² + 3m actually comes from a sign slip in the m terms (4m − m = 3m).",
+  "Question a, other: The why says 3a + b 'forgets the 1 in front of the last b'. Treating the lone b as having no coefficient would give 2b, not b, so this explanation does not match the distractor."
+ ],
+ "proposal": {
+  "title": "Collecting like terms",
+  "card": [
+   "A term is a number, a variable, or numbers and variables multiplied together, such as 7, y, 3x, 3x² or ab. The number in front of the variable part is its coefficient.",
+   "Like terms have the same variables with the same powers. 3x and −5x are like terms. 3x and 3x² are not, because the powers differ. 3x and 3y are not, because the variables differ.",
+   "Only like terms can be added or subtracted. Add or subtract the coefficients and keep the variable part the same. The sign in front of a term belongs to that term, and a lone x means 1x.",
+   "Example: 5x + 2y − 3x + 4y. The x terms give 5x − 3x = 2x. The y terms give 2y + 4y = 6y. So the answer is 2x + 6y."
+  ],
+  "remember": "Add or subtract the coefficients of like terms, and leave unlike terms apart.",
+  "a": {
+   "q": "Which expression is 7a + 2b − 4a + b simplified?",
+   "opts": [
+    "3a + 3b",
+    "3a + 2b",
+    "11a + 3b",
+    "6ab"
+   ],
+   "why": "The a terms give 7a − 4a = 3a. The b terms give 2b + b = 3b, because a lone b means 1b. Writing 3a + 2b leaves out the lone b as if it were worth nothing.",
+   "clue": "A lone b has a coefficient of 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara simplifies 6m² + 4m − 2m² + m. What is the correct answer?",
+   "opts": [
+    "4m² + 5m",
+    "4m² + 3m",
+    "8m² + 5m",
+    "9m²"
+   ],
+   "why": "The m² terms give 6m² − 2m² = 4m², and the m terms give 4m + m = 5m. The answer 4m² + 3m comes from a sign slip: the m term has a plus in front, so it is added, not subtracted. m² and m are not like terms, so they stay apart.",
+   "clue": "Check the sign and the power on each term before combining."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "3a + 3b",
+    "also_right": []
+   },
+   "b": {
+    "best": "4m² + 5m",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines a term as 'a number, a variable, or a number times a variable', which leaves out terms like 3x² and ab. The card itself then treats 3x² as a term, and question b uses 6m². The definition should cover products of numbers, variables and powers."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says 4m² + 3m comes from 'wrongly taking 2m² as a plain m term'. That error would give 6m² + 3m, not 4m² + 3m. The distractor 4m² + 3m actually comes from a sign slip in the m terms (4m − m = 3m)."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 3a + b 'forgets the 1 in front of the last b'. Treating the lone b as having no coefficient would give 2b, not b, so this explanation does not match the distractor."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines a term as 'a number, a variable, or a number times a variable', which leaves out terms like 3x² and ab. The card itself then treats 3x² as a term, and question b uses 6m². The definition should cover products of numbers, variables and powers.",
+   "Question b, other: The why says 4m² + 3m comes from 'wrongly taking 2m² as a plain m term'. That error would give 6m² + 3m, not 4m² + 3m. The distractor 4m² + 3m actually comes from a sign slip in the m terms (4m − m = 3m).",
+   "Question a, other: The why says 3a + b 'forgets the 1 in front of the last b'. Treating the lone b as having no coefficient would give 2b, not b, so this explanation does not match the distractor."
+  ]
+ },
+ "final": {
+  "title": "Collecting like terms",
+  "card": [
+   "A term is a number, a variable, or numbers and variables multiplied together, such as 7, y, 3x, 3x² or ab. The number in front of the variable part is its coefficient.",
+   "Like terms have the same variables with the same powers. 3x and −5x are like terms. 3x and 3x² are not, because the powers differ. 3x and 3y are not, because the variables differ.",
+   "Only like terms can be added or subtracted. Add or subtract the coefficients and keep the variable part the same. The sign in front of a term belongs to that term, and a lone x means 1x.",
+   "Example: 5x + 2y − 3x + 4y. The x terms give 5x − 3x = 2x. The y terms give 2y + 4y = 6y. So the answer is 2x + 6y."
+  ],
+  "remember": "Add or subtract the coefficients of like terms, and leave unlike terms apart.",
+  "a": {
+   "q": "Which expression is 7a + 2b − 4a + b simplified?",
+   "opts": [
+    "3a + 3b",
+    "3a + 2b",
+    "11a + 3b",
+    "6ab"
+   ],
+   "why": "The a terms give 7a − 4a = 3a. The b terms give 2b + b = 3b, because a lone b means 1b. Writing 3a + 2b leaves out the lone b as if it were worth nothing.",
+   "clue": "A lone b has a coefficient of 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zara simplifies 6m² + 4m − 2m² + m. What is the correct answer?",
+   "opts": [
+    "4m² + 5m",
+    "4m² + 3m",
+    "8m² + 5m",
+    "9m²"
+   ],
+   "why": "The m² terms give 6m² − 2m² = 4m², and the m terms give 4m + m = 5m. The answer 4m² + 3m comes from a sign slip: the m term has a plus in front, so it is added, not subtracted. m² and m are not like terms, so they stay apart.",
+   "clue": "Check the sign and the power on each term before combining."
+  }
+ },
+ "cleared_by": "recheck"
+}

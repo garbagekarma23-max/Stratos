@@ -1,0 +1,196 @@
+{
+ "id": "mat-true-bearings",
+ "title": "True bearings",
+ "brief": "cf878d8951eb",
+ "shortlist": [
+  [
+   "mat-bearings-angles-elevation",
+   0.572
+  ],
+  [
+   "mat-bearings-elevation",
+   0.414
+  ],
+  [
+   "mat-true-compass-bearings",
+   0.4
+  ],
+  [
+   "mat-statements-connectives",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T17:58:53Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.01385,
+  "check": 0.00744,
+  "fix": 0.01174
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank cards teach true bearings along with back bearings, navigation with the sine or cosine rule, or elevation, which is broader than this point's single idea of what a true bearing is, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "True bearings",
+  "card": [
+   "A true bearing is an angle measured clockwise from north. It is written with three figures, so 45° is written 045°.",
+   "The four main directions are north 000°, east 090°, south 180° and west 270°.",
+   "A direction halfway between two of these is halfway between their bearings. North-west lies between west (270°) and north (360°), so it is 315°.",
+   "The bearing back is half a turn round. If the bearing from A to B is under 180°, add 180° to get the bearing from B to A. If it is 180° or more, subtract 180°."
+  ],
+  "remember": "Bearings start at north and turn clockwise. The way back is 180° different.",
+  "a": {
+   "q": "What is the true bearing of south-east?",
+   "opts": [
+    "135°",
+    "045°",
+    "225°",
+    "315°"
+   ],
+   "why": "South-east is halfway between east (090°) and south (180°), so it is 135°. 225° is tempting, but that is south-west, halfway between south and west.",
+   "clue": "Find the angle halfway between east and south."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena walks from her camp to a lookout on a bearing of 305°. What is the bearing from the lookout back to the camp?",
+   "opts": [
+    "125°",
+    "055°",
+    "215°",
+    "235°"
+   ],
+   "why": "The bearing is over 180°, so subtract 180°: 305° − 180° = 125°. 055° is tempting, but it comes from 360° − 305°, which does not give the opposite direction.",
+   "clue": "The way back is half a turn from the way out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "135°",
+   "also_right": []
+  },
+  "b": {
+   "best": "125°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card lists north as 000°, then uses north as 360° to find north-west without saying that 000° and 360° are the same direction. Students may be confused about why north changes value."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct. One small wording issue: the card switches north from 000° to 360° without explaining that they are the same direction."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card lists north as 000°, then uses north as 360° to find north-west without saying that 000° and 360° are the same direction. Students may be confused about why north changes value."
+ ],
+ "proposal": {
+  "title": "True bearings",
+  "card": [
+   "A true bearing is an angle measured clockwise from north. It is written with three figures, so 45° is written 045°.",
+   "The four main directions are north 000°, east 090°, south 180° and west 270°. A full turn is 360°, so 360° points north again, the same direction as 000°.",
+   "A direction halfway between two of these is halfway between their bearings. North-west lies between west (270°) and north (use 360° here), so it is 315°.",
+   "The bearing back is half a turn round. If the bearing from A to B is under 180°, add 180° to get the bearing from B to A. If it is 180° or more, subtract 180°."
+  ],
+  "remember": "Bearings start at north and turn clockwise. The way back is 180° different.",
+  "a": {
+   "q": "What is the true bearing of south-east?",
+   "opts": [
+    "135°",
+    "045°",
+    "225°",
+    "315°"
+   ],
+   "why": "South-east is halfway between east (090°) and south (180°), so it is 135°. 225° is tempting, but that is south-west, halfway between south and west.",
+   "clue": "Find the angle halfway between east and south."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena walks from her camp to a lookout on a bearing of 305°. What is the bearing from the lookout back to the camp?",
+   "opts": [
+    "125°",
+    "055°",
+    "215°",
+    "235°"
+   ],
+   "why": "The bearing is 180° or more, so subtract 180°: 305° − 180° = 125°. 055° is tempting, but it comes from 360° − 305°, which does not give the opposite direction.",
+   "clue": "The way back is half a turn from the way out."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:53Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card lists north as 000°, then uses north as 360° to find north-west without saying that 000° and 360° are the same direction. Students may be confused about why north changes value."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card lists north as 000°, then uses north as 360° to find north-west without saying that 000° and 360° are the same direction. Students may be confused about why north changes value."
+  ]
+ },
+ "final": {
+  "title": "True bearings",
+  "card": [
+   "A true bearing is an angle measured clockwise from north. It is written with three figures, so 45° is written 045°.",
+   "The four main directions are north 000°, east 090°, south 180° and west 270°. A full turn is 360°, so 360° points north again, the same direction as 000°.",
+   "A direction halfway between two of these is halfway between their bearings. North-west lies between west (270°) and north (use 360° here), so it is 315°.",
+   "The bearing back is half a turn round. If the bearing from A to B is under 180°, add 180° to get the bearing from B to A. If it is 180° or more, subtract 180°."
+  ],
+  "remember": "Bearings start at north and turn clockwise. The way back is 180° different.",
+  "a": {
+   "q": "What is the true bearing of south-east?",
+   "opts": [
+    "135°",
+    "045°",
+    "225°",
+    "315°"
+   ],
+   "why": "South-east is halfway between east (090°) and south (180°), so it is 135°. 225° is tempting, but that is south-west, halfway between south and west.",
+   "clue": "Find the angle halfway between east and south."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena walks from her camp to a lookout on a bearing of 305°. What is the bearing from the lookout back to the camp?",
+   "opts": [
+    "125°",
+    "055°",
+    "215°",
+    "235°"
+   ],
+   "why": "The bearing is 180° or more, so subtract 180°: 305° − 180° = 125°. 055° is tempting, but it comes from 360° − 305°, which does not give the opposite direction.",
+   "clue": "The way back is half a turn from the way out."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,429 @@
+{
+ "id": "ecb-finance-global-business",
+ "title": "Finance for global business",
+ "brief": "b6fafef95480",
+ "shortlist": [
+  [
+   "eco-circular-flow-income",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, match",
+  "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: done",
+  "2026-11-04T09:58:21Z check: flagged",
+  "2026-11-04T10:07:58Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (card wording, a wording)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00578,
+  "check": 0.01165,
+  "fix": 0.01389,
+  "recheck": 0.01074
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The only candidate, the three-sector circular flow, teaches how money moves between households, businesses and government, not how the financial sector supports overseas trade through currency exchange, international payments, trade insurance and lending, so no bank point fits.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The card says the sector 'offers four main services' but shows only three bullets, with insuring and lending merged into one. A student counting the bullets may be confused about what the four services are.\n- Question a, wording: Only the right option repeats the stem's key word 'rupees', so a student can match words and pick it without knowing the idea.",
+ "rejected": {
+  "title": "Finance for global business",
+  "card": [
+   "Businesses that trade overseas need help from the financial sector. It offers four main services.",
+   [
+    "Changing currencies",
+    "Banks swap Australian dollars for foreign money, so a business can pay overseas sellers or be paid by overseas buyers."
+   ],
+   [
+    "Moving payments",
+    "Banks send money between countries, so a seller and a buyer far apart can complete a sale."
+   ],
+   [
+    "Insuring and lending",
+    "Insurers cover goods that are lost or damaged on the way. Banks lend money to pay for stock before it is sold."
+   ]
+  ],
+  "remember": "Finance helps trade by changing money, moving money, covering risk and lending.",
+  "a": {
+   "q": "Ella's shop in Perth buys tea from Sri Lanka and must pay in rupees. Which service does she need from a bank?",
+   "opts": [
+    "Changing Australian dollars into rupees",
+    "Insuring the tea against damage at sea",
+    "Lending her money to open a second shop",
+    "Taking her deposit so the tea stays safe"
+   ],
+   "why": "Ella must pay in rupees, so she needs her dollars swapped for that currency. Insurance covers damage to goods, which is a different need from paying for them.",
+   "clue": "The seller wants a different kind of money."
+  },
+  "b": {
+   "d": 2,
+   "q": "A Tasmanian farm ships cheese to Japan. A storm might ruin the cargo. Which service best protects the farm from that risk?",
+   "opts": [
+    "Insurance for goods in transit",
+    "A loan to buy more stock",
+    "Changing yen into dollars",
+    "Sending payments overseas"
+   ],
+   "why": "Insurance pays out when goods are lost or damaged on the way, which is the storm risk. Changing currency or sending payments helps the sale get paid, but neither covers ruined cargo.",
+   "clue": "Which service pays out if goods are damaged?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The card says the sector 'offers four main services' but shows only three bullets, with insuring and lending merged into one. A student counting the bullets may be confused about what the four services are.",
+    "Question a, wording: Only the right option repeats the stem's key word 'rupees', so a student can match words and pick it without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Finance for global business",
+     "card": [
+      "Businesses that trade overseas need help from the financial sector. It offers four main services.",
+      [
+       "Changing currencies",
+       "Banks swap Australian dollars for foreign money, so a business can pay overseas sellers or be paid by overseas buyers."
+      ],
+      [
+       "Moving payments",
+       "Banks send money between countries, so a seller and a buyer far apart can complete a sale."
+      ],
+      [
+       "Insuring and lending",
+       "Insurers cover goods that are lost or damaged on the way. Banks lend money to pay for stock before it is sold."
+      ]
+     ],
+     "remember": "Finance helps trade by changing money, moving money, covering risk and lending.",
+     "a": {
+      "q": "Ella's shop in Perth buys tea from Sri Lanka and must pay in rupees. Which service does she need from a bank?",
+      "opts": [
+       "Changing Australian dollars into rupees",
+       "Insuring the tea against damage at sea",
+       "Lending her money to open a second shop",
+       "Taking her deposit so the tea stays safe"
+      ],
+      "why": "Ella must pay in rupees, so she needs her dollars swapped for that currency. Insurance covers damage to goods, which is a different need from paying for them.",
+      "clue": "The seller wants a different kind of money."
+     },
+     "b": {
+      "d": 3,
+      "q": "A Tasmanian farm ships cheese to Japan. A storm might ruin the cargo. Which service best protects the farm from that risk?",
+      "opts": [
+       "Insurance covering the cheese on the voyage",
+       "A loan to pay for more cows",
+       "Changing yen into Australian dollars",
+       "Sending the payment between countries"
+      ],
+      "why": "Insurance covers goods lost or damaged on the way, which is the storm risk. Moving a payment or changing currency helps the sale be paid for, but does not cover ruined cargo.",
+      "clue": "Which service pays out if goods are damaged?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Changing Australian dollars into rupees",
+      "also_right": []
+     },
+     "b": {
+      "best": "Insurance covering the cheese on the voyage",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one that repeats the stem's details ('the cheese', 'on the voyage'), so it stands out. A student could pick it by matching words without knowing what insurance does. Consider a plainer wording such as 'Insurance for goods in transit'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate and match the chapter. One small issue: in question b the right option echoes the stem's cheese and voyage details, which makes it easy to spot."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one that repeats the stem's details ('the cheese', 'on the voyage'), so it stands out. A student could pick it by matching words without knowing what insurance does. Consider a plainer wording such as 'Insurance for goods in transit'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Finance for global business",
+     "card": [
+      "Businesses that trade overseas need help from the financial sector. It offers four main services.",
+      [
+       "Changing currencies",
+       "Banks swap Australian dollars for foreign money, so a business can pay overseas sellers or be paid by overseas buyers."
+      ],
+      [
+       "Moving payments",
+       "Banks send money between countries, so a seller and a buyer far apart can complete a sale."
+      ],
+      [
+       "Insuring and lending",
+       "Insurers cover goods that are lost or damaged on the way. Banks lend money to pay for stock before it is sold."
+      ]
+     ],
+     "remember": "Finance helps trade by changing money, moving money, covering risk and lending.",
+     "a": {
+      "q": "Ella's shop in Perth buys tea from Sri Lanka and must pay in rupees. Which service does she need from a bank?",
+      "opts": [
+       "Changing Australian dollars into rupees",
+       "Insuring the tea against damage at sea",
+       "Lending her money to open a second shop",
+       "Taking her deposit so the tea stays safe"
+      ],
+      "why": "Ella must pay in rupees, so she needs her dollars swapped for that currency. Insurance covers damage to goods, which is a different need from paying for them.",
+      "clue": "The seller wants a different kind of money."
+     },
+     "b": {
+      "d": 2,
+      "q": "A Tasmanian farm ships cheese to Japan. A storm might ruin the cargo. Which service best protects the farm from that risk?",
+      "opts": [
+       "Insurance for goods in transit",
+       "A loan to buy more stock",
+       "Changing yen into dollars",
+       "Sending payments overseas"
+      ],
+      "why": "Insurance pays out when goods are lost or damaged on the way, which is the storm risk. Changing currency or sending payments helps the sale get paid, but neither covers ruined cargo.",
+      "clue": "Which service pays out if goods are damaged?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Changing Australian dollars into rupees",
+       "also_right": []
+      },
+      "b": {
+       "best": "Insurance for goods in transit",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The card says the sector 'offers four main services' but shows only three bullets, with insuring and lending merged into one. A student counting the bullets may be confused about what the four services are."
+       },
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "Only the right option repeats the stem's key word 'rupees', so a student can match words and pick it without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and the intended answers are correct. Two minor issues: the card announces four services but shows three bullets, and in question a the right option repeats 'rupees' from the stem, which gives it away."
+     },
+     "flags": [
+      "Card, wording: The card says the sector 'offers four main services' but shows only three bullets, with insuring and lending merged into one. A student counting the bullets may be confused about what the four services are.",
+      "Question a, wording: Only the right option repeats the stem's key word 'rupees', so a student can match words and pick it without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Finance for global business",
+    "card": [
+     [
+      "Changing currencies",
+      "banks swap Australian dollars for foreign money, so a business can pay overseas sellers or be paid by overseas buyers."
+     ],
+     [
+      "Moving payments",
+      "banks send money between countries, so a seller and a buyer far apart can complete a sale."
+     ],
+     [
+      "Insuring goods",
+      "insurers cover goods that are lost or damaged on the way to an overseas buyer."
+     ],
+     [
+      "Lending money",
+      "banks lend a trading business money to pay for stock from overseas before it is sold."
+     ]
+    ],
+    "remember": "Finance helps trade by changing money, moving money, covering risk and lending.",
+    "a": {
+     "q": "Ella's shop in Perth buys tea from a grower in Sri Lanka. Ella holds Australian dollars, but the grower asks to be paid in Sri Lanka's own currency. Which service solves this problem?",
+     "opts": [
+      "Changing her dollars into that currency",
+      "Insuring the tea against damage at sea",
+      "A loan to open a second shop in Perth",
+      "Keeping her savings safe in a deposit"
+     ],
+     "why": "The grower wants a different currency, so Ella needs her dollars swapped for it. Insurance covers damage to goods on the way, which is a different need from paying for them.",
+     "clue": "The seller wants a different kind of money."
+    },
+    "b": {
+     "d": 2,
+     "q": "A Tasmanian farm sends a shipment of cheese to Japan by sea. Rough weather could spoil the cargo on the way. Which service protects the farm from that risk?",
+     "opts": [
+      "Insurance for the cheese on the way",
+      "A loan to pay for more cheese stock",
+      "Changing yen into Australian dollars",
+      "Sending the payment between countries"
+     ],
+     "why": "Insurance pays out when goods are lost or damaged on the way, which is the weather risk. Changing currency or sending payments helps the farm get paid, but neither covers spoiled cargo.",
+     "clue": "Which service pays out if goods are damaged?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Changing her dollars into that currency",
+     "also_right": []
+    },
+    "b": {
+     "best": "Insurance for the cheese on the way",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Finance for global business",
+  "card": [
+   [
+    "Changing currencies",
+    "banks swap Australian dollars for foreign money, so a business can pay overseas sellers or be paid by overseas buyers."
+   ],
+   [
+    "Moving payments",
+    "banks send money between countries, so a seller and a buyer far apart can complete a sale."
+   ],
+   [
+    "Insuring goods",
+    "insurers cover goods that are lost or damaged on the way to an overseas buyer."
+   ],
+   [
+    "Lending money",
+    "banks lend a trading business money to pay for stock from overseas before it is sold."
+   ]
+  ],
+  "remember": "Finance helps trade by changing money, moving money, covering risk and lending.",
+  "a": {
+   "q": "Ella's shop in Perth buys tea from a grower in Sri Lanka. Ella holds Australian dollars, but the grower asks to be paid in Sri Lanka's own currency. Which service solves this problem?",
+   "opts": [
+    "Changing her dollars into that currency",
+    "Insuring the tea against damage at sea",
+    "A loan to open a second shop in Perth",
+    "Keeping her savings safe in a deposit"
+   ],
+   "why": "The grower wants a different currency, so Ella needs her dollars swapped for it. Insurance covers damage to goods on the way, which is a different need from paying for them.",
+   "clue": "The seller wants a different kind of money."
+  },
+  "b": {
+   "d": 2,
+   "q": "A Tasmanian farm sends a shipment of cheese to Japan by sea. Rough weather could spoil the cargo on the way. Which service protects the farm from that risk?",
+   "opts": [
+    "Insurance for the cheese on the way",
+    "A loan to pay for more cheese stock",
+    "Changing yen into Australian dollars",
+    "Sending the payment between countries"
+   ],
+   "why": "Insurance pays out when goods are lost or damaged on the way, which is the weather risk. Changing currency or sending payments helps the farm get paid, but neither covers spoiled cargo.",
+   "clue": "Which service pays out if goods are damaged?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Changing her dollars into that currency",
+   "also_right": []
+  },
+  "b": {
+   "best": "Insurance for the cheese on the way",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Finance for global business",
+  "card": [
+   [
+    "Changing currencies",
+    "banks swap Australian dollars for foreign money, so a business can pay overseas sellers or be paid by overseas buyers."
+   ],
+   [
+    "Moving payments",
+    "banks send money between countries, so a seller and a buyer far apart can complete a sale."
+   ],
+   [
+    "Insuring goods",
+    "insurers cover goods that are lost or damaged on the way to an overseas buyer."
+   ],
+   [
+    "Lending money",
+    "banks lend a trading business money to pay for stock from overseas before it is sold."
+   ]
+  ],
+  "remember": "Finance helps trade by changing money, moving money, covering risk and lending.",
+  "a": {
+   "q": "Ella's shop in Perth buys tea from a grower in Sri Lanka. Ella holds Australian dollars, but the grower asks to be paid in Sri Lanka's own currency. Which service solves this problem?",
+   "opts": [
+    "Changing her dollars into that currency",
+    "Insuring the tea against damage at sea",
+    "A loan to open a second shop in Perth",
+    "Keeping her savings safe in a deposit"
+   ],
+   "why": "The grower wants a different currency, so Ella needs her dollars swapped for it. Insurance covers damage to goods on the way, which is a different need from paying for them.",
+   "clue": "The seller wants a different kind of money."
+  },
+  "b": {
+   "d": 2,
+   "q": "A Tasmanian farm sends a shipment of cheese to Japan by sea. Rough weather could spoil the cargo on the way. Which service protects the farm from that risk?",
+   "opts": [
+    "Insurance for the cheese on the way",
+    "A loan to pay for more cheese stock",
+    "Changing yen into Australian dollars",
+    "Sending the payment between countries"
+   ],
+   "why": "Insurance pays out when goods are lost or damaged on the way, which is the weather risk. Changing currency or sending payments helps the farm get paid, but neither covers spoiled cargo.",
+   "clue": "Which service pays out if goods are damaged?"
+  }
+ },
+ "checked_by": "claude-code"
+}

@@ -1,0 +1,387 @@
+{
+ "id": "mat-negative-indices",
+ "title": "Negative indices",
+ "brief": "2964703641db",
+ "shortlist": [
+  [
+   "mat-index-laws",
+   0.279
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: flagged",
+  "2026-11-04T10:08:05Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00587,
+  "check": 0.00929,
+  "fix": 0.01185,
+  "recheck": 0.00585
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Index laws, only covers positive whole-number indices and never teaches that a negative index means a reciprocal, so it is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Negative indices",
+  "card": [
+   "A negative index means a reciprocal. The reciprocal of a number is 1 divided by that number.",
+   "The rule is a⁻ⁿ = 1/aⁿ. The negative sign in the index does not make the answer negative.",
+   "Worked example: 2⁻³ = 1/2³ = 1/(2 × 2 × 2) = 1/8.",
+   "A number in front is not moved. 3x⁻² = 3 × 1/x² = 3/x², because the index applies only to x."
+  ],
+  "remember": "A negative index flips the base to the bottom of a fraction. The answer stays positive.",
+  "a": {
+   "q": "What is the value of 5⁻²?",
+   "opts": [
+    "1/25",
+    "1/10",
+    "−25",
+    "−10"
+   ],
+   "why": "5⁻² = 1/5² = 1/25. The tempting answer 1/10 comes from multiplying 5 by 2 instead of using the power. The index makes a reciprocal, not a negative number.",
+   "clue": "Write 1 over the base with the index made positive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is the same as 4x⁻³?",
+   "opts": [
+    "4/x³",
+    "1/(4x³)",
+    "x³/4",
+    "−64x"
+   ],
+   "why": "The index −3 applies only to x, so x⁻³ = 1/x³ and the 4 stays on top, giving 4/x³. The option 1/(4x³) is tempting but it wrongly moves the 4 to the bottom as well.",
+   "clue": "Which part of 4x⁻³ has the negative index?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1/25",
+   "also_right": []
+  },
+  "b": {
+   "best": "4/x³",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'The answer stays positive' is not true in general. A negative base can give a negative result, for example (−2)⁻³ = −1/8, and so can a negative number in front. The card only says the negative sign in the index does not make the answer negative. The remember line should say that instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one correct answer, and the card and explanations are accurate. The remember line wrongly says the answer always stays positive, which is false for negative bases such as (−2)⁻³ = −1/8."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, fact: 'The answer stays positive' is not true in general. A negative base can give a negative result, for example (−2)⁻³ = −1/8, and so can a negative number in front. The card only says the negative sign in the index does not make the answer negative. The remember line should say that instead."
+ ],
+ "proposal": {
+  "title": "Negative indices",
+  "card": [
+   "A negative index means a reciprocal. The reciprocal of a number is 1 divided by that number.",
+   "The rule is a⁻ⁿ = 1/aⁿ. The negative sign in the index does not make the answer negative.",
+   "Worked example: 2⁻³ = 1/2³ = 1/(2 × 2 × 2) = 1/8.",
+   "A number in front is not moved. 3x⁻² = 3 × 1/x² = 3/x², because the index applies only to x."
+  ],
+  "remember": "A negative index means 1 over the same power made positive. The minus sign in the index does not make the answer negative.",
+  "a": {
+   "q": "What is the value of 5⁻²?",
+   "opts": [
+    "1/25",
+    "1/10",
+    "−25",
+    "−10"
+   ],
+   "why": "5⁻² = 1/5² = 1/25. The tempting answer 1/10 comes from multiplying 5 by 2 instead of using the power. The index makes a reciprocal, not a negative number.",
+   "clue": "Write 1 over the base with the index made positive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is the same as 4x⁻³?",
+   "opts": [
+    "4/x³",
+    "1/(4x³)",
+    "x³/4",
+    "−4x³"
+   ],
+   "why": "The index −3 applies only to x, so x⁻³ = 1/x³ and the 4 stays on top, giving 4/x³. The option 1/(4x³) is tempting but it wrongly moves the 4 to the bottom as well.",
+   "clue": "Which part of 4x⁻³ has the negative index?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "1/25",
+    "also_right": []
+   },
+   "b": {
+    "best": "4/x³",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card, both questions and both explanations are correct, and the intended answers are 1/25 and 4/x³."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'The answer stays positive' is not true in general. A negative base can give a negative result, for example (−2)⁻³ = −1/8, and so can a negative number in front. The card only says the negative sign in the index does not make the answer negative. The remember line should say that instead."
+   }
+  ],
+  "flags": [
+   "Remember, fact: 'The answer stays positive' is not true in general. A negative base can give a negative result, for example (−2)⁻³ = −1/8, and so can a negative number in front. The card only says the negative sign in the index does not make the answer negative. The remember line should say that instead."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Negative indices",
+  "card": [
+   "A negative index means a reciprocal. The reciprocal of a number is 1 divided by that number.",
+   "The rule is a⁻ⁿ = 1/aⁿ. The negative sign in the index does not make the answer negative.",
+   "Worked example: 2⁻³ = 1/2³ = 1/(2 × 2 × 2) = 1/8.",
+   "A number in front is not moved. 3x⁻² = 3 × 1/x² = 3/x², because the index applies only to x."
+  ],
+  "remember": "A negative index means 1 over the same power made positive. The minus sign in the index does not make the answer negative.",
+  "a": {
+   "q": "What is the value of 5⁻²?",
+   "opts": [
+    "1/25",
+    "1/10",
+    "−25",
+    "−10"
+   ],
+   "why": "5⁻² = 1/5² = 1/25. The tempting answer 1/10 comes from multiplying 5 by 2 instead of using the power. The index makes a reciprocal, not a negative number.",
+   "clue": "Write 1 over the base with the index made positive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is the same as 4x⁻³?",
+   "opts": [
+    "4/x³",
+    "1/(4x³)",
+    "x³/4",
+    "−4x³"
+   ],
+   "why": "The index −3 applies only to x, so x⁻³ = 1/x³ and the 4 stays on top, giving 4/x³. The option 1/(4x³) is tempting but it wrongly moves the 4 to the bottom as well.",
+   "clue": "Which part of 4x⁻³ has the negative index?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The old remember line said the answer always stays positive, which is false for a negative base. The fix says the minus sign in the index does not make the answer negative, as the card does.",
+   "item": "8afffdc326af07c6",
+   "result": "decided",
+   "saved": {
+    "id": "mat-negative-indices",
+    "title": "Negative indices",
+    "brief": "2964703641db",
+    "shortlist": [
+     [
+      "mat-index-laws",
+      0.279
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 9e-05,
+     "write": 0.00587,
+     "check": 0.00929,
+     "fix": 0.01185,
+     "recheck": 0.00585
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The closest bank point, Index laws, only covers positive whole-number indices and never teaches that a negative index means a reciprocal, so it is related but not the same idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Negative indices",
+     "card": [
+      "A negative index means a reciprocal. The reciprocal of a number is 1 divided by that number.",
+      "The rule is a⁻ⁿ = 1/aⁿ. The negative sign in the index does not make the answer negative.",
+      "Worked example: 2⁻³ = 1/2³ = 1/(2 × 2 × 2) = 1/8.",
+      "A number in front is not moved. 3x⁻² = 3 × 1/x² = 3/x², because the index applies only to x."
+     ],
+     "remember": "A negative index flips the base to the bottom of a fraction. The answer stays positive.",
+     "a": {
+      "q": "What is the value of 5⁻²?",
+      "opts": [
+       "1/25",
+       "1/10",
+       "−25",
+       "−10"
+      ],
+      "why": "5⁻² = 1/5² = 1/25. The tempting answer 1/10 comes from multiplying 5 by 2 instead of using the power. The index makes a reciprocal, not a negative number.",
+      "clue": "Write 1 over the base with the index made positive."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which expression is the same as 4x⁻³?",
+      "opts": [
+       "4/x³",
+       "1/(4x³)",
+       "x³/4",
+       "−64x"
+      ],
+      "why": "The index −3 applies only to x, so x⁻³ = 1/x³ and the 4 stays on top, giving 4/x³. The option 1/(4x³) is tempting but it wrongly moves the 4 to the bottom as well.",
+      "clue": "Which part of 4x⁻³ has the negative index?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "1/25",
+      "also_right": []
+     },
+     "b": {
+      "best": "4/x³",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "fact",
+       "detail": "'The answer stays positive' is not true in general. A negative base can give a negative result, for example (−2)⁻³ = −1/8, and so can a negative number in front. The card only says the negative sign in the index does not make the answer negative. The remember line should say that instead."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one correct answer, and the card and explanations are accurate. The remember line wrongly says the answer always stays positive, which is false for negative bases such as (−2)⁻³ = −1/8."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Remember, fact: 'The answer stays positive' is not true in general. A negative base can give a negative result, for example (−2)⁻³ = −1/8, and so can a negative number in front. The card only says the negative sign in the index does not make the answer negative. The remember line should say that instead."
+    ],
+    "proposal": {
+     "title": "Negative indices",
+     "card": [
+      "A negative index means a reciprocal. The reciprocal of a number is 1 divided by that number.",
+      "The rule is a⁻ⁿ = 1/aⁿ. The negative sign in the index does not make the answer negative.",
+      "Worked example: 2⁻³ = 1/2³ = 1/(2 × 2 × 2) = 1/8.",
+      "A number in front is not moved. 3x⁻² = 3 × 1/x² = 3/x², because the index applies only to x."
+     ],
+     "remember": "A negative index means 1 over the same power made positive. The minus sign in the index does not make the answer negative.",
+     "a": {
+      "q": "What is the value of 5⁻²?",
+      "opts": [
+       "1/25",
+       "1/10",
+       "−25",
+       "−10"
+      ],
+      "why": "5⁻² = 1/5² = 1/25. The tempting answer 1/10 comes from multiplying 5 by 2 instead of using the power. The index makes a reciprocal, not a negative number.",
+      "clue": "Write 1 over the base with the index made positive."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which expression is the same as 4x⁻³?",
+      "opts": [
+       "4/x³",
+       "1/(4x³)",
+       "x³/4",
+       "−4x³"
+      ],
+      "why": "The index −3 applies only to x, so x⁻³ = 1/x³ and the 4 stays on top, giving 4/x³. The option 1/(4x³) is tempting but it wrongly moves the 4 to the bottom as well.",
+      "clue": "Which part of 4x⁻³ has the negative index?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "1/25",
+       "also_right": []
+      },
+      "b": {
+       "best": "4/x³",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found. The card, both questions and both explanations are correct, and the intended answers are 1/25 and 4/x³."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:13Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "fact",
+       "detail": "'The answer stays positive' is not true in general. A negative base can give a negative result, for example (−2)⁻³ = −1/8, and so can a negative number in front. The card only says the negative sign in the index does not make the answer negative. The remember line should say that instead."
+      }
+     ],
+     "flags": [
+      "Remember, fact: 'The answer stays positive' is not true in general. A negative base can give a negative result, for example (−2)⁻³ = −1/8, and so can a negative number in front. The card only says the negative sign in the index does not make the answer negative. The remember line should say that instead."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "ef14e707ebb11f66"
+  }
+ ]
+}

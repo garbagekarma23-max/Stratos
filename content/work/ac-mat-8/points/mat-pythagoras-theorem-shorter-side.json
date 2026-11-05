@@ -1,0 +1,184 @@
+{
+ "id": "mat-pythagoras-theorem-shorter-side",
+ "title": "Pythagoras' theorem for a shorter side",
+ "brief": "0c86145091b3",
+ "shortlist": [
+  [
+   "mat-pythagoras-theorem",
+   0.323
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:09Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00607,
+  "check": 0.01234,
+  "fix": 0.01365
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers Pythagoras' theorem more broadly, including finding the hypotenuse and a 3D box diagonal, and its questions test those rather than finding a shorter side, so it does not match this narrower point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Pythagoras' theorem: shorter side",
+  "card": [
+   "In a right-angled triangle, c² = a² + b², where c is the hypotenuse. The hypotenuse is always the longest side.",
+   "To find a shorter side, rearrange to a² = c² − b². Square the hypotenuse, subtract the square of the known short side, then take the square root.",
+   "Take care to subtract, not add. A shorter side must come out smaller than the hypotenuse.",
+   "Example: the hypotenuse is 10 and one short side is 6. a² = 10² − 6² = 100 − 36 = 64. So a = √64 = 8."
+  ],
+  "remember": "Hypotenuse squared, minus the known short side squared, then the square root.",
+  "a": {
+   "q": "A right-angled triangle has a hypotenuse of 17 cm and one short side of 8 cm. What is the other short side?",
+   "opts": [
+    "15 cm",
+    "9 cm",
+    "19 cm",
+    "225 cm"
+   ],
+   "why": "a² = 17² − 8² = 289 − 64 = 225, and √225 = 15. Choosing 9 subtracts the sides without squaring them. Choosing 225 forgets the square root.",
+   "clue": "Subtract the squares, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 13 m ladder leans against a vertical wall. Its foot is 5 m from the wall on level ground. How high up the wall does the ladder reach?",
+   "opts": [
+    "12 m",
+    "8 m",
+    "14 m",
+    "144 m"
+   ],
+   "why": "The ladder is the hypotenuse: a² = 13² − 5² = 169 − 25 = 144, and √144 = 12. Choosing 14 adds the squares, which would give a length longer than the ladder. Choosing 8 subtracts without squaring.",
+   "clue": "The ladder is the longest side, so it goes first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "15 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "12 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says choosing 14 'adds the squares', but √(13² + 5²) = √194 ≈ 13.9, not exactly 14. A student who checks the working may be confused. It would be clearer to say it is about 14."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer (15 cm and 12 m), and the card and its worked example are correct. One small issue: why (b) treats 14 as the exact result of adding the squares, when √194 is about 13.9."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) says choosing 14 'adds the squares', but √(13² + 5²) = √194 ≈ 13.9, not exactly 14. A student who checks the working may be confused. It would be clearer to say it is about 14."
+ ],
+ "proposal": {
+  "title": "Pythagoras' theorem for a shorter side",
+  "card": [
+   "In a right-angled triangle, c² = a² + b², where c is the hypotenuse. The hypotenuse is always the longest side.",
+   "To find a shorter side, rearrange to a² = c² − b². Square the hypotenuse, subtract the square of the known short side, then take the square root.",
+   "Take care to subtract, not add. A shorter side must come out smaller than the hypotenuse.",
+   "Example: the hypotenuse is 10 and one short side is 6. a² = 10² − 6² = 100 − 36 = 64. So a = √64 = 8."
+  ],
+  "remember": "Hypotenuse squared, minus the known short side squared, then the square root.",
+  "a": {
+   "q": "A right-angled triangle has a hypotenuse of 17 cm and one short side of 8 cm. What is the other short side?",
+   "opts": [
+    "15 cm",
+    "9 cm",
+    "19 cm",
+    "225 cm"
+   ],
+   "why": "a² = 17² − 8² = 289 − 64 = 225, and √225 = 15. Choosing 9 subtracts the sides without squaring them. Choosing 225 forgets the square root.",
+   "clue": "Subtract the squares, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 13 m ladder leans against a vertical wall. Its foot is 5 m from the wall on level ground. How high up the wall does the ladder reach?",
+   "opts": [
+    "12 m",
+    "8 m",
+    "14 m",
+    "144 m"
+   ],
+   "why": "The ladder is the hypotenuse: a² = 13² − 5² = 169 − 25 = 144, and √144 = 12. Choosing 14 comes from adding the squares: √194 is about 14, which is longer than the ladder. Choosing 8 subtracts the sides without squaring them.",
+   "clue": "The ladder is the longest side, so it goes first."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says choosing 14 'adds the squares', but √(13² + 5²) = √194 ≈ 13.9, not exactly 14. A student who checks the working may be confused. It would be clearer to say it is about 14."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) says choosing 14 'adds the squares', but √(13² + 5²) = √194 ≈ 13.9, not exactly 14. A student who checks the working may be confused. It would be clearer to say it is about 14."
+  ]
+ },
+ "final": {
+  "title": "Pythagoras' theorem for a shorter side",
+  "card": [
+   "In a right-angled triangle, c² = a² + b², where c is the hypotenuse. The hypotenuse is always the longest side.",
+   "To find a shorter side, rearrange to a² = c² − b². Square the hypotenuse, subtract the square of the known short side, then take the square root.",
+   "Take care to subtract, not add. A shorter side must come out smaller than the hypotenuse.",
+   "Example: the hypotenuse is 10 and one short side is 6. a² = 10² − 6² = 100 − 36 = 64. So a = √64 = 8."
+  ],
+  "remember": "Hypotenuse squared, minus the known short side squared, then the square root.",
+  "a": {
+   "q": "A right-angled triangle has a hypotenuse of 17 cm and one short side of 8 cm. What is the other short side?",
+   "opts": [
+    "15 cm",
+    "9 cm",
+    "19 cm",
+    "225 cm"
+   ],
+   "why": "a² = 17² − 8² = 289 − 64 = 225, and √225 = 15. Choosing 9 subtracts the sides without squaring them. Choosing 225 forgets the square root.",
+   "clue": "Subtract the squares, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 13 m ladder leans against a vertical wall. Its foot is 5 m from the wall on level ground. How high up the wall does the ladder reach?",
+   "opts": [
+    "12 m",
+    "8 m",
+    "14 m",
+    "144 m"
+   ],
+   "why": "The ladder is the hypotenuse: a² = 13² − 5² = 169 − 25 = 144, and √144 = 12. Choosing 14 comes from adding the squares: √194 is about 14, which is longer than the ladder. Choosing 8 subtracts the sides without squaring them.",
+   "clue": "The ladder is the longest side, so it goes first."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,358 @@
+{
+ "id": "sci-gets-researched",
+ "title": "What gets researched",
+ "brief": "a0d7d8ca74bc",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, write",
+  "2026-11-04T09:36:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:14Z write: done",
+  "2026-11-04T09:58:33Z check: flagged",
+  "2026-11-04T10:08:06Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (a wording, b wording)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00435,
+  "check": 0.01244,
+  "fix": 0.01486,
+  "recheck": 0.013
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: Two distractors use absolutes (\"fully explained\", \"can only study\"), and a third is a blanket rule (\"not allowed\"). Students can rule these out on wording alone, without knowing the idea.\n- Question b, wording: Two distractors use absolutes (\"Only charities\", \"must find\"). This makes them easy to eliminate by wording, so the right option stands out.",
+ "rejected": {
+  "title": "What gets researched",
+  "card": [
+   "Research costs money, so choices are made about which projects get funded. Funding comes from governments, businesses, universities and charities.",
+   "Society's needs help steer those choices. A need might be cleaner energy or treatments for a common disease.",
+   "Society's values also help steer them. Values are beliefs about what matters, such as protecting the environment or caring for the sick.",
+   "So the topics that get funded can change over time. A problem that more people see as urgent is more likely to attract research money."
+  ],
+  "remember": "What society needs and values helps steer which research gets funded.",
+  "a": {
+   "q": "Why is a lot of research money spent on ways to cut greenhouse gas emissions?",
+   "opts": [
+    "Many people see climate change as a problem to solve",
+    "Other topics have already been fully explained",
+    "Science can only study problems linked to the air",
+    "Universities are not allowed to pick their own topics"
+   ],
+   "why": "Many people see climate change as an urgent problem, and problems seen as urgent are more likely to attract research money. Other topics are not fully explained, and science studies many kinds of problems, not just those linked to the air.",
+   "clue": "Think about what people want solved."
+  },
+  "b": {
+   "d": 2,
+   "q": "A town has many people with a common lung disease. Its state government offers extra funds for lung disease research. What best explains this decision?",
+   "opts": [
+    "Many people there are ill and want better treatments",
+    "Lung disease is simpler to study than other diseases",
+    "Scientists were told which results they must find",
+    "Only charities, not governments, can fund research"
+   ],
+   "why": "Many people in the town are ill, so better treatments are wanted, and that helped steer the funding choice. The decision is about which topic to fund, not which results to find, and governments can fund research as well as charities.",
+   "clue": "Think about who the funding is meant to help."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: Two distractors use absolutes (\"fully explained\", \"can only study\"), and a third is a blanket rule (\"not allowed\"). Students can rule these out on wording alone, without knowing the idea.",
+    "Question b, wording: Two distractors use absolutes (\"Only charities\", \"must find\"). This makes them easy to eliminate by wording, so the right option stands out."
+   ],
+   "saved": {
+    "draft": {
+     "title": "What gets researched",
+     "card": [
+      "Research costs money, so choices are made about which projects get funded. Funding comes from governments, businesses, universities and charities.",
+      "Society's needs help steer those choices. A need might be cleaner energy or treatments for a common disease.",
+      "Society's values also steer them. Values are beliefs about what matters, such as protecting the environment or caring for the sick.",
+      "So the topics that get funded can change over time. A problem that more people see as urgent is more likely to attract research money."
+     ],
+     "remember": "Funders choose research that fits what society needs and values.",
+     "a": {
+      "q": "Why is a lot of research money spent on ways to cut greenhouse gas emissions?",
+      "opts": [
+       "Many people see climate change as a problem to solve",
+       "Other topics have already been fully explained",
+       "Science can only study problems linked to the air",
+       "Universities are not allowed to pick their own topics"
+      ],
+      "why": "Funding follows what society sees as a need and values, and many people want action on climate change. It is wrong to say other topics are fully explained, as no card idea suggests that, and science studies many kinds of problems.",
+      "clue": "Think about what people want solved."
+     },
+     "b": {
+      "d": 2,
+      "q": "A town has many people with a common lung disease. Its state government offers extra funds for lung disease research. What best explains this decision?",
+      "opts": [
+       "Society's need for treatments steered the funding",
+       "The disease is simpler to study than other diseases",
+       "Scientists were told which results they must find",
+       "Research is only paid for by charities and not governments"
+      ],
+      "why": "The large number of people affected is a need, and funding was directed to meet it. The decision is about which topic to fund, not about the results, and governments can fund research as well as charities.",
+      "clue": "Ask what the people in the town need."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Many people see climate change as a problem to solve",
+      "also_right": []
+     },
+     "b": {
+      "best": "Society's need for treatments steered the funding",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The card says needs and values 'help steer' funding choices. The remember line drops 'help' and states flatly that funders choose research that fits society's needs and values, which overstates the card."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one that repeats the card's key wording ('Society's need', 'steered'), and the clue 'Ask what the people in the town need' points straight at the word 'need'. A student could pick it by matching words without understanding the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer and the facts are sound. The remember line slightly overstates the card by dropping 'help steer', and question b's right option and clue echo the card's wording, which gives the answer away."
+    },
+    "flags": [
+     "Remember, other: The card says needs and values 'help steer' funding choices. The remember line drops 'help' and states flatly that funders choose research that fits society's needs and values, which overstates the card.",
+     "Question b, wording: The right option is the only one that repeats the card's key wording ('Society's need', 'steered'), and the clue 'Ask what the people in the town need' points straight at the word 'need'. A student could pick it by matching words without understanding the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "What gets researched",
+     "card": [
+      "Research costs money, so choices are made about which projects get funded. Funding comes from governments, businesses, universities and charities.",
+      "Society's needs help steer those choices. A need might be cleaner energy or treatments for a common disease.",
+      "Society's values also help steer them. Values are beliefs about what matters, such as protecting the environment or caring for the sick.",
+      "So the topics that get funded can change over time. A problem that more people see as urgent is more likely to attract research money."
+     ],
+     "remember": "What society needs and values helps steer which research gets funded.",
+     "a": {
+      "q": "Why is a lot of research money spent on ways to cut greenhouse gas emissions?",
+      "opts": [
+       "Many people see climate change as a problem to solve",
+       "Other topics have already been fully explained",
+       "Science can only study problems linked to the air",
+       "Universities are not allowed to pick their own topics"
+      ],
+      "why": "Many people see climate change as an urgent problem, and problems seen as urgent are more likely to attract research money. Other topics are not fully explained, and science studies many kinds of problems, not just those linked to the air.",
+      "clue": "Think about what people want solved."
+     },
+     "b": {
+      "d": 2,
+      "q": "A town has many people with a common lung disease. Its state government offers extra funds for lung disease research. What best explains this decision?",
+      "opts": [
+       "Many people there are ill and want better treatments",
+       "Lung disease is simpler to study than other diseases",
+       "Scientists were told which results they must find",
+       "Only charities, not governments, can fund research"
+      ],
+      "why": "Many people in the town are ill, so better treatments are wanted, and that helped steer the funding choice. The decision is about which topic to fund, not which results to find, and governments can fund research as well as charities.",
+      "clue": "Think about who the funding is meant to help."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Many people see climate change as a problem to solve",
+       "also_right": []
+      },
+      "b": {
+       "best": "Many people there are ill and want better treatments",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "Two distractors use absolutes (\"fully explained\", \"can only study\"), and a third is a blanket rule (\"not allowed\"). Students can rule these out on wording alone, without knowing the idea."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "Two distractors use absolutes (\"Only charities\", \"must find\"). This makes them easy to eliminate by wording, so the right option stands out."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and answers are accurate and on point. Several distractors in both questions use absolute words (only, must, fully, not allowed), which lets students eliminate them without knowing the idea."
+     },
+     "flags": [
+      "Question a, wording: Two distractors use absolutes (\"fully explained\", \"can only study\"), and a third is a blanket rule (\"not allowed\"). Students can rule these out on wording alone, without knowing the idea.",
+      "Question b, wording: Two distractors use absolutes (\"Only charities\", \"must find\"). This makes them easy to eliminate by wording, so the right option stands out."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "What gets researched",
+    "card": [
+     "Research costs money, so choices are made about which projects get funded. Funding comes from governments, businesses, universities and charities.",
+     "Society's needs help steer those choices. A need might be cleaner energy or treatments for a common disease.",
+     "Society's values also help steer them. Values are beliefs about what matters, such as protecting the environment or caring for the sick.",
+     "So the topics that get funded can change over time. A problem that more people see as urgent is more likely to attract research money."
+    ],
+    "remember": "What society needs and values helps steer which research gets funded.",
+    "a": {
+     "q": "A lot of research money goes into ways of cutting greenhouse gas emissions. What best explains this?",
+     "opts": [
+      "Many people see climate change as a problem to solve",
+      "Emissions are easier to measure than other topics",
+      "Climate research costs less than most other research",
+      "Funders pick topics at random to share out their money"
+     ],
+     "why": "Society's needs and values steer funding, and many people see climate change as an urgent problem that needs solving. The card does not link funding to how cheap or easy a topic is, and funding choices are made on purpose, not at random.",
+     "clue": "Whose concerns does the funding respond to?"
+    },
+    "b": {
+     "d": 2,
+     "q": "Many people in a country town have a common lung disease. The state government then offers extra money for lung disease research. What best explains this choice?",
+     "opts": [
+      "Many people there are ill and want better treatments",
+      "Lung disease is simpler to study than other diseases",
+      "The disease is rare, so little is known about it yet",
+      "Lung research costs less than other medical research"
+     ],
+     "why": "Many people in the town are ill, so better treatments are needed, and that need helped steer the funding. The disease is common there, not rare, and nothing in the case suggests lung research is simpler or cheaper.",
+     "clue": "Who in the town would gain from the research?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Many people see climate change as a problem to solve",
+     "also_right": []
+    },
+    "b": {
+     "best": "Many people there are ill and want better treatments",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "What gets researched",
+  "card": [
+   "Research costs money, so choices are made about which projects get funded. Funding comes from governments, businesses, universities and charities.",
+   "Society's needs help steer those choices. A need might be cleaner energy or treatments for a common disease.",
+   "Society's values also help steer them. Values are beliefs about what matters, such as protecting the environment or caring for the sick.",
+   "So the topics that get funded can change over time. A problem that more people see as urgent is more likely to attract research money."
+  ],
+  "remember": "What society needs and values helps steer which research gets funded.",
+  "a": {
+   "q": "A lot of research money goes into ways of cutting greenhouse gas emissions. What best explains this?",
+   "opts": [
+    "Many people see climate change as a problem to solve",
+    "Emissions are easier to measure than other topics",
+    "Climate research costs less than most other research",
+    "Funders pick topics at random to share out their money"
+   ],
+   "why": "Society's needs and values steer funding, and many people see climate change as an urgent problem that needs solving. The card does not link funding to how cheap or easy a topic is, and funding choices are made on purpose, not at random.",
+   "clue": "Whose concerns does the funding respond to?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Many people in a country town have a common lung disease. The state government then offers extra money for lung disease research. What best explains this choice?",
+   "opts": [
+    "Many people there are ill and want better treatments",
+    "Lung disease is simpler to study than other diseases",
+    "The disease is rare, so little is known about it yet",
+    "Lung research costs less than other medical research"
+   ],
+   "why": "Many people in the town are ill, so better treatments are needed, and that need helped steer the funding. The disease is common there, not rare, and nothing in the case suggests lung research is simpler or cheaper.",
+   "clue": "Who in the town would gain from the research?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Many people see climate change as a problem to solve",
+   "also_right": []
+  },
+  "b": {
+   "best": "Many people there are ill and want better treatments",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "What gets researched",
+  "card": [
+   "Research costs money, so choices are made about which projects get funded. Funding comes from governments, businesses, universities and charities.",
+   "Society's needs help steer those choices. A need might be cleaner energy or treatments for a common disease.",
+   "Society's values also help steer them. Values are beliefs about what matters, such as protecting the environment or caring for the sick.",
+   "So the topics that get funded can change over time. A problem that more people see as urgent is more likely to attract research money."
+  ],
+  "remember": "What society needs and values helps steer which research gets funded.",
+  "a": {
+   "q": "A lot of research money goes into ways of cutting greenhouse gas emissions. What best explains this?",
+   "opts": [
+    "Many people see climate change as a problem to solve",
+    "Emissions are easier to measure than other topics",
+    "Climate research costs less than most other research",
+    "Funders pick topics at random to share out their money"
+   ],
+   "why": "Society's needs and values steer funding, and many people see climate change as an urgent problem that needs solving. The card does not link funding to how cheap or easy a topic is, and funding choices are made on purpose, not at random.",
+   "clue": "Whose concerns does the funding respond to?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Many people in a country town have a common lung disease. The state government then offers extra money for lung disease research. What best explains this choice?",
+   "opts": [
+    "Many people there are ill and want better treatments",
+    "Lung disease is simpler to study than other diseases",
+    "The disease is rare, so little is known about it yet",
+    "Lung research costs less than other medical research"
+   ],
+   "why": "Many people in the town are ill, so better treatments are needed, and that need helped steer the funding. The disease is common there, not rare, and nothing in the case suggests lung research is simpler or cheaper.",
+   "clue": "Who in the town would gain from the research?"
+  }
+ },
+ "checked_by": "claude-code"
+}

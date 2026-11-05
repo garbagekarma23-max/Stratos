@@ -1,0 +1,404 @@
+{
+ "id": "sci-society-steering-science",
+ "title": "Society steering science",
+ "brief": "fb557348f2a3",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, write",
+  "2026-11-04T09:36:57Z write: done",
+  "2026-11-04T09:47:11Z check: flagged",
+  "2026-11-04T09:58:32Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b wording, card wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00597,
+  "check": 0.01162,
+  "fix": 0.01655,
+  "recheck": 0.01312
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option echoes the stem almost word for word ('A law then limits how insurers may use the results' / 'Ethics limiting how genetic test results are used'). The clue 'add research or set a limit?' then points straight at it, so students can match words without understanding ethics.\n- Card, wording: The card says ethics 'can limit research', but its example limits how genetic test results are used, not research itself. This blurs limits on research with limits on how science is applied, and question b carries the same blur.",
+ "rejected": {
+  "title": "Society steering science",
+  "card": [
+   "Science does not happen in isolation. Society influences which research goes ahead and how it is done.",
+   [
+    "Public concern",
+    "When many people worry about a problem, such as climate change, there is pressure to study it. Governments and groups may respond."
+   ],
+   [
+    "Funding",
+    "Research costs money. Projects that governments, businesses or charities pay for are more likely to go ahead."
+   ],
+   [
+    "Ethics",
+    "Ethics is about what is right and wrong. It can limit research, such as rules on how genetic tests can be used so that people's private information is protected."
+   ]
+  ],
+  "remember": "Public concern, funding and ethics help decide which research goes ahead and how.",
+  "a": {
+   "q": "A government sets aside money for research into protecting the Great Barrier Reef after public concern. Which factor is most directly shown?",
+   "opts": [
+    "Funding directing research towards a problem",
+    "Ethics banning a type of experiment",
+    "Peer review finding an error in a study",
+    "A new tool making new data possible"
+   ],
+   "why": "The money from the government sends research towards the reef, which shows funding. Public concern started the response, but no ethical limit or error check is described.",
+   "clue": "Look for what the government actually provided."
+  },
+  "b": {
+   "d": 3,
+   "q": "A company can test a person's genes for disease risk. A law then limits how insurers may use the results, to protect privacy. Which factor is most directly shown?",
+   "opts": [
+    "Ethics limiting how genetic test results are used",
+    "Funding paying for more genetic testing research",
+    "Public concern pushing for more genetic research",
+    "A new machine making genetic data possible to collect"
+   ],
+   "why": "The law is based on what is right and wrong, protecting people's private information, so it shows ethics limiting how science is used. It tempts to pick public concern, but the law sets a limit rather than pushing for more research. No money or new machine is described.",
+   "clue": "Does the law add research or set a limit?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option echoes the stem almost word for word ('A law then limits how insurers may use the results' / 'Ethics limiting how genetic test results are used'). The clue 'add research or set a limit?' then points straight at it, so students can match words without understanding ethics.",
+    "Card, wording: The card says ethics 'can limit research', but its example limits how genetic test results are used, not research itself. This blurs limits on research with limits on how science is applied, and question b carries the same blur."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Society steering science",
+     "card": [
+      "Science does not happen in isolation. Society influences which research goes ahead and how it is done.",
+      [
+       "Public concern",
+       "When many people worry about a problem, such as climate change, there is pressure to study it. Governments and groups may respond."
+      ],
+      [
+       "Funding",
+       "Research costs money. Projects that governments, businesses or charities pay for are more likely to go ahead."
+      ],
+      [
+       "Ethics",
+       "Ethics is about what is right and wrong. It can limit research, such as rules on how genetic tests can be used so that people's private information is protected."
+      ]
+     ],
+     "remember": "Public concern, funding and ethics help decide which research goes ahead and how.",
+     "a": {
+      "q": "A government sets aside money for research into protecting the Great Barrier Reef after public concern. Which factor is most directly shown?",
+      "opts": [
+       "Funding directing research towards a problem",
+       "Ethics banning a type of experiment",
+       "Peer review finding an error in a study",
+       "A new tool making new data possible"
+      ],
+      "why": "The money from the government sends research towards the reef, which shows funding. Public concern started the response, but no ethical limit or error check is described.",
+      "clue": "Look for what the government actually provided."
+     },
+     "b": {
+      "d": 3,
+      "q": "A company can test a person's genes for disease risk, but a law limits how insurers may use the results. What does this show?",
+      "opts": [
+       "Ethics and society can limit how science is applied",
+       "Science cannot produce reliable genetic data",
+       "Research is decided only by what scientists want",
+       "Funding is the only factor that shapes research"
+      ],
+      "why": "The law responds to concerns about fairness and privacy, so society limits how the results are used. The tests themselves are not said to be unreliable. Funding is one factor, not the only one.",
+      "clue": "Who set the limit, and why?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Funding directing research towards a problem",
+      "also_right": []
+     },
+     "b": {
+      "best": "Ethics and society can limit how science is applied",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Two distractors use \"only\" (\"decided only by what scientists want\", \"Funding is the only factor\"), while the right option alone is hedged with \"can\". A student can rule out the absolute options and pick the answer without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are sound and both intended answers are correct. In question b, the two wrong options use \"only\" and the right one is the only hedged option, so the answer stands out without knowing the idea."
+    },
+    "flags": [
+     "Question b, wording: Two distractors use \"only\" (\"decided only by what scientists want\", \"Funding is the only factor\"), while the right option alone is hedged with \"can\". A student can rule out the absolute options and pick the answer without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Society steering science",
+     "card": [
+      "Science does not happen in isolation. Society influences which research goes ahead and how it is done.",
+      [
+       "Public concern",
+       "When many people worry about a problem, such as climate change, there is pressure to study it. Governments and groups may respond."
+      ],
+      [
+       "Funding",
+       "Research costs money. Projects that governments, businesses or charities pay for are more likely to go ahead."
+      ],
+      [
+       "Ethics",
+       "Ethics is about what is right and wrong. It can limit research, such as rules on how genetic tests can be used so that people's private information is protected."
+      ]
+     ],
+     "remember": "Public concern, funding and ethics help decide which research goes ahead and how.",
+     "a": {
+      "q": "A government sets aside money for research into protecting the Great Barrier Reef after public concern. Which factor is most directly shown?",
+      "opts": [
+       "Funding directing research towards a problem",
+       "Ethics banning a type of experiment",
+       "Peer review finding an error in a study",
+       "A new tool making new data possible"
+      ],
+      "why": "The money from the government sends research towards the reef, which shows funding. Public concern started the response, but no ethical limit or error check is described.",
+      "clue": "Look for what the government actually provided."
+     },
+     "b": {
+      "d": 3,
+      "q": "A company can test a person's genes for disease risk. A law then limits how insurers may use the results, to protect privacy. Which factor is most directly shown?",
+      "opts": [
+       "Ethics limiting how genetic test results are used",
+       "Funding paying for more genetic testing research",
+       "Public concern pushing for more genetic research",
+       "A new machine making genetic data possible to collect"
+      ],
+      "why": "The law is based on what is right and wrong, protecting people's private information, so it shows ethics limiting how science is used. It tempts to pick public concern, but the law sets a limit rather than pushing for more research. No money or new machine is described.",
+      "clue": "Does the law add research or set a limit?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Funding directing research towards a problem",
+       "also_right": []
+      },
+      "b": {
+       "best": "Ethics limiting how genetic test results are used",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option echoes the stem almost word for word ('A law then limits how insurers may use the results' / 'Ethics limiting how genetic test results are used'). The clue 'add research or set a limit?' then points straight at it, so students can match words without understanding ethics."
+       },
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The card says ethics 'can limit research', but its example limits how genetic test results are used, not research itself. This blurs limits on research with limits on how science is applied, and question b carries the same blur."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer and the facts are sound. In question b the right option repeats the stem's wording, which gives the answer away. The ethics example limits how test results are used rather than research itself."
+     },
+     "flags": [
+      "Question b, wording: The right option echoes the stem almost word for word ('A law then limits how insurers may use the results' / 'Ethics limiting how genetic test results are used'). The clue 'add research or set a limit?' then points straight at it, so students can match words without understanding ethics.",
+      "Card, wording: The card says ethics 'can limit research', but its example limits how genetic test results are used, not research itself. This blurs limits on research with limits on how science is applied, and question b carries the same blur."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Society steering science",
+    "card": [
+     "Science does not happen in isolation. Society influences which research goes ahead and how it is done.",
+     [
+      "Public concern",
+      "When many people worry about a problem, such as climate change, there is pressure to study it. Governments and groups may respond."
+     ],
+     [
+      "Funding",
+      "Research costs money. Projects that governments, businesses or charities pay for are more likely to go ahead."
+     ],
+     [
+      "Ethics",
+      "Ethics is about what is right and wrong. It can limit research itself: a study that tests people's genes needs approval from an ethics committee, which can stop it or set conditions such as consent and privacy."
+     ]
+    ],
+    "remember": "Public concern, funding and ethics help decide which research goes ahead and how.",
+    "a": {
+     "q": "After public worry about coral bleaching, a government sets aside money for Great Barrier Reef research. Which factor most directly sends research to the reef here?",
+     "opts": [
+      "Funding sending research towards a problem",
+      "Ethics rules stopping a kind of experiment on reefs",
+      "Peer review finding a mistake in an earlier study",
+      "A new tool letting scientists gather reef data"
+     ],
+     "why": "The government's money sends research towards the reef, which shows funding. Public concern started the response, but no ethical limit, error check or new tool is described.",
+     "clue": "Look for what the government actually provided."
+    },
+    "b": {
+     "d": 3,
+     "q": "Researchers plan to test the genes of 500 volunteers for a disease risk. A university review panel lets the study go ahead only if every volunteer agrees in writing and their results are kept private. Which factor is most directly shown?",
+     "opts": [
+      "Ethics setting limits on how a study is run",
+      "Funding deciding which study gets paid for",
+      "Public concern pushing a problem up the agenda",
+      "A new machine making genetic data possible"
+     ],
+     "why": "The panel is judging what is right for the volunteers, so its conditions show ethics limiting how the research is done. Public concern is tempting, but no wider worry pushed for this study. No money or new machine is described.",
+     "clue": "Think about why the panel cares about the volunteers' consent and privacy."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Funding sending research towards a problem",
+     "also_right": []
+    },
+    "b": {
+     "best": "Ethics setting limits on how a study is run",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Society steering science",
+  "card": [
+   "Science does not happen in isolation. Society influences which research goes ahead and how it is done.",
+   [
+    "Public concern",
+    "When many people worry about a problem, such as climate change, there is pressure to study it. Governments and groups may respond."
+   ],
+   [
+    "Funding",
+    "Research costs money. Projects that governments, businesses or charities pay for are more likely to go ahead."
+   ],
+   [
+    "Ethics",
+    "Ethics is about what is right and wrong. It can limit research itself: a study that tests people's genes needs approval from an ethics committee, which can stop it or set conditions such as consent and privacy."
+   ]
+  ],
+  "remember": "Public concern, funding and ethics help decide which research goes ahead and how.",
+  "a": {
+   "q": "After public worry about coral bleaching, a government sets aside money for Great Barrier Reef research. Which factor most directly sends research to the reef here?",
+   "opts": [
+    "Funding sending research towards a problem",
+    "Ethics rules stopping a kind of experiment on reefs",
+    "Peer review finding a mistake in an earlier study",
+    "A new tool letting scientists gather reef data"
+   ],
+   "why": "The government's money sends research towards the reef, which shows funding. Public concern started the response, but no ethical limit, error check or new tool is described.",
+   "clue": "Look for what the government actually provided."
+  },
+  "b": {
+   "d": 3,
+   "q": "Researchers plan to test the genes of 500 volunteers for a disease risk. A university review panel lets the study go ahead only if every volunteer agrees in writing and their results are kept private. Which factor is most directly shown?",
+   "opts": [
+    "Ethics setting limits on how a study is run",
+    "Funding deciding which study gets paid for",
+    "Public concern pushing a problem up the agenda",
+    "A new machine making genetic data possible"
+   ],
+   "why": "The panel is judging what is right for the volunteers, so its conditions show ethics limiting how the research is done. Public concern is tempting, but no wider worry pushed for this study. No money or new machine is described.",
+   "clue": "Think about why the panel cares about the volunteers' consent and privacy."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Funding sending research towards a problem",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ethics setting limits on how a study is run",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Society steering science",
+  "card": [
+   "Science does not happen in isolation. Society influences which research goes ahead and how it is done.",
+   [
+    "Public concern",
+    "When many people worry about a problem, such as climate change, there is pressure to study it. Governments and groups may respond."
+   ],
+   [
+    "Funding",
+    "Research costs money. Projects that governments, businesses or charities pay for are more likely to go ahead."
+   ],
+   [
+    "Ethics",
+    "Ethics is about what is right and wrong. It can limit research itself: a study that tests people's genes needs approval from an ethics committee, which can stop it or set conditions such as consent and privacy."
+   ]
+  ],
+  "remember": "Public concern, funding and ethics help decide which research goes ahead and how.",
+  "a": {
+   "q": "After public worry about coral bleaching, a government sets aside money for Great Barrier Reef research. Which factor most directly sends research to the reef here?",
+   "opts": [
+    "Funding sending research towards a problem",
+    "Ethics rules stopping a kind of experiment on reefs",
+    "Peer review finding a mistake in an earlier study",
+    "A new tool letting scientists gather reef data"
+   ],
+   "why": "The government's money sends research towards the reef, which shows funding. Public concern started the response, but no ethical limit, error check or new tool is described.",
+   "clue": "Look for what the government actually provided."
+  },
+  "b": {
+   "d": 3,
+   "q": "Researchers plan to test the genes of 500 volunteers for a disease risk. A university review panel lets the study go ahead only if every volunteer agrees in writing and their results are kept private. Which factor is most directly shown?",
+   "opts": [
+    "Ethics setting limits on how a study is run",
+    "Funding deciding which study gets paid for",
+    "Public concern pushing a problem up the agenda",
+    "A new machine making genetic data possible"
+   ],
+   "why": "The panel is judging what is right for the volunteers, so its conditions show ethics limiting how the research is done. Public concern is tempting, but no wider worry pushed for this study. No money or new machine is described.",
+   "clue": "Think about why the panel cares about the volunteers' consent and privacy."
+  }
+ },
+ "checked_by": "claude-code"
+}

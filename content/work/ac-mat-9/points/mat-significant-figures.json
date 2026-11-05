@@ -1,0 +1,217 @@
+{
+ "id": "mat-significant-figures",
+ "title": "Significant figures",
+ "brief": "1da86c1b8e2b",
+ "shortlist": [
+  [
+   "mat-significant-figures-scientific-notation",
+   0.439
+  ],
+  [
+   "mat-units-precision",
+   0.385
+  ],
+  [
+   "mat-significant-figures-rounding",
+   0.247
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:31Z write: done",
+  "2026-11-04T10:08:04Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00464,
+  "check": 0.01023,
+  "fix": 0.01726,
+  "recheck": 0.00656
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points each teach significant figures alongside other ideas such as scientific notation, units or decimal places, so none teaches only this rounding idea at Year 9 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Significant figures",
+  "card": [
+   "Significant figures are the digits that carry the size of a number. Counting starts at the first non-zero digit and moves right.",
+   "Zeros before the first non-zero digit are not counted. They only show the place value. In 0.004 562, the first significant figure is 4.",
+   "To round, keep the number of digits asked for. Look at the next digit. If it is 5 or more, round the last kept digit up. If it is 4 or less, leave it.",
+   "Worked example: round 0.004 562 to 2 significant figures. The digits are 4 and 5. The next digit is 6, so the 5 becomes 6. The answer is 0.0046."
+  ],
+  "remember": "Count from the first non-zero digit, then round using the next digit.",
+  "a": {
+   "q": "What is 0.007 381 rounded to 2 significant figures?",
+   "opts": [
+    "0.0074",
+    "0.0073",
+    "0.007",
+    "0.074"
+   ],
+   "why": "The first significant figure is 7, so the two digits are 7 and 3. The next digit is 8, so the 3 rounds up to 4, giving 0.0074. Rounding down to 0.0073 ignores the 8.",
+   "clue": "Start counting at the first digit that is not zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "A pond in Hobart holds 0.030 468 megalitres of water. What is this to 3 significant figures?",
+   "opts": [
+    "0.0305",
+    "0.0304",
+    "0.030",
+    "0.305"
+   ],
+   "why": "Counting starts at the 3, so the three digits are 3, 0 and 4. The next digit is 6, so the 4 rounds up to 5, giving 0.0305. The zero between 3 and 4 is counted, and the zeros before the 3 are not. 0.0304 does not round up.",
+   "clue": "A zero between non-zero digits is counted, but zeros at the start are not."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.0074",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.0305",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Question b depends on knowing that a zero between non-zero digits is significant (the 0 in 3, 0, 4). The card never says this. It only covers leading zeros and 'moves right'. The rule appears only in the clue, so the card should state it directly."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (0.0074 and 0.0305) and the explanations match. One gap: the card never says that zeros between non-zero digits count, yet question b depends on that rule."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: Question b depends on knowing that a zero between non-zero digits is significant (the 0 in 3, 0, 4). The card never says this. It only covers leading zeros and 'moves right'. The rule appears only in the clue, so the card should state it directly."
+ ],
+ "proposal": {
+  "title": "Significant figures",
+  "card": [
+   "Significant figures are the digits that carry the size of a number. Counting starts at the first non-zero digit and moves right.",
+   "Zeros before the first non-zero digit only show place value, so they are not counted. Zeros between non-zero digits are counted, so 2.07 has 3 significant figures.",
+   "To round, keep the number of digits asked for. Look at the next digit. If it is 5 or more, round the last kept digit up. If it is 4 or less, leave it.",
+   "Worked example: round 0.004 562 to 2 significant figures. The first two are 4 and 5, and the next digit is 6, so the 5 becomes 6. The answer is 0.0046."
+  ],
+  "remember": "Skip the zeros at the start, count the zeros in between, then round using the next digit.",
+  "a": {
+   "q": "What is 0.007 381 rounded to 2 significant figures?",
+   "opts": [
+    "0.0074",
+    "0.0073",
+    "0.007",
+    "0.074"
+   ],
+   "why": "The first significant figure is 7, so the two digits are 7 and 3. The next digit is 8, so the 3 rounds up to 4, giving 0.0074. Rounding down to 0.0073 ignores the 8.",
+   "clue": "Start counting at the first digit that is not zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "A pond in Hobart holds 0.030 468 megalitres of water. What is this to 3 significant figures?",
+   "opts": [
+    "0.0305",
+    "0.0304",
+    "0.030",
+    "0.305"
+   ],
+   "why": "Counting starts at the 3, and the zero between 3 and 4 is counted, so the three digits are 3, 0 and 4. The next digit is 6, so the 4 rounds up to 5, giving 0.0305. 0.0304 forgets to round up.",
+   "clue": "Does the zero after the 3 count as a significant figure?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "0.0074",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.0305",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Question b depends on knowing that a zero between non-zero digits is significant (the 0 in 3, 0, 4). The card never says this. It only covers leading zeros and 'moves right'. The rule appears only in the clue, so the card should state it directly."
+   }
+  ],
+  "flags": [
+   "Question b, level: Question b depends on knowing that a zero between non-zero digits is significant (the 0 in 3, 0, 4). The card never says this. It only covers leading zeros and 'moves right'. The rule appears only in the clue, so the card should state it directly."
+  ]
+ },
+ "final": {
+  "title": "Significant figures",
+  "card": [
+   "Significant figures are the digits that carry the size of a number. Counting starts at the first non-zero digit and moves right.",
+   "Zeros before the first non-zero digit only show place value, so they are not counted. Zeros between non-zero digits are counted, so 2.07 has 3 significant figures.",
+   "To round, keep the number of digits asked for. Look at the next digit. If it is 5 or more, round the last kept digit up. If it is 4 or less, leave it.",
+   "Worked example: round 0.004 562 to 2 significant figures. The first two are 4 and 5, and the next digit is 6, so the 5 becomes 6. The answer is 0.0046."
+  ],
+  "remember": "Skip the zeros at the start, count the zeros in between, then round using the next digit.",
+  "a": {
+   "q": "What is 0.007 381 rounded to 2 significant figures?",
+   "opts": [
+    "0.0074",
+    "0.0073",
+    "0.007",
+    "0.074"
+   ],
+   "why": "The first significant figure is 7, so the two digits are 7 and 3. The next digit is 8, so the 3 rounds up to 4, giving 0.0074. Rounding down to 0.0073 ignores the 8.",
+   "clue": "Start counting at the first digit that is not zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "A pond in Hobart holds 0.030 468 megalitres of water. What is this to 3 significant figures?",
+   "opts": [
+    "0.0305",
+    "0.0304",
+    "0.030",
+    "0.305"
+   ],
+   "why": "Counting starts at the 3, and the zero between 3 and 4 is counted, so the three digits are 3, 0 and 4. The next digit is 6, so the 4 rounds up to 5, giving 0.0305. 0.0304 forgets to round up.",
+   "clue": "Does the zero after the 3 count as a significant figure?"
+  }
+ },
+ "cleared_by": "recheck"
+}

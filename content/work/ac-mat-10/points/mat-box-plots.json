@@ -1,0 +1,136 @@
+{
+ "id": "mat-box-plots",
+ "title": "Box plots",
+ "brief": "f77005c8d62c",
+ "shortlist": [
+  [
+   "mat-spread-box-plots",
+   0.292
+  ],
+  [
+   "mat-pigeonhole-principle",
+   0.246
+  ],
+  [
+   "mat-comparing-data-sets",
+   0.236
+  ],
+  [
+   "mat-histograms-dot-plots",
+   0.224
+  ],
+  [
+   "mat-distributions-sample-means",
+   0.219
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.0127,
+  "check": 0.00951
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-spread-box-plots, covers drawing a box plot and comparing IQRs but is broader (range and quartile calculations) and does not teach comparing centre, spread and shape with two box plots on one scale, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Box plots",
+  "card": [
+   "A box plot draws the five-number summary on a number line. The box runs from Q1 to Q3, and a line inside it marks the median.",
+   "Lines called whiskers run from the box to the minimum and to the maximum. The box holds about half of the data, and its length is the IQR.",
+   "To compare two data sets, draw both box plots on the same scale. Compare the centre (the medians), the spread (the box lengths and the whisker ends) and the shape.",
+   "For shape, look at where the median sits in the box and which whisker is longer. A longer whisker on one side means the data stretches out further that way."
+  ],
+  "remember": "The box holds about half the data. Compare medians for centre and box length for spread.",
+  "a": {
+   "q": "A box plot of test scores has a box from 55 to 75, with the median line at 62. Which statement is true?",
+   "opts": [
+    "About half the scores are between 55 and 75",
+    "About a quarter of the scores are between 55 and 75",
+    "About half the scores are below 75",
+    "All of the scores are between 55 and 75"
+   ],
+   "why": "The box runs from Q1 to Q3, so it holds about half of the scores. About three quarters are below 75, not half. The whiskers show that scores also fall outside the box.",
+   "clue": "What fraction of the data sits between Q1 and Q3?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Two Darwin bus routes have travel times in minutes. Route 1: min 12, Q1 15, median 18, Q3 22, max 40. Route 2: min 10, Q1 16, median 18, Q3 20, max 26. Which comparison is correct?",
+   "opts": [
+    "Same median, but Route 1 is more spread out",
+    "Same median, but Route 2 is more spread out",
+    "Route 1 has the higher median and the same spread",
+    "Route 2 has the lower median and the smaller range"
+   ],
+   "why": "Both medians are 18. Route 1 has the longer box (IQR 7 against 4) and the larger range (28 against 16), so it is more spread out. Route 2 does not have a lower median, because the two medians are equal.",
+   "clue": "Compare the median lines first, then the box lengths."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "About half the scores are between 55 and 75",
+   "also_right": []
+  },
+  "b": {
+   "best": "Same median, but Route 1 is more spread out",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Box plots",
+  "card": [
+   "A box plot draws the five-number summary on a number line. The box runs from Q1 to Q3, and a line inside it marks the median.",
+   "Lines called whiskers run from the box to the minimum and to the maximum. The box holds about half of the data, and its length is the IQR.",
+   "To compare two data sets, draw both box plots on the same scale. Compare the centre (the medians), the spread (the box lengths and the whisker ends) and the shape.",
+   "For shape, look at where the median sits in the box and which whisker is longer. A longer whisker on one side means the data stretches out further that way."
+  ],
+  "remember": "The box holds about half the data. Compare medians for centre and box length for spread.",
+  "a": {
+   "q": "A box plot of test scores has a box from 55 to 75, with the median line at 62. Which statement is true?",
+   "opts": [
+    "About half the scores are between 55 and 75",
+    "About a quarter of the scores are between 55 and 75",
+    "About half the scores are below 75",
+    "All of the scores are between 55 and 75"
+   ],
+   "why": "The box runs from Q1 to Q3, so it holds about half of the scores. About three quarters are below 75, not half. The whiskers show that scores also fall outside the box.",
+   "clue": "What fraction of the data sits between Q1 and Q3?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Two Darwin bus routes have travel times in minutes. Route 1: min 12, Q1 15, median 18, Q3 22, max 40. Route 2: min 10, Q1 16, median 18, Q3 20, max 26. Which comparison is correct?",
+   "opts": [
+    "Same median, but Route 1 is more spread out",
+    "Same median, but Route 2 is more spread out",
+    "Route 1 has the higher median and the same spread",
+    "Route 2 has the lower median and the smaller range"
+   ],
+   "why": "Both medians are 18. Route 1 has the longer box (IQR 7 against 4) and the larger range (28 against 16), so it is more spread out. Route 2 does not have a lower median, because the two medians are equal.",
+   "clue": "Compare the median lines first, then the box lengths."
+  }
+ },
+ "cleared_by": "checker"
+}

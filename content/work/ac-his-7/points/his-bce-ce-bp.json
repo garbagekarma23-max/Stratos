@@ -1,0 +1,399 @@
+{
+ "id": "his-bce-ce-bp",
+ "title": "BCE, CE and BP",
+ "brief": "9aac75893c70",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:36Z new, write",
+  "2026-11-04T09:36:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:03Z write: done",
+  "2026-11-04T09:58:27Z check: flagged",
+  "2026-11-04T14:58:51Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00453,
+  "check": 0.01094,
+  "fix": 0.01381,
+  "recheck": 0.00988
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card says CE dates 'are after the year 1', but the year 1 is itself a CE date (1 CE), as point 3 shows by starting the 1st century CE at 1 CE. Better: 'CE dates start at the year 1 and count up.'",
+ "rejected": {
+  "title": "BCE, CE and BP",
+  "card": [
+   [
+    "BCE",
+    "Before the Common Era. These dates are before the year 1. They count down towards it, so 500 BCE is earlier than 200 BCE."
+   ],
+   [
+    "CE",
+    "Common Era. These dates are after the year 1. They count up, so 200 CE is earlier than 500 CE."
+   ],
+   [
+    "BP",
+    "Before present. Archaeologists use it to count years back from the present, which is set at 1950 CE. A larger BP number means an older date."
+   ],
+   "BCE and CE are both measured from the year 1. BP is measured back from the present, fixed at 1950."
+  ],
+  "remember": "BCE counts down to year 1, CE counts up from it, and BP counts back from 1950.",
+  "a": {
+   "q": "Which of these dates is the earliest?",
+   "opts": [
+    "800 BCE",
+    "300 BCE",
+    "100 CE",
+    "600 CE"
+   ],
+   "why": "BCE dates count down towards the year 1, so 800 BCE is further back in time than 300 BCE. Both are earlier than any CE date. A student might pick 300 BCE because 300 is a smaller number, but BCE numbers get smaller as time moves forward.",
+   "clue": "BCE numbers get smaller as time moves forward."
+  },
+  "b": {
+   "d": 3,
+   "q": "An archaeologist reports that a stone tool found in Queensland is 12,000 years BP. What does BP tell you about this date?",
+   "opts": [
+    "It counts 12,000 years back from the present",
+    "It counts 12,000 years forward from the year 1",
+    "It counts 12,000 years back from the year 1",
+    "It is a CE date, so the tool is fairly recent"
+   ],
+   "why": "BP means before present, so the date counts 12,000 years back from the present, which archaeologists set at 1950 CE. The tempting answer is counting back from the year 1, but that is how BCE works, and BP is not a CE date either.",
+   "clue": "Think about what the P in BP stands for."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card says CE dates 'are after the year 1', but the year 1 is itself a CE date (1 CE), as point 3 shows by starting the 1st century CE at 1 CE. Better: 'CE dates start at the year 1 and count up.'"
+   ],
+   "saved": {
+    "draft": {
+     "title": "BCE, CE and BP",
+     "card": [
+      [
+       "BCE",
+       "Before the Common Era. These dates are before the year 1. They count down towards it, so 500 BCE is earlier than 200 BCE."
+      ],
+      [
+       "CE",
+       "Common Era. These dates are after the year 1. They count up, so 200 CE is earlier than 500 CE."
+      ],
+      [
+       "BP",
+       "Before present. Archaeologists use it to count years back from today, so a larger BP number means an older date."
+      ],
+      "BCE and CE are both measured from the year 1. BP is measured back from the present."
+     ],
+     "remember": "BCE counts down to year 1, CE counts up from it, and BP counts back from today.",
+     "a": {
+      "q": "Which of these dates is the earliest?",
+      "opts": [
+       "800 BCE",
+       "300 BCE",
+       "100 CE",
+       "600 CE"
+      ],
+      "why": "BCE dates count down towards the year 1, so 800 BCE is further back in time than 300 BCE. Both are earlier than any CE date. A student might pick 300 BCE because 300 is a smaller number, but BCE numbers get smaller as time moves forward.",
+      "clue": "BCE numbers get smaller as time moves forward."
+     },
+     "b": {
+      "d": 3,
+      "q": "An archaeologist reports that a stone tool found in Queensland is 12,000 years BP. What does BP tell you about this date?",
+      "opts": [
+       "It counts 12,000 years back from the present",
+       "It counts 12,000 years forward from the year 1",
+       "It counts 12,000 years back from the year 1",
+       "It is a CE date, so the tool is fairly recent"
+      ],
+      "why": "BP means before present, so the tool is 12,000 years old counted back from today. The tempting answer is counting back from the year 1, but that is how BCE works, not BP. BP is not a CE date.",
+      "clue": "Think about what the P in BP stands for."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "800 BCE",
+      "also_right": []
+     },
+     "b": {
+      "best": "It counts 12,000 years back from the present",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says BP counts years back from 'today'. By convention, 'present' in BP is fixed at 1950 CE, not the current year. This makes little difference for old dates like 12,000 BP, but the card should say so, for example: 'counts years back from the present (set at 1950)'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and the intended answers are correct: 800 BCE for (a) and back from the present for (b). The only issue is that the card says BP counts back from 'today', when the convention fixes the present at 1950."
+    },
+    "flags": [
+     "Card, fact: The card says BP counts years back from 'today'. By convention, 'present' in BP is fixed at 1950 CE, not the current year. This makes little difference for old dates like 12,000 BP, but the card should say so, for example: 'counts years back from the present (set at 1950)'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "BCE, CE and BP",
+     "card": [
+      [
+       "BCE",
+       "Before the Common Era. These dates are before the year 1. They count down towards it, so 500 BCE is earlier than 200 BCE."
+      ],
+      [
+       "CE",
+       "Common Era. These dates are after the year 1. They count up, so 200 CE is earlier than 500 CE."
+      ],
+      [
+       "BP",
+       "Before present. Archaeologists use it to count years back from the present, which is set at 1950 CE. A larger BP number means an older date."
+      ],
+      "BCE and CE are both measured from the year 1. BP is measured back from the present, fixed at 1950."
+     ],
+     "remember": "BCE counts down to year 1, CE counts up from it, and BP counts back from 1950.",
+     "a": {
+      "q": "Which of these dates is the earliest?",
+      "opts": [
+       "800 BCE",
+       "300 BCE",
+       "100 CE",
+       "600 CE"
+      ],
+      "why": "BCE dates count down towards the year 1, so 800 BCE is further back in time than 300 BCE. Both are earlier than any CE date. A student might pick 300 BCE because 300 is a smaller number, but BCE numbers get smaller as time moves forward.",
+      "clue": "BCE numbers get smaller as time moves forward."
+     },
+     "b": {
+      "d": 3,
+      "q": "An archaeologist reports that a stone tool found in Queensland is 12,000 years BP. What does BP tell you about this date?",
+      "opts": [
+       "It counts 12,000 years back from the present",
+       "It counts 12,000 years forward from the year 1",
+       "It counts 12,000 years back from the year 1",
+       "It is a CE date, so the tool is fairly recent"
+      ],
+      "why": "BP means before present, so the date counts 12,000 years back from the present, which archaeologists set at 1950 CE. The tempting answer is counting back from the year 1, but that is how BCE works, and BP is not a CE date either.",
+      "clue": "Think about what the P in BP stands for."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "800 BCE",
+       "also_right": []
+      },
+      "b": {
+       "best": "It counts 12,000 years back from the present",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card says CE dates 'are after the year 1', but the year 1 is itself a CE date (1 CE), as point 3 shows by starting the 1st century CE at 1 CE. Better: 'CE dates start at the year 1 and count up.'"
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions and explanations are correct and fair. One small inaccuracy: the card says CE dates are 'after the year 1', when 1 CE is itself a CE date."
+     },
+     "flags": [
+      "Card, fact: The card says CE dates 'are after the year 1', but the year 1 is itself a CE date (1 CE), as point 3 shows by starting the 1st century CE at 1 CE. Better: 'CE dates start at the year 1 and count up.'"
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "BCE, CE and BP",
+    "card": [
+     [
+      "BCE",
+      "Before the Common Era. These dates come before the year 1 CE. They count down towards it, so 500 BCE is earlier than 200 BCE."
+     ],
+     [
+      "CE",
+      "Common Era. CE dates start at the year 1 and count up, so 200 CE is earlier than 500 CE. There is no year 0: 1 BCE is followed by 1 CE."
+     ],
+     [
+      "BP",
+      "Before present. Archaeologists use it to count years back from the present, which is fixed at 1950 CE. A larger BP number means an older date."
+     ],
+     "BCE and CE dates are counted from the start of the Common Era. BP dates are counted back from 1950."
+    ],
+    "remember": "BCE numbers shrink as time goes on, CE numbers grow, and BP counts back from 1950.",
+    "a": {
+     "q": "Put these dates in time order. Which one comes first?",
+     "opts": [
+      "750 BCE",
+      "250 BCE",
+      "50 CE",
+      "400 CE"
+     ],
+     "why": "BCE dates count down towards 1 CE, so 750 BCE is further back in time than 250 BCE, and every BCE date comes before every CE date. 250 BCE is tempting because 250 is a smaller number, but BCE numbers get smaller as time moves forward.",
+     "clue": "In BCE, a bigger number is further back in time."
+    },
+    "b": {
+     "d": 3,
+     "q": "A museum label says charcoal from an old campfire is 8,000 years BP. What does this date mean?",
+     "opts": [
+      "8,000 years before 1950",
+      "8,000 years after the year 1",
+      "8,000 years before the year 1",
+      "The year 8,000 in the Common Era"
+     ],
+     "why": "BP means before present, and archaeologists fix the present at 1950, so the charcoal is 8,000 years older than 1950. Counting back from the year 1 is how BCE works, not BP.",
+     "clue": "What year do archaeologists treat as the present?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "750 BCE",
+     "also_right": []
+    },
+    "b": {
+     "best": "8,000 years before 1950",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "BCE, CE and BP",
+  "card": [
+   [
+    "BCE",
+    "Before the Common Era. These dates come before the year 1 CE. They count down towards it, so 500 BCE is earlier than 200 BCE."
+   ],
+   [
+    "CE",
+    "Common Era. CE dates start at the year 1 and count up, so 200 CE is earlier than 500 CE. There is no year 0: 1 BCE is followed by 1 CE."
+   ],
+   [
+    "BP",
+    "Before present. Archaeologists use it to count years back from the present, which is fixed at 1950 CE. A larger BP number means an older date."
+   ],
+   "BCE and CE dates are counted from the start of the Common Era. BP dates are counted back from 1950."
+  ],
+  "remember": "BCE numbers shrink as time goes on, CE numbers grow, and BP counts back from 1950.",
+  "a": {
+   "q": "Put these dates in time order. Which one comes first?",
+   "opts": [
+    "750 BCE",
+    "250 BCE",
+    "50 CE",
+    "400 CE"
+   ],
+   "why": "BCE dates count down towards 1 CE, so 750 BCE is further back in time than 250 BCE, and every BCE date comes before every CE date. 250 BCE is tempting because 250 is a smaller number, but BCE numbers get smaller as time moves forward.",
+   "clue": "In BCE, a bigger number is further back in time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A museum label says charcoal from an old campfire is 8,000 years BP. What does this date mean?",
+   "opts": [
+    "8,000 years before 1950",
+    "8,000 years after the year 1",
+    "8,000 years before the year 1",
+    "The year 8,000 in the Common Era"
+   ],
+   "why": "BP means before present, and archaeologists fix the present at 1950, so the charcoal is 8,000 years older than 1950. Counting back from the year 1 is how BCE works, not BP.",
+   "clue": "What year do archaeologists treat as the present?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "750 BCE",
+   "also_right": []
+  },
+  "b": {
+   "best": "8,000 years before 1950",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "BCE, CE and BP",
+  "card": [
+   [
+    "BCE",
+    "Before the Common Era. These dates come before the year 1 CE. They count down towards it, so 500 BCE is earlier than 200 BCE."
+   ],
+   [
+    "CE",
+    "Common Era. CE dates start at the year 1 and count up, so 200 CE is earlier than 500 CE. There is no year 0: 1 BCE is followed by 1 CE."
+   ],
+   [
+    "BP",
+    "Before present. Archaeologists use it to count years back from the present, which is fixed at 1950 CE. A larger BP number means an older date."
+   ],
+   "BCE and CE dates are counted from the start of the Common Era. BP dates are counted back from 1950."
+  ],
+  "remember": "BCE numbers shrink as time goes on, CE numbers grow, and BP counts back from 1950.",
+  "a": {
+   "q": "Put these dates in time order. Which one comes first?",
+   "opts": [
+    "750 BCE",
+    "250 BCE",
+    "50 CE",
+    "400 CE"
+   ],
+   "why": "BCE dates count down towards 1 CE, so 750 BCE is further back in time than 250 BCE, and every BCE date comes before every CE date. 250 BCE is tempting because 250 is a smaller number, but BCE numbers get smaller as time moves forward.",
+   "clue": "In BCE, a bigger number is further back in time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A museum label says charcoal from an old campfire is 8,000 years BP. What does this date mean?",
+   "opts": [
+    "8,000 years before 1950",
+    "8,000 years after the year 1",
+    "8,000 years before the year 1",
+    "The year 8,000 in the Common Era"
+   ],
+   "why": "BP means before present, and archaeologists fix the present at 1950, so the charcoal is 8,000 years older than 1950. Counting back from the year 1 is how BCE works, not BP.",
+   "clue": "What year do archaeologists treat as the present?"
+  }
+ },
+ "checked_by": "claude-code"
+}

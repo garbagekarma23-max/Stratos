@@ -1,0 +1,233 @@
+{
+ "id": "mat-equations-with-algebraic-fractions",
+ "title": "Equations with algebraic fractions",
+ "brief": "fb694eb58730",
+ "shortlist": [
+  [
+   "mat-partial-fractions",
+   0.335
+  ],
+  [
+   "mat-partial-fractions-unit-3",
+   0.253
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.225
+  ],
+  [
+   "mat-parametric-equations",
+   0.212
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:03Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00479,
+  "check": 0.01128,
+  "fix": 0.02225,
+  "recheck": 0.00907
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches solving an equation with algebraic fractions by multiplying through by the lowest common denominator; partial fractions, simultaneous equations and parametric equations are related but different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Equations with algebraic fractions",
+  "card": [
+   "An equation with fractions is easier to solve once the fractions are gone. The lowest common denominator (LCD) is the smallest number that every denominator divides into.",
+   "Multiply every term on both sides by the LCD. Each denominator cancels, and you are left with a plain equation.",
+   "Example: x/3 + x/4 = 7. The LCD is 12, so 12 × x/3 + 12 × x/4 = 12 × 7. This gives 4x + 3x = 84.",
+   "Then solve as usual: 7x = 84, so x = 12. Check by putting x = 12 back in: 12/3 + 12/4 = 4 + 3 = 7."
+  ],
+  "remember": "Multiply every term by the LCD to clear the fractions, then solve.",
+  "a": {
+   "q": "Solve x/2 + x/5 = 14. What is x?",
+   "opts": [
+    "20",
+    "14",
+    "28",
+    "10"
+   ],
+   "why": "The LCD is 10, so 5x + 2x = 140. Then 7x = 140 and x = 20. Check: 20/2 + 20/5 = 10 + 4 = 14. An answer of 14 comes from skipping the multiplication of the right side by 10.",
+   "clue": "Multiply every term, including the 14, by 10."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves x/3 + x/6 = 5. She multiplies the terms on the left by 6 but forgets the right side. Which is the correct value of x?",
+   "opts": [
+    "10",
+    "30",
+    "5",
+    "2"
+   ],
+   "why": "The LCD is 6, so 2x + x = 30. Then 3x = 30 and x = 10. Check: 10/3 + 10/6 = 20/6 + 10/6 = 30/6 = 5. Forgetting the right side gives 3x = 5, which is a wrong equation.",
+   "clue": "The 6 must multiply the 5 as well."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "20",
+   "also_right": []
+  },
+  "b": {
+   "best": "10",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says an answer of 14 comes from not multiplying the right side by 10. Skipping that step gives 5x + 2x = 14, so 7x = 14 and x = 2, not 14. The why misdescribes the error."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question describes Mia's mistake but then asks for the correct value. None of the options matches her mistaken result (3x = 5 gives x = 5/3), so the story adds confusion without testing the error it describes."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers (20 and 10) are correct. Why (a) wrongly says that skipping the right side gives 14 (it gives x = 2), and question b's Mia scenario doesn't match any of its options."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: Why (a) says an answer of 14 comes from not multiplying the right side by 10. Skipping that step gives 5x + 2x = 14, so 7x = 14 and x = 2, not 14. The why misdescribes the error.",
+  "Question b, wording: The question describes Mia's mistake but then asks for the correct value. None of the options matches her mistaken result (3x = 5 gives x = 5/3), so the story adds confusion without testing the error it describes."
+ ],
+ "proposal": {
+  "title": "Equations with algebraic fractions",
+  "card": [
+   "An equation with fractions is easier to solve once the fractions are gone. The lowest common denominator (LCD) is the smallest number that every denominator divides into.",
+   "Multiply every term on both sides by the LCD, including any whole number with no fraction. Each denominator cancels, and you are left with a plain equation.",
+   "Example: x/3 + x/4 = 7. The LCD is 12, so 12 × x/3 + 12 × x/4 = 12 × 7. This gives 4x + 3x = 84.",
+   "Then solve as usual: 7x = 84, so x = 12. Check by putting x = 12 back in: 12/3 + 12/4 = 4 + 3 = 7."
+  ],
+  "remember": "Multiply every term by the LCD to clear the fractions, then solve.",
+  "a": {
+   "q": "Solve x/2 + x/5 = 14. What is x?",
+   "opts": [
+    "20",
+    "2",
+    "140",
+    "49"
+   ],
+   "why": "The LCD is 10, so 5x + 2x = 140. Then 7x = 140 and x = 20. Check: 20/2 + 20/5 = 10 + 4 = 14. An answer of 2 comes from not multiplying the 14 by 10, which gives 7x = 14.",
+   "clue": "Multiply every term, including the 14, by 10."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves x/3 + x/6 = 5 by multiplying by 6. Her answer is x = 5/3. What did she do wrong?",
+   "opts": [
+    "She did not multiply the 5 by 6",
+    "She turned 6 × x/3 into 3x instead of 2x",
+    "She multiplied the 5 by 3 instead of by 6",
+    "She did not divide by 3 at the last step"
+   ],
+   "why": "Without multiplying the 5, Mia gets 2x + x = 5, so 3x = 5 and x = 5/3. The correct working is 2x + x = 30, so x = 10. Turning 6 × x/3 into 3x gives 4x = 30 and x = 7.5, not 5/3.",
+   "clue": "Redo each step and see which one gives 3x = 5."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "20",
+    "also_right": []
+   },
+   "b": {
+    "best": "She did not multiply the 5 by 6",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: x = 20 in (a), and in (b) only leaving the 5 unmultiplied gives 3x = 5."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says an answer of 14 comes from not multiplying the right side by 10. Skipping that step gives 5x + 2x = 14, so 7x = 14 and x = 2, not 14. The why misdescribes the error."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question describes Mia's mistake but then asks for the correct value. None of the options matches her mistaken result (3x = 5 gives x = 5/3), so the story adds confusion without testing the error it describes."
+   }
+  ],
+  "flags": [
+   "Question a, fact: Why (a) says an answer of 14 comes from not multiplying the right side by 10. Skipping that step gives 5x + 2x = 14, so 7x = 14 and x = 2, not 14. The why misdescribes the error.",
+   "Question b, wording: The question describes Mia's mistake but then asks for the correct value. None of the options matches her mistaken result (3x = 5 gives x = 5/3), so the story adds confusion without testing the error it describes."
+  ]
+ },
+ "final": {
+  "title": "Equations with algebraic fractions",
+  "card": [
+   "An equation with fractions is easier to solve once the fractions are gone. The lowest common denominator (LCD) is the smallest number that every denominator divides into.",
+   "Multiply every term on both sides by the LCD, including any whole number with no fraction. Each denominator cancels, and you are left with a plain equation.",
+   "Example: x/3 + x/4 = 7. The LCD is 12, so 12 × x/3 + 12 × x/4 = 12 × 7. This gives 4x + 3x = 84.",
+   "Then solve as usual: 7x = 84, so x = 12. Check by putting x = 12 back in: 12/3 + 12/4 = 4 + 3 = 7."
+  ],
+  "remember": "Multiply every term by the LCD to clear the fractions, then solve.",
+  "a": {
+   "q": "Solve x/2 + x/5 = 14. What is x?",
+   "opts": [
+    "20",
+    "2",
+    "140",
+    "49"
+   ],
+   "why": "The LCD is 10, so 5x + 2x = 140. Then 7x = 140 and x = 20. Check: 20/2 + 20/5 = 10 + 4 = 14. An answer of 2 comes from not multiplying the 14 by 10, which gives 7x = 14.",
+   "clue": "Multiply every term, including the 14, by 10."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves x/3 + x/6 = 5 by multiplying by 6. Her answer is x = 5/3. What did she do wrong?",
+   "opts": [
+    "She did not multiply the 5 by 6",
+    "She turned 6 × x/3 into 3x instead of 2x",
+    "She multiplied the 5 by 3 instead of by 6",
+    "She did not divide by 3 at the last step"
+   ],
+   "why": "Without multiplying the 5, Mia gets 2x + x = 5, so 3x = 5 and x = 5/3. The correct working is 2x + x = 30, so x = 10. Turning 6 × x/3 into 3x gives 4x = 30 and x = 7.5, not 5/3.",
+   "clue": "Redo each step and see which one gives 3x = 5."
+  }
+ },
+ "cleared_by": "recheck"
+}

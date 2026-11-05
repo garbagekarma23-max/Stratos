@@ -1,0 +1,441 @@
+{
+ "id": "mat-choosing-display",
+ "title": "Choosing a display",
+ "brief": "4bb2b5fc77df",
+ "shortlist": [
+  [
+   "mat-displaying-data",
+   0.355
+  ],
+  [
+   "mat-types-data",
+   0.319
+  ],
+  [
+   "mat-histograms-dot-plots",
+   0.222
+  ],
+  [
+   "mat-displaying-data-2",
+   0.216
+  ],
+  [
+   "mat-types-data-2",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: flagged",
+  "2026-11-04T10:08:05Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00727,
+  "check": 0.01285,
+  "fix": 0.01888,
+  "recheck": 0.0096
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers the line graph for change over time, and the bank points cover only categorical versus numerical displays, so the new point teaches a different and broader rule.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The worked example calls 'the number of students who walk, cycle or take the bus' categorical. But the card has just defined numerical data as 'a count', so a student may think counting students makes it numerical. It would be clearer to say the data is each student's way of getting to school, and the bar chart shows how many fall in each group.",
+ "rejected": {
+  "title": "Choosing a display",
+  "card": [
+   [
+    "Categorical",
+    "data sorts things into groups, such as favourite sport or type of pet. A bar chart or a pie chart suits it."
+   ],
+   [
+    "Numerical",
+    "data is a count or a measurement, such as height or test score. A histogram or a dot plot suits it and shows how the values spread out."
+   ],
+   [
+    "Over time",
+    "A line graph suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. A histogram or dot plot would lose that order."
+   ],
+   "To choose a display, first ask what type of data you have and what you want to show. Example: the number of students who walk, cycle or take the bus to school is categorical, so use a bar chart."
+  ],
+  "remember": "Match the display to the data: groups, numbers or change over time.",
+  "a": {
+   "q": "Tamsin records the colour of each car that passes her school. What type of data is this, and which display suits it?",
+   "opts": [
+    "Categorical, so a bar chart",
+    "Numerical, so a histogram",
+    "Categorical, so a histogram",
+    "Numerical, so a line graph"
+   ],
+   "why": "Car colour sorts cars into groups, so it is categorical data and a bar chart suits it. A histogram is for numerical data, such as counts or measurements, so it does not suit colours even though the data is correctly called categorical in that option.",
+   "clue": "Is a colour a group or a measurement?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Hobart records the city's mean daily temperature each month for three years. It wants to show how temperature changes over that time. Which display is best?",
+   "opts": [
+    "A line graph",
+    "A histogram",
+    "A dot plot",
+    "A pie chart"
+   ],
+   "why": "The data is recorded over time and the aim is to show change, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram or dot plot tempting, but both would lose the order of the months.",
+   "clue": "Which display keeps the months in order?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The worked example calls 'the number of students who walk, cycle or take the bus' categorical. But the card has just defined numerical data as 'a count', so a student may think counting students makes it numerical. It would be clearer to say the data is each student's way of getting to school, and the bar chart shows how many fall in each group."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Choosing a display",
+     "card": [
+      [
+       "Categorical",
+       "data sorts things into groups, such as favourite sport or type of pet. A bar chart or a pie chart suits it."
+      ],
+      [
+       "Numerical",
+       "data is a count or a measurement, such as height or test score. A histogram or a dot plot suits it."
+      ],
+      [
+       "Over time",
+       "A line graph suits data that changes over time, such as a town's rainfall each month. The line shows the trend."
+      ],
+      "To choose a display, first ask what type of data you have and what you want to show. Example: the number of students who walk, cycle or take the bus to school is categorical, so use a bar chart."
+     ],
+     "remember": "Match the display to the data: groups, numbers or change over time.",
+     "a": {
+      "q": "Tamsin records the colour of each car that passes her school. Which display suits this data?",
+      "opts": [
+       "A bar chart",
+       "A histogram",
+       "A line graph",
+       "A dot plot of speeds"
+      ],
+      "why": "Car colour sorts cars into groups, so it is categorical data and a bar chart suits it. A histogram is for numerical data such as speeds, not colours.",
+      "clue": "Is colour a group or a number?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A council in Hobart records the city's mean daily temperature each month for three years. It wants to show how temperature changes over that time. Which display is best?",
+      "opts": [
+       "A line graph",
+       "A pie chart",
+       "A bar chart of colours",
+       "A histogram of one month"
+      ],
+      "why": "The data is measured over time and the aim is to show change, so a line graph shows the trend. A pie chart shows parts of a whole at one point, not change. Temperature is numerical, but that alone does not make a histogram best here.",
+      "clue": "The aim is to show change over time."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A bar chart",
+      "also_right": []
+     },
+     "b": {
+      "best": "A line graph",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The distractor 'A dot plot of speeds' names data (speeds) that Tamsin did not record, so a student can rule it out without knowing which display suits categorical data. This leaves the question easier than it should be."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The distractors 'A bar chart of colours' and 'A histogram of one month' carry qualifiers that plainly do not fit temperatures over three years. 'A line graph' is the only plain option left, so it can be picked without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'The aim is to show change over time' repeats the card's line-graph rule word for word, which gives the answer away."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and the intended answers are correct. The distractors are weak: several carry irrelevant qualifiers ('of speeds', 'of colours', 'of one month') that let students rule them out without knowing the idea, and the clue in b gives the answer away."
+    },
+    "flags": [
+     "Question a, wording: The distractor 'A dot plot of speeds' names data (speeds) that Tamsin did not record, so a student can rule it out without knowing which display suits categorical data. This leaves the question easier than it should be.",
+     "Question b, wording: The distractors 'A bar chart of colours' and 'A histogram of one month' carry qualifiers that plainly do not fit temperatures over three years. 'A line graph' is the only plain option left, so it can be picked without knowing the idea.",
+     "Question b, other: The clue 'The aim is to show change over time' repeats the card's line-graph rule word for word, which gives the answer away."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Choosing a display",
+     "card": [
+      [
+       "Categorical",
+       "data sorts things into groups, such as favourite sport or type of pet. A bar chart or a pie chart suits it."
+      ],
+      [
+       "Numerical",
+       "data is a count or a measurement, such as height or test score. A histogram or a dot plot suits it and shows how the values spread out."
+      ],
+      [
+       "Over time",
+       "A line graph suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. A histogram or dot plot would lose that order."
+      ],
+      "To choose a display, first ask what type of data you have and what you want to show. Example: the number of students who walk, cycle or take the bus to school is categorical, so use a bar chart."
+     ],
+     "remember": "Match the display to the data: groups, numbers or change over time.",
+     "a": {
+      "q": "Tamsin records the colour of each car that passes her school. What type of data is this, and which display suits it?",
+      "opts": [
+       "Categorical, so a bar chart",
+       "Numerical, so a histogram",
+       "Categorical, so a histogram",
+       "Numerical, so a line graph"
+      ],
+      "why": "Car colour sorts cars into groups, so it is categorical data and a bar chart suits it. A histogram is for numerical data, such as counts or measurements, so it does not suit colours even though the data is correctly called categorical in that option.",
+      "clue": "Is a colour a group or a measurement?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A council in Hobart records the city's mean daily temperature each month for three years. It wants to show how temperature changes over that time. Which display is best?",
+      "opts": [
+       "A line graph",
+       "A histogram",
+       "A dot plot",
+       "A pie chart"
+      ],
+      "why": "The data is recorded over time and the aim is to show change, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram or dot plot tempting, but both would lose the order of the months.",
+      "clue": "Which display keeps the months in order?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Categorical, so a bar chart",
+       "also_right": []
+      },
+      "b": {
+       "best": "A line graph",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The worked example calls 'the number of students who walk, cycle or take the bus' categorical. But the card has just defined numerical data as 'a count', so a student may think counting students makes it numerical. It would be clearer to say the data is each student's way of getting to school, and the bar chart shows how many fall in each group."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clearly right answer and the facts are correct. One small problem: the card's example begins with 'the number of students', which sounds like a count and could confuse students about why the data is categorical."
+     },
+     "flags": [
+      "Card, wording: The worked example calls 'the number of students who walk, cycle or take the bus' categorical. But the card has just defined numerical data as 'a count', so a student may think counting students makes it numerical. It would be clearer to say the data is each student's way of getting to school, and the bar chart shows how many fall in each group."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Choosing a display",
+    "card": [
+     [
+      "Categorical",
+      "data sorts things into groups, such as favourite sport or type of pet. A bar chart or a pie chart suits it."
+     ],
+     [
+      "Numerical",
+      "data is a count or a measurement, such as height or test score. A histogram or a dot plot suits it and shows how the values spread out."
+     ],
+     [
+      "Over time",
+      "A line graph suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. A histogram or dot plot would lose that order."
+     ],
+     "To choose a display, first ask what type of data you have and what you want to show. Example: each student's way of getting to school (walk, cycle or bus) is categorical. A bar chart shows how many students fall in each group."
+    ],
+    "remember": "Match the display to the data: groups, numbers or change over time.",
+    "a": {
+     "q": "Tamsin notes the colour of every car that drives past her school. Which describes the data and a display that suits it?",
+     "opts": [
+      "Categorical, so a bar chart",
+      "Numerical, so a histogram",
+      "Categorical, so a histogram",
+      "Numerical, so a line graph"
+     ],
+     "why": "Car colour sorts cars into groups, so it is categorical data and a bar chart suits it. The option with a histogram names the data type correctly, but a histogram is for numerical data, such as counts or measurements, so it does not suit colours.",
+     "clue": "Is a colour a group or a measurement?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A Hobart council has the city's mean daily temperature for each month over three years. It wants to show how the temperature changed across that time. Which display suits this best?",
+     "opts": [
+      "A line graph",
+      "A histogram",
+      "A dot plot",
+      "A pie chart"
+     ],
+     "why": "The data is recorded over time and the aim is to show change, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram or dot plot tempting, but both would lose the order of the months.",
+     "clue": "Which display keeps the months in order?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Categorical, so a bar chart",
+     "also_right": []
+    },
+    "b": {
+     "best": "A line graph",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Choosing a display",
+  "card": [
+   [
+    "Categorical",
+    "data sorts things into groups, such as favourite sport or type of pet. A bar chart or a pie chart suits it."
+   ],
+   [
+    "Numerical",
+    "data is a count or a measurement, such as height or test score. A histogram or a dot plot suits it and shows how the values spread out."
+   ],
+   [
+    "Over time",
+    "A line graph suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. A histogram or dot plot would lose that order."
+   ],
+   "To choose a display, first ask what type of data you have and what you want to show. Example: each student's way of getting to school (walk, cycle or bus) is categorical. A bar chart shows how many students fall in each group."
+  ],
+  "remember": "Match the display to the data: groups, numbers or change over time.",
+  "a": {
+   "q": "Tamsin notes the colour of every car that drives past her school. Which describes the data and a display that suits it?",
+   "opts": [
+    "Categorical, so a bar chart",
+    "Numerical, so a histogram",
+    "Categorical, so a histogram",
+    "Numerical, so a line graph"
+   ],
+   "why": "Car colour sorts cars into groups, so it is categorical data and a bar chart suits it. The option with a histogram names the data type correctly, but a histogram is for numerical data, such as counts or measurements, so it does not suit colours.",
+   "clue": "Is a colour a group or a measurement?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A Hobart council has the city's mean daily temperature for each month over three years. It wants to show how the temperature changed across that time. Which display suits this best?",
+   "opts": [
+    "A line graph",
+    "A histogram",
+    "A dot plot",
+    "A pie chart"
+   ],
+   "why": "The data is recorded over time and the aim is to show change, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram or dot plot tempting, but both would lose the order of the months.",
+   "clue": "Which display keeps the months in order?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Categorical, so a bar chart",
+   "also_right": []
+  },
+  "b": {
+   "best": "A line graph",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Choosing a display",
+  "card": [
+   [
+    "Categorical",
+    "data sorts things into groups, such as favourite sport or type of pet. A bar chart or a pie chart suits it."
+   ],
+   [
+    "Numerical",
+    "data is a count or a measurement, such as height or test score. A histogram or a dot plot suits it and shows how the values spread out."
+   ],
+   [
+    "Over time",
+    "A line graph suits data that changes over time, such as a town's rainfall each month. The line keeps the times in order and shows the trend. A histogram or dot plot would lose that order."
+   ],
+   "To choose a display, first ask what type of data you have and what you want to show. Example: each student's way of getting to school (walk, cycle or bus) is categorical. A bar chart shows how many students fall in each group."
+  ],
+  "remember": "Match the display to the data: groups, numbers or change over time.",
+  "a": {
+   "q": "Tamsin notes the colour of every car that drives past her school. Which describes the data and a display that suits it?",
+   "opts": [
+    "Categorical, so a bar chart",
+    "Numerical, so a histogram",
+    "Categorical, so a histogram",
+    "Numerical, so a line graph"
+   ],
+   "why": "Car colour sorts cars into groups, so it is categorical data and a bar chart suits it. The option with a histogram names the data type correctly, but a histogram is for numerical data, such as counts or measurements, so it does not suit colours.",
+   "clue": "Is a colour a group or a measurement?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A Hobart council has the city's mean daily temperature for each month over three years. It wants to show how the temperature changed across that time. Which display suits this best?",
+   "opts": [
+    "A line graph",
+    "A histogram",
+    "A dot plot",
+    "A pie chart"
+   ],
+   "why": "The data is recorded over time and the aim is to show change, so a line graph keeps the months in order and shows the trend. Temperature is numerical, which makes a histogram or dot plot tempting, but both would lose the order of the months.",
+   "clue": "Which display keeps the months in order?"
+  }
+ },
+ "checked_by": "claude-code"
+}

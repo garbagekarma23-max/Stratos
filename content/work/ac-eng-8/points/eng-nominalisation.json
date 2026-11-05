@@ -1,0 +1,351 @@
+{
+ "id": "eng-nominalisation",
+ "title": "Nominalisation",
+ "brief": "5f29c03c7c2b",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:29Z new, write",
+  "2026-11-04T09:36:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:46:58Z write: done",
+  "2026-11-04T09:58:23Z check: flagged",
+  "2026-11-04T10:07:59Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00436,
+  "check": 0.01149,
+  "fix": 0.01467,
+  "recheck": 0.01202
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The clue says to find a noun that began as a verb, but the distractors contain 'Workers' (from work) and 'drivers' (from drive). A student following the clue literally could pick either sentence. Agent nouns like these are not usually counted as nominalisation, and the card does not explain the difference. Consider rewording the clue to 'a noun that names an action or quality', or removing the agent nouns from the distractors.",
+ "rejected": {
+  "title": "Nominalisation",
+  "card": [
+   "Nominalisation turns a verb or an adjective into a noun. The verb decide becomes the noun decision. The adjective safe becomes the noun safety.",
+   "A sentence with a verb often names who did the action: The council decided to close the pool. Nominalising gives: The decision to close the pool was made.",
+   "The nominalised version can leave out the person who acted. This makes the writing sound less personal.",
+   "Nominalisation also packs more information into a noun group. This makes writing sound more formal, so it is common in reports and textbooks."
+  ],
+  "remember": "Turn an action or quality into a noun, and writing can sound more formal and less personal.",
+  "a": {
+   "q": "Which word is a nominalisation of the verb \"discover\"?",
+   "opts": [
+    "Discovery",
+    "Discovered",
+    "Discovers",
+    "Discoverable"
+   ],
+   "why": "Discovery is a noun made from the verb discover. Discovered and discovers are still verb forms, and discoverable is an adjective, so none of them is a noun.",
+   "clue": "Look for the noun, the word that names a thing or idea."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence uses nominalisation?",
+   "opts": [
+    "The failure of the bridge caused long delays",
+    "The bridge failed, so drivers waited for hours",
+    "Workers closed the bridge, so traffic moved slowly",
+    "The bridge was weak, and it broke when trucks crossed"
+   ],
+   "why": "Failure is a noun made from the verb fail, so the sentence about the failure of the bridge is nominalised. The sentence saying the bridge failed is tempting because it is about failing too, but failed is still a verb there.",
+   "clue": "Find a noun that began as a verb or adjective."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The clue says to find a noun that began as a verb, but the distractors contain 'Workers' (from work) and 'drivers' (from drive). A student following the clue literally could pick either sentence. Agent nouns like these are not usually counted as nominalisation, and the card does not explain the difference. Consider rewording the clue to 'a noun that names an action or quality', or removing the agent nouns from the distractors."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Nominalisation",
+     "card": [
+      "Nominalisation turns a verb or an adjective into a noun. The verb decide becomes the noun decision. The adjective unsafe becomes the noun danger.",
+      "A sentence with a verb often names who did the action: The council decided to close the pool. Nominalising gives: The decision to close the pool was made.",
+      "The nominalised version can leave out the person who acted. This makes the writing sound less personal.",
+      "Nominalisation also packs more information into a noun group. This makes writing sound more formal, so it is common in reports and textbooks."
+     ],
+     "remember": "Nominalisation makes a noun from a verb or adjective, so writing sounds more formal and less personal.",
+     "a": {
+      "q": "Which word is a nominalisation of the verb \"discover\"?",
+      "opts": [
+       "Discovery",
+       "Discovered",
+       "Discovering",
+       "Discoverable"
+      ],
+      "why": "Discovery is a noun made from the verb discover. Discovered and discovering are still verb forms, and discoverable is an adjective, so none of them is a noun.",
+      "clue": "Look for the noun, the word that names a thing or idea."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which sentence uses nominalisation?",
+      "opts": [
+       "The failure of the bridge caused long delays",
+       "The bridge failed, so drivers waited a long time",
+       "Workers closed the bridge, so traffic was delayed",
+       "The bridge was weak, and it broke under the load"
+      ],
+      "why": "Failure is a noun made from the verb fail, so the first sentence is nominalised. The second sentence is tempting because it also mentions failing, but failed is still a verb there.",
+      "clue": "Find a noun that began as a verb or adjective."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Discovery",
+      "also_right": []
+     },
+     "b": {
+      "best": "The failure of the bridge caused long delays",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'The adjective unsafe becomes the noun danger' is wrong. Danger is not made from unsafe, and dangerous actually comes from danger. Use a true pair instead, such as safe to safety, or happy to happiness."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why refers to options by position ('the first sentence', 'the second sentence'), but the options are shuffled. The failure sentence is not first and the 'failed' sentence is not second, so the explanation will confuse students. Refer to the sentences by their words instead."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card wrongly gives 'danger' as the nominalisation of 'unsafe'; use a real pair such as safe to safety. The why for question b refers to sentences by position, which will not match the shuffled options."
+    },
+    "flags": [
+     "Card, fact: 'The adjective unsafe becomes the noun danger' is wrong. Danger is not made from unsafe, and dangerous actually comes from danger. Use a true pair instead, such as safe to safety, or happy to happiness.",
+     "Question b, other: The why refers to options by position ('the first sentence', 'the second sentence'), but the options are shuffled. The failure sentence is not first and the 'failed' sentence is not second, so the explanation will confuse students. Refer to the sentences by their words instead."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Nominalisation",
+     "card": [
+      "Nominalisation turns a verb or an adjective into a noun. The verb decide becomes the noun decision. The adjective safe becomes the noun safety.",
+      "A sentence with a verb often names who did the action: The council decided to close the pool. Nominalising gives: The decision to close the pool was made.",
+      "The nominalised version can leave out the person who acted. This makes the writing sound less personal.",
+      "Nominalisation also packs more information into a noun group. This makes writing sound more formal, so it is common in reports and textbooks."
+     ],
+     "remember": "Turn an action or quality into a noun, and writing can sound more formal and less personal.",
+     "a": {
+      "q": "Which word is a nominalisation of the verb \"discover\"?",
+      "opts": [
+       "Discovery",
+       "Discovered",
+       "Discovers",
+       "Discoverable"
+      ],
+      "why": "Discovery is a noun made from the verb discover. Discovered and discovers are still verb forms, and discoverable is an adjective, so none of them is a noun.",
+      "clue": "Look for the noun, the word that names a thing or idea."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which sentence uses nominalisation?",
+      "opts": [
+       "The failure of the bridge caused long delays",
+       "The bridge failed, so drivers waited for hours",
+       "Workers closed the bridge, so traffic moved slowly",
+       "The bridge was weak, and it broke when trucks crossed"
+      ],
+      "why": "Failure is a noun made from the verb fail, so the sentence about the failure of the bridge is nominalised. The sentence saying the bridge failed is tempting because it is about failing too, but failed is still a verb there.",
+      "clue": "Find a noun that began as a verb or adjective."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Discovery",
+       "also_right": []
+      },
+      "b": {
+       "best": "The failure of the bridge caused long delays",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The clue says to find a noun that began as a verb, but the distractors contain 'Workers' (from work) and 'drivers' (from drive). A student following the clue literally could pick either sentence. Agent nouns like these are not usually counted as nominalisation, and the card does not explain the difference. Consider rewording the clue to 'a noun that names an action or quality', or removing the agent nouns from the distractors."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, remember line and both answers are correct. One minor issue: the clue for question b could lead a student to the agent nouns 'workers' or 'drivers' in the wrong options, so the clue or those distractors should be tightened."
+     },
+     "flags": [
+      "Question b, wording: The clue says to find a noun that began as a verb, but the distractors contain 'Workers' (from work) and 'drivers' (from drive). A student following the clue literally could pick either sentence. Agent nouns like these are not usually counted as nominalisation, and the card does not explain the difference. Consider rewording the clue to 'a noun that names an action or quality', or removing the agent nouns from the distractors."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Nominalisation",
+    "card": [
+     "Nominalisation turns a verb or an adjective into a noun. The verb decide becomes the noun decision. The adjective safe becomes the noun safety.",
+     "A sentence with a verb often names who did the action: The council decided to close the pool. Nominalising gives: The decision to close the pool was made.",
+     "The nominalised version can leave out the person who acted. This makes the writing sound less personal.",
+     "Nominalisation also packs more information into a noun group. This makes writing sound more formal, so it is common in reports and textbooks."
+    ],
+    "remember": "Turn an action or quality into a noun, and writing can sound more formal and less personal.",
+    "a": {
+     "q": "Which of these words turns the verb \"discover\" into a noun?",
+     "opts": [
+      "Discovery",
+      "Discovered",
+      "Discovers",
+      "Discoverable"
+     ],
+     "why": "Discovery is a noun made from the verb discover. Discovered and discovers are still verb forms, and discoverable is an adjective, so none of them is a noun.",
+     "clue": "Look for the word that names a thing or idea."
+    },
+    "b": {
+     "d": 3,
+     "q": "Which of these sentences contains a nominalisation?",
+     "opts": [
+      "The failure of the bridge caused long delays",
+      "The bridge failed, so traffic waited for hours",
+      "The bridge was closed, so traffic moved slowly",
+      "The bridge was weak, and it broke when trucks crossed"
+     ],
+     "why": "Failure is a noun made from the verb fail, so the sentence about the failure of the bridge uses nominalisation. The sentence saying the bridge failed is tempting because it is about failing too, but failed is still a verb there.",
+     "clue": "Find a noun that names an action or quality."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Discovery",
+     "also_right": []
+    },
+    "b": {
+     "best": "The failure of the bridge caused long delays",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Nominalisation",
+  "card": [
+   "Nominalisation turns a verb or an adjective into a noun. The verb decide becomes the noun decision. The adjective safe becomes the noun safety.",
+   "A sentence with a verb often names who did the action: The council decided to close the pool. Nominalising gives: The decision to close the pool was made.",
+   "The nominalised version can leave out the person who acted. This makes the writing sound less personal.",
+   "Nominalisation also packs more information into a noun group. This makes writing sound more formal, so it is common in reports and textbooks."
+  ],
+  "remember": "Turn an action or quality into a noun, and writing can sound more formal and less personal.",
+  "a": {
+   "q": "Which of these words turns the verb \"discover\" into a noun?",
+   "opts": [
+    "Discovery",
+    "Discovered",
+    "Discovers",
+    "Discoverable"
+   ],
+   "why": "Discovery is a noun made from the verb discover. Discovered and discovers are still verb forms, and discoverable is an adjective, so none of them is a noun.",
+   "clue": "Look for the word that names a thing or idea."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these sentences contains a nominalisation?",
+   "opts": [
+    "The failure of the bridge caused long delays",
+    "The bridge failed, so traffic waited for hours",
+    "The bridge was closed, so traffic moved slowly",
+    "The bridge was weak, and it broke when trucks crossed"
+   ],
+   "why": "Failure is a noun made from the verb fail, so the sentence about the failure of the bridge uses nominalisation. The sentence saying the bridge failed is tempting because it is about failing too, but failed is still a verb there.",
+   "clue": "Find a noun that names an action or quality."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Discovery",
+   "also_right": []
+  },
+  "b": {
+   "best": "The failure of the bridge caused long delays",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Nominalisation",
+  "card": [
+   "Nominalisation turns a verb or an adjective into a noun. The verb decide becomes the noun decision. The adjective safe becomes the noun safety.",
+   "A sentence with a verb often names who did the action: The council decided to close the pool. Nominalising gives: The decision to close the pool was made.",
+   "The nominalised version can leave out the person who acted. This makes the writing sound less personal.",
+   "Nominalisation also packs more information into a noun group. This makes writing sound more formal, so it is common in reports and textbooks."
+  ],
+  "remember": "Turn an action or quality into a noun, and writing can sound more formal and less personal.",
+  "a": {
+   "q": "Which of these words turns the verb \"discover\" into a noun?",
+   "opts": [
+    "Discovery",
+    "Discovered",
+    "Discovers",
+    "Discoverable"
+   ],
+   "why": "Discovery is a noun made from the verb discover. Discovered and discovers are still verb forms, and discoverable is an adjective, so none of them is a noun.",
+   "clue": "Look for the word that names a thing or idea."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these sentences contains a nominalisation?",
+   "opts": [
+    "The failure of the bridge caused long delays",
+    "The bridge failed, so traffic waited for hours",
+    "The bridge was closed, so traffic moved slowly",
+    "The bridge was weak, and it broke when trucks crossed"
+   ],
+   "why": "Failure is a noun made from the verb fail, so the sentence about the failure of the bridge uses nominalisation. The sentence saying the bridge failed is tempting because it is about failing too, but failed is still a verb there.",
+   "clue": "Find a noun that names an action or quality."
+  }
+ },
+ "checked_by": "claude-code"
+}

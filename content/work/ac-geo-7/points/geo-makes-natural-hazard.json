@@ -1,0 +1,237 @@
+{
+ "id": "geo-makes-natural-hazard",
+ "title": "What makes a natural hazard",
+ "brief": "0ba22283db49",
+ "shortlist": [
+  [
+   "geo-natural-hazards",
+   0.303
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:00Z write: done",
+  "2026-11-04T09:58:25Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00491,
+  "check": 0.01232,
+  "fix": 0.01467,
+  "recheck": 0.00781
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers the core idea that a natural process becomes a hazard when it affects people, but it is written for Year 11 and does not teach the atmospheric and hydrological classification the new point needs, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "What makes a natural hazard",
+  "card": [
+   "A natural event is something that happens in nature, such as heavy rain, strong wind or an earthquake. It becomes a hazard when it can harm people or property.",
+   "The same event can be a hazard in one place and not in another. Heavy rain over an empty desert harms no one. Heavy rain over a busy town can damage homes and roads.",
+   [
+    "Atmospheric hazard",
+    "a hazard that comes from the weather, such as a violent storm or a heatwave."
+   ],
+   [
+    "Hydrological hazard",
+    "a hazard that comes from water, such as water moving over land or the sea rising onto the coast."
+   ]
+  ],
+  "remember": "An event is a hazard when it can harm people or property. The cause is either weather or water.",
+  "a": {
+   "q": "Why is a lightning storm over a remote, empty area not usually called a hazard?",
+   "opts": [
+    "It is unlikely to harm people or property",
+    "It comes from the weather, not from water",
+    "It happens too quickly to be a natural event",
+    "It only counts as a hazard if it lasts for days"
+   ],
+   "why": "An event is a hazard when it can harm people or property. In an empty area there is little to harm. Weather can cause hazards, so coming from the weather does not rule it out.",
+   "clue": "Think about who or what could be harmed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A heatwave hits a city in Western Australia, and older residents become seriously ill. How is the heatwave best described?",
+   "opts": [
+    "An atmospheric hazard, because it comes from the weather",
+    "A hydrological hazard, because it comes from water",
+    "An atmospheric event, but not a hazard, as it is natural",
+    "A hydrological event, but not a hazard, as nobody was hurt"
+   ],
+   "why": "A heatwave comes from the weather, so it is atmospheric. It harmed people, so it is a hazard. Being natural does not stop an event from being a hazard.",
+   "clue": "Ask where the event comes from and whether it caused harm."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is unlikely to harm people or property",
+   "also_right": []
+  },
+  "b": {
+   "best": "An atmospheric hazard, because it comes from the weather",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'The cause is either weather or water' is false. Natural hazards also include geological ones such as earthquakes and volcanic eruptions, and the card itself names an earthquake as a natural event that can become a hazard."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line turns the card's two example types into an either/or rule that covers every hazard. The card does not say this, and its earthquake example contradicts it. Reword to something like 'Atmospheric hazards come from the weather; hydrological hazards come from water.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear right answer. The remember line wrongly says every hazard is caused by either weather or water, which leaves out geological hazards such as the earthquake the card mentions, so it needs rewording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, fact: 'The cause is either weather or water' is false. Natural hazards also include geological ones such as earthquakes and volcanic eruptions, and the card itself names an earthquake as a natural event that can become a hazard.",
+  "Remember, other: The remember line turns the card's two example types into an either/or rule that covers every hazard. The card does not say this, and its earthquake example contradicts it. Reword to something like 'Atmospheric hazards come from the weather; hydrological hazards come from water.'"
+ ],
+ "proposal": {
+  "title": "What makes a natural hazard",
+  "card": [
+   "A natural event is something that happens in nature, such as heavy rain, strong wind or an earthquake. It becomes a hazard when it can harm people or property.",
+   "The same event can be a hazard in one place and not in another. Heavy rain over an empty desert harms no one. Heavy rain over a busy town can damage homes and roads.",
+   [
+    "Atmospheric hazard",
+    "a hazard that comes from the weather, such as a violent storm or a heatwave."
+   ],
+   [
+    "Hydrological hazard",
+    "a hazard that comes from water, such as water moving over land or the sea rising onto the coast."
+   ]
+  ],
+  "remember": "No possible harm to people or property means no hazard. Atmospheric hazards come from the weather, and hydrological hazards come from water.",
+  "a": {
+   "q": "Why is a lightning storm over a remote, empty area not usually called a hazard?",
+   "opts": [
+    "It is unlikely to harm people or property",
+    "It comes from the weather, not from water",
+    "It happens too quickly to be a natural event",
+    "It only counts as a hazard if it lasts for days"
+   ],
+   "why": "An event is a hazard when it can harm people or property. In an empty area there is little to harm. Weather can cause hazards, so coming from the weather does not rule it out.",
+   "clue": "Think about who or what could be harmed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A heatwave hits a city in Western Australia, and older residents become seriously ill. How is the heatwave best described?",
+   "opts": [
+    "An atmospheric hazard, because it comes from the weather",
+    "A hydrological hazard, because it comes from water",
+    "An atmospheric event, but not a hazard, as it is natural",
+    "A hydrological event, but not a hazard, as nobody was hurt"
+   ],
+   "why": "A heatwave comes from the weather, so it is atmospheric. It harmed people, so it is a hazard. Being natural does not stop an event from being a hazard.",
+   "clue": "Ask where the event comes from and whether it caused harm."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is unlikely to harm people or property",
+    "also_right": []
+   },
+   "b": {
+    "best": "An atmospheric hazard, because it comes from the weather",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'The cause is either weather or water' is false. Natural hazards also include geological ones such as earthquakes and volcanic eruptions, and the card itself names an earthquake as a natural event that can become a hazard."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line turns the card's two example types into an either/or rule that covers every hazard. The card does not say this, and its earthquake example contradicts it. Reword to something like 'Atmospheric hazards come from the weather; hydrological hazards come from water.'"
+   }
+  ],
+  "flags": [
+   "Remember, fact: 'The cause is either weather or water' is false. Natural hazards also include geological ones such as earthquakes and volcanic eruptions, and the card itself names an earthquake as a natural event that can become a hazard.",
+   "Remember, other: The remember line turns the card's two example types into an either/or rule that covers every hazard. The card does not say this, and its earthquake example contradicts it. Reword to something like 'Atmospheric hazards come from the weather; hydrological hazards come from water.'"
+  ]
+ },
+ "final": {
+  "title": "What makes a natural hazard",
+  "card": [
+   "A natural event is something that happens in nature, such as heavy rain, strong wind or an earthquake. It becomes a hazard when it can harm people or property.",
+   "The same event can be a hazard in one place and not in another. Heavy rain over an empty desert harms no one. Heavy rain over a busy town can damage homes and roads.",
+   [
+    "Atmospheric hazard",
+    "a hazard that comes from the weather, such as a violent storm or a heatwave."
+   ],
+   [
+    "Hydrological hazard",
+    "a hazard that comes from water, such as water moving over land or the sea rising onto the coast."
+   ]
+  ],
+  "remember": "No possible harm to people or property means no hazard. Atmospheric hazards come from the weather, and hydrological hazards come from water.",
+  "a": {
+   "q": "Why is a lightning storm over a remote, empty area not usually called a hazard?",
+   "opts": [
+    "It is unlikely to harm people or property",
+    "It comes from the weather, not from water",
+    "It happens too quickly to be a natural event",
+    "It only counts as a hazard if it lasts for days"
+   ],
+   "why": "An event is a hazard when it can harm people or property. In an empty area there is little to harm. Weather can cause hazards, so coming from the weather does not rule it out.",
+   "clue": "Think about who or what could be harmed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A heatwave hits a city in Western Australia, and older residents become seriously ill. How is the heatwave best described?",
+   "opts": [
+    "An atmospheric hazard, because it comes from the weather",
+    "A hydrological hazard, because it comes from water",
+    "An atmospheric event, but not a hazard, as it is natural",
+    "A hydrological event, but not a hazard, as nobody was hurt"
+   ],
+   "why": "A heatwave comes from the weather, so it is atmospheric. It harmed people, so it is a hazard. Being natural does not stop an event from being a hazard.",
+   "clue": "Ask where the event comes from and whether it caused harm."
+  }
+ },
+ "cleared_by": "recheck"
+}

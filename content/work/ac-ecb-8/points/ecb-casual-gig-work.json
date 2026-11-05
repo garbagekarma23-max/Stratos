@@ -1,0 +1,425 @@
+{
+ "id": "ecb-casual-gig-work",
+ "title": "Casual and gig work",
+ "brief": "d6969d807a2b",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:25Z new, write",
+  "2026-11-04T09:36:48Z write: done",
+  "2026-11-04T09:46:54Z check: flagged",
+  "2026-11-04T09:58:21Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (a wording, remember fact)",
+  "2026-11-05T02:27:40Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00585,
+  "check": 0.01463,
+  "fix": 0.02083,
+  "recheck": 0.01344
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The right option is the only one with a hedge ('can often'). The three wrong options are all flat promises, so a student could pick the answer from its wording alone.\n- Remember, fact: 'No paid leave' is broader than the card, which says casuals get no paid sick leave or holiday pay. Casual employees in Australia are entitled to paid family and domestic violence leave, and in some states to long service leave. Better: 'no paid sick leave or holiday pay'.",
+ "rejected": {
+  "title": "Casual and gig work",
+  "card": [
+   [
+    "Casual work",
+    "a job with no promise of ongoing work. Hours can change from week to week, and casual employees get no paid sick leave or holiday pay."
+   ],
+   [
+    "Casual loading",
+    "a higher hourly rate that most casual employees get instead of paid leave. It is often 25% more than the rate for a permanent worker."
+   ],
+   [
+    "Gig work",
+    "short jobs or tasks, often found through an app, such as delivering food. Gig workers are paid for each job and often get no paid leave."
+   ],
+   "More Australians now work casual or gig jobs. Many like the flexibility of choosing when to work, but their income can be uncertain."
+  ],
+  "remember": "Casual and gig work give flexibility, but often less certain income and no paid leave.",
+  "a": {
+   "q": "Sam delivers meals through an app and is paid for each delivery. Which describes his work?",
+   "opts": [
+    "He can often choose which hours he works",
+    "He gets paid holiday leave each year",
+    "He is promised the same hours every week",
+    "He gets paid sick leave when he is unwell"
+   ],
+   "why": "Gig work found through an app often lets workers choose when to work, which is its flexibility. Gig workers often get no paid leave and have no promise of certain hours.",
+   "clue": "Think about how gig jobs are found and paid."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess is a casual employee at a Darwin café. She is sick one week and misses her shifts. What is likely to happen?",
+   "opts": [
+    "She is not paid for the shifts she misses",
+    "She gets paid sick leave for the shifts she misses",
+    "She gets casual loading for the shifts she misses",
+    "She is promised the same shifts next week"
+   ],
+   "why": "Casual employees get no paid sick leave, so Jess is not paid for the shifts she misses. Casual loading is a higher rate on the hours she works, not pay for shifts she misses.",
+   "clue": "What does casual loading replace?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The right option is the only one with a hedge ('can often'). The three wrong options are all flat promises, so a student could pick the answer from its wording alone.",
+    "Remember, fact: 'No paid leave' is broader than the card, which says casuals get no paid sick leave or holiday pay. Casual employees in Australia are entitled to paid family and domestic violence leave, and in some states to long service leave. Better: 'no paid sick leave or holiday pay'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Casual and gig work",
+     "card": [
+      [
+       "Casual work",
+       "a job with no promise of ongoing work. Casual workers often have no paid sick leave or holiday pay, and their hours can change from week to week."
+      ],
+      [
+       "Gig work",
+       "short jobs or tasks, often found through an app, such as delivering food or driving passengers. Gig workers are paid for each job."
+      ],
+      "More Australians now work in casual or gig jobs. Many people like the flexibility, such as choosing when to work.",
+      "The cost of this flexibility is that income can be uncertain. Workers may have no sick leave, no holiday pay and no certain hours."
+     ],
+     "remember": "Casual and gig work give flexibility, but often with less certain pay and no leave.",
+     "a": {
+      "q": "Which is the main benefit of gig work for a worker?",
+      "opts": [
+       "Flexibility to choose when to work",
+       "Paid holiday leave each year",
+       "Certain hours every week",
+       "Paid sick leave when unwell"
+      ],
+      "why": "Gig workers can often choose when they work, which is the flexibility the card describes. Paid leave and certain hours are what these jobs often lack.",
+      "clue": "Think about what workers gain, not what they miss out on."
+     },
+     "b": {
+      "d": 2,
+      "q": "Jess works casual shifts at a Darwin café. She is sick one week and cannot work. What is likely to happen?",
+      "opts": [
+       "She may not be paid for the shifts she misses",
+       "She is paid sick leave for the missed shifts",
+       "She is paid extra for being flexible",
+       "She has certain hours for the next week"
+      ],
+      "why": "Casual workers often have no paid sick leave, so missed shifts may mean no pay. Being flexible does not bring extra pay, and casual hours can change from week to week.",
+      "clue": "Casual work often has no sick leave."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Flexibility to choose when to work",
+      "also_right": []
+     },
+     "b": {
+      "best": "She may not be paid for the shifts she misses",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says 'Being flexible does not bring extra pay'. In Australia most casual employees get a casual loading (usually 25%) instead of paid leave, so this is misleading. Reword it, for example: 'Casual workers are not paid for shifts they miss.'"
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card never mentions the casual loading that Australian casual employees usually get in place of paid sick and holiday leave. Without it, students get an incomplete and one-sided picture of casual work."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Casual work often has no sick leave' nearly states the answer outright."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a qualifier ('may'). Its hedged wording makes it stand out from the flat statements in the other options."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think about what workers gain, not what they miss out on' gives the answer away. Only one option is a gain; the other three are things gig workers lack."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The why for question b wrongly says flexibility brings no extra pay, and the card leaves out the casual loading that Australian casual workers usually receive. Both clues also give their answers away, and the right option in b stands out because it is the only hedged one."
+    },
+    "flags": [
+     "Question b, fact: The why says 'Being flexible does not bring extra pay'. In Australia most casual employees get a casual loading (usually 25%) instead of paid leave, so this is misleading. Reword it, for example: 'Casual workers are not paid for shifts they miss.'",
+     "Card, fact: The card never mentions the casual loading that Australian casual employees usually get in place of paid sick and holiday leave. Without it, students get an incomplete and one-sided picture of casual work.",
+     "Question b, other: The clue 'Casual work often has no sick leave' nearly states the answer outright.",
+     "Question b, wording: The right option is the only one with a qualifier ('may'). Its hedged wording makes it stand out from the flat statements in the other options.",
+     "Question a, other: The clue 'Think about what workers gain, not what they miss out on' gives the answer away. Only one option is a gain; the other three are things gig workers lack."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Casual and gig work",
+     "card": [
+      [
+       "Casual work",
+       "a job with no promise of ongoing work. Hours can change from week to week, and casual employees get no paid sick leave or holiday pay."
+      ],
+      [
+       "Casual loading",
+       "a higher hourly rate that most casual employees get instead of paid leave. It is often 25% more than the rate for a permanent worker."
+      ],
+      [
+       "Gig work",
+       "short jobs or tasks, often found through an app, such as delivering food. Gig workers are paid for each job and often get no paid leave."
+      ],
+      "More Australians now work casual or gig jobs. Many like the flexibility of choosing when to work, but their income can be uncertain."
+     ],
+     "remember": "Casual and gig work give flexibility, but often less certain income and no paid leave.",
+     "a": {
+      "q": "Sam delivers meals through an app and is paid for each delivery. Which describes his work?",
+      "opts": [
+       "He can often choose which hours he works",
+       "He gets paid holiday leave each year",
+       "He is promised the same hours every week",
+       "He gets paid sick leave when he is unwell"
+      ],
+      "why": "Gig work found through an app often lets workers choose when to work, which is its flexibility. Gig workers often get no paid leave and have no promise of certain hours.",
+      "clue": "Think about how gig jobs are found and paid."
+     },
+     "b": {
+      "d": 3,
+      "q": "Jess is a casual employee at a Darwin café. She is sick one week and misses her shifts. What is likely to happen?",
+      "opts": [
+       "She is not paid for the shifts she misses",
+       "She gets paid sick leave for the shifts she misses",
+       "She gets casual loading for the shifts she misses",
+       "She is promised the same shifts next week"
+      ],
+      "why": "Casual employees get no paid sick leave, so Jess is not paid for the shifts she misses. Casual loading is a higher rate on the hours she works, not pay for shifts she misses.",
+      "clue": "What does casual loading replace?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "He can often choose which hours he works",
+       "also_right": []
+      },
+      "b": {
+       "best": "She is not paid for the shifts she misses",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The right option is the only one with a hedge ('can often'). The three wrong options are all flat promises, so a student could pick the answer from its wording alone."
+       },
+       {
+        "part": "remember",
+        "kind": "fact",
+        "detail": "'No paid leave' is broader than the card, which says casuals get no paid sick leave or holiday pay. Casual employees in Australia are entitled to paid family and domestic violence leave, and in some states to long service leave. Better: 'no paid sick leave or holiday pay'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts on the card are correct, and both questions have one clear right answer. In question a, the right option is the only hedged one, which gives it away. The remember line's 'no paid leave' overstates the card and is not strictly true for casual employees."
+     },
+     "flags": [
+      "Question a, wording: The right option is the only one with a hedge ('can often'). The three wrong options are all flat promises, so a student could pick the answer from its wording alone.",
+      "Remember, fact: 'No paid leave' is broader than the card, which says casuals get no paid sick leave or holiday pay. Casual employees in Australia are entitled to paid family and domestic violence leave, and in some states to long service leave. Better: 'no paid sick leave or holiday pay'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:40Z",
+   "step": "write",
+   "version": {
+    "title": "Casual and gig work",
+    "card": [
+     [
+      "Casual work",
+      "a job with no promise of ongoing work. Hours can change from week to week, and casual employees get no paid sick leave or holiday pay."
+     ],
+     [
+      "Casual loading",
+      "a higher hourly rate that most casual employees get instead of paid sick leave and holiday pay. It is often 25% more than the rate for a permanent worker."
+     ],
+     [
+      "Gig work",
+      "short jobs or tasks, often found through an app, such as delivering food. Gig workers are paid for each job and often get no paid sick leave or holiday pay."
+     ],
+     "More Australians now work casual or gig jobs. Many like the flexibility of choosing when to work, but their income can be uncertain."
+    ],
+    "remember": "Casual and gig work give flexibility, but often less certain income and no paid sick leave or holiday pay.",
+    "a": {
+     "q": "Sam is paid for each meal he drops off for a delivery app. Which is most likely true of his work?",
+     "opts": [
+      "He can choose when he logs on to work",
+      "He can take paid holidays each year",
+      "He can count on the same hours each week",
+      "He can get paid sick leave when unwell"
+     ],
+     "why": "Gig work found through an app often lets workers choose when to work, which is its flexibility. Gig workers often get no paid sick leave or holiday pay, and their hours and income can change from week to week.",
+     "clue": "Think about what makes gig work flexible."
+    },
+    "b": {
+     "d": 3,
+     "q": "Jess works casual shifts at a café in Darwin. She is unwell for a week and misses four shifts. What is most likely?",
+     "opts": [
+      "She is not paid for those shifts",
+      "She gets paid sick leave for those shifts",
+      "She is paid casual loading for those shifts",
+      "She is owed the missed shifts next week"
+     ],
+     "why": "Casual employees get no paid sick leave, so Jess is not paid for the shifts she misses. Casual loading is a higher rate on the hours she works, in place of paid leave, not pay for shifts she misses.",
+     "clue": "What does casual loading replace?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "He can choose when he logs on to work",
+     "also_right": []
+    },
+    "b": {
+     "best": "She is not paid for those shifts",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Casual and gig work",
+  "card": [
+   [
+    "Casual work",
+    "a job with no promise of ongoing work. Hours can change from week to week, and casual employees get no paid sick leave or holiday pay."
+   ],
+   [
+    "Casual loading",
+    "a higher hourly rate that most casual employees get instead of paid sick leave and holiday pay. It is often 25% more than the rate for a permanent worker."
+   ],
+   [
+    "Gig work",
+    "short jobs or tasks, often found through an app, such as delivering food. Gig workers are paid for each job and often get no paid sick leave or holiday pay."
+   ],
+   "More Australians now work casual or gig jobs. Many like the flexibility of choosing when to work, but their income can be uncertain."
+  ],
+  "remember": "Casual and gig work give flexibility, but often less certain income and no paid sick leave or holiday pay.",
+  "a": {
+   "q": "Sam is paid for each meal he drops off for a delivery app. Which is most likely true of his work?",
+   "opts": [
+    "He can choose when he logs on to work",
+    "He can take paid holidays each year",
+    "He can count on the same hours each week",
+    "He can get paid sick leave when unwell"
+   ],
+   "why": "Gig work found through an app often lets workers choose when to work, which is its flexibility. Gig workers often get no paid sick leave or holiday pay, and their hours and income can change from week to week.",
+   "clue": "Think about what makes gig work flexible."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess works casual shifts at a café in Darwin. She is unwell for a week and misses four shifts. What is most likely?",
+   "opts": [
+    "She is not paid for those shifts",
+    "She gets paid sick leave for those shifts",
+    "She is paid casual loading for those shifts",
+    "She is owed the missed shifts next week"
+   ],
+   "why": "Casual employees get no paid sick leave, so Jess is not paid for the shifts she misses. Casual loading is a higher rate on the hours she works, in place of paid leave, not pay for shifts she misses.",
+   "clue": "What does casual loading replace?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "He can choose when he logs on to work",
+   "also_right": []
+  },
+  "b": {
+   "best": "She is not paid for those shifts",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Casual and gig work",
+  "card": [
+   [
+    "Casual work",
+    "a job with no promise of ongoing work. Hours can change from week to week, and casual employees get no paid sick leave or holiday pay."
+   ],
+   [
+    "Casual loading",
+    "a higher hourly rate that most casual employees get instead of paid sick leave and holiday pay. It is often 25% more than the rate for a permanent worker."
+   ],
+   [
+    "Gig work",
+    "short jobs or tasks, often found through an app, such as delivering food. Gig workers are paid for each job and often get no paid sick leave or holiday pay."
+   ],
+   "More Australians now work casual or gig jobs. Many like the flexibility of choosing when to work, but their income can be uncertain."
+  ],
+  "remember": "Casual and gig work give flexibility, but often less certain income and no paid sick leave or holiday pay.",
+  "a": {
+   "q": "Sam is paid for each meal he drops off for a delivery app. Which is most likely true of his work?",
+   "opts": [
+    "He can choose when he logs on to work",
+    "He can take paid holidays each year",
+    "He can count on the same hours each week",
+    "He can get paid sick leave when unwell"
+   ],
+   "why": "Gig work found through an app often lets workers choose when to work, which is its flexibility. Gig workers often get no paid sick leave or holiday pay, and their hours and income can change from week to week.",
+   "clue": "Think about what makes gig work flexible."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess works casual shifts at a café in Darwin. She is unwell for a week and misses four shifts. What is most likely?",
+   "opts": [
+    "She is not paid for those shifts",
+    "She gets paid sick leave for those shifts",
+    "She is paid casual loading for those shifts",
+    "She is owed the missed shifts next week"
+   ],
+   "why": "Casual employees get no paid sick leave, so Jess is not paid for the shifts she misses. Casual loading is a higher rate on the hours she works, in place of paid leave, not pay for shifts she misses.",
+   "clue": "What does casual loading replace?"
+  }
+ },
+ "checked_by": "claude-code"
+}

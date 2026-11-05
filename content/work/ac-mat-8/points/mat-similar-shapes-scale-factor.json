@@ -1,0 +1,207 @@
+{
+ "id": "mat-similar-shapes-scale-factor",
+ "title": "Similar shapes and scale factor",
+ "brief": "fc1c807337bc",
+ "shortlist": [
+  [
+   "mat-similarity-scale-factors",
+   0.351
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:09Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00513,
+  "check": 0.00878,
+  "fix": 0.01672,
+  "recheck": 0.00671
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card covers the same core idea of similar shapes and scale factor but is broader and deeper than the Year 8 point, adding triangle similarity tests and a question that needs the angle-sum step, and it was written for Victorian Units 1 and 2, so it would need more than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Similar shapes and scale factor",
+  "card": [
+   "Similar shapes have the same shape but can be different sizes. Their matching angles are equal, and their matching sides are in the same ratio.",
+   "The scale factor is a side of the image divided by the matching side of the original. The image is the new shape and the original is the shape you started with.",
+   "Example: a rectangle 4 cm by 6 cm is enlarged to 10 cm by 15 cm. The scale factor is 10 ÷ 4 = 2.5. Check: 6 × 2.5 = 15.",
+   "A scale factor above 1 makes the image bigger. A scale factor below 1 makes it smaller. To find a missing side, multiply the original side by the scale factor."
+  ],
+  "remember": "Image side ÷ original side gives the scale factor, and every matching side uses the same one.",
+  "a": {
+   "q": "Triangle B is similar to triangle A. A side of 6 cm in A matches a side of 15 cm in B. What is the scale factor from A to B?",
+   "opts": [
+    "2.5",
+    "0.4",
+    "9",
+    "90"
+   ],
+   "why": "Scale factor = image side ÷ original side = 15 ÷ 6 = 2.5. The option 0.4 comes from dividing the other way round, which gives the scale factor from B to A.",
+   "clue": "Image over original: which triangle is the image?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Rectangle Q is similar to rectangle P. P is 8 cm by 5 cm. The 8 cm side matches a 20 cm side in Q. What is the length of Q's shorter side?",
+   "opts": [
+    "12.5 cm",
+    "2 cm",
+    "13 cm",
+    "7.5 cm"
+   ],
+   "why": "The scale factor is 20 ÷ 8 = 2.5. Multiply the matching side: 5 × 2.5 = 12.5 cm. Adding 12 to 5 would give 17 cm, and adding the same amount to each side does not keep the ratio equal.",
+   "clue": "Find the scale factor first, then use it on the 5 cm side."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2.5",
+   "also_right": []
+  },
+  "b": {
+   "best": "12.5 cm",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why explains a wrong answer of 17 cm (adding 12 to 5), but 17 cm is not one of the options. It does not explain the real distractors (7.5 cm, 13 cm, 2 cm), so it does not match the question students see."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct (2.5 and 12.5 cm). The why for question b discusses a 17 cm distractor that is not among the options and should be rewritten to match the actual wrong answers."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why explains a wrong answer of 17 cm (adding 12 to 5), but 17 cm is not one of the options. It does not explain the real distractors (7.5 cm, 13 cm, 2 cm), so it does not match the question students see."
+ ],
+ "proposal": {
+  "title": "Similar shapes and scale factor",
+  "card": [
+   "Similar shapes have the same shape but can be different sizes. Their matching angles are equal, and their matching sides are in the same ratio.",
+   "The scale factor is a side of the image divided by the matching side of the original. The image is the new shape and the original is the shape you started with.",
+   "Example: a rectangle 4 cm by 6 cm is enlarged to 10 cm by 15 cm. The scale factor is 10 ÷ 4 = 2.5. Check: 6 × 2.5 = 15.",
+   "A scale factor above 1 makes the image bigger. A scale factor below 1 makes it smaller. To find a missing side, multiply the original side by the scale factor."
+  ],
+  "remember": "Image side ÷ original side gives the scale factor, and every matching side uses the same one.",
+  "a": {
+   "q": "Triangle B is similar to triangle A. A side of 6 cm in A matches a side of 15 cm in B. What is the scale factor from A to B?",
+   "opts": [
+    "2.5",
+    "0.4",
+    "9",
+    "90"
+   ],
+   "why": "Scale factor = image side ÷ original side = 15 ÷ 6 = 2.5. The option 0.4 comes from dividing the other way round, which gives the scale factor from B to A.",
+   "clue": "Image over original: which triangle is the image?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Rectangle Q is similar to rectangle P. P is 8 cm by 5 cm. The 8 cm side matches a 20 cm side in Q. What is the length of Q's shorter side?",
+   "opts": [
+    "12.5 cm",
+    "17 cm",
+    "2 cm",
+    "7.5 cm"
+   ],
+   "why": "The scale factor is 20 ÷ 8 = 2.5, so Q's shorter side is 5 × 2.5 = 12.5 cm. The option 17 cm comes from adding 12 to 5, since 8 + 12 = 20, but adding the same amount to each side does not keep the ratio equal. The option 2 cm divides 5 by 2.5 instead of multiplying, which would make Q smaller than P.",
+   "clue": "Find the scale factor first, then use it on the 5 cm side."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2.5",
+    "also_right": []
+   },
+   "b": {
+    "best": "12.5 cm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why explains a wrong answer of 17 cm (adding 12 to 5), but 17 cm is not one of the options. It does not explain the real distractors (7.5 cm, 13 cm, 2 cm), so it does not match the question students see."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why explains a wrong answer of 17 cm (adding 12 to 5), but 17 cm is not one of the options. It does not explain the real distractors (7.5 cm, 13 cm, 2 cm), so it does not match the question students see."
+  ]
+ },
+ "final": {
+  "title": "Similar shapes and scale factor",
+  "card": [
+   "Similar shapes have the same shape but can be different sizes. Their matching angles are equal, and their matching sides are in the same ratio.",
+   "The scale factor is a side of the image divided by the matching side of the original. The image is the new shape and the original is the shape you started with.",
+   "Example: a rectangle 4 cm by 6 cm is enlarged to 10 cm by 15 cm. The scale factor is 10 ÷ 4 = 2.5. Check: 6 × 2.5 = 15.",
+   "A scale factor above 1 makes the image bigger. A scale factor below 1 makes it smaller. To find a missing side, multiply the original side by the scale factor."
+  ],
+  "remember": "Image side ÷ original side gives the scale factor, and every matching side uses the same one.",
+  "a": {
+   "q": "Triangle B is similar to triangle A. A side of 6 cm in A matches a side of 15 cm in B. What is the scale factor from A to B?",
+   "opts": [
+    "2.5",
+    "0.4",
+    "9",
+    "90"
+   ],
+   "why": "Scale factor = image side ÷ original side = 15 ÷ 6 = 2.5. The option 0.4 comes from dividing the other way round, which gives the scale factor from B to A.",
+   "clue": "Image over original: which triangle is the image?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Rectangle Q is similar to rectangle P. P is 8 cm by 5 cm. The 8 cm side matches a 20 cm side in Q. What is the length of Q's shorter side?",
+   "opts": [
+    "12.5 cm",
+    "17 cm",
+    "2 cm",
+    "7.5 cm"
+   ],
+   "why": "The scale factor is 20 ÷ 8 = 2.5, so Q's shorter side is 5 × 2.5 = 12.5 cm. The option 17 cm comes from adding 12 to 5, since 8 + 12 = 20, but adding the same amount to each side does not keep the ratio equal. The option 2 cm divides 5 by 2.5 instead of multiplying, which would make Q smaller than P.",
+   "clue": "Find the scale factor first, then use it on the 5 cm side."
+  }
+ },
+ "cleared_by": "recheck"
+}

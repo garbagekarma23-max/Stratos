@@ -1,0 +1,365 @@
+{
+ "id": "geo-where-australia-s-water",
+ "title": "Where Australia's water is",
+ "brief": "af27875a5a71",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, write",
+  "2026-11-04T09:36:50Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:00Z write: failed the content check, writing again",
+  "2026-11-04T09:58:25Z write: done",
+  "2026-11-04T10:08:00Z check: flagged",
+  "2026-11-04T10:10:49Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01006,
+  "check": 0.01442,
+  "fix": 0.02246,
+  "recheck": 0.01089
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: All three wrong options rely on heavy or steady rain over the inland. The question itself says the town gets little rain, so a student can rule them out from the question alone and pick groundwater without knowing the idea. At least one distractor should be plausible without contradicting the question, such as a large surface lake or dam.",
+ "rejected": {
+  "title": "Where Australia's water is",
+  "card": [
+   "Australia is the driest inhabited continent. Only Antarctica is drier, and no one lives there permanently.",
+   "Rain falls most on the north and east coasts. Much of the inland gets little rain.",
+   "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
+   "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
+  ],
+  "remember": "Rain falls most on the north and east coasts, while large stores of groundwater lie under the dry inland.",
+  "a": {
+   "q": "Where does most of Australia's rain fall?",
+   "opts": [
+    "On the north and east coasts",
+    "In the centre of the continent",
+    "Evenly across the whole continent",
+    "Under the ground in the inland"
+   ],
+   "why": "The north and east coasts get the most rain, while much of the inland gets little. Water under the inland is groundwater stored in soil and rock, not rain that falls there.",
+   "clue": "Groundwater is not rain, and the inland is dry."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben lives in a dry inland town in Queensland that gets little rain. Where might a large store of water still be found near him?",
+   "opts": [
+    "In groundwater held in the rock beneath the town",
+    "In rivers fed by heavy rain that falls on the inland",
+    "In lakes kept full by steady rain over the inland",
+    "In rain that falls more on the inland than the coast"
+   ],
+   "why": "Large stores of groundwater lie under the inland, and the Great Artesian Basin lies under parts of Queensland. Rivers fed by heavy inland rain is wrong, because much of the inland gets little rain.",
+   "clue": "The water may not be on the surface."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: All three wrong options rely on heavy or steady rain over the inland. The question itself says the town gets little rain, so a student can rule them out from the question alone and pick groundwater without knowing the idea. At least one distractor should be plausible without contradicting the question, such as a large surface lake or dam."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Where Australia's water is",
+     "card": [
+      "Australia is the driest inhabited continent. Only Antarctica is drier, and no one lives there permanently.",
+      "Rain falls most on the north and east coasts. Much of the inland gets little rain.",
+      "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
+      "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
+     ],
+     "remember": "Rain falls mostly on the coasts, while large stores of groundwater lie under the dry inland.",
+     "a": {
+      "q": "Which description best fits where Australia's water is found?",
+      "opts": [
+       "Most rain falls on the north and east coasts",
+       "Most rain falls in the centre of the continent",
+       "Most rain falls evenly across every region",
+       "Most rain falls on the south and west deserts"
+      ],
+      "why": "The north and east coasts receive the most rain. The centre is the driest part, so it is not where most rain falls.",
+      "clue": "Think about which parts of the map are coastal and wet."
+     },
+     "b": {
+      "d": 3,
+      "q": "Ben lives in a dry inland town in Queensland with little rain. Where might a large store of water still be found near him?",
+      "opts": [
+       "In groundwater, such as the Great Artesian Basin",
+       "In rivers that carry the heavy rain of the inland every year",
+       "In large lakes that fill from regular inland rain each year",
+       "In water stored in the air above the inland desert"
+      ],
+      "why": "Large stores of groundwater lie under the inland, and the Great Artesian Basin lies under parts of Queensland. Regular heavy inland rain is wrong because the inland gets little rain.",
+      "clue": "The water may not be on the surface."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Most rain falls on the north and east coasts",
+      "also_right": []
+     },
+     "b": {
+      "best": "In groundwater, such as the Great Artesian Basin",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line says rain falls mostly on 'the coasts', a neater coast-versus-inland split than the card's 'north and east coasts'. Students could think all coasts are wet, but some coastal areas, such as along the Great Australian Bight, are dry."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The stem asks where Australia's 'water is found', but every option is about rainfall only. Groundwater, which the card also teaches, is left out, so the stem does not match the options. Better: 'Where does most of Australia's rain fall?'"
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think about which parts of the map are coastal and wet' points straight to the only option that names coasts, so it gives the answer away."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a precise named example (the Great Artesian Basin), which the card names. The distractors use broad claims such as 'every year' and 'regular inland rain', so a student could pick the answer without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct. Question a's clue gives the answer away and its stem asks about water while the options are only about rain. Question b's right option stands out as the only one with a named example, and the remember line widens 'north and east coasts' to all coasts."
+    },
+    "flags": [
+     "Remember, other: The remember line says rain falls mostly on 'the coasts', a neater coast-versus-inland split than the card's 'north and east coasts'. Students could think all coasts are wet, but some coastal areas, such as along the Great Australian Bight, are dry.",
+     "Question a, wording: The stem asks where Australia's 'water is found', but every option is about rainfall only. Groundwater, which the card also teaches, is left out, so the stem does not match the options. Better: 'Where does most of Australia's rain fall?'",
+     "Question a, other: The clue 'Think about which parts of the map are coastal and wet' points straight to the only option that names coasts, so it gives the answer away.",
+     "Question b, wording: The right option is the only one with a precise named example (the Great Artesian Basin), which the card names. The distractors use broad claims such as 'every year' and 'regular inland rain', so a student could pick the answer without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Where Australia's water is",
+     "card": [
+      "Australia is the driest inhabited continent. Only Antarctica is drier, and no one lives there permanently.",
+      "Rain falls most on the north and east coasts. Much of the inland gets little rain.",
+      "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
+      "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
+     ],
+     "remember": "Rain falls most on the north and east coasts, while large stores of groundwater lie under the dry inland.",
+     "a": {
+      "q": "Where does most of Australia's rain fall?",
+      "opts": [
+       "On the north and east coasts",
+       "In the centre of the continent",
+       "Evenly across the whole continent",
+       "Under the ground in the inland"
+      ],
+      "why": "The north and east coasts get the most rain, while much of the inland gets little. Water under the inland is groundwater stored in soil and rock, not rain that falls there.",
+      "clue": "Groundwater is not rain, and the inland is dry."
+     },
+     "b": {
+      "d": 3,
+      "q": "Ben lives in a dry inland town in Queensland that gets little rain. Where might a large store of water still be found near him?",
+      "opts": [
+       "In groundwater held in the rock beneath the town",
+       "In rivers fed by heavy rain that falls on the inland",
+       "In lakes kept full by steady rain over the inland",
+       "In rain that falls more on the inland than the coast"
+      ],
+      "why": "Large stores of groundwater lie under the inland, and the Great Artesian Basin lies under parts of Queensland. Rivers fed by heavy inland rain is wrong, because much of the inland gets little rain.",
+      "clue": "The water may not be on the surface."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "On the north and east coasts",
+       "also_right": []
+      },
+      "b": {
+       "best": "In groundwater held in the rock beneath the town",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "All three wrong options rely on heavy or steady rain over the inland. The question itself says the town gets little rain, so a student can rule them out from the question alone and pick groundwater without knowing the idea. At least one distractor should be plausible without contradicting the question, such as a large surface lake or dam."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both answers check out. In question b, the wrong options all contradict the question's own statement that the town gets little rain, so the groundwater answer can be picked without knowing the idea."
+     },
+     "flags": [
+      "Question b, wording: All three wrong options rely on heavy or steady rain over the inland. The question itself says the town gets little rain, so a student can rule them out from the question alone and pick groundwater without knowing the idea. At least one distractor should be plausible without contradicting the question, such as a large surface lake or dam."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Where Australia's water is",
+    "card": [
+     "Australia is the driest inhabited continent. Only Antarctica is drier, and no one lives there permanently.",
+     "Rain falls most on the north and east coasts. Much of the inland gets little rain, so water on the surface there is scarce.",
+     "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
+     "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
+    ],
+    "remember": "Rain falls most on the north and east coasts, while large stores of groundwater lie under the dry inland.",
+    "a": {
+     "q": "Which part of Australia gets the most rain?",
+     "opts": [
+      "The north and east coasts",
+      "The middle of the continent",
+      "Every part gets about the same",
+      "The dry inland plains"
+     ],
+     "why": "The north and east coasts get the most rain, while much of the inland gets little. Large stores of water do lie under the inland, but that is groundwater, not rain falling there.",
+     "clue": "Much of Australia's centre is very dry."
+    },
+    "b": {
+     "d": 3,
+     "q": "Ben lives in a dry town in western Queensland where little rain falls. A visitor asks where a large store of water could be found near the town. What should Ben say?",
+     "opts": [
+      "In groundwater stored in rock under the inland",
+      "In a large lake on the surface that stays full",
+      "In inland rivers that run high all year round",
+      "In a big dam filled by the town's own rainfall"
+     ],
+     "why": "Large stores of groundwater lie under the inland, and the Great Artesian Basin lies under parts of Queensland. The inland gets little rain, so its surface water is scarce, which rules out a lake that stays full, rivers running high all year or a dam filled by local rain.",
+     "clue": "Little rain means little water stays on the surface."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The north and east coasts",
+     "also_right": []
+    },
+    "b": {
+     "best": "In groundwater stored in rock under the inland",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Where Australia's water is",
+  "card": [
+   "Australia is the driest inhabited continent. Only Antarctica is drier, and no one lives there permanently.",
+   "Rain falls most on the north and east coasts. Much of the inland gets little rain, so water on the surface there is scarce.",
+   "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
+   "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
+  ],
+  "remember": "Rain falls most on the north and east coasts, while large stores of groundwater lie under the dry inland.",
+  "a": {
+   "q": "Which part of Australia gets the most rain?",
+   "opts": [
+    "The north and east coasts",
+    "The middle of the continent",
+    "Every part gets about the same",
+    "The dry inland plains"
+   ],
+   "why": "The north and east coasts get the most rain, while much of the inland gets little. Large stores of water do lie under the inland, but that is groundwater, not rain falling there.",
+   "clue": "Much of Australia's centre is very dry."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben lives in a dry town in western Queensland where little rain falls. A visitor asks where a large store of water could be found near the town. What should Ben say?",
+   "opts": [
+    "In groundwater stored in rock under the inland",
+    "In a large lake on the surface that stays full",
+    "In inland rivers that run high all year round",
+    "In a big dam filled by the town's own rainfall"
+   ],
+   "why": "Large stores of groundwater lie under the inland, and the Great Artesian Basin lies under parts of Queensland. The inland gets little rain, so its surface water is scarce, which rules out a lake that stays full, rivers running high all year or a dam filled by local rain.",
+   "clue": "Little rain means little water stays on the surface."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The north and east coasts",
+   "also_right": []
+  },
+  "b": {
+   "best": "In groundwater stored in rock under the inland",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Where Australia's water is",
+  "card": [
+   "Australia is the driest inhabited continent. Only Antarctica is drier, and no one lives there permanently.",
+   "Rain falls most on the north and east coasts. Much of the inland gets little rain, so water on the surface there is scarce.",
+   "Groundwater is water stored in the soil and rock under the ground. Large stores of it lie under the inland.",
+   "The Great Artesian Basin is one of these stores. It lies under parts of Queensland, South Australia, New South Wales and the Northern Territory."
+  ],
+  "remember": "Rain falls most on the north and east coasts, while large stores of groundwater lie under the dry inland.",
+  "a": {
+   "q": "Which part of Australia gets the most rain?",
+   "opts": [
+    "The north and east coasts",
+    "The middle of the continent",
+    "Every part gets about the same",
+    "The dry inland plains"
+   ],
+   "why": "The north and east coasts get the most rain, while much of the inland gets little. Large stores of water do lie under the inland, but that is groundwater, not rain falling there.",
+   "clue": "Much of Australia's centre is very dry."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben lives in a dry town in western Queensland where little rain falls. A visitor asks where a large store of water could be found near the town. What should Ben say?",
+   "opts": [
+    "In groundwater stored in rock under the inland",
+    "In a large lake on the surface that stays full",
+    "In inland rivers that run high all year round",
+    "In a big dam filled by the town's own rainfall"
+   ],
+   "why": "Large stores of groundwater lie under the inland, and the Great Artesian Basin lies under parts of Queensland. The inland gets little rain, so its surface water is scarce, which rules out a lake that stays full, rivers running high all year or a dam filled by local rain.",
+   "clue": "Little rain means little water stays on the surface."
+  }
+ },
+ "checked_by": "claude-code"
+}

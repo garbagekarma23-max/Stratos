@@ -1,0 +1,199 @@
+{
+ "id": "mat-finding-side-with-trigonometry",
+ "title": "Finding a side with trigonometry",
+ "brief": "110c7b566768",
+ "shortlist": [
+  [
+   "mat-right-angled-trigonometry",
+   0.338
+  ],
+  [
+   "mat-cosine-rule",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 says reuse mat-right-angled-trigonometry, so to the Opus match check, as every reuse is",
+  "2026-11-04T09:47:10Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:31Z write: done",
+  "2026-11-04T10:08:04Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "confirm": 0.00653,
+  "write": 0.00776,
+  "check": 0.01224,
+  "fix": 0.02712
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-right-angled-trigonometry",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at a suitable basic depth: choosing the sine, cosine or tangent ratio that links the known and unknown sides, then rearranging, with a worked example matching the brief, and nothing in it conflicts with the Queensland, South Australian, Western Australian, Tasmanian, ACT or Northern Territory Year 9 course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is broader than this one: it also covers labelling the sides, defining the three ratios and finding angles with inverse functions, and neither of its questions asks students to find a side, so this point should be written fresh.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Finding a side with trigonometry",
+  "card": [
+   "Label the sides from the known angle: opposite, adjacent and hypotenuse. Choose the ratio that uses the known side and the unknown side.",
+   "Use sin for opposite and hypotenuse, cos for adjacent and hypotenuse, and tan for opposite and adjacent.",
+   "Write the ratio as an equation, then rearrange to get x. If x is on top, multiply. If x is on the bottom, divide.",
+   "Example: hypotenuse 10, angle 30°, x is opposite. sin 30° = x ÷ 10, so x = 10 × sin 30° = 5. Example: adjacent 8 and angle 60° with hypotenuse x. cos 60° = 8 ÷ x, so x = 8 ÷ cos 60° = 16."
+  ],
+  "remember": "Match the two sides and the angle to a ratio, then multiply or divide to get x.",
+  "a": {
+   "q": "A right-angled triangle has an angle of 30°, a hypotenuse of 20 and an opposite side x. Which equation gives x?",
+   "opts": [
+    "x = 20 × sin 30°",
+    "x = 20 ÷ sin 30°",
+    "x = 20 × cos 30°",
+    "x = 20 × tan 30°"
+   ],
+   "why": "Opposite and hypotenuse link to sine, so sin 30° = x ÷ 20 and x = 20 × sin 30° = 10. Dividing by sin 30° is a mistake, since x is on top of the fraction.",
+   "clue": "Which ratio uses opposite and hypotenuse?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A ramp rises at 20° to the ground. Its sloping surface is the hypotenuse. The ground length under it is 6 m, next to the 20° angle. Which equation gives the ramp length x?",
+   "opts": [
+    "x = 6 ÷ cos 20°",
+    "x = 6 × cos 20°",
+    "x = 6 ÷ sin 20°",
+    "x = 6 × tan 20°"
+   ],
+   "why": "Adjacent and hypotenuse link to cosine, so cos 20° = 6 ÷ x. Since x is on the bottom, divide: x = 6 ÷ cos 20°. Multiplying gives a ramp shorter than its own ground length, which cannot be right.",
+   "clue": "x is on the bottom of the fraction, so divide."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = 20 × sin 30°",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 6 ÷ cos 20°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'x is on the bottom of the fraction, so divide' does the rearranging step for the student. It rules out both multiply options and leaves only sin vs cos, so half of what the question tests is given away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts, worked examples and intended answers are all correct. The only issue is that question b's clue tells students x is on the bottom and to divide, which gives away half the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'x is on the bottom of the fraction, so divide' does the rearranging step for the student. It rules out both multiply options and leaves only sin vs cos, so half of what the question tests is given away."
+ ],
+ "proposal": {
+  "title": "Finding a side with trigonometry",
+  "card": [
+   "Label the sides from the known angle: opposite, adjacent and hypotenuse. Choose the ratio that uses the known side and the unknown side.",
+   "Use sin for opposite and hypotenuse, cos for adjacent and hypotenuse, and tan for opposite and adjacent.",
+   "Write the ratio as an equation, then rearrange to get x. If x is on top, multiply. If x is on the bottom, divide.",
+   "Example: hypotenuse 10, angle 30°, x is opposite. sin 30° = x ÷ 10, so x = 10 × sin 30° = 5. Example: adjacent 8, angle 60°, x is the hypotenuse. cos 60° = 8 ÷ x, so x = 8 ÷ cos 60° = 16."
+  ],
+  "remember": "Match the two sides and the angle to a ratio, then multiply or divide to get x.",
+  "a": {
+   "q": "A right-angled triangle has an angle of 30°, a hypotenuse of 20 and an opposite side x. Which equation gives x?",
+   "opts": [
+    "x = 20 × sin 30°",
+    "x = 20 ÷ sin 30°",
+    "x = 20 × cos 30°",
+    "x = 20 × tan 30°"
+   ],
+   "why": "Opposite and hypotenuse link to sine, so sin 30° = x ÷ 20 and x = 20 × sin 30° = 10. Dividing by sin 30° is a mistake, since x is on top of the fraction.",
+   "clue": "Which ratio uses opposite and hypotenuse?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A ramp rises at 20° to the ground. Its sloping surface is the hypotenuse. The ground length under it is 6 m, next to the 20° angle. Which equation gives the ramp length x?",
+   "opts": [
+    "x = 6 ÷ cos 20°",
+    "x = 6 × cos 20°",
+    "x = 6 ÷ sin 20°",
+    "x = 6 × tan 20°"
+   ],
+   "why": "Adjacent and hypotenuse link to cosine, so cos 20° = 6 ÷ x. Since x is on the bottom, divide: x = 6 ÷ cos 20°. Multiplying gives a ramp shorter than its own ground length, which cannot be right.",
+   "clue": "Name the 6 m side and the ramp from the 20° angle first."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'x is on the bottom of the fraction, so divide' does the rearranging step for the student. It rules out both multiply options and leaves only sin vs cos, so half of what the question tests is given away."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'x is on the bottom of the fraction, so divide' does the rearranging step for the student. It rules out both multiply options and leaves only sin vs cos, so half of what the question tests is given away."
+  ]
+ },
+ "final": {
+  "title": "Finding a side with trigonometry",
+  "card": [
+   "Label the sides from the known angle: opposite, adjacent and hypotenuse. Choose the ratio that uses the known side and the unknown side.",
+   "Use sin for opposite and hypotenuse, cos for adjacent and hypotenuse, and tan for opposite and adjacent.",
+   "Write the ratio as an equation, then rearrange to get x. If x is on top, multiply. If x is on the bottom, divide.",
+   "Example: hypotenuse 10, angle 30°, x is opposite. sin 30° = x ÷ 10, so x = 10 × sin 30° = 5. Example: adjacent 8, angle 60°, x is the hypotenuse. cos 60° = 8 ÷ x, so x = 8 ÷ cos 60° = 16."
+  ],
+  "remember": "Match the two sides and the angle to a ratio, then multiply or divide to get x.",
+  "a": {
+   "q": "A right-angled triangle has an angle of 30°, a hypotenuse of 20 and an opposite side x. Which equation gives x?",
+   "opts": [
+    "x = 20 × sin 30°",
+    "x = 20 ÷ sin 30°",
+    "x = 20 × cos 30°",
+    "x = 20 × tan 30°"
+   ],
+   "why": "Opposite and hypotenuse link to sine, so sin 30° = x ÷ 20 and x = 20 × sin 30° = 10. Dividing by sin 30° is a mistake, since x is on top of the fraction.",
+   "clue": "Which ratio uses opposite and hypotenuse?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A ramp rises at 20° to the ground. Its sloping surface is the hypotenuse. The ground length under it is 6 m, next to the 20° angle. Which equation gives the ramp length x?",
+   "opts": [
+    "x = 6 ÷ cos 20°",
+    "x = 6 × cos 20°",
+    "x = 6 ÷ sin 20°",
+    "x = 6 × tan 20°"
+   ],
+   "why": "Adjacent and hypotenuse link to cosine, so cos 20° = 6 ÷ x. Since x is on the bottom, divide: x = 6 ÷ cos 20°. Multiplying gives a ramp shorter than its own ground length, which cannot be right.",
+   "clue": "Name the 6 m side and the ramp from the 20° angle first."
+  }
+ },
+ "cleared_by": "auto"
+}

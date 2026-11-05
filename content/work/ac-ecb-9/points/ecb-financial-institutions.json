@@ -1,0 +1,219 @@
+{
+ "id": "ecb-financial-institutions",
+ "title": "Financial institutions",
+ "brief": "f86186bd9edf",
+ "shortlist": [
+  [
+   "bus-financial-institutions",
+   0.212
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, match",
+  "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: done",
+  "2026-11-04T09:58:22Z check: flagged",
+  "2026-11-04T10:07:58Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00578,
+  "check": 0.01135,
+  "fix": 0.02138,
+  "recheck": 0.00606
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers investment banks, finance companies and pooled funds at Year 12 depth, while the new point is a Year 9 introduction to deposit-taking institutions such as banks, credit unions and building societies, so it is broader and at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Financial institutions",
+  "card": [
+   "Financial institutions are organisations that look after money for people and businesses. Banks, credit unions and building societies are three common kinds in Australia.",
+   "They take deposits and keep the money safe. People can then take it out when they need it.",
+   "They make payments for customers, such as card payments, bill payments and transfers to other accounts.",
+   "They also lend money to people and businesses, for example for a home, a car or a new shop."
+  ],
+  "remember": "Financial institutions hold money, move money and lend money.",
+  "a": {
+   "q": "Sam puts his wages into an account and pays his phone bill from it. Which two services is the institution providing?",
+   "opts": [
+    "Keeping his money safe and making a payment",
+    "Lending him money and insuring his phone",
+    "Making a payment and setting his wages",
+    "Keeping his money safe and borrowing from him"
+   ],
+   "why": "The account holds Sam's deposit safely, and paying the bill is a payment made for him. Lending is a different service, because Sam is not borrowing anything here.",
+   "clue": "Sam puts money in and sends money out."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya wants to open a bakery in Hobart but needs $40,000 for ovens. Which service could a credit union offer her?",
+   "opts": [
+    "A loan to buy the ovens",
+    "A deposit account to hold the ovens",
+    "A payment to the oven maker for free",
+    "A building society to sell her the ovens"
+   ],
+   "why": "Lending money to businesses is one of the services these institutions provide, so a loan fits Priya's need. A deposit account only holds money she already has, so it cannot supply the missing $40,000.",
+   "clue": "Priya needs money she does not have yet."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Keeping his money safe and making a payment",
+   "also_right": []
+  },
+  "b": {
+   "best": "A loan to buy the ovens",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The distractors are absurd: a building society selling ovens, a deposit account holding ovens, or a free payment to the oven maker. A student can rule them out without knowing the idea, so the question tests almost nothing."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'Keeping his money safe and borrowing from him' is not strictly false. A deposit is, in effect, money the institution borrows from the saver, which links to point 2. A careful student could be confused. A clearly wrong service would be safer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and the answers are correct. Question b's distractors are too absurd to test understanding. In question a, the 'borrowing from him' distractor is arguably defensible, because a deposit is money the institution borrows from the saver."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The distractors are absurd: a building society selling ovens, a deposit account holding ovens, or a free payment to the oven maker. A student can rule them out without knowing the idea, so the question tests almost nothing.",
+  "Question a, wording: The distractor 'Keeping his money safe and borrowing from him' is not strictly false. A deposit is, in effect, money the institution borrows from the saver, which links to point 2. A careful student could be confused. A clearly wrong service would be safer."
+ ],
+ "proposal": {
+  "title": "Financial institutions",
+  "card": [
+   "Financial institutions are organisations that look after money for people and businesses. Banks, credit unions and building societies are three common kinds in Australia.",
+   "They take deposits and keep the money safe. People can then take it out when they need it.",
+   "They make payments for customers, such as card payments, bill payments and transfers to other accounts.",
+   "They also lend money to people and businesses, for example for a home, a car or a new shop."
+  ],
+  "remember": "Financial institutions hold money, move money and lend money.",
+  "a": {
+   "q": "Sam puts his wages into an account and pays his phone bill from it. What is the institution doing for Sam?",
+   "opts": [
+    "Keeping his money safe and making a payment",
+    "Lending him money and making a payment",
+    "Keeping his money safe and lending him money",
+    "Lending him money to pay his phone bill"
+   ],
+   "why": "The account holds Sam's wages safely, and paying the bill from it is a payment made for him. The bill is paid with Sam's own money, so no lending is involved.",
+   "clue": "Whose money pays the phone bill?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya wants to open a bakery in Hobart but needs $40,000 for ovens she cannot yet afford. Which service from a credit union would meet this need?",
+   "opts": [
+    "A loan to pay for the ovens",
+    "A deposit account to save her takings",
+    "A transfer to pay the oven maker now",
+    "Card payments so customers can pay her"
+   ],
+   "why": "Lending gives businesses money they do not have yet, so a loan meets Priya's need. A transfer is tempting, but it only moves money she already has, and she does not have the $40,000.",
+   "clue": "Priya needs money she does not have yet."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Keeping his money safe and making a payment",
+    "also_right": []
+   },
+   "b": {
+    "best": "A loan to pay for the ovens",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The distractors are absurd: a building society selling ovens, a deposit account holding ovens, or a free payment to the oven maker. A student can rule them out without knowing the idea, so the question tests almost nothing."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'Keeping his money safe and borrowing from him' is not strictly false. A deposit is, in effect, money the institution borrows from the saver, which links to point 2. A careful student could be confused. A clearly wrong service would be safer."
+   }
+  ],
+  "flags": [
+   "Question b, level: The distractors are absurd: a building society selling ovens, a deposit account holding ovens, or a free payment to the oven maker. A student can rule them out without knowing the idea, so the question tests almost nothing.",
+   "Question a, wording: The distractor 'Keeping his money safe and borrowing from him' is not strictly false. A deposit is, in effect, money the institution borrows from the saver, which links to point 2. A careful student could be confused. A clearly wrong service would be safer."
+  ]
+ },
+ "final": {
+  "title": "Financial institutions",
+  "card": [
+   "Financial institutions are organisations that look after money for people and businesses. Banks, credit unions and building societies are three common kinds in Australia.",
+   "They take deposits and keep the money safe. People can then take it out when they need it.",
+   "They make payments for customers, such as card payments, bill payments and transfers to other accounts.",
+   "They also lend money to people and businesses, for example for a home, a car or a new shop."
+  ],
+  "remember": "Financial institutions hold money, move money and lend money.",
+  "a": {
+   "q": "Sam puts his wages into an account and pays his phone bill from it. What is the institution doing for Sam?",
+   "opts": [
+    "Keeping his money safe and making a payment",
+    "Lending him money and making a payment",
+    "Keeping his money safe and lending him money",
+    "Lending him money to pay his phone bill"
+   ],
+   "why": "The account holds Sam's wages safely, and paying the bill from it is a payment made for him. The bill is paid with Sam's own money, so no lending is involved.",
+   "clue": "Whose money pays the phone bill?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya wants to open a bakery in Hobart but needs $40,000 for ovens she cannot yet afford. Which service from a credit union would meet this need?",
+   "opts": [
+    "A loan to pay for the ovens",
+    "A deposit account to save her takings",
+    "A transfer to pay the oven maker now",
+    "Card payments so customers can pay her"
+   ],
+   "why": "Lending gives businesses money they do not have yet, so a loan meets Priya's need. A transfer is tempting, but it only moves money she already has, and she does not have the $40,000.",
+   "clue": "Priya needs money she does not have yet."
+  }
+ },
+ "cleared_by": "recheck"
+}

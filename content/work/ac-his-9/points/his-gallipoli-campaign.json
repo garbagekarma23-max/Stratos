@@ -1,0 +1,257 @@
+{
+ "id": "his-gallipoli-campaign",
+ "title": "The Gallipoli campaign",
+ "brief": "141a605c70de",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:38Z new, write",
+  "2026-11-04T09:36:54Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:05Z write: failed the content check, writing again",
+  "2026-11-04T09:58:29Z write: done",
+  "2026-11-04T10:08:03Z check: for review (other-sensitive)",
+  "2026-11-05T06:14:58Z review: rejected, to be written again",
+  "2026-11-05T06:26:27Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T06:32:24Z claude-code check: answered by a separate subagent",
+  "2026-11-05T06:32:24Z check: flagged",
+  "2026-11-05T06:46:37Z fix: suggested",
+  "2026-11-05T07:04:01Z review: approved with the fix"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.01168,
+  "check": 0.01186,
+  "fix": 0.01635
+ },
+ "note": "",
+ "rejected": {
+  "title": "The Gallipoli campaign",
+  "card": [
+   "After the landing on 25 April 1915, the Allied troops could not break out from the steep coast. The fighting turned into a stalemate, where neither side could push the other back.",
+   "Conditions were harsh. Summer heat, flies, poor food and a lack of clean water spread diseases such as dysentery, which made many soldiers ill.",
+   "About 8,700 Australians died in the campaign. Many more were wounded or fell sick.",
+   "After about eight months, the commanders decided the campaign could not succeed. The troops were evacuated in December 1915, and the Allies did not reach their goal."
+  ],
+  "remember": "Gallipoli ended in a stalemate, heavy losses and an evacuation, not a victory.",
+  "a": {
+   "q": "Why were the Allied troops evacuated from Gallipoli in December 1915?",
+   "opts": [
+    "The campaign could not succeed after months of stalemate",
+    "The Allied troops had captured all of their goals",
+    "Turkey had agreed to stop fighting and make peace",
+    "Most of the Australian troops had already died"
+   ],
+   "why": "After eight months the Allies were still held on the coast, and commanders decided the campaign could not succeed. Roughly 8,700 Australians died, but that was not most of the troops, and the Allies had not won.",
+   "clue": "Think about whether the Allies had broken out from the coast."
+  },
+  "b": {
+   "d": 3,
+   "q": "Private Tom Hale, an Australian soldier at Gallipoli in August 1915, is sent to hospital with dysentery. What does his illness show about the campaign?",
+   "opts": [
+    "Disease and harsh conditions hurt troops as well as fighting",
+    "Disease was rare because troops had plenty of clean water",
+    "Most Australian deaths at Gallipoli were caused by disease",
+    "The illness spread because troops had stopped the fighting"
+   ],
+   "why": "Dysentery spread because of heat, flies, poor food and a lack of clean water, so conditions caused suffering besides battle. The card does not say most deaths came from disease, so that option goes beyond it.",
+   "clue": "Look at what the card says about heat, flies and water."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:26:27Z",
+   "step": "write",
+   "version": {
+    "title": "The Gallipoli campaign",
+    "card": [
+     "After the landing, neither side could break through. The campaign became a stalemate lasting about eight months, with both sides dug into trenches on the hills.",
+     "Conditions were harsh: summer heat, flies, little clean water and poor food. Diseases such as dysentery spread, and in late November a blizzard brought frostbite.",
+     "About 8,700 Australians died at Gallipoli, and many more were wounded or fell ill.",
+     "In December 1915 the Allied troops were evacuated in secret, with very few losses. The campaign had failed to reach its goal."
+    ],
+    "remember": "Gallipoli became a long, costly stalemate that ended in evacuation, not victory.",
+    "a": {
+     "q": "Why did the Gallipoli campaign end in December 1915?",
+     "opts": [
+      "No side broke through, so the Allies withdrew",
+      "The Allies reached their goal and sailed home",
+      "The Ottoman army surrendered after the blizzard",
+      "Every Australian unit had lost most of its men"
+     ],
+     "why": "After about eight months neither side could break through, and the Allied troops were evacuated without reaching their goal. The Allies did not win, and the Ottoman army did not surrender.",
+     "clue": "Did either side break through?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Private Ellis landed at Gallipoli in April 1915 and left in December. Which best describes what he faced?",
+     "opts": [
+      "Stalemate, disease, heat and then winter cold",
+      "A quick advance and victory over the Ottomans",
+      "Heavy losses during the December evacuation",
+      "Months of fighting in open desert on horseback"
+     ],
+     "why": "Ellis would have faced the stalemate, disease, summer heat and the cold of late November. The evacuation is the tempting wrong answer: it was carried out in secret with very few losses.",
+     "clue": "Think about the conditions across all eight months."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T06:32:24Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "No side broke through, so the Allies withdrew",
+     "also_right": []
+    },
+    "b": {
+     "best": "Stalemate, disease, heat and then winter cold",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "card",
+      "kind": "fact",
+      "detail": "The card says the Allied troops were evacuated in December 1915. The Anzac and Suvla positions were evacuated in December 1915 (completed 20 December), but British and French troops at Cape Helles were not evacuated until 8 to 9 January 1916, so the campaign as a whole ended in January 1916. Saying 'the Australian and New Zealand troops were evacuated in December 1915' would be accurate. Question a's stem ('end in December 1915') carries the same simplification."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Both questions have one clear right answer and the conditions, death toll and secret evacuation are accurate. The only issue is that the Allied evacuation finished at Helles in January 1916, so the card should say the Anzac troops (not all Allied troops) left in December 1915."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The Gallipoli campaign",
+  "card": [
+   "After the landing, neither side could break through. The campaign became a stalemate lasting about eight months, with both sides dug into trenches on the hills.",
+   "Conditions were harsh: summer heat, flies, little clean water and poor food. Diseases such as dysentery spread, and in late November a blizzard brought frostbite.",
+   "About 8,700 Australians died at Gallipoli, and many more were wounded or fell ill.",
+   "In December 1915 the Allied troops were evacuated in secret, with very few losses. The campaign had failed to reach its goal."
+  ],
+  "remember": "Gallipoli became a long, costly stalemate that ended in evacuation, not victory.",
+  "a": {
+   "q": "Why did the Gallipoli campaign end in December 1915?",
+   "opts": [
+    "No side broke through, so the Allies withdrew",
+    "The Allies reached their goal and sailed home",
+    "The Ottoman army surrendered after the blizzard",
+    "Every Australian unit had lost most of its men"
+   ],
+   "why": "After about eight months neither side could break through, and the Allied troops were evacuated without reaching their goal. The Allies did not win, and the Ottoman army did not surrender.",
+   "clue": "Did either side break through?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Private Ellis landed at Gallipoli in April 1915 and left in December. Which best describes what he faced?",
+   "opts": [
+    "Stalemate, disease, heat and then winter cold",
+    "A quick advance and victory over the Ottomans",
+    "Heavy losses during the December evacuation",
+    "Months of fighting in open desert on horseback"
+   ],
+   "why": "Ellis would have faced the stalemate, disease, summer heat and the cold of late November. The evacuation is the tempting wrong answer: it was carried out in secret with very few losses.",
+   "clue": "Think about the conditions across all eight months."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "No side broke through, so the Allies withdrew",
+   "also_right": []
+  },
+  "b": {
+   "best": "Stalemate, disease, heat and then winter cold",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says the Allied troops were evacuated in December 1915. The Anzac and Suvla positions were evacuated in December 1915 (completed 20 December), but British and French troops at Cape Helles were not evacuated until 8 to 9 January 1916, so the campaign as a whole ended in January 1916. Saying 'the Australian and New Zealand troops were evacuated in December 1915' would be accurate. Question a's stem ('end in December 1915') carries the same simplification."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the conditions, death toll and secret evacuation are accurate. The only issue is that the Allied evacuation finished at Helles in January 1916, so the card should say the Anzac troops (not all Allied troops) left in December 1915."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says the Allied troops were evacuated in December 1915. The Anzac and Suvla positions were evacuated in December 1915 (completed 20 December), but British and French troops at Cape Helles were not evacuated until 8 to 9 January 1916, so the campaign as a whole ended in January 1916. Saying 'the Australian and New Zealand troops were evacuated in December 1915' would be accurate. Question a's stem ('end in December 1915') carries the same simplification."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "The Gallipoli campaign",
+  "card": [
+   "After the landing, neither side could break through. The campaign became a stalemate lasting about eight months, with both sides dug into trenches on the hills.",
+   "Conditions were harsh: summer heat, flies, little clean water and poor food. Diseases such as dysentery spread, and in late November a blizzard brought frostbite.",
+   "About 8,700 Australians died at Gallipoli, and many more were wounded or fell ill.",
+   "With no breakthrough in sight, Allied leaders decided to withdraw. The Australian and New Zealand troops were evacuated in secret in December 1915, with very few losses."
+  ],
+  "remember": "Gallipoli became a long, costly stalemate that ended in evacuation, not victory.",
+  "a": {
+   "q": "Why were the Australian and New Zealand troops evacuated from Gallipoli in December 1915?",
+   "opts": [
+    "No side broke through, so the Allies withdrew",
+    "The Allies reached their goal and sailed home",
+    "The Ottoman army surrendered after the blizzard",
+    "Every Australian unit had lost most of its men"
+   ],
+   "why": "After about eight months neither side could break through, so Allied leaders chose to withdraw. The Allies had not reached their goal, and the Ottoman army did not surrender.",
+   "clue": "Did either side break through?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Private Ellis landed at Gallipoli in April 1915 and left in December. Which best describes what he faced?",
+   "opts": [
+    "Stalemate, disease, heat and then winter cold",
+    "A quick advance and victory over the Ottomans",
+    "Heavy losses during the December evacuation",
+    "Months of fighting in open desert on horseback"
+   ],
+   "why": "Ellis would have faced the stalemate, disease, summer heat and the blizzard of late November. The evacuation is the tempting wrong answer: it was carried out in secret with very few losses.",
+   "clue": "Think about the conditions across all eight months."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The Gallipoli campaign",
+  "card": [
+   "After the landing, neither side could break through. The campaign became a stalemate lasting about eight months, with both sides dug into trenches on the hills.",
+   "Conditions were harsh: summer heat, flies, little clean water and poor food. Diseases such as dysentery spread, and in late November a blizzard brought frostbite.",
+   "About 8,700 Australians died at Gallipoli, and many more were wounded or fell ill.",
+   "With no breakthrough in sight, Allied leaders decided to withdraw. The Australian and New Zealand troops were evacuated in secret in December 1915, with very few losses."
+  ],
+  "remember": "Gallipoli became a long, costly stalemate that ended in evacuation, not victory.",
+  "a": {
+   "q": "Why were the Australian and New Zealand troops evacuated from Gallipoli in December 1915?",
+   "opts": [
+    "No side broke through, so the Allies withdrew",
+    "The Allies reached their goal and sailed home",
+    "The Ottoman army surrendered after the blizzard",
+    "Every Australian unit had lost most of its men"
+   ],
+   "why": "After about eight months neither side could break through, so Allied leaders chose to withdraw. The Allies had not reached their goal, and the Ottoman army did not surrender.",
+   "clue": "Did either side break through?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Private Ellis landed at Gallipoli in April 1915 and left in December. Which best describes what he faced?",
+   "opts": [
+    "Stalemate, disease, heat and then winter cold",
+    "A quick advance and victory over the Ottomans",
+    "Heavy losses during the December evacuation",
+    "Months of fighting in open desert on horseback"
+   ],
+   "why": "Ellis would have faced the stalemate, disease, summer heat and the blizzard of late November. The evacuation is the tempting wrong answer: it was carried out in secret with very few losses.",
+   "clue": "Think about the conditions across all eight months."
+  }
+ },
+ "cleared_by": "owner"
+}

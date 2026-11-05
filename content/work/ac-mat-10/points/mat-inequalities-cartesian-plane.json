@@ -1,0 +1,310 @@
+{
+ "id": "mat-inequalities-cartesian-plane",
+ "title": "Inequalities on the Cartesian plane",
+ "brief": "c455878748fd",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, write",
+  "2026-11-04T09:36:55Z write: done",
+  "2026-11-04T09:47:06Z check: flagged",
+  "2026-11-04T09:58:30Z fix: suggested",
+  "2026-11-04T17:58:53Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording)",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.00526,
+  "check": 0.01121,
+  "fix": 0.01354
+ },
+ "draft": {
+  "title": "Inequalities on the Cartesian plane",
+  "card": [
+   "An inequality such as y > 2x + 1 is a region of the plane, not a single line. The line y = 2x + 1 is the edge of the region.",
+   "Draw the line first. Use a dashed line for > or <, because points on the line do not count. Use a solid line for ≥ or ≤, because they do.",
+   "To find which side to shade, pick a test point not on the line, such as (0, 0), and put it into the inequality. If it makes the inequality true, shade that side. If not, shade the other side.",
+   "Example: for y > 2x + 1, test (0, 0). 0 > 2 × 0 + 1 gives 0 > 1, which is false. So shade the side that does not contain (0, 0), with a dashed line."
+  ],
+  "remember": "Draw the boundary line, then use a test point to choose the side to shade.",
+  "a": {
+   "q": "Which point lies in the region y > 2x + 1?",
+   "opts": [
+    "(0, 3)",
+    "(0, 0)",
+    "(2, 5)",
+    "(1, 1)"
+   ],
+   "why": "At (0, 3): 3 > 2 × 0 + 1 gives 3 > 1, which is true. At (0, 0), 0 > 1 is false. At (2, 5), 5 > 5 is false because the point is on the line, and the line is not included for >.",
+   "clue": "Put the x and y values of each point into the inequality."
+  },
+  "b": {
+   "d": 3,
+   "q": "The region y ≤ x − 2 is drawn. Test (0, 0) is put into the inequality. What does the result show about the graph?",
+   "opts": [
+    "Use a solid line and shade the side without (0, 0)",
+    "Use a solid line and shade the side with (0, 0)",
+    "Use a dashed line and shade the side without (0, 0)",
+    "Use a dashed line and shade the side with (0, 0)"
+   ],
+   "why": "At (0, 0): 0 ≤ 0 − 2 gives 0 ≤ −2, which is false, so shade the side without (0, 0). The sign is ≤, so points on the line count and the line is solid. A dashed line would only be used for < or >.",
+   "clue": "Check the test point, then look at whether the sign includes equals."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(0, 3)",
+   "also_right": []
+  },
+  "b": {
+   "best": "Use a solid line and shade the side without (0, 0)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks what the test result shows, but every option also includes the line type, which comes from the ≤ sign, not from the test. 'Test (0, 0) is put into the inequality' is also awkward. A clearer version: 'For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, both answers and both explanations are correct: (0, 3) for a, and solid line shading the side without (0, 0) for b. The only issue is the wording of question b, which suggests the test point decides the line type when the sign does."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question asks what the test result shows, but every option also includes the line type, which comes from the ≤ sign, not from the test. 'Test (0, 0) is put into the inequality' is also awkward. A clearer version: 'For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?'"
+ ],
+ "proposal": {
+  "title": "Inequalities on the Cartesian plane",
+  "card": [
+   "An inequality such as y > 2x + 1 is a region of the plane, not a single line. The line y = 2x + 1 is the edge of the region.",
+   "Draw the line first. Use a dashed line for > or <, because points on the line do not count. Use a solid line for ≥ or ≤, because they do.",
+   "To find which side to shade, pick a test point not on the line, such as (0, 0), and put it into the inequality. If it makes the inequality true, shade that side. If not, shade the other side.",
+   "Example: for y > 2x + 1, test (0, 0). 0 > 2 × 0 + 1 gives 0 > 1, which is false. So shade the side that does not contain (0, 0), with a dashed line."
+  ],
+  "remember": "Draw the boundary line, then use a test point to choose the side to shade.",
+  "a": {
+   "q": "Which point lies in the region y > 2x + 1?",
+   "opts": [
+    "(0, 3)",
+    "(0, 0)",
+    "(2, 5)",
+    "(1, 1)"
+   ],
+   "why": "At (0, 3): 3 > 2 × 0 + 1 gives 3 > 1, which is true. At (0, 0), 0 > 1 is false. At (2, 5), 5 > 5 is false because the point is on the line, and the line is not included for >.",
+   "clue": "Put the x and y values of each point into the inequality."
+  },
+  "b": {
+   "d": 3,
+   "q": "For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?",
+   "opts": [
+    "Use a solid line and shade the side without (0, 0)",
+    "Use a solid line and shade the side with (0, 0)",
+    "Use a dashed line and shade the side without (0, 0)",
+    "Use a dashed line and shade the side with (0, 0)"
+   ],
+   "why": "At (0, 0): 0 ≤ 0 − 2 gives 0 ≤ −2, which is false, so shade the side without (0, 0). The sign is ≤, so points on the line count and the line is solid. A dashed line is for < or >, where points on the line do not count.",
+   "clue": "Check the test point for the side, then check the sign for the line."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:53Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks what the test result shows, but every option also includes the line type, which comes from the ≤ sign, not from the test. 'Test (0, 0) is put into the inequality' is also awkward. A clearer version: 'For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?'"
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question asks what the test result shows, but every option also includes the line type, which comes from the ≤ sign, not from the test. 'Test (0, 0) is put into the inequality' is also awkward. A clearer version: 'For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?'"
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Inequalities on the Cartesian plane",
+  "card": [
+   "An inequality such as y > 2x + 1 is a region of the plane, not a single line. The line y = 2x + 1 is the edge of the region.",
+   "Draw the line first. Use a dashed line for > or <, because points on the line do not count. Use a solid line for ≥ or ≤, because they do.",
+   "To find which side to shade, pick a test point not on the line, such as (0, 0), and put it into the inequality. If it makes the inequality true, shade that side. If not, shade the other side.",
+   "Example: for y > 2x + 1, test (0, 0). 0 > 2 × 0 + 1 gives 0 > 1, which is false. So shade the side that does not contain (0, 0), with a dashed line."
+  ],
+  "remember": "Draw the boundary line, then use a test point to choose the side to shade.",
+  "a": {
+   "q": "Which point lies in the region y > 2x + 1?",
+   "opts": [
+    "(0, 3)",
+    "(0, 0)",
+    "(2, 5)",
+    "(1, 1)"
+   ],
+   "why": "At (0, 3): 3 > 2 × 0 + 1 gives 3 > 1, which is true. At (0, 0), 0 > 1 is false. At (2, 5), 5 > 5 is false because the point is on the line, and the line is not included for >.",
+   "clue": "Put the x and y values of each point into the inequality."
+  },
+  "b": {
+   "d": 3,
+   "q": "For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?",
+   "opts": [
+    "Use a solid line and shade the side without (0, 0)",
+    "Use a solid line and shade the side with (0, 0)",
+    "Use a dashed line and shade the side without (0, 0)",
+    "Use a dashed line and shade the side with (0, 0)"
+   ],
+   "why": "At (0, 0): 0 ≤ 0 − 2 gives 0 ≤ −2, which is false, so shade the side without (0, 0). The sign is ≤, so points on the line count and the line is solid. A dashed line is for < or >, where points on the line do not count.",
+   "clue": "Check the test point for the side, then check the sign for the line."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix rewords question b so it no longer suggests the test point decides the line type, and the clue now names the two checks. The answers are right.",
+   "item": "3895664460fa46da",
+   "result": "decided",
+   "saved": {
+    "id": "mat-inequalities-cartesian-plane",
+    "title": "Inequalities on the Cartesian plane",
+    "brief": "c455878748fd",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "write": 0.00526,
+     "check": 0.01121,
+     "fix": 0.01354
+    },
+    "draft": {
+     "title": "Inequalities on the Cartesian plane",
+     "card": [
+      "An inequality such as y > 2x + 1 is a region of the plane, not a single line. The line y = 2x + 1 is the edge of the region.",
+      "Draw the line first. Use a dashed line for > or <, because points on the line do not count. Use a solid line for ≥ or ≤, because they do.",
+      "To find which side to shade, pick a test point not on the line, such as (0, 0), and put it into the inequality. If it makes the inequality true, shade that side. If not, shade the other side.",
+      "Example: for y > 2x + 1, test (0, 0). 0 > 2 × 0 + 1 gives 0 > 1, which is false. So shade the side that does not contain (0, 0), with a dashed line."
+     ],
+     "remember": "Draw the boundary line, then use a test point to choose the side to shade.",
+     "a": {
+      "q": "Which point lies in the region y > 2x + 1?",
+      "opts": [
+       "(0, 3)",
+       "(0, 0)",
+       "(2, 5)",
+       "(1, 1)"
+      ],
+      "why": "At (0, 3): 3 > 2 × 0 + 1 gives 3 > 1, which is true. At (0, 0), 0 > 1 is false. At (2, 5), 5 > 5 is false because the point is on the line, and the line is not included for >.",
+      "clue": "Put the x and y values of each point into the inequality."
+     },
+     "b": {
+      "d": 3,
+      "q": "The region y ≤ x − 2 is drawn. Test (0, 0) is put into the inequality. What does the result show about the graph?",
+      "opts": [
+       "Use a solid line and shade the side without (0, 0)",
+       "Use a solid line and shade the side with (0, 0)",
+       "Use a dashed line and shade the side without (0, 0)",
+       "Use a dashed line and shade the side with (0, 0)"
+      ],
+      "why": "At (0, 0): 0 ≤ 0 − 2 gives 0 ≤ −2, which is false, so shade the side without (0, 0). The sign is ≤, so points on the line count and the line is solid. A dashed line would only be used for < or >.",
+      "clue": "Check the test point, then look at whether the sign includes equals."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "(0, 3)",
+      "also_right": []
+     },
+     "b": {
+      "best": "Use a solid line and shade the side without (0, 0)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The question asks what the test result shows, but every option also includes the line type, which comes from the ≤ sign, not from the test. 'Test (0, 0) is put into the inequality' is also awkward. A clearer version: 'For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, both answers and both explanations are correct: (0, 3) for a, and solid line shading the side without (0, 0) for b. The only issue is the wording of question b, which suggests the test point decides the line type when the sign does."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, wording: The question asks what the test result shows, but every option also includes the line type, which comes from the ≤ sign, not from the test. 'Test (0, 0) is put into the inequality' is also awkward. A clearer version: 'For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?'"
+    ],
+    "proposal": {
+     "title": "Inequalities on the Cartesian plane",
+     "card": [
+      "An inequality such as y > 2x + 1 is a region of the plane, not a single line. The line y = 2x + 1 is the edge of the region.",
+      "Draw the line first. Use a dashed line for > or <, because points on the line do not count. Use a solid line for ≥ or ≤, because they do.",
+      "To find which side to shade, pick a test point not on the line, such as (0, 0), and put it into the inequality. If it makes the inequality true, shade that side. If not, shade the other side.",
+      "Example: for y > 2x + 1, test (0, 0). 0 > 2 × 0 + 1 gives 0 > 1, which is false. So shade the side that does not contain (0, 0), with a dashed line."
+     ],
+     "remember": "Draw the boundary line, then use a test point to choose the side to shade.",
+     "a": {
+      "q": "Which point lies in the region y > 2x + 1?",
+      "opts": [
+       "(0, 3)",
+       "(0, 0)",
+       "(2, 5)",
+       "(1, 1)"
+      ],
+      "why": "At (0, 3): 3 > 2 × 0 + 1 gives 3 > 1, which is true. At (0, 0), 0 > 1 is false. At (2, 5), 5 > 5 is false because the point is on the line, and the line is not included for >.",
+      "clue": "Put the x and y values of each point into the inequality."
+     },
+     "b": {
+      "d": 3,
+      "q": "For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?",
+      "opts": [
+       "Use a solid line and shade the side without (0, 0)",
+       "Use a solid line and shade the side with (0, 0)",
+       "Use a dashed line and shade the side without (0, 0)",
+       "Use a dashed line and shade the side with (0, 0)"
+      ],
+      "why": "At (0, 0): 0 ≤ 0 − 2 gives 0 ≤ −2, which is false, so shade the side without (0, 0). The sign is ≤, so points on the line count and the line is solid. A dashed line is for < or >, where points on the line do not count.",
+      "clue": "Check the test point for the side, then check the sign for the line."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-04T17:58:53Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The question asks what the test result shows, but every option also includes the line type, which comes from the ≤ sign, not from the test. 'Test (0, 0) is put into the inequality' is also awkward. A clearer version: 'For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?'"
+      }
+     ],
+     "flags": [
+      "Question b, wording: The question asks what the test result shows, but every option also includes the line type, which comes from the ≤ sign, not from the test. 'Test (0, 0) is put into the inequality' is also awkward. A clearer version: 'For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?'"
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "772cc11bc26d2e47"
+  }
+ ]
+}

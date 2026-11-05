@@ -1,0 +1,420 @@
+{
+ "id": "geo-protected-areas-2",
+ "title": "Protected areas",
+ "brief": "8af06d4f2995",
+ "shortlist": [
+  [
+   "geo-protected-areas",
+   0.303
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:31Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:59Z write: done",
+  "2026-11-04T09:58:24Z check: flagged",
+  "2026-11-04T10:08:00Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b other, card fact)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00596,
+  "check": 0.01175,
+  "fix": 0.01801,
+  "recheck": 0.01424
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches what makes a protected area work (size, connection and management) rather than the brief's point that protection works by limiting what people can do there, and it is written for Year 12 NSW rather than Year 10 Australian Curriculum.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue ('the country holds the duty') all but states the right option, so a student can pick it without understanding World Heritage listing.\n- Card, fact: 'Governments protect it' overgeneralises for Australia. Many protected areas in the National Reserve System are Indigenous Protected Areas dedicated by Traditional Owners, or private reserves, not only government-declared areas. Wording such as 'Governments or other groups, such as Traditional Owners' would be accurate.",
+ "rejected": {
+  "title": "Protected areas",
+  "card": [
+   "A protected area is land or sea set aside to look after its environment. Governments protect it by limiting what people can do there.",
+   [
+    "National park",
+    "a land area where activities such as clearing, mining and hunting are restricted, while visitors can usually walk, camp and look at nature."
+   ],
+   [
+    "Marine reserve",
+    "an area of sea where activities such as fishing, drilling or anchoring may be limited to protect reefs and sea life."
+   ],
+   [
+    "World Heritage listing",
+    "a place recognised by UNESCO, a United Nations agency, as having global value for nature or culture. The country that holds it must work to protect it."
+   ]
+  ],
+  "remember": "Protected areas look after places by limiting what people can do in them.",
+  "a": {
+   "q": "Which of these is an example of how a marine reserve protects the environment?",
+   "opts": [
+    "Fishing is limited in parts of it to protect reefs",
+    "Bush clearing and hunting on nearby land are restricted",
+    "The United Nations takes over running the area",
+    "All people are banned from ever entering the area"
+   ],
+   "why": "A marine reserve is an area of sea where some activities, such as fishing, are limited to protect sea life. Restricting clearing and hunting on land describes a national park, not a marine reserve. Protected areas limit what people do rather than shutting everyone out.",
+   "clue": "Think about where a marine reserve is and how protection works."
+  },
+  "b": {
+   "d": 3,
+   "q": "A coastal reef is added to the World Heritage list because of its global value. What does this listing mean for the country that holds the reef?",
+   "opts": [
+    "It must work to protect the reef for the future",
+    "It hands control of the reef to the United Nations",
+    "It must ban every visitor from the reef area",
+    "It is no longer allowed to make rules about the reef"
+   ],
+   "why": "World Heritage listing recognises global value and puts a duty on the country to protect the place. The country still manages it, and visitors may still be allowed with limits. The United Nations does not take control.",
+   "clue": "The listing recognises value, and the country holds the duty."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue ('the country holds the duty') all but states the right option, so a student can pick it without understanding World Heritage listing.",
+    "Card, fact: 'Governments protect it' overgeneralises for Australia. Many protected areas in the National Reserve System are Indigenous Protected Areas dedicated by Traditional Owners, or private reserves, not only government-declared areas. Wording such as 'Governments or other groups, such as Traditional Owners' would be accurate."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Protected areas",
+     "card": [
+      "A protected area is land or sea set aside to look after its environment. Governments protect it by limiting what people can do there.",
+      [
+       "National park",
+       "a land area where activities such as clearing, mining and hunting are restricted, while visitors can usually walk, camp and look at nature."
+      ],
+      [
+       "Marine reserve",
+       "an area of sea where activities such as fishing, drilling or anchoring may be limited to protect reefs and sea life."
+      ],
+      [
+       "World Heritage listing",
+       "a place recognised by the United Nations as having global value for nature or culture. The country that holds it must work to protect it."
+      ]
+     ],
+     "remember": "Protected areas look after places by limiting what people can do in them.",
+     "a": {
+      "q": "Why does a government set up a marine reserve?",
+      "opts": [
+       "To limit activities that could harm sea life and reefs",
+       "To give fishing boats free access to every part of the sea",
+       "To move the sea life to a safer area on land",
+       "To make the sea a place that only scientists may enter"
+      ],
+      "why": "A marine reserve protects ocean environments by limiting some activities, such as fishing or drilling. It does not remove all human use of the area, and it does not move wildlife elsewhere.",
+      "clue": "Protection works by limiting what people can do."
+     },
+     "b": {
+      "d": 3,
+      "q": "A coastal reef is added to the World Heritage list because of its global value. What does this listing mean for the country that holds the reef?",
+      "opts": [
+       "It must work to protect the reef for the future",
+       "It hands control of the reef to the United Nations",
+       "It must ban every visitor from the reef area",
+       "It is no longer allowed to make rules about the reef"
+      ],
+      "why": "World Heritage listing recognises global value and puts a duty on the country to protect the place. The country still manages it, and visitors may still be allowed with limits. The United Nations does not take control.",
+      "clue": "The listing recognises value, and the country holds the duty."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "To limit activities that could harm sea life and reefs",
+      "also_right": []
+     },
+     "b": {
+      "best": "It must work to protect the reef for the future",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "The distractors are implausible for Year 10 (moving sea life onto land, free access for fishing boats everywhere), so the question can be answered without understanding marine reserves."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the intended answers are correct and match the card. The only problem is that question a's wrong options are too implausible to test understanding at Year 10."
+    },
+    "flags": [
+     "Question a, level: The distractors are implausible for Year 10 (moving sea life onto land, free access for fishing boats everywhere), so the question can be answered without understanding marine reserves."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Protected areas",
+     "card": [
+      "A protected area is land or sea set aside to look after its environment. Governments protect it by limiting what people can do there.",
+      [
+       "National park",
+       "a land area where activities such as clearing, mining and hunting are restricted, while visitors can usually walk, camp and look at nature."
+      ],
+      [
+       "Marine reserve",
+       "an area of sea where activities such as fishing, drilling or anchoring may be limited to protect reefs and sea life."
+      ],
+      [
+       "World Heritage listing",
+       "a place recognised by UNESCO, a United Nations agency, as having global value for nature or culture. The country that holds it must work to protect it."
+      ]
+     ],
+     "remember": "Protected areas look after places by limiting what people can do in them.",
+     "a": {
+      "q": "Which of these is an example of how a marine reserve protects the environment?",
+      "opts": [
+       "Fishing is limited in parts of it to protect reefs",
+       "Bush clearing and hunting on nearby land are restricted",
+       "The United Nations takes over running the area",
+       "All people are banned from ever entering the area"
+      ],
+      "why": "A marine reserve is an area of sea where some activities, such as fishing, are limited to protect sea life. Restricting clearing and hunting on land describes a national park, not a marine reserve. Protected areas limit what people do rather than shutting everyone out.",
+      "clue": "Think about where a marine reserve is and how protection works."
+     },
+     "b": {
+      "d": 3,
+      "q": "A coastal reef is added to the World Heritage list because of its global value. What does this listing mean for the country that holds the reef?",
+      "opts": [
+       "It must work to protect the reef for the future",
+       "It hands control of the reef to the United Nations",
+       "It must ban every visitor from the reef area",
+       "It is no longer allowed to make rules about the reef"
+      ],
+      "why": "World Heritage listing recognises global value and puts a duty on the country to protect the place. The country still manages it, and visitors may still be allowed with limits. The United Nations does not take control.",
+      "clue": "The listing recognises value, and the country holds the duty."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Fishing is limited in parts of it to protect reefs",
+       "also_right": []
+      },
+      "b": {
+       "best": "It must work to protect the reef for the future",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue ('the country holds the duty') all but states the right option, so a student can pick it without understanding World Heritage listing."
+       },
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "'Governments protect it' overgeneralises for Australia. Many protected areas in the National Reserve System are Indigenous Protected Areas dedicated by Traditional Owners, or private reserves, not only government-declared areas. Wording such as 'Governments or other groups, such as Traditional Owners' would be accurate."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer, and the facts about national parks, marine reserves and World Heritage are sound. The clue for question b nearly gives the answer away, and the card implies only governments create protected areas, which leaves out Indigenous Protected Areas and private reserves."
+     },
+     "flags": [
+      "Question b, other: The clue ('the country holds the duty') all but states the right option, so a student can pick it without understanding World Heritage listing.",
+      "Card, fact: 'Governments protect it' overgeneralises for Australia. Many protected areas in the National Reserve System are Indigenous Protected Areas dedicated by Traditional Owners, or private reserves, not only government-declared areas. Wording such as 'Governments or other groups, such as Traditional Owners' would be accurate."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Protected areas",
+    "card": [
+     "A protected area is land or sea set aside to look after its environment. Governments, or other groups such as Traditional Owners, protect it by limiting what people can do there.",
+     [
+      "National park",
+      "an area, mostly on land, where activities such as clearing, mining and hunting are restricted, while visitors can usually walk, camp and look at nature."
+     ],
+     [
+      "Marine reserve",
+      "an area of sea where activities such as fishing, drilling or anchoring may be limited to protect reefs and sea life."
+     ],
+     [
+      "World Heritage listing",
+      "a place recognised by UNESCO, a United Nations agency, as having global value for nature or culture. The country that holds it agrees to work to protect it."
+     ]
+    ],
+    "remember": "Protected areas look after places by limiting what people can do in them.",
+    "a": {
+     "q": "How does a marine reserve usually protect the environment?",
+     "opts": [
+      "By limiting fishing in parts of it to guard reefs",
+      "By restricting bush clearing and hunting on land",
+      "By handing the area over to the United Nations",
+      "By banning all people from ever entering the area"
+     ],
+     "why": "A marine reserve is an area of sea where some activities, such as fishing, are limited to protect sea life. Restricting clearing and hunting on land describes a national park, not a marine reserve. Protected areas limit what people do rather than shutting everyone out.",
+     "clue": "Where is a marine reserve, and what is limited there?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A coral reef off a country's coast is added to the World Heritage list for its global value. What does the listing mean for that country?",
+     "opts": [
+      "It agrees to work to protect the reef for the future",
+      "It hands control of the reef to the United Nations",
+      "It has to ban every visitor from the reef area",
+      "It is no longer allowed to make rules about the reef"
+     ],
+     "why": "World Heritage listing recognises global value, and the country that holds the place agrees to work to protect it. The country still manages the reef, and visitors may still come with limits. The United Nations does not take control.",
+     "clue": "Recall what UNESCO's listing asks of a place's own country."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "By limiting fishing in parts of it to guard reefs",
+     "also_right": []
+    },
+    "b": {
+     "best": "It agrees to work to protect the reef for the future",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Protected areas",
+  "card": [
+   "A protected area is land or sea set aside to look after its environment. Governments, or other groups such as Traditional Owners, protect it by limiting what people can do there.",
+   [
+    "National park",
+    "an area, mostly on land, where activities such as clearing, mining and hunting are restricted, while visitors can usually walk, camp and look at nature."
+   ],
+   [
+    "Marine reserve",
+    "an area of sea where activities such as fishing, drilling or anchoring may be limited to protect reefs and sea life."
+   ],
+   [
+    "World Heritage listing",
+    "a place recognised by UNESCO, a United Nations agency, as having global value for nature or culture. The country that holds it agrees to work to protect it."
+   ]
+  ],
+  "remember": "Protected areas look after places by limiting what people can do in them.",
+  "a": {
+   "q": "How does a marine reserve usually protect the environment?",
+   "opts": [
+    "By limiting fishing in parts of it to guard reefs",
+    "By restricting bush clearing and hunting on land",
+    "By handing the area over to the United Nations",
+    "By banning all people from ever entering the area"
+   ],
+   "why": "A marine reserve is an area of sea where some activities, such as fishing, are limited to protect sea life. Restricting clearing and hunting on land describes a national park, not a marine reserve. Protected areas limit what people do rather than shutting everyone out.",
+   "clue": "Where is a marine reserve, and what is limited there?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A coral reef off a country's coast is added to the World Heritage list for its global value. What does the listing mean for that country?",
+   "opts": [
+    "It agrees to work to protect the reef for the future",
+    "It hands control of the reef to the United Nations",
+    "It has to ban every visitor from the reef area",
+    "It is no longer allowed to make rules about the reef"
+   ],
+   "why": "World Heritage listing recognises global value, and the country that holds the place agrees to work to protect it. The country still manages the reef, and visitors may still come with limits. The United Nations does not take control.",
+   "clue": "Recall what UNESCO's listing asks of a place's own country."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "By limiting fishing in parts of it to guard reefs",
+   "also_right": []
+  },
+  "b": {
+   "best": "It agrees to work to protect the reef for the future",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Protected areas",
+  "card": [
+   "A protected area is land or sea set aside to look after its environment. Governments, or other groups such as Traditional Owners, protect it by limiting what people can do there.",
+   [
+    "National park",
+    "an area, mostly on land, where activities such as clearing, mining and hunting are restricted, while visitors can usually walk, camp and look at nature."
+   ],
+   [
+    "Marine reserve",
+    "an area of sea where activities such as fishing, drilling or anchoring may be limited to protect reefs and sea life."
+   ],
+   [
+    "World Heritage listing",
+    "a place recognised by UNESCO, a United Nations agency, as having global value for nature or culture. The country that holds it agrees to work to protect it."
+   ]
+  ],
+  "remember": "Protected areas look after places by limiting what people can do in them.",
+  "a": {
+   "q": "How does a marine reserve usually protect the environment?",
+   "opts": [
+    "By limiting fishing in parts of it to guard reefs",
+    "By restricting bush clearing and hunting on land",
+    "By handing the area over to the United Nations",
+    "By banning all people from ever entering the area"
+   ],
+   "why": "A marine reserve is an area of sea where some activities, such as fishing, are limited to protect sea life. Restricting clearing and hunting on land describes a national park, not a marine reserve. Protected areas limit what people do rather than shutting everyone out.",
+   "clue": "Where is a marine reserve, and what is limited there?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A coral reef off a country's coast is added to the World Heritage list for its global value. What does the listing mean for that country?",
+   "opts": [
+    "It agrees to work to protect the reef for the future",
+    "It hands control of the reef to the United Nations",
+    "It has to ban every visitor from the reef area",
+    "It is no longer allowed to make rules about the reef"
+   ],
+   "why": "World Heritage listing recognises global value, and the country that holds the place agrees to work to protect it. The country still manages the reef, and visitors may still come with limits. The United Nations does not take control.",
+   "clue": "Recall what UNESCO's listing asks of a place's own country."
+  }
+ },
+ "checked_by": "claude-code"
+}

@@ -1,0 +1,419 @@
+{
+ "id": "mat-measurement-errors-affect-results",
+ "title": "How measurement errors affect results",
+ "brief": "8b08792090c7",
+ "shortlist": [
+  [
+   "mat-accuracy-measurements",
+   0.373
+  ],
+  [
+   "mat-percentage-error",
+   0.343
+  ],
+  [
+   "chem-errors-limitations",
+   0.321
+  ],
+  [
+   "bio-errors-limitations-biology",
+   0.263
+  ],
+  [
+   "mat-scaling-area-volume",
+   0.251
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01006,
+  "check": 0.00709,
+  "fix": 0.01385,
+  "recheck": 0.00826
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how a measurement error carries through a calculation into an area or volume; the closest cards cover absolute error and limits of accuracy, percentage error, or random and systematic error, and the scaling card is about similar shapes rather than measurement error.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "How measurement errors affect results",
+  "card": [
+   "A measured length can be a little different from the actual length. This is a measurement error.",
+   "When the length is used in a calculation, the error grows. Area of a square = side × side, so the error is carried into both sides.",
+   "Example: a square has an actual side of 21 cm, but it is measured as 20 cm. The side is out by 1 cm. The area is 441 cm² actual and 400 cm² measured, so it is out by 41 cm².",
+   "Volume of a cube = edge × edge × edge, so a small error in the edge grows even more."
+  ],
+  "remember": "A small error in a length becomes a larger error in area or volume.",
+  "a": {
+   "q": "A square's side is measured as 20 cm, but it is actually 21 cm. By how much is the area out?",
+   "opts": [
+    "41 cm²",
+    "1 cm²",
+    "2 cm²",
+    "40 cm²"
+   ],
+   "why": "The actual area is 21² = 441 cm² and the measured area is 20² = 400 cm². The difference is 41 cm². The side error of 1 cm does not stay at 1: it grows when the side is squared.",
+   "clue": "Find both areas, then subtract."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cube's edge is measured as 10 cm, but it is actually 11 cm. By how much is the volume out?",
+   "opts": [
+    "331 cm³",
+    "1 cm³",
+    "33 cm³",
+    "300 cm³"
+   ],
+   "why": "The actual volume is 11³ = 1331 cm³ and the measured volume is 10³ = 1000 cm³. The difference is 331 cm³. A 1 cm error in the edge becomes a much larger error in volume.",
+   "clue": "Cube both edge lengths, then find the difference."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "41 cm²",
+   "also_right": []
+  },
+  "b": {
+   "best": "331 cm³",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a uses exactly the same numbers as the card's worked example (20 cm measured, 21 cm actual, out by 41 cm²). A student can copy the answer from the card without doing or understanding the calculation. Use different side lengths."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct (41 cm² and 331 cm³). Question a repeats the card's example word for word, so students can match the answer instead of working it out; it should use new numbers."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: Question a uses exactly the same numbers as the card's worked example (20 cm measured, 21 cm actual, out by 41 cm²). A student can copy the answer from the card without doing or understanding the calculation. Use different side lengths."
+ ],
+ "proposal": {
+  "title": "How measurement errors affect results",
+  "card": [
+   "A measured length can be a little different from the actual length. This is a measurement error.",
+   "When the length is used in a calculation, the error grows. Area of a square = side × side, so the error is carried into both sides.",
+   "Example: a square has an actual side of 21 cm, but it is measured as 20 cm. The side is out by 1 cm. The area is 441 cm² actual and 400 cm² measured, so it is out by 41 cm².",
+   "Volume of a cube = edge × edge × edge, so a small error in the edge grows even more. Work out both results, then subtract."
+  ],
+  "remember": "A small error in a length becomes a larger error in area or volume.",
+  "a": {
+   "q": "Ava measures a square tile's side as 12 cm, but it is actually 13 cm. By how much is her area out?",
+   "opts": [
+    "25 cm²",
+    "1 cm²",
+    "2 cm²",
+    "24 cm²"
+   ],
+   "why": "The actual area is 13² = 169 cm² and the measured area is 12² = 144 cm². The difference is 25 cm². The side error of 1 cm does not stay at 1: it grows when the side is squared.",
+   "clue": "Find both areas, then subtract."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cube's edge is measured as 10 cm, but it is actually 11 cm. By how much is the volume out?",
+   "opts": [
+    "331 cm³",
+    "1 cm³",
+    "33 cm³",
+    "300 cm³"
+   ],
+   "why": "The actual volume is 11³ = 1331 cm³ and the measured volume is 10³ = 1000 cm³. The difference is 331 cm³. A 1 cm error in the edge becomes a much larger error in volume.",
+   "clue": "Cube both edge lengths, then find the difference."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "25 cm²",
+    "also_right": []
+   },
+   "b": {
+    "best": "331 cm³",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's example (441 − 400 = 41 cm²) and both answers (169 − 144 = 25 cm², 1331 − 1000 = 331 cm³) are correct, and the explanations match the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a uses exactly the same numbers as the card's worked example (20 cm measured, 21 cm actual, out by 41 cm²). A student can copy the answer from the card without doing or understanding the calculation. Use different side lengths."
+   }
+  ],
+  "flags": [
+   "Question a, level: Question a uses exactly the same numbers as the card's worked example (20 cm measured, 21 cm actual, out by 41 cm²). A student can copy the answer from the card without doing or understanding the calculation. Use different side lengths."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "How measurement errors affect results",
+  "card": [
+   "A measured length can be a little different from the actual length. This is a measurement error.",
+   "When the length is used in a calculation, the error grows. Area of a square = side × side, so the error is carried into both sides.",
+   "Example: a square has an actual side of 21 cm, but it is measured as 20 cm. The side is out by 1 cm. The area is 441 cm² actual and 400 cm² measured, so it is out by 41 cm².",
+   "Volume of a cube = edge × edge × edge, so a small error in the edge grows even more. Work out both results, then subtract."
+  ],
+  "remember": "A small error in a length becomes a larger error in area or volume.",
+  "a": {
+   "q": "Ava measures a square tile's side as 12 cm, but it is actually 13 cm. By how much is her area out?",
+   "opts": [
+    "25 cm²",
+    "1 cm²",
+    "2 cm²",
+    "24 cm²"
+   ],
+   "why": "The actual area is 13² = 169 cm² and the measured area is 12² = 144 cm². The difference is 25 cm². The side error of 1 cm does not stay at 1: it grows when the side is squared.",
+   "clue": "Find both areas, then subtract."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cube's edge is measured as 10 cm, but it is actually 11 cm. By how much is the volume out?",
+   "opts": [
+    "331 cm³",
+    "1 cm³",
+    "33 cm³",
+    "300 cm³"
+   ],
+   "why": "The actual volume is 11³ = 1331 cm³ and the measured volume is 10³ = 1000 cm³. The difference is 331 cm³. A 1 cm error in the edge becomes a much larger error in volume.",
+   "clue": "Cube both edge lengths, then find the difference."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "Question a no longer copies the card's worked example: it uses a 12 cm and 13 cm tile, and 169 minus 144 is 25 cm². Everything else is unchanged and right.",
+   "item": "1c8c3d0aabdd8960",
+   "result": "decided",
+   "saved": {
+    "id": "mat-measurement-errors-affect-results",
+    "title": "How measurement errors affect results",
+    "brief": "8b08792090c7",
+    "shortlist": [
+     [
+      "mat-accuracy-measurements",
+      0.373
+     ],
+     [
+      "mat-percentage-error",
+      0.343
+     ],
+     [
+      "chem-errors-limitations",
+      0.321
+     ],
+     [
+      "bio-errors-limitations-biology",
+      0.263
+     ],
+     [
+      "mat-scaling-area-volume",
+      0.251
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00023,
+     "write": 0.01006,
+     "check": 0.00709,
+     "fix": 0.01385,
+     "recheck": 0.00826
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "None of the bank points teaches how a measurement error carries through a calculation into an area or volume; the closest cards cover absolute error and limits of accuracy, percentage error, or random and systematic error, and the scaling card is about similar shapes rather than measurement error.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "How measurement errors affect results",
+     "card": [
+      "A measured length can be a little different from the actual length. This is a measurement error.",
+      "When the length is used in a calculation, the error grows. Area of a square = side × side, so the error is carried into both sides.",
+      "Example: a square has an actual side of 21 cm, but it is measured as 20 cm. The side is out by 1 cm. The area is 441 cm² actual and 400 cm² measured, so it is out by 41 cm².",
+      "Volume of a cube = edge × edge × edge, so a small error in the edge grows even more."
+     ],
+     "remember": "A small error in a length becomes a larger error in area or volume.",
+     "a": {
+      "q": "A square's side is measured as 20 cm, but it is actually 21 cm. By how much is the area out?",
+      "opts": [
+       "41 cm²",
+       "1 cm²",
+       "2 cm²",
+       "40 cm²"
+      ],
+      "why": "The actual area is 21² = 441 cm² and the measured area is 20² = 400 cm². The difference is 41 cm². The side error of 1 cm does not stay at 1: it grows when the side is squared.",
+      "clue": "Find both areas, then subtract."
+     },
+     "b": {
+      "d": 3,
+      "q": "A cube's edge is measured as 10 cm, but it is actually 11 cm. By how much is the volume out?",
+      "opts": [
+       "331 cm³",
+       "1 cm³",
+       "33 cm³",
+       "300 cm³"
+      ],
+      "why": "The actual volume is 11³ = 1331 cm³ and the measured volume is 10³ = 1000 cm³. The difference is 331 cm³. A 1 cm error in the edge becomes a much larger error in volume.",
+      "clue": "Cube both edge lengths, then find the difference."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "41 cm²",
+      "also_right": []
+     },
+     "b": {
+      "best": "331 cm³",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a uses exactly the same numbers as the card's worked example (20 cm measured, 21 cm actual, out by 41 cm²). A student can copy the answer from the card without doing or understanding the calculation. Use different side lengths."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and both answers are correct (41 cm² and 331 cm³). Question a repeats the card's example word for word, so students can match the answer instead of working it out; it should use new numbers."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, level: Question a uses exactly the same numbers as the card's worked example (20 cm measured, 21 cm actual, out by 41 cm²). A student can copy the answer from the card without doing or understanding the calculation. Use different side lengths."
+    ],
+    "proposal": {
+     "title": "How measurement errors affect results",
+     "card": [
+      "A measured length can be a little different from the actual length. This is a measurement error.",
+      "When the length is used in a calculation, the error grows. Area of a square = side × side, so the error is carried into both sides.",
+      "Example: a square has an actual side of 21 cm, but it is measured as 20 cm. The side is out by 1 cm. The area is 441 cm² actual and 400 cm² measured, so it is out by 41 cm².",
+      "Volume of a cube = edge × edge × edge, so a small error in the edge grows even more. Work out both results, then subtract."
+     ],
+     "remember": "A small error in a length becomes a larger error in area or volume.",
+     "a": {
+      "q": "Ava measures a square tile's side as 12 cm, but it is actually 13 cm. By how much is her area out?",
+      "opts": [
+       "25 cm²",
+       "1 cm²",
+       "2 cm²",
+       "24 cm²"
+      ],
+      "why": "The actual area is 13² = 169 cm² and the measured area is 12² = 144 cm². The difference is 25 cm². The side error of 1 cm does not stay at 1: it grows when the side is squared.",
+      "clue": "Find both areas, then subtract."
+     },
+     "b": {
+      "d": 3,
+      "q": "A cube's edge is measured as 10 cm, but it is actually 11 cm. By how much is the volume out?",
+      "opts": [
+       "331 cm³",
+       "1 cm³",
+       "33 cm³",
+       "300 cm³"
+      ],
+      "why": "The actual volume is 11³ = 1331 cm³ and the measured volume is 10³ = 1000 cm³. The difference is 331 cm³. A 1 cm error in the edge becomes a much larger error in volume.",
+      "clue": "Cube both edge lengths, then find the difference."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "25 cm²",
+       "also_right": []
+      },
+      "b": {
+       "best": "331 cm³",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found. The card's example (441 − 400 = 41 cm²) and both answers (169 − 144 = 25 cm², 1331 − 1000 = 331 cm³) are correct, and the explanations match the card."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:13Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a uses exactly the same numbers as the card's worked example (20 cm measured, 21 cm actual, out by 41 cm²). A student can copy the answer from the card without doing or understanding the calculation. Use different side lengths."
+      }
+     ],
+     "flags": [
+      "Question a, level: Question a uses exactly the same numbers as the card's worked example (20 cm measured, 21 cm actual, out by 41 cm²). A student can copy the answer from the card without doing or understanding the calculation. Use different side lengths."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "3bb502d663f39795"
+  }
+ ]
+}

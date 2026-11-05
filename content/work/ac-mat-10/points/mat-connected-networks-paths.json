@@ -1,0 +1,230 @@
+{
+ "id": "mat-connected-networks-paths",
+ "title": "Connected networks and paths",
+ "brief": "1acaddf51ad4",
+ "shortlist": [
+  [
+   "mat-network-terms",
+   0.438
+  ],
+  [
+   "mat-trees",
+   0.389
+  ],
+  [
+   "mat-trees-algorithms",
+   0.389
+  ],
+  [
+   "mat-graph-theory-specialist",
+   0.303
+  ],
+  [
+   "mat-euler-hamilton",
+   0.303
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T17:58:53Z autoreview: cleared with the fix (card other, card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "write": 0.00663,
+  "check": 0.01354,
+  "fix": 0.02137
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches both that a network is connected when every vertex can be reached and that vertex degrees decide whether a path can use every edge once, at a Year 10 depth; the closest card, Euler and Hamilton, is a different idea mix that adds Hamiltonian paths and the Königsberg problem and does not define connectivity.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Connected networks and paths",
+  "card": [
+   [
+    "Connected",
+    "A network is connected if you can get from every vertex to every other vertex along edges. If one vertex is cut off, it is not connected."
+   ],
+   [
+    "Degree",
+    "The degree of a vertex is the number of edges that meet it. A path that uses every edge exactly once is called an Euler path."
+   ],
+   "A connected network has an Euler path if it has 0 or 2 vertices of odd degree. With 0 odd vertices the path can start and end at the same vertex. With 2 odd vertices it must start at one and end at the other.",
+   "Example: a connected network has vertex degrees 2, 2, 3, 3. Two are odd, so an Euler path exists, from one odd vertex to the other."
+  ],
+  "remember": "Connected, with 0 or 2 odd vertices, means a path can use every edge exactly once.",
+  "a": {
+   "q": "A connected network has vertices with degrees 4, 3, 2, 3, 2. Can a path use every edge exactly once?",
+   "opts": [
+    "Yes, as exactly two vertices have odd degree",
+    "No, as the degrees are not all the same",
+    "No, as the network has a vertex of degree 4",
+    "Yes, but only if it starts and ends at one vertex"
+   ],
+   "why": "The degrees 3 and 3 are odd, so there are exactly two odd vertices. That allows a path, which must start at one and end at the other. Different degrees do not stop a path.",
+   "clue": "Count how many vertices have an odd degree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council plans a route along every footpath in a park network exactly once. The network is connected, with vertex degrees 3, 3, 3, 3, 2. What follows?",
+   "opts": [
+    "No route exists, as four vertices have odd degree",
+    "A route exists, as the network is connected",
+    "A route exists, as four vertices have odd degree",
+    "No route exists, as one vertex has degree 2"
+   ],
+   "why": "Four vertices have odd degree, which is more than two. So no path can use every edge exactly once, even though the network is connected. Being connected is needed but is not enough.",
+   "clue": "Connected is not enough. Count the odd degrees."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Yes, as exactly two vertices have odd degree",
+   "also_right": []
+  },
+  "b": {
+   "best": "No route exists, as four vertices have odd degree",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines degree ('the number of edges that meet it'), which belongs to point 4 (Networks, vertices and edges). It should only be mentioned here, not taught again."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'With 0 odd vertices the path can start and end at the same vertex' understates the rule. With 0 odd vertices, any path using every edge exactly once must finish where it started. 'Can' may suggest it could also end at a different vertex."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear correct answer and the facts are right. The card re-defines degree, which belongs to point 4, and it says a path 'can' rather than 'must' return to its start when there are 0 odd vertices."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines degree ('the number of edges that meet it'), which belongs to point 4 (Networks, vertices and edges). It should only be mentioned here, not taught again.",
+  "Card, wording: 'With 0 odd vertices the path can start and end at the same vertex' understates the rule. With 0 odd vertices, any path using every edge exactly once must finish where it started. 'Can' may suggest it could also end at a different vertex."
+ ],
+ "proposal": {
+  "title": "Connected networks and paths",
+  "card": [
+   [
+    "Connected",
+    "A network is connected if you can get from every vertex to every other vertex along edges. If one vertex is cut off, it is not connected."
+   ],
+   [
+    "Euler path",
+    "a path that uses every edge exactly once. A connected network has one only when 0 or 2 of its vertices have odd degree."
+   ],
+   "With 0 odd vertices, an Euler path must finish at the vertex where it started. With 2 odd vertices, it must start at one odd vertex and end at the other.",
+   "Example: a connected network has vertex degrees 2, 2, 3, 3. Two are odd, so an Euler path exists, from one odd vertex to the other."
+  ],
+  "remember": "Connected, with 0 or 2 odd vertices, means a path can use every edge exactly once.",
+  "a": {
+   "q": "A connected network has vertices with degrees 4, 3, 2, 3, 2. Can a path use every edge exactly once?",
+   "opts": [
+    "Yes, as exactly two vertices have odd degree",
+    "No, as the degrees are not all the same",
+    "No, as the network has a vertex of degree 4",
+    "Yes, but only if it starts and ends at one vertex"
+   ],
+   "why": "The degrees 3 and 3 are odd, so there are exactly two odd vertices. That allows an Euler path, which must start at one odd vertex and end at the other. Different degrees do not stop a path.",
+   "clue": "Count how many vertices have an odd degree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council plans a route along every footpath in a park network exactly once. The network is connected, with vertex degrees 3, 3, 3, 3, 2. What follows?",
+   "opts": [
+    "No route exists, as four vertices have odd degree",
+    "A route exists, as the network is connected",
+    "A route exists, as four vertices have odd degree",
+    "No route exists, as one vertex has degree 2"
+   ],
+   "why": "Four vertices have odd degree, and an Euler path needs 0 or 2. So no route can use every footpath exactly once. Being connected alone is not enough.",
+   "clue": "Connected is not enough. Count the odd degrees."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:53Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines degree ('the number of edges that meet it'), which belongs to point 4 (Networks, vertices and edges). It should only be mentioned here, not taught again."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'With 0 odd vertices the path can start and end at the same vertex' understates the rule. With 0 odd vertices, any path using every edge exactly once must finish where it started. 'Can' may suggest it could also end at a different vertex."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines degree ('the number of edges that meet it'), which belongs to point 4 (Networks, vertices and edges). It should only be mentioned here, not taught again.",
+   "Card, wording: 'With 0 odd vertices the path can start and end at the same vertex' understates the rule. With 0 odd vertices, any path using every edge exactly once must finish where it started. 'Can' may suggest it could also end at a different vertex."
+  ]
+ },
+ "final": {
+  "title": "Connected networks and paths",
+  "card": [
+   [
+    "Connected",
+    "A network is connected if you can get from every vertex to every other vertex along edges. If one vertex is cut off, it is not connected."
+   ],
+   [
+    "Euler path",
+    "a path that uses every edge exactly once. A connected network has one only when 0 or 2 of its vertices have odd degree."
+   ],
+   "With 0 odd vertices, an Euler path must finish at the vertex where it started. With 2 odd vertices, it must start at one odd vertex and end at the other.",
+   "Example: a connected network has vertex degrees 2, 2, 3, 3. Two are odd, so an Euler path exists, from one odd vertex to the other."
+  ],
+  "remember": "Connected, with 0 or 2 odd vertices, means a path can use every edge exactly once.",
+  "a": {
+   "q": "A connected network has vertices with degrees 4, 3, 2, 3, 2. Can a path use every edge exactly once?",
+   "opts": [
+    "Yes, as exactly two vertices have odd degree",
+    "No, as the degrees are not all the same",
+    "No, as the network has a vertex of degree 4",
+    "Yes, but only if it starts and ends at one vertex"
+   ],
+   "why": "The degrees 3 and 3 are odd, so there are exactly two odd vertices. That allows an Euler path, which must start at one odd vertex and end at the other. Different degrees do not stop a path.",
+   "clue": "Count how many vertices have an odd degree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A council plans a route along every footpath in a park network exactly once. The network is connected, with vertex degrees 3, 3, 3, 3, 2. What follows?",
+   "opts": [
+    "No route exists, as four vertices have odd degree",
+    "A route exists, as the network is connected",
+    "A route exists, as four vertices have odd degree",
+    "No route exists, as one vertex has degree 2"
+   ],
+   "why": "Four vertices have odd degree, and an Euler path needs 0 or 2. So no route can use every footpath exactly once. Being connected alone is not enough.",
+   "clue": "Connected is not enough. Count the odd degrees."
+  }
+ },
+ "cleared_by": "auto"
+}

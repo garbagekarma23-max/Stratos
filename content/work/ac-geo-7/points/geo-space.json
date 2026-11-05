@@ -1,0 +1,223 @@
+{
+ "id": "geo-space",
+ "title": "Space",
+ "brief": "f2890fc0260f",
+ "shortlist": [
+  [
+   "geo-place-space",
+   0.219
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, match",
+  "2026-11-04T09:36:51Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:00Z write: done",
+  "2026-11-04T09:58:25Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-04T17:58:51Z autoreview: cleared with the fix (card wording, b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00672,
+  "check": 0.01393,
+  "fix": 0.01718
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-place-space, teaches place and space together at Year 11 depth, while the new point covers only space for Year 7, so it is broader and at a different depth and needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Space",
+  "card": [
+   "Space is about where things are and how they are spread out. Geographers ask where something is and why it is there.",
+   [
+    "Location",
+    "where something is, such as a town's position on a map or its distance from the coast."
+   ],
+   [
+    "Distance",
+    "how far apart two things are. Distance can affect how easily people reach services such as a hospital."
+   ],
+   [
+    "Pattern",
+    "the way things are spread out on a map. They may be clustered close together, spread out evenly, or in a line."
+   ]
+  ],
+  "remember": "Space asks where things are, how far apart they are and what pattern they make.",
+  "a": {
+   "q": "A map shows most of a region's farms bunched close together near one river. Which part of space does this describe?",
+   "opts": [
+    "A pattern, because the farms are clustered",
+    "A distance, because the farms are near a river",
+    "A place, because the farms are on the map",
+    "A location, because the farms are spread evenly"
+   ],
+   "why": "The way the farms are spread out is a pattern, and here they are clustered. Distance is about how far apart two things are, so it does not name the whole spread. The farms are not spread evenly.",
+   "clue": "Think about how the farms are spread out, not one position."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kai lives in a small town in the Northern Territory. The nearest hospital is 300 km away. Which idea from space helps explain why getting medical help is hard for him?",
+   "opts": [
+    "Distance, because the hospital is far from his town",
+    "Pattern, because the towns form a line on the map",
+    "Place, because Kai values his town differently",
+    "Location, because his town has a name on the map"
+   ],
+   "why": "The hospital is a long way from Kai's town, so distance explains the difficulty. Pattern is about how many things are spread out, and this case has only one town and one hospital.",
+   "clue": "Look at the 300 km."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A pattern, because the farms are clustered",
+   "also_right": []
+  },
+  "b": {
+   "best": "Distance, because the hospital is far from his town",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The location example 'its distance from the coast' uses distance to explain location, though the next line teaches distance as its own idea. This blurs the two ideas the questions ask students to tell apart."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says pattern is about 'how many things are spread out'. The card defines pattern as the way things are spread out, so this misstates it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer: pattern for (a) and distance for (b). Minor issues: the card's location example ('distance from the coast') overlaps with distance, and why (b) misstates pattern as 'how many things are spread out'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The location example 'its distance from the coast' uses distance to explain location, though the next line teaches distance as its own idea. This blurs the two ideas the questions ask students to tell apart.",
+  "Question b, wording: Why (b) says pattern is about 'how many things are spread out'. The card defines pattern as the way things are spread out, so this misstates it."
+ ],
+ "proposal": {
+  "title": "Space",
+  "card": [
+   "Space is about where things are and how they are spread out. Geographers ask where something is and why it is there.",
+   [
+    "Location",
+    "where something is, such as a town's position on a map. It can be given by a place name, a grid reference, or latitude and longitude."
+   ],
+   [
+    "Distance",
+    "how far apart two things are. Distance can affect how easily people reach services such as a hospital."
+   ],
+   [
+    "Pattern",
+    "the way things are spread out on a map. They may be clustered close together, spread out evenly, or in a line."
+   ]
+  ],
+  "remember": "Space asks where things are, how far apart they are and what pattern they make.",
+  "a": {
+   "q": "A map shows most of a region's farms bunched close together near one river. Which part of space does this describe?",
+   "opts": [
+    "A pattern, because the farms are clustered",
+    "A distance, because the farms are near a river",
+    "A location, because the farms are spread evenly",
+    "A pattern, because the farms are spread evenly"
+   ],
+   "why": "The way the farms are spread out is a pattern, and here they are bunched, or clustered. They are not spread evenly. Distance is about how far apart two things are, so it does not describe the whole spread.",
+   "clue": "Think about how the farms are spread out, not one position."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kai lives in a small town in the Northern Territory. The nearest hospital is 300 km away. Which idea from space helps explain why getting medical help is hard for him?",
+   "opts": [
+    "Distance, because the hospital is far from his town",
+    "Pattern, because the towns form a line on the map",
+    "Distance, because the hospital is close to his town",
+    "Location, because his town has a name on the map"
+   ],
+   "why": "The hospital is a long way from Kai's town, so distance explains the difficulty. Pattern is about the way things are spread out on a map, and this case is about how far one town is from one hospital.",
+   "clue": "Look at the 300 km."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:51Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The location example 'its distance from the coast' uses distance to explain location, though the next line teaches distance as its own idea. This blurs the two ideas the questions ask students to tell apart."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says pattern is about 'how many things are spread out'. The card defines pattern as the way things are spread out, so this misstates it."
+   }
+  ],
+  "flags": [
+   "Card, wording: The location example 'its distance from the coast' uses distance to explain location, though the next line teaches distance as its own idea. This blurs the two ideas the questions ask students to tell apart.",
+   "Question b, wording: Why (b) says pattern is about 'how many things are spread out'. The card defines pattern as the way things are spread out, so this misstates it."
+  ]
+ },
+ "final": {
+  "title": "Space",
+  "card": [
+   "Space is about where things are and how they are spread out. Geographers ask where something is and why it is there.",
+   [
+    "Location",
+    "where something is, such as a town's position on a map. It can be given by a place name, a grid reference, or latitude and longitude."
+   ],
+   [
+    "Distance",
+    "how far apart two things are. Distance can affect how easily people reach services such as a hospital."
+   ],
+   [
+    "Pattern",
+    "the way things are spread out on a map. They may be clustered close together, spread out evenly, or in a line."
+   ]
+  ],
+  "remember": "Space asks where things are, how far apart they are and what pattern they make.",
+  "a": {
+   "q": "A map shows most of a region's farms bunched close together near one river. Which part of space does this describe?",
+   "opts": [
+    "A pattern, because the farms are clustered",
+    "A distance, because the farms are near a river",
+    "A location, because the farms are spread evenly",
+    "A pattern, because the farms are spread evenly"
+   ],
+   "why": "The way the farms are spread out is a pattern, and here they are bunched, or clustered. They are not spread evenly. Distance is about how far apart two things are, so it does not describe the whole spread.",
+   "clue": "Think about how the farms are spread out, not one position."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kai lives in a small town in the Northern Territory. The nearest hospital is 300 km away. Which idea from space helps explain why getting medical help is hard for him?",
+   "opts": [
+    "Distance, because the hospital is far from his town",
+    "Pattern, because the towns form a line on the map",
+    "Distance, because the hospital is close to his town",
+    "Location, because his town has a name on the map"
+   ],
+   "why": "The hospital is a long way from Kai's town, so distance explains the difficulty. Pattern is about the way things are spread out on a map, and this case is about how far one town is from one hospital.",
+   "clue": "Look at the 300 km."
+  }
+ },
+ "cleared_by": "auto"
+}

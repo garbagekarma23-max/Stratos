@@ -1,0 +1,411 @@
+{
+ "id": "ecb-risk-return",
+ "title": "Risk and return",
+ "brief": "a1f2e0ec37c3",
+ "shortlist": [
+  [
+   "acc-other-ways-invest",
+   0.26
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, match",
+  "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: done",
+  "2026-11-04T09:58:21Z check: flagged",
+  "2026-11-04T10:07:58Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00588,
+  "check": 0.01197,
+  "fix": 0.01492,
+  "recheck": 0.00754
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is about a business owner weighing a business against other options, which is narrower than the new point's general lesson that higher-return investments like shares carry more risk than safer ones like term deposits, and it comes from a different subject and depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Risk and return",
+  "card": [
+   "Return is what an investment earns, such as interest, payments or a rise in value. Risk is the chance you earn less than you hoped, or lose some of your money.",
+   "Investments that can earn more usually carry more risk. Shares can rise a lot in value, but their price can also fall, so you might get back less than you put in.",
+   "A term deposit is safer. The interest rate is agreed in advance and the bank returns your money, but the return is usually lower.",
+   "Investors weigh how much risk they can accept against the return they want. Spreading money across different investments can reduce the harm if one does badly."
+  ],
+  "remember": "Higher possible return usually comes with higher risk of loss.",
+  "a": {
+   "q": "Compared with a term deposit, what do shares usually offer?",
+   "opts": [
+    "A chance of higher returns with more risk of loss",
+    "A lower return with less risk of loss",
+    "A guaranteed return set in advance",
+    "A higher return with no risk of loss"
+   ],
+   "why": "Shares can earn more but their prices can fall, so they carry more risk. A term deposit is the one with an agreed rate, which is why a guaranteed return is wrong for shares.",
+   "clue": "Which one has a price that moves up and down?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya needs her savings back in one year for a car and cannot afford to lose any. Which choice suits her best?",
+   "opts": [
+    "A term deposit, because the return is agreed and safer",
+    "Shares, because they usually earn more over time",
+    "Shares, because their prices only rise in a year",
+    "A term deposit, because it always earns the most"
+   ],
+   "why": "Priya cannot afford a loss, so she should take the safer option with an agreed return. Shares may earn more, but their price can fall, and a term deposit usually earns less, not the most.",
+   "clue": "She cannot accept a loss, so which one is safer?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A chance of higher returns with more risk of loss",
+   "also_right": []
+  },
+  "b": {
+   "best": "A term deposit, because the return is agreed and safer",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out: it is the longest and the only one with a qualifier ('A chance of'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two wrong options use absolute words ('always earns the most', 'only rise'), which mark them as wrong and leave the right option easy to pick by elimination."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct and both questions have one clear right answer. In question a the right option is the longest and the only hedged one, and in question b the absolute words 'always' and 'only' give away the wrong options."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option stands out: it is the longest and the only one with a qualifier ('A chance of'), so a student could pick it without knowing the idea.",
+  "Question b, wording: Two wrong options use absolute words ('always earns the most', 'only rise'), which mark them as wrong and leave the right option easy to pick by elimination."
+ ],
+ "proposal": {
+  "title": "Risk and return",
+  "card": [
+   "Return is what an investment earns, such as interest, payments or a rise in value. Risk is the chance you earn less than you hoped, or lose some of your money.",
+   "Investments that can earn more usually carry more risk. Shares can rise a lot in value, but their price can also fall, so you might get back less than you put in.",
+   "A term deposit is safer. The interest rate is agreed in advance and the bank returns your money, but the return is usually lower.",
+   "Investors weigh how much risk they can accept against the return they want. Spreading money across different investments can reduce the harm if one does badly."
+  ],
+  "remember": "Higher possible return usually comes with higher risk of loss.",
+  "a": {
+   "q": "Compared with a term deposit, what do shares usually offer?",
+   "opts": [
+    "Higher possible returns with more risk of loss",
+    "Lower possible returns with less risk of loss",
+    "Higher possible returns with less risk of loss",
+    "Lower possible returns with more risk of loss"
+   ],
+   "why": "Shares can earn more, but their prices can fall, so they carry more risk of loss. Higher returns with less risk is tempting, but investments that can earn more usually carry more risk, not less.",
+   "clue": "Which one has a price that can move up and down?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya needs her savings back in one year for a car and cannot afford to lose any. Which choice suits her best?",
+   "opts": [
+    "A term deposit, because the bank returns her money",
+    "Shares, because they can earn more over time",
+    "Shares, because a higher return means lower risk",
+    "A term deposit, because it usually earns more than shares"
+   ],
+   "why": "Priya cannot afford a loss, so the safer term deposit suits her: the rate is agreed and the bank returns her money. Shares can earn more, but their price can fall, so she might get back less than she needs.",
+   "clue": "Think about what matters most to her: earning more or not losing money."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Higher possible returns with more risk of loss",
+    "also_right": []
+   },
+   "b": {
+    "best": "A term deposit, because the bank returns her money",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out: it is the longest and the only one with a qualifier ('A chance of'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two wrong options use absolute words ('always earns the most', 'only rise'), which mark them as wrong and leave the right option easy to pick by elimination."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option stands out: it is the longest and the only one with a qualifier ('A chance of'), so a student could pick it without knowing the idea.",
+   "Question b, wording: Two wrong options use absolute words ('always earns the most', 'only rise'), which mark them as wrong and leave the right option easy to pick by elimination."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Risk and return",
+  "card": [
+   "Return is what an investment earns, such as interest, payments or a rise in value. Risk is the chance you earn less than you hoped, or lose some of your money.",
+   "Investments that can earn more usually carry more risk. Shares can rise a lot in value, but their price can also fall, so you might get back less than you put in.",
+   "A term deposit is safer. The interest rate is agreed in advance and the bank returns your money, but the return is usually lower.",
+   "Investors weigh how much risk they can accept against the return they want. Spreading money across different investments can reduce the harm if one does badly."
+  ],
+  "remember": "Higher possible return usually comes with higher risk of loss.",
+  "a": {
+   "q": "Compared with a term deposit, what do shares usually offer?",
+   "opts": [
+    "Higher possible returns with more risk of loss",
+    "Lower possible returns with less risk of loss",
+    "Higher possible returns with less risk of loss",
+    "Lower possible returns with more risk of loss"
+   ],
+   "why": "Shares can earn more, but their prices can fall, so they carry more risk of loss. Higher returns with less risk is tempting, but investments that can earn more usually carry more risk, not less.",
+   "clue": "Which one has a price that can move up and down?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya needs her savings back in one year for a car and cannot afford to lose any. Which choice suits her best?",
+   "opts": [
+    "A term deposit, because the bank returns her money",
+    "Shares, because they can earn more over time",
+    "Shares, because a higher return means lower risk",
+    "A term deposit, because it usually earns more than shares"
+   ],
+   "why": "Priya cannot afford a loss, so the safer term deposit suits her: the rate is agreed and the bank returns her money. Shares can earn more, but their price can fall, so she might get back less than she needs.",
+   "clue": "Think about what matters most to her: earning more or not losing money."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The new options in both questions are parallel, with no hedge on the right one and no absolute words on the wrong ones. The facts are right.",
+   "item": "cdd5aa09b8715922",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-risk-return",
+    "title": "Risk and return",
+    "brief": "a1f2e0ec37c3",
+    "shortlist": [
+     [
+      "acc-other-ways-invest",
+      0.26
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00022,
+     "write": 0.00588,
+     "check": 0.01197,
+     "fix": 0.01492,
+     "recheck": 0.00754
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point is about a business owner weighing a business against other options, which is narrower than the new point's general lesson that higher-return investments like shares carry more risk than safer ones like term deposits, and it comes from a different subject and depth.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Risk and return",
+     "card": [
+      "Return is what an investment earns, such as interest, payments or a rise in value. Risk is the chance you earn less than you hoped, or lose some of your money.",
+      "Investments that can earn more usually carry more risk. Shares can rise a lot in value, but their price can also fall, so you might get back less than you put in.",
+      "A term deposit is safer. The interest rate is agreed in advance and the bank returns your money, but the return is usually lower.",
+      "Investors weigh how much risk they can accept against the return they want. Spreading money across different investments can reduce the harm if one does badly."
+     ],
+     "remember": "Higher possible return usually comes with higher risk of loss.",
+     "a": {
+      "q": "Compared with a term deposit, what do shares usually offer?",
+      "opts": [
+       "A chance of higher returns with more risk of loss",
+       "A lower return with less risk of loss",
+       "A guaranteed return set in advance",
+       "A higher return with no risk of loss"
+      ],
+      "why": "Shares can earn more but their prices can fall, so they carry more risk. A term deposit is the one with an agreed rate, which is why a guaranteed return is wrong for shares.",
+      "clue": "Which one has a price that moves up and down?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya needs her savings back in one year for a car and cannot afford to lose any. Which choice suits her best?",
+      "opts": [
+       "A term deposit, because the return is agreed and safer",
+       "Shares, because they usually earn more over time",
+       "Shares, because their prices only rise in a year",
+       "A term deposit, because it always earns the most"
+      ],
+      "why": "Priya cannot afford a loss, so she should take the safer option with an agreed return. Shares may earn more, but their price can fall, and a term deposit usually earns less, not the most.",
+      "clue": "She cannot accept a loss, so which one is safer?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A chance of higher returns with more risk of loss",
+      "also_right": []
+     },
+     "b": {
+      "best": "A term deposit, because the return is agreed and safer",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option stands out: it is the longest and the only one with a qualifier ('A chance of'), so a student could pick it without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Two wrong options use absolute words ('always earns the most', 'only rise'), which mark them as wrong and leave the right option easy to pick by elimination."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct and both questions have one clear right answer. In question a the right option is the longest and the only hedged one, and in question b the absolute words 'always' and 'only' give away the wrong options."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The right option stands out: it is the longest and the only one with a qualifier ('A chance of'), so a student could pick it without knowing the idea.",
+     "Question b, wording: Two wrong options use absolute words ('always earns the most', 'only rise'), which mark them as wrong and leave the right option easy to pick by elimination."
+    ],
+    "proposal": {
+     "title": "Risk and return",
+     "card": [
+      "Return is what an investment earns, such as interest, payments or a rise in value. Risk is the chance you earn less than you hoped, or lose some of your money.",
+      "Investments that can earn more usually carry more risk. Shares can rise a lot in value, but their price can also fall, so you might get back less than you put in.",
+      "A term deposit is safer. The interest rate is agreed in advance and the bank returns your money, but the return is usually lower.",
+      "Investors weigh how much risk they can accept against the return they want. Spreading money across different investments can reduce the harm if one does badly."
+     ],
+     "remember": "Higher possible return usually comes with higher risk of loss.",
+     "a": {
+      "q": "Compared with a term deposit, what do shares usually offer?",
+      "opts": [
+       "Higher possible returns with more risk of loss",
+       "Lower possible returns with less risk of loss",
+       "Higher possible returns with less risk of loss",
+       "Lower possible returns with more risk of loss"
+      ],
+      "why": "Shares can earn more, but their prices can fall, so they carry more risk of loss. Higher returns with less risk is tempting, but investments that can earn more usually carry more risk, not less.",
+      "clue": "Which one has a price that can move up and down?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya needs her savings back in one year for a car and cannot afford to lose any. Which choice suits her best?",
+      "opts": [
+       "A term deposit, because the bank returns her money",
+       "Shares, because they can earn more over time",
+       "Shares, because a higher return means lower risk",
+       "A term deposit, because it usually earns more than shares"
+      ],
+      "why": "Priya cannot afford a loss, so the safer term deposit suits her: the rate is agreed and the bank returns her money. Shares can earn more, but their price can fall, so she might get back less than she needs.",
+      "clue": "Think about what matters most to her: earning more or not losing money."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Higher possible returns with more risk of loss",
+       "also_right": []
+      },
+      "b": {
+       "best": "A term deposit, because the bank returns her money",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:11Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option stands out: it is the longest and the only one with a qualifier ('A chance of'), so a student could pick it without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Two wrong options use absolute words ('always earns the most', 'only rise'), which mark them as wrong and leave the right option easy to pick by elimination."
+      }
+     ],
+     "flags": [
+      "Question a, wording: The right option stands out: it is the longest and the only one with a qualifier ('A chance of'), so a student could pick it without knowing the idea.",
+      "Question b, wording: Two wrong options use absolute words ('always earns the most', 'only rise'), which mark them as wrong and leave the right option easy to pick by elimination."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "dcde6d3697521766"
+  }
+ ]
+}

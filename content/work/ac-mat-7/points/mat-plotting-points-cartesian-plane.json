@@ -1,0 +1,343 @@
+{
+ "id": "mat-plotting-points-cartesian-plane",
+ "title": "Plotting points on the Cartesian plane",
+ "brief": "26a1da269a8e",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:55Z write: done",
+  "2026-11-04T09:47:07Z check: flagged",
+  "2026-11-04T09:58:30Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00695,
+  "check": 0.0097,
+  "fix": 0.01598,
+  "recheck": 0.00932
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: 'Each time x goes up by 1, y goes up by the same amount' can be read as 'y goes up by 1, the same as x', which suggests a straight line needs y to rise as much as x. Question b then uses y = 2x, where y rises by 2. Reword to 'y goes up by the same amount each time (here, 1)'.",
+ "rejected": {
+  "title": "Plotting points on the Cartesian plane",
+  "card": [
+   "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin (0, 0). The axes split the plane into four quadrants.",
+   "A point is written as (x, y). Start at the origin. Move across first by x: right if positive, left if negative. Then move up or down by y: up if positive, down if negative.",
+   "Example: (−3, 2) means 3 units left, then 2 units up. The order matters, so (2, −3) is a different point. Any point on the x-axis has y = 0.",
+   "The rule y = x + 1 gives the points (0, 1), (1, 2) and (2, 3). Each time x goes up by 1, y goes up by the same amount, so the points sit on a straight line."
+  ],
+  "remember": "Write (x, y): across first, then up or down.",
+  "a": {
+   "q": "Where is the point (4, −2) on the Cartesian plane?",
+   "opts": [
+    "4 units right, then 2 units down",
+    "4 units left, then 2 units down",
+    "2 units right, then 4 units down",
+    "4 units right, then 2 units up"
+   ],
+   "why": "The x-value 4 is positive, so move 4 units right. The y-value −2 is negative, so move 2 units down. Moving 2 units up would need a y-value of positive 2.",
+   "clue": "Look at the sign of each number, x first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam uses the rule y = 2x and finds the points (1, 2), (2, 4) and (3, 6). What does he see when he plots them?",
+   "opts": [
+    "They lie on a straight line",
+    "They lie on a curve",
+    "They lie on the x-axis",
+    "They are scattered with no pattern"
+   ],
+   "why": "Each time x goes up by 1, y goes up by 2, the same amount every time, so the points form a straight line. They are not on the x-axis, because none of the y-values is 0.",
+   "clue": "Check how y changes each time x goes up by 1."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: 'Each time x goes up by 1, y goes up by the same amount' can be read as 'y goes up by 1, the same as x', which suggests a straight line needs y to rise as much as x. Question b then uses y = 2x, where y rises by 2. Reword to 'y goes up by the same amount each time (here, 1)'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Plotting points on the Cartesian plane",
+     "card": [
+      "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin (0, 0). The axes split the plane into four quadrants.",
+      "A point is written as (x, y). Start at the origin. Move across first by x: right if positive, left if negative. Then move up or down by y: up if positive, down if negative.",
+      "Example: (−3, 2) means 3 units left, then 2 units up. The order matters, so (2, −3) is a different point.",
+      "Points made from a rule, such as y = x + 1, give (0, 1), (1, 2) and (2, 3). When plotted, they sit on a straight line."
+     ],
+     "remember": "Write (x, y): across first, then up or down.",
+     "a": {
+      "q": "Where is the point (4, −2) on the Cartesian plane?",
+      "opts": [
+       "4 units right, then 2 units down",
+       "4 units left, then 2 units down",
+       "2 units right, then 4 units down",
+       "4 units right, then 2 units up"
+      ],
+      "why": "The x-value 4 is positive, so move 4 units right. The y-value −2 is negative, so move 2 units down. Moving 4 up would need a y-value of 4 or a positive 2.",
+      "clue": "Look at the sign of each number, x first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam uses the rule y = 2x and finds the points (1, 2), (2, 4) and (3, 6). What does he see when he plots them?",
+      "opts": [
+       "They lie on a straight line",
+       "They lie on a curve",
+       "They lie on the x-axis",
+       "They are scattered with no pattern"
+      ],
+      "why": "Each time x goes up by 1, y goes up by 2, so the points rise at a steady rate and form a straight line. They are not on the x-axis, because the y-values are not 0.",
+      "clue": "Check how y changes each time x goes up by 1."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "4 units right, then 2 units down",
+      "also_right": []
+     },
+     "b": {
+      "best": "They lie on a straight line",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The why for (a) says 'Moving 4 up would need a y-value of 4 or a positive 2.' This is garbled and partly wrong. Moving 4 up needs y = 4, not a positive 2. The distractor it rebuts is '2 units up', which would need y = +2. It should say something like 'Moving 2 units up would need a y-value of positive 2.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are correct and fit the point. The only problem is a confusing, partly wrong sentence in the why for (a), about which y-value would mean moving up."
+    },
+    "flags": [
+     "Question a, wording: The why for (a) says 'Moving 4 up would need a y-value of 4 or a positive 2.' This is garbled and partly wrong. Moving 4 up needs y = 4, not a positive 2. The distractor it rebuts is '2 units up', which would need y = +2. It should say something like 'Moving 2 units up would need a y-value of positive 2.'"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Plotting points on the Cartesian plane",
+     "card": [
+      "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin (0, 0). The axes split the plane into four quadrants.",
+      "A point is written as (x, y). Start at the origin. Move across first by x: right if positive, left if negative. Then move up or down by y: up if positive, down if negative.",
+      "Example: (−3, 2) means 3 units left, then 2 units up. The order matters, so (2, −3) is a different point. Any point on the x-axis has y = 0.",
+      "The rule y = x + 1 gives the points (0, 1), (1, 2) and (2, 3). Each time x goes up by 1, y goes up by the same amount, so the points sit on a straight line."
+     ],
+     "remember": "Write (x, y): across first, then up or down.",
+     "a": {
+      "q": "Where is the point (4, −2) on the Cartesian plane?",
+      "opts": [
+       "4 units right, then 2 units down",
+       "4 units left, then 2 units down",
+       "2 units right, then 4 units down",
+       "4 units right, then 2 units up"
+      ],
+      "why": "The x-value 4 is positive, so move 4 units right. The y-value −2 is negative, so move 2 units down. Moving 2 units up would need a y-value of positive 2.",
+      "clue": "Look at the sign of each number, x first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam uses the rule y = 2x and finds the points (1, 2), (2, 4) and (3, 6). What does he see when he plots them?",
+      "opts": [
+       "They lie on a straight line",
+       "They lie on a curve",
+       "They lie on the x-axis",
+       "They are scattered with no pattern"
+      ],
+      "why": "Each time x goes up by 1, y goes up by 2, the same amount every time, so the points form a straight line. They are not on the x-axis, because none of the y-values is 0.",
+      "clue": "Check how y changes each time x goes up by 1."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "4 units right, then 2 units down",
+       "also_right": []
+      },
+      "b": {
+       "best": "They lie on a straight line",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "'Each time x goes up by 1, y goes up by the same amount' can be read as 'y goes up by 1, the same as x', which suggests a straight line needs y to rise as much as x. Question b then uses y = 2x, where y rises by 2. Reword to 'y goes up by the same amount each time (here, 1)'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both answers are correct. One card sentence ('y goes up by the same amount') could make students think y must rise by the same amount as x for the points to form a straight line, which clashes with the y = 2x example in question b. It should be reworded."
+     },
+     "flags": [
+      "Card, wording: 'Each time x goes up by 1, y goes up by the same amount' can be read as 'y goes up by 1, the same as x', which suggests a straight line needs y to rise as much as x. Question b then uses y = 2x, where y rises by 2. Reword to 'y goes up by the same amount each time (here, 1)'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Plotting points on the Cartesian plane",
+    "card": [
+     "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin (0, 0). The axes split the plane into four quadrants.",
+     "A point is written as (x, y). Start at the origin. Move across first by x: right if positive, left if negative. Then move up or down by y: up if positive, down if negative.",
+     "Example: (−3, 2) means 3 units left, then 2 units up. The order matters, so (2, −3) is a different point. Any point on the x-axis has y = 0.",
+     "The rule y = x + 1 gives the points (0, 1), (1, 2) and (2, 3). As x goes up by 1, y goes up by the same amount each time (here, 1), so the points sit on a straight line."
+    ],
+    "remember": "Write (x, y): across first, then up or down.",
+    "a": {
+     "q": "Starting at the origin, how do you reach the point (4, −2)?",
+     "opts": [
+      "4 units right, then 2 units down",
+      "4 units left, then 2 units down",
+      "2 units right, then 4 units down",
+      "4 units right, then 2 units up"
+     ],
+     "why": "The x-value 4 is positive, so move 4 units right. The y-value −2 is negative, so move 2 units down. Moving 2 units up would need a y-value of positive 2.",
+     "clue": "Look at the sign of each number, x first."
+    },
+    "b": {
+     "d": 3,
+     "q": "Sam plots the points (1, 2), (2, 4) and (3, 6), which come from the rule y = 2x. What do the plotted points form?",
+     "opts": [
+      "They lie on a straight line",
+      "They lie on a curve",
+      "They lie on the x-axis",
+      "They are scattered with no pattern"
+     ],
+     "why": "Each time x goes up by 1, y goes up by 2, the same amount each time, so the points form a straight line. They are not on the x-axis, because none of the y-values is 0.",
+     "clue": "Check how much y changes each time x goes up by 1."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "4 units right, then 2 units down",
+     "also_right": []
+    },
+    "b": {
+     "best": "They lie on a straight line",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Plotting points on the Cartesian plane",
+  "card": [
+   "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin (0, 0). The axes split the plane into four quadrants.",
+   "A point is written as (x, y). Start at the origin. Move across first by x: right if positive, left if negative. Then move up or down by y: up if positive, down if negative.",
+   "Example: (−3, 2) means 3 units left, then 2 units up. The order matters, so (2, −3) is a different point. Any point on the x-axis has y = 0.",
+   "The rule y = x + 1 gives the points (0, 1), (1, 2) and (2, 3). As x goes up by 1, y goes up by the same amount each time (here, 1), so the points sit on a straight line."
+  ],
+  "remember": "Write (x, y): across first, then up or down.",
+  "a": {
+   "q": "Starting at the origin, how do you reach the point (4, −2)?",
+   "opts": [
+    "4 units right, then 2 units down",
+    "4 units left, then 2 units down",
+    "2 units right, then 4 units down",
+    "4 units right, then 2 units up"
+   ],
+   "why": "The x-value 4 is positive, so move 4 units right. The y-value −2 is negative, so move 2 units down. Moving 2 units up would need a y-value of positive 2.",
+   "clue": "Look at the sign of each number, x first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam plots the points (1, 2), (2, 4) and (3, 6), which come from the rule y = 2x. What do the plotted points form?",
+   "opts": [
+    "They lie on a straight line",
+    "They lie on a curve",
+    "They lie on the x-axis",
+    "They are scattered with no pattern"
+   ],
+   "why": "Each time x goes up by 1, y goes up by 2, the same amount each time, so the points form a straight line. They are not on the x-axis, because none of the y-values is 0.",
+   "clue": "Check how much y changes each time x goes up by 1."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4 units right, then 2 units down",
+   "also_right": []
+  },
+  "b": {
+   "best": "They lie on a straight line",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Plotting points on the Cartesian plane",
+  "card": [
+   "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin (0, 0). The axes split the plane into four quadrants.",
+   "A point is written as (x, y). Start at the origin. Move across first by x: right if positive, left if negative. Then move up or down by y: up if positive, down if negative.",
+   "Example: (−3, 2) means 3 units left, then 2 units up. The order matters, so (2, −3) is a different point. Any point on the x-axis has y = 0.",
+   "The rule y = x + 1 gives the points (0, 1), (1, 2) and (2, 3). As x goes up by 1, y goes up by the same amount each time (here, 1), so the points sit on a straight line."
+  ],
+  "remember": "Write (x, y): across first, then up or down.",
+  "a": {
+   "q": "Starting at the origin, how do you reach the point (4, −2)?",
+   "opts": [
+    "4 units right, then 2 units down",
+    "4 units left, then 2 units down",
+    "2 units right, then 4 units down",
+    "4 units right, then 2 units up"
+   ],
+   "why": "The x-value 4 is positive, so move 4 units right. The y-value −2 is negative, so move 2 units down. Moving 2 units up would need a y-value of positive 2.",
+   "clue": "Look at the sign of each number, x first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam plots the points (1, 2), (2, 4) and (3, 6), which come from the rule y = 2x. What do the plotted points form?",
+   "opts": [
+    "They lie on a straight line",
+    "They lie on a curve",
+    "They lie on the x-axis",
+    "They are scattered with no pattern"
+   ],
+   "why": "Each time x goes up by 1, y goes up by 2, the same amount each time, so the points form a straight line. They are not on the x-axis, because none of the y-values is 0.",
+   "clue": "Check how much y changes each time x goes up by 1."
+  }
+ },
+ "checked_by": "claude-code"
+}

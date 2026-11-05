@@ -1,0 +1,364 @@
+{
+ "id": "mat-multiplying-dividing-integers",
+ "title": "Multiplying and dividing integers",
+ "brief": "e80421dad9cd",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:56Z write: done",
+  "2026-11-04T09:47:08Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording, b wording)",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.00683,
+  "check": 0.01146,
+  "fix": 0.01468
+ },
+ "draft": {
+  "title": "Multiplying and dividing integers",
+  "card": [
+   "Integers are whole numbers, positive, negative or zero. To multiply or divide, first look at the signs of the two numbers.",
+   [
+    "Same signs",
+    "the answer is positive. For example, −6 × −3 = 18 and −20 ÷ −4 = 5."
+   ],
+   [
+    "Different signs",
+    "the answer is negative. For example, 7 × −2 = −14 and 20 ÷ −4 = −5."
+   ],
+   "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+  ],
+  "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+  "a": {
+   "q": "What is −8 × −5?",
+   "opts": [
+    "40",
+    "−40",
+    "−13",
+    "13"
+   ],
+   "why": "Both numbers are negative, so the signs are the same and the answer is positive. 8 × 5 = 40. The answer −40 comes from forgetting that two negatives make a positive.",
+   "clue": "Check whether the two signs match."
+  },
+  "b": {
+   "d": 3,
+   "q": "A diver in Hobart drops 4 metres each minute. Her depth change is −4 m per minute. What is her change in depth after 6 minutes, if she dives for 6 minutes and the change is −4 × 6?",
+   "opts": [
+    "−24 m",
+    "24 m",
+    "−10 m",
+    "−2 m"
+   ],
+   "why": "The signs are different, so the answer is negative. 4 × 6 = 24, so the change is −24 m. The answer 24 m ignores the sign, and −10 m adds instead of multiplying.",
+   "clue": "Decide the sign first, then multiply 4 by 6."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "40",
+   "also_right": []
+  },
+  "b": {
+   "best": "−24 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question is clumsy and repeats itself ('after 6 minutes, if she dives for 6 minutes'). It also states the calculation (−4 × 6), so the student only has to evaluate a given expression rather than model the situation."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Calling a descent a 'depth change' of −4 m is confusing. Depth below the surface increases as she drops, so a careful student could argue her depth changes by +24 m. 'Change in height' or 'change in position' would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line and question a are correct. Question b is wordy and repetitive, gives away the calculation, and uses 'depth change' for a descent, which is confusing because depth increases as the diver drops."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question is clumsy and repeats itself ('after 6 minutes, if she dives for 6 minutes'). It also states the calculation (−4 × 6), so the student only has to evaluate a given expression rather than model the situation.",
+  "Question b, wording: Calling a descent a 'depth change' of −4 m is confusing. Depth below the surface increases as she drops, so a careful student could argue her depth changes by +24 m. 'Change in height' or 'change in position' would be clearer."
+ ],
+ "proposal": {
+  "title": "Multiplying and dividing integers",
+  "card": [
+   "Integers are whole numbers, positive, negative or zero. To multiply or divide, first look at the signs of the two numbers.",
+   [
+    "Same signs",
+    "the answer is positive. For example, −6 × −3 = 18 and −20 ÷ −4 = 5."
+   ],
+   [
+    "Different signs",
+    "the answer is negative. For example, 7 × −2 = −14 and 20 ÷ −4 = −5."
+   ],
+   "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+  ],
+  "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+  "a": {
+   "q": "What is −8 × −5?",
+   "opts": [
+    "40",
+    "−40",
+    "−13",
+    "13"
+   ],
+   "why": "Both numbers are negative, so the signs are the same and the answer is positive. 8 × 5 = 40. The answer −40 comes from forgetting that two negatives make a positive.",
+   "clue": "Check whether the two signs match."
+  },
+  "b": {
+   "d": 2,
+   "q": "A diver in Hobart goes down at a steady rate. Her height changes by −4 m each minute. What is the total change in her height over 6 minutes?",
+   "opts": [
+    "−24 m",
+    "24 m",
+    "−10 m",
+    "−2 m"
+   ],
+   "why": "Six lots of −4 m is 6 × −4. The signs are different, so the answer is negative, and 6 × 4 = 24, so the change is −24 m. The answer 24 m drops the sign, and −10 m adds the numbers instead of multiplying.",
+   "clue": "Each minute adds another −4 m. How many minutes are there?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question is clumsy and repeats itself ('after 6 minutes, if she dives for 6 minutes'). It also states the calculation (−4 × 6), so the student only has to evaluate a given expression rather than model the situation."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Calling a descent a 'depth change' of −4 m is confusing. Depth below the surface increases as she drops, so a careful student could argue her depth changes by +24 m. 'Change in height' or 'change in position' would be clearer."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question is clumsy and repeats itself ('after 6 minutes, if she dives for 6 minutes'). It also states the calculation (−4 × 6), so the student only has to evaluate a given expression rather than model the situation.",
+   "Question b, wording: Calling a descent a 'depth change' of −4 m is confusing. Depth below the surface increases as she drops, so a careful student could argue her depth changes by +24 m. 'Change in height' or 'change in position' would be clearer."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Multiplying and dividing integers",
+  "card": [
+   "Integers are whole numbers, positive, negative or zero. To multiply or divide, first look at the signs of the two numbers.",
+   [
+    "Same signs",
+    "the answer is positive. For example, −6 × −3 = 18 and −20 ÷ −4 = 5."
+   ],
+   [
+    "Different signs",
+    "the answer is negative. For example, 7 × −2 = −14 and 20 ÷ −4 = −5."
+   ],
+   "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+  ],
+  "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+  "a": {
+   "q": "What is −8 × −5?",
+   "opts": [
+    "40",
+    "−40",
+    "−13",
+    "13"
+   ],
+   "why": "Both numbers are negative, so the signs are the same and the answer is positive. 8 × 5 = 40. The answer −40 comes from forgetting that two negatives make a positive.",
+   "clue": "Check whether the two signs match."
+  },
+  "b": {
+   "d": 2,
+   "q": "A diver in Hobart goes down at a steady rate. Her height changes by −4 m each minute. What is the total change in her height over 6 minutes?",
+   "opts": [
+    "−24 m",
+    "24 m",
+    "−10 m",
+    "−2 m"
+   ],
+   "why": "Six lots of −4 m is 6 × −4. The signs are different, so the answer is negative, and 6 × 4 = 24, so the change is −24 m. The answer 24 m drops the sign, and −10 m adds the numbers instead of multiplying.",
+   "clue": "Each minute adds another −4 m. How many minutes are there?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The new question b is plain, uses change in height instead of the confusing depth change, and makes the student set up 6 × −4 themselves. The answer, −24 m, is right.",
+   "item": "f4779f9dbc48404c",
+   "result": "decided",
+   "saved": {
+    "id": "mat-multiplying-dividing-integers",
+    "title": "Multiplying and dividing integers",
+    "brief": "e80421dad9cd",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "write": 0.00683,
+     "check": 0.01146,
+     "fix": 0.01468
+    },
+    "draft": {
+     "title": "Multiplying and dividing integers",
+     "card": [
+      "Integers are whole numbers, positive, negative or zero. To multiply or divide, first look at the signs of the two numbers.",
+      [
+       "Same signs",
+       "the answer is positive. For example, −6 × −3 = 18 and −20 ÷ −4 = 5."
+      ],
+      [
+       "Different signs",
+       "the answer is negative. For example, 7 × −2 = −14 and 20 ÷ −4 = −5."
+      ],
+      "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+     ],
+     "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+     "a": {
+      "q": "What is −8 × −5?",
+      "opts": [
+       "40",
+       "−40",
+       "−13",
+       "13"
+      ],
+      "why": "Both numbers are negative, so the signs are the same and the answer is positive. 8 × 5 = 40. The answer −40 comes from forgetting that two negatives make a positive.",
+      "clue": "Check whether the two signs match."
+     },
+     "b": {
+      "d": 3,
+      "q": "A diver in Hobart drops 4 metres each minute. Her depth change is −4 m per minute. What is her change in depth after 6 minutes, if she dives for 6 minutes and the change is −4 × 6?",
+      "opts": [
+       "−24 m",
+       "24 m",
+       "−10 m",
+       "−2 m"
+      ],
+      "why": "The signs are different, so the answer is negative. 4 × 6 = 24, so the change is −24 m. The answer 24 m ignores the sign, and −10 m adds instead of multiplying.",
+      "clue": "Decide the sign first, then multiply 4 by 6."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "40",
+      "also_right": []
+     },
+     "b": {
+      "best": "−24 m",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The question is clumsy and repeats itself ('after 6 minutes, if she dives for 6 minutes'). It also states the calculation (−4 × 6), so the student only has to evaluate a given expression rather than model the situation."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Calling a descent a 'depth change' of −4 m is confusing. Depth below the surface increases as she drops, so a careful student could argue her depth changes by +24 m. 'Change in height' or 'change in position' would be clearer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, remember line and question a are correct. Question b is wordy and repetitive, gives away the calculation, and uses 'depth change' for a descent, which is confusing because depth increases as the diver drops."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, wording: The question is clumsy and repeats itself ('after 6 minutes, if she dives for 6 minutes'). It also states the calculation (−4 × 6), so the student only has to evaluate a given expression rather than model the situation.",
+     "Question b, wording: Calling a descent a 'depth change' of −4 m is confusing. Depth below the surface increases as she drops, so a careful student could argue her depth changes by +24 m. 'Change in height' or 'change in position' would be clearer."
+    ],
+    "proposal": {
+     "title": "Multiplying and dividing integers",
+     "card": [
+      "Integers are whole numbers, positive, negative or zero. To multiply or divide, first look at the signs of the two numbers.",
+      [
+       "Same signs",
+       "the answer is positive. For example, −6 × −3 = 18 and −20 ÷ −4 = 5."
+      ],
+      [
+       "Different signs",
+       "the answer is negative. For example, 7 × −2 = −14 and 20 ÷ −4 = −5."
+      ],
+      "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
+     ],
+     "remember": "Same signs give a positive answer. Different signs give a negative answer.",
+     "a": {
+      "q": "What is −8 × −5?",
+      "opts": [
+       "40",
+       "−40",
+       "−13",
+       "13"
+      ],
+      "why": "Both numbers are negative, so the signs are the same and the answer is positive. 8 × 5 = 40. The answer −40 comes from forgetting that two negatives make a positive.",
+      "clue": "Check whether the two signs match."
+     },
+     "b": {
+      "d": 2,
+      "q": "A diver in Hobart goes down at a steady rate. Her height changes by −4 m each minute. What is the total change in her height over 6 minutes?",
+      "opts": [
+       "−24 m",
+       "24 m",
+       "−10 m",
+       "−2 m"
+      ],
+      "why": "Six lots of −4 m is 6 × −4. The signs are different, so the answer is negative, and 6 × 4 = 24, so the change is −24 m. The answer 24 m drops the sign, and −10 m adds the numbers instead of multiplying.",
+      "clue": "Each minute adds another −4 m. How many minutes are there?"
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-04T17:58:54Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The question is clumsy and repeats itself ('after 6 minutes, if she dives for 6 minutes'). It also states the calculation (−4 × 6), so the student only has to evaluate a given expression rather than model the situation."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Calling a descent a 'depth change' of −4 m is confusing. Depth below the surface increases as she drops, so a careful student could argue her depth changes by +24 m. 'Change in height' or 'change in position' would be clearer."
+      }
+     ],
+     "flags": [
+      "Question b, wording: The question is clumsy and repeats itself ('after 6 minutes, if she dives for 6 minutes'). It also states the calculation (−4 × 6), so the student only has to evaluate a given expression rather than model the situation.",
+      "Question b, wording: Calling a descent a 'depth change' of −4 m is confusing. Depth below the surface increases as she drops, so a careful student could argue her depth changes by +24 m. 'Change in height' or 'change in position' would be clearer."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "255f7e07dc13c823"
+  }
+ ]
+}

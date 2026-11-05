@@ -1,0 +1,419 @@
+{
+ "id": "geo-improving-food-security",
+ "title": "Improving food security",
+ "brief": "82e996f1cb7b",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:34Z new, write",
+  "2026-11-04T09:36:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:02Z write: failed the content check, writing again",
+  "2026-11-04T09:58:27Z write: done",
+  "2026-11-04T10:08:01Z check: flagged",
+  "2026-11-04T14:58:51Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01402,
+  "check": 0.00907,
+  "fix": 0.01608,
+  "recheck": 0.01244
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: Why (b) says trade gets rice to the people 'straight away' and that the farms 'still could not grow enough rice'. The card says only that trade helps people get food their region cannot grow enough of. 'Straight away' overstates how fast imports arrive; 'more directly' would match the card.",
+ "rejected": {
+  "title": "Improving food security",
+  "card": [
+   [
+    "Cutting waste",
+    "Food lost on farms, in transport or thrown out at home feeds no one. Less waste means more of the food already grown is eaten."
+   ],
+   [
+    "Caring for soil",
+    "Methods such as crop rotation and keeping plant cover protect farmland. Healthy soil keeps growing crops year after year."
+   ],
+   [
+    "Trade",
+    "Trade moves food from places with a surplus to places that are short. It helps people get food that their own region cannot grow enough of."
+   ],
+   [
+    "Research",
+    "Research can produce new crops, such as ones that cope with drought or salty soil. These let food be grown where it was once hard to farm."
+   ]
+  ],
+  "remember": "Waste less, protect soil, trade food and research new crops: each helps secure future supply.",
+  "a": {
+   "q": "A town's farms grow plenty of vegetables, but a third rots in storage before it is sold. Which action would best help this problem?",
+   "opts": [
+    "Cutting food waste",
+    "Researching drought-tolerant crops",
+    "Protecting soil with crop rotation",
+    "Importing food from other countries"
+   ],
+   "why": "The food is already grown, so the loss happens after harvest. Cutting waste means more of it gets eaten. Crop rotation protects soil, but it does not stop food rotting in storage.",
+   "clue": "The food is grown. Where does it go missing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A small island nation has very little farmland and grows too little rice for its people. Which action would most directly get rice to them?",
+   "opts": [
+    "Importing rice through trade with other countries",
+    "Rotating crops on the island's few small farms",
+    "Researching drought-tolerant rice for island farms",
+    "Cutting rice waste at harvest on island farms"
+   ],
+   "why": "Trade brings in rice from places that grow more than they need, so it reaches the island's people straight away. Cutting waste, rotating crops or new crop research may help the island's farms, but with so little farmland they still could not grow enough rice.",
+   "clue": "The problem is too little land. Where else could the rice come from?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: Why (b) says trade gets rice to the people 'straight away' and that the farms 'still could not grow enough rice'. The card says only that trade helps people get food their region cannot grow enough of. 'Straight away' overstates how fast imports arrive; 'more directly' would match the card."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Improving food security",
+     "card": [
+      [
+       "Cutting waste",
+       "Food lost on farms, in transport or thrown out at home feeds no one. Less waste means more of the food already grown is eaten."
+      ],
+      [
+       "Caring for soil",
+       "Methods such as crop rotation and keeping plant cover protect farmland. Healthy soil keeps growing crops year after year."
+      ],
+      [
+       "Trade",
+       "Trade moves food from places with a surplus to places that are short. It helps people get food that their own region cannot grow enough of."
+      ],
+      [
+       "Research",
+       "Research can produce new crops, such as ones that cope with drought or salty soil. These let food be grown where it was once hard to farm."
+      ]
+     ],
+     "remember": "Waste less, protect soil, trade food and research new crops: each helps secure future supply.",
+     "a": {
+      "q": "A town's farms grow plenty of vegetables, but a third rots in storage before it is sold. Which action would best help this problem?",
+      "opts": [
+       "Cutting food waste",
+       "Researching drought-tolerant crops",
+       "Protecting soil with crop rotation",
+       "Importing food from other countries"
+      ],
+      "why": "The food is already grown, so the loss happens after harvest. Cutting waste means more of it gets eaten. Crop rotation protects soil, but it does not stop food rotting in storage.",
+      "clue": "The food is grown. Where does it go missing?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A small island nation has very little farmland and grows too little rice for its people. Which action would most directly get rice to them?",
+      "opts": [
+       "Trade to bring rice in from places with a surplus",
+       "Crop rotation on the island's small farms",
+       "Research into drought-tolerant rice crops",
+       "Teaching farmers to waste less at harvest"
+      ],
+      "why": "Trade moves food from places with a surplus to places that are short, so it reaches the island's people most directly. Cutting waste or rotating crops would help a little, but the island's farms could still not grow enough rice.",
+      "clue": "The problem is too little land. Where could the rice come from?"
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Cutting food waste",
+      "also_right": []
+     },
+     "b": {
+      "best": "Trade to bring rice in from places with a surplus",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the longest and the only one with a precise detail ('from places with a surplus'), which copies the card's trade wording. A student could pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate and match the chapter. In question b, the right option stands out because it is the longest and repeats the card's wording, so the other options should be lengthened or the right one shortened."
+    },
+    "flags": [
+     "Question b, wording: The right option is the longest and the only one with a precise detail ('from places with a surplus'), which copies the card's trade wording. A student could pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Improving food security",
+     "card": [
+      [
+       "Cutting waste",
+       "Food lost on farms, in transport or thrown out at home feeds no one. Less waste means more of the food already grown is eaten."
+      ],
+      [
+       "Caring for soil",
+       "Methods such as crop rotation and keeping plant cover protect farmland. Healthy soil keeps growing crops year after year."
+      ],
+      [
+       "Trade",
+       "Trade moves food from places with a surplus to places that are short. It helps people get food that their own region cannot grow enough of."
+      ],
+      [
+       "Research",
+       "Research can produce new crops, such as ones that cope with drought or salty soil. These let food be grown where it was once hard to farm."
+      ]
+     ],
+     "remember": "Waste less, protect soil, trade food and research new crops: each helps secure future supply.",
+     "a": {
+      "q": "A town's farms grow plenty of vegetables, but a third rots in storage before it is sold. Which action would best help this problem?",
+      "opts": [
+       "Cutting food waste",
+       "Researching drought-tolerant crops",
+       "Protecting soil with crop rotation",
+       "Importing food from other countries"
+      ],
+      "why": "The food is already grown, so the loss happens after harvest. Cutting waste means more of it gets eaten. Crop rotation protects soil, but it does not stop food rotting in storage.",
+      "clue": "The food is grown. Where does it go missing?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A small island nation has very little farmland and grows too little rice for its people. Which action would most directly get rice to them?",
+      "opts": [
+       "Importing rice through trade with other countries",
+       "Rotating crops on the island's few small farms",
+       "Researching drought-tolerant rice for island farms",
+       "Cutting rice waste at harvest on island farms"
+      ],
+      "why": "Trade brings in rice from places that grow more than they need, so it reaches the island's people straight away. Cutting waste, rotating crops or new crop research may help the island's farms, but with so little farmland they still could not grow enough rice.",
+      "clue": "The problem is too little land. Where else could the rice come from?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Cutting food waste",
+       "also_right": []
+      },
+      "b": {
+       "best": "Importing rice through trade with other countries",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "Why (b) says trade gets rice to the people 'straight away' and that the farms 'still could not grow enough rice'. The card says only that trade helps people get food their region cannot grow enough of. 'Straight away' overstates how fast imports arrive; 'more directly' would match the card."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear right answer. The only issue is minor: why (b) says imported rice arrives 'straight away', which overstates the card."
+     },
+     "flags": [
+      "Question b, wording: Why (b) says trade gets rice to the people 'straight away' and that the farms 'still could not grow enough rice'. The card says only that trade helps people get food their region cannot grow enough of. 'Straight away' overstates how fast imports arrive; 'more directly' would match the card."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Improving food security",
+    "card": [
+     [
+      "Cutting waste",
+      "Food lost on farms, in transport or thrown out at home feeds no one. Less waste means more of the food already grown is eaten."
+     ],
+     [
+      "Caring for soil",
+      "Methods such as crop rotation and keeping plant cover protect farmland. Healthy soil keeps growing crops year after year."
+     ],
+     [
+      "Trade",
+      "Trade moves food from places with a surplus to places that are short. It helps people get food that their own region cannot grow enough of."
+     ],
+     [
+      "Research",
+      "Research can produce new crops, such as ones that cope with drought or salty soil. These let food be grown where it was once hard to farm."
+     ]
+    ],
+    "remember": "Waste less, protect soil, trade food and research new crops: each helps secure future supply.",
+    "a": {
+     "q": "Farms near a town harvest plenty of fruit, but much of it spoils in sheds before it reaches the shops. Which action would help most?",
+     "opts": [
+      "Cutting food waste",
+      "Researching drought-tolerant crops",
+      "Protecting soil with crop rotation",
+      "Importing food from other countries"
+     ],
+     "why": "The fruit is already grown, so the loss happens after harvest. Cutting waste means more of it gets eaten. Crop rotation protects soil, but it does not stop fruit spoiling in storage.",
+     "clue": "The fruit is grown. Where does it go missing?"
+    },
+    "b": {
+     "d": 3,
+     "q": "An island country has little farmland and cannot grow enough rice for its people. Which action would most directly get more rice to them?",
+     "opts": [
+      "Importing rice through trade with other countries",
+      "Rotating crops on the island's few small farms",
+      "Researching drought-tolerant rice for island farms",
+      "Cutting rice waste at harvest on island farms"
+     ],
+     "why": "Trade brings in rice from places that grow more than they need, so it more directly helps people get food their own land cannot grow enough of. Cutting waste, rotating crops or researching new crops may help the island's farms, but they do less to make up for so little farmland.",
+     "clue": "The problem is too little land. Where else could the rice come from?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Cutting food waste",
+     "also_right": []
+    },
+    "b": {
+     "best": "Importing rice through trade with other countries",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Improving food security",
+  "card": [
+   [
+    "Cutting waste",
+    "Food lost on farms, in transport or thrown out at home feeds no one. Less waste means more of the food already grown is eaten."
+   ],
+   [
+    "Caring for soil",
+    "Methods such as crop rotation and keeping plant cover protect farmland. Healthy soil keeps growing crops year after year."
+   ],
+   [
+    "Trade",
+    "Trade moves food from places with a surplus to places that are short. It helps people get food that their own region cannot grow enough of."
+   ],
+   [
+    "Research",
+    "Research can produce new crops, such as ones that cope with drought or salty soil. These let food be grown where it was once hard to farm."
+   ]
+  ],
+  "remember": "Waste less, protect soil, trade food and research new crops: each helps secure future supply.",
+  "a": {
+   "q": "Farms near a town harvest plenty of fruit, but much of it spoils in sheds before it reaches the shops. Which action would help most?",
+   "opts": [
+    "Cutting food waste",
+    "Researching drought-tolerant crops",
+    "Protecting soil with crop rotation",
+    "Importing food from other countries"
+   ],
+   "why": "The fruit is already grown, so the loss happens after harvest. Cutting waste means more of it gets eaten. Crop rotation protects soil, but it does not stop fruit spoiling in storage.",
+   "clue": "The fruit is grown. Where does it go missing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An island country has little farmland and cannot grow enough rice for its people. Which action would most directly get more rice to them?",
+   "opts": [
+    "Importing rice through trade with other countries",
+    "Rotating crops on the island's few small farms",
+    "Researching drought-tolerant rice for island farms",
+    "Cutting rice waste at harvest on island farms"
+   ],
+   "why": "Trade brings in rice from places that grow more than they need, so it more directly helps people get food their own land cannot grow enough of. Cutting waste, rotating crops or researching new crops may help the island's farms, but they do less to make up for so little farmland.",
+   "clue": "The problem is too little land. Where else could the rice come from?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cutting food waste",
+   "also_right": []
+  },
+  "b": {
+   "best": "Importing rice through trade with other countries",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Improving food security",
+  "card": [
+   [
+    "Cutting waste",
+    "Food lost on farms, in transport or thrown out at home feeds no one. Less waste means more of the food already grown is eaten."
+   ],
+   [
+    "Caring for soil",
+    "Methods such as crop rotation and keeping plant cover protect farmland. Healthy soil keeps growing crops year after year."
+   ],
+   [
+    "Trade",
+    "Trade moves food from places with a surplus to places that are short. It helps people get food that their own region cannot grow enough of."
+   ],
+   [
+    "Research",
+    "Research can produce new crops, such as ones that cope with drought or salty soil. These let food be grown where it was once hard to farm."
+   ]
+  ],
+  "remember": "Waste less, protect soil, trade food and research new crops: each helps secure future supply.",
+  "a": {
+   "q": "Farms near a town harvest plenty of fruit, but much of it spoils in sheds before it reaches the shops. Which action would help most?",
+   "opts": [
+    "Cutting food waste",
+    "Researching drought-tolerant crops",
+    "Protecting soil with crop rotation",
+    "Importing food from other countries"
+   ],
+   "why": "The fruit is already grown, so the loss happens after harvest. Cutting waste means more of it gets eaten. Crop rotation protects soil, but it does not stop fruit spoiling in storage.",
+   "clue": "The fruit is grown. Where does it go missing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An island country has little farmland and cannot grow enough rice for its people. Which action would most directly get more rice to them?",
+   "opts": [
+    "Importing rice through trade with other countries",
+    "Rotating crops on the island's few small farms",
+    "Researching drought-tolerant rice for island farms",
+    "Cutting rice waste at harvest on island farms"
+   ],
+   "why": "Trade brings in rice from places that grow more than they need, so it more directly helps people get food their own land cannot grow enough of. Cutting waste, rotating crops or researching new crops may help the island's farms, but they do less to make up for so little farmland.",
+   "clue": "The problem is too little land. Where else could the rice come from?"
+  }
+ },
+ "checked_by": "claude-code"
+}

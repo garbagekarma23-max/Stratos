@@ -1,0 +1,234 @@
+{
+ "id": "mat-graphing-linear-relations-2",
+ "title": "Graphing linear relations",
+ "brief": "477c298e9c21",
+ "shortlist": [
+  [
+   "mat-graphing-linear-relations",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 may adapt mat-graphing-linear-relations, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:08Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:31Z write: done",
+  "2026-11-04T10:08:04Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "confirm": 0.00576,
+  "write": 0.00471,
+  "check": 0.01106,
+  "fix": 0.01495,
+  "recheck": 0.00693
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-graphing-linear-relations",
+  "changes": [
+   "Replace the context letters C, n, and the words start and rate with x, y, y-intercept and gradient, the terms and notation the Australian Curriculum uses.",
+   "Add a table of values step, since the brief asks students to build a table of values before plotting, while the card only uses two points.",
+   "Use a rule of the form y = mx + c, such as y = 2x − 1, as the main example, in place of the C = 20 + 5n example."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of plotting a linear rule as a straight line, but it needs its terminology, notation and table-of-values step changed to match the Year 8 Australian Curriculum.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches reading the start and rate of a worded linear model and plotting it from two points, while this Year 8 point teaches building a table of values from a rule like y = 2x − 1 and seeing that the plotted points lie on a straight line, which is a different focus.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Graphing linear relations",
+  "card": [
+   "A rule such as y = 2x − 1 tells you how to find y from x. Put a number in for x, work out y, and you have one point.",
+   "Choose a few x-values and record the results in a table of values. For y = 2x − 1: x = 0 gives y = −1, x = 1 gives y = 1, and x = 2 gives y = 3.",
+   "Write each pair as a point (x, y): (0, −1), (1, 1), (2, 3). The x-value is first and tells you how far across to go. The y-value is second and tells you how far up or down.",
+   "Plot the points on a number plane. For a rule like this they lie on a straight line, so draw a line through them with a ruler."
+  ],
+  "remember": "Put x-values into the rule to get y-values, plot each (x, y), and the points line up.",
+  "a": {
+   "q": "Using the rule y = 3x + 2, what is the y-value when x = 4?",
+   "opts": [
+    "14",
+    "10",
+    "11",
+    "24"
+   ],
+   "why": "Multiply x by 3 first: 3 × 4 = 12. Then add 2 to get 14. The answer 10 comes from adding 2 and 4 and stopping early, not following the rule.",
+   "clue": "Replace x with 4, multiply, then add."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia makes a table of values for y = 2x − 1 and plots the points. Which point lies on her line?",
+   "opts": [
+    "(3, 5)",
+    "(5, 3)",
+    "(3, 7)",
+    "(1, 3)"
+   ],
+   "why": "When x = 3, y = 2 × 3 − 1 = 5, so the point is (3, 5). The point (5, 3) swaps the order, but the x-value must come first.",
+   "clue": "Put the first number of each point in for x and check y."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "14",
+   "also_right": []
+  },
+  "b": {
+   "best": "(3, 5)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says the answer 10 comes from adding 2 and 4, but 2 + 4 = 6. The distractor 10 more likely comes from 3 × 4 − 2 (subtracting instead of adding). The why misexplains the error."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says the points 'line up' with no condition. The card limits this to 'a rule like this' (a linear rule), so the remember line suggests any rule gives points on a straight line."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one correct answer: 14 and (3, 5). The why for (a) wrongly says 10 comes from adding 2 and 4, and the remember line drops the card's limit to linear rules."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says the answer 10 comes from adding 2 and 4, but 2 + 4 = 6. The distractor 10 more likely comes from 3 × 4 − 2 (subtracting instead of adding). The why misexplains the error.",
+  "Remember, other: The remember line says the points 'line up' with no condition. The card limits this to 'a rule like this' (a linear rule), so the remember line suggests any rule gives points on a straight line."
+ ],
+ "proposal": {
+  "title": "Graphing linear relations",
+  "card": [
+   "A rule such as y = 2x − 1 tells you how to find y from x. Put a number in for x, work out y, and you have one point.",
+   "Choose a few x-values and record the results in a table of values. For y = 2x − 1: x = 0 gives y = −1, x = 1 gives y = 1, and x = 2 gives y = 3.",
+   "Write each pair as a point (x, y): (0, −1), (1, 1), (2, 3). The x-value is first and tells you how far across to go. The y-value is second and tells you how far up or down.",
+   "Plot the points on a number plane. A rule like y = 2x − 1 is called linear, because its points lie on a straight line. Draw a line through them with a ruler."
+  ],
+  "remember": "For a linear rule, put in x-values, plot each (x, y), and the points lie on a straight line.",
+  "a": {
+   "q": "Using the rule y = 3x + 2, what is the y-value when x = 4?",
+   "opts": [
+    "14",
+    "10",
+    "18",
+    "36"
+   ],
+   "why": "Multiply x by 3 first: 3 × 4 = 12. Then add 2 to get 14. The answer 10 comes from subtracting 2 instead of adding it: 12 − 2 = 10.",
+   "clue": "Replace x with 4, multiply, then add."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia makes a table of values for y = 2x − 1 and plots the points. Which point lies on her line?",
+   "opts": [
+    "(3, 5)",
+    "(5, 3)",
+    "(3, 7)",
+    "(1, 3)"
+   ],
+   "why": "When x = 3, y = 2 × 3 − 1 = 5, so the point is (3, 5). The point (5, 3) swaps the order, but the x-value must come first: when x = 5, y = 9.",
+   "clue": "Put the first number of each point in for x and check y."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "14",
+    "also_right": []
+   },
+   "b": {
+    "best": "(3, 5)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says the answer 10 comes from adding 2 and 4, but 2 + 4 = 6. The distractor 10 more likely comes from 3 × 4 − 2 (subtracting instead of adding). The why misexplains the error."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says the points 'line up' with no condition. The card limits this to 'a rule like this' (a linear rule), so the remember line suggests any rule gives points on a straight line."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says the answer 10 comes from adding 2 and 4, but 2 + 4 = 6. The distractor 10 more likely comes from 3 × 4 − 2 (subtracting instead of adding). The why misexplains the error.",
+   "Remember, other: The remember line says the points 'line up' with no condition. The card limits this to 'a rule like this' (a linear rule), so the remember line suggests any rule gives points on a straight line."
+  ]
+ },
+ "final": {
+  "title": "Graphing linear relations",
+  "card": [
+   "A rule such as y = 2x − 1 tells you how to find y from x. Put a number in for x, work out y, and you have one point.",
+   "Choose a few x-values and record the results in a table of values. For y = 2x − 1: x = 0 gives y = −1, x = 1 gives y = 1, and x = 2 gives y = 3.",
+   "Write each pair as a point (x, y): (0, −1), (1, 1), (2, 3). The x-value is first and tells you how far across to go. The y-value is second and tells you how far up or down.",
+   "Plot the points on a number plane. A rule like y = 2x − 1 is called linear, because its points lie on a straight line. Draw a line through them with a ruler."
+  ],
+  "remember": "For a linear rule, put in x-values, plot each (x, y), and the points lie on a straight line.",
+  "a": {
+   "q": "Using the rule y = 3x + 2, what is the y-value when x = 4?",
+   "opts": [
+    "14",
+    "10",
+    "18",
+    "36"
+   ],
+   "why": "Multiply x by 3 first: 3 × 4 = 12. Then add 2 to get 14. The answer 10 comes from subtracting 2 instead of adding it: 12 − 2 = 10.",
+   "clue": "Replace x with 4, multiply, then add."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia makes a table of values for y = 2x − 1 and plots the points. Which point lies on her line?",
+   "opts": [
+    "(3, 5)",
+    "(5, 3)",
+    "(3, 7)",
+    "(1, 3)"
+   ],
+   "why": "When x = 3, y = 2 × 3 − 1 = 5, so the point is (3, 5). The point (5, 3) swaps the order, but the x-value must come first: when x = 5, y = 9.",
+   "clue": "Put the first number of each point in for x and check y."
+  }
+ },
+ "cleared_by": "recheck"
+}

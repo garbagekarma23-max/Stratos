@@ -1,0 +1,218 @@
+{
+ "id": "mat-demonstration-proof",
+ "title": "Demonstration and proof",
+ "brief": "c4ddd603429d",
+ "shortlist": [
+  [
+   "mat-direct-proof",
+   0.244
+  ],
+  [
+   "mat-proof-by-contradiction",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T17:58:53Z autoreview: cleared with the fix (card wording, a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00663,
+  "check": 0.01435,
+  "fix": 0.0176
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point teaches the distinction between demonstrating a case and proving a statement for all cases; they teach specific proof methods (direct proof and contradiction), which is a related but different idea at a different focus.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Demonstration and proof",
+  "card": [
+   [
+    "Demonstration",
+    "shows a claim is true in one or a few cases. Checking that 3 + 5 = 8 is even is a demonstration for the claim about odd numbers."
+   ],
+   [
+    "Proof",
+    "uses logical steps from known facts to show a claim is true in every case. Each step gives a reason."
+   ],
+   "Many true examples do not make a proof. One case that fails, called a counterexample, is enough to show a claim is false.",
+   "Example: any odd number is 2n + 1 and any other odd number is 2m + 1. Their sum is 2n + 2m + 2 = 2(n + m + 1), which is a multiple of 2. So the sum of two odd numbers is always even."
+  ],
+  "remember": "Examples can demonstrate a claim. Only logical steps from known facts prove it for all cases.",
+  "a": {
+   "q": "Priya checks that 3 + 5, 7 + 9 and 11 + 13 are all even. What has she done?",
+   "opts": [
+    "Demonstrated the claim in three cases",
+    "Proved the claim for all odd numbers",
+    "Found a counterexample to the claim",
+    "Proved the claim by testing three cases"
+   ],
+   "why": "Three true cases show the claim works for those numbers only. They do not cover every pair of odd numbers, so this is a demonstration, not a proof.",
+   "clue": "Does checking three cases cover every case?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo claims that n² + n + 11 is prime for every whole number n. He tests n = 1 to 5 and gets primes each time. Then n = 11 gives 143 = 11 × 13. What does this show?",
+   "opts": [
+    "The claim is false, as 143 is a counterexample",
+    "The claim is proved, as five cases were prime",
+    "The claim is true, as n = 11 is only one case",
+    "The claim is proved for n up to 11 only"
+   ],
+   "why": "One case that fails is enough to show a claim is false. The five earlier cases only demonstrated it and could not prove it. Here n = 11 gives 121 + 11 + 11 = 143, which is not prime.",
+   "clue": "How many failing cases does it take to disprove a claim?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Demonstrated the claim in three cases",
+   "also_right": []
+  },
+  "b": {
+   "best": "The claim is false, as 143 is a counterexample",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first bullet refers to 'the claim about odd numbers' before any claim is stated. The claim (the sum of two odd numbers is even) only appears in the final example, so a student may not know which claim is meant."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question and options refer to 'the claim' without saying what it is. Stating 'the claim that the sum of two odd numbers is always even' would remove the ambiguity."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers check out (n = 1 to 5 give primes, and 143 = 11 × 13). Two minor wording issues: the card and question a refer to 'the claim' without stating it first."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The first bullet refers to 'the claim about odd numbers' before any claim is stated. The claim (the sum of two odd numbers is even) only appears in the final example, so a student may not know which claim is meant.",
+  "Question a, wording: The question and options refer to 'the claim' without saying what it is. Stating 'the claim that the sum of two odd numbers is always even' would remove the ambiguity."
+ ],
+ "proposal": {
+  "title": "Demonstration and proof",
+  "card": [
+   [
+    "Demonstration",
+    "shows a claim is true in one or a few cases. For the claim that the sum of two odd numbers is always even, checking that 3 + 5 = 8 is a demonstration."
+   ],
+   [
+    "Proof",
+    "uses logical steps from known facts to show a claim is true in every case. Each step gives a reason."
+   ],
+   "Many true examples do not make a proof. One case that fails, called a counterexample, is enough to show a claim is false.",
+   "Example: any odd number is 2n + 1 and any other odd number is 2m + 1. Their sum is 2n + 2m + 2 = 2(n + m + 1), which is a multiple of 2. So the sum of two odd numbers is always even."
+  ],
+  "remember": "Examples can demonstrate a claim. Only logical steps from known facts prove it for all cases.",
+  "a": {
+   "q": "Priya tests the claim that the sum of two odd numbers is always even. She finds 3 + 5, 7 + 9 and 11 + 13 are all even. What has she done?",
+   "opts": [
+    "Demonstrated the claim in three cases",
+    "Proved the claim for all odd numbers",
+    "Found a counterexample to the claim",
+    "Proved the claim by testing three cases"
+   ],
+   "why": "Three true cases show the claim works for those numbers only. They do not cover every pair of odd numbers, so this is a demonstration, not a proof. A proof needs logical steps, such as writing the odd numbers as 2n + 1 and 2m + 1.",
+   "clue": "Does checking three cases cover every pair of odd numbers?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo claims that n² + n + 11 is prime for every whole number n. He tests n = 1 to 5 and gets primes each time. Then n = 11 gives 143 = 11 × 13. What does this show?",
+   "opts": [
+    "The claim is false, as 143 is a counterexample",
+    "The claim is proved, as five cases were prime",
+    "The claim is true, as n = 11 is only one case",
+    "The claim is proved for n up to 11 only"
+   ],
+   "why": "One case that fails is enough to show a claim is false. The five earlier cases only demonstrated it and could not prove it. Here n = 11 gives 121 + 11 + 11 = 143, which is not prime.",
+   "clue": "How many failing cases does it take to disprove a claim?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:53Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first bullet refers to 'the claim about odd numbers' before any claim is stated. The claim (the sum of two odd numbers is even) only appears in the final example, so a student may not know which claim is meant."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question and options refer to 'the claim' without saying what it is. Stating 'the claim that the sum of two odd numbers is always even' would remove the ambiguity."
+   }
+  ],
+  "flags": [
+   "Card, wording: The first bullet refers to 'the claim about odd numbers' before any claim is stated. The claim (the sum of two odd numbers is even) only appears in the final example, so a student may not know which claim is meant.",
+   "Question a, wording: The question and options refer to 'the claim' without saying what it is. Stating 'the claim that the sum of two odd numbers is always even' would remove the ambiguity."
+  ]
+ },
+ "final": {
+  "title": "Demonstration and proof",
+  "card": [
+   [
+    "Demonstration",
+    "shows a claim is true in one or a few cases. For the claim that the sum of two odd numbers is always even, checking that 3 + 5 = 8 is a demonstration."
+   ],
+   [
+    "Proof",
+    "uses logical steps from known facts to show a claim is true in every case. Each step gives a reason."
+   ],
+   "Many true examples do not make a proof. One case that fails, called a counterexample, is enough to show a claim is false.",
+   "Example: any odd number is 2n + 1 and any other odd number is 2m + 1. Their sum is 2n + 2m + 2 = 2(n + m + 1), which is a multiple of 2. So the sum of two odd numbers is always even."
+  ],
+  "remember": "Examples can demonstrate a claim. Only logical steps from known facts prove it for all cases.",
+  "a": {
+   "q": "Priya tests the claim that the sum of two odd numbers is always even. She finds 3 + 5, 7 + 9 and 11 + 13 are all even. What has she done?",
+   "opts": [
+    "Demonstrated the claim in three cases",
+    "Proved the claim for all odd numbers",
+    "Found a counterexample to the claim",
+    "Proved the claim by testing three cases"
+   ],
+   "why": "Three true cases show the claim works for those numbers only. They do not cover every pair of odd numbers, so this is a demonstration, not a proof. A proof needs logical steps, such as writing the odd numbers as 2n + 1 and 2m + 1.",
+   "clue": "Does checking three cases cover every pair of odd numbers?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo claims that n² + n + 11 is prime for every whole number n. He tests n = 1 to 5 and gets primes each time. Then n = 11 gives 143 = 11 × 13. What does this show?",
+   "opts": [
+    "The claim is false, as 143 is a counterexample",
+    "The claim is proved, as five cases were prime",
+    "The claim is true, as n = 11 is only one case",
+    "The claim is proved for n up to 11 only"
+   ],
+   "why": "One case that fails is enough to show a claim is false. The five earlier cases only demonstrated it and could not prove it. Here n = 11 gives 121 + 11 + 11 = 143, which is not prime.",
+   "clue": "How many failing cases does it take to disprove a claim?"
+  }
+ },
+ "cleared_by": "auto"
+}

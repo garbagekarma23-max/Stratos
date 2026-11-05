@@ -1,0 +1,247 @@
+{
+ "id": "sci-mitosis-meiosis",
+ "title": "Mitosis and meiosis",
+ "brief": "315087157a10",
+ "shortlist": [
+  [
+   "bio-meiosis-2",
+   0.223
+  ],
+  [
+   "bio-meiosis",
+   0.207
+  ],
+  [
+   "bio-stages-mitosis",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:11Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:32Z write: done",
+  "2026-11-04T10:08:05Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00531,
+  "check": 0.0149,
+  "fix": 0.01788,
+  "recheck": 0.00901
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point compares mitosis and meiosis, but the bank points cover only meiosis or only the stages of mitosis, so no single point teaches both at the Year 10 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Mitosis and meiosis",
+  "card": [
+   [
+    "Mitosis",
+    "one cell divides once to make two cells. Each has the same chromosomes and genes as the parent cell. It is used for growth and to repair damaged tissue."
+   ],
+   [
+    "Meiosis",
+    "one cell divides twice to make four gametes, which are sex cells such as sperm and egg. Each gamete has half the usual number of chromosomes."
+   ],
+   "The four gametes from meiosis differ from one another, so offspring differ from their parents and from each other.",
+   "When a sperm and an egg join, the full chromosome number is restored. Humans have 46 chromosomes in body cells and 23 in each gamete."
+  ],
+  "remember": "Mitosis copies a cell for growth and repair. Meiosis shuffles and halves it to make gametes.",
+  "a": {
+   "q": "A skin cell on Jai's knee divides to heal a graze. Which process makes the new skin cells, and how do they compare with the parent cell?",
+   "opts": [
+    "Mitosis, and they are identical to it",
+    "Meiosis, and they are identical to it",
+    "Mitosis, and they have half its chromosomes",
+    "Meiosis, and they have half its chromosomes"
+   ],
+   "why": "Repairing tissue is done by mitosis, which makes cells identical to the parent cell. Meiosis makes gametes with half the chromosomes, but skin repair does not need gametes.",
+   "clue": "Think about which process is used to repair tissue."
+  },
+  "b": {
+   "d": 3,
+   "q": "A human egg cell is made in an ovary. How many chromosomes does it have, and why can it differ from the mother's other egg cells?",
+   "opts": [
+    "23, because meiosis halves the number and mixes genes",
+    "46, because meiosis copies the cell without changing it",
+    "23, because mitosis halves the number of chromosomes",
+    "46, because mitosis makes cells that all differ"
+   ],
+   "why": "Gametes are made by meiosis, which halves the chromosome number to 23 and makes each gamete different. Mitosis keeps the number at 46 and makes identical cells, so it does not make gametes.",
+   "clue": "Which process makes gametes, and what does it do to the number?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Mitosis, and they are identical to it",
+   "also_right": []
+  },
+  "b": {
+   "best": "23, because meiosis halves the number and mixes genes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says meiosis makes four gametes 'such as sperm and egg'. In human females, meiosis makes one egg and up to three small polar bodies, not four eggs. Question b is about an egg cell, so students may wrongly learn that one cell makes four eggs. A short qualifier, such as 'in males, four sperm', would fix this."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The right option says meiosis 'mixes genes', but the card only says the gametes differ and never explains that genes are mixed or shuffled. Only the remember line says 'shuffles'. A student can still find the answer by elimination, but the reason it gives goes beyond what the card teaches."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and have one right answer each. The card's 'four gametes such as sperm and egg' wrongly implies that one meiosis makes four eggs in humans. Question b's 'mixes genes' goes slightly beyond what the card teaches."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says meiosis makes four gametes 'such as sperm and egg'. In human females, meiosis makes one egg and up to three small polar bodies, not four eggs. Question b is about an egg cell, so students may wrongly learn that one cell makes four eggs. A short qualifier, such as 'in males, four sperm', would fix this.",
+  "Question b, level: The right option says meiosis 'mixes genes', but the card only says the gametes differ and never explains that genes are mixed or shuffled. Only the remember line says 'shuffles'. A student can still find the answer by elimination, but the reason it gives goes beyond what the card teaches."
+ ],
+ "proposal": {
+  "title": "Mitosis and meiosis",
+  "card": [
+   [
+    "Mitosis",
+    "one cell divides once to make two cells. Each has the same chromosomes and genes as the parent cell. It is used for growth and to repair damaged tissue."
+   ],
+   [
+    "Meiosis",
+    "one cell divides twice to make gametes, which are sex cells with half the usual number of chromosomes. In males it makes four sperm. In females it makes one egg, plus tiny cells that break down."
+   ],
+   "During meiosis, the chromosomes are shuffled and the genes on them are mixed. So each gamete gets a different mix of genes, and offspring differ from their parents and from each other.",
+   "When a sperm and an egg join, the full chromosome number is restored. Humans have 46 chromosomes in body cells and 23 in each gamete."
+  ],
+  "remember": "Mitosis copies a cell for growth and repair. Meiosis halves and mixes it to make gametes.",
+  "a": {
+   "q": "A skin cell on Jai's knee divides to heal a graze. Which process makes the new skin cells, and how do they compare with the parent cell?",
+   "opts": [
+    "Mitosis, and they are identical to it",
+    "Meiosis, and they are identical to it",
+    "Mitosis, and they have half its chromosomes",
+    "Meiosis, and they have half its chromosomes"
+   ],
+   "why": "Repairing tissue is done by mitosis, which makes cells identical to the parent cell. Meiosis makes gametes with half the chromosomes, but skin repair does not need gametes.",
+   "clue": "Think about which process is used to repair tissue."
+  },
+  "b": {
+   "d": 3,
+   "q": "A human egg cell is made in an ovary. How many chromosomes does it have, and why can it differ from the mother's other egg cells?",
+   "opts": [
+    "23, because meiosis halves the number and mixes genes",
+    "46, because meiosis copies the cell and keeps its genes",
+    "23, because mitosis halves the number and mixes genes",
+    "46, because mitosis copies the cell and mixes its genes"
+   ],
+   "why": "Egg cells are gametes, made by meiosis. Meiosis halves the chromosome number to 23 and mixes the genes, so each egg gets a different mix. Mitosis keeps the number at 46 and makes identical cells, so it does not make gametes.",
+   "clue": "Which process makes gametes, and what does it do to the number?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Mitosis, and they are identical to it",
+    "also_right": []
+   },
+   "b": {
+    "best": "23, because meiosis halves the number and mixes genes",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says meiosis makes four gametes 'such as sperm and egg'. In human females, meiosis makes one egg and up to three small polar bodies, not four eggs. Question b is about an egg cell, so students may wrongly learn that one cell makes four eggs. A short qualifier, such as 'in males, four sperm', would fix this."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The right option says meiosis 'mixes genes', but the card only says the gametes differ and never explains that genes are mixed or shuffled. Only the remember line says 'shuffles'. A student can still find the answer by elimination, but the reason it gives goes beyond what the card teaches."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says meiosis makes four gametes 'such as sperm and egg'. In human females, meiosis makes one egg and up to three small polar bodies, not four eggs. Question b is about an egg cell, so students may wrongly learn that one cell makes four eggs. A short qualifier, such as 'in males, four sperm', would fix this.",
+   "Question b, level: The right option says meiosis 'mixes genes', but the card only says the gametes differ and never explains that genes are mixed or shuffled. Only the remember line says 'shuffles'. A student can still find the answer by elimination, but the reason it gives goes beyond what the card teaches."
+  ]
+ },
+ "final": {
+  "title": "Mitosis and meiosis",
+  "card": [
+   [
+    "Mitosis",
+    "one cell divides once to make two cells. Each has the same chromosomes and genes as the parent cell. It is used for growth and to repair damaged tissue."
+   ],
+   [
+    "Meiosis",
+    "one cell divides twice to make gametes, which are sex cells with half the usual number of chromosomes. In males it makes four sperm. In females it makes one egg, plus tiny cells that break down."
+   ],
+   "During meiosis, the chromosomes are shuffled and the genes on them are mixed. So each gamete gets a different mix of genes, and offspring differ from their parents and from each other.",
+   "When a sperm and an egg join, the full chromosome number is restored. Humans have 46 chromosomes in body cells and 23 in each gamete."
+  ],
+  "remember": "Mitosis copies a cell for growth and repair. Meiosis halves and mixes it to make gametes.",
+  "a": {
+   "q": "A skin cell on Jai's knee divides to heal a graze. Which process makes the new skin cells, and how do they compare with the parent cell?",
+   "opts": [
+    "Mitosis, and they are identical to it",
+    "Meiosis, and they are identical to it",
+    "Mitosis, and they have half its chromosomes",
+    "Meiosis, and they have half its chromosomes"
+   ],
+   "why": "Repairing tissue is done by mitosis, which makes cells identical to the parent cell. Meiosis makes gametes with half the chromosomes, but skin repair does not need gametes.",
+   "clue": "Think about which process is used to repair tissue."
+  },
+  "b": {
+   "d": 3,
+   "q": "A human egg cell is made in an ovary. How many chromosomes does it have, and why can it differ from the mother's other egg cells?",
+   "opts": [
+    "23, because meiosis halves the number and mixes genes",
+    "46, because meiosis copies the cell and keeps its genes",
+    "23, because mitosis halves the number and mixes genes",
+    "46, because mitosis copies the cell and mixes its genes"
+   ],
+   "why": "Egg cells are gametes, made by meiosis. Meiosis halves the chromosome number to 23 and mixes the genes, so each egg gets a different mix. Mitosis keeps the number at 46 and makes identical cells, so it does not make gametes.",
+   "clue": "Which process makes gametes, and what does it do to the number?"
+  }
+ },
+ "cleared_by": "recheck"
+}

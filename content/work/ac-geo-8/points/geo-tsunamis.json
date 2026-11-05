@@ -1,0 +1,357 @@
+{
+ "id": "geo-tsunamis",
+ "title": "Tsunamis",
+ "brief": "60a7afd632d3",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:33Z new, write",
+  "2026-11-04T09:36:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:01Z write: done",
+  "2026-11-04T09:58:26Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.0048,
+  "check": 0.01397,
+  "fix": 0.01375,
+  "recheck": 0.01118
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one that uses the word 'tsunami', which is the card's title and topic, while the stem never names it. A student could pick it from the word alone without understanding that the waves travel across the ocean. Consider 'Waves set off by the earthquake travelled across the ocean'.",
+ "rejected": {
+  "title": "Tsunamis",
+  "card": [
+   "A tsunami is a series of huge waves that floods coasts. It is not a single wave.",
+   "Most tsunamis are set off by an undersea earthquake. The sea floor suddenly lifts or drops and moves the water above it.",
+   "The waves can cross a whole ocean and flood coasts thousands of kilometres from where the tsunami started.",
+   "In deep water the waves are low and hard to notice. Near the coast they slow down and rise, and water can surge far inland."
+  ],
+  "remember": "A tsunami is a set of waves usually set off by a sudden jolt to the sea floor, and it can hit far-away coasts.",
+  "a": {
+   "q": "What usually sets off a tsunami?",
+   "opts": [
+    "An undersea earthquake that moves the sea floor",
+    "Strong winds blowing across the open ocean",
+    "The pull of the Moon on the sea at high tide",
+    "A cyclone moving towards the coast"
+   ],
+   "why": "A sudden movement of the sea floor pushes the water above it and starts the waves. Strong winds make ordinary waves, not tsunamis, even when the sea looks rough.",
+   "clue": "Think about what suddenly moves the water from below."
+  },
+  "b": {
+   "d": 3,
+   "q": "An undersea earthquake strikes near Chile. Hours later, waves flood a harbour in Japan, and the sea was calm there when the earthquake happened. What best explains this?",
+   "opts": [
+    "The tsunami waves travelled across the ocean",
+    "The earthquake shook the harbour directly",
+    "Local winds in Japan whipped up large waves",
+    "The tide in Japan happened to be very high"
+   ],
+   "why": "A tsunami is a series of waves that can cross an ocean and flood coasts far from where it started. The harbour was calm at first because the waves had not yet arrived. By the time the earthquake's shaking reaches Japan, it is far too weak to cause flooding.",
+   "clue": "Notice how many hours passed before the water arrived."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the only one that uses the word 'tsunami', which is the card's title and topic, while the stem never names it. A student could pick it from the word alone without understanding that the waves travel across the ocean. Consider 'Waves set off by the earthquake travelled across the ocean'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Tsunamis",
+     "card": [
+      "A tsunami is a series of huge waves that floods coasts. It is not a single wave.",
+      "Most tsunamis are set off by an undersea earthquake. The sea floor suddenly lifts or drops and moves the water above it.",
+      "The waves can cross a whole ocean and flood coasts thousands of kilometres from where the tsunami started.",
+      "In deep water the waves are low and hard to notice. Near the coast they slow down and rise, and water can surge far inland."
+     ],
+     "remember": "A tsunami is a set of waves from a sudden jolt to the sea floor, and it can hit far-away coasts.",
+     "a": {
+      "q": "What usually sets off a tsunami?",
+      "opts": [
+       "An undersea earthquake that moves the sea floor",
+       "Strong winds blowing across the open ocean",
+       "The pull of the Moon on the sea at high tide",
+       "A cyclone moving towards the coast"
+      ],
+      "why": "A sudden movement of the sea floor pushes the water above it and starts the waves. Strong winds make ordinary waves, not tsunamis, even when the sea looks rough.",
+      "clue": "Think about what suddenly moves the water from below."
+     },
+     "b": {
+      "d": 3,
+      "q": "An undersea earthquake strikes near Chile. Hours later, waves flood a harbour in Japan, and the sea was calm there when the earthquake happened. What best explains this?",
+      "opts": [
+       "The tsunami waves travelled across the ocean",
+       "The earthquake shook the harbour directly",
+       "Local winds in Japan whipped up large waves",
+       "The tide in Japan happened to be very high"
+      ],
+      "why": "A tsunami is a series of waves that can cross an ocean and flood coasts far from where it started. The harbour was calm at first because the waves had not yet arrived. Shaking from the earthquake does not reach that far.",
+      "clue": "The harbour was far from the earthquake, so something must have travelled."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "An undersea earthquake that moves the sea floor",
+      "also_right": []
+     },
+     "b": {
+      "best": "The tsunami waves travelled across the ocean",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The card says 'most' tsunamis come from undersea earthquakes, but the remember line defines every tsunami as coming 'from a sudden jolt to the sea floor'. It drops the qualifier, though landslides and volcanic eruptions can also cause tsunamis. Add 'usually'."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue says 'something must have travelled', which echoes the word 'travelled' in the right option and gives the answer away."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says 'Shaking from the earthquake does not reach that far.' Seismic waves from a large Chilean earthquake do reach Japan and can be recorded there, just not as damaging shaking, and they arrive within minutes, not hours. Reword to say the shaking is too weak that far away to cause flooding."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The remember line drops 'usually' and implies all tsunamis come from sea-floor jolts. Question b's clue gives the answer away, and its why wrongly says earthquake shaking cannot reach Japan from Chile."
+    },
+    "flags": [
+     "Remember, other: The card says 'most' tsunamis come from undersea earthquakes, but the remember line defines every tsunami as coming 'from a sudden jolt to the sea floor'. It drops the qualifier, though landslides and volcanic eruptions can also cause tsunamis. Add 'usually'.",
+     "Question b, other: The clue says 'something must have travelled', which echoes the word 'travelled' in the right option and gives the answer away.",
+     "Question b, fact: The why says 'Shaking from the earthquake does not reach that far.' Seismic waves from a large Chilean earthquake do reach Japan and can be recorded there, just not as damaging shaking, and they arrive within minutes, not hours. Reword to say the shaking is too weak that far away to cause flooding."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Tsunamis",
+     "card": [
+      "A tsunami is a series of huge waves that floods coasts. It is not a single wave.",
+      "Most tsunamis are set off by an undersea earthquake. The sea floor suddenly lifts or drops and moves the water above it.",
+      "The waves can cross a whole ocean and flood coasts thousands of kilometres from where the tsunami started.",
+      "In deep water the waves are low and hard to notice. Near the coast they slow down and rise, and water can surge far inland."
+     ],
+     "remember": "A tsunami is a set of waves usually set off by a sudden jolt to the sea floor, and it can hit far-away coasts.",
+     "a": {
+      "q": "What usually sets off a tsunami?",
+      "opts": [
+       "An undersea earthquake that moves the sea floor",
+       "Strong winds blowing across the open ocean",
+       "The pull of the Moon on the sea at high tide",
+       "A cyclone moving towards the coast"
+      ],
+      "why": "A sudden movement of the sea floor pushes the water above it and starts the waves. Strong winds make ordinary waves, not tsunamis, even when the sea looks rough.",
+      "clue": "Think about what suddenly moves the water from below."
+     },
+     "b": {
+      "d": 3,
+      "q": "An undersea earthquake strikes near Chile. Hours later, waves flood a harbour in Japan, and the sea was calm there when the earthquake happened. What best explains this?",
+      "opts": [
+       "The tsunami waves travelled across the ocean",
+       "The earthquake shook the harbour directly",
+       "Local winds in Japan whipped up large waves",
+       "The tide in Japan happened to be very high"
+      ],
+      "why": "A tsunami is a series of waves that can cross an ocean and flood coasts far from where it started. The harbour was calm at first because the waves had not yet arrived. By the time the earthquake's shaking reaches Japan, it is far too weak to cause flooding.",
+      "clue": "Notice how many hours passed before the water arrived."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "An undersea earthquake that moves the sea floor",
+       "also_right": []
+      },
+      "b": {
+       "best": "The tsunami waves travelled across the ocean",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one that uses the word 'tsunami', which is the card's title and topic, while the stem never names it. A student could pick it from the word alone without understanding that the waves travel across the ocean. Consider 'Waves set off by the earthquake travelled across the ocean'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and answers check out. In question b the right option is the only one that says 'tsunami', which gives the answer away."
+     },
+     "flags": [
+      "Question b, wording: The right option is the only one that uses the word 'tsunami', which is the card's title and topic, while the stem never names it. A student could pick it from the word alone without understanding that the waves travel across the ocean. Consider 'Waves set off by the earthquake travelled across the ocean'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Tsunamis",
+    "card": [
+     "A tsunami is a series of huge waves that floods coasts. It is not a single wave.",
+     "Most tsunamis are set off by an undersea earthquake. The sea floor suddenly lifts or drops and moves the water above it.",
+     "The waves can cross a whole ocean and flood coasts thousands of kilometres from where the tsunami started.",
+     "In deep water the waves are low and hard to notice. Near the coast they slow down and rise, and water can surge far inland."
+    ],
+    "remember": "A tsunami is a set of waves usually set off by a sudden jolt to the sea floor, and it can hit far-away coasts.",
+    "a": {
+     "q": "What most often sets off a tsunami?",
+     "opts": [
+      "An undersea earthquake moving the sea floor",
+      "Strong winds blowing across the open ocean",
+      "The pull of the Moon on the sea at high tide",
+      "A cyclone pushing the sea towards the coast"
+     ],
+     "why": "A sudden movement of the sea floor pushes the water above it and starts the waves. Strong winds make ordinary waves, not tsunamis, even when the sea looks rough.",
+     "clue": "Think about what suddenly moves the water from below."
+    },
+    "b": {
+     "d": 3,
+     "q": "An undersea earthquake strikes off the coast of Chile. Many hours later, waves flood a harbour in Japan, where the sea had been calm. What best explains this?",
+     "opts": [
+      "Waves set off by the earthquake crossed the ocean",
+      "The earthquake's shaking hit the harbour directly",
+      "Local winds in Japan whipped up large waves",
+      "The tide in Japan happened to be very high"
+     ],
+     "why": "The earthquake set off a series of waves that can cross an ocean and flood coasts far from where they started. The harbour was calm at first because the waves had not yet arrived. By the time the earthquake's shaking reaches Japan, it is far too weak to cause flooding.",
+     "clue": "Notice how many hours passed before the water arrived."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "An undersea earthquake moving the sea floor",
+     "also_right": []
+    },
+    "b": {
+     "best": "Waves set off by the earthquake crossed the ocean",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Tsunamis",
+  "card": [
+   "A tsunami is a series of huge waves that floods coasts. It is not a single wave.",
+   "Most tsunamis are set off by an undersea earthquake. The sea floor suddenly lifts or drops and moves the water above it.",
+   "The waves can cross a whole ocean and flood coasts thousands of kilometres from where the tsunami started.",
+   "In deep water the waves are low and hard to notice. Near the coast they slow down and rise, and water can surge far inland."
+  ],
+  "remember": "A tsunami is a set of waves usually set off by a sudden jolt to the sea floor, and it can hit far-away coasts.",
+  "a": {
+   "q": "What most often sets off a tsunami?",
+   "opts": [
+    "An undersea earthquake moving the sea floor",
+    "Strong winds blowing across the open ocean",
+    "The pull of the Moon on the sea at high tide",
+    "A cyclone pushing the sea towards the coast"
+   ],
+   "why": "A sudden movement of the sea floor pushes the water above it and starts the waves. Strong winds make ordinary waves, not tsunamis, even when the sea looks rough.",
+   "clue": "Think about what suddenly moves the water from below."
+  },
+  "b": {
+   "d": 3,
+   "q": "An undersea earthquake strikes off the coast of Chile. Many hours later, waves flood a harbour in Japan, where the sea had been calm. What best explains this?",
+   "opts": [
+    "Waves set off by the earthquake crossed the ocean",
+    "The earthquake's shaking hit the harbour directly",
+    "Local winds in Japan whipped up large waves",
+    "The tide in Japan happened to be very high"
+   ],
+   "why": "The earthquake set off a series of waves that can cross an ocean and flood coasts far from where they started. The harbour was calm at first because the waves had not yet arrived. By the time the earthquake's shaking reaches Japan, it is far too weak to cause flooding.",
+   "clue": "Notice how many hours passed before the water arrived."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An undersea earthquake moving the sea floor",
+   "also_right": []
+  },
+  "b": {
+   "best": "Waves set off by the earthquake crossed the ocean",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Tsunamis",
+  "card": [
+   "A tsunami is a series of huge waves that floods coasts. It is not a single wave.",
+   "Most tsunamis are set off by an undersea earthquake. The sea floor suddenly lifts or drops and moves the water above it.",
+   "The waves can cross a whole ocean and flood coasts thousands of kilometres from where the tsunami started.",
+   "In deep water the waves are low and hard to notice. Near the coast they slow down and rise, and water can surge far inland."
+  ],
+  "remember": "A tsunami is a set of waves usually set off by a sudden jolt to the sea floor, and it can hit far-away coasts.",
+  "a": {
+   "q": "What most often sets off a tsunami?",
+   "opts": [
+    "An undersea earthquake moving the sea floor",
+    "Strong winds blowing across the open ocean",
+    "The pull of the Moon on the sea at high tide",
+    "A cyclone pushing the sea towards the coast"
+   ],
+   "why": "A sudden movement of the sea floor pushes the water above it and starts the waves. Strong winds make ordinary waves, not tsunamis, even when the sea looks rough.",
+   "clue": "Think about what suddenly moves the water from below."
+  },
+  "b": {
+   "d": 3,
+   "q": "An undersea earthquake strikes off the coast of Chile. Many hours later, waves flood a harbour in Japan, where the sea had been calm. What best explains this?",
+   "opts": [
+    "Waves set off by the earthquake crossed the ocean",
+    "The earthquake's shaking hit the harbour directly",
+    "Local winds in Japan whipped up large waves",
+    "The tide in Japan happened to be very high"
+   ],
+   "why": "The earthquake set off a series of waves that can cross an ocean and flood coasts far from where they started. The harbour was calm at first because the waves had not yet arrived. By the time the earthquake's shaking reaches Japan, it is far too weak to cause flooding.",
+   "clue": "Notice how many hours passed before the water arrived."
+  }
+ },
+ "checked_by": "claude-code"
+}

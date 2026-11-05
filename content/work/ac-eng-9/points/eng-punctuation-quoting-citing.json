@@ -1,0 +1,243 @@
+{
+ "id": "eng-punctuation-quoting-citing",
+ "title": "Punctuation for quoting and citing",
+ "brief": "458aa54ea246",
+ "shortlist": [
+  [
+   "eng-embedding-evidence",
+   0.234
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:30Z new, match",
+  "2026-11-04T09:36:49Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:58Z write: done",
+  "2026-11-04T09:58:24Z check: flagged",
+  "2026-11-04T10:08:00Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00506,
+  "check": 0.00914,
+  "fix": 0.01348,
+  "recheck": 0.00822
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches how to embed short quotations into your own sentences, while the new point teaches the punctuation conventions for quoting, omitting words, altering words and citing sources, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Punctuation for quoting and citing",
+  "card": [
+   [
+    "Quotation marks",
+    "Quotation marks go around words taken exactly from a source. They show the reader which words are borrowed and which are your own."
+   ],
+   [
+    "Ellipsis",
+    "An ellipsis is three dots (...). It shows that some words inside a quotation have been left out."
+   ],
+   [
+    "Square brackets",
+    "Square brackets [ ] show that a writer has changed or added a word inside a quotation, such as swapping \"he\" for [the captain] so the meaning is clear."
+   ],
+   [
+    "Citation",
+    "A citation tells the reader where the words came from, such as the author's name and a page number. It lets the reader find the source."
+   ]
+  ],
+  "remember": "Each mark has a job: borrow, omit, change or credit the source.",
+  "a": {
+   "q": "A student writes: The report said the pool \"will open ... in spring\". What does the ellipsis show?",
+   "opts": [
+    "Some words were left out of the quotation",
+    "A word in the quotation was changed",
+    "The words came from a different source",
+    "The writer is unsure what the report said"
+   ],
+   "why": "An ellipsis marks words cut from inside a quotation. Square brackets are the mark for a changed word, so the second option mixes up the two jobs.",
+   "clue": "Think about what the three dots stand in for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Original: \"She ran the whole race.\" Jai needs to write about the runner as Mia, using her name in the quote. Which version is correct?",
+   "opts": [
+    "\"[Mia] ran the whole race\" (Chen 12)",
+    "\"Mia\" ran the whole race (Chen 12)",
+    "\"...Mia ran the whole race\" (Chen 12)",
+    "\"(Mia) ran the whole race\" (Chen 12)"
+   ],
+   "why": "Square brackets show that Jai changed \"She\" to Mia, and the citation gives the author and page. An ellipsis is wrong because no words were left out. Round brackets are not the mark for changed words.",
+   "clue": "Which mark tells the reader a word was swapped?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Some words were left out of the quotation",
+   "also_right": []
+  },
+  "b": {
+   "best": "\"[Mia] ran the whole race\" (Chen 12)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'the second option mixes up the two jobs', but options are shown in random order. In this order the 'word was changed' option is fourth, so the reference to a position is wrong and confusing. Name the option by its content instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clearly right answer. The only fix needed is in why (a), which refers to 'the second option' even though option order is shuffled."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'the second option mixes up the two jobs', but options are shown in random order. In this order the 'word was changed' option is fourth, so the reference to a position is wrong and confusing. Name the option by its content instead."
+ ],
+ "proposal": {
+  "title": "Punctuation for quoting and citing",
+  "card": [
+   [
+    "Quotation marks",
+    "Quotation marks go around words taken exactly from a source. They show the reader which words are borrowed and which are your own."
+   ],
+   [
+    "Ellipsis",
+    "An ellipsis is three dots (...). It shows that some words inside a quotation have been left out."
+   ],
+   [
+    "Square brackets",
+    "Square brackets [ ] show that a writer has changed or added a word inside a quotation, such as swapping \"he\" for [the captain] so the meaning is clear."
+   ],
+   [
+    "Citation",
+    "A citation tells the reader where the words came from, such as the author's name and a page number. It lets the reader find the source."
+   ]
+  ],
+  "remember": "Each mark has a job: borrow, omit, change or credit the source.",
+  "a": {
+   "q": "A student writes: The report said the pool \"will open ... in spring\". What does the ellipsis show?",
+   "opts": [
+    "Some words were left out of the quotation",
+    "A word in the quotation was changed",
+    "The words came from a different source",
+    "The writer is unsure what the report said"
+   ],
+   "why": "An ellipsis marks words cut from inside a quotation. The option saying a word was changed is tempting, but that is the job of square brackets, not the three dots.",
+   "clue": "Think about what the three dots stand in for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Original, from page 12 of a book by Chen: \"She ran the whole race.\" Jai wants the quote to name the runner, Mia. Which version is correct?",
+   "opts": [
+    "\"[Mia] ran the whole race\" (Chen 12)",
+    "\"Mia\" ran the whole race (Chen 12)",
+    "\"...Mia ran the whole race\" (Chen 12)",
+    "\"(Mia) ran the whole race\" (Chen 12)"
+   ],
+   "why": "Square brackets show that Jai changed \"She\" to Mia, and the citation gives the author and page. An ellipsis is wrong because no words were left out. Round brackets are not the mark for changed words.",
+   "clue": "Which mark tells the reader a word was swapped?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Some words were left out of the quotation",
+    "also_right": []
+   },
+   "b": {
+    "best": "\"[Mia] ran the whole race\" (Chen 12)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'the second option mixes up the two jobs', but options are shown in random order. In this order the 'word was changed' option is fourth, so the reference to a position is wrong and confusing. Name the option by its content instead."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'the second option mixes up the two jobs', but options are shown in random order. In this order the 'word was changed' option is fourth, so the reference to a position is wrong and confusing. Name the option by its content instead."
+  ]
+ },
+ "final": {
+  "title": "Punctuation for quoting and citing",
+  "card": [
+   [
+    "Quotation marks",
+    "Quotation marks go around words taken exactly from a source. They show the reader which words are borrowed and which are your own."
+   ],
+   [
+    "Ellipsis",
+    "An ellipsis is three dots (...). It shows that some words inside a quotation have been left out."
+   ],
+   [
+    "Square brackets",
+    "Square brackets [ ] show that a writer has changed or added a word inside a quotation, such as swapping \"he\" for [the captain] so the meaning is clear."
+   ],
+   [
+    "Citation",
+    "A citation tells the reader where the words came from, such as the author's name and a page number. It lets the reader find the source."
+   ]
+  ],
+  "remember": "Each mark has a job: borrow, omit, change or credit the source.",
+  "a": {
+   "q": "A student writes: The report said the pool \"will open ... in spring\". What does the ellipsis show?",
+   "opts": [
+    "Some words were left out of the quotation",
+    "A word in the quotation was changed",
+    "The words came from a different source",
+    "The writer is unsure what the report said"
+   ],
+   "why": "An ellipsis marks words cut from inside a quotation. The option saying a word was changed is tempting, but that is the job of square brackets, not the three dots.",
+   "clue": "Think about what the three dots stand in for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Original, from page 12 of a book by Chen: \"She ran the whole race.\" Jai wants the quote to name the runner, Mia. Which version is correct?",
+   "opts": [
+    "\"[Mia] ran the whole race\" (Chen 12)",
+    "\"Mia\" ran the whole race (Chen 12)",
+    "\"...Mia ran the whole race\" (Chen 12)",
+    "\"(Mia) ran the whole race\" (Chen 12)"
+   ],
+   "why": "Square brackets show that Jai changed \"She\" to Mia, and the citation gives the author and page. An ellipsis is wrong because no words were left out. Round brackets are not the mark for changed words.",
+   "clue": "Which mark tells the reader a word was swapped?"
+  }
+ },
+ "cleared_by": "recheck"
+}

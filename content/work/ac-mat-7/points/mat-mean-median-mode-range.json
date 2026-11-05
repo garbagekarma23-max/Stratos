@@ -1,0 +1,255 @@
+{
+ "id": "mat-mean-median-mode-range",
+ "title": "Mean, median, mode and range",
+ "brief": "c9124f69c54d",
+ "shortlist": [
+  [
+   "mat-mean-median-range-context",
+   0.221
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:08Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00598,
+  "check": 0.01013,
+  "fix": 0.01755,
+  "recheck": 0.00602
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers mean, median and range but is written for senior secondary (Victorian Units 1 and 2) and adds IQR and outlier discussion, which is a different depth from Year 7, and it does not teach mode at all.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Mean, median, mode and range",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many values there are."
+   ],
+   [
+    "Median",
+    "Put the values in order. The median is the middle one. If there are two middle values, find the number halfway between them."
+   ],
+   [
+    "Mode",
+    "The value that appears most often."
+   ],
+   [
+    "Range",
+    "Highest value minus lowest value. Example: for 3, 5, 5, 6, 11 the mean is 30 ÷ 5 = 6, the median is 5, the mode is 5 and the range is 11 − 3 = 8."
+   ]
+  ],
+  "remember": "Mean shares the total out evenly. Median is the middle. Mode is the most common. Range is the spread.",
+  "a": {
+   "q": "Sam scored 4, 7, 7, 9 and 13 in five quizzes. What is the mean score?",
+   "opts": [
+    "8",
+    "7",
+    "9",
+    "10"
+   ],
+   "why": "The total is 4 + 7 + 7 + 9 + 13 = 40, and 40 ÷ 5 = 8. The answer 7 is the median and the mode, not the mean.",
+   "clue": "Add all five scores, then divide by 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess counted the pencils in six pencil cases: 12, 5, 9, 5, 14, 9. What is the median number of pencils?",
+   "opts": [
+    "9",
+    "5",
+    "9.5",
+    "8"
+   ],
+   "why": "In order the values are 5, 5, 9, 9, 12, 14. The two middle values are both 9, so the median is 9. The answer 5 is tempting but is the lowest value, and 8 would be the mean, not the median.",
+   "clue": "Put the values in order first, then find the middle two."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "8",
+   "also_right": []
+  },
+  "b": {
+   "best": "9",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says 8 would be the mean, but the mean is 54 ÷ 6 = 9, not 8. None of the options is the mean worked out wrongly as 8 here, so this explanation teaches a false calculation."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The mean of this data set is also 9, the same as the median, so a student who mixes up mean and median still gets the right answer. The two middle values are also equal, so the halfway rule from the card is never really tested. A data set with a mean that differs from the median, and two different middle values, would test the idea properly."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. Question b's explanation wrongly says the mean is 8, when it is 9 and equal to the median, so the question cannot tell mean from median and should use different data."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says 8 would be the mean, but the mean is 54 ÷ 6 = 9, not 8. None of the options is the mean worked out wrongly as 8 here, so this explanation teaches a false calculation.",
+  "Question b, other: The mean of this data set is also 9, the same as the median, so a student who mixes up mean and median still gets the right answer. The two middle values are also equal, so the halfway rule from the card is never really tested. A data set with a mean that differs from the median, and two different middle values, would test the idea properly."
+ ],
+ "proposal": {
+  "title": "Mean, median, mode and range",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many values there are."
+   ],
+   [
+    "Median",
+    "Put the values in order. The median is the middle one. If there are two middle values, add them and divide by 2 to find the number halfway between them."
+   ],
+   [
+    "Mode",
+    "The value that appears most often."
+   ],
+   [
+    "Range",
+    "Highest value minus lowest value. Example: for 3, 5, 5, 6, 11 the mean is 30 ÷ 5 = 6, the median is 5, the mode is 5 and the range is 11 − 3 = 8."
+   ]
+  ],
+  "remember": "Mean shares the total out evenly. Median is the middle. Mode is the most common. Range is the spread.",
+  "a": {
+   "q": "Sam scored 4, 7, 7, 9 and 13 in five quizzes. What is the mean score?",
+   "opts": [
+    "8",
+    "7",
+    "9",
+    "10"
+   ],
+   "why": "The total is 4 + 7 + 7 + 9 + 13 = 40, and 40 ÷ 5 = 8. The answer 7 is the median and the mode, not the mean.",
+   "clue": "Add all five scores, then divide by 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess counted the pencils in six pencil cases: 11, 2, 9, 16, 4, 6. What is the median number of pencils?",
+   "opts": [
+    "7.5",
+    "8",
+    "12.5",
+    "6"
+   ],
+   "why": "In order the values are 2, 4, 6, 9, 11, 16. The two middle values are 6 and 9, and (6 + 9) ÷ 2 = 7.5. The answer 8 is tempting but it is the mean, 48 ÷ 6, and 12.5 comes from using the middle of the list before putting it in order.",
+   "clue": "Put the values in order first, then find the middle two."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "8",
+    "also_right": []
+   },
+   "b": {
+    "best": "7.5",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says 8 would be the mean, but the mean is 54 ÷ 6 = 9, not 8. None of the options is the mean worked out wrongly as 8 here, so this explanation teaches a false calculation."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The mean of this data set is also 9, the same as the median, so a student who mixes up mean and median still gets the right answer. The two middle values are also equal, so the halfway rule from the card is never really tested. A data set with a mean that differs from the median, and two different middle values, would test the idea properly."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says 8 would be the mean, but the mean is 54 ÷ 6 = 9, not 8. None of the options is the mean worked out wrongly as 8 here, so this explanation teaches a false calculation.",
+   "Question b, other: The mean of this data set is also 9, the same as the median, so a student who mixes up mean and median still gets the right answer. The two middle values are also equal, so the halfway rule from the card is never really tested. A data set with a mean that differs from the median, and two different middle values, would test the idea properly."
+  ]
+ },
+ "final": {
+  "title": "Mean, median, mode and range",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many values there are."
+   ],
+   [
+    "Median",
+    "Put the values in order. The median is the middle one. If there are two middle values, add them and divide by 2 to find the number halfway between them."
+   ],
+   [
+    "Mode",
+    "The value that appears most often."
+   ],
+   [
+    "Range",
+    "Highest value minus lowest value. Example: for 3, 5, 5, 6, 11 the mean is 30 ÷ 5 = 6, the median is 5, the mode is 5 and the range is 11 − 3 = 8."
+   ]
+  ],
+  "remember": "Mean shares the total out evenly. Median is the middle. Mode is the most common. Range is the spread.",
+  "a": {
+   "q": "Sam scored 4, 7, 7, 9 and 13 in five quizzes. What is the mean score?",
+   "opts": [
+    "8",
+    "7",
+    "9",
+    "10"
+   ],
+   "why": "The total is 4 + 7 + 7 + 9 + 13 = 40, and 40 ÷ 5 = 8. The answer 7 is the median and the mode, not the mean.",
+   "clue": "Add all five scores, then divide by 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess counted the pencils in six pencil cases: 11, 2, 9, 16, 4, 6. What is the median number of pencils?",
+   "opts": [
+    "7.5",
+    "8",
+    "12.5",
+    "6"
+   ],
+   "why": "In order the values are 2, 4, 6, 9, 11, 16. The two middle values are 6 and 9, and (6 + 9) ÷ 2 = 7.5. The answer 8 is tempting but it is the mean, 48 ÷ 6, and 12.5 comes from using the middle of the list before putting it in order.",
+   "clue": "Put the values in order first, then find the middle two."
+  }
+ },
+ "cleared_by": "recheck"
+}

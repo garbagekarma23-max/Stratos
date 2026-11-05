@@ -1,0 +1,373 @@
+{
+ "id": "ecb-inflation",
+ "title": "Inflation",
+ "brief": "1ade627bbf5f",
+ "shortlist": [
+  [
+   "e-cpi",
+   0.526
+  ],
+  [
+   "e-inflation",
+   0.324
+  ],
+  [
+   "eco-low-stable-inflation",
+   0.317
+  ],
+  [
+   "mat-inflation-purchasing-power",
+   0.306
+  ],
+  [
+   "eco-inflation-target",
+   0.3
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: done",
+  "2026-11-04T09:58:20Z check: flagged",
+  "2026-11-04T10:07:56Z fix: suggested",
+  "2026-11-04T17:58:49Z autoreview: picked as a spot check. It would have been cleared with the fix (b other)",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.00554,
+  "check": 0.0102,
+  "fix": 0.01196
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Measuring inflation, is broader and at a higher depth than this Year 10 point, covering index formulas, basket weighting, deflation and disinflation, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Inflation",
+  "card": [
+   "Inflation is a general rise in prices over time. It is about prices across the economy, not one item.",
+   "In Australia, inflation is measured by the consumer price index (CPI). The CPI tracks the cost of a basket of goods and services that households buy.",
+   "When prices rise in general, each dollar buys less than before. This is a fall in what money can buy.",
+   "The inflation rate is the percentage change in the CPI over a period, often a year."
+  ],
+  "remember": "Inflation is a general rise in prices, so each dollar buys less.",
+  "a": {
+   "q": "What does inflation mean for a dollar?",
+   "opts": [
+    "It buys less than before",
+    "It buys more than before",
+    "It buys the same as before",
+    "It becomes worth more to savers"
+   ],
+   "why": "When prices in general rise, the same dollar buys fewer goods and services. Buying more would happen if prices fell.",
+   "clue": "Think about what happens when prices rise."
+  },
+  "b": {
+   "d": 3,
+   "q": "In one year, the price of mangoes in Darwin jumps because of a poor harvest. Most other prices stay about the same. Is this inflation?",
+   "opts": [
+    "No, because prices in general have not risen",
+    "Yes, because one price has risen",
+    "Yes, because mangoes are in the CPI basket",
+    "No, because inflation only counts services"
+   ],
+   "why": "Inflation is a general rise in prices, not a rise in one item. A single price change that is not matched by others does not show inflation. Inflation counts goods as well as services.",
+   "clue": "Inflation is about prices in general."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It buys less than before",
+   "also_right": []
+  },
+  "b": {
+   "best": "No, because prices in general have not risen",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Inflation is about prices in general' repeats the exact phrase 'prices in general' from the right option. A student could match the words and pick it without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line and answers are accurate. The clue for question b echoes the wording of the right option ('prices in general'), which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Inflation is about prices in general' repeats the exact phrase 'prices in general' from the right option. A student could match the words and pick it without understanding the idea."
+ ],
+ "proposal": {
+  "title": "Inflation",
+  "card": [
+   "Inflation is a general rise in prices over time. It is about prices across the economy, not one item.",
+   "In Australia, inflation is measured by the consumer price index (CPI). The CPI tracks the cost of a basket of goods and services that households buy.",
+   "When prices rise in general, each dollar buys less than before. This is a fall in what money can buy.",
+   "The inflation rate is the percentage change in the CPI over a period, often a year."
+  ],
+  "remember": "Inflation is a general rise in prices, so each dollar buys less.",
+  "a": {
+   "q": "What does inflation mean for a dollar?",
+   "opts": [
+    "It buys less than before",
+    "It buys more than before",
+    "It buys the same as before",
+    "It becomes worth more to savers"
+   ],
+   "why": "When prices in general rise, the same dollar buys fewer goods and services. Buying more would happen if prices fell, not rose.",
+   "clue": "Think about what happens when prices rise."
+  },
+  "b": {
+   "d": 3,
+   "q": "In one year, the price of mangoes in Darwin jumps because of a poor harvest. Most other prices stay about the same. Is this inflation?",
+   "opts": [
+    "No, because prices in general have not risen",
+    "Yes, because one price has risen",
+    "Yes, because mangoes are in the CPI basket",
+    "No, because inflation only counts services"
+   ],
+   "why": "Inflation is a general rise in prices, not a rise in one item. Even if mangoes are in the CPI basket, one item going up while most others stay the same does not show a general rise. Inflation also counts goods as well as services.",
+   "clue": "How many prices went up this year?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:49Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Inflation is about prices in general' repeats the exact phrase 'prices in general' from the right option. A student could match the words and pick it without understanding the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Inflation is about prices in general' repeats the exact phrase 'prices in general' from the right option. A student could match the words and pick it without understanding the idea."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Inflation",
+  "card": [
+   "Inflation is a general rise in prices over time. It is about prices across the economy, not one item.",
+   "In Australia, inflation is measured by the consumer price index (CPI). The CPI tracks the cost of a basket of goods and services that households buy.",
+   "When prices rise in general, each dollar buys less than before. This is a fall in what money can buy.",
+   "The inflation rate is the percentage change in the CPI over a period, often a year."
+  ],
+  "remember": "Inflation is a general rise in prices, so each dollar buys less.",
+  "a": {
+   "q": "What does inflation mean for a dollar?",
+   "opts": [
+    "It buys less than before",
+    "It buys more than before",
+    "It buys the same as before",
+    "It becomes worth more to savers"
+   ],
+   "why": "When prices in general rise, the same dollar buys fewer goods and services. Buying more would happen if prices fell, not rose.",
+   "clue": "Think about what happens when prices rise."
+  },
+  "b": {
+   "d": 3,
+   "q": "In one year, the price of mangoes in Darwin jumps because of a poor harvest. Most other prices stay about the same. Is this inflation?",
+   "opts": [
+    "No, because prices in general have not risen",
+    "Yes, because one price has risen",
+    "Yes, because mangoes are in the CPI basket",
+    "No, because inflation only counts services"
+   ],
+   "why": "Inflation is a general rise in prices, not a rise in one item. Even if mangoes are in the CPI basket, one item going up while most others stay the same does not show a general rise. Inflation also counts goods as well as services.",
+   "clue": "How many prices went up this year?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The new clue for question b no longer repeats the right option's words. The facts about the CPI are right.",
+   "item": "52fdb1eff31326cf",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-inflation",
+    "title": "Inflation",
+    "brief": "1ade627bbf5f",
+    "shortlist": [
+     [
+      "e-cpi",
+      0.526
+     ],
+     [
+      "e-inflation",
+      0.324
+     ],
+     [
+      "eco-low-stable-inflation",
+      0.317
+     ],
+     [
+      "mat-inflation-purchasing-power",
+      0.306
+     ],
+     [
+      "eco-inflation-target",
+      0.3
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00033,
+     "write": 0.00554,
+     "check": 0.0102,
+     "fix": 0.01196
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, Measuring inflation, is broader and at a higher depth than this Year 10 point, covering index formulas, basket weighting, deflation and disinflation, so a new point is the safer match.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Inflation",
+     "card": [
+      "Inflation is a general rise in prices over time. It is about prices across the economy, not one item.",
+      "In Australia, inflation is measured by the consumer price index (CPI). The CPI tracks the cost of a basket of goods and services that households buy.",
+      "When prices rise in general, each dollar buys less than before. This is a fall in what money can buy.",
+      "The inflation rate is the percentage change in the CPI over a period, often a year."
+     ],
+     "remember": "Inflation is a general rise in prices, so each dollar buys less.",
+     "a": {
+      "q": "What does inflation mean for a dollar?",
+      "opts": [
+       "It buys less than before",
+       "It buys more than before",
+       "It buys the same as before",
+       "It becomes worth more to savers"
+      ],
+      "why": "When prices in general rise, the same dollar buys fewer goods and services. Buying more would happen if prices fell.",
+      "clue": "Think about what happens when prices rise."
+     },
+     "b": {
+      "d": 3,
+      "q": "In one year, the price of mangoes in Darwin jumps because of a poor harvest. Most other prices stay about the same. Is this inflation?",
+      "opts": [
+       "No, because prices in general have not risen",
+       "Yes, because one price has risen",
+       "Yes, because mangoes are in the CPI basket",
+       "No, because inflation only counts services"
+      ],
+      "why": "Inflation is a general rise in prices, not a rise in one item. A single price change that is not matched by others does not show inflation. Inflation counts goods as well as services.",
+      "clue": "Inflation is about prices in general."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It buys less than before",
+      "also_right": []
+     },
+     "b": {
+      "best": "No, because prices in general have not risen",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Inflation is about prices in general' repeats the exact phrase 'prices in general' from the right option. A student could match the words and pick it without understanding the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, remember line and answers are accurate. The clue for question b echoes the wording of the right option ('prices in general'), which gives the answer away."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, other: The clue 'Inflation is about prices in general' repeats the exact phrase 'prices in general' from the right option. A student could match the words and pick it without understanding the idea."
+    ],
+    "proposal": {
+     "title": "Inflation",
+     "card": [
+      "Inflation is a general rise in prices over time. It is about prices across the economy, not one item.",
+      "In Australia, inflation is measured by the consumer price index (CPI). The CPI tracks the cost of a basket of goods and services that households buy.",
+      "When prices rise in general, each dollar buys less than before. This is a fall in what money can buy.",
+      "The inflation rate is the percentage change in the CPI over a period, often a year."
+     ],
+     "remember": "Inflation is a general rise in prices, so each dollar buys less.",
+     "a": {
+      "q": "What does inflation mean for a dollar?",
+      "opts": [
+       "It buys less than before",
+       "It buys more than before",
+       "It buys the same as before",
+       "It becomes worth more to savers"
+      ],
+      "why": "When prices in general rise, the same dollar buys fewer goods and services. Buying more would happen if prices fell, not rose.",
+      "clue": "Think about what happens when prices rise."
+     },
+     "b": {
+      "d": 3,
+      "q": "In one year, the price of mangoes in Darwin jumps because of a poor harvest. Most other prices stay about the same. Is this inflation?",
+      "opts": [
+       "No, because prices in general have not risen",
+       "Yes, because one price has risen",
+       "Yes, because mangoes are in the CPI basket",
+       "No, because inflation only counts services"
+      ],
+      "why": "Inflation is a general rise in prices, not a rise in one item. Even if mangoes are in the CPI basket, one item going up while most others stay the same does not show a general rise. Inflation also counts goods as well as services.",
+      "clue": "How many prices went up this year?"
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-04T17:58:49Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Inflation is about prices in general' repeats the exact phrase 'prices in general' from the right option. A student could match the words and pick it without understanding the idea."
+      }
+     ],
+     "flags": [
+      "Question b, other: The clue 'Inflation is about prices in general' repeats the exact phrase 'prices in general' from the right option. A student could match the words and pick it without understanding the idea."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "96a86abe297f3c9d"
+  }
+ ]
+}

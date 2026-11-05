@@ -1,0 +1,419 @@
+{
+ "id": "geo-liveability-everyone",
+ "title": "Liveability for everyone",
+ "brief": "28d6055a3695",
+ "shortlist": [
+  [
+   "geo-liveability",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, match",
+  "2026-11-04T09:36:51Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:00Z write: done",
+  "2026-11-04T09:58:25Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (a other)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00465,
+  "check": 0.01145,
+  "fix": 0.01393,
+  "recheck": 0.01163
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is a Year 12 NSW card on what liveability is and how it is measured across several measures, while the new point is about how a liveable place meets the needs of specific groups such as young people, older people and people with disability, so it teaches a different idea at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: Why (a) says liveability is 'not what it costs'. This clashes with point 4, where cost is a criterion for judging a strategy. The distractor is wrong because stairs-only entrances keep people out (and stairs do not generally cost more than ramps and lifts), not because cost never matters.",
+ "rejected": {
+  "title": "Liveability for everyone",
+  "card": [
+   "A place is liveable when it works well for the different people who live there. People of different ages and abilities can have different needs.",
+   [
+    "Young people",
+    "Teenagers need safe places to meet, play sport and spend time, such as a skate park or a youth space."
+   ],
+   [
+    "Older people",
+    "Many older people need seats to rest on, paths that are easy to walk without steep steps, and transport that is easy to reach."
+   ],
+   [
+    "People with disability",
+    "Ramps, wide doorways and lifts let people who use wheelchairs or prams get in and move around. Buses and trains that are easy to board help too."
+   ]
+  ],
+  "remember": "A place is more liveable when it meets the needs of people of all ages and abilities.",
+  "a": {
+   "q": "Why does a town with a new library that has only stairs at its entrance fall short on liveability?",
+   "opts": [
+    "Some people cannot get in, so it does not work for everyone",
+    "Libraries are not a service that adds to liveability",
+    "Only older people use libraries, so teenagers miss out",
+    "Stairs cost more to build than ramps and lifts"
+   ],
+   "why": "A liveable place works for people of different ages and abilities. Stairs can keep out people who use wheelchairs or prams, and many older people who find steps hard. The option about building costs is wrong, because liveability is about who a place works for, not what it costs.",
+   "clue": "Think about who could not use the entrance."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's town has many parks for small children but nowhere for teenagers to meet or play sport. What would make the town work better for everyone?",
+   "opts": [
+    "Build a skate park or youth space for teenagers",
+    "Add more play equipment for small children",
+    "Build wider roads for cars through the town",
+    "Move the parks further from the town centre"
+   ],
+   "why": "Teenagers have different needs from small children, so a place for them makes the town work for more people. More child play equipment helps the group that is already served.",
+   "clue": "Which group is missing out?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: Why (a) says liveability is 'not what it costs'. This clashes with point 4, where cost is a criterion for judging a strategy. The distractor is wrong because stairs-only entrances keep people out (and stairs do not generally cost more than ramps and lifts), not because cost never matters."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Liveability for everyone",
+     "card": [
+      "A place is liveable when it works well for the different people who live there. People of different ages and abilities can have different needs.",
+      [
+       "Young people",
+       "Teenagers need safe places to meet, play sport and spend time, such as a skate park or a youth space."
+      ],
+      [
+       "Older people",
+       "Many older people need seats to rest on, paths that are easy to walk, and transport that is easy to reach."
+      ],
+      [
+       "People with disability",
+       "Ramps, wide doorways and lifts let people who use wheelchairs or prams get in and move around. Buses and trains that are easy to board help too."
+      ]
+     ],
+     "remember": "A place is more liveable when it meets the needs of people of all ages and abilities.",
+     "a": {
+      "q": "Why does a town with a new library that has only stairs at its entrance fall short on liveability?",
+      "opts": [
+       "Some people cannot get in, so it does not work for everyone",
+       "Libraries are not a service that adds to liveability",
+       "Only older people use libraries, so teenagers miss out",
+       "Stairs cost more to build than ramps and lifts"
+      ],
+      "why": "A liveable place works for people of different abilities. Stairs only keep out people who use wheelchairs or prams. Cost is not the issue here, so the last option is wrong.",
+      "clue": "Think about who could not use the entrance."
+     },
+     "b": {
+      "d": 2,
+      "q": "Tom's town has many parks for small children but nowhere for teenagers to meet or play sport. What would make the town work better for everyone?",
+      "opts": [
+       "Build a skate park or youth space for teenagers",
+       "Add more play equipment for small children",
+       "Build wider roads for cars through the town",
+       "Move the parks further from the town centre"
+      ],
+      "why": "Teenagers have different needs from small children, so a place for them makes the town work for more people. More child play equipment helps the group that is already served.",
+      "clue": "Which group is missing out?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Some people cannot get in, so it does not work for everyone",
+      "also_right": []
+     },
+     "b": {
+      "best": "Build a skate park or youth space for teenagers",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "Why (a) says the cost option is 'the last option', but options are shuffled and it may not appear last. Name the option by its content instead."
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "Why (a) says stairs 'only keep out people who use wheelchairs or prams'. Stairs also keep out many others, such as older people who find steps hard, which the card itself mentions. The absolute 'only' is wrong."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are sound. Why (a) refers to 'the last option', which breaks when options are shuffled, and wrongly says stairs 'only' keep out wheelchair and pram users."
+    },
+    "flags": [
+     "Question a, other: Why (a) says the cost option is 'the last option', but options are shuffled and it may not appear last. Name the option by its content instead.",
+     "Question a, fact: Why (a) says stairs 'only keep out people who use wheelchairs or prams'. Stairs also keep out many others, such as older people who find steps hard, which the card itself mentions. The absolute 'only' is wrong."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Liveability for everyone",
+     "card": [
+      "A place is liveable when it works well for the different people who live there. People of different ages and abilities can have different needs.",
+      [
+       "Young people",
+       "Teenagers need safe places to meet, play sport and spend time, such as a skate park or a youth space."
+      ],
+      [
+       "Older people",
+       "Many older people need seats to rest on, paths that are easy to walk without steep steps, and transport that is easy to reach."
+      ],
+      [
+       "People with disability",
+       "Ramps, wide doorways and lifts let people who use wheelchairs or prams get in and move around. Buses and trains that are easy to board help too."
+      ]
+     ],
+     "remember": "A place is more liveable when it meets the needs of people of all ages and abilities.",
+     "a": {
+      "q": "Why does a town with a new library that has only stairs at its entrance fall short on liveability?",
+      "opts": [
+       "Some people cannot get in, so it does not work for everyone",
+       "Libraries are not a service that adds to liveability",
+       "Only older people use libraries, so teenagers miss out",
+       "Stairs cost more to build than ramps and lifts"
+      ],
+      "why": "A liveable place works for people of different ages and abilities. Stairs can keep out people who use wheelchairs or prams, and many older people who find steps hard. The option about building costs is wrong, because liveability is about who a place works for, not what it costs.",
+      "clue": "Think about who could not use the entrance."
+     },
+     "b": {
+      "d": 2,
+      "q": "Tom's town has many parks for small children but nowhere for teenagers to meet or play sport. What would make the town work better for everyone?",
+      "opts": [
+       "Build a skate park or youth space for teenagers",
+       "Add more play equipment for small children",
+       "Build wider roads for cars through the town",
+       "Move the parks further from the town centre"
+      ],
+      "why": "Teenagers have different needs from small children, so a place for them makes the town work for more people. More child play equipment helps the group that is already served.",
+      "clue": "Which group is missing out?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Some people cannot get in, so it does not work for everyone",
+       "also_right": []
+      },
+      "b": {
+       "best": "Build a skate park or youth space for teenagers",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "Why (a) says liveability is 'not what it costs'. This clashes with point 4, where cost is a criterion for judging a strategy. The distractor is wrong because stairs-only entrances keep people out (and stairs do not generally cost more than ramps and lifts), not because cost never matters."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate and suit Year 7. Only why (a) needs a fix: its claim that liveability is not about cost conflicts with point 4, so it should explain the distractor another way."
+     },
+     "flags": [
+      "Question a, other: Why (a) says liveability is 'not what it costs'. This clashes with point 4, where cost is a criterion for judging a strategy. The distractor is wrong because stairs-only entrances keep people out (and stairs do not generally cost more than ramps and lifts), not because cost never matters."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Liveability for everyone",
+    "card": [
+     "A place is liveable when it works well for the different people who live there. People of different ages and abilities can have different needs.",
+     [
+      "Young people",
+      "Teenagers need safe places to meet, play sport and spend time, such as a skate park or a youth space."
+     ],
+     [
+      "Older people",
+      "Many older people need seats to rest on, paths that are easy to walk without steep steps, and transport that is easy to reach."
+     ],
+     [
+      "People with disability",
+      "Ramps, wide doorways and lifts let people who use wheelchairs or prams get in and move around. Buses and trains that are easy to board help too."
+     ]
+    ],
+    "remember": "A place is more liveable when it meets the needs of people of all ages and abilities.",
+    "a": {
+     "q": "A town opens a new library that has only stairs at its entrance. Why does this fall short on liveability?",
+     "opts": [
+      "Some people cannot get in, so it is not for everyone",
+      "Libraries are not a service that adds to liveability",
+      "Only older people use libraries, so teens miss out",
+      "Stairs cost more to build than ramps and lifts"
+     ],
+     "why": "A liveable place works for people of different ages and abilities. Stairs alone can keep out people who use wheelchairs or prams, and many older people who find steps hard. The cost option misses the problem, which is who the entrance keeps out.",
+     "clue": "Who would be stuck at the bottom of the steps?"
+    },
+    "b": {
+     "d": 2,
+     "q": "Tom's town has plenty of parks for young children, but teenagers have nowhere to meet or play sport. Which change would help the town work for more of its people?",
+     "opts": [
+      "Build a skate park or youth space for teens",
+      "Add more play equipment for small children",
+      "Build wider roads for cars through the town",
+      "Move the parks further from the town centre"
+     ],
+     "why": "Teenagers have different needs from small children, so a place for them makes the town work for more people. More child play equipment helps the group that is already served.",
+     "clue": "Which group is missing out?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Some people cannot get in, so it is not for everyone",
+     "also_right": []
+    },
+    "b": {
+     "best": "Build a skate park or youth space for teens",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Liveability for everyone",
+  "card": [
+   "A place is liveable when it works well for the different people who live there. People of different ages and abilities can have different needs.",
+   [
+    "Young people",
+    "Teenagers need safe places to meet, play sport and spend time, such as a skate park or a youth space."
+   ],
+   [
+    "Older people",
+    "Many older people need seats to rest on, paths that are easy to walk without steep steps, and transport that is easy to reach."
+   ],
+   [
+    "People with disability",
+    "Ramps, wide doorways and lifts let people who use wheelchairs or prams get in and move around. Buses and trains that are easy to board help too."
+   ]
+  ],
+  "remember": "A place is more liveable when it meets the needs of people of all ages and abilities.",
+  "a": {
+   "q": "A town opens a new library that has only stairs at its entrance. Why does this fall short on liveability?",
+   "opts": [
+    "Some people cannot get in, so it is not for everyone",
+    "Libraries are not a service that adds to liveability",
+    "Only older people use libraries, so teens miss out",
+    "Stairs cost more to build than ramps and lifts"
+   ],
+   "why": "A liveable place works for people of different ages and abilities. Stairs alone can keep out people who use wheelchairs or prams, and many older people who find steps hard. The cost option misses the problem, which is who the entrance keeps out.",
+   "clue": "Who would be stuck at the bottom of the steps?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's town has plenty of parks for young children, but teenagers have nowhere to meet or play sport. Which change would help the town work for more of its people?",
+   "opts": [
+    "Build a skate park or youth space for teens",
+    "Add more play equipment for small children",
+    "Build wider roads for cars through the town",
+    "Move the parks further from the town centre"
+   ],
+   "why": "Teenagers have different needs from small children, so a place for them makes the town work for more people. More child play equipment helps the group that is already served.",
+   "clue": "Which group is missing out?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Some people cannot get in, so it is not for everyone",
+   "also_right": []
+  },
+  "b": {
+   "best": "Build a skate park or youth space for teens",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Liveability for everyone",
+  "card": [
+   "A place is liveable when it works well for the different people who live there. People of different ages and abilities can have different needs.",
+   [
+    "Young people",
+    "Teenagers need safe places to meet, play sport and spend time, such as a skate park or a youth space."
+   ],
+   [
+    "Older people",
+    "Many older people need seats to rest on, paths that are easy to walk without steep steps, and transport that is easy to reach."
+   ],
+   [
+    "People with disability",
+    "Ramps, wide doorways and lifts let people who use wheelchairs or prams get in and move around. Buses and trains that are easy to board help too."
+   ]
+  ],
+  "remember": "A place is more liveable when it meets the needs of people of all ages and abilities.",
+  "a": {
+   "q": "A town opens a new library that has only stairs at its entrance. Why does this fall short on liveability?",
+   "opts": [
+    "Some people cannot get in, so it is not for everyone",
+    "Libraries are not a service that adds to liveability",
+    "Only older people use libraries, so teens miss out",
+    "Stairs cost more to build than ramps and lifts"
+   ],
+   "why": "A liveable place works for people of different ages and abilities. Stairs alone can keep out people who use wheelchairs or prams, and many older people who find steps hard. The cost option misses the problem, which is who the entrance keeps out.",
+   "clue": "Who would be stuck at the bottom of the steps?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's town has plenty of parks for young children, but teenagers have nowhere to meet or play sport. Which change would help the town work for more of its people?",
+   "opts": [
+    "Build a skate park or youth space for teens",
+    "Add more play equipment for small children",
+    "Build wider roads for cars through the town",
+    "Move the parks further from the town centre"
+   ],
+   "why": "Teenagers have different needs from small children, so a place for them makes the town work for more people. More child play equipment helps the group that is already served.",
+   "clue": "Which group is missing out?"
+  }
+ },
+ "checked_by": "claude-code"
+}

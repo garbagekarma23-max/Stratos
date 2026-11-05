@@ -1,0 +1,377 @@
+{
+ "id": "ecb-companies",
+ "title": "Companies",
+ "brief": "9b85685b883d",
+ "shortlist": [
+  [
+   "bus-companies-limited-liability",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:24Z new, match",
+  "2026-11-04T09:36:47Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:54Z write: done",
+  "2026-11-04T09:58:20Z check: flagged",
+  "2026-11-04T10:07:57Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:40Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00683,
+  "check": 0.01283,
+  "fix": 0.01403,
+  "recheck": 0.01258
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, written for Year 11 NSW, covers legal entity status, Pty Ltd versus Ltd, and ASX listing in far more depth than a Year 7 point on shareholders and limited liability needs, so a new point fits better.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The distractor 'It always makes more profit than a sole trader' uses 'always', an absolute word that marks it as wrong without testing the idea. The card only says a company 'can' raise money by selling shares.",
+ "rejected": {
+  "title": "Companies",
+  "card": [
+   [
+    "Company",
+    "A business owned by shareholders. A shareholder owns a share, which is a part of the company. It is also called a corporation."
+   ],
+   "A company is legally separate from its owners. The law treats it as its own legal person, so it can own property, sign contracts and owe debts in its own name.",
+   "Because of this, shareholders can lose only what they put in. If the company fails, their own homes and savings are not used to pay its debts.",
+   "A company can have many shareholders, so it can raise money by selling shares. Some companies are small and some are very large."
+  ],
+  "remember": "A company is its own legal person, so shareholders risk only what they invested.",
+  "a": {
+   "q": "Ravi buys shares in a Perth company for $1000. The company later fails with large debts. What is the most Ravi can lose?",
+   "opts": [
+    "The $1000 he put in",
+    "All of his savings and his home",
+    "Half of the company's debts",
+    "The full amount the company owes"
+   ],
+   "why": "A company is legally separate from its owners, so shareholders lose only what they put in. Ravi's $1000 is at risk, but his own home and savings are not used to pay the company's debts.",
+   "clue": "The company owes the debts, not the shareholders."
+  },
+  "b": {
+   "d": 3,
+   "q": "Why can a company sign a contract in its own name, unlike a sole trader's business?",
+   "opts": [
+    "It is legally separate from its shareholders",
+    "It has more shareholders than a sole trader has",
+    "It always makes more profit than a sole trader",
+    "Its shareholders are all personally responsible"
+   ],
+   "why": "A company is its own legal person, so it can sign contracts and owe debts itself. Having many shareholders is common but is not the reason. The option saying shareholders are personally responsible is wrong, because they can lose only what they put in.",
+   "clue": "Think about who the law treats the company as being."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The distractor 'It always makes more profit than a sole trader' uses 'always', an absolute word that marks it as wrong without testing the idea. The card only says a company 'can' raise money by selling shares."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Companies",
+     "card": [
+      [
+       "Company",
+       "A business owned by shareholders. A shareholder owns a share, which is a part of the company. It is also called a corporation."
+      ],
+      "A company is legally separate from its owners. It can own property, sign contracts and owe debts in its own name.",
+      "Because of this, shareholders can lose only what they put in. If the company fails, their own homes and savings are not used to pay its debts.",
+      "A company can have many shareholders, so it can raise money by selling shares. Some companies are small and some are very large."
+     ],
+     "remember": "A company is its own legal person, so shareholders risk only what they invested.",
+     "a": {
+      "q": "Ravi buys shares in a Perth company for $1000. The company later fails with large debts. What is the most Ravi can lose?",
+      "opts": [
+       "The $1000 he put in",
+       "All of his savings and his home",
+       "Half of the company's debts",
+       "The full amount the company owes"
+      ],
+      "why": "A company is legally separate from its owners, so shareholders lose only what they put in. Ravi's $1000 is at risk, but his own home and savings are not used to pay the company's debts.",
+      "clue": "The company owes the debts, not the shareholders."
+     },
+     "b": {
+      "d": 3,
+      "q": "Why can a company sign a contract in its own name, unlike a sole trader's business?",
+      "opts": [
+       "It is legally separate from its shareholders",
+       "It has more shareholders than a sole trader has",
+       "It always makes more profit than a sole trader",
+       "Its shareholders are all personally responsible"
+      ],
+      "why": "A company is its own legal person, so it can sign contracts and owe debts itself. Having many shareholders is common but is not the reason. Shareholders are not personally responsible for its debts, so the last option is wrong.",
+      "clue": "Think about who the law treats the company as being."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The $1000 he put in",
+      "also_right": []
+     },
+     "b": {
+      "best": "It is legally separate from its shareholders",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says 'the last option is wrong' when it means the 'personally responsible' option. The options are shown in random order, so the position is wrong here: that option appears first, and the last option is 'It always makes more profit'. Why (b) should name the option by its content, not its position."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate and fit Year 7. Why (b) refers to 'the last option' by position, which does not match the shuffled order, so it should name the option by its content."
+    },
+    "flags": [
+     "Question b, other: Why (b) says 'the last option is wrong' when it means the 'personally responsible' option. The options are shown in random order, so the position is wrong here: that option appears first, and the last option is 'It always makes more profit'. Why (b) should name the option by its content, not its position."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Companies",
+     "card": [
+      [
+       "Company",
+       "A business owned by shareholders. A shareholder owns a share, which is a part of the company. It is also called a corporation."
+      ],
+      "A company is legally separate from its owners. The law treats it as its own legal person, so it can own property, sign contracts and owe debts in its own name.",
+      "Because of this, shareholders can lose only what they put in. If the company fails, their own homes and savings are not used to pay its debts.",
+      "A company can have many shareholders, so it can raise money by selling shares. Some companies are small and some are very large."
+     ],
+     "remember": "A company is its own legal person, so shareholders risk only what they invested.",
+     "a": {
+      "q": "Ravi buys shares in a Perth company for $1000. The company later fails with large debts. What is the most Ravi can lose?",
+      "opts": [
+       "The $1000 he put in",
+       "All of his savings and his home",
+       "Half of the company's debts",
+       "The full amount the company owes"
+      ],
+      "why": "A company is legally separate from its owners, so shareholders lose only what they put in. Ravi's $1000 is at risk, but his own home and savings are not used to pay the company's debts.",
+      "clue": "The company owes the debts, not the shareholders."
+     },
+     "b": {
+      "d": 3,
+      "q": "Why can a company sign a contract in its own name, unlike a sole trader's business?",
+      "opts": [
+       "It is legally separate from its shareholders",
+       "It has more shareholders than a sole trader has",
+       "It always makes more profit than a sole trader",
+       "Its shareholders are all personally responsible"
+      ],
+      "why": "A company is its own legal person, so it can sign contracts and owe debts itself. Having many shareholders is common but is not the reason. The option saying shareholders are personally responsible is wrong, because they can lose only what they put in.",
+      "clue": "Think about who the law treats the company as being."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The $1000 he put in",
+       "also_right": []
+      },
+      "b": {
+       "best": "It is legally separate from its shareholders",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The distractor 'It always makes more profit than a sole trader' uses 'always', an absolute word that marks it as wrong without testing the idea. The card only says a company 'can' raise money by selling shares."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and answers are correct. The only issue is a minor one in question b, where the word 'always' in one distractor makes it easy to rule out."
+     },
+     "flags": [
+      "Question b, wording: The distractor 'It always makes more profit than a sole trader' uses 'always', an absolute word that marks it as wrong without testing the idea. The card only says a company 'can' raise money by selling shares."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:40Z",
+   "step": "write",
+   "version": {
+    "title": "Companies",
+    "card": [
+     [
+      "Company",
+      "A business owned by shareholders. A shareholder owns a share, which is a part of the company. It is also called a corporation."
+     ],
+     "A company is legally separate from its owners. The law treats it as its own legal person, so it can own property, sign contracts and owe debts in its own name.",
+     "Because of this, shareholders can lose only what they put in. If the company fails, their own homes and savings are not used to pay its debts.",
+     "A company can have many shareholders, so it can raise money by selling shares. Some companies are small and some are very large."
+    ],
+    "remember": "A company is its own legal person, so shareholders risk what they invested and no more.",
+    "a": {
+     "q": "Lena paid $500 for shares in a Darwin company. The company closes owing far more than it has. What is the most Lena can lose?",
+     "opts": [
+      "The $500 she paid for her shares",
+      "Her savings and her car as well",
+      "Her share of all the company's debts",
+      "Everything the company still owes"
+     ],
+     "why": "A company is legally separate from its shareholders, so they lose no more than they put in. Lena's $500 is at risk, but the company's debts are its own, so she does not have to pay a share of them.",
+     "clue": "Whose debts are they, Lena's or the company's?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A furniture company in Adelaide buys a warehouse and signs a lease on a shop. What allows it to do these things in its own name?",
+     "opts": [
+      "The law treats it as separate from its owners",
+      "Its shareholders share all of its debts equally",
+      "It has more owners than most small businesses",
+      "It sells shares to raise money from investors"
+     ],
+     "why": "A company is its own legal person, separate from its shareholders, so it can own property and sign contracts itself. Selling shares is a way it can raise money, but that is not what lets it act in its own name.",
+     "clue": "Who does the law see as the owner of the warehouse?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The $500 she paid for her shares",
+     "also_right": []
+    },
+    "b": {
+     "best": "The law treats it as separate from its owners",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Companies",
+  "card": [
+   [
+    "Company",
+    "A business owned by shareholders. A shareholder owns a share, which is a part of the company. It is also called a corporation."
+   ],
+   "A company is legally separate from its owners. The law treats it as its own legal person, so it can own property, sign contracts and owe debts in its own name.",
+   "Because of this, shareholders can lose only what they put in. If the company fails, their own homes and savings are not used to pay its debts.",
+   "A company can have many shareholders, so it can raise money by selling shares. Some companies are small and some are very large."
+  ],
+  "remember": "A company is its own legal person, so shareholders risk what they invested and no more.",
+  "a": {
+   "q": "Lena paid $500 for shares in a Darwin company. The company closes owing far more than it has. What is the most Lena can lose?",
+   "opts": [
+    "The $500 she paid for her shares",
+    "Her savings and her car as well",
+    "Her share of all the company's debts",
+    "Everything the company still owes"
+   ],
+   "why": "A company is legally separate from its shareholders, so they lose no more than they put in. Lena's $500 is at risk, but the company's debts are its own, so she does not have to pay a share of them.",
+   "clue": "Whose debts are they, Lena's or the company's?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A furniture company in Adelaide buys a warehouse and signs a lease on a shop. What allows it to do these things in its own name?",
+   "opts": [
+    "The law treats it as separate from its owners",
+    "Its shareholders share all of its debts equally",
+    "It has more owners than most small businesses",
+    "It sells shares to raise money from investors"
+   ],
+   "why": "A company is its own legal person, separate from its shareholders, so it can own property and sign contracts itself. Selling shares is a way it can raise money, but that is not what lets it act in its own name.",
+   "clue": "Who does the law see as the owner of the warehouse?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The $500 she paid for her shares",
+   "also_right": []
+  },
+  "b": {
+   "best": "The law treats it as separate from its owners",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Companies",
+  "card": [
+   [
+    "Company",
+    "A business owned by shareholders. A shareholder owns a share, which is a part of the company. It is also called a corporation."
+   ],
+   "A company is legally separate from its owners. The law treats it as its own legal person, so it can own property, sign contracts and owe debts in its own name.",
+   "Because of this, shareholders can lose only what they put in. If the company fails, their own homes and savings are not used to pay its debts.",
+   "A company can have many shareholders, so it can raise money by selling shares. Some companies are small and some are very large."
+  ],
+  "remember": "A company is its own legal person, so shareholders risk what they invested and no more.",
+  "a": {
+   "q": "Lena paid $500 for shares in a Darwin company. The company closes owing far more than it has. What is the most Lena can lose?",
+   "opts": [
+    "The $500 she paid for her shares",
+    "Her savings and her car as well",
+    "Her share of all the company's debts",
+    "Everything the company still owes"
+   ],
+   "why": "A company is legally separate from its shareholders, so they lose no more than they put in. Lena's $500 is at risk, but the company's debts are its own, so she does not have to pay a share of them.",
+   "clue": "Whose debts are they, Lena's or the company's?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A furniture company in Adelaide buys a warehouse and signs a lease on a shop. What allows it to do these things in its own name?",
+   "opts": [
+    "The law treats it as separate from its owners",
+    "Its shareholders share all of its debts equally",
+    "It has more owners than most small businesses",
+    "It sells shares to raise money from investors"
+   ],
+   "why": "A company is its own legal person, separate from its shareholders, so it can own property and sign contracts itself. Selling shares is a way it can raise money, but that is not what lets it act in its own name.",
+   "clue": "Who does the law see as the owner of the warehouse?"
+  }
+ },
+ "checked_by": "claude-code"
+}

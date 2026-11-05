@@ -1,0 +1,310 @@
+{
+ "id": "ecb-deciding-with-criteria",
+ "title": "Deciding with criteria",
+ "brief": "50f698696f9c",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, write",
+  "2026-11-04T09:36:48Z write: done",
+  "2026-11-04T09:46:55Z check: flagged",
+  "2026-11-04T09:58:22Z fix: suggested",
+  "2026-11-04T17:58:50Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording)",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.00586,
+  "check": 0.0098,
+  "fix": 0.01234
+ },
+ "draft": {
+  "title": "Deciding with criteria",
+  "card": [
+   "Criteria are the things that matter when you choose, such as cost, risk and fairness. Choose them before you look at the options.",
+   "Score each option against each criterion, for example from 1 (poor) to 5 (very good).",
+   "Add up the scores for each option. The option with the best total does best overall.",
+   "If one criterion matters more, it can be given extra weight. Then the best option may change."
+  ],
+  "remember": "Set criteria, score every option against them, then pick the best overall.",
+  "a": {
+   "q": "A school club must choose a fundraiser. It scores three options from 1 to 5 on cost, risk and fairness. Which option should it choose?",
+   "opts": [
+    "The one with the highest total score",
+    "The one with the lowest cost only",
+    "The one most members chose first",
+    "The one with the highest single score"
+   ],
+   "why": "The method is to score every option against every criterion and pick the best total. Looking at cost only ignores risk and fairness, which the club also decided matter.",
+   "clue": "The decision uses all the criteria together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam scores two phone plans from 1 to 5. Plan A: cost 5, risk 2, fairness 3. Plan B: cost 3, risk 4, fairness 4. Which does best overall, with all criteria equal?",
+   "opts": [
+    "Plan B, with a total of 11",
+    "Plan A, with a total of 10",
+    "Plan A, because it has the best cost",
+    "Both plans, with equal totals"
+   ],
+   "why": "Plan A totals 5 + 2 + 3 = 10. Plan B totals 3 + 4 + 4 = 11. Plan A wins on cost, but with equal weights the best total decides.",
+   "clue": "Add each plan's three scores."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The one with the highest total score",
+   "also_right": []
+  },
+  "b": {
+   "best": "Plan B, with a total of 11",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem gives 'risk 2' and 'risk 4' without saying that 5 is the best score. A student could read 'risk 4' as more risky, which is worse. It should say 'from 1 (poor) to 5 (very good)', as the card does."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Question b should say that 5 is the best score, because 'risk 4' could be read as higher risk."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem gives 'risk 2' and 'risk 4' without saying that 5 is the best score. A student could read 'risk 4' as more risky, which is worse. It should say 'from 1 (poor) to 5 (very good)', as the card does."
+ ],
+ "proposal": {
+  "title": "Deciding with criteria",
+  "card": [
+   "Criteria are the things that matter when you choose, such as cost, risk and fairness. Choose them before you look at the options.",
+   "Score each option against each criterion, for example from 1 (poor) to 5 (very good).",
+   "Add up the scores for each option. The option with the best total does best overall.",
+   "If one criterion matters more, it can be given extra weight. Then the best option may change."
+  ],
+  "remember": "Set criteria, score every option against them, then pick the best overall.",
+  "a": {
+   "q": "A school club must choose a fundraiser. It scores three options from 1 (poor) to 5 (very good) on cost, risk and fairness. Which option should it choose?",
+   "opts": [
+    "The one with the highest total score",
+    "The one with the lowest cost only",
+    "The one most members chose first",
+    "The one with the highest single score"
+   ],
+   "why": "The method is to score every option against every criterion and pick the best total. Looking at cost only ignores risk and fairness, which the club also decided matter.",
+   "clue": "The decision uses all the criteria together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam scores two phone plans from 1 (poor) to 5 (very good). Plan A: cost 5, risk 2, fairness 3. Plan B: cost 3, risk 4, fairness 4. Which does best overall, with all criteria weighted equally?",
+   "opts": [
+    "Plan B, with a total of 11",
+    "Plan A, with a total of 10",
+    "Plan A, because it has the best cost",
+    "Both plans, with equal totals"
+   ],
+   "why": "Plan A totals 5 + 2 + 3 = 10. Plan B totals 3 + 4 + 4 = 11. Plan A wins on cost, but with equal weights the best total decides.",
+   "clue": "Add each plan's three scores."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:50Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem gives 'risk 2' and 'risk 4' without saying that 5 is the best score. A student could read 'risk 4' as more risky, which is worse. It should say 'from 1 (poor) to 5 (very good)', as the card does."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem gives 'risk 2' and 'risk 4' without saying that 5 is the best score. A student could read 'risk 4' as more risky, which is worse. It should say 'from 1 (poor) to 5 (very good)', as the card does."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Deciding with criteria",
+  "card": [
+   "Criteria are the things that matter when you choose, such as cost, risk and fairness. Choose them before you look at the options.",
+   "Score each option against each criterion, for example from 1 (poor) to 5 (very good).",
+   "Add up the scores for each option. The option with the best total does best overall.",
+   "If one criterion matters more, it can be given extra weight. Then the best option may change."
+  ],
+  "remember": "Set criteria, score every option against them, then pick the best overall.",
+  "a": {
+   "q": "A school club must choose a fundraiser. It scores three options from 1 (poor) to 5 (very good) on cost, risk and fairness. Which option should it choose?",
+   "opts": [
+    "The one with the highest total score",
+    "The one with the lowest cost only",
+    "The one most members chose first",
+    "The one with the highest single score"
+   ],
+   "why": "The method is to score every option against every criterion and pick the best total. Looking at cost only ignores risk and fairness, which the club also decided matter.",
+   "clue": "The decision uses all the criteria together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam scores two phone plans from 1 (poor) to 5 (very good). Plan A: cost 5, risk 2, fairness 3. Plan B: cost 3, risk 4, fairness 4. Which does best overall, with all criteria weighted equally?",
+   "opts": [
+    "Plan B, with a total of 11",
+    "Plan A, with a total of 10",
+    "Plan A, because it has the best cost",
+    "Both plans, with equal totals"
+   ],
+   "why": "Plan A totals 5 + 2 + 3 = 10. Plan B totals 3 + 4 + 4 = 11. Plan A wins on cost, but with equal weights the best total decides.",
+   "clue": "Add each plan's three scores."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix says in both questions that 5 is the best score, so 'risk 4' cannot be read as more risky. The totals are right.",
+   "item": "c379de25491311ca",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-deciding-with-criteria",
+    "title": "Deciding with criteria",
+    "brief": "50f698696f9c",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "write": 0.00586,
+     "check": 0.0098,
+     "fix": 0.01234
+    },
+    "draft": {
+     "title": "Deciding with criteria",
+     "card": [
+      "Criteria are the things that matter when you choose, such as cost, risk and fairness. Choose them before you look at the options.",
+      "Score each option against each criterion, for example from 1 (poor) to 5 (very good).",
+      "Add up the scores for each option. The option with the best total does best overall.",
+      "If one criterion matters more, it can be given extra weight. Then the best option may change."
+     ],
+     "remember": "Set criteria, score every option against them, then pick the best overall.",
+     "a": {
+      "q": "A school club must choose a fundraiser. It scores three options from 1 to 5 on cost, risk and fairness. Which option should it choose?",
+      "opts": [
+       "The one with the highest total score",
+       "The one with the lowest cost only",
+       "The one most members chose first",
+       "The one with the highest single score"
+      ],
+      "why": "The method is to score every option against every criterion and pick the best total. Looking at cost only ignores risk and fairness, which the club also decided matter.",
+      "clue": "The decision uses all the criteria together."
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam scores two phone plans from 1 to 5. Plan A: cost 5, risk 2, fairness 3. Plan B: cost 3, risk 4, fairness 4. Which does best overall, with all criteria equal?",
+      "opts": [
+       "Plan B, with a total of 11",
+       "Plan A, with a total of 10",
+       "Plan A, because it has the best cost",
+       "Both plans, with equal totals"
+      ],
+      "why": "Plan A totals 5 + 2 + 3 = 10. Plan B totals 3 + 4 + 4 = 11. Plan A wins on cost, but with equal weights the best total decides.",
+      "clue": "Add each plan's three scores."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The one with the highest total score",
+      "also_right": []
+     },
+     "b": {
+      "best": "Plan B, with a total of 11",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem gives 'risk 2' and 'risk 4' without saying that 5 is the best score. A student could read 'risk 4' as more risky, which is worse. It should say 'from 1 (poor) to 5 (very good)', as the card does."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both answers are correct. Question b should say that 5 is the best score, because 'risk 4' could be read as higher risk."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, wording: The stem gives 'risk 2' and 'risk 4' without saying that 5 is the best score. A student could read 'risk 4' as more risky, which is worse. It should say 'from 1 (poor) to 5 (very good)', as the card does."
+    ],
+    "proposal": {
+     "title": "Deciding with criteria",
+     "card": [
+      "Criteria are the things that matter when you choose, such as cost, risk and fairness. Choose them before you look at the options.",
+      "Score each option against each criterion, for example from 1 (poor) to 5 (very good).",
+      "Add up the scores for each option. The option with the best total does best overall.",
+      "If one criterion matters more, it can be given extra weight. Then the best option may change."
+     ],
+     "remember": "Set criteria, score every option against them, then pick the best overall.",
+     "a": {
+      "q": "A school club must choose a fundraiser. It scores three options from 1 (poor) to 5 (very good) on cost, risk and fairness. Which option should it choose?",
+      "opts": [
+       "The one with the highest total score",
+       "The one with the lowest cost only",
+       "The one most members chose first",
+       "The one with the highest single score"
+      ],
+      "why": "The method is to score every option against every criterion and pick the best total. Looking at cost only ignores risk and fairness, which the club also decided matter.",
+      "clue": "The decision uses all the criteria together."
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam scores two phone plans from 1 (poor) to 5 (very good). Plan A: cost 5, risk 2, fairness 3. Plan B: cost 3, risk 4, fairness 4. Which does best overall, with all criteria weighted equally?",
+      "opts": [
+       "Plan B, with a total of 11",
+       "Plan A, with a total of 10",
+       "Plan A, because it has the best cost",
+       "Both plans, with equal totals"
+      ],
+      "why": "Plan A totals 5 + 2 + 3 = 10. Plan B totals 3 + 4 + 4 = 11. Plan A wins on cost, but with equal weights the best total decides.",
+      "clue": "Add each plan's three scores."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-04T17:58:50Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem gives 'risk 2' and 'risk 4' without saying that 5 is the best score. A student could read 'risk 4' as more risky, which is worse. It should say 'from 1 (poor) to 5 (very good)', as the card does."
+      }
+     ],
+     "flags": [
+      "Question b, wording: The stem gives 'risk 2' and 'risk 4' without saying that 5 is the best score. A student could read 'risk 4' as more risky, which is worse. It should say 'from 1 (poor) to 5 (very good)', as the card does."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "53c8faa2b42430a2"
+  }
+ ]
+}

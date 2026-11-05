@@ -1,0 +1,232 @@
+{
+ "id": "ecb-cost-borrowing",
+ "title": "The cost of borrowing",
+ "brief": "1956f5f58ee5",
+ "shortlist": [
+  [
+   "bus-financing-new-business",
+   0.294
+  ],
+  [
+   "acc-setting-price",
+   0.241
+  ],
+  [
+   "bus-long-term-borrowing",
+   0.231
+  ],
+  [
+   "mat-simple-interest-everyday-life",
+   0.23
+  ],
+  [
+   "acc-cost-price-inventory",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: failed the content check, writing again",
+  "2026-11-04T09:58:20Z write: done",
+  "2026-11-04T10:07:56Z check: flagged",
+  "2026-11-04T10:10:48Z fix: suggested",
+  "2026-11-04T17:58:49Z autoreview: cleared with the fix (b other, remember wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.01215,
+  "check": 0.01263,
+  "fix": 0.01401
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Fees and interest, teaches how to calculate simple interest in a maths setting, but the new point is about the borrowing decision itself (interest, total repaid and whether repayments are affordable), so it is related rather than the same idea and needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The cost of borrowing",
+  "card": [
+   "When you borrow money, you repay more than you borrowed. The extra is the cost of the loan.",
+   [
+    "Interest",
+    "a charge for using the lender's money, usually worked out as a percentage of the amount owing. A higher interest rate means a higher cost."
+   ],
+   [
+    "Fees",
+    "extra charges, such as an amount to set up the loan or a monthly account fee. They add to the total repaid."
+   ],
+   "Before borrowing, check the interest rate, the total you will repay and whether your income can cover each repayment. A longer loan has smaller repayments but usually more interest in total."
+  ],
+  "remember": "A loan costs its price plus interest and fees, so check the rate, the total repaid and each repayment.",
+  "a": {
+   "q": "Ben borrows $5000 and repays $5600 in total over two years. What does the $600 mostly represent?",
+   "opts": [
+    "The cost of the loan, such as interest and fees",
+    "The price of the item he bought with the loan",
+    "A deposit that he gets back at the end",
+    "The amount of the loan that he has not repaid"
+   ],
+   "why": "The $600 is the extra above the amount borrowed, which is the interest and fees. The price of the item is covered by the $5000, so calling the $600 the price is the tempting mistake.",
+   "clue": "It is the extra on top of what he borrowed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is offered two loans for the same amount. Loan X has lower monthly repayments but runs for much longer. Loan Y has higher repayments and is shorter. Other things being equal, what is most likely?",
+   "opts": [
+    "Loan X costs more in total because more interest is paid",
+    "Loan X costs less in total because repayments are lower",
+    "Both loans cost the same as the amount borrowed is equal",
+    "Loan Y costs more in total because repayments are higher"
+   ],
+   "why": "Interest is charged for longer on a longer loan, so the total repaid is usually higher. Smaller repayments feel cheaper each month, which is why the second option is tempting, but they do not mean a lower total.",
+   "clue": "Think about how long interest is being charged."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The cost of the loan, such as interest and fees",
+   "also_right": []
+  },
+  "b": {
+   "best": "Loan X costs more in total because more interest is paid",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says smaller repayments are 'why the second option is tempting', but options are shown in random order. In the order shown, the second option is 'Both loans cost the same'. The tempting option it means is 'Loan X costs less in total because repayments are lower'. The why should name the option by its content, not its position."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'A loan costs its price plus interest and fees' is unclear, because a loan has no 'price'. The card says you repay the amount borrowed plus extra. The phrase could also blur with the item's price, which is a distractor in question a. 'The amount borrowed plus interest and fees' would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer that matches the card. The why for (b) points to 'the second option' by position, which does not match the random option order. The remember line's 'its price' should say 'the amount borrowed'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why says smaller repayments are 'why the second option is tempting', but options are shown in random order. In the order shown, the second option is 'Both loans cost the same'. The tempting option it means is 'Loan X costs less in total because repayments are lower'. The why should name the option by its content, not its position.",
+  "Remember, wording: 'A loan costs its price plus interest and fees' is unclear, because a loan has no 'price'. The card says you repay the amount borrowed plus extra. The phrase could also blur with the item's price, which is a distractor in question a. 'The amount borrowed plus interest and fees' would be clearer."
+ ],
+ "proposal": {
+  "title": "The cost of borrowing",
+  "card": [
+   "When you borrow money, you repay more than you borrowed. The extra is the cost of the loan.",
+   [
+    "Interest",
+    "a charge for using the lender's money, usually worked out as a percentage of the amount owing. A higher interest rate means a higher cost."
+   ],
+   [
+    "Fees",
+    "extra charges, such as an amount to set up the loan or a monthly account fee. They add to the total repaid."
+   ],
+   "Before borrowing, check the interest rate, the total you will repay and whether your income can cover each repayment. A longer loan has smaller repayments but usually more interest in total."
+  ],
+  "remember": "You repay the amount borrowed plus interest and fees, so check the rate, the total repaid and each repayment.",
+  "a": {
+   "q": "Ben borrows $5000 and repays $5600 in total over two years. What does the $600 mostly represent?",
+   "opts": [
+    "The cost of the loan, such as interest and fees",
+    "The price of the item he bought with the loan",
+    "A deposit that he gets back at the end",
+    "The amount of the loan that he has not repaid"
+   ],
+   "why": "The $600 is the extra above the amount borrowed, which is the interest and fees. The price of the item is covered by the $5000, so calling the $600 the price is the tempting mistake.",
+   "clue": "It is the extra on top of what he borrowed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is offered two loans for the same amount. Loan X has lower monthly repayments but runs for much longer. Loan Y has higher repayments and is shorter. Other things being equal, what is most likely?",
+   "opts": [
+    "Loan X costs more in total because more interest is paid",
+    "Loan X costs less in total because repayments are lower",
+    "Both loans cost the same as the amount borrowed is equal",
+    "Loan Y costs more in total because repayments are higher"
+   ],
+   "why": "Interest is charged for longer on a longer loan, so the total repaid is usually higher. Lower repayments feel cheaper each month, which makes the idea that Loan X costs less in total tempting, but smaller repayments do not mean a smaller total.",
+   "clue": "Think about how long interest is being charged."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:49Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says smaller repayments are 'why the second option is tempting', but options are shown in random order. In the order shown, the second option is 'Both loans cost the same'. The tempting option it means is 'Loan X costs less in total because repayments are lower'. The why should name the option by its content, not its position."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'A loan costs its price plus interest and fees' is unclear, because a loan has no 'price'. The card says you repay the amount borrowed plus extra. The phrase could also blur with the item's price, which is a distractor in question a. 'The amount borrowed plus interest and fees' would be clearer."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why says smaller repayments are 'why the second option is tempting', but options are shown in random order. In the order shown, the second option is 'Both loans cost the same'. The tempting option it means is 'Loan X costs less in total because repayments are lower'. The why should name the option by its content, not its position.",
+   "Remember, wording: 'A loan costs its price plus interest and fees' is unclear, because a loan has no 'price'. The card says you repay the amount borrowed plus extra. The phrase could also blur with the item's price, which is a distractor in question a. 'The amount borrowed plus interest and fees' would be clearer."
+  ]
+ },
+ "final": {
+  "title": "The cost of borrowing",
+  "card": [
+   "When you borrow money, you repay more than you borrowed. The extra is the cost of the loan.",
+   [
+    "Interest",
+    "a charge for using the lender's money, usually worked out as a percentage of the amount owing. A higher interest rate means a higher cost."
+   ],
+   [
+    "Fees",
+    "extra charges, such as an amount to set up the loan or a monthly account fee. They add to the total repaid."
+   ],
+   "Before borrowing, check the interest rate, the total you will repay and whether your income can cover each repayment. A longer loan has smaller repayments but usually more interest in total."
+  ],
+  "remember": "You repay the amount borrowed plus interest and fees, so check the rate, the total repaid and each repayment.",
+  "a": {
+   "q": "Ben borrows $5000 and repays $5600 in total over two years. What does the $600 mostly represent?",
+   "opts": [
+    "The cost of the loan, such as interest and fees",
+    "The price of the item he bought with the loan",
+    "A deposit that he gets back at the end",
+    "The amount of the loan that he has not repaid"
+   ],
+   "why": "The $600 is the extra above the amount borrowed, which is the interest and fees. The price of the item is covered by the $5000, so calling the $600 the price is the tempting mistake.",
+   "clue": "It is the extra on top of what he borrowed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is offered two loans for the same amount. Loan X has lower monthly repayments but runs for much longer. Loan Y has higher repayments and is shorter. Other things being equal, what is most likely?",
+   "opts": [
+    "Loan X costs more in total because more interest is paid",
+    "Loan X costs less in total because repayments are lower",
+    "Both loans cost the same as the amount borrowed is equal",
+    "Loan Y costs more in total because repayments are higher"
+   ],
+   "why": "Interest is charged for longer on a longer loan, so the total repaid is usually higher. Lower repayments feel cheaper each month, which makes the idea that Loan X costs less in total tempting, but smaller repayments do not mean a smaller total.",
+   "clue": "Think about how long interest is being charged."
+  }
+ },
+ "cleared_by": "auto"
+}

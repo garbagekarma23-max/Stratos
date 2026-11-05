@@ -1,0 +1,351 @@
+{
+ "id": "his-joan-arc",
+ "title": "Joan of Arc",
+ "brief": "bac2d510281d",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:37Z new, write",
+  "2026-11-04T09:36:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:04Z write: done",
+  "2026-11-04T09:58:28Z check: flagged",
+  "2026-11-04T14:58:52Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00447,
+  "check": 0.01419,
+  "fix": 0.01641,
+  "recheck": 0.01303
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The clue tells students to check the year the card gives for each event, but the card gives no year for the trial. The order is still clear from the card, but the clue does not fully match it.",
+ "rejected": {
+  "title": "Joan of Arc",
+  "card": [
+   "Joan of Arc was a peasant girl from France. She said that God had sent her to help France win its war against England. At that time, peasants and women rarely led armies.",
+   "In 1429 she led French forces to relieve the besieged city of Orléans. Her leadership lifted French hopes, and soon after she helped lead the king to be crowned.",
+   "The English and their French allies captured her. A church court found her guilty, and she was burned to death in 1431.",
+   "Later, she came to be seen as a French hero. The Catholic Church made her a saint in 1920."
+  ],
+  "remember": "A peasant girl's faith and leadership helped France in 1429. She was burned in 1431 and later honoured as a hero and saint.",
+  "a": {
+   "q": "Why was Joan of Arc's role in 1429 so unusual for her time?",
+   "opts": [
+    "A peasant girl led armies, saying God sent her",
+    "A queen led armies to defend her own kingdom",
+    "A priest led armies to defend the Church's lands",
+    "A noble knight led armies to take back Jerusalem"
+   ],
+   "why": "Joan was a peasant girl, and peasants and women rarely led armies then. She led French forces because she said God had sent her. She was not a queen, and her war was against England, not for Jerusalem.",
+   "clue": "Think about who she was and what she said sent her."
+  },
+  "b": {
+   "d": 2,
+   "q": "Which event came first in Joan of Arc's story?",
+   "opts": [
+    "She led French forces at Orléans",
+    "She was put on trial by a church court",
+    "She was burned to death after her trial",
+    "She was made a saint by the Church"
+   ],
+   "why": "Joan led French forces at Orléans in 1429. Her trial and death came in 1431, and she was made a saint much later, in 1920. Her trial did not come before her success in battle.",
+   "clue": "Check the year the card gives for each event."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The clue tells students to check the year the card gives for each event, but the card gives no year for the trial. The order is still clear from the card, but the clue does not fully match it."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Joan of Arc",
+     "card": [
+      "Joan of Arc was a peasant girl from France. She said that God had sent her to help France win its war against England.",
+      "In 1429 she led French forces to relieve the besieged city of Orléans. Her leadership lifted French hopes, and soon after she helped lead the king to be crowned.",
+      "The English and their French allies captured her. A church court found her guilty, and she was burned to death in 1431.",
+      "Later, she came to be seen as a French hero. The Catholic Church made her a saint in 1920."
+     ],
+     "remember": "A peasant girl's faith and leadership helped France in war, and her death made her a lasting hero.",
+     "a": {
+      "q": "Why was Joan of Arc's role in 1429 so unusual for her time?",
+      "opts": [
+       "A peasant girl led armies, saying God had sent her",
+       "A queen led armies to defend her own kingdom",
+       "A priest led armies to defend the Church's lands",
+       "A noble knight led armies to take back Jerusalem"
+      ],
+      "why": "Joan was a peasant girl with no rank, yet she led French forces because she said God had sent her. She was not a queen, and her war was against England, not for Jerusalem.",
+      "clue": "Think about who she was and what she said sent her."
+     },
+     "b": {
+      "d": 2,
+      "q": "Which event came first in Joan of Arc's story?",
+      "opts": [
+       "She led French forces at Orléans",
+       "She was put on trial by a church court",
+       "She was burned to death",
+       "She was later made a saint"
+      ],
+      "why": "Joan led French forces at Orléans in 1429. Her trial and death came in 1431, and she was made a saint much later, in 1920. Her death did not come before her success in battle.",
+      "clue": "Her military role came before her capture."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A peasant girl led armies, saying God had sent her",
+      "also_right": []
+     },
+     "b": {
+      "best": "She led French forces at Orléans",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Her military role came before her capture' nearly states the answer. It rules out the trial, the burning and the sainthood, which all came after her capture, so a student can pick Orléans without knowing the order of events."
+      },
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "'Her death made her a lasting hero' claims a cause the card does not teach. The card says only that she 'later came to be seen as a French hero' and was made a saint in 1920, not that her death made her a hero."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts check out: Orléans in 1429, the coronation, the church trial, burning in 1431 and sainthood in 1920. Question b's clue gives the answer away, and the remember line says her death made her a hero, which the card does not teach."
+    },
+    "flags": [
+     "Question b, other: The clue 'Her military role came before her capture' nearly states the answer. It rules out the trial, the burning and the sainthood, which all came after her capture, so a student can pick Orléans without knowing the order of events.",
+     "Remember, other: 'Her death made her a lasting hero' claims a cause the card does not teach. The card says only that she 'later came to be seen as a French hero' and was made a saint in 1920, not that her death made her a hero."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Joan of Arc",
+     "card": [
+      "Joan of Arc was a peasant girl from France. She said that God had sent her to help France win its war against England. At that time, peasants and women rarely led armies.",
+      "In 1429 she led French forces to relieve the besieged city of Orléans. Her leadership lifted French hopes, and soon after she helped lead the king to be crowned.",
+      "The English and their French allies captured her. A church court found her guilty, and she was burned to death in 1431.",
+      "Later, she came to be seen as a French hero. The Catholic Church made her a saint in 1920."
+     ],
+     "remember": "A peasant girl's faith and leadership helped France in 1429. She was burned in 1431 and later honoured as a hero and saint.",
+     "a": {
+      "q": "Why was Joan of Arc's role in 1429 so unusual for her time?",
+      "opts": [
+       "A peasant girl led armies, saying God sent her",
+       "A queen led armies to defend her own kingdom",
+       "A priest led armies to defend the Church's lands",
+       "A noble knight led armies to take back Jerusalem"
+      ],
+      "why": "Joan was a peasant girl, and peasants and women rarely led armies then. She led French forces because she said God had sent her. She was not a queen, and her war was against England, not for Jerusalem.",
+      "clue": "Think about who she was and what she said sent her."
+     },
+     "b": {
+      "d": 2,
+      "q": "Which event came first in Joan of Arc's story?",
+      "opts": [
+       "She led French forces at Orléans",
+       "She was put on trial by a church court",
+       "She was burned to death after her trial",
+       "She was made a saint by the Church"
+      ],
+      "why": "Joan led French forces at Orléans in 1429. Her trial and death came in 1431, and she was made a saint much later, in 1920. Her trial did not come before her success in battle.",
+      "clue": "Check the year the card gives for each event."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A peasant girl led armies, saying God sent her",
+       "also_right": []
+      },
+      "b": {
+       "best": "She led French forces at Orléans",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The clue tells students to check the year the card gives for each event, but the card gives no year for the trial. The order is still clear from the card, but the clue does not fully match it."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Facts check out and both questions have one clear right answer. One minor issue: question b's clue says to check the year for each event, but the card gives no year for the trial."
+     },
+     "flags": [
+      "Question b, wording: The clue tells students to check the year the card gives for each event, but the card gives no year for the trial. The order is still clear from the card, but the clue does not fully match it."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Joan of Arc",
+    "card": [
+     "Joan of Arc was a peasant girl from France. She said that God had sent her to help France win its war against England. At that time, peasants and women rarely led armies.",
+     "In 1429 she led French forces to relieve the besieged city of Orléans. Her leadership lifted French hopes, and soon after she helped lead the king to be crowned.",
+     "The English and their French allies captured her. In 1431 a church court found her guilty, and she was burned to death that same year.",
+     "Later, she came to be seen as a French hero. The Catholic Church made her a saint in 1920."
+    ],
+    "remember": "A peasant girl's faith and leadership helped France in 1429. She was burned in 1431 and later honoured as a hero and saint.",
+    "a": {
+     "q": "What made Joan of Arc's leadership in 1429 unusual for its time?",
+     "opts": [
+      "She was a peasant girl leading an army",
+      "She was a queen defending her own kingdom",
+      "She was a priest defending Church lands",
+      "She was a noble who had trained as a knight"
+     ],
+     "why": "Joan was a peasant girl, and peasants and women rarely led armies then. She said God had sent her to help France. She was not a queen, a priest or a noble, so none of those made her role unusual.",
+     "clue": "Think about where Joan came from, and who usually led armies."
+    },
+    "b": {
+     "d": 2,
+     "q": "Put Joan of Arc's life in order. Which of these happened earliest?",
+     "opts": [
+      "She led French forces at Orléans",
+      "She was put on trial by a church court",
+      "She was burned to death after her trial",
+      "She was made a saint by the Church"
+     ],
+     "why": "Joan led French forces at Orléans in 1429. She was captured after that, and her trial and death came in 1431. She was made a saint much later, in 1920.",
+     "clue": "Could she be tried before she was captured?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "She was a peasant girl leading an army",
+     "also_right": []
+    },
+    "b": {
+     "best": "She led French forces at Orléans",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Joan of Arc",
+  "card": [
+   "Joan of Arc was a peasant girl from France. She said that God had sent her to help France win its war against England. At that time, peasants and women rarely led armies.",
+   "In 1429 she led French forces to relieve the besieged city of Orléans. Her leadership lifted French hopes, and soon after she helped lead the king to be crowned.",
+   "The English and their French allies captured her. In 1431 a church court found her guilty, and she was burned to death that same year.",
+   "Later, she came to be seen as a French hero. The Catholic Church made her a saint in 1920."
+  ],
+  "remember": "A peasant girl's faith and leadership helped France in 1429. She was burned in 1431 and later honoured as a hero and saint.",
+  "a": {
+   "q": "What made Joan of Arc's leadership in 1429 unusual for its time?",
+   "opts": [
+    "She was a peasant girl leading an army",
+    "She was a queen defending her own kingdom",
+    "She was a priest defending Church lands",
+    "She was a noble who had trained as a knight"
+   ],
+   "why": "Joan was a peasant girl, and peasants and women rarely led armies then. She said God had sent her to help France. She was not a queen, a priest or a noble, so none of those made her role unusual.",
+   "clue": "Think about where Joan came from, and who usually led armies."
+  },
+  "b": {
+   "d": 2,
+   "q": "Put Joan of Arc's life in order. Which of these happened earliest?",
+   "opts": [
+    "She led French forces at Orléans",
+    "She was put on trial by a church court",
+    "She was burned to death after her trial",
+    "She was made a saint by the Church"
+   ],
+   "why": "Joan led French forces at Orléans in 1429. She was captured after that, and her trial and death came in 1431. She was made a saint much later, in 1920.",
+   "clue": "Could she be tried before she was captured?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "She was a peasant girl leading an army",
+   "also_right": []
+  },
+  "b": {
+   "best": "She led French forces at Orléans",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Joan of Arc",
+  "card": [
+   "Joan of Arc was a peasant girl from France. She said that God had sent her to help France win its war against England. At that time, peasants and women rarely led armies.",
+   "In 1429 she led French forces to relieve the besieged city of Orléans. Her leadership lifted French hopes, and soon after she helped lead the king to be crowned.",
+   "The English and their French allies captured her. In 1431 a church court found her guilty, and she was burned to death that same year.",
+   "Later, she came to be seen as a French hero. The Catholic Church made her a saint in 1920."
+  ],
+  "remember": "A peasant girl's faith and leadership helped France in 1429. She was burned in 1431 and later honoured as a hero and saint.",
+  "a": {
+   "q": "What made Joan of Arc's leadership in 1429 unusual for its time?",
+   "opts": [
+    "She was a peasant girl leading an army",
+    "She was a queen defending her own kingdom",
+    "She was a priest defending Church lands",
+    "She was a noble who had trained as a knight"
+   ],
+   "why": "Joan was a peasant girl, and peasants and women rarely led armies then. She said God had sent her to help France. She was not a queen, a priest or a noble, so none of those made her role unusual.",
+   "clue": "Think about where Joan came from, and who usually led armies."
+  },
+  "b": {
+   "d": 2,
+   "q": "Put Joan of Arc's life in order. Which of these happened earliest?",
+   "opts": [
+    "She led French forces at Orléans",
+    "She was put on trial by a church court",
+    "She was burned to death after her trial",
+    "She was made a saint by the Church"
+   ],
+   "why": "Joan led French forces at Orléans in 1429. She was captured after that, and her trial and death came in 1431. She was made a saint much later, in 1920.",
+   "clue": "Could she be tried before she was captured?"
+  }
+ },
+ "checked_by": "claude-code"
+}

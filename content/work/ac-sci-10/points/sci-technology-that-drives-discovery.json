@@ -1,0 +1,392 @@
+{
+ "id": "sci-technology-that-drives-discovery",
+ "title": "Technology that drives discovery",
+ "brief": "499ca75c6272",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, write",
+  "2026-11-04T09:36:57Z write: done",
+  "2026-11-04T09:47:11Z check: flagged",
+  "2026-11-04T09:58:32Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b wording, card fact)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00597,
+  "check": 0.01343,
+  "fix": 0.02134,
+  "recheck": 0.01239
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one whose subject is 'Scientists'; the other three all begin 'The machine'. With the clue asking 'the machine or the scientists?', a student can pick the odd one out without knowing the idea.\n- Card, fact: 'They do not send signals out' is stated as true of all radio telescopes. Some radio telescopes, such as Arecibo and Goldstone, have transmitted signals for planetary radar. Safer wording: 'Telescopes like ASKAP only receive signals; they do not send them out.'",
+ "rejected": {
+  "title": "Technology that drives discovery",
+  "card": [
+   "New technology lets scientists collect data that was impossible to gather before. Better data can lead to new questions and new discoveries.",
+   [
+    "Radio telescopes",
+    "These collect faint radio waves given off by objects in space, such as galaxies. Our eyes cannot see radio waves. They do not send signals out. The Australian SKA Pathfinder in Western Australia is one, and it can survey large areas of sky."
+   ],
+   [
+    "DNA sequencing machines",
+    "These read the order of the bases that make up DNA, without changing them. They let scientists compare the genes of many living things quickly."
+   ],
+   "The tool does not reach conclusions by itself. Scientists analyse the new data it collects, and that analysis drives discovery."
+  ],
+  "remember": "New tools collect data that scientists could not gather before, and analysing that data leads to discoveries.",
+  "a": {
+   "q": "Why can a radio telescope such as ASKAP reveal objects in space that our eyes miss?",
+   "opts": [
+    "It collects faint radio waves given off by objects",
+    "It sends out radio waves and times their echoes",
+    "It magnifies visible light more than other telescopes",
+    "It detects ultraviolet light that our eyes cannot see"
+   ],
+   "why": "Objects such as galaxies give off radio waves, which our eyes cannot see, and a radio telescope collects them. It does not send signals out and time echoes, which is how radar works.",
+   "clue": "Does the telescope send anything, or only receive?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A team uses DNA sequencing to read genes from hundreds of frog species in one month. How does this help drive discovery?",
+   "opts": [
+    "Scientists can analyse far more data to test new ideas",
+    "The machine works out which species are most related",
+    "The machine changes the bases so genes match more easily",
+    "The machine shows each frog's whole body in fine detail"
+   ],
+   "why": "The machine reads the order of bases quickly, giving scientists far more data to analyse. It does not reach conclusions such as which species are related: scientists do that by analysing the data.",
+   "clue": "Who draws conclusions, the machine or the scientists?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the only one whose subject is 'Scientists'; the other three all begin 'The machine'. With the clue asking 'the machine or the scientists?', a student can pick the odd one out without knowing the idea.",
+    "Card, fact: 'They do not send signals out' is stated as true of all radio telescopes. Some radio telescopes, such as Arecibo and Goldstone, have transmitted signals for planetary radar. Safer wording: 'Telescopes like ASKAP only receive signals; they do not send them out.'"
+   ],
+   "saved": {
+    "draft": {
+     "title": "Technology that drives discovery",
+     "card": [
+      "New technology lets scientists collect data that was impossible to gather before. Better data can lead to new questions and new discoveries.",
+      [
+       "Radio telescopes",
+       "These detect radio waves from space, which our eyes cannot see. The Australian SKA Pathfinder in Western Australia is one example, and it can survey large areas of sky."
+      ],
+      [
+       "DNA sequencing machines",
+       "These read the order of the bases that make up DNA. They let scientists compare the genes of many living things quickly."
+      ],
+      "Each tool extends what scientists can observe or measure. It is the new data from the tool that drives discovery."
+     ],
+     "remember": "New tools collect data that scientists could not gather before, and that data leads to discoveries.",
+     "a": {
+      "q": "How does a radio telescope help scientists discover new things about space?",
+      "opts": [
+       "It detects radio waves that our eyes cannot see",
+       "It lets scientists travel to distant stars",
+       "It makes distant objects switch on radio signals",
+       "It replaces the need to collect any data"
+      ],
+      "why": "Radio waves carry information about objects in space, and a radio telescope can detect them. It does not move scientists anywhere, and it still produces data that must be studied.",
+      "clue": "Think about what light our eyes cannot detect."
+     },
+     "b": {
+      "d": 2,
+      "q": "Before DNA sequencing machines, comparing the genes of two species took years. Now it can take days. What is the main effect on research?",
+      "opts": [
+       "Scientists can gather and compare far more genetic data",
+       "Scientists no longer need to ask any questions",
+       "Genes of different species have become more similar",
+       "Scientists can now see DNA with the naked eye"
+      ],
+      "why": "Faster sequencing gives scientists much more data to compare, which can lead to new questions. The machines read DNA but do not change it, and they do not remove the need for questions.",
+      "clue": "Ask what the machine changes about the data collected."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It detects radio waves that our eyes cannot see",
+      "also_right": []
+     },
+     "b": {
+      "best": "Scientists can gather and compare far more genetic data",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "The distractors are implausible (objects 'switch on' radio signals, no data needed, travel to stars), so a Year 10 student can pick the answer without understanding how radio telescopes drive discovery."
+      },
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "The distractors are implausible (seeing DNA with the naked eye, genes becoming more similar, no questions needed), so the question is too easy for Year 10."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts on the card and the intended answers are correct. Both questions are very easy because their wrong options are implausible, so they test little understanding."
+    },
+    "flags": [
+     "Question a, level: The distractors are implausible (objects 'switch on' radio signals, no data needed, travel to stars), so a Year 10 student can pick the answer without understanding how radio telescopes drive discovery.",
+     "Question b, level: The distractors are implausible (seeing DNA with the naked eye, genes becoming more similar, no questions needed), so the question is too easy for Year 10."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Technology that drives discovery",
+     "card": [
+      "New technology lets scientists collect data that was impossible to gather before. Better data can lead to new questions and new discoveries.",
+      [
+       "Radio telescopes",
+       "These collect faint radio waves given off by objects in space, such as galaxies. Our eyes cannot see radio waves. They do not send signals out. The Australian SKA Pathfinder in Western Australia is one, and it can survey large areas of sky."
+      ],
+      [
+       "DNA sequencing machines",
+       "These read the order of the bases that make up DNA, without changing them. They let scientists compare the genes of many living things quickly."
+      ],
+      "The tool does not reach conclusions by itself. Scientists analyse the new data it collects, and that analysis drives discovery."
+     ],
+     "remember": "New tools collect data that scientists could not gather before, and analysing that data leads to discoveries.",
+     "a": {
+      "q": "Why can a radio telescope such as ASKAP reveal objects in space that our eyes miss?",
+      "opts": [
+       "It collects faint radio waves given off by objects",
+       "It sends out radio waves and times their echoes",
+       "It magnifies visible light more than other telescopes",
+       "It detects ultraviolet light that our eyes cannot see"
+      ],
+      "why": "Objects such as galaxies give off radio waves, which our eyes cannot see, and a radio telescope collects them. It does not send signals out and time echoes, which is how radar works.",
+      "clue": "Does the telescope send anything, or only receive?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A team uses DNA sequencing to read genes from hundreds of frog species in one month. How does this help drive discovery?",
+      "opts": [
+       "Scientists can analyse far more data to test new ideas",
+       "The machine works out which species are most related",
+       "The machine changes the bases so genes match more easily",
+       "The machine shows each frog's whole body in fine detail"
+      ],
+      "why": "The machine reads the order of bases quickly, giving scientists far more data to analyse. It does not reach conclusions such as which species are related: scientists do that by analysing the data.",
+      "clue": "Who draws conclusions, the machine or the scientists?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It collects faint radio waves given off by objects",
+       "also_right": []
+      },
+      "b": {
+       "best": "Scientists can analyse far more data to test new ideas",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one whose subject is 'Scientists'; the other three all begin 'The machine'. With the clue asking 'the machine or the scientists?', a student can pick the odd one out without knowing the idea."
+       },
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "'They do not send signals out' is stated as true of all radio telescopes. Some radio telescopes, such as Arecibo and Goldstone, have transmitted signals for planetary radar. Safer wording: 'Telescopes like ASKAP only receive signals; they do not send them out.'"
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and answers are sound. However, question b's right option is the only one starting 'Scientists', which the clue points straight to. The card also overgeneralises that radio telescopes never transmit."
+     },
+     "flags": [
+      "Question b, wording: The right option is the only one whose subject is 'Scientists'; the other three all begin 'The machine'. With the clue asking 'the machine or the scientists?', a student can pick the odd one out without knowing the idea.",
+      "Card, fact: 'They do not send signals out' is stated as true of all radio telescopes. Some radio telescopes, such as Arecibo and Goldstone, have transmitted signals for planetary radar. Safer wording: 'Telescopes like ASKAP only receive signals; they do not send them out.'"
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Technology that drives discovery",
+    "card": [
+     "New technology lets scientists collect data that was impossible to gather before. Better data can lead to new questions and new discoveries.",
+     [
+      "Radio telescopes",
+      "These collect faint radio waves given off by objects in space, such as galaxies. Our eyes cannot see radio waves. The Australian SKA Pathfinder (ASKAP) in Western Australia only receives signals and does not send them out. It can survey large areas of sky."
+     ],
+     [
+      "DNA sequencing machines",
+      "These read the order of the bases that make up DNA, without changing them. They let scientists compare the genes of many living things quickly."
+     ],
+     "The tool does not reach conclusions by itself. Scientists analyse the new data it collects, and that analysis drives discovery."
+    ],
+    "remember": "New tools collect data that scientists could not gather before, and analysing that data leads to discoveries.",
+    "a": {
+     "q": "How can ASKAP detect objects in space that are invisible to our eyes?",
+     "opts": [
+      "It collects faint radio waves that the objects give off",
+      "It sends out radio waves and times the returning echoes",
+      "It magnifies visible light more than other telescopes",
+      "It picks up ultraviolet light that our eyes cannot see"
+     ],
+     "why": "Objects such as galaxies give off radio waves, which our eyes cannot see, and ASKAP collects them. It does not send signals out and time their echoes, which is how radar works.",
+     "clue": "Think about which way the radio waves travel."
+    },
+    "b": {
+     "d": 3,
+     "q": "Using DNA sequencing, a team reads genes from 300 frog species in a few weeks. How does the machine help lead to new discoveries?",
+     "opts": [
+      "It gives scientists far more data to analyse quickly",
+      "It decides by itself which frog species are related",
+      "It changes the bases so the genes match more easily",
+      "It shows each frog's whole body in fine detail"
+     ],
+     "why": "The machine reads the order of bases quickly, giving scientists far more data to analyse. It does not reach conclusions itself, such as which species are related: scientists work that out from the data. It reads the bases without changing them.",
+     "clue": "Think about what the machine produces and who uses it."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It collects faint radio waves that the objects give off",
+     "also_right": []
+    },
+    "b": {
+     "best": "It gives scientists far more data to analyse quickly",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Technology that drives discovery",
+  "card": [
+   "New technology lets scientists collect data that was impossible to gather before. Better data can lead to new questions and new discoveries.",
+   [
+    "Radio telescopes",
+    "These collect faint radio waves given off by objects in space, such as galaxies. Our eyes cannot see radio waves. The Australian SKA Pathfinder (ASKAP) in Western Australia only receives signals and does not send them out. It can survey large areas of sky."
+   ],
+   [
+    "DNA sequencing machines",
+    "These read the order of the bases that make up DNA, without changing them. They let scientists compare the genes of many living things quickly."
+   ],
+   "The tool does not reach conclusions by itself. Scientists analyse the new data it collects, and that analysis drives discovery."
+  ],
+  "remember": "New tools collect data that scientists could not gather before, and analysing that data leads to discoveries.",
+  "a": {
+   "q": "How can ASKAP detect objects in space that are invisible to our eyes?",
+   "opts": [
+    "It collects faint radio waves that the objects give off",
+    "It sends out radio waves and times the returning echoes",
+    "It magnifies visible light more than other telescopes",
+    "It picks up ultraviolet light that our eyes cannot see"
+   ],
+   "why": "Objects such as galaxies give off radio waves, which our eyes cannot see, and ASKAP collects them. It does not send signals out and time their echoes, which is how radar works.",
+   "clue": "Think about which way the radio waves travel."
+  },
+  "b": {
+   "d": 3,
+   "q": "Using DNA sequencing, a team reads genes from 300 frog species in a few weeks. How does the machine help lead to new discoveries?",
+   "opts": [
+    "It gives scientists far more data to analyse quickly",
+    "It decides by itself which frog species are related",
+    "It changes the bases so the genes match more easily",
+    "It shows each frog's whole body in fine detail"
+   ],
+   "why": "The machine reads the order of bases quickly, giving scientists far more data to analyse. It does not reach conclusions itself, such as which species are related: scientists work that out from the data. It reads the bases without changing them.",
+   "clue": "Think about what the machine produces and who uses it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It collects faint radio waves that the objects give off",
+   "also_right": []
+  },
+  "b": {
+   "best": "It gives scientists far more data to analyse quickly",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Technology that drives discovery",
+  "card": [
+   "New technology lets scientists collect data that was impossible to gather before. Better data can lead to new questions and new discoveries.",
+   [
+    "Radio telescopes",
+    "These collect faint radio waves given off by objects in space, such as galaxies. Our eyes cannot see radio waves. The Australian SKA Pathfinder (ASKAP) in Western Australia only receives signals and does not send them out. It can survey large areas of sky."
+   ],
+   [
+    "DNA sequencing machines",
+    "These read the order of the bases that make up DNA, without changing them. They let scientists compare the genes of many living things quickly."
+   ],
+   "The tool does not reach conclusions by itself. Scientists analyse the new data it collects, and that analysis drives discovery."
+  ],
+  "remember": "New tools collect data that scientists could not gather before, and analysing that data leads to discoveries.",
+  "a": {
+   "q": "How can ASKAP detect objects in space that are invisible to our eyes?",
+   "opts": [
+    "It collects faint radio waves that the objects give off",
+    "It sends out radio waves and times the returning echoes",
+    "It magnifies visible light more than other telescopes",
+    "It picks up ultraviolet light that our eyes cannot see"
+   ],
+   "why": "Objects such as galaxies give off radio waves, which our eyes cannot see, and ASKAP collects them. It does not send signals out and time their echoes, which is how radar works.",
+   "clue": "Think about which way the radio waves travel."
+  },
+  "b": {
+   "d": 3,
+   "q": "Using DNA sequencing, a team reads genes from 300 frog species in a few weeks. How does the machine help lead to new discoveries?",
+   "opts": [
+    "It gives scientists far more data to analyse quickly",
+    "It decides by itself which frog species are related",
+    "It changes the bases so the genes match more easily",
+    "It shows each frog's whole body in fine detail"
+   ],
+   "why": "The machine reads the order of bases quickly, giving scientists far more data to analyse. It does not reach conclusions itself, such as which species are related: scientists work that out from the data. It reads the bases without changing them.",
+   "clue": "Think about what the machine produces and who uses it."
+  }
+ },
+ "checked_by": "claude-code"
+}

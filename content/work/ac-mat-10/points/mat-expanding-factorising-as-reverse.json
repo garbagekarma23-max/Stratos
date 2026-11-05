@@ -1,0 +1,122 @@
+{
+ "id": "mat-expanding-factorising-as-reverse",
+ "title": "Expanding and factorising as reverse processes",
+ "brief": "baa6b93fe6f0",
+ "shortlist": [
+  [
+   "mat-expanding-factorising",
+   0.448
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:03Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00534,
+  "check": 0.01006
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches factorising techniques (common factor, grouping, difference of squares, perfect squares) but never states that factorising reverses expanding or that a factorised answer can be checked by expanding, so it is related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Expanding and factorising as reverse processes",
+  "card": [
+   "Expanding removes brackets by multiplying. For example, (x + 2)(x + 5) = x² + 5x + 2x + 10 = x² + 7x + 10.",
+   "Factorising goes the other way. It writes an expression as a product, so x² + 7x + 10 becomes (x + 2)(x + 5).",
+   "To check a factorised answer, expand it. If you get the original expression back, the factorising is right.",
+   "Example: x² − 9 = (x − 3)(x + 3). Check: (x − 3)(x + 3) = x² + 3x − 3x − 9 = x² − 9. The middle terms cancel, so the check works."
+  ],
+  "remember": "Expand to check a factorised answer. If you get the start back, it is right.",
+  "a": {
+   "q": "Mia factorises x² − 25 as (x − 5)(x + 5). What is the best way to check her answer?",
+   "opts": [
+    "Expand (x − 5)(x + 5) and compare it with x² − 25",
+    "Factorise x² − 25 a second time in the same way",
+    "Substitute x = 0 into the brackets only",
+    "Add 5 and −5 to see if they make 0"
+   ],
+   "why": "Expanding undoes factorising, so it should give x² − 25 back: x² + 5x − 5x − 25 = x² − 25. Factorising again repeats the same step and does not test it. One value of x alone could match by chance.",
+   "clue": "Use the reverse process."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam factorises x² + 5x + 6 as (x + 1)(x + 6). Expanding his answer shows what?",
+   "opts": [
+    "It gives x² + 7x + 6, so his factorising is wrong",
+    "It gives x² + 5x + 6, so his factorising is right",
+    "It gives x² + 6x + 7, so his factorising is wrong",
+    "It gives x² + 7x + 6, so his factorising is right"
+   ],
+   "why": "Expanding gives x² + 6x + x + 6 = x² + 7x + 6. This is not x² + 5x + 6, so the factorising is wrong. The constant term 6 matches, which is tempting, but the x term does not.",
+   "clue": "Check the x term as well as the number."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Expand (x − 5)(x + 5) and compare it with x² − 25",
+   "also_right": []
+  },
+  "b": {
+   "best": "It gives x² + 7x + 6, so his factorising is wrong",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Expanding and factorising as reverse processes",
+  "card": [
+   "Expanding removes brackets by multiplying. For example, (x + 2)(x + 5) = x² + 5x + 2x + 10 = x² + 7x + 10.",
+   "Factorising goes the other way. It writes an expression as a product, so x² + 7x + 10 becomes (x + 2)(x + 5).",
+   "To check a factorised answer, expand it. If you get the original expression back, the factorising is right.",
+   "Example: x² − 9 = (x − 3)(x + 3). Check: (x − 3)(x + 3) = x² + 3x − 3x − 9 = x² − 9. The middle terms cancel, so the check works."
+  ],
+  "remember": "Expand to check a factorised answer. If you get the start back, it is right.",
+  "a": {
+   "q": "Mia factorises x² − 25 as (x − 5)(x + 5). What is the best way to check her answer?",
+   "opts": [
+    "Expand (x − 5)(x + 5) and compare it with x² − 25",
+    "Factorise x² − 25 a second time in the same way",
+    "Substitute x = 0 into the brackets only",
+    "Add 5 and −5 to see if they make 0"
+   ],
+   "why": "Expanding undoes factorising, so it should give x² − 25 back: x² + 5x − 5x − 25 = x² − 25. Factorising again repeats the same step and does not test it. One value of x alone could match by chance.",
+   "clue": "Use the reverse process."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam factorises x² + 5x + 6 as (x + 1)(x + 6). Expanding his answer shows what?",
+   "opts": [
+    "It gives x² + 7x + 6, so his factorising is wrong",
+    "It gives x² + 5x + 6, so his factorising is right",
+    "It gives x² + 6x + 7, so his factorising is wrong",
+    "It gives x² + 7x + 6, so his factorising is right"
+   ],
+   "why": "Expanding gives x² + 6x + x + 6 = x² + 7x + 6. This is not x² + 5x + 6, so the factorising is wrong. The constant term 6 matches, which is tempting, but the x term does not.",
+   "clue": "Check the x term as well as the number."
+  }
+ },
+ "cleared_by": "checker"
+}

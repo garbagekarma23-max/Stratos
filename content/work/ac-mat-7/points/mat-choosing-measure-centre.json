@@ -1,0 +1,409 @@
+{
+ "id": "mat-choosing-measure-centre",
+ "title": "Choosing a measure of centre",
+ "brief": "165564fc43e2",
+ "shortlist": [
+  [
+   "mat-measures-centre",
+   0.249
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 may adapt mat-measures-centre, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:07Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:04Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (card other)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00399,
+  "write": 0.00539,
+  "check": 0.01298,
+  "fix": 0.02109,
+  "recheck": 0.01332
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-measures-centre",
+  "changes": [
+   "Replace the Ballarat (Victoria) workers example in question b with a local example, such as a small firm in a Queensland, South Australian, Western Australian, Tasmanian, ACT or Northern Territory town, or a neutral context.",
+   "Check the wording of the card so it is pitched at Year 7 students, since the bank point is currently labelled for Year 11 courses."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea (an outlier pulls the mean, so the median suits skewed data) at a basic level that can suit Year 7, needing only a local example and a wording check.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is broader: it teaches how to calculate the mean, median and mode as well as the effect of outliers, while the new point only teaches why an outlier makes the median the better choice of centre, so a separate point fits better.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: The card restates the definition of the median ('the middle value in order'), which belongs to point 2 (Mean, median, mode and range). It should only mention the median here, not define it.",
+ "rejected": {
+  "title": "Choosing a measure of centre",
+  "card": [
+   "An outlier is a value far from the rest of the data. It can be much higher or much lower than the other values.",
+   [
+    "Mean",
+    "uses every value in its total, so an outlier pulls the mean towards it. One very high value makes the mean higher."
+   ],
+   [
+    "Median",
+    "is the middle value in order. An outlier is just one value at the end, so the median barely moves."
+   ],
+   "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+  ],
+  "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
+  "a": {
+   "q": "Five students sent 2, 3, 3, 4 and 18 messages yesterday. The mean is 6 and the median is 3. Which describes the centre better, and why?",
+   "opts": [
+    "The median, because the outlier 18 pulls the mean up",
+    "The mean, because it uses every value in the data",
+    "The median, because it is always the larger of the two",
+    "The mean, because the outlier 18 does not affect it"
+   ],
+   "why": "Four of the five values are 4 or less, so a mean of 6 is higher than almost all of them. The outlier 18 pulls the mean up, while the median stays at 3. Using every value is true of the mean, but here it is a weakness.",
+   "clue": "Compare each centre with where most of the values sit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Weekly pocket money for five students is $10, $12, $13, $15 and $5. The $5 value is replaced by $60. What happens to the mean and the median?",
+   "opts": [
+    "The mean rises a lot and the median rises a little",
+    "The mean rises a little and the median rises a lot",
+    "The mean and the median both rise by the same amount",
+    "The mean stays the same and the median rises a lot"
+   ],
+   "why": "Before: the total is 55, so the mean is 55 ÷ 5 = $11, and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1, so they do not rise by the same amount.",
+   "clue": "Put the values in order and find both centres before and after."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, other: The card restates the definition of the median ('the middle value in order'), which belongs to point 2 (Mean, median, mode and range). It should only mention the median here, not define it."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Choosing a measure of centre",
+     "card": [
+      "An outlier is a value far from the rest of the data. It can be much higher or much lower than the other values.",
+      [
+       "Mean",
+       "uses every value in its total, so an outlier pulls the mean towards it. One very high value makes the mean higher."
+      ],
+      [
+       "Median",
+       "is the middle value in order. An outlier is just one value at the end, so the median barely moves."
+      ],
+      "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+     ],
+     "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
+     "a": {
+      "q": "Five students sent 2, 3, 3, 4 and 18 messages yesterday. The mean is 6 and the median is 3. Which describes the centre better, and why?",
+      "opts": [
+       "The median, because the outlier 18 pulls the mean up",
+       "The mean, because it uses every value in the data",
+       "The median, because it is always the larger of the two",
+       "The mean, because the outlier 18 does not affect it"
+      ],
+      "why": "Four of the five values are 4 or less, so a mean of 6 is higher than almost all of them. The outlier 18 pulls the mean up, while the median stays at 3. Using every value is true of the mean, but here it is a weakness.",
+      "clue": "Compare each centre with where most of the values sit."
+     },
+     "b": {
+      "d": 3,
+      "q": "Weekly pocket money for six students is $10, $10, $12, $14, $15 and $5. The $5 value is replaced by $60. What happens to the mean and the median?",
+      "opts": [
+       "The mean rises a lot and the median rises a little",
+       "The mean rises a little and the median rises a lot",
+       "The mean and the median both rise by the same amount",
+       "The mean stays the same and the median rises a lot"
+      ],
+      "why": "The old total was 66, so the old mean was $11 and the old median was $11. The new total is 121, so the new mean is about $20.17. The new order is 10, 10, 12, 14, 15, 60, so the new median is $13. The outlier pulls the mean far more than the median.",
+      "clue": "Work out both centres before and after the change."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The median, because the outlier 18 pulls the mean up",
+      "also_right": []
+     },
+     "b": {
+      "best": "The mean rises a lot and the median rises a little",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "With six values, the median is the average of the two middle values: (10+12)/2 = 11 before and (12+14)/2 = 13 after. The card only defines the median as 'the middle value in order' and uses an odd-count example. Students who follow the card alone may get stuck, and the why does not show the averaging step."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and both answers check out. Question b needs the median of an even number of values, which the card does not show and the why does not explain."
+    },
+    "flags": [
+     "Question b, level: With six values, the median is the average of the two middle values: (10+12)/2 = 11 before and (12+14)/2 = 13 after. The card only defines the median as 'the middle value in order' and uses an odd-count example. Students who follow the card alone may get stuck, and the why does not show the averaging step."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Choosing a measure of centre",
+     "card": [
+      "An outlier is a value far from the rest of the data. It can be much higher or much lower than the other values.",
+      [
+       "Mean",
+       "uses every value in its total, so an outlier pulls the mean towards it. One very high value makes the mean higher."
+      ],
+      [
+       "Median",
+       "is the middle value in order. An outlier is just one value at the end, so the median barely moves."
+      ],
+      "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+     ],
+     "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
+     "a": {
+      "q": "Five students sent 2, 3, 3, 4 and 18 messages yesterday. The mean is 6 and the median is 3. Which describes the centre better, and why?",
+      "opts": [
+       "The median, because the outlier 18 pulls the mean up",
+       "The mean, because it uses every value in the data",
+       "The median, because it is always the larger of the two",
+       "The mean, because the outlier 18 does not affect it"
+      ],
+      "why": "Four of the five values are 4 or less, so a mean of 6 is higher than almost all of them. The outlier 18 pulls the mean up, while the median stays at 3. Using every value is true of the mean, but here it is a weakness.",
+      "clue": "Compare each centre with where most of the values sit."
+     },
+     "b": {
+      "d": 3,
+      "q": "Weekly pocket money for five students is $10, $12, $13, $15 and $5. The $5 value is replaced by $60. What happens to the mean and the median?",
+      "opts": [
+       "The mean rises a lot and the median rises a little",
+       "The mean rises a little and the median rises a lot",
+       "The mean and the median both rise by the same amount",
+       "The mean stays the same and the median rises a lot"
+      ],
+      "why": "Before: the total is 55, so the mean is 55 ÷ 5 = $11, and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1, so they do not rise by the same amount.",
+      "clue": "Put the values in order and find both centres before and after."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The median, because the outlier 18 pulls the mean up",
+       "also_right": []
+      },
+      "b": {
+       "best": "The mean rises a lot and the median rises a little",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "The card restates the definition of the median ('the middle value in order'), which belongs to point 2 (Mean, median, mode and range). It should only mention the median here, not define it."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The arithmetic in the card, questions and explanations all checks out, and each question has one clear right answer. The only issue is that the card re-defines the median, which belongs to point 2."
+     },
+     "flags": [
+      "Card, other: The card restates the definition of the median ('the middle value in order'), which belongs to point 2 (Mean, median, mode and range). It should only mention the median here, not define it."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Choosing a measure of centre",
+    "card": [
+     "An outlier is a value far from the rest of the data. It can be much higher or much lower than the other values.",
+     [
+      "Mean",
+      "uses every value in its total, so an outlier pulls the mean towards it. One very high value makes the mean higher."
+     ],
+     [
+      "Median",
+      "an outlier is just one value at one end of the data, so it moves the median a little or not at all."
+     ],
+     "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+    ],
+    "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
+    "a": {
+     "q": "Yesterday five students sent 2, 3, 3, 4 and 18 messages. The mean is 6 and the median is 3. Which measure gives a better picture of the centre?",
+     "opts": [
+      "The median, because the outlier 18 pulls the mean up",
+      "The mean, because it uses every value in the data",
+      "The median, because it is the larger of the two values",
+      "The mean, because the outlier 18 does not affect it"
+     ],
+     "why": "Four of the five values are 4 or less, so a mean of 6 is higher than almost all of them. The outlier 18 pulls the mean up, while the median stays at 3. Using every value is true of the mean, but here it is a weakness.",
+     "clue": "Compare each centre with where most of the values sit."
+    },
+    "b": {
+     "d": 3,
+     "q": "Five students get $5, $10, $12, $13 and $15 pocket money a week. Then the $5 changes to $60. How do the mean and the median change?",
+     "opts": [
+      "The mean rises a lot and the median rises a little",
+      "The mean rises a little and the median rises a lot",
+      "The mean and the median both rise by the same amount",
+      "The mean stays the same and the median rises a lot"
+     ],
+     "why": "Before: the total is 55, so the mean is 55 ÷ 5 = $11, and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1.",
+     "clue": "Put the values in order and find both centres before and after."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The median, because the outlier 18 pulls the mean up",
+     "also_right": []
+    },
+    "b": {
+     "best": "The mean rises a lot and the median rises a little",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Choosing a measure of centre",
+  "card": [
+   "An outlier is a value far from the rest of the data. It can be much higher or much lower than the other values.",
+   [
+    "Mean",
+    "uses every value in its total, so an outlier pulls the mean towards it. One very high value makes the mean higher."
+   ],
+   [
+    "Median",
+    "an outlier is just one value at one end of the data, so it moves the median a little or not at all."
+   ],
+   "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+  ],
+  "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
+  "a": {
+   "q": "Yesterday five students sent 2, 3, 3, 4 and 18 messages. The mean is 6 and the median is 3. Which measure gives a better picture of the centre?",
+   "opts": [
+    "The median, because the outlier 18 pulls the mean up",
+    "The mean, because it uses every value in the data",
+    "The median, because it is the larger of the two values",
+    "The mean, because the outlier 18 does not affect it"
+   ],
+   "why": "Four of the five values are 4 or less, so a mean of 6 is higher than almost all of them. The outlier 18 pulls the mean up, while the median stays at 3. Using every value is true of the mean, but here it is a weakness.",
+   "clue": "Compare each centre with where most of the values sit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Five students get $5, $10, $12, $13 and $15 pocket money a week. Then the $5 changes to $60. How do the mean and the median change?",
+   "opts": [
+    "The mean rises a lot and the median rises a little",
+    "The mean rises a little and the median rises a lot",
+    "The mean and the median both rise by the same amount",
+    "The mean stays the same and the median rises a lot"
+   ],
+   "why": "Before: the total is 55, so the mean is 55 ÷ 5 = $11, and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1.",
+   "clue": "Put the values in order and find both centres before and after."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The median, because the outlier 18 pulls the mean up",
+   "also_right": []
+  },
+  "b": {
+   "best": "The mean rises a lot and the median rises a little",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Choosing a measure of centre",
+  "card": [
+   "An outlier is a value far from the rest of the data. It can be much higher or much lower than the other values.",
+   [
+    "Mean",
+    "uses every value in its total, so an outlier pulls the mean towards it. One very high value makes the mean higher."
+   ],
+   [
+    "Median",
+    "an outlier is just one value at one end of the data, so it moves the median a little or not at all."
+   ],
+   "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+  ],
+  "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
+  "a": {
+   "q": "Yesterday five students sent 2, 3, 3, 4 and 18 messages. The mean is 6 and the median is 3. Which measure gives a better picture of the centre?",
+   "opts": [
+    "The median, because the outlier 18 pulls the mean up",
+    "The mean, because it uses every value in the data",
+    "The median, because it is the larger of the two values",
+    "The mean, because the outlier 18 does not affect it"
+   ],
+   "why": "Four of the five values are 4 or less, so a mean of 6 is higher than almost all of them. The outlier 18 pulls the mean up, while the median stays at 3. Using every value is true of the mean, but here it is a weakness.",
+   "clue": "Compare each centre with where most of the values sit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Five students get $5, $10, $12, $13 and $15 pocket money a week. Then the $5 changes to $60. How do the mean and the median change?",
+   "opts": [
+    "The mean rises a lot and the median rises a little",
+    "The mean rises a little and the median rises a lot",
+    "The mean and the median both rise by the same amount",
+    "The mean stays the same and the median rises a lot"
+   ],
+   "why": "Before: the total is 55, so the mean is 55 ÷ 5 = $11, and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1.",
+   "clue": "Put the values in order and find both centres before and after."
+  }
+ },
+ "checked_by": "claude-code"
+}

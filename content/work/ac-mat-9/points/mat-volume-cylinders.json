@@ -1,0 +1,132 @@
+{
+ "id": "mat-volume-cylinders",
+ "title": "Volume of cylinders",
+ "brief": "083b91646d86",
+ "shortlist": [
+  [
+   "mat-volume-capacity",
+   0.337
+  ],
+  [
+   "mat-surface-area-volume",
+   0.279
+  ],
+  [
+   "mat-scaling-area-volume",
+   0.24
+  ],
+  [
+   "mat-surface-area",
+   0.231
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00598,
+  "check": 0.00714
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-volume-capacity, is broader than this point: it covers all prisms and capacity conversions and is written for Year 11 NSW and Units 1 and 2 Victoria, so it does not match the narrower Year 9 cylinder-volume idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Volume of cylinders",
+  "card": [
+   "Volume is the amount of space inside a solid. It is measured in cubic units, such as cm³.",
+   "A cylinder has a circle as its base. The area of the base is πr², where r is the radius.",
+   "Volume = base area × height, so V = πr²h. Square the radius first, then multiply by π and by the height.",
+   "Example: r = 3 cm and h = 10 cm. V = π × 3² × 10 = π × 9 × 10 = 90π, which is about 283 cm³."
+  ],
+  "remember": "Volume of a cylinder is the circle's area times the height.",
+  "a": {
+   "q": "A cylinder has radius 2 cm and height 5 cm. What is its volume, in terms of π?",
+   "opts": [
+    "20π cm³",
+    "10π cm³",
+    "50π cm³",
+    "100π cm³"
+   ],
+   "why": "V = π × 2² × 5 = π × 4 × 5 = 20π cm³. 10π comes from multiplying r by h without squaring r, which is a common slip.",
+   "clue": "Square the radius before you multiply."
+  },
+  "b": {
+   "d": 3,
+   "q": "A water tank is a cylinder with diameter 4 m and height 3 m. What is its volume, to the nearest cubic metre?",
+   "opts": [
+    "38 m³",
+    "151 m³",
+    "75 m³",
+    "19 m³"
+   ],
+   "why": "The radius is half the diameter, so r = 2 m. V = π × 2² × 3 = 12π, which is about 38 m³. Using 4 as the radius gives 48π, about 151 m³, which is wrong.",
+   "clue": "The diameter is not the radius."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "20π cm³",
+   "also_right": []
+  },
+  "b": {
+   "best": "38 m³",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Volume of cylinders",
+  "card": [
+   "Volume is the amount of space inside a solid. It is measured in cubic units, such as cm³.",
+   "A cylinder has a circle as its base. The area of the base is πr², where r is the radius.",
+   "Volume = base area × height, so V = πr²h. Square the radius first, then multiply by π and by the height.",
+   "Example: r = 3 cm and h = 10 cm. V = π × 3² × 10 = π × 9 × 10 = 90π, which is about 283 cm³."
+  ],
+  "remember": "Volume of a cylinder is the circle's area times the height.",
+  "a": {
+   "q": "A cylinder has radius 2 cm and height 5 cm. What is its volume, in terms of π?",
+   "opts": [
+    "20π cm³",
+    "10π cm³",
+    "50π cm³",
+    "100π cm³"
+   ],
+   "why": "V = π × 2² × 5 = π × 4 × 5 = 20π cm³. 10π comes from multiplying r by h without squaring r, which is a common slip.",
+   "clue": "Square the radius before you multiply."
+  },
+  "b": {
+   "d": 3,
+   "q": "A water tank is a cylinder with diameter 4 m and height 3 m. What is its volume, to the nearest cubic metre?",
+   "opts": [
+    "38 m³",
+    "151 m³",
+    "75 m³",
+    "19 m³"
+   ],
+   "why": "The radius is half the diameter, so r = 2 m. V = π × 2² × 3 = 12π, which is about 38 m³. Using 4 as the radius gives 48π, about 151 m³, which is wrong.",
+   "clue": "The diameter is not the radius."
+  }
+ },
+ "cleared_by": "checker"
+}

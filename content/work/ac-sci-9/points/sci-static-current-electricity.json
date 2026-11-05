@@ -1,0 +1,385 @@
+{
+ "id": "sci-static-current-electricity",
+ "title": "Static and current electricity",
+ "brief": "c3aa7d9a6ec5",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, write",
+  "2026-11-04T09:36:59Z write: done",
+  "2026-11-04T09:47:13Z check: flagged",
+  "2026-11-04T09:58:34Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00617,
+  "check": 0.01224,
+  "fix": 0.02539,
+  "recheck": 0.0115
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The first bullet says static charge 'stays in one place', but the last says it 'sometimes jumps away at once'. Students could read 'at once' as 'straight after rubbing', so the two lines seem to clash. Wording such as 'Built-up charge can suddenly jump away all at once, as a small spark' would remove the confusion.",
+ "rejected": {
+  "title": "Static and current electricity",
+  "card": [
+   [
+    "Static electricity",
+    "a build-up of electric charge on an object. The charge stays in one place, such as on a balloon after it is rubbed on hair."
+   ],
+   [
+    "Current electricity",
+    "a flow of charge through a conductor, such as a copper wire. A conductor is a material that lets charge move through it easily."
+   ],
+   "A voltage is what pushes charge around a circuit. A battery provides the voltage, and the charge flows only if the circuit is a complete loop.",
+   "Rubbing can make charge build up on an object. Sometimes the charge jumps away at once, as in a small spark."
+  ],
+  "remember": "Static is charge that builds up. Current is charge that flows, pushed by a voltage.",
+  "a": {
+   "q": "Which of these is an example of current electricity?",
+   "opts": [
+    "Charge flowing along the wires of a switched-on torch",
+    "Charge building up on a balloon rubbed on hair",
+    "Charge sitting on a plastic comb after combing",
+    "Charge collecting on a jumper rubbed on a rug"
+   ],
+   "why": "In a switched-on torch, charge flows through the wires, which are conductors, in a complete loop. That is current electricity. The balloon, comb and jumper all show static electricity, where charge builds up and stays on the object.",
+   "clue": "Which example needs a conductor and a complete loop?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leon connects a battery, a globe and wires in a complete loop, and the globe lights. What does the battery provide?",
+   "opts": [
+    "A voltage that pushes charge around the loop",
+    "Static charge that builds up on the globe",
+    "Copper wire that lets the charge flow",
+    "Charge that is made by rubbing inside it"
+   ],
+   "why": "The battery provides the voltage, which pushes charge around the complete loop. The copper wire is the conductor that lets charge move, but the wires do that job, not the battery, and a conductor does not push the charge.",
+   "clue": "Think about what makes charge move, not what lets it move."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The first bullet says static charge 'stays in one place', but the last says it 'sometimes jumps away at once'. Students could read 'at once' as 'straight after rubbing', so the two lines seem to clash. Wording such as 'Built-up charge can suddenly jump away all at once, as a small spark' would remove the confusion."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Static and current electricity",
+     "card": [
+      [
+       "Static electricity",
+       "a build-up of electric charge on an object. The charge stays in one place, such as on a balloon after it is rubbed on hair."
+      ],
+      [
+       "Current electricity",
+       "a flow of charge through a conductor, such as a copper wire. A conductor is a material that lets charge move through it easily."
+      ],
+      "A voltage is what pushes charge around a circuit. A battery provides the voltage, and the charge flows only if the circuit is a complete loop.",
+      "Rubbing can make charge build up on an object. Sometimes the charge jumps away at once, as in a small spark."
+     ],
+     "remember": "Static is charge that builds up. Current is charge that flows, pushed by a voltage.",
+     "a": {
+      "q": "Which of these describes current electricity?",
+      "opts": [
+       "Charge flowing through a wire in a complete circuit",
+       "Charge building up on a balloon rubbed on hair",
+       "Charge staying still on a plastic ruler",
+       "Charge that cannot move through a conductor"
+      ],
+      "why": "Current electricity is a flow of charge through a conductor. Charge building up on a balloon is static electricity, because the charge stays in one place.",
+      "clue": "Look for the option where charge is moving."
+     },
+     "b": {
+      "d": 2,
+      "q": "Leon connects a battery, a globe and wires in a complete loop and the globe lights. What is pushing the charge around the loop?",
+      "opts": [
+       "The voltage from the battery",
+       "The static charge on the globe",
+       "The charge built up on the wires",
+       "The rubbing of the wires together"
+      ],
+      "why": "A voltage pushes charge around a complete circuit, and the battery provides it. Static charge is a build-up that stays in place, so it does not push the current.",
+      "clue": "Which part of the circuit provides the push?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Charge flowing through a wire in a complete circuit",
+      "also_right": []
+     },
+     "b": {
+      "best": "The voltage from the battery",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Look for the option where charge is moving' gives the answer away: only one option has moving charge, so a student can pick it without knowing what current electricity is."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem names a battery, and the right option is the only one that mentions the battery. The clue about which part 'provides the push' points straight to it, so a student can match words without understanding voltage."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the intended answers are correct. Both questions give their answers away, through the clue in (a) and the stem-to-option word match in (b), so they test little understanding."
+    },
+    "flags": [
+     "Question a, other: The clue 'Look for the option where charge is moving' gives the answer away: only one option has moving charge, so a student can pick it without knowing what current electricity is.",
+     "Question b, wording: The stem names a battery, and the right option is the only one that mentions the battery. The clue about which part 'provides the push' points straight to it, so a student can match words without understanding voltage."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Static and current electricity",
+     "card": [
+      [
+       "Static electricity",
+       "a build-up of electric charge on an object. The charge stays in one place, such as on a balloon after it is rubbed on hair."
+      ],
+      [
+       "Current electricity",
+       "a flow of charge through a conductor, such as a copper wire. A conductor is a material that lets charge move through it easily."
+      ],
+      "A voltage is what pushes charge around a circuit. A battery provides the voltage, and the charge flows only if the circuit is a complete loop.",
+      "Rubbing can make charge build up on an object. Sometimes the charge jumps away at once, as in a small spark."
+     ],
+     "remember": "Static is charge that builds up. Current is charge that flows, pushed by a voltage.",
+     "a": {
+      "q": "Which of these is an example of current electricity?",
+      "opts": [
+       "Charge flowing along the wires of a switched-on torch",
+       "Charge building up on a balloon rubbed on hair",
+       "Charge sitting on a plastic comb after combing",
+       "Charge collecting on a jumper rubbed on a rug"
+      ],
+      "why": "In a switched-on torch, charge flows through the wires, which are conductors, in a complete loop. That is current electricity. The balloon, comb and jumper all show static electricity, where charge builds up and stays on the object.",
+      "clue": "Which example needs a conductor and a complete loop?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Leon connects a battery, a globe and wires in a complete loop, and the globe lights. What does the battery provide?",
+      "opts": [
+       "A voltage that pushes charge around the loop",
+       "Static charge that builds up on the globe",
+       "Copper wire that lets the charge flow",
+       "Charge that is made by rubbing inside it"
+      ],
+      "why": "The battery provides the voltage, which pushes charge around the complete loop. The copper wire is the conductor that lets charge move, but the wires do that job, not the battery, and a conductor does not push the charge.",
+      "clue": "Think about what makes charge move, not what lets it move."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Charge flowing along the wires of a switched-on torch",
+       "also_right": []
+      },
+      "b": {
+       "best": "A voltage that pushes charge around the loop",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The first bullet says static charge 'stays in one place', but the last says it 'sometimes jumps away at once'. Students could read 'at once' as 'straight after rubbing', so the two lines seem to clash. Wording such as 'Built-up charge can suddenly jump away all at once, as a small spark' would remove the confusion."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both questions are sound, and each has one clear right answer. One small wording issue: the card says static charge stays in one place, then says it 'jumps away at once', which could confuse students."
+     },
+     "flags": [
+      "Card, wording: The first bullet says static charge 'stays in one place', but the last says it 'sometimes jumps away at once'. Students could read 'at once' as 'straight after rubbing', so the two lines seem to clash. Wording such as 'Built-up charge can suddenly jump away all at once, as a small spark' would remove the confusion."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "Static and current electricity",
+    "card": [
+     [
+      "Static electricity",
+      "a build-up of electric charge on an object, such as a balloon after it is rubbed on hair. The charge stays on the object instead of flowing along a path."
+     ],
+     [
+      "Current electricity",
+      "a flow of charge through a conductor, such as a copper wire. A conductor is a material that lets charge move through it easily."
+     ],
+     "A voltage is what pushes charge around a circuit. A battery provides the voltage, and the charge flows only if the circuit is a complete loop.",
+     "Rubbing can make charge build up on an object. Built-up charge can suddenly jump away all at once, as a small spark."
+    ],
+    "remember": "Static is charge that builds up. Current is charge that flows, pushed by a voltage.",
+    "a": {
+     "q": "Which of these shows current electricity?",
+     "opts": [
+      "Charge moving through the wires of a lit torch",
+      "Charge building up on a child going down a slide",
+      "Charge sitting on a plastic comb after combing",
+      "Charge collecting on a jumper rubbed on a rug"
+     ],
+     "why": "In a lit torch, charge flows through the wires, which are conductors, in a complete loop. That is current electricity. The child, the comb and the jumper all show static electricity, where charge builds up and stays on the object.",
+     "clue": "Which example needs a conductor and a complete loop?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Ana joins a battery, a globe and wires into a complete loop, and the globe lights up. What is the battery's job in this circuit?",
+     "opts": [
+      "Giving a voltage that pushes charge around the loop",
+      "Storing static charge that builds up on the globe",
+      "Acting as a conductor that lets the charge flow",
+      "Making charge by rubbing parts together inside it"
+     ],
+     "why": "The battery provides the voltage, which pushes charge around the complete loop. Letting charge flow is the job of conductors such as the copper wires, and a conductor does not push the charge.",
+     "clue": "Think about what makes charge move, not what lets it move."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Charge moving through the wires of a lit torch",
+     "also_right": []
+    },
+    "b": {
+     "best": "Giving a voltage that pushes charge around the loop",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Static and current electricity",
+  "card": [
+   [
+    "Static electricity",
+    "a build-up of electric charge on an object, such as a balloon after it is rubbed on hair. The charge stays on the object instead of flowing along a path."
+   ],
+   [
+    "Current electricity",
+    "a flow of charge through a conductor, such as a copper wire. A conductor is a material that lets charge move through it easily."
+   ],
+   "A voltage is what pushes charge around a circuit. A battery provides the voltage, and the charge flows only if the circuit is a complete loop.",
+   "Rubbing can make charge build up on an object. Built-up charge can suddenly jump away all at once, as a small spark."
+  ],
+  "remember": "Static is charge that builds up. Current is charge that flows, pushed by a voltage.",
+  "a": {
+   "q": "Which of these shows current electricity?",
+   "opts": [
+    "Charge moving through the wires of a lit torch",
+    "Charge building up on a child going down a slide",
+    "Charge sitting on a plastic comb after combing",
+    "Charge collecting on a jumper rubbed on a rug"
+   ],
+   "why": "In a lit torch, charge flows through the wires, which are conductors, in a complete loop. That is current electricity. The child, the comb and the jumper all show static electricity, where charge builds up and stays on the object.",
+   "clue": "Which example needs a conductor and a complete loop?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana joins a battery, a globe and wires into a complete loop, and the globe lights up. What is the battery's job in this circuit?",
+   "opts": [
+    "Giving a voltage that pushes charge around the loop",
+    "Storing static charge that builds up on the globe",
+    "Acting as a conductor that lets the charge flow",
+    "Making charge by rubbing parts together inside it"
+   ],
+   "why": "The battery provides the voltage, which pushes charge around the complete loop. Letting charge flow is the job of conductors such as the copper wires, and a conductor does not push the charge.",
+   "clue": "Think about what makes charge move, not what lets it move."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Charge moving through the wires of a lit torch",
+   "also_right": []
+  },
+  "b": {
+   "best": "Giving a voltage that pushes charge around the loop",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Static and current electricity",
+  "card": [
+   [
+    "Static electricity",
+    "a build-up of electric charge on an object, such as a balloon after it is rubbed on hair. The charge stays on the object instead of flowing along a path."
+   ],
+   [
+    "Current electricity",
+    "a flow of charge through a conductor, such as a copper wire. A conductor is a material that lets charge move through it easily."
+   ],
+   "A voltage is what pushes charge around a circuit. A battery provides the voltage, and the charge flows only if the circuit is a complete loop.",
+   "Rubbing can make charge build up on an object. Built-up charge can suddenly jump away all at once, as a small spark."
+  ],
+  "remember": "Static is charge that builds up. Current is charge that flows, pushed by a voltage.",
+  "a": {
+   "q": "Which of these shows current electricity?",
+   "opts": [
+    "Charge moving through the wires of a lit torch",
+    "Charge building up on a child going down a slide",
+    "Charge sitting on a plastic comb after combing",
+    "Charge collecting on a jumper rubbed on a rug"
+   ],
+   "why": "In a lit torch, charge flows through the wires, which are conductors, in a complete loop. That is current electricity. The child, the comb and the jumper all show static electricity, where charge builds up and stays on the object.",
+   "clue": "Which example needs a conductor and a complete loop?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana joins a battery, a globe and wires into a complete loop, and the globe lights up. What is the battery's job in this circuit?",
+   "opts": [
+    "Giving a voltage that pushes charge around the loop",
+    "Storing static charge that builds up on the globe",
+    "Acting as a conductor that lets the charge flow",
+    "Making charge by rubbing parts together inside it"
+   ],
+   "why": "The battery provides the voltage, which pushes charge around the complete loop. Letting charge flow is the job of conductors such as the copper wires, and a conductor does not push the charge.",
+   "clue": "Think about what makes charge move, not what lets it move."
+  }
+ },
+ "checked_by": "claude-code"
+}

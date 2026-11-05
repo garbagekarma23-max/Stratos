@@ -1,0 +1,302 @@
+{
+ "id": "geo-scale-2",
+ "title": "Scale",
+ "brief": "b64b7f098ec5",
+ "shortlist": [
+  [
+   "geo-scale",
+   0.306
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 may adapt geo-scale, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:46:59Z confirm: Claude Opus 5.5 may adapt geo-scale, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt geo-scale (1 change)",
+  "2026-11-05T06:08:56Z claude-code review: adapting geo-scale on the next run",
+  "2026-11-05T06:46:37Z adapt: done",
+  "2026-11-05T06:53:50Z check: flagged",
+  "2026-11-05T06:56:58Z fix: suggested",
+  "2026-11-05T07:02:43Z autoreview: picked as a spot check. It would have been cleared with the fix (a other, b other)",
+  "2026-11-05T07:03:36Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.00648,
+  "adapt": 0.00307,
+  "check": 0.01277,
+  "fix": 0.01304
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-scale",
+  "changes": [
+   "Replace the Hunter Valley example, which is specific to New South Wales, with a regional example from a state or territory this course covers."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same scale idea at a suitable level, but its Hunter Valley example is New South Wales-specific and needs a local example for these states and territories.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "geo-scale",
+  "changes": [
+   "Replace the Hunter Valley regional example, which is in New South Wales (not one of this course's states), with a region from a course state, such as the Darling Downs or the Barossa Valley."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of local, regional, national and global scales, and how an explanation can change with scale, at a depth that suits Year 7; only its New South Wales regional example should be swapped for one from a course state.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "geo-scale",
+  "changes": [
+   "Replace the Hunter Valley, in New South Wales, as the example of a region with one from the course's states, such as the Darling Downs in Queensland or the Barossa Valley in South Australia."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "b.q"
+  ]
+ },
+ "cleared_by": "owner",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same four scales and how a pattern can change with scale, at a Year 7 depth. Only its New South Wales region should become one in this course's states.",
+   "item": "3c2ea59b593c1e49",
+   "result": "decided",
+   "saved": {
+    "id": "geo-scale-2",
+    "title": "Scale",
+    "brief": "b64b7f098ec5",
+    "shortlist": [
+     [
+      "geo-scale",
+      0.306
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00022,
+     "confirm": 0.00648
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "geo-scale",
+     "changes": [
+      "Replace the Hunter Valley example, which is specific to New South Wales, with a regional example from a state or territory this course covers."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same scale idea at a suitable level, but its Hunter Valley example is New South Wales-specific and needs a local example for these states and territories.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "geo-scale",
+     "changes": [
+      "Replace the Hunter Valley regional example, which is in New South Wales (not one of this course's states), with a region from a course state, such as the Darling Downs or the Barossa Valley."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of local, regional, national and global scales, and how an explanation can change with scale, at a depth that suits Year 7; only its New South Wales regional example should be swapped for one from a course state.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "1baacb775ef5d5b7"
+  }
+ ],
+ "draft": {
+  "title": "Scale",
+  "card": [
+   "Scale is the size of the area a geographer looks at. Four common scales are local, regional, national and global.",
+   [
+    "Local and regional",
+    "local is a small area, such as a suburb or a creek. Regional is a larger area made of many localities, such as a river catchment or the Darling Downs in Queensland."
+   ],
+   [
+    "National and global",
+    "national is a whole country, such as Australia. Global is the whole Earth, or issues that cross many countries."
+   ],
+   "The same issue can look different at each scale. An explanation that fits at one scale may not fit at another, so geographers often check more than one."
+  ],
+  "remember": "Look at an issue at more than one scale, because what you find can change with the scale.",
+  "a": {
+   "q": "Which of these studies of rainfall is set at a regional scale?",
+   "opts": [
+    "Rainfall across the Murray-Darling Basin over ten years",
+    "Rainfall that collects in one school oval after a storm",
+    "Average rainfall for Australia as a single country",
+    "Rainfall patterns for every continent on Earth"
+   ],
+   "why": "A river basin is a large area made of many localities, so it is regional. A playground is local, a whole country is national and every continent is global.",
+   "clue": "Think of an area bigger than a suburb but smaller than a country."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana finds her town's average temperature has stayed steady for 20 years. A national study shows Australia warming over the same time. What does this best show about scale?",
+   "opts": [
+    "The same issue can show a different pattern at each scale",
+    "Two studies of one issue should agree if both are done well",
+    "A local study is too small to tell geographers anything",
+    "The national trend will show up in each town's records"
+   ],
+   "why": "The same issue can look different at each scale, so a steady town and a warming country can both be correct. The tempting idea that well-done studies should agree assumes the scales must match, but a pattern at one scale may not fit at another.",
+   "clue": "Both results could be true at their own scale."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Rainfall across the Murray-Darling Basin over ten years",
+   "also_right": []
+  },
+  "b": {
+   "best": "The same issue can show a different pattern at each scale",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls the local option 'a playground', but the option says 'one school oval'. The explanation should match the option's wording."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Both results could be true at their own scale' almost gives the answer away. It rules out the 'should agree' and 'will show up' options and points straight to the right one."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the intended answers are correct. Two small fixes are needed: Why (a) says 'playground' where the option says 'school oval', and the clue for question b nearly gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) calls the local option 'a playground', but the option says 'one school oval'. The explanation should match the option's wording.",
+  "Question b, other: The clue 'Both results could be true at their own scale' almost gives the answer away. It rules out the 'should agree' and 'will show up' options and points straight to the right one."
+ ],
+ "proposal": {
+  "title": "Scale",
+  "card": [
+   "Scale is the size of the area a geographer looks at. Four common scales are local, regional, national and global.",
+   [
+    "Local and regional",
+    "local is a small area, such as a suburb or a creek. Regional is a larger area made of many localities, such as a river catchment or the Darling Downs in Queensland."
+   ],
+   [
+    "National and global",
+    "national is a whole country, such as Australia. Global is the whole Earth, or issues that cross many countries."
+   ],
+   "The same issue can look different at each scale. An explanation that fits at one scale may not fit at another, so geographers often check more than one."
+  ],
+  "remember": "Look at an issue at more than one scale, because what you find can change with the scale.",
+  "a": {
+   "q": "Which of these studies of rainfall is set at a regional scale?",
+   "opts": [
+    "Rainfall across the Murray-Darling Basin over ten years",
+    "Rainfall that collects in one school oval after a storm",
+    "Average rainfall for Australia as a single country",
+    "Rainfall patterns for every continent on Earth"
+   ],
+   "why": "A river basin is a large area made of many localities, so it is regional. One school oval is local, a whole country is national and every continent is global.",
+   "clue": "Think of an area bigger than a suburb but smaller than a country."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana finds her town's average temperature has stayed steady for 20 years. A national study shows Australia warming over the same time. What does this best show about scale?",
+   "opts": [
+    "The same issue can show a different pattern at each scale",
+    "Two studies of one issue should agree if both are done well",
+    "A local study is too small to tell geographers anything",
+    "The national trend will show up in each town's records"
+   ],
+   "why": "The same issue can look different at each scale, so a steady town and a warming country can both be correct. The tempting idea that well-done studies should agree assumes the scales must match, but a pattern at one scale may not fit at another.",
+   "clue": "Compare the size of the area each study covers."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-05T07:02:43Z",
+  "rules": 1,
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls the local option 'a playground', but the option says 'one school oval'. The explanation should match the option's wording."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Both results could be true at their own scale' almost gives the answer away. It rules out the 'should agree' and 'will show up' options and points straight to the right one."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) calls the local option 'a playground', but the option says 'one school oval'. The explanation should match the option's wording.",
+   "Question b, other: The clue 'Both results could be true at their own scale' almost gives the answer away. It rules out the 'should agree' and 'will show up' options and points straight to the right one."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Scale",
+  "card": [
+   "Scale is the size of the area a geographer looks at. Four common scales are local, regional, national and global.",
+   [
+    "Local and regional",
+    "local is a small area, such as a suburb or a creek. Regional is a larger area made of many localities, such as a river catchment or the Darling Downs in Queensland."
+   ],
+   [
+    "National and global",
+    "national is a whole country, such as Australia. Global is the whole Earth, or issues that cross many countries."
+   ],
+   "The same issue can look different at each scale. An explanation that fits at one scale may not fit at another, so geographers often check more than one."
+  ],
+  "remember": "Look at an issue at more than one scale, because what you find can change with the scale.",
+  "a": {
+   "q": "Which of these studies of rainfall is set at a regional scale?",
+   "opts": [
+    "Rainfall across the Murray-Darling Basin over ten years",
+    "Rainfall that collects in one school oval after a storm",
+    "Average rainfall for Australia as a single country",
+    "Rainfall patterns for every continent on Earth"
+   ],
+   "why": "A river basin is a large area made of many localities, so it is regional. One school oval is local, a whole country is national and every continent is global.",
+   "clue": "Think of an area bigger than a suburb but smaller than a country."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana finds her town's average temperature has stayed steady for 20 years. A national study shows Australia warming over the same time. What does this best show about scale?",
+   "opts": [
+    "The same issue can show a different pattern at each scale",
+    "Two studies of one issue should agree if both are done well",
+    "A local study is too small to tell geographers anything",
+    "The national trend will show up in each town's records"
+   ],
+   "why": "The same issue can look different at each scale, so a steady town and a warming country can both be correct. The tempting idea that well-done studies should agree assumes the scales must match, but a pattern at one scale may not fit at another.",
+   "clue": "Compare the size of the area each study covers."
+  }
+ }
+}

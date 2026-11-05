@@ -1,0 +1,247 @@
+{
+ "id": "ecb-economic-growth-gdp",
+ "title": "Economic growth and GDP",
+ "brief": "3c5100e031c1",
+ "shortlist": [
+  [
+   "e-gdp",
+   0.545
+  ],
+  [
+   "eco-business-cycle",
+   0.33
+  ],
+  [
+   "eco-limits-gdp",
+   0.314
+  ],
+  [
+   "eco-economic-indicators",
+   0.291
+  ],
+  [
+   "eco-costs-benefits-growth",
+   0.29
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: done",
+  "2026-11-04T09:58:20Z check: flagged",
+  "2026-11-04T10:07:56Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00554,
+  "check": 0.01296,
+  "fix": 0.01801,
+  "recheck": 0.00698
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, e-gdp, goes beyond this Year 10 brief into real versus nominal GDP, price index calculations and per capita measures, which is a clearly greater depth than the basic definition of GDP and growth needed here, so a new point is the right match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Economic growth and GDP",
+  "card": [
+   [
+    "GDP",
+    "Gross domestic product is the value of all the goods and services made in a country in a year."
+   ],
+   [
+    "Economic growth",
+    "Economic growth is GDP rising over time. It is usually shown as a percentage change from one period to the next."
+   ],
+   "GDP counts what is made inside the country, whoever owns the business. It counts services such as haircuts and teaching as well as goods such as cars.",
+   "If GDP falls, the economy shrinks. If GDP rises, the economy grows."
+  ],
+  "remember": "GDP is the value of what a country produces in a year. Growth is GDP rising.",
+  "a": {
+   "q": "Which best describes economic growth?",
+   "opts": [
+    "A rise in the value of goods and services produced",
+    "A rise in the number of people in the country",
+    "A rise in the average price of goods and services",
+    "A rise in the number of businesses that open"
+   ],
+   "why": "Economic growth is GDP rising, which means more value of goods and services made. A rise in prices is inflation, which is a different idea.",
+   "clue": "Growth is about GDP going up."
+  },
+  "b": {
+   "d": 2,
+   "q": "Last year a country's GDP was $900 billion. This year it is $936 billion. What has happened?",
+   "opts": [
+    "The economy grew",
+    "The economy shrank",
+    "Prices rose in general",
+    "Unemployment fell"
+   ],
+   "why": "GDP rose from $900 billion to $936 billion, so the economy grew. The figures say nothing about prices or jobs, so those options cannot be shown from GDP alone.",
+   "clue": "Compare the two GDP figures."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A rise in the value of goods and services produced",
+   "also_right": []
+  },
+  "b": {
+   "best": "The economy grew",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines growth as GDP rising in value, but does not say growth is measured in real GDP, adjusted for inflation. A rise in the dollar value of GDP can come partly or wholly from higher prices. Question b's dollar figures ($900b to $936b) could reflect inflation rather than more production, so 'the economy grew' is only safe if the figures are real GDP. Why (b) also says the figures 'say nothing about prices', which overlooks this. A short line such as 'measured after removing price rises (real GDP)', or labelling the figures as real GDP, would fix it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions work as written. However, the card never says growth is measured in real (inflation-adjusted) GDP, so a rise in GDP's dollar value could be mistaken for growth when it is only higher prices. That affects question b's dollar figures and its why."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines growth as GDP rising in value, but does not say growth is measured in real GDP, adjusted for inflation. A rise in the dollar value of GDP can come partly or wholly from higher prices. Question b's dollar figures ($900b to $936b) could reflect inflation rather than more production, so 'the economy grew' is only safe if the figures are real GDP. Why (b) also says the figures 'say nothing about prices', which overlooks this. A short line such as 'measured after removing price rises (real GDP)', or labelling the figures as real GDP, would fix it."
+ ],
+ "proposal": {
+  "title": "Economic growth and GDP",
+  "card": [
+   [
+    "GDP",
+    "Gross domestic product is the value of all the goods and services made in a country in a year."
+   ],
+   [
+    "Economic growth",
+    "Economic growth is GDP rising over time. It is usually shown as a percentage change from one year to the next."
+   ],
+   [
+    "Real GDP",
+    "GDP measured after removing the effect of price rises. Growth is measured with real GDP, so it shows more being made, not just higher prices."
+   ],
+   "GDP counts what is made inside the country, whoever owns the business. It counts services such as haircuts as well as goods such as cars."
+  ],
+  "remember": "Growth means real GDP rising: more goods and services made, not just higher prices.",
+  "a": {
+   "q": "Which best describes economic growth?",
+   "opts": [
+    "More goods and services being made in the country",
+    "More people being born or moving into the country",
+    "Higher average prices for goods and services sold",
+    "More businesses opening up in the country"
+   ],
+   "why": "Economic growth is real GDP rising, which means more goods and services are made. Higher prices alone do not count, because real GDP removes the effect of price rises.",
+   "clue": "Think about what real GDP measures once price rises are removed."
+  },
+  "b": {
+   "d": 2,
+   "q": "A country's real GDP was $900 billion last year. This year it is $936 billion. What has happened?",
+   "opts": [
+    "The economy grew",
+    "The economy shrank",
+    "Prices rose in general",
+    "Unemployment fell"
+   ],
+   "why": "Real GDP rose from $900 billion to $936 billion, so more goods and services were made and the economy grew. Real GDP has the effect of price rises removed, so it cannot show that prices rose, and it says nothing about jobs.",
+   "clue": "Real figures have already had price rises taken out."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "More goods and services being made in the country",
+    "also_right": []
+   },
+   "b": {
+    "best": "The economy grew",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines growth as GDP rising in value, but does not say growth is measured in real GDP, adjusted for inflation. A rise in the dollar value of GDP can come partly or wholly from higher prices. Question b's dollar figures ($900b to $936b) could reflect inflation rather than more production, so 'the economy grew' is only safe if the figures are real GDP. Why (b) also says the figures 'say nothing about prices', which overlooks this. A short line such as 'measured after removing price rises (real GDP)', or labelling the figures as real GDP, would fix it."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines growth as GDP rising in value, but does not say growth is measured in real GDP, adjusted for inflation. A rise in the dollar value of GDP can come partly or wholly from higher prices. Question b's dollar figures ($900b to $936b) could reflect inflation rather than more production, so 'the economy grew' is only safe if the figures are real GDP. Why (b) also says the figures 'say nothing about prices', which overlooks this. A short line such as 'measured after removing price rises (real GDP)', or labelling the figures as real GDP, would fix it."
+  ]
+ },
+ "final": {
+  "title": "Economic growth and GDP",
+  "card": [
+   [
+    "GDP",
+    "Gross domestic product is the value of all the goods and services made in a country in a year."
+   ],
+   [
+    "Economic growth",
+    "Economic growth is GDP rising over time. It is usually shown as a percentage change from one year to the next."
+   ],
+   [
+    "Real GDP",
+    "GDP measured after removing the effect of price rises. Growth is measured with real GDP, so it shows more being made, not just higher prices."
+   ],
+   "GDP counts what is made inside the country, whoever owns the business. It counts services such as haircuts as well as goods such as cars."
+  ],
+  "remember": "Growth means real GDP rising: more goods and services made, not just higher prices.",
+  "a": {
+   "q": "Which best describes economic growth?",
+   "opts": [
+    "More goods and services being made in the country",
+    "More people being born or moving into the country",
+    "Higher average prices for goods and services sold",
+    "More businesses opening up in the country"
+   ],
+   "why": "Economic growth is real GDP rising, which means more goods and services are made. Higher prices alone do not count, because real GDP removes the effect of price rises.",
+   "clue": "Think about what real GDP measures once price rises are removed."
+  },
+  "b": {
+   "d": 2,
+   "q": "A country's real GDP was $900 billion last year. This year it is $936 billion. What has happened?",
+   "opts": [
+    "The economy grew",
+    "The economy shrank",
+    "Prices rose in general",
+    "Unemployment fell"
+   ],
+   "why": "Real GDP rose from $900 billion to $936 billion, so more goods and services were made and the economy grew. Real GDP has the effect of price rises removed, so it cannot show that prices rose, and it says nothing about jobs.",
+   "clue": "Real figures have already had price rises taken out."
+  }
+ },
+ "cleared_by": "recheck"
+}

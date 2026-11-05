@@ -1,0 +1,258 @@
+{
+ "id": "geo-renewable-non-renewable-continuous",
+ "title": "Renewable, non-renewable and continuous resources",
+ "brief": "e95c933f7f58",
+ "shortlist": [
+  [
+   "geo-renewable-non-renewable-resources",
+   0.327
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, match",
+  "2026-11-04T09:36:51Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:00Z write: done",
+  "2026-11-04T09:58:25Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-05T06:13:17Z review: rejected, to be written again",
+  "2026-11-05T06:26:26Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T06:32:24Z claude-code check: answered by a separate subagent",
+  "2026-11-05T06:32:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00578,
+  "check": 0.01098,
+  "fix": 0.0194
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only covers renewable and non-renewable resources and files sunlight and wind under renewable, while the new point needs a third 'continuous' category for Year 7 at a simpler depth, so no bank point is the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Types of resources",
+  "card": [
+   [
+    "Renewable",
+    "A resource that can replace itself over time, such as forests and fish. It can run short if people use it faster than it grows back."
+   ],
+   [
+    "Non-renewable",
+    "A resource that does not replace itself in a human lifetime, such as coal, oil and gas. Once it is used up, it is gone."
+   ],
+   [
+    "Continuous",
+    "A resource that is always available and cannot be used up, such as sunlight and wind."
+   ],
+   "To sort a resource, ask: does it come back, does it run out, or is it always there?"
+  ],
+  "remember": "Renewable resources grow back, non-renewable ones run out, and continuous ones are always there.",
+  "a": {
+   "q": "Natural gas is burned to make electricity. Gas took millions of years to form. What type of resource is it?",
+   "opts": [
+    "Non-renewable",
+    "Renewable",
+    "Continuous",
+    "Both renewable and continuous"
+   ],
+   "why": "Gas does not replace itself in a human lifetime, so it runs out once used. It is not renewable, because renewable resources can replace themselves over time.",
+   "clue": "Can it replace itself in a human lifetime?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Wind turbines on a farm in Tasmania turn the wind into electricity. Which statement about the wind is correct?",
+   "opts": [
+    "It is continuous, because it cannot be used up",
+    "It is renewable, because it grows back after use",
+    "It is non-renewable, because turbines need it",
+    "It is non-renewable, because wind is not always strong"
+   ],
+   "why": "Using wind does not reduce the amount of wind, so it is a continuous resource. Renewable resources, such as forests, grow back after being used, but wind is never used up in the first place.",
+   "clue": "Does using wind take any of it away?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:26:26Z",
+   "step": "write",
+   "version": {
+    "title": "Renewable, non-renewable and continuous resources",
+    "card": [
+     [
+      "Renewable",
+      "can replace itself within a human lifetime, such as forests and fish. It can still run short if people use it faster than it is replaced."
+     ],
+     [
+      "Non-renewable",
+      "took millions of years to form, such as coal, oil and natural gas. Once it is used up, it is not replaced in human time."
+     ],
+     [
+      "Continuous",
+      "is always there and is not used up when people use it, such as sunlight, wind and tides."
+     ],
+     "To sort a resource, ask whether using it takes any away. If it does, ask whether it can be replaced within a lifetime."
+    ],
+    "remember": "Using a continuous resource takes nothing away. Renewables can be replaced, and non-renewables are not.",
+    "a": {
+     "q": "Why is sunlight called a continuous resource rather than a renewable one?",
+     "opts": [
+      "Using it does not reduce how much there is",
+      "It replaces itself within a human lifetime",
+      "It formed over millions of years in the ground",
+      "It can run short if people use too much"
+     ],
+     "why": "Using sunlight does not reduce how much there is, which makes it continuous. A renewable resource such as a forest is used up and then grows back, so it can run short.",
+     "clue": "Does using sunlight take any of it away?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A fishing fleet off Western Australia catches more fish each year than the fish can replace. Which statement is correct?",
+     "opts": [
+      "Fish are renewable, but they can still run short",
+      "Fish are continuous, so they cannot run out",
+      "Fish are non-renewable once fishing begins",
+      "Fish are renewable, so they can never run short"
+     ],
+     "why": "Fish breed and replace themselves, so they are renewable. But if they are caught faster than they are replaced, their numbers fall. Calling them continuous is wrong, because catching fish does take some away.",
+     "clue": "Renewable does not mean it can never run out."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T06:32:24Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Using it does not reduce how much there is",
+     "also_right": []
+    },
+    "b": {
+     "best": "Fish are renewable, but they can still run short",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Renewable, non-renewable and continuous resources",
+  "card": [
+   [
+    "Renewable",
+    "can replace itself within a human lifetime, such as forests and fish. It can still run short if people use it faster than it is replaced."
+   ],
+   [
+    "Non-renewable",
+    "took millions of years to form, such as coal, oil and natural gas. Once it is used up, it is not replaced in human time."
+   ],
+   [
+    "Continuous",
+    "is always there and is not used up when people use it, such as sunlight, wind and tides."
+   ],
+   "To sort a resource, ask whether using it takes any away. If it does, ask whether it can be replaced within a lifetime."
+  ],
+  "remember": "Using a continuous resource takes nothing away. Renewables can be replaced, and non-renewables are not.",
+  "a": {
+   "q": "Why is sunlight called a continuous resource rather than a renewable one?",
+   "opts": [
+    "Using it does not reduce how much there is",
+    "It replaces itself within a human lifetime",
+    "It formed over millions of years in the ground",
+    "It can run short if people use too much"
+   ],
+   "why": "Using sunlight does not reduce how much there is, which makes it continuous. A renewable resource such as a forest is used up and then grows back, so it can run short.",
+   "clue": "Does using sunlight take any of it away?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A fishing fleet off Western Australia catches more fish each year than the fish can replace. Which statement is correct?",
+   "opts": [
+    "Fish are renewable, but they can still run short",
+    "Fish are continuous, so they cannot run out",
+    "Fish are non-renewable once fishing begins",
+    "Fish are renewable, so they can never run short"
+   ],
+   "why": "Fish breed and replace themselves, so they are renewable. But if they are caught faster than they are replaced, their numbers fall. Calling them continuous is wrong, because catching fish does take some away.",
+   "clue": "Renewable does not mean it can never run out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Using it does not reduce how much there is",
+   "also_right": []
+  },
+  "b": {
+   "best": "Fish are renewable, but they can still run short",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Renewable, non-renewable and continuous resources",
+  "card": [
+   [
+    "Renewable",
+    "can replace itself within a human lifetime, such as forests and fish. It can still run short if people use it faster than it is replaced."
+   ],
+   [
+    "Non-renewable",
+    "took millions of years to form, such as coal, oil and natural gas. Once it is used up, it is not replaced in human time."
+   ],
+   [
+    "Continuous",
+    "is always there and is not used up when people use it, such as sunlight, wind and tides."
+   ],
+   "To sort a resource, ask whether using it takes any away. If it does, ask whether it can be replaced within a lifetime."
+  ],
+  "remember": "Using a continuous resource takes nothing away. Renewables can be replaced, and non-renewables are not.",
+  "a": {
+   "q": "Why is sunlight called a continuous resource rather than a renewable one?",
+   "opts": [
+    "Using it does not reduce how much there is",
+    "It replaces itself within a human lifetime",
+    "It formed over millions of years in the ground",
+    "It can run short if people use too much"
+   ],
+   "why": "Using sunlight does not reduce how much there is, which makes it continuous. A renewable resource such as a forest is used up and then grows back, so it can run short.",
+   "clue": "Does using sunlight take any of it away?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A fishing fleet off Western Australia catches more fish each year than the fish can replace. Which statement is correct?",
+   "opts": [
+    "Fish are renewable, but they can still run short",
+    "Fish are continuous, so they cannot run out",
+    "Fish are non-renewable once fishing begins",
+    "Fish are renewable, so they can never run short"
+   ],
+   "why": "Fish breed and replace themselves, so they are renewable. But if they are caught faster than they are replaced, their numbers fall. Calling them continuous is wrong, because catching fish does take some away.",
+   "clue": "Renewable does not mean it can never run out."
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
+}

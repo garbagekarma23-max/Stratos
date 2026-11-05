@@ -1,0 +1,377 @@
+{
+ "id": "sci-repeat-trials-averages",
+ "title": "Repeat trials and averages",
+ "brief": "bf8e659771dc",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:44Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:13Z write: failed the content check, writing again",
+  "2026-11-04T09:58:33Z write: done",
+  "2026-11-04T14:58:53Z check: flagged",
+  "2026-11-04T15:02:07Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (card other)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01096,
+  "check": 0.01247,
+  "fix": 0.0209,
+  "recheck": 0.01363
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: The chapter's summary of this point says repeating trials 'shows whether results are reproducible', but the card (correctly) says your own close repeats show repeatability, and reproducibility needs other people or another method. Question b and its why also mark 'reproducible' wrong for Priya's own repeats. The chapter point wording should be brought into line with the card.",
+ "rejected": {
+  "title": "Repeat trials and averages",
+  "card": [
+   "A trial is one run of an experiment at one setting of the independent variable. Repeating a trial means running it again under the same conditions.",
+   "Random errors change results in an unpredictable way, such as a small slip in timing. Averaging the repeats cancels out much of this. Add the results, then divide by the number of trials.",
+   [
+    "Repeatable",
+    "your own repeats under the same conditions give close results. Repeats that are spread out are less reliable, and the cause should be checked."
+   ],
+   [
+    "Reproducible",
+    "other people, or a different method, get results similar to yours."
+   ]
+  ],
+  "remember": "Averaging repeats reduces random error. Your own close repeats are repeatable, and others getting the same is reproducible.",
+  "a": {
+   "q": "Why does a student average the results of several trials?",
+   "opts": [
+    "It reduces the effect of random errors on the result",
+    "It removes the need to control other variables",
+    "It makes the hypothesis more likely to be correct",
+    "It changes the independent variable to a better value"
+   ],
+   "why": "Random errors push single results up or down, so averaging cancels out much of the variation. It does not control variables, because those must still be kept the same, and it cannot make a hypothesis correct.",
+   "clue": "Think about what happens to results that are too high or too low."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya times a ball rolling down her ramp three times and gets 2.1 s, 2.2 s and 2.1 s. Tom times his ramp three times and gets 1.6 s, 2.4 s and 2.9 s. What can be said about their results?",
+   "opts": [
+    "Priya's repeats are close, so her results are repeatable",
+    "Priya's repeats are close, so her results are reproducible",
+    "Tom's repeats vary a lot, so his average is more reliable",
+    "Both sets are repeatable because both have three trials"
+   ],
+   "why": "Priya's own repeats under the same conditions are close, which shows her results are repeatable. They are not shown to be reproducible, because nobody else or no other method has tested them. Tom's repeats are spread out, so his results are less reliable.",
+   "clue": "Who did the repeats: Priya herself, or other people?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, other: The chapter's summary of this point says repeating trials 'shows whether results are reproducible', but the card (correctly) says your own close repeats show repeatability, and reproducibility needs other people or another method. Question b and its why also mark 'reproducible' wrong for Priya's own repeats. The chapter point wording should be brought into line with the card."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Repeat trials and averages",
+     "card": [
+      "A trial is one run of an experiment at one setting of the independent variable. Repeating each trial means running it again under the same conditions.",
+      "Random errors change a result in an unpredictable way, such as a small slip in timing. Some results come out too high and some too low.",
+      "Averaging the repeats cancels out much of this variation, so the average is a better estimate than any single trial. Add the results, then divide by the number of trials.",
+      "If repeats give close results, the results are reproducible and can be trusted more. If they differ a lot, the results are less reliable and the cause should be checked."
+     ],
+     "remember": "Repeat and average to reduce random error, and close repeats show results are reproducible.",
+     "a": {
+      "q": "Why does a student average the results of several trials?",
+      "opts": [
+       "It reduces the effect of random errors on the result",
+       "It removes the need to control other variables",
+       "It makes the hypothesis more likely to be correct",
+       "It changes the independent variable to a better value"
+      ],
+      "why": "Random errors push single results up or down, so averaging cancels out much of the variation. It does not control variables, because those must still be kept the same, and it cannot make a hypothesis correct.",
+      "clue": "Think about what happens to results that are too high or too low."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya times a ball rolling down a ramp three times and gets 2.1 s, 2.2 s and 2.1 s. Tom times his ramp three times and gets 1.6 s, 2.4 s and 2.9 s. What can be said about their results?",
+      "opts": [
+       "Priya's repeats are close, so her results look reproducible",
+       "Tom's repeats vary a lot, so his average is more reliable",
+       "Both sets are reproducible because both have three trials",
+       "Priya's results must be wrong as her repeats are so similar"
+      ],
+      "why": "Close repeats show results that can be reproduced, so Priya's results can be trusted more. Tom's repeats are spread out, so his average is less reliable. Having three trials does not make results reproducible if they differ a lot.",
+      "clue": "Compare how close each student's repeats are."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It reduces the effect of random errors on the result",
+      "also_right": []
+     },
+     "b": {
+      "best": "Priya's repeats are close, so her results look reproducible",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card calls close repeats by the same student 'reproducible'. In stricter science usage, close repeats under the same conditions show repeatability. Reproducibility means that other people or methods get similar results. The chapter point uses the same wording, so the owner may want to check this against the syllabus glossary before students learn the terms as interchangeable."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer, and the card, remember line and explanations agree. The only concern is that the card uses 'reproducible' where 'repeatable' is the stricter term for one student's repeated trials."
+    },
+    "flags": [
+     "Card, fact: The card calls close repeats by the same student 'reproducible'. In stricter science usage, close repeats under the same conditions show repeatability. Reproducibility means that other people or methods get similar results. The chapter point uses the same wording, so the owner may want to check this against the syllabus glossary before students learn the terms as interchangeable."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Repeat trials and averages",
+     "card": [
+      "A trial is one run of an experiment at one setting of the independent variable. Repeating a trial means running it again under the same conditions.",
+      "Random errors change results in an unpredictable way, such as a small slip in timing. Averaging the repeats cancels out much of this. Add the results, then divide by the number of trials.",
+      [
+       "Repeatable",
+       "your own repeats under the same conditions give close results. Repeats that are spread out are less reliable, and the cause should be checked."
+      ],
+      [
+       "Reproducible",
+       "other people, or a different method, get results similar to yours."
+      ]
+     ],
+     "remember": "Averaging repeats reduces random error. Your own close repeats are repeatable, and others getting the same is reproducible.",
+     "a": {
+      "q": "Why does a student average the results of several trials?",
+      "opts": [
+       "It reduces the effect of random errors on the result",
+       "It removes the need to control other variables",
+       "It makes the hypothesis more likely to be correct",
+       "It changes the independent variable to a better value"
+      ],
+      "why": "Random errors push single results up or down, so averaging cancels out much of the variation. It does not control variables, because those must still be kept the same, and it cannot make a hypothesis correct.",
+      "clue": "Think about what happens to results that are too high or too low."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya times a ball rolling down her ramp three times and gets 2.1 s, 2.2 s and 2.1 s. Tom times his ramp three times and gets 1.6 s, 2.4 s and 2.9 s. What can be said about their results?",
+      "opts": [
+       "Priya's repeats are close, so her results are repeatable",
+       "Priya's repeats are close, so her results are reproducible",
+       "Tom's repeats vary a lot, so his average is more reliable",
+       "Both sets are repeatable because both have three trials"
+      ],
+      "why": "Priya's own repeats under the same conditions are close, which shows her results are repeatable. They are not shown to be reproducible, because nobody else or no other method has tested them. Tom's repeats are spread out, so his results are less reliable.",
+      "clue": "Who did the repeats: Priya herself, or other people?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It reduces the effect of random errors on the result",
+       "also_right": []
+      },
+      "b": {
+       "best": "Priya's repeats are close, so her results are repeatable",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "The chapter's summary of this point says repeating trials 'shows whether results are reproducible', but the card (correctly) says your own close repeats show repeatability, and reproducibility needs other people or another method. Question b and its why also mark 'reproducible' wrong for Priya's own repeats. The chapter point wording should be brought into line with the card."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are correct and clear. However, the chapter's description of this point says repeating trials shows reproducibility, which clashes with the card's (correct) distinction between repeatable and reproducible, so the point description should be fixed."
+     },
+     "flags": [
+      "Card, other: The chapter's summary of this point says repeating trials 'shows whether results are reproducible', but the card (correctly) says your own close repeats show repeatability, and reproducibility needs other people or another method. Question b and its why also mark 'reproducible' wrong for Priya's own repeats. The chapter point wording should be brought into line with the card."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "Repeat trials and averages",
+    "card": [
+     "A trial is one run of an experiment at one setting of the independent variable. Repeating a trial means running it again under the same conditions.",
+     "Random errors change results in an unpredictable way, such as a small slip in timing. Averaging the repeats cancels out much of this. Add the results, then divide by the number of trials.",
+     [
+      "Repeatable",
+      "your own repeats under the same conditions give close results. Repeats that are spread out are less reliable, and the cause should be checked."
+     ],
+     [
+      "Reproducible",
+      "other people repeat your trials with your method, or test the idea a different way, and get similar results. Your own repeats cannot show this."
+     ]
+    ],
+    "remember": "Averaging repeats reduces random error. Close repeats of your own show results are repeatable; close repeats by others show they are reproducible.",
+    "a": {
+     "q": "Ella runs each trial of her experiment four times and works out the average. What does the averaging do?",
+     "opts": [
+      "It reduces the effect of random errors on the result",
+      "It removes the need to control other variables",
+      "It makes the hypothesis more likely to be correct",
+      "It shows that other people would get the same result"
+     ],
+     "why": "Random errors push single results up or down in unpredictable ways, so averaging cancels out much of this. Averaging Ella's own repeats says nothing about what other people would get, and the other variables still need to be controlled.",
+     "clue": "What happens when a result that is too high is added to one that is too low?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya times a marble rolling down her ramp three times: 2.1 s, 2.2 s and 2.1 s. Tom times a marble on his own ramp three times: 1.6 s, 2.4 s and 2.9 s. Which statement is correct?",
+     "opts": [
+      "Priya's repeats are close, so her results are repeatable",
+      "Priya's repeats are close, so her results are reproducible",
+      "Tom's repeats vary a lot, so his average is more reliable",
+      "Both sets are repeatable because both have three trials"
+     ],
+     "why": "Priya's own repeats under the same conditions are close, which shows her results are repeatable. They are not shown to be reproducible, because nobody else has repeated her trials. Tom's repeats are spread out, so his results are less reliable.",
+     "clue": "Who did the repeats: Priya herself, or other people?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It reduces the effect of random errors on the result",
+     "also_right": []
+    },
+    "b": {
+     "best": "Priya's repeats are close, so her results are repeatable",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Repeat trials and averages",
+  "card": [
+   "A trial is one run of an experiment at one setting of the independent variable. Repeating a trial means running it again under the same conditions.",
+   "Random errors change results in an unpredictable way, such as a small slip in timing. Averaging the repeats cancels out much of this. Add the results, then divide by the number of trials.",
+   [
+    "Repeatable",
+    "your own repeats under the same conditions give close results. Repeats that are spread out are less reliable, and the cause should be checked."
+   ],
+   [
+    "Reproducible",
+    "other people repeat your trials with your method, or test the idea a different way, and get similar results. Your own repeats cannot show this."
+   ]
+  ],
+  "remember": "Averaging repeats reduces random error. Close repeats of your own show results are repeatable; close repeats by others show they are reproducible.",
+  "a": {
+   "q": "Ella runs each trial of her experiment four times and works out the average. What does the averaging do?",
+   "opts": [
+    "It reduces the effect of random errors on the result",
+    "It removes the need to control other variables",
+    "It makes the hypothesis more likely to be correct",
+    "It shows that other people would get the same result"
+   ],
+   "why": "Random errors push single results up or down in unpredictable ways, so averaging cancels out much of this. Averaging Ella's own repeats says nothing about what other people would get, and the other variables still need to be controlled.",
+   "clue": "What happens when a result that is too high is added to one that is too low?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya times a marble rolling down her ramp three times: 2.1 s, 2.2 s and 2.1 s. Tom times a marble on his own ramp three times: 1.6 s, 2.4 s and 2.9 s. Which statement is correct?",
+   "opts": [
+    "Priya's repeats are close, so her results are repeatable",
+    "Priya's repeats are close, so her results are reproducible",
+    "Tom's repeats vary a lot, so his average is more reliable",
+    "Both sets are repeatable because both have three trials"
+   ],
+   "why": "Priya's own repeats under the same conditions are close, which shows her results are repeatable. They are not shown to be reproducible, because nobody else has repeated her trials. Tom's repeats are spread out, so his results are less reliable.",
+   "clue": "Who did the repeats: Priya herself, or other people?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It reduces the effect of random errors on the result",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya's repeats are close, so her results are repeatable",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Repeat trials and averages",
+  "card": [
+   "A trial is one run of an experiment at one setting of the independent variable. Repeating a trial means running it again under the same conditions.",
+   "Random errors change results in an unpredictable way, such as a small slip in timing. Averaging the repeats cancels out much of this. Add the results, then divide by the number of trials.",
+   [
+    "Repeatable",
+    "your own repeats under the same conditions give close results. Repeats that are spread out are less reliable, and the cause should be checked."
+   ],
+   [
+    "Reproducible",
+    "other people repeat your trials with your method, or test the idea a different way, and get similar results. Your own repeats cannot show this."
+   ]
+  ],
+  "remember": "Averaging repeats reduces random error. Close repeats of your own show results are repeatable; close repeats by others show they are reproducible.",
+  "a": {
+   "q": "Ella runs each trial of her experiment four times and works out the average. What does the averaging do?",
+   "opts": [
+    "It reduces the effect of random errors on the result",
+    "It removes the need to control other variables",
+    "It makes the hypothesis more likely to be correct",
+    "It shows that other people would get the same result"
+   ],
+   "why": "Random errors push single results up or down in unpredictable ways, so averaging cancels out much of this. Averaging Ella's own repeats says nothing about what other people would get, and the other variables still need to be controlled.",
+   "clue": "What happens when a result that is too high is added to one that is too low?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya times a marble rolling down her ramp three times: 2.1 s, 2.2 s and 2.1 s. Tom times a marble on his own ramp three times: 1.6 s, 2.4 s and 2.9 s. Which statement is correct?",
+   "opts": [
+    "Priya's repeats are close, so her results are repeatable",
+    "Priya's repeats are close, so her results are reproducible",
+    "Tom's repeats vary a lot, so his average is more reliable",
+    "Both sets are repeatable because both have three trials"
+   ],
+   "why": "Priya's own repeats under the same conditions are close, which shows her results are repeatable. They are not shown to be reproducible, because nobody else has repeated her trials. Tom's repeats are spread out, so his results are less reliable.",
+   "clue": "Who did the repeats: Priya herself, or other people?"
+  }
+ },
+ "checked_by": "claude-code"
+}

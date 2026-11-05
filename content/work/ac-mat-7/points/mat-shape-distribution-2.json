@@ -1,0 +1,391 @@
+{
+ "id": "mat-shape-distribution-2",
+ "title": "Shape of a distribution",
+ "brief": "5b7d54c30b0e",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:55Z write: done",
+  "2026-11-04T09:47:07Z check: flagged",
+  "2026-11-04T09:58:30Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (card other)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00534,
+  "check": 0.01364,
+  "fix": 0.01727,
+  "recheck": 0.01541
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: The worked example (4, 5, 5, 6, 6, 6, 7, 7, 8, 9) is only very slightly skewed. The values reach 2 below the mode and 3 above it, and the mean (6.3) is close to the median (6). Many students would see it as roughly symmetric, so it is a weak model of a right skew. A clearer example would help, such as one with a longer high tail like 4, 5, 5, 5, 6, 6, 7, 9, 11, 14.",
+ "rejected": {
+  "title": "Shape of a distribution",
+  "card": [
+   "The shape of a distribution is the pattern made when you display data, such as in a dot plot or stem-and-leaf plot. A display makes the pattern easy to see.",
+   [
+    "Symmetric",
+    "the two sides of the display look like mirror images of each other. Skewed: the data bunches up on one side and has a long tail on the other. The skew is named after the tail."
+   ],
+   [
+    "Cluster",
+    "a group of values close together. Gap: a stretch with no values. Outlier: a value far from the rest."
+   ],
+   "Example: quiz scores of 4, 5, 5, 6, 6, 6, 7, 7, 8, 9 have most values bunched at 4 to 7, with a tail towards 9. The tail points to the higher scores, so the data is skewed to the right."
+  ],
+  "remember": "Look for the tail to name a skew, and look for clusters, gaps and outliers.",
+  "a": {
+   "q": "Most students in a class read 3 to 6 books in a term. A few read 15 or more. How is the data shaped?",
+   "opts": [
+    "Skewed, with a long tail towards the high values",
+    "Skewed, with a long tail towards the low values",
+    "Symmetric, with the same spread on both sides",
+    "Symmetric, with a gap in the middle of the data"
+   ],
+   "why": "Most values bunch at the low end and a few high values stretch out the right side. The long tail is towards the high values, so it is skewed that way. It is not symmetric, because the two sides are not mirror images.",
+   "clue": "Which way does the long tail point?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ten students' times to run 100 m, in seconds, are 15, 16, 16, 17, 17, 18, 18, 19, 20 and 31. Which statement about the data is correct?",
+   "opts": [
+    "31 is an outlier, far from the rest of the times",
+    "31 is part of a cluster with the other times",
+    "There is a gap between 15 and 16 in the data",
+    "The data is symmetric, as 31 balances the 15"
+   ],
+   "why": "Nine times lie between 15 and 20, and 31 is far from all of them, so it is an outlier. The only gap is between 20 and 31, not between 15 and 16. One extreme value does not make the data symmetric, because it stretches a tail out to the high side.",
+   "clue": "Compare the jump from 20 to 31 with the other jumps."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, other: The worked example (4, 5, 5, 6, 6, 6, 7, 7, 8, 9) is only very slightly skewed. The values reach 2 below the mode and 3 above it, and the mean (6.3) is close to the median (6). Many students would see it as roughly symmetric, so it is a weak model of a right skew. A clearer example would help, such as one with a longer high tail like 4, 5, 5, 5, 6, 6, 7, 9, 11, 14."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Shape of a distribution",
+     "card": [
+      "The shape of a distribution is the pattern made when you display data, such as in a dot plot or stem-and-leaf plot. A display makes the pattern easy to see.",
+      [
+       "Symmetric",
+       "the two sides look like mirror images, with most values in the middle. Skewed: the data bunches up on one side and has a long tail on the other. The skew is named after the tail."
+      ],
+      [
+       "Cluster",
+       "a group of values close together. Gap: a stretch with no values. Outlier: a value far from the rest."
+      ],
+      "Example: quiz scores of 4, 5, 5, 6, 6, 6, 7, 7, 8, 9 have most values bunched at 4 to 7, with a tail towards 9. The tail points to the higher scores, so the data is skewed to the right."
+     ],
+     "remember": "Look for the tail to name a skew, and look for clusters, gaps and outliers.",
+     "a": {
+      "q": "Most students in a class read 3 to 6 books in a term. A few read 15 or more. How is the data shaped?",
+      "opts": [
+       "Skewed, with a long tail towards the high values",
+       "Skewed, with a long tail towards the low values",
+       "Symmetric, with the same spread on both sides",
+       "Symmetric, with a gap in the middle of the data"
+      ],
+      "why": "Most values bunch at the low end and a few high values stretch out the right side. The long tail is towards the high values, so it is skewed that way. It is not symmetric, because the two sides are not mirror images.",
+      "clue": "Which way does the long tail point?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Ten students' times to run 100 m, in seconds, are 15, 16, 16, 17, 17, 18, 18, 19, 20 and 31. Which statement about the display is correct?",
+      "opts": [
+       "31 is an outlier, far from the rest of the times",
+       "31 is part of a cluster with the other times",
+       "There is a gap between 15 and 16 in the data",
+       "The data is symmetric, as 31 balances the 15"
+      ],
+      "why": "Nine times lie between 15 and 20, and 31 is far from all of them, so it is an outlier. It is not in a cluster with the others. One outlier does not make the data symmetric, because it pulls a tail out to the high side.",
+      "clue": "Which value sits far away from the rest?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Skewed, with a long tail towards the high values",
+      "also_right": []
+     },
+     "b": {
+      "best": "31 is an outlier, far from the rest of the times",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Which value sits far away from the rest?' echoes the right option's wording ('far from the rest'), so a student can match the words without knowing what an outlier is."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The question asks about 'the display', but only a list of values is given and no display is shown."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'Symmetric: ... with most values in the middle' is not always true. A symmetric distribution can have two peaks, or values spread evenly, so this is a small overstatement of what symmetric means."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are correct and unambiguous. The clue for b echoes the right option's wording, b refers to a display that is not shown, and the card wrongly says symmetric data always has most values in the middle."
+    },
+    "flags": [
+     "Question b, other: The clue 'Which value sits far away from the rest?' echoes the right option's wording ('far from the rest'), so a student can match the words without knowing what an outlier is.",
+     "Question b, wording: The question asks about 'the display', but only a list of values is given and no display is shown.",
+     "Card, fact: 'Symmetric: ... with most values in the middle' is not always true. A symmetric distribution can have two peaks, or values spread evenly, so this is a small overstatement of what symmetric means."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Shape of a distribution",
+     "card": [
+      "The shape of a distribution is the pattern made when you display data, such as in a dot plot or stem-and-leaf plot. A display makes the pattern easy to see.",
+      [
+       "Symmetric",
+       "the two sides of the display look like mirror images of each other. Skewed: the data bunches up on one side and has a long tail on the other. The skew is named after the tail."
+      ],
+      [
+       "Cluster",
+       "a group of values close together. Gap: a stretch with no values. Outlier: a value far from the rest."
+      ],
+      "Example: quiz scores of 4, 5, 5, 6, 6, 6, 7, 7, 8, 9 have most values bunched at 4 to 7, with a tail towards 9. The tail points to the higher scores, so the data is skewed to the right."
+     ],
+     "remember": "Look for the tail to name a skew, and look for clusters, gaps and outliers.",
+     "a": {
+      "q": "Most students in a class read 3 to 6 books in a term. A few read 15 or more. How is the data shaped?",
+      "opts": [
+       "Skewed, with a long tail towards the high values",
+       "Skewed, with a long tail towards the low values",
+       "Symmetric, with the same spread on both sides",
+       "Symmetric, with a gap in the middle of the data"
+      ],
+      "why": "Most values bunch at the low end and a few high values stretch out the right side. The long tail is towards the high values, so it is skewed that way. It is not symmetric, because the two sides are not mirror images.",
+      "clue": "Which way does the long tail point?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Ten students' times to run 100 m, in seconds, are 15, 16, 16, 17, 17, 18, 18, 19, 20 and 31. Which statement about the data is correct?",
+      "opts": [
+       "31 is an outlier, far from the rest of the times",
+       "31 is part of a cluster with the other times",
+       "There is a gap between 15 and 16 in the data",
+       "The data is symmetric, as 31 balances the 15"
+      ],
+      "why": "Nine times lie between 15 and 20, and 31 is far from all of them, so it is an outlier. The only gap is between 20 and 31, not between 15 and 16. One extreme value does not make the data symmetric, because it stretches a tail out to the high side.",
+      "clue": "Compare the jump from 20 to 31 with the other jumps."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Skewed, with a long tail towards the high values",
+       "also_right": []
+      },
+      "b": {
+       "best": "31 is an outlier, far from the rest of the times",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "The worked example (4, 5, 5, 6, 6, 6, 7, 7, 8, 9) is only very slightly skewed. The values reach 2 below the mode and 3 above it, and the mean (6.3) is close to the median (6). Many students would see it as roughly symmetric, so it is a weak model of a right skew. A clearer example would help, such as one with a longer high tail like 4, 5, 5, 5, 6, 6, 7, 9, 11, 14."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and each has exactly one right answer. The card's example of a right skew is so slight that it could look symmetric to students, so it should be replaced with a clearer one."
+     },
+     "flags": [
+      "Card, other: The worked example (4, 5, 5, 6, 6, 6, 7, 7, 8, 9) is only very slightly skewed. The values reach 2 below the mode and 3 above it, and the mean (6.3) is close to the median (6). Many students would see it as roughly symmetric, so it is a weak model of a right skew. A clearer example would help, such as one with a longer high tail like 4, 5, 5, 5, 6, 6, 7, 9, 11, 14."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Shape of a distribution",
+    "card": [
+     "The shape of a distribution is the pattern made when you display data, such as in a dot plot or stem-and-leaf plot. A display makes the pattern easy to see.",
+     [
+      "Symmetric",
+      "the two sides of the display look like mirror images of each other. Skewed: the data bunches up on one side and has a long tail on the other. The skew is named after the tail."
+     ],
+     [
+      "Cluster",
+      "a group of values close together. Gap: a stretch with no values. Outlier: a value far from the rest."
+     ],
+     "Example: quiz scores of 4, 5, 5, 5, 6, 6, 7, 9, 11, 14 bunch up from 4 to 7, then spread out in a long tail up to 14. The tail points to the higher scores, so the data is skewed to the right."
+    ],
+    "remember": "Look for the tail to name a skew, and look for clusters, gaps and outliers.",
+    "a": {
+     "q": "In one term, most students in a class read between 3 and 6 books, but a few read 15 or more. Which describes the shape of this data?",
+     "opts": [
+      "Skewed, with a long tail towards the high values",
+      "Skewed, with a long tail towards the low values",
+      "Symmetric, with equal spread either side of the middle",
+      "Symmetric, with a gap in the middle of the data"
+     ],
+     "why": "Most values bunch at the low end and a few high values stretch out the right side. The long tail is towards the high values, so it is skewed that way. It is not symmetric, because the two sides are not mirror images.",
+     "clue": "Which way does the long tail point?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Ten students ran 100 m. Their times, in seconds, were 15, 16, 16, 17, 17, 18, 18, 19, 20 and 31. Which statement is true?",
+     "opts": [
+      "31 is an outlier, far from the other times",
+      "31 is part of a cluster with the other times",
+      "There is a gap between 15 and 16 in the data",
+      "The data is symmetric, as 31 balances the 15"
+     ],
+     "why": "Nine times lie between 15 and 20, and 31 is far from all of them, so it is an outlier. The only gap is between 20 and 31, not between 15 and 16. One extreme value does not make the data symmetric, because it stretches a tail out to the high side.",
+     "clue": "Compare the jump from 20 to 31 with the other jumps."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Skewed, with a long tail towards the high values",
+     "also_right": []
+    },
+    "b": {
+     "best": "31 is an outlier, far from the other times",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Shape of a distribution",
+  "card": [
+   "The shape of a distribution is the pattern made when you display data, such as in a dot plot or stem-and-leaf plot. A display makes the pattern easy to see.",
+   [
+    "Symmetric",
+    "the two sides of the display look like mirror images of each other. Skewed: the data bunches up on one side and has a long tail on the other. The skew is named after the tail."
+   ],
+   [
+    "Cluster",
+    "a group of values close together. Gap: a stretch with no values. Outlier: a value far from the rest."
+   ],
+   "Example: quiz scores of 4, 5, 5, 5, 6, 6, 7, 9, 11, 14 bunch up from 4 to 7, then spread out in a long tail up to 14. The tail points to the higher scores, so the data is skewed to the right."
+  ],
+  "remember": "Look for the tail to name a skew, and look for clusters, gaps and outliers.",
+  "a": {
+   "q": "In one term, most students in a class read between 3 and 6 books, but a few read 15 or more. Which describes the shape of this data?",
+   "opts": [
+    "Skewed, with a long tail towards the high values",
+    "Skewed, with a long tail towards the low values",
+    "Symmetric, with equal spread either side of the middle",
+    "Symmetric, with a gap in the middle of the data"
+   ],
+   "why": "Most values bunch at the low end and a few high values stretch out the right side. The long tail is towards the high values, so it is skewed that way. It is not symmetric, because the two sides are not mirror images.",
+   "clue": "Which way does the long tail point?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ten students ran 100 m. Their times, in seconds, were 15, 16, 16, 17, 17, 18, 18, 19, 20 and 31. Which statement is true?",
+   "opts": [
+    "31 is an outlier, far from the other times",
+    "31 is part of a cluster with the other times",
+    "There is a gap between 15 and 16 in the data",
+    "The data is symmetric, as 31 balances the 15"
+   ],
+   "why": "Nine times lie between 15 and 20, and 31 is far from all of them, so it is an outlier. The only gap is between 20 and 31, not between 15 and 16. One extreme value does not make the data symmetric, because it stretches a tail out to the high side.",
+   "clue": "Compare the jump from 20 to 31 with the other jumps."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Skewed, with a long tail towards the high values",
+   "also_right": []
+  },
+  "b": {
+   "best": "31 is an outlier, far from the other times",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Shape of a distribution",
+  "card": [
+   "The shape of a distribution is the pattern made when you display data, such as in a dot plot or stem-and-leaf plot. A display makes the pattern easy to see.",
+   [
+    "Symmetric",
+    "the two sides of the display look like mirror images of each other. Skewed: the data bunches up on one side and has a long tail on the other. The skew is named after the tail."
+   ],
+   [
+    "Cluster",
+    "a group of values close together. Gap: a stretch with no values. Outlier: a value far from the rest."
+   ],
+   "Example: quiz scores of 4, 5, 5, 5, 6, 6, 7, 9, 11, 14 bunch up from 4 to 7, then spread out in a long tail up to 14. The tail points to the higher scores, so the data is skewed to the right."
+  ],
+  "remember": "Look for the tail to name a skew, and look for clusters, gaps and outliers.",
+  "a": {
+   "q": "In one term, most students in a class read between 3 and 6 books, but a few read 15 or more. Which describes the shape of this data?",
+   "opts": [
+    "Skewed, with a long tail towards the high values",
+    "Skewed, with a long tail towards the low values",
+    "Symmetric, with equal spread either side of the middle",
+    "Symmetric, with a gap in the middle of the data"
+   ],
+   "why": "Most values bunch at the low end and a few high values stretch out the right side. The long tail is towards the high values, so it is skewed that way. It is not symmetric, because the two sides are not mirror images.",
+   "clue": "Which way does the long tail point?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ten students ran 100 m. Their times, in seconds, were 15, 16, 16, 17, 17, 18, 18, 19, 20 and 31. Which statement is true?",
+   "opts": [
+    "31 is an outlier, far from the other times",
+    "31 is part of a cluster with the other times",
+    "There is a gap between 15 and 16 in the data",
+    "The data is symmetric, as 31 balances the 15"
+   ],
+   "why": "Nine times lie between 15 and 20, and 31 is far from all of them, so it is an outlier. The only gap is between 20 and 31, not between 15 and 16. One extreme value does not make the data symmetric, because it stretches a tail out to the high side.",
+   "clue": "Compare the jump from 20 to 31 with the other jumps."
+  }
+ },
+ "checked_by": "claude-code"
+}

@@ -1,0 +1,138 @@
+{
+ "id": "ecb-business-financial-records",
+ "title": "Business financial records",
+ "brief": "afd3100e3462",
+ "shortlist": [
+  [
+   "bus-balance-sheet",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:25Z new, match",
+  "2026-11-04T09:36:47Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:54Z write: done",
+  "2026-11-04T09:58:21Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00571,
+  "check": 0.00853
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers three statements (income statement, balance sheet and cash flow statement) at Year 8 depth, while the only close bank point teaches just the balance sheet at Year 12 depth, so it is narrower and at a different level.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Business financial records",
+  "card": [
+   [
+    "Income statement",
+    "shows a business's income and expenses over a period of time, so it shows whether the business made a profit or a loss."
+   ],
+   [
+    "Balance sheet",
+    "shows what a business owns (assets) and what it owes (liabilities) on a particular day."
+   ],
+   [
+    "Cash flow statement",
+    "shows the money that came into the business and went out of it over a period."
+   ],
+   "A business can make a profit and still run short of cash, for example if customers pay late."
+  ],
+  "remember": "Income statement: profit or loss. Balance sheet: owns and owes. Cash flow statement: money in and out.",
+  "a": {
+   "q": "Which record would show what a business owns and what it owes?",
+   "opts": [
+    "A balance sheet",
+    "An income statement",
+    "A cash flow statement",
+    "A business plan"
+   ],
+   "why": "A balance sheet lists assets, which the business owns, and liabilities, which it owes. An income statement is the tempting wrong answer, because it shows profit or loss over time instead.",
+   "clue": "Look for the record that lists assets and liabilities."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's bike shop in Hobart sold many bikes in June, but customers have not yet paid. He needs to see if he can pay rent this week. Which record helps most?",
+   "opts": [
+    "The cash flow statement",
+    "The income statement",
+    "The balance sheet",
+    "The sales brochure"
+   ],
+   "why": "Paying rent depends on money actually coming in and going out, which the cash flow statement shows. The income statement counts the June sales as income, even though the cash has not arrived, so it can look healthy while cash is short.",
+   "clue": "Which record tracks actual money moving in and out?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A balance sheet",
+   "also_right": []
+  },
+  "b": {
+   "best": "The cash flow statement",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Business financial records",
+  "card": [
+   [
+    "Income statement",
+    "shows a business's income and expenses over a period of time, so it shows whether the business made a profit or a loss."
+   ],
+   [
+    "Balance sheet",
+    "shows what a business owns (assets) and what it owes (liabilities) on a particular day."
+   ],
+   [
+    "Cash flow statement",
+    "shows the money that came into the business and went out of it over a period."
+   ],
+   "A business can make a profit and still run short of cash, for example if customers pay late."
+  ],
+  "remember": "Income statement: profit or loss. Balance sheet: owns and owes. Cash flow statement: money in and out.",
+  "a": {
+   "q": "Which record would show what a business owns and what it owes?",
+   "opts": [
+    "A balance sheet",
+    "An income statement",
+    "A cash flow statement",
+    "A business plan"
+   ],
+   "why": "A balance sheet lists assets, which the business owns, and liabilities, which it owes. An income statement is the tempting wrong answer, because it shows profit or loss over time instead.",
+   "clue": "Look for the record that lists assets and liabilities."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's bike shop in Hobart sold many bikes in June, but customers have not yet paid. He needs to see if he can pay rent this week. Which record helps most?",
+   "opts": [
+    "The cash flow statement",
+    "The income statement",
+    "The balance sheet",
+    "The sales brochure"
+   ],
+   "why": "Paying rent depends on money actually coming in and going out, which the cash flow statement shows. The income statement counts the June sales as income, even though the cash has not arrived, so it can look healthy while cash is short.",
+   "clue": "Which record tracks actual money moving in and out?"
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,206 @@
+{
+ "id": "mat-venn-diagrams",
+ "title": "Venn diagrams",
+ "brief": "a7a72794e029",
+ "shortlist": [
+  [
+   "mat-venn-diagrams-set-notation",
+   0.288
+  ],
+  [
+   "mat-venn-diagrams-karnaugh-maps",
+   0.266
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:09Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00446,
+  "check": 0.00819,
+  "fix": 0.01396
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Both bank points teach Venn diagrams at Year 11 depth, with set notation, complements and probability formulas, which is clearly broader than the Year 8 point on overlapping circles for A and B, so no bank point fits at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Venn diagrams",
+  "card": [
+   "A Venn diagram uses overlapping circles to show events. Each circle holds the outcomes of one event, A or B.",
+   [
+    "A and B",
+    "the overlap, where outcomes are in both circles."
+   ],
+   [
+    "A or B",
+    "everything inside either circle, including the overlap. Count the overlap once only."
+   ],
+   "Example: 30 students. 12 play netball (N), 9 play soccer (S), and 4 play both. Netball or soccer = 12 + 9 − 4 = 17, so P(N or S) = 17/30."
+  ],
+  "remember": "Overlap means both. Anywhere in the circles means either, with the overlap counted once.",
+  "a": {
+   "q": "In a class of 24, 10 students have a dog, 8 have a cat, and 3 have both. How many students have a dog or a cat?",
+   "opts": [
+    "15",
+    "18",
+    "21",
+    "11"
+   ],
+   "why": "Dog or cat = 10 + 8 − 3 = 15. The 3 students with both were counted in each circle, so they are taken off once. Adding 10 + 8 gives 18, which counts them twice.",
+   "clue": "The overlap is counted twice when you add the circles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 students on a camp, 15 chose kayaking (K), 18 chose climbing (C), and 6 chose both. What is P(K or C)?",
+   "opts": [
+    "27/40",
+    "33/40",
+    "6/40",
+    "12/40"
+   ],
+   "why": "K or C = 15 + 18 − 6 = 27, so the probability is 27/40. The tempting 33/40 comes from adding 15 + 18 without removing the overlap, which counts 6 students twice.",
+   "clue": "Find how many students are in either circle, then divide by 40."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "15",
+   "also_right": []
+  },
+  "b": {
+   "best": "27/40",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first bullet says each circle holds the outcomes of one event, \"A or B\", just before \"A or B\" is defined as the union. This could confuse students about what \"A or B\" means. Better: \"one event, A or the other event, B\" or \"event A and event B each get a circle\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the card's example are arithmetically correct (15 and 27/40). The only issue is a minor wording clash: the card uses \"A or B\" loosely before defining it as the union."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The first bullet says each circle holds the outcomes of one event, \"A or B\", just before \"A or B\" is defined as the union. This could confuse students about what \"A or B\" means. Better: \"one event, A or the other event, B\" or \"event A and event B each get a circle\"."
+ ],
+ "proposal": {
+  "title": "Venn diagrams",
+  "card": [
+   "A Venn diagram uses overlapping circles to show events. Event A and event B each get a circle, which holds the outcomes in that event.",
+   [
+    "A and B",
+    "the overlap, where outcomes are in both circles."
+   ],
+   [
+    "A or B",
+    "everything inside either circle, including the overlap. Count the overlap once only."
+   ],
+   "Example: 30 students. 12 play netball (N), 9 play soccer (S), and 4 play both. Netball or soccer = 12 + 9 − 4 = 17, so P(N or S) = 17/30."
+  ],
+  "remember": "Overlap means both. Anywhere in the circles means either, with the overlap counted once.",
+  "a": {
+   "q": "In a class of 24, 10 students have a dog, 8 have a cat, and 3 have both. How many students have a dog or a cat?",
+   "opts": [
+    "15",
+    "18",
+    "12",
+    "21"
+   ],
+   "why": "Dog or cat = 10 + 8 − 3 = 15. The 3 students with both were counted in each circle, so they are taken off once. Adding 10 + 8 gives 18, which counts them twice.",
+   "clue": "The overlap is counted twice when you add the circles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 students on a camp, 15 chose kayaking (K), 18 chose climbing (C), and 6 chose both. What is P(K or C)?",
+   "opts": [
+    "27/40",
+    "33/40",
+    "21/40",
+    "6/40"
+   ],
+   "why": "K or C = 15 + 18 − 6 = 27, so the probability is 27/40. The tempting 33/40 comes from adding 15 + 18 without removing the overlap, which counts 6 students twice. Taking the 6 off twice gives 21/40, which leaves out the students who chose both.",
+   "clue": "Find how many students are in either circle, then divide by 40."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first bullet says each circle holds the outcomes of one event, \"A or B\", just before \"A or B\" is defined as the union. This could confuse students about what \"A or B\" means. Better: \"one event, A or the other event, B\" or \"event A and event B each get a circle\"."
+   }
+  ],
+  "flags": [
+   "Card, wording: The first bullet says each circle holds the outcomes of one event, \"A or B\", just before \"A or B\" is defined as the union. This could confuse students about what \"A or B\" means. Better: \"one event, A or the other event, B\" or \"event A and event B each get a circle\"."
+  ]
+ },
+ "final": {
+  "title": "Venn diagrams",
+  "card": [
+   "A Venn diagram uses overlapping circles to show events. Event A and event B each get a circle, which holds the outcomes in that event.",
+   [
+    "A and B",
+    "the overlap, where outcomes are in both circles."
+   ],
+   [
+    "A or B",
+    "everything inside either circle, including the overlap. Count the overlap once only."
+   ],
+   "Example: 30 students. 12 play netball (N), 9 play soccer (S), and 4 play both. Netball or soccer = 12 + 9 − 4 = 17, so P(N or S) = 17/30."
+  ],
+  "remember": "Overlap means both. Anywhere in the circles means either, with the overlap counted once.",
+  "a": {
+   "q": "In a class of 24, 10 students have a dog, 8 have a cat, and 3 have both. How many students have a dog or a cat?",
+   "opts": [
+    "15",
+    "18",
+    "12",
+    "21"
+   ],
+   "why": "Dog or cat = 10 + 8 − 3 = 15. The 3 students with both were counted in each circle, so they are taken off once. Adding 10 + 8 gives 18, which counts them twice.",
+   "clue": "The overlap is counted twice when you add the circles."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 students on a camp, 15 chose kayaking (K), 18 chose climbing (C), and 6 chose both. What is P(K or C)?",
+   "opts": [
+    "27/40",
+    "33/40",
+    "21/40",
+    "6/40"
+   ],
+   "why": "K or C = 15 + 18 − 6 = 27, so the probability is 27/40. The tempting 33/40 comes from adding 15 + 18 without removing the overlap, which counts 6 students twice. Taking the 6 off twice gives 21/40, which leaves out the students who chose both.",
+   "clue": "Find how many students are in either circle, then divide by 40."
+  }
+ },
+ "cleared_by": "auto"
+}

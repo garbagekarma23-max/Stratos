@@ -1,0 +1,227 @@
+{
+ "id": "mat-solving-quadratics-from-graph",
+ "title": "Solving quadratics from a graph",
+ "brief": "73fd3d50fed9",
+ "shortlist": [
+  [
+   "mat-quadratic-graphs",
+   0.272
+  ],
+  [
+   "mat-quadratic-functions",
+   0.269
+  ],
+  [
+   "mat-solving-equations-with-graphs",
+   0.242
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: flagged",
+  "2026-11-04T10:08:05Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00632,
+  "check": 0.01303,
+  "fix": 0.0243,
+  "recheck": 0.00747
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches only the idea that the solutions of a quadratic equal to zero are the x-intercepts of its parabola: the closest cards cover vertices, direction and factorising in general, or solving f(x) = g(x) by intersections, so they are broader than this point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Solving quadratics from a graph",
+  "card": [
+   "The graph of y = x² − 4x + 3 is a parabola. Each point on it has an x-value and a y-value.",
+   "To solve x² − 4x + 3 = 0, we ask where y is 0. On a graph, y = 0 is the x-axis.",
+   "So the solutions are the x-values where the parabola crosses the x-axis. Read them off the x-axis. Do not read the y-values.",
+   "Example: if the parabola crosses the x-axis at 1 and 3, the solutions are x = 1 and x = 3. A parabola can cross the x-axis twice, touch it once, or miss it."
+  ],
+  "remember": "Solutions of a quadratic equal to 0 are where the parabola meets the x-axis.",
+  "a": {
+   "q": "A parabola crosses the x-axis at x = −2 and x = 5, and crosses the y-axis at y = −10. What are the solutions of the equation equal to 0?",
+   "opts": [
+    "x = −2 and x = 5",
+    "x = −10 only",
+    "x = −2 and x = −10",
+    "x = 5 and x = −10"
+   ],
+   "why": "The solutions are the x-values where the graph meets the x-axis, so x = −2 and x = 5. The y-axis crossing at −10 is not a solution.",
+   "clue": "Which axis is the line y = 0?"
+  },
+  "b": {
+   "d": 2,
+   "q": "The lowest point of a parabola is (3, −4), and it crosses the x-axis at x = 1. It is symmetrical about x = 3. What is the other solution of the equation equal to 0?",
+   "opts": [
+    "x = 5",
+    "x = 7",
+    "x = −4",
+    "x = 2"
+   ],
+   "why": "The other crossing is the same distance from the line x = 3 as x = 1. That is 2 units on the other side, so x = 5. The value −4 is a y-value, so it cannot be a solution.",
+   "clue": "Crossings sit equally far either side of the line of symmetry."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = −2 and x = 5",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 5",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never says that x-axis crossings sit equally far either side of the line of symmetry, or mentions turning points. Only the clue supplies the idea the question depends on, so it needs more than the card teaches."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "\"The solutions of the equation equal to 0\" names no equation. It would read more clearly as \"the solutions of the parabola's equation when y = 0\" or similar. Question b has the same phrasing."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths is correct and both intended answers (x = −2 and x = 5; x = 5) are consistent with the given parabolas. Question b relies on symmetry of the crossings, which the card does not teach, and both questions say \"the equation equal to 0\" without naming an equation."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The card never says that x-axis crossings sit equally far either side of the line of symmetry, or mentions turning points. Only the clue supplies the idea the question depends on, so it needs more than the card teaches.",
+  "Question a, wording: \"The solutions of the equation equal to 0\" names no equation. It would read more clearly as \"the solutions of the parabola's equation when y = 0\" or similar. Question b has the same phrasing."
+ ],
+ "proposal": {
+  "title": "Solving quadratics from a graph",
+  "card": [
+   "The graph of y = x² − 4x + 3 is a parabola. To solve x² − 4x + 3 = 0, we ask where y is 0. On a graph, y = 0 is the x-axis.",
+   "So the solutions are the x-values where the parabola meets the x-axis. Read them off the x-axis, not the y-axis.",
+   "Example: this parabola crosses the x-axis at 1 and 3, so the solutions are x = 1 and x = 3. Check: 1² − 4 × 1 + 3 = 0.",
+   "Crossing the x-axis twice gives two solutions. Touching it once gives one. If the parabola never meets the x-axis, there are no solutions."
+  ],
+  "remember": "Solutions are the x-values where y = 0. Count the x-axis meetings to count the solutions.",
+  "a": {
+   "q": "A parabola crosses the x-axis at x = −2 and x = 5, and crosses the y-axis at y = −10. What are the solutions of its equation when y = 0?",
+   "opts": [
+    "x = −2 and x = 5",
+    "x = −10 only",
+    "x = −2 and x = −10",
+    "x = 5 and x = −10"
+   ],
+   "why": "The solutions are the x-values where the graph meets the x-axis, so x = −2 and x = 5. The y-axis crossing at −10 is a y-value, so it is not a solution.",
+   "clue": "Which axis is the line y = 0?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of y = x² + 2 stays above the x-axis and crosses the y-axis at y = 2. How many solutions does x² + 2 = 0 have?",
+   "opts": [
+    "No solutions, as the graph never meets the x-axis",
+    "One solution, x = 2, where it crosses the y-axis",
+    "Two solutions, x = √2 and x = −√2, from x² = 2",
+    "One solution, x = 0, where the graph is lowest"
+   ],
+   "why": "Solutions are where the parabola meets the x-axis. This graph never does, so there are no solutions. The y-axis crossing at 2 is a y-value, not a solution.",
+   "clue": "How many times does the graph meet the x-axis?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "x = −2 and x = 5",
+    "also_right": []
+   },
+   "b": {
+    "best": "No solutions, as the graph never meets the x-axis",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never says that x-axis crossings sit equally far either side of the line of symmetry, or mentions turning points. Only the clue supplies the idea the question depends on, so it needs more than the card teaches."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "\"The solutions of the equation equal to 0\" names no equation. It would read more clearly as \"the solutions of the parabola's equation when y = 0\" or similar. Question b has the same phrasing."
+   }
+  ],
+  "flags": [
+   "Question b, level: The card never says that x-axis crossings sit equally far either side of the line of symmetry, or mentions turning points. Only the clue supplies the idea the question depends on, so it needs more than the card teaches.",
+   "Question a, wording: \"The solutions of the equation equal to 0\" names no equation. It would read more clearly as \"the solutions of the parabola's equation when y = 0\" or similar. Question b has the same phrasing."
+  ]
+ },
+ "final": {
+  "title": "Solving quadratics from a graph",
+  "card": [
+   "The graph of y = x² − 4x + 3 is a parabola. To solve x² − 4x + 3 = 0, we ask where y is 0. On a graph, y = 0 is the x-axis.",
+   "So the solutions are the x-values where the parabola meets the x-axis. Read them off the x-axis, not the y-axis.",
+   "Example: this parabola crosses the x-axis at 1 and 3, so the solutions are x = 1 and x = 3. Check: 1² − 4 × 1 + 3 = 0.",
+   "Crossing the x-axis twice gives two solutions. Touching it once gives one. If the parabola never meets the x-axis, there are no solutions."
+  ],
+  "remember": "Solutions are the x-values where y = 0. Count the x-axis meetings to count the solutions.",
+  "a": {
+   "q": "A parabola crosses the x-axis at x = −2 and x = 5, and crosses the y-axis at y = −10. What are the solutions of its equation when y = 0?",
+   "opts": [
+    "x = −2 and x = 5",
+    "x = −10 only",
+    "x = −2 and x = −10",
+    "x = 5 and x = −10"
+   ],
+   "why": "The solutions are the x-values where the graph meets the x-axis, so x = −2 and x = 5. The y-axis crossing at −10 is a y-value, so it is not a solution.",
+   "clue": "Which axis is the line y = 0?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of y = x² + 2 stays above the x-axis and crosses the y-axis at y = 2. How many solutions does x² + 2 = 0 have?",
+   "opts": [
+    "No solutions, as the graph never meets the x-axis",
+    "One solution, x = 2, where it crosses the y-axis",
+    "Two solutions, x = √2 and x = −√2, from x² = 2",
+    "One solution, x = 0, where the graph is lowest"
+   ],
+   "why": "Solutions are where the parabola meets the x-axis. This graph never does, so there are no solutions. The y-axis crossing at 2 is a y-value, not a solution.",
+   "clue": "How many times does the graph meet the x-axis?"
+  }
+ },
+ "cleared_by": "recheck"
+}
