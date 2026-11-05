@@ -160,8 +160,11 @@ check((await A.p.locator('#sheetBody .fine').allTextContents()).includes('When t
   'with a line saying what off does', R);
 await both(A.p, 'week-account');
 await A.p.click('[data-act="wkshow"]');
+// The database saves the switch before its reply reaches the phone, and the toast comes with the reply.
+// Until then #toast still holds the last toast, the one from signing in, so wait for the switch's own toast.
 check(await until(async () => (await rows('select show_week from public.profiles where id = $1', [ua.id]))[0].show_week === false) &&
-  (await text(A.p, '#toast')).includes('Friends can’t see you on the weekly table now.'), 'off: saved in the account, with a toast', R);
+  await until(async () => (await text(A.p, '#toast')) === 'Friends can’t see you on the weekly table now.' &&
+    await A.p.locator('#toast.show').count() === 1, 3000), 'off: saved in the account, with a toast', R);
 await A.p.keyboard.press('Escape'); await A.p.waitForTimeout(200);
 await refresh(B.p);
 check(await tableIs(B.p, [['1', 'Ben', '2']]), 'Ana leaves Ben\'s table', R);
