@@ -1,0 +1,378 @@
+{
+ "id": "sci-correlation-causation",
+ "title": "Correlation and causation",
+ "brief": "002cc9b4543a",
+ "shortlist": [
+  [
+   "mat-correlation-causation",
+   0.26
+  ],
+  [
+   "mat-correlation-causation-2",
+   0.2
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 may adapt mat-correlation-causation, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:11Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:32Z write: done",
+  "2026-11-04T10:08:05Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b other)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.00747,
+  "write": 0.00461,
+  "check": 0.00994,
+  "fix": 0.01642,
+  "recheck": 0.00997
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-correlation-causation",
+  "changes": [
+   "Add chance as a possible explanation alongside a third factor, since the card currently covers only third factors.",
+   "Simplify the references to r and the value of r, which go beyond what Year 10 Science expects, and describe the strength of the relationship in plain terms.",
+   "Use a Year 10 Science example, such as a scientific investigation or data from a class experiment, in place of the mathematics examples if the course should be more science-focused."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same core idea at a somewhat higher, Year 12 mathematics depth, so it needs a chance explanation added and its statistics language simplified for Year 10 Science.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank points teach the same core idea, but they are Year 12 maths cards that rely on r values and scatterplots and leave out chance as an explanation, which this Year 10 science brief includes; fitting one to this course would mean adding a new idea and changing its depth, so a new point is safer.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: Why (b) gives 'time spent reading' as a third factor that may explain both. Reading time is more likely the way owning books could raise scores than a separate cause of both, so it muddies the idea of a third factor. A clearer example would be family income or parents' education.",
+ "rejected": {
+  "title": "Correlation and causation",
+  "card": [
+   "A correlation is when two things change together. When one goes up, the other tends to go up too, or tends to go down.",
+   "A correlation does not prove that one thing causes the other. The link may be a coincidence.",
+   "A third factor may cause both changes. In summer, hot weather can raise both ice cream sales and the number of people swimming at a beach.",
+   "To show that one thing causes another, scientists need more evidence, such as a fair test that changes only that one thing."
+  ],
+  "remember": "Changing together is a correlation. It is not proof of cause.",
+  "a": {
+   "q": "In one town, months with more ice cream sales also have more sunburn cases. What can be concluded from this data alone?",
+   "opts": [
+    "They are correlated, but this alone does not show a cause",
+    "They are correlated, which shows ice cream causes sunburn",
+    "They are correlated, which proves sunburn boosts sales",
+    "They are not linked, because neither one causes the other"
+   ],
+   "why": "Sales and sunburn rise together, so they are correlated, but a correlation alone cannot prove cause. A third factor such as hot sunny weather could explain both. Saying ice cream causes sunburn is tempting, but it reads cause into a pattern that does not show it.",
+   "clue": "Does changing together prove that one thing causes the other?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A survey finds that students who own more books score higher in science tests. Which statement is best supported by this survey alone?",
+   "opts": [
+    "Book ownership and test scores are correlated",
+    "Buying more books raises a student's test score",
+    "High test scores make students buy more books",
+    "Book ownership and test scores have no link at all"
+   ],
+   "why": "The survey shows the two change together, which is a correlation. It does not show that books cause higher scores, as a third factor such as time spent reading may explain both. The survey does not show that there is no link either, since the two do move together.",
+   "clue": "The survey shows a pattern but did not run a fair test."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: Why (b) gives 'time spent reading' as a third factor that may explain both. Reading time is more likely the way owning books could raise scores than a separate cause of both, so it muddies the idea of a third factor. A clearer example would be family income or parents' education."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Correlation and causation",
+     "card": [
+      "A correlation is when two things change together. When one goes up, the other tends to go up too, or tends to go down.",
+      "A correlation does not prove that one thing causes the other. The link may be a coincidence.",
+      "A third factor may cause both changes. In summer, hot weather can raise both ice cream sales and the number of people swimming at a beach.",
+      "To show that one thing causes another, scientists need more evidence, such as a fair test that changes only that one thing."
+     ],
+     "remember": "Changing together is a correlation. It is not proof of cause.",
+     "a": {
+      "q": "In one town, months with more ice cream sales also have more sunburn cases. What is the best conclusion?",
+      "opts": [
+       "The two are correlated, and hot sunny weather may cause both",
+       "Eating ice cream causes sunburn in people",
+       "Sunburn causes people to buy more ice cream",
+       "The two are not related, because neither causes the other"
+      ],
+      "why": "Sales and sunburn rise together, so they are correlated. Hot sunny weather is a third factor that could explain both. The claim that ice cream causes sunburn is tempting, but a correlation alone cannot show it.",
+      "clue": "Think about what else changes in months with more sun."
+     },
+     "b": {
+      "d": 3,
+      "q": "A survey finds that students who own more books score higher in science tests. Which statement is best supported by this survey alone?",
+      "opts": [
+       "Book ownership and test scores are correlated",
+       "Buying more books raises a student's test score",
+       "High test scores make students buy more books",
+       "Book ownership and test scores have no link at all"
+      ],
+      "why": "The survey shows the two change together, which is a correlation. It does not show that books cause higher scores, as a third factor such as time spent reading may explain both. The survey does not show that there is no link either, since the two do move together.",
+      "clue": "The survey shows a pattern but did not run a fair test."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The two are correlated, and hot sunny weather may cause both",
+      "also_right": []
+     },
+     "b": {
+      "best": "Book ownership and test scores are correlated",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one with a qualifier ('may') and the only one naming a precise third factor. It is also slightly the longest, so a student could pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the answers are sound. In question a, the right option stands out as the only one hedged with 'may' and naming a third factor, so a student could guess it without knowing the idea."
+    },
+    "flags": [
+     "Question a, wording: The right option is the only one with a qualifier ('may') and the only one naming a precise third factor. It is also slightly the longest, so a student could pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Correlation and causation",
+     "card": [
+      "A correlation is when two things change together. When one goes up, the other tends to go up too, or tends to go down.",
+      "A correlation does not prove that one thing causes the other. The link may be a coincidence.",
+      "A third factor may cause both changes. In summer, hot weather can raise both ice cream sales and the number of people swimming at a beach.",
+      "To show that one thing causes another, scientists need more evidence, such as a fair test that changes only that one thing."
+     ],
+     "remember": "Changing together is a correlation. It is not proof of cause.",
+     "a": {
+      "q": "In one town, months with more ice cream sales also have more sunburn cases. What can be concluded from this data alone?",
+      "opts": [
+       "They are correlated, but this alone does not show a cause",
+       "They are correlated, which shows ice cream causes sunburn",
+       "They are correlated, which proves sunburn boosts sales",
+       "They are not linked, because neither one causes the other"
+      ],
+      "why": "Sales and sunburn rise together, so they are correlated, but a correlation alone cannot prove cause. A third factor such as hot sunny weather could explain both. Saying ice cream causes sunburn is tempting, but it reads cause into a pattern that does not show it.",
+      "clue": "Does changing together prove that one thing causes the other?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A survey finds that students who own more books score higher in science tests. Which statement is best supported by this survey alone?",
+      "opts": [
+       "Book ownership and test scores are correlated",
+       "Buying more books raises a student's test score",
+       "High test scores make students buy more books",
+       "Book ownership and test scores have no link at all"
+      ],
+      "why": "The survey shows the two change together, which is a correlation. It does not show that books cause higher scores, as a third factor such as time spent reading may explain both. The survey does not show that there is no link either, since the two do move together.",
+      "clue": "The survey shows a pattern but did not run a fair test."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "They are correlated, but this alone does not show a cause",
+       "also_right": []
+      },
+      "b": {
+       "best": "Book ownership and test scores are correlated",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "Why (b) gives 'time spent reading' as a third factor that may explain both. Reading time is more likely the way owning books could raise scores than a separate cause of both, so it muddies the idea of a third factor. A clearer example would be family income or parents' education."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clearly right answer that matches the card. The only problem is in why (b), where 'time spent reading' is a weak example of a third factor and should be swapped for something like family income."
+     },
+     "flags": [
+      "Question b, other: Why (b) gives 'time spent reading' as a third factor that may explain both. Reading time is more likely the way owning books could raise scores than a separate cause of both, so it muddies the idea of a third factor. A clearer example would be family income or parents' education."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Correlation and causation",
+    "card": [
+     "A correlation is when two things change together. When one goes up, the other tends to go up too, or tends to go down.",
+     "A correlation does not prove that one thing causes the other. The link may be a coincidence.",
+     "A third factor may cause both changes. In summer, hot weather can raise both ice cream sales and the number of people swimming at a beach.",
+     "To show that one thing causes another, scientists need more evidence, such as a fair test that changes only that one thing."
+    ],
+    "remember": "Changing together is a correlation. It is not proof of cause.",
+    "a": {
+     "q": "Over a year, a town's monthly ice cream sales rise and fall along with its number of sunburn cases. What can be concluded from this data alone?",
+     "opts": [
+      "They are correlated, but this alone does not show a cause",
+      "They are correlated, which shows ice cream causes sunburn",
+      "They are correlated, which proves sunburn boosts sales",
+      "They are not linked, because neither one causes the other"
+     ],
+     "why": "Sales and sunburn rise and fall together, so they are correlated, but a correlation alone cannot prove cause. A third factor such as hot sunny weather could explain both. Saying ice cream causes sunburn is tempting, but it reads cause into a pattern that does not show it.",
+     "clue": "Does changing together prove that one thing causes the other?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A survey finds that students with more books at home tend to get higher science marks. Which statement does the survey on its own best support?",
+     "opts": [
+      "Books at home and science marks are correlated",
+      "Buying more books raises a student's science mark",
+      "High science marks make students buy more books",
+      "Books at home and science marks have no link at all"
+     ],
+     "why": "The survey shows the two change together, which is a correlation. It does not show that books cause higher marks, because a third factor, such as family income, may explain both. It does not show there is no link either, since the two do move together.",
+     "clue": "A survey finds patterns. It does not run a fair test."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "They are correlated, but this alone does not show a cause",
+     "also_right": []
+    },
+    "b": {
+     "best": "Books at home and science marks are correlated",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Correlation and causation",
+  "card": [
+   "A correlation is when two things change together. When one goes up, the other tends to go up too, or tends to go down.",
+   "A correlation does not prove that one thing causes the other. The link may be a coincidence.",
+   "A third factor may cause both changes. In summer, hot weather can raise both ice cream sales and the number of people swimming at a beach.",
+   "To show that one thing causes another, scientists need more evidence, such as a fair test that changes only that one thing."
+  ],
+  "remember": "Changing together is a correlation. It is not proof of cause.",
+  "a": {
+   "q": "Over a year, a town's monthly ice cream sales rise and fall along with its number of sunburn cases. What can be concluded from this data alone?",
+   "opts": [
+    "They are correlated, but this alone does not show a cause",
+    "They are correlated, which shows ice cream causes sunburn",
+    "They are correlated, which proves sunburn boosts sales",
+    "They are not linked, because neither one causes the other"
+   ],
+   "why": "Sales and sunburn rise and fall together, so they are correlated, but a correlation alone cannot prove cause. A third factor such as hot sunny weather could explain both. Saying ice cream causes sunburn is tempting, but it reads cause into a pattern that does not show it.",
+   "clue": "Does changing together prove that one thing causes the other?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A survey finds that students with more books at home tend to get higher science marks. Which statement does the survey on its own best support?",
+   "opts": [
+    "Books at home and science marks are correlated",
+    "Buying more books raises a student's science mark",
+    "High science marks make students buy more books",
+    "Books at home and science marks have no link at all"
+   ],
+   "why": "The survey shows the two change together, which is a correlation. It does not show that books cause higher marks, because a third factor, such as family income, may explain both. It does not show there is no link either, since the two do move together.",
+   "clue": "A survey finds patterns. It does not run a fair test."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They are correlated, but this alone does not show a cause",
+   "also_right": []
+  },
+  "b": {
+   "best": "Books at home and science marks are correlated",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Correlation and causation",
+  "card": [
+   "A correlation is when two things change together. When one goes up, the other tends to go up too, or tends to go down.",
+   "A correlation does not prove that one thing causes the other. The link may be a coincidence.",
+   "A third factor may cause both changes. In summer, hot weather can raise both ice cream sales and the number of people swimming at a beach.",
+   "To show that one thing causes another, scientists need more evidence, such as a fair test that changes only that one thing."
+  ],
+  "remember": "Changing together is a correlation. It is not proof of cause.",
+  "a": {
+   "q": "Over a year, a town's monthly ice cream sales rise and fall along with its number of sunburn cases. What can be concluded from this data alone?",
+   "opts": [
+    "They are correlated, but this alone does not show a cause",
+    "They are correlated, which shows ice cream causes sunburn",
+    "They are correlated, which proves sunburn boosts sales",
+    "They are not linked, because neither one causes the other"
+   ],
+   "why": "Sales and sunburn rise and fall together, so they are correlated, but a correlation alone cannot prove cause. A third factor such as hot sunny weather could explain both. Saying ice cream causes sunburn is tempting, but it reads cause into a pattern that does not show it.",
+   "clue": "Does changing together prove that one thing causes the other?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A survey finds that students with more books at home tend to get higher science marks. Which statement does the survey on its own best support?",
+   "opts": [
+    "Books at home and science marks are correlated",
+    "Buying more books raises a student's science mark",
+    "High science marks make students buy more books",
+    "Books at home and science marks have no link at all"
+   ],
+   "why": "The survey shows the two change together, which is a correlation. It does not show that books cause higher marks, because a third factor, such as family income, may explain both. It does not show there is no link either, since the two do move together.",
+   "clue": "A survey finds patterns. It does not run a fair test."
+  }
+ },
+ "checked_by": "claude-code"
+}

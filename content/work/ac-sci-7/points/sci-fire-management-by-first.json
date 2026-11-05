@@ -1,0 +1,258 @@
+{
+ "id": "sci-fire-management-by-first",
+ "title": "Fire management by First Nations Australians",
+ "brief": "ef8f90a0ea1f",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:43Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:12Z write: failed the content check, writing again",
+  "2026-11-04T09:58:33Z write: done",
+  "2026-11-04T14:58:52Z check: flagged",
+  "2026-11-04T15:02:07Z fix: suggested",
+  "2026-11-05T06:15:12Z review: rejected, to be written again",
+  "2026-11-05T06:26:27Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T06:32:24Z claude-code check: answered by a separate subagent",
+  "2026-11-05T06:32:24Z check: flagged",
+  "2026-11-05T06:46:38Z fix: suggested",
+  "2026-11-05T07:04:03Z review: approved with the fix"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 2
+ },
+ "usd": {
+  "write": 0.01213,
+  "check": 0.01331,
+  "fix": 0.03427
+ },
+ "note": "",
+ "rejected": {
+  "title": "First Nations fire management",
+  "card": [
+   "First Nations Australians have used planned burning to care for Country for tens of thousands of years. Country means the land, waters, plants, animals and people, and the connection between them.",
+   "Cool burning is a low, slow fire lit at a chosen time and place. It clears dry grass and leaf litter but usually does not scorch the tree canopy.",
+   "Burning in patches creates a mosaic of areas at different stages of regrowth. This gives different plants and animals the habitat they need, so it shapes where they live.",
+   "Cool burning also reduces the fuel that feeds large, hot bushfires. The knowledge of when and where to burn is passed down through generations and differs between peoples and Country."
+  ],
+  "remember": "Planned cool burning is a long-held way of caring for Country that shapes habitats and reduces fuel.",
+  "a": {
+   "q": "Why does burning in patches change where plants and animals live?",
+   "opts": [
+    "It creates areas of different regrowth, so habitats vary",
+    "It burns every area evenly, so habitats all look the same",
+    "It clears all plants, so new species must move in",
+    "It burns the canopy, so more light reaches the ground"
+   ],
+   "why": "Patches burnt at different times regrow at different rates, so a range of habitats sits side by side. Burning evenly would remove that variety, and cool burns usually leave the canopy unburnt.",
+   "clue": "Think about what a patchwork of burnt areas looks like."
+  },
+  "b": {
+   "d": 3,
+   "q": "Rangers in the Northern Territory light a low fire in the early dry season and leave patches unburnt. Why is this called cool burning?",
+   "opts": [
+    "The fire is low and slow and leaves the canopy unburnt",
+    "The fire is lit only at night and burns out in minutes",
+    "The fire is hot and fast and burns all trees in its path",
+    "The fire is lit in the wet season and the ground is damp"
+   ],
+   "why": "Cool burning means a low, slow fire that clears dry grass and litter while usually leaving the canopy alone. The word cool describes the fire, not a time of night or an effort to burn everything.",
+   "clue": "Cool describes how the fire burns, not only when it is lit."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:26:27Z",
+   "step": "write",
+   "version": {
+    "title": "Fire management by First Nations Australians",
+    "card": [
+     "For tens of thousands of years, First Nations Australians have used planned burning to care for Country: the land, waters, plants and animals they belong to.",
+     "Cool burning uses small, slow, low fires lit at chosen times of year. They clear dry grass and leaf litter but usually spare the tree canopy.",
+     "Burning small patches at different times leaves a mosaic, a patchwork of freshly burnt, regrowing and long-unburnt areas. Different plants and animals live in each, so the mosaic shapes where they live.",
+     "Cool burns also use up fuel, so later fires are less likely to become large, hot bushfires that harm many living things."
+    ],
+    "remember": "Planned cool burns make a patchwork of habitats and leave less fuel for big fires.",
+    "a": {
+     "q": "How does burning small patches at different times affect where animals live?",
+     "opts": [
+      "It makes a mix of habitats, each suiting different animals",
+      "It makes every area the same, so all animals move away",
+      "It removes all plants, so animals live only in trees",
+      "It has no effect, because animals return straight away"
+     ],
+     "why": "Patches burnt at different times regrow at different rates, so a mix of habitats sits side by side, and each suits different animals. Burning everything the same way would remove that mix.",
+     "clue": "Picture a patchwork of burnt and unburnt ground."
+    },
+    "b": {
+     "d": 3,
+     "q": "A property has had no planned burning for 15 years, and dry grass and leaf litter have built up. What is most likely?",
+     "opts": [
+      "A later fire burns hotter and spreads more widely",
+      "Fires become less likely, as nothing is burnt",
+      "Animals that need freshly burnt ground do better",
+      "More kinds of habitat form across the property"
+     ],
+     "why": "With no cool burns, dry grass and leaf litter build up as fuel, so a later fire is likely to burn hotter and spread further. Fires do not become less likely, because the fuel is still there to catch alight.",
+     "clue": "What does the built-up dry grass become?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T06:32:24Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It makes a mix of habitats, each suiting different animals",
+     "also_right": []
+    },
+    "b": {
+     "best": "A later fire burns hotter and spreads more widely",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "wording",
+      "detail": "All three wrong options are extreme claims (\"no effect\", \"removes all plants\" and \"live only in trees\", \"every area the same\" and \"all animals move away\"), while the right option is the only measured one. A student could pick it by ruling out the absolutes without knowing what a fire mosaic does. At least one wrong option should be a moderate but mistaken claim, such as \"It makes animals gather in the freshly burnt patches\"."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "first-nations",
+    "summary": "The facts are right and both intended answers are the only right options. In question a, the three wrong options are all extreme claims, so a student could rule them out without knowing the idea. The point is about First Nations cultural practice, so it needs the owner's review."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Fire management by First Nations Australians",
+  "card": [
+   "For tens of thousands of years, First Nations Australians have used planned burning to care for Country: the land, waters, plants and animals they belong to.",
+   "Cool burning uses small, slow, low fires lit at chosen times of year. They clear dry grass and leaf litter but usually spare the tree canopy.",
+   "Burning small patches at different times leaves a mosaic, a patchwork of freshly burnt, regrowing and long-unburnt areas. Different plants and animals live in each, so the mosaic shapes where they live.",
+   "Cool burns also use up fuel, so later fires are less likely to become large, hot bushfires that harm many living things."
+  ],
+  "remember": "Planned cool burns make a patchwork of habitats and leave less fuel for big fires.",
+  "a": {
+   "q": "How does burning small patches at different times affect where animals live?",
+   "opts": [
+    "It makes a mix of habitats, each suiting different animals",
+    "It makes every area the same, so all animals move away",
+    "It removes all plants, so animals live only in trees",
+    "It has no effect, because animals return straight away"
+   ],
+   "why": "Patches burnt at different times regrow at different rates, so a mix of habitats sits side by side, and each suits different animals. Burning everything the same way would remove that mix.",
+   "clue": "Picture a patchwork of burnt and unburnt ground."
+  },
+  "b": {
+   "d": 3,
+   "q": "A property has had no planned burning for 15 years, and dry grass and leaf litter have built up. What is most likely?",
+   "opts": [
+    "A later fire burns hotter and spreads more widely",
+    "Fires become less likely, as nothing is burnt",
+    "Animals that need freshly burnt ground do better",
+    "More kinds of habitat form across the property"
+   ],
+   "why": "With no cool burns, dry grass and leaf litter build up as fuel, so a later fire is likely to burn hotter and spread further. Fires do not become less likely, because the fuel is still there to catch alight.",
+   "clue": "What does the built-up dry grass become?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It makes a mix of habitats, each suiting different animals",
+   "also_right": []
+  },
+  "b": {
+   "best": "A later fire burns hotter and spreads more widely",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "All three wrong options are extreme claims (\"no effect\", \"removes all plants\" and \"live only in trees\", \"every area the same\" and \"all animals move away\"), while the right option is the only measured one. A student could pick it by ruling out the absolutes without knowing what a fire mosaic does. At least one wrong option should be a moderate but mistaken claim, such as \"It makes animals gather in the freshly burnt patches\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "The facts are right and both intended answers are the only right options. In question a, the three wrong options are all extreme claims, so a student could rule them out without knowing the idea. The point is about First Nations cultural practice, so it needs the owner's review."
+ },
+ "sensitive": "first-nations",
+ "flags": [
+  "Question a, wording: All three wrong options are extreme claims (\"no effect\", \"removes all plants\" and \"live only in trees\", \"every area the same\" and \"all animals move away\"), while the right option is the only measured one. A student could pick it by ruling out the absolutes without knowing what a fire mosaic does. At least one wrong option should be a moderate but mistaken claim, such as \"It makes animals gather in the freshly burnt patches\"."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Fire management by First Nations Australians",
+  "card": [
+   "For tens of thousands of years, First Nations Australians have used planned burning to care for Country: the land, waters, plants and animals they belong to.",
+   "Cool burning uses small, slow, low fires lit at chosen times of year. They clear dry grass and leaf litter but usually spare the tree canopy.",
+   "Burning small patches at different times leaves a mosaic, a patchwork of freshly burnt, regrowing and long-unburnt areas. Different plants and animals live in each, so the mosaic shapes where they live.",
+   "Cool burns also use up fuel, so later fires are less likely to become large, hot bushfires that harm many living things."
+  ],
+  "remember": "Planned cool burns make a patchwork of habitats and leave less fuel for big fires.",
+  "a": {
+   "q": "How does burning small patches at different times affect where animals live?",
+   "opts": [
+    "It makes a mix of habitats, each suiting different animals",
+    "It makes most animals gather in the freshly burnt patches",
+    "It mainly suits animals that need long-unburnt bush",
+    "It spreads the same animals evenly across the patches"
+   ],
+   "why": "Patches burnt at different times are at different stages, freshly burnt, regrowing or long unburnt, and different animals live in each. So animals do not all crowd into the fresh patches or the old bush, and the same animals are not found everywhere.",
+   "clue": "Do the same animals live in every kind of patch?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A property has had no planned burning for 15 years, and dry grass and leaf litter have built up. What is most likely?",
+   "opts": [
+    "A later fire burns hotter and spreads more widely",
+    "Fires become less likely, as nothing is burnt",
+    "Animals that need freshly burnt ground do better",
+    "More kinds of habitat form across the property"
+   ],
+   "why": "With no cool burns, dry grass and leaf litter build up as fuel, so a later fire is likely to burn hotter and spread further. Fires do not become less likely, because the fuel is still there to catch alight.",
+   "clue": "What does the built-up dry grass become?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Fire management by First Nations Australians",
+  "card": [
+   "For tens of thousands of years, First Nations Australians have used planned burning to care for Country: the land, waters, plants and animals they belong to.",
+   "Cool burning uses small, slow, low fires lit at chosen times of year. They clear dry grass and leaf litter but usually spare the tree canopy.",
+   "Burning small patches at different times leaves a mosaic, a patchwork of freshly burnt, regrowing and long-unburnt areas. Different plants and animals live in each, so the mosaic shapes where they live.",
+   "Cool burns also use up fuel, so later fires are less likely to become large, hot bushfires that harm many living things."
+  ],
+  "remember": "Planned cool burns make a patchwork of habitats and leave less fuel for big fires.",
+  "a": {
+   "q": "How does burning small patches at different times affect where animals live?",
+   "opts": [
+    "It makes a mix of habitats, each suiting different animals",
+    "It makes most animals gather in the freshly burnt patches",
+    "It mainly suits animals that need long-unburnt bush",
+    "It spreads the same animals evenly across the patches"
+   ],
+   "why": "Patches burnt at different times are at different stages, freshly burnt, regrowing or long unburnt, and different animals live in each. So animals do not all crowd into the fresh patches or the old bush, and the same animals are not found everywhere.",
+   "clue": "Do the same animals live in every kind of patch?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A property has had no planned burning for 15 years, and dry grass and leaf litter have built up. What is most likely?",
+   "opts": [
+    "A later fire burns hotter and spreads more widely",
+    "Fires become less likely, as nothing is burnt",
+    "Animals that need freshly burnt ground do better",
+    "More kinds of habitat form across the property"
+   ],
+   "why": "With no cool burns, dry grass and leaf litter build up as fuel, so a later fire is likely to burn hotter and spread further. Fires do not become less likely, because the fuel is still there to catch alight.",
+   "clue": "What does the built-up dry grass become?"
+  }
+ },
+ "cleared_by": "owner"
+}

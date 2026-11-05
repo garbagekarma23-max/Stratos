@@ -1,0 +1,349 @@
+{
+ "id": "mat-solving-one-variable-inequalities",
+ "title": "Solving one-variable inequalities",
+ "brief": "20c70eea9434",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:56Z write: done",
+  "2026-11-04T09:47:08Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b level)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00713,
+  "check": 0.01305,
+  "fix": 0.02026,
+  "recheck": 0.00966
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, level: Question b's inequality (2x + 3 ≤ 11) solves to x ≤ 4, the same answer as the card's worked example (closed circle at 4, line going left). A student can pick the right option by recalling the example rather than solving.",
+ "rejected": {
+  "title": "Solving one-variable inequalities",
+  "card": [
+   "An inequality uses <, >, ≤ or ≥. Solve it like an equation by doing the same thing to both sides.",
+   "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So −2x < 6 gives x > −3.",
+   "The answer is a range of values, such as x > 3. On a number line, an open circle means the end value is not included (< or >), and a closed circle means it is included (≤ or ≥).",
+   "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+  ],
+  "remember": "Flip the sign if you multiply or divide by a negative. A closed circle includes the end value, an open one does not.",
+  "a": {
+   "q": "Solve 3x − 2 > 10.",
+   "opts": [
+    "x > 4",
+    "x > 8/3",
+    "x > 12",
+    "x < 4"
+   ],
+   "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 12 comes from forgetting to divide by 3, and x < 4 flips the sign even though 3 is positive.",
+   "clue": "Undo the subtraction first, then undo the multiplication."
+  },
+  "b": {
+   "d": 2,
+   "q": "Leo solves 2x + 3 ≤ 11. How should he show the answer on a number line?",
+   "opts": [
+    "Closed circle at 4, line going left",
+    "Open circle at 4, line going left",
+    "Closed circle at 4, line going right",
+    "Closed circle at 7, line going left"
+   ],
+   "why": "Subtract 3: 2x ≤ 8. Divide by 2: x ≤ 4. The sign ≤ includes 4, so the circle is closed, and values smaller than 4 go left. An open circle would leave 4 out.",
+   "clue": "Does the sign include the end value, and which way are smaller numbers?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, level: Question b's inequality (2x + 3 ≤ 11) solves to x ≤ 4, the same answer as the card's worked example (closed circle at 4, line going left). A student can pick the right option by recalling the example rather than solving."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Solving one-variable inequalities",
+     "card": [
+      "An inequality uses <, >, ≤ or ≥. Solve it like an equation: do the same thing to both sides.",
+      "The answer is a range of values, not one number. So x > 3 means x can be any number bigger than 3.",
+      "On a number line, use an open circle when the end value is not included (< or >). Use a closed circle when it is included (≤ or ≥).",
+      "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+     ],
+     "remember": "Solve as for an equation. The answer is a range, and the circle shows if the end value counts.",
+     "a": {
+      "q": "Solve 3x − 2 > 10.",
+      "opts": [
+       "x > 4",
+       "x > 8",
+       "x > 12",
+       "x < 4"
+      ],
+      "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 8 comes from forgetting to divide by 3 after adding 2 to both sides.",
+      "clue": "Undo the subtraction first, then undo the multiplication."
+     },
+     "b": {
+      "d": 2,
+      "q": "Leo solves 2x + 3 ≤ 11. How should he show the answer on a number line?",
+      "opts": [
+       "Closed circle at 4, line going left",
+       "Open circle at 4, line going left",
+       "Closed circle at 4, line going right",
+       "Closed circle at 7, line going left"
+      ],
+      "why": "Subtract 3: 2x ≤ 8. Divide by 2: x ≤ 4. The sign ≤ includes 4, so the circle is closed, and values smaller than 4 go left. An open circle would leave 4 out.",
+      "clue": "Does the sign include the end value, and which way are smaller numbers?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "x > 4",
+      "also_right": []
+     },
+     "b": {
+      "best": "Closed circle at 4, line going left",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The why says x > 8 comes from forgetting to divide by 3 after adding 2. That is wrong: forgetting to divide gives 3x > 12, so x > 12. x > 8 would come from subtracting 2 instead of adding it (10 − 2 = 8) and then not dividing."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'Solve it like an equation: do the same thing to both sides' is given as the whole rule, and the remember line repeats it. It leaves out that the inequality sign reverses when you multiply or divide both sides by a negative number. A student applying this rule to something like −2x < 6 would get the wrong answer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions and their best answers are correct. The why for (a) wrongly says x > 8 comes from forgetting to divide by 3 (that mistake gives x > 12). The card's 'solve it like an equation' rule leaves out that the sign flips when you multiply or divide by a negative."
+    },
+    "flags": [
+     "Question a, fact: The why says x > 8 comes from forgetting to divide by 3 after adding 2. That is wrong: forgetting to divide gives 3x > 12, so x > 12. x > 8 would come from subtracting 2 instead of adding it (10 − 2 = 8) and then not dividing.",
+     "Card, fact: 'Solve it like an equation: do the same thing to both sides' is given as the whole rule, and the remember line repeats it. It leaves out that the inequality sign reverses when you multiply or divide both sides by a negative number. A student applying this rule to something like −2x < 6 would get the wrong answer."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Solving one-variable inequalities",
+     "card": [
+      "An inequality uses <, >, ≤ or ≥. Solve it like an equation by doing the same thing to both sides.",
+      "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So −2x < 6 gives x > −3.",
+      "The answer is a range of values, such as x > 3. On a number line, an open circle means the end value is not included (< or >), and a closed circle means it is included (≤ or ≥).",
+      "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+     ],
+     "remember": "Flip the sign if you multiply or divide by a negative. A closed circle includes the end value, an open one does not.",
+     "a": {
+      "q": "Solve 3x − 2 > 10.",
+      "opts": [
+       "x > 4",
+       "x > 8/3",
+       "x > 12",
+       "x < 4"
+      ],
+      "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 12 comes from forgetting to divide by 3, and x < 4 flips the sign even though 3 is positive.",
+      "clue": "Undo the subtraction first, then undo the multiplication."
+     },
+     "b": {
+      "d": 2,
+      "q": "Leo solves 2x + 3 ≤ 11. How should he show the answer on a number line?",
+      "opts": [
+       "Closed circle at 4, line going left",
+       "Open circle at 4, line going left",
+       "Closed circle at 4, line going right",
+       "Closed circle at 7, line going left"
+      ],
+      "why": "Subtract 3: 2x ≤ 8. Divide by 2: x ≤ 4. The sign ≤ includes 4, so the circle is closed, and values smaller than 4 go left. An open circle would leave 4 out.",
+      "clue": "Does the sign include the end value, and which way are smaller numbers?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "x > 4",
+       "also_right": []
+      },
+      "b": {
+       "best": "Closed circle at 4, line going left",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "level",
+        "detail": "Question b's inequality (2x + 3 ≤ 11) solves to x ≤ 4, the same answer as the card's worked example (closed circle at 4, line going left). A student can pick the right option by recalling the example rather than solving."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts, answers and explanations are all correct. The one concern is that question b has the same answer as the card's worked example, so students can answer it from memory; consider changing the numbers so the answer differs."
+     },
+     "flags": [
+      "Question b, level: Question b's inequality (2x + 3 ≤ 11) solves to x ≤ 4, the same answer as the card's worked example (closed circle at 4, line going left). A student can pick the right option by recalling the example rather than solving."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Solving one-variable inequalities",
+    "card": [
+     "An inequality uses <, >, ≤ or ≥. Solve it like an equation by doing the same thing to both sides.",
+     "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So −2x < 6 gives x > −3.",
+     "The answer is a range of values, such as x > 3. On a number line, an open circle means the end value is not included (< or >), and a closed circle means it is included (≤ or ≥).",
+     "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+    ],
+    "remember": "Flip the sign if you multiply or divide by a negative. A closed circle includes the end value, an open one does not.",
+    "a": {
+     "q": "What is the solution of 3x − 2 > 10?",
+     "opts": [
+      "x > 4",
+      "x > 8/3",
+      "x > 12",
+      "x < 4"
+     ],
+     "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 12 comes from forgetting to divide by 3, x > 8/3 from subtracting 2 instead of adding it, and x < 4 flips the sign even though 3 is positive.",
+     "clue": "Undo the subtraction first, then undo the multiplication."
+    },
+    "b": {
+     "d": 2,
+     "q": "Nadia solves 4x + 5 < 17. How should she draw the answer on a number line?",
+     "opts": [
+      "Open circle at 3, line going left",
+      "Closed circle at 3, line going left",
+      "Open circle at 3, line going right",
+      "Open circle at 5.5, line going left"
+     ],
+     "why": "Subtract 5: 4x < 12. Divide by 4: x < 3. The sign < leaves 3 out, so the circle is open, and values smaller than 3 go left. A closed circle would include 3, and 5.5 comes from adding 5 instead of subtracting it.",
+     "clue": "Is the end value included, and which way are the smaller numbers?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "x > 4",
+     "also_right": []
+    },
+    "b": {
+     "best": "Open circle at 3, line going left",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Solving one-variable inequalities",
+  "card": [
+   "An inequality uses <, >, ≤ or ≥. Solve it like an equation by doing the same thing to both sides.",
+   "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So −2x < 6 gives x > −3.",
+   "The answer is a range of values, such as x > 3. On a number line, an open circle means the end value is not included (< or >), and a closed circle means it is included (≤ or ≥).",
+   "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+  ],
+  "remember": "Flip the sign if you multiply or divide by a negative. A closed circle includes the end value, an open one does not.",
+  "a": {
+   "q": "What is the solution of 3x − 2 > 10?",
+   "opts": [
+    "x > 4",
+    "x > 8/3",
+    "x > 12",
+    "x < 4"
+   ],
+   "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 12 comes from forgetting to divide by 3, x > 8/3 from subtracting 2 instead of adding it, and x < 4 flips the sign even though 3 is positive.",
+   "clue": "Undo the subtraction first, then undo the multiplication."
+  },
+  "b": {
+   "d": 2,
+   "q": "Nadia solves 4x + 5 < 17. How should she draw the answer on a number line?",
+   "opts": [
+    "Open circle at 3, line going left",
+    "Closed circle at 3, line going left",
+    "Open circle at 3, line going right",
+    "Open circle at 5.5, line going left"
+   ],
+   "why": "Subtract 5: 4x < 12. Divide by 4: x < 3. The sign < leaves 3 out, so the circle is open, and values smaller than 3 go left. A closed circle would include 3, and 5.5 comes from adding 5 instead of subtracting it.",
+   "clue": "Is the end value included, and which way are the smaller numbers?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x > 4",
+   "also_right": []
+  },
+  "b": {
+   "best": "Open circle at 3, line going left",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Solving one-variable inequalities",
+  "card": [
+   "An inequality uses <, >, ≤ or ≥. Solve it like an equation by doing the same thing to both sides.",
+   "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So −2x < 6 gives x > −3.",
+   "The answer is a range of values, such as x > 3. On a number line, an open circle means the end value is not included (< or >), and a closed circle means it is included (≤ or ≥).",
+   "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+  ],
+  "remember": "Flip the sign if you multiply or divide by a negative. A closed circle includes the end value, an open one does not.",
+  "a": {
+   "q": "What is the solution of 3x − 2 > 10?",
+   "opts": [
+    "x > 4",
+    "x > 8/3",
+    "x > 12",
+    "x < 4"
+   ],
+   "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 12 comes from forgetting to divide by 3, x > 8/3 from subtracting 2 instead of adding it, and x < 4 flips the sign even though 3 is positive.",
+   "clue": "Undo the subtraction first, then undo the multiplication."
+  },
+  "b": {
+   "d": 2,
+   "q": "Nadia solves 4x + 5 < 17. How should she draw the answer on a number line?",
+   "opts": [
+    "Open circle at 3, line going left",
+    "Closed circle at 3, line going left",
+    "Open circle at 3, line going right",
+    "Open circle at 5.5, line going left"
+   ],
+   "why": "Subtract 5: 4x < 12. Divide by 4: x < 3. The sign < leaves 3 out, so the circle is open, and values smaller than 3 go left. A closed circle would include 3, and 5.5 comes from adding 5 instead of subtracting it.",
+   "clue": "Is the end value included, and which way are the smaller numbers?"
+  }
+ },
+ "checked_by": "claude-code"
+}

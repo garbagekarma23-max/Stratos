@@ -1,0 +1,219 @@
+{
+ "id": "ecb-opportunity-cost",
+ "title": "Opportunity cost",
+ "brief": "a6d693b06de7",
+ "shortlist": [
+  [
+   "eco-opportunity-cost",
+   0.22
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:24Z new, match",
+  "2026-11-04T09:36:47Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:54Z write: done",
+  "2026-11-04T09:58:20Z check: flagged",
+  "2026-11-04T10:07:57Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00675,
+  "check": 0.01038,
+  "fix": 0.01429,
+  "recheck": 0.00836
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is written for Year 11 Victorian Economics and adds cost-benefit analysis and trade-off ideas beyond the Year 7 point, so changing it would mean a change of depth rather than small edits.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Opportunity cost",
+  "card": [
+   "Because of scarcity, people must choose. Choosing one thing means giving up others.",
+   "Opportunity cost is the next best choice you give up when you make a decision.",
+   "It is only the next best choice, not every choice given up. If you spend the afternoon riding your bike, and swimming was your second pick, the swim is the opportunity cost.",
+   "Opportunity cost is not always money. It can be time, effort or any other benefit you miss out on."
+  ],
+  "remember": "Opportunity cost is what you give up: the next best choice.",
+  "a": {
+   "q": "Jack has a free afternoon. He ranks his options: 1 football, 2 reading, 3 video games. He chooses football. What is his opportunity cost?",
+   "opts": [
+    "Reading",
+    "Video games",
+    "Reading and video games",
+    "The money he spent on football boots"
+   ],
+   "why": "Opportunity cost is the next best choice given up, which is Jack's second pick, reading. Video games are also given up, but they are not the next best option.",
+   "clue": "Which choice came second on his list?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mei's family has a spare block of land in Tasmania. They can grow potatoes, graze sheep or build a shed. They rank them in that order and choose potatoes. What is the opportunity cost?",
+   "opts": [
+    "Grazing sheep on the land",
+    "Building a shed on the land",
+    "Grazing sheep and building a shed",
+    "The seeds needed to plant the potatoes"
+   ],
+   "why": "The family gives up the next best use of the land, which is grazing sheep. The shed is also given up, but it was ranked last, so it is not the opportunity cost.",
+   "clue": "Find the option ranked just below the one chosen."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Reading",
+   "also_right": []
+  },
+  "b": {
+   "best": "Grazing sheep on the land",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Which choice came second on his list?' gives the answer away. A student can pick 'Reading' by reading the list without knowing that opportunity cost is the next best choice."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Find the option ranked just below the one chosen' points straight to grazing sheep. It turns the question into a list lookup rather than a test of the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line, questions and explanations are accurate, and each question has one clear right answer. Both clues as written give the answer away, so they should be reworded to prompt the idea without naming the position of the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Which choice came second on his list?' gives the answer away. A student can pick 'Reading' by reading the list without knowing that opportunity cost is the next best choice.",
+  "Question b, other: The clue 'Find the option ranked just below the one chosen' points straight to grazing sheep. It turns the question into a list lookup rather than a test of the idea."
+ ],
+ "proposal": {
+  "title": "Opportunity cost",
+  "card": [
+   "Because of scarcity, people must choose. Choosing one thing means giving up others.",
+   "Opportunity cost is the next best choice you give up when you make a decision.",
+   "It is only the next best choice, not every choice given up. If you spend the afternoon riding your bike, and swimming was your second pick, the swim is the opportunity cost.",
+   "Opportunity cost is not always money. It can be time, effort or any other benefit you miss out on."
+  ],
+  "remember": "Every choice has a cost: the best option you did not pick.",
+  "a": {
+   "q": "Jack has a free afternoon. He ranks his options: 1 football, 2 reading, 3 video games. He chooses football. What is his opportunity cost?",
+   "opts": [
+    "Reading a book",
+    "Playing video games",
+    "Reading and video games",
+    "Money spent on football boots"
+   ],
+   "why": "Opportunity cost is the next best choice given up, which is Jack's second pick, reading. Video games are also given up, but opportunity cost counts only the next best option, not every option.",
+   "clue": "He gives up two things. Does opportunity cost count both?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mei's family has a spare block of land in Tasmania. They can grow potatoes, graze sheep or build a shed. They rank them in that order and choose potatoes. What is the opportunity cost?",
+   "opts": [
+    "Grazing sheep on the land",
+    "Building a shed on the land",
+    "Grazing sheep and building a shed",
+    "The seeds needed to plant the potatoes"
+   ],
+   "why": "The family gives up the next best use of the land, which is grazing sheep. The shed is also given up, but opportunity cost is only the next best choice, not every choice given up.",
+   "clue": "Is the cost every use given up, or just one?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Reading a book",
+    "also_right": []
+   },
+   "b": {
+    "best": "Grazing sheep on the land",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Which choice came second on his list?' gives the answer away. A student can pick 'Reading' by reading the list without knowing that opportunity cost is the next best choice."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Find the option ranked just below the one chosen' points straight to grazing sheep. It turns the question into a list lookup rather than a test of the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Which choice came second on his list?' gives the answer away. A student can pick 'Reading' by reading the list without knowing that opportunity cost is the next best choice.",
+   "Question b, other: The clue 'Find the option ranked just below the one chosen' points straight to grazing sheep. It turns the question into a list lookup rather than a test of the idea."
+  ]
+ },
+ "final": {
+  "title": "Opportunity cost",
+  "card": [
+   "Because of scarcity, people must choose. Choosing one thing means giving up others.",
+   "Opportunity cost is the next best choice you give up when you make a decision.",
+   "It is only the next best choice, not every choice given up. If you spend the afternoon riding your bike, and swimming was your second pick, the swim is the opportunity cost.",
+   "Opportunity cost is not always money. It can be time, effort or any other benefit you miss out on."
+  ],
+  "remember": "Every choice has a cost: the best option you did not pick.",
+  "a": {
+   "q": "Jack has a free afternoon. He ranks his options: 1 football, 2 reading, 3 video games. He chooses football. What is his opportunity cost?",
+   "opts": [
+    "Reading a book",
+    "Playing video games",
+    "Reading and video games",
+    "Money spent on football boots"
+   ],
+   "why": "Opportunity cost is the next best choice given up, which is Jack's second pick, reading. Video games are also given up, but opportunity cost counts only the next best option, not every option.",
+   "clue": "He gives up two things. Does opportunity cost count both?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mei's family has a spare block of land in Tasmania. They can grow potatoes, graze sheep or build a shed. They rank them in that order and choose potatoes. What is the opportunity cost?",
+   "opts": [
+    "Grazing sheep on the land",
+    "Building a shed on the land",
+    "Grazing sheep and building a shed",
+    "The seeds needed to plant the potatoes"
+   ],
+   "why": "The family gives up the next best use of the land, which is grazing sheep. The shed is also given up, but opportunity cost is only the next best choice, not every choice given up.",
+   "clue": "Is the cost every use given up, or just one?"
+  }
+ },
+ "cleared_by": "recheck"
+}

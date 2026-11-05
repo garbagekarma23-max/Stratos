@@ -1,0 +1,345 @@
+{
+ "id": "sci-particle-theory-matter",
+ "title": "The particle theory of matter",
+ "brief": "afb746e69a5b",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:43Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:12Z write: done",
+  "2026-11-04T09:58:32Z check: flagged",
+  "2026-11-04T14:58:53Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b other)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00405,
+  "check": 0.00915,
+  "fix": 0.01294,
+  "recheck": 0.01116
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue 'Think about what lies between the particles' points straight at the only option about the gaps between particles, so a student could pick the right answer without knowing the idea.",
+ "rejected": {
+  "title": "The particle theory of matter",
+  "card": [
+   "All matter is made of tiny particles. Matter is anything that takes up space and has mass.",
+   "The particles are always moving. They never stop, even in a solid that looks still.",
+   "The particles attract each other. This pull holds them together.",
+   "There is space between the particles. The particles are the matter, and the gaps between them are empty."
+  ],
+  "remember": "Matter is made of tiny moving particles that attract each other and have space between them.",
+  "a": {
+   "q": "A block of wood looks completely still. What does the particle theory say about its particles?",
+   "opts": [
+    "They are always moving, though the block looks still",
+    "They are not moving, because the block is still",
+    "They are moving only when the block is heated",
+    "They are moving only when the block is touched"
+   ],
+   "why": "The theory says particles are always moving, so the particles in the block move even though it looks still. Saying they move only when heated is tempting, but the card says the movement never stops.",
+   "clue": "Look at what the card says about how long particles move."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mei says the water in a glass is one continuous piece with no gaps at all. Which idea from the particle theory shows she is wrong?",
+   "opts": [
+    "There is space between the particles of water",
+    "The particles of water have stopped moving",
+    "Water is not made of particles at all",
+    "The particles of water do not attract each other"
+   ],
+   "why": "The theory says there is space between the particles, so water is not one continuous piece with no gaps. The idea that the particles do not attract is wrong, because the theory says they pull on each other.",
+   "clue": "Think about what lies between the particles."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue 'Think about what lies between the particles' points straight at the only option about the gaps between particles, so a student could pick the right answer without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The particle theory of matter",
+     "card": [
+      "All matter is made of tiny particles. Matter is anything that takes up space and has mass.",
+      "The particles are always moving. They never stop, even in a solid that looks still.",
+      "The particles attract each other. This pull holds them together.",
+      "There is space between the particles. The particles are the matter, and the gaps between them are empty."
+     ],
+     "remember": "Matter is made of tiny moving particles that attract each other and have space between them.",
+     "a": {
+      "q": "A block of wood looks completely still. What does the particle theory say about its particles?",
+      "opts": [
+       "They are always moving, even though the block looks still",
+       "They are not moving, because the block is still",
+       "They are moving only when the block is heated",
+       "They are moving only when the block is touched"
+      ],
+      "why": "The theory says particles are always moving, so a block that looks still still has moving particles. Saying they move only when heated is tempting, but the card says the movement never stops.",
+      "clue": "Look at what the card says about how long particles move."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mei says a glass of water is solid all the way through, with no gaps. Which idea from the particle theory shows she is wrong?",
+      "opts": [
+       "There is space between the particles of water",
+       "The particles of water have stopped moving",
+       "Water is not made of particles at all",
+       "The particles of water do not attract each other"
+      ],
+      "why": "The theory says there is space between the particles, so water is not solid all the way through. The idea that particles do not attract is wrong, because the theory says they pull on each other.",
+      "clue": "Think about what lies between the particles."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "They are always moving, even though the block looks still",
+      "also_right": []
+     },
+     "b": {
+      "best": "There is space between the particles of water",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Mei calls water 'solid all the way through'. Water is a liquid, and solids, liquids and gases are taught in the next point, so the everyday sense of 'solid' (meaning 'no gaps') could confuse students. Something like 'made of one continuous piece with no gaps' would be clearer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. One minor wording issue: question b describes water as 'solid', which could confuse students who are about to learn states of matter."
+    },
+    "flags": [
+     "Question b, wording: Mei calls water 'solid all the way through'. Water is a liquid, and solids, liquids and gases are taught in the next point, so the everyday sense of 'solid' (meaning 'no gaps') could confuse students. Something like 'made of one continuous piece with no gaps' would be clearer."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The particle theory of matter",
+     "card": [
+      "All matter is made of tiny particles. Matter is anything that takes up space and has mass.",
+      "The particles are always moving. They never stop, even in a solid that looks still.",
+      "The particles attract each other. This pull holds them together.",
+      "There is space between the particles. The particles are the matter, and the gaps between them are empty."
+     ],
+     "remember": "Matter is made of tiny moving particles that attract each other and have space between them.",
+     "a": {
+      "q": "A block of wood looks completely still. What does the particle theory say about its particles?",
+      "opts": [
+       "They are always moving, though the block looks still",
+       "They are not moving, because the block is still",
+       "They are moving only when the block is heated",
+       "They are moving only when the block is touched"
+      ],
+      "why": "The theory says particles are always moving, so the particles in the block move even though it looks still. Saying they move only when heated is tempting, but the card says the movement never stops.",
+      "clue": "Look at what the card says about how long particles move."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mei says the water in a glass is one continuous piece with no gaps at all. Which idea from the particle theory shows she is wrong?",
+      "opts": [
+       "There is space between the particles of water",
+       "The particles of water have stopped moving",
+       "Water is not made of particles at all",
+       "The particles of water do not attract each other"
+      ],
+      "why": "The theory says there is space between the particles, so water is not one continuous piece with no gaps. The idea that the particles do not attract is wrong, because the theory says they pull on each other.",
+      "clue": "Think about what lies between the particles."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "They are always moving, though the block looks still",
+       "also_right": []
+      },
+      "b": {
+       "best": "There is space between the particles of water",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue 'Think about what lies between the particles' points straight at the only option about the gaps between particles, so a student could pick the right answer without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate for Year 7 and stay within this point. The only issue is that question b's clue points so directly at the answer that it gives it away."
+     },
+     "flags": [
+      "Question b, other: The clue 'Think about what lies between the particles' points straight at the only option about the gaps between particles, so a student could pick the right answer without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "The particle theory of matter",
+    "card": [
+     "All matter is made of tiny particles. Matter is anything that takes up space and has mass.",
+     "The particles are always moving. They never stop, even in a solid that looks still.",
+     "The particles attract each other. This pull holds them together.",
+     "There is space between the particles. The particles are the matter, and the gaps between them are empty."
+    ],
+    "remember": "Matter is made of tiny moving particles that attract each other and have space between them.",
+    "a": {
+     "q": "A steel spoon lies on a bench and does not move. What does the particle theory say about the particles in the spoon?",
+     "opts": [
+      "They keep moving, even though the spoon looks still",
+      "They are still, because the spoon is not moving at all",
+      "They start moving only when the spoon is heated up",
+      "They start moving only when someone picks up the spoon"
+     ],
+     "why": "The theory says particles are always moving, so the particles in the spoon move even though the spoon looks still. Saying they move only when heated is tempting, but the card says the movement never stops.",
+     "clue": "Look at what the card says about how long particles move."
+    },
+    "b": {
+     "d": 2,
+     "q": "Sam says a drop of water is one smooth piece, with nothing at all between its parts. Which idea from the particle theory shows he is wrong?",
+     "opts": [
+      "There is space between the particles of water",
+      "The particles of water have stopped moving",
+      "Water is not made of particles at all",
+      "The particles of water do not attract each other"
+     ],
+     "why": "The theory says there is space between the particles, so water is not one smooth piece with nothing between its parts. The idea that the particles do not attract is wrong, because the theory says they pull on each other.",
+     "clue": "Sam's claim is about how the water is built, not how it moves."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "They keep moving, even though the spoon looks still",
+     "also_right": []
+    },
+    "b": {
+     "best": "There is space between the particles of water",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The particle theory of matter",
+  "card": [
+   "All matter is made of tiny particles. Matter is anything that takes up space and has mass.",
+   "The particles are always moving. They never stop, even in a solid that looks still.",
+   "The particles attract each other. This pull holds them together.",
+   "There is space between the particles. The particles are the matter, and the gaps between them are empty."
+  ],
+  "remember": "Matter is made of tiny moving particles that attract each other and have space between them.",
+  "a": {
+   "q": "A steel spoon lies on a bench and does not move. What does the particle theory say about the particles in the spoon?",
+   "opts": [
+    "They keep moving, even though the spoon looks still",
+    "They are still, because the spoon is not moving at all",
+    "They start moving only when the spoon is heated up",
+    "They start moving only when someone picks up the spoon"
+   ],
+   "why": "The theory says particles are always moving, so the particles in the spoon move even though the spoon looks still. Saying they move only when heated is tempting, but the card says the movement never stops.",
+   "clue": "Look at what the card says about how long particles move."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam says a drop of water is one smooth piece, with nothing at all between its parts. Which idea from the particle theory shows he is wrong?",
+   "opts": [
+    "There is space between the particles of water",
+    "The particles of water have stopped moving",
+    "Water is not made of particles at all",
+    "The particles of water do not attract each other"
+   ],
+   "why": "The theory says there is space between the particles, so water is not one smooth piece with nothing between its parts. The idea that the particles do not attract is wrong, because the theory says they pull on each other.",
+   "clue": "Sam's claim is about how the water is built, not how it moves."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They keep moving, even though the spoon looks still",
+   "also_right": []
+  },
+  "b": {
+   "best": "There is space between the particles of water",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The particle theory of matter",
+  "card": [
+   "All matter is made of tiny particles. Matter is anything that takes up space and has mass.",
+   "The particles are always moving. They never stop, even in a solid that looks still.",
+   "The particles attract each other. This pull holds them together.",
+   "There is space between the particles. The particles are the matter, and the gaps between them are empty."
+  ],
+  "remember": "Matter is made of tiny moving particles that attract each other and have space between them.",
+  "a": {
+   "q": "A steel spoon lies on a bench and does not move. What does the particle theory say about the particles in the spoon?",
+   "opts": [
+    "They keep moving, even though the spoon looks still",
+    "They are still, because the spoon is not moving at all",
+    "They start moving only when the spoon is heated up",
+    "They start moving only when someone picks up the spoon"
+   ],
+   "why": "The theory says particles are always moving, so the particles in the spoon move even though the spoon looks still. Saying they move only when heated is tempting, but the card says the movement never stops.",
+   "clue": "Look at what the card says about how long particles move."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam says a drop of water is one smooth piece, with nothing at all between its parts. Which idea from the particle theory shows he is wrong?",
+   "opts": [
+    "There is space between the particles of water",
+    "The particles of water have stopped moving",
+    "Water is not made of particles at all",
+    "The particles of water do not attract each other"
+   ],
+   "why": "The theory says there is space between the particles, so water is not one smooth piece with nothing between its parts. The idea that the particles do not attract is wrong, because the theory says they pull on each other.",
+   "clue": "Sam's claim is about how the water is built, not how it moves."
+  }
+ },
+ "checked_by": "claude-code"
+}

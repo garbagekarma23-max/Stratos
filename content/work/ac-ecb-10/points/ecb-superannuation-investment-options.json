@@ -1,0 +1,241 @@
+{
+ "id": "ecb-superannuation-investment-options",
+ "title": "Superannuation investment options",
+ "brief": "a57a370b2bc8",
+ "shortlist": [
+  [
+   "bus-goal-setting-decision-making",
+   0.231
+  ],
+  [
+   "eco-opportunity-cost",
+   0.228
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: done",
+  "2026-11-04T09:58:19Z check: flagged",
+  "2026-11-04T10:07:56Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00717,
+  "check": 0.01188,
+  "fix": 0.0192,
+  "recheck": 0.00746
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point covers superannuation investment options or the link between risk, time horizon and fund choice; goal setting and opportunity cost are different ideas, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Superannuation investment options",
+  "card": [
+   "A super fund invests members' money. Most funds let members choose between investment options, which range from safer to riskier.",
+   [
+    "Conservative option",
+    "holds mostly safer investments, such as cash. Its value rises and falls less, but it usually earns lower returns over time."
+   ],
+   [
+    "Growth option",
+    "holds mostly shares and property. Its value can fall sharply in a bad year, but it usually earns higher returns over a long time."
+   ],
+   "Younger workers often choose growth options. They are many decades from retirement, so they have time to recover from falls. Older workers have less time, so many choose safer options."
+  ],
+  "remember": "Higher risk can mean higher returns over time, and a longer wait makes risk easier to bear.",
+  "a": {
+   "q": "Which description best fits a growth super option?",
+   "opts": [
+    "Mostly shares and property, with bigger ups and downs",
+    "Mostly cash, with small ups and downs and steady returns",
+    "Guaranteed to rise in value every year it is held",
+    "Only open to members who are close to retirement"
+   ],
+   "why": "Growth options hold mostly shares and property, so their value can swing widely. The cash option describes a conservative choice, which moves less. No option is guaranteed to rise every year.",
+   "clue": "Growth options accept more risk for the chance of more return."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam is 19 and starts his first job in Perth. Why might a growth option suit him better than it would suit his 63 year old uncle?",
+   "opts": [
+    "Liam has decades to recover if the value falls",
+    "Liam's option is guaranteed not to fall in value",
+    "Liam's uncle is not allowed to choose growth options",
+    "Liam's fund pays no fees on growth options"
+   ],
+   "why": "Liam will not need the money for a very long time, so he can wait out falls in value. Growth options can still fall, and nothing in the card says older members are banned from them. They simply have less time to recover.",
+   "clue": "Think about how long each person has until retirement."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Mostly shares and property, with bigger ups and downs",
+   "also_right": []
+  },
+  "b": {
+   "best": "Liam has decades to recover if the value falls",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The wrong options use absolute words ('Guaranteed', 'Only'). The right option is the only hedged, plausible one, so a test-wise student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "All three wrong options are absolute claims ('no fees', 'not allowed', 'guaranteed not to fall'). The right option stands out as the only reasonable one and could be picked without understanding the time-horizon idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts, card, remember line and explanations are accurate and stay within this point. The only weakness is that both questions use absolute-word distractors ('guaranteed', 'only', 'not allowed', 'no fees'), which make the right answer easy to spot by elimination."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The wrong options use absolute words ('Guaranteed', 'Only'). The right option is the only hedged, plausible one, so a test-wise student could pick it without knowing the idea.",
+  "Question b, wording: All three wrong options are absolute claims ('no fees', 'not allowed', 'guaranteed not to fall'). The right option stands out as the only reasonable one and could be picked without understanding the time-horizon idea."
+ ],
+ "proposal": {
+  "title": "Superannuation investment options",
+  "card": [
+   "A super fund invests members' money. Most funds let members choose between investment options, which range from safer to riskier.",
+   [
+    "Conservative option",
+    "holds mostly safer investments, such as cash. Its value rises and falls less, but it usually earns lower returns over time."
+   ],
+   [
+    "Growth option",
+    "holds mostly shares and property. Its value can fall sharply in a bad year, and over a few years it may earn less. Over a long time it usually earns more."
+   ],
+   "Younger workers often choose growth options. They are many decades from retirement, so they have time to recover from falls. Older workers have less time, so many choose safer options."
+  ],
+  "remember": "Higher risk can mean higher returns over time, and a longer wait makes risk easier to bear.",
+  "a": {
+   "q": "Which description best fits a growth super option?",
+   "opts": [
+    "Mostly shares and property, with bigger ups and downs",
+    "Mostly shares and property, with smaller ups and downs",
+    "Mostly cash, with smaller ups and downs",
+    "Mostly cash, with bigger ups and downs"
+   ],
+   "why": "Growth options hold mostly shares and property, and their value can swing widely, even falling sharply in a bad year. Shares and property with small swings mixes up the two options: smaller ups and downs belong to the conservative option.",
+   "clue": "Growth options accept more risk for the chance of more return."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam is 19 and starts his first job in Perth. Why might a growth option suit him better than his 63-year-old uncle?",
+   "opts": [
+    "He has decades to recover if its value falls",
+    "He will need his super sooner than his uncle will",
+    "Growth options rise and fall less than safer ones",
+    "Growth options usually earn more over a short time"
+   ],
+   "why": "Liam will not need his super for decades, so he can wait out falls in value and gain from higher returns over a long time. Growth options do not reliably earn more over a short time: they can fall sharply in a bad year, which is why time to recover matters.",
+   "clue": "Think about how long each person has until retirement."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Mostly shares and property, with bigger ups and downs",
+    "also_right": []
+   },
+   "b": {
+    "best": "He has decades to recover if its value falls",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The wrong options use absolute words ('Guaranteed', 'Only'). The right option is the only hedged, plausible one, so a test-wise student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "All three wrong options are absolute claims ('no fees', 'not allowed', 'guaranteed not to fall'). The right option stands out as the only reasonable one and could be picked without understanding the time-horizon idea."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The wrong options use absolute words ('Guaranteed', 'Only'). The right option is the only hedged, plausible one, so a test-wise student could pick it without knowing the idea.",
+   "Question b, wording: All three wrong options are absolute claims ('no fees', 'not allowed', 'guaranteed not to fall'). The right option stands out as the only reasonable one and could be picked without understanding the time-horizon idea."
+  ]
+ },
+ "final": {
+  "title": "Superannuation investment options",
+  "card": [
+   "A super fund invests members' money. Most funds let members choose between investment options, which range from safer to riskier.",
+   [
+    "Conservative option",
+    "holds mostly safer investments, such as cash. Its value rises and falls less, but it usually earns lower returns over time."
+   ],
+   [
+    "Growth option",
+    "holds mostly shares and property. Its value can fall sharply in a bad year, and over a few years it may earn less. Over a long time it usually earns more."
+   ],
+   "Younger workers often choose growth options. They are many decades from retirement, so they have time to recover from falls. Older workers have less time, so many choose safer options."
+  ],
+  "remember": "Higher risk can mean higher returns over time, and a longer wait makes risk easier to bear.",
+  "a": {
+   "q": "Which description best fits a growth super option?",
+   "opts": [
+    "Mostly shares and property, with bigger ups and downs",
+    "Mostly shares and property, with smaller ups and downs",
+    "Mostly cash, with smaller ups and downs",
+    "Mostly cash, with bigger ups and downs"
+   ],
+   "why": "Growth options hold mostly shares and property, and their value can swing widely, even falling sharply in a bad year. Shares and property with small swings mixes up the two options: smaller ups and downs belong to the conservative option.",
+   "clue": "Growth options accept more risk for the chance of more return."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam is 19 and starts his first job in Perth. Why might a growth option suit him better than his 63-year-old uncle?",
+   "opts": [
+    "He has decades to recover if its value falls",
+    "He will need his super sooner than his uncle will",
+    "Growth options rise and fall less than safer ones",
+    "Growth options usually earn more over a short time"
+   ],
+   "why": "Liam will not need his super for decades, so he can wait out falls in value and gain from higher returns over a long time. Growth options do not reliably earn more over a short time: they can fall sharply in a bad year, which is why time to recover matters.",
+   "clue": "Think about how long each person has until retirement."
+  }
+ },
+ "cleared_by": "recheck"
+}

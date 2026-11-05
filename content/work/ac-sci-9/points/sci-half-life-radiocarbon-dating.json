@@ -1,0 +1,280 @@
+{
+ "id": "sci-half-life-radiocarbon-dating",
+ "title": "Half-life and radiocarbon dating",
+ "brief": "0c2647d42022",
+ "shortlist": [
+  [
+   "phys-half-life",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, match",
+  "2026-11-04T09:36:59Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:14Z write: done",
+  "2026-11-04T09:58:33Z check: for review (first-nations)",
+  "2026-11-05T06:15:38Z review: rejected, to be written again",
+  "2026-11-05T06:26:28Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T06:32:24Z claude-code check: answered by a separate subagent",
+  "2026-11-05T06:32:24Z check: for review (first-nations)",
+  "2026-11-05T07:04:15Z review: rejected, to be written again",
+  "2026-11-05T07:10:02Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T07:18:39Z claude-code check: answered by a separate subagent",
+  "2026-11-05T07:18:39Z check: for review (first-nations)",
+  "2026-11-05T12:51:43Z review: approved as written"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00573,
+  "check": 0.00775
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's Half-life card covers only the concept at Year 12 depth, while the new point needs a Year 9 treatment that adds carbon-14 dating of once-living things, which would require a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Half-life and radiocarbon dating",
+  "card": [
+   "Half-life is the time it takes for half of the unstable atoms in a sample to decay. After one half-life, half remain. After two, a quarter remain.",
+   "Living things take in carbon, including a small share of unstable carbon-14, while they are alive. When they die, they stop taking it in.",
+   "Carbon-14 has a half-life of about 5,700 years. Measuring how much is left in charcoal, bone or shell shows how long ago the living thing died.",
+   "Radiocarbon dating has dated many First Peoples' campsites and burials in Australia. It works back to about 50,000 years, so older sites need other methods."
+  ],
+  "remember": "Each half-life halves the unstable atoms left, so less carbon-14 means an older sample.",
+  "a": {
+   "q": "A sample starts with 800 unstable atoms, and its half-life is 2 hours. How many unstable atoms are left after 6 hours?",
+   "opts": [
+    "100 atoms",
+    "200 atoms",
+    "400 atoms",
+    "No atoms"
+   ],
+   "why": "Six hours is three half-lives, so 800 halves to 400, then 200, then 100. No atoms would mean the same number decays each time, but each half-life halves what is left.",
+   "clue": "Count the half-lives in 6 hours."
+  },
+  "b": {
+   "d": 3,
+   "q": "Charcoal from an old campsite has a quarter of the carbon-14 that living wood has. About how long ago did the tree it came from die?",
+   "opts": [
+    "About 11,400 years ago",
+    "About 5,700 years ago",
+    "About 22,800 years ago",
+    "About 1,400 years ago"
+   ],
+   "why": "A quarter left means two half-lives have passed, and 2 × 5,700 = 11,400 years. About 5,700 years would leave half, not a quarter.",
+   "clue": "How many halvings turn the whole amount into a quarter?"
+  }
+ },
+ "rewrites": 2,
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:26:28Z",
+   "step": "write",
+   "version": {
+    "title": "Half-life and radiocarbon dating",
+    "card": [
+     "Half-life is the time it takes for half of the unstable atoms in a sample to decay. After one half-life, half remain. After two, a quarter remain.",
+     "Living things take in carbon, including a small share of unstable carbon-14, while they are alive. When they die, they stop taking it in.",
+     "Carbon-14 has a half-life of about 5,700 years. Measuring how much is left in charcoal, bone or shell shows how long ago the living thing died.",
+     "Radiocarbon dating has dated many First Peoples' campsites and burials in Australia. It works back to about 50,000 years, so older sites need other methods."
+    ],
+    "remember": "Each half-life halves the unstable atoms left, so less carbon-14 means an older sample.",
+    "a": {
+     "q": "A sample starts with 800 unstable atoms, and its half-life is 2 hours. How many unstable atoms are left after 6 hours?",
+     "opts": [
+      "100 atoms",
+      "200 atoms",
+      "400 atoms",
+      "No atoms"
+     ],
+     "why": "Six hours is three half-lives, so 800 halves to 400, then 200, then 100. No atoms would mean the same number decays each time, but each half-life halves what is left.",
+     "clue": "Count the half-lives in 6 hours."
+    },
+    "b": {
+     "d": 3,
+     "q": "Charcoal from an old campsite has a quarter of the carbon-14 that living wood has. About how long ago did the tree it came from die?",
+     "opts": [
+      "About 11,400 years ago",
+      "About 5,700 years ago",
+      "About 22,800 years ago",
+      "About 1,400 years ago"
+     ],
+     "why": "A quarter left means two half-lives have passed, and 2 × 5,700 = 11,400 years. About 5,700 years would leave half, not a quarter.",
+     "clue": "How many halvings turn the whole amount into a quarter?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T06:32:24Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "100 atoms",
+     "also_right": []
+    },
+    "b": {
+     "best": "About 11,400 years ago",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "first-nations",
+    "summary": "No problems found. The point mentions First Peoples' campsites and burials, so it is marked as a First Nations topic for the owner to see."
+   }
+  },
+  {
+   "at": "2026-11-05T07:10:02Z",
+   "step": "write",
+   "version": {
+    "title": "Half-life and radiocarbon dating",
+    "card": [
+     "Half-life is the time it takes for half of the unstable atoms in a sample to decay. After one half-life, half are left. After two, a quarter are left.",
+     "Living things take in carbon, including a tiny share of unstable carbon-14, while they are alive. When they die, they take in no more, and their carbon-14 slowly decays.",
+     "Carbon-14 has a half-life of about 5,700 years. Comparing the carbon-14 left in charcoal, bone or shell with a living sample shows how long ago it died.",
+     "Radiocarbon dating has dated many First Peoples' campsites and burials in Australia. It works up to about 50,000 years ago, so older sites need other dating methods."
+    ],
+    "remember": "Less carbon-14 left means more half-lives have passed, so the sample is older.",
+    "a": {
+     "q": "A sample has 1,200 unstable atoms, and its half-life is 3 days. How many unstable atoms are left after 9 days?",
+     "opts": [
+      "150 atoms",
+      "300 atoms",
+      "400 atoms",
+      "600 atoms"
+     ],
+     "why": "Nine days is three half-lives: 1,200 halves to 600, then 300, then 150. 400 comes from dividing by 3, but each half-life halves what is left.",
+     "clue": "Halve it once for each half-life."
+    },
+    "b": {
+     "d": 3,
+     "q": "A shell from an old campsite has one eighth of the carbon-14 that a living shell has. About how long ago did it die?",
+     "opts": [
+      "About 17,100 years ago",
+      "About 11,400 years ago",
+      "About 45,600 years ago",
+      "About 5,700 years ago"
+     ],
+     "why": "One eighth left means three half-lives: a half, a quarter, then an eighth. 3 × 5,700 = 17,100 years. 45,600 comes from multiplying by 8, but each half-life halves what is left, so an eighth takes only three.",
+     "clue": "How many halvings turn the whole into an eighth?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T07:18:39Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "150 atoms",
+     "also_right": []
+    },
+    "b": {
+     "best": "About 17,100 years ago",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "first-nations",
+    "summary": "No problems found. The point mentions dating First Peoples' campsites and burials in Australia, so it is marked as a First Nations topic for review."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Half-life and radiocarbon dating",
+  "card": [
+   "Half-life is the time it takes for half of the unstable atoms in a sample to decay. After one half-life, half are left. After two, a quarter are left.",
+   "Living things take in carbon, including a tiny share of unstable carbon-14, while they are alive. When they die, they take in no more, and their carbon-14 slowly decays.",
+   "Carbon-14 has a half-life of about 5,700 years. Comparing the carbon-14 left in charcoal, bone or shell with a living sample shows how long ago it died.",
+   "Radiocarbon dating has dated many First Peoples' campsites and burials in Australia. It works up to about 50,000 years ago, so older sites need other dating methods."
+  ],
+  "remember": "Less carbon-14 left means more half-lives have passed, so the sample is older.",
+  "a": {
+   "q": "A sample has 1,200 unstable atoms, and its half-life is 3 days. How many unstable atoms are left after 9 days?",
+   "opts": [
+    "150 atoms",
+    "300 atoms",
+    "400 atoms",
+    "600 atoms"
+   ],
+   "why": "Nine days is three half-lives: 1,200 halves to 600, then 300, then 150. 400 comes from dividing by 3, but each half-life halves what is left.",
+   "clue": "Halve it once for each half-life."
+  },
+  "b": {
+   "d": 3,
+   "q": "A shell from an old campsite has one eighth of the carbon-14 that a living shell has. About how long ago did it die?",
+   "opts": [
+    "About 17,100 years ago",
+    "About 11,400 years ago",
+    "About 45,600 years ago",
+    "About 5,700 years ago"
+   ],
+   "why": "One eighth left means three half-lives: a half, a quarter, then an eighth. 3 × 5,700 = 17,100 years. 45,600 comes from multiplying by 8, but each half-life halves what is left, so an eighth takes only three.",
+   "clue": "How many halvings turn the whole into an eighth?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "150 atoms",
+   "also_right": []
+  },
+  "b": {
+   "best": "About 17,100 years ago",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "No problems found. The point mentions dating First Peoples' campsites and burials in Australia, so it is marked as a First Nations topic for review."
+ },
+ "sensitive": "first-nations",
+ "flags": [],
+ "checked_by": "claude-code",
+ "final": {
+  "title": "Half-life and radiocarbon dating",
+  "card": [
+   "Half-life is the time it takes for half of the unstable atoms in a sample to decay. After one half-life, half are left. After two, a quarter are left.",
+   "Living things take in carbon, including a tiny share of unstable carbon-14, while they are alive. When they die, they take in no more, and their carbon-14 slowly decays.",
+   "Carbon-14 has a half-life of about 5,700 years. Comparing the carbon-14 left in charcoal, bone or shell with a living sample shows how long ago it died.",
+   "Radiocarbon dating has dated many First Peoples' campsites and burials in Australia. It works up to about 50,000 years ago, so older sites need other dating methods."
+  ],
+  "remember": "Less carbon-14 left means more half-lives have passed, so the sample is older.",
+  "a": {
+   "q": "A sample has 1,200 unstable atoms, and its half-life is 3 days. How many unstable atoms are left after 9 days?",
+   "opts": [
+    "150 atoms",
+    "300 atoms",
+    "400 atoms",
+    "600 atoms"
+   ],
+   "why": "Nine days is three half-lives: 1,200 halves to 600, then 300, then 150. 400 comes from dividing by 3, but each half-life halves what is left.",
+   "clue": "Halve it once for each half-life."
+  },
+  "b": {
+   "d": 3,
+   "q": "A shell from an old campsite has one eighth of the carbon-14 that a living shell has. About how long ago did it die?",
+   "opts": [
+    "About 17,100 years ago",
+    "About 11,400 years ago",
+    "About 45,600 years ago",
+    "About 5,700 years ago"
+   ],
+   "why": "One eighth left means three half-lives: a half, a quarter, then an eighth. 3 × 5,700 = 17,100 years. 45,600 comes from multiplying by 8, but each half-life halves what is left, so an eighth takes only three.",
+   "clue": "How many halvings turn the whole into an eighth?"
+  }
+ },
+ "cleared_by": "owner"
+}

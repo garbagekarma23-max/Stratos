@@ -1,0 +1,233 @@
+{
+ "id": "mat-independent-dependent-events",
+ "title": "Independent and dependent events",
+ "brief": "bb31ae9aff45",
+ "shortlist": [
+  [
+   "mat-independent-events",
+   0.476
+  ],
+  [
+   "mat-independent-events-2",
+   0.476
+  ],
+  [
+   "mat-linear-dependence",
+   0.231
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00576,
+  "check": 0.01009,
+  "fix": 0.02043,
+  "recheck": 0.00794
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers only independent events at Year 11 depth, while the new point also needs dependent events such as drawing cards without replacement, which is a different idea that the card does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Independent and dependent events",
+  "card": [
+   [
+    "Independent",
+    "one event does not change the chance of the other. Two coin tosses are independent, because the first toss has no effect on the second."
+   ],
+   [
+    "Dependent",
+    "one event does change the chance of the other. Drawing cards without replacement is dependent, because the pack changes after each draw."
+   ],
+   "To test, ask: does knowing the first result change the chance of the second? If it does, the events are dependent.",
+   "Example: a card is drawn and put back, then another is drawn. The pack is the same each time, so the draws are independent."
+  ],
+  "remember": "Independent: the first result does not change the second chance. Dependent: it does.",
+  "a": {
+   "q": "A spinner is spun twice. Are the two spins independent or dependent?",
+   "opts": [
+    "Independent, as the first spin does not change the second",
+    "Dependent, as the first spin changes the second",
+    "Dependent, as both spins use the same spinner",
+    "Independent, as the two results must be different"
+   ],
+   "why": "The spinner is unchanged after the first spin, so the second chance is the same. Using the same spinner does not make the spins dependent.",
+   "clue": "Does the first spin change the spinner?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A jar has 6 red and 4 blue marbles. Two are drawn, one after the other. In which case are the draws independent?",
+   "opts": [
+    "The first marble is put back before the second draw",
+    "The first marble is kept out of the jar",
+    "The first marble is red and is kept out",
+    "The first marble is blue and is kept out"
+   ],
+   "why": "Putting the marble back restores the jar, so the second chance does not change. If the marble is kept out, the counts change, so the draws are dependent.",
+   "clue": "Is the jar the same for both draws?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Independent, as the first spin does not change the second",
+   "also_right": []
+  },
+  "b": {
+   "best": "The first marble is put back before the second draw",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The three wrong options are all variations of 'kept out', and the right option is the only different one and the longest. A student could pick it as the odd one out without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. In question b, the three wrong options all say the marble is 'kept out', so the right option stands out as the odd one."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The three wrong options are all variations of 'kept out', and the right option is the only different one and the longest. A student could pick it as the odd one out without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Independent and dependent events",
+  "card": [
+   [
+    "Independent",
+    "one event does not change the chance of the other. Two coin tosses are independent, because the first toss has no effect on the second."
+   ],
+   [
+    "Dependent",
+    "one event does change the chance of the other. Drawing cards without replacement is dependent, because the pack changes after each draw."
+   ],
+   "To test, ask: does knowing the first result change the chance of the second? If it does, the events are dependent.",
+   "Example: a card is drawn and put back, then another is drawn. The pack is the same each time, so the draws are independent."
+  ],
+  "remember": "Independent: the first result does not change the second chance. Dependent: it does.",
+  "a": {
+   "q": "A spinner is spun twice. Are the two spins independent or dependent?",
+   "opts": [
+    "Independent, as the first spin does not change the second",
+    "Dependent, as the first spin changes the second",
+    "Dependent, as both spins use the same spinner",
+    "Independent, as the two results must be different"
+   ],
+   "why": "The spinner is unchanged after the first spin, so the second chance is the same. Using the same spinner does not make the spins dependent.",
+   "clue": "Does the first spin change the spinner?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which pair of events is independent?",
+   "opts": [
+    "Rolling a die, then rolling the same die again",
+    "Drawing a card, keeping it out, then drawing again",
+    "Taking two lollies from a bag and eating the first",
+    "Choosing a captain, then a vice captain from 20 students"
+   ],
+   "why": "The die is unchanged after the first roll, so the second roll has the same chances. In the other cases the first choice is removed, so the chances change: the captain cannot also be picked as vice captain.",
+   "clue": "After the first event, is anything taken away?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Independent, as the first spin does not change the second",
+    "also_right": []
+   },
+   "b": {
+    "best": "Rolling a die, then rolling the same die again",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The three wrong options are all variations of 'kept out', and the right option is the only different one and the longest. A student could pick it as the odd one out without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The three wrong options are all variations of 'kept out', and the right option is the only different one and the longest. A student could pick it as the odd one out without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Independent and dependent events",
+  "card": [
+   [
+    "Independent",
+    "one event does not change the chance of the other. Two coin tosses are independent, because the first toss has no effect on the second."
+   ],
+   [
+    "Dependent",
+    "one event does change the chance of the other. Drawing cards without replacement is dependent, because the pack changes after each draw."
+   ],
+   "To test, ask: does knowing the first result change the chance of the second? If it does, the events are dependent.",
+   "Example: a card is drawn and put back, then another is drawn. The pack is the same each time, so the draws are independent."
+  ],
+  "remember": "Independent: the first result does not change the second chance. Dependent: it does.",
+  "a": {
+   "q": "A spinner is spun twice. Are the two spins independent or dependent?",
+   "opts": [
+    "Independent, as the first spin does not change the second",
+    "Dependent, as the first spin changes the second",
+    "Dependent, as both spins use the same spinner",
+    "Independent, as the two results must be different"
+   ],
+   "why": "The spinner is unchanged after the first spin, so the second chance is the same. Using the same spinner does not make the spins dependent.",
+   "clue": "Does the first spin change the spinner?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which pair of events is independent?",
+   "opts": [
+    "Rolling a die, then rolling the same die again",
+    "Drawing a card, keeping it out, then drawing again",
+    "Taking two lollies from a bag and eating the first",
+    "Choosing a captain, then a vice captain from 20 students"
+   ],
+   "why": "The die is unchanged after the first roll, so the second roll has the same chances. In the other cases the first choice is removed, so the chances change: the captain cannot also be picked as vice captain.",
+   "clue": "After the first event, is anything taken away?"
+  }
+ },
+ "cleared_by": "recheck"
+}

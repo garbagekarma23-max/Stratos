@@ -1,0 +1,220 @@
+{
+ "id": "geo-water-cycle-2",
+ "title": "The water cycle",
+ "brief": "7843df9e6b59",
+ "shortlist": [
+  [
+   "geo-water-cycle",
+   0.22
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:00Z write: done",
+  "2026-11-04T09:58:25Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-04T17:58:51Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00578,
+  "check": 0.01118,
+  "fix": 0.01376
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is written for Year 11 NSW, with stores, infiltration and transpiration, which is a clearly greater depth than the Year 7 brief, and its questions use a Penrith example, so a small adaptation would not be enough.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The water cycle",
+  "card": [
+   [
+    "Evaporation",
+    "The sun heats water in seas, lakes and rivers. Some of it turns into water vapour, a gas, and rises into the air."
+   ],
+   [
+    "Condensation",
+    "High in the air, the vapour cools and turns back into tiny drops of water. The drops gather to form clouds."
+   ],
+   [
+    "Precipitation",
+    "When cloud drops grow heavy, they fall as rain, hail or snow."
+   ],
+   [
+    "Runoff and infiltration",
+    "Some water runs over the land into rivers and then the sea. Some soaks into the ground. The cycle then starts again."
+   ]
+  ],
+  "remember": "Water rises as vapour, forms clouds, falls as precipitation, then returns to the sea over or under the land.",
+  "a": {
+   "q": "Water vapour rises, cools and turns into tiny drops that form a cloud. What is this step called?",
+   "opts": [
+    "Condensation",
+    "Evaporation",
+    "Precipitation",
+    "Runoff"
+   ],
+   "why": "Condensation is when vapour cools and becomes liquid drops. Evaporation is the opposite step, where liquid water heats up and becomes vapour.",
+   "clue": "Think of drops forming on a cold glass."
+  },
+  "b": {
+   "d": 2,
+   "q": "After a storm in Darwin, water flows down a street drain and into a creek that leads to the sea. Which step of the water cycle is this?",
+   "opts": [
+    "Runoff over the land",
+    "Evaporation from the sea",
+    "Condensation into clouds",
+    "Precipitation from clouds"
+   ],
+   "why": "Water moving across the land surface towards a creek and the sea is runoff. The rain that fell in the storm was precipitation, but the flowing along the street is the step that came after it.",
+   "clue": "The rain has already fallen. Where does it go next?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Condensation",
+   "also_right": []
+  },
+  "b": {
+   "best": "Runoff over the land",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says water 'returns to the sea over or under the land', but the card only says some water 'soaks into the ground'. It never says that this underground water flows back to the sea. The remember line adds a claim the card does not teach. It also implies all water ends up back in the sea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with one clearly right answer each. The only issue is that the remember line says soaked-in water returns to the sea underground, which the card does not teach. Add that to the card's infiltration line or soften the remember line."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says water 'returns to the sea over or under the land', but the card only says some water 'soaks into the ground'. It never says that this underground water flows back to the sea. The remember line adds a claim the card does not teach. It also implies all water ends up back in the sea."
+ ],
+ "proposal": {
+  "title": "The water cycle",
+  "card": [
+   [
+    "Evaporation",
+    "The sun heats water in seas, lakes and rivers. Some of it turns into water vapour, a gas, and rises into the air."
+   ],
+   [
+    "Condensation",
+    "High in the air, the vapour cools and turns back into tiny drops of water. The drops gather to form clouds."
+   ],
+   [
+    "Precipitation",
+    "When cloud drops grow heavy, they fall as rain, hail or snow."
+   ],
+   [
+    "Runoff and infiltration",
+    "Some water runs over the land into rivers and then the sea. Some soaks into the ground, and it can flow slowly underground to rivers and the sea. The cycle then starts again."
+   ]
+  ],
+  "remember": "Water evaporates, condenses into clouds, falls as precipitation, then runs off or soaks in before the cycle repeats.",
+  "a": {
+   "q": "Water vapour rises, cools and turns into tiny drops that form a cloud. What is this step called?",
+   "opts": [
+    "Condensation",
+    "Evaporation",
+    "Precipitation",
+    "Runoff"
+   ],
+   "why": "Condensation is when vapour cools and becomes liquid drops. Evaporation is the opposite step, where liquid water heats up and becomes vapour.",
+   "clue": "Think of drops forming on a cold glass."
+  },
+  "b": {
+   "d": 2,
+   "q": "After a storm in Darwin, water flows down a street drain and into a creek that leads to the sea. Which step of the water cycle is this?",
+   "opts": [
+    "Runoff over the land",
+    "Evaporation from the sea",
+    "Condensation into clouds",
+    "Precipitation from clouds"
+   ],
+   "why": "Water moving across the land surface towards a creek and the sea is runoff. The rain that fell in the storm was precipitation, but the flowing along the street is the step that came after it.",
+   "clue": "The rain has already fallen. Where does it go next?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:51Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says water 'returns to the sea over or under the land', but the card only says some water 'soaks into the ground'. It never says that this underground water flows back to the sea. The remember line adds a claim the card does not teach. It also implies all water ends up back in the sea."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says water 'returns to the sea over or under the land', but the card only says some water 'soaks into the ground'. It never says that this underground water flows back to the sea. The remember line adds a claim the card does not teach. It also implies all water ends up back in the sea."
+  ]
+ },
+ "final": {
+  "title": "The water cycle",
+  "card": [
+   [
+    "Evaporation",
+    "The sun heats water in seas, lakes and rivers. Some of it turns into water vapour, a gas, and rises into the air."
+   ],
+   [
+    "Condensation",
+    "High in the air, the vapour cools and turns back into tiny drops of water. The drops gather to form clouds."
+   ],
+   [
+    "Precipitation",
+    "When cloud drops grow heavy, they fall as rain, hail or snow."
+   ],
+   [
+    "Runoff and infiltration",
+    "Some water runs over the land into rivers and then the sea. Some soaks into the ground, and it can flow slowly underground to rivers and the sea. The cycle then starts again."
+   ]
+  ],
+  "remember": "Water evaporates, condenses into clouds, falls as precipitation, then runs off or soaks in before the cycle repeats.",
+  "a": {
+   "q": "Water vapour rises, cools and turns into tiny drops that form a cloud. What is this step called?",
+   "opts": [
+    "Condensation",
+    "Evaporation",
+    "Precipitation",
+    "Runoff"
+   ],
+   "why": "Condensation is when vapour cools and becomes liquid drops. Evaporation is the opposite step, where liquid water heats up and becomes vapour.",
+   "clue": "Think of drops forming on a cold glass."
+  },
+  "b": {
+   "d": 2,
+   "q": "After a storm in Darwin, water flows down a street drain and into a creek that leads to the sea. Which step of the water cycle is this?",
+   "opts": [
+    "Runoff over the land",
+    "Evaporation from the sea",
+    "Condensation into clouds",
+    "Precipitation from clouds"
+   ],
+   "why": "Water moving across the land surface towards a creek and the sea is runoff. The rain that fell in the storm was precipitation, but the flowing along the street is the step that came after it.",
+   "clue": "The rain has already fallen. Where does it go next?"
+  }
+ },
+ "cleared_by": "auto"
+}

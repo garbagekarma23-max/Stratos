@@ -1,0 +1,394 @@
+{
+ "id": "mat-random-non-random-sampling",
+ "title": "Random and non-random sampling",
+ "brief": "a31f68245914",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, write",
+  "2026-11-04T09:36:56Z write: done",
+  "2026-11-04T09:47:08Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00596,
+  "check": 0.01407,
+  "fix": 0.01708,
+  "recheck": 0.01198
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The right option is the longest and the only one with a precise detail ('a box holding every student's name'). Its word 'every' also echoes the clue's 'every student an equal chance', so a student could pick it without knowing the idea. Consider adding similar detail to the wrong options.",
+ "rejected": {
+  "title": "Random and non-random sampling",
+  "card": [
+   [
+    "Random sample",
+    "every member of the population has an equal chance of being picked, such as drawing names from a hat."
+   ],
+   [
+    "Non-random sample",
+    "some members are more likely to be picked than others, such as asking only your friends or only people who volunteer."
+   ],
+   "Non-random samples can be biased. Bias means the results lean one way and do not fairly show the whole population.",
+   "Example: to find the favourite sport of a school of 800, picking 40 names by random draw is fair. Asking only the football team is not, because it leaves out most students."
+  ],
+  "remember": "Equal chances give a random sample. Unequal chances can make the results biased.",
+  "a": {
+   "q": "Which method gives a random sample of the 600 students at a school in Darwin?",
+   "opts": [
+    "Drawing 30 names from a box holding every student's name",
+    "Asking the first 30 students to arrive at school",
+    "Asking 30 students in the school choir",
+    "Asking 30 students who put their hand up"
+   ],
+   "why": "Only the name draw gives every student an equal chance. Asking the first to arrive is tempting, but early arrivals are a particular group, so others have less chance of being picked.",
+   "clue": "Which method gives every student an equal chance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants to know how often people in her suburb in Perth use the library. She surveys people as they leave the library. Why is her sample likely to be biased?",
+   "opts": [
+    "Library users are more likely to be picked than others",
+    "People who rarely visit are more likely to be picked",
+    "Everyone in the suburb has the same chance of being picked",
+    "Random samples tend to give more biased results"
+   ],
+   "why": "Only people at the library can be picked, so frequent users have a much greater chance and the results will lean towards them. It is tempting to reverse this, but people who rarely visit are the ones least likely to be at the door.",
+   "clue": "Who could never be picked at the library door?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The right option is the longest and the only one with a precise detail ('a box holding every student's name'). Its word 'every' also echoes the clue's 'every student an equal chance', so a student could pick it without knowing the idea. Consider adding similar detail to the wrong options."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Random and non-random sampling",
+     "card": [
+      [
+       "Random sample",
+       "every member of the population has an equal chance of being picked, such as drawing names from a hat."
+      ],
+      [
+       "Non-random sample",
+       "some members are more likely to be picked than others, such as asking only your friends or only people who volunteer."
+      ],
+      "Non-random samples can be biased. Bias means the results lean one way and do not fairly show the whole population.",
+      "Example: to find the favourite sport of a school of 800, picking 40 names by random draw is fair. Asking only the football team is not, because it leaves out most students."
+     ],
+     "remember": "Equal chance for everyone gives a fair sample. Picking by convenience can give a biased one.",
+     "a": {
+      "q": "Which method gives a random sample of the 600 students at a school in Darwin?",
+      "opts": [
+       "Drawing 30 names from a box holding every student's name",
+       "Asking the first 30 students to arrive at school",
+       "Asking 30 students in the school choir",
+       "Asking 30 students who put their hand up"
+      ],
+      "why": "Only the name draw gives every student an equal chance. Asking the first to arrive is tempting, but early arrivals are a particular group, so others have less chance of being picked.",
+      "clue": "Which method gives every student an equal chance?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya wants to know how often people in her suburb in Perth use the library. She surveys people as they leave the library. Why is her sample likely to be biased?",
+      "opts": [
+       "People who use the library are more likely to be picked",
+       "The sample is too small to be a sample",
+       "She asked people instead of using a census",
+       "She asked people on only one day"
+      ],
+      "why": "People who never visit the library cannot be picked, so the results will lean towards frequent users. Asking on one day could also limit results, but the main bias comes from who is able to be picked.",
+      "clue": "Who could never be picked at the library door?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Drawing 30 names from a box holding every student's name",
+      "also_right": []
+     },
+     "b": {
+      "best": "People who use the library are more likely to be picked",
+      "also_right": [
+       "She asked people on only one day"
+      ]
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The distractor 'She asked people on only one day' is defensible as a source of bias, since people who visit on other days may differ. The why even admits it 'could also limit results'. Replace it with a clearly wrong option."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The distractor 'The sample is too small to be a sample' is nonsensical. It also leans on sample size, which is the idea of point 4."
+      },
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line uses 'picking by convenience', a term the card never uses or defines. The card's examples include volunteers, which is self-selection rather than convenience, so the line labels the ideas more neatly than the card does."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct and the intended answers are right. In question b, the 'only one day' distractor can be defended as a cause of bias. The remember line also brings in the undefined term 'convenience'."
+    },
+    "flags": [
+     "Question b: the checker says “She asked people on only one day” could also be right.",
+     "Question b, wording: The distractor 'She asked people on only one day' is defensible as a source of bias, since people who visit on other days may differ. The why even admits it 'could also limit results'. Replace it with a clearly wrong option.",
+     "Question b, other: The distractor 'The sample is too small to be a sample' is nonsensical. It also leans on sample size, which is the idea of point 4.",
+     "Remember, other: The remember line uses 'picking by convenience', a term the card never uses or defines. The card's examples include volunteers, which is self-selection rather than convenience, so the line labels the ideas more neatly than the card does."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Random and non-random sampling",
+     "card": [
+      [
+       "Random sample",
+       "every member of the population has an equal chance of being picked, such as drawing names from a hat."
+      ],
+      [
+       "Non-random sample",
+       "some members are more likely to be picked than others, such as asking only your friends or only people who volunteer."
+      ],
+      "Non-random samples can be biased. Bias means the results lean one way and do not fairly show the whole population.",
+      "Example: to find the favourite sport of a school of 800, picking 40 names by random draw is fair. Asking only the football team is not, because it leaves out most students."
+     ],
+     "remember": "Equal chances give a random sample. Unequal chances can make the results biased.",
+     "a": {
+      "q": "Which method gives a random sample of the 600 students at a school in Darwin?",
+      "opts": [
+       "Drawing 30 names from a box holding every student's name",
+       "Asking the first 30 students to arrive at school",
+       "Asking 30 students in the school choir",
+       "Asking 30 students who put their hand up"
+      ],
+      "why": "Only the name draw gives every student an equal chance. Asking the first to arrive is tempting, but early arrivals are a particular group, so others have less chance of being picked.",
+      "clue": "Which method gives every student an equal chance?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya wants to know how often people in her suburb in Perth use the library. She surveys people as they leave the library. Why is her sample likely to be biased?",
+      "opts": [
+       "Library users are more likely to be picked than others",
+       "People who rarely visit are more likely to be picked",
+       "Everyone in the suburb has the same chance of being picked",
+       "Random samples tend to give more biased results"
+      ],
+      "why": "Only people at the library can be picked, so frequent users have a much greater chance and the results will lean towards them. It is tempting to reverse this, but people who rarely visit are the ones least likely to be at the door.",
+      "clue": "Who could never be picked at the library door?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Drawing 30 names from a box holding every student's name",
+       "also_right": []
+      },
+      "b": {
+       "best": "Library users are more likely to be picked than others",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The right option is the longest and the only one with a precise detail ('a box holding every student's name'). Its word 'every' also echoes the clue's 'every student an equal chance', so a student could pick it without knowing the idea. Consider adding similar detail to the wrong options."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, remember line, answers and explanations are all correct. The only issue is that question a's right option stands out: it is the longest, the most detailed, and it echoes the clue's wording."
+     },
+     "flags": [
+      "Question a, wording: The right option is the longest and the only one with a precise detail ('a box holding every student's name'). Its word 'every' also echoes the clue's 'every student an equal chance', so a student could pick it without knowing the idea. Consider adding similar detail to the wrong options."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Random and non-random sampling",
+    "card": [
+     [
+      "Random sample",
+      "every member of the population has an equal chance of being picked, such as drawing names from a hat."
+     ],
+     [
+      "Non-random sample",
+      "some members are more likely to be picked than others, such as asking only your friends or only people who volunteer."
+     ],
+     "Non-random samples can be biased. Bias means the results lean one way and do not fairly show the whole population.",
+     "Example: to find the favourite sport of a school of 800, picking 40 names by random draw is fair. Asking only the football team is not, because it leaves out most students."
+    ],
+    "remember": "Equal chances give a random sample. Unequal chances can make the results biased.",
+    "a": {
+     "q": "A school in Darwin has 600 students. Which way of choosing 30 of them gives a random sample?",
+     "opts": [
+      "Drawing 30 names from a box with all 600 names in it",
+      "Asking the first 30 students to walk in the school gate",
+      "Asking 30 students from the choir at their lunch practice",
+      "Asking 30 students who put their hand up at assembly"
+     ],
+     "why": "Only the name draw gives each of the 600 students the same chance of being picked. Asking the first to arrive is tempting, but early arrivals are a particular group, so students who come later have less chance. Choir members and volunteers are particular groups too.",
+     "clue": "In which method does each student have the same chance?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya wants to find out how often people in her Perth suburb use the library, so she surveys people as they walk out of it. Why are her results likely to be biased?",
+     "opts": [
+      "Library users are more likely to be picked than others",
+      "People who rarely visit are more likely to be picked",
+      "Everyone in the suburb has the same chance of being picked",
+      "Random samples tend to give more biased results"
+     ],
+     "why": "Only people at the library can be picked, so frequent users have a much greater chance and the results will lean towards them. It is tempting to reverse this, but people who rarely visit are the ones least likely to be at the door.",
+     "clue": "Who could never be picked at the library door?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Drawing 30 names from a box with all 600 names in it",
+     "also_right": []
+    },
+    "b": {
+     "best": "Library users are more likely to be picked than others",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Random and non-random sampling",
+  "card": [
+   [
+    "Random sample",
+    "every member of the population has an equal chance of being picked, such as drawing names from a hat."
+   ],
+   [
+    "Non-random sample",
+    "some members are more likely to be picked than others, such as asking only your friends or only people who volunteer."
+   ],
+   "Non-random samples can be biased. Bias means the results lean one way and do not fairly show the whole population.",
+   "Example: to find the favourite sport of a school of 800, picking 40 names by random draw is fair. Asking only the football team is not, because it leaves out most students."
+  ],
+  "remember": "Equal chances give a random sample. Unequal chances can make the results biased.",
+  "a": {
+   "q": "A school in Darwin has 600 students. Which way of choosing 30 of them gives a random sample?",
+   "opts": [
+    "Drawing 30 names from a box with all 600 names in it",
+    "Asking the first 30 students to walk in the school gate",
+    "Asking 30 students from the choir at their lunch practice",
+    "Asking 30 students who put their hand up at assembly"
+   ],
+   "why": "Only the name draw gives each of the 600 students the same chance of being picked. Asking the first to arrive is tempting, but early arrivals are a particular group, so students who come later have less chance. Choir members and volunteers are particular groups too.",
+   "clue": "In which method does each student have the same chance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants to find out how often people in her Perth suburb use the library, so she surveys people as they walk out of it. Why are her results likely to be biased?",
+   "opts": [
+    "Library users are more likely to be picked than others",
+    "People who rarely visit are more likely to be picked",
+    "Everyone in the suburb has the same chance of being picked",
+    "Random samples tend to give more biased results"
+   ],
+   "why": "Only people at the library can be picked, so frequent users have a much greater chance and the results will lean towards them. It is tempting to reverse this, but people who rarely visit are the ones least likely to be at the door.",
+   "clue": "Who could never be picked at the library door?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Drawing 30 names from a box with all 600 names in it",
+   "also_right": []
+  },
+  "b": {
+   "best": "Library users are more likely to be picked than others",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Random and non-random sampling",
+  "card": [
+   [
+    "Random sample",
+    "every member of the population has an equal chance of being picked, such as drawing names from a hat."
+   ],
+   [
+    "Non-random sample",
+    "some members are more likely to be picked than others, such as asking only your friends or only people who volunteer."
+   ],
+   "Non-random samples can be biased. Bias means the results lean one way and do not fairly show the whole population.",
+   "Example: to find the favourite sport of a school of 800, picking 40 names by random draw is fair. Asking only the football team is not, because it leaves out most students."
+  ],
+  "remember": "Equal chances give a random sample. Unequal chances can make the results biased.",
+  "a": {
+   "q": "A school in Darwin has 600 students. Which way of choosing 30 of them gives a random sample?",
+   "opts": [
+    "Drawing 30 names from a box with all 600 names in it",
+    "Asking the first 30 students to walk in the school gate",
+    "Asking 30 students from the choir at their lunch practice",
+    "Asking 30 students who put their hand up at assembly"
+   ],
+   "why": "Only the name draw gives each of the 600 students the same chance of being picked. Asking the first to arrive is tempting, but early arrivals are a particular group, so students who come later have less chance. Choir members and volunteers are particular groups too.",
+   "clue": "In which method does each student have the same chance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants to find out how often people in her Perth suburb use the library, so she surveys people as they walk out of it. Why are her results likely to be biased?",
+   "opts": [
+    "Library users are more likely to be picked than others",
+    "People who rarely visit are more likely to be picked",
+    "Everyone in the suburb has the same chance of being picked",
+    "Random samples tend to give more biased results"
+   ],
+   "why": "Only people at the library can be picked, so frequent users have a much greater chance and the results will lean towards them. It is tempting to reverse this, but people who rarely visit are the ones least likely to be at the door.",
+   "clue": "Who could never be picked at the library door?"
+  }
+ },
+ "checked_by": "claude-code"
+}

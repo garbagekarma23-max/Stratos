@@ -1,0 +1,434 @@
+{
+ "id": "ecb-sectors-economy",
+ "title": "Sectors of the economy",
+ "brief": "05a8c0832748",
+ "shortlist": [
+  [
+   "eco-circular-flow-income",
+   0.221
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:25Z new, match",
+  "2026-11-04T09:36:47Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: done",
+  "2026-11-04T09:58:21Z check: flagged",
+  "2026-11-04T10:07:57Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:40Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00545,
+  "check": 0.01049,
+  "fix": 0.01438,
+  "recheck": 0.01073
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers only the three-sector circular flow of households, businesses and government, while this point also needs the financial sector (saving and lending), which is a change of scope rather than a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: Each option carries a short description, and the right one says 'taxes', echoing 'a local tax' in the stem. A student can match the words without knowing the sectors. Consider dropping the descriptions from the options.",
+ "rejected": {
+  "title": "Sectors of the economy",
+  "card": [
+   [
+    "Households",
+    "people who live in one home, alone or together. They sell their labour, buy goods and services, and may save."
+   ],
+   [
+    "Businesses",
+    "make and sell goods and services. They buy resources and hire workers."
+   ],
+   [
+    "Financial sector",
+    "banks and similar organisations. Banks are businesses, but they are grouped as their own sector because they take savings from some people and lend money to others."
+   ],
+   [
+    "Government",
+    "collects taxes and provides services such as roads and public schools. It also buys goods and services."
+   ]
+  ],
+  "remember": "Households, businesses, the financial sector and government each play a different part in the market.",
+  "a": {
+   "q": "A bank pays interest on savings and lends a family money to buy a home. In the four-sector model, which sector is the bank in?",
+   "opts": [
+    "The financial sector",
+    "The household sector",
+    "The government sector",
+    "The business sector"
+   ],
+   "why": "Banks take in savings and lend money out, so they are grouped as the financial sector. A bank is a kind of business, but in this model it is placed in its own sector, not with other businesses.",
+   "clue": "Which sector is set apart for saving and lending?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Tasmania collects rates, a local tax, and uses them to repair a local road. Which sector does this show?",
+   "opts": [
+    "Government, which taxes and provides services",
+    "Households, which sell labour for income",
+    "Businesses, which make goods to sell",
+    "Financial sector, which lends savings to others"
+   ],
+   "why": "Collecting tax from people and spending it on a road is what government does. The council might pay a business to do the repair, but the council doing the taxing and providing the road is government.",
+   "clue": "Who collects taxes and provides roads?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: Each option carries a short description, and the right one says 'taxes', echoing 'a local tax' in the stem. A student can match the words without knowing the sectors. Consider dropping the descriptions from the options."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Sectors of the economy",
+     "card": [
+      [
+       "Households",
+       "groups of people who live together. They sell their labour, buy goods and services, and may save."
+      ],
+      [
+       "Businesses",
+       "make and sell goods and services. They buy resources and hire workers."
+      ],
+      [
+       "Financial sector",
+       "banks and similar organisations. They take savings from some people and lend money to others."
+      ],
+      [
+       "Government",
+       "collects taxes and provides services such as roads and public schools. It also buys goods and services."
+      ]
+     ],
+     "remember": "Households, businesses, the financial sector and government each play a different part in the market.",
+     "a": {
+      "q": "A bank pays interest on savings and lends money to a family to buy a home. Which sector is the bank in?",
+      "opts": [
+       "The financial sector",
+       "The household sector",
+       "The government sector",
+       "The business sector"
+      ],
+      "why": "Banks take in savings and lend money out, which is the work of the financial sector. A family is a household, but the bank is not one.",
+      "clue": "Think about who saves and lends money."
+     },
+     "b": {
+      "d": 3,
+      "q": "A council in Tasmania collects rates and uses them to repair a local road. Which sector does this show?",
+      "opts": [
+       "Government, which taxes and provides services",
+       "Households, which sell labour for income",
+       "Businesses, which make goods to sell",
+       "Financial sector, which lends savings to others"
+      ],
+      "why": "Collecting money from people and spending it on a road is what government does. The road repair might use a business, but the council doing the taxing and providing is government.",
+      "clue": "Who collects money and provides roads?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The financial sector",
+      "also_right": [
+       "The business sector"
+      ]
+     },
+     "b": {
+      "best": "Government, which taxes and provides services",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "A bank is itself a business: it sells services (savings accounts, loans) and hires workers, which fits the card's own definition of businesses. A careful student could defend 'The business sector'. The question should say 'in the four-sector model', or the card should note that banks are businesses grouped separately as the financial sector."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Question a is ambiguous because a bank is also a business under the card's own definition, so 'The business sector' is defensible. Question b and the card are otherwise fine."
+    },
+    "flags": [
+     "Question a: the checker says “The business sector” could also be right.",
+     "Question a, wording: A bank is itself a business: it sells services (savings accounts, loans) and hires workers, which fits the card's own definition of businesses. A careful student could defend 'The business sector'. The question should say 'in the four-sector model', or the card should note that banks are businesses grouped separately as the financial sector."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Sectors of the economy",
+     "card": [
+      [
+       "Households",
+       "people who live in one home, alone or together. They sell their labour, buy goods and services, and may save."
+      ],
+      [
+       "Businesses",
+       "make and sell goods and services. They buy resources and hire workers."
+      ],
+      [
+       "Financial sector",
+       "banks and similar organisations. Banks are businesses, but they are grouped as their own sector because they take savings from some people and lend money to others."
+      ],
+      [
+       "Government",
+       "collects taxes and provides services such as roads and public schools. It also buys goods and services."
+      ]
+     ],
+     "remember": "Households, businesses, the financial sector and government each play a different part in the market.",
+     "a": {
+      "q": "A bank pays interest on savings and lends a family money to buy a home. In the four-sector model, which sector is the bank in?",
+      "opts": [
+       "The financial sector",
+       "The household sector",
+       "The government sector",
+       "The business sector"
+      ],
+      "why": "Banks take in savings and lend money out, so they are grouped as the financial sector. A bank is a kind of business, but in this model it is placed in its own sector, not with other businesses.",
+      "clue": "Which sector is set apart for saving and lending?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A council in Tasmania collects rates, a local tax, and uses them to repair a local road. Which sector does this show?",
+      "opts": [
+       "Government, which taxes and provides services",
+       "Households, which sell labour for income",
+       "Businesses, which make goods to sell",
+       "Financial sector, which lends savings to others"
+      ],
+      "why": "Collecting tax from people and spending it on a road is what government does. The council might pay a business to do the repair, but the council doing the taxing and providing the road is government.",
+      "clue": "Who collects taxes and provides roads?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The financial sector",
+       "also_right": []
+      },
+      "b": {
+       "best": "Government, which taxes and provides services",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "Each option carries a short description, and the right one says 'taxes', echoing 'a local tax' in the stem. A student can match the words without knowing the sectors. Consider dropping the descriptions from the options."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and question a are accurate and clear. In question b, the right option repeats 'tax' from the stem, so students can pick it by matching words; removing the option descriptions would fix this."
+     },
+     "flags": [
+      "Question b, wording: Each option carries a short description, and the right one says 'taxes', echoing 'a local tax' in the stem. A student can match the words without knowing the sectors. Consider dropping the descriptions from the options."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:40Z",
+   "step": "write",
+   "version": {
+    "title": "Sectors of the economy",
+    "card": [
+     [
+      "Households",
+      "people who live in one home, alone or together. They sell their labour, buy goods and services, and may save."
+     ],
+     [
+      "Businesses",
+      "make and sell goods and services. They buy resources and hire workers."
+     ],
+     [
+      "Financial sector",
+      "banks and similar organisations. Banks are businesses, but they are grouped as their own sector because they take savings from some people and lend money to others."
+     ],
+     [
+      "Government",
+      "collects taxes and provides services such as roads and public schools. It also buys goods and services."
+     ]
+    ],
+    "remember": "Households, businesses, the financial sector and government each play a different part in the market.",
+    "a": {
+     "q": "A credit union holds its members' savings and lends money to members buying cars. Which of the four sectors is it in?",
+     "opts": [
+      "The financial sector",
+      "The business sector",
+      "The household sector",
+      "The government sector"
+     ],
+     "why": "A credit union takes in savings and lends money out, as a bank does, so it is grouped in the financial sector. It is run like a business, but in this model saving and lending organisations have a sector of their own.",
+     "clue": "Which sector is set apart for saving and lending?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A council in Tasmania charges rates on local land and pays a building firm to fix a road for residents. Which sector is the council in?",
+     "opts": [
+      "Government",
+      "Businesses",
+      "Households",
+      "The financial sector"
+     ],
+     "why": "Rates are a tax, and collecting tax to provide a road is what government does. The building firm that does the work is a business, but the council that charges the rates and provides the road is government.",
+     "clue": "Who collects the money and decides the road gets fixed?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The financial sector",
+     "also_right": []
+    },
+    "b": {
+     "best": "Government",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Sectors of the economy",
+  "card": [
+   [
+    "Households",
+    "people who live in one home, alone or together. They sell their labour, buy goods and services, and may save."
+   ],
+   [
+    "Businesses",
+    "make and sell goods and services. They buy resources and hire workers."
+   ],
+   [
+    "Financial sector",
+    "banks and similar organisations. Banks are businesses, but they are grouped as their own sector because they take savings from some people and lend money to others."
+   ],
+   [
+    "Government",
+    "collects taxes and provides services such as roads and public schools. It also buys goods and services."
+   ]
+  ],
+  "remember": "Households, businesses, the financial sector and government each play a different part in the market.",
+  "a": {
+   "q": "A credit union holds its members' savings and lends money to members buying cars. Which of the four sectors is it in?",
+   "opts": [
+    "The financial sector",
+    "The business sector",
+    "The household sector",
+    "The government sector"
+   ],
+   "why": "A credit union takes in savings and lends money out, as a bank does, so it is grouped in the financial sector. It is run like a business, but in this model saving and lending organisations have a sector of their own.",
+   "clue": "Which sector is set apart for saving and lending?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Tasmania charges rates on local land and pays a building firm to fix a road for residents. Which sector is the council in?",
+   "opts": [
+    "Government",
+    "Businesses",
+    "Households",
+    "The financial sector"
+   ],
+   "why": "Rates are a tax, and collecting tax to provide a road is what government does. The building firm that does the work is a business, but the council that charges the rates and provides the road is government.",
+   "clue": "Who collects the money and decides the road gets fixed?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The financial sector",
+   "also_right": []
+  },
+  "b": {
+   "best": "Government",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sectors of the economy",
+  "card": [
+   [
+    "Households",
+    "people who live in one home, alone or together. They sell their labour, buy goods and services, and may save."
+   ],
+   [
+    "Businesses",
+    "make and sell goods and services. They buy resources and hire workers."
+   ],
+   [
+    "Financial sector",
+    "banks and similar organisations. Banks are businesses, but they are grouped as their own sector because they take savings from some people and lend money to others."
+   ],
+   [
+    "Government",
+    "collects taxes and provides services such as roads and public schools. It also buys goods and services."
+   ]
+  ],
+  "remember": "Households, businesses, the financial sector and government each play a different part in the market.",
+  "a": {
+   "q": "A credit union holds its members' savings and lends money to members buying cars. Which of the four sectors is it in?",
+   "opts": [
+    "The financial sector",
+    "The business sector",
+    "The household sector",
+    "The government sector"
+   ],
+   "why": "A credit union takes in savings and lends money out, as a bank does, so it is grouped in the financial sector. It is run like a business, but in this model saving and lending organisations have a sector of their own.",
+   "clue": "Which sector is set apart for saving and lending?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Tasmania charges rates on local land and pays a building firm to fix a road for residents. Which sector is the council in?",
+   "opts": [
+    "Government",
+    "Businesses",
+    "Households",
+    "The financial sector"
+   ],
+   "why": "Rates are a tax, and collecting tax to provide a road is what government does. The building firm that does the work is a business, but the council that charges the rates and provides the road is government.",
+   "clue": "Who collects the money and decides the road gets fixed?"
+  }
+ },
+ "checked_by": "claude-code"
+}

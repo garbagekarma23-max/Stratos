@@ -1,0 +1,341 @@
+{
+ "id": "sci-validity",
+ "title": "Validity",
+ "brief": "cc7b01c947ca",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, write",
+  "2026-11-04T09:36:59Z write: failed the content check, writing again",
+  "2026-11-04T09:47:14Z write: done (still fails the content check)",
+  "2026-11-04T09:58:33Z check: flagged",
+  "2026-11-04T10:08:06Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01185,
+  "check": 0.00743,
+  "fix": 0.02118,
+  "recheck": 0.01049
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: 'A fair method ... measures only the dependent variable' is overstated. Scientists often also measure or monitor controlled variables, such as temperature, to check they stay the same. A student could learn that measuring anything else makes a test unfair.",
+ "rejected": {
+  "title": "Validity",
+  "card": [
+   "An investigation is valid when it tests what it set out to test. The method must measure the thing the question asks about.",
+   "The independent variable is the one you change. The dependent variable is the one you measure.",
+   "Controlled variables are all the other factors you keep the same. If one of them changes too, you cannot tell what caused the result.",
+   "A fair method changes only the independent variable and measures only the dependent variable. This makes the conclusion trustworthy."
+  ],
+  "remember": "A valid test changes one thing, measures the right thing and keeps everything else the same.",
+  "a": {
+   "q": "Why must controlled variables be kept the same in an investigation?",
+   "opts": [
+    "So only the independent variable can explain the result",
+    "So the dependent variable stays the same in every trial",
+    "So the independent variable changes by the same amount",
+    "So the results come out as the student predicted"
+   ],
+   "why": "If the other factors stay the same, any change in the dependent variable can be linked to the independent variable. The dependent variable is meant to change, so keeping it constant would defeat the test.",
+   "clue": "Think about what you could blame if two things changed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya tests whether fertiliser affects bean plant height. She gives Plant A fertiliser in a sunny window and Plant B none in a dark cupboard. Why is her test not valid?",
+   "opts": [
+    "Light also differs, so two things could explain the result",
+    "Height does not show plant growth, so she measured wrongly",
+    "Fertiliser is a controlled variable, so it must stay fixed",
+    "Using two plants is wrong, as a fair test uses one plant"
+   ],
+   "why": "Fertiliser and light both differ, so either could explain the height difference. Her question is about height, so measuring height is the right dependent variable and is not the problem.",
+   "clue": "Count how many things differ between the two plants."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: 'A fair method ... measures only the dependent variable' is overstated. Scientists often also measure or monitor controlled variables, such as temperature, to check they stay the same. A student could learn that measuring anything else makes a test unfair."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Validity",
+     "card": [
+      "An investigation is valid when it tests what it set out to test. The method must measure the thing the question asks about.",
+      "The independent variable is the one you change. The dependent variable is the one you measure.",
+      "Controlled variables are all the other factors you keep the same. If one of them changes too, you cannot tell what caused the result.",
+      "A fair method changes only the independent variable and measures only the dependent variable. This makes the conclusion trustworthy."
+     ],
+     "remember": "A valid test changes one thing, measures the right thing and keeps everything else the same.",
+     "a": {
+      "q": "Why must controlled variables be kept the same in an investigation?",
+      "opts": [
+       "So only the independent variable can explain the result",
+       "So the dependent variable stays the same in every trial",
+       "So the independent variable changes by the same amount",
+       "So the results come out as the student predicted"
+      ],
+      "why": "If the other factors stay the same, any change in the dependent variable can be linked to the independent variable. The dependent variable is meant to change, so keeping it constant would defeat the test.",
+      "clue": "Think about what you could blame if two things changed."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya tests whether fertiliser affects bean plant height. She gives Plant A fertiliser in a sunny window and Plant B none in a dark cupboard. Why is her test not valid?",
+      "opts": [
+       "Light also differs, so the height gap has two possible causes",
+       "She measured height, which does not show plant growth",
+       "She used fertiliser, which is not a variable to change",
+       "She should have used only one plant in total"
+      ],
+      "why": "Fertiliser and light both differ, so either could explain the height difference. Height is a sensible dependent variable, so measuring it is not the problem.",
+      "clue": "Count how many things differ between the two plants."
+     }
+    },
+    "redone": true,
+    "local": [
+     "sci-validityb option is 61 characters: Light also differs, so the height gap has two possible causes"
+    ],
+    "check": {
+     "a": {
+      "best": "So only the independent variable can explain the result",
+      "also_right": []
+     },
+     "b": {
+      "best": "Light also differs, so the height gap has two possible causes",
+      "also_right": []
+     },
+     "problems": [],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "No problems found."
+    },
+    "flags": [
+     "Content check: sci-validityb option is 61 characters: Light also differs, so the height gap has two possible causes"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Validity",
+     "card": [
+      "An investigation is valid when it tests what it set out to test. The method must measure the thing the question asks about.",
+      "The independent variable is the one you change. The dependent variable is the one you measure.",
+      "Controlled variables are all the other factors you keep the same. If one of them changes too, you cannot tell what caused the result.",
+      "A fair method changes only the independent variable and measures only the dependent variable. This makes the conclusion trustworthy."
+     ],
+     "remember": "A valid test changes one thing, measures the right thing and keeps everything else the same.",
+     "a": {
+      "q": "Why must controlled variables be kept the same in an investigation?",
+      "opts": [
+       "So only the independent variable can explain the result",
+       "So the dependent variable stays the same in every trial",
+       "So the independent variable changes by the same amount",
+       "So the results come out as the student predicted"
+      ],
+      "why": "If the other factors stay the same, any change in the dependent variable can be linked to the independent variable. The dependent variable is meant to change, so keeping it constant would defeat the test.",
+      "clue": "Think about what you could blame if two things changed."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya tests whether fertiliser affects bean plant height. She gives Plant A fertiliser in a sunny window and Plant B none in a dark cupboard. Why is her test not valid?",
+      "opts": [
+       "Light also differs, so two things could explain the result",
+       "Height does not show plant growth, so she measured wrongly",
+       "Fertiliser is a controlled variable, so it must stay fixed",
+       "Using two plants is wrong, as a fair test uses one plant"
+      ],
+      "why": "Fertiliser and light both differ, so either could explain the height difference. Her question is about height, so measuring height is the right dependent variable and is not the problem.",
+      "clue": "Count how many things differ between the two plants."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "So only the independent variable can explain the result",
+       "also_right": []
+      },
+      "b": {
+       "best": "Light also differs, so two things could explain the result",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "'A fair method ... measures only the dependent variable' is overstated. Scientists often also measure or monitor controlled variables, such as temperature, to check they stay the same. A student could learn that measuring anything else makes a test unfair."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer and the explanations match the card. One small issue: the card says a fair method 'measures only the dependent variable', which wrongly suggests you should not monitor controlled variables."
+     },
+     "flags": [
+      "Card, fact: 'A fair method ... measures only the dependent variable' is overstated. Scientists often also measure or monitor controlled variables, such as temperature, to check they stay the same. A student could learn that measuring anything else makes a test unfair."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "Validity",
+    "card": [
+     "An investigation is valid when it tests what it set out to test. The method must measure the thing the question asks about.",
+     "The independent variable is the one you change. The dependent variable is the one you measure.",
+     "Controlled variables are all the other factors you keep the same. If one of them changes too, you cannot tell what caused the result.",
+     "A fair method changes only the independent variable and measures its effect on the dependent variable. Scientists may also check controlled variables, such as temperature, to make sure they stay the same."
+    ],
+    "remember": "A valid test changes one thing, measures its effect and keeps everything else the same.",
+    "a": {
+     "q": "In an investigation, why are the controlled variables kept the same?",
+     "opts": [
+      "So only the independent variable can explain the result",
+      "So the dependent variable stays the same in every trial",
+      "So the independent variable changes by the same amount",
+      "So the results come out as the student predicted"
+     ],
+     "why": "If the other factors stay the same, any change in the dependent variable can be linked to the independent variable. The dependent variable is meant to change, so keeping it constant would defeat the test.",
+     "clue": "Think about what you could blame if two things changed."
+    },
+    "b": {
+     "d": 3,
+     "q": "Kai tests whether salt water affects how tall bean plants grow. Plant A gets salt water on a sunny windowsill, and Plant B gets tap water in a dark cupboard. Why is his test not valid?",
+     "opts": [
+      "Light also differs, so two things could explain the result",
+      "Height does not show plant growth, so he measured wrongly",
+      "Salt is a controlled variable, so it should stay the same",
+      "A fair test uses one plant, so using two plants is wrong"
+     ],
+     "why": "Salt and light both differ between the plants, so either could explain a difference in height. His question is about height, so measuring height is the right dependent variable and is not the problem.",
+     "clue": "Count how many things differ between the two plants."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "So only the independent variable can explain the result",
+     "also_right": []
+    },
+    "b": {
+     "best": "Light also differs, so two things could explain the result",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Validity",
+  "card": [
+   "An investigation is valid when it tests what it set out to test. The method must measure the thing the question asks about.",
+   "The independent variable is the one you change. The dependent variable is the one you measure.",
+   "Controlled variables are all the other factors you keep the same. If one of them changes too, you cannot tell what caused the result.",
+   "A fair method changes only the independent variable and measures its effect on the dependent variable. Scientists may also check controlled variables, such as temperature, to make sure they stay the same."
+  ],
+  "remember": "A valid test changes one thing, measures its effect and keeps everything else the same.",
+  "a": {
+   "q": "In an investigation, why are the controlled variables kept the same?",
+   "opts": [
+    "So only the independent variable can explain the result",
+    "So the dependent variable stays the same in every trial",
+    "So the independent variable changes by the same amount",
+    "So the results come out as the student predicted"
+   ],
+   "why": "If the other factors stay the same, any change in the dependent variable can be linked to the independent variable. The dependent variable is meant to change, so keeping it constant would defeat the test.",
+   "clue": "Think about what you could blame if two things changed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kai tests whether salt water affects how tall bean plants grow. Plant A gets salt water on a sunny windowsill, and Plant B gets tap water in a dark cupboard. Why is his test not valid?",
+   "opts": [
+    "Light also differs, so two things could explain the result",
+    "Height does not show plant growth, so he measured wrongly",
+    "Salt is a controlled variable, so it should stay the same",
+    "A fair test uses one plant, so using two plants is wrong"
+   ],
+   "why": "Salt and light both differ between the plants, so either could explain a difference in height. His question is about height, so measuring height is the right dependent variable and is not the problem.",
+   "clue": "Count how many things differ between the two plants."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "So only the independent variable can explain the result",
+   "also_right": []
+  },
+  "b": {
+   "best": "Light also differs, so two things could explain the result",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Validity",
+  "card": [
+   "An investigation is valid when it tests what it set out to test. The method must measure the thing the question asks about.",
+   "The independent variable is the one you change. The dependent variable is the one you measure.",
+   "Controlled variables are all the other factors you keep the same. If one of them changes too, you cannot tell what caused the result.",
+   "A fair method changes only the independent variable and measures its effect on the dependent variable. Scientists may also check controlled variables, such as temperature, to make sure they stay the same."
+  ],
+  "remember": "A valid test changes one thing, measures its effect and keeps everything else the same.",
+  "a": {
+   "q": "In an investigation, why are the controlled variables kept the same?",
+   "opts": [
+    "So only the independent variable can explain the result",
+    "So the dependent variable stays the same in every trial",
+    "So the independent variable changes by the same amount",
+    "So the results come out as the student predicted"
+   ],
+   "why": "If the other factors stay the same, any change in the dependent variable can be linked to the independent variable. The dependent variable is meant to change, so keeping it constant would defeat the test.",
+   "clue": "Think about what you could blame if two things changed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kai tests whether salt water affects how tall bean plants grow. Plant A gets salt water on a sunny windowsill, and Plant B gets tap water in a dark cupboard. Why is his test not valid?",
+   "opts": [
+    "Light also differs, so two things could explain the result",
+    "Height does not show plant growth, so he measured wrongly",
+    "Salt is a controlled variable, so it should stay the same",
+    "A fair test uses one plant, so using two plants is wrong"
+   ],
+   "why": "Salt and light both differ between the plants, so either could explain a difference in height. His question is about height, so measuring height is the right dependent variable and is not the problem.",
+   "clue": "Count how many things differ between the two plants."
+  }
+ },
+ "checked_by": "claude-code"
+}

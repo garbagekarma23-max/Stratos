@@ -1,0 +1,399 @@
+{
+ "id": "sci-telling-elements-compounds-mixtures",
+ "title": "Telling elements, compounds and mixtures apart",
+ "brief": "d6ccc1e7c4d7",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:44Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:13Z write: done",
+  "2026-11-04T09:58:33Z check: flagged",
+  "2026-11-04T14:58:53Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00462,
+  "check": 0.00995,
+  "fix": 0.01396,
+  "recheck": 0.01124
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The two-step method is incomplete. A mixture of two compounds has different kinds of atom joined, so following the steps alone would wrongly call it a compound. The method should also check that the same joined group repeats throughout, as the compound line says. The remember line ('Joined different atoms are a compound') has the same gap.",
+ "rejected": {
+  "title": "Telling elements, compounds and mixtures apart",
+  "card": [
+   [
+    "Element",
+    "a particle diagram shows only one kind of atom. The atoms may be single or joined in pairs, but they are all the same kind."
+   ],
+   [
+    "Compound",
+    "a particle diagram shows different kinds of atoms joined together. The same joined group repeats throughout the substance."
+   ],
+   [
+    "Mixture",
+    "a particle diagram shows two or more separate substances together. They are not joined to each other, so each keeps its own particles."
+   ],
+   "To classify a diagram, first check how many kinds of atom there are. If there are different kinds, check whether they are joined or just sitting side by side."
+  ],
+  "remember": "One kind of atom is an element. Joined different atoms are a compound. Separate substances together are a mixture.",
+  "a": {
+   "q": "A diagram shows red and blue circles. Each red circle is joined to one blue circle, and every joined pair looks the same. What is it?",
+   "opts": [
+    "A compound",
+    "An element",
+    "A mixture",
+    "A single atom"
+   ],
+   "why": "There are two kinds of atom and they are joined in the same repeating pairs, which is a compound. It is not a mixture, because in a mixture the different particles would be separate and not joined.",
+   "clue": "Look at whether the different atoms are joined or apart."
+  },
+  "b": {
+   "d": 3,
+   "q": "A diagram shows pairs of joined red atoms alongside single blue atoms. No red atom is joined to a blue atom. How should it be classified?",
+   "opts": [
+    "A mixture of two elements",
+    "A compound of two elements",
+    "A mixture of two compounds",
+    "A single pure element"
+   ],
+   "why": "The red pairs and the blue atoms are not joined to each other, so there are two separate substances together, each made of one kind of atom. That makes a mixture of two elements. It is not a compound, because the different kinds of atom are not joined, even though there are two kinds.",
+   "clue": "Are the red and blue atoms joined to each other?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The two-step method is incomplete. A mixture of two compounds has different kinds of atom joined, so following the steps alone would wrongly call it a compound. The method should also check that the same joined group repeats throughout, as the compound line says. The remember line ('Joined different atoms are a compound') has the same gap."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Telling elements, compounds and mixtures apart",
+     "card": [
+      [
+       "Element",
+       "a particle diagram shows only one kind of atom. The atoms may be single or joined in pairs, but they are all the same kind."
+      ],
+      [
+       "Compound",
+       "a particle diagram shows different kinds of atoms joined together. The same joined group repeats throughout the substance."
+      ],
+      [
+       "Mixture",
+       "a particle diagram shows two or more separate substances together. They are not joined to each other, so each keeps its own particles."
+      ],
+      "To classify a diagram, first check how many kinds of atom there are. If there are different kinds, check whether they are joined or just sitting side by side."
+     ],
+     "remember": "One kind of atom is an element. Joined different atoms are a compound. Separate substances together are a mixture.",
+     "a": {
+      "q": "A diagram shows red and blue circles. Each red circle is joined to one blue circle, and every joined pair looks the same. What is it?",
+      "opts": [
+       "A compound",
+       "An element",
+       "A mixture",
+       "A single atom"
+      ],
+      "why": "There are two kinds of atom and they are joined in the same repeating pairs, which is a compound. It is not a mixture, because in a mixture the different particles would be separate and not joined.",
+      "clue": "Look at whether the different atoms are joined or apart."
+     },
+     "b": {
+      "d": 3,
+      "q": "A diagram shows pairs of joined red atoms mixed with separate, unjoined blue atoms. How should the substance be classified?",
+      "opts": [
+       "A mixture of two substances",
+       "A compound of two elements",
+       "A single element",
+       "A compound of one element"
+      ],
+      "why": "The red pairs and the blue atoms are not joined to each other, so there are two separate substances together. That makes a mixture. It is not a compound, because the different kinds of atom are not joined, even though there are two kinds.",
+      "clue": "Are the red and blue atoms joined to each other?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A compound",
+      "also_right": []
+     },
+     "b": {
+      "best": "A mixture of two substances",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem says the red pairs are 'mixed with' the blue atoms. That word cues the answer 'A mixture' without the student needing to check whether the atoms are joined. A neutral word such as 'together with' or 'alongside' would avoid the clue."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, the remember line and both answers are correct. Question b's stem says 'mixed with', which hints at the answer 'mixture' and should be reworded to something neutral."
+    },
+    "flags": [
+     "Question b, wording: The stem says the red pairs are 'mixed with' the blue atoms. That word cues the answer 'A mixture' without the student needing to check whether the atoms are joined. A neutral word such as 'together with' or 'alongside' would avoid the clue."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Telling elements, compounds and mixtures apart",
+     "card": [
+      [
+       "Element",
+       "a particle diagram shows only one kind of atom. The atoms may be single or joined in pairs, but they are all the same kind."
+      ],
+      [
+       "Compound",
+       "a particle diagram shows different kinds of atoms joined together. The same joined group repeats throughout the substance."
+      ],
+      [
+       "Mixture",
+       "a particle diagram shows two or more separate substances together. They are not joined to each other, so each keeps its own particles."
+      ],
+      "To classify a diagram, first check how many kinds of atom there are. If there are different kinds, check whether they are joined or just sitting side by side."
+     ],
+     "remember": "One kind of atom is an element. Joined different atoms are a compound. Separate substances together are a mixture.",
+     "a": {
+      "q": "A diagram shows red and blue circles. Each red circle is joined to one blue circle, and every joined pair looks the same. What is it?",
+      "opts": [
+       "A compound",
+       "An element",
+       "A mixture",
+       "A single atom"
+      ],
+      "why": "There are two kinds of atom and they are joined in the same repeating pairs, which is a compound. It is not a mixture, because in a mixture the different particles would be separate and not joined.",
+      "clue": "Look at whether the different atoms are joined or apart."
+     },
+     "b": {
+      "d": 3,
+      "q": "A diagram shows pairs of joined red atoms alongside single blue atoms. No red atom is joined to a blue atom. How should it be classified?",
+      "opts": [
+       "A mixture of two elements",
+       "A compound of two elements",
+       "A mixture of two compounds",
+       "A single pure element"
+      ],
+      "why": "The red pairs and the blue atoms are not joined to each other, so there are two separate substances together, each made of one kind of atom. That makes a mixture of two elements. It is not a compound, because the different kinds of atom are not joined, even though there are two kinds.",
+      "clue": "Are the red and blue atoms joined to each other?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A compound",
+       "also_right": []
+      },
+      "b": {
+       "best": "A mixture of two elements",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The two-step method is incomplete. A mixture of two compounds has different kinds of atom joined, so following the steps alone would wrongly call it a compound. The method should also check that the same joined group repeats throughout, as the compound line says. The remember line ('Joined different atoms are a compound') has the same gap."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct, each with one clear answer. The card's two-step classifying method leaves out the check that the same joined group repeats, so it would misclassify a mixture of compounds."
+     },
+     "flags": [
+      "Card, wording: The two-step method is incomplete. A mixture of two compounds has different kinds of atom joined, so following the steps alone would wrongly call it a compound. The method should also check that the same joined group repeats throughout, as the compound line says. The remember line ('Joined different atoms are a compound') has the same gap."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "Telling elements, compounds and mixtures apart",
+    "card": [
+     [
+      "Element",
+      "a particle diagram shows only one kind of atom. The atoms may be single or joined in pairs, but they are all the same kind."
+     ],
+     [
+      "Compound",
+      "every particle in the diagram is the same group of different atoms joined together. That one group repeats throughout."
+     ],
+     [
+      "Mixture",
+      "the diagram shows two or more kinds of particle side by side. They are not joined to each other, so each substance keeps its own particles."
+     ],
+     "To classify a diagram, first check whether every particle is the same. If not, it is a mixture. If so, look inside a particle: one kind of atom is an element, and different atoms joined is a compound."
+    ],
+    "remember": "Two or more kinds of particle make a mixture. If every particle is the same, one kind of atom is an element and joined different atoms are a compound.",
+    "a": {
+     "q": "A particle diagram shows green and yellow circles. Every green circle is joined to two yellow circles, and every group looks the same. What does the diagram show?",
+     "opts": [
+      "A compound",
+      "An element",
+      "A mixture",
+      "A single atom"
+     ],
+     "why": "Every particle is the same group, and each group has two kinds of atom joined, so it is a compound. It is not a mixture, because there is only one kind of particle, and it is not an element, because each particle has two kinds of atom.",
+     "clue": "Is every particle in the diagram the same?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A diagram shows some particles made of one red atom joined to two white atoms, and other particles made of one black atom joined to two red atoms. How should it be classified?",
+     "opts": [
+      "A mixture of two compounds",
+      "A single compound",
+      "A mixture of two elements",
+      "A compound of three elements"
+     ],
+     "why": "There are two kinds of particle, so it is a mixture. Each kind has different atoms joined, so each one is a compound. Calling it one compound is tempting because the atoms inside each particle are joined, but the two kinds of particle are not joined to each other.",
+     "clue": "Count the kinds of particle before looking inside them."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A compound",
+     "also_right": []
+    },
+    "b": {
+     "best": "A mixture of two compounds",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Telling elements, compounds and mixtures apart",
+  "card": [
+   [
+    "Element",
+    "a particle diagram shows only one kind of atom. The atoms may be single or joined in pairs, but they are all the same kind."
+   ],
+   [
+    "Compound",
+    "every particle in the diagram is the same group of different atoms joined together. That one group repeats throughout."
+   ],
+   [
+    "Mixture",
+    "the diagram shows two or more kinds of particle side by side. They are not joined to each other, so each substance keeps its own particles."
+   ],
+   "To classify a diagram, first check whether every particle is the same. If not, it is a mixture. If so, look inside a particle: one kind of atom is an element, and different atoms joined is a compound."
+  ],
+  "remember": "Two or more kinds of particle make a mixture. If every particle is the same, one kind of atom is an element and joined different atoms are a compound.",
+  "a": {
+   "q": "A particle diagram shows green and yellow circles. Every green circle is joined to two yellow circles, and every group looks the same. What does the diagram show?",
+   "opts": [
+    "A compound",
+    "An element",
+    "A mixture",
+    "A single atom"
+   ],
+   "why": "Every particle is the same group, and each group has two kinds of atom joined, so it is a compound. It is not a mixture, because there is only one kind of particle, and it is not an element, because each particle has two kinds of atom.",
+   "clue": "Is every particle in the diagram the same?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A diagram shows some particles made of one red atom joined to two white atoms, and other particles made of one black atom joined to two red atoms. How should it be classified?",
+   "opts": [
+    "A mixture of two compounds",
+    "A single compound",
+    "A mixture of two elements",
+    "A compound of three elements"
+   ],
+   "why": "There are two kinds of particle, so it is a mixture. Each kind has different atoms joined, so each one is a compound. Calling it one compound is tempting because the atoms inside each particle are joined, but the two kinds of particle are not joined to each other.",
+   "clue": "Count the kinds of particle before looking inside them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A compound",
+   "also_right": []
+  },
+  "b": {
+   "best": "A mixture of two compounds",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Telling elements, compounds and mixtures apart",
+  "card": [
+   [
+    "Element",
+    "a particle diagram shows only one kind of atom. The atoms may be single or joined in pairs, but they are all the same kind."
+   ],
+   [
+    "Compound",
+    "every particle in the diagram is the same group of different atoms joined together. That one group repeats throughout."
+   ],
+   [
+    "Mixture",
+    "the diagram shows two or more kinds of particle side by side. They are not joined to each other, so each substance keeps its own particles."
+   ],
+   "To classify a diagram, first check whether every particle is the same. If not, it is a mixture. If so, look inside a particle: one kind of atom is an element, and different atoms joined is a compound."
+  ],
+  "remember": "Two or more kinds of particle make a mixture. If every particle is the same, one kind of atom is an element and joined different atoms are a compound.",
+  "a": {
+   "q": "A particle diagram shows green and yellow circles. Every green circle is joined to two yellow circles, and every group looks the same. What does the diagram show?",
+   "opts": [
+    "A compound",
+    "An element",
+    "A mixture",
+    "A single atom"
+   ],
+   "why": "Every particle is the same group, and each group has two kinds of atom joined, so it is a compound. It is not a mixture, because there is only one kind of particle, and it is not an element, because each particle has two kinds of atom.",
+   "clue": "Is every particle in the diagram the same?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A diagram shows some particles made of one red atom joined to two white atoms, and other particles made of one black atom joined to two red atoms. How should it be classified?",
+   "opts": [
+    "A mixture of two compounds",
+    "A single compound",
+    "A mixture of two elements",
+    "A compound of three elements"
+   ],
+   "why": "There are two kinds of particle, so it is a mixture. Each kind has different atoms joined, so each one is a compound. Calling it one compound is tempting because the atoms inside each particle are joined, but the two kinds of particle are not joined to each other.",
+   "clue": "Count the kinds of particle before looking inside them."
+  }
+ },
+ "checked_by": "claude-code"
+}

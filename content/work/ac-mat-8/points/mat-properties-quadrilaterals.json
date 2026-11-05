@@ -1,0 +1,203 @@
+{
+ "id": "mat-properties-quadrilaterals",
+ "title": "Properties of quadrilaterals",
+ "brief": "f93d66e2d25f",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, write",
+  "2026-11-04T09:36:56Z write: done",
+  "2026-11-04T09:47:08Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00589,
+  "check": 0.01091,
+  "fix": 0.01628,
+  "recheck": 0.00831
+ },
+ "draft": {
+  "title": "Properties of quadrilaterals",
+  "card": [
+   "A parallelogram has two pairs of parallel sides. Drawing a diagonal splits it into two triangles.",
+   "The two triangles share the diagonal as a side. Their other angles match because parallel lines make equal alternate angles.",
+   "So the triangles are congruent, and matching parts of congruent triangles are equal. This shows that opposite sides of a parallelogram are equal.",
+   "Drawing both diagonals makes two triangles that are congruent by AAS. This shows that the diagonals bisect each other, which means they cut each other in half."
+  ],
+  "remember": "Congruent triangles inside a parallelogram explain why its opposite sides are equal and its diagonals bisect each other.",
+  "a": {
+   "q": "Parallelogram ABCD has AB = 7 cm and BC = 4 cm. What is the length of CD?",
+   "opts": [
+    "7 cm",
+    "4 cm",
+    "11 cm",
+    "3 cm"
+   ],
+   "why": "CD is opposite AB, and opposite sides of a parallelogram are equal, so CD = 7 cm. 4 cm is wrong because that is the length of BC, a neighbouring side.",
+   "clue": "Which side is opposite CD?"
+  },
+  "b": {
+   "d": 2,
+   "q": "The diagonals of parallelogram PQRS meet at M. PM is 6 cm. What is the length of the whole diagonal PR?",
+   "opts": [
+    "12 cm",
+    "6 cm",
+    "3 cm",
+    "18 cm"
+   ],
+   "why": "The diagonals bisect each other, so M is the midpoint of PR. PR = 6 + 6 = 12 cm. Giving 6 cm forgets that PM is only half of the diagonal.",
+   "clue": "Bisect means cut in half."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "7 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "12 cm",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Drawing both diagonals makes two triangles\" is wrong: two diagonals split a parallelogram into four triangles. Only the pairs of opposite triangles (e.g. AMB and CMD) are congruent by AAS."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Their other angles match because parallel lines make equal alternate angles\" is vague. It should say that the angles each triangle makes with the diagonal are equal alternate angles. The card also never names the congruence test for the first pair of triangles."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct with single answers (7 cm and 12 cm). The card wrongly says drawing both diagonals makes two triangles (it makes four, in congruent opposite pairs), and its alternate-angles step is vaguely worded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Drawing both diagonals makes two triangles\" is wrong: two diagonals split a parallelogram into four triangles. Only the pairs of opposite triangles (e.g. AMB and CMD) are congruent by AAS.",
+  "Card, wording: \"Their other angles match because parallel lines make equal alternate angles\" is vague. It should say that the angles each triangle makes with the diagonal are equal alternate angles. The card also never names the congruence test for the first pair of triangles."
+ ],
+ "proposal": {
+  "title": "Properties of quadrilaterals",
+  "card": [
+   "A parallelogram has two pairs of parallel sides. In parallelogram ABCD, diagonal AC splits it into triangles ABC and CDA.",
+   "The triangles share side AC. Since AB ∥ DC and AD ∥ BC, the angles each triangle makes with AC are equal alternate angles. So the triangles are congruent by AAS.",
+   "Matching sides of congruent triangles are equal, so AB = CD and AD = BC. For example, if AB = 5 cm, then CD = 5 cm.",
+   "Both diagonals together make four triangles. Opposite triangles, such as AMB and CMD, are congruent by AAS, so the diagonals bisect each other: they cut each other in half."
+  ],
+  "remember": "Congruent triangles inside a parallelogram explain why its opposite sides are equal and its diagonals bisect each other.",
+  "a": {
+   "q": "Parallelogram ABCD has AB = 7 cm and BC = 4 cm. What is the length of CD?",
+   "opts": [
+    "7 cm",
+    "4 cm",
+    "11 cm",
+    "3 cm"
+   ],
+   "why": "CD is opposite AB, and opposite sides of a parallelogram are equal, so CD = 7 cm. 4 cm is wrong because that is the length of BC, a neighbouring side.",
+   "clue": "Which side is opposite CD?"
+  },
+  "b": {
+   "d": 2,
+   "q": "The diagonals of parallelogram PQRS meet at M. PM is 6 cm. What is the length of the whole diagonal PR?",
+   "opts": [
+    "12 cm",
+    "6 cm",
+    "3 cm",
+    "18 cm"
+   ],
+   "why": "The diagonals bisect each other, so M is the midpoint of PR. PR = 6 + 6 = 12 cm. Giving 6 cm forgets that PM is only half of the diagonal.",
+   "clue": "Bisect means cut in half."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "7 cm",
+    "also_right": []
+   },
+   "b": {
+    "best": "12 cm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Drawing both diagonals makes two triangles\" is wrong: two diagonals split a parallelogram into four triangles. Only the pairs of opposite triangles (e.g. AMB and CMD) are congruent by AAS."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Their other angles match because parallel lines make equal alternate angles\" is vague. It should say that the angles each triangle makes with the diagonal are equal alternate angles. The card also never names the congruence test for the first pair of triangles."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Drawing both diagonals makes two triangles\" is wrong: two diagonals split a parallelogram into four triangles. Only the pairs of opposite triangles (e.g. AMB and CMD) are congruent by AAS.",
+   "Card, wording: \"Their other angles match because parallel lines make equal alternate angles\" is vague. It should say that the angles each triangle makes with the diagonal are equal alternate angles. The card also never names the congruence test for the first pair of triangles."
+  ]
+ },
+ "final": {
+  "title": "Properties of quadrilaterals",
+  "card": [
+   "A parallelogram has two pairs of parallel sides. In parallelogram ABCD, diagonal AC splits it into triangles ABC and CDA.",
+   "The triangles share side AC. Since AB ∥ DC and AD ∥ BC, the angles each triangle makes with AC are equal alternate angles. So the triangles are congruent by AAS.",
+   "Matching sides of congruent triangles are equal, so AB = CD and AD = BC. For example, if AB = 5 cm, then CD = 5 cm.",
+   "Both diagonals together make four triangles. Opposite triangles, such as AMB and CMD, are congruent by AAS, so the diagonals bisect each other: they cut each other in half."
+  ],
+  "remember": "Congruent triangles inside a parallelogram explain why its opposite sides are equal and its diagonals bisect each other.",
+  "a": {
+   "q": "Parallelogram ABCD has AB = 7 cm and BC = 4 cm. What is the length of CD?",
+   "opts": [
+    "7 cm",
+    "4 cm",
+    "11 cm",
+    "3 cm"
+   ],
+   "why": "CD is opposite AB, and opposite sides of a parallelogram are equal, so CD = 7 cm. 4 cm is wrong because that is the length of BC, a neighbouring side.",
+   "clue": "Which side is opposite CD?"
+  },
+  "b": {
+   "d": 2,
+   "q": "The diagonals of parallelogram PQRS meet at M. PM is 6 cm. What is the length of the whole diagonal PR?",
+   "opts": [
+    "12 cm",
+    "6 cm",
+    "3 cm",
+    "18 cm"
+   ],
+   "why": "The diagonals bisect each other, so M is the midpoint of PR. PR = 6 + 6 = 12 cm. Giving 6 cm forgets that PM is only half of the diagonal.",
+   "clue": "Bisect means cut in half."
+  }
+ },
+ "cleared_by": "recheck"
+}

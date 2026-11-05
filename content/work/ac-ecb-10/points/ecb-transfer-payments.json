@@ -1,0 +1,182 @@
+{
+ "id": "ecb-transfer-payments",
+ "title": "Transfer payments",
+ "brief": "73d1630dce4b",
+ "shortlist": [
+  [
+   "eco-government-spending",
+   0.253
+  ],
+  [
+   "e-bop",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:20Z write: failed the content check, writing again",
+  "2026-11-04T10:07:56Z write: done (still fails the content check)",
+  "2026-11-04T10:10:47Z check: flagged",
+  "2026-11-04T10:14:00Z fix: suggested",
+  "2026-11-04T17:58:49Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01572,
+  "check": 0.01215,
+  "fix": 0.01573
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, eco-government-spending, is broader because it covers current and capital spending as well as transfer payments, and its questions test those other categories, so it does not fit a point about transfer payments alone.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Transfer payments",
+  "card": [
+   "A transfer payment is money the government pays to people who need support. The person pays nothing back and does not provide a good or service in return.",
+   "Examples in Australia are the Age Pension, Youth Allowance and JobSeeker Payment. Each is paid to people in a particular situation, such as older age, study or looking for work.",
+   "Payments are usually paid for from taxes. Money moves from the government's budget to households, so those households have more income to spend.",
+   "Many payments are means tested. This means a person with a higher income or more assets may get a smaller payment or none. This aims to direct help to people who need it most."
+  ],
+  "remember": "Transfer payments move money from the government to people who need support, with nothing provided in return.",
+  "a": {
+   "q": "Which of these is a transfer payment?",
+   "opts": [
+    "The Age Pension paid to a retired person",
+    "Wages paid to a nurse in a public hospital",
+    "Interest paid on a bank savings account",
+    "A fee paid to a tutor for maths lessons"
+   ],
+   "why": "The Age Pension is money the government pays to a person who needs support, with no work or product given in return. Wages for a public hospital nurse come from the government too, but they are payment for work, so they are not a transfer payment.",
+   "clue": "Which payment is made with nothing supplied in return?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam is 19 and studies full time. He gets Youth Allowance from the government. Why is this a transfer payment?",
+   "opts": [
+    "He receives government money without providing work for it",
+    "He pays tax on it, so the money goes back to the government",
+    "He earns it by studying, which is a service to the government",
+    "It is paid by his university for the courses he completes"
+   ],
+   "why": "Youth Allowance is government money paid to a person who needs support, and Liam does not provide a good or service in return. Studying may be required to qualify, but it is not work sold to the government, so it does not make the payment a wage.",
+   "clue": "Is the government buying anything from Liam?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "ecb-transfer-paymentsb option is 61 characters: He earns it by studying, which is a service to the government"
+ ],
+ "check": {
+  "a": {
+   "best": "The Age Pension paid to a retired person",
+   "also_right": []
+  },
+  "b": {
+   "best": "He receives government money without providing work for it",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: ecb-transfer-paymentsb option is 61 characters: He earns it by studying, which is a service to the government"
+ ],
+ "proposal": {
+  "title": "Transfer payments",
+  "card": [
+   "A transfer payment is money the government pays to people who need support. The person pays nothing back and does not provide a good or service in return.",
+   "Examples in Australia are the Age Pension, Youth Allowance and JobSeeker Payment. Each is paid to people in a particular situation, such as older age, study or looking for work.",
+   "Payments are usually paid for from taxes. Money moves from the government's budget to households, so those households have more income to spend.",
+   "Many payments are means tested. This means a person with a higher income or more assets may get a smaller payment or none. This aims to direct help to people who need it most."
+  ],
+  "remember": "Transfer payments move money from the government to people who need support, with nothing provided in return.",
+  "a": {
+   "q": "Which of these is a transfer payment?",
+   "opts": [
+    "The Age Pension paid to a retired person",
+    "Wages paid to a nurse in a public hospital",
+    "Interest paid on a bank savings account",
+    "A fee paid to a tutor for maths lessons"
+   ],
+   "why": "The Age Pension is money the government pays to a person who needs support, with no work or product given in return. Wages for a public hospital nurse come from the government too, but they are payment for work, so they are not a transfer payment.",
+   "clue": "Which payment is made with nothing supplied in return?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam is 19 and studies full time. He gets Youth Allowance from the government. Why is this a transfer payment?",
+   "opts": [
+    "He receives government money without providing work for it",
+    "He pays tax on it, so the money goes back to the government",
+    "He earns it by studying, which is work for the government",
+    "It is paid by his university for the courses he completes"
+   ],
+   "why": "Youth Allowance is government money paid to a person who needs support, and Liam does not provide a good or service in return. Studying may be required to qualify, but it is not work sold to the government, so it does not make the payment a wage.",
+   "clue": "Is the government buying anything from Liam?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:49Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: ecb-transfer-paymentsb option is 61 characters: He earns it by studying, which is a service to the government"
+  ]
+ },
+ "final": {
+  "title": "Transfer payments",
+  "card": [
+   "A transfer payment is money the government pays to people who need support. The person pays nothing back and does not provide a good or service in return.",
+   "Examples in Australia are the Age Pension, Youth Allowance and JobSeeker Payment. Each is paid to people in a particular situation, such as older age, study or looking for work.",
+   "Payments are usually paid for from taxes. Money moves from the government's budget to households, so those households have more income to spend.",
+   "Many payments are means tested. This means a person with a higher income or more assets may get a smaller payment or none. This aims to direct help to people who need it most."
+  ],
+  "remember": "Transfer payments move money from the government to people who need support, with nothing provided in return.",
+  "a": {
+   "q": "Which of these is a transfer payment?",
+   "opts": [
+    "The Age Pension paid to a retired person",
+    "Wages paid to a nurse in a public hospital",
+    "Interest paid on a bank savings account",
+    "A fee paid to a tutor for maths lessons"
+   ],
+   "why": "The Age Pension is money the government pays to a person who needs support, with no work or product given in return. Wages for a public hospital nurse come from the government too, but they are payment for work, so they are not a transfer payment.",
+   "clue": "Which payment is made with nothing supplied in return?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam is 19 and studies full time. He gets Youth Allowance from the government. Why is this a transfer payment?",
+   "opts": [
+    "He receives government money without providing work for it",
+    "He pays tax on it, so the money goes back to the government",
+    "He earns it by studying, which is work for the government",
+    "It is paid by his university for the courses he completes"
+   ],
+   "why": "Youth Allowance is government money paid to a person who needs support, and Liam does not provide a good or service in return. Studying may be required to qualify, but it is not work sold to the government, so it does not make the payment a wage.",
+   "clue": "Is the government buying anything from Liam?"
+  }
+ },
+ "cleared_by": "auto"
+}

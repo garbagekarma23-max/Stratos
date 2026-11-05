@@ -1,0 +1,376 @@
+{
+ "id": "eng-spelling-patterns-from-other",
+ "title": "Spelling patterns from other languages",
+ "brief": "555a69916d12",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:27Z new, write",
+  "2026-11-04T09:36:48Z write: done",
+  "2026-11-04T09:46:56Z check: flagged",
+  "2026-11-04T09:58:22Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b other)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00611,
+  "check": 0.0105,
+  "fix": 0.01665,
+  "recheck": 0.01017
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue asks 'Which language wrote this sound with the letter chi?', and only the right option mentions chi, so a student can match the word without knowing the idea.",
+ "rejected": {
+  "title": "Spelling patterns from other languages",
+  "card": [
+   "English has borrowed words from many languages. Borrowed words often keep the spelling patterns of the language they came from.",
+   [
+    "French",
+    "endings such as -et in ballet and -que in unique. In these words the final letters are not sounded as they usually would be in English."
+   ],
+   [
+    "Greek",
+    "many words with ch said as k, such as chorus and chaos. Greek wrote this sound with the letter chi, which came into English, mostly through Latin, as ch."
+   ],
+   "Knowing where a word came from helps you spell it. A pattern that looks odd in English may be normal in the language it was borrowed from."
+  ],
+  "remember": "Odd spellings often come from the language a word was borrowed from.",
+  "a": {
+   "q": "Why does the word \"unique\" end in -que?",
+   "opts": [
+    "It kept the spelling it had in French",
+    "It was spelt that way by mistake in English",
+    "It is a Greek word with a silent ending",
+    "It follows the usual English rule for endings"
+   ],
+   "why": "English borrowed unique from French and kept the French -que ending. It is not a usual English pattern, so it is not an English rule.",
+   "clue": "Think about which language gave English this ending."
+  },
+  "b": {
+   "d": 2,
+   "q": "Layla notices that chorus has ch said as k. What is the best explanation for this spelling?",
+   "opts": [
+    "It came from Greek, whose letter chi became ch in English",
+    "It came from French, whose letters ch are said as k",
+    "It is a spelling mistake that spread through English",
+    "It is a modern English word with no borrowed origin"
+   ],
+   "why": "Chorus came from Greek, which wrote this k sound with the letter chi. English spells chi as ch but keeps the k sound. French is the tempting choice, but French ch is usually said as sh, not k.",
+   "clue": "Which language wrote this sound with the letter chi?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue asks 'Which language wrote this sound with the letter chi?', and only the right option mentions chi, so a student can match the word without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Spelling patterns from other languages",
+     "card": [
+      "English has borrowed words from many languages. Borrowed words often keep the spelling patterns of the language they came from.",
+      [
+       "French",
+       "endings such as -et in ballet and -que in unique. In these words the final letters are not sounded as they usually would be in English."
+      ],
+      "Other languages leave patterns too. Many English words with ch said as k, such as chorus and chaos, came from Greek.",
+      "Knowing where a word came from helps you spell it. A pattern that looks odd in English may be normal in the language it was borrowed from."
+     ],
+     "remember": "Odd spellings often come from the language a word was borrowed from.",
+     "a": {
+      "q": "Why does the word \"unique\" end in -que?",
+      "opts": [
+       "It kept the spelling it had in French",
+       "It was spelt that way by mistake in English",
+       "It is a Greek word with a silent ending",
+       "It follows the usual English rule for endings"
+      ],
+      "why": "English borrowed unique from French and kept the French -que ending. It is not a usual English pattern, so it is not an English rule.",
+      "clue": "Think about which language gave English this ending."
+     },
+     "b": {
+      "d": 2,
+      "q": "Layla notices that chorus has ch said as k. What is the best explanation for this spelling?",
+      "opts": [
+       "The word came from Greek, where ch had this sound",
+       "The word came from French, where ch is said as k",
+       "The word is a mistake that spread in English",
+       "The word is a modern invention with no origin"
+      ],
+      "why": "Chorus came from Greek, and English kept the ch spelling said as k. French ch is usually said as sh, so French is the tempting but wrong choice.",
+      "clue": "The card links this ch sound to one language."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It kept the spelling it had in French",
+      "also_right": []
+     },
+     "b": {
+      "best": "The word came from Greek, where ch had this sound",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option says Greek is 'where ch had this sound', but Greek does not use the letters ch. It wrote the letter chi (χ), which came into English, mostly through Latin, as ch. Better: 'The word came from Greek, whose letter chi is written ch in English and said as k.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and answers are accurate. One small issue: question b's right option implies Greek itself spelt the sound ch, when Greek used the letter chi, which English writes as ch."
+    },
+    "flags": [
+     "Question b, wording: The right option says Greek is 'where ch had this sound', but Greek does not use the letters ch. It wrote the letter chi (χ), which came into English, mostly through Latin, as ch. Better: 'The word came from Greek, whose letter chi is written ch in English and said as k.'"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Spelling patterns from other languages",
+     "card": [
+      "English has borrowed words from many languages. Borrowed words often keep the spelling patterns of the language they came from.",
+      [
+       "French",
+       "endings such as -et in ballet and -que in unique. In these words the final letters are not sounded as they usually would be in English."
+      ],
+      [
+       "Greek",
+       "many words with ch said as k, such as chorus and chaos. Greek wrote this sound with the letter chi, which came into English, mostly through Latin, as ch."
+      ],
+      "Knowing where a word came from helps you spell it. A pattern that looks odd in English may be normal in the language it was borrowed from."
+     ],
+     "remember": "Odd spellings often come from the language a word was borrowed from.",
+     "a": {
+      "q": "Why does the word \"unique\" end in -que?",
+      "opts": [
+       "It kept the spelling it had in French",
+       "It was spelt that way by mistake in English",
+       "It is a Greek word with a silent ending",
+       "It follows the usual English rule for endings"
+      ],
+      "why": "English borrowed unique from French and kept the French -que ending. It is not a usual English pattern, so it is not an English rule.",
+      "clue": "Think about which language gave English this ending."
+     },
+     "b": {
+      "d": 2,
+      "q": "Layla notices that chorus has ch said as k. What is the best explanation for this spelling?",
+      "opts": [
+       "It came from Greek, whose letter chi became ch in English",
+       "It came from French, whose letters ch are said as k",
+       "It is a spelling mistake that spread through English",
+       "It is a modern English word with no borrowed origin"
+      ],
+      "why": "Chorus came from Greek, which wrote this k sound with the letter chi. English spells chi as ch but keeps the k sound. French is the tempting choice, but French ch is usually said as sh, not k.",
+      "clue": "Which language wrote this sound with the letter chi?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It kept the spelling it had in French",
+       "also_right": []
+      },
+      "b": {
+       "best": "It came from Greek, whose letter chi became ch in English",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue asks 'Which language wrote this sound with the letter chi?', and only the right option mentions chi, so a student can match the word without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts on the card and in both questions are correct. One minor problem: question b's clue names 'chi', which only the right option contains, so it gives the answer away."
+     },
+     "flags": [
+      "Question b, other: The clue asks 'Which language wrote this sound with the letter chi?', and only the right option mentions chi, so a student can match the word without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Spelling patterns from other languages",
+    "card": [
+     "English has borrowed words from many languages. Borrowed words often keep the spelling patterns of the language they came from.",
+     [
+      "French",
+      "endings such as -et in ballet and -que in unique. In these words the final letters are not sounded as they usually would be in English."
+     ],
+     [
+      "Greek",
+      "many words with ch said as k, such as chorus and chaos. Greek wrote this sound with the letter chi, which came into English, mostly through Latin, as ch."
+     ],
+     "Knowing where a word came from helps you spell it. A pattern that looks odd in English may be normal in the language it was borrowed from."
+    ],
+    "remember": "Odd spellings often come from the language a word was borrowed from.",
+    "a": {
+     "q": "What explains the -que ending of the word \"unique\"?",
+     "opts": [
+      "It kept the spelling it had in French",
+      "It was spelt that way by mistake in English",
+      "It is a Greek word with a silent ending",
+      "It follows the usual English rule for endings"
+     ],
+     "why": "English borrowed unique from French and kept the French -que ending. It is not a usual English pattern, so it is not an English rule.",
+     "clue": "Where did English get this word from?"
+    },
+    "b": {
+     "d": 2,
+     "q": "Layla notices that the ch in chorus is said as k. What best explains this spelling?",
+     "opts": [
+      "It came from Greek, which wrote this sound as chi",
+      "It came from French, which says ch as k",
+      "It is a spelling mistake that spread through English",
+      "It is a modern English word with no borrowed origin"
+     ],
+     "why": "Chorus came from Greek, which wrote this k sound with the letter chi. English spells chi as ch but keeps the k sound. French is the tempting choice, but French ch is usually said as sh, not k.",
+     "clue": "Chaos has the same pattern. Which language did both words come from?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It kept the spelling it had in French",
+     "also_right": []
+    },
+    "b": {
+     "best": "It came from Greek, which wrote this sound as chi",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Spelling patterns from other languages",
+  "card": [
+   "English has borrowed words from many languages. Borrowed words often keep the spelling patterns of the language they came from.",
+   [
+    "French",
+    "endings such as -et in ballet and -que in unique. In these words the final letters are not sounded as they usually would be in English."
+   ],
+   [
+    "Greek",
+    "many words with ch said as k, such as chorus and chaos. Greek wrote this sound with the letter chi, which came into English, mostly through Latin, as ch."
+   ],
+   "Knowing where a word came from helps you spell it. A pattern that looks odd in English may be normal in the language it was borrowed from."
+  ],
+  "remember": "Odd spellings often come from the language a word was borrowed from.",
+  "a": {
+   "q": "What explains the -que ending of the word \"unique\"?",
+   "opts": [
+    "It kept the spelling it had in French",
+    "It was spelt that way by mistake in English",
+    "It is a Greek word with a silent ending",
+    "It follows the usual English rule for endings"
+   ],
+   "why": "English borrowed unique from French and kept the French -que ending. It is not a usual English pattern, so it is not an English rule.",
+   "clue": "Where did English get this word from?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Layla notices that the ch in chorus is said as k. What best explains this spelling?",
+   "opts": [
+    "It came from Greek, which wrote this sound as chi",
+    "It came from French, which says ch as k",
+    "It is a spelling mistake that spread through English",
+    "It is a modern English word with no borrowed origin"
+   ],
+   "why": "Chorus came from Greek, which wrote this k sound with the letter chi. English spells chi as ch but keeps the k sound. French is the tempting choice, but French ch is usually said as sh, not k.",
+   "clue": "Chaos has the same pattern. Which language did both words come from?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It kept the spelling it had in French",
+   "also_right": []
+  },
+  "b": {
+   "best": "It came from Greek, which wrote this sound as chi",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Spelling patterns from other languages",
+  "card": [
+   "English has borrowed words from many languages. Borrowed words often keep the spelling patterns of the language they came from.",
+   [
+    "French",
+    "endings such as -et in ballet and -que in unique. In these words the final letters are not sounded as they usually would be in English."
+   ],
+   [
+    "Greek",
+    "many words with ch said as k, such as chorus and chaos. Greek wrote this sound with the letter chi, which came into English, mostly through Latin, as ch."
+   ],
+   "Knowing where a word came from helps you spell it. A pattern that looks odd in English may be normal in the language it was borrowed from."
+  ],
+  "remember": "Odd spellings often come from the language a word was borrowed from.",
+  "a": {
+   "q": "What explains the -que ending of the word \"unique\"?",
+   "opts": [
+    "It kept the spelling it had in French",
+    "It was spelt that way by mistake in English",
+    "It is a Greek word with a silent ending",
+    "It follows the usual English rule for endings"
+   ],
+   "why": "English borrowed unique from French and kept the French -que ending. It is not a usual English pattern, so it is not an English rule.",
+   "clue": "Where did English get this word from?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Layla notices that the ch in chorus is said as k. What best explains this spelling?",
+   "opts": [
+    "It came from Greek, which wrote this sound as chi",
+    "It came from French, which says ch as k",
+    "It is a spelling mistake that spread through English",
+    "It is a modern English word with no borrowed origin"
+   ],
+   "why": "Chorus came from Greek, which wrote this k sound with the letter chi. English spells chi as ch but keeps the k sound. French is the tempting choice, but French ch is usually said as sh, not k.",
+   "clue": "Chaos has the same pattern. Which language did both words come from?"
+  }
+ },
+ "checked_by": "claude-code"
+}

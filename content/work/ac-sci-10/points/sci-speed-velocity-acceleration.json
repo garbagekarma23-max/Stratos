@@ -1,0 +1,480 @@
+{
+ "id": "sci-speed-velocity-acceleration",
+ "title": "Speed, velocity and acceleration",
+ "brief": "fe7129fcb380",
+ "shortlist": [
+  [
+   "phys-displacement-velocity-acceleration",
+   0.36
+  ],
+  [
+   "phys-motion-graphs",
+   0.263
+  ],
+  [
+   "phys-equations-motion",
+   0.263
+  ],
+  [
+   "mat-acceleration-different-forms",
+   0.2
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:11Z write: done",
+  "2026-11-04T09:58:32Z check: flagged",
+  "2026-11-04T10:08:05Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00472,
+  "check": 0.01017,
+  "fix": 0.0149,
+  "recheck": 0.00859
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, phys-displacement-velocity-acceleration, is written for Victorian Units 1 and 2 and centres on displacement, average velocity and the distance-displacement distinction, and it never defines speed as distance over time, so it is broader and at a higher depth than this Year 10 point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Speed, velocity and acceleration",
+  "card": [
+   [
+    "Speed",
+    "how far an object travels in a given time. Speed = distance ÷ time, so 300 m in 60 s is 5 m/s."
+   ],
+   [
+    "Velocity",
+    "speed in a given direction, such as 5 m/s north. Speed has a size only. Velocity has a size and a direction."
+   ],
+   [
+    "Acceleration",
+    "how quickly velocity changes. Acceleration = change in velocity ÷ time taken, measured in m/s²."
+   ],
+   "Velocity changes if the speed changes, the direction changes, or both. So an object moving at a steady speed around a bend is accelerating."
+  ],
+  "remember": "Velocity is speed with a direction. Acceleration is how fast velocity changes.",
+  "a": {
+   "q": "Which of these gives a velocity, not just a speed?",
+   "opts": [
+    "12 m/s east",
+    "12 m/s",
+    "12 m in 1 s",
+    "12 m/s²"
+   ],
+   "why": "Velocity needs a size and a direction, and only 12 m/s east gives both. 12 m/s is a speed because it has no direction. 12 m/s² is a unit of acceleration.",
+   "clue": "Look for the option that says which way."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cyclist in Hobart rides a bend at a steady 8 m/s. Her direction changes the whole way round. What is true of her motion?",
+   "opts": [
+    "Her velocity changes, so she is accelerating",
+    "Her velocity is steady, so she is not accelerating",
+    "Her speed changes, so she is accelerating",
+    "Her acceleration is zero, as her speed is steady"
+   ],
+   "why": "Velocity includes direction, so a change in direction is a change in velocity. That means she is accelerating even though her speed stays at 8 m/s. Steady speed alone does not mean steady velocity.",
+   "clue": "Does velocity depend on direction as well as speed?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "12 m/s east",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her velocity changes, so she is accelerating",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for the option that says which way' gives the answer away. Only one option includes a direction, so a student can pick it without understanding velocity."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) calls 12 m/s² 'a unit of acceleration'. It is a value of acceleration; the unit is m/s². The why also never explains why '12 m in 1 s' is wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Question a's clue all but names the answer, and its why wrongly calls 12 m/s² a unit rather than a value of acceleration."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Look for the option that says which way' gives the answer away. Only one option includes a direction, so a student can pick it without understanding velocity.",
+  "Question a, fact: Why (a) calls 12 m/s² 'a unit of acceleration'. It is a value of acceleration; the unit is m/s². The why also never explains why '12 m in 1 s' is wrong."
+ ],
+ "proposal": {
+  "title": "Speed, velocity and acceleration",
+  "card": [
+   [
+    "Speed",
+    "how far an object travels in a given time. Speed = distance ÷ time, so 300 m in 60 s is 5 m/s."
+   ],
+   [
+    "Velocity",
+    "speed in a given direction, such as 5 m/s north. Speed has a size only. Velocity has a size and a direction, and both use the unit m/s."
+   ],
+   [
+    "Acceleration",
+    "how quickly velocity changes. Acceleration = change in velocity ÷ time taken, measured in m/s²."
+   ],
+   "Velocity changes if the speed changes, the direction changes, or both. So an object moving at a steady speed around a bend is accelerating."
+  ],
+  "remember": "Velocity is speed with a direction. Acceleration is how fast velocity changes.",
+  "a": {
+   "q": "Which of these gives a velocity, not just a speed?",
+   "opts": [
+    "12 m/s east",
+    "12 m/s",
+    "12 m east",
+    "12 m/s² east"
+   ],
+   "why": "Velocity needs a speed in m/s and a direction, and only 12 m/s east has both. 12 m/s is a speed with no direction. 12 m east is a distance, as it has no time in its unit, and 12 m/s² east is an acceleration, because m/s² is the unit of acceleration.",
+   "clue": "Check the unit as well as the direction."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cyclist in Hobart rides a bend at a steady 8 m/s. Her direction changes the whole way round. What is true of her motion?",
+   "opts": [
+    "Her velocity changes, so she is accelerating",
+    "Her velocity is steady, so she is not accelerating",
+    "Her speed changes, so she is accelerating",
+    "Her acceleration is zero, as her speed is steady"
+   ],
+   "why": "Velocity includes direction, so a change in direction is a change in velocity. That means she is accelerating even though her speed stays at 8 m/s. Steady speed alone does not mean steady velocity.",
+   "clue": "Does velocity depend on direction as well as speed?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "12 m/s east",
+    "also_right": []
+   },
+   "b": {
+    "best": "Her velocity changes, so she is accelerating",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for the option that says which way' gives the answer away. Only one option includes a direction, so a student can pick it without understanding velocity."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) calls 12 m/s² 'a unit of acceleration'. It is a value of acceleration; the unit is m/s². The why also never explains why '12 m in 1 s' is wrong."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Look for the option that says which way' gives the answer away. Only one option includes a direction, so a student can pick it without understanding velocity.",
+   "Question a, fact: Why (a) calls 12 m/s² 'a unit of acceleration'. It is a value of acceleration; the unit is m/s². The why also never explains why '12 m in 1 s' is wrong."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Speed, velocity and acceleration",
+  "card": [
+   [
+    "Speed",
+    "how far an object travels in a given time. Speed = distance ÷ time, so 300 m in 60 s is 5 m/s."
+   ],
+   [
+    "Velocity",
+    "speed in a given direction, such as 5 m/s north. Speed has a size only. Velocity has a size and a direction, and both use the unit m/s."
+   ],
+   [
+    "Acceleration",
+    "how quickly velocity changes. Acceleration = change in velocity ÷ time taken, measured in m/s²."
+   ],
+   "Velocity changes if the speed changes, the direction changes, or both. So an object moving at a steady speed around a bend is accelerating."
+  ],
+  "remember": "Velocity is speed with a direction. Acceleration is how fast velocity changes.",
+  "a": {
+   "q": "Which of these gives a velocity, not just a speed?",
+   "opts": [
+    "12 m/s east",
+    "12 m/s",
+    "12 m east",
+    "12 m/s² east"
+   ],
+   "why": "Velocity needs a speed in m/s and a direction, and only 12 m/s east has both. 12 m/s is a speed with no direction. 12 m east is a distance, as it has no time in its unit, and 12 m/s² east is an acceleration, because m/s² is the unit of acceleration.",
+   "clue": "Check the unit as well as the direction."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cyclist in Hobart rides a bend at a steady 8 m/s. Her direction changes the whole way round. What is true of her motion?",
+   "opts": [
+    "Her velocity changes, so she is accelerating",
+    "Her velocity is steady, so she is not accelerating",
+    "Her speed changes, so she is accelerating",
+    "Her acceleration is zero, as her speed is steady"
+   ],
+   "why": "Velocity includes direction, so a change in direction is a change in velocity. That means she is accelerating even though her speed stays at 8 m/s. Steady speed alone does not mean steady velocity.",
+   "clue": "Does velocity depend on direction as well as speed?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The new options in question a each have a direction, so the student must check the unit too, and why (a) no longer calls a value a unit.",
+   "item": "70d6008e9eaf0141",
+   "result": "decided",
+   "saved": {
+    "id": "sci-speed-velocity-acceleration",
+    "title": "Speed, velocity and acceleration",
+    "brief": "fe7129fcb380",
+    "shortlist": [
+     [
+      "phys-displacement-velocity-acceleration",
+      0.36
+     ],
+     [
+      "phys-motion-graphs",
+      0.263
+     ],
+     [
+      "phys-equations-motion",
+      0.263
+     ],
+     [
+      "mat-acceleration-different-forms",
+      0.2
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00025,
+     "write": 0.00472,
+     "check": 0.01017,
+     "fix": 0.0149,
+     "recheck": 0.00859
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, phys-displacement-velocity-acceleration, is written for Victorian Units 1 and 2 and centres on displacement, average velocity and the distance-displacement distinction, and it never defines speed as distance over time, so it is broader and at a higher depth than this Year 10 point.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Speed, velocity and acceleration",
+     "card": [
+      [
+       "Speed",
+       "how far an object travels in a given time. Speed = distance ÷ time, so 300 m in 60 s is 5 m/s."
+      ],
+      [
+       "Velocity",
+       "speed in a given direction, such as 5 m/s north. Speed has a size only. Velocity has a size and a direction."
+      ],
+      [
+       "Acceleration",
+       "how quickly velocity changes. Acceleration = change in velocity ÷ time taken, measured in m/s²."
+      ],
+      "Velocity changes if the speed changes, the direction changes, or both. So an object moving at a steady speed around a bend is accelerating."
+     ],
+     "remember": "Velocity is speed with a direction. Acceleration is how fast velocity changes.",
+     "a": {
+      "q": "Which of these gives a velocity, not just a speed?",
+      "opts": [
+       "12 m/s east",
+       "12 m/s",
+       "12 m in 1 s",
+       "12 m/s²"
+      ],
+      "why": "Velocity needs a size and a direction, and only 12 m/s east gives both. 12 m/s is a speed because it has no direction. 12 m/s² is a unit of acceleration.",
+      "clue": "Look for the option that says which way."
+     },
+     "b": {
+      "d": 3,
+      "q": "A cyclist in Hobart rides a bend at a steady 8 m/s. Her direction changes the whole way round. What is true of her motion?",
+      "opts": [
+       "Her velocity changes, so she is accelerating",
+       "Her velocity is steady, so she is not accelerating",
+       "Her speed changes, so she is accelerating",
+       "Her acceleration is zero, as her speed is steady"
+      ],
+      "why": "Velocity includes direction, so a change in direction is a change in velocity. That means she is accelerating even though her speed stays at 8 m/s. Steady speed alone does not mean steady velocity.",
+      "clue": "Does velocity depend on direction as well as speed?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "12 m/s east",
+      "also_right": []
+     },
+     "b": {
+      "best": "Her velocity changes, so she is accelerating",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Look for the option that says which way' gives the answer away. Only one option includes a direction, so a student can pick it without understanding velocity."
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "Why (a) calls 12 m/s² 'a unit of acceleration'. It is a value of acceleration; the unit is m/s². The why also never explains why '12 m in 1 s' is wrong."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both answers are correct. Question a's clue all but names the answer, and its why wrongly calls 12 m/s² a unit rather than a value of acceleration."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, other: The clue 'Look for the option that says which way' gives the answer away. Only one option includes a direction, so a student can pick it without understanding velocity.",
+     "Question a, fact: Why (a) calls 12 m/s² 'a unit of acceleration'. It is a value of acceleration; the unit is m/s². The why also never explains why '12 m in 1 s' is wrong."
+    ],
+    "proposal": {
+     "title": "Speed, velocity and acceleration",
+     "card": [
+      [
+       "Speed",
+       "how far an object travels in a given time. Speed = distance ÷ time, so 300 m in 60 s is 5 m/s."
+      ],
+      [
+       "Velocity",
+       "speed in a given direction, such as 5 m/s north. Speed has a size only. Velocity has a size and a direction, and both use the unit m/s."
+      ],
+      [
+       "Acceleration",
+       "how quickly velocity changes. Acceleration = change in velocity ÷ time taken, measured in m/s²."
+      ],
+      "Velocity changes if the speed changes, the direction changes, or both. So an object moving at a steady speed around a bend is accelerating."
+     ],
+     "remember": "Velocity is speed with a direction. Acceleration is how fast velocity changes.",
+     "a": {
+      "q": "Which of these gives a velocity, not just a speed?",
+      "opts": [
+       "12 m/s east",
+       "12 m/s",
+       "12 m east",
+       "12 m/s² east"
+      ],
+      "why": "Velocity needs a speed in m/s and a direction, and only 12 m/s east has both. 12 m/s is a speed with no direction. 12 m east is a distance, as it has no time in its unit, and 12 m/s² east is an acceleration, because m/s² is the unit of acceleration.",
+      "clue": "Check the unit as well as the direction."
+     },
+     "b": {
+      "d": 3,
+      "q": "A cyclist in Hobart rides a bend at a steady 8 m/s. Her direction changes the whole way round. What is true of her motion?",
+      "opts": [
+       "Her velocity changes, so she is accelerating",
+       "Her velocity is steady, so she is not accelerating",
+       "Her speed changes, so she is accelerating",
+       "Her acceleration is zero, as her speed is steady"
+      ],
+      "why": "Velocity includes direction, so a change in direction is a change in velocity. That means she is accelerating even though her speed stays at 8 m/s. Steady speed alone does not mean steady velocity.",
+      "clue": "Does velocity depend on direction as well as speed?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "12 m/s east",
+       "also_right": []
+      },
+      "b": {
+       "best": "Her velocity changes, so she is accelerating",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:13Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Look for the option that says which way' gives the answer away. Only one option includes a direction, so a student can pick it without understanding velocity."
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "Why (a) calls 12 m/s² 'a unit of acceleration'. It is a value of acceleration; the unit is m/s². The why also never explains why '12 m in 1 s' is wrong."
+      }
+     ],
+     "flags": [
+      "Question a, other: The clue 'Look for the option that says which way' gives the answer away. Only one option includes a direction, so a student can pick it without understanding velocity.",
+      "Question a, fact: Why (a) calls 12 m/s² 'a unit of acceleration'. It is a value of acceleration; the unit is m/s². The why also never explains why '12 m in 1 s' is wrong."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "0409e0ef339ea4c8"
+  }
+ ]
+}

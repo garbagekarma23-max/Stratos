@@ -1,0 +1,184 @@
+{
+ "id": "ecb-superannuation-guarantee",
+ "title": "The superannuation guarantee",
+ "brief": "9fe5d4aa47f4",
+ "shortlist": [
+  [
+   "mat-tax-superannuation",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: done",
+  "2026-11-04T09:58:20Z check: flagged",
+  "2026-11-04T10:07:56Z fix: suggested",
+  "2026-11-04T17:58:49Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00717,
+  "check": 0.01246,
+  "fix": 0.01877
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is a Victorian Maths card about tax and take-home pay, where super is only a side step, and its questions test tax rather than the superannuation guarantee, so it is broader than the new point and missing the worker's voluntary contributions.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The superannuation guarantee",
+  "card": [
+   "The superannuation guarantee (SG) is a law that requires employers to pay a set share of each worker's wages into a super fund. The share is set by law and has risen over time.",
+   "The employer pays this money on top of the wages. It is paid into the worker's super fund, not into their everyday bank account.",
+   "Workers can add their own money to super as well. These are called voluntary contributions, and they can build up savings faster.",
+   "The money stays in the fund until the worker reaches retirement age, with only a few exceptions. This helps make sure people have income when they stop work."
+  ],
+  "remember": "The law makes employers pay a share of wages into super, and workers can add more.",
+  "a": {
+   "q": "What does the superannuation guarantee require an employer to do?",
+   "opts": [
+    "Pay a set share of wages into the worker's super fund",
+    "Pay the worker a bonus every year into their bank account",
+    "Match every dollar the worker adds to their own super",
+    "Pay the Australian Government a share of each worker's wages"
+   ],
+   "why": "The guarantee is a law that sends a set share of wages to the worker's super fund. Matching the worker's own extra payments is not required, because those voluntary contributions are the worker's choice.",
+   "clue": "Think about where the employer's payment is sent."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya works at a bakery in Hobart. She asks her boss to pay her the super share as cash in her next pay instead. What is the best reply?",
+   "opts": [
+    "No, the law says it must go into her super fund",
+    "Yes, if she asks, because it is her money to spend",
+    "Yes, but only if she is under 25 years old",
+    "No, because super is paid only when workers add their own"
+   ],
+   "why": "The guarantee requires the employer to pay the set share into a super fund, so it cannot simply be swapped for cash. Priya's own extra payments are optional, but the employer's share does not depend on them.",
+   "clue": "Who decides whether the employer's share is paid, the law or the worker?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pay a set share of wages into the worker's super fund",
+   "also_right": []
+  },
+  "b": {
+   "best": "No, the law says it must go into her super fund",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The fourth bullet explains that super is kept until retirement so people have income when they stop work. That is the definition from point 1 (What superannuation is), taught again here rather than only mentioned."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound, and each has one clear right answer. One minor issue: the last card bullet repeats point 1's idea that super is kept until retirement to give income."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The fourth bullet explains that super is kept until retirement so people have income when they stop work. That is the definition from point 1 (What superannuation is), taught again here rather than only mentioned."
+ ],
+ "proposal": {
+  "title": "The superannuation guarantee",
+  "card": [
+   "The superannuation guarantee (SG) is a law that requires employers to pay a set share of each worker's wages into a super fund. The share is set by law and has risen over time.",
+   "The employer pays this money on top of the wages. It is paid into the worker's super fund, not into their everyday bank account.",
+   "Workers can add their own money to super as well. These are called voluntary contributions, and they can build up savings faster.",
+   "An employer cannot swap the SG for extra cash in a worker's pay. If an employer does not pay it in full and on time, the Australian Taxation Office (ATO) can make them pay it, plus extra charges."
+  ],
+  "remember": "The law makes employers pay a share of wages into super, and workers can add more.",
+  "a": {
+   "q": "What does the superannuation guarantee require an employer to do?",
+   "opts": [
+    "Pay a set share of wages into the worker's super fund",
+    "Pay the worker a bonus every year into their bank account",
+    "Match every dollar the worker adds to their own super",
+    "Pay the government a share of each worker's wages as tax"
+   ],
+   "why": "The guarantee is a law that sends a set share of wages to the worker's super fund. Matching the worker's own extra payments is not required, because those voluntary contributions are the worker's choice.",
+   "clue": "Think about where the employer's payment is sent."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya works at a bakery in Hobart. She asks her boss to pay her the super share as cash in her next pay instead. What is the best reply?",
+   "opts": [
+    "No, the law says it must go into her super fund",
+    "Yes, if she asks, because it is her money to spend",
+    "Yes, but only if she is under 25 years old",
+    "No, because super is paid only when workers add their own"
+   ],
+   "why": "The guarantee requires the employer to pay the set share into a super fund, so it cannot be swapped for cash. Priya's own extra payments are optional, but the employer's share does not depend on them.",
+   "clue": "Who decides whether the employer's share is paid, the law or the worker?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:49Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The fourth bullet explains that super is kept until retirement so people have income when they stop work. That is the definition from point 1 (What superannuation is), taught again here rather than only mentioned."
+   }
+  ],
+  "flags": [
+   "Card, other: The fourth bullet explains that super is kept until retirement so people have income when they stop work. That is the definition from point 1 (What superannuation is), taught again here rather than only mentioned."
+  ]
+ },
+ "final": {
+  "title": "The superannuation guarantee",
+  "card": [
+   "The superannuation guarantee (SG) is a law that requires employers to pay a set share of each worker's wages into a super fund. The share is set by law and has risen over time.",
+   "The employer pays this money on top of the wages. It is paid into the worker's super fund, not into their everyday bank account.",
+   "Workers can add their own money to super as well. These are called voluntary contributions, and they can build up savings faster.",
+   "An employer cannot swap the SG for extra cash in a worker's pay. If an employer does not pay it in full and on time, the Australian Taxation Office (ATO) can make them pay it, plus extra charges."
+  ],
+  "remember": "The law makes employers pay a share of wages into super, and workers can add more.",
+  "a": {
+   "q": "What does the superannuation guarantee require an employer to do?",
+   "opts": [
+    "Pay a set share of wages into the worker's super fund",
+    "Pay the worker a bonus every year into their bank account",
+    "Match every dollar the worker adds to their own super",
+    "Pay the government a share of each worker's wages as tax"
+   ],
+   "why": "The guarantee is a law that sends a set share of wages to the worker's super fund. Matching the worker's own extra payments is not required, because those voluntary contributions are the worker's choice.",
+   "clue": "Think about where the employer's payment is sent."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya works at a bakery in Hobart. She asks her boss to pay her the super share as cash in her next pay instead. What is the best reply?",
+   "opts": [
+    "No, the law says it must go into her super fund",
+    "Yes, if she asks, because it is her money to spend",
+    "Yes, but only if she is under 25 years old",
+    "No, because super is paid only when workers add their own"
+   ],
+   "why": "The guarantee requires the employer to pay the set share into a super fund, so it cannot be swapped for cash. Priya's own extra payments are optional, but the employer's share does not depend on them.",
+   "clue": "Who decides whether the employer's share is paid, the law or the worker?"
+  }
+ },
+ "cleared_by": "auto"
+}

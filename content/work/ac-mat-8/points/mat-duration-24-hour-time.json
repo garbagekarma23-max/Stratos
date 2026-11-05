@@ -1,0 +1,343 @@
+{
+ "id": "mat-duration-24-hour-time",
+ "title": "Duration and 24-hour time",
+ "brief": "d0d3f198945b",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:56Z write: done",
+  "2026-11-04T09:47:08Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00735,
+  "check": 0.00939,
+  "fix": 0.01655,
+  "recheck": 0.00936
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The clue 'Add 12 to the hour for a pm time' overgeneralises. The card says to add 12 only from 1 pm on, because 12:30 pm stays 1230. The clue still works for 7:05 pm, but it should say 'from 1 pm on' to match the card.",
+ "rejected": {
+  "title": "Duration and 24-hour time",
+  "card": [
+   "The 24-hour clock counts hours from 00 to 23 and is usually written with four digits. Midnight is 0000 and noon is 1200.",
+   "From 1:00 am to 12:59 pm, keep the hour and add a zero in front if needed: 3:45 am is 0345 and 12:30 pm is 1230. The 12 am hour is different. It becomes 00, so 12:20 am is 0020.",
+   "For pm times from 1:00 pm on, add 12 to the hour. So 3:45 pm is 1545. To go back, subtract 12 from the hour.",
+   "To find a duration, go to the next whole hour, then add the hours, then add the leftover minutes. From 1545 to 1810: 15 minutes to 1600, 2 hours to 1800, then 10 minutes. Total 2 hours 25 minutes."
+  ],
+  "remember": "Add 12 to pm hours from 1 pm on, and 12 am becomes 00. Find a duration in steps through the whole hours.",
+  "a": {
+   "q": "What is 7:05 pm in 24-hour time?",
+   "opts": [
+    "1905",
+    "0705",
+    "1705",
+    "1950"
+   ],
+   "why": "7 pm is 7 + 12 = 19, so 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+   "clue": "Add 12 to the hour for a pm time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A film at a cinema in Mount Gambier starts at 1650 and ends at 1905. How long does the film last?",
+   "opts": [
+    "2 hours 15 minutes",
+    "2 hours 55 minutes",
+    "2 hours 45 minutes",
+    "1 hour 55 minutes"
+   ],
+   "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+   "clue": "Go to the next whole hour first, then count on."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The clue 'Add 12 to the hour for a pm time' overgeneralises. The card says to add 12 only from 1 pm on, because 12:30 pm stays 1230. The clue still works for 7:05 pm, but it should say 'from 1 pm on' to match the card."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Duration and 24-hour time",
+     "card": [
+      "The 24-hour clock counts hours from 00 to 23 and is usually written with four digits. 3:45 am is 0345 and midnight is 0000.",
+      "For am times, keep the hour and add a zero in front if needed. 12:20 am is 0020. Noon is 1200, and 12:30 pm is 1230.",
+      "For pm times from 1:00 pm on, add 12 to the hour. So 3:45 pm is 1545. To go back, subtract 12 from the hour.",
+      "To find a duration, go to the next whole hour, then add the hours, then add the leftover minutes. From 1545 to 1810: 15 minutes to 1600, 2 hours to 1800, then 10 minutes. Total 2 hours 25 minutes."
+     ],
+     "remember": "Add 12 to pm hours from 1 pm on. Find a duration in steps through the whole hours.",
+     "a": {
+      "q": "What is 7:05 pm in 24-hour time?",
+      "opts": [
+       "1905",
+       "0705",
+       "1705",
+       "1950"
+      ],
+      "why": "7 pm is 7 + 12 = 19, so 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+      "clue": "Add 12 to the hour for a pm time."
+     },
+     "b": {
+      "d": 3,
+      "q": "A film at a cinema in Mount Gambier starts at 1650 and ends at 1905. How long does the film last?",
+      "opts": [
+       "2 hours 15 minutes",
+       "2 hours 55 minutes",
+       "2 hours 45 minutes",
+       "1 hour 55 minutes"
+      ],
+      "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+      "clue": "Go to the next whole hour first, then count on."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "1905",
+      "also_right": []
+     },
+     "b": {
+      "best": "2 hours 15 minutes",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "The card says 'For am times, keep the hour', then gives 12:20 am as 0020 straight after, where the hour is not kept but changes from 12 to 00. The 12 am exception is not stated as a rule, so students may wrongly write 12:20 am as 1220."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions and their explanations are correct. The card's am rule ('keep the hour') clashes with its own 12:20 am → 0020 example and needs the midnight-hour exception stated clearly."
+    },
+    "flags": [
+     "Card, wording: The card says 'For am times, keep the hour', then gives 12:20 am as 0020 straight after, where the hour is not kept but changes from 12 to 00. The 12 am exception is not stated as a rule, so students may wrongly write 12:20 am as 1220."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Duration and 24-hour time",
+     "card": [
+      "The 24-hour clock counts hours from 00 to 23 and is usually written with four digits. Midnight is 0000 and noon is 1200.",
+      "From 1:00 am to 12:59 pm, keep the hour and add a zero in front if needed: 3:45 am is 0345 and 12:30 pm is 1230. The 12 am hour is different. It becomes 00, so 12:20 am is 0020.",
+      "For pm times from 1:00 pm on, add 12 to the hour. So 3:45 pm is 1545. To go back, subtract 12 from the hour.",
+      "To find a duration, go to the next whole hour, then add the hours, then add the leftover minutes. From 1545 to 1810: 15 minutes to 1600, 2 hours to 1800, then 10 minutes. Total 2 hours 25 minutes."
+     ],
+     "remember": "Add 12 to pm hours from 1 pm on, and 12 am becomes 00. Find a duration in steps through the whole hours.",
+     "a": {
+      "q": "What is 7:05 pm in 24-hour time?",
+      "opts": [
+       "1905",
+       "0705",
+       "1705",
+       "1950"
+      ],
+      "why": "7 pm is 7 + 12 = 19, so 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+      "clue": "Add 12 to the hour for a pm time."
+     },
+     "b": {
+      "d": 3,
+      "q": "A film at a cinema in Mount Gambier starts at 1650 and ends at 1905. How long does the film last?",
+      "opts": [
+       "2 hours 15 minutes",
+       "2 hours 55 minutes",
+       "2 hours 45 minutes",
+       "1 hour 55 minutes"
+      ],
+      "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+      "clue": "Go to the next whole hour first, then count on."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "1905",
+       "also_right": []
+      },
+      "b": {
+       "best": "2 hours 15 minutes",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The clue 'Add 12 to the hour for a pm time' overgeneralises. The card says to add 12 only from 1 pm on, because 12:30 pm stays 1230. The clue still works for 7:05 pm, but it should say 'from 1 pm on' to match the card."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card's facts and both answers (1905 and 2 hours 15 minutes) are correct. One minor issue: the clue for question a says to add 12 for any pm time, which leaves out the card's 12 pm exception."
+     },
+     "flags": [
+      "Question a, wording: The clue 'Add 12 to the hour for a pm time' overgeneralises. The card says to add 12 only from 1 pm on, because 12:30 pm stays 1230. The clue still works for 7:05 pm, but it should say 'from 1 pm on' to match the card."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Duration and 24-hour time",
+    "card": [
+     "The 24-hour clock counts hours from 00 to 23 and is usually written with four digits. Midnight is 0000 and noon is 1200.",
+     "From 1:00 am to 12:59 pm, keep the hour and add a zero in front if needed: 3:45 am is 0345 and 12:30 pm is 1230. The 12 am hour is different. It becomes 00, so 12:20 am is 0020.",
+     "For pm times from 1:00 pm on, add 12 to the hour. So 3:45 pm is 1545. To go back, subtract 12 from the hour.",
+     "To find a duration, go to the next whole hour, then add the hours, then add the leftover minutes. From 1545 to 1810: 15 minutes to 1600, 2 hours to 1800, then 10 minutes. Total 2 hours 25 minutes."
+    ],
+    "remember": "Add 12 to pm hours from 1 pm on, and 12 am becomes 00. Find a duration in steps through the whole hours.",
+    "a": {
+     "q": "Write 7:05 pm as a 24-hour time.",
+     "opts": [
+      "1905",
+      "0705",
+      "1705",
+      "1950"
+     ],
+     "why": "7 pm is after 1 pm, so add 12: 7 + 12 = 19, and 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+     "clue": "From 1 pm on, add 12 to the hour."
+    },
+    "b": {
+     "d": 3,
+     "q": "A film in Mount Gambier begins at 1650 and finishes at 1905. What is its running time?",
+     "opts": [
+      "2 hours 15 minutes",
+      "2 hours 55 minutes",
+      "2 hours 45 minutes",
+      "1 hour 55 minutes"
+     ],
+     "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+     "clue": "Go to the next whole hour first, then count on."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "1905",
+     "also_right": []
+    },
+    "b": {
+     "best": "2 hours 15 minutes",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Duration and 24-hour time",
+  "card": [
+   "The 24-hour clock counts hours from 00 to 23 and is usually written with four digits. Midnight is 0000 and noon is 1200.",
+   "From 1:00 am to 12:59 pm, keep the hour and add a zero in front if needed: 3:45 am is 0345 and 12:30 pm is 1230. The 12 am hour is different. It becomes 00, so 12:20 am is 0020.",
+   "For pm times from 1:00 pm on, add 12 to the hour. So 3:45 pm is 1545. To go back, subtract 12 from the hour.",
+   "To find a duration, go to the next whole hour, then add the hours, then add the leftover minutes. From 1545 to 1810: 15 minutes to 1600, 2 hours to 1800, then 10 minutes. Total 2 hours 25 minutes."
+  ],
+  "remember": "Add 12 to pm hours from 1 pm on, and 12 am becomes 00. Find a duration in steps through the whole hours.",
+  "a": {
+   "q": "Write 7:05 pm as a 24-hour time.",
+   "opts": [
+    "1905",
+    "0705",
+    "1705",
+    "1950"
+   ],
+   "why": "7 pm is after 1 pm, so add 12: 7 + 12 = 19, and 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+   "clue": "From 1 pm on, add 12 to the hour."
+  },
+  "b": {
+   "d": 3,
+   "q": "A film in Mount Gambier begins at 1650 and finishes at 1905. What is its running time?",
+   "opts": [
+    "2 hours 15 minutes",
+    "2 hours 55 minutes",
+    "2 hours 45 minutes",
+    "1 hour 55 minutes"
+   ],
+   "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+   "clue": "Go to the next whole hour first, then count on."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1905",
+   "also_right": []
+  },
+  "b": {
+   "best": "2 hours 15 minutes",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Duration and 24-hour time",
+  "card": [
+   "The 24-hour clock counts hours from 00 to 23 and is usually written with four digits. Midnight is 0000 and noon is 1200.",
+   "From 1:00 am to 12:59 pm, keep the hour and add a zero in front if needed: 3:45 am is 0345 and 12:30 pm is 1230. The 12 am hour is different. It becomes 00, so 12:20 am is 0020.",
+   "For pm times from 1:00 pm on, add 12 to the hour. So 3:45 pm is 1545. To go back, subtract 12 from the hour.",
+   "To find a duration, go to the next whole hour, then add the hours, then add the leftover minutes. From 1545 to 1810: 15 minutes to 1600, 2 hours to 1800, then 10 minutes. Total 2 hours 25 minutes."
+  ],
+  "remember": "Add 12 to pm hours from 1 pm on, and 12 am becomes 00. Find a duration in steps through the whole hours.",
+  "a": {
+   "q": "Write 7:05 pm as a 24-hour time.",
+   "opts": [
+    "1905",
+    "0705",
+    "1705",
+    "1950"
+   ],
+   "why": "7 pm is after 1 pm, so add 12: 7 + 12 = 19, and 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+   "clue": "From 1 pm on, add 12 to the hour."
+  },
+  "b": {
+   "d": 3,
+   "q": "A film in Mount Gambier begins at 1650 and finishes at 1905. What is its running time?",
+   "opts": [
+    "2 hours 15 minutes",
+    "2 hours 55 minutes",
+    "2 hours 45 minutes",
+    "1 hour 55 minutes"
+   ],
+   "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+   "clue": "Go to the next whole hour first, then count on."
+  }
+ },
+ "checked_by": "claude-code"
+}

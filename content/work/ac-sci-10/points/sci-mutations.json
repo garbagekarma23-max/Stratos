@@ -1,0 +1,198 @@
+{
+ "id": "sci-mutations",
+ "title": "Mutations",
+ "brief": "e832be44f850",
+ "shortlist": [
+  [
+   "bio-causes-mutation",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:11Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:32Z write: done",
+  "2026-11-04T10:08:05Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (card other, a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.0049,
+  "check": 0.01236,
+  "fix": 0.01602
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers how mutations are caused at Year 12 depth, with enzymes, repair and mutagen questions, but it does not teach that most mutations have no effect or that some cause disorders such as cystic fibrosis, so it does not match this Year 10 point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Mutations",
+  "card": [
+   "A mutation is a change in the DNA sequence of a gene or chromosome. It can happen when DNA is copied before a cell divides and a mistake is made.",
+   "Radiation, such as ultraviolet light, and some chemicals can also damage DNA and cause mutations.",
+   "Most mutations have no effect on the organism. Some change a trait, and a few cause a genetic disorder, such as cystic fibrosis.",
+   "A mutation can only be passed to offspring if it is in a gamete, the cells used in sexual reproduction. Mutations in other body cells are not inherited."
+  ],
+  "remember": "A mutation is a change in DNA. Most do nothing, and only those in gametes can be inherited.",
+  "a": {
+   "q": "Which of these is a mutation?",
+   "opts": [
+    "A change in the DNA sequence of a gene",
+    "A change in which cells a body makes from DNA",
+    "A change in the number of cells in the body",
+    "A change in which alleles a parent passes on"
+   ],
+   "why": "A mutation is a change in the DNA itself. Parents passing on different alleles is normal inheritance, and no DNA has changed.",
+   "clue": "Look for a change to the DNA itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom gets a mutation in a skin cell from too much sun, and later has a child. What is most likely true of the mutation?",
+   "opts": [
+    "It is not passed on, as it is not in a gamete",
+    "It is passed on, as all mutations are inherited",
+    "It is passed on, as sunlight changes every cell",
+    "It is not passed on, as sunlight cannot cause mutations"
+   ],
+   "why": "Only mutations in gametes can be passed to offspring. A skin cell is not a gamete, so the child does not inherit it. Ultraviolet light can cause mutations, so the last option is wrong.",
+   "clue": "Which cells are used in sexual reproduction?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A change in the DNA sequence of a gene",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is not passed on, as it is not in a gamete",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines 'gamete' ('the cells used in sexual reproduction'). Gametes belong to point 2 (Mitosis and meiosis), so here the term should only be mentioned, not explained."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'A change in which cells a body makes from DNA' is unclear and hard to parse, which could confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers check out. The card re-explains 'gamete', which belongs to the meiosis point, and one distractor in question a is awkwardly worded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines 'gamete' ('the cells used in sexual reproduction'). Gametes belong to point 2 (Mitosis and meiosis), so here the term should only be mentioned, not explained.",
+  "Question a, wording: The distractor 'A change in which cells a body makes from DNA' is unclear and hard to parse, which could confuse students."
+ ],
+ "proposal": {
+  "title": "Mutations",
+  "card": [
+   "A mutation is a change in the DNA sequence of a gene or chromosome. It can happen when DNA is copied before a cell divides and a mistake is made.",
+   "Radiation, such as ultraviolet light, and some chemicals can also damage DNA and cause mutations.",
+   "Most mutations have no effect on the organism. Some change a trait, and a few cause a genetic disorder, such as cystic fibrosis.",
+   "A mutation can be passed to offspring only if it is in a gamete. Mutations in other body cells, such as skin cells, are not inherited."
+  ],
+  "remember": "A mutation is a change in DNA. Most do nothing, and only those in gametes can be inherited.",
+  "a": {
+   "q": "Which of these is a mutation?",
+   "opts": [
+    "A change in the DNA sequence of a gene",
+    "A new mix of alleles inherited from two parents",
+    "A change in the number of cells in the body",
+    "A change in a trait caused by diet or exercise"
+   ],
+   "why": "A mutation is a change in the DNA itself. A new mix of alleles from two parents is normal inheritance, and none of the DNA has changed.",
+   "clue": "Look for a change to the DNA itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom gets a mutation in a skin cell from too much sun, and later has a child. What is most likely true of the mutation?",
+   "opts": [
+    "It is not passed on, as it is not in a gamete",
+    "It is passed on, as all mutations are inherited",
+    "It is passed on, as sunlight changes every cell",
+    "It is not passed on, as sunlight cannot cause mutations"
+   ],
+   "why": "Only mutations in gametes can be passed to offspring. A skin cell is not a gamete, so the child does not inherit it. Ultraviolet light can cause mutations, so the last option is wrong.",
+   "clue": "Does the mutation reach the cells that can make a child?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines 'gamete' ('the cells used in sexual reproduction'). Gametes belong to point 2 (Mitosis and meiosis), so here the term should only be mentioned, not explained."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'A change in which cells a body makes from DNA' is unclear and hard to parse, which could confuse students."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines 'gamete' ('the cells used in sexual reproduction'). Gametes belong to point 2 (Mitosis and meiosis), so here the term should only be mentioned, not explained.",
+   "Question a, wording: The distractor 'A change in which cells a body makes from DNA' is unclear and hard to parse, which could confuse students."
+  ]
+ },
+ "final": {
+  "title": "Mutations",
+  "card": [
+   "A mutation is a change in the DNA sequence of a gene or chromosome. It can happen when DNA is copied before a cell divides and a mistake is made.",
+   "Radiation, such as ultraviolet light, and some chemicals can also damage DNA and cause mutations.",
+   "Most mutations have no effect on the organism. Some change a trait, and a few cause a genetic disorder, such as cystic fibrosis.",
+   "A mutation can be passed to offspring only if it is in a gamete. Mutations in other body cells, such as skin cells, are not inherited."
+  ],
+  "remember": "A mutation is a change in DNA. Most do nothing, and only those in gametes can be inherited.",
+  "a": {
+   "q": "Which of these is a mutation?",
+   "opts": [
+    "A change in the DNA sequence of a gene",
+    "A new mix of alleles inherited from two parents",
+    "A change in the number of cells in the body",
+    "A change in a trait caused by diet or exercise"
+   ],
+   "why": "A mutation is a change in the DNA itself. A new mix of alleles from two parents is normal inheritance, and none of the DNA has changed.",
+   "clue": "Look for a change to the DNA itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom gets a mutation in a skin cell from too much sun, and later has a child. What is most likely true of the mutation?",
+   "opts": [
+    "It is not passed on, as it is not in a gamete",
+    "It is passed on, as all mutations are inherited",
+    "It is passed on, as sunlight changes every cell",
+    "It is not passed on, as sunlight cannot cause mutations"
+   ],
+   "why": "Only mutations in gametes can be passed to offspring. A skin cell is not a gamete, so the child does not inherit it. Ultraviolet light can cause mutations, so the last option is wrong.",
+   "clue": "Does the mutation reach the cells that can make a child?"
+  }
+ },
+ "cleared_by": "auto"
+}

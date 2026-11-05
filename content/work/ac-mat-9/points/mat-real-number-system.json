@@ -1,0 +1,392 @@
+{
+ "id": "mat-real-number-system",
+ "title": "The real number system",
+ "brief": "4e663ad3ec7d",
+ "shortlist": [
+  [
+   "mat-number-systems-sets",
+   0.296
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:31Z write: failed the content check, writing again",
+  "2026-11-04T10:08:05Z write: done",
+  "2026-11-04T10:10:50Z check: flagged",
+  "2026-11-04T10:14:01Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01497,
+  "check": 0.00874,
+  "fix": 0.01218
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers the same number hierarchy but is broader, adding set operations and complex numbers, and it is pitched at Victorian Year 11 Units 1 and 2 rather than Year 9, so it would not fit this course as it stands.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The real number system",
+  "card": [
+   [
+    "Rational",
+    "a number that can be written as a fraction of two integers, such as 3/4 or −7. Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
+   ],
+   [
+    "Irrational",
+    "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are √5 and π."
+   ],
+   [
+    "Real",
+    "all the rational numbers and all the irrational numbers together. Every point on the number line is a real number."
+   ],
+   "The square root of a whole number is irrational unless the number is a perfect square. So √5 is irrational, but √9 = 3 is rational."
+  ],
+  "remember": "Real numbers are the rational numbers and the irrational numbers combined.",
+  "a": {
+   "q": "Which of these numbers is irrational?",
+   "opts": [
+    "√7",
+    "√16",
+    "0.125",
+    "0.666... repeating"
+   ],
+   "why": "√7 is not the root of a perfect square, so its decimal never ends or repeats. √16 = 4 is an integer. 0.125 ends, and 0.666... repeats, so both are rational.",
+   "clue": "Which one has a decimal that never ends and never repeats?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which list contains only rational numbers?",
+   "opts": [
+    "√25, 0.4, −3, 2/9",
+    "√10, 0.4, −3, 2/9",
+    "√25, π, −3, 2/9",
+    "√25, 0.4, −3, √11"
+   ],
+   "why": "√25 = 5, 0.4 ends and 2/9 is a fraction, so all four are rational. Each wrong list includes an irrational number: √10, π or √11. √25 is not irrational just because it has a root sign.",
+   "clue": "Work out each square root before you decide."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "√7",
+   "also_right": []
+  },
+  "b": {
+   "best": "√25, 0.4, −3, 2/9",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says '√7 is not the root of a perfect square', which is muddled. It should say that 7 is not a perfect square, matching the card's rule."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, with one clear answer each. The only issue is a small wording slip in why (a): it should say '7 is not a perfect square' rather than '√7 is not the root of a perfect square'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: Why (a) says '√7 is not the root of a perfect square', which is muddled. It should say that 7 is not a perfect square, matching the card's rule."
+ ],
+ "proposal": {
+  "title": "The real number system",
+  "card": [
+   [
+    "Rational",
+    "a number that can be written as a fraction of two integers, such as 3/4 or −7. Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
+   ],
+   [
+    "Irrational",
+    "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are √5 and π."
+   ],
+   [
+    "Real",
+    "all the rational numbers and all the irrational numbers together. Every point on the number line is a real number."
+   ],
+   "The square root of a whole number is irrational unless the number is a perfect square. So √5 is irrational, but √9 = 3 is rational."
+  ],
+  "remember": "Real numbers are the rational numbers and the irrational numbers combined.",
+  "a": {
+   "q": "Which of these numbers is irrational?",
+   "opts": [
+    "√7",
+    "√16",
+    "0.125",
+    "0.666... repeating"
+   ],
+   "why": "7 is not a perfect square, so √7 is irrational: its decimal never ends and never repeats. √16 = 4 is an integer. 0.125 ends and 0.666... repeats, so both are rational.",
+   "clue": "Which one has a decimal that never ends and never repeats?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which list contains only rational numbers?",
+   "opts": [
+    "√25, 0.4, −3, 2/9",
+    "√10, 0.4, −3, 2/9",
+    "√25, π, −3, 2/9",
+    "√25, 0.4, −3, √11"
+   ],
+   "why": "√25 = 5, 0.4 ends and 2/9 is a fraction, so all four are rational. Each wrong list includes an irrational number: √10, π or √11. √25 is not irrational just because it has a root sign.",
+   "clue": "Work out each square root before you decide."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says '√7 is not the root of a perfect square', which is muddled. It should say that 7 is not a perfect square, matching the card's rule."
+   }
+  ],
+  "flags": [
+   "Question a, wording: Why (a) says '√7 is not the root of a perfect square', which is muddled. It should say that 7 is not a perfect square, matching the card's rule."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "The real number system",
+  "card": [
+   [
+    "Rational",
+    "a number that can be written as a fraction of two integers, such as 3/4 or −7. Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
+   ],
+   [
+    "Irrational",
+    "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are √5 and π."
+   ],
+   [
+    "Real",
+    "all the rational numbers and all the irrational numbers together. Every point on the number line is a real number."
+   ],
+   "The square root of a whole number is irrational unless the number is a perfect square. So √5 is irrational, but √9 = 3 is rational."
+  ],
+  "remember": "Real numbers are the rational numbers and the irrational numbers combined.",
+  "a": {
+   "q": "Which of these numbers is irrational?",
+   "opts": [
+    "√7",
+    "√16",
+    "0.125",
+    "0.666... repeating"
+   ],
+   "why": "7 is not a perfect square, so √7 is irrational: its decimal never ends and never repeats. √16 = 4 is an integer. 0.125 ends and 0.666... repeats, so both are rational.",
+   "clue": "Which one has a decimal that never ends and never repeats?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which list contains only rational numbers?",
+   "opts": [
+    "√25, 0.4, −3, 2/9",
+    "√10, 0.4, −3, 2/9",
+    "√25, π, −3, 2/9",
+    "√25, 0.4, −3, √11"
+   ],
+   "why": "√25 = 5, 0.4 ends and 2/9 is a fraction, so all four are rational. Each wrong list includes an irrational number: √10, π or √11. √25 is not irrational just because it has a root sign.",
+   "clue": "Work out each square root before you decide."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix only rewords why (a) to say 7 is not a perfect square. Nothing else changes.",
+   "item": "edee33edf07101af",
+   "result": "decided",
+   "saved": {
+    "id": "mat-real-number-system",
+    "title": "The real number system",
+    "brief": "4e663ad3ec7d",
+    "shortlist": [
+     [
+      "mat-number-systems-sets",
+      0.296
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 3,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00018,
+     "write": 0.01497,
+     "check": 0.00874,
+     "fix": 0.01218
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point covers the same number hierarchy but is broader, adding set operations and complex numbers, and it is pitched at Victorian Year 11 Units 1 and 2 rather than Year 9, so it would not fit this course as it stands.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "The real number system",
+     "card": [
+      [
+       "Rational",
+       "a number that can be written as a fraction of two integers, such as 3/4 or −7. Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
+      ],
+      [
+       "Irrational",
+       "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are √5 and π."
+      ],
+      [
+       "Real",
+       "all the rational numbers and all the irrational numbers together. Every point on the number line is a real number."
+      ],
+      "The square root of a whole number is irrational unless the number is a perfect square. So √5 is irrational, but √9 = 3 is rational."
+     ],
+     "remember": "Real numbers are the rational numbers and the irrational numbers combined.",
+     "a": {
+      "q": "Which of these numbers is irrational?",
+      "opts": [
+       "√7",
+       "√16",
+       "0.125",
+       "0.666... repeating"
+      ],
+      "why": "√7 is not the root of a perfect square, so its decimal never ends or repeats. √16 = 4 is an integer. 0.125 ends, and 0.666... repeats, so both are rational.",
+      "clue": "Which one has a decimal that never ends and never repeats?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Which list contains only rational numbers?",
+      "opts": [
+       "√25, 0.4, −3, 2/9",
+       "√10, 0.4, −3, 2/9",
+       "√25, π, −3, 2/9",
+       "√25, 0.4, −3, √11"
+      ],
+      "why": "√25 = 5, 0.4 ends and 2/9 is a fraction, so all four are rational. Each wrong list includes an irrational number: √10, π or √11. √25 is not irrational just because it has a root sign.",
+      "clue": "Work out each square root before you decide."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "√7",
+      "also_right": []
+     },
+     "b": {
+      "best": "√25, 0.4, −3, 2/9",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "Why (a) says '√7 is not the root of a perfect square', which is muddled. It should say that 7 is not a perfect square, matching the card's rule."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are correct, with one clear answer each. The only issue is a small wording slip in why (a): it should say '7 is not a perfect square' rather than '√7 is not the root of a perfect square'."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: Why (a) says '√7 is not the root of a perfect square', which is muddled. It should say that 7 is not a perfect square, matching the card's rule."
+    ],
+    "proposal": {
+     "title": "The real number system",
+     "card": [
+      [
+       "Rational",
+       "a number that can be written as a fraction of two integers, such as 3/4 or −7. Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
+      ],
+      [
+       "Irrational",
+       "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are √5 and π."
+      ],
+      [
+       "Real",
+       "all the rational numbers and all the irrational numbers together. Every point on the number line is a real number."
+      ],
+      "The square root of a whole number is irrational unless the number is a perfect square. So √5 is irrational, but √9 = 3 is rational."
+     ],
+     "remember": "Real numbers are the rational numbers and the irrational numbers combined.",
+     "a": {
+      "q": "Which of these numbers is irrational?",
+      "opts": [
+       "√7",
+       "√16",
+       "0.125",
+       "0.666... repeating"
+      ],
+      "why": "7 is not a perfect square, so √7 is irrational: its decimal never ends and never repeats. √16 = 4 is an integer. 0.125 ends and 0.666... repeats, so both are rational.",
+      "clue": "Which one has a decimal that never ends and never repeats?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Which list contains only rational numbers?",
+      "opts": [
+       "√25, 0.4, −3, 2/9",
+       "√10, 0.4, −3, 2/9",
+       "√25, π, −3, 2/9",
+       "√25, 0.4, −3, √11"
+      ],
+      "why": "√25 = 5, 0.4 ends and 2/9 is a fraction, so all four are rational. Each wrong list includes an irrational number: √10, π or √11. √25 is not irrational just because it has a root sign.",
+      "clue": "Work out each square root before you decide."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-04T17:58:54Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "Why (a) says '√7 is not the root of a perfect square', which is muddled. It should say that 7 is not a perfect square, matching the card's rule."
+      }
+     ],
+     "flags": [
+      "Question a, wording: Why (a) says '√7 is not the root of a perfect square', which is muddled. It should say that 7 is not a perfect square, matching the card's rule."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "cbaa62599929fa60"
+  }
+ ]
+}

@@ -1,0 +1,401 @@
+{
+ "id": "mat-listing-outcomes-compound-events",
+ "title": "Listing outcomes for compound events",
+ "brief": "13cdecf3cfe8",
+ "shortlist": [
+  [
+   "mat-sample-spaces-probability",
+   0.266
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: flagged",
+  "2026-11-04T10:08:05Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b other)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00471,
+  "check": 0.00959,
+  "fix": 0.01565,
+  "recheck": 0.00841
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers sample spaces and single-step probability at a Year 11 depth, but it does not teach listing every outcome of a two- or three-step experiment with arrays, tables or tree diagrams, so it is related and broader rather than the same idea at Year 9 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The right answer, 3/8, is the same number as the card's worked example (exactly two heads in three tosses). A student could copy the example's answer without counting the one-head outcomes. A different count, such as at least two heads (4/8) or no heads (1/8), would test the idea better.",
+ "rejected": {
+  "title": "Listing outcomes for compound events",
+  "card": [
+   "A compound event has two or more steps, such as tossing a coin and then rolling a die. Listing every outcome lets you count them and find each probability.",
+   [
+    "Array or table",
+    "a grid with the first step down the side and the second across the top. Each cell is one outcome. It suits two steps."
+   ],
+   [
+    "Tree diagram",
+    "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
+   ],
+   "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+  ],
+  "remember": "List every outcome once. If they are equally likely, probability = outcomes you want ÷ all outcomes.",
+  "a": {
+   "q": "A coin is tossed and then a die is rolled. How many outcomes are there in total?",
+   "opts": [
+    "12",
+    "8",
+    "7",
+    "6"
+   ],
+   "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+   "clue": "Each coin result pairs with every die result."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila tosses a fair coin three times. What is the probability of getting exactly one head?",
+   "opts": [
+    "3/8",
+    "1/8",
+    "1/2",
+    "1/3"
+   ],
+   "why": "The coin is fair, so the 8 outcomes are equally likely, and exactly one head is in HTT, THT and TTH. That is 3 outcomes out of 8, so 3/8. The answer 1/3 is tempting because it is one head out of three tosses, but the tosses are not the outcomes: the 8 paths of the tree are.",
+   "clue": "Draw a tree with three steps and count the paths with one H."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The right answer, 3/8, is the same number as the card's worked example (exactly two heads in three tosses). A student could copy the example's answer without counting the one-head outcomes. A different count, such as at least two heads (4/8) or no heads (1/8), would test the idea better."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Listing outcomes for compound events",
+     "card": [
+      "A compound event has two or more steps, such as tossing a coin and then rolling a die. Listing every outcome lets you count them and find each probability.",
+      [
+       "Array or table",
+       "a grid with the first step down the side and the second across the top. Each cell is one outcome. It suits two steps."
+      ],
+      [
+       "Tree diagram",
+       "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
+      ],
+      "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+     ],
+     "remember": "List every outcome once, then probability = outcomes you want ÷ all outcomes.",
+     "a": {
+      "q": "A coin is tossed and then a die is rolled. How many outcomes are there in total?",
+      "opts": [
+       "12",
+       "8",
+       "7",
+       "6"
+      ],
+      "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+      "clue": "Each coin result pairs with every die result."
+     },
+     "b": {
+      "d": 3,
+      "q": "Leila tosses a fair coin three times. What is the probability of getting exactly one head?",
+      "opts": [
+       "3/8",
+       "1/8",
+       "1/2",
+       "1/3"
+      ],
+      "why": "The 8 outcomes are equally likely, and exactly one head is in HTT, THT and TTH. That is 3 outcomes out of 8, so 3/8. The answer 1/3 is tempting but wrong, because it treats the 3 favourable outcomes as if they were all the outcomes.",
+      "clue": "Draw a tree with three steps and count the paths with one H."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "12",
+      "also_right": []
+     },
+     "b": {
+      "best": "3/8",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line gives probability = outcomes you want ÷ all outcomes with no condition. The card says this holds only if each outcome is equally likely. Students may apply it to outcomes that are not equally likely."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The why's account of the 1/3 distractor is confusing. Treating the 3 favourable outcomes as all the outcomes would give 3/3, not 1/3. It needs a clearer reason, such as wrongly counting only 3 possible numbers of heads."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers (12 and 3/8) are correct. The remember line drops the card's 'equally likely' condition, and the why for (b) explains the 1/3 distractor in a confusing way."
+    },
+    "flags": [
+     "Remember, other: The remember line gives probability = outcomes you want ÷ all outcomes with no condition. The card says this holds only if each outcome is equally likely. Students may apply it to outcomes that are not equally likely.",
+     "Question b, wording: The why's account of the 1/3 distractor is confusing. Treating the 3 favourable outcomes as all the outcomes would give 3/3, not 1/3. It needs a clearer reason, such as wrongly counting only 3 possible numbers of heads."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Listing outcomes for compound events",
+     "card": [
+      "A compound event has two or more steps, such as tossing a coin and then rolling a die. Listing every outcome lets you count them and find each probability.",
+      [
+       "Array or table",
+       "a grid with the first step down the side and the second across the top. Each cell is one outcome. It suits two steps."
+      ],
+      [
+       "Tree diagram",
+       "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
+      ],
+      "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+     ],
+     "remember": "List every outcome once. If they are equally likely, probability = outcomes you want ÷ all outcomes.",
+     "a": {
+      "q": "A coin is tossed and then a die is rolled. How many outcomes are there in total?",
+      "opts": [
+       "12",
+       "8",
+       "7",
+       "6"
+      ],
+      "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+      "clue": "Each coin result pairs with every die result."
+     },
+     "b": {
+      "d": 3,
+      "q": "Leila tosses a fair coin three times. What is the probability of getting exactly one head?",
+      "opts": [
+       "3/8",
+       "1/8",
+       "1/2",
+       "1/3"
+      ],
+      "why": "The coin is fair, so the 8 outcomes are equally likely, and exactly one head is in HTT, THT and TTH. That is 3 outcomes out of 8, so 3/8. The answer 1/3 is tempting because it is one head out of three tosses, but the tosses are not the outcomes: the 8 paths of the tree are.",
+      "clue": "Draw a tree with three steps and count the paths with one H."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "12",
+       "also_right": []
+      },
+      "b": {
+       "best": "3/8",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The right answer, 3/8, is the same number as the card's worked example (exactly two heads in three tosses). A student could copy the example's answer without counting the one-head outcomes. A different count, such as at least two heads (4/8) or no heads (1/8), would test the idea better."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both answers are correct: 12 outcomes for (a) and 3/8 for (b). The only issue is that (b)'s answer matches the card's worked example, so students could pick it without working it out."
+     },
+     "flags": [
+      "Question b, other: The right answer, 3/8, is the same number as the card's worked example (exactly two heads in three tosses). A student could copy the example's answer without counting the one-head outcomes. A different count, such as at least two heads (4/8) or no heads (1/8), would test the idea better."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Listing outcomes for compound events",
+    "card": [
+     "A compound event has two or more steps, such as tossing a coin and then rolling a die. Listing every outcome lets you count them and find each probability.",
+     [
+      "Array or table",
+      "a grid with the first step down the side and the second across the top. Each cell is one outcome. It suits two steps."
+     ],
+     [
+      "Tree diagram",
+      "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
+     ],
+     "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+    ],
+    "remember": "List every outcome once. If they are equally likely, probability = outcomes you want ÷ all outcomes.",
+    "a": {
+     "q": "Ana tosses a coin and then rolls a six-sided die. How many different outcomes are possible?",
+     "opts": [
+      "12",
+      "8",
+      "7",
+      "6"
+     ],
+     "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+     "clue": "Each coin result pairs with every die result."
+    },
+    "b": {
+     "d": 3,
+     "q": "Leila tosses a fair coin three times. What is the probability that she gets at least two heads?",
+     "opts": [
+      "1/2",
+      "3/8",
+      "1/8",
+      "2/3"
+     ],
+     "why": "The coin is fair, so the 8 outcomes are equally likely. At least two heads means two or three heads: HHT, HTH, THH and HHH. That is 4 out of 8, which is 1/2. The answer 3/8 counts exactly two heads and leaves out HHH.",
+     "clue": "Count the paths with two heads and the path with three."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "12",
+     "also_right": []
+    },
+    "b": {
+     "best": "1/2",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Listing outcomes for compound events",
+  "card": [
+   "A compound event has two or more steps, such as tossing a coin and then rolling a die. Listing every outcome lets you count them and find each probability.",
+   [
+    "Array or table",
+    "a grid with the first step down the side and the second across the top. Each cell is one outcome. It suits two steps."
+   ],
+   [
+    "Tree diagram",
+    "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
+   ],
+   "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+  ],
+  "remember": "List every outcome once. If they are equally likely, probability = outcomes you want ÷ all outcomes.",
+  "a": {
+   "q": "Ana tosses a coin and then rolls a six-sided die. How many different outcomes are possible?",
+   "opts": [
+    "12",
+    "8",
+    "7",
+    "6"
+   ],
+   "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+   "clue": "Each coin result pairs with every die result."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila tosses a fair coin three times. What is the probability that she gets at least two heads?",
+   "opts": [
+    "1/2",
+    "3/8",
+    "1/8",
+    "2/3"
+   ],
+   "why": "The coin is fair, so the 8 outcomes are equally likely. At least two heads means two or three heads: HHT, HTH, THH and HHH. That is 4 out of 8, which is 1/2. The answer 3/8 counts exactly two heads and leaves out HHH.",
+   "clue": "Count the paths with two heads and the path with three."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "12",
+   "also_right": []
+  },
+  "b": {
+   "best": "1/2",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Listing outcomes for compound events",
+  "card": [
+   "A compound event has two or more steps, such as tossing a coin and then rolling a die. Listing every outcome lets you count them and find each probability.",
+   [
+    "Array or table",
+    "a grid with the first step down the side and the second across the top. Each cell is one outcome. It suits two steps."
+   ],
+   [
+    "Tree diagram",
+    "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
+   ],
+   "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+  ],
+  "remember": "List every outcome once. If they are equally likely, probability = outcomes you want ÷ all outcomes.",
+  "a": {
+   "q": "Ana tosses a coin and then rolls a six-sided die. How many different outcomes are possible?",
+   "opts": [
+    "12",
+    "8",
+    "7",
+    "6"
+   ],
+   "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+   "clue": "Each coin result pairs with every die result."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila tosses a fair coin three times. What is the probability that she gets at least two heads?",
+   "opts": [
+    "1/2",
+    "3/8",
+    "1/8",
+    "2/3"
+   ],
+   "why": "The coin is fair, so the 8 outcomes are equally likely. At least two heads means two or three heads: HHT, HTH, THH and HHH. That is 4 out of 8, which is 1/2. The answer 3/8 counts exactly two heads and leaves out HHH.",
+   "clue": "Count the paths with two heads and the path with three."
+  }
+ },
+ "checked_by": "claude-code"
+}

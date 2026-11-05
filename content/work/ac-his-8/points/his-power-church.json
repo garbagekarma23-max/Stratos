@@ -1,0 +1,399 @@
+{
+ "id": "his-power-church",
+ "title": "The power of the Church",
+ "brief": "4668322d6fca",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:37Z new, write",
+  "2026-11-04T09:36:54Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:04Z write: done",
+  "2026-11-04T09:58:28Z check: flagged",
+  "2026-11-04T14:58:52Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00455,
+  "check": 0.01233,
+  "fix": 0.01522,
+  "recheck": 0.01123
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: The remember line says the Church's power 'came from' the tithe, the monasteries and excommunication. The card only lists these as things the Church did, alongside its role as the centre of faith. The line turns them into a neat list of the sources of its power, which the card does not state.",
+ "rejected": {
+  "title": "The power of the Church",
+  "card": [
+   "In medieval Western Europe, the Catholic Church was part of daily life for most people. It held great power as well as being the centre of faith.",
+   [
+    "Tithe",
+    "a tax paid to the Church. People gave a tenth of what they produced, such as crops or animals."
+   ],
+   [
+    "Monasteries",
+    "communities of monks or nuns. They copied books by hand and cared for the sick."
+   ],
+   [
+    "Excommunication",
+    "the Church could cast a person out of the Church. People believed this cut them off from God and salvation, so they feared it."
+   ]
+  ],
+  "remember": "The Church's power came from the tithe it collected, the monasteries it ran, and its right to cast people out.",
+  "a": {
+   "q": "What was a tithe in medieval Europe?",
+   "opts": [
+    "A tenth of what people produced, paid to the Church",
+    "A tenth of a lord's land, given to his knights",
+    "A fine paid to the king for breaking a law",
+    "A tenth of a peasant's time, spent in the lord's fields"
+   ],
+   "why": "A tithe was a payment to the Church of a tenth of what people produced. Work in the lord's fields was a duty owed to a lord, not a payment to the Church.",
+   "clue": "Think about who received the payment."
+  },
+  "b": {
+   "d": 3,
+   "q": "Why was excommunication a powerful tool for the medieval Church?",
+   "opts": [
+    "People believed it cut them off from God and salvation",
+    "It took away a person's land and gave it to the Church",
+    "It sent the person to work in a monastery for life",
+    "It meant the person had to pay a larger tithe"
+   ],
+   "why": "People believed being cast out of the Church cut them off from God and salvation, so they feared it. The Church collected tithes for money, but excommunication was about a person's place in the Church, not a payment or a transfer of land.",
+   "clue": "Think about what people believed the Church could give them."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: The remember line says the Church's power 'came from' the tithe, the monasteries and excommunication. The card only lists these as things the Church did, alongside its role as the centre of faith. The line turns them into a neat list of the sources of its power, which the card does not state."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The power of the Church",
+     "card": [
+      "In medieval Europe, the Catholic Church was part of daily life for almost everyone. It had great power as well as faith.",
+      [
+       "Tithe",
+       "a tax paid to the Church. People gave a tenth of what they produced, such as crops or animals."
+      ],
+      [
+       "Monasteries",
+       "communities of monks or nuns. They copied books by hand and cared for the sick."
+      ],
+      [
+       "Excommunication",
+       "the Church could cast a person out of the Church. People believed this cut them off from God and salvation, so they feared it."
+      ]
+     ],
+     "remember": "The Church gained power from the tithe, from its work in monasteries, and from its right to cast people out.",
+     "a": {
+      "q": "What was a tithe in medieval Europe?",
+      "opts": [
+       "A tenth of what people produced, paid to the Church",
+       "A tenth of a lord's land, given to his knights",
+       "A fine paid to the king for breaking a law",
+       "A tenth of a peasant's time, spent in the lord's fields"
+      ],
+      "why": "A tithe was a payment to the Church of about a tenth of what people produced. Work in the lord's fields was a duty owed to a lord, not a payment to the Church.",
+      "clue": "Think about who received the payment."
+     },
+     "b": {
+      "d": 3,
+      "q": "Why was excommunication a powerful tool for the medieval Church?",
+      "opts": [
+       "People believed it cut them off from God and salvation",
+       "It took away a person's land and gave it to the Church",
+       "It sent the person to work in a monastery for life",
+       "It meant the person had to pay a larger tithe"
+      ],
+      "why": "Most people believed the Church held the way to salvation, so being cast out was a serious fear. The Church used tithes for money, but excommunication was about a person's place in the Church, not a payment or a transfer of land.",
+      "clue": "Think about what people believed the Church could give them."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A tenth of what people produced, paid to the Church",
+      "also_right": []
+     },
+     "b": {
+      "best": "People believed it cut them off from God and salvation",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says the Catholic Church was part of daily life for 'almost everyone' in medieval Europe. That was true of Western Europe, but Eastern Europe was largely Orthodox, and there were Jewish and Muslim communities too. 'Western Europe' would be more accurate."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer, and the explanations match the card. One small accuracy issue: the card should say 'Western Europe' rather than 'medieval Europe' when it says almost everyone was Catholic."
+    },
+    "flags": [
+     "Card, fact: The card says the Catholic Church was part of daily life for 'almost everyone' in medieval Europe. That was true of Western Europe, but Eastern Europe was largely Orthodox, and there were Jewish and Muslim communities too. 'Western Europe' would be more accurate."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The power of the Church",
+     "card": [
+      "In medieval Western Europe, the Catholic Church was part of daily life for most people. It held great power as well as being the centre of faith.",
+      [
+       "Tithe",
+       "a tax paid to the Church. People gave a tenth of what they produced, such as crops or animals."
+      ],
+      [
+       "Monasteries",
+       "communities of monks or nuns. They copied books by hand and cared for the sick."
+      ],
+      [
+       "Excommunication",
+       "the Church could cast a person out of the Church. People believed this cut them off from God and salvation, so they feared it."
+      ]
+     ],
+     "remember": "The Church's power came from the tithe it collected, the monasteries it ran, and its right to cast people out.",
+     "a": {
+      "q": "What was a tithe in medieval Europe?",
+      "opts": [
+       "A tenth of what people produced, paid to the Church",
+       "A tenth of a lord's land, given to his knights",
+       "A fine paid to the king for breaking a law",
+       "A tenth of a peasant's time, spent in the lord's fields"
+      ],
+      "why": "A tithe was a payment to the Church of a tenth of what people produced. Work in the lord's fields was a duty owed to a lord, not a payment to the Church.",
+      "clue": "Think about who received the payment."
+     },
+     "b": {
+      "d": 3,
+      "q": "Why was excommunication a powerful tool for the medieval Church?",
+      "opts": [
+       "People believed it cut them off from God and salvation",
+       "It took away a person's land and gave it to the Church",
+       "It sent the person to work in a monastery for life",
+       "It meant the person had to pay a larger tithe"
+      ],
+      "why": "People believed being cast out of the Church cut them off from God and salvation, so they feared it. The Church collected tithes for money, but excommunication was about a person's place in the Church, not a payment or a transfer of land.",
+      "clue": "Think about what people believed the Church could give them."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A tenth of what people produced, paid to the Church",
+       "also_right": []
+      },
+      "b": {
+       "best": "People believed it cut them off from God and salvation",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The remember line says the Church's power 'came from' the tithe, the monasteries and excommunication. The card only lists these as things the Church did, alongside its role as the centre of faith. The line turns them into a neat list of the sources of its power, which the card does not state."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both questions are sound, and each question has one clear right answer. The remember line overstates the card by presenting the tithe, the monasteries and excommunication as the sources of the Church's power."
+     },
+     "flags": [
+      "Remember, other: The remember line says the Church's power 'came from' the tithe, the monasteries and excommunication. The card only lists these as things the Church did, alongside its role as the centre of faith. The line turns them into a neat list of the sources of its power, which the card does not state."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "The power of the Church",
+    "card": [
+     "In medieval Western Europe, the Catholic Church was part of daily life for most people. It held great power as well as being the centre of faith.",
+     [
+      "Tithe",
+      "a tax paid to the Church. People gave a tenth of what they produced, such as crops or animals."
+     ],
+     [
+      "Monasteries",
+      "communities of monks or nuns. They copied books by hand and cared for the sick."
+     ],
+     [
+      "Excommunication",
+      "the Church could cast a person out of the Church. People believed this cut them off from God and salvation, so they feared it."
+     ]
+    ],
+    "remember": "The Church took a tenth in tithes, ran monasteries, and could cast people out of the Church.",
+    "a": {
+     "q": "Each harvest, a medieval farmer hands over one sack of grain for every ten he grows. What is this payment?",
+     "opts": [
+      "A tithe, paid to the Church",
+      "Rent, paid to the lord of the manor",
+      "A fine, paid to the king's court",
+      "A tax, paid to the town's guild"
+     ],
+     "why": "A tithe was a payment to the Church of a tenth of what people produced, and one sack in ten is a tenth. Rent to the lord is tempting because peasants did owe their lord, but the tenth went to the Church.",
+     "clue": "What fraction of the grain does the farmer hand over?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Agnes, a medieval villager, is told she will be cast out of the Church. Why would this frighten her most?",
+     "opts": [
+      "People thought it cut them off from salvation",
+      "It took away a person's land and gave it to the Church",
+      "It sent the person to work in a monastery for life",
+      "It meant the person had to pay a larger tithe"
+     ],
+     "why": "Being cast out of the Church was called excommunication, and people believed it cut them off from God and salvation. It was about a person's place in the Church, not a payment, a loss of land or work in a monastery.",
+     "clue": "Think about what people believed the Church could give them."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A tithe, paid to the Church",
+     "also_right": []
+    },
+    "b": {
+     "best": "People thought it cut them off from salvation",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The power of the Church",
+  "card": [
+   "In medieval Western Europe, the Catholic Church was part of daily life for most people. It held great power as well as being the centre of faith.",
+   [
+    "Tithe",
+    "a tax paid to the Church. People gave a tenth of what they produced, such as crops or animals."
+   ],
+   [
+    "Monasteries",
+    "communities of monks or nuns. They copied books by hand and cared for the sick."
+   ],
+   [
+    "Excommunication",
+    "the Church could cast a person out of the Church. People believed this cut them off from God and salvation, so they feared it."
+   ]
+  ],
+  "remember": "The Church took a tenth in tithes, ran monasteries, and could cast people out of the Church.",
+  "a": {
+   "q": "Each harvest, a medieval farmer hands over one sack of grain for every ten he grows. What is this payment?",
+   "opts": [
+    "A tithe, paid to the Church",
+    "Rent, paid to the lord of the manor",
+    "A fine, paid to the king's court",
+    "A tax, paid to the town's guild"
+   ],
+   "why": "A tithe was a payment to the Church of a tenth of what people produced, and one sack in ten is a tenth. Rent to the lord is tempting because peasants did owe their lord, but the tenth went to the Church.",
+   "clue": "What fraction of the grain does the farmer hand over?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Agnes, a medieval villager, is told she will be cast out of the Church. Why would this frighten her most?",
+   "opts": [
+    "People thought it cut them off from salvation",
+    "It took away a person's land and gave it to the Church",
+    "It sent the person to work in a monastery for life",
+    "It meant the person had to pay a larger tithe"
+   ],
+   "why": "Being cast out of the Church was called excommunication, and people believed it cut them off from God and salvation. It was about a person's place in the Church, not a payment, a loss of land or work in a monastery.",
+   "clue": "Think about what people believed the Church could give them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A tithe, paid to the Church",
+   "also_right": []
+  },
+  "b": {
+   "best": "People thought it cut them off from salvation",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The power of the Church",
+  "card": [
+   "In medieval Western Europe, the Catholic Church was part of daily life for most people. It held great power as well as being the centre of faith.",
+   [
+    "Tithe",
+    "a tax paid to the Church. People gave a tenth of what they produced, such as crops or animals."
+   ],
+   [
+    "Monasteries",
+    "communities of monks or nuns. They copied books by hand and cared for the sick."
+   ],
+   [
+    "Excommunication",
+    "the Church could cast a person out of the Church. People believed this cut them off from God and salvation, so they feared it."
+   ]
+  ],
+  "remember": "The Church took a tenth in tithes, ran monasteries, and could cast people out of the Church.",
+  "a": {
+   "q": "Each harvest, a medieval farmer hands over one sack of grain for every ten he grows. What is this payment?",
+   "opts": [
+    "A tithe, paid to the Church",
+    "Rent, paid to the lord of the manor",
+    "A fine, paid to the king's court",
+    "A tax, paid to the town's guild"
+   ],
+   "why": "A tithe was a payment to the Church of a tenth of what people produced, and one sack in ten is a tenth. Rent to the lord is tempting because peasants did owe their lord, but the tenth went to the Church.",
+   "clue": "What fraction of the grain does the farmer hand over?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Agnes, a medieval villager, is told she will be cast out of the Church. Why would this frighten her most?",
+   "opts": [
+    "People thought it cut them off from salvation",
+    "It took away a person's land and gave it to the Church",
+    "It sent the person to work in a monastery for life",
+    "It meant the person had to pay a larger tithe"
+   ],
+   "why": "Being cast out of the Church was called excommunication, and people believed it cut them off from God and salvation. It was about a person's place in the Church, not a payment, a loss of land or work in a monastery.",
+   "clue": "Think about what people believed the Church could give them."
+  }
+ },
+ "checked_by": "claude-code"
+}

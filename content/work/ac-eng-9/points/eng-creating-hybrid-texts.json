@@ -1,0 +1,347 @@
+{
+ "id": "eng-creating-hybrid-texts",
+ "title": "Creating hybrid texts",
+ "brief": "173e62fc4d25",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:30Z new, write",
+  "2026-11-04T09:36:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:46:58Z write: failed the content check, writing again",
+  "2026-11-04T09:58:24Z write: done",
+  "2026-11-04T10:07:59Z check: flagged",
+  "2026-11-04T10:10:49Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b other)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01023,
+  "check": 0.01085,
+  "fix": 0.01391,
+  "recheck": 0.01112
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The right option says each form 'adds a clue', but the why says the group chat 'gives voices' while only the notice and photo give clues. The why does not quite match the option it explains.",
+ "rejected": {
+  "title": "Creating hybrid texts",
+  "card": [
+   "A hybrid text mixes the structures or features of two or more text types or modes. One example is a story told through text messages, emails and photos.",
+   "Each part does a job. A text message can show a quick, casual voice. A photo can show a place or mood without any description.",
+   "Writers choose which forms to mix by thinking about the audience. A story for teenagers might use a group chat, while a story for young children might use pictures and short captions.",
+   "The mix should still make sense as one text. Each part should move the story or idea forward, not just add decoration."
+  ],
+  "remember": "A hybrid text blends forms, and each form is chosen for its job and its audience.",
+  "a": {
+   "q": "What makes a text a hybrid text?",
+   "opts": [
+    "It blends features of two or more text types or modes",
+    "It is written in two different languages",
+    "It is retold from a different point of view",
+    "It is adapted from a book into a film"
+   ],
+   "why": "A hybrid text mixes the structures or features of different text types or modes, such as emails and photos in one story. Retelling from another point of view changes the narrator, not the forms used.",
+   "clue": "Think about mixing forms inside one text."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo is writing a mystery for Year 7 readers. She tells it through a group chat, a school notice and a photo of a muddy footprint. Why is this a good choice for her audience?",
+   "opts": [
+    "The forms are familiar to readers and each adds a clue",
+    "Mixing forms lets the story skip a plot and characters",
+    "The photo is decoration that makes the page look less plain",
+    "The forms suit adult readers who enjoy complex layouts"
+   ],
+   "why": "Jo picks forms her Year 7 readers know, and each one has a job: the chat gives voices, and the notice and photo give clues. The photo is not just decoration, because the footprint moves the mystery forward.",
+   "clue": "Ask what each form does for the reader."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The right option says each form 'adds a clue', but the why says the group chat 'gives voices' while only the notice and photo give clues. The why does not quite match the option it explains."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Creating hybrid texts",
+     "card": [
+      "A hybrid text mixes the structures or features of two or more text types or modes. One example is a story told through text messages, emails and photos.",
+      "Each part does a job. A text message can show a quick, casual voice. A photo can show a place or mood without any description.",
+      "Writers choose which forms to mix by thinking about the audience. A story for teenagers might use a group chat, while a story for young children might use pictures and short captions.",
+      "The mix should still make sense as one text. Each part should move the story or idea forward, not just add decoration."
+     ],
+     "remember": "A hybrid text blends forms, and each form is chosen for its job and its audience.",
+     "a": {
+      "q": "What makes a text a hybrid text?",
+      "opts": [
+       "It blends features of two or more text types or modes",
+       "It is written in two different languages",
+       "It is retold from a different point of view",
+       "It is adapted from a book into a film"
+      ],
+      "why": "A hybrid text mixes the structures or features of different text types or modes, such as emails and photos in one story. Retelling from another point of view changes the narrator, not the forms used.",
+      "clue": "Think about mixing forms inside one text."
+     },
+     "b": {
+      "d": 3,
+      "q": "Jo is writing a mystery for Year 7 readers. She tells it through a group chat, a school notice and a photo of a muddy footprint. Why is this a good choice for her audience?",
+      "opts": [
+       "The forms are familiar to readers and each adds a clue",
+       "Mixing forms means the story needs no plot or characters",
+       "Photos always make a story more serious than words do",
+       "A school notice is the only form that can hold clues"
+      ],
+      "why": "Jo picks forms her readers know, and each one has a job: the chat gives voices, the notice and photo give clues. The idea that photos always make a story serious is wrong, because the effect depends on how the photo is used.",
+      "clue": "Ask what each form does for the reader."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It blends features of two or more text types or modes",
+      "also_right": []
+     },
+     "b": {
+      "best": "The forms are familiar to readers and each adds a clue",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Two distractors use absolutes ('the only form', 'Photos always make'), while the card says a photo 'can' show a place or mood. These words make the wrong options easy to rule out without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and question a are accurate and on point. Question b's distractors lean on absolute words ('only', 'always') that the card does not support, so students can spot them as wrong without knowing the idea; consider rewording them."
+    },
+    "flags": [
+     "Question b, wording: Two distractors use absolutes ('the only form', 'Photos always make'), while the card says a photo 'can' show a place or mood. These words make the wrong options easy to rule out without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Creating hybrid texts",
+     "card": [
+      "A hybrid text mixes the structures or features of two or more text types or modes. One example is a story told through text messages, emails and photos.",
+      "Each part does a job. A text message can show a quick, casual voice. A photo can show a place or mood without any description.",
+      "Writers choose which forms to mix by thinking about the audience. A story for teenagers might use a group chat, while a story for young children might use pictures and short captions.",
+      "The mix should still make sense as one text. Each part should move the story or idea forward, not just add decoration."
+     ],
+     "remember": "A hybrid text blends forms, and each form is chosen for its job and its audience.",
+     "a": {
+      "q": "What makes a text a hybrid text?",
+      "opts": [
+       "It blends features of two or more text types or modes",
+       "It is written in two different languages",
+       "It is retold from a different point of view",
+       "It is adapted from a book into a film"
+      ],
+      "why": "A hybrid text mixes the structures or features of different text types or modes, such as emails and photos in one story. Retelling from another point of view changes the narrator, not the forms used.",
+      "clue": "Think about mixing forms inside one text."
+     },
+     "b": {
+      "d": 3,
+      "q": "Jo is writing a mystery for Year 7 readers. She tells it through a group chat, a school notice and a photo of a muddy footprint. Why is this a good choice for her audience?",
+      "opts": [
+       "The forms are familiar to readers and each adds a clue",
+       "Mixing forms lets the story skip a plot and characters",
+       "The photo is decoration that makes the page look less plain",
+       "The forms suit adult readers who enjoy complex layouts"
+      ],
+      "why": "Jo picks forms her Year 7 readers know, and each one has a job: the chat gives voices, and the notice and photo give clues. The photo is not just decoration, because the footprint moves the mystery forward.",
+      "clue": "Ask what each form does for the reader."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It blends features of two or more text types or modes",
+       "also_right": []
+      },
+      "b": {
+       "best": "The forms are familiar to readers and each adds a clue",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The right option says each form 'adds a clue', but the why says the group chat 'gives voices' while only the notice and photo give clues. The why does not quite match the option it explains."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer and the card is accurate. One small issue: the why for question b says the group chat gives voices, but the right option says every form adds a clue."
+     },
+     "flags": [
+      "Question b, other: The right option says each form 'adds a clue', but the why says the group chat 'gives voices' while only the notice and photo give clues. The why does not quite match the option it explains."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Creating hybrid texts",
+    "card": [
+     "A hybrid text mixes the structures or features of two or more text types or modes. One example is a story told through text messages, emails and photos.",
+     "Each part does a job. A text message can show a quick, casual voice. A photo can show a place or mood without any description.",
+     "Writers choose which forms to mix by thinking about the audience. A story for teenagers might use a group chat, while a story for young children might use pictures and short captions.",
+     "The mix should still make sense as one text. Each part should move the story or idea forward, not just add decoration."
+    ],
+    "remember": "A hybrid text blends forms, and each form is chosen for its job and its audience.",
+    "a": {
+     "q": "Which of these best describes a hybrid text?",
+     "opts": [
+      "It mixes features of different text types",
+      "It is written in two different languages",
+      "It retells a story from a new point of view",
+      "It is a book that has been adapted into a film"
+     ],
+     "why": "A hybrid text mixes the structures or features of different text types or modes, such as emails and photos in one story. Retelling from another point of view changes the narrator, not the forms used, and a film adaptation moves a story into one new form rather than mixing forms.",
+     "clue": "Think about what happens to forms inside one text."
+    },
+    "b": {
+     "d": 3,
+     "q": "Jo's mystery for Year 7 readers unfolds through a group chat, a school notice and a photo of a muddy footprint. Why is this mix a good fit for her readers?",
+     "opts": [
+      "Readers know these forms, and each one has a job",
+      "Mixing forms lets the story skip a plot and characters",
+      "The photo is decoration that makes the page less plain",
+      "The forms suit adult readers who enjoy complex layouts"
+     ],
+     "why": "Jo picks forms her Year 7 readers know, and each one does a job: the chat gives the characters' voices, while the notice and the photo give clues. The photo is not just decoration, because the footprint moves the mystery forward.",
+     "clue": "Think about what each part adds for a Year 7 reader."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "It mixes features of different text types",
+     "also_right": []
+    },
+    "b": {
+     "best": "Readers know these forms, and each one has a job",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Creating hybrid texts",
+  "card": [
+   "A hybrid text mixes the structures or features of two or more text types or modes. One example is a story told through text messages, emails and photos.",
+   "Each part does a job. A text message can show a quick, casual voice. A photo can show a place or mood without any description.",
+   "Writers choose which forms to mix by thinking about the audience. A story for teenagers might use a group chat, while a story for young children might use pictures and short captions.",
+   "The mix should still make sense as one text. Each part should move the story or idea forward, not just add decoration."
+  ],
+  "remember": "A hybrid text blends forms, and each form is chosen for its job and its audience.",
+  "a": {
+   "q": "Which of these best describes a hybrid text?",
+   "opts": [
+    "It mixes features of different text types",
+    "It is written in two different languages",
+    "It retells a story from a new point of view",
+    "It is a book that has been adapted into a film"
+   ],
+   "why": "A hybrid text mixes the structures or features of different text types or modes, such as emails and photos in one story. Retelling from another point of view changes the narrator, not the forms used, and a film adaptation moves a story into one new form rather than mixing forms.",
+   "clue": "Think about what happens to forms inside one text."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo's mystery for Year 7 readers unfolds through a group chat, a school notice and a photo of a muddy footprint. Why is this mix a good fit for her readers?",
+   "opts": [
+    "Readers know these forms, and each one has a job",
+    "Mixing forms lets the story skip a plot and characters",
+    "The photo is decoration that makes the page less plain",
+    "The forms suit adult readers who enjoy complex layouts"
+   ],
+   "why": "Jo picks forms her Year 7 readers know, and each one does a job: the chat gives the characters' voices, while the notice and the photo give clues. The photo is not just decoration, because the footprint moves the mystery forward.",
+   "clue": "Think about what each part adds for a Year 7 reader."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It mixes features of different text types",
+   "also_right": []
+  },
+  "b": {
+   "best": "Readers know these forms, and each one has a job",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Creating hybrid texts",
+  "card": [
+   "A hybrid text mixes the structures or features of two or more text types or modes. One example is a story told through text messages, emails and photos.",
+   "Each part does a job. A text message can show a quick, casual voice. A photo can show a place or mood without any description.",
+   "Writers choose which forms to mix by thinking about the audience. A story for teenagers might use a group chat, while a story for young children might use pictures and short captions.",
+   "The mix should still make sense as one text. Each part should move the story or idea forward, not just add decoration."
+  ],
+  "remember": "A hybrid text blends forms, and each form is chosen for its job and its audience.",
+  "a": {
+   "q": "Which of these best describes a hybrid text?",
+   "opts": [
+    "It mixes features of different text types",
+    "It is written in two different languages",
+    "It retells a story from a new point of view",
+    "It is a book that has been adapted into a film"
+   ],
+   "why": "A hybrid text mixes the structures or features of different text types or modes, such as emails and photos in one story. Retelling from another point of view changes the narrator, not the forms used, and a film adaptation moves a story into one new form rather than mixing forms.",
+   "clue": "Think about what happens to forms inside one text."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo's mystery for Year 7 readers unfolds through a group chat, a school notice and a photo of a muddy footprint. Why is this mix a good fit for her readers?",
+   "opts": [
+    "Readers know these forms, and each one has a job",
+    "Mixing forms lets the story skip a plot and characters",
+    "The photo is decoration that makes the page less plain",
+    "The forms suit adult readers who enjoy complex layouts"
+   ],
+   "why": "Jo picks forms her Year 7 readers know, and each one does a job: the chat gives the characters' voices, while the notice and the photo give clues. The photo is not just decoration, because the footprint moves the mystery forward.",
+   "clue": "Think about what each part adds for a Year 7 reader."
+  }
+ },
+ "checked_by": "claude-code"
+}

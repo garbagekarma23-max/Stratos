@@ -1,0 +1,235 @@
+{
+ "id": "mat-proofs-with-angle-properties",
+ "title": "Proofs with angle properties",
+ "brief": "9e772c0b34ff",
+ "shortlist": [
+  [
+   "mat-sine-rule",
+   0.394
+  ],
+  [
+   "mat-area-any-triangle",
+   0.288
+  ],
+  [
+   "mat-sine-cosine-rules",
+   0.284
+  ],
+  [
+   "mat-cosine-rule",
+   0.279
+  ],
+  [
+   "mat-angles-any-size",
+   0.25
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: failed the content check, writing again",
+  "2026-11-04T09:58:30Z write: done (still fails the content check)",
+  "2026-11-04T10:08:03Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.0133,
+  "check": 0.01128,
+  "fix": 0.0209,
+  "recheck": 0.00803
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches proving a result by chaining known angle facts with reasons; the closest cards cover trigonometric rules for triangles, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Proofs with angle properties",
+  "card": [
+   "Known angle facts can be used as reasons. Angles in a triangle add to 180°. Angles on a straight line add to 180°. Alternate angles on parallel lines are equal.",
+   "A proof chains these facts. Each step is a statement with a reason, and each step builds on earlier ones.",
+   "The exterior angle of a triangle is the angle formed outside by extending one side. Example: the interior angle at C is c, and the other two angles are a and b.",
+   "Then a + b + c = 180° (angles in a triangle). The exterior angle at C is 180° − c (angles on a straight line). So the exterior angle = a + b."
+  ],
+  "remember": "Chain known angle facts, giving a reason at every step, to prove a new result.",
+  "a": {
+   "q": "In the proof, which reason shows that the exterior angle at C equals 180° − c?",
+   "opts": [
+    "Angles on a straight line add to 180°",
+    "Angles in a triangle add to 180°",
+    "Alternate angles on parallel lines are equal",
+    "Vertically opposite angles are equal"
+   ],
+   "why": "The exterior angle and angle c sit side by side on a straight line, so together they make 180°. The triangle fact gives a + b + c = 180°, which is a different step.",
+   "clue": "The exterior angle and c lie together along one line."
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, angle P = 50° and angle Q = 70°. Side QR is extended to S. Which pair of steps proves that the exterior angle PRS is 120°?",
+   "opts": [
+    "R = 60° (angles in a triangle), then PRS = 180° − 60° (straight line)",
+    "R = 60° (angles in a triangle), then PRS = 60° + 60° (straight line)",
+    "R = 120° (angles in a triangle), then PRS = 120° (exterior)",
+    "R = 60° (alternate angles), then PRS = 180° − 60° (straight line)"
+   ],
+   "why": "The triangle gives angle R = 180° − 50° − 70° = 60°. Then PRS and R are on a straight line, so PRS = 180° − 60° = 120°. There are no parallel lines here, so alternate angles cannot be used as a reason.",
+   "clue": "Find angle R first, then use the straight line."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-proofs-with-angle-propertiesb option is 69 characters: R = 60° (angles in a triangle), then PRS = 180° − 60° (straight line)",
+  "mat-proofs-with-angle-propertiesb option is 68 characters: R = 60° (angles in a triangle), then PRS = 60° + 60° (straight line)",
+  "mat-proofs-with-angle-propertiesb option is 65 characters: R = 60° (alternate angles), then PRS = 180° − 60° (straight line)"
+ ],
+ "check": {
+  "a": {
+   "best": "Angles on a straight line add to 180°",
+   "also_right": []
+  },
+  "b": {
+   "best": "R = 60° (angles in a triangle), then PRS = 180° − 60° (straight line)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('The exterior angle and c lie together along one line') restates the right option, 'Angles on a straight line', so a student can pick it without knowing which angle fact applies."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts, the proof on the card and both intended answers are correct. The only problem is that the clue for question a almost gives the answer away by pointing straight at the 'straight line' option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue ('The exterior angle and c lie together along one line') restates the right option, 'Angles on a straight line', so a student can pick it without knowing which angle fact applies.",
+  "Content check: mat-proofs-with-angle-propertiesb option is 69 characters: R = 60° (angles in a triangle), then PRS = 180° − 60° (straight line)",
+  "Content check: mat-proofs-with-angle-propertiesb option is 68 characters: R = 60° (angles in a triangle), then PRS = 60° + 60° (straight line)",
+  "Content check: mat-proofs-with-angle-propertiesb option is 65 characters: R = 60° (alternate angles), then PRS = 180° − 60° (straight line)"
+ ],
+ "proposal": {
+  "title": "Proofs with angle properties",
+  "card": [
+   "Known angle facts can be used as reasons. Angles in a triangle add to 180°. Angles on a straight line add to 180°. Vertically opposite angles are equal. Alternate angles on parallel lines are equal.",
+   "A proof chains these facts. Each step is a statement with a reason, and each step builds on earlier ones.",
+   "The exterior angle of a triangle is the angle formed outside by extending one side. Example: the interior angle at C is c, and the other two angles are a and b.",
+   "Then a + b + c = 180° (angles in a triangle). The exterior angle at C is 180° − c (angles on a straight line). So the exterior angle = a + b."
+  ],
+  "remember": "Chain known angle facts, giving a reason at every step, to prove a new result.",
+  "a": {
+   "q": "In the proof, which reason shows that the exterior angle at C equals 180° − c?",
+   "opts": [
+    "Angles on a straight line add to 180°",
+    "Angles in a triangle add to 180°",
+    "Alternate angles on parallel lines are equal",
+    "Vertically opposite angles are equal"
+   ],
+   "why": "The exterior angle and angle c sit side by side on a straight line, so together they make 180°. The triangle fact gives a + b + c = 180°, which is a different step that uses all three angles.",
+   "clue": "Which fact uses only the angles at C, not the whole triangle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, angle P = 50° and angle Q = 70°. Side QR is extended to S. Which pair of steps proves that the exterior angle PRS is 120°?",
+   "opts": [
+    "R = 60° (triangle), then PRS = 180° − 60° (straight line)",
+    "R = 60° (triangle), then PRS = 60° + 60° (straight line)",
+    "R = 120° (triangle), then PRS = 120° (straight line)",
+    "R = 60° (alternate), then PRS = 180° − 60° (straight line)"
+   ],
+   "why": "The triangle gives angle R = 180° − 50° − 70° = 60°. Then PRS and R are on a straight line, so PRS = 180° − 60° = 120°. The option with alternate angles gets the numbers right, but there are no parallel lines here, so that reason cannot be used.",
+   "clue": "Check each reason as well as each number."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Angles on a straight line add to 180°",
+    "also_right": []
+   },
+   "b": {
+    "best": "R = 60° (triangle), then PRS = 180° − 60° (straight line)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('The exterior angle and c lie together along one line') restates the right option, 'Angles on a straight line', so a student can pick it without knowing which angle fact applies."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue ('The exterior angle and c lie together along one line') restates the right option, 'Angles on a straight line', so a student can pick it without knowing which angle fact applies.",
+   "Content check: mat-proofs-with-angle-propertiesb option is 69 characters: R = 60° (angles in a triangle), then PRS = 180° − 60° (straight line)",
+   "Content check: mat-proofs-with-angle-propertiesb option is 68 characters: R = 60° (angles in a triangle), then PRS = 60° + 60° (straight line)",
+   "Content check: mat-proofs-with-angle-propertiesb option is 65 characters: R = 60° (alternate angles), then PRS = 180° − 60° (straight line)"
+  ]
+ },
+ "final": {
+  "title": "Proofs with angle properties",
+  "card": [
+   "Known angle facts can be used as reasons. Angles in a triangle add to 180°. Angles on a straight line add to 180°. Vertically opposite angles are equal. Alternate angles on parallel lines are equal.",
+   "A proof chains these facts. Each step is a statement with a reason, and each step builds on earlier ones.",
+   "The exterior angle of a triangle is the angle formed outside by extending one side. Example: the interior angle at C is c, and the other two angles are a and b.",
+   "Then a + b + c = 180° (angles in a triangle). The exterior angle at C is 180° − c (angles on a straight line). So the exterior angle = a + b."
+  ],
+  "remember": "Chain known angle facts, giving a reason at every step, to prove a new result.",
+  "a": {
+   "q": "In the proof, which reason shows that the exterior angle at C equals 180° − c?",
+   "opts": [
+    "Angles on a straight line add to 180°",
+    "Angles in a triangle add to 180°",
+    "Alternate angles on parallel lines are equal",
+    "Vertically opposite angles are equal"
+   ],
+   "why": "The exterior angle and angle c sit side by side on a straight line, so together they make 180°. The triangle fact gives a + b + c = 180°, which is a different step that uses all three angles.",
+   "clue": "Which fact uses only the angles at C, not the whole triangle?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangle PQR, angle P = 50° and angle Q = 70°. Side QR is extended to S. Which pair of steps proves that the exterior angle PRS is 120°?",
+   "opts": [
+    "R = 60° (triangle), then PRS = 180° − 60° (straight line)",
+    "R = 60° (triangle), then PRS = 60° + 60° (straight line)",
+    "R = 120° (triangle), then PRS = 120° (straight line)",
+    "R = 60° (alternate), then PRS = 180° − 60° (straight line)"
+   ],
+   "why": "The triangle gives angle R = 180° − 50° − 70° = 60°. Then PRS and R are on a straight line, so PRS = 180° − 60° = 120°. The option with alternate angles gets the numbers right, but there are no parallel lines here, so that reason cannot be used.",
+   "clue": "Check each reason as well as each number."
+  }
+ },
+ "cleared_by": "recheck"
+}

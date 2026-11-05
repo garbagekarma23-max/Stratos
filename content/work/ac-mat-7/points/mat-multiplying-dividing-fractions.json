@@ -1,0 +1,343 @@
+{
+ "id": "mat-multiplying-dividing-fractions",
+ "title": "Multiplying and dividing fractions",
+ "brief": "3a2fe5fd2ca5",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, write",
+  "2026-11-04T09:36:55Z write: done",
+  "2026-11-04T09:47:07Z check: flagged",
+  "2026-11-04T09:58:30Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00629,
+  "check": 0.00986,
+  "fix": 0.01607,
+  "recheck": 0.01099
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: Why (a) says 5/12 comes from 'adding the tops and bottoms, which is a different operation'. This can suggest that adding tops and bottoms is how you add fractions. It is not: 3/5 + 2/7 is not 5/12. Reword it to say that adding tops and bottoms is a common mistake and not a valid operation.",
+ "rejected": {
+  "title": "Multiplying and dividing fractions",
+  "card": [
+   "To multiply fractions, multiply the tops together and multiply the bottoms together. Example: 2/3 × 4/5 = 8/15.",
+   "Write a whole number as a fraction over 1. Example: 6 × 3/4 = 6/1 × 3/4 = 18/4 = 4 1/2.",
+   "The reciprocal of a fraction is the fraction turned upside down. The reciprocal of 3/5 is 5/3.",
+   "To divide, multiply by the reciprocal of the second fraction. Example: 1/2 ÷ 3/4 = 1/2 × 4/3 = 4/6 = 2/3. Only the second fraction is flipped."
+  ],
+  "remember": "Multiply tops and bottoms. To divide, flip the second fraction and multiply.",
+  "a": {
+   "q": "What is 3/5 × 2/7?",
+   "opts": [
+    "6/35",
+    "5/12",
+    "6/12",
+    "21/10"
+   ],
+   "why": "Multiply the tops, 3 × 2 = 6, and the bottoms, 5 × 7 = 35, to get 6/35. The answer 5/12 comes from adding the tops and bottoms, which is a different operation.",
+   "clue": "You do not need a common denominator for multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila has 3/4 of a pizza and shares it into pieces of 1/8 of a pizza each. How many pieces does she make? Work out 3/4 ÷ 1/8.",
+   "opts": [
+    "6",
+    "3/32",
+    "1/6",
+    "10 2/3"
+   ],
+   "why": "3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6. The answer 3/32 comes from multiplying without flipping, and 1/6 comes from flipping the first fraction instead: 4/3 × 1/8 = 4/24 = 1/6.",
+   "clue": "Flip the second fraction only, then multiply."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: Why (a) says 5/12 comes from 'adding the tops and bottoms, which is a different operation'. This can suggest that adding tops and bottoms is how you add fractions. It is not: 3/5 + 2/7 is not 5/12. Reword it to say that adding tops and bottoms is a common mistake and not a valid operation."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Multiplying and dividing fractions",
+     "card": [
+      "To multiply fractions, multiply the tops together and multiply the bottoms together. Example: 2/3 × 4/5 = 8/15.",
+      "Write a whole number as a fraction over 1. Example: 6 × 3/4 = 6/1 × 3/4 = 18/4 = 4 1/2.",
+      "The reciprocal of a fraction is the fraction turned upside down. The reciprocal of 3/5 is 5/3.",
+      "To divide, multiply by the reciprocal of the second fraction. Example: 1/2 ÷ 3/4 = 1/2 × 4/3 = 4/6 = 2/3. Only the second fraction is flipped."
+     ],
+     "remember": "Multiply tops and bottoms. To divide, flip the second fraction and multiply.",
+     "a": {
+      "q": "What is 3/5 × 2/7?",
+      "opts": [
+       "6/35",
+       "5/12",
+       "6/12",
+       "21/10"
+      ],
+      "why": "Multiply the tops, 3 × 2 = 6, and the bottoms, 5 × 7 = 35, to get 6/35. The answer 5/12 comes from adding the tops and bottoms, which is a different operation.",
+      "clue": "You do not need a common denominator for multiplying."
+     },
+     "b": {
+      "d": 3,
+      "q": "Leila has 3/4 of a pizza and shares it into pieces of 1/8 of a pizza each. How many pieces does she make? Work out 3/4 ÷ 1/8.",
+      "opts": [
+       "6",
+       "3/32",
+       "2/3",
+       "1 1/2"
+      ],
+      "why": "3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6. The answer 3/32 comes from multiplying the two fractions, and 2/3 comes from flipping the first fraction instead of the second.",
+      "clue": "Flip the second fraction only, then multiply."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "6/35",
+      "also_right": []
+     },
+     "b": {
+      "best": "6",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Why (b) says 2/3 comes from flipping the first fraction instead of the second, but that gives 4/3 × 1/8 = 4/24 = 1/6, not 2/3. The explanation of this distractor is wrong."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are correct, and the answers are 6/35 and 6. Why (b) wrongly says 2/3 comes from flipping the first fraction; that gives 1/6, so the explanation of this wrong option needs fixing."
+    },
+    "flags": [
+     "Question b, fact: Why (b) says 2/3 comes from flipping the first fraction instead of the second, but that gives 4/3 × 1/8 = 4/24 = 1/6, not 2/3. The explanation of this distractor is wrong."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Multiplying and dividing fractions",
+     "card": [
+      "To multiply fractions, multiply the tops together and multiply the bottoms together. Example: 2/3 × 4/5 = 8/15.",
+      "Write a whole number as a fraction over 1. Example: 6 × 3/4 = 6/1 × 3/4 = 18/4 = 4 1/2.",
+      "The reciprocal of a fraction is the fraction turned upside down. The reciprocal of 3/5 is 5/3.",
+      "To divide, multiply by the reciprocal of the second fraction. Example: 1/2 ÷ 3/4 = 1/2 × 4/3 = 4/6 = 2/3. Only the second fraction is flipped."
+     ],
+     "remember": "Multiply tops and bottoms. To divide, flip the second fraction and multiply.",
+     "a": {
+      "q": "What is 3/5 × 2/7?",
+      "opts": [
+       "6/35",
+       "5/12",
+       "6/12",
+       "21/10"
+      ],
+      "why": "Multiply the tops, 3 × 2 = 6, and the bottoms, 5 × 7 = 35, to get 6/35. The answer 5/12 comes from adding the tops and bottoms, which is a different operation.",
+      "clue": "You do not need a common denominator for multiplying."
+     },
+     "b": {
+      "d": 3,
+      "q": "Leila has 3/4 of a pizza and shares it into pieces of 1/8 of a pizza each. How many pieces does she make? Work out 3/4 ÷ 1/8.",
+      "opts": [
+       "6",
+       "3/32",
+       "1/6",
+       "10 2/3"
+      ],
+      "why": "3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6. The answer 3/32 comes from multiplying without flipping, and 1/6 comes from flipping the first fraction instead: 4/3 × 1/8 = 4/24 = 1/6.",
+      "clue": "Flip the second fraction only, then multiply."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "6/35",
+       "also_right": []
+      },
+      "b": {
+       "best": "6",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "Why (a) says 5/12 comes from 'adding the tops and bottoms, which is a different operation'. This can suggest that adding tops and bottoms is how you add fractions. It is not: 3/5 + 2/7 is not 5/12. Reword it to say that adding tops and bottoms is a common mistake and not a valid operation."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, both questions and both answers are correct. The only problem is in the why for (a), which implies that adding tops and bottoms is a valid way to add fractions, and it should be reworded."
+     },
+     "flags": [
+      "Question a, wording: Why (a) says 5/12 comes from 'adding the tops and bottoms, which is a different operation'. This can suggest that adding tops and bottoms is how you add fractions. It is not: 3/5 + 2/7 is not 5/12. Reword it to say that adding tops and bottoms is a common mistake and not a valid operation."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Multiplying and dividing fractions",
+    "card": [
+     "To multiply fractions, multiply the tops together and multiply the bottoms together. Example: 2/3 × 4/5 = 8/15.",
+     "Write a whole number as a fraction over 1. Example: 6 × 3/4 = 6/1 × 3/4 = 18/4 = 4 1/2.",
+     "The reciprocal of a fraction is the fraction turned upside down. The reciprocal of 3/5 is 5/3.",
+     "To divide, multiply by the reciprocal of the second fraction. Example: 1/2 ÷ 3/4 = 1/2 × 4/3 = 4/6 = 2/3. Only the second fraction is flipped."
+    ],
+    "remember": "Multiply tops and bottoms. To divide, flip the second fraction and multiply.",
+    "a": {
+     "q": "Work out 3/5 × 2/7.",
+     "opts": [
+      "6/35",
+      "5/12",
+      "6/12",
+      "21/10"
+     ],
+     "why": "Multiply the tops, 3 × 2 = 6, and the bottoms, 5 × 7 = 35, to get 6/35. The answer 5/12 comes from adding the tops and adding the bottoms. That is a common mistake, and it is not a correct method for multiplying or for adding fractions.",
+     "clue": "Multiplying needs no common denominator."
+    },
+    "b": {
+     "d": 3,
+     "q": "Leila cuts 3/4 of a pizza into slices that are each 1/8 of a whole pizza. How many slices does she get? Find 3/4 ÷ 1/8.",
+     "opts": [
+      "6",
+      "3/32",
+      "1/6",
+      "10 2/3"
+     ],
+     "why": "3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6. The answer 3/32 comes from multiplying without flipping, and 1/6 comes from flipping the first fraction instead: 4/3 × 1/8 = 4/24 = 1/6.",
+     "clue": "Flip the second fraction only, then multiply."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "6/35",
+     "also_right": []
+    },
+    "b": {
+     "best": "6",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Multiplying and dividing fractions",
+  "card": [
+   "To multiply fractions, multiply the tops together and multiply the bottoms together. Example: 2/3 × 4/5 = 8/15.",
+   "Write a whole number as a fraction over 1. Example: 6 × 3/4 = 6/1 × 3/4 = 18/4 = 4 1/2.",
+   "The reciprocal of a fraction is the fraction turned upside down. The reciprocal of 3/5 is 5/3.",
+   "To divide, multiply by the reciprocal of the second fraction. Example: 1/2 ÷ 3/4 = 1/2 × 4/3 = 4/6 = 2/3. Only the second fraction is flipped."
+  ],
+  "remember": "Multiply tops and bottoms. To divide, flip the second fraction and multiply.",
+  "a": {
+   "q": "Work out 3/5 × 2/7.",
+   "opts": [
+    "6/35",
+    "5/12",
+    "6/12",
+    "21/10"
+   ],
+   "why": "Multiply the tops, 3 × 2 = 6, and the bottoms, 5 × 7 = 35, to get 6/35. The answer 5/12 comes from adding the tops and adding the bottoms. That is a common mistake, and it is not a correct method for multiplying or for adding fractions.",
+   "clue": "Multiplying needs no common denominator."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila cuts 3/4 of a pizza into slices that are each 1/8 of a whole pizza. How many slices does she get? Find 3/4 ÷ 1/8.",
+   "opts": [
+    "6",
+    "3/32",
+    "1/6",
+    "10 2/3"
+   ],
+   "why": "3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6. The answer 3/32 comes from multiplying without flipping, and 1/6 comes from flipping the first fraction instead: 4/3 × 1/8 = 4/24 = 1/6.",
+   "clue": "Flip the second fraction only, then multiply."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6/35",
+   "also_right": []
+  },
+  "b": {
+   "best": "6",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Multiplying and dividing fractions",
+  "card": [
+   "To multiply fractions, multiply the tops together and multiply the bottoms together. Example: 2/3 × 4/5 = 8/15.",
+   "Write a whole number as a fraction over 1. Example: 6 × 3/4 = 6/1 × 3/4 = 18/4 = 4 1/2.",
+   "The reciprocal of a fraction is the fraction turned upside down. The reciprocal of 3/5 is 5/3.",
+   "To divide, multiply by the reciprocal of the second fraction. Example: 1/2 ÷ 3/4 = 1/2 × 4/3 = 4/6 = 2/3. Only the second fraction is flipped."
+  ],
+  "remember": "Multiply tops and bottoms. To divide, flip the second fraction and multiply.",
+  "a": {
+   "q": "Work out 3/5 × 2/7.",
+   "opts": [
+    "6/35",
+    "5/12",
+    "6/12",
+    "21/10"
+   ],
+   "why": "Multiply the tops, 3 × 2 = 6, and the bottoms, 5 × 7 = 35, to get 6/35. The answer 5/12 comes from adding the tops and adding the bottoms. That is a common mistake, and it is not a correct method for multiplying or for adding fractions.",
+   "clue": "Multiplying needs no common denominator."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila cuts 3/4 of a pizza into slices that are each 1/8 of a whole pizza. How many slices does she get? Find 3/4 ÷ 1/8.",
+   "opts": [
+    "6",
+    "3/32",
+    "1/6",
+    "10 2/3"
+   ],
+   "why": "3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6. The answer 3/32 comes from multiplying without flipping, and 1/6 comes from flipping the first fraction instead: 4/3 × 1/8 = 4/24 = 1/6.",
+   "clue": "Flip the second fraction only, then multiply."
+  }
+ },
+ "checked_by": "claude-code"
+}

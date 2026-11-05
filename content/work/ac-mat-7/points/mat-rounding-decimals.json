@@ -1,0 +1,197 @@
+{
+ "id": "mat-rounding-decimals",
+ "title": "Rounding decimals",
+ "brief": "9d09b16a5c0a",
+ "shortlist": [
+  [
+   "mat-estimating-rounding",
+   0.213
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 may adapt mat-estimating-rounding, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:07Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:04Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00512,
+  "write": 0.01077,
+  "check": 0.01239,
+  "fix": 0.01916
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-estimating-rounding",
+  "changes": [
+   "Add an example of rounding a decimal to a given number of decimal places, such as one or two places, because the card only shows rounding to a whole number."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same rule for rounding by the next digit and estimating to check an answer, but it only shows whole-number rounding, so it needs a decimal-places example for Year 7.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is mainly about estimating whole-number calculations and never teaches rounding to a given number of decimal places, so making it fit would need a new step and a change of focus.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Rounding decimals",
+  "card": [
+   "To round to a given number of decimal places, find the last digit you are keeping. Then look at the digit right after it.",
+   "If the next digit is 5 or more, round up: add 1 to the last digit you keep. If it is 4 or less, leave the last digit as it is. Then drop all the digits after it.",
+   "Example: round 3.476 to 1 decimal place. The last digit kept is 4. The next digit is 7, so round up. The answer is 3.5.",
+   "To check an answer is reasonable, round each number to something easy first. 4.9 × 2.1 is close to 5 × 2 = 10, so an answer of 10.29 is reasonable but 102.9 is not."
+  ],
+  "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays.",
+  "a": {
+   "q": "What is 6.382 rounded to 2 decimal places?",
+   "opts": [
+    "6.38",
+    "6.39",
+    "6.40",
+    "6.4"
+   ],
+   "why": "The last digit kept is 8 and the next digit is 2. Since 2 is 4 or less, the 8 stays and the answer is 6.38. Rounding up to 6.39 looks at the wrong digit, as the 8 is not the digit that decides.",
+   "clue": "Only the digit right after the last one you keep decides."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben estimates 7.8 × 4.1 by rounding each number to the nearest whole number first. His calculator shows 31.98. Which estimate shows this answer is reasonable?",
+   "opts": [
+    "8 × 4 = 32, so 31.98 is reasonable",
+    "8 × 4 = 32, so 31.98 is too small",
+    "7 × 4 = 28, so 31.98 is too large",
+    "8 × 5 = 40, so 31.98 is too small"
+   ],
+   "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is 8 × 4 = 32. The calculator answer of 31.98 is very close to 32, so it is reasonable. Rounding 7.8 down to 7 is a mistake, because the next digit 8 means round up.",
+   "clue": "Round 7.8 using the digit after the 7."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6.38",
+   "also_right": []
+  },
+  "b": {
+   "best": "8 × 4 = 32, so 31.98 is reasonable",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks which estimate 'shows this answer is reasonable', and only one option ends with 'is reasonable'. The other three all say 31.98 is too small or too large, so a student can pick the right option from the stem's wording alone without doing the estimate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the answers and the explanations are correct. In question b, the right option is the only one that says 'reasonable', matching the question's wording, so it gives the answer away; rewording the stem to 'What does Ben's estimate show?' would fix this."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question asks which estimate 'shows this answer is reasonable', and only one option ends with 'is reasonable'. The other three all say 31.98 is too small or too large, so a student can pick the right option from the stem's wording alone without doing the estimate."
+ ],
+ "proposal": {
+  "title": "Rounding decimals",
+  "card": [
+   "To round to a given number of decimal places, find the last digit you are keeping. Then look at the digit right after it.",
+   "If the next digit is 5 or more, round up: add 1 to the last digit you keep. If it is 4 or less, leave the last digit as it is. Then drop all the digits after it.",
+   "Example: round 3.476 to 1 decimal place. The last digit kept is 4. The next digit is 7, so round up. The answer is 3.5.",
+   "To check an answer is reasonable, round each number to something easy first. 4.9 × 2.1 is close to 5 × 2 = 10, so an answer of 10.29 is reasonable but 102.9 is not."
+  ],
+  "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays.",
+  "a": {
+   "q": "What is 6.382 rounded to 2 decimal places?",
+   "opts": [
+    "6.38",
+    "6.39",
+    "6.4",
+    "6.3"
+   ],
+   "why": "The last digit kept is 8 and the next digit is 2. Since 2 is 4 or less, the 8 stays and the answer is 6.38. Rounding up to 6.39 looks at the wrong digit, as the 8 is not the digit that decides.",
+   "clue": "Only the digit right after the last one you keep decides."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben's calculator shows 31.98 for 7.8 × 4.1. He checks it by rounding each number to the nearest whole number. Which check is correct?",
+   "opts": [
+    "8 × 4 = 32, so 31.98 is reasonable",
+    "7 × 4 = 28, so 31.98 is reasonable",
+    "8 × 4 = 32, so 31.98 is too small",
+    "8 × 5 = 40, so 31.98 is too small"
+   ],
+   "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is 8 × 4 = 32. The answer 31.98 is very close to 32, so it is reasonable. The check using 7 × 4 reaches the right conclusion with a wrong estimate, because the 8 after the 7 means 7.8 rounds up.",
+   "clue": "Round each number first, then compare the estimate with 31.98."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks which estimate 'shows this answer is reasonable', and only one option ends with 'is reasonable'. The other three all say 31.98 is too small or too large, so a student can pick the right option from the stem's wording alone without doing the estimate."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question asks which estimate 'shows this answer is reasonable', and only one option ends with 'is reasonable'. The other three all say 31.98 is too small or too large, so a student can pick the right option from the stem's wording alone without doing the estimate."
+  ]
+ },
+ "final": {
+  "title": "Rounding decimals",
+  "card": [
+   "To round to a given number of decimal places, find the last digit you are keeping. Then look at the digit right after it.",
+   "If the next digit is 5 or more, round up: add 1 to the last digit you keep. If it is 4 or less, leave the last digit as it is. Then drop all the digits after it.",
+   "Example: round 3.476 to 1 decimal place. The last digit kept is 4. The next digit is 7, so round up. The answer is 3.5.",
+   "To check an answer is reasonable, round each number to something easy first. 4.9 × 2.1 is close to 5 × 2 = 10, so an answer of 10.29 is reasonable but 102.9 is not."
+  ],
+  "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays.",
+  "a": {
+   "q": "What is 6.382 rounded to 2 decimal places?",
+   "opts": [
+    "6.38",
+    "6.39",
+    "6.4",
+    "6.3"
+   ],
+   "why": "The last digit kept is 8 and the next digit is 2. Since 2 is 4 or less, the 8 stays and the answer is 6.38. Rounding up to 6.39 looks at the wrong digit, as the 8 is not the digit that decides.",
+   "clue": "Only the digit right after the last one you keep decides."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben's calculator shows 31.98 for 7.8 × 4.1. He checks it by rounding each number to the nearest whole number. Which check is correct?",
+   "opts": [
+    "8 × 4 = 32, so 31.98 is reasonable",
+    "7 × 4 = 28, so 31.98 is reasonable",
+    "8 × 4 = 32, so 31.98 is too small",
+    "8 × 5 = 40, so 31.98 is too small"
+   ],
+   "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is 8 × 4 = 32. The answer 31.98 is very close to 32, so it is reasonable. The check using 7 × 4 reaches the right conclusion with a wrong estimate, because the 8 after the 7 means 7.8 rounds up.",
+   "clue": "Round each number first, then compare the estimate with 31.98."
+  }
+ },
+ "cleared_by": "auto"
+}

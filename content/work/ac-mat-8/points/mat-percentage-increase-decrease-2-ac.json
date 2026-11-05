@@ -1,0 +1,136 @@
+{
+ "id": "mat-percentage-increase-decrease-2-ac",
+ "title": "Percentage increase and decrease",
+ "brief": "74caafab5092",
+ "shortlist": [
+  [
+   "mat-percentage-increase-decrease",
+   0.285
+  ],
+  [
+   "mat-percentages-amounts",
+   0.226
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:09Z write: done",
+  "2026-11-04T09:58:30Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.00677,
+  "check": 0.00601
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same multiplier method, but it is broader than this Year 8 point because it adds reversing a percentage change and question b depends on that step, so no bank point fits as it stands or with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Percentage increase and decrease",
+  "card": [
+   "To change an amount by a percentage in one step, multiply by a single factor. The factor is the new amount as a decimal fraction of the original.",
+   [
+    "Increase",
+    "Add the percentage to 100%, then write it as a decimal. A 15% increase is 100% + 15% = 115%, so the factor is 1.15."
+   ],
+   [
+    "Decrease",
+    "Take the percentage from 100%, then write it as a decimal. A 20% decrease is 100% − 20% = 80%, so the factor is 0.8."
+   ],
+   "Example: a $60 jacket rises in price by 15%. New price = 60 × 1.15 = $69."
+  ],
+  "remember": "Increase: 100% plus the change. Decrease: 100% minus the change. Then multiply.",
+  "a": {
+   "q": "Which factor gives a 30% decrease?",
+   "opts": [
+    "0.7",
+    "0.3",
+    "1.3",
+    "0.03"
+   ],
+   "why": "A 30% decrease leaves 100% − 30% = 70%, which is 0.7. The factor 0.3 is tempting, but multiplying by 0.3 leaves only 30% of the amount, so it is a 70% decrease.",
+   "clue": "Work out what percentage is left after the decrease."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi's gym fee is $40 a week. It rises by 15%. What is the new weekly fee?",
+   "opts": [
+    "$46",
+    "$55",
+    "$41.50",
+    "$6"
+   ],
+   "why": "The factor is 1.15, so 40 × 1.15 = $46. The answer $6 is only the increase (15% of 40), not the new fee.",
+   "clue": "The question asks for the new fee, not the size of the rise."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.7",
+   "also_right": []
+  },
+  "b": {
+   "best": "$46",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's facts and both answers check out (60 × 1.15 = 69, factor 0.7 for a 30% decrease, 40 × 1.15 = 46), and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Percentage increase and decrease",
+  "card": [
+   "To change an amount by a percentage in one step, multiply by a single factor. The factor is the new amount as a decimal fraction of the original.",
+   [
+    "Increase",
+    "Add the percentage to 100%, then write it as a decimal. A 15% increase is 100% + 15% = 115%, so the factor is 1.15."
+   ],
+   [
+    "Decrease",
+    "Take the percentage from 100%, then write it as a decimal. A 20% decrease is 100% − 20% = 80%, so the factor is 0.8."
+   ],
+   "Example: a $60 jacket rises in price by 15%. New price = 60 × 1.15 = $69."
+  ],
+  "remember": "Increase: 100% plus the change. Decrease: 100% minus the change. Then multiply.",
+  "a": {
+   "q": "Which factor gives a 30% decrease?",
+   "opts": [
+    "0.7",
+    "0.3",
+    "1.3",
+    "0.03"
+   ],
+   "why": "A 30% decrease leaves 100% − 30% = 70%, which is 0.7. The factor 0.3 is tempting, but multiplying by 0.3 leaves only 30% of the amount, so it is a 70% decrease.",
+   "clue": "Work out what percentage is left after the decrease."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi's gym fee is $40 a week. It rises by 15%. What is the new weekly fee?",
+   "opts": [
+    "$46",
+    "$55",
+    "$41.50",
+    "$6"
+   ],
+   "why": "The factor is 1.15, so 40 × 1.15 = $46. The answer $6 is only the increase (15% of 40), not the new fee.",
+   "clue": "The question asks for the new fee, not the size of the rise."
+  }
+ },
+ "cleared_by": "checker"
+}

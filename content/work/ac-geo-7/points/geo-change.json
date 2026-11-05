@@ -1,0 +1,355 @@
+{
+ "id": "geo-change",
+ "title": "Change",
+ "brief": "0dd697972f88",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, write",
+  "2026-11-04T09:36:51Z write: done",
+  "2026-11-04T09:46:59Z check: flagged",
+  "2026-11-04T09:58:25Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (a other)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00595,
+  "check": 0.01405,
+  "fix": 0.01819,
+  "recheck": 0.01142
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Think about how fast running water wears away rock' points straight at the only option about rock, so a student can pick the river gorge without knowing which changes are slow.",
+ "rejected": {
+  "title": "Change",
+  "card": [
+   "Places and environments change over time. Some changes happen quickly, such as a bushfire or a flood. Others are very slow, such as a river carving a valley over thousands of years or more.",
+   "Change can come from natural processes, such as weather and erosion. It can also come from people, such as building a town or clearing forest.",
+   "Geographers ask why a place changed. They compare how it looked in the past with how it looks now, using sources like old photos and maps.",
+   "Knowing why a place changed helps predict what may come next. If a coastline has been wearing away for years, it may keep doing so."
+  ],
+  "remember": "Places change at different speeds, and knowing why they changed helps predict what may happen next.",
+  "a": {
+   "q": "Which of these changes is most likely to take thousands of years?",
+   "opts": [
+    "A river cutting a deep gorge into solid rock",
+    "A storm flooding the streets of a coastal town",
+    "A bushfire burning through a large forest",
+    "Workers clearing a forest to build a new town"
+   ],
+   "why": "Rivers wear away rock very slowly, so a deep gorge takes thousands of years or more to form. The storm and the bushfire are quick changes. Clearing a forest for a town is a change made by people, and it takes months or years, not thousands of years.",
+   "clue": "Think about how fast running water wears away rock."
+  },
+  "b": {
+   "d": 3,
+   "q": "Old photos show a beach in Tasmania losing a little more sand each decade. How can a geographer use this to predict what comes next?",
+   "opts": [
+    "Find the cause and judge whether it is likely to continue",
+    "Assume the beach will return to how it was before",
+    "Assume the change will stop because it is slow",
+    "Conclude the beach is only changing because of people"
+   ],
+   "why": "Knowing why the sand is being lost lets a geographer judge whether that cause will keep acting. If it will, the loss may well continue. The change is slow, but slow does not mean it will stop, and change can come from natural processes as well as from people.",
+   "clue": "The photos show a pattern. What do you need to know about it?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Think about how fast running water wears away rock' points straight at the only option about rock, so a student can pick the river gorge without knowing which changes are slow."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Change",
+     "card": [
+      "Places and environments change over time. Some changes happen quickly, such as a bushfire or a flood. Others take centuries, such as a river slowly carving a valley.",
+      "Change can come from natural processes, such as weather and erosion. It can also come from people, such as building a town or clearing forest.",
+      "Geographers ask why a place changed. They compare how it looked in the past with how it looks now, using sources like old photos and maps.",
+      "Knowing why a place changed helps predict what may come next. If a coastline has been wearing away for years, it may keep doing so."
+     ],
+     "remember": "Places change at different speeds, and knowing why they changed helps predict what may happen next.",
+     "a": {
+      "q": "Which change is most likely to happen over centuries?",
+      "opts": [
+       "A river slowly cutting a deep gorge into rock",
+       "A storm flooding a street in an afternoon",
+       "A bushfire burning through a forest in days",
+       "A new shopping centre opening after a year of building"
+      ],
+      "why": "Rivers wear away rock very slowly, so a gorge forms over centuries. The storm and bushfire are fast changes. The shopping centre is a human change that takes about a year, so it is not the slowest.",
+      "clue": "Think about which one needs the most time."
+     },
+     "b": {
+      "d": 3,
+      "q": "Old photos show a beach in Tasmania losing a little more sand each decade. How can a geographer use this to predict what comes next?",
+      "opts": [
+       "Find the cause and judge whether it is likely to continue",
+       "Assume the beach will return to how it was before",
+       "Assume the change will stop because it is slow",
+       "Conclude the beach is only changing because of people"
+      ],
+      "why": "Knowing why the sand is being lost lets a geographer judge whether that cause will keep acting. If it will, the loss may well continue. The change is slow, but slow does not mean it will stop, and the card says change can come from natural processes as well as from people.",
+      "clue": "The photos show a pattern. What do you need to know about it?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A river slowly cutting a deep gorge into rock",
+      "also_right": []
+     },
+     "b": {
+      "best": "Find the cause and judge whether it is likely to continue",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'Others take centuries, such as a river slowly carving a valley' understates the time. Rivers usually carve valleys and gorges over thousands to millions of years, not centuries. Better: 'over thousands of years or more'."
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The question and why (a) say a gorge forms 'over centuries'. Gorges normally take thousands of years or longer, so this repeats the card's understatement. Rephrase it as 'over a very long time' or 'thousands of years'."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one with 'slowly' in it and the only one without a short time span such as 'in days' or 'in an afternoon', so students can pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and question a say a river carves a valley or gorge over 'centuries', when this usually takes thousands of years or more. The right option in question a also stands out because it is the only one that says 'slowly'. Question b is sound."
+    },
+    "flags": [
+     "Card, fact: 'Others take centuries, such as a river slowly carving a valley' understates the time. Rivers usually carve valleys and gorges over thousands to millions of years, not centuries. Better: 'over thousands of years or more'.",
+     "Question a, fact: The question and why (a) say a gorge forms 'over centuries'. Gorges normally take thousands of years or longer, so this repeats the card's understatement. Rephrase it as 'over a very long time' or 'thousands of years'.",
+     "Question a, wording: The right option is the only one with 'slowly' in it and the only one without a short time span such as 'in days' or 'in an afternoon', so students can pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Change",
+     "card": [
+      "Places and environments change over time. Some changes happen quickly, such as a bushfire or a flood. Others are very slow, such as a river carving a valley over thousands of years or more.",
+      "Change can come from natural processes, such as weather and erosion. It can also come from people, such as building a town or clearing forest.",
+      "Geographers ask why a place changed. They compare how it looked in the past with how it looks now, using sources like old photos and maps.",
+      "Knowing why a place changed helps predict what may come next. If a coastline has been wearing away for years, it may keep doing so."
+     ],
+     "remember": "Places change at different speeds, and knowing why they changed helps predict what may happen next.",
+     "a": {
+      "q": "Which of these changes is most likely to take thousands of years?",
+      "opts": [
+       "A river cutting a deep gorge into solid rock",
+       "A storm flooding the streets of a coastal town",
+       "A bushfire burning through a large forest",
+       "Workers clearing a forest to build a new town"
+      ],
+      "why": "Rivers wear away rock very slowly, so a deep gorge takes thousands of years or more to form. The storm and the bushfire are quick changes. Clearing a forest for a town is a change made by people, and it takes months or years, not thousands of years.",
+      "clue": "Think about how fast running water wears away rock."
+     },
+     "b": {
+      "d": 3,
+      "q": "Old photos show a beach in Tasmania losing a little more sand each decade. How can a geographer use this to predict what comes next?",
+      "opts": [
+       "Find the cause and judge whether it is likely to continue",
+       "Assume the beach will return to how it was before",
+       "Assume the change will stop because it is slow",
+       "Conclude the beach is only changing because of people"
+      ],
+      "why": "Knowing why the sand is being lost lets a geographer judge whether that cause will keep acting. If it will, the loss may well continue. The change is slow, but slow does not mean it will stop, and change can come from natural processes as well as from people.",
+      "clue": "The photos show a pattern. What do you need to know about it?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A river cutting a deep gorge into solid rock",
+       "also_right": []
+      },
+      "b": {
+       "best": "Find the cause and judge whether it is likely to continue",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Think about how fast running water wears away rock' points straight at the only option about rock, so a student can pick the river gorge without knowing which changes are slow."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both answers are sound. The clue for question a mentions running water wearing away rock, which gives away the answer; it should be reworded."
+     },
+     "flags": [
+      "Question a, other: The clue 'Think about how fast running water wears away rock' points straight at the only option about rock, so a student can pick the river gorge without knowing which changes are slow."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Change",
+    "card": [
+     "Places and environments change over time. Some changes happen quickly, such as a bushfire or a flood. Others are very slow, such as a river carving a valley over thousands of years or more.",
+     "Change can come from natural processes, such as weather and erosion. It can also come from people, such as building a town or clearing forest.",
+     "Geographers ask why a place changed. They compare how it looked in the past with how it looks now, using sources like old photos and maps.",
+     "Knowing why a place changed helps predict what may come next. If a coastline has been wearing away for years, it may keep doing so."
+    ],
+    "remember": "Places change at different speeds, and knowing why they changed helps predict what may happen next.",
+    "a": {
+     "q": "Which of these changes to a place would take the longest to happen?",
+     "opts": [
+      "A river cutting a deep gorge into solid rock",
+      "A storm flooding the streets of a coastal town",
+      "A bushfire burning through a large forest",
+      "Workers clearing a forest to build a new town"
+     ],
+     "why": "Rivers wear away rock very slowly, so a deep gorge takes thousands of years or more to form. The storm and the bushfire are quick changes. Clearing a forest for a town is a change made by people, and it takes months or years, not thousands of years.",
+     "clue": "Which change could no person watch from start to finish?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Photos from the past 50 years show a Tasmanian beach growing a little narrower each decade. How can a geographer best predict its future?",
+     "opts": [
+      "Work out the cause and whether it will keep acting",
+      "Expect the beach to grow back to its old width",
+      "Expect the loss to stop, since it has been so slow",
+      "Assume people caused it and look no further"
+     ],
+     "why": "Knowing why the sand is being lost lets a geographer judge whether that cause will keep acting. If it will, the beach may keep narrowing. A slow change is still a change, and change can come from natural processes as well as from people, so the cause has to be checked.",
+     "clue": "A pattern on its own does not say why it is happening."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A river cutting a deep gorge into solid rock",
+     "also_right": []
+    },
+    "b": {
+     "best": "Work out the cause and whether it will keep acting",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Change",
+  "card": [
+   "Places and environments change over time. Some changes happen quickly, such as a bushfire or a flood. Others are very slow, such as a river carving a valley over thousands of years or more.",
+   "Change can come from natural processes, such as weather and erosion. It can also come from people, such as building a town or clearing forest.",
+   "Geographers ask why a place changed. They compare how it looked in the past with how it looks now, using sources like old photos and maps.",
+   "Knowing why a place changed helps predict what may come next. If a coastline has been wearing away for years, it may keep doing so."
+  ],
+  "remember": "Places change at different speeds, and knowing why they changed helps predict what may happen next.",
+  "a": {
+   "q": "Which of these changes to a place would take the longest to happen?",
+   "opts": [
+    "A river cutting a deep gorge into solid rock",
+    "A storm flooding the streets of a coastal town",
+    "A bushfire burning through a large forest",
+    "Workers clearing a forest to build a new town"
+   ],
+   "why": "Rivers wear away rock very slowly, so a deep gorge takes thousands of years or more to form. The storm and the bushfire are quick changes. Clearing a forest for a town is a change made by people, and it takes months or years, not thousands of years.",
+   "clue": "Which change could no person watch from start to finish?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Photos from the past 50 years show a Tasmanian beach growing a little narrower each decade. How can a geographer best predict its future?",
+   "opts": [
+    "Work out the cause and whether it will keep acting",
+    "Expect the beach to grow back to its old width",
+    "Expect the loss to stop, since it has been so slow",
+    "Assume people caused it and look no further"
+   ],
+   "why": "Knowing why the sand is being lost lets a geographer judge whether that cause will keep acting. If it will, the beach may keep narrowing. A slow change is still a change, and change can come from natural processes as well as from people, so the cause has to be checked.",
+   "clue": "A pattern on its own does not say why it is happening."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A river cutting a deep gorge into solid rock",
+   "also_right": []
+  },
+  "b": {
+   "best": "Work out the cause and whether it will keep acting",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Change",
+  "card": [
+   "Places and environments change over time. Some changes happen quickly, such as a bushfire or a flood. Others are very slow, such as a river carving a valley over thousands of years or more.",
+   "Change can come from natural processes, such as weather and erosion. It can also come from people, such as building a town or clearing forest.",
+   "Geographers ask why a place changed. They compare how it looked in the past with how it looks now, using sources like old photos and maps.",
+   "Knowing why a place changed helps predict what may come next. If a coastline has been wearing away for years, it may keep doing so."
+  ],
+  "remember": "Places change at different speeds, and knowing why they changed helps predict what may happen next.",
+  "a": {
+   "q": "Which of these changes to a place would take the longest to happen?",
+   "opts": [
+    "A river cutting a deep gorge into solid rock",
+    "A storm flooding the streets of a coastal town",
+    "A bushfire burning through a large forest",
+    "Workers clearing a forest to build a new town"
+   ],
+   "why": "Rivers wear away rock very slowly, so a deep gorge takes thousands of years or more to form. The storm and the bushfire are quick changes. Clearing a forest for a town is a change made by people, and it takes months or years, not thousands of years.",
+   "clue": "Which change could no person watch from start to finish?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Photos from the past 50 years show a Tasmanian beach growing a little narrower each decade. How can a geographer best predict its future?",
+   "opts": [
+    "Work out the cause and whether it will keep acting",
+    "Expect the beach to grow back to its old width",
+    "Expect the loss to stop, since it has been so slow",
+    "Assume people caused it and look no further"
+   ],
+   "why": "Knowing why the sand is being lost lets a geographer judge whether that cause will keep acting. If it will, the beach may keep narrowing. A slow change is still a change, and change can come from natural processes as well as from people, so the cause has to be checked.",
+   "clue": "A pattern on its own does not say why it is happening."
+  }
+ },
+ "checked_by": "claude-code"
+}

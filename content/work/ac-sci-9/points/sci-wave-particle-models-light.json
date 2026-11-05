@@ -1,0 +1,379 @@
+{
+ "id": "sci-wave-particle-models-light",
+ "title": "Wave and particle models of light",
+ "brief": "86025eb98f34",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, write",
+  "2026-11-04T09:36:59Z write: done",
+  "2026-11-04T09:47:13Z check: flagged",
+  "2026-11-04T09:58:34Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00617,
+  "check": 0.01087,
+  "fix": 0.01287,
+  "recheck": 0.01306
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: Why (b) says flatly that 'The wave model does not explain absorption.' The card only says the particle model explains why light is absorbed in separate amounts. The wave model can describe light being absorbed; it just cannot explain the separate packets. The absolute claim overstates the card and is not quite true.",
+ "rejected": {
+  "title": "Wave and particle models of light",
+  "card": [
+   "A model is a way of explaining how something behaves. Scientists use two models for light, because one model cannot explain everything light does.",
+   [
+    "Wave model",
+    "light travels as a wave. It explains why light spreads out after passing through a narrow gap and why it bends when it moves from air into water."
+   ],
+   [
+    "Particle model",
+    "light is a stream of tiny packets of energy called photons. It explains why light is absorbed in separate amounts of energy, such as when a solar cell takes in light."
+   ],
+   "Neither model is wrong. Each one explains some behaviour of light, so scientists choose the model that fits what they are studying."
+  ],
+  "remember": "Spreading and bending fit the wave model. Absorption fits the particle model.",
+  "a": {
+   "q": "Light from a torch passes through a narrow slit and spreads out on the other side. Which model best explains this?",
+   "opts": [
+    "The wave model, because waves spread after a gap",
+    "The particle model, because photons spread after a gap",
+    "The wave model, because waves are absorbed in packets",
+    "The particle model, because photons bend in water"
+   ],
+   "why": "Spreading out after a narrow gap is a wave behaviour, so the wave model explains it. The particle model is tempting, but it is used for absorption, not for spreading.",
+   "clue": "Think about which behaviour belongs to which model."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's solar cell takes in light and gives out electricity. Which model best explains how the cell takes in the light, and why?",
+   "opts": [
+    "Particle model, as photons are absorbed as packets of energy",
+    "Wave model, as waves are absorbed as packets of energy",
+    "Particle model, as photons spread out after a narrow gap",
+    "Wave model, as light bends when it enters the glass cover"
+   ],
+   "why": "Absorption is explained by the particle model, where each photon hands over a packet of energy. The wave model does not explain absorption. Bending in the glass cover is a real wave behaviour, but it is not how the cell takes in light.",
+   "clue": "The question is about absorbing light, not bending it."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: Why (b) says flatly that 'The wave model does not explain absorption.' The card only says the particle model explains why light is absorbed in separate amounts. The wave model can describe light being absorbed; it just cannot explain the separate packets. The absolute claim overstates the card and is not quite true."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Wave and particle models of light",
+     "card": [
+      "A model is a way of explaining how something behaves. Scientists use two models for light, because one model cannot explain everything light does.",
+      [
+       "Wave model",
+       "light travels as a wave. It explains why light spreads out after passing through a narrow gap and why it bends when it moves from air into water."
+      ],
+      [
+       "Particle model",
+       "light is a stream of tiny packets of energy called photons. It explains why light is absorbed in separate amounts of energy, such as when a solar cell takes in light."
+      ],
+      "Neither model is wrong. Each one explains some behaviour of light, so scientists choose the model that fits what they are studying."
+     ],
+     "remember": "Spreading and bending fit the wave model. Absorption fits the particle model.",
+     "a": {
+      "q": "Light from a torch passes through a narrow slit and spreads out on the other side. Which model best explains this?",
+      "opts": [
+       "The wave model, because waves spread after a gap",
+       "The particle model, because photons spread after a gap",
+       "The wave model, because waves are absorbed in packets",
+       "The particle model, because photons bend in water"
+      ],
+      "why": "Spreading out after a narrow gap is a wave behaviour, so the wave model explains it. The particle model is tempting, but it is used for absorption, not for spreading.",
+      "clue": "Think about which behaviour belongs to which model."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya's solar cell takes in light and gives out electricity. Which model best explains how the cell takes in the light, and why?",
+      "opts": [
+       "Particle model, as photons are absorbed as packets of energy",
+       "Wave model, as waves are absorbed as packets of energy",
+       "Particle model, as photons spread out after a narrow gap",
+       "Wave model, as light bends when it enters the glass cover"
+      ],
+      "why": "Absorption is explained by the particle model, where each photon hands over a packet of energy. The wave model is wrong here: bending in glass is a real wave behaviour, but it is not about absorption.",
+      "clue": "The question is about absorbing light, not bending it."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The wave model, because waves spread after a gap",
+      "also_right": []
+     },
+     "b": {
+      "best": "Particle model, as photons are absorbed as packets of energy",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says 'The wave model is wrong here', which clashes with the card's 'Neither model is wrong'. Better: 'The wave model does not explain absorption.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, remember line and both questions are accurate and each has one clear right answer. The only issue is that why (b) calls the wave model 'wrong', against the card's point that neither model is wrong."
+    },
+    "flags": [
+     "Question b, other: Why (b) says 'The wave model is wrong here', which clashes with the card's 'Neither model is wrong'. Better: 'The wave model does not explain absorption.'"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Wave and particle models of light",
+     "card": [
+      "A model is a way of explaining how something behaves. Scientists use two models for light, because one model cannot explain everything light does.",
+      [
+       "Wave model",
+       "light travels as a wave. It explains why light spreads out after passing through a narrow gap and why it bends when it moves from air into water."
+      ],
+      [
+       "Particle model",
+       "light is a stream of tiny packets of energy called photons. It explains why light is absorbed in separate amounts of energy, such as when a solar cell takes in light."
+      ],
+      "Neither model is wrong. Each one explains some behaviour of light, so scientists choose the model that fits what they are studying."
+     ],
+     "remember": "Spreading and bending fit the wave model. Absorption fits the particle model.",
+     "a": {
+      "q": "Light from a torch passes through a narrow slit and spreads out on the other side. Which model best explains this?",
+      "opts": [
+       "The wave model, because waves spread after a gap",
+       "The particle model, because photons spread after a gap",
+       "The wave model, because waves are absorbed in packets",
+       "The particle model, because photons bend in water"
+      ],
+      "why": "Spreading out after a narrow gap is a wave behaviour, so the wave model explains it. The particle model is tempting, but it is used for absorption, not for spreading.",
+      "clue": "Think about which behaviour belongs to which model."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya's solar cell takes in light and gives out electricity. Which model best explains how the cell takes in the light, and why?",
+      "opts": [
+       "Particle model, as photons are absorbed as packets of energy",
+       "Wave model, as waves are absorbed as packets of energy",
+       "Particle model, as photons spread out after a narrow gap",
+       "Wave model, as light bends when it enters the glass cover"
+      ],
+      "why": "Absorption is explained by the particle model, where each photon hands over a packet of energy. The wave model does not explain absorption. Bending in the glass cover is a real wave behaviour, but it is not how the cell takes in light.",
+      "clue": "The question is about absorbing light, not bending it."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The wave model, because waves spread after a gap",
+       "also_right": []
+      },
+      "b": {
+       "best": "Particle model, as photons are absorbed as packets of energy",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "Why (b) says flatly that 'The wave model does not explain absorption.' The card only says the particle model explains why light is absorbed in separate amounts. The wave model can describe light being absorbed; it just cannot explain the separate packets. The absolute claim overstates the card and is not quite true."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer that matches the card. The only problem is that why (b) overstates things by saying the wave model does not explain absorption at all, when the card only says the particle model explains absorption in separate amounts."
+     },
+     "flags": [
+      "Question b, wording: Why (b) says flatly that 'The wave model does not explain absorption.' The card only says the particle model explains why light is absorbed in separate amounts. The wave model can describe light being absorbed; it just cannot explain the separate packets. The absolute claim overstates the card and is not quite true."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "Wave and particle models of light",
+    "card": [
+     "A model is a way of explaining how something behaves. Scientists use two models for light, because one model cannot explain everything light does.",
+     [
+      "Wave model",
+      "light travels as a wave. It explains why light spreads out after passing through a narrow gap and why it bends when it moves from air into water."
+     ],
+     [
+      "Particle model",
+      "light is a stream of tiny packets of energy called photons. It explains why light is absorbed in separate amounts of energy, such as when a solar cell takes in light."
+     ],
+     "Neither model is wrong. Each one explains some behaviour of light, so scientists choose the model that fits what they are studying."
+    ],
+    "remember": "Spreading and bending fit the wave model. Absorption in separate packets fits the particle model.",
+    "a": {
+     "q": "A laser beam passes through a very narrow slit and fans out on the far side. Which model explains this best?",
+     "opts": [
+      "The wave model, because waves spread after a gap",
+      "The particle model, because photons spread after a gap",
+      "The wave model, because waves are absorbed in packets",
+      "The particle model, because photons bend in water"
+     ],
+     "why": "Spreading out after a narrow gap is a wave behaviour, so the wave model explains it. The particle model is tempting, but it is used for absorption in separate packets, not for spreading.",
+     "clue": "Think about which behaviour belongs to which model."
+    },
+    "b": {
+     "d": 3,
+     "q": "Sam's solar panel takes in sunlight and turns it into electricity. Which model best explains how the panel absorbs the light, and why?",
+     "opts": [
+      "Particle model, as energy is absorbed in separate packets",
+      "Wave model, as waves are absorbed as packets of energy",
+      "Particle model, as photons spread out after a narrow gap",
+      "Wave model, as light bends when it enters the glass cover"
+     ],
+     "why": "The particle model explains why light is absorbed in separate packets of energy, called photons. The wave model can describe light being taken in, but it does not explain these separate packets. Bending in the glass cover is a real wave behaviour, but it is not how the panel absorbs light.",
+     "clue": "Focus on how the light is taken in, not how it travels."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The wave model, because waves spread after a gap",
+     "also_right": []
+    },
+    "b": {
+     "best": "Particle model, as energy is absorbed in separate packets",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Wave and particle models of light",
+  "card": [
+   "A model is a way of explaining how something behaves. Scientists use two models for light, because one model cannot explain everything light does.",
+   [
+    "Wave model",
+    "light travels as a wave. It explains why light spreads out after passing through a narrow gap and why it bends when it moves from air into water."
+   ],
+   [
+    "Particle model",
+    "light is a stream of tiny packets of energy called photons. It explains why light is absorbed in separate amounts of energy, such as when a solar cell takes in light."
+   ],
+   "Neither model is wrong. Each one explains some behaviour of light, so scientists choose the model that fits what they are studying."
+  ],
+  "remember": "Spreading and bending fit the wave model. Absorption in separate packets fits the particle model.",
+  "a": {
+   "q": "A laser beam passes through a very narrow slit and fans out on the far side. Which model explains this best?",
+   "opts": [
+    "The wave model, because waves spread after a gap",
+    "The particle model, because photons spread after a gap",
+    "The wave model, because waves are absorbed in packets",
+    "The particle model, because photons bend in water"
+   ],
+   "why": "Spreading out after a narrow gap is a wave behaviour, so the wave model explains it. The particle model is tempting, but it is used for absorption in separate packets, not for spreading.",
+   "clue": "Think about which behaviour belongs to which model."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's solar panel takes in sunlight and turns it into electricity. Which model best explains how the panel absorbs the light, and why?",
+   "opts": [
+    "Particle model, as energy is absorbed in separate packets",
+    "Wave model, as waves are absorbed as packets of energy",
+    "Particle model, as photons spread out after a narrow gap",
+    "Wave model, as light bends when it enters the glass cover"
+   ],
+   "why": "The particle model explains why light is absorbed in separate packets of energy, called photons. The wave model can describe light being taken in, but it does not explain these separate packets. Bending in the glass cover is a real wave behaviour, but it is not how the panel absorbs light.",
+   "clue": "Focus on how the light is taken in, not how it travels."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The wave model, because waves spread after a gap",
+   "also_right": []
+  },
+  "b": {
+   "best": "Particle model, as energy is absorbed in separate packets",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Wave and particle models of light",
+  "card": [
+   "A model is a way of explaining how something behaves. Scientists use two models for light, because one model cannot explain everything light does.",
+   [
+    "Wave model",
+    "light travels as a wave. It explains why light spreads out after passing through a narrow gap and why it bends when it moves from air into water."
+   ],
+   [
+    "Particle model",
+    "light is a stream of tiny packets of energy called photons. It explains why light is absorbed in separate amounts of energy, such as when a solar cell takes in light."
+   ],
+   "Neither model is wrong. Each one explains some behaviour of light, so scientists choose the model that fits what they are studying."
+  ],
+  "remember": "Spreading and bending fit the wave model. Absorption in separate packets fits the particle model.",
+  "a": {
+   "q": "A laser beam passes through a very narrow slit and fans out on the far side. Which model explains this best?",
+   "opts": [
+    "The wave model, because waves spread after a gap",
+    "The particle model, because photons spread after a gap",
+    "The wave model, because waves are absorbed in packets",
+    "The particle model, because photons bend in water"
+   ],
+   "why": "Spreading out after a narrow gap is a wave behaviour, so the wave model explains it. The particle model is tempting, but it is used for absorption in separate packets, not for spreading.",
+   "clue": "Think about which behaviour belongs to which model."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's solar panel takes in sunlight and turns it into electricity. Which model best explains how the panel absorbs the light, and why?",
+   "opts": [
+    "Particle model, as energy is absorbed in separate packets",
+    "Wave model, as waves are absorbed as packets of energy",
+    "Particle model, as photons spread out after a narrow gap",
+    "Wave model, as light bends when it enters the glass cover"
+   ],
+   "why": "The particle model explains why light is absorbed in separate packets of energy, called photons. The wave model can describe light being taken in, but it does not explain these separate packets. Bending in the glass cover is a real wave behaviour, but it is not how the panel absorbs light.",
+   "clue": "Focus on how the light is taken in, not how it travels."
+  }
+ },
+ "checked_by": "claude-code"
+}

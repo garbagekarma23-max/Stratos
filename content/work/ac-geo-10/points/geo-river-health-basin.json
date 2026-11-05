@@ -1,0 +1,414 @@
+{
+ "id": "geo-river-health-basin",
+ "title": "River health in the basin",
+ "brief": "868766d615f8",
+ "shortlist": [
+  [
+   "geo-managing-water",
+   0.295
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:31Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:25Z write: done",
+  "2026-11-04T10:08:00Z check: flagged",
+  "2026-11-04T10:10:49Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00509,
+  "check": 0.01182,
+  "fix": 0.01897,
+  "recheck": 0.00998
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers water management and competing demands at a Year 11 NSW depth, but it does not teach the river health impacts in the brief, such as salinity, algal blooms, land clearing, fish kills and drying wetlands, so it is related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "River health in the basin",
+  "card": [
+   "River health describes how well a river and its wetlands support plants, animals and people. In the Murray-Darling Basin, several human actions have lowered it.",
+   "Taking large amounts of water for use on farms and in towns leaves less water in the rivers. Wetlands can dry out, and low flows can leave fish and other water life short of habitat.",
+   "Dams and weirs change when and how much water flows downstream. Clearing land can raise salt levels, because removing deep-rooted plants lets more water seep underground and bring salt up.",
+   "Warm, slow, low water with extra nutrients can cause algal blooms. Blooms can use up oxygen in the water, which can lead to fish kills."
+  ],
+  "remember": "Less water, changed flows and cleared land can harm rivers, causing salinity, blooms, fish kills and drying wetlands.",
+  "a": {
+   "q": "Which change is most likely to lead to an algal bloom in a river of the basin?",
+   "opts": [
+    "Warm, slow, low water with extra nutrients",
+    "Fast, cold water flowing from a dam release",
+    "A wetland filling with water after rain",
+    "Deep-rooted trees planted along the bank"
+   ],
+   "why": "Algal blooms are more likely when water is warm, slow and low and has extra nutrients. Fast, cold flow is the tempting wrong choice because it mixes and moves the water, so it does not give blooms the same conditions.",
+   "clue": "Think about water that is warm and barely moving."
+  },
+  "b": {
+   "d": 3,
+   "q": "Farmers near a river in the basin clear all the deep-rooted trees from their paddocks. Over time, which effect is most likely?",
+   "opts": [
+    "More salt rising in the soil and reaching the river",
+    "More water being taken straight from the river",
+    "Fewer dams changing the timing of river flows",
+    "Wetlands staying full because less water seeps down"
+   ],
+   "why": "Without deep-rooted plants, more water seeps underground and can bring salt up, so salinity can rise. Taking water from the river is a different cause of poor river health, and clearing land does not make it happen.",
+   "clue": "Ask what deep roots do to the water underground."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Warm, slow, low water with extra nutrients",
+   "also_right": []
+  },
+  "b": {
+   "best": "More salt rising in the soil and reaching the river",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest and the only one with several precise conditions, and it copies the card's wording word for word. A student could pick it without understanding why blooms form."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('water that is warm and barely moving') points straight at the only option describing warm, slow water, which gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct, but question a is too easy to guess: the right option is the longest, repeats the card's exact wording, and the clue points straight to it. Question b and the card are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option stands out. It is the longest and the only one with several precise conditions, and it copies the card's wording word for word. A student could pick it without understanding why blooms form.",
+  "Question a, other: The clue ('water that is warm and barely moving') points straight at the only option describing warm, slow water, which gives the answer away."
+ ],
+ "proposal": {
+  "title": "River health in the basin",
+  "card": [
+   "River health describes how well a river and its wetlands support plants, animals and people. In the Murray-Darling Basin, several human actions have lowered it.",
+   "Taking large amounts of water for use on farms and in towns leaves less water in the rivers. Wetlands can dry out, and low flows can leave fish and other water life short of habitat.",
+   "Dams and weirs change when and how much water flows downstream. Clearing land can raise salt levels, because removing deep-rooted plants lets more water seep underground and bring salt up.",
+   "Algal blooms can form when water is warm, slow and low and has extra nutrients, such as fertiliser washed off farms. Blooms can use up oxygen in the water, which can lead to fish kills."
+  ],
+  "remember": "Less water, changed flows and cleared land can harm rivers, causing salinity, blooms, fish kills and drying wetlands.",
+  "a": {
+   "q": "Which situation in a basin river is most likely to lead to an algal bloom?",
+   "opts": [
+    "A still, shallow summer pool with fertiliser runoff",
+    "A cold, fast flow released from the bottom of a dam",
+    "A deep winter flood with water mixing quickly",
+    "A cool, shaded stretch flowing quickly over rocks"
+   ],
+   "why": "The summer pool is warm, slow and low, and the fertiliser adds nutrients, so it meets all the conditions for a bloom. The cold dam release is tempting because dams can harm rivers, but its water is cold and moving fast, so it does not suit algae.",
+   "clue": "Check each option against every condition a bloom needs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Farmers near a river in the basin clear all the deep-rooted trees from their paddocks. Over time, which effect is most likely?",
+   "opts": [
+    "More salt rising in the soil and reaching the river",
+    "More water being taken straight from the river",
+    "Fewer dams changing the timing of river flows",
+    "Wetlands staying full because less water seeps down"
+   ],
+   "why": "Without deep-rooted plants, more water seeps underground and can bring salt up, so salinity can rise. Taking water from the river is a different cause of poor river health, and clearing land does not make it happen.",
+   "clue": "Ask what deep roots do to the water underground."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:12Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A still, shallow summer pool with fertiliser runoff",
+    "also_right": []
+   },
+   "b": {
+    "best": "More salt rising in the soil and reaching the river",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest and the only one with several precise conditions, and it copies the card's wording word for word. A student could pick it without understanding why blooms form."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('water that is warm and barely moving') points straight at the only option describing warm, slow water, which gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option stands out. It is the longest and the only one with several precise conditions, and it copies the card's wording word for word. A student could pick it without understanding why blooms form.",
+   "Question a, other: The clue ('water that is warm and barely moving') points straight at the only option describing warm, slow water, which gives the answer away."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "River health in the basin",
+  "card": [
+   "River health describes how well a river and its wetlands support plants, animals and people. In the Murray-Darling Basin, several human actions have lowered it.",
+   "Taking large amounts of water for use on farms and in towns leaves less water in the rivers. Wetlands can dry out, and low flows can leave fish and other water life short of habitat.",
+   "Dams and weirs change when and how much water flows downstream. Clearing land can raise salt levels, because removing deep-rooted plants lets more water seep underground and bring salt up.",
+   "Algal blooms can form when water is warm, slow and low and has extra nutrients, such as fertiliser washed off farms. Blooms can use up oxygen in the water, which can lead to fish kills."
+  ],
+  "remember": "Less water, changed flows and cleared land can harm rivers, causing salinity, blooms, fish kills and drying wetlands.",
+  "a": {
+   "q": "Which situation in a basin river is most likely to lead to an algal bloom?",
+   "opts": [
+    "A still, shallow summer pool with fertiliser runoff",
+    "A cold, fast flow released from the bottom of a dam",
+    "A deep winter flood with water mixing quickly",
+    "A cool, shaded stretch flowing quickly over rocks"
+   ],
+   "why": "The summer pool is warm, slow and low, and the fertiliser adds nutrients, so it meets all the conditions for a bloom. The cold dam release is tempting because dams can harm rivers, but its water is cold and moving fast, so it does not suit algae.",
+   "clue": "Check each option against every condition a bloom needs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Farmers near a river in the basin clear all the deep-rooted trees from their paddocks. Over time, which effect is most likely?",
+   "opts": [
+    "More salt rising in the soil and reaching the river",
+    "More water being taken straight from the river",
+    "Fewer dams changing the timing of river flows",
+    "Wetlands staying full because less water seeps down"
+   ],
+   "why": "Without deep-rooted plants, more water seeps underground and can bring salt up, so salinity can rise. Taking water from the river is a different cause of poor river health, and clearing land does not make it happen.",
+   "clue": "Ask what deep roots do to the water underground."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The new question a describes a real situation that meets every condition for a bloom instead of copying the card's words, and the card now says where extra nutrients come from.",
+   "item": "e61333c1d8321d97",
+   "result": "decided",
+   "saved": {
+    "id": "geo-river-health-basin",
+    "title": "River health in the basin",
+    "brief": "868766d615f8",
+    "shortlist": [
+     [
+      "geo-managing-water",
+      0.295
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00015,
+     "write": 0.00509,
+     "check": 0.01182,
+     "fix": 0.01897,
+     "recheck": 0.00998
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point covers water management and competing demands at a Year 11 NSW depth, but it does not teach the river health impacts in the brief, such as salinity, algal blooms, land clearing, fish kills and drying wetlands, so it is related rather than the same idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "River health in the basin",
+     "card": [
+      "River health describes how well a river and its wetlands support plants, animals and people. In the Murray-Darling Basin, several human actions have lowered it.",
+      "Taking large amounts of water for use on farms and in towns leaves less water in the rivers. Wetlands can dry out, and low flows can leave fish and other water life short of habitat.",
+      "Dams and weirs change when and how much water flows downstream. Clearing land can raise salt levels, because removing deep-rooted plants lets more water seep underground and bring salt up.",
+      "Warm, slow, low water with extra nutrients can cause algal blooms. Blooms can use up oxygen in the water, which can lead to fish kills."
+     ],
+     "remember": "Less water, changed flows and cleared land can harm rivers, causing salinity, blooms, fish kills and drying wetlands.",
+     "a": {
+      "q": "Which change is most likely to lead to an algal bloom in a river of the basin?",
+      "opts": [
+       "Warm, slow, low water with extra nutrients",
+       "Fast, cold water flowing from a dam release",
+       "A wetland filling with water after rain",
+       "Deep-rooted trees planted along the bank"
+      ],
+      "why": "Algal blooms are more likely when water is warm, slow and low and has extra nutrients. Fast, cold flow is the tempting wrong choice because it mixes and moves the water, so it does not give blooms the same conditions.",
+      "clue": "Think about water that is warm and barely moving."
+     },
+     "b": {
+      "d": 3,
+      "q": "Farmers near a river in the basin clear all the deep-rooted trees from their paddocks. Over time, which effect is most likely?",
+      "opts": [
+       "More salt rising in the soil and reaching the river",
+       "More water being taken straight from the river",
+       "Fewer dams changing the timing of river flows",
+       "Wetlands staying full because less water seeps down"
+      ],
+      "why": "Without deep-rooted plants, more water seeps underground and can bring salt up, so salinity can rise. Taking water from the river is a different cause of poor river health, and clearing land does not make it happen.",
+      "clue": "Ask what deep roots do to the water underground."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Warm, slow, low water with extra nutrients",
+      "also_right": []
+     },
+     "b": {
+      "best": "More salt rising in the soil and reaching the river",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option stands out. It is the longest and the only one with several precise conditions, and it copies the card's wording word for word. A student could pick it without understanding why blooms form."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue ('water that is warm and barely moving') points straight at the only option describing warm, slow water, which gives the answer away."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct, but question a is too easy to guess: the right option is the longest, repeats the card's exact wording, and the clue points straight to it. Question b and the card are fine."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The right option stands out. It is the longest and the only one with several precise conditions, and it copies the card's wording word for word. A student could pick it without understanding why blooms form.",
+     "Question a, other: The clue ('water that is warm and barely moving') points straight at the only option describing warm, slow water, which gives the answer away."
+    ],
+    "proposal": {
+     "title": "River health in the basin",
+     "card": [
+      "River health describes how well a river and its wetlands support plants, animals and people. In the Murray-Darling Basin, several human actions have lowered it.",
+      "Taking large amounts of water for use on farms and in towns leaves less water in the rivers. Wetlands can dry out, and low flows can leave fish and other water life short of habitat.",
+      "Dams and weirs change when and how much water flows downstream. Clearing land can raise salt levels, because removing deep-rooted plants lets more water seep underground and bring salt up.",
+      "Algal blooms can form when water is warm, slow and low and has extra nutrients, such as fertiliser washed off farms. Blooms can use up oxygen in the water, which can lead to fish kills."
+     ],
+     "remember": "Less water, changed flows and cleared land can harm rivers, causing salinity, blooms, fish kills and drying wetlands.",
+     "a": {
+      "q": "Which situation in a basin river is most likely to lead to an algal bloom?",
+      "opts": [
+       "A still, shallow summer pool with fertiliser runoff",
+       "A cold, fast flow released from the bottom of a dam",
+       "A deep winter flood with water mixing quickly",
+       "A cool, shaded stretch flowing quickly over rocks"
+      ],
+      "why": "The summer pool is warm, slow and low, and the fertiliser adds nutrients, so it meets all the conditions for a bloom. The cold dam release is tempting because dams can harm rivers, but its water is cold and moving fast, so it does not suit algae.",
+      "clue": "Check each option against every condition a bloom needs."
+     },
+     "b": {
+      "d": 3,
+      "q": "Farmers near a river in the basin clear all the deep-rooted trees from their paddocks. Over time, which effect is most likely?",
+      "opts": [
+       "More salt rising in the soil and reaching the river",
+       "More water being taken straight from the river",
+       "Fewer dams changing the timing of river flows",
+       "Wetlands staying full because less water seeps down"
+      ],
+      "why": "Without deep-rooted plants, more water seeps underground and can bring salt up, so salinity can rise. Taking water from the river is a different cause of poor river health, and clearing land does not make it happen.",
+      "clue": "Ask what deep roots do to the water underground."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "A still, shallow summer pool with fertiliser runoff",
+       "also_right": []
+      },
+      "b": {
+       "best": "More salt rising in the soil and reaching the river",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:12Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option stands out. It is the longest and the only one with several precise conditions, and it copies the card's wording word for word. A student could pick it without understanding why blooms form."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue ('water that is warm and barely moving') points straight at the only option describing warm, slow water, which gives the answer away."
+      }
+     ],
+     "flags": [
+      "Question a, wording: The right option stands out. It is the longest and the only one with several precise conditions, and it copies the card's wording word for word. A student could pick it without understanding why blooms form.",
+      "Question a, other: The clue ('water that is warm and barely moving') points straight at the only option describing warm, slow water, which gives the answer away."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "26525fb4aa544277"
+  }
+ ]
+}

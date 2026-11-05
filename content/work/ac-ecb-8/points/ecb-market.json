@@ -1,0 +1,285 @@
+{
+ "id": "ecb-market",
+ "title": "What a market is",
+ "brief": "841918695c40",
+ "shortlist": [
+  [
+   "eco-market",
+   0.276
+  ],
+  [
+   "bus-types-markets",
+   0.221
+  ],
+  [
+   "eco-market-structures",
+   0.218
+  ],
+  [
+   "bus-identifying-target-markets",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:25Z new, match",
+  "2026-11-04T09:36:47Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: failed the content check, writing again",
+  "2026-11-04T09:58:21Z write: done",
+  "2026-11-04T10:07:57Z check: flagged",
+  "2026-11-04T10:10:48Z fix: suggested",
+  "2026-11-05T06:11:33Z review: rejected, to be written again",
+  "2026-11-05T06:26:26Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T06:32:24Z claude-code check: answered by a separate subagent",
+  "2026-11-05T06:32:24Z check: flagged",
+  "2026-11-05T06:46:37Z fix: suggested",
+  "2026-11-05T07:03:27Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 2
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01048,
+  "check": 0.01075,
+  "fix": 0.03497
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eco-market, covers the same basic idea but is written for senior VCE Units 1 and 2 and goes beyond the brief into price signals and what producers make, so it is too deep and too broad for this Year 8 point.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "What a market is",
+  "card": [
+   "A market is any place or way that buyers and sellers come together to trade. Buyers want to get goods or services. Sellers want to sell them.",
+   "A market can be a place you visit, such as a weekend food market. It can also be online, such as a website that sells shoes.",
+   "A market does not need a building. The share market is a market because people buy and sell shares in companies there.",
+   "What makes something a market is that buyers and sellers meet to trade, whether face to face, by phone or on the internet."
+  ],
+  "remember": "A market is where buyers and sellers trade, in person or online.",
+  "a": {
+   "q": "Which example shows buyers and sellers in a market?",
+   "opts": [
+    "An app where people buy and sell used bikes",
+    "A bike left unused in a garage",
+    "A bike shop's list of staff wages",
+    "A bike race held on a Sunday morning"
+   ],
+   "why": "On the app, buyers and sellers come together to trade bikes, so it is a market. A race has riders but no buying and selling of goods, so it is not a market.",
+   "clue": "Look for buyers and sellers who trade."
+  },
+  "b": {
+   "d": 2,
+   "q": "Zane sells handmade candles. Which choice shows him selling in a market?",
+   "opts": [
+    "Selling candles to customers on a website",
+    "Making candles at home for himself",
+    "Giving candles to his family as gifts",
+    "Buying wax and keeping it in a cupboard"
+   ],
+   "why": "Selling candles to customers on a website brings a seller and buyers together to trade, so it is a market. Making candles for himself or giving them away involves no trade with buyers.",
+   "clue": "Which choice has a seller trading with buyers?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:26:26Z",
+   "step": "write",
+   "version": {
+    "title": "What a market is",
+    "card": [
+     "A market is any place or way that buyers and sellers come together to trade goods or services.",
+     "Some markets are in one place, such as a weekend farmers market. Others are online, such as a website that sells second-hand clothes.",
+     "A market does not need a building. On the share market, people buy and sell parts of companies, called shares, mostly through computers.",
+     "To tell whether something is a market, ask: are buyers and sellers trading? Where or how they meet does not matter."
+    ],
+    "remember": "If buyers and sellers are trading, it is a market, wherever and however they meet.",
+    "a": {
+     "q": "Which statement about markets is correct?",
+     "opts": [
+      "A market can exist without any building at all",
+      "A market needs a building where people meet",
+      "A market trades only goods, never services",
+      "A market is a place where goods are made to sell"
+     ],
+     "why": "Buyers and sellers can trade online or by phone, so a market does not need a building. A building is tempting because many markets have one, but the share market trades mostly through computers.",
+     "clue": "Think about buying something online."
+    },
+    "b": {
+     "d": 3,
+     "q": "Jai says the share market is not a real market, because nobody meets face to face. Is he right?",
+     "opts": [
+      "No, buyers and sellers still trade shares",
+      "Yes, a market needs buyers and sellers to meet",
+      "Yes, shares are not goods, so they have no market",
+      "No, the share market meets in one building daily"
+     ],
+     "why": "Buyers and sellers still come together to trade shares, so it is a market. They do not need to meet face to face, because where or how they meet does not matter.",
+     "clue": "What has to happen for something to be a market?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T06:32:24Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A market can exist without any building at all",
+     "also_right": []
+    },
+    "b": {
+     "best": "No, buyers and sellers still trade shares",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "wording",
+      "detail": "The right option is the only one with a hedging qualifier (\"can\"), while two wrong options use absolutes (\"needs\", \"only ... never\"). A test-wise student could pick it without knowing the idea. Reword so the options are alike in tone, for example make the right option a plain statement such as \"A market is buyers and sellers trading, wherever they meet\" or remove the absolutes from the wrong ones."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The content is accurate and both questions have one clear right answer. One wording problem: in question a, the right option is the only hedged one (\"can\") among options with absolutes, which gives it away."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "What a market is",
+  "card": [
+   "A market is any place or way that buyers and sellers come together to trade goods or services.",
+   "Some markets are in one place, such as a weekend farmers market. Others are online, such as a website that sells second-hand clothes.",
+   "A market does not need a building. On the share market, people buy and sell parts of companies, called shares, mostly through computers.",
+   "To tell whether something is a market, ask: are buyers and sellers trading? Where or how they meet does not matter."
+  ],
+  "remember": "If buyers and sellers are trading, it is a market, wherever and however they meet.",
+  "a": {
+   "q": "Which statement about markets is correct?",
+   "opts": [
+    "A market can exist without any building at all",
+    "A market needs a building where people meet",
+    "A market trades only goods, never services",
+    "A market is a place where goods are made to sell"
+   ],
+   "why": "Buyers and sellers can trade online or by phone, so a market does not need a building. A building is tempting because many markets have one, but the share market trades mostly through computers.",
+   "clue": "Think about buying something online."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai says the share market is not a real market, because nobody meets face to face. Is he right?",
+   "opts": [
+    "No, buyers and sellers still trade shares",
+    "Yes, a market needs buyers and sellers to meet",
+    "Yes, shares are not goods, so they have no market",
+    "No, the share market meets in one building daily"
+   ],
+   "why": "Buyers and sellers still come together to trade shares, so it is a market. They do not need to meet face to face, because where or how they meet does not matter.",
+   "clue": "What has to happen for something to be a market?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A market can exist without any building at all",
+   "also_right": []
+  },
+  "b": {
+   "best": "No, buyers and sellers still trade shares",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedging qualifier (\"can\"), while two wrong options use absolutes (\"needs\", \"only ... never\"). A test-wise student could pick it without knowing the idea. Reword so the options are alike in tone, for example make the right option a plain statement such as \"A market is buyers and sellers trading, wherever they meet\" or remove the absolutes from the wrong ones."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both questions have one clear right answer. One wording problem: in question a, the right option is the only hedged one (\"can\") among options with absolutes, which gives it away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one with a hedging qualifier (\"can\"), while two wrong options use absolutes (\"needs\", \"only ... never\"). A test-wise student could pick it without knowing the idea. Reword so the options are alike in tone, for example make the right option a plain statement such as \"A market is buyers and sellers trading, wherever they meet\" or remove the absolutes from the wrong ones."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "What a market is",
+  "card": [
+   "A market is any place or way that buyers and sellers come together to trade goods or services.",
+   "Some markets are in one place, such as a weekend farmers market. Others are online, such as a website that sells second-hand clothes.",
+   "A market does not need a building. On the share market, people buy and sell parts of companies, called shares, mostly through computers.",
+   "To tell whether something is a market, ask: are buyers and sellers trading? Where or how they meet does not matter."
+  ],
+  "remember": "If buyers and sellers are trading, it is a market, wherever and however they meet.",
+  "a": {
+   "q": "Which statement describes a market?",
+   "opts": [
+    "A market is buyers and sellers trading, wherever they meet",
+    "A market is a building where buyers go to do their shopping",
+    "A market is a place where goods are made and then sold",
+    "A market is a group of sellers offering the same goods"
+   ],
+   "why": "A market is buyers and sellers coming together to trade, in any place or way, including online. The building option is tempting because many markets have one, but the share market trades mostly through computers.",
+   "clue": "Think about buying something online."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai says the share market is not a real market, because nobody meets face to face. Is he right?",
+   "opts": [
+    "No, buyers and sellers still trade shares",
+    "Yes, a market needs buyers and sellers to meet",
+    "Yes, shares are not goods, so they have no market",
+    "No, the share market meets in one building daily"
+   ],
+   "why": "Buyers and sellers still come together to trade shares, so it is a market. They do not need to meet face to face, because where or how they meet does not matter.",
+   "clue": "What has to happen for something to be a market?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "What a market is",
+  "card": [
+   "A market is any place or way that buyers and sellers come together to trade goods or services.",
+   "Some markets are in one place, such as a weekend farmers market. Others are online, such as a website that sells second-hand clothes.",
+   "A market does not need a building. On the share market, people buy and sell parts of companies, called shares, mostly through computers.",
+   "To tell whether something is a market, ask: are buyers and sellers trading? Where or how they meet does not matter."
+  ],
+  "remember": "If buyers and sellers are trading, it is a market, wherever and however they meet.",
+  "a": {
+   "q": "Which statement describes a market?",
+   "opts": [
+    "A market is buyers and sellers trading, wherever they meet",
+    "A market is a building where buyers go to do their shopping",
+    "A market is a place where goods are made and then sold",
+    "A market is a group of sellers offering the same goods"
+   ],
+   "why": "A market is buyers and sellers coming together to trade, in any place or way, including online. The building option is tempting because many markets have one, but the share market trades mostly through computers.",
+   "clue": "Think about buying something online."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai says the share market is not a real market, because nobody meets face to face. Is he right?",
+   "opts": [
+    "No, buyers and sellers still trade shares",
+    "Yes, a market needs buyers and sellers to meet",
+    "Yes, shares are not goods, so they have no market",
+    "No, the share market meets in one building daily"
+   ],
+   "why": "Buyers and sellers still come together to trade shares, so it is a market. They do not need to meet face to face, because where or how they meet does not matter.",
+   "clue": "What has to happen for something to be a market?"
+  }
+ },
+ "cleared_by": "owner"
+}

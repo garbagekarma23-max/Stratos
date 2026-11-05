@@ -1,0 +1,446 @@
+{
+ "id": "ecb-using-economic-terms-explanations",
+ "title": "Using economic terms in explanations",
+ "brief": "46c7bcef816a",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:25Z new, write",
+  "2026-11-04T09:36:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:46:55Z write: done",
+  "2026-11-04T09:58:21Z check: flagged",
+  "2026-11-04T10:07:57Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check was not highly sure; the fresh check found a problem)",
+  "2026-11-05T06:08:56Z claude-code review: rejected, to be written again with a note",
+  "2026-11-05T06:26:26Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T06:32:24Z claude-code check: answered by a separate subagent",
+  "2026-11-05T06:32:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00516,
+  "check": 0.01299,
+  "fix": 0.03092,
+  "recheck": 0.01843
+ },
+ "note": "Question a: an explanation says what happened and why, so give options that make a claim with a reason, using a term correctly and data from a named source. Do not use demand for the quantity bought: the card defines demand as how much buyers are willing and able to buy at different prices. The right option must not be the only one with a figure or a named source. Question b: the right option must be a real change that improves Priya's explanation, not a condition about a claim she has not made. The clue must not rule out the wrong options.",
+ "rejected": {
+  "title": "Using economic terms in explanations",
+  "card": [
+   "An economic explanation says what happened and why. It uses the correct economic terms, not everyday words that are vague.",
+   [
+    "Economic terms",
+    "Words such as demand (how much buyers want a good at different prices) and opportunity cost (the next best option given up) have exact meanings. Using them correctly makes a claim clear."
+   ],
+   [
+    "Evidence",
+    "Each claim should be backed by data from a named source, such as a figure from the Australian Bureau of Statistics (ABS). Naming the source lets a reader check it."
+   ],
+   "A strong explanation joins the two: it makes a claim with the right term, then gives the data and its source. A claim with no data, or data with no source, is weaker."
+  ],
+  "remember": "Use the right term for each idea, and back each claim with data from a named source.",
+  "a": {
+   "q": "Which sentence is the clearest economic explanation?",
+   "opts": [
+    "Demand for electric bikes rose 15% in 2023, says the ABS",
+    "Lots of people suddenly seemed to want electric bikes",
+    "Electric bikes are a really popular thing these days",
+    "Everyone I know has bought an electric bike lately"
+   ],
+   "why": "It uses the term demand and backs the claim with a figure from a named source, the ABS. The others use vague words and give no data or source, so a reader cannot check them.",
+   "clue": "Look for a correct term plus data from a named source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya says: \"Skipping the school fair to work cost me the fair, which was my opportunity cost.\" She then adds that her shift paid $96, according to her payslip. Which change would best improve her explanation?",
+   "opts": [
+    "Name the source of the claim about the fair's popularity",
+    "Replace opportunity cost with a more everyday phrase",
+    "Remove the payslip figure so the claim is shorter",
+    "Use demand instead of opportunity cost for the fair"
+   ],
+   "why": "Her use of opportunity cost is correct, since the fair is the next best option she gave up, and her pay figure has a named source. Any new claim, such as how popular the fair was, would need a named source too. Dropping the term or the data would make the explanation weaker.",
+   "clue": "Priya already uses the term correctly. What would any new claim need?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "reject",
+   "sure": "high",
+   "reason": "Neither version works. The first draft's right answer in question b names a claim Priya never made, and the fix uses demand for the number of bikes bought and makes question b's right answer a change that changes nothing.",
+   "item": "b056da89748e64bd",
+   "note": "Question a: an explanation says what happened and why, so give options that make a claim with a reason, using a term correctly and data from a named source. Do not use demand for the quantity bought: the card defines demand as how much buyers are willing and able to buy at different prices. The right option must not be the only one with a figure or a named source. Question b: the right option must be a real change that improves Priya's explanation, not a condition about a claim she has not made. The clue must not rule out the wrong options.",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-using-economic-terms-explanations",
+    "title": "Using economic terms in explanations",
+    "brief": "46c7bcef816a",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "alone": true,
+    "usd": {
+     "write": 0.00516,
+     "check": 0.01299,
+     "fix": 0.03092,
+     "recheck": 0.01843
+    },
+    "draft": {
+     "title": "Using economic terms in explanations",
+     "card": [
+      "An economic explanation says what happened and why. It uses the correct economic terms, not everyday words that are vague.",
+      [
+       "Economic terms",
+       "Words such as demand (how much buyers want a good at different prices) and opportunity cost (the next best option given up) have exact meanings. Using them correctly makes a claim clear."
+      ],
+      [
+       "Evidence",
+       "Each claim should be backed by data from a named source, such as a figure from the Australian Bureau of Statistics (ABS). Naming the source lets a reader check it."
+      ],
+      "A strong explanation joins the two: it makes a claim with the right term, then gives the data and its source. A claim with no data, or data with no source, is weaker."
+     ],
+     "remember": "Use the right term for each idea, and back each claim with data from a named source.",
+     "a": {
+      "q": "Which sentence is the clearest economic explanation?",
+      "opts": [
+       "Demand for electric bikes rose 15% in 2023, says the ABS",
+       "Lots of people suddenly seemed to want electric bikes",
+       "Electric bikes are a really popular thing these days",
+       "Everyone I know has bought an electric bike lately"
+      ],
+      "why": "It uses the term demand and backs the claim with a figure from a named source, the ABS. The others use vague words and give no data or source, so a reader cannot check them.",
+      "clue": "Look for a correct term plus data from a named source."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya says: \"Skipping the school fair to work cost me the fair, which was my opportunity cost.\" She then adds that her shift paid $96, according to her payslip. Which change would best improve her explanation?",
+      "opts": [
+       "Name the source of the claim about the fair's popularity",
+       "Replace opportunity cost with a more everyday phrase",
+       "Remove the payslip figure so the claim is shorter",
+       "Use demand instead of opportunity cost for the fair"
+      ],
+      "why": "Her use of opportunity cost is correct, since the fair is the next best option she gave up, and her pay figure has a named source. Any new claim, such as how popular the fair was, would need a named source too. Dropping the term or the data would make the explanation weaker.",
+      "clue": "Priya already uses the term correctly. What would any new claim need?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Demand for electric bikes rose 15% in 2023, says the ABS",
+      "also_right": []
+     },
+     "b": {
+      "best": "Name the source of the claim about the fair's popularity",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one with a precise figure, a year and a named source, so a student can pick it by spotting the detail without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The intended option refers to 'the claim about the fair's popularity', but Priya makes no such claim. The why and the clue treat it as a possible new claim. The option should say something like 'If she adds a claim about the fair, name its source.'"
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "Demand is defined as 'how much buyers want a good at different prices'. In economics, demand is the quantity buyers are willing and able to buy at different prices. 'Want' leaves out ability to pay and could mislead."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "In question b, the intended answer refers to a claim about the fair's popularity that Priya never makes, which is confusing. In question a, the right option stands out as the only one with precise data. The card's definition of demand leaves out 'willing and able to buy'."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, wording: The right option is the only one with a precise figure, a year and a named source, so a student can pick it by spotting the detail without knowing the idea.",
+     "Question b, wording: The intended option refers to 'the claim about the fair's popularity', but Priya makes no such claim. The why and the clue treat it as a possible new claim. The option should say something like 'If she adds a claim about the fair, name its source.'",
+     "Card, fact: Demand is defined as 'how much buyers want a good at different prices'. In economics, demand is the quantity buyers are willing and able to buy at different prices. 'Want' leaves out ability to pay and could mislead."
+    ],
+    "proposal": {
+     "title": "Using economic terms in explanations",
+     "card": [
+      "An economic explanation says what happened and why. It uses the correct economic terms, not everyday words that are vague.",
+      [
+       "Economic terms",
+       "Words such as demand (the amount of a good buyers are willing and able to buy at different prices) and opportunity cost (the next best option given up) have exact meanings. Using them correctly makes a claim clear."
+      ],
+      [
+       "Evidence",
+       "Each claim should be backed by data from a named source, such as the Australian Bureau of Statistics (ABS) or a local council. Naming the source lets a reader check it. \"A post I saw online\" does not name a source."
+      ],
+      "A strong explanation joins the two: it makes a claim with the right term, then gives the data and its source. A claim with no data, or data with no source, is weaker."
+     ],
+     "remember": "Use the right term for each idea, and back each claim with data from a named source.",
+     "a": {
+      "q": "An Ashvale Council survey found that buyers in Ashvale bought 15% more bikes in 2023. Which sentence is the clearest economic explanation?",
+      "opts": [
+       "Bike demand rose 15% in 2023, says Ashvale Council",
+       "Bikes got 15% more popular in 2023, says Ashvale Council",
+       "Bike demand rose 15% in 2023, says a post I saw online",
+       "Bike opportunity cost rose 15% in 2023, says Ashvale Council"
+      ],
+      "why": "It uses the correct term, demand, for what buyers bought, and it names the council as its source. The popular option uses a vague everyday word, and the online post is not a named source. Opportunity cost is the wrong term, because it means the next best option given up.",
+      "clue": "Check both the term and the source in each sentence."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya says: \"Skipping the school fair to work cost me the fair, which was my opportunity cost.\" She then adds that her shift paid $96, according to her payslip. Which change would best improve her explanation?",
+      "opts": [
+       "If she adds a claim about the fair, name its source",
+       "Replace opportunity cost with a more everyday phrase",
+       "Remove the payslip figure so the claim is shorter",
+       "Use demand instead of opportunity cost for the fair"
+      ],
+      "why": "Her use of opportunity cost is correct, since the fair is the next best option she gave up, and her pay figure has a named source. Any new claim she adds about the fair would need a named source too. Swapping the term for an everyday phrase or the wrong term, or dropping the data, would make the explanation weaker.",
+      "clue": "Priya already uses the term correctly. What would any new claim need?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check was not highly sure",
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Bike demand rose 15% in 2023, says Ashvale Council",
+       "also_right": []
+      },
+      "b": {
+       "best": "If she adds a claim about the fair, name its source",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "fact",
+        "detail": "The card defines demand as the amount buyers are willing and able to buy at different prices. The survey only shows that 15% more bikes were bought, which is quantity bought, not a 15% rise in demand. The intended answer and Why (a) ('demand, for what buyers bought') blur the precise meaning the card has just taught."
+       },
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The card says an explanation says what happened and why, but none of the options gives a reason. Each is only a sourced claim, so calling one 'the clearest economic explanation' does not match the card."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The question asks which change would best improve her explanation, but the intended answer changes nothing. It is a conditional about a claim she has not made, and the Why admits her explanation is already correct. The question is confusing as posed."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option stands out. It is the only conditional ('If she adds...') and the only one that does not plainly weaken the explanation, so a student can pick it without knowing the idea."
+       },
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue says Priya already uses the term correctly and asks what any new claim would need. This rules out the demand and everyday-phrase options and points straight at the source answer."
+       }
+      ],
+      "sure": "medium",
+      "sensitive": "none",
+      "summary": "Question a's intended answer uses 'demand' loosely for quantity bought, which clashes with the card's precise definition, and none of its options is really an explanation. Question b asks for an improvement but its right answer is a conditional that changes nothing; it stands out from the other options, and the clue gives it away."
+     },
+     "flags": [
+      "Question a, fact: The card defines demand as the amount buyers are willing and able to buy at different prices. The survey only shows that 15% more bikes were bought, which is quantity bought, not a 15% rise in demand. The intended answer and Why (a) ('demand, for what buyers bought') blur the precise meaning the card has just taught.",
+      "Question a, wording: The card says an explanation says what happened and why, but none of the options gives a reason. Each is only a sourced claim, so calling one 'the clearest economic explanation' does not match the card.",
+      "Question b, wording: The question asks which change would best improve her explanation, but the intended answer changes nothing. It is a conditional about a claim she has not made, and the Why admits her explanation is already correct. The question is confusing as posed.",
+      "Question b, wording: The right option stands out. It is the only conditional ('If she adds...') and the only one that does not plainly weaken the explanation, so a student can pick it without knowing the idea.",
+      "Question b, other: The clue says Priya already uses the term correctly and asks what any new claim would need. This rules out the demand and everyday-phrase options and points straight at the source answer."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "e951432ae9751616"
+  },
+  {
+   "at": "2026-11-05T06:26:26Z",
+   "step": "write",
+   "version": {
+    "title": "Using economic terms in explanations",
+    "card": [
+     "An economic explanation says what happened and why. It makes a claim, gives a reason, and backs it up.",
+     [
+      "Demand",
+      "how much buyers are willing and able to buy at different prices. It is not the same as the number sold."
+     ],
+     [
+      "Opportunity cost",
+      "the next best option given up when you make a choice. It is what you give up, not what you gain."
+     ],
+     [
+      "Evidence",
+      "data that backs a claim, with its source named, such as the Australian Bureau of Statistics. A reader can then check it, so data with no source is weaker."
+     ]
+    ],
+    "remember": "Use each term for its exact meaning, and back each claim with data from a named source.",
+    "a": {
+     "q": "Students explain why more people in their town bought bikes this year. Which explanation is clearest?",
+     "opts": [
+      "Fuel cost 20% more (council data), so demand for bikes rose",
+      "Bike sales rose 20% (council data), so bike demand rose 20%",
+      "Fuel cost about 20% more, so the demand for bikes rose a lot",
+      "Fuel got much dearer, so heaps more people wanted bikes"
+     ],
+     "why": "It uses demand correctly, since dearer fuel makes people willing to buy more bikes at each price, and it gives a figure with a named source. The sales option has data and a source too, but it treats demand as the number sold.",
+     "clue": "Check how each option uses the word demand, then look for data and a source."
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya writes: \"I skipped the school fair to work a shift. My payslip shows it paid $96, so $96 was my opportunity cost.\" Which change would best improve her explanation?",
+     "opts": [
+      "Name the fair as her opportunity cost",
+      "Drop the payslip, since sources are not needed",
+      "Call the $96 her demand for work instead",
+      "Swap opportunity cost for an everyday word"
+     ],
+     "why": "Opportunity cost is the next best option given up, and Priya gave up the fair. The $96 is what she gained by working, so calling it her opportunity cost misuses the term. Her payslip is a named source, so it should stay.",
+     "clue": "What did Priya give up when she chose to work?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T06:32:24Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Fuel cost 20% more (council data), so demand for bikes rose",
+     "also_right": []
+    },
+    "b": {
+     "best": "Name the fair as her opportunity cost",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Using economic terms in explanations",
+  "card": [
+   "An economic explanation says what happened and why. It makes a claim, gives a reason, and backs it up.",
+   [
+    "Demand",
+    "how much buyers are willing and able to buy at different prices. It is not the same as the number sold."
+   ],
+   [
+    "Opportunity cost",
+    "the next best option given up when you make a choice. It is what you give up, not what you gain."
+   ],
+   [
+    "Evidence",
+    "data that backs a claim, with its source named, such as the Australian Bureau of Statistics. A reader can then check it, so data with no source is weaker."
+   ]
+  ],
+  "remember": "Use each term for its exact meaning, and back each claim with data from a named source.",
+  "a": {
+   "q": "Students explain why more people in their town bought bikes this year. Which explanation is clearest?",
+   "opts": [
+    "Fuel cost 20% more (council data), so demand for bikes rose",
+    "Bike sales rose 20% (council data), so bike demand rose 20%",
+    "Fuel cost about 20% more, so the demand for bikes rose a lot",
+    "Fuel got much dearer, so heaps more people wanted bikes"
+   ],
+   "why": "It uses demand correctly, since dearer fuel makes people willing to buy more bikes at each price, and it gives a figure with a named source. The sales option has data and a source too, but it treats demand as the number sold.",
+   "clue": "Check how each option uses the word demand, then look for data and a source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: \"I skipped the school fair to work a shift. My payslip shows it paid $96, so $96 was my opportunity cost.\" Which change would best improve her explanation?",
+   "opts": [
+    "Name the fair as her opportunity cost",
+    "Drop the payslip, since sources are not needed",
+    "Call the $96 her demand for work instead",
+    "Swap opportunity cost for an everyday word"
+   ],
+   "why": "Opportunity cost is the next best option given up, and Priya gave up the fair. The $96 is what she gained by working, so calling it her opportunity cost misuses the term. Her payslip is a named source, so it should stay.",
+   "clue": "What did Priya give up when she chose to work?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Fuel cost 20% more (council data), so demand for bikes rose",
+   "also_right": []
+  },
+  "b": {
+   "best": "Name the fair as her opportunity cost",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Using economic terms in explanations",
+  "card": [
+   "An economic explanation says what happened and why. It makes a claim, gives a reason, and backs it up.",
+   [
+    "Demand",
+    "how much buyers are willing and able to buy at different prices. It is not the same as the number sold."
+   ],
+   [
+    "Opportunity cost",
+    "the next best option given up when you make a choice. It is what you give up, not what you gain."
+   ],
+   [
+    "Evidence",
+    "data that backs a claim, with its source named, such as the Australian Bureau of Statistics. A reader can then check it, so data with no source is weaker."
+   ]
+  ],
+  "remember": "Use each term for its exact meaning, and back each claim with data from a named source.",
+  "a": {
+   "q": "Students explain why more people in their town bought bikes this year. Which explanation is clearest?",
+   "opts": [
+    "Fuel cost 20% more (council data), so demand for bikes rose",
+    "Bike sales rose 20% (council data), so bike demand rose 20%",
+    "Fuel cost about 20% more, so the demand for bikes rose a lot",
+    "Fuel got much dearer, so heaps more people wanted bikes"
+   ],
+   "why": "It uses demand correctly, since dearer fuel makes people willing to buy more bikes at each price, and it gives a figure with a named source. The sales option has data and a source too, but it treats demand as the number sold.",
+   "clue": "Check how each option uses the word demand, then look for data and a source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya writes: \"I skipped the school fair to work a shift. My payslip shows it paid $96, so $96 was my opportunity cost.\" Which change would best improve her explanation?",
+   "opts": [
+    "Name the fair as her opportunity cost",
+    "Drop the payslip, since sources are not needed",
+    "Call the $96 her demand for work instead",
+    "Swap opportunity cost for an everyday word"
+   ],
+   "why": "Opportunity cost is the next best option given up, and Priya gave up the fair. The $96 is what she gained by working, so calling it her opportunity cost misuses the term. Her payslip is a named source, so it should stay.",
+   "clue": "What did Priya give up when she chose to work?"
+  }
+ },
+ "checked_by": "claude-code"
+}

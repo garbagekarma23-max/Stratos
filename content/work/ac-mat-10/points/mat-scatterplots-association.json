@@ -1,0 +1,235 @@
+{
+ "id": "mat-scatterplots-association",
+ "title": "Scatterplots and association",
+ "brief": "a150b10ae383",
+ "shortlist": [
+  [
+   "mat-describing-association",
+   0.439
+  ],
+  [
+   "mat-scatterplots",
+   0.282
+  ],
+  [
+   "mat-associations-between-categorical-variables",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 may adapt mat-describing-association, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:06Z confirm: Claude Opus 5.5 may adapt mat-describing-association, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt mat-describing-association (1 change)",
+  "2026-11-05T06:08:56Z claude-code review: adapting mat-describing-association on the next run",
+  "2026-11-05T06:46:38Z adapt: done",
+  "2026-11-05T06:53:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.00896,
+  "adapt": 0.00214,
+  "check": 0.00722
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-describing-association",
+  "changes": [
+   "Replace the Geelong ice cream and sunburn example in question b with an example set in a place in one of the course's jurisdictions, such as Queensland, South Australia, Western Australia, Tasmania, the ACT or the Northern Territory."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at a suitable depth, covering direction, form and strength of a scatterplot pattern, but its question b uses a Victorian location that should be local to this course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-describing-association",
+  "changes": [
+   "Replace the Geelong example in question b with a place local to the course's states, such as Perth or Brisbane."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches how to describe a scatterplot's association by direction, form and strength at a depth that suits Year 10, and only its Victorian example needs to be made local.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-describing-association",
+  "changes": [
+   "Move the ice cream and sunburn example in question b from Geelong to a place in one of the course's states, such as Perth or Brisbane."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches direction, form and strength of an association exactly as the brief asks, at a Year 10 depth. Only its Victorian example should become one in this course's states.",
+   "item": "1a8dd21651e87699",
+   "result": "decided",
+   "saved": {
+    "id": "mat-scatterplots-association",
+    "title": "Scatterplots and association",
+    "brief": "a150b10ae383",
+    "shortlist": [
+     [
+      "mat-describing-association",
+      0.439
+     ],
+     [
+      "mat-scatterplots",
+      0.282
+     ],
+     [
+      "mat-associations-between-categorical-variables",
+      0.23
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00034,
+     "confirm": 0.00896
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-describing-association",
+     "changes": [
+      "Replace the Geelong ice cream and sunburn example in question b with an example set in a place in one of the course's jurisdictions, such as Queensland, South Australia, Western Australia, Tasmania, the ACT or the Northern Territory."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea at a suitable depth, covering direction, form and strength of a scatterplot pattern, but its question b uses a Victorian location that should be local to this course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-describing-association",
+     "changes": [
+      "Replace the Geelong example in question b with a place local to the course's states, such as Perth or Brisbane."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches how to describe a scatterplot's association by direction, form and strength at a depth that suits Year 10, and only its Victorian example needs to be made local.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "3bb386926ee5b283"
+  }
+ ],
+ "draft": {
+  "title": "Describing an association",
+  "card": [
+   [
+    "Direction",
+    "Positive: as one variable increases, the other tends to increase. Negative: as one increases, the other tends to decrease. No direction: no clear trend."
+   ],
+   [
+    "Form",
+    "Linear if the points follow a straight line pattern. Non-linear if they follow a curve."
+   ],
+   [
+    "Strength",
+    "Strong if the points sit close to a clear pattern. Weak if they are widely scattered around it. Moderate sits in between."
+   ],
+   "A strong association does not prove that one variable causes the other. Both may be affected by a third variable, or the link may be coincidence."
+  ],
+  "remember": "Describe direction, form and strength. A strong association does not prove cause.",
+  "a": {
+   "q": "A scatterplot has points that fall from left to right and sit close to a straight line. Which description fits best?",
+   "opts": [
+    "Negative, linear and strong",
+    "Positive, linear and strong",
+    "Negative, linear and weak",
+    "Negative, non-linear and strong"
+   ],
+   "why": "Points sloping down show a negative direction. A straight line pattern is linear, and points close to the line make it strong. Positive is wrong because the other variable decreases as the first increases.",
+   "clue": "Read the points from left to right: do they rise or fall?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Perth, daily ice cream sales and daily sunburn cases have a strong positive linear association. What does this association show?",
+   "opts": [
+    "Neither variable is shown to cause the other",
+    "Ice cream sales are shown to cause sunburn cases",
+    "Sunburn cases are shown to cause ice cream sales",
+    "The association is weak, as neither causes the other"
+   ],
+   "why": "A strong association does not prove cause. A third variable, such as hot sunny weather, may affect both. Saying ice cream sales cause sunburn is tempting, but strength only describes how close the points sit to the pattern.",
+   "clue": "Think about what else could affect both variables on a hot day."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Negative, linear and strong",
+   "also_right": []
+  },
+  "b": {
+   "best": "Neither variable is shown to cause the other",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Describing an association",
+  "card": [
+   [
+    "Direction",
+    "Positive: as one variable increases, the other tends to increase. Negative: as one increases, the other tends to decrease. No direction: no clear trend."
+   ],
+   [
+    "Form",
+    "Linear if the points follow a straight line pattern. Non-linear if they follow a curve."
+   ],
+   [
+    "Strength",
+    "Strong if the points sit close to a clear pattern. Weak if they are widely scattered around it. Moderate sits in between."
+   ],
+   "A strong association does not prove that one variable causes the other. Both may be affected by a third variable, or the link may be coincidence."
+  ],
+  "remember": "Describe direction, form and strength. A strong association does not prove cause.",
+  "a": {
+   "q": "A scatterplot has points that fall from left to right and sit close to a straight line. Which description fits best?",
+   "opts": [
+    "Negative, linear and strong",
+    "Positive, linear and strong",
+    "Negative, linear and weak",
+    "Negative, non-linear and strong"
+   ],
+   "why": "Points sloping down show a negative direction. A straight line pattern is linear, and points close to the line make it strong. Positive is wrong because the other variable decreases as the first increases.",
+   "clue": "Read the points from left to right: do they rise or fall?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Perth, daily ice cream sales and daily sunburn cases have a strong positive linear association. What does this association show?",
+   "opts": [
+    "Neither variable is shown to cause the other",
+    "Ice cream sales are shown to cause sunburn cases",
+    "Sunburn cases are shown to cause ice cream sales",
+    "The association is weak, as neither causes the other"
+   ],
+   "why": "A strong association does not prove cause. A third variable, such as hot sunny weather, may affect both. Saying ice cream sales cause sunburn is tempting, but strength only describes how close the points sit to the pattern.",
+   "clue": "Think about what else could affect both variables on a hot day."
+  }
+ }
+}

@@ -1,0 +1,745 @@
+{
+ "id": "ecb-using-economic-indicators-as",
+ "title": "Using economic indicators as evidence",
+ "brief": "460c7537b6c7",
+ "shortlist": [
+  [
+   "eco-economic-indicators",
+   0.379
+  ],
+  [
+   "eco-traditional-economic-thinking",
+   0.232
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: failed the content check, writing again",
+  "2026-11-04T09:58:20Z write: done",
+  "2026-11-04T10:07:56Z check: flagged",
+  "2026-11-04T10:10:48Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-05T02:27:40Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: flagged",
+  "2026-11-05T03:14:56Z fix: suggested",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.01832,
+  "check": 0.01066,
+  "fix": 0.04555,
+  "recheck": 0.01526
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point classifies indicators as leading, coincident or lagging, but the new point is about checking the period and source of an indicator when using it as evidence, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: 'The unemployment rate measures jobs' is loose and could mislead. It measures the share of the labour force that is without work and looking for it, not the number of jobs. Why (a) repeats the same phrasing.",
+ "rejected": {
+  "title": "Using economic indicators as evidence",
+  "card": [
+   "An economic indicator is a figure that measures part of the economy. The unemployment rate measures jobs, and the inflation rate measures how fast prices rise. A claim about the economy is stronger when a figure backs it.",
+   "A figure only supports a claim if it matches the claim: what it measures, the area it covers and the period. A claim about a whole town over the last year needs figures for the whole town over the last year.",
+   "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+   "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one."
+  ],
+  "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+  "a": {
+   "q": "Which choice best uses an indicator as evidence for the claim that prices rose faster in 2023 than in 2020?",
+   "opts": [
+    "Inflation rates for both years from a statistics agency",
+    "A news headline saying that prices feel very high these days",
+    "The unemployment rate for 2023 from a government report",
+    "Inflation for 2023 only, from a post with no named source"
+   ],
+   "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures jobs, not prices, so it does not match the claim.",
+   "clue": "Match the figure to the claim, the years and the source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya says her town's economy is growing strongly. She quotes a small business owner's sales figures from last month. Why is this weak evidence?",
+   "opts": [
+    "It covers one business and one month, not the whole town",
+    "It is a recent figure, and older figures are more reliable",
+    "It is about sales, and inflation is what shows growth",
+    "It is a number, and a claim needs a quote from an expert"
+   ],
+   "why": "The claim is about the whole town economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures prices, not growth.",
+   "clue": "Ask what the figure covers and what the claim covers."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "claude-code",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: 'The unemployment rate measures jobs' is loose and could mislead. It measures the share of the labour force that is without work and looking for it, not the number of jobs. Why (a) repeats the same phrasing."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Using economic indicators as evidence",
+     "card": [
+      "An economic indicator is a figure that measures part of the economy, such as the unemployment rate or the inflation rate. A claim about the economy is stronger when it is backed by a figure.",
+      "A figure only supports a claim if it matches the claim. A claim about the last year needs figures for the last year, not for ten years ago.",
+      "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+      "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one."
+     ],
+     "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+     "a": {
+      "q": "Which choice best uses an indicator as evidence for the claim that prices rose faster in 2023 than in 2020?",
+      "opts": [
+       "Inflation rates for both years from a statistics agency",
+       "A news headline saying that prices feel very high these days",
+       "The unemployment rate for 2023 from a government report",
+       "Inflation for 2023 only, from a post with no named source"
+      ],
+      "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures jobs, not prices, so it does not match the claim.",
+      "clue": "Match the figure to the claim, the years and the source."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya says her town's economy is growing strongly. She quotes a small business owner's sales figures from last month. Why is this weak evidence?",
+      "opts": [
+       "It covers one business and one month, not the whole economy",
+       "It is a figure, and figures cannot support a claim",
+       "It comes from a person, and people cannot give evidence",
+       "It covers last month, so recent figures cannot be used"
+      ],
+      "why": "The claim is about the whole town economy, but the figure covers one business over one short period. It does not match the claim. Figures can support claims, and a recent figure is not unusable just because it is recent.",
+      "clue": "Ask what the figure covers and what the claim covers."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Inflation rates for both years from a statistics agency",
+      "also_right": []
+     },
+     "b": {
+      "best": "It covers one business and one month, not the whole economy",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "All three wrong options use the absolute 'cannot', and the right option is the only one without it. A student could pick it by ruling out absolute statements, without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, remember line and answers are accurate, and the explanations match the intended answers. One minor issue: in question b, every wrong option says 'cannot', so the right answer stands out."
+    },
+    "flags": [
+     "Question b, wording: All three wrong options use the absolute 'cannot', and the right option is the only one without it. A student could pick it by ruling out absolute statements, without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Using economic indicators as evidence",
+     "card": [
+      "An economic indicator is a figure that measures part of the economy. The unemployment rate measures jobs, and the inflation rate measures how fast prices rise. A claim about the economy is stronger when a figure backs it.",
+      "A figure only supports a claim if it matches the claim: what it measures, the area it covers and the period. A claim about a whole town over the last year needs figures for the whole town over the last year.",
+      "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+      "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one."
+     ],
+     "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+     "a": {
+      "q": "Which choice best uses an indicator as evidence for the claim that prices rose faster in 2023 than in 2020?",
+      "opts": [
+       "Inflation rates for both years from a statistics agency",
+       "A news headline saying that prices feel very high these days",
+       "The unemployment rate for 2023 from a government report",
+       "Inflation for 2023 only, from a post with no named source"
+      ],
+      "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures jobs, not prices, so it does not match the claim.",
+      "clue": "Match the figure to the claim, the years and the source."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya says her town's economy is growing strongly. She quotes a small business owner's sales figures from last month. Why is this weak evidence?",
+      "opts": [
+       "It covers one business and one month, not the whole town",
+       "It is a recent figure, and older figures are more reliable",
+       "It is about sales, and inflation is what shows growth",
+       "It is a number, and a claim needs a quote from an expert"
+      ],
+      "why": "The claim is about the whole town economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures prices, not growth.",
+      "clue": "Ask what the figure covers and what the claim covers."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Inflation rates for both years from a statistics agency",
+       "also_right": []
+      },
+      "b": {
+       "best": "It covers one business and one month, not the whole town",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "'The unemployment rate measures jobs' is loose and could mislead. It measures the share of the labour force that is without work and looking for it, not the number of jobs. Why (a) repeats the same phrasing."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer and the explanations match the card. The only issue is the loose phrase that the unemployment rate 'measures jobs'. It should say the unemployment rate shows the share of people in the labour force who are without work and looking for it."
+     },
+     "flags": [
+      "Card, fact: 'The unemployment rate measures jobs' is loose and could mislead. It measures the share of the labour force that is without work and looking for it, not the number of jobs. Why (a) repeats the same phrasing."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:40Z",
+   "step": "write",
+   "version": {
+    "title": "Using economic indicators as evidence",
+    "card": [
+     "An economic indicator is a figure that measures part of the economy. The unemployment rate is the share of people wanting work who are looking for a job but have none. The inflation rate measures how fast prices rise.",
+     "A figure supports a claim when it matches the claim: what it measures, the area it covers and the period. A claim about a whole town over the last year needs figures for the whole town over the last year.",
+     "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+     "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one, and a claim backed by matching figures is stronger."
+    ],
+    "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+    "a": {
+     "q": "Which evidence best supports the claim that prices rose faster in 2023 than in 2020?",
+     "opts": [
+      "Inflation rates for both years from a statistics agency",
+      "A news headline saying that prices feel very high these days",
+      "The unemployment rate for 2023 from a government report",
+      "Inflation for 2023 alone, from a post with no named source"
+     ],
+     "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures the share of people looking for work who have no job, not prices, so it does not match the claim.",
+     "clue": "Match the figure to the claim, the years and the source."
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya claims her town's economy is growing strongly. As proof, she quotes one café owner's sales for last month. Why is this weak evidence?",
+     "opts": [
+      "It covers one business and one month, not the whole town",
+      "It is a recent figure, and older figures are more reliable",
+      "It is about sales, and inflation is what shows growth",
+      "It is a number, and a claim needs a quote from an expert"
+     ],
+     "why": "The claim is about the whole town's economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures how fast prices rise, not growth.",
+     "clue": "Ask what the figure covers and what the claim covers."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Inflation rates for both years from a statistics agency",
+     "also_right": []
+    },
+    "b": {
+     "best": "It covers one business and one month, not the whole town",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "card",
+      "kind": "fact",
+      "detail": "The unemployment rate is the share of the labour force (people who have a job or are looking for one) who have no job. \"The share of people wanting work who are looking for a job but have none\" reads as if the base is only people wanting work, which leaves out people already employed. Better: \"the share of people in the labour force, those working or looking for work, who have no job.\""
+     },
+     {
+      "part": "a",
+      "kind": "fact",
+      "detail": "The why for (a) says the unemployment rate measures \"the share of people looking for work who have no job\". Nearly everyone looking for work has no job, so this base gives about 100%. It should say the share of the labour force (people working or looking for work) who have no job."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Both questions work, and the right answers match the writer's. The card and the why for (a) define the unemployment rate with the wrong base: it should be the share of the labour force (working or looking for work) who have no job."
+   }
+  },
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix gives the unemployment rate its right base, the labour force, in the card and in why (a). Nothing else changes and both answers stay right.",
+   "item": "0e6fd67a0ba83e01",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-using-economic-indicators-as",
+    "title": "Using economic indicators as evidence",
+    "brief": "460c7537b6c7",
+    "shortlist": [
+     [
+      "eco-economic-indicators",
+      0.379
+     ],
+     [
+      "eco-traditional-economic-thinking",
+      0.232
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00019,
+     "write": 0.01832,
+     "check": 0.01066,
+     "fix": 0.04555,
+     "recheck": 0.01526
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point classifies indicators as leading, coincident or lagging, but the new point is about checking the period and source of an indicator when using it as evidence, which is a different idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: 'The unemployment rate measures jobs' is loose and could mislead. It measures the share of the labour force that is without work and looking for it, not the number of jobs. Why (a) repeats the same phrasing.",
+    "rejected": {
+     "title": "Using economic indicators as evidence",
+     "card": [
+      "An economic indicator is a figure that measures part of the economy. The unemployment rate measures jobs, and the inflation rate measures how fast prices rise. A claim about the economy is stronger when a figure backs it.",
+      "A figure only supports a claim if it matches the claim: what it measures, the area it covers and the period. A claim about a whole town over the last year needs figures for the whole town over the last year.",
+      "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+      "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one."
+     ],
+     "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+     "a": {
+      "q": "Which choice best uses an indicator as evidence for the claim that prices rose faster in 2023 than in 2020?",
+      "opts": [
+       "Inflation rates for both years from a statistics agency",
+       "A news headline saying that prices feel very high these days",
+       "The unemployment rate for 2023 from a government report",
+       "Inflation for 2023 only, from a post with no named source"
+      ],
+      "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures jobs, not prices, so it does not match the claim.",
+      "clue": "Match the figure to the claim, the years and the source."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya says her town's economy is growing strongly. She quotes a small business owner's sales figures from last month. Why is this weak evidence?",
+      "opts": [
+       "It covers one business and one month, not the whole town",
+       "It is a recent figure, and older figures are more reliable",
+       "It is about sales, and inflation is what shows growth",
+       "It is a number, and a claim needs a quote from an expert"
+      ],
+      "why": "The claim is about the whole town economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures prices, not growth.",
+      "clue": "Ask what the figure covers and what the claim covers."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-05T02:17:40Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Card, fact: 'The unemployment rate measures jobs' is loose and could mislead. It measures the share of the labour force that is without work and looking for it, not the number of jobs. Why (a) repeats the same phrasing."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Using economic indicators as evidence",
+        "card": [
+         "An economic indicator is a figure that measures part of the economy, such as the unemployment rate or the inflation rate. A claim about the economy is stronger when it is backed by a figure.",
+         "A figure only supports a claim if it matches the claim. A claim about the last year needs figures for the last year, not for ten years ago.",
+         "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+         "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one."
+        ],
+        "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+        "a": {
+         "q": "Which choice best uses an indicator as evidence for the claim that prices rose faster in 2023 than in 2020?",
+         "opts": [
+          "Inflation rates for both years from a statistics agency",
+          "A news headline saying that prices feel very high these days",
+          "The unemployment rate for 2023 from a government report",
+          "Inflation for 2023 only, from a post with no named source"
+         ],
+         "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures jobs, not prices, so it does not match the claim.",
+         "clue": "Match the figure to the claim, the years and the source."
+        },
+        "b": {
+         "d": 3,
+         "q": "Priya says her town's economy is growing strongly. She quotes a small business owner's sales figures from last month. Why is this weak evidence?",
+         "opts": [
+          "It covers one business and one month, not the whole economy",
+          "It is a figure, and figures cannot support a claim",
+          "It comes from a person, and people cannot give evidence",
+          "It covers last month, so recent figures cannot be used"
+         ],
+         "why": "The claim is about the whole town economy, but the figure covers one business over one short period. It does not match the claim. Figures can support claims, and a recent figure is not unusable just because it is recent.",
+         "clue": "Ask what the figure covers and what the claim covers."
+        }
+       },
+       "redone": true,
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Inflation rates for both years from a statistics agency",
+         "also_right": []
+        },
+        "b": {
+         "best": "It covers one business and one month, not the whole economy",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "b",
+          "kind": "wording",
+          "detail": "All three wrong options use the absolute 'cannot', and the right option is the only one without it. A student could pick it by ruling out absolute statements, without knowing the idea."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "The card, remember line and answers are accurate, and the explanations match the intended answers. One minor issue: in question b, every wrong option says 'cannot', so the right answer stands out."
+       },
+       "flags": [
+        "Question b, wording: All three wrong options use the absolute 'cannot', and the right option is the only one without it. A student could pick it by ruling out absolute statements, without knowing the idea."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Using economic indicators as evidence",
+        "card": [
+         "An economic indicator is a figure that measures part of the economy. The unemployment rate measures jobs, and the inflation rate measures how fast prices rise. A claim about the economy is stronger when a figure backs it.",
+         "A figure only supports a claim if it matches the claim: what it measures, the area it covers and the period. A claim about a whole town over the last year needs figures for the whole town over the last year.",
+         "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+         "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one."
+        ],
+        "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+        "a": {
+         "q": "Which choice best uses an indicator as evidence for the claim that prices rose faster in 2023 than in 2020?",
+         "opts": [
+          "Inflation rates for both years from a statistics agency",
+          "A news headline saying that prices feel very high these days",
+          "The unemployment rate for 2023 from a government report",
+          "Inflation for 2023 only, from a post with no named source"
+         ],
+         "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures jobs, not prices, so it does not match the claim.",
+         "clue": "Match the figure to the claim, the years and the source."
+        },
+        "b": {
+         "d": 3,
+         "q": "Priya says her town's economy is growing strongly. She quotes a small business owner's sales figures from last month. Why is this weak evidence?",
+         "opts": [
+          "It covers one business and one month, not the whole town",
+          "It is a recent figure, and older figures are more reliable",
+          "It is about sales, and inflation is what shows growth",
+          "It is a number, and a claim needs a quote from an expert"
+         ],
+         "why": "The claim is about the whole town economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures prices, not growth.",
+         "clue": "Ask what the figure covers and what the claim covers."
+        }
+       },
+       "proposal_problems": [],
+       "recheck": {
+        "at": "2026-11-04T18:10:11Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Inflation rates for both years from a statistics agency",
+          "also_right": []
+         },
+         "b": {
+          "best": "It covers one business and one month, not the whole town",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "card",
+           "kind": "fact",
+           "detail": "'The unemployment rate measures jobs' is loose and could mislead. It measures the share of the labour force that is without work and looking for it, not the number of jobs. Why (a) repeats the same phrasing."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "Both questions have one clear right answer and the explanations match the card. The only issue is the loose phrase that the unemployment rate 'measures jobs'. It should say the unemployment rate shows the share of people in the labour force who are without work and looking for it."
+        },
+        "flags": [
+         "Card, fact: 'The unemployment rate measures jobs' is loose and could mislead. It measures the share of the labour force that is without work and looking for it, not the number of jobs. Why (a) repeats the same phrasing."
+        ]
+       }
+      }
+     }
+    ],
+    "written_by": "claude-code",
+    "draft": {
+     "title": "Using economic indicators as evidence",
+     "card": [
+      "An economic indicator is a figure that measures part of the economy. The unemployment rate is the share of people wanting work who are looking for a job but have none. The inflation rate measures how fast prices rise.",
+      "A figure supports a claim when it matches the claim: what it measures, the area it covers and the period. A claim about a whole town over the last year needs figures for the whole town over the last year.",
+      "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+      "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one, and a claim backed by matching figures is stronger."
+     ],
+     "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+     "a": {
+      "q": "Which evidence best supports the claim that prices rose faster in 2023 than in 2020?",
+      "opts": [
+       "Inflation rates for both years from a statistics agency",
+       "A news headline saying that prices feel very high these days",
+       "The unemployment rate for 2023 from a government report",
+       "Inflation for 2023 alone, from a post with no named source"
+      ],
+      "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures the share of people looking for work who have no job, not prices, so it does not match the claim.",
+      "clue": "Match the figure to the claim, the years and the source."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya claims her town's economy is growing strongly. As proof, she quotes one café owner's sales for last month. Why is this weak evidence?",
+      "opts": [
+       "It covers one business and one month, not the whole town",
+       "It is a recent figure, and older figures are more reliable",
+       "It is about sales, and inflation is what shows growth",
+       "It is a number, and a claim needs a quote from an expert"
+      ],
+      "why": "The claim is about the whole town's economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures how fast prices rise, not growth.",
+      "clue": "Ask what the figure covers and what the claim covers."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Inflation rates for both years from a statistics agency",
+      "also_right": []
+     },
+     "b": {
+      "best": "It covers one business and one month, not the whole town",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The unemployment rate is the share of the labour force (people who have a job or are looking for one) who have no job. \"The share of people wanting work who are looking for a job but have none\" reads as if the base is only people wanting work, which leaves out people already employed. Better: \"the share of people in the labour force, those working or looking for work, who have no job.\""
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The why for (a) says the unemployment rate measures \"the share of people looking for work who have no job\". Nearly everyone looking for work has no job, so this base gives about 100%. It should say the share of the labour force (people working or looking for work) who have no job."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions work, and the right answers match the writer's. The card and the why for (a) define the unemployment rate with the wrong base: it should be the share of the labour force (working or looking for work) who have no job."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: The unemployment rate is the share of the labour force (people who have a job or are looking for one) who have no job. \"The share of people wanting work who are looking for a job but have none\" reads as if the base is only people wanting work, which leaves out people already employed. Better: \"the share of people in the labour force, those working or looking for work, who have no job.\"",
+     "Question a, fact: The why for (a) says the unemployment rate measures \"the share of people looking for work who have no job\". Nearly everyone looking for work has no job, so this base gives about 100%. It should say the share of the labour force (people working or looking for work) who have no job."
+    ],
+    "checked_by": "claude-code",
+    "proposal": {
+     "title": "Using economic indicators as evidence",
+     "card": [
+      "An economic indicator is a figure that measures part of the economy. The inflation rate, for example, measures how fast prices rise.",
+      "The unemployment rate is the share of people in the labour force, those working or looking for work, who have no job.",
+      "A figure supports a claim when it matches what the claim is about, the area it covers and the period. Check the source too: figures from a statistics agency or government body are collected by set methods, and a figure with no named source is hard to trust.",
+      "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture, and a claim backed by matching figures is stronger."
+     ],
+     "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+     "a": {
+      "q": "Which evidence best supports the claim that prices rose faster in 2023 than in 2020?",
+      "opts": [
+       "Inflation rates for both years from a statistics agency",
+       "A news headline saying that prices feel very high these days",
+       "The unemployment rate for 2023 from a government report",
+       "Inflation for 2023 alone, from a post with no named source"
+      ],
+      "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures the share of the labour force (people working or looking for work) who have no job, not prices, so it does not match the claim.",
+      "clue": "Match the figure to the claim, the years and the source."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya claims her town's economy is growing strongly. As proof, she quotes one café owner's sales for last month. Why is this weak evidence?",
+      "opts": [
+       "It covers one business and one month, not the whole town",
+       "It is a recent figure, and older figures are more reliable",
+       "It is about sales, and inflation is what shows growth",
+       "It is a number, and a claim needs a quote from an expert"
+      ],
+      "why": "The claim is about the whole town's economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures how fast prices rise, not growth.",
+      "clue": "Ask what the figure covers and what the claim covers."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "5be62f943805fa6d"
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Using economic indicators as evidence",
+  "card": [
+   "An economic indicator is a figure that measures part of the economy. The unemployment rate is the share of people wanting work who are looking for a job but have none. The inflation rate measures how fast prices rise.",
+   "A figure supports a claim when it matches the claim: what it measures, the area it covers and the period. A claim about a whole town over the last year needs figures for the whole town over the last year.",
+   "Check the source. Figures from a statistics agency or a government body are usually collected by set methods. A figure with no named source is hard to trust.",
+   "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture than one, and a claim backed by matching figures is stronger."
+  ],
+  "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+  "a": {
+   "q": "Which evidence best supports the claim that prices rose faster in 2023 than in 2020?",
+   "opts": [
+    "Inflation rates for both years from a statistics agency",
+    "A news headline saying that prices feel very high these days",
+    "The unemployment rate for 2023 from a government report",
+    "Inflation for 2023 alone, from a post with no named source"
+   ],
+   "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures the share of people looking for work who have no job, not prices, so it does not match the claim.",
+   "clue": "Match the figure to the claim, the years and the source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya claims her town's economy is growing strongly. As proof, she quotes one café owner's sales for last month. Why is this weak evidence?",
+   "opts": [
+    "It covers one business and one month, not the whole town",
+    "It is a recent figure, and older figures are more reliable",
+    "It is about sales, and inflation is what shows growth",
+    "It is a number, and a claim needs a quote from an expert"
+   ],
+   "why": "The claim is about the whole town's economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures how fast prices rise, not growth.",
+   "clue": "Ask what the figure covers and what the claim covers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Inflation rates for both years from a statistics agency",
+   "also_right": []
+  },
+  "b": {
+   "best": "It covers one business and one month, not the whole town",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The unemployment rate is the share of the labour force (people who have a job or are looking for one) who have no job. \"The share of people wanting work who are looking for a job but have none\" reads as if the base is only people wanting work, which leaves out people already employed. Better: \"the share of people in the labour force, those working or looking for work, who have no job.\""
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why for (a) says the unemployment rate measures \"the share of people looking for work who have no job\". Nearly everyone looking for work has no job, so this base gives about 100%. It should say the share of the labour force (people working or looking for work) who have no job."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions work, and the right answers match the writer's. The card and the why for (a) define the unemployment rate with the wrong base: it should be the share of the labour force (working or looking for work) who have no job."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The unemployment rate is the share of the labour force (people who have a job or are looking for one) who have no job. \"The share of people wanting work who are looking for a job but have none\" reads as if the base is only people wanting work, which leaves out people already employed. Better: \"the share of people in the labour force, those working or looking for work, who have no job.\"",
+  "Question a, fact: The why for (a) says the unemployment rate measures \"the share of people looking for work who have no job\". Nearly everyone looking for work has no job, so this base gives about 100%. It should say the share of the labour force (people working or looking for work) who have no job."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Using economic indicators as evidence",
+  "card": [
+   "An economic indicator is a figure that measures part of the economy. The inflation rate, for example, measures how fast prices rise.",
+   "The unemployment rate is the share of people in the labour force, those working or looking for work, who have no job.",
+   "A figure supports a claim when it matches what the claim is about, the area it covers and the period. Check the source too: figures from a statistics agency or government body are collected by set methods, and a figure with no named source is hard to trust.",
+   "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture, and a claim backed by matching figures is stronger."
+  ],
+  "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+  "a": {
+   "q": "Which evidence best supports the claim that prices rose faster in 2023 than in 2020?",
+   "opts": [
+    "Inflation rates for both years from a statistics agency",
+    "A news headline saying that prices feel very high these days",
+    "The unemployment rate for 2023 from a government report",
+    "Inflation for 2023 alone, from a post with no named source"
+   ],
+   "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures the share of the labour force (people working or looking for work) who have no job, not prices, so it does not match the claim.",
+   "clue": "Match the figure to the claim, the years and the source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya claims her town's economy is growing strongly. As proof, she quotes one café owner's sales for last month. Why is this weak evidence?",
+   "opts": [
+    "It covers one business and one month, not the whole town",
+    "It is a recent figure, and older figures are more reliable",
+    "It is about sales, and inflation is what shows growth",
+    "It is a number, and a claim needs a quote from an expert"
+   ],
+   "why": "The claim is about the whole town's economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures how fast prices rise, not growth.",
+   "clue": "Ask what the figure covers and what the claim covers."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Using economic indicators as evidence",
+  "card": [
+   "An economic indicator is a figure that measures part of the economy. The inflation rate, for example, measures how fast prices rise.",
+   "The unemployment rate is the share of people in the labour force, those working or looking for work, who have no job.",
+   "A figure supports a claim when it matches what the claim is about, the area it covers and the period. Check the source too: figures from a statistics agency or government body are collected by set methods, and a figure with no named source is hard to trust.",
+   "One figure rarely tells the whole story. Using two or more indicators gives a fuller picture, and a claim backed by matching figures is stronger."
+  ],
+  "remember": "Good evidence is a figure that fits the claim, covers the right period and comes from a clear source.",
+  "a": {
+   "q": "Which evidence best supports the claim that prices rose faster in 2023 than in 2020?",
+   "opts": [
+    "Inflation rates for both years from a statistics agency",
+    "A news headline saying that prices feel very high these days",
+    "The unemployment rate for 2023 from a government report",
+    "Inflation for 2023 alone, from a post with no named source"
+   ],
+   "why": "The claim compares prices in two years, so it needs inflation figures for both years from a clear source. The unemployment rate is a figure, but it measures the share of the labour force (people working or looking for work) who have no job, not prices, so it does not match the claim.",
+   "clue": "Match the figure to the claim, the years and the source."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya claims her town's economy is growing strongly. As proof, she quotes one café owner's sales for last month. Why is this weak evidence?",
+   "opts": [
+    "It covers one business and one month, not the whole town",
+    "It is a recent figure, and older figures are more reliable",
+    "It is about sales, and inflation is what shows growth",
+    "It is a number, and a claim needs a quote from an expert"
+   ],
+   "why": "The claim is about the whole town's economy, but the figure covers one business over one short period, so it does not match the claim. Recent figures are not the problem, and inflation measures how fast prices rise, not growth.",
+   "clue": "Ask what the figure covers and what the claim covers."
+  }
+ }
+}

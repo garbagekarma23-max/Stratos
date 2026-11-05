@@ -1,0 +1,819 @@
+{
+ "id": "his-short-term-long-term",
+ "title": "Short-term and long-term effects in history",
+ "brief": "fa34f1e45127",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:38Z new, write",
+  "2026-11-04T09:36:54Z write: done",
+  "2026-11-04T09:47:05Z check: flagged",
+  "2026-11-04T09:58:29Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: flagged",
+  "2026-11-05T03:14:57Z fix: suggested",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00603,
+  "check": 0.01438,
+  "fix": 0.04327,
+  "recheck": 0.01028
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option stands out. It is the only one not set 'at the diggings', and the stem's line 'many newcomers stayed in the colonies' points straight to population growth. A student could pick it without understanding long-term effects.",
+ "rejected": {
+  "title": "Short-term and long-term effects",
+  "card": [
+   [
+    "Short-term",
+    "A short-term effect is felt soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+   ],
+   [
+    "Long-term",
+    "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+   ],
+   "What sorts an effect is how long it lasts, not how soon it starts. A long-term effect can begin straight after the event.",
+   "One event can have both kinds of effect. Some long-term effects only become clear when historians look back across many years."
+  ],
+  "remember": "Sort an effect by how long it lasts. One event can have both short-term and long-term effects.",
+  "a": {
+   "q": "An effect began within weeks of an event and lasted for 80 years. How should a historian sort it?",
+   "opts": [
+    "Long-term, because of how long it lasted",
+    "Short-term, because of how soon it began",
+    "Both kinds, because it began soon and lasted",
+    "Neither kind, because it began too early"
+   ],
+   "why": "An effect is sorted by how long it lasts, and 80 years is a long time. Calling it both kinds is tempting, but it is the event that can have both kinds of effect. Each single effect is sorted by its length.",
+   "clue": "Does the start or the length decide it?"
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1851 gold was found near Bathurst in New South Wales. Thousands rushed there, and many newcomers stayed in the colonies. Which is a long-term effect of the gold rushes?",
+   "opts": [
+    "Growth in Australia's population and cities",
+    "Crowded tent camps at the diggings",
+    "Shops at the diggings running short of tools",
+    "High prices for food at the diggings"
+   ],
+   "why": "Many newcomers stayed, so the colonies' population and cities kept growing for decades. Crowded camps, short supplies and high prices at the diggings were real effects, but they eased as the rush faded, so they were short-term.",
+   "clue": "Which change would still be seen decades later?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "claude-code",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option stands out. It is the only one not set 'at the diggings', and the stem's line 'many newcomers stayed in the colonies' points straight to population growth. A student could pick it without understanding long-term effects."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Short-term and long-term effects",
+     "card": [
+      [
+       "Short-term",
+       "A short-term effect happens soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+      ],
+      [
+       "Long-term",
+       "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+      ],
+      "Some effects can be seen at once. Others only become clear when historians look back across many years.",
+      "One event can have both kinds of effect. To sort an effect, ask how soon it began and how long it lasted."
+     ],
+     "remember": "Short-term effects come soon and fade. Long-term effects last for years or generations.",
+     "a": {
+      "q": "Which is a long-term effect of a war?",
+      "opts": [
+       "Beliefs about the nation that last for generations",
+       "Deaths among the soldiers in one battle",
+       "Damage to a bridge during the fighting",
+       "A shortage of food in the week after a siege"
+      ],
+      "why": "Changed beliefs about a nation can last for generations. The other options happened soon after events and were limited to a short period.",
+      "clue": "Which effect is still felt long after the fighting ends?"
+     },
+     "b": {
+      "d": 2,
+      "q": "In 1851 gold was found near Bathurst in New South Wales, and thousands rushed there within months. Which is a long-term effect of the gold rushes?",
+      "opts": [
+       "Lasting growth in Australia's population and cities",
+       "Crowded camps in the first months after the discovery",
+       "Workers leaving farms to dig for gold that year",
+       "Rising prices of food at the diggings that season"
+      ],
+      "why": "Population and city growth lasted for decades and shaped the colonies. The other options describe changes that happened quickly and were limited to a short time.",
+      "clue": "Which effect was still shaping the colonies decades later?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Beliefs about the nation that last for generations",
+      "also_right": []
+     },
+     "b": {
+      "best": "Lasting growth in Australia's population and cities",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line says short-term effects 'come soon and fade' as a flat rule, but the card says they are 'often over quickly'. The remember line drops the hedge and sorts the two kinds more neatly than the card does."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one that states a long duration ('that last for generations'). It repeats the card's definition word for word, so a student can match the wording without understanding the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one that says 'Lasting'. Every other option is tied to a short time ('that season', 'first months', 'that year'), so the word itself gives the answer away."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'Ask how soon it began' can mislead. Many long-term effects begin straight away, such as population growth that started within months of the 1851 discovery. What makes an effect long-term is how long it lasts, not how late it starts."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct and the intended answers are right. However, both questions give their answers away through duration words ('last for generations', 'Lasting'). The remember line hardens the card's 'often over quickly' into 'fade', and the card's 'how soon it began' test could lead students to misclassify long-term effects that start early."
+    },
+    "flags": [
+     "Remember, other: The remember line says short-term effects 'come soon and fade' as a flat rule, but the card says they are 'often over quickly'. The remember line drops the hedge and sorts the two kinds more neatly than the card does.",
+     "Question a, wording: The right option is the only one that states a long duration ('that last for generations'). It repeats the card's definition word for word, so a student can match the wording without understanding the idea.",
+     "Question b, wording: The right option is the only one that says 'Lasting'. Every other option is tied to a short time ('that season', 'first months', 'that year'), so the word itself gives the answer away.",
+     "Card, wording: 'Ask how soon it began' can mislead. Many long-term effects begin straight away, such as population growth that started within months of the 1851 discovery. What makes an effect long-term is how long it lasts, not how late it starts."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Short-term and long-term effects",
+     "card": [
+      [
+       "Short-term",
+       "A short-term effect is felt soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+      ],
+      [
+       "Long-term",
+       "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+      ],
+      "What sorts an effect is how long it lasts, not how soon it starts. A long-term effect can begin straight after the event.",
+      "One event can have both kinds of effect. Some long-term effects only become clear when historians look back across many years."
+     ],
+     "remember": "Sort an effect by how long it lasts. One event can have both short-term and long-term effects.",
+     "a": {
+      "q": "An effect began within weeks of an event and lasted for 80 years. How should a historian sort it?",
+      "opts": [
+       "Long-term, because of how long it lasted",
+       "Short-term, because of how soon it began",
+       "Both kinds, because it began soon and lasted",
+       "Neither kind, because it began too early"
+      ],
+      "why": "An effect is sorted by how long it lasts, and 80 years is a long time. Calling it both kinds is tempting, but it is the event that can have both kinds of effect. Each single effect is sorted by its length.",
+      "clue": "Does the start or the length decide it?"
+     },
+     "b": {
+      "d": 2,
+      "q": "In 1851 gold was found near Bathurst in New South Wales. Thousands rushed there, and many newcomers stayed in the colonies. Which is a long-term effect of the gold rushes?",
+      "opts": [
+       "Growth in Australia's population and cities",
+       "Crowded tent camps at the diggings",
+       "Shops at the diggings running short of tools",
+       "High prices for food at the diggings"
+      ],
+      "why": "Many newcomers stayed, so the colonies' population and cities kept growing for decades. Crowded camps, short supplies and high prices at the diggings were real effects, but they eased as the rush faded, so they were short-term.",
+      "clue": "Which change would still be seen decades later?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Long-term, because of how long it lasted",
+       "also_right": []
+      },
+      "b": {
+       "best": "Growth in Australia's population and cities",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option stands out. It is the only one not set 'at the diggings', and the stem's line 'many newcomers stayed in the colonies' points straight to population growth. A student could pick it without understanding long-term effects."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, remember line and question a are accurate and clear. In question b, the right option is the only one not set at the diggings, and the stem hints at population growth, so students can guess it without knowing the idea."
+     },
+     "flags": [
+      "Question b, wording: The right option stands out. It is the only one not set 'at the diggings', and the stem's line 'many newcomers stayed in the colonies' points straight to population growth. A student could pick it without understanding long-term effects."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Short-term and long-term effects in history",
+    "card": [
+     [
+      "Short-term",
+      "A short-term effect is felt soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+     ],
+     [
+      "Long-term",
+      "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+     ],
+     "What sorts an effect is how long it lasts, not how soon it starts. A long-term effect can begin straight after the event.",
+     "One event can have both kinds of effect. Some long-term effects only become clear when historians look back across many years."
+    ],
+    "remember": "Sort an effect by how long it lasts. One event can have both short-term and long-term effects.",
+    "a": {
+     "q": "A historian studies an effect of a revolution. It started the very next month and went on for 80 years. Which kind of effect is it?",
+     "opts": [
+      "Long-term, because of how long it lasted",
+      "Short-term, because of how soon it began",
+      "Both kinds, because it began soon and lasted",
+      "Neither kind, because it began too early"
+     ],
+     "why": "An effect is sorted by how long it lasts, and 80 years is a long time. Calling it both kinds is tempting, but it is the event that can have both kinds of effect. Each single effect is sorted by its length.",
+     "clue": "Does the start or the length decide it?"
+    },
+    "b": {
+     "d": 3,
+     "q": "A war in the made-up country of Doria ended in 1920. A historian lists some of its effects. Which one is long-term?",
+     "opts": [
+      "A new border, drawn in 1920 and still used today",
+      "Food shortages in the first winter after the war",
+      "Bridge repairs that took until the end of 1921",
+      "Protests by returned soldiers in 1935, over within weeks"
+     ],
+     "why": "The border began straight after the war and has lasted ever since, so it is long-term. The protests are tempting because they came 15 years later, but they were over within weeks, and an effect is sorted by how long it lasts, not how late it starts.",
+     "clue": "Ignore when each effect began. How long did each one last?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Long-term, because of how long it lasted",
+     "also_right": []
+    },
+    "b": {
+     "best": "A new border, drawn in 1920 and still used today",
+     "also_right": [
+      "Protests by returned soldiers in 1935, over within weeks"
+     ]
+    },
+    "problems": [
+     {
+      "part": "card",
+      "kind": "fact",
+      "detail": "The card says an effect is sorted only by how long it lasts, 'not how soon it starts'. Many school history resources and teachers sort short-term and long-term consequences by timing as well: short-term effects come soon after the event, long-term effects come or show up years later. Saying start time never counts presents one convention as the rule, and the card's own last line ('Some long-term effects only become clear when historians look back across many years') leans on the timing idea."
+     },
+     {
+      "part": "b",
+      "kind": "other",
+      "detail": "Under the common timing convention, protests by returned soldiers 15 years after the war are a longer-term consequence of it, so a careful teacher could defend this option. The question depends on the card's duration-only rule, which is contestable."
+     }
+    ],
+    "sure": "medium",
+    "sensitive": "none",
+    "summary": "The card claims an effect is sorted only by how long it lasts, never by when it starts, but many history classrooms also use timing. Because of that, the 1935 protests in question b could be defended as long-term. Consider softening the rule to 'mainly by how long it lasts' or choosing a distractor that is both soon and brief."
+   }
+  },
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The first draft's rule that only length counts is not how most classrooms sort effects, so the 1935 protests could be defended. The fix uses both timing and length, and every wrong option in both questions is clearly short-term.",
+   "item": "e84f05dcb24cdb6d",
+   "result": "decided",
+   "saved": {
+    "id": "his-short-term-long-term",
+    "title": "Short-term and long-term effects in history",
+    "brief": "fa34f1e45127",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.00603,
+     "check": 0.01438,
+     "fix": 0.04327,
+     "recheck": 0.01028
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option stands out. It is the only one not set 'at the diggings', and the stem's line 'many newcomers stayed in the colonies' points straight to population growth. A student could pick it without understanding long-term effects.",
+    "rejected": {
+     "title": "Short-term and long-term effects",
+     "card": [
+      [
+       "Short-term",
+       "A short-term effect is felt soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+      ],
+      [
+       "Long-term",
+       "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+      ],
+      "What sorts an effect is how long it lasts, not how soon it starts. A long-term effect can begin straight after the event.",
+      "One event can have both kinds of effect. Some long-term effects only become clear when historians look back across many years."
+     ],
+     "remember": "Sort an effect by how long it lasts. One event can have both short-term and long-term effects.",
+     "a": {
+      "q": "An effect began within weeks of an event and lasted for 80 years. How should a historian sort it?",
+      "opts": [
+       "Long-term, because of how long it lasted",
+       "Short-term, because of how soon it began",
+       "Both kinds, because it began soon and lasted",
+       "Neither kind, because it began too early"
+      ],
+      "why": "An effect is sorted by how long it lasts, and 80 years is a long time. Calling it both kinds is tempting, but it is the event that can have both kinds of effect. Each single effect is sorted by its length.",
+      "clue": "Does the start or the length decide it?"
+     },
+     "b": {
+      "d": 2,
+      "q": "In 1851 gold was found near Bathurst in New South Wales. Thousands rushed there, and many newcomers stayed in the colonies. Which is a long-term effect of the gold rushes?",
+      "opts": [
+       "Growth in Australia's population and cities",
+       "Crowded tent camps at the diggings",
+       "Shops at the diggings running short of tools",
+       "High prices for food at the diggings"
+      ],
+      "why": "Many newcomers stayed, so the colonies' population and cities kept growing for decades. Crowded camps, short supplies and high prices at the diggings were real effects, but they eased as the rush faded, so they were short-term.",
+      "clue": "Which change would still be seen decades later?"
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-05T02:17:42Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question b, wording: The right option stands out. It is the only one not set 'at the diggings', and the stem's line 'many newcomers stayed in the colonies' points straight to population growth. A student could pick it without understanding long-term effects."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Short-term and long-term effects",
+        "card": [
+         [
+          "Short-term",
+          "A short-term effect happens soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+         ],
+         [
+          "Long-term",
+          "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+         ],
+         "Some effects can be seen at once. Others only become clear when historians look back across many years.",
+         "One event can have both kinds of effect. To sort an effect, ask how soon it began and how long it lasted."
+        ],
+        "remember": "Short-term effects come soon and fade. Long-term effects last for years or generations.",
+        "a": {
+         "q": "Which is a long-term effect of a war?",
+         "opts": [
+          "Beliefs about the nation that last for generations",
+          "Deaths among the soldiers in one battle",
+          "Damage to a bridge during the fighting",
+          "A shortage of food in the week after a siege"
+         ],
+         "why": "Changed beliefs about a nation can last for generations. The other options happened soon after events and were limited to a short period.",
+         "clue": "Which effect is still felt long after the fighting ends?"
+        },
+        "b": {
+         "d": 2,
+         "q": "In 1851 gold was found near Bathurst in New South Wales, and thousands rushed there within months. Which is a long-term effect of the gold rushes?",
+         "opts": [
+          "Lasting growth in Australia's population and cities",
+          "Crowded camps in the first months after the discovery",
+          "Workers leaving farms to dig for gold that year",
+          "Rising prices of food at the diggings that season"
+         ],
+         "why": "Population and city growth lasted for decades and shaped the colonies. The other options describe changes that happened quickly and were limited to a short time.",
+         "clue": "Which effect was still shaping the colonies decades later?"
+        }
+       },
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Beliefs about the nation that last for generations",
+         "also_right": []
+        },
+        "b": {
+         "best": "Lasting growth in Australia's population and cities",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "remember",
+          "kind": "other",
+          "detail": "The remember line says short-term effects 'come soon and fade' as a flat rule, but the card says they are 'often over quickly'. The remember line drops the hedge and sorts the two kinds more neatly than the card does."
+         },
+         {
+          "part": "a",
+          "kind": "wording",
+          "detail": "The right option is the only one that states a long duration ('that last for generations'). It repeats the card's definition word for word, so a student can match the wording without understanding the idea."
+         },
+         {
+          "part": "b",
+          "kind": "wording",
+          "detail": "The right option is the only one that says 'Lasting'. Every other option is tied to a short time ('that season', 'first months', 'that year'), so the word itself gives the answer away."
+         },
+         {
+          "part": "card",
+          "kind": "wording",
+          "detail": "'Ask how soon it began' can mislead. Many long-term effects begin straight away, such as population growth that started within months of the 1851 discovery. What makes an effect long-term is how long it lasts, not how late it starts."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "The facts are correct and the intended answers are right. However, both questions give their answers away through duration words ('last for generations', 'Lasting'). The remember line hardens the card's 'often over quickly' into 'fade', and the card's 'how soon it began' test could lead students to misclassify long-term effects that start early."
+       },
+       "flags": [
+        "Remember, other: The remember line says short-term effects 'come soon and fade' as a flat rule, but the card says they are 'often over quickly'. The remember line drops the hedge and sorts the two kinds more neatly than the card does.",
+        "Question a, wording: The right option is the only one that states a long duration ('that last for generations'). It repeats the card's definition word for word, so a student can match the wording without understanding the idea.",
+        "Question b, wording: The right option is the only one that says 'Lasting'. Every other option is tied to a short time ('that season', 'first months', 'that year'), so the word itself gives the answer away.",
+        "Card, wording: 'Ask how soon it began' can mislead. Many long-term effects begin straight away, such as population growth that started within months of the 1851 discovery. What makes an effect long-term is how long it lasts, not how late it starts."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Short-term and long-term effects",
+        "card": [
+         [
+          "Short-term",
+          "A short-term effect is felt soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+         ],
+         [
+          "Long-term",
+          "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+         ],
+         "What sorts an effect is how long it lasts, not how soon it starts. A long-term effect can begin straight after the event.",
+         "One event can have both kinds of effect. Some long-term effects only become clear when historians look back across many years."
+        ],
+        "remember": "Sort an effect by how long it lasts. One event can have both short-term and long-term effects.",
+        "a": {
+         "q": "An effect began within weeks of an event and lasted for 80 years. How should a historian sort it?",
+         "opts": [
+          "Long-term, because of how long it lasted",
+          "Short-term, because of how soon it began",
+          "Both kinds, because it began soon and lasted",
+          "Neither kind, because it began too early"
+         ],
+         "why": "An effect is sorted by how long it lasts, and 80 years is a long time. Calling it both kinds is tempting, but it is the event that can have both kinds of effect. Each single effect is sorted by its length.",
+         "clue": "Does the start or the length decide it?"
+        },
+        "b": {
+         "d": 2,
+         "q": "In 1851 gold was found near Bathurst in New South Wales. Thousands rushed there, and many newcomers stayed in the colonies. Which is a long-term effect of the gold rushes?",
+         "opts": [
+          "Growth in Australia's population and cities",
+          "Crowded tent camps at the diggings",
+          "Shops at the diggings running short of tools",
+          "High prices for food at the diggings"
+         ],
+         "why": "Many newcomers stayed, so the colonies' population and cities kept growing for decades. Crowded camps, short supplies and high prices at the diggings were real effects, but they eased as the rush faded, so they were short-term.",
+         "clue": "Which change would still be seen decades later?"
+        }
+       },
+       "proposal_problems": [],
+       "recheck": {
+        "at": "2026-11-04T18:10:13Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Long-term, because of how long it lasted",
+          "also_right": []
+         },
+         "b": {
+          "best": "Growth in Australia's population and cities",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "b",
+           "kind": "wording",
+           "detail": "The right option stands out. It is the only one not set 'at the diggings', and the stem's line 'many newcomers stayed in the colonies' points straight to population growth. A student could pick it without understanding long-term effects."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The card, remember line and question a are accurate and clear. In question b, the right option is the only one not set at the diggings, and the stem hints at population growth, so students can guess it without knowing the idea."
+        },
+        "flags": [
+         "Question b, wording: The right option stands out. It is the only one not set 'at the diggings', and the stem's line 'many newcomers stayed in the colonies' points straight to population growth. A student could pick it without understanding long-term effects."
+        ]
+       }
+      }
+     }
+    ],
+    "written_by": "claude-code",
+    "draft": {
+     "title": "Short-term and long-term effects in history",
+     "card": [
+      [
+       "Short-term",
+       "A short-term effect is felt soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+      ],
+      [
+       "Long-term",
+       "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+      ],
+      "What sorts an effect is how long it lasts, not how soon it starts. A long-term effect can begin straight after the event.",
+      "One event can have both kinds of effect. Some long-term effects only become clear when historians look back across many years."
+     ],
+     "remember": "Sort an effect by how long it lasts. One event can have both short-term and long-term effects.",
+     "a": {
+      "q": "A historian studies an effect of a revolution. It started the very next month and went on for 80 years. Which kind of effect is it?",
+      "opts": [
+       "Long-term, because of how long it lasted",
+       "Short-term, because of how soon it began",
+       "Both kinds, because it began soon and lasted",
+       "Neither kind, because it began too early"
+      ],
+      "why": "An effect is sorted by how long it lasts, and 80 years is a long time. Calling it both kinds is tempting, but it is the event that can have both kinds of effect. Each single effect is sorted by its length.",
+      "clue": "Does the start or the length decide it?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A war in the made-up country of Doria ended in 1920. A historian lists some of its effects. Which one is long-term?",
+      "opts": [
+       "A new border, drawn in 1920 and still used today",
+       "Food shortages in the first winter after the war",
+       "Bridge repairs that took until the end of 1921",
+       "Protests by returned soldiers in 1935, over within weeks"
+      ],
+      "why": "The border began straight after the war and has lasted ever since, so it is long-term. The protests are tempting because they came 15 years later, but they were over within weeks, and an effect is sorted by how long it lasts, not how late it starts.",
+      "clue": "Ignore when each effect began. How long did each one last?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Long-term, because of how long it lasted",
+      "also_right": []
+     },
+     "b": {
+      "best": "A new border, drawn in 1920 and still used today",
+      "also_right": [
+       "Protests by returned soldiers in 1935, over within weeks"
+      ]
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says an effect is sorted only by how long it lasts, 'not how soon it starts'. Many school history resources and teachers sort short-term and long-term consequences by timing as well: short-term effects come soon after the event, long-term effects come or show up years later. Saying start time never counts presents one convention as the rule, and the card's own last line ('Some long-term effects only become clear when historians look back across many years') leans on the timing idea."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Under the common timing convention, protests by returned soldiers 15 years after the war are a longer-term consequence of it, so a careful teacher could defend this option. The question depends on the card's duration-only rule, which is contestable."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "The card claims an effect is sorted only by how long it lasts, never by when it starts, but many history classrooms also use timing. Because of that, the 1935 protests in question b could be defended as long-term. Consider softening the rule to 'mainly by how long it lasts' or choosing a distractor that is both soon and brief."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b: the checker says “Protests by returned soldiers in 1935, over within weeks” could also be right.",
+     "Card, fact: The card says an effect is sorted only by how long it lasts, 'not how soon it starts'. Many school history resources and teachers sort short-term and long-term consequences by timing as well: short-term effects come soon after the event, long-term effects come or show up years later. Saying start time never counts presents one convention as the rule, and the card's own last line ('Some long-term effects only become clear when historians look back across many years') leans on the timing idea.",
+     "Question b, other: Under the common timing convention, protests by returned soldiers 15 years after the war are a longer-term consequence of it, so a careful teacher could defend this option. The question depends on the card's duration-only rule, which is contestable."
+    ],
+    "checked_by": "claude-code",
+    "proposal": {
+     "title": "Short-term and long-term effects in history",
+     "card": [
+      [
+       "Short-term",
+       "A short-term effect comes soon after an event and is usually over within months or a few years. Deaths in a battle or damage to a town are examples."
+      ],
+      [
+       "Long-term",
+       "A long-term effect carries on, or shows up, years after the event. It can last for generations, such as changed beliefs about a nation or a shift in who holds power."
+      ],
+      "Historians look at both when an effect appears and how long it lasts. Some long-term effects begin straight away and keep going. Others only show up years later.",
+      "One event can have both kinds of effect. Short-term effects show why it mattered at the time, and long-term effects show why it still matters."
+     ],
+     "remember": "Short-term effects come and go soon after an event. Long-term effects carry on or appear years later.",
+     "a": {
+      "q": "A flood in 1890 ruined that season's crops. It also led the town to move to higher ground, where it still stands. How are these effects best described?",
+      "opts": [
+       "Crop loss is short-term and the town's move is long-term",
+       "Both are short-term, because both began in 1890",
+       "Both are long-term, because the flood was so serious",
+       "Crop loss is long-term and the town's move is short-term"
+      ],
+      "why": "The crop loss came soon and was over within a season, so it is short-term. The move also began soon, but the town is still there, so it is long-term. Calling both short-term is tempting, but a long-term effect can begin straight away and keep going.",
+      "clue": "Which effect is still there today?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A war in the made-up country of Doria ended in 1920. A historian lists some of its effects. Which one is long-term?",
+      "opts": [
+       "A new border, drawn in 1920 and still used today",
+       "Food shortages in the first winter after the war",
+       "Bridge repairs that were finished by the end of 1921",
+       "A rise in flu cases in the months after the war"
+      ],
+      "why": "The border began straight after the war and has lasted ever since, so it is a long-term effect. The bridge repairs are tempting because they took over a year, but they came soon after the war and were finished quickly, so they are short-term.",
+      "clue": "Which effect still carries on many years later?"
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "5f5bb663d3776c5e"
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Short-term and long-term effects in history",
+  "card": [
+   [
+    "Short-term",
+    "A short-term effect is felt soon after an event and is often over quickly. Deaths in a battle or damage to a town are examples."
+   ],
+   [
+    "Long-term",
+    "A long-term effect lasts for years or generations. Changed beliefs about a nation or a shift in who holds power are examples."
+   ],
+   "What sorts an effect is how long it lasts, not how soon it starts. A long-term effect can begin straight after the event.",
+   "One event can have both kinds of effect. Some long-term effects only become clear when historians look back across many years."
+  ],
+  "remember": "Sort an effect by how long it lasts. One event can have both short-term and long-term effects.",
+  "a": {
+   "q": "A historian studies an effect of a revolution. It started the very next month and went on for 80 years. Which kind of effect is it?",
+   "opts": [
+    "Long-term, because of how long it lasted",
+    "Short-term, because of how soon it began",
+    "Both kinds, because it began soon and lasted",
+    "Neither kind, because it began too early"
+   ],
+   "why": "An effect is sorted by how long it lasts, and 80 years is a long time. Calling it both kinds is tempting, but it is the event that can have both kinds of effect. Each single effect is sorted by its length.",
+   "clue": "Does the start or the length decide it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A war in the made-up country of Doria ended in 1920. A historian lists some of its effects. Which one is long-term?",
+   "opts": [
+    "A new border, drawn in 1920 and still used today",
+    "Food shortages in the first winter after the war",
+    "Bridge repairs that took until the end of 1921",
+    "Protests by returned soldiers in 1935, over within weeks"
+   ],
+   "why": "The border began straight after the war and has lasted ever since, so it is long-term. The protests are tempting because they came 15 years later, but they were over within weeks, and an effect is sorted by how long it lasts, not how late it starts.",
+   "clue": "Ignore when each effect began. How long did each one last?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Long-term, because of how long it lasted",
+   "also_right": []
+  },
+  "b": {
+   "best": "A new border, drawn in 1920 and still used today",
+   "also_right": [
+    "Protests by returned soldiers in 1935, over within weeks"
+   ]
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says an effect is sorted only by how long it lasts, 'not how soon it starts'. Many school history resources and teachers sort short-term and long-term consequences by timing as well: short-term effects come soon after the event, long-term effects come or show up years later. Saying start time never counts presents one convention as the rule, and the card's own last line ('Some long-term effects only become clear when historians look back across many years') leans on the timing idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Under the common timing convention, protests by returned soldiers 15 years after the war are a longer-term consequence of it, so a careful teacher could defend this option. The question depends on the card's duration-only rule, which is contestable."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "The card claims an effect is sorted only by how long it lasts, never by when it starts, but many history classrooms also use timing. Because of that, the 1935 protests in question b could be defended as long-term. Consider softening the rule to 'mainly by how long it lasts' or choosing a distractor that is both soon and brief."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Protests by returned soldiers in 1935, over within weeks” could also be right.",
+  "Card, fact: The card says an effect is sorted only by how long it lasts, 'not how soon it starts'. Many school history resources and teachers sort short-term and long-term consequences by timing as well: short-term effects come soon after the event, long-term effects come or show up years later. Saying start time never counts presents one convention as the rule, and the card's own last line ('Some long-term effects only become clear when historians look back across many years') leans on the timing idea.",
+  "Question b, other: Under the common timing convention, protests by returned soldiers 15 years after the war are a longer-term consequence of it, so a careful teacher could defend this option. The question depends on the card's duration-only rule, which is contestable."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Short-term and long-term effects in history",
+  "card": [
+   [
+    "Short-term",
+    "A short-term effect comes soon after an event and is usually over within months or a few years. Deaths in a battle or damage to a town are examples."
+   ],
+   [
+    "Long-term",
+    "A long-term effect carries on, or shows up, years after the event. It can last for generations, such as changed beliefs about a nation or a shift in who holds power."
+   ],
+   "Historians look at both when an effect appears and how long it lasts. Some long-term effects begin straight away and keep going. Others only show up years later.",
+   "One event can have both kinds of effect. Short-term effects show why it mattered at the time, and long-term effects show why it still matters."
+  ],
+  "remember": "Short-term effects come and go soon after an event. Long-term effects carry on or appear years later.",
+  "a": {
+   "q": "A flood in 1890 ruined that season's crops. It also led the town to move to higher ground, where it still stands. How are these effects best described?",
+   "opts": [
+    "Crop loss is short-term and the town's move is long-term",
+    "Both are short-term, because both began in 1890",
+    "Both are long-term, because the flood was so serious",
+    "Crop loss is long-term and the town's move is short-term"
+   ],
+   "why": "The crop loss came soon and was over within a season, so it is short-term. The move also began soon, but the town is still there, so it is long-term. Calling both short-term is tempting, but a long-term effect can begin straight away and keep going.",
+   "clue": "Which effect is still there today?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A war in the made-up country of Doria ended in 1920. A historian lists some of its effects. Which one is long-term?",
+   "opts": [
+    "A new border, drawn in 1920 and still used today",
+    "Food shortages in the first winter after the war",
+    "Bridge repairs that were finished by the end of 1921",
+    "A rise in flu cases in the months after the war"
+   ],
+   "why": "The border began straight after the war and has lasted ever since, so it is a long-term effect. The bridge repairs are tempting because they took over a year, but they came soon after the war and were finished quickly, so they are short-term.",
+   "clue": "Which effect still carries on many years later?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Short-term and long-term effects in history",
+  "card": [
+   [
+    "Short-term",
+    "A short-term effect comes soon after an event and is usually over within months or a few years. Deaths in a battle or damage to a town are examples."
+   ],
+   [
+    "Long-term",
+    "A long-term effect carries on, or shows up, years after the event. It can last for generations, such as changed beliefs about a nation or a shift in who holds power."
+   ],
+   "Historians look at both when an effect appears and how long it lasts. Some long-term effects begin straight away and keep going. Others only show up years later.",
+   "One event can have both kinds of effect. Short-term effects show why it mattered at the time, and long-term effects show why it still matters."
+  ],
+  "remember": "Short-term effects come and go soon after an event. Long-term effects carry on or appear years later.",
+  "a": {
+   "q": "A flood in 1890 ruined that season's crops. It also led the town to move to higher ground, where it still stands. How are these effects best described?",
+   "opts": [
+    "Crop loss is short-term and the town's move is long-term",
+    "Both are short-term, because both began in 1890",
+    "Both are long-term, because the flood was so serious",
+    "Crop loss is long-term and the town's move is short-term"
+   ],
+   "why": "The crop loss came soon and was over within a season, so it is short-term. The move also began soon, but the town is still there, so it is long-term. Calling both short-term is tempting, but a long-term effect can begin straight away and keep going.",
+   "clue": "Which effect is still there today?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A war in the made-up country of Doria ended in 1920. A historian lists some of its effects. Which one is long-term?",
+   "opts": [
+    "A new border, drawn in 1920 and still used today",
+    "Food shortages in the first winter after the war",
+    "Bridge repairs that were finished by the end of 1921",
+    "A rise in flu cases in the months after the war"
+   ],
+   "why": "The border began straight after the war and has lasted ever since, so it is a long-term effect. The bridge repairs are tempting because they took over a year, but they came soon after the war and were finished quickly, so they are short-term.",
+   "clue": "Which effect still carries on many years later?"
+  }
+ }
+}

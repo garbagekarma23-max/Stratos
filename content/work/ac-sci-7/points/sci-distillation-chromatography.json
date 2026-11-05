@@ -1,0 +1,389 @@
+{
+ "id": "sci-distillation-chromatography",
+ "title": "Distillation and chromatography",
+ "brief": "ab9153261b14",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:43Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:12Z write: done",
+  "2026-11-04T09:58:32Z check: flagged",
+  "2026-11-04T14:58:53Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00522,
+  "check": 0.01226,
+  "fix": 0.019,
+  "recheck": 0.00677
+ },
+ "draft": {
+  "title": "Distillation and chromatography",
+  "card": [
+   [
+    "Distillation",
+    "A liquid is boiled and its vapour is cooled in a condenser so it turns back into a liquid. The liquid collected is called the distillate."
+   ],
+   "Distillation can separate a solvent, such as water, from a solution. The dissolved solid stays behind in the flask, so the water is collected pure.",
+   [
+    "Chromatography",
+    "A spot of a mixture of dissolved substances, such as the dyes in an ink, is placed near the bottom of a strip of paper. The bottom edge is then dipped in a solvent."
+   ],
+   "The solvent moves up the paper and carries the substances with it. Each substance travels a different distance, so they spread out into separate spots or bands."
+  ],
+  "remember": "Distillation collects a pure liquid from vapour. Chromatography spreads dissolved substances out on paper.",
+  "a": {
+   "q": "Salty water is boiled and the vapour is cooled in a condenser. What is collected in the cup at the end?",
+   "opts": [
+    "Pure water, with the salt left in the flask",
+    "Salty water, with less salt than before",
+    "Salt crystals, with the water left in the flask",
+    "Pure water, with the salt carried into the cup"
+   ],
+   "why": "Only the water boils off and condenses, so the distillate is pure water. The salt is left in the flask. Collecting salt crystals is wrong because the salt stays behind as a solid and is not carried over in the vapour.",
+   "clue": "Think about what turns to vapour and what stays in the flask."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia dips paper with a spot of black ink into water. The ink splits into a yellow band and a blue band. What does this show?",
+   "opts": [
+    "The black ink is a mixture of dyes",
+    "The black ink is one pure substance",
+    "The yellow dye is heavier than the blue dye",
+    "The paper has made new dyes from the ink"
+   ],
+   "why": "The ink separated into two colours that travelled different distances, so it contains at least two dyes. It is not a pure substance, because a pure substance would make only one spot. The paper only separates the dyes and does not make new ones.",
+   "clue": "A pure substance would stay as one spot."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pure water, with the salt left in the flask",
+   "also_right": []
+  },
+  "b": {
+   "best": "The black ink is a mixture of dyes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says the salt 'stays behind as a solid'. While water is still in the flask, the salt stays dissolved in it, as the card says ('the dissolved solid stays behind'). It only becomes a solid if the flask boils dry. Say 'the salt stays behind in the flask' instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each has one clear right answer. One small fix: the why for question a says the salt stays behind 'as a solid' when it stays dissolved in the remaining water."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says the salt 'stays behind as a solid'. While water is still in the flask, the salt stays dissolved in it, as the card says ('the dissolved solid stays behind'). It only becomes a solid if the flask boils dry. Say 'the salt stays behind in the flask' instead."
+ ],
+ "proposal": {
+  "title": "Distillation and chromatography",
+  "card": [
+   [
+    "Distillation",
+    "A liquid is boiled and its vapour is cooled in a condenser so it turns back into a liquid. The liquid collected is called the distillate."
+   ],
+   "Distillation can separate a solvent, such as water, from a solution. The dissolved solid stays behind in the flask, so the water is collected pure.",
+   [
+    "Chromatography",
+    "A spot of a mixture of dissolved substances, such as the dyes in an ink, is placed near the bottom of a strip of paper. The bottom edge is then dipped in a solvent."
+   ],
+   "The solvent moves up the paper and carries the substances with it. Each substance travels a different distance, so they spread out into separate spots or bands. A single substance makes only one spot."
+  ],
+  "remember": "Distillation collects a pure liquid from vapour. Chromatography spreads dissolved substances out on paper.",
+  "a": {
+   "q": "Salty water is boiled and the vapour is cooled in a condenser. What is collected in the cup at the end?",
+   "opts": [
+    "Pure water, with the salt left in the flask",
+    "Salty water, with less salt than before",
+    "Salt crystals, with the water left in the flask",
+    "Steam, with the salt left in the flask"
+   ],
+   "why": "Only the water boils off and condenses, so the distillate is pure water. Collecting salt crystals is wrong because the salt stays behind in the flask and is not carried over in the vapour. It is not steam, because the condenser cools the vapour back into a liquid.",
+   "clue": "Think about what turns to vapour and what stays in the flask."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia dips paper with a spot of black ink into water. The ink splits into a yellow band and a blue band. What does this show?",
+   "opts": [
+    "The black ink is a mixture of dyes",
+    "The black ink is one pure substance",
+    "The blue and yellow dyes are the same substance",
+    "The paper has made new dyes from the ink"
+   ],
+   "why": "The ink separated into two bands that travelled different distances, so it contains at least two dyes. It is not one substance, because a single substance makes only one spot. The paper only separates the dyes and does not make new ones.",
+   "clue": "How many spots would a single substance make?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Pure water, with the salt left in the flask",
+    "also_right": []
+   },
+   "b": {
+    "best": "The black ink is a mixture of dyes",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says the salt 'stays behind as a solid'. While water is still in the flask, the salt stays dissolved in it, as the card says ('the dissolved solid stays behind'). It only becomes a solid if the flask boils dry. Say 'the salt stays behind in the flask' instead."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says the salt 'stays behind as a solid'. While water is still in the flask, the salt stays dissolved in it, as the card says ('the dissolved solid stays behind'). It only becomes a solid if the flask boils dry. Say 'the salt stays behind in the flask' instead."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Distillation and chromatography",
+  "card": [
+   [
+    "Distillation",
+    "A liquid is boiled and its vapour is cooled in a condenser so it turns back into a liquid. The liquid collected is called the distillate."
+   ],
+   "Distillation can separate a solvent, such as water, from a solution. The dissolved solid stays behind in the flask, so the water is collected pure.",
+   [
+    "Chromatography",
+    "A spot of a mixture of dissolved substances, such as the dyes in an ink, is placed near the bottom of a strip of paper. The bottom edge is then dipped in a solvent."
+   ],
+   "The solvent moves up the paper and carries the substances with it. Each substance travels a different distance, so they spread out into separate spots or bands. A single substance makes only one spot."
+  ],
+  "remember": "Distillation collects a pure liquid from vapour. Chromatography spreads dissolved substances out on paper.",
+  "a": {
+   "q": "Salty water is boiled and the vapour is cooled in a condenser. What is collected in the cup at the end?",
+   "opts": [
+    "Pure water, with the salt left in the flask",
+    "Salty water, with less salt than before",
+    "Salt crystals, with the water left in the flask",
+    "Steam, with the salt left in the flask"
+   ],
+   "why": "Only the water boils off and condenses, so the distillate is pure water. Collecting salt crystals is wrong because the salt stays behind in the flask and is not carried over in the vapour. It is not steam, because the condenser cools the vapour back into a liquid.",
+   "clue": "Think about what turns to vapour and what stays in the flask."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia dips paper with a spot of black ink into water. The ink splits into a yellow band and a blue band. What does this show?",
+   "opts": [
+    "The black ink is a mixture of dyes",
+    "The black ink is one pure substance",
+    "The blue and yellow dyes are the same substance",
+    "The paper has made new dyes from the ink"
+   ],
+   "why": "The ink separated into two bands that travelled different distances, so it contains at least two dyes. It is not one substance, because a single substance makes only one spot. The paper only separates the dyes and does not make new ones.",
+   "clue": "How many spots would a single substance make?"
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix stops why (a) saying the salt stays behind as a solid, and swaps two weak wrong options for plausible ones. The facts are right.",
+   "item": "278d9ff2679e1b71",
+   "result": "decided",
+   "saved": {
+    "id": "sci-distillation-chromatography",
+    "title": "Distillation and chromatography",
+    "brief": "ab9153261b14",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "alone": true,
+    "usd": {
+     "write": 0.00522,
+     "check": 0.01226,
+     "fix": 0.019,
+     "recheck": 0.00677
+    },
+    "draft": {
+     "title": "Distillation and chromatography",
+     "card": [
+      [
+       "Distillation",
+       "A liquid is boiled and its vapour is cooled in a condenser so it turns back into a liquid. The liquid collected is called the distillate."
+      ],
+      "Distillation can separate a solvent, such as water, from a solution. The dissolved solid stays behind in the flask, so the water is collected pure.",
+      [
+       "Chromatography",
+       "A spot of a mixture of dissolved substances, such as the dyes in an ink, is placed near the bottom of a strip of paper. The bottom edge is then dipped in a solvent."
+      ],
+      "The solvent moves up the paper and carries the substances with it. Each substance travels a different distance, so they spread out into separate spots or bands."
+     ],
+     "remember": "Distillation collects a pure liquid from vapour. Chromatography spreads dissolved substances out on paper.",
+     "a": {
+      "q": "Salty water is boiled and the vapour is cooled in a condenser. What is collected in the cup at the end?",
+      "opts": [
+       "Pure water, with the salt left in the flask",
+       "Salty water, with less salt than before",
+       "Salt crystals, with the water left in the flask",
+       "Pure water, with the salt carried into the cup"
+      ],
+      "why": "Only the water boils off and condenses, so the distillate is pure water. The salt is left in the flask. Collecting salt crystals is wrong because the salt stays behind as a solid and is not carried over in the vapour.",
+      "clue": "Think about what turns to vapour and what stays in the flask."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mia dips paper with a spot of black ink into water. The ink splits into a yellow band and a blue band. What does this show?",
+      "opts": [
+       "The black ink is a mixture of dyes",
+       "The black ink is one pure substance",
+       "The yellow dye is heavier than the blue dye",
+       "The paper has made new dyes from the ink"
+      ],
+      "why": "The ink separated into two colours that travelled different distances, so it contains at least two dyes. It is not a pure substance, because a pure substance would make only one spot. The paper only separates the dyes and does not make new ones.",
+      "clue": "A pure substance would stay as one spot."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Pure water, with the salt left in the flask",
+      "also_right": []
+     },
+     "b": {
+      "best": "The black ink is a mixture of dyes",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The why says the salt 'stays behind as a solid'. While water is still in the flask, the salt stays dissolved in it, as the card says ('the dissolved solid stays behind'). It only becomes a solid if the flask boils dry. Say 'the salt stays behind in the flask' instead."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and each has one clear right answer. One small fix: the why for question a says the salt stays behind 'as a solid' when it stays dissolved in the remaining water."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, fact: The why says the salt 'stays behind as a solid'. While water is still in the flask, the salt stays dissolved in it, as the card says ('the dissolved solid stays behind'). It only becomes a solid if the flask boils dry. Say 'the salt stays behind in the flask' instead."
+    ],
+    "proposal": {
+     "title": "Distillation and chromatography",
+     "card": [
+      [
+       "Distillation",
+       "A liquid is boiled and its vapour is cooled in a condenser so it turns back into a liquid. The liquid collected is called the distillate."
+      ],
+      "Distillation can separate a solvent, such as water, from a solution. The dissolved solid stays behind in the flask, so the water is collected pure.",
+      [
+       "Chromatography",
+       "A spot of a mixture of dissolved substances, such as the dyes in an ink, is placed near the bottom of a strip of paper. The bottom edge is then dipped in a solvent."
+      ],
+      "The solvent moves up the paper and carries the substances with it. Each substance travels a different distance, so they spread out into separate spots or bands. A single substance makes only one spot."
+     ],
+     "remember": "Distillation collects a pure liquid from vapour. Chromatography spreads dissolved substances out on paper.",
+     "a": {
+      "q": "Salty water is boiled and the vapour is cooled in a condenser. What is collected in the cup at the end?",
+      "opts": [
+       "Pure water, with the salt left in the flask",
+       "Salty water, with less salt than before",
+       "Salt crystals, with the water left in the flask",
+       "Steam, with the salt left in the flask"
+      ],
+      "why": "Only the water boils off and condenses, so the distillate is pure water. Collecting salt crystals is wrong because the salt stays behind in the flask and is not carried over in the vapour. It is not steam, because the condenser cools the vapour back into a liquid.",
+      "clue": "Think about what turns to vapour and what stays in the flask."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mia dips paper with a spot of black ink into water. The ink splits into a yellow band and a blue band. What does this show?",
+      "opts": [
+       "The black ink is a mixture of dyes",
+       "The black ink is one pure substance",
+       "The blue and yellow dyes are the same substance",
+       "The paper has made new dyes from the ink"
+      ],
+      "why": "The ink separated into two bands that travelled different distances, so it contains at least two dyes. It is not one substance, because a single substance makes only one spot. The paper only separates the dyes and does not make new ones.",
+      "clue": "How many spots would a single substance make?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Pure water, with the salt left in the flask",
+       "also_right": []
+      },
+      "b": {
+       "best": "The black ink is a mixture of dyes",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:13Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The why says the salt 'stays behind as a solid'. While water is still in the flask, the salt stays dissolved in it, as the card says ('the dissolved solid stays behind'). It only becomes a solid if the flask boils dry. Say 'the salt stays behind in the flask' instead."
+      }
+     ],
+     "flags": [
+      "Question a, fact: The why says the salt 'stays behind as a solid'. While water is still in the flask, the salt stays dissolved in it, as the card says ('the dissolved solid stays behind'). It only becomes a solid if the flask boils dry. Say 'the salt stays behind in the flask' instead."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "1479044f9fe7fefa"
+  }
+ ]
+}

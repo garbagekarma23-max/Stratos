@@ -1,0 +1,202 @@
+{
+ "id": "ecb-short-long-term-financial",
+ "title": "Short and long-term financial goals",
+ "brief": "39a74d38d369",
+ "shortlist": [
+  [
+   "bus-short-term-long-term",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:25Z new, match",
+  "2026-11-04T09:36:47Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:54Z write: done",
+  "2026-11-04T09:58:21Z check: flagged",
+  "2026-11-04T10:07:57Z fix: suggested",
+  "2026-11-04T17:58:50Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00571,
+  "check": 0.01132,
+  "fix": 0.01504
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers business strategic, tactical and operational objectives for Year 12 in NSW, which is a different idea and depth from personal short- and long-term savings goals for a Year 8 student.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Short and long-term financial goals",
+  "card": [
+   [
+    "Short-term goal",
+    "something you can reach in weeks or months, such as saving for new shoes or a concert ticket."
+   ],
+   [
+    "Long-term goal",
+    "something that takes years to reach, such as saving for a car or a deposit on a home."
+   ],
+   "A goal is sorted by how long it takes to reach, not by how much it matters to you.",
+   "A long-term goal needs a savings plan: a set amount put aside regularly until you have enough."
+  ],
+  "remember": "Short-term goals take weeks or months. Long-term goals take years and need a savings plan.",
+  "a": {
+   "q": "Which of these is a long-term financial goal?",
+   "opts": [
+    "Saving for a car over four years",
+    "Saving for a game over three weeks",
+    "Saving for a movie ticket this month",
+    "Saving for a birthday present in two months"
+   ],
+   "why": "A car costs a lot, so saving for it takes years. The other three can be reached in weeks or a few months, so they are short-term goals.",
+   "clue": "Think about which goal takes years to reach."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaya wants a $60 pair of headphones in six weeks. She also wants $9,000 for a trip overseas after school. Which describes her goals?",
+   "opts": [
+    "Headphones are short-term, the trip is long-term",
+    "Headphones are long-term, the trip is short-term",
+    "Both are short-term because she wants them soon",
+    "Both are long-term because they cost her money"
+   ],
+   "why": "Six weeks is a short time, so the headphones are a short-term goal. Saving $9,000 will take years, so the trip is long-term and needs a savings plan. Cost alone does not decide it: the time needed does.",
+   "clue": "Sort each goal by how long it takes to reach."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Saving for a car over four years",
+   "also_right": []
+  },
+  "b": {
+   "best": "Headphones are short-term, the trip is long-term",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question never states how long the trip goal will take. 'After school' could be read as 'after school today' rather than 'after Year 12'. The why then works out the time from the $9,000 cost ('Saving $9,000 will take years'), which sits awkwardly with its own line that cost does not decide it. Give the trip a stated timeframe, such as 'in four years, after she finishes Year 12'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b does not give a clear timeframe for the trip: 'after school' is ambiguous, and the why infers years from the cost, against the card's rule that time, not cost, sorts goals. State the trip's timeframe in the question."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question never states how long the trip goal will take. 'After school' could be read as 'after school today' rather than 'after Year 12'. The why then works out the time from the $9,000 cost ('Saving $9,000 will take years'), which sits awkwardly with its own line that cost does not decide it. Give the trip a stated timeframe, such as 'in four years, after she finishes Year 12'."
+ ],
+ "proposal": {
+  "title": "Short and long-term financial goals",
+  "card": [
+   [
+    "Short-term goal",
+    "something you can reach in weeks or months, such as saving for new shoes or a concert ticket."
+   ],
+   [
+    "Long-term goal",
+    "something that takes years to reach, such as saving for a car or a deposit on a home."
+   ],
+   "A goal is sorted by how long it takes to reach, not by how much it matters to you.",
+   "A long-term goal needs a savings plan: a set amount put aside regularly until you have enough."
+  ],
+  "remember": "Short-term goals take weeks or months. Long-term goals take years and need a savings plan.",
+  "a": {
+   "q": "Which of these is a long-term financial goal?",
+   "opts": [
+    "Saving for a car over four years",
+    "Saving for a game over three weeks",
+    "Saving for a movie ticket this month",
+    "Saving for a birthday present in two months"
+   ],
+   "why": "Four years is a long time, so saving for the car is a long-term goal. The other three can be reached in weeks or a few months, so they are short-term goals.",
+   "clue": "Think about which goal takes years to reach."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jaya wants $60 headphones in six weeks. She also wants $9,000 for a trip overseas in four years, after she finishes Year 12. Which describes her goals?",
+   "opts": [
+    "Headphones are short-term, the trip is long-term",
+    "Headphones are long-term, the trip is short-term",
+    "Both are short-term because she wants them soon",
+    "Both are long-term because they cost her money"
+   ],
+   "why": "Six weeks is a short time, so the headphones are a short-term goal. Four years is a long time, so the trip is long-term and needs a savings plan. Each goal is sorted by how long it takes to reach, not by its cost.",
+   "clue": "Sort each goal by how long it takes to reach."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:50Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question never states how long the trip goal will take. 'After school' could be read as 'after school today' rather than 'after Year 12'. The why then works out the time from the $9,000 cost ('Saving $9,000 will take years'), which sits awkwardly with its own line that cost does not decide it. Give the trip a stated timeframe, such as 'in four years, after she finishes Year 12'."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question never states how long the trip goal will take. 'After school' could be read as 'after school today' rather than 'after Year 12'. The why then works out the time from the $9,000 cost ('Saving $9,000 will take years'), which sits awkwardly with its own line that cost does not decide it. Give the trip a stated timeframe, such as 'in four years, after she finishes Year 12'."
+  ]
+ },
+ "final": {
+  "title": "Short and long-term financial goals",
+  "card": [
+   [
+    "Short-term goal",
+    "something you can reach in weeks or months, such as saving for new shoes or a concert ticket."
+   ],
+   [
+    "Long-term goal",
+    "something that takes years to reach, such as saving for a car or a deposit on a home."
+   ],
+   "A goal is sorted by how long it takes to reach, not by how much it matters to you.",
+   "A long-term goal needs a savings plan: a set amount put aside regularly until you have enough."
+  ],
+  "remember": "Short-term goals take weeks or months. Long-term goals take years and need a savings plan.",
+  "a": {
+   "q": "Which of these is a long-term financial goal?",
+   "opts": [
+    "Saving for a car over four years",
+    "Saving for a game over three weeks",
+    "Saving for a movie ticket this month",
+    "Saving for a birthday present in two months"
+   ],
+   "why": "Four years is a long time, so saving for the car is a long-term goal. The other three can be reached in weeks or a few months, so they are short-term goals.",
+   "clue": "Think about which goal takes years to reach."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jaya wants $60 headphones in six weeks. She also wants $9,000 for a trip overseas in four years, after she finishes Year 12. Which describes her goals?",
+   "opts": [
+    "Headphones are short-term, the trip is long-term",
+    "Headphones are long-term, the trip is short-term",
+    "Both are short-term because she wants them soon",
+    "Both are long-term because they cost her money"
+   ],
+   "why": "Six weeks is a short time, so the headphones are a short-term goal. Four years is a long time, so the trip is long-term and needs a savings plan. Each goal is sorted by how long it takes to reach, not by its cost.",
+   "clue": "Sort each goal by how long it takes to reach."
+  }
+ },
+ "cleared_by": "auto"
+}

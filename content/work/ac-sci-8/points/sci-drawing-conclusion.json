@@ -1,0 +1,276 @@
+{
+ "id": "sci-drawing-conclusion",
+ "title": "Drawing a conclusion",
+ "brief": "908d566a681d",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:44Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:13Z write: failed the content check, writing again",
+  "2026-11-04T09:58:33Z write: done (still fails the content check)",
+  "2026-11-04T14:58:53Z check: flagged",
+  "2026-11-04T15:02:07Z fix: suggested",
+  "2026-11-05T06:15:30Z review: rejected, to be written again",
+  "2026-11-05T06:26:27Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T06:32:24Z claude-code check: answered by a separate subagent",
+  "2026-11-05T06:32:24Z check: flagged",
+  "2026-11-05T06:46:39Z fix: suggested",
+  "2026-11-05T07:02:44Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 2
+ },
+ "usd": {
+  "write": 0.01177,
+  "check": 0.0171,
+  "fix": 0.03884
+ },
+ "note": "",
+ "rejected": {
+  "title": "Drawing a conclusion",
+  "card": [
+   "A conclusion is the final step of an investigation. It answers the aim by stating what the investigation found out.",
+   "It says whether the data supports the hypothesis. Data can support a hypothesis or not support it. A single investigation does not prove a hypothesis is true.",
+   "It uses the results as evidence. A good conclusion quotes numbers or trends from the data, such as \"plants in the sun grew 12 cm on average, but plants in the shade grew 5 cm\".",
+   "A conclusion should only claim what the results show. It should not bring in new ideas or results that were not measured."
+  ],
+  "remember": "A conclusion answers the aim, judges the hypothesis and backs both with the results.",
+  "a": {
+   "q": "Which sentence from a conclusion best uses results as evidence?",
+   "opts": [
+    "Water at 40 °C dissolved sugar in 20 s, but 10 °C took 65 s",
+    "Warmer water seemed to work better, as we expected it would",
+    "The experiment went well and everyone in the group helped",
+    "Sugar dissolves faster in warm water as particles move more"
+   ],
+   "why": "It quotes measured results from the investigation, so a reader can see what the claim rests on. The last option gives a scientific reason, but it does not use the group's own data as evidence.",
+   "clue": "Look for the option that quotes measurements."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's aim was to find out how light affects bean plant growth. Her hypothesis was that more light gives taller plants. After two weeks, plants in full light averaged 14 cm and plants in the dark averaged 6 cm. Which conclusion is best?",
+   "opts": [
+    "Plants in light grew taller (14 cm, not 6 cm), as predicted",
+    "The hypothesis is proven, so all plants grow taller in light",
+    "The data does not support it, as the plants had different heights",
+    "Light made plants grow, and fertiliser would add even more"
+   ],
+   "why": "It answers the aim, says the data supports the hypothesis and quotes the averages. The second option claims proof from one investigation, which a conclusion should not do. The last option adds an idea that was never tested.",
+   "clue": "Stay with what was measured and avoid claiming proof."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:26:27Z",
+   "step": "write",
+   "version": {
+    "title": "Drawing a conclusion",
+    "card": [
+     "A conclusion comes at the end of an investigation. It answers the aim in a sentence or two.",
+     "It says whether the data supports the hypothesis. One investigation can support a hypothesis, but it does not prove it.",
+     "It uses the results as evidence, quoting the measurements or the pattern in them. For example: \"Paper planes with longer wings flew further, 6.2 m on average compared with 4.1 m.\"",
+     "It claims only what the results show. It does not stretch to things that were not tested."
+    ],
+    "remember": "Answer the aim, judge the hypothesis, and point to the results that show it.",
+    "a": {
+     "q": "Kai's results show warmer water dissolved sugar faster, as his hypothesis predicted. Which sentence belongs in his conclusion?",
+     "opts": [
+      "The results support the hypothesis",
+      "The results prove the hypothesis true",
+      "The hypothesis was changed to fit the data",
+      "The results show sugar dissolves in all liquids"
+     ],
+     "why": "Kai's data agrees with his prediction, so it supports the hypothesis. One investigation cannot prove a hypothesis true, so the second option claims too much.",
+     "clue": "Support and prove do not mean the same thing."
+    },
+    "b": {
+     "d": 3,
+     "q": "Lena's aim was to find out whether a ball bounces higher on concrete or on grass. Over 5 drops on each, it bounced 62 cm on average on concrete and 18 cm on grass. Which is the best conclusion?",
+     "opts": [
+      "It bounced higher on concrete, 62 cm to 18 cm on average",
+      "It bounced higher on concrete, so all balls do the same",
+      "It bounced higher on concrete because concrete is cold",
+      "It bounced 62 cm, which proves concrete is always best"
+     ],
+     "why": "It answers the aim and quotes the averages as evidence. The other options stretch to all balls, give a reason that was never tested, or claim proof.",
+     "clue": "Stay with what Lena measured."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T06:32:24Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The results support the hypothesis",
+     "also_right": []
+    },
+    "b": {
+     "best": "It bounced higher on concrete, 62 cm to 18 cm on average",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "a",
+      "kind": "wording",
+      "detail": "The why for question a says \"the second option claims too much\", but the options are shown in a shuffled order, so the second option a student sees may not be the one about proof. Name it instead, for example \"saying the results prove it claims too much\"."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The card and both questions are right, with one clear answer each. The only problem is that the why for question a points to \"the second option\", which will not match once the options are shuffled; it should name the proof option instead."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Drawing a conclusion",
+  "card": [
+   "A conclusion comes at the end of an investigation. It answers the aim in a sentence or two.",
+   "It says whether the data supports the hypothesis. One investigation can support a hypothesis, but it does not prove it.",
+   "It uses the results as evidence, quoting the measurements or the pattern in them. For example: \"Paper planes with longer wings flew further, 6.2 m on average compared with 4.1 m.\"",
+   "It claims only what the results show. It does not stretch to things that were not tested."
+  ],
+  "remember": "Answer the aim, judge the hypothesis, and point to the results that show it.",
+  "a": {
+   "q": "Kai's results show warmer water dissolved sugar faster, as his hypothesis predicted. Which sentence belongs in his conclusion?",
+   "opts": [
+    "The results support the hypothesis",
+    "The results prove the hypothesis true",
+    "The hypothesis was changed to fit the data",
+    "The results show sugar dissolves in all liquids"
+   ],
+   "why": "Kai's data agrees with his prediction, so it supports the hypothesis. One investigation cannot prove a hypothesis true, so the second option claims too much.",
+   "clue": "Support and prove do not mean the same thing."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena's aim was to find out whether a ball bounces higher on concrete or on grass. Over 5 drops on each, it bounced 62 cm on average on concrete and 18 cm on grass. Which is the best conclusion?",
+   "opts": [
+    "It bounced higher on concrete, 62 cm to 18 cm on average",
+    "It bounced higher on concrete, so all balls do the same",
+    "It bounced higher on concrete because concrete is cold",
+    "It bounced 62 cm, which proves concrete is always best"
+   ],
+   "why": "It answers the aim and quotes the averages as evidence. The other options stretch to all balls, give a reason that was never tested, or claim proof.",
+   "clue": "Stay with what Lena measured."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The results support the hypothesis",
+   "also_right": []
+  },
+  "b": {
+   "best": "It bounced higher on concrete, 62 cm to 18 cm on average",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why for question a says \"the second option claims too much\", but the options are shown in a shuffled order, so the second option a student sees may not be the one about proof. Name it instead, for example \"saying the results prove it claims too much\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are right, with one clear answer each. The only problem is that the why for question a points to \"the second option\", which will not match once the options are shuffled; it should name the proof option instead."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why for question a says \"the second option claims too much\", but the options are shown in a shuffled order, so the second option a student sees may not be the one about proof. Name it instead, for example \"saying the results prove it claims too much\"."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Drawing a conclusion",
+  "card": [
+   "A conclusion comes at the end of an investigation. It answers the aim in a sentence or two.",
+   "It says whether the data supports the hypothesis. One investigation can support a hypothesis, but it does not prove it.",
+   "It uses the results as evidence, quoting the measurements or the pattern in them. For example: \"Paper planes with longer wings flew further, 6.2 m on average compared with 4.1 m.\"",
+   "It claims only what the results show. It does not stretch to things that were not tested."
+  ],
+  "remember": "Answer the aim, judge the hypothesis, and point to the results that show it.",
+  "a": {
+   "q": "Kai's results show warmer water dissolved sugar faster, as his hypothesis predicted. Which sentence belongs in his conclusion?",
+   "opts": [
+    "The results support the hypothesis",
+    "The results prove the hypothesis true",
+    "The hypothesis was changed to fit the data",
+    "The results show sugar dissolves in all liquids"
+   ],
+   "why": "Kai's data agrees with his prediction, so it supports the hypothesis. Saying the results prove the hypothesis true claims too much, because one investigation cannot prove a hypothesis.",
+   "clue": "Support and prove do not mean the same thing."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena's aim was to find out whether a ball bounces higher on concrete or on grass. Over 5 drops on each, it bounced 62 cm on average on concrete and 18 cm on grass. Which is the best conclusion?",
+   "opts": [
+    "It bounced higher on concrete, 62 cm to 18 cm on average",
+    "It bounced higher on concrete, so all balls do the same",
+    "It bounced higher on concrete because concrete is cold",
+    "It bounced 62 cm, which proves concrete is always best"
+   ],
+   "why": "It answers the aim and quotes the averages as evidence. The other options stretch to all balls, give a reason that was never tested, or claim proof.",
+   "clue": "Stay with what Lena measured."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-05T07:02:44Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why for question a says \"the second option claims too much\", but the options are shown in a shuffled order, so the second option a student sees may not be the one about proof. Name it instead, for example \"saying the results prove it claims too much\"."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why for question a says \"the second option claims too much\", but the options are shown in a shuffled order, so the second option a student sees may not be the one about proof. Name it instead, for example \"saying the results prove it claims too much\"."
+  ]
+ },
+ "final": {
+  "title": "Drawing a conclusion",
+  "card": [
+   "A conclusion comes at the end of an investigation. It answers the aim in a sentence or two.",
+   "It says whether the data supports the hypothesis. One investigation can support a hypothesis, but it does not prove it.",
+   "It uses the results as evidence, quoting the measurements or the pattern in them. For example: \"Paper planes with longer wings flew further, 6.2 m on average compared with 4.1 m.\"",
+   "It claims only what the results show. It does not stretch to things that were not tested."
+  ],
+  "remember": "Answer the aim, judge the hypothesis, and point to the results that show it.",
+  "a": {
+   "q": "Kai's results show warmer water dissolved sugar faster, as his hypothesis predicted. Which sentence belongs in his conclusion?",
+   "opts": [
+    "The results support the hypothesis",
+    "The results prove the hypothesis true",
+    "The hypothesis was changed to fit the data",
+    "The results show sugar dissolves in all liquids"
+   ],
+   "why": "Kai's data agrees with his prediction, so it supports the hypothesis. Saying the results prove the hypothesis true claims too much, because one investigation cannot prove a hypothesis.",
+   "clue": "Support and prove do not mean the same thing."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena's aim was to find out whether a ball bounces higher on concrete or on grass. Over 5 drops on each, it bounced 62 cm on average on concrete and 18 cm on grass. Which is the best conclusion?",
+   "opts": [
+    "It bounced higher on concrete, 62 cm to 18 cm on average",
+    "It bounced higher on concrete, so all balls do the same",
+    "It bounced higher on concrete because concrete is cold",
+    "It bounced 62 cm, which proves concrete is always best"
+   ],
+   "why": "It answers the aim and quotes the averages as evidence. The other options stretch to all balls, give a reason that was never tested, or claim proof.",
+   "clue": "Stay with what Lena measured."
+  }
+ },
+ "cleared_by": "auto"
+}

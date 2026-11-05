@@ -1,0 +1,231 @@
+{
+ "id": "ecb-young-people-tax",
+ "title": "Young people and tax",
+ "brief": "d05580681682",
+ "shortlist": [
+  [
+   "bus-taxation-business",
+   0.251
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:25Z new, match",
+  "2026-11-04T09:36:47Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: done",
+  "2026-11-04T09:58:21Z check: flagged",
+  "2026-11-04T10:07:57Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.0058,
+  "check": 0.01185,
+  "fix": 0.01844,
+  "recheck": 0.00887
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers a business's tax duties (PAYG withholding, GST, company tax), while the new point teaches a young worker's side: getting a tax file number, having tax taken from pay, and lodging a return to possibly get a refund, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Young people and tax",
+  "card": [
+   "A young person who starts a job needs a tax file number (TFN). It is a personal number that the tax office uses to keep track of their tax.",
+   "The employer takes tax out of each pay and sends it to the government. The worker receives the pay that is left.",
+   "The tax year ends on 30 June. After that date, workers lodge a tax return, which tells the tax office what they earned and what tax was paid.",
+   "If too much tax was taken out during the year, the worker may get some money back as a refund."
+  ],
+  "remember": "Get a TFN, let your employer take tax from your pay, then lodge a return after 30 June to see if you get some back.",
+  "a": {
+   "q": "Why might a teenager who works part time get money back after lodging a tax return?",
+   "opts": [
+    "Their employer may have taken out too much tax",
+    "The government pays all workers a bonus each year",
+    "They did not need a tax file number to start work",
+    "Their employer paid their tax before they were hired"
+   ],
+   "why": "Tax is taken from each pay, and if too much was taken out over the year, the worker may get a refund. A bonus is not paid to every worker.",
+   "clue": "Think about what is taken from each pay during the year."
+  },
+  "b": {
+   "d": 2,
+   "q": "Noah, aged 15, starts a job at a bakery in Perth. What should he do first so his tax can be recorded?",
+   "opts": [
+    "Give his employer his tax file number",
+    "Wait until 30 June to lodge a tax return",
+    "Ask his employer to keep all of his pay",
+    "Send his pay slips to the bakery's customers"
+   ],
+   "why": "A young worker needs a tax file number so the tax office can keep track of their tax. Lodging a return happens after 30 June, not before starting.",
+   "clue": "It is a personal number linked to the tax office."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Their employer may have taken out too much tax",
+   "also_right": []
+  },
+  "b": {
+   "best": "Give his employer his tax file number",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a qualifier ('may') and it echoes the card's wording ('too much tax was taken out'). The other options are plainly absurd, so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('a personal number linked to the tax office') points straight at the only option that mentions a number, which gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card says a young worker needs a TFN but never says the worker gives it to the employer. The question asks for that step without the card teaching it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct. In question a, the right option stands out because it alone has 'may' and echoes the card. In question b, the clue gives the answer away, and the card never teaches that the TFN is given to the employer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one with a qualifier ('may') and it echoes the card's wording ('too much tax was taken out'). The other options are plainly absurd, so a student could pick it without knowing the idea.",
+  "Question b, other: The clue ('a personal number linked to the tax office') points straight at the only option that mentions a number, which gives the answer away.",
+  "Question b, level: The card says a young worker needs a TFN but never says the worker gives it to the employer. The question asks for that step without the card teaching it."
+ ],
+ "proposal": {
+  "title": "Young people and tax",
+  "card": [
+   "A young person who starts a job needs a tax file number (TFN). It is a personal number that the tax office uses to keep track of their tax.",
+   "When they start the job, the worker gives their TFN to their employer. The employer then takes tax out of each pay and sends it to the government.",
+   "The tax year ends on 30 June. After that date, the worker lodges their own tax return, which tells the tax office what they earned and what tax was paid.",
+   "If the tax taken from their pay was more than the tax they owed for the year, the worker may get the difference back as a refund."
+  ],
+  "remember": "Your employer takes tax from each pay, and your tax return after 30 June can show whether you paid too much.",
+  "a": {
+   "q": "Why might a teenager who works part time get money back after lodging a tax return?",
+   "opts": [
+    "More tax came out of their pay than they owed for the year",
+    "Their employer took no tax at all out of their pay that year",
+    "They gave their employer their tax file number when hired",
+    "They lodged their tax return early, before the 30 June date"
+   ],
+   "why": "A refund is the difference when the tax taken from pay is more than the tax owed. If no tax was taken out, there would be nothing to give back. Giving a TFN to an employer is a normal step, not a reason for a refund.",
+   "clue": "Compare what was taken from pay with what was owed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Noah, aged 15, starts a job at a bakery in Perth. What should he do with his tax file number when he starts?",
+   "opts": [
+    "Give it to the bakery so tax can be taken from his pay",
+    "Keep it to himself until he lodges a tax return in July",
+    "Use it to pay his own tax to the tax office each week",
+    "Give it to the bakery so it can lodge his tax return"
+   ],
+   "why": "A new worker gives their TFN to their employer, and the employer takes tax from each pay. The bakery does not lodge Noah's return for him: he lodges his own after 30 June.",
+   "clue": "Who takes the tax out of each pay, and who lodges the return?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "More tax came out of their pay than they owed for the year",
+    "also_right": []
+   },
+   "b": {
+    "best": "Give it to the bakery so tax can be taken from his pay",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a qualifier ('may') and it echoes the card's wording ('too much tax was taken out'). The other options are plainly absurd, so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('a personal number linked to the tax office') points straight at the only option that mentions a number, which gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card says a young worker needs a TFN but never says the worker gives it to the employer. The question asks for that step without the card teaching it."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only one with a qualifier ('may') and it echoes the card's wording ('too much tax was taken out'). The other options are plainly absurd, so a student could pick it without knowing the idea.",
+   "Question b, other: The clue ('a personal number linked to the tax office') points straight at the only option that mentions a number, which gives the answer away.",
+   "Question b, level: The card says a young worker needs a TFN but never says the worker gives it to the employer. The question asks for that step without the card teaching it."
+  ]
+ },
+ "final": {
+  "title": "Young people and tax",
+  "card": [
+   "A young person who starts a job needs a tax file number (TFN). It is a personal number that the tax office uses to keep track of their tax.",
+   "When they start the job, the worker gives their TFN to their employer. The employer then takes tax out of each pay and sends it to the government.",
+   "The tax year ends on 30 June. After that date, the worker lodges their own tax return, which tells the tax office what they earned and what tax was paid.",
+   "If the tax taken from their pay was more than the tax they owed for the year, the worker may get the difference back as a refund."
+  ],
+  "remember": "Your employer takes tax from each pay, and your tax return after 30 June can show whether you paid too much.",
+  "a": {
+   "q": "Why might a teenager who works part time get money back after lodging a tax return?",
+   "opts": [
+    "More tax came out of their pay than they owed for the year",
+    "Their employer took no tax at all out of their pay that year",
+    "They gave their employer their tax file number when hired",
+    "They lodged their tax return early, before the 30 June date"
+   ],
+   "why": "A refund is the difference when the tax taken from pay is more than the tax owed. If no tax was taken out, there would be nothing to give back. Giving a TFN to an employer is a normal step, not a reason for a refund.",
+   "clue": "Compare what was taken from pay with what was owed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Noah, aged 15, starts a job at a bakery in Perth. What should he do with his tax file number when he starts?",
+   "opts": [
+    "Give it to the bakery so tax can be taken from his pay",
+    "Keep it to himself until he lodges a tax return in July",
+    "Use it to pay his own tax to the tax office each week",
+    "Give it to the bakery so it can lodge his tax return"
+   ],
+   "why": "A new worker gives their TFN to their employer, and the employer takes tax from each pay. The bakery does not lodge Noah's return for him: he lodges his own after 30 June.",
+   "clue": "Who takes the tax out of each pay, and who lodges the return?"
+  }
+ },
+ "cleared_by": "recheck"
+}

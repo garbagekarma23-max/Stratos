@@ -1,0 +1,351 @@
+{
+ "id": "eng-embedded-clauses",
+ "title": "Embedded clauses",
+ "brief": "f02c383c525e",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:29Z new, write",
+  "2026-11-04T09:36:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:46:58Z write: done",
+  "2026-11-04T09:58:23Z check: flagged",
+  "2026-11-04T10:07:59Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00441,
+  "check": 0.01602,
+  "fix": 0.01605,
+  "recheck": 0.01177
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The why calls 'drew a map' 'the verb of the main clause'. Only 'drew' is the verb; 'a map' is its object. Better: 'drew a map is part of the main clause'.",
+ "rejected": {
+  "title": "Embedded clauses",
+  "card": [
+   "A clause is a group of words with a verb. A main clause makes sense on its own, such as: The dog barked.",
+   "An embedded clause sits inside another clause and adds information about a noun. It often starts with who, which or that.",
+   "Example: The dog, which belongs to Ava, barked. The embedded clause tells us more about the noun dog. The sentence still works without it.",
+   "Embedded clauses let a writer pack more detail into one sentence. Commas often mark off the extra information, but not always."
+  ],
+  "remember": "An embedded clause adds detail about a noun from inside the sentence.",
+  "a": {
+   "q": "In the sentence The girl who sat near the window drew a map, which words are the embedded clause?",
+   "opts": [
+    "who sat near the window",
+    "who sat near the window drew a map",
+    "The girl who sat",
+    "drew a map"
+   ],
+   "why": "Who sat near the window tells us more about the noun girl, and if you take it out, The girl drew a map still works. Adding drew a map is wrong, because that is the verb of the main clause, and the sentence falls apart without it.",
+   "clue": "Which words could you remove and still have a full sentence?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Read this sentence: Mr Tran's bakery, which opened in Perth last year, sells sourdough. What does the embedded clause do?",
+   "opts": [
+    "It adds detail about the noun bakery",
+    "It adds detail about the noun Perth",
+    "It adds detail about the noun sourdough",
+    "It adds detail about the verb sells"
+   ],
+   "why": "The clause which opened in Perth last year tells us more about the bakery: it is the bakery that opened. Perth is a noun inside the clause, but the clause is not describing Perth, so that option is wrong.",
+   "clue": "Ask yourself what opened in Perth last year."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The why calls 'drew a map' 'the verb of the main clause'. Only 'drew' is the verb; 'a map' is its object. Better: 'drew a map is part of the main clause'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Embedded clauses",
+     "card": [
+      "A clause is a group of words with a verb. A main clause makes sense on its own, such as: The dog barked.",
+      "An embedded clause sits inside another clause and adds information about a noun. It often starts with who, which or that.",
+      "Example: The dog, which belongs to Ava, barked. The embedded clause tells us more about the noun dog. The sentence still works without it.",
+      "Embedded clauses let a writer pack more detail into one sentence. Commas often mark off the extra information, but not always."
+     ],
+     "remember": "An embedded clause adds detail about a noun from inside the sentence.",
+     "a": {
+      "q": "Which sentence has an embedded clause that adds information about a noun?",
+      "opts": [
+       "The boy who won the race smiled",
+       "The boy won the race and smiled",
+       "The boy smiled after the race",
+       "Smiling, the boy ran quickly"
+      ],
+      "why": "In the first sentence, who won the race sits inside the sentence and tells us more about the noun boy. The second sentence joins two main clauses with and, so neither is embedded.",
+      "clue": "Look for a who, which or that group describing a noun."
+     },
+     "b": {
+      "d": 3,
+      "q": "Read this sentence: Mr Tran's bakery, which opened in Perth last year, sells sourdough. What does the embedded clause do?",
+      "opts": [
+       "It adds detail about the noun bakery",
+       "It tells us what the bakery sells",
+       "It joins two separate main clauses",
+       "It adds detail about the verb sells"
+      ],
+      "why": "The clause which opened in Perth last year sits inside the sentence and gives more detail about the noun bakery. What the bakery sells is in the main clause, so that option is wrong.",
+      "clue": "Which noun comes just before the which clause?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The boy who won the race smiled",
+      "also_right": []
+     },
+     "b": {
+      "best": "It adds detail about the noun bakery",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue says to look for a who, which or that group, and the right option is the only one containing who, so a student can pick it by spotting the word without understanding embedded clauses."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue asks which noun comes before the which clause, and the right option is the only one that names a noun, so the clue gives the answer away."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "The card, answers and explanations are accurate for Year 8. Both clues point straight to the right option (the only option with 'who' in a, the only option naming a noun in b), so students can answer without understanding the idea. Note that in strict functional grammar, comma-marked (non-defining) relative clauses like the card's example are not always counted as embedded, though school resources commonly treat them this way."
+    },
+    "flags": [
+     "Question a, other: The clue says to look for a who, which or that group, and the right option is the only one containing who, so a student can pick it by spotting the word without understanding embedded clauses.",
+     "Question b, other: The clue asks which noun comes before the which clause, and the right option is the only one that names a noun, so the clue gives the answer away."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Embedded clauses",
+     "card": [
+      "A clause is a group of words with a verb. A main clause makes sense on its own, such as: The dog barked.",
+      "An embedded clause sits inside another clause and adds information about a noun. It often starts with who, which or that.",
+      "Example: The dog, which belongs to Ava, barked. The embedded clause tells us more about the noun dog. The sentence still works without it.",
+      "Embedded clauses let a writer pack more detail into one sentence. Commas often mark off the extra information, but not always."
+     ],
+     "remember": "An embedded clause adds detail about a noun from inside the sentence.",
+     "a": {
+      "q": "In the sentence The girl who sat near the window drew a map, which words are the embedded clause?",
+      "opts": [
+       "who sat near the window",
+       "who sat near the window drew a map",
+       "The girl who sat",
+       "drew a map"
+      ],
+      "why": "Who sat near the window tells us more about the noun girl, and if you take it out, The girl drew a map still works. Adding drew a map is wrong, because that is the verb of the main clause, and the sentence falls apart without it.",
+      "clue": "Which words could you remove and still have a full sentence?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Read this sentence: Mr Tran's bakery, which opened in Perth last year, sells sourdough. What does the embedded clause do?",
+      "opts": [
+       "It adds detail about the noun bakery",
+       "It adds detail about the noun Perth",
+       "It adds detail about the noun sourdough",
+       "It adds detail about the verb sells"
+      ],
+      "why": "The clause which opened in Perth last year tells us more about the bakery: it is the bakery that opened. Perth is a noun inside the clause, but the clause is not describing Perth, so that option is wrong.",
+      "clue": "Ask yourself what opened in Perth last year."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "who sat near the window",
+       "also_right": []
+      },
+      "b": {
+       "best": "It adds detail about the noun bakery",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The why calls 'drew a map' 'the verb of the main clause'. Only 'drew' is the verb; 'a map' is its object. Better: 'drew a map is part of the main clause'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear right answer. One small fix: the why for question a calls 'drew a map' the verb, when only 'drew' is."
+     },
+     "flags": [
+      "Question a, wording: The why calls 'drew a map' 'the verb of the main clause'. Only 'drew' is the verb; 'a map' is its object. Better: 'drew a map is part of the main clause'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Embedded clauses",
+    "card": [
+     "A clause is a group of words with a verb. A main clause makes sense on its own, such as: The dog barked.",
+     "An embedded clause sits inside another clause and adds information about a noun. It often starts with who, which or that.",
+     "Example: The dog, which belongs to Ava, barked. The embedded clause tells us more about the noun dog. The sentence still works without it.",
+     "Embedded clauses let a writer pack more detail into one sentence. Commas often mark off the extra information, but not always."
+    ],
+    "remember": "An embedded clause adds detail about a noun from inside the sentence.",
+    "a": {
+     "q": "In this sentence, which words form the embedded clause? The girl who sat near the window drew a map.",
+     "opts": [
+      "who sat near the window",
+      "who sat near the window drew a map",
+      "The girl who sat",
+      "drew a map"
+     ],
+     "why": "Who sat near the window tells us more about the noun girl, and if you take it out, The girl drew a map still works. Adding drew a map is wrong, because drew a map is part of the main clause, and the sentence falls apart without it.",
+     "clue": "Which words could you lift out and still have a full sentence?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Mr Tran's bakery, which opened in Perth last year, sells sourdough. What job does the embedded clause in this sentence do?",
+     "opts": [
+      "It adds detail about the noun bakery",
+      "It adds detail about the noun Perth",
+      "It adds detail about the noun sourdough",
+      "It adds detail about the verb sells"
+     ],
+     "why": "The clause which opened in Perth last year tells us more about the bakery: it is the bakery that opened. Perth is a noun inside the clause, but the clause is not describing Perth, so that option is wrong.",
+     "clue": "What was it that opened in Perth last year?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "who sat near the window",
+     "also_right": []
+    },
+    "b": {
+     "best": "It adds detail about the noun bakery",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Embedded clauses",
+  "card": [
+   "A clause is a group of words with a verb. A main clause makes sense on its own, such as: The dog barked.",
+   "An embedded clause sits inside another clause and adds information about a noun. It often starts with who, which or that.",
+   "Example: The dog, which belongs to Ava, barked. The embedded clause tells us more about the noun dog. The sentence still works without it.",
+   "Embedded clauses let a writer pack more detail into one sentence. Commas often mark off the extra information, but not always."
+  ],
+  "remember": "An embedded clause adds detail about a noun from inside the sentence.",
+  "a": {
+   "q": "In this sentence, which words form the embedded clause? The girl who sat near the window drew a map.",
+   "opts": [
+    "who sat near the window",
+    "who sat near the window drew a map",
+    "The girl who sat",
+    "drew a map"
+   ],
+   "why": "Who sat near the window tells us more about the noun girl, and if you take it out, The girl drew a map still works. Adding drew a map is wrong, because drew a map is part of the main clause, and the sentence falls apart without it.",
+   "clue": "Which words could you lift out and still have a full sentence?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mr Tran's bakery, which opened in Perth last year, sells sourdough. What job does the embedded clause in this sentence do?",
+   "opts": [
+    "It adds detail about the noun bakery",
+    "It adds detail about the noun Perth",
+    "It adds detail about the noun sourdough",
+    "It adds detail about the verb sells"
+   ],
+   "why": "The clause which opened in Perth last year tells us more about the bakery: it is the bakery that opened. Perth is a noun inside the clause, but the clause is not describing Perth, so that option is wrong.",
+   "clue": "What was it that opened in Perth last year?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "who sat near the window",
+   "also_right": []
+  },
+  "b": {
+   "best": "It adds detail about the noun bakery",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Embedded clauses",
+  "card": [
+   "A clause is a group of words with a verb. A main clause makes sense on its own, such as: The dog barked.",
+   "An embedded clause sits inside another clause and adds information about a noun. It often starts with who, which or that.",
+   "Example: The dog, which belongs to Ava, barked. The embedded clause tells us more about the noun dog. The sentence still works without it.",
+   "Embedded clauses let a writer pack more detail into one sentence. Commas often mark off the extra information, but not always."
+  ],
+  "remember": "An embedded clause adds detail about a noun from inside the sentence.",
+  "a": {
+   "q": "In this sentence, which words form the embedded clause? The girl who sat near the window drew a map.",
+   "opts": [
+    "who sat near the window",
+    "who sat near the window drew a map",
+    "The girl who sat",
+    "drew a map"
+   ],
+   "why": "Who sat near the window tells us more about the noun girl, and if you take it out, The girl drew a map still works. Adding drew a map is wrong, because drew a map is part of the main clause, and the sentence falls apart without it.",
+   "clue": "Which words could you lift out and still have a full sentence?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mr Tran's bakery, which opened in Perth last year, sells sourdough. What job does the embedded clause in this sentence do?",
+   "opts": [
+    "It adds detail about the noun bakery",
+    "It adds detail about the noun Perth",
+    "It adds detail about the noun sourdough",
+    "It adds detail about the verb sells"
+   ],
+   "why": "The clause which opened in Perth last year tells us more about the bakery: it is the bakery that opened. Perth is a noun inside the clause, but the clause is not describing Perth, so that option is wrong.",
+   "clue": "What was it that opened in Perth last year?"
+  }
+ },
+ "checked_by": "claude-code"
+}

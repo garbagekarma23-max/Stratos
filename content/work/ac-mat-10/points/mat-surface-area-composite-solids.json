@@ -1,0 +1,200 @@
+{
+ "id": "mat-surface-area-composite-solids",
+ "title": "Surface area of composite solids",
+ "brief": "17e6805f9e90",
+ "shortlist": [
+  [
+   "mat-surface-area",
+   0.368
+  ],
+  [
+   "mat-surface-area-volume",
+   0.324
+  ],
+  [
+   "mat-shapes-objects",
+   0.28
+  ],
+  [
+   "mat-composite-functions",
+   0.207
+  ],
+  [
+   "mat-perimeter-area-2",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T17:58:53Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00834,
+  "check": 0.00893,
+  "fix": 0.01477
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the rule that joined faces are left out of a composite solid's surface area: mat-surface-area and mat-surface-area-volume cover only single solids, and mat-shapes-objects covers the joining idea only for 2D outlines, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Surface area of composite solids",
+  "card": [
+   "Surface area is the total area of the faces on the outside of a solid.",
+   "When two parts are joined, the faces that touch are hidden inside. Leave them out.",
+   "Method: find the surface area of each part, then subtract the area of every hidden face. If a small part sits on a larger face, that part of the large face is hidden too.",
+   "Example: two cubes of side 1 cm are stacked. Each has area 6 cm², so 12 − 2 = 10 cm², as two 1 cm² faces are hidden."
+  ],
+  "remember": "Add the outside faces only. Every join hides a face on each part.",
+  "a": {
+   "q": "Two cubes of side 2 cm are stacked to make a 2 cm by 2 cm by 4 cm prism. What is the surface area?",
+   "opts": [
+    "40 cm²",
+    "48 cm²",
+    "44 cm²",
+    "32 cm²"
+   ],
+   "why": "Each cube has surface area 6 × 4 = 24 cm², so 48 cm² together. The join hides one 4 cm² face on each cube, which is 8 cm². So 48 − 8 = 40 cm². Subtracting only one hidden face gives 44 cm², which is wrong.",
+   "clue": "Each cube loses a face where they touch."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cube of side 4 cm has a cube of side 2 cm sitting on top of it. What is the total surface area?",
+   "opts": [
+    "112 cm²",
+    "120 cm²",
+    "116 cm²",
+    "108 cm²"
+   ],
+   "why": "The cubes have 96 + 24 = 120 cm² separately. The join hides 4 cm² on the small cube's base and 4 cm² on the large cube's top, so 120 − 8 = 112 cm². Subtracting only one hidden face gives 116 cm².",
+   "clue": "The large cube's top is covered where the small cube sits."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "40 cm²",
+   "also_right": []
+  },
+  "b": {
+   "best": "112 cm²",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Every join hides a face on each part\" clashes with the card, which says that when a small part sits on a larger face, only part of the large face is hidden. In question b the large cube loses only 4 cm² of its 16 cm² top, not a whole face."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: 40 cm² for a and 112 cm² for b, and the explanations agree. The remember line says each join hides a whole face on each part, which contradicts the card's point that only part of a larger face is hidden."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: \"Every join hides a face on each part\" clashes with the card, which says that when a small part sits on a larger face, only part of the large face is hidden. In question b the large cube loses only 4 cm² of its 16 cm² top, not a whole face."
+ ],
+ "proposal": {
+  "title": "Surface area of composite solids",
+  "card": [
+   "Surface area is the total area of the faces on the outside of a solid.",
+   "When two parts are joined, the areas that touch are hidden inside. Leave them out of the total.",
+   "Method: add the surface areas of the parts, then subtract the touching area twice, once for each part. If a small part sits on a larger face, only the covered part of that face is hidden.",
+   "Example: two cubes of side 1 cm are stacked. Each has area 6 cm², so 12 − 2 = 10 cm², as a 1 cm² face is hidden on each cube."
+  ],
+  "remember": "Count the outside only. Subtract the touching area once for each part that touches.",
+  "a": {
+   "q": "Two cubes of side 2 cm are stacked to make a 2 cm by 2 cm by 4 cm prism. What is the surface area?",
+   "opts": [
+    "40 cm²",
+    "48 cm²",
+    "44 cm²",
+    "32 cm²"
+   ],
+   "why": "Each cube has surface area 6 × 4 = 24 cm², so 48 cm² together. The join hides one 4 cm² face on each cube, which is 8 cm², so 48 − 8 = 40 cm². Subtracting the hidden area only once gives 44 cm², which is wrong.",
+   "clue": "Each cube loses a face where they touch."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cube of side 4 cm has a cube of side 2 cm sitting on top of it. What is the total surface area?",
+   "opts": [
+    "112 cm²",
+    "120 cm²",
+    "116 cm²",
+    "108 cm²"
+   ],
+   "why": "The cubes have 96 + 24 = 120 cm² separately. The join hides the small cube's 4 cm² base and the 4 cm² of the large cube's top that it covers, so 120 − 8 = 112 cm². Subtracting the touching area only once gives 116 cm².",
+   "clue": "Only the covered part of the large cube's top is hidden."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:53Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Every join hides a face on each part\" clashes with the card, which says that when a small part sits on a larger face, only part of the large face is hidden. In question b the large cube loses only 4 cm² of its 16 cm² top, not a whole face."
+   }
+  ],
+  "flags": [
+   "Remember, other: \"Every join hides a face on each part\" clashes with the card, which says that when a small part sits on a larger face, only part of the large face is hidden. In question b the large cube loses only 4 cm² of its 16 cm² top, not a whole face."
+  ]
+ },
+ "final": {
+  "title": "Surface area of composite solids",
+  "card": [
+   "Surface area is the total area of the faces on the outside of a solid.",
+   "When two parts are joined, the areas that touch are hidden inside. Leave them out of the total.",
+   "Method: add the surface areas of the parts, then subtract the touching area twice, once for each part. If a small part sits on a larger face, only the covered part of that face is hidden.",
+   "Example: two cubes of side 1 cm are stacked. Each has area 6 cm², so 12 − 2 = 10 cm², as a 1 cm² face is hidden on each cube."
+  ],
+  "remember": "Count the outside only. Subtract the touching area once for each part that touches.",
+  "a": {
+   "q": "Two cubes of side 2 cm are stacked to make a 2 cm by 2 cm by 4 cm prism. What is the surface area?",
+   "opts": [
+    "40 cm²",
+    "48 cm²",
+    "44 cm²",
+    "32 cm²"
+   ],
+   "why": "Each cube has surface area 6 × 4 = 24 cm², so 48 cm² together. The join hides one 4 cm² face on each cube, which is 8 cm², so 48 − 8 = 40 cm². Subtracting the hidden area only once gives 44 cm², which is wrong.",
+   "clue": "Each cube loses a face where they touch."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cube of side 4 cm has a cube of side 2 cm sitting on top of it. What is the total surface area?",
+   "opts": [
+    "112 cm²",
+    "120 cm²",
+    "116 cm²",
+    "108 cm²"
+   ],
+   "why": "The cubes have 96 + 24 = 120 cm² separately. The join hides the small cube's 4 cm² base and the 4 cm² of the large cube's top that it covers, so 120 − 8 = 112 cm². Subtracting the touching area only once gives 116 cm².",
+   "clue": "Only the covered part of the large cube's top is hidden."
+  }
+ },
+ "cleared_by": "auto"
+}

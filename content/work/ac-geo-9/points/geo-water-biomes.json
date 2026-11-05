@@ -1,0 +1,462 @@
+{
+ "id": "geo-water-biomes",
+ "title": "Water biomes",
+ "brief": "e4fa6b01a0ae",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:34Z new, write",
+  "2026-11-04T09:36:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:02Z write: done",
+  "2026-11-04T09:58:26Z check: flagged",
+  "2026-11-04T10:08:02Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (card fact, b other)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: flagged",
+  "2026-11-05T03:14:57Z fix: suggested",
+  "2026-11-05T06:01:29Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00423,
+  "check": 0.01206,
+  "fix": 0.02722,
+  "recheck": 0.01312
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card defines marine simply as 'salt water' and says salt lakes such as Lake Torrens 'are not freshwater'. With only two groups, this implies inland salt lakes are marine biomes, which is false. Marine means seas and oceans; inland salt lakes are inland (non-marine) waters. The card should say salt lakes are salty inland waters, not marine, or avoid implying they fit the marine group.\n- Question b, other: The clue 'Look at the salt in the water, not the size' rules out every option except the one that gives salt as the reason, so a student can answer from the clue without knowing the idea.",
+ "rejected": {
+  "title": "Water biomes",
+  "card": [
+   "Aquatic biomes are the biomes found in water. They are sorted into two groups by the kind of water: marine and freshwater.",
+   [
+    "Marine",
+    "salt water. Oceans and coral reefs are marine biomes."
+   ],
+   [
+    "Freshwater",
+    "water with very little salt. Rivers, most lakes and many wetlands are freshwater biomes."
+   ],
+   "The main test for sorting an aquatic biome is the salt in its water, not its size or depth. Some lakes and wetlands are salty, such as Lake Torrens in South Australia, so they are not freshwater."
+  ],
+  "remember": "Aquatic biomes are marine (salt water) or freshwater (little salt).",
+  "a": {
+   "q": "Which of these is a freshwater biome?",
+   "opts": [
+    "A river",
+    "A coral reef",
+    "An ocean",
+    "A salt lake"
+   ],
+   "why": "A river holds water with very little salt, so it is a freshwater biome. A salt lake is tempting because most lakes are freshwater, but its water is salty, so it fails the salt test.",
+   "clue": "Freshwater means water with very little salt."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tarni studies a large lake in Tasmania with water that has very little salt. How should she classify its biome?",
+   "opts": [
+    "Freshwater, because its water has little salt",
+    "Marine, because it is a large body of water",
+    "Marine, because it is deeper than a river",
+    "Freshwater, because it is smaller than an ocean"
+   ],
+   "why": "Aquatic biomes are sorted by the salt in the water. This lake has little salt, so it is freshwater. Being smaller than an ocean is not the reason, because size is not the test.",
+   "clue": "Look at the salt in the water, not the size."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "auto",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card defines marine simply as 'salt water' and says salt lakes such as Lake Torrens 'are not freshwater'. With only two groups, this implies inland salt lakes are marine biomes, which is false. Marine means seas and oceans; inland salt lakes are inland (non-marine) waters. The card should say salt lakes are salty inland waters, not marine, or avoid implying they fit the marine group.",
+    "Question b, other: The clue 'Look at the salt in the water, not the size' rules out every option except the one that gives salt as the reason, so a student can answer from the clue without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Water biomes",
+     "card": [
+      "Aquatic biomes are the biomes found in water. They are sorted into two groups by the kind of water: marine and freshwater.",
+      [
+       "Marine",
+       "salt water. Oceans and coral reefs are marine biomes."
+      ],
+      [
+       "Freshwater",
+       "water with very little salt. Rivers, lakes and wetlands are freshwater biomes."
+      ],
+      "So the main test for sorting an aquatic biome is the salt in its water, not its size or how deep it is."
+     ],
+     "remember": "Aquatic biomes are marine (salt water) or freshwater (little salt).",
+     "a": {
+      "q": "Which of these is a freshwater biome?",
+      "opts": [
+       "A wetland",
+       "A coral reef",
+       "An ocean",
+       "A marine bay"
+      ],
+      "why": "A wetland holds water with very little salt, so it is a freshwater biome. A coral reef is tempting because it is water, but it lies in the salty sea, so it is marine.",
+      "clue": "Freshwater means water with very little salt."
+     },
+     "b": {
+      "d": 2,
+      "q": "Tarni studies a large lake in Tasmania with water that has very little salt. How should she classify its biome?",
+      "opts": [
+       "Freshwater, because its water has little salt",
+       "Marine, because it is a large body of water",
+       "Marine, because it is deeper than a river",
+       "Freshwater, because it is smaller than an ocean"
+      ],
+      "why": "Aquatic biomes are sorted by the salt in the water. This lake has little salt, so it is freshwater. Being large does not make a biome marine, because size is not the test.",
+      "clue": "Look at the salt in the water, not the size."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A wetland",
+      "also_right": []
+     },
+     "b": {
+      "best": "Freshwater, because its water has little salt",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says flatly that lakes and wetlands are freshwater biomes. Many Australian lakes are salt lakes, such as Kati Thanda–Lake Eyre and Lake Torrens in South Australia, and many wetlands are saline, such as mangroves and salt marshes. The card's own salt test would class these as not freshwater, so the wording could mislead. Say 'most lakes and many wetlands' or note that salt lakes exist."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and have one clear right answer. The card overstates that all lakes and wetlands are freshwater, which is not true of Australia's many salt lakes and saline wetlands, so a small qualifier is needed."
+    },
+    "flags": [
+     "Card, fact: The card says flatly that lakes and wetlands are freshwater biomes. Many Australian lakes are salt lakes, such as Kati Thanda–Lake Eyre and Lake Torrens in South Australia, and many wetlands are saline, such as mangroves and salt marshes. The card's own salt test would class these as not freshwater, so the wording could mislead. Say 'most lakes and many wetlands' or note that salt lakes exist."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Water biomes",
+     "card": [
+      "Aquatic biomes are the biomes found in water. They are sorted into two groups by the kind of water: marine and freshwater.",
+      [
+       "Marine",
+       "salt water. Oceans and coral reefs are marine biomes."
+      ],
+      [
+       "Freshwater",
+       "water with very little salt. Rivers, most lakes and many wetlands are freshwater biomes."
+      ],
+      "The main test for sorting an aquatic biome is the salt in its water, not its size or depth. Some lakes and wetlands are salty, such as Lake Torrens in South Australia, so they are not freshwater."
+     ],
+     "remember": "Aquatic biomes are marine (salt water) or freshwater (little salt).",
+     "a": {
+      "q": "Which of these is a freshwater biome?",
+      "opts": [
+       "A river",
+       "A coral reef",
+       "An ocean",
+       "A salt lake"
+      ],
+      "why": "A river holds water with very little salt, so it is a freshwater biome. A salt lake is tempting because most lakes are freshwater, but its water is salty, so it fails the salt test.",
+      "clue": "Freshwater means water with very little salt."
+     },
+     "b": {
+      "d": 2,
+      "q": "Tarni studies a large lake in Tasmania with water that has very little salt. How should she classify its biome?",
+      "opts": [
+       "Freshwater, because its water has little salt",
+       "Marine, because it is a large body of water",
+       "Marine, because it is deeper than a river",
+       "Freshwater, because it is smaller than an ocean"
+      ],
+      "why": "Aquatic biomes are sorted by the salt in the water. This lake has little salt, so it is freshwater. Being smaller than an ocean is not the reason, because size is not the test.",
+      "clue": "Look at the salt in the water, not the size."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A river",
+       "also_right": []
+      },
+      "b": {
+       "best": "Freshwater, because its water has little salt",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card defines marine simply as 'salt water' and says salt lakes such as Lake Torrens 'are not freshwater'. With only two groups, this implies inland salt lakes are marine biomes, which is false. Marine means seas and oceans; inland salt lakes are inland (non-marine) waters. The card should say salt lakes are salty inland waters, not marine, or avoid implying they fit the marine group."
+       },
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue 'Look at the salt in the water, not the size' rules out every option except the one that gives salt as the reason, so a student can answer from the clue without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card defines marine as just 'salt water' and calls salt lakes like Lake Torrens not freshwater, which implies inland salt lakes are marine; that is false and needs rewording. The clue for question b also gives the answer away."
+     },
+     "flags": [
+      "Card, fact: The card defines marine simply as 'salt water' and says salt lakes such as Lake Torrens 'are not freshwater'. With only two groups, this implies inland salt lakes are marine biomes, which is false. Marine means seas and oceans; inland salt lakes are inland (non-marine) waters. The card should say salt lakes are salty inland waters, not marine, or avoid implying they fit the marine group.",
+      "Question b, other: The clue 'Look at the salt in the water, not the size' rules out every option except the one that gives salt as the reason, so a student can answer from the clue without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Water biomes",
+    "card": [
+     "Aquatic biomes are the biomes found in water. They are sorted into two groups: marine and freshwater.",
+     [
+      "Marine",
+      "the salty water of the seas and oceans. The open ocean and coral reefs are marine biomes."
+     ],
+     [
+      "Freshwater",
+      "inland water with very little salt. Rivers, most lakes and many wetlands are freshwater biomes."
+     ],
+     "Size and depth do not decide the group. A huge, deep lake with little salt is still freshwater, and a shallow coral reef is still marine."
+    ],
+    "remember": "Marine biomes belong to the seas and oceans. Freshwater biomes are inland waters with little salt.",
+    "a": {
+     "q": "Which pair lists two marine biomes?",
+     "opts": [
+      "An ocean and a coral reef",
+      "A river and a coral reef",
+      "A lake and the open ocean",
+      "A river and a wetland"
+     ],
+     "why": "Oceans and coral reefs are both part of the sea, so both are marine. A river or a lake is inland water, so a pair with one of them in it is not two marine biomes.",
+     "clue": "Check both places in each pair."
+    },
+    "b": {
+     "d": 2,
+     "q": "Ravi visits a wide, deep lake in Tasmania. Its water is fresh, with very little salt. Which aquatic biome is it part of?",
+     "opts": [
+      "Freshwater, as it is inland with little salt",
+      "Marine, as it is wide and deep like a sea",
+      "Marine, as large lakes count as marine biomes",
+      "Freshwater, as it is far smaller than an ocean"
+     ],
+     "why": "The lake is inland and its water has very little salt, so it is freshwater. Being smaller than an ocean is not the reason: size does not decide the group, and a huge lake can still be freshwater.",
+     "clue": "Is this lake part of the sea?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "An ocean and a coral reef",
+     "also_right": []
+    },
+    "b": {
+     "best": "Freshwater, as it is inland with little salt",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "wording",
+      "detail": "The stem says \"Its water is fresh\", which tells the student the group (freshwater) before they think about it, so the two marine options can be ruled out from the word alone. Saying only that the water has very little salt would make the student apply the card's rule."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The facts and both answers are right. One small wording issue: question b's stem calls the lake's water \"fresh\", which half gives the answer away."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Water biomes",
+  "card": [
+   "Aquatic biomes are the biomes found in water. They are sorted into two groups: marine and freshwater.",
+   [
+    "Marine",
+    "the salty water of the seas and oceans. The open ocean and coral reefs are marine biomes."
+   ],
+   [
+    "Freshwater",
+    "inland water with very little salt. Rivers, most lakes and many wetlands are freshwater biomes."
+   ],
+   "Size and depth do not decide the group. A huge, deep lake with little salt is still freshwater, and a shallow coral reef is still marine."
+  ],
+  "remember": "Marine biomes belong to the seas and oceans. Freshwater biomes are inland waters with little salt.",
+  "a": {
+   "q": "Which pair lists two marine biomes?",
+   "opts": [
+    "An ocean and a coral reef",
+    "A river and a coral reef",
+    "A lake and the open ocean",
+    "A river and a wetland"
+   ],
+   "why": "Oceans and coral reefs are both part of the sea, so both are marine. A river or a lake is inland water, so a pair with one of them in it is not two marine biomes.",
+   "clue": "Check both places in each pair."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi visits a wide, deep lake in Tasmania. Its water is fresh, with very little salt. Which aquatic biome is it part of?",
+   "opts": [
+    "Freshwater, as it is inland with little salt",
+    "Marine, as it is wide and deep like a sea",
+    "Marine, as large lakes count as marine biomes",
+    "Freshwater, as it is far smaller than an ocean"
+   ],
+   "why": "The lake is inland and its water has very little salt, so it is freshwater. Being smaller than an ocean is not the reason: size does not decide the group, and a huge lake can still be freshwater.",
+   "clue": "Is this lake part of the sea?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An ocean and a coral reef",
+   "also_right": []
+  },
+  "b": {
+   "best": "Freshwater, as it is inland with little salt",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says \"Its water is fresh\", which tells the student the group (freshwater) before they think about it, so the two marine options can be ruled out from the word alone. Saying only that the water has very little salt would make the student apply the card's rule."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are right. One small wording issue: question b's stem calls the lake's water \"fresh\", which half gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem says \"Its water is fresh\", which tells the student the group (freshwater) before they think about it, so the two marine options can be ruled out from the word alone. Saying only that the water has very little salt would make the student apply the card's rule."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Water biomes",
+  "card": [
+   "Aquatic biomes are the biomes found in water. They are sorted into two groups: marine and freshwater.",
+   [
+    "Marine",
+    "the salty water of the seas and oceans. The open ocean and coral reefs are marine biomes."
+   ],
+   [
+    "Freshwater",
+    "inland water with very little salt. Rivers, most lakes and many wetlands are freshwater biomes."
+   ],
+   "Size and depth do not decide the group. A huge, deep lake with little salt is still freshwater, and a shallow coral reef is still marine."
+  ],
+  "remember": "Marine biomes belong to the seas and oceans. Freshwater biomes are inland waters with little salt.",
+  "a": {
+   "q": "Which pair lists two marine biomes?",
+   "opts": [
+    "An ocean and a coral reef",
+    "A river and a coral reef",
+    "A lake and the open ocean",
+    "A river and a wetland"
+   ],
+   "why": "Oceans and coral reefs are both part of the sea, so both are marine. A river or a lake is inland water, so a pair with one of them in it is not two marine biomes.",
+   "clue": "Check both places in each pair."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi visits a wide, deep lake in Tasmania. The water has very little salt. Which aquatic biome is it part of?",
+   "opts": [
+    "Freshwater, as it is inland with little salt",
+    "Marine, as it is wide and deep like a sea",
+    "Marine, as large lakes count as marine biomes",
+    "Freshwater, as it is far smaller than an ocean"
+   ],
+   "why": "The lake is inland and its water has very little salt, so it is freshwater. Being smaller than an ocean is not the reason: size does not decide the group, and a huge lake can still be freshwater.",
+   "clue": "Is this lake part of the sea?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-05T06:01:29Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says \"Its water is fresh\", which tells the student the group (freshwater) before they think about it, so the two marine options can be ruled out from the word alone. Saying only that the water has very little salt would make the student apply the card's rule."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem says \"Its water is fresh\", which tells the student the group (freshwater) before they think about it, so the two marine options can be ruled out from the word alone. Saying only that the water has very little salt would make the student apply the card's rule."
+  ]
+ },
+ "final": {
+  "title": "Water biomes",
+  "card": [
+   "Aquatic biomes are the biomes found in water. They are sorted into two groups: marine and freshwater.",
+   [
+    "Marine",
+    "the salty water of the seas and oceans. The open ocean and coral reefs are marine biomes."
+   ],
+   [
+    "Freshwater",
+    "inland water with very little salt. Rivers, most lakes and many wetlands are freshwater biomes."
+   ],
+   "Size and depth do not decide the group. A huge, deep lake with little salt is still freshwater, and a shallow coral reef is still marine."
+  ],
+  "remember": "Marine biomes belong to the seas and oceans. Freshwater biomes are inland waters with little salt.",
+  "a": {
+   "q": "Which pair lists two marine biomes?",
+   "opts": [
+    "An ocean and a coral reef",
+    "A river and a coral reef",
+    "A lake and the open ocean",
+    "A river and a wetland"
+   ],
+   "why": "Oceans and coral reefs are both part of the sea, so both are marine. A river or a lake is inland water, so a pair with one of them in it is not two marine biomes.",
+   "clue": "Check both places in each pair."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi visits a wide, deep lake in Tasmania. The water has very little salt. Which aquatic biome is it part of?",
+   "opts": [
+    "Freshwater, as it is inland with little salt",
+    "Marine, as it is wide and deep like a sea",
+    "Marine, as large lakes count as marine biomes",
+    "Freshwater, as it is far smaller than an ocean"
+   ],
+   "why": "The lake is inland and its water has very little salt, so it is freshwater. Being smaller than an ocean is not the reason: size does not decide the group, and a huge lake can still be freshwater.",
+   "clue": "Is this lake part of the sea?"
+  }
+ }
+}

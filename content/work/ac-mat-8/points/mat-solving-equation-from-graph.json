@@ -1,0 +1,372 @@
+{
+ "id": "mat-solving-equation-from-graph",
+ "title": "Solving an equation from a graph",
+ "brief": "59337f59d1fc",
+ "shortlist": [
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:09Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (a other, b other)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00489,
+  "check": 0.01071,
+  "fix": 0.01312,
+  "recheck": 0.01194
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers solving two simultaneous equations by graph, substitution and elimination, which is deeper than this Year 8 point, and it does not teach reading the x-value where one line reaches a given y-value.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Which number in the point is the x-value?' tells students the answer is the x-coordinate of the given point. That is the idea being tested, so they can pick x = 2 without understanding why.\n- Question b, other: The clue 'Which letter does the equation ask you to find?' points students straight to the x-coordinate of (3, 4). This largely gives the answer away instead of checking that they know the crossing point solves the equation.",
+ "rejected": {
+  "title": "Solving an equation from a graph",
+  "card": [
+   "Every point on a line has an x-value and a y-value that fit the line's rule. To solve an equation such as 2x − 1 = 5, graph y = 2x − 1 and find where y = 5.",
+   "Start at 5 on the y-axis and go across to the line. Then go straight down to the x-axis and read the x-value. Here it is x = 3.",
+   "Check by putting the x-value back in the rule: 2 × 3 − 1 = 5. It works.",
+   "If two different lines cross, they cross at exactly one point. At that point both rules give the same x and the same y. So the x-value of the crossing point solves the equation made by setting the two rules equal."
+  ],
+  "remember": "Read across from the y-value to the line, then down to x. A crossing point fits both rules.",
+  "a": {
+   "q": "The line y = 3x + 2 passes through the point (2, 8). What is the solution of 3x + 2 = 8?",
+   "opts": [
+    "x = 2",
+    "x = 8",
+    "x = 6",
+    "x = 10"
+   ],
+   "why": "The equation asks where y = 8 on the line. The point (2, 8) has y = 8, so x = 2. Choosing 8 mixes up the y-value with the x-value.",
+   "clue": "Which number in the point is the x-value?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The lines y = x + 1 and y = 2x − 2 cross at the point (3, 4). What is the solution of x + 1 = 2x − 2?",
+   "opts": [
+    "x = 3",
+    "x = 4",
+    "x = 1",
+    "x = 7"
+   ],
+   "why": "Setting the rules equal asks where both lines have the same y-value, which is the crossing point. Its x-value is 3. Check: 3 + 1 = 4 and 2 × 3 − 2 = 4. The y-value 4 is the shared output, not the solution for x.",
+   "clue": "Which letter does the equation ask you to find?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Which number in the point is the x-value?' tells students the answer is the x-coordinate of the given point. That is the idea being tested, so they can pick x = 2 without understanding why.",
+    "Question b, other: The clue 'Which letter does the equation ask you to find?' points students straight to the x-coordinate of (3, 4). This largely gives the answer away instead of checking that they know the crossing point solves the equation."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Solving an equation from a graph",
+     "card": [
+      "Every point on a line has an x-value and a y-value that fit the line's rule. To solve an equation such as 2x − 1 = 5, graph y = 2x − 1 and find where y = 5.",
+      "Start at 5 on the y-axis and go across to the line. Then go straight down to the x-axis and read the x-value. Here it is x = 3.",
+      "Check by putting the x-value back in the rule: 2 × 3 − 1 = 5. It works.",
+      "Two lines cross at one point. At that point both rules give the same x and the same y. So the x-value of the crossing point solves the equation made by setting the two rules equal."
+     ],
+     "remember": "Read across from the y-value to the line, then down to x. A crossing point fits both rules.",
+     "a": {
+      "q": "The line y = 3x + 2 passes through the point (2, 8). What is the solution of 3x + 2 = 8?",
+      "opts": [
+       "x = 2",
+       "x = 8",
+       "x = 6",
+       "x = 10"
+      ],
+      "why": "The equation asks where y = 8 on the line. The point (2, 8) has y = 8, so x = 2. Choosing 8 mixes up the y-value with the x-value.",
+      "clue": "Which number in the point is the x-value?"
+     },
+     "b": {
+      "d": 3,
+      "q": "The lines y = x + 1 and y = 2x − 2 cross at the point (3, 4). What is the solution of x + 1 = 2x − 2?",
+      "opts": [
+       "x = 3",
+       "x = 4",
+       "x = 1",
+       "x = 7"
+      ],
+      "why": "Setting the rules equal asks where both lines have the same y-value, which is the crossing point. Its x-value is 3. Check: 3 + 1 = 4 and 2 × 3 − 2 = 4. The y-value 4 is the shared output, not the solution for x.",
+      "clue": "The solution is the x-value of the crossing point."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "x = 2",
+      "also_right": []
+     },
+     "b": {
+      "best": "x = 3",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"Two lines cross at one point\" is stated as always true. Parallel lines never cross, and two identical lines meet at every point. It should say \"If two different lines cross, they cross at exactly one point.\""
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue \"The solution is the x-value of the crossing point\" restates the rule. Given the point (3, 4), it hands the student the answer without any thinking."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer (x = 2 and x = 3), and the explanations agree. The card wrongly says two lines always cross at one point (parallel lines never cross), and question b's clue gives the answer away."
+    },
+    "flags": [
+     "Card, fact: \"Two lines cross at one point\" is stated as always true. Parallel lines never cross, and two identical lines meet at every point. It should say \"If two different lines cross, they cross at exactly one point.\"",
+     "Question b, other: The clue \"The solution is the x-value of the crossing point\" restates the rule. Given the point (3, 4), it hands the student the answer without any thinking."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Solving an equation from a graph",
+     "card": [
+      "Every point on a line has an x-value and a y-value that fit the line's rule. To solve an equation such as 2x − 1 = 5, graph y = 2x − 1 and find where y = 5.",
+      "Start at 5 on the y-axis and go across to the line. Then go straight down to the x-axis and read the x-value. Here it is x = 3.",
+      "Check by putting the x-value back in the rule: 2 × 3 − 1 = 5. It works.",
+      "If two different lines cross, they cross at exactly one point. At that point both rules give the same x and the same y. So the x-value of the crossing point solves the equation made by setting the two rules equal."
+     ],
+     "remember": "Read across from the y-value to the line, then down to x. A crossing point fits both rules.",
+     "a": {
+      "q": "The line y = 3x + 2 passes through the point (2, 8). What is the solution of 3x + 2 = 8?",
+      "opts": [
+       "x = 2",
+       "x = 8",
+       "x = 6",
+       "x = 10"
+      ],
+      "why": "The equation asks where y = 8 on the line. The point (2, 8) has y = 8, so x = 2. Choosing 8 mixes up the y-value with the x-value.",
+      "clue": "Which number in the point is the x-value?"
+     },
+     "b": {
+      "d": 3,
+      "q": "The lines y = x + 1 and y = 2x − 2 cross at the point (3, 4). What is the solution of x + 1 = 2x − 2?",
+      "opts": [
+       "x = 3",
+       "x = 4",
+       "x = 1",
+       "x = 7"
+      ],
+      "why": "Setting the rules equal asks where both lines have the same y-value, which is the crossing point. Its x-value is 3. Check: 3 + 1 = 4 and 2 × 3 − 2 = 4. The y-value 4 is the shared output, not the solution for x.",
+      "clue": "Which letter does the equation ask you to find?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "x = 2",
+       "also_right": []
+      },
+      "b": {
+       "best": "x = 3",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Which number in the point is the x-value?' tells students the answer is the x-coordinate of the given point. That is the idea being tested, so they can pick x = 2 without understanding why."
+       },
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue 'Which letter does the equation ask you to find?' points students straight to the x-coordinate of (3, 4). This largely gives the answer away instead of checking that they know the crossing point solves the equation."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, answers and explanations are correct. Both clues come close to giving the answer away by sending students straight to the x-coordinate of the given point."
+     },
+     "flags": [
+      "Question a, other: The clue 'Which number in the point is the x-value?' tells students the answer is the x-coordinate of the given point. That is the idea being tested, so they can pick x = 2 without understanding why.",
+      "Question b, other: The clue 'Which letter does the equation ask you to find?' points students straight to the x-coordinate of (3, 4). This largely gives the answer away instead of checking that they know the crossing point solves the equation."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Solving an equation from a graph",
+    "card": [
+     "Every point on a line has an x-value and a y-value that fit the line's rule. To solve an equation such as 2x − 1 = 5, graph y = 2x − 1 and find where y = 5.",
+     "Start at 5 on the y-axis and go across to the line. Then go straight down to the x-axis and read the x-value. Here it is x = 3.",
+     "Check by putting the x-value back in the rule: 2 × 3 − 1 = 5. It works.",
+     "If two different lines cross, they cross at exactly one point. At that point both rules give the same x and the same y. So the x-value of the crossing point solves the equation made by setting the two rules equal."
+    ],
+    "remember": "Read across from the y-value to the line, then down to x. A crossing point fits both rules.",
+    "a": {
+     "q": "The point (2, 8) lies on the graph of y = 3x + 2. Use it to solve 3x + 2 = 8.",
+     "opts": [
+      "x = 2",
+      "x = 8",
+      "x = 6",
+      "x = 10"
+     ],
+     "why": "The equation asks where the line has y = 8. The point (2, 8) has y = 8, so x = 2. Check: 3 × 2 + 2 = 8. Choosing 8 mixes up the y-value with the x-value.",
+     "clue": "What does the 8 in the equation stand for on the graph?"
+    },
+    "b": {
+     "d": 3,
+     "q": "The graphs of y = x + 1 and y = 2x − 2 meet at (3, 4). Use this to solve x + 1 = 2x − 2.",
+     "opts": [
+      "x = 3",
+      "x = 4",
+      "x = 1",
+      "x = 7"
+     ],
+     "why": "Setting the rules equal asks where both lines have the same y-value, which is the crossing point. Its x-value is 3. Check: 3 + 1 = 4 and 2 × 3 − 2 = 4. The y-value 4 is the shared output, not the solution for x.",
+     "clue": "What do the two rules have in common where the lines meet?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "x = 2",
+     "also_right": []
+    },
+    "b": {
+     "best": "x = 3",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Solving an equation from a graph",
+  "card": [
+   "Every point on a line has an x-value and a y-value that fit the line's rule. To solve an equation such as 2x − 1 = 5, graph y = 2x − 1 and find where y = 5.",
+   "Start at 5 on the y-axis and go across to the line. Then go straight down to the x-axis and read the x-value. Here it is x = 3.",
+   "Check by putting the x-value back in the rule: 2 × 3 − 1 = 5. It works.",
+   "If two different lines cross, they cross at exactly one point. At that point both rules give the same x and the same y. So the x-value of the crossing point solves the equation made by setting the two rules equal."
+  ],
+  "remember": "Read across from the y-value to the line, then down to x. A crossing point fits both rules.",
+  "a": {
+   "q": "The point (2, 8) lies on the graph of y = 3x + 2. Use it to solve 3x + 2 = 8.",
+   "opts": [
+    "x = 2",
+    "x = 8",
+    "x = 6",
+    "x = 10"
+   ],
+   "why": "The equation asks where the line has y = 8. The point (2, 8) has y = 8, so x = 2. Check: 3 × 2 + 2 = 8. Choosing 8 mixes up the y-value with the x-value.",
+   "clue": "What does the 8 in the equation stand for on the graph?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The graphs of y = x + 1 and y = 2x − 2 meet at (3, 4). Use this to solve x + 1 = 2x − 2.",
+   "opts": [
+    "x = 3",
+    "x = 4",
+    "x = 1",
+    "x = 7"
+   ],
+   "why": "Setting the rules equal asks where both lines have the same y-value, which is the crossing point. Its x-value is 3. Check: 3 + 1 = 4 and 2 × 3 − 2 = 4. The y-value 4 is the shared output, not the solution for x.",
+   "clue": "What do the two rules have in common where the lines meet?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = 2",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Solving an equation from a graph",
+  "card": [
+   "Every point on a line has an x-value and a y-value that fit the line's rule. To solve an equation such as 2x − 1 = 5, graph y = 2x − 1 and find where y = 5.",
+   "Start at 5 on the y-axis and go across to the line. Then go straight down to the x-axis and read the x-value. Here it is x = 3.",
+   "Check by putting the x-value back in the rule: 2 × 3 − 1 = 5. It works.",
+   "If two different lines cross, they cross at exactly one point. At that point both rules give the same x and the same y. So the x-value of the crossing point solves the equation made by setting the two rules equal."
+  ],
+  "remember": "Read across from the y-value to the line, then down to x. A crossing point fits both rules.",
+  "a": {
+   "q": "The point (2, 8) lies on the graph of y = 3x + 2. Use it to solve 3x + 2 = 8.",
+   "opts": [
+    "x = 2",
+    "x = 8",
+    "x = 6",
+    "x = 10"
+   ],
+   "why": "The equation asks where the line has y = 8. The point (2, 8) has y = 8, so x = 2. Check: 3 × 2 + 2 = 8. Choosing 8 mixes up the y-value with the x-value.",
+   "clue": "What does the 8 in the equation stand for on the graph?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The graphs of y = x + 1 and y = 2x − 2 meet at (3, 4). Use this to solve x + 1 = 2x − 2.",
+   "opts": [
+    "x = 3",
+    "x = 4",
+    "x = 1",
+    "x = 7"
+   ],
+   "why": "Setting the rules equal asks where both lines have the same y-value, which is the crossing point. Its x-value is 3. Check: 3 + 1 = 4 and 2 × 3 − 2 = 4. The y-value 4 is the shared output, not the solution for x.",
+   "clue": "What do the two rules have in common where the lines meet?"
+  }
+ },
+ "checked_by": "claude-code"
+}

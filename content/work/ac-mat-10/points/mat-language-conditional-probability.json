@@ -1,0 +1,235 @@
+{
+ "id": "mat-language-conditional-probability",
+ "title": "The language of conditional probability",
+ "brief": "79256ed8fbf8",
+ "shortlist": [
+  [
+   "mat-conditional-probability",
+   0.514
+  ],
+  [
+   "mat-conditional-probability-2",
+   0.514
+  ],
+  [
+   "mat-discrete-probability-distributions",
+   0.263
+  ],
+  [
+   "mat-conditional-statements",
+   0.254
+  ],
+  [
+   "mat-law-total-probability",
+   0.251
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00576,
+  "check": 0.01042,
+  "fix": 0.01463,
+  "recheck": 0.00589
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point teaches only the wording that signals conditional probability, but the closest bank cards teach the P(A | B) notation, the formula and worked calculations at Year 11 depth, which goes beyond this Year 10 language point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Language of conditional probability",
+  "card": [
+   "A conditional probability is the chance of one event when we already know another event has happened. We write P(A | B) and say \"the probability of A given B\".",
+   "Words such as given, if, then and knowing that signal a condition. The condition is the event we know has happened.",
+   "The condition shrinks the set of outcomes we look at. Only outcomes where the condition is true count.",
+   "Example: a die is rolled. Given that the number is even, the outcomes are 2, 4 and 6. The chance of a 6 is then 1/3, not 1/6."
+  ],
+  "remember": "The condition is what we already know. P(A | B) is the chance of A once B is known.",
+  "a": {
+   "q": "In P(rain | cloudy), which event is the condition?",
+   "opts": [
+    "Cloudy",
+    "Rain",
+    "Rain and cloudy",
+    "Not cloudy"
+   ],
+   "why": "The event after the bar is the condition, so cloudy is already known. Rain is the event whose chance we are finding.",
+   "clue": "Look at the event after the bar."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of the students at a school in Perth, some walk to school and some own a bike. Which statement describes P(owns a bike | walks to school)?",
+   "opts": [
+    "Chance a student who walks owns a bike",
+    "Chance a student who owns a bike walks",
+    "Chance a student walks and owns a bike",
+    "Chance a student walks or owns a bike"
+   ],
+   "why": "The condition is after the bar, so we already know the student walks. We then ask about owning a bike. The second option swaps the two events.",
+   "clue": "Which event do we already know about?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cloudy",
+   "also_right": []
+  },
+  "b": {
+   "best": "Chance a student who walks owns a bike",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The second option swaps the two events', but options are shown in random order. Here the swapped option ('Chance a student who owns a bike walks') is listed first, so the explanation points students to the wrong option. Name the option by its wording instead."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says 'given, if, then and knowing that signal a condition. The condition is the event we know has happened.' In 'if B, then A', the word 'then' introduces the event whose chance we find, not the condition. Grouping 'then' with condition words could lead students to pick the wrong event as the condition."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. Why (b) refers to 'the second option', which does not match the random option order. The card also suggests 'then' marks the condition, when it marks the other event."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says 'The second option swaps the two events', but options are shown in random order. Here the swapped option ('Chance a student who owns a bike walks') is listed first, so the explanation points students to the wrong option. Name the option by its wording instead.",
+  "Card, wording: The card says 'given, if, then and knowing that signal a condition. The condition is the event we know has happened.' In 'if B, then A', the word 'then' introduces the event whose chance we find, not the condition. Grouping 'then' with condition words could lead students to pick the wrong event as the condition."
+ ],
+ "proposal": {
+  "title": "Language of conditional probability",
+  "card": [
+   "A conditional probability is the chance of one event when we already know another event has happened. We write P(A | B) and say \"the probability of A given B\".",
+   "The event after the bar is the condition: the event we know has happened. The event before the bar is the one whose chance we find.",
+   "Words such as given, if and knowing that introduce the condition. In \"if B, then A\", the word then introduces A, the event whose chance we find.",
+   "The condition shrinks the outcomes we count. Example: given a die shows an even number, the outcomes are 2, 4 and 6, so the chance of a 6 is 1/3, not 1/6."
+  ],
+  "remember": "The condition is what we already know. It goes after the bar in P(A | B).",
+  "a": {
+   "q": "In P(rain | cloudy), which event is the condition?",
+   "opts": [
+    "Cloudy",
+    "Rain",
+    "Rain and cloudy",
+    "Not cloudy"
+   ],
+   "why": "The event after the bar is the condition, so cloudy is already known. Rain is the event whose chance we are finding.",
+   "clue": "Look at the event after the bar."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of the students at a school in Perth, some walk to school and some own a bike. Which statement describes P(owns a bike | walks to school)?",
+   "opts": [
+    "Chance a student who walks owns a bike",
+    "Chance a student who owns a bike walks",
+    "Chance a student walks and owns a bike",
+    "Chance a student walks or owns a bike"
+   ],
+   "why": "The condition is after the bar, so we already know the student walks, and we ask about owning a bike. The option about a student who owns a bike walking swaps the two events: that would be P(walks | owns a bike).",
+   "clue": "Which event do we already know about?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Cloudy",
+    "also_right": []
+   },
+   "b": {
+    "best": "Chance a student who walks owns a bike",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The second option swaps the two events', but options are shown in random order. Here the swapped option ('Chance a student who owns a bike walks') is listed first, so the explanation points students to the wrong option. Name the option by its wording instead."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says 'given, if, then and knowing that signal a condition. The condition is the event we know has happened.' In 'if B, then A', the word 'then' introduces the event whose chance we find, not the condition. Grouping 'then' with condition words could lead students to pick the wrong event as the condition."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says 'The second option swaps the two events', but options are shown in random order. Here the swapped option ('Chance a student who owns a bike walks') is listed first, so the explanation points students to the wrong option. Name the option by its wording instead.",
+   "Card, wording: The card says 'given, if, then and knowing that signal a condition. The condition is the event we know has happened.' In 'if B, then A', the word 'then' introduces the event whose chance we find, not the condition. Grouping 'then' with condition words could lead students to pick the wrong event as the condition."
+  ]
+ },
+ "final": {
+  "title": "Language of conditional probability",
+  "card": [
+   "A conditional probability is the chance of one event when we already know another event has happened. We write P(A | B) and say \"the probability of A given B\".",
+   "The event after the bar is the condition: the event we know has happened. The event before the bar is the one whose chance we find.",
+   "Words such as given, if and knowing that introduce the condition. In \"if B, then A\", the word then introduces A, the event whose chance we find.",
+   "The condition shrinks the outcomes we count. Example: given a die shows an even number, the outcomes are 2, 4 and 6, so the chance of a 6 is 1/3, not 1/6."
+  ],
+  "remember": "The condition is what we already know. It goes after the bar in P(A | B).",
+  "a": {
+   "q": "In P(rain | cloudy), which event is the condition?",
+   "opts": [
+    "Cloudy",
+    "Rain",
+    "Rain and cloudy",
+    "Not cloudy"
+   ],
+   "why": "The event after the bar is the condition, so cloudy is already known. Rain is the event whose chance we are finding.",
+   "clue": "Look at the event after the bar."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of the students at a school in Perth, some walk to school and some own a bike. Which statement describes P(owns a bike | walks to school)?",
+   "opts": [
+    "Chance a student who walks owns a bike",
+    "Chance a student who owns a bike walks",
+    "Chance a student walks and owns a bike",
+    "Chance a student walks or owns a bike"
+   ],
+   "why": "The condition is after the bar, so we already know the student walks, and we ask about owning a bike. The option about a student who owns a bike walking swaps the two events: that would be P(walks | owns a bike).",
+   "clue": "Which event do we already know about?"
+  }
+ },
+ "cleared_by": "recheck"
+}

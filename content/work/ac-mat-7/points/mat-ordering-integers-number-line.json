@@ -1,0 +1,365 @@
+{
+ "id": "mat-ordering-integers-number-line",
+ "title": "Ordering integers on a number line",
+ "brief": "4179b69f3595",
+ "shortlist": [
+  [
+   "mat-proofs-about-integers",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:08Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00603,
+  "check": 0.01189,
+  "fix": 0.02602,
+  "recheck": 0.00872
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches algebraic proofs about integers (even, odd, multiples, contradiction) at a university-style depth, not ordering integers on a number line, so no bank point matches the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: \"On a number line, zero sits in the middle\" can mislead: a number line has no middle, and a drawn one can show any range. Zero is better described as the point between the negatives and the positives.",
+ "rejected": {
+  "title": "Ordering integers on a number line",
+  "card": [
+   "Integers are whole numbers that can be negative, zero or positive. Examples are −7, 0 and 12. Fractions and decimals are not integers.",
+   "On a number line, zero sits in the middle. Positive integers are to the right and negative integers are to the left.",
+   "Numbers further to the right are larger. So 2 is greater than −5, and −2 is greater than −5 because −2 is further right.",
+   "With negatives, the number that looks bigger is smaller. −9 is less than −3, as −9 is further left. To order from least to greatest, go from left to right."
+  ],
+  "remember": "Further right is larger. Further left is smaller.",
+  "a": {
+   "q": "Which list shows the integers in order from least to greatest?",
+   "opts": [
+    "−6, −1, 0, 4",
+    "−1, −6, 0, 4",
+    "4, 0, −1, −6",
+    "0, −1, −6, 4"
+   ],
+   "why": "Least to greatest goes from left to right on the number line, so −6 comes first, then −1, 0 and 4. The list −1, −6, 0, 4 is tempting, but −6 is further left than −1, so it is smaller.",
+   "clue": "Picture the number line and read from left to right."
+  },
+  "b": {
+   "d": 3,
+   "q": "At 5 am on a winter morning, the temperatures were: Alice Springs −3°C, Thredbo −8°C, Hobart 2°C, Canberra −5°C. Which place was the coldest?",
+   "opts": [
+    "Thredbo",
+    "Canberra",
+    "Alice Springs",
+    "Hobart"
+   ],
+   "why": "The coldest place has the least temperature, which is the number furthest left on the number line. −8 is further left than −5, −3 and 2, so Thredbo was the coldest. Canberra is tempting because −5 is also a negative temperature, but −8 is further left, so it is smaller.",
+   "clue": "The coldest is the number furthest to the left."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: \"On a number line, zero sits in the middle\" can mislead: a number line has no middle, and a drawn one can show any range. Zero is better described as the point between the negatives and the positives."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Ordering integers on a number line",
+     "card": [
+      "Integers are whole numbers that can be negative, zero or positive. Examples are −7, 0 and 12. Fractions and decimals are not integers.",
+      "On a number line, zero sits in the middle. Positive integers are to the right and negative integers are to the left.",
+      "Numbers further to the right are larger. So 2 is greater than −5, and −2 is greater than −5 because −2 is further right.",
+      "With negatives, the number that looks bigger is smaller. −9 is less than −3, as −9 is further left. To order from least to greatest, go from left to right."
+     ],
+     "remember": "Further right is larger. Further left is smaller.",
+     "a": {
+      "q": "Which list shows the integers in order from least to greatest?",
+      "opts": [
+       "−6, −1, 0, 4",
+       "−1, −6, 0, 4",
+       "4, 0, −1, −6",
+       "0, −1, −6, 4"
+      ],
+      "why": "Least to greatest goes from left to right on the number line, so −6 comes first, then −1, 0 and 4. The list −1, −6, 0, 4 is tempting, but −6 is further left than −1, so it is smaller.",
+      "clue": "Picture the number line and read from left to right."
+     },
+     "b": {
+      "d": 3,
+      "q": "At 5 am, the temperatures in four towns were: Alice Springs −3°C, Hobart −8°C, Perth 2°C, Canberra −5°C. Which town was the coldest?",
+      "opts": [
+       "Hobart",
+       "Canberra",
+       "Alice Springs",
+       "Perth"
+      ],
+      "why": "The coldest town has the least temperature, which is the number furthest left on the number line. −8 is further left than −5 and −3, so Hobart was the coldest. Canberra is tempting because it is a lower number than Hobart's when you ignore the signs, but −5 is greater than −8.",
+      "clue": "The coldest is the number furthest to the left."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "−6, −1, 0, 4",
+      "also_right": []
+     },
+     "b": {
+      "best": "Hobart",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Hobart at −8°C is unrealistic. Hobart's record low is about −2.8°C. Alice Springs and Canberra are known for colder winter mornings, so the example could mislead students, especially in Tasmania. Use plausible temperatures or swap the towns."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why's reasoning for the Canberra distractor is confused. A student who ignores the signs and looks for the lowest number would pick Perth (2), not Canberra (5). The explanation needs rewording, for example: Canberra is tempting because −5 is one of the negative temperatures, but −8 is further left."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer. Hobart's −8°C is implausible for real Australian weather, and the why for (b) explains the Canberra distractor illogically."
+    },
+    "flags": [
+     "Question b, fact: Hobart at −8°C is unrealistic. Hobart's record low is about −2.8°C. Alice Springs and Canberra are known for colder winter mornings, so the example could mislead students, especially in Tasmania. Use plausible temperatures or swap the towns.",
+     "Question b, other: The why's reasoning for the Canberra distractor is confused. A student who ignores the signs and looks for the lowest number would pick Perth (2), not Canberra (5). The explanation needs rewording, for example: Canberra is tempting because −5 is one of the negative temperatures, but −8 is further left."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Ordering integers on a number line",
+     "card": [
+      "Integers are whole numbers that can be negative, zero or positive. Examples are −7, 0 and 12. Fractions and decimals are not integers.",
+      "On a number line, zero sits in the middle. Positive integers are to the right and negative integers are to the left.",
+      "Numbers further to the right are larger. So 2 is greater than −5, and −2 is greater than −5 because −2 is further right.",
+      "With negatives, the number that looks bigger is smaller. −9 is less than −3, as −9 is further left. To order from least to greatest, go from left to right."
+     ],
+     "remember": "Further right is larger. Further left is smaller.",
+     "a": {
+      "q": "Which list shows the integers in order from least to greatest?",
+      "opts": [
+       "−6, −1, 0, 4",
+       "−1, −6, 0, 4",
+       "4, 0, −1, −6",
+       "0, −1, −6, 4"
+      ],
+      "why": "Least to greatest goes from left to right on the number line, so −6 comes first, then −1, 0 and 4. The list −1, −6, 0, 4 is tempting, but −6 is further left than −1, so it is smaller.",
+      "clue": "Picture the number line and read from left to right."
+     },
+     "b": {
+      "d": 3,
+      "q": "At 5 am on a winter morning, the temperatures were: Alice Springs −3°C, Thredbo −8°C, Hobart 2°C, Canberra −5°C. Which place was the coldest?",
+      "opts": [
+       "Thredbo",
+       "Canberra",
+       "Alice Springs",
+       "Hobart"
+      ],
+      "why": "The coldest place has the least temperature, which is the number furthest left on the number line. −8 is further left than −5, −3 and 2, so Thredbo was the coldest. Canberra is tempting because −5 is also a negative temperature, but −8 is further left, so it is smaller.",
+      "clue": "The coldest is the number furthest to the left."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "−6, −1, 0, 4",
+       "also_right": []
+      },
+      "b": {
+       "best": "Thredbo",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "\"On a number line, zero sits in the middle\" can mislead: a number line has no middle, and a drawn one can show any range. Zero is better described as the point between the negatives and the positives."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer, and the explanations match the card. The only issue is the card's claim that zero 'sits in the middle' of a number line, which should say zero separates the negatives from the positives."
+     },
+     "flags": [
+      "Card, wording: \"On a number line, zero sits in the middle\" can mislead: a number line has no middle, and a drawn one can show any range. Zero is better described as the point between the negatives and the positives."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "Ordering integers on a number line",
+    "card": [
+     "Integers are whole numbers that can be negative, zero or positive. Examples are −7, 0 and 12. Fractions and decimals are not integers.",
+     "On a number line, zero is the point between the negatives and the positives. Positive integers are to its right and negative integers are to its left.",
+     "Numbers further to the right are larger. So 2 is greater than −5, and −2 is greater than −5 because −2 is further right.",
+     "With negatives, the number that looks bigger is smaller. −9 is less than −3, as −9 is further left. To order from least to greatest, go from left to right."
+    ],
+    "remember": "Further right is larger. Further left is smaller.",
+    "a": {
+     "q": "Which list puts these integers in order from least to greatest?",
+     "opts": [
+      "−6, −1, 0, 4",
+      "−1, −6, 0, 4",
+      "4, 0, −1, −6",
+      "0, −1, −6, 4"
+     ],
+     "why": "Least to greatest goes from left to right on the number line, so −6 comes first, then −1, 0 and 4. The list −1, −6, 0, 4 is tempting, but −6 is further left than −1, so it is smaller.",
+     "clue": "Picture the number line and read from left to right."
+    },
+    "b": {
+     "d": 3,
+     "q": "Early on a winter morning, the temperatures were Alice Springs −3°C, Thredbo −8°C, Hobart 2°C and Canberra −5°C. Which place had the lowest temperature?",
+     "opts": [
+      "Thredbo",
+      "Canberra",
+      "Alice Springs",
+      "Hobart"
+     ],
+     "why": "The lowest temperature is the number furthest left on the number line. −8 is further left than −5, −3 and 2, so Thredbo was the coldest. Canberra is tempting because −5 is also below zero, but −8 is further left, so it is smaller.",
+     "clue": "The lowest is the number furthest to the left."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "−6, −1, 0, 4",
+     "also_right": []
+    },
+    "b": {
+     "best": "Thredbo",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Ordering integers on a number line",
+  "card": [
+   "Integers are whole numbers that can be negative, zero or positive. Examples are −7, 0 and 12. Fractions and decimals are not integers.",
+   "On a number line, zero is the point between the negatives and the positives. Positive integers are to its right and negative integers are to its left.",
+   "Numbers further to the right are larger. So 2 is greater than −5, and −2 is greater than −5 because −2 is further right.",
+   "With negatives, the number that looks bigger is smaller. −9 is less than −3, as −9 is further left. To order from least to greatest, go from left to right."
+  ],
+  "remember": "Further right is larger. Further left is smaller.",
+  "a": {
+   "q": "Which list puts these integers in order from least to greatest?",
+   "opts": [
+    "−6, −1, 0, 4",
+    "−1, −6, 0, 4",
+    "4, 0, −1, −6",
+    "0, −1, −6, 4"
+   ],
+   "why": "Least to greatest goes from left to right on the number line, so −6 comes first, then −1, 0 and 4. The list −1, −6, 0, 4 is tempting, but −6 is further left than −1, so it is smaller.",
+   "clue": "Picture the number line and read from left to right."
+  },
+  "b": {
+   "d": 3,
+   "q": "Early on a winter morning, the temperatures were Alice Springs −3°C, Thredbo −8°C, Hobart 2°C and Canberra −5°C. Which place had the lowest temperature?",
+   "opts": [
+    "Thredbo",
+    "Canberra",
+    "Alice Springs",
+    "Hobart"
+   ],
+   "why": "The lowest temperature is the number furthest left on the number line. −8 is further left than −5, −3 and 2, so Thredbo was the coldest. Canberra is tempting because −5 is also below zero, but −8 is further left, so it is smaller.",
+   "clue": "The lowest is the number furthest to the left."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "−6, −1, 0, 4",
+   "also_right": []
+  },
+  "b": {
+   "best": "Thredbo",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Ordering integers on a number line",
+  "card": [
+   "Integers are whole numbers that can be negative, zero or positive. Examples are −7, 0 and 12. Fractions and decimals are not integers.",
+   "On a number line, zero is the point between the negatives and the positives. Positive integers are to its right and negative integers are to its left.",
+   "Numbers further to the right are larger. So 2 is greater than −5, and −2 is greater than −5 because −2 is further right.",
+   "With negatives, the number that looks bigger is smaller. −9 is less than −3, as −9 is further left. To order from least to greatest, go from left to right."
+  ],
+  "remember": "Further right is larger. Further left is smaller.",
+  "a": {
+   "q": "Which list puts these integers in order from least to greatest?",
+   "opts": [
+    "−6, −1, 0, 4",
+    "−1, −6, 0, 4",
+    "4, 0, −1, −6",
+    "0, −1, −6, 4"
+   ],
+   "why": "Least to greatest goes from left to right on the number line, so −6 comes first, then −1, 0 and 4. The list −1, −6, 0, 4 is tempting, but −6 is further left than −1, so it is smaller.",
+   "clue": "Picture the number line and read from left to right."
+  },
+  "b": {
+   "d": 3,
+   "q": "Early on a winter morning, the temperatures were Alice Springs −3°C, Thredbo −8°C, Hobart 2°C and Canberra −5°C. Which place had the lowest temperature?",
+   "opts": [
+    "Thredbo",
+    "Canberra",
+    "Alice Springs",
+    "Hobart"
+   ],
+   "why": "The lowest temperature is the number furthest left on the number line. −8 is further left than −5, −3 and 2, so Thredbo was the coldest. Canberra is tempting because −5 is also below zero, but −8 is further left, so it is smaller.",
+   "clue": "The lowest is the number furthest to the left."
+  }
+ },
+ "checked_by": "claude-code"
+}

@@ -1,0 +1,404 @@
+{
+ "id": "ecb-goods-services-tax",
+ "title": "The goods and services tax",
+ "brief": "2204beb9a40c",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:25Z new, write",
+  "2026-11-04T09:36:47Z write: done",
+  "2026-11-04T09:46:54Z check: flagged",
+  "2026-11-04T09:58:21Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00699,
+  "check": 0.01372,
+  "fix": 0.01397,
+  "recheck": 0.00787
+ },
+ "draft": {
+  "title": "The goods and services tax",
+  "card": [
+   "The goods and services tax (GST) is a tax of 10 per cent added to the price of most goods and services. The seller collects it from the buyer and passes it on to the government.",
+   "If a item costs $50 before tax, GST adds $5, so the buyer pays $55. To find the GST, divide the price before tax by 10.",
+   "Some things are left out of the GST, such as most fresh food. A loaf of bread from a bakery or a bag of apples has no GST added.",
+   "The GST applies to everyone who buys taxed goods and services, whatever their income. The money raised goes to the states and territories."
+  ],
+  "remember": "GST adds 10 per cent to most prices, but most fresh food is left out.",
+  "a": {
+   "q": "Jai buys a pair of headphones with a price of $80 before tax. How much does he pay in total once GST is added?",
+   "opts": [
+    "$88",
+    "$81",
+    "$90",
+    "$80"
+   ],
+   "why": "GST is 10 per cent of $80, which is $8, so Jai pays $88. Paying $90 comes from adding 10 per cent of the wrong amount, but GST is worked out on the price before tax.",
+   "clue": "Find one tenth of the price, then add it on."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tilly buys a bag of fresh carrots and a new bike helmet at a shop in Hobart. Which statement about GST is correct?",
+   "opts": [
+    "GST is added to the helmet but not to the carrots",
+    "GST is added to the carrots but not to the helmet",
+    "GST is added to both, as it applies to all goods",
+    "GST is added to neither, as Tilly is a young shopper"
+   ],
+   "why": "Most goods and services carry GST, so the helmet has it. Most fresh food, such as carrots, is left out. GST does not depend on the age or income of the buyer.",
+   "clue": "Think about which item is fresh food."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$88",
+   "also_right": []
+  },
+  "b": {
+   "best": "GST is added to the helmet but not to the carrots",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Grammar error: 'If a item costs $50' should be 'If an item costs $50'."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "A loaf of bread is given as an example of 'most fresh food'. Plain bread is GST-free as basic food, but it is not really fresh food, and many bakery items such as cakes and pastries do carry GST. Students could wrongly think everything from a bakery is GST-free."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says $90 comes from 'adding 10 per cent of the wrong amount'. $90 is $80 plus $10, which is not 10 per cent of any amount in the question, so the explanation is confusing. It would be clearer to say $90 adds $10 instead of one tenth of $80, which is $8."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. Fix the grammar slip 'a item', reconsider using bakery bread as a fresh-food example, and reword Why (a)'s confusing explanation of the $90 distractor."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: Grammar error: 'If a item costs $50' should be 'If an item costs $50'.",
+  "Card, wording: A loaf of bread is given as an example of 'most fresh food'. Plain bread is GST-free as basic food, but it is not really fresh food, and many bakery items such as cakes and pastries do carry GST. Students could wrongly think everything from a bakery is GST-free.",
+  "Question a, other: Why (a) says $90 comes from 'adding 10 per cent of the wrong amount'. $90 is $80 plus $10, which is not 10 per cent of any amount in the question, so the explanation is confusing. It would be clearer to say $90 adds $10 instead of one tenth of $80, which is $8."
+ ],
+ "proposal": {
+  "title": "The goods and services tax",
+  "card": [
+   "The goods and services tax (GST) is a tax of 10 per cent added to the price of most goods and services. The seller collects it from the buyer and passes it on to the government.",
+   "If an item costs $50 before tax, GST adds $5, so the buyer pays $55. To find the GST, divide the price before tax by 10.",
+   "Some things are left out of the GST, such as most fresh food. A bag of apples or a tray of fresh chicken has no GST added.",
+   "The GST applies to everyone who buys taxed goods and services, whatever their age or income. The money raised goes to the states and territories."
+  ],
+  "remember": "GST adds 10 per cent to most prices, but most fresh food is left out.",
+  "a": {
+   "q": "Jai buys a pair of headphones with a price of $80 before tax. How much does he pay in total once GST is added?",
+   "opts": [
+    "$88",
+    "$81",
+    "$90",
+    "$80"
+   ],
+   "why": "GST is one tenth of $80, which is $8, so Jai pays $88. Paying $90 adds $10 instead of one tenth of $80, which is $8.",
+   "clue": "Find one tenth of the price, then add it on."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tilly buys a bag of fresh carrots and a new bike helmet at a shop in Hobart. Which statement about GST is correct?",
+   "opts": [
+    "GST is added to the helmet but not to the carrots",
+    "GST is added to the carrots but not to the helmet",
+    "GST is added to both, as it applies to all goods",
+    "GST is added to neither, as Tilly is a young shopper"
+   ],
+   "why": "Most goods and services carry GST, so the helmet has it. Most fresh food, such as carrots, is left out. GST does not depend on the age or income of the buyer, so being young does not remove it.",
+   "clue": "Think about which item is fresh food."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$88",
+    "also_right": []
+   },
+   "b": {
+    "best": "GST is added to the helmet but not to the carrots",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Grammar error: 'If a item costs $50' should be 'If an item costs $50'."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "A loaf of bread is given as an example of 'most fresh food'. Plain bread is GST-free as basic food, but it is not really fresh food, and many bakery items such as cakes and pastries do carry GST. Students could wrongly think everything from a bakery is GST-free."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says $90 comes from 'adding 10 per cent of the wrong amount'. $90 is $80 plus $10, which is not 10 per cent of any amount in the question, so the explanation is confusing. It would be clearer to say $90 adds $10 instead of one tenth of $80, which is $8."
+   }
+  ],
+  "flags": [
+   "Card, wording: Grammar error: 'If a item costs $50' should be 'If an item costs $50'.",
+   "Card, wording: A loaf of bread is given as an example of 'most fresh food'. Plain bread is GST-free as basic food, but it is not really fresh food, and many bakery items such as cakes and pastries do carry GST. Students could wrongly think everything from a bakery is GST-free.",
+   "Question a, other: Why (a) says $90 comes from 'adding 10 per cent of the wrong amount'. $90 is $80 plus $10, which is not 10 per cent of any amount in the question, so the explanation is confusing. It would be clearer to say $90 adds $10 instead of one tenth of $80, which is $8."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "The goods and services tax",
+  "card": [
+   "The goods and services tax (GST) is a tax of 10 per cent added to the price of most goods and services. The seller collects it from the buyer and passes it on to the government.",
+   "If an item costs $50 before tax, GST adds $5, so the buyer pays $55. To find the GST, divide the price before tax by 10.",
+   "Some things are left out of the GST, such as most fresh food. A bag of apples or a tray of fresh chicken has no GST added.",
+   "The GST applies to everyone who buys taxed goods and services, whatever their age or income. The money raised goes to the states and territories."
+  ],
+  "remember": "GST adds 10 per cent to most prices, but most fresh food is left out.",
+  "a": {
+   "q": "Jai buys a pair of headphones with a price of $80 before tax. How much does he pay in total once GST is added?",
+   "opts": [
+    "$88",
+    "$81",
+    "$90",
+    "$80"
+   ],
+   "why": "GST is one tenth of $80, which is $8, so Jai pays $88. Paying $90 adds $10 instead of one tenth of $80, which is $8.",
+   "clue": "Find one tenth of the price, then add it on."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tilly buys a bag of fresh carrots and a new bike helmet at a shop in Hobart. Which statement about GST is correct?",
+   "opts": [
+    "GST is added to the helmet but not to the carrots",
+    "GST is added to the carrots but not to the helmet",
+    "GST is added to both, as it applies to all goods",
+    "GST is added to neither, as Tilly is a young shopper"
+   ],
+   "why": "Most goods and services carry GST, so the helmet has it. Most fresh food, such as carrots, is left out. GST does not depend on the age or income of the buyer, so being young does not remove it.",
+   "clue": "Think about which item is fresh food."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix corrects 'a item', swaps bakery bread for fresh chicken as GST-free fresh food, and explains the $90 option plainly. The GST facts are right.",
+   "item": "5785815d7e779746",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-goods-services-tax",
+    "title": "The goods and services tax",
+    "brief": "2204beb9a40c",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.00699,
+     "check": 0.01372,
+     "fix": 0.01397,
+     "recheck": 0.00787
+    },
+    "draft": {
+     "title": "The goods and services tax",
+     "card": [
+      "The goods and services tax (GST) is a tax of 10 per cent added to the price of most goods and services. The seller collects it from the buyer and passes it on to the government.",
+      "If a item costs $50 before tax, GST adds $5, so the buyer pays $55. To find the GST, divide the price before tax by 10.",
+      "Some things are left out of the GST, such as most fresh food. A loaf of bread from a bakery or a bag of apples has no GST added.",
+      "The GST applies to everyone who buys taxed goods and services, whatever their income. The money raised goes to the states and territories."
+     ],
+     "remember": "GST adds 10 per cent to most prices, but most fresh food is left out.",
+     "a": {
+      "q": "Jai buys a pair of headphones with a price of $80 before tax. How much does he pay in total once GST is added?",
+      "opts": [
+       "$88",
+       "$81",
+       "$90",
+       "$80"
+      ],
+      "why": "GST is 10 per cent of $80, which is $8, so Jai pays $88. Paying $90 comes from adding 10 per cent of the wrong amount, but GST is worked out on the price before tax.",
+      "clue": "Find one tenth of the price, then add it on."
+     },
+     "b": {
+      "d": 3,
+      "q": "Tilly buys a bag of fresh carrots and a new bike helmet at a shop in Hobart. Which statement about GST is correct?",
+      "opts": [
+       "GST is added to the helmet but not to the carrots",
+       "GST is added to the carrots but not to the helmet",
+       "GST is added to both, as it applies to all goods",
+       "GST is added to neither, as Tilly is a young shopper"
+      ],
+      "why": "Most goods and services carry GST, so the helmet has it. Most fresh food, such as carrots, is left out. GST does not depend on the age or income of the buyer.",
+      "clue": "Think about which item is fresh food."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "$88",
+      "also_right": []
+     },
+     "b": {
+      "best": "GST is added to the helmet but not to the carrots",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "Grammar error: 'If a item costs $50' should be 'If an item costs $50'."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "A loaf of bread is given as an example of 'most fresh food'. Plain bread is GST-free as basic food, but it is not really fresh food, and many bakery items such as cakes and pastries do carry GST. Students could wrongly think everything from a bakery is GST-free."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "Why (a) says $90 comes from 'adding 10 per cent of the wrong amount'. $90 is $80 plus $10, which is not 10 per cent of any amount in the question, so the explanation is confusing. It would be clearer to say $90 adds $10 instead of one tenth of $80, which is $8."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. Fix the grammar slip 'a item', reconsider using bakery bread as a fresh-food example, and reword Why (a)'s confusing explanation of the $90 distractor."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, wording: Grammar error: 'If a item costs $50' should be 'If an item costs $50'.",
+     "Card, wording: A loaf of bread is given as an example of 'most fresh food'. Plain bread is GST-free as basic food, but it is not really fresh food, and many bakery items such as cakes and pastries do carry GST. Students could wrongly think everything from a bakery is GST-free.",
+     "Question a, other: Why (a) says $90 comes from 'adding 10 per cent of the wrong amount'. $90 is $80 plus $10, which is not 10 per cent of any amount in the question, so the explanation is confusing. It would be clearer to say $90 adds $10 instead of one tenth of $80, which is $8."
+    ],
+    "proposal": {
+     "title": "The goods and services tax",
+     "card": [
+      "The goods and services tax (GST) is a tax of 10 per cent added to the price of most goods and services. The seller collects it from the buyer and passes it on to the government.",
+      "If an item costs $50 before tax, GST adds $5, so the buyer pays $55. To find the GST, divide the price before tax by 10.",
+      "Some things are left out of the GST, such as most fresh food. A bag of apples or a tray of fresh chicken has no GST added.",
+      "The GST applies to everyone who buys taxed goods and services, whatever their age or income. The money raised goes to the states and territories."
+     ],
+     "remember": "GST adds 10 per cent to most prices, but most fresh food is left out.",
+     "a": {
+      "q": "Jai buys a pair of headphones with a price of $80 before tax. How much does he pay in total once GST is added?",
+      "opts": [
+       "$88",
+       "$81",
+       "$90",
+       "$80"
+      ],
+      "why": "GST is one tenth of $80, which is $8, so Jai pays $88. Paying $90 adds $10 instead of one tenth of $80, which is $8.",
+      "clue": "Find one tenth of the price, then add it on."
+     },
+     "b": {
+      "d": 3,
+      "q": "Tilly buys a bag of fresh carrots and a new bike helmet at a shop in Hobart. Which statement about GST is correct?",
+      "opts": [
+       "GST is added to the helmet but not to the carrots",
+       "GST is added to the carrots but not to the helmet",
+       "GST is added to both, as it applies to all goods",
+       "GST is added to neither, as Tilly is a young shopper"
+      ],
+      "why": "Most goods and services carry GST, so the helmet has it. Most fresh food, such as carrots, is left out. GST does not depend on the age or income of the buyer, so being young does not remove it.",
+      "clue": "Think about which item is fresh food."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "$88",
+       "also_right": []
+      },
+      "b": {
+       "best": "GST is added to the helmet but not to the carrots",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-04T18:10:11Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "Grammar error: 'If a item costs $50' should be 'If an item costs $50'."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "A loaf of bread is given as an example of 'most fresh food'. Plain bread is GST-free as basic food, but it is not really fresh food, and many bakery items such as cakes and pastries do carry GST. Students could wrongly think everything from a bakery is GST-free."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "Why (a) says $90 comes from 'adding 10 per cent of the wrong amount'. $90 is $80 plus $10, which is not 10 per cent of any amount in the question, so the explanation is confusing. It would be clearer to say $90 adds $10 instead of one tenth of $80, which is $8."
+      }
+     ],
+     "flags": [
+      "Card, wording: Grammar error: 'If a item costs $50' should be 'If an item costs $50'.",
+      "Card, wording: A loaf of bread is given as an example of 'most fresh food'. Plain bread is GST-free as basic food, but it is not really fresh food, and many bakery items such as cakes and pastries do carry GST. Students could wrongly think everything from a bakery is GST-free.",
+      "Question a, other: Why (a) says $90 comes from 'adding 10 per cent of the wrong amount'. $90 is $80 plus $10, which is not 10 per cent of any amount in the question, so the explanation is confusing. It would be clearer to say $90 adds $10 instead of one tenth of $80, which is $8."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "fe15937fbc6a615e"
+  }
+ ]
+}

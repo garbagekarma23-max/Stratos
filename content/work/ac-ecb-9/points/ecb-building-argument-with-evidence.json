@@ -1,0 +1,257 @@
+{
+ "id": "ecb-building-argument-with-evidence",
+ "title": "Building an argument with evidence",
+ "brief": "d1938847239b",
+ "shortlist": [
+  [
+   "eng-arguments-evidence",
+   0.238
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, match",
+  "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: failed the content check, writing again",
+  "2026-11-04T09:58:22Z write: done",
+  "2026-11-04T10:07:57Z check: flagged",
+  "2026-11-04T10:10:48Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01082,
+  "check": 0.01354,
+  "fix": 0.01952,
+  "recheck": 0.00786
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only reasons and evidence in English, while this point also requires stating a position and answering the main opposing view with named economic sources, which is a new step the card does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Building an argument with evidence",
+  "card": [
+   [
+    "Position",
+    "An argument starts with a clear position. This is the answer you are claiming, such as \"the council should build a new skate park\"."
+   ],
+   [
+    "Reasons",
+    "A position needs reasons that explain why it is right. Each reason is a separate point that backs up the position."
+   ],
+   [
+    "Evidence",
+    "Each reason is supported with evidence from a named source, such as a council report or a survey by a named organisation. Naming the source lets a reader check it."
+   ],
+   [
+    "Other view",
+    "A strong argument also answers the main view against it. It says what the other side claims, then explains with evidence why its own position is still the better one."
+   ]
+  ],
+  "remember": "A position, reasons, named evidence for each reason, and a reply to the other side.",
+  "a": {
+   "q": "Which sentence is a reason supported by evidence from a named source?",
+   "opts": [
+    "A Bureau of Statistics report shows rents rose last year",
+    "Rents in our town are unfair and need to be fixed",
+    "Our town should cap rents because renters are struggling",
+    "Some people say a rent cap would be bad for landlords"
+   ],
+   "why": "The first option states a fact and names the report it came from, so a reader can check it. The second is an opinion with no source. The third is a position, and the fourth is the other view, not evidence for a reason.",
+   "clue": "Which one tells the reader exactly where the fact came from?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya argues her school should sell water in reusable bottles only. She gives two reasons, each backed by a named source. A critic says the bottles cost too much. What should Priya add to complete her argument?",
+   "opts": [
+    "A reply to the cost claim, backed by evidence",
+    "A third reason that repeats her first reason",
+    "A stronger statement that the critic is wrong",
+    "A new position about how the school spends money"
+   ],
+   "why": "A complete argument answers the main view against it, and the reply should use evidence. Saying the critic is wrong gives no evidence, so it does not answer the claim. Repeating a reason adds nothing new.",
+   "clue": "Her position and evidenced reasons are done. What is still missing?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A Bureau of Statistics report shows rents rose last year",
+   "also_right": []
+  },
+  "b": {
+   "best": "A reply to the cost claim, backed by evidence",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to options by position (first, second, third, fourth), but the options are shuffled, so the labels do not match. As shown, the second option is the other view ('Some people say...'), not an opinion with no source, and the fourth is a position with a reason, not the other view. Refer to options by content, not order."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question asks for 'a reason supported by evidence', but the right option is only a piece of evidence ('rents rose last year'). It does not state a reason. Consider rewording the stem to 'Which sentence gives evidence from a named source?' or make the option include a reason."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are sound. The why for question a names options by position, which does not match the shuffled order and mislabels them. The stem of a also calls a piece of evidence a reason."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why refers to options by position (first, second, third, fourth), but the options are shuffled, so the labels do not match. As shown, the second option is the other view ('Some people say...'), not an opinion with no source, and the fourth is a position with a reason, not the other view. Refer to options by content, not order.",
+  "Question a, wording: The question asks for 'a reason supported by evidence', but the right option is only a piece of evidence ('rents rose last year'). It does not state a reason. Consider rewording the stem to 'Which sentence gives evidence from a named source?' or make the option include a reason."
+ ],
+ "proposal": {
+  "title": "Building an argument with evidence",
+  "card": [
+   [
+    "Position",
+    "An argument starts with a clear position. This is the answer you are claiming, such as \"the council should build a new skate park\"."
+   ],
+   [
+    "Reasons",
+    "A position needs reasons that explain why it is right. Each reason is a separate point that backs up the position."
+   ],
+   [
+    "Evidence",
+    "Each reason is supported with evidence from a named source, such as a council report or a survey by a named organisation. Naming the source lets a reader check it."
+   ],
+   [
+    "Other view",
+    "A strong argument also answers the main view against it. It says what the other side claims, then explains with evidence why its own position is still the better one."
+   ]
+  ],
+  "remember": "A position, reasons, named evidence for each reason, and a reply to the other side.",
+  "a": {
+   "q": "Which sentence gives evidence from a named source?",
+   "opts": [
+    "Riverton Council's housing report shows rents rose last year",
+    "Rents in Riverton are unfair and need to be fixed",
+    "Riverton should cap rents because renters are struggling",
+    "Some people say a rent cap would be bad for landlords"
+   ],
+   "why": "The sentence about the council's housing report states a fact and names where it came from, so a reader can check it. The rent cap sentence gives a position and a reason but no evidence or source. The claim that rents are unfair is an opinion, and the sentence about landlords reports the other view without a source.",
+   "clue": "Which one tells the reader exactly where the fact came from?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya argues her school should sell water in reusable bottles only. She gives two reasons, each backed by a named source. A critic says the bottles cost too much. What should Priya add to complete her argument?",
+   "opts": [
+    "A reply to the cost claim, backed by evidence",
+    "A third reason that repeats her first reason",
+    "A stronger statement that the critic is wrong",
+    "A new position about how the school spends money"
+   ],
+   "why": "A complete argument answers the main view against it, and the reply should use evidence. Saying the critic is wrong gives no evidence, so it does not answer the claim. Repeating a reason adds nothing new.",
+   "clue": "Her position and evidenced reasons are done. What is still missing?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Riverton Council's housing report shows rents rose last year",
+    "also_right": []
+   },
+   "b": {
+    "best": "A reply to the cost claim, backed by evidence",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to options by position (first, second, third, fourth), but the options are shuffled, so the labels do not match. As shown, the second option is the other view ('Some people say...'), not an opinion with no source, and the fourth is a position with a reason, not the other view. Refer to options by content, not order."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question asks for 'a reason supported by evidence', but the right option is only a piece of evidence ('rents rose last year'). It does not state a reason. Consider rewording the stem to 'Which sentence gives evidence from a named source?' or make the option include a reason."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why refers to options by position (first, second, third, fourth), but the options are shuffled, so the labels do not match. As shown, the second option is the other view ('Some people say...'), not an opinion with no source, and the fourth is a position with a reason, not the other view. Refer to options by content, not order.",
+   "Question a, wording: The question asks for 'a reason supported by evidence', but the right option is only a piece of evidence ('rents rose last year'). It does not state a reason. Consider rewording the stem to 'Which sentence gives evidence from a named source?' or make the option include a reason."
+  ]
+ },
+ "final": {
+  "title": "Building an argument with evidence",
+  "card": [
+   [
+    "Position",
+    "An argument starts with a clear position. This is the answer you are claiming, such as \"the council should build a new skate park\"."
+   ],
+   [
+    "Reasons",
+    "A position needs reasons that explain why it is right. Each reason is a separate point that backs up the position."
+   ],
+   [
+    "Evidence",
+    "Each reason is supported with evidence from a named source, such as a council report or a survey by a named organisation. Naming the source lets a reader check it."
+   ],
+   [
+    "Other view",
+    "A strong argument also answers the main view against it. It says what the other side claims, then explains with evidence why its own position is still the better one."
+   ]
+  ],
+  "remember": "A position, reasons, named evidence for each reason, and a reply to the other side.",
+  "a": {
+   "q": "Which sentence gives evidence from a named source?",
+   "opts": [
+    "Riverton Council's housing report shows rents rose last year",
+    "Rents in Riverton are unfair and need to be fixed",
+    "Riverton should cap rents because renters are struggling",
+    "Some people say a rent cap would be bad for landlords"
+   ],
+   "why": "The sentence about the council's housing report states a fact and names where it came from, so a reader can check it. The rent cap sentence gives a position and a reason but no evidence or source. The claim that rents are unfair is an opinion, and the sentence about landlords reports the other view without a source.",
+   "clue": "Which one tells the reader exactly where the fact came from?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya argues her school should sell water in reusable bottles only. She gives two reasons, each backed by a named source. A critic says the bottles cost too much. What should Priya add to complete her argument?",
+   "opts": [
+    "A reply to the cost claim, backed by evidence",
+    "A third reason that repeats her first reason",
+    "A stronger statement that the critic is wrong",
+    "A new position about how the school spends money"
+   ],
+   "why": "A complete argument answers the main view against it, and the reply should use evidence. Saying the critic is wrong gives no evidence, so it does not answer the claim. Repeating a reason adds nothing new.",
+   "clue": "Her position and evidenced reasons are done. What is still missing?"
+  }
+ },
+ "cleared_by": "recheck"
+}

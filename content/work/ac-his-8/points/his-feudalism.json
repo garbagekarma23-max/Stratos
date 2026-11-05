@@ -1,0 +1,351 @@
+{
+ "id": "his-feudalism",
+ "title": "Feudalism",
+ "brief": "dafa7dbda127",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:37Z new, write",
+  "2026-11-04T09:36:54Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:04Z write: done",
+  "2026-11-04T09:58:28Z check: flagged",
+  "2026-11-04T14:58:52Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00453,
+  "check": 0.01168,
+  "fix": 0.0157,
+  "recheck": 0.00836
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the only one that mentions farming the land, which echoes the question's 'worked by'. The clue ('farm work') points straight to it, so a student can pick it without knowing the feudal structure.",
+ "rejected": {
+  "title": "Feudalism",
+  "card": [
+   "Feudalism was the system that organised land and power in much of medieval Europe. Land was the main source of wealth, so whoever held it held power.",
+   "The king granted large areas of land to powerful lords. In return, the lords promised loyalty and had to supply soldiers when the king needed them.",
+   "Lords then gave parts of their land to knights, who promised to fight for them. Each person owed duties to the one who gave them land.",
+   "At the bottom were the peasants. They worked the land and did not hold power in the system."
+  ],
+  "remember": "Land went from king to lords to knights in return for loyalty and service, and peasants farmed it.",
+  "a": {
+   "q": "Why did a medieval king grant land to his lords?",
+   "opts": [
+    "To gain their loyalty and soldiers",
+    "To collect rent from them in coins",
+    "To let peasants own their own farms",
+    "To pay for the building of churches"
+   ],
+   "why": "The king held land, which was wealth, and he traded it for loyalty and soldiers. The option about rent is wrong because the lords gave loyalty and soldiers in return, not coins.",
+   "clue": "Think about what the lords promised in return."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sir Edmund holds land from Lord Aldric and promises to fight for him. Who is the land granted to Edmund most likely to be worked by?",
+   "opts": [
+    "Peasants who farm the land for him",
+    "The king's own royal soldiers",
+    "Other lords who also hold land",
+    "Knights who serve Lord Aldric"
+   ],
+   "why": "Land passed from the king to lords to knights, and the peasants below them worked it. Other knights are wrong because knights received land in return for fighting, not for farming it.",
+   "clue": "Which group did the farm work rather than the fighting?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the only one that mentions farming the land, which echoes the question's 'worked by'. The clue ('farm work') points straight to it, so a student can pick it without knowing the feudal structure."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Feudalism",
+     "card": [
+      "Feudalism was the system that organised land and power in much of medieval Europe. Land was the main source of wealth, so whoever held it held power.",
+      "The king granted large areas of land to powerful lords. In return, the lords promised loyalty and had to supply soldiers when the king needed them.",
+      "Lords then gave parts of their land to knights, who promised to fight for them. The knights in turn expected loyalty from those below them.",
+      "At the bottom were the peasants. They worked the land and did not hold power in the system."
+     ],
+     "remember": "Land was exchanged for loyalty and service, passing down from the king to the peasants who worked it.",
+     "a": {
+      "q": "Why did a medieval king grant land to his lords?",
+      "opts": [
+       "To gain their loyalty and soldiers",
+       "To collect rent from them in coins",
+       "To let peasants own their own farms",
+       "To pay for the building of churches"
+      ],
+      "why": "The king held land, which was wealth, and he traded it for loyalty and soldiers. The tempting option about rent is wrong because the card says the return was loyalty and soldiers, not coins.",
+      "clue": "Think about what the lords promised in return."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sir Edmund holds land from Lord Aldric and promises to fight for him. Who is the land granted to Edmund most likely to be worked by?",
+      "opts": [
+       "Peasants at the bottom of the system",
+       "The king and his royal soldiers",
+       "Other lords who had been given land",
+       "Knights who serve Lord Aldric"
+      ],
+      "why": "Land passed down from the king to lords to knights, and peasants at the bottom worked it. Other knights are wrong because knights were given land to fight, not to farm it.",
+      "clue": "Who sits at the bottom of the system?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "To gain their loyalty and soldiers",
+      "also_right": []
+     },
+     "b": {
+      "best": "Peasants at the bottom of the system",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Who sits at the bottom of the system?' repeats the exact words of the right option ('Peasants at the bottom of the system'). A student can match the wording without knowing the idea."
+      },
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "'Passing down from the king to the peasants who worked it' suggests land was granted to peasants. The card only says peasants worked the land and did not hold power, so the remember line does not quite match the card."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and both answers are sound. Question b's clue repeats the right option's wording and gives the answer away. The remember line wrongly suggests land was passed down to the peasants."
+    },
+    "flags": [
+     "Question b, other: The clue 'Who sits at the bottom of the system?' repeats the exact words of the right option ('Peasants at the bottom of the system'). A student can match the wording without knowing the idea.",
+     "Remember, other: 'Passing down from the king to the peasants who worked it' suggests land was granted to peasants. The card only says peasants worked the land and did not hold power, so the remember line does not quite match the card."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Feudalism",
+     "card": [
+      "Feudalism was the system that organised land and power in much of medieval Europe. Land was the main source of wealth, so whoever held it held power.",
+      "The king granted large areas of land to powerful lords. In return, the lords promised loyalty and had to supply soldiers when the king needed them.",
+      "Lords then gave parts of their land to knights, who promised to fight for them. Each person owed duties to the one who gave them land.",
+      "At the bottom were the peasants. They worked the land and did not hold power in the system."
+     ],
+     "remember": "Land went from king to lords to knights in return for loyalty and service, and peasants farmed it.",
+     "a": {
+      "q": "Why did a medieval king grant land to his lords?",
+      "opts": [
+       "To gain their loyalty and soldiers",
+       "To collect rent from them in coins",
+       "To let peasants own their own farms",
+       "To pay for the building of churches"
+      ],
+      "why": "The king held land, which was wealth, and he traded it for loyalty and soldiers. The option about rent is wrong because the lords gave loyalty and soldiers in return, not coins.",
+      "clue": "Think about what the lords promised in return."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sir Edmund holds land from Lord Aldric and promises to fight for him. Who is the land granted to Edmund most likely to be worked by?",
+      "opts": [
+       "Peasants who farm the land for him",
+       "The king's own royal soldiers",
+       "Other lords who also hold land",
+       "Knights who serve Lord Aldric"
+      ],
+      "why": "Land passed from the king to lords to knights, and the peasants below them worked it. Other knights are wrong because knights received land in return for fighting, not for farming it.",
+      "clue": "Which group did the farm work rather than the fighting?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "To gain their loyalty and soldiers",
+       "also_right": []
+      },
+      "b": {
+       "best": "Peasants who farm the land for him",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the only one that mentions farming the land, which echoes the question's 'worked by'. The clue ('farm work') points straight to it, so a student can pick it without knowing the feudal structure."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and question a are accurate and well pitched. In question b, the right option is the only one about farming, which matches the question's wording and the clue, so the answer is given away."
+     },
+     "flags": [
+      "Question b, wording: The right option is the only one that mentions farming the land, which echoes the question's 'worked by'. The clue ('farm work') points straight to it, so a student can pick it without knowing the feudal structure."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Feudalism",
+    "card": [
+     "Feudalism was the system that organised land and power in much of medieval Europe. Land was the main source of wealth, so whoever held it held power.",
+     "The king granted large areas of land to powerful lords. In return, the lords promised loyalty and had to supply soldiers when the king needed them.",
+     "Lords then gave parts of their land to knights, who promised to fight for them. Each person owed duties to the one who gave them land.",
+     "At the bottom were the peasants. They worked the land and did not hold power in the system."
+    ],
+    "remember": "Land went from king to lords to knights in return for loyalty and service, and peasants farmed it.",
+    "a": {
+     "q": "What did a medieval lord give the king in return for a grant of land?",
+     "opts": [
+      "Loyalty and soldiers when needed",
+      "Rent paid each year in coins",
+      "A share of every peasant's harvest",
+      "Money to build the king's churches"
+     ],
+     "why": "Under feudalism the king traded land for the lords' loyalty and for soldiers when he needed them. Rent in coins is tempting, but the grant was paid for with loyalty and military service, not money.",
+     "clue": "The king needed an army as well as people he could trust."
+    },
+    "b": {
+     "d": 2,
+     "q": "Sir Edmund is a knight who holds land granted to him by Lord Aldric. Under feudalism, who does Edmund owe service to, and what kind?",
+     "opts": [
+      "Lord Aldric, by fighting for him",
+      "Lord Aldric, by paying him in coins",
+      "The peasants, by farming their land",
+      "The king, by farming the royal land"
+     ],
+     "why": "Each person owed duties to the one who gave them land, and knights promised to fight for their lord. Paying Lord Aldric in coins names the right person but the wrong kind of service.",
+     "clue": "Who gave Edmund his land, and what did knights promise?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Loyalty and soldiers when needed",
+     "also_right": []
+    },
+    "b": {
+     "best": "Lord Aldric, by fighting for him",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Feudalism",
+  "card": [
+   "Feudalism was the system that organised land and power in much of medieval Europe. Land was the main source of wealth, so whoever held it held power.",
+   "The king granted large areas of land to powerful lords. In return, the lords promised loyalty and had to supply soldiers when the king needed them.",
+   "Lords then gave parts of their land to knights, who promised to fight for them. Each person owed duties to the one who gave them land.",
+   "At the bottom were the peasants. They worked the land and did not hold power in the system."
+  ],
+  "remember": "Land went from king to lords to knights in return for loyalty and service, and peasants farmed it.",
+  "a": {
+   "q": "What did a medieval lord give the king in return for a grant of land?",
+   "opts": [
+    "Loyalty and soldiers when needed",
+    "Rent paid each year in coins",
+    "A share of every peasant's harvest",
+    "Money to build the king's churches"
+   ],
+   "why": "Under feudalism the king traded land for the lords' loyalty and for soldiers when he needed them. Rent in coins is tempting, but the grant was paid for with loyalty and military service, not money.",
+   "clue": "The king needed an army as well as people he could trust."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sir Edmund is a knight who holds land granted to him by Lord Aldric. Under feudalism, who does Edmund owe service to, and what kind?",
+   "opts": [
+    "Lord Aldric, by fighting for him",
+    "Lord Aldric, by paying him in coins",
+    "The peasants, by farming their land",
+    "The king, by farming the royal land"
+   ],
+   "why": "Each person owed duties to the one who gave them land, and knights promised to fight for their lord. Paying Lord Aldric in coins names the right person but the wrong kind of service.",
+   "clue": "Who gave Edmund his land, and what did knights promise?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Loyalty and soldiers when needed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Lord Aldric, by fighting for him",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Feudalism",
+  "card": [
+   "Feudalism was the system that organised land and power in much of medieval Europe. Land was the main source of wealth, so whoever held it held power.",
+   "The king granted large areas of land to powerful lords. In return, the lords promised loyalty and had to supply soldiers when the king needed them.",
+   "Lords then gave parts of their land to knights, who promised to fight for them. Each person owed duties to the one who gave them land.",
+   "At the bottom were the peasants. They worked the land and did not hold power in the system."
+  ],
+  "remember": "Land went from king to lords to knights in return for loyalty and service, and peasants farmed it.",
+  "a": {
+   "q": "What did a medieval lord give the king in return for a grant of land?",
+   "opts": [
+    "Loyalty and soldiers when needed",
+    "Rent paid each year in coins",
+    "A share of every peasant's harvest",
+    "Money to build the king's churches"
+   ],
+   "why": "Under feudalism the king traded land for the lords' loyalty and for soldiers when he needed them. Rent in coins is tempting, but the grant was paid for with loyalty and military service, not money.",
+   "clue": "The king needed an army as well as people he could trust."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sir Edmund is a knight who holds land granted to him by Lord Aldric. Under feudalism, who does Edmund owe service to, and what kind?",
+   "opts": [
+    "Lord Aldric, by fighting for him",
+    "Lord Aldric, by paying him in coins",
+    "The peasants, by farming their land",
+    "The king, by farming the royal land"
+   ],
+   "why": "Each person owed duties to the one who gave them land, and knights promised to fight for their lord. Paying Lord Aldric in coins names the right person but the wrong kind of service.",
+   "clue": "Who gave Edmund his land, and what did knights promise?"
+  }
+ },
+ "checked_by": "claude-code"
+}

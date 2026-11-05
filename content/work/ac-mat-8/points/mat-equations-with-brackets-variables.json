@@ -1,0 +1,191 @@
+{
+ "id": "mat-equations-with-brackets-variables",
+ "title": "Equations with brackets and variables on both sides",
+ "brief": "96e4e9b594e6",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, write",
+  "2026-11-04T09:36:56Z write: done",
+  "2026-11-04T09:47:08Z check: flagged",
+  "2026-11-04T09:58:31Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00713,
+  "check": 0.00885,
+  "fix": 0.01795,
+  "recheck": 0.0071
+ },
+ "draft": {
+  "title": "Equations with brackets and variables on both sides",
+  "card": [
+   "Expand any brackets first by multiplying every term inside by the number outside. So 3(x + 2) becomes 3x + 6.",
+   "Collect the variable terms on one side and the plain numbers on the other. Whatever you do to one side, do to the other. Adding or subtracting moves a term across.",
+   "Divide both sides by the number in front of the variable to finish.",
+   "Example: 3(x + 2) = x + 14. Expand: 3x + 6 = x + 14. Subtract x: 2x + 6 = 14. Subtract 6: 2x = 8. Divide by 2: x = 4."
+  ],
+  "remember": "Expand, collect variables on one side and numbers on the other, then divide.",
+  "a": {
+   "q": "Solve 2(x + 5) = x + 13.",
+   "opts": [
+    "x = 3",
+    "x = 8",
+    "x = 1",
+    "x = 4"
+   ],
+   "why": "Expand: 2x + 10 = x + 13. Subtract x: x + 10 = 13. Subtract 10: x = 3. The answer x = 1 comes from multiplying only the x by 2 and leaving the 5 as it was.",
+   "clue": "Multiply both terms in the bracket by 2 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya solves 4(x − 1) = 2x + 6. What is the value of x?",
+   "opts": [
+    "x = 5",
+    "x = 1",
+    "x = 3",
+    "x = 7"
+   ],
+   "why": "Expand: 4x − 4 = 2x + 6. Subtract 2x: 2x − 4 = 6. Add 4: 2x = 10, so x = 5. The answer x = 1 comes from a sign error: subtracting 4 instead of adding it gives 2x = 2.",
+   "clue": "Moving −4 across means adding 4 to both sides."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = 3",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 5",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says x = 1 comes from multiplying only the x by 2. That error gives 2x + 5 = x + 13, so x = 8, not x = 1. The explanation of the distractor is wrong and would confuse a student checking their mistake."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the example and both intended answers (x = 3 and x = 5) are correct. The why for question a misexplains a distractor: multiplying only the x by 2 gives x = 8, not x = 1."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says x = 1 comes from multiplying only the x by 2. That error gives 2x + 5 = x + 13, so x = 8, not x = 1. The explanation of the distractor is wrong and would confuse a student checking their mistake."
+ ],
+ "proposal": {
+  "title": "Equations with brackets and variables on both sides",
+  "card": [
+   "Expand any brackets first by multiplying every term inside by the number outside. So 3(x + 2) becomes 3x + 6.",
+   "Collect the variable terms on one side and the plain numbers on the other. Whatever you do to one side, do to the other. Adding or subtracting moves a term across.",
+   "Divide both sides by the number in front of the variable to finish.",
+   "Example: 3(x + 2) = x + 14. Expand: 3x + 6 = x + 14. Subtract x: 2x + 6 = 14. Subtract 6: 2x = 8. Divide by 2: x = 4."
+  ],
+  "remember": "Expand, collect variables on one side and numbers on the other, then divide.",
+  "a": {
+   "q": "Solve 2(x + 5) = x + 13.",
+   "opts": [
+    "x = 3",
+    "x = 8",
+    "x = 1",
+    "x = 4"
+   ],
+   "why": "Expand: 2x + 10 = x + 13. Subtract x: x + 10 = 13. Subtract 10: x = 3. The answer x = 8 comes from multiplying only the x by 2, which gives 2x + 5 = x + 13.",
+   "clue": "Multiply both terms in the bracket by 2 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya solves 4(x − 1) = 2x + 6. What is the value of x?",
+   "opts": [
+    "x = 5",
+    "x = 1",
+    "x = 10",
+    "x = 3.5"
+   ],
+   "why": "Expand: 4x − 4 = 2x + 6. Subtract 2x: 2x − 4 = 6. Add 4: 2x = 10, so x = 5. The answer x = 1 comes from a sign error: subtracting 4 instead of adding it gives 2x = 2.",
+   "clue": "Moving −4 across means adding 4 to both sides."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "x = 3",
+    "also_right": []
+   },
+   "b": {
+    "best": "x = 5",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says x = 1 comes from multiplying only the x by 2. That error gives 2x + 5 = x + 13, so x = 8, not x = 1. The explanation of the distractor is wrong and would confuse a student checking their mistake."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says x = 1 comes from multiplying only the x by 2. That error gives 2x + 5 = x + 13, so x = 8, not x = 1. The explanation of the distractor is wrong and would confuse a student checking their mistake."
+  ]
+ },
+ "final": {
+  "title": "Equations with brackets and variables on both sides",
+  "card": [
+   "Expand any brackets first by multiplying every term inside by the number outside. So 3(x + 2) becomes 3x + 6.",
+   "Collect the variable terms on one side and the plain numbers on the other. Whatever you do to one side, do to the other. Adding or subtracting moves a term across.",
+   "Divide both sides by the number in front of the variable to finish.",
+   "Example: 3(x + 2) = x + 14. Expand: 3x + 6 = x + 14. Subtract x: 2x + 6 = 14. Subtract 6: 2x = 8. Divide by 2: x = 4."
+  ],
+  "remember": "Expand, collect variables on one side and numbers on the other, then divide.",
+  "a": {
+   "q": "Solve 2(x + 5) = x + 13.",
+   "opts": [
+    "x = 3",
+    "x = 8",
+    "x = 1",
+    "x = 4"
+   ],
+   "why": "Expand: 2x + 10 = x + 13. Subtract x: x + 10 = 13. Subtract 10: x = 3. The answer x = 8 comes from multiplying only the x by 2, which gives 2x + 5 = x + 13.",
+   "clue": "Multiply both terms in the bracket by 2 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya solves 4(x − 1) = 2x + 6. What is the value of x?",
+   "opts": [
+    "x = 5",
+    "x = 1",
+    "x = 10",
+    "x = 3.5"
+   ],
+   "why": "Expand: 4x − 4 = 2x + 6. Subtract 2x: 2x − 4 = 6. Add 4: 2x = 10, so x = 5. The answer x = 1 comes from a sign error: subtracting 4 instead of adding it gives 2x = 2.",
+   "clue": "Moving −4 across means adding 4 to both sides."
+  }
+ },
+ "cleared_by": "recheck"
+}

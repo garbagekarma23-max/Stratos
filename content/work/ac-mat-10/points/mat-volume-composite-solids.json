@@ -1,0 +1,223 @@
+{
+ "id": "mat-volume-composite-solids",
+ "title": "Volume of composite solids",
+ "brief": "77d0b2ac57bd",
+ "shortlist": [
+  [
+   "mat-volume-capacity",
+   0.323
+  ],
+  [
+   "mat-scaling-area-volume",
+   0.286
+  ],
+  [
+   "mat-surface-area-volume",
+   0.244
+  ],
+  [
+   "mat-shapes-objects",
+   0.22
+  ],
+  [
+   "mat-composite-functions",
+   0.2
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: flagged",
+  "2026-11-04T10:08:03Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00834,
+  "check": 0.01144,
+  "fix": 0.01487,
+  "recheck": 0.00836
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches finding the volume of a composite solid by adding or subtracting its prism and cylinder parts; the closest, Volume and capacity, covers only single prisms and cylinders.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Volume of composite solids",
+  "card": [
+   "A composite solid is made of simpler solids joined together. Split it into prisms and cylinders.",
+   "Prism: volume = base area × height. Cylinder: volume = π × r² × h, where r is the radius.",
+   "If parts are joined on, add their volumes. If a part is cut out, such as a hole or notch, subtract its volume.",
+   "Example: a 6 cm by 5 cm by 2 cm block has a 2 cm cube cut from it. Volume = 60 − 8 = 52 cm³."
+  ],
+  "remember": "Find the volume of each part, then add the parts that are joined and subtract the parts that are removed.",
+  "a": {
+   "q": "A rectangular prism measures 5 cm by 4 cm by 3 cm. A cube of side 2 cm is cut out of one corner. What is the volume left?",
+   "opts": [
+    "52 cm³",
+    "68 cm³",
+    "60 cm³",
+    "56 cm³"
+   ],
+   "why": "The prism is 5 × 4 × 3 = 60 cm³ and the cube is 2 × 2 × 2 = 8 cm³. Removing it leaves 60 − 8 = 52 cm³. Adding gives 68 cm³, but the cube is taken away, not joined on.",
+   "clue": "Material is removed, so one volume is taken from the other."
+  },
+  "b": {
+   "d": 3,
+   "q": "A block is 10 cm by 10 cm by 5 cm. A cylindrical hole of radius 2 cm is drilled through the 5 cm height. What is the volume left, to one decimal place?",
+   "opts": [
+    "437.2 cm³",
+    "562.8 cm³",
+    "468.6 cm³",
+    "248.7 cm³"
+   ],
+   "why": "Block = 500 cm³. Hole = π × 2² × 5 = 20π ≈ 62.8 cm³. Volume left = 500 − 62.8 = 437.2 cm³. Using r instead of r² gives 468.6 cm³, which is a common slip.",
+   "clue": "Square the radius before multiplying by the height."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "52 cm³",
+   "also_right": []
+  },
+  "b": {
+   "best": "437.2 cm³",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Question a uses the same volumes as the card's worked example (a 60 cm³ block minus an 8 cm³ cube, giving 52 cm³). A student can match the example's answer without doing the calculation, so the question does not test the idea. Changing the dimensions so the answer differs from the example would fix this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct: 52 cm³ for a, and 437.2 cm³ for b. Question a repeats the card example's numbers and answer, so it should use different dimensions."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Question a uses the same volumes as the card's worked example (a 60 cm³ block minus an 8 cm³ cube, giving 52 cm³). A student can match the example's answer without doing the calculation, so the question does not test the idea. Changing the dimensions so the answer differs from the example would fix this."
+ ],
+ "proposal": {
+  "title": "Volume of composite solids",
+  "card": [
+   "A composite solid is made of simpler solids joined together. Split it into prisms and cylinders.",
+   "Prism: volume = base area × height. Cylinder: volume = π × r² × h, where r is the radius.",
+   "If parts are joined on, add their volumes. If a part is cut out, such as a hole or notch, subtract its volume.",
+   "Example: a 6 cm by 5 cm by 2 cm block has a 2 cm cube cut from it. Volume = 60 − 8 = 52 cm³."
+  ],
+  "remember": "Find the volume of each part, then add the parts that are joined and subtract the parts that are removed.",
+  "a": {
+   "q": "A rectangular prism measures 6 cm by 4 cm by 3 cm. A cube of side 3 cm is cut out of one corner. What is the volume left?",
+   "opts": [
+    "45 cm³",
+    "99 cm³",
+    "72 cm³",
+    "63 cm³"
+   ],
+   "why": "The prism is 6 × 4 × 3 = 72 cm³ and the cube is 3 × 3 × 3 = 27 cm³. Removing it leaves 72 − 27 = 45 cm³. Adding gives 99 cm³, but the cube is taken away, not joined on.",
+   "clue": "Material is removed, so one volume is taken from the other."
+  },
+  "b": {
+   "d": 3,
+   "q": "A block is 10 cm by 10 cm by 5 cm. A cylindrical hole of radius 2 cm is drilled through the 5 cm height. What is the volume left, to one decimal place?",
+   "opts": [
+    "437.2 cm³",
+    "562.8 cm³",
+    "468.6 cm³",
+    "248.7 cm³"
+   ],
+   "why": "Block = 500 cm³. Hole = π × 2² × 5 = 20π ≈ 62.8 cm³. Volume left = 500 − 62.8 = 437.2 cm³. Using r instead of r² gives 468.6 cm³, which is a common slip.",
+   "clue": "Square the radius before multiplying by the height."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "45 cm³",
+    "also_right": []
+   },
+   "b": {
+    "best": "437.2 cm³",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out (72 − 27 = 45 cm³; 500 − 20π ≈ 437.2 cm³), and the distractors match common slips."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Question a uses the same volumes as the card's worked example (a 60 cm³ block minus an 8 cm³ cube, giving 52 cm³). A student can match the example's answer without doing the calculation, so the question does not test the idea. Changing the dimensions so the answer differs from the example would fix this."
+   }
+  ],
+  "flags": [
+   "Question a, other: Question a uses the same volumes as the card's worked example (a 60 cm³ block minus an 8 cm³ cube, giving 52 cm³). A student can match the example's answer without doing the calculation, so the question does not test the idea. Changing the dimensions so the answer differs from the example would fix this."
+  ]
+ },
+ "final": {
+  "title": "Volume of composite solids",
+  "card": [
+   "A composite solid is made of simpler solids joined together. Split it into prisms and cylinders.",
+   "Prism: volume = base area × height. Cylinder: volume = π × r² × h, where r is the radius.",
+   "If parts are joined on, add their volumes. If a part is cut out, such as a hole or notch, subtract its volume.",
+   "Example: a 6 cm by 5 cm by 2 cm block has a 2 cm cube cut from it. Volume = 60 − 8 = 52 cm³."
+  ],
+  "remember": "Find the volume of each part, then add the parts that are joined and subtract the parts that are removed.",
+  "a": {
+   "q": "A rectangular prism measures 6 cm by 4 cm by 3 cm. A cube of side 3 cm is cut out of one corner. What is the volume left?",
+   "opts": [
+    "45 cm³",
+    "99 cm³",
+    "72 cm³",
+    "63 cm³"
+   ],
+   "why": "The prism is 6 × 4 × 3 = 72 cm³ and the cube is 3 × 3 × 3 = 27 cm³. Removing it leaves 72 − 27 = 45 cm³. Adding gives 99 cm³, but the cube is taken away, not joined on.",
+   "clue": "Material is removed, so one volume is taken from the other."
+  },
+  "b": {
+   "d": 3,
+   "q": "A block is 10 cm by 10 cm by 5 cm. A cylindrical hole of radius 2 cm is drilled through the 5 cm height. What is the volume left, to one decimal place?",
+   "opts": [
+    "437.2 cm³",
+    "562.8 cm³",
+    "468.6 cm³",
+    "248.7 cm³"
+   ],
+   "why": "Block = 500 cm³. Hole = π × 2² × 5 = 20π ≈ 62.8 cm³. Volume left = 500 − 62.8 = 437.2 cm³. Using r instead of r² gives 468.6 cm³, which is a common slip.",
+   "clue": "Square the radius before multiplying by the height."
+  }
+ },
+ "cleared_by": "recheck"
+}

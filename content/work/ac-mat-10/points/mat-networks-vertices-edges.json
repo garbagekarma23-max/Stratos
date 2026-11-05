@@ -1,0 +1,156 @@
+{
+ "id": "mat-networks-vertices-edges",
+ "title": "Networks, vertices and edges",
+ "brief": "eb31319b4a38",
+ "shortlist": [
+  [
+   "mat-network-terms",
+   0.725
+  ],
+  [
+   "mat-vertices-edges-degree",
+   0.551
+  ],
+  [
+   "mat-graph-theory-specialist",
+   0.501
+  ],
+  [
+   "mat-trees",
+   0.427
+  ],
+  [
+   "mat-trees-algorithms",
+   0.427
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 may adapt mat-network-terms, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:03Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "confirm": 0.0101,
+  "write": 0.00471,
+  "check": 0.00725
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-network-terms",
+  "changes": [
+   "Remove the weighted network line from the card, because the brief covers only vertices, edges and degree.",
+   "Replace question b, which asks about weights, with a question about vertices or edges that matches the brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same vertices, edges and degree at a suitable depth, but it also adds weighted networks, which the new point does not cover, so it needs trimming.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points cover vertices, edges and degree but each adds a further idea that one of its questions tests: weighted edges in one and the sum-of-degrees rule in the other, so both are broader than this point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Networks, vertices and edges",
+  "card": [
+   "A network shows connections. Each point is a vertex, and each line joining two vertices is an edge. Towns joined by roads make a network: the towns are vertices and the roads are edges.",
+   [
+    "Degree",
+    "the degree of a vertex is the number of edges that meet at it. Count the edges touching the vertex."
+   ],
+   "Example: a network has vertices P, Q, R and S. The edges are PQ, PR, PS and QR. P meets three edges, so its degree is 3. S meets only PS, so its degree is 1.",
+   "Add up all the degrees and you get twice the number of edges, because every edge has two ends. Here the degrees are 3, 2, 2 and 1, which total 8, and there are 4 edges."
+  ],
+  "remember": "Vertices are points, edges are lines, and degree counts the edges at a vertex.",
+  "a": {
+   "q": "A network has vertices A, B, C and D. Its edges are AB, AC, AD and BC. What is the degree of vertex A?",
+   "opts": [
+    "3",
+    "4",
+    "2",
+    "1"
+   ],
+   "why": "Three edges meet at A: AB, AC and AD. The edge BC does not touch A, so it is not counted. Counting all 4 edges would give the number of edges, not the degree of A.",
+   "clue": "Count only the edges that have A as an end."
+  },
+  "b": {
+   "d": 3,
+   "q": "A network of walking tracks has 6 edges. What is the total of the degrees of all its vertices?",
+   "opts": [
+    "12",
+    "6",
+    "3",
+    "36"
+   ],
+   "why": "Every edge has two ends, so each edge adds 2 to the total of the degrees. 6 × 2 = 12. A total of 6 would count each edge only once.",
+   "clue": "Each edge has two ends, and each end adds to a degree."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3",
+   "also_right": []
+  },
+  "b": {
+   "best": "12",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's example degrees (3, 2, 2, 1, totalling 8 for 4 edges) check out, and both questions have a single correct answer (3 and 12) that matches the explanations."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Networks, vertices and edges",
+  "card": [
+   "A network shows connections. Each point is a vertex, and each line joining two vertices is an edge. Towns joined by roads make a network: the towns are vertices and the roads are edges.",
+   [
+    "Degree",
+    "the degree of a vertex is the number of edges that meet at it. Count the edges touching the vertex."
+   ],
+   "Example: a network has vertices P, Q, R and S. The edges are PQ, PR, PS and QR. P meets three edges, so its degree is 3. S meets only PS, so its degree is 1.",
+   "Add up all the degrees and you get twice the number of edges, because every edge has two ends. Here the degrees are 3, 2, 2 and 1, which total 8, and there are 4 edges."
+  ],
+  "remember": "Vertices are points, edges are lines, and degree counts the edges at a vertex.",
+  "a": {
+   "q": "A network has vertices A, B, C and D. Its edges are AB, AC, AD and BC. What is the degree of vertex A?",
+   "opts": [
+    "3",
+    "4",
+    "2",
+    "1"
+   ],
+   "why": "Three edges meet at A: AB, AC and AD. The edge BC does not touch A, so it is not counted. Counting all 4 edges would give the number of edges, not the degree of A.",
+   "clue": "Count only the edges that have A as an end."
+  },
+  "b": {
+   "d": 3,
+   "q": "A network of walking tracks has 6 edges. What is the total of the degrees of all its vertices?",
+   "opts": [
+    "12",
+    "6",
+    "3",
+    "36"
+   ],
+   "why": "Every edge has two ends, so each edge adds 2 to the total of the degrees. 6 × 2 = 12. A total of 6 would count each edge only once.",
+   "clue": "Each edge has two ends, and each end adds to a degree."
+  }
+ },
+ "cleared_by": "checker"
+}

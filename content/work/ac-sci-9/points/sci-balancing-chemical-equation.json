@@ -1,0 +1,200 @@
+{
+ "id": "sci-balancing-chemical-equation",
+ "title": "Balancing a chemical equation",
+ "brief": "f73f4b45c59a",
+ "shortlist": [
+  [
+   "chem-balanced-equations",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:45Z new, match",
+  "2026-11-04T09:36:59Z match: Claude Haiku 5.5 says reuse chem-balanced-equations, so to the Opus match check, as every reuse is",
+  "2026-11-04T09:47:14Z confirm: Claude Opus 5.5 may reuse chem-balanced-equations, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt chem-balanced-equations (2 changes)",
+  "2026-11-05T06:08:56Z claude-code review: adapting chem-balanced-equations on the next run",
+  "2026-11-05T06:46:39Z adapt: done",
+  "2026-11-05T06:53:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "confirm": 0.00503,
+  "adapt": 0.00345,
+  "check": 0.00976
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "chem-balanced-equations",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea, balancing by changing coefficients only and conserving mass, at a level simple enough for Year 9, and both questions are fair for this course, though it was written for a Year 11 NSW course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "chem-balanced-equations",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches exactly this idea: equal atoms of each type on both sides, balanced by changing coefficients and never subscripts. It uses simple examples and terms that suit Year 9, and both questions are fair for these students.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "chem-balanced-equations",
+  "changes": [
+   "Mention that atoms are rearranged, not made or lost, but leave explaining conservation of mass to its own point in this chapter.",
+   "Make question a about why each type of atom must appear in the same number on both sides, rather than about mass being conserved."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches balancing with coefficients, never subscripts, at a depth Year 9 can handle, but it explains conservation of mass, which is its own point in this chapter.",
+   "item": "0d47b64fca94c880",
+   "result": "decided",
+   "saved": {
+    "id": "sci-balancing-chemical-equation",
+    "title": "Balancing a chemical equation",
+    "brief": "f73f4b45c59a",
+    "shortlist": [
+     [
+      "chem-balanced-equations",
+      0.237
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00024,
+     "confirm": 0.00503
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "chem-balanced-equations",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank card teaches the same idea, balancing by changing coefficients only and conserving mass, at a level simple enough for Year 9, and both questions are fair for this course, though it was written for a Year 11 NSW course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "chem-balanced-equations",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank card teaches exactly this idea: equal atoms of each type on both sides, balanced by changing coefficients and never subscripts. It uses simple examples and terms that suit Year 9, and both questions are fair for these students.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "2654eb933f8f374e"
+  }
+ ],
+ "draft": {
+  "title": "Balanced equations",
+  "card": [
+   "In a chemical reaction, atoms are rearranged. They are not made or lost, so each type of atom is still there after the reaction.",
+   "A balanced equation shows this. It has the same number of each type of atom on both sides of the arrow.",
+   "To balance an equation, change the coefficients, the big numbers in front of formulas. Never change the small subscripts inside a formula, because that would make a different substance.",
+   "Example: 2H₂ + O₂ → 2H₂O has 4 H atoms and 2 O atoms on each side. H₂ + O₂ → H₂O is not balanced, because the left has 2 O atoms and the right has 1."
+  ],
+  "remember": "Atoms are not lost or gained, so balance by changing coefficients only.",
+  "a": {
+   "q": "Why must each type of atom appear in the same number on both sides of a balanced equation?",
+   "opts": [
+    "Atoms are only rearranged, never made or lost",
+    "Each reactant must have the same mass as each product",
+    "Molecules are never made or lost, so counts must match",
+    "Subscripts in each formula must match on both sides"
+   ],
+   "why": "Atoms are only rearranged in a reaction, so each type of atom must appear in the same number on both sides. The number of molecules can change, as in 2H₂ + O₂ → 2H₂O, so equal molecule counts are not required.",
+   "clue": "Think about what happens to atoms during a reaction."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia tries to balance H₂ + O₂ → H₂O by rewriting the product as H₂O₂. Why is this not a correct way to balance it?",
+   "opts": [
+    "Changing a subscript makes a different substance",
+    "Subscripts should be changed on the reactant side only",
+    "H₂O₂ has more atoms than the reactants",
+    "Only coefficients on the left side may be changed"
+   ],
+   "why": "H₂O₂ is hydrogen peroxide, not water, so Mia has changed the reaction instead of balancing it. Balancing uses coefficients, which change the amount of a substance but not what it is.",
+   "clue": "What does a subscript tell you about a formula?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Atoms are only rearranged, never made or lost",
+   "also_right": []
+  },
+  "b": {
+   "best": "Changing a subscript makes a different substance",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Balanced equations",
+  "card": [
+   "In a chemical reaction, atoms are rearranged. They are not made or lost, so each type of atom is still there after the reaction.",
+   "A balanced equation shows this. It has the same number of each type of atom on both sides of the arrow.",
+   "To balance an equation, change the coefficients, the big numbers in front of formulas. Never change the small subscripts inside a formula, because that would make a different substance.",
+   "Example: 2H₂ + O₂ → 2H₂O has 4 H atoms and 2 O atoms on each side. H₂ + O₂ → H₂O is not balanced, because the left has 2 O atoms and the right has 1."
+  ],
+  "remember": "Atoms are not lost or gained, so balance by changing coefficients only.",
+  "a": {
+   "q": "Why must each type of atom appear in the same number on both sides of a balanced equation?",
+   "opts": [
+    "Atoms are only rearranged, never made or lost",
+    "Each reactant must have the same mass as each product",
+    "Molecules are never made or lost, so counts must match",
+    "Subscripts in each formula must match on both sides"
+   ],
+   "why": "Atoms are only rearranged in a reaction, so each type of atom must appear in the same number on both sides. The number of molecules can change, as in 2H₂ + O₂ → 2H₂O, so equal molecule counts are not required.",
+   "clue": "Think about what happens to atoms during a reaction."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia tries to balance H₂ + O₂ → H₂O by rewriting the product as H₂O₂. Why is this not a correct way to balance it?",
+   "opts": [
+    "Changing a subscript makes a different substance",
+    "Subscripts should be changed on the reactant side only",
+    "H₂O₂ has more atoms than the reactants",
+    "Only coefficients on the left side may be changed"
+   ],
+   "why": "H₂O₂ is hydrogen peroxide, not water, so Mia has changed the reaction instead of balancing it. Balancing uses coefficients, which change the amount of a substance but not what it is.",
+   "clue": "What does a subscript tell you about a formula?"
+  }
+ }
+}

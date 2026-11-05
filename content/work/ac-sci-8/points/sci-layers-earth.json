@@ -1,0 +1,405 @@
+{
+ "id": "sci-layers-earth",
+ "title": "Layers of the Earth",
+ "brief": "c9be4a909cb2",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:44Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:13Z write: done",
+  "2026-11-04T09:58:33Z check: flagged",
+  "2026-11-04T14:58:53Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (a other)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00481,
+  "check": 0.01126,
+  "fix": 0.017,
+  "recheck": 0.01154
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Plates reach a little deeper than the crust, but not far' fits only one option, so it gives the answer away without testing the idea.",
+ "rejected": {
+  "title": "Layers of the Earth",
+  "card": [
+   [
+    "Crust",
+    "The thin, rocky outer layer of the Earth. It is the layer we live on, and it is thinnest under the oceans."
+   ],
+   [
+    "Mantle",
+    "The thick layer under the crust. It is hot, solid rock, but it can flow very slowly over long periods of time."
+   ],
+   [
+    "Core",
+    "The centre of the Earth, made mostly of metal, mainly iron and nickel."
+   ],
+   "The crust and the very top of the mantle are cool and rigid. Together they are broken into large pieces called plates."
+  ],
+  "remember": "Crust, mantle, core from the outside in. Plates are crust plus the top of the mantle.",
+  "a": {
+   "q": "Which layers make up the Earth's plates?",
+   "opts": [
+    "The crust and the top of the mantle",
+    "The crust on its own",
+    "The mantle and the core",
+    "The crust and the whole mantle"
+   ],
+   "why": "The plates are made of the crust together with the cool, rigid top of the mantle. The crust on its own is tempting, but the plates reach down into the top of the mantle as well.",
+   "clue": "Plates reach a little deeper than the crust, but not far."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says the Earth's plates float on a sea of liquid rock in the mantle. What is wrong with this idea?",
+   "opts": [
+    "The mantle is solid rock, though it moves very slowly",
+    "The mantle is cold rock that cannot move at all",
+    "The plates sit on the core rather than the mantle",
+    "The mantle is made mostly of iron and nickel metal"
+   ],
+   "why": "The mantle is hot, solid rock that can flow very slowly over long periods, so it is not a liquid sea. Saying it cannot move at all is tempting, but the mantle does flow slowly. Iron and nickel make up the core, not the mantle.",
+   "clue": "Think about whether mantle rock is solid or liquid."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Plates reach a little deeper than the crust, but not far' fits only one option, so it gives the answer away without testing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Layers of the Earth",
+     "card": [
+      [
+       "Crust",
+       "The thin, rocky outer layer of the Earth. It is the layer we live on, and it is thinnest under the oceans."
+      ],
+      [
+       "Mantle",
+       "The thick, hot layer under the crust. It is solid rock, but it flows very slowly over long periods of time."
+      ],
+      [
+       "Core",
+       "The centre of the Earth, made mostly of metal, mainly iron and nickel."
+      ],
+      "The crust and the very top of the mantle are cool and rigid. Together they are broken into large pieces called plates."
+     ],
+     "remember": "Crust, mantle, core from the outside in. The rigid plates are crust plus top mantle.",
+     "a": {
+      "q": "Which part of the Earth is made up of the crust and the top of the mantle, broken into large pieces?",
+      "opts": [
+       "The rigid plates",
+       "The core",
+       "The flowing mantle",
+       "The inner crust"
+      ],
+      "why": "The crust and the top of the mantle are rigid and are broken into pieces called plates. The flowing mantle is tempting, but it lies below the plates and moves very slowly, so it is not rigid.",
+      "clue": "Think about which part is rigid and cracked into pieces."
+     },
+     "b": {
+      "d": 3,
+      "q": "Rock in the mantle is solid, yet it can slowly flow. A student says the plates must sit on a layer of liquid. Which statement is correct?",
+      "opts": [
+       "The mantle is hot solid rock that flows very slowly",
+       "The mantle is a thin layer of runny liquid rock",
+       "The mantle is a layer of cold rock that cannot move",
+       "The mantle is made mostly of iron and nickel metal"
+      ],
+      "why": "The card says the mantle is solid rock that flows very slowly because it is hot. Calling it runny liquid is tempting because it can flow, but it is not liquid like water. Iron and nickel make up the core, not the mantle.",
+      "clue": "Solid rock can still flow if it is hot and given enough time."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The rigid plates",
+      "also_right": []
+     },
+     "b": {
+      "best": "The mantle is hot solid rock that flows very slowly",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem opens with 'Rock in the mantle is solid, yet it can slowly flow', which is the right option. A student can match it without knowing the idea. The clue repeats it too."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think about which part is rigid' points straight at the only option containing 'rigid', so it gives the answer away."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct. Question b's stem states the answer outright, and question a's clue echoes the word 'rigid' from the right option, so both give away their answers."
+    },
+    "flags": [
+     "Question b, wording: The stem opens with 'Rock in the mantle is solid, yet it can slowly flow', which is the right option. A student can match it without knowing the idea. The clue repeats it too.",
+     "Question a, other: The clue 'Think about which part is rigid' points straight at the only option containing 'rigid', so it gives the answer away."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Layers of the Earth",
+     "card": [
+      [
+       "Crust",
+       "The thin, rocky outer layer of the Earth. It is the layer we live on, and it is thinnest under the oceans."
+      ],
+      [
+       "Mantle",
+       "The thick layer under the crust. It is hot, solid rock, but it can flow very slowly over long periods of time."
+      ],
+      [
+       "Core",
+       "The centre of the Earth, made mostly of metal, mainly iron and nickel."
+      ],
+      "The crust and the very top of the mantle are cool and rigid. Together they are broken into large pieces called plates."
+     ],
+     "remember": "Crust, mantle, core from the outside in. Plates are crust plus the top of the mantle.",
+     "a": {
+      "q": "Which layers make up the Earth's plates?",
+      "opts": [
+       "The crust and the top of the mantle",
+       "The crust on its own",
+       "The mantle and the core",
+       "The crust and the whole mantle"
+      ],
+      "why": "The plates are made of the crust together with the cool, rigid top of the mantle. The crust on its own is tempting, but the plates reach down into the top of the mantle as well.",
+      "clue": "Plates reach a little deeper than the crust, but not far."
+     },
+     "b": {
+      "d": 3,
+      "q": "A student says the Earth's plates float on a sea of liquid rock in the mantle. What is wrong with this idea?",
+      "opts": [
+       "The mantle is solid rock, though it moves very slowly",
+       "The mantle is cold rock that cannot move at all",
+       "The plates sit on the core rather than the mantle",
+       "The mantle is made mostly of iron and nickel metal"
+      ],
+      "why": "The mantle is hot, solid rock that can flow very slowly over long periods, so it is not a liquid sea. Saying it cannot move at all is tempting, but the mantle does flow slowly. Iron and nickel make up the core, not the mantle.",
+      "clue": "Think about whether mantle rock is solid or liquid."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The crust and the top of the mantle",
+       "also_right": []
+      },
+      "b": {
+       "best": "The mantle is solid rock, though it moves very slowly",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Plates reach a little deeper than the crust, but not far' fits only one option, so it gives the answer away without testing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both questions are correct. The clue for question a fits only the right option, so it gives the answer away."
+     },
+     "flags": [
+      "Question a, other: The clue 'Plates reach a little deeper than the crust, but not far' fits only one option, so it gives the answer away without testing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "Layers of the Earth",
+    "card": [
+     [
+      "Crust",
+      "The thin, rocky outer layer of the Earth. It is the layer we live on, and it is thinnest under the oceans."
+     ],
+     [
+      "Mantle",
+      "The thick layer under the crust. It is hot, solid rock, but it can flow very slowly over long periods of time."
+     ],
+     [
+      "Core",
+      "The centre of the Earth, made mostly of metal, mainly iron and nickel."
+     ],
+     "The crust and the very top of the mantle are cool and rigid. Together they are broken into large pieces called plates."
+    ],
+    "remember": "Crust, mantle, core from the outside in. Plates are crust plus the top of the mantle.",
+    "a": {
+     "q": "A plate is one of the large pieces of the Earth's rigid outer shell. Which layers is a plate made of?",
+     "opts": [
+      "The crust and the top of the mantle",
+      "The crust and the whole of the mantle",
+      "The mantle and the outer part of the core",
+      "Only the thin crust under land and sea"
+     ],
+     "why": "The plates are made of the crust together with the cool, rigid top of the mantle. The crust on its own is tempting, but the plates reach down into the top of the mantle as well. The rest of the mantle is hot and can flow, so it is not part of the plates.",
+     "clue": "Which layers does the card call cool and rigid?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Jack thinks the plates float on an ocean of melted rock inside the mantle. Which fact shows his idea is wrong?",
+     "opts": [
+      "The mantle is solid rock, though it can flow very slowly",
+      "The mantle is cold, hard rock that cannot flow at all",
+      "The plates rest on the core, not on the mantle under them",
+      "The mantle is made mostly of the metals iron and nickel"
+     ],
+     "why": "The mantle is hot, solid rock that can flow very slowly over long periods, so it is not an ocean of melted rock. Saying it cannot flow at all is tempting, but the mantle does flow slowly. Iron and nickel make up the core, not the mantle.",
+     "clue": "Is the rock under the plates solid or liquid?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The crust and the top of the mantle",
+     "also_right": []
+    },
+    "b": {
+     "best": "The mantle is solid rock, though it can flow very slowly",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Layers of the Earth",
+  "card": [
+   [
+    "Crust",
+    "The thin, rocky outer layer of the Earth. It is the layer we live on, and it is thinnest under the oceans."
+   ],
+   [
+    "Mantle",
+    "The thick layer under the crust. It is hot, solid rock, but it can flow very slowly over long periods of time."
+   ],
+   [
+    "Core",
+    "The centre of the Earth, made mostly of metal, mainly iron and nickel."
+   ],
+   "The crust and the very top of the mantle are cool and rigid. Together they are broken into large pieces called plates."
+  ],
+  "remember": "Crust, mantle, core from the outside in. Plates are crust plus the top of the mantle.",
+  "a": {
+   "q": "A plate is one of the large pieces of the Earth's rigid outer shell. Which layers is a plate made of?",
+   "opts": [
+    "The crust and the top of the mantle",
+    "The crust and the whole of the mantle",
+    "The mantle and the outer part of the core",
+    "Only the thin crust under land and sea"
+   ],
+   "why": "The plates are made of the crust together with the cool, rigid top of the mantle. The crust on its own is tempting, but the plates reach down into the top of the mantle as well. The rest of the mantle is hot and can flow, so it is not part of the plates.",
+   "clue": "Which layers does the card call cool and rigid?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack thinks the plates float on an ocean of melted rock inside the mantle. Which fact shows his idea is wrong?",
+   "opts": [
+    "The mantle is solid rock, though it can flow very slowly",
+    "The mantle is cold, hard rock that cannot flow at all",
+    "The plates rest on the core, not on the mantle under them",
+    "The mantle is made mostly of the metals iron and nickel"
+   ],
+   "why": "The mantle is hot, solid rock that can flow very slowly over long periods, so it is not an ocean of melted rock. Saying it cannot flow at all is tempting, but the mantle does flow slowly. Iron and nickel make up the core, not the mantle.",
+   "clue": "Is the rock under the plates solid or liquid?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The crust and the top of the mantle",
+   "also_right": []
+  },
+  "b": {
+   "best": "The mantle is solid rock, though it can flow very slowly",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Layers of the Earth",
+  "card": [
+   [
+    "Crust",
+    "The thin, rocky outer layer of the Earth. It is the layer we live on, and it is thinnest under the oceans."
+   ],
+   [
+    "Mantle",
+    "The thick layer under the crust. It is hot, solid rock, but it can flow very slowly over long periods of time."
+   ],
+   [
+    "Core",
+    "The centre of the Earth, made mostly of metal, mainly iron and nickel."
+   ],
+   "The crust and the very top of the mantle are cool and rigid. Together they are broken into large pieces called plates."
+  ],
+  "remember": "Crust, mantle, core from the outside in. Plates are crust plus the top of the mantle.",
+  "a": {
+   "q": "A plate is one of the large pieces of the Earth's rigid outer shell. Which layers is a plate made of?",
+   "opts": [
+    "The crust and the top of the mantle",
+    "The crust and the whole of the mantle",
+    "The mantle and the outer part of the core",
+    "Only the thin crust under land and sea"
+   ],
+   "why": "The plates are made of the crust together with the cool, rigid top of the mantle. The crust on its own is tempting, but the plates reach down into the top of the mantle as well. The rest of the mantle is hot and can flow, so it is not part of the plates.",
+   "clue": "Which layers does the card call cool and rigid?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack thinks the plates float on an ocean of melted rock inside the mantle. Which fact shows his idea is wrong?",
+   "opts": [
+    "The mantle is solid rock, though it can flow very slowly",
+    "The mantle is cold, hard rock that cannot flow at all",
+    "The plates rest on the core, not on the mantle under them",
+    "The mantle is made mostly of the metals iron and nickel"
+   ],
+   "why": "The mantle is hot, solid rock that can flow very slowly over long periods, so it is not an ocean of melted rock. Saying it cannot flow at all is tempting, but the mantle does flow slowly. Iron and nickel make up the core, not the mantle.",
+   "clue": "Is the rock under the plates solid or liquid?"
+  }
+ },
+ "checked_by": "claude-code"
+}

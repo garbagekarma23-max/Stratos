@@ -1,0 +1,225 @@
+{
+ "id": "mat-multiplying-dividing-powers",
+ "title": "Multiplying and dividing powers",
+ "brief": "ef96a2679fa6",
+ "shortlist": [
+  [
+   "mat-index-laws",
+   0.247
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:09Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00522,
+  "check": 0.01061,
+  "fix": 0.01884,
+  "recheck": 0.00676
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers the same multiply and divide rule but also teaches power of a power and power of a product, and its depth and second question go beyond this Year 8 brief, so it is broader than the new point and no bank point fits exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Multiplying and dividing powers",
+  "card": [
+   "A power has a base and an index. In 3⁴, the base is 3 and the index is 4, so 3⁴ = 3 × 3 × 3 × 3.",
+   [
+    "Multiply",
+    "when the bases are the same, add the indices. 3⁴ × 3² = 3⁽⁴⁺²⁾ = 3⁶. This works because 3⁴ has four 3s and 3² has two more, so there are six 3s in all."
+   ],
+   [
+    "Divide",
+    "when the bases are the same, subtract the indices. 5⁷ ÷ 5³ = 5⁽⁷⁻³⁾ = 5⁴. Three of the seven 5s cancel with the three 5s below."
+   ],
+   "Only the indices are added or subtracted. The base stays the same. These rules need the same base, so they do not apply to 2⁴ × 3² as it stands."
+  ],
+  "remember": "Same base: add the indices to multiply, subtract them to divide, and keep the base.",
+  "a": {
+   "q": "Which is 7⁵ × 7³ written as a single power?",
+   "opts": [
+    "7⁸",
+    "7²",
+    "7¹⁵",
+    "49⁸"
+   ],
+   "why": "Multiplying powers with the same base adds the indices: 5 + 3 = 8, so the answer is 7⁸. 7¹⁵ is tempting, but it comes from multiplying the indices, which is not the rule here.",
+   "clue": "The base stays the same. What do you do to the indices?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is 6⁹ ÷ 6⁴ × 6² written as a single power?",
+   "opts": [
+    "6⁷",
+    "6³",
+    "6¹¹",
+    "6⁸"
+   ],
+   "why": "Work from left to right: 6⁹ ÷ 6⁴ = 6⁵, then 6⁵ × 6² = 6⁷. Check: 9 − 4 + 2 = 7. 6³ comes from subtracting both 4 and 2 instead of adding the 2.",
+   "clue": "Divide means subtract the indices. Multiply means add them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "7⁸",
+   "also_right": []
+  },
+  "b": {
+   "best": "6⁷",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never shows dividing and multiplying in one expression, or the left-to-right rule for ÷ and ×. Some students may read 6⁹ ÷ 6⁴ × 6² as 6⁹ ÷ (6⁴ × 6²) and pick 6³. The why relies on 'work from left to right', which the card does not teach."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. Question b mixes ÷ and × and depends on the left-to-right order of operations, which the card does not teach. Consider adding a mixed example to the card or rewording the question."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The card never shows dividing and multiplying in one expression, or the left-to-right rule for ÷ and ×. Some students may read 6⁹ ÷ 6⁴ × 6² as 6⁹ ÷ (6⁴ × 6²) and pick 6³. The why relies on 'work from left to right', which the card does not teach."
+ ],
+ "proposal": {
+  "title": "Multiplying and dividing powers",
+  "card": [
+   "A power has a base and an index. In 3⁴, the base is 3 and the index is 4, so 3⁴ = 3 × 3 × 3 × 3.",
+   [
+    "Multiply",
+    "when the bases are the same, add the indices. 3⁴ × 3² = 3⁽⁴⁺²⁾ = 3⁶. This works because 3⁴ has four 3s and 3² has two more, so there are six 3s in all."
+   ],
+   [
+    "Divide",
+    "when the bases are the same, subtract the indices. 5⁷ ÷ 5³ = 5⁽⁷⁻³⁾ = 5⁴. Three of the seven 5s cancel with the three 5s below."
+   ],
+   "Only the indices change. The base stays the same. The rules need the same base, so they do not apply to 2⁴ × 3² as it stands. If there are brackets, work them out first."
+  ],
+  "remember": "Same base: add the indices to multiply, subtract them to divide, and keep the base.",
+  "a": {
+   "q": "Which is 7⁵ × 7³ written as a single power?",
+   "opts": [
+    "7⁸",
+    "7²",
+    "7¹⁵",
+    "49⁸"
+   ],
+   "why": "Multiplying powers with the same base adds the indices: 5 + 3 = 8, so the answer is 7⁸. 7¹⁵ is tempting, but it comes from multiplying the indices, which is not the rule here.",
+   "clue": "The base stays the same. What do you do to the indices?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is (2⁵ × 2⁶) ÷ 2³ written as a single power?",
+   "opts": [
+    "2⁸",
+    "2¹⁴",
+    "2²⁷",
+    "4⁸"
+   ],
+   "why": "Do the brackets first: 2⁵ × 2⁶ = 2¹¹. Then 2¹¹ ÷ 2³ = 2⁸, as 11 − 3 = 8. 2¹⁴ is tempting, but it comes from adding the 3 when dividing means subtracting it.",
+   "clue": "Multiply means add the indices. Divide means subtract them."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "7⁸",
+    "also_right": []
+   },
+   "b": {
+    "best": "2⁸",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never shows dividing and multiplying in one expression, or the left-to-right rule for ÷ and ×. Some students may read 6⁹ ÷ 6⁴ × 6² as 6⁹ ÷ (6⁴ × 6²) and pick 6³. The why relies on 'work from left to right', which the card does not teach."
+   }
+  ],
+  "flags": [
+   "Question b, level: The card never shows dividing and multiplying in one expression, or the left-to-right rule for ÷ and ×. Some students may read 6⁹ ÷ 6⁴ × 6² as 6⁹ ÷ (6⁴ × 6²) and pick 6³. The why relies on 'work from left to right', which the card does not teach."
+  ]
+ },
+ "final": {
+  "title": "Multiplying and dividing powers",
+  "card": [
+   "A power has a base and an index. In 3⁴, the base is 3 and the index is 4, so 3⁴ = 3 × 3 × 3 × 3.",
+   [
+    "Multiply",
+    "when the bases are the same, add the indices. 3⁴ × 3² = 3⁽⁴⁺²⁾ = 3⁶. This works because 3⁴ has four 3s and 3² has two more, so there are six 3s in all."
+   ],
+   [
+    "Divide",
+    "when the bases are the same, subtract the indices. 5⁷ ÷ 5³ = 5⁽⁷⁻³⁾ = 5⁴. Three of the seven 5s cancel with the three 5s below."
+   ],
+   "Only the indices change. The base stays the same. The rules need the same base, so they do not apply to 2⁴ × 3² as it stands. If there are brackets, work them out first."
+  ],
+  "remember": "Same base: add the indices to multiply, subtract them to divide, and keep the base.",
+  "a": {
+   "q": "Which is 7⁵ × 7³ written as a single power?",
+   "opts": [
+    "7⁸",
+    "7²",
+    "7¹⁵",
+    "49⁸"
+   ],
+   "why": "Multiplying powers with the same base adds the indices: 5 + 3 = 8, so the answer is 7⁸. 7¹⁵ is tempting, but it comes from multiplying the indices, which is not the rule here.",
+   "clue": "The base stays the same. What do you do to the indices?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is (2⁵ × 2⁶) ÷ 2³ written as a single power?",
+   "opts": [
+    "2⁸",
+    "2¹⁴",
+    "2²⁷",
+    "4⁸"
+   ],
+   "why": "Do the brackets first: 2⁵ × 2⁶ = 2¹¹. Then 2¹¹ ÷ 2³ = 2⁸, as 11 − 3 = 8. 2¹⁴ is tempting, but it comes from adding the 3 when dividing means subtracting it.",
+   "clue": "Multiply means add the indices. Divide means subtract them."
+  }
+ },
+ "cleared_by": "recheck"
+}

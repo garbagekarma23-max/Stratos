@@ -1,0 +1,136 @@
+{
+ "id": "mat-conditional-probability-from-tree",
+ "title": "Conditional probability from a tree diagram",
+ "brief": "bb87a2ad126b",
+ "shortlist": [
+  [
+   "mat-conditional-probability",
+   0.391
+  ],
+  [
+   "mat-conditional-probability-2",
+   0.391
+  ],
+  [
+   "mat-law-total-probability",
+   0.317
+  ],
+  [
+   "mat-multi-stage-experiments",
+   0.293
+  ],
+  [
+   "mat-sample-spaces-probability",
+   0.288
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: done",
+  "2026-11-04T09:58:29Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "write": 0.00576,
+  "check": 0.00731
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Multi-stage experiments, covers tree diagrams without replacement and multiplying along paths, but it never teaches that second-stage branches are conditional probabilities, which is the central idea of the new point, and the conditional probability cards teach the P(A|B) formula and tables rather than tree diagrams.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Conditional probability from trees",
+  "card": [
+   "In a tree diagram without replacement, the first branches show the chance of the first outcome. Nothing is put back, so the counts change.",
+   "The second branches show probabilities given the first outcome. Use the new total and the new count after the first pick.",
+   "Multiply along a path to get the chance of both outcomes happening in that order.",
+   "Example: a bag has 3 red and 2 blue counters. Two are drawn without replacement. P(red then red) = 3/5 × 2/4 = 6/20 = 3/10."
+  ],
+  "remember": "Second branches are given the first pick. Multiply along a path for the combined chance.",
+  "a": {
+   "q": "A bag has 4 green and 3 yellow counters. One green is drawn and not replaced. What is P(green on the second draw | green first)?",
+   "opts": [
+    "3/6",
+    "4/7",
+    "4/6",
+    "3/7"
+   ],
+   "why": "After one green is removed, 3 green and 3 yellow remain, so there are 6 counters and 3 are green. 4/7 ignores the first draw.",
+   "clue": "Count what is left in the bag after the first draw."
+  },
+  "b": {
+   "d": 3,
+   "q": "A box has 5 milk and 3 dark chocolates. Mia eats two at random, one after the other. What is P(milk then dark)?",
+   "opts": [
+    "15/56",
+    "5/8",
+    "3/7",
+    "15/64"
+   ],
+   "why": "P(milk first) = 5/8. Then 7 remain, 3 of them dark, so 3/7. Multiply: 5/8 × 3/7 = 15/56. 15/64 forgets that one chocolate has been eaten.",
+   "clue": "Multiply along the path, using the new total for the second branch."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3/6",
+   "also_right": []
+  },
+  "b": {
+   "best": "15/56",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out (3/6 and 15/56), the card's example is correct, and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Conditional probability from trees",
+  "card": [
+   "In a tree diagram without replacement, the first branches show the chance of the first outcome. Nothing is put back, so the counts change.",
+   "The second branches show probabilities given the first outcome. Use the new total and the new count after the first pick.",
+   "Multiply along a path to get the chance of both outcomes happening in that order.",
+   "Example: a bag has 3 red and 2 blue counters. Two are drawn without replacement. P(red then red) = 3/5 × 2/4 = 6/20 = 3/10."
+  ],
+  "remember": "Second branches are given the first pick. Multiply along a path for the combined chance.",
+  "a": {
+   "q": "A bag has 4 green and 3 yellow counters. One green is drawn and not replaced. What is P(green on the second draw | green first)?",
+   "opts": [
+    "3/6",
+    "4/7",
+    "4/6",
+    "3/7"
+   ],
+   "why": "After one green is removed, 3 green and 3 yellow remain, so there are 6 counters and 3 are green. 4/7 ignores the first draw.",
+   "clue": "Count what is left in the bag after the first draw."
+  },
+  "b": {
+   "d": 3,
+   "q": "A box has 5 milk and 3 dark chocolates. Mia eats two at random, one after the other. What is P(milk then dark)?",
+   "opts": [
+    "15/56",
+    "5/8",
+    "3/7",
+    "15/64"
+   ],
+   "why": "P(milk first) = 5/8. Then 7 remain, 3 of them dark, so 3/7. Multiply: 5/8 × 3/7 = 15/56. 15/64 forgets that one chocolate has been eaten.",
+   "clue": "Multiply along the path, using the new total for the second branch."
+  }
+ },
+ "cleared_by": "checker"
+}

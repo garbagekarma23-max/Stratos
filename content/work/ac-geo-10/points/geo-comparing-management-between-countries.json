@@ -1,0 +1,367 @@
+{
+ "id": "geo-comparing-management-between-countries",
+ "title": "Comparing management between countries",
+ "brief": "ba824ff59c7d",
+ "shortlist": [
+  [
+   "geo-aboriginal-torres-strait-islander",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:31Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:59Z write: failed the content check, writing again",
+  "2026-11-04T09:58:25Z write: done",
+  "2026-11-04T10:08:00Z check: flagged",
+  "2026-11-04T10:10:49Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01164,
+  "check": 0.01294,
+  "fix": 0.02244,
+  "recheck": 0.0114
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches Aboriginal and Torres Strait Islander care for Country, not a comparison of how the same environmental problem is managed differently across countries, so no existing point teaches the new idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The right option's gloss ('set rules on where people can build') is tailored to the stem's 'no such rule' and 'build there'. The other options have generic glosses, so a student can match words without knowing the idea.",
+ "rejected": {
+  "title": "Comparing management between countries",
+  "card": [
+   "Countries often face the same problem, such as waste or floods, but they may manage it in different ways.",
+   "Money affects what a country can build or buy. Technology affects the tools it can use, such as recycling plants or flood warning systems.",
+   "Laws set the rules, such as bans on dumping or limits on building on floodplains. Values shape what people think matters most, such as protecting nature or protecting jobs.",
+   "To compare two countries, look at the same problem and ask how money, technology, laws and values led to different responses."
+  ],
+  "remember": "Same problem, different management: money, technology, laws and values shape the response.",
+  "a": {
+   "q": "Country X bans new homes on floodplains. Country Y has no such rule, so people build there. Which factor explains this difference?",
+   "opts": [
+    "Laws, which set rules on where people can build",
+    "Money, which decides what a country can afford",
+    "Technology, which decides the tools a country has",
+    "Values, which shape what people think matters most"
+   ],
+   "why": "The difference is a rule about where homes can go, and rules come from laws. Money and technology affect what a country can build or use, but neither is a rule that limits building.",
+   "clue": "Is the difference about a rule, a cost or a tool?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Country A has a lot of money and recycling technology, and Country B has little of either. Both have a rubbish problem. What is the most likely difference in how they manage waste?",
+   "opts": [
+    "Country A builds recycling plants, while B relies on dumps",
+    "Country B builds recycling plants, while A relies on dumps",
+    "Country B recycles more because it has less money to spend",
+    "Both use the same methods because they share the problem"
+   ],
+   "why": "Money and technology let Country A build recycling plants, while Country B is likely to use cheaper methods such as dumps. The reversed option gets this backwards, and sharing a problem does not mean countries manage it the same way.",
+   "clue": "Ask which country can afford to build recycling plants."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The right option's gloss ('set rules on where people can build') is tailored to the stem's 'no such rule' and 'build there'. The other options have generic glosses, so a student can match words without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Comparing management between countries",
+     "card": [
+      "Countries often face the same problem, such as waste or floods, but they may manage it in different ways.",
+      "Money affects what a country can build or buy. Technology affects the tools it can use, such as recycling plants or flood warning systems.",
+      "Laws set the rules, such as bans on dumping or limits on building on floodplains. Values shape what people think matters most, such as protecting nature or protecting jobs.",
+      "To compare two countries, look at the same problem and ask how money, technology, laws and values led to different responses."
+     ],
+     "remember": "Same problem, different management: money, technology, laws and values shape the response.",
+     "a": {
+      "q": "Two countries face river floods. One builds levees and runs a warning system, while the other relies on local volunteers. What best explains the difference?",
+      "opts": [
+       "Differences in money, technology, laws or values",
+       "The floods are a different problem in each country",
+       "Only one country has people who care about floods",
+       "Floods can be managed in only one correct way"
+      ],
+      "why": "The problem is the same, so the difference comes from what each country can afford, which tools it has, its laws and what it values. Saying floods can be managed in only one way ignores these differences.",
+      "clue": "The problem is the same, so look at the factors behind the response."
+     },
+     "b": {
+      "d": 3,
+      "q": "Country A has a lot of money and recycling technology, and Country B has little of either. Both have a rubbish problem. What is the most likely difference in how they manage waste?",
+      "opts": [
+       "Country A can build recycling plants, while B may use dumps",
+       "Country B will recycle more because it has less money",
+       "Both must use identical methods to deal with waste",
+       "Country A has less rubbish so it needs no plan"
+      ],
+      "why": "Money and technology let Country A build recycling plants, while Country B may have to use cheaper methods such as dumps. Less money does not cause more recycling, and countries do not have to use the same methods.",
+      "clue": "Ask what each country can afford to build."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Differences in money, technology, laws or values",
+      "also_right": []
+     },
+     "b": {
+      "best": "Country A can build recycling plants, while B may use dumps",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the longest and the only one hedged with 'can' and 'may'. The distractors use absolute words ('needs no plan', 'must use identical methods', 'will recycle more'), so a student could pick the answer from the wording alone."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "Two distractors use 'only' ('only one correct way', 'Only one country has people who care'), where the card says countries 'may' manage problems differently. The absolute wording marks them as wrong, which makes the right option easier to spot without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the intended answers are correct. In both questions the distractors use absolute words ('only', 'must', 'will') while the right option in (b) is hedged and slightly longest, so students could guess the answers from the wording."
+    },
+    "flags": [
+     "Question b, wording: The right option is the longest and the only one hedged with 'can' and 'may'. The distractors use absolute words ('needs no plan', 'must use identical methods', 'will recycle more'), so a student could pick the answer from the wording alone.",
+     "Question a, wording: Two distractors use 'only' ('only one correct way', 'Only one country has people who care'), where the card says countries 'may' manage problems differently. The absolute wording marks them as wrong, which makes the right option easier to spot without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Comparing management between countries",
+     "card": [
+      "Countries often face the same problem, such as waste or floods, but they may manage it in different ways.",
+      "Money affects what a country can build or buy. Technology affects the tools it can use, such as recycling plants or flood warning systems.",
+      "Laws set the rules, such as bans on dumping or limits on building on floodplains. Values shape what people think matters most, such as protecting nature or protecting jobs.",
+      "To compare two countries, look at the same problem and ask how money, technology, laws and values led to different responses."
+     ],
+     "remember": "Same problem, different management: money, technology, laws and values shape the response.",
+     "a": {
+      "q": "Country X bans new homes on floodplains. Country Y has no such rule, so people build there. Which factor explains this difference?",
+      "opts": [
+       "Laws, which set rules on where people can build",
+       "Money, which decides what a country can afford",
+       "Technology, which decides the tools a country has",
+       "Values, which shape what people think matters most"
+      ],
+      "why": "The difference is a rule about where homes can go, and rules come from laws. Money and technology affect what a country can build or use, but neither is a rule that limits building.",
+      "clue": "Is the difference about a rule, a cost or a tool?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Country A has a lot of money and recycling technology, and Country B has little of either. Both have a rubbish problem. What is the most likely difference in how they manage waste?",
+      "opts": [
+       "Country A builds recycling plants, while B relies on dumps",
+       "Country B builds recycling plants, while A relies on dumps",
+       "Country B recycles more because it has less money to spend",
+       "Both use the same methods because they share the problem"
+      ],
+      "why": "Money and technology let Country A build recycling plants, while Country B is likely to use cheaper methods such as dumps. The reversed option gets this backwards, and sharing a problem does not mean countries manage it the same way.",
+      "clue": "Ask which country can afford to build recycling plants."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Laws, which set rules on where people can build",
+       "also_right": []
+      },
+      "b": {
+       "best": "Country A builds recycling plants, while B relies on dumps",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The right option's gloss ('set rules on where people can build') is tailored to the stem's 'no such rule' and 'build there'. The other options have generic glosses, so a student can match words without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer that matches the card. In question a, the correct option's wording echoes the stem ('rule', 'build'), which gives the answer away."
+     },
+     "flags": [
+      "Question a, wording: The right option's gloss ('set rules on where people can build') is tailored to the stem's 'no such rule' and 'build there'. The other options have generic glosses, so a student can match words without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Comparing management between countries",
+    "card": [
+     "Countries often face the same problem, such as waste or floods, but they may manage it in different ways.",
+     "Money affects what a country can build or buy. Technology affects the tools it can use, such as recycling plants or flood warning systems.",
+     "Laws set the rules, such as bans on dumping or limits on building on floodplains. Values shape what people think matters most, such as protecting nature or protecting jobs.",
+     "To compare two countries, look at the same problem and ask how money, technology, laws and values led to different responses."
+    ],
+    "remember": "Same problem, different management: money, technology, laws and values shape the response.",
+    "a": {
+     "q": "Country X fines anyone who builds a new home on a floodplain. Country Y does not, so homes go up there. Which factor does this difference show most directly?",
+     "opts": [
+      "Laws, the rules a country sets and enforces",
+      "Money, the funds a country has to spend",
+      "Technology, the tools a country can use",
+      "Values, what a country's people think matters most"
+     ],
+     "why": "A fine for building on a floodplain comes from a law that limits where homes can go. Money and technology affect what a country can afford or use, and values shape what people care about, but the difference here is a legal limit on building.",
+     "clue": "Is the difference about a rule, a cost, a tool or a belief?"
+    },
+    "b": {
+     "d": 2,
+     "q": "Country A has plenty of money and recycling technology. Country B has little of either. Both struggle with growing rubbish. How are they most likely to manage waste differently?",
+     "opts": [
+      "Country A builds recycling plants, while B relies on dumps",
+      "Country B builds recycling plants, while A relies on dumps",
+      "Country B recycles more because it has less money to spend",
+      "Both use the same methods because they share the problem"
+     ],
+     "why": "Money and technology let Country A build recycling plants, while Country B is likely to use cheaper methods such as dumps. The reversed option gets this backwards, and sharing a problem does not mean countries manage it the same way.",
+     "clue": "Ask which country can afford to build recycling plants."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Laws, the rules a country sets and enforces",
+     "also_right": []
+    },
+    "b": {
+     "best": "Country A builds recycling plants, while B relies on dumps",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Comparing management between countries",
+  "card": [
+   "Countries often face the same problem, such as waste or floods, but they may manage it in different ways.",
+   "Money affects what a country can build or buy. Technology affects the tools it can use, such as recycling plants or flood warning systems.",
+   "Laws set the rules, such as bans on dumping or limits on building on floodplains. Values shape what people think matters most, such as protecting nature or protecting jobs.",
+   "To compare two countries, look at the same problem and ask how money, technology, laws and values led to different responses."
+  ],
+  "remember": "Same problem, different management: money, technology, laws and values shape the response.",
+  "a": {
+   "q": "Country X fines anyone who builds a new home on a floodplain. Country Y does not, so homes go up there. Which factor does this difference show most directly?",
+   "opts": [
+    "Laws, the rules a country sets and enforces",
+    "Money, the funds a country has to spend",
+    "Technology, the tools a country can use",
+    "Values, what a country's people think matters most"
+   ],
+   "why": "A fine for building on a floodplain comes from a law that limits where homes can go. Money and technology affect what a country can afford or use, and values shape what people care about, but the difference here is a legal limit on building.",
+   "clue": "Is the difference about a rule, a cost, a tool or a belief?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Country A has plenty of money and recycling technology. Country B has little of either. Both struggle with growing rubbish. How are they most likely to manage waste differently?",
+   "opts": [
+    "Country A builds recycling plants, while B relies on dumps",
+    "Country B builds recycling plants, while A relies on dumps",
+    "Country B recycles more because it has less money to spend",
+    "Both use the same methods because they share the problem"
+   ],
+   "why": "Money and technology let Country A build recycling plants, while Country B is likely to use cheaper methods such as dumps. The reversed option gets this backwards, and sharing a problem does not mean countries manage it the same way.",
+   "clue": "Ask which country can afford to build recycling plants."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Laws, the rules a country sets and enforces",
+   "also_right": []
+  },
+  "b": {
+   "best": "Country A builds recycling plants, while B relies on dumps",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Comparing management between countries",
+  "card": [
+   "Countries often face the same problem, such as waste or floods, but they may manage it in different ways.",
+   "Money affects what a country can build or buy. Technology affects the tools it can use, such as recycling plants or flood warning systems.",
+   "Laws set the rules, such as bans on dumping or limits on building on floodplains. Values shape what people think matters most, such as protecting nature or protecting jobs.",
+   "To compare two countries, look at the same problem and ask how money, technology, laws and values led to different responses."
+  ],
+  "remember": "Same problem, different management: money, technology, laws and values shape the response.",
+  "a": {
+   "q": "Country X fines anyone who builds a new home on a floodplain. Country Y does not, so homes go up there. Which factor does this difference show most directly?",
+   "opts": [
+    "Laws, the rules a country sets and enforces",
+    "Money, the funds a country has to spend",
+    "Technology, the tools a country can use",
+    "Values, what a country's people think matters most"
+   ],
+   "why": "A fine for building on a floodplain comes from a law that limits where homes can go. Money and technology affect what a country can afford or use, and values shape what people care about, but the difference here is a legal limit on building.",
+   "clue": "Is the difference about a rule, a cost, a tool or a belief?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Country A has plenty of money and recycling technology. Country B has little of either. Both struggle with growing rubbish. How are they most likely to manage waste differently?",
+   "opts": [
+    "Country A builds recycling plants, while B relies on dumps",
+    "Country B builds recycling plants, while A relies on dumps",
+    "Country B recycles more because it has less money to spend",
+    "Both use the same methods because they share the problem"
+   ],
+   "why": "Money and technology let Country A build recycling plants, while Country B is likely to use cheaper methods such as dumps. The reversed option gets this backwards, and sharing a problem does not mean countries manage it the same way.",
+   "clue": "Ask which country can afford to build recycling plants."
+  }
+ },
+ "checked_by": "claude-code"
+}

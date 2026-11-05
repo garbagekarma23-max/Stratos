@@ -1,0 +1,151 @@
+{
+ "id": "ecb-unemployment-rate",
+ "title": "The unemployment rate",
+ "brief": "c162948860e8",
+ "shortlist": [
+  [
+   "e-labour",
+   0.466
+  ],
+  [
+   "eco-natural-rate-unemployment",
+   0.347
+  ],
+  [
+   "e-unemployment",
+   0.325
+  ],
+  [
+   "eco-hidden-long-term-unemployment",
+   0.292
+  ],
+  [
+   "eco-measuring-labour-market",
+   0.283
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 may adapt e-labour, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:46:53Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:20Z write: done",
+  "2026-11-04T10:07:56Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.00926,
+  "write": 0.00466,
+  "check": 0.00653
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "e-labour",
+  "changes": [
+   "Replace the Canada figures in question a with an Australian example, such as unemployed and employed counts from the ABS Labour Force Survey, so the question suits an Australian Year 10 course.",
+   "Replace the Cairo example in question b with an Australian student, such as one working few hours and wanting full-time work in an Australian town or city.",
+   "Check that the claimant count and underemployment content suits the Year 10 Australian Curriculum depth, and trim it if the course does not cover it, since the brief only asks for the unemployment rate."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same unemployment rate definition at a suitable depth, but its examples are set in Canada and Egypt and need to be made Australian for this course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points (e-labour and eco-measuring-labour-market) define the unemployment rate. But both are broader, adding the claimant count, underemployment, participation or under-utilisation at senior depth, so a focused Year 10 point on the unemployment rate alone should be new.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The unemployment rate",
+  "card": [
+   "The labour force is everyone aged 15 or over who has a job or is actively looking for one. People who are not working and not looking, such as full-time students and retirees, are outside it.",
+   "A person is unemployed if they have no job, are looking for work and are available to start. Someone who works even a few hours a week is counted as employed.",
+   "Unemployment rate = unemployed people ÷ labour force × 100. For example, 50 unemployed people in a labour force of 1000 gives a rate of 5%.",
+   "The rate can fall when people stop looking for work, because they leave the labour force. A lower rate does not always mean more people have jobs."
+  ],
+  "remember": "Unemployment rate = unemployed people as a share of the labour force, not of the whole population.",
+  "a": {
+   "q": "Which person is counted as unemployed?",
+   "opts": [
+    "Leila, who has no job and is applying for work",
+    "Sam, who is retired and does not want a job",
+    "Priya, who is studying full time and not job hunting",
+    "Tom, who works six hours a week at a bakery"
+   ],
+   "why": "Leila has no job, is looking for work and is available, so she is unemployed. Tom is employed because he works some hours, even though it is not many.",
+   "clue": "Unemployed people want work and are looking for it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in Tasmania has a labour force of 2000 people, and 100 of them are unemployed. What is its unemployment rate?",
+   "opts": [
+    "5%",
+    "10%",
+    "20%",
+    "95%"
+   ],
+   "why": "The rate is unemployed people divided by the labour force: 100 ÷ 2000 × 100 = 5%. The tempting answer is 95%, which is the share of the labour force with a job.",
+   "clue": "Divide by the labour force, then multiply by 100."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Leila, who has no job and is applying for work",
+   "also_right": []
+  },
+  "b": {
+   "best": "5%",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The unemployment rate",
+  "card": [
+   "The labour force is everyone aged 15 or over who has a job or is actively looking for one. People who are not working and not looking, such as full-time students and retirees, are outside it.",
+   "A person is unemployed if they have no job, are looking for work and are available to start. Someone who works even a few hours a week is counted as employed.",
+   "Unemployment rate = unemployed people ÷ labour force × 100. For example, 50 unemployed people in a labour force of 1000 gives a rate of 5%.",
+   "The rate can fall when people stop looking for work, because they leave the labour force. A lower rate does not always mean more people have jobs."
+  ],
+  "remember": "Unemployment rate = unemployed people as a share of the labour force, not of the whole population.",
+  "a": {
+   "q": "Which person is counted as unemployed?",
+   "opts": [
+    "Leila, who has no job and is applying for work",
+    "Sam, who is retired and does not want a job",
+    "Priya, who is studying full time and not job hunting",
+    "Tom, who works six hours a week at a bakery"
+   ],
+   "why": "Leila has no job, is looking for work and is available, so she is unemployed. Tom is employed because he works some hours, even though it is not many.",
+   "clue": "Unemployed people want work and are looking for it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town in Tasmania has a labour force of 2000 people, and 100 of them are unemployed. What is its unemployment rate?",
+   "opts": [
+    "5%",
+    "10%",
+    "20%",
+    "95%"
+   ],
+   "why": "The rate is unemployed people divided by the labour force: 100 ÷ 2000 × 100 = 5%. The tempting answer is 95%, which is the share of the labour force with a job.",
+   "clue": "Divide by the labour force, then multiply by 100."
+  }
+ },
+ "cleared_by": "checker"
+}

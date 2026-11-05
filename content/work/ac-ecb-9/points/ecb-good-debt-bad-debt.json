@@ -1,0 +1,227 @@
+{
+ "id": "ecb-good-debt-bad-debt",
+ "title": "Good debt and bad debt",
+ "brief": "453f8a7f32ec",
+ "shortlist": [
+  [
+   "acc-returns-bad-debts-discounts",
+   0.312
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, match",
+  "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: failed the content check, writing again",
+  "2026-11-04T09:58:22Z write: done",
+  "2026-11-04T10:07:57Z check: flagged",
+  "2026-11-04T10:10:48Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01134,
+  "check": 0.00933,
+  "fix": 0.01494,
+  "recheck": 0.00726
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers accounting treatment of returns, bad debts and discounts, while the new point asks students to distinguish good debt that funds growing assets or income from bad debt that funds depreciating goods, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Good debt and bad debt",
+  "card": [
+   "Debt is money you borrow and must pay back, usually with interest. Interest is the extra amount the lender charges for the loan.",
+   [
+    "Good debt",
+    "borrowing to pay for something that grows in value or earns income, such as study or a home. It may help you earn or own more later."
+   ],
+   [
+    "Bad debt",
+    "borrowing to pay for things that lose value, such as clothes or a gadget. It often has high interest, so you can end up paying much more than the price."
+   ],
+   "The line is not always clear. A good debt can still cause trouble if the repayments are more than a person can afford."
+  ],
+  "remember": "Good debt buys something that grows in value or earns income. Bad debt buys things that lose value.",
+  "a": {
+   "q": "Which loan is the best example of good debt?",
+   "opts": [
+    "A loan to pay for a course that helps you get a better job",
+    "A loan to buy a new game console",
+    "A loan to pay for a holiday",
+    "A loan to buy a party outfit"
+   ],
+   "why": "A course can raise future income, so the debt pays for something that earns. A console, holiday and outfit lose value or give no lasting return.",
+   "clue": "Which loan might help you earn more later?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo puts a gadget on a store card at a high rate of interest and pays only a little each month. Why is this often bad debt?",
+   "opts": [
+    "The gadget loses value while interest adds to the cost",
+    "The gadget grows in value, so the interest is a waste",
+    "All borrowing is bad debt, whatever it pays for",
+    "Store cards cannot charge interest on a gadget"
+   ],
+   "why": "A gadget loses value, and high interest means Jo pays far more than the price. Not all borrowing is bad debt, as study or a home may grow in value or earn income.",
+   "clue": "Think about what happens to the gadget's value and to the interest."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A loan to pay for a course that helps you get a better job",
+   "also_right": []
+  },
+  "b": {
+   "best": "The gadget loses value while interest adds to the cost",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and the only one with a qualifying detail ('that helps you get a better job'), so a student could pick it without knowing the idea. The other options are short ('a holiday', 'a new game console', 'a party outfit')."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out and both answers are clear. In question a, the right option stands out as the longest and the only one with an added detail, so it gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is clearly the longest and the only one with a qualifying detail ('that helps you get a better job'), so a student could pick it without knowing the idea. The other options are short ('a holiday', 'a new game console', 'a party outfit')."
+ ],
+ "proposal": {
+  "title": "Good debt and bad debt",
+  "card": [
+   "Debt is money you borrow and must pay back, usually with interest. Interest is the extra amount the lender charges for the loan.",
+   [
+    "Good debt",
+    "borrowing to pay for something that grows in value or earns income, such as study or a home. It may help you earn or own more later."
+   ],
+   [
+    "Bad debt",
+    "borrowing to pay for things that lose value, such as clothes or a gadget. It often has high interest, so you can end up paying much more than the price."
+   ],
+   "The line is not always clear. A good debt can still cause trouble if the repayments are more than a person can afford."
+  ],
+  "remember": "Good debt buys something that grows in value or earns income. Bad debt buys things that lose value.",
+  "a": {
+   "q": "Which loan is the best example of good debt?",
+   "opts": [
+    "A loan to pay for a TAFE course in plumbing",
+    "A loan to pay for a holiday on the Gold Coast",
+    "A loan to buy a new game console and games",
+    "A loan to buy a designer outfit for a party"
+   ],
+   "why": "A plumbing course is study, which can help a person earn more income later. A holiday is used up, and a console or an outfit loses value, so borrowing for them is bad debt.",
+   "clue": "Which one could still be paying off for you years later?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo puts a gadget on a store card at a high rate of interest and pays only a little each month. Why is this often bad debt?",
+   "opts": [
+    "The gadget loses value while interest adds to the cost",
+    "The gadget grows in value, so the interest is a waste",
+    "All borrowing is bad debt, whatever it pays for",
+    "Store cards cannot charge interest on a gadget"
+   ],
+   "why": "A gadget loses value, and high interest means Jo pays far more than the price. Not all borrowing is bad debt, as study or a home may grow in value or earn income.",
+   "clue": "Think about what happens to the gadget's value and to the interest."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A loan to pay for a TAFE course in plumbing",
+    "also_right": []
+   },
+   "b": {
+    "best": "The gadget loses value while interest adds to the cost",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest and the only one with a qualifying detail ('that helps you get a better job'), so a student could pick it without knowing the idea. The other options are short ('a holiday', 'a new game console', 'a party outfit')."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is clearly the longest and the only one with a qualifying detail ('that helps you get a better job'), so a student could pick it without knowing the idea. The other options are short ('a holiday', 'a new game console', 'a party outfit')."
+  ]
+ },
+ "final": {
+  "title": "Good debt and bad debt",
+  "card": [
+   "Debt is money you borrow and must pay back, usually with interest. Interest is the extra amount the lender charges for the loan.",
+   [
+    "Good debt",
+    "borrowing to pay for something that grows in value or earns income, such as study or a home. It may help you earn or own more later."
+   ],
+   [
+    "Bad debt",
+    "borrowing to pay for things that lose value, such as clothes or a gadget. It often has high interest, so you can end up paying much more than the price."
+   ],
+   "The line is not always clear. A good debt can still cause trouble if the repayments are more than a person can afford."
+  ],
+  "remember": "Good debt buys something that grows in value or earns income. Bad debt buys things that lose value.",
+  "a": {
+   "q": "Which loan is the best example of good debt?",
+   "opts": [
+    "A loan to pay for a TAFE course in plumbing",
+    "A loan to pay for a holiday on the Gold Coast",
+    "A loan to buy a new game console and games",
+    "A loan to buy a designer outfit for a party"
+   ],
+   "why": "A plumbing course is study, which can help a person earn more income later. A holiday is used up, and a console or an outfit loses value, so borrowing for them is bad debt.",
+   "clue": "Which one could still be paying off for you years later?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo puts a gadget on a store card at a high rate of interest and pays only a little each month. Why is this often bad debt?",
+   "opts": [
+    "The gadget loses value while interest adds to the cost",
+    "The gadget grows in value, so the interest is a waste",
+    "All borrowing is bad debt, whatever it pays for",
+    "Store cards cannot charge interest on a gadget"
+   ],
+   "why": "A gadget loses value, and high interest means Jo pays far more than the price. Not all borrowing is bad debt, as study or a home may grow in value or earn income.",
+   "clue": "Think about what happens to the gadget's value and to the interest."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,393 @@
+{
+ "id": "geo-transport-technology-access",
+ "title": "Transport, technology and access",
+ "brief": "01f55c3c8b94",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:32Z new, write",
+  "2026-11-04T09:36:51Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:00Z write: done",
+  "2026-11-04T09:58:25Z check: flagged",
+  "2026-11-04T10:08:01Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (a other)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00469,
+  "check": 0.01154,
+  "fix": 0.01635,
+  "recheck": 0.01015
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Think about what people can do without leaving home' echoes the only option that says 'from home', so a student can match the words without understanding the idea.",
+ "rejected": {
+  "title": "Transport, technology and access",
+  "card": [
+   "Access means how easily people can reach services and activities, such as a doctor, a school, a job or a sports club.",
+   [
+    "Transport",
+    "Roads, buses, trains and trams carry people to places. Where these are missing, unreliable or far apart, getting to services takes more time and effort."
+   ],
+   [
+    "Technology",
+    "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It only helps where a connection is available and works well."
+   ],
+   "Good transport and technology make it easier to reach services and activities, so a place is usually easier to live in. Without them, a place can be harder to live in."
+  ],
+  "remember": "Good roads, public transport and internet can make it easier to reach what people need.",
+  "a": {
+   "q": "Why can a good internet connection make a place easier to live in?",
+   "opts": [
+    "People can reach services like lessons from home",
+    "It brings hospitals and shops closer to homes",
+    "It makes buses and trains run more often",
+    "It makes travelling by road quicker and safer"
+   ],
+   "why": "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It does not move hospitals or shops, and it does not change buses, trains or roads. Those are part of transport, not technology.",
+   "clue": "Think about what people can do without leaving home."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ben lives on a farm in the Northern Territory. The nearest bus stop is a long drive away and his internet often drops out. What is the likely effect on his access to services?",
+   "opts": [
+    "It is harder for him to reach services and activities",
+    "It is easier for him to reach services and activities",
+    "It makes no difference to how he reaches services",
+    "It means he needs fewer services than other people"
+   ],
+   "why": "Without nearby public transport or a reliable internet connection, Ben has fewer ways to reach services, so his place can be harder to live in. Having poor access does not mean he needs fewer services. It means getting to them takes more time and effort.",
+   "clue": "Ask what ways Ben has to reach a service, in person or online."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Think about what people can do without leaving home' echoes the only option that says 'from home', so a student can match the words without understanding the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Transport, technology and access",
+     "card": [
+      "Access means how easily people can reach services and activities, such as a doctor, a school, a job or a sports club.",
+      [
+       "Transport",
+       "Roads, buses, trains and trams carry people to places. Where these are missing, unreliable or far apart, getting to services takes more time and effort."
+      ],
+      [
+       "Technology",
+       "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It only helps where a connection is available and works well."
+      ],
+      "Good transport and technology make it easier to reach services and activities, so a place is usually easier to live in. Without them, a place can be harder to live in."
+     ],
+     "remember": "Roads, public transport and the internet decide how easily people reach what they need.",
+     "a": {
+      "q": "Why does a good internet connection make a place easier to live in?",
+      "opts": [
+       "People can use some services without travelling",
+       "People no longer need any roads or public transport",
+       "Services move closer to every home in the area",
+       "Everyone in the place can reach every service in person"
+      ],
+      "why": "The internet lets people do some things from home, such as online lessons or video calls with a doctor. It does not replace every service or remove the need for roads, so the option about not needing transport is wrong.",
+      "clue": "Think about what people can do without leaving home."
+     },
+     "b": {
+      "d": 2,
+      "q": "Ben lives on a farm in the Northern Territory. The nearest bus stop is a long drive away and his internet often drops out. What is the likely effect on his access to services?",
+      "opts": [
+       "It is harder for him to reach services and activities",
+       "It is easier for him to reach services and activities",
+       "It makes no difference to how he reaches services",
+       "It means he does not need any services"
+      ],
+      "why": "Without nearby public transport or a reliable internet connection, Ben has fewer ways to reach services. This makes the place harder to live in. Having no easy access does not mean he needs fewer services.",
+      "clue": "Ask what ways Ben has to reach a service, in person or online."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "People can use some services without travelling",
+      "also_right": []
+     },
+     "b": {
+      "best": "It is harder for him to reach services and activities",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "\"decide how easily people reach what they need\" is stronger than the card, which says good transport and technology make a place \"usually\" easier to live in and that without them a place \"can be\" harder."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one with a qualifier (\"some\"). The three distractors all use absolutes (\"every home\", \"everyone… every service\", \"no longer need any\"), so a student could pick the answer without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Why (b) says \"This makes the place harder to live in\" as a certainty, where the card says a place \"can be\" harder to live in."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer. The remember line and why (b) overstate the card's \"usually\" and \"can\". In question a, the right option is the only one without an absolute, so it is easy to guess."
+    },
+    "flags": [
+     "Remember, wording: \"decide how easily people reach what they need\" is stronger than the card, which says good transport and technology make a place \"usually\" easier to live in and that without them a place \"can be\" harder.",
+     "Question a, wording: The right option is the only one with a qualifier (\"some\"). The three distractors all use absolutes (\"every home\", \"everyone… every service\", \"no longer need any\"), so a student could pick the answer without knowing the idea.",
+     "Question b, wording: Why (b) says \"This makes the place harder to live in\" as a certainty, where the card says a place \"can be\" harder to live in."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Transport, technology and access",
+     "card": [
+      "Access means how easily people can reach services and activities, such as a doctor, a school, a job or a sports club.",
+      [
+       "Transport",
+       "Roads, buses, trains and trams carry people to places. Where these are missing, unreliable or far apart, getting to services takes more time and effort."
+      ],
+      [
+       "Technology",
+       "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It only helps where a connection is available and works well."
+      ],
+      "Good transport and technology make it easier to reach services and activities, so a place is usually easier to live in. Without them, a place can be harder to live in."
+     ],
+     "remember": "Good roads, public transport and internet can make it easier to reach what people need.",
+     "a": {
+      "q": "Why can a good internet connection make a place easier to live in?",
+      "opts": [
+       "People can reach services like lessons from home",
+       "It brings hospitals and shops closer to homes",
+       "It makes buses and trains run more often",
+       "It makes travelling by road quicker and safer"
+      ],
+      "why": "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It does not move hospitals or shops, and it does not change buses, trains or roads. Those are part of transport, not technology.",
+      "clue": "Think about what people can do without leaving home."
+     },
+     "b": {
+      "d": 2,
+      "q": "Ben lives on a farm in the Northern Territory. The nearest bus stop is a long drive away and his internet often drops out. What is the likely effect on his access to services?",
+      "opts": [
+       "It is harder for him to reach services and activities",
+       "It is easier for him to reach services and activities",
+       "It makes no difference to how he reaches services",
+       "It means he needs fewer services than other people"
+      ],
+      "why": "Without nearby public transport or a reliable internet connection, Ben has fewer ways to reach services, so his place can be harder to live in. Having poor access does not mean he needs fewer services. It means getting to them takes more time and effort.",
+      "clue": "Ask what ways Ben has to reach a service, in person or online."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "People can reach services like lessons from home",
+       "also_right": []
+      },
+      "b": {
+       "best": "It is harder for him to reach services and activities",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Think about what people can do without leaving home' echoes the only option that says 'from home', so a student can match the words without understanding the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both answers are sound. The only problem is that the clue for question a gives the answer away by echoing 'home', which appears in just one option."
+     },
+     "flags": [
+      "Question a, other: The clue 'Think about what people can do without leaving home' echoes the only option that says 'from home', so a student can match the words without understanding the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Transport, technology and access",
+    "card": [
+     "Access means how easily people can reach services and activities, such as a doctor, a school, a job or a sports club.",
+     [
+      "Transport",
+      "Roads, buses, trains and trams carry people to places. Where these are missing, unreliable or far apart, getting to services takes more time and effort."
+     ],
+     [
+      "Technology",
+      "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It helps only where a connection is available and works well."
+     ],
+     "Good transport and technology make it easier to reach services and activities, so a place is usually easier to live in. Without them, a place can be harder to live in."
+    ],
+    "remember": "Good roads, public transport and internet can make it easier to reach what people need.",
+    "a": {
+     "q": "How can a reliable internet connection make a place easier to live in?",
+     "opts": [
+      "People can use some services without travelling",
+      "It moves hospitals and shops closer to homes",
+      "It makes local buses and trains run more often",
+      "It makes driving on country roads quicker"
+     ],
+     "why": "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It does not move hospitals or shops, and it does not change buses, trains or roads. Those are part of transport, not technology.",
+     "clue": "What does a video call with a doctor save the patient?"
+    },
+    "b": {
+     "d": 2,
+     "q": "Ben's family farms in the Northern Territory. The nearest bus stop is a long drive away, and the internet often cuts out. How does this affect his access to services?",
+     "opts": [
+      "It is harder for him to reach services and activities",
+      "It is easier for him to reach services and activities",
+      "It makes no difference to how he reaches services",
+      "It means he needs fewer services than other people"
+     ],
+     "why": "Without nearby public transport or a reliable internet connection, Ben has fewer ways to reach services, so his place can be harder to live in. Having poor access does not mean he needs fewer services. It means getting to them takes more time and effort.",
+     "clue": "Ask what ways Ben has to reach a service, in person or online."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "People can use some services without travelling",
+     "also_right": []
+    },
+    "b": {
+     "best": "It is harder for him to reach services and activities",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Transport, technology and access",
+  "card": [
+   "Access means how easily people can reach services and activities, such as a doctor, a school, a job or a sports club.",
+   [
+    "Transport",
+    "Roads, buses, trains and trams carry people to places. Where these are missing, unreliable or far apart, getting to services takes more time and effort."
+   ],
+   [
+    "Technology",
+    "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It helps only where a connection is available and works well."
+   ],
+   "Good transport and technology make it easier to reach services and activities, so a place is usually easier to live in. Without them, a place can be harder to live in."
+  ],
+  "remember": "Good roads, public transport and internet can make it easier to reach what people need.",
+  "a": {
+   "q": "How can a reliable internet connection make a place easier to live in?",
+   "opts": [
+    "People can use some services without travelling",
+    "It moves hospitals and shops closer to homes",
+    "It makes local buses and trains run more often",
+    "It makes driving on country roads quicker"
+   ],
+   "why": "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It does not move hospitals or shops, and it does not change buses, trains or roads. Those are part of transport, not technology.",
+   "clue": "What does a video call with a doctor save the patient?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ben's family farms in the Northern Territory. The nearest bus stop is a long drive away, and the internet often cuts out. How does this affect his access to services?",
+   "opts": [
+    "It is harder for him to reach services and activities",
+    "It is easier for him to reach services and activities",
+    "It makes no difference to how he reaches services",
+    "It means he needs fewer services than other people"
+   ],
+   "why": "Without nearby public transport or a reliable internet connection, Ben has fewer ways to reach services, so his place can be harder to live in. Having poor access does not mean he needs fewer services. It means getting to them takes more time and effort.",
+   "clue": "Ask what ways Ben has to reach a service, in person or online."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "People can use some services without travelling",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is harder for him to reach services and activities",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Transport, technology and access",
+  "card": [
+   "Access means how easily people can reach services and activities, such as a doctor, a school, a job or a sports club.",
+   [
+    "Transport",
+    "Roads, buses, trains and trams carry people to places. Where these are missing, unreliable or far apart, getting to services takes more time and effort."
+   ],
+   [
+    "Technology",
+    "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It helps only where a connection is available and works well."
+   ],
+   "Good transport and technology make it easier to reach services and activities, so a place is usually easier to live in. Without them, a place can be harder to live in."
+  ],
+  "remember": "Good roads, public transport and internet can make it easier to reach what people need.",
+  "a": {
+   "q": "How can a reliable internet connection make a place easier to live in?",
+   "opts": [
+    "People can use some services without travelling",
+    "It moves hospitals and shops closer to homes",
+    "It makes local buses and trains run more often",
+    "It makes driving on country roads quicker"
+   ],
+   "why": "The internet lets people use some services without travelling, such as online lessons or video calls with a doctor. It does not move hospitals or shops, and it does not change buses, trains or roads. Those are part of transport, not technology.",
+   "clue": "What does a video call with a doctor save the patient?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ben's family farms in the Northern Territory. The nearest bus stop is a long drive away, and the internet often cuts out. How does this affect his access to services?",
+   "opts": [
+    "It is harder for him to reach services and activities",
+    "It is easier for him to reach services and activities",
+    "It makes no difference to how he reaches services",
+    "It means he needs fewer services than other people"
+   ],
+   "why": "Without nearby public transport or a reliable internet connection, Ben has fewer ways to reach services, so his place can be harder to live in. Having poor access does not mean he needs fewer services. It means getting to them takes more time and effort.",
+   "clue": "Ask what ways Ben has to reach a service, in person or online."
+  }
+ },
+ "checked_by": "claude-code"
+}

@@ -1,0 +1,150 @@
+{
+ "id": "mat-conditional-probability-from-two",
+ "title": "Conditional probability from a two-way table",
+ "brief": "a26cc0055d95",
+ "shortlist": [
+  [
+   "mat-conditional-probability",
+   0.522
+  ],
+  [
+   "mat-conditional-probability-2",
+   0.522
+  ],
+  [
+   "mat-discrete-probability-distributions",
+   0.298
+  ],
+  [
+   "mat-law-total-probability",
+   0.255
+  ],
+  [
+   "mat-sample-spaces-probability",
+   0.244
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 may adapt mat-conditional-probability, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:03Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.00885,
+  "write": 0.00445,
+  "check": 0.00653
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-conditional-probability",
+  "changes": [
+   "Question a asks students to use the formula P(A | B) = P(A ∩ B)/P(B) with given probabilities, which goes beyond the Year 10 two-way table method, so replace it with a question read from a two-way table.",
+   "The formula and intersection notation in the card are more advanced than the Year 10 focus, so keep the table method as the main teaching approach and present the formula as optional or remove it."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same two-way table method for conditional probability, but its formula-based question and intersection notation go beyond what Year 10 students are expected to know, so it needs small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank points teach conditional probability in full, with the formula P(A ∩ B)/P(B) and a formula-based question, at Year 11 depth, while this Year 10 point is narrower: reading a conditional probability from a two-way table using the condition's row or column as the total.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Conditional probability from a two-way table",
+  "card": [
+   "A two-way table sorts people or things by two features at once. Each cell counts those with both features.",
+   "When a condition is given, only the row or column for that condition counts. That row or column total becomes the new total.",
+   "Probability given the condition = number with both features ÷ total for the condition. Do not use the grand total.",
+   "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. P(Year 7 given bus) = 6/24 = 1/4."
+  ],
+  "remember": "Given a condition, shrink the total to that row or column.",
+  "a": {
+   "q": "A table shows 30 members of a club. 18 are juniors, and 12 of the juniors play netball. What is P(plays netball given junior)?",
+   "opts": [
+    "12/18",
+    "12/30",
+    "18/30",
+    "6/18"
+   ],
+   "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving 12/18. Using 30 would divide by everyone, which ignores the condition.",
+   "clue": "Which group are we told about?"
+  },
+  "b": {
+   "d": 3,
+   "q": "At a Perth school, 50 students were asked about a sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. What is P(football given cricket)?",
+   "opts": [
+    "8/23",
+    "8/20",
+    "8/50",
+    "15/23"
+   ],
+   "why": "Cricket players are 8 + 15 = 23, so that is the total. Of them, 8 play football, giving 8/23. The tempting 8/20 uses the football total, which reverses the condition.",
+   "clue": "Find the total for the group named after the word given."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "12/18",
+   "also_right": []
+  },
+  "b": {
+   "best": "8/23",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers (12/18 and 8/23) are correct, the card's example is accurate, and the distractors are fair."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Conditional probability from a two-way table",
+  "card": [
+   "A two-way table sorts people or things by two features at once. Each cell counts those with both features.",
+   "When a condition is given, only the row or column for that condition counts. That row or column total becomes the new total.",
+   "Probability given the condition = number with both features ÷ total for the condition. Do not use the grand total.",
+   "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. P(Year 7 given bus) = 6/24 = 1/4."
+  ],
+  "remember": "Given a condition, shrink the total to that row or column.",
+  "a": {
+   "q": "A table shows 30 members of a club. 18 are juniors, and 12 of the juniors play netball. What is P(plays netball given junior)?",
+   "opts": [
+    "12/18",
+    "12/30",
+    "18/30",
+    "6/18"
+   ],
+   "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving 12/18. Using 30 would divide by everyone, which ignores the condition.",
+   "clue": "Which group are we told about?"
+  },
+  "b": {
+   "d": 3,
+   "q": "At a Perth school, 50 students were asked about a sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. What is P(football given cricket)?",
+   "opts": [
+    "8/23",
+    "8/20",
+    "8/50",
+    "15/23"
+   ],
+   "why": "Cricket players are 8 + 15 = 23, so that is the total. Of them, 8 play football, giving 8/23. The tempting 8/20 uses the football total, which reverses the condition.",
+   "clue": "Find the total for the group named after the word given."
+  }
+ },
+ "cleared_by": "checker"
+}

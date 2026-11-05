@@ -1,0 +1,364 @@
+{
+ "id": "geo-transport-access",
+ "title": "Transport and access",
+ "brief": "ea51fdf9a17b",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:34Z new, write",
+  "2026-11-04T09:36:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:02Z write: done",
+  "2026-11-04T09:58:26Z check: flagged",
+  "2026-11-04T10:08:02Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:42Z autoreject: rejected, to be written again (b wording, b other)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00474,
+  "check": 0.0114,
+  "fix": 0.02288,
+  "recheck": 0.01288
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The distractor 'As a place locals must leave to find a café or motel' uses 'must', and the card speaks in terms of 'can' and 'may'. The absolute word helps mark this option as wrong without any need to know the idea.\n- Question b, other: Wilga is a real locality in Western Australia (Shire of Boyup Brook), but the question presents a made-up new highway and new businesses there as if they happened. A fictional town name, or a clear 'imagine' framing, would avoid teaching students something false about a real place.",
+ "rejected": {
+  "title": "Transport and access",
+  "card": [
+   "Access is how easily people can reach jobs, services and other places. Roads, flights and public transport all shape it.",
+   "Good transport shortens the time and cost of a trip. A place with frequent trains or buses is easier to reach than one with no regular service.",
+   "Poor access can leave people far from hospitals, schools and work. Some remote towns depend on a long road or a small plane to reach them.",
+   "Transport also changes how people use and see a place. A new road can bring visitors and new businesses, so a quiet town may come to be seen as a busy stop."
+  ],
+  "remember": "Better transport means easier access, and that changes how a place is used and seen.",
+  "a": {
+   "q": "Two towns are the same distance from a city hospital. One has a train every hour. The other has no regular service. Which is true?",
+   "opts": [
+    "The town with the train has better access",
+    "Both towns have the same access to the hospital",
+    "The town without the train has better access",
+    "Neither town has any access to the hospital"
+   ],
+   "why": "Access is about how easily people can reach a place, not just how far away it is. Frequent trains cut the time and cost of the trip, so that town has better access. Equal distance does not mean equal access.",
+   "clue": "Access depends on more than distance."
+  },
+  "b": {
+   "d": 3,
+   "q": "A new highway is built past Wilga, a quiet farming town in Western Australia. Cafés and motels open for drivers. How might people now see Wilga?",
+   "opts": [
+    "As a stopover town for people on the highway",
+    "As a remote town that is hard to reach by road",
+    "As a farming town no one outside the area visits",
+    "As a place locals must leave to find a café or motel"
+   ],
+   "why": "The highway made Wilga easier to reach, and the new cafés and motels serve drivers who stop there. So the town is used and seen as a stopover. It was once a quiet farming town, but the new businesses show outsiders now visit.",
+   "clue": "Who are the new businesses there to serve?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:42Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The distractor 'As a place locals must leave to find a café or motel' uses 'must', and the card speaks in terms of 'can' and 'may'. The absolute word helps mark this option as wrong without any need to know the idea.",
+    "Question b, other: Wilga is a real locality in Western Australia (Shire of Boyup Brook), but the question presents a made-up new highway and new businesses there as if they happened. A fictional town name, or a clear 'imagine' framing, would avoid teaching students something false about a real place."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Transport and access",
+     "card": [
+      "Access is how easily people can reach jobs, services and other places. Roads, flights and public transport all shape it.",
+      "Good transport shortens the time and cost of a trip. A place with frequent trains or buses is easier to reach than one with no regular service.",
+      "Poor access can leave people far from hospitals, schools and work. Some remote towns depend on a long road or a small plane to reach them.",
+      "Transport also changes how people use and see a place. A new road can bring visitors and new businesses, so a quiet town may come to be seen as a busy tourist spot."
+     ],
+     "remember": "Better transport means easier access, and that changes how a place is used and seen.",
+     "a": {
+      "q": "Why does a remote town with no regular bus or train service often have poor access?",
+      "opts": [
+       "Residents take longer and pay more to reach services",
+       "Residents are barred from using hospitals in other towns",
+       "Residents choose to avoid jobs and schools elsewhere",
+       "Residents cannot see the town's surrounding landscape"
+      ],
+      "why": "Without regular transport, trips to jobs and services take more time and cost more. The town is not cut off by rules or by choice, so the options about being barred or choosing to avoid are wrong.",
+      "clue": "Think about the time and cost of each trip."
+     },
+     "b": {
+      "d": 3,
+      "q": "A new highway is built past Wilga, a quiet farming town in Western Australia. Cafés and motels open for travellers. What has the highway most directly changed?",
+      "opts": [
+       "How the town is used and seen, as a stop for travellers",
+       "How far the town sits from the nearest coast",
+       "How much rain falls on the surrounding farmland",
+       "How many people use the town's old airstrip"
+      ],
+      "why": "The highway improved access, which brought travellers and new businesses, so the town is used and seen differently. The highway cannot move the town or change the rainfall, and nothing in the case says airstrip use changed.",
+      "clue": "Which change comes from people being able to reach the town?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Residents take longer and pay more to reach services",
+      "also_right": []
+     },
+     "b": {
+      "best": "How the town is used and seen, as a stop for travellers",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is clearly the longest and the only one with an extra detail ('as a stop for travellers'). It also echoes 'travellers' from the stem and 'used and seen' from the card, so a student could pick it without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "The distractors (distance to the coast, rainfall) are things a highway obviously cannot change, which makes the question too easy for Year 9."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'Think about the time and cost of each trip' points straight to the only option that mentions time and cost, which gives the answer away."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are sound. Question b's right option stands out by length and echoed wording, its distractors are too easy, and question a's clue gives the answer away."
+    },
+    "flags": [
+     "Question b, wording: The right option is clearly the longest and the only one with an extra detail ('as a stop for travellers'). It also echoes 'travellers' from the stem and 'used and seen' from the card, so a student could pick it without knowing the idea.",
+     "Question b, level: The distractors (distance to the coast, rainfall) are things a highway obviously cannot change, which makes the question too easy for Year 9.",
+     "Question a, other: The clue 'Think about the time and cost of each trip' points straight to the only option that mentions time and cost, which gives the answer away."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Transport and access",
+     "card": [
+      "Access is how easily people can reach jobs, services and other places. Roads, flights and public transport all shape it.",
+      "Good transport shortens the time and cost of a trip. A place with frequent trains or buses is easier to reach than one with no regular service.",
+      "Poor access can leave people far from hospitals, schools and work. Some remote towns depend on a long road or a small plane to reach them.",
+      "Transport also changes how people use and see a place. A new road can bring visitors and new businesses, so a quiet town may come to be seen as a busy stop."
+     ],
+     "remember": "Better transport means easier access, and that changes how a place is used and seen.",
+     "a": {
+      "q": "Two towns are the same distance from a city hospital. One has a train every hour. The other has no regular service. Which is true?",
+      "opts": [
+       "The town with the train has better access",
+       "Both towns have the same access to the hospital",
+       "The town without the train has better access",
+       "Neither town has any access to the hospital"
+      ],
+      "why": "Access is about how easily people can reach a place, not just how far away it is. Frequent trains cut the time and cost of the trip, so that town has better access. Equal distance does not mean equal access.",
+      "clue": "Access depends on more than distance."
+     },
+     "b": {
+      "d": 3,
+      "q": "A new highway is built past Wilga, a quiet farming town in Western Australia. Cafés and motels open for drivers. How might people now see Wilga?",
+      "opts": [
+       "As a stopover town for people on the highway",
+       "As a remote town that is hard to reach by road",
+       "As a farming town no one outside the area visits",
+       "As a place locals must leave to find a café or motel"
+      ],
+      "why": "The highway made Wilga easier to reach, and the new cafés and motels serve drivers who stop there. So the town is used and seen as a stopover. It was once a quiet farming town, but the new businesses show outsiders now visit.",
+      "clue": "Who are the new businesses there to serve?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The town with the train has better access",
+       "also_right": []
+      },
+      "b": {
+       "best": "As a stopover town for people on the highway",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The distractor 'As a place locals must leave to find a café or motel' uses 'must', and the card speaks in terms of 'can' and 'may'. The absolute word helps mark this option as wrong without any need to know the idea."
+       },
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "Wilga is a real locality in Western Australia (Shire of Boyup Brook), but the question presents a made-up new highway and new businesses there as if they happened. A fictional town name, or a clear 'imagine' framing, would avoid teaching students something false about a real place."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and the intended answers are clearly right. Question b uses 'must' in a distractor, and it describes an invented highway at a real WA town without saying the scenario is made up."
+     },
+     "flags": [
+      "Question b, wording: The distractor 'As a place locals must leave to find a café or motel' uses 'must', and the card speaks in terms of 'can' and 'may'. The absolute word helps mark this option as wrong without any need to know the idea.",
+      "Question b, other: Wilga is a real locality in Western Australia (Shire of Boyup Brook), but the question presents a made-up new highway and new businesses there as if they happened. A fictional town name, or a clear 'imagine' framing, would avoid teaching students something false about a real place."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Transport and access",
+    "card": [
+     "Access is how easily people can reach jobs, services and other places. Roads, flights and public transport all shape it.",
+     "Good transport shortens the time and cost of a trip. A place with frequent trains or buses is easier to reach than one with no regular service.",
+     "Poor access can leave people far from hospitals, schools and work. Some remote towns depend on a long road or a small plane to reach them.",
+     "Transport also changes how people use and see a place. A new road can bring visitors and new businesses, so a quiet town may come to be seen as a busy stop."
+    ],
+    "remember": "Better transport means easier access, and that changes how a place is used and seen.",
+    "a": {
+     "q": "Two towns lie the same distance from a regional hospital. A bus runs from one every half hour, and the other has no regular service. Which statement is true?",
+     "opts": [
+      "The town with the bus has better access",
+      "Both towns have the same access to the hospital",
+      "The town without the bus has better access",
+      "Neither town has any access to the hospital"
+     ],
+     "why": "Access is about how easily people can reach a place, not just how far away it is. Frequent buses cut the time and cost of the trip, so that town has better access. Equal distance does not mean equal access.",
+     "clue": "Access depends on more than distance."
+    },
+    "b": {
+     "d": 3,
+     "q": "Imagine a new highway is built past a small, quiet farming town in Western Australia. Cafés and motels then open to serve drivers. How might people come to see the town?",
+     "opts": [
+      "As a stopover town for people on the highway",
+      "As a remote town that is hard to reach by road",
+      "As a farming town that outsiders rarely visit",
+      "As a place locals leave to find a café or motel"
+     ],
+     "why": "The highway made the town easier to reach, and the new cafés and motels serve drivers who stop there. So the town may come to be used and seen as a stopover. It was once a quiet farming town, but the new businesses show outsiders now visit.",
+     "clue": "Who are the new businesses there to serve?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The town with the bus has better access",
+     "also_right": []
+    },
+    "b": {
+     "best": "As a stopover town for people on the highway",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Transport and access",
+  "card": [
+   "Access is how easily people can reach jobs, services and other places. Roads, flights and public transport all shape it.",
+   "Good transport shortens the time and cost of a trip. A place with frequent trains or buses is easier to reach than one with no regular service.",
+   "Poor access can leave people far from hospitals, schools and work. Some remote towns depend on a long road or a small plane to reach them.",
+   "Transport also changes how people use and see a place. A new road can bring visitors and new businesses, so a quiet town may come to be seen as a busy stop."
+  ],
+  "remember": "Better transport means easier access, and that changes how a place is used and seen.",
+  "a": {
+   "q": "Two towns lie the same distance from a regional hospital. A bus runs from one every half hour, and the other has no regular service. Which statement is true?",
+   "opts": [
+    "The town with the bus has better access",
+    "Both towns have the same access to the hospital",
+    "The town without the bus has better access",
+    "Neither town has any access to the hospital"
+   ],
+   "why": "Access is about how easily people can reach a place, not just how far away it is. Frequent buses cut the time and cost of the trip, so that town has better access. Equal distance does not mean equal access.",
+   "clue": "Access depends on more than distance."
+  },
+  "b": {
+   "d": 3,
+   "q": "Imagine a new highway is built past a small, quiet farming town in Western Australia. Cafés and motels then open to serve drivers. How might people come to see the town?",
+   "opts": [
+    "As a stopover town for people on the highway",
+    "As a remote town that is hard to reach by road",
+    "As a farming town that outsiders rarely visit",
+    "As a place locals leave to find a café or motel"
+   ],
+   "why": "The highway made the town easier to reach, and the new cafés and motels serve drivers who stop there. So the town may come to be used and seen as a stopover. It was once a quiet farming town, but the new businesses show outsiders now visit.",
+   "clue": "Who are the new businesses there to serve?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The town with the bus has better access",
+   "also_right": []
+  },
+  "b": {
+   "best": "As a stopover town for people on the highway",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Transport and access",
+  "card": [
+   "Access is how easily people can reach jobs, services and other places. Roads, flights and public transport all shape it.",
+   "Good transport shortens the time and cost of a trip. A place with frequent trains or buses is easier to reach than one with no regular service.",
+   "Poor access can leave people far from hospitals, schools and work. Some remote towns depend on a long road or a small plane to reach them.",
+   "Transport also changes how people use and see a place. A new road can bring visitors and new businesses, so a quiet town may come to be seen as a busy stop."
+  ],
+  "remember": "Better transport means easier access, and that changes how a place is used and seen.",
+  "a": {
+   "q": "Two towns lie the same distance from a regional hospital. A bus runs from one every half hour, and the other has no regular service. Which statement is true?",
+   "opts": [
+    "The town with the bus has better access",
+    "Both towns have the same access to the hospital",
+    "The town without the bus has better access",
+    "Neither town has any access to the hospital"
+   ],
+   "why": "Access is about how easily people can reach a place, not just how far away it is. Frequent buses cut the time and cost of the trip, so that town has better access. Equal distance does not mean equal access.",
+   "clue": "Access depends on more than distance."
+  },
+  "b": {
+   "d": 3,
+   "q": "Imagine a new highway is built past a small, quiet farming town in Western Australia. Cafés and motels then open to serve drivers. How might people come to see the town?",
+   "opts": [
+    "As a stopover town for people on the highway",
+    "As a remote town that is hard to reach by road",
+    "As a farming town that outsiders rarely visit",
+    "As a place locals leave to find a café or motel"
+   ],
+   "why": "The highway made the town easier to reach, and the new cafés and motels serve drivers who stop there. So the town may come to be used and seen as a stopover. It was once a quiet farming town, but the new businesses show outsiders now visit.",
+   "clue": "Who are the new businesses there to serve?"
+  }
+ },
+ "checked_by": "claude-code"
+}

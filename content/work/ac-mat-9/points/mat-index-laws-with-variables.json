@@ -1,0 +1,224 @@
+{
+ "id": "mat-index-laws-with-variables",
+ "title": "Index laws with variables",
+ "brief": "cebb8df3a578",
+ "shortlist": [
+  [
+   "mat-index-laws",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 may adapt mat-index-laws, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:10Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:31Z write: done",
+  "2026-11-04T10:08:04Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.00782,
+  "write": 0.00505,
+  "check": 0.00978,
+  "fix": 0.01612
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-index-laws",
+  "changes": [
+   "Add a sentence that numbers in front of variables are multiplied or divided as usual, with an example such as 3x² × 4x⁵ = 12x⁷, because the card does not state this rule."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same index laws at a suitable Year 9 depth and its questions are fair, but it does not explicitly cover multiplying or dividing the numeric coefficients that the new point includes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is a broader introduction to index laws that starts with numerical bases and adds the power-of-a-product law, while the new point is narrower: it applies the laws to variables and to terms with coefficients (such as 6x⁵ ÷ 2x²), which the bank card does not teach directly.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Index laws with variables",
+  "card": [
+   "An index tells you how many times a base is multiplied by itself. In x⁵, the base is x and the index is 5.",
+   [
+    "Multiply",
+    "when you multiply powers with the same base, add the indices. x⁵ × x³ = x⁸. Numbers in front are multiplied: 3x² × 4x⁵ = 12x⁷."
+   ],
+   [
+    "Divide",
+    "when you divide powers with the same base, subtract the indices. x⁶ ÷ x² = x⁴. Numbers in front are divided: 12x⁷ ÷ 4x² = 3x⁵."
+   ],
+   [
+    "Power of a power",
+    "multiply the indices. (x²)³ = x⁶. A number in front is also raised to the power: (2x²)³ = 8x⁶."
+   ]
+  ],
+  "remember": "Multiply powers: add indices. Divide: subtract. Power of a power: multiply. Numbers in front follow normal rules.",
+  "a": {
+   "q": "What is x⁷ × x² in simplest form?",
+   "opts": [
+    "x⁹",
+    "x¹⁴",
+    "x⁵",
+    "x⁴⁹"
+   ],
+   "why": "Multiplying powers with the same base means adding the indices: 7 + 2 = 9. Multiplying the indices to get x¹⁴ is the rule for a power of a power, not for a product.",
+   "clue": "The bases are the same, so combine the indices by adding or subtracting."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is (2x³)² × 3x² in simplest form?",
+   "opts": [
+    "12x⁸",
+    "12x⁷",
+    "18x⁸",
+    "6x⁸"
+   ],
+   "why": "First (2x³)² = 4x⁶, because both the 2 and the index are squared. Then 4x⁶ × 3x² = 12x⁸, multiplying the numbers and adding the indices. Forgetting to square the 2 gives 6x⁸.",
+   "clue": "Square everything inside the bracket first, including the number."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x⁹",
+   "also_right": []
+  },
+  "b": {
+   "best": "12x⁸",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"An index tells you how many times a base is multiplied by itself\" is imprecise. x⁵ is x × x × x × x × x, five factors of x, which is x multiplied by itself four times. Better: \"how many times the base is used as a factor\" or \"how many copies of the base are multiplied together\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: x⁹ for (a) and 12x⁸ for (b), and the explanations are correct. The one issue is the card's opening line, \"multiplied by itself\", which could confuse students about what the index counts and should say \"used as a factor\" instead."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"An index tells you how many times a base is multiplied by itself\" is imprecise. x⁵ is x × x × x × x × x, five factors of x, which is x multiplied by itself four times. Better: \"how many times the base is used as a factor\" or \"how many copies of the base are multiplied together\"."
+ ],
+ "proposal": {
+  "title": "Index laws with variables",
+  "card": [
+   "An index tells you how many copies of the base are multiplied together. In x⁵ = x × x × x × x × x, the base is x and the index is 5.",
+   [
+    "Multiply",
+    "when you multiply powers with the same base, add the indices. x⁵ × x³ = x⁸. Numbers in front are multiplied: 3x² × 4x⁵ = 12x⁷."
+   ],
+   [
+    "Divide",
+    "when you divide powers with the same base, subtract the indices. x⁶ ÷ x² = x⁴. Numbers in front are divided: 12x⁷ ÷ 4x² = 3x⁵."
+   ],
+   [
+    "Power of a power",
+    "multiply the indices. (x²)³ = x⁶. A number in front is also raised to the power: (2x²)³ = 8x⁶."
+   ]
+  ],
+  "remember": "Multiply powers: add indices. Divide: subtract. Power of a power: multiply. Numbers in front follow normal rules.",
+  "a": {
+   "q": "What is x⁷ × x² in simplest form?",
+   "opts": [
+    "x⁹",
+    "x¹⁴",
+    "x⁵",
+    "x⁴⁹"
+   ],
+   "why": "Multiplying powers with the same base means adding the indices: 7 + 2 = 9. Multiplying the indices to get x¹⁴ is the rule for a power of a power, not for a product.",
+   "clue": "The bases are the same, so combine the indices by adding or subtracting."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is (2x³)² × 3x² in simplest form?",
+   "opts": [
+    "12x⁸",
+    "12x⁷",
+    "18x⁸",
+    "6x⁸"
+   ],
+   "why": "First (2x³)² = 4x⁶, because both the 2 and the index are squared. Then 4x⁶ × 3x² = 12x⁸, multiplying the numbers and adding the indices. Forgetting to square the 2 gives 6x⁸.",
+   "clue": "Square everything inside the bracket first, including the number."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"An index tells you how many times a base is multiplied by itself\" is imprecise. x⁵ is x × x × x × x × x, five factors of x, which is x multiplied by itself four times. Better: \"how many times the base is used as a factor\" or \"how many copies of the base are multiplied together\"."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"An index tells you how many times a base is multiplied by itself\" is imprecise. x⁵ is x × x × x × x × x, five factors of x, which is x multiplied by itself four times. Better: \"how many times the base is used as a factor\" or \"how many copies of the base are multiplied together\"."
+  ]
+ },
+ "final": {
+  "title": "Index laws with variables",
+  "card": [
+   "An index tells you how many copies of the base are multiplied together. In x⁵ = x × x × x × x × x, the base is x and the index is 5.",
+   [
+    "Multiply",
+    "when you multiply powers with the same base, add the indices. x⁵ × x³ = x⁸. Numbers in front are multiplied: 3x² × 4x⁵ = 12x⁷."
+   ],
+   [
+    "Divide",
+    "when you divide powers with the same base, subtract the indices. x⁶ ÷ x² = x⁴. Numbers in front are divided: 12x⁷ ÷ 4x² = 3x⁵."
+   ],
+   [
+    "Power of a power",
+    "multiply the indices. (x²)³ = x⁶. A number in front is also raised to the power: (2x²)³ = 8x⁶."
+   ]
+  ],
+  "remember": "Multiply powers: add indices. Divide: subtract. Power of a power: multiply. Numbers in front follow normal rules.",
+  "a": {
+   "q": "What is x⁷ × x² in simplest form?",
+   "opts": [
+    "x⁹",
+    "x¹⁴",
+    "x⁵",
+    "x⁴⁹"
+   ],
+   "why": "Multiplying powers with the same base means adding the indices: 7 + 2 = 9. Multiplying the indices to get x¹⁴ is the rule for a power of a power, not for a product.",
+   "clue": "The bases are the same, so combine the indices by adding or subtracting."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is (2x³)² × 3x² in simplest form?",
+   "opts": [
+    "12x⁸",
+    "12x⁷",
+    "18x⁸",
+    "6x⁸"
+   ],
+   "why": "First (2x³)² = 4x⁶, because both the 2 and the index are squared. Then 4x⁶ × 3x² = 12x⁸, multiplying the numbers and adding the indices. Forgetting to square the 2 gives 6x⁸.",
+   "clue": "Square everything inside the bracket first, including the number."
+  }
+ },
+ "cleared_by": "auto"
+}

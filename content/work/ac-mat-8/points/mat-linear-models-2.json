@@ -1,0 +1,225 @@
+{
+ "id": "mat-linear-models-2",
+ "title": "Linear models",
+ "brief": "35592b206335",
+ "shortlist": [
+  [
+   "mat-linear-models-context",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 may adapt mat-linear-models-context, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:08Z confirm: Claude Opus 5.5 may adapt mat-linear-models-context, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt mat-linear-models-context (2 changes)",
+  "2026-11-05T06:08:56Z claude-code review: adapting mat-linear-models-context on the next run",
+  "2026-11-05T06:46:38Z adapt: done",
+  "2026-11-05T06:53:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.009,
+  "adapt": 0.00364,
+  "check": 0.0093
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-linear-models-context",
+  "changes": [
+   "Replace the Geelong taxi question with a fare set in a town or city in a state or territory on the course list, such as Brisbane or Adelaide.",
+   "Replace the Bendigo ladder question with a hire cost set in a place on the course list, such as Perth or Darwin.",
+   "Use the brief's notation for the rule, such as C = 15h + 20 with h for hours, instead of y = mx + c, so the card matches how the Australian Curriculum course presents linear rules."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same rate-plus-fixed-amount idea at a suitable depth, but its two questions use Victorian towns and the notation differs from the brief, so it needs small local changes before use.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-linear-models-context",
+  "changes": [
+   "Replace the Victorian places (Geelong, Bendigo) in the questions with places in the states and territories this course serves, or with neutral settings.",
+   "Describe the rate as setting the steepness of the graph and introduce 'gradient' only as an extra name, because gradient is formally taught in Year 9 of the Australian Curriculum."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea (a fixed amount plus a rate gives a linear rule) at a simple depth that suits Year 8. It needs local examples, and its gradient language should be softened to the rate setting the steepness.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-linear-models-context",
+  "changes": [
+   "Replace Geelong and Bendigo in the questions with places in this course's states, or with settings that name no place.",
+   "Describe the rate as setting the steepness of the graph, and give gradient only as another name for it, because gradient is taught formally in Year 9."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2 label",
+   "card2",
+   "remember",
+   "a.q",
+   "a.why",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches a fixed amount plus a rate giving a linear rule at a simple depth, but its places are Victorian and it leans on gradient and intercept, which Year 8 meets only as the rate and the starting amount.",
+   "item": "43c82e603ba389a7",
+   "result": "decided",
+   "saved": {
+    "id": "mat-linear-models-2",
+    "title": "Linear models",
+    "brief": "35592b206335",
+    "shortlist": [
+     [
+      "mat-linear-models-context",
+      0.227
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00032,
+     "confirm": 0.009
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-linear-models-context",
+     "changes": [
+      "Replace the Geelong taxi question with a fare set in a town or city in a state or territory on the course list, such as Brisbane or Adelaide.",
+      "Replace the Bendigo ladder question with a hire cost set in a place on the course list, such as Perth or Darwin.",
+      "Use the brief's notation for the rule, such as C = 15h + 20 with h for hours, instead of y = mx + c, so the card matches how the Australian Curriculum course presents linear rules."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same rate-plus-fixed-amount idea at a suitable depth, but its two questions use Victorian towns and the notation differs from the brief, so it needs small local changes before use.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-linear-models-context",
+     "changes": [
+      "Replace the Victorian places (Geelong, Bendigo) in the questions with places in the states and territories this course serves, or with neutral settings.",
+      "Describe the rate as setting the steepness of the graph and introduce 'gradient' only as an extra name, because gradient is formally taught in Year 9 of the Australian Curriculum."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea (a fixed amount plus a rate gives a linear rule) at a simple depth that suits Year 8. It needs local examples, and its gradient language should be softened to the rate setting the steepness.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "ab6abc195589a829"
+  }
+ ],
+ "draft": {
+  "title": "Linear models in context",
+  "card": [
+   "A linear model has a rule like y = mx + c. It fits a situation where something changes by the same amount for each step.",
+   [
+    "Rate",
+    "m is the rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
+   ],
+   [
+    "Intercept",
+    "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+   ],
+   "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+  ],
+  "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
+  "a": {
+   "q": "A taxi fare in Perth is F = 2.5d + 4, where d is the distance in km. What does the 2.5 tell you?",
+   "opts": [
+    "The fare rises by $2.50 for each extra kilometre",
+    "The fare for a trip of 0 km is $2.50",
+    "The fare for a trip of 4 km is $2.50",
+    "The fare rises by $4 for each extra kilometre"
+   ],
+   "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
+   "clue": "Which number multiplies d?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya hires a ladder in Darwin. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+   "opts": [
+    "$90",
+    "$60",
+    "$150",
+    "$102"
+   ],
+   "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+   "clue": "Multiply the daily rate by 5, then add the fixed amount."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The fare rises by $2.50 for each extra kilometre",
+   "also_right": []
+  },
+  "b": {
+   "best": "$90",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Linear models in context",
+  "card": [
+   "A linear model has a rule like y = mx + c. It fits a situation where something changes by the same amount for each step.",
+   [
+    "Rate",
+    "m is the rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
+   ],
+   [
+    "Intercept",
+    "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+   ],
+   "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+  ],
+  "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
+  "a": {
+   "q": "A taxi fare in Perth is F = 2.5d + 4, where d is the distance in km. What does the 2.5 tell you?",
+   "opts": [
+    "The fare rises by $2.50 for each extra kilometre",
+    "The fare for a trip of 0 km is $2.50",
+    "The fare for a trip of 4 km is $2.50",
+    "The fare rises by $4 for each extra kilometre"
+   ],
+   "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
+   "clue": "Which number multiplies d?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya hires a ladder in Darwin. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+   "opts": [
+    "$90",
+    "$60",
+    "$150",
+    "$102"
+   ],
+   "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+   "clue": "Multiply the daily rate by 5, then add the fixed amount."
+  }
+ }
+}

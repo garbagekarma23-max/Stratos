@@ -1,0 +1,381 @@
+{
+ "id": "ecb-responding-indicators",
+ "title": "Responding to indicators",
+ "brief": "daf0e8305127",
+ "shortlist": [
+  [
+   "eco-economic-indicators",
+   0.414
+  ],
+  [
+   "bus-reviewing-performance-indicators-after",
+   0.299
+  ],
+  [
+   "acc-measuring-performance",
+   0.212
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:23Z new, match",
+  "2026-11-04T09:36:46Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:20Z write: done",
+  "2026-11-04T10:07:56Z check: flagged",
+  "2026-11-04T10:10:48Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-05T02:27:40Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00447,
+  "check": 0.01385,
+  "fix": 0.01487,
+  "recheck": 0.01037
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how government responds to changing indicators; the closest, Economic indicators, only classifies indicators as leading, coincident or lagging, and the business cards cover business performance rather than government action.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: \"Indicators show a problem\" goes beyond the card, which says indicators show how the economy is doing. Indicators do not always show a problem, so this could mislead. Something like \"Indicators show how the economy is doing, and the government can respond to the one that has changed\" fits the card better.",
+ "rejected": {
+  "title": "Responding to indicators",
+  "card": [
+   "An economic indicator is a measure that shows how the economy is doing. Examples are the unemployment rate, the inflation rate and the growth rate of GDP.",
+   "The government watches these indicators. When one moves away from what it wants, it may act to move it back.",
+   "If unemployment rises, the government can fund apprenticeships and training places. This helps people gain skills and find work.",
+   "The action is matched to the indicator that has changed. A rise in unemployment calls for a different response from a rise in prices."
+  ],
+  "remember": "Indicators show a problem, and the government can respond to the one that has changed.",
+  "a": {
+   "q": "Why might the government fund more training places when unemployment rises?",
+   "opts": [
+    "To help jobseekers gain skills and find work",
+    "To make prices across the economy stay stable",
+    "To raise the amount of tax people must pay",
+    "To lower the number of people who want a job"
+   ],
+   "why": "Rising unemployment means more people are without work, and training builds skills that help them get jobs. It does not target prices, which is a different indicator. It also does not change how many people want work.",
+   "clue": "Which indicator changed, and what would help that group?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Suppose the unemployment rate in Australia rises from 4% to 5%. Which response matches this indicator?",
+   "opts": [
+    "Funding more apprenticeships and training places",
+    "Cutting the number of training places on offer",
+    "Acting to keep prices across the economy stable",
+    "Waiting until the inflation rate changes as well"
+   ],
+   "why": "Unemployment has risen, so a matching response helps people gain skills and find work, such as funding apprenticeships and training places. Acting on prices is tempting, but it responds to a different indicator. Cutting training places would work against the aim.",
+   "clue": "Match the response to the indicator that moved."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: \"Indicators show a problem\" goes beyond the card, which says indicators show how the economy is doing. Indicators do not always show a problem, so this could mislead. Something like \"Indicators show how the economy is doing, and the government can respond to the one that has changed\" fits the card better."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Responding to indicators",
+     "card": [
+      "An economic indicator is a measure that shows how the economy is doing. Examples are the unemployment rate, the inflation rate and the growth rate of GDP.",
+      "The government watches these indicators. When one moves away from what it wants, it may act to move it back.",
+      "If unemployment rises, the government can fund apprenticeships and training places. This helps people gain skills and find work.",
+      "The action is matched to the indicator that has changed. A rise in unemployment calls for a different response from a rise in prices."
+     ],
+     "remember": "Indicators show a problem, and the government can respond to the one that has changed.",
+     "a": {
+      "q": "Why might the government fund more training places when unemployment rises?",
+      "opts": [
+       "To help jobseekers gain skills and find work",
+       "To make prices across the economy stay stable",
+       "To raise the amount of tax people must pay",
+       "To lower the number of people who want a job"
+      ],
+      "why": "Rising unemployment means more people are without work, and training builds skills that help them get jobs. It does not target prices, which is a different indicator. It also does not change how many people want work.",
+      "clue": "Which indicator changed, and what would help that group?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Last year, the unemployment rate in Australia rose from 4% to 5%. Which response matches this indicator?",
+      "opts": [
+       "Funding more apprenticeships in a regional town",
+       "Ignoring the change because it is only one point",
+       "Cutting back on training places in all trades",
+       "Waiting for the inflation rate to change as well"
+      ],
+      "why": "Unemployment has risen, so the government can act on it by funding apprenticeships that help people into work. Cutting training places would work against the aim. Waiting for a different indicator does not respond to the one that has changed.",
+      "clue": "Pick the action that helps people find work."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "To help jobseekers gain skills and find work",
+      "also_right": []
+     },
+     "b": {
+      "best": "Funding more apprenticeships in a regional town",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The stem says as fact that 'Last year, the unemployment rate in Australia rose from 4% to 5%'. That is not accurate for recent years, when Australia's rate stayed around 3.5–4.5%, and it will date. Frame it as a hypothetical (e.g. 'Suppose the unemployment rate rises from 4% to 5%')."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Pick the action that helps people find work' points straight to the apprenticeships option, so it gives the answer away instead of prompting thinking."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option adds the narrow detail 'in a regional town' to a national rise in unemployment. This can confuse students about whether a local action matches a national indicator. 'Funding more apprenticeships and training places' would be clearer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and question a are sound. Question b presents a made-up unemployment rise in Australia as a real fact from last year, and its clue gives away the answer, so both should be fixed."
+    },
+    "flags": [
+     "Question b, fact: The stem says as fact that 'Last year, the unemployment rate in Australia rose from 4% to 5%'. That is not accurate for recent years, when Australia's rate stayed around 3.5–4.5%, and it will date. Frame it as a hypothetical (e.g. 'Suppose the unemployment rate rises from 4% to 5%').",
+     "Question b, other: The clue 'Pick the action that helps people find work' points straight to the apprenticeships option, so it gives the answer away instead of prompting thinking.",
+     "Question b, wording: The right option adds the narrow detail 'in a regional town' to a national rise in unemployment. This can confuse students about whether a local action matches a national indicator. 'Funding more apprenticeships and training places' would be clearer."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Responding to indicators",
+     "card": [
+      "An economic indicator is a measure that shows how the economy is doing. Examples are the unemployment rate, the inflation rate and the growth rate of GDP.",
+      "The government watches these indicators. When one moves away from what it wants, it may act to move it back.",
+      "If unemployment rises, the government can fund apprenticeships and training places. This helps people gain skills and find work.",
+      "The action is matched to the indicator that has changed. A rise in unemployment calls for a different response from a rise in prices."
+     ],
+     "remember": "Indicators show a problem, and the government can respond to the one that has changed.",
+     "a": {
+      "q": "Why might the government fund more training places when unemployment rises?",
+      "opts": [
+       "To help jobseekers gain skills and find work",
+       "To make prices across the economy stay stable",
+       "To raise the amount of tax people must pay",
+       "To lower the number of people who want a job"
+      ],
+      "why": "Rising unemployment means more people are without work, and training builds skills that help them get jobs. It does not target prices, which is a different indicator. It also does not change how many people want work.",
+      "clue": "Which indicator changed, and what would help that group?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Suppose the unemployment rate in Australia rises from 4% to 5%. Which response matches this indicator?",
+      "opts": [
+       "Funding more apprenticeships and training places",
+       "Cutting the number of training places on offer",
+       "Acting to keep prices across the economy stable",
+       "Waiting until the inflation rate changes as well"
+      ],
+      "why": "Unemployment has risen, so a matching response helps people gain skills and find work, such as funding apprenticeships and training places. Acting on prices is tempting, but it responds to a different indicator. Cutting training places would work against the aim.",
+      "clue": "Match the response to the indicator that moved."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "To help jobseekers gain skills and find work",
+       "also_right": []
+      },
+      "b": {
+       "best": "Funding more apprenticeships and training places",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "\"Indicators show a problem\" goes beyond the card, which says indicators show how the economy is doing. Indicators do not always show a problem, so this could mislead. Something like \"Indicators show how the economy is doing, and the government can respond to the one that has changed\" fits the card better."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer that matches the card, and the explanations are consistent. The only issue is the remember line: \"Indicators show a problem\" overstates the card, which says indicators show how the economy is doing."
+     },
+     "flags": [
+      "Remember, other: \"Indicators show a problem\" goes beyond the card, which says indicators show how the economy is doing. Indicators do not always show a problem, so this could mislead. Something like \"Indicators show how the economy is doing, and the government can respond to the one that has changed\" fits the card better."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:40Z",
+   "step": "write",
+   "version": {
+    "title": "Responding to indicators",
+    "card": [
+     "An economic indicator is a measure that shows how the economy is doing. Examples are the unemployment rate, the inflation rate and the growth rate of GDP.",
+     "The government watches these indicators. When one moves away from what it wants, it may act to move it back.",
+     "If unemployment rises, the government can fund apprenticeships and training places. This helps people gain skills and find work.",
+     "The action is matched to the indicator that has changed. A rise in unemployment calls for a different response from a rise in prices."
+    ],
+    "remember": "Indicators show how the economy is doing, and the government can respond to the one that has changed.",
+    "a": {
+     "q": "When unemployment climbs, why might the government pay for more training places?",
+     "opts": [
+      "To help jobseekers gain skills and find work",
+      "To make prices across the economy stay stable",
+      "To raise the amount of tax that people pay",
+      "To lower the number of people who want a job"
+     ],
+     "why": "Rising unemployment means more people are without work, and training builds skills that help them get jobs. It does not target prices, which is a different indicator. It also does not change how many people want work.",
+     "clue": "Which indicator changed, and what would help that group?"
+    },
+    "b": {
+     "d": 2,
+     "q": "The unemployment rate in Australia goes from 4% to 5%. Which government response is matched to this change?",
+     "opts": [
+      "Funding more apprenticeships and training places",
+      "Cutting the number of training places on offer",
+      "Acting to keep prices across the economy stable",
+      "Waiting until the inflation rate changes as well"
+     ],
+     "why": "Unemployment has risen, so a matching response helps people gain skills and find work, such as funding apprenticeships and training places. Acting on prices is tempting, but it responds to a different indicator. Cutting training places would work against the aim.",
+     "clue": "Match the response to the indicator that moved."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "To help jobseekers gain skills and find work",
+     "also_right": []
+    },
+    "b": {
+     "best": "Funding more apprenticeships and training places",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Responding to indicators",
+  "card": [
+   "An economic indicator is a measure that shows how the economy is doing. Examples are the unemployment rate, the inflation rate and the growth rate of GDP.",
+   "The government watches these indicators. When one moves away from what it wants, it may act to move it back.",
+   "If unemployment rises, the government can fund apprenticeships and training places. This helps people gain skills and find work.",
+   "The action is matched to the indicator that has changed. A rise in unemployment calls for a different response from a rise in prices."
+  ],
+  "remember": "Indicators show how the economy is doing, and the government can respond to the one that has changed.",
+  "a": {
+   "q": "When unemployment climbs, why might the government pay for more training places?",
+   "opts": [
+    "To help jobseekers gain skills and find work",
+    "To make prices across the economy stay stable",
+    "To raise the amount of tax that people pay",
+    "To lower the number of people who want a job"
+   ],
+   "why": "Rising unemployment means more people are without work, and training builds skills that help them get jobs. It does not target prices, which is a different indicator. It also does not change how many people want work.",
+   "clue": "Which indicator changed, and what would help that group?"
+  },
+  "b": {
+   "d": 2,
+   "q": "The unemployment rate in Australia goes from 4% to 5%. Which government response is matched to this change?",
+   "opts": [
+    "Funding more apprenticeships and training places",
+    "Cutting the number of training places on offer",
+    "Acting to keep prices across the economy stable",
+    "Waiting until the inflation rate changes as well"
+   ],
+   "why": "Unemployment has risen, so a matching response helps people gain skills and find work, such as funding apprenticeships and training places. Acting on prices is tempting, but it responds to a different indicator. Cutting training places would work against the aim.",
+   "clue": "Match the response to the indicator that moved."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To help jobseekers gain skills and find work",
+   "also_right": []
+  },
+  "b": {
+   "best": "Funding more apprenticeships and training places",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Responding to indicators",
+  "card": [
+   "An economic indicator is a measure that shows how the economy is doing. Examples are the unemployment rate, the inflation rate and the growth rate of GDP.",
+   "The government watches these indicators. When one moves away from what it wants, it may act to move it back.",
+   "If unemployment rises, the government can fund apprenticeships and training places. This helps people gain skills and find work.",
+   "The action is matched to the indicator that has changed. A rise in unemployment calls for a different response from a rise in prices."
+  ],
+  "remember": "Indicators show how the economy is doing, and the government can respond to the one that has changed.",
+  "a": {
+   "q": "When unemployment climbs, why might the government pay for more training places?",
+   "opts": [
+    "To help jobseekers gain skills and find work",
+    "To make prices across the economy stay stable",
+    "To raise the amount of tax that people pay",
+    "To lower the number of people who want a job"
+   ],
+   "why": "Rising unemployment means more people are without work, and training builds skills that help them get jobs. It does not target prices, which is a different indicator. It also does not change how many people want work.",
+   "clue": "Which indicator changed, and what would help that group?"
+  },
+  "b": {
+   "d": 2,
+   "q": "The unemployment rate in Australia goes from 4% to 5%. Which government response is matched to this change?",
+   "opts": [
+    "Funding more apprenticeships and training places",
+    "Cutting the number of training places on offer",
+    "Acting to keep prices across the economy stable",
+    "Waiting until the inflation rate changes as well"
+   ],
+   "why": "Unemployment has risen, so a matching response helps people gain skills and find work, such as funding apprenticeships and training places. Acting on prices is tempting, but it responds to a different indicator. Cutting training places would work against the aim.",
+   "clue": "Match the response to the indicator that moved."
+  }
+ },
+ "checked_by": "claude-code"
+}

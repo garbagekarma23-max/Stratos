@@ -1,0 +1,219 @@
+{
+ "id": "mat-prime-factorisation-with-index",
+ "title": "Prime factorisation with index notation",
+ "brief": "e24153cd47a6",
+ "shortlist": [
+  [
+   "mat-primes-fundamental-theorem-arithmetic",
+   0.252
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:08Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00691,
+  "check": 0.0099,
+  "fix": 0.01935,
+  "recheck": 0.00618
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point is written for senior Victorian students and covers the fundamental theorem and a proof that primes are infinite, with a question that is too advanced for Year 7, while the new point needs a factor-tree method and index form at Year 7 depth, so a new point is the safer fit.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Prime factorisation with index notation",
+  "card": [
+   "A prime number has exactly two factors, 1 and itself. Examples are 2, 3, 5, 7 and 11.",
+   "A factor tree splits a number into factor pairs again and again until every branch ends in a prime. For 72: 72 = 8 × 9, 8 = 2 × 4, 4 = 2 × 2, 9 = 3 × 3.",
+   "Multiply the primes at the ends: 72 = 2 × 2 × 2 × 3 × 3.",
+   "Index form counts repeated primes with a small power. Three 2s make 2³ and two 3s make 3², so 72 = 2³ × 3²."
+  ],
+  "remember": "Split into primes, then write repeated primes with an index.",
+  "a": {
+   "q": "Which is 40 written as a product of primes in index form?",
+   "opts": [
+    "2³ × 5",
+    "2² × 10",
+    "2 × 4 × 5",
+    "2⁴ × 5"
+   ],
+   "why": "40 = 2 × 2 × 2 × 5, which is 2³ × 5. The option 2² × 10 is wrong because 10 is not a prime, and 2⁴ × 5 equals 80.",
+   "clue": "Keep splitting until every number is prime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev writes 90 as 2 × 3² × 5. Sam says it is wrong. What should Sam check?",
+   "opts": [
+    "Multiply it out: 2 × 9 × 5 = 90, so Dev is right",
+    "Whether 3² means 3 × 2, which would be 6",
+    "Whether 90 needs 5² because it ends in 0",
+    "Whether 2 should be written as 2¹ × 2"
+   ],
+   "why": "3² means 3 × 3 = 9, so 2 × 9 × 5 = 90 and Dev is correct. The idea that 3² is 3 × 2 mixes up the index with multiplying.",
+   "clue": "Work out 3² first, then multiply."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2³ × 5",
+   "also_right": []
+  },
+  "b": {
+   "best": "Multiply it out: 2 × 9 × 5 = 90, so Dev is right",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks 'What should Sam check?', but the right option is a verdict ('so Dev is right'), not a check. It is also the only option not starting with 'Whether', and the only one with a worked calculation, so it stands out and can be picked without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Work out 3² first, then multiply' tells the student to do exactly what the right option does, which gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. In question b, the right option does not match the stem ('What should Sam check?') and stands out in form and detail, and the clue gives the answer away. Reword the stem and options so they match, and make the clue less direct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem asks 'What should Sam check?', but the right option is a verdict ('so Dev is right'), not a check. It is also the only option not starting with 'Whether', and the only one with a worked calculation, so it stands out and can be picked without knowing the idea.",
+  "Question b, other: The clue 'Work out 3² first, then multiply' tells the student to do exactly what the right option does, which gives the answer away."
+ ],
+ "proposal": {
+  "title": "Prime factorisation with index notation",
+  "card": [
+   "A prime number has exactly two factors, 1 and itself. Examples are 2, 3, 5, 7 and 11.",
+   "A factor tree splits a number into factor pairs again and again until every branch ends in a prime. For 72: 72 = 8 × 9, 8 = 2 × 4, 4 = 2 × 2, 9 = 3 × 3.",
+   "Multiply the primes at the ends: 72 = 2 × 2 × 2 × 3 × 3.",
+   "Index form counts repeated primes with a small power. Three 2s make 2³ and two 3s make 3², so 72 = 2³ × 3²."
+  ],
+  "remember": "Split into primes, then write repeated primes with an index.",
+  "a": {
+   "q": "Which is 40 written as a product of primes in index form?",
+   "opts": [
+    "2³ × 5",
+    "2² × 10",
+    "2 × 4 × 5",
+    "2⁴ × 5"
+   ],
+   "why": "40 = 2 × 2 × 2 × 5, which is 2³ × 5. The option 2² × 10 is wrong because 10 is not a prime, and 2⁴ × 5 equals 80.",
+   "clue": "Keep splitting until every number is prime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia writes 180 as a product of primes in index form. Which answer is correct?",
+   "opts": [
+    "2² × 3² × 5",
+    "2 × 3² × 10",
+    "2² × 3 × 15",
+    "2³ × 3² × 5"
+   ],
+   "why": "180 = 2 × 2 × 3 × 3 × 5, which is 2² × 3² × 5. The option 2 × 3² × 10 does equal 180, but 10 = 2 × 5 is not a prime, so the tree was not finished. The option 2³ × 3² × 5 equals 360.",
+   "clue": "Check that every number is prime and that the total is 180."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2³ × 5",
+    "also_right": []
+   },
+   "b": {
+    "best": "2² × 3² × 5",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks 'What should Sam check?', but the right option is a verdict ('so Dev is right'), not a check. It is also the only option not starting with 'Whether', and the only one with a worked calculation, so it stands out and can be picked without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Work out 3² first, then multiply' tells the student to do exactly what the right option does, which gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem asks 'What should Sam check?', but the right option is a verdict ('so Dev is right'), not a check. It is also the only option not starting with 'Whether', and the only one with a worked calculation, so it stands out and can be picked without knowing the idea.",
+   "Question b, other: The clue 'Work out 3² first, then multiply' tells the student to do exactly what the right option does, which gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "Prime factorisation with index notation",
+  "card": [
+   "A prime number has exactly two factors, 1 and itself. Examples are 2, 3, 5, 7 and 11.",
+   "A factor tree splits a number into factor pairs again and again until every branch ends in a prime. For 72: 72 = 8 × 9, 8 = 2 × 4, 4 = 2 × 2, 9 = 3 × 3.",
+   "Multiply the primes at the ends: 72 = 2 × 2 × 2 × 3 × 3.",
+   "Index form counts repeated primes with a small power. Three 2s make 2³ and two 3s make 3², so 72 = 2³ × 3²."
+  ],
+  "remember": "Split into primes, then write repeated primes with an index.",
+  "a": {
+   "q": "Which is 40 written as a product of primes in index form?",
+   "opts": [
+    "2³ × 5",
+    "2² × 10",
+    "2 × 4 × 5",
+    "2⁴ × 5"
+   ],
+   "why": "40 = 2 × 2 × 2 × 5, which is 2³ × 5. The option 2² × 10 is wrong because 10 is not a prime, and 2⁴ × 5 equals 80.",
+   "clue": "Keep splitting until every number is prime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia writes 180 as a product of primes in index form. Which answer is correct?",
+   "opts": [
+    "2² × 3² × 5",
+    "2 × 3² × 10",
+    "2² × 3 × 15",
+    "2³ × 3² × 5"
+   ],
+   "why": "180 = 2 × 2 × 3 × 3 × 5, which is 2² × 3² × 5. The option 2 × 3² × 10 does equal 180, but 10 = 2 × 5 is not a prime, so the tree was not finished. The option 2³ × 3² × 5 equals 360.",
+   "clue": "Check that every number is prime and that the total is 180."
+  }
+ },
+ "cleared_by": "recheck"
+}

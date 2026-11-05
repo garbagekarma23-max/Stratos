@@ -1,0 +1,341 @@
+{
+ "id": "mat-square-numbers-square-roots",
+ "title": "Square numbers and square roots",
+ "brief": "a1b42e36d327",
+ "shortlist": [
+  [
+   "mat-imaginary-unit",
+   0.231
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:08Z write: done",
+  "2026-11-04T09:58:30Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T17:58:54Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00691,
+  "check": 0.00848,
+  "fix": 0.01161
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The only close bank point teaches the imaginary unit and square roots of negative numbers, which is far beyond the Year 7 idea of squares and roots of positive numbers, so no bank point matches.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Square numbers and square roots",
+  "card": [
+   "A square number is a number multiplied by itself. For example, 7² = 7 × 7 = 49, so 49 is a square number.",
+   "The square root undoes squaring. √49 = 7 because 7 × 7 = 49.",
+   "The first square numbers are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.",
+   "If a number is not a square number, its square root is not whole. It lies between two whole numbers. 43 sits between 36 and 49, so √43 is between 6 and 7."
+  ],
+  "remember": "Squaring multiplies a number by itself. The square root undoes it.",
+  "a": {
+   "q": "What is the value of 9²?",
+   "opts": [
+    "81",
+    "18",
+    "99",
+    "3"
+   ],
+   "why": "9² means 9 × 9, which is 81. The answer 18 comes from 9 × 2, which doubles the number instead of multiplying it by itself.",
+   "clue": "Multiply 9 by itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Between which two whole numbers does √70 lie?",
+   "opts": [
+    "8 and 9",
+    "7 and 8",
+    "9 and 10",
+    "34 and 36"
+   ],
+   "why": "64 = 8² and 81 = 9², and 70 is between 64 and 81. So √70 is between 8 and 9. Choosing 7 and 8 is tempting, but 8² = 64 is below 70, so the root must be above 8.",
+   "clue": "Find the two square numbers that 70 sits between."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "81",
+   "also_right": []
+  },
+  "b": {
+   "best": "8 and 9",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'A square number is a number multiplied by itself' does not say the number must be whole. By this wording 6.25 (2.5 × 2.5) would count as a square number. 'A whole number multiplied by itself' would be exact."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct: 9² = 81, and √70 lies between 8 and 9, as the explanations say. One minor wording issue: the card's definition of a square number should say 'whole number' multiplied by itself."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'A square number is a number multiplied by itself' does not say the number must be whole. By this wording 6.25 (2.5 × 2.5) would count as a square number. 'A whole number multiplied by itself' would be exact."
+ ],
+ "proposal": {
+  "title": "Square numbers and square roots",
+  "card": [
+   "A square number is a whole number multiplied by itself. For example, 7² = 7 × 7 = 49, so 49 is a square number.",
+   "The square root undoes squaring. √49 = 7 because 7 × 7 = 49.",
+   "The first square numbers are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.",
+   "If a whole number is not a square number, its square root is not whole. It lies between two whole numbers. 43 sits between 36 and 49, so √43 is between 6 and 7."
+  ],
+  "remember": "Squaring multiplies a number by itself. The square root undoes it.",
+  "a": {
+   "q": "What is the value of 9²?",
+   "opts": [
+    "81",
+    "18",
+    "99",
+    "3"
+   ],
+   "why": "9² means 9 × 9, which is 81. The answer 18 comes from 9 × 2, which doubles the number instead of multiplying it by itself.",
+   "clue": "Multiply 9 by itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Between which two whole numbers does √70 lie?",
+   "opts": [
+    "8 and 9",
+    "7 and 8",
+    "9 and 10",
+    "34 and 36"
+   ],
+   "why": "64 = 8² and 81 = 9², and 70 is between 64 and 81. So √70 is between 8 and 9. Choosing 7 and 8 is tempting, but 8² = 64 is below 70, so the root must be above 8.",
+   "clue": "Find the two square numbers that 70 sits between."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-04T17:58:54Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'A square number is a number multiplied by itself' does not say the number must be whole. By this wording 6.25 (2.5 × 2.5) would count as a square number. 'A whole number multiplied by itself' would be exact."
+   }
+  ],
+  "flags": [
+   "Card, wording: 'A square number is a number multiplied by itself' does not say the number must be whole. By this wording 6.25 (2.5 × 2.5) would count as a square number. 'A whole number multiplied by itself' would be exact."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Square numbers and square roots",
+  "card": [
+   "A square number is a whole number multiplied by itself. For example, 7² = 7 × 7 = 49, so 49 is a square number.",
+   "The square root undoes squaring. √49 = 7 because 7 × 7 = 49.",
+   "The first square numbers are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.",
+   "If a whole number is not a square number, its square root is not whole. It lies between two whole numbers. 43 sits between 36 and 49, so √43 is between 6 and 7."
+  ],
+  "remember": "Squaring multiplies a number by itself. The square root undoes it.",
+  "a": {
+   "q": "What is the value of 9²?",
+   "opts": [
+    "81",
+    "18",
+    "99",
+    "3"
+   ],
+   "why": "9² means 9 × 9, which is 81. The answer 18 comes from 9 × 2, which doubles the number instead of multiplying it by itself.",
+   "clue": "Multiply 9 by itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Between which two whole numbers does √70 lie?",
+   "opts": [
+    "8 and 9",
+    "7 and 8",
+    "9 and 10",
+    "34 and 36"
+   ],
+   "why": "64 = 8² and 81 = 9², and 70 is between 64 and 81. So √70 is between 8 and 9. Choosing 7 and 8 is tempting, but 8² = 64 is below 70, so the root must be above 8.",
+   "clue": "Find the two square numbers that 70 sits between."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix only says a square number is a whole number times itself. Both answers are right.",
+   "item": "7f5b046ae3536d20",
+   "result": "decided",
+   "saved": {
+    "id": "mat-square-numbers-square-roots",
+    "title": "Square numbers and square roots",
+    "brief": "a1b42e36d327",
+    "shortlist": [
+     [
+      "mat-imaginary-unit",
+      0.231
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 1,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 6e-05,
+     "write": 0.00691,
+     "check": 0.00848,
+     "fix": 0.01161
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The only close bank point teaches the imaginary unit and square roots of negative numbers, which is far beyond the Year 7 idea of squares and roots of positive numbers, so no bank point matches.",
+     "model": "claude-haiku-5-5"
+    },
+    "draft": {
+     "title": "Square numbers and square roots",
+     "card": [
+      "A square number is a number multiplied by itself. For example, 7² = 7 × 7 = 49, so 49 is a square number.",
+      "The square root undoes squaring. √49 = 7 because 7 × 7 = 49.",
+      "The first square numbers are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.",
+      "If a number is not a square number, its square root is not whole. It lies between two whole numbers. 43 sits between 36 and 49, so √43 is between 6 and 7."
+     ],
+     "remember": "Squaring multiplies a number by itself. The square root undoes it.",
+     "a": {
+      "q": "What is the value of 9²?",
+      "opts": [
+       "81",
+       "18",
+       "99",
+       "3"
+      ],
+      "why": "9² means 9 × 9, which is 81. The answer 18 comes from 9 × 2, which doubles the number instead of multiplying it by itself.",
+      "clue": "Multiply 9 by itself."
+     },
+     "b": {
+      "d": 3,
+      "q": "Between which two whole numbers does √70 lie?",
+      "opts": [
+       "8 and 9",
+       "7 and 8",
+       "9 and 10",
+       "34 and 36"
+      ],
+      "why": "64 = 8² and 81 = 9², and 70 is between 64 and 81. So √70 is between 8 and 9. Choosing 7 and 8 is tempting, but 8² = 64 is below 70, so the root must be above 8.",
+      "clue": "Find the two square numbers that 70 sits between."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "81",
+      "also_right": []
+     },
+     "b": {
+      "best": "8 and 9",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'A square number is a number multiplied by itself' does not say the number must be whole. By this wording 6.25 (2.5 × 2.5) would count as a square number. 'A whole number multiplied by itself' would be exact."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are correct: 9² = 81, and √70 lies between 8 and 9, as the explanations say. One minor wording issue: the card's definition of a square number should say 'whole number' multiplied by itself."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, wording: 'A square number is a number multiplied by itself' does not say the number must be whole. By this wording 6.25 (2.5 × 2.5) would count as a square number. 'A whole number multiplied by itself' would be exact."
+    ],
+    "proposal": {
+     "title": "Square numbers and square roots",
+     "card": [
+      "A square number is a whole number multiplied by itself. For example, 7² = 7 × 7 = 49, so 49 is a square number.",
+      "The square root undoes squaring. √49 = 7 because 7 × 7 = 49.",
+      "The first square numbers are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.",
+      "If a whole number is not a square number, its square root is not whole. It lies between two whole numbers. 43 sits between 36 and 49, so √43 is between 6 and 7."
+     ],
+     "remember": "Squaring multiplies a number by itself. The square root undoes it.",
+     "a": {
+      "q": "What is the value of 9²?",
+      "opts": [
+       "81",
+       "18",
+       "99",
+       "3"
+      ],
+      "why": "9² means 9 × 9, which is 81. The answer 18 comes from 9 × 2, which doubles the number instead of multiplying it by itself.",
+      "clue": "Multiply 9 by itself."
+     },
+     "b": {
+      "d": 3,
+      "q": "Between which two whole numbers does √70 lie?",
+      "opts": [
+       "8 and 9",
+       "7 and 8",
+       "9 and 10",
+       "34 and 36"
+      ],
+      "why": "64 = 8² and 81 = 9², and 70 is between 64 and 81. So √70 is between 8 and 9. Choosing 7 and 8 is tempting, but 8² = 64 is below 70, so the root must be above 8.",
+      "clue": "Find the two square numbers that 70 sits between."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-04T17:58:54Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'A square number is a number multiplied by itself' does not say the number must be whole. By this wording 6.25 (2.5 × 2.5) would count as a square number. 'A whole number multiplied by itself' would be exact."
+      }
+     ],
+     "flags": [
+      "Card, wording: 'A square number is a number multiplied by itself' does not say the number must be whole. By this wording 6.25 (2.5 × 2.5) would count as a square number. 'A whole number multiplied by itself' would be exact."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "64225bc33056099b"
+  }
+ ]
+}

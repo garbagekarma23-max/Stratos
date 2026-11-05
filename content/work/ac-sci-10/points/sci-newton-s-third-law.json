@@ -1,0 +1,208 @@
+{
+ "id": "sci-newton-s-third-law",
+ "title": "Newton's third law",
+ "brief": "e44a04fb0010",
+ "shortlist": [
+  [
+   "phys-newton-s-third-law-2",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:42Z new, match",
+  "2026-11-04T09:36:57Z match: Claude Haiku 5.5 may adapt phys-newton-s-third-law-2, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:11Z confirm: Claude Opus 5.5 may adapt phys-newton-s-third-law-2, but is not highly sure, so it is for you to review",
+  "2026-11-05T06:08:56Z match: claude-code says adapt phys-newton-s-third-law-2 (1 change)",
+  "2026-11-05T06:08:56Z claude-code review: adapting phys-newton-s-third-law-2 on the next run",
+  "2026-11-05T06:46:38Z adapt: done",
+  "2026-11-05T06:53:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00597,
+  "adapt": 0.00376,
+  "check": 0.00796
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "phys-newton-s-third-law-2",
+  "changes": [
+   "Remove the stray \"(right)\" marker from the first answer option of question a, which is wrong and makes the correct answer unclear."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same third-law idea at a suitable depth for Year 10, but question a has a stray marker on a wrong option that needs removing before it is fair for this course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "phys-newton-s-third-law-2",
+  "changes": [
+   "Add the rocket example from the brief: the rocket pushes exhaust gas backwards, and the gas pushes the rocket forwards with an equal force."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches Newton's third law at a depth that suits Year 10, and its questions are fair; it only needs the brief's rocket example added.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "phys-newton-s-third-law-2",
+  "changes": [
+   "Add the rocket example from the brief: the rocket pushes exhaust gas backwards, and the gas pushes the rocket forwards with an equal force."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches Newton's third law at a Year 10 depth with fair questions. It only lacks the brief's rocket example.",
+   "item": "b9cb1f87f953275f",
+   "result": "decided",
+   "saved": {
+    "id": "sci-newton-s-third-law",
+    "title": "Newton's third law",
+    "brief": "e44a04fb0010",
+    "shortlist": [
+     [
+      "phys-newton-s-third-law-2",
+      0.237
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "confirm": 0.00597
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "phys-newton-s-third-law-2",
+     "changes": [
+      "Remove the stray \"(right)\" marker from the first answer option of question a, which is wrong and makes the correct answer unclear."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same third-law idea at a suitable depth for Year 10, but question a has a stray marker on a wrong option that needs removing before it is fair for this course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "phys-newton-s-third-law-2",
+     "changes": [
+      "Add the rocket example from the brief: the rocket pushes exhaust gas backwards, and the gas pushes the rocket forwards with an equal force."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches Newton's third law at a depth that suits Year 10, and its questions are fair; it only needs the brief's rocket example added.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "9325eb9a112320c2"
+  }
+ ],
+ "draft": {
+  "title": "Newton's third law",
+  "card": [
+   "Forces come in pairs. If object A exerts a force on object B, then B exerts a force on A at the same time.",
+   "The two forces in a pair are equal in size, opposite in direction and of the same type, such as both contact forces or both gravitational.",
+   "The two forces act on different objects. Because of this, they never cancel each other out.",
+   "The pair stays equal whatever the objects are like. A rocket pushes exhaust gas backwards, and the gas pushes the rocket forwards with an equal force."
+  ],
+  "remember": "Every force has a partner of equal size and opposite direction, acting on the other object.",
+  "a": {
+   "q": "A rocket engine pushes exhaust gas backwards with a force of 800 N. What is the partner force?",
+   "opts": [
+    "The gas pushes the rocket forwards with 800 N",
+    "The gas pushes the rocket backwards with 800 N",
+    "The rocket's weight pulls down on the rocket",
+    "The gas pushes the rocket forwards with less than 800 N"
+   ],
+   "why": "The partner force acts on the other object, so the gas pushes on the rocket. It is equal in size and opposite in direction, so 800 N forwards. A push backwards would not be opposite to the rocket's push on the gas.",
+   "clue": "Which object does the partner force act on, and which way?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A heavy truck pushes on a lighter parked car with 5000 N in a crash. What size is the force the car pushes back on the truck with?",
+   "opts": [
+    "5000 N, as the pair forces are equal in size",
+    "Less than 5000 N, as the car has less mass",
+    "More than 5000 N, as the car is damaged more",
+    "Zero, as the car was parked before the crash"
+   ],
+   "why": "The car's push on the truck is the partner of the truck's push on the car, so it is also 5000 N. The pair stays equal even though the truck is heavier and the car was still. Less than 5000 N is tempting, but the size of a third law pair does not depend on the masses of the objects.",
+   "clue": "Think about what the third law says a pair depends on."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The gas pushes the rocket forwards with 800 N",
+   "also_right": []
+  },
+  "b": {
+   "best": "5000 N, as the pair forces are equal in size",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Newton's third law",
+  "card": [
+   "Forces come in pairs. If object A exerts a force on object B, then B exerts a force on A at the same time.",
+   "The two forces in a pair are equal in size, opposite in direction and of the same type, such as both contact forces or both gravitational.",
+   "The two forces act on different objects. Because of this, they never cancel each other out.",
+   "The pair stays equal whatever the objects are like. A rocket pushes exhaust gas backwards, and the gas pushes the rocket forwards with an equal force."
+  ],
+  "remember": "Every force has a partner of equal size and opposite direction, acting on the other object.",
+  "a": {
+   "q": "A rocket engine pushes exhaust gas backwards with a force of 800 N. What is the partner force?",
+   "opts": [
+    "The gas pushes the rocket forwards with 800 N",
+    "The gas pushes the rocket backwards with 800 N",
+    "The rocket's weight pulls down on the rocket",
+    "The gas pushes the rocket forwards with less than 800 N"
+   ],
+   "why": "The partner force acts on the other object, so the gas pushes on the rocket. It is equal in size and opposite in direction, so 800 N forwards. A push backwards would not be opposite to the rocket's push on the gas.",
+   "clue": "Which object does the partner force act on, and which way?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A heavy truck pushes on a lighter parked car with 5000 N in a crash. What size is the force the car pushes back on the truck with?",
+   "opts": [
+    "5000 N, as the pair forces are equal in size",
+    "Less than 5000 N, as the car has less mass",
+    "More than 5000 N, as the car is damaged more",
+    "Zero, as the car was parked before the crash"
+   ],
+   "why": "The car's push on the truck is the partner of the truck's push on the car, so it is also 5000 N. The pair stays equal even though the truck is heavier and the car was still. Less than 5000 N is tempting, but the size of a third law pair does not depend on the masses of the objects.",
+   "clue": "Think about what the third law says a pair depends on."
+  }
+ }
+}

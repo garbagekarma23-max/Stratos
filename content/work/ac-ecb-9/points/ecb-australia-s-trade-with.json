@@ -1,0 +1,361 @@
+{
+ "id": "ecb-australia-s-trade-with",
+ "title": "Australia's trade with Asia",
+ "brief": "8c3729195f50",
+ "shortlist": [
+  [
+   "eco-australia-s-trading-partners",
+   0.22
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, match",
+  "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:22Z write: done",
+  "2026-11-04T10:07:57Z check: flagged",
+  "2026-11-04T10:10:48Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (a other)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00451,
+  "check": 0.01127,
+  "fix": 0.01362,
+  "recheck": 0.01072
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers the historical shift in Australia's trading partners and names China as largest partner, but it does not teach that Asia buys most of Australia's exports, the export commodities (iron ore, coal, gas, education), or India as a partner, so it is related rather than the same idea, and it is pitched at Year 12 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue lists China, Japan, South Korea and India and asks where they are, which all but hands over the answer 'Asia'. A student needs only basic geography, not the idea from the card.",
+ "rejected": {
+  "title": "Australia's trade with Asia",
+  "card": [
+   "Asia is the region that buys most of Australia's exports. This makes Asia Australia's most important group of trading partners.",
+   "Many of the exports are minerals and energy, such as iron ore, coal and gas. These are used in Asian factories, power stations and steel making.",
+   "Education is also an export. When students from Asia pay fees to study in Australia, Australia earns income from another country.",
+   "China, Japan, South Korea and India are major partners. Each buys large amounts of Australian goods and services."
+  ],
+  "remember": "Asia buys most of Australia's exports, from iron ore, coal and gas to education.",
+  "a": {
+   "q": "Which region buys the largest share of Australia's exports?",
+   "opts": [
+    "Asia",
+    "Europe",
+    "North America",
+    "Africa"
+   ],
+   "why": "Asia buys most of Australia's exports, including iron ore, coal, gas and education. Europe is a trading partner, but it buys a smaller share than Asia.",
+   "clue": "Think of where China, Japan, South Korea and India are."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya from India pays fees to study at a university in Adelaide. How does this link to Australia's trade with Asia?",
+   "opts": [
+    "It is an Australian export of education to Asia",
+    "It is an Australian import of education from Asia",
+    "It is an Australian export of minerals to Asia",
+    "It is an Indian export of education to Australia"
+   ],
+   "why": "Priya pays an Australian university, so Australia is the seller and earns income from another country. That makes it an Australian export of education, not an import or an Indian export. It counts as an export wherever the student comes from.",
+   "clue": "Who is selling the education, and who is paying?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue lists China, Japan, South Korea and India and asks where they are, which all but hands over the answer 'Asia'. A student needs only basic geography, not the idea from the card."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Australia's trade with Asia",
+     "card": [
+      "Asia is the region that buys most of Australia's exports. This makes Asia Australia's most important group of trading partners.",
+      "Many of the exports are minerals and energy, such as iron ore, coal and gas. These are used in Asian factories, power stations and steel making.",
+      "Education is also an export. When students from Asia pay fees to study in Australia, Australia earns income from another country.",
+      "China, Japan, South Korea and India are major partners. Each buys large amounts of Australian goods and services."
+     ],
+     "remember": "Asia buys most of Australia's exports, from iron ore, coal and gas to education.",
+     "a": {
+      "q": "Which region buys the largest share of Australia's exports?",
+      "opts": [
+       "Asia",
+       "Europe",
+       "North America",
+       "Africa"
+      ],
+      "why": "Asia buys most of Australia's exports, including iron ore, coal, gas and education. Europe is a trading partner, but it buys a smaller share than Asia.",
+      "clue": "Think of where China, Japan, South Korea and India are."
+     },
+     "b": {
+      "d": 2,
+      "q": "Priya from India pays fees to study at a university in Adelaide. How does this link to Australia's trade with Asia?",
+      "opts": [
+       "It is an Australian export of education to Asia",
+       "It is an Australian import of education from Asia",
+       "It is an export of minerals to Asia",
+       "It is a trade that only counts if she is from China"
+      ],
+      "why": "Education sold to students from Asia earns income for Australia, so it is an export. It is not an import, because Australia is the seller, not the buyer. India is a major partner, so the trade counts.",
+      "clue": "Who is selling the education, and who is paying?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Asia",
+      "also_right": []
+     },
+     "b": {
+      "best": "It is an Australian export of education to Asia",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The explanation for (b) ends 'India is a major partner, so the trade counts.' This wrongly suggests a sale only counts as an export when the buyer is a major partner. Education sold to a student from any country is an export. Better: 'It counts as an export wherever the student comes from.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate. One fix is needed: the explanation for (b) wrongly implies the trade counts only because India is a major partner."
+    },
+    "flags": [
+     "Question b, other: The explanation for (b) ends 'India is a major partner, so the trade counts.' This wrongly suggests a sale only counts as an export when the buyer is a major partner. Education sold to a student from any country is an export. Better: 'It counts as an export wherever the student comes from.'"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Australia's trade with Asia",
+     "card": [
+      "Asia is the region that buys most of Australia's exports. This makes Asia Australia's most important group of trading partners.",
+      "Many of the exports are minerals and energy, such as iron ore, coal and gas. These are used in Asian factories, power stations and steel making.",
+      "Education is also an export. When students from Asia pay fees to study in Australia, Australia earns income from another country.",
+      "China, Japan, South Korea and India are major partners. Each buys large amounts of Australian goods and services."
+     ],
+     "remember": "Asia buys most of Australia's exports, from iron ore, coal and gas to education.",
+     "a": {
+      "q": "Which region buys the largest share of Australia's exports?",
+      "opts": [
+       "Asia",
+       "Europe",
+       "North America",
+       "Africa"
+      ],
+      "why": "Asia buys most of Australia's exports, including iron ore, coal, gas and education. Europe is a trading partner, but it buys a smaller share than Asia.",
+      "clue": "Think of where China, Japan, South Korea and India are."
+     },
+     "b": {
+      "d": 2,
+      "q": "Priya from India pays fees to study at a university in Adelaide. How does this link to Australia's trade with Asia?",
+      "opts": [
+       "It is an Australian export of education to Asia",
+       "It is an Australian import of education from Asia",
+       "It is an Australian export of minerals to Asia",
+       "It is an Indian export of education to Australia"
+      ],
+      "why": "Priya pays an Australian university, so Australia is the seller and earns income from another country. That makes it an Australian export of education, not an import or an Indian export. It counts as an export wherever the student comes from.",
+      "clue": "Who is selling the education, and who is paying?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Asia",
+       "also_right": []
+      },
+      "b": {
+       "best": "It is an Australian export of education to Asia",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue lists China, Japan, South Korea and India and asks where they are, which all but hands over the answer 'Asia'. A student needs only basic geography, not the idea from the card."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and the intended answers check out. Question a's clue names the Asian partner countries, which nearly gives the answer away."
+     },
+     "flags": [
+      "Question a, other: The clue lists China, Japan, South Korea and India and asks where they are, which all but hands over the answer 'Asia'. A student needs only basic geography, not the idea from the card."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "Australia's trade with Asia",
+    "card": [
+     "Asia is the region that buys most of Australia's exports. This makes Asia Australia's most important group of trading partners.",
+     "Many of the exports are minerals and energy, such as iron ore, coal and gas. These are used in Asian factories, power stations and steel making.",
+     "Education is also an export. When students from Asia pay fees to study in Australia, Australia earns income from another country.",
+     "China, Japan, South Korea and India are major partners. Each buys large amounts of Australian goods and services."
+    ],
+    "remember": "Asia buys most of Australia's exports, from iron ore, coal and gas to education.",
+    "a": {
+     "q": "Which statement best describes where Australia's exports go and what they are?",
+     "opts": [
+      "Most go to Asia, including services like education",
+      "Most go to North America, mainly as farm goods",
+      "Most go to Asia, but they are all goods, not services",
+      "Most go to Asia, and China is the one buyer there"
+     ],
+     "why": "Asia buys most of Australia's exports, and they include services such as education as well as minerals and energy. China is a major partner, but Japan, South Korea and India also buy large amounts.",
+     "clue": "Can a service, not just a good, be sold to another country?"
+    },
+    "b": {
+     "d": 2,
+     "q": "Kenji from Japan pays fees to study at a university in Brisbane. How does this count in Australia's trade?",
+     "opts": [
+      "An Australian export of education",
+      "An Australian import of education",
+      "A Japanese export of education",
+      "Not trade, as no goods cross a border"
+     ],
+     "why": "Kenji pays an Australian university, so Australia is the seller and earns income from another country. That makes it an Australian export of education, even though no goods are shipped. Japan is the buyer here, not the seller.",
+     "clue": "Who is selling the education, and who is paying?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Most go to Asia, including services like education",
+     "also_right": []
+    },
+    "b": {
+     "best": "An Australian export of education",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Australia's trade with Asia",
+  "card": [
+   "Asia is the region that buys most of Australia's exports. This makes Asia Australia's most important group of trading partners.",
+   "Many of the exports are minerals and energy, such as iron ore, coal and gas. These are used in Asian factories, power stations and steel making.",
+   "Education is also an export. When students from Asia pay fees to study in Australia, Australia earns income from another country.",
+   "China, Japan, South Korea and India are major partners. Each buys large amounts of Australian goods and services."
+  ],
+  "remember": "Asia buys most of Australia's exports, from iron ore, coal and gas to education.",
+  "a": {
+   "q": "Which statement best describes where Australia's exports go and what they are?",
+   "opts": [
+    "Most go to Asia, including services like education",
+    "Most go to North America, mainly as farm goods",
+    "Most go to Asia, but they are all goods, not services",
+    "Most go to Asia, and China is the one buyer there"
+   ],
+   "why": "Asia buys most of Australia's exports, and they include services such as education as well as minerals and energy. China is a major partner, but Japan, South Korea and India also buy large amounts.",
+   "clue": "Can a service, not just a good, be sold to another country?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Kenji from Japan pays fees to study at a university in Brisbane. How does this count in Australia's trade?",
+   "opts": [
+    "An Australian export of education",
+    "An Australian import of education",
+    "A Japanese export of education",
+    "Not trade, as no goods cross a border"
+   ],
+   "why": "Kenji pays an Australian university, so Australia is the seller and earns income from another country. That makes it an Australian export of education, even though no goods are shipped. Japan is the buyer here, not the seller.",
+   "clue": "Who is selling the education, and who is paying?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Most go to Asia, including services like education",
+   "also_right": []
+  },
+  "b": {
+   "best": "An Australian export of education",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Australia's trade with Asia",
+  "card": [
+   "Asia is the region that buys most of Australia's exports. This makes Asia Australia's most important group of trading partners.",
+   "Many of the exports are minerals and energy, such as iron ore, coal and gas. These are used in Asian factories, power stations and steel making.",
+   "Education is also an export. When students from Asia pay fees to study in Australia, Australia earns income from another country.",
+   "China, Japan, South Korea and India are major partners. Each buys large amounts of Australian goods and services."
+  ],
+  "remember": "Asia buys most of Australia's exports, from iron ore, coal and gas to education.",
+  "a": {
+   "q": "Which statement best describes where Australia's exports go and what they are?",
+   "opts": [
+    "Most go to Asia, including services like education",
+    "Most go to North America, mainly as farm goods",
+    "Most go to Asia, but they are all goods, not services",
+    "Most go to Asia, and China is the one buyer there"
+   ],
+   "why": "Asia buys most of Australia's exports, and they include services such as education as well as minerals and energy. China is a major partner, but Japan, South Korea and India also buy large amounts.",
+   "clue": "Can a service, not just a good, be sold to another country?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Kenji from Japan pays fees to study at a university in Brisbane. How does this count in Australia's trade?",
+   "opts": [
+    "An Australian export of education",
+    "An Australian import of education",
+    "A Japanese export of education",
+    "Not trade, as no goods cross a border"
+   ],
+   "why": "Kenji pays an Australian university, so Australia is the seller and earns income from another country. That makes it an Australian export of education, even though no goods are shipped. Japan is the buyer here, not the seller.",
+   "clue": "Who is selling the education, and who is paying?"
+  }
+ },
+ "checked_by": "claude-code"
+}

@@ -1,0 +1,686 @@
+{
+ "id": "geo-australia-s-distinctive-landscapes",
+ "title": "Australia's distinctive landscapes",
+ "brief": "4e4913ed2dfa",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:33Z new, write",
+  "2026-11-04T09:36:52Z write: done",
+  "2026-11-04T09:47:00Z check: flagged",
+  "2026-11-04T09:58:26Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:41Z autoreject: rejected, to be written again (b other)",
+  "2026-11-05T02:27:42Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: flagged",
+  "2026-11-05T03:14:56Z fix: suggested",
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00551,
+  "check": 0.01231,
+  "fix": 0.03141,
+  "recheck": 0.01132
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue ('Is the rainforest spread right across the north, or only in parts?') rules out the main distractor and points straight to the 'patches' option, so students can answer without knowing the idea.",
+ "rejected": {
+  "title": "Australia's distinctive landscapes",
+  "card": [
+   "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+   "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+   "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+   "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+  ],
+  "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+  "a": {
+   "q": "Which description best fits most of Australia's landscape?",
+   "opts": [
+    "Mostly flat and dry",
+    "Mostly high and snowy",
+    "Mostly wet and forested",
+    "Mostly wetland and swamp"
+   ],
+   "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+   "clue": "Think of the centre of the country."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya flies over Australia looking for tropical rainforest. Where could she find it?",
+   "opts": [
+    "In hot, wet patches of the north",
+    "Across almost all of the north",
+    "Across most of the dry centre",
+    "Around Uluru in central Australia"
+   ],
+   "why": "Tropical rainforest grows in hot, wet parts of the north, but only in patches. Much of the north is grassy woodland, so saying it covers almost all of the north is wrong.",
+   "clue": "Is the rainforest spread right across the north, or only in parts?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "claude-code",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:41Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue ('Is the rainforest spread right across the north, or only in parts?') rules out the main distractor and points straight to the 'patches' option, so students can answer without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Australia's distinctive landscapes",
+     "card": [
+      "Australia is mostly flat and dry. Much of the centre is desert, with little rain.",
+      "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+      "The north has tropical rainforests, where it is hot and wet. Australia also has very long coasts.",
+      "Some landforms are famous, such as Uluru, a huge rock in central Australia."
+     ],
+     "remember": "Australia is mostly flat and dry, with highlands in the east and wetter lands in the north.",
+     "a": {
+      "q": "Which description best fits most of Australia's landscape?",
+      "opts": [
+       "Mostly flat and dry",
+       "Mostly high and snowy",
+       "Mostly wet and forested",
+       "Mostly wetland and swamp"
+      ],
+      "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in the north, but they cover only a small part of the country.",
+      "clue": "Think of the centre of the country."
+     },
+     "b": {
+      "d": 2,
+      "q": "Priya travels from the central desert to the far north of Australia. Which change in landscape would she most likely see?",
+      "opts": [
+       "Dry desert gives way to tropical rainforest",
+       "Dry desert gives way to snowy highlands",
+       "Tropical rainforest gives way to flat grassland",
+       "Flat desert gives way to the Great Dividing Range"
+      ],
+      "why": "The north is hot and wet, so tropical rainforests grow there. The Great Dividing Range is in the east, not the north, so it is not the change she would see.",
+      "clue": "The north is hot and wet."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Mostly flat and dry",
+      "also_right": []
+     },
+     "b": {
+      "best": "Dry desert gives way to tropical rainforest",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Most of northern Australia is tropical savanna (grassy woodland), and rainforest grows only in patches such as the Wet Tropics, Cape York and parts of the Top End. Asking what Priya would 'most likely' see suggests the far north is mainly rainforest. The card's 'The north has tropical rainforests' supports that reading without saying the rainforests are patchy. A wording such as 'could see' or 'parts of the north have tropical rainforests' would be safer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer and the card is accurate overall. The card and question b suggest the far north is mainly rainforest, when most of it is tropical savanna and rainforest occurs in patches."
+    },
+    "flags": [
+     "Question b, fact: Most of northern Australia is tropical savanna (grassy woodland), and rainforest grows only in patches such as the Wet Tropics, Cape York and parts of the Top End. Asking what Priya would 'most likely' see suggests the far north is mainly rainforest. The card's 'The north has tropical rainforests' supports that reading without saying the rainforests are patchy. A wording such as 'could see' or 'parts of the north have tropical rainforests' would be safer."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Australia's distinctive landscapes",
+     "card": [
+      "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+      "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+      "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+      "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+     ],
+     "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+     "a": {
+      "q": "Which description best fits most of Australia's landscape?",
+      "opts": [
+       "Mostly flat and dry",
+       "Mostly high and snowy",
+       "Mostly wet and forested",
+       "Mostly wetland and swamp"
+      ],
+      "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+      "clue": "Think of the centre of the country."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya flies over Australia looking for tropical rainforest. Where could she find it?",
+      "opts": [
+       "In hot, wet patches of the north",
+       "Across almost all of the north",
+       "Across most of the dry centre",
+       "Around Uluru in central Australia"
+      ],
+      "why": "Tropical rainforest grows in hot, wet parts of the north, but only in patches. Much of the north is grassy woodland, so saying it covers almost all of the north is wrong.",
+      "clue": "Is the rainforest spread right across the north, or only in parts?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Mostly flat and dry",
+       "also_right": []
+      },
+      "b": {
+       "best": "In hot, wet patches of the north",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue ('Is the rainforest spread right across the north, or only in parts?') rules out the main distractor and points straight to the 'patches' option, so students can answer without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts are correct and both questions have one clear right answer. The clue for question b nearly gives the answer away by asking whether the rainforest is 'only in parts'."
+     },
+     "flags": [
+      "Question b, other: The clue ('Is the rainforest spread right across the north, or only in parts?') rules out the main distractor and points straight to the 'patches' option, so students can answer without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:42Z",
+   "step": "write",
+   "version": {
+    "title": "Australia's distinctive landscapes",
+    "card": [
+     "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+     "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+     "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+     "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+    ],
+    "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+    "a": {
+     "q": "Which phrase best describes most of Australia's land?",
+     "opts": [
+      "Mostly flat and dry",
+      "Mostly high and snowy",
+      "Mostly wet and forested",
+      "Mostly marsh and wetland"
+     ],
+     "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+     "clue": "Think of what covers the centre of the country."
+    },
+    "b": {
+     "d": 3,
+     "q": "Priya is flying over Australia to see tropical rainforest. Where should she look?",
+     "opts": [
+      "In hot, wet patches of the north",
+      "Across almost all of the north",
+      "Across most of the dry centre",
+      "Around Uluru in central Australia"
+     ],
+     "why": "Tropical rainforest grows in hot, wet parts of the north, but only in patches. Much of the north is grassy woodland, so saying it covers almost all of the north is wrong.",
+     "clue": "Rainforest needs heat and plenty of rain."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Mostly flat and dry",
+     "also_right": []
+    },
+    "b": {
+     "best": "In hot, wet patches of the north",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "wording",
+      "detail": "The right option is the only one with a describing detail (\"hot, wet\"), and it repeats the clue's words (heat and plenty of rain), so a student can pick it by matching words without knowing that rainforest is only in patches. Consider dropping \"hot, wet\" from the option, e.g. \"In patches of the north\"."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Facts check out. Question b's right option echoes the clue with \"hot, wet\", which gives the answer away; dropping those words would fix it."
+   }
+  },
+  {
+   "at": "2026-11-05T06:08:56Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix drops 'hot, wet' from question b's right option and its clue, so it no longer matches the clue's words. The facts are right.",
+   "item": "b308f3b4aad37965",
+   "result": "decided",
+   "saved": {
+    "id": "geo-australia-s-distinctive-landscapes",
+    "title": "Australia's distinctive landscapes",
+    "brief": "4e4913ed2dfa",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.00551,
+     "check": 0.01231,
+     "fix": 0.03141,
+     "recheck": 0.01132
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue ('Is the rainforest spread right across the north, or only in parts?') rules out the main distractor and points straight to the 'patches' option, so students can answer without knowing the idea.",
+    "rejected": {
+     "title": "Australia's distinctive landscapes",
+     "card": [
+      "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+      "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+      "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+      "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+     ],
+     "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+     "a": {
+      "q": "Which description best fits most of Australia's landscape?",
+      "opts": [
+       "Mostly flat and dry",
+       "Mostly high and snowy",
+       "Mostly wet and forested",
+       "Mostly wetland and swamp"
+      ],
+      "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+      "clue": "Think of the centre of the country."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya flies over Australia looking for tropical rainforest. Where could she find it?",
+      "opts": [
+       "In hot, wet patches of the north",
+       "Across almost all of the north",
+       "Across most of the dry centre",
+       "Around Uluru in central Australia"
+      ],
+      "why": "Tropical rainforest grows in hot, wet parts of the north, but only in patches. Much of the north is grassy woodland, so saying it covers almost all of the north is wrong.",
+      "clue": "Is the rainforest spread right across the north, or only in parts?"
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-05T02:17:41Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question b, other: The clue ('Is the rainforest spread right across the north, or only in parts?') rules out the main distractor and points straight to the 'patches' option, so students can answer without knowing the idea."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Australia's distinctive landscapes",
+        "card": [
+         "Australia is mostly flat and dry. Much of the centre is desert, with little rain.",
+         "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+         "The north has tropical rainforests, where it is hot and wet. Australia also has very long coasts.",
+         "Some landforms are famous, such as Uluru, a huge rock in central Australia."
+        ],
+        "remember": "Australia is mostly flat and dry, with highlands in the east and wetter lands in the north.",
+        "a": {
+         "q": "Which description best fits most of Australia's landscape?",
+         "opts": [
+          "Mostly flat and dry",
+          "Mostly high and snowy",
+          "Mostly wet and forested",
+          "Mostly wetland and swamp"
+         ],
+         "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in the north, but they cover only a small part of the country.",
+         "clue": "Think of the centre of the country."
+        },
+        "b": {
+         "d": 2,
+         "q": "Priya travels from the central desert to the far north of Australia. Which change in landscape would she most likely see?",
+         "opts": [
+          "Dry desert gives way to tropical rainforest",
+          "Dry desert gives way to snowy highlands",
+          "Tropical rainforest gives way to flat grassland",
+          "Flat desert gives way to the Great Dividing Range"
+         ],
+         "why": "The north is hot and wet, so tropical rainforests grow there. The Great Dividing Range is in the east, not the north, so it is not the change she would see.",
+         "clue": "The north is hot and wet."
+        }
+       },
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Mostly flat and dry",
+         "also_right": []
+        },
+        "b": {
+         "best": "Dry desert gives way to tropical rainforest",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "b",
+          "kind": "fact",
+          "detail": "Most of northern Australia is tropical savanna (grassy woodland), and rainforest grows only in patches such as the Wet Tropics, Cape York and parts of the Top End. Asking what Priya would 'most likely' see suggests the far north is mainly rainforest. The card's 'The north has tropical rainforests' supports that reading without saying the rainforests are patchy. A wording such as 'could see' or 'parts of the north have tropical rainforests' would be safer."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "Both questions have one clear right answer and the card is accurate overall. The card and question b suggest the far north is mainly rainforest, when most of it is tropical savanna and rainforest occurs in patches."
+       },
+       "flags": [
+        "Question b, fact: Most of northern Australia is tropical savanna (grassy woodland), and rainforest grows only in patches such as the Wet Tropics, Cape York and parts of the Top End. Asking what Priya would 'most likely' see suggests the far north is mainly rainforest. The card's 'The north has tropical rainforests' supports that reading without saying the rainforests are patchy. A wording such as 'could see' or 'parts of the north have tropical rainforests' would be safer."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Australia's distinctive landscapes",
+        "card": [
+         "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+         "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+         "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+         "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+        ],
+        "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+        "a": {
+         "q": "Which description best fits most of Australia's landscape?",
+         "opts": [
+          "Mostly flat and dry",
+          "Mostly high and snowy",
+          "Mostly wet and forested",
+          "Mostly wetland and swamp"
+         ],
+         "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+         "clue": "Think of the centre of the country."
+        },
+        "b": {
+         "d": 3,
+         "q": "Priya flies over Australia looking for tropical rainforest. Where could she find it?",
+         "opts": [
+          "In hot, wet patches of the north",
+          "Across almost all of the north",
+          "Across most of the dry centre",
+          "Around Uluru in central Australia"
+         ],
+         "why": "Tropical rainforest grows in hot, wet parts of the north, but only in patches. Much of the north is grassy woodland, so saying it covers almost all of the north is wrong.",
+         "clue": "Is the rainforest spread right across the north, or only in parts?"
+        }
+       },
+       "proposal_problems": [],
+       "recheck": {
+        "at": "2026-11-04T18:10:12Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Mostly flat and dry",
+          "also_right": []
+         },
+         "b": {
+          "best": "In hot, wet patches of the north",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "b",
+           "kind": "other",
+           "detail": "The clue ('Is the rainforest spread right across the north, or only in parts?') rules out the main distractor and points straight to the 'patches' option, so students can answer without knowing the idea."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The facts are correct and both questions have one clear right answer. The clue for question b nearly gives the answer away by asking whether the rainforest is 'only in parts'."
+        },
+        "flags": [
+         "Question b, other: The clue ('Is the rainforest spread right across the north, or only in parts?') rules out the main distractor and points straight to the 'patches' option, so students can answer without knowing the idea."
+        ]
+       }
+      }
+     }
+    ],
+    "written_by": "claude-code",
+    "draft": {
+     "title": "Australia's distinctive landscapes",
+     "card": [
+      "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+      "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+      "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+      "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+     ],
+     "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+     "a": {
+      "q": "Which phrase best describes most of Australia's land?",
+      "opts": [
+       "Mostly flat and dry",
+       "Mostly high and snowy",
+       "Mostly wet and forested",
+       "Mostly marsh and wetland"
+      ],
+      "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+      "clue": "Think of what covers the centre of the country."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya is flying over Australia to see tropical rainforest. Where should she look?",
+      "opts": [
+       "In hot, wet patches of the north",
+       "Across almost all of the north",
+       "Across most of the dry centre",
+       "Around Uluru in central Australia"
+      ],
+      "why": "Tropical rainforest grows in hot, wet parts of the north, but only in patches. Much of the north is grassy woodland, so saying it covers almost all of the north is wrong.",
+      "clue": "Rainforest needs heat and plenty of rain."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Mostly flat and dry",
+      "also_right": []
+     },
+     "b": {
+      "best": "In hot, wet patches of the north",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a describing detail (\"hot, wet\"), and it repeats the clue's words (heat and plenty of rain), so a student can pick it by matching words without knowing that rainforest is only in patches. Consider dropping \"hot, wet\" from the option, e.g. \"In patches of the north\"."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Facts check out. Question b's right option echoes the clue with \"hot, wet\", which gives the answer away; dropping those words would fix it."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, wording: The right option is the only one with a describing detail (\"hot, wet\"), and it repeats the clue's words (heat and plenty of rain), so a student can pick it by matching words without knowing that rainforest is only in patches. Consider dropping \"hot, wet\" from the option, e.g. \"In patches of the north\"."
+    ],
+    "checked_by": "claude-code",
+    "proposal": {
+     "title": "Australia's distinctive landscapes",
+     "card": [
+      "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+      "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+      "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+      "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+     ],
+     "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+     "a": {
+      "q": "Which phrase best describes most of Australia's land?",
+      "opts": [
+       "Mostly flat and dry",
+       "Mostly high and snowy",
+       "Mostly wet and forested",
+       "Mostly marsh and wetland"
+      ],
+      "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+      "clue": "Think of what covers the centre of the country."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya is flying over Australia to see tropical rainforest. Where should she look?",
+      "opts": [
+       "In patches of the north",
+       "Across almost all of the north",
+       "Across most of the dry centre",
+       "Around Uluru in central Australia"
+      ],
+      "why": "Tropical rainforest grows in parts of the north, but only in patches. Much of the north is grassy woodland, so saying rainforest covers almost all of the north is wrong.",
+      "clue": "Recall what covers much of the north apart from rainforest."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "63b7a41878b8f96c"
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Australia's distinctive landscapes",
+  "card": [
+   "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+   "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+   "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+   "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+  ],
+  "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+  "a": {
+   "q": "Which phrase best describes most of Australia's land?",
+   "opts": [
+    "Mostly flat and dry",
+    "Mostly high and snowy",
+    "Mostly wet and forested",
+    "Mostly marsh and wetland"
+   ],
+   "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+   "clue": "Think of what covers the centre of the country."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is flying over Australia to see tropical rainforest. Where should she look?",
+   "opts": [
+    "In hot, wet patches of the north",
+    "Across almost all of the north",
+    "Across most of the dry centre",
+    "Around Uluru in central Australia"
+   ],
+   "why": "Tropical rainforest grows in hot, wet parts of the north, but only in patches. Much of the north is grassy woodland, so saying it covers almost all of the north is wrong.",
+   "clue": "Rainforest needs heat and plenty of rain."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Mostly flat and dry",
+   "also_right": []
+  },
+  "b": {
+   "best": "In hot, wet patches of the north",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a describing detail (\"hot, wet\"), and it repeats the clue's words (heat and plenty of rain), so a student can pick it by matching words without knowing that rainforest is only in patches. Consider dropping \"hot, wet\" from the option, e.g. \"In patches of the north\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Facts check out. Question b's right option echoes the clue with \"hot, wet\", which gives the answer away; dropping those words would fix it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one with a describing detail (\"hot, wet\"), and it repeats the clue's words (heat and plenty of rain), so a student can pick it by matching words without knowing that rainforest is only in patches. Consider dropping \"hot, wet\" from the option, e.g. \"In patches of the north\"."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Australia's distinctive landscapes",
+  "card": [
+   "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+   "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+   "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+   "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+  ],
+  "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+  "a": {
+   "q": "Which phrase best describes most of Australia's land?",
+   "opts": [
+    "Mostly flat and dry",
+    "Mostly high and snowy",
+    "Mostly wet and forested",
+    "Mostly marsh and wetland"
+   ],
+   "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+   "clue": "Think of what covers the centre of the country."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is flying over Australia to see tropical rainforest. Where should she look?",
+   "opts": [
+    "In patches of the north",
+    "Across almost all of the north",
+    "Across most of the dry centre",
+    "Around Uluru in central Australia"
+   ],
+   "why": "Tropical rainforest grows in parts of the north, but only in patches. Much of the north is grassy woodland, so saying rainforest covers almost all of the north is wrong.",
+   "clue": "Recall what covers much of the north apart from rainforest."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Australia's distinctive landscapes",
+  "card": [
+   "Australia is mostly flat and dry, with very long coasts. Much of the centre is desert, with little rain.",
+   "The Great Dividing Range runs down the east. It is a long line of highlands, and it is the main mountain system in the east.",
+   "Parts of the north, where it is hot and wet, have tropical rainforest. These are patches only: much of the north is grassy woodland.",
+   "Some landforms are famous, such as Uluru, a huge rock in the desert of central Australia."
+  ],
+  "remember": "Australia is mostly flat and dry, with highlands in the east and patches of rainforest in the north.",
+  "a": {
+   "q": "Which phrase best describes most of Australia's land?",
+   "opts": [
+    "Mostly flat and dry",
+    "Mostly high and snowy",
+    "Mostly wet and forested",
+    "Mostly marsh and wetland"
+   ],
+   "why": "Most of Australia is flat and dry, with deserts in the centre. Rainforests are found in parts of the north, but they cover only a small part of the country.",
+   "clue": "Think of what covers the centre of the country."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is flying over Australia to see tropical rainforest. Where should she look?",
+   "opts": [
+    "In patches of the north",
+    "Across almost all of the north",
+    "Across most of the dry centre",
+    "Around Uluru in central Australia"
+   ],
+   "why": "Tropical rainforest grows in parts of the north, but only in patches. Much of the north is grassy woodland, so saying rainforest covers almost all of the north is wrong.",
+   "clue": "Recall what covers much of the north apart from rainforest."
+  }
+ }
+}

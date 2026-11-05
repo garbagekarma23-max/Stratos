@@ -1,0 +1,124 @@
+{
+ "id": "mat-surface-area-prisms",
+ "title": "Surface area of prisms",
+ "brief": "069c5c56abe1",
+ "shortlist": [
+  [
+   "mat-surface-area-volume",
+   0.412
+  ],
+  [
+   "mat-surface-area",
+   0.405
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00598,
+  "check": 0.00898
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point is a clean match: the Victoria card mixes in volume, and its first question tests volume rather than surface area, while the NSW Year 11 card is broader (it covers general solids and cylinders) and pitched at a higher level than Year 9 prisms.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Surface area of prisms",
+  "card": [
+   "The surface area of a prism is the total area of all its faces. It is measured in square units, such as cm².",
+   "A net is the prism folded out flat. It shows every face, so you can find each area and add them.",
+   "A triangular prism has 2 triangle faces and 3 rectangle faces. A rectangular prism has 6 rectangle faces, in 3 matching pairs.",
+   "Example: a box is 5 cm long, 3 cm wide and 2 cm high. The faces are 2 × (5 × 3) + 2 × (5 × 2) + 2 × (3 × 2) = 30 + 20 + 12 = 62 cm²."
+  ],
+  "remember": "Find the area of every face, then add them all.",
+  "a": {
+   "q": "A rectangular prism is 4 cm long, 3 cm wide and 2 cm high. What is its surface area?",
+   "opts": [
+    "52 cm²",
+    "24 cm²",
+    "26 cm²",
+    "36 cm²"
+   ],
+   "why": "The pairs of faces are 2 × 12 = 24, 2 × 8 = 16 and 2 × 6 = 12. The total is 52 cm². 24 cm² is only the volume, not the area of the faces.",
+   "clue": "There are 3 pairs of matching faces."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tent is a triangular prism. Each triangle end has base 6 m and height 4 m. The three rectangle faces are 6 m × 10 m, 5 m × 10 m and 5 m × 10 m. What is the surface area of the tent, including the floor?",
+   "opts": [
+    "184 m²",
+    "160 m²",
+    "172 m²",
+    "208 m²"
+   ],
+   "why": "Each triangle is 6 × 4 ÷ 2 = 12 m², so two give 24 m². The rectangles give 60 + 50 + 50 = 160 m². The total is 184 m². 160 m² is wrong because it leaves out the two triangle ends.",
+   "clue": "Remember to halve each triangle, and count both ends."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "52 cm²",
+   "also_right": []
+  },
+  "b": {
+   "best": "184 m²",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card example (62 cm²) and both answers (52 cm² and 184 m²) check out, the tent's 5 m sloping sides match its 6 m by 4 m triangle ends, and the explanations agree with the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Surface area of prisms",
+  "card": [
+   "The surface area of a prism is the total area of all its faces. It is measured in square units, such as cm².",
+   "A net is the prism folded out flat. It shows every face, so you can find each area and add them.",
+   "A triangular prism has 2 triangle faces and 3 rectangle faces. A rectangular prism has 6 rectangle faces, in 3 matching pairs.",
+   "Example: a box is 5 cm long, 3 cm wide and 2 cm high. The faces are 2 × (5 × 3) + 2 × (5 × 2) + 2 × (3 × 2) = 30 + 20 + 12 = 62 cm²."
+  ],
+  "remember": "Find the area of every face, then add them all.",
+  "a": {
+   "q": "A rectangular prism is 4 cm long, 3 cm wide and 2 cm high. What is its surface area?",
+   "opts": [
+    "52 cm²",
+    "24 cm²",
+    "26 cm²",
+    "36 cm²"
+   ],
+   "why": "The pairs of faces are 2 × 12 = 24, 2 × 8 = 16 and 2 × 6 = 12. The total is 52 cm². 24 cm² is only the volume, not the area of the faces.",
+   "clue": "There are 3 pairs of matching faces."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tent is a triangular prism. Each triangle end has base 6 m and height 4 m. The three rectangle faces are 6 m × 10 m, 5 m × 10 m and 5 m × 10 m. What is the surface area of the tent, including the floor?",
+   "opts": [
+    "184 m²",
+    "160 m²",
+    "172 m²",
+    "208 m²"
+   ],
+   "why": "Each triangle is 6 × 4 ÷ 2 = 12 m², so two give 24 m². The rectangles give 60 + 50 + 50 = 160 m². The total is 184 m². 160 m² is wrong because it leaves out the two triangle ends.",
+   "clue": "Remember to halve each triangle, and count both ends."
+  }
+ },
+ "cleared_by": "checker"
+}

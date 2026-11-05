@@ -1,0 +1,454 @@
+{
+ "id": "mat-trigonometric-ratios",
+ "title": "The trigonometric ratios",
+ "brief": "38d474f9e526",
+ "shortlist": [
+  [
+   "mat-sine-cosine-tangent-ratios",
+   0.435
+  ],
+  [
+   "mat-right-angled-trigonometry",
+   0.364
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 may adapt mat-sine-cosine-tangent-ratios, but is not highly sure, so to the Opus match check",
+  "2026-11-04T09:47:10Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:58:31Z write: done",
+  "2026-11-04T10:08:04Z check: flagged",
+  "2026-11-04T10:10:50Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b other)",
+  "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "confirm": 0.00557,
+  "write": 0.00776,
+  "check": 0.0145,
+  "fix": 0.01843,
+  "recheck": 0.01055
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-sine-cosine-tangent-ratios",
+  "changes": [
+   "Add a sentence stating that similar triangles give the same sine, cosine and tangent for the same angle, since the new point's brief includes this and the card does not teach it."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same three ratios at a suitable Year 9 depth and its questions are fair, but it omits the similar-triangles idea the brief asks for, so one sentence needs adding.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank points go further than this one, into solving for sides and angles and angles of elevation, and neither teaches the idea at the heart of this point: similar triangles give the same ratios for the same angle, which is what AC9M9SP01 asks for.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: Question b asks students to find an unknown side by solving opposite ÷ 15 = 3/5. Rearranging a ratio to find a side is point 2 (finding a side with trigonometry), and this card does not teach it. Students could still solve it by scaling the similar triangle (×3).",
+ "rejected": {
+  "title": "The trigonometric ratios",
+  "card": [
+   "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle. The adjacent side is next to that angle and is not the hypotenuse.",
+   [
+    "Sine",
+    "sin = opposite ÷ hypotenuse."
+   ],
+   [
+    "Cosine",
+    "cos = adjacent ÷ hypotenuse."
+   ],
+   [
+    "Tangent",
+    "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
+   ]
+  ],
+  "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
+  "a": {
+   "q": "A right-angled triangle has sides 5, 12 and 13. For the angle that has 5 opposite and 12 adjacent, what is sin?",
+   "opts": [
+    "5/13",
+    "12/13",
+    "5/12",
+    "13/5"
+   ],
+   "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+   "clue": "Sine uses the opposite side and the longest side."
+  },
+  "b": {
+   "d": 3,
+   "q": "Triangle P has sides 3, 4 and 5. Angle A has 3 opposite and 4 adjacent. Triangle Q is similar, with the same angle A, and its hypotenuse is 15. What is the side opposite angle A in Q?",
+   "opts": [
+    "9",
+    "13",
+    "12",
+    "25"
+   ],
+   "why": "In P, sin A = 3/5. Q has the same angle, so sin A is also 3/5, and opposite ÷ 15 = 3/5 gives an opposite side of 9. Adding 10 to each side gives 13, but 13/15 is not 3/5, so that does not keep the ratio.",
+   "clue": "The sine of angle A is the same in both triangles."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:43Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: Question b asks students to find an unknown side by solving opposite ÷ 15 = 3/5. Rearranging a ratio to find a side is point 2 (finding a side with trigonometry), and this card does not teach it. Students could still solve it by scaling the similar triangle (×3)."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The trigonometric ratios",
+     "card": [
+      "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle, and the adjacent side touches it.",
+      [
+       "Sine",
+       "sin = opposite ÷ hypotenuse."
+      ],
+      [
+       "Cosine",
+       "cos = adjacent ÷ hypotenuse."
+      ],
+      [
+       "Tangent",
+       "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle."
+      ]
+     ],
+     "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
+     "a": {
+      "q": "A right-angled triangle has sides 5, 12 and 13. For the angle that has 5 opposite and 12 adjacent, what is sin?",
+      "opts": [
+       "5/13",
+       "12/13",
+       "5/12",
+       "13/5"
+      ],
+      "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+      "clue": "Sine uses the opposite side and the longest side."
+     },
+     "b": {
+      "d": 3,
+      "q": "Triangle P has angle 40° with opposite side 4 and hypotenuse 6. Triangle Q is similar and bigger, with hypotenuse 18 at its 40° angle. What is the opposite side in Q?",
+      "opts": [
+       "12",
+       "10",
+       "14",
+       "8"
+      ],
+      "why": "The ratios are the same for the same angle, so sin 40° = 4/6 = 2/3 in both triangles. In Q, opposite ÷ 18 = 2/3, so the opposite side is 12. Adding the same amount to each side, which gives 10, does not keep the ratio.",
+      "clue": "Similar triangles keep the same sine, so scale by the same multiple."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "5/13",
+      "also_right": []
+     },
+     "b": {
+      "best": "12",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "A triangle with opposite 4 and hypotenuse 6 has an angle of about 41.8°, not 40°, since sin 40° ≈ 0.643 while 4/6 ≈ 0.667. A student who checks on a calculator will find the data inconsistent. Use a different angle or different side lengths."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Why (b) says sin 40° = 4/6 = 2/3, which is false (sin 40° ≈ 0.643)."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says adding the same amount to each side gives 10, but going from hypotenuse 6 to 18 adds 12, so the opposite side would be 16, not 10. The explanation of the distractor is wrong."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "'with hypotenuse 18 at its 40° angle' is awkward and unclear. Say 'its hypotenuse is 18' instead."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'the adjacent side touches it' is ambiguous, because the hypotenuse also touches the angle. It should say the adjacent side is the side next to the angle that is not the hypotenuse."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Question b uses impossible data (opposite 4 and hypotenuse 6 gives about 41.8°, not 40°). Its why wrongly states sin 40° = 2/3 and miscalculates the 'add the same amount' distractor (that gives 16, not 10). The card's definition of the adjacent side is also ambiguous, since the hypotenuse touches the angle too."
+    },
+    "flags": [
+     "Question b, fact: A triangle with opposite 4 and hypotenuse 6 has an angle of about 41.8°, not 40°, since sin 40° ≈ 0.643 while 4/6 ≈ 0.667. A student who checks on a calculator will find the data inconsistent. Use a different angle or different side lengths.",
+     "Question b, fact: Why (b) says sin 40° = 4/6 = 2/3, which is false (sin 40° ≈ 0.643).",
+     "Question b, other: Why (b) says adding the same amount to each side gives 10, but going from hypotenuse 6 to 18 adds 12, so the opposite side would be 16, not 10. The explanation of the distractor is wrong.",
+     "Question b, wording: 'with hypotenuse 18 at its 40° angle' is awkward and unclear. Say 'its hypotenuse is 18' instead.",
+     "Card, wording: 'the adjacent side touches it' is ambiguous, because the hypotenuse also touches the angle. It should say the adjacent side is the side next to the angle that is not the hypotenuse."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The trigonometric ratios",
+     "card": [
+      "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle. The adjacent side is next to that angle and is not the hypotenuse.",
+      [
+       "Sine",
+       "sin = opposite ÷ hypotenuse."
+      ],
+      [
+       "Cosine",
+       "cos = adjacent ÷ hypotenuse."
+      ],
+      [
+       "Tangent",
+       "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
+      ]
+     ],
+     "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
+     "a": {
+      "q": "A right-angled triangle has sides 5, 12 and 13. For the angle that has 5 opposite and 12 adjacent, what is sin?",
+      "opts": [
+       "5/13",
+       "12/13",
+       "5/12",
+       "13/5"
+      ],
+      "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+      "clue": "Sine uses the opposite side and the longest side."
+     },
+     "b": {
+      "d": 3,
+      "q": "Triangle P has sides 3, 4 and 5. Angle A has 3 opposite and 4 adjacent. Triangle Q is similar, with the same angle A, and its hypotenuse is 15. What is the side opposite angle A in Q?",
+      "opts": [
+       "9",
+       "13",
+       "12",
+       "25"
+      ],
+      "why": "In P, sin A = 3/5. Q has the same angle, so sin A is also 3/5, and opposite ÷ 15 = 3/5 gives an opposite side of 9. Adding 10 to each side gives 13, but 13/15 is not 3/5, so that does not keep the ratio.",
+      "clue": "The sine of angle A is the same in both triangles."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "5/13",
+       "also_right": []
+      },
+      "b": {
+       "best": "9",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "Question b asks students to find an unknown side by solving opposite ÷ 15 = 3/5. Rearranging a ratio to find a side is point 2 (finding a side with trigonometry), and this card does not teach it. Students could still solve it by scaling the similar triangle (×3)."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and answers are correct (a: 5/13, b: 9). Question b leans into point 2 by having students rearrange a sine ratio to find a side, which the card does not teach."
+     },
+     "flags": [
+      "Question b, other: Question b asks students to find an unknown side by solving opposite ÷ 15 = 3/5. Rearranging a ratio to find a side is point 2 (finding a side with trigonometry), and this card does not teach it. Students could still solve it by scaling the similar triangle (×3)."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:43Z",
+   "step": "write",
+   "version": {
+    "title": "The trigonometric ratios",
+    "card": [
+     "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle. The adjacent side is next to that angle and is not the hypotenuse.",
+     [
+      "Sine",
+      "sin = opposite ÷ hypotenuse."
+     ],
+     [
+      "Cosine",
+      "cos = adjacent ÷ hypotenuse."
+     ],
+     [
+      "Tangent",
+      "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
+     ]
+    ],
+    "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
+    "a": {
+     "q": "A right-angled triangle has sides 5, 12 and 13. Angle B has the side 5 opposite it and the side 12 next to it. What is sin B?",
+     "opts": [
+      "5/13",
+      "12/13",
+      "5/12",
+      "13/5"
+     ],
+     "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin B = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+     "clue": "Sine uses the opposite side and the longest side."
+    },
+    "b": {
+     "d": 3,
+     "q": "Triangle P has sides 8, 15 and 17, with 8 opposite angle A and 15 adjacent to it. Triangle Q has sides 16, 30 and 34 and the same angle A, with 16 opposite it. What is true about tan A?",
+     "opts": [
+      "It is 8/15 in both triangles",
+      "It is 8/17 in both triangles",
+      "It is 8/15 in P and 16/15 in Q",
+      "It is twice as large in Q as in P"
+     ],
+     "why": "tan A = opposite ÷ adjacent. In P it is 8/15, and in Q it is 16/30, which is also 8/15. Similar triangles give the same ratios for the same angle, even though Q's sides are twice as long. 8/17 is sin A, not tan A, and 16/15 mixes a side from Q with a side from P.",
+     "clue": "Work out opposite ÷ adjacent in each triangle and compare."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "5/13",
+     "also_right": []
+    },
+    "b": {
+     "best": "It is 8/15 in both triangles",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The trigonometric ratios",
+  "card": [
+   "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle. The adjacent side is next to that angle and is not the hypotenuse.",
+   [
+    "Sine",
+    "sin = opposite ÷ hypotenuse."
+   ],
+   [
+    "Cosine",
+    "cos = adjacent ÷ hypotenuse."
+   ],
+   [
+    "Tangent",
+    "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
+   ]
+  ],
+  "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
+  "a": {
+   "q": "A right-angled triangle has sides 5, 12 and 13. Angle B has the side 5 opposite it and the side 12 next to it. What is sin B?",
+   "opts": [
+    "5/13",
+    "12/13",
+    "5/12",
+    "13/5"
+   ],
+   "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin B = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+   "clue": "Sine uses the opposite side and the longest side."
+  },
+  "b": {
+   "d": 3,
+   "q": "Triangle P has sides 8, 15 and 17, with 8 opposite angle A and 15 adjacent to it. Triangle Q has sides 16, 30 and 34 and the same angle A, with 16 opposite it. What is true about tan A?",
+   "opts": [
+    "It is 8/15 in both triangles",
+    "It is 8/17 in both triangles",
+    "It is 8/15 in P and 16/15 in Q",
+    "It is twice as large in Q as in P"
+   ],
+   "why": "tan A = opposite ÷ adjacent. In P it is 8/15, and in Q it is 16/30, which is also 8/15. Similar triangles give the same ratios for the same angle, even though Q's sides are twice as long. 8/17 is sin A, not tan A, and 16/15 mixes a side from Q with a side from P.",
+   "clue": "Work out opposite ÷ adjacent in each triangle and compare."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5/13",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is 8/15 in both triangles",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The trigonometric ratios",
+  "card": [
+   "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle. The adjacent side is next to that angle and is not the hypotenuse.",
+   [
+    "Sine",
+    "sin = opposite ÷ hypotenuse."
+   ],
+   [
+    "Cosine",
+    "cos = adjacent ÷ hypotenuse."
+   ],
+   [
+    "Tangent",
+    "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
+   ]
+  ],
+  "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
+  "a": {
+   "q": "A right-angled triangle has sides 5, 12 and 13. Angle B has the side 5 opposite it and the side 12 next to it. What is sin B?",
+   "opts": [
+    "5/13",
+    "12/13",
+    "5/12",
+    "13/5"
+   ],
+   "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin B = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+   "clue": "Sine uses the opposite side and the longest side."
+  },
+  "b": {
+   "d": 3,
+   "q": "Triangle P has sides 8, 15 and 17, with 8 opposite angle A and 15 adjacent to it. Triangle Q has sides 16, 30 and 34 and the same angle A, with 16 opposite it. What is true about tan A?",
+   "opts": [
+    "It is 8/15 in both triangles",
+    "It is 8/17 in both triangles",
+    "It is 8/15 in P and 16/15 in Q",
+    "It is twice as large in Q as in P"
+   ],
+   "why": "tan A = opposite ÷ adjacent. In P it is 8/15, and in Q it is 16/30, which is also 8/15. Similar triangles give the same ratios for the same angle, even though Q's sides are twice as long. 8/17 is sin A, not tan A, and 16/15 mixes a side from Q with a side from P.",
+   "clue": "Work out opposite ÷ adjacent in each triangle and compare."
+  }
+ },
+ "checked_by": "claude-code"
+}

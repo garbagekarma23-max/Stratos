@@ -1,0 +1,146 @@
+{
+ "id": "mat-simplifying-with-index-laws",
+ "title": "Simplifying with the index laws",
+ "brief": "b8910a370167",
+ "shortlist": [
+  [
+   "mat-index-laws",
+   0.269
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:39Z new, match",
+  "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:30Z write: done",
+  "2026-11-04T10:08:03Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.0052,
+  "check": 0.00905
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only covers positive whole-number indices and never teaches negative indices, which this Year 10 point requires, so adding them would be a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Simplifying with the index laws",
+  "card": [
+   [
+    "Multiply",
+    "add the indices when the base is the same. x³ × x² = x⁵. Multiply the numbers in front as usual."
+   ],
+   [
+    "Divide",
+    "subtract the indices. x⁵ ÷ x² = x³. A negative index results when the power in the divisor is larger, so x² ÷ x⁵ = x⁻³. Divide the numbers in front as usual."
+   ],
+   [
+    "Power of a power",
+    "multiply the indices, and raise every factor inside the brackets to the power. (2x³)² = 2² × x⁶ = 4x⁶."
+   ],
+   [
+    "Worked example",
+    "(2x³y)² ÷ 4xy = 4x⁶y² ÷ 4xy. Divide the numbers: 4 ÷ 4 = 1. Subtract the indices: x⁶ ÷ x = x⁵ and y² ÷ y = y. The answer is x⁵y."
+   ]
+  ],
+  "remember": "Work one base at a time: add indices to multiply, subtract to divide, multiply for a power of a power.",
+  "a": {
+   "q": "Simplify (3x²)³",
+   "opts": [
+    "27x⁶",
+    "9x⁶",
+    "27x⁵",
+    "9x⁵"
+   ],
+   "why": "Cube every factor: 3³ = 27 and (x²)³ = x⁶, so the answer is 27x⁶. Writing 9 is tempting, but that multiplies 3 by 3 only, instead of cubing it.",
+   "clue": "The power applies to the 3 as well as to the x."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify (4x⁵y)² ÷ 8x³y",
+   "opts": [
+    "2x⁷y",
+    "2x⁴y",
+    "2x⁷y²",
+    "8x⁷y"
+   ],
+   "why": "Squaring gives 16x¹⁰y². Then 16 ÷ 8 = 2, x¹⁰ ÷ x³ = x⁷ and y² ÷ y = y, so the answer is 2x⁷y. Leaving y² forgets to divide by the y, and 8x⁷y comes from squaring 4 as 4 × 2.",
+   "clue": "Square everything in the brackets first, then divide."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "27x⁶",
+   "also_right": []
+  },
+  "b": {
+   "best": "2x⁷y",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: (3x²)³ = 27x⁶ and (4x⁵y)² ÷ 8x³y = 2x⁷y. The card, the remember line and the explanations are all accurate."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Simplifying with the index laws",
+  "card": [
+   [
+    "Multiply",
+    "add the indices when the base is the same. x³ × x² = x⁵. Multiply the numbers in front as usual."
+   ],
+   [
+    "Divide",
+    "subtract the indices. x⁵ ÷ x² = x³. A negative index results when the power in the divisor is larger, so x² ÷ x⁵ = x⁻³. Divide the numbers in front as usual."
+   ],
+   [
+    "Power of a power",
+    "multiply the indices, and raise every factor inside the brackets to the power. (2x³)² = 2² × x⁶ = 4x⁶."
+   ],
+   [
+    "Worked example",
+    "(2x³y)² ÷ 4xy = 4x⁶y² ÷ 4xy. Divide the numbers: 4 ÷ 4 = 1. Subtract the indices: x⁶ ÷ x = x⁵ and y² ÷ y = y. The answer is x⁵y."
+   ]
+  ],
+  "remember": "Work one base at a time: add indices to multiply, subtract to divide, multiply for a power of a power.",
+  "a": {
+   "q": "Simplify (3x²)³",
+   "opts": [
+    "27x⁶",
+    "9x⁶",
+    "27x⁵",
+    "9x⁵"
+   ],
+   "why": "Cube every factor: 3³ = 27 and (x²)³ = x⁶, so the answer is 27x⁶. Writing 9 is tempting, but that multiplies 3 by 3 only, instead of cubing it.",
+   "clue": "The power applies to the 3 as well as to the x."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify (4x⁵y)² ÷ 8x³y",
+   "opts": [
+    "2x⁷y",
+    "2x⁴y",
+    "2x⁷y²",
+    "8x⁷y"
+   ],
+   "why": "Squaring gives 16x¹⁰y². Then 16 ÷ 8 = 2, x¹⁰ ÷ x³ = x⁷ and y² ÷ y = y, so the answer is 2x⁷y. Leaving y² forgets to divide by the y, and 8x⁷y comes from squaring 4 as 4 × 2.",
+   "clue": "Square everything in the brackets first, then divide."
+  }
+ },
+ "cleared_by": "checker"
+}

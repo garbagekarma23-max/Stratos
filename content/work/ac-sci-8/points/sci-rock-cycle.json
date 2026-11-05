@@ -1,0 +1,411 @@
+{
+ "id": "sci-rock-cycle",
+ "title": "The rock cycle",
+ "brief": "8c02e888ae8a",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:44Z new, write",
+  "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:47:13Z write: done",
+  "2026-11-04T09:58:33Z check: flagged",
+  "2026-11-04T14:58:53Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:44Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-05T02:27:44Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00493,
+  "check": 0.01419,
+  "fix": 0.01931,
+  "recheck": 0.01377
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: The remember line gives one fixed sequence (breaks down, buried, heated or melted, uplifted), which sorts the cycle more neatly than the card. The card says any rock can change into any of the three types by different paths.",
+ "rejected": {
+  "title": "The rock cycle",
+  "card": [
+   "The rock cycle is the set of processes that turn rock of one type into another type. Any rock can change into any of the three types, and most changes take millions of years.",
+   [
+    "Surface processes",
+    "Weathering breaks rock into smaller pieces. Erosion moves the pieces away, and deposition drops them in a new place. Layers of sediment that are buried and cemented become sedimentary rock."
+   ],
+   [
+    "Underground processes",
+    "Heat and pressure change buried rock into metamorphic rock without melting it. If the rock gets hot enough to melt, it becomes magma. When magma cools, it forms igneous rock."
+   ],
+   [
+    "Uplift",
+    "Uplift pushes rock from deep underground up towards the surface. There it can be weathered, and the cycle goes on."
+   ]
+  ],
+  "remember": "Rock keeps changing: it breaks down, is buried, is heated or melted, and is uplifted again.",
+  "a": {
+   "q": "A river carries sand and pebbles downstream from a mountain. Which rock cycle process is this?",
+   "opts": [
+    "Erosion",
+    "Deposition",
+    "Uplift",
+    "Weathering"
+   ],
+   "why": "Erosion is the process that moves weathered pieces of rock, for example in a river or the wind. Deposition is tempting, but it is when the pieces are dropped, not when they are carried. Weathering breaks the rock up before it is moved.",
+   "clue": "Is the sand being broken, carried or dropped?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Granite that formed deep underground is uplifted to the surface. Which order of processes could turn it into sedimentary rock?",
+   "opts": [
+    "Weathering, erosion, deposition, then burial",
+    "Deposition, erosion, weathering, then burial",
+    "Heating, melting, cooling, then uplift",
+    "Heat, pressure, burial, then uplift"
+   ],
+   "why": "The granite must first be broken into pieces, then moved, then dropped in layers that are buried and cemented. The reversed order is tempting, but pieces cannot be moved or dropped before weathering makes them. Melting and cooling would give igneous rock, and heat and pressure would give metamorphic rock.",
+   "clue": "What must happen to solid rock before any pieces can be moved?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:44Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: The remember line gives one fixed sequence (breaks down, buried, heated or melted, uplifted), which sorts the cycle more neatly than the card. The card says any rock can change into any of the three types by different paths."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The rock cycle",
+     "card": [
+      "The rock cycle is the set of processes that turn rock of one type into another type. Any rock can change into any of the three types, and most changes take millions of years.",
+      [
+       "Surface processes",
+       "Weathering breaks rock into smaller pieces. Erosion moves the pieces away, and deposition is where they are dropped. Layers of sediment that are buried and cemented become sedimentary rock."
+      ],
+      [
+       "Underground processes",
+       "Heat and pressure change buried rock into metamorphic rock without melting it. If the rock gets hot enough to melt, it becomes magma. When magma cools, it forms igneous rock."
+      ],
+      [
+       "Uplift",
+       "Uplift pushes rock from deep underground up towards the surface. There it can be weathered, and the cycle goes on."
+      ]
+     ],
+     "remember": "Rock keeps changing: it breaks down, is buried, is heated or melted, and is uplifted again.",
+     "a": {
+      "q": "Which process in the rock cycle moves pieces of weathered rock from one place to another?",
+      "opts": [
+       "Erosion",
+       "Deposition",
+       "Uplift",
+       "Melting"
+      ],
+      "why": "Erosion carries weathered pieces away, for example in a river or the wind. Deposition is tempting, but it is where the pieces are dropped, not where they are moved.",
+      "clue": "Think of a river carrying sand downstream."
+     },
+     "b": {
+      "d": 3,
+      "q": "A layer of sandstone is buried deep underground. Heat and pressure change it, but it does not melt. What does it become, and which process is this?",
+      "opts": [
+       "Metamorphic rock, by heat and pressure",
+       "Igneous rock, by melting and cooling",
+       "Sedimentary rock, by burial and cementing",
+       "Metamorphic rock, by weathering and erosion"
+      ],
+      "why": "Heat and pressure that change rock without melting it make metamorphic rock. Igneous rock is tempting, but it needs the rock to melt first. Weathering and erosion break rock down at the surface and do not change it underground.",
+      "clue": "The card says the rock does not melt."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Erosion",
+      "also_right": []
+     },
+     "b": {
+      "best": "Metamorphic rock, by heat and pressure",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The stem already says 'Heat and pressure change it, but it does not melt', and the right option repeats 'by heat and pressure'. The clue then repeats 'does not melt'. A student can match the words without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The question tests how metamorphic rock forms, which is point 3's idea, rather than the rock cycle as a set of linked processes. A question about how one rock type moves through the cycle into another would fit this point better."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'deposition is where they are dropped' makes deposition sound like a place rather than a process. Better: 'deposition is when they are dropped' or 'deposition drops them'. The why for (a) repeats this ('it is where the pieces are dropped')."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct. Question b gives its answer away, because the stem and clue repeat the words of the right option, and it tests point 3 (metamorphic rocks) rather than the rock cycle. The card and why (a) also describe deposition as a place rather than a process."
+    },
+    "flags": [
+     "Question b, wording: The stem already says 'Heat and pressure change it, but it does not melt', and the right option repeats 'by heat and pressure'. The clue then repeats 'does not melt'. A student can match the words without knowing the idea.",
+     "Question b, other: The question tests how metamorphic rock forms, which is point 3's idea, rather than the rock cycle as a set of linked processes. A question about how one rock type moves through the cycle into another would fit this point better.",
+     "Card, wording: 'deposition is where they are dropped' makes deposition sound like a place rather than a process. Better: 'deposition is when they are dropped' or 'deposition drops them'. The why for (a) repeats this ('it is where the pieces are dropped')."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The rock cycle",
+     "card": [
+      "The rock cycle is the set of processes that turn rock of one type into another type. Any rock can change into any of the three types, and most changes take millions of years.",
+      [
+       "Surface processes",
+       "Weathering breaks rock into smaller pieces. Erosion moves the pieces away, and deposition drops them in a new place. Layers of sediment that are buried and cemented become sedimentary rock."
+      ],
+      [
+       "Underground processes",
+       "Heat and pressure change buried rock into metamorphic rock without melting it. If the rock gets hot enough to melt, it becomes magma. When magma cools, it forms igneous rock."
+      ],
+      [
+       "Uplift",
+       "Uplift pushes rock from deep underground up towards the surface. There it can be weathered, and the cycle goes on."
+      ]
+     ],
+     "remember": "Rock keeps changing: it breaks down, is buried, is heated or melted, and is uplifted again.",
+     "a": {
+      "q": "A river carries sand and pebbles downstream from a mountain. Which rock cycle process is this?",
+      "opts": [
+       "Erosion",
+       "Deposition",
+       "Uplift",
+       "Weathering"
+      ],
+      "why": "Erosion is the process that moves weathered pieces of rock, for example in a river or the wind. Deposition is tempting, but it is when the pieces are dropped, not when they are carried. Weathering breaks the rock up before it is moved.",
+      "clue": "Is the sand being broken, carried or dropped?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Granite that formed deep underground is uplifted to the surface. Which order of processes could turn it into sedimentary rock?",
+      "opts": [
+       "Weathering, erosion, deposition, then burial",
+       "Deposition, erosion, weathering, then burial",
+       "Heating, melting, cooling, then uplift",
+       "Heat, pressure, burial, then uplift"
+      ],
+      "why": "The granite must first be broken into pieces, then moved, then dropped in layers that are buried and cemented. The reversed order is tempting, but pieces cannot be moved or dropped before weathering makes them. Melting and cooling would give igneous rock, and heat and pressure would give metamorphic rock.",
+      "clue": "What must happen to solid rock before any pieces can be moved?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-04T18:10:13Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Erosion",
+       "also_right": []
+      },
+      "b": {
+       "best": "Weathering, erosion, deposition, then burial",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The remember line gives one fixed sequence (breaks down, buried, heated or melted, uplifted), which sorts the cycle more neatly than the card. The card says any rock can change into any of the three types by different paths."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer, and the facts and explanations check out. The only issue is that the remember line suggests one fixed order of steps, while the card says rocks can take many paths."
+     },
+     "flags": [
+      "Remember, other: The remember line gives one fixed sequence (breaks down, buried, heated or melted, uplifted), which sorts the cycle more neatly than the card. The card says any rock can change into any of the three types by different paths."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:44Z",
+   "step": "write",
+   "version": {
+    "title": "The rock cycle",
+    "card": [
+     "The rock cycle is the set of processes that turn rock of one type into another type. Any rock can change into any of the three types, and most changes take millions of years.",
+     [
+      "Surface processes",
+      "Weathering breaks rock into smaller pieces. Erosion moves the pieces away, and deposition drops them in a new place. Layers of sediment that are buried and cemented become sedimentary rock."
+     ],
+     [
+      "Underground processes",
+      "Heat and pressure change buried rock into metamorphic rock without melting it. If the rock gets hot enough to melt, it becomes magma. When magma cools, it forms igneous rock."
+     ],
+     [
+      "Uplift",
+      "Uplift pushes rock from deep underground up towards the surface. There it can be weathered, and the cycle goes on."
+     ]
+    ],
+    "remember": "There is no single path: surface processes, heat, pressure, melting and uplift can change any rock into any type.",
+    "a": {
+     "q": "Wind picks up grains of sand from a weathered cliff and blows them far inland. Which rock cycle process is this?",
+     "opts": [
+      "Erosion",
+      "Deposition",
+      "Uplift",
+      "Weathering"
+     ],
+     "why": "Erosion is the process that moves weathered pieces of rock, for example by wind or a river. Deposition is tempting, but it is when the pieces are dropped, not when they are carried. Weathering breaks the rock up before it is moved.",
+     "clue": "Are the grains being broken up, moved or dropped?"
+    },
+    "b": {
+     "d": 3,
+     "q": "Waves beat against a cliff of igneous rock beside the sea. Which order of processes could turn this rock into sedimentary rock?",
+     "opts": [
+      "Weathering, erosion, deposition, then burial",
+      "Deposition, erosion, weathering, then burial",
+      "Heating, melting, cooling, then uplift",
+      "Heat, pressure, burial, then uplift"
+     ],
+     "why": "The rock is first broken into pieces, then moved, then dropped in layers that are buried and cemented. The reversed order is tempting, but pieces cannot be moved or dropped before weathering makes them. Melting and cooling would give igneous rock, and heat and pressure would give metamorphic rock.",
+     "clue": "What has to happen to solid rock before any pieces can be moved?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Erosion",
+     "also_right": []
+    },
+    "b": {
+     "best": "Weathering, erosion, deposition, then burial",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The rock cycle",
+  "card": [
+   "The rock cycle is the set of processes that turn rock of one type into another type. Any rock can change into any of the three types, and most changes take millions of years.",
+   [
+    "Surface processes",
+    "Weathering breaks rock into smaller pieces. Erosion moves the pieces away, and deposition drops them in a new place. Layers of sediment that are buried and cemented become sedimentary rock."
+   ],
+   [
+    "Underground processes",
+    "Heat and pressure change buried rock into metamorphic rock without melting it. If the rock gets hot enough to melt, it becomes magma. When magma cools, it forms igneous rock."
+   ],
+   [
+    "Uplift",
+    "Uplift pushes rock from deep underground up towards the surface. There it can be weathered, and the cycle goes on."
+   ]
+  ],
+  "remember": "There is no single path: surface processes, heat, pressure, melting and uplift can change any rock into any type.",
+  "a": {
+   "q": "Wind picks up grains of sand from a weathered cliff and blows them far inland. Which rock cycle process is this?",
+   "opts": [
+    "Erosion",
+    "Deposition",
+    "Uplift",
+    "Weathering"
+   ],
+   "why": "Erosion is the process that moves weathered pieces of rock, for example by wind or a river. Deposition is tempting, but it is when the pieces are dropped, not when they are carried. Weathering breaks the rock up before it is moved.",
+   "clue": "Are the grains being broken up, moved or dropped?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Waves beat against a cliff of igneous rock beside the sea. Which order of processes could turn this rock into sedimentary rock?",
+   "opts": [
+    "Weathering, erosion, deposition, then burial",
+    "Deposition, erosion, weathering, then burial",
+    "Heating, melting, cooling, then uplift",
+    "Heat, pressure, burial, then uplift"
+   ],
+   "why": "The rock is first broken into pieces, then moved, then dropped in layers that are buried and cemented. The reversed order is tempting, but pieces cannot be moved or dropped before weathering makes them. Melting and cooling would give igneous rock, and heat and pressure would give metamorphic rock.",
+   "clue": "What has to happen to solid rock before any pieces can be moved?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Erosion",
+   "also_right": []
+  },
+  "b": {
+   "best": "Weathering, erosion, deposition, then burial",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The rock cycle",
+  "card": [
+   "The rock cycle is the set of processes that turn rock of one type into another type. Any rock can change into any of the three types, and most changes take millions of years.",
+   [
+    "Surface processes",
+    "Weathering breaks rock into smaller pieces. Erosion moves the pieces away, and deposition drops them in a new place. Layers of sediment that are buried and cemented become sedimentary rock."
+   ],
+   [
+    "Underground processes",
+    "Heat and pressure change buried rock into metamorphic rock without melting it. If the rock gets hot enough to melt, it becomes magma. When magma cools, it forms igneous rock."
+   ],
+   [
+    "Uplift",
+    "Uplift pushes rock from deep underground up towards the surface. There it can be weathered, and the cycle goes on."
+   ]
+  ],
+  "remember": "There is no single path: surface processes, heat, pressure, melting and uplift can change any rock into any type.",
+  "a": {
+   "q": "Wind picks up grains of sand from a weathered cliff and blows them far inland. Which rock cycle process is this?",
+   "opts": [
+    "Erosion",
+    "Deposition",
+    "Uplift",
+    "Weathering"
+   ],
+   "why": "Erosion is the process that moves weathered pieces of rock, for example by wind or a river. Deposition is tempting, but it is when the pieces are dropped, not when they are carried. Weathering breaks the rock up before it is moved.",
+   "clue": "Are the grains being broken up, moved or dropped?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Waves beat against a cliff of igneous rock beside the sea. Which order of processes could turn this rock into sedimentary rock?",
+   "opts": [
+    "Weathering, erosion, deposition, then burial",
+    "Deposition, erosion, weathering, then burial",
+    "Heating, melting, cooling, then uplift",
+    "Heat, pressure, burial, then uplift"
+   ],
+   "why": "The rock is first broken into pieces, then moved, then dropped in layers that are buried and cemented. The reversed order is tempting, but pieces cannot be moved or dropped before weathering makes them. Melting and cooling would give igneous rock, and heat and pressure would give metamorphic rock.",
+   "clue": "What has to happen to solid rock before any pieces can be moved?"
+  }
+ },
+ "checked_by": "claude-code"
+}

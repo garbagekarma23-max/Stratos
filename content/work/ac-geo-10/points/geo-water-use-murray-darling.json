@@ -1,0 +1,215 @@
+{
+ "id": "geo-water-use-murray-darling",
+ "title": "Water use in the Murray-Darling Basin",
+ "brief": "fd33ff8751de",
+ "shortlist": [
+  [
+   "geo-managing-water",
+   0.356
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:31Z new, match",
+  "2026-11-04T09:36:50Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-04T09:58:25Z write: failed the content check, writing again",
+  "2026-11-04T10:08:00Z write: done (still fails the content check)",
+  "2026-11-04T10:10:49Z check: flagged",
+  "2026-11-04T10:14:00Z fix: suggested",
+  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.01055,
+  "check": 0.01056,
+  "fix": 0.0177,
+  "recheck": 0.01118
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers water management more broadly, including dams, water trading and environmental change, at a Year 11 depth, while the new point is a narrower Year 10 point on water sharing in the Murray-Darling Basin, so no bank point fits as it stands or with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Water use in the Murray-Darling Basin",
+  "card": [
+   "The Murray-Darling Basin is Australia's largest river system. It covers a large part of inland south-eastern Australia and crosses several states and the ACT.",
+   "The basin grows much of Australia's food. Irrigation, which means watering crops with water taken from rivers, is the biggest use of its water.",
+   "Towns and cities along the rivers also take water for drinking, homes and industry. Some towns rely on the rivers for most of their supply.",
+   "The rivers and wetlands need water too, to keep plants, animals and water quality healthy. Every drop taken out leaves less in the river, so the water must be shared between these uses."
+  ],
+  "remember": "The basin's water is shared between irrigation, towns and the rivers themselves.",
+  "a": {
+   "q": "Why must the water of the Murray-Darling Basin be shared?",
+   "opts": [
+    "Farms, towns and rivers all use it, and taking some leaves less",
+    "Only farms need water, so towns must wait for what is left",
+    "The rivers are too small to supply any farms or towns",
+    "Each state owns its own river, so none can be shared"
+   ],
+   "why": "Irrigation, towns and the rivers themselves all depend on the same water, and taking some leaves less for the others. The idea that only farms need it is wrong, because towns and the rivers need water too.",
+   "clue": "Think about who uses the water, and what happens when one user takes more."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam grows cotton beside a river in the basin and takes water from it to irrigate his crop. Which use of basin water is this?",
+   "opts": [
+    "Irrigation for farming",
+    "Water supply for a town",
+    "Water left for the river environment",
+    "Water used in a dam for flood control"
+   ],
+   "why": "Taking river water to water crops is irrigation, the biggest use of water in the basin. It is not left in the river, so it is not water for the environment.",
+   "clue": "What is Sam using the water to do?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "geo-water-use-murray-darlinga option is 63 characters: Farms, towns and rivers all use it, and taking some leaves less"
+ ],
+ "check": {
+  "a": {
+   "best": "Farms, towns and rivers all use it, and taking some leaves less",
+   "also_right": []
+  },
+  "b": {
+   "best": "Irrigation for farming",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question says Sam takes water 'to irrigate his crop', and the right option is 'Irrigation for farming'. A student can match the word without knowing the idea. Describe what he does instead, for example 'to water his crop'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the answers check out. Question b gives its answer away, because the question uses 'irrigate' and the right option says 'Irrigation'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question says Sam takes water 'to irrigate his crop', and the right option is 'Irrigation for farming'. A student can match the word without knowing the idea. Describe what he does instead, for example 'to water his crop'.",
+  "Content check: geo-water-use-murray-darlinga option is 63 characters: Farms, towns and rivers all use it, and taking some leaves less"
+ ],
+ "proposal": {
+  "title": "Water use in the Murray-Darling Basin",
+  "card": [
+   "The Murray-Darling Basin is Australia's largest river system. It covers a large part of inland south-eastern Australia and crosses several states and the ACT.",
+   "The basin grows much of Australia's food. Irrigation, which means watering crops with water taken from rivers, is the biggest use of its water.",
+   "Towns and cities along the rivers also take water for drinking, homes and industry. Some towns rely on the rivers for most of their supply.",
+   "The rivers and wetlands need water too, to keep plants, animals and water quality healthy. Every drop taken out leaves less in the river, so the water must be shared between these uses."
+  ],
+  "remember": "The basin's water is shared between irrigation, towns and the rivers themselves.",
+  "a": {
+   "q": "Why must the water of the Murray-Darling Basin be shared?",
+   "opts": [
+    "Farms, towns and rivers all depend on the same water",
+    "Only farms need water, so towns must wait for what is left",
+    "The rivers are too small to supply any farms or towns",
+    "Each state owns its own river, so none can be shared"
+   ],
+   "why": "Irrigation, towns and the rivers themselves all depend on the same water, and taking some leaves less for the others. The idea that only farms need it is wrong, because towns and the rivers need water too.",
+   "clue": "Think about who uses the water, and what happens when one user takes more."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam grows cotton beside a river in the basin. He pumps water from the river onto his cotton plants so they can grow. Which use of basin water is this?",
+   "opts": [
+    "Irrigation to grow crops on a farm",
+    "Town supply for homes and drinking",
+    "Environmental water for the river",
+    "Storage in a dam for flood control"
+   ],
+   "why": "Taking river water to water crops is irrigation, the biggest use of water in the basin. It is taken out of the river, so it is not environmental water left to keep the river healthy.",
+   "clue": "What is Sam using the water to do?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Farms, towns and rivers all depend on the same water",
+    "also_right": []
+   },
+   "b": {
+    "best": "Irrigation to grow crops on a farm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The facts about the basin's size, its states and irrigation being the biggest water use check out, and both questions have one clear right answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question says Sam takes water 'to irrigate his crop', and the right option is 'Irrigation for farming'. A student can match the word without knowing the idea. Describe what he does instead, for example 'to water his crop'."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question says Sam takes water 'to irrigate his crop', and the right option is 'Irrigation for farming'. A student can match the word without knowing the idea. Describe what he does instead, for example 'to water his crop'.",
+   "Content check: geo-water-use-murray-darlinga option is 63 characters: Farms, towns and rivers all use it, and taking some leaves less"
+  ]
+ },
+ "final": {
+  "title": "Water use in the Murray-Darling Basin",
+  "card": [
+   "The Murray-Darling Basin is Australia's largest river system. It covers a large part of inland south-eastern Australia and crosses several states and the ACT.",
+   "The basin grows much of Australia's food. Irrigation, which means watering crops with water taken from rivers, is the biggest use of its water.",
+   "Towns and cities along the rivers also take water for drinking, homes and industry. Some towns rely on the rivers for most of their supply.",
+   "The rivers and wetlands need water too, to keep plants, animals and water quality healthy. Every drop taken out leaves less in the river, so the water must be shared between these uses."
+  ],
+  "remember": "The basin's water is shared between irrigation, towns and the rivers themselves.",
+  "a": {
+   "q": "Why must the water of the Murray-Darling Basin be shared?",
+   "opts": [
+    "Farms, towns and rivers all depend on the same water",
+    "Only farms need water, so towns must wait for what is left",
+    "The rivers are too small to supply any farms or towns",
+    "Each state owns its own river, so none can be shared"
+   ],
+   "why": "Irrigation, towns and the rivers themselves all depend on the same water, and taking some leaves less for the others. The idea that only farms need it is wrong, because towns and the rivers need water too.",
+   "clue": "Think about who uses the water, and what happens when one user takes more."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam grows cotton beside a river in the basin. He pumps water from the river onto his cotton plants so they can grow. Which use of basin water is this?",
+   "opts": [
+    "Irrigation to grow crops on a farm",
+    "Town supply for homes and drinking",
+    "Environmental water for the river",
+    "Storage in a dam for flood control"
+   ],
+   "why": "Taking river water to water crops is irrigation, the biggest use of water in the basin. It is taken out of the river, so it is not environmental water left to keep the river healthy.",
+   "clue": "What is Sam using the water to do?"
+  }
+ },
+ "cleared_by": "recheck"
+}

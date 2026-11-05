@@ -1,0 +1,207 @@
+{
+ "id": "mat-time-zones-2",
+ "title": "Time zones",
+ "brief": "b3423991b962",
+ "shortlist": [
+  [
+   "mat-travel-across-time-zones",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:40Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:09Z write: done",
+  "2026-11-04T09:58:31Z check: flagged",
+  "2026-11-04T10:08:04Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00607,
+  "check": 0.0121,
+  "fix": 0.01457,
+  "recheck": 0.00729
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is broader than the new point, centring on working out flight arrival times from flight duration plus a time difference, and it is pitched at Year 11 rather than Year 8, so it does not teach the time-difference idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Time zones",
+  "card": [
+   "Earth turns, so the sun rises at different times in different places. Places are put into time zones, and each zone keeps its own clock time.",
+   "Places further east are ahead. Their clocks show a later time than places to the west.",
+   "To find the time somewhere else, work out the time difference. Add it if the other place is east of you. Subtract it if the other place is west.",
+   "Example: City A is 3 hours ahead of City B. When it is 2:00 pm in B, it is 2:00 pm + 3 hours = 5:00 pm in A."
+  ],
+  "remember": "Ahead means a later clock time, so add. Behind means an earlier clock time, so subtract.",
+  "a": {
+   "q": "Town P is 2 hours ahead of Town Q. It is 4:00 pm in Town Q. What time is it in Town P?",
+   "opts": [
+    "6:00 pm",
+    "2:00 pm",
+    "4:00 pm",
+    "8:00 pm"
+   ],
+   "why": "Town P is ahead, so its clock shows a later time: 4:00 pm + 2 hours = 6:00 pm. Choosing 2:00 pm subtracts instead, which would be right only if P were behind Q.",
+   "clue": "Ahead means a later time on the clock."
+  },
+  "b": {
+   "d": 3,
+   "q": "Perth is 2 hours behind Brisbane. Mei in Brisbane phones her cousin in Perth at 9:30 pm Brisbane time. What is the time in Perth?",
+   "opts": [
+    "7:30 pm",
+    "11:30 pm",
+    "9:30 pm",
+    "7:30 am"
+   ],
+   "why": "Perth is behind, so its clock shows an earlier time: 9:30 pm − 2 hours = 7:30 pm. Adding 2 hours gives 11:30 pm, which is the mistake of moving the clock the wrong way.",
+   "clue": "Behind means an earlier time, so take hours away."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6:00 pm",
+   "also_right": []
+  },
+  "b": {
+   "best": "7:30 pm",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Places further east are ahead' and 'Add it if the other place is east of you' are stated as rules, but clock time follows borders, not longitude alone. During daylight saving, Sydney is ahead of Brisbane even though Brisbane is slightly further east. Across the International Date Line, Hawaii lies east of New Zealand but is behind it. Soften this to 'usually' or add that zones follow borders."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct: 6:00 pm, and 7:30 pm in Perth, which is 2 hours behind Brisbane all year. The card states 'further east is ahead' as a firm rule, which fails in Australia during daylight saving and across the Date Line, so it should be softened."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'Places further east are ahead' and 'Add it if the other place is east of you' are stated as rules, but clock time follows borders, not longitude alone. During daylight saving, Sydney is ahead of Brisbane even though Brisbane is slightly further east. Across the International Date Line, Hawaii lies east of New Zealand but is behind it. Soften this to 'usually' or add that zones follow borders."
+ ],
+ "proposal": {
+  "title": "Time zones",
+  "card": [
+   "Earth turns, so the sun rises at different times in different places. Places are put into time zones, and each zone keeps its own clock time.",
+   "Places further east are usually ahead, but zones follow borders, not just position. During daylight saving, Sydney is ahead of Brisbane, even though Brisbane is a little further east.",
+   "To find the time somewhere else, use the time difference. If the other place is ahead, add it. If the other place is behind, subtract it.",
+   "Example: City A is 3 hours ahead of City B. When it is 2:00 pm in B, it is 2:00 pm + 3 hours = 5:00 pm in A."
+  ],
+  "remember": "Ahead means a later clock time, so add. Behind means an earlier clock time, so subtract.",
+  "a": {
+   "q": "Town P is 2 hours ahead of Town Q. It is 4:00 pm in Town Q. What time is it in Town P?",
+   "opts": [
+    "6:00 pm",
+    "2:00 pm",
+    "4:00 pm",
+    "8:00 pm"
+   ],
+   "why": "Town P is ahead, so its clock shows a later time: 4:00 pm + 2 hours = 6:00 pm. Choosing 2:00 pm subtracts instead, which would be right only if P were behind Q.",
+   "clue": "Ahead means a later time on the clock."
+  },
+  "b": {
+   "d": 3,
+   "q": "Perth is 2 hours behind Brisbane. Mei in Brisbane phones her cousin in Perth at 9:30 pm Brisbane time. What is the time in Perth?",
+   "opts": [
+    "7:30 pm",
+    "11:30 pm",
+    "9:30 pm",
+    "7:30 am"
+   ],
+   "why": "Perth is behind, so its clock shows an earlier time: 9:30 pm − 2 hours = 7:30 pm. Adding 2 hours gives 11:30 pm, which is the mistake of moving the clock the wrong way.",
+   "clue": "Behind means an earlier time, so take hours away."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6:00 pm",
+    "also_right": []
+   },
+   "b": {
+    "best": "7:30 pm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The facts check out: Perth (UTC+8) is 2 hours behind Brisbane (UTC+10) all year, and Brisbane is slightly east of Sydney."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Places further east are ahead' and 'Add it if the other place is east of you' are stated as rules, but clock time follows borders, not longitude alone. During daylight saving, Sydney is ahead of Brisbane even though Brisbane is slightly further east. Across the International Date Line, Hawaii lies east of New Zealand but is behind it. Soften this to 'usually' or add that zones follow borders."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'Places further east are ahead' and 'Add it if the other place is east of you' are stated as rules, but clock time follows borders, not longitude alone. During daylight saving, Sydney is ahead of Brisbane even though Brisbane is slightly further east. Across the International Date Line, Hawaii lies east of New Zealand but is behind it. Soften this to 'usually' or add that zones follow borders."
+  ]
+ },
+ "final": {
+  "title": "Time zones",
+  "card": [
+   "Earth turns, so the sun rises at different times in different places. Places are put into time zones, and each zone keeps its own clock time.",
+   "Places further east are usually ahead, but zones follow borders, not just position. During daylight saving, Sydney is ahead of Brisbane, even though Brisbane is a little further east.",
+   "To find the time somewhere else, use the time difference. If the other place is ahead, add it. If the other place is behind, subtract it.",
+   "Example: City A is 3 hours ahead of City B. When it is 2:00 pm in B, it is 2:00 pm + 3 hours = 5:00 pm in A."
+  ],
+  "remember": "Ahead means a later clock time, so add. Behind means an earlier clock time, so subtract.",
+  "a": {
+   "q": "Town P is 2 hours ahead of Town Q. It is 4:00 pm in Town Q. What time is it in Town P?",
+   "opts": [
+    "6:00 pm",
+    "2:00 pm",
+    "4:00 pm",
+    "8:00 pm"
+   ],
+   "why": "Town P is ahead, so its clock shows a later time: 4:00 pm + 2 hours = 6:00 pm. Choosing 2:00 pm subtracts instead, which would be right only if P were behind Q.",
+   "clue": "Ahead means a later time on the clock."
+  },
+  "b": {
+   "d": 3,
+   "q": "Perth is 2 hours behind Brisbane. Mei in Brisbane phones her cousin in Perth at 9:30 pm Brisbane time. What is the time in Perth?",
+   "opts": [
+    "7:30 pm",
+    "11:30 pm",
+    "9:30 pm",
+    "7:30 am"
+   ],
+   "why": "Perth is behind, so its clock shows an earlier time: 9:30 pm − 2 hours = 7:30 pm. Adding 2 hours gives 11:30 pm, which is the mistake of moving the clock the wrong way.",
+   "clue": "Behind means an earlier time, so take hours away."
+  }
+ },
+ "cleared_by": "recheck"
+}

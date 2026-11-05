@@ -1,0 +1,229 @@
+{
+ "id": "mat-choosing-linear-or-quadratic",
+ "title": "Choosing a linear or quadratic model",
+ "brief": "babd9063e0af",
+ "shortlist": [
+  [
+   "mat-linear-models-context",
+   0.247
+  ],
+  [
+   "mat-linear-models",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:41Z new, match",
+  "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:47:10Z write: done",
+  "2026-11-04T09:58:31Z check: flagged",
+  "2026-11-04T10:08:05Z fix: suggested",
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00632,
+  "check": 0.01696,
+  "fix": 0.02049,
+  "recheck": 0.01452
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches how to choose between a linear and a quadratic model; both only explain linear models in context, so the new point's idea is not covered.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Choosing a linear or quadratic model",
+  "card": [
+   [
+    "Linear",
+    "the quantity changes by the same amount each step. The graph is a straight line, such as a taxi fare that adds the same amount for every kilometre."
+   ],
+   [
+    "Quadratic",
+    "the change itself keeps changing. The graph is a parabola, so a path can rise and then fall, such as a ball thrown in the air."
+   ],
+   "To choose, look at the change in a table of values. If each step adds the same amount, use a linear model.",
+   "Example: 2, 5, 8, 11 adds 3 each time, so it is linear. 0, 3, 4, 3 rises then falls, so it suits a quadratic."
+  ],
+  "remember": "Same change each step is linear. Rising then falling is quadratic.",
+  "a": {
+   "q": "The height of a kicked football is 0 m, 8 m, 12 m, 12 m, 8 m, 0 m at equal time steps. Which model suits it?",
+   "opts": [
+    "Quadratic, as it rises and then falls",
+    "Linear, as the heights are all whole numbers",
+    "Linear, as the time steps are equal",
+    "Quadratic, as the height starts at 0 m"
+   ],
+   "why": "The height rises then falls, which is the shape of a parabola. Equal time steps do not make a model linear: the height must change by the same amount each step.",
+   "clue": "Does the height keep going the same way?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's phone plan costs $20, $30, $40, $50 over four months. Which model suits it, and why?",
+   "opts": [
+    "Linear, as the cost rises by $10 each month",
+    "Quadratic, as the cost keeps rising",
+    "Quadratic, as the cost is always above $0",
+    "Linear, as the cost starts at $20"
+   ],
+   "why": "The cost adds $10 every month, which is the same change each step, so a linear model suits it. A rising value is not enough for a quadratic: a quadratic has changing steps or a turning point.",
+   "clue": "Subtract each cost from the next one."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Quadratic, as it rises and then falls",
+   "also_right": []
+  },
+  "b": {
+   "best": "Linear, as the cost rises by $10 each month",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line reduces quadratic to 'rising then falling'. It drops the card's main test, that the change itself keeps changing. Students could then think a quadratic pattern that only rises (such as 1, 4, 9, 16) is not quadratic, or that any rise-then-fall pattern must be quadratic."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the data check out (the football heights have constant second differences). The only issue is that the remember line oversimplifies quadratic to 'rising then falling' and leaves out the card's changing-change test."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line reduces quadratic to 'rising then falling'. It drops the card's main test, that the change itself keeps changing. Students could then think a quadratic pattern that only rises (such as 1, 4, 9, 16) is not quadratic, or that any rise-then-fall pattern must be quadratic."
+ ],
+ "proposal": {
+  "title": "Choosing a linear or quadratic model",
+  "card": [
+   [
+    "Linear",
+    "the quantity changes by the same amount each step. The graph is a straight line, such as a taxi fare that adds the same amount for every kilometre."
+   ],
+   [
+    "Quadratic",
+    "the change itself changes by the same amount each step. The graph is a parabola. A path can rise then fall, like a thrown ball, or keep rising faster, like 1, 4, 9, 16."
+   ],
+   "To choose, find the change between each pair of values in a table. If every change is the same, use a linear model. If the changes go up or down by the same amount, use a quadratic model.",
+   "Example: 2, 5, 8, 11 adds 3 each time, so it is linear. 0, 3, 4, 3 changes by 3, 1, −1. These changes drop by 2 each time, so it is quadratic."
+  ],
+  "remember": "Same change each step is linear. A change that itself changes steadily is quadratic.",
+  "a": {
+   "q": "The height of a kicked football is 0 m, 8 m, 12 m, 12 m, 8 m, 0 m at equal time steps. Which model suits it?",
+   "opts": [
+    "Quadratic, as the change drops by 4 each step",
+    "Linear, as the heights are all whole numbers",
+    "Linear, as the time steps are equal",
+    "Quadratic, as the height starts at 0 m"
+   ],
+   "why": "The changes are 8, 4, 0, −4, −8, which drop by 4 each step, so a quadratic model suits it. Equal time steps do not make a model linear: for that, the height itself must change by the same amount each step.",
+   "clue": "Find each change in height, then compare the changes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's phone plan costs $20, $30, $40, $50 over four months. Which model suits it, and why?",
+   "opts": [
+    "Linear, as the cost rises by $10 each month",
+    "Quadratic, as the cost keeps rising",
+    "Quadratic, as the cost is always above $0",
+    "Linear, as the cost starts at $20"
+   ],
+   "why": "The cost adds $10 every month, the same change each step, so a linear model suits it. A rising value is not enough for a quadratic: in a quadratic, the change itself must change from step to step.",
+   "clue": "Subtract each cost from the next one."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-04T18:10:13Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Quadratic, as the change drops by 4 each step",
+    "also_right": []
+   },
+   "b": {
+    "best": "Linear, as the cost rises by $10 each month",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's examples and both answers check out: football changes 8, 4, 0, −4, −8 drop by 4 (quadratic), and the phone costs rise by $10 each month (linear)."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-04T18:10:13Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line reduces quadratic to 'rising then falling'. It drops the card's main test, that the change itself keeps changing. Students could then think a quadratic pattern that only rises (such as 1, 4, 9, 16) is not quadratic, or that any rise-then-fall pattern must be quadratic."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line reduces quadratic to 'rising then falling'. It drops the card's main test, that the change itself keeps changing. Students could then think a quadratic pattern that only rises (such as 1, 4, 9, 16) is not quadratic, or that any rise-then-fall pattern must be quadratic."
+  ]
+ },
+ "final": {
+  "title": "Choosing a linear or quadratic model",
+  "card": [
+   [
+    "Linear",
+    "the quantity changes by the same amount each step. The graph is a straight line, such as a taxi fare that adds the same amount for every kilometre."
+   ],
+   [
+    "Quadratic",
+    "the change itself changes by the same amount each step. The graph is a parabola. A path can rise then fall, like a thrown ball, or keep rising faster, like 1, 4, 9, 16."
+   ],
+   "To choose, find the change between each pair of values in a table. If every change is the same, use a linear model. If the changes go up or down by the same amount, use a quadratic model.",
+   "Example: 2, 5, 8, 11 adds 3 each time, so it is linear. 0, 3, 4, 3 changes by 3, 1, −1. These changes drop by 2 each time, so it is quadratic."
+  ],
+  "remember": "Same change each step is linear. A change that itself changes steadily is quadratic.",
+  "a": {
+   "q": "The height of a kicked football is 0 m, 8 m, 12 m, 12 m, 8 m, 0 m at equal time steps. Which model suits it?",
+   "opts": [
+    "Quadratic, as the change drops by 4 each step",
+    "Linear, as the heights are all whole numbers",
+    "Linear, as the time steps are equal",
+    "Quadratic, as the height starts at 0 m"
+   ],
+   "why": "The changes are 8, 4, 0, −4, −8, which drop by 4 each step, so a quadratic model suits it. Equal time steps do not make a model linear: for that, the height itself must change by the same amount each step.",
+   "clue": "Find each change in height, then compare the changes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's phone plan costs $20, $30, $40, $50 over four months. Which model suits it, and why?",
+   "opts": [
+    "Linear, as the cost rises by $10 each month",
+    "Quadratic, as the cost keeps rising",
+    "Quadratic, as the cost is always above $0",
+    "Linear, as the cost starts at $20"
+   ],
+   "why": "The cost adds $10 every month, the same change each step, so a linear model suits it. A rising value is not enough for a quadratic: in a quadratic, the change itself must change from step to step.",
+   "clue": "Subtract each cost from the next one."
+  }
+ },
+ "cleared_by": "recheck"
+}

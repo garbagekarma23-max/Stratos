@@ -1,0 +1,428 @@
+{
+ "id": "ecb-shapes-financial-sector",
+ "title": "What shapes the financial sector",
+ "brief": "618cdf6325a5",
+ "shortlist": [
+  [
+   "eco-circular-flow-income",
+   0.256
+  ],
+  [
+   "eco-economic-agents-sectors",
+   0.219
+  ],
+  [
+   "eco-five-sector-circular-flow-2",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-04T09:23:26Z new, match",
+  "2026-11-04T09:36:48Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-04T09:46:55Z write: done",
+  "2026-11-04T09:58:21Z check: flagged",
+  "2026-11-04T10:07:58Z fix: suggested",
+  "2026-11-04T18:10:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-05T02:17:40Z autoreject: rejected, to be written again (a wording, b wording)",
+  "2026-11-05T02:27:41Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
+  "2026-11-05T02:37:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00578,
+  "check": 0.01202,
+  "fix": 0.01236,
+  "recheck": 0.00849
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the three bank points teaches what shapes the financial sector: they cover the circular flow of money and economic agents, not deregulation, technology or confidence affecting financial institutions.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The question calls deregulation a 'force' ('Which force is shaping the financial sector?'). The card never uses 'force'; it says these things 'can change' the sector. Use 'factor' or 'influence' instead.\n- Question b, wording: The question asks 'Which force is at work', but the card never uses 'force' and only says these things 'can change' the sector. Use 'factor' or 'influence' instead.",
+ "rejected": {
+  "title": "What shapes the financial sector",
+  "card": [
+   [
+    "Deregulation",
+    "the removal or easing of government rules. Fewer rules can let new firms enter and let existing firms offer new products."
+   ],
+   [
+    "New technology",
+    "such as online banking and phone apps. It lets customers use financial services at any time without visiting a branch."
+   ],
+   [
+    "Confidence",
+    "how positive people and businesses feel about the future. When confidence is high, more people may borrow and spend. When it is low, more may save and borrow less."
+   ],
+   "These three things can change what the financial sector offers and how people use it."
+  ],
+  "remember": "Rules, technology and confidence can all change how the financial sector works.",
+  "a": {
+   "q": "A government removes many rules that stopped new lenders opening in Australia. Which force is shaping the financial sector?",
+   "opts": [
+    "Deregulation",
+    "New technology",
+    "Falling confidence",
+    "Online banking"
+   ],
+   "why": "Removing government rules is deregulation, and it can let new lenders enter. Online banking is technology, which is a different force and does not involve changing rules.",
+   "clue": "Think about who removed what."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many Darwin families fear a downturn is coming. Which force is at work, and what is its likely effect on the financial sector?",
+   "opts": [
+    "Low confidence, so demand for loans may fall",
+    "Low confidence, so demand for loans may rise",
+    "New technology, so demand for loans may fall",
+    "Deregulation, so demand for loans may fall"
+   ],
+   "why": "Fear about the future is low confidence. When confidence is low, more people may save and borrow less, so demand for loans may fall, not rise. The families' feelings are not a change in technology or in government rules.",
+   "clue": "When people worry about the future, do they borrow more or less?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-05T02:17:40Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The question calls deregulation a 'force' ('Which force is shaping the financial sector?'). The card never uses 'force'; it says these things 'can change' the sector. Use 'factor' or 'influence' instead.",
+    "Question b, wording: The question asks 'Which force is at work', but the card never uses 'force' and only says these things 'can change' the sector. Use 'factor' or 'influence' instead."
+   ],
+   "saved": {
+    "draft": {
+     "title": "What shapes the financial sector",
+     "card": [
+      [
+       "Deregulation",
+       "the removal or easing of government rules. Fewer rules can let new firms enter and let existing firms offer new products."
+      ],
+      [
+       "New technology",
+       "such as online banking and phone apps. It lets customers use financial services at any time without visiting a branch."
+      ],
+      [
+       "Confidence",
+       "how positive people and businesses feel about the future. When confidence is high, more people may borrow and spend. When it is low, more may save and borrow less."
+      ],
+      "These three things can change what the financial sector offers and how people use it."
+     ],
+     "remember": "Rules, technology and confidence can all change how the financial sector works.",
+     "a": {
+      "q": "A government removes many rules that stopped new lenders opening in Australia. Which force is shaping the financial sector?",
+      "opts": [
+       "Deregulation",
+       "New technology",
+       "Falling confidence",
+       "Online banking"
+      ],
+      "why": "Removing government rules is deregulation, and it can let new lenders enter. Online banking is technology, which is a different force and does not involve changing rules.",
+      "clue": "Think about who removed what."
+     },
+     "b": {
+      "d": 3,
+      "q": "Many Darwin families fear a downturn, so they borrow less and save more. Which force is at work, and what is its effect?",
+      "opts": [
+       "Low confidence, so demand for loans may fall",
+       "Low confidence, so demand for loans must rise",
+       "New technology, so demand for loans may fall",
+       "Deregulation, so demand for loans may fall"
+      ],
+      "why": "Fear about the future is low confidence, and it can lead people to borrow less. The families' feelings are not technology or rule changes, and the effect is a possibility, not a certainty.",
+      "clue": "The cause is about how people feel, not about rules or apps."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Deregulation",
+      "also_right": []
+     },
+     "b": {
+      "best": "Low confidence, so demand for loans may fall",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The option 'Low confidence, so demand for loans must rise' uses 'must', but the card says confidence 'may' change borrowing. It is also wrong on direction. Consider rewording it so the only difference from the right answer is the direction of the effect, for example 'Low confidence, so demand for loans may rise'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer, and the facts check out. One distractor in question b uses 'must' where the card says 'may', and it would be cleaner without it."
+    },
+    "flags": [
+     "Question b, wording: The option 'Low confidence, so demand for loans must rise' uses 'must', but the card says confidence 'may' change borrowing. It is also wrong on direction. Consider rewording it so the only difference from the right answer is the direction of the effect, for example 'Low confidence, so demand for loans may rise'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "What shapes the financial sector",
+     "card": [
+      [
+       "Deregulation",
+       "the removal or easing of government rules. Fewer rules can let new firms enter and let existing firms offer new products."
+      ],
+      [
+       "New technology",
+       "such as online banking and phone apps. It lets customers use financial services at any time without visiting a branch."
+      ],
+      [
+       "Confidence",
+       "how positive people and businesses feel about the future. When confidence is high, more people may borrow and spend. When it is low, more may save and borrow less."
+      ],
+      "These three things can change what the financial sector offers and how people use it."
+     ],
+     "remember": "Rules, technology and confidence can all change how the financial sector works.",
+     "a": {
+      "q": "A government removes many rules that stopped new lenders opening in Australia. Which force is shaping the financial sector?",
+      "opts": [
+       "Deregulation",
+       "New technology",
+       "Falling confidence",
+       "Online banking"
+      ],
+      "why": "Removing government rules is deregulation, and it can let new lenders enter. Online banking is technology, which is a different force and does not involve changing rules.",
+      "clue": "Think about who removed what."
+     },
+     "b": {
+      "d": 3,
+      "q": "Many Darwin families fear a downturn is coming. Which force is at work, and what is its likely effect on the financial sector?",
+      "opts": [
+       "Low confidence, so demand for loans may fall",
+       "Low confidence, so demand for loans may rise",
+       "New technology, so demand for loans may fall",
+       "Deregulation, so demand for loans may fall"
+      ],
+      "why": "Fear about the future is low confidence. When confidence is low, more people may save and borrow less, so demand for loans may fall, not rise. The families' feelings are not a change in technology or in government rules.",
+      "clue": "When people worry about the future, do they borrow more or less?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-04T18:10:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Deregulation",
+       "also_right": []
+      },
+      "b": {
+       "best": "Low confidence, so demand for loans may fall",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The question calls deregulation a 'force' ('Which force is shaping the financial sector?'). The card never uses 'force'; it says these things 'can change' the sector. Use 'factor' or 'influence' instead."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The question asks 'Which force is at work', but the card never uses 'force' and only says these things 'can change' the sector. Use 'factor' or 'influence' instead."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions call the three influences 'forces', but the card only says they 'can change' the sector, so 'factor' or 'influence' would fit better. The facts and answers are otherwise sound."
+     },
+     "flags": [
+      "Question a, wording: The question calls deregulation a 'force' ('Which force is shaping the financial sector?'). The card never uses 'force'; it says these things 'can change' the sector. Use 'factor' or 'influence' instead.",
+      "Question b, wording: The question asks 'Which force is at work', but the card never uses 'force' and only says these things 'can change' the sector. Use 'factor' or 'influence' instead."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-05T02:27:41Z",
+   "step": "write",
+   "version": {
+    "title": "What shapes the financial sector",
+    "card": [
+     [
+      "Deregulation",
+      "the removal or easing of government rules. Fewer rules can let new firms enter and let existing firms offer new products."
+     ],
+     [
+      "New technology",
+      "such as online banking and phone apps. It lets customers use financial services at any time without visiting a branch."
+     ],
+     [
+      "Confidence",
+      "how positive people and businesses feel about the future. When confidence is high, more people may borrow and spend. When it is low, more may save and borrow less."
+     ],
+     "These three things can change what the financial sector offers and how people use it."
+    ],
+    "remember": "Rules, technology and confidence can all change how the financial sector works.",
+    "a": {
+     "q": "The government scraps many rules that kept new lenders out of Australia's banking market. Which factor is changing the financial sector?",
+     "opts": [
+      "Deregulation",
+      "New technology",
+      "Falling confidence",
+      "Online banking"
+     ],
+     "why": "Removing government rules is deregulation, and it can let new lenders enter. Online banking is new technology, which is a different factor and does not involve changing rules.",
+     "clue": "Think about who removed what."
+    },
+    "b": {
+     "d": 3,
+     "q": "Many families in Darwin fear hard times are coming and expect to earn less. Which factor is at work, and how may it affect the financial sector?",
+     "opts": [
+      "Low confidence, so demand for loans may fall",
+      "Low confidence, so demand for loans may rise",
+      "High confidence, so demand for loans may rise",
+      "Deregulation, so demand for loans may fall"
+     ],
+     "why": "Fear about the future is low confidence. When confidence is low, more people may save and borrow less, so demand for loans may fall, not rise. The families' feelings are not a change in government rules.",
+     "clue": "When people worry about the future, do they borrow more or less?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-05T02:37:17Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Deregulation",
+     "also_right": []
+    },
+    "b": {
+     "best": "Low confidence, so demand for loans may fall",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "What shapes the financial sector",
+  "card": [
+   [
+    "Deregulation",
+    "the removal or easing of government rules. Fewer rules can let new firms enter and let existing firms offer new products."
+   ],
+   [
+    "New technology",
+    "such as online banking and phone apps. It lets customers use financial services at any time without visiting a branch."
+   ],
+   [
+    "Confidence",
+    "how positive people and businesses feel about the future. When confidence is high, more people may borrow and spend. When it is low, more may save and borrow less."
+   ],
+   "These three things can change what the financial sector offers and how people use it."
+  ],
+  "remember": "Rules, technology and confidence can all change how the financial sector works.",
+  "a": {
+   "q": "The government scraps many rules that kept new lenders out of Australia's banking market. Which factor is changing the financial sector?",
+   "opts": [
+    "Deregulation",
+    "New technology",
+    "Falling confidence",
+    "Online banking"
+   ],
+   "why": "Removing government rules is deregulation, and it can let new lenders enter. Online banking is new technology, which is a different factor and does not involve changing rules.",
+   "clue": "Think about who removed what."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many families in Darwin fear hard times are coming and expect to earn less. Which factor is at work, and how may it affect the financial sector?",
+   "opts": [
+    "Low confidence, so demand for loans may fall",
+    "Low confidence, so demand for loans may rise",
+    "High confidence, so demand for loans may rise",
+    "Deregulation, so demand for loans may fall"
+   ],
+   "why": "Fear about the future is low confidence. When confidence is low, more people may save and borrow less, so demand for loans may fall, not rise. The families' feelings are not a change in government rules.",
+   "clue": "When people worry about the future, do they borrow more or less?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Deregulation",
+   "also_right": []
+  },
+  "b": {
+   "best": "Low confidence, so demand for loans may fall",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "What shapes the financial sector",
+  "card": [
+   [
+    "Deregulation",
+    "the removal or easing of government rules. Fewer rules can let new firms enter and let existing firms offer new products."
+   ],
+   [
+    "New technology",
+    "such as online banking and phone apps. It lets customers use financial services at any time without visiting a branch."
+   ],
+   [
+    "Confidence",
+    "how positive people and businesses feel about the future. When confidence is high, more people may borrow and spend. When it is low, more may save and borrow less."
+   ],
+   "These three things can change what the financial sector offers and how people use it."
+  ],
+  "remember": "Rules, technology and confidence can all change how the financial sector works.",
+  "a": {
+   "q": "The government scraps many rules that kept new lenders out of Australia's banking market. Which factor is changing the financial sector?",
+   "opts": [
+    "Deregulation",
+    "New technology",
+    "Falling confidence",
+    "Online banking"
+   ],
+   "why": "Removing government rules is deregulation, and it can let new lenders enter. Online banking is new technology, which is a different factor and does not involve changing rules.",
+   "clue": "Think about who removed what."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many families in Darwin fear hard times are coming and expect to earn less. Which factor is at work, and how may it affect the financial sector?",
+   "opts": [
+    "Low confidence, so demand for loans may fall",
+    "Low confidence, so demand for loans may rise",
+    "High confidence, so demand for loans may rise",
+    "Deregulation, so demand for loans may fall"
+   ],
+   "why": "Fear about the future is low confidence. When confidence is low, more people may save and borrow less, so demand for loans may fall, not rise. The families' feelings are not a change in government rules.",
+   "clue": "When people worry about the future, do they borrow more or less?"
+  }
+ },
+ "checked_by": "claude-code"
+}
