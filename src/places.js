@@ -6,7 +6,8 @@
                 the line under it: the exam it leads to, then the topic loaded. The courses the content pipeline made
                 (made.js) come after the others. Each course also gets its group and rank (see yearGroup below).
    CURRICULA    a country's or a state's own courses, by id. more is a line under them. about is the certificate a
-                state's row names on the sheet. A state's curriculum shows only once it has a course (see the end).
+                state's row names on the sheet once it has a Year 11 or 12 course. A state's curriculum shows only
+                once it has a course (see the end).
    INTERNATIONAL the courses that show in every country, under International courses.
    COUNTRY_CODES every country, by its two-letter code. The browser names each one (Intl.DisplayNames), so no names are
                 stored here. Uninhabited places (Antarctica, Bouvet Island, South Georgia, Heard Island, the French
@@ -56,7 +57,7 @@ const COUNTRY_CODES = ('AD AE AF AG AI AL AM AO AR AS AT AU AW AX AZ BA BB BD BE
   'UY UZ VA VC VE VG VI VN VU WF WS XK YE YT ZA ZM ZW').split(' ');
 const PLACES = {
   AU: {zones: ['Australia/'], about: 'NSW courses and international courses', states: [
-    {id: 'nsw', name: 'New South Wales', curriculum: 'nsw', about: 'HSC',
+    {id: 'nsw', name: 'New South Wales',
       zones: ['Australia/Sydney', 'Australia/NSW', 'Australia/Broken_Hill', 'Australia/Yancowinna', 'Australia/Lord_Howe', 'Australia/LHI']},
     {id: 'vic', name: 'Victoria', zones: ['Australia/Melbourne', 'Australia/Victoria']},
     {id: 'qld', name: 'Queensland', zones: ['Australia/Brisbane', 'Australia/Lindeman', 'Australia/Queensland']},
@@ -68,11 +69,17 @@ const PLACES = {
   ]}
 };
 /* A state's own curriculum (CURRICULA, by the state's id) shows once it has a course. Until then the state says
-   "Courses coming" on the sheet, and its students see the international courses. Australia's line on the country
-   list names every state with courses: "NSW courses and international courses", then "NSW and VIC courses and ...". */
+   "Courses coming" on the sheet, and its students see the international courses. The state step names the senior
+   certificate (QCE, WACE and so on) only once the state has a Year 11 or 12 course, which includes a course named by
+   Units or Stage 1 and 2, since its years say 11 or 12. With only Years 7 to 10 courses, it says "Years 7 to 10".
+   Australia's line on the country list names every state with courses: "NSW courses and international courses",
+   then "NSW and VIC courses and ...". */
+const SENIOR = id => { const c = COURSE_LIST.find(x => x.id === id); return !!c && (c.data.years || []).some(y => y >= 11); };
 PLACES.AU.states.forEach(s => {
   const c = CURRICULA[s.id];
-  if (!s.curriculum && c && c.courses.length) Object.assign(s, {curriculum: s.id, about: c.about});
+  if (!c || !c.courses.length) return;
+  s.curriculum = s.id;
+  s.about = c.courses.some(SENIOR) ? c.about : 'Years 7 to 10';
 });
 (own => { PLACES.AU.about = own.length > 1 ? own.slice(0, -1).join(', ') + ' and ' + own[own.length - 1] + ' courses and international courses' : PLACES.AU.about; })(
   PLACES.AU.states.filter(s => s.curriculum).map(s => s.id.toUpperCase()));
