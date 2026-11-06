@@ -28,7 +28,8 @@
   "2026-11-04T09:58:30Z write: done",
   "2026-11-04T10:08:03Z check: flagged",
   "2026-11-04T10:10:50Z fix: suggested",
-  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -201,33 +202,70 @@
   "card": [
    "An equation with fractions is easier to solve once the fractions are gone. The lowest common denominator (LCD) is the smallest number that every denominator divides into.",
    "Multiply every term on both sides by the LCD, including any whole number with no fraction. Each denominator cancels, and you are left with a plain equation.",
-   "Example: x/3 + x/4 = 7. The LCD is 12, so 12 × x/3 + 12 × x/4 = 12 × 7. This gives 4x + 3x = 84.",
-   "Then solve as usual: 7x = 84, so x = 12. Check by putting x = 12 back in: 12/3 + 12/4 = 4 + 3 = 7."
+   "Example: \\(\\frac{x}{3} + \\frac{x}{4} = 7\\). The LCD is 12, so \\(12 \\times \\frac{x}{3} + 12 \\times \\frac{x}{4} = 12 \\times 7\\). This gives \\(4x + 3x = 84\\).",
+   "Then solve as usual: \\(7x = 84\\), so \\(x = 12\\). Check by putting \\(x = 12\\) back in: \\(\\frac{12}{3} + \\frac{12}{4} = 4 + 3 = 7\\)."
   ],
   "remember": "Multiply every term by the LCD to clear the fractions, then solve.",
   "a": {
-   "q": "Solve x/2 + x/5 = 14. What is x?",
+   "q": "Solve \\(\\frac{x}{2} + \\frac{x}{5} = 14\\). What is \\(x\\)?",
    "opts": [
     "20",
     "2",
     "140",
     "49"
    ],
-   "why": "The LCD is 10, so 5x + 2x = 140. Then 7x = 140 and x = 20. Check: 20/2 + 20/5 = 10 + 4 = 14. An answer of 2 comes from not multiplying the 14 by 10, which gives 7x = 14.",
+   "why": "The LCD is 10, so \\(5x + 2x = 140\\). Then \\(7x = 140\\) and \\(x = 20\\). Check: \\(\\frac{20}{2} + \\frac{20}{5} = 10 + 4 = 14\\). An answer of 2 comes from not multiplying the 14 by 10, which gives \\(7x = 14\\).",
    "clue": "Multiply every term, including the 14, by 10."
   },
   "b": {
    "d": 3,
-   "q": "Mia solves x/3 + x/6 = 5 by multiplying by 6. Her answer is x = 5/3. What did she do wrong?",
+   "q": "Mia solves \\(\\frac{x}{3} + \\frac{x}{6} = 5\\) by multiplying by 6. Her answer is \\(x = \\frac{5}{3}\\). What did she do wrong?",
    "opts": [
     "She did not multiply the 5 by 6",
-    "She turned 6 × x/3 into 3x instead of 2x",
+    "She turned \\(6 \\times \\frac{x}{3}\\) into \\(3x\\) instead of \\(2x\\)",
     "She multiplied the 5 by 3 instead of by 6",
     "She did not divide by 3 at the last step"
    ],
-   "why": "Without multiplying the 5, Mia gets 2x + x = 5, so 3x = 5 and x = 5/3. The correct working is 2x + x = 30, so x = 10. Turning 6 × x/3 into 3x gives 4x = 30 and x = 7.5, not 5/3.",
-   "clue": "Redo each step and see which one gives 3x = 5."
+   "why": "Without multiplying the 5, Mia gets \\(2x + x = 5\\), so \\(3x = 5\\) and \\(x = \\frac{5}{3}\\). The correct working is \\(2x + x = 30\\), so \\(x = 10\\). Turning \\(6 \\times \\frac{x}{3}\\) into \\(3x\\) gives \\(4x = 30\\) and \\(x = 7.5\\), not \\(\\frac{5}{3}\\).",
+   "clue": "Redo each step and see which one gives \\(3x = 5\\)."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Equations with algebraic fractions",
+   "card": [
+    "An equation with fractions is easier to solve once the fractions are gone. The lowest common denominator (LCD) is the smallest number that every denominator divides into.",
+    "Multiply every term on both sides by the LCD, including any whole number with no fraction. Each denominator cancels, and you are left with a plain equation.",
+    "Example: x/3 + x/4 = 7. The LCD is 12, so 12 × x/3 + 12 × x/4 = 12 × 7. This gives 4x + 3x = 84.",
+    "Then solve as usual: 7x = 84, so x = 12. Check by putting x = 12 back in: 12/3 + 12/4 = 4 + 3 = 7."
+   ],
+   "remember": "Multiply every term by the LCD to clear the fractions, then solve.",
+   "a": {
+    "q": "Solve x/2 + x/5 = 14. What is x?",
+    "opts": [
+     "20",
+     "2",
+     "140",
+     "49"
+    ],
+    "why": "The LCD is 10, so 5x + 2x = 140. Then 7x = 140 and x = 20. Check: 20/2 + 20/5 = 10 + 4 = 14. An answer of 2 comes from not multiplying the 14 by 10, which gives 7x = 14.",
+    "clue": "Multiply every term, including the 14, by 10."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia solves x/3 + x/6 = 5 by multiplying by 6. Her answer is x = 5/3. What did she do wrong?",
+    "opts": [
+     "She did not multiply the 5 by 6",
+     "She turned 6 × x/3 into 3x instead of 2x",
+     "She multiplied the 5 by 3 instead of by 6",
+     "She did not divide by 3 at the last step"
+    ],
+    "why": "Without multiplying the 5, Mia gets 2x + x = 5, so 3x = 5 and x = 5/3. The correct working is 2x + x = 30, so x = 10. Turning 6 × x/3 into 3x gives 4x = 30 and x = 7.5, not 5/3.",
+    "clue": "Redo each step and see which one gives 3x = 5."
+   }
+  }
+ }
 }

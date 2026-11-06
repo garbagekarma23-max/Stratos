@@ -20,7 +20,8 @@
   "2026-11-05T02:17:43Z autoreject: rejected, to be written again (card other)",
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
-  "2026-11-05T02:37:17Z check: passed, cleared"
+  "2026-11-05T02:37:17Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -378,7 +379,7 @@
     "Median",
     "an outlier is just one value at one end of the data, so it moves the median a little or not at all."
    ],
-   "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+   "Example: 3, 4, 4, 5, 39. The mean is \\(55 \\div 5 = 11\\) and the median is 4. Most values are near 4, so the median describes the centre better here."
   ],
   "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
   "a": {
@@ -401,9 +402,52 @@
     "The mean and the median both rise by the same amount",
     "The mean stays the same and the median rises a lot"
    ],
-   "why": "Before: the total is 55, so the mean is 55 ÷ 5 = $11, and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1.",
+   "why": "Before: the total is 55, so the mean is \\(55 \\div 5 = \\$11\\), and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1.",
    "clue": "Put the values in order and find both centres before and after."
   }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Choosing a measure of centre",
+   "card": [
+    "An outlier is a value far from the rest of the data. It can be much higher or much lower than the other values.",
+    [
+     "Mean",
+     "uses every value in its total, so an outlier pulls the mean towards it. One very high value makes the mean higher."
+    ],
+    [
+     "Median",
+     "an outlier is just one value at one end of the data, so it moves the median a little or not at all."
+    ],
+    "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+   ],
+   "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
+   "a": {
+    "q": "Yesterday five students sent 2, 3, 3, 4 and 18 messages. The mean is 6 and the median is 3. Which measure gives a better picture of the centre?",
+    "opts": [
+     "The median, because the outlier 18 pulls the mean up",
+     "The mean, because it uses every value in the data",
+     "The median, because it is the larger of the two values",
+     "The mean, because the outlier 18 does not affect it"
+    ],
+    "why": "Four of the five values are 4 or less, so a mean of 6 is higher than almost all of them. The outlier 18 pulls the mean up, while the median stays at 3. Using every value is true of the mean, but here it is a weakness.",
+    "clue": "Compare each centre with where most of the values sit."
+   },
+   "b": {
+    "d": 3,
+    "q": "Five students get $5, $10, $12, $13 and $15 pocket money a week. Then the $5 changes to $60. How do the mean and the median change?",
+    "opts": [
+     "The mean rises a lot and the median rises a little",
+     "The mean rises a little and the median rises a lot",
+     "The mean and the median both rise by the same amount",
+     "The mean stays the same and the median rises a lot"
+    ],
+    "why": "Before: the total is 55, so the mean is 55 ÷ 5 = $11, and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1.",
+    "clue": "Put the values in order and find both centres before and after."
+   }
+  }
+ }
 }

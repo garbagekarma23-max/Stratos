@@ -15,7 +15,8 @@
   "2026-11-01T08:14:08Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -187,33 +188,70 @@
   "card": [
    "A statement \"if P then Q\" has a contrapositive: \"if not Q then not P\". Swap the two parts, then negate both.",
    "A statement and its contrapositive are logically equivalent: both are true or both are false. The converse (swap only) and the inverse (negate only) are not equivalent to the original.",
-   "Use this method when P is hard to use directly, but not Q gives you something concrete to work with, such as a formula for n.",
-   "Example: prove that if n² is even, then the integer n is even. Knowing n² is even tells you little about n, so prove the contrapositive: if n is odd, then n² is odd. Let n = 2k + 1. Then n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd, so the original is true."
+   "Use this method when P is hard to use directly, but not Q gives you something concrete to work with, such as a formula for \\(n\\).",
+   "Example: prove that if \\(n^{2}\\) is even, then the integer \\(n\\) is even. Knowing \\(n^{2}\\) is even tells you little about \\(n\\), so prove the contrapositive: if \\(n\\) is odd, then \\(n^{2}\\) is odd. Let \\(n = 2k + 1\\). Then \\(n^{2} = 4k^{2} + 4k + 1 = 2(2k^{2} + 2k) + 1\\), which is odd, so the original is true."
   ],
   "remember": "To prove if P then Q, prove if not Q then not P. The two are equivalent.",
   "a": {
-   "q": "What is the contrapositive of \"if x is a multiple of 6, then x is even\"?",
+   "q": "What is the contrapositive of \"if \\(x\\) is a multiple of 6, then \\(x\\) is even\"?",
    "opts": [
-    "If x is not even, then x is not a multiple of 6",
-    "If x is even, then x is a multiple of 6",
-    "If x is not a multiple of 6, then x is not even",
-    "If x is not a multiple of 6, then x is even"
+    "If \\(x\\) is not even, then \\(x\\) is not a multiple of 6",
+    "If \\(x\\) is even, then \\(x\\) is a multiple of 6",
+    "If \\(x\\) is not a multiple of 6, then \\(x\\) is not even",
+    "If \\(x\\) is not a multiple of 6, then \\(x\\) is even"
    ],
    "why": "Swap the two parts and negate both: not even comes first, and not a multiple of 6 follows. The option that only swaps the parts is the converse, which is a different statement and need not be true.",
    "clue": "Swap the parts, then negate both."
   },
   "b": {
    "d": 3,
-   "q": "To prove \"if n² is odd, then n is odd\" by contrapositive, which statement should be proved?",
+   "q": "To prove \"if \\(n^{2}\\) is odd, then \\(n\\) is odd\" by contrapositive, which statement should be proved?",
    "opts": [
-    "If n is even, then n² is even",
-    "If n is odd, then n² is odd",
-    "If n² is even, then n is even",
-    "If n² is odd, then n is even"
+    "If \\(n\\) is even, then \\(n^{2}\\) is even",
+    "If \\(n\\) is odd, then \\(n^{2}\\) is odd",
+    "If \\(n^{2}\\) is even, then \\(n\\) is even",
+    "If \\(n^{2}\\) is odd, then \\(n\\) is even"
    ],
-   "why": "P is \"n² is odd\" and Q is \"n is odd\". The contrapositive, if not Q then not P, is: if n is even, then n² is even. The option \"if n² is even, then n is even\" is the inverse (if not P then not Q), which is not equivalent to the original.",
+   "why": "P is \"\\(n^{2}\\) is odd\" and Q is \"\\(n\\) is odd\". The contrapositive, if not Q then not P, is: if \\(n\\) is even, then \\(n^{2}\\) is even. The option \"if \\(n^{2}\\) is even, then \\(n\\) is even\" is the inverse (if not P then not Q), which is not equivalent to the original.",
    "clue": "Not odd means even. Put not Q first."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Proof by contrapositive",
+   "card": [
+    "A statement \"if P then Q\" has a contrapositive: \"if not Q then not P\". Swap the two parts, then negate both.",
+    "A statement and its contrapositive are logically equivalent: both are true or both are false. The converse (swap only) and the inverse (negate only) are not equivalent to the original.",
+    "Use this method when P is hard to use directly, but not Q gives you something concrete to work with, such as a formula for n.",
+    "Example: prove that if n² is even, then the integer n is even. Knowing n² is even tells you little about n, so prove the contrapositive: if n is odd, then n² is odd. Let n = 2k + 1. Then n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd, so the original is true."
+   ],
+   "remember": "To prove if P then Q, prove if not Q then not P. The two are equivalent.",
+   "a": {
+    "q": "What is the contrapositive of \"if x is a multiple of 6, then x is even\"?",
+    "opts": [
+     "If x is not even, then x is not a multiple of 6",
+     "If x is even, then x is a multiple of 6",
+     "If x is not a multiple of 6, then x is not even",
+     "If x is not a multiple of 6, then x is even"
+    ],
+    "why": "Swap the two parts and negate both: not even comes first, and not a multiple of 6 follows. The option that only swaps the parts is the converse, which is a different statement and need not be true.",
+    "clue": "Swap the parts, then negate both."
+   },
+   "b": {
+    "d": 3,
+    "q": "To prove \"if n² is odd, then n is odd\" by contrapositive, which statement should be proved?",
+    "opts": [
+     "If n is even, then n² is even",
+     "If n is odd, then n² is odd",
+     "If n² is even, then n is even",
+     "If n² is odd, then n is even"
+    ],
+    "why": "P is \"n² is odd\" and Q is \"n is odd\". The contrapositive, if not Q then not P, is: if n is even, then n² is even. The option \"if n² is even, then n is even\" is the inverse (if not P then not Q), which is not equivalent to the original.",
+    "clue": "Not odd means even. Put not Q first."
+   }
+  }
+ }
 }

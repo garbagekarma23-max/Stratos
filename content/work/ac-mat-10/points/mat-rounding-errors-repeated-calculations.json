@@ -25,7 +25,8 @@
   "2026-11-04T09:23:39Z new, match",
   "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:06Z write: done",
-  "2026-11-04T09:58:29Z check: passed, cleared"
+  "2026-11-04T09:58:29Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -99,34 +100,71 @@
   "title": "Rounding errors in repeated calculations",
   "card": [
    "Rounding changes a number a little. If you round early and use the rounded number again, the small change is carried into every later step.",
-   "Example: 10 ÷ 3 × 3. Round 10 ÷ 3 to 3.3 first and you get 3.3 × 3 = 9.9. The true answer is 10.",
+   "Example: \\(10 \\div 3 \\times 3\\). Round \\(10 \\div 3\\) to 3.3 first and you get \\(3.3 \\times 3 = 9.9\\). The true answer is 10.",
    "The more steps that use the rounded value, the more the small errors can build up.",
    "Keep the full calculator value through every step, and round only the final answer."
   ],
   "remember": "Round only at the end, so small errors do not build up.",
   "a": {
-   "q": "What is the best way to find 20 ÷ 3 × 6 correct to 1 decimal place?",
+   "q": "What is the best way to find \\(20 \\div 3 \\times 6\\) correct to 1 decimal place?",
    "opts": [
-    "Keep the full value of 20 ÷ 3, then round the final answer",
-    "Round 20 ÷ 3 to 1 decimal place, then multiply by 6",
-    "Round 20 ÷ 3 to a whole number, then multiply by 6",
+    "Keep the full value of \\(20 \\div 3\\), then round the final answer",
+    "Round \\(20 \\div 3\\) to 1 decimal place, then multiply by 6",
+    "Round \\(20 \\div 3\\) to a whole number, then multiply by 6",
     "Round every number in the question before starting"
    ],
-   "why": "Keeping the full value means no error is carried into the multiplication, and the answer 40 is exact. Rounding 20 ÷ 3 to 6.7 first gives 40.2, which is already out.",
+   "why": "Keeping the full value means no error is carried into the multiplication, and the answer 40 is exact. Rounding \\(20 \\div 3\\) to 6.7 first gives 40.2, which is already out.",
    "clue": "When should the rounding happen?"
   },
   "b": {
    "d": 2,
-   "q": "Tom rounds 100 ÷ 7 to 14.3, then multiplies by 7. What does he get, and why is it off?",
+   "q": "Tom rounds \\(100 \\div 7\\) to 14.3, then multiplies by 7. What does he get, and why is it off?",
    "opts": [
-    "100.1, because he rounded 100 ÷ 7 before multiplying",
-    "100.1, because he rounded 100 ÷ 7 after multiplying",
+    "100.1, because he rounded \\(100 \\div 7\\) before multiplying",
+    "100.1, because he rounded \\(100 \\div 7\\) after multiplying",
     "100, because rounding a value does not change the result",
-    "99.9, because 14.3 is lower than 100 ÷ 7"
+    "99.9, because 14.3 is lower than \\(100 \\div 7\\)"
    ],
-   "why": "14.3 × 7 = 100.1, but the true answer is 100. The error came from rounding 100 ÷ 7 early, then using the rounded value. In fact 14.3 is higher than 100 ÷ 7, which is about 14.2857.",
-   "clue": "Work out 14.3 × 7, then think about when he rounded."
+   "why": "\\(14.3 \\times 7 = 100.1\\), but the true answer is 100. The error came from rounding \\(100 \\div 7\\) early, then using the rounded value. In fact 14.3 is higher than \\(100 \\div 7\\), which is about 14.2857.",
+   "clue": "Work out \\(14.3 \\times 7\\), then think about when he rounded."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Rounding errors in repeated calculations",
+   "card": [
+    "Rounding changes a number a little. If you round early and use the rounded number again, the small change is carried into every later step.",
+    "Example: 10 ÷ 3 × 3. Round 10 ÷ 3 to 3.3 first and you get 3.3 × 3 = 9.9. The true answer is 10.",
+    "The more steps that use the rounded value, the more the small errors can build up.",
+    "Keep the full calculator value through every step, and round only the final answer."
+   ],
+   "remember": "Round only at the end, so small errors do not build up.",
+   "a": {
+    "q": "What is the best way to find 20 ÷ 3 × 6 correct to 1 decimal place?",
+    "opts": [
+     "Keep the full value of 20 ÷ 3, then round the final answer",
+     "Round 20 ÷ 3 to 1 decimal place, then multiply by 6",
+     "Round 20 ÷ 3 to a whole number, then multiply by 6",
+     "Round every number in the question before starting"
+    ],
+    "why": "Keeping the full value means no error is carried into the multiplication, and the answer 40 is exact. Rounding 20 ÷ 3 to 6.7 first gives 40.2, which is already out.",
+    "clue": "When should the rounding happen?"
+   },
+   "b": {
+    "d": 2,
+    "q": "Tom rounds 100 ÷ 7 to 14.3, then multiplies by 7. What does he get, and why is it off?",
+    "opts": [
+     "100.1, because he rounded 100 ÷ 7 before multiplying",
+     "100.1, because he rounded 100 ÷ 7 after multiplying",
+     "100, because rounding a value does not change the result",
+     "99.9, because 14.3 is lower than 100 ÷ 7"
+    ],
+    "why": "14.3 × 7 = 100.1, but the true answer is 100. The error came from rounding 100 ÷ 7 early, then using the rounded value. In fact 14.3 is higher than 100 ÷ 7, which is about 14.2857.",
+    "clue": "Work out 14.3 × 7, then think about when he rounded."
+   }
+  }
+ }
 }

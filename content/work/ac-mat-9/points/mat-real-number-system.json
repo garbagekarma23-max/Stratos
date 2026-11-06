@@ -18,7 +18,8 @@
   "2026-11-04T10:10:50Z check: flagged",
   "2026-11-04T10:14:01Z fix: suggested",
   "2026-11-04T17:58:54Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)",
-  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -176,40 +177,40 @@
   "card": [
    [
     "Rational",
-    "a number that can be written as a fraction of two integers, such as 3/4 or −7. Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
+    "a number that can be written as a fraction of two integers, such as \\(\\frac{3}{4}\\) or \\(-7\\). Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
    ],
    [
     "Irrational",
-    "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are √5 and π."
+    "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are \\(\\sqrt{5}\\) and \\(\\pi\\)."
    ],
    [
     "Real",
     "all the rational numbers and all the irrational numbers together. Every point on the number line is a real number."
    ],
-   "The square root of a whole number is irrational unless the number is a perfect square. So √5 is irrational, but √9 = 3 is rational."
+   "The square root of a whole number is irrational unless the number is a perfect square. So \\(\\sqrt{5}\\) is irrational, but \\(\\sqrt{9} = 3\\) is rational."
   ],
   "remember": "Real numbers are the rational numbers and the irrational numbers combined.",
   "a": {
    "q": "Which of these numbers is irrational?",
    "opts": [
-    "√7",
-    "√16",
+    "\\(\\sqrt{7}\\)",
+    "\\(\\sqrt{16}\\)",
     "0.125",
     "0.666... repeating"
    ],
-   "why": "7 is not a perfect square, so √7 is irrational: its decimal never ends and never repeats. √16 = 4 is an integer. 0.125 ends and 0.666... repeats, so both are rational.",
+   "why": "7 is not a perfect square, so \\(\\sqrt{7}\\) is irrational: its decimal never ends and never repeats. \\(\\sqrt{16} = 4\\) is an integer. 0.125 ends and 0.666... repeats, so both are rational.",
    "clue": "Which one has a decimal that never ends and never repeats?"
   },
   "b": {
    "d": 3,
    "q": "Which list contains only rational numbers?",
    "opts": [
-    "√25, 0.4, −3, 2/9",
-    "√10, 0.4, −3, 2/9",
-    "√25, π, −3, 2/9",
-    "√25, 0.4, −3, √11"
+    "\\(\\sqrt{25}\\), 0.4, \\(-3\\), \\(\\frac{2}{9}\\)",
+    "\\(\\sqrt{10}\\), 0.4, \\(-3\\), \\(\\frac{2}{9}\\)",
+    "\\(\\sqrt{25}\\), \\(\\pi\\), \\(-3\\), \\(\\frac{2}{9}\\)",
+    "\\(\\sqrt{25}\\), 0.4, \\(-3\\), \\(\\sqrt{11}\\)"
    ],
-   "why": "√25 = 5, 0.4 ends and 2/9 is a fraction, so all four are rational. Each wrong list includes an irrational number: √10, π or √11. √25 is not irrational just because it has a root sign.",
+   "why": "\\(\\sqrt{25} = 5\\), 0.4 ends and \\(\\frac{2}{9}\\) is a fraction, so all four are rational. Each wrong list includes an irrational number: \\(\\sqrt{10}\\), \\(\\pi\\) or \\(\\sqrt{11}\\). \\(\\sqrt{25}\\) is not irrational just because it has a root sign.",
    "clue": "Work out each square root before you decide."
   }
  },
@@ -388,5 +389,51 @@
    },
    "after": "cbaa62599929fa60"
   }
- ]
+ ],
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "The real number system",
+   "card": [
+    [
+     "Rational",
+     "a number that can be written as a fraction of two integers, such as 3/4 or −7. Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
+    ],
+    [
+     "Irrational",
+     "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are √5 and π."
+    ],
+    [
+     "Real",
+     "all the rational numbers and all the irrational numbers together. Every point on the number line is a real number."
+    ],
+    "The square root of a whole number is irrational unless the number is a perfect square. So √5 is irrational, but √9 = 3 is rational."
+   ],
+   "remember": "Real numbers are the rational numbers and the irrational numbers combined.",
+   "a": {
+    "q": "Which of these numbers is irrational?",
+    "opts": [
+     "√7",
+     "√16",
+     "0.125",
+     "0.666... repeating"
+    ],
+    "why": "7 is not a perfect square, so √7 is irrational: its decimal never ends and never repeats. √16 = 4 is an integer. 0.125 ends and 0.666... repeats, so both are rational.",
+    "clue": "Which one has a decimal that never ends and never repeats?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Which list contains only rational numbers?",
+    "opts": [
+     "√25, 0.4, −3, 2/9",
+     "√10, 0.4, −3, 2/9",
+     "√25, π, −3, 2/9",
+     "√25, 0.4, −3, √11"
+    ],
+    "why": "√25 = 5, 0.4 ends and 2/9 is a fraction, so all four are rational. Each wrong list includes an irrational number: √10, π or √11. √25 is not irrational just because it has a root sign.",
+    "clue": "Work out each square root before you decide."
+   }
+  }
+ }
 }

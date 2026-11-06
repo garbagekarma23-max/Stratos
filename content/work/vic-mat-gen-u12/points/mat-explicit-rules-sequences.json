@@ -22,7 +22,8 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-arithmetic-sequences, but is not highly sure, so to the Opus match check",
   "2026-11-01T08:14:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:24:33Z write: done",
-  "2026-11-01T08:33:51Z check: passed, cleared"
+  "2026-11-01T08:33:51Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -108,12 +109,12 @@
  "final": {
   "title": "Explicit rules for sequences",
   "card": [
-   "An explicit rule gives the nth term directly from n. You put in the term number and get that term, with no need to list the terms before it.",
-   "For an arithmetic sequence, the rule is t(n) = a + (n − 1)d. Here a is the first term and d is the common difference.",
-   "Worked example: the sequence 7, 12, 17, 22, ... has a = 7 and d = 5. So t(n) = 7 + (n − 1) × 5.",
-   "To find the 30th term, put n = 30. t(30) = 7 + 29 × 5 = 7 + 145 = 152. Do the bracket and the multiplication before the addition."
+   "An explicit rule gives the nth term directly from \\(n\\). You put in the term number and get that term, with no need to list the terms before it.",
+   "For an arithmetic sequence, the rule is \\(t(n) = a + (n - 1)d\\). Here a is the first term and \\(d\\) is the common difference.",
+   "Worked example: the sequence 7, 12, 17, 22, ... has \\(a = 7\\) and \\(d = 5\\). So \\(t(n) = 7 + (n - 1) \\times 5\\).",
+   "To find the 30th term, put \\(n = 30\\). \\(t(30) = 7 + 29 \\times 5 = 7 + 145 = 152\\). Do the bracket and the multiplication before the addition."
   ],
-  "remember": "An explicit rule takes n and gives that term straight away.",
+  "remember": "An explicit rule takes \\(n\\) and gives that term straight away.",
   "a": {
    "q": "An arithmetic sequence has first term 4 and common difference 3. What is the 21st term?",
    "opts": [
@@ -122,21 +123,58 @@
     "63",
     "84"
    ],
-   "why": "t(21) = 4 + (21 − 1) × 3 = 4 + 60 = 64. Using 21 × 3 instead of 20 × 3 gives 67, which forgets that the first term is already there.",
-   "clue": "Multiply d by n − 1, not by n."
+   "why": "\\(t(21) = 4 + (21 - 1) \\times 3 = 4 + 60 = 64\\). Using \\(21 \\times 3\\) instead of \\(20 \\times 3\\) gives 67, which forgets that the first term is already there.",
+   "clue": "Multiply \\(d\\) by \\(n - 1\\), not by \\(n\\)."
   },
   "b": {
    "d": 3,
-   "q": "Mia saves for a bike. She has $50 in week 1 and adds $15 each week. Using t(n) = a + (n − 1)d, how much has she in week 12?",
+   "q": "Mia saves for a bike. She has $50 in week 1 and adds $15 each week. Using \\(t(n) = a + (n - 1)d\\), how much has she in week 12?",
    "opts": [
     "$215",
     "$230",
     "$195",
     "$180"
    ],
-   "why": "Here a = 50 and d = 15. t(12) = 50 + 11 × 15 = 50 + 165 = $215. Using 12 × 15 gives $230, because it counts one extra step of $15.",
+   "why": "Here \\(a = 50\\) and \\(d = 15\\). \\(t(12) = 50 + 11 \\times 15 = 50 + 165 = \\$215\\). Using \\(12 \\times 15\\) gives $230, because it counts one extra step of $15.",
    "clue": "Week 1 is the first term, so count how many steps come after it."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Explicit rules for sequences",
+   "card": [
+    "An explicit rule gives the nth term directly from n. You put in the term number and get that term, with no need to list the terms before it.",
+    "For an arithmetic sequence, the rule is t(n) = a + (n − 1)d. Here a is the first term and d is the common difference.",
+    "Worked example: the sequence 7, 12, 17, 22, ... has a = 7 and d = 5. So t(n) = 7 + (n − 1) × 5.",
+    "To find the 30th term, put n = 30. t(30) = 7 + 29 × 5 = 7 + 145 = 152. Do the bracket and the multiplication before the addition."
+   ],
+   "remember": "An explicit rule takes n and gives that term straight away.",
+   "a": {
+    "q": "An arithmetic sequence has first term 4 and common difference 3. What is the 21st term?",
+    "opts": [
+     "64",
+     "67",
+     "63",
+     "84"
+    ],
+    "why": "t(21) = 4 + (21 − 1) × 3 = 4 + 60 = 64. Using 21 × 3 instead of 20 × 3 gives 67, which forgets that the first term is already there.",
+    "clue": "Multiply d by n − 1, not by n."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia saves for a bike. She has $50 in week 1 and adds $15 each week. Using t(n) = a + (n − 1)d, how much has she in week 12?",
+    "opts": [
+     "$215",
+     "$230",
+     "$195",
+     "$180"
+    ],
+    "why": "Here a = 50 and d = 15. t(12) = 50 + 11 × 15 = 50 + 165 = $215. Using 12 × 15 gives $230, because it counts one extra step of $15.",
+    "clue": "Week 1 is the first term, so count how many steps come after it."
+   }
+  }
+ }
 }

@@ -16,7 +16,8 @@
   "2026-11-01T15:05:28Z check: flagged",
   "2026-11-01T15:14:47Z fix: suggested",
   "2026-11-02T04:41:51Z recheck: kept for you (the fresh check was not highly sure; the fresh check found a problem)",
-  "2026-11-02T06:22:45Z review: approved with the fix"
+  "2026-11-02T06:22:45Z review: approved with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -228,7 +229,7 @@
    ],
    [
     "Example",
-    "Ben buys a $400 jacket on his credit card and pays $100 by the due date. He is charged 2% interest for the month on the unpaid $300: 0.02 × 300 = $6, so he now owes $306."
+    "Ben buys a $400 jacket on his credit card and pays $100 by the due date. He is charged 2% interest for the month on the unpaid $300: \\(0.02 \\times 300 = \\$6\\), so he now owes $306."
    ]
   ],
   "remember": "Debit spends what you have. Credit is borrowed, and interest and fees can push the cost above the price.",
@@ -252,9 +253,58 @@
     "$600",
     "$913.50"
    ],
-   "why": "Interest is charged only on the unpaid amount: $900 − $300 = $600, and 0.015 × 600 = $9, so he owes $609. The answer $613.50 wrongly charges 1.5% on the full $900 instead of the unpaid $600.",
+   "why": "Interest is charged only on the unpaid amount: \\(\\$900 - \\$300 = \\$600\\), and \\(0.015 \\times 600 = \\$9\\), so he owes $609. The answer $613.50 wrongly charges 1.5% on the full $900 instead of the unpaid $600.",
    "clue": "Work out what is still unpaid before finding the interest."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Credit and debit",
+   "card": [
+    [
+     "Debit",
+     "You spend your own money from your bank account. You usually cannot spend more than you have, and going overdrawn can bring fees."
+    ],
+    [
+     "Credit",
+     "You borrow money from a lender to pay now, then repay it later. Lenders include banks, credit card providers and buy now pay later (BNPL) companies."
+    ],
+    [
+     "Costs",
+     "A credit card charges interest on the amount not paid by the due date. The interest is a percentage of that unpaid amount. Missed payments on cards or BNPL can also bring late fees."
+    ],
+    [
+     "Example",
+     "Ben buys a $400 jacket on his credit card and pays $100 by the due date. He is charged 2% interest for the month on the unpaid $300: 0.02 × 300 = $6, so he now owes $306."
+    ]
+   ],
+   "remember": "Debit spends what you have. Credit is borrowed, and interest and fees can push the cost above the price.",
+   "a": {
+    "q": "Priya pays $60 for shoes with her debit card. Whose money is used to pay the shop?",
+    "opts": [
+     "Her own money from her bank account",
+     "Money her bank lends her until payday",
+     "Money lent by a buy now pay later company",
+     "Money lent by a credit card provider"
+    ],
+    "why": "A debit card takes the money straight from Priya's own account, so her balance drops by $60. The other options all involve a lender, which is credit, not debit.",
+    "clue": "Does debit involve borrowing?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Jack buys a $900 laptop on his credit card. He pays $300 by the due date and is charged 1.5% interest for the month on the rest. How much does he now owe?",
+    "opts": [
+     "$609",
+     "$613.50",
+     "$600",
+     "$913.50"
+    ],
+    "why": "Interest is charged only on the unpaid amount: $900 − $300 = $600, and 0.015 × 600 = $9, so he owes $609. The answer $613.50 wrongly charges 1.5% on the full $900 instead of the unpaid $600.",
+    "clue": "Work out what is still unpaid before finding the interest."
+   }
+  }
+ }
 }

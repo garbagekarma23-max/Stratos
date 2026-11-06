@@ -8,7 +8,8 @@
   "2026-10-29T12:14:27Z match: none",
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
-  "2026-10-29T12:39:10Z check: passed, cleared"
+  "2026-10-29T12:39:10Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -91,34 +92,77 @@
    ],
    [
     "Substitution",
-    "Put one equation into the other to leave one unknown. Example: y = 2x + 5 and y = 3x + 1. Set 2x + 5 = 3x + 1, so x = 4. Then y = 2 × 4 + 5 = 13. The lines meet at (4, 13)."
+    "Put one equation into the other to leave one unknown. Example: \\(y = 2x + 5\\) and \\(y = 3x + 1\\). Set \\(2x + 5 = 3x + 1\\), so \\(x = 4\\). Then \\(y = 2 \\times 4 + 5 = 13\\). The lines meet at \\((4, 13)\\)."
    ],
-   "The meeting point shows where two things are equal. If two phone plans have costs C = 20 + 5t and C = 8 + 8t, they cost the same at the t-value where the lines meet."
+   "The meeting point shows where two things are equal. If two phone plans have costs \\(C = 20 + 5t\\) and \\(C = 8 + 8t\\), they cost the same at the t-value where the lines meet."
   ],
   "remember": "The crossing point is the one pair of values that fits both equations, so both quantities are equal there.",
   "a": {
-   "q": "Solve y = 2x + 1 and y = x + 6 by substitution. Where do the lines meet?",
+   "q": "Solve \\(y = 2x + 1\\) and \\(y = x + 6\\) by substitution. Where do the lines meet?",
    "opts": [
-    "(5, 11)",
-    "(11, 5)",
-    "(5, 6)",
-    "(7, 5)"
+    "\\((5, 11)\\)",
+    "\\((11, 5)\\)",
+    "\\((5, 6)\\)",
+    "\\((7, 5)\\)"
    ],
-   "why": "Set 2x + 1 = x + 6, so x = 5. Then y = 2 × 5 + 1 = 11, which gives (5, 11). Checking in the other equation: 5 + 6 = 11. The point (11, 5) swaps the order of x and y.",
-   "clue": "Make the two right-hand sides equal, then find y."
+   "why": "Set \\(2x + 1 = x + 6\\), so \\(x = 5\\). Then \\(y = 2 \\times 5 + 1 = 11\\), which gives \\((5, 11)\\). Checking in the other equation: \\(5 + 6 = 11\\). The point \\((11, 5)\\) swaps the order of \\(x\\) and \\(y\\).",
+   "clue": "Make the two right-hand sides equal, then find \\(y\\)."
   },
   "b": {
    "d": 3,
-   "q": "Plan A costs C = 30 + 4t and Plan B costs C = 10 + 6t, where t is the number of gigabytes used. At how many gigabytes do the plans cost the same?",
+   "q": "Plan A costs \\(C = 30 + 4t\\) and Plan B costs \\(C = 10 + 6t\\), where \\(t\\) is the number of gigabytes used. At how many gigabytes do the plans cost the same?",
    "opts": [
     "10 gigabytes",
     "20 gigabytes",
     "4 gigabytes",
     "70 gigabytes"
    ],
-   "why": "Set 30 + 4t = 10 + 6t, so 20 = 2t and t = 10. The cost at that point is 30 + 40 = 70 dollars, which is the answer 70, not the number of gigabytes. Check: 10 + 60 = 70.",
-   "clue": "Ask for t, not the cost. Make the two costs equal."
+   "why": "Set \\(30 + 4t = 10 + 6t\\), so \\(20 = 2t\\) and \\(t = 10\\). The cost at that point is \\(30 + 40 = 70\\) dollars, which is the answer 70, not the number of gigabytes. Check: \\(10 + 60 = 70\\).",
+   "clue": "Ask for \\(t\\), not the cost. Make the two costs equal."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Simultaneous linear equations",
+   "card": [
+    "Two linear equations that describe the same situation are called simultaneous equations. Their graphs are straight lines, and the point where the lines cross satisfies both equations.",
+    [
+     "Graphing",
+     "Draw both lines on the same axes and read off the point where they cross. This is quick, but the reading may be only approximate."
+    ],
+    [
+     "Substitution",
+     "Put one equation into the other to leave one unknown. Example: y = 2x + 5 and y = 3x + 1. Set 2x + 5 = 3x + 1, so x = 4. Then y = 2 × 4 + 5 = 13. The lines meet at (4, 13)."
+    ],
+    "The meeting point shows where two things are equal. If two phone plans have costs C = 20 + 5t and C = 8 + 8t, they cost the same at the t-value where the lines meet."
+   ],
+   "remember": "The crossing point is the one pair of values that fits both equations, so both quantities are equal there.",
+   "a": {
+    "q": "Solve y = 2x + 1 and y = x + 6 by substitution. Where do the lines meet?",
+    "opts": [
+     "(5, 11)",
+     "(11, 5)",
+     "(5, 6)",
+     "(7, 5)"
+    ],
+    "why": "Set 2x + 1 = x + 6, so x = 5. Then y = 2 × 5 + 1 = 11, which gives (5, 11). Checking in the other equation: 5 + 6 = 11. The point (11, 5) swaps the order of x and y.",
+    "clue": "Make the two right-hand sides equal, then find y."
+   },
+   "b": {
+    "d": 3,
+    "q": "Plan A costs C = 30 + 4t and Plan B costs C = 10 + 6t, where t is the number of gigabytes used. At how many gigabytes do the plans cost the same?",
+    "opts": [
+     "10 gigabytes",
+     "20 gigabytes",
+     "4 gigabytes",
+     "70 gigabytes"
+    ],
+    "why": "Set 30 + 4t = 10 + 6t, so 20 = 2t and t = 10. The cost at that point is 30 + 40 = 70 dollars, which is the answer 70, not the number of gigabytes. Check: 10 + 60 = 70.",
+    "clue": "Ask for t, not the cost. Make the two costs equal."
+   }
+  }
+ }
 }

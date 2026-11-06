@@ -10,7 +10,8 @@
   "2026-11-04T09:47:08Z write: done",
   "2026-11-04T09:58:30Z check: flagged",
   "2026-11-04T10:08:04Z fix: suggested",
-  "2026-11-04T17:58:54Z autoreview: cleared with the fix (remember other)"
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (remember other)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 2,
@@ -151,38 +152,81 @@
    "A transformation moves a shape on the number plane. In a translation and a reflection, the shape keeps its size and its shape.",
    [
     "Translation",
-    "slides every point the same distance in the same direction. Right adds to x and left subtracts from x. Up adds to y and down subtracts from y."
+    "slides every point the same distance in the same direction. Right adds to \\(x\\) and left subtracts from \\(x\\). Up adds to \\(y\\) and down subtracts from \\(y\\)."
    ],
    [
     "Reflection",
-    "flips a shape over a mirror line. In the x-axis, (x, y) becomes (x, −y): x stays the same and the sign of y changes."
+    "flips a shape over a mirror line. In the x-axis, \\((x, y)\\) becomes \\((x, -y)\\): \\(x\\) stays the same and the sign of \\(y\\) changes."
    ],
-   "Example: the point (4, 5) moved 3 right and 2 down is (4 + 3, 5 − 2) = (7, 3). Reflected in the x-axis, (4, 5) becomes (4, −5)."
+   "Example: the point \\((4, 5)\\) moved 3 right and 2 down is \\((4 + 3, 5 - 2) = (7, 3)\\). Reflected in the x-axis, \\((4, 5)\\) becomes \\((4, -5)\\)."
   ],
-  "remember": "Translation: right or up adds, left or down subtracts. Reflection in the x-axis: only the sign of y changes.",
+  "remember": "Translation: right or up adds, left or down subtracts. Reflection in the x-axis: only the sign of \\(y\\) changes.",
   "a": {
-   "q": "The point (2, 6) is reflected in the x-axis. What is its image?",
+   "q": "The point \\((2, 6)\\) is reflected in the x-axis. What is its image?",
    "opts": [
-    "(2, −6)",
-    "(−2, 6)",
-    "(−2, −6)",
-    "(6, 2)"
+    "\\((2, -6)\\)",
+    "\\((-2, 6)\\)",
+    "\\((-2, -6)\\)",
+    "\\((6, 2)\\)"
    ],
-   "why": "A reflection in the x-axis keeps x the same and changes the sign of y, so (2, 6) becomes (2, −6). (−2, 6) is tempting, but it changes the sign of x instead, and x should stay the same.",
+   "why": "A reflection in the x-axis keeps \\(x\\) the same and changes the sign of \\(y\\), so \\((2, 6)\\) becomes \\((2, -6)\\). \\((-2, 6)\\) is tempting, but it changes the sign of \\(x\\) instead, and \\(x\\) should stay the same.",
    "clue": "Which coordinate stays the same in the x-axis?"
   },
   "b": {
    "d": 2,
-   "q": "Triangle vertex A is at (1, 5). The triangle is translated 4 right and 3 down. Where is A now?",
+   "q": "Triangle vertex A is at \\((1, 5)\\). The triangle is translated 4 right and 3 down. Where is A now?",
    "opts": [
-    "(5, 2)",
-    "(−3, 8)",
-    "(5, 8)",
-    "(−3, 2)"
+    "\\((5, 2)\\)",
+    "\\((-3, 8)\\)",
+    "\\((5, 8)\\)",
+    "\\((-3, 2)\\)"
    ],
-   "why": "Right 4 adds 4 to x: 1 + 4 = 5. Down 3 subtracts 3 from y: 5 − 3 = 2. So A is at (5, 2). (5, 8) is tempting, but it moves the point up instead of down.",
-   "clue": "Right changes x. Down changes y."
+   "why": "Right 4 adds 4 to \\(x\\): \\(1 + 4 = 5\\). Down 3 subtracts 3 from \\(y\\): \\(5 - 3 = 2\\). So A is at \\((5, 2)\\). \\((5, 8)\\) is tempting, but it moves the point up instead of down.",
+   "clue": "Right changes \\(x\\). Down changes \\(y\\)."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Translations and reflections",
+   "card": [
+    "A transformation moves a shape on the number plane. In a translation and a reflection, the shape keeps its size and its shape.",
+    [
+     "Translation",
+     "slides every point the same distance in the same direction. Right adds to x and left subtracts from x. Up adds to y and down subtracts from y."
+    ],
+    [
+     "Reflection",
+     "flips a shape over a mirror line. In the x-axis, (x, y) becomes (x, −y): x stays the same and the sign of y changes."
+    ],
+    "Example: the point (4, 5) moved 3 right and 2 down is (4 + 3, 5 − 2) = (7, 3). Reflected in the x-axis, (4, 5) becomes (4, −5)."
+   ],
+   "remember": "Translation: right or up adds, left or down subtracts. Reflection in the x-axis: only the sign of y changes.",
+   "a": {
+    "q": "The point (2, 6) is reflected in the x-axis. What is its image?",
+    "opts": [
+     "(2, −6)",
+     "(−2, 6)",
+     "(−2, −6)",
+     "(6, 2)"
+    ],
+    "why": "A reflection in the x-axis keeps x the same and changes the sign of y, so (2, 6) becomes (2, −6). (−2, 6) is tempting, but it changes the sign of x instead, and x should stay the same.",
+    "clue": "Which coordinate stays the same in the x-axis?"
+   },
+   "b": {
+    "d": 2,
+    "q": "Triangle vertex A is at (1, 5). The triangle is translated 4 right and 3 down. Where is A now?",
+    "opts": [
+     "(5, 2)",
+     "(−3, 8)",
+     "(5, 8)",
+     "(−3, 2)"
+    ],
+    "why": "Right 4 adds 4 to x: 1 + 4 = 5. Down 3 subtracts 3 from y: 5 − 3 = 2. So A is at (5, 2). (5, 8) is tempting, but it moves the point up instead of down.",
+    "clue": "Right changes x. Down changes y."
+   }
+  }
+ }
 }

@@ -16,7 +16,8 @@
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -207,12 +208,12 @@
     "Dominance matrix",
     "A binary matrix where 1 means the row player beat the column player. Each pair plays once, so a 1 in one place means a 0 in the matching place across the diagonal."
    ],
-   "Row sums count direct links or wins. The matrix squared, M², counts two-step links: the entry in row i and column j is the number of ways to go from i to j through one other person.",
-   "M + M² counts all one-step and two-step links. Example: if A beat B and B beat C, then A has 1 direct win (over B) and 1 two-step win (over C). Ranking uses row sums of M + M²."
+   "Row sums count direct links or wins. The matrix squared, \\(M^{2}\\), counts two-step links: the entry in row \\(i\\) and column \\(j\\) is the number of ways to go from \\(i\\) to \\(j\\) through one other person.",
+   "\\(M + M^{2}\\) counts all one-step and two-step links. Example: if A beat B and B beat C, then A has 1 direct win (over B) and 1 two-step win (over C). Ranking uses row sums of \\(M + M^{2}\\)."
   ],
-  "remember": "Row sums of M count direct links. Row sums of M + M² count direct and two-step links.",
+  "remember": "Row sums of M count direct links. Row sums of \\(M + M^{2}\\) count direct and two-step links.",
   "a": {
-   "q": "A dominance matrix M has rows and columns in the order P, Q, R, S: row P is 0 1 0 1, row Q is 0 0 1 1, row R is 1 0 0 0, row S is 0 0 1 0. What is P's row sum in M + M²?",
+   "q": "A dominance matrix M has rows and columns in the order P, Q, R, S: row P is 0 1 0 1, row Q is 0 0 1 1, row R is 1 0 0 0, row S is 0 0 1 0. What is P's row sum in \\(M + M^{2}\\)?",
    "opts": [
     "5",
     "2",
@@ -235,5 +236,48 @@
    "clue": "Check each middle person: can A reach them, and can they reach C?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Communication and dominance matrices",
+   "card": [
+    [
+     "Communication matrix",
+     "A binary matrix where 1 means the row person can send a message directly to the column person, and 0 means they cannot. A message may go one way only."
+    ],
+    [
+     "Dominance matrix",
+     "A binary matrix where 1 means the row player beat the column player. Each pair plays once, so a 1 in one place means a 0 in the matching place across the diagonal."
+    ],
+    "Row sums count direct links or wins. The matrix squared, M², counts two-step links: the entry in row i and column j is the number of ways to go from i to j through one other person.",
+    "M + M² counts all one-step and two-step links. Example: if A beat B and B beat C, then A has 1 direct win (over B) and 1 two-step win (over C). Ranking uses row sums of M + M²."
+   ],
+   "remember": "Row sums of M count direct links. Row sums of M + M² count direct and two-step links.",
+   "a": {
+    "q": "A dominance matrix M has rows and columns in the order P, Q, R, S: row P is 0 1 0 1, row Q is 0 0 1 1, row R is 1 0 0 0, row S is 0 0 1 0. What is P's row sum in M + M²?",
+    "opts": [
+     "5",
+     "2",
+     "3",
+     "4"
+    ],
+    "why": "P beat Q and S directly, so 2 direct wins. Two-step wins go through those players: P to Q to R, P to Q to S, and P to S to R, so 3 more. The total is 5, while 2 counts only the direct wins.",
+    "clue": "Find who P beat, then who those players beat."
+   },
+   "b": {
+    "d": 3,
+    "q": "Messages in a team are shown by this communication matrix, with rows and columns in the order A, B, C: row A is 0 1 1, row B is 0 0 1, row C is 1 0 0. How many two-step ways are there to send a message from A to C?",
+    "opts": [
+     "1",
+     "2",
+     "0",
+     "3"
+    ],
+    "why": "A two-step path from A to C goes through a middle person. A to B then B to C works. A to C then C to C does not, as C has a 0 for C to C. So there is 1 way. Counting the direct link A to C as well would give 2, but that is a one-step link.",
+    "clue": "Check each middle person: can A reach them, and can they reach C?"
+   }
+  }
+ }
 }

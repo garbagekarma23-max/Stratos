@@ -14,7 +14,8 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:32Z write: done",
-  "2026-11-01T08:33:51Z check: passed, cleared"
+  "2026-11-01T08:33:51Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -97,44 +98,90 @@
  "final": {
   "title": "Fractions, decimals and percentages",
   "card": [
-   "A fraction, a decimal and a percentage can show the same amount. For example, 1/4 = 0.25 = 25%.",
+   "A fraction, a decimal and a percentage can show the same amount. For example, \\(\\frac{1}{4} = 0.25 = 25\\%\\).",
    [
     "Fraction to decimal",
-    "divide the top number by the bottom number. 3/5 = 3 ÷ 5 = 0.6."
+    "divide the top number by the bottom number. \\(\\frac{3}{5} = 3 \\div 5 = 0.6\\)."
    ],
    [
     "Decimal to percentage",
-    "multiply by 100. 0.6 × 100 = 60%. To go back, divide by 100."
+    "multiply by 100. \\(0.6 \\times 100 = 60\\%\\). To go back, divide by 100."
    ],
    [
     "Percentage to fraction",
-    "write the percentage over 100, then simplify. 60% = 60/100 = 3/5."
+    "write the percentage over 100, then simplify. \\(60\\% = \\frac{60}{100} = \\frac{3}{5}\\)."
    ]
   ],
   "remember": "Percent means out of 100. Divide by 100 to go from a percentage to a decimal, and multiply by 100 to go back.",
   "a": {
-   "q": "Which decimal is equal to 3/8?",
+   "q": "Which decimal is equal to \\(\\frac{3}{8}\\)?",
    "opts": [
     "0.375",
     "0.38",
     "2.67",
     "0.83"
    ],
-   "why": "Divide the top by the bottom: 3 ÷ 8 = 0.375. Dividing 8 by 3 instead gives 2.67, which is the mistake of turning the fraction upside down.",
+   "why": "Divide the top by the bottom: \\(3 \\div 8 = 0.375\\). Dividing 8 by 3 instead gives 2.67, which is the mistake of turning the fraction upside down.",
    "clue": "Divide the top number by the bottom number."
   },
   "b": {
    "d": 3,
-   "q": "Mia scored 0.7 on one quiz, 65% on another and 3/4 on a third. Which list puts these in order from smallest to largest?",
+   "q": "Mia scored 0.7 on one quiz, 65% on another and \\(\\frac{3}{4}\\) on a third. Which list puts these in order from smallest to largest?",
    "opts": [
-    "65%, 0.7, 3/4",
-    "0.7, 65%, 3/4",
-    "3/4, 0.7, 65%",
-    "65%, 3/4, 0.7"
+    "65%, 0.7, \\(\\frac{3}{4}\\)",
+    "0.7, 65%, \\(\\frac{3}{4}\\)",
+    "\\(\\frac{3}{4}\\), 0.7, 65%",
+    "65%, \\(\\frac{3}{4}\\), 0.7"
    ],
-   "why": "Write each as a percentage: 0.7 = 70%, 65% stays 65%, and 3/4 = 75%. The order is 65%, 70%, 75%. Comparing 0.7 with 65 without converting wrongly makes 0.7 look smaller.",
+   "why": "Write each as a percentage: \\(0.7 = 70\\%\\), 65% stays 65%, and \\(\\frac{3}{4} = 75\\%\\). The order is 65%, 70%, 75%. Comparing 0.7 with 65 without converting wrongly makes 0.7 look smaller.",
    "clue": "Write all three amounts in the same form first."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Fractions, decimals and percentages",
+   "card": [
+    "A fraction, a decimal and a percentage can show the same amount. For example, 1/4 = 0.25 = 25%.",
+    [
+     "Fraction to decimal",
+     "divide the top number by the bottom number. 3/5 = 3 ÷ 5 = 0.6."
+    ],
+    [
+     "Decimal to percentage",
+     "multiply by 100. 0.6 × 100 = 60%. To go back, divide by 100."
+    ],
+    [
+     "Percentage to fraction",
+     "write the percentage over 100, then simplify. 60% = 60/100 = 3/5."
+    ]
+   ],
+   "remember": "Percent means out of 100. Divide by 100 to go from a percentage to a decimal, and multiply by 100 to go back.",
+   "a": {
+    "q": "Which decimal is equal to 3/8?",
+    "opts": [
+     "0.375",
+     "0.38",
+     "2.67",
+     "0.83"
+    ],
+    "why": "Divide the top by the bottom: 3 ÷ 8 = 0.375. Dividing 8 by 3 instead gives 2.67, which is the mistake of turning the fraction upside down.",
+    "clue": "Divide the top number by the bottom number."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia scored 0.7 on one quiz, 65% on another and 3/4 on a third. Which list puts these in order from smallest to largest?",
+    "opts": [
+     "65%, 0.7, 3/4",
+     "0.7, 65%, 3/4",
+     "3/4, 0.7, 65%",
+     "65%, 3/4, 0.7"
+    ],
+    "why": "Write each as a percentage: 0.7 = 70%, 65% stays 65%, and 3/4 = 75%. The order is 65%, 70%, 75%. Comparing 0.7 with 65 without converting wrongly makes 0.7 look smaller.",
+    "clue": "Write all three amounts in the same form first."
+   }
+  }
+ }
 }

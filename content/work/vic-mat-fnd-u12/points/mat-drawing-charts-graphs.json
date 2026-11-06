@@ -24,7 +24,8 @@
   "2026-11-01T08:24:32Z write: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -223,7 +224,7 @@
    ],
    [
     "Pie chart",
-    "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: 1/4 of the whole is 1/4 × 360° = 90°."
+    "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: \\(\\frac{1}{4}\\) of the whole is \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\)."
    ],
    "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
   ],
@@ -248,9 +249,55 @@
     "40°",
     "144°"
    ],
-   "why": "The bus share is 10/40 = 1/4, and 1/4 × 360° = 90°. The answer 144° comes from wrongly using 40% as the share, since 0.4 × 360° = 144°. But 10 out of 40 is 25%, not 40%.",
+   "why": "The bus share is \\(\\frac{10}{40} = \\frac{1}{4}\\), and \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\). The answer 144° comes from wrongly using 40% as the share, since \\(0.4 \\times 360^{\\circ} = 144^{\\circ}\\). But 10 out of 40 is 25%, not 40%.",
    "clue": "Find the fraction of the whole, then take that share of 360°."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Drawing charts and graphs",
+   "card": [
+    [
+     "Column graph",
+     "Use it to compare separate groups, such as the number of students in each year level. Draw gaps between the columns."
+    ],
+    [
+     "Line graph",
+     "Use it to show how something changes over time, such as a temperature each month. Join the points with a line."
+    ],
+    [
+     "Pie chart",
+     "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: 1/4 of the whole is 1/4 × 360° = 90°."
+    ],
+    "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
+   ],
+   "remember": "Match the graph to the data, then add a title and clear labels.",
+   "a": {
+    "q": "Which graph best shows a town's rainfall each month over one year?",
+    "opts": [
+     "A line graph with a title and labels",
+     "A pie chart with a title and labels",
+     "A column graph with no axis labels",
+     "A table of values with no title"
+    ],
+    "why": "Rainfall each month is a change over time, so a labelled line graph suits it. A pie chart shows parts of a whole, and the monthly rainfall figures are not shares of a total that matter here. The other two are missing a title or labels.",
+    "clue": "Think about change over time."
+   },
+   "b": {
+    "d": 3,
+    "q": "In a survey of 40 students, 10 chose bus to get to school. What angle is the bus slice on a pie chart?",
+    "opts": [
+     "90°",
+     "10°",
+     "40°",
+     "144°"
+    ],
+    "why": "The bus share is 10/40 = 1/4, and 1/4 × 360° = 90°. The answer 144° comes from wrongly using 40% as the share, since 0.4 × 360° = 144°. But 10 out of 40 is 25%, not 40%.",
+    "clue": "Find the fraction of the whole, then take that share of 360°."
+   }
+  }
+ }
 }

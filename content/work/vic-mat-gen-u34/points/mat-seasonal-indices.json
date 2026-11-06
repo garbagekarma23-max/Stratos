@@ -10,7 +10,8 @@
   "2026-11-01T14:56:02Z check: flagged",
   "2026-11-01T15:05:28Z fix: suggested",
   "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:23:09Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:23:09Z review: approved with the fix (a spot check)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 1,
@@ -162,7 +163,7 @@
    "A seasonal index shows how one season (such as a quarter, month or day) compares with the average season. An index of 1 means that season is average.",
    "An index above 1 means the season is above average. An index of 1.2 means 20% above average. An index below 1 means below average, so 0.9 means 10% below average.",
    "Over a full cycle, the seasonal indices add up to the number of seasons. With 4 quarters, the indices add to 4. With 12 months, they add to 12.",
-   "Example: if the indices for three quarters are 1.3, 0.8 and 1.1, the fourth must be 4 − (1.3 + 0.8 + 1.1) = 0.8."
+   "Example: if the indices for three quarters are 1.3, 0.8 and 1.1, the fourth must be \\(4 - (1.3 + 0.8 + 1.1) = 0.8\\)."
   ],
   "remember": "Index 1 is average. Above 1 is above average. The indices add to the number of seasons.",
   "a": {
@@ -173,7 +174,7 @@
     "15% above the average day",
     "85% below the average day"
    ],
-   "why": "An index of 0.85 is 1 − 0.85 = 0.15 below 1, so sales are 15% below average. Saying 85% below confuses the index with the size of the gap.",
+   "why": "An index of 0.85 is \\(1 - 0.85 = 0.15\\) below 1, so sales are 15% below average. Saying 85% below confuses the index with the size of the gap.",
    "clue": "Compare 0.85 with 1, which is average."
   },
   "b": {
@@ -185,9 +186,46 @@
     "1.35",
     "1.00"
    ],
-   "why": "Four seasons means the indices add to 4. The three given add to 3.35, so winter is 4 − 3.35 = 0.65. The answer 0.35 is how far winter sits below average, not the index itself.",
+   "why": "Four seasons means the indices add to 4. The three given add to 3.35, so winter is \\(4 - 3.35 = 0.65\\). The answer 0.35 is how far winter sits below average, not the index itself.",
    "clue": "How many seasons are there, and what must the indices add to?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Seasonal indices",
+   "card": [
+    "A seasonal index shows how one season (such as a quarter, month or day) compares with the average season. An index of 1 means that season is average.",
+    "An index above 1 means the season is above average. An index of 1.2 means 20% above average. An index below 1 means below average, so 0.9 means 10% below average.",
+    "Over a full cycle, the seasonal indices add up to the number of seasons. With 4 quarters, the indices add to 4. With 12 months, they add to 12.",
+    "Example: if the indices for three quarters are 1.3, 0.8 and 1.1, the fourth must be 4 − (1.3 + 0.8 + 1.1) = 0.8."
+   ],
+   "remember": "Index 1 is average. Above 1 is above average. The indices add to the number of seasons.",
+   "a": {
+    "q": "A café in Geelong has a seasonal index of 0.85 for Mondays. What does this tell us about Monday sales?",
+    "opts": [
+     "15% below the average day",
+     "85% above the average day",
+     "15% above the average day",
+     "85% below the average day"
+    ],
+    "why": "An index of 0.85 is 1 − 0.85 = 0.15 below 1, so sales are 15% below average. Saying 85% below confuses the index with the size of the gap.",
+    "clue": "Compare 0.85 with 1, which is average."
+   },
+   "b": {
+    "d": 3,
+    "q": "A pool in Mildura has seasonal indices of 1.45 for summer, 0.85 for autumn and 1.05 for spring. What is the seasonal index for winter?",
+    "opts": [
+     "0.65",
+     "0.35",
+     "1.35",
+     "1.00"
+    ],
+    "why": "Four seasons means the indices add to 4. The three given add to 3.35, so winter is 4 − 3.35 = 0.65. The answer 0.35 is how far winter sits below average, not the index itself.",
+    "clue": "How many seasons are there, and what must the indices add to?"
+   }
+  }
+ }
 }

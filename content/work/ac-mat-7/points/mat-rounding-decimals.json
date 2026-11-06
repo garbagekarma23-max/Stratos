@@ -16,7 +16,8 @@
   "2026-11-04T09:58:30Z write: done",
   "2026-11-04T10:08:04Z check: flagged",
   "2026-11-04T10:10:50Z fix: suggested",
-  "2026-11-04T17:58:54Z autoreview: cleared with the fix (b wording)"
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (b wording)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -166,7 +167,7 @@
    "To round to a given number of decimal places, find the last digit you are keeping. Then look at the digit right after it.",
    "If the next digit is 5 or more, round up: add 1 to the last digit you keep. If it is 4 or less, leave the last digit as it is. Then drop all the digits after it.",
    "Example: round 3.476 to 1 decimal place. The last digit kept is 4. The next digit is 7, so round up. The answer is 3.5.",
-   "To check an answer is reasonable, round each number to something easy first. 4.9 × 2.1 is close to 5 × 2 = 10, so an answer of 10.29 is reasonable but 102.9 is not."
+   "To check an answer is reasonable, round each number to something easy first. \\(4.9 \\times 2.1\\) is close to \\(5 \\times 2 = 10\\), so an answer of 10.29 is reasonable but 102.9 is not."
   ],
   "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays.",
   "a": {
@@ -182,16 +183,53 @@
   },
   "b": {
    "d": 3,
-   "q": "Ben's calculator shows 31.98 for 7.8 × 4.1. He checks it by rounding each number to the nearest whole number. Which check is correct?",
+   "q": "Ben's calculator shows 31.98 for \\(7.8 \\times 4.1\\). He checks it by rounding each number to the nearest whole number. Which check is correct?",
    "opts": [
-    "8 × 4 = 32, so 31.98 is reasonable",
-    "7 × 4 = 28, so 31.98 is reasonable",
-    "8 × 4 = 32, so 31.98 is too small",
-    "8 × 5 = 40, so 31.98 is too small"
+    "\\(8 \\times 4 = 32\\), so 31.98 is reasonable",
+    "\\(7 \\times 4 = 28\\), so 31.98 is reasonable",
+    "\\(8 \\times 4 = 32\\), so 31.98 is too small",
+    "\\(8 \\times 5 = 40\\), so 31.98 is too small"
    ],
-   "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is 8 × 4 = 32. The answer 31.98 is very close to 32, so it is reasonable. The check using 7 × 4 reaches the right conclusion with a wrong estimate, because the 8 after the 7 means 7.8 rounds up.",
+   "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is \\(8 \\times 4 = 32\\). The answer 31.98 is very close to 32, so it is reasonable. The check using \\(7 \\times 4\\) reaches the right conclusion with a wrong estimate, because the 8 after the 7 means 7.8 rounds up.",
    "clue": "Round each number first, then compare the estimate with 31.98."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Rounding decimals",
+   "card": [
+    "To round to a given number of decimal places, find the last digit you are keeping. Then look at the digit right after it.",
+    "If the next digit is 5 or more, round up: add 1 to the last digit you keep. If it is 4 or less, leave the last digit as it is. Then drop all the digits after it.",
+    "Example: round 3.476 to 1 decimal place. The last digit kept is 4. The next digit is 7, so round up. The answer is 3.5.",
+    "To check an answer is reasonable, round each number to something easy first. 4.9 × 2.1 is close to 5 × 2 = 10, so an answer of 10.29 is reasonable but 102.9 is not."
+   ],
+   "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays.",
+   "a": {
+    "q": "What is 6.382 rounded to 2 decimal places?",
+    "opts": [
+     "6.38",
+     "6.39",
+     "6.4",
+     "6.3"
+    ],
+    "why": "The last digit kept is 8 and the next digit is 2. Since 2 is 4 or less, the 8 stays and the answer is 6.38. Rounding up to 6.39 looks at the wrong digit, as the 8 is not the digit that decides.",
+    "clue": "Only the digit right after the last one you keep decides."
+   },
+   "b": {
+    "d": 3,
+    "q": "Ben's calculator shows 31.98 for 7.8 × 4.1. He checks it by rounding each number to the nearest whole number. Which check is correct?",
+    "opts": [
+     "8 × 4 = 32, so 31.98 is reasonable",
+     "7 × 4 = 28, so 31.98 is reasonable",
+     "8 × 4 = 32, so 31.98 is too small",
+     "8 × 5 = 40, so 31.98 is too small"
+    ],
+    "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is 8 × 4 = 32. The answer 31.98 is very close to 32, so it is reasonable. The check using 7 × 4 reaches the right conclusion with a wrong estimate, because the 8 after the 7 means 7.8 rounds up.",
+    "clue": "Round each number first, then compare the estimate with 31.98."
+   }
+  }
+ }
 }

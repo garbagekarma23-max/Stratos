@@ -22,7 +22,8 @@
   "2026-11-01T08:42:06Z check: flagged",
   "2026-11-01T08:44:27Z fix: suggested",
   "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
-  "2026-11-02T06:22:35Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:22:35Z review: approved with the fix (a spot check)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -213,9 +214,55 @@
     "Its width is bigger, so sales look smaller than Monday's",
     "Pictures can only be used when the axis starts at zero"
    ],
-   "why": "Doubling both height and width makes the area 2 × 2 = 4 times as large. Sales only doubled, so the eye reads a bigger rise than the real one. The area is not 2 times bigger, because both measurements were doubled.",
+   "why": "Doubling both height and width makes the area \\(2 \\times 2 = 4\\) times as large. Sales only doubled, so the eye reads a bigger rise than the real one. The area is not 2 times bigger, because both measurements were doubled.",
    "clue": "Area depends on height and width together."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Misleading graphs",
+   "card": [
+    "A graph can show true numbers and still give the wrong picture. Check the axes, the scale and the pictures before you trust the shape.",
+    [
+     "Axis not at zero",
+     "if the vertical axis starts above zero, the bottom of every column is cut off. A small difference then looks huge."
+    ],
+    [
+     "Uneven scale",
+     "the marks on an axis are evenly spaced, but the values jump unevenly, such as 0, 10, 20, 50. Equal distances then stand for unequal amounts, so a change can look faster or slower than it is."
+    ],
+    [
+     "Unfair pictures",
+     "if a picture is made twice as tall and also twice as wide, its area is 4 times bigger. Example: sales double from 10 to 20, but the picture looks 4 times as large."
+    ]
+   ],
+   "remember": "Read the axis numbers first. Then ask if the shape matches the real change.",
+   "a": {
+    "q": "A column graph of phone sales starts its vertical axis at 90, not 0. Sales of 100 and 110 are shown. What is the effect?",
+    "opts": [
+     "The 110 column looks much more than 10% taller than 100",
+     "The 110 column looks the same height as the 100 column",
+     "The 110 column looks shorter than the 100 column",
+     "The two sales figures are changed to different numbers"
+    ],
+    "why": "Starting at 90 cuts off the bottom of both columns. The columns look 10 and 20 tall, so the second looks double the first, not 10% taller. The sales numbers stay the same: only the picture changes.",
+    "clue": "Compare the heights you see above the starting value."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia's café sold 10 cups on Monday and 20 on Tuesday. A graph shows each as a cup picture, with Tuesday's cup twice as tall and twice as wide. Why is this misleading?",
+    "opts": [
+     "Its area is 4 times bigger, so sales look 4 times bigger",
+     "Its area is 2 times bigger, so sales look 2 times bigger",
+     "Its width is bigger, so sales look smaller than Monday's",
+     "Pictures can only be used when the axis starts at zero"
+    ],
+    "why": "Doubling both height and width makes the area 2 × 2 = 4 times as large. Sales only doubled, so the eye reads a bigger rise than the real one. The area is not 2 times bigger, because both measurements were doubled.",
+    "clue": "Area depends on height and width together."
+   }
+  }
+ }
 }

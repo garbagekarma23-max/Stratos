@@ -10,7 +10,8 @@
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: flagged",
   "2026-10-29T12:41:46Z fix: suggested",
-  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -186,15 +187,15 @@
    "GST is the Goods and Services Tax. In Australia it is 10% of the price on most goods and services. Some items, such as basic fresh food, do not have it.",
    [
     "Adding GST",
-    "Multiply the price before GST by 1.1. Example: a $60 repair becomes $60 × 1.1 = $66. The GST is $6."
+    "Multiply the price before GST by 1.1. Example: a $60 repair becomes \\(\\$60 \\times 1.1 = \\$66\\). The GST is $6."
    ],
    [
     "Finding the GST",
-    "A price with GST included is 110% of the original, so the GST is 1/11 of it. Divide the GST-inclusive price by 11."
+    "A price with GST included is 110% of the original, so the GST is \\(\\frac{1}{11}\\) of it. Divide the GST-inclusive price by 11."
    ],
    [
     "Example",
-    "A jacket costs $154 with GST included. The GST is $154 ÷ 11 = $14. The price before GST is $154 − $14 = $140."
+    "A jacket costs $154 with GST included. The GST is \\(\\$154 \\div 11 = \\$14\\). The price before GST is \\(\\$154 - \\$14 = \\$140\\)."
    ]
   ],
   "remember": "Add GST by multiplying by 1.1. To find the GST in a price that includes it, divide by 11.",
@@ -206,7 +207,7 @@
     "$272.73",
     "$260"
    ],
-   "why": "The price with GST is $250 × 1.1 = $275. Adding $250 ÷ 11 = $22.73 gives $272.73, but that uses the wrong method: dividing by 11 finds the GST in a price that already includes it. Here the $250 is before GST, so the GST is 10% of it, which is $25.",
+   "why": "The price with GST is \\(\\$250 \\times 1.1 = \\$275\\). Adding \\(\\$250 \\div 11 = \\$22.73\\) gives $272.73, but that uses the wrong method: dividing by 11 finds the GST in a price that already includes it. Here the $250 is before GST, so the GST is 10% of it, which is $25.",
    "clue": "The new price is 110% of the starting price."
   },
   "b": {
@@ -218,9 +219,55 @@
     "$170",
     "$20.57"
    ],
-   "why": "The price includes GST, so the GST is $187 ÷ 11 = $17. Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
+   "why": "The price includes GST, so the GST is \\(\\$187 \\div 11 = \\$17\\). Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
    "clue": "The $187 is already 110% of the price before GST."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "GST",
+   "card": [
+    "GST is the Goods and Services Tax. In Australia it is 10% of the price on most goods and services. Some items, such as basic fresh food, do not have it.",
+    [
+     "Adding GST",
+     "Multiply the price before GST by 1.1. Example: a $60 repair becomes $60 × 1.1 = $66. The GST is $6."
+    ],
+    [
+     "Finding the GST",
+     "A price with GST included is 110% of the original, so the GST is 1/11 of it. Divide the GST-inclusive price by 11."
+    ],
+    [
+     "Example",
+     "A jacket costs $154 with GST included. The GST is $154 ÷ 11 = $14. The price before GST is $154 − $14 = $140."
+    ]
+   ],
+   "remember": "Add GST by multiplying by 1.1. To find the GST in a price that includes it, divide by 11.",
+   "a": {
+    "q": "A tradesperson charges $250 before GST. What is the price with 10% GST added?",
+    "opts": [
+     "$275",
+     "$25",
+     "$272.73",
+     "$260"
+    ],
+    "why": "The price with GST is $250 × 1.1 = $275. Adding $250 ÷ 11 = $22.73 gives $272.73, but that uses the wrong method: dividing by 11 finds the GST in a price that already includes it. Here the $250 is before GST, so the GST is 10% of it, which is $25.",
+    "clue": "The new price is 110% of the starting price."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia pays $187 for a printer, and the price includes GST. How much of the $187 is GST?",
+    "opts": [
+     "$17",
+     "$18.70",
+     "$170",
+     "$20.57"
+    ],
+    "why": "The price includes GST, so the GST is $187 ÷ 11 = $17. Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
+    "clue": "The $187 is already 110% of the price before GST."
+   }
+  }
+ }
 }

@@ -10,7 +10,8 @@
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: flagged",
   "2026-10-29T12:41:47Z fix: suggested",
-  "2026-10-29T14:30:29Z autoreview: cleared with the fix (b other, card wording)"
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (b other, card wording)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -157,7 +158,7 @@
    "The critical path is the longest path through an activity network, from start to finish. Its length is the shortest time in which the whole project can be finished.",
    "Every activity on the critical path has zero float, so its earliest start time equals its latest start time. These are called critical activities.",
    "A delay to any critical activity delays the whole project by the same amount. An activity off the path has float, so it can start late by up to its float without delaying the project.",
-   "Example: path A, C, E takes 3 + 5 + 4 = 12 days. Path B, D takes 4 + 6 = 10 days. The longest is A, C, E, so it is the critical path and the project takes 12 days."
+   "Example: path A, C, E takes \\(3 + 5 + 4 = 12\\) days. Path B, D takes \\(4 + 6 = 10\\) days. The longest is A, C, E, so it is the critical path and the project takes 12 days."
   ],
   "remember": "The critical path is the longest path. It has no float, so any delay on it delays the project.",
   "a": {
@@ -184,5 +185,42 @@
    "clue": "Critical activities have zero float."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "The critical path",
+   "card": [
+    "The critical path is the longest path through an activity network, from start to finish. Its length is the shortest time in which the whole project can be finished.",
+    "Every activity on the critical path has zero float, so its earliest start time equals its latest start time. These are called critical activities.",
+    "A delay to any critical activity delays the whole project by the same amount. An activity off the path has float, so it can start late by up to its float without delaying the project.",
+    "Example: path A, C, E takes 3 + 5 + 4 = 12 days. Path B, D takes 4 + 6 = 10 days. The longest is A, C, E, so it is the critical path and the project takes 12 days."
+   ],
+   "remember": "The critical path is the longest path. It has no float, so any delay on it delays the project.",
+   "a": {
+    "q": "A project has three paths from start to finish. Path 1 takes 14 days, path 2 takes 17 days and path 3 takes 15 days. What is the shortest time to finish the project?",
+    "opts": [
+     "17 days",
+     "14 days",
+     "15 days",
+     "46 days"
+    ],
+    "why": "The project cannot finish until the longest path is done, so the critical path of 17 days sets the time. The shortest path of 14 days is tempting, but the project would not be finished when that path ends.",
+    "clue": "The project is only finished when every path is done."
+   },
+   "b": {
+    "d": 3,
+    "q": "In Priya's building project, activity G is on the critical path and activity H is not. Both are due to start on Monday. G is delayed by 2 days. What happens?",
+    "opts": [
+     "The whole project is delayed by 2 days",
+     "The whole project is delayed by less than 2 days",
+     "The project is not delayed, as G has float",
+     "Only activity H is delayed, by 2 days"
+    ],
+    "why": "G is critical, so it has zero float and a 2 day delay moves the finish by 2 days. The option saying G has float is tempting but wrong, because float belongs to activities off the critical path, such as H.",
+    "clue": "Critical activities have zero float."
+   }
+  }
+ }
 }

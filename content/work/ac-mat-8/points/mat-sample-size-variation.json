@@ -32,7 +32,8 @@
   "2026-11-05T06:08:56Z match: claude-code says adapt mat-sample-means-vary (1 change)",
   "2026-11-05T06:08:56Z claude-code review: adapting mat-sample-means-vary on the next run",
   "2026-11-05T06:46:38Z adapt: done",
-  "2026-11-05T06:53:51Z check: passed, cleared"
+  "2026-11-05T06:53:51Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -213,7 +214,7 @@
   "card": [
    "A sample is a group taken from a larger population. Its mean is found by adding the values and dividing by the number of values.",
    "Different samples contain different values, so their means usually differ, even when each sample is taken and worked out correctly. This is called sample variation.",
-   "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are 510 ÷ 3 = 170 and 525 ÷ 3 = 175.",
+   "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are \\(510 \\div 3 = 170\\) and \\(525 \\div 3 = 175\\).",
    "Larger samples tend to have means that vary less from sample to sample. A single extreme value has less pull on a big sample."
   ],
   "remember": "Sample means usually differ from sample to sample. Larger samples vary less, so their results tend to be closer to the population value.",
@@ -239,6 +240,43 @@
    ],
    "why": "Larger samples vary less, so their means tend to sit closer to the population mean and estimate it better. Lee's samples are larger, so Lee's means tend to be closer. Using the same school does not make the variation equal.",
    "clue": "Which samples vary less, and so land closer to the true mean?"
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Sample means vary",
+   "card": [
+    "A sample is a group taken from a larger population. Its mean is found by adding the values and dividing by the number of values.",
+    "Different samples contain different values, so their means usually differ, even when each sample is taken and worked out correctly. This is called sample variation.",
+    "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are 510 ÷ 3 = 170 and 525 ÷ 3 = 175.",
+    "Larger samples tend to have means that vary less from sample to sample. A single extreme value has less pull on a big sample."
+   ],
+   "remember": "Sample means usually differ from sample to sample. Larger samples vary less, so their results tend to be closer to the population value.",
+   "a": {
+    "q": "Mia and Jo each take a correctly chosen random sample of 10 from the same population. Their sample means are different. What does this show?",
+    "opts": [
+     "Sample means vary from one sample to the next",
+     "One of the two samples was chosen wrongly",
+     "The population mean changed between samples",
+     "One of the means was calculated incorrectly"
+    ],
+    "why": "Each sample holds different values, so their means usually differ even when nothing has gone wrong. A difference does not mean a sample was chosen badly or a mean was worked out wrongly, and the population itself stays the same.",
+    "clue": "Do two samples usually contain the same values?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Sam repeatedly takes random samples of 5 students from a school, and Lee repeatedly takes random samples of 50. Whose sample means will tend to be closer to the school's true mean?",
+    "opts": [
+     "Lee's, because larger samples vary less",
+     "Sam's, because smaller samples vary less",
+     "Both the same, because the school is the same",
+     "Sam's, because there are fewer values to add"
+    ],
+    "why": "Larger samples vary less, so their means tend to sit closer to the population mean and estimate it better. Lee's samples are larger, so Lee's means tend to be closer. Using the same school does not make the variation equal.",
+    "clue": "Which samples vary less, and so land closer to the true mean?"
+   }
   }
  }
 }

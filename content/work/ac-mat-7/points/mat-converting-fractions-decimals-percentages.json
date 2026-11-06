@@ -19,7 +19,8 @@
   "2026-11-05T02:17:43Z autoreject: rejected, to be written again (a wording)",
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
-  "2026-11-05T02:37:17Z check: passed, cleared"
+  "2026-11-05T02:37:17Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -370,44 +371,90 @@
  "final": {
   "title": "Converting fractions, decimals and percentages",
   "card": [
-   "A fraction, a decimal and a percentage can show the same amount. 3/4 = 0.75 = 75%.",
+   "A fraction, a decimal and a percentage can show the same amount. \\(\\frac{3}{4} = 0.75 = 75\\%\\).",
    [
     "Fraction to decimal",
-    "divide the top by the bottom. 3/8 means 3 ÷ 8 = 0.375."
+    "divide the top by the bottom. \\(\\frac{3}{8}\\) means \\(3 \\div 8 = 0.375\\)."
    ],
    [
     "Decimal to percentage",
-    "multiply by 100. 0.375 × 100 = 37.5%. To go back, divide by 100."
+    "multiply by 100. \\(0.375 \\times 100 = 37.5\\%\\). To go back, divide by 100."
    ],
    [
     "Number line",
-    "split the space from 0 to 1 into equal parts to match the bottom number. Negative fractions sit to the left of 0, so −1/2 is halfway between 0 and −1."
+    "split the space from 0 to 1 into equal parts to match the bottom number. Negative fractions sit to the left of 0, so \\(-\\frac{1}{2}\\) is halfway between 0 and \\(-1\\)."
    ]
   ],
   "remember": "Divide the top by the bottom for a decimal, then multiply by 100 for a percentage.",
   "a": {
-   "q": "What is 2/5 written as a percentage?",
+   "q": "What is \\(\\frac{2}{5}\\) written as a percentage?",
    "opts": [
     "40%",
     "25%",
     "20%",
     "2.5%"
    ],
-   "why": "2 ÷ 5 = 0.4, and 0.4 × 100 = 40%. 2.5% comes from two slips: dividing 5 by 2 instead of 2 by 5, then leaving out the multiply by 100 step. 25% is equal to 1/4, not 2/5.",
+   "why": "\\(2 \\div 5 = 0.4\\), and \\(0.4 \\times 100 = 40\\%\\). 2.5% comes from two slips: dividing 5 by 2 instead of 2 by 5, then leaving out the multiply by 100 step. 25% is equal to \\(\\frac{1}{4}\\), not \\(\\frac{2}{5}\\).",
    "clue": "Divide the top by the bottom, then multiply by 100."
   },
   "b": {
    "d": 3,
-   "q": "Jai wants to mark −3/4 on a number line. Where should he put it?",
+   "q": "Jai wants to mark \\(-\\frac{3}{4}\\) on a number line. Where should he put it?",
    "opts": [
-    "Three quarters of the way from 0 to −1",
+    "Three quarters of the way from 0 to \\(-1\\)",
     "Three quarters of the way from 0 to 1",
-    "One quarter of the way from 0 to −1",
-    "Three quarters of the way from −1 to −2"
+    "One quarter of the way from 0 to \\(-1\\)",
+    "Three quarters of the way from \\(-1\\) to \\(-2\\)"
    ],
-   "why": "A negative fraction sits to the left of 0, and 3/4 means three of four equal parts, so it is three quarters of the way from 0 to −1. Three quarters of the way to 1 would be the positive fraction 3/4. The point between −1 and −2 is further left than −1, so it is less than −1.",
+   "why": "A negative fraction sits to the left of 0, and \\(\\frac{3}{4}\\) means three of four equal parts, so it is three quarters of the way from 0 to \\(-1\\). Three quarters of the way to 1 would be the positive fraction \\(\\frac{3}{4}\\). The point between \\(-1\\) and \\(-2\\) is further left than \\(-1\\), so it is less than \\(-1\\).",
    "clue": "Decide which side of 0 first, then count the parts from 0."
   }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Converting fractions, decimals and percentages",
+   "card": [
+    "A fraction, a decimal and a percentage can show the same amount. 3/4 = 0.75 = 75%.",
+    [
+     "Fraction to decimal",
+     "divide the top by the bottom. 3/8 means 3 ÷ 8 = 0.375."
+    ],
+    [
+     "Decimal to percentage",
+     "multiply by 100. 0.375 × 100 = 37.5%. To go back, divide by 100."
+    ],
+    [
+     "Number line",
+     "split the space from 0 to 1 into equal parts to match the bottom number. Negative fractions sit to the left of 0, so −1/2 is halfway between 0 and −1."
+    ]
+   ],
+   "remember": "Divide the top by the bottom for a decimal, then multiply by 100 for a percentage.",
+   "a": {
+    "q": "What is 2/5 written as a percentage?",
+    "opts": [
+     "40%",
+     "25%",
+     "20%",
+     "2.5%"
+    ],
+    "why": "2 ÷ 5 = 0.4, and 0.4 × 100 = 40%. 2.5% comes from two slips: dividing 5 by 2 instead of 2 by 5, then leaving out the multiply by 100 step. 25% is equal to 1/4, not 2/5.",
+    "clue": "Divide the top by the bottom, then multiply by 100."
+   },
+   "b": {
+    "d": 3,
+    "q": "Jai wants to mark −3/4 on a number line. Where should he put it?",
+    "opts": [
+     "Three quarters of the way from 0 to −1",
+     "Three quarters of the way from 0 to 1",
+     "One quarter of the way from 0 to −1",
+     "Three quarters of the way from −1 to −2"
+    ],
+    "why": "A negative fraction sits to the left of 0, and 3/4 means three of four equal parts, so it is three quarters of the way from 0 to −1. Three quarters of the way to 1 would be the positive fraction 3/4. The point between −1 and −2 is further left than −1, so it is less than −1.",
+    "clue": "Decide which side of 0 first, then count the parts from 0."
+   }
+  }
+ }
 }

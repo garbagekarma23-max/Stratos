@@ -19,7 +19,8 @@
   "2026-11-04T09:47:06Z write: done",
   "2026-11-04T09:58:29Z check: flagged",
   "2026-11-04T10:08:03Z fix: suggested",
-  "2026-11-04T17:58:53Z autoreview: cleared with the fix (card wording, a wording)"
+  "2026-11-04T17:58:53Z autoreview: cleared with the fix (card wording, a wording)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -180,39 +181,82 @@
   "card": [
    [
     "Demonstration",
-    "shows a claim is true in one or a few cases. For the claim that the sum of two odd numbers is always even, checking that 3 + 5 = 8 is a demonstration."
+    "shows a claim is true in one or a few cases. For the claim that the sum of two odd numbers is always even, checking that \\(3 + 5 = 8\\) is a demonstration."
    ],
    [
     "Proof",
     "uses logical steps from known facts to show a claim is true in every case. Each step gives a reason."
    ],
    "Many true examples do not make a proof. One case that fails, called a counterexample, is enough to show a claim is false.",
-   "Example: any odd number is 2n + 1 and any other odd number is 2m + 1. Their sum is 2n + 2m + 2 = 2(n + m + 1), which is a multiple of 2. So the sum of two odd numbers is always even."
+   "Example: any odd number is \\(2n + 1\\) and any other odd number is \\(2m + 1\\). Their sum is \\(2n + 2m + 2 = 2(n + m + 1)\\), which is a multiple of 2. So the sum of two odd numbers is always even."
   ],
   "remember": "Examples can demonstrate a claim. Only logical steps from known facts prove it for all cases.",
   "a": {
-   "q": "Priya tests the claim that the sum of two odd numbers is always even. She finds 3 + 5, 7 + 9 and 11 + 13 are all even. What has she done?",
+   "q": "Priya tests the claim that the sum of two odd numbers is always even. She finds \\(3 + 5\\), \\(7 + 9\\) and \\(11 + 13\\) are all even. What has she done?",
    "opts": [
     "Demonstrated the claim in three cases",
     "Proved the claim for all odd numbers",
     "Found a counterexample to the claim",
     "Proved the claim by testing three cases"
    ],
-   "why": "Three true cases show the claim works for those numbers only. They do not cover every pair of odd numbers, so this is a demonstration, not a proof. A proof needs logical steps, such as writing the odd numbers as 2n + 1 and 2m + 1.",
+   "why": "Three true cases show the claim works for those numbers only. They do not cover every pair of odd numbers, so this is a demonstration, not a proof. A proof needs logical steps, such as writing the odd numbers as \\(2n + 1\\) and \\(2m + 1\\).",
    "clue": "Does checking three cases cover every pair of odd numbers?"
   },
   "b": {
    "d": 3,
-   "q": "Leo claims that n² + n + 11 is prime for every whole number n. He tests n = 1 to 5 and gets primes each time. Then n = 11 gives 143 = 11 × 13. What does this show?",
+   "q": "Leo claims that \\(n^{2} + n + 11\\) is prime for every whole number \\(n\\). He tests \\(n = 1\\) to 5 and gets primes each time. Then \\(n = 11\\) gives \\(143 = 11 \\times 13\\). What does this show?",
    "opts": [
     "The claim is false, as 143 is a counterexample",
     "The claim is proved, as five cases were prime",
-    "The claim is true, as n = 11 is only one case",
-    "The claim is proved for n up to 11 only"
+    "The claim is true, as \\(n = 11\\) is only one case",
+    "The claim is proved for \\(n\\) up to 11 only"
    ],
-   "why": "One case that fails is enough to show a claim is false. The five earlier cases only demonstrated it and could not prove it. Here n = 11 gives 121 + 11 + 11 = 143, which is not prime.",
+   "why": "One case that fails is enough to show a claim is false. The five earlier cases only demonstrated it and could not prove it. Here \\(n = 11\\) gives \\(121 + 11 + 11 = 143\\), which is not prime.",
    "clue": "How many failing cases does it take to disprove a claim?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Demonstration and proof",
+   "card": [
+    [
+     "Demonstration",
+     "shows a claim is true in one or a few cases. For the claim that the sum of two odd numbers is always even, checking that 3 + 5 = 8 is a demonstration."
+    ],
+    [
+     "Proof",
+     "uses logical steps from known facts to show a claim is true in every case. Each step gives a reason."
+    ],
+    "Many true examples do not make a proof. One case that fails, called a counterexample, is enough to show a claim is false.",
+    "Example: any odd number is 2n + 1 and any other odd number is 2m + 1. Their sum is 2n + 2m + 2 = 2(n + m + 1), which is a multiple of 2. So the sum of two odd numbers is always even."
+   ],
+   "remember": "Examples can demonstrate a claim. Only logical steps from known facts prove it for all cases.",
+   "a": {
+    "q": "Priya tests the claim that the sum of two odd numbers is always even. She finds 3 + 5, 7 + 9 and 11 + 13 are all even. What has she done?",
+    "opts": [
+     "Demonstrated the claim in three cases",
+     "Proved the claim for all odd numbers",
+     "Found a counterexample to the claim",
+     "Proved the claim by testing three cases"
+    ],
+    "why": "Three true cases show the claim works for those numbers only. They do not cover every pair of odd numbers, so this is a demonstration, not a proof. A proof needs logical steps, such as writing the odd numbers as 2n + 1 and 2m + 1.",
+    "clue": "Does checking three cases cover every pair of odd numbers?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Leo claims that n² + n + 11 is prime for every whole number n. He tests n = 1 to 5 and gets primes each time. Then n = 11 gives 143 = 11 × 13. What does this show?",
+    "opts": [
+     "The claim is false, as 143 is a counterexample",
+     "The claim is proved, as five cases were prime",
+     "The claim is true, as n = 11 is only one case",
+     "The claim is proved for n up to 11 only"
+    ],
+    "why": "One case that fails is enough to show a claim is false. The five earlier cases only demonstrated it and could not prove it. Here n = 11 gives 121 + 11 + 11 = 143, which is not prime.",
+    "clue": "How many failing cases does it take to disprove a claim?"
+   }
+  }
+ }
 }

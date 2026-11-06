@@ -10,7 +10,8 @@
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: flagged",
   "2026-10-29T12:41:47Z fix: suggested",
-  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -182,7 +183,7 @@
    "A cut is a line drawn across a flow network that splits the vertices into two groups. The source is in one group and the sink is in the other.",
    "The capacity of a cut is the total of the capacities of the edges that point from the source side to the sink side. Edges that point back towards the source side are not counted.",
    "Edges with both ends on the same side do not cross the cut, so they are not counted either.",
-   "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is 4 + 6 = 10."
+   "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is \\(4 + 6 = 10\\)."
   ],
   "remember": "Add only the edges that go from the source side to the sink side.",
   "a": {
@@ -193,7 +194,7 @@
     "8",
     "14"
    ],
-   "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is 3 + 5 + 2 = 10. B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
+   "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is \\(3 + 5 + 2 = 10\\). B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
    "clue": "Count only the edges that start on the source side and end on the sink side."
   },
   "b": {
@@ -205,9 +206,46 @@
     "10",
     "12"
    ],
-   "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5), so the total is 6 + 3 + 5 = 14. B to A (4) points back to the source side, so it is ignored: adding it gives 18 and subtracting it gives 10. Adding only the edges into T gives 12, which misses S to B and A to B.",
+   "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5), so the total is \\(6 + 3 + 5 = 14\\). B to A (4) points back to the source side, so it is ignored: adding it gives 18 and subtracting it gives 10. Adding only the edges into T gives 12, which misses S to B and A to B.",
    "clue": "Check the direction of each edge that crosses the cut."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Cuts",
+   "card": [
+    "A cut is a line drawn across a flow network that splits the vertices into two groups. The source is in one group and the sink is in the other.",
+    "The capacity of a cut is the total of the capacities of the edges that point from the source side to the sink side. Edges that point back towards the source side are not counted.",
+    "Edges with both ends on the same side do not cross the cut, so they are not counted either.",
+    "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is 4 + 6 = 10."
+   ],
+   "remember": "Add only the edges that go from the source side to the sink side.",
+   "a": {
+    "q": "A cut separates S and A from B and T. The edges are S to B (3), A to B (5), A to T (2) and B to T (6). What is the capacity of the cut?",
+    "opts": [
+     "10",
+     "16",
+     "8",
+     "14"
+    ],
+    "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is 3 + 5 + 2 = 10. B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
+    "clue": "Count only the edges that start on the source side and end on the sink side."
+   },
+   "b": {
+    "d": 3,
+    "q": "The edges are S to A (9), S to B (6), A to B (3), B to A (4), A to T (5) and B to T (7). A cut separates S and A from B and T. What is its capacity?",
+    "opts": [
+     "14",
+     "18",
+     "10",
+     "12"
+    ],
+    "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5), so the total is 6 + 3 + 5 = 14. B to A (4) points back to the source side, so it is ignored: adding it gives 18 and subtracting it gives 10. Adding only the edges into T gives 12, which misses S to B and A to B.",
+    "clue": "Check the direction of each edge that crosses the cut."
+   }
+  }
+ }
 }

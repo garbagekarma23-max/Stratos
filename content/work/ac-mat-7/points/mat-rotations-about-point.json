@@ -8,7 +8,8 @@
   "2026-11-04T09:23:40Z new, write",
   "2026-11-04T09:36:55Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:47:08Z write: done",
-  "2026-11-04T09:58:30Z check: passed, cleared"
+  "2026-11-04T09:58:30Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 2,
@@ -73,20 +74,20 @@
   "title": "Rotations about a point",
   "card": [
    "A rotation turns a shape about a fixed point, called the centre of rotation. The shape keeps its size and shape. Only its position and direction change.",
-   "To describe a rotation, give the angle, the direction (clockwise or anticlockwise) and the centre. For example: 90° clockwise about the origin (0, 0).",
+   "To describe a rotation, give the angle, the direction (clockwise or anticlockwise) and the centre. For example: 90° clockwise about the origin \\((0, 0)\\).",
    "The centre does not move. Every other point stays the same distance from the centre and turns through the same angle. A 180° turn is a half turn, and it looks the same in either direction.",
-   "Example: the point (3, 0) is 3 units right of the origin. Turn it 90° clockwise about the origin. It moves to 3 units below the origin, which is (0, −3)."
+   "Example: the point \\((3, 0)\\) is 3 units right of the origin. Turn it 90° clockwise about the origin. It moves to 3 units below the origin, which is \\((0, -3)\\)."
   ],
   "remember": "A rotation needs an angle, a direction and a centre. The centre stays still.",
   "a": {
-   "q": "Point P is at (0, 4). It is rotated 90° clockwise about the origin. Where does P end up?",
+   "q": "Point P is at \\((0, 4)\\). It is rotated 90° clockwise about the origin. Where does P end up?",
    "opts": [
-    "(4, 0)",
-    "(−4, 0)",
-    "(0, −4)",
-    "(4, 4)"
+    "\\((4, 0)\\)",
+    "\\((-4, 0)\\)",
+    "\\((0, -4)\\)",
+    "\\((4, 4)\\)"
    ],
-   "why": "P is 4 units above the origin. A quarter turn clockwise moves it to 4 units right of the origin, which is (4, 0). (−4, 0) is the result of turning anticlockwise instead.",
+   "why": "P is 4 units above the origin. A quarter turn clockwise moves it to 4 units right of the origin, which is \\((4, 0)\\). \\((-4, 0)\\) is the result of turning anticlockwise instead.",
    "clue": "Clockwise moves the top of a clock face towards the right."
   },
   "b": {
@@ -102,5 +103,42 @@
    "clue": "Which point is the centre of the turn?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Rotations about a point",
+   "card": [
+    "A rotation turns a shape about a fixed point, called the centre of rotation. The shape keeps its size and shape. Only its position and direction change.",
+    "To describe a rotation, give the angle, the direction (clockwise or anticlockwise) and the centre. For example: 90° clockwise about the origin (0, 0).",
+    "The centre does not move. Every other point stays the same distance from the centre and turns through the same angle. A 180° turn is a half turn, and it looks the same in either direction.",
+    "Example: the point (3, 0) is 3 units right of the origin. Turn it 90° clockwise about the origin. It moves to 3 units below the origin, which is (0, −3)."
+   ],
+   "remember": "A rotation needs an angle, a direction and a centre. The centre stays still.",
+   "a": {
+    "q": "Point P is at (0, 4). It is rotated 90° clockwise about the origin. Where does P end up?",
+    "opts": [
+     "(4, 0)",
+     "(−4, 0)",
+     "(0, −4)",
+     "(4, 4)"
+    ],
+    "why": "P is 4 units above the origin. A quarter turn clockwise moves it to 4 units right of the origin, which is (4, 0). (−4, 0) is the result of turning anticlockwise instead.",
+    "clue": "Clockwise moves the top of a clock face towards the right."
+   },
+   "b": {
+    "d": 3,
+    "q": "Triangle ABC is rotated 90° clockwise about vertex A. Which statement is true?",
+    "opts": [
+     "Vertex A stays where it is",
+     "Vertex A moves 90° clockwise",
+     "Side lengths of the triangle change",
+     "The triangle is reflected, not turned"
+    ],
+    "why": "The centre of rotation is a fixed point, so A does not move. Moving A 90° clockwise is tempting, but only the other points turn about A. A rotation also keeps side lengths the same.",
+    "clue": "Which point is the centre of the turn?"
+   }
+  }
+ }
 }

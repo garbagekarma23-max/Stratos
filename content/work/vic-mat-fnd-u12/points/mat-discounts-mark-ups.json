@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:34Z write: done",
-  "2026-11-01T08:14:05Z check: passed, cleared"
+  "2026-11-01T08:14:05Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 1,
@@ -78,14 +79,14 @@
   "card": [
    [
     "Discount",
-    "A discount lowers a price. For a 20% discount, the new price is 100% − 20% = 80% of the old price, so multiply by 0.8."
+    "A discount lowers a price. For a 20% discount, the new price is \\(100\\% - 20\\% = 80\\%\\) of the old price, so multiply by 0.8."
    ],
    [
     "Mark-up",
-    "A mark-up raises a price. For a 20% mark-up, the new price is 100% + 20% = 120% of the old price, so multiply by 1.2."
+    "A mark-up raises a price. For a 20% mark-up, the new price is \\(100\\% + 20\\% = 120\\%\\) of the old price, so multiply by 1.2."
    ],
    "To find the multiplier, turn the percentage into a decimal. Subtract it from 1 for a discount. Add it to 1 for a mark-up.",
-   "Example: a $50 jacket with a 20% discount costs 50 × 0.8 = $40. A $50 item with a 20% mark-up sells for 50 × 1.2 = $60."
+   "Example: a $50 jacket with a 20% discount costs \\(50 \\times 0.8 = \\$40\\). A $50 item with a 20% mark-up sells for \\(50 \\times 1.2 = \\$60\\)."
   ],
   "remember": "Discount: multiply by 1 minus the rate. Mark-up: multiply by 1 plus the rate.",
   "a": {
@@ -96,7 +97,7 @@
     "1.15",
     "0.75"
    ],
-   "why": "A 15% discount leaves 100% − 15% = 85% of the price, so the multiplier is 0.85. The multiplier 1.15 is for a 15% mark-up, which raises the price instead.",
+   "why": "A 15% discount leaves \\(100\\% - 15\\% = 85\\%\\) of the price, so the multiplier is 0.85. The multiplier 1.15 is for a 15% mark-up, which raises the price instead.",
    "clue": "A discount takes the rate away from 1."
   },
   "b": {
@@ -108,9 +109,52 @@
     "$13",
     "$12.25"
    ],
-   "why": "A 25% mark-up means multiplying by 1.25, so 12 × 1.25 = $15. Adding only $0.25 mixes up the percentage with a dollar amount, which gives the wrong price.",
+   "why": "A 25% mark-up means multiplying by 1.25, so \\(12 \\times 1.25 = \\$15\\). Adding only $0.25 mixes up the percentage with a dollar amount, which gives the wrong price.",
    "clue": "Add the rate to 1 to get the multiplier."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Discounts and mark-ups",
+   "card": [
+    [
+     "Discount",
+     "A discount lowers a price. For a 20% discount, the new price is 100% − 20% = 80% of the old price, so multiply by 0.8."
+    ],
+    [
+     "Mark-up",
+     "A mark-up raises a price. For a 20% mark-up, the new price is 100% + 20% = 120% of the old price, so multiply by 1.2."
+    ],
+    "To find the multiplier, turn the percentage into a decimal. Subtract it from 1 for a discount. Add it to 1 for a mark-up.",
+    "Example: a $50 jacket with a 20% discount costs 50 × 0.8 = $40. A $50 item with a 20% mark-up sells for 50 × 1.2 = $60."
+   ],
+   "remember": "Discount: multiply by 1 minus the rate. Mark-up: multiply by 1 plus the rate.",
+   "a": {
+    "q": "Which multiplier gives the new price after a 15% discount?",
+    "opts": [
+     "0.85",
+     "0.15",
+     "1.15",
+     "0.75"
+    ],
+    "why": "A 15% discount leaves 100% − 15% = 85% of the price, so the multiplier is 0.85. The multiplier 1.15 is for a 15% mark-up, which raises the price instead.",
+    "clue": "A discount takes the rate away from 1."
+   },
+   "b": {
+    "d": 2,
+    "q": "Sam buys mugs for $12 each and sells them with a 25% mark-up. What is the selling price of one mug?",
+    "opts": [
+     "$15",
+     "$9",
+     "$13",
+     "$12.25"
+    ],
+    "why": "A 25% mark-up means multiplying by 1.25, so 12 × 1.25 = $15. Adding only $0.25 mixes up the percentage with a dollar amount, which gives the wrong price.",
+    "clue": "Add the rate to 1 to get the multiplier."
+   }
+  }
+ }
 }

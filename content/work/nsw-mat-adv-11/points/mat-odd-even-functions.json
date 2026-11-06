@@ -9,7 +9,8 @@
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:32Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (remember other, b wording)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (remember other, b wording)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 2,
@@ -161,39 +162,82 @@
   "card": [
    [
     "Even",
-    "f(-x) = f(x) for every x in the domain. The graph is symmetric in the y-axis, so the left side mirrors the right side."
+    "\\(f(-x) = f(x)\\) for every \\(x\\) in the domain. The graph is symmetric in the y-axis, so the left side mirrors the right side."
    ],
    [
     "Odd",
-    "f(-x) = -f(x) for every x in the domain. The graph has point symmetry about the origin, so turning it half a turn about the origin leaves it unchanged."
+    "\\(f(-x) = -f(x)\\) for every \\(x\\) in the domain. The graph has point symmetry about the origin, so turning it half a turn about the origin leaves it unchanged."
    ],
-   "To test a function, replace x with -x and simplify. Compare the result with f(x) and with -f(x). If it matches neither, the function is neither odd nor even.",
-   "Example: f(x) = x³ + x. Then f(-x) = (-x)³ + (-x) = -x³ - x = -(x³ + x) = -f(x), so f is odd."
+   "To test a function, replace \\(x\\) with \\(-x\\) and simplify. Compare the result with f(x) and with \\(-f(x)\\). If it matches neither, the function is neither odd nor even.",
+   "Example: \\(f(x) = x^{3} + x\\). Then \\(f(-x) = (-x)^{3} + (-x) = -x^{3} - x = -(x^{3} + x) = -f(x)\\), so \\(f\\) is odd."
   ],
-  "remember": "Put in -x. Equal to f(x) means even, equal to -f(x) means odd, and matching neither means neither.",
+  "remember": "Put in \\(-x\\). Equal to f(x) means even, equal to \\(-f(x)\\) means odd, and matching neither means neither.",
   "a": {
-   "q": "f(x) = x² + 5. What is f(-x) in simplest form, and what type of function is f?",
+   "q": "\\(f(x) = x^{2} + 5\\). What is \\(f(-x)\\) in simplest form, and what type of function is \\(f\\)?",
    "opts": [
-    "x² + 5, so f is even",
-    "-x² - 5, so f is odd",
-    "x² - 5, so f is neither odd nor even",
-    "-x² + 5, so f is odd"
+    "\\(x^{2} + 5\\), so \\(f\\) is even",
+    "\\(-x^{2} - 5\\), so \\(f\\) is odd",
+    "\\(x^{2} - 5\\), so \\(f\\) is neither odd nor even",
+    "\\(-x^{2} + 5\\), so \\(f\\) is odd"
    ],
-   "why": "f(-x) = (-x)² + 5 = x² + 5, which equals f(x), so f is even. A common slip is to think the minus sign makes the whole rule negative, but squaring removes it.",
-   "clue": "Replace x with -x, then square it."
+   "why": "\\(f(-x) = (-x)^{2} + 5 = x^{2} + 5\\), which equals f(x), so \\(f\\) is even. A common slip is to think the minus sign makes the whole rule negative, but squaring removes it.",
+   "clue": "Replace \\(x\\) with \\(-x\\), then square it."
   },
   "b": {
    "d": 3,
-   "q": "f(x) = x³ + 2. Which statement is correct?",
+   "q": "\\(f(x) = x^{3} + 2\\). Which statement is correct?",
    "opts": [
-    "f is neither odd nor even",
-    "f is odd, because x³ is odd",
-    "f is even, because 2 is a constant",
-    "f is both odd and even"
+    "\\(f\\) is neither odd nor even",
+    "\\(f\\) is odd, because \\(x^{3}\\) is odd",
+    "\\(f\\) is even, because 2 is a constant",
+    "\\(f\\) is both odd and even"
    ],
-   "why": "f(-x) = (-x)³ + 2 = -x³ + 2. This is not equal to f(x) = x³ + 2, and it is not equal to -f(x) = -x³ - 2. So f is neither. The tempting answer is odd, but the constant 2 breaks the test.",
-   "clue": "Find f(-x), then compare it with both f(x) and -f(x)."
+   "why": "\\(f(-x) = (-x)^{3} + 2 = -x^{3} + 2\\). This is not equal to \\(f(x) = x^{3} + 2\\), and it is not equal to \\(-f(x) = -x^{3} - 2\\). So \\(f\\) is neither. The tempting answer is odd, but the constant 2 breaks the test.",
+   "clue": "Find \\(f(-x)\\), then compare it with both f(x) and \\(-f(x)\\)."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Odd and even functions",
+   "card": [
+    [
+     "Even",
+     "f(-x) = f(x) for every x in the domain. The graph is symmetric in the y-axis, so the left side mirrors the right side."
+    ],
+    [
+     "Odd",
+     "f(-x) = -f(x) for every x in the domain. The graph has point symmetry about the origin, so turning it half a turn about the origin leaves it unchanged."
+    ],
+    "To test a function, replace x with -x and simplify. Compare the result with f(x) and with -f(x). If it matches neither, the function is neither odd nor even.",
+    "Example: f(x) = x³ + x. Then f(-x) = (-x)³ + (-x) = -x³ - x = -(x³ + x) = -f(x), so f is odd."
+   ],
+   "remember": "Put in -x. Equal to f(x) means even, equal to -f(x) means odd, and matching neither means neither.",
+   "a": {
+    "q": "f(x) = x² + 5. What is f(-x) in simplest form, and what type of function is f?",
+    "opts": [
+     "x² + 5, so f is even",
+     "-x² - 5, so f is odd",
+     "x² - 5, so f is neither odd nor even",
+     "-x² + 5, so f is odd"
+    ],
+    "why": "f(-x) = (-x)² + 5 = x² + 5, which equals f(x), so f is even. A common slip is to think the minus sign makes the whole rule negative, but squaring removes it.",
+    "clue": "Replace x with -x, then square it."
+   },
+   "b": {
+    "d": 3,
+    "q": "f(x) = x³ + 2. Which statement is correct?",
+    "opts": [
+     "f is neither odd nor even",
+     "f is odd, because x³ is odd",
+     "f is even, because 2 is a constant",
+     "f is both odd and even"
+    ],
+    "why": "f(-x) = (-x)³ + 2 = -x³ + 2. This is not equal to f(x) = x³ + 2, and it is not equal to -f(x) = -x³ - 2. So f is neither. The tempting answer is odd, but the constant 2 breaks the test.",
+    "clue": "Find f(-x), then compare it with both f(x) and -f(x)."
+   }
+  }
+ }
 }

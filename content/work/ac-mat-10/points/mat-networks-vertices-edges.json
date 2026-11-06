@@ -30,7 +30,8 @@
   "2026-11-04T09:36:55Z match: Claude Haiku 5.5 may adapt mat-network-terms, but is not highly sure, so to the Opus match check",
   "2026-11-04T09:47:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:58:30Z write: done",
-  "2026-11-04T10:08:03Z check: passed, cleared"
+  "2026-11-04T10:08:03Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -148,9 +149,49 @@
     "3",
     "36"
    ],
-   "why": "Every edge has two ends, so each edge adds 2 to the total of the degrees. 6 × 2 = 12. A total of 6 would count each edge only once.",
+   "why": "Every edge has two ends, so each edge adds 2 to the total of the degrees. \\(6 \\times 2 = 12\\). A total of 6 would count each edge only once.",
    "clue": "Each edge has two ends, and each end adds to a degree."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Networks, vertices and edges",
+   "card": [
+    "A network shows connections. Each point is a vertex, and each line joining two vertices is an edge. Towns joined by roads make a network: the towns are vertices and the roads are edges.",
+    [
+     "Degree",
+     "the degree of a vertex is the number of edges that meet at it. Count the edges touching the vertex."
+    ],
+    "Example: a network has vertices P, Q, R and S. The edges are PQ, PR, PS and QR. P meets three edges, so its degree is 3. S meets only PS, so its degree is 1.",
+    "Add up all the degrees and you get twice the number of edges, because every edge has two ends. Here the degrees are 3, 2, 2 and 1, which total 8, and there are 4 edges."
+   ],
+   "remember": "Vertices are points, edges are lines, and degree counts the edges at a vertex.",
+   "a": {
+    "q": "A network has vertices A, B, C and D. Its edges are AB, AC, AD and BC. What is the degree of vertex A?",
+    "opts": [
+     "3",
+     "4",
+     "2",
+     "1"
+    ],
+    "why": "Three edges meet at A: AB, AC and AD. The edge BC does not touch A, so it is not counted. Counting all 4 edges would give the number of edges, not the degree of A.",
+    "clue": "Count only the edges that have A as an end."
+   },
+   "b": {
+    "d": 3,
+    "q": "A network of walking tracks has 6 edges. What is the total of the degrees of all its vertices?",
+    "opts": [
+     "12",
+     "6",
+     "3",
+     "36"
+    ],
+    "why": "Every edge has two ends, so each edge adds 2 to the total of the degrees. 6 × 2 = 12. A total of 6 would count each edge only once.",
+    "clue": "Each edge has two ends, and each end adds to a degree."
+   }
+  }
+ }
 }

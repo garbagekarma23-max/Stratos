@@ -29,7 +29,8 @@
   "2026-11-04T09:23:39Z new, match",
   "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:06Z write: done",
-  "2026-11-04T09:58:29Z check: passed, cleared"
+  "2026-11-04T09:58:29Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -105,7 +106,7 @@
    "On an ordinary scale, equal steps add the same amount. On a logarithmic scale, equal steps multiply the quantity by the same factor.",
    "The Richter scale for earthquakes is logarithmic. Each increase of 1 in magnitude multiplies the measured ground shaking by 10.",
    "The decibel (dB) scale for sound intensity is logarithmic too. Each increase of 10 dB multiplies the sound intensity by 10.",
-   "Example: a rise of 2 on the Richter scale means 10 × 10 = 100 times the shaking."
+   "Example: a rise of 2 on the Richter scale means \\(10 \\times 10 = 100\\) times the shaking."
   ],
   "remember": "On a logarithmic scale, going up one step multiplies the quantity. It does not add to it.",
   "a": {
@@ -116,7 +117,7 @@
     "20 times",
     "10 times"
    ],
-   "why": "The scale rises by 2 steps, and each step multiplies the shaking by 10. So the shaking is 10 × 10 = 100 times greater. Saying 10 times counts only one step.",
+   "why": "The scale rises by 2 steps, and each step multiplies the shaking by 10. So the shaking is \\(10 \\times 10 = 100\\) times greater. Saying 10 times counts only one step.",
    "clue": "Count the steps, then multiply by 10 for each."
   },
   "b": {
@@ -128,9 +129,46 @@
     "30 times",
     "100 times"
    ],
-   "why": "The rise is 30 dB, which is three steps of 10 dB. Each step multiplies the intensity by 10, so 10 × 10 × 10 = 1000 times. Saying 2 times divides the readings, and 100 times counts only two steps.",
+   "why": "The rise is 30 dB, which is three steps of 10 dB. Each step multiplies the intensity by 10, so \\(10 \\times 10 \\times 10 = 1000\\) times. Saying 2 times divides the readings, and 100 times counts only two steps.",
    "clue": "Each 10 dB is one step, so count the steps first."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Logarithmic scales",
+   "card": [
+    "On an ordinary scale, equal steps add the same amount. On a logarithmic scale, equal steps multiply the quantity by the same factor.",
+    "The Richter scale for earthquakes is logarithmic. Each increase of 1 in magnitude multiplies the measured ground shaking by 10.",
+    "The decibel (dB) scale for sound intensity is logarithmic too. Each increase of 10 dB multiplies the sound intensity by 10.",
+    "Example: a rise of 2 on the Richter scale means 10 × 10 = 100 times the shaking."
+   ],
+   "remember": "On a logarithmic scale, going up one step multiplies the quantity. It does not add to it.",
+   "a": {
+    "q": "One earthquake measures 4 on the Richter scale and another measures 6. How many times greater is the measured shaking of the second?",
+    "opts": [
+     "100 times",
+     "2 times",
+     "20 times",
+     "10 times"
+    ],
+    "why": "The scale rises by 2 steps, and each step multiplies the shaking by 10. So the shaking is 10 × 10 = 100 times greater. Saying 10 times counts only one step.",
+    "clue": "Count the steps, then multiply by 10 for each."
+   },
+   "b": {
+    "d": 3,
+    "q": "A quiet room has sound at 30 dB. A busy street measures 60 dB. How many times greater is the sound intensity on the street?",
+    "opts": [
+     "1000 times",
+     "2 times",
+     "30 times",
+     "100 times"
+    ],
+    "why": "The rise is 30 dB, which is three steps of 10 dB. Each step multiplies the intensity by 10, so 10 × 10 × 10 = 1000 times. Saying 2 times divides the readings, and 100 times counts only two steps.",
+    "clue": "Each 10 dB is one step, so count the steps first."
+   }
+  }
+ }
 }

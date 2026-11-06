@@ -10,7 +10,8 @@
   "2026-11-01T08:14:08Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 2,
@@ -173,39 +174,82 @@
   "card": [
    [
     "For all",
-    "A statement with \"for all\" (written ∀) claims that every member of a set fits. For example, \"for all integers n, n² ≥ 0\" is true, because no integer squared is negative."
+    "A statement with \"for all\" (written ∀) claims that every member of a set fits. For example, \"for all integers \\(n\\), \\(n^{2} \\ge 0\\)\" is true, because no integer squared is negative."
    ],
    [
     "There exists",
-    "A statement with \"there exists\" (written ∃) claims that at least one member of a set fits. For example, \"there exists an integer n with n² = 49\" is true, because n = 7 works."
+    "A statement with \"there exists\" (written ∃) claims that at least one member of a set fits. For example, \"there exists an integer \\(n\\) with \\(n^{2} = 49\\)\" is true, because \\(n = 7\\) works."
    ],
    "One member that fails is called a counterexample. A single counterexample shows that a \"for all\" statement is false.",
-   "Example: \"for all integers n, n² > n\" is false. Take n = 1: 1² = 1, and 1 is not greater than 1. To show a \"there exists\" statement is true, one member that fits is enough."
+   "Example: \"for all integers \\(n\\), \\(n^{2} > n\\)\" is false. Take \\(n = 1\\): \\(1^{2} = 1\\), and 1 is not greater than 1. To show a \"there exists\" statement is true, one member that fits is enough."
   ],
   "remember": "For all needs every case to work. There exists needs just one case to work.",
   "a": {
-   "q": "Which single value of n shows that \"for all integers n, n + 3 > 5\" is false?",
+   "q": "Which single value of \\(n\\) shows that \"for all integers \\(n\\), \\(n + 3 > 5\\)\" is false?",
    "opts": [
-    "n = 2",
-    "n = 4",
-    "n = 10",
-    "n = 100"
+    "\\(n = 2\\)",
+    "\\(n = 4\\)",
+    "\\(n = 10\\)",
+    "\\(n = 100\\)"
    ],
-   "why": "For n = 2, n + 3 = 5, and 5 is not greater than 5, so the claim fails. The values 4, 10 and 100 all give results above 5, so they fit the statement and cannot disprove it.",
-   "clue": "Find a value where n + 3 is not above 5."
+   "why": "For \\(n = 2\\), \\(n + 3 = 5\\), and 5 is not greater than 5, so the claim fails. The values 4, 10 and 100 all give results above 5, so they fit the statement and cannot disprove it.",
+   "clue": "Find a value where \\(n + 3\\) is not above 5."
   },
   "b": {
    "d": 3,
    "q": "Which statement about the integers is true?",
    "opts": [
-    "There exists an integer n with n + 4 = 1",
-    "For all integers n, n + 4 > 1",
-    "There exists an integer n with n² = −4",
-    "For all integers n, n² > n"
+    "There exists an integer \\(n\\) with \\(n + 4 = 1\\)",
+    "For all integers \\(n\\), \\(n + 4 > 1\\)",
+    "There exists an integer \\(n\\) with \\(n^{2} = -4\\)",
+    "For all integers \\(n\\), \\(n^{2} > n\\)"
    ],
-   "why": "With n = −3, n + 4 = 1, so one integer fits and the \"there exists\" statement is true. The claim \"for all integers n, n + 4 > 1\" fails at n = −5, which gives −1, and \"for all integers n, n² > n\" fails at n = 0, since 0 is not greater than 0. No integer squared is negative, so no integer has n² = −4.",
+   "why": "With \\(n = -3\\), \\(n + 4 = 1\\), so one integer fits and the \"there exists\" statement is true. The claim \"for all integers \\(n\\), \\(n + 4 > 1\\)\" fails at \\(n = -5\\), which gives \\(-1\\), and \"for all integers \\(n\\), \\(n^{2} > n\\)\" fails at \\(n = 0\\), since 0 is not greater than 0. No integer squared is negative, so no integer has \\(n^{2} = -4\\).",
    "clue": "For a \"for all\" statement, test one value that might fail it."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Quantifiers",
+   "card": [
+    [
+     "For all",
+     "A statement with \"for all\" (written ∀) claims that every member of a set fits. For example, \"for all integers n, n² ≥ 0\" is true, because no integer squared is negative."
+    ],
+    [
+     "There exists",
+     "A statement with \"there exists\" (written ∃) claims that at least one member of a set fits. For example, \"there exists an integer n with n² = 49\" is true, because n = 7 works."
+    ],
+    "One member that fails is called a counterexample. A single counterexample shows that a \"for all\" statement is false.",
+    "Example: \"for all integers n, n² > n\" is false. Take n = 1: 1² = 1, and 1 is not greater than 1. To show a \"there exists\" statement is true, one member that fits is enough."
+   ],
+   "remember": "For all needs every case to work. There exists needs just one case to work.",
+   "a": {
+    "q": "Which single value of n shows that \"for all integers n, n + 3 > 5\" is false?",
+    "opts": [
+     "n = 2",
+     "n = 4",
+     "n = 10",
+     "n = 100"
+    ],
+    "why": "For n = 2, n + 3 = 5, and 5 is not greater than 5, so the claim fails. The values 4, 10 and 100 all give results above 5, so they fit the statement and cannot disprove it.",
+    "clue": "Find a value where n + 3 is not above 5."
+   },
+   "b": {
+    "d": 3,
+    "q": "Which statement about the integers is true?",
+    "opts": [
+     "There exists an integer n with n + 4 = 1",
+     "For all integers n, n + 4 > 1",
+     "There exists an integer n with n² = −4",
+     "For all integers n, n² > n"
+    ],
+    "why": "With n = −3, n + 4 = 1, so one integer fits and the \"there exists\" statement is true. The claim \"for all integers n, n + 4 > 1\" fails at n = −5, which gives −1, and \"for all integers n, n² > n\" fails at n = 0, since 0 is not greater than 0. No integer squared is negative, so no integer has n² = −4.",
+    "clue": "For a \"for all\" statement, test one value that might fail it."
+   }
+  }
+ }
 }
