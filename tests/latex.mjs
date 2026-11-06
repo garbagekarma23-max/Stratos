@@ -123,8 +123,10 @@ check(!/plain text/.test(full.stdout), 'and every maths point in src/ writes its
 
 // ---------- the safe swaps in content/convert_maths.py ----------
 const py = process.platform === 'win32' ? 'py' : 'python3';
+// -X utf8 makes Python read and write UTF-8 everywhere. Without it, Python on Windows reads stdin in the system's
+// code page, and maths signs such as − and ² arrive garbled.
 const conv = texts => {
-  const out = spawnSync(py, ['-c', 'import json, sys\nsys.path.insert(0, "content")\nimport convert_maths as C\nout = []\nfor t in json.load(sys.stdin):\n    try: out.append(C.convert_text(t))\n    except C.Unsafe as e: out.append("UNSAFE " + str(e))\nprint(json.dumps(out))'],
+  const out = spawnSync(py, ['-X', 'utf8', '-c', 'import json, sys\nsys.path.insert(0, "content")\nimport convert_maths as C\nout = []\nfor t in json.load(sys.stdin):\n    try: out.append(C.convert_text(t))\n    except C.Unsafe as e: out.append("UNSAFE " + str(e))\nprint(json.dumps(out))'],
     {cwd: ROOT, encoding: 'utf8', input: JSON.stringify(texts)});
   if (out.status !== 0) throw new Error(out.stderr);
   return JSON.parse(out.stdout);
