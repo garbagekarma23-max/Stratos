@@ -17,7 +17,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:08Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -93,38 +94,78 @@
  "final": {
   "title": "Solving quadratics over the complex numbers",
   "card": [
-   "The discriminant of ax² + bx + c is Δ = b² − 4ac. If Δ is negative, there are no real roots, but there are two complex roots.",
-   "Use the quadratic formula: z = (−b ± √Δ) ÷ 2a. Write √(negative number) using i, where i² = −1. For example, √(−16) = 4i.",
-   "The two roots are conjugates: they have the same real part and opposite imaginary parts, as in p + qi and p − qi. This holds when a, b and c are all real.",
+   "The discriminant of \\(ax^{2} + bx + c\\) is \\(\\Delta = b^{2} - 4ac\\). If \\(\\Delta\\) is negative, there are no real roots, but there are two complex roots.",
+   "Use the quadratic formula: \\(z = \\frac{-b \\pm \\sqrt{\\Delta}}{2a}\\). Write the square root of a negative number using \\(i\\), where \\(i^{2} = -1\\). For example, \\(\\sqrt{-16} = 4i\\).",
+   "The two roots are conjugates: they have the same real part and opposite imaginary parts, as in \\(p + qi\\) and \\(p - qi\\). This holds when \\(a\\), \\(b\\) and \\(c\\) are all real.",
    [
     "Example",
-    "Solve z² − 4z + 13 = 0. Δ = 16 − 52 = −36, so √Δ = 6i. Then z = (4 ± 6i) ÷ 2 = 2 ± 3i."
+    "Solve \\(z^{2} - 4z + 13 = 0\\). \\(\\Delta = 16 - 52 = -36\\), so \\(\\sqrt{\\Delta} = 6i\\). Then \\(z = \\frac{4 \\pm 6i}{2} = 2 \\pm 3i\\)."
    ]
   ],
   "remember": "Negative discriminant: two complex roots, found with the formula, and they are conjugates.",
   "a": {
-   "q": "Solve z² + 6z + 10 = 0. What are the roots?",
+   "q": "Solve \\(z^{2} + 6z + 10 = 0\\). What are the roots?",
    "opts": [
-    "−3 + i and −3 − i",
-    "3 + i and 3 − i",
-    "−3 + 2i and −3 − 2i",
-    "−6 + i and −6 − i"
+    "\\(-3 + i\\) and \\(-3 - i\\)",
+    "\\(3 + i\\) and \\(3 - i\\)",
+    "\\(-3 + 2i\\) and \\(-3 - 2i\\)",
+    "\\(-6 + i\\) and \\(-6 - i\\)"
    ],
-   "why": "Δ = 36 − 40 = −4, so √Δ = 2i. Then z = (−6 ± 2i) ÷ 2 = −3 ± i. Using 3 ± i comes from dropping the sign of −b.",
-   "clue": "Divide both parts of −b ± √Δ by 2a."
+   "why": "\\(\\Delta = 36 - 40 = -4\\), so \\(\\sqrt{\\Delta} = 2i\\). Then \\(z = \\frac{-6 \\pm 2i}{2} = -3 \\pm i\\). Using \\(3 \\pm i\\) comes from dropping the sign of \\(-b\\).",
+   "clue": "Divide both parts of \\(-b \\pm \\sqrt{\\Delta}\\) by \\(2a\\)."
   },
   "b": {
    "d": 3,
-   "q": "A quadratic with real coefficients has one root 5 − 2i. What is true of its other root?",
+   "q": "A quadratic with real coefficients has one root \\(5 - 2i\\). What is true of its other root?",
    "opts": [
-    "It is 5 + 2i",
-    "It is −5 + 2i",
-    "It is 5 − 2i again",
+    "It is \\(5 + 2i\\)",
+    "It is \\(-5 + 2i\\)",
+    "It is \\(5 - 2i\\) again",
     "It is a real number"
    ],
-   "why": "Real coefficients and a negative discriminant give conjugate roots, so the other root is 5 + 2i. Negating both parts, as in −5 + 2i, is not the conjugate: only the imaginary part changes sign.",
+   "why": "Real coefficients and a negative discriminant give conjugate roots, so the other root is \\(5 + 2i\\). Negating both parts, as in \\(-5 + 2i\\), is not the conjugate: only the imaginary part changes sign.",
    "clue": "Only the sign of the imaginary part changes."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Solving quadratics over the complex numbers",
+   "card": [
+    "The discriminant of ax² + bx + c is Δ = b² − 4ac. If Δ is negative, there are no real roots, but there are two complex roots.",
+    "Use the quadratic formula: z = (−b ± √Δ) ÷ 2a. Write √(negative number) using i, where i² = −1. For example, √(−16) = 4i.",
+    "The two roots are conjugates: they have the same real part and opposite imaginary parts, as in p + qi and p − qi. This holds when a, b and c are all real.",
+    [
+     "Example",
+     "Solve z² − 4z + 13 = 0. Δ = 16 − 52 = −36, so √Δ = 6i. Then z = (4 ± 6i) ÷ 2 = 2 ± 3i."
+    ]
+   ],
+   "remember": "Negative discriminant: two complex roots, found with the formula, and they are conjugates.",
+   "a": {
+    "q": "Solve z² + 6z + 10 = 0. What are the roots?",
+    "opts": [
+     "−3 + i and −3 − i",
+     "3 + i and 3 − i",
+     "−3 + 2i and −3 − 2i",
+     "−6 + i and −6 − i"
+    ],
+    "why": "Δ = 36 − 40 = −4, so √Δ = 2i. Then z = (−6 ± 2i) ÷ 2 = −3 ± i. Using 3 ± i comes from dropping the sign of −b.",
+    "clue": "Divide both parts of −b ± √Δ by 2a."
+   },
+   "b": {
+    "d": 3,
+    "q": "A quadratic with real coefficients has one root 5 − 2i. What is true of its other root?",
+    "opts": [
+     "It is 5 + 2i",
+     "It is −5 + 2i",
+     "It is 5 − 2i again",
+     "It is a real number"
+    ],
+    "why": "Real coefficients and a negative discriminant give conjugate roots, so the other root is 5 + 2i. Negating both parts, as in −5 + 2i, is not the conjugate: only the imaginary part changes sign.",
+    "clue": "Only the sign of the imaginary part changes."
+   }
+  }
+ }
 }

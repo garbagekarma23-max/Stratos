@@ -24,7 +24,8 @@
   "2026-11-01T15:05:30Z write: done",
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -197,35 +198,72 @@
  "final": {
   "title": "The logistic equation",
   "card": [
-   "The logistic equation models a population P with a limit N, the carrying capacity: the largest population the environment can support. From a small start, P grows slowly, speeds up until P = N/2, then slows as it nears N.",
-   "The equation is dP/dt = kP(1 − P/N), where k > 0 and N > 0. The factor (1 − P/N) is close to 1 when P is small and close to 0 when P is near N.",
-   "If 0 < P < N, then dP/dt > 0 and the population rises towards N. If P > N, then dP/dt < 0 and it falls towards N. If P = N or P = 0, then dP/dt = 0 and the population does not change.",
-   "Example: dP/dt = 0.2P(1 − P/500). When P = 100, dP/dt = 0.2 × 100 × (1 − 100/500) = 20 × 0.8 = 16. The population is growing at 16 per unit of time."
+   "The logistic equation models a population \\(P\\) with a limit \\(N\\), the carrying capacity: the largest population the environment can support. From a small start, \\(P\\) grows slowly, speeds up until \\(P = \\frac{N}{2}\\), then slows as it nears \\(N\\).",
+   "The equation is \\(\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{N}\\right)\\), where \\(k > 0\\) and \\(N > 0\\). The factor \\(\\left(1 - \\frac{P}{N}\\right)\\) is close to 1 when \\(P\\) is small and close to 0 when \\(P\\) is near \\(N\\).",
+   "If \\(0 < P < N\\), then \\(\\frac{dP}{dt} > 0\\) and the population rises towards \\(N\\). If \\(P > N\\), then \\(\\frac{dP}{dt} < 0\\) and it falls towards \\(N\\). If \\(P = N\\) or \\(P = 0\\), then \\(\\frac{dP}{dt} = 0\\) and the population does not change.",
+   "Example: \\(\\frac{dP}{dt} = 0.2P\\left(1 - \\frac{P}{500}\\right)\\). When \\(P = 100\\), \\(\\frac{dP}{dt} = 0.2 \\times 100 \\times \\left(1 - \\frac{100}{500}\\right)\\), which is \\(20 \\times 0.8 = 16\\). The population is growing at 16 per unit of time."
   ],
-  "remember": "The rate kP(1 − P/N) peaks at P = N/2 and falls to 0 as P reaches N.",
+  "remember": "The rate \\(kP\\left(1 - \\frac{P}{N}\\right)\\) peaks at \\(P = \\frac{N}{2}\\) and falls to 0 as \\(P\\) reaches \\(N\\).",
   "a": {
-   "q": "A population follows dP/dt = 0.3P(1 − P/800). What is the carrying capacity?",
+   "q": "A population follows \\(\\frac{dP}{dt} = 0.3P\\left(1 - \\frac{P}{800}\\right)\\). What is the carrying capacity?",
    "opts": [
     "800",
     "0.3",
     "2400",
     "400"
    ],
-   "why": "The equation has the form dP/dt = kP(1 − P/N), so N = 800. The number 0.3 is the growth constant k, not a population limit, and 400 is N/2, where growth is fastest.",
-   "clue": "Match the equation to the form with N inside the bracket."
+   "why": "The equation has the form \\(\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{N}\\right)\\), so \\(N = 800\\). The number 0.3 is the growth constant \\(k\\), not a population limit, and 400 is \\(\\frac{N}{2}\\), where growth is fastest.",
+   "clue": "Match the equation to the form with \\(N\\) inside the bracket."
   },
   "b": {
    "d": 3,
-   "q": "A pond population follows dP/dt = 0.1P(1 − P/200). At P = 100, what is dP/dt?",
+   "q": "A pond population follows \\(\\frac{dP}{dt} = 0.1P\\left(1 - \\frac{P}{200}\\right)\\). At \\(P = 100\\), what is \\(\\frac{dP}{dt}\\)?",
    "opts": [
     "5",
     "10",
     "2.5",
     "0"
    ],
-   "why": "dP/dt = 0.1 × 100 × (1 − 100/200) = 10 × 0.5 = 5. The value 10 comes from leaving out the bracket. The value 0 mixes up the point where the rate is largest, P = N/2, with a rate of zero.",
-   "clue": "Work out the bracket first, then multiply by 0.1P."
+   "why": "\\(\\frac{dP}{dt} = 0.1 \\times 100 \\times \\left(1 - \\frac{100}{200}\\right)\\), which is \\(10 \\times 0.5 = 5\\). The value 10 comes from leaving out the bracket. The value 0 mixes up the point where the rate is largest, \\(P = \\frac{N}{2}\\), with a rate of zero.",
+   "clue": "Work out the bracket first, then multiply by \\(0.1P\\)."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "The logistic equation",
+   "card": [
+    "The logistic equation models a population P with a limit N, the carrying capacity: the largest population the environment can support. From a small start, P grows slowly, speeds up until P = N/2, then slows as it nears N.",
+    "The equation is dP/dt = kP(1 − P/N), where k > 0 and N > 0. The factor (1 − P/N) is close to 1 when P is small and close to 0 when P is near N.",
+    "If 0 < P < N, then dP/dt > 0 and the population rises towards N. If P > N, then dP/dt < 0 and it falls towards N. If P = N or P = 0, then dP/dt = 0 and the population does not change.",
+    "Example: dP/dt = 0.2P(1 − P/500). When P = 100, dP/dt = 0.2 × 100 × (1 − 100/500) = 20 × 0.8 = 16. The population is growing at 16 per unit of time."
+   ],
+   "remember": "The rate kP(1 − P/N) peaks at P = N/2 and falls to 0 as P reaches N.",
+   "a": {
+    "q": "A population follows dP/dt = 0.3P(1 − P/800). What is the carrying capacity?",
+    "opts": [
+     "800",
+     "0.3",
+     "2400",
+     "400"
+    ],
+    "why": "The equation has the form dP/dt = kP(1 − P/N), so N = 800. The number 0.3 is the growth constant k, not a population limit, and 400 is N/2, where growth is fastest.",
+    "clue": "Match the equation to the form with N inside the bracket."
+   },
+   "b": {
+    "d": 3,
+    "q": "A pond population follows dP/dt = 0.1P(1 − P/200). At P = 100, what is dP/dt?",
+    "opts": [
+     "5",
+     "10",
+     "2.5",
+     "0"
+    ],
+    "why": "dP/dt = 0.1 × 100 × (1 − 100/200) = 10 × 0.5 = 5. The value 10 comes from leaving out the bracket. The value 0 mixes up the point where the rate is largest, P = N/2, with a rate of zero.",
+    "clue": "Work out the bracket first, then multiply by 0.1P."
+   }
+  }
+ }
 }

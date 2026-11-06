@@ -26,7 +26,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:30Z write: done",
-  "2026-11-01T15:14:48Z check: passed, cleared"
+  "2026-11-01T15:14:48Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -100,35 +101,72 @@
  "final": {
   "title": "Angles between vectors",
   "card": [
-   "The scalar product of a = a1i + a2j + a3k and b = b1i + b2j + b3k is a·b = a1b1 + a2b2 + a3b3. It is also a·b = |a||b| cos θ, where θ is the angle between them.",
-   "Put the two together: cos θ = (a·b) ÷ (|a||b|). Find the scalar product, find both lengths, divide, then use inverse cosine.",
-   "If a·b = 0, then cos θ = 0, so θ = 90°. Two non-zero vectors with a·b = 0 are perpendicular.",
-   "Example: a = i + 2j + 2k and b = 2i − j + 2k. a·b = 2 − 2 + 4 = 4. |a| = 3 and |b| = 3. So cos θ = 4/9 and θ ≈ 63.6°."
+   "The scalar product of \\(a = a_{1}i + a_{2}j + a_{3}k\\) and \\(b = b_{1}i + b_{2}j + b_{3}k\\) is \\(a \\cdot b = a_{1}b_{1} + a_{2}b_{2} + a_{3}b_{3}\\). It is also \\(a \\cdot b = |a||b| \\cos \\theta\\), where \\(\\theta\\) is the angle between them.",
+   "Put the two together: \\(\\cos \\theta = \\frac{a \\cdot b}{|a||b|}\\). Find the scalar product, find both lengths, divide, then use inverse cosine.",
+   "If \\(a \\cdot b = 0\\), then \\(\\cos \\theta = 0\\), so \\(\\theta = 90^{\\circ}\\). Two non-zero vectors with \\(a \\cdot b = 0\\) are perpendicular.",
+   "Example: \\(a = i + 2j + 2k\\) and \\(b = 2i - j + 2k\\). \\(a \\cdot b = 2 - 2 + 4 = 4\\). \\(|a| = 3\\) and \\(|b| = 3\\). So \\(\\cos \\theta = \\frac{4}{9}\\) and \\(\\theta \\approx 63.6^{\\circ}\\)."
   ],
-  "remember": "cos θ = a·b ÷ (|a||b|), and a·b = 0 means the vectors are perpendicular.",
+  "remember": "\\(\\cos \\theta = \\frac{a \\cdot b}{|a||b|}\\), and \\(a \\cdot b = 0\\) means the vectors are perpendicular.",
   "a": {
-   "q": "For a = 2i + j − k and b = i − 3j + k, what does a·b show?",
+   "q": "For \\(a = 2i + j - k\\) and \\(b = i - 3j + k\\), what does \\(a \\cdot b\\) show?",
    "opts": [
-    "a·b = −2, so the angle is obtuse",
-    "a·b = 2, so the angle is acute",
-    "a·b = 0, so they are perpendicular",
-    "a·b = −2, so the angle is acute"
+    "\\(a \\cdot b = -2\\), so the angle is obtuse",
+    "\\(a \\cdot b = 2\\), so the angle is acute",
+    "\\(a \\cdot b = 0\\), so they are perpendicular",
+    "\\(a \\cdot b = -2\\), so the angle is acute"
    ],
-   "why": "a·b = 2 × 1 + 1 × (−3) + (−1) × 1 = 2 − 3 − 1 = −2. Since |a| and |b| are positive, cos θ is negative, so θ is obtuse. A negative scalar product does not mean an acute angle.",
+   "why": "\\(a \\cdot b = 2 \\times 1 + 1 \\times (-3) + (-1) \\times 1\\), which is \\(2 - 3 - 1 = -2\\). Since \\(|a|\\) and \\(|b|\\) are positive, \\(\\cos \\theta\\) is negative, so \\(\\theta\\) is obtuse. A negative scalar product does not mean an acute angle.",
    "clue": "Multiply matching components, then add them."
   },
   "b": {
    "d": 3,
-   "q": "For which value of m are p = 2i + mj + k and q = i − 2j + 4k perpendicular?",
+   "q": "For which value of \\(m\\) are \\(p = 2i + mj + k\\) and \\(q = i - 2j + 4k\\) perpendicular?",
    "opts": [
-    "m = 3",
-    "m = −3",
-    "m = 1",
-    "m = 6"
+    "\\(m = 3\\)",
+    "\\(m = -3\\)",
+    "\\(m = 1\\)",
+    "\\(m = 6\\)"
    ],
-   "why": "p·q = 2 − 2m + 4 = 6 − 2m. Perpendicular means p·q = 0, so m = 3. Checking: 2 − 6 + 4 = 0. The value m = −3 comes from a sign slip, as it gives 6 + 6 = 12.",
-   "clue": "Set the scalar product equal to zero and solve for m."
+   "why": "\\(p \\cdot q = 2 - 2m + 4 = 6 - 2m\\). Perpendicular means \\(p \\cdot q = 0\\), so \\(m = 3\\). Checking: \\(2 - 6 + 4 = 0\\). The value \\(m = -3\\) comes from a sign slip, as it gives \\(6 + 6 = 12\\).",
+   "clue": "Set the scalar product equal to zero and solve for \\(m\\)."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Angles between vectors",
+   "card": [
+    "The scalar product of a = a1i + a2j + a3k and b = b1i + b2j + b3k is a·b = a1b1 + a2b2 + a3b3. It is also a·b = |a||b| cos θ, where θ is the angle between them.",
+    "Put the two together: cos θ = (a·b) ÷ (|a||b|). Find the scalar product, find both lengths, divide, then use inverse cosine.",
+    "If a·b = 0, then cos θ = 0, so θ = 90°. Two non-zero vectors with a·b = 0 are perpendicular.",
+    "Example: a = i + 2j + 2k and b = 2i − j + 2k. a·b = 2 − 2 + 4 = 4. |a| = 3 and |b| = 3. So cos θ = 4/9 and θ ≈ 63.6°."
+   ],
+   "remember": "cos θ = a·b ÷ (|a||b|), and a·b = 0 means the vectors are perpendicular.",
+   "a": {
+    "q": "For a = 2i + j − k and b = i − 3j + k, what does a·b show?",
+    "opts": [
+     "a·b = −2, so the angle is obtuse",
+     "a·b = 2, so the angle is acute",
+     "a·b = 0, so they are perpendicular",
+     "a·b = −2, so the angle is acute"
+    ],
+    "why": "a·b = 2 × 1 + 1 × (−3) + (−1) × 1 = 2 − 3 − 1 = −2. Since |a| and |b| are positive, cos θ is negative, so θ is obtuse. A negative scalar product does not mean an acute angle.",
+    "clue": "Multiply matching components, then add them."
+   },
+   "b": {
+    "d": 3,
+    "q": "For which value of m are p = 2i + mj + k and q = i − 2j + 4k perpendicular?",
+    "opts": [
+     "m = 3",
+     "m = −3",
+     "m = 1",
+     "m = 6"
+    ],
+    "why": "p·q = 2 − 2m + 4 = 6 − 2m. Perpendicular means p·q = 0, so m = 3. Checking: 2 − 6 + 4 = 0. The value m = −3 comes from a sign slip, as it gives 6 + 6 = 12.",
+    "clue": "Set the scalar product equal to zero and solve for m."
+   }
+  }
+ }
 }

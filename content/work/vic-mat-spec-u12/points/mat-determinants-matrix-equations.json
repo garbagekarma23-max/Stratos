@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: done",
-  "2026-11-01T08:14:07Z check: passed, cleared"
+  "2026-11-01T08:14:07Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -70,35 +71,72 @@
  "final": {
   "title": "Determinants and matrix equations",
   "card": [
-   "For a 2 × 2 matrix A with rows (a b) and (c d), the determinant is det(A) = ad − bc.",
-   "A square matrix has an inverse only if its determinant is not 0. If det(A) = 0, there is no inverse.",
-   "When det(A) = D is not 0, the inverse A⁻¹ is 1/D times the matrix with rows (d −b) and (−c a).",
-   "To solve AX = B, multiply both sides on the left by A⁻¹. This gives X = A⁻¹B. The order matters: A⁻¹ goes before B."
+   "For a \\(2 \\times 2\\) matrix \\(A\\) with rows \\((a \\quad b)\\) and \\((c \\quad d)\\), the determinant is \\(\\text{det}(A) = ad - bc\\).",
+   "A square matrix has an inverse only if its determinant is not 0. If \\(\\text{det}(A) = 0\\), there is no inverse.",
+   "When \\(\\text{det}(A) = D\\) is not 0, the inverse \\(A^{-1}\\) is \\(\\frac{1}{D}\\) times the matrix with rows \\((d \\quad -b)\\) and \\((-c \\quad a)\\).",
+   "To solve \\(AX = B\\), multiply both sides on the left by \\(A^{-1}\\). This gives \\(X = A^{-1}B\\). The order matters: \\(A^{-1}\\) goes before \\(B\\)."
   ],
-  "remember": "No inverse if det = 0. Otherwise X = A⁻¹B, with A⁻¹ on the left.",
+  "remember": "No inverse if \\(\\text{det} = 0\\). Otherwise \\(X = A^{-1}B\\), with \\(A^{-1}\\) on the left.",
   "a": {
-   "q": "Matrix A has rows (3 2) and (4 5). What is det(A)?",
+   "q": "Matrix \\(A\\) has rows \\((3 \\quad 2)\\) and \\((4 \\quad 5)\\). What is \\(\\text{det}(A)\\)?",
    "opts": [
     "7",
     "23",
-    "−7",
+    "\\(-7\\)",
     "15"
    ],
-   "why": "det(A) = ad − bc = 3×5 − 2×4 = 15 − 8 = 7. The answer 23 comes from adding the products instead of subtracting.",
+   "why": "\\(\\text{det}(A) = ad - bc = 3 \\times 5 - 2 \\times 4\\), which is \\(15 - 8 = 7\\). The answer 23 comes from adding the products instead of subtracting.",
    "clue": "Main diagonal product, take away the other."
   },
   "b": {
    "d": 3,
-   "q": "For which value of k does the matrix with rows (2 k) and (6 3) have no inverse?",
+   "q": "For which value of \\(k\\) does the matrix with rows \\((2 \\quad k)\\) and \\((6 \\quad 3)\\) have no inverse?",
    "opts": [
-    "k = 1",
-    "k = 9",
-    "k = 0",
-    "k = 4"
+    "\\(k = 1\\)",
+    "\\(k = 9\\)",
+    "\\(k = 0\\)",
+    "\\(k = 4\\)"
    ],
-   "why": "det = 2×3 − 6k = 6 − 6k. There is no inverse when this is 0, so k = 1. The value k = 9 does not give 0, since 6 − 54 = −48.",
+   "why": "\\(\\text{det} = 2 \\times 3 - 6k = 6 - 6k\\). There is no inverse when this is 0, so \\(k = 1\\). The value \\(k = 9\\) does not give 0, since \\(6 - 54 = -48\\).",
    "clue": "Set the determinant equal to 0."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Determinants and matrix equations",
+   "card": [
+    "For a 2 × 2 matrix A with rows (a b) and (c d), the determinant is det(A) = ad − bc.",
+    "A square matrix has an inverse only if its determinant is not 0. If det(A) = 0, there is no inverse.",
+    "When det(A) = D is not 0, the inverse A⁻¹ is 1/D times the matrix with rows (d −b) and (−c a).",
+    "To solve AX = B, multiply both sides on the left by A⁻¹. This gives X = A⁻¹B. The order matters: A⁻¹ goes before B."
+   ],
+   "remember": "No inverse if det = 0. Otherwise X = A⁻¹B, with A⁻¹ on the left.",
+   "a": {
+    "q": "Matrix A has rows (3 2) and (4 5). What is det(A)?",
+    "opts": [
+     "7",
+     "23",
+     "−7",
+     "15"
+    ],
+    "why": "det(A) = ad − bc = 3×5 − 2×4 = 15 − 8 = 7. The answer 23 comes from adding the products instead of subtracting.",
+    "clue": "Main diagonal product, take away the other."
+   },
+   "b": {
+    "d": 3,
+    "q": "For which value of k does the matrix with rows (2 k) and (6 3) have no inverse?",
+    "opts": [
+     "k = 1",
+     "k = 9",
+     "k = 0",
+     "k = 4"
+    ],
+    "why": "det = 2×3 − 6k = 6 − 6k. There is no inverse when this is 0, so k = 1. The value k = 9 does not give 0, since 6 − 54 = −48.",
+    "clue": "Set the determinant equal to 0."
+   }
+  }
+ }
 }

@@ -31,7 +31,8 @@
   "2026-11-01T14:56:05Z write: done",
   "2026-11-01T15:05:29Z check: flagged",
   "2026-11-01T15:14:48Z fix: suggested",
-  "2026-11-02T04:35:42Z autoreview: cleared with the fix (remember wording)"
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (remember wording)",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -166,35 +167,72 @@
  "final": {
   "title": "Derivatives of inverse circular functions",
   "card": [
-   "The derivative of arcsin(x) is 1/√(1 − x²), for −1 < x < 1.",
-   "The derivative of arctan(x) is 1/(1 + x²), for all real x.",
-   "When the input is a function u of x, use the chain rule. The derivative of arctan(u) is u′/(1 + u²).",
-   "Example: for y = arctan(3x), u = 3x and u′ = 3. So dy/dx = 3/(1 + 9x²)."
+   "The derivative of \\(\\arcsin(x)\\) is \\(\\frac{1}{\\sqrt{1 - x^{2}}}\\), for \\(-1 < x < 1\\).",
+   "The derivative of \\(\\arctan(x)\\) is \\(\\frac{1}{1 + x^{2}}\\), for all real \\(x\\).",
+   "When the input is a function \\(u\\) of \\(x\\), use the chain rule. The derivative of \\(\\arctan(u)\\) is \\(\\frac{u'}{1 + u^{2}}\\).",
+   "Example: for \\(y = \\arctan(3x)\\), \\(u = 3x\\) and \\(u' = 3\\). So \\(\\frac{dy}{dx} = \\frac{3}{1 + 9x^{2}}\\)."
   ],
-  "remember": "Arcsin gives 1/√(1 − x²), arctan gives 1/(1 + x²), and the chain rule puts u′ on top.",
+  "remember": "\\(\\arcsin\\) gives \\(\\frac{1}{\\sqrt{1 - x^{2}}}\\), \\(\\arctan\\) gives \\(\\frac{1}{1 + x^{2}}\\), and the chain rule puts \\(u'\\) on top.",
   "a": {
-   "q": "What is the derivative of arcsin(x)?",
+   "q": "What is the derivative of \\(\\arcsin(x)\\)?",
    "opts": [
-    "1/√(1 − x²)",
-    "1/(1 + x²)",
-    "1/√(1 + x²)",
-    "−1/√(1 − x²)"
+    "\\(\\frac{1}{\\sqrt{1 - x^{2}}}\\)",
+    "\\(\\frac{1}{1 + x^{2}}\\)",
+    "\\(\\frac{1}{\\sqrt{1 + x^{2}}}\\)",
+    "\\(-\\frac{1}{\\sqrt{1 - x^{2}}}\\)"
    ],
-   "why": "The derivative of arcsin(x) is 1/√(1 − x²). The option 1/(1 + x²) is the derivative of arctan(x), a neighbouring result.",
+   "why": "The derivative of \\(\\arcsin(x)\\) is \\(\\frac{1}{\\sqrt{1 - x^{2}}}\\). The option \\(\\frac{1}{1 + x^{2}}\\) is the derivative of \\(\\arctan(x)\\), a neighbouring result.",
    "clue": "The answer has a square root in the denominator."
   },
   "b": {
    "d": 3,
-   "q": "What is dy/dx when y = arctan(2x) at x = 1/2?",
+   "q": "What is \\(\\frac{dy}{dx}\\) when \\(y = \\arctan(2x)\\) at \\(x = \\frac{1}{2}\\)?",
    "opts": [
     "1",
     "2",
-    "1/2",
-    "4/5"
+    "\\(\\frac{1}{2}\\)",
+    "\\(\\frac{4}{5}\\)"
    ],
-   "why": "By the chain rule, dy/dx = 2/(1 + 4x²). At x = 1/2, 4x² = 1, so dy/dx = 2/2 = 1. The option 1/2 forgets to multiply by u′ = 2.",
-   "clue": "Let u = 2x and multiply by u′ = 2."
+   "why": "By the chain rule, \\(\\frac{dy}{dx} = \\frac{2}{1 + 4x^{2}}\\). At \\(x = \\frac{1}{2}\\), \\(4x^{2} = 1\\), so \\(\\frac{dy}{dx} = \\frac{2}{2} = 1\\). The option \\(\\frac{1}{2}\\) forgets to multiply by \\(u' = 2\\).",
+   "clue": "Let \\(u = 2x\\) and multiply by \\(u' = 2\\)."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Derivatives of inverse circular functions",
+   "card": [
+    "The derivative of arcsin(x) is 1/√(1 − x²), for −1 < x < 1.",
+    "The derivative of arctan(x) is 1/(1 + x²), for all real x.",
+    "When the input is a function u of x, use the chain rule. The derivative of arctan(u) is u′/(1 + u²).",
+    "Example: for y = arctan(3x), u = 3x and u′ = 3. So dy/dx = 3/(1 + 9x²)."
+   ],
+   "remember": "Arcsin gives 1/√(1 − x²), arctan gives 1/(1 + x²), and the chain rule puts u′ on top.",
+   "a": {
+    "q": "What is the derivative of arcsin(x)?",
+    "opts": [
+     "1/√(1 − x²)",
+     "1/(1 + x²)",
+     "1/√(1 + x²)",
+     "−1/√(1 − x²)"
+    ],
+    "why": "The derivative of arcsin(x) is 1/√(1 − x²). The option 1/(1 + x²) is the derivative of arctan(x), a neighbouring result.",
+    "clue": "The answer has a square root in the denominator."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is dy/dx when y = arctan(2x) at x = 1/2?",
+    "opts": [
+     "1",
+     "2",
+     "1/2",
+     "4/5"
+    ],
+    "why": "By the chain rule, dy/dx = 2/(1 + 4x²). At x = 1/2, 4x² = 1, so dy/dx = 2/2 = 1. The option 1/2 forgets to multiply by u′ = 2.",
+    "clue": "Let u = 2x and multiply by u′ = 2."
+   }
+  }
+ }
 }

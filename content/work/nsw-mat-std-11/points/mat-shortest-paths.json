@@ -10,7 +10,8 @@
   "2026-10-29T12:30:22Z write: done",
   "2026-10-29T12:39:09Z check: flagged",
   "2026-10-29T12:41:46Z fix: suggested",
-  "2026-10-29T14:30:29Z autoreview: cleared with the fix (a wording)"
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (a wording)",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -145,7 +146,7 @@
    "In a weighted network, the weight of a route is the sum of the weights on its edges. The shortest path between two vertices is the route with the smallest total weight.",
    "The route with the fewest edges is not always the shortest. Add up the weights to compare routes.",
    "For a small network, list every route from the start to the end without repeating a vertex. Add the weights of each route and choose the smallest total.",
-   "Example: A to D can go A-B-D with weights 4 and 7, or A-C-D with weights 3 and 5. A-B-D totals 4 + 7 = 11. A-C-D totals 3 + 5 = 8. The shortest path is A-C-D, with weight 8."
+   "Example: A to D can go A-B-D with weights 4 and 7, or A-C-D with weights 3 and 5. A-B-D totals \\(4 + 7 = 11\\). A-C-D totals \\(3 + 5 = 8\\). The shortest path is A-C-D, with weight 8."
   ],
   "remember": "Add the weights along each route and pick the smallest total, not the fewest edges.",
   "a": {
@@ -156,7 +157,7 @@
     "11",
     "13"
    ],
-   "why": "P-R-S totals 5 + 7 = 12, and P-Q-S totals 6 + 9 = 15. The smaller total is 12. Choosing 15 would mean picking the longer route.",
+   "why": "P-R-S totals \\(5 + 7 = 12\\), and P-Q-S totals \\(6 + 9 = 15\\). The smaller total is 12. Choosing 15 would mean picking the longer route.",
    "clue": "Add the weights along each route, then compare the totals."
   },
   "b": {
@@ -168,9 +169,46 @@
     "A-B-C-D, with a total of 13 km",
     "A-D, because it has the fewest edges"
    ],
-   "why": "A-B-C-D totals 4 + 5 + 3 = 12 km, which is less than the direct 14 km. The direct road has fewer edges, but the shortest path depends on total weight, not the number of edges.",
+   "why": "A-B-C-D totals \\(4 + 5 + 3 = 12\\) km, which is less than the direct 14 km. The direct road has fewer edges, but the shortest path depends on total weight, not the number of edges.",
    "clue": "Fewer edges does not mean less total weight."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Shortest paths",
+   "card": [
+    "In a weighted network, the weight of a route is the sum of the weights on its edges. The shortest path between two vertices is the route with the smallest total weight.",
+    "The route with the fewest edges is not always the shortest. Add up the weights to compare routes.",
+    "For a small network, list every route from the start to the end without repeating a vertex. Add the weights of each route and choose the smallest total.",
+    "Example: A to D can go A-B-D with weights 4 and 7, or A-C-D with weights 3 and 5. A-B-D totals 4 + 7 = 11. A-C-D totals 3 + 5 = 8. The shortest path is A-C-D, with weight 8."
+   ],
+   "remember": "Add the weights along each route and pick the smallest total, not the fewest edges.",
+   "a": {
+    "q": "In a network, the only two routes from P to S are P-Q-S, with weights 6 and 9, and P-R-S, with weights 5 and 7. What is the weight of the shortest path from P to S?",
+    "opts": [
+     "12",
+     "15",
+     "11",
+     "13"
+    ],
+    "why": "P-R-S totals 5 + 7 = 12, and P-Q-S totals 6 + 9 = 15. The smaller total is 12. Choosing 15 would mean picking the longer route.",
+    "clue": "Add the weights along each route, then compare the totals."
+   },
+   "b": {
+    "d": 3,
+    "q": "Town A is joined to town D by a direct road of 14 km. The only other route goes A to B (4 km), B to C (5 km), then C to D (3 km). Which route is the shortest path from A to D?",
+    "opts": [
+     "A-B-C-D, with a total of 12 km",
+     "A-D, with a total of 14 km",
+     "A-B-C-D, with a total of 13 km",
+     "A-D, because it has the fewest edges"
+    ],
+    "why": "A-B-C-D totals 4 + 5 + 3 = 12 km, which is less than the direct 14 km. The direct road has fewer edges, but the shortest path depends on total weight, not the number of edges.",
+    "clue": "Fewer edges does not mean less total weight."
+   }
+  }
+ }
 }

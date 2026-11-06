@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T14:36:28Z new, write",
   "2026-11-01T14:46:41Z write: done",
-  "2026-11-01T14:56:04Z check: passed, cleared"
+  "2026-11-01T14:56:04Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -78,39 +79,82 @@
   "card": [
    [
     "Null hypothesis",
-    "H₀ is the claim we test, usually that nothing has changed. For a mean, it looks like H₀: μ = 50."
+    "\\(H_{0}\\) is the claim we test, usually that nothing has changed. For a mean, it looks like \\(H_{0}: \\mu = 50\\)."
    ],
    [
     "Alternative",
-    "H₁ is what we suspect instead, such as H₁: μ ≠ 50 or H₁: μ > 50. It is written before looking at the sample."
+    "\\(H_{1}\\) is what we suspect instead, such as \\(H_{1}: \\mu \\ne 50\\) or \\(H_{1}: \\mu > 50\\). It is written before looking at the sample."
    ],
-   "Assume H₀ is true. Then ask how unlikely the sample result would be. A result very unlikely under H₀ is evidence against it.",
-   "Example: a machine should fill bags with a mean of 50 g. A sample mean of 47 g is far below 50 for the sample size, so it would be unlikely if H₀ were true. That counts against H₀."
+   "Assume \\(H_{0}\\) is true. Then ask how unlikely the sample result would be. A result very unlikely under \\(H_{0}\\) is evidence against it.",
+   "Example: a machine should fill bags with a mean of 50 g. A sample mean of 47 g is far below 50 for the sample size, so it would be unlikely if \\(H_{0}\\) were true. That counts against \\(H_{0}\\)."
   ],
   "remember": "Assume the null is true, then ask how unlikely the sample result would be.",
   "a": {
    "q": "What is the test of a hypothesis based on?",
    "opts": [
-    "How unlikely the sample result is if H₀ is true",
-    "How unlikely the sample result is if H₁ is true",
+    "How unlikely the sample result is if \\(H_{0}\\) is true",
+    "How unlikely the sample result is if \\(H_{1}\\) is true",
     "Whether the sample mean equals the claimed mean",
     "How large the sample is compared with the population"
    ],
-   "why": "The test assumes H₀ is true and asks how unlikely the sample result would be. The sample mean will rarely equal the claimed mean exactly, so equality is not the test.",
+   "why": "The test assumes \\(H_{0}\\) is true and asks how unlikely the sample result would be. The sample mean will rarely equal the claimed mean exactly, so equality is not the test.",
    "clue": "Which hypothesis do we assume is true while testing?"
   },
   "b": {
    "d": 2,
    "q": "A bakery claims its loaves have a mean mass of 700 g. Mia suspects they are lighter. Which pair of hypotheses should she use?",
    "opts": [
-    "H₀: μ = 700 and H₁: μ < 700",
-    "H₀: μ < 700 and H₁: μ = 700",
-    "H₀: μ = 700 and H₁: μ > 700",
-    "H₀: μ ≠ 700 and H₁: μ = 700"
+    "\\(H_{0}: \\mu = 700\\) and \\(H_{1}: \\mu < 700\\)",
+    "\\(H_{0}: \\mu < 700\\) and \\(H_{1}: \\mu = 700\\)",
+    "\\(H_{0}: \\mu = 700\\) and \\(H_{1}: \\mu > 700\\)",
+    "\\(H_{0}: \\mu \\ne 700\\) and \\(H_{1}: \\mu = 700\\)"
    ],
-   "why": "The null is the claim being tested, μ = 700. Mia suspects the loaves are lighter, so the alternative is μ < 700. Using μ > 700 would test for heavier loaves.",
+   "why": "The null is the claim being tested, \\(\\mu = 700\\). Mia suspects the loaves are lighter, so the alternative is \\(\\mu < 700\\). Using \\(\\mu > 700\\) would test for heavier loaves.",
    "clue": "The null is the bakery's claim. The alternative is Mia's suspicion."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Hypothesis testing",
+   "card": [
+    [
+     "Null hypothesis",
+     "H₀ is the claim we test, usually that nothing has changed. For a mean, it looks like H₀: μ = 50."
+    ],
+    [
+     "Alternative",
+     "H₁ is what we suspect instead, such as H₁: μ ≠ 50 or H₁: μ > 50. It is written before looking at the sample."
+    ],
+    "Assume H₀ is true. Then ask how unlikely the sample result would be. A result very unlikely under H₀ is evidence against it.",
+    "Example: a machine should fill bags with a mean of 50 g. A sample mean of 47 g is far below 50 for the sample size, so it would be unlikely if H₀ were true. That counts against H₀."
+   ],
+   "remember": "Assume the null is true, then ask how unlikely the sample result would be.",
+   "a": {
+    "q": "What is the test of a hypothesis based on?",
+    "opts": [
+     "How unlikely the sample result is if H₀ is true",
+     "How unlikely the sample result is if H₁ is true",
+     "Whether the sample mean equals the claimed mean",
+     "How large the sample is compared with the population"
+    ],
+    "why": "The test assumes H₀ is true and asks how unlikely the sample result would be. The sample mean will rarely equal the claimed mean exactly, so equality is not the test.",
+    "clue": "Which hypothesis do we assume is true while testing?"
+   },
+   "b": {
+    "d": 2,
+    "q": "A bakery claims its loaves have a mean mass of 700 g. Mia suspects they are lighter. Which pair of hypotheses should she use?",
+    "opts": [
+     "H₀: μ = 700 and H₁: μ < 700",
+     "H₀: μ < 700 and H₁: μ = 700",
+     "H₀: μ = 700 and H₁: μ > 700",
+     "H₀: μ ≠ 700 and H₁: μ = 700"
+    ],
+    "why": "The null is the claim being tested, μ = 700. Mia suspects the loaves are lighter, so the alternative is μ < 700. Using μ > 700 would test for heavier loaves.",
+    "clue": "The null is the bakery's claim. The alternative is Mia's suspicion."
+   }
+  }
+ }
 }

@@ -30,7 +30,8 @@
   "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:34Z write: done",
-  "2026-11-01T08:33:52Z check: passed, cleared"
+  "2026-11-01T08:33:52Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -106,8 +107,8 @@
   "card": [
    "A graph is a set of vertices (points) joined by edges (lines). It can model a molecule, where atoms are vertices and bonds are edges, or a network of computers and cables.",
    "The degree of a vertex is the number of edges that meet it. An edge that starts and ends at the same vertex, called a loop, adds 2 to that vertex's degree.",
-   "Every edge has two ends, so it adds 2 to the total of all the degrees. This gives the handshake rule: the sum of the degrees = 2 × the number of edges.",
-   "Example: a graph has 5 edges. The degrees add to 2 × 5 = 10. If four vertices have degrees 3, 2, 2 and 1, the fifth has degree 10 − 8 = 2."
+   "Every edge has two ends, so it adds 2 to the total of all the degrees. This gives the handshake rule: the sum of the degrees \\(= 2 \\times\\) the number of edges.",
+   "Example: a graph has 5 edges. The degrees add to \\(2 \\times 5 = 10\\). If four vertices have degrees 3, 2, 2 and 1, the fifth has degree \\(10 - 8 = 2\\)."
   ],
   "remember": "Add up every vertex's degree and you get twice the number of edges.",
   "a": {
@@ -118,21 +119,58 @@
     "15",
     "12"
    ],
-   "why": "Each edge adds 2 to the total, so the sum is 2 × 9 = 18. The answer 9 is the number of edges, which is only half of the degree sum.",
+   "why": "Each edge adds 2 to the total, so the sum is \\(2 \\times 9 = 18\\). The answer 9 is the number of edges, which is only half of the degree sum.",
    "clue": "Each edge has two ends."
   },
   "b": {
    "d": 3,
-   "q": "A graph has 4 vertices with degrees 4, 3, 3 and x. It has 7 edges. What is x?",
+   "q": "A graph has 4 vertices with degrees 4, 3, 3 and \\(x\\). It has 7 edges. What is \\(x\\)?",
    "opts": [
     "4",
     "3",
     "7",
     "14"
    ],
-   "why": "The degrees add to 2 × 7 = 14. The three known degrees give 4 + 3 + 3 = 10, so x = 14 − 10 = 4. Using 7 as the total forgets to double the number of edges.",
+   "why": "The degrees add to \\(2 \\times 7 = 14\\). The three known degrees give \\(4 + 3 + 3 = 10\\), so \\(x = 14 - 10 = 4\\). Using 7 as the total forgets to double the number of edges.",
    "clue": "Find the degree sum first, then subtract."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Graph theory in Specialist",
+   "card": [
+    "A graph is a set of vertices (points) joined by edges (lines). It can model a molecule, where atoms are vertices and bonds are edges, or a network of computers and cables.",
+    "The degree of a vertex is the number of edges that meet it. An edge that starts and ends at the same vertex, called a loop, adds 2 to that vertex's degree.",
+    "Every edge has two ends, so it adds 2 to the total of all the degrees. This gives the handshake rule: the sum of the degrees = 2 × the number of edges.",
+    "Example: a graph has 5 edges. The degrees add to 2 × 5 = 10. If four vertices have degrees 3, 2, 2 and 1, the fifth has degree 10 − 8 = 2."
+   ],
+   "remember": "Add up every vertex's degree and you get twice the number of edges.",
+   "a": {
+    "q": "A network of 6 computers has 9 cables, and each cable joins two computers. What is the sum of the degrees of all the vertices?",
+    "opts": [
+     "18",
+     "9",
+     "15",
+     "12"
+    ],
+    "why": "Each edge adds 2 to the total, so the sum is 2 × 9 = 18. The answer 9 is the number of edges, which is only half of the degree sum.",
+    "clue": "Each edge has two ends."
+   },
+   "b": {
+    "d": 3,
+    "q": "A graph has 4 vertices with degrees 4, 3, 3 and x. It has 7 edges. What is x?",
+    "opts": [
+     "4",
+     "3",
+     "7",
+     "14"
+    ],
+    "why": "The degrees add to 2 × 7 = 14. The three known degrees give 4 + 3 + 3 = 10, so x = 14 − 10 = 4. Using 7 as the total forgets to double the number of edges.",
+    "clue": "Find the degree sum first, then subtract."
+   }
+  }
+ }
 }

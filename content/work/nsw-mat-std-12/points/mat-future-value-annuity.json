@@ -8,7 +8,8 @@
   "2026-10-29T12:14:27Z match: none",
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
-  "2026-10-29T12:39:10Z check: passed, cleared"
+  "2026-10-29T12:39:10Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -80,10 +81,10 @@
   "card": [
    "The future value of an annuity is the total it grows to, including every payment and all the interest earned. Interest is paid on each payment from the day it goes in.",
    "A table of future value interest factors gives a number for each interest rate per period and number of periods. The rate and periods must match how often payments are made.",
-   "Future value = payment × factor. A spreadsheet can also give the answer.",
-   "Example: $200 is paid in at the end of each year for 3 years at 5% p.a. The factor for 5% and 3 periods is 3.1525. Future value = 200 × 3.1525 = $630.50."
+   "\\(\\text{Future value} = \\text{payment} \\times \\text{factor}\\). A spreadsheet can also give the answer.",
+   "Example: $200 is paid in at the end of each year for 3 years at 5% p.a. The factor for 5% and 3 periods is 3.1525. \\(\\text{Future value} = 200 \\times 3.1525 = \\$630.50\\)."
   ],
-  "remember": "Future value = payment × table factor, using the rate and periods that match each payment.",
+  "remember": "\\(\\text{Future value} = \\text{payment} \\times \\text{table factor}\\), using the rate and periods that match each payment.",
   "a": {
    "q": "An annuity pays $500 at the end of each year. For its rate and term, the future value factor is 4.3101. What is the future value?",
    "opts": [
@@ -92,7 +93,7 @@
     "$500.00",
     "$2500.00"
    ],
-   "why": "Future value = 500 × 4.3101 = $2155.05. Dividing by the factor gives a much smaller number, because the factor is a multiplier that includes interest. That is a common mistake.",
+   "why": "\\(\\text{Future value} = 500 \\times 4.3101 = \\$2155.05\\). Dividing by the factor gives a much smaller number, because the factor is a multiplier that includes interest. That is a common mistake.",
    "clue": "Multiply the payment by the factor."
   },
   "b": {
@@ -104,9 +105,46 @@
     "2% per period, 2 periods",
     "8% per period, 8 periods"
    ],
-   "why": "Payments are quarterly, so the rate is 8% ÷ 4 = 2% per quarter. Two years has 2 × 4 = 8 quarters, so there are 8 periods. Using 8% and 2 periods matches the yearly figures, not the quarterly payments.",
+   "why": "Payments are quarterly, so the rate is \\(8\\% \\div 4 = 2\\%\\) per quarter. Two years has \\(2 \\times 4 = 8\\) quarters, so there are 8 periods. Using 8% and 2 periods matches the yearly figures, not the quarterly payments.",
    "clue": "Change both the rate and the term to quarters."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Future value of an annuity",
+   "card": [
+    "The future value of an annuity is the total it grows to, including every payment and all the interest earned. Interest is paid on each payment from the day it goes in.",
+    "A table of future value interest factors gives a number for each interest rate per period and number of periods. The rate and periods must match how often payments are made.",
+    "Future value = payment × factor. A spreadsheet can also give the answer.",
+    "Example: $200 is paid in at the end of each year for 3 years at 5% p.a. The factor for 5% and 3 periods is 3.1525. Future value = 200 × 3.1525 = $630.50."
+   ],
+   "remember": "Future value = payment × table factor, using the rate and periods that match each payment.",
+   "a": {
+    "q": "An annuity pays $500 at the end of each year. For its rate and term, the future value factor is 4.3101. What is the future value?",
+    "opts": [
+     "$2155.05",
+     "$116.00",
+     "$500.00",
+     "$2500.00"
+    ],
+    "why": "Future value = 500 × 4.3101 = $2155.05. Dividing by the factor gives a much smaller number, because the factor is a multiplier that includes interest. That is a common mistake.",
+    "clue": "Multiply the payment by the factor."
+   },
+   "b": {
+    "d": 3,
+    "q": "Leila saves $300 at the end of each quarter for 2 years at 8% p.a. compounded quarterly. Which factor should she use from the table?",
+    "opts": [
+     "2% per period, 8 periods",
+     "8% per period, 2 periods",
+     "2% per period, 2 periods",
+     "8% per period, 8 periods"
+    ],
+    "why": "Payments are quarterly, so the rate is 8% ÷ 4 = 2% per quarter. Two years has 2 × 4 = 8 quarters, so there are 8 periods. Using 8% and 2 periods matches the yearly figures, not the quarterly payments.",
+    "clue": "Change both the rate and the term to quarters."
+   }
+  }
+ }
 }

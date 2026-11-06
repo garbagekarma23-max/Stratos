@@ -22,7 +22,8 @@ Write every piece of maths in LaTeX between \( and \), inside the sentence: "The
 - Absolute value: |x - 3|. Brackets: ( ) and [ ], and \{ \} for a set. Write every bracket the maths needs, so it means one thing only.
 - Words inside maths: \text{cm}. Keep units such as cm, km/h and $ outside maths where you can: "a length of 12 cm".
 - Spaces inside maths change nothing, so a number such as 100 000 is written 100{,}000 inside maths, or kept as a word outside it.
-- Use only these commands: frac, sqrt, binom, times, div, pm, cdot, le, ge, ne, approx, pi, theta and other Greek letters, infty, to, log, ln, sin, cos, tan, lim, int, sum, text, left, right, circ, overline, mid, cup, cap, in.
+- Use only these commands: frac, sqrt, binom, times, div, pm, cdot, le, ge, ne, approx, sim (for a distribution, such as \(X \sim \text{Bin}(n, p)\)), pi, theta and other Greek letters, infty, to, log, ln, sin, cos, tan, lim, int, sum, text, left, right, circ, overline, mid, cup, cap, in.
+- A piece of maths never wraps onto a second line, and a phone line holds about 30 characters of maths. Never put a formula in words inside one piece with \text: write "Weekly wage \(=\) hourly rate \(\times\) hours worked", with only the signs in maths. Split a long chain of working into pieces joined by words: "\(|v| = \sqrt{3^{2} + (-4)^{2}}\), which is \(\sqrt{25} = 5\)".
 - Keep each option short as it looks on screen: \(\frac{12}{5}\) counts as two characters, not twelve.
 - A title is words only, with no maths.
 - In JSON every backslash is written twice: "\\(x = -\\frac{b}{2a}\\)".

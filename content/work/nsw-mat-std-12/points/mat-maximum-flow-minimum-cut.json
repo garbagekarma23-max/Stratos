@@ -10,7 +10,8 @@
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: flagged",
   "2026-10-29T12:41:47Z fix: suggested",
-  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -179,10 +180,10 @@
   "card": [
    "A cut splits a network into a source side and a sink side, as in the last point. Every unit of flow must cross each cut to reach the sink.",
    "So no flow can be bigger than the capacity of any cut. The cut with the smallest capacity is called the minimum cut, and it is the tightest limit.",
-   "Maximum flow = capacity of the minimum cut. If a flow you find equals the capacity of some cut, that flow is the maximum and that cut is the minimum.",
+   "Maximum flow \\(=\\) capacity of the minimum cut. If a flow you find equals the capacity of some cut, that flow is the maximum and that cut is the minimum.",
    "Example: a network's cuts have capacities 12, 9 and 15. The maximum flow is 9. Finding a flow of 9 confirms it, since no flow can get past the cut of 9."
   ],
-  "remember": "The tightest cut sets the limit: maximum flow = minimum cut.",
+  "remember": "The tightest cut sets the limit: maximum flow \\(=\\) minimum cut.",
   "a": {
    "q": "A network has exactly three cuts, with capacities 14, 11 and 17. What is the maximum flow through the network?",
    "opts": [
@@ -207,5 +208,42 @@
    "clue": "Can any flow be bigger than a cut it has to cross?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Maximum flow and minimum cut",
+   "card": [
+    "A cut splits a network into a source side and a sink side, as in the last point. Every unit of flow must cross each cut to reach the sink.",
+    "So no flow can be bigger than the capacity of any cut. The cut with the smallest capacity is called the minimum cut, and it is the tightest limit.",
+    "Maximum flow = capacity of the minimum cut. If a flow you find equals the capacity of some cut, that flow is the maximum and that cut is the minimum.",
+    "Example: a network's cuts have capacities 12, 9 and 15. The maximum flow is 9. Finding a flow of 9 confirms it, since no flow can get past the cut of 9."
+   ],
+   "remember": "The tightest cut sets the limit: maximum flow = minimum cut.",
+   "a": {
+    "q": "A network has exactly three cuts, with capacities 14, 11 and 17. What is the maximum flow through the network?",
+    "opts": [
+     "11",
+     "14",
+     "17",
+     "42"
+    ],
+    "why": "The maximum flow equals the capacity of the minimum cut, which is 11. Choosing 17 is tempting, but all the flow must also cross the cut of 11, so it cannot be more than 11. Adding the cuts to get 42 has no meaning.",
+    "clue": "Which cut is the tightest limit?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Ava finds a way to send 15 kL per hour through a pipe network. She also finds a cut with a capacity of 15 kL per hour. What can she conclude?",
+    "opts": [
+     "15 kL per hour is the maximum flow",
+     "The maximum flow could be more than 15 kL per hour",
+     "Another cut could have a capacity under 15 kL per hour",
+     "The maximum flow is less than 15 kL per hour"
+    ],
+    "why": "No flow can be bigger than any cut, so no flow can pass the cut of 15, and 15 is the maximum. Thinking a bigger flow might exist is tempting, but it would have to cross that cut. Also, no cut can be under 15, since Ava's flow of 15 crosses every cut.",
+    "clue": "Can any flow be bigger than a cut it has to cross?"
+   }
+  }
+ }
 }

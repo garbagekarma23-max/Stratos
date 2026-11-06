@@ -30,7 +30,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:30Z write: done",
-  "2026-11-01T15:14:48Z check: passed, cleared"
+  "2026-11-01T15:14:48Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -104,35 +105,72 @@
  "final": {
   "title": "Arc length and surface area",
   "card": [
-   "A curve given by x = x(t) and y = y(t), for a ≤ t ≤ b, has length L = ∫ √((dx/dt)² + (dy/dt)²) dt, from t = a to t = b. The root comes from Pythagoras on a tiny piece of the curve.",
-   "If the curve is y = f(x), use L = ∫ √(1 + (dy/dx)²) dx, from x = a to x = b.",
-   "Rotating the curve y = f(x) about the x-axis makes a surface. Its area is S = 2π ∫ y √(1 + (dy/dx)²) dx. Each tiny piece of length is spun around a circle of circumference 2πy.",
-   "Example: x = t², y = 2t for 0 ≤ t ≤ 1 gives dx/dt = 2t and dy/dt = 2. So L = ∫ √(4t² + 4) dt = 2∫ √(t² + 1) dt, from t = 0 to t = 1."
+   "A curve given by \\(x = x(t)\\) and \\(y = y(t)\\), for \\(a \\le t \\le b\\), has length \\(L = \\int \\sqrt{\\left(\\frac{dx}{dt}\\right)^{2} + \\left(\\frac{dy}{dt}\\right)^{2}} \\, dt\\), from \\(t = a\\) to \\(t = b\\). The root comes from Pythagoras on a tiny piece of the curve.",
+   "If the curve is \\(y = f(x)\\), use \\(L = \\int \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^{2}} \\, dx\\), from \\(x = a\\) to \\(x = b\\).",
+   "Rotating the curve \\(y = f(x)\\) about the x-axis makes a surface. Its area is \\(S = 2\\pi \\int y \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^{2}} \\, dx\\). Each tiny piece of length is spun around a circle of circumference \\(2\\pi y\\).",
+   "Example: \\(x = t^{2}\\), \\(y = 2t\\) for \\(0 \\le t \\le 1\\) gives \\(\\frac{dx}{dt} = 2t\\) and \\(\\frac{dy}{dt} = 2\\). So \\(L = \\int \\sqrt{4t^{2} + 4} \\, dt = 2\\int \\sqrt{t^{2} + 1} \\, dt\\), from \\(t = 0\\) to \\(t = 1\\)."
   ],
-  "remember": "Length adds up tiny pieces √(dx² + dy²). Surface area multiplies each piece by 2πy.",
+  "remember": "Length adds up tiny pieces \\(\\sqrt{(dx)^{2} + (dy)^{2}}\\). Surface area multiplies each piece by \\(2\\pi y\\).",
   "a": {
-   "q": "A curve has x = 3t and y = 4t for 0 ≤ t ≤ 2. Using the arc length formula, what is its length?",
+   "q": "A curve has \\(x = 3t\\) and \\(y = 4t\\) for \\(0 \\le t \\le 2\\). Using the arc length formula, what is its length?",
    "opts": [
     "10",
     "14",
     "5",
     "50"
    ],
-   "why": "dx/dt = 3 and dy/dt = 4, so the integrand is √(9 + 16) = 5. Then L = 5 × 2 = 10. Answer 5 forgets to integrate over the interval of length 2.",
-   "clue": "The integrand is constant, so multiply it by the length of the t interval."
+   "why": "\\(\\frac{dx}{dt} = 3\\) and \\(\\frac{dy}{dt} = 4\\), so the integrand is \\(\\sqrt{9 + 16} = 5\\). Then \\(L = 5 \\times 2 = 10\\). Answer 5 forgets to integrate over the interval of length 2.",
+   "clue": "The integrand is constant, so multiply it by the length of the \\(t\\) interval."
   },
   "b": {
    "d": 3,
-   "q": "The line y = 2x for 0 ≤ x ≤ 1 is rotated about the x-axis. What is the surface area, using S = 2π ∫ y √(1 + (dy/dx)²) dx?",
+   "q": "The line \\(y = 2x\\) for \\(0 \\le x \\le 1\\) is rotated about the x-axis. What is the surface area, using \\(S = 2\\pi \\int y \\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^{2}} \\, dx\\)?",
    "opts": [
-    "2π√5",
-    "4π√5",
-    "2π",
-    "4π"
+    "\\(2\\pi\\sqrt{5}\\)",
+    "\\(4\\pi\\sqrt{5}\\)",
+    "\\(2\\pi\\)",
+    "\\(4\\pi\\)"
    ],
-   "why": "dy/dx = 2, so √(1 + 4) = √5. Then S = 2π ∫ 2x√5 dx = 2π√5 × [x²] from 0 to 1 = 2π√5. Answer 4π√5 forgets that the integral of 2x is x², not 2x². Answer 4π leaves out the √5 factor.",
-   "clue": "Put y = 2x into the integrand, and keep the factor √(1 + (dy/dx)²)."
+   "why": "\\(\\frac{dy}{dx} = 2\\), so \\(\\sqrt{1 + 4} = \\sqrt{5}\\). Then \\(S = 2\\pi \\int_{0}^{1} 2x\\sqrt{5} \\, dx\\), which is \\(2\\pi\\sqrt{5} \\times \\left[x^{2}\\right]_{0}^{1} = 2\\pi\\sqrt{5}\\). Answer \\(4\\pi\\sqrt{5}\\) forgets that the integral of \\(2x\\) is \\(x^{2}\\), not \\(2x^{2}\\). Answer \\(2\\pi\\) leaves out the \\(\\sqrt{5}\\) factor.",
+   "clue": "Put \\(y = 2x\\) into the integrand, and keep the factor \\(\\sqrt{1 + \\left(\\frac{dy}{dx}\\right)^{2}}\\)."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Arc length and surface area",
+   "card": [
+    "A curve given by x = x(t) and y = y(t), for a ≤ t ≤ b, has length L = ∫ √((dx/dt)² + (dy/dt)²) dt, from t = a to t = b. The root comes from Pythagoras on a tiny piece of the curve.",
+    "If the curve is y = f(x), use L = ∫ √(1 + (dy/dx)²) dx, from x = a to x = b.",
+    "Rotating the curve y = f(x) about the x-axis makes a surface. Its area is S = 2π ∫ y √(1 + (dy/dx)²) dx. Each tiny piece of length is spun around a circle of circumference 2πy.",
+    "Example: x = t², y = 2t for 0 ≤ t ≤ 1 gives dx/dt = 2t and dy/dt = 2. So L = ∫ √(4t² + 4) dt = 2∫ √(t² + 1) dt, from t = 0 to t = 1."
+   ],
+   "remember": "Length adds up tiny pieces √(dx² + dy²). Surface area multiplies each piece by 2πy.",
+   "a": {
+    "q": "A curve has x = 3t and y = 4t for 0 ≤ t ≤ 2. Using the arc length formula, what is its length?",
+    "opts": [
+     "10",
+     "14",
+     "5",
+     "50"
+    ],
+    "why": "dx/dt = 3 and dy/dt = 4, so the integrand is √(9 + 16) = 5. Then L = 5 × 2 = 10. Answer 5 forgets to integrate over the interval of length 2.",
+    "clue": "The integrand is constant, so multiply it by the length of the t interval."
+   },
+   "b": {
+    "d": 3,
+    "q": "The line y = 2x for 0 ≤ x ≤ 1 is rotated about the x-axis. What is the surface area, using S = 2π ∫ y √(1 + (dy/dx)²) dx?",
+    "opts": [
+     "2π√5",
+     "4π√5",
+     "2π",
+     "4π"
+    ],
+    "why": "dy/dx = 2, so √(1 + 4) = √5. Then S = 2π ∫ 2x√5 dx = 2π√5 × [x²] from 0 to 1 = 2π√5. Answer 4π√5 forgets that the integral of 2x is x², not 2x². Answer 4π leaves out the √5 factor.",
+    "clue": "Put y = 2x into the integrand, and keep the factor √(1 + (dy/dx)²)."
+   }
+  }
+ }
 }

@@ -10,7 +10,8 @@
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: flagged",
   "2026-10-29T12:41:47Z fix: suggested",
-  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -216,32 +217,69 @@
    "The latest starting time (LST) of an activity is the latest it can begin without delaying the whole project. A backward scan through the network finds it.",
    "Start at the finish vertex. Give it the project's shortest time, which comes from the forward scan. Then work backwards, one vertex at a time.",
    "An activity's LST is the value at the vertex it leads to, minus its duration. A vertex's value is the smallest LST of the activities leaving it.",
-   "Example: the finish vertex is 12. A (4 days) and B (7 days) both go from vertex V to the finish. A's LST is 12 − 4 = 8. B's LST is 12 − 7 = 5. V's value is the smallest, 5."
+   "Example: the finish vertex is 12. \\(A\\) (4 days) and \\(B\\) (7 days) both go from vertex \\(V\\) to the finish. \\(A\\)'s LST is \\(12 - 4 = 8\\). \\(B\\)'s LST is \\(12 - 7 = 5\\). \\(V\\)'s value is the smallest, 5."
   ],
   "remember": "Work back from the finish: subtract each duration, and keep the smallest result at each vertex.",
   "a": {
-   "q": "Two activities leave vertex V. One lasts 3 days and leads to a vertex with value 10. The other lasts 5 days and leads to a vertex with value 11. What is the value at vertex V?",
+   "q": "Two activities leave vertex \\(V\\). One lasts 3 days and leads to a vertex with value 10. The other lasts 5 days and leads to a vertex with value 11. What is the value at vertex \\(V\\)?",
    "opts": [
     "6",
     "7",
     "13",
     "16"
    ],
-   "why": "10 − 3 = 7 and 11 − 5 = 6, and a vertex takes the smallest result, so V is 6. Choosing 7 is wrong: the 5-day activity would then end on day 12, after 11, which delays the whole project.",
+   "why": "\\(10 - 3 = 7\\) and \\(11 - 5 = 6\\), and a vertex takes the smallest result, so \\(V\\) is 6. Choosing 7 is wrong: the 5-day activity would then end on day 12, after 11, which delays the whole project.",
    "clue": "Subtract each duration, then compare the two results."
   },
   "b": {
    "d": 3,
-   "q": "In Mia's building project, the finish vertex has value 20. Activity P (6 days) and activity Q (9 days) both go from vertex X to the finish. What is the LST of activity P?",
+   "q": "In Mia's building project, the finish vertex has value 20. Activity \\(P\\) (6 days) and activity \\(Q\\) (9 days) both go from vertex \\(X\\) to the finish. What is the LST of activity \\(P\\)?",
    "opts": [
     "14",
     "11",
     "26",
     "6"
    ],
-   "why": "P's LST is the value at the vertex it leads to minus its duration: 20 − 6 = 14. The tempting 11 is the value at vertex X, which is set by Q, the longer activity. P can start as late as day 14 and still finish by day 20.",
-   "clue": "Use only P's duration and the vertex P leads to."
+   "why": "\\(P\\)'s LST is the value at the vertex it leads to minus its duration: \\(20 - 6 = 14\\). The tempting 11 is the value at vertex \\(X\\), which is set by \\(Q\\), the longer activity. \\(P\\) can start as late as day 14 and still finish by day 20.",
+   "clue": "Use only \\(P\\)'s duration and the vertex \\(P\\) leads to."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Latest starting times",
+   "card": [
+    "The latest starting time (LST) of an activity is the latest it can begin without delaying the whole project. A backward scan through the network finds it.",
+    "Start at the finish vertex. Give it the project's shortest time, which comes from the forward scan. Then work backwards, one vertex at a time.",
+    "An activity's LST is the value at the vertex it leads to, minus its duration. A vertex's value is the smallest LST of the activities leaving it.",
+    "Example: the finish vertex is 12. A (4 days) and B (7 days) both go from vertex V to the finish. A's LST is 12 − 4 = 8. B's LST is 12 − 7 = 5. V's value is the smallest, 5."
+   ],
+   "remember": "Work back from the finish: subtract each duration, and keep the smallest result at each vertex.",
+   "a": {
+    "q": "Two activities leave vertex V. One lasts 3 days and leads to a vertex with value 10. The other lasts 5 days and leads to a vertex with value 11. What is the value at vertex V?",
+    "opts": [
+     "6",
+     "7",
+     "13",
+     "16"
+    ],
+    "why": "10 − 3 = 7 and 11 − 5 = 6, and a vertex takes the smallest result, so V is 6. Choosing 7 is wrong: the 5-day activity would then end on day 12, after 11, which delays the whole project.",
+    "clue": "Subtract each duration, then compare the two results."
+   },
+   "b": {
+    "d": 3,
+    "q": "In Mia's building project, the finish vertex has value 20. Activity P (6 days) and activity Q (9 days) both go from vertex X to the finish. What is the LST of activity P?",
+    "opts": [
+     "14",
+     "11",
+     "26",
+     "6"
+    ],
+    "why": "P's LST is the value at the vertex it leads to minus its duration: 20 − 6 = 14. The tempting 11 is the value at vertex X, which is set by Q, the longer activity. P can start as late as day 14 and still finish by day 20.",
+    "clue": "Use only P's duration and the vertex P leads to."
+   }
+  }
+ }
 }

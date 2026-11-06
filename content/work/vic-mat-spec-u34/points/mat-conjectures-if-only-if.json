@@ -8,7 +8,8 @@
   "2026-11-01T14:36:27Z new, write",
   "2026-11-01T14:46:40Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T14:56:05Z write: done",
-  "2026-11-01T15:05:29Z check: passed, cleared"
+  "2026-11-01T15:05:29Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -73,34 +74,71 @@
   "title": "Conjectures and if and only if",
   "card": [
    "A conjecture is a statement that is believed true but is not yet proved. It stays a conjecture until it is proved or disproved.",
-   "P ⇒ Q means if P is true, then Q is true. We say P is sufficient for Q, and Q is necessary for P.",
-   "P ⇔ Q means P ⇒ Q and Q ⇒ P. Read it as P if and only if Q. Each side is both necessary and sufficient for the other.",
-   "To prove P ⇔ Q, prove both directions. Example: n is even ⇔ n² is even. The 'n is even ⇒ n² is even' direction is true, but 'n² is even ⇒ n is even' must also be shown. Here both hold, so the ⇔ is true. For x > 2 ⇒ x² > 4, the reverse fails at x = −3, so ⇔ is false."
+   "\\(P \\Rightarrow Q\\) means if \\(P\\) is true, then \\(Q\\) is true. We say \\(P\\) is sufficient for \\(Q\\), and \\(Q\\) is necessary for \\(P\\).",
+   "\\(P \\iff Q\\) means \\(P \\Rightarrow Q\\) and \\(Q \\Rightarrow P\\). Read it as \\(P\\) if and only if \\(Q\\). Each side is both necessary and sufficient for the other.",
+   "To prove \\(P \\iff Q\\), prove both directions. Example: \\(n \\text{ is even} \\iff n^{2} \\text{ is even}\\). The '\\(n \\text{ is even} \\Rightarrow n^{2} \\text{ is even}\\)' direction is true, but '\\(n^{2} \\text{ is even} \\Rightarrow n \\text{ is even}\\)' must also be shown. Here both hold, so the \\(\\iff\\) is true. For \\(x > 2 \\Rightarrow x^{2} > 4\\), the reverse fails at \\(x = -3\\), so \\(\\iff\\) is false."
   ],
-  "remember": "P ⇔ Q needs both P ⇒ Q and Q ⇒ P to be true.",
+  "remember": "\\(P \\iff Q\\) needs both \\(P \\Rightarrow Q\\) and \\(Q \\Rightarrow P\\) to be true.",
   "a": {
-   "q": "Which is needed to prove the statement P ⇔ Q?",
+   "q": "Which is needed to prove the statement \\(P \\iff Q\\)?",
    "opts": [
-    "P ⇒ Q and Q ⇒ P are both proved",
-    "P ⇒ Q is proved for several cases",
-    "Q ⇒ P is proved for several cases",
-    "P ⇒ Q is proved and Q is checked once"
+    "\\(P \\Rightarrow Q\\) and \\(Q \\Rightarrow P\\) are both proved",
+    "\\(P \\Rightarrow Q\\) is proved for several cases",
+    "\\(Q \\Rightarrow P\\) is proved for several cases",
+    "\\(P \\Rightarrow Q\\) is proved and \\(Q\\) is checked once"
    ],
-   "why": "⇔ means each side implies the other, so both directions must be proved. Proving only P ⇒ Q shows P is sufficient for Q, but not that Q is sufficient for P.",
-   "clue": "Think of the two arrows inside ⇔."
+   "why": "\\(\\iff\\) means each side implies the other, so both directions must be proved. Proving only \\(P \\Rightarrow Q\\) shows \\(P\\) is sufficient for \\(Q\\), but not that \\(Q\\) is sufficient for \\(P\\).",
+   "clue": "Think of the two arrows inside \\(\\iff\\)."
   },
   "b": {
    "d": 3,
-   "q": "For a real number x, consider: x = 3 ⇒ x² = 9. Which statement about it is correct?",
+   "q": "For a real number \\(x\\), consider: \\(x = 3 \\Rightarrow x^{2} = 9\\). Which statement about it is correct?",
    "opts": [
-    "x = 3 is sufficient but not necessary for x² = 9",
-    "x = 3 is necessary but not sufficient for x² = 9",
-    "x = 3 is both necessary and sufficient for x² = 9",
-    "x = 3 is neither necessary nor sufficient for x² = 9"
+    "\\(x = 3\\) is sufficient but not necessary for \\(x^{2} = 9\\)",
+    "\\(x = 3\\) is necessary but not sufficient for \\(x^{2} = 9\\)",
+    "\\(x = 3\\) is both necessary and sufficient for \\(x^{2} = 9\\)",
+    "\\(x = 3\\) is neither necessary nor sufficient for \\(x^{2} = 9\\)"
    ],
-   "why": "If x = 3 then x² = 9, so x = 3 is sufficient. But x = −3 also gives x² = 9, so x = 3 is not necessary. The reverse implication fails, so the ⇔ is false.",
-   "clue": "Try x = −3 in x² = 9."
+   "why": "If \\(x = 3\\) then \\(x^{2} = 9\\), so \\(x = 3\\) is sufficient. But \\(x = -3\\) also gives \\(x^{2} = 9\\), so \\(x = 3\\) is not necessary. The reverse implication fails, so the \\(\\iff\\) is false.",
+   "clue": "Try \\(x = -3\\) in \\(x^{2} = 9\\)."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Conjectures and if and only if",
+   "card": [
+    "A conjecture is a statement that is believed true but is not yet proved. It stays a conjecture until it is proved or disproved.",
+    "P ⇒ Q means if P is true, then Q is true. We say P is sufficient for Q, and Q is necessary for P.",
+    "P ⇔ Q means P ⇒ Q and Q ⇒ P. Read it as P if and only if Q. Each side is both necessary and sufficient for the other.",
+    "To prove P ⇔ Q, prove both directions. Example: n is even ⇔ n² is even. The 'n is even ⇒ n² is even' direction is true, but 'n² is even ⇒ n is even' must also be shown. Here both hold, so the ⇔ is true. For x > 2 ⇒ x² > 4, the reverse fails at x = −3, so ⇔ is false."
+   ],
+   "remember": "P ⇔ Q needs both P ⇒ Q and Q ⇒ P to be true.",
+   "a": {
+    "q": "Which is needed to prove the statement P ⇔ Q?",
+    "opts": [
+     "P ⇒ Q and Q ⇒ P are both proved",
+     "P ⇒ Q is proved for several cases",
+     "Q ⇒ P is proved for several cases",
+     "P ⇒ Q is proved and Q is checked once"
+    ],
+    "why": "⇔ means each side implies the other, so both directions must be proved. Proving only P ⇒ Q shows P is sufficient for Q, but not that Q is sufficient for P.",
+    "clue": "Think of the two arrows inside ⇔."
+   },
+   "b": {
+    "d": 3,
+    "q": "For a real number x, consider: x = 3 ⇒ x² = 9. Which statement about it is correct?",
+    "opts": [
+     "x = 3 is sufficient but not necessary for x² = 9",
+     "x = 3 is necessary but not sufficient for x² = 9",
+     "x = 3 is both necessary and sufficient for x² = 9",
+     "x = 3 is neither necessary nor sufficient for x² = 9"
+    ],
+    "why": "If x = 3 then x² = 9, so x = 3 is sufficient. But x = −3 also gives x² = 9, so x = 3 is not necessary. The reverse implication fails, so the ⇔ is false.",
+    "clue": "Try x = −3 in x² = 9."
+   }
+  }
+ }
 }

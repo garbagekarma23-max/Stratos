@@ -14,7 +14,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:30Z write: done",
-  "2026-11-01T15:14:48Z check: passed, cleared"
+  "2026-11-01T15:14:48Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -88,12 +89,12 @@
  "final": {
   "title": "Vector proofs",
   "card": [
-   "To prove a geometry result, write the sides as vectors. Name two sides from one corner, such as a and b, then write every other side or diagonal using a and b.",
+   "To prove a geometry result, write the sides as vectors. Name two sides from one vertex, such as \\(a\\) and \\(b\\), then write every other side or diagonal using \\(a\\) and \\(b\\).",
    "Two non-zero vectors are perpendicular when their scalar product is 0. So to prove two lines are perpendicular, show that the scalar product of their vectors is 0.",
-   "Worked example: a rhombus OABC has OA = a and OC = b, with |a| = |b| because all sides are equal. The diagonals are OB = a + b and AC = b − a.",
-   "Then (a + b)·(b − a) = b·b − a·a = |b|² − |a|² = 0. So the diagonals are perpendicular."
+   "Worked example: a rhombus OABC has \\(OA = a\\) and \\(OC = b\\), with \\(|a| = |b|\\) because all sides are equal. The diagonals are \\(OB = a + b\\) and \\(AC = b - a\\).",
+   "Then \\((a + b) \\cdot (b - a) = b \\cdot b - a \\cdot a\\), which is \\(|b|^{2} - |a|^{2} = 0\\). So the diagonals are perpendicular."
   ],
-  "remember": "Write the shape in terms of a and b, then show the scalar product is 0.",
+  "remember": "Write the shape in terms of \\(a\\) and \\(b\\), then show the scalar product is 0.",
   "a": {
    "q": "To prove that two diagonals of a shape are perpendicular, what must you show about their vectors?",
    "opts": [
@@ -107,16 +108,53 @@
   },
   "b": {
    "d": 3,
-   "q": "In a rhombus, OA = a, OC = b and |a| = |b|. Which step gives (a + b)·(b − a) = 0?",
+   "q": "In a rhombus, \\(OA = a\\), \\(OC = b\\) and \\(|a| = |b|\\). Which step gives \\((a + b) \\cdot (b - a) = 0\\)?",
    "opts": [
-    "It expands to |b|² − |a|², and the sides are equal",
-    "It expands to |a|² − |b|², and the sides are equal",
-    "It expands to |a|² + |b|², and the sides are equal",
-    "It expands to a·b − a·b, and the sides are parallel"
+    "It expands to \\(|b|^{2} - |a|^{2}\\), and the sides are equal",
+    "It expands to \\(|a|^{2} - |b|^{2}\\), and the sides are equal",
+    "It expands to \\(|a|^{2} + |b|^{2}\\), and the sides are equal",
+    "It expands to \\(a \\cdot b - a \\cdot b\\), and the sides are parallel"
    ],
-   "why": "Expanding gives a·b − a·a + b·b − b·a. The a·b terms cancel, leaving |b|² − |a|². Equal side lengths make this 0. The option with a plus sign is wrong because the a·a term is subtracted, not added.",
-   "clue": "The two a·b terms cancel, so check which squares are left and their signs."
+   "why": "Expanding gives \\(a \\cdot b - a \\cdot a + b \\cdot b - b \\cdot a\\). The \\(a \\cdot b\\) terms cancel, leaving \\(|b|^{2} - |a|^{2}\\). Equal side lengths make this 0. The option with a plus sign is wrong because the \\(a \\cdot a\\) term is subtracted, not added.",
+   "clue": "The two \\(a \\cdot b\\) terms cancel, so check which squares are left and their signs."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Vector proofs",
+   "card": [
+    "To prove a geometry result, write the sides as vectors. Name two sides from one corner, such as a and b, then write every other side or diagonal using a and b.",
+    "Two non-zero vectors are perpendicular when their scalar product is 0. So to prove two lines are perpendicular, show that the scalar product of their vectors is 0.",
+    "Worked example: a rhombus OABC has OA = a and OC = b, with |a| = |b| because all sides are equal. The diagonals are OB = a + b and AC = b − a.",
+    "Then (a + b)·(b − a) = b·b − a·a = |b|² − |a|² = 0. So the diagonals are perpendicular."
+   ],
+   "remember": "Write the shape in terms of a and b, then show the scalar product is 0.",
+   "a": {
+    "q": "To prove that two diagonals of a shape are perpendicular, what must you show about their vectors?",
+    "opts": [
+     "Their scalar product is 0",
+     "Their scalar product is 1",
+     "Their vector sum is the zero vector",
+     "They have equal magnitudes"
+    ],
+    "why": "Non-zero vectors are perpendicular exactly when their scalar product is 0. Equal magnitudes do not make lines perpendicular: the diagonals of a rectangle are equal in length but are not usually perpendicular.",
+    "clue": "Think of the test for perpendicular vectors."
+   },
+   "b": {
+    "d": 3,
+    "q": "In a rhombus, OA = a, OC = b and |a| = |b|. Which step gives (a + b)·(b − a) = 0?",
+    "opts": [
+     "It expands to |b|² − |a|², and the sides are equal",
+     "It expands to |a|² − |b|², and the sides are equal",
+     "It expands to |a|² + |b|², and the sides are equal",
+     "It expands to a·b − a·b, and the sides are parallel"
+    ],
+    "why": "Expanding gives a·b − a·a + b·b − b·a. The a·b terms cancel, leaving |b|² − |a|². Equal side lengths make this 0. The option with a plus sign is wrong because the a·a term is subtracted, not added.",
+    "clue": "The two a·b terms cancel, so check which squares are left and their signs."
+   }
+  }
+ }
 }

@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: done",
-  "2026-11-01T08:14:07Z check: passed, cleared"
+  "2026-11-01T08:14:07Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -84,19 +85,19 @@
   "card": [
    [
     "Permutation",
-    "an arrangement where order matters. Arranging n different items in a row can be done in n! ways, where n! = n × (n − 1) × ... × 1."
+    "an arrangement where order matters. Arranging \\(n\\) different items in a row can be done in \\(n!\\) ways, where \\(n! = n \\times (n - 1) \\times \\ldots \\times 1\\)."
    ],
    [
     "Combination",
-    "a selection where order does not matter. Choosing r from n different items can be done in nCr = n! ÷ (r! × (n − r)!) ways."
+    "a selection where order does not matter. Choosing \\(r\\) from \\(n\\) different items can be done in \\(\\binom{n}{r} = n! \\div (r! \\times (n - r)!)\\) ways."
    ],
    [
     "Repeated items",
-    "if some items are identical, divide n! by the factorial of each repeat count. The word AABC has 4! ÷ 2! = 12 arrangements."
+    "if some items are identical, divide \\(n!\\) by the factorial of each repeat count. The word AABC has \\(4! \\div 2! = 12\\) arrangements."
    ],
    [
     "Together",
-    "to keep two people side by side, treat them as one block, arrange the blocks, then multiply by the ways to order the pair. For 4 people with A and B together: 3! × 2! = 12."
+    "to keep two people side by side, treat them as one block, arrange the blocks, then multiply by the ways to order the pair. For 4 people with A and B together: \\(3! \\times 2! = 12\\)."
    ]
   ],
   "remember": "Order matters: arrange. Order does not matter: choose. Join a pair into one block.",
@@ -108,7 +109,7 @@
     "60",
     "20"
    ],
-   "why": "LEVEL has 5 letters, with L twice and E twice. So the count is 5! ÷ (2! × 2!) = 120 ÷ 4 = 30. Dividing by only one repeat gives 60, which is tempting but ignores the second repeated letter.",
+   "why": "LEVEL has 5 letters, with L twice and E twice. So the count is \\(5! \\div (2! \\times 2!) = 120 \\div 4 = 30\\). Dividing by only one repeat gives 60, which is tempting but ignores the second repeated letter.",
    "clue": "Two letters each appear twice."
   },
   "b": {
@@ -120,9 +121,58 @@
     "120",
     "12"
    ],
-   "why": "Treat Sam and Tia as one block. Then there are 4 units to arrange, which is 4! = 24 ways. The pair can sit in 2 orders, so 24 × 2 = 48. Leaving out the pair's order gives 24, which is the common slip.",
+   "why": "Treat Sam and Tia as one block. Then there are 4 units to arrange, which is \\(4! = 24\\) ways. The pair can sit in 2 orders, so \\(24 \\times 2 = 48\\). Leaving out the pair's order gives 24, which is the common slip.",
    "clue": "Count the block's arrangements, then the order inside the block."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Permutations and combinations",
+   "card": [
+    [
+     "Permutation",
+     "an arrangement where order matters. Arranging n different items in a row can be done in n! ways, where n! = n × (n − 1) × ... × 1."
+    ],
+    [
+     "Combination",
+     "a selection where order does not matter. Choosing r from n different items can be done in nCr = n! ÷ (r! × (n − r)!) ways."
+    ],
+    [
+     "Repeated items",
+     "if some items are identical, divide n! by the factorial of each repeat count. The word AABC has 4! ÷ 2! = 12 arrangements."
+    ],
+    [
+     "Together",
+     "to keep two people side by side, treat them as one block, arrange the blocks, then multiply by the ways to order the pair. For 4 people with A and B together: 3! × 2! = 12."
+    ]
+   ],
+   "remember": "Order matters: arrange. Order does not matter: choose. Join a pair into one block.",
+   "a": {
+    "q": "How many different arrangements of the letters in the word LEVEL are there?",
+    "opts": [
+     "30",
+     "120",
+     "60",
+     "20"
+    ],
+    "why": "LEVEL has 5 letters, with L twice and E twice. So the count is 5! ÷ (2! × 2!) = 120 ÷ 4 = 30. Dividing by only one repeat gives 60, which is tempting but ignores the second repeated letter.",
+    "clue": "Two letters each appear twice."
+   },
+   "b": {
+    "d": 3,
+    "q": "Five friends sit in a row of 5 seats. Two of them, Sam and Tia, must sit next to each other. How many seatings are possible?",
+    "opts": [
+     "48",
+     "24",
+     "120",
+     "12"
+    ],
+    "why": "Treat Sam and Tia as one block. Then there are 4 units to arrange, which is 4! = 24 ways. The pair can sit in 2 orders, so 24 × 2 = 48. Leaving out the pair's order gives 24, which is the common slip.",
+    "clue": "Count the block's arrangements, then the order inside the block."
+   }
+  }
+ }
 }

@@ -411,9 +411,11 @@ def main(argv=None):
 
 
 def save(path, rec, p, by):
-    rec['latex'] = {'at': now(), 'by': by, 'before': rec['final']}
+    # A point converted before keeps its first version as before, so --undo still puts back the plain text.
+    again = bool(rec.get('latex'))
+    rec['latex'] = {'at': now(), 'by': by, 'before': rec['latex']['before'] if again else rec['final']}
     rec['final'] = p
-    rec['log'].append(now() + ' maths: written in LaTeX (' + ('by hand' if by == 'hand' else 'convert_maths.py, the safe swaps') + ')')
+    rec['log'].append(now() + ' maths: ' + ('LaTeX changed by hand' if again else 'written in LaTeX (' + ('by hand' if by == 'hand' else 'convert_maths.py, the safe swaps') + ')'))
     write(path, rec)
 
 
