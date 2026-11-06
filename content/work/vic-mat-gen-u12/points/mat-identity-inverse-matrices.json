@@ -10,7 +10,8 @@
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -162,45 +163,94 @@
   "card": [
    [
     "Identity",
-    "The identity matrix I is a square matrix with 1s down the main diagonal and 0s elsewhere. For a square matrix A, using I of the same order, A × I = A and I × A = A."
+    "The identity matrix \\(I\\) is a square matrix with 1s down the main diagonal and 0s elsewhere. For a square matrix \\(A\\), using \\(I\\) of the same order, \\(A \\times I = A\\) and \\(I \\times A = A\\)."
    ],
    [
     "Inverse",
-    "The inverse of A is written A⁻¹. It is the matrix where A × A⁻¹ = I. Only a square matrix can have an inverse, and not every square matrix has one."
+    "The inverse of \\(A\\) is written \\(A^{-1}\\). It is the matrix where \\(A \\times A^{-1} = I\\). Only a square matrix can have an inverse, and not every square matrix has one."
    ],
    [
-    "2 × 2 rule",
-    "For A = [a b; c d], the determinant is ad − bc. If it is 0, there is no inverse. If not, A⁻¹ = 1/(ad − bc) × [d −b; −c a]."
+    "2 by 2 rule",
+    "For \\(A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), the determinant is \\(ad - bc\\). If it is 0, there is no inverse. If not, \\(A^{-1} = \\frac{1}{ad - bc} \\times \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}\\)."
    ],
    [
     "Example",
-    "For A = [3 1; 5 2], ad − bc = 3×2 − 1×5 = 1. So A⁻¹ = 1/1 × [2 −1; −5 3] = [2 −1; −5 3]."
+    "For \\(A = \\begin{bmatrix} 3 & 1 \\\\ 5 & 2 \\end{bmatrix}\\), \\(ad - bc = 3 \\times 2 - 1 \\times 5 = 1\\). So \\(A^{-1} = \\frac{1}{1} \\times \\begin{bmatrix} 2 & -1 \\\\ -5 & 3 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 2 & -1 \\\\ -5 & 3 \\end{bmatrix}\\)."
    ]
   ],
-  "remember": "A matrix times its inverse gives I. No inverse if the determinant is 0.",
+  "remember": "A matrix times its inverse gives \\(I\\). No inverse if the determinant is 0.",
   "a": {
-   "q": "What is the determinant of the matrix [4 3; 2 5]?",
+   "q": "What is the determinant of the matrix \\(\\begin{bmatrix} 4 & 3 \\\\ 2 & 5 \\end{bmatrix}\\)?",
    "opts": [
     "14",
     "26",
-    "−14",
+    "\\(-14\\)",
     "6"
    ],
-   "why": "The determinant is ad − bc = 4×5 − 3×2 = 20 − 6 = 14. The value 26 comes from adding the products instead of subtracting them.",
+   "why": "The determinant is \\(ad - bc = 4 \\times 5 - 3 \\times 2\\), which is \\(20 - 6 = 14\\). The value 26 comes from adding the products instead of subtracting them.",
    "clue": "Multiply the main diagonal, then take away the other diagonal's product."
   },
   "b": {
    "d": 3,
-   "q": "For which value of k does the matrix [2 k; 3 6] have no inverse?",
+   "q": "For which value of \\(k\\) does the matrix \\(\\begin{bmatrix} 2 & k \\\\ 3 & 6 \\end{bmatrix}\\) have no inverse?",
    "opts": [
-    "k = 4",
-    "k = 9",
-    "k = −4",
-    "k = 0"
+    "\\(k = 4\\)",
+    "\\(k = 9\\)",
+    "\\(k = -4\\)",
+    "\\(k = 0\\)"
    ],
-   "why": "The determinant is 2×6 − k×3 = 12 − 3k. It equals 0 when k = 4, so there is no inverse. When k = 0 the determinant is 12, which is not 0, so an inverse exists.",
-   "clue": "Set the determinant equal to 0 and solve for k."
+   "why": "The determinant is \\(2 \\times 6 - k \\times 3 = 12 - 3k\\). It equals 0 when \\(k = 4\\), so there is no inverse. When \\(k = 0\\) the determinant is 12, which is not 0, so an inverse exists.",
+   "clue": "Set the determinant equal to 0 and solve for \\(k\\)."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Identity and inverse matrices",
+   "card": [
+    [
+     "Identity",
+     "The identity matrix I is a square matrix with 1s down the main diagonal and 0s elsewhere. For a square matrix A, using I of the same order, A × I = A and I × A = A."
+    ],
+    [
+     "Inverse",
+     "The inverse of A is written A⁻¹. It is the matrix where A × A⁻¹ = I. Only a square matrix can have an inverse, and not every square matrix has one."
+    ],
+    [
+     "2 × 2 rule",
+     "For A = [a b; c d], the determinant is ad − bc. If it is 0, there is no inverse. If not, A⁻¹ = 1/(ad − bc) × [d −b; −c a]."
+    ],
+    [
+     "Example",
+     "For A = [3 1; 5 2], ad − bc = 3×2 − 1×5 = 1. So A⁻¹ = 1/1 × [2 −1; −5 3] = [2 −1; −5 3]."
+    ]
+   ],
+   "remember": "A matrix times its inverse gives I. No inverse if the determinant is 0.",
+   "a": {
+    "q": "What is the determinant of the matrix [4 3; 2 5]?",
+    "opts": [
+     "14",
+     "26",
+     "−14",
+     "6"
+    ],
+    "why": "The determinant is ad − bc = 4×5 − 3×2 = 20 − 6 = 14. The value 26 comes from adding the products instead of subtracting them.",
+    "clue": "Multiply the main diagonal, then take away the other diagonal's product."
+   },
+   "b": {
+    "d": 3,
+    "q": "For which value of k does the matrix [2 k; 3 6] have no inverse?",
+    "opts": [
+     "k = 4",
+     "k = 9",
+     "k = −4",
+     "k = 0"
+    ],
+    "why": "The determinant is 2×6 − k×3 = 12 − 3k. It equals 0 when k = 4, so there is no inverse. When k = 0 the determinant is 12, which is not 0, so an inverse exists.",
+    "clue": "Set the determinant equal to 0 and solve for k."
+   }
+  }
+ }
 }

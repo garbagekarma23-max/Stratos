@@ -13,7 +13,8 @@
   "2026-11-05T02:17:43Z autoreject: rejected, to be written again (a wording)",
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
-  "2026-11-05T02:37:17Z check: passed, cleared"
+  "2026-11-05T02:37:17Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -323,7 +324,7 @@
     "1705",
     "1950"
    ],
-   "why": "7 pm is after 1 pm, so add 12: 7 + 12 = 19, and 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+   "why": "7 pm is after 1 pm, so add 12: \\(7 + 12 = 19\\), and 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
    "clue": "From 1 pm on, add 12 to the hour."
   },
   "b": {
@@ -335,9 +336,46 @@
     "2 hours 45 minutes",
     "1 hour 55 minutes"
    ],
-   "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+   "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting \\(1905 - 1650\\) as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
    "clue": "Go to the next whole hour first, then count on."
   }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Duration and 24-hour time",
+   "card": [
+    "The 24-hour clock counts hours from 00 to 23 and is usually written with four digits. Midnight is 0000 and noon is 1200.",
+    "From 1:00 am to 12:59 pm, keep the hour and add a zero in front if needed: 3:45 am is 0345 and 12:30 pm is 1230. The 12 am hour is different. It becomes 00, so 12:20 am is 0020.",
+    "For pm times from 1:00 pm on, add 12 to the hour. So 3:45 pm is 1545. To go back, subtract 12 from the hour.",
+    "To find a duration, go to the next whole hour, then add the hours, then add the leftover minutes. From 1545 to 1810: 15 minutes to 1600, 2 hours to 1800, then 10 minutes. Total 2 hours 25 minutes."
+   ],
+   "remember": "Add 12 to pm hours from 1 pm on, and 12 am becomes 00. Find a duration in steps through the whole hours.",
+   "a": {
+    "q": "Write 7:05 pm as a 24-hour time.",
+    "opts": [
+     "1905",
+     "0705",
+     "1705",
+     "1950"
+    ],
+    "why": "7 pm is after 1 pm, so add 12: 7 + 12 = 19, and 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+    "clue": "From 1 pm on, add 12 to the hour."
+   },
+   "b": {
+    "d": 3,
+    "q": "A film in Mount Gambier begins at 1650 and finishes at 1905. What is its running time?",
+    "opts": [
+     "2 hours 15 minutes",
+     "2 hours 55 minutes",
+     "2 hours 45 minutes",
+     "1 hour 55 minutes"
+    ],
+    "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+    "clue": "Go to the next whole hour first, then count on."
+   }
+  }
+ }
 }

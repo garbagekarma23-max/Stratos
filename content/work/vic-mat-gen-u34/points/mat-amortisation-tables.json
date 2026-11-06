@@ -28,7 +28,8 @@
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -165,9 +166,9 @@
   "title": "Amortisation tables",
   "card": [
    "An amortisation table lists a loan period by period. Its columns are the payment, the interest, the reduction in principal and the balance.",
-   "Interest = balance at the start of the period × the interest rate for that period. Reduction in principal = payment − interest.",
-   "Each period the interest is added to the balance and the whole payment is taken off. So new balance = old balance + interest − payment, which equals old balance − reduction in principal.",
-   "Example: a $10 000 loan has interest of 6% per year, charged yearly, with a payment of $2000. Interest = 10 000 × 0.06 = $600. Reduction in principal = 2000 − 600 = $1400. New balance = 10 000 + 600 − 2000 = $8600."
+   "Interest \\(=\\) balance at the start of the period \\(\\times\\) the interest rate for that period. Reduction in principal \\(=\\) payment \\(-\\) interest.",
+   "Each period the interest is added to the balance and the whole payment is taken off. So new balance \\(=\\) old balance \\(+\\) interest \\(-\\) payment, which equals old balance \\(-\\) reduction in principal.",
+   "Example: a $10,000 loan has interest of 6% per year, charged yearly, with a payment of $2000. Interest \\(= \\$10{,}000 \\times 0.06 = \\$600\\). Reduction in principal \\(= \\$2000 - \\$600 = \\$1400\\). New balance \\(= \\$10{,}000 + \\$600 - \\$2000\\), which is $8600."
   ],
   "remember": "Part of each payment covers the interest. Only what is left over cuts the balance.",
   "a": {
@@ -178,7 +179,7 @@
     "$1000",
     "$1200"
    ],
-   "why": "Interest = 5000 × 0.04 = $200. Reduction in principal = 1000 − 200 = $800. The $200 is the interest, which the payment must cover first, so it is not the amount that reduces the principal.",
+   "why": "Interest \\(= \\$5000 \\times 0.04 = \\$200\\). Reduction in principal \\(= \\$1000 - \\$200 = \\$800\\). The $200 is the interest, which the payment must cover first, so it is not the amount that reduces the principal.",
    "clue": "Find the interest first, then take it from the payment."
   },
   "b": {
@@ -190,9 +191,46 @@
     "$6260",
     "$7760"
    ],
-   "why": "Interest = 8000 × 0.03 = $240. New balance = 8000 + 240 − 1500 = $6740, the same as 8000 − 1260. $6500 is wrong because it ignores the interest added to the balance, and $6260 takes the interest off instead of adding it.",
+   "why": "Interest \\(= \\$8000 \\times 0.03 = \\$240\\). New balance \\(= \\$8000 + \\$240 - \\$1500\\), which is $6740, the same as \\(\\$8000 - \\$1260\\). $6500 is wrong because it ignores the interest added to the balance, and $6260 takes the interest off instead of adding it.",
    "clue": "Interest is added to the balance before the payment comes off."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Amortisation tables",
+   "card": [
+    "An amortisation table lists a loan period by period. Its columns are the payment, the interest, the reduction in principal and the balance.",
+    "Interest = balance at the start of the period × the interest rate for that period. Reduction in principal = payment − interest.",
+    "Each period the interest is added to the balance and the whole payment is taken off. So new balance = old balance + interest − payment, which equals old balance − reduction in principal.",
+    "Example: a $10 000 loan has interest of 6% per year, charged yearly, with a payment of $2000. Interest = 10 000 × 0.06 = $600. Reduction in principal = 2000 − 600 = $1400. New balance = 10 000 + 600 − 2000 = $8600."
+   ],
+   "remember": "Part of each payment covers the interest. Only what is left over cuts the balance.",
+   "a": {
+    "q": "A loan balance is $5000 and the interest rate is 4% per period. The payment is $1000. What is the reduction in principal for this period?",
+    "opts": [
+     "$800",
+     "$200",
+     "$1000",
+     "$1200"
+    ],
+    "why": "Interest = 5000 × 0.04 = $200. Reduction in principal = 1000 − 200 = $800. The $200 is the interest, which the payment must cover first, so it is not the amount that reduces the principal.",
+    "clue": "Find the interest first, then take it from the payment."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya has a loan with a balance of $8000. The interest is 3% per period and the payment is $1500. What is the balance after this payment?",
+    "opts": [
+     "$6740",
+     "$6500",
+     "$6260",
+     "$7760"
+    ],
+    "why": "Interest = 8000 × 0.03 = $240. New balance = 8000 + 240 − 1500 = $6740, the same as 8000 − 1260. $6500 is wrong because it ignores the interest added to the balance, and $6260 takes the interest off instead of adding it.",
+    "clue": "Interest is added to the balance before the payment comes off."
+   }
+  }
+ }
 }

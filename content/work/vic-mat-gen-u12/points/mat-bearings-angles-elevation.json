@@ -17,7 +17,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:06Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -104,7 +105,7 @@
     "055°T",
     "215°T"
    ],
-   "why": "The bearing is under 180°, so add 180°: 125° + 180° = 305°T. The answer 055°T comes from subtracting from 180° instead.",
+   "why": "The bearing is under 180°, so add 180°: \\(125^{\\circ} + 180^{\\circ} = 305^{\\circ}\\text{T}\\). The answer 055°T comes from subtracting from 180° instead.",
    "clue": "The return direction is exactly opposite."
   },
   "b": {
@@ -116,9 +117,46 @@
     "70°",
     "120°"
    ],
-   "why": "The bearing from Q back to P is 070° + 180° = 250°T. The angle between 250°T and 150°T is 100°. The angle 80° is how far the ship turns, not the angle inside the triangle.",
+   "why": "The bearing from Q back to P is \\(070^{\\circ} + 180^{\\circ} = 250^{\\circ}\\text{T}\\). The angle between 250°T and 150°T is 100°. The angle 80° is how far the ship turns, not the angle inside the triangle.",
    "clue": "Find the back bearing from Q to P first."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Three-figure bearings",
+   "card": [
+    "A bearing is a direction measured clockwise from north. It is written with three figures and a T, such as 045°T or 135°T.",
+    "North is 000°T, east is 090°T, south is 180°T and west is 270°T.",
+    "To find the back bearing, add 180° if the bearing is under 180°, or subtract 180° if it is over. Example: if B is on 070°T from A, then A is on 250°T from B.",
+    "In navigation problems, draw a north line at each point. North lines are parallel, so they give equal alternate angles. This lets you find angles inside the triangle, then use the sine or cosine rule."
+   ],
+   "remember": "Measure clockwise from north, and swap direction by adding or subtracting 180°.",
+   "a": {
+    "q": "A hiker walks from camp to a lookout on a bearing of 125°T. What is the bearing from the lookout back to camp?",
+    "opts": [
+     "305°T",
+     "235°T",
+     "055°T",
+     "215°T"
+    ],
+    "why": "The bearing is under 180°, so add 180°: 125° + 180° = 305°T. The answer 055°T comes from subtracting from 180° instead.",
+    "clue": "The return direction is exactly opposite."
+   },
+   "b": {
+    "d": 3,
+    "q": "A ship sails from P to Q on a bearing of 070°T, then from Q to R on a bearing of 150°T. What is the interior angle PQR?",
+    "opts": [
+     "100°",
+     "80°",
+     "70°",
+     "120°"
+    ],
+    "why": "The bearing from Q back to P is 070° + 180° = 250°T. The angle between 250°T and 150°T is 100°. The angle 80° is how far the ship turns, not the angle inside the triangle.",
+    "clue": "Find the back bearing from Q to P first."
+   }
+  }
+ }
 }

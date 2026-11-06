@@ -17,7 +17,8 @@
   "2026-11-04T09:23:41Z new, match",
   "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:10Z write: done",
-  "2026-11-04T09:58:31Z check: passed, cleared"
+  "2026-11-04T09:58:31Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -91,34 +92,71 @@
   "title": "Surface area of cylinders",
   "card": [
    "A closed cylinder has 2 circles, one at the top and one at the bottom, and one curved surface around the side.",
-   "The two circles each have area πr². Together they give 2πr².",
-   "The curved surface unrolls into a rectangle. Its width is the circle's circumference, 2πr, and its height is h. Its area is 2πrh.",
-   "SA = 2πr² + 2πrh. Example: r = 2 cm and h = 5 cm. SA = 2π × 4 + 2π × 2 × 5 = 8π + 20π = 28π, which is about 88 cm²."
+   "The two circles each have area \\(\\pi r^{2}\\). Together they give \\(2\\pi r^{2}\\).",
+   "The curved surface unrolls into a rectangle. Its width is the circle's circumference, \\(2\\pi r\\), and its height is \\(h\\). Its area is \\(2\\pi rh\\).",
+   "\\(SA = 2\\pi r^{2} + 2\\pi rh\\). Example: \\(r = 2\\) cm and \\(h = 5\\) cm. \\(SA = 2\\pi \\times 4 + 2\\pi \\times 2 \\times 5\\), which is \\(8\\pi + 20\\pi = 28\\pi\\), about \\(88\\text{ cm}^{2}\\)."
   ],
   "remember": "Add the two circles to the unrolled rectangle.",
   "a": {
-   "q": "A closed cylinder has radius 3 cm and height 4 cm. What is its surface area, in terms of π?",
+   "q": "A closed cylinder has radius 3 cm and height 4 cm. What is its surface area, in terms of \\(\\pi\\)?",
    "opts": [
-    "42π cm²",
-    "24π cm²",
-    "30π cm²",
-    "66π cm²"
+    "\\(42\\pi\\text{ cm}^{2}\\)",
+    "\\(24\\pi\\text{ cm}^{2}\\)",
+    "\\(30\\pi\\text{ cm}^{2}\\)",
+    "\\(66\\pi\\text{ cm}^{2}\\)"
    ],
-   "why": "The circles give 2π × 9 = 18π. The curved part gives 2π × 3 × 4 = 24π. The total is 42π cm². 24π is only the curved part, so it leaves out the two circles.",
+   "why": "The circles give \\(2\\pi \\times 9 = 18\\pi\\). The curved part gives \\(2\\pi \\times 3 \\times 4 = 24\\pi\\). The total is \\(42\\pi\\text{ cm}^{2}\\). \\(24\\pi\\) is only the curved part, so it leaves out the two circles.",
    "clue": "Find the circles and the curved part separately."
   },
   "b": {
    "d": 3,
    "q": "A closed tin has diameter 10 cm and height 8 cm. What is its surface area, to the nearest square centimetre?",
    "opts": [
-    "408 cm²",
-    "565 cm²",
-    "251 cm²",
-    "816 cm²"
+    "\\(408\\text{ cm}^{2}\\)",
+    "\\(565\\text{ cm}^{2}\\)",
+    "\\(251\\text{ cm}^{2}\\)",
+    "\\(816\\text{ cm}^{2}\\)"
    ],
-   "why": "The radius is 5 cm. The circles give 2π × 25 = 50π and the side gives 2π × 5 × 8 = 80π. The total is 130π, about 408 cm². Using 10 as the radius gives a much larger wrong answer.",
+   "why": "The radius is 5 cm. The circles give \\(2\\pi \\times 25 = 50\\pi\\) and the side gives \\(2\\pi \\times 5 \\times 8 = 80\\pi\\). The total is \\(130\\pi\\), about \\(408\\text{ cm}^{2}\\). Using 10 as the radius gives a much larger wrong answer.",
    "clue": "Halve the diameter first."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Surface area of cylinders",
+   "card": [
+    "A closed cylinder has 2 circles, one at the top and one at the bottom, and one curved surface around the side.",
+    "The two circles each have area πr². Together they give 2πr².",
+    "The curved surface unrolls into a rectangle. Its width is the circle's circumference, 2πr, and its height is h. Its area is 2πrh.",
+    "SA = 2πr² + 2πrh. Example: r = 2 cm and h = 5 cm. SA = 2π × 4 + 2π × 2 × 5 = 8π + 20π = 28π, which is about 88 cm²."
+   ],
+   "remember": "Add the two circles to the unrolled rectangle.",
+   "a": {
+    "q": "A closed cylinder has radius 3 cm and height 4 cm. What is its surface area, in terms of π?",
+    "opts": [
+     "42π cm²",
+     "24π cm²",
+     "30π cm²",
+     "66π cm²"
+    ],
+    "why": "The circles give 2π × 9 = 18π. The curved part gives 2π × 3 × 4 = 24π. The total is 42π cm². 24π is only the curved part, so it leaves out the two circles.",
+    "clue": "Find the circles and the curved part separately."
+   },
+   "b": {
+    "d": 3,
+    "q": "A closed tin has diameter 10 cm and height 8 cm. What is its surface area, to the nearest square centimetre?",
+    "opts": [
+     "408 cm²",
+     "565 cm²",
+     "251 cm²",
+     "816 cm²"
+    ],
+    "why": "The radius is 5 cm. The circles give 2π × 25 = 50π and the side gives 2π × 5 × 8 = 80π. The total is 130π, about 408 cm². Using 10 as the radius gives a much larger wrong answer.",
+    "clue": "Halve the diameter first."
+   }
+  }
+ }
 }

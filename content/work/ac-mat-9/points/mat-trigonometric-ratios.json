@@ -24,7 +24,8 @@
   "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b other)",
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
-  "2026-11-05T02:37:17Z check: passed, cleared"
+  "2026-11-05T02:37:17Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -414,41 +415,87 @@
    "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle. The adjacent side is next to that angle and is not the hypotenuse.",
    [
     "Sine",
-    "sin = opposite ÷ hypotenuse."
+    "For the angle \\(\\theta\\), \\(\\sin \\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}\\)."
    ],
    [
     "Cosine",
-    "cos = adjacent ÷ hypotenuse."
+    "\\(\\cos \\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}\\)."
    ],
    [
     "Tangent",
-    "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
+    "\\(\\tan \\theta = \\frac{\\text{opposite}}{\\text{adjacent}}\\). Example: sides 3, 4 and 5, with 3 opposite the angle \\(\\theta\\) and 4 adjacent. Then \\(\\tan \\theta = \\frac{3}{4}\\) and \\(\\sin \\theta = \\frac{3}{5}\\). Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
    ]
   ],
   "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
   "a": {
-   "q": "A right-angled triangle has sides 5, 12 and 13. Angle B has the side 5 opposite it and the side 12 next to it. What is sin B?",
+   "q": "A right-angled triangle has sides 5, 12 and 13. Angle \\(B\\) has the side 5 opposite it and the side 12 next to it. What is \\(\\sin B\\)?",
    "opts": [
-    "5/13",
-    "12/13",
-    "5/12",
-    "13/5"
+    "\\(\\frac{5}{13}\\)",
+    "\\(\\frac{12}{13}\\)",
+    "\\(\\frac{5}{12}\\)",
+    "\\(\\frac{13}{5}\\)"
    ],
-   "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin B = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+   "why": "Sine is opposite \\(\\div\\) hypotenuse. The hypotenuse is 13, so \\(\\sin B = \\frac{5}{13}\\). The ratio \\(\\frac{5}{12}\\) is tempting, but that is tangent, which uses the adjacent side.",
    "clue": "Sine uses the opposite side and the longest side."
   },
   "b": {
    "d": 3,
-   "q": "Triangle P has sides 8, 15 and 17, with 8 opposite angle A and 15 adjacent to it. Triangle Q has sides 16, 30 and 34 and the same angle A, with 16 opposite it. What is true about tan A?",
+   "q": "Triangle P has sides 8, 15 and 17, with 8 opposite angle \\(A\\) and 15 adjacent to it. Triangle Q has sides 16, 30 and 34 and the same angle \\(A\\), with 16 opposite it. What is true about \\(\\tan A\\)?",
    "opts": [
-    "It is 8/15 in both triangles",
-    "It is 8/17 in both triangles",
-    "It is 8/15 in P and 16/15 in Q",
+    "It is \\(\\frac{8}{15}\\) in both triangles",
+    "It is \\(\\frac{8}{17}\\) in both triangles",
+    "It is \\(\\frac{8}{15}\\) in P and \\(\\frac{16}{15}\\) in Q",
     "It is twice as large in Q as in P"
    ],
-   "why": "tan A = opposite ÷ adjacent. In P it is 8/15, and in Q it is 16/30, which is also 8/15. Similar triangles give the same ratios for the same angle, even though Q's sides are twice as long. 8/17 is sin A, not tan A, and 16/15 mixes a side from Q with a side from P.",
-   "clue": "Work out opposite ÷ adjacent in each triangle and compare."
+   "why": "\\(\\tan A = \\frac{\\text{opposite}}{\\text{adjacent}}\\). In P it is \\(\\frac{8}{15}\\), and in Q it is \\(\\frac{16}{30}\\), which is also \\(\\frac{8}{15}\\). Similar triangles give the same ratios for the same angle, even though Q's sides are twice as long. \\(\\frac{8}{17}\\) is \\(\\sin A\\), not \\(\\tan A\\), and \\(\\frac{16}{15}\\) mixes a side from Q with a side from P.",
+   "clue": "Work out opposite \\(\\div\\) adjacent in each triangle and compare."
   }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "The trigonometric ratios",
+   "card": [
+    "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle. The adjacent side is next to that angle and is not the hypotenuse.",
+    [
+     "Sine",
+     "sin = opposite ÷ hypotenuse."
+    ],
+    [
+     "Cosine",
+     "cos = adjacent ÷ hypotenuse."
+    ],
+    [
+     "Tangent",
+     "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
+    ]
+   ],
+   "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
+   "a": {
+    "q": "A right-angled triangle has sides 5, 12 and 13. Angle B has the side 5 opposite it and the side 12 next to it. What is sin B?",
+    "opts": [
+     "5/13",
+     "12/13",
+     "5/12",
+     "13/5"
+    ],
+    "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin B = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+    "clue": "Sine uses the opposite side and the longest side."
+   },
+   "b": {
+    "d": 3,
+    "q": "Triangle P has sides 8, 15 and 17, with 8 opposite angle A and 15 adjacent to it. Triangle Q has sides 16, 30 and 34 and the same angle A, with 16 opposite it. What is true about tan A?",
+    "opts": [
+     "It is 8/15 in both triangles",
+     "It is 8/17 in both triangles",
+     "It is 8/15 in P and 16/15 in Q",
+     "It is twice as large in Q as in P"
+    ],
+    "why": "tan A = opposite ÷ adjacent. In P it is 8/15, and in Q it is 16/30, which is also 8/15. Similar triangles give the same ratios for the same angle, even though Q's sides are twice as long. 8/17 is sin A, not tan A, and 16/15 mixes a side from Q with a side from P.",
+    "clue": "Work out opposite ÷ adjacent in each triangle and compare."
+   }
+  }
+ }
 }

@@ -17,7 +17,8 @@
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: done",
-  "2026-11-01T15:05:28Z check: passed, cleared"
+  "2026-11-01T15:05:28Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -90,14 +91,14 @@
  "final": {
   "title": "Transition matrices",
   "card": [
-   "A transition matrix T shows the chance of moving between states in one step. Each column is one starting state, and the numbers in a column add to 1.",
-   "The entry in row i, column j is the chance of moving from state j to state i. The entry in row j, column j is the chance of staying put.",
-   "A state matrix S lists how many are in each state. The next state matrix is T × S.",
-   "Example: T = [0.8 0.3; 0.2 0.7] (rows separated by a semicolon) and S = [100; 50]. T × S = [0.8×100 + 0.3×50; 0.2×100 + 0.7×50] = [95; 55]."
+   "A transition matrix \\(T\\) shows the chance of moving between states in one step. Each column is one starting state, and the numbers in a column add to 1.",
+   "The entry in row \\(i\\), column \\(j\\) is the chance of moving from state \\(j\\) to state \\(i\\). The entry in row \\(j\\), column \\(j\\) is the chance of staying put.",
+   "A state matrix \\(S\\) lists how many are in each state. The next state matrix is \\(T \\times S\\).",
+   "Example: \\(T = \\begin{bmatrix} 0.8 & 0.3 \\\\ 0.2 & 0.7 \\end{bmatrix}\\) and \\(S = \\begin{bmatrix} 100 \\\\ 50 \\end{bmatrix}\\). The top entry of \\(T \\times S\\) is \\(0.8 \\times 100 + 0.3 \\times 50\\), which is 95. The bottom entry is \\(0.2 \\times 100 + 0.7 \\times 50\\), which is 55. So \\(T \\times S = \\begin{bmatrix} 95 \\\\ 55 \\end{bmatrix}\\)."
   ],
-  "remember": "Read a column as where that state's members go next. T × S gives the next state.",
+  "remember": "Read a column as where that state's members go next. \\(T \\times S\\) gives the next state.",
   "a": {
-   "q": "Commuters in a city use the bus or the train. T = [0.8 0.3; 0.2 0.7] has rows and columns in the order bus, train. What does the 0.3 in row 1, column 2 mean?",
+   "q": "Commuters in a city use the bus or the train. \\(T = \\begin{bmatrix} 0.8 & 0.3 \\\\ 0.2 & 0.7 \\end{bmatrix}\\) has rows and columns in the order bus, train. What does the 0.3 in row 1, column 2 mean?",
    "opts": [
     "Chance a train user switches to the bus",
     "Chance a bus user switches to the train",
@@ -109,16 +110,53 @@
   },
   "b": {
    "d": 2,
-   "q": "Two cafés share a town. This week 600 customers use Café A and 400 use Café B. T = [0.9 0.2; 0.1 0.8] has rows and columns in the order A, B. How many customers will use Café A next week?",
+   "q": "Two cafés share a town. This week 600 customers use Café A and 400 use Café B. \\(T = \\begin{bmatrix} 0.9 & 0.2 \\\\ 0.1 & 0.8 \\end{bmatrix}\\) has rows and columns in the order A, B. How many customers will use Café A next week?",
    "opts": [
     "620",
     "580",
     "540",
     "380"
    ],
-   "why": "Café A next week = 0.9 × 600 + 0.2 × 400 = 540 + 80 = 620. The 580 comes from using 0.1 instead of 0.2, which reads the column instead of the row. The 380 is the number at Café B.",
-   "clue": "Multiply row 1 of T by the column of customer numbers."
+   "why": "Café A next week \\(= 0.9 \\times 600 + 0.2 \\times 400\\), which is \\(540 + 80 = 620\\). The 580 comes from using 0.1 instead of 0.2, which reads the column instead of the row. The 380 is the number at Café B.",
+   "clue": "Multiply row 1 of \\(T\\) by the column of customer numbers."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Transition matrices",
+   "card": [
+    "A transition matrix T shows the chance of moving between states in one step. Each column is one starting state, and the numbers in a column add to 1.",
+    "The entry in row i, column j is the chance of moving from state j to state i. The entry in row j, column j is the chance of staying put.",
+    "A state matrix S lists how many are in each state. The next state matrix is T × S.",
+    "Example: T = [0.8 0.3; 0.2 0.7] (rows separated by a semicolon) and S = [100; 50]. T × S = [0.8×100 + 0.3×50; 0.2×100 + 0.7×50] = [95; 55]."
+   ],
+   "remember": "Read a column as where that state's members go next. T × S gives the next state.",
+   "a": {
+    "q": "Commuters in a city use the bus or the train. T = [0.8 0.3; 0.2 0.7] has rows and columns in the order bus, train. What does the 0.3 in row 1, column 2 mean?",
+    "opts": [
+     "Chance a train user switches to the bus",
+     "Chance a bus user switches to the train",
+     "Chance a train user stays on the train",
+     "Share of all commuters who use the bus"
+    ],
+    "why": "Row 1 is the bus and column 2 is the train, so 0.3 is the chance of moving from train to bus. The reverse option reads the row and column the wrong way round.",
+    "clue": "Column is where they start, row is where they end up."
+   },
+   "b": {
+    "d": 2,
+    "q": "Two cafés share a town. This week 600 customers use Café A and 400 use Café B. T = [0.9 0.2; 0.1 0.8] has rows and columns in the order A, B. How many customers will use Café A next week?",
+    "opts": [
+     "620",
+     "580",
+     "540",
+     "380"
+    ],
+    "why": "Café A next week = 0.9 × 600 + 0.2 × 400 = 540 + 80 = 620. The 580 comes from using 0.1 instead of 0.2, which reads the column instead of the row. The 380 is the number at Café B.",
+    "clue": "Multiply row 1 of T by the column of customer numbers."
+   }
+  }
+ }
 }

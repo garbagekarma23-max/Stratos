@@ -25,7 +25,8 @@
   "2026-11-01T15:14:47Z write: done",
   "2026-11-01T15:19:04Z check: flagged",
   "2026-11-01T15:21:20Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -207,12 +208,12 @@
     "Tree",
     "a connected graph with no cycles. A cycle is a walk that starts and ends at the same vertex without repeating any other vertex or any edge."
    ],
-   "A tree with n vertices has exactly n − 1 edges. For example, a tree with 6 vertices has 5 edges.",
+   "A tree with \\(n\\) vertices has exactly \\(n - 1\\) edges. For example, a tree with 6 vertices has 5 edges.",
    [
     "Spanning tree",
     "a tree made from some of the edges of a connected graph. It reaches every vertex of that graph."
    ],
-   "Example: a connected graph has 5 vertices and 7 edges. Any spanning tree of it has 5 − 1 = 4 edges, so 7 − 4 = 3 edges are left out to break every cycle."
+   "Example: a connected graph has 5 vertices and 7 edges. Any spanning tree of it has \\(5 - 1 = 4\\) edges, so \\(7 - 4 = 3\\) edges are left out to break every cycle."
   ],
   "remember": "A tree is connected with no cycles, and it has one fewer edge than vertices.",
   "a": {
@@ -223,7 +224,7 @@
     "13",
     "10"
    ],
-   "why": "A connected graph with no cycles is a tree, and a tree with n vertices has n − 1 edges, so 12 − 1 = 11. The answer 12 is tempting, but a connected graph with 12 edges on 12 vertices would contain a cycle.",
+   "why": "A connected graph with no cycles is a tree, and a tree with \\(n\\) vertices has \\(n - 1\\) edges, so \\(12 - 1 = 11\\). The answer 12 is tempting, but a connected graph with 12 edges on 12 vertices would contain a cycle.",
    "clue": "No cycles and connected means it is a tree."
   },
   "b": {
@@ -235,9 +236,52 @@
     "7",
     "10"
    ],
-   "why": "A spanning tree reaches all 8 vertices, so it has 8 − 1 = 7 edges. Edges removed = 11 − 7 = 4. The answer 3 comes from taking 11 − 8, which forgets that a tree has one fewer edge than vertices.",
+   "why": "A spanning tree reaches all 8 vertices, so it has \\(8 - 1 = 7\\) edges. Edges removed \\(= 11 - 7 = 4\\). The answer 3 comes from taking \\(11 - 8\\), which forgets that a tree has one fewer edge than vertices.",
    "clue": "First find how many edges the spanning tree keeps."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Trees and spanning trees",
+   "card": [
+    [
+     "Tree",
+     "a connected graph with no cycles. A cycle is a walk that starts and ends at the same vertex without repeating any other vertex or any edge."
+    ],
+    "A tree with n vertices has exactly n − 1 edges. For example, a tree with 6 vertices has 5 edges.",
+    [
+     "Spanning tree",
+     "a tree made from some of the edges of a connected graph. It reaches every vertex of that graph."
+    ],
+    "Example: a connected graph has 5 vertices and 7 edges. Any spanning tree of it has 5 − 1 = 4 edges, so 7 − 4 = 3 edges are left out to break every cycle."
+   ],
+   "remember": "A tree is connected with no cycles, and it has one fewer edge than vertices.",
+   "a": {
+    "q": "Mia draws a connected graph with no cycles on 12 vertices. How many edges does her graph have?",
+    "opts": [
+     "11",
+     "12",
+     "13",
+     "10"
+    ],
+    "why": "A connected graph with no cycles is a tree, and a tree with n vertices has n − 1 edges, so 12 − 1 = 11. The answer 12 is tempting, but a connected graph with 12 edges on 12 vertices would contain a cycle.",
+    "clue": "No cycles and connected means it is a tree."
+   },
+   "b": {
+    "d": 3,
+    "q": "A connected graph has 8 vertices and 11 edges. How many edges must be removed to leave a spanning tree?",
+    "opts": [
+     "4",
+     "3",
+     "7",
+     "10"
+    ],
+    "why": "A spanning tree reaches all 8 vertices, so it has 8 − 1 = 7 edges. Edges removed = 11 − 7 = 4. The answer 3 comes from taking 11 − 8, which forgets that a tree has one fewer edge than vertices.",
+    "clue": "First find how many edges the spanning tree keeps."
+   }
+  }
+ }
 }

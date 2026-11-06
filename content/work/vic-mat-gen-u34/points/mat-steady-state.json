@@ -9,7 +9,8 @@
   "2026-11-01T14:46:40Z write: done",
   "2026-11-01T14:56:03Z check: flagged",
   "2026-11-01T15:05:28Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -160,7 +161,7 @@
    "After many steps, a regular transition matrix gives a steady state. The number in each state stops changing, whatever the starting split was.",
    "People or items still move between states in a steady state. The numbers moving out of each state equal the numbers moving in, so the totals stay put.",
    "To find it, write that balance for one state and keep the total fixed. Example: each month 10% of A move to B and 20% of B move to A, with 900 in total.",
-   "Balance: 10% of A = 20% of B, so A = 2 × B. With A + B = 900, B = 300 and A = 600. Check: 60 leave A and 60 join it."
+   "Balance: 10% of \\(A\\) \\(=\\) 20% of \\(B\\), so \\(A = 2 \\times B\\). With \\(A + B = 900\\), \\(B = 300\\) and \\(A = 600\\). Check: 60 leave A and 60 join it."
   ],
   "remember": "In a steady state the numbers stop changing because movement out equals movement in.",
   "a": {
@@ -183,9 +184,46 @@
     "500",
     "800"
    ],
-   "why": "At the steady state, 20% of train users = 30% of bus users, so train : bus = 3 : 2. Of 1000 commuters, that is 600 train and 400 bus. The starting split does not change the steady state, and 400 is the bus figure.",
+   "why": "At the steady state, 20% of train users \\(=\\) 30% of bus users, so train \\(:\\) bus \\(= 3 : 2\\). Of 1000 commuters, that is 600 train and 400 bus. The starting split does not change the steady state, and 400 is the bus figure.",
    "clue": "Balance the numbers switching each way. The starting split does not matter."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Steady state",
+   "card": [
+    "After many steps, a regular transition matrix gives a steady state. The number in each state stops changing, whatever the starting split was.",
+    "People or items still move between states in a steady state. The numbers moving out of each state equal the numbers moving in, so the totals stay put.",
+    "To find it, write that balance for one state and keep the total fixed. Example: each month 10% of A move to B and 20% of B move to A, with 900 in total.",
+    "Balance: 10% of A = 20% of B, so A = 2 × B. With A + B = 900, B = 300 and A = 600. Check: 60 leave A and 60 join it."
+   ],
+   "remember": "In a steady state the numbers stop changing because movement out equals movement in.",
+   "a": {
+    "q": "Which statement describes a steady state?",
+    "opts": [
+     "Another step leaves the numbers in each state the same",
+     "Every state ends up holding the same number of people",
+     "Nobody moves from one state to another any more",
+     "One state slowly loses everyone until it is empty"
+    ],
+    "why": "In a steady state, the numbers leaving each state equal the numbers joining it, so another step changes nothing. People still move between states, so the idea that movement stops is wrong.",
+    "clue": "Do people stop moving, or do the totals stop changing?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Each month, 20% of train users in a town switch to the bus, and 30% of bus users switch to the train. The others stay. Of 1000 commuters, 100 use the train and 900 use the bus at the start. In the long run, how many use the train?",
+    "opts": [
+     "600",
+     "400",
+     "500",
+     "800"
+    ],
+    "why": "At the steady state, 20% of train users = 30% of bus users, so train : bus = 3 : 2. Of 1000 commuters, that is 600 train and 400 bus. The starting split does not change the steady state, and 400 is the bus figure.",
+    "clue": "Balance the numbers switching each way. The starting split does not matter."
+   }
+  }
+ }
 }

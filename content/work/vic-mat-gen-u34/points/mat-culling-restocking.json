@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T14:36:27Z new, write",
   "2026-11-01T14:46:40Z write: done",
-  "2026-11-01T14:56:02Z check: passed, cleared"
+  "2026-11-01T14:56:02Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -70,35 +71,72 @@
  "final": {
   "title": "Culling and restocking",
   "card": [
-   "Culling removes animals from a population. Restocking adds animals to it. Both can be built into a matrix recurrence by using a matrix B.",
-   "The rule is S(n+1) = T × S(n) + B. Multiply by T first, then add B.",
-   "A positive entry in B restocks that state. A negative entry in B culls that state.",
-   "Example: T × S(0) = [70; 80] and B = [−10; 20]. Then S(1) = [70 − 10; 80 + 20] = [60; 100]."
+   "Culling removes animals from a population. Restocking adds animals to it. Both can be built into a matrix recurrence by using a matrix \\(B\\).",
+   "The rule is \\(S_{n+1} = TS_{n} + B\\). Multiply by \\(T\\) first, then add \\(B\\).",
+   "A positive entry in \\(B\\) restocks that state. A negative entry in \\(B\\) culls that state.",
+   "Example: \\(TS_{0} = \\begin{bmatrix} 70 \\\\ 80 \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} -10 \\\\ 20 \\end{bmatrix}\\). Then \\(S_{1} = \\begin{bmatrix} 70 - 10 \\\\ 80 + 20 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 60 \\\\ 100 \\end{bmatrix}\\)."
   ],
-  "remember": "Multiply by T first, then add B: a negative entry culls and a positive entry restocks.",
+  "remember": "Multiply by \\(T\\) first, then add \\(B\\): a negative entry culls and a positive entry restocks.",
   "a": {
-   "q": "In S(n+1) = T × S(n) + B, what does a negative entry in B mean?",
+   "q": "In \\(S_{n+1} = TS_{n} + B\\), what does a negative entry in \\(B\\) mean?",
    "opts": [
     "Animals are culled from that state each step",
     "Animals are restocked into that state each step",
     "That state's chance of staying is negative",
     "That state is left out of the model"
    ],
-   "why": "B is added after the transition, so a negative entry takes that many away from the state. Restocking is the opposite, and it needs a positive entry.",
-   "clue": "B is added to the population, so a negative number takes away."
+   "why": "\\(B\\) is added after the transition, so a negative entry takes that many away from the state. Restocking is the opposite, and it needs a positive entry.",
+   "clue": "\\(B\\) is added to the population, so a negative number takes away."
   },
   "b": {
    "d": 3,
-   "q": "Deer live in a forest and on a plain. Each year, T × S gives the new numbers after moving, where T = [0.8 0.1; 0.2 0.9]. Then B = [−20; 50] is added. At the start S(0) = [300; 200]. What is S(1), as forest then plain?",
+   "q": "Deer live in a forest and on a plain. Each year, \\(TS_{n}\\) gives the new numbers after moving, where \\(T = \\begin{bmatrix} 0.8 & 0.1 \\\\ 0.2 & 0.9 \\end{bmatrix}\\). Then \\(B = \\begin{bmatrix} -20 \\\\ 50 \\end{bmatrix}\\) is added. At the start \\(S_{0} = \\begin{bmatrix} 300 \\\\ 200 \\end{bmatrix}\\). What is \\(S_{1}\\), as forest then plain?",
    "opts": [
     "240 and 290",
     "249 and 281",
     "280 and 190",
     "280 and 250"
    ],
-   "why": "T × S(0) = [0.8×300 + 0.1×200; 0.2×300 + 0.9×200] = [260; 240]. Adding B gives [240; 290]. Adding B before multiplying by T gives 249 and 281, which is the wrong order.",
-   "clue": "Find T × S(0) first, then add B to the result."
+   "why": "\\(TS_{0} = \\begin{bmatrix} 0.8 \\times 300 + 0.1 \\times 200 \\\\ 0.2 \\times 300 + 0.9 \\times 200 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 260 \\\\ 240 \\end{bmatrix}\\). Adding \\(B\\) gives \\(\\begin{bmatrix} 240 \\\\ 290 \\end{bmatrix}\\). Adding \\(B\\) before multiplying by \\(T\\) gives 249 and 281, which is the wrong order.",
+   "clue": "Find \\(TS_{0}\\) first, then add \\(B\\) to the result."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Culling and restocking",
+   "card": [
+    "Culling removes animals from a population. Restocking adds animals to it. Both can be built into a matrix recurrence by using a matrix B.",
+    "The rule is S(n+1) = T × S(n) + B. Multiply by T first, then add B.",
+    "A positive entry in B restocks that state. A negative entry in B culls that state.",
+    "Example: T × S(0) = [70; 80] and B = [−10; 20]. Then S(1) = [70 − 10; 80 + 20] = [60; 100]."
+   ],
+   "remember": "Multiply by T first, then add B: a negative entry culls and a positive entry restocks.",
+   "a": {
+    "q": "In S(n+1) = T × S(n) + B, what does a negative entry in B mean?",
+    "opts": [
+     "Animals are culled from that state each step",
+     "Animals are restocked into that state each step",
+     "That state's chance of staying is negative",
+     "That state is left out of the model"
+    ],
+    "why": "B is added after the transition, so a negative entry takes that many away from the state. Restocking is the opposite, and it needs a positive entry.",
+    "clue": "B is added to the population, so a negative number takes away."
+   },
+   "b": {
+    "d": 3,
+    "q": "Deer live in a forest and on a plain. Each year, T × S gives the new numbers after moving, where T = [0.8 0.1; 0.2 0.9]. Then B = [−20; 50] is added. At the start S(0) = [300; 200]. What is S(1), as forest then plain?",
+    "opts": [
+     "240 and 290",
+     "249 and 281",
+     "280 and 190",
+     "280 and 250"
+    ],
+    "why": "T × S(0) = [0.8×300 + 0.1×200; 0.2×300 + 0.9×200] = [260; 240]. Adding B gives [240; 290]. Adding B before multiplying by T gives 249 and 281, which is the wrong order.",
+    "clue": "Find T × S(0) first, then add B to the result."
+   }
+  }
+ }
 }

@@ -32,7 +32,8 @@
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -218,11 +219,11 @@
   "title": "Compound interest with regular additions",
   "card": [
    "This investment earns compound interest, and the same amount is also added at the end of every period. The balance grows from both.",
-   "Each period: new balance = old balance × (1 + r) + deposit, where r is the interest rate for one period as a decimal. Divide an annual rate by the number of periods in a year.",
-   "Example: start with $1000, interest 10% per year, add $200 at the end of each year. After year 1: 1000 × 1.10 + 200 = $1300.",
-   "After year 2: 1300 × 1.10 + 200 = $1630. The interest is worked out on the whole balance, including earlier deposits and earlier interest."
+   "Each period: new balance \\(=\\) old balance \\(\\times\\) \\((1 + r)\\) \\(+\\) deposit, where \\(r\\) is the interest rate for one period as a decimal. Divide an annual rate by the number of periods in a year.",
+   "Example: start with $1000, interest 10% per year, add $200 at the end of each year. After year 1: \\(\\$1000 \\times 1.10 + \\$200 = \\$1300\\).",
+   "After year 2: \\(\\$1300 \\times 1.10 + \\$200 = \\$1630\\). The interest is worked out on the whole balance, including earlier deposits and earlier interest."
   ],
-  "remember": "Multiply the balance by (1 + r), then add the deposit, and repeat.",
+  "remember": "Multiply the balance by \\((1 + r)\\), then add the deposit, and repeat.",
   "a": {
    "q": "An account has $2000, earns 5% per year, and $500 is added at the end of each year. What is the balance after year 1?",
    "opts": [
@@ -231,7 +232,7 @@
     "$2100",
     "$2625"
    ],
-   "why": "New balance = 2000 × 1.05 + 500 = 2100 + 500 = $2600. $2625 adds the deposit before the interest, but the deposit comes at the end of the year. $2500 skips the interest, and $2100 leaves out the deposit.",
+   "why": "New balance \\(= \\$2000 \\times 1.05 + \\$500\\), which is \\(\\$2100 + \\$500 = \\$2600\\). $2625 adds the deposit before the interest, but the deposit comes at the end of the year. $2500 skips the interest, and $2100 leaves out the deposit.",
    "clue": "Add the interest first, then the deposit."
   },
   "b": {
@@ -243,9 +244,46 @@
     "$1320.00",
     "$1123.60"
    ],
-   "why": "Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = 1229.60 + 100 = $1329.60. $1341.96 adds each deposit before the interest, $1320.00 pays interest only on the first $1000, and $1123.60 leaves out the deposits.",
+   "why": "Year 1: \\(\\$1000 \\times 1.06 + \\$100 = \\$1160\\). Year 2: \\(\\$1160 \\times 1.06 + \\$100\\), which is \\(\\$1229.60 + \\$100 = \\$1329.60\\). $1341.96 adds each deposit before the interest, $1320.00 pays interest only on the first $1000, and $1123.60 leaves out the deposits.",
    "clue": "Work out year 1 first, then use that balance for year 2."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Compound interest with regular additions",
+   "card": [
+    "This investment earns compound interest, and the same amount is also added at the end of every period. The balance grows from both.",
+    "Each period: new balance = old balance × (1 + r) + deposit, where r is the interest rate for one period as a decimal. Divide an annual rate by the number of periods in a year.",
+    "Example: start with $1000, interest 10% per year, add $200 at the end of each year. After year 1: 1000 × 1.10 + 200 = $1300.",
+    "After year 2: 1300 × 1.10 + 200 = $1630. The interest is worked out on the whole balance, including earlier deposits and earlier interest."
+   ],
+   "remember": "Multiply the balance by (1 + r), then add the deposit, and repeat.",
+   "a": {
+    "q": "An account has $2000, earns 5% per year, and $500 is added at the end of each year. What is the balance after year 1?",
+    "opts": [
+     "$2600",
+     "$2500",
+     "$2100",
+     "$2625"
+    ],
+    "why": "New balance = 2000 × 1.05 + 500 = 2100 + 500 = $2600. $2625 adds the deposit before the interest, but the deposit comes at the end of the year. $2500 skips the interest, and $2100 leaves out the deposit.",
+    "clue": "Add the interest first, then the deposit."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya opens a savings account with $1000. It earns 6% per year, and she adds $100 at the end of each year. What is the balance after year 2?",
+    "opts": [
+     "$1329.60",
+     "$1341.96",
+     "$1320.00",
+     "$1123.60"
+    ],
+    "why": "Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = 1229.60 + 100 = $1329.60. $1341.96 adds each deposit before the interest, $1320.00 pays interest only on the first $1000, and $1123.60 leaves out the deposits.",
+    "clue": "Work out year 1 first, then use that balance for year 2."
+   }
+  }
+ }
 }

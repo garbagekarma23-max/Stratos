@@ -13,7 +13,8 @@
   "2026-11-04T09:23:41Z new, match",
   "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:10Z write: done",
-  "2026-11-04T09:58:31Z check: passed, cleared"
+  "2026-11-04T09:58:31Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -94,39 +95,82 @@
   "card": [
    [
     "Perfect square",
-    "(a + b)² = a² + 2ab + b². Square the first term, double the product of the two terms, then square the last term."
+    "\\((a + b)^{2} = a^{2} + 2ab + b^{2}\\). Square the first term, double the product of the two terms, then square the last term."
    ],
-   "Worked example: (x + 4)² = x² + 2 × x × 4 + 4² = x² + 8x + 16. Note that (x + 4)² is not x² + 16.",
+   "Worked example: \\((x + 4)^{2} = x^{2} + 2 \\times x \\times 4 + 4^{2}\\), which is \\(x^{2} + 8x + 16\\). Note that \\((x + 4)^{2}\\) is not \\(x^{2} + 16\\).",
    [
     "Difference of two squares",
-    "(a + b)(a − b) = a² − b². The middle terms cancel, so only two terms are left."
+    "\\((a + b)(a - b) = a^{2} - b^{2}\\). The middle terms cancel, so only two terms are left."
    ],
-   "Worked example: (x + 5)(x − 5) = x² − 25. The brackets must have the same two terms, one with + and one with −."
+   "Worked example: \\((x + 5)(x - 5) = x^{2} - 25\\). The brackets must have the same two terms, one with \\(+\\) and one with \\(-\\)."
   ],
-  "remember": "A squared bracket has a middle term 2ab. Matching brackets with + and − have no middle term.",
+  "remember": "A squared bracket has a middle term \\(2ab\\). Matching brackets with \\(+\\) and \\(-\\) have no middle term.",
   "a": {
-   "q": "What is (x + 6)² when expanded?",
+   "q": "What is \\((x + 6)^{2}\\) when expanded?",
    "opts": [
-    "x² + 12x + 36",
-    "x² + 36",
-    "x² + 6x + 36",
-    "x² + 12x + 12"
+    "\\(x^{2} + 12x + 36\\)",
+    "\\(x^{2} + 36\\)",
+    "\\(x^{2} + 6x + 36\\)",
+    "\\(x^{2} + 12x + 12\\)"
    ],
-   "why": "Using (a + b)², the middle term is 2 × x × 6 = 12x and the last is 6² = 36. The answer x² + 36 is tempting, but it leaves out the middle term.",
-   "clue": "Double the product of x and 6 for the middle term."
+   "why": "Using \\((a + b)^{2}\\), the middle term is \\(2 \\times x \\times 6 = 12x\\) and the last is \\(6^{2} = 36\\). The answer \\(x^{2} + 36\\) is tempting, but it leaves out the middle term.",
+   "clue": "Double the product of \\(x\\) and 6 for the middle term."
   },
   "b": {
    "d": 2,
-   "q": "What is (y + 9)(y − 9) when expanded?",
+   "q": "What is \\((y + 9)(y - 9)\\) when expanded?",
    "opts": [
-    "y² − 81",
-    "y² + 81",
-    "y² − 18y − 81",
-    "y² − 18"
+    "\\(y^{2} - 81\\)",
+    "\\(y^{2} + 81\\)",
+    "\\(y^{2} - 18y - 81\\)",
+    "\\(y^{2} - 18\\)"
    ],
-   "why": "The brackets match except for the sign, so the middle terms cancel and the answer is y² − 9² = y² − 81. Writing y² + 81 mixes this up with a perfect square, which has a plus sign for the last term.",
-   "clue": "The y terms with 9 cancel out."
+   "why": "The brackets match except for the sign, so the middle terms cancel and the answer is \\(y^{2} - 9^{2} = y^{2} - 81\\). Writing \\(y^{2} + 81\\) mixes this up with a perfect square, which has a plus sign for the last term.",
+   "clue": "The \\(y\\) terms with 9 cancel out."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Perfect squares and difference of two squares",
+   "card": [
+    [
+     "Perfect square",
+     "(a + b)² = a² + 2ab + b². Square the first term, double the product of the two terms, then square the last term."
+    ],
+    "Worked example: (x + 4)² = x² + 2 × x × 4 + 4² = x² + 8x + 16. Note that (x + 4)² is not x² + 16.",
+    [
+     "Difference of two squares",
+     "(a + b)(a − b) = a² − b². The middle terms cancel, so only two terms are left."
+    ],
+    "Worked example: (x + 5)(x − 5) = x² − 25. The brackets must have the same two terms, one with + and one with −."
+   ],
+   "remember": "A squared bracket has a middle term 2ab. Matching brackets with + and − have no middle term.",
+   "a": {
+    "q": "What is (x + 6)² when expanded?",
+    "opts": [
+     "x² + 12x + 36",
+     "x² + 36",
+     "x² + 6x + 36",
+     "x² + 12x + 12"
+    ],
+    "why": "Using (a + b)², the middle term is 2 × x × 6 = 12x and the last is 6² = 36. The answer x² + 36 is tempting, but it leaves out the middle term.",
+    "clue": "Double the product of x and 6 for the middle term."
+   },
+   "b": {
+    "d": 2,
+    "q": "What is (y + 9)(y − 9) when expanded?",
+    "opts": [
+     "y² − 81",
+     "y² + 81",
+     "y² − 18y − 81",
+     "y² − 18"
+    ],
+    "why": "The brackets match except for the sign, so the middle terms cancel and the answer is y² − 9² = y² − 81. Writing y² + 81 mixes this up with a perfect square, which has a plus sign for the last term.",
+    "clue": "The y terms with 9 cancel out."
+   }
+  }
+ }
 }

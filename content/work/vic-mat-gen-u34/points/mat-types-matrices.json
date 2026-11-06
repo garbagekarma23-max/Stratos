@@ -20,7 +20,8 @@
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -191,35 +192,72 @@
  "final": {
   "title": "Types of matrices",
   "card": [
-   "The order of a matrix is rows × columns, so a 2 × 3 matrix has 2 rows and 3 columns. A row matrix has one row, a column matrix has one column, and a square matrix has equal numbers of rows and columns.",
+   "The order of a matrix is rows \\(\\times\\) columns, so a \\(2 \\times 3\\) matrix has 2 rows and 3 columns. A row matrix has one row, a column matrix has one column, and a square matrix has equal numbers of rows and columns.",
    "The main diagonal of a square matrix runs from top left to bottom right. A diagonal matrix has 0s everywhere off it. An upper triangular matrix has 0s everywhere below it, and a lower triangular matrix has 0s everywhere above it.",
-   "A symmetric matrix is square, and each element equals the one in its mirror position across the main diagonal. The identity matrix I has 1s on the main diagonal and 0s elsewhere. A zero matrix has every element 0, and a binary matrix has only 0s and 1s.",
-   "The transpose swaps rows and columns, so row 1 becomes column 1. For example, the transpose of [1 2 3] is a column matrix with 1, 2, 3 going down. A 2 × 3 matrix has a 3 × 2 transpose."
+   "A symmetric matrix is square, and each element equals the one in its mirror position across the main diagonal. The identity matrix \\(I\\) has 1s on the main diagonal and 0s elsewhere. A zero matrix has every element 0, and a binary matrix has only 0s and 1s.",
+   "The transpose swaps rows and columns, so row 1 becomes column 1. For example, the transpose of \\(\\begin{bmatrix} 1 & 2 & 3 \\end{bmatrix}\\) is a column matrix with 1, 2, 3 going down. A \\(2 \\times 3\\) matrix has a \\(3 \\times 2\\) transpose."
   ],
-  "remember": "Order is rows × columns. The transpose swaps rows and columns, so the order flips.",
+  "remember": "Order is rows \\(\\times\\) columns. The transpose swaps rows and columns, so the order flips.",
   "a": {
-   "q": "Matrix M has 4 rows and 2 columns. What is the order of the transpose of M?",
+   "q": "Matrix \\(M\\) has 4 rows and 2 columns. What is the order of the transpose of \\(M\\)?",
    "opts": [
-    "2 × 4",
-    "4 × 2",
-    "2 × 2",
-    "4 × 4"
+    "\\(2 \\times 4\\)",
+    "\\(4 \\times 2\\)",
+    "\\(2 \\times 2\\)",
+    "\\(4 \\times 4\\)"
    ],
-   "why": "The transpose swaps rows and columns, so 4 rows and 2 columns become 2 rows and 4 columns. The order is 2 × 4. The order 4 × 2 is the original matrix, which comes from forgetting to swap.",
+   "why": "The transpose swaps rows and columns, so 4 rows and 2 columns become 2 rows and 4 columns. The order is \\(2 \\times 4\\). The order \\(4 \\times 2\\) is the original matrix, which comes from forgetting to swap.",
    "clue": "Swap the number of rows and the number of columns."
   },
   "b": {
    "d": 3,
-   "q": "Which matrix is symmetric? Rows are separated by a semicolon.",
+   "q": "Which matrix is symmetric?",
    "opts": [
-    "[2 5; 5 3]",
-    "[2 5; 3 5]",
-    "[2 0; 5 3]",
-    "[2 5 3; 5 3 1]"
+    "\\(\\begin{bmatrix} 2 & 5 \\\\ 5 & 3 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 2 & 5 \\\\ 3 & 5 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 2 & 0 \\\\ 5 & 3 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 2 & 5 & 3 \\\\ 5 & 3 & 1 \\end{bmatrix}\\)"
    ],
-   "why": "In [2 5; 5 3] the elements in row 1, column 2 and row 2, column 1 are both 5, so it matches its mirror image. [2 0; 5 3] is lower triangular, not symmetric, because 0 and 5 differ. [2 5 3; 5 3 1] is not square, so it cannot be symmetric.",
+   "why": "In \\(\\begin{bmatrix} 2 & 5 \\\\ 5 & 3 \\end{bmatrix}\\) the elements in row 1, column 2 and row 2, column 1 are both 5, so it matches its mirror image. \\(\\begin{bmatrix} 2 & 0 \\\\ 5 & 3 \\end{bmatrix}\\) is lower triangular, not symmetric, because 0 and 5 differ. \\(\\begin{bmatrix} 2 & 5 & 3 \\\\ 5 & 3 & 1 \\end{bmatrix}\\) is not square, so it cannot be symmetric.",
    "clue": "A symmetric matrix must be square, and its mirror positions must match."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Types of matrices",
+   "card": [
+    "The order of a matrix is rows × columns, so a 2 × 3 matrix has 2 rows and 3 columns. A row matrix has one row, a column matrix has one column, and a square matrix has equal numbers of rows and columns.",
+    "The main diagonal of a square matrix runs from top left to bottom right. A diagonal matrix has 0s everywhere off it. An upper triangular matrix has 0s everywhere below it, and a lower triangular matrix has 0s everywhere above it.",
+    "A symmetric matrix is square, and each element equals the one in its mirror position across the main diagonal. The identity matrix I has 1s on the main diagonal and 0s elsewhere. A zero matrix has every element 0, and a binary matrix has only 0s and 1s.",
+    "The transpose swaps rows and columns, so row 1 becomes column 1. For example, the transpose of [1 2 3] is a column matrix with 1, 2, 3 going down. A 2 × 3 matrix has a 3 × 2 transpose."
+   ],
+   "remember": "Order is rows × columns. The transpose swaps rows and columns, so the order flips.",
+   "a": {
+    "q": "Matrix M has 4 rows and 2 columns. What is the order of the transpose of M?",
+    "opts": [
+     "2 × 4",
+     "4 × 2",
+     "2 × 2",
+     "4 × 4"
+    ],
+    "why": "The transpose swaps rows and columns, so 4 rows and 2 columns become 2 rows and 4 columns. The order is 2 × 4. The order 4 × 2 is the original matrix, which comes from forgetting to swap.",
+    "clue": "Swap the number of rows and the number of columns."
+   },
+   "b": {
+    "d": 3,
+    "q": "Which matrix is symmetric? Rows are separated by a semicolon.",
+    "opts": [
+     "[2 5; 5 3]",
+     "[2 5; 3 5]",
+     "[2 0; 5 3]",
+     "[2 5 3; 5 3 1]"
+    ],
+    "why": "In [2 5; 5 3] the elements in row 1, column 2 and row 2, column 1 are both 5, so it matches its mirror image. [2 0; 5 3] is lower triangular, not symmetric, because 0 and 5 differ. [2 5 3; 5 3 1] is not square, so it cannot be symmetric.",
+    "clue": "A symmetric matrix must be square, and its mirror positions must match."
+   }
+  }
+ }
 }

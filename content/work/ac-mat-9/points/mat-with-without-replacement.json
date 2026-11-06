@@ -9,7 +9,8 @@
   "2026-11-04T09:36:57Z write: done",
   "2026-11-04T09:47:09Z check: flagged",
   "2026-11-04T09:58:31Z fix: suggested",
-  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -189,33 +190,76 @@
     "Without replacement",
     "The item is kept out after each pick. The total drops by 1, and the count of the picked type drops by 1. The counts of other types stay the same."
    ],
-   "Example: a bag has 3 red and 2 blue counters. P(red) = 3/5 on the first pick.",
-   "If a red is kept out, 2 red and 2 blue are left, so P(red) on the second pick = 2/4. If the red is put back, it is still 3/5."
+   "Example: a bag has 3 red and 2 blue counters. \\(P(\\text{red}) = \\frac{3}{5}\\) on the first pick.",
+   "If a red is kept out, 2 red and 2 blue are left, so on the second pick \\(P(\\text{red}) = \\frac{2}{4}\\). If the red is put back, it is still \\(\\frac{3}{5}\\)."
   ],
   "remember": "Replace it and the chances stay put. Keep it out and the counts and the total change.",
   "a": {
-   "q": "A bag has 4 green and 6 yellow marbles. One green marble is picked and kept out. What is P(green) on the next pick?",
+   "q": "A bag has 4 green and 6 yellow marbles. One green marble is picked and kept out. What is \\(P(\\text{green})\\) on the next pick?",
    "opts": [
-    "3/9",
-    "4/9",
-    "3/10",
-    "4/10"
+    "\\(\\frac{3}{9}\\)",
+    "\\(\\frac{4}{9}\\)",
+    "\\(\\frac{3}{10}\\)",
+    "\\(\\frac{4}{10}\\)"
    ],
-   "why": "Without replacement, 9 marbles are left and 3 of them are green, so P(green) = 3/9. The answer 4/9 is tempting, but the green marble taken out also lowers the green count.",
+   "why": "Without replacement, 9 marbles are left and 3 of them are green, so \\(P(\\text{green}) = \\frac{3}{9}\\). The answer \\(\\frac{4}{9}\\) is tempting, but the green marble taken out also lowers the green count.",
    "clue": "Count what is left in the bag after the pick."
   },
   "b": {
    "d": 3,
-   "q": "Priya has 5 red pens and 3 black pens in a box. She takes out a black pen and keeps it, then takes out a red pen and keeps it. What is P(black) on her next pick?",
+   "q": "Priya has 5 red pens and 3 black pens in a box. She takes out a black pen and keeps it, then takes out a red pen and keeps it. What is \\(P(\\text{black})\\) on her next pick?",
    "opts": [
-    "2/6",
-    "3/6",
-    "2/7",
-    "3/8"
+    "\\(\\frac{2}{6}\\)",
+    "\\(\\frac{3}{6}\\)",
+    "\\(\\frac{2}{7}\\)",
+    "\\(\\frac{3}{8}\\)"
    ],
-   "why": "Two pens are kept out, so 6 are left: 4 red and 2 black. P(black) = 2/6. The answer 3/6 is tempting, but it forgets that the first black pen was also kept out.",
+   "why": "Two pens are kept out, so 6 are left: 4 red and 2 black. \\(P(\\text{black}) = \\frac{2}{6}\\). The answer \\(\\frac{3}{6}\\) is tempting, but it forgets that the first black pen was also kept out.",
    "clue": "Each pen kept out changes the total and one of the counts."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "With and without replacement",
+   "card": [
+    [
+     "With replacement",
+     "The item is put back after each pick. The total and the counts stay the same, so the probability is the same for every pick."
+    ],
+    [
+     "Without replacement",
+     "The item is kept out after each pick. The total drops by 1, and the count of the picked type drops by 1. The counts of other types stay the same."
+    ],
+    "Example: a bag has 3 red and 2 blue counters. P(red) = 3/5 on the first pick.",
+    "If a red is kept out, 2 red and 2 blue are left, so P(red) on the second pick = 2/4. If the red is put back, it is still 3/5."
+   ],
+   "remember": "Replace it and the chances stay put. Keep it out and the counts and the total change.",
+   "a": {
+    "q": "A bag has 4 green and 6 yellow marbles. One green marble is picked and kept out. What is P(green) on the next pick?",
+    "opts": [
+     "3/9",
+     "4/9",
+     "3/10",
+     "4/10"
+    ],
+    "why": "Without replacement, 9 marbles are left and 3 of them are green, so P(green) = 3/9. The answer 4/9 is tempting, but the green marble taken out also lowers the green count.",
+    "clue": "Count what is left in the bag after the pick."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya has 5 red pens and 3 black pens in a box. She takes out a black pen and keeps it, then takes out a red pen and keeps it. What is P(black) on her next pick?",
+    "opts": [
+     "2/6",
+     "3/6",
+     "2/7",
+     "3/8"
+    ],
+    "why": "Two pens are kept out, so 6 are left: 4 red and 2 black. P(black) = 2/6. The answer 3/6 is tempting, but it forgets that the first black pen was also kept out.",
+    "clue": "Each pen kept out changes the total and one of the counts."
+   }
+  }
+ }
 }

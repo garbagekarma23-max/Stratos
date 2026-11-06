@@ -8,7 +8,8 @@
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: done",
   "2026-11-01T08:14:08Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-06T10:41:22Z maths: LaTeX changed by hand"
  ],
  "sent": {
   "write": 1,
@@ -71,14 +72,14 @@
  "final": {
   "title": "Matrices as transformations",
   "card": [
-   "A \\(2 \\times 2\\) matrix can move every point \\((x, y)\\) in the plane. Write the point as a column and multiply: \\([a \\;\\; b;\\;\\; c \\;\\; d]\\) times \\((x, y)\\) gives \\((ax + by, cx + dy)\\).",
+   "A \\(2 \\times 2\\) matrix can move every point \\((x, y)\\) in the plane. Write the point as a column and multiply: \\(\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} ax + by \\\\ cx + dy \\end{bmatrix}\\).",
    "The first column of the matrix is where the point \\((1, 0)\\) lands. The second column is where \\((0, 1)\\) lands.",
-   "Some common matrices: \\([k \\;\\; 0;\\;\\; 0 \\;\\; k]\\) is a dilation by factor \\(k\\) from the origin. \\([1 \\;\\; 0;\\;\\; 0 \\;\\; -1]\\) reflects in the x-axis. \\([0 \\;\\; -1;\\;\\; 1 \\;\\; 0]\\) rotates 90° anticlockwise about the origin. \\([1 \\;\\; k;\\;\\; 0 \\;\\; 1]\\) is a shear that moves points parallel to the x-axis.",
-   "Example: \\([2 \\;\\; 0;\\;\\; 0 \\;\\; 2]\\) sends \\((3, 1)\\) to \\((2 \\times 3 + 0 \\times 1, 0 \\times 3 + 2 \\times 1) = (6, 2)\\). Every coordinate doubles."
+   "Some common matrices: \\(\\begin{bmatrix} k & 0 \\\\ 0 & k \\end{bmatrix}\\) is a dilation by factor \\(k\\) from the origin. \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\) reflects in the x-axis. \\(\\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}\\) rotates 90° anticlockwise about the origin. \\(\\begin{bmatrix} 1 & k \\\\ 0 & 1 \\end{bmatrix}\\) is a shear that moves points parallel to the x-axis.",
+   "Example: \\(\\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix}\\) sends \\((3, 1)\\) to \\((2 \\times 3 + 0 \\times 1, 0 \\times 3 + 2 \\times 1) = (6, 2)\\). Every coordinate doubles."
   ],
   "remember": "Multiply the matrix by the point's column. The columns show where \\((1, 0)\\) and \\((0, 1)\\) go.",
   "a": {
-   "q": "What does the matrix \\([1 \\;\\; 0;\\;\\; 0 \\;\\; -1]\\) do to the point \\((4, 3)\\)?",
+   "q": "What does the matrix \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\) do to the point \\((4, 3)\\)?",
    "opts": [
     "Sends it to \\((4, -3)\\)",
     "Sends it to \\((-4, 3)\\)",
@@ -86,7 +87,7 @@
     "Sends it to \\((3, 4)\\)"
    ],
    "why": "The new point is \\((1 \\times 4 + 0 \\times 3, 0 \\times 4 + (-1) \\times 3) = (4, -3)\\). The x-value stays and the y-value changes sign, so this is a reflection in the x-axis. Reflection in the y-axis would give \\((-4, 3)\\).",
-   "clue": "Multiply each row of the matrix by the column \\((4, 3)\\)."
+   "clue": "Multiply each row of the matrix by the column \\(\\begin{bmatrix} 4 \\\\ 3 \\end{bmatrix}\\)."
   },
   "b": {
    "d": 3,
@@ -97,13 +98,13 @@
     "\\((-2, 5)\\)",
     "\\((2, -5)\\)"
    ],
-   "why": "The columns are \\((0, 1)\\) and \\((-1, 0)\\), so the matrix is \\([0 \\;\\; -1;\\;\\; 1 \\;\\; 0]\\), a 90° anticlockwise rotation. Then \\((2, 5)\\) goes to \\((0 \\times 2 + (-1) \\times 5, 1 \\times 2 + 0 \\times 5) = (-5, 2)\\). Putting the columns in as rows would give \\((5, -2)\\).",
+   "why": "The columns are \\((0, 1)\\) and \\((-1, 0)\\), so the matrix is \\(\\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}\\), a 90° anticlockwise rotation. Then \\((2, 5)\\) goes to \\((0 \\times 2 + (-1) \\times 5, 1 \\times 2 + 0 \\times 5) = (-5, 2)\\). Putting the columns in as rows would give \\((5, -2)\\).",
    "clue": "Where \\((1, 0)\\) and \\((0, 1)\\) land are the columns of the matrix."
   }
  },
  "cleared_by": "checker",
  "latex": {
-  "at": "2026-11-06T08:49:32Z",
+  "at": "2026-11-06T10:41:22Z",
   "by": "hand",
   "before": {
    "title": "Matrices as transformations",

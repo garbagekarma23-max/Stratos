@@ -18,7 +18,8 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:06Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:33Z write: done",
-  "2026-11-01T08:33:51Z check: passed, cleared"
+  "2026-11-01T08:33:51Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -103,7 +104,7 @@
   "card": [
    [
     "Tree",
-    "a connected graph with no cycles. A tree with v vertices always has v − 1 edges."
+    "a connected graph with no cycles. A tree with \\(v\\) vertices always has \\(v - 1\\) edges."
    ],
    [
     "Spanning tree",
@@ -113,9 +114,9 @@
     "Minimum spanning tree",
     "the spanning tree with the smallest total weight. Use Prim's algorithm: start at any vertex, then keep adding the lightest edge that joins a new vertex to the tree."
    ],
-   "Example: edges AB = 2, BC = 3, AC = 4 and CD = 5. Take AB (2), then BC (3), then CD (5). AC is skipped because it would make a cycle. Total weight = 2 + 3 + 5 = 10."
+   "Example: edges AB, BC, AC and CD have weights 2, 3, 4 and 5. Take AB (2), then BC (3), then CD (5). AC is skipped because it would make a cycle. Total weight \\(= 2 + 3 + 5 = 10\\)."
   ],
-  "remember": "A minimum spanning tree reaches every vertex with v − 1 edges and the least total weight.",
+  "remember": "A minimum spanning tree reaches every vertex with \\(v - 1\\) edges and the least total weight.",
   "a": {
    "q": "A connected graph has 7 vertices. How many edges does a spanning tree of this graph have?",
    "opts": [
@@ -124,7 +125,7 @@
     "8",
     "5"
    ],
-   "why": "A tree with v vertices has v − 1 edges, so 7 − 1 = 6. Choosing 7 would mean one edge too many, and that edge would make a cycle.",
+   "why": "A tree with \\(v\\) vertices has \\(v - 1\\) edges, so \\(7 - 1 = 6\\). Choosing 7 would mean one edge too many, and that edge would make a cycle.",
    "clue": "Take one away from the number of vertices."
   },
   "b": {
@@ -136,9 +137,55 @@
     "14 km",
     "15 km"
    ],
-   "why": "Start at Q and take QR (3), then RS (4), then PR (5). Total = 3 + 4 + 5 = 12 km. Adding PQ (6) or QS (7) would make a cycle. Picking 13 km comes from taking PQ (6) instead of PR (5), which is heavier.",
+   "why": "Start at Q and take QR (3), then RS (4), then PR (5). Total \\(= 3 + 4 + 5 = 12\\) km. Adding PQ (6) or QS (7) would make a cycle. Picking 13 km comes from taking PQ (6) instead of PR (5), which is heavier.",
    "clue": "A tree on 4 towns uses 3 roads. Add the lightest edge that reaches a new town each time."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Trees and minimum spanning trees",
+   "card": [
+    [
+     "Tree",
+     "a connected graph with no cycles. A tree with v vertices always has v − 1 edges."
+    ],
+    [
+     "Spanning tree",
+     "a tree that reaches every vertex of a connected graph, using only edges from that graph. A weighted graph can have many spanning trees."
+    ],
+    [
+     "Minimum spanning tree",
+     "the spanning tree with the smallest total weight. Use Prim's algorithm: start at any vertex, then keep adding the lightest edge that joins a new vertex to the tree."
+    ],
+    "Example: edges AB = 2, BC = 3, AC = 4 and CD = 5. Take AB (2), then BC (3), then CD (5). AC is skipped because it would make a cycle. Total weight = 2 + 3 + 5 = 10."
+   ],
+   "remember": "A minimum spanning tree reaches every vertex with v − 1 edges and the least total weight.",
+   "a": {
+    "q": "A connected graph has 7 vertices. How many edges does a spanning tree of this graph have?",
+    "opts": [
+     "6",
+     "7",
+     "8",
+     "5"
+    ],
+    "why": "A tree with v vertices has v − 1 edges, so 7 − 1 = 6. Choosing 7 would mean one edge too many, and that edge would make a cycle.",
+    "clue": "Take one away from the number of vertices."
+   },
+   "b": {
+    "d": 3,
+    "q": "Roads join four towns: P to Q is 6 km, Q to R is 3 km, P to R is 5 km, R to S is 4 km and Q to S is 7 km. Cables must link all four towns using the least total length. What is that length?",
+    "opts": [
+     "12 km",
+     "13 km",
+     "14 km",
+     "15 km"
+    ],
+    "why": "Start at Q and take QR (3), then RS (4), then PR (5). Total = 3 + 4 + 5 = 12 km. Adding PQ (6) or QS (7) would make a cycle. Picking 13 km comes from taking PQ (6) instead of PR (5), which is heavier.",
+    "clue": "A tree on 4 towns uses 3 roads. Add the lightest edge that reaches a new town each time."
+   }
+  }
+ }
 }

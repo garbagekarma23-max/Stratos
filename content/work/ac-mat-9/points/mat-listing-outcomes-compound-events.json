@@ -19,7 +19,8 @@
   "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b other)",
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
-  "2026-11-05T02:37:17Z check: passed, cleared"
+  "2026-11-05T02:37:17Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -370,9 +371,9 @@
     "Tree diagram",
     "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
    ],
-   "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+   "Example: toss a coin three times. Each toss has 2 results, so there are \\(2 \\times 2 \\times 2 = 8\\) outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is \\(\\frac{3}{8}\\), if each outcome is equally likely."
   ],
-  "remember": "List every outcome once. If they are equally likely, probability = outcomes you want ÷ all outcomes.",
+  "remember": "List every outcome once. If they are equally likely, probability \\(=\\) outcomes you want \\(\\div\\) all outcomes.",
   "a": {
    "q": "Ana tosses a coin and then rolls a six-sided die. How many different outcomes are possible?",
    "opts": [
@@ -381,21 +382,64 @@
     "7",
     "6"
    ],
-   "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+   "why": "The coin has 2 results and the die has 6, so there are \\(2 \\times 6 = 12\\) outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
    "clue": "Each coin result pairs with every die result."
   },
   "b": {
    "d": 3,
    "q": "Leila tosses a fair coin three times. What is the probability that she gets at least two heads?",
    "opts": [
-    "1/2",
-    "3/8",
-    "1/8",
-    "2/3"
+    "\\(\\frac{1}{2}\\)",
+    "\\(\\frac{3}{8}\\)",
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{2}{3}\\)"
    ],
-   "why": "The coin is fair, so the 8 outcomes are equally likely. At least two heads means two or three heads: HHT, HTH, THH and HHH. That is 4 out of 8, which is 1/2. The answer 3/8 counts exactly two heads and leaves out HHH.",
+   "why": "The coin is fair, so the 8 outcomes are equally likely. At least two heads means two or three heads: HHT, HTH, THH and HHH. That is 4 out of 8, which is \\(\\frac{1}{2}\\). The answer \\(\\frac{3}{8}\\) counts exactly two heads and leaves out HHH.",
    "clue": "Count the paths with two heads and the path with three."
   }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Listing outcomes for compound events",
+   "card": [
+    "A compound event has two or more steps, such as tossing a coin and then rolling a die. Listing every outcome lets you count them and find each probability.",
+    [
+     "Array or table",
+     "a grid with the first step down the side and the second across the top. Each cell is one outcome. It suits two steps."
+    ],
+    [
+     "Tree diagram",
+     "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
+    ],
+    "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+   ],
+   "remember": "List every outcome once. If they are equally likely, probability = outcomes you want ÷ all outcomes.",
+   "a": {
+    "q": "Ana tosses a coin and then rolls a six-sided die. How many different outcomes are possible?",
+    "opts": [
+     "12",
+     "8",
+     "7",
+     "6"
+    ],
+    "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+    "clue": "Each coin result pairs with every die result."
+   },
+   "b": {
+    "d": 3,
+    "q": "Leila tosses a fair coin three times. What is the probability that she gets at least two heads?",
+    "opts": [
+     "1/2",
+     "3/8",
+     "1/8",
+     "2/3"
+    ],
+    "why": "The coin is fair, so the 8 outcomes are equally likely. At least two heads means two or three heads: HHT, HTH, THH and HHH. That is 4 out of 8, which is 1/2. The answer 3/8 counts exactly two heads and leaves out HHH.",
+    "clue": "Count the paths with two heads and the path with three."
+   }
+  }
+ }
 }

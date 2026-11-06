@@ -15,7 +15,8 @@
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: flagged",
   "2026-11-01T15:14:47Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -185,35 +186,72 @@
  "final": {
   "title": "Least squares regression line",
   "card": [
-   "The least squares regression line is written y = a + bx. It is the line that makes the sum of the squared residuals as small as possible, which is where its name comes from.",
-   "The slope is b = r × sy/sx. Here r is the correlation coefficient, sy is the standard deviation of the response y, and sx is the standard deviation of the explanatory variable x.",
-   "The intercept is a = ȳ − b × x̄, where x̄ and ȳ are the means. This means the line always passes through the point (x̄, ȳ).",
-   "Worked example: r = 0.8, sx = 5, sy = 10. Then b = 0.8 × 10/5 = 1.6. If x̄ = 20 and ȳ = 50, then a = 50 − 1.6 × 20 = 50 − 32 = 18."
+   "The least squares regression line is written \\(y = a + bx\\). It is the line that makes the sum of the squared residuals as small as possible, which is where its name comes from.",
+   "The slope is \\(b = r \\times \\frac{s_{y}}{s_{x}}\\). Here \\(r\\) is the correlation coefficient, \\(s_{y}\\) is the standard deviation of the response \\(y\\), and \\(s_{x}\\) is the standard deviation of the explanatory variable \\(x\\).",
+   "The intercept is \\(a = \\overline{y} - b \\times \\overline{x}\\), where \\(\\overline{x}\\) and \\(\\overline{y}\\) are the means. This means the line always passes through the point \\((\\overline{x}, \\overline{y})\\).",
+   "Worked example: \\(r = 0.8\\), \\(s_{x} = 5\\), \\(s_{y} = 10\\). Then \\(b = 0.8 \\times \\frac{10}{5} = 1.6\\). If \\(\\overline{x} = 20\\) and \\(\\overline{y} = 50\\), then \\(a = 50 - 1.6 \\times 20\\), which is \\(50 - 32 = 18\\)."
   ],
-  "remember": "Slope b = r × sy/sx, and the line passes through (x̄, ȳ).",
+  "remember": "Slope \\(b = r \\times \\frac{s_{y}}{s_{x}}\\), and the line passes through \\((\\overline{x}, \\overline{y})\\).",
   "a": {
-   "q": "A data set has r = 0.6, sx = 4 and sy = 12. What is the slope of the least squares line?",
+   "q": "A data set has \\(r = 0.6\\), \\(s_{x} = 4\\) and \\(s_{y} = 12\\). What is the slope of the least squares line?",
    "opts": [
     "1.8",
     "0.2",
     "7.2",
     "3"
    ],
-   "why": "b = r × sy/sx = 0.6 × 12/4 = 0.6 × 3 = 1.8. Using sx/sy instead gives 0.6 × 4/12 = 0.2, which turns the ratio upside down. Leaving out r gives 3.",
-   "clue": "The standard deviation of y goes on top."
+   "why": "\\(b = r \\times \\frac{s_{y}}{s_{x}}\\), so \\(b = 0.6 \\times \\frac{12}{4}\\), which is \\(0.6 \\times 3 = 1.8\\). Using \\(\\frac{s_{x}}{s_{y}}\\) instead gives \\(0.6 \\times \\frac{4}{12} = 0.2\\), which turns the ratio upside down. Leaving out \\(r\\) gives 3.",
+   "clue": "The standard deviation of \\(y\\) goes on top."
   },
   "b": {
    "d": 3,
-   "q": "For a group of runners, x̄ = 30, ȳ = 60, and the least squares line has slope 1.5. What is the intercept a?",
+   "q": "For a group of runners, \\(\\overline{x} = 30\\), \\(\\overline{y} = 60\\), and the least squares line has slope 1.5. What is the intercept \\(a\\)?",
    "opts": [
     "15",
-    "−15",
+    "\\(-15\\)",
     "45",
     "105"
    ],
-   "why": "a = ȳ − b × x̄ = 60 − 1.5 × 30 = 60 − 45 = 15. The value 45 is just b × x̄ with the subtraction from ȳ skipped, and adding instead of subtracting gives 105. Subtracting the wrong way round, 45 − 60, gives −15.",
+   "why": "\\(a = \\overline{y} - b \\times \\overline{x}\\), so \\(a = 60 - 1.5 \\times 30\\), which is \\(60 - 45 = 15\\). The value 45 is just \\(b \\times \\overline{x}\\) with the subtraction from \\(\\overline{y}\\) skipped, and adding instead of subtracting gives 105. Subtracting the wrong way round, \\(45 - 60\\), gives \\(-15\\).",
    "clue": "The line passes through the point of the two means."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Least squares regression line",
+   "card": [
+    "The least squares regression line is written y = a + bx. It is the line that makes the sum of the squared residuals as small as possible, which is where its name comes from.",
+    "The slope is b = r × sy/sx. Here r is the correlation coefficient, sy is the standard deviation of the response y, and sx is the standard deviation of the explanatory variable x.",
+    "The intercept is a = ȳ − b × x̄, where x̄ and ȳ are the means. This means the line always passes through the point (x̄, ȳ).",
+    "Worked example: r = 0.8, sx = 5, sy = 10. Then b = 0.8 × 10/5 = 1.6. If x̄ = 20 and ȳ = 50, then a = 50 − 1.6 × 20 = 50 − 32 = 18."
+   ],
+   "remember": "Slope b = r × sy/sx, and the line passes through (x̄, ȳ).",
+   "a": {
+    "q": "A data set has r = 0.6, sx = 4 and sy = 12. What is the slope of the least squares line?",
+    "opts": [
+     "1.8",
+     "0.2",
+     "7.2",
+     "3"
+    ],
+    "why": "b = r × sy/sx = 0.6 × 12/4 = 0.6 × 3 = 1.8. Using sx/sy instead gives 0.6 × 4/12 = 0.2, which turns the ratio upside down. Leaving out r gives 3.",
+    "clue": "The standard deviation of y goes on top."
+   },
+   "b": {
+    "d": 3,
+    "q": "For a group of runners, x̄ = 30, ȳ = 60, and the least squares line has slope 1.5. What is the intercept a?",
+    "opts": [
+     "15",
+     "−15",
+     "45",
+     "105"
+    ],
+    "why": "a = ȳ − b × x̄ = 60 − 1.5 × 30 = 60 − 45 = 15. The value 45 is just b × x̄ with the subtraction from ȳ skipped, and adding instead of subtracting gives 105. Subtracting the wrong way round, 45 − 60, gives −15.",
+    "clue": "The line passes through the point of the two means."
+   }
+  }
+ }
 }

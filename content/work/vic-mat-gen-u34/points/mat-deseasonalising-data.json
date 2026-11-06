@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T14:36:27Z new, write",
   "2026-11-01T14:46:40Z write: done",
-  "2026-11-01T14:56:03Z check: passed, cleared"
+  "2026-11-01T14:56:03Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -71,9 +72,9 @@
   "title": "Deseasonalising data",
   "card": [
    "Seasonal effects can hide the trend. Deseasonalising removes them so we can see whether values are really rising or falling.",
-   "To deseasonalise, divide each value by the seasonal index for its season. Deseasonalised value = actual value ÷ seasonal index.",
-   "Example: sales are 120 in a season with index 1.2. The deseasonalised value is 120 ÷ 1.2 = 100. This is what sales would be in an average season.",
-   "A season with an index below 1 gets adjusted upwards. Sales of 72 with index 0.8 give 72 ÷ 0.8 = 90."
+   "To deseasonalise, divide each value by the seasonal index for its season. Deseasonalised value \\(=\\) actual value \\(\\div\\) seasonal index.",
+   "Example: sales are 120 in a season with index 1.2. The deseasonalised value is \\(120 \\div 1.2 = 100\\). This is what sales would be in an average season.",
+   "A season with an index below 1 gets adjusted upwards. Sales of 72 with index 0.8 give \\(72 \\div 0.8 = 90\\)."
   ],
   "remember": "Divide by the seasonal index to take the season out and reveal the trend.",
   "a": {
@@ -84,7 +85,7 @@
     "148.75",
     "151.25"
    ],
-   "why": "Deseasonalised value = 150 ÷ 1.25 = 120. Multiplying gives 187.5, which adds the seasonal effect instead of removing it.",
+   "why": "Deseasonalised value \\(= 150 \\div 1.25 = 120\\). Multiplying gives 187.5, which adds the seasonal effect instead of removing it.",
    "clue": "Removing a season's effect means dividing, not multiplying."
   },
   "b": {
@@ -96,9 +97,46 @@
     "147, below the 210 actually sold",
     "147, above the 210 actually sold"
    ],
-   "why": "210 ÷ 0.70 = 300. The month is below average, so removing the season raises the value above 210. The 147 comes from multiplying by 0.70 instead.",
+   "why": "\\(210 \\div 0.70 = 300\\). The month is below average, so removing the season raises the value above 210. The 147 comes from multiplying by 0.70 instead.",
    "clue": "An index below 1 means the month was weaker than average."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Deseasonalising data",
+   "card": [
+    "Seasonal effects can hide the trend. Deseasonalising removes them so we can see whether values are really rising or falling.",
+    "To deseasonalise, divide each value by the seasonal index for its season. Deseasonalised value = actual value ÷ seasonal index.",
+    "Example: sales are 120 in a season with index 1.2. The deseasonalised value is 120 ÷ 1.2 = 100. This is what sales would be in an average season.",
+    "A season with an index below 1 gets adjusted upwards. Sales of 72 with index 0.8 give 72 ÷ 0.8 = 90."
+   ],
+   "remember": "Divide by the seasonal index to take the season out and reveal the trend.",
+   "a": {
+    "q": "Ice cream sales in Cairns are 150 boxes in a quarter with a seasonal index of 1.25. What is the deseasonalised value?",
+    "opts": [
+     "120",
+     "187.5",
+     "148.75",
+     "151.25"
+    ],
+    "why": "Deseasonalised value = 150 ÷ 1.25 = 120. Multiplying gives 187.5, which adds the seasonal effect instead of removing it.",
+    "clue": "Removing a season's effect means dividing, not multiplying."
+   },
+   "b": {
+    "d": 2,
+    "q": "A bookshop in Bendigo sells 210 books in a month with seasonal index 0.70. After deseasonalising, what does this value show?",
+    "opts": [
+     "300, above the 210 actually sold",
+     "300, below the 210 actually sold",
+     "147, below the 210 actually sold",
+     "147, above the 210 actually sold"
+    ],
+    "why": "210 ÷ 0.70 = 300. The month is below average, so removing the season raises the value above 210. The 147 comes from multiplying by 0.70 instead.",
+    "clue": "An index below 1 means the month was weaker than average."
+   }
+  }
+ }
 }

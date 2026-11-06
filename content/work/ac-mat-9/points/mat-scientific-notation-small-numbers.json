@@ -14,7 +14,8 @@
   "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:58:31Z write: done",
-  "2026-11-04T10:08:04Z check: passed, cleared"
+  "2026-11-04T10:08:04Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -88,35 +89,72 @@
  "final": {
   "title": "Scientific notation for small numbers",
   "card": [
-   "Scientific notation writes a number as a × 10ⁿ, where a is from 1 to less than 10. A very small number, between 0 and 1, uses a negative power of 10.",
+   "Scientific notation writes a number as \\(a \\times 10^{n}\\), where \\(a\\) is from 1 to less than 10. A very small number, between 0 and 1, uses a negative power of 10.",
    "To write a small number, move the decimal point right until you have a number from 1 to less than 10. The power of 10 is minus the number of places you moved it.",
-   "Example: 0.000 52. Move the point 4 places right to get 5.2. So 0.000 52 = 5.2 × 10⁻⁴.",
-   "To go back, move the point left by the number in the power. 3 × 10⁻² = 0.03, because the point moves 2 places left. A negative power makes a small number, not a negative number."
+   "Example: 0.00052. Move the point 4 places right to get 5.2. So \\(0.00052 = 5.2 \\times 10^{-4}\\).",
+   "To go back, move the point left by the number in the power. \\(3 \\times 10^{-2} = 0.03\\), because the point moves 2 places left. A negative power makes a small number, not a negative number."
   ],
-  "remember": "A small number is a × 10⁻ⁿ, where n counts the places the point moved to get a.",
+  "remember": "A small number is \\(a \\times 10^{-n}\\), where \\(n\\) counts the places the point moved to get \\(a\\).",
   "a": {
-   "q": "A cell is 0.000 073 m wide. How is this written in scientific notation?",
+   "q": "A cell is 0.000073 m wide. How is this written in scientific notation?",
    "opts": [
-    "7.3 × 10⁻⁵ m",
-    "7.3 × 10⁻⁴ m",
-    "7.3 × 10⁵ m",
-    "0.73 × 10⁻⁴ m"
+    "\\(7.3 \\times 10^{-5}\\) m",
+    "\\(7.3 \\times 10^{-4}\\) m",
+    "\\(7.3 \\times 10^{5}\\) m",
+    "\\(0.73 \\times 10^{-4}\\) m"
    ],
-   "why": "The point moves 5 places right to give 7.3, so the power is −5. Using −4 is tempting, but it comes from counting only the zeros after the point, which is 4, and missing a place.",
+   "why": "The point moves 5 places right to give 7.3, so the power is \\(-5\\). Using \\(-4\\) is tempting, but it comes from counting only the zeros after the point, which is 4, and missing a place.",
    "clue": "Count the places the point moves to get 7.3."
   },
   "b": {
    "d": 2,
-   "q": "A dust particle has a width of 2.5 × 10⁻³ m. What is this as an ordinary decimal?",
+   "q": "A dust particle has a width of \\(2.5 \\times 10^{-3}\\) m. What is this as an ordinary decimal?",
    "opts": [
     "0.0025 m",
     "0.025 m",
-    "0.000 25 m",
-    "−0.0025 m"
+    "0.00025 m",
+    "\\(-0.0025\\) m"
    ],
-   "why": "A power of −3 means the point moves 3 places left: 2.5 becomes 0.0025. The option 0.025 moves it only 2 places. A negative power does not make the number negative.",
+   "why": "A power of \\(-3\\) means the point moves 3 places left: 2.5 becomes 0.0025. The option 0.025 moves it only 2 places. A negative power does not make the number negative.",
    "clue": "Move the point 3 places to the left."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Scientific notation for small numbers",
+   "card": [
+    "Scientific notation writes a number as a × 10ⁿ, where a is from 1 to less than 10. A very small number, between 0 and 1, uses a negative power of 10.",
+    "To write a small number, move the decimal point right until you have a number from 1 to less than 10. The power of 10 is minus the number of places you moved it.",
+    "Example: 0.000 52. Move the point 4 places right to get 5.2. So 0.000 52 = 5.2 × 10⁻⁴.",
+    "To go back, move the point left by the number in the power. 3 × 10⁻² = 0.03, because the point moves 2 places left. A negative power makes a small number, not a negative number."
+   ],
+   "remember": "A small number is a × 10⁻ⁿ, where n counts the places the point moved to get a.",
+   "a": {
+    "q": "A cell is 0.000 073 m wide. How is this written in scientific notation?",
+    "opts": [
+     "7.3 × 10⁻⁵ m",
+     "7.3 × 10⁻⁴ m",
+     "7.3 × 10⁵ m",
+     "0.73 × 10⁻⁴ m"
+    ],
+    "why": "The point moves 5 places right to give 7.3, so the power is −5. Using −4 is tempting, but it comes from counting only the zeros after the point, which is 4, and missing a place.",
+    "clue": "Count the places the point moves to get 7.3."
+   },
+   "b": {
+    "d": 2,
+    "q": "A dust particle has a width of 2.5 × 10⁻³ m. What is this as an ordinary decimal?",
+    "opts": [
+     "0.0025 m",
+     "0.025 m",
+     "0.000 25 m",
+     "−0.0025 m"
+    ],
+    "why": "A power of −3 means the point moves 3 places left: 2.5 becomes 0.0025. The option 0.025 moves it only 2 places. A negative power does not make the number negative.",
+    "clue": "Move the point 3 places to the left."
+   }
+  }
+ }
 }

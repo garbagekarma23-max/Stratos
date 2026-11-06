@@ -14,7 +14,8 @@
   "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:58:31Z write: done",
-  "2026-11-04T10:08:04Z check: passed, cleared"
+  "2026-11-04T10:08:04Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -89,34 +90,71 @@
   "title": "Scientific notation for large numbers",
   "card": [
    "Scientific notation writes a large number as a number from 1 to less than 10, times a power of 10. The power is positive.",
-   "To write 3 400 000: put the point after the first non-zero digit to get 3.4. Count how many places the point moved. It moved 6 places.",
-   "So 3 400 000 = 3.4 × 10⁶. The power of 10 is the number of places the point moved.",
-   "To go back, multiply by the power of 10. 10⁶ is 1 000 000, so 3.4 × 10⁶ = 3 400 000. A number such as 34 × 10⁵ is not in scientific notation, because 34 is not less than 10."
+   "To write 3,400,000: put the point after the first non-zero digit to get 3.4. Count how many places the point moved. It moved 6 places.",
+   "So \\(3{,}400{,}000 = 3.4 \\times 10^{6}\\). The power of 10 is the number of places the point moved.",
+   "To go back, multiply by the power of 10. \\(10^{6}\\) is 1,000,000, so \\(3.4 \\times 10^{6} = 3{,}400{,}000\\). A number such as \\(34 \\times 10^{5}\\) is not in scientific notation, because 34 is not less than 10."
   ],
   "remember": "Large number: a number from 1 to less than 10, times 10 to a positive power.",
   "a": {
-   "q": "Which is 52 000 000 written in scientific notation?",
+   "q": "Which is 52,000,000 written in scientific notation?",
    "opts": [
-    "5.2 × 10⁷",
-    "5.2 × 10⁶",
-    "52 × 10⁶",
-    "5.2 × 10⁸"
+    "\\(5.2 \\times 10^{7}\\)",
+    "\\(5.2 \\times 10^{6}\\)",
+    "\\(52 \\times 10^{6}\\)",
+    "\\(5.2 \\times 10^{8}\\)"
    ],
-   "why": "The point moves 7 places to give 5.2, so the power is 7. 5.2 × 10⁶ is tempting, but it counts only the 6 zeros and not the places the point moved.",
+   "why": "The point moves 7 places to give 5.2, so the power is 7. \\(5.2 \\times 10^{6}\\) is tempting, but it counts only the 6 zeros and not the places the point moved.",
    "clue": "Count the places from the end of the number to after the 5."
   },
   "b": {
    "d": 3,
-   "q": "A tank holds 7.8 × 10⁵ litres of water. How many litres is that?",
+   "q": "A tank holds \\(7.8 \\times 10^{5}\\) litres of water. How many litres is that?",
    "opts": [
-    "780 000",
-    "78 000",
-    "7 800 000",
-    "7 800 005"
+    "780,000",
+    "78,000",
+    "7,800,000",
+    "7,800,005"
    ],
-   "why": "10⁵ is 100 000, and 7.8 × 100 000 = 780 000. The point moves 5 places to the right. 78 000 is tempting, but it moves the point only 4 places.",
+   "why": "\\(10^{5}\\) is 100,000, and \\(7.8 \\times 100{,}000 = 780{,}000\\). The point moves 5 places to the right. 78,000 is tempting, but it moves the point only 4 places.",
    "clue": "Move the decimal point right by the same number of places as the power."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Scientific notation for large numbers",
+   "card": [
+    "Scientific notation writes a large number as a number from 1 to less than 10, times a power of 10. The power is positive.",
+    "To write 3 400 000: put the point after the first non-zero digit to get 3.4. Count how many places the point moved. It moved 6 places.",
+    "So 3 400 000 = 3.4 × 10⁶. The power of 10 is the number of places the point moved.",
+    "To go back, multiply by the power of 10. 10⁶ is 1 000 000, so 3.4 × 10⁶ = 3 400 000. A number such as 34 × 10⁵ is not in scientific notation, because 34 is not less than 10."
+   ],
+   "remember": "Large number: a number from 1 to less than 10, times 10 to a positive power.",
+   "a": {
+    "q": "Which is 52 000 000 written in scientific notation?",
+    "opts": [
+     "5.2 × 10⁷",
+     "5.2 × 10⁶",
+     "52 × 10⁶",
+     "5.2 × 10⁸"
+    ],
+    "why": "The point moves 7 places to give 5.2, so the power is 7. 5.2 × 10⁶ is tempting, but it counts only the 6 zeros and not the places the point moved.",
+    "clue": "Count the places from the end of the number to after the 5."
+   },
+   "b": {
+    "d": 3,
+    "q": "A tank holds 7.8 × 10⁵ litres of water. How many litres is that?",
+    "opts": [
+     "780 000",
+     "78 000",
+     "7 800 000",
+     "7 800 005"
+    ],
+    "why": "10⁵ is 100 000, and 7.8 × 100 000 = 780 000. The point moves 5 places to the right. 78 000 is tempting, but it moves the point only 4 places.",
+    "clue": "Move the decimal point right by the same number of places as the power."
+   }
+  }
+ }
 }

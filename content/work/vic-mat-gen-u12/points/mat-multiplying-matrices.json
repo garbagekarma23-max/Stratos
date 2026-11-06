@@ -10,7 +10,8 @@
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:32Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b wording)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b wording)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -142,38 +143,78 @@
  "final": {
   "title": "Multiplying matrices",
   "card": [
-   "The order of a matrix is its number of rows × its number of columns. A 2 × 3 matrix has 2 rows and 3 columns.",
-   "Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second. An m × n matrix times an n × p matrix gives an m × p matrix.",
+   "The order of a matrix is its number of rows \\(\\times\\) its number of columns. A \\(2 \\times 3\\) matrix has 2 rows and 3 columns.",
+   "Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second. An \\(m \\times n\\) matrix times an \\(n \\times p\\) matrix gives an \\(m \\times p\\) matrix.",
    "Each element of the answer is a row of the first matrix times a column of the second. Multiply the pairs in order, then add them.",
    [
     "Example",
-    "Row [2 3] times column [4 5] (read down) = 2 × 4 + 3 × 5 = 8 + 15 = 23. This is one element of the answer."
+    "the row \\(\\begin{bmatrix} 2 & 3 \\end{bmatrix}\\) times the column \\(\\begin{bmatrix} 4 \\\\ 5 \\end{bmatrix}\\) is \\(2 \\times 4 + 3 \\times 5\\), which is \\(8 + 15 = 23\\). This is one element of the answer."
    ]
   ],
   "remember": "Columns of the first must match rows of the second. Each element is row times column, then add.",
   "a": {
-   "q": "A is a 2 × 3 matrix and B is a 3 × 4 matrix. What is the order of the product AB?",
+   "q": "\\(A\\) is a \\(2 \\times 3\\) matrix and \\(B\\) is a \\(3 \\times 4\\) matrix. What is the order of the product \\(AB\\)?",
    "opts": [
-    "2 × 4",
-    "3 × 3",
-    "2 × 3",
-    "3 × 4"
+    "\\(2 \\times 4\\)",
+    "\\(3 \\times 3\\)",
+    "\\(2 \\times 3\\)",
+    "\\(3 \\times 4\\)"
    ],
-   "why": "The inner numbers (3 and 3) match, so the product exists. The answer has the outer numbers: 2 rows from A and 4 columns from B. 3 × 3 is wrong because it uses the inner numbers, which are used up in the multiplying.",
+   "why": "The inner numbers (3 and 3) match, so the product exists. The answer has the outer numbers: 2 rows from \\(A\\) and 4 columns from \\(B\\). \\(3 \\times 3\\) is wrong because it uses the inner numbers, which are used up in the multiplying.",
    "clue": "Look at the outer numbers once the inner ones match."
   },
   "b": {
    "d": 2,
-   "q": "A is the row [1 2 3] and B is the column [4 5 6], read down. AB has one element. What is it?",
+   "q": "\\(A = \\begin{bmatrix} 1 & 2 & 3 \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} 4 \\\\ 5 \\\\ 6 \\end{bmatrix}\\). \\(AB\\) has one element. What is it?",
    "opts": [
     "32",
     "28",
     "21",
     "18"
    ],
-   "why": "Multiply the pairs in order and add: 1 × 4 + 2 × 5 + 3 × 6 = 4 + 10 + 18 = 32. The answer 28 comes from reading the column upwards, pairing 1 with 6 and 3 with 4. The answer 21 adds all six numbers instead of multiplying pairs.",
+   "why": "Multiply the pairs in order and add: \\(1 \\times 4 + 2 \\times 5 + 3 \\times 6\\), which is \\(4 + 10 + 18 = 32\\). The answer 28 comes from reading the column upwards, pairing 1 with 6 and 3 with 4. The answer 21 adds all six numbers instead of multiplying pairs.",
    "clue": "Pair the first of the row with the top of the column."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Multiplying matrices",
+   "card": [
+    "The order of a matrix is its number of rows × its number of columns. A 2 × 3 matrix has 2 rows and 3 columns.",
+    "Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second. An m × n matrix times an n × p matrix gives an m × p matrix.",
+    "Each element of the answer is a row of the first matrix times a column of the second. Multiply the pairs in order, then add them.",
+    [
+     "Example",
+     "Row [2 3] times column [4 5] (read down) = 2 × 4 + 3 × 5 = 8 + 15 = 23. This is one element of the answer."
+    ]
+   ],
+   "remember": "Columns of the first must match rows of the second. Each element is row times column, then add.",
+   "a": {
+    "q": "A is a 2 × 3 matrix and B is a 3 × 4 matrix. What is the order of the product AB?",
+    "opts": [
+     "2 × 4",
+     "3 × 3",
+     "2 × 3",
+     "3 × 4"
+    ],
+    "why": "The inner numbers (3 and 3) match, so the product exists. The answer has the outer numbers: 2 rows from A and 4 columns from B. 3 × 3 is wrong because it uses the inner numbers, which are used up in the multiplying.",
+    "clue": "Look at the outer numbers once the inner ones match."
+   },
+   "b": {
+    "d": 2,
+    "q": "A is the row [1 2 3] and B is the column [4 5 6], read down. AB has one element. What is it?",
+    "opts": [
+     "32",
+     "28",
+     "21",
+     "18"
+    ],
+    "why": "Multiply the pairs in order and add: 1 × 4 + 2 × 5 + 3 × 6 = 4 + 10 + 18 = 32. The answer 28 comes from reading the column upwards, pairing 1 with 6 and 3 with 4. The answer 21 adds all six numbers instead of multiplying pairs.",
+    "clue": "Pair the first of the row with the top of the column."
+   }
+  }
+ }
 }

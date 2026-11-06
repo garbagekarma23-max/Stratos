@@ -21,7 +21,8 @@
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:22:49Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:22:49Z review: approved with the fix (a spot check)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -202,35 +203,72 @@
  "final": {
   "title": "The five-number summary and boxplots",
   "card": [
-   "The five-number summary lists the minimum, Q1, median, Q3 and maximum. Q1 is the median of the lower half of the data, and Q3 is the median of the upper half.",
-   "A boxplot draws these five values. The box runs from Q1 to Q3 with a line at the median. Whiskers reach out to the smallest and largest values that are not outliers.",
-   "The fences are 1.5 × IQR below Q1 and 1.5 × IQR above Q3, where IQR = Q3 − Q1. A value beyond a fence is a possible outlier, and it is shown as a separate dot.",
-   "Example: Q1 = 12 and Q3 = 20. IQR = 8, and 1.5 × 8 = 12. The fences are 12 − 12 = 0 and 20 + 12 = 32. A value of 35 is a possible outlier."
+   "The five-number summary lists the minimum, \\(Q_{1}\\), median, \\(Q_{3}\\) and maximum. \\(Q_{1}\\) is the median of the lower half of the data, and \\(Q_{3}\\) is the median of the upper half.",
+   "A boxplot draws these five values. The box runs from \\(Q_{1}\\) to \\(Q_{3}\\) with a line at the median. Whiskers reach out to the smallest and largest values that are not outliers.",
+   "The fences are \\(1.5 \\times \\text{IQR}\\) below \\(Q_{1}\\) and \\(1.5 \\times \\text{IQR}\\) above \\(Q_{3}\\), where \\(\\text{IQR} = Q_{3} - Q_{1}\\). A value beyond a fence is a possible outlier, and it is shown as a separate dot.",
+   "Example: \\(Q_{1} = 12\\) and \\(Q_{3} = 20\\). \\(\\text{IQR} = 8\\), and \\(1.5 \\times 8 = 12\\). The fences are \\(12 - 12 = 0\\) and \\(20 + 12 = 32\\). A value of 35 is a possible outlier."
   ],
   "remember": "A boxplot shows five values, and anything beyond a fence is a possible outlier.",
   "a": {
-   "q": "A data set has Q1 = 30 and Q3 = 50. What is the upper fence for outliers?",
+   "q": "A data set has \\(Q_{1} = 30\\) and \\(Q_{3} = 50\\). What is the upper fence for outliers?",
    "opts": [
     "80",
     "70",
     "60",
     "75"
    ],
-   "why": "IQR = 50 − 30 = 20, and 1.5 × 20 = 30. The upper fence is Q3 + 30 = 80. Adding only the IQR to Q3 gives 70, adding 30 to Q1 instead of Q3 gives 60, and multiplying Q3 by 1.5 gives 75.",
+   "why": "\\(\\text{IQR} = 50 - 30 = 20\\), and \\(1.5 \\times 20 = 30\\). The upper fence is \\(Q_{3} + 30 = 80\\). Adding only the IQR to \\(Q_{3}\\) gives 70, adding 30 to \\(Q_{1}\\) instead of \\(Q_{3}\\) gives 60, and multiplying \\(Q_{3}\\) by 1.5 gives 75.",
    "clue": "Find the IQR first, then multiply it by 1.5."
   },
   "b": {
    "d": 3,
-   "q": "Mia's daily steps (in hundreds) have Q1 = 40 and Q3 = 60. Her minimum is 8 and her maximum is 88. Which statement is correct?",
+   "q": "Mia's daily steps (in hundreds) have \\(Q_{1} = 40\\) and \\(Q_{3} = 60\\). Her minimum is 8 and her maximum is 88. Which statement is correct?",
    "opts": [
     "Only the minimum of 8 is a possible outlier",
     "Only the maximum of 88 is a possible outlier",
     "Both 8 and 88 are possible outliers",
     "Neither 8 nor 88 is a possible outlier"
    ],
-   "why": "IQR = 20, and 1.5 × 20 = 30, so the fences are 40 − 30 = 10 and 60 + 30 = 90. The value 8 is below 10, so it is a possible outlier, but 88 is inside the upper fence of 90. Using the IQR alone gives fences of 20 and 80, which wrongly flags both values.",
+   "why": "\\(\\text{IQR} = 20\\), and \\(1.5 \\times 20 = 30\\), so the fences are \\(40 - 30 = 10\\) and \\(60 + 30 = 90\\). The value 8 is below 10, so it is a possible outlier, but 88 is inside the upper fence of 90. Using the IQR alone gives fences of 20 and 80, which wrongly flags both values.",
    "clue": "Work out both fences, then check each end value against them."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "The five-number summary and boxplots",
+   "card": [
+    "The five-number summary lists the minimum, Q1, median, Q3 and maximum. Q1 is the median of the lower half of the data, and Q3 is the median of the upper half.",
+    "A boxplot draws these five values. The box runs from Q1 to Q3 with a line at the median. Whiskers reach out to the smallest and largest values that are not outliers.",
+    "The fences are 1.5 × IQR below Q1 and 1.5 × IQR above Q3, where IQR = Q3 − Q1. A value beyond a fence is a possible outlier, and it is shown as a separate dot.",
+    "Example: Q1 = 12 and Q3 = 20. IQR = 8, and 1.5 × 8 = 12. The fences are 12 − 12 = 0 and 20 + 12 = 32. A value of 35 is a possible outlier."
+   ],
+   "remember": "A boxplot shows five values, and anything beyond a fence is a possible outlier.",
+   "a": {
+    "q": "A data set has Q1 = 30 and Q3 = 50. What is the upper fence for outliers?",
+    "opts": [
+     "80",
+     "70",
+     "60",
+     "75"
+    ],
+    "why": "IQR = 50 − 30 = 20, and 1.5 × 20 = 30. The upper fence is Q3 + 30 = 80. Adding only the IQR to Q3 gives 70, adding 30 to Q1 instead of Q3 gives 60, and multiplying Q3 by 1.5 gives 75.",
+    "clue": "Find the IQR first, then multiply it by 1.5."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia's daily steps (in hundreds) have Q1 = 40 and Q3 = 60. Her minimum is 8 and her maximum is 88. Which statement is correct?",
+    "opts": [
+     "Only the minimum of 8 is a possible outlier",
+     "Only the maximum of 88 is a possible outlier",
+     "Both 8 and 88 are possible outliers",
+     "Neither 8 nor 88 is a possible outlier"
+    ],
+    "why": "IQR = 20, and 1.5 × 20 = 30, so the fences are 40 − 30 = 10 and 60 + 30 = 90. The value 8 is below 10, so it is a possible outlier, but 88 is inside the upper fence of 90. Using the IQR alone gives fences of 20 and 80, which wrongly flags both values.",
+    "clue": "Work out both fences, then check each end value against them."
+   }
+  }
+ }
 }
