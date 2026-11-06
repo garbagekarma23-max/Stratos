@@ -19,10 +19,11 @@ Write every piece of maths in LaTeX between \( and \), inside the sentence: "The
 - Logarithms and functions: \log_{e} x, \ln x, \sin x, \cos 2x, \tan \theta, f(x).
 - Combinations: the syllabus's notation for the course. NSW writes {}^{n}C_{r}; Victoria and the Australian Curriculum write \binom{n}{r}.
 - Limits, sums and integrals: \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}, \sum_{k=1}^{n} k, \int_{0}^{1} x^{2} \, dx.
+- Matrices: \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, in square brackets as VCAA and NSW write them, with & between the entries of a row and \\ followed by a space between rows. A row matrix is \begin{bmatrix} 10 & 20 \end{bmatrix}. Never write a matrix in a line of text, such as [1 2; 3 4] or "rows (1 2) and (3 4)". A matrix's widest row counts toward the 30 characters, so a 4 by 4 matrix of single digits fits, but a row of long numbers does not.
 - Absolute value: |x - 3|. Brackets: ( ) and [ ], and \{ \} for a set. Write every bracket the maths needs, so it means one thing only.
 - Words inside maths: \text{cm}. Keep units such as cm, km/h and $ outside maths where you can: "a length of 12 cm".
 - Spaces inside maths change nothing, so a number such as 100 000 is written 100{,}000 inside maths, or kept as a word outside it.
-- Use only these commands: frac, sqrt, binom, times, div, pm, cdot, le, ge, ne, approx, sim (for a distribution, such as \(X \sim \text{Bin}(n, p)\)), pi, theta and other Greek letters, infty, to, log, ln, sin, cos, tan, lim, int, sum, text, left, right, circ, overline, mid, cup, cap, in.
+- Use only these commands: frac, sqrt, binom, times, div, pm, cdot, le, ge, ne, approx, sim (for a distribution, such as \(X \sim \text{Bin}(n, p)\)), pi, theta and other Greek letters, infty, to, log, ln, sin, cos, tan, lim, int, sum, text, left, right, circ, overline, mid, cup, cap, in, and begin and end only for {bmatrix}.
 - A piece of maths never wraps onto a second line, and a phone line holds about 30 characters of maths. Never put a formula in words inside one piece with \text: write "Weekly wage \(=\) hourly rate \(\times\) hours worked", with only the signs in maths. Split a long chain of working into pieces joined by words: "\(|v| = \sqrt{3^{2} + (-4)^{2}}\), which is \(\sqrt{25} = 5\)".
 - Keep each option short as it looks on screen: \(\frac{12}{5}\) counts as two characters, not twelve.
 - A title is words only, with no maths.
