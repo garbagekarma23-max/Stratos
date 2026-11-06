@@ -19,8 +19,11 @@ export const EDEXCEL = new Function(fs.readFileSync(new URL('../src/edexcel-cont
 // Every multiple-choice question, by its text, so pick() can find the right answer in any course with options.
 // The made banks (src/bank) are added too. keyBank adds another bank, such as the made course in tests/made.
 // A question with maths in it (LaTeX between \( and \)) reads on the page as its text with those marks taken out, since
-// each piece is a <math-span> holding its LaTeX. onPage gives that text, and each question is keyed both ways.
-export const onPage = t => t.replace(/\\\(|\\\)/g, '');
+// each piece is a <math-span> holding its LaTeX as MathLive is given it: mxDraw (src/05-maths-text.js, read from the
+// app's own file) puts each \text{} word in braces so it gets a space before a sign. onPage gives that text, and each
+// question is keyed both ways.
+const mxDraw = new Function(fs.readFileSync(new URL('../src/05-maths-text.js', import.meta.url), 'utf8') + '; return mxDraw;')();
+export const onPage = t => t.replace(/\\\((.+?)\\\)/g, (m, x) => mxDraw(x));
 export const KEYED = new Map();
 export function keyBank(bank) {
   for (const id of Object.keys(bank)) for (const k of ['a', 'b']) {

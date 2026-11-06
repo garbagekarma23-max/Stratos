@@ -108,12 +108,15 @@ function diff(a, b) {
    gives from the app's own copy (lab/mathlive), loaded the first time a point has maths in it. Until it is ready the
    pieces stay hidden, so the LaTeX itself never shows; the edit form shows it. */
 const MX = /\\\((.+?)\\\)/;
+/* A word in \text{} goes in braces, {\text{rate}}, so MathLive puts the usual space before = or + after it, as the
+   app does (mxDraw in src/05-maths-text.js). The edit form still shows the LaTeX as written. */
+const mxDraw = t => t.replace(/\\text\{([^{}]*)\}/g, '{\\text{$1}}');
 let mathLive = null;
 function mt(s) {
   s = String(s == null ? '' : s);
   if (s.indexOf('\\(') < 0) return esc(s);
   if (!mathLive) { mathLive = document.createElement('script'); mathLive.src = '/mathlive/mathlive.min.js'; document.head.appendChild(mathLive); }
-  return s.split(MX).map((part, i) => i % 2 ? '<math-span>' + esc(part) + '</math-span>' : esc(part)).join('');
+  return s.split(MX).map((part, i) => i % 2 ? '<math-span>' + esc(mxDraw(part)) + '</math-span>' : esc(part)).join('');
 }
 /* Text in pieces for diff(): words, spaces, and each piece of maths whole. */
 const pieces = s => String(s || '').split(/(\\\(.+?\\\)|\s+)/).filter(x => x !== '');
