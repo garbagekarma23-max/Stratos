@@ -13,7 +13,8 @@
   "2026-11-04T09:23:39Z new, match",
   "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:07Z write: done",
-  "2026-11-04T09:58:29Z check: passed, cleared"
+  "2026-11-04T09:58:29Z check: passed, cleared",
+  "2026-11-06T10:44:11Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -89,18 +90,18 @@
    "Some problems hide two right-angled triangles that share a side. Draw both and mark the shared side.",
    "Use the triangle with enough information first. Find the shared side there, using a trigonometric ratio or Pythagoras' theorem.",
    "Then use that side in the second triangle to find what the problem asks for.",
-   "Example: a flagpole stands on a building. From a point 30 m from the base, the angle up to the bottom of the pole is 45° and to the top is 60°. The building is 30 × tan 45° = 30 m high. The top is 30 × tan 60° = 52.0 m high. The pole is 52.0 − 30 = 22.0 m long."
+   "Example: a flagpole stands on a building. From a point 30 m from the base, the angle up to the bottom of the pole is 45° and to the top is 60°. The building is \\(30 \\times \\tan 45^{\\circ} = 30\\) m high. The top is \\(30 \\times \\tan 60^{\\circ} \\approx 52.0\\) m high. The pole is \\(52.0 - 30 = 22.0\\) m long."
   ],
   "remember": "Solve the triangle you can, then pass its shared side to the next.",
   "a": {
-   "q": "Triangles ABD and CBD both have a right angle at D and share side BD. In triangle ABD, AB = 10 m and angle A = 30°. In triangle CBD, CD = 12 m. What is BC?",
+   "q": "Triangles ABD and CBD both have a right angle at D and share side BD. In triangle ABD, \\(AB = 10\\) m and angle \\(A = 30^{\\circ}\\). In triangle CBD, \\(CD = 12\\) m. What is BC?",
    "opts": [
     "13 m",
     "15.6 m",
     "17 m",
     "7 m"
    ],
-   "why": "In triangle ABD, BD = 10 × sin 30° = 5 m. Then BC = √(5² + 12²) = 13 m. 15.6 m is tempting, but it comes from using 10 instead of the shared side 5.",
+   "why": "In triangle ABD, \\(BD = 10 \\times \\sin 30^{\\circ} = 5\\) m. Then \\(BC = \\sqrt{5^{2} + 12^{2}} = 13\\) m. 15.6 m is tempting, but it comes from using 10 instead of the shared side 5.",
    "clue": "Find BD first, then use it in the second triangle."
   },
   "b": {
@@ -112,9 +113,46 @@
     "50 m",
     "136.6 m"
    ],
-   "why": "The building is 50 × tan 45° = 50 m high. The top of the mast is 50 × tan 60° = 86.6 m high. The mast is the difference: 86.6 − 50 = 36.6 m. 86.6 m is tempting, but that is the height of the top, not the mast.",
+   "why": "The building is \\(50 \\times \\tan 45^{\\circ} = 50\\) m high. The top of the mast is \\(50 \\times \\tan 60^{\\circ} \\approx 86.6\\) m high. The mast is the difference: \\(86.6 - 50 = 36.6\\) m. 86.6 m is tempting, but that is the height of the top, not the mast.",
    "clue": "The mast is the difference between two heights."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:44:11Z",
+  "by": "hand",
+  "before": {
+   "title": "Problems with two right-angled triangles",
+   "card": [
+    "Some problems hide two right-angled triangles that share a side. Draw both and mark the shared side.",
+    "Use the triangle with enough information first. Find the shared side there, using a trigonometric ratio or Pythagoras' theorem.",
+    "Then use that side in the second triangle to find what the problem asks for.",
+    "Example: a flagpole stands on a building. From a point 30 m from the base, the angle up to the bottom of the pole is 45° and to the top is 60°. The building is 30 × tan 45° = 30 m high. The top is 30 × tan 60° = 52.0 m high. The pole is 52.0 − 30 = 22.0 m long."
+   ],
+   "remember": "Solve the triangle you can, then pass its shared side to the next.",
+   "a": {
+    "q": "Triangles ABD and CBD both have a right angle at D and share side BD. In triangle ABD, AB = 10 m and angle A = 30°. In triangle CBD, CD = 12 m. What is BC?",
+    "opts": [
+     "13 m",
+     "15.6 m",
+     "17 m",
+     "7 m"
+    ],
+    "why": "In triangle ABD, BD = 10 × sin 30° = 5 m. Then BC = √(5² + 12²) = 13 m. 15.6 m is tempting, but it comes from using 10 instead of the shared side 5.",
+    "clue": "Find BD first, then use it in the second triangle."
+   },
+   "b": {
+    "d": 3,
+    "q": "Hasan stands in Hobart, 50 m from the base of a building with a radio mast on its roof. The angle up to the bottom of the mast is 45° and to the top is 60°. How long is the mast?",
+    "opts": [
+     "36.6 m",
+     "86.6 m",
+     "50 m",
+     "136.6 m"
+    ],
+    "why": "The building is 50 × tan 45° = 50 m high. The top of the mast is 50 × tan 60° = 86.6 m high. The mast is the difference: 86.6 − 50 = 36.6 m. 86.6 m is tempting, but that is the height of the top, not the mast.",
+    "clue": "The mast is the difference between two heights."
+   }
+  }
+ }
 }

@@ -7,7 +7,8 @@
  "log": [
   "2026-11-04T09:23:40Z new, write",
   "2026-11-04T09:36:55Z write: done",
-  "2026-11-04T09:47:07Z check: passed, cleared"
+  "2026-11-04T09:47:07Z check: passed, cleared",
+  "2026-11-06T10:43:46Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -71,11 +72,11 @@
   "title": "Angle sum of polygons",
   "card": [
    "A polygon is a closed shape with straight sides. Pick one vertex (corner) and draw lines to every other vertex that is not next to it. This splits the polygon into triangles.",
-   "Each triangle has an angle sum of 180°. A quadrilateral splits into 2 triangles, so its angles add to 2 × 180° = 360°.",
-   "A polygon with n sides splits into n − 2 triangles. Its angles add to (n − 2) × 180°.",
-   "Example: a hexagon has 6 sides. (6 − 2) × 180° = 4 × 180° = 720°."
+   "Each triangle has an angle sum of 180°. A quadrilateral splits into 2 triangles, so its angles add to \\(2 \\times 180^{\\circ} = 360^{\\circ}\\).",
+   "A polygon with \\(n\\) sides splits into \\(n - 2\\) triangles. Its angles add to \\((n - 2) \\times 180^{\\circ}\\).",
+   "Example: a hexagon has 6 sides. \\((6 - 2) \\times 180^{\\circ} = 4 \\times 180^{\\circ}\\), which is 720°."
   ],
-  "remember": "Number of triangles = n − 2, so the angle sum is (n − 2) × 180°.",
+  "remember": "Number of triangles \\(= n - 2\\), so the angle sum is \\((n - 2) \\times 180^{\\circ}\\).",
   "a": {
    "q": "What is the angle sum of a pentagon, which has 5 sides?",
    "opts": [
@@ -84,8 +85,8 @@
     "360°",
     "720°"
    ],
-   "why": "A pentagon splits into 5 − 2 = 3 triangles, so the sum is 3 × 180° = 540°. 720° would be the sum for a hexagon, which has 6 sides.",
-   "clue": "Find n − 2 first, then multiply by 180°."
+   "why": "A pentagon splits into \\(5 - 2 = 3\\) triangles, so the sum is \\(3 \\times 180^{\\circ} = 540^{\\circ}\\). 720° would be the sum for a hexagon, which has 6 sides.",
+   "clue": "Find \\(n - 2\\) first, then multiply by 180°."
   },
   "b": {
    "d": 3,
@@ -96,9 +97,46 @@
     "95°",
     "180°"
    ],
-   "why": "The four angles add to 360°. 95° + 110° + 70° = 275°, and 360° − 275° = 85°. 275° is the sum of the three known angles, not the missing one.",
+   "why": "The four angles add to 360°. \\(95^{\\circ} + 110^{\\circ} + 70^{\\circ} = 275^{\\circ}\\), and \\(360^{\\circ} - 275^{\\circ} = 85^{\\circ}\\). 275° is the sum of the three known angles, not the missing one.",
    "clue": "Subtract the three known angles from the quadrilateral's total."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:43:46Z",
+  "by": "hand",
+  "before": {
+   "title": "Angle sum of polygons",
+   "card": [
+    "A polygon is a closed shape with straight sides. Pick one vertex (corner) and draw lines to every other vertex that is not next to it. This splits the polygon into triangles.",
+    "Each triangle has an angle sum of 180°. A quadrilateral splits into 2 triangles, so its angles add to 2 × 180° = 360°.",
+    "A polygon with n sides splits into n − 2 triangles. Its angles add to (n − 2) × 180°.",
+    "Example: a hexagon has 6 sides. (6 − 2) × 180° = 4 × 180° = 720°."
+   ],
+   "remember": "Number of triangles = n − 2, so the angle sum is (n − 2) × 180°.",
+   "a": {
+    "q": "What is the angle sum of a pentagon, which has 5 sides?",
+    "opts": [
+     "540°",
+     "900°",
+     "360°",
+     "720°"
+    ],
+    "why": "A pentagon splits into 5 − 2 = 3 triangles, so the sum is 3 × 180° = 540°. 720° would be the sum for a hexagon, which has 6 sides.",
+    "clue": "Find n − 2 first, then multiply by 180°."
+   },
+   "b": {
+    "d": 3,
+    "q": "Three angles of a quadrilateral are 95°, 110° and 70°. What is the fourth angle?",
+    "opts": [
+     "85°",
+     "275°",
+     "95°",
+     "180°"
+    ],
+    "why": "The four angles add to 360°. 95° + 110° + 70° = 275°, and 360° − 275° = 85°. 275° is the sum of the three known angles, not the missing one.",
+    "clue": "Subtract the three known angles from the quadrilateral's total."
+   }
+  }
+ }
 }

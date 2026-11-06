@@ -523,7 +523,7 @@ py content/pipeline.py cc-review --undo
 
 A maths point writes its maths in LaTeX between `\(` and `\)`, inside the sentence: `The axis of symmetry is \(x = -\frac{b}{2a}\).` The app draws it with MathLive, the way the Maths Lab does, and reads it aloud to screen readers. Dollar signs are never used to mark maths, because `$20` is money. `content/prompts/kinds/maths.md` tells the writer which commands to use, and the checker, the adapter, rebalance and the Claude Code reviewer are told to look for maths written as plain text.
 
-The content check (`check_content.mjs`, with `content/latex.mjs`) fails a point when a piece of LaTeX does not parse, and fails a maths point that writes maths as plain text: a slash as a fraction, a caret or ² for a power, `log_`, `sqrt`, `<=` or `>=`, ≤ ≥ × ÷ − π and the like, an equals sign, or a hyphen used as a minus sign, outside `\( \)`. Numbers, money, percentages, coordinates such as (3, 4), degrees, `km/h`, `and/or` and words such as `x-axis` are fine as text. Every new point is checked this way. The maths points written before this rule get a warning in the full check, not a failure, until they are converted.
+The content check (`check_content.mjs`, with `content/latex.mjs`) fails a point when a piece of LaTeX does not parse, and fails a maths point that writes maths as plain text: a slash as a fraction, a caret or ² for a power, `log_`, `sqrt`, `<=` or `>=`, ≤ ≥ × ÷ − π and the like, an equals sign, or a hyphen used as a minus sign, outside `\( \)`. Numbers, money, percentages, coordinates such as (3, 4), degrees, `km/h`, `and/or` and words such as `x-axis` are fine as text. Every point is checked this way, in the full check and in the pipeline alike. A matrix is `\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}`, in square brackets as VCAA and NSW write them, with `&` between the entries of a row and `\\` and a space between rows; it is never written in a line of text such as [1 2; 3 4].
 
 `content/convert_maths.py` converts them. It changes only the point files in `content/work/`, never `src/`:
 
@@ -540,7 +540,7 @@ py content/convert_maths.py --write
 
 makes the safe swaps (each run of maths is read back as plain text and must match the original). `--write ID ID` does only those points, and `--show ID` shows one point before and after. Points converted by hand go in a JSON file, `{id: point}`, and in with `--apply FILE`, after passing the content check. `--undo ID` puts a point back. Each converted point keeps its version before under `latex` in its file. Afterwards the script lists the courses that use the points it changed: publish each one (step 9), then build and test.
 
-The first chapter converted by hand is Mathematics Advanced, Year 11, Families of graphs (`nsw-mat-adv-11-1-2`).
+The first chapter converted by hand is Mathematics Advanced, Year 11, Families of graphs (`nsw-mat-adv-11-1-2`). Every maths point written before this rule is converted now, so `py content/convert_maths.py` reports 0 to convert. The script stays for any maths point found in plain text later.
 
 ## Writing an outline
 

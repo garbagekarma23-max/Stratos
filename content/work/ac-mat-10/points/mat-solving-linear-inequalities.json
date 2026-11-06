@@ -26,7 +26,8 @@
   "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:06Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:58:30Z write: done",
-  "2026-11-04T10:08:03Z check: passed, cleared"
+  "2026-11-04T10:08:03Z check: passed, cleared",
+  "2026-11-06T10:44:11Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -100,35 +101,72 @@
  "final": {
   "title": "Solving linear inequalities",
   "card": [
-   "An inequality compares two sides with <, >, ≤ or ≥. Its solution is a range of values, not one number.",
+   "An inequality compares two sides with \\(<\\), \\(>\\), \\(\\le\\) or \\(\\ge\\). Its solution is a range of values, not one number.",
    "Solve it like an equation. Do the same thing to both sides: add, subtract, multiply or divide.",
-   "If you multiply or divide both sides by a negative number, flip the sign. < becomes > and ≤ becomes ≥. Adding or subtracting never flips it.",
-   "Example: −2x < 6. Divide both sides by −2 and flip the sign, so x > −3. Check with x = 0: −2 × 0 = 0, and 0 < 6 is true."
+   "If you multiply or divide both sides by a negative number, flip the sign. \\(<\\) becomes \\(>\\) and \\(\\le\\) becomes \\(\\ge\\). Adding or subtracting never flips it.",
+   "Example: \\(-2x < 6\\). Divide both sides by \\(-2\\) and flip the sign, so \\(x > -3\\). Check with \\(x = 0\\): \\(-2 \\times 0 = 0\\), and \\(0 < 6\\) is true."
   ],
   "remember": "Solve as you would an equation, but flip the sign when you multiply or divide by a negative.",
   "a": {
-   "q": "Solve −3x ≥ 12.",
+   "q": "Solve \\(-3x \\ge 12\\).",
    "opts": [
-    "x ≤ −4",
-    "x ≥ −4",
-    "x ≤ 4",
-    "x ≥ 4"
+    "\\(x \\le -4\\)",
+    "\\(x \\ge -4\\)",
+    "\\(x \\le 4\\)",
+    "\\(x \\ge 4\\)"
    ],
-   "why": "Divide both sides by −3 and flip the sign, so x ≤ −4. The option x ≥ −4 divides correctly but forgets to flip the sign. Check x = −5: −3 × −5 = 15, and 15 ≥ 12 is true.",
+   "why": "Divide both sides by \\(-3\\) and flip the sign, so \\(x \\le -4\\). The option \\(x \\ge -4\\) divides correctly but forgets to flip the sign. Check \\(x = -5\\): \\(-3 \\times (-5) = 15\\), and \\(15 \\ge 12\\) is true.",
    "clue": "Which way does the sign go after dividing by a negative?"
   },
   "b": {
    "d": 3,
-   "q": "Solve 5 − 2x > 11.",
+   "q": "Solve \\(5 - 2x > 11\\).",
    "opts": [
-    "x < −3",
-    "x > −3",
-    "x < 8",
-    "x > 8"
+    "\\(x < -3\\)",
+    "\\(x > -3\\)",
+    "\\(x < 8\\)",
+    "\\(x > 8\\)"
    ],
-   "why": "Subtract 5 from both sides: −2x > 6. Divide by −2 and flip the sign: x < −3. The option x > −3 forgets the flip. Check x = −4: 5 − 2 × −4 = 13, and 13 > 11 is true.",
-   "clue": "Subtracting 5 does not flip the sign. Dividing by −2 does."
+   "why": "Subtract 5 from both sides: \\(-2x > 6\\). Divide by \\(-2\\) and flip the sign: \\(x < -3\\). The option \\(x > -3\\) forgets the flip. Check \\(x = -4\\): \\(5 - 2 \\times (-4) = 13\\), and \\(13 > 11\\) is true.",
+   "clue": "Subtracting 5 does not flip the sign. Dividing by \\(-2\\) does."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:44:11Z",
+  "by": "hand",
+  "before": {
+   "title": "Solving linear inequalities",
+   "card": [
+    "An inequality compares two sides with <, >, ≤ or ≥. Its solution is a range of values, not one number.",
+    "Solve it like an equation. Do the same thing to both sides: add, subtract, multiply or divide.",
+    "If you multiply or divide both sides by a negative number, flip the sign. < becomes > and ≤ becomes ≥. Adding or subtracting never flips it.",
+    "Example: −2x < 6. Divide both sides by −2 and flip the sign, so x > −3. Check with x = 0: −2 × 0 = 0, and 0 < 6 is true."
+   ],
+   "remember": "Solve as you would an equation, but flip the sign when you multiply or divide by a negative.",
+   "a": {
+    "q": "Solve −3x ≥ 12.",
+    "opts": [
+     "x ≤ −4",
+     "x ≥ −4",
+     "x ≤ 4",
+     "x ≥ 4"
+    ],
+    "why": "Divide both sides by −3 and flip the sign, so x ≤ −4. The option x ≥ −4 divides correctly but forgets to flip the sign. Check x = −5: −3 × −5 = 15, and 15 ≥ 12 is true.",
+    "clue": "Which way does the sign go after dividing by a negative?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Solve 5 − 2x > 11.",
+    "opts": [
+     "x < −3",
+     "x > −3",
+     "x < 8",
+     "x > 8"
+    ],
+    "why": "Subtract 5 from both sides: −2x > 6. Divide by −2 and flip the sign: x < −3. The option x > −3 forgets the flip. Check x = −4: 5 − 2 × −4 = 13, and 13 > 11 is true.",
+    "clue": "Subtracting 5 does not flip the sign. Dividing by −2 does."
+   }
+  }
+ }
 }
