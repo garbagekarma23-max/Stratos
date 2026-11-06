@@ -29,7 +29,8 @@
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: done",
-  "2026-11-01T15:05:29Z check: passed, cleared"
+  "2026-11-01T15:05:29Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -116,45 +117,94 @@
   "card": [
    [
     "Mean",
-    "For a pdf f(x), the mean is E(X) = ∫ x f(x) dx, taken over the values X can take. It is the balance point of the distribution."
+    "For a pdf \\(f(x)\\), the mean is \\(E(X) = \\int x f(x) \\, dx\\), taken over the values \\(X\\) can take. It is the balance point of the distribution."
    ],
    [
     "Median",
-    "The median m splits the area under f into two halves. Solve ∫ f(x) dx = 1/2, from the lowest value of X up to m."
+    "The median \\(m\\) splits the area under \\(f\\) into two halves. Solve \\(\\int_{a}^{m} f(x) \\, dx = \\frac{1}{2}\\), where \\(a\\) is the lowest value of \\(X\\)."
    ],
    [
     "Variance",
-    "Var(X) = E(X²) − [E(X)]², where E(X²) = ∫ x² f(x) dx. The standard deviation is the square root of the variance."
+    "\\(\\text{Var}(X) = E(X^{2}) - [E(X)]^{2}\\), where \\(E(X^{2}) = \\int x^{2} f(x) \\, dx\\). The standard deviation is the square root of the variance."
    ],
    [
     "Example",
-    "Let f(x) = 2x for 0 ≤ x ≤ 1. Mean = ∫ 2x² dx = 2/3. Median: x² = 1/2, so m = √2/2. E(X²) = ∫ 2x³ dx = 1/2, so Var(X) = 1/2 − 4/9 = 1/18."
+    "Let \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). Mean \\(= \\int_{0}^{1} 2x^{2} \\, dx = \\frac{2}{3}\\). Median: \\(m^{2} = \\frac{1}{2}\\), so \\(m = \\frac{\\sqrt{2}}{2}\\). \\(E(X^{2}) = \\int_{0}^{1} 2x^{3} \\, dx = \\frac{1}{2}\\), so \\(\\text{Var}(X) = \\frac{1}{2} - \\frac{4}{9} = \\frac{1}{18}\\)."
    ]
   ],
-  "remember": "Mean uses x times f(x). Median uses half the area. Variance is E(X²) minus the mean squared.",
+  "remember": "Mean uses \\(x\\) times \\(f(x)\\). Median uses half the area. Variance is \\(E(X^{2})\\) minus the mean squared.",
   "a": {
-   "q": "X has pdf f(x) = 3x² for 0 ≤ x ≤ 1, and 0 otherwise. What is E(X)?",
+   "q": "\\(X\\) has pdf \\(f(x) = 3x^{2}\\) for \\(0 \\le x \\le 1\\), and 0 otherwise. What is \\(E(X)\\)?",
    "opts": [
-    "3/4",
-    "1/2",
-    "3/5",
+    "\\(\\frac{3}{4}\\)",
+    "\\(\\frac{1}{2}\\)",
+    "\\(\\frac{3}{5}\\)",
     "1"
    ],
-   "why": "E(X) = ∫ x · 3x² dx from 0 to 1 = [3x⁴/4] = 3/4. The value 3/5 is tempting, but it comes from ∫ x² · 3x² dx, which is E(X²), not the mean.",
-   "clue": "Multiply f(x) by x before you integrate."
+   "why": "\\(E(X) = \\int_{0}^{1} x \\cdot 3x^{2} \\, dx = \\left[\\frac{3x^{4}}{4}\\right]_{0}^{1} = \\frac{3}{4}\\). The value \\(\\frac{3}{5}\\) is tempting, but it comes from \\(\\int_{0}^{1} x^{2} \\cdot 3x^{2} \\, dx\\), which is \\(E(X^{2})\\), not the mean.",
+   "clue": "Multiply \\(f(x)\\) by \\(x\\) before you integrate."
   },
   "b": {
    "d": 3,
-   "q": "The time T hours that Priya spends on a task has pdf f(t) = t/2 for 0 ≤ t ≤ 2, and 0 otherwise. What is the median of T?",
+   "q": "The time \\(T\\) hours that Priya spends on a task has pdf \\(f(t) = \\frac{t}{2}\\) for \\(0 \\le t \\le 2\\), and 0 otherwise. What is the median of \\(T\\)?",
    "opts": [
-    "√2",
-    "4/3",
+    "\\(\\sqrt{2}\\)",
+    "\\(\\frac{4}{3}\\)",
     "1",
     "2"
    ],
-   "why": "Solve ∫ t/2 dt from 0 to m = m²/4 = 1/2, so m² = 2 and m = √2. The value 4/3 is the mean, found with ∫ t · t/2 dt. The value 1 is the middle of the range, but the area is not split evenly there.",
-   "clue": "Set the area from 0 to m equal to 1/2, then solve for m."
+   "why": "Solve \\(\\int_{0}^{m} \\frac{t}{2} \\, dt = \\frac{m^{2}}{4} = \\frac{1}{2}\\), so \\(m^{2} = 2\\) and \\(m = \\sqrt{2}\\). The value \\(\\frac{4}{3}\\) is the mean, found with \\(\\int_{0}^{2} t \\cdot \\frac{t}{2} \\, dt\\). The value 1 is the middle of the range, but the area is not split evenly there.",
+   "clue": "Set the area from 0 to \\(m\\) equal to \\(\\frac{1}{2}\\), then solve for \\(m\\)."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Mean, median and variance of a continuous variable",
+   "card": [
+    [
+     "Mean",
+     "For a pdf f(x), the mean is E(X) = ∫ x f(x) dx, taken over the values X can take. It is the balance point of the distribution."
+    ],
+    [
+     "Median",
+     "The median m splits the area under f into two halves. Solve ∫ f(x) dx = 1/2, from the lowest value of X up to m."
+    ],
+    [
+     "Variance",
+     "Var(X) = E(X²) − [E(X)]², where E(X²) = ∫ x² f(x) dx. The standard deviation is the square root of the variance."
+    ],
+    [
+     "Example",
+     "Let f(x) = 2x for 0 ≤ x ≤ 1. Mean = ∫ 2x² dx = 2/3. Median: x² = 1/2, so m = √2/2. E(X²) = ∫ 2x³ dx = 1/2, so Var(X) = 1/2 − 4/9 = 1/18."
+    ]
+   ],
+   "remember": "Mean uses x times f(x). Median uses half the area. Variance is E(X²) minus the mean squared.",
+   "a": {
+    "q": "X has pdf f(x) = 3x² for 0 ≤ x ≤ 1, and 0 otherwise. What is E(X)?",
+    "opts": [
+     "3/4",
+     "1/2",
+     "3/5",
+     "1"
+    ],
+    "why": "E(X) = ∫ x · 3x² dx from 0 to 1 = [3x⁴/4] = 3/4. The value 3/5 is tempting, but it comes from ∫ x² · 3x² dx, which is E(X²), not the mean.",
+    "clue": "Multiply f(x) by x before you integrate."
+   },
+   "b": {
+    "d": 3,
+    "q": "The time T hours that Priya spends on a task has pdf f(t) = t/2 for 0 ≤ t ≤ 2, and 0 otherwise. What is the median of T?",
+    "opts": [
+     "√2",
+     "4/3",
+     "1",
+     "2"
+    ],
+    "why": "Solve ∫ t/2 dt from 0 to m = m²/4 = 1/2, so m² = 2 and m = √2. The value 4/3 is the mean, found with ∫ t · t/2 dt. The value 1 is the middle of the range, but the area is not split evenly there.",
+    "clue": "Set the area from 0 to m equal to 1/2, then solve for m."
+   }
+  }
+ }
 }

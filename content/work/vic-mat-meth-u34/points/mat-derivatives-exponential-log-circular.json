@@ -32,7 +32,8 @@
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -217,45 +218,94 @@
   "card": [
    [
     "Exponential",
-    "The derivative of e^(kx) is k e^(kx). The power stays the same and the constant k comes out the front."
+    "The derivative of \\(e^{kx}\\) is \\(ke^{kx}\\). The power stays the same and the constant \\(k\\) comes out the front."
    ],
    [
     "Logarithm",
-    "The derivative of log_e(x) is 1/x, for x > 0."
+    "The derivative of \\(\\log_{e}(x)\\) is \\(\\frac{1}{x}\\), for \\(x > 0\\)."
    ],
    [
     "Sine",
-    "The derivative of sin(kx) is k cos(kx). Angles are in radians. In a sum, differentiate each term separately."
+    "The derivative of \\(\\sin(kx)\\) is \\(k\\cos(kx)\\). Angles are in radians. In a sum, differentiate each term separately."
    ],
    [
     "Cosine",
-    "The derivative of cos(kx) is −k sin(kx). Note the negative sign. A number in front stays as a multiplier: the derivative of 2 cos(3x) is 2 × (−3 sin(3x)) = −6 sin(3x)."
+    "The derivative of \\(\\cos(kx)\\) is \\(-k\\sin(kx)\\). Note the negative sign. A number in front stays as a multiplier: the derivative of \\(2\\cos(3x)\\) is \\(2 \\times (-3\\sin(3x)) = -6\\sin(3x)\\)."
    ]
   ],
-  "remember": "For e^(kx), sin(kx) and cos(kx), k comes out the front. log_e(x) gives 1/x, and cos gives a negative sin.",
+  "remember": "For \\(e^{kx}\\), \\(\\sin(kx)\\) and \\(\\cos(kx)\\), \\(k\\) comes out the front. \\(\\log_{e}(x)\\) gives \\(\\frac{1}{x}\\), and cos gives a negative sin.",
   "a": {
-   "q": "A function is given by f(x) = e^(6x). Which expression is f′(x)?",
+   "q": "A function is given by \\(f(x) = e^{6x}\\). Which expression is \\(f'(x)\\)?",
    "opts": [
-    "6e^(6x)",
-    "e^(6x)",
-    "6xe^(6x−1)",
-    "e^(6x)/6"
+    "\\(6e^{6x}\\)",
+    "\\(e^{6x}\\)",
+    "\\(6xe^{6x - 1}\\)",
+    "\\(\\frac{e^{6x}}{6}\\)"
    ],
-   "why": "The derivative of e^(kx) is k e^(kx), so with k = 6 it is 6e^(6x). The option e^(6x) is tempting because e^x is its own derivative, but the constant 6 must come out the front.",
-   "clue": "The number in front of x comes out the front."
+   "why": "The derivative of \\(e^{kx}\\) is \\(ke^{kx}\\), so with \\(k = 6\\) it is \\(6e^{6x}\\). The option \\(e^{6x}\\) is tempting because \\(e^{x}\\) is its own derivative, but the constant 6 must come out the front.",
+   "clue": "The number in front of \\(x\\) comes out the front."
   },
   "b": {
    "d": 3,
-   "q": "What is the derivative of 2 cos(4x) + 3 sin(x)?",
+   "q": "What is the derivative of \\(2\\cos(4x) + 3\\sin(x)\\)?",
    "opts": [
-    "−8 sin(4x) + 3 cos(x)",
-    "8 sin(4x) + 3 cos(x)",
-    "−2 sin(4x) + 3 cos(x)",
-    "−8 sin(4x) − 3 cos(x)"
+    "\\(-8\\sin(4x) + 3\\cos(x)\\)",
+    "\\(8\\sin(4x) + 3\\cos(x)\\)",
+    "\\(-2\\sin(4x) + 3\\cos(x)\\)",
+    "\\(-8\\sin(4x) - 3\\cos(x)\\)"
    ],
-   "why": "Each term is done separately. The derivative of 2 cos(4x) is 2 × (−4 sin(4x)) = −8 sin(4x), and the derivative of 3 sin(x) is 3 cos(x). Dropping the negative sign for cos gives the tempting wrong answer 8 sin(4x).",
-   "clue": "Multiply the 2 by the −4 from the cos rule."
+   "why": "Each term is done separately. The derivative of \\(2\\cos(4x)\\) is \\(2 \\times (-4\\sin(4x)) = -8\\sin(4x)\\), and the derivative of \\(3\\sin(x)\\) is \\(3\\cos(x)\\). Dropping the negative sign for cos gives the tempting wrong answer \\(8\\sin(4x)\\).",
+   "clue": "Multiply the 2 by the \\(-4\\) from the cos rule."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Derivatives of e, log and trig",
+   "card": [
+    [
+     "Exponential",
+     "The derivative of e^(kx) is k e^(kx). The power stays the same and the constant k comes out the front."
+    ],
+    [
+     "Logarithm",
+     "The derivative of log_e(x) is 1/x, for x > 0."
+    ],
+    [
+     "Sine",
+     "The derivative of sin(kx) is k cos(kx). Angles are in radians. In a sum, differentiate each term separately."
+    ],
+    [
+     "Cosine",
+     "The derivative of cos(kx) is −k sin(kx). Note the negative sign. A number in front stays as a multiplier: the derivative of 2 cos(3x) is 2 × (−3 sin(3x)) = −6 sin(3x)."
+    ]
+   ],
+   "remember": "For e^(kx), sin(kx) and cos(kx), k comes out the front. log_e(x) gives 1/x, and cos gives a negative sin.",
+   "a": {
+    "q": "A function is given by f(x) = e^(6x). Which expression is f′(x)?",
+    "opts": [
+     "6e^(6x)",
+     "e^(6x)",
+     "6xe^(6x−1)",
+     "e^(6x)/6"
+    ],
+    "why": "The derivative of e^(kx) is k e^(kx), so with k = 6 it is 6e^(6x). The option e^(6x) is tempting because e^x is its own derivative, but the constant 6 must come out the front.",
+    "clue": "The number in front of x comes out the front."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is the derivative of 2 cos(4x) + 3 sin(x)?",
+    "opts": [
+     "−8 sin(4x) + 3 cos(x)",
+     "8 sin(4x) + 3 cos(x)",
+     "−2 sin(4x) + 3 cos(x)",
+     "−8 sin(4x) − 3 cos(x)"
+    ],
+    "why": "Each term is done separately. The derivative of 2 cos(4x) is 2 × (−4 sin(4x)) = −8 sin(4x), and the derivative of 3 sin(x) is 3 cos(x). Dropping the negative sign for cos gives the tempting wrong answer 8 sin(4x).",
+    "clue": "Multiply the 2 by the −4 from the cos rule."
+   }
+  }
+ }
 }

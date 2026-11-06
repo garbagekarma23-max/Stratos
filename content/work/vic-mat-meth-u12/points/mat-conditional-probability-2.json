@@ -30,7 +30,8 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-conditional-probability, but is not highly sure, so to the Opus match check",
   "2026-11-01T08:14:07Z match: Claude Opus 5.5 says adapt mat-conditional-probability (1 change)",
   "2026-11-01T08:24:33Z adapt: done",
-  "2026-11-01T08:33:51Z check: passed, cleared"
+  "2026-11-01T08:33:51Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -134,35 +135,72 @@
  "final": {
   "title": "Conditional probability",
   "card": [
-   "Pr(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
-   "Formula: Pr(A | B) = Pr(A ∩ B)/Pr(B). The bottom is the event we are given. The top is the part of it that is also A.",
-   "From a table, Pr(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
-   "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. Pr(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+   "\\(\\text{Pr}(A \\mid B)\\) is the probability of \\(A\\) given that \\(B\\) has happened. Knowing \\(B\\) has happened shrinks the sample space to just the outcomes in \\(B\\).",
+   "Formula: \\(\\text{Pr}(A \\mid B) = \\frac{\\text{Pr}(A \\cap B)}{\\text{Pr}(B)}\\). The bottom is the event we are given. The top is the part of it that is also \\(A\\).",
+   "From a table, \\(\\text{Pr}(A \\mid B)\\) is the number in both \\(A\\) and \\(B\\), divided by the number in \\(B\\). Use only the row or column for \\(B\\) as the total.",
+   "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. \\(\\text{Pr}(\\text{tennis} \\mid \\text{netball}) = \\frac{8}{12} = \\frac{2}{3}\\). The total is 12, not 30."
   ],
-  "remember": "Given B means B is the new total. Divide by Pr(B), not by everything.",
+  "remember": "Given \\(B\\) means \\(B\\) is the new total. Divide by \\(\\text{Pr}(B)\\), not by everything.",
   "a": {
-   "q": "For two events, Pr(A ∩ B) = 0.2 and Pr(B) = 0.5. Find Pr(A | B).",
+   "q": "For two events, \\(\\text{Pr}(A \\cap B) = 0.2\\) and \\(\\text{Pr}(B) = 0.5\\). Find \\(\\text{Pr}(A \\mid B)\\).",
    "opts": [
     "0.4",
     "0.1",
     "0.7",
     "2.5"
    ],
-   "why": "Pr(A | B) = Pr(A ∩ B) ÷ Pr(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "why": "\\(\\text{Pr}(A \\mid B) = \\text{Pr}(A \\cap B) \\div \\text{Pr}(B) = 0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
    "clue": "The event after the bar goes on the bottom."
   },
   "b": {
    "d": 3,
    "q": "At a school camp, 40 students chose activities. 25 chose kayaking, and 10 of those also chose archery. 5 chose only archery. One archery student is picked at random. What is the probability they also chose kayaking?",
    "opts": [
-    "2/3",
-    "1/4",
-    "2/5",
-    "3/8"
+    "\\(\\frac{2}{3}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{2}{5}\\)",
+    "\\(\\frac{3}{8}\\)"
    ],
-   "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+   "why": "Archery has \\(10 + 5 = 15\\) students, and 10 of them chose kayaking, so the probability is \\(\\frac{10}{15} = \\frac{2}{3}\\). The option \\(\\frac{2}{5}\\) is \\(\\frac{10}{25}\\), which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
    "clue": "Find the total number who chose archery first."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Conditional probability",
+   "card": [
+    "Pr(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
+    "Formula: Pr(A | B) = Pr(A ∩ B)/Pr(B). The bottom is the event we are given. The top is the part of it that is also A.",
+    "From a table, Pr(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
+    "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. Pr(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+   ],
+   "remember": "Given B means B is the new total. Divide by Pr(B), not by everything.",
+   "a": {
+    "q": "For two events, Pr(A ∩ B) = 0.2 and Pr(B) = 0.5. Find Pr(A | B).",
+    "opts": [
+     "0.4",
+     "0.1",
+     "0.7",
+     "2.5"
+    ],
+    "why": "Pr(A | B) = Pr(A ∩ B) ÷ Pr(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+    "clue": "The event after the bar goes on the bottom."
+   },
+   "b": {
+    "d": 3,
+    "q": "At a school camp, 40 students chose activities. 25 chose kayaking, and 10 of those also chose archery. 5 chose only archery. One archery student is picked at random. What is the probability they also chose kayaking?",
+    "opts": [
+     "2/3",
+     "1/4",
+     "2/5",
+     "3/8"
+    ],
+    "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+    "clue": "Find the total number who chose archery first."
+   }
+  }
+ }
 }

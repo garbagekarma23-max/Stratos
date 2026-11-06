@@ -14,7 +14,8 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-independent-events, but is not highly sure, so to the Opus match check",
   "2026-11-01T08:14:07Z match: Claude Opus 5.5 says adapt mat-independent-events (1 change)",
   "2026-11-01T08:24:33Z adapt: done",
-  "2026-11-01T08:33:51Z check: passed, cleared"
+  "2026-11-01T08:33:51Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -122,34 +123,71 @@
   "title": "Independent events",
   "card": [
    "Two events are independent if knowing that one happened does not change the probability of the other. Flipping a coin and rolling a die are independent.",
-   "For independent events A and B, Pr(A ∩ B) = Pr(A) × Pr(B). This means both happen.",
-   "Example: Pr(heads) = 1/2 and Pr(roll a 6) = 1/6. Pr(heads and a 6) = 1/2 × 1/6 = 1/12.",
-   "To test for independence, check whether Pr(A ∩ B) equals Pr(A) × Pr(B). If it does, the events are independent. If it does not, they are not."
+   "For independent events \\(A\\) and \\(B\\), \\(\\text{Pr}(A \\cap B) = \\text{Pr}(A) \\times \\text{Pr}(B)\\). This means both happen.",
+   "Example: \\(\\text{Pr}(\\text{heads}) = \\frac{1}{2}\\) and \\(\\text{Pr}(\\text{roll a 6}) = \\frac{1}{6}\\). So \\(\\text{Pr}(\\text{heads and a 6}) = \\frac{1}{2} \\times \\frac{1}{6} = \\frac{1}{12}\\).",
+   "To test for independence, check whether \\(\\text{Pr}(A \\cap B)\\) equals \\(\\text{Pr}(A) \\times \\text{Pr}(B)\\). If it does, the events are independent. If it does not, they are not."
   ],
-  "remember": "Independent events: multiply the probabilities to find Pr(A ∩ B).",
+  "remember": "Independent events: multiply the probabilities to find \\(\\text{Pr}(A \\cap B)\\).",
   "a": {
-   "q": "Events A and B are independent, with Pr(A) = 0.4 and Pr(B) = 0.5. Find Pr(A ∩ B).",
+   "q": "Events \\(A\\) and \\(B\\) are independent, with \\(\\text{Pr}(A) = 0.4\\) and \\(\\text{Pr}(B) = 0.5\\). Find \\(\\text{Pr}(A \\cap B)\\).",
    "opts": [
     "0.2",
     "0.9",
     "0.1",
     "0.8"
    ],
-   "why": "For independent events, Pr(A ∩ B) = 0.4 × 0.5 = 0.2. Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
+   "why": "For independent events, \\(\\text{Pr}(A \\cap B) = 0.4 \\times 0.5 = 0.2\\). Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
    "clue": "Both events happen, and the events are independent."
   },
   "b": {
    "d": 3,
-   "q": "Pr(A) = 0.5, Pr(B) = 0.4 and Pr(A ∩ B) = 0.3. Which statement is correct?",
+   "q": "\\(\\text{Pr}(A) = 0.5\\), \\(\\text{Pr}(B) = 0.4\\) and \\(\\text{Pr}(A \\cap B) = 0.3\\). Which statement is correct?",
    "opts": [
-    "Not independent, as 0.5 × 0.4 = 0.2, not 0.3",
+    "Not independent, as \\(0.5 \\times 0.4 = 0.2\\), not 0.3",
     "Independent, as 0.3 is between 0 and 1",
-    "Independent, as 0.5 + 0.4 is more than 0.3",
-    "Not independent, as 0.3 is less than Pr(A)"
+    "Independent, as \\(0.5 + 0.4\\) is more than 0.3",
+    "Not independent, as 0.3 is less than \\(\\text{Pr}(A)\\)"
    ],
-   "why": "Independent events need Pr(A ∩ B) = Pr(A) × Pr(B). Here 0.5 × 0.4 = 0.2, which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
-   "clue": "Multiply Pr(A) and Pr(B), then compare with Pr(A ∩ B)."
+   "why": "Independent events need \\(\\text{Pr}(A \\cap B) = \\text{Pr}(A) \\times \\text{Pr}(B)\\). Here \\(0.5 \\times 0.4 = 0.2\\), which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
+   "clue": "Multiply \\(\\text{Pr}(A)\\) and \\(\\text{Pr}(B)\\), then compare with \\(\\text{Pr}(A \\cap B)\\)."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Independent events",
+   "card": [
+    "Two events are independent if knowing that one happened does not change the probability of the other. Flipping a coin and rolling a die are independent.",
+    "For independent events A and B, Pr(A ∩ B) = Pr(A) × Pr(B). This means both happen.",
+    "Example: Pr(heads) = 1/2 and Pr(roll a 6) = 1/6. Pr(heads and a 6) = 1/2 × 1/6 = 1/12.",
+    "To test for independence, check whether Pr(A ∩ B) equals Pr(A) × Pr(B). If it does, the events are independent. If it does not, they are not."
+   ],
+   "remember": "Independent events: multiply the probabilities to find Pr(A ∩ B).",
+   "a": {
+    "q": "Events A and B are independent, with Pr(A) = 0.4 and Pr(B) = 0.5. Find Pr(A ∩ B).",
+    "opts": [
+     "0.2",
+     "0.9",
+     "0.1",
+     "0.8"
+    ],
+    "why": "For independent events, Pr(A ∩ B) = 0.4 × 0.5 = 0.2. Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
+    "clue": "Both events happen, and the events are independent."
+   },
+   "b": {
+    "d": 3,
+    "q": "Pr(A) = 0.5, Pr(B) = 0.4 and Pr(A ∩ B) = 0.3. Which statement is correct?",
+    "opts": [
+     "Not independent, as 0.5 × 0.4 = 0.2, not 0.3",
+     "Independent, as 0.3 is between 0 and 1",
+     "Independent, as 0.5 + 0.4 is more than 0.3",
+     "Not independent, as 0.3 is less than Pr(A)"
+    ],
+    "why": "Independent events need Pr(A ∩ B) = Pr(A) × Pr(B). Here 0.5 × 0.4 = 0.2, which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
+    "clue": "Multiply Pr(A) and Pr(B), then compare with Pr(A ∩ B)."
+   }
+  }
+ }
 }

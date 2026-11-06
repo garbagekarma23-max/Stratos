@@ -7,13 +7,13 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Relation",
-        "A relation is any rule or set of pairs that links inputs (x values) to outputs (y values). Example: {(1, 2), (1, 5), (3, 4)}."
+        "A relation is any rule or set of pairs that links inputs (\\(x\\) values) to outputs (\\(y\\) values). Example: {(1, 2), \\((1, 5)\\), (3, 4)}."
       ],
       [
         "Function",
         "A function is a relation where each input has exactly one output. Two different inputs may share the same output."
       ],
-      "To check a set of pairs, look for an x value that appears twice with different y values. In the example above, x = 1 gives both 2 and 5, so it is a relation but not a function.",
+      "To check a set of pairs, look for an \\(x\\) value that appears twice with different \\(y\\) values. In the example above, \\(x = 1\\) gives both 2 and 5, so it is a relation but not a function.",
       [
         "Vertical line test",
         "Draw vertical lines on a graph. If some vertical line cuts the graph more than once, it is not a function. If every vertical line cuts it at most once, it is a function."
@@ -22,76 +22,89 @@ MADE_BANKS.mat = {
     "remember": "A function never gives two different outputs for one input.",
     "a": {
       "q": "Which set of pairs is a function?",
-      "opts": ["{(1, 4), (2, 4), (3, 7)}", "{(1, 4), (1, 7), (2, 5)}", "{(2, 3), (5, 1), (2, 6)}", "{(0, 1), (3, 2), (0, 2)}"],
-      "why": "In {(1, 4), (2, 4), (3, 7)}, each x value (1, 2 and 3) has one output. Sharing the output 4 is allowed. Each other set repeats an x value with different y values, so that input has two outputs.",
-      "clue": "Look for an x value that is repeated with different y values."
+      "opts": [
+        "{(1, 4), \\((2, 4)\\), (3, 7)}",
+        "{(1, 4), \\((1, 7)\\), (2, 5)}",
+        "{(2, 3), \\((5, 1)\\), (2, 6)}",
+        "{(0, 1), \\((3, 2)\\), (0, 2)}"
+      ],
+      "why": "In {(1, 4), \\((2, 4)\\), (3, 7)}, each \\(x\\) value (1, 2 and 3) has one output. Sharing the output 4 is allowed. Each other set repeats an \\(x\\) value with different \\(y\\) values, so that input has two outputs.",
+      "clue": "Look for an \\(x\\) value that is repeated with different \\(y\\) values."
     },
     "b": {
       "d": 2,
-      "q": "A circle on a graph is cut twice by the vertical line x = 0. What does this tell you?",
+      "q": "A circle on a graph is cut twice by the vertical line \\(x = 0\\). What does this tell you?",
       "opts": [
         "The circle is not the graph of a function",
         "The circle is the graph of a valid function",
-        "The circle is a function only when x is above 0",
-        "The circle is not a relation of x and y values"
+        "The circle is a function only when \\(x\\) is above 0",
+        "The circle is not a relation of \\(x\\) and \\(y\\) values"
       ],
-      "why": "A vertical line that cuts the graph twice means one x value has two y values. So it fails the vertical line test and is not a function. It is still a relation, because it pairs x values with y values.",
+      "why": "A vertical line that cuts the graph twice means one \\(x\\) value has two \\(y\\) values. So it fails the vertical line test and is not a function. It is still a relation, because it pairs \\(x\\) values with \\(y\\) values.",
       "clue": "One vertical line cutting twice means one input has two outputs."
     }
   },
   "mat-domain-range": {
     "title": "Domain and range",
     "card": [
-      ["Domain", "the set of x values a function can accept. The range is the set of y values it produces."],
+      [
+        "Domain",
+        "the set of \\(x\\) values a function can accept. The range is the set of \\(y\\) values it produces."
+      ],
       [
         "Square roots",
-        "You cannot take the square root of a negative number. So the expression under √ must be 0 or more. For y = √(x − 2), x − 2 ≥ 0, so the domain is x ≥ 2."
+        "You cannot take the square root of a negative number. So the expression under the square root must be 0 or more. For \\(y = \\sqrt{x - 2}\\), \\(x - 2 \\ge 0\\), so the domain is \\(x \\ge 2\\)."
       ],
       [
         "Fractions",
-        "You cannot divide by zero. So any x that makes the denominator 0 is left out. For y = 1/(x − 3), the domain is all real x except x = 3."
+        "You cannot divide by zero. So any \\(x\\) that makes the denominator 0 is left out. For \\(y = \\frac{1}{x - 3}\\), the domain is all real \\(x\\) except \\(x = 3\\)."
       ],
       [
         "Range",
-        "Look at the smallest and largest y values the graph reaches. A square root is never negative, so y = √(x − 2) has range y ≥ 0."
+        "Look at the smallest and largest \\(y\\) values the graph reaches. A square root is never negative, so \\(y = \\sqrt{x - 2}\\) has range \\(y \\ge 0\\)."
       ]
     ],
-    "remember": "Domain is the x values that work. Range is the y values that come out.",
+    "remember": "Domain is the \\(x\\) values that work. Range is the \\(y\\) values that come out.",
     "a": {
-      "q": "What is the domain of y = √(x + 5)?",
-      "opts": ["x ≥ −5", "x ≥ 5", "x ≤ −5", "x > −5"],
-      "why": "The expression under the root must be 0 or more, so x + 5 ≥ 0, which gives x ≥ −5. The option x ≥ 5 comes from ignoring the sign when moving 5 across. The option x > −5 leaves out x = −5, but √0 = 0 is allowed.",
+      "q": "What is the domain of \\(y = \\sqrt{x + 5}\\)?",
+      "opts": ["\\(x \\ge -5\\)", "\\(x \\ge 5\\)", "\\(x \\le -5\\)", "\\(x > -5\\)"],
+      "why": "The expression under the root must be 0 or more, so \\(x + 5 \\ge 0\\), which gives \\(x \\ge -5\\). The option \\(x \\ge 5\\) comes from ignoring the sign when moving 5 across. The option \\(x > -5\\) leaves out \\(x = -5\\), but \\(\\sqrt{0} = 0\\) is allowed.",
       "clue": "Make the expression under the root 0 or more, then solve."
     },
     "b": {
       "d": 3,
-      "q": "What is the domain of y = 4/(2x − 6)?",
-      "opts": ["All real x except x = 3", "All real x except x = −3", "All real x except x = 6", "All real x except x = 0"],
-      "why": "The denominator is 0 when 2x − 6 = 0, so 2x = 6 and x = 3. Only x = 3 is excluded. Choosing x = 6 forgets to divide by 2.",
-      "clue": "Find the x value that makes the bottom equal 0."
+      "q": "What is the domain of \\(y = \\frac{4}{2x - 6}\\)?",
+      "opts": [
+        "All real \\(x\\) except \\(x = 3\\)",
+        "All real \\(x\\) except \\(x = -3\\)",
+        "All real \\(x\\) except \\(x = 6\\)",
+        "All real \\(x\\) except \\(x = 0\\)"
+      ],
+      "why": "The denominator is 0 when \\(2x - 6 = 0\\), so \\(2x = 6\\) and \\(x = 3\\). Only \\(x = 3\\) is excluded. Choosing \\(x = 6\\) forgets to divide by 2.",
+      "clue": "Find the \\(x\\) value that makes the bottom equal 0."
     }
   },
   "mat-function-notation": {
     "title": "Function notation",
     "card": [
-      "f(x) is the output of the function f when the input is x. It is read as \"f of x\". It does not mean f multiplied by x.",
-      "To evaluate f(3), replace every x in the rule with 3. If f(x) = 2x² − 5, then f(3) = 2 × 3² − 5 = 2 × 9 − 5 = 13.",
-      "The input can be an expression. To find f(a + 1), put the whole bracket (a + 1) in place of x. For f(x) = 3x − 2, f(a + 1) = 3(a + 1) − 2 = 3a + 1.",
-      "A rule can be written in words and then in notation. \"Double the input and add 4\" is f(x) = 2x + 4."
+      "f(x) is the output of the function \\(f\\) when the input is \\(x\\). It is read as \"\\(f\\) of \\(x\\)\". It does not mean \\(f\\) multiplied by \\(x\\).",
+      "To evaluate f(3), replace every \\(x\\) in the rule with 3. If \\(f(x) = 2x^{2} - 5\\), then \\(f(3) = 2 \\times 3^{2} - 5 = 2 \\times 9 - 5 = 13\\).",
+      "The input can be an expression. To find \\(f(a + 1)\\), put the whole bracket \\((a + 1)\\) in place of \\(x\\). For \\(f(x) = 3x - 2\\), \\(f(a + 1) = 3(a + 1) - 2 = 3a + 1\\).",
+      "A rule can be written in words and then in notation. \"Double the input and add 4\" is \\(f(x) = 2x + 4\\)."
     ],
-    "remember": "To find f of something, put that something in place of every x.",
+    "remember": "To find \\(f\\) of something, put that something in place of every \\(x\\).",
     "a": {
-      "q": "If f(x) = 4x − 7, what is f(5)?",
-      "opts": ["13", "−13", "20", "−3"],
-      "why": "Replace x with 5: f(5) = 4 × 5 − 7 = 20 − 7 = 13. The answer 20 comes from forgetting to subtract 7.",
-      "clue": "Put 5 in place of x, then follow the order of operations."
+      "q": "If \\(f(x) = 4x - 7\\), what is f(5)?",
+      "opts": ["13", "\\(-13\\)", "20", "\\(-3\\)"],
+      "why": "Replace \\(x\\) with 5: \\(f(5) = 4 \\times 5 - 7 = 20 - 7 = 13\\). The answer 20 comes from forgetting to subtract 7.",
+      "clue": "Put 5 in place of \\(x\\), then follow the order of operations."
     },
     "b": {
       "d": 3,
-      "q": "If f(x) = x² + 2x, what is f(a + 1)?",
-      "opts": ["a² + 4a + 3", "a² + 2a + 3", "a² + 2a + 1", "a² + 4a + 1"],
-      "why": "f(a + 1) = (a + 1)² + 2(a + 1) = a² + 2a + 1 + 2a + 2 = a² + 4a + 3. The option a² + 2a + 3 comes from writing (a + 1)² as a² + 1, which skips the middle term.",
-      "clue": "Put the whole bracket in place of x, then expand (a + 1)² fully."
+      "q": "If \\(f(x) = x^{2} + 2x\\), what is \\(f(a + 1)\\)?",
+      "opts": ["\\(a^{2} + 4a + 3\\)", "\\(a^{2} + 2a + 3\\)", "\\(a^{2} + 2a + 1\\)", "\\(a^{2} + 4a + 1\\)"],
+      "why": "\\(f(a + 1) = (a + 1)^{2} + 2(a + 1) = a^{2} + 2a + 1 + 2a + 2 = a^{2} + 4a + 3\\). The option \\(a^{2} + 2a + 3\\) comes from writing \\((a + 1)^{2}\\) as \\(a^{2} + 1\\), which skips the middle term.",
+      "clue": "Put the whole bracket in place of \\(x\\), then expand \\((a + 1)^{2}\\) fully."
     }
   },
   "mat-odd-even-functions": {
@@ -99,58 +112,71 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Even",
-        "f(-x) = f(x) for every x in the domain. The graph is symmetric in the y-axis, so the left side mirrors the right side."
+        "\\(f(-x) = f(x)\\) for every \\(x\\) in the domain. The graph is symmetric in the y-axis, so the left side mirrors the right side."
       ],
       [
         "Odd",
-        "f(-x) = -f(x) for every x in the domain. The graph has point symmetry about the origin, so turning it half a turn about the origin leaves it unchanged."
+        "\\(f(-x) = -f(x)\\) for every \\(x\\) in the domain. The graph has point symmetry about the origin, so turning it half a turn about the origin leaves it unchanged."
       ],
-      "To test a function, replace x with -x and simplify. Compare the result with f(x) and with -f(x). If it matches neither, the function is neither odd nor even.",
-      "Example: f(x) = x³ + x. Then f(-x) = (-x)³ + (-x) = -x³ - x = -(x³ + x) = -f(x), so f is odd."
+      "To test a function, replace \\(x\\) with \\(-x\\) and simplify. Compare the result with f(x) and with \\(-f(x)\\). If it matches neither, the function is neither odd nor even.",
+      "Example: \\(f(x) = x^{3} + x\\). Then \\(f(-x) = (-x)^{3} + (-x) = -x^{3} - x = -(x^{3} + x) = -f(x)\\), so \\(f\\) is odd."
     ],
-    "remember": "Put in -x. Equal to f(x) means even, equal to -f(x) means odd, and matching neither means neither.",
+    "remember": "Put in \\(-x\\). Equal to f(x) means even, equal to \\(-f(x)\\) means odd, and matching neither means neither.",
     "a": {
-      "q": "f(x) = x² + 5. What is f(-x) in simplest form, and what type of function is f?",
-      "opts": ["x² + 5, so f is even", "-x² - 5, so f is odd", "x² - 5, so f is neither odd nor even", "-x² + 5, so f is odd"],
-      "why": "f(-x) = (-x)² + 5 = x² + 5, which equals f(x), so f is even. A common slip is to think the minus sign makes the whole rule negative, but squaring removes it.",
-      "clue": "Replace x with -x, then square it."
+      "q": "\\(f(x) = x^{2} + 5\\). What is \\(f(-x)\\) in simplest form, and what type of function is \\(f\\)?",
+      "opts": [
+        "\\(x^{2} + 5\\), so \\(f\\) is even",
+        "\\(-x^{2} - 5\\), so \\(f\\) is odd",
+        "\\(x^{2} - 5\\), so \\(f\\) is neither odd nor even",
+        "\\(-x^{2} + 5\\), so \\(f\\) is odd"
+      ],
+      "why": "\\(f(-x) = (-x)^{2} + 5 = x^{2} + 5\\), which equals f(x), so \\(f\\) is even. A common slip is to think the minus sign makes the whole rule negative, but squaring removes it.",
+      "clue": "Replace \\(x\\) with \\(-x\\), then square it."
     },
     "b": {
       "d": 3,
-      "q": "f(x) = x³ + 2. Which statement is correct?",
+      "q": "\\(f(x) = x^{3} + 2\\). Which statement is correct?",
       "opts": [
-        "f is neither odd nor even",
-        "f is odd, because x³ is odd",
-        "f is even, because 2 is a constant",
-        "f is both odd and even"
+        "\\(f\\) is neither odd nor even",
+        "\\(f\\) is odd, because \\(x^{3}\\) is odd",
+        "\\(f\\) is even, because 2 is a constant",
+        "\\(f\\) is both odd and even"
       ],
-      "why": "f(-x) = (-x)³ + 2 = -x³ + 2. This is not equal to f(x) = x³ + 2, and it is not equal to -f(x) = -x³ - 2. So f is neither. The tempting answer is odd, but the constant 2 breaks the test.",
-      "clue": "Find f(-x), then compare it with both f(x) and -f(x)."
+      "why": "\\(f(-x) = (-x)^{3} + 2 = -x^{3} + 2\\). This is not equal to \\(f(x) = x^{3} + 2\\), and it is not equal to \\(-f(x) = -x^{3} - 2\\). So \\(f\\) is neither. The tempting answer is odd, but the constant 2 breaks the test.",
+      "clue": "Find \\(f(-x)\\), then compare it with both f(x) and \\(-f(x)\\)."
     }
   },
   "mat-linear-functions": {
     "title": "Linear functions",
     "card": [
-      "The gradient m of a line is rise ÷ run. For points (x₁, y₁) and (x₂, y₂), m = (y₂ − y₁) ÷ (x₂ − x₁).",
-      ["y = mx + c", "m is the gradient and c is the y-intercept, where the line crosses the y-axis."],
+      "The gradient \\(m\\) of a line is \\(\\frac{\\text{rise}}{\\text{run}}\\). For points \\((x_{1}, y_{1})\\) and \\((x_{2}, y_{2})\\), \\(m = \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\).",
       [
-        "y − y₁ = m(x − x₁)",
-        "use this when you know the gradient m and one point (x₁, y₁) on the line. Example: m = 2 through (3, 1) gives y − 1 = 2(x − 3), so y = 2x − 5."
+        "\\(y = mx + c\\)",
+        "\\(m\\) is the gradient and \\(c\\) is the y-intercept, where the line crosses the y-axis."
       ],
-      "Parallel lines have equal gradients. Perpendicular lines have gradients that multiply to −1, so a line with gradient 2 is perpendicular to a line with gradient −1/2."
+      [
+        "\\(y - y_{1} = m(x - x_{1})\\)",
+        "use this when you know the gradient \\(m\\) and one point \\((x_{1}, y_{1})\\) on the line. Example: \\(m = 2\\) through \\((3, 1)\\) gives \\(y - 1 = 2(x - 3)\\), so \\(y = 2x - 5\\)."
+      ],
+      "Parallel lines have equal gradients. Perpendicular lines have gradients that multiply to \\(-1\\), so a line with gradient 2 is perpendicular to a line with gradient \\(-\\frac{1}{2}\\)."
     ],
-    "remember": "Gradient is rise over run. Parallel: same m. Perpendicular: m₁ × m₂ = −1.",
+    "remember": "Gradient is rise over run. Parallel: same \\(m\\). Perpendicular: \\(m_{1} \\times m_{2} = -1\\).",
     "a": {
-      "q": "What is the gradient of the line through (1, 2) and (4, 11)?",
-      "opts": ["3", "1/3", "−3", "9"],
-      "why": "m = (11 − 2) ÷ (4 − 1) = 9 ÷ 3 = 3. The option 1/3 comes from putting run over rise, which is the wrong way round.",
+      "q": "What is the gradient of the line through \\((1, 2)\\) and \\((4, 11)\\)?",
+      "opts": ["3", "\\(\\frac{1}{3}\\)", "\\(-3\\)", "9"],
+      "why": "\\(m = \\frac{11 - 2}{4 - 1} = \\frac{9}{3} = 3\\). The option \\(\\frac{1}{3}\\) comes from putting run over rise, which is the wrong way round.",
       "clue": "Rise goes on top, run goes on the bottom."
     },
     "b": {
       "d": 3,
-      "q": "A line has gradient 2/3 and passes through (6, 1). Which line through the same point is perpendicular to it?",
-      "opts": ["y − 1 = −3/2(x − 6)", "y − 1 = 3/2(x − 6)", "y − 1 = −2/3(x − 6)", "y − 6 = −3/2(x − 1)"],
-      "why": "The perpendicular gradient m satisfies 2/3 × m = −1, so m = −3/2. Using the point (6, 1) gives y − 1 = −3/2(x − 6). The option with 3/2 only flips the fraction and does not change the sign, so the product is 1, not −1.",
+      "q": "A line has gradient \\(\\frac{2}{3}\\) and passes through \\((6, 1)\\). Which line through the same point is perpendicular to it?",
+      "opts": [
+        "\\(y - 1 = -\\frac{3}{2}(x - 6)\\)",
+        "\\(y - 1 = \\frac{3}{2}(x - 6)\\)",
+        "\\(y - 1 = -\\frac{2}{3}(x - 6)\\)",
+        "\\(y - 6 = -\\frac{3}{2}(x - 1)\\)"
+      ],
+      "why": "The perpendicular gradient \\(m\\) satisfies \\(\\frac{2}{3} \\times m = -1\\), so \\(m = -\\frac{3}{2}\\). Using the point \\((6, 1)\\) gives \\(y - 1 = -\\frac{3}{2}(x - 6)\\). The option with \\(\\frac{3}{2}\\) only flips the fraction and does not change the sign, so the product is 1, not \\(-1\\).",
       "clue": "Flip the fraction and change the sign."
     }
   },
@@ -335,98 +361,98 @@ MADE_BANKS.mat = {
   "mat-vertical-translations": {
     "title": "Vertical translations",
     "card": [
-      "A translation slides a graph without changing its shape or size. In y = f(x) + c, the number c is added to every y value.",
-      "If c is positive, the graph moves up by c units. If c is negative, it moves down by that many units. For example, y = x² + 3 is y = x² moved up 3.",
-      "Every point (x, y) on y = f(x) moves to (x, y + c). The x value stays the same.",
-      "Worked example: y = x² has its vertex at (0, 0). For y = x² − 2, the vertex moves to (0, −2), which is 2 units down."
+      "A translation slides a graph without changing its shape or size. In \\(y = f(x) + c\\), the number \\(c\\) is added to every \\(y\\) value.",
+      "If \\(c\\) is positive, the graph moves up by \\(c\\) units. If \\(c\\) is negative, it moves down by that many units. For example, \\(y = x^{2} + 3\\) is \\(y = x^{2}\\) moved up 3.",
+      "Every point \\((x, y)\\) on \\(y = f(x)\\) moves to \\((x, y + c)\\). The \\(x\\) value stays the same.",
+      "Worked example: \\(y = x^{2}\\) has its vertex at \\((0, 0)\\). For \\(y = x^{2} - 2\\), the vertex moves to \\((0, -2)\\), which is 2 units down."
     ],
-    "remember": "Adding c outside f(x) moves every point up c units, or down if c is negative.",
+    "remember": "Adding \\(c\\) outside \\(f(x)\\) moves every point up \\(c\\) units, or down if \\(c\\) is negative.",
     "a": {
-      "q": "The graph of y = f(x) is moved to y = f(x) − 4. What happens to the graph?",
+      "q": "The graph of \\(y = f(x)\\) is moved to \\(y = f(x) - 4\\). What happens to the graph?",
       "opts": ["It moves down 4 units", "It moves up 4 units", "It moves left 4 units", "It moves right 4 units"],
-      "why": "Subtracting 4 from every y value lowers each point by 4 units, so the graph moves down. Up is wrong because that would need +4. Left and right are wrong because the x values do not change.",
-      "clue": "Look at what happens to each y value."
+      "why": "Subtracting 4 from every \\(y\\) value lowers each point by 4 units, so the graph moves down. Up is wrong because that would need \\(+4\\). Left and right are wrong because the \\(x\\) values do not change.",
+      "clue": "Look at what happens to each \\(y\\) value."
     },
     "b": {
       "d": 2,
-      "q": "The graph of y = x² has its vertex at (0, 0). Where is the vertex of y = x² + 5?",
-      "opts": ["(0, 5)", "(0, −5)", "(5, 0)", "(−5, 0)"],
-      "why": "Adding 5 to every y value moves the graph up 5 units, so the vertex moves from (0, 0) to (0, 5). (0, −5) is tempting but it is a move down, which needs −5. The x value stays 0.",
-      "clue": "Only the y value of each point changes."
+      "q": "The graph of \\(y = x^{2}\\) has its vertex at \\((0, 0)\\). Where is the vertex of \\(y = x^{2} + 5\\)?",
+      "opts": ["\\((0, 5)\\)", "\\((0, -5)\\)", "\\((5, 0)\\)", "\\((-5, 0)\\)"],
+      "why": "Adding 5 to every \\(y\\) value moves the graph up 5 units, so the vertex moves from \\((0, 0)\\) to \\((0, 5)\\). \\((0, -5)\\) is tempting but it is a move down, which needs \\(-5\\). The \\(x\\) value stays 0.",
+      "clue": "Only the \\(y\\) value of each point changes."
     }
   },
   "mat-horizontal-translations": {
     "title": "Horizontal translations",
     "card": [
-      "The graph of y = f(x + b) is the graph of y = f(x) moved sideways by b units. The shape does not change, and only the position does.",
-      "The shift goes the opposite way to the sign. y = f(x + b) with b positive moves the graph left by b. y = f(x − b) moves it right by b.",
-      "Why: in y = f(x + 3), the input x + 3 reaches the old value of x when x is 3 less. So each point appears 3 units further left.",
-      "Example: y = x² has its vertex at (0, 0). For y = (x − 5)², the vertex is at (5, 0), so the graph has moved 5 units right."
+      "The graph of \\(y = f(x + b)\\) is the graph of \\(y = f(x)\\) moved sideways by \\(b\\) units. The shape does not change, and only the position does.",
+      "The shift goes the opposite way to the sign. \\(y = f(x + b)\\) with \\(b\\) positive moves the graph left by \\(b\\). \\(y = f(x - b)\\) moves it right by \\(b\\).",
+      "Why: in \\(y = f(x + 3)\\), the input \\(x + 3\\) reaches the old value of \\(x\\) when \\(x\\) is 3 less. So each point appears 3 units further left.",
+      "Example: \\(y = x^{2}\\) has its vertex at \\((0, 0)\\). For \\(y = (x - 5)^{2}\\), the vertex is at \\((5, 0)\\), so the graph has moved 5 units right."
     ],
-    "remember": "Inside the brackets, the shift is the opposite of the sign: +b moves left, −b moves right.",
+    "remember": "Inside the brackets, the shift is the opposite of the sign: \\(+b\\) moves left, \\(-b\\) moves right.",
     "a": {
-      "q": "The graph of y = f(x) is moved 4 units to the left. What is the equation of the new graph?",
-      "opts": ["y = f(x + 4)", "y = f(x − 4)", "y = f(x) + 4", "y = f(x) − 4"],
-      "why": "A move of 4 units left is written f(x + 4), because the shift is opposite to the sign. f(x − 4) is the tempting choice, but it moves the graph right. The options with +4 or −4 outside the brackets move the graph up or down.",
+      "q": "The graph of \\(y = f(x)\\) is moved 4 units to the left. What is the equation of the new graph?",
+      "opts": ["\\(y = f(x + 4)\\)", "\\(y = f(x - 4)\\)", "\\(y = f(x) + 4\\)", "\\(y = f(x) - 4\\)"],
+      "why": "A move of 4 units left is written \\(f(x + 4)\\), because the shift is opposite to the sign. \\(f(x - 4)\\) is the tempting choice, but it moves the graph right. The options with \\(+4\\) or \\(-4\\) outside the brackets move the graph up or down.",
       "clue": "The sideways shift goes inside the brackets, and its sign is opposite to the direction."
     },
     "b": {
       "d": 2,
-      "q": "The graph of y = x² has its vertex at (0, 0). Where is the vertex of y = (x + 2)²?",
-      "opts": ["(−2, 0)", "(2, 0)", "(0, 2)", "(0, −2)"],
-      "why": "y = (x + 2)² is y = x² moved 2 units left, so the vertex goes from (0, 0) to (−2, 0). (2, 0) is the tempting wrong answer, as it follows the sign instead of reversing it. The points with x = 0 would come from adding or subtracting outside the brackets.",
-      "clue": "Find the x value that makes the bracket equal 0."
+      "q": "The graph of \\(y = x^{2}\\) has its vertex at \\((0, 0)\\). Where is the vertex of \\(y = (x + 2)^{2}\\)?",
+      "opts": ["\\((-2, 0)\\)", "\\((2, 0)\\)", "\\((0, 2)\\)", "\\((0, -2)\\)"],
+      "why": "\\(y = (x + 2)^{2}\\) is \\(y = x^{2}\\) moved 2 units left, so the vertex goes from \\((0, 0)\\) to \\((-2, 0)\\). \\((2, 0)\\) is the tempting wrong answer, as it follows the sign instead of reversing it. The points with \\(x = 0\\) would come from adding or subtracting outside the brackets.",
+      "clue": "Find the \\(x\\) value that makes the bracket equal 0."
     }
   },
   "mat-vertical-dilations": {
     "title": "Vertical dilations",
     "card": [
-      "The graph of y = kf(x) is the graph of y = f(x) with every y value multiplied by k. The graph is stretched away from the x-axis, or squashed towards it, in the vertical direction.",
-      "If k is greater than 1, the graph stretches away from the x-axis. If k is between 0 and 1, it is squashed towards the x-axis. The x values do not change.",
-      "Points on the x-axis stay where they are, because 0 × k = 0. So the x-intercepts do not move. The y-intercept is multiplied by k.",
-      "Example: f(x) = x² − 4 has the point (3, 5). For y = 2f(x), the point becomes (3, 10). The x-intercepts at x = −2 and x = 2 stay the same."
+      "The graph of \\(y = kf(x)\\) is the graph of \\(y = f(x)\\) with every \\(y\\) value multiplied by \\(k\\). The graph is stretched away from the x-axis, or squashed towards it, in the vertical direction.",
+      "If \\(k\\) is greater than 1, the graph stretches away from the x-axis. If \\(k\\) is between 0 and 1, it is squashed towards the x-axis. The \\(x\\) values do not change.",
+      "Points on the x-axis stay where they are, because \\(0 \\times k = 0\\). So the x-intercepts do not move. The y-intercept is multiplied by \\(k\\).",
+      "Example: \\(f(x) = x^{2} - 4\\) has the point \\((3, 5)\\). For \\(y = 2f(x)\\), the point becomes \\((3, 10)\\). The x-intercepts at \\(x = -2\\) and \\(x = 2\\) stay the same."
     ],
-    "remember": "In y = kf(x), multiply every y value by k. The x values and x-intercepts stay put.",
+    "remember": "In \\(y = kf(x)\\), multiply every \\(y\\) value by \\(k\\). The \\(x\\) values and x-intercepts stay put.",
     "a": {
-      "q": "The graph of y = f(x) passes through (4, 6). Which point must lie on y = 3f(x)?",
-      "opts": ["(4, 18)", "(12, 6)", "(4, 2)", "(4, 9)"],
-      "why": "Multiplying the y value by 3 gives 6 × 3 = 18, and x stays at 4. The point (12, 6) is tempting, but that multiplies x, which a vertical dilation does not do.",
-      "clue": "Only the y value is multiplied by k."
+      "q": "The graph of \\(y = f(x)\\) passes through \\((4, 6)\\). Which point must lie on \\(y = 3f(x)\\)?",
+      "opts": ["\\((4, 18)\\)", "\\((12, 6)\\)", "\\((4, 2)\\)", "\\((4, 9)\\)"],
+      "why": "Multiplying the \\(y\\) value by 3 gives \\(6 \\times 3 = 18\\), and \\(x\\) stays at 4. The point \\((12, 6)\\) is tempting, but that multiplies \\(x\\), which a vertical dilation does not do.",
+      "clue": "Only the \\(y\\) value is multiplied by \\(k\\)."
     },
     "b": {
       "d": 2,
-      "q": "The graph of y = f(x) has x-intercepts at x = 1 and x = 5, and a y-intercept at (0, 10). What are the intercepts of y = 2f(x)?",
+      "q": "The graph of \\(y = f(x)\\) has x-intercepts at \\(x = 1\\) and \\(x = 5\\), and a y-intercept at \\((0, 10)\\). What are the intercepts of \\(y = 2f(x)\\)?",
       "opts": [
-        "x-intercepts 1 and 5, y-intercept (0, 20)",
-        "x-intercepts 2 and 10, y-intercept (0, 20)",
-        "x-intercepts 1 and 5, y-intercept (0, 10)",
-        "x-intercepts 2 and 10, y-intercept (0, 10)"
+        "x-intercepts 1 and 5, y-intercept \\((0, 20)\\)",
+        "x-intercepts 2 and 10, y-intercept \\((0, 20)\\)",
+        "x-intercepts 1 and 5, y-intercept \\((0, 10)\\)",
+        "x-intercepts 2 and 10, y-intercept \\((0, 10)\\)"
       ],
-      "why": "On the x-axis y = 0, and 2 × 0 = 0, so the x-intercepts stay at 1 and 5. The y-intercept is multiplied by 2, giving (0, 20). Doubling the x-intercepts is wrong, as x values do not change.",
-      "clue": "Which values does k multiply, and what is 0 × k?"
+      "why": "On the x-axis \\(y = 0\\), and \\(2 \\times 0 = 0\\), so the x-intercepts stay at 1 and 5. The y-intercept is multiplied by 2, giving \\((0, 20)\\). Doubling the x-intercepts is wrong, as \\(x\\) values do not change.",
+      "clue": "Which values does \\(k\\) multiply, and what is \\(0 \\times k\\)?"
     }
   },
   "mat-horizontal-dilations": {
     "title": "Horizontal dilations",
     "card": [
-      "The graph of y = f(ax) is the graph of y = f(x) squeezed or stretched sideways, towards or away from the y-axis. Every x value on the graph is divided by a. The y values do not change.",
-      "If a is greater than 1, the graph is compressed towards the y-axis. If a is between 0 and 1, the graph is stretched away from it.",
-      "Points on the y-axis stay where they are, because dividing 0 by a gives 0.",
-      "Example: (6, 4) is on y = f(x). On y = f(2x), the point is (6 ÷ 2, 4) = (3, 4). Check: f(2 × 3) = f(6) = 4."
+      "The graph of \\(y = f(ax)\\) is the graph of \\(y = f(x)\\) squeezed or stretched sideways, towards or away from the y-axis. Every \\(x\\) value on the graph is divided by \\(a\\). The \\(y\\) values do not change.",
+      "If \\(a\\) is greater than 1, the graph is compressed towards the y-axis. If \\(a\\) is between 0 and 1, the graph is stretched away from it.",
+      "Points on the y-axis stay where they are, because dividing 0 by \\(a\\) gives 0.",
+      "Example: \\((6, 4)\\) is on \\(y = f(x)\\). On \\(y = f(2x)\\), the point is \\((6 \\div 2, 4) = (3, 4)\\). Check: \\(f(2 \\times 3) = f(6) = 4\\)."
     ],
-    "remember": "In y = f(ax), the x values are divided by a and the y values stay the same.",
+    "remember": "In \\(y = f(ax)\\), the \\(x\\) values are divided by \\(a\\) and the \\(y\\) values stay the same.",
     "a": {
-      "q": "The point (8, 5) is on y = f(x). Which point must be on y = f(2x)?",
-      "opts": ["(4, 5)", "(16, 5)", "(8, 10)", "(8, 2.5)"],
-      "why": "Every x value is divided by 2, so 8 becomes 4 and y stays 5. Check: f(2 × 4) = f(8) = 5. (16, 5) multiplies x by 2, which is the tempting mistake.",
-      "clue": "Divide x by a. Leave y alone."
+      "q": "The point \\((8, 5)\\) is on \\(y = f(x)\\). Which point must be on \\(y = f(2x)\\)?",
+      "opts": ["\\((4, 5)\\)", "\\((16, 5)\\)", "\\((8, 10)\\)", "\\((8, 2.5)\\)"],
+      "why": "Every \\(x\\) value is divided by 2, so 8 becomes 4 and \\(y\\) stays 5. Check: \\(f(2 \\times 4) = f(8) = 5\\). \\((16, 5)\\) multiplies \\(x\\) by 2, which is the tempting mistake.",
+      "clue": "Divide \\(x\\) by \\(a\\). Leave \\(y\\) alone."
     },
     "b": {
       "d": 3,
-      "q": "The point (12, −3) is on y = f(x). Which point must be on y = f(3x)?",
-      "opts": ["(4, −3)", "(36, −3)", "(12, −1)", "(4, −9)"],
-      "why": "The x value is divided by 3, so 12 becomes 4 and y stays −3. Check: f(3 × 4) = f(12) = −3. (36, −3) multiplies x by 3 instead, and the other two change y, which a horizontal dilation does not do.",
-      "clue": "Find the x that makes 3x equal 12."
+      "q": "The point \\((12, -3)\\) is on \\(y = f(x)\\). Which point must be on \\(y = f(3x)\\)?",
+      "opts": ["\\((4, -3)\\)", "\\((36, -3)\\)", "\\((12, -1)\\)", "\\((4, -9)\\)"],
+      "why": "The \\(x\\) value is divided by 3, so 12 becomes 4 and \\(y\\) stays \\(-3\\). Check: \\(f(3 \\times 4) = f(12) = -3\\). \\((36, -3)\\) multiplies \\(x\\) by 3 instead, and the other two change \\(y\\), which a horizontal dilation does not do.",
+      "clue": "Find the \\(x\\) that makes \\(3x\\) equal 12."
     }
   },
   "mat-reflections": {
@@ -435,77 +461,87 @@ MADE_BANKS.mat = {
       "A reflection flips a graph over a line, like a mirror. The flipped graph has the same shape and size.",
       [
         "x-axis",
-        "y = -f(x) reflects the graph in the x-axis. Every y value changes sign, so the point (x, y) moves to (x, -y)."
+        "\\(y = -f(x)\\) reflects the graph in the x-axis. Every \\(y\\) value changes sign, so the point \\((x, y)\\) moves to \\((x, -y)\\)."
       ],
       [
         "y-axis",
-        "y = f(-x) reflects the graph in the y-axis. Every x value changes sign, so the point (x, y) moves to (-x, y)."
+        "\\(y = f(-x)\\) reflects the graph in the y-axis. Every \\(x\\) value changes sign, so the point \\((x, y)\\) moves to \\((-x, y)\\)."
       ],
-      "Example: the point (2, 5) is on y = f(x). Then (2, -5) is on y = -f(x), and (-2, 5) is on y = f(-x)."
+      "Example: the point \\((2, 5)\\) is on \\(y = f(x)\\). Then \\((2, -5)\\) is on \\(y = -f(x)\\), and \\((-2, 5)\\) is on \\(y = f(-x)\\)."
     ],
-    "remember": "A minus outside f flips up and down. A minus inside f flips left and right.",
+    "remember": "A minus outside \\(f\\) flips up and down. A minus inside \\(f\\) flips left and right.",
     "a": {
-      "q": "The point (3, 4) is on y = f(x). Which point must be on y = -f(x)?",
-      "opts": ["(3, -4)", "(-3, 4)", "(-3, -4)", "(4, 3)"],
-      "why": "A minus outside f changes the sign of every y value, so (3, 4) moves to (3, -4). The point (-3, 4) is on y = f(-x), because that changes the sign of x instead.",
-      "clue": "The minus is outside f, so it acts on the output."
+      "q": "The point \\((3, 4)\\) is on \\(y = f(x)\\). Which point must be on \\(y = -f(x)\\)?",
+      "opts": ["\\((3, -4)\\)", "\\((-3, 4)\\)", "\\((-3, -4)\\)", "\\((4, 3)\\)"],
+      "why": "A minus outside \\(f\\) changes the sign of every \\(y\\) value, so \\((3, 4)\\) moves to \\((3, -4)\\). The point \\((-3, 4)\\) is on \\(y = f(-x)\\), because that changes the sign of \\(x\\) instead.",
+      "clue": "The minus is outside \\(f\\), so it acts on the output."
     },
     "b": {
       "d": 3,
-      "q": "The point (-6, 2) is on y = f(x). Which point must be on y = f(-x)?",
-      "opts": ["(6, 2)", "(6, -2)", "(-6, -2)", "(-2, 6)"],
-      "why": "A minus inside f changes the sign of every x value, so (-6, 2) moves to (6, 2). The point (-6, -2) is tempting, but it is on y = -f(x), which changes the sign of y.",
-      "clue": "The minus is inside the brackets, so it acts on x."
+      "q": "The point \\((-6, 2)\\) is on \\(y = f(x)\\). Which point must be on \\(y = f(-x)\\)?",
+      "opts": ["\\((6, 2)\\)", "\\((6, -2)\\)", "\\((-6, -2)\\)", "\\((-2, 6)\\)"],
+      "why": "A minus inside \\(f\\) changes the sign of every \\(x\\) value, so \\((-6, 2)\\) moves to \\((6, 2)\\). The point \\((-6, -2)\\) is tempting, but it is on \\(y = -f(x)\\), which changes the sign of \\(y\\).",
+      "clue": "The minus is inside the brackets, so it acts on \\(x\\)."
     }
   },
   "mat-solving-equations-with-graphs": {
     "title": "Solving equations with graphs",
     "card": [
-      "To solve f(x) = g(x), draw y = f(x) and y = g(x) on the same axes. At a point where the graphs meet, both functions give the same y value for that x.",
-      "The solutions are the x values of the intersection points. The y values are not the solutions.",
+      "To solve \\(f(x) = g(x)\\), draw \\(y = f(x)\\) and \\(y = g(x)\\) on the same axes. At a point where the graphs meet, both functions give the same \\(y\\) value for that \\(x\\).",
+      "The solutions are the \\(x\\) values of the intersection points. The \\(y\\) values are not the solutions.",
       "The number of intersection points is the number of solutions. Two crossing points mean two solutions, one touching point means one, and no meeting means none.",
-      "Example: y = x² and y = 4 meet at (−2, 4) and (2, 4). So x² = 4 has two solutions, x = −2 and x = 2."
+      "Example: \\(y = x^{2}\\) and \\(y = 4\\) meet at \\((-2, 4)\\) and \\((2, 4)\\). So \\(x^{2} = 4\\) has two solutions, \\(x = -2\\) and \\(x = 2\\)."
     ],
-    "remember": "Solutions of f(x) = g(x) are the x values where the graphs meet, one for each meeting point.",
+    "remember": "Solutions of \\(f(x) = g(x)\\) are the \\(x\\) values where the graphs meet, one for each meeting point.",
     "a": {
-      "q": "The graphs of y = f(x) and y = g(x) meet at (1, 5) and (3, 5). What are the solutions of f(x) = g(x)?",
-      "opts": ["x = 1 and x = 3", "x = 5", "x = 1, x = 3 and x = 5", "x = 5 only, found twice"],
-      "why": "Solutions are the x values of the meeting points, which are 1 and 3. The y value 5 is tempting, but it is the common height of the graphs, not a solution for x.",
+      "q": "The graphs of \\(y = f(x)\\) and \\(y = g(x)\\) meet at \\((1, 5)\\) and \\((3, 5)\\). What are the solutions of \\(f(x) = g(x)\\)?",
+      "opts": [
+        "\\(x = 1\\) and \\(x = 3\\)",
+        "\\(x = 5\\)",
+        "\\(x = 1\\), \\(x = 3\\) and \\(x = 5\\)",
+        "\\(x = 5\\) only, found twice"
+      ],
+      "why": "Solutions are the \\(x\\) values of the meeting points, which are 1 and 3. The \\(y\\) value 5 is tempting, but it is the common height of the graphs, not a solution for \\(x\\).",
       "clue": "Which coordinate of each meeting point is the solution?"
     },
     "b": {
       "d": 3,
-      "q": "The line y = 2 and the parabola y = x² + 3 are drawn on the same axes. The parabola never goes below y = 3. How many solutions does x² + 3 = 2 have?",
+      "q": "The line \\(y = 2\\) and the parabola \\(y = x^{2} + 3\\) are drawn on the same axes. The parabola never goes below \\(y = 3\\). How many solutions does \\(x^{2} + 3 = 2\\) have?",
       "opts": [
         "None, because the graphs never meet",
         "One, because the line is horizontal",
         "Two, because a parabola is a quadratic",
         "Three, because there are three terms"
       ],
-      "why": "The parabola's lowest point is y = 3, which is above the line y = 2, so the graphs never meet. No intersections means no solutions. A quadratic does not always have two solutions, as the graphs may not meet.",
+      "why": "The parabola's lowest point is \\(y = 3\\), which is above the line \\(y = 2\\), so the graphs never meet. No intersections means no solutions. A quadratic does not always have two solutions, as the graphs may not meet.",
       "clue": "Compare the height of the line with the lowest point of the parabola."
     }
   },
   "mat-right-angled-trigonometry": {
     "title": "Right-angled trigonometry",
     "card": [
-      "In a right-angled triangle, the hypotenuse is the longest side, opposite the right angle. For a chosen angle θ, the opposite side is across from θ. The adjacent side is the side next to θ that is not the hypotenuse.",
-      "sin θ = opposite ÷ hypotenuse. cos θ = adjacent ÷ hypotenuse. tan θ = opposite ÷ adjacent.",
-      "To find a side, write the ratio that has the known side and the unknown side, then solve. To find an angle, use the inverse button: if sin θ = 0.5, then θ = sin⁻¹(0.5) = 30°.",
-      "Worked example: the hypotenuse is 10 and θ = 30°. The side opposite θ is x. sin 30° = x ÷ 10, so x = 10 × sin 30° = 10 × 0.5 = 5."
+      "In a right-angled triangle, the hypotenuse is the longest side, opposite the right angle. For a chosen angle \\(\\theta\\), the opposite side is across from \\(\\theta\\). The adjacent side is the side next to \\(\\theta\\) that is not the hypotenuse.",
+      "\\(\\sin \\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}\\). \\(\\cos \\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}\\). \\(\\tan \\theta = \\frac{\\text{opposite}}{\\text{adjacent}}\\).",
+      "To find a side, write the ratio that has the known side and the unknown side, then solve. To find an angle, use the inverse button: if \\(\\sin \\theta = 0.5\\), then \\(\\theta = \\sin^{-1}(0.5) = 30^{\\circ}\\).",
+      "Worked example: the hypotenuse is 10 and \\(\\theta = 30^{\\circ}\\). The side opposite \\(\\theta\\) is \\(x\\). \\(\\sin 30^{\\circ} = \\frac{x}{10}\\), so \\(x = 10 \\times \\sin 30^{\\circ} = 10 \\times 0.5 = 5\\)."
     ],
     "remember": "Choose the ratio that links the side you know to the side you want.",
     "a": {
-      "q": "In a right-angled triangle, the side opposite angle θ is 6 and the hypotenuse is 10. What is sin θ?",
-      "opts": ["6/10", "10/6", "6/8", "8/10"],
-      "why": "sin θ = opposite ÷ hypotenuse = 6/10. The option 6/8 is tempting, but it is opposite ÷ adjacent, which is tan θ rather than sin θ.",
+      "q": "In a right-angled triangle, the side opposite angle \\(\\theta\\) is 6 and the hypotenuse is 10. What is \\(\\sin \\theta\\)?",
+      "opts": ["\\(\\frac{6}{10}\\)", "\\(\\frac{10}{6}\\)", "\\(\\frac{6}{8}\\)", "\\(\\frac{8}{10}\\)"],
+      "why": "\\(\\sin \\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{6}{10}\\). The option \\(\\frac{6}{8}\\) is tempting, but it is \\(\\frac{\\text{opposite}}{\\text{adjacent}}\\), which is \\(\\tan \\theta\\) rather than \\(\\sin \\theta\\).",
       "clue": "Sine uses the opposite side and the hypotenuse."
     },
     "b": {
       "d": 2,
-      "q": "A ladder 5 m long leans against a wall and makes an angle of 60° with the ground. The ladder is the hypotenuse. Which expression gives how far up the wall it reaches?",
-      "opts": ["5 × sin 60°", "5 × cos 60°", "5 ÷ sin 60°", "5 × tan 60°"],
-      "why": "The height up the wall is opposite the 60° angle at the ground, and the ladder is the hypotenuse. So sin 60° = height ÷ 5, giving height = 5 × sin 60°. Using cos 60° would find the distance from the wall to the foot of the ladder, which is the adjacent side.",
+      "q": "A ladder 5 m long leans against a wall and makes an angle of \\(60^{\\circ}\\) with the ground. The ladder is the hypotenuse. Which expression gives how far up the wall it reaches?",
+      "opts": [
+        "\\(5 \\times \\sin 60^{\\circ}\\)",
+        "\\(5 \\times \\cos 60^{\\circ}\\)",
+        "\\(5 \\div \\sin 60^{\\circ}\\)",
+        "\\(5 \\times \\tan 60^{\\circ}\\)"
+      ],
+      "why": "The height up the wall is opposite the \\(60^{\\circ}\\) angle at the ground, and the ladder is the hypotenuse. So \\(\\sin 60^{\\circ} = \\frac{\\text{height}}{5}\\), giving \\(\\text{height} = 5 \\times \\sin 60^{\\circ}\\). Using \\(\\cos 60^{\\circ}\\) would find the distance from the wall to the foot of the ladder, which is the adjacent side.",
       "clue": "Is the height opposite or adjacent to the angle at the ground?"
     }
   },
@@ -514,30 +550,30 @@ MADE_BANKS.mat = {
     "card": [
       [
         "45° triangle",
-        "Half a square with side 1 has angles 45°, 45° and 90°. By Pythagoras the hypotenuse is √2. So sin 45° = 1/√2, cos 45° = 1/√2 and tan 45° = 1."
+        "Half a square with side 1 has angles 45°, 45° and 90°. By Pythagoras the hypotenuse is \\(\\sqrt{2}\\). So \\(\\sin 45^{\\circ} = \\frac{1}{\\sqrt{2}}\\), \\(\\cos 45^{\\circ} = \\frac{1}{\\sqrt{2}}\\) and \\(\\tan 45^{\\circ} = 1\\)."
       ],
       [
         "30° and 60° triangle",
-        "Half an equilateral triangle with side 2 has angles 30°, 60° and 90°. Its short side is 1 and its other side is √3, by Pythagoras."
+        "Half an equilateral triangle with side 2 has angles 30°, 60° and 90°. Its short side is 1 and its other side is \\(\\sqrt{3}\\), by Pythagoras."
       ],
       [
         "Reading it off",
-        "Opposite 30° is 1, so sin 30° = 1/2, cos 30° = √3/2 and tan 30° = 1/√3. Opposite 60° is √3, so sin 60° = √3/2, cos 60° = 1/2 and tan 60° = √3."
+        "Opposite 30° is 1, so \\(\\sin 30^{\\circ} = \\frac{1}{2}\\), \\(\\cos 30^{\\circ} = \\frac{\\sqrt{3}}{2}\\) and \\(\\tan 30^{\\circ} = \\frac{1}{\\sqrt{3}}\\). Opposite 60° is \\(\\sqrt{3}\\), so \\(\\sin 60^{\\circ} = \\frac{\\sqrt{3}}{2}\\), \\(\\cos 60^{\\circ} = \\frac{1}{2}\\) and \\(\\tan 60^{\\circ} = \\sqrt{3}\\)."
       ],
-      "Leave answers as surds, not decimals. Example: sin 60° × cos 30° = (√3/2) × (√3/2) = 3/4."
+      "Leave answers as surds, not decimals. Example: \\(\\sin 60^{\\circ} \\times \\cos 30^{\\circ} = \\frac{\\sqrt{3}}{2} \\times \\frac{\\sqrt{3}}{2} = \\frac{3}{4}\\)."
     ],
     "remember": "Draw the special triangle, then read the ratio from its sides.",
     "a": {
-      "q": "What is the exact value of cos 60°?",
-      "opts": ["1/2", "√3/2", "1/√2", "√3"],
-      "why": "In the 30°, 60° and 90° triangle, the side next to 60° is 1 and the hypotenuse is 2, so cos 60° = 1/2. The value √3/2 is tempting, but that is sin 60° and cos 30°.",
+      "q": "What is the exact value of \\(\\cos 60^{\\circ}\\)?",
+      "opts": ["\\(\\frac{1}{2}\\)", "\\(\\frac{\\sqrt{3}}{2}\\)", "\\(\\frac{1}{\\sqrt{2}}\\)", "\\(\\sqrt{3}\\)"],
+      "why": "In the 30°, 60° and 90° triangle, the side next to 60° is 1 and the hypotenuse is 2, so \\(\\cos 60^{\\circ} = \\frac{1}{2}\\). The value \\(\\frac{\\sqrt{3}}{2}\\) is tempting, but that is \\(\\sin 60^{\\circ}\\) and \\(\\cos 30^{\\circ}\\).",
       "clue": "Which side is next to the 60° angle?"
     },
     "b": {
       "d": 3,
-      "q": "What is the exact value of sin 30° + tan 45°?",
-      "opts": ["3/2", "1/2", "√3/2 + 1", "1 + 1/√2"],
-      "why": "sin 30° = 1/2 and tan 45° = 1, so the sum is 1/2 + 1 = 3/2. The option 1/2 is tempting, but it leaves out the tan 45° term.",
+      "q": "What is the exact value of \\(\\sin 30^{\\circ} + \\tan 45^{\\circ}\\)?",
+      "opts": ["\\(\\frac{3}{2}\\)", "\\(\\frac{1}{2}\\)", "\\(\\frac{\\sqrt{3}}{2} + 1\\)", "\\(1 + \\frac{1}{\\sqrt{2}}\\)"],
+      "why": "\\(\\sin 30^{\\circ} = \\frac{1}{2}\\) and \\(\\tan 45^{\\circ} = 1\\), so the sum is \\(\\frac{1}{2} + 1 = \\frac{3}{2}\\). The option \\(\\frac{1}{2}\\) is tempting, but it leaves out the \\(\\tan 45^{\\circ}\\) term.",
       "clue": "Find each value from its triangle, then add."
     }
   },
@@ -554,7 +590,7 @@ MADE_BANKS.mat = {
       ],
       [
         "Two steps",
-        "Use sin, cos or tan in one right-angled triangle to find a shared side, then use it in the next. Example: 30 m from a tower the elevation is 40°, so height = 30 × tan 40° ≈ 25.2 m. Where the elevation is 25°, distance = 25.2 ÷ tan 25° ≈ 54.0 m."
+        "Use sin, cos or tan in one right-angled triangle to find a shared side, then use it in the next. Example: 30 m from a tower the elevation is 40°, so the height is \\(30 \\times \\tan 40^{\\circ} \\approx 25.2\\) m. Where the elevation is 25°, the distance is \\(25.2 \\div \\tan 25^{\\circ} \\approx 54.0\\) m."
       ],
       [
         "Back bearing",
@@ -572,7 +608,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "From the top of a 60 m lighthouse, the angle of depression to a boat is 15°. Later it is 25°. How far has the boat moved toward the lighthouse?",
       "opts": ["95.3 m", "11.9 m", "89.9 m", "352.6 m"],
-      "why": "The depression angle equals the elevation angle at the boat, so each distance is 60 ÷ tan of the angle: 60 ÷ tan 15° ≈ 223.9 m and 60 ÷ tan 25° ≈ 128.7 m. The boat moved 223.9 − 128.7 ≈ 95.3 m. Multiplying by tan instead of dividing gives 11.9 m, which treats the height as the side next to the angle.",
+      "why": "The depression angle equals the elevation angle at the boat, so each distance is 60 divided by the tan of the angle: \\(60 \\div \\tan 15^{\\circ} \\approx 223.9\\) m and \\(60 \\div \\tan 25^{\\circ} \\approx 128.7\\) m. The boat moved \\(223.9 - 128.7 \\approx 95.3\\) m. Multiplying by tan instead of dividing gives 11.9 m, which treats the height as the side next to the angle.",
       "clue": "The height is opposite the angle at the boat in both triangles."
     }
   },
@@ -580,145 +616,156 @@ MADE_BANKS.mat = {
     "title": "Radians",
     "card": [
       "One radian is the size of the angle at the centre of a circle when the arc length equals the radius. Radians are a way to measure angles, like degrees.",
-      "The circumference is 2πr, so a full turn is 2π radians. This means π radians = 180°.",
-      ["To radians", "multiply the degrees by π/180. Example: 60° × π/180 = π/3."],
-      ["To degrees", "multiply the radians by 180/π. Example: 3π/4 × 180/π = 135°."]
+      "The circumference is \\(2\\pi r\\), so a full turn is \\(2\\pi\\) radians. This means \\(\\pi \\text{ radians} = 180^{\\circ}\\).",
+      [
+        "To radians",
+        "multiply the degrees by \\(\\frac{\\pi}{180}\\). Example: \\(60^{\\circ} \\times \\frac{\\pi}{180} = \\frac{\\pi}{3}\\)."
+      ],
+      [
+        "To degrees",
+        "multiply the radians by \\(\\frac{180}{\\pi}\\). Example: \\(\\frac{3\\pi}{4} \\times \\frac{180}{\\pi} = 135^{\\circ}\\)."
+      ]
     ],
-    "remember": "π radians is 180°. Use π/180 to go to radians and 180/π to go to degrees.",
+    "remember": "\\(\\pi\\) radians is 180°. Use \\(\\frac{\\pi}{180}\\) to go to radians and \\(\\frac{180}{\\pi}\\) to go to degrees.",
     "a": {
       "q": "What is 150° in radians?",
-      "opts": ["5π/6", "6π/5", "5π/3", "3π/4"],
-      "why": "150 × π/180 = 150π/180 = 5π/6. The option 6π/5 turns the fraction upside down, which would come from using 180/150 instead of 150/180.",
-      "clue": "Multiply by π/180, then simplify the fraction."
+      "opts": ["\\(\\frac{5\\pi}{6}\\)", "\\(\\frac{6\\pi}{5}\\)", "\\(\\frac{5\\pi}{3}\\)", "\\(\\frac{3\\pi}{4}\\)"],
+      "why": "\\(150 \\times \\frac{\\pi}{180} = \\frac{150\\pi}{180} = \\frac{5\\pi}{6}\\). The option \\(\\frac{6\\pi}{5}\\) turns the fraction upside down, which would come from using \\(\\frac{180}{150}\\) instead of \\(\\frac{150}{180}\\).",
+      "clue": "Multiply by \\(\\frac{\\pi}{180}\\), then simplify the fraction."
     },
     "b": {
       "d": 2,
-      "q": "Mia turns a dial through 5π/4 radians. How many degrees is this?",
+      "q": "Mia turns a dial through \\(\\frac{5\\pi}{4}\\) radians. How many degrees is this?",
       "opts": ["225°", "240°", "150°", "200°"],
-      "why": "5π/4 × 180/π = 5 × 45 = 225°. The option 150° comes from using 5π/6, a different fraction, and 240° is 4π/3, so neither fits 5π/4.",
-      "clue": "Multiply by 180/π so that π cancels."
+      "why": "\\(\\frac{5\\pi}{4} \\times \\frac{180}{\\pi} = 5 \\times 45 = 225^{\\circ}\\). The option 150° comes from using \\(\\frac{5\\pi}{6}\\), a different fraction, and 240° is \\(\\frac{4\\pi}{3}\\), so neither fits \\(\\frac{5\\pi}{4}\\).",
+      "clue": "Multiply by \\(\\frac{180}{\\pi}\\) so that \\(\\pi\\) cancels."
     }
   },
   "mat-arcs-sectors": {
     "title": "Arcs and sectors",
     "card": [
-      "An arc is part of the edge of a circle. A sector is the slice of the circle between two radii and an arc. The angle θ at the centre must be in radians.",
-      ["Arc length", "l = rθ. The length is the radius times the angle in radians."],
-      ["Sector area", "A = ½r²θ. Square the radius, multiply by θ, then halve."],
+      "An arc is part of the edge of a circle. A sector is the slice of the circle between two radii and an arc. The angle \\(\\theta\\) at the centre must be in radians.",
+      ["Arc length", "\\(l = r\\theta\\). The length is the radius times the angle in radians."],
+      ["Sector area", "\\(A = \\frac{1}{2}r^{2}\\theta\\). Square the radius, multiply by \\(\\theta\\), then halve."],
       [
         "Example",
-        "A sector has r = 6 cm and θ = 2 radians. Arc length = 6 × 2 = 12 cm. Area = ½ × 6² × 2 = ½ × 36 × 2 = 36 cm²."
+        "A sector has \\(r = 6\\) cm and \\(\\theta = 2\\) radians. Arc length is \\(6 \\times 2 = 12\\) cm. Area is \\(\\frac{1}{2} \\times 6^{2} \\times 2 = \\frac{1}{2} \\times 36 \\times 2 = 36 \\text{ cm}^{2}\\)."
       ]
     ],
-    "remember": "With θ in radians: arc length is rθ, and sector area is ½r²θ.",
+    "remember": "With \\(\\theta\\) in radians: arc length is \\(r\\theta\\), and sector area is \\(\\frac{1}{2}r^{2}\\theta\\).",
     "a": {
       "q": "A sector has radius 5 cm and angle 3 radians. What is its arc length?",
       "opts": ["15 cm", "7.5 cm", "37.5 cm", "75 cm"],
-      "why": "Arc length l = rθ = 5 × 3 = 15 cm. The answer 37.5 comes from the area formula ½r²θ, which gives an area in cm², not a length.",
+      "why": "Arc length \\(l = r\\theta = 5 \\times 3 = 15\\) cm. The answer 37.5 comes from the area formula \\(\\frac{1}{2}r^{2}\\theta\\), which gives an area in \\(\\text{cm}^{2}\\), not a length.",
       "clue": "Use the radius times the angle."
     },
     "b": {
       "d": 3,
       "q": "Mia cuts a slice of pizza shaped as a sector with radius 10 cm and angle 0.8 radians. What is the area of the slice?",
-      "opts": ["40 cm²", "80 cm²", "8 cm²", "4 cm²"],
-      "why": "A = ½r²θ = ½ × 10² × 0.8 = ½ × 100 × 0.8 = 40 cm². Forgetting the ½ gives 80 cm². Using rθ gives 8, which is the arc length.",
+      "opts": ["\\(40 \\text{ cm}^{2}\\)", "\\(80 \\text{ cm}^{2}\\)", "\\(8 \\text{ cm}^{2}\\)", "\\(4 \\text{ cm}^{2}\\)"],
+      "why": "\\(A = \\frac{1}{2}r^{2}\\theta = \\frac{1}{2} \\times 10^{2} \\times 0.8 = \\frac{1}{2} \\times 100 \\times 0.8 = 40 \\text{ cm}^{2}\\). Forgetting the \\(\\frac{1}{2}\\) gives \\(80 \\text{ cm}^{2}\\). Using \\(r\\theta\\) gives 8, which is the arc length.",
       "clue": "Square the radius first, then halve."
     }
   },
   "mat-sine-rule": {
     "title": "The sine rule",
     "card": [
-      "In any triangle, a/sin A = b/sin B = c/sin C. Each side is opposite the angle with the same letter.",
-      "Use it when you know an angle and the side opposite it, plus one more side or angle. Write two of the ratios, then solve for the unknown. Example: A = 30°, a = 5, B = 90° gives b = 5 × sin 90° ÷ sin 30° = 10.",
-      "To find an angle, flip the rule: sin B = b sin A ÷ a. A calculator gives only an acute angle for B, but an obtuse angle 180° − B has the same sine.",
-      "Ambiguous case: when you know two sides and an angle opposite one of them, two triangles can fit. The second angle 180° − B works if it still leaves room for the given angle, so the two angles add to less than 180°."
+      "In any triangle, \\(\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}\\). Each side is opposite the angle with the same letter.",
+      "Use it when you know an angle and the side opposite it, plus one more side or angle. Write two of the ratios, then solve for the unknown. Example: \\(A = 30^{\\circ}\\), \\(a = 5\\), \\(B = 90^{\\circ}\\) gives \\(b = 5 \\times \\sin 90^{\\circ} \\div \\sin 30^{\\circ} = 10\\).",
+      "To find an angle, flip the rule: \\(\\sin B = \\frac{b \\sin A}{a}\\). A calculator gives only an acute angle for \\(B\\), but an obtuse angle \\(180^{\\circ} - B\\) has the same sine.",
+      "Ambiguous case: when you know two sides and an angle opposite one of them, two triangles can fit. The second angle \\(180^{\\circ} - B\\) works if it still leaves room for the given angle, so the two angles add to less than 180°."
     ],
     "remember": "Match each side with its opposite angle. A sine can come from an acute angle or its obtuse partner.",
     "a": {
-      "q": "In triangle PQR, angle P = 40°, angle Q = 70° and QR = 10 cm. What is the length of PR, to 1 decimal place?",
+      "q": "In triangle PQR, angle \\(P = 40^{\\circ}\\), angle \\(Q = 70^{\\circ}\\) and \\(QR = 10\\) cm. What is the length of PR, to 1 decimal place?",
       "opts": ["14.6 cm", "6.8 cm", "4.5 cm", "9.4 cm"],
-      "why": "QR is opposite P and PR is opposite Q. So PR = 10 × sin 70° ÷ sin 40° = 14.6 cm. Putting the sines the wrong way round gives 6.8 cm.",
+      "why": "QR is opposite \\(P\\) and PR is opposite \\(Q\\). So \\(PR = 10 \\times \\sin 70^{\\circ} \\div \\sin 40^{\\circ} = 14.6\\) cm. Putting the sines the wrong way round gives 6.8 cm.",
       "clue": "Pair each side with the angle opposite it."
     },
     "b": {
       "d": 3,
-      "q": "In triangle ABC, angle A = 30°, a = 8 cm and b = 12 cm. Using the sine rule, a calculator gives B = 48.6°. What is the other possible size of angle B?",
+      "q": "In triangle ABC, angle \\(A = 30^{\\circ}\\), \\(a = 8\\) cm and \\(b = 12\\) cm. Using the sine rule, a calculator gives \\(B = 48.6^{\\circ}\\). What is the other possible size of angle \\(B\\)?",
       "opts": ["131.4°", "41.4°", "101.4°", "228.6°"],
-      "why": "Two triangles fit, because sin B = 12 × sin 30° ÷ 8 = 0.75 has an acute and an obtuse answer. The other angle is 180° − 48.6° = 131.4°, and 30° + 131.4° is less than 180°, so it works. 101.4° is the third angle of the first triangle, not another B.",
+      "why": "Two triangles fit, because \\(\\sin B = 12 \\times \\sin 30^{\\circ} \\div 8 = 0.75\\) has an acute and an obtuse answer. The other angle is \\(180^{\\circ} - 48.6^{\\circ} = 131.4^{\\circ}\\), and \\(30^{\\circ} + 131.4^{\\circ}\\) is less than 180°, so it works. 101.4° is the third angle of the first triangle, not another \\(B\\).",
       "clue": "An obtuse angle shares its sine with an acute one."
     }
   },
   "mat-cosine-rule": {
     "title": "The cosine rule",
     "card": [
-      "In any triangle, c² = a² + b² − 2ab cos C. Angle C is the angle between sides a and b, and c is the side opposite it.",
-      "Use it to find the third side when you know two sides and the angle between them. Example: a = 5, b = 7, C = 60° gives c² = 25 + 49 − 70 × 0.5 = 39, so c = 6.2.",
-      "Use it to find an angle when you know all three sides. Rearrange it: cos C = (a² + b² − c²) ÷ 2ab. Side c is the one opposite the angle you want.",
-      "Work out 2ab cos C as one amount, subtract it from a² + b², and take the square root last."
+      "In any triangle, \\(c^{2} = a^{2} + b^{2} - 2ab \\cos C\\). Angle \\(C\\) is the angle between sides \\(a\\) and \\(b\\), and \\(c\\) is the side opposite it.",
+      "Use it to find the third side when you know two sides and the angle between them. Example: \\(a = 5\\), \\(b = 7\\), \\(C = 60^{\\circ}\\) gives \\(c^{2} = 25 + 49 - 70 \\times 0.5 = 39\\), so \\(c = 6.2\\).",
+      "Use it to find an angle when you know all three sides. Rearrange it: \\(\\cos C = \\frac{a^{2} + b^{2} - c^{2}}{2ab}\\). Side \\(c\\) is the one opposite the angle you want.",
+      "Work out \\(2ab \\cos C\\) as one amount, subtract it from \\(a^{2} + b^{2}\\), and take the square root last."
     ],
     "remember": "Two sides and the angle between, or three sides: use the cosine rule.",
     "a": {
       "q": "Two trails leave a campsite at an angle of 60°. One is 6 km long and the other is 10 km long. How far apart are their ends, to 1 decimal place?",
       "opts": ["8.7 km", "14.0 km", "76.0 km", "2.8 km"],
-      "why": "c² = 6² + 10² − 2 × 6 × 10 × cos 60° = 136 − 60 = 76, so c = 8.7 km. Stopping at 76 forgets the square root.",
+      "why": "\\(c^{2} = 6^{2} + 10^{2} - 2 \\times 6 \\times 10 \\times \\cos 60^{\\circ} = 136 - 60 = 76\\), so \\(c = 8.7\\) km. Stopping at 76 forgets the square root.",
       "clue": "The 60° angle sits between the two known sides."
     },
     "b": {
       "d": 3,
       "q": "A garden bed is a triangle with sides 5 m, 6 m and 7 m. What is the angle opposite the 7 m side, to 1 decimal place?",
       "opts": ["78.5°", "101.5°", "44.4°", "11.5°"],
-      "why": "cos C = (5² + 6² − 7²) ÷ (2 × 5 × 6) = 12 ÷ 60 = 0.2, so C = 78.5°. The 7 m side must be c, the side opposite the angle. Using 101.5° comes from a sign error that makes cos C negative.",
+      "why": "\\(\\cos C = \\frac{5^{2} + 6^{2} - 7^{2}}{2 \\times 5 \\times 6} = \\frac{12}{60} = 0.2\\), so \\(C = 78.5^{\\circ}\\). The 7 m side must be \\(c\\), the side opposite the angle. Using 101.5° comes from a sign error that makes \\(\\cos C\\) negative.",
       "clue": "The side opposite the wanted angle is the one that is subtracted."
     }
   },
   "mat-area-any-triangle": {
     "title": "Area of any triangle",
     "card": [
-      "Area = ½ab sin C. Here a and b are two sides, and C is the angle between them.",
-      "It works for any triangle, because a sin C acts as the height. You do not need to measure the height.",
-      "Example: sides 8 cm and 5 cm with 30° between them. Area = ½ × 8 × 5 × sin 30° = 20 × 0.5 = 10 cm².",
-      "To find an angle from a known area, rearrange to sin C = 2 × Area ÷ ab and take the inverse sine. As sin C = sin(180° − C), the obtuse angle 180° − C may also fit."
+      "\\(\\text{Area} = \\frac{1}{2}ab \\sin C\\). Here \\(a\\) and \\(b\\) are two sides, and \\(C\\) is the angle between them.",
+      "It works for any triangle, because \\(a \\sin C\\) acts as the height. You do not need to measure the height.",
+      "Example: sides 8 cm and 5 cm with 30° between them. \\(\\text{Area} = \\frac{1}{2} \\times 8 \\times 5 \\times \\sin 30^{\\circ} = 20 \\times 0.5 = 10 \\text{ cm}^{2}\\).",
+      "To find an angle from a known area, rearrange to \\(\\sin C = \\frac{2 \\times \\text{Area}}{ab}\\) and take the inverse sine. As \\(\\sin C = \\sin(180^{\\circ} - C)\\), the obtuse angle \\(180^{\\circ} - C\\) may also fit."
     ],
     "remember": "Half the product of two sides, times the sine of the angle between them.",
     "a": {
       "q": "A triangular paddock has two fences of 9 m and 12 m meeting at an angle of 40°. What is its area, to 1 decimal place?",
-      "opts": ["34.7 m²", "41.4 m²", "69.4 m²", "108.0 m²"],
-      "why": "Area = ½ × 9 × 12 × sin 40° = 54 × 0.6428 = 34.7 m². Using cos 40° gives 41.4 m², which uses the wrong ratio.",
+      "opts": [
+        "\\(34.7 \\text{ m}^{2}\\)",
+        "\\(41.4 \\text{ m}^{2}\\)",
+        "\\(69.4 \\text{ m}^{2}\\)",
+        "\\(108.0 \\text{ m}^{2}\\)"
+      ],
+      "why": "\\(\\text{Area} = \\frac{1}{2} \\times 9 \\times 12 \\times \\sin 40^{\\circ} = 54 \\times 0.6428 = 34.7 \\text{ m}^{2}\\). Using \\(\\cos 40^{\\circ}\\) gives \\(41.4 \\text{ m}^{2}\\), which uses the wrong ratio.",
       "clue": "Half, times both sides, times the sine."
     },
     "b": {
       "d": 3,
-      "q": "A triangle has an area of 20 cm². Two of its sides are 8 cm and 10 cm, and the acute angle between them is C. What is C?",
+      "q": "A triangle has an area of \\(20 \\text{ cm}^{2}\\). Two of its sides are 8 cm and 10 cm, and the acute angle between them is \\(C\\). What is \\(C\\)?",
       "opts": ["30°", "14.5°", "60°", "7.2°"],
-      "why": "20 = ½ × 8 × 10 × sin C = 40 sin C, so sin C = 0.5 and C = 30°. The angle 150° also has a sine of 0.5, but it is not acute. Forgetting the ½ gives sin C = 0.25, which is 14.5°.",
-      "clue": "Write the area formula, then solve for sin C."
+      "why": "\\(20 = \\frac{1}{2} \\times 8 \\times 10 \\times \\sin C = 40 \\sin C\\), so \\(\\sin C = 0.5\\) and \\(C = 30^{\\circ}\\). The angle 150° also has a sine of 0.5, but it is not acute. Forgetting the \\(\\frac{1}{2}\\) gives \\(\\sin C = 0.25\\), which is 14.5°.",
+      "clue": "Write the area formula, then solve for \\(\\sin C\\)."
     }
   },
   "mat-unit-circle": {
     "title": "The unit circle",
     "card": [
-      "The unit circle has its centre at the origin and radius 1. Start at the point (1, 0) and turn anticlockwise by an angle θ. You land on a point P on the circle.",
-      "The x-coordinate of P is cos θ. The y-coordinate of P is sin θ. So P = (cos θ, sin θ).",
-      "Signs follow from the coordinates. In quadrant 1, x and y are both positive. In quadrant 2, x is negative and y is positive. In quadrant 3, both are negative. In quadrant 4, x is positive and y is negative.",
-      "Example: at θ = 90°, P = (0, 1), so cos 90° = 0 and sin 90° = 1. At θ = 180°, P = (−1, 0), so cos 180° = −1 and sin 180° = 0."
+      "The unit circle has its centre at the origin and radius 1. Start at the point \\((1, 0)\\) and turn anticlockwise by an angle \\(\\theta\\). You land on a point \\(P\\) on the circle.",
+      "The x-coordinate of \\(P\\) is \\(\\cos \\theta\\). The y-coordinate of \\(P\\) is \\(\\sin \\theta\\). So \\(P = (\\cos \\theta, \\sin \\theta)\\).",
+      "Signs follow from the coordinates. In quadrant 1, \\(x\\) and \\(y\\) are both positive. In quadrant 2, \\(x\\) is negative and \\(y\\) is positive. In quadrant 3, both are negative. In quadrant 4, \\(x\\) is positive and \\(y\\) is negative.",
+      "Example: at \\(\\theta = 90^{\\circ}\\), \\(P = (0, 1)\\), so \\(\\cos 90^{\\circ} = 0\\) and \\(\\sin 90^{\\circ} = 1\\). At \\(\\theta = 180^{\\circ}\\), \\(P = (-1, 0)\\), so \\(\\cos 180^{\\circ} = -1\\) and \\(\\sin 180^{\\circ} = 0\\)."
     ],
-    "remember": "On the unit circle, P = (cos θ, sin θ), so the signs of x and y give the signs of cos θ and sin θ.",
+    "remember": "On the unit circle, \\(P = (\\cos \\theta, \\sin \\theta)\\), so the signs of \\(x\\) and \\(y\\) give the signs of \\(\\cos \\theta\\) and \\(\\sin \\theta\\).",
     "a": {
-      "q": "What is the value of sin 180°?",
-      "opts": ["0", "−1", "1", "180"],
-      "why": "At 180° the point on the unit circle is (−1, 0). Sin is the y-coordinate, so sin 180° = 0. The value −1 is the x-coordinate, which is cos 180°.",
+      "q": "What is the value of \\(\\sin 180^{\\circ}\\)?",
+      "opts": ["0", "\\(-1\\)", "1", "180"],
+      "why": "At 180° the point on the unit circle is \\((-1, 0)\\). Sin is the y-coordinate, so \\(\\sin 180^{\\circ} = 0\\). The value \\(-1\\) is the x-coordinate, which is \\(\\cos 180^{\\circ}\\).",
       "clue": "Sin is one of the two coordinates. Which one?"
     },
     "b": {
       "d": 3,
-      "q": "An angle θ has its point P on the unit circle in quadrant 3. Which pair of signs is correct?",
+      "q": "An angle \\(\\theta\\) has its point \\(P\\) on the unit circle in quadrant 3. Which pair of signs is correct?",
       "opts": [
-        "cos θ is negative and sin θ is negative",
-        "cos θ is negative and sin θ is positive",
-        "cos θ is positive and sin θ is negative",
-        "cos θ is positive and sin θ is positive"
+        "\\(\\cos \\theta\\) is negative and \\(\\sin \\theta\\) is negative",
+        "\\(\\cos \\theta\\) is negative and \\(\\sin \\theta\\) is positive",
+        "\\(\\cos \\theta\\) is positive and \\(\\sin \\theta\\) is negative",
+        "\\(\\cos \\theta\\) is positive and \\(\\sin \\theta\\) is positive"
       ],
-      "why": "In quadrant 3, P is to the left of the y-axis and below the x-axis, so x and y are both negative. Cos θ is x and sin θ is y, so both are negative. Quadrant 2 is the one where only cos θ is negative.",
+      "why": "In quadrant 3, \\(P\\) is to the left of the y-axis and below the x-axis, so \\(x\\) and \\(y\\) are both negative. Cos is \\(x\\) and sin is \\(y\\), so \\(\\cos \\theta\\) and \\(\\sin \\theta\\) are both negative. Quadrant 2 is the one where only \\(\\cos \\theta\\) is negative.",
       "clue": "Think about which side of each axis quadrant 3 lies on."
     }
   },
@@ -727,22 +774,22 @@ MADE_BANKS.mat = {
     "card": [
       "For an angle beyond 90°, find its related acute angle: the acute angle it makes with the x-axis. The trig ratio has the same size as the ratio of that acute angle.",
       "The quadrant gives the sign. In quadrant 1 all ratios are positive. In quadrant 2 only sin is positive. In quadrant 3 only tan is positive. In quadrant 4 only cos is positive.",
-      "Related acute angle: in quadrant 2 it is 180° − θ. In quadrant 3 it is θ − 180°. In quadrant 4 it is 360° − θ. In radians, use π in place of 180° and 2π in place of 360°.",
-      "Example: sin 150°. It is in quadrant 2, so the related angle is 180° − 150° = 30° and sin is positive. So sin 150° = sin 30° = 1/2."
+      "Related acute angle: in quadrant 2 it is \\(180^{\\circ} - \\theta\\). In quadrant 3 it is \\(\\theta - 180^{\\circ}\\). In quadrant 4 it is \\(360^{\\circ} - \\theta\\). In radians, use \\(\\pi\\) in place of 180° and \\(2\\pi\\) in place of 360°.",
+      "Example: \\(\\sin 150^{\\circ}\\). It is in quadrant 2, so the related angle is \\(180^{\\circ} - 150^{\\circ} = 30^{\\circ}\\) and sin is positive. So \\(\\sin 150^{\\circ} = \\sin 30^{\\circ} = \\frac{1}{2}\\)."
     ],
     "remember": "Find the related acute angle for the size, then use the quadrant for the sign.",
     "a": {
-      "q": "What is the value of cos 120°?",
-      "opts": ["−1/2", "1/2", "−√3/2", "√3/2"],
-      "why": "120° is in quadrant 2, so the related angle is 180° − 120° = 60°. Cos is negative in quadrant 2, so cos 120° = −cos 60° = −1/2. The option 1/2 has the right size but ignores the sign.",
+      "q": "What is the value of \\(\\cos 120^{\\circ}\\)?",
+      "opts": ["\\(-\\frac{1}{2}\\)", "\\(\\frac{1}{2}\\)", "\\(-\\frac{\\sqrt{3}}{2}\\)", "\\(\\frac{\\sqrt{3}}{2}\\)"],
+      "why": "120° is in quadrant 2, so the related angle is \\(180^{\\circ} - 120^{\\circ} = 60^{\\circ}\\). Cos is negative in quadrant 2, so \\(\\cos 120^{\\circ} = -\\cos 60^{\\circ} = -\\frac{1}{2}\\). The option \\(\\frac{1}{2}\\) has the right size but ignores the sign.",
       "clue": "Find the related angle, then check the sign in quadrant 2."
     },
     "b": {
       "d": 3,
-      "q": "What is the value of tan (5π/4)?",
-      "opts": ["1", "−1", "√3", "−√3"],
-      "why": "5π/4 is between π and 3π/2, so it is in quadrant 3. The related angle is 5π/4 − π = π/4, and tan (π/4) = 1. Tan is positive in quadrant 3, so the answer is 1. The option −1 comes from wrongly treating tan as negative here.",
-      "clue": "Subtract π to get the related angle, then check the sign in quadrant 3."
+      "q": "What is the value of \\(\\tan \\frac{5\\pi}{4}\\)?",
+      "opts": ["1", "\\(-1\\)", "\\(\\sqrt{3}\\)", "\\(-\\sqrt{3}\\)"],
+      "why": "\\(\\frac{5\\pi}{4}\\) is between \\(\\pi\\) and \\(\\frac{3\\pi}{2}\\), so it is in quadrant 3. The related angle is \\(\\frac{5\\pi}{4} - \\pi = \\frac{\\pi}{4}\\), and \\(\\tan \\frac{\\pi}{4} = 1\\). Tan is positive in quadrant 3, so the answer is 1. The option \\(-1\\) comes from wrongly treating tan as negative here.",
+      "clue": "Subtract \\(\\pi\\) to get the related angle, then check the sign in quadrant 3."
     }
   },
   "mat-graphs-sine-cosine-tangent": {
@@ -750,39 +797,39 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Sine and cosine",
-        "y = sin x and y = cos x are smooth waves between −1 and 1. The amplitude is 1 and the period is 360° (2π radians), so the pattern then repeats."
+        "\\(y = \\sin x\\) and \\(y = \\cos x\\) are smooth waves between \\(-1\\) and 1. The amplitude is 1 and the period is 360° (\\(2\\pi\\) radians), so the pattern then repeats."
       ],
       [
         "Starting points",
-        "sin x starts at 0 and rises: sin 0° = 0. cos x starts at its maximum: cos 0° = 1. The cosine graph is the sine graph shifted left by 90°."
+        "\\(\\sin x\\) starts at 0 and rises: \\(\\sin 0^{\\circ} = 0\\). \\(\\cos x\\) starts at its maximum: \\(\\cos 0^{\\circ} = 1\\). The cosine graph is the sine graph shifted left by 90°."
       ],
       [
         "Tangent",
-        "y = tan x has no maximum, so it has no amplitude. Its period is 180° (π radians). It has vertical asymptotes at x = ±90°, ±270° and so on, where cos x = 0."
+        "\\(y = \\tan x\\) has no maximum, so it has no amplitude. Its period is 180° (\\(\\pi\\) radians). It has vertical asymptotes at \\(x = \\pm 90^{\\circ}, \\pm 270^{\\circ}\\) and so on, where \\(\\cos x = 0\\)."
       ],
       [
         "Example",
-        "tan 0° = 0 and tan 45° = 1. Between the asymptotes at −90° and 90°, the graph rises through the origin. It falls without limit as x nears −90° and climbs without limit as x nears 90°."
+        "\\(\\tan 0^{\\circ} = 0\\) and \\(\\tan 45^{\\circ} = 1\\). Between the asymptotes at \\(-90^{\\circ}\\) and 90°, the graph rises through the origin. It falls without limit as \\(x\\) nears \\(-90^{\\circ}\\) and climbs without limit as \\(x\\) nears 90°."
       ]
     ],
     "remember": "Sine and cosine repeat every 360° with amplitude 1. Tangent repeats every 180° and has asymptotes.",
     "a": {
-      "q": "What is the period of y = tan x?",
+      "q": "What is the period of \\(y = \\tan x\\)?",
       "opts": ["180°", "360°", "90°", "1"],
-      "why": "The tangent graph repeats every 180°, or π radians. 360° is the period of sine and cosine, which is the tempting mistake.",
+      "why": "The tangent graph repeats every 180°, or \\(\\pi\\) radians. 360° is the period of sine and cosine, which is the tempting mistake.",
       "clue": "Tangent repeats twice as often as sine."
     },
     "b": {
       "d": 3,
-      "q": "Which statement about the graph of y = tan x is correct?",
+      "q": "Which statement about the graph of \\(y = \\tan x\\) is correct?",
       "opts": [
-        "It has an asymptote at x = 90°",
+        "It has an asymptote at \\(x = 90^{\\circ}\\)",
         "It has an amplitude of 1",
-        "It passes through the point (90°, 1)",
+        "It passes through the point \\((90^{\\circ}, 1)\\)",
         "It has a maximum value of 1"
       ],
-      "why": "At x = 90°, cos x = 0, so the graph has a vertical asymptote there. Tangent has no maximum, so it has no amplitude. The values of 1 belong to sine and cosine, and tan 90° is undefined.",
-      "clue": "Where does cos x equal 0?"
+      "why": "At \\(x = 90^{\\circ}\\), \\(\\cos x = 0\\), so the graph has a vertical asymptote there. Tangent has no maximum, so it has no amplitude. The values of 1 belong to sine and cosine, and \\(\\tan 90^{\\circ}\\) is undefined.",
+      "clue": "Where does \\(\\cos x\\) equal 0?"
     }
   },
   "mat-reciprocal-ratios": {
@@ -791,67 +838,78 @@ MADE_BANKS.mat = {
       "Three more trig ratios are the reciprocals (1 divided by the ratio) of the ones you know. They are cosecant, secant and cotangent.",
       [
         "Cosec",
-        "cosec θ = 1/sin θ, so sin 30° = 1/2 gives cosec 30° = 2. It is undefined when sin θ = 0, such as at 0°, 180° and 360°."
+        "\\(\\text{cosec}\\,\\theta = \\frac{1}{\\sin \\theta}\\), so \\(\\sin 30^{\\circ} = \\frac{1}{2}\\) gives \\(\\text{cosec}\\,30^{\\circ} = 2\\). It is undefined when \\(\\sin \\theta = 0\\), such as at 0°, 180° and 360°."
       ],
-      ["Sec", "sec θ = 1/cos θ. It is undefined when cos θ = 0, such as at 90° and 270°."],
-      ["Cot", "cot θ = 1/tan θ = cos θ/sin θ. It is undefined when sin θ = 0, such as at 0° and 180°."]
+      [
+        "Sec",
+        "\\(\\sec \\theta = \\frac{1}{\\cos \\theta}\\). It is undefined when \\(\\cos \\theta = 0\\), such as at 90° and 270°."
+      ],
+      [
+        "Cot",
+        "\\(\\cot \\theta = \\frac{1}{\\tan \\theta} = \\frac{\\cos \\theta}{\\sin \\theta}\\). It is undefined when \\(\\sin \\theta = 0\\), such as at 0° and 180°."
+      ]
     ],
     "remember": "Each reciprocal ratio is 1 over its partner, and it is undefined where that partner equals 0.",
     "a": {
-      "q": "Which of these is equal to sec θ?",
-      "opts": ["1/cos θ", "1/sin θ", "1/tan θ", "cos θ/sin θ"],
-      "why": "Secant is the reciprocal of cosine, so sec θ = 1/cos θ. The tempting mix-up is 1/sin θ, but that is cosec θ. Cosec pairs with sin, and sec pairs with cos.",
-      "clue": "Sec θ is undefined at 90°. Which ratio is 0 there?"
+      "q": "Which of these is equal to \\(\\sec \\theta\\)?",
+      "opts": [
+        "\\(\\frac{1}{\\cos \\theta}\\)",
+        "\\(\\frac{1}{\\sin \\theta}\\)",
+        "\\(\\frac{1}{\\tan \\theta}\\)",
+        "\\(\\frac{\\cos \\theta}{\\sin \\theta}\\)"
+      ],
+      "why": "Secant is the reciprocal of cosine, so \\(\\sec \\theta = \\frac{1}{\\cos \\theta}\\). The tempting mix-up is \\(\\frac{1}{\\sin \\theta}\\), but that is \\(\\text{cosec}\\,\\theta\\). Cosec pairs with sin, and sec pairs with cos.",
+      "clue": "\\(\\sec \\theta\\) is undefined at 90°. Which ratio is 0 there?"
     },
     "b": {
       "d": 3,
-      "q": "For which angle is cosec θ undefined?",
+      "q": "For which angle is \\(\\text{cosec}\\,\\theta\\) undefined?",
       "opts": ["180°", "90°", "270°", "60°"],
-      "why": "cosec θ = 1/sin θ, and sin 180° = 0, so the division is impossible. At 90° and 270° it is sec θ that is undefined, because cos θ = 0 there. At 60° sin θ is not 0, so cosec 60° is defined.",
-      "clue": "Find where sin θ = 0, not cos θ = 0."
+      "why": "\\(\\text{cosec}\\,\\theta = \\frac{1}{\\sin \\theta}\\), and \\(\\sin 180^{\\circ} = 0\\), so the division is impossible. At 90° and 270° it is \\(\\sec \\theta\\) that is undefined, because \\(\\cos \\theta = 0\\) there. At 60°, \\(\\sin \\theta\\) is not 0, so \\(\\text{cosec}\\,60^{\\circ}\\) is defined.",
+      "clue": "Find where \\(\\sin \\theta = 0\\), not \\(\\cos \\theta = 0\\)."
     }
   },
   "mat-pythagorean-identity": {
     "title": "The Pythagorean identity",
     "card": [
-      "For any angle θ, sin²θ + cos²θ = 1. It comes from the unit circle: the point (cos θ, sin θ) lies on a circle of radius 1, so x² + y² = 1.",
-      "Rearranged, it gives sin²θ = 1 − cos²θ and cos²θ = 1 − sin²θ. If you take a square root, use the quadrant to choose the sign.",
-      "Dividing every term by cos²θ gives tan²θ + 1 = sec²θ, using tan θ = sin θ ÷ cos θ. You cannot divide by zero, so this form holds only where cos θ ≠ 0.",
-      "Example: simplify 1 − cos²θ. By the identity it equals sin²θ. To prove an identity, work on one side only until it matches the other."
+      "For any angle \\(\\theta\\), \\(\\sin^{2} \\theta + \\cos^{2} \\theta = 1\\). It comes from the unit circle: the point \\((\\cos \\theta, \\sin \\theta)\\) lies on a circle of radius 1, so \\(x^{2} + y^{2} = 1\\).",
+      "Rearranged, it gives \\(\\sin^{2} \\theta = 1 - \\cos^{2} \\theta\\) and \\(\\cos^{2} \\theta = 1 - \\sin^{2} \\theta\\). If you take a square root, use the quadrant to choose the sign.",
+      "Dividing every term by \\(\\cos^{2} \\theta\\) gives \\(\\tan^{2} \\theta + 1 = \\sec^{2} \\theta\\), using \\(\\tan \\theta = \\frac{\\sin \\theta}{\\cos \\theta}\\). You cannot divide by zero, so this form holds only where \\(\\cos \\theta \\ne 0\\).",
+      "Example: simplify \\(1 - \\cos^{2} \\theta\\). By the identity it equals \\(\\sin^{2} \\theta\\). To prove an identity, work on one side only until it matches the other."
     ],
-    "remember": "Swap sin²θ and cos²θ using sin²θ + cos²θ = 1. The tan and sec form needs cos θ ≠ 0.",
+    "remember": "Swap \\(\\sin^{2} \\theta\\) and \\(\\cos^{2} \\theta\\) using \\(\\sin^{2} \\theta + \\cos^{2} \\theta = 1\\). The tan and sec form needs \\(\\cos \\theta \\ne 0\\).",
     "a": {
-      "q": "If sin θ = 3/5 and θ is acute, what is the value of cos θ?",
-      "opts": ["4/5", "2/5", "16/25", "−4/5"],
-      "why": "cos²θ = 1 − sin²θ = 1 − 9/25 = 16/25, so cos θ = 4/5. Since θ is acute, cos θ is positive. The value 16/25 is cos²θ, so the square root step is still needed.",
-      "clue": "Find cos²θ first, then take the square root."
+      "q": "If \\(\\sin \\theta = \\frac{3}{5}\\) and \\(\\theta\\) is acute, what is the value of \\(\\cos \\theta\\)?",
+      "opts": ["\\(\\frac{4}{5}\\)", "\\(\\frac{2}{5}\\)", "\\(\\frac{16}{25}\\)", "\\(-\\frac{4}{5}\\)"],
+      "why": "\\(\\cos^{2} \\theta = 1 - \\sin^{2} \\theta = 1 - \\frac{9}{25} = \\frac{16}{25}\\), so \\(\\cos \\theta = \\frac{4}{5}\\). Since \\(\\theta\\) is acute, \\(\\cos \\theta\\) is positive. The value \\(\\frac{16}{25}\\) is \\(\\cos^{2} \\theta\\), so the square root step is still needed.",
+      "clue": "Find \\(\\cos^{2} \\theta\\) first, then take the square root."
     },
     "b": {
       "d": 3,
-      "q": "Which expression is equal to (1 − cos²θ) ÷ sin θ, for sin θ ≠ 0?",
-      "opts": ["sin θ", "cos θ", "sin²θ", "1/sin θ"],
-      "why": "1 − cos²θ = sin²θ, so the expression is sin²θ ÷ sin θ = sin θ. The option sin²θ is tempting, but it is only the top rewritten: you still have to divide by sin θ.",
-      "clue": "Rewrite the top using sin²θ + cos²θ = 1, then divide."
+      "q": "Which expression is equal to \\(\\frac{1 - \\cos^{2} \\theta}{\\sin \\theta}\\), for \\(\\sin \\theta \\ne 0\\)?",
+      "opts": ["\\(\\sin \\theta\\)", "\\(\\cos \\theta\\)", "\\(\\sin^{2} \\theta\\)", "\\(\\frac{1}{\\sin \\theta}\\)"],
+      "why": "\\(1 - \\cos^{2} \\theta = \\sin^{2} \\theta\\), so the expression is \\(\\sin^{2} \\theta \\div \\sin \\theta = \\sin \\theta\\). The option \\(\\sin^{2} \\theta\\) is tempting, but it is only the top rewritten: you still have to divide by \\(\\sin \\theta\\).",
+      "clue": "Rewrite the top using \\(\\sin^{2} \\theta + \\cos^{2} \\theta = 1\\), then divide."
     }
   },
   "mat-solving-trigonometric-equations": {
     "title": "Solving trigonometric equations",
     "card": [
-      "First rearrange to get one trig ratio alone. For 2 sin x = 1, divide by 2 to get sin x = 1/2.",
-      "Find the related acute angle by ignoring the sign. Here sin 30° = 1/2, so the related angle is 30°.",
-      "Use the signs in each quadrant to place the angle. Sin is positive in quadrants 1 and 2, so x = 30° and x = 180° − 30° = 150°. Cos is positive in quadrants 1 and 4. Tan is positive in quadrants 1 and 3.",
-      "To find every solution in a larger domain, add or subtract the period: 360° for sin and cos, 180° for tan. For 0° ≤ x ≤ 360°, the solutions of sin x = 1/2 are 30° and 150°."
+      "First rearrange to get one trig ratio alone. For \\(2 \\sin x = 1\\), divide by 2 to get \\(\\sin x = \\frac{1}{2}\\).",
+      "Find the related acute angle by ignoring the sign. Here \\(\\sin 30^{\\circ} = \\frac{1}{2}\\), so the related angle is 30°.",
+      "Use the signs in each quadrant to place the angle. Sin is positive in quadrants 1 and 2, so \\(x = 30^{\\circ}\\) and \\(x = 180^{\\circ} - 30^{\\circ} = 150^{\\circ}\\). Cos is positive in quadrants 1 and 4. Tan is positive in quadrants 1 and 3.",
+      "To find every solution in a larger domain, add or subtract the period: 360° for sin and cos, 180° for tan. For \\(0^{\\circ} \\le x \\le 360^{\\circ}\\), the solutions of \\(\\sin x = \\frac{1}{2}\\) are 30° and 150°."
     ],
     "remember": "Find the related angle, place it using the quadrants, then use the period for the rest of the domain.",
     "a": {
-      "q": "What are the solutions of 2 cos x = 1 for 0° ≤ x ≤ 360°?",
+      "q": "What are the solutions of \\(2 \\cos x = 1\\) for \\(0^{\\circ} \\le x \\le 360^{\\circ}\\)?",
       "opts": ["60° and 300°", "60° and 120°", "30° and 330°", "60° and 240°"],
-      "why": "cos x = 1/2, so the related angle is 60°. Cos is positive in quadrants 1 and 4, giving 60° and 360° − 60° = 300°. The pair 60° and 120° uses the quadrants where sin is positive, which is the wrong ratio.",
+      "why": "\\(\\cos x = \\frac{1}{2}\\), so the related angle is 60°. Cos is positive in quadrants 1 and 4, giving 60° and \\(360^{\\circ} - 60^{\\circ} = 300^{\\circ}\\). The pair 60° and 120° uses the quadrants where sin is positive, which is the wrong ratio.",
       "clue": "Cos is positive in quadrants 1 and 4."
     },
     "b": {
       "d": 3,
-      "q": "How many solutions does tan x = 1 have for 0° ≤ x ≤ 720°?",
+      "q": "How many solutions does \\(\\tan x = 1\\) have for \\(0^{\\circ} \\le x \\le 720^{\\circ}\\)?",
       "opts": ["4", "2", "3", "8"],
       "why": "The related angle is 45°, and tan has a period of 180°. The solutions are 45°, 225°, 405° and 585°, so there are 4. Using a period of 360° gives only 2, which is the tempting mistake.",
       "clue": "Tan repeats every 180°, not 360°."
@@ -860,75 +918,75 @@ MADE_BANKS.mat = {
   "mat-average-rate-change": {
     "title": "Average rate of change",
     "card": [
-      "The average rate of change of f(x) from x = a to x = b is how much f changes for each 1 unit of x, on average. It equals (f(b) − f(a)) ÷ (b − a).",
-      "This is the gradient of the secant, the straight line through the points (a, f(a)) and (b, f(b)) on the curve.",
-      "Worked example: for f(x) = x², find the average rate of change from x = 1 to x = 3. f(3) = 9 and f(1) = 1, so the rate is (9 − 1) ÷ (3 − 1) = 8 ÷ 2 = 4.",
-      "The answer is an average over the whole interval. The curve can be steeper or flatter at points inside it. If x and f(x) have units, the rate is in units of f per unit of x."
+      "The average rate of change of \\(f(x)\\) from \\(x = a\\) to \\(x = b\\) is how much \\(f\\) changes for each 1 unit of \\(x\\), on average. It equals \\(\\frac{f(b) - f(a)}{b - a}\\).",
+      "This is the gradient of the secant, the straight line through the points \\((a, f(a))\\) and \\((b, f(b))\\) on the curve.",
+      "Worked example: for \\(f(x) = x^{2}\\), find the average rate of change from \\(x = 1\\) to \\(x = 3\\). \\(f(3) = 9\\) and \\(f(1) = 1\\), so the rate is \\(\\frac{9 - 1}{3 - 1} = \\frac{8}{2} = 4\\).",
+      "The answer is an average over the whole interval. The curve can be steeper or flatter at points inside it. If \\(x\\) and \\(f(x)\\) have units, the rate is in units of \\(f\\) per unit of \\(x\\)."
     ],
-    "remember": "Average rate of change is the change in f divided by the change in x, which is the secant gradient.",
+    "remember": "Average rate of change is the change in \\(f\\) divided by the change in \\(x\\), which is the secant gradient.",
     "a": {
-      "q": "For f(x) = x² + 2x, what is the average rate of change from x = 1 to x = 4?",
+      "q": "For \\(f(x) = x^{2} + 2x\\), what is the average rate of change from \\(x = 1\\) to \\(x = 4\\)?",
       "opts": ["7", "8", "21", "3"],
-      "why": "f(4) = 24 and f(1) = 3, so the rate is (24 − 3) ÷ (4 − 1) = 21 ÷ 3 = 7. The answer 21 is wrong because it skips dividing by the change in x.",
-      "clue": "Divide the change in f by the change in x."
+      "why": "\\(f(4) = 24\\) and \\(f(1) = 3\\), so the rate is \\(\\frac{24 - 3}{4 - 1} = \\frac{21}{3} = 7\\). The answer 21 is wrong because it skips dividing by the change in \\(x\\).",
+      "clue": "Divide the change in \\(f\\) by the change in \\(x\\)."
     },
     "b": {
       "d": 3,
-      "q": "A drone's height is h(t) = 2t² metres after t seconds. What is its average rate of change of height from t = 2 to t = 5, and what is it measured in?",
+      "q": "A drone's height is \\(h(t) = 2t^{2}\\) metres after \\(t\\) seconds. What is its average rate of change of height from \\(t = 2\\) to \\(t = 5\\), and what is it measured in?",
       "opts": ["14 metres per second", "42 metres per second", "14 metres", "6 metres per second"],
-      "why": "h(5) = 50 and h(2) = 8, so the rate is (50 − 8) ÷ (5 − 2) = 42 ÷ 3 = 14. It is height per time, so the unit is metres per second. Answering 42 is tempting, but that is only the change in height and skips dividing by 3.",
+      "why": "\\(h(5) = 50\\) and \\(h(2) = 8\\), so the rate is \\(\\frac{50 - 8}{5 - 2} = \\frac{42}{3} = 14\\). It is height per time, so the unit is metres per second. Answering 42 is tempting, but that is only the change in height and skips dividing by 3.",
       "clue": "Find both heights, then divide by the time taken."
     }
   },
   "mat-derivative-from-first-principles": {
     "title": "The derivative from first principles",
     "card": [
-      "The gradient of a secant through (x, f(x)) and (x + h, f(x + h)) is (f(x + h) − f(x))/h. Here h is the gap in x between the two points.",
-      "As h gets closer to 0, the second point slides towards the first. The secant turns into the tangent at that point.",
-      "The derivative is that limit: f'(x) = lim (f(x + h) − f(x))/h as h approaches 0. It gives the gradient of the tangent at x.",
-      "Example: f(x) = x². Then (f(x + h) − f(x))/h = (2xh + h²)/h = 2x + h. As h approaches 0, this approaches 2x, so f'(x) = 2x."
+      "The gradient of a secant through \\((x, f(x))\\) and \\((x + h, f(x + h))\\) is \\(\\frac{f(x + h) - f(x)}{h}\\). Here \\(h\\) is the gap in \\(x\\) between the two points.",
+      "As \\(h\\) gets closer to 0, the second point slides towards the first. The secant turns into the tangent at that point.",
+      "The derivative is that limit: \\(f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}\\), the limit as \\(h\\) approaches 0. It gives the gradient of the tangent at \\(x\\).",
+      "Example: \\(f(x) = x^{2}\\). Then \\(\\frac{f(x + h) - f(x)}{h} = \\frac{2xh + h^{2}}{h} = 2x + h\\). As \\(h\\) approaches 0, this approaches \\(2x\\), so \\(f'(x) = 2x\\)."
     ],
-    "remember": "Find the secant gradient, simplify it, then let h approach 0.",
+    "remember": "Find the secant gradient, simplify it, then let \\(h\\) approach 0.",
     "a": {
-      "q": "What does f'(x) = lim (f(x + h) − f(x))/h as h approaches 0 give?",
+      "q": "What does \\(f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}\\) give?",
       "opts": [
-        "The gradient of the tangent at x",
+        "The gradient of the tangent at \\(x\\)",
         "The gradient of the secant between two fixed points",
         "The average rate of change over an interval",
-        "The value of the function at x"
+        "The value of the function at \\(x\\)"
       ],
-      "why": "As h approaches 0, the secant becomes the tangent, so the limit is the tangent's gradient. A secant gradient needs two separate points, so it is not the limit.",
-      "clue": "What does the secant turn into as h shrinks?"
+      "why": "As \\(h\\) approaches 0, the secant becomes the tangent, so the limit is the tangent's gradient. A secant gradient needs two separate points, so it is not the limit.",
+      "clue": "What does the secant turn into as \\(h\\) shrinks?"
     },
     "b": {
       "d": 3,
-      "q": "Using first principles, what is f'(x) for f(x) = x² + 3x?",
-      "opts": ["2x + 3", "2x + 3h", "x² + 3", "2x"],
-      "why": "The secant gradient is ((x + h)² + 3(x + h) − x² − 3x)/h = (2xh + h² + 3h)/h = 2x + h + 3. As h approaches 0, this approaches 2x + 3. The option 2x + 3h keeps h, which has gone to 0 in the limit.",
-      "clue": "Expand, cancel the h in the denominator, then let h approach 0."
+      "q": "Using first principles, what is \\(f'(x)\\) for \\(f(x) = x^{2} + 3x\\)?",
+      "opts": ["\\(2x + 3\\)", "\\(2x + 3h\\)", "\\(x^{2} + 3\\)", "\\(2x\\)"],
+      "why": "The secant gradient is \\(\\frac{(x + h)^{2} + 3(x + h) - x^{2} - 3x}{h} = \\frac{2xh + h^{2} + 3h}{h} = 2x + h + 3\\). As \\(h\\) approaches 0, this approaches \\(2x + 3\\). The option \\(2x + 3h\\) keeps \\(h\\), which has gone to 0 in the limit.",
+      "clue": "Expand, cancel the \\(h\\) in the denominator, then let \\(h\\) approach 0."
     }
   },
   "mat-power-rule": {
     "title": "The power rule",
     "card": [
-      "The derivative of xⁿ is nxⁿ⁻¹. Bring the power down in front, then reduce the power by 1. For example, the derivative of x⁵ is 5x⁴.",
-      "The rule works for negative and fractional powers too. Write roots and reciprocals as powers first: √x = x^(1/2) and 1/x² = x^(−2).",
-      "A constant multiple stays in front: the derivative of 3x⁴ is 3 × 4x³ = 12x³. A constant on its own has derivative 0.",
-      "For a sum or difference, differentiate each term separately. The derivative of x³ − 6x + 5 is 3x² − 6."
+      "The derivative of \\(x^{n}\\) is \\(nx^{n - 1}\\). Bring the power down in front, then reduce the power by 1. For example, the derivative of \\(x^{5}\\) is \\(5x^{4}\\).",
+      "The rule works for negative and fractional powers too. Write roots and reciprocals as powers first: \\(\\sqrt{x} = x^{\\frac{1}{2}}\\) and \\(\\frac{1}{x^{2}} = x^{-2}\\).",
+      "A constant multiple stays in front: the derivative of \\(3x^{4}\\) is \\(3 \\times 4x^{3} = 12x^{3}\\). A constant on its own has derivative 0.",
+      "For a sum or difference, differentiate each term separately. The derivative of \\(x^{3} - 6x + 5\\) is \\(3x^{2} - 6\\)."
     ],
     "remember": "Bring the power down, then take 1 off the power. Do this term by term.",
     "a": {
-      "q": "What is the derivative of 4x³ + 2x?",
-      "opts": ["12x² + 2", "12x² + 2x", "4x² + 2", "3x² + 2"],
-      "why": "Differentiate each term. 4x³ gives 4 × 3x² = 12x², and 2x gives 2. The option 12x² + 2x is tempting, but it leaves the power on the second term, so 2x was not differentiated.",
+      "q": "What is the derivative of \\(4x^{3} + 2x\\)?",
+      "opts": ["\\(12x^{2} + 2\\)", "\\(12x^{2} + 2x\\)", "\\(4x^{2} + 2\\)", "\\(3x^{2} + 2\\)"],
+      "why": "Differentiate each term. \\(4x^{3}\\) gives \\(4 \\times 3x^{2} = 12x^{2}\\), and \\(2x\\) gives 2. The option \\(12x^{2} + 2x\\) is tempting, but it leaves the power on the second term, so \\(2x\\) was not differentiated.",
       "clue": "Differentiate each term separately, and keep the constant multiple."
     },
     "b": {
       "d": 3,
-      "q": "What is the derivative of 6√x, written as 6x^(1/2)?",
-      "opts": ["3x^(−1/2)", "6x^(−1/2)", "3x^(1/2)", "12x^(3/2)"],
-      "why": "Bring down 1/2 and multiply by 6 to get 3. Then subtract 1 from 1/2 to get −1/2, so the answer is 3x^(−1/2). The option 6x^(−1/2) lowers the power but forgets to multiply 6 by 1/2.",
-      "clue": "Multiply 6 by the power, then subtract 1 from 1/2."
+      "q": "What is the derivative of \\(6\\sqrt{x}\\), written as \\(6x^{\\frac{1}{2}}\\)?",
+      "opts": ["\\(3x^{-\\frac{1}{2}}\\)", "\\(6x^{-\\frac{1}{2}}\\)", "\\(3x^{\\frac{1}{2}}\\)", "\\(12x^{\\frac{3}{2}}\\)"],
+      "why": "Bring down \\(\\frac{1}{2}\\) and multiply by 6 to get 3. Then subtract 1 from \\(\\frac{1}{2}\\) to get \\(-\\frac{1}{2}\\), so the answer is \\(3x^{-\\frac{1}{2}}\\). The option \\(6x^{-\\frac{1}{2}}\\) lowers the power but forgets to multiply 6 by \\(\\frac{1}{2}\\).",
+      "clue": "Multiply 6 by the power, then subtract 1 from \\(\\frac{1}{2}\\)."
     }
   },
   "mat-tangents-normals": {
@@ -936,28 +994,28 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Tangent",
-        "The gradient of the tangent at x = a is f'(a). Find f(a) for the point, then use y − y₁ = m(x − x₁) with m = f'(a)."
+        "The gradient of the tangent at \\(x = a\\) is \\(f'(a)\\). Find \\(f(a)\\) for the point, then use \\(y - y_{1} = m(x - x_{1})\\) with \\(m = f'(a)\\)."
       ],
       [
         "Normal",
-        "The normal is the line through the same point, perpendicular to the tangent. Its gradient is the negative reciprocal: −1/f'(a), when f'(a) is not 0."
+        "The normal is the line through the same point, perpendicular to the tangent. Its gradient is the negative reciprocal: \\(-\\frac{1}{f'(a)}\\), when \\(f'(a)\\) is not 0."
       ],
-      "Example: f(x) = x², at x = 3. The point is (3, 9) and f'(x) = 2x, so the tangent gradient is 6. Tangent: y − 9 = 6(x − 3), so y = 6x − 9.",
-      "The normal gradient is −1/6, so the normal is y − 9 = −(1/6)(x − 3), which gives y = −x/6 + 19/2."
+      "Example: \\(f(x) = x^{2}\\), at \\(x = 3\\). The point is \\((3, 9)\\) and \\(f'(x) = 2x\\), so the tangent gradient is 6. Tangent: \\(y - 9 = 6(x - 3)\\), so \\(y = 6x - 9\\).",
+      "The normal gradient is \\(-\\frac{1}{6}\\), so the normal is \\(y - 9 = -\\frac{1}{6}(x - 3)\\), which gives \\(y = -\\frac{x}{6} + \\frac{19}{2}\\)."
     ],
-    "remember": "Use f'(a) for the tangent gradient, then flip it and change the sign for the normal.",
+    "remember": "Use \\(f'(a)\\) for the tangent gradient, then flip it and change the sign for the normal.",
     "a": {
       "q": "The tangent to a curve at a point has gradient 4. What is the gradient of the normal at that point?",
-      "opts": ["−1/4", "1/4", "−4", "4"],
-      "why": "The normal is perpendicular to the tangent, so its gradient is the negative reciprocal of 4, which is −1/4. The option 1/4 flips the gradient but keeps the sign, so 4 × 1/4 = 1, not −1, and the lines are not perpendicular.",
+      "opts": ["\\(-\\frac{1}{4}\\)", "\\(\\frac{1}{4}\\)", "\\(-4\\)", "4"],
+      "why": "The normal is perpendicular to the tangent, so its gradient is the negative reciprocal of 4, which is \\(-\\frac{1}{4}\\). The option \\(\\frac{1}{4}\\) flips the gradient but keeps the sign, so \\(4 \\times \\frac{1}{4} = 1\\), not \\(-1\\), and the lines are not perpendicular.",
       "clue": "Flip the number, then change the sign."
     },
     "b": {
       "d": 3,
-      "q": "What is the equation of the tangent to f(x) = x² + 2x at x = 1?",
-      "opts": ["y = 4x − 1", "y = 4x + 3", "y = 2x + 1", "y = −x/4 + 13/4"],
-      "why": "f(1) = 3, so the point is (1, 3). f'(x) = 2x + 2, so the gradient is 4. Then y − 3 = 4(x − 1), giving y = 4x − 1. The option y = 4x + 3 uses the right gradient but wrongly takes the y-value as the intercept.",
-      "clue": "Find the point and f'(1) first, then use y − y₁ = m(x − x₁)."
+      "q": "What is the equation of the tangent to \\(f(x) = x^{2} + 2x\\) at \\(x = 1\\)?",
+      "opts": ["\\(y = 4x - 1\\)", "\\(y = 4x + 3\\)", "\\(y = 2x + 1\\)", "\\(y = -\\frac{x}{4} + \\frac{13}{4}\\)"],
+      "why": "\\(f(1) = 3\\), so the point is \\((1, 3)\\). \\(f'(x) = 2x + 2\\), so the gradient is 4. Then \\(y - 3 = 4(x - 1)\\), giving \\(y = 4x - 1\\). The option \\(y = 4x + 3\\) uses the right gradient but wrongly takes the \\(y\\)-value as the intercept.",
+      "clue": "Find the point and \\(f'(1)\\) first, then use \\(y - y_{1} = m(x - x_{1})\\)."
     }
   },
   "mat-where-function-not-differentiable": {
@@ -966,7 +1024,7 @@ MADE_BANKS.mat = {
       "A derivative at a point is the gradient of the tangent there. If no single tangent gradient exists, the function is not differentiable at that point.",
       [
         "Sharp corner",
-        "the left and right sides have different gradients. For f(x) = |x| at x = 0, the gradient is −1 on the left and 1 on the right, so there is no derivative."
+        "the left and right sides have different gradients. For \\(f(x) = |x|\\) at \\(x = 0\\), the gradient is \\(-1\\) on the left and 1 on the right, so there is no derivative."
       ],
       [
         "Jump",
@@ -974,203 +1032,218 @@ MADE_BANKS.mat = {
       ],
       [
         "Vertical tangent",
-        "the tangent is a vertical line, which has no gradient. For f(x) = ∛x at x = 0, the curve is continuous but the gradient grows without limit. So a function can be continuous at a point and still not differentiable there."
+        "the tangent is a vertical line, which has no gradient. For \\(f(x) = \\sqrt[3]{x}\\) at \\(x = 0\\), the curve is continuous but the gradient grows without limit. So a function can be continuous at a point and still not differentiable there."
       ]
     ],
     "remember": "No derivative where the graph has a corner, a jump or a vertical tangent.",
     "a": {
-      "q": "Which function is continuous at x = 0 but has no derivative there?",
-      "opts": ["f(x) = |x|", "f(x) = x²", "f(x) = 3x + 1", "f(x) = x³"],
-      "why": "The graph of |x| has no break at x = 0, but the gradient changes from −1 to 1 at the corner, so there is no derivative. The graph of x² is smooth at x = 0, with gradient 0, so it is differentiable.",
+      "q": "Which function is continuous at \\(x = 0\\) but has no derivative there?",
+      "opts": ["\\(f(x) = |x|\\)", "\\(f(x) = x^{2}\\)", "\\(f(x) = 3x + 1\\)", "\\(f(x) = x^{3}\\)"],
+      "why": "The graph of \\(|x|\\) has no break at \\(x = 0\\), but the gradient changes from \\(-1\\) to 1 at the corner, so there is no derivative. The graph of \\(x^{2}\\) is smooth at \\(x = 0\\), with gradient 0, so it is differentiable.",
       "clue": "Look for the function whose graph has a sharp point at the origin."
     },
     "b": {
       "d": 3,
-      "q": "A function has gradient 2 for x < 3 and gradient 2 for x > 3, but its graph jumps up by 4 units at x = 3. What is true at x = 3?",
+      "q": "A function has gradient 2 for \\(x < 3\\) and gradient 2 for \\(x > 3\\), but its graph jumps up by 4 units at \\(x = 3\\). What is true at \\(x = 3\\)?",
       "opts": [
         "It is not differentiable, because it is not continuous",
         "It is differentiable, because both gradients equal 2",
         "It is not differentiable, because of a sharp corner",
         "It is not differentiable, because the tangent is vertical"
       ],
-      "why": "A jump means the function is not continuous at x = 3, so it cannot be differentiable there. Equal gradients on each side are tempting, but the two pieces do not meet, so there is no single tangent at that point.",
-      "clue": "Check whether the graph is joined at x = 3 before comparing gradients."
+      "why": "A jump means the function is not continuous at \\(x = 3\\), so it cannot be differentiable there. Equal gradients on each side are tempting, but the two pieces do not meet, so there is no single tangent at that point.",
+      "clue": "Check whether the graph is joined at \\(x = 3\\) before comparing gradients."
     }
   },
   "mat-product-rule": {
     "title": "The product rule",
     "card": [
-      "Use the product rule when a function is two factors multiplied together, such as x²(4x − 1). Call the factors u and v.",
-      "The rule: if y = uv, then dy/dx = u'v + uv'. Differentiate one factor at a time and leave the other alone, then add.",
-      "Example: y = x³(2x + 5). Let u = x³ and v = 2x + 5, so u' = 3x² and v' = 2.",
-      "dy/dx = 3x²(2x + 5) + x³ × 2 = 6x³ + 15x² + 2x³ = 8x³ + 15x². Check by expanding first: y = 2x⁴ + 5x³, which gives 8x³ + 15x²."
+      "Use the product rule when a function is two factors multiplied together, such as \\(x^{2}(4x - 1)\\). Call the factors \\(u\\) and \\(v\\).",
+      "The rule: if \\(y = uv\\), then \\(\\frac{dy}{dx} = u'v + uv'\\). Differentiate one factor at a time and leave the other alone, then add.",
+      "Example: \\(y = x^{3}(2x + 5)\\). Let \\(u = x^{3}\\) and \\(v = 2x + 5\\), so \\(u' = 3x^{2}\\) and \\(v' = 2\\).",
+      "\\(\\frac{dy}{dx} = 3x^{2}(2x + 5) + x^{3} \\times 2 = 6x^{3} + 15x^{2} + 2x^{3} = 8x^{3} + 15x^{2}\\). Check by expanding first: \\(y = 2x^{4} + 5x^{3}\\), which gives \\(8x^{3} + 15x^{2}\\)."
     ],
     "remember": "Product rule: derivative of the first times the second, plus the first times the derivative of the second.",
     "a": {
-      "q": "For y = x²(3x − 1), let u = x² and v = 3x − 1. Which expression is dy/dx?",
-      "opts": ["2x(3x − 1) + x² × 3", "2x × 3", "2x(3x − 1) − x² × 3", "2x × 3 + x² × 3"],
-      "why": "The product rule adds u'v and uv', so dy/dx = 2x(3x − 1) + 3x². Multiplying the two derivatives, 2x × 3, is the tempting mistake: the rule never multiplies u' by v'.",
+      "q": "For \\(y = x^{2}(3x - 1)\\), let \\(u = x^{2}\\) and \\(v = 3x - 1\\). Which expression is \\(\\frac{dy}{dx}\\)?",
+      "opts": [
+        "\\(2x(3x - 1) + x^{2} \\times 3\\)",
+        "\\(2x \\times 3\\)",
+        "\\(2x(3x - 1) - x^{2} \\times 3\\)",
+        "\\(2x \\times 3 + x^{2} \\times 3\\)"
+      ],
+      "why": "The product rule adds \\(u'v\\) and \\(uv'\\), so \\(\\frac{dy}{dx} = 2x(3x - 1) + 3x^{2}\\). Multiplying the two derivatives, \\(2x \\times 3\\), is the tempting mistake: the rule never multiplies \\(u'\\) by \\(v'\\).",
       "clue": "Differentiate one factor at a time, keep the other, then add."
     },
     "b": {
       "d": 2,
-      "q": "What is the derivative of y = x⁴(x + 2) at x = 1?",
+      "q": "What is the derivative of \\(y = x^{4}(x + 2)\\) at \\(x = 1\\)?",
       "opts": ["13", "12", "11", "4"],
-      "why": "With u = x⁴ and v = x + 2, dy/dx = 4x³(x + 2) + x⁴ × 1, which is 4 × 3 + 1 = 13 at x = 1. Expanding first gives y = x⁵ + 2x⁴, so dy/dx = 5x⁴ + 8x³, also 13. The answer 12 comes from leaving out the uv' term.",
-      "clue": "Find dy/dx with the product rule, then substitute x = 1."
+      "why": "With \\(u = x^{4}\\) and \\(v = x + 2\\), \\(\\frac{dy}{dx} = 4x^{3}(x + 2) + x^{4} \\times 1\\), which is \\(4 \\times 3 + 1 = 13\\) at \\(x = 1\\). Expanding first gives \\(y = x^{5} + 2x^{4}\\), so \\(\\frac{dy}{dx} = 5x^{4} + 8x^{3}\\), also 13. The answer 12 comes from leaving out the \\(uv'\\) term.",
+      "clue": "Find \\(\\frac{dy}{dx}\\) with the product rule, then substitute \\(x = 1\\)."
     }
   },
   "mat-quotient-rule": {
     "title": "The quotient rule",
     "card": [
-      "Use the quotient rule to differentiate a fraction y = u/v, where u and v are both functions of x and v is not zero.",
-      "The rule is dy/dx = (u'v − uv') ÷ v². Here u' and v' are the derivatives of u and v.",
-      "The order on top matters. Start with u'v (the derivative of the top times the bottom), then subtract uv'. Swapping them flips the sign of the answer.",
-      "Example: y = x²/(x + 1). Take u = x² and v = x + 1, so u' = 2x and v' = 1. Then dy/dx = (2x(x + 1) − x² × 1) ÷ (x + 1)² = (x² + 2x) ÷ (x + 1)²."
+      "Use the quotient rule to differentiate a fraction \\(y = \\frac{u}{v}\\), where \\(u\\) and \\(v\\) are both functions of \\(x\\) and \\(v\\) is not zero.",
+      "The rule is \\(\\frac{dy}{dx} = \\frac{u'v - uv'}{v^{2}}\\). Here \\(u'\\) and \\(v'\\) are the derivatives of \\(u\\) and \\(v\\).",
+      "The order on top matters. Start with \\(u'v\\) (the derivative of the top times the bottom), then subtract \\(uv'\\). Swapping them flips the sign of the answer.",
+      "Example: \\(y = \\frac{x^{2}}{x + 1}\\). Take \\(u = x^{2}\\) and \\(v = x + 1\\), so \\(u' = 2x\\) and \\(v' = 1\\). Then \\(\\frac{dy}{dx} = \\frac{2x(x + 1) - x^{2} \\times 1}{(x + 1)^{2}} = \\frac{x^{2} + 2x}{(x + 1)^{2}}\\)."
     ],
-    "remember": "Top: u'v − uv'. Bottom: v². The derivative of the top comes first.",
+    "remember": "Top: \\(u'v - uv'\\). Bottom: \\(v^{2}\\). The derivative of the top comes first.",
     "a": {
-      "q": "Which expression is the derivative of u/v by the quotient rule?",
-      "opts": ["(u'v − uv') ÷ v²", "(uv' − u'v) ÷ v²", "(u'v + uv') ÷ v²", "(u'v − uv') ÷ v"],
-      "why": "The top is u'v − uv', with the derivative of the top function first, and the bottom is v squared. The expression (uv' − u'v) ÷ v² has the terms on top in the wrong order, so it gives the answer with the wrong sign.",
-      "clue": "Start the top line with u', the derivative of the top function."
+      "q": "Which expression is the derivative of \\(\\frac{u}{v}\\) by the quotient rule?",
+      "opts": [
+        "\\(\\frac{u'v - uv'}{v^{2}}\\)",
+        "\\(\\frac{uv' - u'v}{v^{2}}\\)",
+        "\\(\\frac{u'v + uv'}{v^{2}}\\)",
+        "\\(\\frac{u'v - uv'}{v}\\)"
+      ],
+      "why": "The top is \\(u'v - uv'\\), with the derivative of the top function first, and the bottom is \\(v\\) squared. The expression \\(\\frac{uv' - u'v}{v^{2}}\\) has the terms on top in the wrong order, so it gives the answer with the wrong sign.",
+      "clue": "Start the top line with \\(u'\\), the derivative of the top function."
     },
     "b": {
       "d": 2,
-      "q": "Using the quotient rule, what is the derivative of y = x/(x + 2)?",
-      "opts": ["2 ÷ (x + 2)²", "−2 ÷ (x + 2)²", "(2x + 2) ÷ (x + 2)²", "1 ÷ (x + 2)²"],
-      "why": "Let u = x and v = x + 2, so u' = 1 and v' = 1. The top is 1 × (x + 2) − x × 1 = 2, so dy/dx = 2 ÷ (x + 2)². Putting the terms in the wrong order would give −2, which is the most tempting mistake.",
-      "clue": "Find u' and v' first, then work out u'v − uv'."
+      "q": "Using the quotient rule, what is the derivative of \\(y = \\frac{x}{x + 2}\\)?",
+      "opts": [
+        "\\(\\frac{2}{(x + 2)^{2}}\\)",
+        "\\(-\\frac{2}{(x + 2)^{2}}\\)",
+        "\\(\\frac{2x + 2}{(x + 2)^{2}}\\)",
+        "\\(\\frac{1}{(x + 2)^{2}}\\)"
+      ],
+      "why": "Let \\(u = x\\) and \\(v = x + 2\\), so \\(u' = 1\\) and \\(v' = 1\\). The top is \\(1 \\times (x + 2) - x \\times 1 = 2\\), so \\(\\frac{dy}{dx} = \\frac{2}{(x + 2)^{2}}\\). Putting the terms in the wrong order would give \\(-2\\), which is the most tempting mistake.",
+      "clue": "Find \\(u'\\) and \\(v'\\) first, then work out \\(u'v - uv'\\)."
     }
   },
   "mat-chain-rule": {
     "title": "The chain rule",
     "card": [
-      "A composite function has one function inside another, such as (3x + 1)⁵. The inner function is 3x + 1 and the outer function is the fifth power.",
-      "The chain rule says: if y = f(g(x)), then dy/dx = f'(g(x)) × g'(x). Differentiate the outer function and leave the inside alone, then multiply by the derivative of the inside.",
-      "Example: y = (3x + 1)⁵. The outer derivative is 5(3x + 1)⁴. The inner derivative is 3. So dy/dx = 5(3x + 1)⁴ × 3 = 15(3x + 1)⁴.",
-      "A common mistake is to leave out the derivative of the inside. To find the gradient at a point, find dy/dx first, then substitute the x value."
+      "A composite function has one function inside another, such as \\((3x + 1)^{5}\\). The inner function is \\(3x + 1\\) and the outer function is the fifth power.",
+      "The chain rule says: if \\(y = f(g(x))\\), then \\(\\frac{dy}{dx} = f'(g(x)) \\times g'(x)\\). Differentiate the outer function and leave the inside alone, then multiply by the derivative of the inside.",
+      "Example: \\(y = (3x + 1)^{5}\\). The outer derivative is \\(5(3x + 1)^{4}\\). The inner derivative is 3. So \\(\\frac{dy}{dx} = 5(3x + 1)^{4} \\times 3 = 15(3x + 1)^{4}\\).",
+      "A common mistake is to leave out the derivative of the inside. To find the gradient at a point, find \\(\\frac{dy}{dx}\\) first, then substitute the value of \\(x\\)."
     ],
     "remember": "Differentiate the outside, keep the inside, then multiply by the derivative of the inside.",
     "a": {
-      "q": "What is the derivative of y = (2x + 7)⁴?",
-      "opts": ["8(2x + 7)³", "4(2x + 7)³", "4(2x + 7)³ + 2", "2(2x + 7)⁴"],
-      "why": "The outer derivative is 4(2x + 7)³ and the inner derivative is 2, so dy/dx = 4(2x + 7)³ × 2 = 8(2x + 7)³. The option 4(2x + 7)³ is tempting, but it leaves out the multiplication by the derivative of the inside.",
-      "clue": "Multiply by the derivative of 2x + 7."
+      "q": "What is the derivative of \\(y = (2x + 7)^{4}\\)?",
+      "opts": ["\\(8(2x + 7)^{3}\\)", "\\(4(2x + 7)^{3}\\)", "\\(4(2x + 7)^{3} + 2\\)", "\\(2(2x + 7)^{4}\\)"],
+      "why": "The outer derivative is \\(4(2x + 7)^{3}\\) and the inner derivative is 2, so \\(\\frac{dy}{dx} = 4(2x + 7)^{3} \\times 2 = 8(2x + 7)^{3}\\). The option \\(4(2x + 7)^{3}\\) is tempting, but it leaves out the multiplication by the derivative of the inside.",
+      "clue": "Multiply by the derivative of \\(2x + 7\\)."
     },
     "b": {
       "d": 3,
-      "q": "Find the gradient of y = (x² − 3)³ at x = 2.",
+      "q": "Find the gradient of \\(y = (x^{2} - 3)^{3}\\) at \\(x = 2\\).",
       "opts": ["12", "3", "6", "1"],
-      "why": "dy/dx = 3(x² − 3)² × 2x = 6x(x² − 3)². At x = 2 this is 6 × 2 × (4 − 3)² = 12. The answer 6 uses 2 as the inner derivative instead of 2x, 3 leaves out the inner derivative, and 1 is the value of y, not the gradient.",
-      "clue": "Find the derivative of x² − 3 before you substitute."
+      "why": "\\(\\frac{dy}{dx} = 3(x^{2} - 3)^{2} \\times 2x = 6x(x^{2} - 3)^{2}\\). At \\(x = 2\\) this is \\(6 \\times 2 \\times (4 - 3)^{2} = 12\\). The answer 6 uses 2 as the inner derivative instead of \\(2x\\), 3 leaves out the inner derivative, and 1 is the value of \\(y\\), not the gradient.",
+      "clue": "Find the derivative of \\(x^{2} - 3\\) before you substitute."
     }
   },
   "mat-derivatives-as-rates-context": {
     "title": "Derivatives as rates in context",
     "card": [
-      "The derivative dy/dx is the rate of change of y with respect to x. Its units are the units of y per unit of x.",
-      "If x(t) is displacement in metres at time t seconds, then x'(t) is velocity in metres per second. A positive value means moving in the positive direction, and a negative value means moving the other way.",
-      "To find a rate at a given time, differentiate first, then substitute the value of t. Example: V = 4t² + 10 litres at t minutes. V' = 8t, so at t = 3 the rate is 8 × 3 = 24 litres per minute.",
-      "The same idea works in any setting: if C(n) is cost in dollars for n items, then C'(n) is the rate of change of cost in dollars per item."
+      "The derivative \\(\\frac{dy}{dx}\\) is the rate of change of \\(y\\) with respect to \\(x\\). Its units are the units of \\(y\\) per unit of \\(x\\).",
+      "If \\(x(t)\\) is displacement in metres at time \\(t\\) seconds, then \\(x'(t)\\) is velocity in metres per second. A positive value means moving in the positive direction, and a negative value means moving the other way.",
+      "To find a rate at a given time, differentiate first, then substitute the value of \\(t\\). Example: \\(V = 4t^{2} + 10\\) litres at \\(t\\) minutes. \\(V' = 8t\\), so at \\(t = 3\\) the rate is \\(8 \\times 3 = 24\\) litres per minute.",
+      "The same idea works in any setting: if \\(C(n)\\) is cost in dollars for \\(n\\) items, then \\(C'(n)\\) is the rate of change of cost in dollars per item."
     ],
-    "remember": "Differentiate, then substitute. The units are y units per x unit.",
+    "remember": "Differentiate, then substitute. The units are \\(y\\) units per \\(x\\) unit.",
     "a": {
-      "q": "The volume of water in a tank is V = 5t² + 20 litres after t minutes. What is the rate of change of volume at t = 2?",
+      "q": "The volume of water in a tank is \\(V = 5t^{2} + 20\\) litres after \\(t\\) minutes. What is the rate of change of volume at \\(t = 2\\)?",
       "opts": ["20 litres per minute", "40 litres per minute", "40 litres", "20 litres"],
-      "why": "V' = 10t, so at t = 2 the rate is 10 × 2 = 20 litres per minute. Substituting t = 2 into V gives 40 litres, which is the volume itself and not the rate.",
+      "why": "\\(V' = 10t\\), so at \\(t = 2\\) the rate is \\(10 \\times 2 = 20\\) litres per minute. Substituting \\(t = 2\\) into \\(V\\) gives 40 litres, which is the volume itself and not the rate.",
       "clue": "Differentiate before you substitute."
     },
     "b": {
       "d": 3,
-      "q": "A cyclist's displacement from home is x = 2t³ − 12t metres after t seconds. What is her velocity at t = 2?",
-      "opts": ["12 metres per second", "−8 metres per second", "4 metres per second", "12 metres"],
-      "why": "x' = 6t² − 12, so at t = 2 the velocity is 6 × 4 − 12 = 12 metres per second. Substituting into x gives 16 − 24 = −8, which is her displacement in metres and not her velocity.",
+      "q": "A cyclist's displacement from home is \\(x = 2t^{3} - 12t\\) metres after \\(t\\) seconds. What is her velocity at \\(t = 2\\)?",
+      "opts": ["12 metres per second", "\\(-8\\) metres per second", "4 metres per second", "12 metres"],
+      "why": "\\(x' = 6t^{2} - 12\\), so at \\(t = 2\\) the velocity is \\(6 \\times 4 - 12 = 12\\) metres per second. Substituting into \\(x\\) gives \\(16 - 24 = -8\\), which is her displacement in metres and not her velocity.",
       "clue": "Velocity is the derivative of displacement."
     }
   },
   "mat-exponential-functions": {
     "title": "Exponential functions",
     "card": [
-      "An exponential function has the form y = aˣ, where the base a is a positive number and a ≠ 1. The variable x is the power.",
+      "An exponential function has the form \\(y = a^{x}\\), where the base \\(a\\) is a positive number and \\(a \\ne 1\\). The variable \\(x\\) is the power.",
       [
-        "a > 1",
-        "the graph rises from left to right. It is growth: y gets bigger as x increases, and y gets closer to 0 as x becomes very negative."
+        "\\(a > 1\\)",
+        "the graph rises from left to right. It is growth: \\(y\\) gets bigger as \\(x\\) increases, and \\(y\\) gets closer to 0 as \\(x\\) becomes very negative."
       ],
       [
-        "0 < a < 1",
-        "the graph falls from left to right. It is decay: y gets smaller as x increases, and y gets very large as x becomes very negative."
+        "\\(0 < a < 1\\)",
+        "the graph falls from left to right. It is decay: \\(y\\) gets smaller as \\(x\\) increases, and \\(y\\) gets very large as \\(x\\) becomes very negative."
       ],
-      "Both graphs pass through (0, 1), because a⁰ = 1. Both stay above the x-axis and get closer to the line y = 0 on one side without touching it. This line is the horizontal asymptote. Example: y = 2ˣ has points (0, 1), (1, 2) and (3, 8)."
+      "Both graphs pass through \\((0, 1)\\), because \\(a^{0} = 1\\). Both stay above the x-axis and get closer to the line \\(y = 0\\) on one side without touching it. This line is the horizontal asymptote. Example: \\(y = 2^{x}\\) has points \\((0, 1)\\), \\((1, 2)\\) and \\((3, 8)\\)."
     ],
-    "remember": "Every y = aˣ passes through (0, 1), stays above the x-axis and has y = 0 as its asymptote.",
+    "remember": "Every \\(y = a^{x}\\) passes through \\((0, 1)\\), stays above the x-axis and has \\(y = 0\\) as its asymptote.",
     "a": {
-      "q": "Which statement is true for the graph of y = (1/2)ˣ?",
+      "q": "Which statement is true for the graph of \\(y = \\left(\\frac{1}{2}\\right)^{x}\\)?",
       "opts": [
-        "It falls from left to right and passes through (0, 1)",
-        "It rises from left to right and passes through (0, 1)",
-        "It falls from left to right and passes through (0, 0)",
-        "It rises from left to right and passes through (1, 0)"
+        "It falls from left to right and passes through \\((0, 1)\\)",
+        "It rises from left to right and passes through \\((0, 1)\\)",
+        "It falls from left to right and passes through \\((0, 0)\\)",
+        "It rises from left to right and passes through \\((1, 0)\\)"
       ],
-      "why": "The base 1/2 is between 0 and 1, so the graph falls. Any base to the power 0 is 1, so it passes through (0, 1). Through (0, 0) is wrong because aˣ is never 0.",
-      "clue": "Is the base more than 1 or between 0 and 1? What is a⁰?"
+      "why": "The base \\(\\frac{1}{2}\\) is between 0 and 1, so the graph falls. Any base to the power 0 is 1, so it passes through \\((0, 1)\\). Through \\((0, 0)\\) is wrong because \\(a^{x}\\) is never 0.",
+      "clue": "Is the base more than 1 or between 0 and 1? What is \\(a^{0}\\)?"
     },
     "b": {
       "d": 3,
-      "q": "Mia graphs y = 3ˣ and y = (1/3)ˣ on the same axes. Which statement is true for both graphs?",
+      "q": "Mia graphs \\(y = 3^{x}\\) and \\(y = \\left(\\frac{1}{3}\\right)^{x}\\) on the same axes. Which statement is true for both graphs?",
       "opts": [
-        "Both have the horizontal asymptote y = 0",
+        "Both have the horizontal asymptote \\(y = 0\\)",
         "Both rise steadily from left to right",
-        "Both cross the x-axis at the point x = 1",
+        "Both cross the x-axis at the point \\(x = 1\\)",
         "Both have the y-intercept 3 on the y-axis"
       ],
-      "why": "Both have positive bases not equal to 1, so both have y-intercept 1 and get closer to y = 0 without touching it. The graph of y = 3ˣ rises but y = (1/3)ˣ falls, so rising is not true for both.",
+      "why": "Both have positive bases not equal to 1, so both have y-intercept 1 and get closer to \\(y = 0\\) without touching it. The graph of \\(y = 3^{x}\\) rises but \\(y = \\left(\\frac{1}{3}\\right)^{x}\\) falls, so rising is not true for both.",
       "clue": "Think about what both graphs share, whatever the base."
     }
   },
   "mat-number-e": {
     "title": "The number e",
     "card": [
-      "e is a special number, about 2.718. It is irrational, so its decimal never ends or repeats.",
-      "y = eˣ is an exponential function with base e. Like other exponentials with base above 1, it is always positive and rises as x increases.",
-      "What makes eˣ special is its gradient. At every point on the curve, the gradient equals the y-value at that point.",
-      "So the derivative of eˣ is eˣ. Example: at x = 0, y = e⁰ = 1, so the gradient there is 1. At x = 2, the gradient is e², about 7.39."
+      "\\(e\\) is a special number, about 2.718. It is irrational, so its decimal never ends or repeats.",
+      "\\(y = e^{x}\\) is an exponential function with base \\(e\\). Like other exponentials with base above 1, it is always positive and rises as \\(x\\) increases.",
+      "What makes \\(e^{x}\\) special is its gradient. At every point on the curve, the gradient equals the y-value at that point.",
+      "So the derivative of \\(e^{x}\\) is \\(e^{x}\\). Example: at \\(x = 0\\), \\(y = e^{0} = 1\\), so the gradient there is 1. At \\(x = 2\\), the gradient is \\(e^{2}\\), about 7.39."
     ],
-    "remember": "The gradient of y = eˣ equals its height, so the derivative of eˣ is eˣ.",
+    "remember": "The gradient of \\(y = e^{x}\\) equals its height, so the derivative of \\(e^{x}\\) is \\(e^{x}\\).",
     "a": {
-      "q": "What is the derivative of y = eˣ?",
-      "opts": ["eˣ", "x eˣ⁻¹", "eˣ⁺¹", "e"],
-      "why": "The gradient of y = eˣ equals its y-value at every point, so the derivative is eˣ again. The rule x eˣ⁻¹ copies the power rule for xⁿ, but eˣ has the variable in the power, so that rule does not apply.",
+      "q": "What is the derivative of \\(y = e^{x}\\)?",
+      "opts": ["\\(e^{x}\\)", "\\(xe^{x - 1}\\)", "\\(e^{x + 1}\\)", "\\(e\\)"],
+      "why": "The gradient of \\(y = e^{x}\\) equals its y-value at every point, so the derivative is \\(e^{x}\\) again. The rule \\(xe^{x - 1}\\) copies the power rule for \\(x^{n}\\), but \\(e^{x}\\) has the variable in the power, so that rule does not apply.",
       "clue": "The gradient matches the y-value at every point."
     },
     "b": {
       "d": 2,
-      "q": "Mia studies the curve y = eˣ. At the point where x = 3, what is the exact gradient of the curve?",
-      "opts": ["e³", "3e²", "3", "e"],
-      "why": "The gradient equals the y-value at each point. At x = 3, y = e³, so the gradient is e³. The answer 3e² comes from wrongly using the power rule, and 3 is just the x-value.",
-      "clue": "Find the y-value at x = 3 first."
+      "q": "Mia studies the curve \\(y = e^{x}\\). At the point where \\(x = 3\\), what is the exact gradient of the curve?",
+      "opts": ["\\(e^{3}\\)", "\\(3e^{2}\\)", "3", "\\(e\\)"],
+      "why": "The gradient equals the y-value at each point. At \\(x = 3\\), \\(y = e^{3}\\), so the gradient is \\(e^{3}\\). The answer \\(3e^{2}\\) comes from wrongly using the power rule, and 3 is just the x-value.",
+      "clue": "Find the y-value at \\(x = 3\\) first."
     }
   },
   "mat-logarithm": {
     "title": "What a logarithm is",
     "card": [
-      "log_a(x) is the power that a must be raised to, to give x. The number a is called the base.",
-      "Example: 2³ = 8, so log₂ 8 = 3. Read it as: 2 to what power gives 8? The answer is 3.",
-      "To work one out, ask the question in words. For log₃ 81, ask: 3 to what power gives 81? Since 3⁴ = 81, log₃ 81 = 4.",
-      "Logarithms undo exponentials. The statements a^y = x and log_a(x) = y say the same thing, so you can swap between the two forms."
+      "\\(\\log_{a}(x)\\) is the power that \\(a\\) must be raised to, to give \\(x\\). The number \\(a\\) is called the base.",
+      "Example: \\(2^{3} = 8\\), so \\(\\log_{2} 8 = 3\\). Read it as: 2 to what power gives 8? The answer is 3.",
+      "To work one out, ask the question in words. For \\(\\log_{3} 81\\), ask: 3 to what power gives 81? Since \\(3^{4} = 81\\), \\(\\log_{3} 81 = 4\\).",
+      "Logarithms undo exponentials. The statements \\(a^{y} = x\\) and \\(\\log_{a}(x) = y\\) say the same thing, so you can swap between the two forms."
     ],
-    "remember": "A logarithm is a power: log_a(x) asks what power of a gives x.",
+    "remember": "A logarithm is a power: \\(\\log_{a}(x)\\) asks what power of \\(a\\) gives \\(x\\).",
     "a": {
-      "q": "What is the value of log₅ 25?",
-      "opts": ["2", "5", "20", "25/5"],
-      "why": "5² = 25, so 5 must be raised to the power 2. The answer 5 is tempting because it is the base, but the logarithm is the power, not the base.",
+      "q": "What is the value of \\(\\log_{5} 25\\)?",
+      "opts": ["2", "5", "20", "\\(\\frac{25}{5}\\)"],
+      "why": "\\(5^{2} = 25\\), so 5 must be raised to the power 2. The answer 5 is tempting because it is the base, but the logarithm is the power, not the base.",
       "clue": "5 to what power gives 25?"
     },
     "b": {
       "d": 3,
-      "q": "Which exponential statement is the same as log₄ x = 3?",
-      "opts": ["4³ = x", "3⁴ = x", "x³ = 4", "4x = 3"],
-      "why": "log₄ x = 3 means 4 raised to the power 3 gives x, so 4³ = x. The option 3⁴ = x swaps the base and the power, which is a common mistake.",
+      "q": "Which exponential statement is the same as \\(\\log_{4} x = 3\\)?",
+      "opts": ["\\(4^{3} = x\\)", "\\(3^{4} = x\\)", "\\(x^{3} = 4\\)", "\\(4x = 3\\)"],
+      "why": "\\(\\log_{4} x = 3\\) means 4 raised to the power 3 gives \\(x\\), so \\(4^{3} = x\\). The option \\(3^{4} = x\\) swaps the base and the power, which is a common mistake.",
       "clue": "The base of the logarithm stays the base of the power."
     }
   },
@@ -1179,170 +1252,190 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Product law",
-        "log(xy) = log x + log y. Multiplying inside the log becomes adding the logs. All logs here share the same base."
+        "\\(\\log(xy) = \\log x + \\log y\\). Multiplying inside the log becomes adding the logs. All logs here share the same base."
       ],
-      ["Quotient law", "log(x/y) = log x − log y. Dividing inside the log becomes subtracting the logs."],
+      [
+        "Quotient law",
+        "\\(\\log\\left(\\frac{x}{y}\\right) = \\log x - \\log y\\). Dividing inside the log becomes subtracting the logs."
+      ],
       [
         "Power law",
-        "log(xⁿ) = n log x. The power comes down to the front as a multiplier. For example, log₂ 32 = log₂ (2⁵) = 5 log₂ 2 = 5."
+        "\\(\\log(x^{n}) = n \\log x\\). The power comes down to the front as a multiplier. For example, \\(\\log_{2} 32 = \\log_{2}(2^{5}) = 5 \\log_{2} 2 = 5\\)."
       ],
-      ["Special values", "log_a(1) = 0, because a⁰ = 1. log_a(a) = 1, because a¹ = a."]
+      [
+        "Special values",
+        "\\(\\log_{a}(1) = 0\\), because \\(a^{0} = 1\\). \\(\\log_{a}(a) = 1\\), because \\(a^{1} = a\\)."
+      ]
     ],
     "remember": "Logs turn multiplying into adding, dividing into subtracting, and powers into multipliers.",
     "a": {
-      "q": "What is log₃ 6 + log₃ 1.5 equal to?",
-      "opts": ["2", "7.5", "log₃ 4", "log₃ 7.5"],
-      "why": "Adding logs with the same base means multiplying inside: log₃ (6 × 1.5) = log₃ 9. Since 3² = 9, this equals 2. The option log₃ 7.5 comes from adding the numbers inside, which the product law does not do.",
+      "q": "What is \\(\\log_{3} 6 + \\log_{3} 1.5\\) equal to?",
+      "opts": ["2", "7.5", "\\(\\log_{3} 4\\)", "\\(\\log_{3} 7.5\\)"],
+      "why": "Adding logs with the same base means multiplying inside: \\(\\log_{3}(6 \\times 1.5) = \\log_{3} 9\\). Since \\(3^{2} = 9\\), this equals 2. The option \\(\\log_{3} 7.5\\) comes from adding the numbers inside, which the product law does not do.",
       "clue": "Adding logs means multiplying what is inside them."
     },
     "b": {
       "d": 3,
-      "q": "What is the value of log₅ 50 − log₅ 2 + log₅ 5?",
-      "opts": ["3", "2", "4", "log₅ 53"],
-      "why": "log₅ 50 − log₅ 2 = log₅ 25 = 2, using the quotient law. Then log₅ 5 = 1, so the total is 3. The answer 2 comes from forgetting that log₅ 5 = 1.",
+      "q": "What is the value of \\(\\log_{5} 50 - \\log_{5} 2 + \\log_{5} 5\\)?",
+      "opts": ["3", "2", "4", "\\(\\log_{5} 53\\)"],
+      "why": "\\(\\log_{5} 50 - \\log_{5} 2 = \\log_{5} 25 = 2\\), using the quotient law. Then \\(\\log_{5} 5 = 1\\), so the total is 3. The answer 2 comes from forgetting that \\(\\log_{5} 5 = 1\\).",
       "clue": "Combine the first two terms into one log, then find the special value."
     }
   },
   "mat-change-base": {
     "title": "Change of base",
     "card": [
-      "Many calculators mainly offer two log buttons: log for base 10 and ln for base e. To find a log in another base, you can change it to one of these.",
-      "The rule: log_a(x) = log_b(x) ÷ log_b(a). The new base b can be any valid base, such as 10 or e. The base a goes in the bottom.",
-      "Example: find log₂ 20. log₂ 20 = log 20 ÷ log 2 = 1.3010 ÷ 0.3010 = 4.32 (to 2 decimal places).",
-      "Check: 2⁴ = 16 and 2⁵ = 32, and 20 lies between them, so an answer between 4 and 5 makes sense."
+      "Many calculators mainly offer two log buttons: \\(\\log\\) for base 10 and \\(\\ln\\) for base \\(e\\). To find a log in another base, you can change it to one of these.",
+      "The rule: \\(\\log_{a}(x) = \\log_{b}(x) \\div \\log_{b}(a)\\). The new base \\(b\\) can be any valid base, such as 10 or \\(e\\). The base \\(a\\) goes in the bottom.",
+      "Example: find \\(\\log_{2} 20\\). \\(\\log_{2} 20 = \\log 20 \\div \\log 2 = 1.3010 \\div 0.3010 = 4.32\\) (to 2 decimal places).",
+      "Check: \\(2^{4} = 16\\) and \\(2^{5} = 32\\), and 20 lies between them, so an answer between 4 and 5 makes sense."
     ],
     "remember": "Log of the number on top, log of the old base on the bottom, both in the same new base.",
     "a": {
-      "q": "Which expression gives log₅ 40, using base 10 logs?",
-      "opts": ["log 40 ÷ log 5", "log 5 ÷ log 40", "log 40 − log 5", "log 40 × log 5"],
-      "why": "The number goes on top and the old base goes on the bottom: log₅ 40 = log 40 ÷ log 5. Flipping the fraction is the tempting mistake, and it gives the reciprocal of the right value.",
+      "q": "Which expression gives \\(\\log_{5} 40\\), using base 10 logs?",
+      "opts": [
+        "\\(\\log 40 \\div \\log 5\\)",
+        "\\(\\log 5 \\div \\log 40\\)",
+        "\\(\\log 40 - \\log 5\\)",
+        "\\(\\log 40 \\times \\log 5\\)"
+      ],
+      "why": "The number goes on top and the old base goes on the bottom: \\(\\log_{5} 40 = \\log 40 \\div \\log 5\\). Flipping the fraction is the tempting mistake, and it gives the reciprocal of the right value.",
       "clue": "The base of the original log goes in the bottom."
     },
     "b": {
       "d": 2,
-      "q": "Mia uses a calculator to find log₃ 50. What is the value, to 2 decimal places?",
+      "q": "Mia uses a calculator to find \\(\\log_{3} 50\\). What is the value, to 2 decimal places?",
       "opts": ["3.56", "0.28", "1.70", "16.67"],
-      "why": "log₃ 50 = log 50 ÷ log 3 = 1.6990 ÷ 0.4771 = 3.56. The value 0.28 comes from dividing the wrong way round. Check: 3³ = 27 and 3⁴ = 81, and 50 lies between them.",
+      "why": "\\(\\log_{3} 50 = \\log 50 \\div \\log 3 = 1.6990 \\div 0.4771 = 3.56\\). The value 0.28 comes from dividing the wrong way round. Check: \\(3^{3} = 27\\) and \\(3^{4} = 81\\), and 50 lies between them.",
       "clue": "Which log goes on top, and which goes in the bottom?"
     }
   },
   "mat-solving-exponential-equations": {
     "title": "Solving exponential equations",
     "card": [
-      "To solve an equation with x in the power, take logarithms of both sides. This brings the power down: 3ˣ = 20 becomes x log 3 = log 20.",
-      "Then divide: x = log 20 ÷ log 3 ≈ 2.73. Use the same base on both sides. A calculator's log or ln button both work.",
-      "When the base is e, use the natural log ln, because ln undoes eˣ. So eˣ = 5 gives x = ln 5 ≈ 1.61.",
-      "Get the power on its own first. For 2 × 3ˣ = 40, divide both sides by 2 to get 3ˣ = 20, then take logarithms."
+      "To solve an equation with \\(x\\) in the power, take logarithms of both sides. This brings the power down: \\(3^{x} = 20\\) becomes \\(x \\log 3 = \\log 20\\).",
+      "Then divide: \\(x = \\log 20 \\div \\log 3 \\approx 2.73\\). Use the same base on both sides. A calculator's \\(\\log\\) or \\(\\ln\\) button both work.",
+      "When the base is \\(e\\), use the natural log, \\(\\ln\\), because \\(\\ln\\) undoes \\(e^{x}\\). So \\(e^{x} = 5\\) gives \\(x = \\ln 5 \\approx 1.61\\).",
+      "Get the power on its own first. For \\(2 \\times 3^{x} = 40\\), divide both sides by 2 to get \\(3^{x} = 20\\), then take logarithms."
     ],
-    "remember": "Isolate the power, take logs of both sides, then divide. Use ln for base e.",
+    "remember": "Isolate the power, take logs of both sides, then divide. Use \\(\\ln\\) for base \\(e\\).",
     "a": {
-      "q": "Solve 5ˣ = 40. Give x to 2 decimal places.",
+      "q": "Solve \\(5^{x} = 40\\). Give \\(x\\) to 2 decimal places.",
       "opts": ["2.29", "8.00", "0.44", "3.69"],
-      "why": "Taking logs gives x log 5 = log 40, so x = log 40 ÷ log 5 ≈ 2.29. Dividing 40 by 5 to get 8 is tempting, but that treats 5ˣ as 5 × x, and it is not.",
+      "why": "Taking logs gives \\(x \\log 5 = \\log 40\\), so \\(x = \\log 40 \\div \\log 5 \\approx 2.29\\). Dividing 40 by 5 to get 8 is tempting, but that treats \\(5^{x}\\) as \\(5 \\times x\\), and it is not.",
       "clue": "Bring the power down with logs, then divide the two log values."
     },
     "b": {
       "d": 2,
-      "q": "Solve 2eˣ = 14. Give x to 2 decimal places.",
+      "q": "Solve \\(2e^{x} = 14\\). Give \\(x\\) to 2 decimal places.",
       "opts": ["1.95", "2.64", "1.32", "2.48"],
-      "why": "Divide both sides by 2 to get eˣ = 7, so x = ln 7 ≈ 1.95. Taking ln 14 straight away gives 2.64, which skips the step of getting eˣ alone, so it is wrong.",
-      "clue": "Get eˣ on its own before you use ln."
+      "why": "Divide both sides by 2 to get \\(e^{x} = 7\\), so \\(x = \\ln 7 \\approx 1.95\\). Taking \\(\\ln 14\\) straight away gives 2.64, which skips the step of getting \\(e^{x}\\) alone, so it is wrong.",
+      "clue": "Get \\(e^{x}\\) on its own before you use \\(\\ln\\)."
     }
   },
   "mat-graphs-logarithmic-functions": {
     "title": "Graphs of logarithmic functions",
     "card": [
-      "The graph of y = log_a(x) is the reflection of y = aˣ in the line y = x. Swapping x and y turns each point (p, q) on one graph into (q, p) on the other.",
-      "The y-intercept of y = aˣ is (0, 1), so y = log_a(x) passes through (1, 0). It has no y-intercept.",
-      "The horizontal asymptote y = 0 of y = aˣ becomes a vertical asymptote x = 0. The graph only exists for x > 0, because a positive base raised to any power never gives zero or a negative number.",
-      "Example: 2³ = 8 puts (3, 8) on y = 2ˣ, so (8, 3) is on y = log₂(x). For a > 1 the graph rises. Its gradient is steep near x = 0 and flattens as x grows."
+      "The graph of \\(y = \\log_{a}(x)\\) is the reflection of \\(y = a^{x}\\) in the line \\(y = x\\). Swapping \\(x\\) and \\(y\\) turns each point \\((p, q)\\) on one graph into \\((q, p)\\) on the other.",
+      "The y-intercept of \\(y = a^{x}\\) is \\((0, 1)\\), so \\(y = \\log_{a}(x)\\) passes through \\((1, 0)\\). It has no y-intercept.",
+      "The horizontal asymptote \\(y = 0\\) of \\(y = a^{x}\\) becomes a vertical asymptote \\(x = 0\\). The graph only exists for \\(x > 0\\), because a positive base raised to any power never gives zero or a negative number.",
+      "Example: \\(2^{3} = 8\\) puts \\((3, 8)\\) on \\(y = 2^{x}\\), so \\((8, 3)\\) is on \\(y = \\log_{2}(x)\\). For \\(a > 1\\) the graph rises. Its gradient is steep near \\(x = 0\\) and flattens as \\(x\\) grows."
     ],
-    "remember": "Swap the coordinates of y = aˣ to get the log graph: through (1, 0), with a vertical asymptote at x = 0.",
+    "remember": "Swap the coordinates of \\(y = a^{x}\\) to get the log graph: through \\((1, 0)\\), with a vertical asymptote at \\(x = 0\\).",
     "a": {
-      "q": "Which point lies on the graph of y = log₃(x)?",
-      "opts": ["(9, 2)", "(2, 9)", "(0, 1)", "(3, 0)"],
-      "why": "3² = 9, so log₃ 9 = 2 and (9, 2) is on the graph. (2, 9) lies on y = 3ˣ itself. Reflecting it in y = x swaps the coordinates and gives (9, 2) on y = log₃(x).",
-      "clue": "Find a point on y = 3ˣ, then swap its coordinates."
+      "q": "Which point lies on the graph of \\(y = \\log_{3}(x)\\)?",
+      "opts": ["\\((9, 2)\\)", "\\((2, 9)\\)", "\\((0, 1)\\)", "\\((3, 0)\\)"],
+      "why": "\\(3^{2} = 9\\), so \\(\\log_{3} 9 = 2\\) and \\((9, 2)\\) is on the graph. \\((2, 9)\\) lies on \\(y = 3^{x}\\) itself. Reflecting it in \\(y = x\\) swaps the coordinates and gives \\((9, 2)\\) on \\(y = \\log_{3}(x)\\).",
+      "clue": "Find a point on \\(y = 3^{x}\\), then swap its coordinates."
     },
     "b": {
       "d": 3,
-      "q": "Which statement about the graph of y = log₂(x) is correct?",
+      "q": "Which statement about the graph of \\(y = \\log_{2}(x)\\) is correct?",
       "opts": [
-        "It has a vertical asymptote at x = 0",
-        "It has a horizontal asymptote at y = 0",
-        "It has a y-intercept at (0, 1)",
-        "It is defined for all real values of x"
+        "It has a vertical asymptote at \\(x = 0\\)",
+        "It has a horizontal asymptote at \\(y = 0\\)",
+        "It has a y-intercept at \\((0, 1)\\)",
+        "It is defined for all real values of \\(x\\)"
       ],
-      "why": "The horizontal asymptote y = 0 of y = 2ˣ reflects into the vertical line x = 0. A horizontal asymptote at y = 0 and a y-intercept at (0, 1) are features of y = 2ˣ, not of the log graph, which passes through (1, 0) and exists only for x > 0.",
-      "clue": "Reflecting in y = x swaps x and y, so a horizontal line becomes a vertical line."
+      "why": "The horizontal asymptote \\(y = 0\\) of \\(y = 2^{x}\\) reflects into the vertical line \\(x = 0\\). A horizontal asymptote at \\(y = 0\\) and a y-intercept at \\((0, 1)\\) are features of \\(y = 2^{x}\\), not of the log graph, which passes through \\((1, 0)\\) and exists only for \\(x > 0\\).",
+      "clue": "Reflecting in \\(y = x\\) swaps \\(x\\) and \\(y\\), so a horizontal line becomes a vertical line."
     }
   },
   "mat-sample-spaces-probability": {
     "title": "Sample spaces and probability",
     "card": [
-      "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives {1, 2, 3, 4, 5, 6}.",
-      "An event is a set of outcomes we care about, such as rolling an even number: {2, 4, 6}.",
-      "If all outcomes are equally likely, P(event) = number of favourable outcomes ÷ total number of outcomes. For an even number, P = 3/6 = 1/2.",
+      "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives \\(\\{1, 2, 3, 4, 5, 6\\}\\).",
+      "An event is a set of outcomes we care about, such as rolling an even number: \\(\\{2, 4, 6\\}\\).",
+      "If all outcomes are equally likely, \\(P(\\text{event}) = \\frac{\\text{number of favourable outcomes}}{\\text{total number of outcomes}}\\). For an even number, \\(P = \\frac{3}{6} = \\frac{1}{2}\\).",
       "Every probability is between 0 and 1. An impossible event has probability 0 and a certain event has probability 1."
     ],
     "remember": "List equally likely outcomes, count the ones you want, then divide by the total.",
     "a": {
       "q": "A fair die is rolled once. What is the probability of rolling a number greater than 4?",
-      "opts": ["1/3", "1/6", "2/3", "5/6"],
-      "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and 2/6 = 1/3. The option 1/6 is tempting, but it counts only one outcome, forgetting that 6 is also greater than 4.",
+      "opts": ["\\(\\frac{1}{3}\\)", "\\(\\frac{1}{6}\\)", "\\(\\frac{2}{3}\\)", "\\(\\frac{5}{6}\\)"],
+      "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and \\(\\frac{2}{6} = \\frac{1}{3}\\). The option \\(\\frac{1}{6}\\) is tempting, but it counts only one outcome, forgetting that 6 is also greater than 4.",
       "clue": "Count the outcomes that are above 4, not including 4."
     },
     "b": {
       "d": 3,
       "q": "Two fair coins are tossed. What is the probability of getting exactly one head?",
-      "opts": ["1/2", "1/3", "1/4", "3/4"],
-      "why": "The sample space is {HH, HT, TH, TT}, which has 4 equally likely outcomes. Exactly one head happens in HT and TH, so P = 2/4 = 1/2. The answer 1/3 comes from wrongly listing only 3 outcomes: 2 heads, 1 head, 0 heads. These are not equally likely.",
+      "opts": ["\\(\\frac{1}{2}\\)", "\\(\\frac{1}{3}\\)", "\\(\\frac{1}{4}\\)", "\\(\\frac{3}{4}\\)"],
+      "why": "The sample space is \\(\\{\\text{HH}, \\text{HT}, \\text{TH}, \\text{TT}\\}\\), which has 4 equally likely outcomes. Exactly one head happens in HT and TH, so \\(P = \\frac{2}{4} = \\frac{1}{2}\\). The answer \\(\\frac{1}{3}\\) comes from wrongly listing only 3 outcomes: 2 heads, 1 head, 0 heads. These are not equally likely.",
       "clue": "List the outcomes in order, so HT and TH are different."
     }
   },
   "mat-venn-diagrams-set-notation": {
     "title": "Venn diagrams and set notation",
     "card": [
-      ["Union", "A ∪ B means in A, or in B, or in both. On a Venn diagram it is everything inside either circle."],
-      ["Intersection", "A ∩ B means in both A and B. On a Venn diagram it is the overlap of the two circles."],
-      ["Complement", "A′ means not in A. On a Venn diagram it is everything outside the circle for A."],
-      "Adding P(A) and P(B) counts the overlap twice, so subtract it once: P(A ∪ B) = P(A) + P(B) − P(A ∩ B). Example: P(A) = 0.5, P(B) = 0.4 and P(A ∩ B) = 0.2 give P(A ∪ B) = 0.5 + 0.4 − 0.2 = 0.7."
+      [
+        "Union",
+        "\\(A \\cup B\\) means in \\(A\\), or in \\(B\\), or in both. On a Venn diagram it is everything inside either circle."
+      ],
+      [
+        "Intersection",
+        "\\(A \\cap B\\) means in both \\(A\\) and \\(B\\). On a Venn diagram it is the overlap of the two circles."
+      ],
+      [
+        "Complement",
+        "\\(A'\\) means not in \\(A\\). On a Venn diagram it is everything outside the circle for \\(A\\)."
+      ],
+      "Adding \\(P(A)\\) and \\(P(B)\\) counts the overlap twice, so subtract it once: \\(P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\). Example: \\(P(A) = 0.5\\), \\(P(B) = 0.4\\) and \\(P(A \\cap B) = 0.2\\) give \\(P(A \\cup B) = 0.5 + 0.4 - 0.2 = 0.7\\)."
     ],
     "remember": "Union is either or both. Subtract the overlap once so it is not counted twice.",
     "a": {
-      "q": "In a Year 11 class, P(A) = 0.6, P(B) = 0.3 and P(A ∩ B) = 0.1. What is P(A ∪ B)?",
+      "q": "In a Year 11 class, \\(P(A) = 0.6\\), \\(P(B) = 0.3\\) and \\(P(A \\cap B) = 0.1\\). What is \\(P(A \\cup B)\\)?",
       "opts": ["0.8", "0.9", "0.7", "0.6"],
-      "why": "P(A ∪ B) = 0.6 + 0.3 − 0.1 = 0.8. The answer 0.9 comes from adding without subtracting the overlap, which counts the overlap twice.",
+      "why": "\\(P(A \\cup B) = 0.6 + 0.3 - 0.1 = 0.8\\). The answer 0.9 comes from adding without subtracting the overlap, which counts the overlap twice.",
       "clue": "Subtract the overlap once."
     },
     "b": {
       "d": 3,
-      "q": "At a school, 40% of students play netball (N) and 25% play tennis (T). 10% play both. What is the probability a student plays neither sport?",
+      "q": "At a school, 40% of students play netball (\\(N\\)) and 25% play tennis (\\(T\\)). 10% play both. What is the probability a student plays neither sport?",
       "opts": ["0.45", "0.55", "0.35", "0.65"],
-      "why": "P(N ∪ T) = 0.40 + 0.25 − 0.10 = 0.55. Neither is the complement of the union, so 1 − 0.55 = 0.45. The answer 0.55 is wrong because it is the probability of playing at least one sport.",
+      "why": "\\(P(N \\cup T) = 0.40 + 0.25 - 0.10 = 0.55\\). Neither is the complement of the union, so \\(1 - 0.55 = 0.45\\). The answer 0.55 is wrong because it is the probability of playing at least one sport.",
       "clue": "Find the union first, then take its complement."
     }
   },
   "mat-conditional-probability": {
     "title": "Conditional probability",
     "card": [
-      "P(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
-      "Formula: P(A | B) = P(A ∩ B)/P(B). The bottom is the event we are given. The top is the part of it that is also A.",
-      "From a table, P(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
-      "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. P(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+      "\\(P(A \\mid B)\\) is the probability of \\(A\\) given that \\(B\\) has happened. Knowing \\(B\\) has happened shrinks the sample space to just the outcomes in \\(B\\).",
+      "Formula: \\(P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)}\\). The bottom is the event we are given. The top is the part of it that is also \\(A\\).",
+      "From a table, \\(P(A \\mid B) = \\frac{\\text{number in both } A \\text{ and } B}{\\text{number in } B}\\). Use only the row or column for \\(B\\) as the total.",
+      "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. \\(P(\\text{tennis} \\mid \\text{netball}) = \\frac{8}{12} = \\frac{2}{3}\\). The total is 12, not 30."
     ],
-    "remember": "Given B means B is the new total. Divide by P(B), not by everything.",
+    "remember": "Given \\(B\\) means \\(B\\) is the new total. Divide by \\(P(B)\\), not by everything.",
     "a": {
-      "q": "In a group, P(A ∩ B) = 0.2 and P(B) = 0.5. What is P(A | B)?",
+      "q": "In a group, \\(P(A \\cap B) = 0.2\\) and \\(P(B) = 0.5\\). What is \\(P(A \\mid B)\\)?",
       "opts": ["0.4", "0.1", "0.7", "2.5"],
-      "why": "P(A | B) = P(A ∩ B) ÷ P(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+      "why": "\\(P(A \\mid B) = P(A \\cap B) \\div P(B) = 0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
       "clue": "The event after the bar goes on the bottom."
     },
     "b": {
       "d": 3,
       "q": "Of 40 students at a school camp, 25 chose kayaking and 10 of those also chose archery. 5 chose only archery. A student who chose archery is picked. What is the probability they also chose kayaking?",
-      "opts": ["2/3", "1/4", "2/5", "3/8"],
-      "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+      "opts": ["\\(\\frac{2}{3}\\)", "\\(\\frac{1}{4}\\)", "\\(\\frac{2}{5}\\)", "\\(\\frac{3}{8}\\)"],
+      "why": "Archery has \\(10 + 5 = 15\\) students, and 10 of them chose kayaking, so the probability is \\(\\frac{10}{15} = \\frac{2}{3}\\). The option \\(\\frac{2}{5}\\) is \\(\\frac{10}{25}\\), which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
       "clue": "Find the total number who chose archery first."
     }
   },
@@ -1350,28 +1443,28 @@ MADE_BANKS.mat = {
     "title": "Independent events",
     "card": [
       "Two events are independent if knowing that one happened does not change the probability of the other. Flipping a coin and rolling a die are independent.",
-      "For independent events A and B, P(A ∩ B) = P(A) × P(B). This means both happen.",
-      "Example: P(heads) = 1/2 and P(roll a 6) = 1/6. P(heads and a 6) = 1/2 × 1/6 = 1/12.",
-      "To test for independence, check whether P(A ∩ B) equals P(A) × P(B). If it does, the events are independent. If it does not, they are not."
+      "For independent events \\(A\\) and \\(B\\), \\(P(A \\cap B) = P(A) \\times P(B)\\). This means both happen.",
+      "Example: \\(P(\\text{heads}) = \\frac{1}{2}\\) and \\(P(\\text{roll a } 6) = \\frac{1}{6}\\). \\(P(\\text{heads and a } 6) = \\frac{1}{2} \\times \\frac{1}{6} = \\frac{1}{12}\\).",
+      "To test for independence, check whether \\(P(A \\cap B)\\) equals \\(P(A) \\times P(B)\\). If it does, the events are independent. If it does not, they are not."
     ],
-    "remember": "Independent events: multiply the probabilities to find P(A ∩ B).",
+    "remember": "Independent events: multiply the probabilities to find \\(P(A \\cap B)\\).",
     "a": {
-      "q": "A and B are independent events with P(A) = 0.4 and P(B) = 0.5. What is P(A ∩ B)?",
+      "q": "\\(A\\) and \\(B\\) are independent events with \\(P(A) = 0.4\\) and \\(P(B) = 0.5\\). What is \\(P(A \\cap B)\\)?",
       "opts": ["0.2", "0.9", "0.1", "0.8"],
-      "why": "For independent events, P(A ∩ B) = 0.4 × 0.5 = 0.2. Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
+      "why": "For independent events, \\(P(A \\cap B) = 0.4 \\times 0.5 = 0.2\\). Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
       "clue": "Both events happen, and the events are independent."
     },
     "b": {
       "d": 3,
-      "q": "For events A and B, P(A) = 0.5, P(B) = 0.4 and P(A ∩ B) = 0.3. Which statement is correct?",
+      "q": "For events \\(A\\) and \\(B\\), \\(P(A) = 0.5\\), \\(P(B) = 0.4\\) and \\(P(A \\cap B) = 0.3\\). Which statement is correct?",
       "opts": [
-        "Not independent, as 0.5 × 0.4 = 0.2, not 0.3",
+        "Not independent, as \\(0.5 \\times 0.4 = 0.2\\), not 0.3",
         "Independent, as 0.3 is between 0 and 1",
-        "Independent, as 0.5 + 0.4 is more than 0.3",
-        "Not independent, as 0.3 is less than P(A)"
+        "Independent, as \\(0.5 + 0.4\\) is more than 0.3",
+        "Not independent, as 0.3 is less than \\(P(A)\\)"
       ],
-      "why": "Independent events need P(A ∩ B) = P(A) × P(B). Here 0.5 × 0.4 = 0.2, which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
-      "clue": "Multiply P(A) and P(B), then compare with P(A ∩ B)."
+      "why": "Independent events need \\(P(A \\cap B) = P(A) \\times P(B)\\). Here \\(0.5 \\times 0.4 = 0.2\\), which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
+      "clue": "Multiply \\(P(A)\\) and \\(P(B)\\), then compare with \\(P(A \\cap B)\\)."
     }
   },
   "mat-multi-stage-experiments": {
@@ -1382,21 +1475,21 @@ MADE_BANKS.mat = {
       ["With replacement", "the item is put back, so the second stage has the same probabilities as the first."],
       [
         "Without replacement",
-        "the item is kept out, so the total and possibly the favourable count drop by 1 at the second stage. Example: a bag has 3 red and 2 blue counters. Two are drawn without replacement. P(both red) = 3/5 × 2/4 = 6/20 = 3/10."
+        "the item is kept out, so the total and possibly the favourable count drop by 1 at the second stage. Example: a bag has 3 red and 2 blue counters. Two are drawn without replacement. \\(P(\\text{both red}) = \\frac{3}{5} \\times \\frac{2}{4} = \\frac{6}{20} = \\frac{3}{10}\\)."
       ]
     ],
     "remember": "Multiply along a path, add across paths, and check whether the second stage has changed.",
     "a": {
-      "q": "A bag has 4 red and 6 blue counters. Two are drawn without replacement. What is P(both red)?",
-      "opts": ["2/15", "4/25", "2/5", "1/3"],
-      "why": "The first draw gives 4/10. With one red gone, the second gives 3/9. So P = 4/10 × 3/9 = 12/90 = 2/15. The option 4/25 comes from 4/10 × 4/10, which wrongly puts the counter back.",
+      "q": "A bag has 4 red and 6 blue counters. Two are drawn without replacement. What is \\(P(\\text{both red})\\)?",
+      "opts": ["\\(\\frac{2}{15}\\)", "\\(\\frac{4}{25}\\)", "\\(\\frac{2}{5}\\)", "\\(\\frac{1}{3}\\)"],
+      "why": "The first draw gives \\(\\frac{4}{10}\\). With one red gone, the second gives \\(\\frac{3}{9}\\). So \\(P = \\frac{4}{10} \\times \\frac{3}{9} = \\frac{12}{90} = \\frac{2}{15}\\). The option \\(\\frac{4}{25}\\) comes from \\(\\frac{4}{10} \\times \\frac{4}{10}\\), which wrongly puts the counter back.",
       "clue": "After the first draw, both the reds and the total change."
     },
     "b": {
       "d": 3,
-      "q": "A box has 3 green and 2 yellow balls. Two are drawn without replacement. What is P(exactly one green)?",
-      "opts": ["3/5", "3/10", "12/25", "6/25"],
-      "why": "Two paths work: green then yellow is 3/5 × 2/4 = 3/10, and yellow then green is 2/5 × 3/4 = 3/10. Add them: 3/10 + 3/10 = 3/5. The option 12/25 comes from using replacement, where the answer is 2 × 3/5 × 2/5.",
+      "q": "A box has 3 green and 2 yellow balls. Two are drawn without replacement. What is \\(P(\\text{exactly one green})\\)?",
+      "opts": ["\\(\\frac{3}{5}\\)", "\\(\\frac{3}{10}\\)", "\\(\\frac{12}{25}\\)", "\\(\\frac{6}{25}\\)"],
+      "why": "Two paths work: green then yellow is \\(\\frac{3}{5} \\times \\frac{2}{4} = \\frac{3}{10}\\), and yellow then green is \\(\\frac{2}{5} \\times \\frac{3}{4} = \\frac{3}{10}\\). Add them: \\(\\frac{3}{10} + \\frac{3}{10} = \\frac{3}{5}\\). The option \\(\\frac{12}{25}\\) comes from using replacement, where the answer is \\(2 \\times \\frac{3}{5} \\times \\frac{2}{5}\\).",
       "clue": "Find both orders, then add them."
     }
   },
@@ -1464,17 +1557,20 @@ MADE_BANKS.mat = {
         "The mean and median are equal, so either one works",
         "The mode of $50 000 is the best centre, as it is lowest"
       ],
-      "why": "The $288 000 value is an outlier. It pulls the mean up to $100 000 (500 000 ÷ 5), which is more than four of the five workers earn. The median of $54 000 barely moves because of the outlier, so it is a better centre, and no value repeats, so there is no mode.",
+      "why": "The $288 000 value is an outlier. It pulls the mean up to $100 000 (\\(500{,}000 \\div 5\\)), which is more than four of the five workers earn. The median of $54 000 barely moves because of the outlier, so it is a better centre, and no value repeats, so there is no mode.",
       "clue": "Which value is far from the rest, and which measure does it pull?"
     }
   },
   "mat-measures-spread": {
     "title": "Measures of spread",
     "card": [
-      ["Range", "Highest value − lowest value. It uses only two values, so one extreme value can change it a lot."],
+      [
+        "Range",
+        "\\(\\text{Highest value} - \\text{lowest value}\\). It uses only two values, so one extreme value can change it a lot."
+      ],
       [
         "IQR",
-        "The interquartile range is Q3 − Q1. It is the spread of the middle half of the data. Q1 is the median of the lower half and Q3 is the median of the upper half. For 2, 4, 5, 7, 8, 10, 12, 15: Q1 = 4.5, Q3 = 11, so IQR = 6.5."
+        "The interquartile range is \\(Q_{3} - Q_{1}\\). It is the spread of the middle half of the data. \\(Q_{1}\\) is the median of the lower half and \\(Q_{3}\\) is the median of the upper half. For 2, 4, 5, 7, 8, 10, 12, 15: \\(Q_{1} = 4.5\\), \\(Q_{3} = 11\\), so \\(\\text{IQR} = 6.5\\)."
       ],
       [
         "Standard deviation",
@@ -1486,8 +1582,8 @@ MADE_BANKS.mat = {
     "a": {
       "q": "What is the IQR of 4, 6, 7, 9, 10, 12, 15, 18?",
       "opts": ["7", "14", "13.5", "6.5"],
-      "why": "The lower half is 4, 6, 7, 9, so Q1 = 6.5. The upper half is 10, 12, 15, 18, so Q3 = 13.5. IQR = 13.5 − 6.5 = 7. The value 14 is tempting, but that is the range, not the IQR.",
-      "clue": "Find Q1 and Q3 first, then subtract."
+      "why": "The lower half is 4, 6, 7, 9, so \\(Q_{1} = 6.5\\). The upper half is 10, 12, 15, 18, so \\(Q_{3} = 13.5\\). \\(\\text{IQR} = 13.5 - 6.5 = 7\\). The value 14 is tempting, but that is the range, not the IQR.",
+      "clue": "Find \\(Q_{1}\\) and \\(Q_{3}\\) first, then subtract."
     },
     "b": {
       "d": 3,
@@ -1510,11 +1606,11 @@ MADE_BANKS.mat = {
         "The tail stretches to the left, towards the smaller values. Most data sits at the high end."
       ],
       [
-        "1.5 × IQR rule",
-        "Fences: lower = Q1 − 1.5 × IQR and upper = Q3 + 1.5 × IQR. A value outside the fences is an outlier. Example: Q1 = 10 and Q3 = 18, so IQR = 8 and 1.5 × 8 = 12. The fences are 10 − 12 = −2 and 18 + 12 = 30, so a value of 34 is an outlier."
+        "\\(1.5 \\times \\text{IQR}\\) rule",
+        "Fences: \\(\\text{lower} = Q_{1} - 1.5 \\times \\text{IQR}\\) and \\(\\text{upper} = Q_{3} + 1.5 \\times \\text{IQR}\\). A value outside the fences is an outlier. Example: \\(Q_{1} = 10\\) and \\(Q_{3} = 18\\), so \\(\\text{IQR} = 8\\) and \\(1.5 \\times 8 = 12\\). The fences are \\(10 - 12 = -2\\) and \\(18 + 12 = 30\\), so a value of 34 is an outlier."
       ]
     ],
-    "remember": "The tail names the skew. Outliers lie more than 1.5 × IQR beyond Q1 or Q3.",
+    "remember": "The tail names the skew. Outliers lie more than \\(1.5 \\times \\text{IQR}\\) beyond \\(Q_{1}\\) or \\(Q_{3}\\).",
     "a": {
       "q": "A histogram of house prices has most values at the low end and a long tail stretching to the right. How is it described?",
       "opts": ["Positively skewed", "Negatively skewed", "Symmetric", "Uniform with no outliers"],
@@ -1523,64 +1619,69 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 3,
-      "q": "A data set has Q1 = 22 and Q3 = 30. Which value is an outlier by the 1.5 × IQR rule?",
+      "q": "A data set has \\(Q_{1} = 22\\) and \\(Q_{3} = 30\\). Which value is an outlier by the \\(1.5 \\times \\text{IQR}\\) rule?",
       "opts": ["43", "41", "12", "11"],
-      "why": "IQR = 30 − 22 = 8, and 1.5 × 8 = 12, so the fences are 22 − 12 = 10 and 30 + 12 = 42. Only 43 lies outside the fences. 41 is tempting, but it is below the upper fence of 42, and 11 and 12 are both above the lower fence of 10.",
+      "why": "\\(\\text{IQR} = 30 - 22 = 8\\), and \\(1.5 \\times 8 = 12\\), so the fences are \\(22 - 12 = 10\\) and \\(30 + 12 = 42\\). Only 43 lies outside the fences. 41 is tempting, but it is below the upper fence of 42, and 11 and 12 are both above the lower fence of 10.",
       "clue": "Find both fences, then check which value lies outside them."
     }
   },
   "mat-combining-transformations": {
     "title": "Combining transformations",
     "card": [
-      "In y = kf(a(x + b)) + c, the numbers a and b change x. The numbers k and c change y. A negative a reflects in the y-axis. A negative k reflects in the x-axis.",
-      "Do dilations and reflections first, then translations. A point (x, y) on y = f(x) moves to (x/a − b, ky + c).",
-      "The x-coordinate is divided by a, not multiplied. Then b is taken away, so x + b shifts the graph left by b.",
-      "Example: (6, 3) is on y = f(x). On y = 2f(3(x − 1)) + 4, x becomes 6 ÷ 3 = 2, then 2 + 1 = 3. y becomes 2 × 3 = 6, then 6 + 4 = 10. The new point is (3, 10)."
+      "In \\(y = kf(a(x + b)) + c\\), the numbers \\(a\\) and \\(b\\) change \\(x\\). The numbers \\(k\\) and \\(c\\) change \\(y\\). A negative \\(a\\) reflects in the y-axis. A negative \\(k\\) reflects in the x-axis.",
+      "Do dilations and reflections first, then translations. A point \\((x, y)\\) on \\(y = f(x)\\) moves to \\((\\frac{x}{a} - b, ky + c)\\).",
+      "The x-coordinate is divided by \\(a\\), not multiplied. Then \\(b\\) is taken away, so \\(x + b\\) shifts the graph left by \\(b\\).",
+      "Example: \\((6, 3)\\) is on \\(y = f(x)\\). On \\(y = 2f(3(x - 1)) + 4\\), \\(x\\) becomes \\(6 \\div 3 = 2\\), then \\(2 + 1 = 3\\). \\(y\\) becomes \\(2 \\times 3 = 6\\), then \\(6 + 4 = 10\\). The new point is \\((3, 10)\\)."
     ],
-    "remember": "Dilate and reflect first, then translate. The x-coordinate is divided by a.",
+    "remember": "Dilate and reflect first, then translate. The x-coordinate is divided by \\(a\\).",
     "a": {
-      "q": "The point (4, −2) is on y = f(x). What is its image on y = −f(2x) + 1?",
-      "opts": ["(2, 3)", "(8, 3)", "(2, −1)", "(2, 1)"],
-      "why": "x becomes 4 ÷ 2 = 2. For y, reflect first to get 2, then add 1 to get 3. (2, 1) is wrong because it adds 1 before reflecting, which is the wrong order.",
+      "q": "The point \\((4, -2)\\) is on \\(y = f(x)\\). What is its image on \\(y = -f(2x) + 1\\)?",
+      "opts": ["\\((2, 3)\\)", "\\((8, 3)\\)", "\\((2, -1)\\)", "\\((2, 1)\\)"],
+      "why": "\\(x\\) becomes \\(4 \\div 2 = 2\\). For \\(y\\), reflect first to get 2, then add 1 to get 3. \\((2, 1)\\) is wrong because it adds 1 before reflecting, which is the wrong order.",
       "clue": "Reflect and dilate before you translate."
     },
     "b": {
       "d": 3,
-      "q": "The point (6, 2) is on y = f(x). What is its image on y = 3f(½(x + 1)) − 4?",
-      "opts": ["(11, 2)", "(13, 2)", "(2, 2)", "(11, −6)"],
-      "why": "Dividing x by ½ gives 12. Then x + 1 shifts the graph left by 1, so x becomes 11. For y, 3 × 2 = 6, then 6 − 4 = 2. (13, 2) is wrong because it shifts right instead of left.",
-      "clue": "Dividing by ½ is the same as doubling, and + 1 inside the bracket moves left."
+      "q": "The point \\((6, 2)\\) is on \\(y = f(x)\\). What is its image on \\(y = 3f(\\frac{1}{2}(x + 1)) - 4\\)?",
+      "opts": ["\\((11, 2)\\)", "\\((13, 2)\\)", "\\((2, 2)\\)", "\\((11, -6)\\)"],
+      "why": "Dividing \\(x\\) by \\(\\frac{1}{2}\\) gives 12. Then \\(x + 1\\) shifts the graph left by 1, so \\(x\\) becomes 11. For \\(y\\), \\(3 \\times 2 = 6\\), then \\(6 - 4 = 2\\). \\((13, 2)\\) is wrong because it shifts right instead of left.",
+      "clue": "Dividing by \\(\\frac{1}{2}\\) is the same as doubling, and \\(+1\\) inside the bracket moves left."
     }
   },
   "mat-transforming-trigonometric-graphs": {
     "title": "Transforming trigonometric graphs",
     "card": [
-      "In y = k sin(a(x + b)) + c, each letter changes the graph of y = sin x in one way. Use the form with a(x + b) so that b is read straight off.",
+      "In \\(y = k\\sin(a(x + b)) + c\\), each letter changes the graph of \\(y = \\sin x\\) in one way. Use the form with \\(a(x + b)\\) so that \\(b\\) is read straight off.",
       [
         "Amplitude and period",
-        "The amplitude is |k|, the distance from the centre line to a peak. The period is 2π/a (with a > 0), the length of one full cycle."
+        "The amplitude is \\(|k|\\), the distance from the centre line to a peak. The period is \\(\\frac{2\\pi}{a}\\) (with \\(a > 0\\)), the length of one full cycle."
       ],
       [
         "Shift and centre line",
-        "b is the horizontal shift: the graph moves left by b, so x + b with b = π/6 means a shift left by π/6. c is the vertical shift, and the centre line is y = c."
+        "\\(b\\) is the horizontal shift: the graph moves left by \\(b\\), so \\(x + b\\) with \\(b = \\frac{\\pi}{6}\\) means a shift left by \\(\\frac{\\pi}{6}\\). \\(c\\) is the vertical shift, and the centre line is \\(y = c\\)."
       ],
       [
         "Example",
-        "y = 3 sin(2(x − π/4)) + 1 has amplitude 3, period 2π/2 = π, a shift right by π/4 and centre line y = 1. Its maximum is 1 + 3 = 4 and its minimum is 1 − 3 = −2."
+        "\\(y = 3\\sin(2(x - \\frac{\\pi}{4})) + 1\\) has amplitude 3, period \\(\\frac{2\\pi}{2} = \\pi\\), a shift right by \\(\\frac{\\pi}{4}\\) and centre line \\(y = 1\\). Its maximum is \\(1 + 3 = 4\\) and its minimum is \\(1 - 3 = -2\\)."
       ]
     ],
-    "remember": "Amplitude |k| is centre line to peak, period is 2π/a, x + b moves the graph left by b, and y = c is the centre line.",
+    "remember": "Amplitude \\(|k|\\) is centre line to peak, period is \\(\\frac{2\\pi}{a}\\), \\(x + b\\) moves the graph left by \\(b\\), and \\(y = c\\) is the centre line.",
     "a": {
-      "q": "What is the period of y = 5 sin(4x) + 2?",
-      "opts": ["π/2", "8π", "2/π", "π/4"],
-      "why": "The period is 2π/a with a = 4, so 2π/4 = π/2. The 5 changes the amplitude and the 2 moves the centre line, so neither changes the period. Multiplying 2π by 4 gives 8π, and dividing 4 by 2π gives 2/π, which both use the formula the wrong way.",
-      "clue": "Use 2π divided by the number multiplying x."
+      "q": "What is the period of \\(y = 5\\sin(4x) + 2\\)?",
+      "opts": ["\\(\\frac{\\pi}{2}\\)", "\\(8\\pi\\)", "\\(\\frac{2}{\\pi}\\)", "\\(\\frac{\\pi}{4}\\)"],
+      "why": "The period is \\(\\frac{2\\pi}{a}\\) with \\(a = 4\\), so \\(\\frac{2\\pi}{4} = \\frac{\\pi}{2}\\). The 5 changes the amplitude and the 2 moves the centre line, so neither changes the period. Multiplying \\(2\\pi\\) by 4 gives \\(8\\pi\\), and dividing 4 by \\(2\\pi\\) gives \\(\\frac{2}{\\pi}\\), which both use the formula the wrong way.",
+      "clue": "Use \\(2\\pi\\) divided by the number multiplying \\(x\\)."
     },
     "b": {
       "d": 3,
-      "q": "What are the maximum and minimum values of y = 2 sin(3(x + π/6)) − 4?",
-      "opts": ["Maximum −2, minimum −6", "Maximum −1, minimum −7", "Maximum 2, minimum −2", "Maximum 6, minimum 2"],
-      "why": "The amplitude is 2 and the centre line is y = −4, so the maximum is −4 + 2 = −2 and the minimum is −4 − 2 = −6. Using 3 as the amplitude gives −1 and −7, but 3 only sets the period, and the shift does not change the heights. Ignoring the −4 gives 2 and −2.",
+      "q": "What are the maximum and minimum values of \\(y = 2\\sin(3(x + \\frac{\\pi}{6})) - 4\\)?",
+      "opts": [
+        "Maximum \\(-2\\), minimum \\(-6\\)",
+        "Maximum \\(-1\\), minimum \\(-7\\)",
+        "Maximum 2, minimum \\(-2\\)",
+        "Maximum 6, minimum 2"
+      ],
+      "why": "The amplitude is 2 and the centre line is \\(y = -4\\), so the maximum is \\(-4 + 2 = -2\\) and the minimum is \\(-4 - 2 = -6\\). Using 3 as the amplitude gives \\(-1\\) and \\(-7\\), but 3 only sets the period, and the shift does not change the heights. Ignoring the \\(-4\\) gives 2 and \\(-2\\).",
       "clue": "Go up and down from the centre line by the amplitude."
     }
   },
@@ -1589,15 +1690,15 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Linear",
-        "y = mx + c. The value changes by the same amount each step. m is the rate of change and c is the starting value."
+        "\\(y = mx + c\\). The value changes by the same amount each step. \\(m\\) is the rate of change and \\(c\\) is the starting value."
       ],
       [
         "Quadratic",
-        "y = ax² + bx + c. The graph has one turning point, so it suits a rise then a fall, such as a ball thrown in the air."
+        "\\(y = ax^{2} + bx + c\\). The graph has one turning point, so it suits a rise then a fall, such as a ball thrown in the air."
       ],
       [
         "Exponential",
-        "y = A × rˣ: A is the starting value and each step multiplies by r, so r > 1 grows and 0 < r < 1 decays. In P = 300 × 0.9ᵗ, each step keeps 90%, so 10% is lost."
+        "\\(y = A \\times r^{x}\\): \\(A\\) is the starting value and each step multiplies by \\(r\\), so \\(r > 1\\) grows and \\(0 < r < 1\\) decays. In \\(P = 300 \\times 0.9^{t}\\), each step keeps 90%, so 10% is lost."
       ],
       [
         "Trigonometric",
@@ -1608,494 +1709,543 @@ MADE_BANKS.mat = {
     "a": {
       "q": "A town has 2000 people. Its population grows by 5% each year. Which model suits this best?",
       "opts": [
-        "Exponential, P = 2000 × 1.05ᵗ",
-        "Linear, P = 2000 + 5t",
-        "Quadratic, P = 2000 + 5t²",
-        "Trigonometric, P = 2000 sin(5t)"
+        "Exponential, \\(P = 2000 \\times 1.05^{t}\\)",
+        "Linear, \\(P = 2000 + 5t\\)",
+        "Quadratic, \\(P = 2000 + 5t^{2}\\)",
+        "Trigonometric, \\(P = 2000\\sin(5t)\\)"
       ],
       "why": "A 5% rise each year means multiplying by the same factor, 1.05, every year. That is exponential. A linear model adds the same number of people each year, which is not what a percentage rise does.",
       "clue": "Is the same amount added, or the same factor multiplied?"
     },
     "b": {
       "d": 3,
-      "q": "A car's value is V = 30000 × 0.85ᵗ dollars, where t is years. What does 0.85 tell you?",
+      "q": "A car's value is \\(V = 30000 \\times 0.85^{t}\\) dollars, where \\(t\\) is years. What does 0.85 tell you?",
       "opts": [
         "It loses 15% of its value each year",
         "It loses 85% of its value each year",
         "It loses $0.85 of its value each year",
         "It keeps 15% of its value each year"
       ],
-      "why": "Multiplying by 0.85 means the car keeps 85% of its value each year, so it loses 100% − 85% = 15%. Losing 85% each year would need a factor of 0.15, not 0.85.",
+      "why": "Multiplying by 0.85 means the car keeps 85% of its value each year, so it loses \\(100\\% - 85\\% = 15\\%\\). Losing 85% each year would need a factor of 0.15, not 0.85.",
       "clue": "Multiplying by 0.85 keeps what share of the value?"
     }
   },
   "mat-finding-rule-from-graph": {
     "title": "Finding a rule from a graph",
     "card": [
-      "Match the graph to a family first: a U or upside-down U shape is a quadratic, and a wave is a sine or cosine. Then use the graph's features to find each number.",
+      "Match the graph to a family first: a parabola, concave up or concave down, is a quadratic, and a wave is a sine or cosine. Then use the graph's features to find each number.",
       [
         "Quadratic",
-        "With turning point (h, k), use y = a(x − h)² + k, then put one other point in to find a. A negative a gives an upside-down U."
+        "With turning point \\((h, k)\\), use \\(y = a(x - h)^{2} + k\\), then put one other point in to find \\(a\\). A negative \\(a\\) gives a parabola that is concave down."
       ],
       [
         "Sine wave",
-        "In y = A sin(nx) + c, the centre line is c = (max + min) ÷ 2 and the amplitude is A = (max − min) ÷ 2. The period is 2π/n, so n = 2π ÷ period."
+        "In \\(y = A\\sin(nx) + c\\), the centre line is \\(c = (\\text{max} + \\text{min}) \\div 2\\) and the amplitude is \\(A = (\\text{max} - \\text{min}) \\div 2\\). The period is \\(\\frac{2\\pi}{n}\\), so \\(n = 2\\pi \\div \\text{period}\\)."
       ],
-      "Example: a parabola has turning point (2, −3) and passes through (0, 1). Then y = a(x − 2)² − 3. Put in x = 0, y = 1: 1 = 4a − 3, so a = 1. The rule is y = (x − 2)² − 3."
+      "Example: a parabola has turning point \\((2, -3)\\) and passes through \\((0, 1)\\). Then \\(y = a(x - 2)^{2} - 3\\). Put in \\(x = 0\\), \\(y = 1\\): \\(1 = 4a - 3\\), so \\(a = 1\\). The rule is \\(y = (x - 2)^{2} - 3\\)."
     ],
     "remember": "Read the turning point or the max, min and period off the graph, then use one more point to finish the rule.",
     "a": {
-      "q": "A parabola has turning point (1, 5) and passes through (3, 1). Which rule fits it?",
-      "opts": ["y = −(x − 1)² + 5", "y = (x − 1)² + 5", "y = −(x + 1)² + 5", "y = −(x − 1)² − 5"],
-      "why": "Start with y = a(x − 1)² + 5. Put in (3, 1): 1 = 4a + 5, so a = −1. The option with (x + 1) has the sign of the horizontal shift wrong, because the turning point is at x = 1.",
-      "clue": "Use the turning point first, then put in the other point to find a."
+      "q": "A parabola has turning point \\((1, 5)\\) and passes through \\((3, 1)\\). Which rule fits it?",
+      "opts": [
+        "\\(y = -(x - 1)^{2} + 5\\)",
+        "\\(y = (x - 1)^{2} + 5\\)",
+        "\\(y = -(x + 1)^{2} + 5\\)",
+        "\\(y = -(x - 1)^{2} - 5\\)"
+      ],
+      "why": "Start with \\(y = a(x - 1)^{2} + 5\\). Put in \\((3, 1)\\): \\(1 = 4a + 5\\), so \\(a = -1\\). The option with \\((x + 1)\\) has the sign of the horizontal shift wrong, because the turning point is at \\(x = 1\\).",
+      "clue": "Use the turning point first, then put in the other point to find \\(a\\)."
     },
     "b": {
       "d": 3,
-      "q": "A sine wave has a maximum of 7, a minimum of −1 and a period of π. Which rule fits it?",
-      "opts": ["y = 4 sin(2x) + 3", "y = 4 sin(x) + 3", "y = 8 sin(2x) + 3", "y = 4 sin(2x) + 7"],
-      "why": "Amplitude = (7 − (−1)) ÷ 2 = 4 and centre line = (7 + (−1)) ÷ 2 = 3. Also n = 2π ÷ π = 2. The option with 8 uses the full height from min to max, which is double the amplitude.",
+      "q": "A sine wave has a maximum of 7, a minimum of \\(-1\\) and a period of \\(\\pi\\). Which rule fits it?",
+      "opts": ["\\(y = 4\\sin(2x) + 3\\)", "\\(y = 4\\sin(x) + 3\\)", "\\(y = 8\\sin(2x) + 3\\)", "\\(y = 4\\sin(2x) + 7\\)"],
+      "why": "The amplitude is \\((7 - (-1)) \\div 2 = 4\\) and the centre line is at \\((7 + (-1)) \\div 2 = 3\\). Also \\(n = 2\\pi \\div \\pi = 2\\). The option with 8 uses the full height from min to max, which is double the amplitude.",
       "clue": "Half the gap between max and min is the amplitude. Midway between them is the centre line."
     }
   },
   "mat-arithmetic-sequences": {
     "title": "Arithmetic sequences",
     "card": [
-      "An arithmetic sequence goes up or down by the same amount each time. That amount is the common difference, d. Find it by subtracting a term from the next one.",
-      "d is positive when the terms rise and negative when they fall. In 20, 17, 14, 11, d = 17 − 20 = −3.",
-      "Call the first term a. The nth term is Tₙ = a + (n − 1)d. To reach term n, start at a and add d a total of (n − 1) times.",
-      "Example: for 5, 9, 13, ... we have a = 5 and d = 4. The 10th term is 5 + (10 − 1) × 4 = 5 + 36 = 41."
+      "An arithmetic sequence goes up or down by the same amount each time. That amount is the common difference, \\(d\\). Find it by subtracting a term from the next one.",
+      "\\(d\\) is positive when the terms rise and negative when they fall. In 20, 17, 14, 11, \\(d = 17 - 20 = -3\\).",
+      "Call the first term \\(a\\). The \\(n\\)th term is \\(T_{n} = a + (n - 1)d\\). To reach term \\(n\\), start at \\(a\\) and add \\(d\\) a total of \\(n - 1\\) times.",
+      "Example: for 5, 9, 13, ... we have \\(a = 5\\) and \\(d = 4\\). The 10th term is \\(5 + (10 - 1) \\times 4 = 5 + 36 = 41\\)."
     ],
-    "remember": "Tₙ = a + (n − 1)d: term n is (n − 1) steps of d away from a.",
+    "remember": "\\(T_{n} = a + (n - 1)d\\): term \\(n\\) is \\(n - 1\\) steps of \\(d\\) away from \\(a\\).",
     "a": {
       "q": "What is the 8th term of the sequence 3, 7, 11, 15, ...?",
       "opts": ["31", "35", "32", "27"],
-      "why": "Here a = 3 and d = 4, so T₈ = 3 + (8 − 1) × 4 = 3 + 28 = 31. The tempting answer 35 comes from adding d eight times instead of seven, which is 3 + 8 × 4 = 35.",
-      "clue": "From the first term, d is added one fewer time than the term number."
+      "why": "Here \\(a = 3\\) and \\(d = 4\\), so \\(T_{8} = 3 + (8 - 1) \\times 4 = 3 + 28 = 31\\). The tempting answer 35 comes from adding \\(d\\) eight times instead of seven, which is \\(3 + 8 \\times 4 = 35\\).",
+      "clue": "From the first term, \\(d\\) is added one fewer time than the term number."
     },
     "b": {
       "d": 3,
       "q": "Priya has $90 set aside for a trip in week 1. Each week after that, the amount falls by $6 as she pays bus fares. How much does she have in week 12?",
       "opts": ["$24", "$18", "$30", "$156"],
-      "why": "This is arithmetic with a = 90 and d = −6, so T₁₂ = 90 + (12 − 1) × (−6) = 90 − 66 = 24. The answer $18 comes from using 12 differences instead of 11. The answer $156 comes from using +6 instead of −6.",
-      "clue": "The amount falls, so d is negative. Count the steps from week 1 to week 12."
+      "why": "This is arithmetic with \\(a = 90\\) and \\(d = -6\\), so \\(T_{12} = 90 + (12 - 1) \\times (-6) = 90 - 66 = 24\\). The answer $18 comes from using 12 differences instead of 11. The answer $156 comes from using \\(+6\\) instead of \\(-6\\).",
+      "clue": "The amount falls, so \\(d\\) is negative. Count the steps from week 1 to week 12."
     }
   },
   "mat-arithmetic-series": {
     "title": "Arithmetic series",
     "card": [
-      "An arithmetic series is the sum of the terms of an arithmetic sequence. Here a is the first term, d is the common difference and n is the number of terms.",
-      ["Formula 1", "Sₙ = n/2 × (2a + (n − 1)d). Use it when you know a, d and n."],
-      ["Formula 2", "Sₙ = n/2 × (first + last). Use it when you know the first and last terms and n."],
+      "An arithmetic series is the sum of the terms of an arithmetic sequence. Here \\(a\\) is the first term, \\(d\\) is the common difference and \\(n\\) is the number of terms.",
+      [
+        "Formula 1",
+        "\\(S_{n} = \\frac{n}{2} \\times (2a + (n - 1)d)\\). Use it when you know \\(a\\), \\(d\\) and \\(n\\)."
+      ],
+      [
+        "Formula 2",
+        "\\(S_{n} = \\frac{n}{2} \\times (\\text{first} + \\text{last})\\). Use it when you know the first and last terms and \\(n\\)."
+      ],
       [
         "Example",
-        "Add 3 + 7 + 11 + ... for 10 terms. Here a = 3, d = 4 and n = 10. S₁₀ = 10/2 × (2×3 + 9×4) = 5 × 42 = 210."
+        "Add \\(3 + 7 + 11 + \\ldots\\) for 10 terms. Here \\(a = 3\\), \\(d = 4\\) and \\(n = 10\\). \\(S_{10} = \\frac{10}{2} \\times (2 \\times 3 + 9 \\times 4) = 5 \\times 42 = 210\\)."
       ]
     ],
-    "remember": "Sum = half the number of terms × (first + last), and the last term is a + (n − 1)d.",
+    "remember": "The sum is half the number of terms times the total of the first and last terms, and the last term is \\(a + (n - 1)d\\).",
     "a": {
-      "q": "What is the sum of the first 8 terms of 5 + 8 + 11 + ...?",
+      "q": "What is the sum of the first 8 terms of \\(5 + 8 + 11 + \\ldots\\)?",
       "opts": ["124", "136", "248", "26"],
-      "why": "Here a = 5, d = 3 and n = 8. S₈ = 8/2 × (2×5 + 7×3) = 4 × 31 = 124. The answer 248 comes from forgetting to halve n, which is the tempting mistake.",
-      "clue": "Find 2a + (n − 1)d first, then multiply by n/2."
+      "why": "Here \\(a = 5\\), \\(d = 3\\) and \\(n = 8\\). \\(S_{8} = \\frac{8}{2} \\times (2 \\times 5 + 7 \\times 3) = 4 \\times 31 = 124\\). The answer 248 comes from forgetting to halve \\(n\\), which is the tempting mistake.",
+      "clue": "Find \\(2a + (n - 1)d\\) first, then multiply by \\(\\frac{n}{2}\\)."
     },
     "b": {
       "d": 3,
       "q": "Mia saves $10 in week 1, then $14 in week 2, and so on, adding $4 more each week. She does this for 12 weeks. How much has she saved in total?",
       "opts": ["$384", "$408", "$768", "$330"],
-      "why": "Here a = 10, d = 4 and n = 12. The last term is 10 + 11×4 = 54, so S₁₂ = 12/2 × (10 + 54) = 6 × 64 = 384. The answer $408 uses 12×4 for the last term, giving 58 instead of 54.",
-      "clue": "Count the weeks as n, then find the last week's saving first."
+      "why": "Here \\(a = 10\\), \\(d = 4\\) and \\(n = 12\\). The last term is \\(10 + 11 \\times 4 = 54\\), so \\(S_{12} = \\frac{12}{2} \\times (10 + 54) = 6 \\times 64 = 384\\). The answer $408 uses \\(12 \\times 4\\) for the last term, giving 58 instead of 54.",
+      "clue": "Count the weeks as \\(n\\), then find the last week's saving first."
     }
   },
   "mat-geometric-sequences": {
     "title": "Geometric sequences",
     "card": [
-      "In a geometric sequence, each term is found by multiplying the one before it by the same number. That number is the common ratio, r.",
-      "To find r, divide any term by the term before it. For 3, 6, 12, 24, r = 6 ÷ 3 = 2. The ratio can be negative or a fraction.",
-      "The first term is a. The nth term is Tₙ = arⁿ⁻¹. The power is n − 1, because the first term has not been multiplied by r yet.",
-      "For example, in 5, 10, 20, ..., a = 5 and r = 2. The 6th term is 5 × 2⁵ = 5 × 32 = 160."
+      "In a geometric sequence, each term is found by multiplying the one before it by the same number. That number is the common ratio, \\(r\\).",
+      "To find \\(r\\), divide any term by the term before it. For 3, 6, 12, 24, \\(r = 6 \\div 3 = 2\\). The ratio can be negative or a fraction.",
+      "The first term is \\(a\\). The \\(n\\)th term is \\(T_{n} = ar^{n - 1}\\). The power is \\(n - 1\\), because the first term has not been multiplied by \\(r\\) yet.",
+      "For example, in 5, 10, 20, ..., \\(a = 5\\) and \\(r = 2\\). The 6th term is \\(5 \\times 2^{5} = 5 \\times 32 = 160\\)."
     ],
-    "remember": "Divide to find r, then use Tₙ = arⁿ⁻¹ with the power n − 1.",
+    "remember": "Divide to find \\(r\\), then use \\(T_{n} = ar^{n - 1}\\) with the power \\(n - 1\\).",
     "a": {
       "q": "A geometric sequence is 2, 6, 18, 54, ... What is the 7th term?",
       "opts": ["1458", "4374", "729", "12"],
-      "why": "Here a = 2 and r = 6 ÷ 2 = 3. T₇ = 2 × 3⁶ = 2 × 729 = 1458. Using 3⁷ gives 4374, which is the 8th term, because the power must be n − 1.",
-      "clue": "Find r first, then check the power on r."
+      "why": "Here \\(a = 2\\) and \\(r = 6 \\div 2 = 3\\). \\(T_{7} = 2 \\times 3^{6} = 2 \\times 729 = 1458\\). Using \\(3^{7}\\) gives 4374, which is the 8th term, because the power must be \\(n - 1\\).",
+      "clue": "Find \\(r\\) first, then check the power on \\(r\\)."
     },
     "b": {
       "d": 3,
-      "q": "A geometric sequence is 400, −200, 100, ... What is the 5th term?",
-      "opts": ["25", "−25", "−50", "12.5"],
-      "why": "Here a = 400 and r = −200 ÷ 400 = −1/2. T₅ = 400 × (−1/2)⁴ = 400 × 1/16 = 25. Treating it as −(1/2)⁴ gives −25, but the negative sign is part of r, so it is raised to the power too. The value −50 is only the 4th term.",
-      "clue": "Count how many times r has been applied by the 5th term."
+      "q": "A geometric sequence is \\(400, -200, 100, \\ldots\\) What is the 5th term?",
+      "opts": ["25", "\\(-25\\)", "\\(-50\\)", "12.5"],
+      "why": "Here \\(a = 400\\) and \\(r = -200 \\div 400 = -\\frac{1}{2}\\). \\(T_{5} = 400 \\times (-\\frac{1}{2})^{4} = 400 \\times \\frac{1}{16} = 25\\). Treating it as \\(-(\\frac{1}{2})^{4}\\) gives \\(-25\\), but the negative sign is part of \\(r\\), so it is raised to the power too. The value \\(-50\\) is only the 4th term.",
+      "clue": "Count how many times \\(r\\) has been applied by the 5th term."
     }
   },
   "mat-geometric-series": {
     "title": "Geometric series",
     "card": [
-      "A geometric series is the sum of the terms of a geometric sequence. Each term is the one before it multiplied by a common ratio r.",
-      "The sum of the first n terms is Sₙ = a(rⁿ − 1)/(r − 1), where a is the first term. This works for any r except 1.",
-      "Steps: find a and r, count the terms n, then put them in the formula. Work out rⁿ before you subtract 1.",
-      "Example: 3 + 6 + 12 + 24 + 48 has a = 3, r = 2 and n = 5. S₅ = 3(2⁵ − 1)/(2 − 1) = 3 × 31 ÷ 1 = 93."
+      "A geometric series is the sum of the terms of a geometric sequence. Each term is the one before it multiplied by a common ratio \\(r\\).",
+      "The sum of the first \\(n\\) terms is \\(S_{n} = \\frac{a(r^{n} - 1)}{r - 1}\\), where \\(a\\) is the first term. This works for any \\(r\\) except 1.",
+      "Steps: find \\(a\\) and \\(r\\), count the terms \\(n\\), then put them in the formula. Work out \\(r^{n}\\) before you subtract 1.",
+      "Example: \\(3 + 6 + 12 + 24 + 48\\) has \\(a = 3\\), \\(r = 2\\) and \\(n = 5\\). \\(S_{5} = \\frac{3(2^{5} - 1)}{2 - 1} = 3 \\times 31 \\div 1 = 93\\)."
     ],
-    "remember": "Find a, r and n, then use Sₙ = a(rⁿ − 1)/(r − 1).",
+    "remember": "Find \\(a\\), \\(r\\) and \\(n\\), then use \\(S_{n} = \\frac{a(r^{n} - 1)}{r - 1}\\).",
     "a": {
-      "q": "What is the sum of the first 4 terms of the geometric series 2 + 6 + 18 + ...?",
+      "q": "What is the sum of the first 4 terms of the geometric series \\(2 + 6 + 18 + \\ldots\\)?",
       "opts": ["80", "728", "26", "160"],
-      "why": "Here a = 2, r = 3 and n = 4. S₄ = 2(3⁴ − 1)/(3 − 1) = 2 × 80 ÷ 2 = 80. The option 160 comes from forgetting to divide by r − 1.",
-      "clue": "Find r by dividing a term by the one before it."
+      "why": "Here \\(a = 2\\), \\(r = 3\\) and \\(n = 4\\). \\(S_{4} = \\frac{2(3^{4} - 1)}{3 - 1} = 2 \\times 80 \\div 2 = 80\\). The option 160 comes from forgetting to divide by \\(r - 1\\).",
+      "clue": "Find \\(r\\) by dividing a term by the one before it."
     },
     "b": {
       "d": 3,
       "q": "Mia saves $5 in week 1. Each week after that she saves double the week before. How much has she saved in total after 6 weeks?",
       "opts": ["$315", "$630", "$160", "$310"],
-      "why": "The savings form a geometric series with a = 5, r = 2 and n = 6. S₆ = 5(2⁶ − 1)/(2 − 1) = 5 × 63 = 315. The option $160 is only the amount saved in week 6, not the total.",
+      "why": "The savings form a geometric series with \\(a = 5\\), \\(r = 2\\) and \\(n = 6\\). \\(S_{6} = \\frac{5(2^{6} - 1)}{2 - 1} = 5 \\times 63 = 315\\). The option $160 is only the amount saved in week 6, not the total.",
       "clue": "The total is a sum of 6 terms, not the 6th term."
     }
   },
   "mat-limiting-sums": {
     "title": "Limiting sums",
     "card": [
-      "A geometric series adds terms that multiply by a common ratio r each time. If r is between -1 and 1, the terms shrink towards 0.",
-      "When -1 < r < 1, the sum of the first n terms gets closer and closer to one number as n grows. This number is the limiting sum: S = a/(1 - r), where a is the first term.",
-      "If r is 1 or more, or -1 or less, the terms do not shrink to 0. The sum does not settle on a number, so there is no limiting sum.",
-      "Example: 12 + 6 + 3 + ... has a = 12 and r = 6/12 = 1/2. This is between -1 and 1, so S = 12 ÷ (1 - 1/2) = 12 ÷ 1/2 = 24."
+      "A geometric series adds terms that multiply by a common ratio \\(r\\) each time. If \\(r\\) is between \\(-1\\) and 1, the terms shrink towards 0.",
+      "When \\(-1 < r < 1\\), the sum of the first \\(n\\) terms gets closer and closer to one number as \\(n\\) grows. This number is the limiting sum: \\(S = \\frac{a}{1 - r}\\), where \\(a\\) is the first term.",
+      "If \\(r\\) is 1 or more, or \\(-1\\) or less, the terms do not shrink to 0. The sum does not settle on a number, so there is no limiting sum.",
+      "Example: \\(12 + 6 + 3 + \\ldots\\) has \\(a = 12\\) and \\(r = \\frac{6}{12} = \\frac{1}{2}\\). This is between \\(-1\\) and 1, so \\(S = 12 \\div (1 - \\frac{1}{2}) = 12 \\div \\frac{1}{2} = 24\\)."
     ],
-    "remember": "Check r first. If -1 < r < 1, use S = a/(1 - r). If not, there is no limiting sum.",
+    "remember": "Check \\(r\\) first. If \\(-1 < r < 1\\), use \\(S = \\frac{a}{1 - r}\\). If not, there is no limiting sum.",
     "a": {
-      "q": "A geometric series has first term 18 and common ratio 1/3. What is its limiting sum?",
+      "q": "A geometric series has first term 18 and common ratio \\(\\frac{1}{3}\\). What is its limiting sum?",
       "opts": ["27", "54", "6", "13.5"],
-      "why": "Here -1 < r < 1, so S = 18 ÷ (1 - 1/3) = 18 ÷ 2/3 = 27. Using 18 ÷ 1/3 = 54 is tempting, but it forgets to subtract r from 1 first.",
-      "clue": "Work out 1 - r before you divide."
+      "why": "Here \\(-1 < r < 1\\), so \\(S = 18 \\div (1 - \\frac{1}{3}) = 18 \\div \\frac{2}{3} = 27\\). Using \\(18 \\div \\frac{1}{3} = 54\\) is tempting, but it forgets to subtract \\(r\\) from 1 first.",
+      "clue": "Work out \\(1 - r\\) before you divide."
     },
     "b": {
       "d": 3,
       "q": "Which of these geometric series has a limiting sum?",
       "opts": [
-        "8 - 4 + 2 - 1 + ... (r = -1/2)",
-        "3 + 6 + 12 + 24 + ... (r = 2)",
-        "5 - 5 + 5 - 5 + ... (r = -1)",
-        "2 + 2.2 + 2.42 + ... (r = 1.1)"
+        "\\(8 - 4 + 2 - 1 + \\ldots\\) (\\(r = -\\frac{1}{2}\\))",
+        "\\(3 + 6 + 12 + 24 + \\ldots\\) (\\(r = 2\\))",
+        "\\(5 - 5 + 5 - 5 + \\ldots\\) (\\(r = -1\\))",
+        "\\(2 + 2.2 + 2.42 + \\ldots\\) (\\(r = 1.1\\))"
       ],
-      "why": "8 - 4 + 2 - 1 has r = -4/8 = -1/2, which is between -1 and 1, so it has a limiting sum (16/3). The negative sign does not stop it. The others have r = 2, r = -1 and r = 1.1, and none of these is between -1 and 1.",
-      "clue": "Check each r. A negative r can still work."
+      "why": "\\(8 - 4 + 2 - 1\\) has \\(r = -\\frac{4}{8} = -\\frac{1}{2}\\), which is between \\(-1\\) and 1, so it has a limiting sum (\\(\\frac{16}{3}\\)). The negative sign does not stop it. The others have \\(r = 2\\), \\(r = -1\\) and \\(r = 1.1\\), and none of these is between \\(-1\\) and 1.",
+      "clue": "Check each \\(r\\). A negative \\(r\\) can still work."
     }
   },
   "mat-sigma-notation": {
     "title": "Sigma notation",
     "card": [
-      "The symbol Σ means \"add up\". It is a short way to write a sum of many terms.",
-      "The counter, such as k, is written below Σ with its first value, like k = 1. The last value is written above Σ. The first value does not have to be 1.",
-      "The rule to the right of Σ gives each term. Put in each value of the counter, from first to last, then add. The number of terms is last − first + 1.",
-      "Example: the sum from k = 1 to 4 of (2k + 1) = (2×1 + 1) + (2×2 + 1) + (2×3 + 1) + (2×4 + 1) = 3 + 5 + 7 + 9 = 24."
+      "The symbol \\(\\Sigma\\) means \"add up\". It is a short way to write a sum of many terms.",
+      "The counter, such as \\(k\\), is written below \\(\\Sigma\\) with its first value, like \\(k = 1\\). The last value is written above \\(\\Sigma\\). The first value does not have to be 1.",
+      "The rule to the right of \\(\\Sigma\\) gives each term. Put in each value of the counter, from first to last, then add. The number of terms is \\(\\text{last} - \\text{first} + 1\\).",
+      "Example: \\(\\sum_{k=1}^{4} (2k + 1) = (2 \\times 1 + 1) + (2 \\times 2 + 1) + (2 \\times 3 + 1) + (2 \\times 4 + 1) = 3 + 5 + 7 + 9 = 24\\)."
     ],
     "remember": "Put in each counter value from first to last, then add the terms.",
     "a": {
-      "q": "What is the sum from k = 1 to 3 of (k² + 1)?",
+      "q": "What is \\(\\sum_{k=1}^{3} (k^{2} + 1)\\)?",
       "opts": ["17", "14", "15", "9"],
-      "why": "The terms are (1 + 1) + (4 + 1) + (9 + 1) = 2 + 5 + 10 = 17. The answer 14 comes from adding 1² + 2² + 3² and forgetting the + 1 in each term.",
-      "clue": "Put k = 1, 2 and 3 into the rule, then add."
+      "why": "The terms are \\((1 + 1) + (4 + 1) + (9 + 1) = 2 + 5 + 10 = 17\\). The answer 14 comes from adding \\(1^{2} + 2^{2} + 3^{2}\\) and forgetting the \\(+1\\) in each term.",
+      "clue": "Put \\(k = 1\\), 2 and 3 into the rule, then add."
     },
     "b": {
       "d": 3,
-      "q": "What is the sum from n = 2 to 5 of (3n − 1)?",
+      "q": "What is \\(\\sum_{n=2}^{5} (3n - 1)\\)?",
       "opts": ["38", "40", "26", "33"],
-      "why": "Start at n = 2 and stop at n = 5: 5 + 8 + 11 + 14 = 38, which is 4 terms. The answer 40 comes from starting at n = 1, which adds an extra term of 2 that is not in the sum.",
+      "why": "Start at \\(n = 2\\) and stop at \\(n = 5\\): \\(5 + 8 + 11 + 14 = 38\\), which is 4 terms. The answer 40 comes from starting at \\(n = 1\\), which adds an extra term of 2 that is not in the sum.",
       "clue": "Check where the counter starts, and count the terms."
     }
   },
   "mat-derivatives-trigonometric-functions": {
     "title": "Derivatives of trigonometric functions",
     "card": [
-      "With x in radians: the derivative of sin x is cos x, of cos x is −sin x, and of tan x is sec²x. Here sec x means 1/cos x.",
+      "With \\(x\\) in radians: the derivative of \\(\\sin x\\) is \\(\\cos x\\), of \\(\\cos x\\) is \\(-\\sin x\\), and of \\(\\tan x\\) is \\(\\sec^{2} x\\). Here \\(\\sec x\\) means \\(\\frac{1}{\\cos x}\\).",
       "If the angle is a function, use the chain rule. Differentiate the trig function, keep the inside the same, then multiply by the derivative of the inside.",
-      "So d/dx [sin(f(x))] = f'(x) cos(f(x)), and d/dx [cos(f(x))] = −f'(x) sin(f(x)). For tan, d/dx [tan(f(x))] = f'(x) sec²(f(x)).",
-      ["Example", "y = sin(3x). The inside is 3x, and its derivative is 3. So dy/dx = 3cos(3x)."]
+      "So \\(\\frac{d}{dx} [\\sin(f(x))] = f'(x) \\cos(f(x))\\), and \\(\\frac{d}{dx} [\\cos(f(x))] = -f'(x) \\sin(f(x))\\). For \\(\\tan\\), \\(\\frac{d}{dx} [\\tan(f(x))] = f'(x) \\sec^{2}(f(x))\\).",
+      [
+        "Example",
+        "\\(y = \\sin(3x)\\). The inside is \\(3x\\), and its derivative is 3. So \\(\\frac{dy}{dx} = 3\\cos(3x)\\)."
+      ]
     ],
     "remember": "Differentiate the trig function, keep the inside, then multiply by the derivative of the inside.",
     "a": {
-      "q": "What is the derivative of cos(5x)?",
-      "opts": ["−5sin(5x)", "5sin(5x)", "−sin(5x)", "−5cos(5x)"],
-      "why": "The derivative of cos is −sin, and the inside 5x has derivative 5. So the answer is −5sin(5x). Leaving out the minus sign gives 5sin(5x), which is a common sign error.",
-      "clue": "The derivative of cos has a minus sign, and the inside also adds a factor."
+      "q": "What is the derivative of \\(\\cos(5x)\\)?",
+      "opts": ["\\(-5\\sin(5x)\\)", "\\(5\\sin(5x)\\)", "\\(-\\sin(5x)\\)", "\\(-5\\cos(5x)\\)"],
+      "why": "The derivative of \\(\\cos\\) is \\(-\\sin\\), and the inside \\(5x\\) has derivative 5. So the answer is \\(-5\\sin(5x)\\). Leaving out the minus sign gives \\(5\\sin(5x)\\), which is a common sign error.",
+      "clue": "The derivative of \\(\\cos\\) has a minus sign, and the inside also adds a factor."
     },
     "b": {
       "d": 3,
-      "q": "What is the gradient of y = tan(2x) at x = 0?",
-      "opts": ["2", "0", "1", "1/2"],
-      "why": "dy/dx = 2sec²(2x). At x = 0, sec²(0) = 1/cos²(0) = 1, so the gradient is 2 × 1 = 2. The answer 1 comes from forgetting to multiply by the derivative of 2x.",
-      "clue": "Use the chain rule first, then put x = 0 into sec²."
+      "q": "What is the gradient of \\(y = \\tan(2x)\\) at \\(x = 0\\)?",
+      "opts": ["2", "0", "1", "\\(\\frac{1}{2}\\)"],
+      "why": "\\(\\frac{dy}{dx} = 2\\sec^{2}(2x)\\). At \\(x = 0\\), \\(\\sec^{2}(0) = \\frac{1}{\\cos^{2}(0)} = 1\\), so the gradient is \\(2 \\times 1 = 2\\). The answer 1 comes from forgetting to multiply by the derivative of \\(2x\\).",
+      "clue": "Use the chain rule first, then put \\(x = 0\\) into \\(\\sec^{2}(2x)\\)."
     }
   },
   "mat-derivatives-exponentials-logarithms": {
     "title": "Derivatives of exponentials and logarithms",
     "card": [
-      "The derivative of eˣ is eˣ. For a general power, use the chain rule: the derivative of e^f(x) is f'(x) × e^f(x).",
-      "The derivative of ln x is 1/x. In general, the derivative of ln f(x) is f'(x)/f(x), which is the derivative of the inside divided by the inside.",
-      "Example: for y = e^(3x²), the inside is 3x², with derivative 6x. So dy/dx = 6x × e^(3x²).",
-      "Example: for y = ln(x² + 1), the inside is x² + 1, with derivative 2x. So dy/dx = 2x/(x² + 1)."
+      "The derivative of \\(e^{x}\\) is \\(e^{x}\\). For a general power, use the chain rule: the derivative of \\(e^{f(x)}\\) is \\(f'(x) \\times e^{f(x)}\\).",
+      "The derivative of \\(\\ln x\\) is \\(\\frac{1}{x}\\). In general, the derivative of \\(\\ln f(x)\\) is \\(\\frac{f'(x)}{f(x)}\\), which is the derivative of the inside divided by the inside.",
+      "Example: for \\(y = e^{3x^{2}}\\), the inside is \\(3x^{2}\\), with derivative \\(6x\\). So \\(\\frac{dy}{dx} = 6x \\times e^{3x^{2}}\\).",
+      "Example: for \\(y = \\ln(x^{2} + 1)\\), the inside is \\(x^{2} + 1\\), with derivative \\(2x\\). So \\(\\frac{dy}{dx} = \\frac{2x}{x^{2} + 1}\\)."
     ],
-    "remember": "Find the derivative of the inside. Multiply it by e^f(x), or put it over f(x) for ln.",
+    "remember": "Find the derivative of the inside. Multiply it by \\(e^{f(x)}\\), or put it over \\(f(x)\\) for \\(\\ln f(x)\\).",
     "a": {
-      "q": "What is the derivative of e^(5x)?",
-      "opts": ["5e^(5x)", "e^(5x)", "5x e^(5x−1)", "e^(5x)/5"],
-      "why": "The inside is 5x, with derivative 5. So the derivative is 5 × e^(5x). Leaving out the 5 is tempting because eˣ is its own derivative, but the chain rule needs the derivative of the inside.",
+      "q": "What is the derivative of \\(e^{5x}\\)?",
+      "opts": ["\\(5e^{5x}\\)", "\\(e^{5x}\\)", "\\(5x e^{5x - 1}\\)", "\\(\\frac{e^{5x}}{5}\\)"],
+      "why": "The inside is \\(5x\\), with derivative 5. So the derivative is \\(5 \\times e^{5x}\\). Leaving out the 5 is tempting because \\(e^{x}\\) is its own derivative, but the chain rule needs the derivative of the inside.",
       "clue": "Multiply by the derivative of the power."
     },
     "b": {
       "d": 3,
-      "q": "Mia is given y = ln(x³ + 4x). What is dy/dx?",
-      "opts": ["(3x² + 4)/(x³ + 4x)", "1/(x³ + 4x)", "(x³ + 4x)/(3x² + 4)", "(3x² + 4) ln(x³ + 4x)"],
-      "why": "The inside is x³ + 4x, with derivative 3x² + 4. The derivative of ln f(x) is f'(x)/f(x), so the answer is (3x² + 4)/(x³ + 4x). Writing only 1/(x³ + 4x) skips the derivative of the inside.",
+      "q": "Mia is given \\(y = \\ln(x^{3} + 4x)\\). What is \\(\\frac{dy}{dx}\\)?",
+      "opts": [
+        "\\(\\frac{3x^{2} + 4}{x^{3} + 4x}\\)",
+        "\\(\\frac{1}{x^{3} + 4x}\\)",
+        "\\(\\frac{x^{3} + 4x}{3x^{2} + 4}\\)",
+        "\\((3x^{2} + 4) \\ln(x^{3} + 4x)\\)"
+      ],
+      "why": "The inside is \\(x^{3} + 4x\\), with derivative \\(3x^{2} + 4\\). The derivative of \\(\\ln f(x)\\) is \\(\\frac{f'(x)}{f(x)}\\), so the answer is \\(\\frac{3x^{2} + 4}{x^{3} + 4x}\\). Writing only \\(\\frac{1}{x^{3} + 4x}\\) skips the derivative of the inside.",
       "clue": "Put the derivative of the inside on top."
     }
   },
   "mat-stationary-points": {
     "title": "Stationary points",
     "card": [
-      "A stationary point is where the gradient of the curve is zero. To find one, solve f'(x) = 0, then put each x value into f(x) to get the y value.",
+      "A stationary point is where the gradient of the curve is zero. To find one, solve \\(f'(x) = 0\\), then put each \\(x\\) value into f(x) to get the \\(y\\) value.",
       "To find its type, check the sign of f'(x) just before and just after the point, and record it in a table of gradients. Positive to zero to negative is a maximum. Negative to zero to positive is a minimum.",
       "If the gradient has the same sign on both sides, such as positive, zero, positive, the point is a horizontal point of inflection.",
-      "Example: f(x) = x³ − 3x², so f'(x) = 3x² − 6x = 3x(x − 2) = 0 at x = 0 or 2. At x = −1, 1 and 3, f' is 9, −3 and 9, so (0, 0) is a maximum and (2, −4) is a minimum."
+      "Example: \\(f(x) = x^{3} - 3x^{2}\\), so \\(f'(x) = 3x^{2} - 6x = 3x(x - 2) = 0\\) at \\(x = 0\\) or 2. At \\(x = -1\\), 1 and 3, f' is 9, \\(-3\\) and 9, so \\((0, 0)\\) is a maximum and \\((2, -4)\\) is a minimum."
     ],
-    "remember": "Solve f'(x) = 0, then test the gradient on each side to name the type.",
+    "remember": "Solve \\(f'(x) = 0\\), then test the gradient on each side to name the type.",
     "a": {
-      "q": "A curve has f'(x) = 0 at x = 4. The gradient is negative just before x = 4 and positive just after. What type of stationary point is it?",
+      "q": "A curve has \\(f'(x) = 0\\) at \\(x = 4\\). The gradient is negative just before \\(x = 4\\) and positive just after. What type of stationary point is it?",
       "opts": ["A minimum", "A maximum", "A horizontal point of inflection", "Not a stationary point"],
       "why": "The gradient goes from negative to zero to positive, so the curve falls and then rises. That is a minimum. It is not a maximum, because a maximum has the gradient going from positive to negative.",
       "clue": "Picture the curve going down and then up."
     },
     "b": {
       "d": 3,
-      "q": "For f(x) = x³ − 6x² + 9x, what is the stationary point at x = 3?",
-      "opts": ["A minimum at (3, 0)", "A maximum at (3, 0)", "A minimum at (3, 9)", "A horizontal inflection at (3, 0)"],
-      "why": "f'(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3), so f'(x) = 0 at x = 3. At x = 2, f' = −3, and at x = 4, f' = 9, so the gradient goes from negative to positive: a minimum. f(3) = 27 − 54 + 27 = 0, so the point is (3, 0), not (3, 9), which mixes up a gradient value with the y value.",
-      "clue": "Test the gradient at x = 2 and x = 4, then find f(3)."
+      "q": "For \\(f(x) = x^{3} - 6x^{2} + 9x\\), what is the stationary point at \\(x = 3\\)?",
+      "opts": [
+        "A minimum at \\((3, 0)\\)",
+        "A maximum at \\((3, 0)\\)",
+        "A minimum at \\((3, 9)\\)",
+        "A horizontal inflection at \\((3, 0)\\)"
+      ],
+      "why": "\\(f'(x) = 3x^{2} - 12x + 9 = 3(x - 1)(x - 3)\\), so \\(f'(x) = 0\\) at \\(x = 3\\). At \\(x = 2\\), \\(f' = -3\\), and at \\(x = 4\\), \\(f' = 9\\), so the gradient goes from negative to positive: a minimum. \\(f(3) = 27 - 54 + 27 = 0\\), so the point is \\((3, 0)\\), not \\((3, 9)\\), which mixes up a gradient value with the \\(y\\) value.",
+      "clue": "Test the gradient at \\(x = 2\\) and \\(x = 4\\), then find f(3)."
     }
   },
   "mat-second-derivative-concavity": {
     "title": "The second derivative and concavity",
     "card": [
       "The second derivative f''(x) is the derivative of f'(x). It tells you how the gradient is changing.",
-      ["Concave up", "f''(x) > 0. The gradient is increasing and the curve bends upwards like a cup."],
-      ["Concave down", "f''(x) < 0. The gradient is decreasing and the curve bends downwards like a cap."],
-      "A point of inflection is where concavity changes, so f''(x) changes sign there. Example: f(x) = x³ has f'(x) = 3x² and f''(x) = 6x. This is negative for x < 0 and positive for x > 0, so the concavity changes at x = 0."
+      ["Concave up", "\\(f''(x) > 0\\). The gradient is increasing and the curve bends upwards like a cup."],
+      ["Concave down", "\\(f''(x) < 0\\). The gradient is decreasing and the curve bends downwards like a cap."],
+      "A point of inflection is where concavity changes, so f''(x) changes sign there. Example: \\(f(x) = x^{3}\\) has \\(f'(x) = 3x^{2}\\) and \\(f''(x) = 6x\\). This is negative for \\(x < 0\\) and positive for \\(x > 0\\), so the concavity changes at \\(x = 0\\)."
     ],
     "remember": "Sign of f''(x) gives the concavity. A change of sign gives a point of inflection.",
     "a": {
-      "q": "For f(x) = x³ − 3x², f''(x) = 6x − 6. Where is the curve concave up?",
-      "opts": ["x > 1", "x < 1", "x > 0", "x > 2"],
-      "why": "The curve is concave up where 6x − 6 > 0, which gives x > 1. The option x < 1 is tempting, but there f''(x) is negative, so the curve is concave down.",
-      "clue": "Solve f''(x) > 0."
+      "q": "For \\(f(x) = x^{3} - 3x^{2}\\), \\(f''(x) = 6x - 6\\). Where is the curve concave up?",
+      "opts": ["\\(x > 1\\)", "\\(x < 1\\)", "\\(x > 0\\)", "\\(x > 2\\)"],
+      "why": "The curve is concave up where \\(6x - 6 > 0\\), which gives \\(x > 1\\). The option \\(x < 1\\) is tempting, but there f''(x) is negative, so the curve is concave down.",
+      "clue": "Solve \\(f''(x) > 0\\)."
     },
     "b": {
       "d": 3,
-      "q": "f(x) = x⁴ has f''(x) = 12x². Which statement about the point (0, 0) is true?",
+      "q": "\\(f(x) = x^{4}\\) has \\(f''(x) = 12x^{2}\\). Which statement about the point \\((0, 0)\\) is true?",
       "opts": [
         "Not an inflection point, as f''(x) does not change sign",
-        "An inflection point, as f''(x) = 0 when x = 0 on the curve",
-        "An inflection point, as the curve is concave up near x = 0",
-        "Not an inflection point, as f''(x) is negative near x = 0"
+        "An inflection point, as \\(f''(x) = 0\\) when \\(x = 0\\) on the curve",
+        "An inflection point, as the curve is concave up near \\(x = 0\\)",
+        "Not an inflection point, as f''(x) is negative near \\(x = 0\\)"
       ],
-      "why": "f''(x) = 12x² is positive on both sides of x = 0, so the concavity does not change and there is no point of inflection. The tempting option says f''(0) = 0 is enough, but the sign of f''(x) must change.",
-      "clue": "Check the sign of f''(x) on each side of x = 0."
+      "why": "\\(f''(x) = 12x^{2}\\) is positive on both sides of \\(x = 0\\), so the concavity does not change and there is no point of inflection. The tempting option says \\(f''(0) = 0\\) is enough, but the sign of f''(x) must change.",
+      "clue": "Check the sign of f''(x) on each side of \\(x = 0\\)."
     }
   },
   "mat-curve-sketching-with-calculus": {
     "title": "Curve sketching with calculus",
     "card": [
-      ["Intercepts", "Put x = 0 to find the y-intercept. Solve f(x) = 0 to find the x-intercepts."],
+      ["Intercepts", "Put \\(x = 0\\) to find the y-intercept. Solve \\(f(x) = 0\\) to find the x-intercepts."],
       [
         "Stationary points",
-        "Solve f'(x) = 0 and find each y-value. The gradient either side shows whether each is a maximum, a minimum or a horizontal point of inflection. Also mark any other points of inflection."
+        "Solve \\(f'(x) = 0\\) and find each y-value. The gradient either side shows whether each is a maximum, a minimum or a horizontal point of inflection. Also mark any other points of inflection."
       ],
       [
         "Edges",
-        "Check what f(x) does for very large positive and negative x. For a polynomial, the term with the highest power decides this."
+        "Check what \\(f(x)\\) does for very large positive and negative \\(x\\). For a polynomial, the term with the highest power decides this."
       ],
       [
         "Example",
-        "f(x) = x³ − 3x² = x²(x − 3) cuts the axes at (0, 0) and (3, 0). f'(x) = 3x(x − 2) gives stationary points (0, 0), a maximum, and (2, −4), a minimum. There is a point of inflection at (1, −2). As x → ∞, f(x) → ∞, and as x → −∞, f(x) → −∞."
+        "\\(f(x) = x^{3} - 3x^{2} = x^{2}(x - 3)\\) cuts the axes at \\((0, 0)\\) and \\((3, 0)\\). \\(f'(x) = 3x(x - 2)\\) gives stationary points \\((0, 0)\\), a maximum, and \\((2, -4)\\), a minimum. There is a point of inflection at \\((1, -2)\\). As \\(x \\to \\infty\\), \\(f(x) \\to \\infty\\), and as \\(x \\to -\\infty\\), \\(f(x) \\to -\\infty\\)."
       ]
     ],
     "remember": "Plot the intercepts, stationary points and inflections, then join them to match the edge behaviour.",
     "a": {
-      "q": "What does the graph of y = x³ − 3x² do as x gets very large and negative?",
-      "opts": ["It falls without bound", "It rises without bound", "It levels off at 0", "It levels off at −3"],
-      "why": "For large x, the x³ term outweighs the −3x² term. A large negative number cubed is a large negative number, so y falls without bound. The graph does not level off, because a cubic has no horizontal limit.",
-      "clue": "Which term is largest when x is huge? What sign does it have for negative x?"
+      "q": "What does the graph of \\(y = x^{3} - 3x^{2}\\) do as \\(x\\) gets very large and negative?",
+      "opts": ["It falls without bound", "It rises without bound", "It levels off at 0", "It levels off at \\(-3\\)"],
+      "why": "For large \\(x\\), the \\(x^{3}\\) term outweighs the \\(-3x^{2}\\) term. A large negative number cubed is a large negative number, so \\(y\\) falls without bound. The graph does not level off, because a cubic has no horizontal limit.",
+      "clue": "Which term is largest when \\(x\\) is huge? What sign does it have for negative \\(x\\)?"
     },
     "b": {
       "d": 3,
-      "q": "For f(x) = x³ − 12x, what are the coordinates of the maximum turning point?",
-      "opts": ["(−2, 16)", "(2, −16)", "(−2, −16)", "(2, 16)"],
-      "why": "f'(x) = 3x² − 12 = 0 gives x = 2 or x = −2. f(−2) = −8 + 24 = 16. The gradient is positive at x = −3 and negative at x = 0, so (−2, 16) is a maximum. (2, −16) is tempting but is the minimum.",
-      "clue": "Solve f'(x) = 0, then check the gradient either side of each x-value."
+      "q": "For \\(f(x) = x^{3} - 12x\\), what are the coordinates of the maximum turning point?",
+      "opts": ["\\((-2, 16)\\)", "\\((2, -16)\\)", "\\((-2, -16)\\)", "\\((2, 16)\\)"],
+      "why": "\\(f'(x) = 3x^{2} - 12 = 0\\) gives \\(x = 2\\) or \\(x = -2\\). \\(f(-2) = -8 + 24 = 16\\). The gradient is positive at \\(x = -3\\) and negative at \\(x = 0\\), so \\((-2, 16)\\) is a maximum. \\((2, -16)\\) is tempting but is the minimum.",
+      "clue": "Solve \\(f'(x) = 0\\), then check the gradient either side of each x-value."
     }
   },
   "mat-antiderivatives": {
     "title": "Antiderivatives",
     "card": [
-      "An antiderivative undoes differentiation. If F'(x) = f(x), then F(x) is an antiderivative of f(x).",
-      "Power rule: the antiderivative of xⁿ is xⁿ⁺¹/(n + 1) + C, for n ≠ -1. Add 1 to the power and divide by the new power, one term at a time, keeping any constant multiple in front.",
-      "C is the constant of integration. Constants vanish when we differentiate, so the general antiderivative, which covers all antiderivatives, includes + C.",
-      "Example: 6x² gives 6 × x³/3 + C = 2x³ + C. If a curve with gradient 6x² passes through (1, 7), then 7 = 2 + C, so C = 5 and y = 2x³ + 5."
+      "An antiderivative undoes differentiation. If \\(F'(x) = f(x)\\), then \\(F(x)\\) is an antiderivative of \\(f(x)\\).",
+      "Power rule: the antiderivative of \\(x^{n}\\) is \\(\\frac{x^{n + 1}}{n + 1} + C\\), for \\(n \\ne -1\\). Add 1 to the power and divide by the new power, one term at a time, keeping any constant multiple in front.",
+      "\\(C\\) is the constant of integration. Constants vanish when we differentiate, so the general antiderivative, which covers all antiderivatives, includes \\(+ C\\).",
+      "Example: \\(6x^{2}\\) gives \\(6 \\times \\frac{x^{3}}{3} + C = 2x^{3} + C\\). If a curve with gradient \\(6x^{2}\\) passes through \\((1, 7)\\), then \\(7 = 2 + C\\), so \\(C = 5\\) and \\(y = 2x^{3} + 5\\)."
     ],
-    "remember": "Add 1 to the power, divide by the new power, add C, then use a known point to find C.",
+    "remember": "Add 1 to the power, divide by the new power, add \\(C\\), then use a known point to find \\(C\\).",
     "a": {
-      "q": "What is the general antiderivative of 8x³?",
-      "opts": ["2x⁴ + C", "24x² + C", "8x⁴ + C", "8x⁴/3 + C"],
-      "why": "Raise the power to 4, then divide by 4: 8x⁴/4 = 2x⁴, so the general antiderivative is 2x⁴ + C. Differentiating 2x⁴ gives 8x³, which confirms it. 24x² + C comes from differentiating instead, and 8x⁴/3 + C divides by the old power.",
+      "q": "What is the general antiderivative of \\(8x^{3}\\)?",
+      "opts": ["\\(2x^{4} + C\\)", "\\(24x^{2} + C\\)", "\\(8x^{4} + C\\)", "\\(\\frac{8x^{4}}{3} + C\\)"],
+      "why": "Raise the power to 4, then divide by 4: \\(\\frac{8x^{4}}{4} = 2x^{4}\\), so the general antiderivative is \\(2x^{4} + C\\). Differentiating \\(2x^{4}\\) gives \\(8x^{3}\\), which confirms it. \\(24x^{2} + C\\) comes from differentiating instead, and \\(\\frac{8x^{4}}{3} + C\\) divides by the old power.",
       "clue": "Divide by the new power, not the old one."
     },
     "b": {
       "d": 3,
-      "q": "A curve has gradient function dy/dx = 3x² − 4x and passes through (1, 5). What is its equation?",
-      "opts": ["y = x³ − 2x² + 6", "y = x³ − 2x² + 5", "y = x³ − 4x² + 8", "y = x³ − 2x² + 4"],
-      "why": "Term by term, the antiderivative is y = x³ − 2x² + C. Putting in (1, 5): 1 − 2 + C = 5, so C = 6. Using 5 as C without substituting is the tempting mistake, and y = x³ − 4x² + 8 passes through the point but forgets to divide −4x² by 2.",
-      "clue": "Find the antiderivative first, then substitute the point to find C."
+      "q": "A curve has gradient function \\(\\frac{dy}{dx} = 3x^{2} - 4x\\) and passes through \\((1, 5)\\). What is its equation?",
+      "opts": [
+        "\\(y = x^{3} - 2x^{2} + 6\\)",
+        "\\(y = x^{3} - 2x^{2} + 5\\)",
+        "\\(y = x^{3} - 4x^{2} + 8\\)",
+        "\\(y = x^{3} - 2x^{2} + 4\\)"
+      ],
+      "why": "Term by term, the antiderivative is \\(y = x^{3} - 2x^{2} + C\\). Putting in \\((1, 5)\\): \\(1 - 2 + C = 5\\), so \\(C = 6\\). Using 5 as \\(C\\) without substituting is the tempting mistake, and \\(y = x^{3} - 4x^{2} + 8\\) passes through the point but forgets to divide \\(-4x^{2}\\) by 2.",
+      "clue": "Find the antiderivative first, then substitute the point to find \\(C\\)."
     }
   },
   "mat-integrals-exponential-trigonometric-functions": {
     "title": "Integrals of exponential and trig functions",
     "card": [
-      "Each rule comes from reversing a derivative. ∫eˣ dx = eˣ + C. ∫cos x dx = sin x + C. ∫sec²x dx = tan x + C.",
-      "Watch the sign for sine: ∫sin x dx = −cos x + C, because the derivative of cos x is −sin x.",
-      "If the inside is linear, ax + b, divide by a. ∫e^(ax+b) dx = e^(ax+b) ÷ a + C. ∫cos(ax+b) dx = sin(ax+b) ÷ a + C. The same works for sin and sec².",
-      "Example: ∫e³ˣ dx = e³ˣ/3 + C. Check by differentiating: the derivative of e³ˣ/3 is 3e³ˣ/3 = e³ˣ."
+      "Each rule comes from reversing a derivative. \\(\\int e^{x} \\, dx = e^{x} + C\\). \\(\\int \\cos x \\, dx = \\sin x + C\\). \\(\\int \\sec^{2} x \\, dx = \\tan x + C\\).",
+      "Watch the sign for sine: \\(\\int \\sin x \\, dx = -\\cos x + C\\), because the derivative of \\(\\cos x\\) is \\(-\\sin x\\).",
+      "If the inside is linear, \\(ax + b\\), divide by \\(a\\). \\(\\int e^{ax + b} \\, dx = \\frac{e^{ax + b}}{a} + C\\). \\(\\int \\cos(ax + b) \\, dx = \\frac{\\sin(ax + b)}{a} + C\\). The same works for \\(\\sin\\) and \\(\\sec^{2}\\).",
+      "Example: \\(\\int e^{3x} \\, dx = \\frac{e^{3x}}{3} + C\\). Check by differentiating: the derivative of \\(\\frac{e^{3x}}{3}\\) is \\(\\frac{3e^{3x}}{3} = e^{3x}\\)."
     ],
-    "remember": "Integrate the function, then divide by the number in front of x. Sine gives −cos.",
+    "remember": "Integrate the function, then divide by the number in front of \\(x\\). Sine gives \\(-\\cos\\).",
     "a": {
-      "q": "What is ∫sin x dx?",
-      "opts": ["−cos x + C", "cos x + C", "−sin x + C", "sin²x/2 + C"],
-      "why": "The derivative of −cos x is sin x, so −cos x + C is the integral. cos x + C is tempting, but its derivative is −sin x, which has the wrong sign.",
-      "clue": "Differentiate your answer and see if you get sin x."
+      "q": "What is \\(\\int \\sin x \\, dx\\)?",
+      "opts": ["\\(-\\cos x + C\\)", "\\(\\cos x + C\\)", "\\(-\\sin x + C\\)", "\\(\\frac{\\sin^{2} x}{2} + C\\)"],
+      "why": "The derivative of \\(-\\cos x\\) is \\(\\sin x\\), so \\(-\\cos x + C\\) is the integral. \\(\\cos x + C\\) is tempting, but its derivative is \\(-\\sin x\\), which has the wrong sign.",
+      "clue": "Differentiate your answer and see if you get \\(\\sin x\\)."
     },
     "b": {
       "d": 3,
-      "q": "What is ∫cos(2x) dx?",
-      "opts": ["sin(2x)/2 + C", "2 sin(2x) + C", "−sin(2x)/2 + C", "sin(2x) + C"],
-      "why": "Divide by the 2 in front of x, so the integral is sin(2x)/2 + C. Differentiating gives 2cos(2x)/2 = cos(2x). Multiplying by 2 instead is a common slip, and sin(2x) + C would differentiate to 2cos(2x).",
-      "clue": "Differentiating sin(2x) brings out an extra factor. Cancel it."
+      "q": "What is \\(\\int \\cos(2x) \\, dx\\)?",
+      "opts": [
+        "\\(\\frac{\\sin(2x)}{2} + C\\)",
+        "\\(2\\sin(2x) + C\\)",
+        "\\(-\\frac{\\sin(2x)}{2} + C\\)",
+        "\\(\\sin(2x) + C\\)"
+      ],
+      "why": "Divide by the 2 in front of \\(x\\), so the integral is \\(\\frac{\\sin(2x)}{2} + C\\). Differentiating gives \\(\\frac{2\\cos(2x)}{2} = \\cos(2x)\\). Multiplying by 2 instead is a common slip, and \\(\\sin(2x) + C\\) would differentiate to \\(2\\cos(2x)\\).",
+      "clue": "Differentiating \\(\\sin(2x)\\) brings out an extra factor. Cancel it."
     }
   },
   "mat-integrals-giving-logarithms": {
     "title": "Integrals giving logarithms",
     "card": [
-      "The integral of 1/x is ln|x| + C. The absolute value bars are there because 1/x is defined for negative x too, but ln is only defined for positive numbers.",
-      "More generally, if the top of a fraction is the derivative of the bottom, the integral is ln|bottom| + C. In symbols: ∫ f'(x)/f(x) dx = ln|f(x)| + C.",
-      "Worked example: ∫ 2x/(x² + 1) dx. The derivative of x² + 1 is 2x, which is the top. So the answer is ln(x² + 1) + C. Here x² + 1 is always positive, so the bars are not needed.",
-      "If the top is only a constant multiple of the derivative, take the constant out. For ∫ 3/(3x + 5) dx, the derivative of 3x + 5 is 3, so the answer is ln|3x + 5| + C. For ∫ 1/(3x + 5) dx, the top is 1, which is 1/3 of 3, so the answer is (1/3) ln|3x + 5| + C."
+      "The integral of \\(\\frac{1}{x}\\) is \\(\\ln|x| + C\\). The absolute value bars are there because \\(\\frac{1}{x}\\) is defined for negative \\(x\\) too, but \\(\\ln\\) is only defined for positive numbers.",
+      "More generally, if the top of a fraction is the derivative of the bottom, the integral is \\(\\ln|\\text{bottom}| + C\\). In symbols: \\(\\int \\frac{f'(x)}{f(x)} \\, dx = \\ln|f(x)| + C\\).",
+      "Worked example: \\(\\int \\frac{2x}{x^{2} + 1} \\, dx\\). The derivative of \\(x^{2} + 1\\) is \\(2x\\), which is the top. So the answer is \\(\\ln(x^{2} + 1) + C\\). Here \\(x^{2} + 1\\) is always positive, so the bars are not needed.",
+      "If the top is only a constant multiple of the derivative, take the constant out. For \\(\\int \\frac{3}{3x + 5} \\, dx\\), the derivative of \\(3x + 5\\) is 3, so the answer is \\(\\ln|3x + 5| + C\\). For \\(\\int \\frac{1}{3x + 5} \\, dx\\), the top is 1, which is \\(\\frac{1}{3}\\) of 3, so the answer is \\(\\frac{1}{3} \\ln|3x + 5| + C\\)."
     ],
-    "remember": "Top is the derivative of the bottom: the integral is ln|bottom| + C.",
+    "remember": "Top is the derivative of the bottom: the integral is \\(\\ln|\\text{bottom}| + C\\).",
     "a": {
-      "q": "What is ∫ 4x³/(x⁴ + 7) dx?",
-      "opts": ["ln(x⁴ + 7) + C", "4 ln(x⁴ + 7) + C", "x⁴/(x⁴ + 7) + C", "(x⁴ + 7)⁻¹ + C"],
-      "why": "The derivative of x⁴ + 7 is 4x³, which is exactly the top, so the answer is ln(x⁴ + 7) + C. Multiplying by 4 is wrong because the 4 is already part of the derivative and is not an extra factor.",
+      "q": "What is \\(\\int \\frac{4x^{3}}{x^{4} + 7} \\, dx\\)?",
+      "opts": [
+        "\\(\\ln(x^{4} + 7) + C\\)",
+        "\\(4\\ln(x^{4} + 7) + C\\)",
+        "\\(\\frac{x^{4}}{x^{4} + 7} + C\\)",
+        "\\((x^{4} + 7)^{-1} + C\\)"
+      ],
+      "why": "The derivative of \\(x^{4} + 7\\) is \\(4x^{3}\\), which is exactly the top, so the answer is \\(\\ln(x^{4} + 7) + C\\). Multiplying by 4 is wrong because the 4 is already part of the derivative and is not an extra factor.",
       "clue": "Differentiate the bottom and compare it with the top."
     },
     "b": {
       "d": 3,
-      "q": "What is ∫ 1/(2x + 1) dx, for x > 0?",
-      "opts": ["(1/2) ln(2x + 1) + C", "ln(2x + 1) + C", "2 ln(2x + 1) + C", "−1/(2x + 1)² + C"],
-      "why": "The derivative of 2x + 1 is 2, but the top is only 1, which is half of 2. So the answer is (1/2) ln(2x + 1) + C. Check by differentiating: (1/2) × 2/(2x + 1) = 1/(2x + 1). Leaving out the 1/2 is the tempting mistake.",
-      "clue": "Differentiate your answer: do you get back 1/(2x + 1)?"
+      "q": "What is \\(\\int \\frac{1}{2x + 1} \\, dx\\), for \\(x > 0\\)?",
+      "opts": [
+        "\\(\\frac{1}{2} \\ln(2x + 1) + C\\)",
+        "\\(\\ln(2x + 1) + C\\)",
+        "\\(2\\ln(2x + 1) + C\\)",
+        "\\(-\\frac{1}{(2x + 1)^{2}} + C\\)"
+      ],
+      "why": "The derivative of \\(2x + 1\\) is 2, but the top is only 1, which is half of 2. So the answer is \\(\\frac{1}{2} \\ln(2x + 1) + C\\). Check by differentiating: \\(\\frac{1}{2} \\times \\frac{2}{2x + 1} = \\frac{1}{2x + 1}\\). Leaving out the \\(\\frac{1}{2}\\) is the tempting mistake.",
+      "clue": "Differentiate your answer: do you get back \\(\\frac{1}{2x + 1}\\)?"
     }
   },
   "mat-definite-integral": {
     "title": "The definite integral",
     "card": [
-      "The definite integral of f(x) from a to b is written ∫ f(x) dx, with a at the bottom and b at the top. a and b are called the limits.",
-      "To find it, first find an antiderivative F(x). Then the value is F(b) − F(a): put in the top limit, put in the bottom limit, and subtract. This is the fundamental theorem of calculus.",
-      "The constant C is not needed. It would appear in both F(b) and F(a), so it cancels.",
-      ["Example", "For the integral of 2x from 1 to 3, F(x) = x². Then F(3) − F(1) = 9 − 1 = 8."]
+      "The definite integral of \\(f(x)\\) from \\(a\\) to \\(b\\) is written \\(\\int_{a}^{b} f(x) \\, dx\\), with \\(a\\) at the bottom and \\(b\\) at the top. \\(a\\) and \\(b\\) are called the limits.",
+      "To find it, first find an antiderivative \\(F(x)\\). Then the value is \\(F(b) - F(a)\\): put in the top limit, put in the bottom limit, and subtract. This is the fundamental theorem of calculus.",
+      "The constant \\(C\\) is not needed. It would appear in both \\(F(b)\\) and \\(F(a)\\), so it cancels.",
+      ["Example", "For \\(\\int_{1}^{3} 2x \\, dx\\), \\(F(x) = x^{2}\\). Then \\(F(3) - F(1) = 9 - 1 = 8\\)."]
     ],
-    "remember": "Definite integral = F(top) − F(bottom), and C cancels.",
+    "remember": "A definite integral is \\(F(\\text{top}) - F(\\text{bottom})\\), and \\(C\\) cancels.",
     "a": {
-      "q": "What is the value of the integral of 3x² from 1 to 2?",
+      "q": "What is the value of \\(\\int_{1}^{2} 3x^{2} \\, dx\\)?",
       "opts": ["7", "8", "1", "5"],
-      "why": "An antiderivative of 3x² is x³. Then F(2) − F(1) = 8 − 1 = 7. The answer 8 comes from using only F(2) and forgetting to subtract F(1).",
-      "clue": "Find F(x), then subtract the bottom value from the top."
+      "why": "An antiderivative of \\(3x^{2}\\) is \\(x^{3}\\). Then \\(F(2) - F(1) = 8 - 1 = 7\\). The answer 8 comes from using only \\(F(2)\\) and forgetting to subtract \\(F(1)\\).",
+      "clue": "Find \\(F(x)\\), then subtract the bottom value from the top."
     },
     "b": {
       "d": 3,
-      "q": "What is the value of the integral of (4x − 1) from 0 to 3?",
-      "opts": ["15", "18", "−15", "21"],
-      "why": "An antiderivative is 2x² − x. Then F(3) = 18 − 3 = 15 and F(0) = 0, so the value is 15 − 0 = 15. The answer 18 comes from forgetting to integrate the −1 term, and −15 comes from subtracting in the wrong order.",
+      "q": "What is the value of \\(\\int_{0}^{3} (4x - 1) \\, dx\\)?",
+      "opts": ["15", "18", "\\(-15\\)", "21"],
+      "why": "An antiderivative is \\(2x^{2} - x\\). Then \\(F(3) = 18 - 3 = 15\\) and \\(F(0) = 0\\), so the value is \\(15 - 0 = 15\\). The answer 18 comes from forgetting to integrate the \\(-1\\) term, and \\(-15\\) comes from subtracting in the wrong order.",
       "clue": "Integrate both terms, then put in 3 and 0."
     }
   },
   "mat-areas-under-curves": {
     "title": "Areas under curves",
     "card": [
-      "The definite integral of f(x) from a to b gives signed area between the curve and the x-axis. Area above the x-axis counts as positive. Area below counts as negative.",
-      "If a curve crosses the x-axis between a and b, the positive and negative parts partly cancel. The integral then does not give the total area.",
-      "To find the total area, solve f(x) = 0 to find where the curve crosses the axis. Integrate each region separately. Take each result as a positive value, then add.",
-      "Example: y = x² − 4 from x = 0 to x = 3. It crosses at x = 2. From 0 to 2: [x³/3 − 4x] = 8/3 − 8 = −16/3, so the area is 16/3. From 2 to 3: (9 − 12) − (8/3 − 8) = −3 + 16/3 = 7/3. Total area = 16/3 + 7/3 = 23/3."
+      "The definite integral of \\(f(x)\\) from \\(a\\) to \\(b\\) gives signed area between the curve and the x-axis. Area above the x-axis counts as positive. Area below counts as negative.",
+      "If a curve crosses the x-axis between \\(a\\) and \\(b\\), the positive and negative parts partly cancel. The integral then does not give the total area.",
+      "To find the total area, solve \\(f(x) = 0\\) to find where the curve crosses the axis. Integrate each region separately. Take each result as a positive value, then add.",
+      "Example: \\(y = x^{2} - 4\\) from \\(x = 0\\) to \\(x = 3\\). It crosses at \\(x = 2\\). From 0 to 2: \\(\\left[\\frac{x^{3}}{3} - 4x\\right]_{0}^{2} = \\frac{8}{3} - 8 = -\\frac{16}{3}\\), so the area is \\(\\frac{16}{3}\\). From 2 to 3: \\((9 - 12) - (\\frac{8}{3} - 8) = -3 + \\frac{16}{3} = \\frac{7}{3}\\). The total area is \\(\\frac{16}{3} + \\frac{7}{3} = \\frac{23}{3}\\)."
     ],
     "remember": "Integrals give signed area, so split at each x-intercept and add the positive sizes.",
     "a": {
-      "q": "The integral of f(x) from 1 to 4 is −6, and the whole region lies below the x-axis. What is the area of the region?",
-      "opts": ["6 square units", "−6 square units", "0 square units", "3 square units"],
-      "why": "Area below the x-axis gives a negative integral, but an area is positive. The area is the size of −6, which is 6. Leaving it as −6 mixes up signed area with area.",
+      "q": "The value of \\(\\int_{1}^{4} f(x) \\, dx\\) is \\(-6\\), and the whole region lies below the x-axis. What is the area of the region?",
+      "opts": ["6 square units", "\\(-6\\) square units", "0 square units", "3 square units"],
+      "why": "Area below the x-axis gives a negative integral, but an area is positive. The area is the size of \\(-6\\), which is 6. Leaving it as \\(-6\\) mixes up signed area with area.",
       "clue": "An area cannot be negative."
     },
     "b": {
       "d": 3,
-      "q": "What is the total area between y = x² − 1 and the x-axis from x = 0 to x = 2?",
-      "opts": ["2 square units", "2/3 square units", "8/3 square units", "4/3 square units"],
-      "why": "The curve crosses at x = 1. From 0 to 1: [x³/3 − x] = −2/3, so area 2/3. From 1 to 2: (8/3 − 2) − (1/3 − 1) = 2/3 + 2/3 = 4/3. Total = 2/3 + 4/3 = 2. The single integral from 0 to 2 gives 2/3, which is the tempting wrong answer because the parts cancel.",
+      "q": "What is the total area between \\(y = x^{2} - 1\\) and the x-axis from \\(x = 0\\) to \\(x = 2\\)?",
+      "opts": [
+        "2 square units",
+        "\\(\\frac{2}{3}\\) square units",
+        "\\(\\frac{8}{3}\\) square units",
+        "\\(\\frac{4}{3}\\) square units"
+      ],
+      "why": "The curve crosses at \\(x = 1\\). From 0 to 1: \\(\\left[\\frac{x^{3}}{3} - x\\right]_{0}^{1} = -\\frac{2}{3}\\), so the area is \\(\\frac{2}{3}\\). From 1 to 2: \\((\\frac{8}{3} - 2) - (\\frac{1}{3} - 1) = \\frac{2}{3} + \\frac{2}{3} = \\frac{4}{3}\\). The total is \\(\\frac{2}{3} + \\frac{4}{3} = 2\\). The single integral from 0 to 2 gives \\(\\frac{2}{3}\\), which is the tempting wrong answer because the parts cancel.",
       "clue": "Find where the curve crosses the x-axis, then split the integral there."
     }
   },
   "mat-area-between-two-curves": {
     "title": "Area between two curves",
     "card": [
-      "To find the area between two curves, subtract the lower function from the upper one, then integrate. Area = ∫ (upper − lower) dx.",
-      "The limits are where the curves meet. Set f(x) = g(x) and solve for x to find them.",
+      "To find the area between two curves, subtract the lower function from the upper one, then integrate: \\(\\text{area} = \\int (\\text{upper} - \\text{lower}) \\, dx\\).",
+      "The limits are where the curves meet. Set \\(f(x) = g(x)\\) and solve for \\(x\\) to find them.",
       "Check which curve is on top between the limits, for example by testing a point. Subtracting the wrong way gives a negative area.",
-      "Example: y = x and y = x² meet where x = x², so at x = 0 and x = 1. Between them x is on top. Area = ∫ from 0 to 1 of (x − x²) dx = [x²/2 − x³/3] from 0 to 1 = 1/2 − 1/3 = 1/6."
+      "Example: \\(y = x\\) and \\(y = x^{2}\\) meet where \\(x = x^{2}\\), so at \\(x = 0\\) and \\(x = 1\\). Between them \\(y = x\\) is on top. The area is \\(\\int_{0}^{1} (x - x^{2}) \\, dx = \\left[\\frac{x^{2}}{2} - \\frac{x^{3}}{3}\\right]_{0}^{1} = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6}\\)."
     ],
-    "remember": "Area between curves = integral of (upper − lower), from one intersection to the next.",
+    "remember": "The area between curves is the integral of \\(\\text{upper} - \\text{lower}\\), from one intersection to the next.",
     "a": {
-      "q": "Which integral gives the area between y = x and y = x² from x = 0 to x = 1, where y = x is the upper curve?",
+      "q": "Which integral gives the area between \\(y = x\\) and \\(y = x^{2}\\) from \\(x = 0\\) to \\(x = 1\\), where \\(y = x\\) is the upper curve?",
       "opts": [
-        "∫ from 0 to 1 of (x − x²) dx",
-        "∫ from 0 to 1 of (x² − x) dx",
-        "∫ from 0 to 1 of (x + x²) dx",
-        "∫ from 0 to 1 of (x · x²) dx"
+        "\\(\\int_{0}^{1} (x - x^{2}) \\, dx\\)",
+        "\\(\\int_{0}^{1} (x^{2} - x) \\, dx\\)",
+        "\\(\\int_{0}^{1} (x + x^{2}) \\, dx\\)",
+        "\\(\\int_{0}^{1} (x \\cdot x^{2}) \\, dx\\)"
       ],
-      "why": "The area is the upper function minus the lower one, and y = x is on top, so the integrand is x − x². Using x² − x gives the right size with the wrong sign, a negative answer.",
+      "why": "The area is the upper function minus the lower one, and \\(y = x\\) is on top, so the integrand is \\(x - x^{2}\\). Using \\(x^{2} - x\\) gives the right size with the wrong sign, a negative answer.",
       "clue": "Take the lower curve away from the upper curve."
     },
     "b": {
       "d": 2,
-      "q": "The line y = 4 and the curve y = x² meet at x = −2 and x = 2, with the line on top. What is the area between them?",
-      "opts": ["32/3", "16/3", "16", "64/3"],
-      "why": "Area = ∫ from −2 to 2 of (4 − x²) dx = [4x − x³/3] from −2 to 2 = (8 − 8/3) − (−8 + 8/3) = 32/3. Using only 0 to 2 gives 16/3, which is just half of the area.",
-      "clue": "The region runs from x = −2 to x = 2, not from 0."
+      "q": "The line \\(y = 4\\) and the curve \\(y = x^{2}\\) meet at \\(x = -2\\) and \\(x = 2\\), with the line on top. What is the area between them?",
+      "opts": ["\\(\\frac{32}{3}\\)", "\\(\\frac{16}{3}\\)", "16", "\\(\\frac{64}{3}\\)"],
+      "why": "The area is \\(\\int_{-2}^{2} (4 - x^{2}) \\, dx = \\left[4x - \\frac{x^{3}}{3}\\right]_{-2}^{2} = (8 - \\frac{8}{3}) - (-8 + \\frac{8}{3}) = \\frac{32}{3}\\). Using only 0 to 2 gives \\(\\frac{16}{3}\\), which is just half of the area.",
+      "clue": "The region runs from \\(x = -2\\) to \\(x = 2\\), not from 0."
     }
   },
   "mat-trapezoidal-rule": {
     "title": "The trapezoidal rule",
     "card": [
-      "The trapezoidal rule estimates a definite integral when an exact antiderivative is hard to find or the data comes as a table. Split the area into strips of equal width h, and treat each strip as a trapezium.",
-      "A trapezium has area (sum of parallel sides) ÷ 2 × width. With n strips, h = (b − a) ÷ n, and the function values are y₀, y₁, ..., yₙ.",
-      "Adding the strips: area ≈ h/2 × [y₀ + yₙ + 2(y₁ + y₂ + ... + yₙ₋₁)]. The first and last values are used once. Every middle value is used twice.",
-      "Example: estimate the integral of x² from 0 to 2 using 2 strips. h = 1, and y₀ = 0, y₁ = 1, y₂ = 4. Area ≈ 1/2 × [0 + 4 + 2×1] = 3."
+      "The trapezoidal rule estimates a definite integral when an exact antiderivative is hard to find or the data comes as a table. Split the area into strips of equal width \\(h\\), and treat each strip as a trapezium.",
+      "A trapezium has area \\(\\frac{\\text{sum of parallel sides}}{2} \\times \\text{width}\\). With \\(n\\) strips, \\(h = \\frac{b - a}{n}\\), and the function values are \\(y_{0}, y_{1}, \\ldots, y_{n}\\).",
+      "Adding the strips: \\(\\text{area} \\approx \\frac{h}{2} \\times [y_{0} + y_{n} + 2(y_{1} + y_{2} + \\cdots + y_{n - 1})]\\). The first and last values are used once. Every middle value is used twice.",
+      "Example: estimate \\(\\int_{0}^{2} x^{2} \\, dx\\) using 2 strips. \\(h = 1\\), and \\(y_{0} = 0\\), \\(y_{1} = 1\\), \\(y_{2} = 4\\). \\(\\text{Area} \\approx \\frac{1}{2} \\times [0 + 4 + 2 \\times 1] = 3\\)."
     ],
-    "remember": "Use h/2 × [first + last + 2 × (all the middle values)].",
+    "remember": "Use \\(\\frac{h}{2} \\times [\\text{first} + \\text{last} + 2 \\times (\\text{all the middle values})]\\).",
     "a": {
-      "q": "Using the trapezoidal rule with 2 strips, what is the estimate for the integral of x² from 0 to 4?",
+      "q": "Using the trapezoidal rule with 2 strips, what is the estimate for \\(\\int_{0}^{4} x^{2} \\, dx\\)?",
       "opts": ["24", "20", "48", "12"],
-      "why": "Here h = (4 − 0) ÷ 2 = 2, and y₀ = 0, y₁ = 4, y₂ = 16. Area ≈ 2/2 × [0 + 16 + 2×4] = 24. The answer 20 comes from using the middle value only once, and 48 comes from multiplying by h instead of h/2.",
-      "clue": "Find h first, then double the middle value."
+      "why": "Here \\(h = \\frac{4 - 0}{2} = 2\\), and \\(y_{0} = 0\\), \\(y_{1} = 4\\), \\(y_{2} = 16\\). \\(\\text{Area} \\approx \\frac{2}{2} \\times [0 + 16 + 2 \\times 4] = 24\\). The answer 20 comes from using the middle value only once, and 48 comes from multiplying by \\(h\\) instead of \\(\\frac{h}{2}\\).",
+      "clue": "Find \\(h\\) first, then double the middle value."
     },
     "b": {
       "d": 2,
-      "q": "A function has values 2, 5, 6 and 3 at x = 0, 1, 2 and 3. Using the trapezoidal rule with 3 strips, what is the estimate of the integral from 0 to 3?",
+      "q": "A function has values 2, 5, 6 and 3 at \\(x = 0\\), 1, 2 and 3. Using the trapezoidal rule with 3 strips, what is the estimate of the integral from 0 to 3?",
       "opts": ["13.5", "10.5", "8", "27"],
-      "why": "Here h = 1, so area ≈ 1/2 × [2 + 3 + 2×(5 + 6)] = 1/2 × 27 = 13.5. Adding the three trapezia gives the same: 3.5 + 5.5 + 4.5 = 13.5. The answer 10.5 comes from doubling the first and last values instead of the middle ones.",
+      "why": "Here \\(h = 1\\), so \\(\\text{area} \\approx \\frac{1}{2} \\times [2 + 3 + 2 \\times (5 + 6)] = \\frac{1}{2} \\times 27 = 13.5\\). Adding the three trapezia gives the same: \\(3.5 + 5.5 + 4.5 = 13.5\\). The answer 10.5 comes from doubling the first and last values instead of the middle ones.",
       "clue": "Which values sit inside the interval and get doubled?"
     }
   },
@@ -2103,49 +2253,49 @@ MADE_BANKS.mat = {
     "title": "Optimisation",
     "card": [
       "Optimisation finds the largest or smallest value of a quantity. First write that quantity as a function of one variable. Use any given condition to remove the other variables.",
-      "Differentiate and solve f'(x) = 0 to find the stationary points. Test each one to see if it is a maximum or minimum, using the second derivative or the sign of f'(x) on each side.",
+      "Differentiate and solve \\(f'(x) = 0\\) to find the stationary points. Test each one to see if it is a maximum or minimum, using the second derivative or the sign of \\(f'(x)\\) on each side.",
       "Check the endpoints of the allowed domain, because the greatest or least value can occur there. Also check that the answer makes sense, for example that a length is positive.",
-      "Example: two numbers add to 10. Find the largest product. If one is x, the other is 10 − x, so P = x(10 − x) = 10x − x². Then P' = 10 − 2x = 0 gives x = 5. P'' = −2 is negative, so it is a maximum. The largest product is 5 × 5 = 25."
+      "Example: two numbers add to 10. Find the largest product. If one is \\(x\\), the other is \\(10 - x\\), so \\(P = x(10 - x) = 10x - x^{2}\\). Then \\(P' = 10 - 2x = 0\\) gives \\(x = 5\\). \\(P'' = -2\\) is negative, so it is a maximum. The largest product is \\(5 \\times 5 = 25\\)."
     ],
-    "remember": "Write one variable, solve f'(x) = 0, test the type, then check endpoints and sense.",
+    "remember": "Write one variable, solve \\(f'(x) = 0\\), test the type, then check endpoints and sense.",
     "a": {
-      "q": "Two numbers add to 12. Their product P = x(12 − x). What is the largest value of P?",
+      "q": "Two numbers add to 12. Their product \\(P = x(12 - x)\\). What is the largest value of \\(P\\)?",
       "opts": ["36", "6", "72", "12"],
-      "why": "P = 12x − x², so P' = 12 − 2x = 0 gives x = 6. P'' = −2 is negative, so this is a maximum, and P = 6 × 6 = 36. The value 6 is where the maximum occurs, not the maximum itself.",
-      "clue": "Find x first, then put it back into P."
+      "why": "\\(P = 12x - x^{2}\\), so \\(P' = 12 - 2x = 0\\) gives \\(x = 6\\). \\(P'' = -2\\) is negative, so this is a maximum, and \\(P = 6 \\times 6 = 36\\). The value 6 is where the maximum occurs, not the maximum itself.",
+      "clue": "Find \\(x\\) first, then put it back into \\(P\\)."
     },
     "b": {
       "d": 3,
-      "q": "Ava has 40 m of fencing for a rectangular pen x metres wide, so its area is A = x(20 − x) for 0 ≤ x ≤ 20. What is the largest possible area A?",
-      "opts": ["100 m²", "10 m²", "200 m²", "400 m²"],
-      "why": "A = 20x − x², so A' = 20 − 2x = 0 gives x = 10. A'' = −2 is negative, so it is a maximum, and A = 10 × 10 = 100. The endpoints x = 0 and x = 20 both give area 0, so they are smaller. The value 10 is the width, not the area.",
-      "clue": "Find x, then work out the area, and compare with the endpoints."
+      "q": "Ava has 40 m of fencing for a rectangular pen \\(x\\) metres wide, so its area is \\(A = x(20 - x)\\) for \\(0 \\le x \\le 20\\). What is the largest possible area \\(A\\)?",
+      "opts": ["\\(100 \\text{ m}^{2}\\)", "\\(10 \\text{ m}^{2}\\)", "\\(200 \\text{ m}^{2}\\)", "\\(400 \\text{ m}^{2}\\)"],
+      "why": "\\(A = 20x - x^{2}\\), so \\(A' = 20 - 2x = 0\\) gives \\(x = 10\\). \\(A'' = -2\\) is negative, so it is a maximum, and \\(A = 10 \\times 10 = 100\\). The endpoints \\(x = 0\\) and \\(x = 20\\) both give area 0, so they are smaller. The value 10 is the width, not the area.",
+      "clue": "Find \\(x\\), then work out the area, and compare with the endpoints."
     }
   },
   "mat-displacement-velocity-acceleration": {
     "title": "Displacement, velocity and acceleration",
     "card": [
-      "For a particle moving in a straight line, x(t) is its displacement from the origin at time t. Velocity is v = dx/dt and acceleration is a = dv/dt.",
-      "Going the other way, integrate. Velocity is the integral of acceleration, and displacement is the integral of velocity. Each integral adds a constant C.",
-      "An initial condition fixes the constant. Put in the given values of t and v (or x), then solve for C.",
+      "For a particle moving in a straight line, \\(x(t)\\) is its displacement from the origin at time \\(t\\). Velocity is \\(v = \\frac{dx}{dt}\\) and acceleration is \\(a = \\frac{dv}{dt}\\).",
+      "Going the other way, integrate. Velocity is the integral of acceleration, and displacement is the integral of velocity. Each integral adds a constant \\(C\\).",
+      "An initial condition fixes the constant. Put in the given values of \\(t\\) and \\(v\\) (or \\(x\\)), then solve for \\(C\\).",
       [
         "Example",
-        "If a = 6t and v = 2 when t = 0, then v = 3t² + C. Putting in t = 0 gives 2 = C, so v = 3t² + 2. At t = 1, v = 5."
+        "If \\(a = 6t\\) and \\(v = 2\\) when \\(t = 0\\), then \\(v = 3t^{2} + C\\). Putting in \\(t = 0\\) gives \\(2 = C\\), so \\(v = 3t^{2} + 2\\). At \\(t = 1\\), \\(v = 5\\)."
       ]
     ],
-    "remember": "Differentiate to go from x to v to a. Integrate to go back, and use the starting values to find C.",
+    "remember": "Differentiate to go from \\(x\\) to \\(v\\) to \\(a\\). Integrate to go back, and use the starting values to find \\(C\\).",
     "a": {
-      "q": "A particle has displacement x = t³ − 4t metres at time t seconds. What is its velocity when t = 2?",
+      "q": "A particle has displacement \\(x = t^{3} - 4t\\) metres at time \\(t\\) seconds. What is its velocity when \\(t = 2\\)?",
       "opts": ["8 m/s", "4 m/s", "0 m/s", "12 m/s"],
-      "why": "v = dx/dt = 3t² − 4, so at t = 2, v = 12 − 4 = 8 m/s. The value 0 is x itself at t = 2 (8 − 8), which is displacement, not velocity.",
-      "clue": "Differentiate x first, then put in t = 2."
+      "why": "\\(v = \\frac{dx}{dt} = 3t^{2} - 4\\), so at \\(t = 2\\), \\(v = 12 - 4 = 8\\) m/s. The value 0 is \\(x\\) itself at \\(t = 2\\) (\\(8 - 8 = 0\\)), which is displacement, not velocity.",
+      "clue": "Differentiate \\(x\\) first, then put in \\(t = 2\\)."
     },
     "b": {
       "d": 3,
-      "q": "A particle has acceleration a = 4t m/s². When t = 0 its velocity is 3 m/s. What is its velocity when t = 2?",
+      "q": "A particle has acceleration \\(a = 4t \\text{ m/s}^{2}\\). When \\(t = 0\\) its velocity is 3 m/s. What is its velocity when \\(t = 2\\)?",
       "opts": ["11 m/s", "8 m/s", "5 m/s", "14 m/s"],
-      "why": "Integrating gives v = 2t² + C. Since v = 3 when t = 0, C = 3, so v = 2t² + 3. At t = 2, v = 8 + 3 = 11 m/s. The answer 8 comes from leaving out the constant.",
-      "clue": "Integrate a, then use v = 3 at t = 0 to find C before putting in t = 2."
+      "why": "Integrating gives \\(v = 2t^{2} + C\\). Since \\(v = 3\\) when \\(t = 0\\), \\(C = 3\\), so \\(v = 2t^{2} + 3\\). At \\(t = 2\\), \\(v = 8 + 3 = 11\\) m/s. The answer 8 comes from leaving out the constant.",
+      "clue": "Integrate \\(a\\), then use \\(v = 3\\) at \\(t = 0\\) to find \\(C\\) before putting in \\(t = 2\\)."
     }
   },
   "mat-reading-motion-from-graphs": {
@@ -2161,16 +2311,16 @@ MADE_BANKS.mat = {
       ],
       [
         "Changing direction",
-        "the velocity must change sign. On a velocity-time graph, the graph crosses the t-axis. On a displacement-time graph, the curve turns at a peak or a trough."
+        "the velocity must change sign. On a velocity-time graph, the graph crosses the t-axis. On a displacement-time graph, the curve has a turning point."
       ],
       [
         "Speeding up",
-        "the particle speeds up when velocity and acceleration have the same sign, and slows down when the signs differ. Example: v = −3 and a = −2 means speeding up."
+        "the particle speeds up when velocity and acceleration have the same sign, and slows down when the signs differ. Example: \\(v = -3\\) and \\(a = -2\\) means speeding up."
       ]
     ],
-    "remember": "Rest means v = 0. A change of direction needs v to change sign. Same signs for v and a mean speeding up.",
+    "remember": "Rest means \\(v = 0\\). A change of direction needs \\(v\\) to change sign. Same signs for \\(v\\) and \\(a\\) mean speeding up.",
     "a": {
-      "q": "On a velocity-time graph, a particle's graph crosses the t-axis from above to below at t = 4. What happens at t = 4?",
+      "q": "On a velocity-time graph, a particle's graph crosses the t-axis from above to below at \\(t = 4\\). What happens at \\(t = 4\\)?",
       "opts": [
         "It changes direction",
         "It is at the origin",
@@ -2178,11 +2328,11 @@ MADE_BANKS.mat = {
         "It stops and then continues the same way"
       ],
       "why": "Crossing the t-axis means velocity changes from positive to negative, so the particle reverses direction. Stopping and carrying on the same way would need the graph to touch the axis without crossing, so velocity would not change sign.",
-      "clue": "Look at the sign of velocity before and after t = 4."
+      "clue": "Look at the sign of velocity before and after \\(t = 4\\)."
     },
     "b": {
       "d": 3,
-      "q": "At t = 3, a particle's velocity-time graph is above the t-axis and sloping downwards. What is the particle doing at that moment?",
+      "q": "At \\(t = 3\\), a particle's velocity-time graph is above the t-axis and sloping downwards. What is the particle doing at that moment?",
       "opts": [
         "Moving in the positive direction and slowing down",
         "Moving in the positive direction and speeding up",
@@ -2196,185 +2346,185 @@ MADE_BANKS.mat = {
   "mat-exponential-growth-decay": {
     "title": "Exponential growth and decay",
     "card": [
-      "Some quantities change at a rate proportional to their size: the bigger N is, the faster it changes. This is written dN/dt = kN, and its solution is N = N₀eᵏᵗ.",
-      "N₀ is the starting amount, when t = 0. k is the constant that sets how fast N changes, and t is time.",
-      ["Growth", "k > 0, so N increases, as with a population in a good environment."],
+      "Some quantities change at a rate proportional to their size: the bigger \\(N\\) is, the faster it changes. This is written \\(\\frac{dN}{dt} = kN\\), and its solution is \\(N = N_{0}e^{kt}\\).",
+      "\\(N_{0}\\) is the starting amount, when \\(t = 0\\). \\(k\\) is the constant that sets how fast \\(N\\) changes, and \\(t\\) is time.",
+      ["Growth", "\\(k > 0\\), so \\(N\\) increases, as with a population in a good environment."],
       [
         "Decay",
-        "k < 0, so N decreases towards 0, as with a radioactive substance. Example: N = 80e^(−0.5t) starts at 80. At t = 2, N = 80e⁻¹ ≈ 29.4."
+        "\\(k < 0\\), so \\(N\\) decreases towards 0, as with a radioactive substance. Example: \\(N = 80e^{-0.5t}\\) starts at 80. At \\(t = 2\\), \\(N = 80e^{-1} \\approx 29.4\\)."
       ]
     ],
-    "remember": "N = N₀eᵏᵗ: N₀ is the start, and the sign of k decides growth or decay.",
+    "remember": "\\(N = N_{0}e^{kt}\\): \\(N_{0}\\) is the start, and the sign of \\(k\\) decides growth or decay.",
     "a": {
-      "q": "A quantity follows N = 50e^(−0.2t). Which statement is true?",
+      "q": "A quantity follows \\(N = 50e^{-0.2t}\\). Which statement is true?",
       "opts": [
         "It starts at 50 and is decaying",
         "It starts at 50 and is growing",
         "It starts at 0.2 and is decaying",
-        "It starts at −0.2 and is growing"
+        "It starts at \\(-0.2\\) and is growing"
       ],
-      "why": "N₀ = 50 is the value at t = 0, and k = −0.2 is negative, so N decays. Growing is wrong because it ignores the negative sign of k.",
-      "clue": "Put t = 0 in, then look at the sign of k."
+      "why": "\\(N_{0} = 50\\) is the value at \\(t = 0\\), and \\(k = -0.2\\) is negative, so \\(N\\) decays. Growing is wrong because it ignores the negative sign of \\(k\\).",
+      "clue": "Put \\(t = 0\\) in, then look at the sign of \\(k\\)."
     },
     "b": {
       "d": 3,
-      "q": "A colony of bacteria in a lab follows N = 200e^(0.3t), where t is in hours. What is N after 2 hours, to the nearest whole number?",
+      "q": "A colony of bacteria in a lab follows \\(N = 200e^{0.3t}\\), where \\(t\\) is in hours. What is \\(N\\) after 2 hours, to the nearest whole number?",
       "opts": ["364", "120", "1478", "320"],
-      "why": "N = 200e^(0.3 × 2) = 200e^0.6 ≈ 200 × 1.822 = 364. The value 320 comes from adding 30% of 200, which is 60, in each of the 2 hours. That treats the growth as a fixed amount per hour, but in this model N grows faster as it gets bigger, so you must use e to the power 0.6.",
-      "clue": "Work out k × t first, then use e to that power."
+      "why": "\\(N = 200e^{0.3 \\times 2} = 200e^{0.6} \\approx 200 \\times 1.822 = 364\\). The value 320 comes from adding 30% of 200, which is 60, in each of the 2 hours. That treats the growth as a fixed amount per hour, but in this model \\(N\\) grows faster as it gets bigger, so you must use \\(e^{0.6}\\).",
+      "clue": "Work out \\(kt\\) first, then use \\(e\\) to that power."
     }
   },
   "mat-rates-change-context": {
     "title": "Rates of change in context",
     "card": [
-      "The derivative dV/dt is the rate of change of V with respect to time t. Its units are the units of V per unit of t, such as litres per minute.",
-      "To find how fast a quantity changes at a given moment, write it as a function of t, differentiate, then substitute that value of t.",
+      "The derivative \\(\\frac{dV}{dt}\\) is the rate of change of \\(V\\) with respect to time \\(t\\). Its units are the units of \\(V\\) per unit of \\(t\\), such as litres per minute.",
+      "To find how fast a quantity changes at a given moment, write it as a function of \\(t\\), differentiate, then substitute that value of \\(t\\).",
       "A positive rate means the quantity is increasing. A negative rate means it is decreasing.",
-      "Example: water in a tank is V = 40t − t² litres after t minutes. Then dV/dt = 40 − 2t. At t = 5, dV/dt = 40 − 10 = 30, so the volume is rising at 30 litres per minute."
+      "Example: water in a tank is \\(V = 40t - t^{2}\\) litres after \\(t\\) minutes. Then \\(\\frac{dV}{dt} = 40 - 2t\\). At \\(t = 5\\), \\(\\frac{dV}{dt} = 40 - 10 = 30\\), so the volume is rising at 30 litres per minute."
     ],
     "remember": "Differentiate, then substitute the time. The sign of the answer shows whether the quantity is rising or falling.",
     "a": {
-      "q": "The water in a tank is V = 60t − t² litres after t minutes. How fast is the volume changing at t = 10?",
+      "q": "The water in a tank is \\(V = 60t - t^{2}\\) litres after \\(t\\) minutes. How fast is the volume changing at \\(t = 10\\)?",
       "opts": ["Increasing at 40 L/min", "Increasing at 500 L/min", "Increasing at 80 L/min", "Decreasing at 40 L/min"],
-      "why": "dV/dt = 60 − 2t, so at t = 10 the rate is 60 − 20 = 40. It is positive, so the volume is increasing. The value 500 is V itself, found by substituting without differentiating.",
-      "clue": "Differentiate first, then put in t = 10."
+      "why": "\\(\\frac{dV}{dt} = 60 - 2t\\), so at \\(t = 10\\) the rate is \\(60 - 20 = 40\\). It is positive, so the volume is increasing. The value 500 is \\(V\\) itself, found by substituting without differentiating.",
+      "clue": "Differentiate first, then put in \\(t = 10\\)."
     },
     "b": {
       "d": 3,
-      "q": "The water in a pool is V = 200 + 12t − 3t² litres after t minutes. What is the rate of change of volume at t = 4?",
+      "q": "The water in a pool is \\(V = 200 + 12t - 3t^{2}\\) litres after \\(t\\) minutes. What is the rate of change of volume at \\(t = 4\\)?",
       "opts": ["Decreasing at 12 L/min", "Increasing at 12 L/min", "Decreasing at 36 L/min", "Increasing at 236 L/min"],
-      "why": "dV/dt = 12 − 6t, so at t = 4 the rate is 12 − 24 = −12. The negative sign means the volume is decreasing. Choosing increasing at 12 ignores the sign.",
+      "why": "\\(\\frac{dV}{dt} = 12 - 6t\\), so at \\(t = 4\\) the rate is \\(12 - 24 = -12\\). The negative sign means the volume is decreasing. Choosing increasing at 12 ignores the sign.",
       "clue": "Check the sign of your answer."
     }
   },
   "mat-discrete-probability-distributions": {
     "title": "Discrete probability distributions",
     "card": [
-      "A discrete random variable X takes separate values, such as 0, 1, 2, 3. A probability distribution lists each value x with its probability P(X = x).",
+      "A discrete random variable X takes separate values, such as 0, 1, 2, 3. A probability distribution lists each value \\(x\\) with its probability \\(P(X = x)\\).",
       "Every probability is between 0 and 1. All the probabilities in the table must add to 1, because one of the values must happen.",
-      "To find a missing probability, subtract the others from 1. Example: P(1) = 0.3, P(2) = 0.5 and P(3) = k. Then k = 1 − 0.3 − 0.5 = 0.2.",
-      "To find the chance of a group of values, add their probabilities. In the example, P(X ≥ 2) = 0.5 + 0.2 = 0.7."
+      "To find a missing probability, subtract the others from 1. Example: \\(P(1) = 0.3\\), \\(P(2) = 0.5\\) and \\(P(3) = k\\). Then \\(k = 1 - 0.3 - 0.5 = 0.2\\).",
+      "To find the chance of a group of values, add their probabilities. In the example, \\(P(X \\ge 2) = 0.5 + 0.2 = 0.7\\)."
     ],
     "remember": "List every value with its probability, and the probabilities add to 1.",
     "a": {
-      "q": "A random variable X has P(1) = 0.2, P(2) = 0.35, P(3) = k and P(4) = 0.25. What is k?",
+      "q": "A random variable X has \\(P(1) = 0.2\\), \\(P(2) = 0.35\\), \\(P(3) = k\\) and \\(P(4) = 0.25\\). What is \\(k\\)?",
       "opts": ["0.2", "0.8", "0.45", "0.25"],
-      "why": "The probabilities add to 1, so k = 1 − (0.2 + 0.35 + 0.25) = 1 − 0.8 = 0.2. The value 0.8 is the sum of the known probabilities, not the missing one.",
+      "why": "The probabilities add to 1, so \\(k = 1 - (0.2 + 0.35 + 0.25) = 1 - 0.8 = 0.2\\). The value 0.8 is the sum of the known probabilities, not the missing one.",
       "clue": "Subtract the known probabilities from 1."
     },
     "b": {
       "d": 3,
-      "q": "Ava's bus is late X minutes, where P(0) = 0.4, P(5) = 0.3, P(10) = 0.2 and P(15) = 0.1. What is P(X ≥ 5)?",
+      "q": "Ava's bus is late X minutes, where \\(P(0) = 0.4\\), \\(P(5) = 0.3\\), \\(P(10) = 0.2\\) and \\(P(15) = 0.1\\). What is \\(P(X \\ge 5)\\)?",
       "opts": ["0.6", "0.3", "0.4", "0.9"],
-      "why": "Add the probabilities for 5, 10 and 15: 0.3 + 0.2 + 0.1 = 0.6. Check: 1 − P(0) = 1 − 0.4 = 0.6. The value 0.9 adds the probabilities for 0, 5 and 10, so it wrongly includes P(0) and leaves out P(15).",
+      "why": "Add the probabilities for 5, 10 and 15: \\(0.3 + 0.2 + 0.1 = 0.6\\). Check: \\(1 - P(0) = 1 - 0.4 = 0.6\\). The value 0.9 adds the probabilities for 0, 5 and 10, so it wrongly includes P(0) and leaves out P(15).",
       "clue": "At least 5 means 5 or more. Add those probabilities."
     }
   },
   "mat-expected-value": {
     "title": "Expected value",
     "card": [
-      "The expected value E(X) is the long-run average of a random variable. It is the mean of the distribution.",
-      "Formula: E(X) = Σ x × P(x). Multiply each value by its probability, then add the results.",
-      "Example: P(0) = 0.5, P(1) = 0.3, P(2) = 0.2. Then E(X) = 0 × 0.5 + 1 × 0.3 + 2 × 0.2 = 0.7.",
-      "E(X) is an average over many trials. It need not be a value X can actually take, as 0.7 is not."
+      "The expected value \\(E(X)\\) is the long-run average of a random variable. It is the mean of the distribution.",
+      "Formula: \\(E(X) = \\sum x \\times P(x)\\). Multiply each value by its probability, then add the results.",
+      "Example: \\(P(0) = 0.5\\), \\(P(1) = 0.3\\), \\(P(2) = 0.2\\). Then \\(E(X) = 0 \\times 0.5 + 1 \\times 0.3 + 2 \\times 0.2 = 0.7\\).",
+      "\\(E(X)\\) is an average over many trials. It need not be a value \\(X\\) can actually take, as 0.7 is not."
     ],
     "remember": "Multiply each value by its probability and add them up.",
     "a": {
-      "q": "X has P(1) = 0.5, P(2) = 0.3 and P(5) = 0.2. What is E(X)?",
+      "q": "\\(X\\) has \\(P(1) = 0.5\\), \\(P(2) = 0.3\\) and \\(P(5) = 0.2\\). What is \\(E(X)\\)?",
       "opts": ["2.1", "2.67", "1.0", "8"],
-      "why": "E(X) = 1 × 0.5 + 2 × 0.3 + 5 × 0.2 = 0.5 + 0.6 + 1.0 = 2.1. The value 2.67 comes from averaging 1, 2 and 5 without using the probabilities.",
+      "why": "\\(E(X) = 1 \\times 0.5 + 2 \\times 0.3 + 5 \\times 0.2 = 0.5 + 0.6 + 1.0 = 2.1\\). The value 2.67 comes from averaging 1, 2 and 5 without using the probabilities.",
       "clue": "Weight each value by its probability."
     },
     "b": {
       "d": 3,
       "q": "A game at a fete in Orange costs nothing to play. You win $0 with probability 0.7, $4 with probability 0.2 and $10 with probability 0.1. What is the expected win in dollars?",
       "opts": ["1.80", "4.67", "14", "0.90"],
-      "why": "E(X) = 0 × 0.7 + 4 × 0.2 + 10 × 0.1 = 0.8 + 1.0 = 1.80. The value 4.67 is the plain average of 0, 4 and 10, which ignores how likely each prize is.",
+      "why": "\\(E(X) = 0 \\times 0.7 + 4 \\times 0.2 + 10 \\times 0.1 = 0.8 + 1.0 = 1.80\\). The value 4.67 is the plain average of 0, 4 and 10, which ignores how likely each prize is.",
       "clue": "Do not average the prizes. Weight them by probability."
     }
   },
   "mat-variance-standard-deviation-random": {
     "title": "Variance and standard deviation of a random variable",
     "card": [
-      "Variance measures how spread out X is around its mean. Formula: Var(X) = E(X²) − [E(X)]².",
-      "E(X²) = Σ x² × P(x). Square each value first, then multiply by its probability and add. Then subtract the square of E(X).",
-      "The standard deviation is the square root of the variance: SD = √Var(X). It is in the same units as X.",
-      "Example: P(0) = 0.5 and P(2) = 0.5. E(X) = 1 and E(X²) = 0 × 0.5 + 4 × 0.5 = 2. So Var(X) = 2 − 1² = 1 and SD = 1."
+      "Variance measures how spread out \\(X\\) is around its mean. Formula: \\(\\text{Var}(X) = E(X^{2}) - [E(X)]^{2}\\).",
+      "\\(E(X^{2}) = \\sum x^{2} \\times P(x)\\). Square each value first, then multiply by its probability and add. Then subtract the square of \\(E(X)\\).",
+      "The standard deviation is the square root of the variance: \\(\\text{SD} = \\sqrt{\\text{Var}(X)}\\). It is in the same units as \\(X\\).",
+      "Example: \\(P(0) = 0.5\\) and \\(P(2) = 0.5\\). \\(E(X) = 1\\) and \\(E(X^{2}) = 0 \\times 0.5 + 4 \\times 0.5 = 2\\). So \\(\\text{Var}(X) = 2 - 1^{2} = 1\\) and \\(\\text{SD} = 1\\)."
     ],
-    "remember": "Var = E(X²) minus the square of E(X). SD is its square root.",
+    "remember": "\\(\\text{Var}(X)\\) is \\(E(X^{2})\\) minus the square of \\(E(X)\\). SD is its square root.",
     "a": {
-      "q": "X has P(1) = 0.5 and P(3) = 0.5. So E(X) = 2 and E(X²) = 5. What is Var(X)?",
+      "q": "\\(X\\) has \\(P(1) = 0.5\\) and \\(P(3) = 0.5\\). So \\(E(X) = 2\\) and \\(E(X^{2}) = 5\\). What is \\(\\text{Var}(X)\\)?",
       "opts": ["1", "3", "5", "9"],
-      "why": "Var(X) = E(X²) − [E(X)]² = 5 − 2² = 1. The value 3 comes from subtracting E(X) instead of its square.",
-      "clue": "Square E(X) before subtracting."
+      "why": "\\(\\text{Var}(X) = E(X^{2}) - [E(X)]^{2} = 5 - 2^{2} = 1\\). The value 3 comes from subtracting \\(E(X)\\) instead of its square.",
+      "clue": "Square \\(E(X)\\) before subtracting."
     },
     "b": {
       "d": 3,
-      "q": "A spinner gives X = 0 with probability 0.6 and X = 5 with probability 0.4. What is the variance of X?",
+      "q": "A spinner gives \\(X = 0\\) with probability 0.6 and \\(X = 5\\) with probability 0.4. What is the variance of \\(X\\)?",
       "opts": ["6", "10", "4", "2.45"],
-      "why": "E(X) = 5 × 0.4 = 2. E(X²) = 25 × 0.4 = 10. Var(X) = 10 − 2² = 6. The value 2.45 is the standard deviation √6, not the variance.",
-      "clue": "Find E(X) and E(X²) first, then subtract."
+      "why": "\\(E(X) = 5 \\times 0.4 = 2\\). \\(E(X^{2}) = 25 \\times 0.4 = 10\\). \\(\\text{Var}(X) = 10 - 2^{2} = 6\\). The value 2.45 is the standard deviation \\(\\sqrt{6}\\), not the variance.",
+      "clue": "Find \\(E(X)\\) and \\(E(X^{2})\\) first, then subtract."
     }
   },
   "mat-probability-density-functions": {
     "title": "Probability density functions",
     "card": [
       "A continuous variable can take any value in an interval, such as a height or a waiting time. The chance of one exact value is 0, so we find the chance of a range of values.",
-      "A probability density function f(x) is a curve. P(a ≤ X ≤ b) is the area under the curve from x = a to x = b. This area is found by integrating: ∫ f(x) dx from a to b.",
-      "A density function must follow two rules. f(x) ≥ 0 for every x, so no area is negative. The total area under the whole curve is 1.",
-      "Example: f(x) = 0.25 for 0 ≤ x ≤ 4, and 0 elsewhere. The total area is 0.25 × 4 = 1. P(1 ≤ X ≤ 3) = 0.25 × 2 = 0.5."
+      "A probability density function \\(f(x)\\) is a curve. \\(P(a \\le X \\le b)\\) is the area under the curve from \\(x = a\\) to \\(x = b\\). This area is found by integrating: \\(\\int_{a}^{b} f(x) \\, dx\\).",
+      "A density function must follow two rules. \\(f(x) \\ge 0\\) for every \\(x\\), so no area is negative. The total area under the whole curve is 1.",
+      "Example: \\(f(x) = 0.25\\) for \\(0 \\le x \\le 4\\), and 0 elsewhere. The total area is \\(0.25 \\times 4 = 1\\). \\(P(1 \\le X \\le 3) = 0.25 \\times 2 = 0.5\\)."
     ],
-    "remember": "For a continuous variable, probability is area under f(x), and the total area is 1.",
+    "remember": "For a continuous variable, probability is area under \\(f(x)\\), and the total area is 1.",
     "a": {
-      "q": "f(x) = k for 0 ≤ x ≤ 5, and 0 elsewhere, is a probability density function. What is k?",
+      "q": "\\(f(x) = k\\) for \\(0 \\le x \\le 5\\), and 0 elsewhere, is a probability density function. What is \\(k\\)?",
       "opts": ["0.2", "5", "1", "0.5"],
-      "why": "The total area must be 1, so the rectangle gives k × 5 = 1 and k = 0.2. Choosing 5 mixes up the width with the height.",
+      "why": "The total area must be 1, so the rectangle gives \\(k \\times 5 = 1\\) and \\(k = 0.2\\). Choosing 5 mixes up the width with the height.",
       "clue": "Set the area of the rectangle equal to 1."
     },
     "b": {
       "d": 3,
-      "q": "A waiting time X minutes has f(x) = 0.1 for 0 ≤ x ≤ 10, and 0 elsewhere. What is P(X ≥ 7)?",
+      "q": "A waiting time \\(X\\) minutes has \\(f(x) = 0.1\\) for \\(0 \\le x \\le 10\\), and 0 elsewhere. What is \\(P(X \\ge 7)\\)?",
       "opts": ["0.3", "0.7", "0.03", "0.1"],
-      "why": "The area from x = 7 to x = 10 is 0.1 × 3 = 0.3. The value 0.7 is the area from 0 to 7, which is P(X ≤ 7), so it is the wrong part of the curve.",
+      "why": "The area from \\(x = 7\\) to \\(x = 10\\) is \\(0.1 \\times 3 = 0.3\\). The value 0.7 is the area from 0 to 7, which is \\(P(X \\le 7)\\), so it is the wrong part of the curve.",
       "clue": "Find the width of the interval from 7 to the end of the curve."
     }
   },
   "mat-cumulative-distribution-functions": {
     "title": "Cumulative distribution functions",
     "card": [
-      "The cumulative distribution function (CDF), F(x), gives P(X ≤ x). It is the area under the density curve f from the lowest value of X up to x.",
-      "Find it by integrating: F(x) = ∫ f(t) dt, from the lowest value up to x. Use t inside the integral so x is only the upper limit.",
-      "Worked example: f(x) = 2x for 0 ≤ x ≤ 1. Then F(x) = ∫ 2t dt from 0 to x = x². So P(X ≤ 0.5) = 0.5² = 0.25.",
-      "F rises from 0 to 1 and never falls. For an interval, P(a ≤ X ≤ b) = F(b) − F(a). Differentiating F gives back f."
+      "The cumulative distribution function (CDF), \\(F(x)\\), gives \\(P(X \\le x)\\). It is the area under the density curve \\(f\\) from the lowest value of \\(X\\) up to \\(x\\).",
+      "Find it by integrating: \\(F(x) = \\int f(t) \\, dt\\), from the lowest value up to \\(x\\). Use \\(t\\) inside the integral so \\(x\\) is only the upper limit.",
+      "Worked example: \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). Then \\(F(x) = \\int_{0}^{x} 2t \\, dt = x^{2}\\). So \\(P(X \\le 0.5) = 0.5^{2} = 0.25\\).",
+      "\\(F\\) rises from 0 to 1 and never falls. For an interval, \\(P(a \\le X \\le b) = F(b) - F(a)\\). Differentiating \\(F\\) gives back \\(f\\)."
     ],
-    "remember": "F(x) is the area so far: integrate f up to x.",
+    "remember": "\\(F(x)\\) is the area so far: integrate \\(f\\) up to \\(x\\).",
     "a": {
-      "q": "A variable has density f(x) = 2x for 0 ≤ x ≤ 1. What is P(X ≤ 0.6)?",
+      "q": "A variable has density \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). What is \\(P(X \\le 0.6)\\)?",
       "opts": ["0.36", "0.6", "1.2", "0.72"],
-      "why": "F(x) = x², so P(X ≤ 0.6) = 0.6² = 0.36. Substituting 0.6 into f gives 1.2, which is the height of the curve, not the area up to 0.6.",
-      "clue": "Integrate f from 0 up to 0.6."
+      "why": "\\(F(x) = x^{2}\\), so \\(P(X \\le 0.6) = 0.6^{2} = 0.36\\). Substituting 0.6 into \\(f\\) gives 1.2, which is the height of the curve, not the area up to 0.6.",
+      "clue": "Integrate \\(f\\) from 0 up to 0.6."
     },
     "b": {
       "d": 3,
-      "q": "A variable has density f(x) = 2x for 0 ≤ x ≤ 1. What is P(0.5 ≤ X ≤ 0.8)?",
+      "q": "A variable has density \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). What is \\(P(0.5 \\le X \\le 0.8)\\)?",
       "opts": ["0.39", "0.64", "0.25", "0.30"],
-      "why": "F(x) = x², so P = F(0.8) − F(0.5) = 0.64 − 0.25 = 0.39. Using F(0.8) alone gives 0.64, which wrongly includes the area below 0.5.",
+      "why": "\\(F(x) = x^{2}\\), so \\(P = F(0.8) - F(0.5) = 0.64 - 0.25 = 0.39\\). Using \\(F(0.8)\\) alone gives 0.64, which wrongly includes the area below 0.5.",
       "clue": "Subtract the area up to 0.5 from the area up to 0.8."
     }
   },
   "mat-normal-distribution": {
     "title": "The normal distribution",
     "card": [
-      "A normal distribution is a symmetric, bell-shaped curve. Its highest point is at the mean (μ), and the left and right sides mirror each other.",
-      "Two numbers set the curve: the mean μ, which gives its centre, and the standard deviation σ, which gives its spread. A bigger σ makes a wider, flatter bell.",
-      "The empirical rule: about 68% of values lie within 1σ of the mean, about 95% within 2σ, and about 99.7% within 3σ.",
-      "Example: if μ = 50 and σ = 4, about 95% of values lie within 2 × 4 = 8 of the mean, so between 42 and 58."
+      "A normal distribution is a symmetric, bell-shaped curve. Its highest point is at the mean (\\(\\mu\\)), and the left and right sides mirror each other.",
+      "Two numbers set the curve: the mean \\(\\mu\\), which gives its centre, and the standard deviation \\(\\sigma\\), which gives its spread. A bigger \\(\\sigma\\) makes a wider, flatter bell.",
+      "The empirical rule: about 68% of values lie within \\(1\\sigma\\) of the mean, about 95% within \\(2\\sigma\\), and about 99.7% within \\(3\\sigma\\).",
+      "Example: if \\(\\mu = 50\\) and \\(\\sigma = 4\\), about 95% of values lie within \\(2 \\times 4 = 8\\) of the mean, so between 42 and 58."
     ],
-    "remember": "Mean sets the centre, standard deviation sets the spread: 68%, 95% and 99.7% within 1, 2 and 3σ.",
+    "remember": "Mean sets the centre, standard deviation sets the spread: 68%, 95% and 99.7% within \\(1\\sigma\\), \\(2\\sigma\\) and \\(3\\sigma\\).",
     "a": {
       "q": "A normal variable has mean 100 and standard deviation 10. About 95% of values lie between which two numbers?",
       "opts": ["80 and 120", "90 and 110", "70 and 130", "95 and 105"],
-      "why": "95% lies within 2 standard deviations, and 2 × 10 = 20, so the range is 100 − 20 = 80 to 100 + 20 = 120. The range 90 to 110 is only 1 standard deviation each side, which holds about 68%.",
+      "why": "95% lies within 2 standard deviations, and \\(2 \\times 10 = 20\\), so the range is \\(100 - 20 = 80\\) to \\(100 + 20 = 120\\). The range 90 to 110 is only 1 standard deviation each side, which holds about 68%.",
       "clue": "95% is within 2 standard deviations of the mean."
     },
     "b": {
@@ -2386,67 +2536,67 @@ MADE_BANKS.mat = {
         "Mean 40 cm, standard deviation 12 cm",
         "Mean 40 cm, standard deviation 2 cm"
       ],
-      "why": "The curve is symmetric, so the mean is the midpoint: (34 + 46) ÷ 2 = 40. Each end is 6 cm from the mean, and 95% covers 2σ each side, so 2σ = 6 and σ = 3. Choosing 6 cm treats the distance to each end as only one standard deviation.",
+      "why": "The curve is symmetric, so the mean is the midpoint: \\((34 + 46) \\div 2 = 40\\). Each end is 6 cm from the mean, and 95% covers \\(2\\sigma\\) each side, so \\(2\\sigma = 6\\) and \\(\\sigma = 3\\). Choosing 6 cm treats the distance to each end as only one standard deviation.",
       "clue": "How many standard deviations does 95% cover on each side?"
     }
   },
   "mat-z-scores": {
     "title": "z-scores",
     "card": [
-      "A z-score tells how many standard deviations a value is from the mean. z = (x − μ) ÷ σ, where x is the value, μ is the mean and σ is the standard deviation.",
+      "A z-score tells how many standard deviations a value is from the mean. \\(z = \\frac{x - \\mu}{\\sigma}\\), where \\(x\\) is the value, \\(\\mu\\) is the mean and \\(\\sigma\\) is the standard deviation.",
       "A positive z-score means the value is above the mean. A negative z-score means it is below the mean. A z-score of 0 means it equals the mean.",
-      "Example: a test has mean 60 and standard deviation 8. A mark of 76 has z = (76 − 60) ÷ 8 = 16 ÷ 8 = 2, so it is 2 standard deviations above the mean.",
+      "Example: a test has mean 60 and standard deviation 8. A mark of 76 has \\(z = \\frac{76 - 60}{8} = \\frac{16}{8} = 2\\), so it is 2 standard deviations above the mean.",
       "A z-score has no units, so it lets you compare values from different distributions. The higher z-score is further above its own mean, relative to its spread."
     ],
-    "remember": "z is the distance from the mean, measured in standard deviations.",
+    "remember": "\\(z\\) is the distance from the mean, measured in standard deviations.",
     "a": {
       "q": "A variable has mean 50 and standard deviation 5. What is the z-score of the value 42?",
-      "opts": ["-1.6", "1.6", "-8", "-0.2"],
-      "why": "z = (42 − 50) ÷ 5 = −8 ÷ 5 = −1.6. The value is below the mean, so z is negative. Giving 1.6 drops the sign, and −8 forgets to divide by the standard deviation.",
+      "opts": ["\\(-1.6\\)", "\\(1.6\\)", "\\(-8\\)", "\\(-0.2\\)"],
+      "why": "\\(z = \\frac{42 - 50}{5} = \\frac{-8}{5} = -1.6\\). The value is below the mean, so \\(z\\) is negative. Giving 1.6 drops the sign, and \\(-8\\) forgets to divide by the standard deviation.",
       "clue": "Subtract the mean first, then divide by the standard deviation."
     },
     "b": {
       "d": 3,
-      "q": "Priya scores 68 in Maths, where the mean is 56 and σ = 6. She scores 75 in Science, where the mean is 65 and σ = 8. In which subject did she do better compared with her class?",
+      "q": "Priya scores 68 in Maths, where the mean is 56 and \\(\\sigma = 6\\). She scores 75 in Science, where the mean is 65 and \\(\\sigma = 8\\). In which subject did she do better compared with her class?",
       "opts": [
         "Maths, because its z-score of 2 is higher than 1.25",
         "Science, because 75 is a higher mark than 68",
         "Science, because its mean of 65 is higher",
         "Neither, because the two tests have different means"
       ],
-      "why": "Maths: z = (68 − 56) ÷ 6 = 2. Science: z = (75 − 65) ÷ 8 = 1.25. The higher z-score is further above its own mean, so Maths is better. Comparing raw marks is tempting, but the two tests have different means and spreads.",
+      "why": "Maths: \\(z = \\frac{68 - 56}{6} = 2\\). Science: \\(z = \\frac{75 - 65}{8} = 1.25\\). The higher z-score is further above its own mean, so Maths is better. Comparing raw marks is tempting, but the two tests have different means and spreads.",
       "clue": "Work out both z-scores before comparing."
     }
   },
   "mat-probabilities-from-normal-distribution": {
     "title": "Probabilities from the normal distribution",
     "card": [
-      "Step 1: turn each end of the interval into a z-score using z = (x − μ)/σ. Step 2: use the z-scores to find the area under the standard normal curve. That area is the probability.",
+      "Step 1: turn each end of the interval into a z-score using \\(z = \\frac{x - \\mu}{\\sigma}\\). Step 2: use the z-scores to find the area under the standard normal curve. That area is the probability.",
       [
         "Empirical rule",
         "About 68% of values lie within 1 standard deviation of the mean, 95% within 2 and 99.7% within 3. The curve is symmetric, so half of the area lies on each side of the mean."
       ],
       [
         "Table or calculator",
-        "A z-table gives P(Z ≤ z). For an interval, P(a < Z < b) = P(Z ≤ b) − P(Z ≤ a). For a value above z, P(Z > z) = 1 − P(Z ≤ z)."
+        "A z-table gives \\(P(Z \\le z)\\). For an interval, \\(P(a < Z < b) = P(Z \\le b) - P(Z \\le a)\\). For a value above \\(z\\), \\(P(Z > z) = 1 - P(Z \\le z)\\)."
       ],
       [
         "Example",
-        "Heights have μ = 170 and σ = 10. For 150 to 190, z = −2 to 2, so P is about 0.95. For above 180, z = 1. Within 1 standard deviation is 68%, so the two tails share 32%. Each tail is 16%, so P(X > 180) is about 0.16."
+        "Heights have \\(\\mu = 170\\) and \\(\\sigma = 10\\). For 150 to 190, \\(z = -2\\) to 2, so \\(P(150 < X < 190)\\) is about 0.95. For above 180, \\(z = 1\\). Within 1 standard deviation is 68%, so the two tails share 32%. Each tail is 16%, so \\(P(X > 180)\\) is about 0.16."
       ]
     ],
     "remember": "Convert to z-scores, then read the area from the empirical rule or a table.",
     "a": {
       "q": "Test marks are normal with mean 60 and standard deviation 8. What is the approximate probability that a mark is between 44 and 76?",
       "opts": ["0.95", "0.68", "0.997", "0.475"],
-      "why": "z = (44 − 60)/8 = −2 and z = (76 − 60)/8 = 2. The interval is within 2 standard deviations of the mean, so the probability is about 0.95. The value 0.68 is for 1 standard deviation, not 2.",
+      "why": "\\(z = \\frac{44 - 60}{8} = -2\\) and \\(z = \\frac{76 - 60}{8} = 2\\). The interval is within 2 standard deviations of the mean, so the probability is about 0.95. The value 0.68 is for 1 standard deviation, not 2.",
       "clue": "Find the z-scores of 44 and 76 first."
     },
     "b": {
       "d": 3,
       "q": "The lifetime of a battery is normal with mean 400 hours and standard deviation 25 hours. What is the approximate probability that a battery lasts more than 450 hours?",
       "opts": ["0.025", "0.05", "0.95", "0.975"],
-      "why": "z = (450 − 400)/25 = 2. About 95% of values lie within 2 standard deviations, so 5% lie outside, split equally between the two tails. The upper tail is 0.025. The value 0.05 is wrong because it counts both tails.",
+      "why": "\\(z = \\frac{450 - 400}{25} = 2\\). About 95% of values lie within 2 standard deviations, so 5% lie outside, split equally between the two tails. The upper tail is 0.025. The value 0.05 is wrong because it counts both tails.",
       "clue": "The 5% outside 2 standard deviations is split between both tails, but this question asks about one."
     }
   },
@@ -2454,45 +2604,55 @@ MADE_BANKS.mat = {
     "title": "Compound interest",
     "card": [
       "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
-      "The formula is A = P(1 + r)ⁿ. A is the final amount, P is the amount invested at the start, r is the rate per period as a decimal, and n is the number of periods.",
-      "Rate and periods must match. For 6% per year compounded monthly, r = 0.06 ÷ 12 = 0.005 and n is the number of months.",
-      "Example: $2000 at 5% per year for 3 years. A = 2000 × 1.05³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+      "The formula is \\(A = P(1 + r)^{n}\\). A is the final amount, P is the amount invested at the start, \\(r\\) is the rate per period as a decimal, and \\(n\\) is the number of periods.",
+      "Rate and periods must match. For 6% per year compounded monthly, \\(r = 0.06 \\div 12 = 0.005\\) and \\(n\\) is the number of months.",
+      "Example: $2000 at 5% per year for 3 years. \\(A = 2000 \\times 1.05^{3} = 2000 \\times 1.157625 = \\$2315.25\\). The interest earned is $315.25."
     ],
-    "remember": "Multiply by (1 + r) once for each period. Match r and n to the same period.",
+    "remember": "Multiply by \\((1 + r)\\) once for each period. Match \\(r\\) and \\(n\\) to the same period.",
     "a": {
       "q": "Mia invests $1000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
       "opts": ["$1210", "$1200", "$1100", "$1020"],
-      "why": "A = 1000 × 1.1² = 1000 × 1.21 = $1210. The answer $1200 is simple interest, which does not let the interest earn interest.",
+      "why": "\\(A = 1000 \\times 1.1^{2} = 1000 \\times 1.21 = \\$1210\\). The answer $1200 is simple interest, which does not let the interest earn interest.",
       "clue": "Is the second year's interest found on $1000 or on the new balance?"
     },
     "b": {
       "d": 3,
       "q": "Sam invests $5000 at 6% per year, compounded monthly, for 2 years. Which calculation gives the final amount?",
-      "opts": ["5000 × (1.005)²⁴", "5000 × (1.005)²", "5000 × (1.06)²⁴", "5000 × (1.06)²"],
-      "why": "The rate per month is 0.06 ÷ 12 = 0.005, and there are 2 × 12 = 24 months. So A = 5000 × 1.005²⁴. Using 1.06² ignores the monthly compounding, so the rate and periods do not match.",
+      "opts": [
+        "\\(5000 \\times (1.005)^{24}\\)",
+        "\\(5000 \\times (1.005)^{2}\\)",
+        "\\(5000 \\times (1.06)^{24}\\)",
+        "\\(5000 \\times (1.06)^{2}\\)"
+      ],
+      "why": "The rate per month is \\(0.06 \\div 12 = 0.005\\), and there are \\(2 \\times 12 = 24\\) months. So \\(A = 5000 \\times 1.005^{24}\\). Using \\(1.06^{2}\\) ignores the monthly compounding, so the rate and periods do not match.",
       "clue": "Convert both the rate and the time to months."
     }
   },
   "mat-annuities-as-geometric-series": {
     "title": "Annuities as geometric series",
     "card": [
-      "An annuity is a series of equal payments M made at regular intervals, such as $1000 deposited at the end of each year. Interest is added each period at a rate r.",
-      "The future value is the total of all payments after compounding. A payment made with k periods left grows to M × (1 + r) to the power k, so each payment compounds for a different number of periods.",
-      "Written from the last payment back, the terms are M, M(1 + r), M(1 + r)², and so on. This is a geometric series with first term M and common ratio (1 + r). For n payments, its sum is FV = M[(1 + r)ⁿ − 1] ÷ r.",
-      "Example: $1000 at the end of each year for 3 years at 10% a year. FV = 1000 + 1000 × 1.1 + 1000 × 1.1² = 1000 + 1100 + 1210 = $3310. The formula gives 1000 × (1.1³ − 1) ÷ 0.1 = 1000 × 3.31 = $3310."
+      "An annuity is a series of equal payments \\(M\\) made at regular intervals, such as $1000 deposited at the end of each year. Interest is added each period at a rate \\(r\\).",
+      "The future value is the total of all payments after compounding. A payment made with \\(k\\) periods left grows to \\(M \\times (1 + r)^{k}\\), so each payment compounds for a different number of periods.",
+      "Written from the last payment back, the terms are \\(M\\), \\(M(1 + r)\\), \\(M(1 + r)^{2}\\), and so on. This is a geometric series with first term \\(M\\) and common ratio \\((1 + r)\\). For \\(n\\) payments, its sum is \\(FV = \\frac{M[(1 + r)^{n} - 1]}{r}\\).",
+      "Example: $1000 at the end of each year for 3 years at 10% a year. \\(FV = 1000 + 1000 \\times 1.1 + 1000 \\times 1.1^{2} = 1000 + 1100 + 1210 = \\$3310\\). The formula gives \\(1000 \\times \\frac{1.1^{3} - 1}{0.1} = 1000 \\times 3.31 = \\$3310\\)."
     ],
-    "remember": "Each payment compounds for a different time, and the total is a geometric series with ratio 1 + r.",
+    "remember": "Each payment compounds for a different time, and the total is a geometric series with ratio \\(1 + r\\).",
     "a": {
       "q": "$500 is paid at the end of each year for 3 years, with interest of 10% a year. What is the future value just after the last payment?",
       "opts": ["$1655", "$1500", "$1820.50", "$665.50"],
-      "why": "The payments grow to 500, 500 × 1.1 = 550 and 500 × 1.1² = 605, so the total is 500 + 550 + 605 = $1655. $1820.50 compounds every payment one extra period, but the last payment earns no interest. $1500 ignores interest altogether.",
+      "why": "The payments grow to 500, \\(500 \\times 1.1 = 550\\) and \\(500 \\times 1.1^{2} = 605\\), so the total is \\(500 + 550 + 605 = \\$1655\\). $1820.50 compounds every payment one extra period, but the last payment earns no interest. $1500 ignores interest altogether.",
       "clue": "The last payment earns no interest, and the earlier ones earn more."
     },
     "b": {
       "d": 3,
       "q": "Priya deposits $200 at the end of each year for 4 years at 5% a year. Which expression gives the future value just after her last deposit?",
-      "opts": ["200 × (1.05⁴ − 1) ÷ 0.05", "200 × 1.05⁴", "200 × (1.05⁴ − 1) ÷ 1.05", "200 × (1.05⁵ − 1) ÷ 0.05"],
-      "why": "The deposits form a geometric series with first term 200, ratio 1.05 and 4 terms, so the sum is 200 × (1.05⁴ − 1) ÷ 0.05, about $862.03. 200 × 1.05⁴ compounds only one deposit, not all four. Using a power of 5 counts one deposit too many.",
+      "opts": [
+        "\\(200 \\times \\frac{1.05^{4} - 1}{0.05}\\)",
+        "\\(200 \\times 1.05^{4}\\)",
+        "\\(200 \\times \\frac{1.05^{4} - 1}{1.05}\\)",
+        "\\(200 \\times \\frac{1.05^{5} - 1}{0.05}\\)"
+      ],
+      "why": "The deposits form a geometric series with first term 200, ratio 1.05 and 4 terms, so the sum is \\(200 \\times \\frac{1.05^{4} - 1}{0.05}\\), about $862.03. \\(200 \\times 1.05^{4}\\) compounds only one deposit, not all four. Using a power of 5 counts one deposit too many.",
       "clue": "Match each part of the expression to the sum formula on the card."
     }
   },
@@ -2500,45 +2660,45 @@ MADE_BANKS.mat = {
     "title": "Present value of an annuity",
     "card": [
       "The present value of an annuity is the lump sum needed now to fund a series of equal future payments, when the money earns compound interest.",
-      "Each payment is discounted back to today. A payment N made n periods from now is worth N ÷ (1 + r)ⁿ today, where r is the rate per period.",
-      "Add the discounted payments to get the present value. Example: $1000 at the end of each year for 3 years at 5% p.a. gives 1000/1.05 + 1000/1.05² + 1000/1.05³ = 952.38 + 907.03 + 863.84 = $2723.25.",
+      "Each payment is discounted back to today. A payment \\(N\\) made \\(n\\) periods from now is worth \\(\\frac{N}{(1 + r)^{n}}\\) today, where \\(r\\) is the rate per period.",
+      "Add the discounted payments to get the present value. Example: $1000 at the end of each year for 3 years at 5% p.a. gives \\(\\frac{1000}{1.05} + \\frac{1000}{1.05^{2}} + \\frac{1000}{1.05^{3}} = 952.38 + 907.03 + 863.84 = \\$2723.25\\).",
       "Later payments are discounted by more periods, so each is worth less today than the one before."
     ],
-    "remember": "Present value is the sum of each payment divided by (1 + r)ⁿ for its own n.",
+    "remember": "Present value is the sum of each payment divided by \\((1 + r)^{n}\\) for its own \\(n\\).",
     "a": {
       "q": "Amir will be paid $2000 in 2 years. Interest is 10% p.a. compounded annually. What is that payment worth today?",
       "opts": ["$1652.89", "$2420.00", "$1818.18", "$1600.00"],
-      "why": "Discount over 2 periods: 2000 ÷ 1.1² = 2000 ÷ 1.21 = $1652.89. Dividing by 1.1 only once ($1818.18) discounts for just one year, but the payment is two years away.",
-      "clue": "Divide by (1 + r) once for each period until payment."
+      "why": "Discount over 2 periods: \\(2000 \\div 1.1^{2} = 2000 \\div 1.21 = \\$1652.89\\). Dividing by 1.1 only once ($1818.18) discounts for just one year, but the payment is two years away.",
+      "clue": "Divide by \\((1 + r)\\) once for each period until payment."
     },
     "b": {
       "d": 3,
       "q": "Lena wants to receive $500 at the end of each year for 2 years. Money earns 8% p.a. compounded annually. What lump sum is needed now?",
       "opts": ["$891.63", "$857.34", "$925.93", "$1123.20"],
-      "why": "Discount each payment separately: 500 ÷ 1.08 = 462.96 and 500 ÷ 1.08² = 428.67, which total $891.63. Discounting the $1000 total by 2 years ($857.34) treats the first payment as if it came a year later than it does.",
+      "why": "Discount each payment separately: \\(500 \\div 1.08 = 462.96\\) and \\(500 \\div 1.08^{2} = 428.67\\), which total $891.63. Discounting the $1000 total by 2 years ($857.34) treats the first payment as if it came a year later than it does.",
       "clue": "The first payment is discounted by 1 year, the second by 2."
     }
   },
   "mat-reducing-balance-loans": {
     "title": "Reducing balance loans",
     "card": [
-      "On a reducing balance loan, interest is charged on the amount still owing. Each period, the interest is added and then the repayment M is taken off.",
-      "With balance B and rate r per period, the new balance is B × (1 + r) − M. Repeat this step for each period.",
-      "Example: $10 000 at 10% per year, repaid over 2 years. After year 1: 11 000 − M. After year 2: (11 000 − M) × 1.1 − M = 12 100 − 2.1M.",
-      "The loan is repaid when the balance after n periods is zero. Here 12 100 − 2.1M = 0, so M = 12 100 ÷ 2.1 = $5761.90 per year, to the nearest cent."
+      "On a reducing balance loan, interest is charged on the amount still owing. Each period, the interest is added and then the repayment \\(M\\) is taken off.",
+      "With balance \\(B\\) and rate \\(r\\) per period, the new balance is \\(B \\times (1 + r) - M\\). Repeat this step for each period.",
+      "Example: $10 000 at 10% per year, repaid over 2 years. After year 1: \\(11{,}000 - M\\). After year 2: \\((11{,}000 - M) \\times 1.1 - M = 12{,}100 - 2.1M\\).",
+      "The loan is repaid when the balance after \\(n\\) periods is zero. Here \\(12{,}100 - 2.1M = 0\\), so \\(M = 12{,}100 \\div 2.1 = \\$5761.90\\) per year, to the nearest cent."
     ],
-    "remember": "Balance each period = balance × (1 + r) − M. Set the final balance to zero to find M.",
+    "remember": "Each period, the balance \\(B\\) becomes \\(B \\times (1 + r) - M\\). Set the final balance to zero to find \\(M\\).",
     "a": {
       "q": "Ravi borrows $1000 at 5% per period. He makes a repayment of $300 at the end of the first period. What is the balance after that repayment?",
       "opts": ["$750", "$700", "$735", "$1350"],
-      "why": "Interest is added first: 1000 × 1.05 = 1050. Then the repayment comes off: 1050 − 300 = 750. $735 is wrong because it takes the repayment off before adding interest.",
+      "why": "Interest is added first: \\(1000 \\times 1.05 = 1050\\). Then the repayment comes off: \\(1050 - 300 = 750\\). $735 is wrong because it takes the repayment off before adding interest.",
       "clue": "Add the interest to the balance, then take off the repayment."
     },
     "b": {
       "d": 3,
       "q": "Lena borrows $2000 at 10% per year. She repays it with 2 equal repayments at the end of each year. What is each repayment, to the nearest cent?",
       "opts": ["$1152.38", "$1210.00", "$1100.00", "$1047.62"],
-      "why": "After year 1 the balance is 2000 × 1.1 − M = 2200 − M. After year 2 it is 2420 − 2.1M. Setting this to zero gives M = 2420 ÷ 2.1 = $1152.38. $1210 is wrong because it halves 2420 and ignores that the first repayment cuts the interest in year 2.",
+      "why": "After year 1 the balance is \\(2000 \\times 1.1 - M = 2200 - M\\). After year 2 it is \\(2420 - 2.1M\\). Setting this to zero gives \\(M = 2420 \\div 2.1 = \\$1152.38\\). $1210 is wrong because it halves 2420 and ignores that the first repayment cuts the interest in year 2.",
       "clue": "Write the balance after each year, then set the second one to zero."
     }
   },
@@ -2554,20 +2714,20 @@ MADE_BANKS.mat = {
         "Present value",
         "Use this when you want the lump sum needed now. Factors for $1: 2% for 5 periods is 4.7135, 3% for 5 periods is 4.5797."
       ],
-      "Multiply the payment by the factor. Example: $100 paid each period for 5 periods at 2% has a future value of 100 × 5.2040 = $520.40."
+      "Multiply the payment by the factor. Example: $100 paid each period for 5 periods at 2% has a future value of \\(100 \\times 5.2040 = \\$520.40\\)."
     ],
-    "remember": "Payment × factor. Use a future value factor for the end total and a present value factor for the sum now.",
+    "remember": "Multiply the payment by the factor. Use a future value factor for the end total and a present value factor for the sum now.",
     "a": {
       "q": "Mia deposits $500 at the end of each year for 5 years. Interest is 2% per year, compounded yearly. What is the future value of her deposits?",
       "opts": ["$2602.00", "$2356.75", "$2654.55", "$2500.00"],
-      "why": "Mia wants the total at the end, so use the future value factor for 2% and 5 periods: 500 × 5.2040 = $2602.00. The present value factor gives $2356.75, which is the lump sum needed now, not the total at the end.",
+      "why": "Mia wants the total at the end, so use the future value factor for 2% and 5 periods: \\(500 \\times 5.2040 = \\$2602.00\\). The present value factor gives $2356.75, which is the lump sum needed now, not the total at the end.",
       "clue": "Does she want a total at the end or a sum now?"
     },
     "b": {
       "d": 3,
       "q": "Sam wants to receive $2000 at the end of each year for 5 years. The account earns 3% per year, compounded yearly. What lump sum must he put in now?",
       "opts": ["$9159.40", "$10618.20", "$9427.00", "$10000.00"],
-      "why": "A lump sum needed now uses the present value factor for 3% and 5 periods: 2000 × 4.5797 = $9159.40. The future value factor gives $10618.20, which is tempting but is the total at the end, not the sum needed now.",
+      "why": "A lump sum needed now uses the present value factor for 3% and 5 periods: \\(2000 \\times 4.5797 = \\$9159.40\\). The future value factor gives $10618.20, which is tempting but is the total at the end, not the sum needed now.",
       "clue": "Is Sam's money needed at the start or built up by the end?"
     }
   },
@@ -2620,23 +2780,23 @@ MADE_BANKS.mat = {
   "mat-solving-linear-equations": {
     "title": "Solving linear equations",
     "card": [
-      "A linear equation has one unknown, such as x, and no powers of x higher than 1 (no x², x³ and so on). To solve it, find the value of x that makes both sides equal.",
+      "A linear equation has one unknown, such as \\(x\\), and no powers of \\(x\\) higher than 1 (no \\(x^{2}\\), \\(x^{3}\\) and so on). To solve it, find the value of \\(x\\) that makes both sides equal.",
       "Undo the operations in reverse order, doing the same to both sides each time. In an equation without brackets, undo any addition or subtraction first, then undo multiplication or division.",
-      "With brackets, expand them first or divide both sides by the number outside. With a fraction such as x/4, multiply both sides by the bottom number.",
-      "Example: 3(x + 2) = 21. Divide both sides by 3 to get x + 2 = 7. Subtract 2 to get x = 5. Check: 3 × (5 + 2) = 3 × 7 = 21, so x = 5 is correct."
+      "With brackets, expand them first or divide both sides by the number outside. With a fraction such as \\(\\frac{x}{4}\\), multiply both sides by the bottom number.",
+      "Example: \\(3(x + 2) = 21\\). Divide both sides by 3 to get \\(x + 2 = 7\\). Subtract 2 to get \\(x = 5\\). Check: \\(3 \\times (5 + 2) = 3 \\times 7 = 21\\), so \\(x = 5\\) is correct."
     ],
     "remember": "Do the same to both sides, undo in reverse order, then check by substituting.",
     "a": {
-      "q": "Solve 2x + 5 = 17.",
-      "opts": ["x = 6", "x = 11", "x = 12", "x = 3.5"],
-      "why": "Subtract 5 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 5 = 17. Choosing x = 11 comes from adding 5 instead of subtracting it, and x = 12 comes from skipping the division by 2.",
+      "q": "Solve \\(2x + 5 = 17\\).",
+      "opts": ["\\(x = 6\\)", "\\(x = 11\\)", "\\(x = 12\\)", "\\(x = 3.5\\)"],
+      "why": "Subtract 5 from both sides to get \\(2x = 12\\), then divide by 2 to get \\(x = 6\\). Check: \\(2 \\times 6 + 5 = 17\\). Choosing \\(x = 11\\) comes from adding 5 instead of subtracting it, and \\(x = 12\\) comes from skipping the division by 2.",
       "clue": "Undo the addition before the multiplication."
     },
     "b": {
       "d": 3,
-      "q": "Mia solves 4(x − 3) = 20. What is x?",
-      "opts": ["x = 8", "x = 2", "x = 5", "x = 5.75"],
-      "why": "Divide both sides by 4 to get x − 3 = 5, then add 3 to get x = 8. Check: 4 × (8 − 3) = 4 × 5 = 20. Choosing x = 5 comes from dividing by 4 but forgetting to add 3 back.",
+      "q": "Mia solves \\(4(x - 3) = 20\\). What is \\(x\\)?",
+      "opts": ["\\(x = 8\\)", "\\(x = 2\\)", "\\(x = 5\\)", "\\(x = 5.75\\)"],
+      "why": "Divide both sides by 4 to get \\(x - 3 = 5\\), then add 3 to get \\(x = 8\\). Check: \\(4 \\times (8 - 3) = 4 \\times 5 = 20\\). Choosing \\(x = 5\\) comes from dividing by 4 but forgetting to add 3 back.",
       "clue": "Divide by the number outside the bracket, then undo the subtraction."
     }
   },
@@ -3071,29 +3231,29 @@ MADE_BANKS.mat = {
       "GST is the Goods and Services Tax. In Australia it is 10% of the price on most goods and services. Some items, such as basic fresh food, do not have it.",
       [
         "Adding GST",
-        "Multiply the price before GST by 1.1. Example: a $60 repair becomes $60 × 1.1 = $66. The GST is $6."
+        "Multiply the price before GST by 1.1. Example: a $60 repair becomes \\(\\$60 \\times 1.1 = \\$66\\). The GST is $6."
       ],
       [
         "Finding the GST",
-        "A price with GST included is 110% of the original, so the GST is 1/11 of it. Divide the GST-inclusive price by 11."
+        "A price with GST included is 110% of the original, so the GST is \\(\\frac{1}{11}\\) of it. Divide the GST-inclusive price by 11."
       ],
       [
         "Example",
-        "A jacket costs $154 with GST included. The GST is $154 ÷ 11 = $14. The price before GST is $154 − $14 = $140."
+        "A jacket costs $154 with GST included. The GST is \\(\\$154 \\div 11 = \\$14\\). The price before GST is \\(\\$154 - \\$14 = \\$140\\)."
       ]
     ],
     "remember": "Add GST by multiplying by 1.1. To find the GST in a price that includes it, divide by 11.",
     "a": {
       "q": "A tradesperson charges $250 before GST. What is the price with 10% GST added?",
       "opts": ["$275", "$25", "$272.73", "$260"],
-      "why": "The price with GST is $250 × 1.1 = $275. Adding $250 ÷ 11 = $22.73 gives $272.73, but that uses the wrong method: dividing by 11 finds the GST in a price that already includes it. Here the $250 is before GST, so the GST is 10% of it, which is $25.",
+      "why": "The price with GST is \\(\\$250 \\times 1.1 = \\$275\\). Adding \\(\\$250 \\div 11 = \\$22.73\\) gives $272.73, but that uses the wrong method: dividing by 11 finds the GST in a price that already includes it. Here the $250 is before GST, so the GST is 10% of it, which is $25.",
       "clue": "The new price is 110% of the starting price."
     },
     "b": {
       "d": 3,
       "q": "Mia pays $187 for a printer, and the price includes GST. How much of the $187 is GST?",
       "opts": ["$17", "$18.70", "$170", "$20.57"],
-      "why": "The price includes GST, so the GST is $187 ÷ 11 = $17. Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
+      "why": "The price includes GST, so the GST is \\(\\$187 \\div 11 = \\$17\\). Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
       "clue": "The $187 is already 110% of the price before GST."
     }
   },
@@ -3350,14 +3510,14 @@ MADE_BANKS.mat = {
   "mat-longitude-time-difference": {
     "title": "Longitude and time difference",
     "card": [
-      "The Earth turns 360° in 24 hours, so it turns 360° ÷ 24 = 15° each hour. This means every 15° of longitude is about 1 hour of time difference.",
+      "The Earth turns 360° in 24 hours, so it turns \\(360^{\\circ} \\div 24 = 15^{\\circ}\\) each hour. This means every 15° of longitude is about 1 hour of time difference.",
       [
         "Same side",
-        "if both places are east, or both are west, subtract the longitudes. For 150°E and 120°E: 150° − 120° = 30°, and 30° ÷ 15 = 2 hours."
+        "if both places are east, or both are west, subtract the longitudes. For 150°E and 120°E: \\(150^{\\circ} - 120^{\\circ} = 30^{\\circ}\\), and \\(30^{\\circ} \\div 15 = 2\\) hours."
       ],
       [
         "Opposite sides",
-        "if one place is east and one is west of 0°, add the longitudes. For 45°E and 15°W: 45° + 15° = 60°, and 60° ÷ 15 = 4 hours."
+        "if one place is east and one is west of 0°, add the longitudes. For 45°E and 15°W: \\(45^{\\circ} + 15^{\\circ} = 60^{\\circ}\\), and \\(60^{\\circ} \\div 15 = 4\\) hours."
       ],
       "The Earth turns towards the east, so the place further east is ahead in time. So 150°E is 2 hours ahead of 120°E, and 45°E is 4 hours ahead of 15°W."
     ],
@@ -3365,14 +3525,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "Two towns are 45° of longitude apart. About how many hours apart are their times?",
       "opts": ["3 hours", "4 hours", "6 hours", "45 hours"],
-      "why": "The Earth turns 15° each hour, so 45° ÷ 15 = 3 hours. Dividing by 24 instead of 15 gives about 1.9, which does not match the rule of 15° per hour.",
+      "why": "The Earth turns 15° each hour, so \\(45^{\\circ} \\div 15 = 3\\) hours. Dividing by 24 instead of 15 gives about 1.9, which does not match the rule of 15° per hour.",
       "clue": "Divide the degrees by the number of degrees in one hour."
     },
     "b": {
       "d": 3,
       "q": "Town P is at 30°E and town Q is at 75°W. Both are on the same day. About what is the time difference, and which town is ahead?",
       "opts": ["7 hours, and P is ahead", "7 hours, and Q is ahead", "3 hours, and P is ahead", "3 hours, and Q is ahead"],
-      "why": "P is east and Q is west of 0°, so add the longitudes: 30° + 75° = 105°, and 105° ÷ 15 = 7 hours. P is further east, so P is ahead. Subtracting gives 75° − 30° = 45°, or 3 hours, which treats the towns as if they were on the same side.",
+      "why": "P is east and Q is west of 0°, so add the longitudes: \\(30^{\\circ} + 75^{\\circ} = 105^{\\circ}\\), and \\(105^{\\circ} \\div 15 = 7\\) hours. P is further east, so P is ahead. Subtracting gives \\(75^{\\circ} - 30^{\\circ} = 45^{\\circ}\\), or 3 hours, which treats the towns as if they were on the same side.",
       "clue": "Check whether the towns are on the same side of 0°."
     }
   },
@@ -3524,14 +3684,14 @@ MADE_BANKS.mat = {
     "card": [
       "A network is connected if there is a route between every pair of vertices.",
       "A tree is a connected network that contains no circuits. Take away any one edge and it is no longer connected.",
-      "A tree with n vertices has n − 1 edges. Example: a tree with 6 vertices has 6 − 1 = 5 edges.",
-      "To test a network, check that it is connected and has no circuits. If a connected network has n vertices and more than n − 1 edges, it must contain a circuit, so it is not a tree."
+      "A tree with \\(n\\) vertices has \\(n - 1\\) edges. Example: a tree with 6 vertices has \\(6 - 1 = 5\\) edges.",
+      "To test a network, check that it is connected and has no circuits. If a connected network has \\(n\\) vertices and more than \\(n - 1\\) edges, it must contain a circuit, so it is not a tree."
     ],
-    "remember": "A tree is connected with no circuits, and n vertices means n − 1 edges.",
+    "remember": "A tree is connected with no circuits, and \\(n\\) vertices means \\(n - 1\\) edges.",
     "a": {
       "q": "A tree has 9 vertices. How many edges does it have?",
       "opts": ["8", "9", "10", "7"],
-      "why": "A tree with n vertices has n − 1 edges, so 9 − 1 = 8. Choosing 9 mixes up the number of edges with the number of vertices.",
+      "why": "A tree with \\(n\\) vertices has \\(n - 1\\) edges, so \\(9 - 1 = 8\\). Choosing 9 mixes up the number of edges with the number of vertices.",
       "clue": "Take one away from the number of vertices."
     },
     "b": {
@@ -3543,7 +3703,7 @@ MADE_BANKS.mat = {
         "Yes, because it has as many edges as vertices",
         "No, because a tree would have 8 edges"
       ],
-      "why": "A tree with 7 vertices has 7 − 1 = 6 edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
+      "why": "A tree with 7 vertices has \\(7 - 1 = 6\\) edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
       "clue": "Work out how many edges a tree with 7 vertices has, then compare."
     }
   },
@@ -3561,21 +3721,21 @@ MADE_BANKS.mat = {
       ],
       [
         "Example",
-        "Edges: AB 4, AC 2, BC 3, BD 5, CD 6. Kruskal adds AC 2 and BC 3. It skips AB 4, as A, B and C would form a circuit. It adds BD 5. Total weight: 2 + 3 + 5 = 10."
+        "Edges: AB 4, AC 2, BC 3, BD 5, CD 6. Kruskal adds AC 2 and BC 3. It skips AB 4, as A, B and C would form a circuit. It adds BD 5. Total weight: \\(2 + 3 + 5 = 10\\)."
       ]
     ],
     "remember": "Both methods build the cheapest way to join every vertex, and neither ever adds an edge that makes a circuit.",
     "a": {
       "q": "A network has edges PQ 3, PR 4, QR 5, RS 6 and QS 8. What is the total weight of its minimum spanning tree?",
       "opts": ["13", "12", "18", "26"],
-      "why": "Kruskal adds PQ 3 and PR 4. It skips QR 5, as P, Q and R would form a circuit. It adds RS 6. Total: 3 + 4 + 6 = 13. The answer 12 is tempting, but 3 + 4 + 5 leaves S unconnected.",
+      "why": "Kruskal adds PQ 3 and PR 4. It skips QR 5, as P, Q and R would form a circuit. It adds RS 6. Total: \\(3 + 4 + 6 = 13\\). The answer 12 is tempting, but \\(3 + 4 + 5\\) leaves S unconnected.",
       "clue": "Check each edge for a circuit before you add it."
     },
     "b": {
       "d": 3,
       "q": "Cable must link five towns. The costs in thousands of dollars are AB 7, AC 5, BC 6, BD 4, CD 8, CE 9 and DE 3. What is the least total cost to connect all five towns?",
       "opts": ["$18 000", "$19 000", "$21 000", "$42 000"],
-      "why": "Kruskal adds DE 3, BD 4, AC 5 and BC 6. Every town is now joined, so the rest are not needed. Total: 3 + 4 + 5 + 6 = 18. Using AB 7 in place of BC 6 also joins all towns, but it costs 19, which is more.",
+      "why": "Kruskal adds DE 3, BD 4, AC 5 and BC 6. Every town is now joined, so the rest are not needed. Total: \\(3 + 4 + 5 + 6 = 18\\). Using AB 7 in place of BC 6 also joins all towns, but it costs 19, which is more.",
       "clue": "Take the cheapest edges first, and stop once all five towns are joined."
     }
   },
@@ -3734,23 +3894,23 @@ MADE_BANKS.mat = {
       ],
       [
         "Substitution",
-        "Put one equation into the other to leave one unknown. Example: y = 2x + 5 and y = 3x + 1. Set 2x + 5 = 3x + 1, so x = 4. Then y = 2 × 4 + 5 = 13. The lines meet at (4, 13)."
+        "Put one equation into the other to leave one unknown. Example: \\(y = 2x + 5\\) and \\(y = 3x + 1\\). Set \\(2x + 5 = 3x + 1\\), so \\(x = 4\\). Then \\(y = 2 \\times 4 + 5 = 13\\). The lines meet at \\((4, 13)\\)."
       ],
-      "The meeting point shows where two things are equal. If two phone plans have costs C = 20 + 5t and C = 8 + 8t, they cost the same at the t-value where the lines meet."
+      "The meeting point shows where two things are equal. If two phone plans have costs \\(C = 20 + 5t\\) and \\(C = 8 + 8t\\), they cost the same at the t-value where the lines meet."
     ],
     "remember": "The crossing point is the one pair of values that fits both equations, so both quantities are equal there.",
     "a": {
-      "q": "Solve y = 2x + 1 and y = x + 6 by substitution. Where do the lines meet?",
-      "opts": ["(5, 11)", "(11, 5)", "(5, 6)", "(7, 5)"],
-      "why": "Set 2x + 1 = x + 6, so x = 5. Then y = 2 × 5 + 1 = 11, which gives (5, 11). Checking in the other equation: 5 + 6 = 11. The point (11, 5) swaps the order of x and y.",
-      "clue": "Make the two right-hand sides equal, then find y."
+      "q": "Solve \\(y = 2x + 1\\) and \\(y = x + 6\\) by substitution. Where do the lines meet?",
+      "opts": ["\\((5, 11)\\)", "\\((11, 5)\\)", "\\((5, 6)\\)", "\\((7, 5)\\)"],
+      "why": "Set \\(2x + 1 = x + 6\\), so \\(x = 5\\). Then \\(y = 2 \\times 5 + 1 = 11\\), which gives \\((5, 11)\\). Checking in the other equation: \\(5 + 6 = 11\\). The point \\((11, 5)\\) swaps the order of \\(x\\) and \\(y\\).",
+      "clue": "Make the two right-hand sides equal, then find \\(y\\)."
     },
     "b": {
       "d": 3,
-      "q": "Plan A costs C = 30 + 4t and Plan B costs C = 10 + 6t, where t is the number of gigabytes used. At how many gigabytes do the plans cost the same?",
+      "q": "Plan A costs \\(C = 30 + 4t\\) and Plan B costs \\(C = 10 + 6t\\), where \\(t\\) is the number of gigabytes used. At how many gigabytes do the plans cost the same?",
       "opts": ["10 gigabytes", "20 gigabytes", "4 gigabytes", "70 gigabytes"],
-      "why": "Set 30 + 4t = 10 + 6t, so 20 = 2t and t = 10. The cost at that point is 30 + 40 = 70 dollars, which is the answer 70, not the number of gigabytes. Check: 10 + 60 = 70.",
-      "clue": "Ask for t, not the cost. Make the two costs equal."
+      "why": "Set \\(30 + 4t = 10 + 6t\\), so \\(20 = 2t\\) and \\(t = 10\\). The cost at that point is \\(30 + 40 = 70\\) dollars, which is the answer 70, not the number of gigabytes. Check: \\(10 + 60 = 70\\).",
+      "clue": "Ask for \\(t\\), not the cost. Make the two costs equal."
     }
   },
   "mat-break-even-analysis": {
@@ -4384,20 +4544,20 @@ MADE_BANKS.mat = {
       "A cut is a line drawn across a flow network that splits the vertices into two groups. The source is in one group and the sink is in the other.",
       "The capacity of a cut is the total of the capacities of the edges that point from the source side to the sink side. Edges that point back towards the source side are not counted.",
       "Edges with both ends on the same side do not cross the cut, so they are not counted either.",
-      "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is 4 + 6 = 10."
+      "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is \\(4 + 6 = 10\\)."
     ],
     "remember": "Add only the edges that go from the source side to the sink side.",
     "a": {
       "q": "A cut separates S and A from B and T. The edges are S to B (3), A to B (5), A to T (2) and B to T (6). What is the capacity of the cut?",
       "opts": ["10", "16", "8", "14"],
-      "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is 3 + 5 + 2 = 10. B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
+      "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is \\(3 + 5 + 2 = 10\\). B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
       "clue": "Count only the edges that start on the source side and end on the sink side."
     },
     "b": {
       "d": 3,
       "q": "The edges are S to A (9), S to B (6), A to B (3), B to A (4), A to T (5) and B to T (7). A cut separates S and A from B and T. What is its capacity?",
       "opts": ["14", "18", "10", "12"],
-      "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5), so the total is 6 + 3 + 5 = 14. B to A (4) points back to the source side, so it is ignored: adding it gives 18 and subtracting it gives 10. Adding only the edges into T gives 12, which misses S to B and A to B.",
+      "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5), so the total is \\(6 + 3 + 5 = 14\\). B to A (4) points back to the source side, so it is ignored: adding it gives 18 and subtracting it gives 10. Adding only the edges into T gives 12, which misses S to B and A to B.",
       "clue": "Check the direction of each edge that crosses the cut."
     }
   },
@@ -4497,9 +4657,9 @@ MADE_BANKS.mat = {
       "Scan forward: an activity finishes at its own EST plus its own duration. The next activity's EST is the largest finish time of the activities leading into it, since it must wait for all of them.",
       [
         "Example",
-        "A (3 days) and B (5 days) both start at 0. C (4 days) follows A, so its EST is 0 + 3 = 3. D (3 days) follows A and B, which finish at 3 and 5, so its EST is 5."
+        "A (3 days) and B (5 days) both start at 0. C (4 days) follows A, so its EST is \\(0 + 3 = 3\\). D (3 days) follows A and B, which finish at 3 and 5, so its EST is 5."
       ],
-      "E (3 days) follows C and D. C finishes at 3 + 4 = 7 and D at 5 + 3 = 8, so the EST of E is 8. The project's shortest time is 8 + 3 = 11 days."
+      "E (3 days) follows C and D. C finishes at \\(3 + 4 = 7\\) and D at \\(5 + 3 = 8\\), so the EST of E is 8. The project's shortest time is \\(8 + 3 = 11\\) days."
     ],
     "remember": "Scan forward, add durations, and take the largest total where paths meet.",
     "a": {
@@ -4512,7 +4672,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "P (2 days) and Q (4 days) both start at 0. R (5 days) follows P. S (4 days) follows P and Q. T (6 days) follows R and S. What is the shortest time to finish the project?",
       "opts": ["14 days", "13 days", "21 days", "8 days"],
-      "why": "R finishes at 2 + 5 = 7. S starts at the larger of 2 and 4, which is 4, so S finishes at 8. T starts at the larger of 7 and 8, which is 8, so the project takes 8 + 6 = 14 days. The answer 8 is only the EST of T, and it leaves out T's own duration.",
+      "why": "R finishes at \\(2 + 5 = 7\\). S starts at the larger of 2 and 4, which is 4, so S finishes at 8. T starts at the larger of 7 and 8, which is 8, so the project takes \\(8 + 6 = 14\\) days. The answer 8 is only the EST of T, and it leaves out T's own duration.",
       "clue": "Find the EST of T, then add its duration."
     }
   },
@@ -4573,7 +4733,7 @@ MADE_BANKS.mat = {
       "The critical path is the longest path through an activity network, from start to finish. Its length is the shortest time in which the whole project can be finished.",
       "Every activity on the critical path has zero float, so its earliest start time equals its latest start time. These are called critical activities.",
       "A delay to any critical activity delays the whole project by the same amount. An activity off the path has float, so it can start late by up to its float without delaying the project.",
-      "Example: path A, C, E takes 3 + 5 + 4 = 12 days. Path B, D takes 4 + 6 = 10 days. The longest is A, C, E, so it is the critical path and the project takes 12 days."
+      "Example: path A, C, E takes \\(3 + 5 + 4 = 12\\) days. Path B, D takes \\(4 + 6 = 10\\) days. The longest is A, C, E, so it is the critical path and the project takes 12 days."
     ],
     "remember": "The critical path is the longest path. It has no float, so any delay on it delays the project.",
     "a": {
@@ -4666,28 +4826,28 @@ MADE_BANKS.mat = {
   "mat-pearson-s-correlation-coefficient": {
     "title": "Pearson's correlation coefficient",
     "card": [
-      "Pearson's correlation coefficient, written r, is a number that measures how strong a linear relationship is and which direction it goes. It is found with a calculator.",
-      "r is always from -1 to 1. The sign gives the direction: a positive r means y tends to rise as x rises, and a negative r means y tends to fall as x rises.",
-      "The distance from 0 gives the strength. Values close to 1 or -1 are strong, values near 0.5 or -0.5 are moderate, and values close to 0 are weak. So r = -0.9 is stronger than r = 0.6.",
-      "Example: r = -0.82 is a strong negative linear relationship. r = 0 means there is no linear relationship, but the data could still follow a curve."
+      "Pearson's correlation coefficient, written \\(r\\), is a number that measures how strong a linear relationship is and which direction it goes. It is found with a calculator.",
+      "\\(r\\) is always from \\(-1\\) to 1. The sign gives the direction: a positive \\(r\\) means \\(y\\) tends to rise as \\(x\\) rises, and a negative \\(r\\) means \\(y\\) tends to fall as \\(x\\) rises.",
+      "The distance from 0 gives the strength. Values close to 1 or \\(-1\\) are strong, values near 0.5 or \\(-0.5\\) are moderate, and values close to 0 are weak. So \\(r = -0.9\\) is stronger than \\(r = 0.6\\).",
+      "Example: \\(r = -0.82\\) is a strong negative linear relationship. \\(r = 0\\) means there is no linear relationship, but the data could still follow a curve."
     ],
-    "remember": "The sign of r gives the direction. How close it is to 1 or -1 gives the strength.",
+    "remember": "The sign of \\(r\\) gives the direction. How close it is to 1 or \\(-1\\) gives the strength.",
     "a": {
-      "q": "A calculator gives r = -0.85 for a set of data. Which description is correct?",
+      "q": "A calculator gives \\(r = -0.85\\) for a set of data. Which description is correct?",
       "opts": [
         "A strong negative linear relationship",
         "A strong positive linear relationship",
         "A weak negative linear relationship",
         "A weak positive linear relationship"
       ],
-      "why": "The negative sign means y tends to fall as x rises. The value 0.85 is close to 1, so the relationship is strong. The positive options ignore the sign, and the weak options misread how close 0.85 is to 1.",
-      "clue": "Read the sign for direction, then see how close the number is to 1 or -1."
+      "why": "The negative sign means \\(y\\) tends to fall as \\(x\\) rises. The value 0.85 is close to 1, so the relationship is strong. The positive options ignore the sign, and the weak options misread how close 0.85 is to 1.",
+      "clue": "Read the sign for direction, then see how close the number is to 1 or \\(-1\\)."
     },
     "b": {
       "d": 3,
-      "q": "Four pairs of variables have these values of r. Which pair has the strongest linear relationship?",
-      "opts": ["r = -0.92", "r = 0.75", "r = 0.10", "r = -0.48"],
-      "why": "Strength depends on the distance from 0, not on the sign. The value -0.92 is closest to -1, so it is the strongest. A common mistake is to pick 0.75 because it is the largest positive value, but a negative r can be stronger.",
+      "q": "Four pairs of variables have these values of \\(r\\). Which pair has the strongest linear relationship?",
+      "opts": ["\\(r = -0.92\\)", "\\(r = 0.75\\)", "\\(r = 0.10\\)", "\\(r = -0.48\\)"],
+      "why": "Strength depends on the distance from 0, not on the sign. The value \\(-0.92\\) is closest to \\(-1\\), so it is the strongest. A common mistake is to pick 0.75 because it is the largest positive value, but a negative \\(r\\) can be stronger.",
       "clue": "Ignore the signs and ask which number is closest to 1."
     }
   },
@@ -4731,13 +4891,18 @@ MADE_BANKS.mat = {
         "Extrapolation",
         "predicting for an x-value outside the range of the data. It is less reliable, because the pattern may not continue beyond the data."
       ],
-      "Example: a line is fitted to data for x from 10 to 40. Predicting at x = 25 is interpolation. Predicting at x = 60 is extrapolation."
+      "Example: a line is fitted to data for \\(x\\) from 10 to 40. Predicting at \\(x = 25\\) is interpolation. Predicting at \\(x = 60\\) is extrapolation."
     ],
     "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
     "a": {
       "q": "A line of best fit is drawn using data with x-values from 20 to 50. Which prediction is an example of extrapolation?",
-      "opts": ["Predicting y when x = 70", "Predicting y when x = 35", "Predicting y when x = 22", "Predicting y when x = 48"],
-      "why": "The value x = 70 is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
+      "opts": [
+        "Predicting \\(y\\) when \\(x = 70\\)",
+        "Predicting \\(y\\) when \\(x = 35\\)",
+        "Predicting \\(y\\) when \\(x = 22\\)",
+        "Predicting \\(y\\) when \\(x = 48\\)"
+      ],
+      "why": "The value \\(x = 70\\) is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
       "clue": "Compare each x-value with the data the line was built from."
     },
     "b": {
@@ -4943,7 +5108,7 @@ MADE_BANKS.mat = {
       "Raw scores from different tests cannot be compared directly, because each test has its own mean and spread. A mark of 70 can be strong on one test and weak on another.",
       "To compare, convert each score to a z-score using its own test's mean and standard deviation (SD). This puts both scores on the same scale.",
       "The higher z-score is the better performance relative to its group. A bigger gap in marks does not always give a higher z-score, because a wider spread makes it smaller.",
-      "Example: Maths 72 (mean 60, SD 8) gives z = (72 − 60) ÷ 8 = 1.5. Science 68 (mean 50, SD 12) gives z = (68 − 50) ÷ 12 = 1.5. The two results are equal relative to their groups."
+      "Example: Maths 72 (mean 60, SD 8) gives \\(z = (72 - 60) \\div 8 = 1.5\\). Science 68 (mean 50, SD 12) gives \\(z = (68 - 50) \\div 12 = 1.5\\). The two results are equal relative to their groups."
     ],
     "remember": "Compare z-scores, not raw marks. The higher z-score is the better result for its group.",
     "a": {
@@ -4954,19 +5119,19 @@ MADE_BANKS.mat = {
         "English, because 64 is higher than 58",
         "History, because its mean is lower than English"
       ],
-      "why": "English z = (64 − 55) ÷ 6 = 1.5. History z = (58 − 50) ÷ 4 = 2. The higher z-score is the better result. Comparing raw marks is tempting, but each test has its own mean and spread.",
+      "why": "English \\(z = (64 - 55) \\div 6 = 1.5\\). History \\(z = (58 - 50) \\div 4 = 2\\). The higher z-score is the better result. Comparing raw marks is tempting, but each test has its own mean and spread.",
       "clue": "Find a z-score for each subject, then compare them."
     },
     "b": {
       "d": 3,
       "q": "Priya scores 45 on a music test (mean 38, SD 5) and 81 on a drama test (mean 70, SD 10). Which statement is correct?",
       "opts": [
-        "Music was better: z = 1.4 compared with z = 1.1",
-        "Drama was better: z = 1.1 compared with z = 1.4",
+        "Music was better: \\(z = 1.4\\) compared with \\(z = 1.1\\)",
+        "Drama was better: \\(z = 1.1\\) compared with \\(z = 1.4\\)",
         "Drama was better, as she was 11 marks above the mean",
         "The two were equal, because both are above the mean"
       ],
-      "why": "Music z = (45 − 38) ÷ 5 = 1.4. Drama z = (81 − 70) ÷ 10 = 1.1. Drama has the bigger gap in marks, but its spread is wider, so its z-score is lower. Music is the better result for its group.",
+      "why": "Music \\(z = (45 - 38) \\div 5 = 1.4\\). Drama \\(z = (81 - 70) \\div 10 = 1.1\\). Drama has the bigger gap in marks, but its spread is wider, so its z-score is lower. Music is the better result for its group.",
       "clue": "Divide each gap from the mean by that test's standard deviation."
     }
   },
@@ -5024,23 +5189,31 @@ MADE_BANKS.mat = {
   "mat-fractions-decimals-percentages": {
     "title": "Fractions, decimals and percentages",
     "card": [
-      "A fraction, a decimal and a percentage can show the same amount. For example, 1/4 = 0.25 = 25%.",
-      ["Fraction to decimal", "divide the top number by the bottom number. 3/5 = 3 ÷ 5 = 0.6."],
-      ["Decimal to percentage", "multiply by 100. 0.6 × 100 = 60%. To go back, divide by 100."],
-      ["Percentage to fraction", "write the percentage over 100, then simplify. 60% = 60/100 = 3/5."]
+      "A fraction, a decimal and a percentage can show the same amount. For example, \\(\\frac{1}{4} = 0.25 = 25\\%\\).",
+      ["Fraction to decimal", "divide the top number by the bottom number. \\(\\frac{3}{5} = 3 \\div 5 = 0.6\\)."],
+      ["Decimal to percentage", "multiply by 100. \\(0.6 \\times 100 = 60\\%\\). To go back, divide by 100."],
+      [
+        "Percentage to fraction",
+        "write the percentage over 100, then simplify. \\(60\\% = \\frac{60}{100} = \\frac{3}{5}\\)."
+      ]
     ],
     "remember": "Percent means out of 100. Divide by 100 to go from a percentage to a decimal, and multiply by 100 to go back.",
     "a": {
-      "q": "Which decimal is equal to 3/8?",
+      "q": "Which decimal is equal to \\(\\frac{3}{8}\\)?",
       "opts": ["0.375", "0.38", "2.67", "0.83"],
-      "why": "Divide the top by the bottom: 3 ÷ 8 = 0.375. Dividing 8 by 3 instead gives 2.67, which is the mistake of turning the fraction upside down.",
+      "why": "Divide the top by the bottom: \\(3 \\div 8 = 0.375\\). Dividing 8 by 3 instead gives 2.67, which is the mistake of turning the fraction upside down.",
       "clue": "Divide the top number by the bottom number."
     },
     "b": {
       "d": 3,
-      "q": "Mia scored 0.7 on one quiz, 65% on another and 3/4 on a third. Which list puts these in order from smallest to largest?",
-      "opts": ["65%, 0.7, 3/4", "0.7, 65%, 3/4", "3/4, 0.7, 65%", "65%, 3/4, 0.7"],
-      "why": "Write each as a percentage: 0.7 = 70%, 65% stays 65%, and 3/4 = 75%. The order is 65%, 70%, 75%. Comparing 0.7 with 65 without converting wrongly makes 0.7 look smaller.",
+      "q": "Mia scored 0.7 on one quiz, 65% on another and \\(\\frac{3}{4}\\) on a third. Which list puts these in order from smallest to largest?",
+      "opts": [
+        "65%, 0.7, \\(\\frac{3}{4}\\)",
+        "0.7, 65%, \\(\\frac{3}{4}\\)",
+        "\\(\\frac{3}{4}\\), 0.7, 65%",
+        "65%, \\(\\frac{3}{4}\\), 0.7"
+      ],
+      "why": "Write each as a percentage: \\(0.7 = 70\\%\\), 65% stays 65%, and \\(\\frac{3}{4} = 75\\%\\). The order is 65%, 70%, 75%. Comparing 0.7 with 65 without converting wrongly makes 0.7 look smaller.",
       "clue": "Write all three amounts in the same form first."
     }
   },
@@ -5048,22 +5221,22 @@ MADE_BANKS.mat = {
     "title": "Percentages of amounts",
     "card": [
       "Percent means out of 100. To find a percentage of an amount, change the percentage to a decimal by dividing by 100, then multiply.",
-      "Example: 15% of $80. 15% = 0.15, and 0.15 × 80 = $12.",
-      "Some percentages are quick: 50% is half, 10% is dividing by 10, and 1% is dividing by 100. Use them to build other percentages, so 30% is 3 × 10%.",
+      "Example: 15% of $80. \\(15\\% = 0.15\\), and \\(0.15 \\times \\$80 = \\$12\\).",
+      "Some percentages are quick: 50% is half, 10% is dividing by 10, and 1% is dividing by 100. Use them to build other percentages, so 30% is \\(3 \\times 10\\%\\).",
       "To find a percentage increase, work out the percentage of the amount, then add it to the amount. For a decrease, such as a discount, subtract it."
     ],
     "remember": "Percentage of an amount: change the percentage to a decimal, then multiply.",
     "a": {
       "q": "What is 35% of $60?",
       "opts": ["$21", "$2.10", "$25", "$210"],
-      "why": "35% = 0.35, and 0.35 × 60 = $21. As a check, 30% is 3 × $6 = $18 and 5% is $3, giving $21. The answer $2.10 comes from writing 35% as 0.035, which moves the decimal point one place too far.",
+      "why": "\\(35\\% = 0.35\\), and \\(0.35 \\times \\$60 = \\$21\\). As a check, 30% is \\(3 \\times \\$6 = \\$18\\) and 5% is $3, giving $21. The answer $2.10 comes from writing 35% as 0.035, which moves the decimal point one place too far.",
       "clue": "Write 35% as a decimal first."
     },
     "b": {
       "d": 3,
       "q": "Sam's phone costs $400. It is on sale with a 20% discount. What is the sale price?",
       "opts": ["$320", "$80", "$480", "$380"],
-      "why": "20% of 400 = 0.2 × 400 = $80. A discount is taken off the price, so 400 − 80 = $320. The answer $80 is only the discount, not the sale price.",
+      "why": "\\(20\\% \\text{ of } \\$400 = 0.2 \\times \\$400 = \\$80\\). A discount is taken off the price, so \\(\\$400 - \\$80 = \\$320\\). The answer $80 is only the discount, not the sale price.",
       "clue": "Find the discount, then decide whether to add or subtract it."
     }
   },
@@ -5163,23 +5336,23 @@ MADE_BANKS.mat = {
   "mat-solving-simple-equations": {
     "title": "Solving simple equations",
     "card": [
-      "An equation says two things are equal. Solving it means finding the value of the unknown, such as x, that makes it true.",
+      "An equation says two things are equal. Solving it means finding the value of the unknown, such as \\(x\\), that makes it true.",
       "To solve it, undo the operations on the unknown in reverse order. Whatever you do to one side, do to the other.",
-      "Example: 3x + 5 = 20. The unknown was multiplied by 3, then 5 was added. Undo the adding first: subtract 5 from both sides to get 3x = 15.",
-      "Then undo the multiplying: divide both sides by 3 to get x = 5. Check by putting 5 back in: 3 × 5 + 5 = 20."
+      "Example: \\(3x + 5 = 20\\). The unknown was multiplied by 3, then 5 was added. Undo the adding first: subtract 5 from both sides to get \\(3x = 15\\).",
+      "Then undo the multiplying: divide both sides by 3 to get \\(x = 5\\). Check by putting 5 back in: \\(3 \\times 5 + 5 = 20\\)."
     ],
     "remember": "Undo the last operation first, do the same to both sides, then check.",
     "a": {
-      "q": "Solve 2x + 7 = 19. What is x?",
+      "q": "Solve \\(2x + 7 = 19\\). What is \\(x\\)?",
       "opts": ["6", "13", "12", "10"],
-      "why": "Subtract 7 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 7 = 19. The answer 13 comes from adding 7 instead of subtracting it: (19 + 7) ÷ 2 = 13.",
+      "why": "Subtract 7 from both sides to get \\(2x = 12\\), then divide by 2 to get \\(x = 6\\). Check: \\(2 \\times 6 + 7 = 19\\). The answer 13 comes from adding 7 instead of subtracting it: \\((19 + 7) \\div 2 = 13\\).",
       "clue": "Undo the adding before the multiplying."
     },
     "b": {
       "d": 3,
-      "q": "Leila pays $12 to join a gym, then $8 per class. She has paid $60 in total. This gives 12 + 8n = 60. How many classes has she attended?",
+      "q": "Leila pays $12 to join a gym, then $8 per class. She has paid $60 in total. This gives \\(12 + 8n = 60\\). How many classes has she attended?",
       "opts": ["6", "9", "48", "7.5"],
-      "why": "Subtract 12 from both sides to get 8n = 48, then divide by 8 to get n = 6. Check: 12 + 8 × 6 = 60. The answer 9 comes from adding the joining fee instead of subtracting it: (60 + 12) ÷ 8 = 9.",
+      "why": "Subtract 12 from both sides to get \\(8n = 48\\), then divide by 8 to get \\(n = 6\\). Check: \\(12 + 8 \\times 6 = 60\\). The answer 9 comes from adding the joining fee instead of subtracting it: \\((60 + 12) \\div 8 = 9\\).",
       "clue": "Take away the joining fee before dividing."
     }
   },
@@ -5837,96 +6010,104 @@ MADE_BANKS.mat = {
   "mat-quadratic-graphs": {
     "title": "Quadratic graphs",
     "card": [
-      "A quadratic graph is a parabola. In turning point form, y = a(x − h)² + k, the vertex (turning point) is (h, k). Note the sign: (x − 3) gives h = 3, and (x + 3) = (x − (−3)) gives h = −3.",
-      "If a is positive, the parabola opens upwards and the vertex is the lowest point. If a is negative, it opens downwards and the vertex is the highest point.",
-      "For the y-intercept, put x = 0. For the x-intercepts, put y = 0, then solve by factorising or by the quadratic formula.",
-      "Example: y = (x − 2)² − 9 has vertex (2, −9). Setting y = 0 gives (x − 2)² = 9, so x − 2 = 3 or −3, and x = 5 or −1."
+      "A quadratic graph is a parabola. In turning point form, \\(y = a(x - h)^{2} + k\\), the vertex (turning point) is \\((h, k)\\). Note the sign: \\((x - 3)\\) gives \\(h = 3\\), and \\((x + 3) = (x - (-3))\\) gives \\(h = -3\\).",
+      "If \\(a\\) is positive, the parabola is concave up and the vertex is the lowest point. If \\(a\\) is negative, it is concave down and the vertex is the highest point.",
+      "For the y-intercept, put \\(x = 0\\). For the x-intercepts, put \\(y = 0\\), then solve by factorising or by the quadratic formula.",
+      "Example: \\(y = (x - 2)^{2} - 9\\) has vertex \\((2, -9)\\). Setting \\(y = 0\\) gives \\((x - 2)^{2} = 9\\), so \\(x - 2 = 3\\) or \\(x - 2 = -3\\), and \\(x = 5\\) or \\(x = -1\\)."
     ],
-    "remember": "To get h, flip the sign of the number inside the bracket. k is read as it is. Set y = 0 for x-intercepts.",
+    "remember": "To get \\(h\\), flip the sign of the number inside the bracket. \\(k\\) is read as it is. Set \\(y = 0\\) for x-intercepts.",
     "a": {
-      "q": "What is the vertex of y = 2(x + 4)² − 7?",
-      "opts": ["(−4, −7)", "(4, −7)", "(−4, 7)", "(4, 7)"],
-      "why": "Write (x + 4) as (x − (−4)), so h = −4. The k value is −7, so the vertex is (−4, −7). The option (4, −7) is tempting but copies the sign inside the bracket.",
-      "clue": "Whatever is added inside the bracket, h has the opposite sign."
+      "q": "What is the vertex of \\(y = 2(x + 4)^{2} - 7\\)?",
+      "opts": ["\\((-4, -7)\\)", "\\((4, -7)\\)", "\\((-4, 7)\\)", "\\((4, 7)\\)"],
+      "why": "Write \\((x + 4)\\) as \\((x - (-4))\\), so \\(h = -4\\). The \\(k\\) value is \\(-7\\), so the vertex is \\((-4, -7)\\). The option \\((4, -7)\\) is tempting but copies the sign inside the bracket.",
+      "clue": "Whatever is added inside the bracket, \\(h\\) has the opposite sign."
     },
     "b": {
       "d": 3,
-      "q": "Priya graphs y = −(x − 1)² + 16. What are the x-intercepts?",
-      "opts": ["x = −3 and x = 5", "x = −5 and x = 3", "x = 1 and x = 16", "x = 0 and x = 2"],
-      "why": "Set y = 0: (x − 1)² = 16, so x − 1 = 4 or −4. That gives x = 5 or x = −3. The option x = −5 and x = 3 comes from taking h as −1.",
-      "clue": "Set y = 0, then take the square root of both sides, remembering both signs."
+      "q": "Priya graphs \\(y = -(x - 1)^{2} + 16\\). What are the x-intercepts?",
+      "opts": [
+        "\\(x = -3\\) and \\(x = 5\\)",
+        "\\(x = -5\\) and \\(x = 3\\)",
+        "\\(x = 1\\) and \\(x = 16\\)",
+        "\\(x = 0\\) and \\(x = 2\\)"
+      ],
+      "why": "Set \\(y = 0\\): \\((x - 1)^{2} = 16\\), so \\(x - 1 = 4\\) or \\(x - 1 = -4\\). That gives \\(x = 5\\) or \\(x = -3\\). The option \\(x = -5\\) and \\(x = 3\\) comes from taking \\(h\\) as \\(-1\\).",
+      "clue": "Set \\(y = 0\\), then take the square root of both sides, remembering both signs."
     }
   },
   "mat-cubic-quartic-graphs": {
     "title": "Cubic and quartic graphs",
     "card": [
-      "A factorised polynomial shows its x-intercepts. Set each bracket to zero. For y = (x + 2)(x − 1)(x − 3), the x-intercepts are x = −2, 1 and 3.",
-      ["Single factor", "a bracket that appears once, such as (x − 1). The graph crosses the x-axis at that point."],
+      "A factorised polynomial shows its x-intercepts. Set each bracket to zero. For \\(y = (x + 2)(x - 1)(x - 3)\\), the x-intercepts are \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\).",
+      [
+        "Single factor",
+        "a bracket that appears once, such as \\((x - 1)\\). The graph crosses the x-axis at that point."
+      ],
       [
         "Squared factor",
-        "a bracket that appears twice, such as (x − 1)². The graph touches the axis and turns back without crossing."
+        "a bracket that appears twice, such as \\((x - 1)^{2}\\). The graph touches the axis at a turning point, without crossing."
       ],
       [
         "Cubed factor",
-        "a bracket that appears three times, such as (x − 1)³. The graph flattens at the axis as it crosses."
+        "a bracket that appears three times, such as \\((x - 1)^{3}\\). The graph crosses the axis at a stationary point of inflection."
       ]
     ],
-    "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches, a cubed factor flattens.",
+    "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches at a turning point, a cubed factor crosses at a point of inflection.",
     "a": {
-      "q": "For y = (x − 4)²(x + 1), what does the graph do at x = 4?",
+      "q": "For \\(y = (x - 4)^{2}(x + 1)\\), what does the graph do at \\(x = 4\\)?",
       "opts": [
-        "Touches the x-axis and turns back",
-        "Crosses the x-axis without flattening",
-        "Flattens as it crosses the x-axis",
+        "Touches the x-axis at a turning point",
+        "Crosses the x-axis with no stationary point",
+        "Crosses the x-axis at a point of inflection",
         "Does not meet the x-axis"
       ],
-      "why": "The factor (x − 4) is squared, so x = 4 is an x-intercept where the graph touches the axis and turns. A single factor would cross. A cubed factor would flatten as it crosses.",
-      "clue": "Look at the power on the bracket (x − 4)."
+      "why": "The factor \\((x - 4)\\) is squared, so \\(x = 4\\) is an x-intercept where the graph touches the axis at a turning point. A single factor would cross. A cubed factor would cross at a stationary point of inflection.",
+      "clue": "Look at the power on the bracket \\((x - 4)\\)."
     },
     "b": {
       "d": 3,
-      "q": "A graph is y = (x + 2)(x − 3)³. What does it do at x = 3 and at x = −2?",
+      "q": "A graph is \\(y = (x + 2)(x - 3)^{3}\\). What does it do at \\(x = 3\\) and at \\(x = -2\\)?",
       "opts": [
-        "Flattens as it crosses at x = 3, crosses at x = −2",
-        "Crosses at x = 3, flattens as it crosses at x = −2",
-        "Touches and turns at x = 3, crosses at x = −2",
-        "Flattens as it crosses at both x = 3 and x = −2"
+        "Point of inflection at \\(x = 3\\), crosses at \\(x = -2\\)",
+        "Crosses at \\(x = 3\\), point of inflection at \\(x = -2\\)",
+        "Turning point at \\(x = 3\\), crosses at \\(x = -2\\)",
+        "Points of inflection at both \\(x = 3\\) and \\(x = -2\\)"
       ],
-      "why": "The bracket (x − 3) is cubed, so the graph flattens as it crosses at x = 3. The bracket (x + 2) appears once, so the graph simply crosses at x = −2. The powers belong to the brackets, not to the numbers inside them.",
+      "why": "The bracket \\((x - 3)\\) is cubed, so the graph crosses at \\(x = 3\\) with a stationary point of inflection. The bracket \\((x + 2)\\) appears once, so the graph simply crosses at \\(x = -2\\). The powers belong to the brackets, not to the numbers inside them.",
       "clue": "Match each power to its own bracket, then set each bracket to zero."
     }
   },
   "mat-power-functions": {
     "title": "Power functions",
     "card": [
-      "A power function has the form y = xⁿ, where n can be negative or a fraction. Its graph is shaped by values it cannot reach.",
+      "A power function has the form \\(y = x^{n}\\), where \\(n\\) can be negative or a fraction. Its graph is shaped by values it cannot reach.",
       [
-        "1/x and 1/x²",
-        "x cannot be 0, so the y-axis is a vertical asymptote, a line the graph approaches but never touches. y = 0 is a horizontal asymptote. For y = 1/x the branches are in opposite quadrants. For y = 1/x² both branches are above the x-axis."
+        "\\(\\frac{1}{x}\\) and \\(\\frac{1}{x^{2}}\\)",
+        "\\(x\\) cannot be 0, so the y-axis is a vertical asymptote, a line the graph approaches but never touches. \\(y = 0\\) is a horizontal asymptote. For \\(y = \\frac{1}{x}\\) the branches are in opposite quadrants. For \\(y = \\frac{1}{x^{2}}\\) both branches are above the x-axis."
       ],
       [
-        "√x",
-        "y = √x needs x ≥ 0, so the graph starts at the point (0, 0) and rises to the right. It has no part to the left of the y-axis."
+        "\\(\\sqrt{x}\\)",
+        "\\(y = \\sqrt{x}\\) needs \\(x \\ge 0\\), so the graph starts at the point \\((0, 0)\\) and rises to the right. It has no part to the left of the y-axis."
       ],
-      "Example: y = 1/x has no point at x = 0. When x = 2, y = 1/2. When x = −2, y = −1/2."
+      "Example: \\(y = \\frac{1}{x}\\) has no point at \\(x = 0\\). When \\(x = 2\\), \\(y = \\frac{1}{2}\\). When \\(x = -2\\), \\(y = -\\frac{1}{2}\\)."
     ],
-    "remember": "The values a power function cannot use, such as x = 0 for 1/x or negative x for √x, set its shape.",
+    "remember": "The values a power function cannot use, such as \\(x = 0\\) for \\(\\frac{1}{x}\\) or negative \\(x\\) for \\(\\sqrt{x}\\), set its shape.",
     "a": {
-      "q": "Which statement is true for the graph of y = 1/x²?",
+      "q": "Which statement is true for the graph of \\(y = \\frac{1}{x^{2}}\\)?",
       "opts": [
         "It has the y-axis as an asymptote and lies above the x-axis",
         "It has the y-axis as an asymptote and dips below the x-axis",
         "It passes through the origin and lies above the x-axis",
-        "It starts at the origin and has no part for negative x"
+        "It starts at the origin and has no part for negative \\(x\\)"
       ],
-      "why": "x = 0 is not allowed, so the y-axis is an asymptote. Squaring makes every x² positive, so y is always positive. A branch below the x-axis belongs to y = 1/x, not 1/x².",
-      "clue": "Is x² ever negative?"
+      "why": "\\(x = 0\\) is not allowed, so the y-axis is an asymptote. Squaring makes every \\(x^{2}\\) positive, so \\(y\\) is always positive. A branch below the x-axis belongs to \\(y = \\frac{1}{x}\\), not \\(y = \\frac{1}{x^{2}}\\).",
+      "clue": "Is \\(x^{2}\\) ever negative?"
     },
     "b": {
       "d": 2,
-      "q": "Sam graphs y = √x. Which x-value gives no point on the graph?",
-      "opts": ["x = −4", "x = 0", "x = 4", "x = 9"],
-      "why": "The square root of a negative number is not a real number, so the graph has no point for x = −4. The value x = 0 is tempting, but it is allowed and gives the start point (0, 0).",
+      "q": "Sam graphs \\(y = \\sqrt{x}\\). Which x-value gives no point on the graph?",
+      "opts": ["\\(x = -4\\)", "\\(x = 0\\)", "\\(x = 4\\)", "\\(x = 9\\)"],
+      "why": "The square root of a negative number is not a real number, so the graph has no point for \\(x = -4\\). The value \\(x = 0\\) is tempting, but it is allowed and gives the start point \\((0, 0)\\).",
       "clue": "Which x-value would put a negative number under the root?"
     }
   },
@@ -5935,50 +6116,55 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Translation",
-        "y = f(x − h) + k moves the graph h units right and k units up. A minus inside the bracket moves the graph right."
+        "\\(y = f(x - h) + k\\) moves the graph \\(h\\) units right and \\(k\\) units up. A minus inside the bracket moves the graph right."
       ],
-      ["Reflection", "y = −f(x) reflects the graph in the x-axis. y = f(−x) reflects it in the y-axis."],
+      ["Reflection", "\\(y = -f(x)\\) reflects the graph in the x-axis. \\(y = f(-x)\\) reflects it in the y-axis."],
       [
         "Dilation",
-        "y = a f(x) stretches the graph by a factor of a from the x-axis. y = f(x/b) stretches it by a factor of b from the y-axis."
+        "\\(y = af(x)\\) stretches the graph by a factor of \\(a\\) from the x-axis. \\(y = f\\left(\\frac{x}{b}\\right)\\) stretches it by a factor of \\(b\\) from the y-axis."
       ],
-      "Each point (x, y) moves in a set way. For example, y = (x + 1)² − 4 is y = x² moved 1 left and 4 down, so its vertex is (−1, −4)."
+      "Each point \\((x, y)\\) moves in a set way. For example, \\(y = (x + 1)^{2} - 4\\) is \\(y = x^{2}\\) moved 1 left and 4 down, so its vertex is \\((-1, -4)\\)."
     ],
-    "remember": "Outside the bracket changes y. Inside the bracket changes x, and in the opposite way to how it looks.",
+    "remember": "Outside the bracket changes \\(y\\). Inside the bracket changes \\(x\\), and in the opposite way to how it looks.",
     "a": {
-      "q": "The graph of y = x² is translated 3 units right and 2 units down. What is the new rule?",
-      "opts": ["y = (x − 3)² − 2", "y = (x + 3)² − 2", "y = (x − 3)² + 2", "y = (x + 3)² + 2"],
-      "why": "Moving right by 3 means x is replaced by (x − 3), and moving down by 2 means subtracting 2. The option with (x + 3) moves the graph left, which is the tempting mistake.",
+      "q": "The graph of \\(y = x^{2}\\) is translated 3 units right and 2 units down. What is the new rule?",
+      "opts": [
+        "\\(y = (x - 3)^{2} - 2\\)",
+        "\\(y = (x + 3)^{2} - 2\\)",
+        "\\(y = (x - 3)^{2} + 2\\)",
+        "\\(y = (x + 3)^{2} + 2\\)"
+      ],
+      "why": "Moving right by 3 means \\(x\\) is replaced by \\((x - 3)\\), and moving down by 2 means subtracting 2. The option with \\((x + 3)\\) moves the graph left, which is the tempting mistake.",
       "clue": "Right 3 puts a minus inside the bracket."
     },
     "b": {
       "d": 3,
-      "q": "The point (6, 4) lies on y = f(x). Which point lies on y = −f(x/2)?",
-      "opts": ["(12, −4)", "(3, −4)", "(−12, 4)", "(12, 4)"],
-      "why": "Replacing x with x/2 stretches the graph by a factor of 2 from the y-axis, so x goes from 6 to 12. The negative sign outside reflects in the x-axis, so y goes from 4 to −4. (3, −4) is tempting, but it halves x instead of doubling it.",
-      "clue": "Deal with x and y separately: one is stretched, one is flipped."
+      "q": "The point \\((6, 4)\\) lies on \\(y = f(x)\\). Which point lies on \\(y = -f\\left(\\frac{x}{2}\\right)\\)?",
+      "opts": ["\\((12, -4)\\)", "\\((3, -4)\\)", "\\((-12, 4)\\)", "\\((12, 4)\\)"],
+      "why": "Replacing \\(x\\) with \\(\\frac{x}{2}\\) stretches the graph by a factor of 2 from the y-axis, so \\(x\\) goes from 6 to 12. The negative sign outside reflects in the x-axis, so \\(y\\) goes from 4 to \\(-4\\). \\((3, -4)\\) is tempting, but it halves \\(x\\) instead of doubling it.",
+      "clue": "Deal with \\(x\\) and \\(y\\) separately: one is stretched, one is reflected."
     }
   },
   "mat-families-functions": {
     "title": "Families of functions",
     "card": [
-      "A parameter is a letter in a rule that can take many values. In y = ax², each value of a gives a different parabola, and together they form a family.",
-      "If a > 0 the parabola opens up. If a < 0 it opens down. The larger the size of a, the narrower the parabola.",
+      "A parameter is a letter in a rule that can take many values. In \\(y = ax^{2}\\), each value of \\(a\\) gives a different parabola, and together they form a family.",
+      "If \\(a > 0\\) the parabola is concave up. If \\(a < 0\\) it is concave down. The larger the size of \\(a\\), the narrower the parabola.",
       "To find the rule for one member of the family, put a given point into the rule and solve for the parameter.",
-      "Example: y = ax² passes through (2, 12). Then 12 = a × 2², so 12 = 4a and a = 3. The rule is y = 3x²."
+      "Example: \\(y = ax^{2}\\) passes through \\((2, 12)\\). Then \\(12 = a \\times 2^{2}\\), so \\(12 = 4a\\) and \\(a = 3\\). The rule is \\(y = 3x^{2}\\)."
     ],
     "remember": "A parameter names a family. A point on the graph fixes which member it is.",
     "a": {
-      "q": "The graph of y = ax² passes through (3, 18). What is the value of a?",
+      "q": "The graph of \\(y = ax^{2}\\) passes through \\((3, 18)\\). What is the value of \\(a\\)?",
       "opts": ["2", "6", "9", "54"],
-      "why": "Put in x = 3 and y = 18: 18 = a × 3², so 18 = 9a and a = 2. Using 3 instead of 3² gives 6, which is the tempting mistake.",
+      "why": "Put in \\(x = 3\\) and \\(y = 18\\): \\(18 = a \\times 3^{2}\\), so \\(18 = 9a\\) and \\(a = 2\\). Using 3 instead of \\(3^{2}\\) gives 6, which is the tempting mistake.",
       "clue": "Square the x-value before dividing."
     },
     "b": {
       "d": 3,
-      "q": "The graph of y = ax² + 1 passes through (2, −7). What is its rule?",
-      "opts": ["y = −2x² + 1", "y = −1.5x² + 1", "y = −1.75x² + 1", "y = 2x² + 1"],
-      "why": "Put in the point: −7 = 4a + 1, so 4a = −8 and a = −2. Adding 1 instead of subtracting it gives 4a = −6, so −1.5, which is the tempting mistake.",
+      "q": "The graph of \\(y = ax^{2} + 1\\) passes through \\((2, -7)\\). What is its rule?",
+      "opts": ["\\(y = -2x^{2} + 1\\)", "\\(y = -1.5x^{2} + 1\\)", "\\(y = -1.75x^{2} + 1\\)", "\\(y = 2x^{2} + 1\\)"],
+      "why": "Put in the point: \\(-7 = 4a + 1\\), so \\(4a = -8\\) and \\(a = -2\\). Adding 1 instead of subtracting it gives \\(4a = -6\\), so \\(-1.5\\), which is the tempting mistake.",
       "clue": "Subtract the constant from both sides before dividing."
     }
   },
@@ -5987,56 +6173,61 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Substitution",
-        "Rearrange one equation to give y (or x), then put it into the other. Example: y = 2x + 1 and 3x + y = 11 give 3x + 2x + 1 = 11, so x = 2 and y = 5."
+        "Rearrange one equation to give y (or \\(x\\)), then put it into the other. Example: \\(y = 2x + 1\\) and \\(3x + y = 11\\) give \\(3x + 2x + 1 = 11\\), so \\(x = 2\\) and \\(y = 5\\)."
       ],
       [
         "Elimination",
-        "Add or subtract the equations to remove one variable. Example: x + y = 7 and x − y = 3 add to give 2x = 10, so x = 5 and y = 2."
+        "Add or subtract the equations to remove one variable. Example: \\(x + y = 7\\) and \\(x - y = 3\\) add to give \\(2x = 10\\), so \\(x = 5\\) and \\(y = 2\\)."
       ],
       "A line can meet a parabola. Substitute the line into the parabola to get a quadratic, then solve it. There can be two solutions, one or none.",
-      "Find y for each x using the line's rule. The answer is a point (x, y), so always give both coordinates."
+      "Find \\(y\\) for each \\(x\\) using the line's rule. The answer is a point \\((x, y)\\), so always give both coordinates."
     ],
     "remember": "Combine the equations to get one variable, solve it, then go back for the other.",
     "a": {
-      "q": "Solve y = 3x − 2 and 2x + y = 13 together. What is the solution (x, y)?",
-      "opts": ["(3, 7)", "(7, 3)", "(3, 11)", "(3, 10)"],
-      "why": "Substituting gives 2x + 3x − 2 = 13, so 5x = 15 and x = 3. Then y = 3 × 3 − 2 = 7, which also checks in 2 × 3 + 7 = 13. (7, 3) has the coordinates swapped.",
-      "clue": "Replace y in the second equation with 3x − 2."
+      "q": "Solve \\(y = 3x - 2\\) and \\(2x + y = 13\\) together. What is the solution \\((x, y)\\)?",
+      "opts": ["\\((3, 7)\\)", "\\((7, 3)\\)", "\\((3, 11)\\)", "\\((3, 10)\\)"],
+      "why": "Substituting gives \\(2x + 3x - 2 = 13\\), so \\(5x = 15\\) and \\(x = 3\\). Then \\(y = 3 \\times 3 - 2 = 7\\), which also checks in \\(2 \\times 3 + 7 = 13\\). \\((7, 3)\\) has the coordinates swapped.",
+      "clue": "Replace \\(y\\) in the second equation with \\(3x - 2\\)."
     },
     "b": {
       "d": 3,
-      "q": "The line y = x + 2 meets the parabola y = x². Where do they meet?",
-      "opts": ["(2, 4) and (−1, 1)", "(2, 4) and (1, 1)", "(−2, 0) and (1, 3)", "(2, 4) only"],
-      "why": "Set x² = x + 2, so x² − x − 2 = 0, which factorises as (x − 2)(x + 1) = 0. So x = 2 or x = −1, and the points are (2, 4) and (−1, 1). (2, 4) only is tempting, but the quadratic has two solutions.",
-      "clue": "Put x + 2 equal to x², then factorise."
+      "q": "The line \\(y = x + 2\\) meets the parabola \\(y = x^{2}\\). Where do they meet?",
+      "opts": [
+        "\\((2, 4)\\) and \\((-1, 1)\\)",
+        "\\((2, 4)\\) and \\((1, 1)\\)",
+        "\\((-2, 0)\\) and \\((1, 3)\\)",
+        "\\((2, 4)\\) only"
+      ],
+      "why": "Set \\(x^{2} = x + 2\\), so \\(x^{2} - x - 2 = 0\\), which factorises as \\((x - 2)(x + 1) = 0\\). So \\(x = 2\\) or \\(x = -1\\), and the points are \\((2, 4)\\) and \\((-1, 1)\\). \\((2, 4)\\) only is tempting, but the quadratic has two solutions.",
+      "clue": "Put \\(x + 2\\) equal to \\(x^{2}\\), then factorise."
     }
   },
   "mat-simulation": {
     "title": "Simulation",
     "card": [
       "A simulation copies a random experiment using a device that is easier to run. Coins, dice, spinners and random number generators are common choices.",
-      "The device must match the chances in the real experiment. A fair coin has two equally likely outcomes, so it can stand in for any yes or no event with probability 1/2.",
-      "Run the simulation many times. Estimated probability = number of trials with the event ÷ total number of trials.",
-      "Example: a spinner has 5 equal sectors. Let 1 stand for rain and 2 to 5 for no rain. In 40 spins, 1 comes up 9 times. The estimate for rain is 9/40 = 0.225. The true value is 1/5 = 0.2. More trials usually bring the estimate closer."
+      "The device must match the chances in the real experiment. A fair coin has two equally likely outcomes, so it can stand in for any yes or no event with probability \\(\\frac{1}{2}\\).",
+      "Run the simulation many times. The estimated probability is the number of trials with the event divided by the total number of trials.",
+      "Example: a spinner has 5 equal sectors. Let 1 stand for rain and 2 to 5 for no rain. In 40 spins, 1 comes up 9 times. The estimate for rain is \\(\\frac{9}{40} = 0.225\\). The true value is \\(\\frac{1}{5} = 0.2\\). More trials usually bring the estimate closer."
     ],
     "remember": "Match the device to the chances, run many trials, then divide successes by trials.",
     "a": {
       "q": "A fair six-sided die is rolled 50 times and shows a 6 on 7 rolls. What is the estimated probability of a 6?",
-      "opts": ["7/50", "1/6", "7/43", "43/50"],
-      "why": "The estimate is the number of trials with the event divided by all trials, so 7 ÷ 50 = 0.14. The value 1/6 is the theoretical probability, not the result of this simulation.",
+      "opts": ["\\(\\frac{7}{50}\\)", "\\(\\frac{1}{6}\\)", "\\(\\frac{7}{43}\\)", "\\(\\frac{43}{50}\\)"],
+      "why": "The estimate is the number of trials with the event divided by all trials, so \\(7 \\div 50 = 0.14\\). The value \\(\\frac{1}{6}\\) is the theoretical probability, not the result of this simulation.",
       "clue": "Divide the count of 6s by the total number of rolls."
     },
     "b": {
       "d": 3,
-      "q": "Priya wants to simulate whether a bus is late, with probability 1/4. Which device matches this chance?",
+      "q": "Priya wants to simulate whether a bus is late, with probability \\(\\frac{1}{4}\\). Which device matches this chance?",
       "opts": [
         "A spinner with 4 equal sectors, one marked late",
         "A fair coin, with heads meaning late",
         "A fair die, with 1 meaning late",
         "A spinner with 3 equal sectors, one marked late"
       ],
-      "why": "One of 4 equal sectors gives a chance of 1/4. A coin gives 1/2, a die gives 1/6 for a single face, and a 3-sector spinner gives 1/3.",
-      "clue": "Find the device where the late outcome has chance 1/4."
+      "why": "One of 4 equal sectors gives a chance of \\(\\frac{1}{4}\\). A coin gives \\(\\frac{1}{2}\\), a die gives \\(\\frac{1}{6}\\) for a single face, and a 3-sector spinner gives \\(\\frac{1}{3}\\).",
+      "clue": "Find the device where the late outcome has chance \\(\\frac{1}{4}\\)."
     }
   },
   "mat-permutations": {
@@ -6044,11 +6235,11 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Multiplication",
-        "When choices are made one after another, multiply the number of ways for each step. A meal with 3 mains and then 4 drinks gives 3 × 4 = 12 meals."
+        "When choices are made one after another, multiply the number of ways for each step. A meal with 3 mains and then 4 drinks gives \\(3 \\times 4 = 12\\) meals."
       ],
       [
         "Addition",
-        "When you pick one option from separate groups, and only one choice is made, add the numbers. Choosing one book from 5 novels or 6 atlases gives 5 + 6 = 11 books."
+        "When you pick one option from separate groups, and only one choice is made, add the numbers. Choosing one book from 5 novels or 6 atlases gives \\(5 + 6 = 11\\) books."
       ],
       "Ask first: do I make one choice after another, or do I pick just one item from different groups?",
       "Some problems use both. Work out each part, then combine them with the right principle."
@@ -6057,14 +6248,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "Priya chooses one of 4 hats and then one of 5 scarves. How many hat and scarf outfits are possible?",
       "opts": ["20", "9", "16", "25"],
-      "why": "The two choices are made one after another, so multiply: 4 × 5 = 20. Adding gives 9, which would count only a single item from the two groups, not an outfit of both.",
+      "why": "The two choices are made one after another, so multiply: \\(4 \\times 5 = 20\\). Adding gives 9, which would count only a single item from the two groups, not an outfit of both.",
       "clue": "She picks a hat and then a scarf."
     },
     "b": {
       "d": 3,
       "q": "A café sells 6 hot drinks and 4 cold drinks. Sam buys one drink, then picks one of 3 snacks. How many drink and snack choices are there?",
       "opts": ["30", "13", "72", "24"],
-      "why": "The drink is one choice from two groups, so add: 6 + 4 = 10 drinks. The snack comes after, so multiply: 10 × 3 = 30. Using 6 × 4 × 3 = 72 wrongly multiplies the two drink groups, which are alternatives.",
+      "why": "The drink is one choice from two groups, so add: \\(6 + 4 = 10\\) drinks. The snack comes after, so multiply: \\(10 \\times 3 = 30\\). Using \\(6 \\times 4 \\times 3 = 72\\) wrongly multiplies the two drink groups, which are alternatives.",
       "clue": "Hot and cold drinks are alternatives. The snack is a second step."
     }
   },
@@ -6072,23 +6263,23 @@ MADE_BANKS.mat = {
     "title": "Combinations",
     "card": [
       "A combination is a selection where order does not matter. Choosing Ana and Ben is the same as choosing Ben and Ana.",
-      "The number of ways to choose r items from n is nCr = n! ÷ (r! × (n − r)!). Here n! means n × (n − 1) × ... × 1.",
-      "Example: choose 2 from 5. 5C2 = 5! ÷ (2! × 3!) = 120 ÷ (2 × 6) = 10.",
-      "Shortcut: multiply r numbers counting down from n, then divide by r!. So 5C2 = (5 × 4) ÷ (2 × 1) = 10. Dividing by r! removes repeats, as each group can be ordered in r! ways."
+      "The number of ways to choose \\(r\\) items from \\(n\\) is \\(\\binom{n}{r} = \\frac{n!}{r! \\times (n - r)!}\\). Here \\(n!\\) means \\(n \\times (n - 1) \\times \\ldots \\times 1\\).",
+      "Example: choose 2 from 5. \\(\\binom{5}{2} = \\frac{5!}{2! \\times 3!} = \\frac{120}{2 \\times 6} = 10\\).",
+      "Shortcut: multiply \\(r\\) numbers counting down from \\(n\\), then divide by \\(r!\\). So \\(\\binom{5}{2} = \\frac{5 \\times 4}{2 \\times 1} = 10\\). Dividing by \\(r!\\) removes repeats, as each group can be ordered in \\(r!\\) ways."
     ],
-    "remember": "When order does not matter, divide by r! so each group is counted once.",
+    "remember": "When order does not matter, divide by \\(r!\\) so each group is counted once.",
     "a": {
-      "q": "What is 6C2?",
+      "q": "What is \\(\\binom{6}{2}\\)?",
       "opts": ["15", "30", "12", "8"],
-      "why": "6C2 = (6 × 5) ÷ (2 × 1) = 15. The answer 30 is 6 × 5 without dividing by 2!, so it counts each pair twice, once in each order.",
-      "clue": "Each pair can be ordered in 2! ways."
+      "why": "\\(\\binom{6}{2} = \\frac{6 \\times 5}{2 \\times 1} = 15\\). The answer 30 is \\(6 \\times 5\\) without dividing by \\(2!\\), so it counts each pair twice, once in each order.",
+      "clue": "Each pair can be ordered in \\(2!\\) ways."
     },
     "b": {
       "d": 2,
       "q": "A coach picks 3 players from a squad of 8 to attend a clinic. The order of picking does not matter. How many different groups can be picked?",
       "opts": ["56", "336", "24", "5"],
-      "why": "This is 8C3 = (8 × 7 × 6) ÷ (3 × 2 × 1) = 336 ÷ 6 = 56. The answer 336 counts each group in every order, so it is 3! = 6 times too large.",
-      "clue": "Work out which number is n and which is r."
+      "why": "This is \\(\\binom{8}{3} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = \\frac{336}{6} = 56\\). The answer 336 counts each group in every order, so it is \\(3! = 6\\) times too large.",
+      "clue": "Work out which number is \\(n\\) and which is \\(r\\)."
     }
   },
   "mat-venn-diagrams-karnaugh-maps": {
@@ -6097,72 +6288,72 @@ MADE_BANKS.mat = {
       "A Venn diagram uses a rectangle for all outcomes and overlapping circles for events. A probability table, or Karnaugh map, does the same job with rows and columns, and in both the probabilities of all regions add to 1.",
       [
         "Intersection",
-        "A ∩ B means both A and B happen. It is the overlap of the two circles, or the cell where row A meets column B."
+        "\\(A \\cap B\\) means both \\(A\\) and \\(B\\) happen. It is the overlap of the two circles, or the cell where row \\(A\\) meets column \\(B\\)."
       ],
-      ["Union", "A ∪ B means A or B or both happen. It is everything inside either circle."],
+      ["Union", "\\(A \\cup B\\) means \\(A\\) or \\(B\\) or both happen. It is everything inside either circle."],
       [
         "Complement",
-        "A' means A does not happen. It is everything outside circle A, so Pr(A') = 1 − Pr(A). Example: if Pr(A) = 0.6 and Pr(A ∩ B) = 0.3, then Pr(A ∩ B') = 0.6 − 0.3 = 0.3."
+        "\\(A'\\) means \\(A\\) does not happen. It is everything outside circle \\(A\\), so \\(\\text{Pr}(A') = 1 - \\text{Pr}(A)\\). Example: if \\(\\text{Pr}(A) = 0.6\\) and \\(\\text{Pr}(A \\cap B) = 0.3\\), then \\(\\text{Pr}(A \\cap B') = 0.6 - 0.3 = 0.3\\)."
       ]
     ],
     "remember": "Overlap is both, whole circles together is or, outside is not. All regions add to 1.",
     "a": {
-      "q": "In a table, Pr(A) = 0.7 and Pr(A ∩ B) = 0.4. What is Pr(A ∩ B')?",
+      "q": "In a table, \\(\\text{Pr}(A) = 0.7\\) and \\(\\text{Pr}(A \\cap B) = 0.4\\). What is \\(\\text{Pr}(A \\cap B')\\)?",
       "opts": ["0.3", "0.4", "0.6", "1.1"],
-      "why": "A ∩ B' is the part of A that is not in B, so 0.7 − 0.4 = 0.3. Giving 0.6 comes from finding 1 − 0.4, which ignores that the region must sit inside A.",
-      "clue": "Take the overlap away from all of A."
+      "why": "\\(A \\cap B'\\) is the part of \\(A\\) that is not in \\(B\\), so \\(0.7 - 0.4 = 0.3\\). Giving 0.6 comes from finding \\(1 - 0.4\\), which ignores that the region must sit inside \\(A\\).",
+      "clue": "Take the overlap away from all of \\(A\\)."
     },
     "b": {
       "d": 3,
-      "q": "In Year 11 at a Ballarat school, Pr(plays sport) = 0.5, Pr(plays music) = 0.4 and Pr(both) = 0.2. What is the probability a student does neither?",
+      "q": "In Year 11 at a Ballarat school, the probability a student plays sport is 0.5, plays music is 0.4 and plays both is 0.2. What is the probability a student does neither?",
       "opts": ["0.3", "0.1", "0.5", "0.7"],
-      "why": "Fill each region: sport only 0.5 − 0.2 = 0.3, both 0.2, music only 0.4 − 0.2 = 0.2. These add to 0.7, so neither is 1 − 0.7 = 0.3. Giving 0.1 comes from 1 − 0.5 − 0.4, which counts the overlap twice.",
+      "why": "Fill each region: sport only \\(0.5 - 0.2 = 0.3\\), both 0.2, music only \\(0.4 - 0.2 = 0.2\\). These add to 0.7, so neither is \\(1 - 0.7 = 0.3\\). Giving 0.1 comes from \\(1 - 0.5 - 0.4\\), which counts the overlap twice.",
       "clue": "Fill the three regions inside the circles first."
     }
   },
   "mat-addition-rule": {
     "title": "The addition rule",
     "card": [
-      "Pr(A ∪ B) is the chance that A happens, or B happens, or both. The rule is Pr(A ∪ B) = Pr(A) + Pr(B) − Pr(A ∩ B).",
-      "We subtract Pr(A ∩ B) because outcomes in both A and B are counted twice when we add Pr(A) and Pr(B).",
-      "Mutually exclusive events cannot happen together, so Pr(A ∩ B) = 0. Then Pr(A ∪ B) = Pr(A) + Pr(B).",
-      "Example: Pr(A) = 0.5, Pr(B) = 0.4 and Pr(A ∩ B) = 0.2. Then Pr(A ∪ B) = 0.5 + 0.4 − 0.2 = 0.7."
+      "\\(\\text{Pr}(A \\cup B)\\) is the chance that \\(A\\) happens, or \\(B\\) happens, or both. The rule is \\(\\text{Pr}(A \\cup B) = \\text{Pr}(A) + \\text{Pr}(B) - \\text{Pr}(A \\cap B)\\).",
+      "We subtract \\(\\text{Pr}(A \\cap B)\\) because outcomes in both \\(A\\) and \\(B\\) are counted twice when we add \\(\\text{Pr}(A)\\) and \\(\\text{Pr}(B)\\).",
+      "Mutually exclusive events cannot happen together, so \\(\\text{Pr}(A \\cap B) = 0\\). Then \\(\\text{Pr}(A \\cup B) = \\text{Pr}(A) + \\text{Pr}(B)\\).",
+      "Example: \\(\\text{Pr}(A) = 0.5\\), \\(\\text{Pr}(B) = 0.4\\) and \\(\\text{Pr}(A \\cap B) = 0.2\\). Then \\(\\text{Pr}(A \\cup B) = 0.5 + 0.4 - 0.2 = 0.7\\)."
     ],
     "remember": "Add the two chances, then take away the overlap so it is counted once.",
     "a": {
-      "q": "Pr(A) = 0.6, Pr(B) = 0.3 and Pr(A ∩ B) = 0.1. What is Pr(A ∪ B)?",
+      "q": "\\(\\text{Pr}(A) = 0.6\\), \\(\\text{Pr}(B) = 0.3\\) and \\(\\text{Pr}(A \\cap B) = 0.1\\). What is \\(\\text{Pr}(A \\cup B)\\)?",
       "opts": ["0.8", "0.9", "0.7", "0.18"],
-      "why": "Pr(A ∪ B) = 0.6 + 0.3 − 0.1 = 0.8. Adding only Pr(A) and Pr(B) gives 0.9, which counts the overlap twice.",
+      "why": "\\(\\text{Pr}(A \\cup B) = 0.6 + 0.3 - 0.1 = 0.8\\). Adding only \\(\\text{Pr}(A)\\) and \\(\\text{Pr}(B)\\) gives 0.9, which counts the overlap twice.",
       "clue": "Take away the overlap once."
     },
     "b": {
       "d": 3,
-      "q": "At a Ballarat school, Pr(a student plays netball) = 0.35 and Pr(a student plays chess) = 0.15. No student does both. What is the chance a student plays netball or chess?",
+      "q": "At a Ballarat school, the probability a student plays netball is 0.35 and the probability a student plays chess is 0.15. No student does both. What is the chance a student plays netball or chess?",
       "opts": ["0.50", "0.20", "0.0525", "0.4475"],
-      "why": "No student does both, so the events are mutually exclusive and Pr(A ∩ B) = 0. Then Pr(A ∪ B) = 0.35 + 0.15 = 0.50. The product 0.0525 is not used here, because the rule adds the chances.",
+      "why": "No student does both, so the events are mutually exclusive and \\(\\text{Pr}(A \\cap B) = 0\\). Then \\(\\text{Pr}(A \\cup B) = 0.35 + 0.15 = 0.50\\). The product 0.0525 is not used here, because the rule adds the chances.",
       "clue": "If no one does both, what is the overlap?"
     }
   },
   "mat-conditional-probability-2": {
     "title": "Conditional probability",
     "card": [
-      "Pr(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
-      "Formula: Pr(A | B) = Pr(A ∩ B)/Pr(B). The bottom is the event we are given. The top is the part of it that is also A.",
-      "From a table, Pr(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
-      "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. Pr(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+      "\\(\\text{Pr}(A \\mid B)\\) is the probability of \\(A\\) given that \\(B\\) has happened. Knowing \\(B\\) has happened shrinks the sample space to just the outcomes in \\(B\\).",
+      "Formula: \\(\\text{Pr}(A \\mid B) = \\frac{\\text{Pr}(A \\cap B)}{\\text{Pr}(B)}\\). The bottom is the event we are given. The top is the part of it that is also \\(A\\).",
+      "From a table, \\(\\text{Pr}(A \\mid B)\\) is the number in both \\(A\\) and \\(B\\), divided by the number in \\(B\\). Use only the row or column for \\(B\\) as the total.",
+      "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. \\(\\text{Pr}(\\text{tennis} \\mid \\text{netball}) = \\frac{8}{12} = \\frac{2}{3}\\). The total is 12, not 30."
     ],
-    "remember": "Given B means B is the new total. Divide by Pr(B), not by everything.",
+    "remember": "Given \\(B\\) means \\(B\\) is the new total. Divide by \\(\\text{Pr}(B)\\), not by everything.",
     "a": {
-      "q": "For two events, Pr(A ∩ B) = 0.2 and Pr(B) = 0.5. Find Pr(A | B).",
+      "q": "For two events, \\(\\text{Pr}(A \\cap B) = 0.2\\) and \\(\\text{Pr}(B) = 0.5\\). Find \\(\\text{Pr}(A \\mid B)\\).",
       "opts": ["0.4", "0.1", "0.7", "2.5"],
-      "why": "Pr(A | B) = Pr(A ∩ B) ÷ Pr(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+      "why": "\\(\\text{Pr}(A \\mid B) = \\text{Pr}(A \\cap B) \\div \\text{Pr}(B) = 0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
       "clue": "The event after the bar goes on the bottom."
     },
     "b": {
       "d": 3,
       "q": "At a school camp, 40 students chose activities. 25 chose kayaking, and 10 of those also chose archery. 5 chose only archery. One archery student is picked at random. What is the probability they also chose kayaking?",
-      "opts": ["2/3", "1/4", "2/5", "3/8"],
-      "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+      "opts": ["\\(\\frac{2}{3}\\)", "\\(\\frac{1}{4}\\)", "\\(\\frac{2}{5}\\)", "\\(\\frac{3}{8}\\)"],
+      "why": "Archery has \\(10 + 5 = 15\\) students, and 10 of them chose kayaking, so the probability is \\(\\frac{10}{15} = \\frac{2}{3}\\). The option \\(\\frac{2}{5}\\) is \\(\\frac{10}{25}\\), which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
       "clue": "Find the total number who chose archery first."
     }
   },
@@ -6170,22 +6361,22 @@ MADE_BANKS.mat = {
     "title": "The law of total probability",
     "card": [
       "Sometimes an event can happen in more than one way. The law of total probability adds up the chance of each way.",
-      "Split on A and not A: Pr(B) = Pr(B | A) × Pr(A) + Pr(B | A') × Pr(A').",
-      "Each path is a product: the chance of the first step times the chance of the second step given the first. Then the paths that end in B are added.",
-      "Example: Pr(A) = 0.4, Pr(B | A) = 0.5 and Pr(B | A') = 0.2. Then Pr(B) = 0.5 × 0.4 + 0.2 × 0.6 = 0.2 + 0.12 = 0.32."
+      "Split on \\(A\\) and not \\(A\\): \\(\\text{Pr}(B) = \\text{Pr}(B \\mid A) \\times \\text{Pr}(A) + \\text{Pr}(B \\mid A') \\times \\text{Pr}(A')\\).",
+      "Each path is a product: the chance of the first step times the chance of the second step given the first. Then the paths that end in \\(B\\) are added.",
+      "Example: \\(\\text{Pr}(A) = 0.4\\), \\(\\text{Pr}(B \\mid A) = 0.5\\) and \\(\\text{Pr}(B \\mid A') = 0.2\\). Then \\(\\text{Pr}(B) = 0.5 \\times 0.4 + 0.2 \\times 0.6 = 0.2 + 0.12 = 0.32\\)."
     ],
-    "remember": "Multiply along each path to B, then add the paths.",
+    "remember": "Multiply along each path to \\(B\\), then add the paths.",
     "a": {
-      "q": "Pr(A) = 0.3, Pr(B | A) = 0.6 and Pr(B | A') = 0.1. What is Pr(B)?",
+      "q": "\\(\\text{Pr}(A) = 0.3\\), \\(\\text{Pr}(B \\mid A) = 0.6\\) and \\(\\text{Pr}(B \\mid A') = 0.1\\). What is \\(\\text{Pr}(B)\\)?",
       "opts": ["0.25", "0.18", "0.70", "0.35"],
-      "why": "Pr(B) = 0.6 × 0.3 + 0.1 × 0.7 = 0.18 + 0.07 = 0.25. Giving 0.18 counts only the path through A and misses the path through not A.",
-      "clue": "B can happen after A or after not A."
+      "why": "\\(\\text{Pr}(B) = 0.6 \\times 0.3 + 0.1 \\times 0.7 = 0.18 + 0.07 = 0.25\\). Giving 0.18 counts only the path through \\(A\\) and misses the path through not \\(A\\).",
+      "clue": "\\(B\\) can happen after \\(A\\) or after not \\(A\\)."
     },
     "b": {
       "d": 3,
       "q": "Priya cycles to school in Geelong on 20% of days, and otherwise takes the bus. She is late on 10% of cycling days and 30% of bus days. What is the probability she is late on a random day?",
       "opts": ["0.26", "0.20", "0.40", "0.06"],
-      "why": "Late = 0.1 × 0.2 + 0.3 × 0.8 = 0.02 + 0.24 = 0.26. Giving 0.40 adds 0.1 and 0.3 without weighting each by how often that path is used.",
+      "why": "\\(\\text{Pr}(\\text{late}) = 0.1 \\times 0.2 + 0.3 \\times 0.8 = 0.02 + 0.24 = 0.26\\). Giving 0.40 adds 0.1 and 0.3 without weighting each by how often that path is used.",
       "clue": "Weight each lateness chance by how often she uses that way."
     }
   },
@@ -6193,28 +6384,28 @@ MADE_BANKS.mat = {
     "title": "Independent events",
     "card": [
       "Two events are independent if knowing that one happened does not change the probability of the other. Flipping a coin and rolling a die are independent.",
-      "For independent events A and B, Pr(A ∩ B) = Pr(A) × Pr(B). This means both happen.",
-      "Example: Pr(heads) = 1/2 and Pr(roll a 6) = 1/6. Pr(heads and a 6) = 1/2 × 1/6 = 1/12.",
-      "To test for independence, check whether Pr(A ∩ B) equals Pr(A) × Pr(B). If it does, the events are independent. If it does not, they are not."
+      "For independent events \\(A\\) and \\(B\\), \\(\\text{Pr}(A \\cap B) = \\text{Pr}(A) \\times \\text{Pr}(B)\\). This means both happen.",
+      "Example: \\(\\text{Pr}(\\text{heads}) = \\frac{1}{2}\\) and \\(\\text{Pr}(\\text{roll a 6}) = \\frac{1}{6}\\). So \\(\\text{Pr}(\\text{heads and a 6}) = \\frac{1}{2} \\times \\frac{1}{6} = \\frac{1}{12}\\).",
+      "To test for independence, check whether \\(\\text{Pr}(A \\cap B)\\) equals \\(\\text{Pr}(A) \\times \\text{Pr}(B)\\). If it does, the events are independent. If it does not, they are not."
     ],
-    "remember": "Independent events: multiply the probabilities to find Pr(A ∩ B).",
+    "remember": "Independent events: multiply the probabilities to find \\(\\text{Pr}(A \\cap B)\\).",
     "a": {
-      "q": "Events A and B are independent, with Pr(A) = 0.4 and Pr(B) = 0.5. Find Pr(A ∩ B).",
+      "q": "Events \\(A\\) and \\(B\\) are independent, with \\(\\text{Pr}(A) = 0.4\\) and \\(\\text{Pr}(B) = 0.5\\). Find \\(\\text{Pr}(A \\cap B)\\).",
       "opts": ["0.2", "0.9", "0.1", "0.8"],
-      "why": "For independent events, Pr(A ∩ B) = 0.4 × 0.5 = 0.2. Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
+      "why": "For independent events, \\(\\text{Pr}(A \\cap B) = 0.4 \\times 0.5 = 0.2\\). Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
       "clue": "Both events happen, and the events are independent."
     },
     "b": {
       "d": 3,
-      "q": "Pr(A) = 0.5, Pr(B) = 0.4 and Pr(A ∩ B) = 0.3. Which statement is correct?",
+      "q": "\\(\\text{Pr}(A) = 0.5\\), \\(\\text{Pr}(B) = 0.4\\) and \\(\\text{Pr}(A \\cap B) = 0.3\\). Which statement is correct?",
       "opts": [
-        "Not independent, as 0.5 × 0.4 = 0.2, not 0.3",
+        "Not independent, as \\(0.5 \\times 0.4 = 0.2\\), not 0.3",
         "Independent, as 0.3 is between 0 and 1",
-        "Independent, as 0.5 + 0.4 is more than 0.3",
-        "Not independent, as 0.3 is less than Pr(A)"
+        "Independent, as \\(0.5 + 0.4\\) is more than 0.3",
+        "Not independent, as 0.3 is less than \\(\\text{Pr}(A)\\)"
       ],
-      "why": "Independent events need Pr(A ∩ B) = Pr(A) × Pr(B). Here 0.5 × 0.4 = 0.2, which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
-      "clue": "Multiply Pr(A) and Pr(B), then compare with Pr(A ∩ B)."
+      "why": "Independent events need \\(\\text{Pr}(A \\cap B) = \\text{Pr}(A) \\times \\text{Pr}(B)\\). Here \\(0.5 \\times 0.4 = 0.2\\), which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
+      "clue": "Multiply \\(\\text{Pr}(A)\\) and \\(\\text{Pr}(B)\\), then compare with \\(\\text{Pr}(A \\cap B)\\)."
     }
   },
   "mat-graph-theory-specialist": {
@@ -6276,22 +6467,22 @@ MADE_BANKS.mat = {
     "title": "Planar graphs and Euler's formula",
     "card": [
       "A planar graph can be drawn on a flat page so that no edges cross. A face is a region bounded by edges, and the outside region counts as one face.",
-      "Euler's formula is for a connected planar graph: v − e + f = 2. Here v is the number of vertices, e the number of edges and f the number of faces.",
-      "Worked example: a connected planar graph has 6 vertices and 9 edges. Then 6 − 9 + f = 2, so f = 5.",
+      "Euler's formula is for a connected planar graph: \\(v - e + f = 2\\). Here \\(v\\) is the number of vertices, \\(e\\) the number of edges and \\(f\\) the number of faces.",
+      "Worked example: a connected planar graph has 6 vertices and 9 edges. Then \\(6 - 9 + f = 2\\), so \\(f = 5\\).",
       "A common slip is to forget the outside face when counting. Also, a graph that is drawn with crossing edges may still be planar, if it can be redrawn with no crossings."
     ],
-    "remember": "For a connected planar graph, v − e + f = 2, and the outside face counts.",
+    "remember": "For a connected planar graph, \\(v - e + f = 2\\), and the outside face counts.",
     "a": {
       "q": "A connected planar graph has 7 vertices and 10 edges. How many faces does it have?",
       "opts": ["5", "3", "4", "6"],
-      "why": "Use v − e + f = 2. Then 7 − 10 + f = 2, so −3 + f = 2 and f = 5. Choosing 3 comes from calculating 10 − 7 and stopping before adding the 2.",
-      "clue": "Put the numbers into v − e + f = 2, then solve for f."
+      "why": "Use \\(v - e + f = 2\\). Then \\(7 - 10 + f = 2\\), so \\(-3 + f = 2\\) and \\(f = 5\\). Choosing 3 comes from calculating \\(10 - 7\\) and stopping before adding the 2.",
+      "clue": "Put the numbers into \\(v - e + f = 2\\), then solve for \\(f\\)."
     },
     "b": {
       "d": 3,
       "q": "A connected planar graph has 8 faces, counting the outside face, and 12 edges. How many vertices does it have?",
       "opts": ["6", "4", "7", "18"],
-      "why": "Use v − e + f = 2. Then v − 12 + 8 = 2, so v − 4 = 2 and v = 6. Choosing 4 comes from leaving out the 2 on the right side, which gives v − 12 + 8 = 0. Choosing 7 comes from taking away the outside face as well, so f becomes 7.",
+      "why": "Use \\(v - e + f = 2\\). Then \\(v - 12 + 8 = 2\\), so \\(v - 4 = 2\\) and \\(v = 6\\). Choosing 4 comes from leaving out the 2 on the right side, which gives \\(v - 12 + 8 = 0\\). Choosing 7 comes from taking away the outside face as well, so \\(f\\) becomes 7.",
       "clue": "The 8 faces already include the outside one."
     }
   },
@@ -6300,14 +6491,14 @@ MADE_BANKS.mat = {
     "card": [
       "A network is connected if there is a route between every pair of vertices.",
       "A tree is a connected network that contains no circuits. Take away any one edge and it is no longer connected.",
-      "A tree with n vertices has n − 1 edges. Example: a tree with 6 vertices has 6 − 1 = 5 edges.",
-      "To test a network, check that it is connected and has no circuits. If a connected network has n vertices and more than n − 1 edges, it must contain a circuit, so it is not a tree."
+      "A tree with \\(n\\) vertices has \\(n - 1\\) edges. Example: a tree with 6 vertices has \\(6 - 1 = 5\\) edges.",
+      "To test a network, check that it is connected and has no circuits. If a connected network has \\(n\\) vertices and more than \\(n - 1\\) edges, it must contain a circuit, so it is not a tree."
     ],
-    "remember": "A tree is connected with no circuits, and n vertices means n − 1 edges.",
+    "remember": "A tree is connected with no circuits, and \\(n\\) vertices means \\(n - 1\\) edges.",
     "a": {
       "q": "A tree has 12 vertices. How many edges does it have?",
       "opts": ["11", "12", "13", "10"],
-      "why": "A tree with n vertices has n − 1 edges, so 12 − 1 = 11. Choosing 12 mixes up the number of edges with the number of vertices.",
+      "why": "A tree with \\(n\\) vertices has \\(n - 1\\) edges, so \\(12 - 1 = 11\\). Choosing 12 mixes up the number of edges with the number of vertices.",
       "clue": "Sketch a tree with 3 vertices and count its edges."
     },
     "b": {
@@ -6319,7 +6510,7 @@ MADE_BANKS.mat = {
         "Yes, because it has as many edges as vertices",
         "No, because a tree would have 8 edges"
       ],
-      "why": "A tree with 7 vertices has 7 − 1 = 6 edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
+      "why": "A tree with 7 vertices has \\(7 - 1 = 6\\) edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
       "clue": "Work out how many edges a tree with 7 vertices has, then compare."
     }
   },
@@ -6419,23 +6610,28 @@ MADE_BANKS.mat = {
   "mat-sums-random-variables": {
     "title": "Sums of random variables",
     "card": [
-      "Let X be a discrete random variable. X1 + X2 means two independent copies of X: two separate trials, added together. 2X means one trial, then doubled.",
-      "Example: a spinner gives X = 1 or 3, each with probability 1/2. Doubling one spin gives 2X = 2 or 6, each with probability 1/2.",
-      "Adding two spins gives the sums 1+1 = 2, 1+3 = 4, 3+1 = 4 and 3+3 = 6. So X1 + X2 is 2 with probability 1/4, 4 with probability 1/2 and 6 with probability 1/4.",
-      "Both have a mean of 4, but the distributions differ. X1 + X2 can take the middle value 4, and 2X cannot. The sum is less likely to land on the extremes."
+      "Let \\(X\\) be a discrete random variable. \\(X_{1} + X_{2}\\) means two independent copies of \\(X\\): two separate trials, added together. \\(2X\\) means one trial, then doubled.",
+      "Example: a spinner gives \\(X = 1\\) or \\(X = 3\\), each with probability \\(\\frac{1}{2}\\). Doubling one spin gives \\(2X = 2\\) or \\(2X = 6\\), each with probability \\(\\frac{1}{2}\\).",
+      "Adding two spins gives the sums \\(1 + 1 = 2\\), \\(1 + 3 = 4\\), \\(3 + 1 = 4\\) and \\(3 + 3 = 6\\). So \\(X_{1} + X_{2}\\) is 2 with probability \\(\\frac{1}{4}\\), 4 with probability \\(\\frac{1}{2}\\) and 6 with probability \\(\\frac{1}{4}\\).",
+      "Both have a mean of 4, but the distributions differ. \\(X_{1} + X_{2}\\) can take the middle value 4, and \\(2X\\) cannot. The sum is less likely to land on the extremes."
     ],
-    "remember": "2X repeats one outcome. X1 + X2 combines two outcomes, so its distribution is different.",
+    "remember": "\\(2X\\) repeats one outcome. \\(X_{1} + X_{2}\\) combines two outcomes, so its distribution is different.",
     "a": {
-      "q": "A fair coin scores X = 1 for heads and 0 for tails. It is tossed twice, independently. What is P(X1 + X2 = 1)?",
-      "opts": ["1/2", "1/4", "1/3", "0"],
-      "why": "A sum of 1 happens with heads then tails, or tails then heads. Each has probability 1/4, so the total is 1/2. The value 0 would be right for 2X, which can only be 0 or 2, but not for the sum of two tosses.",
+      "q": "A fair coin scores \\(X = 1\\) for heads and \\(X = 0\\) for tails. It is tossed twice, independently. What is \\(\\text{Pr}(X_{1} + X_{2} = 1)\\)?",
+      "opts": ["\\(\\frac{1}{2}\\)", "\\(\\frac{1}{4}\\)", "\\(\\frac{1}{3}\\)", "0"],
+      "why": "A sum of 1 happens with heads then tails, or tails then heads. Each has probability \\(\\frac{1}{4}\\), so the total is \\(\\frac{1}{2}\\). The value 0 would be right for \\(2X\\), which can only be 0 or 2, but not for the sum of two tosses.",
       "clue": "Count the ways two tosses can add to 1."
     },
     "b": {
       "d": 3,
-      "q": "A spinner scores 2 or 4, each with probability 1/2. Mia spins once and doubles the score. Sam spins twice and adds the scores. What is each person's chance of getting 8?",
-      "opts": ["Mia 1/2, Sam 1/4", "Mia 1/4, Sam 1/2", "Mia 1/2, Sam 1/2", "Mia 1/4, Sam 1/4"],
-      "why": "Mia gets 8 when her one spin is 4, which has probability 1/2. Sam needs 4 + 4, which has probability 1/2 × 1/2 = 1/4. The tempting answer of 1/2 for both treats adding two spins as the same as doubling one.",
+      "q": "A spinner scores 2 or 4, each with probability \\(\\frac{1}{2}\\). Mia spins once and doubles the score. Sam spins twice and adds the scores. What is each person's chance of getting 8?",
+      "opts": [
+        "Mia \\(\\frac{1}{2}\\), Sam \\(\\frac{1}{4}\\)",
+        "Mia \\(\\frac{1}{4}\\), Sam \\(\\frac{1}{2}\\)",
+        "Mia \\(\\frac{1}{2}\\), Sam \\(\\frac{1}{2}\\)",
+        "Mia \\(\\frac{1}{4}\\), Sam \\(\\frac{1}{4}\\)"
+      ],
+      "why": "Mia gets 8 when her one spin is 4, which has probability \\(\\frac{1}{2}\\). Sam needs \\(4 + 4\\), which has probability \\(\\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}\\). The tempting answer of \\(\\frac{1}{2}\\) for both treats adding two spins as the same as doubling one.",
       "clue": "Sam needs both spins to be the same high score."
     }
   },
@@ -6472,7 +6668,7 @@ MADE_BANKS.mat = {
     "card": [
       "A sample is a group taken from a larger population. Its mean is found by adding the values and dividing by the number of values.",
       "Different samples contain different values, so their means usually differ, even when each sample is taken and worked out correctly. This is called sample variation.",
-      "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are 510 ÷ 3 = 170 and 525 ÷ 3 = 175.",
+      "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are \\(510 \\div 3 = 170\\) and \\(525 \\div 3 = 175\\).",
       "Larger samples tend to have means that vary less from sample to sample. A single extreme value has less pull on a big sample."
     ],
     "remember": "Sample means usually differ from sample to sample, and larger samples tend to differ less.",
@@ -6960,24 +7156,24 @@ MADE_BANKS.mat = {
   "mat-absolute-value-function": {
     "title": "The absolute value function",
     "card": [
-      "The absolute value |x| is the distance of x from 0, so it is never negative. |x| = x when x ≥ 0, and |x| = −x when x < 0.",
-      "The graph of y = |x| is a V with its vertex at (0, 0). The part of y = x below the x-axis is reflected above it.",
-      "For y = |f(x)|, any part of the graph of f below the x-axis is reflected in the x-axis. Parts on or above the axis stay the same.",
-      "Transformations apply as usual. y = |x − 2| + 3 is a V with its vertex moved to (2, 3). Example: |−5| = 5 and |5| = 5."
+      "The absolute value \\(|x|\\) is the distance of \\(x\\) from 0, so it is never negative. \\(|x| = x\\) when \\(x \\ge 0\\), and \\(|x| = -x\\) when \\(x < 0\\).",
+      "The graph of \\(y = |x|\\) is a V with its vertex at \\((0, 0)\\). The part of \\(y = x\\) below the x-axis is reflected above it.",
+      "For \\(y = |f(x)|\\), any part of the graph of \\(f\\) below the x-axis is reflected in the x-axis. Parts on or above the axis stay the same.",
+      "Transformations apply as usual. \\(y = |x - 2| + 3\\) is a V with its vertex moved to \\((2, 3)\\). Example: \\(|-5| = 5\\) and \\(|5| = 5\\)."
     ],
     "remember": "Absolute value makes outputs non-negative by flipping any negative part upwards.",
     "a": {
-      "q": "What is the vertex of the graph of y = |x + 1| − 4?",
-      "opts": ["(−1, −4)", "(1, −4)", "(−1, 4)", "(1, 4)"],
-      "why": "Inside the bars, x + 1 = 0 when x = −1, so the vertex has x = −1. The −4 outside moves the graph down 4, giving (−1, −4). The sign inside the bars shifts the graph the opposite way to what it looks like.",
+      "q": "What is the vertex of the graph of \\(y = |x + 1| - 4\\)?",
+      "opts": ["\\((-1, -4)\\)", "\\((1, -4)\\)", "\\((-1, 4)\\)", "\\((1, 4)\\)"],
+      "why": "Inside the bars, \\(x + 1 = 0\\) when \\(x = -1\\), so the vertex has \\(x = -1\\). The \\(-4\\) outside moves the graph down 4, giving \\((-1, -4)\\). The sign inside the bars shifts the graph the opposite way to what it looks like.",
       "clue": "Find the x-value that makes the inside zero."
     },
     "b": {
       "d": 2,
-      "q": "The graph of y = x − 3 is reflected using y = |x − 3|. What is the y-intercept?",
-      "opts": ["3", "−3", "0", "1/3"],
-      "why": "At x = 0, y = |0 − 3| = |−3| = 3. The value −3 is the y-intercept of y = x − 3, but the absolute value makes it positive.",
-      "clue": "Substitute x = 0, then take the absolute value."
+      "q": "The graph of \\(y = x - 3\\) is reflected using \\(y = |x - 3|\\). What is the y-intercept?",
+      "opts": ["3", "\\(-3\\)", "0", "\\(\\frac{1}{3}\\)"],
+      "why": "At \\(x = 0\\), \\(y = |0 - 3| = |-3| = 3\\). The value \\(-3\\) is the y-intercept of \\(y = x - 3\\), but the absolute value makes it positive.",
+      "clue": "Substitute \\(x = 0\\), then take the absolute value."
     }
   },
   "mat-collecting-data": {
@@ -7025,7 +7221,7 @@ MADE_BANKS.mat = {
       "A table lists values in rows and columns. Find the row and the column you need, then read where they meet.",
       "On a bar graph or line graph, read the label on each axis first. Then follow the top of a bar, or a point on the line, across to the scale to find its value.",
       "A line graph shows a trend. A line going up means the values rise over time. A line going down means they fall. A flat line means no change.",
-      "A pie chart shows parts of a whole. A bigger slice is a bigger share. Example: a pie chart of 200 students shows 25% walk to school. 25% of 200 = 50 students."
+      "A pie chart shows parts of a whole. A bigger slice is a bigger share. Example: a pie chart of 200 students shows 25% walk to school. 25% of 200 is 50 students."
     ],
     "remember": "Read the labels and scale first, then find the value, trend or share.",
     "a": {
@@ -7055,7 +7251,7 @@ MADE_BANKS.mat = {
       ],
       [
         "Pie chart",
-        "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: 1/4 of the whole is 1/4 × 360° = 90°."
+        "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: \\(\\frac{1}{4}\\) of the whole is \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\)."
       ],
       "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
     ],
@@ -7075,7 +7271,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "In a survey of 40 students, 10 chose bus to get to school. What angle is the bus slice on a pie chart?",
       "opts": ["90°", "10°", "40°", "144°"],
-      "why": "The bus share is 10/40 = 1/4, and 1/4 × 360° = 90°. The answer 144° comes from wrongly using 40% as the share, since 0.4 × 360° = 144°. But 10 out of 40 is 25%, not 40%.",
+      "why": "The bus share is \\(\\frac{10}{40} = \\frac{1}{4}\\), and \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\). The answer 144° comes from wrongly using 40% as the share, since \\(0.4 \\times 360^{\\circ} = 144^{\\circ}\\). But 10 out of 40 is 25%, not 40%.",
       "clue": "Find the fraction of the whole, then take that share of 360°."
     }
   },
@@ -7117,7 +7313,7 @@ MADE_BANKS.mat = {
         "Its width is bigger, so sales look smaller than Monday's",
         "Pictures can only be used when the axis starts at zero"
       ],
-      "why": "Doubling both height and width makes the area 2 × 2 = 4 times as large. Sales only doubled, so the eye reads a bigger rise than the real one. The area is not 2 times bigger, because both measurements were doubled.",
+      "why": "Doubling both height and width makes the area \\(2 \\times 2 = 4\\) times as large. Sales only doubled, so the eye reads a bigger rise than the real one. The area is not 2 times bigger, because both measurements were doubled.",
       "clue": "Area depends on height and width together."
     }
   },
@@ -7292,27 +7488,27 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Discount",
-        "A discount lowers a price. For a 20% discount, the new price is 100% − 20% = 80% of the old price, so multiply by 0.8."
+        "A discount lowers a price. For a 20% discount, the new price is \\(100\\% - 20\\% = 80\\%\\) of the old price, so multiply by 0.8."
       ],
       [
         "Mark-up",
-        "A mark-up raises a price. For a 20% mark-up, the new price is 100% + 20% = 120% of the old price, so multiply by 1.2."
+        "A mark-up raises a price. For a 20% mark-up, the new price is \\(100\\% + 20\\% = 120\\%\\) of the old price, so multiply by 1.2."
       ],
       "To find the multiplier, turn the percentage into a decimal. Subtract it from 1 for a discount. Add it to 1 for a mark-up.",
-      "Example: a $50 jacket with a 20% discount costs 50 × 0.8 = $40. A $50 item with a 20% mark-up sells for 50 × 1.2 = $60."
+      "Example: a $50 jacket with a 20% discount costs \\(50 \\times 0.8 = \\$40\\). A $50 item with a 20% mark-up sells for \\(50 \\times 1.2 = \\$60\\)."
     ],
     "remember": "Discount: multiply by 1 minus the rate. Mark-up: multiply by 1 plus the rate.",
     "a": {
       "q": "Which multiplier gives the new price after a 15% discount?",
       "opts": ["0.85", "0.15", "1.15", "0.75"],
-      "why": "A 15% discount leaves 100% − 15% = 85% of the price, so the multiplier is 0.85. The multiplier 1.15 is for a 15% mark-up, which raises the price instead.",
+      "why": "A 15% discount leaves \\(100\\% - 15\\% = 85\\%\\) of the price, so the multiplier is 0.85. The multiplier 1.15 is for a 15% mark-up, which raises the price instead.",
       "clue": "A discount takes the rate away from 1."
     },
     "b": {
       "d": 2,
       "q": "Sam buys mugs for $12 each and sells them with a 25% mark-up. What is the selling price of one mug?",
       "opts": ["$15", "$9", "$13", "$12.25"],
-      "why": "A 25% mark-up means multiplying by 1.25, so 12 × 1.25 = $15. Adding only $0.25 mixes up the percentage with a dollar amount, which gives the wrong price.",
+      "why": "A 25% mark-up means multiplying by 1.25, so \\(12 \\times 1.25 = \\$15\\). Adding only $0.25 mixes up the percentage with a dollar amount, which gives the wrong price.",
       "clue": "Add the rate to 1 to get the multiplier."
     }
   },
@@ -7347,14 +7543,14 @@ MADE_BANKS.mat = {
       "For a jug, read at eye level, at the flat top of the liquid. Always include the unit, such as mL, °C or kg.",
       [
         "Example",
-        "The marks 0 and 100 mL have 5 spaces between them. Each space is 100 ÷ 5 = 20 mL. The third mark after 0 reads 60 mL."
+        "The marks 0 and 100 mL have 5 spaces between them. Each space is \\(100 \\div 5 = 20\\) mL. The third mark after 0 reads 60 mL."
       ]
     ],
     "remember": "Work out what each small mark is worth before you read the value.",
     "a": {
       "q": "On a jug, the marks 200 mL and 300 mL have 4 equal spaces between them. What does each small mark count for?",
       "opts": ["25 mL", "20 mL", "4 mL", "100 mL"],
-      "why": "The gap is 300 − 200 = 100 mL, shared over 4 spaces: 100 ÷ 4 = 25 mL. Using 20 mL would mean dividing by 5, which is the number of marks, not the number of spaces.",
+      "why": "The gap is \\(300 - 200 = 100\\) mL, shared over 4 spaces: \\(100 \\div 4 = 25\\) mL. Using 20 mL would mean dividing by 5, which is the number of marks, not the number of spaces.",
       "clue": "Divide the gap between the numbers by the number of spaces."
     },
     "b": {
@@ -7391,20 +7587,20 @@ MADE_BANKS.mat = {
   "mat-graphing-linear-relations": {
     "title": "Graphing linear relations",
     "card": [
-      "A linear rule such as C = 20 + 5n gives a straight line when plotted. Put n on the horizontal axis and C on the vertical axis.",
+      "A linear rule such as \\(C = 20 + 5n\\) gives a straight line when plotted. Put \\(n\\) on the horizontal axis and C on the vertical axis.",
       [
         "Start",
-        "the fixed amount, where the line meets the vertical axis (n = 0). In C = 20 + 5n, the line starts at 20."
+        "the fixed amount, where the line meets the vertical axis \\((n = 0)\\). In \\(C = 20 + 5n\\), the line starts at 20."
       ],
       [
         "Steepness",
-        "the rate, which is how much the vertical value changes for each 1 step across. In C = 20 + 5n, C rises by 5 for each 1 more n, and a bigger rate gives a steeper line."
+        "the rate, which is how much the vertical value changes for each 1 step across. In \\(C = 20 + 5n\\), C rises by 5 for each 1 more \\(n\\), and a bigger rate gives a steeper line."
       ],
-      "To plot, find two points. At n = 0, C = 20. At n = 4, C = 20 + 5 × 4 = 40. Mark (0, 20) and (4, 40), then join them with a straight line."
+      "To plot, find two points. At \\(n = 0\\), \\(C = 20\\). At \\(n = 4\\), \\(C = 20 + 5 \\times 4 = 40\\). Mark \\((0, 20)\\) and \\((4, 40)\\), then join them with a straight line."
     ],
     "remember": "The start is where the line crosses the vertical axis. The rate is how much it rises for each 1 step across.",
     "a": {
-      "q": "A taxi fare is F = 4 + 3d, where d is the distance in km. What does the graph of F against d look like?",
+      "q": "A taxi fare is \\(F = 4 + 3d\\), where \\(d\\) is the distance in km. What does the graph of F against \\(d\\) look like?",
       "opts": [
         "A straight line starting at 4 and rising 3 for each 1 km",
         "A straight line starting at 3 and rising 4 for each 1 km",
@@ -7412,14 +7608,14 @@ MADE_BANKS.mat = {
         "A straight line starting at 4 and rising 3 for each 3 km"
       ],
       "why": "The fixed amount 4 is the start, and the rate 3 is the rise for each 1 km across. The line starting at 3 and rising 4 swaps the start and the rate, which is a common mistake.",
-      "clue": "The start is the value when d = 0."
+      "clue": "The start is the value when \\(d = 0\\)."
     },
     "b": {
       "d": 3,
-      "q": "Ben hires a bike for C = 10 + 6h dollars, where h is the hours. He plots C against h. What is the value of C at h = 3 on his line?",
+      "q": "Ben hires a bike for \\(C = 10 + 6h\\) dollars, where \\(h\\) is the hours. He plots C against \\(h\\). What is the value of C at \\(h = 3\\) on his line?",
       "opts": ["28", "18", "48", "19"],
-      "why": "At h = 3, C = 10 + 6 × 3 = 10 + 18 = 28. Choosing 18 leaves out the fixed 10, and 48 adds 10 and 6 first, then multiplies by 3, so the fixed part is wrongly tripled.",
-      "clue": "Multiply the rate by h first, then add the start."
+      "why": "At \\(h = 3\\), \\(C = 10 + 6 \\times 3 = 10 + 18 = 28\\). Choosing 18 leaves out the fixed 10, and 48 adds 10 and 6 first, then multiplies by 3, so the fixed part is wrongly tripled.",
+      "clue": "Multiply the rate by \\(h\\) first, then add the start."
     }
   },
   "mat-significant-figures-rounding": {
@@ -7450,7 +7646,7 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Leading digit",
-        "round each number to its first digit, then work with those. For 6.8 × 31, think 7 × 30 = 210."
+        "round each number to its first digit, then work with those. For \\(6.8 \\times 31\\), think \\(7 \\times 30 = 210\\)."
       ],
       [
         "Interval",
@@ -7467,16 +7663,16 @@ MADE_BANKS.mat = {
     ],
     "remember": "Round simply to estimate. Round up when you need enough, down when only whole ones count.",
     "a": {
-      "q": "Which is the best leading-digit estimate of 48 × 21?",
+      "q": "Which is the best leading-digit estimate of \\(48 \\times 21\\)?",
       "opts": ["1000", "800", "1200", "500"],
-      "why": "Round 48 to 50 and 21 to 20. Then 50 × 20 = 1000. The answer 800 would come from rounding 48 down to 40, which is too rough.",
+      "why": "Round 48 to 50 and 21 to 20. Then \\(50 \\times 20 = 1000\\). The answer 800 would come from rounding 48 down to 40, which is too rough.",
       "clue": "Round each number to one digit followed by zeros."
     },
     "b": {
       "d": 2,
       "q": "Mia needs to move 130 students in vans that each hold 12. How many vans does she need?",
       "opts": ["11", "10", "12", "130"],
-      "why": "130 ÷ 12 is about 10.83. Ten vans seat only 120, so 10 students would be left behind. Round up to 11, as the ceiling gives. The answer 10 rounds down.",
+      "why": "\\(130 \\div 12\\) is about 10.83. Ten vans seat only 120, so 10 students would be left behind. Round up to 11, as the ceiling gives. The answer 10 rounds down.",
       "clue": "Would a part-full van still be needed?"
     }
   },
@@ -7669,20 +7865,20 @@ MADE_BANKS.mat = {
       "Cumulative frequency is a running total. For each value or class, add its frequency to all the frequencies before it. The last total equals the number of values.",
       "Example: Frequencies of 4, 6, 10 and 5 give cumulative frequencies of 4, 10, 20 and 25. So 20 of the 25 values are in the first three classes.",
       "A percentile shows where a value sits. The 40th percentile is the value with about 40% of the data at or below it.",
-      "To find a percentile, work out that percentage of the total count, then read across to the value. In 25 values, the 40th percentile is near the 10th value, as 0.4 × 25 = 10."
+      "To find a percentile, work out that percentage of the total count, then read across to the value. In 25 values, the 40th percentile is near the 10th value, as \\(0.4 \\times 25 = 10\\)."
     ],
     "remember": "Cumulative frequency counts values up to a point. A percentile turns that count into a percentage.",
     "a": {
       "q": "Frequencies for four classes are 3, 7, 12 and 8. What are the cumulative frequencies?",
       "opts": ["3, 10, 22, 30", "3, 7, 12, 8", "8, 20, 27, 30", "3, 10, 19, 27"],
-      "why": "Add each frequency to the running total: 3, 3 + 7 = 10, 10 + 12 = 22, 22 + 8 = 30. The last total must equal the number of values. Repeating the frequencies adds nothing up.",
+      "why": "Add each frequency to the running total: 3, \\(3 + 7 = 10\\), \\(10 + 12 = 22\\), \\(22 + 8 = 30\\). The last total must equal the number of values. Repeating the frequencies adds nothing up.",
       "clue": "Each total includes every class before it."
     },
     "b": {
       "d": 2,
       "q": "A school records 80 swim times. Tia's time has 60 times at or below it. What is her percentile?",
       "opts": ["75th percentile", "60th percentile", "25th percentile", "80th percentile"],
-      "why": "The percentile is 60 ÷ 80 × 100 = 75. So 75% of times are at or below hers. Using 60 itself ignores that the total is 80, not 100.",
+      "why": "The percentile is \\(60 \\div 80 \\times 100 = 75\\). So 75% of times are at or below hers. Using 60 itself ignores that the total is 80, not 100.",
       "clue": "Divide the count at or below by the total count."
     }
   },
@@ -7698,13 +7894,18 @@ MADE_BANKS.mat = {
         "Extrapolation",
         "predicting for an x-value outside the range of the data. It is less reliable, because the pattern may not continue beyond the data."
       ],
-      "Example: a line is fitted to data for x from 10 to 40. Predicting at x = 25 is interpolation. Predicting at x = 60 is extrapolation."
+      "Example: a line is fitted to data for \\(x\\) from 10 to 40. Predicting at \\(x = 25\\) is interpolation. Predicting at \\(x = 60\\) is extrapolation."
     ],
     "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
     "a": {
       "q": "A line of best fit is fitted to data with x-values from 20 to 50. Which prediction is extrapolation?",
-      "opts": ["Predicting y when x = 70", "Predicting y when x = 35", "Predicting y when x = 22", "Predicting y when x = 48"],
-      "why": "The value x = 70 is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
+      "opts": [
+        "Predicting \\(y\\) when \\(x = 70\\)",
+        "Predicting \\(y\\) when \\(x = 35\\)",
+        "Predicting \\(y\\) when \\(x = 22\\)",
+        "Predicting \\(y\\) when \\(x = 48\\)"
+      ],
+      "why": "The value \\(x = 70\\) is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
       "clue": "Compare each x-value with the data the line was built from."
     },
     "b": {
@@ -7737,7 +7938,7 @@ MADE_BANKS.mat = {
       ],
       [
         "Example",
-        "Ben buys a $400 jacket on his credit card and pays $100 by the due date. He is charged 2% interest for the month on the unpaid $300: 0.02 × 300 = $6, so he now owes $306."
+        "Ben buys a $400 jacket on his credit card and pays $100 by the due date. He is charged 2% interest for the month on the unpaid $300: \\(0.02 \\times 300 = \\$6\\), so he now owes $306."
       ]
     ],
     "remember": "Debit spends what you have. Credit is borrowed, and interest and fees can push the cost above the price.",
@@ -7756,7 +7957,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Jack buys a $900 laptop on his credit card. He pays $300 by the due date and is charged 1.5% interest for the month on the rest. How much does he now owe?",
       "opts": ["$609", "$613.50", "$600", "$913.50"],
-      "why": "Interest is charged only on the unpaid amount: $900 − $300 = $600, and 0.015 × 600 = $9, so he owes $609. The answer $613.50 wrongly charges 1.5% on the full $900 instead of the unpaid $600.",
+      "why": "Interest is charged only on the unpaid amount: \\(\\$900 - \\$300 = \\$600\\), and \\(0.015 \\times 600 = \\$9\\), so he owes $609. The answer $613.50 wrongly charges 1.5% on the full $900 instead of the unpaid $600.",
       "clue": "Work out what is still unpaid before finding the interest."
     }
   },
@@ -7961,14 +8162,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "Sam puts $6000 into the shares of one company. Its price falls by 30%. How much does Sam lose?",
       "opts": ["$1800", "$4200", "$600", "$3000"],
-      "why": "30% of $6000 = 0.3 × $6000 = $1800. $4200 is what the shares are worth after the fall, not the loss.",
+      "why": "\\(30\\% \\text{ of } \\$6000 = 0.3 \\times \\$6000 = \\$1800\\). $4200 is what the shares are worth after the fall, not the loss.",
       "clue": "Find 30% of the amount invested."
     },
     "b": {
       "d": 3,
       "q": "Priya has $10 000. She puts $2000 into each of five different companies. One company's shares fall by 50%, and the other four do not change in value. How much does she lose in total?",
       "opts": ["$1000", "$5000", "$2000", "$8000"],
-      "why": "Only $2000 was in the company that fell. 50% of $2000 = $1000. Losing $5000 would be the result if all $10 000 had been in that one company.",
+      "why": "Only $2000 was in the company that fell. 50% of $2000 is $1000. Losing $5000 would be the result if all $10 000 had been in that one company.",
       "clue": "Only the money in the falling company is affected."
     }
   },
@@ -8312,7 +8513,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "The heights of plants in a nursery are bell-shaped, with a mean of 40 cm and a standard deviation of 4 cm. About 68% of the plants have heights between which values?",
       "opts": ["36 cm and 44 cm", "32 cm and 48 cm", "28 cm and 52 cm", "38 cm and 42 cm"],
-      "why": "About 68% of values lie within 1 standard deviation of the mean, so 40 − 4 = 36 and 40 + 4 = 44. The range 32 cm to 48 cm is within 2 standard deviations, which holds about 95%.",
+      "why": "About 68% of values lie within 1 standard deviation of the mean, so \\(40 - 4 = 36\\) and \\(40 + 4 = 44\\). The range 32 cm to 48 cm is within 2 standard deviations, which holds about 95%.",
       "clue": "Which percentage matches 1 standard deviation?"
     }
   },
@@ -8359,45 +8560,45 @@ MADE_BANKS.mat = {
     "title": "First-order recurrence relations",
     "card": [
       "A recurrence relation gives each term from the term just before it. It needs a starting value, written u0, so the list can begin.",
-      "The rule u(n+1) = u(n) + 4 means the next term is the current term plus 4. The rule u(n+1) = 3 × u(n) means the next term is 3 times the current term.",
+      "The rule \\(u(n+1) = u(n) + 4\\) means the next term is the current term plus 4. The rule \\(u(n+1) = 3 \\times u(n)\\) means the next term is 3 times the current term.",
       "To use it, start with u0 and apply the rule again and again. Each answer becomes the input for the next step.",
-      "Example: u0 = 5 and u(n+1) = u(n) + 4. Then u1 = 5 + 4 = 9, u2 = 9 + 4 = 13 and u3 = 13 + 4 = 17."
+      "Example: \\(u0 = 5\\) and \\(u(n+1) = u(n) + 4\\). Then \\(u1 = 5 + 4 = 9\\), \\(u2 = 9 + 4 = 13\\) and \\(u3 = 13 + 4 = 17\\)."
     ],
     "remember": "Start with u0, then apply the rule to each term to get the next one.",
     "a": {
-      "q": "A sequence has u0 = 2 and u(n+1) = 3 × u(n) − 1. What is u2?",
+      "q": "A sequence has \\(u0 = 2\\) and \\(u(n+1) = 3 \\times u(n) - 1\\). What is u2?",
       "opts": ["14", "5", "17", "8"],
-      "why": "u1 = 3 × 2 − 1 = 5. Then u2 = 3 × 5 − 1 = 14. The answer 5 is only u1, so one step was missed.",
+      "why": "\\(u1 = 3 \\times 2 - 1 = 5\\). Then \\(u2 = 3 \\times 5 - 1 = 14\\). The answer 5 is only u1, so one step was missed.",
       "clue": "Find u1 first, then use it to find u2."
     },
     "b": {
       "d": 2,
-      "q": "Sam saves for a bike. His savings follow u0 = 30 and u(n+1) = u(n) + 12, where n is the week. How much does he have at the end of week 3?",
+      "q": "Sam saves for a bike. His savings follow \\(u0 = 30\\) and \\(u(n+1) = u(n) + 12\\), where \\(n\\) is the week. How much does he have at the end of week 3?",
       "opts": ["$66", "$42", "$54", "$78"],
-      "why": "u1 = 42, u2 = 54 and u3 = 66. The answer $54 is u2, which stops one step too early.",
+      "why": "\\(u1 = 42\\), \\(u2 = 54\\) and \\(u3 = 66\\). The answer $54 is u2, which stops one step too early.",
       "clue": "Apply the rule three times, starting from u0."
     }
   },
   "mat-explicit-rules-sequences": {
     "title": "Explicit rules for sequences",
     "card": [
-      "An explicit rule gives the nth term directly from n. You put in the term number and get that term, with no need to list the terms before it.",
-      "For an arithmetic sequence, the rule is t(n) = a + (n − 1)d. Here a is the first term and d is the common difference.",
-      "Worked example: the sequence 7, 12, 17, 22, ... has a = 7 and d = 5. So t(n) = 7 + (n − 1) × 5.",
-      "To find the 30th term, put n = 30. t(30) = 7 + 29 × 5 = 7 + 145 = 152. Do the bracket and the multiplication before the addition."
+      "An explicit rule gives the nth term directly from \\(n\\). You put in the term number and get that term, with no need to list the terms before it.",
+      "For an arithmetic sequence, the rule is \\(t(n) = a + (n - 1)d\\). Here a is the first term and \\(d\\) is the common difference.",
+      "Worked example: the sequence 7, 12, 17, 22, ... has \\(a = 7\\) and \\(d = 5\\). So \\(t(n) = 7 + (n - 1) \\times 5\\).",
+      "To find the 30th term, put \\(n = 30\\). \\(t(30) = 7 + 29 \\times 5 = 7 + 145 = 152\\). Do the bracket and the multiplication before the addition."
     ],
-    "remember": "An explicit rule takes n and gives that term straight away.",
+    "remember": "An explicit rule takes \\(n\\) and gives that term straight away.",
     "a": {
       "q": "An arithmetic sequence has first term 4 and common difference 3. What is the 21st term?",
       "opts": ["64", "67", "63", "84"],
-      "why": "t(21) = 4 + (21 − 1) × 3 = 4 + 60 = 64. Using 21 × 3 instead of 20 × 3 gives 67, which forgets that the first term is already there.",
-      "clue": "Multiply d by n − 1, not by n."
+      "why": "\\(t(21) = 4 + (21 - 1) \\times 3 = 4 + 60 = 64\\). Using \\(21 \\times 3\\) instead of \\(20 \\times 3\\) gives 67, which forgets that the first term is already there.",
+      "clue": "Multiply \\(d\\) by \\(n - 1\\), not by \\(n\\)."
     },
     "b": {
       "d": 3,
-      "q": "Mia saves for a bike. She has $50 in week 1 and adds $15 each week. Using t(n) = a + (n − 1)d, how much has she in week 12?",
+      "q": "Mia saves for a bike. She has $50 in week 1 and adds $15 each week. Using \\(t(n) = a + (n - 1)d\\), how much has she in week 12?",
       "opts": ["$215", "$230", "$195", "$180"],
-      "why": "Here a = 50 and d = 15. t(12) = 50 + 11 × 15 = 50 + 165 = $215. Using 12 × 15 gives $230, because it counts one extra step of $15.",
+      "why": "Here \\(a = 50\\) and \\(d = 15\\). \\(t(12) = 50 + 11 \\times 15 = 50 + 165 = \\$215\\). Using \\(12 \\times 15\\) gives $230, because it counts one extra step of $15.",
       "clue": "Week 1 is the first term, so count how many steps come after it."
     }
   },
@@ -8427,23 +8628,23 @@ MADE_BANKS.mat = {
   "mat-geometric-growth-decay": {
     "title": "Geometric growth and decay",
     "card": [
-      "In geometric growth or decay, each term is the one before multiplied by the same factor R. The recurrence relation is u(n+1) = R × u(n).",
+      "In geometric growth or decay, each term is the one before multiplied by the same factor R. The recurrence relation is \\(u(n+1) = R \\times u(n)\\).",
       "If R is above 1, the amount grows. If R is between 0 and 1, the amount decays.",
-      "To find R, write the percentage rate as a decimal. Add it to 1 for growth, or subtract it from 1 for decay: a 5% rise gives R = 1 + 0.05 = 1.05, and a 5% fall gives R = 1 − 0.05 = 0.95.",
-      "Compound interest is geometric growth. Reducing balance depreciation is geometric decay. Example: $1000 at 5% compound interest becomes 1000 × 1.05 = $1050, then 1050 × 1.05 = $1102.50."
+      "To find R, write the percentage rate as a decimal. Add it to 1 for growth, or subtract it from 1 for decay: a 5% rise gives \\(R = 1 + 0.05 = 1.05\\), and a 5% fall gives \\(R = 1 - 0.05 = 0.95\\).",
+      "Compound interest is geometric growth. Reducing balance depreciation is geometric decay. Example: $1000 at 5% compound interest becomes \\(1000 \\times 1.05 = \\$1050\\), then \\(1050 \\times 1.05 = \\$1102.50\\)."
     ],
     "remember": "Multiply by the same factor R each step: above 1 grows, between 0 and 1 decays.",
     "a": {
       "q": "A car loses 15% of its value each year by reducing balance depreciation. What factor R is used?",
       "opts": ["0.85", "1.15", "0.15", "15"],
-      "why": "A 15% fall means R = 1 − 0.15 = 0.85, so 85% of the value is left each year. The answer 1.15 adds the rate to 1, which would be a 15% rise.",
+      "why": "A 15% fall means \\(R = 1 - 0.15 = 0.85\\), so 85% of the value is left each year. The answer 1.15 adds the rate to 1, which would be a 15% rise.",
       "clue": "What percentage of the value is left after the fall?"
     },
     "b": {
       "d": 3,
       "q": "Leo puts $2000 in an account paying 5% compound interest per year. What is the balance after 2 years?",
       "opts": ["$2205", "$2200", "$2100", "$2210"],
-      "why": "Year 1: 2000 × 1.05 = $2100. Year 2: 2100 × 1.05 = $2205. The answer $2200 is simple interest, which adds the same $100 each year instead of working out interest on the new balance.",
+      "why": "Year 1: \\(2000 \\times 1.05 = \\$2100\\). Year 2: \\(2100 \\times 1.05 = \\$2205\\). The answer $2200 is simple interest, which adds the same $100 each year instead of working out interest on the new balance.",
       "clue": "Year 2 interest is worked out on the year 1 balance."
     }
   },
@@ -8480,15 +8681,15 @@ MADE_BANKS.mat = {
     "title": "The unitary method",
     "card": [
       "The unitary method finds the value of one unit first. A unit can be one item, one litre, one hour or 1 per cent. Then you scale up by multiplying.",
-      "To find one unit, divide the total amount by the number of units. If 5 kg of rice costs $12.50, then 1 kg costs $12.50 ÷ 5 = $2.50.",
-      "To find several units, multiply the one-unit value by the number wanted. 3 kg of that rice costs 3 × $2.50 = $7.50.",
+      "To find one unit, divide the total amount by the number of units. If 5 kg of rice costs $12.50, then 1 kg costs \\(\\$12.50 \\div 5 = \\$2.50\\).",
+      "To find several units, multiply the one-unit value by the number wanted. 3 kg of that rice costs \\(3 \\times \\$2.50 = \\$7.50\\).",
       "To compare two deals, find the cost of one unit for each. The smaller cost per unit is the better buy."
     ],
     "remember": "Divide to get one unit, then multiply to get the amount you need.",
     "a": {
       "q": "Four tickets to a footy match cost $90. Using the unitary method, what do seven tickets at the same price cost?",
       "opts": ["$157.50", "$51.43", "$360.00", "$22.50"],
-      "why": "One ticket costs $90 ÷ 4 = $22.50, so seven cost 7 × $22.50 = $157.50. $22.50 is only the cost of one ticket, so it stops after the first step.",
+      "why": "One ticket costs \\(\\$90 \\div 4 = \\$22.50\\), so seven cost \\(7 \\times \\$22.50 = \\$157.50\\). $22.50 is only the cost of one ticket, so it stops after the first step.",
       "clue": "Find the cost of one ticket first."
     },
     "b": {
@@ -8500,7 +8701,7 @@ MADE_BANKS.mat = {
         "10 pens, at 82 cents each",
         "6 pens, at 70 cents each"
       ],
-      "why": "6 pens: $4.50 ÷ 6 = $0.75 each. 10 pens: $7.20 ÷ 10 = $0.72 each. The lower cost per pen is the better buy, so the pack of 10 wins even though it costs more in total.",
+      "why": "6 pens: \\(\\$4.50 \\div 6 = \\$0.75\\) each. 10 pens: \\(\\$7.20 \\div 10 = \\$0.72\\) each. The lower cost per pen is the better buy, so the pack of 10 wins even though it costs more in total.",
       "clue": "Work out the cost of one pen in each pack."
     }
   },
@@ -8531,22 +8732,27 @@ MADE_BANKS.mat = {
     "title": "Compound interest",
     "card": [
       "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
-      "The formula is A = P(1 + r/100)ⁿ. A is the final amount, P is the amount invested at the start, r is the percentage rate per period (6 means 6%), and n is the number of periods.",
-      "Both r and n must use the compounding period. For 6% per year compounded monthly, r = 6 ÷ 12 = 0.5 per month, so the multiplier is 1 + 0.5/100 = 1.005. Then n is the number of months.",
-      "Example: $2000 at 5% per year, compounded yearly, for 3 years. A = 2000 × (1 + 5/100)³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+      "The formula is \\(A = P(1 + \\frac{r}{100})^{n}\\). A is the final amount, P is the amount invested at the start, \\(r\\) is the percentage rate per period (6 means 6%), and \\(n\\) is the number of periods.",
+      "Both \\(r\\) and \\(n\\) must use the compounding period. For 6% per year compounded monthly, \\(r = 6 \\div 12 = 0.5\\) per month, so the multiplier is \\(1 + \\frac{0.5}{100} = 1.005\\). Then \\(n\\) is the number of months.",
+      "Example: $2000 at 5% per year, compounded yearly, for 3 years. \\(A = 2000 \\times (1 + \\frac{5}{100})^{3} = 2000 \\times 1.157625 = \\$2315.25\\). The interest earned is $315.25."
     ],
-    "remember": "Multiply by (1 + r/100) once for each period, with r and n both set to the compounding period.",
+    "remember": "Multiply by \\((1 + \\frac{r}{100})\\) once for each period, with \\(r\\) and \\(n\\) both set to the compounding period.",
     "a": {
       "q": "Priya invests $2000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
       "opts": ["$2420", "$2400", "$2200", "$2040"],
-      "why": "A = 2000 × (1 + 10/100)² = 2000 × 1.21 = $2420. The answer $2400 is simple interest, which does not let the interest earn interest.",
+      "why": "\\(A = 2000 \\times (1 + \\frac{10}{100})^{2} = 2000 \\times 1.21 = \\$2420\\). The answer $2400 is simple interest, which does not let the interest earn interest.",
       "clue": "Is year 2 interest found on $2000 or on the new balance?"
     },
     "b": {
       "d": 3,
       "q": "Tom invests $3000 at 12% per year, compounded monthly, for 3 years. Which calculation gives the final amount?",
-      "opts": ["3000 × (1 + 1/100)³⁶", "3000 × (1 + 1/100)³", "3000 × (1 + 12/100)³⁶", "3000 × (1 + 12/100)³"],
-      "why": "Interest is compounded monthly, so the rate per month is 12 ÷ 12 = 1 and there are 3 × 12 = 36 months. So A = 3000 × (1 + 1/100)³⁶. Using 12% with 3 periods works in years, so neither r nor n matches the monthly compounding period.",
+      "opts": [
+        "\\(3000 \\times (1 + \\frac{1}{100})^{36}\\)",
+        "\\(3000 \\times (1 + \\frac{1}{100})^{3}\\)",
+        "\\(3000 \\times (1 + \\frac{12}{100})^{36}\\)",
+        "\\(3000 \\times (1 + \\frac{12}{100})^{3}\\)"
+      ],
+      "why": "Interest is compounded monthly, so the rate per month is \\(12 \\div 12 = 1\\) and there are \\(3 \\times 12 = 36\\) months. So \\(A = 3000 \\times (1 + \\frac{1}{100})^{36}\\). Using 12% with 3 periods works in years, so neither \\(r\\) nor \\(n\\) matches the monthly compounding period.",
       "clue": "Convert both the rate and the time to months."
     }
   },
@@ -8590,7 +8796,7 @@ MADE_BANKS.mat = {
       "Inflation is a general rise in prices over time. It is usually given as a percentage per year.",
       "Purchasing power is how much a sum of money can buy. When prices rise, the same money buys less, so its purchasing power falls.",
       "A price that rises at the same rate as inflation has not changed in real terms. The dollar figure is higher, but money is worth less by the same amount.",
-      "Example: a $50 item rises with 4% inflation to $50 × 1.04 = $52. In real terms it costs the same. If your $50 stays the same, it is no longer enough to buy the item."
+      "Example: a $50 item rises with 4% inflation to \\(\\$50 \\times 1.04 = \\$52\\). In real terms it costs the same. If your $50 stays the same, it is no longer enough to buy the item."
     ],
     "remember": "If prices rise, money buys less. A price rising with inflation is unchanged in real terms.",
     "a": {
@@ -8613,7 +8819,7 @@ MADE_BANKS.mat = {
         "It has fallen, as inflation makes money worth less",
         "It has risen by 5%, as the dollar price went up by 5%"
       ],
-      "why": "$4.00 × 1.05 = $4.20, so the bread rose in line with inflation. In real terms the price is unchanged. The dollar price did rise by 5%, but so did prices in general.",
+      "why": "\\(\\$4.00 \\times 1.05 = \\$4.20\\), so the bread rose in line with inflation. In real terms the price is unchanged. The dollar price did rise by 5%, but so did prices in general.",
       "clue": "Compare the bread's rise with the rise in prices in general."
     }
   },
@@ -8852,7 +9058,7 @@ MADE_BANKS.mat = {
       "A line of good fit is a straight line drawn by eye through a scatterplot that shows a linear trend. It follows the general direction of the points.",
       "Draw it so that about half the points lie above the line and half below. The points should be spread fairly evenly along it. The line does not need to touch any point.",
       "To predict, pick a value on the horizontal axis. Go up to the line, then across to the vertical axis and read off the value.",
-      "Example: a line passes through (2, 10) and (6, 30). At x = 4, the line is at y = 20, the midway value. So the prediction is 20."
+      "Example: a line passes through \\((2, 10)\\) and \\((6, 30)\\). At \\(x = 4\\), the line is at \\(y = 20\\), the midway value. So the prediction is 20."
     ],
     "remember": "Draw the line by eye through the middle of the points, then read predictions off it.",
     "a": {
@@ -8868,10 +9074,10 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 2,
-      "q": "Kai draws a line of good fit that passes through (10, 50) and (30, 90). What does the line predict when x = 20?",
+      "q": "Kai draws a line of good fit that passes through \\((10, 50)\\) and \\((30, 90)\\). What does the line predict when \\(x = 20\\)?",
       "opts": ["70", "60", "80", "65"],
-      "why": "At x = 20, the line is midway between x = 10 and x = 30. The midway value of y is (50 + 90) ÷ 2 = 70. The value 60 comes from adding only 10 to 50, which does not match the line's steepness.",
-      "clue": "x = 20 is exactly halfway between 10 and 30."
+      "why": "At \\(x = 20\\), the line is midway between \\(x = 10\\) and \\(x = 30\\). The midway value of \\(y\\) is \\((50 + 90) \\div 2 = 70\\). The value 60 comes from adding only 10 to 50, which does not match the line's steepness.",
+      "clue": "\\(x = 20\\) is exactly halfway between 10 and 30."
     }
   },
   "mat-interpolation-extrapolation-2": {
@@ -8886,13 +9092,18 @@ MADE_BANKS.mat = {
         "Extrapolation",
         "predicting for an x-value outside the range of the data. It is less reliable, because the pattern may not continue beyond the data."
       ],
-      "Example: a line is fitted to data for x from 10 to 40. Predicting at x = 25 is interpolation. Predicting at x = 60 is extrapolation."
+      "Example: a line is fitted to data for \\(x\\) from 10 to 40. Predicting at \\(x = 25\\) is interpolation. Predicting at \\(x = 60\\) is extrapolation."
     ],
     "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
     "a": {
       "q": "A line of good fit is drawn for data with x-values from 20 to 50. Which prediction is extrapolation?",
-      "opts": ["Predicting y when x = 70", "Predicting y when x = 35", "Predicting y when x = 22", "Predicting y when x = 48"],
-      "why": "The value x = 70 is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
+      "opts": [
+        "Predicting \\(y\\) when \\(x = 70\\)",
+        "Predicting \\(y\\) when \\(x = 35\\)",
+        "Predicting \\(y\\) when \\(x = 22\\)",
+        "Predicting \\(y\\) when \\(x = 48\\)"
+      ],
+      "why": "The value \\(x = 70\\) is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
       "clue": "Compare each x-value with the data the line was built from."
     },
     "b": {
@@ -9057,7 +9268,7 @@ MADE_BANKS.mat = {
       ],
       [
         "Spread",
-        "The spread is the IQR (Q3 − Q1) or the standard deviation. Median and IQR go together, as do mean and standard deviation."
+        "The spread is the IQR (\\(Q_{3} - Q_{1}\\)) or the standard deviation. Median and IQR go together, as do mean and standard deviation."
       ],
       [
         "Outliers",
@@ -9173,7 +9384,7 @@ MADE_BANKS.mat = {
         "An association, as 57% of all swimmers are in Club A",
         "An association, as Club A has 33% more swimmers than B"
       ],
-      "why": "Club A: 40 ÷ 80 = 50%. Club B: 30 ÷ 60 = 50%. The percentages within each club are the same, so there is no association. Treating the counts 40 and 30 as percentages is tempting, but the clubs differ in size, so counts mislead.",
+      "why": "Club A: \\(40 \\div 80 = 50\\%\\). Club B: \\(30 \\div 60 = 50\\%\\). The percentages within each club are the same, so there is no association. Treating the counts 40 and 30 as percentages is tempting, but the clubs differ in size, so counts mislead.",
       "clue": "Turn each count into a percentage of its own club."
     },
     "b": {
@@ -9182,10 +9393,10 @@ MADE_BANKS.mat = {
       "opts": [
         "Bike ownership is associated with year level, 60% to 30%",
         "Bike ownership is associated with year level, 54% to 36%",
-        "Bike ownership is not associated with year level, as 90 > 36",
-        "Bike ownership is not associated with year level, as 54 > 36"
+        "Bike ownership is not associated with year level, as \\(90 > 36\\)",
+        "Bike ownership is not associated with year level, as \\(54 > 36\\)"
       ],
-      "why": "Year 9: 54 ÷ 90 = 60%. Year 10: 36 ÷ 120 = 30%. The percentages differ clearly, so there is an association. The numbers 54 and 36 are counts, not percentages, so quoting them as percentages is a mistake.",
+      "why": "Year 9: \\(54 \\div 90 = 60\\%\\). Year 10: \\(36 \\div 120 = 30\\%\\). The percentages differ clearly, so there is an association. The numbers 54 and 36 are counts, not percentages, so quoting them as percentages is a mistake.",
       "clue": "Divide each count by its own year total, not by the overall total."
     }
   },
@@ -9320,28 +9531,28 @@ MADE_BANKS.mat = {
   "mat-coefficient-determination": {
     "title": "The coefficient of determination",
     "card": [
-      "The coefficient of determination is r². It is found by squaring the correlation coefficient r, so it is always between 0 and 1.",
-      "r² is the proportion of the variation in the response variable explained by the variation in the explanatory variable. Multiply by 100 to write it as a percentage. The rest, 1 − r², is due to other factors.",
-      "To go back from r² to r, take the square root. Give r the sign of the association: negative if y tends to fall as x rises.",
-      "Worked example: r = −0.7. Then r² = 0.49, so 49% of the variation in y is explained by x. The other 51% is not."
+      "The coefficient of determination is \\(r^{2}\\). It is found by squaring the correlation coefficient \\(r\\), so it is always between 0 and 1.",
+      "\\(r^{2}\\) is the proportion of the variation in the response variable explained by the variation in the explanatory variable. Multiply by 100 to write it as a percentage. The rest, \\(1 - r^{2}\\), is due to other factors.",
+      "To go back from \\(r^{2}\\) to \\(r\\), take the square root. Give \\(r\\) the sign of the association: negative if \\(y\\) tends to fall as \\(x\\) rises.",
+      "Worked example: \\(r = -0.7\\). Then \\(r^{2} = 0.49\\), so 49% of the variation in \\(y\\) is explained by \\(x\\). The other 51% is not."
     ],
-    "remember": "Square r to find the share of variation in y explained by x. The rest is not explained.",
+    "remember": "Square \\(r\\) to find the share of variation in \\(y\\) explained by \\(x\\). The rest is not explained.",
     "a": {
-      "q": "A data set has r = 0.9. What percentage of the variation in y is explained by x?",
+      "q": "A data set has \\(r = 0.9\\). What percentage of the variation in \\(y\\) is explained by \\(x\\)?",
       "opts": ["81%", "90%", "9%", "19%"],
-      "why": "r² = 0.9 × 0.9 = 0.81, so 81% is explained. Giving 90% mistakes r for r². The value 19% is the part not explained.",
-      "clue": "Square r before turning it into a percentage."
+      "why": "\\(r^{2} = 0.9 \\times 0.9 = 0.81\\), so 81% is explained. Giving 90% mistakes \\(r\\) for \\(r^{2}\\). The value 19% is the part not explained.",
+      "clue": "Square \\(r\\) before turning it into a percentage."
     },
     "b": {
       "d": 3,
-      "q": "For a sample of bakeries, r² = 0.36 between the price of a loaf and loaves sold each day. The association is negative. What is r, and what percentage is not explained by price?",
+      "q": "For a sample of bakeries, \\(r^{2} = 0.36\\) between the price of a loaf and loaves sold each day. The association is negative. What is \\(r\\), and what percentage is not explained by price?",
       "opts": [
-        "r = −0.6, and 64% is not explained",
-        "r = −0.6, and 36% is not explained",
-        "r = −0.36, and 64% is not explained",
-        "r = 0.6, and 64% is not explained"
+        "\\(r = -0.6\\), and 64% is not explained",
+        "\\(r = -0.6\\), and 36% is not explained",
+        "\\(r = -0.36\\), and 64% is not explained",
+        "\\(r = 0.6\\), and 64% is not explained"
       ],
-      "why": "r = −√0.36 = −0.6, negative because sales fall as price rises. The unexplained part is 1 − 0.36 = 0.64, or 64%. The 36% is the explained part, not the unexplained part.",
+      "why": "\\(r = -\\sqrt{0.36} = -0.6\\), negative because sales fall as price rises. The unexplained part is \\(1 - 0.36 = 0.64\\), or 64%. The 36% is the explained part, not the unexplained part.",
       "clue": "Take the square root, then check the direction of the association."
     }
   },
@@ -9783,12 +9994,12 @@ MADE_BANKS.mat = {
         "Dominance matrix",
         "A binary matrix where 1 means the row player beat the column player. Each pair plays once, so a 1 in one place means a 0 in the matching place across the diagonal."
       ],
-      "Row sums count direct links or wins. The matrix squared, M², counts two-step links: the entry in row i and column j is the number of ways to go from i to j through one other person.",
-      "M + M² counts all one-step and two-step links. Example: if A beat B and B beat C, then A has 1 direct win (over B) and 1 two-step win (over C). Ranking uses row sums of M + M²."
+      "Row sums count direct links or wins. The matrix squared, \\(M^{2}\\), counts two-step links: the entry in row \\(i\\) and column \\(j\\) is the number of ways to go from \\(i\\) to \\(j\\) through one other person.",
+      "\\(M + M^{2}\\) counts all one-step and two-step links. Example: if A beat B and B beat C, then A has 1 direct win (over B) and 1 two-step win (over C). Ranking uses row sums of \\(M + M^{2}\\)."
     ],
-    "remember": "Row sums of M count direct links. Row sums of M + M² count direct and two-step links.",
+    "remember": "Row sums of M count direct links. Row sums of \\(M + M^{2}\\) count direct and two-step links.",
     "a": {
-      "q": "A dominance matrix M has rows and columns in the order P, Q, R, S: row P is 0 1 0 1, row Q is 0 0 1 1, row R is 1 0 0 0, row S is 0 0 1 0. What is P's row sum in M + M²?",
+      "q": "A dominance matrix M has rows and columns in the order P, Q, R, S: row P is 0 1 0 1, row Q is 0 0 1 1, row R is 1 0 0 0, row S is 0 0 1 0. What is P's row sum in \\(M + M^{2}\\)?",
       "opts": ["5", "2", "3", "4"],
       "why": "P beat Q and S directly, so 2 direct wins. Two-step wins go through those players: P to Q to R, P to Q to S, and P to S to R, so 3 more. The total is 5, while 2 counts only the direct wins.",
       "clue": "Find who P beat, then who those players beat."
@@ -9945,7 +10156,7 @@ MADE_BANKS.mat = {
       ],
       [
         "Planar graph",
-        "A graph is planar if it can be drawn with no edges crossing. Euler's rule for a connected planar graph is v + f = e + 2, where v is vertices, e is edges and f is faces. The outside region counts as a face."
+        "A graph is planar if it can be drawn with no edges crossing. Euler's rule for a connected planar graph is \\(v + f = e + 2\\), where \\(v\\) is vertices, \\(e\\) is edges and \\(f\\) is faces. The outside region counts as a face."
       ],
       [
         "Digraph",
@@ -9953,19 +10164,19 @@ MADE_BANKS.mat = {
       ],
       ["Weighted network", "A weighted network has a number on each edge, such as a distance, time or cost."]
     ],
-    "remember": "Degree counts edge ends at a vertex. Euler's rule: v + f = e + 2.",
+    "remember": "Degree counts edge ends at a vertex. Euler's rule: \\(v + f = e + 2\\).",
     "a": {
       "q": "A connected planar graph has 6 vertices and 9 edges. Using Euler's rule, how many faces does it have?",
       "opts": ["5", "3", "4", "17"],
-      "why": "v + f = e + 2 gives 6 + f = 9 + 2 = 11, so f = 5. Answering 4 comes from forgetting that the outside region counts as a face.",
-      "clue": "Put the numbers into v + f = e + 2, then solve for f."
+      "why": "\\(v + f = e + 2\\) gives \\(6 + f = 9 + 2 = 11\\), so \\(f = 5\\). Answering 4 comes from forgetting that the outside region counts as a face.",
+      "clue": "Put the numbers into \\(v + f = e + 2\\), then solve for \\(f\\)."
     },
     "b": {
       "d": 3,
       "q": "A connected planar graph has 5 faces and 8 vertices. How many edges does it have?",
       "opts": ["11", "15", "13", "9"],
-      "why": "v + f = e + 2 gives 8 + 5 = e + 2, so e = 11. Choosing 15 comes from adding 2 instead of subtracting it: 8 + 5 + 2 = 15 is a sign error.",
-      "clue": "The 2 is on the same side as e, so take it away from v + f."
+      "why": "\\(v + f = e + 2\\) gives \\(8 + 5 = e + 2\\), so \\(e = 11\\). Choosing 15 comes from adding 2 instead of subtracting it: \\(8 + 5 + 2 = 15\\) is a sign error.",
+      "clue": "The 2 is on the same side as \\(e\\), so take it away from \\(v + f\\)."
     }
   },
   "mat-adjacency-matrices": {
@@ -10123,77 +10334,95 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Relation",
-        "a set of ordered pairs (x, y) linking inputs to outputs. Any rule that pairs numbers is a relation."
+        "a set of ordered pairs \\((x, y)\\) linking inputs to outputs. Any rule that pairs numbers is a relation."
       ],
       [
         "Function",
         "a relation where each input gives exactly one output. No x-value is paired with two different y-values."
       ],
-      ["Notation", "f(x) names the rule and its output. If f(x) = 2x + 1, then f(3) = 2 × 3 + 1 = 7."],
+      [
+        "Notation",
+        "f(x) names the rule and its output. If \\(f(x) = 2x + 1\\), then \\(f(3) = 2 \\times 3 + 1 = 7\\)."
+      ],
       [
         "Domain and range",
-        "The domain is the set of allowed inputs. The range is the set of outputs that result. For {(1, 4), (2, 4), (3, 5)}, the domain is {1, 2, 3} and the range is {4, 5}."
+        "The domain is the set of allowed inputs. The range is the set of outputs that result. For {(1, 4), \\((2, 4)\\), (3, 5)}, the domain is {1, 2, 3} and the range is {4, 5}."
       ]
     ],
-    "remember": "A function never sends one input to two outputs. f(x) is the output for input x.",
+    "remember": "A function never sends one input to two outputs. f(x) is the output for input \\(x\\).",
     "a": {
       "q": "Which set of ordered pairs is a function?",
-      "opts": ["{(1, 2), (2, 2), (3, 5)}", "{(1, 2), (1, 3), (2, 5)}", "{(2, 1), (2, 4), (3, 5)}", "{(0, 3), (4, 1), (4, 6)}"],
-      "why": "Each input appears once, so each x has one output. It is fine for two inputs to share an output, as 1 and 2 both give 2. The other sets pair one input with two outputs.",
+      "opts": [
+        "{(1, 2), \\((2, 2)\\), (3, 5)}",
+        "{(1, 2), \\((1, 3)\\), (2, 5)}",
+        "{(2, 1), \\((2, 4)\\), (3, 5)}",
+        "{(0, 3), \\((4, 1)\\), (4, 6)}"
+      ],
+      "why": "Each input appears once, so each \\(x\\) has one output. It is fine for two inputs to share an output, as 1 and 2 both give 2. The other sets pair one input with two outputs.",
       "clue": "Look for an x-value that appears twice."
     },
     "b": {
       "d": 2,
-      "q": "Given f(x) = 3x − 4, what is f(−2)?",
-      "opts": ["−10", "2", "−2", "10"],
-      "why": "f(−2) = 3 × (−2) − 4 = −6 − 4 = −10. The answer −2 comes from working out −6 + 4, but the 4 is subtracted, so the result goes further below zero. The answer 2 comes from treating 3 × (−2) as 6.",
-      "clue": "Replace x with −2 in brackets, then follow the order of operations."
+      "q": "Given \\(f(x) = 3x - 4\\), what is \\(f(-2)\\)?",
+      "opts": ["\\(-10\\)", "2", "\\(-2\\)", "10"],
+      "why": "\\(f(-2) = 3 \\times (-2) - 4 = -6 - 4 = -10\\). The answer \\(-2\\) comes from working out \\(-6 + 4\\), but the 4 is subtracted, so the result goes further below zero. The answer 2 comes from treating \\(3 \\times (-2)\\) as 6.",
+      "clue": "Replace \\(x\\) with \\(-2\\) in brackets, then follow the order of operations."
     }
   },
   "mat-domain-range-notation": {
     "title": "Domain and range notation",
     "card": [
       "An interval is a set of numbers between two ends. A square bracket [ or ] includes the end number. A round bracket ( or ) leaves it out.",
-      "Example: [0, 5) means all numbers from 0 up to but not including 5. So 0 is in the interval and 5 is not.",
-      "The symbol ∞ means the numbers go on without end. It is not a number, so it always gets a round bracket, as in [0, ∞).",
-      "A restricted domain is written f: [0, ∞) → R. This reads: f is a function whose inputs are x ≥ 0, and whose outputs are real numbers. For f(x) = x² on this domain, the range is [0, ∞)."
+      "Example: \\([0, 5)\\) means all numbers from 0 up to but not including 5. So 0 is in the interval and 5 is not.",
+      "The symbol \\(\\infty\\) means the numbers go on without end. It is not a number, so it always gets a round bracket, as in \\([0, \\infty)\\).",
+      "A restricted domain is written \\(f: [0, \\infty) \\to \\mathbb{R}\\). This reads: \\(f\\) is a function whose inputs are \\(x \\ge 0\\), and whose outputs are real numbers. For \\(f(x) = x^{2}\\) on this domain, the range is \\([0, \\infty)\\)."
     ],
     "remember": "Square bracket includes the end. Round bracket leaves it out. Infinity always gets a round bracket.",
     "a": {
-      "q": "Which interval contains every x with −2 < x ≤ 3?",
-      "opts": ["(−2, 3]", "[−2, 3]", "[−2, 3)", "(−2, 3)"],
-      "why": "−2 is not included, so it gets a round bracket. 3 is included, so it gets a square bracket. [−2, 3] is tempting, but it wrongly includes −2.",
+      "q": "Which interval contains every \\(x\\) with \\(-2 < x \\le 3\\)?",
+      "opts": ["\\((-2, 3]\\)", "\\([-2, 3]\\)", "\\([-2, 3)\\)", "\\((-2, 3)\\)"],
+      "why": "\\(-2\\) is not included, so it gets a round bracket. 3 is included, so it gets a square bracket. \\([-2, 3]\\) is tempting, but it wrongly includes \\(-2\\).",
       "clue": "Check each end on its own: is it included or not?"
     },
     "b": {
       "d": 3,
-      "q": "A function is f: [1, ∞) → R, where f(x) = x². Which input is NOT allowed?",
-      "opts": ["x = 0", "x = 1", "x = 2", "x = 100"],
-      "why": "The domain [1, ∞) holds only numbers from 1 upwards, with 1 included. So 0 is outside it and is not allowed. x = 1 is allowed because the square bracket includes 1.",
+      "q": "A function is \\(f: [1, \\infty) \\to \\mathbb{R}\\), where \\(f(x) = x^{2}\\). Which input is NOT allowed?",
+      "opts": ["\\(x = 0\\)", "\\(x = 1\\)", "\\(x = 2\\)", "\\(x = 100\\)"],
+      "why": "The domain \\([1, \\infty)\\) holds only numbers from 1 upwards, with 1 included. So 0 is outside it and is not allowed. \\(x = 1\\) is allowed because the square bracket includes 1.",
       "clue": "The domain is the set of allowed inputs, not the outputs."
     }
   },
   "mat-inverse-functions": {
     "title": "Inverse functions",
     "card": [
-      "The inverse of f, written f⁻¹, reverses f. If f takes 2 to 7, then f⁻¹ takes 7 back to 2.",
-      "To find it, write y = f(x), swap x and y, then solve for y. Example: f(x) = 2x + 3. Write y = 2x + 3, swap to x = 2y + 3, so y = (x − 3)/2. This gives f⁻¹(x) = (x − 3)/2.",
-      "An inverse exists only if f is one-to-one: each output comes from exactly one input. A horizontal line must cut the graph at most once. So y = x² on all of R has no inverse, because 2 and −2 both give 4.",
-      "The graph of f⁻¹ is the graph of f reflected in the line y = x. The domain of f⁻¹ is the range of f, and the range of f⁻¹ is the domain of f."
+      "The inverse of \\(f\\), written \\(f^{-1}\\), reverses \\(f\\). If \\(f\\) takes 2 to 7, then \\(f^{-1}\\) takes 7 back to 2.",
+      "To find it, write \\(y = f(x)\\), swap \\(x\\) and \\(y\\), then solve for \\(y\\). Example: \\(f(x) = 2x + 3\\). Write \\(y = 2x + 3\\), swap to \\(x = 2y + 3\\), so \\(y = \\frac{x - 3}{2}\\). This gives \\(f^{-1}(x) = \\frac{x - 3}{2}\\).",
+      "An inverse exists only if \\(f\\) is one-to-one: each output comes from exactly one input. A horizontal line must cut the graph at most once. So \\(y = x^{2}\\) on all of \\(\\mathbb{R}\\) has no inverse, because 2 and \\(-2\\) both give 4.",
+      "The graph of \\(f^{-1}\\) is the graph of \\(f\\) reflected in the line \\(y = x\\). The domain of \\(f^{-1}\\) is the range of \\(f\\), and the range of \\(f^{-1}\\) is the domain of \\(f\\)."
     ],
-    "remember": "Swap x and y to reverse a function. Only a one-to-one function has an inverse.",
+    "remember": "Swap \\(x\\) and \\(y\\) to reverse a function. Only a one-to-one function has an inverse.",
     "a": {
-      "q": "What is the inverse of f(x) = 3x − 6?",
-      "opts": ["f⁻¹(x) = (x + 6)/3", "f⁻¹(x) = (x − 6)/3", "f⁻¹(x) = x/3 + 6", "f⁻¹(x) = 3x + 6"],
-      "why": "Swap to x = 3y − 6, so 3y = x + 6 and y = (x + 6)/3. Check: f(4) = 6, and f⁻¹(6) = 12/3 = 4 gives back 4. The option (x − 6)/3 has a sign error when moving the 6 across.",
-      "clue": "Swap x and y first, then undo the subtraction before the multiplication."
+      "q": "What is the inverse of \\(f(x) = 3x - 6\\)?",
+      "opts": [
+        "\\(f^{-1}(x) = \\frac{x + 6}{3}\\)",
+        "\\(f^{-1}(x) = \\frac{x - 6}{3}\\)",
+        "\\(f^{-1}(x) = \\frac{x}{3} + 6\\)",
+        "\\(f^{-1}(x) = 3x + 6\\)"
+      ],
+      "why": "Swap to \\(x = 3y - 6\\), so \\(3y = x + 6\\) and \\(y = \\frac{x + 6}{3}\\). Check: \\(f(4) = 6\\), and \\(f^{-1}(6) = \\frac{12}{3} = 4\\) gives back 4. The option \\(\\frac{x - 6}{3}\\) has a sign error when moving the 6 across.",
+      "clue": "Swap \\(x\\) and \\(y\\) first, then undo the subtraction before the multiplication."
     },
     "b": {
       "d": 3,
       "q": "Which function, on the domain given, has an inverse function?",
-      "opts": ["f(x) = 2x + 1, for x in R", "f(x) = x², for x in R", "f(x) = |x|, for x in R", "f(x) = 4 − x², for x in R"],
-      "why": "Only f(x) = 2x + 1 is one-to-one, so any horizontal line cuts it once. The other three each give the same output for x and −x, such as 2 and −2, so a horizontal line can cut them twice. Having a rule that can be rearranged does not make a function one-to-one.",
-      "clue": "Does any output come from two different inputs, such as 2 and −2?"
+      "opts": [
+        "\\(f(x) = 2x + 1\\), for \\(x \\in \\mathbb{R}\\)",
+        "\\(f(x) = x^{2}\\), for \\(x \\in \\mathbb{R}\\)",
+        "\\(f(x) = |x|\\), for \\(x \\in \\mathbb{R}\\)",
+        "\\(f(x) = 4 - x^{2}\\), for \\(x \\in \\mathbb{R}\\)"
+      ],
+      "why": "Only \\(f(x) = 2x + 1\\) is one-to-one, so any horizontal line cuts it once. The other three each give the same output for \\(x\\) and \\(-x\\), such as 2 and \\(-2\\), so a horizontal line can cut them twice. Having a rule that can be rearranged does not make a function one-to-one.",
+      "clue": "Does any output come from two different inputs, such as 2 and \\(-2\\)?"
     }
   },
   "mat-reading-graphs-real-data": {
@@ -10238,58 +10467,66 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Common factor",
-        "Check for this first. Take out the largest factor shared by every term. 6x² + 9x = 3x(2x + 3)."
+        "Check for this first. Take out the largest factor shared by every term. \\(6x^{2} + 9x = 3x(2x + 3)\\)."
       ],
       [
         "Grouping",
-        "With four terms, factorise in pairs, then take out the shared bracket. x³ + 2x² + 3x + 6 = x²(x + 2) + 3(x + 2) = (x + 2)(x² + 3)."
+        "With four terms, factorise in pairs, then take out the shared bracket. \\(x^{3} + 2x^{2} + 3x + 6 = x^{2}(x + 2) + 3(x + 2) = (x + 2)(x^{2} + 3)\\)."
       ],
-      ["Difference of two squares", "a² − b² = (a − b)(a + b). For example, x² − 25 = (x − 5)(x + 5)."],
+      [
+        "Difference of two squares",
+        "\\(a^{2} - b^{2} = (a - b)(a + b)\\). For example, \\(x^{2} - 25 = (x - 5)(x + 5)\\)."
+      ],
       [
         "Perfect squares",
-        "(a + b)² = a² + 2ab + b², and (a − b)² = a² − 2ab + b². For example, (x − 3)² = x² − 6x + 9."
+        "\\((a + b)^{2} = a^{2} + 2ab + b^{2}\\), and \\((a - b)^{2} = a^{2} - 2ab + b^{2}\\). For example, \\((x - 3)^{2} = x^{2} - 6x + 9\\)."
       ]
     ],
     "remember": "Look for a common factor first, then a pattern: a difference of two squares, a perfect square, or grouping.",
     "a": {
-      "q": "Which is the factorised form of 4x² − 49?",
-      "opts": ["(2x − 7)(2x + 7)", "(2x − 7)²", "(4x − 7)(x + 7)", "(2x + 7)²"],
-      "why": "4x² is (2x)² and 49 is 7², so this is a difference of two squares: (2x − 7)(2x + 7). The option (2x − 7)² expands to 4x² − 28x + 49, which has a middle term.",
-      "clue": "Write each term as a square, then use a² − b²."
+      "q": "Which is the factorised form of \\(4x^{2} - 49\\)?",
+      "opts": ["\\((2x - 7)(2x + 7)\\)", "\\((2x - 7)^{2}\\)", "\\((4x - 7)(x + 7)\\)", "\\((2x + 7)^{2}\\)"],
+      "why": "\\(4x^{2}\\) is \\((2x)^{2}\\) and 49 is \\(7^{2}\\), so this is a difference of two squares: \\((2x - 7)(2x + 7)\\). The option \\((2x - 7)^{2}\\) expands to \\(4x^{2} - 28x + 49\\), which has a middle term.",
+      "clue": "Write each term as a square, then use \\(a^{2} - b^{2}\\)."
     },
     "b": {
       "d": 3,
-      "q": "Which is the expansion of (3x − 2)²?",
-      "opts": ["9x² − 12x + 4", "9x² − 4", "9x² − 6x + 4", "9x² + 12x + 4"],
-      "why": "Use (a − b)² = a² − 2ab + b² with a = 3x and b = 2. This gives 9x² − 12x + 4. The option 9x² − 4 is tempting, but it leaves out the middle term −2ab.",
-      "clue": "The middle term is twice the product of 3x and 2, with a minus sign."
+      "q": "Which is the expansion of \\((3x - 2)^{2}\\)?",
+      "opts": ["\\(9x^{2} - 12x + 4\\)", "\\(9x^{2} - 4\\)", "\\(9x^{2} - 6x + 4\\)", "\\(9x^{2} + 12x + 4\\)"],
+      "why": "Use \\((a - b)^{2} = a^{2} - 2ab + b^{2}\\) with \\(a = 3x\\) and \\(b = 2\\). This gives \\(9x^{2} - 12x + 4\\). The option \\(9x^{2} - 4\\) is tempting, but it leaves out the middle term \\(-2ab\\).",
+      "clue": "The middle term is twice the product of \\(3x\\) and 2, with a minus sign."
     }
   },
   "mat-dividing-polynomials": {
     "title": "Dividing polynomials",
     "card": [
-      "Long division of polynomials works like long division of numbers. Any polynomial P(x) can be written as P(x) = D(x) × Q(x) + R(x), where D is the divisor, Q is the quotient and R is the remainder.",
-      "The remainder has a lower degree than the divisor. If the divisor is x − a, the remainder is a number.",
+      "Long division of polynomials works like long division of numbers. Any polynomial \\(P(x)\\) can be written as \\(P(x) = D(x) \\times Q(x) + R(x)\\), where \\(D\\) is the divisor, \\(Q\\) is the quotient and \\(R\\) is the remainder.",
+      "The remainder has a lower degree than the divisor. If the divisor is \\(x - a\\), the remainder is a number.",
       "Step 1: divide the first term of what is left by the first term of the divisor. Step 2: multiply the divisor by that result and subtract. Step 3: repeat until what is left has a lower degree than the divisor.",
-      "Example: divide x² + 5x + 7 by x + 2. x² ÷ x = x, and x(x + 2) = x² + 2x, leaving 3x + 7. Then 3x ÷ x = 3, and 3(x + 2) = 3x + 6, leaving 1. So x² + 5x + 7 = (x + 2)(x + 3) + 1."
+      "Example: divide \\(x^{2} + 5x + 7\\) by \\(x + 2\\). \\(x^{2} \\div x = x\\), and \\(x(x + 2) = x^{2} + 2x\\), leaving \\(3x + 7\\). Then \\(3x \\div x = 3\\), and \\(3(x + 2) = 3x + 6\\), leaving 1. So \\(x^{2} + 5x + 7 = (x + 2)(x + 3) + 1\\)."
     ],
-    "remember": "P(x) = divisor × quotient + remainder, and the remainder has a lower degree than the divisor.",
+    "remember": "\\(P(x) = \\text{divisor} \\times \\text{quotient} + \\text{remainder}\\), and the remainder has a lower degree than the divisor.",
     "a": {
-      "q": "x² + 7x + 4 is divided by x + 3. What are the quotient and the remainder?",
+      "q": "\\(x^{2} + 7x + 4\\) is divided by \\(x + 3\\). What are the quotient and the remainder?",
       "opts": [
-        "Quotient x + 4, remainder −8",
-        "Quotient x + 4, remainder 8",
-        "Quotient x + 4, remainder 12",
-        "Quotient x + 7, remainder 4"
+        "Quotient \\(x + 4\\), remainder \\(-8\\)",
+        "Quotient \\(x + 4\\), remainder 8",
+        "Quotient \\(x + 4\\), remainder 12",
+        "Quotient \\(x + 7\\), remainder 4"
       ],
-      "why": "x² ÷ x = x, and subtracting x² + 3x leaves 4x + 4. Then 4x ÷ x = 4, and subtracting 4x + 12 leaves 4 − 12 = −8. A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
+      "why": "\\(x^{2} \\div x = x\\), and subtracting \\(x^{2} + 3x\\) leaves \\(4x + 4\\). Then \\(4x \\div x = 4\\), and subtracting \\(4x + 12\\) leaves \\(4 - 12 = -8\\). A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
       "clue": "Subtract after every step, and stop only when the leftover has a lower degree than the divisor."
     },
     "b": {
       "d": 3,
-      "q": "x³ − 2x² + 3x − 5 is divided by x − 1. Which is the correct way to write it?",
-      "opts": ["(x − 1)(x² − x + 2) − 3", "(x − 1)(x² − x + 2) + 3", "(x − 1)(x² − x + 2) − 5", "(x − 1)(x² − x + 4) − 9"],
-      "why": "Dividing the first terms in turn gives x², then −x, then 2, so the quotient is x² − x + 2. The last step leaves 2x − 5 − (2x − 2) = −3. Writing +3 comes from taking the constants the wrong way round, −2 − (−5).",
+      "q": "\\(x^{3} - 2x^{2} + 3x - 5\\) is divided by \\(x - 1\\). Which is the correct way to write it?",
+      "opts": [
+        "\\((x - 1)(x^{2} - x + 2) - 3\\)",
+        "\\((x - 1)(x^{2} - x + 2) + 3\\)",
+        "\\((x - 1)(x^{2} - x + 2) - 5\\)",
+        "\\((x - 1)(x^{2} - x + 4) - 9\\)"
+      ],
+      "why": "Dividing the first terms in turn gives \\(x^{2}\\), then \\(-x\\), then 2, so the quotient is \\(x^{2} - x + 2\\). The last step leaves \\(2x - 5 - (2x - 2) = -3\\). Writing \\(+3\\) comes from taking the constants the wrong way round, \\(-2 - (-5)\\).",
       "clue": "Subtract each line carefully, especially when a term is negative."
     }
   },
@@ -10298,34 +10535,34 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Remainder theorem",
-        "When P(x) is divided by (x − a), the remainder is P(a). To find it, substitute x = a. No long division is needed."
+        "When \\(P(x)\\) is divided by \\((x - a)\\), the remainder is \\(P(a)\\). To find it, substitute \\(x = a\\). No long division is needed."
       ],
       [
         "Factor theorem",
-        "If P(a) = 0, then (x − a) is a factor of P(x). If P(a) is not 0, then (x − a) is not a factor."
+        "If \\(P(a) = 0\\), then \\((x - a)\\) is a factor of \\(P(x)\\). If \\(P(a)\\) is not 0, then \\((x - a)\\) is not a factor."
       ],
       [
         "Rational root theorem",
-        "Take P(x) with integer coefficients, which may be negative. Any rational root p/q in lowest terms has p dividing the constant term and q dividing the leading coefficient."
+        "Take \\(P(x)\\) with integer coefficients, which may be negative. Any rational root \\(\\frac{p}{q}\\) in lowest terms has \\(p\\) dividing the constant term and \\(q\\) dividing the leading coefficient."
       ],
       [
         "Example",
-        "Let P(x) = x³ − 2x² − 5x + 6. P(1) = 1 − 2 − 5 + 6 = 0, so (x − 1) is a factor. P(2) = 8 − 8 − 10 + 6 = −4, so dividing by (x − 2) leaves remainder −4."
+        "Let \\(P(x) = x^{3} - 2x^{2} - 5x + 6\\). \\(P(1) = 1 - 2 - 5 + 6 = 0\\), so \\((x - 1)\\) is a factor. \\(P(2) = 8 - 8 - 10 + 6 = -4\\), so dividing by \\((x - 2)\\) leaves remainder \\(-4\\)."
       ]
     ],
-    "remember": "Substitute a into P(x): the answer is the remainder, and 0 means (x − a) is a factor.",
+    "remember": "Substitute \\(a\\) into \\(P(x)\\): the answer is the remainder, and 0 means \\((x - a)\\) is a factor.",
     "a": {
-      "q": "What is the remainder when P(x) = x³ + 2x − 5 is divided by (x − 2)?",
-      "opts": ["7", "−17", "5", "17"],
-      "why": "The remainder is P(2) = 8 + 4 − 5 = 7. The option −17 comes from substituting x = −2, giving −8 − 4 − 5 = −17, but the divisor (x − 2) means x = 2.",
-      "clue": "Substitute the value that makes x − 2 equal zero."
+      "q": "What is the remainder when \\(P(x) = x^{3} + 2x - 5\\) is divided by \\((x - 2)\\)?",
+      "opts": ["7", "\\(-17\\)", "5", "17"],
+      "why": "The remainder is \\(P(2) = 8 + 4 - 5 = 7\\). The option \\(-17\\) comes from substituting \\(x = -2\\), giving \\(-8 - 4 - 5 = -17\\), but the divisor \\((x - 2)\\) means \\(x = 2\\).",
+      "clue": "Substitute the value that makes \\(x - 2\\) equal zero."
     },
     "b": {
       "d": 3,
-      "q": "For which value of k is (x + 3) a factor of P(x) = x³ + kx² − 4x − 12?",
-      "opts": ["k = 3", "k = −3", "k = 1", "k = −1"],
-      "why": "(x + 3) is a factor when P(−3) = 0. P(−3) = −27 + 9k + 12 − 12 = 9k − 27, so k = 3. Substituting x = 3 instead is a common slip: it gives 9k + 3 = 0, which does not match any option.",
-      "clue": "Set P(−3) = 0 and solve for k."
+      "q": "For which value of \\(k\\) is \\((x + 3)\\) a factor of \\(P(x) = x^{3} + kx^{2} - 4x - 12\\)?",
+      "opts": ["\\(k = 3\\)", "\\(k = -3\\)", "\\(k = 1\\)", "\\(k = -1\\)"],
+      "why": "\\((x + 3)\\) is a factor when \\(P(-3) = 0\\). \\(P(-3) = -27 + 9k + 12 - 12 = 9k - 27\\), so \\(k = 3\\). Substituting \\(x = 3\\) instead is a common slip: it gives \\(9k + 3 = 0\\), which does not match any option.",
+      "clue": "Set \\(P(-3) = 0\\) and solve for \\(k\\)."
     }
   },
   "mat-solving-polynomial-equations": {
@@ -10333,52 +10570,57 @@ MADE_BANKS.mat = {
     "card": [
       "To solve a polynomial equation, move every term to one side so the other side is 0. Then factorise the polynomial.",
       "If a product is 0, at least one factor is 0. So set each factor equal to 0 and solve each one.",
-      "For a cubic with no obvious factor, test small values such as ±1, ±2 in P(x). When P(a) = 0, the factor theorem says (x − a) is a factor. Divide it out to leave a quadratic.",
+      "For a cubic with no obvious factor, test small values such as \\(\\pm 1\\), \\(\\pm 2\\) in \\(P(x)\\). When \\(P(a) = 0\\), the factor theorem says \\((x - a)\\) is a factor. Divide it out to leave a quadratic.",
       [
         "Example",
-        "Solve x³ − 2x² − 5x + 6 = 0. P(1) = 0, so (x − 1) is a factor. Dividing gives (x − 1)(x² − x − 6) = (x − 1)(x − 3)(x + 2), so x = 1, 3 or −2."
+        "Solve \\(x^{3} - 2x^{2} - 5x + 6 = 0\\). \\(P(1) = 0\\), so \\((x - 1)\\) is a factor. Dividing gives \\((x - 1)(x^{2} - x - 6) = (x - 1)(x - 3)(x + 2)\\), so \\(x = 1\\), 3 or \\(-2\\)."
       ]
     ],
     "remember": "Make one side 0, factorise, then set each factor to 0.",
     "a": {
-      "q": "What are the solutions of (x − 4)(x + 1)(2x − 3) = 0?",
-      "opts": ["x = 4, −1, 3/2", "x = −4, 1, −3/2", "x = 4, −1, 2/3", "x = 4, −1, −3/2"],
-      "why": "Set each factor to 0: x = 4, x = −1, and 2x = 3 gives x = 3/2. The option with 2/3 flips the fraction, which is a common slip.",
-      "clue": "Solve each bracket separately, including 2x − 3 = 0."
+      "q": "What are the solutions of \\((x - 4)(x + 1)(2x - 3) = 0\\)?",
+      "opts": [
+        "\\(x = 4, -1, \\frac{3}{2}\\)",
+        "\\(x = -4, 1, -\\frac{3}{2}\\)",
+        "\\(x = 4, -1, \\frac{2}{3}\\)",
+        "\\(x = 4, -1, -\\frac{3}{2}\\)"
+      ],
+      "why": "Set each factor to 0: \\(x = 4\\), \\(x = -1\\), and \\(2x = 3\\) gives \\(x = \\frac{3}{2}\\). The option with \\(\\frac{2}{3}\\) flips the fraction, which is a common slip.",
+      "clue": "Solve each bracket separately, including \\(2x - 3 = 0\\)."
     },
     "b": {
       "d": 3,
-      "q": "Solve x³ − 7x + 6 = 0. What are all the solutions?",
-      "opts": ["x = 1, 2, −3", "x = −1, −2, 3", "x = 1, −2, 3", "x = 1, 2, 3"],
-      "why": "P(1) = 1 − 7 + 6 = 0, so (x − 1) is a factor. Dividing gives x² + x − 6 = (x + 3)(x − 2), so x = 1, 2 or −3. Check x = 3: 27 − 21 + 6 = 12, so it is not a solution.",
-      "clue": "Test x = 1 first, then factorise the quadratic that is left."
+      "q": "Solve \\(x^{3} - 7x + 6 = 0\\). What are all the solutions?",
+      "opts": ["\\(x = 1, 2, -3\\)", "\\(x = -1, -2, 3\\)", "\\(x = 1, -2, 3\\)", "\\(x = 1, 2, 3\\)"],
+      "why": "\\(P(1) = 1 - 7 + 6 = 0\\), so \\((x - 1)\\) is a factor. Dividing gives \\(x^{2} + x - 6 = (x + 3)(x - 2)\\), so \\(x = 1\\), 2 or \\(-3\\). Check \\(x = 3\\): \\(27 - 21 + 6 = 12\\), so it is not a solution.",
+      "clue": "Test \\(x = 1\\) first, then factorise the quadratic that is left."
     }
   },
   "mat-bisection-method": {
     "title": "The bisection method",
     "card": [
-      "If f(x) is continuous and f(a) and f(b) have opposite signs, then f has a root between a and b. The root is where f(x) = 0.",
-      "Find the midpoint m = (a + b) ÷ 2 and work out f(m). Keep the half of the interval where the signs at the two ends are still opposite.",
+      "If \\(f(x)\\) is continuous and \\(f(a)\\) and \\(f(b)\\) have opposite signs, then \\(f\\) has a root between \\(a\\) and \\(b\\). The root is where \\(f(x) = 0\\).",
+      "Find the midpoint \\(m = \\frac{a + b}{2}\\) and work out \\(f(m)\\). Keep the half of the interval where the signs at the two ends are still opposite.",
       "Repeat. Each step halves the interval, so the root is trapped in a smaller and smaller interval. You can stop when the interval is as small as the accuracy you need.",
-      "Example: f(x) = x² − 5 has f(2) = −1 and f(3) = 4. The midpoint is 2.5 and f(2.5) = 1.25, which is positive. So the root lies between 2 and 2.5."
+      "Example: \\(f(x) = x^{2} - 5\\) has \\(f(2) = -1\\) and \\(f(3) = 4\\). The midpoint is 2.5 and \\(f(2.5) = 1.25\\), which is positive. So the root lies between 2 and 2.5."
     ],
-    "remember": "Halve the interval and keep the half where f changes sign. The root stays trapped inside.",
+    "remember": "Halve the interval and keep the half where \\(f\\) changes sign. The root stays trapped inside.",
     "a": {
-      "q": "f(x) = x³ − 10 has f(2) = −2 and f(3) = 17. Which interval does the method keep after one bisection step?",
+      "q": "\\(f(x) = x^{3} - 10\\) has \\(f(2) = -2\\) and \\(f(3) = 17\\). Which interval does the method keep after one bisection step?",
       "opts": ["Between 2 and 2.5", "Between 2.5 and 3", "Between 2 and 3", "Between 2.25 and 2.75"],
-      "why": "The midpoint is 2.5 and f(2.5) = 15.625 − 10 = 5.625, which is positive. The signs at 2 and 2.5 are opposite, so the method keeps 2 to 2.5. Between 2.5 and 3 is wrong, because f is positive at both ends.",
-      "clue": "Find f at the midpoint and check which end has the opposite sign."
+      "why": "The midpoint is 2.5 and \\(f(2.5) = 15.625 - 10 = 5.625\\), which is positive. The signs at 2 and 2.5 are opposite, so the method keeps 2 to 2.5. Between 2.5 and 3 is wrong, because \\(f\\) is positive at both ends.",
+      "clue": "Find \\(f\\) at the midpoint and check which end has the opposite sign."
     },
     "b": {
       "d": 2,
-      "q": "f(x) = x² − 7 has f(2) = −3 and f(3) = 2. What is f(2.5), and which interval does the method keep next?",
+      "q": "\\(f(x) = x^{2} - 7\\) has \\(f(2) = -3\\) and \\(f(3) = 2\\). What is \\(f(2.5)\\), and which interval does the method keep next?",
       "opts": [
-        "−0.75, so between 2.5 and 3",
-        "−0.75, so between 2 and 2.5",
+        "\\(-0.75\\), so between 2.5 and 3",
+        "\\(-0.75\\), so between 2 and 2.5",
         "1.25, so between 2.5 and 3",
         "1.25, so between 2 and 2.5"
       ],
-      "why": "f(2.5) = 6.25 − 7 = −0.75, which is negative. The signs at 2.5 and 3 are opposite (−0.75 and 2), so the method keeps 2.5 to 3. The option with 2 and 2.5 fails, because f is negative at both ends.",
+      "why": "\\(f(2.5) = 6.25 - 7 = -0.75\\), which is negative. The signs at 2.5 and 3 are opposite (\\(-0.75\\) and 2), so the method keeps 2.5 to 3. The option with 2 and 2.5 fails, because \\(f\\) is negative at both ends.",
       "clue": "Square 2.5 first, then subtract 7."
     }
   },
@@ -10386,23 +10628,23 @@ MADE_BANKS.mat = {
     "title": "Instantaneous rate of change",
     "card": [
       "The instantaneous rate of change is how fast a function is changing at one exact point. It is the gradient of the tangent, the line that just touches the curve there.",
-      "To find it, take a chord from the point to a second point a small distance h away. Then let h get smaller and smaller.",
+      "To find it, take a chord from the point to a second point a small distance \\(h\\) away. Then let \\(h\\) get smaller and smaller.",
       "The chord gradients settle towards one number. That number is the limit, and it is the instantaneous rate of change.",
-      "Example: for f(x) = x², the chord from x = 1 to x = 1 + h has gradient ((1 + h)² − 1) ÷ h = 2 + h. As h shrinks towards 0, this gets close to 2. So the rate at x = 1 is 2."
+      "Example: for \\(f(x) = x^{2}\\), the chord from \\(x = 1\\) to \\(x = 1 + h\\) has gradient \\(((1 + h)^{2} - 1) \\div h = 2 + h\\). As \\(h\\) shrinks towards 0, this gets close to 2. So the rate at \\(x = 1\\) is 2."
     ],
-    "remember": "Shrink the gap h towards 0. The chord gradient settles on the instantaneous rate.",
+    "remember": "Shrink the gap \\(h\\) towards 0. The chord gradient settles on the instantaneous rate.",
     "a": {
-      "q": "For f(x) = x², the chord from x = 3 to x = 3 + h has gradient 6 + h. What is the instantaneous rate of change at x = 3?",
+      "q": "For \\(f(x) = x^{2}\\), the chord from \\(x = 3\\) to \\(x = 3 + h\\) has gradient \\(6 + h\\). What is the instantaneous rate of change at \\(x = 3\\)?",
       "opts": ["6", "9", "3", "7"],
-      "why": "As h shrinks towards 0, the gradient 6 + h gets close to 6. The value 9 is f(3), a height on the curve, not a rate.",
-      "clue": "What does 6 + h get close to as h gets tiny?"
+      "why": "As \\(h\\) shrinks towards 0, the gradient \\(6 + h\\) gets close to 6. The value 9 is f(3), a height on the curve, not a rate.",
+      "clue": "What does \\(6 + h\\) get close to as \\(h\\) gets tiny?"
     },
     "b": {
       "d": 3,
-      "q": "For f(x) = 2x², the chord from x = 3 to x = 3 + h is used to find the rate at x = 3. What is the instantaneous rate of change there?",
+      "q": "For \\(f(x) = 2x^{2}\\), the chord from \\(x = 3\\) to \\(x = 3 + h\\) is used to find the rate at \\(x = 3\\). What is the instantaneous rate of change there?",
       "opts": ["12", "14", "18", "6"],
-      "why": "The chord gradient is (2(3 + h)² − 18) ÷ h = (12h + 2h²) ÷ h = 12 + 2h. As h gets close to 0, this gets close to 12. The value 14 is the chord gradient when h = 1, which is not the limit.",
-      "clue": "Work out 2(3 + h)² − f(3) first, and only then divide by h."
+      "why": "The chord gradient is \\((2(3 + h)^{2} - 18) \\div h = (12h + 2h^{2}) \\div h = 12 + 2h\\). As \\(h\\) gets close to 0, this gets close to 12. The value 14 is the chord gradient when \\(h = 1\\), which is not the limit.",
+      "clue": "Work out \\(2(3 + h)^{2} - f(3)\\) first, and only then divide by \\(h\\)."
     }
   },
   "mat-rates-context": {
@@ -10441,268 +10683,291 @@ MADE_BANKS.mat = {
   "mat-tangent-lines": {
     "title": "Tangent lines",
     "card": [
-      "A tangent line touches the curve at a point and has the same direction as the curve there. Its gradient, rise ÷ run between any two points on the line, is the instantaneous rate of change at that point.",
+      "A tangent line touches the curve at a point and has the same direction as the curve there. Its gradient, rise divided by run between any two points on the line, is the instantaneous rate of change at that point.",
       ["Positive gradient", "the tangent slopes up, so the function is increasing at that point."],
       ["Negative gradient", "the tangent slopes down, so the function is decreasing at that point."],
       [
         "Zero gradient",
-        "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to y = x² at x = 0 is flat, so the rate there is 0."
+        "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to \\(y = x^{2}\\) at \\(x = 0\\) is horizontal, so the rate there is 0."
       ]
     ],
-    "remember": "Tangent up is positive, down is negative, flat is zero.",
+    "remember": "Tangent up is positive, down is negative, horizontal is zero.",
     "a": {
-      "q": "The tangent to a curve at point P is horizontal. What does this tell you about the curve at P?",
+      "q": "The tangent to a curve at point \\(P\\) is horizontal. What does this tell you about the curve at \\(P\\)?",
       "opts": [
-        "The rate of change at P is zero",
-        "The rate of change at P is 1",
-        "The curve is decreasing at P",
-        "The rate of change at P is undefined"
+        "The rate of change at \\(P\\) is zero",
+        "The rate of change at \\(P\\) is 1",
+        "The curve is decreasing at \\(P\\)",
+        "The rate of change at \\(P\\) is undefined"
       ],
-      "why": "A horizontal line has gradient 0, so the instantaneous rate of change at P is 0. It is not decreasing, because a decreasing curve has a tangent that slopes down.",
+      "why": "A horizontal line has gradient 0, so the instantaneous rate of change at \\(P\\) is 0. It is not decreasing, because a decreasing curve has a tangent that slopes down.",
       "clue": "What is the gradient of a horizontal line?"
     },
     "b": {
       "d": 3,
-      "q": "A tangent to a curve at (0, 5) also passes through (2, 1). What is the instantaneous rate of change at (0, 5)?",
-      "opts": ["−2", "2", "−4", "−1/2"],
-      "why": "The gradient is (1 − 5) ÷ (2 − 0) = −4 ÷ 2 = −2, so the curve is decreasing at that point. The value −4 is only the rise and has not been divided by the run.",
+      "q": "A tangent to a curve at \\((0, 5)\\) also passes through \\((2, 1)\\). What is the instantaneous rate of change at \\((0, 5)\\)?",
+      "opts": ["\\(-2\\)", "2", "\\(-4\\)", "\\(-\\frac{1}{2}\\)"],
+      "why": "The gradient is \\(\\frac{1 - 5}{2 - 0} = \\frac{-4}{2} = -2\\), so the curve is decreasing at that point. The value \\(-4\\) is only the rise and has not been divided by the run.",
       "clue": "Rise over run, and check which way the line slopes."
     }
   },
   "mat-graphs-sine-cosine": {
     "title": "Graphs of sine and cosine",
     "card": [
-      "The graphs of y = a sin(nx) + k and y = a cos(nx) + k are smooth waves that repeat. Here a, n and k are numbers, and a and n are positive.",
+      "The graphs of \\(y = a \\sin(nx) + k\\) and \\(y = a \\cos(nx) + k\\) are smooth waves that repeat. Here \\(a\\), \\(n\\) and \\(k\\) are numbers, and \\(a\\) and \\(n\\) are positive.",
       [
         "Amplitude",
-        "The amplitude is a. It is the distance from the middle line up to a peak. The wave goes from k − a to k + a."
+        "The amplitude is \\(a\\). It is the distance from the middle line up to a peak. The wave goes from \\(k - a\\) to \\(k + a\\)."
       ],
       [
         "Period",
-        "The period is 2π ÷ n. It is the length of one full wave along the x-axis. A larger n gives a shorter period."
+        "The period is \\(2\\pi \\div n\\). It is the length of one full wave along the x-axis. A larger \\(n\\) gives a shorter period."
       ],
       [
         "Mean value",
-        "The mean value is k. It is the height of the middle line. Example: y = 3 sin(2x) + 1 has amplitude 3, period 2π ÷ 2 = π, mean 1, and goes from −2 to 4."
+        "The mean value is \\(k\\). It is the height of the middle line. Example: \\(y = 3 \\sin(2x) + 1\\) has amplitude 3, period \\(2\\pi \\div 2 = \\pi\\), mean 1, and goes from \\(-2\\) to 4."
       ]
     ],
-    "remember": "a is the distance from the middle to a peak, 2π ÷ n is the length of one wave, and k is the height of the middle line.",
+    "remember": "\\(a\\) is the distance from the middle to a peak, \\(2\\pi \\div n\\) is the length of one wave, and \\(k\\) is the height of the middle line.",
     "a": {
-      "q": "What is the period of y = 2 cos(4x) + 5?",
-      "opts": ["π/2", "8π", "π/4", "2π"],
-      "why": "Period = 2π ÷ n = 2π ÷ 4 = π/2. The tempting answer 2π is the period of y = cos x, which applies when n = 1.",
-      "clue": "Divide 2π by the number multiplying x."
+      "q": "What is the period of \\(y = 2 \\cos(4x) + 5\\)?",
+      "opts": ["\\(\\frac{\\pi}{2}\\)", "\\(8\\pi\\)", "\\(\\frac{\\pi}{4}\\)", "\\(2\\pi\\)"],
+      "why": "Period \\(= 2\\pi \\div n = 2\\pi \\div 4 = \\frac{\\pi}{2}\\). The tempting answer \\(2\\pi\\) is the period of \\(y = \\cos x\\), which applies when \\(n = 1\\).",
+      "clue": "Divide \\(2\\pi\\) by the number multiplying \\(x\\)."
     },
     "b": {
       "d": 3,
-      "q": "What are the greatest and least values of y = 4 sin(3x) − 2?",
-      "opts": ["2 and −6", "4 and −4", "1 and −5", "6 and −2"],
-      "why": "The mean is −2 and the amplitude is 4, so y goes from −2 − 4 = −6 up to −2 + 4 = 2. The option 4 and −4 forgets to shift the wave by k.",
+      "q": "What are the greatest and least values of \\(y = 4 \\sin(3x) - 2\\)?",
+      "opts": ["2 and \\(-6\\)", "4 and \\(-4\\)", "1 and \\(-5\\)", "6 and \\(-2\\)"],
+      "why": "The mean is \\(-2\\) and the amplitude is 4, so \\(y\\) goes from \\(-2 - 4 = -6\\) up to \\(-2 + 4 = 2\\). The option 4 and \\(-4\\) forgets to shift the wave by \\(k\\).",
       "clue": "Start at the middle line, then go up and down by the amplitude."
     }
   },
   "mat-tangent-graph": {
     "title": "The tangent graph",
     "card": [
-      "The graph of y = tan x comes from tan x = sin x ÷ cos x. It repeats every π radians, so its period is π.",
-      "When cos x = 0, the fraction cannot be worked out. The graph has a vertical asymptote there, a line it gets closer to but never touches.",
-      "In one period from −π/2 to π/2, the asymptotes are at x = −π/2 and x = π/2. Others are at x = 3π/2, −3π/2 and so on, every π apart.",
-      "The graph crosses the x-axis where sin x = 0, so at x = 0, π, −π, 2π and so on. Between each pair of asymptotes, the curve rises from left to right."
+      "The graph of \\(y = \\tan x\\) comes from \\(\\tan x = \\sin x \\div \\cos x\\). It repeats every \\(\\pi\\) radians, so its period is \\(\\pi\\).",
+      "When \\(\\cos x = 0\\), the fraction cannot be worked out. The graph has a vertical asymptote there, a line it gets closer to but never touches.",
+      "In one period from \\(-\\frac{\\pi}{2}\\) to \\(\\frac{\\pi}{2}\\), the asymptotes are at \\(x = -\\frac{\\pi}{2}\\) and \\(x = \\frac{\\pi}{2}\\). Others are at \\(x = \\frac{3\\pi}{2}\\), \\(x = -\\frac{3\\pi}{2}\\) and so on, every \\(\\pi\\) apart.",
+      "The graph crosses the x-axis where \\(\\sin x = 0\\), so at \\(x = 0, \\pi, -\\pi, 2\\pi\\) and so on. Between each pair of asymptotes, the curve rises from left to right."
     ],
-    "remember": "tan x = sin x ÷ cos x: period π, with asymptotes wherever cos x = 0.",
+    "remember": "\\(\\tan x = \\sin x \\div \\cos x\\): period \\(\\pi\\), with asymptotes wherever \\(\\cos x = 0\\).",
     "a": {
-      "q": "Which of these is a vertical asymptote of y = tan x?",
-      "opts": ["x = π/2", "x = π", "x = 0", "x = 2π"],
-      "why": "At x = π/2, cos x = 0, so tan x cannot be worked out and there is an asymptote. At x = π, sin x = 0 and cos x = −1, so tan π = 0 and the graph crosses the x-axis there.",
-      "clue": "Look for the value of x where cos x = 0."
+      "q": "Which of these is a vertical asymptote of \\(y = \\tan x\\)?",
+      "opts": ["\\(x = \\frac{\\pi}{2}\\)", "\\(x = \\pi\\)", "\\(x = 0\\)", "\\(x = 2\\pi\\)"],
+      "why": "At \\(x = \\frac{\\pi}{2}\\), \\(\\cos x = 0\\), so \\(\\tan x\\) cannot be worked out and there is an asymptote. At \\(x = \\pi\\), \\(\\sin x = 0\\) and \\(\\cos x = -1\\), so \\(\\tan \\pi = 0\\) and the graph crosses the x-axis there.",
+      "clue": "Look for the value of \\(x\\) where \\(\\cos x = 0\\)."
     },
     "b": {
       "d": 3,
-      "q": "The graph of y = tan x has a vertical asymptote at x = π/2. Which is the next asymptote to the right?",
-      "opts": ["x = 3π/2", "x = π", "x = 2π", "x = 5π/2"],
-      "why": "Asymptotes repeat every period, which is π. So the next one is π/2 + π = 3π/2. The value x = π is tempting, but tan π = 0 there, so the graph crosses the axis.",
-      "clue": "Add one period to π/2."
+      "q": "The graph of \\(y = \\tan x\\) has a vertical asymptote at \\(x = \\frac{\\pi}{2}\\). Which is the next asymptote to the right?",
+      "opts": ["\\(x = \\frac{3\\pi}{2}\\)", "\\(x = \\pi\\)", "\\(x = 2\\pi\\)", "\\(x = \\frac{5\\pi}{2}\\)"],
+      "why": "Asymptotes repeat every period, which is \\(\\pi\\). So the next one is \\(\\frac{\\pi}{2} + \\pi = \\frac{3\\pi}{2}\\). The value \\(x = \\pi\\) is tempting, but \\(\\tan \\pi = 0\\) there, so the graph crosses the axis.",
+      "clue": "Add one period to \\(\\frac{\\pi}{2}\\)."
     }
   },
   "mat-modelling-with-sine-cosine": {
     "title": "Modelling with sine and cosine",
     "card": [
-      "Things that rise and fall in a regular cycle, such as tides, daylight hours and temperatures, can be modelled by y = a sin(nx) + k or y = a cos(nx) + k.",
+      "Things that rise and fall in a regular cycle, such as tides, daylight hours and temperatures, can be modelled by \\(y = a \\sin(nx) + k\\) or \\(y = a \\cos(nx) + k\\).",
       [
         "Mean",
-        "The mean k is the middle value of the cycle. It is halfway between the greatest and least values, so k = (greatest + least) ÷ 2."
+        "The mean \\(k\\) is the middle value of the cycle. It is halfway between the greatest and least values, so \\(k = (\\text{greatest} + \\text{least}) \\div 2\\)."
       ],
       [
         "Amplitude",
-        "The amplitude a is how far the value rises above the mean. It is half the gap between greatest and least, so a = (greatest − least) ÷ 2."
+        "The amplitude \\(a\\) is how far the value rises above the mean. It is half the gap between greatest and least, so \\(a = (\\text{greatest} - \\text{least}) \\div 2\\)."
       ],
       [
         "Period",
-        "The period is the time for one full cycle, and it equals 2π ÷ n. Example: a tide with high 5 m, low 1 m and a 12 hour cycle has mean 3 m, amplitude 2 m and n = 2π ÷ 12 = π/6."
+        "The period is the time for one full cycle, and it equals \\(2\\pi \\div n\\). Example: a tide with high 5 m, low 1 m and a 12 hour cycle has mean 3 m, amplitude 2 m and \\(n = 2\\pi \\div 12 = \\frac{\\pi}{6}\\)."
       ]
     ],
     "remember": "Mean is halfway between the extremes, amplitude is half the gap, period is one cycle.",
     "a": {
       "q": "The temperature in a cool room cycles between 14°C and 22°C. What is the amplitude of a sine model for it?",
       "opts": ["4°C", "8°C", "18°C", "36°C"],
-      "why": "The amplitude is half the gap: (22 − 14) ÷ 2 = 4. The option 8°C is the whole gap from least to greatest, not the distance from the middle.",
+      "why": "The amplitude is half the gap: \\((22 - 14) \\div 2 = 4\\). The option 8°C is the whole gap from least to greatest, not the distance from the middle.",
       "clue": "Amplitude is measured from the middle line, not from bottom to top."
     },
     "b": {
       "d": 3,
-      "q": "Water depth at a small harbour jetty is modelled by d = 0.5 sin(nt) + 2, in metres, with t in hours. One full tide cycle takes 12 hours. What is n?",
-      "opts": ["π/6", "6/π", "24π", "π/12"],
-      "why": "The period is 2π ÷ n = 12, so n = 2π ÷ 12 = π/6. Check: 2π ÷ (π/6) = 12. The option 6/π comes from dividing 12 by 2π, which turns the division upside down.",
-      "clue": "Put the period into period = 2π ÷ n and solve for n."
+      "q": "Water depth at a small harbour jetty is modelled by \\(d = 0.5 \\sin(nt) + 2\\), in metres, with \\(t\\) in hours. One full tide cycle takes 12 hours. What is \\(n\\)?",
+      "opts": ["\\(\\frac{\\pi}{6}\\)", "\\(\\frac{6}{\\pi}\\)", "\\(24\\pi\\)", "\\(\\frac{\\pi}{12}\\)"],
+      "why": "The period is \\(2\\pi \\div n = 12\\), so \\(n = 2\\pi \\div 12 = \\frac{\\pi}{6}\\). Check: \\(2\\pi \\div \\frac{\\pi}{6} = 12\\). The option \\(\\frac{6}{\\pi}\\) comes from dividing 12 by \\(2\\pi\\), which turns the division upside down.",
+      "clue": "Put the period into \\(\\text{period} = 2\\pi \\div n\\) and solve for \\(n\\)."
     }
   },
   "mat-index-laws": {
     "title": "Index laws",
     "card": [
-      "For a positive whole number n, a^n means n copies of the base a multiplied together. The number n is the index.",
+      "For a positive whole number \\(n\\), \\(a^{n}\\) means \\(n\\) copies of the base \\(a\\) multiplied together. The number \\(n\\) is the index.",
       [
         "Multiply or divide",
-        "with the same base, add the indices to multiply and subtract them to divide: a^m × a^n = a^(m+n) and a^m ÷ a^n = a^(m−n). For example, 3² × 3⁴ = 3⁶ and 5⁷ ÷ 5³ = 5⁴."
+        "with the same base, add the indices to multiply and subtract them to divide: \\(a^{m} \\times a^{n} = a^{m + n}\\) and \\(a^{m} \\div a^{n} = a^{m - n}\\). For example, \\(3^{2} \\times 3^{4} = 3^{6}\\) and \\(5^{7} \\div 5^{3} = 5^{4}\\)."
       ],
-      ["Power of a power", "multiply the indices: (a^m)^n = a^(mn). For example, (2³)² = 2⁶."],
+      [
+        "Power of a power",
+        "multiply the indices: \\((a^{m})^{n} = a^{mn}\\). For example, \\((2^{3})^{2} = 2^{6}\\)."
+      ],
       [
         "Power of a product",
-        "raise every factor inside the brackets to the power: (ab)^n = a^n × b^n. For example, (3x²)² = 3² × x⁴ = 9x⁴."
+        "raise every factor inside the brackets to the power: \\((ab)^{n} = a^{n} \\times b^{n}\\). For example, \\((3x^{2})^{2} = 3^{2} \\times x^{4} = 9x^{4}\\)."
       ]
     ],
     "remember": "Same base: add indices to multiply, subtract to divide. A power outside brackets applies to every factor inside.",
     "a": {
-      "q": "Which expression is equal to x⁵ × x³?",
-      "opts": ["x⁸", "x¹⁵", "x²", "2x⁸"],
-      "why": "Same base, multiplying, so add the indices: 5 + 3 = 8. Multiplying the indices to get x¹⁵ is the rule for a power of a power, not for a product.",
+      "q": "Which expression is equal to \\(x^{5} \\times x^{3}\\)?",
+      "opts": ["\\(x^{8}\\)", "\\(x^{15}\\)", "\\(x^{2}\\)", "\\(2x^{8}\\)"],
+      "why": "Same base, multiplying, so add the indices: \\(5 + 3 = 8\\). Multiplying the indices to get \\(x^{15}\\) is the rule for a power of a power, not for a product.",
       "clue": "The bases match and you are multiplying."
     },
     "b": {
       "d": 3,
-      "q": "Simplify (2x³)² × x⁴.",
-      "opts": ["4x¹⁰", "2x¹⁰", "4x⁹", "4x²⁴"],
-      "why": "Every factor in the brackets is squared: (2x³)² = 2² × x⁶ = 4x⁶. Then 4x⁶ × x⁴ = 4x¹⁰. Leaving the 2 unsquared gives 2x¹⁰, which is the tempting mistake.",
+      "q": "Simplify \\((2x^{3})^{2} \\times x^{4}\\).",
+      "opts": ["\\(4x^{10}\\)", "\\(2x^{10}\\)", "\\(4x^{9}\\)", "\\(4x^{24}\\)"],
+      "why": "Every factor in the brackets is squared: \\((2x^{3})^{2} = 2^{2} \\times x^{6} = 4x^{6}\\). Then \\(4x^{6} \\times x^{4} = 4x^{10}\\). Leaving the 2 unsquared gives \\(2x^{10}\\), which is the tempting mistake.",
       "clue": "Every factor inside the brackets is squared."
     }
   },
   "mat-exponential-models-2": {
     "title": "Exponential models",
     "card": [
-      "An exponential model has the form y = a × b^t. The value a is the initial value, when t = 0. The base b is the growth or decay factor for each time step.",
-      "For a rise of r% per step, b = 1 + r/100, so a 5% rise gives b = 1.05. For a fall of r%, b = 1 − r/100, so a 20% fall gives b = 0.8.",
-      "Example: $200 grows 10% each year, so y = 200 × 1.1^t. After 2 years, y = 200 × 1.21 = $242.",
-      "If a quantity doubles every d hours (its doubling time), y = a × 2^(t/d). If it halves every h hours (its half-life), y = a × (1/2)^(t/h)."
+      "An exponential model has the form \\(y = a \\times b^{t}\\). The value \\(a\\) is the initial value, when \\(t = 0\\). The base \\(b\\) is the growth or decay factor for each time step.",
+      "For a rise of \\(r\\%\\) per step, \\(b = 1 + \\frac{r}{100}\\), so a 5% rise gives \\(b = 1.05\\). For a fall of \\(r\\%\\), \\(b = 1 - \\frac{r}{100}\\), so a 20% fall gives \\(b = 0.8\\).",
+      "Example: $200 grows 10% each year, so \\(y = 200 \\times 1.1^{t}\\). After 2 years, \\(y = 200 \\times 1.21 = 242\\), which is $242.",
+      "If a quantity doubles every \\(d\\) hours (its doubling time), \\(y = a \\times 2^{\\frac{t}{d}}\\). If it halves every \\(h\\) hours (its half-life), \\(y = a \\times \\left(\\frac{1}{2}\\right)^{\\frac{t}{h}}\\)."
     ],
-    "remember": "Start value a, then multiply by b each step: b = 1 + r/100 for growth, 1 − r/100 for decay.",
+    "remember": "Start value \\(a\\), then multiply by \\(b\\) each step: \\(b = 1 + \\frac{r}{100}\\) for growth, \\(b = 1 - \\frac{r}{100}\\) for decay.",
     "a": {
-      "q": "A town of 4000 people grows by 3% each year. Which rule gives its population P after t years?",
-      "opts": ["P = 4000 × 1.03^t", "P = 4000 × 0.03^t", "P = 4000 × 3^t", "P = 4000 + 1.03t"],
-      "why": "Growth of 3% means the factor is 1 + 3/100 = 1.03, and the population is multiplied by it each year. Using 0.03 would shrink the population to almost nothing.",
+      "q": "A town of 4000 people grows by 3% each year. Which rule gives its population \\(P\\) after \\(t\\) years?",
+      "opts": [
+        "\\(P = 4000 \\times 1.03^{t}\\)",
+        "\\(P = 4000 \\times 0.03^{t}\\)",
+        "\\(P = 4000 \\times 3^{t}\\)",
+        "\\(P = 4000 + 1.03t\\)"
+      ],
+      "why": "Growth of 3% means the factor is \\(1 + \\frac{3}{100} = 1.03\\), and the population is multiplied by it each year. Using 0.03 would shrink the population to almost nothing.",
       "clue": "Each year the population becomes 103% of the year before."
     },
     "b": {
       "d": 3,
       "q": "A drug in the blood has a half-life of 4 hours. A dose of 80 mg is taken. How much remains after 12 hours?",
       "opts": ["10 mg", "20 mg", "26.7 mg", "40 mg"],
-      "why": "Using y = 80 × (1/2)^(12/4) = 80 × 1/8 = 10 mg. That is 3 half-lives, so 80 → 40 → 20 → 10. Halving only once or twice gives 40 or 20 mg, and dividing 80 by 3 gives 26.7 mg.",
+      "why": "Using \\(y = 80 \\times \\left(\\frac{1}{2}\\right)^{\\frac{12}{4}} = 80 \\times \\frac{1}{8} = 10\\), so 10 mg remains. That is 3 half-lives, so \\(80 \\to 40 \\to 20 \\to 10\\). Halving only once or twice gives 40 or 20 mg, and dividing 80 by 3 gives 26.7 mg.",
       "clue": "Count how many half-lives fit into 12 hours."
     }
   },
   "mat-central-difference-approximation": {
     "title": "The central difference approximation",
     "card": [
-      "A chord joins two points on a curve. Its gradient is rise over run. The derivative at x = a is the gradient of the tangent there.",
-      "The central difference uses one point either side of a. f′(a) ≈ (f(a + h) − f(a − h)) ÷ 2h, where h is a small positive number.",
-      "Take f(x) = x² with a = 3 and h = 0.1. f(3.1) = 9.61 and f(2.9) = 8.41. The difference is 9.61 − 8.41 = 1.2, and 2h = 0.2.",
-      "So the estimate is 1.2 ÷ 0.2 = 6. A smaller h usually gives a closer estimate."
+      "A chord joins two points on a curve. Its gradient is rise over run. The derivative at \\(x = a\\) is the gradient of the tangent there.",
+      "The central difference uses one point either side of \\(a\\): \\(f'(a) \\approx \\frac{f(a + h) - f(a - h)}{2h}\\), where \\(h\\) is a small positive number.",
+      "Take \\(f(x) = x^{2}\\) with \\(a = 3\\) and \\(h = 0.1\\). \\(f(3.1) = 9.61\\) and \\(f(2.9) = 8.41\\). The difference is \\(9.61 - 8.41 = 1.2\\), and \\(2h = 0.2\\).",
+      "So the estimate is \\(1.2 \\div 0.2 = 6\\). A smaller \\(h\\) usually gives a closer estimate."
     ],
-    "remember": "Right value minus left value, f(a + h) − f(a − h), then divide by 2h.",
+    "remember": "Right value minus left value, \\(f(a + h) - f(a - h)\\), then divide by \\(2h\\).",
     "a": {
-      "q": "For f(x) = x² with a = 4 and h = 0.5, what is the central difference estimate of f′(4)?",
-      "opts": ["8", "7.5", "16", "−8"],
-      "why": "f(4.5) = 20.25 and f(3.5) = 12.25. The difference is 20.25 − 12.25 = 8, and 2h = 1, so the estimate is 8 ÷ 1 = 8. Dividing by h instead of 2h gives 16, and subtracting the right value from the left gives −8.",
-      "clue": "Find f at 4.5 and 3.5, take right minus left, then divide by 2h."
+      "q": "For \\(f(x) = x^{2}\\) with \\(a = 4\\) and \\(h = 0.5\\), what is the central difference estimate of \\(f'(4)\\)?",
+      "opts": ["8", "7.5", "16", "\\(-8\\)"],
+      "why": "\\(f(4.5) = 20.25\\) and \\(f(3.5) = 12.25\\). The difference is \\(20.25 - 12.25 = 8\\), and \\(2h = 1\\), so the estimate is \\(8 \\div 1 = 8\\). Dividing by \\(h\\) instead of \\(2h\\) gives 16, and subtracting the right value from the left gives \\(-8\\).",
+      "clue": "Find \\(f\\) at 4.5 and 3.5, take right minus left, then divide by \\(2h\\)."
     },
     "b": {
       "d": 3,
-      "q": "Priya estimates f′(2) for f(x) = x³ using h = 0.1. What does she get?",
+      "q": "Priya estimates \\(f'(2)\\) for \\(f(x) = x^{3}\\) using \\(h = 0.1\\). What does she get?",
       "opts": ["12.01", "24.02", "12.61", "11.41"],
-      "why": "f(2.1) = 9.261 and f(1.9) = 6.859. The difference is 2.402, and 2h = 0.2, so the estimate is 12.01. Dividing by h gives 24.02, which forgets that the points are 2h apart. 12.61 uses f(2.1) and f(2) only, which is not a point either side of 2.",
+      "why": "\\(f(2.1) = 9.261\\) and \\(f(1.9) = 6.859\\). The difference is 2.402, and \\(2h = 0.2\\), so the estimate is 12.01. Dividing by \\(h\\) gives 24.02, which forgets that the points are \\(2h\\) apart. 12.61 uses \\(f(2.1)\\) and \\(f(2)\\) only, which is not a point either side of 2.",
       "clue": "Use one point either side of 2, and the points are 0.2 apart."
     }
   },
   "mat-graphs-derivative-functions": {
     "title": "Graphs of derivative functions",
     "card": [
-      "The derivative f′(x) gives the gradient of the graph of f at each x. So its graph shows how steep f is and which way it slopes.",
-      "Where f rises as x increases, the gradient is positive, so f′ is above the x-axis. Where f falls, f′ is below the x-axis.",
+      "The derivative f′(x) gives the gradient of the graph of \\(f\\) at each \\(x\\). So its graph shows how steep \\(f\\) is and which way it slopes.",
+      "Where \\(f\\) rises as \\(x\\) increases, the gradient is positive, so f′ is above the x-axis. Where \\(f\\) falls, f′ is below the x-axis.",
       "At a stationary point, such as a peak or a dip, the tangent is flat. The gradient is zero, so the graph of f′ touches or crosses the x-axis there.",
-      "Example: a curve falls until x = 2, then rises. So f′ is negative for x < 2, zero at x = 2 and positive for x > 2."
+      "Example: a curve falls until \\(x = 2\\), then rises. So f′ is negative for \\(x < 2\\), zero at \\(x = 2\\) and positive for \\(x > 2\\)."
     ],
-    "remember": "Read f′ from the slope of f: above the axis means rising, below means falling.",
+    "remember": "Read f′ from the slope of \\(f\\): above the axis means rising, below means falling.",
     "a": {
-      "q": "The graph of f falls for x < 1 and rises for x > 1. Which describes f′?",
+      "q": "The graph of \\(f\\) falls for \\(x < 1\\) and rises for \\(x > 1\\). Which describes f′?",
       "opts": [
-        "Negative for x < 1, zero at x = 1, positive after",
-        "Positive for x < 1, zero at x = 1, negative after",
-        "Negative everywhere, with a zero at x = 1",
-        "Zero for x < 1 and positive for x > 1"
+        "Negative for \\(x < 1\\), zero at \\(x = 1\\), positive after",
+        "Positive for \\(x < 1\\), zero at \\(x = 1\\), negative after",
+        "Negative everywhere, with a zero at \\(x = 1\\)",
+        "Zero for \\(x < 1\\) and positive for \\(x > 1\\)"
       ],
-      "why": "A falling graph has a negative gradient, and a rising graph has a positive one. The flat point at x = 1 gives zero. Swapping the signs is the tempting mistake.",
+      "why": "A falling graph has a negative gradient, and a rising graph has a positive one. The flat point at \\(x = 1\\) gives zero. Swapping the signs is the tempting mistake.",
       "clue": "Falling means a negative gradient."
     },
     "b": {
       "d": 3,
-      "q": "The graph of f has a peak at x = −1, a dip at x = 3 and no other stationary points. Where is f′ negative?",
-      "opts": ["Between x = −1 and x = 3", "For x < −1 and for x > 3", "At x = −1 and at x = 3", "For all x less than 3"],
-      "why": "After a peak the graph falls until the dip, so f′ is negative between −1 and 3. Before the peak f rises, so f′ is positive for x < −1, which rules out all x less than 3. At −1 and 3 the gradient is zero, not negative.",
+      "q": "The graph of \\(f\\) has a peak at \\(x = -1\\), a dip at \\(x = 3\\) and no other stationary points. Where is f′ negative?",
+      "opts": [
+        "Between \\(x = -1\\) and \\(x = 3\\)",
+        "For \\(x < -1\\) and for \\(x > 3\\)",
+        "At \\(x = -1\\) and at \\(x = 3\\)",
+        "For all \\(x\\) less than 3"
+      ],
+      "why": "After a peak the graph falls until the dip, so f′ is negative between \\(-1\\) and 3. Before the peak \\(f\\) rises, so f′ is positive for \\(x < -1\\), which rules out all \\(x\\) less than 3. At \\(-1\\) and 3 the gradient is zero, not negative.",
       "clue": "What does the graph do just after a peak?"
     }
   },
   "mat-antidifferentiation": {
     "title": "Antidifferentiation",
     "card": [
-      "Antidifferentiation reverses differentiation. If f′(x) = 2x, then f(x) could be x², because the derivative of x² is 2x.",
-      "Add 1 to the power, then divide by the new power. The antiderivative of xⁿ is xⁿ⁺¹/(n + 1) + c, for n ≠ −1. Do each term of a sum separately.",
-      "The constant c is needed because a constant has derivative 0. So x², x² + 5 and x² − 3 all have derivative 2x. They form a family of curves with the same gradient at each x value.",
-      "A known point picks out one curve. Example: f′(x) = 6x² and f(1) = 5. Then f(x) = 2x³ + c. Put in x = 1: 2 + c = 5, so c = 3 and f(x) = 2x³ + 3."
+      "Antidifferentiation reverses differentiation. If \\(f'(x) = 2x\\), then \\(f(x)\\) could be \\(x^{2}\\), because the derivative of \\(x^{2}\\) is \\(2x\\).",
+      "Add 1 to the power, then divide by the new power. The antiderivative of \\(x^{n}\\) is \\(\\frac{x^{n + 1}}{n + 1} + c\\), for \\(n \\ne -1\\). Do each term of a sum separately.",
+      "The constant \\(c\\) is needed because a constant has derivative 0. So \\(x^{2}\\), \\(x^{2} + 5\\) and \\(x^{2} - 3\\) all have derivative \\(2x\\). They form a family of curves with the same gradient at each value of \\(x\\).",
+      "A known point picks out one curve. Example: \\(f'(x) = 6x^{2}\\) and \\(f(1) = 5\\). Then \\(f(x) = 2x^{3} + c\\). Put in \\(x = 1\\): \\(2 + c = 5\\), so \\(c = 3\\) and \\(f(x) = 2x^{3} + 3\\)."
     ],
-    "remember": "Antidifferentiate to get xⁿ⁺¹/(n + 1) + c, then use a known point to find c.",
+    "remember": "Antidifferentiate to get \\(\\frac{x^{n + 1}}{n + 1} + c\\), then use a known point to find \\(c\\).",
     "a": {
-      "q": "Which function has derivative f′(x) = 4x³ and passes through (1, 7)?",
-      "opts": ["f(x) = x⁴ + 6", "f(x) = x⁴ + 7", "f(x) = 12x² + 7", "f(x) = x⁴ − 6"],
-      "why": "The antiderivative of 4x³ is x⁴ + c. Putting in x = 1 gives 1 + c = 7, so c = 6. The option x⁴ + 7 has the right shape, but it gives 8 at x = 1, not 7, as it uses the y value as c.",
-      "clue": "Find x⁴ + c first, then put in the point."
+      "q": "Which function has derivative \\(f'(x) = 4x^{3}\\) and passes through \\((1, 7)\\)?",
+      "opts": ["\\(f(x) = x^{4} + 6\\)", "\\(f(x) = x^{4} + 7\\)", "\\(f(x) = 12x^{2} + 7\\)", "\\(f(x) = x^{4} - 6\\)"],
+      "why": "The antiderivative of \\(4x^{3}\\) is \\(x^{4} + c\\). Putting in \\(x = 1\\) gives \\(1 + c = 7\\), so \\(c = 6\\). The option \\(x^{4} + 7\\) has the right shape, but it gives 8 at \\(x = 1\\), not 7, as it uses the y-value as \\(c\\).",
+      "clue": "Find \\(x^{4} + c\\) first, then put in the point."
     },
     "b": {
       "d": 3,
-      "q": "A curve has gradient 3x² − 4x at every point and passes through (2, 1). What is its equation?",
-      "opts": ["y = x³ − 2x² + 1", "y = x³ − 2x²", "y = x³ − 2x² − 1", "y = x³ − 4x² + 1"],
-      "why": "The antiderivative is y = x³ − 2x² + c. At x = 2: 8 − 8 + c = 1, so c = 1. The option with no constant would give y = 0 at x = 2, not 1. The option with −4x² divides by the new power wrongly: it leaves out the division by 2.",
-      "clue": "Divide each term by its new power, then use (2, 1) to find c."
+      "q": "A curve has gradient \\(3x^{2} - 4x\\) at every point and passes through \\((2, 1)\\). What is its equation?",
+      "opts": [
+        "\\(y = x^{3} - 2x^{2} + 1\\)",
+        "\\(y = x^{3} - 2x^{2}\\)",
+        "\\(y = x^{3} - 2x^{2} - 1\\)",
+        "\\(y = x^{3} - 4x^{2} + 1\\)"
+      ],
+      "why": "The antiderivative is \\(y = x^{3} - 2x^{2} + c\\). At \\(x = 2\\): \\(8 - 8 + c = 1\\), so \\(c = 1\\). The option with no constant would give \\(y = 0\\) at \\(x = 2\\), not 1. The option with \\(-4x^{2}\\) divides by the new power wrongly: it leaves out the division by 2.",
+      "clue": "Divide each term by its new power, then use \\((2, 1)\\) to find \\(c\\)."
     }
   },
   "mat-newton-s-method": {
     "title": "Newton's method",
     "card": [
-      "Newton's method improves a guess for a root, a value of x where f(x) = 0. Draw the tangent at the guess and see where it meets the x-axis.",
-      "That crossing point is the next guess. The rule is x₁ = x₀ − f(x₀) ÷ f′(x₀). Repeating it usually gets closer.",
-      "Example: f(x) = x³ − 8 with x₀ = 3. f(3) = 19 and f′(x) = 3x², so f′(3) = 27.",
-      "Then x₁ = 3 − 19/27 ≈ 2.30. This is closer to the root x = 2. The method fails if f′(x₀) = 0, and a poor guess can overshoot or move away."
+      "Newton's method improves a guess for a root, a value of \\(x\\) where \\(f(x) = 0\\). Draw the tangent at the guess and see where it meets the x-axis.",
+      "That crossing point is the next guess. The rule is \\(x_{1} = x_{0} - \\frac{f(x_{0})}{f'(x_{0})}\\). Repeating it usually gets closer.",
+      "Example: \\(f(x) = x^{3} - 8\\) with \\(x_{0} = 3\\). \\(f(3) = 19\\) and \\(f'(x) = 3x^{2}\\), so \\(f'(3) = 27\\).",
+      "Then \\(x_{1} = 3 - \\frac{19}{27} \\approx 2.30\\). This is closer to the root \\(x = 2\\). The method fails if \\(f'(x_{0}) = 0\\), and a poor guess can overshoot or move away."
     ],
-    "remember": "New guess = old guess − f ÷ f′, found where the tangent meets the axis.",
+    "remember": "\\(\\text{new guess} = \\text{old guess} - \\frac{f}{f'}\\), found where the tangent meets the axis.",
     "a": {
-      "q": "For f(x) = x³ − 8 with x₀ = 2.5, what is x₁ using Newton's method?",
-      "opts": ["2.5 − 7.625/18.75 ≈ 2.09", "2.5 + 7.625/18.75 ≈ 2.91", "2.5 − 7.625/7.5 ≈ 1.48", "2.5 − 18.75/7.625 ≈ 0.04"],
-      "why": "f(2.5) = 15.625 − 8 = 7.625, and f′(2.5) = 3 × 6.25 = 18.75. So x₁ = 2.5 − 7.625/18.75 ≈ 2.09. Adding instead of subtracting moves away from the root.",
-      "clue": "Subtract f divided by f′."
+      "q": "For \\(f(x) = x^{3} - 8\\) with \\(x_{0} = 2.5\\), what is \\(x_{1}\\) using Newton's method?",
+      "opts": [
+        "\\(2.5 - \\frac{7.625}{18.75} \\approx 2.09\\)",
+        "\\(2.5 + \\frac{7.625}{18.75} \\approx 2.91\\)",
+        "\\(2.5 - \\frac{7.625}{7.5} \\approx 1.48\\)",
+        "\\(2.5 - \\frac{18.75}{7.625} \\approx 0.04\\)"
+      ],
+      "why": "\\(f(2.5) = 15.625 - 8 = 7.625\\), and \\(f'(2.5) = 3 \\times 6.25 = 18.75\\). So \\(x_{1} = 2.5 - \\frac{7.625}{18.75} \\approx 2.09\\). Adding instead of subtracting moves away from the root.",
+      "clue": "Subtract \\(f\\) divided by \\(f'\\)."
     },
     "b": {
       "d": 3,
-      "q": "For f(x) = x³ − 2x − 5 with x₀ = 2, what is x₁?",
+      "q": "For \\(f(x) = x^{3} - 2x - 5\\) with \\(x_{0} = 2\\), what is \\(x_{1}\\)?",
       "opts": ["2.1", "1.9", "3", "2.5"],
-      "why": "f(2) = 8 − 4 − 5 = −1, and f′(x) = 3x² − 2, so f′(2) = 10. Then x₁ = 2 − (−1)/10 = 2.1. Dropping the negative sign on f(2) gives 1.9, and forgetting to divide by f′(2) gives 3.",
-      "clue": "Find f(2) ÷ f′(2) first, keeping its sign, then subtract it."
+      "why": "\\(f(2) = 8 - 4 - 5 = -1\\), and \\(f'(x) = 3x^{2} - 2\\), so \\(f'(2) = 10\\). Then \\(x_{1} = 2 - \\frac{-1}{10} = 2.1\\). Dropping the negative sign on \\(f(2)\\) gives 1.9, and forgetting to divide by \\(f'(2)\\) gives 3.",
+      "clue": "Find \\(f(2) \\div f'(2)\\) first, keeping its sign, then subtract it."
     }
   },
   "mat-polynomial-power-graphs-unit": {
@@ -10710,231 +10975,256 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Polynomial",
-        "a function such as y = x³ − 4x, with whole-number powers of x. Its domain is all real numbers and its graph has no asymptotes."
+        "a function such as \\(y = x^{3} - 4x\\), with whole-number powers of \\(x\\). Its domain is all real numbers and its graph has no asymptotes."
       ],
       [
         "Intercepts",
-        "The y-intercept is found by putting x = 0. The x-intercepts are found by solving y = 0. For y = x³ − 4x, x(x − 2)(x + 2) = 0, so x = −2, 0 or 2."
+        "The y-intercept is found by putting \\(x = 0\\). The x-intercepts are found by solving \\(y = 0\\). For \\(y = x^{3} - 4x\\), \\(x(x - 2)(x + 2) = 0\\), so \\(x = -2\\), \\(x = 0\\) or \\(x = 2\\)."
       ],
       [
         "Power function",
-        "y = x^n with n negative, such as y = 1/x², has the asymptotes x = 0 and y = 0. Its domain leaves out x = 0. A square root such as y = √x is also a power function, with domain x ≥ 0."
+        "\\(y = x^{n}\\) with \\(n\\) negative, such as \\(y = \\frac{1}{x^{2}}\\), has the asymptotes \\(x = 0\\) and \\(y = 0\\). Its domain leaves out \\(x = 0\\). A square root such as \\(y = \\sqrt{x}\\) is also a power function, with domain \\(x \\ge 0\\)."
       ],
       [
         "Stationary points",
-        "These are points where the gradient is 0. A stationary point of inflection also has a curve that changes concavity, as in y = x³ at (0, 0). A cubic can have two turning points or none."
+        "These are points where the gradient is 0. A stationary point of inflection also has a curve that changes concavity, as in \\(y = x^{3}\\) at \\((0, 0)\\). A cubic can have two turning points or none."
       ]
     ],
-    "remember": "Polynomials have no asymptotes and a domain of all reals. Negative powers have asymptotes and leave out x = 0.",
+    "remember": "Polynomials have no asymptotes and a domain of all reals. Negative powers have asymptotes and leave out \\(x = 0\\).",
     "a": {
-      "q": "What are the x-intercepts of y = x³ − 9x?",
-      "opts": ["−3, 0 and 3", "0 and 9", "−9, 0 and 9", "3 only"],
-      "why": "Factorise: x(x − 3)(x + 3) = 0, so x = −3, 0 or 3. The option 0 and 9 comes from stopping at x² = 9 and mistaking it for x = 9.",
-      "clue": "Take out a common factor of x first, then factorise what is left."
+      "q": "What are the x-intercepts of \\(y = x^{3} - 9x\\)?",
+      "opts": ["\\(-3\\), 0 and 3", "0 and 9", "\\(-9\\), 0 and 9", "3 only"],
+      "why": "Factorise: \\(x(x - 3)(x + 3) = 0\\), so \\(x = -3\\), \\(x = 0\\) or \\(x = 3\\). The option 0 and 9 comes from stopping at \\(x^{2} = 9\\) and mistaking it for \\(x = 9\\).",
+      "clue": "Take out a common factor of \\(x\\) first, then factorise what is left."
     },
     "b": {
       "d": 2,
-      "q": "Which function has a vertical asymptote at x = 0?",
-      "opts": ["y = 1/x²", "y = x²", "y = x³", "y = √x"],
-      "why": "A negative power puts x in the denominator, so x = 0 is not allowed and the graph rises or falls without limit near it. Polynomials have no asymptotes. The graph of y = √x starts at (0, 0), so it has no asymptote.",
-      "clue": "Look for the function where x = 0 is not in the domain."
+      "q": "Which function has a vertical asymptote at \\(x = 0\\)?",
+      "opts": ["\\(y = \\frac{1}{x^{2}}\\)", "\\(y = x^{2}\\)", "\\(y = x^{3}\\)", "\\(y = \\sqrt{x}\\)"],
+      "why": "A negative power puts \\(x\\) in the denominator, so \\(x = 0\\) is not allowed and the graph rises or falls without limit near it. Polynomials have no asymptotes. The graph of \\(y = \\sqrt{x}\\) starts at \\((0, 0)\\), so it has no asymptote.",
+      "clue": "Look for the function where \\(x = 0\\) is not in the domain."
     }
   },
   "mat-exponential-logarithmic-graphs": {
     "title": "Exponential and logarithmic graphs",
     "card": [
-      "y = e^x has domain all real x and range y > 0. It has a horizontal asymptote at y = 0 and a y-intercept at (0, 1).",
-      "y = log_e(x) is the inverse of y = e^x, so its graph is the reflection of y = e^x in the line y = x. It has domain x > 0, a vertical asymptote at x = 0 and an x-intercept at (1, 0).",
-      "A translation moves the asymptote with the graph. For y = e^x + c, the asymptote is y = c. For y = log_e(x − h), the asymptote is x = h.",
-      "Example: y = e^x + 3 has asymptote y = 3. Its y-intercept is e⁰ + 3 = 4, so the point is (0, 4)."
+      "\\(y = e^{x}\\) has domain all real \\(x\\) and range \\(y > 0\\). It has a horizontal asymptote at \\(y = 0\\) and a y-intercept at \\((0, 1)\\).",
+      "\\(y = \\log_{e} x\\) is the inverse of \\(y = e^{x}\\), so its graph is the reflection of \\(y = e^{x}\\) in the line \\(y = x\\). It has domain \\(x > 0\\), a vertical asymptote at \\(x = 0\\) and an x-intercept at \\((1, 0)\\).",
+      "A translation moves the asymptote with the graph. For \\(y = e^{x} + c\\), the asymptote is \\(y = c\\). For \\(y = \\log_{e}(x - h)\\), the asymptote is \\(x = h\\).",
+      "Example: \\(y = e^{x} + 3\\) has asymptote \\(y = 3\\). Its y-intercept is \\(e^{0} + 3 = 4\\), so the point is \\((0, 4)\\)."
     ],
-    "remember": "e^x and log_e(x) mirror each other in y = x. Translations move the asymptote too.",
+    "remember": "\\(e^{x}\\) and \\(\\log_{e} x\\) mirror each other in \\(y = x\\). Translations move the asymptote too.",
     "a": {
-      "q": "What is the vertical asymptote of y = log_e(x − 2)?",
-      "opts": ["x = 2", "x = −2", "x = 0", "y = 2"],
-      "why": "Replacing x with x − 2 moves the graph 2 units right, so the asymptote x = 0 moves to x = 2. The option x = −2 comes from reading the sign the wrong way.",
-      "clue": "Which way does x − 2 shift the graph?"
+      "q": "What is the vertical asymptote of \\(y = \\log_{e}(x - 2)\\)?",
+      "opts": ["\\(x = 2\\)", "\\(x = -2\\)", "\\(x = 0\\)", "\\(y = 2\\)"],
+      "why": "Replacing \\(x\\) with \\(x - 2\\) moves the graph 2 units right, so the asymptote \\(x = 0\\) moves to \\(x = 2\\). The option \\(x = -2\\) comes from reading the sign the wrong way.",
+      "clue": "Which way does \\(x - 2\\) shift the graph?"
     },
     "b": {
       "d": 3,
-      "q": "What is the y-intercept of y = e^x − 5?",
-      "opts": ["(0, −4)", "(0, −5)", "(0, 1)", "(0, −6)"],
-      "why": "At x = 0, y = e⁰ − 5 = 1 − 5 = −4. The option (0, −5) is tempting but it is the asymptote level, not the intercept, because e⁰ is 1 and not 0.",
-      "clue": "Put x = 0 in and remember what e⁰ equals."
+      "q": "What is the y-intercept of \\(y = e^{x} - 5\\)?",
+      "opts": ["\\((0, -4)\\)", "\\((0, -5)\\)", "\\((0, 1)\\)", "\\((0, -6)\\)"],
+      "why": "At \\(x = 0\\), \\(y = e^{0} - 5 = 1 - 5 = -4\\). The option \\((0, -5)\\) is tempting but it is the asymptote level, not the intercept, because \\(e^{0}\\) is 1 and not 0.",
+      "clue": "Put \\(x = 0\\) in and remember what \\(e^{0}\\) equals."
     }
   },
   "mat-circular-function-graphs": {
     "title": "Circular function graphs",
     "card": [
-      "The graph of y = a sin(n(x − b)) + c is a wave. The same four numbers shape y = a cos(n(x − b)) + c and y = a tan(n(x − b)) + c.",
+      "The graph of \\(y = a \\sin(n(x - b)) + c\\) is a wave. The same four numbers shape \\(y = a \\cos(n(x - b)) + c\\) and \\(y = a \\tan(n(x - b)) + c\\).",
       [
         "Amplitude and centre",
-        "The amplitude is |a|, the height from the centre line to a peak. The centre line is y = c, so the range of sine and cosine is from c − |a| to c + |a|. Tangent has no peaks, so it has no amplitude."
+        "The amplitude is \\(|a|\\), the height from the centre line to a peak. The centre line is \\(y = c\\), so the range of sine and cosine is from \\(c - |a|\\) to \\(c + |a|\\). Tangent has no peaks, so it has no amplitude."
       ],
       [
         "Period and phase",
-        "The period is 2π ÷ |n| for sine and cosine, and π ÷ |n| for tangent. The graph shifts b units right, so b is the phase shift."
+        "The period is \\(2\\pi \\div |n|\\) for sine and cosine, and \\(\\pi \\div |n|\\) for tangent. The graph shifts \\(b\\) units right, so \\(b\\) is the phase shift."
       ],
       [
         "Example",
-        "y = 3 sin(2(x − π/4)) + 1 has amplitude 3, period 2π ÷ 2 = π, centre line y = 1, and a shift of π/4 right. Its range is from −2 to 4."
+        "\\(y = 3 \\sin\\left(2\\left(x - \\frac{\\pi}{4}\\right)\\right) + 1\\) has amplitude 3, period \\(2\\pi \\div 2 = \\pi\\), centre line \\(y = 1\\), and a shift of \\(\\frac{\\pi}{4}\\) right. Its range is from \\(-2\\) to 4."
       ]
     ],
-    "remember": "a sets the height, n the period, b the shift right, c the centre line.",
+    "remember": "\\(a\\) sets the height, \\(n\\) the period, \\(b\\) the shift right, \\(c\\) the centre line.",
     "a": {
-      "q": "For y = 5 cos(4x) − 2, what are the amplitude and the period?",
-      "opts": ["Amplitude 5, period π/2", "Amplitude 5, period 8π", "Amplitude 2, period π/2", "Amplitude 4, period π/2"],
-      "why": "The amplitude is |a| = 5. The period is 2π ÷ |4| = π/2. Amplitude 2 is wrong because −2 only moves the centre line down, it does not set the height of the wave.",
-      "clue": "Amplitude comes from a, and the period is 2π divided by |n|."
+      "q": "For \\(y = 5 \\cos(4x) - 2\\), what are the amplitude and the period?",
+      "opts": [
+        "Amplitude 5, period \\(\\frac{\\pi}{2}\\)",
+        "Amplitude 5, period \\(8\\pi\\)",
+        "Amplitude 2, period \\(\\frac{\\pi}{2}\\)",
+        "Amplitude 4, period \\(\\frac{\\pi}{2}\\)"
+      ],
+      "why": "The amplitude is \\(|a| = 5\\). The period is \\(2\\pi \\div |4| = \\frac{\\pi}{2}\\). Amplitude 2 is wrong because \\(-2\\) only moves the centre line down, it does not set the height of the wave.",
+      "clue": "Amplitude comes from \\(a\\), and the period is \\(2\\pi\\) divided by \\(|n|\\)."
     },
     "b": {
       "d": 3,
-      "q": "A tide height in metres is h = 2 sin(π/6 (t − 3)) + 5, with t in hours. What are the lowest height and the period?",
+      "q": "A tide height in metres is \\(h = 2 \\sin\\left(\\frac{\\pi}{6}(t - 3)\\right) + 5\\), with \\(t\\) in hours. What are the lowest height and the period?",
       "opts": ["3 m and 12 hours", "3 m and 6 hours", "7 m and 12 hours", "2 m and 12 hours"],
-      "why": "The lowest height is c − |a| = 5 − 2 = 3 m. The period is 2π ÷ (π/6) = 12 hours. 7 m is the highest height, not the lowest, and a period of 6 hours comes from dividing π by n, which is the tangent rule.",
+      "why": "The lowest height is \\(c - |a| = 5 - 2 = 3\\) m. The period is \\(2\\pi \\div \\frac{\\pi}{6} = 12\\) hours. 7 m is the highest height, not the lowest, and a period of 6 hours comes from dividing \\(\\pi\\) by \\(n\\), which is the tangent rule.",
       "clue": "Lowest height is the centre line minus the amplitude."
     }
   },
   "mat-transformations-mapping-form": {
     "title": "Transformations in mapping form",
     "card": [
-      "A mapping rule such as (x, y) → (2x + 1, 3y) says where each point (x, y) on a graph moves to. The first part gives the new x-value. The second part gives the new y-value.",
-      "A number multiplying a part is a dilation: 2x dilates from the y-axis by a factor of 2, and 3y dilates from the x-axis by a factor of 3. A negative sign is a reflection: −y reflects in the x-axis and −x reflects in the y-axis.",
-      "A number added or subtracted is a translation. In the x-part, x + 1 moves the graph 1 unit right and x − 4 moves it 4 units left. In the y-part, y + 2 moves it 2 units up and y − 2 moves it 2 units down.",
-      "Worked example: apply (x, y) → (2x + 1, 3y) to the point (4, 5). New x = 2 × 4 + 1 = 9. New y = 3 × 5 = 15. The point moves to (9, 15)."
+      "A mapping rule such as \\((x, y) \\to (2x + 1, 3y)\\) says where each point \\((x, y)\\) on a graph moves to. The first part gives the new x-value. The second part gives the new y-value.",
+      "A number multiplying a part is a dilation: \\(2x\\) dilates from the y-axis by a factor of 2, and \\(3y\\) dilates from the x-axis by a factor of 3. A negative sign is a reflection: \\(-y\\) reflects in the x-axis and \\(-x\\) reflects in the y-axis.",
+      "A number added or subtracted is a translation. In the x-part, \\(x + 1\\) moves the graph 1 unit right and \\(x - 4\\) moves it 4 units left. In the y-part, \\(y + 2\\) moves it 2 units up and \\(y - 2\\) moves it 2 units down.",
+      "Worked example: apply \\((x, y) \\to (2x + 1, 3y)\\) to the point \\((4, 5)\\). New \\(x = 2 \\times 4 + 1 = 9\\). New \\(y = 3 \\times 5 = 15\\). The point moves to \\((9, 15)\\)."
     ],
-    "remember": "Read a mapping rule as new x, then new y, and apply it to each point.",
+    "remember": "Read a mapping rule as new \\(x\\), then new \\(y\\), and apply it to each point.",
     "a": {
-      "q": "The rule (x, y) → (2x + 1, 3y) is applied to the point (3, −2). Where does the point move to?",
-      "opts": ["(7, −6)", "(8, −6)", "(7, 6)", "(7, −5)"],
-      "why": "New x = 2 × 3 + 1 = 7. New y = 3 × (−2) = −6. The point moves to (7, −6). (8, −6) comes from adding 1 before doubling, which is the wrong order, since the rule doubles x and then adds 1.",
-      "clue": "Double x first, then add 1, and multiply y by 3."
+      "q": "The rule \\((x, y) \\to (2x + 1, 3y)\\) is applied to the point \\((3, -2)\\). Where does the point move to?",
+      "opts": ["\\((7, -6)\\)", "\\((8, -6)\\)", "\\((7, 6)\\)", "\\((7, -5)\\)"],
+      "why": "New \\(x = 2 \\times 3 + 1 = 7\\). New \\(y = 3 \\times (-2) = -6\\). The point moves to \\((7, -6)\\). \\((8, -6)\\) comes from adding 1 before doubling, which is the wrong order, since the rule doubles \\(x\\) and then adds 1.",
+      "clue": "Double \\(x\\) first, then add 1, and multiply \\(y\\) by 3."
     },
     "b": {
       "d": 3,
       "q": "Which mapping rule reflects a graph in the x-axis and then translates it 4 units to the left? (Apply the reflection first.)",
-      "opts": ["(x, y) → (x − 4, −y)", "(x, y) → (x + 4, −y)", "(x, y) → (−x − 4, y)", "(x, y) → (−x + 4, y)"],
-      "why": "Reflecting in the x-axis changes y to −y and leaves x alone. Moving 4 units left subtracts 4 from x, so the rule is (x − 4, −y). (x + 4, −y) moves the graph 4 units right, which is the tempting sign mistake.",
+      "opts": [
+        "\\((x, y) \\to (x - 4, -y)\\)",
+        "\\((x, y) \\to (x + 4, -y)\\)",
+        "\\((x, y) \\to (-x - 4, y)\\)",
+        "\\((x, y) \\to (-x + 4, y)\\)"
+      ],
+      "why": "Reflecting in the x-axis changes \\(y\\) to \\(-y\\) and leaves \\(x\\) alone. Moving 4 units left subtracts 4 from \\(x\\), so the rule is \\((x, y) \\to (x - 4, -y)\\). The rule \\((x, y) \\to (x + 4, -y)\\) moves the graph 4 units right, which is the tempting sign mistake.",
       "clue": "Reflection in the x-axis changes the y-part only."
     }
   },
   "mat-sums-products-functions": {
     "title": "Sums and products of functions",
     "card": [
-      "(f + g)(x) = f(x) + g(x) and (f × g)(x) = f(x) × g(x). Each is built by working with the two outputs at the same x value.",
-      "The new function exists only where both f and g exist. Its domain is the overlap of the two domains.",
-      "To sketch f + g, add the heights of the two graphs at each x. To sketch f × g, multiply the heights. Where one height is 0, the product is 0.",
-      "Example: f(x) = x² with domain R, and g(x) = √x with domain [0, ∞). Then (f + g)(4) = 16 + 2 = 18, and the domain of f + g is [0, ∞)."
+      "\\((f + g)(x) = f(x) + g(x)\\) and \\((f \\times g)(x) = f(x) \\times g(x)\\). Each is built by working with the two outputs at the same \\(x\\) value.",
+      "The new function exists only where both \\(f\\) and \\(g\\) exist. Its domain is the overlap of the two domains.",
+      "To sketch \\(f + g\\), add the heights of the two graphs at each \\(x\\). To sketch \\(f \\times g\\), multiply the heights. Where one height is 0, the product is 0.",
+      "Example: \\(f(x) = x^{2}\\) with domain \\(\\mathbb{R}\\), and \\(g(x) = \\sqrt{x}\\) with domain \\([0, \\infty)\\). Then \\((f + g)(4) = 16 + 2 = 18\\), and the domain of \\(f + g\\) is \\([0, \\infty)\\)."
     ],
-    "remember": "Combine the outputs at the same x, and only use x values that both functions allow.",
+    "remember": "Combine the outputs at the same \\(x\\), and only use \\(x\\) values that both functions allow.",
     "a": {
-      "q": "f(x) = 2x + 1 and g(x) = x². What is (f × g)(3)?",
+      "q": "\\(f(x) = 2x + 1\\) and \\(g(x) = x^{2}\\). What is \\((f \\times g)(3)\\)?",
       "opts": ["63", "30", "16", "28"],
-      "why": "f(3) = 7 and g(3) = 9, so the product is 7 × 9 = 63. The answer 16 comes from adding the outputs, which gives f + g, not f × g.",
-      "clue": "Find each output at x = 3, then multiply them."
+      "why": "\\(f(3) = 7\\) and \\(g(3) = 9\\), so the product is \\(7 \\times 9 = 63\\). The answer 16 comes from adding the outputs, which gives \\(f + g\\), not \\(f \\times g\\).",
+      "clue": "Find each output at \\(x = 3\\), then multiply them."
     },
     "b": {
       "d": 3,
-      "q": "f(x) = √(x − 2) and g(x) = 1/(x − 5). What is the domain of f + g?",
-      "opts": ["[2, ∞) except x = 5", "[2, ∞)", "R except x = 5", "(2, ∞) except x = 5"],
-      "why": "f needs x ≥ 2, and g needs x ≠ 5. The shared domain keeps x ≥ 2 and removes 5. R except x = 5 ignores the limit from f.",
+      "q": "\\(f(x) = \\sqrt{x - 2}\\) and \\(g(x) = \\frac{1}{x - 5}\\). What is the domain of \\(f + g\\)?",
+      "opts": [
+        "\\([2, \\infty)\\) except \\(x = 5\\)",
+        "\\([2, \\infty)\\)",
+        "\\(\\mathbb{R}\\) except \\(x = 5\\)",
+        "\\((2, \\infty)\\) except \\(x = 5\\)"
+      ],
+      "why": "\\(f\\) needs \\(x \\ge 2\\), and \\(g\\) needs \\(x \\ne 5\\). The shared domain keeps \\(x \\ge 2\\) and removes 5. \\(\\mathbb{R}\\) except \\(x = 5\\) ignores the limit from \\(f\\).",
       "clue": "Check what each function rules out, then keep only what both allow."
     }
   },
   "mat-composite-functions": {
     "title": "Composite functions",
     "card": [
-      "A composite function applies one function and then another. In f(g(x)), g is applied first and f is applied to the result.",
-      "Worked example: f(x) = 2x + 1 and g(x) = x². Then f(g(x)) = 2(x²) + 1 = 2x² + 1. For x = 3: g(3) = 9, then f(9) = 19.",
-      "The order matters. Here g(f(x)) = (2x + 1)², and g(f(3)) = 7² = 49, which is not 19.",
-      "f(g(x)) exists only when the range of g sits inside the domain of f. Every output of g must be an input that f accepts."
+      "A composite function applies one function and then another. In \\(f(g(x))\\), \\(g\\) is applied first and \\(f\\) is applied to the result.",
+      "Worked example: \\(f(x) = 2x + 1\\) and \\(g(x) = x^{2}\\). Then \\(f(g(x)) = 2(x^{2}) + 1 = 2x^{2} + 1\\). For \\(x = 3\\): \\(g(3) = 9\\), then \\(f(9) = 19\\).",
+      "The order matters. Here \\(g(f(x)) = (2x + 1)^{2}\\), and \\(g(f(3)) = 7^{2} = 49\\), which is not 19.",
+      "\\(f(g(x))\\) exists only when the range of \\(g\\) sits inside the domain of \\(f\\). Every output of \\(g\\) must be an input that \\(f\\) accepts."
     ],
-    "remember": "In f(g(x)), work from the inside out. It exists only if the range of g fits inside the domain of f.",
+    "remember": "In \\(f(g(x))\\), work from the inside out. It exists only if the range of \\(g\\) fits inside the domain of \\(f\\).",
     "a": {
-      "q": "Let f(x) = 3x − 2 and g(x) = x + 4. What is f(g(x))?",
-      "opts": ["3x + 10", "3x + 2", "3x − 6", "x + 2"],
-      "why": "Apply g first: g(x) = x + 4. Then f of that is 3(x + 4) − 2 = 3x + 10. The option 3x + 2 comes from adding 4 after f, which is g(f(x)) and applies the functions in the wrong order.",
-      "clue": "Put x + 4 into f in place of x."
+      "q": "Let \\(f(x) = 3x - 2\\) and \\(g(x) = x + 4\\). What is \\(f(g(x))\\)?",
+      "opts": ["\\(3x + 10\\)", "\\(3x + 2\\)", "\\(3x - 6\\)", "\\(x + 2\\)"],
+      "why": "Apply \\(g\\) first: \\(g(x) = x + 4\\). Then \\(f\\) of that is \\(3(x + 4) - 2 = 3x + 10\\). The option \\(3x + 2\\) comes from adding 4 after \\(f\\), which is \\(g(f(x))\\) and applies the functions in the wrong order.",
+      "clue": "Put \\(x + 4\\) into \\(f\\) in place of \\(x\\)."
     },
     "b": {
       "d": 3,
-      "q": "Let f(x) = √x with domain [0, ∞) and g(x) = x − 5 with domain R. Why does f(g(x)) not exist on the whole domain R?",
+      "q": "Let \\(f(x) = \\sqrt{x}\\) with domain \\([0, \\infty)\\) and \\(g(x) = x - 5\\) with domain \\(\\mathbb{R}\\). Why does \\(f(g(x))\\) not exist on the whole domain \\(\\mathbb{R}\\)?",
       "opts": [
-        "The range of g is not inside the domain of f",
-        "The range of f is not inside the domain of g",
-        "The domain of g is not inside the range of f",
+        "The range of \\(g\\) is not inside the domain of \\(f\\)",
+        "The range of \\(f\\) is not inside the domain of \\(g\\)",
+        "The domain of \\(g\\) is not inside the range of \\(f\\)",
         "The functions give different outputs when swapped"
       ],
-      "why": "The range of g is all real numbers, but f accepts only inputs of 0 or more, so some outputs of g cannot go into f. The option 'the range of f is not inside the domain of g' swaps the roles: that is the test for g(f(x)), and it is false here anyway, since g accepts every real number. The domain of g is not the test for f(g(x)), so 'the domain of g is not inside the range of f' is wrong too.",
-      "clue": "g goes first, so its outputs become inputs for f."
+      "why": "The range of \\(g\\) is all real numbers, but \\(f\\) accepts only inputs of 0 or more, so some outputs of \\(g\\) cannot go into \\(f\\). The option 'the range of \\(f\\) is not inside the domain of \\(g\\)' swaps the roles: that is the test for \\(g(f(x))\\), and it is false here anyway, since \\(g\\) accepts every real number. The domain of \\(g\\) is not the test for \\(f(g(x))\\), so 'the domain of \\(g\\) is not inside the range of \\(f\\)' is wrong too.",
+      "clue": "\\(g\\) goes first, so its outputs become inputs for \\(f\\)."
     }
   },
   "mat-inverse-functions-unit-3": {
     "title": "Inverse functions",
     "card": [
       "A function is one-to-one if each y-value comes from only one x-value. A horizontal line cuts its graph at most once. Only a one-to-one function has an inverse function.",
-      "The inverse f⁻¹ undoes f. Its domain is the range of f, and its range is the domain of f. The graphs are reflections of each other in the line y = x.",
-      "To find f⁻¹, swap x and y, then solve for y. Example: f(x) = 2x + 3. Swap: x = 2y + 3. Solve: y = (x − 3)/2. So f⁻¹(x) = (x − 3)/2.",
-      "y = x² is not one-to-one, as x = 2 and x = −2 both give 4. Restrict the domain, such as x ≥ 0, and it becomes one-to-one. Then the inverse is f⁻¹(x) = √x."
+      "The inverse \\(f^{-1}\\) undoes \\(f\\). Its domain is the range of \\(f\\), and its range is the domain of \\(f\\). The graphs are reflections of each other in the line \\(y = x\\).",
+      "To find \\(f^{-1}\\), swap \\(x\\) and \\(y\\), then solve for \\(y\\). Example: \\(f(x) = 2x + 3\\). Swap: \\(x = 2y + 3\\). Solve: \\(y = \\frac{x - 3}{2}\\). So \\(f^{-1}(x) = \\frac{x - 3}{2}\\).",
+      "\\(y = x^{2}\\) is not one-to-one, as \\(x = 2\\) and \\(x = -2\\) both give 4. Restrict the domain, such as \\(x \\ge 0\\), and it becomes one-to-one. Then the inverse is \\(f^{-1}(x) = \\sqrt{x}\\)."
     ],
-    "remember": "Swap x and y to find the inverse. Its domain is the range of f.",
+    "remember": "Swap \\(x\\) and \\(y\\) to find the inverse. Its domain is the range of \\(f\\).",
     "a": {
-      "q": "f(x) = 3x − 6 is a one-to-one function. What is f⁻¹(x)?",
-      "opts": ["(x + 6)/3", "(x − 6)/3", "x/3 + 6", "−3x + 6"],
-      "why": "Swap to get x = 3y − 6. Add 6 to get x + 6 = 3y, so y = (x + 6)/3. (x − 6)/3 is tempting, but it subtracts 6 when the inverse must undo the subtraction by adding 6.",
-      "clue": "Swap x and y, then solve for y."
+      "q": "\\(f(x) = 3x - 6\\) is a one-to-one function. What is \\(f^{-1}(x)\\)?",
+      "opts": ["\\(\\frac{x + 6}{3}\\)", "\\(\\frac{x - 6}{3}\\)", "\\(\\frac{x}{3} + 6\\)", "\\(-3x + 6\\)"],
+      "why": "Swap to get \\(x = 3y - 6\\). Add 6 to get \\(x + 6 = 3y\\), so \\(y = \\frac{x + 6}{3}\\). \\(\\frac{x - 6}{3}\\) is tempting, but it subtracts 6 when the inverse must undo the subtraction by adding 6.",
+      "clue": "Swap \\(x\\) and \\(y\\), then solve for \\(y\\)."
     },
     "b": {
       "d": 3,
-      "q": "g(x) = (x − 2)², with domain x ≥ 2. What are the domain and rule of g⁻¹?",
-      "opts": ["x ≥ 0, g⁻¹(x) = √x + 2", "x ≥ 2, g⁻¹(x) = √x + 2", "x ≥ 0, g⁻¹(x) = √x − 2", "x ≥ 2, g⁻¹(x) = √x − 2"],
-      "why": "The range of g is y ≥ 0, so the domain of g⁻¹ is x ≥ 0. Swap: x = (y − 2)², so y − 2 = √x since y ≥ 2, and y = √x + 2. Using the domain of g as the domain of g⁻¹ is the tempting mistake.",
-      "clue": "The domain of the inverse is the range of g, not the domain of g."
+      "q": "\\(g(x) = (x - 2)^{2}\\), with domain \\(x \\ge 2\\). What are the domain and rule of \\(g^{-1}\\)?",
+      "opts": [
+        "\\(x \\ge 0\\), \\(g^{-1}(x) = \\sqrt{x} + 2\\)",
+        "\\(x \\ge 2\\), \\(g^{-1}(x) = \\sqrt{x} + 2\\)",
+        "\\(x \\ge 0\\), \\(g^{-1}(x) = \\sqrt{x} - 2\\)",
+        "\\(x \\ge 2\\), \\(g^{-1}(x) = \\sqrt{x} - 2\\)"
+      ],
+      "why": "The range of \\(g\\) is \\(y \\ge 0\\), so the domain of \\(g^{-1}\\) is \\(x \\ge 0\\). Swap: \\(x = (y - 2)^{2}\\), so \\(y - 2 = \\sqrt{x}\\) since \\(y \\ge 2\\), and \\(y = \\sqrt{x} + 2\\). Using the domain of \\(g\\) as the domain of \\(g^{-1}\\) is the tempting mistake.",
+      "clue": "The domain of the inverse is the range of \\(g\\), not the domain of \\(g\\)."
     }
   },
   "mat-hybrid-functions-modelling": {
     "title": "Hybrid functions and modelling",
     "card": [
       "A hybrid (piecewise) function uses different rules on different parts of its domain. Each rule is written with the x-values it applies to.",
-      "Example: a taxi charges $3 per km up to 10 km, then $2 per km after that. For x ≤ 10, C(x) = 3x. For x > 10, C(x) = 30 + 2(x − 10).",
-      "To find a value, first check which x-interval the input is in. Then use only that rule. For x = 14, use the second rule: C(14) = 30 + 2 × 4 = 38.",
-      "If the pieces meet at the boundary, the graph has no jump there. Here 3 × 10 = 30 and the second rule also gives 30 at x = 10, so the graph joins up."
+      "Example: a taxi charges $3 per km up to 10 km, then $2 per km after that. For \\(x \\le 10\\), \\(C(x) = 3x\\). For \\(x > 10\\), \\(C(x) = 30 + 2(x - 10)\\).",
+      "To find a value, first check which x-interval the input is in. Then use only that rule. For \\(x = 14\\), use the second rule: \\(C(14) = 30 + 2 \\times 4 = 38\\).",
+      "If the pieces meet at the boundary, the graph has no jump there. Here \\(3 \\times 10 = 30\\) and the second rule also gives 30 at \\(x = 10\\), so the graph joins up."
     ],
     "remember": "Pick the rule by the interval the input falls in, then use only that rule.",
     "a": {
-      "q": "A function is f(x) = 2x + 1 for x < 3, and f(x) = 10 − x for x ≥ 3. What is f(5)?",
-      "opts": ["5", "11", "6", "−5"],
-      "why": "Since 5 ≥ 3, use the second rule: f(5) = 10 − 5 = 5. The first rule gives 11, but it only applies for x < 3.",
+      "q": "A function is \\(f(x) = 2x + 1\\) for \\(x < 3\\), and \\(f(x) = 10 - x\\) for \\(x \\ge 3\\). What is f(5)?",
+      "opts": ["5", "11", "6", "\\(-5\\)"],
+      "why": "Since \\(5 \\ge 3\\), use the second rule: \\(f(5) = 10 - 5 = 5\\). The first rule gives 11, but it only applies for \\(x < 3\\).",
       "clue": "Check which interval 5 is in first."
     },
     "b": {
       "d": 3,
-      "q": "Mia's gym charges C(x) = 20x dollars for x ≤ 8 visits, and C(x) = 160 + 12(x − 8) for x > 8. What is the cost for 11 visits?",
+      "q": "Mia's gym charges \\(C(x) = 20x\\) dollars for \\(x \\le 8\\) visits, and \\(C(x) = 160 + 12(x - 8)\\) for \\(x > 8\\). What is the cost for 11 visits?",
       "opts": ["$196", "$220", "$132", "$36"],
-      "why": "Since 11 > 8, use the second rule: 160 + 12 × 3 = 160 + 36 = 196. The tempting $220 applies 20 to every visit, but the cheaper rate applies only after 8 visits.",
+      "why": "Since \\(11 > 8\\), use the second rule: \\(160 + 12 \\times 3 = 160 + 36 = 196\\). The tempting $220 applies 20 to every visit, but the cheaper rate applies only after 8 visits.",
       "clue": "Only the visits after the 8th use the second rate, and 160 is the cost of the first 8."
     }
   },
   "mat-polynomial-equations-unit-3": {
     "title": "Polynomial equations",
     "card": [
-      "A polynomial of degree n has at most n real solutions. A cubic has at most 3, and a quadratic at most 2. It can have fewer.",
+      "A polynomial of degree \\(n\\) has at most \\(n\\) real solutions. A cubic has at most 3, and a quadratic at most 2. It can have fewer.",
       "To solve by factorising, move every term to one side so the other side is 0. Factorise, then set each factor equal to 0 (the null factor law).",
-      "Example: x³ − 4x = 0 gives x(x − 2)(x + 2) = 0, so x = 0, x = 2 or x = −2. Three solutions from a cubic.",
-      "If it will not factorise, graph y = the polynomial. The real solutions are the x-intercepts. A calculator can also find them numerically."
+      "Example: \\(x^{3} - 4x = 0\\) gives \\(x(x - 2)(x + 2) = 0\\), so \\(x = 0\\), \\(x = 2\\) or \\(x = -2\\). Three solutions from a cubic.",
+      "If it will not factorise, graph \\(y = P(x)\\), where \\(P(x)\\) is the polynomial. The real solutions are the x-intercepts. A calculator can also find them numerically."
     ],
-    "remember": "Set one side to 0, then factorise. A degree n polynomial has at most n real solutions.",
+    "remember": "Set one side to 0, then factorise. A degree \\(n\\) polynomial has at most \\(n\\) real solutions.",
     "a": {
-      "q": "How many real solutions does x³ − 9x = 0 have?",
+      "q": "How many real solutions does \\(x^{3} - 9x = 0\\) have?",
       "opts": ["3", "2", "1", "9"],
-      "why": "x³ − 9x = x(x − 3)(x + 3) = 0, so x = 0, 3 or −3. Three solutions is the most a cubic can have. Dividing both sides by x would lose x = 0 and leave only 2.",
+      "why": "\\(x^{3} - 9x = x(x - 3)(x + 3) = 0\\), so \\(x = 0\\), 3 or \\(-3\\). Three solutions is the most a cubic can have. Dividing both sides by \\(x\\) would lose \\(x = 0\\) and leave only 2.",
       "clue": "Factorise fully, then set each factor to 0."
     },
     "b": {
       "d": 3,
-      "q": "What are all the real solutions of x³ = 4x²?",
-      "opts": ["x = 0 or x = 4", "x = 4 only", "x = 0 or x = 2", "x = 0, x = 2 or x = −2"],
-      "why": "Move terms to one side: x³ − 4x² = 0, so x²(x − 4) = 0. Then x = 0 or x = 4. Dividing both sides by x² would lose x = 0, which is the tempting mistake that gives x = 4 only.",
+      "q": "What are all the real solutions of \\(x^{3} = 4x^{2}\\)?",
+      "opts": [
+        "\\(x = 0\\) or \\(x = 4\\)",
+        "\\(x = 4\\) only",
+        "\\(x = 0\\) or \\(x = 2\\)",
+        "\\(x = 0\\), \\(x = 2\\) or \\(x = -2\\)"
+      ],
+      "why": "Move terms to one side: \\(x^{3} - 4x^{2} = 0\\), so \\(x^{2}(x - 4) = 0\\). Then \\(x = 0\\) or \\(x = 4\\). Dividing both sides by \\(x^{2}\\) would lose \\(x = 0\\), which is the tempting mistake that gives \\(x = 4\\) only.",
       "clue": "Get 0 on one side before you factorise."
     }
   },
@@ -10943,150 +11233,158 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Same base",
-        "If both sides can be written with the same base, equate the indices. Example: 2^(x+1) = 32 = 2⁵, so x + 1 = 5 and x = 4."
+        "If both sides can be written with the same base, equate the indices. Example: \\(2^{x + 1} = 32 = 2^{5}\\), so \\(x + 1 = 5\\) and \\(x = 4\\)."
       ],
       [
         "Take logs",
-        "If the bases cannot match, take logs of both sides. Example: 3^x = 20 gives x = log₃(20) = log(20) ÷ log(3), which is about 2.73."
+        "If the bases cannot match, take logs of both sides. Example: \\(3^{x} = 20\\) gives \\(x = \\log_{3} 20 = \\frac{\\log_{e} 20}{\\log_{e} 3}\\), which is about 2.73."
       ],
       [
         "Log equations",
-        "Combine the logs into one using the log laws, then rewrite in index form. Example: log₂(x) + log₂(x − 2) = 3 gives log₂(x(x − 2)) = 3, so x² − 2x = 8."
+        "Combine the logs into one using the log laws, then rewrite in index form. Example: \\(\\log_{2}(x) + \\log_{2}(x - 2) = 3\\) gives \\(\\log_{2}(x(x - 2)) = 3\\), so \\(x^{2} - 2x = 8\\)."
       ],
       [
         "Domain check",
-        "A log needs a positive input. Test each answer in the original equation. For x² − 2x = 8, x = 4 or x = −2. Only x = 4 works, as log₂(−2) is undefined."
+        "A log needs a positive input. Test each answer in the original equation. For \\(x^{2} - 2x = 8\\), \\(x = 4\\) or \\(x = -2\\). Only \\(x = 4\\) works, as \\(\\log_{2}(-2)\\) is undefined."
       ]
     ],
     "remember": "Match the base or take logs, then check every answer against the log's domain.",
     "a": {
-      "q": "Solve 3^(2x) = 81.",
-      "opts": ["x = 2", "x = 4", "x = 9", "x = 40"],
-      "why": "81 = 3⁴, so 2x = 4 and x = 2. Choosing x = 4 comes from stopping at the index 4 and forgetting to divide by 2.",
+      "q": "Solve \\(3^{2x} = 81\\).",
+      "opts": ["\\(x = 2\\)", "\\(x = 4\\)", "\\(x = 9\\)", "\\(x = 40\\)"],
+      "why": "\\(81 = 3^{4}\\), so \\(2x = 4\\) and \\(x = 2\\). Choosing \\(x = 4\\) comes from stopping at the index 4 and forgetting to divide by 2.",
       "clue": "Write 81 as a power of 3, then equate the indices."
     },
     "b": {
       "d": 3,
-      "q": "Solve log₃(x) + log₃(x − 6) = 3 for x.",
-      "opts": ["x = 9", "x = −3", "x = 9 or x = −3", "x = 27"],
-      "why": "Combining gives x(x − 6) = 27, so x² − 6x − 27 = 0 and (x − 9)(x + 3) = 0. The input of a log must be positive, so x = −3 is rejected and only x = 9 remains. Giving both values skips the domain check.",
+      "q": "Solve \\(\\log_{3}(x) + \\log_{3}(x - 6) = 3\\) for \\(x\\).",
+      "opts": ["\\(x = 9\\)", "\\(x = -3\\)", "\\(x = 9\\) or \\(x = -3\\)", "\\(x = 27\\)"],
+      "why": "Combining gives \\(x(x - 6) = 27\\), so \\(x^{2} - 6x - 27 = 0\\) and \\((x - 9)(x + 3) = 0\\). The input of a log must be positive, so \\(x = -3\\) is rejected and only \\(x = 9\\) remains. Giving both values skips the domain check.",
       "clue": "Test each solution in the original equation."
     }
   },
   "mat-trigonometric-equations-unit-3": {
     "title": "Trigonometric equations",
     "card": [
-      "To solve sin(x) = k, cos(x) = k or tan(x) = k, first find the reference angle α. It is the angle from 0 to π/2 whose sin, cos or tan equals |k|, so ignore the sign of k at this step.",
-      "Use the signs in the quadrants to place the solutions. Sin is positive in quadrants 1 and 2, cos in 1 and 4, tan in 1 and 3. For a negative k, use the two quadrants where the function is negative.",
-      "Quadrant 1 gives α, quadrant 2 gives π − α, quadrant 3 gives π + α and quadrant 4 gives 2π − α. Add the period for more solutions: 2π for sin and cos, π for tan. Keep every solution in the domain.",
-      "For sin(2x) = 1/2 on 0 ≤ x ≤ 2π, solve for 2x on 0 ≤ 2x ≤ 4π. Here α = π/6, so 2x = π/6, 5π/6, 13π/6, 17π/6. Divide by 2: x = π/12, 5π/12, 13π/12, 17π/12."
+      "To solve \\(\\sin(x) = k\\), \\(\\cos(x) = k\\) or \\(\\tan(x) = k\\), first find the reference angle \\(\\alpha\\). It is the angle from 0 to \\(\\frac{\\pi}{2}\\) whose sin, cos or tan equals \\(|k|\\), so ignore the sign of \\(k\\) at this step.",
+      "Use the signs in the quadrants to place the solutions. Sin is positive in quadrants 1 and 2, cos in 1 and 4, tan in 1 and 3. For a negative \\(k\\), use the two quadrants where the function is negative.",
+      "Quadrant 1 gives \\(\\alpha\\), quadrant 2 gives \\(\\pi - \\alpha\\), quadrant 3 gives \\(\\pi + \\alpha\\) and quadrant 4 gives \\(2\\pi - \\alpha\\). Add the period for more solutions: \\(2\\pi\\) for sin and cos, \\(\\pi\\) for tan. Keep every solution in the domain.",
+      "For \\(\\sin(2x) = \\frac{1}{2}\\) on \\(0 \\le x \\le 2\\pi\\), solve for \\(2x\\) on \\(0 \\le 2x \\le 4\\pi\\). Here \\(\\alpha = \\frac{\\pi}{6}\\), so \\(2x = \\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{13\\pi}{6}, \\frac{17\\pi}{6}\\). Divide by 2: \\(x = \\frac{\\pi}{12}, \\frac{5\\pi}{12}, \\frac{13\\pi}{12}, \\frac{17\\pi}{12}\\)."
     ],
-    "remember": "Reference angle, then quadrants, then add the period, and change the domain first if x is transformed.",
+    "remember": "Reference angle, then quadrants, then add the period, and change the domain first if \\(x\\) is transformed.",
     "a": {
-      "q": "Solve 2cos(x) = 1 for 0 ≤ x ≤ 2π. What are the solutions?",
-      "opts": ["π/3 and 5π/3", "π/3 and 2π/3", "π/6 and 11π/6", "π/3 and 4π/3"],
-      "why": "cos(x) = 1/2, so the reference angle is π/3. Cos is positive in quadrants 1 and 4, giving π/3 and 2π − π/3 = 5π/3. Using π/3 and 2π/3 is tempting, but that is the pair for sin, where quadrants 1 and 2 are positive.",
+      "q": "Solve \\(2\\cos(x) = 1\\) for \\(0 \\le x \\le 2\\pi\\). What are the solutions?",
+      "opts": [
+        "\\(\\frac{\\pi}{3}\\) and \\(\\frac{5\\pi}{3}\\)",
+        "\\(\\frac{\\pi}{3}\\) and \\(\\frac{2\\pi}{3}\\)",
+        "\\(\\frac{\\pi}{6}\\) and \\(\\frac{11\\pi}{6}\\)",
+        "\\(\\frac{\\pi}{3}\\) and \\(\\frac{4\\pi}{3}\\)"
+      ],
+      "why": "\\(\\cos(x) = \\frac{1}{2}\\), so the reference angle is \\(\\frac{\\pi}{3}\\). Cos is positive in quadrants 1 and 4, giving \\(\\frac{\\pi}{3}\\) and \\(2\\pi - \\frac{\\pi}{3} = \\frac{5\\pi}{3}\\). Using \\(\\frac{\\pi}{3}\\) and \\(\\frac{2\\pi}{3}\\) is tempting, but that is the pair for sin, where quadrants 1 and 2 are positive.",
       "clue": "Cos is positive in which two quadrants?"
     },
     "b": {
       "d": 3,
-      "q": "How many solutions does sin(2x) = 1/2 have for 0 ≤ x ≤ π?",
+      "q": "How many solutions does \\(\\sin(2x) = \\frac{1}{2}\\) have for \\(0 \\le x \\le \\pi\\)?",
       "opts": ["2", "1", "4", "3"],
-      "why": "Let u = 2x, so 0 ≤ u ≤ 2π. Then sin(u) = 1/2 gives u = π/6 and 5π/6, so x = π/12 and 5π/12. Giving 4 solutions comes from using the domain 0 to 4π for 2x, which is too wide here.",
-      "clue": "Change the domain for 2x before you solve."
+      "why": "Let \\(u = 2x\\), so \\(0 \\le u \\le 2\\pi\\). Then \\(\\sin(u) = \\frac{1}{2}\\) gives \\(u = \\frac{\\pi}{6}\\) and \\(\\frac{5\\pi}{6}\\), so \\(x = \\frac{\\pi}{12}\\) and \\(\\frac{5\\pi}{12}\\). Giving 4 solutions comes from using the domain 0 to \\(4\\pi\\) for \\(2x\\), which is too wide here.",
+      "clue": "Change the domain for \\(2x\\) before you solve."
     }
   },
   "mat-literal-parameter-equations": {
     "title": "Literal and parameter equations",
     "card": [
-      "A parameter is a letter that stands for a fixed number whose value is not given, such as k in kx + 2 = 3. The unknown to solve for is x.",
-      "Collect the x terms and write the equation as ax = b, where a and b may involve k. Then check whether a is zero before dividing.",
-      ["One solution", "if a ≠ 0, divide to get x = b/a. For kx + 2 = 3, we get kx = 1, so x = 1/k when k ≠ 0."],
+      "A parameter is a letter that stands for a fixed number whose value is not given, such as \\(k\\) in \\(kx + 2 = 3\\). The unknown to solve for is \\(x\\).",
+      "Collect the \\(x\\) terms and write the equation as \\(ax = b\\), where \\(a\\) and \\(b\\) may involve \\(k\\). Then check whether \\(a\\) is zero before dividing.",
+      [
+        "One solution",
+        "if \\(a \\ne 0\\), divide to get \\(x = \\frac{b}{a}\\). For \\(kx + 2 = 3\\), we get \\(kx = 1\\), so \\(x = \\frac{1}{k}\\) when \\(k \\ne 0\\)."
+      ],
       [
         "None or infinitely many",
-        "if a = 0, the equation becomes 0 = b. If b ≠ 0 it is false for every x, so there is no solution. If b = 0 it is true for every x, so there are infinitely many."
+        "if \\(a = 0\\), the equation becomes \\(0 = b\\). If \\(b \\ne 0\\) it is false for every \\(x\\), so there is no solution. If \\(b = 0\\) it is true for every \\(x\\), so there are infinitely many."
       ]
     ],
-    "remember": "Write ax = b. Only divide by a when a ≠ 0. If a = 0, look at b.",
+    "remember": "Write \\(ax = b\\). Only divide by \\(a\\) when \\(a \\ne 0\\). If \\(a = 0\\), look at \\(b\\).",
     "a": {
-      "q": "For which value of k does kx + 2 = 3 have no solution?",
-      "opts": ["k = 0", "k = 1", "k = 2", "k = 3"],
-      "why": "Rearranging gives kx = 1. If k = 0 this becomes 0 = 1, which is false for every x, so there is no solution. For k = 1, 2 or 3 we can divide by k and get one solution.",
-      "clue": "Which value of k makes you unable to divide?"
+      "q": "For which value of \\(k\\) does \\(kx + 2 = 3\\) have no solution?",
+      "opts": ["\\(k = 0\\)", "\\(k = 1\\)", "\\(k = 2\\)", "\\(k = 3\\)"],
+      "why": "Rearranging gives \\(kx = 1\\). If \\(k = 0\\) this becomes \\(0 = 1\\), which is false for every \\(x\\), so there is no solution. For \\(k = 1\\), 2 or 3 we can divide by \\(k\\) and get one solution.",
+      "clue": "Which value of \\(k\\) makes you unable to divide?"
     },
     "b": {
       "d": 3,
-      "q": "For which value of m does the equation 3x + 5 = mx + 5 have infinitely many solutions?",
-      "opts": ["m = 3", "m = 0", "m = 5", "m = −3"],
-      "why": "Collecting x terms gives (3 − m)x = 0. If m = 3 this is 0 = 0, which is true for every x. If m = 0 the equation is 3x = 0, which has the single solution x = 0.",
-      "clue": "Make the x coefficient zero, then check what is left on the right."
+      "q": "For which value of \\(m\\) does the equation \\(3x + 5 = mx + 5\\) have infinitely many solutions?",
+      "opts": ["\\(m = 3\\)", "\\(m = 0\\)", "\\(m = 5\\)", "\\(m = -3\\)"],
+      "why": "Collecting \\(x\\) terms gives \\((3 - m)x = 0\\). If \\(m = 3\\) this is \\(0 = 0\\), which is true for every \\(x\\). If \\(m = 0\\) the equation is \\(3x = 0\\), which has the single solution \\(x = 0\\).",
+      "clue": "Make the \\(x\\) coefficient zero, then check what is left on the right."
     }
   },
   "mat-systems-linear-equations": {
     "title": "Systems of linear equations",
     "card": [
-      "A system of two linear equations in x and y is a pair of straight lines. A solution is a point on both lines, so if the gradients differ, the lines cross at exactly one point.",
+      "A system of two linear equations in \\(x\\) and \\(y\\) is a pair of straight lines. A solution is a point on both lines, so if the gradients differ, the lines cross at exactly one point.",
       [
         "No solution",
-        "the lines are parallel and never meet. The gradients are equal but the y-intercepts differ, such as y = 2x + 1 and y = 2x + 5."
+        "the lines are parallel and never meet. The gradients are equal but the y-intercepts differ, such as \\(y = 2x + 1\\) and \\(y = 2x + 5\\)."
       ],
       [
         "Infinitely many",
-        "both equations describe the same line, so every point on it is a solution. For example, 2y = 4x + 2 is the same line as y = 2x + 1."
+        "both equations describe the same line, so every point on it is a solution. For example, \\(2y = 4x + 2\\) is the same line as \\(y = 2x + 1\\)."
       ],
-      "With a parameter k, find the k that makes the gradients equal, then compare the y-intercepts. For kx + y = 3 and 2x + y = 5, the gradients are −k and −2, so k = 2. The intercepts 3 and 5 differ, so k = 2 gives no solution."
+      "With a parameter \\(k\\), find the \\(k\\) that makes the gradients equal, then compare the y-intercepts. For \\(kx + y = 3\\) and \\(2x + y = 5\\), the gradients are \\(-k\\) and \\(-2\\), so \\(k = 2\\). The intercepts 3 and 5 differ, so \\(k = 2\\) gives no solution."
     ],
     "remember": "Different gradients give one solution. Equal gradients give none or infinitely many, depending on the intercepts.",
     "a": {
       "q": "Which pair of equations has no solution?",
       "opts": [
-        "y = 3x + 2 and y = 3x − 4",
-        "y = 3x + 2 and y = −3x + 2",
-        "y = 3x + 2 and 2y = 6x + 4",
-        "y = 3x + 2 and y = 2x + 3"
+        "\\(y = 3x + 2\\) and \\(y = 3x - 4\\)",
+        "\\(y = 3x + 2\\) and \\(y = -3x + 2\\)",
+        "\\(y = 3x + 2\\) and \\(2y = 6x + 4\\)",
+        "\\(y = 3x + 2\\) and \\(y = 2x + 3\\)"
       ],
-      "why": "Both lines have gradient 3 but different y-intercepts, so they are parallel and never meet. The pair with 2y = 6x + 4 is the same line as y = 3x + 2, so it has infinitely many solutions, not none.",
-      "clue": "Rewrite each pair as y = mx + c and compare m, then c."
+      "why": "Both lines have gradient 3 but different y-intercepts, so they are parallel and never meet. The pair with \\(2y = 6x + 4\\) is the same line as \\(y = 3x + 2\\), so it has infinitely many solutions, not none.",
+      "clue": "Rewrite each pair as \\(y = mx + c\\) and compare \\(m\\), then \\(c\\)."
     },
     "b": {
       "d": 3,
-      "q": "For the system 3x + ky = 6 and x + 2y = 4, which value of k gives no solution?",
-      "opts": ["k = 6", "k = 3", "k = 2/3", "k = −6"],
-      "why": "Parallel lines need equal gradients: −3/k = −1/2, so k = 6. Then 3x + 6y = 6 becomes x + 2y = 2, which has a different intercept from x + 2y = 4, so the lines never meet. The other values of k give different gradients, so those lines cross once.",
+      "q": "For the system \\(3x + ky = 6\\) and \\(x + 2y = 4\\), which value of \\(k\\) gives no solution?",
+      "opts": ["\\(k = 6\\)", "\\(k = 3\\)", "\\(k = \\frac{2}{3}\\)", "\\(k = -6\\)"],
+      "why": "Parallel lines need equal gradients: \\(-\\frac{3}{k} = -\\frac{1}{2}\\), so \\(k = 6\\). Then \\(3x + 6y = 6\\) becomes \\(x + 2y = 2\\), which has a different intercept from \\(x + 2y = 4\\), so the lines never meet. The other values of \\(k\\) give different gradients, so those lines cross once.",
       "clue": "Make the gradients equal, then check the intercepts differ."
     }
   },
   "mat-bisection-method-2": {
     "title": "Numerical solutions",
     "card": [
-      "Some equations cannot be solved exactly with algebra, such as x = cos(x) or eˣ = 3 − x². A numerical method finds an approximate solution instead.",
-      "Bisection starts with an interval [a, b] where f is continuous and f(a) and f(b) have opposite signs. Then f(x) = 0 has a solution between a and b.",
-      "Find the midpoint m. Keep the half of the interval where the signs still differ, and repeat. Each step halves the interval, so the answer can be found to any accuracy.",
-      "Example: f(x) = x² − 2 has f(1) = −1 and f(2) = 2. The midpoint is 1.5 and f(1.5) = 0.25, which is positive. The solution lies in [1, 1.5]."
+      "Some equations cannot be solved exactly with algebra, such as \\(x = \\cos(x)\\) or \\(e^{x} = 3 - x^{2}\\). A numerical method finds an approximate solution instead.",
+      "Bisection starts with an interval \\([a, b]\\) where \\(f\\) is continuous and \\(f(a)\\) and \\(f(b)\\) have opposite signs. Then \\(f(x) = 0\\) has a solution between \\(a\\) and \\(b\\).",
+      "Find the midpoint \\(m\\). Keep the half of the interval where the signs still differ, and repeat. Each step halves the interval, so the answer can be found to any accuracy.",
+      "Example: \\(f(x) = x^{2} - 2\\) has \\(f(1) = -1\\) and \\(f(2) = 2\\). The midpoint is 1.5 and \\(f(1.5) = 0.25\\), which is positive. The solution lies in \\([1, 1.5]\\)."
     ],
     "remember": "Bisection: check for a sign change, halve the interval, and keep the half with the sign change.",
     "a": {
-      "q": "For f(x) = x³ − 5, f(1) = −4 and f(2) = 3. Bisection is used on [1, 2]. Which interval holds the solution after one step?",
+      "q": "For \\(f(x) = x^{3} - 5\\), \\(f(1) = -4\\) and \\(f(2) = 3\\). Bisection is used on \\([1, 2]\\). Which interval holds the solution after one step?",
       "opts": [
-        "[1.5, 2], because f(1.5) = −1.625",
-        "[1, 1.5], because f(1.5) = −1.625",
-        "[1.5, 2], because f(1.5) = 1.625",
-        "[1, 1.5], because f(1.5) = 1.625"
+        "\\([1.5, 2]\\), because \\(f(1.5) = -1.625\\)",
+        "\\([1, 1.5]\\), because \\(f(1.5) = -1.625\\)",
+        "\\([1.5, 2]\\), because \\(f(1.5) = 1.625\\)",
+        "\\([1, 1.5]\\), because \\(f(1.5) = 1.625\\)"
       ],
-      "why": "The midpoint is 1.5 and f(1.5) = 3.375 − 5 = −1.625. This is negative, like f(1), so the sign change is now between 1.5 and 2. Keeping [1, 1.5] would be wrong, as both ends would be negative.",
-      "clue": "Work out f(1.5), then find where the sign changes."
+      "why": "The midpoint is 1.5 and \\(f(1.5) = 3.375 - 5 = -1.625\\). This is negative, like \\(f(1)\\), so the sign change is now between 1.5 and 2. Keeping \\([1, 1.5]\\) would be wrong, as both ends would be negative.",
+      "clue": "Work out \\(f(1.5)\\), then find where the sign changes."
     },
     "b": {
       "d": 3,
-      "q": "Mia uses bisection on f(x) = x² − 2 in [1, 2]. After the first step the solution lies in [1, 1.5]. What is the midpoint of the next step, and which interval does she keep?",
+      "q": "Mia uses bisection on \\(f(x) = x^{2} - 2\\) in \\([1, 2]\\). After the first step the solution lies in \\([1, 1.5]\\). What is the midpoint of the next step, and which interval does she keep?",
       "opts": [
-        "1.25, and she keeps [1.25, 1.5]",
-        "1.25, and she keeps [1, 1.25]",
-        "1.75, and she keeps [1.5, 1.75]",
-        "1.75, and she keeps [1, 1.75]"
+        "1.25, and she keeps \\([1.25, 1.5]\\)",
+        "1.25, and she keeps \\([1, 1.25]\\)",
+        "1.75, and she keeps \\([1.5, 1.75]\\)",
+        "1.75, and she keeps \\([1, 1.75]\\)"
       ],
-      "why": "The midpoint of [1, 1.5] is 1.25. f(1.25) = 1.5625 − 2 = −0.4375, which is negative like f(1), so the sign change is in [1.25, 1.5], where f(1.5) = 0.25 is positive. The midpoint 1.75 comes from using the old interval [1, 2].",
-      "clue": "Take the midpoint of the current interval, then check the sign of f there."
+      "why": "The midpoint of \\([1, 1.5]\\) is 1.25. \\(f(1.25) = 1.5625 - 2 = -0.4375\\), which is negative like \\(f(1)\\), so the sign change is in \\([1.25, 1.5]\\), where \\(f(1.5) = 0.25\\) is positive. The midpoint 1.75 comes from using the old interval \\([1, 2]\\).",
+      "clue": "Take the midpoint of the current interval, then check the sign of \\(f\\) there."
     }
   },
   "mat-derivatives-exponential-log-circular": {
@@ -11094,31 +11392,36 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Exponential",
-        "The derivative of e^(kx) is k e^(kx). The power stays the same and the constant k comes out the front."
+        "The derivative of \\(e^{kx}\\) is \\(ke^{kx}\\). The power stays the same and the constant \\(k\\) comes out the front."
       ],
-      ["Logarithm", "The derivative of log_e(x) is 1/x, for x > 0."],
+      ["Logarithm", "The derivative of \\(\\log_{e}(x)\\) is \\(\\frac{1}{x}\\), for \\(x > 0\\)."],
       [
         "Sine",
-        "The derivative of sin(kx) is k cos(kx). Angles are in radians. In a sum, differentiate each term separately."
+        "The derivative of \\(\\sin(kx)\\) is \\(k\\cos(kx)\\). Angles are in radians. In a sum, differentiate each term separately."
       ],
       [
         "Cosine",
-        "The derivative of cos(kx) is −k sin(kx). Note the negative sign. A number in front stays as a multiplier: the derivative of 2 cos(3x) is 2 × (−3 sin(3x)) = −6 sin(3x)."
+        "The derivative of \\(\\cos(kx)\\) is \\(-k\\sin(kx)\\). Note the negative sign. A number in front stays as a multiplier: the derivative of \\(2\\cos(3x)\\) is \\(2 \\times (-3\\sin(3x)) = -6\\sin(3x)\\)."
       ]
     ],
-    "remember": "For e^(kx), sin(kx) and cos(kx), k comes out the front. log_e(x) gives 1/x, and cos gives a negative sin.",
+    "remember": "For \\(e^{kx}\\), \\(\\sin(kx)\\) and \\(\\cos(kx)\\), \\(k\\) comes out the front. \\(\\log_{e}(x)\\) gives \\(\\frac{1}{x}\\), and cos gives a negative sin.",
     "a": {
-      "q": "A function is given by f(x) = e^(6x). Which expression is f′(x)?",
-      "opts": ["6e^(6x)", "e^(6x)", "6xe^(6x−1)", "e^(6x)/6"],
-      "why": "The derivative of e^(kx) is k e^(kx), so with k = 6 it is 6e^(6x). The option e^(6x) is tempting because e^x is its own derivative, but the constant 6 must come out the front.",
-      "clue": "The number in front of x comes out the front."
+      "q": "A function is given by \\(f(x) = e^{6x}\\). Which expression is \\(f'(x)\\)?",
+      "opts": ["\\(6e^{6x}\\)", "\\(e^{6x}\\)", "\\(6xe^{6x - 1}\\)", "\\(\\frac{e^{6x}}{6}\\)"],
+      "why": "The derivative of \\(e^{kx}\\) is \\(ke^{kx}\\), so with \\(k = 6\\) it is \\(6e^{6x}\\). The option \\(e^{6x}\\) is tempting because \\(e^{x}\\) is its own derivative, but the constant 6 must come out the front.",
+      "clue": "The number in front of \\(x\\) comes out the front."
     },
     "b": {
       "d": 3,
-      "q": "What is the derivative of 2 cos(4x) + 3 sin(x)?",
-      "opts": ["−8 sin(4x) + 3 cos(x)", "8 sin(4x) + 3 cos(x)", "−2 sin(4x) + 3 cos(x)", "−8 sin(4x) − 3 cos(x)"],
-      "why": "Each term is done separately. The derivative of 2 cos(4x) is 2 × (−4 sin(4x)) = −8 sin(4x), and the derivative of 3 sin(x) is 3 cos(x). Dropping the negative sign for cos gives the tempting wrong answer 8 sin(4x).",
-      "clue": "Multiply the 2 by the −4 from the cos rule."
+      "q": "What is the derivative of \\(2\\cos(4x) + 3\\sin(x)\\)?",
+      "opts": [
+        "\\(-8\\sin(4x) + 3\\cos(x)\\)",
+        "\\(8\\sin(4x) + 3\\cos(x)\\)",
+        "\\(-2\\sin(4x) + 3\\cos(x)\\)",
+        "\\(-8\\sin(4x) - 3\\cos(x)\\)"
+      ],
+      "why": "Each term is done separately. The derivative of \\(2\\cos(4x)\\) is \\(2 \\times (-4\\sin(4x)) = -8\\sin(4x)\\), and the derivative of \\(3\\sin(x)\\) is \\(3\\cos(x)\\). Dropping the negative sign for cos gives the tempting wrong answer \\(8\\sin(4x)\\).",
+      "clue": "Multiply the 2 by the \\(-4\\) from the cos rule."
     }
   },
   "mat-sketching-derivative-antiderivative-graphs": {
@@ -11127,70 +11430,70 @@ MADE_BANKS.mat = {
       "The derivative graph shows the gradient of the original graph. Where the original rises, the derivative is above the x-axis. Where it falls, the derivative is below.",
       "Where the original has a turning point, the derivative graph crosses the x-axis, because the gradient is zero.",
       "Going the other way, an antiderivative has the given graph as its gradient. Where the given graph is positive, the antiderivative rises. Where it is negative, it falls.",
-      "Example: a parabola that opens upward has a derivative that is a straight line with positive gradient, crossing the x-axis at the parabola's lowest point."
+      "Example: a parabola that is concave up has a derivative that is a straight line with positive gradient, crossing the x-axis at the parabola's turning point."
     ],
     "remember": "The original's gradient is the derivative's height.",
     "a": {
-      "q": "A graph rises, reaches a peak, then falls. What does its derivative graph do around the peak?",
+      "q": "A graph rises to a local maximum, then falls. What does its derivative graph do around the local maximum?",
       "opts": [
         "Goes from above the x-axis to below it",
         "Goes from below the x-axis to above it",
         "Stays above the x-axis the whole time",
-        "Has a peak at the same x-value"
+        "Has a local maximum at the same x-value"
       ],
-      "why": "Before the peak the gradient is positive, at the peak it is zero, and after it the gradient is negative. So the derivative crosses the x-axis from above to below. A peak in the original does not give a peak in the derivative.",
-      "clue": "Think about the sign of the gradient before and after the peak."
+      "why": "Before the local maximum the gradient is positive, at the local maximum it is zero, and after it the gradient is negative. So the derivative crosses the x-axis from above to below. A local maximum in the original does not give a local maximum in the derivative.",
+      "clue": "Think about the sign of the gradient before and after the local maximum."
     },
     "b": {
       "d": 3,
-      "q": "A graph y = f(x) is below the x-axis for x < 2 and above it for x > 2. What is true of an antiderivative of f?",
+      "q": "A graph \\(y = f(x)\\) is below the x-axis for \\(x < 2\\) and above it for \\(x > 2\\). What is true of an antiderivative of \\(f\\)?",
       "opts": [
-        "It falls until x = 2, then rises",
-        "It rises until x = 2, then falls",
-        "It is below the x-axis for x < 2",
-        "It is above the x-axis for x > 2"
+        "It falls until \\(x = 2\\), then rises",
+        "It rises until \\(x = 2\\), then falls",
+        "It is below the x-axis for \\(x < 2\\)",
+        "It is above the x-axis for \\(x > 2\\)"
       ],
-      "why": "The antiderivative has gradient f(x). Where f is negative it falls, and where f is positive it rises, so it has a lowest point at x = 2. The options saying it is below the x-axis for x < 2 or above it for x > 2 mix up height and gradient: the sign of f sets the antiderivative's gradient, not its height.",
-      "clue": "The sign of f gives the gradient of the antiderivative, not its height."
+      "why": "The antiderivative has gradient \\(f(x)\\). Where \\(f\\) is negative it falls, and where \\(f\\) is positive it rises, so it has a local minimum at \\(x = 2\\). The options saying it is below the x-axis for \\(x < 2\\) or above it for \\(x > 2\\) mix up height and gradient: the sign of \\(f\\) sets the antiderivative's gradient, not its height.",
+      "clue": "The sign of \\(f\\) gives the gradient of the antiderivative, not its height."
     }
   },
   "mat-stationary-points-curve-sketching": {
     "title": "Stationary points and curve sketching",
     "card": [
-      ["Stationary point", "A stationary point is where f′(x) = 0. Solve this equation to find the x-values."],
+      ["Stationary point", "A stationary point is where \\(f'(x) = 0\\). Solve this equation to find the x-values."],
       [
         "Nature",
-        "Check the sign of f′ on each side. Positive then negative is a local maximum. Negative then positive is a local minimum. The same sign on both sides is a stationary point of inflection."
+        "Check the sign of \\(f'\\) on each side. Positive then negative is a local maximum. Negative then positive is a local minimum. The same sign on both sides is a stationary point of inflection."
       ],
       [
         "Increasing",
-        "If f′(x) > 0 across an interval, except at isolated points where f′(x) = 0, f is strictly increasing there. So x³ is strictly increasing for all x, even though f′(0) = 0. With f′(x) < 0, f is strictly decreasing. Endpoints where f′ = 0 are usually included."
+        "If \\(f'(x) > 0\\) across an interval, except at isolated points where \\(f'(x) = 0\\), \\(f\\) is strictly increasing there. So \\(x^{3}\\) is strictly increasing for all \\(x\\), even though \\(f'(0) = 0\\). With \\(f'(x) < 0\\), \\(f\\) is strictly decreasing. Endpoints where \\(f' = 0\\) are usually included."
       ],
       [
         "Example",
-        "For f(x) = x³ − 3x, f′(x) = 3x² − 3 = 0 gives x = −1 or x = 1. f′ < 0 between them, so f is strictly decreasing on [−1, 1], endpoints included."
+        "For \\(f(x) = x^{3} - 3x\\), \\(f'(x) = 3x^{2} - 3 = 0\\) gives \\(x = -1\\) or \\(x = 1\\). \\(f' < 0\\) between them, so \\(f\\) is strictly decreasing on \\([-1, 1]\\), endpoints included."
       ]
     ],
-    "remember": "Set f′(x) = 0 to find stationary points, then use the sign of f′ to decide their nature.",
+    "remember": "Set \\(f'(x) = 0\\) to find stationary points, then use the sign of \\(f'\\) to decide their nature.",
     "a": {
-      "q": "What are the x-values of the stationary points of f(x) = x² − 6x + 5?",
-      "opts": ["x = 3 only", "x = 1 and x = 5", "x = −3 only", "x = 6 only"],
-      "why": "f′(x) = 2x − 6 = 0 gives x = 3. The values 1 and 5 are the x-intercepts, where f(x) = 0, not where f′(x) = 0.",
+      "q": "What are the x-values of the stationary points of \\(f(x) = x^{2} - 6x + 5\\)?",
+      "opts": ["\\(x = 3\\) only", "\\(x = 1\\) and \\(x = 5\\)", "\\(x = -3\\) only", "\\(x = 6\\) only"],
+      "why": "\\(f'(x) = 2x - 6 = 0\\) gives \\(x = 3\\). The values 1 and 5 are the x-intercepts, where \\(f(x) = 0\\), not where \\(f'(x) = 0\\).",
       "clue": "Differentiate first, then set the derivative to zero."
     },
     "b": {
       "d": 3,
-      "q": "For f(x) = x³ − 12x, what is the largest interval on which f is strictly decreasing?",
-      "opts": ["[−2, 2]", "(−∞, −2] ∪ [2, ∞)", "(−∞, 2]", "[−2, ∞)"],
-      "why": "f′(x) = 3x² − 12 = 3(x − 2)(x + 2). This is negative between −2 and 2 and zero only at the endpoints, so f is strictly decreasing on [−2, 2]. Outside this interval f′ is positive, so the reversed answer is where f is increasing.",
-      "clue": "Factorise f′ and decide where it is negative."
+      "q": "For \\(f(x) = x^{3} - 12x\\), what is the largest interval on which \\(f\\) is strictly decreasing?",
+      "opts": ["\\([-2, 2]\\)", "\\((-\\infty, -2] \\cup [2, \\infty)\\)", "\\((-\\infty, 2]\\)", "\\([-2, \\infty)\\)"],
+      "why": "\\(f'(x) = 3x^{2} - 12 = 3(x - 2)(x + 2)\\). This is negative between \\(-2\\) and 2 and zero only at the endpoints, so \\(f\\) is strictly decreasing on \\([-2, 2]\\). Outside this interval \\(f'\\) is positive, so the reversed answer is where \\(f\\) is increasing.",
+      "clue": "Factorise \\(f'\\) and decide where it is negative."
     }
   },
   "mat-random-variables": {
     "title": "Random variables",
     "card": [
-      "A random variable gives a number to each outcome of an experiment. It is written with a capital letter, such as X.",
-      "Example: toss a coin 3 times. Let X be the number of heads. The outcome HTH gives X = 2.",
+      "A random variable gives a number to each outcome of an experiment. It is written with a capital letter, such as \\(X\\).",
+      "Example: toss a coin 3 times. Let \\(X\\) be the number of heads. The outcome HTH gives \\(X = 2\\).",
       [
         "Discrete",
         "it takes separate values that can be counted, such as 0, 1, 2, 3. Counting things usually gives a discrete variable."
@@ -11228,39 +11531,39 @@ MADE_BANKS.mat = {
   "mat-expected-value-variance": {
     "title": "Expected value and variance",
     "card": [
-      "The expected value is the long-run mean of X. E(X) = sum of x × Pr(X = x), taken over every value of x.",
-      "The variance is Var(X) = E(X²) − (E(X))². Find E(X²) by adding x² × Pr(X = x). The standard deviation is the square root of Var(X).",
-      "Example: X takes 0, 1, 2 with probabilities 0.5, 0.3, 0.2. E(X) = 0 + 0.3 + 0.4 = 0.7.",
-      "E(X²) = 0 + 0.3 + 0.8 = 1.1. So Var(X) = 1.1 − 0.7² = 1.1 − 0.49 = 0.61."
+      "The expected value is the long-run mean of \\(X\\). \\(E(X) = \\sum x \\times \\text{Pr}(X = x)\\), taken over every value of \\(x\\).",
+      "The variance is \\(\\text{Var}(X) = E(X^{2}) - (E(X))^{2}\\). Find \\(E(X^{2})\\) by adding \\(x^{2} \\times \\text{Pr}(X = x)\\). The standard deviation is the square root of \\(\\text{Var}(X)\\).",
+      "Example: \\(X\\) takes 0, 1, 2 with probabilities 0.5, 0.3, 0.2. \\(E(X) = 0 + 0.3 + 0.4 = 0.7\\).",
+      "\\(E(X^{2}) = 0 + 0.3 + 0.8 = 1.1\\). So \\(\\text{Var}(X) = 1.1 - 0.7^{2} = 1.1 - 0.49 = 0.61\\)."
     ],
-    "remember": "Find E(X), then E(X²), then subtract the square of E(X). Take the square root for the standard deviation.",
+    "remember": "Find \\(E(X)\\), then \\(E(X^{2})\\), then subtract the square of \\(E(X)\\). Take the square root for the standard deviation.",
     "a": {
-      "q": "X takes the values 1, 2, 3 with probabilities 0.2, 0.5, 0.3. What is E(X)?",
+      "q": "\\(X\\) takes the values 1, 2, 3 with probabilities 0.2, 0.5, 0.3. What is \\(E(X)\\)?",
       "opts": ["2.1", "2", "4.9", "1.9"],
-      "why": "E(X) = 1 × 0.2 + 2 × 0.5 + 3 × 0.3 = 0.2 + 1 + 0.9 = 2.1. Averaging the values 1, 2, 3 gives 2, which ignores the probabilities. 4.9 is E(X²), not E(X).",
+      "why": "\\(E(X) = 1 \\times 0.2 + 2 \\times 0.5 + 3 \\times 0.3 = 0.2 + 1 + 0.9 = 2.1\\). Averaging the values 1, 2, 3 gives 2, which ignores the probabilities. 4.9 is \\(E(X^{2})\\), not \\(E(X)\\).",
       "clue": "Multiply each value by its own probability, then add."
     },
     "b": {
       "d": 3,
-      "q": "A game gives a score X of 0, 2 or 4 with probabilities 0.4, 0.4, 0.2. What is Var(X)?",
+      "q": "A game gives a score \\(X\\) of 0, 2 or 4 with probabilities 0.4, 0.4, 0.2. What is \\(\\text{Var}(X)\\)?",
       "opts": ["2.24", "2.56", "3.2", "4.8"],
-      "why": "E(X) = 0 + 0.8 + 0.8 = 1.6 and E(X²) = 0 + 1.6 + 3.2 = 4.8, so Var(X) = 4.8 − 1.6² = 4.8 − 2.56 = 2.24. The tempting 2.56 is only (E(X))², and 3.2 comes from subtracting 1.6 without squaring it.",
-      "clue": "Subtract the square of the mean from E(X²)."
+      "why": "\\(E(X) = 0 + 0.8 + 0.8 = 1.6\\) and \\(E(X^{2}) = 0 + 1.6 + 3.2 = 4.8\\), so \\(\\text{Var}(X) = 4.8 - 1.6^{2} = 4.8 - 2.56 = 2.24\\). The tempting 2.56 is only \\((E(X))^{2}\\), and 3.2 comes from subtracting 1.6 without squaring it.",
+      "clue": "Subtract the square of the mean from \\(E(X^{2})\\)."
     }
   },
   "mat-binomial-distribution": {
     "title": "The binomial distribution",
     "card": [
-      "A Bernoulli trial has two outcomes, success or failure. The chance of success is p, and the chance of failure is 1 − p.",
-      "Let X be the number of successes in n trials. X is binomial if n is fixed, the trials are independent and p is the same every time. We write X ~ Bin(n, p).",
-      "The chance of exactly x successes is Pr(X = x) = nCx × p^x × (1 − p)^(n − x). Here nCx counts the ways to place x successes among n trials.",
-      "Example: a fair coin is tossed 3 times and X is the number of heads. X ~ Bin(3, 0.5). Pr(X = 2) = 3 × 0.5² × 0.5 = 0.375."
+      "A Bernoulli trial has two outcomes, success or failure. The chance of success is \\(p\\), and the chance of failure is \\(1 - p\\).",
+      "Let \\(X\\) be the number of successes in \\(n\\) trials. \\(X\\) is binomial if \\(n\\) is fixed, the trials are independent and \\(p\\) is the same every time. We say \\(X\\) has the distribution \\(\\text{Bin}(n, p)\\).",
+      "The chance of exactly \\(x\\) successes is \\(\\text{Pr}(X = x) = \\binom{n}{x} p^{x} (1 - p)^{n - x}\\). Here \\(\\binom{n}{x}\\) counts the ways to place \\(x\\) successes among \\(n\\) trials.",
+      "Example: a fair coin is tossed 3 times and \\(X\\) is the number of heads. So \\(X\\) has the distribution \\(\\text{Bin}(3, 0.5)\\). \\(\\text{Pr}(X = 2) = 3 \\times 0.5^{2} \\times 0.5 = 0.375\\)."
     ],
-    "remember": "Fixed n, independent trials, same p each time: count the successes and you have a binomial.",
+    "remember": "Fixed \\(n\\), independent trials, same \\(p\\) each time: count the successes and you have a binomial.",
     "a": {
-      "q": "A fair coin is tossed 4 times. X is the number of heads. What is Pr(X = 3)?",
+      "q": "A fair coin is tossed 4 times. \\(X\\) is the number of heads. What is \\(\\text{Pr}(X = 3)\\)?",
       "opts": ["0.25", "0.0625", "0.5", "0.125"],
-      "why": "X ~ Bin(4, 0.5), so Pr(X = 3) = 4 × 0.5³ × 0.5 = 4 × 0.0625 = 0.25. The option 0.0625 leaves out the factor 4 for the ways to place the 3 heads.",
+      "why": "\\(X\\) has the distribution \\(\\text{Bin}(4, 0.5)\\), so \\(\\text{Pr}(X = 3) = 4 \\times 0.5^{3} \\times 0.5 = 4 \\times 0.0625 = 0.25\\). The option 0.0625 leaves out the factor 4 for the ways to place the 3 heads.",
       "clue": "Count the ways to place 3 heads among 4 tosses."
     },
     "b": {
@@ -11272,30 +11575,30 @@ MADE_BANKS.mat = {
         "Number of red cards in 5 cards dealt, no replacing",
         "Number of rolls of a die until 3 sixes appear"
       ],
-      "why": "Ten rolls give a fixed n, independent trials and the same p of 1/6 each time. Dealing cards without replacement changes the chance of red after each card, so the trials are not independent and p does not stay the same.",
-      "clue": "Check for a fixed number of trials and a constant p."
+      "why": "Ten rolls give a fixed \\(n\\), independent trials and the same \\(p\\) of \\(\\frac{1}{6}\\) each time. Dealing cards without replacement changes the chance of red after each card, so the trials are not independent and \\(p\\) does not stay the same.",
+      "clue": "Check for a fixed number of trials and a constant \\(p\\)."
     }
   },
   "mat-mean-variance-binomial": {
     "title": "Mean and variance of a binomial",
     "card": [
-      "Suppose X is binomial with n trials and chance of success p on each trial. Then the mean is E(X) = np.",
-      "The variance is Var(X) = np(1 − p). The standard deviation is the square root of the variance.",
-      "Example: n = 50 and p = 0.2. E(X) = 50 × 0.2 = 10.",
-      "Var(X) = 50 × 0.2 × 0.8 = 8. The standard deviation is √8, about 2.83."
+      "Suppose \\(X\\) is binomial with \\(n\\) trials and chance of success \\(p\\) on each trial. Then the mean is \\(E(X) = np\\).",
+      "The variance is \\(\\text{Var}(X) = np(1 - p)\\). The standard deviation is the square root of the variance.",
+      "Example: \\(n = 50\\) and \\(p = 0.2\\). \\(E(X) = 50 \\times 0.2 = 10\\).",
+      "\\(\\text{Var}(X) = 50 \\times 0.2 \\times 0.8 = 8\\). The standard deviation is \\(\\sqrt{8}\\), about 2.83."
     ],
-    "remember": "Mean is np. Variance is np(1 − p), and the standard deviation is its square root.",
+    "remember": "Mean is \\(np\\). Variance is \\(np(1 - p)\\), and the standard deviation is its square root.",
     "a": {
-      "q": "X is binomial with n = 40 and p = 0.25. What is E(X)?",
+      "q": "\\(X\\) is binomial with \\(n = 40\\) and \\(p = 0.25\\). What is \\(E(X)\\)?",
       "opts": ["10", "7.5", "30", "0.625"],
-      "why": "E(X) = np = 40 × 0.25 = 10. The value 7.5 is the variance, np(1 − p), not the mean.",
+      "why": "\\(E(X) = np = 40 \\times 0.25 = 10\\). The value 7.5 is the variance, \\(np(1 - p)\\), not the mean.",
       "clue": "Multiply the number of trials by the chance of success."
     },
     "b": {
       "d": 3,
-      "q": "A bakery in Ballarat finds 10% of its pies are underbaked. In a batch of 80 pies, X is the number underbaked. What is the standard deviation of X, to 2 decimal places?",
+      "q": "A bakery in Ballarat finds 10% of its pies are underbaked. In a batch of 80 pies, \\(X\\) is the number underbaked. What is the standard deviation of \\(X\\), to 2 decimal places?",
       "opts": ["2.68", "7.2", "8", "2.83"],
-      "why": "Var(X) = 80 × 0.1 × 0.9 = 7.2. The standard deviation is √7.2 = 2.68. The value 7.2 is the variance, and 8 is the mean.",
+      "why": "\\(\\text{Var}(X) = 80 \\times 0.1 \\times 0.9 = 7.2\\). The standard deviation is \\(\\sqrt{7.2} \\approx 2.68\\). The value 7.2 is the variance, and 8 is the mean.",
       "clue": "Find the variance first, then take the square root."
     }
   },
@@ -11304,57 +11607,57 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Mean",
-        "For a pdf f(x), the mean is E(X) = ∫ x f(x) dx, taken over the values X can take. It is the balance point of the distribution."
+        "For a pdf \\(f(x)\\), the mean is \\(E(X) = \\int x f(x) \\, dx\\), taken over the values \\(X\\) can take. It is the balance point of the distribution."
       ],
       [
         "Median",
-        "The median m splits the area under f into two halves. Solve ∫ f(x) dx = 1/2, from the lowest value of X up to m."
+        "The median \\(m\\) splits the area under \\(f\\) into two halves. Solve \\(\\int_{a}^{m} f(x) \\, dx = \\frac{1}{2}\\), where \\(a\\) is the lowest value of \\(X\\)."
       ],
       [
         "Variance",
-        "Var(X) = E(X²) − [E(X)]², where E(X²) = ∫ x² f(x) dx. The standard deviation is the square root of the variance."
+        "\\(\\text{Var}(X) = E(X^{2}) - [E(X)]^{2}\\), where \\(E(X^{2}) = \\int x^{2} f(x) \\, dx\\). The standard deviation is the square root of the variance."
       ],
       [
         "Example",
-        "Let f(x) = 2x for 0 ≤ x ≤ 1. Mean = ∫ 2x² dx = 2/3. Median: x² = 1/2, so m = √2/2. E(X²) = ∫ 2x³ dx = 1/2, so Var(X) = 1/2 − 4/9 = 1/18."
+        "Let \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). Mean \\(= \\int_{0}^{1} 2x^{2} \\, dx = \\frac{2}{3}\\). Median: \\(m^{2} = \\frac{1}{2}\\), so \\(m = \\frac{\\sqrt{2}}{2}\\). \\(E(X^{2}) = \\int_{0}^{1} 2x^{3} \\, dx = \\frac{1}{2}\\), so \\(\\text{Var}(X) = \\frac{1}{2} - \\frac{4}{9} = \\frac{1}{18}\\)."
       ]
     ],
-    "remember": "Mean uses x times f(x). Median uses half the area. Variance is E(X²) minus the mean squared.",
+    "remember": "Mean uses \\(x\\) times \\(f(x)\\). Median uses half the area. Variance is \\(E(X^{2})\\) minus the mean squared.",
     "a": {
-      "q": "X has pdf f(x) = 3x² for 0 ≤ x ≤ 1, and 0 otherwise. What is E(X)?",
-      "opts": ["3/4", "1/2", "3/5", "1"],
-      "why": "E(X) = ∫ x · 3x² dx from 0 to 1 = [3x⁴/4] = 3/4. The value 3/5 is tempting, but it comes from ∫ x² · 3x² dx, which is E(X²), not the mean.",
-      "clue": "Multiply f(x) by x before you integrate."
+      "q": "\\(X\\) has pdf \\(f(x) = 3x^{2}\\) for \\(0 \\le x \\le 1\\), and 0 otherwise. What is \\(E(X)\\)?",
+      "opts": ["\\(\\frac{3}{4}\\)", "\\(\\frac{1}{2}\\)", "\\(\\frac{3}{5}\\)", "1"],
+      "why": "\\(E(X) = \\int_{0}^{1} x \\cdot 3x^{2} \\, dx = \\left[\\frac{3x^{4}}{4}\\right]_{0}^{1} = \\frac{3}{4}\\). The value \\(\\frac{3}{5}\\) is tempting, but it comes from \\(\\int_{0}^{1} x^{2} \\cdot 3x^{2} \\, dx\\), which is \\(E(X^{2})\\), not the mean.",
+      "clue": "Multiply \\(f(x)\\) by \\(x\\) before you integrate."
     },
     "b": {
       "d": 3,
-      "q": "The time T hours that Priya spends on a task has pdf f(t) = t/2 for 0 ≤ t ≤ 2, and 0 otherwise. What is the median of T?",
-      "opts": ["√2", "4/3", "1", "2"],
-      "why": "Solve ∫ t/2 dt from 0 to m = m²/4 = 1/2, so m² = 2 and m = √2. The value 4/3 is the mean, found with ∫ t · t/2 dt. The value 1 is the middle of the range, but the area is not split evenly there.",
-      "clue": "Set the area from 0 to m equal to 1/2, then solve for m."
+      "q": "The time \\(T\\) hours that Priya spends on a task has pdf \\(f(t) = \\frac{t}{2}\\) for \\(0 \\le t \\le 2\\), and 0 otherwise. What is the median of \\(T\\)?",
+      "opts": ["\\(\\sqrt{2}\\)", "\\(\\frac{4}{3}\\)", "1", "2"],
+      "why": "Solve \\(\\int_{0}^{m} \\frac{t}{2} \\, dt = \\frac{m^{2}}{4} = \\frac{1}{2}\\), so \\(m^{2} = 2\\) and \\(m = \\sqrt{2}\\). The value \\(\\frac{4}{3}\\) is the mean, found with \\(\\int_{0}^{2} t \\cdot \\frac{t}{2} \\, dt\\). The value 1 is the middle of the range, but the area is not split evenly there.",
+      "clue": "Set the area from 0 to \\(m\\) equal to \\(\\frac{1}{2}\\), then solve for \\(m\\)."
     }
   },
   "mat-standard-normal-distribution": {
     "title": "The standard normal distribution",
     "card": [
-      "The standard normal variable Z has mean 0 and standard deviation 1. Any normal variable X with mean μ and standard deviation σ can be turned into Z.",
-      "The rule is Z = (X − μ)/σ. Subtract the mean, then divide by the standard deviation.",
-      "The value of Z says how many standard deviations X is from the mean. It is negative below the mean and positive above it.",
-      "To go back, use X = μ + σZ. Example: if μ = 50 and σ = 4, then X = 58 gives Z = (58 − 50)/4 = 2. The probability Pr(X < 58) equals Pr(Z < 2)."
+      "The standard normal variable \\(Z\\) has mean 0 and standard deviation 1. Any normal variable \\(X\\) with mean \\(\\mu\\) and standard deviation \\(\\sigma\\) can be turned into \\(Z\\).",
+      "The rule is \\(Z = \\frac{X - \\mu}{\\sigma}\\). Subtract the mean, then divide by the standard deviation.",
+      "The value of \\(Z\\) says how many standard deviations \\(X\\) is from the mean. It is negative below the mean and positive above it.",
+      "To go back, use \\(X = \\mu + \\sigma Z\\). Example: if \\(\\mu = 50\\) and \\(\\sigma = 4\\), then \\(X = 58\\) gives \\(Z = \\frac{58 - 50}{4} = 2\\). The probability \\(\\text{Pr}(X < 58)\\) equals \\(\\text{Pr}(Z < 2)\\)."
     ],
-    "remember": "Z counts standard deviations from the mean, so a probability for X equals the matching probability for Z.",
+    "remember": "\\(Z\\) counts standard deviations from the mean, so a probability for \\(X\\) equals the matching probability for \\(Z\\).",
     "a": {
-      "q": "A machine fills bags with mass X grams, normal with mean 250 and standard deviation 8. What is Z for a bag of 234 g?",
-      "opts": ["−2", "2", "−16", "−0.5"],
-      "why": "Z = (234 − 250)/8 = −16/8 = −2. The value −16 is only the top line: it skips the division by the standard deviation. The bag is below the mean, so Z must be negative, which rules out 2.",
+      "q": "A machine fills bags with mass \\(X\\) grams, normal with mean 250 and standard deviation 8. What is \\(Z\\) for a bag of 234 g?",
+      "opts": ["\\(-2\\)", "2", "\\(-16\\)", "\\(-0.5\\)"],
+      "why": "\\(Z = \\frac{234 - 250}{8} = \\frac{-16}{8} = -2\\). The value \\(-16\\) is only the top line: it skips the division by the standard deviation. The bag is below the mean, so \\(Z\\) must be negative, which rules out 2.",
       "clue": "Subtract the mean first, then divide."
     },
     "b": {
       "d": 3,
-      "q": "Daniel's bus journey time X, in minutes, is normal with mean 40 and standard deviation 6. One trip has a Z value of 1.5. How long did the trip take?",
+      "q": "Daniel's bus journey time \\(X\\), in minutes, is normal with mean 40 and standard deviation 6. One trip has a \\(Z\\) value of 1.5. How long did the trip take?",
       "opts": ["49 minutes", "31 minutes", "41.5 minutes", "60 minutes"],
-      "why": "X = μ + σZ = 40 + 6 × 1.5 = 49. A positive Z means above the mean, so 31 is wrong. The value 41.5 adds Z without multiplying by σ, and 60 multiplies the mean by Z.",
-      "clue": "Z is a number of standard deviations. Turn it into minutes before adding."
+      "why": "\\(X = \\mu + \\sigma Z = 40 + 6 \\times 1.5 = 49\\). A positive \\(Z\\) means above the mean, so 31 is wrong. The value 41.5 adds \\(Z\\) without multiplying by \\(\\sigma\\), and 60 multiplies the mean by \\(Z\\).",
+      "clue": "\\(Z\\) is a number of standard deviations. Turn it into minutes before adding."
     }
   },
   "mat-populations-samples": {
@@ -11362,117 +11665,117 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Population",
-        "the whole group we want to know about, such as every Year 12 student in Victoria. A number that describes the population is a parameter, such as the population proportion p."
+        "the whole group we want to know about, such as every Year 12 student in Victoria. A number that describes the population is a parameter, such as the population proportion \\(p\\)."
       ],
       [
         "Sample",
-        "a smaller group taken from the population. A number worked out from the sample is a statistic, such as the sample proportion p̂ = number with the feature ÷ sample size."
+        "a smaller group taken from the population. A number worked out from the sample is a statistic, such as the sample proportion \\(\\hat{p}\\), the number with the feature divided by the sample size."
       ],
-      "We use a statistic to estimate a parameter. Example: in a random sample of 50 students, 30 own a bike. Then p̂ = 30/50 = 0.6.",
-      "A different random sample can give a different statistic. The parameter p is fixed, but p̂ varies from sample to sample."
+      "We use a statistic to estimate a parameter. Example: in a random sample of 50 students, 30 own a bike. Then \\(\\hat{p} = \\frac{30}{50} = 0.6\\).",
+      "A different random sample can give a different statistic. The parameter \\(p\\) is fixed, but \\(\\hat{p}\\) varies from sample to sample."
     ],
     "remember": "A sample statistic estimates a population parameter. The parameter is fixed, but the statistic varies between samples.",
     "a": {
-      "q": "In a random sample of 200 Geelong voters, 90 back a new bike path. What is the value of p̂ and what does it estimate?",
+      "q": "In a random sample of 200 Geelong voters, 90 back a new bike path. What is the value of \\(\\hat{p}\\) and what does it estimate?",
       "opts": [
         "0.45, the proportion of all Geelong voters who back it",
         "0.45, the proportion of the 200 who back it",
         "0.9, the proportion of all Geelong voters who back it",
         "0.55, the proportion of all Geelong voters who back it"
       ],
-      "why": "p̂ = 90/200 = 0.45. This is a statistic from the sample, and it estimates the population parameter p, the proportion of all Geelong voters. The proportion in the sample is already known to be exactly 0.45, so it is not what is being estimated.",
+      "why": "\\(\\hat{p} = \\frac{90}{200} = 0.45\\). This is a statistic from the sample, and it estimates the population parameter \\(p\\), the proportion of all Geelong voters. The proportion in the sample is already known to be exactly 0.45, so it is not what is being estimated.",
       "clue": "Divide the count by the sample size, then ask which group is being estimated."
     },
     "b": {
       "d": 2,
-      "q": "Priya takes a random sample of 40 students from a school of 900. She finds p̂ = 0.35. A friend takes another random sample of 40 and finds p̂ = 0.30. What is the best explanation?",
+      "q": "Priya takes a random sample of 40 students from a school of 900. She finds \\(\\hat{p} = 0.35\\). A friend takes another random sample of 40 and finds \\(\\hat{p} = 0.30\\). What is the best explanation?",
       "opts": [
         "Sample statistics vary from sample to sample",
-        "The population proportion p has changed",
+        "The population proportion \\(p\\) has changed",
         "One of the two samples must have been counted wrongly",
         "The samples came from two different populations"
       ],
-      "why": "Different random samples usually give different values of p̂, even when the population proportion p stays the same. The parameter p is fixed, so it has not changed, and both samples come from the same school. Nothing suggests a counting error.",
+      "why": "Different random samples usually give different values of \\(\\hat{p}\\), even when the population proportion \\(p\\) stays the same. The parameter \\(p\\) is fixed, so it has not changed, and both samples come from the same school. Nothing suggests a counting error.",
       "clue": "Is it the sample or the population that changes between draws?"
     }
   },
   "mat-simulating-samples": {
     "title": "Simulating samples",
     "card": [
-      "A simulation uses technology to draw many random samples of the same size from a population with a known proportion p. Doing this by hand would take too long.",
+      "A simulation uses technology to draw many random samples of the same size from a population with a known proportion \\(p\\). Doing this by hand would take too long.",
       "For each sample, record the sample proportion. Each trial can give a different value, because each random sample can include different members.",
-      "Example: set p = 0.4 and n = 50. Ten simulated samples might give 0.36, 0.42, 0.46, 0.38, 0.40, 0.34, 0.44, 0.40, 0.48 and 0.38. The values spread around 0.4 but few equal it.",
+      "Example: set \\(p = 0.4\\) and \\(n = 50\\). Ten simulated samples might give 0.36, 0.42, 0.46, 0.38, 0.40, 0.34, 0.44, 0.40, 0.48 and 0.38. The values spread around 0.4 but few equal it.",
       "Plot all the results on a dot plot or histogram. The shape shows how much the statistic varies. Running more trials gives a clearer picture of that variation."
     ],
     "remember": "Simulation repeats random sampling many times to show how much a statistic varies.",
     "a": {
-      "q": "A simulation draws 200 random samples, each of size 50, from a population with p = 0.4. Why do the sample proportions vary?",
+      "q": "A simulation draws 200 random samples, each of size 50, from a population with \\(p = 0.4\\). Why do the sample proportions vary?",
       "opts": [
         "Random samples differ in which members they include",
         "The simulation has made a calculation error",
         "The population proportion changes each trial",
         "Each sample has a different number of members"
       ],
-      "why": "Each trial picks a random set of members, so the sample proportion can change from trial to trial. The population proportion p stays fixed at 0.4, and every sample has 50 members, so neither of those can be the cause.",
+      "why": "Each trial picks a random set of members, so the sample proportion can change from trial to trial. The population proportion \\(p\\) stays fixed at 0.4, and every sample has 50 members, so neither of those can be the cause.",
       "clue": "What can differ between samples, and what stays fixed?"
     },
     "b": {
       "d": 2,
-      "q": "Priya simulates 1000 random samples of size 80 from a population with p = 0.25 and plots the 1000 sample proportions. What does the plot show?",
+      "q": "Priya simulates 1000 random samples of size 80 from a population with \\(p = 0.25\\) and plots the 1000 sample proportions. What does the plot show?",
       "opts": [
         "How much the sample proportion varies between samples",
-        "The exact value of p in the population",
+        "The exact value of \\(p\\) in the population",
         "How the population proportion varies between samples",
         "The proportion in the first sample she drew"
       ],
-      "why": "Each dot is one sample proportion, so the plot shows how that statistic varies from sample to sample. The value p was set by Priya and does not vary, so the plot is not showing a changing population proportion.",
+      "why": "Each dot is one sample proportion, so the plot shows how that statistic varies from sample to sample. The value \\(p\\) was set by Priya and does not vary, so the plot is not showing a changing population proportion.",
       "clue": "Each dot on the plot comes from one sample."
     }
   },
   "mat-sample-proportion": {
     "title": "The sample proportion",
     "card": [
-      "The sample proportion is p̂ = X ÷ n, where X is the number in the sample with a feature and n is the sample size.",
-      "If we take many random samples of the same size n from a population with proportion p, the value of p̂ changes each time.",
-      "For large n, the distribution of p̂ is roughly normal, with mean p and standard deviation √(p(1 − p)/n).",
-      "Example: p = 0.4 and n = 100. The standard deviation is √(0.4 × 0.6/100) = √0.0024, which is about 0.049. So p̂ is centred on 0.4 and usually lies within about 0.1 of it."
+      "The sample proportion is \\(\\hat{p} = \\frac{X}{n}\\), where \\(X\\) is the number in the sample with a feature and \\(n\\) is the sample size.",
+      "If we take many random samples of the same size \\(n\\) from a population with proportion \\(p\\), the value of \\(\\hat{p}\\) changes each time.",
+      "For large \\(n\\), the distribution of \\(\\hat{p}\\) is roughly normal, with mean \\(p\\) and standard deviation \\(\\sqrt{\\frac{p(1 - p)}{n}}\\).",
+      "Example: \\(p = 0.4\\) and \\(n = 100\\). The standard deviation is \\(\\sqrt{\\frac{0.4 \\times 0.6}{100}} = \\sqrt{0.0024}\\), which is about 0.049. So \\(\\hat{p}\\) is centred on 0.4 and usually lies within about 0.1 of it."
     ],
-    "remember": "p̂ varies between samples, and for large n it is roughly normal and centred on p.",
+    "remember": "\\(\\hat{p}\\) varies between samples, and for large \\(n\\) it is roughly normal and centred on \\(p\\).",
     "a": {
-      "q": "Many random samples of size 100 are taken from a population where p = 0.4. Around which value are the p̂ values centred?",
+      "q": "Many random samples of size 100 are taken from a population where \\(p = 0.4\\). Around which value are the \\(\\hat{p}\\) values centred?",
       "opts": ["0.4", "0.04", "0.5", "100"],
-      "why": "The distribution of p̂ is centred on the population proportion p, which is 0.4. The value 0.04 mixes up the mean with a spread-type value, and the sample size is not a proportion.",
-      "clue": "Where does the distribution of p̂ sit compared with p?"
+      "why": "The distribution of \\(\\hat{p}\\) is centred on the population proportion \\(p\\), which is 0.4. The value 0.04 mixes up the mean with a spread-type value, and the sample size is not a proportion.",
+      "clue": "Where does the distribution of \\(\\hat{p}\\) sit compared with \\(p\\)?"
     },
     "b": {
       "d": 3,
-      "q": "A factory has a fault rate of p = 0.2. Random samples of 400 items are tested. What is the standard deviation of p̂?",
+      "q": "A factory has a fault rate of \\(p = 0.2\\). Random samples of 400 items are tested. What is the standard deviation of \\(\\hat{p}\\)?",
       "opts": ["0.02", "0.0004", "0.16", "0.2"],
-      "why": "The standard deviation is √(0.2 × 0.8/400) = √0.0004 = 0.02. The answer 0.0004 is the variance, because the square root step was skipped. The answer 0.16 is just 0.2 × 0.8.",
-      "clue": "Use √(p(1 − p)/n) and finish with the square root."
+      "why": "The standard deviation is \\(\\sqrt{\\frac{0.2 \\times 0.8}{400}} = \\sqrt{0.0004} = 0.02\\). The answer 0.0004 is the variance, because the square root step was skipped. The answer 0.16 is just \\(0.2 \\times 0.8\\).",
+      "clue": "Use \\(\\sqrt{\\frac{p(1 - p)}{n}}\\) and finish with the square root."
     }
   },
   "mat-approximate-confidence-intervals": {
     "title": "Approximate confidence intervals",
     "card": [
-      "A confidence interval gives a range of likely values for the population proportion p. First find p-hat = x ÷ n, where x is the number with the feature and n is the sample size.",
-      "An approximate 95% confidence interval for p is p-hat ± 1.96 × √(p-hat(1 − p-hat)/n). Work out the part after ± first. It is the margin of error.",
-      "Worked example: 20 of 100 people are left-handed. p-hat = 0.2, so √(0.2 × 0.8 ÷ 100) = √0.0016 = 0.04.",
-      "The margin of error is 1.96 × 0.04 = 0.0784. The interval is 0.2 ± 0.0784, which is about 0.122 to 0.278."
+      "A confidence interval gives a range of likely values for the population proportion \\(p\\). First find \\(\\hat{p} = \\frac{x}{n}\\), where \\(x\\) is the number with the feature and \\(n\\) is the sample size.",
+      "An approximate 95% confidence interval for \\(p\\) is \\(\\hat{p} \\pm 1.96 \\times \\sqrt{\\frac{\\hat{p}(1 - \\hat{p})}{n}}\\). Work out the part after \\(\\pm\\) first. It is the margin of error.",
+      "Worked example: 20 of 100 people are left-handed. \\(\\hat{p} = 0.2\\), so \\(\\sqrt{\\frac{0.2 \\times 0.8}{100}} = \\sqrt{0.0016} = 0.04\\).",
+      "The margin of error is \\(1.96 \\times 0.04 = 0.0784\\). The interval is \\(0.2 \\pm 0.0784\\), which is about 0.122 to 0.278."
     ],
-    "remember": "Find p-hat, then p-hat ± 1.96 × √(p-hat(1 − p-hat)/n), with n the sample size.",
+    "remember": "Find \\(\\hat{p}\\), then \\(\\hat{p} \\pm 1.96 \\times \\sqrt{\\frac{\\hat{p}(1 - \\hat{p})}{n}}\\), with \\(n\\) the sample size.",
     "a": {
-      "q": "In a survey of 400 Victorian students, 100 walk to school. What is the approximate 95% confidence interval for p?",
+      "q": "In a survey of 400 Victorian students, 100 walk to school. What is the approximate 95% confidence interval for \\(p\\)?",
       "opts": ["0.208 to 0.292", "0.228 to 0.272", "0.249 to 0.251", "0.165 to 0.335"],
-      "why": "p-hat = 100 ÷ 400 = 0.25. The margin is 1.96 × √(0.25 × 0.75 ÷ 400) ≈ 0.042, giving 0.208 to 0.292. Leaving out 1.96 gives a narrower interval, 0.228 to 0.272, which is not the 95% interval.",
-      "clue": "Find p-hat first, then divide by the sample size inside the root."
+      "why": "\\(\\hat{p} = \\frac{100}{400} = 0.25\\). The margin is \\(1.96 \\times \\sqrt{\\frac{0.25 \\times 0.75}{400}} \\approx 0.042\\), giving 0.208 to 0.292. Leaving out 1.96 gives a narrower interval, 0.228 to 0.272, which is not the 95% interval.",
+      "clue": "Find \\(\\hat{p}\\) first, then divide by the sample size inside the root."
     },
     "b": {
       "d": 3,
-      "q": "A council surveys 900 residents of Ballarat, and 540 say they use the library. What is the margin of error for a 95% interval for p, to 3 decimal places?",
+      "q": "A council surveys 900 residents of Ballarat, and 540 say they use the library. What is the margin of error for a 95% interval for \\(p\\), to 3 decimal places?",
       "opts": ["0.032", "0.016", "0.041", "0.001"],
-      "why": "p-hat = 540 ÷ 900 = 0.6, and n = 900. The margin is 1.96 × √(0.6 × 0.4 ÷ 900) ≈ 0.032. Using 540 as n gives 0.041, which mixes up the count with the sample size.",
-      "clue": "n is the number surveyed, not the number who said yes."
+      "why": "\\(\\hat{p} = \\frac{540}{900} = 0.6\\), and \\(n = 900\\). The margin is \\(1.96 \\times \\sqrt{\\frac{0.6 \\times 0.4}{900}} \\approx 0.032\\). Using 540 as \\(n\\) gives 0.041, which mixes up the count with the sample size.",
+      "clue": "\\(n\\) is the number surveyed, not the number who said yes."
     }
   },
   "mat-interpreting-confidence-interval": {
@@ -11561,7 +11864,7 @@ MADE_BANKS.mat = {
       ],
       [
         "Fundamental theorem",
-        "every whole number above 1 is a product of primes in exactly one way, apart from the order of the factors. For example, 60 = 2 × 30 = 2 × 2 × 15 = 2 × 2 × 3 × 5, which is 2² × 3 × 5."
+        "every whole number above 1 is a product of primes in exactly one way, apart from the order of the factors. For example, \\(60 = 2 \\times 30 = 2 \\times 2 \\times 15 = 2 \\times 2 \\times 3 \\times 5\\), which is \\(2^{2} \\times 3 \\times 5\\)."
       ],
       [
         "Infinitely many",
@@ -11571,20 +11874,25 @@ MADE_BANKS.mat = {
     "remember": "Every whole number above 1 is built from primes in one way only, and the primes never run out.",
     "a": {
       "q": "What is the prime factorisation of 84?",
-      "opts": ["2² × 3 × 7", "2 × 6 × 7", "2 × 3 × 14", "2² × 21"],
-      "why": "84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7, which is 2² × 3 × 7. The option 2 × 6 × 7 also multiplies to 84, but 6 is composite, so it is not a product of primes.",
+      "opts": [
+        "\\(2^{2} \\times 3 \\times 7\\)",
+        "\\(2 \\times 6 \\times 7\\)",
+        "\\(2 \\times 3 \\times 14\\)",
+        "\\(2^{2} \\times 21\\)"
+      ],
+      "why": "\\(84 = 2 \\times 42 = 2 \\times 2 \\times 21 = 2 \\times 2 \\times 3 \\times 7\\), which is \\(2^{2} \\times 3 \\times 7\\). The option \\(2 \\times 6 \\times 7\\) also multiplies to 84, but 6 is composite, so it is not a product of primes.",
       "clue": "Every factor in the answer must itself be prime."
     },
     "b": {
       "d": 3,
-      "q": "Priya says the number 2 × 3 × 5 × 7 × 11 + 1 must be divisible by one of 2, 3, 5, 7 or 11. Which statement is correct?",
+      "q": "Priya says the number \\(2 \\times 3 \\times 5 \\times 7 \\times 11 + 1\\) must be divisible by one of 2, 3, 5, 7 or 11. Which statement is correct?",
       "opts": [
         "No, it leaves remainder 1 when divided by each of them",
         "Yes, because it is built from those primes",
         "No, because it is odd, so no prime can divide it",
         "Yes, because adding 1 keeps every factor of the product"
       ],
-      "why": "The product 2 × 3 × 5 × 7 × 11 = 2310 is divisible by each of these primes, so 2311 leaves remainder 1 each time. Adding 1 breaks those factors rather than keeping them, and being odd only rules out 2. Numbers made this way are not always prime, since 2 × 3 × 5 × 7 × 11 × 13 + 1 = 30031 = 59 × 509, though 2311 happens to be prime.",
+      "why": "The product \\(2 \\times 3 \\times 5 \\times 7 \\times 11 = 2310\\) is divisible by each of these primes, so 2311 leaves remainder 1 each time. Adding 1 breaks those factors rather than keeping them, and being odd only rules out 2. Numbers made this way are not always prime, since \\(2 \\times 3 \\times 5 \\times 7 \\times 11 \\times 13 + 1 = 30031 = 59 \\times 509\\), though 2311 happens to be prime.",
       "clue": "Divide the product part by each prime, then think about the extra 1."
     }
   },
@@ -11593,32 +11901,32 @@ MADE_BANKS.mat = {
     "card": [
       [
         "For all",
-        "A statement with \"for all\" (written ∀) claims that every member of a set fits. For example, \"for all integers n, n² ≥ 0\" is true, because no integer squared is negative."
+        "A statement with \"for all\" (written ∀) claims that every member of a set fits. For example, \"for all integers \\(n\\), \\(n^{2} \\ge 0\\)\" is true, because no integer squared is negative."
       ],
       [
         "There exists",
-        "A statement with \"there exists\" (written ∃) claims that at least one member of a set fits. For example, \"there exists an integer n with n² = 49\" is true, because n = 7 works."
+        "A statement with \"there exists\" (written ∃) claims that at least one member of a set fits. For example, \"there exists an integer \\(n\\) with \\(n^{2} = 49\\)\" is true, because \\(n = 7\\) works."
       ],
       "One member that fails is called a counterexample. A single counterexample shows that a \"for all\" statement is false.",
-      "Example: \"for all integers n, n² > n\" is false. Take n = 1: 1² = 1, and 1 is not greater than 1. To show a \"there exists\" statement is true, one member that fits is enough."
+      "Example: \"for all integers \\(n\\), \\(n^{2} > n\\)\" is false. Take \\(n = 1\\): \\(1^{2} = 1\\), and 1 is not greater than 1. To show a \"there exists\" statement is true, one member that fits is enough."
     ],
     "remember": "For all needs every case to work. There exists needs just one case to work.",
     "a": {
-      "q": "Which single value of n shows that \"for all integers n, n + 3 > 5\" is false?",
-      "opts": ["n = 2", "n = 4", "n = 10", "n = 100"],
-      "why": "For n = 2, n + 3 = 5, and 5 is not greater than 5, so the claim fails. The values 4, 10 and 100 all give results above 5, so they fit the statement and cannot disprove it.",
-      "clue": "Find a value where n + 3 is not above 5."
+      "q": "Which single value of \\(n\\) shows that \"for all integers \\(n\\), \\(n + 3 > 5\\)\" is false?",
+      "opts": ["\\(n = 2\\)", "\\(n = 4\\)", "\\(n = 10\\)", "\\(n = 100\\)"],
+      "why": "For \\(n = 2\\), \\(n + 3 = 5\\), and 5 is not greater than 5, so the claim fails. The values 4, 10 and 100 all give results above 5, so they fit the statement and cannot disprove it.",
+      "clue": "Find a value where \\(n + 3\\) is not above 5."
     },
     "b": {
       "d": 3,
       "q": "Which statement about the integers is true?",
       "opts": [
-        "There exists an integer n with n + 4 = 1",
-        "For all integers n, n + 4 > 1",
-        "There exists an integer n with n² = −4",
-        "For all integers n, n² > n"
+        "There exists an integer \\(n\\) with \\(n + 4 = 1\\)",
+        "For all integers \\(n\\), \\(n + 4 > 1\\)",
+        "There exists an integer \\(n\\) with \\(n^{2} = -4\\)",
+        "For all integers \\(n\\), \\(n^{2} > n\\)"
       ],
-      "why": "With n = −3, n + 4 = 1, so one integer fits and the \"there exists\" statement is true. The claim \"for all integers n, n + 4 > 1\" fails at n = −5, which gives −1, and \"for all integers n, n² > n\" fails at n = 0, since 0 is not greater than 0. No integer squared is negative, so no integer has n² = −4.",
+      "why": "With \\(n = -3\\), \\(n + 4 = 1\\), so one integer fits and the \"there exists\" statement is true. The claim \"for all integers \\(n\\), \\(n + 4 > 1\\)\" fails at \\(n = -5\\), which gives \\(-1\\), and \"for all integers \\(n\\), \\(n^{2} > n\\)\" fails at \\(n = 0\\), since 0 is not greater than 0. No integer squared is negative, so no integer has \\(n^{2} = -4\\).",
       "clue": "For a \"for all\" statement, test one value that might fail it."
     }
   },
@@ -11667,30 +11975,30 @@ MADE_BANKS.mat = {
         "Counterexample",
         "a single case where the claim fails. One is enough to disprove the claim, so it must be a case that fits the claim's conditions and gives a false result."
       ],
-      "Worked example: \"n² + n + 11 is prime for every whole number n ≥ 0.\" It works for n = 0, 1, 2 and more, giving 11, 13, 17. But n = 11 gives 121 + 11 + 11 = 143 = 11 × 13, which is not prime. So the claim is false."
+      "Worked example: \"\\(n^{2} + n + 11\\) is prime for every whole number \\(n \\ge 0\\).\" It works for \\(n = 0\\), 1, 2 and more, giving 11, 13, 17. But \\(n = 11\\) gives \\(121 + 11 + 11 = 143 = 11 \\times 13\\), which is not prime. So the claim is false."
     ],
     "remember": "Examples can support a claim, but one counterexample disproves it.",
     "a": {
-      "q": "Priya says \"n² + n + 11 is prime for every whole number n ≥ 0\" because it works for n = 0 to 5. What do her six checks show?",
+      "q": "Priya says \"\\(n^{2} + n + 11\\) is prime for every whole number \\(n \\ge 0\\)\" because it works for \\(n = 0\\) to 5. What do her six checks show?",
       "opts": [
         "They support the claim but do not prove it",
-        "They prove the claim is true for all n",
-        "They prove the claim is false for some n",
-        "They show the claim is false after n = 5"
+        "They prove the claim is true for all \\(n\\)",
+        "They prove the claim is false for some \\(n\\)",
+        "They show the claim is false after \\(n = 5\\)"
       ],
-      "why": "Six successful checks are examples, and examples never cover every case. The claim is not proved, because a later case such as n = 11 could fail. It is also not disproved, because no failing case has been found.",
-      "clue": "Did any of the six checks fail, and did they cover every n?"
+      "why": "Six successful checks are examples, and examples never cover every case. The claim is not proved, because a later case such as \\(n = 11\\) could fail. It is also not disproved, because no failing case has been found.",
+      "clue": "Did any of the six checks fail, and did they cover every \\(n\\)?"
     },
     "b": {
       "d": 3,
-      "q": "Claim: \"If n is a whole number above 1, then n² − 1 is composite.\" Which value of n is a counterexample?",
+      "q": "Claim: \"If \\(n\\) is a whole number above 1, then \\(n^{2} - 1\\) is composite.\" Which value of \\(n\\) is a counterexample?",
       "opts": [
-        "n = 2, giving 3, which is prime",
-        "n = 5, giving 24, which is composite",
-        "n = 7, giving 48, which is composite",
-        "n = 1, giving 0, which is not composite"
+        "\\(n = 2\\), giving 3, which is prime",
+        "\\(n = 5\\), giving 24, which is composite",
+        "\\(n = 7\\), giving 48, which is composite",
+        "\\(n = 1\\), giving 0, which is not composite"
       ],
-      "why": "For n = 2, n² − 1 = 3, which is prime, so the claim fails for a case that fits its conditions. The values n = 5 and n = 7 are examples that agree with the claim. n = 1 is not above 1, so it does not fit the claim's conditions and cannot be a counterexample.",
+      "why": "For \\(n = 2\\), \\(n^{2} - 1 = 3\\), which is prime, so the claim fails for a case that fits its conditions. The values \\(n = 5\\) and \\(n = 7\\) are examples that agree with the claim. \\(n = 1\\) is not above 1, so it does not fit the claim's conditions and cannot be a counterexample.",
       "clue": "A counterexample must meet the condition and make the result false."
     }
   },
@@ -11699,31 +12007,31 @@ MADE_BANKS.mat = {
     "card": [
       "A statement \"if P then Q\" has a contrapositive: \"if not Q then not P\". Swap the two parts, then negate both.",
       "A statement and its contrapositive are logically equivalent: both are true or both are false. The converse (swap only) and the inverse (negate only) are not equivalent to the original.",
-      "Use this method when P is hard to use directly, but not Q gives you something concrete to work with, such as a formula for n.",
-      "Example: prove that if n² is even, then the integer n is even. Knowing n² is even tells you little about n, so prove the contrapositive: if n is odd, then n² is odd. Let n = 2k + 1. Then n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd, so the original is true."
+      "Use this method when P is hard to use directly, but not Q gives you something concrete to work with, such as a formula for \\(n\\).",
+      "Example: prove that if \\(n^{2}\\) is even, then the integer \\(n\\) is even. Knowing \\(n^{2}\\) is even tells you little about \\(n\\), so prove the contrapositive: if \\(n\\) is odd, then \\(n^{2}\\) is odd. Let \\(n = 2k + 1\\). Then \\(n^{2} = 4k^{2} + 4k + 1 = 2(2k^{2} + 2k) + 1\\), which is odd, so the original is true."
     ],
     "remember": "To prove if P then Q, prove if not Q then not P. The two are equivalent.",
     "a": {
-      "q": "What is the contrapositive of \"if x is a multiple of 6, then x is even\"?",
+      "q": "What is the contrapositive of \"if \\(x\\) is a multiple of 6, then \\(x\\) is even\"?",
       "opts": [
-        "If x is not even, then x is not a multiple of 6",
-        "If x is even, then x is a multiple of 6",
-        "If x is not a multiple of 6, then x is not even",
-        "If x is not a multiple of 6, then x is even"
+        "If \\(x\\) is not even, then \\(x\\) is not a multiple of 6",
+        "If \\(x\\) is even, then \\(x\\) is a multiple of 6",
+        "If \\(x\\) is not a multiple of 6, then \\(x\\) is not even",
+        "If \\(x\\) is not a multiple of 6, then \\(x\\) is even"
       ],
       "why": "Swap the two parts and negate both: not even comes first, and not a multiple of 6 follows. The option that only swaps the parts is the converse, which is a different statement and need not be true.",
       "clue": "Swap the parts, then negate both."
     },
     "b": {
       "d": 3,
-      "q": "To prove \"if n² is odd, then n is odd\" by contrapositive, which statement should be proved?",
+      "q": "To prove \"if \\(n^{2}\\) is odd, then \\(n\\) is odd\" by contrapositive, which statement should be proved?",
       "opts": [
-        "If n is even, then n² is even",
-        "If n is odd, then n² is odd",
-        "If n² is even, then n is even",
-        "If n² is odd, then n is even"
+        "If \\(n\\) is even, then \\(n^{2}\\) is even",
+        "If \\(n\\) is odd, then \\(n^{2}\\) is odd",
+        "If \\(n^{2}\\) is even, then \\(n\\) is even",
+        "If \\(n^{2}\\) is odd, then \\(n\\) is even"
       ],
-      "why": "P is \"n² is odd\" and Q is \"n is odd\". The contrapositive, if not Q then not P, is: if n is even, then n² is even. The option \"if n² is even, then n is even\" is the inverse (if not P then not Q), which is not equivalent to the original.",
+      "why": "P is \"\\(n^{2}\\) is odd\" and Q is \"\\(n\\) is odd\". The contrapositive, if not Q then not P, is: if \\(n\\) is even, then \\(n^{2}\\) is even. The option \"if \\(n^{2}\\) is even, then \\(n\\) is even\" is the inverse (if not P then not Q), which is not equivalent to the original.",
       "clue": "Not odd means even. Put not Q first."
     }
   },
@@ -11732,7 +12040,7 @@ MADE_BANKS.mat = {
     "card": [
       "To prove a statement by contradiction, assume it is false. Then reason step by step until you reach something impossible.",
       "The impossible result might clash with a known fact, or with the assumption itself. Either way, the assumption cannot be true, so the original statement must be true.",
-      "Example: prove there is no greatest even number. Assume there is one, called N. Then N + 2 is even and larger than N. This contradicts N being the greatest.",
+      "Example: prove there is no greatest even number. Assume there is one, called N. Then \\(N + 2\\) is even and larger than N. This contradicts N being the greatest.",
       "A contradiction only shows the assumption is wrong if every step of the reasoning was valid."
     ],
     "remember": "Assume the opposite, reach something impossible, and the original statement is true.",
@@ -11749,15 +12057,15 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 2,
-      "q": "Sam assumes there is a greatest odd number, M. He notes that M + 2 is odd and greater than M. What does this show?",
+      "q": "Sam assumes there is a greatest odd number, M. He notes that \\(M + 2\\) is odd and greater than M. What does this show?",
       "opts": [
         "The assumption is false, so there is no greatest odd number",
         "The assumption is true, so M is the greatest odd number",
-        "M + 2 is the greatest odd number instead",
+        "\\(M + 2\\) is the greatest odd number instead",
         "Nothing, because one number cannot give a contradiction"
       ],
-      "why": "M + 2 is odd and larger than M, which contradicts M being the greatest. So the assumption is false and there is no greatest odd number. Choosing M + 2 as the greatest would just repeat the same problem.",
-      "clue": "Does M + 2 fit the assumption about M?"
+      "why": "\\(M + 2\\) is odd and larger than M, which contradicts M being the greatest. So the assumption is false and there is no greatest odd number. Choosing \\(M + 2\\) as the greatest would just repeat the same problem.",
+      "clue": "Does \\(M + 2\\) fit the assumption about M?"
     }
   },
   "mat-mathematical-induction": {
@@ -11895,26 +12203,26 @@ MADE_BANKS.mat = {
     ],
     "remember": "Swapping the parts of a true statement may make it false. If both directions are true, P and Q are equivalent.",
     "a": {
-      "q": "For a whole number n, what is the converse of \"If n is divisible by 10, then n is divisible by 5\"?",
+      "q": "For a whole number \\(n\\), what is the converse of \"If \\(n\\) is divisible by 10, then \\(n\\) is divisible by 5\"?",
       "opts": [
-        "If n is divisible by 5, then n is divisible by 10",
-        "If n is not divisible by 10, then n is not divisible by 5",
-        "If n is not divisible by 5, then n is not divisible by 10",
-        "If n is divisible by 10, then n is not divisible by 5"
+        "If \\(n\\) is divisible by 5, then \\(n\\) is divisible by 10",
+        "If \\(n\\) is not divisible by 10, then \\(n\\) is not divisible by 5",
+        "If \\(n\\) is not divisible by 5, then \\(n\\) is not divisible by 10",
+        "If \\(n\\) is divisible by 10, then \\(n\\) is not divisible by 5"
       ],
       "why": "The converse only swaps the two parts, so it starts with divisible by 5 and ends with divisible by 10. The options with \"not\" change the parts by negating them, which the converse never does.",
       "clue": "Swap the two parts without changing either one."
     },
     "b": {
       "d": 3,
-      "q": "Which statement about \"If x = 3, then x² = 9\" and its converse is correct?",
+      "q": "Which statement about \"If \\(x = 3\\), then \\(x^{2} = 9\\)\" and its converse is correct?",
       "opts": [
-        "The converse is false, because x = −3 gives x² = 9",
-        "The converse is true, so x = 3 and x² = 9 are equivalent",
-        "The converse is false, because x = 3 does not give x² = 9",
+        "The converse is false, because \\(x = -3\\) gives \\(x^{2} = 9\\)",
+        "The converse is true, so \\(x = 3\\) and \\(x^{2} = 9\\) are equivalent",
+        "The converse is false, because \\(x = 3\\) does not give \\(x^{2} = 9\\)",
         "The original is false, so the converse cannot be true"
       ],
-      "why": "The converse is \"If x² = 9, then x = 3\". Taking x = −3 gives x² = 9 but x ≠ 3, so this counterexample makes the converse false. The original is true but the converse is false, so P and Q are not equivalent.",
+      "why": "The converse is \"If \\(x^{2} = 9\\), then \\(x = 3\\)\". Taking \\(x = -3\\) gives \\(x^{2} = 9\\) but \\(x \\ne 3\\), so this counterexample makes the converse false. The original is true but the converse is false, so P and Q are not equivalent.",
       "clue": "Write the converse first, then test whether Q can be true while P is false."
     }
   },
@@ -11953,28 +12261,33 @@ MADE_BANKS.mat = {
   "mat-logic-gates-circuits": {
     "title": "Logic gates and circuits",
     "card": [
-      ["AND gate", "gives output 1 only when both inputs are 1. It matches the Boolean product A·B."],
-      ["OR gate", "gives output 1 when at least one input is 1. It matches the Boolean sum A + B."],
-      ["NOT gate", "has one input and flips it: 1 becomes 0 and 0 becomes 1. It matches the complement A'."],
-      "Gates joined together make a circuit whose output follows a Boolean expression. Simplifying the expression gives fewer gates. For example, A·B + A·B' = A·(B + B') = A·1 = A, since B + B' is always 1. So that circuit is just a wire from A."
+      ["AND gate", "gives output 1 only when both inputs are 1. It matches the Boolean product \\(A \\cdot B\\)."],
+      ["OR gate", "gives output 1 when at least one input is 1. It matches the Boolean sum \\(A + B\\)."],
+      ["NOT gate", "has one input and flips it: 1 becomes 0 and 0 becomes 1. It matches the complement \\(A'\\)."],
+      "Gates joined together make a circuit whose output follows a Boolean expression. Simplifying the expression gives fewer gates. For example, \\(A \\cdot B + A \\cdot B' = A \\cdot (B + B') = A \\cdot 1 = A\\), since \\(B + B'\\) is always 1. So that circuit is just a wire from \\(A\\)."
     ],
     "remember": "Each gate matches a Boolean operation, so a simpler expression means a simpler circuit.",
     "a": {
-      "q": "Inputs A and B go into an AND gate, and its output goes into a NOT gate. For which inputs is the final output 0?",
-      "opts": ["A = 1 and B = 1", "A = 1 and B = 0", "A = 0 and B = 1", "A = 0 and B = 0"],
-      "why": "The NOT gate gives 0 only when the AND gate gives 1, and the AND gate gives 1 only when both inputs are 1. Choosing A = 0 and B = 0 forgets the NOT gate: the AND output there is 0, which the NOT gate flips to 1.",
+      "q": "Inputs \\(A\\) and \\(B\\) go into an AND gate, and its output goes into a NOT gate. For which inputs is the final output 0?",
+      "opts": [
+        "\\(A = 1\\) and \\(B = 1\\)",
+        "\\(A = 1\\) and \\(B = 0\\)",
+        "\\(A = 0\\) and \\(B = 1\\)",
+        "\\(A = 0\\) and \\(B = 0\\)"
+      ],
+      "why": "The NOT gate gives 0 only when the AND gate gives 1, and the AND gate gives 1 only when both inputs are 1. Choosing \\(A = 0\\) and \\(B = 0\\) forgets the NOT gate: the AND output there is 0, which the NOT gate flips to 1.",
       "clue": "What must the AND gate give for the NOT gate to output 0?"
     },
     "b": {
       "d": 3,
-      "q": "A circuit has the output A·B + A'·B. How can the circuit be simplified?",
+      "q": "A circuit has the output \\(A \\cdot B + A' \\cdot B\\). How can the circuit be simplified?",
       "opts": [
-        "Replace it with a wire carrying B",
-        "Replace it with a wire carrying A",
-        "Replace it with a single AND gate on A and B",
-        "Replace it with a single OR gate on A and B"
+        "Replace it with a wire carrying \\(B\\)",
+        "Replace it with a wire carrying \\(A\\)",
+        "Replace it with a single AND gate on \\(A\\) and \\(B\\)",
+        "Replace it with a single OR gate on \\(A\\) and \\(B\\)"
       ],
-      "why": "Factor out B: (A + A')·B. A + A' is always 1, so the output is 1·B = B, a wire from B with no gates. An AND gate on A and B is wrong: when A = 0 and B = 1 it gives 0, but the original gives 0·1 + 1·1 = 1.",
+      "why": "Factor out \\(B\\): \\((A + A') \\cdot B\\). \\(A + A'\\) is always 1, so the output is \\(1 \\cdot B = B\\), a wire from \\(B\\) with no gates. An AND gate on \\(A\\) and \\(B\\) is wrong: when \\(A = 0\\) and \\(B = 1\\) it gives 0, but the original gives \\(0 \\cdot 1 + 1 \\cdot 1 = 1\\).",
       "clue": "Find the input that appears in both terms and factor it out."
     }
   },
@@ -11983,21 +12296,21 @@ MADE_BANKS.mat = {
     "card": [
       "Binary is base 2. It uses only the digits 0 and 1. Computers store numbers this way because a circuit can be off (0) or on (1).",
       "Place values go up in powers of 2 from the right: 1, 2, 4, 8, 16 and so on. Each place is worth double the one to its right.",
-      "To convert to base 10, add the place values where there is a 1. For example, 1011 = 8 + 2 + 1 = 11.",
-      "To convert from base 10, take away the largest power of 2 that fits, and repeat. For 13: 8 fits, leaving 5. 4 fits, leaving 1. 1 fits. So 13 = 8 + 4 + 1 = 1101."
+      "To convert to base 10, add the place values where there is a 1. For example, \\(1011 = 8 + 2 + 1 = 11\\).",
+      "To convert from base 10, take away the largest power of 2 that fits, and repeat. For 13: 8 fits, leaving 5. 4 fits, leaving 1. 1 fits. So \\(13 = 8 + 4 + 1 = 1101\\)."
     ],
     "remember": "Binary place values double from the right: 1, 2, 4, 8, 16. Add the place values that have a 1 to get base 10.",
     "a": {
       "q": "What is 10110 in base 10?",
       "opts": ["22", "26", "11", "20"],
-      "why": "The places with a 1 are 16, 4 and 2, and 16 + 4 + 2 = 22. The answer 20 comes from leaving out the 2. The answer 26 comes from using 8 instead of 4: 16 + 8 + 2 = 26.",
+      "why": "The places with a 1 are 16, 4 and 2, and \\(16 + 4 + 2 = 22\\). The answer 20 comes from leaving out the 2. The answer 26 comes from using 8 instead of 4: \\(16 + 8 + 2 = 26\\).",
       "clue": "Write the place values 16, 8, 4, 2, 1 under the digits."
     },
     "b": {
       "d": 2,
       "q": "What is 37 written in binary?",
       "opts": ["100101", "101001", "100011", "110101"],
-      "why": "32 fits in 37, leaving 5. Then 4 fits, leaving 1, and 1 fits. So 37 = 32 + 4 + 1, which is 100101. The option 101001 equals 32 + 8 + 1 = 41, so it has the 4 in the wrong place.",
+      "why": "32 fits in 37, leaving 5. Then 4 fits, leaving 1, and 1 fits. So \\(37 = 32 + 4 + 1\\), which is 100101. The option 101001 equals \\(32 + 8 + 1 = 41\\), so it has the 4 in the wrong place.",
       "clue": "Take away 32 first, then work with what is left."
     }
   },
@@ -12060,22 +12373,22 @@ MADE_BANKS.mat = {
     "title": "Recurrence relations in Specialist",
     "card": [
       "A recurrence relation gives each term using earlier terms. You also need starting values to get the sequence going.",
-      "A first-order relation uses only the previous term, such as t(n+1) = 2 × t(n). It needs one starting value.",
-      "A second-order relation uses the two previous terms, such as t(n+2) = t(n+1) + t(n). It needs two starting values.",
-      "The Fibonacci sequence has t1 = 1, t2 = 1 and t(n+2) = t(n+1) + t(n), giving 1, 1, 2, 3, 5, 8. Earlier terms can also be multiplied by a number, such as t(n+2) = 3 × t(n+1) − t(n)."
+      "A first-order relation uses only the previous term, such as \\(t(n+1) = 2 \\times t(n)\\). It needs one starting value.",
+      "A second-order relation uses the two previous terms, such as \\(t(n+2) = t(n+1) + t(n)\\). It needs two starting values.",
+      "The Fibonacci sequence has \\(t1 = 1\\), \\(t2 = 1\\) and \\(t(n+2) = t(n+1) + t(n)\\), giving 1, 1, 2, 3, 5, 8. Earlier terms can also be multiplied by a number, such as \\(t(n+2) = 3 \\times t(n+1) - t(n)\\)."
     ],
     "remember": "Start with the given values, then build each new term from the earlier ones, one step at a time.",
     "a": {
-      "q": "A sequence has t1 = 1, t2 = 3 and t(n+2) = t(n+1) + t(n). What is t6?",
+      "q": "A sequence has \\(t1 = 1\\), \\(t2 = 3\\) and \\(t(n+2) = t(n+1) + t(n)\\). What is t6?",
       "opts": ["18", "11", "29", "12"],
-      "why": "The terms are 1, 3, 4, 7, 11, 18, so t6 = 18. The value 11 is t5, which comes from stopping one term too soon.",
+      "why": "The terms are 1, 3, 4, 7, 11, 18, so \\(t6 = 18\\). The value 11 is t5, which comes from stopping one term too soon.",
       "clue": "Write out each term in order, adding the previous two."
     },
     "b": {
       "d": 3,
-      "q": "A sequence has t1 = 1, t2 = 2 and t(n+2) = 2 × t(n+1) + t(n). What is t5?",
+      "q": "A sequence has \\(t1 = 1\\), \\(t2 = 2\\) and \\(t(n+2) = 2 \\times t(n+1) + t(n)\\). What is t5?",
       "opts": ["29", "8", "16", "12"],
-      "why": "t3 = 2 × 2 + 1 = 5, t4 = 2 × 5 + 2 = 12 and t5 = 2 × 12 + 5 = 29. The value 12 is t4, and 8 comes from ignoring the 2 and adding the previous two terms.",
+      "why": "\\(t3 = 2 \\times 2 + 1 = 5\\), \\(t4 = 2 \\times 5 + 2 = 12\\) and \\(t5 = 2 \\times 12 + 5 = 29\\). The value 12 is t4, and 8 comes from ignoring the 2 and adding the previous two terms.",
       "clue": "The 2 multiplies the term just before, not the one before that."
     }
   },
@@ -12110,23 +12423,23 @@ MADE_BANKS.mat = {
   "mat-inclusion-exclusion-principle": {
     "title": "The inclusion-exclusion principle",
     "card": [
-      "To count items in A or B (or both), add the count of A and the count of B. Then subtract the count of items in both.",
-      "In symbols: |A or B| = |A| + |B| − |A and B|. Items in both were counted twice, so one count is taken away.",
-      "Example: of 30 students, 18 play netball, 12 swim and 5 do both. Students doing at least one: 18 + 12 − 5 = 25.",
+      "To count items in \\(A\\) or \\(B\\) (or both), add the count of \\(A\\) and the count of \\(B\\). Then subtract the count of items in both.",
+      "In symbols: \\(|A \\cup B| = |A| + |B| - |A \\cap B|\\). Items in both were counted twice, so one count is taken away.",
+      "Example: of 30 students, 18 play netball, 12 swim and 5 do both. Students doing at least one: \\(18 + 12 - 5 = 25\\).",
       "Sometimes the overlap must be worked out. Whole numbers divisible by both 2 and 3 are the multiples of 6."
     ],
     "remember": "Add the two groups, then subtract the overlap once so nothing is counted twice.",
     "a": {
       "q": "In a year group of 40, 24 study French, 15 study Italian and 6 study both. How many study French or Italian?",
       "opts": ["33", "39", "27", "18"],
-      "why": "24 + 15 − 6 = 33. Adding only 24 + 15 = 39 counts the 6 students in both subjects twice.",
+      "why": "\\(24 + 15 - 6 = 33\\). Adding only \\(24 + 15 = 39\\) counts the 6 students in both subjects twice.",
       "clue": "Students in both subjects appear in both counts."
     },
     "b": {
       "d": 3,
       "q": "How many whole numbers from 1 to 50 are divisible by 3 or by 5?",
       "opts": ["23", "26", "20", "13"],
-      "why": "There are 16 multiples of 3, 10 multiples of 5 and 3 multiples of 15, so 16 + 10 − 3 = 23. The option 26 adds without taking away the overlap.",
+      "why": "There are 16 multiples of 3, 10 multiples of 5 and 3 multiples of 15, so \\(16 + 10 - 3 = 23\\). The option 26 adds without taking away the overlap.",
       "clue": "A number divisible by both 3 and 5 is a multiple of 15."
     }
   },
@@ -12193,45 +12506,45 @@ MADE_BANKS.mat = {
     "card": [
       "A vector has a size and a direction. A scalar, such as 5 kg or 20 °C, has size only.",
       "A vector can be written as a column of two numbers. The top number is the move right (x) and the bottom number is the move up (y), so a negative number means left or down.",
-      "Here a column with 3 on top and −2 below is typed as [3, −2], with square brackets, so it is not confused with a point such as (3, −2). The same vector with i and j components is 3i − 2j, where i is one unit right and j is one unit up.",
-      "Example: the vector from A(1, 4) to B(5, 2) is end minus start. The x change is 5 − 1 = 4 and the y change is 2 − 4 = −2. So the vector is [4, −2], or 4i − 2j."
+      "Here a column with 3 on top and \\(-2\\) below is typed as \\([3, -2]\\), with square brackets, so it is not confused with a point such as \\((3, -2)\\). The same vector with \\(i\\) and \\(j\\) components is \\(3i - 2j\\), where \\(i\\) is one unit right and \\(j\\) is one unit up.",
+      "Example: the vector from A(1, 4) to B(5, 2) is end minus start. The \\(x\\) change is \\(5 - 1 = 4\\) and the \\(y\\) change is \\(2 - 4 = -2\\). So the vector is \\([4, -2]\\), or \\(4i - 2j\\)."
     ],
     "remember": "A vector has size and direction. To find the vector from A to B, take B minus A.",
     "a": {
-      "q": "Which vector is the same as the column vector [−4, 5]?",
-      "opts": ["−4i + 5j", "4i − 5j", "5i − 4j", "−5i + 4j"],
-      "why": "The top number is the i part and the bottom number is the j part, so [−4, 5] is −4i + 5j. The option 5i − 4j swaps the two parts, which is a common slip.",
-      "clue": "The top number goes with i."
+      "q": "Which vector is the same as the column vector \\([-4, 5]\\)?",
+      "opts": ["\\(-4i + 5j\\)", "\\(4i - 5j\\)", "\\(5i - 4j\\)", "\\(-5i + 4j\\)"],
+      "why": "The top number is the \\(i\\) part and the bottom number is the \\(j\\) part, so \\([-4, 5]\\) is \\(-4i + 5j\\). The option \\(5i - 4j\\) swaps the two parts, which is a common slip.",
+      "clue": "The top number goes with \\(i\\)."
     },
     "b": {
       "d": 3,
-      "q": "A drone in Geelong flies from P(6, −1) to Q(2, 3). What is the vector from P to Q?",
-      "opts": ["−4i + 4j", "4i − 4j", "8i + 2j", "−8i − 2j"],
-      "why": "Take end minus start: 2 − 6 = −4 and 3 − (−1) = 4, so the vector is −4i + 4j. The option 4i − 4j is start minus end, which gives the vector from Q to P.",
-      "clue": "Subtract the start point from the end point, and take care with the −1."
+      "q": "A drone in Geelong flies from \\(P(6, -1)\\) to Q(2, 3). What is the vector from P to Q?",
+      "opts": ["\\(-4i + 4j\\)", "\\(4i - 4j\\)", "\\(8i + 2j\\)", "\\(-8i - 2j\\)"],
+      "why": "Take end minus start: \\(2 - 6 = -4\\) and \\(3 - (-1) = 4\\), so the vector is \\(-4i + 4j\\). The option \\(4i - 4j\\) is start minus end, which gives the vector from Q to P.",
+      "clue": "Subtract the start point from the end point, and take care with the \\(-1\\)."
     }
   },
   "mat-adding-scaling-vectors": {
     "title": "Adding and scaling vectors",
     "card": [
-      "To add vectors, add the matching components. If a = 3i + 2j and b = i − 4j, then a + b = 4i − 2j. Drawn as arrows, you place the tail of b at the head of a (head to tail).",
-      "To subtract, subtract the matching components. a − b = (3 − 1)i + (2 − (−4))j = 2i + 6j. Take care with the sign when the second component is negative.",
-      "A scalar is an ordinary number. Multiplying a vector by a scalar k multiplies every component by k. So 2a = 6i + 4j.",
-      "If k > 1, the vector gets longer. If 0 < k < 1, it gets shorter. If k is negative, the vector points the opposite way. So −a = −3i − 2j."
+      "To add vectors, add the matching components. If \\(a = 3i + 2j\\) and \\(b = i - 4j\\), then \\(a + b = 4i - 2j\\). Drawn as arrows, you place the tail of \\(b\\) at the head of a (head to tail).",
+      "To subtract, subtract the matching components. \\(a - b = (3 - 1)i + (2 - (-4))j = 2i + 6j\\). Take care with the sign when the second component is negative.",
+      "A scalar is an ordinary number. Multiplying a vector by a scalar \\(k\\) multiplies every component by \\(k\\). So \\(2a = 6i + 4j\\).",
+      "If \\(k > 1\\), the vector gets longer. If \\(0 < k < 1\\), it gets shorter. If \\(k\\) is negative, the vector points the opposite way. So \\(-a = -3i - 2j\\)."
     ],
     "remember": "Add or scale each component. A negative scalar reverses the direction.",
     "a": {
-      "q": "Let p = 2i + 5j and q = 4i − j. What is p + q?",
-      "opts": ["6i + 4j", "−2i + 6j", "6i + 6j", "8i − 5j"],
-      "why": "Add the i components: 2 + 4 = 6. Add the j components: 5 + (−1) = 4. So p + q = 6i + 4j. The option 6i + 6j comes from ignoring the negative sign on the j component of q.",
-      "clue": "Add the i parts together and the j parts together."
+      "q": "Let \\(p = 2i + 5j\\) and \\(q = 4i - j\\). What is \\(p + q\\)?",
+      "opts": ["\\(6i + 4j\\)", "\\(-2i + 6j\\)", "\\(6i + 6j\\)", "\\(8i - 5j\\)"],
+      "why": "Add the \\(i\\) components: \\(2 + 4 = 6\\). Add the \\(j\\) components: \\(5 + (-1) = 4\\). So \\(p + q = 6i + 4j\\). The option \\(6i + 6j\\) comes from ignoring the negative sign on the \\(j\\) component of \\(q\\).",
+      "clue": "Add the \\(i\\) parts together and the \\(j\\) parts together."
     },
     "b": {
       "d": 3,
-      "q": "Let u = 3i − 2j and v = i + 4j. What is 2u − v?",
-      "opts": ["5i − 8j", "5i + 2j", "7i − 8j", "5i − 4j"],
-      "why": "First 2u = 6i − 4j. Then 2u − v = (6 − 1)i + (−4 − 4)j = 5i − 8j. The option 5i + 2j comes from two slips: leaving the j part of u as −2 instead of doubling it, then adding 4 instead of subtracting it, so −2 + 4 = 2.",
-      "clue": "Scale u first, then subtract each component of v."
+      "q": "Let \\(u = 3i - 2j\\) and \\(v = i + 4j\\). What is \\(2u - v\\)?",
+      "opts": ["\\(5i - 8j\\)", "\\(5i + 2j\\)", "\\(7i - 8j\\)", "\\(5i - 4j\\)"],
+      "why": "First \\(2u = 6i - 4j\\). Then \\(2u - v = (6 - 1)i + (-4 - 4)j = 5i - 8j\\). The option \\(5i + 2j\\) comes from two slips: leaving the \\(j\\) part of \\(u\\) as \\(-2\\) instead of doubling it, then adding 4 instead of subtracting it, so \\(-2 + 4 = 2\\).",
+      "clue": "Scale \\(u\\) first, then subtract each component of \\(v\\)."
     }
   },
   "mat-magnitude-unit-vectors": {
@@ -12552,25 +12865,25 @@ MADE_BANKS.mat = {
       "A counterexample is one case where a statement about all values fails. Finding a single counterexample proves the statement is false.",
       "Many examples that work do not prove a statement true. A statement is only proved true for every case by a proof.",
       "To disprove a claim, pick a value that makes the conditions true but the conclusion false, then check it by working it out.",
-      "Worked example: \"n² + n + 41 is prime for every whole number n.\" Try n = 41: 41² + 41 + 41 = 41 × 43 = 1763. This is not prime, so n = 41 is a counterexample."
+      "Worked example: \"\\(n^{2} + n + 41\\) is prime for every whole number \\(n\\).\" Try \\(n = 41\\): \\(41^{2} + 41 + 41 = 41 \\times 43 = 1763\\). This is not prime, so \\(n = 41\\) is a counterexample."
     ],
     "remember": "One failing case disproves a claim for all. Many working cases never prove it.",
     "a": {
-      "q": "Claim: \"n² > n for every whole number n.\" Which value of n is a counterexample?",
-      "opts": ["n = 1", "n = 2", "n = 3", "n = 10"],
-      "why": "For n = 1, n² = 1 and n = 1, so n² > n is false. For n = 2, 3 and 10 the claim holds (4 > 2, 9 > 3, 100 > 10), so they cannot disprove it.",
+      "q": "Claim: \"\\(n^{2} > n\\) for every whole number \\(n\\).\" Which value of \\(n\\) is a counterexample?",
+      "opts": ["\\(n = 1\\)", "\\(n = 2\\)", "\\(n = 3\\)", "\\(n = 10\\)"],
+      "why": "For \\(n = 1\\), \\(n^{2} = 1\\) and \\(n = 1\\), so \\(n^{2} > n\\) is false. For \\(n = 2\\), 3 and 10 the claim holds \\((4 > 2, 9 > 3, 100 > 10)\\), so they cannot disprove it.",
       "clue": "Which value makes both sides equal?"
     },
     "b": {
       "d": 3,
-      "q": "Mia claims that \"if n is a prime number, then n + 2 is also prime\". She checks n = 3, 5 and 11 and finds it works each time. What does this show?",
+      "q": "Mia claims that \"if \\(n\\) is a prime number, then \\(n + 2\\) is also prime\". She checks \\(n = 3\\), 5 and 11 and finds it works each time. What does this show?",
       "opts": [
-        "Nothing is proved, and n = 7 disproves the claim",
+        "Nothing is proved, and \\(n = 7\\) disproves the claim",
         "The claim is proved, because three cases work",
         "The claim is proved, because 3, 5 and 11 are all odd",
-        "Nothing is proved, and n = 11 disproves the claim"
+        "Nothing is proved, and \\(n = 11\\) disproves the claim"
       ],
-      "why": "For n = 3, 5 and 11 the claim holds, but working cases never prove it for all primes. For n = 7, n + 2 = 9 = 3 × 3, which is not prime, so n = 7 is a counterexample. For n = 11, n + 2 = 13 is prime, so n = 11 does not disprove it.",
+      "why": "For \\(n = 3\\), 5 and 11 the claim holds, but working cases never prove it for all primes. For \\(n = 7\\), \\(n + 2 = 9 = 3 \\times 3\\), which is not prime, so \\(n = 7\\) is a counterexample. For \\(n = 11\\), \\(n + 2 = 13\\) is prime, so \\(n = 11\\) does not disprove it.",
       "clue": "Test the next prime after 5."
     }
   },
@@ -12616,35 +12929,35 @@ MADE_BANKS.mat = {
       ],
       [
         "Cases",
-        "Split all possibilities into groups that cover every number, such as n even or n odd. Prove the statement in each group."
+        "Split all possibilities into groups that cover every number, such as \\(n\\) even or \\(n\\) odd. Prove the statement in each group."
       ],
       [
         "Example",
-        "Claim: if n² is even, then n is even. Contrapositive: if n is odd, then n² is odd. Let n = 2k + 1. Then n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd. So the claim is true."
+        "Claim: if \\(n^{2}\\) is even, then \\(n\\) is even. Contrapositive: if \\(n\\) is odd, then \\(n^{2}\\) is odd. Let \\(n = 2k + 1\\). Then \\(n^{2} = 4k^{2} + 4k + 1 = 2(2k^{2} + 2k) + 1\\), which is odd. So the claim is true."
       ]
     ],
     "remember": "Contrapositive turns \"if P then Q\" into \"if not Q then not P\". Contradiction assumes the statement is false and finds an impossibility.",
     "a": {
-      "q": "What is the contrapositive of \"if n is divisible by 6, then n is even\"?",
+      "q": "What is the contrapositive of \"if \\(n\\) is divisible by 6, then \\(n\\) is even\"?",
       "opts": [
-        "If n is not even, then n is not divisible by 6",
-        "If n is even, then n is divisible by 6",
-        "If n is not divisible by 6, then n is not even",
-        "If n is divisible by 6, then n is not even"
+        "If \\(n\\) is not even, then \\(n\\) is not divisible by 6",
+        "If \\(n\\) is even, then \\(n\\) is divisible by 6",
+        "If \\(n\\) is not divisible by 6, then \\(n\\) is not even",
+        "If \\(n\\) is divisible by 6, then \\(n\\) is not even"
       ],
-      "why": "The contrapositive swaps the two parts and negates both: if not Q then not P. Here that gives \"if n is not even, then n is not divisible by 6\". The option that only swaps the parts is the converse, which is not equivalent to the original.",
+      "why": "The contrapositive swaps the two parts and negates both: if not Q then not P. Here that gives \"if \\(n\\) is not even, then \\(n\\) is not divisible by 6\". The option that only swaps the parts is the converse, which is not equivalent to the original.",
       "clue": "Swap the two parts, then negate both."
     },
     "b": {
       "d": 3,
-      "q": "Dana wants to prove \"if n² is odd, then n is odd\". Which start gives a valid proof of this statement by contrapositive?",
+      "q": "Dana wants to prove \"if \\(n^{2}\\) is odd, then \\(n\\) is odd\". Which start gives a valid proof of this statement by contrapositive?",
       "opts": [
-        "Let n be even, so n = 2k, and show n² is even",
-        "Let n be odd, so n = 2k + 1, and show n² is odd",
-        "Let n² be odd, so n² = 2k + 1, and show n is odd",
-        "Let n be even, so n = 2k, and show n² is odd"
+        "Let \\(n\\) be even, so \\(n = 2k\\), and show \\(n^{2}\\) is even",
+        "Let \\(n\\) be odd, so \\(n = 2k + 1\\), and show \\(n^{2}\\) is odd",
+        "Let \\(n^{2}\\) be odd, so \\(n^{2} = 2k + 1\\), and show \\(n\\) is odd",
+        "Let \\(n\\) be even, so \\(n = 2k\\), and show \\(n^{2}\\) is odd"
       ],
-      "why": "The contrapositive is \"if n is not odd, then n² is not odd\", which means: if n is even, then n² is even. Starting with n = 2k leads to n² = 4k², which is even. Starting with n odd only proves the converse.",
+      "why": "The contrapositive is \"if \\(n\\) is not odd, then \\(n^{2}\\) is not odd\", which means: if \\(n\\) is even, then \\(n^{2}\\) is even. Starting with \\(n = 2k\\) leads to \\(n^{2} = 4k^{2}\\), which is even. Starting with \\(n\\) odd only proves the converse.",
       "clue": "Write \"not Q then not P\" first, using even in place of not odd."
     }
   },
@@ -12886,24 +13199,24 @@ MADE_BANKS.mat = {
   "mat-graphs-antiderivatives": {
     "title": "Graphs of antiderivatives",
     "card": [
-      "An antiderivative of f is a function F whose derivative is f. So F′(x) = f(x).",
-      "Any two antiderivatives of f differ by a constant. Their graphs are vertical shifts of each other, with the same shape.",
-      "Where f is positive, F is increasing. Where f is negative, F is decreasing. Where f = 0, F has a stationary point.",
-      "Example: if f is a straight line crossing the x-axis at x = 2 from below to above, F has a minimum at x = 2."
+      "An antiderivative of \\(f\\) is a function \\(F\\) whose derivative is \\(f\\). So \\(F'(x) = f(x)\\).",
+      "Any two antiderivatives of \\(f\\) differ by a constant. Their graphs are vertical shifts of each other, with the same shape.",
+      "Where \\(f\\) is positive, \\(F\\) is increasing. Where \\(f\\) is negative, \\(F\\) is decreasing. Where \\(f = 0\\), \\(F\\) has a stationary point.",
+      "Example: if \\(f\\) is a straight line crossing the x-axis at \\(x = 2\\) from below to above, \\(F\\) has a minimum at \\(x = 2\\)."
     ],
-    "remember": "The sign of f gives the slope of F, and F can be shifted up or down.",
+    "remember": "The sign of \\(f\\) gives the gradient of \\(F\\), and \\(F\\) can be shifted up or down.",
     "a": {
-      "q": "The graph of f is above the x-axis for 1 < x < 4. What does the graph of an antiderivative F do on that interval?",
+      "q": "The graph of \\(f\\) is above the x-axis for \\(1 < x < 4\\). What does the graph of an antiderivative \\(F\\) do on that interval?",
       "opts": ["It is increasing", "It is decreasing", "It is above the x-axis", "It is concave up"],
-      "why": "F′ = f, and f is positive there, so F is increasing. F being above the x-axis depends on the shift, so it is not guaranteed.",
-      "clue": "F′ = f, so the sign of f gives the slope of F."
+      "why": "\\(F' = f\\), and \\(f\\) is positive there, so \\(F\\) is increasing. \\(F\\) being above the x-axis depends on the shift, so it is not guaranteed.",
+      "clue": "\\(F' = f\\), so the sign of \\(f\\) gives the gradient of \\(F\\)."
     },
     "b": {
       "d": 3,
-      "q": "f crosses the x-axis at x = 3 from above to below. What does an antiderivative F have at x = 3?",
+      "q": "\\(f\\) crosses the x-axis at \\(x = 3\\) from above to below. What does an antiderivative \\(F\\) have at \\(x = 3\\)?",
       "opts": ["A local maximum", "A local minimum", "A point of inflection", "A vertical asymptote"],
-      "why": "F′ = f is positive before x = 3 and negative after, so F rises then falls. This gives a local maximum. A minimum would need f to go from negative to positive.",
-      "clue": "Check whether F rises or falls on each side of x = 3."
+      "why": "\\(F' = f\\) is positive before \\(x = 3\\) and negative after, so \\(F\\) rises then falls. This gives a local maximum. A minimum would need \\(f\\) to go from negative to positive.",
+      "clue": "Check whether \\(F\\) rises or falls on each side of \\(x = 3\\)."
     }
   },
   "mat-integrals-that-give-inverse": {
@@ -13669,35 +13982,38 @@ MADE_BANKS.mat = {
     "card": [
       [
         "p-value",
-        "The p-value is the probability of a sample result at least as extreme as the one observed, if H₀ is true."
+        "The p-value is the probability of a sample result at least as extreme as the one observed, if \\(H_{0}\\) is true."
       ],
-      ["Significance level", "The significance level, α, is chosen before the test. A common choice is 0.05."],
-      "If p < α, reject H₀. There is evidence for H₁. If p > α, do not reject H₀. The evidence is not strong enough.",
-      "Example: with α = 0.05, a p-value of 0.03 gives evidence to reject H₀. A p-value of 0.20 does not."
+      [
+        "Significance level",
+        "The significance level, \\(\\alpha\\), is chosen before the test. A common choice is 0.05."
+      ],
+      "If \\(p < \\alpha\\), reject \\(H_{0}\\). There is evidence for \\(H_{1}\\). If \\(p > \\alpha\\), do not reject \\(H_{0}\\). The evidence is not strong enough.",
+      "Example: with \\(\\alpha = 0.05\\), a p-value of 0.03 gives evidence to reject \\(H_{0}\\). A p-value of 0.20 does not."
     ],
-    "remember": "A p-value below the significance level is evidence to reject H₀.",
+    "remember": "A p-value below the significance level is evidence to reject \\(H_{0}\\).",
     "a": {
-      "q": "A test has α = 0.05 and gives a p-value of 0.02. What is the conclusion?",
+      "q": "A test has \\(\\alpha = 0.05\\) and gives a p-value of 0.02. What is the conclusion?",
       "opts": [
-        "Reject H₀, as 0.02 is less than 0.05",
-        "Do not reject H₀, as 0.02 is a small value",
-        "Reject H₁, as 0.02 is less than 0.05",
-        "Do not reject H₀, as 0.02 is not equal to 0.05"
+        "Reject \\(H_{0}\\), as 0.02 is less than 0.05",
+        "Do not reject \\(H_{0}\\), as 0.02 is a small value",
+        "Reject \\(H_{1}\\), as 0.02 is less than 0.05",
+        "Do not reject \\(H_{0}\\), as 0.02 is not equal to 0.05"
       ],
-      "why": "The p-value 0.02 is below α = 0.05, so there is evidence to reject H₀. A small p-value is a reason to reject H₀, not to keep it.",
-      "clue": "Compare the p-value with α. Which is smaller?"
+      "why": "The p-value 0.02 is below \\(\\alpha = 0.05\\), so there is evidence to reject \\(H_{0}\\). A small p-value is a reason to reject \\(H_{0}\\), not to keep it.",
+      "clue": "Compare the p-value with \\(\\alpha\\). Which is smaller?"
     },
     "b": {
       "d": 3,
-      "q": "Sam tests a new fertiliser at α = 0.01 and gets p = 0.03. What is the correct conclusion?",
+      "q": "Sam tests a new fertiliser at \\(\\alpha = 0.01\\) and gets \\(p = 0.03\\). What is the correct conclusion?",
       "opts": [
-        "Do not reject H₀, as 0.03 is greater than 0.01",
-        "Reject H₀, as 0.03 is less than 0.05",
-        "Reject H₀, as 0.03 is a small probability",
-        "Do not reject H₀, as 0.03 is less than 0.05"
+        "Do not reject \\(H_{0}\\), as 0.03 is greater than 0.01",
+        "Reject \\(H_{0}\\), as 0.03 is less than 0.05",
+        "Reject \\(H_{0}\\), as 0.03 is a small probability",
+        "Do not reject \\(H_{0}\\), as 0.03 is less than 0.05"
       ],
-      "why": "The level here is 0.01, not 0.05. Since 0.03 is above 0.01, the evidence is not strong enough to reject H₀. Using 0.05 would give the wrong conclusion.",
-      "clue": "Use the α given in the question, not the usual one."
+      "why": "The level here is 0.01, not 0.05. Since 0.03 is above 0.01, the evidence is not strong enough to reject \\(H_{0}\\). Using 0.05 would give the wrong conclusion.",
+      "clue": "Use the \\(\\alpha\\) given in the question, not the usual one."
     }
   },
   "mat-one-tail-two-tail": {
@@ -13795,7 +14111,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "A network of 6 towns has roads joining them. The towns have degrees 4, 3, 3, 2, 2 and 2. How many roads are in the network?",
       "opts": ["8", "16", "6", "32"],
-      "why": "The degrees add to 4 + 3 + 3 + 2 + 2 + 2 = 16. Each road adds 1 to the degree at both of its ends, so it is counted twice: 16 ÷ 2 = 8 roads. The answer 16 forgets to halve.",
+      "why": "The degrees add to \\(4 + 3 + 3 + 2 + 2 + 2 = 16\\). Each road adds 1 to the degree at both of its ends, so it is counted twice: \\(16 \\div 2 = 8\\) roads. The answer 16 forgets to halve.",
       "clue": "Each road is counted once at each end."
     }
   },
@@ -14006,7 +14322,7 @@ MADE_BANKS.mat = {
       "A seasonal index shows how one season (such as a quarter, month or day) compares with the average season. An index of 1 means that season is average.",
       "An index above 1 means the season is above average. An index of 1.2 means 20% above average. An index below 1 means below average, so 0.9 means 10% below average.",
       "Over a full cycle, the seasonal indices add up to the number of seasons. With 4 quarters, the indices add to 4. With 12 months, they add to 12.",
-      "Example: if the indices for three quarters are 1.3, 0.8 and 1.1, the fourth must be 4 − (1.3 + 0.8 + 1.1) = 0.8."
+      "Example: if the indices for three quarters are 1.3, 0.8 and 1.1, the fourth must be \\(4 - (1.3 + 0.8 + 1.1) = 0.8\\)."
     ],
     "remember": "Index 1 is average. Above 1 is above average. The indices add to the number of seasons.",
     "a": {
@@ -14017,14 +14333,14 @@ MADE_BANKS.mat = {
         "15% above the average day",
         "85% below the average day"
       ],
-      "why": "An index of 0.85 is 1 − 0.85 = 0.15 below 1, so sales are 15% below average. Saying 85% below confuses the index with the size of the gap.",
+      "why": "An index of 0.85 is \\(1 - 0.85 = 0.15\\) below 1, so sales are 15% below average. Saying 85% below confuses the index with the size of the gap.",
       "clue": "Compare 0.85 with 1, which is average."
     },
     "b": {
       "d": 3,
       "q": "A pool in Mildura has seasonal indices of 1.45 for summer, 0.85 for autumn and 1.05 for spring. What is the seasonal index for winter?",
       "opts": ["0.65", "0.35", "1.35", "1.00"],
-      "why": "Four seasons means the indices add to 4. The three given add to 3.35, so winter is 4 − 3.35 = 0.65. The answer 0.35 is how far winter sits below average, not the index itself.",
+      "why": "Four seasons means the indices add to 4. The three given add to 3.35, so winter is \\(4 - 3.35 = 0.65\\). The answer 0.35 is how far winter sits below average, not the index itself.",
       "clue": "How many seasons are there, and what must the indices add to?"
     }
   },
@@ -14196,235 +14512,241 @@ MADE_BANKS.mat = {
     "title": "Radians",
     "card": [
       "On a unit circle (radius 1), the angle at the centre in radians equals the arc length it cuts off. So an arc of length 1 gives an angle of 1 radian.",
-      "The unit circle has circumference 2π, so a full turn is 2π radians. This means π radians = 180°.",
+      "The unit circle has circumference \\(2\\pi\\), so a full turn is \\(2\\pi\\) radians. This means \\(\\pi \\text{ radians} = 180^{\\circ}\\).",
       [
         "Arc length",
-        "on a circle of radius r, arc length = radius × angle in radians, so l = rθ. Example: r = 4 and θ = π/3 give l = 4π/3."
+        "on a circle of radius \\(r\\), arc length is the radius times the angle in radians, so \\(l = r\\theta\\). Example: \\(r = 4\\) and \\(\\theta = \\frac{\\pi}{3}\\) give \\(l = \\frac{4\\pi}{3}\\)."
       ],
-      ["Change units", "degrees × π/180 gives radians. Radians × 180/π gives degrees. Example: 60° × π/180 = π/3."]
+      [
+        "Change units",
+        "multiplying degrees by \\(\\frac{\\pi}{180}\\) gives radians. Multiplying radians by \\(\\frac{180}{\\pi}\\) gives degrees. Example: \\(60^{\\circ} \\times \\frac{\\pi}{180} = \\frac{\\pi}{3}\\)."
+      ]
     ],
-    "remember": "π radians is 180°. Use π/180 to go to radians and 180/π to go to degrees.",
+    "remember": "\\(\\pi\\) radians is 180°. Use \\(\\frac{\\pi}{180}\\) to go to radians and \\(\\frac{180}{\\pi}\\) to go to degrees.",
     "a": {
       "q": "Convert 150° to radians.",
-      "opts": ["5π/6", "6π/5", "5π/3", "3π/4"],
-      "why": "150 × π/180 = 150π/180 = 5π/6. The option 6π/5 turns the fraction upside down, which would come from using 180/150 instead of 150/180.",
-      "clue": "Multiply by π/180, then simplify the fraction."
+      "opts": ["\\(\\frac{5\\pi}{6}\\)", "\\(\\frac{6\\pi}{5}\\)", "\\(\\frac{5\\pi}{3}\\)", "\\(\\frac{3\\pi}{4}\\)"],
+      "why": "\\(150 \\times \\frac{\\pi}{180} = \\frac{150\\pi}{180} = \\frac{5\\pi}{6}\\). The option \\(\\frac{6\\pi}{5}\\) turns the fraction upside down, which would come from using \\(\\frac{180}{150}\\) instead of \\(\\frac{150}{180}\\).",
+      "clue": "Multiply by \\(\\frac{\\pi}{180}\\), then simplify the fraction."
     },
     "b": {
       "d": 2,
-      "q": "A dial is turned through 5π/4 radians. What is this angle in degrees?",
+      "q": "A dial is turned through \\(\\frac{5\\pi}{4}\\) radians. What is this angle in degrees?",
       "opts": ["225°", "240°", "150°", "200°"],
-      "why": "5π/4 × 180/π = 5 × 45 = 225°. The option 150° comes from using 5π/6, a different fraction, and 240° is 4π/3, so neither fits 5π/4.",
-      "clue": "Multiply by 180/π so that π cancels."
+      "why": "\\(\\frac{5\\pi}{4} \\times \\frac{180}{\\pi} = 5 \\times 45 = 225^{\\circ}\\). The option 150° comes from using \\(\\frac{5\\pi}{6}\\), a different fraction, and 240° is \\(\\frac{4\\pi}{3}\\), so neither fits \\(\\frac{5\\pi}{4}\\).",
+      "clue": "Multiply by \\(\\frac{180}{\\pi}\\) so that \\(\\pi\\) cancels."
     }
   },
   "mat-exact-values-2": {
     "title": "Exact values",
     "card": [
       [
-        "π/4 triangle",
-        "Half a square with side 1 has angles π/4, π/4 and π/2. By Pythagoras the hypotenuse is √2. So sin(π/4) = 1/√2, cos(π/4) = 1/√2 and tan(π/4) = 1."
+        "\\(\\frac{\\pi}{4}\\) triangle",
+        "Half a square with side 1 has angles \\(\\frac{\\pi}{4}\\), \\(\\frac{\\pi}{4}\\) and \\(\\frac{\\pi}{2}\\). By Pythagoras the hypotenuse is \\(\\sqrt{2}\\). So \\(\\sin\\left(\\frac{\\pi}{4}\\right) = \\frac{1}{\\sqrt{2}}\\), \\(\\cos\\left(\\frac{\\pi}{4}\\right) = \\frac{1}{\\sqrt{2}}\\) and \\(\\tan\\left(\\frac{\\pi}{4}\\right) = 1\\)."
       ],
       [
-        "π/6 and π/3 triangle",
-        "Half an equilateral triangle with side 2 has angles π/6, π/3 and π/2. Its short side is 1 and its other side is √3, by Pythagoras."
+        "\\(\\frac{\\pi}{6}\\) and \\(\\frac{\\pi}{3}\\) triangle",
+        "Half an equilateral triangle with side 2 has angles \\(\\frac{\\pi}{6}\\), \\(\\frac{\\pi}{3}\\) and \\(\\frac{\\pi}{2}\\). Its short side is 1 and its other side is \\(\\sqrt{3}\\), by Pythagoras."
       ],
       [
         "Reading it off",
-        "Opposite π/6 is 1, so sin(π/6) = 1/2, cos(π/6) = √3/2 and tan(π/6) = 1/√3. Opposite π/3 is √3, so sin(π/3) = √3/2, cos(π/3) = 1/2 and tan(π/3) = √3."
+        "Opposite \\(\\frac{\\pi}{6}\\) is 1, so \\(\\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\), \\(\\cos\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2}\\) and \\(\\tan\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{\\sqrt{3}}\\). Opposite \\(\\frac{\\pi}{3}\\) is \\(\\sqrt{3}\\), so \\(\\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}\\), \\(\\cos\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}\\) and \\(\\tan\\left(\\frac{\\pi}{3}\\right) = \\sqrt{3}\\)."
       ],
-      "Leave answers as surds, not decimals. Example: sin(π/3) × cos(π/6) = (√3/2) × (√3/2) = 3/4."
+      "Leave answers as surds, not decimals. Example: \\(\\sin\\left(\\frac{\\pi}{3}\\right) \\times \\cos\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2} \\times \\frac{\\sqrt{3}}{2} = \\frac{3}{4}\\)."
     ],
     "remember": "Draw the special triangle, then read the ratio from its sides.",
     "a": {
-      "q": "Find the exact value of cos(π/3).",
-      "opts": ["1/2", "√3/2", "1/√2", "√3"],
-      "why": "In the π/6, π/3, π/2 triangle, the side next to π/3 is 1 and the hypotenuse is 2, so cos(π/3) = 1/2. The value √3/2 is tempting, but that is sin(π/3) and cos(π/6).",
-      "clue": "Which side is next to the angle π/3?"
+      "q": "Find the exact value of \\(\\cos\\left(\\frac{\\pi}{3}\\right)\\).",
+      "opts": ["\\(\\frac{1}{2}\\)", "\\(\\frac{\\sqrt{3}}{2}\\)", "\\(\\frac{1}{\\sqrt{2}}\\)", "\\(\\sqrt{3}\\)"],
+      "why": "In the \\(\\frac{\\pi}{6}\\), \\(\\frac{\\pi}{3}\\), \\(\\frac{\\pi}{2}\\) triangle, the side next to \\(\\frac{\\pi}{3}\\) is 1 and the hypotenuse is 2, so \\(\\cos\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}\\). The value \\(\\frac{\\sqrt{3}}{2}\\) is tempting, but that is \\(\\sin\\left(\\frac{\\pi}{3}\\right)\\) and \\(\\cos\\left(\\frac{\\pi}{6}\\right)\\).",
+      "clue": "Which side is next to the angle \\(\\frac{\\pi}{3}\\)?"
     },
     "b": {
       "d": 3,
-      "q": "Evaluate sin(π/6) + tan(π/4) exactly.",
-      "opts": ["3/2", "1/2", "√3/2 + 1", "1 + 1/√2"],
-      "why": "sin(π/6) = 1/2 and tan(π/4) = 1, so the sum is 1/2 + 1 = 3/2. The option 1/2 is tempting, but it leaves out the tan(π/4) term.",
+      "q": "Evaluate \\(\\sin\\left(\\frac{\\pi}{6}\\right) + \\tan\\left(\\frac{\\pi}{4}\\right)\\) exactly.",
+      "opts": ["\\(\\frac{3}{2}\\)", "\\(\\frac{1}{2}\\)", "\\(\\frac{\\sqrt{3}}{2} + 1\\)", "\\(1 + \\frac{1}{\\sqrt{2}}\\)"],
+      "why": "\\(\\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\) and \\(\\tan\\left(\\frac{\\pi}{4}\\right) = 1\\), so the sum is \\(\\frac{1}{2} + 1 = \\frac{3}{2}\\). The option \\(\\frac{1}{2}\\) is tempting, but it leaves out the \\(\\tan\\left(\\frac{\\pi}{4}\\right)\\) term.",
       "clue": "Find each value from its triangle, then add."
     }
   },
   "mat-symmetry-periodicity": {
     "title": "Symmetry and periodicity",
     "card": [
-      "Sine and cosine repeat every 2π, so sin(θ + 2π) = sin θ and cos(θ + 2π) = cos θ. Tangent repeats every π, so tan(θ + π) = tan θ.",
-      "Reflecting an angle in the y-axis gives π − θ: sin(π − θ) = sin θ and cos(π − θ) = −cos θ.",
-      "Going half a turn round gives π + θ: sin(π + θ) = −sin θ and cos(π + θ) = −cos θ. Reflecting in the x-axis gives −θ or 2π − θ: sin(−θ) = −sin θ and cos(−θ) = cos θ.",
-      "Worked example: sin(5π/6) = sin(π − π/6) = sin(π/6) = 1/2. The angle 5π/6 is in quadrant 2, where sine is positive."
+      "Sine and cosine repeat every \\(2\\pi\\), so \\(\\sin(\\theta + 2\\pi) = \\sin \\theta\\) and \\(\\cos(\\theta + 2\\pi) = \\cos \\theta\\). Tangent repeats every \\(\\pi\\), so \\(\\tan(\\theta + \\pi) = \\tan \\theta\\).",
+      "Reflecting an angle in the y-axis gives \\(\\pi - \\theta\\): \\(\\sin(\\pi - \\theta) = \\sin \\theta\\) and \\(\\cos(\\pi - \\theta) = -\\cos \\theta\\).",
+      "Going half a turn round gives \\(\\pi + \\theta\\): \\(\\sin(\\pi + \\theta) = -\\sin \\theta\\) and \\(\\cos(\\pi + \\theta) = -\\cos \\theta\\). Reflecting in the x-axis gives \\(-\\theta\\) or \\(2\\pi - \\theta\\): \\(\\sin(-\\theta) = -\\sin \\theta\\) and \\(\\cos(-\\theta) = \\cos \\theta\\).",
+      "Worked example: \\(\\sin\\left(\\frac{5\\pi}{6}\\right) = \\sin\\left(\\pi - \\frac{\\pi}{6}\\right) = \\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\). The angle \\(\\frac{5\\pi}{6}\\) is in quadrant 2, where sine is positive."
     ],
     "remember": "Find the matching angle in quadrant 1, then fix the sign using the quadrant.",
     "a": {
-      "q": "Which expression is equal to cos(π − θ)?",
-      "opts": ["−cos θ", "cos θ", "−sin θ", "sin θ"],
-      "why": "Reflecting in the y-axis keeps the height but flips the x-coordinate, so cosine changes sign: cos(π − θ) = −cos θ. The option cos θ is tempting, but that is the rule for sine, which keeps its sign.",
+      "q": "Which expression is equal to \\(\\cos(\\pi - \\theta)\\)?",
+      "opts": ["\\(-\\cos \\theta\\)", "\\(\\cos \\theta\\)", "\\(-\\sin \\theta\\)", "\\(\\sin \\theta\\)"],
+      "why": "Reflecting in the y-axis keeps the height but flips the x-coordinate, so cosine changes sign: \\(\\cos(\\pi - \\theta) = -\\cos \\theta\\). The option \\(\\cos \\theta\\) is tempting, but that is the rule for sine, which keeps its sign.",
       "clue": "Reflecting in the y-axis changes the x-coordinate."
     },
     "b": {
       "d": 3,
-      "q": "What is the value of cos(4π/3)?",
-      "opts": ["−1/2", "1/2", "−√3/2", "√3/2"],
-      "why": "4π/3 = π + π/3, which is in quadrant 3, where cosine is negative. So cos(4π/3) = −cos(π/3) = −1/2. The option −√3/2 is tempting, but it is the value of sin(4π/3) and cos(7π/6), not of cos(4π/3).",
-      "clue": "Write 4π/3 as π + π/3, then check the quadrant."
+      "q": "What is the value of \\(\\cos\\left(\\frac{4\\pi}{3}\\right)\\)?",
+      "opts": ["\\(-\\frac{1}{2}\\)", "\\(\\frac{1}{2}\\)", "\\(-\\frac{\\sqrt{3}}{2}\\)", "\\(\\frac{\\sqrt{3}}{2}\\)"],
+      "why": "\\(\\frac{4\\pi}{3} = \\pi + \\frac{\\pi}{3}\\), which is in quadrant 3, where cosine is negative. So \\(\\cos\\left(\\frac{4\\pi}{3}\\right) = -\\cos\\left(\\frac{\\pi}{3}\\right) = -\\frac{1}{2}\\). The option \\(-\\frac{\\sqrt{3}}{2}\\) is tempting, but it is the value of \\(\\sin\\left(\\frac{4\\pi}{3}\\right)\\) and \\(\\cos\\left(\\frac{7\\pi}{6}\\right)\\), not of \\(\\cos\\left(\\frac{4\\pi}{3}\\right)\\).",
+      "clue": "Write \\(\\frac{4\\pi}{3}\\) as \\(\\pi + \\frac{\\pi}{3}\\), then check the quadrant."
     }
   },
   "mat-antiderivatives-unit-3": {
     "title": "Antiderivatives",
     "card": [
-      "An antiderivative of f(x) is a function whose derivative is f(x). A constant disappears when we differentiate, so the general antiderivative, written ∫f(x) dx, includes + c, where c is any constant.",
+      "An antiderivative of \\(f(x)\\) is a function whose derivative is \\(f(x)\\). A constant disappears when we differentiate, so the general antiderivative, written \\(\\int f(x) \\, dx\\), includes \\(+ c\\), where \\(c\\) is any constant.",
       [
         "Powers",
-        "∫xⁿ dx = xⁿ⁺¹/(n + 1) + c, for n ≠ −1. Add 1 to the power, then divide by the new power. For 1/x, ∫1/x dx = loge|x| + c."
+        "\\(\\int x^{n} \\, dx = \\frac{x^{n + 1}}{n + 1} + c\\), for \\(n \\ne -1\\). Add 1 to the power, then divide by the new power. For \\(\\frac{1}{x}\\), \\(\\int \\frac{1}{x} \\, dx = \\log_{e} |x| + c\\)."
       ],
-      ["Exponential", "∫e^(kx) dx = (1/k)e^(kx) + c, for k ≠ 0. Divide by the number k in front of x."],
+      [
+        "Exponential",
+        "\\(\\int e^{kx} \\, dx = \\frac{1}{k} e^{kx} + c\\), for \\(k \\ne 0\\). Divide by the number \\(k\\) in front of \\(x\\)."
+      ],
       [
         "Trig",
-        "∫sin(kx) dx = −(1/k)cos(kx) + c and ∫cos(kx) dx = (1/k)sin(kx) + c. Example: ∫cos(2x) dx = (1/2)sin(2x) + c."
+        "\\(\\int \\sin(kx) \\, dx = -\\frac{1}{k} \\cos(kx) + c\\) and \\(\\int \\cos(kx) \\, dx = \\frac{1}{k} \\sin(kx) + c\\). Example: \\(\\int \\cos(2x) \\, dx = \\frac{1}{2} \\sin(2x) + c\\)."
       ]
     ],
-    "remember": "Raise the power and divide by the new power, or divide by k. The general antiderivative adds + c.",
+    "remember": "Raise the power and divide by the new power, or divide by \\(k\\). The general antiderivative adds \\(+ c\\).",
     "a": {
-      "q": "What is ∫6x² dx?",
-      "opts": ["2x³ + c", "3x³ + c", "12x + c", "6x³ + c"],
-      "why": "Add 1 to the power to get x³, then divide by the new power 3: 6x³/3 = 2x³. The option 12x comes from differentiating instead: multiplying by the power and lowering it by 1. The option 3x³ divides by the old power 2, and 6x³ forgets to divide at all.",
+      "q": "What is \\(\\int 6x^{2} \\, dx\\)?",
+      "opts": ["\\(2x^{3} + c\\)", "\\(3x^{3} + c\\)", "\\(12x + c\\)", "\\(6x^{3} + c\\)"],
+      "why": "Add 1 to the power to get \\(x^{3}\\), then divide by the new power 3: \\(\\frac{6x^{3}}{3} = 2x^{3}\\). The option \\(12x\\) comes from differentiating instead: multiplying by the power and lowering it by 1. The option \\(3x^{3}\\) divides by the old power 2, and \\(6x^{3}\\) forgets to divide at all.",
       "clue": "Raise the power by 1, then divide by the new power."
     },
     "b": {
       "d": 3,
-      "q": "What is ∫(e^(3x) + sin(2x)) dx?",
+      "q": "What is \\(\\int (e^{3x} + \\sin(2x)) \\, dx\\)?",
       "opts": [
-        "(1/3)e^(3x) − (1/2)cos(2x) + c",
-        "(1/3)e^(3x) + (1/2)cos(2x) + c",
-        "3e^(3x) − 2cos(2x) + c",
-        "(1/3)e^(3x) − 2cos(2x) + c"
+        "\\(\\frac{1}{3} e^{3x} - \\frac{1}{2} \\cos(2x) + c\\)",
+        "\\(\\frac{1}{3} e^{3x} + \\frac{1}{2} \\cos(2x) + c\\)",
+        "\\(3e^{3x} - 2\\cos(2x) + c\\)",
+        "\\(\\frac{1}{3} e^{3x} - 2\\cos(2x) + c\\)"
       ],
-      "why": "Integrate each term. e^(3x) gives (1/3)e^(3x), and sin(2x) gives −(1/2)cos(2x). The sign is negative because the derivative of cos is −sin, and multiplying by k instead of dividing is a common slip.",
-      "clue": "Divide by k in each term, and check the sign for sin."
+      "why": "Integrate each term. \\(e^{3x}\\) gives \\(\\frac{1}{3} e^{3x}\\), and \\(\\sin(2x)\\) gives \\(-\\frac{1}{2} \\cos(2x)\\). The sign is negative because the derivative of \\(\\cos x\\) is \\(-\\sin x\\), and multiplying by \\(k\\) instead of dividing is a common slip.",
+      "clue": "Divide by \\(k\\) in each term, and check the sign for \\(\\sin\\)."
     }
   },
   "mat-definite-integrals": {
     "title": "Definite integrals",
     "card": [
-      "Split the area under y = f(x) from x = a to x = b into thin strips of height f(x) and width Δx. The definite integral is the limit of the sum of their areas as the strips get thinner.",
-      "It is written ∫ from a to b of f(x) dx and gives a number, not a function. Area above the x-axis counts as positive, and area below the axis counts as negative.",
-      "Splitting: for c between a and b, ∫ from a to b of f(x) dx = ∫ from a to c of f(x) dx + ∫ from c to b of f(x) dx. Example: if ∫ from 0 to 2 of f(x) dx = 5 and ∫ from 2 to 6 of f(x) dx = 3, then ∫ from 0 to 6 of f(x) dx = 8.",
-      "Swapping the limits reverses the sign: ∫ from b to a of f(x) dx = −∫ from a to b of f(x) dx. Example: if ∫ from 0 to 6 of f(x) dx = 8, then ∫ from 6 to 0 of f(x) dx = −8."
+      "Split the area under \\(y = f(x)\\) from \\(x = a\\) to \\(x = b\\) into thin strips of height \\(f(x)\\) and width \\(\\Delta x\\). The definite integral is the limit of the sum of their areas as the strips get thinner.",
+      "It is written \\(\\int_{a}^{b} f(x) \\, dx\\) and gives a number, not a function. Area above the x-axis counts as positive, and area below the axis counts as negative.",
+      "Splitting: for \\(c\\) between \\(a\\) and \\(b\\), \\(\\int_{a}^{b} f(x) \\, dx = \\int_{a}^{c} f(x) \\, dx + \\int_{c}^{b} f(x) \\, dx\\). Example: if \\(\\int_{0}^{2} f(x) \\, dx = 5\\) and \\(\\int_{2}^{6} f(x) \\, dx = 3\\), then \\(\\int_{0}^{6} f(x) \\, dx = 8\\).",
+      "Swapping the limits reverses the sign: \\(\\int_{b}^{a} f(x) \\, dx = -\\int_{a}^{b} f(x) \\, dx\\). Example: if \\(\\int_{0}^{6} f(x) \\, dx = 8\\), then \\(\\int_{6}^{0} f(x) \\, dx = -8\\)."
     ],
     "remember": "Join pieces across an interval by adding them with their signs. Swap the limits and the sign flips.",
     "a": {
-      "q": "Given ∫ from 1 to 4 of f(x) dx = 7 and ∫ from 4 to 9 of f(x) dx = −2, what is ∫ from 1 to 9 of f(x) dx?",
-      "opts": ["5", "9", "−5", "14"],
-      "why": "Splitting at x = 4 gives 7 + (−2) = 5. The answer 9 comes from ignoring the negative sign, which treats the negative integral as positive.",
+      "q": "Given \\(\\int_{1}^{4} f(x) \\, dx = 7\\) and \\(\\int_{4}^{9} f(x) \\, dx = -2\\), what is \\(\\int_{1}^{9} f(x) \\, dx\\)?",
+      "opts": ["5", "9", "\\(-5\\)", "14"],
+      "why": "Splitting at \\(x = 4\\) gives \\(7 + (-2) = 5\\). The answer 9 comes from ignoring the negative sign, which treats the negative integral as positive.",
       "clue": "Add the two pieces, keeping their signs."
     },
     "b": {
       "d": 3,
-      "q": "Given ∫ from 2 to 8 of f(x) dx = 10 and ∫ from 2 to 5 of f(x) dx = 6, what is ∫ from 8 to 5 of f(x) dx?",
-      "opts": ["−4", "4", "16", "−16"],
-      "why": "Splitting at 5 gives 10 = 6 + ∫ from 5 to 8, so ∫ from 5 to 8 of f(x) dx = 4. The required integral runs from 8 to 5, so the limits are swapped and the sign reverses to −4. The answer 4 forgets this swap.",
+      "q": "Given \\(\\int_{2}^{8} f(x) \\, dx = 10\\) and \\(\\int_{2}^{5} f(x) \\, dx = 6\\), what is \\(\\int_{8}^{5} f(x) \\, dx\\)?",
+      "opts": ["\\(-4\\)", "4", "16", "\\(-16\\)"],
+      "why": "Splitting at 5 gives \\(10 = 6 + \\int_{5}^{8} f(x) \\, dx\\), so \\(\\int_{5}^{8} f(x) \\, dx = 4\\). The required integral runs from 8 to 5, so the limits are swapped and the sign reverses to \\(-4\\). The answer 4 forgets this swap.",
       "clue": "Find the piece from 5 to 8 first, then check the direction of the limits."
     }
   },
   "mat-fundamental-theorem-calculus": {
     "title": "The fundamental theorem of calculus",
     "card": [
-      "Differentiating and integrating undo each other. If F′(x) = f(x), then F is an antiderivative of f.",
-      "To find a definite integral, find an antiderivative F, then work out F(b) − F(a). The constant of integration cancels, so leave it out.",
-      "Worked example: ∫ from 1 to 3 of 2x dx. An antiderivative of 2x is x². So the integral = 3² − 1² = 9 − 1 = 8.",
-      "The same rule works the other way. The derivative of ∫ from a to x of f(t) dt is f(x). Where f is positive, the integral is the area under the curve."
+      "Differentiating and integrating undo each other. If \\(F'(x) = f(x)\\), then \\(F\\) is an antiderivative of \\(f\\).",
+      "To find a definite integral, find an antiderivative \\(F\\), then work out \\(F(b) - F(a)\\). The constant of integration cancels, so leave it out.",
+      "Worked example: \\(\\int_{1}^{3} 2x \\, dx\\). An antiderivative of \\(2x\\) is \\(x^{2}\\). So the integral is \\(3^{2} - 1^{2} = 9 - 1 = 8\\).",
+      "The same rule works the other way. The derivative of \\(\\int_{a}^{x} f(t) \\, dt\\) is \\(f(x)\\). Where \\(f\\) is positive, the integral is the area under the curve."
     ],
-    "remember": "Integral from a to b of f = F(b) − F(a), where F′ = f.",
+    "remember": "\\(\\int_{a}^{b} f(x) \\, dx = F(b) - F(a)\\), where \\(F' = f\\).",
     "a": {
-      "q": "What is the value of ∫ from 0 to 2 of 3x² dx?",
+      "q": "What is the value of \\(\\int_{0}^{2} 3x^{2} \\, dx\\)?",
       "opts": ["8", "6", "12", "4"],
-      "why": "An antiderivative of 3x² is x³. The integral is 2³ − 0³ = 8. Using the value 3x² = 12 at x = 2 is the tempting mistake, because that is the function's value, not F(2) − F(0).",
-      "clue": "Find F first, then use its values at both limits."
+      "why": "An antiderivative of \\(3x^{2}\\) is \\(x^{3}\\). The integral is \\(2^{3} - 0^{3} = 8\\). Using the value \\(3x^{2} = 12\\) at \\(x = 2\\) is the tempting mistake, because that is the function's value, not \\(F(2) - F(0)\\).",
+      "clue": "Find \\(F\\) first, then use its values at both limits."
     },
     "b": {
       "d": 2,
-      "q": "Mia finds that an antiderivative of 2x + 1 is F(x) = x² + x. What is ∫ from 1 to 4 of (2x + 1) dx?",
-      "opts": ["18", "22", "20", "−18"],
-      "why": "F(4) = 16 + 4 = 20 and F(1) = 1 + 1 = 2, so the integral is 20 − 2 = 18. Adding the two values gives 22, and using F(4) alone gives 20. Working out F(1) − F(4) gives −18, but the rule is F(b) − F(a).",
+      "q": "Mia finds that an antiderivative of \\(2x + 1\\) is \\(F(x) = x^{2} + x\\). What is \\(\\int_{1}^{4} (2x + 1) \\, dx\\)?",
+      "opts": ["18", "22", "20", "\\(-18\\)"],
+      "why": "\\(F(4) = 16 + 4 = 20\\) and \\(F(1) = 1 + 1 = 2\\), so the integral is \\(20 - 2 = 18\\). Adding the two values gives 22, and using \\(F(4)\\) alone gives 20. Working out \\(F(1) - F(4)\\) gives \\(-18\\), but the rule is \\(F(b) - F(a)\\).",
       "clue": "Both limits are needed, and the order matters."
     }
   },
   "mat-finding-function-from-rate": {
     "title": "Finding a function from its rate of change",
     "card": [
-      "If you know f'(x), the rate of change, you can find f(x) by antidifferentiating. The answer has a constant: f(x) = ∫f'(x) dx + c.",
-      "One rate fits many functions, because each value of c gives a different curve. A known point on the curve, called a boundary condition, fixes c.",
-      "Substitute the point into f(x) and solve for c. Then write the full function with c in place.",
-      "Example: f'(x) = 6x² − 2 and f(1) = 5. Then f(x) = 2x³ − 2x + c. Putting in x = 1: 2 − 2 + c = 5, so c = 5 and f(x) = 2x³ − 2x + 5."
+      "If you know \\(f'(x)\\), the rate of change, you can find \\(f(x)\\) by antidifferentiating. The answer has a constant: \\(f(x) = \\int f'(x) \\, dx + c\\).",
+      "One rate fits many functions, because each value of \\(c\\) gives a different curve. A known point on the curve, called a boundary condition, fixes \\(c\\).",
+      "Substitute the point into \\(f(x)\\) and solve for \\(c\\). Then write the full function with \\(c\\) in place.",
+      "Example: \\(f'(x) = 6x^{2} - 2\\) and \\(f(1) = 5\\). Then \\(f(x) = 2x^{3} - 2x + c\\). Putting in \\(x = 1\\): \\(2 - 2 + c = 5\\), so \\(c = 5\\) and \\(f(x) = 2x^{3} - 2x + 5\\)."
     ],
-    "remember": "Antidifferentiate the rate, then use the known point to find c.",
+    "remember": "Antidifferentiate the rate, then use the known point to find \\(c\\).",
     "a": {
-      "q": "f'(x) = 4x − 3 and f(2) = 1. What is f(x)?",
-      "opts": ["2x² − 3x − 1", "2x² − 3x + 1", "2x² − 3x + 3", "4x² − 3x − 9"],
-      "why": "Antidifferentiating gives f(x) = 2x² − 3x + c. Then f(2) = 8 − 6 + c = 1, so c = −1. The option with +1 uses the value of f(2) as c without working it out.",
-      "clue": "Find c by putting x = 2 into 2x² − 3x + c."
+      "q": "\\(f'(x) = 4x - 3\\) and \\(f(2) = 1\\). What is \\(f(x)\\)?",
+      "opts": ["\\(2x^{2} - 3x - 1\\)", "\\(2x^{2} - 3x + 1\\)", "\\(2x^{2} - 3x + 3\\)", "\\(4x^{2} - 3x - 9\\)"],
+      "why": "Antidifferentiating gives \\(f(x) = 2x^{2} - 3x + c\\). Then \\(f(2) = 8 - 6 + c = 1\\), so \\(c = -1\\). The option with \\(+1\\) uses the value of \\(f(2)\\) as \\(c\\) without working it out.",
+      "clue": "Find \\(c\\) by putting \\(x = 2\\) into \\(2x^{2} - 3x + c\\)."
     },
     "b": {
       "d": 3,
-      "q": "A tank's volume V litres changes at dV/dt = 6t − 12 litres per minute. At t = 0 the tank holds 20 litres. What is V at t = 4?",
+      "q": "A tank's volume \\(V\\) litres changes at \\(\\frac{dV}{dt} = 6t - 12\\) litres per minute. At \\(t = 0\\) the tank holds 20 litres. What is \\(V\\) at \\(t = 4\\)?",
       "opts": ["20 litres", "0 litres", "12 litres", "32 litres"],
-      "why": "V = 3t² − 12t + c. At t = 0, V = 20, so c = 20, and V(4) = 48 − 48 + 20 = 20 litres. The 12 litres option is the rate dV/dt at t = 4, not the volume, and 0 litres leaves out c.",
-      "clue": "Antidifferentiate first, then use t = 0 to find c."
+      "why": "\\(V = 3t^{2} - 12t + c\\). At \\(t = 0\\), \\(V = 20\\), so \\(c = 20\\), and \\(V(4) = 48 - 48 + 20 = 20\\) litres. The 12 litres option is the rate \\(\\frac{dV}{dt}\\) at \\(t = 4\\), not the volume, and 0 litres leaves out \\(c\\).",
+      "clue": "Antidifferentiate first, then use \\(t = 0\\) to find \\(c\\)."
     }
   },
   "mat-area-under-between-curves": {
     "title": "Area under and between curves",
     "card": [
-      "The area between two curves from x = a to x = b is the integral of (top curve − bottom curve). Area = ∫ from a to b of [f(x) − g(x)] dx, where f(x) ≥ g(x) on [a, b].",
-      "For the area between a curve and the x-axis, the axis is the bottom curve (g(x) = 0). Where the curve is below the axis, the integral is negative, so take the positive size of that part.",
-      "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top − bottom each time.",
-      "Example: f(x) = x and g(x) = x² between x = 0 and x = 1. They meet where x = x², at x = 0 and x = 1, and x ≥ x² between them. Area = ∫ from 0 to 1 of (x − x²) dx = 1/2 − 1/3 = 1/6."
+      "The area between two curves from \\(x = a\\) to \\(x = b\\) is the integral of top curve minus bottom curve. Area \\(= \\int_{a}^{b} [f(x) - g(x)] \\, dx\\), where \\(f(x) \\ge g(x)\\) on \\([a, b]\\).",
+      "For the area between a curve and the x-axis, the axis is the bottom curve (\\(g(x) = 0\\)). Where the curve is below the axis, the integral is negative, so take the positive size of that part.",
+      "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top minus bottom each time.",
+      "Example: \\(f(x) = x\\) and \\(g(x) = x^{2}\\) between \\(x = 0\\) and \\(x = 1\\). They meet where \\(x = x^{2}\\), at \\(x = 0\\) and \\(x = 1\\), and \\(x \\ge x^{2}\\) between them. Area \\(= \\int_{0}^{1} (x - x^{2}) \\, dx = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6}\\)."
     ],
-    "remember": "Area = integral of top − bottom, and split at every crossing.",
+    "remember": "Area is the integral of top minus bottom, and split at every crossing.",
     "a": {
-      "q": "Between x = 0 and x = 2, the line y = 4 lies above the curve y = x². Which integral gives the area between them?",
+      "q": "Between \\(x = 0\\) and \\(x = 2\\), the line \\(y = 4\\) lies above the curve \\(y = x^{2}\\). Which integral gives the area between them?",
       "opts": [
-        "∫ from 0 to 2 of (4 − x²) dx",
-        "∫ from 0 to 2 of (x² − 4) dx",
-        "∫ from 0 to 2 of (4 + x²) dx",
-        "∫ from 0 to 4 of (4 − x²) dx"
+        "\\(\\int_{0}^{2} (4 - x^{2}) \\, dx\\)",
+        "\\(\\int_{0}^{2} (x^{2} - 4) \\, dx\\)",
+        "\\(\\int_{0}^{2} (4 + x^{2}) \\, dx\\)",
+        "\\(\\int_{0}^{4} (4 - x^{2}) \\, dx\\)"
       ],
-      "why": "The top curve is y = 4, so the integrand is top − bottom = 4 − x², over the x-values 0 to 2. Using x² − 4 reverses the order and gives a negative number, which is not an area.",
+      "why": "The top curve is \\(y = 4\\), so the integrand is top minus bottom, \\(4 - x^{2}\\), over the x-values 0 to 2. Using \\(x^{2} - 4\\) reverses the order and gives a negative number, which is not an area.",
       "clue": "Subtract the lower curve from the upper curve."
     },
     "b": {
       "d": 3,
-      "q": "What is the total area enclosed between y = x² − 4 and the x-axis, from x = 0 to x = 3?",
-      "opts": ["23/3", "5/3", "−23/3", "7/3"],
-      "why": "The curve crosses the axis at x = 2, so split there. From 0 to 2 the integral is [x³/3 − 4x] = 8/3 − 8 = −16/3, so that area is 16/3. From 2 to 3 it is (9 − 12) − (8/3 − 8) = −3 + 16/3 = 7/3. The total is 16/3 + 7/3 = 23/3. Integrating straight from 0 to 3 gives −16/3 + 7/3 = −3, which cancels the parts instead of adding them.",
+      "q": "What is the total area enclosed between \\(y = x^{2} - 4\\) and the x-axis, from \\(x = 0\\) to \\(x = 3\\)?",
+      "opts": ["\\(\\frac{23}{3}\\)", "\\(\\frac{5}{3}\\)", "\\(-\\frac{23}{3}\\)", "\\(\\frac{7}{3}\\)"],
+      "why": "The curve crosses the axis at \\(x = 2\\), so split there. From 0 to 2 the integral is \\(\\left[\\frac{x^{3}}{3} - 4x\\right]_{0}^{2} = \\frac{8}{3} - 8 = -\\frac{16}{3}\\), so that area is \\(\\frac{16}{3}\\). From 2 to 3 it is \\((9 - 12) - (\\frac{8}{3} - 8) = -3 + \\frac{16}{3} = \\frac{7}{3}\\). The total is \\(\\frac{16}{3} + \\frac{7}{3} = \\frac{23}{3}\\). Integrating straight from 0 to 3 gives \\(-\\frac{16}{3} + \\frac{7}{3} = -3\\), which cancels the parts instead of adding them.",
       "clue": "Find where the curve crosses the axis, and add the two areas as positive numbers."
     }
   },
   "mat-average-value-function": {
     "title": "Average value of a function",
     "card": [
-      "The average value of f on [a, b] is 1/(b − a) × the definite integral of f(x) from a to b. In words: integrate, then divide by the width b − a.",
-      "When f(x) ≥ 0 on [a, b], the average value is the height of a rectangle on [a, b] with the same area as the region under the curve.",
+      "The average value of \\(f\\) on \\([a, b]\\) is \\(\\frac{1}{b - a} \\int_{a}^{b} f(x) \\, dx\\). In words: integrate, then divide by the width \\(b - a\\).",
+      "When \\(f(x) \\ge 0\\) on \\([a, b]\\), the average value is the height of a rectangle on \\([a, b]\\) with the same area as the region under the curve.",
       "The integral is signed: parts of the graph below the x-axis count as negative. So use the definite integral itself, not the total area.",
-      "Example: for f(x) = x² on [0, 3], the integral is [x³/3] from 0 to 3 = 9 − 0 = 9. Dividing by the width 3 − 0 gives 9 ÷ 3 = 3."
+      "Example: for \\(f(x) = x^{2}\\) on \\([0, 3]\\), the integral is \\(\\left[\\frac{x^{3}}{3}\\right]_{0}^{3} = 9 - 0 = 9\\). Dividing by the width \\(3 - 0\\) gives \\(9 \\div 3 = 3\\)."
     ],
-    "remember": "Find the signed integral first, then divide by the width b − a.",
+    "remember": "Find the signed integral first, then divide by the width \\(b - a\\).",
     "a": {
-      "q": "The integral of f(x) from 1 to 5 is 20. What is the average value of f on [1, 5]?",
+      "q": "The integral of \\(f(x)\\) from 1 to 5 is 20. What is the average value of \\(f\\) on \\([1, 5]\\)?",
       "opts": ["5", "4", "20", "80"],
-      "why": "The width is 5 − 1 = 4, so the average value is 20 ÷ 4 = 5. Dividing by 5, the end value, gives 4, which is a mistake: the width is b − a, not b.",
+      "why": "The width is \\(5 - 1 = 4\\), so the average value is \\(20 \\div 4 = 5\\). Dividing by 5, the end value, gives 4, which is a mistake: the width is \\(b - a\\), not \\(b\\).",
       "clue": "Divide the integral by the width of the interval."
     },
     "b": {
       "d": 3,
-      "q": "What is the average value of f(x) = 2x on [1, 4]?",
+      "q": "What is the average value of \\(f(x) = 2x\\) on \\([1, 4]\\)?",
       "opts": ["5", "15", "3", "7.5"],
-      "why": "The integral of 2x from 1 to 4 is [x²] from 1 to 4 = 16 − 1 = 15. The width is 3, so the average is 15 ÷ 3 = 5. The answer 15 is only the integral, and has not been divided by the width.",
-      "clue": "Find the integral first, then divide by 4 − 1."
+      "why": "The integral of \\(2x\\) from 1 to 4 is \\(\\left[x^{2}\\right]_{1}^{4} = 16 - 1 = 15\\). The width is 3, so the average is \\(15 \\div 3 = 5\\). The answer 15 is only the integral, and has not been divided by the width.",
+      "clue": "Find the integral first, then divide by \\(4 - 1\\)."
     }
   },
   "mat-exact-values-approximations": {
@@ -14459,33 +14781,33 @@ MADE_BANKS.mat = {
     "title": "Rounding errors in repeated calculations",
     "card": [
       "Rounding changes a number a little. If you round early and use the rounded number again, the small change is carried into every later step.",
-      "Example: 10 ÷ 3 × 3. Round 10 ÷ 3 to 3.3 first and you get 3.3 × 3 = 9.9. The true answer is 10.",
+      "Example: \\(10 \\div 3 \\times 3\\). Round \\(10 \\div 3\\) to 3.3 first and you get \\(3.3 \\times 3 = 9.9\\). The true answer is 10.",
       "The more steps that use the rounded value, the more the small errors can build up.",
       "Keep the full calculator value through every step, and round only the final answer."
     ],
     "remember": "Round only at the end, so small errors do not build up.",
     "a": {
-      "q": "What is the best way to find 20 ÷ 3 × 6 correct to 1 decimal place?",
+      "q": "What is the best way to find \\(20 \\div 3 \\times 6\\) correct to 1 decimal place?",
       "opts": [
-        "Keep the full value of 20 ÷ 3, then round the final answer",
-        "Round 20 ÷ 3 to 1 decimal place, then multiply by 6",
-        "Round 20 ÷ 3 to a whole number, then multiply by 6",
+        "Keep the full value of \\(20 \\div 3\\), then round the final answer",
+        "Round \\(20 \\div 3\\) to 1 decimal place, then multiply by 6",
+        "Round \\(20 \\div 3\\) to a whole number, then multiply by 6",
         "Round every number in the question before starting"
       ],
-      "why": "Keeping the full value means no error is carried into the multiplication, and the answer 40 is exact. Rounding 20 ÷ 3 to 6.7 first gives 40.2, which is already out.",
+      "why": "Keeping the full value means no error is carried into the multiplication, and the answer 40 is exact. Rounding \\(20 \\div 3\\) to 6.7 first gives 40.2, which is already out.",
       "clue": "When should the rounding happen?"
     },
     "b": {
       "d": 2,
-      "q": "Tom rounds 100 ÷ 7 to 14.3, then multiplies by 7. What does he get, and why is it off?",
+      "q": "Tom rounds \\(100 \\div 7\\) to 14.3, then multiplies by 7. What does he get, and why is it off?",
       "opts": [
-        "100.1, because he rounded 100 ÷ 7 before multiplying",
-        "100.1, because he rounded 100 ÷ 7 after multiplying",
+        "100.1, because he rounded \\(100 \\div 7\\) before multiplying",
+        "100.1, because he rounded \\(100 \\div 7\\) after multiplying",
         "100, because rounding a value does not change the result",
-        "99.9, because 14.3 is lower than 100 ÷ 7"
+        "99.9, because 14.3 is lower than \\(100 \\div 7\\)"
       ],
-      "why": "14.3 × 7 = 100.1, but the true answer is 100. The error came from rounding 100 ÷ 7 early, then using the rounded value. In fact 14.3 is higher than 100 ÷ 7, which is about 14.2857.",
-      "clue": "Work out 14.3 × 7, then think about when he rounded."
+      "why": "\\(14.3 \\times 7 = 100.1\\), but the true answer is 100. The error came from rounding \\(100 \\div 7\\) early, then using the rounded value. In fact 14.3 is higher than \\(100 \\div 7\\), which is about 14.2857.",
+      "clue": "Work out \\(14.3 \\times 7\\), then think about when he rounded."
     }
   },
   "mat-measurement-errors-affect-results": {
@@ -14604,27 +14926,27 @@ MADE_BANKS.mat = {
     "card": [
       "An equation with fractions is easier to solve once the fractions are gone. The lowest common denominator (LCD) is the smallest number that every denominator divides into.",
       "Multiply every term on both sides by the LCD, including any whole number with no fraction. Each denominator cancels, and you are left with a plain equation.",
-      "Example: x/3 + x/4 = 7. The LCD is 12, so 12 × x/3 + 12 × x/4 = 12 × 7. This gives 4x + 3x = 84.",
-      "Then solve as usual: 7x = 84, so x = 12. Check by putting x = 12 back in: 12/3 + 12/4 = 4 + 3 = 7."
+      "Example: \\(\\frac{x}{3} + \\frac{x}{4} = 7\\). The LCD is 12, so \\(12 \\times \\frac{x}{3} + 12 \\times \\frac{x}{4} = 12 \\times 7\\). This gives \\(4x + 3x = 84\\).",
+      "Then solve as usual: \\(7x = 84\\), so \\(x = 12\\). Check by putting \\(x = 12\\) back in: \\(\\frac{12}{3} + \\frac{12}{4} = 4 + 3 = 7\\)."
     ],
     "remember": "Multiply every term by the LCD to clear the fractions, then solve.",
     "a": {
-      "q": "Solve x/2 + x/5 = 14. What is x?",
+      "q": "Solve \\(\\frac{x}{2} + \\frac{x}{5} = 14\\). What is \\(x\\)?",
       "opts": ["20", "2", "140", "49"],
-      "why": "The LCD is 10, so 5x + 2x = 140. Then 7x = 140 and x = 20. Check: 20/2 + 20/5 = 10 + 4 = 14. An answer of 2 comes from not multiplying the 14 by 10, which gives 7x = 14.",
+      "why": "The LCD is 10, so \\(5x + 2x = 140\\). Then \\(7x = 140\\) and \\(x = 20\\). Check: \\(\\frac{20}{2} + \\frac{20}{5} = 10 + 4 = 14\\). An answer of 2 comes from not multiplying the 14 by 10, which gives \\(7x = 14\\).",
       "clue": "Multiply every term, including the 14, by 10."
     },
     "b": {
       "d": 3,
-      "q": "Mia solves x/3 + x/6 = 5 by multiplying by 6. Her answer is x = 5/3. What did she do wrong?",
+      "q": "Mia solves \\(\\frac{x}{3} + \\frac{x}{6} = 5\\) by multiplying by 6. Her answer is \\(x = \\frac{5}{3}\\). What did she do wrong?",
       "opts": [
         "She did not multiply the 5 by 6",
-        "She turned 6 × x/3 into 3x instead of 2x",
+        "She turned \\(6 \\times \\frac{x}{3}\\) into \\(3x\\) instead of \\(2x\\)",
         "She multiplied the 5 by 3 instead of by 6",
         "She did not divide by 3 at the last step"
       ],
-      "why": "Without multiplying the 5, Mia gets 2x + x = 5, so 3x = 5 and x = 5/3. The correct working is 2x + x = 30, so x = 10. Turning 6 × x/3 into 3x gives 4x = 30 and x = 7.5, not 5/3.",
-      "clue": "Redo each step and see which one gives 3x = 5."
+      "why": "Without multiplying the 5, Mia gets \\(2x + x = 5\\), so \\(3x = 5\\) and \\(x = \\frac{5}{3}\\). The correct working is \\(2x + x = 30\\), so \\(x = 10\\). Turning \\(6 \\times \\frac{x}{3}\\) into \\(3x\\) gives \\(4x = 30\\) and \\(x = 7.5\\), not \\(\\frac{5}{3}\\).",
+      "clue": "Redo each step and see which one gives \\(3x = 5\\)."
     }
   },
   "mat-solving-linear-inequalities": {
@@ -14683,21 +15005,26 @@ MADE_BANKS.mat = {
     "card": [
       "Simultaneous equations are two equations that must both be true at once. Each linear equation draws a straight line on the Cartesian plane.",
       "Every point on a line makes that line's equation true. The point where the two lines cross is on both lines, so it makes both equations true.",
-      "To solve: graph both lines, read the crossing point (x, y), then check it by putting x and y into both equations.",
-      "Example: y = x + 1 and y = 7 − x. The lines cross at (3, 4). Check: 4 = 3 + 1 is true, and 7 − 3 = 4 is true. So x = 3 and y = 4."
+      "To solve: graph both lines, read the crossing point \\((x, y)\\), then check it by putting \\(x\\) and \\(y\\) into both equations.",
+      "Example: \\(y = x + 1\\) and \\(y = 7 - x\\). The lines cross at \\((3, 4)\\). Check: \\(4 = 3 + 1\\) is true, and \\(7 - 3 = 4\\) is true. So \\(x = 3\\) and \\(y = 4\\)."
     ],
     "remember": "The solution is the crossing point, and it must work in both equations.",
     "a": {
-      "q": "Two lines cross at the point (2, 5). What is the solution of the pair of equations?",
-      "opts": ["x = 2 and y = 5", "x = 5 and y = 2", "x = 2 and y = 2", "x = 5 and y = 5"],
-      "why": "A point is written (x, y), so the first number is x and the second is y. Swapping them to x = 5 and y = 2 is a common mistake.",
-      "clue": "A point is written in the order (x, y)."
+      "q": "Two lines cross at the point \\((2, 5)\\). What is the solution of the pair of equations?",
+      "opts": [
+        "\\(x = 2\\) and \\(y = 5\\)",
+        "\\(x = 5\\) and \\(y = 2\\)",
+        "\\(x = 2\\) and \\(y = 2\\)",
+        "\\(x = 5\\) and \\(y = 5\\)"
+      ],
+      "why": "A point is written \\((x, y)\\), so the first number is \\(x\\) and the second is \\(y\\). Swapping them to \\(x = 5\\) and \\(y = 2\\) is a common mistake.",
+      "clue": "A point is written in the order \\((x, y)\\)."
     },
     "b": {
       "d": 3,
-      "q": "Lines y = 2x − 1 and y = x + 2 are graphed. Which point is where they cross?",
-      "opts": ["(3, 5)", "(1, 3)", "(2, 3)", "(3, 4)"],
-      "why": "At (3, 5): 2 × 3 − 1 = 5 and 3 + 2 = 5, so both equations are true. (1, 3) is on y = x + 2 only, and (2, 3) is on y = 2x − 1 only. (3, 4) fits neither line.",
+      "q": "Lines \\(y = 2x - 1\\) and \\(y = x + 2\\) are graphed. Which point is where they cross?",
+      "opts": ["\\((3, 5)\\)", "\\((1, 3)\\)", "\\((2, 3)\\)", "\\((3, 4)\\)"],
+      "why": "At \\((3, 5)\\): \\(2 \\times 3 - 1 = 5\\) and \\(3 + 2 = 5\\), so both equations are true. \\((1, 3)\\) is on \\(y = x + 2\\) only, and \\((2, 3)\\) is on \\(y = 2x - 1\\) only. \\((3, 4)\\) fits neither line.",
       "clue": "Put each point into both equations. It must work in both."
     }
   },
@@ -14707,7 +15034,7 @@ MADE_BANKS.mat = {
       "Simultaneous equations are two equations with the same two unknowns. The solution is the pair of values that makes both equations true.",
       [
         "Step 1",
-        "Rearrange one equation so one variable is alone, such as y = 2x − 1. Pick the equation where this is easiest."
+        "Rearrange one equation so one variable is alone, such as \\(y = 2x - 1\\). Pick the equation where this is easiest."
       ],
       [
         "Step 2",
@@ -14715,22 +15042,22 @@ MADE_BANKS.mat = {
       ],
       [
         "Step 3",
-        "Substitute your answer back into the rearranged equation to find the other variable. Example: y = 2x − 1 and x + y = 8. Then x + (2x − 1) = 8, so 3x = 9 and x = 3. So y = 2 × 3 − 1 = 5."
+        "Substitute your answer back into the rearranged equation to find the other variable. Example: \\(y = 2x - 1\\) and \\(x + y = 8\\). Then \\(x + (2x - 1) = 8\\), so \\(3x = 9\\) and \\(x = 3\\). So \\(y = 2 \\times 3 - 1 = 5\\)."
       ]
     ],
     "remember": "Get one variable alone, substitute, solve, then substitute back for the other.",
     "a": {
-      "q": "Solve y = 3x and x + y = 12. What is the value of y?",
+      "q": "Solve \\(y = 3x\\) and \\(x + y = 12\\). What is the value of \\(y\\)?",
       "opts": ["9", "3", "4", "12"],
-      "why": "Substituting y = 3x gives x + 3x = 12, so 4x = 12 and x = 3. Then y = 3 × 3 = 9. The value 3 is tempting, but it is x, not y.",
-      "clue": "Replace y in the second equation with 3x."
+      "why": "Substituting \\(y = 3x\\) gives \\(x + 3x = 12\\), so \\(4x = 12\\) and \\(x = 3\\). Then \\(y = 3 \\times 3 = 9\\). The value 3 is tempting, but it is \\(x\\), not \\(y\\).",
+      "clue": "Replace \\(y\\) in the second equation with \\(3x\\)."
     },
     "b": {
       "d": 3,
-      "q": "Solve x = 2y − 3 and 3x + y = 5. What is the solution (x, y)?",
-      "opts": ["(1, 2)", "(−1, 1)", "(2, 2.5)", "(1, −2)"],
-      "why": "Substituting gives 3(2y − 3) + y = 5, so 7y − 9 = 5 and y = 2. Then x = 2 × 2 − 3 = 1. Check in 3x + y: 3 + 2 = 5. A common slip is to write 3 × 2y − 3, which skips multiplying the −3 by 3.",
-      "clue": "Put brackets around 2y − 3 before multiplying by 3."
+      "q": "Solve \\(x = 2y - 3\\) and \\(3x + y = 5\\). What is the solution \\((x, y)\\)?",
+      "opts": ["\\((1, 2)\\)", "\\((-1, 1)\\)", "\\((2, 2.5)\\)", "\\((1, -2)\\)"],
+      "why": "Substituting gives \\(3(2y - 3) + y = 5\\), so \\(7y - 9 = 5\\) and \\(y = 2\\). Then \\(x = 2 \\times 2 - 3 = 1\\). Check in \\(3x + y\\): \\(3 + 2 = 5\\). A common slip is to write \\(3 \\times 2y - 3\\), which skips multiplying the \\(-3\\) by 3.",
+      "clue": "Put brackets around \\(2y - 3\\) before multiplying by 3."
     }
   },
   "mat-simultaneous-equations-by-elimination": {
@@ -14764,23 +15091,23 @@ MADE_BANKS.mat = {
   "mat-solving-simple-exponential-equations": {
     "title": "Solving simple exponential equations",
     "card": [
-      "An exponential equation has the unknown in the index, such as 3ˣ = 81. The base is the number being raised to a power.",
-      "Write both sides as powers of the same base. Here 81 = 3⁴, so 3ˣ = 3⁴.",
-      "When the bases match, the indices must be equal. So x = 4.",
-      "If the index has more than x, set the indices equal and solve. For 2^(x + 1) = 32, write 32 = 2⁵, so x + 1 = 5 and x = 4."
+      "An exponential equation has the unknown in the index, such as \\(3^{x} = 81\\). The base is the number being raised to a power.",
+      "Write both sides as powers of the same base. Here \\(81 = 3^{4}\\), so \\(3^{x} = 3^{4}\\).",
+      "When the bases match, the indices must be equal. So \\(x = 4\\).",
+      "If the index has more than \\(x\\), set the indices equal and solve. For \\(2^{x + 1} = 32\\), write \\(32 = 2^{5}\\), so \\(x + 1 = 5\\) and \\(x = 4\\)."
     ],
     "remember": "Same base on both sides, then the indices are equal.",
     "a": {
-      "q": "What is the solution of 5ˣ = 125?",
-      "opts": ["x = 3", "x = 25", "x = 5", "x = 120"],
-      "why": "125 = 5 × 5 × 5 = 5³, so 5ˣ = 5³ and x = 3. Choosing 25 comes from dividing 125 by 5, which does not give the index.",
+      "q": "What is the solution of \\(5^{x} = 125\\)?",
+      "opts": ["\\(x = 3\\)", "\\(x = 25\\)", "\\(x = 5\\)", "\\(x = 120\\)"],
+      "why": "\\(125 = 5 \\times 5 \\times 5 = 5^{3}\\), so \\(5^{x} = 5^{3}\\) and \\(x = 3\\). Choosing 25 comes from dividing 125 by 5, which does not give the index.",
       "clue": "Write 125 as a power of 5."
     },
     "b": {
       "d": 3,
-      "q": "Solve 2^(x + 3) = 64.",
-      "opts": ["x = 3", "x = 6", "x = 9", "x = 29"],
-      "why": "64 = 2⁶, so x + 3 = 6 and x = 3. The tempting answer 6 forgets that the index is x + 3, not just x.",
+      "q": "Solve \\(2^{x + 3} = 64\\).",
+      "opts": ["\\(x = 3\\)", "\\(x = 6\\)", "\\(x = 9\\)", "\\(x = 29\\)"],
+      "why": "\\(64 = 2^{6}\\), so \\(x + 3 = 6\\) and \\(x = 3\\). The tempting answer 6 forgets that the index is \\(x + 3\\), not just \\(x\\).",
       "clue": "Write 64 as a power of 2, then solve for the index."
     }
   },
@@ -14818,11 +15145,11 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Linear",
-        "the difference between each y value is equal when x goes up by 1. Example: 4, 7, 10, 13 adds 3 each step."
+        "the difference between each \\(y\\) value is equal when \\(x\\) goes up by 1. Example: 4, 7, 10, 13 adds 3 each step."
       ],
       [
         "Exponential",
-        "the ratio between each y value is equal when x goes up by 1. Example: 3, 6, 12, 24 multiplies by 2 each step."
+        "the ratio between each \\(y\\) value is equal when \\(x\\) goes up by 1. Example: 3, 6, 12, 24 multiplies by 2 each step."
       ],
       [
         "Quadratic",
@@ -14832,7 +15159,7 @@ MADE_BANKS.mat = {
     ],
     "remember": "Equal differences suggest linear, equal ratios suggest exponential, and a rise then fall suggests quadratic.",
     "a": {
-      "q": "As x goes 0, 1, 2, 3, the y values in a table are 5, 10, 20, 40. Which model suits the data best?",
+      "q": "As \\(x\\) goes 0, 1, 2, 3, the \\(y\\) values in a table are 5, 10, 20, 40. Which model suits the data best?",
       "opts": [
         "Exponential, as each value doubles",
         "Linear, as each value rises by a similar amount",
@@ -14851,7 +15178,7 @@ MADE_BANKS.mat = {
         "Exponential, as the heights change every second",
         "Exponential, as the heights repeat in pairs"
       ],
-      "why": "The heights rise to 10 then fall, which suggests a quadratic with one turning point. The differences are 6, 2, −2, −6, so they are not equal and it is not linear, and the ratios are not equal either.",
+      "why": "The heights rise to 10 then fall, which suggests a quadratic with one turning point. The differences are 6, 2, \\(-2\\), \\(-6\\), so they are not equal and it is not linear, and the ratios are not equal either.",
       "clue": "Check the differences and ratios, then look at what the heights do."
     }
   },
@@ -14907,20 +15234,20 @@ MADE_BANKS.mat = {
       "On an ordinary scale, equal steps add the same amount. On a logarithmic scale, equal steps multiply the quantity by the same factor.",
       "The Richter scale for earthquakes is logarithmic. Each increase of 1 in magnitude multiplies the measured ground shaking by 10.",
       "The decibel (dB) scale for sound intensity is logarithmic too. Each increase of 10 dB multiplies the sound intensity by 10.",
-      "Example: a rise of 2 on the Richter scale means 10 × 10 = 100 times the shaking."
+      "Example: a rise of 2 on the Richter scale means \\(10 \\times 10 = 100\\) times the shaking."
     ],
     "remember": "On a logarithmic scale, going up one step multiplies the quantity. It does not add to it.",
     "a": {
       "q": "One earthquake measures 4 on the Richter scale and another measures 6. How many times greater is the measured shaking of the second?",
       "opts": ["100 times", "2 times", "20 times", "10 times"],
-      "why": "The scale rises by 2 steps, and each step multiplies the shaking by 10. So the shaking is 10 × 10 = 100 times greater. Saying 10 times counts only one step.",
+      "why": "The scale rises by 2 steps, and each step multiplies the shaking by 10. So the shaking is \\(10 \\times 10 = 100\\) times greater. Saying 10 times counts only one step.",
       "clue": "Count the steps, then multiply by 10 for each."
     },
     "b": {
       "d": 3,
       "q": "A quiet room has sound at 30 dB. A busy street measures 60 dB. How many times greater is the sound intensity on the street?",
       "opts": ["1000 times", "2 times", "30 times", "100 times"],
-      "why": "The rise is 30 dB, which is three steps of 10 dB. Each step multiplies the intensity by 10, so 10 × 10 × 10 = 1000 times. Saying 2 times divides the readings, and 100 times counts only two steps.",
+      "why": "The rise is 30 dB, which is three steps of 10 dB. Each step multiplies the intensity by 10, so \\(10 \\times 10 \\times 10 = 1000\\) times. Saying 2 times divides the readings, and 100 times counts only two steps.",
       "clue": "Each 10 dB is one step, so count the steps first."
     }
   },
@@ -14943,7 +15270,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Lena walks from her camp to a lookout on a bearing of 305°. What is the bearing from the lookout back to the camp?",
       "opts": ["125°", "055°", "215°", "235°"],
-      "why": "The bearing is 180° or more, so subtract 180°: 305° − 180° = 125°. 055° is tempting, but it comes from 360° − 305°, which does not give the opposite direction.",
+      "why": "The bearing is 180° or more, so subtract 180°: \\(305^{\\circ} - 180^{\\circ} = 125^{\\circ}\\). 055° is tempting, but it comes from \\(360^{\\circ} - 305^{\\circ}\\), which does not give the opposite direction.",
       "clue": "The way back is half a turn from the way out."
     }
   },
@@ -14975,37 +15302,37 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Demonstration",
-        "shows a claim is true in one or a few cases. For the claim that the sum of two odd numbers is always even, checking that 3 + 5 = 8 is a demonstration."
+        "shows a claim is true in one or a few cases. For the claim that the sum of two odd numbers is always even, checking that \\(3 + 5 = 8\\) is a demonstration."
       ],
       [
         "Proof",
         "uses logical steps from known facts to show a claim is true in every case. Each step gives a reason."
       ],
       "Many true examples do not make a proof. One case that fails, called a counterexample, is enough to show a claim is false.",
-      "Example: any odd number is 2n + 1 and any other odd number is 2m + 1. Their sum is 2n + 2m + 2 = 2(n + m + 1), which is a multiple of 2. So the sum of two odd numbers is always even."
+      "Example: any odd number is \\(2n + 1\\) and any other odd number is \\(2m + 1\\). Their sum is \\(2n + 2m + 2 = 2(n + m + 1)\\), which is a multiple of 2. So the sum of two odd numbers is always even."
     ],
     "remember": "Examples can demonstrate a claim. Only logical steps from known facts prove it for all cases.",
     "a": {
-      "q": "Priya tests the claim that the sum of two odd numbers is always even. She finds 3 + 5, 7 + 9 and 11 + 13 are all even. What has she done?",
+      "q": "Priya tests the claim that the sum of two odd numbers is always even. She finds \\(3 + 5\\), \\(7 + 9\\) and \\(11 + 13\\) are all even. What has she done?",
       "opts": [
         "Demonstrated the claim in three cases",
         "Proved the claim for all odd numbers",
         "Found a counterexample to the claim",
         "Proved the claim by testing three cases"
       ],
-      "why": "Three true cases show the claim works for those numbers only. They do not cover every pair of odd numbers, so this is a demonstration, not a proof. A proof needs logical steps, such as writing the odd numbers as 2n + 1 and 2m + 1.",
+      "why": "Three true cases show the claim works for those numbers only. They do not cover every pair of odd numbers, so this is a demonstration, not a proof. A proof needs logical steps, such as writing the odd numbers as \\(2n + 1\\) and \\(2m + 1\\).",
       "clue": "Does checking three cases cover every pair of odd numbers?"
     },
     "b": {
       "d": 3,
-      "q": "Leo claims that n² + n + 11 is prime for every whole number n. He tests n = 1 to 5 and gets primes each time. Then n = 11 gives 143 = 11 × 13. What does this show?",
+      "q": "Leo claims that \\(n^{2} + n + 11\\) is prime for every whole number \\(n\\). He tests \\(n = 1\\) to 5 and gets primes each time. Then \\(n = 11\\) gives \\(143 = 11 \\times 13\\). What does this show?",
       "opts": [
         "The claim is false, as 143 is a counterexample",
         "The claim is proved, as five cases were prime",
-        "The claim is true, as n = 11 is only one case",
-        "The claim is proved for n up to 11 only"
+        "The claim is true, as \\(n = 11\\) is only one case",
+        "The claim is proved for \\(n\\) up to 11 only"
       ],
-      "why": "One case that fails is enough to show a claim is false. The five earlier cases only demonstrated it and could not prove it. Here n = 11 gives 121 + 11 + 11 = 143, which is not prime.",
+      "why": "One case that fails is enough to show a claim is false. The five earlier cases only demonstrated it and could not prove it. Here \\(n = 11\\) gives \\(121 + 11 + 11 = 143\\), which is not prime.",
       "clue": "How many failing cases does it take to disprove a claim?"
     }
   },
@@ -15092,7 +15419,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "A network of walking tracks has 6 edges. What is the total of the degrees of all its vertices?",
       "opts": ["12", "6", "3", "36"],
-      "why": "Every edge has two ends, so each edge adds 2 to the total of the degrees. 6 × 2 = 12. A total of 6 would count each edge only once.",
+      "why": "Every edge has two ends, so each edge adds 2 to the total of the degrees. \\(6 \\times 2 = 12\\). A total of 6 would count each edge only once.",
       "clue": "Each edge has two ends, and each end adds to a degree."
     }
   },
@@ -15286,7 +15613,7 @@ MADE_BANKS.mat = {
         "An association, as 32% of those who chose it are in Year 7",
         "An association, as the counts 24 and 50 clearly differ"
       ],
-      "why": "Year 7: 24 ÷ 48 = 50%. Year 8: 50 ÷ 100 = 50%. The percentages within each year level are the same, so there is no association. The counts differ only because the year levels differ in size.",
+      "why": "Year 7: \\(24 \\div 48 = 50\\%\\). Year 8: \\(50 \\div 100 = 50\\%\\). The percentages within each year level are the same, so there is no association. The counts differ only because the year levels differ in size.",
       "clue": "Turn each count into a percentage of its own year level."
     },
     "b": {
@@ -15298,7 +15625,7 @@ MADE_BANKS.mat = {
         "Use is not related to town, as 42 is more than 30",
         "Use is not related to town, as 40% of all students use it"
       ],
-      "why": "Town A: 42 ÷ 60 = 70%. Town B: 30 ÷ 120 = 25%. The percentages differ clearly, so the variables may be related. The numbers 42 and 30 are counts, not percentages.",
+      "why": "Town A: \\(42 \\div 60 = 70\\%\\). Town B: \\(30 \\div 120 = 25\\%\\). The percentages differ clearly, so the variables may be related. The numbers 42 and 30 are counts, not percentages.",
       "clue": "Divide each count by its own town total, not the overall total."
     }
   },
@@ -15418,23 +15745,23 @@ MADE_BANKS.mat = {
   "mat-square-numbers-square-roots": {
     "title": "Square numbers and square roots",
     "card": [
-      "A square number is a whole number multiplied by itself. For example, 7² = 7 × 7 = 49, so 49 is a square number.",
-      "The square root undoes squaring. √49 = 7 because 7 × 7 = 49.",
+      "A square number is a whole number multiplied by itself. For example, \\(7^{2} = 7 \\times 7 = 49\\), so 49 is a square number.",
+      "The square root undoes squaring. \\(\\sqrt{49} = 7\\) because \\(7 \\times 7 = 49\\).",
       "The first square numbers are 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.",
-      "If a whole number is not a square number, its square root is not whole. It lies between two whole numbers. 43 sits between 36 and 49, so √43 is between 6 and 7."
+      "If a whole number is not a square number, its square root is not whole. It lies between two whole numbers. 43 sits between 36 and 49, so \\(\\sqrt{43}\\) is between 6 and 7."
     ],
     "remember": "Squaring multiplies a number by itself. The square root undoes it.",
     "a": {
-      "q": "What is the value of 9²?",
+      "q": "What is the value of \\(9^{2}\\)?",
       "opts": ["81", "18", "99", "3"],
-      "why": "9² means 9 × 9, which is 81. The answer 18 comes from 9 × 2, which doubles the number instead of multiplying it by itself.",
+      "why": "\\(9^{2}\\) means \\(9 \\times 9\\), which is 81. The answer 18 comes from \\(9 \\times 2\\), which doubles the number instead of multiplying it by itself.",
       "clue": "Multiply 9 by itself."
     },
     "b": {
       "d": 3,
-      "q": "Between which two whole numbers does √70 lie?",
+      "q": "Between which two whole numbers does \\(\\sqrt{70}\\) lie?",
       "opts": ["8 and 9", "7 and 8", "9 and 10", "34 and 36"],
-      "why": "64 = 8² and 81 = 9², and 70 is between 64 and 81. So √70 is between 8 and 9. Choosing 7 and 8 is tempting, but 8² = 64 is below 70, so the root must be above 8.",
+      "why": "\\(64 = 8^{2}\\) and \\(81 = 9^{2}\\), and 70 is between 64 and 81. So \\(\\sqrt{70}\\) is between 8 and 9. Choosing 7 and 8 is tempting, but \\(8^{2} = 64\\) is below 70, so the root must be above 8.",
       "clue": "Find the two square numbers that 70 sits between."
     }
   },
@@ -15442,22 +15769,27 @@ MADE_BANKS.mat = {
     "title": "Prime factorisation with index notation",
     "card": [
       "A prime number has exactly two factors, 1 and itself. Examples are 2, 3, 5, 7 and 11.",
-      "A factor tree splits a number into factor pairs again and again until every branch ends in a prime. For 72: 72 = 8 × 9, 8 = 2 × 4, 4 = 2 × 2, 9 = 3 × 3.",
-      "Multiply the primes at the ends: 72 = 2 × 2 × 2 × 3 × 3.",
-      "Index form counts repeated primes with a small power. Three 2s make 2³ and two 3s make 3², so 72 = 2³ × 3²."
+      "A factor tree splits a number into factor pairs again and again until every branch ends in a prime. For 72: \\(72 = 8 \\times 9\\), \\(8 = 2 \\times 4\\), \\(4 = 2 \\times 2\\), \\(9 = 3 \\times 3\\).",
+      "Multiply the primes at the ends: \\(72 = 2 \\times 2 \\times 2 \\times 3 \\times 3\\).",
+      "Index form counts repeated primes with a small power. Three 2s make \\(2^{3}\\) and two 3s make \\(3^{2}\\), so \\(72 = 2^{3} \\times 3^{2}\\)."
     ],
     "remember": "Split into primes, then write repeated primes with an index.",
     "a": {
       "q": "Which is 40 written as a product of primes in index form?",
-      "opts": ["2³ × 5", "2² × 10", "2 × 4 × 5", "2⁴ × 5"],
-      "why": "40 = 2 × 2 × 2 × 5, which is 2³ × 5. The option 2² × 10 is wrong because 10 is not a prime, and 2⁴ × 5 equals 80.",
+      "opts": ["\\(2^{3} \\times 5\\)", "\\(2^{2} \\times 10\\)", "\\(2 \\times 4 \\times 5\\)", "\\(2^{4} \\times 5\\)"],
+      "why": "\\(40 = 2 \\times 2 \\times 2 \\times 5\\), which is \\(2^{3} \\times 5\\). The option \\(2^{2} \\times 10\\) is wrong because 10 is not a prime, and \\(2^{4} \\times 5\\) equals 80.",
       "clue": "Keep splitting until every number is prime."
     },
     "b": {
       "d": 3,
       "q": "Mia writes 180 as a product of primes in index form. Which answer is correct?",
-      "opts": ["2² × 3² × 5", "2 × 3² × 10", "2² × 3 × 15", "2³ × 3² × 5"],
-      "why": "180 = 2 × 2 × 3 × 3 × 5, which is 2² × 3² × 5. The option 2 × 3² × 10 does equal 180, but 10 = 2 × 5 is not a prime, so the tree was not finished. The option 2³ × 3² × 5 equals 360.",
+      "opts": [
+        "\\(2^{2} \\times 3^{2} \\times 5\\)",
+        "\\(2 \\times 3^{2} \\times 10\\)",
+        "\\(2^{2} \\times 3 \\times 15\\)",
+        "\\(2^{3} \\times 3^{2} \\times 5\\)"
+      ],
+      "why": "\\(180 = 2 \\times 2 \\times 3 \\times 3 \\times 5\\), which is \\(2^{2} \\times 3^{2} \\times 5\\). The option \\(2 \\times 3^{2} \\times 10\\) does equal 180, but \\(10 = 2 \\times 5\\) is not a prime, so the tree was not finished. The option \\(2^{3} \\times 3^{2} \\times 5\\) equals 360.",
       "clue": "Check that every number is prime and that the total is 180."
     }
   },
@@ -15465,27 +15797,30 @@ MADE_BANKS.mat = {
     "title": "Expanded notation with powers of 10",
     "card": [
       "Each digit in a number has a place value. Moving one place left makes the value 10 times bigger. The places are 1, 10, 100, 1000 and so on.",
-      "These place values are powers of 10: 1 = 10⁰, 10 = 10¹, 100 = 10², 1000 = 10³. The small raised number counts the tens multiplied together.",
+      "These place values are powers of 10: \\(1 = 10^{0}\\), \\(10 = 10^{1}\\), \\(100 = 10^{2}\\), \\(1000 = 10^{3}\\). The small raised number counts the tens multiplied together.",
       "Expanded notation writes each digit times its power of 10, then adds them. A digit of 0 adds nothing, so that place can be left out.",
-      ["Example", "4305 = 4 × 10³ + 3 × 10² + 5 × 10⁰. There are no tens, so there is no 10¹ term."]
+      [
+        "Example",
+        "\\(4305 = 4 \\times 10^{3} + 3 \\times 10^{2} + 5 \\times 10^{0}\\). There are no tens, so there is no \\(10^{1}\\) term."
+      ]
     ],
     "remember": "Write each digit times its place value as a power of 10, and add.",
     "a": {
       "q": "Which is 6208 in expanded notation using powers of 10?",
       "opts": [
-        "6 × 10³ + 2 × 10² + 8 × 10⁰",
-        "6 × 10³ + 2 × 10² + 8 × 10¹",
-        "6 × 10⁴ + 2 × 10³ + 8 × 10¹",
-        "6 × 10² + 2 × 10¹ + 8 × 10⁰"
+        "\\(6 \\times 10^{3} + 2 \\times 10^{2} + 8 \\times 10^{0}\\)",
+        "\\(6 \\times 10^{3} + 2 \\times 10^{2} + 8 \\times 10^{1}\\)",
+        "\\(6 \\times 10^{4} + 2 \\times 10^{3} + 8 \\times 10^{1}\\)",
+        "\\(6 \\times 10^{2} + 2 \\times 10^{1} + 8 \\times 10^{0}\\)"
       ],
-      "why": "The 6 is in the thousands place (10³), the 2 is in the hundreds (10²) and the 8 is in the ones (10⁰). Using 10¹ for the 8 is tempting, but 10¹ is the tens place and this number has 0 tens.",
-      "clue": "Ones are 10⁰. Count the places moving left."
+      "why": "The 6 is in the thousands place \\((10^{3})\\), the 2 is in the hundreds \\((10^{2})\\) and the 8 is in the ones \\((10^{0})\\). Using \\(10^{1}\\) for the 8 is tempting, but \\(10^{1}\\) is the tens place and this number has 0 tens.",
+      "clue": "Ones are \\(10^{0}\\). Count the places moving left."
     },
     "b": {
       "d": 3,
-      "q": "Mia writes a number as 7 × 10⁴ + 5 × 10² + 3 × 10⁰. What is the number?",
+      "q": "Mia writes a number as \\(7 \\times 10^{4} + 5 \\times 10^{2} + 3 \\times 10^{0}\\). What is the number?",
       "opts": ["70 503", "7503", "75 003", "70 530"],
-      "why": "7 × 10⁴ is 70 000, 5 × 10² is 500 and 3 × 10⁰ is 3, so the total is 70 503. The answer 7503 is tempting, but it ignores that 10⁴ is ten thousands, and the missing 10³ and 10¹ terms mean zeros in those places.",
+      "why": "\\(7 \\times 10^{4}\\) is 70 000, \\(5 \\times 10^{2}\\) is 500 and \\(3 \\times 10^{0}\\) is 3, so the total is 70 503. The answer 7503 is tempting, but it ignores that \\(10^{4}\\) is ten thousands, and the missing \\(10^{3}\\) and \\(10^{1}\\) terms mean zeros in those places.",
       "clue": "Find which places have no term. They hold zeros."
     }
   },
@@ -15515,31 +15850,31 @@ MADE_BANKS.mat = {
   "mat-converting-fractions-decimals-percentages": {
     "title": "Converting fractions, decimals and percentages",
     "card": [
-      "A fraction, a decimal and a percentage can show the same amount. 3/4 = 0.75 = 75%.",
-      ["Fraction to decimal", "divide the top by the bottom. 3/8 means 3 ÷ 8 = 0.375."],
-      ["Decimal to percentage", "multiply by 100. 0.375 × 100 = 37.5%. To go back, divide by 100."],
+      "A fraction, a decimal and a percentage can show the same amount. \\(\\frac{3}{4} = 0.75 = 75\\%\\).",
+      ["Fraction to decimal", "divide the top by the bottom. \\(\\frac{3}{8}\\) means \\(3 \\div 8 = 0.375\\)."],
+      ["Decimal to percentage", "multiply by 100. \\(0.375 \\times 100 = 37.5\\%\\). To go back, divide by 100."],
       [
         "Number line",
-        "split the space from 0 to 1 into equal parts to match the bottom number. Negative fractions sit to the left of 0, so −1/2 is halfway between 0 and −1."
+        "split the space from 0 to 1 into equal parts to match the bottom number. Negative fractions sit to the left of 0, so \\(-\\frac{1}{2}\\) is halfway between 0 and \\(-1\\)."
       ]
     ],
     "remember": "Divide the top by the bottom for a decimal, then multiply by 100 for a percentage.",
     "a": {
-      "q": "What is 2/5 written as a percentage?",
+      "q": "What is \\(\\frac{2}{5}\\) written as a percentage?",
       "opts": ["40%", "25%", "20%", "2.5%"],
-      "why": "2 ÷ 5 = 0.4, and 0.4 × 100 = 40%. 2.5% comes from two slips: dividing 5 by 2 instead of 2 by 5, then leaving out the multiply by 100 step. 25% is equal to 1/4, not 2/5.",
+      "why": "\\(2 \\div 5 = 0.4\\), and \\(0.4 \\times 100 = 40\\%\\). 2.5% comes from two slips: dividing 5 by 2 instead of 2 by 5, then leaving out the multiply by 100 step. 25% is equal to \\(\\frac{1}{4}\\), not \\(\\frac{2}{5}\\).",
       "clue": "Divide the top by the bottom, then multiply by 100."
     },
     "b": {
       "d": 3,
-      "q": "Jai wants to mark −3/4 on a number line. Where should he put it?",
+      "q": "Jai wants to mark \\(-\\frac{3}{4}\\) on a number line. Where should he put it?",
       "opts": [
-        "Three quarters of the way from 0 to −1",
+        "Three quarters of the way from 0 to \\(-1\\)",
         "Three quarters of the way from 0 to 1",
-        "One quarter of the way from 0 to −1",
-        "Three quarters of the way from −1 to −2"
+        "One quarter of the way from 0 to \\(-1\\)",
+        "Three quarters of the way from \\(-1\\) to \\(-2\\)"
       ],
-      "why": "A negative fraction sits to the left of 0, and 3/4 means three of four equal parts, so it is three quarters of the way from 0 to −1. Three quarters of the way to 1 would be the positive fraction 3/4. The point between −1 and −2 is further left than −1, so it is less than −1.",
+      "why": "A negative fraction sits to the left of 0, and \\(\\frac{3}{4}\\) means three of four equal parts, so it is three quarters of the way from 0 to \\(-1\\). Three quarters of the way to 1 would be the positive fraction \\(\\frac{3}{4}\\). The point between \\(-1\\) and \\(-2\\) is further left than \\(-1\\), so it is less than \\(-1\\).",
       "clue": "Decide which side of 0 first, then count the parts from 0."
     }
   },
@@ -15549,7 +15884,7 @@ MADE_BANKS.mat = {
       "To round to a given number of decimal places, find the last digit you are keeping. Then look at the digit right after it.",
       "If the next digit is 5 or more, round up: add 1 to the last digit you keep. If it is 4 or less, leave the last digit as it is. Then drop all the digits after it.",
       "Example: round 3.476 to 1 decimal place. The last digit kept is 4. The next digit is 7, so round up. The answer is 3.5.",
-      "To check an answer is reasonable, round each number to something easy first. 4.9 × 2.1 is close to 5 × 2 = 10, so an answer of 10.29 is reasonable but 102.9 is not."
+      "To check an answer is reasonable, round each number to something easy first. \\(4.9 \\times 2.1\\) is close to \\(5 \\times 2 = 10\\), so an answer of 10.29 is reasonable but 102.9 is not."
     ],
     "remember": "Look at the next digit: 5 or more rounds up, 4 or less stays.",
     "a": {
@@ -15560,14 +15895,14 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 3,
-      "q": "Ben's calculator shows 31.98 for 7.8 × 4.1. He checks it by rounding each number to the nearest whole number. Which check is correct?",
+      "q": "Ben's calculator shows 31.98 for \\(7.8 \\times 4.1\\). He checks it by rounding each number to the nearest whole number. Which check is correct?",
       "opts": [
-        "8 × 4 = 32, so 31.98 is reasonable",
-        "7 × 4 = 28, so 31.98 is reasonable",
-        "8 × 4 = 32, so 31.98 is too small",
-        "8 × 5 = 40, so 31.98 is too small"
+        "\\(8 \\times 4 = 32\\), so 31.98 is reasonable",
+        "\\(7 \\times 4 = 28\\), so 31.98 is reasonable",
+        "\\(8 \\times 4 = 32\\), so 31.98 is too small",
+        "\\(8 \\times 5 = 40\\), so 31.98 is too small"
       ],
-      "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is 8 × 4 = 32. The answer 31.98 is very close to 32, so it is reasonable. The check using 7 × 4 reaches the right conclusion with a wrong estimate, because the 8 after the 7 means 7.8 rounds up.",
+      "why": "7.8 rounds to 8 and 4.1 rounds to 4, so the estimate is \\(8 \\times 4 = 32\\). The answer 31.98 is very close to 32, so it is reasonable. The check using \\(7 \\times 4\\) reaches the right conclusion with a wrong estimate, because the 8 after the 7 means 7.8 rounds up.",
       "clue": "Round each number first, then compare the estimate with 31.98."
     }
   },
@@ -15620,23 +15955,23 @@ MADE_BANKS.mat = {
   "mat-percentage-quantity": {
     "title": "Percentage of a quantity",
     "card": [
-      "Per cent means out of 100. So 15% means 15/100, or 0.15.",
+      "Per cent means out of 100. So 15% means \\(\\frac{15}{100}\\), or 0.15.",
       "To find a percentage of an amount, change the percentage to a decimal or fraction. Then multiply by the amount.",
-      "Example: 15% of $80 = 0.15 × 80 = $12.",
-      "For 10%, you can divide by 10. For 50%, divide by 2. Add these parts to build other percentages, such as 30% = 3 × 10%."
+      "Example: to find 15% of $80, work out \\(0.15 \\times 80 = 12\\). So 15% of $80 is $12.",
+      "For 10%, you can divide by 10. For 50%, divide by 2. Add these parts to build other percentages, such as \\(30\\% = 3 \\times 10\\%\\)."
     ],
     "remember": "Turn the percentage into a decimal or fraction, then multiply by the amount.",
     "a": {
       "q": "What is 20% of 60 kg?",
       "opts": ["12 kg", "3 kg", "20 kg", "120 kg"],
-      "why": "20% = 0.2, and 0.2 × 60 = 12 kg. Another way: 10% of 60 is 6, so 20% is 12. 3 kg comes from dividing 60 by 20, which is a different calculation.",
+      "why": "\\(20\\% = 0.2\\), and \\(0.2 \\times 60 = 12\\), so the answer is 12 kg. Another way: 10% of 60 is 6, so 20% is 12. 3 kg comes from dividing 60 by 20, which is a different calculation.",
       "clue": "Write 20% as a decimal, then multiply."
     },
     "b": {
       "d": 3,
       "q": "Ravi has $240 and spends 35% of it on a bike helmet. How much does the helmet cost?",
       "opts": ["$84", "$8.40", "$205", "$156"],
-      "why": "35% = 0.35, and 0.35 × 240 = $84. Check: 10% is $24, so 30% is $72 and 5% is $12, giving $84. $156 is what is left after spending, not the cost of the helmet.",
+      "why": "\\(35\\% = 0.35\\), and \\(0.35 \\times 240 = 84\\), so the helmet costs $84. Check: 10% is $24, so 30% is $72 and 5% is $12, giving $84. $156 is what is left after spending, not the cost of the helmet.",
       "clue": "The question asks for the amount spent, not the amount left."
     }
   },
@@ -15713,22 +16048,22 @@ MADE_BANKS.mat = {
     "title": "Dividing a quantity in a ratio",
     "card": [
       "To share an amount in a ratio, work in three steps: add the parts, find one part, then multiply.",
-      "Step 1: add the parts of the ratio to get the total number of parts. For 2:3, there are 2 + 3 = 5 parts.",
-      "Step 2: divide the amount by the total parts to find one part. For $60, one part is $60 ÷ 5 = $12.",
-      "Step 3: multiply one part by each number in the ratio. 2 × $12 = $24 and 3 × $12 = $36. Check: $24 + $36 = $60."
+      "Step 1: add the parts of the ratio to get the total number of parts. For 2:3, there are \\(2 + 3 = 5\\) parts.",
+      "Step 2: divide the amount by the total parts to find one part. For $60, one part is \\(\\$60 \\div 5 = \\$12\\).",
+      "Step 3: multiply one part by each number in the ratio. \\(2 \\times \\$12 = \\$24\\) and \\(3 \\times \\$12 = \\$36\\). Check: \\(\\$24 + \\$36 = \\$60\\)."
     ],
     "remember": "Add the parts, divide to find one part, then multiply.",
     "a": {
       "q": "$40 is shared in the ratio 1:3. What is the larger share?",
       "opts": ["$30", "$10", "$13", "$120"],
-      "why": "There are 1 + 3 = 4 parts, so one part is $40 ÷ 4 = $10. The larger share is 3 × $10 = $30. The answer $10 is the smaller share, not the larger one.",
+      "why": "There are \\(1 + 3 = 4\\) parts, so one part is \\(\\$40 \\div 4 = \\$10\\). The larger share is \\(3 \\times \\$10 = \\$30\\). The answer $10 is the smaller share, not the larger one.",
       "clue": "Add the parts first, then divide $40 by the total."
     },
     "b": {
       "d": 3,
       "q": "Priya and Sam run a stall and share a $350 profit in the ratio 3:4. How much more does Sam get than Priya?",
       "opts": ["$50", "$150", "$200", "$100"],
-      "why": "There are 3 + 4 = 7 parts, so one part is $350 ÷ 7 = $50. Priya gets $150 and Sam gets $200, so Sam gets $50 more. The amount $200 is tempting, but it is Sam's share, not the difference.",
+      "why": "There are \\(3 + 4 = 7\\) parts, so one part is \\(\\$350 \\div 7 = \\$50\\). Priya gets $150 and Sam gets $200, so Sam gets $50 more. The amount $200 is tempting, but it is Sam's share, not the difference.",
       "clue": "Find both shares, then subtract."
     }
   },
@@ -15738,26 +16073,26 @@ MADE_BANKS.mat = {
       "A percentage discount lowers a price. A percentage increase raises it. Both are a percentage of the original price.",
       [
         "Discount",
-        "find the percentage of the price, then subtract it. For 20% off $50: 20% of $50 is $10, so the sale price is $50 − $10 = $40."
+        "find the percentage of the price, then subtract it. For 20% off $50: 20% of $50 is $10, so the sale price is \\(\\$50 - \\$10 = \\$40\\)."
       ],
       [
         "Increase",
         "find the percentage of the price, then add it. GST is an increase of 10%. On $30, 10% is $3, so the price with GST is $33."
       ],
-      "To find 10% divide by 10. To find 5% halve the 10%. Add or subtract the amounts to build other percentages, such as 15% = 10% + 5%."
+      "To find 10% divide by 10. To find 5% halve the 10%. Add or subtract the amounts to build other percentages, such as \\(15\\% = 10\\% + 5\\%\\)."
     ],
     "remember": "Find the percentage of the original price, then take it off for a discount or add it on for an increase.",
     "a": {
       "q": "A skateboard costs $80. It is on sale for 25% off. What is the sale price?",
       "opts": ["$60", "$20", "$100", "$55"],
-      "why": "25% of $80 is $20, and a discount is taken off, so the sale price is $80 − $20 = $60. The answer $20 is the amount saved, not the price to pay.",
+      "why": "25% of $80 is $20, and a discount is taken off, so the sale price is \\(\\$80 - \\$20 = \\$60\\). The answer $20 is the amount saved, not the price to pay.",
       "clue": "Subtract the discount from the original price."
     },
     "b": {
       "d": 3,
       "q": "A bike helmet at a shop in Perth costs $60 before GST. GST of 10% is added. What is the price with GST?",
       "opts": ["$66", "$6", "$54", "$70"],
-      "why": "10% of $60 is $6. GST is added, so the price is $60 + $6 = $66. The answer $54 comes from taking the GST off instead of adding it.",
+      "why": "10% of $60 is $6. GST is added, so the price is \\(\\$60 + \\$6 = \\$66\\). The answer $54 comes from taking the GST off instead of adding it.",
       "clue": "Find 10% by dividing by 10, then add it on."
     }
   },
@@ -15813,54 +16148,54 @@ MADE_BANKS.mat = {
       "An equation says two sides are equal. To solve it, find the value of the letter that makes it true.",
       "Undo the operation with its inverse. Addition and subtraction undo each other. Multiplication and division undo each other.",
       "Do the same thing to both sides, so the equation stays balanced.",
-      "Example: x + 7 = 12. Subtract 7 from both sides to get x = 5. Example: 4x = 28. Divide both sides by 4 to get x = 7."
+      "Example: \\(x + 7 = 12\\). Subtract 7 from both sides to get \\(x = 5\\). Example: \\(4x = 28\\). Divide both sides by 4 to get \\(x = 7\\)."
     ],
     "remember": "Use the inverse operation on both sides to get the letter alone.",
     "a": {
-      "q": "What is the first step to solve n − 9 = 15?",
+      "q": "What is the first step to solve \\(n - 9 = 15\\)?",
       "opts": ["Add 9 to both sides", "Subtract 9 from both sides", "Add 15 to both sides", "Divide both sides by 9"],
-      "why": "The equation subtracts 9 from n, so the inverse is to add 9 to both sides. This gives n = 24. Subtracting 9 again would make the left side n − 18, not n.",
+      "why": "The equation subtracts 9 from \\(n\\), so the inverse is to add 9 to both sides. This gives \\(n = 24\\). Subtracting 9 again would make the left side \\(n - 18\\), not \\(n\\).",
       "clue": "Which operation undoes subtracting?"
     },
     "b": {
       "d": 2,
-      "q": "Priya shares her stickers equally among 6 friends, and each friend gets 8. The equation is s ÷ 6 = 8. How many stickers does Priya have?",
+      "q": "Priya shares her stickers equally among 6 friends, and each friend gets 8. The equation is \\(s \\div 6 = 8\\). How many stickers does Priya have?",
       "opts": ["48", "14", "2", "1.5"],
-      "why": "Division is undone by multiplying both sides by 6, so s = 8 × 6 = 48. Adding 6 to 8 to get 14 uses the wrong inverse operation.",
+      "why": "Division is undone by multiplying both sides by 6, so \\(s = 8 \\times 6 = 48\\). Adding 6 to 8 to get 14 uses the wrong inverse operation.",
       "clue": "Undo the dividing by 6 on both sides."
     }
   },
   "mat-plotting-points-cartesian-plane": {
     "title": "Plotting points on the Cartesian plane",
     "card": [
-      "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin (0, 0). The axes split the plane into four quadrants.",
-      "A point is written as (x, y). Start at the origin. Move across first by x: right if positive, left if negative. Then move up or down by y: up if positive, down if negative.",
-      "Example: (−3, 2) means 3 units left, then 2 units up. The order matters, so (2, −3) is a different point. Any point on the x-axis has y = 0.",
-      "The rule y = x + 1 gives the points (0, 1), (1, 2) and (2, 3). As x goes up by 1, y goes up by the same amount each time (here, 1), so the points sit on a straight line."
+      "The Cartesian plane has a horizontal x-axis and a vertical y-axis. They cross at the origin \\((0, 0)\\). The axes split the plane into four quadrants.",
+      "A point is written as \\((x, y)\\). Start at the origin. Move across first by \\(x\\): right if positive, left if negative. Then move up or down by \\(y\\): up if positive, down if negative.",
+      "Example: \\((-3, 2)\\) means 3 units left, then 2 units up. The order matters, so \\((2, -3)\\) is a different point. Any point on the x-axis has \\(y = 0\\).",
+      "The rule \\(y = x + 1\\) gives the points \\((0, 1)\\), \\((1, 2)\\) and \\((2, 3)\\). As \\(x\\) goes up by 1, \\(y\\) goes up by the same amount each time (here, 1), so the points sit on a straight line."
     ],
-    "remember": "Write (x, y): across first, then up or down.",
+    "remember": "Write \\((x, y)\\): across first, then up or down.",
     "a": {
-      "q": "Starting at the origin, how do you reach the point (4, −2)?",
+      "q": "Starting at the origin, how do you reach the point \\((4, -2)\\)?",
       "opts": [
         "4 units right, then 2 units down",
         "4 units left, then 2 units down",
         "2 units right, then 4 units down",
         "4 units right, then 2 units up"
       ],
-      "why": "The x-value 4 is positive, so move 4 units right. The y-value −2 is negative, so move 2 units down. Moving 2 units up would need a y-value of positive 2.",
-      "clue": "Look at the sign of each number, x first."
+      "why": "The x-value 4 is positive, so move 4 units right. The y-value \\(-2\\) is negative, so move 2 units down. Moving 2 units up would need a y-value of positive 2.",
+      "clue": "Look at the sign of each number, \\(x\\) first."
     },
     "b": {
       "d": 3,
-      "q": "Sam plots the points (1, 2), (2, 4) and (3, 6), which come from the rule y = 2x. What do the plotted points form?",
+      "q": "Sam plots the points \\((1, 2)\\), \\((2, 4)\\) and \\((3, 6)\\), which come from the rule \\(y = 2x\\). What do the plotted points form?",
       "opts": [
         "They lie on a straight line",
         "They lie on a curve",
         "They lie on the x-axis",
         "They are scattered with no pattern"
       ],
-      "why": "Each time x goes up by 1, y goes up by 2, the same amount each time, so the points form a straight line. They are not on the x-axis, because none of the y-values is 0.",
-      "clue": "Check how much y changes each time x goes up by 1."
+      "why": "Each time \\(x\\) goes up by 1, \\(y\\) goes up by 2, the same amount each time, so the points form a straight line. They are not on the x-axis, because none of the y-values is 0.",
+      "clue": "Check how much \\(y\\) changes each time \\(x\\) goes up by 1."
     }
   },
   "mat-area-triangles-parallelograms": {
@@ -15956,14 +16291,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "A transversal crosses two parallel lines. One angle at the top crossing is 70°. What is the alternate angle at the lower crossing?",
       "opts": ["70°", "110°", "20°", "180°"],
-      "why": "Alternate angles (Z shape) between parallel lines are equal, so the angle is 70°. 110° is 180° − 70°, which is not the rule for alternate angles.",
+      "why": "Alternate angles (Z shape) between parallel lines are equal, so the angle is 70°. 110° is \\(180^{\\circ} - 70^{\\circ}\\), which is not the rule for alternate angles.",
       "clue": "Trace a Z shape. Are the two angles equal or different?"
     },
     "b": {
       "d": 2,
       "q": "Two parallel fence rails are crossed by a diagonal brace. At the top rail, the angle is 48°. What is the corresponding angle at the bottom rail?",
       "opts": ["48°", "132°", "42°", "96°"],
-      "why": "When a transversal crosses parallel lines, corresponding angles (F shape) are equal, so the angle is 48°. 132° is 180° − 48°, which is not the rule for corresponding angles.",
+      "why": "When a transversal crosses parallel lines, corresponding angles (F shape) are equal, so the angle is 48°. 132° is \\(180^{\\circ} - 48^{\\circ}\\), which is not the rule for corresponding angles.",
       "clue": "Corresponding angles sit in matching positions, like an F."
     }
   },
@@ -16000,21 +16335,21 @@ MADE_BANKS.mat = {
     "card": [
       "The three angles inside any triangle add to 180°. This is true for every triangle, whatever its shape or size.",
       "To find a missing angle, add the two angles you know. Then subtract that total from 180°.",
-      "Example: a triangle has angles of 50° and 65°. Add them: 50° + 65° = 115°. The third angle is 180° − 115° = 65°.",
+      "Example: a triangle has angles of 50° and 65°. Add them: \\(50^{\\circ} + 65^{\\circ} = 115^{\\circ}\\). The third angle is \\(180^{\\circ} - 115^{\\circ} = 65^{\\circ}\\).",
       "A right angle is 90°. If a triangle has a right angle, the other two angles add to 90°."
     ],
     "remember": "Add the two known angles, then take the total away from 180°.",
     "a": {
       "q": "A triangle has angles of 70° and 45°. What is the third angle?",
       "opts": ["65°", "115°", "135°", "110°"],
-      "why": "70° + 45° = 115°, and 180° − 115° = 65°. The answer 115° is wrong because it is only the sum of the two known angles, and the step of subtracting from 180° was skipped.",
+      "why": "\\(70^{\\circ} + 45^{\\circ} = 115^{\\circ}\\), and \\(180^{\\circ} - 115^{\\circ} = 65^{\\circ}\\). The answer 115° is wrong because it is only the sum of the two known angles, and the step of subtracting from 180° was skipped.",
       "clue": "Add the two angles you know, then subtract from 180°."
     },
     "b": {
       "d": 3,
       "q": "Mia cuts a triangle of card in Hobart. One angle is a right angle and another is 38°. What is the size of the third angle?",
       "opts": ["52°", "142°", "128°", "90°"],
-      "why": "A right angle is 90°, so 90° + 38° = 128°. Then 180° − 128° = 52°. The answer 142° comes from subtracting 38° from 180° and forgetting the right angle.",
+      "why": "A right angle is 90°, so \\(90^{\\circ} + 38^{\\circ} = 128^{\\circ}\\). Then \\(180^{\\circ} - 128^{\\circ} = 52^{\\circ}\\). The answer 142° comes from subtracting 38° from 180° and forgetting the right angle.",
       "clue": "A right angle is 90°, so use it as one of the known angles."
     }
   },
@@ -16137,42 +16472,42 @@ MADE_BANKS.mat = {
       "A transformation moves a shape on the number plane. In a translation and a reflection, the shape keeps its size and its shape.",
       [
         "Translation",
-        "slides every point the same distance in the same direction. Right adds to x and left subtracts from x. Up adds to y and down subtracts from y."
+        "slides every point the same distance in the same direction. Right adds to \\(x\\) and left subtracts from \\(x\\). Up adds to \\(y\\) and down subtracts from \\(y\\)."
       ],
       [
         "Reflection",
-        "flips a shape over a mirror line. In the x-axis, (x, y) becomes (x, −y): x stays the same and the sign of y changes."
+        "flips a shape over a mirror line. In the x-axis, \\((x, y)\\) becomes \\((x, -y)\\): \\(x\\) stays the same and the sign of \\(y\\) changes."
       ],
-      "Example: the point (4, 5) moved 3 right and 2 down is (4 + 3, 5 − 2) = (7, 3). Reflected in the x-axis, (4, 5) becomes (4, −5)."
+      "Example: the point \\((4, 5)\\) moved 3 right and 2 down is \\((4 + 3, 5 - 2) = (7, 3)\\). Reflected in the x-axis, \\((4, 5)\\) becomes \\((4, -5)\\)."
     ],
-    "remember": "Translation: right or up adds, left or down subtracts. Reflection in the x-axis: only the sign of y changes.",
+    "remember": "Translation: right or up adds, left or down subtracts. Reflection in the x-axis: only the sign of \\(y\\) changes.",
     "a": {
-      "q": "The point (2, 6) is reflected in the x-axis. What is its image?",
-      "opts": ["(2, −6)", "(−2, 6)", "(−2, −6)", "(6, 2)"],
-      "why": "A reflection in the x-axis keeps x the same and changes the sign of y, so (2, 6) becomes (2, −6). (−2, 6) is tempting, but it changes the sign of x instead, and x should stay the same.",
+      "q": "The point \\((2, 6)\\) is reflected in the x-axis. What is its image?",
+      "opts": ["\\((2, -6)\\)", "\\((-2, 6)\\)", "\\((-2, -6)\\)", "\\((6, 2)\\)"],
+      "why": "A reflection in the x-axis keeps \\(x\\) the same and changes the sign of \\(y\\), so \\((2, 6)\\) becomes \\((2, -6)\\). \\((-2, 6)\\) is tempting, but it changes the sign of \\(x\\) instead, and \\(x\\) should stay the same.",
       "clue": "Which coordinate stays the same in the x-axis?"
     },
     "b": {
       "d": 2,
-      "q": "Triangle vertex A is at (1, 5). The triangle is translated 4 right and 3 down. Where is A now?",
-      "opts": ["(5, 2)", "(−3, 8)", "(5, 8)", "(−3, 2)"],
-      "why": "Right 4 adds 4 to x: 1 + 4 = 5. Down 3 subtracts 3 from y: 5 − 3 = 2. So A is at (5, 2). (5, 8) is tempting, but it moves the point up instead of down.",
-      "clue": "Right changes x. Down changes y."
+      "q": "Triangle vertex A is at \\((1, 5)\\). The triangle is translated 4 right and 3 down. Where is A now?",
+      "opts": ["\\((5, 2)\\)", "\\((-3, 8)\\)", "\\((5, 8)\\)", "\\((-3, 2)\\)"],
+      "why": "Right 4 adds 4 to \\(x\\): \\(1 + 4 = 5\\). Down 3 subtracts 3 from \\(y\\): \\(5 - 3 = 2\\). So A is at \\((5, 2)\\). \\((5, 8)\\) is tempting, but it moves the point up instead of down.",
+      "clue": "Right changes \\(x\\). Down changes \\(y\\)."
     }
   },
   "mat-rotations-about-point": {
     "title": "Rotations about a point",
     "card": [
       "A rotation turns a shape about a fixed point, called the centre of rotation. The shape keeps its size and shape. Only its position and direction change.",
-      "To describe a rotation, give the angle, the direction (clockwise or anticlockwise) and the centre. For example: 90° clockwise about the origin (0, 0).",
+      "To describe a rotation, give the angle, the direction (clockwise or anticlockwise) and the centre. For example: 90° clockwise about the origin \\((0, 0)\\).",
       "The centre does not move. Every other point stays the same distance from the centre and turns through the same angle. A 180° turn is a half turn, and it looks the same in either direction.",
-      "Example: the point (3, 0) is 3 units right of the origin. Turn it 90° clockwise about the origin. It moves to 3 units below the origin, which is (0, −3)."
+      "Example: the point \\((3, 0)\\) is 3 units right of the origin. Turn it 90° clockwise about the origin. It moves to 3 units below the origin, which is \\((0, -3)\\)."
     ],
     "remember": "A rotation needs an angle, a direction and a centre. The centre stays still.",
     "a": {
-      "q": "Point P is at (0, 4). It is rotated 90° clockwise about the origin. Where does P end up?",
-      "opts": ["(4, 0)", "(−4, 0)", "(0, −4)", "(4, 4)"],
-      "why": "P is 4 units above the origin. A quarter turn clockwise moves it to 4 units right of the origin, which is (4, 0). (−4, 0) is the result of turning anticlockwise instead.",
+      "q": "Point P is at \\((0, 4)\\). It is rotated 90° clockwise about the origin. Where does P end up?",
+      "opts": ["\\((4, 0)\\)", "\\((-4, 0)\\)", "\\((0, -4)\\)", "\\((4, 4)\\)"],
+      "why": "P is 4 units above the origin. A quarter turn clockwise moves it to 4 units right of the origin, which is \\((4, 0)\\). \\((-4, 0)\\) is the result of turning anticlockwise instead.",
       "clue": "Clockwise moves the top of a clock face towards the right."
     },
     "b": {
@@ -16261,21 +16596,21 @@ MADE_BANKS.mat = {
       ["Mode", "The value that appears most often."],
       [
         "Range",
-        "Highest value minus lowest value. Example: for 3, 5, 5, 6, 11 the mean is 30 ÷ 5 = 6, the median is 5, the mode is 5 and the range is 11 − 3 = 8."
+        "Highest value minus lowest value. Example: for 3, 5, 5, 6, 11 the mean is \\(30 \\div 5 = 6\\), the median is 5, the mode is 5 and the range is \\(11 - 3 = 8\\)."
       ]
     ],
     "remember": "Mean shares the total out evenly. Median is the middle. Mode is the most common. Range is the spread.",
     "a": {
       "q": "Sam scored 4, 7, 7, 9 and 13 in five quizzes. What is the mean score?",
       "opts": ["8", "7", "9", "10"],
-      "why": "The total is 4 + 7 + 7 + 9 + 13 = 40, and 40 ÷ 5 = 8. The answer 7 is the median and the mode, not the mean.",
+      "why": "The total is \\(4 + 7 + 7 + 9 + 13 = 40\\), and \\(40 \\div 5 = 8\\). The answer 7 is the median and the mode, not the mean.",
       "clue": "Add all five scores, then divide by 5."
     },
     "b": {
       "d": 3,
       "q": "Jess counted the pencils in six pencil cases: 11, 2, 9, 16, 4, 6. What is the median number of pencils?",
       "opts": ["7.5", "8", "12.5", "6"],
-      "why": "In order the values are 2, 4, 6, 9, 11, 16. The two middle values are 6 and 9, and (6 + 9) ÷ 2 = 7.5. The answer 8 is tempting but it is the mean, 48 ÷ 6, and 12.5 comes from using the middle of the list before putting it in order.",
+      "why": "In order the values are 2, 4, 6, 9, 11, 16. The two middle values are 6 and 9, and \\((6 + 9) \\div 2 = 7.5\\). The answer 8 is tempting but it is the mean, \\(48 \\div 6\\), and 12.5 comes from using the middle of the list before putting it in order.",
       "clue": "Put the values in order first, then find the middle two."
     }
   },
@@ -16291,7 +16626,7 @@ MADE_BANKS.mat = {
         "Median",
         "an outlier is just one value at one end of the data, so it moves the median a little or not at all."
       ],
-      "Example: 3, 4, 4, 5, 39. The mean is 55 ÷ 5 = 11 and the median is 4. Most values are near 4, so the median describes the centre better here."
+      "Example: 3, 4, 4, 5, 39. The mean is \\(55 \\div 5 = 11\\) and the median is 4. Most values are near 4, so the median describes the centre better here."
     ],
     "remember": "An outlier drags the mean towards it, so with extreme values the median often describes the centre better.",
     "a": {
@@ -16314,7 +16649,7 @@ MADE_BANKS.mat = {
         "The mean and the median both rise by the same amount",
         "The mean stays the same and the median rises a lot"
       ],
-      "why": "Before: the total is 55, so the mean is 55 ÷ 5 = $11, and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1.",
+      "why": "Before: the total is 55, so the mean is \\(55 \\div 5 = \\$11\\), and in order 5, 10, 12, 13, 15 the median is $12. After: the total is 110, so the mean is $22, and in order 10, 12, 13, 15, 60 the median is $13. The mean rises by $11 but the median rises by only $1.",
       "clue": "Put the values in order and find both centres before and after."
     }
   },
@@ -16442,28 +16777,33 @@ MADE_BANKS.mat = {
     "title": "Experiments and theory",
     "card": [
       "In a chance experiment, the results vary. Two sets of 10 coin tosses can give different numbers of heads.",
-      "We can compare the relative frequency from our trials with the theoretical probability. For heads on a fair coin, the theoretical probability is 1/2.",
+      "We can compare the relative frequency from our trials with the theoretical probability. For heads on a fair coin, the theoretical probability is \\(\\frac{1}{2}\\).",
       "With only a few trials, the relative frequency can be far from the theoretical probability. For example, 10 tosses might give mostly heads. That alone does not show the coin is unfair.",
       "With many trials, the relative frequency usually gets closer to the theoretical probability. It need not match it exactly."
     ],
     "remember": "Few trials can be far off. Many trials usually land close to the theory.",
     "a": {
       "q": "Sam tosses a fair coin many times. What is likely to happen to the relative frequency of heads as the number of tosses grows?",
-      "opts": ["It gets closer to 1/2", "It gets closer to 1", "It becomes exactly 1/2 every time", "It moves away from 1/2"],
-      "why": "With more trials, the relative frequency usually gets closer to the theoretical probability of 1/2. It need not equal 1/2 exactly, so the option saying it becomes exactly 1/2 every time is wrong.",
+      "opts": [
+        "It gets closer to \\(\\frac{1}{2}\\)",
+        "It gets closer to 1",
+        "It becomes exactly \\(\\frac{1}{2}\\) every time",
+        "It moves away from \\(\\frac{1}{2}\\)"
+      ],
+      "why": "With more trials, the relative frequency usually gets closer to the theoretical probability of \\(\\frac{1}{2}\\). It need not equal \\(\\frac{1}{2}\\) exactly, so the option saying it becomes exactly \\(\\frac{1}{2}\\) every time is wrong.",
       "clue": "Think about what the theoretical probability of heads is."
     },
     "b": {
       "d": 3,
       "q": "Priya spins a fair spinner with 4 equal sections, one red. Her relative frequency of red is 0.4 after 20 spins and 0.24 after 400 spins. Which statement is correct?",
       "opts": [
-        "The 400 spins are closer to the 1/4 theory",
-        "The 20 spins are closer to the 1/4 theory",
-        "Both are equally close to the 1/4 theory",
+        "The 400 spins are closer to the \\(\\frac{1}{4}\\) theory",
+        "The 20 spins are closer to the \\(\\frac{1}{4}\\) theory",
+        "Both are equally close to the \\(\\frac{1}{4}\\) theory",
         "The 20 spins show the spinner is not fair"
       ],
-      "why": "The theoretical probability is 1/4 = 0.25. The 400 spins give 0.24, only 0.01 away, while the 20 spins give 0.4, which is 0.15 away. A result far off in a few trials is not enough to say the spinner is unfair.",
-      "clue": "Compare each result with 1/4 written as a decimal."
+      "why": "The theoretical probability is \\(\\frac{1}{4} = 0.25\\). The 400 spins give 0.24, only 0.01 away, while the 20 spins give 0.4, which is 0.15 away. A result far off in a few trials is not enough to say the spinner is unfair.",
+      "clue": "Compare each result with \\(\\frac{1}{4}\\) written as a decimal."
     }
   },
   "mat-rational-irrational-numbers": {
@@ -16500,52 +16840,52 @@ MADE_BANKS.mat = {
   "mat-multiplying-dividing-powers": {
     "title": "Multiplying and dividing powers",
     "card": [
-      "A power has a base and an index. In 3⁴, the base is 3 and the index is 4, so 3⁴ = 3 × 3 × 3 × 3.",
+      "A power has a base and an index. In \\(3^{4}\\), the base is 3 and the index is 4, so \\(3^{4} = 3 \\times 3 \\times 3 \\times 3\\).",
       [
         "Multiply",
-        "when the bases are the same, add the indices. 3⁴ × 3² = 3⁽⁴⁺²⁾ = 3⁶. This works because 3⁴ has four 3s and 3² has two more, so there are six 3s in all."
+        "when the bases are the same, add the indices. \\(3^{4} \\times 3^{2} = 3^{4 + 2} = 3^{6}\\). This works because \\(3^{4}\\) has four 3s and \\(3^{2}\\) has two more, so there are six 3s in all."
       ],
       [
         "Divide",
-        "when the bases are the same, subtract the indices. 5⁷ ÷ 5³ = 5⁽⁷⁻³⁾ = 5⁴. Three of the seven 5s cancel with the three 5s below."
+        "when the bases are the same, subtract the indices. \\(5^{7} \\div 5^{3} = 5^{7 - 3} = 5^{4}\\). Three of the seven 5s cancel with the three 5s below."
       ],
-      "Only the indices change. The base stays the same. The rules need the same base, so they do not apply to 2⁴ × 3² as it stands. If there are brackets, work them out first."
+      "Only the indices change. The base stays the same. The rules need the same base, so they do not apply to \\(2^{4} \\times 3^{2}\\) as it stands. If there are brackets, work them out first."
     ],
     "remember": "Same base: add the indices to multiply, subtract them to divide, and keep the base.",
     "a": {
-      "q": "Which is 7⁵ × 7³ written as a single power?",
-      "opts": ["7⁸", "7²", "7¹⁵", "49⁸"],
-      "why": "Multiplying powers with the same base adds the indices: 5 + 3 = 8, so the answer is 7⁸. 7¹⁵ is tempting, but it comes from multiplying the indices, which is not the rule here.",
+      "q": "Which is \\(7^{5} \\times 7^{3}\\) written as a single power?",
+      "opts": ["\\(7^{8}\\)", "\\(7^{2}\\)", "\\(7^{15}\\)", "\\(49^{8}\\)"],
+      "why": "Multiplying powers with the same base adds the indices: \\(5 + 3 = 8\\), so the answer is \\(7^{8}\\). \\(7^{15}\\) is tempting, but it comes from multiplying the indices, which is not the rule here.",
       "clue": "The base stays the same. What do you do to the indices?"
     },
     "b": {
       "d": 3,
-      "q": "Which is (2⁵ × 2⁶) ÷ 2³ written as a single power?",
-      "opts": ["2⁸", "2¹⁴", "2²⁷", "4⁸"],
-      "why": "Do the brackets first: 2⁵ × 2⁶ = 2¹¹. Then 2¹¹ ÷ 2³ = 2⁸, as 11 − 3 = 8. 2¹⁴ is tempting, but it comes from adding the 3 when dividing means subtracting it.",
+      "q": "Which is \\((2^{5} \\times 2^{6}) \\div 2^{3}\\) written as a single power?",
+      "opts": ["\\(2^{8}\\)", "\\(2^{14}\\)", "\\(2^{27}\\)", "\\(4^{8}\\)"],
+      "why": "Do the brackets first: \\(2^{5} \\times 2^{6} = 2^{11}\\). Then \\(2^{11} \\div 2^{3} = 2^{8}\\), as \\(11 - 3 = 8\\). \\(2^{14}\\) is tempting, but it comes from adding the 3 when dividing means subtracting it.",
       "clue": "Multiply means add the indices. Divide means subtract them."
     }
   },
   "mat-power-power-zero-index": {
     "title": "Power of a power and the zero index",
     "card": [
-      "A power of a power is a power raised to another power. To simplify it, multiply the indices: (a^m)^n = a^(m×n).",
-      "Worked example: (2³)² = 2³ × 2³ = 2⁶. The indices 3 × 2 give 6. Adding them would give 5, which is wrong here.",
-      "Any non-zero number to the power 0 equals 1. So 7⁰ = 1 and (−4)⁰ = 1.",
-      "Put the two together: (5⁴)⁰ = 5⁰ = 1, because 4 × 0 = 0."
+      "A power of a power is a power raised to another power. To simplify it, multiply the indices: \\((a^{m})^{n} = a^{m \\times n}\\).",
+      "Worked example: \\((2^{3})^{2} = 2^{3} \\times 2^{3} = 2^{6}\\). The indices \\(3 \\times 2\\) give 6. Adding them would give 5, which is wrong here.",
+      "Any non-zero number to the power 0 equals 1. So \\(7^{0} = 1\\) and \\((-4)^{0} = 1\\).",
+      "Put the two together: \\((5^{4})^{0} = 5^{0} = 1\\), because \\(4 \\times 0 = 0\\)."
     ],
     "remember": "Power of a power: multiply the indices. Non-zero number to the power 0: 1.",
     "a": {
-      "q": "What is (3²)⁴ written as a single power of 3?",
-      "opts": ["3⁸", "3⁶", "3²", "3¹⁶"],
-      "why": "Multiply the indices: 2 × 4 = 8, so the answer is 3⁸. Adding them gives 3⁶, which is the rule for multiplying powers with the same base, not a power of a power.",
+      "q": "What is \\((3^{2})^{4}\\) written as a single power of 3?",
+      "opts": ["\\(3^{8}\\)", "\\(3^{6}\\)", "\\(3^{2}\\)", "\\(3^{16}\\)"],
+      "why": "Multiply the indices: \\(2 \\times 4 = 8\\), so the answer is \\(3^{8}\\). Adding them gives \\(3^{6}\\), which is the rule for multiplying powers with the same base, not a power of a power.",
       "clue": "Which operation joins the two indices?"
     },
     "b": {
       "d": 3,
-      "q": "What is the value of 6⁰ + (2³)⁰ + 5?",
+      "q": "What is the value of \\(6^{0} + (2^{3})^{0} + 5\\)?",
       "opts": ["7", "5", "6", "11"],
-      "why": "6⁰ = 1 and (2³)⁰ = 2⁰ = 1, so the total is 1 + 1 + 5 = 7. Reading a zero index as 0 would give 5, which is the tempting mistake.",
+      "why": "\\(6^{0} = 1\\) and \\((2^{3})^{0} = 2^{0} = 1\\), so the total is \\(1 + 1 + 5 = 7\\). Reading a zero index as 0 would give 5, which is the tempting mistake.",
       "clue": "Each number to the power 0 is worth the same amount."
     }
   },
@@ -16609,30 +16949,30 @@ MADE_BANKS.mat = {
       "The sign rules for integers work for fractions and decimals too. Same signs give a positive answer. Different signs give a negative answer.",
       [
         "Fractions",
-        "decide the sign first. Then multiply the tops, multiply the bottoms and simplify if you can. For example, −1/2 × 3/4 = −3/8, because the signs are different."
+        "decide the sign first. Then multiply the tops, multiply the bottoms and simplify if you can. For example, \\(-\\frac{1}{2} \\times \\frac{3}{4} = -\\frac{3}{8}\\), because the signs are different."
       ],
       [
         "Decimals",
-        "decide the sign first, then multiply as usual. For example, −0.5 × −0.4 = 0.2, because the signs are the same."
+        "decide the sign first, then multiply as usual. For example, \\(-0.5 \\times -0.4 = 0.2\\), because the signs are the same."
       ],
       [
         "Division",
-        "the same sign rules apply. For example, −1.2 ÷ 0.3 = −4, because the signs are different and 12 ÷ 3 = 4."
+        "the same sign rules apply. For example, \\(-1.2 \\div 0.3 = -4\\), because the signs are different and \\(12 \\div 3 = 4\\)."
       ]
     ],
     "remember": "Fractions and decimals follow the same sign rules as integers.",
     "a": {
-      "q": "What is −2/3 × −3/5?",
-      "opts": ["2/5", "−2/5", "10/9", "−10/9"],
-      "why": "Both fractions are negative, so the answer is positive. 2 × 3 = 6 and 3 × 5 = 15, so the answer is 6/15, which simplifies to 2/5. The option −2/5 has the wrong sign, and 10/9 comes from dividing instead of multiplying.",
+      "q": "What is \\(-\\frac{2}{3} \\times -\\frac{3}{5}\\)?",
+      "opts": ["\\(\\frac{2}{5}\\)", "\\(-\\frac{2}{5}\\)", "\\(\\frac{10}{9}\\)", "\\(-\\frac{10}{9}\\)"],
+      "why": "Both fractions are negative, so the answer is positive. \\(2 \\times 3 = 6\\) and \\(3 \\times 5 = 15\\), so the answer is \\(\\frac{6}{15}\\), which simplifies to \\(\\frac{2}{5}\\). The option \\(-\\frac{2}{5}\\) has the wrong sign, and \\(\\frac{10}{9}\\) comes from dividing instead of multiplying.",
       "clue": "Check the signs, then multiply tops and bottoms."
     },
     "b": {
       "d": 3,
-      "q": "What is −3.6 ÷ 0.9?",
-      "opts": ["−4", "4", "−0.4", "0.4"],
-      "why": "One number is negative and one is positive, so the answer is negative. 3.6 ÷ 0.9 is the same as 36 ÷ 9 = 4, so the answer is −4. The answer 4 has the wrong sign, and −0.4 puts the decimal point in the wrong place.",
-      "clue": "Check the signs, then work out 36 ÷ 9."
+      "q": "What is \\(-3.6 \\div 0.9\\)?",
+      "opts": ["\\(-4\\)", "4", "\\(-0.4\\)", "0.4"],
+      "why": "One number is negative and one is positive, so the answer is negative. \\(3.6 \\div 0.9\\) is the same as \\(36 \\div 9 = 4\\), so the answer is \\(-4\\). The answer 4 has the wrong sign, and \\(-0.4\\) puts the decimal point in the wrong place.",
+      "clue": "Check the signs, then work out \\(36 \\div 9\\)."
     }
   },
   "mat-percentage-increase-decrease-2-ac": {
@@ -16693,23 +17033,23 @@ MADE_BANKS.mat = {
   "mat-collecting-like-terms": {
     "title": "Collecting like terms",
     "card": [
-      "A term is a number, a variable, or numbers and variables multiplied together, such as 7, y, 3x, 3x² or ab. The number in front of the variable part is its coefficient.",
-      "Like terms have the same variables with the same powers. 3x and −5x are like terms. 3x and 3x² are not, because the powers differ. 3x and 3y are not, because the variables differ.",
-      "Only like terms can be added or subtracted. Add or subtract the coefficients and keep the variable part the same. The sign in front of a term belongs to that term, and a lone x means 1x.",
-      "Example: 5x + 2y − 3x + 4y. The x terms give 5x − 3x = 2x. The y terms give 2y + 4y = 6y. So the answer is 2x + 6y."
+      "A term is a number, a variable, or numbers and variables multiplied together, such as 7, \\(y\\), \\(3x\\), \\(3x^{2}\\) or ab. The number in front of the variable part is its coefficient.",
+      "Like terms have the same variables with the same powers. \\(3x\\) and \\(-5x\\) are like terms. \\(3x\\) and \\(3x^{2}\\) are not, because the powers differ. \\(3x\\) and \\(3y\\) are not, because the variables differ.",
+      "Only like terms can be added or subtracted. Add or subtract the coefficients and keep the variable part the same. The sign in front of a term belongs to that term, and a lone \\(x\\) means \\(1x\\).",
+      "Example: \\(5x + 2y - 3x + 4y\\). The \\(x\\) terms give \\(5x - 3x = 2x\\). The \\(y\\) terms give \\(2y + 4y = 6y\\). So the answer is \\(2x + 6y\\)."
     ],
     "remember": "Add or subtract the coefficients of like terms, and leave unlike terms apart.",
     "a": {
-      "q": "Which expression is 7a + 2b − 4a + b simplified?",
-      "opts": ["3a + 3b", "3a + 2b", "11a + 3b", "6ab"],
-      "why": "The a terms give 7a − 4a = 3a. The b terms give 2b + b = 3b, because a lone b means 1b. Writing 3a + 2b leaves out the lone b as if it were worth nothing.",
-      "clue": "A lone b has a coefficient of 1."
+      "q": "Which expression is \\(7a + 2b - 4a + b\\) simplified?",
+      "opts": ["\\(3a + 3b\\)", "\\(3a + 2b\\)", "\\(11a + 3b\\)", "6ab"],
+      "why": "The a terms give \\(7a - 4a = 3a\\). The \\(b\\) terms give \\(2b + b = 3b\\), because a lone \\(b\\) means \\(1b\\). Writing \\(3a + 2b\\) leaves out the lone \\(b\\) as if it were worth nothing.",
+      "clue": "A lone \\(b\\) has a coefficient of 1."
     },
     "b": {
       "d": 3,
-      "q": "Zara simplifies 6m² + 4m − 2m² + m. What is the correct answer?",
-      "opts": ["4m² + 5m", "4m² + 3m", "8m² + 5m", "9m²"],
-      "why": "The m² terms give 6m² − 2m² = 4m², and the m terms give 4m + m = 5m. The answer 4m² + 3m comes from a sign slip: the m term has a plus in front, so it is added, not subtracted. m² and m are not like terms, so they stay apart.",
+      "q": "Zara simplifies \\(6m^{2} + 4m - 2m^{2} + m\\). What is the correct answer?",
+      "opts": ["\\(4m^{2} + 5m\\)", "\\(4m^{2} + 3m\\)", "\\(8m^{2} + 5m\\)", "\\(9m^{2}\\)"],
+      "why": "The \\(m^{2}\\) terms give \\(6m^{2} - 2m^{2} = 4m^{2}\\), and the \\(m\\) terms give \\(4m + m = 5m\\). The answer \\(4m^{2} + 3m\\) comes from a sign slip: the \\(m\\) term has a plus in front, so it is added, not subtracted. \\(m^{2}\\) and \\(m\\) are not like terms, so they stay apart.",
       "clue": "Check the sign and the power on each term before combining."
     }
   },
@@ -16718,21 +17058,21 @@ MADE_BANKS.mat = {
     "card": [
       "Expanding removes the brackets by multiplying. The distributive law says the term outside multiplies every term inside the brackets.",
       "Multiply the number parts, then keep the variables. Take care with signs: a negative times a negative gives a positive.",
-      "Worked example: 3(2x − 4) = 3 × 2x − 3 × 4 = 6x − 12.",
-      "A negative outside changes the sign of every term inside. For example, −2(x − 5) = −2x + 10."
+      "Worked example: \\(3(2x - 4) = 3 \\times 2x - 3 \\times 4 = 6x - 12\\).",
+      "A negative outside changes the sign of every term inside. For example, \\(-2(x - 5) = -2x + 10\\)."
     ],
     "remember": "Multiply every term inside the brackets by the term outside, and watch the signs.",
     "a": {
-      "q": "What is 4(3x − 2) when expanded?",
-      "opts": ["12x − 8", "12x − 2", "7x − 6", "12x + 8"],
-      "why": "Multiply both terms by 4: 4 × 3x = 12x and 4 × 2 = 8, so the answer is 12x − 8. Writing 12x − 2 is tempting, but it multiplies only the first term and skips the second.",
+      "q": "What is \\(4(3x - 2)\\) when expanded?",
+      "opts": ["\\(12x - 8\\)", "\\(12x - 2\\)", "\\(7x - 6\\)", "\\(12x + 8\\)"],
+      "why": "Multiply both terms by 4: \\(4 \\times 3x = 12x\\) and \\(4 \\times 2 = 8\\), so the answer is \\(12x - 8\\). Writing \\(12x - 2\\) is tempting, but it multiplies only the first term and skips the second.",
       "clue": "The 4 multiplies both terms inside."
     },
     "b": {
       "d": 3,
-      "q": "Mia expands −3(x − 5). What is the correct result?",
-      "opts": ["−3x + 15", "−3x − 15", "3x − 15", "−3x + 5"],
-      "why": "Multiply each term by −3: −3 × x = −3x, and −3 × −5 = +15. So the answer is −3x + 15. The option −3x − 15 is tempting, but it forgets that a negative times a negative is positive.",
+      "q": "Mia expands \\(-3(x - 5)\\). What is the correct result?",
+      "opts": ["\\(-3x + 15\\)", "\\(-3x - 15\\)", "\\(3x - 15\\)", "\\(-3x + 5\\)"],
+      "why": "Multiply each term by \\(-3\\): \\(-3 \\times x = -3x\\), and \\(-3 \\times -5 = +15\\). So the answer is \\(-3x + 15\\). The option \\(-3x - 15\\) is tempting, but it forgets that a negative times a negative is positive.",
       "clue": "Check the sign when two negatives are multiplied."
     }
   },
@@ -16740,22 +17080,22 @@ MADE_BANKS.mat = {
     "title": "Factorising by the highest common factor",
     "card": [
       "Factorising is the reverse of expanding. It writes an expression as a product: a common factor multiplied by a bracket.",
-      "The highest common factor (HCF) is the largest number, variable, or product of them that divides every term. For 8x and 12, the HCF is 4. For 6x² and 9x, it is 3x, so 6x² + 9x = 3x(2x + 3).",
+      "The highest common factor (HCF) is the largest number, variable, or product of them that divides every term. For \\(8x\\) and 12, the HCF is 4. For \\(6x^{2}\\) and \\(9x\\), it is \\(3x\\), so \\(6x^{2} + 9x = 3x(2x + 3)\\).",
       "To factorise, find the HCF, write it outside the bracket, then divide each term by it to get what goes inside.",
-      "Example: 8x + 12. The HCF is 4. 8x ÷ 4 = 2x and 12 ÷ 4 = 3, so 8x + 12 = 4(2x + 3). Expand the answer to check: 4 × 2x + 4 × 3 = 8x + 12."
+      "Example: \\(8x + 12\\). The HCF is 4. \\(8x \\div 4 = 2x\\) and \\(12 \\div 4 = 3\\), so \\(8x + 12 = 4(2x + 3)\\). Expand the answer to check: \\(4 \\times 2x + 4 \\times 3 = 8x + 12\\)."
     ],
     "remember": "Take out the HCF, then check by expanding the brackets.",
     "a": {
-      "q": "What is 12x + 18 written in factorised form using the HCF?",
-      "opts": ["6(2x + 3)", "3(4x + 6)", "2(6x + 9)", "6(2x + 18)"],
-      "why": "The HCF of 12 and 18 is 6. 12x ÷ 6 = 2x and 18 ÷ 6 = 3, so the answer is 6(2x + 3). 3(4x + 6) is tempting, but 3 is a common factor, not the highest, so the bracket can still be factorised.",
+      "q": "What is \\(12x + 18\\) written in factorised form using the HCF?",
+      "opts": ["\\(6(2x + 3)\\)", "\\(3(4x + 6)\\)", "\\(2(6x + 9)\\)", "\\(6(2x + 18)\\)"],
+      "why": "The HCF of 12 and 18 is 6. \\(12x \\div 6 = 2x\\) and \\(18 \\div 6 = 3\\), so the answer is \\(6(2x + 3)\\). \\(3(4x + 6)\\) is tempting, but 3 is a common factor, not the highest, so the bracket can still be factorised.",
       "clue": "Find the largest number that divides both 12 and 18."
     },
     "b": {
       "d": 3,
-      "q": "Mia factorises 10x² + 15x by taking out the HCF. What does she write?",
-      "opts": ["5x(2x + 3)", "5(2x² + 3x)", "x(10x + 15)", "5x(2x + 15)"],
-      "why": "The HCF of 10x² and 15x is 5x. 10x² ÷ 5x = 2x and 15x ÷ 5x = 3, so the answer is 5x(2x + 3). 5(2x² + 3x) is tempting, but it leaves a common factor of x inside the bracket, so 5 is not the HCF.",
+      "q": "Mia factorises \\(10x^{2} + 15x\\) by taking out the HCF. What does she write?",
+      "opts": ["\\(5x(2x + 3)\\)", "\\(5(2x^{2} + 3x)\\)", "\\(x(10x + 15)\\)", "\\(5x(2x + 15)\\)"],
+      "why": "The HCF of \\(10x^{2}\\) and \\(15x\\) is \\(5x\\). \\(10x^{2} \\div 5x = 2x\\) and \\(15x \\div 5x = 3\\), so the answer is \\(5x(2x + 3)\\). \\(5(2x^{2} + 3x)\\) is tempting, but it leaves a common factor of \\(x\\) inside the bracket, so 5 is not the HCF.",
       "clue": "Both terms share a number and a variable. Take out both."
     }
   },
@@ -16799,24 +17139,24 @@ MADE_BANKS.mat = {
   "mat-equations-with-brackets-variables": {
     "title": "Equations with brackets and variables on both sides",
     "card": [
-      "Expand any brackets first by multiplying every term inside by the number outside. So 3(x + 2) becomes 3x + 6.",
+      "Expand any brackets first by multiplying every term inside by the number outside. So \\(3(x + 2)\\) becomes \\(3x + 6\\).",
       "Collect the variable terms on one side and the plain numbers on the other. Whatever you do to one side, do to the other. Adding or subtracting moves a term across.",
       "Divide both sides by the number in front of the variable to finish.",
-      "Example: 3(x + 2) = x + 14. Expand: 3x + 6 = x + 14. Subtract x: 2x + 6 = 14. Subtract 6: 2x = 8. Divide by 2: x = 4."
+      "Example: \\(3(x + 2) = x + 14\\). Expand: \\(3x + 6 = x + 14\\). Subtract \\(x\\): \\(2x + 6 = 14\\). Subtract 6: \\(2x = 8\\). Divide by 2: \\(x = 4\\)."
     ],
     "remember": "Expand, collect variables on one side and numbers on the other, then divide.",
     "a": {
-      "q": "Solve 2(x + 5) = x + 13.",
-      "opts": ["x = 3", "x = 8", "x = 1", "x = 4"],
-      "why": "Expand: 2x + 10 = x + 13. Subtract x: x + 10 = 13. Subtract 10: x = 3. The answer x = 8 comes from multiplying only the x by 2, which gives 2x + 5 = x + 13.",
+      "q": "Solve \\(2(x + 5) = x + 13\\).",
+      "opts": ["\\(x = 3\\)", "\\(x = 8\\)", "\\(x = 1\\)", "\\(x = 4\\)"],
+      "why": "Expand: \\(2x + 10 = x + 13\\). Subtract \\(x\\): \\(x + 10 = 13\\). Subtract 10: \\(x = 3\\). The answer \\(x = 8\\) comes from multiplying only the \\(x\\) by 2, which gives \\(2x + 5 = x + 13\\).",
       "clue": "Multiply both terms in the bracket by 2 first."
     },
     "b": {
       "d": 3,
-      "q": "Priya solves 4(x − 1) = 2x + 6. What is the value of x?",
-      "opts": ["x = 5", "x = 1", "x = 10", "x = 3.5"],
-      "why": "Expand: 4x − 4 = 2x + 6. Subtract 2x: 2x − 4 = 6. Add 4: 2x = 10, so x = 5. The answer x = 1 comes from a sign error: subtracting 4 instead of adding it gives 2x = 2.",
-      "clue": "Moving −4 across means adding 4 to both sides."
+      "q": "Priya solves \\(4(x - 1) = 2x + 6\\). What is the value of \\(x\\)?",
+      "opts": ["\\(x = 5\\)", "\\(x = 1\\)", "\\(x = 10\\)", "\\(x = 3.5\\)"],
+      "why": "Expand: \\(4x - 4 = 2x + 6\\). Subtract \\(2x\\): \\(2x - 4 = 6\\). Add 4: \\(2x = 10\\), so \\(x = 5\\). The answer \\(x = 1\\) comes from a sign error: subtracting 4 instead of adding it gives \\(2x = 2\\).",
+      "clue": "Moving \\(-4\\) across means adding 4 to both sides."
     }
   },
   "mat-solving-one-variable-inequalities": {
@@ -16850,46 +17190,46 @@ MADE_BANKS.mat = {
   "mat-graphing-linear-relations-2": {
     "title": "Graphing linear relations",
     "card": [
-      "A rule such as y = 2x − 1 tells you how to find y from x. Put a number in for x, work out y, and you have one point.",
-      "Choose a few x-values and record the results in a table of values. For y = 2x − 1: x = 0 gives y = −1, x = 1 gives y = 1, and x = 2 gives y = 3.",
-      "Write each pair as a point (x, y): (0, −1), (1, 1), (2, 3). The x-value is first and tells you how far across to go. The y-value is second and tells you how far up or down.",
-      "Plot the points on a number plane. A rule like y = 2x − 1 is called linear, because its points lie on a straight line. Draw a line through them with a ruler."
+      "A rule such as \\(y = 2x - 1\\) tells you how to find \\(y\\) from \\(x\\). Put a number in for \\(x\\), work out \\(y\\), and you have one point.",
+      "Choose a few x-values and record the results in a table of values. For \\(y = 2x - 1\\): \\(x = 0\\) gives \\(y = -1\\), \\(x = 1\\) gives \\(y = 1\\), and \\(x = 2\\) gives \\(y = 3\\).",
+      "Write each pair as a point \\((x, y)\\): \\((0, -1)\\), \\((1, 1)\\), \\((2, 3)\\). The x-value is first and tells you how far across to go. The y-value is second and tells you how far up or down.",
+      "Plot the points on a number plane. A rule like \\(y = 2x - 1\\) is called linear, because its points lie on a straight line. Draw a line through them with a ruler."
     ],
-    "remember": "For a linear rule, put in x-values, plot each (x, y), and the points lie on a straight line.",
+    "remember": "For a linear rule, put in x-values, plot each \\((x, y)\\), and the points lie on a straight line.",
     "a": {
-      "q": "Using the rule y = 3x + 2, what is the y-value when x = 4?",
+      "q": "Using the rule \\(y = 3x + 2\\), what is the y-value when \\(x = 4\\)?",
       "opts": ["14", "10", "18", "36"],
-      "why": "Multiply x by 3 first: 3 × 4 = 12. Then add 2 to get 14. The answer 10 comes from subtracting 2 instead of adding it: 12 − 2 = 10.",
-      "clue": "Replace x with 4, multiply, then add."
+      "why": "Multiply \\(x\\) by 3 first: \\(3 \\times 4 = 12\\). Then add 2 to get 14. The answer 10 comes from subtracting 2 instead of adding it: \\(12 - 2 = 10\\).",
+      "clue": "Replace \\(x\\) with 4, multiply, then add."
     },
     "b": {
       "d": 2,
-      "q": "Mia makes a table of values for y = 2x − 1 and plots the points. Which point lies on her line?",
-      "opts": ["(3, 5)", "(5, 3)", "(3, 7)", "(1, 3)"],
-      "why": "When x = 3, y = 2 × 3 − 1 = 5, so the point is (3, 5). The point (5, 3) swaps the order, but the x-value must come first: when x = 5, y = 9.",
-      "clue": "Put the first number of each point in for x and check y."
+      "q": "Mia makes a table of values for \\(y = 2x - 1\\) and plots the points. Which point lies on her line?",
+      "opts": ["\\((3, 5)\\)", "\\((5, 3)\\)", "\\((3, 7)\\)", "\\((1, 3)\\)"],
+      "why": "When \\(x = 3\\), \\(y = 2 \\times 3 - 1 = 5\\), so the point is \\((3, 5)\\). The point \\((5, 3)\\) swaps the order, but the x-value must come first: when \\(x = 5\\), \\(y = 9\\).",
+      "clue": "Put the first number of each point in for \\(x\\) and check \\(y\\)."
     }
   },
   "mat-solving-equation-from-graph": {
     "title": "Solving an equation from a graph",
     "card": [
-      "Every point on a line has an x-value and a y-value that fit the line's rule. To solve an equation such as 2x − 1 = 5, graph y = 2x − 1 and find where y = 5.",
-      "Start at 5 on the y-axis and go across to the line. Then go straight down to the x-axis and read the x-value. Here it is x = 3.",
-      "Check by putting the x-value back in the rule: 2 × 3 − 1 = 5. It works.",
-      "If two different lines cross, they cross at exactly one point. At that point both rules give the same x and the same y. So the x-value of the crossing point solves the equation made by setting the two rules equal."
+      "Every point on a line has an x-value and a y-value that fit the line's rule. To solve an equation such as \\(2x - 1 = 5\\), graph \\(y = 2x - 1\\) and find where \\(y = 5\\).",
+      "Start at 5 on the y-axis and go across to the line. Then go straight down to the x-axis and read the x-value. Here it is \\(x = 3\\).",
+      "Check by putting the x-value back in the rule: \\(2 \\times 3 - 1 = 5\\). It works.",
+      "If two different lines cross, they cross at exactly one point. At that point both rules give the same \\(x\\) and the same \\(y\\). So the x-value of the crossing point solves the equation made by setting the two rules equal."
     ],
-    "remember": "Read across from the y-value to the line, then down to x. A crossing point fits both rules.",
+    "remember": "Read across from the y-value to the line, then down to \\(x\\). A crossing point fits both rules.",
     "a": {
-      "q": "The point (2, 8) lies on the graph of y = 3x + 2. Use it to solve 3x + 2 = 8.",
-      "opts": ["x = 2", "x = 8", "x = 6", "x = 10"],
-      "why": "The equation asks where the line has y = 8. The point (2, 8) has y = 8, so x = 2. Check: 3 × 2 + 2 = 8. Choosing 8 mixes up the y-value with the x-value.",
+      "q": "The point \\((2, 8)\\) lies on the graph of \\(y = 3x + 2\\). Use it to solve \\(3x + 2 = 8\\).",
+      "opts": ["\\(x = 2\\)", "\\(x = 8\\)", "\\(x = 6\\)", "\\(x = 10\\)"],
+      "why": "The equation asks where the line has \\(y = 8\\). The point \\((2, 8)\\) has \\(y = 8\\), so \\(x = 2\\). Check: \\(3 \\times 2 + 2 = 8\\). Choosing 8 mixes up the y-value with the x-value.",
       "clue": "What does the 8 in the equation stand for on the graph?"
     },
     "b": {
       "d": 3,
-      "q": "The graphs of y = x + 1 and y = 2x − 2 meet at (3, 4). Use this to solve x + 1 = 2x − 2.",
-      "opts": ["x = 3", "x = 4", "x = 1", "x = 7"],
-      "why": "Setting the rules equal asks where both lines have the same y-value, which is the crossing point. Its x-value is 3. Check: 3 + 1 = 4 and 2 × 3 − 2 = 4. The y-value 4 is the shared output, not the solution for x.",
+      "q": "The graphs of \\(y = x + 1\\) and \\(y = 2x - 2\\) meet at \\((3, 4)\\). Use this to solve \\(x + 1 = 2x - 2\\).",
+      "opts": ["\\(x = 3\\)", "\\(x = 4\\)", "\\(x = 1\\)", "\\(x = 7\\)"],
+      "why": "Setting the rules equal asks where both lines have the same y-value, which is the crossing point. Its x-value is 3. Check: \\(3 + 1 = 4\\) and \\(2 \\times 3 - 2 = 4\\). The y-value 4 is the shared output, not the solution for \\(x\\).",
       "clue": "What do the two rules have in common where the lines meet?"
     }
   },
@@ -17098,15 +17438,15 @@ MADE_BANKS.mat = {
     "title": "Rates and best buys",
     "card": [
       "A rate compares two quantities with different units. Speed in km/h and price in $/kg are rates. The word per means for each one.",
-      "To find a unit rate, divide the first quantity by the second. 6 kg of apples for $21 costs $21 ÷ 6 = $3.50 per kg.",
+      "To find a unit rate, divide the first quantity by the second. 6 kg of apples for $21 costs \\(\\$21 \\div 6 = \\$3.50\\) per kg.",
       "To compare two deals, find the unit rate of each in the same unit. The deal with the lower price per unit is the better buy.",
-      "Unit rates also find totals. At 80 km/h, a car travels 80 × 2.5 = 200 km in 2.5 hours."
+      "Unit rates also find totals. At 80 km/h, a car travels \\(80 \\times 2.5 = 200\\) km in 2.5 hours."
     ],
     "remember": "Divide to get a rate per one unit, then compare the unit rates.",
     "a": {
       "q": "A cyclist in Hobart rides 45 km in 3 hours at a steady pace. What is the rate?",
       "opts": ["15 km/h", "135 km/h", "48 km/h", "0.07 km/h"],
-      "why": "Divide distance by time: 45 ÷ 3 = 15 km/h. Multiplying to get 135 is the tempting mistake, but a rate is found by dividing.",
+      "why": "Divide distance by time: \\(45 \\div 3 = 15\\) km/h. Multiplying to get 135 is the tempting mistake, but a rate is found by dividing.",
       "clue": "Divide distance by time."
     },
     "b": {
@@ -17118,7 +17458,7 @@ MADE_BANKS.mat = {
         "5 kg, at $12.50 in total",
         "3 kg, because it costs less in total"
       ],
-      "why": "5 kg costs $12.50 ÷ 5 = $2.50 per kg. 3 kg costs $8.40 ÷ 3 = $2.80 per kg. The 5 kg bag has the lower price per kg. The lower total for 3 kg is tempting but it buys less rice.",
+      "why": "5 kg costs \\(\\$12.50 \\div 5 = \\$2.50\\) per kg. 3 kg costs \\(\\$8.40 \\div 3 = \\$2.80\\) per kg. The 5 kg bag has the lower price per kg. The lower total for 3 kg is tempting but it buys less rice.",
       "clue": "Find the price per kg for both bags."
     }
   },
@@ -17391,7 +17731,7 @@ MADE_BANKS.mat = {
     "card": [
       "A sample is a group taken from a larger population. Its mean is found by adding the values and dividing by the number of values.",
       "Different samples contain different values, so their means usually differ, even when each sample is taken and worked out correctly. This is called sample variation.",
-      "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are 510 ÷ 3 = 170 and 525 ÷ 3 = 175.",
+      "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are \\(510 \\div 3 = 170\\) and \\(525 \\div 3 = 175\\).",
       "Larger samples tend to have means that vary less from sample to sample. A single extreme value has less pull on a big sample."
     ],
     "remember": "Sample means usually differ from sample to sample. Larger samples vary less, so their results tend to be closer to the population value.",
@@ -17423,7 +17763,7 @@ MADE_BANKS.mat = {
     "title": "Making inferences from a sample",
     "card": [
       "An inference uses a sample's results to estimate something about the whole population, such as its mean (the average).",
-      "To find a sample mean, add up all the values and divide by how many there are. Example: 4, 6 and 8 add to 18, and 18 ÷ 3 = 6.",
+      "To find a sample mean, add up all the values and divide by how many there are. Example: 4, 6 and 8 add to 18, and \\(18 \\div 3 = 6\\).",
       "The sample mean is used as an estimate of the population mean. If the sample was a random one, the estimate is more reliable.",
       "The estimate is uncertain. Another sample would probably give a slightly different mean, so the population mean is probably close to it but may not be exactly equal."
     ],
@@ -17431,7 +17771,7 @@ MADE_BANKS.mat = {
     "a": {
       "q": "A random sample of 5 students at an Adelaide school spend 20, 30, 10, 40 and 50 minutes on homework each night. What is the best estimate of the mean for all students at the school?",
       "opts": ["30 minutes", "150 minutes", "37.5 minutes", "50 minutes"],
-      "why": "The values add to 150, and 150 ÷ 5 = 30 minutes. The total of 150 is tempting, but the dividing step was skipped. 37.5 comes from dividing by 4 instead of 5.",
+      "why": "The values add to 150, and \\(150 \\div 5 = 30\\) minutes. The total of 150 is tempting, but the dividing step was skipped. 37.5 comes from dividing by 4 instead of 5.",
       "clue": "Add the values, then divide by how many there are."
     },
     "b": {
@@ -17521,30 +17861,35 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Rational",
-        "a number that can be written as a fraction of two integers, such as 3/4 or −7. Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
+        "a number that can be written as a fraction of two integers, such as \\(\\frac{3}{4}\\) or \\(-7\\). Integers, terminating decimals like 0.25 and recurring decimals like 0.333... are all rational."
       ],
       [
         "Irrational",
-        "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are √5 and π."
+        "a number that cannot be written as a fraction of two integers. Its decimal never ends and never repeats. Examples are \\(\\sqrt{5}\\) and \\(\\pi\\)."
       ],
       [
         "Real",
         "all the rational numbers and all the irrational numbers together. Every point on the number line is a real number."
       ],
-      "The square root of a whole number is irrational unless the number is a perfect square. So √5 is irrational, but √9 = 3 is rational."
+      "The square root of a whole number is irrational unless the number is a perfect square. So \\(\\sqrt{5}\\) is irrational, but \\(\\sqrt{9} = 3\\) is rational."
     ],
     "remember": "Real numbers are the rational numbers and the irrational numbers combined.",
     "a": {
       "q": "Which of these numbers is irrational?",
-      "opts": ["√7", "√16", "0.125", "0.666... repeating"],
-      "why": "7 is not a perfect square, so √7 is irrational: its decimal never ends and never repeats. √16 = 4 is an integer. 0.125 ends and 0.666... repeats, so both are rational.",
+      "opts": ["\\(\\sqrt{7}\\)", "\\(\\sqrt{16}\\)", "0.125", "0.666... repeating"],
+      "why": "7 is not a perfect square, so \\(\\sqrt{7}\\) is irrational: its decimal never ends and never repeats. \\(\\sqrt{16} = 4\\) is an integer. 0.125 ends and 0.666... repeats, so both are rational.",
       "clue": "Which one has a decimal that never ends and never repeats?"
     },
     "b": {
       "d": 3,
       "q": "Which list contains only rational numbers?",
-      "opts": ["√25, 0.4, −3, 2/9", "√10, 0.4, −3, 2/9", "√25, π, −3, 2/9", "√25, 0.4, −3, √11"],
-      "why": "√25 = 5, 0.4 ends and 2/9 is a fraction, so all four are rational. Each wrong list includes an irrational number: √10, π or √11. √25 is not irrational just because it has a root sign.",
+      "opts": [
+        "\\(\\sqrt{25}\\), 0.4, \\(-3\\), \\(\\frac{2}{9}\\)",
+        "\\(\\sqrt{10}\\), 0.4, \\(-3\\), \\(\\frac{2}{9}\\)",
+        "\\(\\sqrt{25}\\), \\(\\pi\\), \\(-3\\), \\(\\frac{2}{9}\\)",
+        "\\(\\sqrt{25}\\), 0.4, \\(-3\\), \\(\\sqrt{11}\\)"
+      ],
+      "why": "\\(\\sqrt{25} = 5\\), 0.4 ends and \\(\\frac{2}{9}\\) is a fraction, so all four are rational. Each wrong list includes an irrational number: \\(\\sqrt{10}\\), \\(\\pi\\) or \\(\\sqrt{11}\\). \\(\\sqrt{25}\\) is not irrational just because it has a root sign.",
       "clue": "Work out each square root before you decide."
     }
   },
@@ -17620,32 +17965,32 @@ MADE_BANKS.mat = {
   "mat-index-laws-with-variables": {
     "title": "Index laws with variables",
     "card": [
-      "An index tells you how many copies of the base are multiplied together. In x⁵ = x × x × x × x × x, the base is x and the index is 5.",
+      "An index tells you how many copies of the base are multiplied together. In \\(x^{5} = x \\times x \\times x \\times x \\times x\\), the base is \\(x\\) and the index is 5.",
       [
         "Multiply",
-        "when you multiply powers with the same base, add the indices. x⁵ × x³ = x⁸. Numbers in front are multiplied: 3x² × 4x⁵ = 12x⁷."
+        "when you multiply powers with the same base, add the indices. \\(x^{5} \\times x^{3} = x^{8}\\). Numbers in front are multiplied: \\(3x^{2} \\times 4x^{5} = 12x^{7}\\)."
       ],
       [
         "Divide",
-        "when you divide powers with the same base, subtract the indices. x⁶ ÷ x² = x⁴. Numbers in front are divided: 12x⁷ ÷ 4x² = 3x⁵."
+        "when you divide powers with the same base, subtract the indices. \\(x^{6} \\div x^{2} = x^{4}\\). Numbers in front are divided: \\(12x^{7} \\div 4x^{2} = 3x^{5}\\)."
       ],
       [
         "Power of a power",
-        "multiply the indices. (x²)³ = x⁶. A number in front is also raised to the power: (2x²)³ = 8x⁶."
+        "multiply the indices. \\((x^{2})^{3} = x^{6}\\). A number in front is also raised to the power: \\((2x^{2})^{3} = 8x^{6}\\)."
       ]
     ],
     "remember": "Multiply powers: add indices. Divide: subtract. Power of a power: multiply. Numbers in front follow normal rules.",
     "a": {
-      "q": "What is x⁷ × x² in simplest form?",
-      "opts": ["x⁹", "x¹⁴", "x⁵", "x⁴⁹"],
-      "why": "Multiplying powers with the same base means adding the indices: 7 + 2 = 9. Multiplying the indices to get x¹⁴ is the rule for a power of a power, not for a product.",
+      "q": "What is \\(x^{7} \\times x^{2}\\) in simplest form?",
+      "opts": ["\\(x^{9}\\)", "\\(x^{14}\\)", "\\(x^{5}\\)", "\\(x^{49}\\)"],
+      "why": "Multiplying powers with the same base means adding the indices: \\(7 + 2 = 9\\). Multiplying the indices to get \\(x^{14}\\) is the rule for a power of a power, not for a product.",
       "clue": "The bases are the same, so combine the indices by adding or subtracting."
     },
     "b": {
       "d": 3,
-      "q": "What is (2x³)² × 3x² in simplest form?",
-      "opts": ["12x⁸", "12x⁷", "18x⁸", "6x⁸"],
-      "why": "First (2x³)² = 4x⁶, because both the 2 and the index are squared. Then 4x⁶ × 3x² = 12x⁸, multiplying the numbers and adding the indices. Forgetting to square the 2 gives 6x⁸.",
+      "q": "What is \\((2x^{3})^{2} \\times 3x^{2}\\) in simplest form?",
+      "opts": ["\\(12x^{8}\\)", "\\(12x^{7}\\)", "\\(18x^{8}\\)", "\\(6x^{8}\\)"],
+      "why": "First \\((2x^{3})^{2} = 4x^{6}\\), because both the 2 and the index are squared. Then \\(4x^{6} \\times 3x^{2} = 12x^{8}\\), multiplying the numbers and adding the indices. Forgetting to square the 2 gives \\(6x^{8}\\).",
       "clue": "Square everything inside the bracket first, including the number."
     }
   },
@@ -17675,23 +18020,23 @@ MADE_BANKS.mat = {
   "mat-expanding-binomial-products": {
     "title": "Expanding binomial products",
     "card": [
-      "A binomial is an expression with two terms, such as x + 3. To expand a product of two binomials, multiply each term in the first bracket by each term in the second.",
-      "Worked example: (x + 3)(x + 5) = x × x + x × 5 + 3 × x + 3 × 5 = x² + 5x + 3x + 15.",
-      "Then collect like terms. 5x + 3x = 8x, so the answer is x² + 8x + 15.",
-      "Take care with signs. A negative term makes negative products, so (x − 2)(x + 4) = x² + 4x − 2x − 8 = x² + 2x − 8."
+      "A binomial is an expression with two terms, such as \\(x + 3\\). To expand a product of two binomials, multiply each term in the first bracket by each term in the second.",
+      "Worked example: \\((x + 3)(x + 5) = x \\times x + x \\times 5 + 3 \\times x + 3 \\times 5 = x^{2} + 5x + 3x + 15\\).",
+      "Then collect like terms. \\(5x + 3x = 8x\\), so the answer is \\(x^{2} + 8x + 15\\).",
+      "Take care with signs. A negative term makes negative products, so \\((x - 2)(x + 4) = x^{2} + 4x - 2x - 8 = x^{2} + 2x - 8\\)."
     ],
     "remember": "Every term in the first bracket meets every term in the second. Then collect like terms.",
     "a": {
-      "q": "What is (x + 2)(x + 7) when expanded?",
-      "opts": ["x² + 9x + 14", "x² + 14x + 9", "x² + 9x + 9", "x² + 14"],
-      "why": "x × x = x², x × 7 = 7x, 2 × x = 2x and 2 × 7 = 14. Then 7x + 2x = 9x. Giving x² + 14 skips the two middle products.",
-      "clue": "Make four products, then add the two x terms."
+      "q": "What is \\((x + 2)(x + 7)\\) when expanded?",
+      "opts": ["\\(x^{2} + 9x + 14\\)", "\\(x^{2} + 14x + 9\\)", "\\(x^{2} + 9x + 9\\)", "\\(x^{2} + 14\\)"],
+      "why": "\\(x \\times x = x^{2}\\), \\(x \\times 7 = 7x\\), \\(2 \\times x = 2x\\) and \\(2 \\times 7 = 14\\). Then \\(7x + 2x = 9x\\). Giving \\(x^{2} + 14\\) skips the two middle products.",
+      "clue": "Make four products, then add the two \\(x\\) terms."
     },
     "b": {
       "d": 3,
-      "q": "What is (x − 3)(x + 6) when expanded?",
-      "opts": ["x² + 3x − 18", "x² + 9x − 18", "x² + 3x + 18", "x² − 3x − 18"],
-      "why": "The products are x², 6x, −3x and −18. Then 6x − 3x = 3x, giving x² + 3x − 18. Adding 6x and 3x instead ignores the negative sign on the 3.",
+      "q": "What is \\((x - 3)(x + 6)\\) when expanded?",
+      "opts": ["\\(x^{2} + 3x - 18\\)", "\\(x^{2} + 9x - 18\\)", "\\(x^{2} + 3x + 18\\)", "\\(x^{2} - 3x - 18\\)"],
+      "why": "The products are \\(x^{2}\\), \\(6x\\), \\(-3x\\) and \\(-18\\). Then \\(6x - 3x = 3x\\), giving \\(x^{2} + 3x - 18\\). Adding \\(6x\\) and \\(3x\\) instead ignores the negative sign on the 3.",
       "clue": "The 3 in the first bracket is being taken away."
     }
   },
@@ -17772,21 +18117,21 @@ MADE_BANKS.mat = {
     "card": [
       "An interval is the part of a line between two end points. Its midpoint is the point exactly halfway between them.",
       "To find the midpoint, average the x-values of the end points. Then average the y-values. To average two numbers, add them and divide by 2.",
-      "For end points (x₁, y₁) and (x₂, y₂), the midpoint is ((x₁ + x₂) ÷ 2, (y₁ + y₂) ÷ 2).",
-      "Example: the end points are (2, 5) and (8, −1). x: (2 + 8) ÷ 2 = 5. y: (5 + −1) ÷ 2 = 2. The midpoint is (5, 2)."
+      "For end points \\((x_{1}, y_{1})\\) and \\((x_{2}, y_{2})\\), the midpoint is \\(\\left(\\frac{x_{1} + x_{2}}{2}, \\frac{y_{1} + y_{2}}{2}\\right)\\).",
+      "Example: the end points are \\((2, 5)\\) and \\((8, -1)\\). For \\(x\\): \\((2 + 8) \\div 2 = 5\\). For \\(y\\): \\((5 + (-1)) \\div 2 = 2\\). The midpoint is \\((5, 2)\\)."
     ],
     "remember": "Midpoint: add the two x-values and halve, then add the two y-values and halve.",
     "a": {
-      "q": "What is the midpoint of the interval with end points (4, 3) and (10, 9)?",
-      "opts": ["(7, 6)", "(3, 3)", "(14, 12)", "(6, 6)"],
-      "why": "x: (4 + 10) ÷ 2 = 7. y: (3 + 9) ÷ 2 = 6. So the midpoint is (7, 6). (14, 12) is wrong because it adds the values but does not divide by 2.",
+      "q": "What is the midpoint of the interval with end points \\((4, 3)\\) and \\((10, 9)\\)?",
+      "opts": ["\\((7, 6)\\)", "\\((3, 3)\\)", "\\((14, 12)\\)", "\\((6, 6)\\)"],
+      "why": "For \\(x\\): \\((4 + 10) \\div 2 = 7\\). For \\(y\\): \\((3 + 9) \\div 2 = 6\\). So the midpoint is \\((7, 6)\\). \\((14, 12)\\) is wrong because it adds the values but does not divide by 2.",
       "clue": "Add each pair of values, then halve the total."
     },
     "b": {
       "d": 3,
-      "q": "Mia marks the points A(−6, 2) and B(4, −8) on a map grid. What is the midpoint of AB?",
-      "opts": ["(−1, −3)", "(−5, −5)", "(−1, 3)", "(−10, −6)"],
-      "why": "x: (−6 + 4) ÷ 2 = −2 ÷ 2 = −1. y: (2 + −8) ÷ 2 = −6 ÷ 2 = −3. The midpoint is (−1, −3). (−1, 3) is tempting but drops the negative sign on the y-value.",
+      "q": "Mia marks the points \\(A(-6, 2)\\) and \\(B(4, -8)\\) on a map grid. What is the midpoint of \\(AB\\)?",
+      "opts": ["\\((-1, -3)\\)", "\\((-5, -5)\\)", "\\((-1, 3)\\)", "\\((-10, -6)\\)"],
+      "why": "For \\(x\\): \\((-6 + 4) \\div 2 = -2 \\div 2 = -1\\). For \\(y\\): \\((2 + (-8)) \\div 2 = -6 \\div 2 = -3\\). The midpoint is \\((-1, -3)\\). \\((-1, 3)\\) is tempting but drops the negative sign on the y-value.",
       "clue": "Take care adding a negative number to a positive one."
     }
   },
@@ -17849,23 +18194,23 @@ MADE_BANKS.mat = {
   "mat-graphing-parabolas": {
     "title": "Graphing parabolas",
     "card": [
-      "The graph of y = x² is a U-shaped curve called a parabola. To draw it, work out y for several x-values, plot the points and join them with a smooth curve.",
-      "Example: x = −2, −1, 0, 1, 2 give y = 4, 1, 0, 1, 4. Squaring a negative number gives a positive answer, so y is never below 0.",
-      "The turning point is where the curve changes direction. For y = x² it is at the origin (0, 0), the lowest point.",
-      "The y-axis is the line of symmetry. The left side is a mirror image of the right side, so (3, 9) and (−3, 9) are both on the curve."
+      "The graph of \\(y = x^{2}\\) is a U-shaped curve called a parabola. To draw it, work out \\(y\\) for several x-values, plot the points and join them with a smooth curve.",
+      "Example: \\(x = -2\\), \\(-1\\), 0, 1, 2 give \\(y = 4\\), 1, 0, 1, 4. Squaring a negative number gives a positive answer, so \\(y\\) is never below 0.",
+      "The turning point is where the curve changes direction. For \\(y = x^{2}\\) it is at the origin \\((0, 0)\\), the lowest point.",
+      "The y-axis is the line of symmetry. The left side is a mirror image of the right side, so \\((3, 9)\\) and \\((-3, 9)\\) are both on the curve."
     ],
-    "remember": "y = x² is a U-shaped parabola, with its turning point at (0, 0) and a mirror line along the y-axis.",
+    "remember": "\\(y = x^{2}\\) is a U-shaped parabola, with its turning point at \\((0, 0)\\) and a mirror line along the y-axis.",
     "a": {
-      "q": "Which point lies on the graph of y = x²?",
-      "opts": ["(−4, 16)", "(−4, −16)", "(4, 8)", "(4, −16)"],
-      "why": "When x = −4, y = (−4)² = 16, because a negative number squared is positive. (4, 8) is tempting, but it comes from doubling 4 instead of squaring it.",
+      "q": "Which point lies on the graph of \\(y = x^{2}\\)?",
+      "opts": ["\\((-4, 16)\\)", "\\((-4, -16)\\)", "\\((4, 8)\\)", "\\((4, -16)\\)"],
+      "why": "When \\(x = -4\\), \\(y = (-4)^{2} = 16\\), because a negative number squared is positive. \\((4, 8)\\) is tempting, but it comes from doubling 4 instead of squaring it.",
       "clue": "Square the x-value first."
     },
     "b": {
       "d": 2,
-      "q": "The point (5, 25) is on the graph of y = x². Which other point must also be on the graph?",
-      "opts": ["(−5, 25)", "(−5, −25)", "(25, 5)", "(5, −25)"],
-      "why": "The y-axis is the line of symmetry, so the point (5, 25) has a mirror image at (−5, 25). Changing the signs of both x and y, as in (−5, −25), would put the point below the x-axis, but the curve never goes below it.",
+      "q": "The point \\((5, 25)\\) is on the graph of \\(y = x^{2}\\). Which other point must also be on the graph?",
+      "opts": ["\\((-5, 25)\\)", "\\((-5, -25)\\)", "\\((25, 5)\\)", "\\((5, -25)\\)"],
+      "why": "The y-axis is the line of symmetry, so the point \\((5, 25)\\) has a mirror image at \\((-5, 25)\\). Changing the signs of both \\(x\\) and \\(y\\), as in \\((-5, -25)\\), would put the point below the x-axis, but the curve never goes below it.",
       "clue": "Reflect the point across the y-axis."
     }
   },
@@ -17918,26 +18263,31 @@ MADE_BANKS.mat = {
   "mat-solving-quadratics-from-graph": {
     "title": "Solving quadratics from a graph",
     "card": [
-      "The graph of y = x² − 4x + 3 is a parabola. To solve x² − 4x + 3 = 0, we ask where y is 0. On a graph, y = 0 is the x-axis.",
+      "The graph of \\(y = x^{2} - 4x + 3\\) is a parabola. To solve \\(x^{2} - 4x + 3 = 0\\), we ask where \\(y\\) is 0. On a graph, \\(y = 0\\) is the x-axis.",
       "So the solutions are the x-values where the parabola meets the x-axis. Read them off the x-axis, not the y-axis.",
-      "Example: this parabola crosses the x-axis at 1 and 3, so the solutions are x = 1 and x = 3. Check: 1² − 4 × 1 + 3 = 0.",
+      "Example: this parabola crosses the x-axis at 1 and 3, so the solutions are \\(x = 1\\) and \\(x = 3\\). Check: \\(1^{2} - 4 \\times 1 + 3 = 0\\).",
       "Crossing the x-axis twice gives two solutions. Touching it once gives one. If the parabola never meets the x-axis, there are no solutions."
     ],
-    "remember": "Solutions are the x-values where y = 0. Count the x-axis meetings to count the solutions.",
+    "remember": "Solutions are the x-values where \\(y = 0\\). Count the x-axis meetings to count the solutions.",
     "a": {
-      "q": "A parabola crosses the x-axis at x = −2 and x = 5, and crosses the y-axis at y = −10. What are the solutions of its equation when y = 0?",
-      "opts": ["x = −2 and x = 5", "x = −10 only", "x = −2 and x = −10", "x = 5 and x = −10"],
-      "why": "The solutions are the x-values where the graph meets the x-axis, so x = −2 and x = 5. The y-axis crossing at −10 is a y-value, so it is not a solution.",
-      "clue": "Which axis is the line y = 0?"
+      "q": "A parabola crosses the x-axis at \\(x = -2\\) and \\(x = 5\\), and crosses the y-axis at \\(y = -10\\). What are the solutions of its equation when \\(y = 0\\)?",
+      "opts": [
+        "\\(x = -2\\) and \\(x = 5\\)",
+        "\\(x = -10\\) only",
+        "\\(x = -2\\) and \\(x = -10\\)",
+        "\\(x = 5\\) and \\(x = -10\\)"
+      ],
+      "why": "The solutions are the x-values where the graph meets the x-axis, so \\(x = -2\\) and \\(x = 5\\). The y-axis crossing at \\(-10\\) is a y-value, so it is not a solution.",
+      "clue": "Which axis is the line \\(y = 0\\)?"
     },
     "b": {
       "d": 3,
-      "q": "The graph of y = x² + 2 stays above the x-axis and crosses the y-axis at y = 2. How many solutions does x² + 2 = 0 have?",
+      "q": "The graph of \\(y = x^{2} + 2\\) stays above the x-axis and crosses the y-axis at \\(y = 2\\). How many solutions does \\(x^{2} + 2 = 0\\) have?",
       "opts": [
         "No solutions, as the graph never meets the x-axis",
-        "One solution, x = 2, where it crosses the y-axis",
-        "Two solutions, x = √2 and x = −√2, from x² = 2",
-        "One solution, x = 0, where the graph is lowest"
+        "One solution, \\(x = 2\\), where it crosses the y-axis",
+        "Two solutions, \\(x = \\sqrt{2}\\) and \\(x = -\\sqrt{2}\\), from \\(x^{2} = 2\\)",
+        "One solution, \\(x = 0\\), where the graph is lowest"
       ],
       "why": "Solutions are where the parabola meets the x-axis. This graph never does, so there are no solutions. The y-axis crossing at 2 is a y-value, not a solution.",
       "clue": "How many times does the graph meet the x-axis?"
@@ -18186,28 +18536,28 @@ MADE_BANKS.mat = {
   "mat-enlargements": {
     "title": "Enlargements",
     "card": [
-      "An enlargement changes the size of a shape but not its shape. It uses a fixed point called the centre and a scale factor k.",
-      "Every point on the image is k times as far from the centre as the matching point on the original, on the same straight line out from the centre.",
-      "If k is more than 1, the image is bigger. If k is between 0 and 1, the image is smaller.",
-      "Example: a point is 4 cm from the centre and k = 3. Its image is 4 × 3 = 12 cm from the centre."
+      "An enlargement changes the size of a shape but not its shape. It uses a fixed point called the centre and a scale factor \\(k\\).",
+      "Every point on the image is \\(k\\) times as far from the centre as the matching point on the original, on the same straight line out from the centre.",
+      "If \\(k\\) is more than 1, the image is bigger. If \\(k\\) is between 0 and 1, the image is smaller.",
+      "Example: a point is 4 cm from the centre and \\(k = 3\\). Its image is \\(4 \\times 3 = 12\\) cm from the centre."
     ],
-    "remember": "Multiply each distance from the centre by k. The shape stays the same.",
+    "remember": "Multiply each distance from the centre by \\(k\\). The shape stays the same.",
     "a": {
       "q": "A point is 5 cm from the centre of an enlargement with scale factor 3. How far from the centre is its image?",
       "opts": ["15 cm", "8 cm", "2 cm", "20 cm"],
-      "why": "The distance is multiplied by k: 5 × 3 = 15 cm. Adding 3 to get 8 cm treats the scale factor as an amount to add, but an enlargement multiplies.",
+      "why": "The distance is multiplied by \\(k\\): \\(5 \\times 3 = 15\\) cm. Adding 3 to get 8 cm treats the scale factor as an amount to add, but an enlargement multiplies.",
       "clue": "Multiply the distance by the scale factor."
     },
     "b": {
       "d": 3,
-      "q": "Priya enlarges a drawing of a kite using a centre point and k = 0.5. A corner of the kite is 12 cm from the centre. How far from the centre is the image of that corner, and what happens to the kite?",
+      "q": "Priya enlarges a drawing of a kite using a centre point and \\(k = 0.5\\). A corner of the kite is 12 cm from the centre. How far from the centre is the image of that corner, and what happens to the kite?",
       "opts": [
         "6 cm from the centre, and the image is smaller",
         "6 cm from the centre, and the image is bigger",
         "24 cm from the centre, and the image is bigger",
         "11.5 cm from the centre, and the image is smaller"
       ],
-      "why": "The distance is 12 × 0.5 = 6 cm. A scale factor between 0 and 1 makes the image smaller. Doubling to 24 cm would need k = 2. Subtracting 0.5 gives 11.5 cm, but an enlargement multiplies.",
+      "why": "The distance is \\(12 \\times 0.5 = 6\\) cm. A scale factor between 0 and 1 makes the image smaller. Doubling to 24 cm would need \\(k = 2\\). Subtracting 0.5 gives 11.5 cm, but an enlargement multiplies.",
       "clue": "Is 0.5 more or less than 1?"
     }
   },
@@ -18514,7 +18864,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "In a class of 10 students, 4 play netball and 5 play soccer. 2 play both. How many play exactly one of the two sports?",
       "opts": ["5", "7", "9", "3"],
-      "why": "Only netball is 4 − 2 = 2 and only soccer is 5 − 2 = 3, so exclusive or gives 2 + 3 = 5. The answer 7 is inclusive or, which counts the 2 who play both once.",
+      "why": "Only netball is \\(4 - 2 = 2\\) and only soccer is \\(5 - 2 = 3\\), so exclusive or gives \\(2 + 3 = 5\\). The answer 7 is inclusive or, which counts the 2 who play both once.",
       "clue": "Remove the students who play both."
     }
   },

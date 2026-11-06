@@ -29,7 +29,8 @@
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: done",
-  "2026-11-01T15:05:28Z check: passed, cleared"
+  "2026-11-01T15:05:28Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -124,7 +125,7 @@
    ],
    [
     "Spread",
-    "The spread is the IQR (Q3 − Q1) or the standard deviation. Median and IQR go together, as do mean and standard deviation."
+    "The spread is the IQR (\\(Q_{3} - Q_{1}\\)) or the standard deviation. Median and IQR go together, as do mean and standard deviation."
    ],
    [
     "Outliers",
@@ -156,5 +157,54 @@
    "clue": "Which measures are pulled least by extreme values?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Describing a distribution",
+   "card": [
+    [
+     "Shape",
+     "A distribution is symmetric if both sides mirror each other. It is positively skewed if the tail stretches to the right, and negatively skewed if the tail stretches to the left."
+    ],
+    [
+     "Centre",
+     "The centre is the median (the middle value) or the mean (the average). In a skewed distribution, the mean is pulled towards the tail."
+    ],
+    [
+     "Spread",
+     "The spread is the IQR (Q3 − Q1) or the standard deviation. Median and IQR go together, as do mean and standard deviation."
+    ],
+    [
+     "Outliers",
+     "An outlier is a value far from the rest. Outliers pull the mean and standard deviation more than the median and IQR, so with skew or outliers, median and IQR are the better pair."
+    ]
+   ],
+   "remember": "Describe shape, centre, spread and outliers, and use median and IQR when data is skewed.",
+   "a": {
+    "q": "Most scores in a histogram are bunched at the left, with a long tail to the right. What is the shape?",
+    "opts": [
+     "Positively skewed",
+     "Negatively skewed",
+     "Symmetric",
+     "Symmetric with outliers"
+    ],
+    "why": "The tail names the skew, and this tail points right, so it is positively skewed. It is not negatively skewed, which has its tail on the left.",
+    "clue": "Look at which way the tail points."
+   },
+   "b": {
+    "d": 3,
+    "q": "House prices in a suburb are positively skewed, with a few very expensive mansions. Which pair best describes centre and spread?",
+    "opts": [
+     "Median and IQR",
+     "Mean and standard deviation",
+     "Mean and IQR",
+     "Median and standard deviation"
+    ],
+    "why": "The mansions pull the mean and standard deviation upwards, so they misdescribe most houses. The median and IQR are less affected, and they are the matching pair.",
+    "clue": "Which measures are pulled least by extreme values?"
+   }
+  }
+ }
 }

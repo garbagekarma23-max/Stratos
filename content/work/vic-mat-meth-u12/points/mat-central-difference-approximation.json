@@ -15,7 +15,8 @@
   "2026-11-01T08:14:07Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -173,35 +174,72 @@
  "final": {
   "title": "The central difference approximation",
   "card": [
-   "A chord joins two points on a curve. Its gradient is rise over run. The derivative at x = a is the gradient of the tangent there.",
-   "The central difference uses one point either side of a. f′(a) ≈ (f(a + h) − f(a − h)) ÷ 2h, where h is a small positive number.",
-   "Take f(x) = x² with a = 3 and h = 0.1. f(3.1) = 9.61 and f(2.9) = 8.41. The difference is 9.61 − 8.41 = 1.2, and 2h = 0.2.",
-   "So the estimate is 1.2 ÷ 0.2 = 6. A smaller h usually gives a closer estimate."
+   "A chord joins two points on a curve. Its gradient is rise over run. The derivative at \\(x = a\\) is the gradient of the tangent there.",
+   "The central difference uses one point either side of \\(a\\): \\(f'(a) \\approx \\frac{f(a + h) - f(a - h)}{2h}\\), where \\(h\\) is a small positive number.",
+   "Take \\(f(x) = x^{2}\\) with \\(a = 3\\) and \\(h = 0.1\\). \\(f(3.1) = 9.61\\) and \\(f(2.9) = 8.41\\). The difference is \\(9.61 - 8.41 = 1.2\\), and \\(2h = 0.2\\).",
+   "So the estimate is \\(1.2 \\div 0.2 = 6\\). A smaller \\(h\\) usually gives a closer estimate."
   ],
-  "remember": "Right value minus left value, f(a + h) − f(a − h), then divide by 2h.",
+  "remember": "Right value minus left value, \\(f(a + h) - f(a - h)\\), then divide by \\(2h\\).",
   "a": {
-   "q": "For f(x) = x² with a = 4 and h = 0.5, what is the central difference estimate of f′(4)?",
+   "q": "For \\(f(x) = x^{2}\\) with \\(a = 4\\) and \\(h = 0.5\\), what is the central difference estimate of \\(f'(4)\\)?",
    "opts": [
     "8",
     "7.5",
     "16",
-    "−8"
+    "\\(-8\\)"
    ],
-   "why": "f(4.5) = 20.25 and f(3.5) = 12.25. The difference is 20.25 − 12.25 = 8, and 2h = 1, so the estimate is 8 ÷ 1 = 8. Dividing by h instead of 2h gives 16, and subtracting the right value from the left gives −8.",
-   "clue": "Find f at 4.5 and 3.5, take right minus left, then divide by 2h."
+   "why": "\\(f(4.5) = 20.25\\) and \\(f(3.5) = 12.25\\). The difference is \\(20.25 - 12.25 = 8\\), and \\(2h = 1\\), so the estimate is \\(8 \\div 1 = 8\\). Dividing by \\(h\\) instead of \\(2h\\) gives 16, and subtracting the right value from the left gives \\(-8\\).",
+   "clue": "Find \\(f\\) at 4.5 and 3.5, take right minus left, then divide by \\(2h\\)."
   },
   "b": {
    "d": 3,
-   "q": "Priya estimates f′(2) for f(x) = x³ using h = 0.1. What does she get?",
+   "q": "Priya estimates \\(f'(2)\\) for \\(f(x) = x^{3}\\) using \\(h = 0.1\\). What does she get?",
    "opts": [
     "12.01",
     "24.02",
     "12.61",
     "11.41"
    ],
-   "why": "f(2.1) = 9.261 and f(1.9) = 6.859. The difference is 2.402, and 2h = 0.2, so the estimate is 12.01. Dividing by h gives 24.02, which forgets that the points are 2h apart. 12.61 uses f(2.1) and f(2) only, which is not a point either side of 2.",
+   "why": "\\(f(2.1) = 9.261\\) and \\(f(1.9) = 6.859\\). The difference is 2.402, and \\(2h = 0.2\\), so the estimate is 12.01. Dividing by \\(h\\) gives 24.02, which forgets that the points are \\(2h\\) apart. 12.61 uses \\(f(2.1)\\) and \\(f(2)\\) only, which is not a point either side of 2.",
    "clue": "Use one point either side of 2, and the points are 0.2 apart."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The central difference approximation",
+   "card": [
+    "A chord joins two points on a curve. Its gradient is rise over run. The derivative at x = a is the gradient of the tangent there.",
+    "The central difference uses one point either side of a. f′(a) ≈ (f(a + h) − f(a − h)) ÷ 2h, where h is a small positive number.",
+    "Take f(x) = x² with a = 3 and h = 0.1. f(3.1) = 9.61 and f(2.9) = 8.41. The difference is 9.61 − 8.41 = 1.2, and 2h = 0.2.",
+    "So the estimate is 1.2 ÷ 0.2 = 6. A smaller h usually gives a closer estimate."
+   ],
+   "remember": "Right value minus left value, f(a + h) − f(a − h), then divide by 2h.",
+   "a": {
+    "q": "For f(x) = x² with a = 4 and h = 0.5, what is the central difference estimate of f′(4)?",
+    "opts": [
+     "8",
+     "7.5",
+     "16",
+     "−8"
+    ],
+    "why": "f(4.5) = 20.25 and f(3.5) = 12.25. The difference is 20.25 − 12.25 = 8, and 2h = 1, so the estimate is 8 ÷ 1 = 8. Dividing by h instead of 2h gives 16, and subtracting the right value from the left gives −8.",
+    "clue": "Find f at 4.5 and 3.5, take right minus left, then divide by 2h."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya estimates f′(2) for f(x) = x³ using h = 0.1. What does she get?",
+    "opts": [
+     "12.01",
+     "24.02",
+     "12.61",
+     "11.41"
+    ],
+    "why": "f(2.1) = 9.261 and f(1.9) = 6.859. The difference is 2.402, and 2h = 0.2, so the estimate is 12.01. Dividing by h gives 24.02, which forgets that the points are 2h apart. 12.61 uses f(2.1) and f(2) only, which is not a point either side of 2.",
+    "clue": "Use one point either side of 2, and the points are 0.2 apart."
+   }
+  }
+ }
 }

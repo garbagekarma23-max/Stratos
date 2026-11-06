@@ -7,7 +7,8 @@
   "2026-10-26T13:29:55Z new, write",
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:05Z write: done",
-  "2026-10-27T01:08:32Z check: passed, cleared"
+  "2026-10-27T01:08:32Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -71,35 +72,72 @@
  "final": {
   "title": "The derivative from first principles",
   "card": [
-   "The gradient of a secant through (x, f(x)) and (x + h, f(x + h)) is (f(x + h) − f(x))/h. Here h is the gap in x between the two points.",
-   "As h gets closer to 0, the second point slides towards the first. The secant turns into the tangent at that point.",
-   "The derivative is that limit: f'(x) = lim (f(x + h) − f(x))/h as h approaches 0. It gives the gradient of the tangent at x.",
-   "Example: f(x) = x². Then (f(x + h) − f(x))/h = (2xh + h²)/h = 2x + h. As h approaches 0, this approaches 2x, so f'(x) = 2x."
+   "The gradient of a secant through \\((x, f(x))\\) and \\((x + h, f(x + h))\\) is \\(\\frac{f(x + h) - f(x)}{h}\\). Here \\(h\\) is the gap in \\(x\\) between the two points.",
+   "As \\(h\\) gets closer to 0, the second point slides towards the first. The secant turns into the tangent at that point.",
+   "The derivative is that limit: \\(f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}\\), the limit as \\(h\\) approaches 0. It gives the gradient of the tangent at \\(x\\).",
+   "Example: \\(f(x) = x^{2}\\). Then \\(\\frac{f(x + h) - f(x)}{h} = \\frac{2xh + h^{2}}{h} = 2x + h\\). As \\(h\\) approaches 0, this approaches \\(2x\\), so \\(f'(x) = 2x\\)."
   ],
-  "remember": "Find the secant gradient, simplify it, then let h approach 0.",
+  "remember": "Find the secant gradient, simplify it, then let \\(h\\) approach 0.",
   "a": {
-   "q": "What does f'(x) = lim (f(x + h) − f(x))/h as h approaches 0 give?",
+   "q": "What does \\(f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}\\) give?",
    "opts": [
-    "The gradient of the tangent at x",
+    "The gradient of the tangent at \\(x\\)",
     "The gradient of the secant between two fixed points",
     "The average rate of change over an interval",
-    "The value of the function at x"
+    "The value of the function at \\(x\\)"
    ],
-   "why": "As h approaches 0, the secant becomes the tangent, so the limit is the tangent's gradient. A secant gradient needs two separate points, so it is not the limit.",
-   "clue": "What does the secant turn into as h shrinks?"
+   "why": "As \\(h\\) approaches 0, the secant becomes the tangent, so the limit is the tangent's gradient. A secant gradient needs two separate points, so it is not the limit.",
+   "clue": "What does the secant turn into as \\(h\\) shrinks?"
   },
   "b": {
    "d": 3,
-   "q": "Using first principles, what is f'(x) for f(x) = x² + 3x?",
+   "q": "Using first principles, what is \\(f'(x)\\) for \\(f(x) = x^{2} + 3x\\)?",
    "opts": [
-    "2x + 3",
-    "2x + 3h",
-    "x² + 3",
-    "2x"
+    "\\(2x + 3\\)",
+    "\\(2x + 3h\\)",
+    "\\(x^{2} + 3\\)",
+    "\\(2x\\)"
    ],
-   "why": "The secant gradient is ((x + h)² + 3(x + h) − x² − 3x)/h = (2xh + h² + 3h)/h = 2x + h + 3. As h approaches 0, this approaches 2x + 3. The option 2x + 3h keeps h, which has gone to 0 in the limit.",
-   "clue": "Expand, cancel the h in the denominator, then let h approach 0."
+   "why": "The secant gradient is \\(\\frac{(x + h)^{2} + 3(x + h) - x^{2} - 3x}{h} = \\frac{2xh + h^{2} + 3h}{h} = 2x + h + 3\\). As \\(h\\) approaches 0, this approaches \\(2x + 3\\). The option \\(2x + 3h\\) keeps \\(h\\), which has gone to 0 in the limit.",
+   "clue": "Expand, cancel the \\(h\\) in the denominator, then let \\(h\\) approach 0."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The derivative from first principles",
+   "card": [
+    "The gradient of a secant through (x, f(x)) and (x + h, f(x + h)) is (f(x + h) − f(x))/h. Here h is the gap in x between the two points.",
+    "As h gets closer to 0, the second point slides towards the first. The secant turns into the tangent at that point.",
+    "The derivative is that limit: f'(x) = lim (f(x + h) − f(x))/h as h approaches 0. It gives the gradient of the tangent at x.",
+    "Example: f(x) = x². Then (f(x + h) − f(x))/h = (2xh + h²)/h = 2x + h. As h approaches 0, this approaches 2x, so f'(x) = 2x."
+   ],
+   "remember": "Find the secant gradient, simplify it, then let h approach 0.",
+   "a": {
+    "q": "What does f'(x) = lim (f(x + h) − f(x))/h as h approaches 0 give?",
+    "opts": [
+     "The gradient of the tangent at x",
+     "The gradient of the secant between two fixed points",
+     "The average rate of change over an interval",
+     "The value of the function at x"
+    ],
+    "why": "As h approaches 0, the secant becomes the tangent, so the limit is the tangent's gradient. A secant gradient needs two separate points, so it is not the limit.",
+    "clue": "What does the secant turn into as h shrinks?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Using first principles, what is f'(x) for f(x) = x² + 3x?",
+    "opts": [
+     "2x + 3",
+     "2x + 3h",
+     "x² + 3",
+     "2x"
+    ],
+    "why": "The secant gradient is ((x + h)² + 3(x + h) − x² − 3x)/h = (2xh + h² + 3h)/h = 2x + h + 3. As h approaches 0, this approaches 2x + 3. The option 2x + 3h keeps h, which has gone to 0 in the limit.",
+    "clue": "Expand, cancel the h in the denominator, then let h approach 0."
+   }
+  }
+ }
 }

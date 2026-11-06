@@ -27,7 +27,8 @@
   "2026-11-01T08:14:07Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -203,21 +204,21 @@
  "final": {
   "title": "Exponential models",
   "card": [
-   "An exponential model has the form y = a × b^t. The value a is the initial value, when t = 0. The base b is the growth or decay factor for each time step.",
-   "For a rise of r% per step, b = 1 + r/100, so a 5% rise gives b = 1.05. For a fall of r%, b = 1 − r/100, so a 20% fall gives b = 0.8.",
-   "Example: $200 grows 10% each year, so y = 200 × 1.1^t. After 2 years, y = 200 × 1.21 = $242.",
-   "If a quantity doubles every d hours (its doubling time), y = a × 2^(t/d). If it halves every h hours (its half-life), y = a × (1/2)^(t/h)."
+   "An exponential model has the form \\(y = a \\times b^{t}\\). The value \\(a\\) is the initial value, when \\(t = 0\\). The base \\(b\\) is the growth or decay factor for each time step.",
+   "For a rise of \\(r\\%\\) per step, \\(b = 1 + \\frac{r}{100}\\), so a 5% rise gives \\(b = 1.05\\). For a fall of \\(r\\%\\), \\(b = 1 - \\frac{r}{100}\\), so a 20% fall gives \\(b = 0.8\\).",
+   "Example: $200 grows 10% each year, so \\(y = 200 \\times 1.1^{t}\\). After 2 years, \\(y = 200 \\times 1.21 = 242\\), which is $242.",
+   "If a quantity doubles every \\(d\\) hours (its doubling time), \\(y = a \\times 2^{\\frac{t}{d}}\\). If it halves every \\(h\\) hours (its half-life), \\(y = a \\times \\left(\\frac{1}{2}\\right)^{\\frac{t}{h}}\\)."
   ],
-  "remember": "Start value a, then multiply by b each step: b = 1 + r/100 for growth, 1 − r/100 for decay.",
+  "remember": "Start value \\(a\\), then multiply by \\(b\\) each step: \\(b = 1 + \\frac{r}{100}\\) for growth, \\(b = 1 - \\frac{r}{100}\\) for decay.",
   "a": {
-   "q": "A town of 4000 people grows by 3% each year. Which rule gives its population P after t years?",
+   "q": "A town of 4000 people grows by 3% each year. Which rule gives its population \\(P\\) after \\(t\\) years?",
    "opts": [
-    "P = 4000 × 1.03^t",
-    "P = 4000 × 0.03^t",
-    "P = 4000 × 3^t",
-    "P = 4000 + 1.03t"
+    "\\(P = 4000 \\times 1.03^{t}\\)",
+    "\\(P = 4000 \\times 0.03^{t}\\)",
+    "\\(P = 4000 \\times 3^{t}\\)",
+    "\\(P = 4000 + 1.03t\\)"
    ],
-   "why": "Growth of 3% means the factor is 1 + 3/100 = 1.03, and the population is multiplied by it each year. Using 0.03 would shrink the population to almost nothing.",
+   "why": "Growth of 3% means the factor is \\(1 + \\frac{3}{100} = 1.03\\), and the population is multiplied by it each year. Using 0.03 would shrink the population to almost nothing.",
    "clue": "Each year the population becomes 103% of the year before."
   },
   "b": {
@@ -229,9 +230,46 @@
     "26.7 mg",
     "40 mg"
    ],
-   "why": "Using y = 80 × (1/2)^(12/4) = 80 × 1/8 = 10 mg. That is 3 half-lives, so 80 → 40 → 20 → 10. Halving only once or twice gives 40 or 20 mg, and dividing 80 by 3 gives 26.7 mg.",
+   "why": "Using \\(y = 80 \\times \\left(\\frac{1}{2}\\right)^{\\frac{12}{4}} = 80 \\times \\frac{1}{8} = 10\\), so 10 mg remains. That is 3 half-lives, so \\(80 \\to 40 \\to 20 \\to 10\\). Halving only once or twice gives 40 or 20 mg, and dividing 80 by 3 gives 26.7 mg.",
    "clue": "Count how many half-lives fit into 12 hours."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Exponential models",
+   "card": [
+    "An exponential model has the form y = a × b^t. The value a is the initial value, when t = 0. The base b is the growth or decay factor for each time step.",
+    "For a rise of r% per step, b = 1 + r/100, so a 5% rise gives b = 1.05. For a fall of r%, b = 1 − r/100, so a 20% fall gives b = 0.8.",
+    "Example: $200 grows 10% each year, so y = 200 × 1.1^t. After 2 years, y = 200 × 1.21 = $242.",
+    "If a quantity doubles every d hours (its doubling time), y = a × 2^(t/d). If it halves every h hours (its half-life), y = a × (1/2)^(t/h)."
+   ],
+   "remember": "Start value a, then multiply by b each step: b = 1 + r/100 for growth, 1 − r/100 for decay.",
+   "a": {
+    "q": "A town of 4000 people grows by 3% each year. Which rule gives its population P after t years?",
+    "opts": [
+     "P = 4000 × 1.03^t",
+     "P = 4000 × 0.03^t",
+     "P = 4000 × 3^t",
+     "P = 4000 + 1.03t"
+    ],
+    "why": "Growth of 3% means the factor is 1 + 3/100 = 1.03, and the population is multiplied by it each year. Using 0.03 would shrink the population to almost nothing.",
+    "clue": "Each year the population becomes 103% of the year before."
+   },
+   "b": {
+    "d": 3,
+    "q": "A drug in the blood has a half-life of 4 hours. A dose of 80 mg is taken. How much remains after 12 hours?",
+    "opts": [
+     "10 mg",
+     "20 mg",
+     "26.7 mg",
+     "40 mg"
+    ],
+    "why": "Using y = 80 × (1/2)^(12/4) = 80 × 1/8 = 10 mg. That is 3 half-lives, so 80 → 40 → 20 → 10. Halving only once or twice gives 40 or 20 mg, and dividing 80 by 3 gives 26.7 mg.",
+    "clue": "Count how many half-lives fit into 12 hours."
+   }
+  }
+ }
 }

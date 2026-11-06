@@ -10,7 +10,8 @@
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-28T11:49:43Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:49:43Z review: approved with the fix (a spot check)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -172,12 +173,12 @@
  "final": {
   "title": "Annuities as geometric series",
   "card": [
-   "An annuity is a series of equal payments M made at regular intervals, such as $1000 deposited at the end of each year. Interest is added each period at a rate r.",
-   "The future value is the total of all payments after compounding. A payment made with k periods left grows to M × (1 + r) to the power k, so each payment compounds for a different number of periods.",
-   "Written from the last payment back, the terms are M, M(1 + r), M(1 + r)², and so on. This is a geometric series with first term M and common ratio (1 + r). For n payments, its sum is FV = M[(1 + r)ⁿ − 1] ÷ r.",
-   "Example: $1000 at the end of each year for 3 years at 10% a year. FV = 1000 + 1000 × 1.1 + 1000 × 1.1² = 1000 + 1100 + 1210 = $3310. The formula gives 1000 × (1.1³ − 1) ÷ 0.1 = 1000 × 3.31 = $3310."
+   "An annuity is a series of equal payments \\(M\\) made at regular intervals, such as $1000 deposited at the end of each year. Interest is added each period at a rate \\(r\\).",
+   "The future value is the total of all payments after compounding. A payment made with \\(k\\) periods left grows to \\(M \\times (1 + r)^{k}\\), so each payment compounds for a different number of periods.",
+   "Written from the last payment back, the terms are \\(M\\), \\(M(1 + r)\\), \\(M(1 + r)^{2}\\), and so on. This is a geometric series with first term \\(M\\) and common ratio \\((1 + r)\\). For \\(n\\) payments, its sum is \\(FV = \\frac{M[(1 + r)^{n} - 1]}{r}\\).",
+   "Example: $1000 at the end of each year for 3 years at 10% a year. \\(FV = 1000 + 1000 \\times 1.1 + 1000 \\times 1.1^{2} = 1000 + 1100 + 1210 = \\$3310\\). The formula gives \\(1000 \\times \\frac{1.1^{3} - 1}{0.1} = 1000 \\times 3.31 = \\$3310\\)."
   ],
-  "remember": "Each payment compounds for a different time, and the total is a geometric series with ratio 1 + r.",
+  "remember": "Each payment compounds for a different time, and the total is a geometric series with ratio \\(1 + r\\).",
   "a": {
    "q": "$500 is paid at the end of each year for 3 years, with interest of 10% a year. What is the future value just after the last payment?",
    "opts": [
@@ -186,21 +187,58 @@
     "$1820.50",
     "$665.50"
    ],
-   "why": "The payments grow to 500, 500 × 1.1 = 550 and 500 × 1.1² = 605, so the total is 500 + 550 + 605 = $1655. $1820.50 compounds every payment one extra period, but the last payment earns no interest. $1500 ignores interest altogether.",
+   "why": "The payments grow to 500, \\(500 \\times 1.1 = 550\\) and \\(500 \\times 1.1^{2} = 605\\), so the total is \\(500 + 550 + 605 = \\$1655\\). $1820.50 compounds every payment one extra period, but the last payment earns no interest. $1500 ignores interest altogether.",
    "clue": "The last payment earns no interest, and the earlier ones earn more."
   },
   "b": {
    "d": 3,
    "q": "Priya deposits $200 at the end of each year for 4 years at 5% a year. Which expression gives the future value just after her last deposit?",
    "opts": [
-    "200 × (1.05⁴ − 1) ÷ 0.05",
-    "200 × 1.05⁴",
-    "200 × (1.05⁴ − 1) ÷ 1.05",
-    "200 × (1.05⁵ − 1) ÷ 0.05"
+    "\\(200 \\times \\frac{1.05^{4} - 1}{0.05}\\)",
+    "\\(200 \\times 1.05^{4}\\)",
+    "\\(200 \\times \\frac{1.05^{4} - 1}{1.05}\\)",
+    "\\(200 \\times \\frac{1.05^{5} - 1}{0.05}\\)"
    ],
-   "why": "The deposits form a geometric series with first term 200, ratio 1.05 and 4 terms, so the sum is 200 × (1.05⁴ − 1) ÷ 0.05, about $862.03. 200 × 1.05⁴ compounds only one deposit, not all four. Using a power of 5 counts one deposit too many.",
+   "why": "The deposits form a geometric series with first term 200, ratio 1.05 and 4 terms, so the sum is \\(200 \\times \\frac{1.05^{4} - 1}{0.05}\\), about $862.03. \\(200 \\times 1.05^{4}\\) compounds only one deposit, not all four. Using a power of 5 counts one deposit too many.",
    "clue": "Match each part of the expression to the sum formula on the card."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Annuities as geometric series",
+   "card": [
+    "An annuity is a series of equal payments M made at regular intervals, such as $1000 deposited at the end of each year. Interest is added each period at a rate r.",
+    "The future value is the total of all payments after compounding. A payment made with k periods left grows to M × (1 + r) to the power k, so each payment compounds for a different number of periods.",
+    "Written from the last payment back, the terms are M, M(1 + r), M(1 + r)², and so on. This is a geometric series with first term M and common ratio (1 + r). For n payments, its sum is FV = M[(1 + r)ⁿ − 1] ÷ r.",
+    "Example: $1000 at the end of each year for 3 years at 10% a year. FV = 1000 + 1000 × 1.1 + 1000 × 1.1² = 1000 + 1100 + 1210 = $3310. The formula gives 1000 × (1.1³ − 1) ÷ 0.1 = 1000 × 3.31 = $3310."
+   ],
+   "remember": "Each payment compounds for a different time, and the total is a geometric series with ratio 1 + r.",
+   "a": {
+    "q": "$500 is paid at the end of each year for 3 years, with interest of 10% a year. What is the future value just after the last payment?",
+    "opts": [
+     "$1655",
+     "$1500",
+     "$1820.50",
+     "$665.50"
+    ],
+    "why": "The payments grow to 500, 500 × 1.1 = 550 and 500 × 1.1² = 605, so the total is 500 + 550 + 605 = $1655. $1820.50 compounds every payment one extra period, but the last payment earns no interest. $1500 ignores interest altogether.",
+    "clue": "The last payment earns no interest, and the earlier ones earn more."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya deposits $200 at the end of each year for 4 years at 5% a year. Which expression gives the future value just after her last deposit?",
+    "opts": [
+     "200 × (1.05⁴ − 1) ÷ 0.05",
+     "200 × 1.05⁴",
+     "200 × (1.05⁴ − 1) ÷ 1.05",
+     "200 × (1.05⁵ − 1) ÷ 0.05"
+    ],
+    "why": "The deposits form a geometric series with first term 200, ratio 1.05 and 4 terms, so the sum is 200 × (1.05⁴ − 1) ÷ 0.05, about $862.03. 200 × 1.05⁴ compounds only one deposit, not all four. Using a power of 5 counts one deposit too many.",
+    "clue": "Match each part of the expression to the sum formula on the card."
+   }
+  }
+ }
 }

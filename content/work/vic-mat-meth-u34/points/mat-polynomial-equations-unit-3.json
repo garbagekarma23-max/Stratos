@@ -26,7 +26,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -100,35 +101,72 @@
  "final": {
   "title": "Polynomial equations",
   "card": [
-   "A polynomial of degree n has at most n real solutions. A cubic has at most 3, and a quadratic at most 2. It can have fewer.",
+   "A polynomial of degree \\(n\\) has at most \\(n\\) real solutions. A cubic has at most 3, and a quadratic at most 2. It can have fewer.",
    "To solve by factorising, move every term to one side so the other side is 0. Factorise, then set each factor equal to 0 (the null factor law).",
-   "Example: x³ − 4x = 0 gives x(x − 2)(x + 2) = 0, so x = 0, x = 2 or x = −2. Three solutions from a cubic.",
-   "If it will not factorise, graph y = the polynomial. The real solutions are the x-intercepts. A calculator can also find them numerically."
+   "Example: \\(x^{3} - 4x = 0\\) gives \\(x(x - 2)(x + 2) = 0\\), so \\(x = 0\\), \\(x = 2\\) or \\(x = -2\\). Three solutions from a cubic.",
+   "If it will not factorise, graph \\(y = P(x)\\), where \\(P(x)\\) is the polynomial. The real solutions are the x-intercepts. A calculator can also find them numerically."
   ],
-  "remember": "Set one side to 0, then factorise. A degree n polynomial has at most n real solutions.",
+  "remember": "Set one side to 0, then factorise. A degree \\(n\\) polynomial has at most \\(n\\) real solutions.",
   "a": {
-   "q": "How many real solutions does x³ − 9x = 0 have?",
+   "q": "How many real solutions does \\(x^{3} - 9x = 0\\) have?",
    "opts": [
     "3",
     "2",
     "1",
     "9"
    ],
-   "why": "x³ − 9x = x(x − 3)(x + 3) = 0, so x = 0, 3 or −3. Three solutions is the most a cubic can have. Dividing both sides by x would lose x = 0 and leave only 2.",
+   "why": "\\(x^{3} - 9x = x(x - 3)(x + 3) = 0\\), so \\(x = 0\\), 3 or \\(-3\\). Three solutions is the most a cubic can have. Dividing both sides by \\(x\\) would lose \\(x = 0\\) and leave only 2.",
    "clue": "Factorise fully, then set each factor to 0."
   },
   "b": {
    "d": 3,
-   "q": "What are all the real solutions of x³ = 4x²?",
+   "q": "What are all the real solutions of \\(x^{3} = 4x^{2}\\)?",
    "opts": [
-    "x = 0 or x = 4",
-    "x = 4 only",
-    "x = 0 or x = 2",
-    "x = 0, x = 2 or x = −2"
+    "\\(x = 0\\) or \\(x = 4\\)",
+    "\\(x = 4\\) only",
+    "\\(x = 0\\) or \\(x = 2\\)",
+    "\\(x = 0\\), \\(x = 2\\) or \\(x = -2\\)"
    ],
-   "why": "Move terms to one side: x³ − 4x² = 0, so x²(x − 4) = 0. Then x = 0 or x = 4. Dividing both sides by x² would lose x = 0, which is the tempting mistake that gives x = 4 only.",
+   "why": "Move terms to one side: \\(x^{3} - 4x^{2} = 0\\), so \\(x^{2}(x - 4) = 0\\). Then \\(x = 0\\) or \\(x = 4\\). Dividing both sides by \\(x^{2}\\) would lose \\(x = 0\\), which is the tempting mistake that gives \\(x = 4\\) only.",
    "clue": "Get 0 on one side before you factorise."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Polynomial equations",
+   "card": [
+    "A polynomial of degree n has at most n real solutions. A cubic has at most 3, and a quadratic at most 2. It can have fewer.",
+    "To solve by factorising, move every term to one side so the other side is 0. Factorise, then set each factor equal to 0 (the null factor law).",
+    "Example: x³ − 4x = 0 gives x(x − 2)(x + 2) = 0, so x = 0, x = 2 or x = −2. Three solutions from a cubic.",
+    "If it will not factorise, graph y = the polynomial. The real solutions are the x-intercepts. A calculator can also find them numerically."
+   ],
+   "remember": "Set one side to 0, then factorise. A degree n polynomial has at most n real solutions.",
+   "a": {
+    "q": "How many real solutions does x³ − 9x = 0 have?",
+    "opts": [
+     "3",
+     "2",
+     "1",
+     "9"
+    ],
+    "why": "x³ − 9x = x(x − 3)(x + 3) = 0, so x = 0, 3 or −3. Three solutions is the most a cubic can have. Dividing both sides by x would lose x = 0 and leave only 2.",
+    "clue": "Factorise fully, then set each factor to 0."
+   },
+   "b": {
+    "d": 3,
+    "q": "What are all the real solutions of x³ = 4x²?",
+    "opts": [
+     "x = 0 or x = 4",
+     "x = 4 only",
+     "x = 0 or x = 2",
+     "x = 0, x = 2 or x = −2"
+    ],
+    "why": "Move terms to one side: x³ − 4x² = 0, so x²(x − 4) = 0. Then x = 0 or x = 4. Dividing both sides by x² would lose x = 0, which is the tempting mistake that gives x = 4 only.",
+    "clue": "Get 0 on one side before you factorise."
+   }
+  }
+ }
 }

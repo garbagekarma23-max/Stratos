@@ -18,7 +18,8 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:33Z write: done",
-  "2026-11-01T08:33:51Z check: passed, cleared"
+  "2026-11-01T08:33:51Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -93,34 +94,71 @@
   "title": "Domain and range notation",
   "card": [
    "An interval is a set of numbers between two ends. A square bracket [ or ] includes the end number. A round bracket ( or ) leaves it out.",
-   "Example: [0, 5) means all numbers from 0 up to but not including 5. So 0 is in the interval and 5 is not.",
-   "The symbol ∞ means the numbers go on without end. It is not a number, so it always gets a round bracket, as in [0, ∞).",
-   "A restricted domain is written f: [0, ∞) → R. This reads: f is a function whose inputs are x ≥ 0, and whose outputs are real numbers. For f(x) = x² on this domain, the range is [0, ∞)."
+   "Example: \\([0, 5)\\) means all numbers from 0 up to but not including 5. So 0 is in the interval and 5 is not.",
+   "The symbol \\(\\infty\\) means the numbers go on without end. It is not a number, so it always gets a round bracket, as in \\([0, \\infty)\\).",
+   "A restricted domain is written \\(f: [0, \\infty) \\to \\mathbb{R}\\). This reads: \\(f\\) is a function whose inputs are \\(x \\ge 0\\), and whose outputs are real numbers. For \\(f(x) = x^{2}\\) on this domain, the range is \\([0, \\infty)\\)."
   ],
   "remember": "Square bracket includes the end. Round bracket leaves it out. Infinity always gets a round bracket.",
   "a": {
-   "q": "Which interval contains every x with −2 < x ≤ 3?",
+   "q": "Which interval contains every \\(x\\) with \\(-2 < x \\le 3\\)?",
    "opts": [
-    "(−2, 3]",
-    "[−2, 3]",
-    "[−2, 3)",
-    "(−2, 3)"
+    "\\((-2, 3]\\)",
+    "\\([-2, 3]\\)",
+    "\\([-2, 3)\\)",
+    "\\((-2, 3)\\)"
    ],
-   "why": "−2 is not included, so it gets a round bracket. 3 is included, so it gets a square bracket. [−2, 3] is tempting, but it wrongly includes −2.",
+   "why": "\\(-2\\) is not included, so it gets a round bracket. 3 is included, so it gets a square bracket. \\([-2, 3]\\) is tempting, but it wrongly includes \\(-2\\).",
    "clue": "Check each end on its own: is it included or not?"
   },
   "b": {
    "d": 3,
-   "q": "A function is f: [1, ∞) → R, where f(x) = x². Which input is NOT allowed?",
+   "q": "A function is \\(f: [1, \\infty) \\to \\mathbb{R}\\), where \\(f(x) = x^{2}\\). Which input is NOT allowed?",
    "opts": [
-    "x = 0",
-    "x = 1",
-    "x = 2",
-    "x = 100"
+    "\\(x = 0\\)",
+    "\\(x = 1\\)",
+    "\\(x = 2\\)",
+    "\\(x = 100\\)"
    ],
-   "why": "The domain [1, ∞) holds only numbers from 1 upwards, with 1 included. So 0 is outside it and is not allowed. x = 1 is allowed because the square bracket includes 1.",
+   "why": "The domain \\([1, \\infty)\\) holds only numbers from 1 upwards, with 1 included. So 0 is outside it and is not allowed. \\(x = 1\\) is allowed because the square bracket includes 1.",
    "clue": "The domain is the set of allowed inputs, not the outputs."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Domain and range notation",
+   "card": [
+    "An interval is a set of numbers between two ends. A square bracket [ or ] includes the end number. A round bracket ( or ) leaves it out.",
+    "Example: [0, 5) means all numbers from 0 up to but not including 5. So 0 is in the interval and 5 is not.",
+    "The symbol ∞ means the numbers go on without end. It is not a number, so it always gets a round bracket, as in [0, ∞).",
+    "A restricted domain is written f: [0, ∞) → R. This reads: f is a function whose inputs are x ≥ 0, and whose outputs are real numbers. For f(x) = x² on this domain, the range is [0, ∞)."
+   ],
+   "remember": "Square bracket includes the end. Round bracket leaves it out. Infinity always gets a round bracket.",
+   "a": {
+    "q": "Which interval contains every x with −2 < x ≤ 3?",
+    "opts": [
+     "(−2, 3]",
+     "[−2, 3]",
+     "[−2, 3)",
+     "(−2, 3)"
+    ],
+    "why": "−2 is not included, so it gets a round bracket. 3 is included, so it gets a square bracket. [−2, 3] is tempting, but it wrongly includes −2.",
+    "clue": "Check each end on its own: is it included or not?"
+   },
+   "b": {
+    "d": 3,
+    "q": "A function is f: [1, ∞) → R, where f(x) = x². Which input is NOT allowed?",
+    "opts": [
+     "x = 0",
+     "x = 1",
+     "x = 2",
+     "x = 100"
+    ],
+    "why": "The domain [1, ∞) holds only numbers from 1 upwards, with 1 included. So 0 is outside it and is not allowed. x = 1 is allowed because the square bracket includes 1.",
+    "clue": "The domain is the set of allowed inputs, not the outputs."
+   }
+  }
+ }
 }

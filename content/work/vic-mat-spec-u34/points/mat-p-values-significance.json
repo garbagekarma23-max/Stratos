@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T14:36:28Z new, write",
   "2026-11-01T14:46:41Z write: done",
-  "2026-11-01T14:56:04Z check: passed, cleared"
+  "2026-11-01T14:56:04Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -78,39 +79,82 @@
   "card": [
    [
     "p-value",
-    "The p-value is the probability of a sample result at least as extreme as the one observed, if H₀ is true."
+    "The p-value is the probability of a sample result at least as extreme as the one observed, if \\(H_{0}\\) is true."
    ],
    [
     "Significance level",
-    "The significance level, α, is chosen before the test. A common choice is 0.05."
+    "The significance level, \\(\\alpha\\), is chosen before the test. A common choice is 0.05."
    ],
-   "If p < α, reject H₀. There is evidence for H₁. If p > α, do not reject H₀. The evidence is not strong enough.",
-   "Example: with α = 0.05, a p-value of 0.03 gives evidence to reject H₀. A p-value of 0.20 does not."
+   "If \\(p < \\alpha\\), reject \\(H_{0}\\). There is evidence for \\(H_{1}\\). If \\(p > \\alpha\\), do not reject \\(H_{0}\\). The evidence is not strong enough.",
+   "Example: with \\(\\alpha = 0.05\\), a p-value of 0.03 gives evidence to reject \\(H_{0}\\). A p-value of 0.20 does not."
   ],
-  "remember": "A p-value below the significance level is evidence to reject H₀.",
+  "remember": "A p-value below the significance level is evidence to reject \\(H_{0}\\).",
   "a": {
-   "q": "A test has α = 0.05 and gives a p-value of 0.02. What is the conclusion?",
+   "q": "A test has \\(\\alpha = 0.05\\) and gives a p-value of 0.02. What is the conclusion?",
    "opts": [
-    "Reject H₀, as 0.02 is less than 0.05",
-    "Do not reject H₀, as 0.02 is a small value",
-    "Reject H₁, as 0.02 is less than 0.05",
-    "Do not reject H₀, as 0.02 is not equal to 0.05"
+    "Reject \\(H_{0}\\), as 0.02 is less than 0.05",
+    "Do not reject \\(H_{0}\\), as 0.02 is a small value",
+    "Reject \\(H_{1}\\), as 0.02 is less than 0.05",
+    "Do not reject \\(H_{0}\\), as 0.02 is not equal to 0.05"
    ],
-   "why": "The p-value 0.02 is below α = 0.05, so there is evidence to reject H₀. A small p-value is a reason to reject H₀, not to keep it.",
-   "clue": "Compare the p-value with α. Which is smaller?"
+   "why": "The p-value 0.02 is below \\(\\alpha = 0.05\\), so there is evidence to reject \\(H_{0}\\). A small p-value is a reason to reject \\(H_{0}\\), not to keep it.",
+   "clue": "Compare the p-value with \\(\\alpha\\). Which is smaller?"
   },
   "b": {
    "d": 3,
-   "q": "Sam tests a new fertiliser at α = 0.01 and gets p = 0.03. What is the correct conclusion?",
+   "q": "Sam tests a new fertiliser at \\(\\alpha = 0.01\\) and gets \\(p = 0.03\\). What is the correct conclusion?",
    "opts": [
-    "Do not reject H₀, as 0.03 is greater than 0.01",
-    "Reject H₀, as 0.03 is less than 0.05",
-    "Reject H₀, as 0.03 is a small probability",
-    "Do not reject H₀, as 0.03 is less than 0.05"
+    "Do not reject \\(H_{0}\\), as 0.03 is greater than 0.01",
+    "Reject \\(H_{0}\\), as 0.03 is less than 0.05",
+    "Reject \\(H_{0}\\), as 0.03 is a small probability",
+    "Do not reject \\(H_{0}\\), as 0.03 is less than 0.05"
    ],
-   "why": "The level here is 0.01, not 0.05. Since 0.03 is above 0.01, the evidence is not strong enough to reject H₀. Using 0.05 would give the wrong conclusion.",
-   "clue": "Use the α given in the question, not the usual one."
+   "why": "The level here is 0.01, not 0.05. Since 0.03 is above 0.01, the evidence is not strong enough to reject \\(H_{0}\\). Using 0.05 would give the wrong conclusion.",
+   "clue": "Use the \\(\\alpha\\) given in the question, not the usual one."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "p-values and significance",
+   "card": [
+    [
+     "p-value",
+     "The p-value is the probability of a sample result at least as extreme as the one observed, if H₀ is true."
+    ],
+    [
+     "Significance level",
+     "The significance level, α, is chosen before the test. A common choice is 0.05."
+    ],
+    "If p < α, reject H₀. There is evidence for H₁. If p > α, do not reject H₀. The evidence is not strong enough.",
+    "Example: with α = 0.05, a p-value of 0.03 gives evidence to reject H₀. A p-value of 0.20 does not."
+   ],
+   "remember": "A p-value below the significance level is evidence to reject H₀.",
+   "a": {
+    "q": "A test has α = 0.05 and gives a p-value of 0.02. What is the conclusion?",
+    "opts": [
+     "Reject H₀, as 0.02 is less than 0.05",
+     "Do not reject H₀, as 0.02 is a small value",
+     "Reject H₁, as 0.02 is less than 0.05",
+     "Do not reject H₀, as 0.02 is not equal to 0.05"
+    ],
+    "why": "The p-value 0.02 is below α = 0.05, so there is evidence to reject H₀. A small p-value is a reason to reject H₀, not to keep it.",
+    "clue": "Compare the p-value with α. Which is smaller?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Sam tests a new fertiliser at α = 0.01 and gets p = 0.03. What is the correct conclusion?",
+    "opts": [
+     "Do not reject H₀, as 0.03 is greater than 0.01",
+     "Reject H₀, as 0.03 is less than 0.05",
+     "Reject H₀, as 0.03 is a small probability",
+     "Do not reject H₀, as 0.03 is less than 0.05"
+    ],
+    "why": "The level here is 0.01, not 0.05. Since 0.03 is above 0.01, the evidence is not strong enough to reject H₀. Using 0.05 would give the wrong conclusion.",
+    "clue": "Use the α given in the question, not the usual one."
+   }
+  }
+ }
 }

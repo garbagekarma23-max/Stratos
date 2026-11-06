@@ -9,7 +9,8 @@
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
-  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -196,15 +197,15 @@
   "card": [
    [
     "Linear",
-    "y = mx + c. The value changes by the same amount each step. m is the rate of change and c is the starting value."
+    "\\(y = mx + c\\). The value changes by the same amount each step. \\(m\\) is the rate of change and \\(c\\) is the starting value."
    ],
    [
     "Quadratic",
-    "y = ax² + bx + c. The graph has one turning point, so it suits a rise then a fall, such as a ball thrown in the air."
+    "\\(y = ax^{2} + bx + c\\). The graph has one turning point, so it suits a rise then a fall, such as a ball thrown in the air."
    ],
    [
     "Exponential",
-    "y = A × rˣ: A is the starting value and each step multiplies by r, so r > 1 grows and 0 < r < 1 decays. In P = 300 × 0.9ᵗ, each step keeps 90%, so 10% is lost."
+    "\\(y = A \\times r^{x}\\): \\(A\\) is the starting value and each step multiplies by \\(r\\), so \\(r > 1\\) grows and \\(0 < r < 1\\) decays. In \\(P = 300 \\times 0.9^{t}\\), each step keeps 90%, so 10% is lost."
    ],
    [
     "Trigonometric",
@@ -215,26 +216,75 @@
   "a": {
    "q": "A town has 2000 people. Its population grows by 5% each year. Which model suits this best?",
    "opts": [
-    "Exponential, P = 2000 × 1.05ᵗ",
-    "Linear, P = 2000 + 5t",
-    "Quadratic, P = 2000 + 5t²",
-    "Trigonometric, P = 2000 sin(5t)"
+    "Exponential, \\(P = 2000 \\times 1.05^{t}\\)",
+    "Linear, \\(P = 2000 + 5t\\)",
+    "Quadratic, \\(P = 2000 + 5t^{2}\\)",
+    "Trigonometric, \\(P = 2000\\sin(5t)\\)"
    ],
    "why": "A 5% rise each year means multiplying by the same factor, 1.05, every year. That is exponential. A linear model adds the same number of people each year, which is not what a percentage rise does.",
    "clue": "Is the same amount added, or the same factor multiplied?"
   },
   "b": {
    "d": 3,
-   "q": "A car's value is V = 30000 × 0.85ᵗ dollars, where t is years. What does 0.85 tell you?",
+   "q": "A car's value is \\(V = 30000 \\times 0.85^{t}\\) dollars, where \\(t\\) is years. What does 0.85 tell you?",
    "opts": [
     "It loses 15% of its value each year",
     "It loses 85% of its value each year",
     "It loses $0.85 of its value each year",
     "It keeps 15% of its value each year"
    ],
-   "why": "Multiplying by 0.85 means the car keeps 85% of its value each year, so it loses 100% − 85% = 15%. Losing 85% each year would need a factor of 0.15, not 0.85.",
+   "why": "Multiplying by 0.85 means the car keeps 85% of its value each year, so it loses \\(100\\% - 85\\% = 15\\%\\). Losing 85% each year would need a factor of 0.15, not 0.85.",
    "clue": "Multiplying by 0.85 keeps what share of the value?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Modelling with functions",
+   "card": [
+    [
+     "Linear",
+     "y = mx + c. The value changes by the same amount each step. m is the rate of change and c is the starting value."
+    ],
+    [
+     "Quadratic",
+     "y = ax² + bx + c. The graph has one turning point, so it suits a rise then a fall, such as a ball thrown in the air."
+    ],
+    [
+     "Exponential",
+     "y = A × rˣ: A is the starting value and each step multiplies by r, so r > 1 grows and 0 < r < 1 decays. In P = 300 × 0.9ᵗ, each step keeps 90%, so 10% is lost."
+    ],
+    [
+     "Trigonometric",
+     "A sine or cosine model repeats the same cycle over and over, so it suits things that rise and fall regularly, such as tides or daylight hours."
+    ]
+   ],
+   "remember": "Same amount added: linear. Same factor multiplied: exponential. One turning point: quadratic. Repeating cycle: trigonometric.",
+   "a": {
+    "q": "A town has 2000 people. Its population grows by 5% each year. Which model suits this best?",
+    "opts": [
+     "Exponential, P = 2000 × 1.05ᵗ",
+     "Linear, P = 2000 + 5t",
+     "Quadratic, P = 2000 + 5t²",
+     "Trigonometric, P = 2000 sin(5t)"
+    ],
+    "why": "A 5% rise each year means multiplying by the same factor, 1.05, every year. That is exponential. A linear model adds the same number of people each year, which is not what a percentage rise does.",
+    "clue": "Is the same amount added, or the same factor multiplied?"
+   },
+   "b": {
+    "d": 3,
+    "q": "A car's value is V = 30000 × 0.85ᵗ dollars, where t is years. What does 0.85 tell you?",
+    "opts": [
+     "It loses 15% of its value each year",
+     "It loses 85% of its value each year",
+     "It loses $0.85 of its value each year",
+     "It keeps 15% of its value each year"
+    ],
+    "why": "Multiplying by 0.85 means the car keeps 85% of its value each year, so it loses 100% − 85% = 15%. Losing 85% each year would need a factor of 0.15, not 0.85.",
+    "clue": "Multiplying by 0.85 keeps what share of the value?"
+   }
+  }
+ }
 }

@@ -9,7 +9,8 @@
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b wording, b other)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b wording, b other)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -150,12 +151,12 @@
  "final": {
   "title": "Geometric sequences",
   "card": [
-   "In a geometric sequence, each term is found by multiplying the one before it by the same number. That number is the common ratio, r.",
-   "To find r, divide any term by the term before it. For 3, 6, 12, 24, r = 6 ÷ 3 = 2. The ratio can be negative or a fraction.",
-   "The first term is a. The nth term is Tₙ = arⁿ⁻¹. The power is n − 1, because the first term has not been multiplied by r yet.",
-   "For example, in 5, 10, 20, ..., a = 5 and r = 2. The 6th term is 5 × 2⁵ = 5 × 32 = 160."
+   "In a geometric sequence, each term is found by multiplying the one before it by the same number. That number is the common ratio, \\(r\\).",
+   "To find \\(r\\), divide any term by the term before it. For 3, 6, 12, 24, \\(r = 6 \\div 3 = 2\\). The ratio can be negative or a fraction.",
+   "The first term is \\(a\\). The \\(n\\)th term is \\(T_{n} = ar^{n - 1}\\). The power is \\(n - 1\\), because the first term has not been multiplied by \\(r\\) yet.",
+   "For example, in 5, 10, 20, ..., \\(a = 5\\) and \\(r = 2\\). The 6th term is \\(5 \\times 2^{5} = 5 \\times 32 = 160\\)."
   ],
-  "remember": "Divide to find r, then use Tₙ = arⁿ⁻¹ with the power n − 1.",
+  "remember": "Divide to find \\(r\\), then use \\(T_{n} = ar^{n - 1}\\) with the power \\(n - 1\\).",
   "a": {
    "q": "A geometric sequence is 2, 6, 18, 54, ... What is the 7th term?",
    "opts": [
@@ -164,21 +165,58 @@
     "729",
     "12"
    ],
-   "why": "Here a = 2 and r = 6 ÷ 2 = 3. T₇ = 2 × 3⁶ = 2 × 729 = 1458. Using 3⁷ gives 4374, which is the 8th term, because the power must be n − 1.",
-   "clue": "Find r first, then check the power on r."
+   "why": "Here \\(a = 2\\) and \\(r = 6 \\div 2 = 3\\). \\(T_{7} = 2 \\times 3^{6} = 2 \\times 729 = 1458\\). Using \\(3^{7}\\) gives 4374, which is the 8th term, because the power must be \\(n - 1\\).",
+   "clue": "Find \\(r\\) first, then check the power on \\(r\\)."
   },
   "b": {
    "d": 3,
-   "q": "A geometric sequence is 400, −200, 100, ... What is the 5th term?",
+   "q": "A geometric sequence is \\(400, -200, 100, \\ldots\\) What is the 5th term?",
    "opts": [
     "25",
-    "−25",
-    "−50",
+    "\\(-25\\)",
+    "\\(-50\\)",
     "12.5"
    ],
-   "why": "Here a = 400 and r = −200 ÷ 400 = −1/2. T₅ = 400 × (−1/2)⁴ = 400 × 1/16 = 25. Treating it as −(1/2)⁴ gives −25, but the negative sign is part of r, so it is raised to the power too. The value −50 is only the 4th term.",
-   "clue": "Count how many times r has been applied by the 5th term."
+   "why": "Here \\(a = 400\\) and \\(r = -200 \\div 400 = -\\frac{1}{2}\\). \\(T_{5} = 400 \\times (-\\frac{1}{2})^{4} = 400 \\times \\frac{1}{16} = 25\\). Treating it as \\(-(\\frac{1}{2})^{4}\\) gives \\(-25\\), but the negative sign is part of \\(r\\), so it is raised to the power too. The value \\(-50\\) is only the 4th term.",
+   "clue": "Count how many times \\(r\\) has been applied by the 5th term."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Geometric sequences",
+   "card": [
+    "In a geometric sequence, each term is found by multiplying the one before it by the same number. That number is the common ratio, r.",
+    "To find r, divide any term by the term before it. For 3, 6, 12, 24, r = 6 ÷ 3 = 2. The ratio can be negative or a fraction.",
+    "The first term is a. The nth term is Tₙ = arⁿ⁻¹. The power is n − 1, because the first term has not been multiplied by r yet.",
+    "For example, in 5, 10, 20, ..., a = 5 and r = 2. The 6th term is 5 × 2⁵ = 5 × 32 = 160."
+   ],
+   "remember": "Divide to find r, then use Tₙ = arⁿ⁻¹ with the power n − 1.",
+   "a": {
+    "q": "A geometric sequence is 2, 6, 18, 54, ... What is the 7th term?",
+    "opts": [
+     "1458",
+     "4374",
+     "729",
+     "12"
+    ],
+    "why": "Here a = 2 and r = 6 ÷ 2 = 3. T₇ = 2 × 3⁶ = 2 × 729 = 1458. Using 3⁷ gives 4374, which is the 8th term, because the power must be n − 1.",
+    "clue": "Find r first, then check the power on r."
+   },
+   "b": {
+    "d": 3,
+    "q": "A geometric sequence is 400, −200, 100, ... What is the 5th term?",
+    "opts": [
+     "25",
+     "−25",
+     "−50",
+     "12.5"
+    ],
+    "why": "Here a = 400 and r = −200 ÷ 400 = −1/2. T₅ = 400 × (−1/2)⁴ = 400 × 1/16 = 25. Treating it as −(1/2)⁴ gives −25, but the negative sign is part of r, so it is raised to the power too. The value −50 is only the 4th term.",
+    "clue": "Count how many times r has been applied by the 5th term."
+   }
+  }
+ }
 }

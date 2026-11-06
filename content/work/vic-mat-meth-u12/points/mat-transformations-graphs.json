@@ -29,7 +29,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -113,42 +114,88 @@
   "card": [
    [
     "Translation",
-    "y = f(x − h) + k moves the graph h units right and k units up. A minus inside the bracket moves the graph right."
+    "\\(y = f(x - h) + k\\) moves the graph \\(h\\) units right and \\(k\\) units up. A minus inside the bracket moves the graph right."
    ],
    [
     "Reflection",
-    "y = −f(x) reflects the graph in the x-axis. y = f(−x) reflects it in the y-axis."
+    "\\(y = -f(x)\\) reflects the graph in the x-axis. \\(y = f(-x)\\) reflects it in the y-axis."
    ],
    [
     "Dilation",
-    "y = a f(x) stretches the graph by a factor of a from the x-axis. y = f(x/b) stretches it by a factor of b from the y-axis."
+    "\\(y = af(x)\\) stretches the graph by a factor of \\(a\\) from the x-axis. \\(y = f\\left(\\frac{x}{b}\\right)\\) stretches it by a factor of \\(b\\) from the y-axis."
    ],
-   "Each point (x, y) moves in a set way. For example, y = (x + 1)² − 4 is y = x² moved 1 left and 4 down, so its vertex is (−1, −4)."
+   "Each point \\((x, y)\\) moves in a set way. For example, \\(y = (x + 1)^{2} - 4\\) is \\(y = x^{2}\\) moved 1 left and 4 down, so its vertex is \\((-1, -4)\\)."
   ],
-  "remember": "Outside the bracket changes y. Inside the bracket changes x, and in the opposite way to how it looks.",
+  "remember": "Outside the bracket changes \\(y\\). Inside the bracket changes \\(x\\), and in the opposite way to how it looks.",
   "a": {
-   "q": "The graph of y = x² is translated 3 units right and 2 units down. What is the new rule?",
+   "q": "The graph of \\(y = x^{2}\\) is translated 3 units right and 2 units down. What is the new rule?",
    "opts": [
-    "y = (x − 3)² − 2",
-    "y = (x + 3)² − 2",
-    "y = (x − 3)² + 2",
-    "y = (x + 3)² + 2"
+    "\\(y = (x - 3)^{2} - 2\\)",
+    "\\(y = (x + 3)^{2} - 2\\)",
+    "\\(y = (x - 3)^{2} + 2\\)",
+    "\\(y = (x + 3)^{2} + 2\\)"
    ],
-   "why": "Moving right by 3 means x is replaced by (x − 3), and moving down by 2 means subtracting 2. The option with (x + 3) moves the graph left, which is the tempting mistake.",
+   "why": "Moving right by 3 means \\(x\\) is replaced by \\((x - 3)\\), and moving down by 2 means subtracting 2. The option with \\((x + 3)\\) moves the graph left, which is the tempting mistake.",
    "clue": "Right 3 puts a minus inside the bracket."
   },
   "b": {
    "d": 3,
-   "q": "The point (6, 4) lies on y = f(x). Which point lies on y = −f(x/2)?",
+   "q": "The point \\((6, 4)\\) lies on \\(y = f(x)\\). Which point lies on \\(y = -f\\left(\\frac{x}{2}\\right)\\)?",
    "opts": [
-    "(12, −4)",
-    "(3, −4)",
-    "(−12, 4)",
-    "(12, 4)"
+    "\\((12, -4)\\)",
+    "\\((3, -4)\\)",
+    "\\((-12, 4)\\)",
+    "\\((12, 4)\\)"
    ],
-   "why": "Replacing x with x/2 stretches the graph by a factor of 2 from the y-axis, so x goes from 6 to 12. The negative sign outside reflects in the x-axis, so y goes from 4 to −4. (3, −4) is tempting, but it halves x instead of doubling it.",
-   "clue": "Deal with x and y separately: one is stretched, one is flipped."
+   "why": "Replacing \\(x\\) with \\(\\frac{x}{2}\\) stretches the graph by a factor of 2 from the y-axis, so \\(x\\) goes from 6 to 12. The negative sign outside reflects in the x-axis, so \\(y\\) goes from 4 to \\(-4\\). \\((3, -4)\\) is tempting, but it halves \\(x\\) instead of doubling it.",
+   "clue": "Deal with \\(x\\) and \\(y\\) separately: one is stretched, one is reflected."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Transformations of graphs",
+   "card": [
+    [
+     "Translation",
+     "y = f(x − h) + k moves the graph h units right and k units up. A minus inside the bracket moves the graph right."
+    ],
+    [
+     "Reflection",
+     "y = −f(x) reflects the graph in the x-axis. y = f(−x) reflects it in the y-axis."
+    ],
+    [
+     "Dilation",
+     "y = a f(x) stretches the graph by a factor of a from the x-axis. y = f(x/b) stretches it by a factor of b from the y-axis."
+    ],
+    "Each point (x, y) moves in a set way. For example, y = (x + 1)² − 4 is y = x² moved 1 left and 4 down, so its vertex is (−1, −4)."
+   ],
+   "remember": "Outside the bracket changes y. Inside the bracket changes x, and in the opposite way to how it looks.",
+   "a": {
+    "q": "The graph of y = x² is translated 3 units right and 2 units down. What is the new rule?",
+    "opts": [
+     "y = (x − 3)² − 2",
+     "y = (x + 3)² − 2",
+     "y = (x − 3)² + 2",
+     "y = (x + 3)² + 2"
+    ],
+    "why": "Moving right by 3 means x is replaced by (x − 3), and moving down by 2 means subtracting 2. The option with (x + 3) moves the graph left, which is the tempting mistake.",
+    "clue": "Right 3 puts a minus inside the bracket."
+   },
+   "b": {
+    "d": 3,
+    "q": "The point (6, 4) lies on y = f(x). Which point lies on y = −f(x/2)?",
+    "opts": [
+     "(12, −4)",
+     "(3, −4)",
+     "(−12, 4)",
+     "(12, 4)"
+    ],
+    "why": "Replacing x with x/2 stretches the graph by a factor of 2 from the y-axis, so x goes from 6 to 12. The negative sign outside reflects in the x-axis, so y goes from 4 to −4. (3, −4) is tempting, but it halves x instead of doubling it.",
+    "clue": "Deal with x and y separately: one is stretched, one is flipped."
+   }
+  }
+ }
 }

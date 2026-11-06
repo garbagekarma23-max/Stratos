@@ -9,7 +9,8 @@
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b wording)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b wording)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -135,12 +136,12 @@
  "final": {
   "title": "Arithmetic sequences",
   "card": [
-   "An arithmetic sequence goes up or down by the same amount each time. That amount is the common difference, d. Find it by subtracting a term from the next one.",
-   "d is positive when the terms rise and negative when they fall. In 20, 17, 14, 11, d = 17 − 20 = −3.",
-   "Call the first term a. The nth term is Tₙ = a + (n − 1)d. To reach term n, start at a and add d a total of (n − 1) times.",
-   "Example: for 5, 9, 13, ... we have a = 5 and d = 4. The 10th term is 5 + (10 − 1) × 4 = 5 + 36 = 41."
+   "An arithmetic sequence goes up or down by the same amount each time. That amount is the common difference, \\(d\\). Find it by subtracting a term from the next one.",
+   "\\(d\\) is positive when the terms rise and negative when they fall. In 20, 17, 14, 11, \\(d = 17 - 20 = -3\\).",
+   "Call the first term \\(a\\). The \\(n\\)th term is \\(T_{n} = a + (n - 1)d\\). To reach term \\(n\\), start at \\(a\\) and add \\(d\\) a total of \\(n - 1\\) times.",
+   "Example: for 5, 9, 13, ... we have \\(a = 5\\) and \\(d = 4\\). The 10th term is \\(5 + (10 - 1) \\times 4 = 5 + 36 = 41\\)."
   ],
-  "remember": "Tₙ = a + (n − 1)d: term n is (n − 1) steps of d away from a.",
+  "remember": "\\(T_{n} = a + (n - 1)d\\): term \\(n\\) is \\(n - 1\\) steps of \\(d\\) away from \\(a\\).",
   "a": {
    "q": "What is the 8th term of the sequence 3, 7, 11, 15, ...?",
    "opts": [
@@ -149,8 +150,8 @@
     "32",
     "27"
    ],
-   "why": "Here a = 3 and d = 4, so T₈ = 3 + (8 − 1) × 4 = 3 + 28 = 31. The tempting answer 35 comes from adding d eight times instead of seven, which is 3 + 8 × 4 = 35.",
-   "clue": "From the first term, d is added one fewer time than the term number."
+   "why": "Here \\(a = 3\\) and \\(d = 4\\), so \\(T_{8} = 3 + (8 - 1) \\times 4 = 3 + 28 = 31\\). The tempting answer 35 comes from adding \\(d\\) eight times instead of seven, which is \\(3 + 8 \\times 4 = 35\\).",
+   "clue": "From the first term, \\(d\\) is added one fewer time than the term number."
   },
   "b": {
    "d": 3,
@@ -161,9 +162,46 @@
     "$30",
     "$156"
    ],
-   "why": "This is arithmetic with a = 90 and d = −6, so T₁₂ = 90 + (12 − 1) × (−6) = 90 − 66 = 24. The answer $18 comes from using 12 differences instead of 11. The answer $156 comes from using +6 instead of −6.",
-   "clue": "The amount falls, so d is negative. Count the steps from week 1 to week 12."
+   "why": "This is arithmetic with \\(a = 90\\) and \\(d = -6\\), so \\(T_{12} = 90 + (12 - 1) \\times (-6) = 90 - 66 = 24\\). The answer $18 comes from using 12 differences instead of 11. The answer $156 comes from using \\(+6\\) instead of \\(-6\\).",
+   "clue": "The amount falls, so \\(d\\) is negative. Count the steps from week 1 to week 12."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Arithmetic sequences",
+   "card": [
+    "An arithmetic sequence goes up or down by the same amount each time. That amount is the common difference, d. Find it by subtracting a term from the next one.",
+    "d is positive when the terms rise and negative when they fall. In 20, 17, 14, 11, d = 17 − 20 = −3.",
+    "Call the first term a. The nth term is Tₙ = a + (n − 1)d. To reach term n, start at a and add d a total of (n − 1) times.",
+    "Example: for 5, 9, 13, ... we have a = 5 and d = 4. The 10th term is 5 + (10 − 1) × 4 = 5 + 36 = 41."
+   ],
+   "remember": "Tₙ = a + (n − 1)d: term n is (n − 1) steps of d away from a.",
+   "a": {
+    "q": "What is the 8th term of the sequence 3, 7, 11, 15, ...?",
+    "opts": [
+     "31",
+     "35",
+     "32",
+     "27"
+    ],
+    "why": "Here a = 3 and d = 4, so T₈ = 3 + (8 − 1) × 4 = 3 + 28 = 31. The tempting answer 35 comes from adding d eight times instead of seven, which is 3 + 8 × 4 = 35.",
+    "clue": "From the first term, d is added one fewer time than the term number."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya has $90 set aside for a trip in week 1. Each week after that, the amount falls by $6 as she pays bus fares. How much does she have in week 12?",
+    "opts": [
+     "$24",
+     "$18",
+     "$30",
+     "$156"
+    ],
+    "why": "This is arithmetic with a = 90 and d = −6, so T₁₂ = 90 + (12 − 1) × (−6) = 90 − 66 = 24. The answer $18 comes from using 12 differences instead of 11. The answer $156 comes from using +6 instead of −6.",
+    "clue": "The amount falls, so d is negative. Count the steps from week 1 to week 12."
+   }
+  }
+ }
 }

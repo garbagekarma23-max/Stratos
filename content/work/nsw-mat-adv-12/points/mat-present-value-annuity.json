@@ -7,7 +7,8 @@
   "2026-10-26T13:29:57Z new, write",
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: done",
-  "2026-10-27T01:08:33Z check: passed, cleared"
+  "2026-10-27T01:08:33Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -72,11 +73,11 @@
   "title": "Present value of an annuity",
   "card": [
    "The present value of an annuity is the lump sum needed now to fund a series of equal future payments, when the money earns compound interest.",
-   "Each payment is discounted back to today. A payment N made n periods from now is worth N ÷ (1 + r)ⁿ today, where r is the rate per period.",
-   "Add the discounted payments to get the present value. Example: $1000 at the end of each year for 3 years at 5% p.a. gives 1000/1.05 + 1000/1.05² + 1000/1.05³ = 952.38 + 907.03 + 863.84 = $2723.25.",
+   "Each payment is discounted back to today. A payment \\(N\\) made \\(n\\) periods from now is worth \\(\\frac{N}{(1 + r)^{n}}\\) today, where \\(r\\) is the rate per period.",
+   "Add the discounted payments to get the present value. Example: $1000 at the end of each year for 3 years at 5% p.a. gives \\(\\frac{1000}{1.05} + \\frac{1000}{1.05^{2}} + \\frac{1000}{1.05^{3}} = 952.38 + 907.03 + 863.84 = \\$2723.25\\).",
    "Later payments are discounted by more periods, so each is worth less today than the one before."
   ],
-  "remember": "Present value is the sum of each payment divided by (1 + r)ⁿ for its own n.",
+  "remember": "Present value is the sum of each payment divided by \\((1 + r)^{n}\\) for its own \\(n\\).",
   "a": {
    "q": "Amir will be paid $2000 in 2 years. Interest is 10% p.a. compounded annually. What is that payment worth today?",
    "opts": [
@@ -85,8 +86,8 @@
     "$1818.18",
     "$1600.00"
    ],
-   "why": "Discount over 2 periods: 2000 ÷ 1.1² = 2000 ÷ 1.21 = $1652.89. Dividing by 1.1 only once ($1818.18) discounts for just one year, but the payment is two years away.",
-   "clue": "Divide by (1 + r) once for each period until payment."
+   "why": "Discount over 2 periods: \\(2000 \\div 1.1^{2} = 2000 \\div 1.21 = \\$1652.89\\). Dividing by 1.1 only once ($1818.18) discounts for just one year, but the payment is two years away.",
+   "clue": "Divide by \\((1 + r)\\) once for each period until payment."
   },
   "b": {
    "d": 3,
@@ -97,9 +98,46 @@
     "$925.93",
     "$1123.20"
    ],
-   "why": "Discount each payment separately: 500 ÷ 1.08 = 462.96 and 500 ÷ 1.08² = 428.67, which total $891.63. Discounting the $1000 total by 2 years ($857.34) treats the first payment as if it came a year later than it does.",
+   "why": "Discount each payment separately: \\(500 \\div 1.08 = 462.96\\) and \\(500 \\div 1.08^{2} = 428.67\\), which total $891.63. Discounting the $1000 total by 2 years ($857.34) treats the first payment as if it came a year later than it does.",
    "clue": "The first payment is discounted by 1 year, the second by 2."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Present value of an annuity",
+   "card": [
+    "The present value of an annuity is the lump sum needed now to fund a series of equal future payments, when the money earns compound interest.",
+    "Each payment is discounted back to today. A payment N made n periods from now is worth N ÷ (1 + r)ⁿ today, where r is the rate per period.",
+    "Add the discounted payments to get the present value. Example: $1000 at the end of each year for 3 years at 5% p.a. gives 1000/1.05 + 1000/1.05² + 1000/1.05³ = 952.38 + 907.03 + 863.84 = $2723.25.",
+    "Later payments are discounted by more periods, so each is worth less today than the one before."
+   ],
+   "remember": "Present value is the sum of each payment divided by (1 + r)ⁿ for its own n.",
+   "a": {
+    "q": "Amir will be paid $2000 in 2 years. Interest is 10% p.a. compounded annually. What is that payment worth today?",
+    "opts": [
+     "$1652.89",
+     "$2420.00",
+     "$1818.18",
+     "$1600.00"
+    ],
+    "why": "Discount over 2 periods: 2000 ÷ 1.1² = 2000 ÷ 1.21 = $1652.89. Dividing by 1.1 only once ($1818.18) discounts for just one year, but the payment is two years away.",
+    "clue": "Divide by (1 + r) once for each period until payment."
+   },
+   "b": {
+    "d": 3,
+    "q": "Lena wants to receive $500 at the end of each year for 2 years. Money earns 8% p.a. compounded annually. What lump sum is needed now?",
+    "opts": [
+     "$891.63",
+     "$857.34",
+     "$925.93",
+     "$1123.20"
+    ],
+    "why": "Discount each payment separately: 500 ÷ 1.08 = 462.96 and 500 ÷ 1.08² = 428.67, which total $891.63. Discounting the $1000 total by 2 years ($857.34) treats the first payment as if it came a year later than it does.",
+    "clue": "The first payment is discounted by 1 year, the second by 2."
+   }
+  }
+ }
 }

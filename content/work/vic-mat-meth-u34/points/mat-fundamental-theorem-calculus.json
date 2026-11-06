@@ -19,7 +19,8 @@
   "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other)",
   "2026-11-02T04:50:15Z write: done",
-  "2026-11-03T11:40:50Z check: passed, cleared"
+  "2026-11-03T11:40:50Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -292,34 +293,71 @@
  "final": {
   "title": "The fundamental theorem of calculus",
   "card": [
-   "Differentiating and integrating undo each other. If F′(x) = f(x), then F is an antiderivative of f.",
-   "To find a definite integral, find an antiderivative F, then work out F(b) − F(a). The constant of integration cancels, so leave it out.",
-   "Worked example: ∫ from 1 to 3 of 2x dx. An antiderivative of 2x is x². So the integral = 3² − 1² = 9 − 1 = 8.",
-   "The same rule works the other way. The derivative of ∫ from a to x of f(t) dt is f(x). Where f is positive, the integral is the area under the curve."
+   "Differentiating and integrating undo each other. If \\(F'(x) = f(x)\\), then \\(F\\) is an antiderivative of \\(f\\).",
+   "To find a definite integral, find an antiderivative \\(F\\), then work out \\(F(b) - F(a)\\). The constant of integration cancels, so leave it out.",
+   "Worked example: \\(\\int_{1}^{3} 2x \\, dx\\). An antiderivative of \\(2x\\) is \\(x^{2}\\). So the integral is \\(3^{2} - 1^{2} = 9 - 1 = 8\\).",
+   "The same rule works the other way. The derivative of \\(\\int_{a}^{x} f(t) \\, dt\\) is \\(f(x)\\). Where \\(f\\) is positive, the integral is the area under the curve."
   ],
-  "remember": "Integral from a to b of f = F(b) − F(a), where F′ = f.",
+  "remember": "\\(\\int_{a}^{b} f(x) \\, dx = F(b) - F(a)\\), where \\(F' = f\\).",
   "a": {
-   "q": "What is the value of ∫ from 0 to 2 of 3x² dx?",
+   "q": "What is the value of \\(\\int_{0}^{2} 3x^{2} \\, dx\\)?",
    "opts": [
     "8",
     "6",
     "12",
     "4"
    ],
-   "why": "An antiderivative of 3x² is x³. The integral is 2³ − 0³ = 8. Using the value 3x² = 12 at x = 2 is the tempting mistake, because that is the function's value, not F(2) − F(0).",
-   "clue": "Find F first, then use its values at both limits."
+   "why": "An antiderivative of \\(3x^{2}\\) is \\(x^{3}\\). The integral is \\(2^{3} - 0^{3} = 8\\). Using the value \\(3x^{2} = 12\\) at \\(x = 2\\) is the tempting mistake, because that is the function's value, not \\(F(2) - F(0)\\).",
+   "clue": "Find \\(F\\) first, then use its values at both limits."
   },
   "b": {
    "d": 2,
-   "q": "Mia finds that an antiderivative of 2x + 1 is F(x) = x² + x. What is ∫ from 1 to 4 of (2x + 1) dx?",
+   "q": "Mia finds that an antiderivative of \\(2x + 1\\) is \\(F(x) = x^{2} + x\\). What is \\(\\int_{1}^{4} (2x + 1) \\, dx\\)?",
    "opts": [
     "18",
     "22",
     "20",
-    "−18"
+    "\\(-18\\)"
    ],
-   "why": "F(4) = 16 + 4 = 20 and F(1) = 1 + 1 = 2, so the integral is 20 − 2 = 18. Adding the two values gives 22, and using F(4) alone gives 20. Working out F(1) − F(4) gives −18, but the rule is F(b) − F(a).",
+   "why": "\\(F(4) = 16 + 4 = 20\\) and \\(F(1) = 1 + 1 = 2\\), so the integral is \\(20 - 2 = 18\\). Adding the two values gives 22, and using \\(F(4)\\) alone gives 20. Working out \\(F(1) - F(4)\\) gives \\(-18\\), but the rule is \\(F(b) - F(a)\\).",
    "clue": "Both limits are needed, and the order matters."
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The fundamental theorem of calculus",
+   "card": [
+    "Differentiating and integrating undo each other. If F′(x) = f(x), then F is an antiderivative of f.",
+    "To find a definite integral, find an antiderivative F, then work out F(b) − F(a). The constant of integration cancels, so leave it out.",
+    "Worked example: ∫ from 1 to 3 of 2x dx. An antiderivative of 2x is x². So the integral = 3² − 1² = 9 − 1 = 8.",
+    "The same rule works the other way. The derivative of ∫ from a to x of f(t) dt is f(x). Where f is positive, the integral is the area under the curve."
+   ],
+   "remember": "Integral from a to b of f = F(b) − F(a), where F′ = f.",
+   "a": {
+    "q": "What is the value of ∫ from 0 to 2 of 3x² dx?",
+    "opts": [
+     "8",
+     "6",
+     "12",
+     "4"
+    ],
+    "why": "An antiderivative of 3x² is x³. The integral is 2³ − 0³ = 8. Using the value 3x² = 12 at x = 2 is the tempting mistake, because that is the function's value, not F(2) − F(0).",
+    "clue": "Find F first, then use its values at both limits."
+   },
+   "b": {
+    "d": 2,
+    "q": "Mia finds that an antiderivative of 2x + 1 is F(x) = x² + x. What is ∫ from 1 to 4 of (2x + 1) dx?",
+    "opts": [
+     "18",
+     "22",
+     "20",
+     "−18"
+    ],
+    "why": "F(4) = 16 + 4 = 20 and F(1) = 1 + 1 = 2, so the integral is 20 − 2 = 18. Adding the two values gives 22, and using F(4) alone gives 20. Working out F(1) − F(4) gives −18, but the rule is F(b) − F(a).",
+    "clue": "Both limits are needed, and the order matters."
+   }
   }
  }
 }

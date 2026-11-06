@@ -9,7 +9,8 @@
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -156,9 +157,9 @@
     "Present value",
     "Use this when you want the lump sum needed now. Factors for $1: 2% for 5 periods is 4.7135, 3% for 5 periods is 4.5797."
    ],
-   "Multiply the payment by the factor. Example: $100 paid each period for 5 periods at 2% has a future value of 100 × 5.2040 = $520.40."
+   "Multiply the payment by the factor. Example: $100 paid each period for 5 periods at 2% has a future value of \\(100 \\times 5.2040 = \\$520.40\\)."
   ],
-  "remember": "Payment × factor. Use a future value factor for the end total and a present value factor for the sum now.",
+  "remember": "Multiply the payment by the factor. Use a future value factor for the end total and a present value factor for the sum now.",
   "a": {
    "q": "Mia deposits $500 at the end of each year for 5 years. Interest is 2% per year, compounded yearly. What is the future value of her deposits?",
    "opts": [
@@ -167,7 +168,7 @@
     "$2654.55",
     "$2500.00"
    ],
-   "why": "Mia wants the total at the end, so use the future value factor for 2% and 5 periods: 500 × 5.2040 = $2602.00. The present value factor gives $2356.75, which is the lump sum needed now, not the total at the end.",
+   "why": "Mia wants the total at the end, so use the future value factor for 2% and 5 periods: \\(500 \\times 5.2040 = \\$2602.00\\). The present value factor gives $2356.75, which is the lump sum needed now, not the total at the end.",
    "clue": "Does she want a total at the end or a sum now?"
   },
   "b": {
@@ -179,9 +180,52 @@
     "$9427.00",
     "$10000.00"
    ],
-   "why": "A lump sum needed now uses the present value factor for 3% and 5 periods: 2000 × 4.5797 = $9159.40. The future value factor gives $10618.20, which is tempting but is the total at the end, not the sum needed now.",
+   "why": "A lump sum needed now uses the present value factor for 3% and 5 periods: \\(2000 \\times 4.5797 = \\$9159.40\\). The future value factor gives $10618.20, which is tempting but is the total at the end, not the sum needed now.",
    "clue": "Is Sam's money needed at the start or built up by the end?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Using tables of interest factors",
+   "card": [
+    "An interest factor table gives the value of an annuity of $1 per period. Find the row for the number of periods and the column for the rate per period.",
+    [
+     "Future value",
+     "Use this when you want the total at the end of the payments. Factors for $1: 2% for 4 periods is 4.1216, 2% for 5 periods is 5.2040, 3% for 5 periods is 5.3091."
+    ],
+    [
+     "Present value",
+     "Use this when you want the lump sum needed now. Factors for $1: 2% for 5 periods is 4.7135, 3% for 5 periods is 4.5797."
+    ],
+    "Multiply the payment by the factor. Example: $100 paid each period for 5 periods at 2% has a future value of 100 × 5.2040 = $520.40."
+   ],
+   "remember": "Payment × factor. Use a future value factor for the end total and a present value factor for the sum now.",
+   "a": {
+    "q": "Mia deposits $500 at the end of each year for 5 years. Interest is 2% per year, compounded yearly. What is the future value of her deposits?",
+    "opts": [
+     "$2602.00",
+     "$2356.75",
+     "$2654.55",
+     "$2500.00"
+    ],
+    "why": "Mia wants the total at the end, so use the future value factor for 2% and 5 periods: 500 × 5.2040 = $2602.00. The present value factor gives $2356.75, which is the lump sum needed now, not the total at the end.",
+    "clue": "Does she want a total at the end or a sum now?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Sam wants to receive $2000 at the end of each year for 5 years. The account earns 3% per year, compounded yearly. What lump sum must he put in now?",
+    "opts": [
+     "$9159.40",
+     "$10618.20",
+     "$9427.00",
+     "$10000.00"
+    ],
+    "why": "A lump sum needed now uses the present value factor for 3% and 5 periods: 2000 × 4.5797 = $9159.40. The future value factor gives $10618.20, which is tempting but is the total at the end, not the sum needed now.",
+    "clue": "Is Sam's money needed at the start or built up by the end?"
+   }
+  }
+ }
 }

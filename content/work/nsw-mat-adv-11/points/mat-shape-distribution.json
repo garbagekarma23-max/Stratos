@@ -9,7 +9,8 @@
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:32Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -211,11 +212,11 @@
     "The tail stretches to the left, towards the smaller values. Most data sits at the high end."
    ],
    [
-    "1.5 × IQR rule",
-    "Fences: lower = Q1 − 1.5 × IQR and upper = Q3 + 1.5 × IQR. A value outside the fences is an outlier. Example: Q1 = 10 and Q3 = 18, so IQR = 8 and 1.5 × 8 = 12. The fences are 10 − 12 = −2 and 18 + 12 = 30, so a value of 34 is an outlier."
+    "\\(1.5 \\times \\text{IQR}\\) rule",
+    "Fences: \\(\\text{lower} = Q_{1} - 1.5 \\times \\text{IQR}\\) and \\(\\text{upper} = Q_{3} + 1.5 \\times \\text{IQR}\\). A value outside the fences is an outlier. Example: \\(Q_{1} = 10\\) and \\(Q_{3} = 18\\), so \\(\\text{IQR} = 8\\) and \\(1.5 \\times 8 = 12\\). The fences are \\(10 - 12 = -2\\) and \\(18 + 12 = 30\\), so a value of 34 is an outlier."
    ]
   ],
-  "remember": "The tail names the skew. Outliers lie more than 1.5 × IQR beyond Q1 or Q3.",
+  "remember": "The tail names the skew. Outliers lie more than \\(1.5 \\times \\text{IQR}\\) beyond \\(Q_{1}\\) or \\(Q_{3}\\).",
   "a": {
    "q": "A histogram of house prices has most values at the low end and a long tail stretching to the right. How is it described?",
    "opts": [
@@ -229,16 +230,65 @@
   },
   "b": {
    "d": 3,
-   "q": "A data set has Q1 = 22 and Q3 = 30. Which value is an outlier by the 1.5 × IQR rule?",
+   "q": "A data set has \\(Q_{1} = 22\\) and \\(Q_{3} = 30\\). Which value is an outlier by the \\(1.5 \\times \\text{IQR}\\) rule?",
    "opts": [
     "43",
     "41",
     "12",
     "11"
    ],
-   "why": "IQR = 30 − 22 = 8, and 1.5 × 8 = 12, so the fences are 22 − 12 = 10 and 30 + 12 = 42. Only 43 lies outside the fences. 41 is tempting, but it is below the upper fence of 42, and 11 and 12 are both above the lower fence of 10.",
+   "why": "\\(\\text{IQR} = 30 - 22 = 8\\), and \\(1.5 \\times 8 = 12\\), so the fences are \\(22 - 12 = 10\\) and \\(30 + 12 = 42\\). Only 43 lies outside the fences. 41 is tempting, but it is below the upper fence of 42, and 11 and 12 are both above the lower fence of 10.",
    "clue": "Find both fences, then check which value lies outside them."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Shape of a distribution",
+   "card": [
+    [
+     "Symmetric",
+     "The two sides of the display mirror each other, with the mean and median close together."
+    ],
+    [
+     "Positively skewed",
+     "The tail stretches to the right, towards the larger values. Most data sits at the low end."
+    ],
+    [
+     "Negatively skewed",
+     "The tail stretches to the left, towards the smaller values. Most data sits at the high end."
+    ],
+    [
+     "1.5 × IQR rule",
+     "Fences: lower = Q1 − 1.5 × IQR and upper = Q3 + 1.5 × IQR. A value outside the fences is an outlier. Example: Q1 = 10 and Q3 = 18, so IQR = 8 and 1.5 × 8 = 12. The fences are 10 − 12 = −2 and 18 + 12 = 30, so a value of 34 is an outlier."
+    ]
+   ],
+   "remember": "The tail names the skew. Outliers lie more than 1.5 × IQR beyond Q1 or Q3.",
+   "a": {
+    "q": "A histogram of house prices has most values at the low end and a long tail stretching to the right. How is it described?",
+    "opts": [
+     "Positively skewed",
+     "Negatively skewed",
+     "Symmetric",
+     "Uniform with no outliers"
+    ],
+    "why": "The tail points towards the larger values, so the data is positively skewed. Negatively skewed is tempting because most values are at the low end, but skew is named by the direction of the tail, not by where most data sits.",
+    "clue": "Skew is named by the direction of the tail."
+   },
+   "b": {
+    "d": 3,
+    "q": "A data set has Q1 = 22 and Q3 = 30. Which value is an outlier by the 1.5 × IQR rule?",
+    "opts": [
+     "43",
+     "41",
+     "12",
+     "11"
+    ],
+    "why": "IQR = 30 − 22 = 8, and 1.5 × 8 = 12, so the fences are 22 − 12 = 10 and 30 + 12 = 42. Only 43 lies outside the fences. 41 is tempting, but it is below the upper fence of 42, and 11 and 12 are both above the lower fence of 10.",
+    "clue": "Find both fences, then check which value lies outside them."
+   }
+  }
+ }
 }

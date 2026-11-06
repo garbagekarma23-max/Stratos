@@ -10,7 +10,8 @@
   "2026-11-01T08:14:07Z check: flagged",
   "2026-11-01T08:24:33Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:23:15Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:23:15Z review: approved with the fix (a spot check)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -163,35 +164,72 @@
  "final": {
   "title": "The bisection method",
   "card": [
-   "If f(x) is continuous and f(a) and f(b) have opposite signs, then f has a root between a and b. The root is where f(x) = 0.",
-   "Find the midpoint m = (a + b) ÷ 2 and work out f(m). Keep the half of the interval where the signs at the two ends are still opposite.",
+   "If \\(f(x)\\) is continuous and \\(f(a)\\) and \\(f(b)\\) have opposite signs, then \\(f\\) has a root between \\(a\\) and \\(b\\). The root is where \\(f(x) = 0\\).",
+   "Find the midpoint \\(m = \\frac{a + b}{2}\\) and work out \\(f(m)\\). Keep the half of the interval where the signs at the two ends are still opposite.",
    "Repeat. Each step halves the interval, so the root is trapped in a smaller and smaller interval. You can stop when the interval is as small as the accuracy you need.",
-   "Example: f(x) = x² − 5 has f(2) = −1 and f(3) = 4. The midpoint is 2.5 and f(2.5) = 1.25, which is positive. So the root lies between 2 and 2.5."
+   "Example: \\(f(x) = x^{2} - 5\\) has \\(f(2) = -1\\) and \\(f(3) = 4\\). The midpoint is 2.5 and \\(f(2.5) = 1.25\\), which is positive. So the root lies between 2 and 2.5."
   ],
-  "remember": "Halve the interval and keep the half where f changes sign. The root stays trapped inside.",
+  "remember": "Halve the interval and keep the half where \\(f\\) changes sign. The root stays trapped inside.",
   "a": {
-   "q": "f(x) = x³ − 10 has f(2) = −2 and f(3) = 17. Which interval does the method keep after one bisection step?",
+   "q": "\\(f(x) = x^{3} - 10\\) has \\(f(2) = -2\\) and \\(f(3) = 17\\). Which interval does the method keep after one bisection step?",
    "opts": [
     "Between 2 and 2.5",
     "Between 2.5 and 3",
     "Between 2 and 3",
     "Between 2.25 and 2.75"
    ],
-   "why": "The midpoint is 2.5 and f(2.5) = 15.625 − 10 = 5.625, which is positive. The signs at 2 and 2.5 are opposite, so the method keeps 2 to 2.5. Between 2.5 and 3 is wrong, because f is positive at both ends.",
-   "clue": "Find f at the midpoint and check which end has the opposite sign."
+   "why": "The midpoint is 2.5 and \\(f(2.5) = 15.625 - 10 = 5.625\\), which is positive. The signs at 2 and 2.5 are opposite, so the method keeps 2 to 2.5. Between 2.5 and 3 is wrong, because \\(f\\) is positive at both ends.",
+   "clue": "Find \\(f\\) at the midpoint and check which end has the opposite sign."
   },
   "b": {
    "d": 2,
-   "q": "f(x) = x² − 7 has f(2) = −3 and f(3) = 2. What is f(2.5), and which interval does the method keep next?",
+   "q": "\\(f(x) = x^{2} - 7\\) has \\(f(2) = -3\\) and \\(f(3) = 2\\). What is \\(f(2.5)\\), and which interval does the method keep next?",
    "opts": [
-    "−0.75, so between 2.5 and 3",
-    "−0.75, so between 2 and 2.5",
+    "\\(-0.75\\), so between 2.5 and 3",
+    "\\(-0.75\\), so between 2 and 2.5",
     "1.25, so between 2.5 and 3",
     "1.25, so between 2 and 2.5"
    ],
-   "why": "f(2.5) = 6.25 − 7 = −0.75, which is negative. The signs at 2.5 and 3 are opposite (−0.75 and 2), so the method keeps 2.5 to 3. The option with 2 and 2.5 fails, because f is negative at both ends.",
+   "why": "\\(f(2.5) = 6.25 - 7 = -0.75\\), which is negative. The signs at 2.5 and 3 are opposite (\\(-0.75\\) and 2), so the method keeps 2.5 to 3. The option with 2 and 2.5 fails, because \\(f\\) is negative at both ends.",
    "clue": "Square 2.5 first, then subtract 7."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The bisection method",
+   "card": [
+    "If f(x) is continuous and f(a) and f(b) have opposite signs, then f has a root between a and b. The root is where f(x) = 0.",
+    "Find the midpoint m = (a + b) ÷ 2 and work out f(m). Keep the half of the interval where the signs at the two ends are still opposite.",
+    "Repeat. Each step halves the interval, so the root is trapped in a smaller and smaller interval. You can stop when the interval is as small as the accuracy you need.",
+    "Example: f(x) = x² − 5 has f(2) = −1 and f(3) = 4. The midpoint is 2.5 and f(2.5) = 1.25, which is positive. So the root lies between 2 and 2.5."
+   ],
+   "remember": "Halve the interval and keep the half where f changes sign. The root stays trapped inside.",
+   "a": {
+    "q": "f(x) = x³ − 10 has f(2) = −2 and f(3) = 17. Which interval does the method keep after one bisection step?",
+    "opts": [
+     "Between 2 and 2.5",
+     "Between 2.5 and 3",
+     "Between 2 and 3",
+     "Between 2.25 and 2.75"
+    ],
+    "why": "The midpoint is 2.5 and f(2.5) = 15.625 − 10 = 5.625, which is positive. The signs at 2 and 2.5 are opposite, so the method keeps 2 to 2.5. Between 2.5 and 3 is wrong, because f is positive at both ends.",
+    "clue": "Find f at the midpoint and check which end has the opposite sign."
+   },
+   "b": {
+    "d": 2,
+    "q": "f(x) = x² − 7 has f(2) = −3 and f(3) = 2. What is f(2.5), and which interval does the method keep next?",
+    "opts": [
+     "−0.75, so between 2.5 and 3",
+     "−0.75, so between 2 and 2.5",
+     "1.25, so between 2.5 and 3",
+     "1.25, so between 2 and 2.5"
+    ],
+    "why": "f(2.5) = 6.25 − 7 = −0.75, which is negative. The signs at 2.5 and 3 are opposite (−0.75 and 2), so the method keeps 2.5 to 3. The option with 2 and 2.5 fails, because f is negative at both ends.",
+    "clue": "Square 2.5 first, then subtract 7."
+   }
+  }
+ }
 }

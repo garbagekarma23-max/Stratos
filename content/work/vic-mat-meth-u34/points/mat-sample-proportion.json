@@ -21,7 +21,8 @@
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: done",
-  "2026-11-01T15:05:28Z check: passed, cleared"
+  "2026-11-01T15:05:28Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -94,35 +95,72 @@
  "final": {
   "title": "The sample proportion",
   "card": [
-   "The sample proportion is p̂ = X ÷ n, where X is the number in the sample with a feature and n is the sample size.",
-   "If we take many random samples of the same size n from a population with proportion p, the value of p̂ changes each time.",
-   "For large n, the distribution of p̂ is roughly normal, with mean p and standard deviation √(p(1 − p)/n).",
-   "Example: p = 0.4 and n = 100. The standard deviation is √(0.4 × 0.6/100) = √0.0024, which is about 0.049. So p̂ is centred on 0.4 and usually lies within about 0.1 of it."
+   "The sample proportion is \\(\\hat{p} = \\frac{X}{n}\\), where \\(X\\) is the number in the sample with a feature and \\(n\\) is the sample size.",
+   "If we take many random samples of the same size \\(n\\) from a population with proportion \\(p\\), the value of \\(\\hat{p}\\) changes each time.",
+   "For large \\(n\\), the distribution of \\(\\hat{p}\\) is roughly normal, with mean \\(p\\) and standard deviation \\(\\sqrt{\\frac{p(1 - p)}{n}}\\).",
+   "Example: \\(p = 0.4\\) and \\(n = 100\\). The standard deviation is \\(\\sqrt{\\frac{0.4 \\times 0.6}{100}} = \\sqrt{0.0024}\\), which is about 0.049. So \\(\\hat{p}\\) is centred on 0.4 and usually lies within about 0.1 of it."
   ],
-  "remember": "p̂ varies between samples, and for large n it is roughly normal and centred on p.",
+  "remember": "\\(\\hat{p}\\) varies between samples, and for large \\(n\\) it is roughly normal and centred on \\(p\\).",
   "a": {
-   "q": "Many random samples of size 100 are taken from a population where p = 0.4. Around which value are the p̂ values centred?",
+   "q": "Many random samples of size 100 are taken from a population where \\(p = 0.4\\). Around which value are the \\(\\hat{p}\\) values centred?",
    "opts": [
     "0.4",
     "0.04",
     "0.5",
     "100"
    ],
-   "why": "The distribution of p̂ is centred on the population proportion p, which is 0.4. The value 0.04 mixes up the mean with a spread-type value, and the sample size is not a proportion.",
-   "clue": "Where does the distribution of p̂ sit compared with p?"
+   "why": "The distribution of \\(\\hat{p}\\) is centred on the population proportion \\(p\\), which is 0.4. The value 0.04 mixes up the mean with a spread-type value, and the sample size is not a proportion.",
+   "clue": "Where does the distribution of \\(\\hat{p}\\) sit compared with \\(p\\)?"
   },
   "b": {
    "d": 3,
-   "q": "A factory has a fault rate of p = 0.2. Random samples of 400 items are tested. What is the standard deviation of p̂?",
+   "q": "A factory has a fault rate of \\(p = 0.2\\). Random samples of 400 items are tested. What is the standard deviation of \\(\\hat{p}\\)?",
    "opts": [
     "0.02",
     "0.0004",
     "0.16",
     "0.2"
    ],
-   "why": "The standard deviation is √(0.2 × 0.8/400) = √0.0004 = 0.02. The answer 0.0004 is the variance, because the square root step was skipped. The answer 0.16 is just 0.2 × 0.8.",
-   "clue": "Use √(p(1 − p)/n) and finish with the square root."
+   "why": "The standard deviation is \\(\\sqrt{\\frac{0.2 \\times 0.8}{400}} = \\sqrt{0.0004} = 0.02\\). The answer 0.0004 is the variance, because the square root step was skipped. The answer 0.16 is just \\(0.2 \\times 0.8\\).",
+   "clue": "Use \\(\\sqrt{\\frac{p(1 - p)}{n}}\\) and finish with the square root."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The sample proportion",
+   "card": [
+    "The sample proportion is p̂ = X ÷ n, where X is the number in the sample with a feature and n is the sample size.",
+    "If we take many random samples of the same size n from a population with proportion p, the value of p̂ changes each time.",
+    "For large n, the distribution of p̂ is roughly normal, with mean p and standard deviation √(p(1 − p)/n).",
+    "Example: p = 0.4 and n = 100. The standard deviation is √(0.4 × 0.6/100) = √0.0024, which is about 0.049. So p̂ is centred on 0.4 and usually lies within about 0.1 of it."
+   ],
+   "remember": "p̂ varies between samples, and for large n it is roughly normal and centred on p.",
+   "a": {
+    "q": "Many random samples of size 100 are taken from a population where p = 0.4. Around which value are the p̂ values centred?",
+    "opts": [
+     "0.4",
+     "0.04",
+     "0.5",
+     "100"
+    ],
+    "why": "The distribution of p̂ is centred on the population proportion p, which is 0.4. The value 0.04 mixes up the mean with a spread-type value, and the sample size is not a proportion.",
+    "clue": "Where does the distribution of p̂ sit compared with p?"
+   },
+   "b": {
+    "d": 3,
+    "q": "A factory has a fault rate of p = 0.2. Random samples of 400 items are tested. What is the standard deviation of p̂?",
+    "opts": [
+     "0.02",
+     "0.0004",
+     "0.16",
+     "0.2"
+    ],
+    "why": "The standard deviation is √(0.2 × 0.8/400) = √0.0004 = 0.02. The answer 0.0004 is the variance, because the square root step was skipped. The answer 0.16 is just 0.2 × 0.8.",
+    "clue": "Use √(p(1 − p)/n) and finish with the square root."
+   }
+  }
+ }
 }

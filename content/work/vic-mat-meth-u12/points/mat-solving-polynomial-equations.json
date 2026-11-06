@@ -17,7 +17,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -95,36 +96,76 @@
   "card": [
    "To solve a polynomial equation, move every term to one side so the other side is 0. Then factorise the polynomial.",
    "If a product is 0, at least one factor is 0. So set each factor equal to 0 and solve each one.",
-   "For a cubic with no obvious factor, test small values such as ±1, ±2 in P(x). When P(a) = 0, the factor theorem says (x − a) is a factor. Divide it out to leave a quadratic.",
+   "For a cubic with no obvious factor, test small values such as \\(\\pm 1\\), \\(\\pm 2\\) in \\(P(x)\\). When \\(P(a) = 0\\), the factor theorem says \\((x - a)\\) is a factor. Divide it out to leave a quadratic.",
    [
     "Example",
-    "Solve x³ − 2x² − 5x + 6 = 0. P(1) = 0, so (x − 1) is a factor. Dividing gives (x − 1)(x² − x − 6) = (x − 1)(x − 3)(x + 2), so x = 1, 3 or −2."
+    "Solve \\(x^{3} - 2x^{2} - 5x + 6 = 0\\). \\(P(1) = 0\\), so \\((x - 1)\\) is a factor. Dividing gives \\((x - 1)(x^{2} - x - 6) = (x - 1)(x - 3)(x + 2)\\), so \\(x = 1\\), 3 or \\(-2\\)."
    ]
   ],
   "remember": "Make one side 0, factorise, then set each factor to 0.",
   "a": {
-   "q": "What are the solutions of (x − 4)(x + 1)(2x − 3) = 0?",
+   "q": "What are the solutions of \\((x - 4)(x + 1)(2x - 3) = 0\\)?",
    "opts": [
-    "x = 4, −1, 3/2",
-    "x = −4, 1, −3/2",
-    "x = 4, −1, 2/3",
-    "x = 4, −1, −3/2"
+    "\\(x = 4, -1, \\frac{3}{2}\\)",
+    "\\(x = -4, 1, -\\frac{3}{2}\\)",
+    "\\(x = 4, -1, \\frac{2}{3}\\)",
+    "\\(x = 4, -1, -\\frac{3}{2}\\)"
    ],
-   "why": "Set each factor to 0: x = 4, x = −1, and 2x = 3 gives x = 3/2. The option with 2/3 flips the fraction, which is a common slip.",
-   "clue": "Solve each bracket separately, including 2x − 3 = 0."
+   "why": "Set each factor to 0: \\(x = 4\\), \\(x = -1\\), and \\(2x = 3\\) gives \\(x = \\frac{3}{2}\\). The option with \\(\\frac{2}{3}\\) flips the fraction, which is a common slip.",
+   "clue": "Solve each bracket separately, including \\(2x - 3 = 0\\)."
   },
   "b": {
    "d": 3,
-   "q": "Solve x³ − 7x + 6 = 0. What are all the solutions?",
+   "q": "Solve \\(x^{3} - 7x + 6 = 0\\). What are all the solutions?",
    "opts": [
-    "x = 1, 2, −3",
-    "x = −1, −2, 3",
-    "x = 1, −2, 3",
-    "x = 1, 2, 3"
+    "\\(x = 1, 2, -3\\)",
+    "\\(x = -1, -2, 3\\)",
+    "\\(x = 1, -2, 3\\)",
+    "\\(x = 1, 2, 3\\)"
    ],
-   "why": "P(1) = 1 − 7 + 6 = 0, so (x − 1) is a factor. Dividing gives x² + x − 6 = (x + 3)(x − 2), so x = 1, 2 or −3. Check x = 3: 27 − 21 + 6 = 12, so it is not a solution.",
-   "clue": "Test x = 1 first, then factorise the quadratic that is left."
+   "why": "\\(P(1) = 1 - 7 + 6 = 0\\), so \\((x - 1)\\) is a factor. Dividing gives \\(x^{2} + x - 6 = (x + 3)(x - 2)\\), so \\(x = 1\\), 2 or \\(-3\\). Check \\(x = 3\\): \\(27 - 21 + 6 = 12\\), so it is not a solution.",
+   "clue": "Test \\(x = 1\\) first, then factorise the quadratic that is left."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Solving polynomial equations",
+   "card": [
+    "To solve a polynomial equation, move every term to one side so the other side is 0. Then factorise the polynomial.",
+    "If a product is 0, at least one factor is 0. So set each factor equal to 0 and solve each one.",
+    "For a cubic with no obvious factor, test small values such as ±1, ±2 in P(x). When P(a) = 0, the factor theorem says (x − a) is a factor. Divide it out to leave a quadratic.",
+    [
+     "Example",
+     "Solve x³ − 2x² − 5x + 6 = 0. P(1) = 0, so (x − 1) is a factor. Dividing gives (x − 1)(x² − x − 6) = (x − 1)(x − 3)(x + 2), so x = 1, 3 or −2."
+    ]
+   ],
+   "remember": "Make one side 0, factorise, then set each factor to 0.",
+   "a": {
+    "q": "What are the solutions of (x − 4)(x + 1)(2x − 3) = 0?",
+    "opts": [
+     "x = 4, −1, 3/2",
+     "x = −4, 1, −3/2",
+     "x = 4, −1, 2/3",
+     "x = 4, −1, −3/2"
+    ],
+    "why": "Set each factor to 0: x = 4, x = −1, and 2x = 3 gives x = 3/2. The option with 2/3 flips the fraction, which is a common slip.",
+    "clue": "Solve each bracket separately, including 2x − 3 = 0."
+   },
+   "b": {
+    "d": 3,
+    "q": "Solve x³ − 7x + 6 = 0. What are all the solutions?",
+    "opts": [
+     "x = 1, 2, −3",
+     "x = −1, −2, 3",
+     "x = 1, −2, 3",
+     "x = 1, 2, 3"
+    ],
+    "why": "P(1) = 1 − 7 + 6 = 0, so (x − 1) is a factor. Dividing gives x² + x − 6 = (x + 3)(x − 2), so x = 1, 2 or −3. Check x = 3: 27 − 21 + 6 = 12, so it is not a solution.",
+    "clue": "Test x = 1 first, then factorise the quadratic that is left."
+   }
+  }
+ }
 }

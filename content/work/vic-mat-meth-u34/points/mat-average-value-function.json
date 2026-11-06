@@ -33,7 +33,8 @@
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:23:33Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:23:33Z review: approved with the fix (a spot check)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -205,35 +206,72 @@
  "final": {
   "title": "Average value of a function",
   "card": [
-   "The average value of f on [a, b] is 1/(b − a) × the definite integral of f(x) from a to b. In words: integrate, then divide by the width b − a.",
-   "When f(x) ≥ 0 on [a, b], the average value is the height of a rectangle on [a, b] with the same area as the region under the curve.",
+   "The average value of \\(f\\) on \\([a, b]\\) is \\(\\frac{1}{b - a} \\int_{a}^{b} f(x) \\, dx\\). In words: integrate, then divide by the width \\(b - a\\).",
+   "When \\(f(x) \\ge 0\\) on \\([a, b]\\), the average value is the height of a rectangle on \\([a, b]\\) with the same area as the region under the curve.",
    "The integral is signed: parts of the graph below the x-axis count as negative. So use the definite integral itself, not the total area.",
-   "Example: for f(x) = x² on [0, 3], the integral is [x³/3] from 0 to 3 = 9 − 0 = 9. Dividing by the width 3 − 0 gives 9 ÷ 3 = 3."
+   "Example: for \\(f(x) = x^{2}\\) on \\([0, 3]\\), the integral is \\(\\left[\\frac{x^{3}}{3}\\right]_{0}^{3} = 9 - 0 = 9\\). Dividing by the width \\(3 - 0\\) gives \\(9 \\div 3 = 3\\)."
   ],
-  "remember": "Find the signed integral first, then divide by the width b − a.",
+  "remember": "Find the signed integral first, then divide by the width \\(b - a\\).",
   "a": {
-   "q": "The integral of f(x) from 1 to 5 is 20. What is the average value of f on [1, 5]?",
+   "q": "The integral of \\(f(x)\\) from 1 to 5 is 20. What is the average value of \\(f\\) on \\([1, 5]\\)?",
    "opts": [
     "5",
     "4",
     "20",
     "80"
    ],
-   "why": "The width is 5 − 1 = 4, so the average value is 20 ÷ 4 = 5. Dividing by 5, the end value, gives 4, which is a mistake: the width is b − a, not b.",
+   "why": "The width is \\(5 - 1 = 4\\), so the average value is \\(20 \\div 4 = 5\\). Dividing by 5, the end value, gives 4, which is a mistake: the width is \\(b - a\\), not \\(b\\).",
    "clue": "Divide the integral by the width of the interval."
   },
   "b": {
    "d": 3,
-   "q": "What is the average value of f(x) = 2x on [1, 4]?",
+   "q": "What is the average value of \\(f(x) = 2x\\) on \\([1, 4]\\)?",
    "opts": [
     "5",
     "15",
     "3",
     "7.5"
    ],
-   "why": "The integral of 2x from 1 to 4 is [x²] from 1 to 4 = 16 − 1 = 15. The width is 3, so the average is 15 ÷ 3 = 5. The answer 15 is only the integral, and has not been divided by the width.",
-   "clue": "Find the integral first, then divide by 4 − 1."
+   "why": "The integral of \\(2x\\) from 1 to 4 is \\(\\left[x^{2}\\right]_{1}^{4} = 16 - 1 = 15\\). The width is 3, so the average is \\(15 \\div 3 = 5\\). The answer 15 is only the integral, and has not been divided by the width.",
+   "clue": "Find the integral first, then divide by \\(4 - 1\\)."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Average value of a function",
+   "card": [
+    "The average value of f on [a, b] is 1/(b − a) × the definite integral of f(x) from a to b. In words: integrate, then divide by the width b − a.",
+    "When f(x) ≥ 0 on [a, b], the average value is the height of a rectangle on [a, b] with the same area as the region under the curve.",
+    "The integral is signed: parts of the graph below the x-axis count as negative. So use the definite integral itself, not the total area.",
+    "Example: for f(x) = x² on [0, 3], the integral is [x³/3] from 0 to 3 = 9 − 0 = 9. Dividing by the width 3 − 0 gives 9 ÷ 3 = 3."
+   ],
+   "remember": "Find the signed integral first, then divide by the width b − a.",
+   "a": {
+    "q": "The integral of f(x) from 1 to 5 is 20. What is the average value of f on [1, 5]?",
+    "opts": [
+     "5",
+     "4",
+     "20",
+     "80"
+    ],
+    "why": "The width is 5 − 1 = 4, so the average value is 20 ÷ 4 = 5. Dividing by 5, the end value, gives 4, which is a mistake: the width is b − a, not b.",
+    "clue": "Divide the integral by the width of the interval."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is the average value of f(x) = 2x on [1, 4]?",
+    "opts": [
+     "5",
+     "15",
+     "3",
+     "7.5"
+    ],
+    "why": "The integral of 2x from 1 to 4 is [x²] from 1 to 4 = 16 − 1 = 15. The width is 3, so the average is 15 ÷ 3 = 5. The answer 15 is only the integral, and has not been divided by the width.",
+    "clue": "Find the integral first, then divide by 4 − 1."
+   }
+  }
+ }
 }
