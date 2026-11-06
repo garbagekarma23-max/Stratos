@@ -43,7 +43,10 @@ check(copies(problems({'e-ped': BANK['e-ped']})['e-ped']).length === 0, 'a point
 const copy = fs.mkdtempSync(path.join(os.tmpdir(), 'stratos-questions-src-'));
 fs.cpSync(path.join(ROOT, 'src'), path.join(copy, 'src'), {recursive: true});
 fs.mkdirSync(path.join(copy, 'content'));
-fs.copyFileSync(path.join(ROOT, 'content', 'load.mjs'), path.join(copy, 'content', 'load.mjs'));
+for (const f of ['load.mjs', 'latex.mjs']) fs.copyFileSync(path.join(ROOT, 'content', f), path.join(copy, 'content', f));
+// MathLive's build for Node, which the check uses to parse the LaTeX in maths points (content/latex.mjs).
+fs.mkdirSync(path.join(copy, 'lab', 'mathlive'), {recursive: true});
+fs.copyFileSync(path.join(ROOT, 'lab', 'mathlive', 'mathlive-ssr.min.mjs'), path.join(copy, 'lab', 'mathlive', 'mathlive-ssr.min.mjs'));
 fs.copyFileSync(path.join(ROOT, 'check_content.mjs'), path.join(copy, 'check_content.mjs'));
 const full = () => spawnSync('node', ['check_content.mjs'], {cwd: copy, encoding: 'utf8'});
 check(full().status === 0, 'the full check passes on src/ as it is', R);

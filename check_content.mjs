@@ -10,11 +10,18 @@
 // guess by length. content/pipeline.py rebalance fixes a course already written.
 // No two questions may ask the same thing word for word, in any bank or in NSW Economics (content.js). The tests find
 // each answer by its question's text, and a student studying two courses would meet one question with two answers.
+// Maths in a point is LaTeX between \( and \) (content/latex.mjs). Every piece must parse, a title has no maths, and a
+// maths point that has been converted to LaTeX may not write maths as plain text anywhere (a slash as a fraction, a caret,
+// log_, sqrt, <=, ² and the like, PLAIN in latex.mjs). A maths point still written all in plain text gets a warning,
+// not a failure, until content/convert_maths.py and a read by hand convert it. Points checked with --json, which the
+// pipeline writes, always get the maths rule. Options are measured as they look on screen (shown in latex.mjs).
 //   node check_content.mjs                 checks everything in src/
 //   node check_content.mjs --json FILE     checks only the points in FILE ({"kind": ..., "subject": ..., "points": {id: point}})
 //                                          and prints the problems for each as JSON. content/pipeline.py uses this.
 import fs from 'fs';
 import { loadContent, allBankPoints, unitCourses } from './content/load.mjs';
+import { ready, latexProblems, plainMaths, shown, sameMaths, hasMaths } from './content/latex.mjs';
+await ready();
 const C = loadContent();
 const {TOPIC, MATHS, ECON_POINTS} = C;
 const MAKE = new Function(fs.readFileSync(new URL('./src/15-maths-make.js', import.meta.url), 'utf8') + '; return MAKE;')();
@@ -47,7 +54,10 @@ const clearlyLongest = len => len[0] > Math.max(...len.slice(1)) && len[0] - (le
 /* One point with a card and two questions. tally counts its questions and how often the right answer is longest.
    kind is the made course's kind (english, maths, theory or standard), for the rules that only some subjects have.
    subject is the course's subject, for the subject terms the banned words let through (ALLOWED_IN). */
-function checkPoint(id, p, tally, kind, subject) {
+/* strict: a maths point must write all its maths in LaTeX. In the full check that is only asked of a point that has
+   some LaTeX in it already; the --json check asks it of every maths point. */
+let unconverted = [];
+function checkPoint(id, p, tally, kind, subject, strict) {
   tally.pts++;
   if (!p.title) problems.push(id + ' has no title');
   if (!Array.isArray(p.card) || p.card.length < 3 || p.card.length > 4) { problems.push(id + ' card has ' + (p.card || []).length + ' lines'); if (!Array.isArray(p.card)) return; }
@@ -59,14 +69,21 @@ function checkPoint(id, p, tally, kind, subject) {
     if (!q || !q.q || !q.why || !q.clue) { problems.push(id + k + ' is missing a part'); continue; }
     if (!Array.isArray(q.opts) || q.opts.length !== 4 || new Set(q.opts).size !== 4) problems.push(id + k + ' needs four different options');
     if (k === 'b' && ![2, 3].includes(q.d)) problems.push(id + k + ' has no difficulty');
-    const len = q.opts.map(o => o.length), rest = Math.max(...len.slice(1));
+    const len = q.opts.map(o => shown(o).length), rest = Math.max(...len.slice(1));
     if (len[0] > rest) tally.longest++;
     if (clearlyLongest(len)) tally.clear++;
     tally.margins.push([id + k, len[0] - rest, len.join('/')]);
-    q.opts.forEach(o => { if (o.length > 60) problems.push(id + k + ' option is ' + o.length + ' characters: ' + o); if (/[.]$/.test(o)) problems.push(id + k + ' option ends with a full stop: ' + o); });
+    q.opts.forEach(o => { if (shown(o).length > 60) problems.push(id + k + ' option is ' + shown(o).length + ' characters' + (hasMaths(o) ? ' as shown' : '') + ': ' + o); if (/[.]$/.test(o)) problems.push(id + k + ' option ends with a full stop: ' + o); });
     texts.push(q.q, q.why, q.clue, ...q.opts);
   }
   for (const t of texts) wordCheck(id, t, subject);
+  for (const t of texts) for (const m of latexProblems(t)) problems.push(id + ' ' + m);
+  if (hasMaths(p.title)) problems.push(id + ' has maths in its title. Titles are words only: ' + p.title);
+  if (kind === 'maths') {
+    const found = texts.map(t => [t, plainMaths(t)]).filter(([, m]) => m.length);
+    if (strict || texts.some(hasMaths)) for (const [t, m] of found) problems.push(id + ' writes maths as plain text, ' + m.join('; ') + ', in: ' + t + ' Write the maths in LaTeX between \\( and \\).');
+    else if (found.length && !unconverted.includes(id)) unconverted.push(id);
+  }
   if (kind === 'english') for (const t of texts) { const q = typeof t === 'string' && longQuote(t); if (q) problems.push(id + ' quotes more than 10 words: ' + q); }
 }
 /* A course's right option is the longest well above chance when the count is at least 2 standard deviations above a
@@ -86,7 +103,7 @@ const tally = () => ({pts: 0, qs: 0, longest: 0, clear: 0, margins: []});
 
 /* Two questions share the same text when they match ignoring capitals, spaces and the mark at the end. asked() lists
    every question of NSW Economics and every bank, by its text, as [id, a or b], leaving out the points in skip. */
-const sameText = q => q.toLowerCase().replace(/\s+/g, ' ').replace(/[\s?.!:]+$/, '').trim();
+const sameText = q => sameMaths(q).toLowerCase().replace(/\s+/g, ' ').replace(/[\s?.!:]+$/, '').trim();
 function asked(skip) {
   const out = new Map(), add = (id, p) => { for (const k of ['a', 'b']) if (p[k] && typeof p[k].q === 'string') { const t = sameText(p[k].q); (out.get(t) || out.set(t, []).get(t)).push([id, k]); } };
   for (const ch of TOPIC.chapters) for (const p of ch.points) if (!skip.has(p.id)) add(p.id, p);
@@ -103,15 +120,16 @@ if (process.argv[2] === '--json') {
   for (const [id, p] of Object.entries(input.points)) if (p && typeof p === 'object') qs.add(id, p);
   for (const [id, p] of Object.entries(input.points)) {
     problems = [];
-    try { checkPoint(id, p, tally(), input.kind, input.subject); } catch (e) { problems.push(id + ' could not be checked: ' + e.message); }
+    try { checkPoint(id, p, tally(), input.kind, input.subject, true); } catch (e) { problems.push(id + ' could not be checked: ' + e.message); }
     for (const k of ['a', 'b']) {
       const q = p && p[k] && p[k].q, same = typeof q === 'string' ? twins(qs.map, id, k, q) : [];
       if (same.length) problems.push(id + k + ' asks the same question, word for word, as ' + same.join(' and ') + ': ' + q.trim() + ' Word it differently.');
     }
     out[id] = problems;
   }
-  console.log(JSON.stringify(out));
-  process.exit(0);
+  // Exit only once the answer is written: a large answer through a pipe is cut short by an early exit.
+  process.stdout.write(JSON.stringify(out) + '\n', () => process.exit(0));
+  await new Promise(() => {});
 }
 
 const nsw = tally();
@@ -178,6 +196,7 @@ for (const ch of MATHS.chapters) for (const p of ch.points) {
   for (const t of texts) wordCheck(p.id, t);
 }
 console.log('maths:', mpts, 'points,', mforms, 'question templates');
+if (unconverted.length) warnings.push(unconverted.length + ' maths points still write their maths as plain text. content/convert_maths.py converts the simple ones (content/README.md, step 12).');
 if (warnings.length) console.log('WARNINGS (these do not fail the check):\n  ' + warnings.join('\n  '));
 console.log(problems.length ? 'PROBLEMS:\n  ' + problems.join('\n  ') : 'no problems found');
 process.exitCode = problems.length ? 1 : 0;

@@ -11,6 +11,7 @@ A point has a title, a card of 3 or 4 lines (each with an optional label), a rem
 - If a change touches what a question asks, change its options, why and clue to match, so they still fit.
 - opt1 stays the right answer. Exactly one option is right, and a student who knows the idea must be able to rule out the others using only the card.
 - Keep the card's depth and the right option's length about the same as the other options'. Never make the right option the longest or the most detailed.
+- If the bank point writes maths as plain text (a slash as a fraction, ² for a power, √, a hyphen as a minus sign) and this course's rules below ask for LaTeX, change every part that has maths in it, writing the maths in LaTeX as the rules say. Name each of those parts too.
 - Every fact must be correct for this course's state or country, and current. If you are not sure a fact is right there, describe it in general terms.
 
 ## Words

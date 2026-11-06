@@ -341,8 +341,9 @@ function indexEntry(p) {
     const ex = MAKE.example(p), lines = [p.intro, p.remember].concat(ex.steps.map(s => s.note));
     return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: ex.text.toLowerCase()};
   }
+  /* A made maths point's LaTeX is searched as plain characters (plainTx), so a search for frac finds nothing. */
   const lines = p.card.map(l => Array.isArray(l) ? l[0] + ': ' + l[1] : l).concat([p.remember]);
-  return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: [p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ').toLowerCase()};
+  return {p: p, title: p.title.toLowerCase(), lines: lines, body: plainTx(lines.join(' ')).toLowerCase(), qs: plainTx([p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ')).toLowerCase()};
 }
 /* Words to try in Search, for each subject. A made course (made.js) brings its own, as chips. */
 const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides'],
@@ -359,6 +360,8 @@ function marked(text, terms) {
   const re = new RegExp('(' + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'ig');
   return text.split(re).map((part, i) => i % 2 ? '<mark>' + esc(part) + '</mark>' : esc(part)).join('');
 }
+/* A line with maths in it: the words are marked, and each piece of maths is drawn as maths, unmarked. */
+const markedTx = (text, terms) => hasMx(text) ? text.split(MX_SPLIT).map((part, i) => i % 2 ? tx('\\(' + part + '\\)') : marked(part, terms)).join('') : marked(text, terms);
 function runSearch() {
   const raw = qIn.value.trim(), terms = raw.toLowerCase().split(/\s+/).filter(Boolean), hits = [];
   searchPad.classList.toggle('has-q', !!terms.length);
@@ -375,8 +378,8 @@ function runSearch() {
   hits.sort((a, b) => b.s - a.s);
   if (!hits.length) { qOut.innerHTML = '<p class="nores">Nothing in this topic matches "' + esc(raw) + '".</p>'; return; }
   qOut.innerHTML = '<p class="count-l">' + plural(hits.length, 'point') + '</p><div class="results">' + hits.map(h => {
-    const e = h.e, st = statusOf(e.p.id), line = e.lines.find(l => terms.some(t => l.toLowerCase().indexOf(t) >= 0)) || e.lines[0];
-    return '<button class="res" type="button" data-act="point" data-p="' + e.p.id + '"><i class="st ' + st + '"></i><span><span class="t">' + esc(e.p.title) + '</span><span class="c">' + esc(chName(chOf(e.p.ch))) + ', ' + STATUS[st].toLowerCase() + '</span><span class="snip">' + marked(line, terms) + '</span></span></button>';
+    const e = h.e, st = statusOf(e.p.id), line = e.lines.find(l => terms.some(t => plainTx(l).toLowerCase().indexOf(t) >= 0)) || e.lines[0];
+    return '<button class="res" type="button" data-act="point" data-p="' + e.p.id + '"><i class="st ' + st + '"></i><span><span class="t">' + esc(e.p.title) + '</span><span class="c">' + esc(chName(chOf(e.p.ch))) + ', ' + STATUS[st].toLowerCase() + '</span><span class="snip">' + markedTx(line, terms) + '</span></span></button>';
   }).join('') + '</div>';
 }
 qIn.addEventListener('input', runSearch);

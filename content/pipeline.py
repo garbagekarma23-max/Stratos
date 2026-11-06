@@ -648,8 +648,8 @@ def stem(w):
 
 def words(text):
     """The words of some text that say what it is about, cut back to their roots. A hyphenated word also counts as one
-    word, so multi-stage matches multistage."""
-    t = text.lower().replace('’', "'")
+    word, so multi-stage matches multistage. LaTeX commands in maths, such as \\frac or \\sqrt, are not words."""
+    t = re.sub(r'\\[a-zA-Z]+', ' ', text).lower().replace('’', "'")
     ws = re.findall(r'[a-z0-9]+', t) + [w.replace('-', '') for w in re.findall(r'[a-z0-9]+(?:-[a-z0-9]+)+', t)]
     return [stem(w) for w in ws if w not in MATCH_STOP and len(w) > 2]
 
@@ -2250,10 +2250,33 @@ def cmd_autoreject(args):
 
 
 # ---------- rebalance: wrong options as long and detailed as the right one ----------
+MX = re.compile(r'\\\((.*?)\\\)')
+
+def shown_maths(s):
+    """A piece of LaTeX as it looks, roughly, one character for each character drawn: a fraction is as wide as its wider
+    part, a command such as \\pi or \\le is one character. The same as shownMaths in content/latex.mjs."""
+    wider = lambda m: m.group(1) if len(m.group(1)) >= len(m.group(2)) else m.group(2)
+    s = re.sub(r'\\(?:left|right)\b|\\[,;:!]|\\q?quad\b', '', s)
+    s = re.sub(r'\\(?:text|mathrm|mathbb)\{([^{}]*)\}', r'\1', s)
+    for _ in range(8):
+        t = re.sub(r'\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}', wider, s)
+        t = re.sub(r'\\binom\{([^{}]*)\}\{([^{}]*)\}', lambda m: '(' + wider(m) + ')', t)
+        t = re.sub(r'\\sqrt(?:\[[^\]]*\])?\{([^{}]*)\}', r'√\1', t)
+        if t == s: break
+        s = t
+    s = re.sub(r'\\(log|ln|sin|cos|tan|sec|csc|cot|lim|max|min|exp)(?![a-zA-Z])', r'\1', s)
+    s = re.sub(r'\\[a-zA-Z]+', '#', s)
+    s = re.sub(r'\\.', '#', s)
+    return re.sub(r'\s+', ' ', re.sub(r'[{}^_]', '', s)).strip()
+
+def shown_len(text):
+    """How many characters an option takes on screen. Maths between \\( and \\) is measured as it is drawn (shown_maths)."""
+    return len(MX.sub(lambda m: shown_maths(m.group(1)), text))
+
 def clearly_longest(opts):
     """True when the right option (the first) is longer than every wrong option and at least LONG_MARGIN characters
-    longer than their average, so a student could pick it by its length alone."""
-    n, rest = len(opts[0]), [len(o) for o in opts[1:]]
+    longer than their average, so a student could pick it by its length alone. Maths is measured as it looks."""
+    n, rest = shown_len(opts[0]), [shown_len(o) for o in opts[1:]]
     return n > max(rest) and n - sum(rest) / len(rest) >= LONG_MARGIN
 
 def rebalance_qs(p):
@@ -2280,7 +2303,7 @@ def rebalance_range(right):
     """The lengths a new wrong option may have: from 4 characters shorter than the right option to 4 longer, at most 60.
     Three wrong options in it are never clearly shorter on average. The request also asks for one at least as long as the
     right option, so across a course the right option stops being the longest more often than chance."""
-    n = len(right)
+    n = shown_len(right)
     return max(1, n - 4), min(60, n + 4)
 
 def rebalance_user(course, pt, p, ks):
@@ -2290,8 +2313,8 @@ def rebalance_user(course, pt, p, ks):
     for k in ks:
         q = p[k]
         lo, hi = rebalance_range(q['opts'][0])
-        parts += ['', 'Question ' + k + ': ' + q['q'], 'Right option, ' + str(len(q['opts'][0])) + ' characters (keep it as it is): ' + q['opts'][0], 'Wrong options now:']
-        parts += ['- ' + o + ' (' + str(len(o)) + ' characters)' for o in q['opts'][1:]]
+        parts += ['', 'Question ' + k + ': ' + q['q'], 'Right option, ' + str(shown_len(q['opts'][0])) + ' characters (keep it as it is): ' + q['opts'][0], 'Wrong options now:']
+        parts += ['- ' + o + ' (' + str(shown_len(o)) + ' characters)' for o in q['opts'][1:]]
         parts += ['Why: ' + q['why'], 'Clue: ' + q['clue'], 'Write each new wrong option in ' + str(lo) + ' to ' + str(hi) + ' characters. '
                   'Make at least one of them as long as the right option or longer.']
     return '\n'.join(parts)
@@ -2686,15 +2709,22 @@ def review_server(root, repo, port):
             host = (self.headers.get('Host') or '').split(':')[0]
             return host in ('127.0.0.1', 'localhost')
         def send(self, code, body, kind='application/json'):
-            data = body.encode('utf-8') if isinstance(body, str) else json.dumps(body, ensure_ascii=False).encode('utf-8')
+            data = body if isinstance(body, bytes) else body.encode('utf-8') if isinstance(body, str) else json.dumps(body, ensure_ascii=False).encode('utf-8')
             self.send_response(code)
-            self.send_header('Content-Type', kind + '; charset=utf-8')
+            self.send_header('Content-Type', kind + ('' if isinstance(body, bytes) else '; charset=utf-8'))
             self.send_header('Cache-Control', 'no-store')
             self.end_headers(); self.wfile.write(data)
         def do_GET(self):
             if not self.allowed(): return self.send(403, {'ok': False})
             path = urllib.parse.urlparse(self.path).path
             if path == '/': return self.send(200, page, 'text/html')
+            # MathLive, which draws the maths written in LaTeX, from the app's own copy in lab/mathlive: only its script
+            # and its fonts, by name, so no other file on the computer can be asked for.
+            m = re.fullmatch(r'/mathlive/(mathlive\.min\.js|fonts/[A-Za-z0-9_-]+\.woff2)', path)
+            if m:
+                f = os.path.join(repo, 'lab', 'mathlive', *m.group(1).split('/'))
+                if not os.path.isfile(f): return self.send(404, {'ok': False})
+                with open(f, 'rb') as fh: return self.send(200, fh.read(), 'text/javascript' if f.endswith('.js') else 'font/woff2')
             if path in ('/api/items', '/api/compare'):
                 if self.headers.get('X-Review-Token') != token: return self.send(403, {'ok': False})
                 try: return self.send(200, review_items(root, repo) if path == '/api/items' else compare_items(root))

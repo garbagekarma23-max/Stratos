@@ -280,6 +280,10 @@ svg{display:block;flex:none}
 .opt.is-wrong .mk .cross{opacity:1}
 .opt.pop{animation:pop .4s cubic-bezier(.2,1.5,.4,1)}
 .opt.shake{animation:shake .34s ease-in-out}
+/* Maths inside a point's text (tx in 10-core.js), drawn by MathLive: the colour of the words around it, a touch larger
+   to match their height. A long expression scrolls sideways inside its own box, so it never makes the page wider. */
+.mxw{white-space:nowrap}
+math-span.mx{color:inherit;font-size:1.06em;display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;scrollbar-width:thin}
 @keyframes pop{0%{transform:scale(.96)}55%{transform:scale(1.035)}100%{transform:scale(1)}}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}60%{transform:translateX(4px)}85%{transform:translateX(-2px)}}
 
@@ -73408,168 +73412,178 @@ MADE_BANKS.mat = {
   "mat-quadratic-functions": {
     "title": "Quadratic functions",
     "card": [
-      "A quadratic function is y = ax² + bx + c, with a ≠ 0. Its graph is a parabola. If a > 0 it opens up. If a < 0 it opens down. The y-intercept is c.",
-      "The axis of symmetry is the line x = -b/2a. The vertex lies on this line. Put this x-value into the function to get the y-value of the vertex.",
-      "The x-intercepts are the roots, where y = 0. Find them by factorising, by completing the square, or by the quadratic formula x = (-b ± √(b² - 4ac)) ÷ 2a.",
-      "Example: y = x² - 6x + 5. The axis is x = 6/2 = 3. At x = 3, y = 9 - 18 + 5 = -4, so the vertex is (3, -4). Factorising gives (x - 1)(x - 5) = 0, so the roots are x = 1 and x = 5."
+      "A quadratic function is \\(y = ax^{2} + bx + c\\), with \\(a \\ne 0\\). Its graph is a parabola. If \\(a > 0\\) it is concave up. If \\(a < 0\\) it is concave down. The y-intercept is \\(c\\).",
+      "The axis of symmetry is the line \\(x = -\\frac{b}{2a}\\). The vertex, the turning point, lies on this line. Put this \\(x\\) value into the function to get the \\(y\\) value of the vertex.",
+      "The x-intercepts are the roots, where \\(y = 0\\). Find them by factorising, by completing the square, or by the quadratic formula \\(x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}\\).",
+      "Example: \\(y = x^{2} - 6x + 5\\). The axis is \\(x = \\frac{6}{2} = 3\\). At \\(x = 3\\), \\(y = 9 - 18 + 5 = -4\\), so the vertex is \\((3, -4)\\). Factorising gives \\((x - 1)(x - 5) = 0\\), so the roots are \\(x = 1\\) and \\(x = 5\\)."
     ],
-    "remember": "Axis x = -b/2a gives the vertex. Roots are where y = 0. The sign of a sets the direction.",
+    "remember": "The axis \\(x = -\\frac{b}{2a}\\) gives the vertex. Roots are where \\(y = 0\\). The sign of \\(a\\) sets the concavity.",
     "a": {
-      "q": "What is the vertex of y = x² - 8x + 7?",
-      "opts": ["(4, -9)", "(-4, -9)", "(4, 7)", "(8, 7)"],
-      "why": "The axis is x = -(-8)/(2×1) = 4. Then y = 16 - 32 + 7 = -9, so the vertex is (4, -9). (-4, -9) comes from a sign error in -b/2a.",
-      "clue": "Find x = -b/2a first, then put it back into the function."
+      "q": "What is the vertex of \\(y = x^{2} - 8x + 7\\)?",
+      "opts": ["\\((4, -9)\\)", "\\((-4, -9)\\)", "\\((4, 7)\\)", "\\((8, 7)\\)"],
+      "why": "The axis is \\(x = -\\frac{-8}{2 \\times 1} = 4\\). Then \\(y = 16 - 32 + 7 = -9\\), so the vertex is \\((4, -9)\\). \\((-4, -9)\\) comes from a sign error in \\(-\\frac{b}{2a}\\).",
+      "clue": "Find \\(x = -\\frac{b}{2a}\\) first, then put it back into the function."
     },
     "b": {
       "d": 3,
-      "q": "Mia studies y = -x² + 2x + 8. Which statement is correct?",
+      "q": "Mia studies \\(y = -x^{2} + 2x + 8\\). Which statement is correct?",
       "opts": [
-        "It opens down and has roots x = -2 and x = 4",
-        "It opens down and has roots x = 2 and x = -4",
-        "It opens up and has roots x = -2 and x = 4",
-        "It opens up and has a y-intercept of -8"
+        "It is concave down and has roots \\(x = -2\\) and \\(x = 4\\)",
+        "It is concave down and has roots \\(x = 2\\) and \\(x = -4\\)",
+        "It is concave up and has roots \\(x = -2\\) and \\(x = 4\\)",
+        "It is concave up and has a y-intercept of \\(-8\\)"
       ],
-      "why": "Here a = -1, so it opens down. Multiply by -1: x² - 2x - 8 = 0, which gives (x - 4)(x + 2) = 0, so x = 4 or x = -2. Check: -16 + 8 + 8 = 0. The option with roots 2 and -4 has the signs swapped, and -4 gives -16 - 8 + 8 = -16, not 0.",
-      "clue": "Check the sign of a, then set y = 0 and factorise."
+      "why": "Here \\(a = -1\\), so it is concave down. Multiply by \\(-1\\): \\(x^{2} - 2x - 8 = 0\\), which gives \\((x - 4)(x + 2) = 0\\), so \\(x = 4\\) or \\(x = -2\\). Check: \\(-16 + 8 + 8 = 0\\). The option with roots 2 and \\(-4\\) has the signs swapped, and \\(x = -4\\) gives \\(-16 - 8 + 8 = -16\\), not 0.",
+      "clue": "Check the sign of \\(a\\), then set \\(y = 0\\) and factorise."
     }
   },
   "mat-discriminant": {
     "title": "The discriminant",
     "card": [
-      "For a quadratic ax² + bx + c = 0, the discriminant is Δ = b² − 4ac. It is the part under the square root in the quadratic formula.",
-      "If Δ > 0, there are two real roots. If Δ = 0, there is one real root. If Δ < 0, there are no real roots, so the parabola does not meet the x-axis.",
-      "Example: x² + 4x + 5 = 0 has a = 1, b = 4, c = 5. Δ = 4² − 4×1×5 = 16 − 20 = −4, which is negative, so there are no real roots.",
-      "To test a line and a parabola, set their equations equal and rearrange to a quadratic. Find Δ: positive means the line cuts the parabola twice, zero means it touches once, negative means it misses."
+      "For a quadratic \\(ax^{2} + bx + c = 0\\), the discriminant is \\(\\Delta = b^{2} - 4ac\\). It is the part under the square root in the quadratic formula.",
+      "If \\(\\Delta > 0\\), there are two real roots. If \\(\\Delta = 0\\), there is one real root. If \\(\\Delta < 0\\), there are no real roots, so the parabola does not meet the x-axis.",
+      "Example: \\(x^{2} + 4x + 5 = 0\\) has \\(a = 1\\), \\(b = 4\\), \\(c = 5\\). \\(\\Delta = 4^{2} - 4 \\times 1 \\times 5 = 16 - 20 = -4\\), which is negative, so there are no real roots.",
+      "To test a line and a parabola, set their equations equal and rearrange to a quadratic. Find \\(\\Delta\\): positive means the line cuts the parabola twice, zero means it touches once, negative means it misses."
     ],
-    "remember": "Δ = b² − 4ac: positive gives two roots, zero gives one, negative gives none.",
+    "remember": "\\(\\Delta = b^{2} - 4ac\\): positive gives two roots, zero gives one, negative gives none.",
     "a": {
-      "q": "What is the discriminant of 2x² − 3x − 5 = 0, and how many real roots does it have?",
-      "opts": ["49, so two real roots", "−31, so no real roots", "19, so two real roots", "49, so one real root"],
-      "why": "a = 2, b = −3, c = −5, so Δ = (−3)² − 4×2×(−5) = 9 + 40 = 49. This is positive, so there are two real roots. Forgetting that −4ac becomes +40 gives 9 − 40 = −31, which is the tempting wrong answer.",
-      "clue": "Take care with the signs when c is negative."
+      "q": "What is the discriminant of \\(2x^{2} - 3x - 5 = 0\\), and how many real roots does it have?",
+      "opts": [
+        "\\(49\\), so two real roots",
+        "\\(-31\\), so no real roots",
+        "\\(19\\), so two real roots",
+        "\\(49\\), so one real root"
+      ],
+      "why": "\\(a = 2\\), \\(b = -3\\), \\(c = -5\\), so \\(\\Delta = (-3)^{2} - 4 \\times 2 \\times (-5) = 9 + 40 = 49\\). This is positive, so there are two real roots. Forgetting that \\(-4ac\\) becomes \\(+40\\) gives \\(9 - 40 = -31\\), which is the tempting wrong answer.",
+      "clue": "Take care with the signs when \\(c\\) is negative."
     },
     "b": {
       "d": 3,
-      "q": "The line y = 2x − 5 and the parabola y = x² − 2x − 1 are drawn on the same axes. What happens?",
+      "q": "The line \\(y = 2x - 5\\) and the parabola \\(y = x^{2} - 2x - 1\\) are drawn on the same axes. What happens?",
       "opts": [
         "The line touches the parabola at one point",
         "The line cuts the parabola at two points",
         "The line does not meet the parabola",
         "The line meets the parabola at the vertex only"
       ],
-      "why": "Setting them equal: x² − 2x − 1 = 2x − 5, so x² − 4x + 4 = 0. Then Δ = 16 − 16 = 0, so the line meets the parabola at exactly one point and touches it. Two points would need Δ to be positive.",
-      "clue": "Make one side zero, then find Δ."
+      "why": "Setting them equal: \\(x^{2} - 2x - 1 = 2x - 5\\), so \\(x^{2} - 4x + 4 = 0\\). Then \\(\\Delta = 16 - 16 = 0\\), so the line meets the parabola at exactly one point and touches it. Two points would need \\(\\Delta\\) to be positive.",
+      "clue": "Make one side zero, then find \\(\\Delta\\)."
     }
   },
   "mat-cubic-polynomial-graphs": {
     "title": "Cubic and polynomial graphs",
     "card": [
-      "A cubic such as y = (x − 1)(x + 2)(x − 3) has roots where each factor is zero: x = 1, −2 and 3. The graph crosses the x-axis at each of these single roots.",
-      "For the y-intercept, put x = 0. Here y = (−1)(2)(−3) = 6, so the graph meets the y-axis at (0, 6).",
-      "Look at the sign of the x³ term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
-      "A squared factor, such as (x − 2)², gives a double root. The graph touches the x-axis there and turns back. A cubed factor, such as (x − 2)³, still crosses, but flattens as it passes through."
+      "A cubic such as \\(y = (x - 1)(x + 2)(x - 3)\\) has roots where each factor is zero: \\(x = 1\\), \\(-2\\) and \\(3\\). The graph crosses the x-axis at each of these single roots.",
+      "For the y-intercept, put \\(x = 0\\). Here \\(y = (-1)(2)(-3) = 6\\), so the graph meets the y-axis at \\((0, 6)\\).",
+      "Look at the sign of the \\(x^{3}\\) term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
+      "A squared factor, such as \\((x - 2)^{2}\\), gives a double root. The graph touches the x-axis there, at a turning point. A cubed factor, such as \\((x - 2)^{3}\\), still crosses, but flattens as it passes through."
     ],
-    "remember": "Single roots cross, a double (squared) root touches, x = 0 gives the y-intercept and the x³ sign sets the ends.",
+    "remember": "Single roots cross, a double (squared) root touches at a turning point, \\(x = 0\\) gives the y-intercept and the sign of the \\(x^{3}\\) term sets the ends.",
     "a": {
-      "q": "The graph of y = (x − 2)²(x + 1) is sketched. What happens at x = 2?",
+      "q": "The graph of \\(y = (x - 2)^{2}(x + 1)\\) is sketched. What happens at \\(x = 2\\)?",
       "opts": [
-        "It touches the x-axis and turns back",
+        "It touches the x-axis at a turning point",
         "It crosses the x-axis",
         "It crosses, flattening as it passes through",
         "It has a gap in the graph"
       ],
-      "why": "The factor (x − 2) is squared, so x = 2 is a double root and the graph touches the axis there and turns back. Crossing with a flat point happens for a cubed factor, not a squared one. The graph crosses only at the single root x = −1.",
-      "clue": "What power is the factor (x − 2) raised to?"
+      "why": "The factor \\((x - 2)\\) is squared, so \\(x = 2\\) is a double root and the graph touches the axis there, at a turning point. Crossing with a flat point happens for a cubed factor, not a squared one. The graph crosses only at the single root \\(x = -1\\).",
+      "clue": "What power is the factor \\((x - 2)\\) raised to?"
     },
     "b": {
       "d": 3,
-      "q": "What is the y-intercept of y = −(x − 1)(x + 4)(x − 2)?",
-      "opts": ["−8", "8", "−2", "2"],
-      "why": "Put x = 0: y = −(−1)(4)(−2) = −8. Here (−1)(4)(−2) = 8, and the minus sign in front makes it −8. Dropping that sign gives 8, which is wrong.",
-      "clue": "Put x = 0 and keep the minus sign at the front."
+      "q": "What is the y-intercept of \\(y = -(x - 1)(x + 4)(x - 2)\\)?",
+      "opts": ["\\(-8\\)", "\\(8\\)", "\\(-2\\)", "\\(2\\)"],
+      "why": "Put \\(x = 0\\): \\(y = -(-1)(4)(-2) = -8\\). Here \\((-1)(4)(-2) = 8\\), and the minus sign in front makes it \\(-8\\). Dropping that sign gives 8, which is wrong.",
+      "clue": "Put \\(x = 0\\) and keep the minus sign at the front."
     }
   },
   "mat-reciprocal-functions": {
     "title": "Reciprocal functions",
     "card": [
-      "A reciprocal function has the form y = k/x, where k is a number that is not zero. Its graph is a hyperbola, made of two separate curves.",
-      "x = 0 makes the fraction undefined, so the curve never meets the y-axis. A large x makes y very small, so the curve gets close to the x-axis but never touches it. These lines, x = 0 and y = 0, are the asymptotes.",
-      "If k is positive, x and y have the same sign. The curves lie in quadrants 1 and 3. If k is negative, x and y have opposite signs. The curves lie in quadrants 2 and 4.",
-      "Example: y = 6/x has k = 6. At x = 2, y = 3. At x = −2, y = −3. The points are in quadrants 1 and 3, as expected."
+      "A reciprocal function has the form \\(y = \\frac{k}{x}\\), where \\(k\\) is a number that is not zero. Its graph is a hyperbola, made of two separate curves.",
+      "\\(x = 0\\) makes the fraction undefined, so the curve never meets the y-axis. A large \\(x\\) makes \\(y\\) very small, so the curve gets close to the x-axis but never touches it. These lines, \\(x = 0\\) and \\(y = 0\\), are the asymptotes.",
+      "If \\(k\\) is positive, \\(x\\) and \\(y\\) have the same sign. The curves lie in quadrants 1 and 3. If \\(k\\) is negative, \\(x\\) and \\(y\\) have opposite signs. The curves lie in quadrants 2 and 4.",
+      "Example: \\(y = \\frac{6}{x}\\) has \\(k = 6\\). At \\(x = 2\\), \\(y = 3\\). At \\(x = -2\\), \\(y = -3\\). The points are in quadrants 1 and 3, as expected."
     ],
-    "remember": "y = k/x has both axes as asymptotes. The sign of k decides which quadrants hold the curves.",
+    "remember": "\\(y = \\frac{k}{x}\\) has both axes as asymptotes. The sign of \\(k\\) decides which quadrants hold the curves.",
     "a": {
-      "q": "The graph of y = −4/x is drawn. In which quadrants do its two curves lie?",
+      "q": "The graph of \\(y = -\\frac{4}{x}\\) is drawn. In which quadrants do its two curves lie?",
       "opts": ["Quadrants 2 and 4", "Quadrants 1 and 3", "Quadrants 1 and 2", "Quadrants 3 and 4"],
-      "why": "k = −4 is negative, so x and y have opposite signs. For example, x = 1 gives y = −4, which is in quadrant 4, and x = −1 gives y = 4, which is in quadrant 2. Quadrants 1 and 3 are for a positive k.",
-      "clue": "Try x = 1 and see the sign of y."
+      "why": "\\(k = -4\\) is negative, so \\(x\\) and \\(y\\) have opposite signs. For example, \\(x = 1\\) gives \\(y = -4\\), which is in quadrant 4, and \\(x = -1\\) gives \\(y = 4\\), which is in quadrant 2. Quadrants 1 and 3 are for a positive \\(k\\).",
+      "clue": "Try \\(x = 1\\) and see the sign of \\(y\\)."
     },
     "b": {
       "d": 2,
-      "q": "Which statement about the graph of y = 5/x is correct?",
+      "q": "Which statement about the graph of \\(y = \\frac{5}{x}\\) is correct?",
       "opts": [
-        "It has no point with x = 0",
-        "It crosses the x-axis at x = 5",
-        "It crosses the y-axis at y = 5",
+        "It has no point with \\(x = 0\\)",
+        "It crosses the x-axis at \\(x = 5\\)",
+        "It crosses the y-axis at \\(y = 5\\)",
         "It lies in quadrants 2 and 4"
       ],
-      "why": "x = 0 would need division by zero, so no point has x = 0 and the curve never meets the y-axis. The curve never meets the x-axis either, since 5/x is never 0. The tempting y = 5 is just the numerator and is not an intercept.",
-      "clue": "What happens to 5/x if x is 0?"
+      "why": "\\(x = 0\\) would need division by zero, so no point has \\(x = 0\\) and the curve never meets the y-axis. The curve never meets the x-axis either, since \\(\\frac{5}{x}\\) is never 0. The tempting \\(y = 5\\) is just the numerator and is not an intercept.",
+      "clue": "What happens to \\(\\frac{5}{x}\\) if \\(x\\) is 0?"
     }
   },
   "mat-absolute-value-functions": {
     "title": "Absolute value functions",
     "card": [
-      "The absolute value |x| is the distance of x from zero on the number line. It is never negative. So |5| = 5 and |−5| = 5.",
-      "The graph of y = |x| is a V shape with its corner at the origin. For x ≥ 0 it is the line y = x. For x < 0 it is the line y = −x.",
-      "|x − a| is the distance of x from a. So |x − a| = b asks for the points that are b units from a. If b > 0, there are two: x = a + b and x = a − b.",
-      "Example: solve |x − 3| = 4. The points 4 units from 3 are 3 + 4 = 7 and 3 − 4 = −1. Check: |7 − 3| = 4 and |−1 − 3| = |−4| = 4."
+      "The absolute value \\(|x|\\) is the distance of \\(x\\) from zero on the number line. It is never negative. So \\(|5| = 5\\) and \\(|-5| = 5\\).",
+      "The graph of \\(y = |x|\\) is a V shape with its vertex at the origin. For \\(x \\ge 0\\) it is the line \\(y = x\\). For \\(x < 0\\) it is the line \\(y = -x\\).",
+      "\\(|x - a|\\) is the distance of \\(x\\) from \\(a\\). So \\(|x - a| = b\\) asks for the points that are \\(b\\) units from \\(a\\). If \\(b > 0\\), there are two: \\(x = a + b\\) and \\(x = a - b\\).",
+      "Example: solve \\(|x - 3| = 4\\). The points 4 units from 3 are \\(3 + 4 = 7\\) and \\(3 - 4 = -1\\). Check: \\(|7 - 3| = 4\\) and \\(|-1 - 3| = |-4| = 4\\)."
     ],
-    "remember": "If b > 0, |x − a| = b means x is b units from a, so x = a + b or x = a − b.",
+    "remember": "If \\(b > 0\\), \\(|x - a| = b\\) means \\(x\\) is \\(b\\) units from \\(a\\), so \\(x = a + b\\) or \\(x = a - b\\).",
     "a": {
-      "q": "What are the solutions of |x − 2| = 5?",
-      "opts": ["x = 7 and x = −3", "x = 7 only", "x = 3 and x = −3", "x = −7 and x = 3"],
-      "why": "The points 5 units from 2 are 2 + 5 = 7 and 2 − 5 = −3. Giving x = 7 only is tempting, but a distance can be measured in either direction from 2.",
+      "q": "What are the solutions of \\(|x - 2| = 5\\)?",
+      "opts": [
+        "\\(x = 7\\) and \\(x = -3\\)",
+        "\\(x = 7\\) only",
+        "\\(x = 3\\) and \\(x = -3\\)",
+        "\\(x = -7\\) and \\(x = 3\\)"
+      ],
+      "why": "The points 5 units from 2 are \\(2 + 5 = 7\\) and \\(2 - 5 = -3\\). Giving \\(x = 7\\) only is tempting, but a distance can be measured in either direction from 2.",
       "clue": "Which numbers are 5 units from 2 on the number line?"
     },
     "b": {
       "d": 3,
-      "q": "Which equation has the solutions x = −1 and x = 9?",
-      "opts": ["|x − 4| = 5", "|x + 4| = 5", "|x − 5| = 4", "|x − 4| = 9"],
-      "why": "The midpoint of −1 and 9 is 4, and each is 5 units from 4, so |x − 4| = 5. |x + 4| = 5 is tempting, but it is centred at −4 and gives x = 1 and x = −9.",
-      "clue": "Find the number halfway between −1 and 9, then the distance to each."
+      "q": "Which equation has the solutions \\(x = -1\\) and \\(x = 9\\)?",
+      "opts": ["\\(|x - 4| = 5\\)", "\\(|x + 4| = 5\\)", "\\(|x - 5| = 4\\)", "\\(|x - 4| = 9\\)"],
+      "why": "The midpoint of \\(-1\\) and 9 is 4, and each is 5 units from 4, so \\(|x - 4| = 5\\). \\(|x + 4| = 5\\) is tempting, but it is centred at \\(-4\\) and gives \\(x = 1\\) and \\(x = -9\\).",
+      "clue": "Find the number halfway between \\(-1\\) and 9, then the distance to each."
     }
   },
   "mat-circles": {
     "title": "Circles",
     "card": [
-      "A circle with centre (h, k) and radius r has the equation (x − h)² + (y − k)² = r². The right side is r², not r.",
-      "Read the centre from the brackets and flip the signs. In (x − 3)² + (y + 2)² = 25, the centre is (3, −2) and r² = 25, so r = 5.",
-      "A general equation such as x² + y² − 6x + 4y − 12 = 0 can be rewritten by completing the square. Add half the x coefficient, squared, and the same for y, to both sides.",
-      "Worked example: x² − 6x + 9 + y² + 4y + 4 = 12 + 9 + 4. This gives (x − 3)² + (y + 2)² = 25, so the centre is (3, −2) and the radius is 5."
+      "A circle with centre \\((h, k)\\) and radius \\(r\\) has the equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\). The right side is \\(r^{2}\\), not \\(r\\).",
+      "Read the centre from the brackets and flip the signs. In \\((x - 3)^{2} + (y + 2)^{2} = 25\\), the centre is \\((3, -2)\\) and \\(r^{2} = 25\\), so \\(r = 5\\).",
+      "A general equation such as \\(x^{2} + y^{2} - 6x + 4y - 12 = 0\\) can be rewritten by completing the square. Add half the \\(x\\) coefficient, squared, and the same for \\(y\\), to both sides.",
+      "Worked example: \\(x^{2} - 6x + 9 + y^{2} + 4y + 4 = 12 + 9 + 4\\). This gives \\((x - 3)^{2} + (y + 2)^{2} = 25\\), so the centre is \\((3, -2)\\) and the radius is 5."
     ],
-    "remember": "Flip the signs inside the brackets for the centre. The right side is r², so take a square root for the radius.",
+    "remember": "Flip the signs inside the brackets for the centre. The right side is \\(r^{2}\\), so take a square root for the radius.",
     "a": {
-      "q": "What are the centre and radius of the circle (x + 1)² + (y − 4)² = 49?",
+      "q": "What are the centre and radius of the circle \\((x + 1)^{2} + (y - 4)^{2} = 49\\)?",
       "opts": [
-        "Centre (−1, 4), radius 7",
-        "Centre (1, −4), radius 7",
-        "Centre (−1, 4), radius 49",
-        "Centre (1, −4), radius 49"
+        "Centre \\((-1, 4)\\), radius 7",
+        "Centre \\((1, -4)\\), radius 7",
+        "Centre \\((-1, 4)\\), radius 49",
+        "Centre \\((1, -4)\\), radius 49"
       ],
-      "why": "The brackets show x + 1 = x − (−1) and y − 4, so the centre is (−1, 4). The right side is r² = 49, so r = 7. Choosing (1, −4) copies the signs instead of flipping them.",
+      "why": "The brackets show \\(x + 1 = x - (-1)\\) and \\(y - 4\\), so the centre is \\((-1, 4)\\). The right side is \\(r^{2} = 49\\), so \\(r = 7\\). Choosing \\((1, -4)\\) copies the signs instead of flipping them.",
       "clue": "Flip the signs for the centre, then take a square root."
     },
     "b": {
       "d": 3,
-      "q": "The circle x² + y² − 8x + 2y − 8 = 0 is rewritten by completing the square. What are its centre and radius?",
+      "q": "The circle \\(x^{2} + y^{2} - 8x + 2y - 8 = 0\\) is rewritten by completing the square. What are its centre and radius?",
       "opts": [
-        "Centre (4, −1), radius 5",
-        "Centre (4, −1), radius 25",
-        "Centre (−4, 1), radius 5",
-        "Centre (8, −2), radius 5"
+        "Centre \\((4, -1)\\), radius 5",
+        "Centre \\((4, -1)\\), radius 25",
+        "Centre \\((-4, 1)\\), radius 5",
+        "Centre \\((8, -2)\\), radius 5"
       ],
-      "why": "Add 16 and 1 to both sides: (x − 4)² + (y + 1)² = 8 + 16 + 1 = 25. The centre is (4, −1) and r = 5. Radius 25 forgets that the right side is r², not r.",
+      "why": "Add 16 and 1 to both sides: \\((x - 4)^{2} + (y + 1)^{2} = 8 + 16 + 1 = 25\\). The centre is \\((4, -1)\\) and \\(r = 5\\). Radius 25 forgets that the right side is \\(r^{2}\\), not \\(r\\).",
       "clue": "Move the constant across, then add 16 and 1 to both sides."
     }
   },
@@ -131115,6 +131129,162 @@ const Sheet = (() => {
   return {create: create, drawnWith: drawnWith};
 })();
 
+/* ---------- maths inside a point's text ----------
+   A made maths point writes its maths as LaTeX between \( and \), such as "The axis is \(x = -\frac{b}{2a}\)."
+   (content/latex.mjs has the rules, and check_content.mjs checks them.)
+   tx() turns a point's text into HTML: the words are escaped as usual, and each piece of maths becomes a <math-span>,
+   which MathLive draws as real maths. MathLive is big, so it loads from lab/mathlive only the first time some text has
+   maths in it, and a course with maths starts loading it as soon as it is picked (setSubject in 10-core.js). Text with
+   no maths is only escaped. Until MathLive is ready, a <math-span> is kept invisible (lab/keys.css), so the LaTeX itself
+   never shows.
+   Screen readers read each piece from its label, which speak() writes in words: "x equals negative b over 2 a".
+   This file comes before 10-core.js, which uses hasMx while it loads, and has no screen code of its own, so
+   tests/maths-text.mjs can run it with no browser. */
+const MX_SPLIT = /\\\((.+?)\\\)/;
+const hasMx = s => typeof s === 'string' && s.indexOf('\\(') >= 0;
+let mathLiveLoad = null;
+function loadMathLive() {
+  if (!mathLiveLoad) mathLiveLoad = new Promise((ok, fail) => {
+    if (window.MathLive) { ok(); return; }
+    const s = document.createElement('script');
+    s.src = 'lab/mathlive/mathlive.min.js';
+    s.onload = ok;
+    s.onerror = () => { mathLiveLoad = null; fail(new Error('MathLive did not load')); };
+    document.head.appendChild(s);
+  });
+  return mathLiveLoad;
+}
+function tx(s) {
+  s = String(s);
+  if (!hasMx(s)) return esc(s);
+  loadMathLive().catch(() => {});
+  const parts = s.split(MX_SPLIT);
+  /* A bracket just before a piece of maths, and the marks just after it (a comma, a full stop, a closing bracket), are
+     kept on the same line as the maths, so a line never starts with a comma. */
+  for (let i = 1; i < parts.length; i += 2) {
+    const before = /[(\[‘“"]+$/.exec(parts[i - 1]), after = /^[.,;:?!)\]’”"]+/.exec(parts[i + 1]);
+    const open = before ? before[0] : '', close = after ? after[0] : '';
+    parts[i - 1] = esc(parts[i - 1].slice(0, parts[i - 1].length - open.length));
+    parts[i + 1] = parts[i + 1].slice(close.length);
+    const m = '<math-span class="mx" role="img" aria-label="' + esc(speak(parts[i])) + '">' + esc(parts[i]) + '</math-span>';
+    parts[i] = open || close ? '<span class="mxw">' + esc(open) + m + esc(close) + '</span>' : m;
+  }
+  parts[parts.length - 1] = esc(parts[parts.length - 1]);
+  return parts.join('');
+}
+/* The same text as words, for the screen reader's live line (say in 30-shell.js). */
+const spoken = s => hasMx(s) ? String(s).split(MX_SPLIT).map((part, i) => i % 2 ? speak(part) : part).join('') : String(s);
+
+/* A piece of LaTeX read aloud, the way a teacher in Australia would say it. It knows the commands content/latex.mjs
+   allows (COMMANDS there), so every piece the content check passes has a reading. */
+const SPEAK = {le: 'is less than or equal to', leq: 'is less than or equal to', ge: 'is greater than or equal to', geq: 'is greater than or equal to',
+  ne: 'is not equal to', neq: 'is not equal to', approx: 'is approximately equal to', equiv: 'is equivalent to', lt: 'is less than', gt: 'is greater than',
+  pm: 'plus or minus', mp: 'minus or plus', times: 'times', cdot: 'times', div: 'divided by', to: 'approaches', rightarrow: 'gives', Rightarrow: 'implies',
+  implies: 'implies', iff: 'if and only if', leftarrow: 'from', Leftarrow: 'is implied by', leftrightarrow: 'if and only if', in: 'is in', notin: 'is not in',
+  subset: 'is a subset of', subseteq: 'is a subset of', cup: 'union', cap: 'intersection', emptyset: 'the empty set', varnothing: 'the empty set',
+  infty: 'infinity', circ: 'degrees', angle: 'angle', triangle: 'triangle', parallel: 'is parallel to', perp: 'is perpendicular to', ldots: 'dot dot dot',
+  cdots: 'dot dot dot', dots: 'dot dot dot', prime: 'prime', mid: 'given', colon: ':', therefore: 'therefore', because: 'because', forall: 'for all',
+  exists: 'there exists', neg: 'not', land: 'and', lor: 'or', sin: 'sine', cos: 'cos', tan: 'tan', sec: 'sec', csc: 'cosec', cot: 'cot',
+  arcsin: 'inverse sine', arccos: 'inverse cos', arctan: 'inverse tan', exp: 'exp', min: 'min', max: 'max', ln: 'natural log', log: 'log',
+  langle: 'open angle bracket', rangle: 'close angle bracket', lfloor: 'floor', rfloor: 'end floor', lceil: 'ceiling', rceil: 'end ceiling',
+  lvert: 'the absolute value of', rvert: 'end absolute value', vert: 'bar', varepsilon: 'epsilon', varphi: 'phi', Delta: 'delta', Sigma: 'sigma', Omega: 'omega'};
+const SAY_CHAR = {'+': 'plus', '=': 'equals', '<': 'is less than', '>': 'is greater than', '(': 'open bracket', ')': 'close bracket', '[': 'open square bracket',
+  ']': 'close square bracket', ',': ',', '!': 'factorial', "'": 'prime', '/': 'over', '*': 'times', ':': ':', ';': ';'};
+function speak(tex) {
+  /* nCr written as {}^{n}C_{r} is read as n choose r, and a number's thousands comma {,} is part of the number. */
+  tex = tex.replace(/\{\}\^\{([^{}]+)\}C_\{([^{}]+)\}/g, '\\binom{$1}{$2}').replace(/(\d)\{,\}(?=\d)/g, '$1,');
+  let i = 0;
+  const sp = () => { while (tex[i] === ' ') i++; };
+  const raw = () => { sp(); if (tex[i] !== '{') return ''; const j = tex.indexOf('}', i); const t = tex.slice(i + 1, j); i = j + 1; return t; };
+  /* One argument: a group in braces, or a single token. Returns [words, simple], simple when it is one word. */
+  const arg = () => { sp(); let w; if (tex[i] === '{') { i++; w = run('}'); i++; } else w = item(false).w; return w; };
+  /* A part is short when it is one term with no signs, such as 2 a, so "b over 2 a" needs no "end fraction". */
+  const one = w => w.length === 1 || (w.length <= 3 && w.every(x => /^([\d.,$]+|[a-zA-Z]|pi|theta|delta)$/.test(x)));
+  const end = (w, e) => one(w) ? w : w.concat(e);
+  /* A ^ or _ after something, read with it. */
+  function post(w) {
+    for (;;) {
+      sp();
+      if (tex[i] === '^') {
+        i++; const e = arg();
+        if (e.length === 1 && e[0] === '2') w = w.concat('squared');
+        else if (e.length === 1 && e[0] === '3') w = w.concat('cubed');
+        else if (e.length === 1 && e[0] === 'degrees') w = w.concat('degrees');
+        else w = w.concat('to the power of', e, one(e) ? [] : [',']);
+      } else if (tex[i] === '_') { i++; w = w.concat('sub', arg()); }
+      else return w;
+    }
+  }
+  /* Limits under and over \lim, \int and \sum: _{...} and ^{...} in either order. */
+  function limits() {
+    let lo = null, hi = null;
+    for (;;) { sp(); if (tex[i] === '_') { i++; lo = arg(); } else if (tex[i] === '^') { i++; hi = arg(); } else return [lo, hi]; }
+  }
+  /* One token and what follows it. operand says whether the token before was a number or letter, which tells a minus
+     sign (x minus 2) from a negative number (negative 2). */
+  function item(operand) {
+    sp();
+    const c = tex[i];
+    let m = /^\d+(?:,\d{3})*(?:\.\d+)?/.exec(tex.slice(i));
+    if (m) { i += m[0].length; return {w: post([m[0]]), operand: true}; }
+    if (/[a-zA-Z]/.test(c)) { i++; return {w: post([c]), operand: true}; }
+    if (c === '{') { i++; const w = run('}'); i++; return {w: post(w), operand: w.length > 0}; }
+    if (c === '-') { i++; return {w: [operand ? 'minus' : 'negative'], operand: false}; }
+    if (c === '|') { i++; const w = run('|'); i++; return {w: post(['the absolute value of', ...end(w, ', end absolute value')]), operand: true}; }
+    if (c === ')' || c === ']') { i++; return {w: post([SAY_CHAR[c]]), operand: true}; }
+    if (c !== '\\') { i++; return {w: [SAY_CHAR[c] || c], operand: false}; }
+    m = /^\\([a-zA-Z]+|.)/.exec(tex.slice(i));
+    i += m[0].length;
+    const n = m[1];
+    if (n === 'frac' || n === 'dfrac' || n === 'tfrac') {
+      const a = arg(), b = arg();
+      return {w: post(one(a) && one(b) ? [...a, 'over', ...b] : ['the fraction', ...a, 'over', ...b, ', end fraction']), operand: true};
+    }
+    if (n === 'sqrt') {
+      sp(); let k = null;
+      if (tex[i] === '[') { const j = tex.indexOf(']', i); k = tex.slice(i + 1, j); i = j + 1; }
+      const a = arg(), root = k === null ? 'the square root of' : k === '3' ? 'the cube root of' : 'the ' + k + 'th root of';
+      return {w: post([root, ...end(a, ', end root')]), operand: true};
+    }
+    if (n === 'binom') { const a = arg(), b = arg(); return {w: post([...a, 'choose', ...b]), operand: true}; }
+    if (n === 'text' || n === 'mathrm' || n === 'mathbb') return {w: post([raw()]), operand: true};
+    if (n === 'overline' || n === 'bar') return {w: post([...arg(), 'bar']), operand: true};
+    if (n === 'hat') return {w: post([...arg(), 'hat']), operand: true};
+    if (n === 'vec') return {w: post(['vector', ...arg()]), operand: true};
+    if (n === 'left' || n === 'right' || n === 'quad' || n === 'qquad' || /^[,;:! ]$/.test(n)) return {w: [], operand: operand};
+    if (n === 'lim') { const [lo] = limits(); return {w: lo ? ['the limit as', ...lo, 'of'] : ['the limit of'], operand: false}; }
+    if (n === 'int' || n === 'sum' || n === 'prod') {
+      const [lo, hi] = limits(), name = n === 'int' ? 'the integral' : n === 'sum' ? 'the sum' : 'the product';
+      return {w: [name, ...(lo ? ['from', ...lo] : []), ...(hi ? ['to', ...hi] : []), 'of'], operand: false};
+    }
+    if (n === 'log') { sp(); if (tex[i] === '_') { i++; return {w: ['log base', ...arg(), 'of'], operand: false}; } return {w: ['log'], operand: false}; }
+    if (n === '$') { const k = /^\d+(?:,\d{3})*(?:\.\d+)?/.exec(tex.slice(i)); if (k) { i += k[0].length; return {w: post(['$' + k[0]]), operand: true}; } return {w: ['dollars'], operand: true}; }
+    if (n === '%') return {w: ['percent'], operand: true};
+    if (n === '{' || n === '}') return {w: [n === '{' ? 'open curly bracket' : 'close curly bracket'], operand: n === '}'};
+    if (n === '&') return {w: ['and'], operand: false};
+    const word = SPEAK[n] || n;
+    const isSymbol = /^(pi|theta|alpha|beta|gamma|delta|Delta|epsilon|varepsilon|lambda|mu|sigma|Sigma|phi|varphi|omega|Omega|rho|tau|infty|emptyset|varnothing|circ|prime)$/.test(n);
+    return {w: isSymbol ? post([word]) : [word], operand: isSymbol};
+  }
+  function run(stop) {
+    const w = [];
+    let operand = false;
+    while (i < tex.length && tex[i] !== stop) { const r = item(operand); w.push(...r.w); operand = r.operand; }
+    return w;
+  }
+  return run(null).join(' ').replace(/ ([,;:])/g, '$1').replace(/,(,| ,)+/g, ',').replace(/\s+/g, ' ').replace(/[,\s]+$/, '').trim();
+}
+
+/* LaTeX as plain characters, for Search: \frac{-b}{2a} becomes (−b)/(2a), x^{2} becomes x^2. */
+function mxPlain(t) {
+  const SYM = {le: '≤', ge: '≥', ne: '≠', pm: '±', times: '×', div: '÷', pi: 'π', theta: 'θ', infty: '∞', to: '→', cdot: '·', circ: '°', approx: '≈', int: '∫', sum: 'Σ', Delta: 'Δ'};
+  let out = t.replace(/\\left|\\right|\\[,;!]|\\quad/g, ' ').replace(/\\(?:text|mathrm)\{([^{}]*)\}/g, '$1');
+  for (let n = 0; n < 6; n++) out = out.replace(/\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}/g, '($1)/($2)').replace(/\\sqrt\{([^{}]*)\}/g, '√($1)');
+  return out.replace(/\\([a-zA-Z]+)/g, (m, w) => SYM[w] || w).replace(/\\(.)/g, '$1').replace(/[{}]/g, '').replace(/-/g, '−').replace(/\s+/g, ' ').trim();
+}
+/* Text with its maths as plain characters. */
+const plainTx = s => hasMx(s) ? String(s).split(MX_SPLIT).map((part, i) => i % 2 ? mxPlain(part) : part).join('') : String(s);
+
 /* ---------- small tools ---------- */
 const $ = (s, r) => (r || document).querySelector(s);
 const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
@@ -131123,6 +131293,7 @@ const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
 const plural = (n, word) => n + ' ' + word + (n === 1 ? '' : 's');
 const reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
 
 /* ---------- icons and rockets, drawn as small SVG pictures ---------- */
 const icon = d => '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">' + d + '</svg>';
@@ -131380,7 +131551,12 @@ const SUBJECTS = {};
 COURSE_LIST.forEach(c => { SUBJECTS[c.id] = c.data.units ? indexCourse(c.data, c.id) : indexTopic(c.data, c.id); });
 const COURSES = COURSE_LIST.filter(c => c.data.units).map(c => c.id);
 let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
-function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; ALL.forEach(p => { PT[p.id] = p; }); }
+function setSubject(id) {
+  SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; ALL.forEach(p => { PT[p.id] = p; });
+  /* A course whose points have maths in them starts loading MathLive at once, so it is ready before the first card. */
+  if (SUB.mx === undefined) SUB.mx = SUB.id !== 'maths' && ALL.some(p => hasMx(JSON.stringify([p.card, p.remember, p.a, p.b])));
+  if (SUB.mx) setTimeout(() => loadMathLive().catch(() => {}), 0);
+}
 const isMaths = () => SUB.id === 'maths';
 /* A chapter with points, from any subject. Coming soon chapters are left out, so nothing can open one. */
 function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x => x.id === id); if (c) return c; } return null; }
@@ -132117,7 +132293,7 @@ function frame() {
 }
 
 /* ---------- home: the chapter in progress, its bar, and the list of chapters ---------- */
-const lineHtml = l => '<p>' + (Array.isArray(l) ? '<b>' + esc(l[0]) + ':</b> ' + esc(l[1]) : esc(l)) + '</p>';
+const lineHtml = l => '<p>' + (Array.isArray(l) ? '<b>' + tx(l[0]) + ':</b> ' + tx(l[1]) : tx(l)) + '</p>';
 /* New messages from the sample friends, friend requests waiting (75-friends.js), unread messages and message requests
    (77-messages.js), and challenges to play and new results (78-challenges.js). */
 const unreadCount = () => FRIENDS.reduce((n, f) => n + (saved.unread[f.id] || 0), 0) + frRequests() + msUnread() + chUnread();
@@ -132224,7 +132400,7 @@ function pointSheet(pid) {
   openSheet(p.title,
     '<p class="statusline"><i class="st ' + st + '"></i><span>' + STATUS[st] + '. ' + STATUS_MEANS[st] + '</span></p>' +
     '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
-    '<p class="rem"><b>Remember</b>' + esc(p.remember) + '</p>' +
+    '<p class="rem"><b>Remember</b>' + tx(p.remember) + '</p>' +
     '<p class="sub">' + esc(chName(chOf(p.ch))) + ': ' + esc(chOf(p.ch).title) + '</p>' +
     (isDraft(chOf(p.ch)) ? '<p class="sub">' + DRAFT + ' This chapter has not been checked by a teacher yet.</p>' : '') +
     '<div class="cta">' + (st === 'new'
@@ -132437,7 +132613,7 @@ function useSubject(id, quiet) {
 
 /* ---------- slides: the pieces Learn and Practice share ---------- */
 const actBtn = (name, ic, label) => '<button class="act" type="button" data-act="' + name + '">' + ic + label + '</button>';
-const whyHtml = q => '<b>Why</b><p>' + esc(q.why) + '</p>';
+const whyHtml = q => '<b>Why</b><p>' + tx(q.why) + '</p>';
 
 /* One question as a slide. S is the session it belongs to and i is its place in S.items. */
 function qEl(S, i, learn) {
@@ -132453,9 +132629,9 @@ function qEl(S, i, learn) {
   sec.className = 'slide q'; sec.dataset.i = i;
   sec.innerHTML =
     '<p class="meta">' + meta + '</p>' +
-    '<h2 class="qtext">' + esc(q.q) + '</h2>' +
+    '<h2 class="qtext">' + tx(q.q) + '</h2>' +
     '<div class="opts" role="group" aria-label="Answer choices">' +
-      it.perm.map((oi, n) => '<button class="opt" type="button" data-act="opt" data-n="' + n + '"><span class="key">' + 'ABCD'.charAt(n) + '</span><span class="txt">' + esc(q.opts[oi]) + '</span><span class="mk">' + IC.tick + IC.cross + '</span></button>').join('') +
+      it.perm.map((oi, n) => '<button class="opt" type="button" data-act="opt" data-n="' + n + '"><span class="key">' + 'ABCD'.charAt(n) + '</span><span class="txt">' + tx(q.opts[oi]) + '</span><span class="mk">' + IC.tick + IC.cross + '</span></button>').join('') +
     '</div>' +
     '<div class="note" hidden></div>' +
     '<div class="foot">' + (acts ? '<div class="actions">' + acts + '</div>' : '') + '<button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
@@ -132491,7 +132667,7 @@ function paintResolved(S, sec, i, learn) {
 function paintClue(sec, q) {
   const note = $('.note', sec), b = $('[data-act="clue"]', sec);
   note.hidden = false; note.className = 'note';
-  note.innerHTML = '<b>Clue</b><p>' + esc(q.clue) + '</p>';
+  note.innerHTML = '<b>Clue</b><p>' + tx(q.clue) + '</p>';
   if (b) b.disabled = true;
 }
 /* The slide that fills the screen right now. */
@@ -132583,7 +132759,7 @@ function cardEl(i) {
     '<p class="meta"><span>Point ' + (p.pi + 1) + ' of ' + ch.points.length + '</span>' + (isDraft(ch) ? DRAFT : '') + '</p>' +
     '<h2 class="ctitle">' + esc(p.title) + '</h2>' +
     '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
-    '<p class="rem"><b>Remember</b>' + esc(p.remember) + '</p>' +
+    '<p class="rem"><b>Remember</b>' + tx(p.remember) + '</p>' +
     '<div class="foot"><button class="next" type="button" data-act="nextslide">Check it' + IC.down + '</button></div>';
   return sec;
 }
@@ -132634,11 +132810,11 @@ function learnAnswer(sec, n) {
     anim(btn, 'pop');
     burst(p.x, p.y, 18, sparkColours(1));
     sound.correct(L.row, 0);
-    say('Correct. ' + c.q.why);
+    say('Correct. ' + spoken(c.q.why));
   } else {
     anim(btn, 'shake');
     sound.wrong();
-    say('Not this time. The answer is ' + c.q.opts[0] + '. ' + c.q.why);
+    say('Not this time. The answer is ' + spoken(c.q.opts[0]) + '. ' + spoken(c.q.why));
   }
   buzzFor(right, 0);
   if (L.shown < L.items.length) fillLearn();
@@ -132650,7 +132826,7 @@ function learnAnswer(sec, n) {
   paintLearnBar();
   showFoot(c.sec);
 }
-function learnClue() { const c = learnCurrent(); if (!c) return; paintClue(c.sec, c.q); say('Clue. ' + c.q.clue); }
+function learnClue() { const c = learnCurrent(); if (!c) return; paintClue(c.sec, c.q); say('Clue. ' + spoken(c.q.clue)); }
 /* The bar above the cards: the chapter, and one segment for each question in this session.
    A segment fills when its question is finished: blue if it was right first time, the weak-point colour if not.
    The segment for the question on screen (or the one a card leads to) is darker until it is done. */
@@ -132699,14 +132875,7 @@ const drawn = Sheet.drawnWith(MPAD.macros);
 let mathsLoad = null, mathsReady = false, pad = null, mRow = 0;
 
 function loadMaths() {
-  if (!mathsLoad) mathsLoad = new Promise((ok, fail) => {
-    if (window.MathfieldElement) { ok(); return; }
-    const s = document.createElement('script');
-    s.src = 'lab/mathlive/mathlive.min.js';
-    s.onload = ok;
-    s.onerror = () => { mathsLoad = null; fail(new Error('MathLive did not load')); };
-    document.head.appendChild(s);
-  }).then(() => {
+  if (!mathsLoad) mathsLoad = loadMathLive().then(() => {
     mathsReady = true;
     if (!pad) pad = Sheet.create({
       keys: $('#mKeys'), calc: $('#mCalc'), strip: $('#mStrip'), done: $('#mDone'), topic: MPAD,
@@ -132723,7 +132892,7 @@ function loadMaths() {
     });
     paintWork();
   });
-  mathsLoad.catch(() => toast('Maths could not load. Check the connection, then open Learn again.'));
+  mathsLoad.catch(() => { mathsLoad = null; toast('Maths could not load. Check the connection, then open Learn again.'); });
   return mathsLoad;
 }
 /* Let go of the question on the keypad, for example when the session is rebuilt. */
@@ -133327,7 +133496,7 @@ function answer(sec, n) {
     anim(btn, 'shake');
     sound.wrong(); buzzFor(false);
     if (prevCombo >= 3) { const p = centre(comboEl); puff(p.x, p.y); }
-    say('Not this time. The answer is ' + c.q.opts[0] + '.');
+    say('Not this time. The answer is ' + spoken(c.q.opts[0]) + '.');
     settle(c.sec, 1300);
     showFoot(c.sec);
   }
@@ -133335,7 +133504,7 @@ function answer(sec, n) {
 function clue() {
   const c = current(); if (!c || !solo() || P.clue) return;
   P.clue = true; paintClue(c.sec, c.q);
-  say('Clue. ' + c.q.clue);
+  say('Clue. ' + spoken(c.q.clue));
 }
 function skip() {
   const c = current(); if (!c || !solo() || c.it.back) return;
@@ -133359,7 +133528,7 @@ function reveal() {
   paintResolved(P, c.sec, c.i);
   paintHud(false);
   if (prevCombo >= 3) { const p = centre(comboEl); puff(p.x, p.y); }
-  say('The answer is ' + c.q.opts[0] + '.');
+  say('The answer is ' + spoken(c.q.opts[0]) + '.');
   settle(c.sec, 1300);
   showFoot(c.sec);
 }
@@ -134223,8 +134392,9 @@ function indexEntry(p) {
     const ex = MAKE.example(p), lines = [p.intro, p.remember].concat(ex.steps.map(s => s.note));
     return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: ex.text.toLowerCase()};
   }
+  /* A made maths point's LaTeX is searched as plain characters (plainTx), so a search for frac finds nothing. */
   const lines = p.card.map(l => Array.isArray(l) ? l[0] + ': ' + l[1] : l).concat([p.remember]);
-  return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: [p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ').toLowerCase()};
+  return {p: p, title: p.title.toLowerCase(), lines: lines, body: plainTx(lines.join(' ')).toLowerCase(), qs: plainTx([p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ')).toLowerCase()};
 }
 /* Words to try in Search, for each subject. A made course (made.js) brings its own, as chips. */
 const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides'],
@@ -134241,6 +134411,8 @@ function marked(text, terms) {
   const re = new RegExp('(' + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'ig');
   return text.split(re).map((part, i) => i % 2 ? '<mark>' + esc(part) + '</mark>' : esc(part)).join('');
 }
+/* A line with maths in it: the words are marked, and each piece of maths is drawn as maths, unmarked. */
+const markedTx = (text, terms) => hasMx(text) ? text.split(MX_SPLIT).map((part, i) => i % 2 ? tx('\\(' + part + '\\)') : marked(part, terms)).join('') : marked(text, terms);
 function runSearch() {
   const raw = qIn.value.trim(), terms = raw.toLowerCase().split(/\s+/).filter(Boolean), hits = [];
   searchPad.classList.toggle('has-q', !!terms.length);
@@ -134257,8 +134429,8 @@ function runSearch() {
   hits.sort((a, b) => b.s - a.s);
   if (!hits.length) { qOut.innerHTML = '<p class="nores">Nothing in this topic matches "' + esc(raw) + '".</p>'; return; }
   qOut.innerHTML = '<p class="count-l">' + plural(hits.length, 'point') + '</p><div class="results">' + hits.map(h => {
-    const e = h.e, st = statusOf(e.p.id), line = e.lines.find(l => terms.some(t => l.toLowerCase().indexOf(t) >= 0)) || e.lines[0];
-    return '<button class="res" type="button" data-act="point" data-p="' + e.p.id + '"><i class="st ' + st + '"></i><span><span class="t">' + esc(e.p.title) + '</span><span class="c">' + esc(chName(chOf(e.p.ch))) + ', ' + STATUS[st].toLowerCase() + '</span><span class="snip">' + marked(line, terms) + '</span></span></button>';
+    const e = h.e, st = statusOf(e.p.id), line = e.lines.find(l => terms.some(t => plainTx(l).toLowerCase().indexOf(t) >= 0)) || e.lines[0];
+    return '<button class="res" type="button" data-act="point" data-p="' + e.p.id + '"><i class="st ' + st + '"></i><span><span class="t">' + esc(e.p.title) + '</span><span class="c">' + esc(chName(chOf(e.p.ch))) + ', ' + STATUS[st].toLowerCase() + '</span><span class="snip">' + markedTx(line, terms) + '</span></span></button>';
   }).join('') + '</div>';
 }
 qIn.addEventListener('input', runSearch);
