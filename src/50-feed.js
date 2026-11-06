@@ -71,7 +71,12 @@ function showFoot(sec) {
 }
 function buzzFor(right, tier) { buzz(right ? BUZZ[tier] : [16, 40, 16]); }
 
-ACT.nextslide = b => { const sec = b.closest('.slide'); if (sec && sec.nextElementSibling) scrollToEl(sec.parentNode, sec.nextElementSibling); };
+ACT.nextslide = b => {
+  const sec = b.closest('.slide'), to = sec && sec.nextElementSibling;
+  if (!to) return;
+  if (to === look.learn || to === look.practice) { ACT.mback(); return; }     /* Next onto the maths question being worked goes back to it */
+  scrollToEl(sec.parentNode, to);
+};
 ACT.opt = b => { const sec = b.closest('.slide'); if (sec.parentNode === learnFeed) learnAnswer(sec, +b.dataset.n); else answer(sec, +b.dataset.n); };
 ACT.clue = b => { if (b.closest('.feed') === learnFeed) learnClue(); else clue(); };
 ACT.why = b => { const sec = b.closest('.slide'), it = P && P.items[+sec.dataset.i]; if (!it) return; const note = b.parentNode; note.className = 'note'; note.innerHTML = whyHtml(PT[it.p][it.k]); };

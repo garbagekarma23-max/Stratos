@@ -122,7 +122,7 @@ function mpEl(i) {
   if (!it.q) it.q = MAKE.question(p, {avoid: mpAvoid(it.p)});      /* a challenge's questions are made already, from its seed */
   if (!it.ans) it.ans = it.q.answers.map(LabMaths.number);
   sec.className = 'slide mq'; sec.dataset.i = i;
-  sec.innerHTML =
+  sec.innerHTML = lookBtn() +
     '<p class="meta"><span>Question ' + (i + 1) + (it.back || P.race ? '' : ' of ' + P.total) + '</span><span>' + esc(p.title) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '') + '</p>' +
     '<div class="mq-head"><div class="mq-q"><span class="ask">' + esc(MATHS.ask) + '</span>' + mathsEq(it.q.eq) + '</div>' +
       '<div class="actions">' + (it.back || game() ? '' : mpBtn('mpskip', IC.skip, 'Skip')) + mpBtn('mpreveal', IC.eye, 'Answer') + '</div></div>' +
@@ -171,7 +171,7 @@ function mpRequeue(it) { P.items.push({p: it.p, back: true}); }
    the same as a check question in Learn. A line that is not an answer yet gets a hint and does not count. */
 function mpDone() {
   const c = mpWaiting();
-  if (!c || P.busy || !pad.open || pad.el !== $('.work', c.sec)) return;
+  if (!c || look.practice || P.busy || !pad.open || pad.el !== $('.work', c.sec)) return;
   const line = pad.finalLine();
   if (!line) { toast('Write the answer first, like x = 4.'); return; }
   pad.check(line);

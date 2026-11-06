@@ -310,6 +310,12 @@ svg{display:block;flex:none}
 .slide.mq.working .work{flex:1;min-height:0}
 .slide.mq.working .foot{display:none}
 #mClose{position:absolute;top:6px;right:8px}
+/* Looking back from a maths question: Previous question at the top of the question while it is worked, and
+   Back to question N at the bottom of the screen while the earlier slides scroll. */
+.slide.mq .look{display:none}
+.slide.mq.working .look{display:inline-flex;align-self:flex-start;align-items:center;gap:4px;min-height:32px;margin:-8px 0 -4px -4px;padding:0 8px 0 4px;border:0;background:none;color:var(--ink-2);font-size:13px;font-weight:600}
+.slide.mq .look .ic{width:16px;height:16px}
+#mBack{position:absolute;left:50%;bottom:16px;z-index:5;transform:translateX(-50%);white-space:nowrap;box-shadow:0 0 0 1px var(--paper)}
 /* On a short screen the keypad takes half the height, so the hint above the working steps aside to leave room for the lines. */
 @media (max-height:700px){.slide.mq.working .mq-tip{display:none}}
 .panel .rule{font-size:14px;line-height:1.45;color:var(--ink-2)}

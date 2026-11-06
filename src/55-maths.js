@@ -84,7 +84,7 @@ function mqEl(i) {
   if (!it.q) { it.q = MAKE.question(p, {avoid: avoidFor(it.p)}); it.ans = it.q.answers.map(LabMaths.number); }
   const guided = it.k === 'guided';
   sec.className = 'slide mq'; sec.dataset.i = i;
-  sec.innerHTML =
+  sec.innerHTML = lookBtn() +
     '<p class="meta"><span>' + (guided ? 'Guided' : 'Check') + '</span><span>' + esc(p.title) + '</span></p>' +
     '<div class="mq-head"><div class="mq-q"><span class="ask">' + esc(MATHS.ask) + '</span>' + mathsEq(it.q.eq) + '</div>' + actBtn('mreveal', IC.eye, 'Answer') + '</div>' +
     '<p class="mq-tip">' + (guided ? 'The first lines are written for you. Finish the working, then press Done.' : 'On your own now. Write each step, then press Done.') + '</p>' +
@@ -103,22 +103,47 @@ function mathsWaiting() {
   return sec ? {i: i, sec: sec, it: it} : null;
 }
 
+/* Looking back from a maths question. In work mode the slides stay still (see paintWork), so the student needs a way
+   up: Previous question (or Previous card in Learn) at the top of the question. While looking back:
+   - the keypad hides and the slides scroll as usual, earlier questions with their working and results as they were.
+     Their lines were locked when each question ended (pad.lock), so nothing on them can change, in a challenge or race too.
+   - the question being worked stays exactly as it is, and inert, so nothing can touch it or answer it.
+     The keypad keeps hold of it: pad.el stays on its list of lines, so coming back does not call pad.start,
+     which would empty the list and wipe the working.
+   - Back to question N floats at the bottom. It, Next on the slide above, or scrolling down onto the question
+     turns work mode on again with the working as it was.
+   look holds the question being worked while its feed looks back, one for Learn and one for a Practice flight. */
+const look = {learn: null, practice: null}, mBack = $('#mBack');
+const lookBtn = () => '<button class="look" type="button" data-act="mlook" hidden>' + IC.up + '<span>Previous question</span></button>';
+/* N in Back to question N: the question's number in the flight, or in Learn its place among the session's questions,
+   which matches the segments in the bar. */
+function lookNum(fl, i) { return fl ? i + 1 : L.items.slice(0, i + 1).filter(it => it.t === 'q' || it.t === 'mq').length; }
+function lookEnd(k) { if (look[k]) look[k].inert = false; look[k] = null; }
+
 /* Work mode: while a maths question fills the screen (in Learn, or in a Practice flight), the keypad sits at the bottom
    where the phone keyboard would be, the tab bar steps aside, and the slides stay still so a swipe never moves them
    mid-working. The one keypad moves into whichever of the two screens needs it. */
 function paintWork() {
-  const fl = mpOn(), c = fl ? mpWaiting() : mathsWaiting(), f = fl ? feed : learnFeed;
-  const on = !!c && mathsReady && !!pad && ui.tab === (fl ? 'practice' : 'learn') && !pages.length && viewing(f) === c.sec && (!fl || launch.hidden);
+  const fl = mpOn(), c = fl ? mpWaiting() : mathsWaiting(), f = fl ? feed : learnFeed, k = fl ? 'practice' : 'learn';
+  const shown = ui.tab === (fl ? 'practice' : 'learn') && !pages.length && (!fl || launch.hidden);
+  let back = false;
+  if (look[k] && (!c || look[k] !== c.sec)) lookEnd(k);                  /* the question ended while away (a race): nothing to come back to */
+  else if (look[k] && shown && viewing(f) === c.sec) { lookEnd(k); back = true; }     /* scrolled back down onto it */
+  const on = !!c && !look[k] && mathsReady && !!pad && shown && viewing(f) === c.sec;
   const was = app.dataset.work !== undefined;
   if (on) {
     const host = fl ? run : views.learn;
     if (mPad.parentNode !== host) host.appendChild(mPad);
+    mBack.hidden = true;
     const el = $('.work', c.sec);
     if (pad.el !== el) {
       mRow = 0;
       pad.start({el: el, answers: c.it.ans, given: c.it.k === 'guided' ? c.it.q.steps.slice(0, c.it.q.give) : [], open: true});
       say((fl ? 'Question ' + (c.i + 1) + '. ' : c.it.k === 'guided' ? 'Guided question. ' : 'Check question. ') + 'Solve ' + c.it.q.text + '.');
-    }
+    } else if (back) say('Back to question ' + lookNum(fl, c.i) + '. Your working is as you left it.');
+    /* Previous question, or Previous card when the slide above is a worked example. */
+    const lb = $('.look', c.sec), prev = c.sec.previousElementSibling;
+    if (lb) { lb.hidden = !prev; if (prev) $('span', lb).textContent = prev.classList.contains('mq') ? 'Previous question' : 'Previous card'; }
     app.dataset.work = '';
     mPad.hidden = false; mClose.hidden = fl;
     c.sec.classList.add('working');
@@ -132,16 +157,49 @@ function paintWork() {
     mPad.hidden = true; mClose.hidden = true;
     learnFeed.style.bottom = ''; feed.style.bottom = ''; gauge.style.bottom = ''; toastEl.style.bottom = '';
     $$('.slide.working').forEach(s => s.classList.remove('working'));
+    /* Looking back: Back to question N sits at the bottom of the screen the student is looking at. */
+    const away = !!look[k] && shown;
+    if (away) {
+      const host = fl ? run : views.learn;
+      if (mBack.parentNode !== host) host.appendChild(mBack);
+      $('span', mBack).textContent = 'Back to question ' + lookNum(fl, +look[k].dataset.i);
+      mBack.hidden = false;
+      f.style.bottom = (mBack.offsetHeight + 32) + 'px';     /* the slides end above it, so it never covers their buttons */
+    } else mBack.hidden = true;
   }
 }
 ACT.mclose = () => go('home');
+/* Previous question: look back at the slides above. The keypad hides; the question being worked waits, untouched. */
+ACT.mlook = b => {
+  const fl = b.closest('.feed') === feed, c = fl ? mpWaiting() : mathsWaiting(), f = fl ? feed : learnFeed;
+  if (!c || b.closest('.slide') !== c.sec || (fl && P.busy)) return;     /* not during the Done moment */
+  const prev = c.sec.previousElementSibling;
+  if (!prev) return;
+  look[fl ? 'practice' : 'learn'] = c.sec;
+  c.sec.inert = true;
+  f.scrollTop = prev.offsetTop;            /* first, so paintWork sees the slide above on screen */
+  paintWork();
+  f.scrollTop = prev.offsetTop;            /* again, now the question has its own height back */
+  mBack.focus({preventScroll: true});
+  const n = lookNum(fl, c.i);
+  say('Looking back. Question ' + n + ' waits with your working as it is. Tap Back to question ' + n + ' to carry on.');
+};
+/* Back to question N: scroll to the question being worked and turn work mode on again. paintWork sees it on screen,
+   ends the look back and puts the keypad on the same lines, so the working is as it was. */
+ACT.mback = () => {
+  const fl = mpOn(), sec = look[fl ? 'practice' : 'learn'], f = fl ? feed : learnFeed;
+  if (!sec) return;
+  sec.inert = false;
+  f.scrollTop = sec.offsetTop;
+  paintWork();
+};
 
 /* Done: check the final answer. On a check question, the first real answer counts toward the point's status.
    A line that is not an answer yet (x not on its own, a sum not worked out) gets a hint and does not count. */
 const COUNTS = new Set(['This isn’t the answer.', 'One of these isn’t an answer.', 'There is a second answer.', 'There is one more answer.', 'There are more answers.', 'Give the answer exactly, or to 2 decimal places.']);
 function mathsDone() {
   const c = mathsWaiting();
-  if (!c || !pad.open || pad.el !== $('.work', c.sec)) return;
+  if (!c || look.learn || !pad.open || pad.el !== $('.work', c.sec)) return;
   const line = pad.finalLine();
   if (!line) { toast('Write the answer first, like x = 4.'); return; }
   pad.check(line);
