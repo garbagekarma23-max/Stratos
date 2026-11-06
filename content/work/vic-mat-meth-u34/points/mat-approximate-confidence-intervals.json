@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T14:36:27Z new, write",
   "2026-11-01T14:46:40Z write: done",
-  "2026-11-01T14:56:03Z check: passed, cleared"
+  "2026-11-01T14:56:03Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -70,35 +71,72 @@
  "final": {
   "title": "Approximate confidence intervals",
   "card": [
-   "A confidence interval gives a range of likely values for the population proportion p. First find p-hat = x ÷ n, where x is the number with the feature and n is the sample size.",
-   "An approximate 95% confidence interval for p is p-hat ± 1.96 × √(p-hat(1 − p-hat)/n). Work out the part after ± first. It is the margin of error.",
-   "Worked example: 20 of 100 people are left-handed. p-hat = 0.2, so √(0.2 × 0.8 ÷ 100) = √0.0016 = 0.04.",
-   "The margin of error is 1.96 × 0.04 = 0.0784. The interval is 0.2 ± 0.0784, which is about 0.122 to 0.278."
+   "A confidence interval gives a range of likely values for the population proportion \\(p\\). First find \\(\\hat{p} = \\frac{x}{n}\\), where \\(x\\) is the number with the feature and \\(n\\) is the sample size.",
+   "An approximate 95% confidence interval for \\(p\\) is \\(\\hat{p} \\pm 1.96 \\times \\sqrt{\\frac{\\hat{p}(1 - \\hat{p})}{n}}\\). Work out the part after \\(\\pm\\) first. It is the margin of error.",
+   "Worked example: 20 of 100 people are left-handed. \\(\\hat{p} = 0.2\\), so \\(\\sqrt{\\frac{0.2 \\times 0.8}{100}} = \\sqrt{0.0016} = 0.04\\).",
+   "The margin of error is \\(1.96 \\times 0.04 = 0.0784\\). The interval is \\(0.2 \\pm 0.0784\\), which is about 0.122 to 0.278."
   ],
-  "remember": "Find p-hat, then p-hat ± 1.96 × √(p-hat(1 − p-hat)/n), with n the sample size.",
+  "remember": "Find \\(\\hat{p}\\), then \\(\\hat{p} \\pm 1.96 \\times \\sqrt{\\frac{\\hat{p}(1 - \\hat{p})}{n}}\\), with \\(n\\) the sample size.",
   "a": {
-   "q": "In a survey of 400 Victorian students, 100 walk to school. What is the approximate 95% confidence interval for p?",
+   "q": "In a survey of 400 Victorian students, 100 walk to school. What is the approximate 95% confidence interval for \\(p\\)?",
    "opts": [
     "0.208 to 0.292",
     "0.228 to 0.272",
     "0.249 to 0.251",
     "0.165 to 0.335"
    ],
-   "why": "p-hat = 100 ÷ 400 = 0.25. The margin is 1.96 × √(0.25 × 0.75 ÷ 400) ≈ 0.042, giving 0.208 to 0.292. Leaving out 1.96 gives a narrower interval, 0.228 to 0.272, which is not the 95% interval.",
-   "clue": "Find p-hat first, then divide by the sample size inside the root."
+   "why": "\\(\\hat{p} = \\frac{100}{400} = 0.25\\). The margin is \\(1.96 \\times \\sqrt{\\frac{0.25 \\times 0.75}{400}} \\approx 0.042\\), giving 0.208 to 0.292. Leaving out 1.96 gives a narrower interval, 0.228 to 0.272, which is not the 95% interval.",
+   "clue": "Find \\(\\hat{p}\\) first, then divide by the sample size inside the root."
   },
   "b": {
    "d": 3,
-   "q": "A council surveys 900 residents of Ballarat, and 540 say they use the library. What is the margin of error for a 95% interval for p, to 3 decimal places?",
+   "q": "A council surveys 900 residents of Ballarat, and 540 say they use the library. What is the margin of error for a 95% interval for \\(p\\), to 3 decimal places?",
    "opts": [
     "0.032",
     "0.016",
     "0.041",
     "0.001"
    ],
-   "why": "p-hat = 540 ÷ 900 = 0.6, and n = 900. The margin is 1.96 × √(0.6 × 0.4 ÷ 900) ≈ 0.032. Using 540 as n gives 0.041, which mixes up the count with the sample size.",
-   "clue": "n is the number surveyed, not the number who said yes."
+   "why": "\\(\\hat{p} = \\frac{540}{900} = 0.6\\), and \\(n = 900\\). The margin is \\(1.96 \\times \\sqrt{\\frac{0.6 \\times 0.4}{900}} \\approx 0.032\\). Using 540 as \\(n\\) gives 0.041, which mixes up the count with the sample size.",
+   "clue": "\\(n\\) is the number surveyed, not the number who said yes."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Approximate confidence intervals",
+   "card": [
+    "A confidence interval gives a range of likely values for the population proportion p. First find p-hat = x ÷ n, where x is the number with the feature and n is the sample size.",
+    "An approximate 95% confidence interval for p is p-hat ± 1.96 × √(p-hat(1 − p-hat)/n). Work out the part after ± first. It is the margin of error.",
+    "Worked example: 20 of 100 people are left-handed. p-hat = 0.2, so √(0.2 × 0.8 ÷ 100) = √0.0016 = 0.04.",
+    "The margin of error is 1.96 × 0.04 = 0.0784. The interval is 0.2 ± 0.0784, which is about 0.122 to 0.278."
+   ],
+   "remember": "Find p-hat, then p-hat ± 1.96 × √(p-hat(1 − p-hat)/n), with n the sample size.",
+   "a": {
+    "q": "In a survey of 400 Victorian students, 100 walk to school. What is the approximate 95% confidence interval for p?",
+    "opts": [
+     "0.208 to 0.292",
+     "0.228 to 0.272",
+     "0.249 to 0.251",
+     "0.165 to 0.335"
+    ],
+    "why": "p-hat = 100 ÷ 400 = 0.25. The margin is 1.96 × √(0.25 × 0.75 ÷ 400) ≈ 0.042, giving 0.208 to 0.292. Leaving out 1.96 gives a narrower interval, 0.228 to 0.272, which is not the 95% interval.",
+    "clue": "Find p-hat first, then divide by the sample size inside the root."
+   },
+   "b": {
+    "d": 3,
+    "q": "A council surveys 900 residents of Ballarat, and 540 say they use the library. What is the margin of error for a 95% interval for p, to 3 decimal places?",
+    "opts": [
+     "0.032",
+     "0.016",
+     "0.041",
+     "0.001"
+    ],
+    "why": "p-hat = 540 ÷ 900 = 0.6, and n = 900. The margin is 1.96 × √(0.6 × 0.4 ÷ 900) ≈ 0.032. Using 540 as n gives 0.041, which mixes up the count with the sample size.",
+    "clue": "n is the number surveyed, not the number who said yes."
+   }
+  }
+ }
 }

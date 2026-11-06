@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: done",
-  "2026-11-01T08:14:07Z check: passed, cleared"
+  "2026-11-01T08:14:07Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 1,
@@ -72,7 +73,7 @@
   "card": [
    "To prove a statement by contradiction, assume it is false. Then reason step by step until you reach something impossible.",
    "The impossible result might clash with a known fact, or with the assumption itself. Either way, the assumption cannot be true, so the original statement must be true.",
-   "Example: prove there is no greatest even number. Assume there is one, called N. Then N + 2 is even and larger than N. This contradicts N being the greatest.",
+   "Example: prove there is no greatest even number. Assume there is one, called N. Then \\(N + 2\\) is even and larger than N. This contradicts N being the greatest.",
    "A contradiction only shows the assumption is wrong if every step of the reasoning was valid."
   ],
   "remember": "Assume the opposite, reach something impossible, and the original statement is true.",
@@ -89,16 +90,53 @@
   },
   "b": {
    "d": 2,
-   "q": "Sam assumes there is a greatest odd number, M. He notes that M + 2 is odd and greater than M. What does this show?",
+   "q": "Sam assumes there is a greatest odd number, M. He notes that \\(M + 2\\) is odd and greater than M. What does this show?",
    "opts": [
     "The assumption is false, so there is no greatest odd number",
     "The assumption is true, so M is the greatest odd number",
-    "M + 2 is the greatest odd number instead",
+    "\\(M + 2\\) is the greatest odd number instead",
     "Nothing, because one number cannot give a contradiction"
    ],
-   "why": "M + 2 is odd and larger than M, which contradicts M being the greatest. So the assumption is false and there is no greatest odd number. Choosing M + 2 as the greatest would just repeat the same problem.",
-   "clue": "Does M + 2 fit the assumption about M?"
+   "why": "\\(M + 2\\) is odd and larger than M, which contradicts M being the greatest. So the assumption is false and there is no greatest odd number. Choosing \\(M + 2\\) as the greatest would just repeat the same problem.",
+   "clue": "Does \\(M + 2\\) fit the assumption about M?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Proof by contradiction",
+   "card": [
+    "To prove a statement by contradiction, assume it is false. Then reason step by step until you reach something impossible.",
+    "The impossible result might clash with a known fact, or with the assumption itself. Either way, the assumption cannot be true, so the original statement must be true.",
+    "Example: prove there is no greatest even number. Assume there is one, called N. Then N + 2 is even and larger than N. This contradicts N being the greatest.",
+    "A contradiction only shows the assumption is wrong if every step of the reasoning was valid."
+   ],
+   "remember": "Assume the opposite, reach something impossible, and the original statement is true.",
+   "a": {
+    "q": "To prove by contradiction that there is no smallest positive rational number, what is the first step?",
+    "opts": [
+     "Assume there is a smallest positive rational number",
+     "Assume there is no smallest positive rational number",
+     "Test several small positive rational numbers",
+     "Show that every positive rational number is a fraction"
+    ],
+    "why": "The first step is to assume the opposite of the statement, so we assume a smallest one exists. Assuming the statement itself is true gives nothing to contradict, and testing examples does not prove it.",
+    "clue": "Start by assuming the statement is false."
+   },
+   "b": {
+    "d": 2,
+    "q": "Sam assumes there is a greatest odd number, M. He notes that M + 2 is odd and greater than M. What does this show?",
+    "opts": [
+     "The assumption is false, so there is no greatest odd number",
+     "The assumption is true, so M is the greatest odd number",
+     "M + 2 is the greatest odd number instead",
+     "Nothing, because one number cannot give a contradiction"
+    ],
+    "why": "M + 2 is odd and larger than M, which contradicts M being the greatest. So the assumption is false and there is no greatest odd number. Choosing M + 2 as the greatest would just repeat the same problem.",
+    "clue": "Does M + 2 fit the assumption about M?"
+   }
+  }
+ }
 }

@@ -13,7 +13,8 @@
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:02Z write: done",
-  "2026-11-01T15:05:28Z check: passed, cleared"
+  "2026-11-01T15:05:28Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -100,7 +101,7 @@
   "card": [
    [
     "Leading digit",
-    "round each number to its first digit, then work with those. For 6.8 × 31, think 7 × 30 = 210."
+    "round each number to its first digit, then work with those. For \\(6.8 \\times 31\\), think \\(7 \\times 30 = 210\\)."
    ],
    [
     "Interval",
@@ -117,14 +118,14 @@
   ],
   "remember": "Round simply to estimate. Round up when you need enough, down when only whole ones count.",
   "a": {
-   "q": "Which is the best leading-digit estimate of 48 × 21?",
+   "q": "Which is the best leading-digit estimate of \\(48 \\times 21\\)?",
    "opts": [
     "1000",
     "800",
     "1200",
     "500"
    ],
-   "why": "Round 48 to 50 and 21 to 20. Then 50 × 20 = 1000. The answer 800 would come from rounding 48 down to 40, which is too rough.",
+   "why": "Round 48 to 50 and 21 to 20. Then \\(50 \\times 20 = 1000\\). The answer 800 would come from rounding 48 down to 40, which is too rough.",
    "clue": "Round each number to one digit followed by zeros."
   },
   "b": {
@@ -136,9 +137,58 @@
     "12",
     "130"
    ],
-   "why": "130 ÷ 12 is about 10.83. Ten vans seat only 120, so 10 students would be left behind. Round up to 11, as the ceiling gives. The answer 10 rounds down.",
+   "why": "\\(130 \\div 12\\) is about 10.83. Ten vans seat only 120, so 10 students would be left behind. Round up to 11, as the ceiling gives. The answer 10 rounds down.",
    "clue": "Would a part-full van still be needed?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Quick estimates",
+   "card": [
+    [
+     "Leading digit",
+     "round each number to its first digit, then work with those. For 6.8 × 31, think 7 × 30 = 210."
+    ],
+    [
+     "Interval",
+     "give a low and a high value that the answer must sit between. Round the numbers down for the low value and up for the high value."
+    ],
+    [
+     "Ceiling",
+     "round up to the next whole unit. Use it when a part unit still needs a whole one, such as buses or boxes."
+    ],
+    [
+     "Floor",
+     "round down to the whole unit. Use it when only complete units count, such as full packs you can fill."
+    ]
+   ],
+   "remember": "Round simply to estimate. Round up when you need enough, down when only whole ones count.",
+   "a": {
+    "q": "Which is the best leading-digit estimate of 48 × 21?",
+    "opts": [
+     "1000",
+     "800",
+     "1200",
+     "500"
+    ],
+    "why": "Round 48 to 50 and 21 to 20. Then 50 × 20 = 1000. The answer 800 would come from rounding 48 down to 40, which is too rough.",
+    "clue": "Round each number to one digit followed by zeros."
+   },
+   "b": {
+    "d": 2,
+    "q": "Mia needs to move 130 students in vans that each hold 12. How many vans does she need?",
+    "opts": [
+     "11",
+     "10",
+     "12",
+     "130"
+    ],
+    "why": "130 ÷ 12 is about 10.83. Ten vans seat only 120, so 10 students would be left behind. Round up to 11, as the ceiling gives. The answer 10 rounds down.",
+    "clue": "Would a part-full van still be needed?"
+   }
+  }
+ }
 }

@@ -12,7 +12,8 @@
   "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-01T13:35:05Z autoreject: rejected, to be written again (a other, b fact)",
   "2026-11-01T13:41:59Z write: done",
-  "2026-11-01T13:47:17Z check: passed, cleared"
+  "2026-11-01T13:47:17Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -256,34 +257,71 @@
  "final": {
   "title": "Dividing polynomials",
   "card": [
-   "Long division of polynomials works like long division of numbers. Any polynomial P(x) can be written as P(x) = D(x) × Q(x) + R(x), where D is the divisor, Q is the quotient and R is the remainder.",
-   "The remainder has a lower degree than the divisor. If the divisor is x − a, the remainder is a number.",
+   "Long division of polynomials works like long division of numbers. Any polynomial \\(P(x)\\) can be written as \\(P(x) = D(x) \\times Q(x) + R(x)\\), where \\(D\\) is the divisor, \\(Q\\) is the quotient and \\(R\\) is the remainder.",
+   "The remainder has a lower degree than the divisor. If the divisor is \\(x - a\\), the remainder is a number.",
    "Step 1: divide the first term of what is left by the first term of the divisor. Step 2: multiply the divisor by that result and subtract. Step 3: repeat until what is left has a lower degree than the divisor.",
-   "Example: divide x² + 5x + 7 by x + 2. x² ÷ x = x, and x(x + 2) = x² + 2x, leaving 3x + 7. Then 3x ÷ x = 3, and 3(x + 2) = 3x + 6, leaving 1. So x² + 5x + 7 = (x + 2)(x + 3) + 1."
+   "Example: divide \\(x^{2} + 5x + 7\\) by \\(x + 2\\). \\(x^{2} \\div x = x\\), and \\(x(x + 2) = x^{2} + 2x\\), leaving \\(3x + 7\\). Then \\(3x \\div x = 3\\), and \\(3(x + 2) = 3x + 6\\), leaving 1. So \\(x^{2} + 5x + 7 = (x + 2)(x + 3) + 1\\)."
   ],
-  "remember": "P(x) = divisor × quotient + remainder, and the remainder has a lower degree than the divisor.",
+  "remember": "\\(P(x) = \\text{divisor} \\times \\text{quotient} + \\text{remainder}\\), and the remainder has a lower degree than the divisor.",
   "a": {
-   "q": "x² + 7x + 4 is divided by x + 3. What are the quotient and the remainder?",
+   "q": "\\(x^{2} + 7x + 4\\) is divided by \\(x + 3\\). What are the quotient and the remainder?",
    "opts": [
-    "Quotient x + 4, remainder −8",
-    "Quotient x + 4, remainder 8",
-    "Quotient x + 4, remainder 12",
-    "Quotient x + 7, remainder 4"
+    "Quotient \\(x + 4\\), remainder \\(-8\\)",
+    "Quotient \\(x + 4\\), remainder 8",
+    "Quotient \\(x + 4\\), remainder 12",
+    "Quotient \\(x + 7\\), remainder 4"
    ],
-   "why": "x² ÷ x = x, and subtracting x² + 3x leaves 4x + 4. Then 4x ÷ x = 4, and subtracting 4x + 12 leaves 4 − 12 = −8. A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
+   "why": "\\(x^{2} \\div x = x\\), and subtracting \\(x^{2} + 3x\\) leaves \\(4x + 4\\). Then \\(4x \\div x = 4\\), and subtracting \\(4x + 12\\) leaves \\(4 - 12 = -8\\). A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
    "clue": "Subtract after every step, and stop only when the leftover has a lower degree than the divisor."
   },
   "b": {
    "d": 3,
-   "q": "x³ − 2x² + 3x − 5 is divided by x − 1. Which is the correct way to write it?",
+   "q": "\\(x^{3} - 2x^{2} + 3x - 5\\) is divided by \\(x - 1\\). Which is the correct way to write it?",
    "opts": [
-    "(x − 1)(x² − x + 2) − 3",
-    "(x − 1)(x² − x + 2) + 3",
-    "(x − 1)(x² − x + 2) − 5",
-    "(x − 1)(x² − x + 4) − 9"
+    "\\((x - 1)(x^{2} - x + 2) - 3\\)",
+    "\\((x - 1)(x^{2} - x + 2) + 3\\)",
+    "\\((x - 1)(x^{2} - x + 2) - 5\\)",
+    "\\((x - 1)(x^{2} - x + 4) - 9\\)"
    ],
-   "why": "Dividing the first terms in turn gives x², then −x, then 2, so the quotient is x² − x + 2. The last step leaves 2x − 5 − (2x − 2) = −3. Writing +3 comes from taking the constants the wrong way round, −2 − (−5).",
+   "why": "Dividing the first terms in turn gives \\(x^{2}\\), then \\(-x\\), then 2, so the quotient is \\(x^{2} - x + 2\\). The last step leaves \\(2x - 5 - (2x - 2) = -3\\). Writing \\(+3\\) comes from taking the constants the wrong way round, \\(-2 - (-5)\\).",
    "clue": "Subtract each line carefully, especially when a term is negative."
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Dividing polynomials",
+   "card": [
+    "Long division of polynomials works like long division of numbers. Any polynomial P(x) can be written as P(x) = D(x) × Q(x) + R(x), where D is the divisor, Q is the quotient and R is the remainder.",
+    "The remainder has a lower degree than the divisor. If the divisor is x − a, the remainder is a number.",
+    "Step 1: divide the first term of what is left by the first term of the divisor. Step 2: multiply the divisor by that result and subtract. Step 3: repeat until what is left has a lower degree than the divisor.",
+    "Example: divide x² + 5x + 7 by x + 2. x² ÷ x = x, and x(x + 2) = x² + 2x, leaving 3x + 7. Then 3x ÷ x = 3, and 3(x + 2) = 3x + 6, leaving 1. So x² + 5x + 7 = (x + 2)(x + 3) + 1."
+   ],
+   "remember": "P(x) = divisor × quotient + remainder, and the remainder has a lower degree than the divisor.",
+   "a": {
+    "q": "x² + 7x + 4 is divided by x + 3. What are the quotient and the remainder?",
+    "opts": [
+     "Quotient x + 4, remainder −8",
+     "Quotient x + 4, remainder 8",
+     "Quotient x + 4, remainder 12",
+     "Quotient x + 7, remainder 4"
+    ],
+    "why": "x² ÷ x = x, and subtracting x² + 3x leaves 4x + 4. Then 4x ÷ x = 4, and subtracting 4x + 12 leaves 4 − 12 = −8. A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
+    "clue": "Subtract after every step, and stop only when the leftover has a lower degree than the divisor."
+   },
+   "b": {
+    "d": 3,
+    "q": "x³ − 2x² + 3x − 5 is divided by x − 1. Which is the correct way to write it?",
+    "opts": [
+     "(x − 1)(x² − x + 2) − 3",
+     "(x − 1)(x² − x + 2) + 3",
+     "(x − 1)(x² − x + 2) − 5",
+     "(x − 1)(x² − x + 4) − 9"
+    ],
+    "why": "Dividing the first terms in turn gives x², then −x, then 2, so the quotient is x² − x + 2. The last step leaves 2x − 5 − (2x − 2) = −3. Writing +3 comes from taking the constants the wrong way round, −2 − (−5).",
+    "clue": "Subtract each line carefully, especially when a term is negative."
+   }
   }
  }
 }

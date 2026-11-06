@@ -15,7 +15,8 @@
   "2026-11-01T08:14:08Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -193,42 +194,88 @@
   "card": [
    [
     "AND gate",
-    "gives output 1 only when both inputs are 1. It matches the Boolean product A·B."
+    "gives output 1 only when both inputs are 1. It matches the Boolean product \\(A \\cdot B\\)."
    ],
    [
     "OR gate",
-    "gives output 1 when at least one input is 1. It matches the Boolean sum A + B."
+    "gives output 1 when at least one input is 1. It matches the Boolean sum \\(A + B\\)."
    ],
    [
     "NOT gate",
-    "has one input and flips it: 1 becomes 0 and 0 becomes 1. It matches the complement A'."
+    "has one input and flips it: 1 becomes 0 and 0 becomes 1. It matches the complement \\(A'\\)."
    ],
-   "Gates joined together make a circuit whose output follows a Boolean expression. Simplifying the expression gives fewer gates. For example, A·B + A·B' = A·(B + B') = A·1 = A, since B + B' is always 1. So that circuit is just a wire from A."
+   "Gates joined together make a circuit whose output follows a Boolean expression. Simplifying the expression gives fewer gates. For example, \\(A \\cdot B + A \\cdot B' = A \\cdot (B + B') = A \\cdot 1 = A\\), since \\(B + B'\\) is always 1. So that circuit is just a wire from \\(A\\)."
   ],
   "remember": "Each gate matches a Boolean operation, so a simpler expression means a simpler circuit.",
   "a": {
-   "q": "Inputs A and B go into an AND gate, and its output goes into a NOT gate. For which inputs is the final output 0?",
+   "q": "Inputs \\(A\\) and \\(B\\) go into an AND gate, and its output goes into a NOT gate. For which inputs is the final output 0?",
    "opts": [
-    "A = 1 and B = 1",
-    "A = 1 and B = 0",
-    "A = 0 and B = 1",
-    "A = 0 and B = 0"
+    "\\(A = 1\\) and \\(B = 1\\)",
+    "\\(A = 1\\) and \\(B = 0\\)",
+    "\\(A = 0\\) and \\(B = 1\\)",
+    "\\(A = 0\\) and \\(B = 0\\)"
    ],
-   "why": "The NOT gate gives 0 only when the AND gate gives 1, and the AND gate gives 1 only when both inputs are 1. Choosing A = 0 and B = 0 forgets the NOT gate: the AND output there is 0, which the NOT gate flips to 1.",
+   "why": "The NOT gate gives 0 only when the AND gate gives 1, and the AND gate gives 1 only when both inputs are 1. Choosing \\(A = 0\\) and \\(B = 0\\) forgets the NOT gate: the AND output there is 0, which the NOT gate flips to 1.",
    "clue": "What must the AND gate give for the NOT gate to output 0?"
   },
   "b": {
    "d": 3,
-   "q": "A circuit has the output A·B + A'·B. How can the circuit be simplified?",
+   "q": "A circuit has the output \\(A \\cdot B + A' \\cdot B\\). How can the circuit be simplified?",
    "opts": [
-    "Replace it with a wire carrying B",
-    "Replace it with a wire carrying A",
-    "Replace it with a single AND gate on A and B",
-    "Replace it with a single OR gate on A and B"
+    "Replace it with a wire carrying \\(B\\)",
+    "Replace it with a wire carrying \\(A\\)",
+    "Replace it with a single AND gate on \\(A\\) and \\(B\\)",
+    "Replace it with a single OR gate on \\(A\\) and \\(B\\)"
    ],
-   "why": "Factor out B: (A + A')·B. A + A' is always 1, so the output is 1·B = B, a wire from B with no gates. An AND gate on A and B is wrong: when A = 0 and B = 1 it gives 0, but the original gives 0·1 + 1·1 = 1.",
+   "why": "Factor out \\(B\\): \\((A + A') \\cdot B\\). \\(A + A'\\) is always 1, so the output is \\(1 \\cdot B = B\\), a wire from \\(B\\) with no gates. An AND gate on \\(A\\) and \\(B\\) is wrong: when \\(A = 0\\) and \\(B = 1\\) it gives 0, but the original gives \\(0 \\cdot 1 + 1 \\cdot 1 = 1\\).",
    "clue": "Find the input that appears in both terms and factor it out."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Logic gates and circuits",
+   "card": [
+    [
+     "AND gate",
+     "gives output 1 only when both inputs are 1. It matches the Boolean product A·B."
+    ],
+    [
+     "OR gate",
+     "gives output 1 when at least one input is 1. It matches the Boolean sum A + B."
+    ],
+    [
+     "NOT gate",
+     "has one input and flips it: 1 becomes 0 and 0 becomes 1. It matches the complement A'."
+    ],
+    "Gates joined together make a circuit whose output follows a Boolean expression. Simplifying the expression gives fewer gates. For example, A·B + A·B' = A·(B + B') = A·1 = A, since B + B' is always 1. So that circuit is just a wire from A."
+   ],
+   "remember": "Each gate matches a Boolean operation, so a simpler expression means a simpler circuit.",
+   "a": {
+    "q": "Inputs A and B go into an AND gate, and its output goes into a NOT gate. For which inputs is the final output 0?",
+    "opts": [
+     "A = 1 and B = 1",
+     "A = 1 and B = 0",
+     "A = 0 and B = 1",
+     "A = 0 and B = 0"
+    ],
+    "why": "The NOT gate gives 0 only when the AND gate gives 1, and the AND gate gives 1 only when both inputs are 1. Choosing A = 0 and B = 0 forgets the NOT gate: the AND output there is 0, which the NOT gate flips to 1.",
+    "clue": "What must the AND gate give for the NOT gate to output 0?"
+   },
+   "b": {
+    "d": 3,
+    "q": "A circuit has the output A·B + A'·B. How can the circuit be simplified?",
+    "opts": [
+     "Replace it with a wire carrying B",
+     "Replace it with a wire carrying A",
+     "Replace it with a single AND gate on A and B",
+     "Replace it with a single OR gate on A and B"
+    ],
+    "why": "Factor out B: (A + A')·B. A + A' is always 1, so the output is 1·B = B, a wire from B with no gates. An AND gate on A and B is wrong: when A = 0 and B = 1 it gives 0, but the original gives 0·1 + 1·1 = 1.",
+    "clue": "Find the input that appears in both terms and factor it out."
+   }
+  }
+ }
 }

@@ -30,7 +30,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -104,35 +105,72 @@
  "final": {
   "title": "Exponential and logarithmic graphs",
   "card": [
-   "y = e^x has domain all real x and range y > 0. It has a horizontal asymptote at y = 0 and a y-intercept at (0, 1).",
-   "y = log_e(x) is the inverse of y = e^x, so its graph is the reflection of y = e^x in the line y = x. It has domain x > 0, a vertical asymptote at x = 0 and an x-intercept at (1, 0).",
-   "A translation moves the asymptote with the graph. For y = e^x + c, the asymptote is y = c. For y = log_e(x − h), the asymptote is x = h.",
-   "Example: y = e^x + 3 has asymptote y = 3. Its y-intercept is e⁰ + 3 = 4, so the point is (0, 4)."
+   "\\(y = e^{x}\\) has domain all real \\(x\\) and range \\(y > 0\\). It has a horizontal asymptote at \\(y = 0\\) and a y-intercept at \\((0, 1)\\).",
+   "\\(y = \\log_{e} x\\) is the inverse of \\(y = e^{x}\\), so its graph is the reflection of \\(y = e^{x}\\) in the line \\(y = x\\). It has domain \\(x > 0\\), a vertical asymptote at \\(x = 0\\) and an x-intercept at \\((1, 0)\\).",
+   "A translation moves the asymptote with the graph. For \\(y = e^{x} + c\\), the asymptote is \\(y = c\\). For \\(y = \\log_{e}(x - h)\\), the asymptote is \\(x = h\\).",
+   "Example: \\(y = e^{x} + 3\\) has asymptote \\(y = 3\\). Its y-intercept is \\(e^{0} + 3 = 4\\), so the point is \\((0, 4)\\)."
   ],
-  "remember": "e^x and log_e(x) mirror each other in y = x. Translations move the asymptote too.",
+  "remember": "\\(e^{x}\\) and \\(\\log_{e} x\\) mirror each other in \\(y = x\\). Translations move the asymptote too.",
   "a": {
-   "q": "What is the vertical asymptote of y = log_e(x − 2)?",
+   "q": "What is the vertical asymptote of \\(y = \\log_{e}(x - 2)\\)?",
    "opts": [
-    "x = 2",
-    "x = −2",
-    "x = 0",
-    "y = 2"
+    "\\(x = 2\\)",
+    "\\(x = -2\\)",
+    "\\(x = 0\\)",
+    "\\(y = 2\\)"
    ],
-   "why": "Replacing x with x − 2 moves the graph 2 units right, so the asymptote x = 0 moves to x = 2. The option x = −2 comes from reading the sign the wrong way.",
-   "clue": "Which way does x − 2 shift the graph?"
+   "why": "Replacing \\(x\\) with \\(x - 2\\) moves the graph 2 units right, so the asymptote \\(x = 0\\) moves to \\(x = 2\\). The option \\(x = -2\\) comes from reading the sign the wrong way.",
+   "clue": "Which way does \\(x - 2\\) shift the graph?"
   },
   "b": {
    "d": 3,
-   "q": "What is the y-intercept of y = e^x − 5?",
+   "q": "What is the y-intercept of \\(y = e^{x} - 5\\)?",
    "opts": [
-    "(0, −4)",
-    "(0, −5)",
-    "(0, 1)",
-    "(0, −6)"
+    "\\((0, -4)\\)",
+    "\\((0, -5)\\)",
+    "\\((0, 1)\\)",
+    "\\((0, -6)\\)"
    ],
-   "why": "At x = 0, y = e⁰ − 5 = 1 − 5 = −4. The option (0, −5) is tempting but it is the asymptote level, not the intercept, because e⁰ is 1 and not 0.",
-   "clue": "Put x = 0 in and remember what e⁰ equals."
+   "why": "At \\(x = 0\\), \\(y = e^{0} - 5 = 1 - 5 = -4\\). The option \\((0, -5)\\) is tempting but it is the asymptote level, not the intercept, because \\(e^{0}\\) is 1 and not 0.",
+   "clue": "Put \\(x = 0\\) in and remember what \\(e^{0}\\) equals."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Exponential and logarithmic graphs",
+   "card": [
+    "y = e^x has domain all real x and range y > 0. It has a horizontal asymptote at y = 0 and a y-intercept at (0, 1).",
+    "y = log_e(x) is the inverse of y = e^x, so its graph is the reflection of y = e^x in the line y = x. It has domain x > 0, a vertical asymptote at x = 0 and an x-intercept at (1, 0).",
+    "A translation moves the asymptote with the graph. For y = e^x + c, the asymptote is y = c. For y = log_e(x − h), the asymptote is x = h.",
+    "Example: y = e^x + 3 has asymptote y = 3. Its y-intercept is e⁰ + 3 = 4, so the point is (0, 4)."
+   ],
+   "remember": "e^x and log_e(x) mirror each other in y = x. Translations move the asymptote too.",
+   "a": {
+    "q": "What is the vertical asymptote of y = log_e(x − 2)?",
+    "opts": [
+     "x = 2",
+     "x = −2",
+     "x = 0",
+     "y = 2"
+    ],
+    "why": "Replacing x with x − 2 moves the graph 2 units right, so the asymptote x = 0 moves to x = 2. The option x = −2 comes from reading the sign the wrong way.",
+    "clue": "Which way does x − 2 shift the graph?"
+   },
+   "b": {
+    "d": 3,
+    "q": "What is the y-intercept of y = e^x − 5?",
+    "opts": [
+     "(0, −4)",
+     "(0, −5)",
+     "(0, 1)",
+     "(0, −6)"
+    ],
+    "why": "At x = 0, y = e⁰ − 5 = 1 − 5 = −4. The option (0, −5) is tempting but it is the asymptote level, not the intercept, because e⁰ is 1 and not 0.",
+    "clue": "Put x = 0 in and remember what e⁰ equals."
+   }
+  }
+ }
 }

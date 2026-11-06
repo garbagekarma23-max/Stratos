@@ -13,7 +13,8 @@
   "2026-11-04T09:23:41Z new, match",
   "2026-11-04T09:36:56Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:10Z write: done",
-  "2026-11-04T09:58:31Z check: passed, cleared"
+  "2026-11-04T09:58:31Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -86,35 +87,72 @@
  "final": {
   "title": "Expanding binomial products",
   "card": [
-   "A binomial is an expression with two terms, such as x + 3. To expand a product of two binomials, multiply each term in the first bracket by each term in the second.",
-   "Worked example: (x + 3)(x + 5) = x × x + x × 5 + 3 × x + 3 × 5 = x² + 5x + 3x + 15.",
-   "Then collect like terms. 5x + 3x = 8x, so the answer is x² + 8x + 15.",
-   "Take care with signs. A negative term makes negative products, so (x − 2)(x + 4) = x² + 4x − 2x − 8 = x² + 2x − 8."
+   "A binomial is an expression with two terms, such as \\(x + 3\\). To expand a product of two binomials, multiply each term in the first bracket by each term in the second.",
+   "Worked example: \\((x + 3)(x + 5) = x \\times x + x \\times 5 + 3 \\times x + 3 \\times 5 = x^{2} + 5x + 3x + 15\\).",
+   "Then collect like terms. \\(5x + 3x = 8x\\), so the answer is \\(x^{2} + 8x + 15\\).",
+   "Take care with signs. A negative term makes negative products, so \\((x - 2)(x + 4) = x^{2} + 4x - 2x - 8 = x^{2} + 2x - 8\\)."
   ],
   "remember": "Every term in the first bracket meets every term in the second. Then collect like terms.",
   "a": {
-   "q": "What is (x + 2)(x + 7) when expanded?",
+   "q": "What is \\((x + 2)(x + 7)\\) when expanded?",
    "opts": [
-    "x² + 9x + 14",
-    "x² + 14x + 9",
-    "x² + 9x + 9",
-    "x² + 14"
+    "\\(x^{2} + 9x + 14\\)",
+    "\\(x^{2} + 14x + 9\\)",
+    "\\(x^{2} + 9x + 9\\)",
+    "\\(x^{2} + 14\\)"
    ],
-   "why": "x × x = x², x × 7 = 7x, 2 × x = 2x and 2 × 7 = 14. Then 7x + 2x = 9x. Giving x² + 14 skips the two middle products.",
-   "clue": "Make four products, then add the two x terms."
+   "why": "\\(x \\times x = x^{2}\\), \\(x \\times 7 = 7x\\), \\(2 \\times x = 2x\\) and \\(2 \\times 7 = 14\\). Then \\(7x + 2x = 9x\\). Giving \\(x^{2} + 14\\) skips the two middle products.",
+   "clue": "Make four products, then add the two \\(x\\) terms."
   },
   "b": {
    "d": 3,
-   "q": "What is (x − 3)(x + 6) when expanded?",
+   "q": "What is \\((x - 3)(x + 6)\\) when expanded?",
    "opts": [
-    "x² + 3x − 18",
-    "x² + 9x − 18",
-    "x² + 3x + 18",
-    "x² − 3x − 18"
+    "\\(x^{2} + 3x - 18\\)",
+    "\\(x^{2} + 9x - 18\\)",
+    "\\(x^{2} + 3x + 18\\)",
+    "\\(x^{2} - 3x - 18\\)"
    ],
-   "why": "The products are x², 6x, −3x and −18. Then 6x − 3x = 3x, giving x² + 3x − 18. Adding 6x and 3x instead ignores the negative sign on the 3.",
+   "why": "The products are \\(x^{2}\\), \\(6x\\), \\(-3x\\) and \\(-18\\). Then \\(6x - 3x = 3x\\), giving \\(x^{2} + 3x - 18\\). Adding \\(6x\\) and \\(3x\\) instead ignores the negative sign on the 3.",
    "clue": "The 3 in the first bracket is being taken away."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Expanding binomial products",
+   "card": [
+    "A binomial is an expression with two terms, such as x + 3. To expand a product of two binomials, multiply each term in the first bracket by each term in the second.",
+    "Worked example: (x + 3)(x + 5) = x × x + x × 5 + 3 × x + 3 × 5 = x² + 5x + 3x + 15.",
+    "Then collect like terms. 5x + 3x = 8x, so the answer is x² + 8x + 15.",
+    "Take care with signs. A negative term makes negative products, so (x − 2)(x + 4) = x² + 4x − 2x − 8 = x² + 2x − 8."
+   ],
+   "remember": "Every term in the first bracket meets every term in the second. Then collect like terms.",
+   "a": {
+    "q": "What is (x + 2)(x + 7) when expanded?",
+    "opts": [
+     "x² + 9x + 14",
+     "x² + 14x + 9",
+     "x² + 9x + 9",
+     "x² + 14"
+    ],
+    "why": "x × x = x², x × 7 = 7x, 2 × x = 2x and 2 × 7 = 14. Then 7x + 2x = 9x. Giving x² + 14 skips the two middle products.",
+    "clue": "Make four products, then add the two x terms."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is (x − 3)(x + 6) when expanded?",
+    "opts": [
+     "x² + 3x − 18",
+     "x² + 9x − 18",
+     "x² + 3x + 18",
+     "x² − 3x − 18"
+    ],
+    "why": "The products are x², 6x, −3x and −18. Then 6x − 3x = 3x, giving x² + 3x − 18. Adding 6x and 3x instead ignores the negative sign on the 3.",
+    "clue": "The 3 in the first bracket is being taken away."
+   }
+  }
+ }
 }

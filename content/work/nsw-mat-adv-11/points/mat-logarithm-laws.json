@@ -7,7 +7,8 @@
   "2026-10-26T13:29:55Z new, write",
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:05Z write: done",
-  "2026-10-27T01:08:32Z check: passed, cleared"
+  "2026-10-27T01:08:32Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -85,45 +86,94 @@
   "card": [
    [
     "Product law",
-    "log(xy) = log x + log y. Multiplying inside the log becomes adding the logs. All logs here share the same base."
+    "\\(\\log(xy) = \\log x + \\log y\\). Multiplying inside the log becomes adding the logs. All logs here share the same base."
    ],
    [
     "Quotient law",
-    "log(x/y) = log x − log y. Dividing inside the log becomes subtracting the logs."
+    "\\(\\log\\left(\\frac{x}{y}\\right) = \\log x - \\log y\\). Dividing inside the log becomes subtracting the logs."
    ],
    [
     "Power law",
-    "log(xⁿ) = n log x. The power comes down to the front as a multiplier. For example, log₂ 32 = log₂ (2⁵) = 5 log₂ 2 = 5."
+    "\\(\\log(x^{n}) = n \\log x\\). The power comes down to the front as a multiplier. For example, \\(\\log_{2} 32 = \\log_{2}(2^{5}) = 5 \\log_{2} 2 = 5\\)."
    ],
    [
     "Special values",
-    "log_a(1) = 0, because a⁰ = 1. log_a(a) = 1, because a¹ = a."
+    "\\(\\log_{a}(1) = 0\\), because \\(a^{0} = 1\\). \\(\\log_{a}(a) = 1\\), because \\(a^{1} = a\\)."
    ]
   ],
   "remember": "Logs turn multiplying into adding, dividing into subtracting, and powers into multipliers.",
   "a": {
-   "q": "What is log₃ 6 + log₃ 1.5 equal to?",
+   "q": "What is \\(\\log_{3} 6 + \\log_{3} 1.5\\) equal to?",
    "opts": [
     "2",
     "7.5",
-    "log₃ 4",
-    "log₃ 7.5"
+    "\\(\\log_{3} 4\\)",
+    "\\(\\log_{3} 7.5\\)"
    ],
-   "why": "Adding logs with the same base means multiplying inside: log₃ (6 × 1.5) = log₃ 9. Since 3² = 9, this equals 2. The option log₃ 7.5 comes from adding the numbers inside, which the product law does not do.",
+   "why": "Adding logs with the same base means multiplying inside: \\(\\log_{3}(6 \\times 1.5) = \\log_{3} 9\\). Since \\(3^{2} = 9\\), this equals 2. The option \\(\\log_{3} 7.5\\) comes from adding the numbers inside, which the product law does not do.",
    "clue": "Adding logs means multiplying what is inside them."
   },
   "b": {
    "d": 3,
-   "q": "What is the value of log₅ 50 − log₅ 2 + log₅ 5?",
+   "q": "What is the value of \\(\\log_{5} 50 - \\log_{5} 2 + \\log_{5} 5\\)?",
    "opts": [
     "3",
     "2",
     "4",
-    "log₅ 53"
+    "\\(\\log_{5} 53\\)"
    ],
-   "why": "log₅ 50 − log₅ 2 = log₅ 25 = 2, using the quotient law. Then log₅ 5 = 1, so the total is 3. The answer 2 comes from forgetting that log₅ 5 = 1.",
+   "why": "\\(\\log_{5} 50 - \\log_{5} 2 = \\log_{5} 25 = 2\\), using the quotient law. Then \\(\\log_{5} 5 = 1\\), so the total is 3. The answer 2 comes from forgetting that \\(\\log_{5} 5 = 1\\).",
    "clue": "Combine the first two terms into one log, then find the special value."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Logarithm laws",
+   "card": [
+    [
+     "Product law",
+     "log(xy) = log x + log y. Multiplying inside the log becomes adding the logs. All logs here share the same base."
+    ],
+    [
+     "Quotient law",
+     "log(x/y) = log x − log y. Dividing inside the log becomes subtracting the logs."
+    ],
+    [
+     "Power law",
+     "log(xⁿ) = n log x. The power comes down to the front as a multiplier. For example, log₂ 32 = log₂ (2⁵) = 5 log₂ 2 = 5."
+    ],
+    [
+     "Special values",
+     "log_a(1) = 0, because a⁰ = 1. log_a(a) = 1, because a¹ = a."
+    ]
+   ],
+   "remember": "Logs turn multiplying into adding, dividing into subtracting, and powers into multipliers.",
+   "a": {
+    "q": "What is log₃ 6 + log₃ 1.5 equal to?",
+    "opts": [
+     "2",
+     "7.5",
+     "log₃ 4",
+     "log₃ 7.5"
+    ],
+    "why": "Adding logs with the same base means multiplying inside: log₃ (6 × 1.5) = log₃ 9. Since 3² = 9, this equals 2. The option log₃ 7.5 comes from adding the numbers inside, which the product law does not do.",
+    "clue": "Adding logs means multiplying what is inside them."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is the value of log₅ 50 − log₅ 2 + log₅ 5?",
+    "opts": [
+     "3",
+     "2",
+     "4",
+     "log₅ 53"
+    ],
+    "why": "log₅ 50 − log₅ 2 = log₅ 25 = 2, using the quotient law. Then log₅ 5 = 1, so the total is 3. The answer 2 comes from forgetting that log₅ 5 = 1.",
+    "clue": "Combine the first two terms into one log, then find the special value."
+   }
+  }
+ }
 }

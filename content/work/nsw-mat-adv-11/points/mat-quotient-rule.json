@@ -9,7 +9,8 @@
   "2026-10-27T01:00:05Z write: done",
   "2026-10-27T01:08:32Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -158,35 +159,72 @@
  "final": {
   "title": "The quotient rule",
   "card": [
-   "Use the quotient rule to differentiate a fraction y = u/v, where u and v are both functions of x and v is not zero.",
-   "The rule is dy/dx = (u'v − uv') ÷ v². Here u' and v' are the derivatives of u and v.",
-   "The order on top matters. Start with u'v (the derivative of the top times the bottom), then subtract uv'. Swapping them flips the sign of the answer.",
-   "Example: y = x²/(x + 1). Take u = x² and v = x + 1, so u' = 2x and v' = 1. Then dy/dx = (2x(x + 1) − x² × 1) ÷ (x + 1)² = (x² + 2x) ÷ (x + 1)²."
+   "Use the quotient rule to differentiate a fraction \\(y = \\frac{u}{v}\\), where \\(u\\) and \\(v\\) are both functions of \\(x\\) and \\(v\\) is not zero.",
+   "The rule is \\(\\frac{dy}{dx} = \\frac{u'v - uv'}{v^{2}}\\). Here \\(u'\\) and \\(v'\\) are the derivatives of \\(u\\) and \\(v\\).",
+   "The order on top matters. Start with \\(u'v\\) (the derivative of the top times the bottom), then subtract \\(uv'\\). Swapping them flips the sign of the answer.",
+   "Example: \\(y = \\frac{x^{2}}{x + 1}\\). Take \\(u = x^{2}\\) and \\(v = x + 1\\), so \\(u' = 2x\\) and \\(v' = 1\\). Then \\(\\frac{dy}{dx} = \\frac{2x(x + 1) - x^{2} \\times 1}{(x + 1)^{2}} = \\frac{x^{2} + 2x}{(x + 1)^{2}}\\)."
   ],
-  "remember": "Top: u'v − uv'. Bottom: v². The derivative of the top comes first.",
+  "remember": "Top: \\(u'v - uv'\\). Bottom: \\(v^{2}\\). The derivative of the top comes first.",
   "a": {
-   "q": "Which expression is the derivative of u/v by the quotient rule?",
+   "q": "Which expression is the derivative of \\(\\frac{u}{v}\\) by the quotient rule?",
    "opts": [
-    "(u'v − uv') ÷ v²",
-    "(uv' − u'v) ÷ v²",
-    "(u'v + uv') ÷ v²",
-    "(u'v − uv') ÷ v"
+    "\\(\\frac{u'v - uv'}{v^{2}}\\)",
+    "\\(\\frac{uv' - u'v}{v^{2}}\\)",
+    "\\(\\frac{u'v + uv'}{v^{2}}\\)",
+    "\\(\\frac{u'v - uv'}{v}\\)"
    ],
-   "why": "The top is u'v − uv', with the derivative of the top function first, and the bottom is v squared. The expression (uv' − u'v) ÷ v² has the terms on top in the wrong order, so it gives the answer with the wrong sign.",
-   "clue": "Start the top line with u', the derivative of the top function."
+   "why": "The top is \\(u'v - uv'\\), with the derivative of the top function first, and the bottom is \\(v\\) squared. The expression \\(\\frac{uv' - u'v}{v^{2}}\\) has the terms on top in the wrong order, so it gives the answer with the wrong sign.",
+   "clue": "Start the top line with \\(u'\\), the derivative of the top function."
   },
   "b": {
    "d": 2,
-   "q": "Using the quotient rule, what is the derivative of y = x/(x + 2)?",
+   "q": "Using the quotient rule, what is the derivative of \\(y = \\frac{x}{x + 2}\\)?",
    "opts": [
-    "2 ÷ (x + 2)²",
-    "−2 ÷ (x + 2)²",
-    "(2x + 2) ÷ (x + 2)²",
-    "1 ÷ (x + 2)²"
+    "\\(\\frac{2}{(x + 2)^{2}}\\)",
+    "\\(-\\frac{2}{(x + 2)^{2}}\\)",
+    "\\(\\frac{2x + 2}{(x + 2)^{2}}\\)",
+    "\\(\\frac{1}{(x + 2)^{2}}\\)"
    ],
-   "why": "Let u = x and v = x + 2, so u' = 1 and v' = 1. The top is 1 × (x + 2) − x × 1 = 2, so dy/dx = 2 ÷ (x + 2)². Putting the terms in the wrong order would give −2, which is the most tempting mistake.",
-   "clue": "Find u' and v' first, then work out u'v − uv'."
+   "why": "Let \\(u = x\\) and \\(v = x + 2\\), so \\(u' = 1\\) and \\(v' = 1\\). The top is \\(1 \\times (x + 2) - x \\times 1 = 2\\), so \\(\\frac{dy}{dx} = \\frac{2}{(x + 2)^{2}}\\). Putting the terms in the wrong order would give \\(-2\\), which is the most tempting mistake.",
+   "clue": "Find \\(u'\\) and \\(v'\\) first, then work out \\(u'v - uv'\\)."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The quotient rule",
+   "card": [
+    "Use the quotient rule to differentiate a fraction y = u/v, where u and v are both functions of x and v is not zero.",
+    "The rule is dy/dx = (u'v − uv') ÷ v². Here u' and v' are the derivatives of u and v.",
+    "The order on top matters. Start with u'v (the derivative of the top times the bottom), then subtract uv'. Swapping them flips the sign of the answer.",
+    "Example: y = x²/(x + 1). Take u = x² and v = x + 1, so u' = 2x and v' = 1. Then dy/dx = (2x(x + 1) − x² × 1) ÷ (x + 1)² = (x² + 2x) ÷ (x + 1)²."
+   ],
+   "remember": "Top: u'v − uv'. Bottom: v². The derivative of the top comes first.",
+   "a": {
+    "q": "Which expression is the derivative of u/v by the quotient rule?",
+    "opts": [
+     "(u'v − uv') ÷ v²",
+     "(uv' − u'v) ÷ v²",
+     "(u'v + uv') ÷ v²",
+     "(u'v − uv') ÷ v"
+    ],
+    "why": "The top is u'v − uv', with the derivative of the top function first, and the bottom is v squared. The expression (uv' − u'v) ÷ v² has the terms on top in the wrong order, so it gives the answer with the wrong sign.",
+    "clue": "Start the top line with u', the derivative of the top function."
+   },
+   "b": {
+    "d": 2,
+    "q": "Using the quotient rule, what is the derivative of y = x/(x + 2)?",
+    "opts": [
+     "2 ÷ (x + 2)²",
+     "−2 ÷ (x + 2)²",
+     "(2x + 2) ÷ (x + 2)²",
+     "1 ÷ (x + 2)²"
+    ],
+    "why": "Let u = x and v = x + 2, so u' = 1 and v' = 1. The top is 1 × (x + 2) − x × 1 = 2, so dy/dx = 2 ÷ (x + 2)². Putting the terms in the wrong order would give −2, which is the most tempting mistake.",
+    "clue": "Find u' and v' first, then work out u'v − uv'."
+   }
+  }
+ }
 }

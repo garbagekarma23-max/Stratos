@@ -33,7 +33,8 @@
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:35:42Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
-  "2026-11-02T06:23:28Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:23:28Z review: approved with the fix (a spot check)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -170,35 +171,72 @@
  "final": {
   "title": "Trigonometric equations",
   "card": [
-   "To solve sin(x) = k, cos(x) = k or tan(x) = k, first find the reference angle α. It is the angle from 0 to π/2 whose sin, cos or tan equals |k|, so ignore the sign of k at this step.",
-   "Use the signs in the quadrants to place the solutions. Sin is positive in quadrants 1 and 2, cos in 1 and 4, tan in 1 and 3. For a negative k, use the two quadrants where the function is negative.",
-   "Quadrant 1 gives α, quadrant 2 gives π − α, quadrant 3 gives π + α and quadrant 4 gives 2π − α. Add the period for more solutions: 2π for sin and cos, π for tan. Keep every solution in the domain.",
-   "For sin(2x) = 1/2 on 0 ≤ x ≤ 2π, solve for 2x on 0 ≤ 2x ≤ 4π. Here α = π/6, so 2x = π/6, 5π/6, 13π/6, 17π/6. Divide by 2: x = π/12, 5π/12, 13π/12, 17π/12."
+   "To solve \\(\\sin(x) = k\\), \\(\\cos(x) = k\\) or \\(\\tan(x) = k\\), first find the reference angle \\(\\alpha\\). It is the angle from 0 to \\(\\frac{\\pi}{2}\\) whose sin, cos or tan equals \\(|k|\\), so ignore the sign of \\(k\\) at this step.",
+   "Use the signs in the quadrants to place the solutions. Sin is positive in quadrants 1 and 2, cos in 1 and 4, tan in 1 and 3. For a negative \\(k\\), use the two quadrants where the function is negative.",
+   "Quadrant 1 gives \\(\\alpha\\), quadrant 2 gives \\(\\pi - \\alpha\\), quadrant 3 gives \\(\\pi + \\alpha\\) and quadrant 4 gives \\(2\\pi - \\alpha\\). Add the period for more solutions: \\(2\\pi\\) for sin and cos, \\(\\pi\\) for tan. Keep every solution in the domain.",
+   "For \\(\\sin(2x) = \\frac{1}{2}\\) on \\(0 \\le x \\le 2\\pi\\), solve for \\(2x\\) on \\(0 \\le 2x \\le 4\\pi\\). Here \\(\\alpha = \\frac{\\pi}{6}\\), so \\(2x = \\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{13\\pi}{6}, \\frac{17\\pi}{6}\\). Divide by 2: \\(x = \\frac{\\pi}{12}, \\frac{5\\pi}{12}, \\frac{13\\pi}{12}, \\frac{17\\pi}{12}\\)."
   ],
-  "remember": "Reference angle, then quadrants, then add the period, and change the domain first if x is transformed.",
+  "remember": "Reference angle, then quadrants, then add the period, and change the domain first if \\(x\\) is transformed.",
   "a": {
-   "q": "Solve 2cos(x) = 1 for 0 ≤ x ≤ 2π. What are the solutions?",
+   "q": "Solve \\(2\\cos(x) = 1\\) for \\(0 \\le x \\le 2\\pi\\). What are the solutions?",
    "opts": [
-    "π/3 and 5π/3",
-    "π/3 and 2π/3",
-    "π/6 and 11π/6",
-    "π/3 and 4π/3"
+    "\\(\\frac{\\pi}{3}\\) and \\(\\frac{5\\pi}{3}\\)",
+    "\\(\\frac{\\pi}{3}\\) and \\(\\frac{2\\pi}{3}\\)",
+    "\\(\\frac{\\pi}{6}\\) and \\(\\frac{11\\pi}{6}\\)",
+    "\\(\\frac{\\pi}{3}\\) and \\(\\frac{4\\pi}{3}\\)"
    ],
-   "why": "cos(x) = 1/2, so the reference angle is π/3. Cos is positive in quadrants 1 and 4, giving π/3 and 2π − π/3 = 5π/3. Using π/3 and 2π/3 is tempting, but that is the pair for sin, where quadrants 1 and 2 are positive.",
+   "why": "\\(\\cos(x) = \\frac{1}{2}\\), so the reference angle is \\(\\frac{\\pi}{3}\\). Cos is positive in quadrants 1 and 4, giving \\(\\frac{\\pi}{3}\\) and \\(2\\pi - \\frac{\\pi}{3} = \\frac{5\\pi}{3}\\). Using \\(\\frac{\\pi}{3}\\) and \\(\\frac{2\\pi}{3}\\) is tempting, but that is the pair for sin, where quadrants 1 and 2 are positive.",
    "clue": "Cos is positive in which two quadrants?"
   },
   "b": {
    "d": 3,
-   "q": "How many solutions does sin(2x) = 1/2 have for 0 ≤ x ≤ π?",
+   "q": "How many solutions does \\(\\sin(2x) = \\frac{1}{2}\\) have for \\(0 \\le x \\le \\pi\\)?",
    "opts": [
     "2",
     "1",
     "4",
     "3"
    ],
-   "why": "Let u = 2x, so 0 ≤ u ≤ 2π. Then sin(u) = 1/2 gives u = π/6 and 5π/6, so x = π/12 and 5π/12. Giving 4 solutions comes from using the domain 0 to 4π for 2x, which is too wide here.",
-   "clue": "Change the domain for 2x before you solve."
+   "why": "Let \\(u = 2x\\), so \\(0 \\le u \\le 2\\pi\\). Then \\(\\sin(u) = \\frac{1}{2}\\) gives \\(u = \\frac{\\pi}{6}\\) and \\(\\frac{5\\pi}{6}\\), so \\(x = \\frac{\\pi}{12}\\) and \\(\\frac{5\\pi}{12}\\). Giving 4 solutions comes from using the domain 0 to \\(4\\pi\\) for \\(2x\\), which is too wide here.",
+   "clue": "Change the domain for \\(2x\\) before you solve."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Trigonometric equations",
+   "card": [
+    "To solve sin(x) = k, cos(x) = k or tan(x) = k, first find the reference angle α. It is the angle from 0 to π/2 whose sin, cos or tan equals |k|, so ignore the sign of k at this step.",
+    "Use the signs in the quadrants to place the solutions. Sin is positive in quadrants 1 and 2, cos in 1 and 4, tan in 1 and 3. For a negative k, use the two quadrants where the function is negative.",
+    "Quadrant 1 gives α, quadrant 2 gives π − α, quadrant 3 gives π + α and quadrant 4 gives 2π − α. Add the period for more solutions: 2π for sin and cos, π for tan. Keep every solution in the domain.",
+    "For sin(2x) = 1/2 on 0 ≤ x ≤ 2π, solve for 2x on 0 ≤ 2x ≤ 4π. Here α = π/6, so 2x = π/6, 5π/6, 13π/6, 17π/6. Divide by 2: x = π/12, 5π/12, 13π/12, 17π/12."
+   ],
+   "remember": "Reference angle, then quadrants, then add the period, and change the domain first if x is transformed.",
+   "a": {
+    "q": "Solve 2cos(x) = 1 for 0 ≤ x ≤ 2π. What are the solutions?",
+    "opts": [
+     "π/3 and 5π/3",
+     "π/3 and 2π/3",
+     "π/6 and 11π/6",
+     "π/3 and 4π/3"
+    ],
+    "why": "cos(x) = 1/2, so the reference angle is π/3. Cos is positive in quadrants 1 and 4, giving π/3 and 2π − π/3 = 5π/3. Using π/3 and 2π/3 is tempting, but that is the pair for sin, where quadrants 1 and 2 are positive.",
+    "clue": "Cos is positive in which two quadrants?"
+   },
+   "b": {
+    "d": 3,
+    "q": "How many solutions does sin(2x) = 1/2 have for 0 ≤ x ≤ π?",
+    "opts": [
+     "2",
+     "1",
+     "4",
+     "3"
+    ],
+    "why": "Let u = 2x, so 0 ≤ u ≤ 2π. Then sin(u) = 1/2 gives u = π/6 and 5π/6, so x = π/12 and 5π/12. Giving 4 solutions comes from using the domain 0 to 4π for 2x, which is too wide here.",
+    "clue": "Change the domain for 2x before you solve."
+   }
+  }
+ }
 }

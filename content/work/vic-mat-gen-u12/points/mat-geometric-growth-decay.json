@@ -31,7 +31,8 @@
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -166,10 +167,10 @@
  "final": {
   "title": "Geometric growth and decay",
   "card": [
-   "In geometric growth or decay, each term is the one before multiplied by the same factor R. The recurrence relation is u(n+1) = R × u(n).",
+   "In geometric growth or decay, each term is the one before multiplied by the same factor R. The recurrence relation is \\(u(n+1) = R \\times u(n)\\).",
    "If R is above 1, the amount grows. If R is between 0 and 1, the amount decays.",
-   "To find R, write the percentage rate as a decimal. Add it to 1 for growth, or subtract it from 1 for decay: a 5% rise gives R = 1 + 0.05 = 1.05, and a 5% fall gives R = 1 − 0.05 = 0.95.",
-   "Compound interest is geometric growth. Reducing balance depreciation is geometric decay. Example: $1000 at 5% compound interest becomes 1000 × 1.05 = $1050, then 1050 × 1.05 = $1102.50."
+   "To find R, write the percentage rate as a decimal. Add it to 1 for growth, or subtract it from 1 for decay: a 5% rise gives \\(R = 1 + 0.05 = 1.05\\), and a 5% fall gives \\(R = 1 - 0.05 = 0.95\\).",
+   "Compound interest is geometric growth. Reducing balance depreciation is geometric decay. Example: $1000 at 5% compound interest becomes \\(1000 \\times 1.05 = \\$1050\\), then \\(1050 \\times 1.05 = \\$1102.50\\)."
   ],
   "remember": "Multiply by the same factor R each step: above 1 grows, between 0 and 1 decays.",
   "a": {
@@ -180,7 +181,7 @@
     "0.15",
     "15"
    ],
-   "why": "A 15% fall means R = 1 − 0.15 = 0.85, so 85% of the value is left each year. The answer 1.15 adds the rate to 1, which would be a 15% rise.",
+   "why": "A 15% fall means \\(R = 1 - 0.15 = 0.85\\), so 85% of the value is left each year. The answer 1.15 adds the rate to 1, which would be a 15% rise.",
    "clue": "What percentage of the value is left after the fall?"
   },
   "b": {
@@ -192,9 +193,46 @@
     "$2100",
     "$2210"
    ],
-   "why": "Year 1: 2000 × 1.05 = $2100. Year 2: 2100 × 1.05 = $2205. The answer $2200 is simple interest, which adds the same $100 each year instead of working out interest on the new balance.",
+   "why": "Year 1: \\(2000 \\times 1.05 = \\$2100\\). Year 2: \\(2100 \\times 1.05 = \\$2205\\). The answer $2200 is simple interest, which adds the same $100 each year instead of working out interest on the new balance.",
    "clue": "Year 2 interest is worked out on the year 1 balance."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Geometric growth and decay",
+   "card": [
+    "In geometric growth or decay, each term is the one before multiplied by the same factor R. The recurrence relation is u(n+1) = R × u(n).",
+    "If R is above 1, the amount grows. If R is between 0 and 1, the amount decays.",
+    "To find R, write the percentage rate as a decimal. Add it to 1 for growth, or subtract it from 1 for decay: a 5% rise gives R = 1 + 0.05 = 1.05, and a 5% fall gives R = 1 − 0.05 = 0.95.",
+    "Compound interest is geometric growth. Reducing balance depreciation is geometric decay. Example: $1000 at 5% compound interest becomes 1000 × 1.05 = $1050, then 1050 × 1.05 = $1102.50."
+   ],
+   "remember": "Multiply by the same factor R each step: above 1 grows, between 0 and 1 decays.",
+   "a": {
+    "q": "A car loses 15% of its value each year by reducing balance depreciation. What factor R is used?",
+    "opts": [
+     "0.85",
+     "1.15",
+     "0.15",
+     "15"
+    ],
+    "why": "A 15% fall means R = 1 − 0.15 = 0.85, so 85% of the value is left each year. The answer 1.15 adds the rate to 1, which would be a 15% rise.",
+    "clue": "What percentage of the value is left after the fall?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Leo puts $2000 in an account paying 5% compound interest per year. What is the balance after 2 years?",
+    "opts": [
+     "$2205",
+     "$2200",
+     "$2100",
+     "$2210"
+    ],
+    "why": "Year 1: 2000 × 1.05 = $2100. Year 2: 2100 × 1.05 = $2205. The answer $2200 is simple interest, which adds the same $100 each year instead of working out interest on the new balance.",
+    "clue": "Year 2 interest is worked out on the year 1 balance."
+   }
+  }
+ }
 }

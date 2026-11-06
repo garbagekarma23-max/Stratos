@@ -9,7 +9,8 @@
   "2026-11-01T14:46:40Z write: done",
   "2026-11-01T14:56:03Z check: flagged",
   "2026-11-01T15:05:28Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 1,
@@ -183,7 +184,7 @@
     "An association, as 57% of all swimmers are in Club A",
     "An association, as Club A has 33% more swimmers than B"
    ],
-   "why": "Club A: 40 ÷ 80 = 50%. Club B: 30 ÷ 60 = 50%. The percentages within each club are the same, so there is no association. Treating the counts 40 and 30 as percentages is tempting, but the clubs differ in size, so counts mislead.",
+   "why": "Club A: \\(40 \\div 80 = 50\\%\\). Club B: \\(30 \\div 60 = 50\\%\\). The percentages within each club are the same, so there is no association. Treating the counts 40 and 30 as percentages is tempting, but the clubs differ in size, so counts mislead.",
    "clue": "Turn each count into a percentage of its own club."
   },
   "b": {
@@ -192,12 +193,49 @@
    "opts": [
     "Bike ownership is associated with year level, 60% to 30%",
     "Bike ownership is associated with year level, 54% to 36%",
-    "Bike ownership is not associated with year level, as 90 > 36",
-    "Bike ownership is not associated with year level, as 54 > 36"
+    "Bike ownership is not associated with year level, as \\(90 > 36\\)",
+    "Bike ownership is not associated with year level, as \\(54 > 36\\)"
    ],
-   "why": "Year 9: 54 ÷ 90 = 60%. Year 10: 36 ÷ 120 = 30%. The percentages differ clearly, so there is an association. The numbers 54 and 36 are counts, not percentages, so quoting them as percentages is a mistake.",
+   "why": "Year 9: \\(54 \\div 90 = 60\\%\\). Year 10: \\(36 \\div 120 = 30\\%\\). The percentages differ clearly, so there is an association. The numbers 54 and 36 are counts, not percentages, so quoting them as percentages is a mistake.",
    "clue": "Divide each count by its own year total, not by the overall total."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Associations between categorical variables",
+   "card": [
+    "A two-way table shows counts for two categorical variables at once. One variable runs down the rows and the other across the columns.",
+    "Raw counts can mislead when the groups differ in size. So turn the counts into percentages of each column total, or each row total, as set by the explanatory variable.",
+    "Percentages are taken within each group of the explanatory variable. Then compare them across the groups. Example: 30 of 60 Year 11 students walk to school (50%), and 20 of 80 Year 12 students do (25%).",
+    "If the percentages differ clearly between the groups, there is an association. If they are about the same, there is no association. In the example, walking is associated with year level."
+   ],
+   "remember": "Find percentages within each explanatory group, then compare them. Clearly different percentages mean an association.",
+   "a": {
+    "q": "In a survey, 40 of 80 members of Club A and 30 of 60 members of Club B prefer swimming. What does this show about club and preference?",
+    "opts": [
+     "No association, as 50% of each club prefer swimming",
+     "An association, as 40% of Club A and 30% of Club B do",
+     "An association, as 57% of all swimmers are in Club A",
+     "An association, as Club A has 33% more swimmers than B"
+    ],
+    "why": "Club A: 40 ÷ 80 = 50%. Club B: 30 ÷ 60 = 50%. The percentages within each club are the same, so there is no association. Treating the counts 40 and 30 as percentages is tempting, but the clubs differ in size, so counts mislead.",
+    "clue": "Turn each count into a percentage of its own club."
+   },
+   "b": {
+    "d": 3,
+    "q": "In a school, 54 of 90 Year 9 students and 36 of 120 Year 10 students own a bike. Which statement is correct?",
+    "opts": [
+     "Bike ownership is associated with year level, 60% to 30%",
+     "Bike ownership is associated with year level, 54% to 36%",
+     "Bike ownership is not associated with year level, as 90 > 36",
+     "Bike ownership is not associated with year level, as 54 > 36"
+    ],
+    "why": "Year 9: 54 ÷ 90 = 60%. Year 10: 36 ÷ 120 = 30%. The percentages differ clearly, so there is an association. The numbers 54 and 36 are counts, not percentages, so quoting them as percentages is a mistake.",
+    "clue": "Divide each count by its own year total, not by the overall total."
+   }
+  }
+ }
 }

@@ -30,7 +30,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -104,35 +105,72 @@
  "final": {
   "title": "Sums and products of functions",
   "card": [
-   "(f + g)(x) = f(x) + g(x) and (f × g)(x) = f(x) × g(x). Each is built by working with the two outputs at the same x value.",
-   "The new function exists only where both f and g exist. Its domain is the overlap of the two domains.",
-   "To sketch f + g, add the heights of the two graphs at each x. To sketch f × g, multiply the heights. Where one height is 0, the product is 0.",
-   "Example: f(x) = x² with domain R, and g(x) = √x with domain [0, ∞). Then (f + g)(4) = 16 + 2 = 18, and the domain of f + g is [0, ∞)."
+   "\\((f + g)(x) = f(x) + g(x)\\) and \\((f \\times g)(x) = f(x) \\times g(x)\\). Each is built by working with the two outputs at the same \\(x\\) value.",
+   "The new function exists only where both \\(f\\) and \\(g\\) exist. Its domain is the overlap of the two domains.",
+   "To sketch \\(f + g\\), add the heights of the two graphs at each \\(x\\). To sketch \\(f \\times g\\), multiply the heights. Where one height is 0, the product is 0.",
+   "Example: \\(f(x) = x^{2}\\) with domain \\(\\mathbb{R}\\), and \\(g(x) = \\sqrt{x}\\) with domain \\([0, \\infty)\\). Then \\((f + g)(4) = 16 + 2 = 18\\), and the domain of \\(f + g\\) is \\([0, \\infty)\\)."
   ],
-  "remember": "Combine the outputs at the same x, and only use x values that both functions allow.",
+  "remember": "Combine the outputs at the same \\(x\\), and only use \\(x\\) values that both functions allow.",
   "a": {
-   "q": "f(x) = 2x + 1 and g(x) = x². What is (f × g)(3)?",
+   "q": "\\(f(x) = 2x + 1\\) and \\(g(x) = x^{2}\\). What is \\((f \\times g)(3)\\)?",
    "opts": [
     "63",
     "30",
     "16",
     "28"
    ],
-   "why": "f(3) = 7 and g(3) = 9, so the product is 7 × 9 = 63. The answer 16 comes from adding the outputs, which gives f + g, not f × g.",
-   "clue": "Find each output at x = 3, then multiply them."
+   "why": "\\(f(3) = 7\\) and \\(g(3) = 9\\), so the product is \\(7 \\times 9 = 63\\). The answer 16 comes from adding the outputs, which gives \\(f + g\\), not \\(f \\times g\\).",
+   "clue": "Find each output at \\(x = 3\\), then multiply them."
   },
   "b": {
    "d": 3,
-   "q": "f(x) = √(x − 2) and g(x) = 1/(x − 5). What is the domain of f + g?",
+   "q": "\\(f(x) = \\sqrt{x - 2}\\) and \\(g(x) = \\frac{1}{x - 5}\\). What is the domain of \\(f + g\\)?",
    "opts": [
-    "[2, ∞) except x = 5",
-    "[2, ∞)",
-    "R except x = 5",
-    "(2, ∞) except x = 5"
+    "\\([2, \\infty)\\) except \\(x = 5\\)",
+    "\\([2, \\infty)\\)",
+    "\\(\\mathbb{R}\\) except \\(x = 5\\)",
+    "\\((2, \\infty)\\) except \\(x = 5\\)"
    ],
-   "why": "f needs x ≥ 2, and g needs x ≠ 5. The shared domain keeps x ≥ 2 and removes 5. R except x = 5 ignores the limit from f.",
+   "why": "\\(f\\) needs \\(x \\ge 2\\), and \\(g\\) needs \\(x \\ne 5\\). The shared domain keeps \\(x \\ge 2\\) and removes 5. \\(\\mathbb{R}\\) except \\(x = 5\\) ignores the limit from \\(f\\).",
    "clue": "Check what each function rules out, then keep only what both allow."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Sums and products of functions",
+   "card": [
+    "(f + g)(x) = f(x) + g(x) and (f × g)(x) = f(x) × g(x). Each is built by working with the two outputs at the same x value.",
+    "The new function exists only where both f and g exist. Its domain is the overlap of the two domains.",
+    "To sketch f + g, add the heights of the two graphs at each x. To sketch f × g, multiply the heights. Where one height is 0, the product is 0.",
+    "Example: f(x) = x² with domain R, and g(x) = √x with domain [0, ∞). Then (f + g)(4) = 16 + 2 = 18, and the domain of f + g is [0, ∞)."
+   ],
+   "remember": "Combine the outputs at the same x, and only use x values that both functions allow.",
+   "a": {
+    "q": "f(x) = 2x + 1 and g(x) = x². What is (f × g)(3)?",
+    "opts": [
+     "63",
+     "30",
+     "16",
+     "28"
+    ],
+    "why": "f(3) = 7 and g(3) = 9, so the product is 7 × 9 = 63. The answer 16 comes from adding the outputs, which gives f + g, not f × g.",
+    "clue": "Find each output at x = 3, then multiply them."
+   },
+   "b": {
+    "d": 3,
+    "q": "f(x) = √(x − 2) and g(x) = 1/(x − 5). What is the domain of f + g?",
+    "opts": [
+     "[2, ∞) except x = 5",
+     "[2, ∞)",
+     "R except x = 5",
+     "(2, ∞) except x = 5"
+    ],
+    "why": "f needs x ≥ 2, and g needs x ≠ 5. The shared domain keeps x ≥ 2 and removes 5. R except x = 5 ignores the limit from f.",
+    "clue": "Check what each function rules out, then keep only what both allow."
+   }
+  }
+ }
 }

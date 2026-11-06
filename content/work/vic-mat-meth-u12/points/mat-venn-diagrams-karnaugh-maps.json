@@ -15,7 +15,8 @@
   "2026-11-01T08:14:07Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b other)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b other)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -171,41 +172,87 @@
    "A Venn diagram uses a rectangle for all outcomes and overlapping circles for events. A probability table, or Karnaugh map, does the same job with rows and columns, and in both the probabilities of all regions add to 1.",
    [
     "Intersection",
-    "A ∩ B means both A and B happen. It is the overlap of the two circles, or the cell where row A meets column B."
+    "\\(A \\cap B\\) means both \\(A\\) and \\(B\\) happen. It is the overlap of the two circles, or the cell where row \\(A\\) meets column \\(B\\)."
    ],
    [
     "Union",
-    "A ∪ B means A or B or both happen. It is everything inside either circle."
+    "\\(A \\cup B\\) means \\(A\\) or \\(B\\) or both happen. It is everything inside either circle."
    ],
    [
     "Complement",
-    "A' means A does not happen. It is everything outside circle A, so Pr(A') = 1 − Pr(A). Example: if Pr(A) = 0.6 and Pr(A ∩ B) = 0.3, then Pr(A ∩ B') = 0.6 − 0.3 = 0.3."
+    "\\(A'\\) means \\(A\\) does not happen. It is everything outside circle \\(A\\), so \\(\\text{Pr}(A') = 1 - \\text{Pr}(A)\\). Example: if \\(\\text{Pr}(A) = 0.6\\) and \\(\\text{Pr}(A \\cap B) = 0.3\\), then \\(\\text{Pr}(A \\cap B') = 0.6 - 0.3 = 0.3\\)."
    ]
   ],
   "remember": "Overlap is both, whole circles together is or, outside is not. All regions add to 1.",
   "a": {
-   "q": "In a table, Pr(A) = 0.7 and Pr(A ∩ B) = 0.4. What is Pr(A ∩ B')?",
+   "q": "In a table, \\(\\text{Pr}(A) = 0.7\\) and \\(\\text{Pr}(A \\cap B) = 0.4\\). What is \\(\\text{Pr}(A \\cap B')\\)?",
    "opts": [
     "0.3",
     "0.4",
     "0.6",
     "1.1"
    ],
-   "why": "A ∩ B' is the part of A that is not in B, so 0.7 − 0.4 = 0.3. Giving 0.6 comes from finding 1 − 0.4, which ignores that the region must sit inside A.",
-   "clue": "Take the overlap away from all of A."
+   "why": "\\(A \\cap B'\\) is the part of \\(A\\) that is not in \\(B\\), so \\(0.7 - 0.4 = 0.3\\). Giving 0.6 comes from finding \\(1 - 0.4\\), which ignores that the region must sit inside \\(A\\).",
+   "clue": "Take the overlap away from all of \\(A\\)."
   },
   "b": {
    "d": 3,
-   "q": "In Year 11 at a Ballarat school, Pr(plays sport) = 0.5, Pr(plays music) = 0.4 and Pr(both) = 0.2. What is the probability a student does neither?",
+   "q": "In Year 11 at a Ballarat school, the probability a student plays sport is 0.5, plays music is 0.4 and plays both is 0.2. What is the probability a student does neither?",
    "opts": [
     "0.3",
     "0.1",
     "0.5",
     "0.7"
    ],
-   "why": "Fill each region: sport only 0.5 − 0.2 = 0.3, both 0.2, music only 0.4 − 0.2 = 0.2. These add to 0.7, so neither is 1 − 0.7 = 0.3. Giving 0.1 comes from 1 − 0.5 − 0.4, which counts the overlap twice.",
+   "why": "Fill each region: sport only \\(0.5 - 0.2 = 0.3\\), both 0.2, music only \\(0.4 - 0.2 = 0.2\\). These add to 0.7, so neither is \\(1 - 0.7 = 0.3\\). Giving 0.1 comes from \\(1 - 0.5 - 0.4\\), which counts the overlap twice.",
    "clue": "Fill the three regions inside the circles first."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Venn diagrams and Karnaugh maps",
+   "card": [
+    "A Venn diagram uses a rectangle for all outcomes and overlapping circles for events. A probability table, or Karnaugh map, does the same job with rows and columns, and in both the probabilities of all regions add to 1.",
+    [
+     "Intersection",
+     "A ∩ B means both A and B happen. It is the overlap of the two circles, or the cell where row A meets column B."
+    ],
+    [
+     "Union",
+     "A ∪ B means A or B or both happen. It is everything inside either circle."
+    ],
+    [
+     "Complement",
+     "A' means A does not happen. It is everything outside circle A, so Pr(A') = 1 − Pr(A). Example: if Pr(A) = 0.6 and Pr(A ∩ B) = 0.3, then Pr(A ∩ B') = 0.6 − 0.3 = 0.3."
+    ]
+   ],
+   "remember": "Overlap is both, whole circles together is or, outside is not. All regions add to 1.",
+   "a": {
+    "q": "In a table, Pr(A) = 0.7 and Pr(A ∩ B) = 0.4. What is Pr(A ∩ B')?",
+    "opts": [
+     "0.3",
+     "0.4",
+     "0.6",
+     "1.1"
+    ],
+    "why": "A ∩ B' is the part of A that is not in B, so 0.7 − 0.4 = 0.3. Giving 0.6 comes from finding 1 − 0.4, which ignores that the region must sit inside A.",
+    "clue": "Take the overlap away from all of A."
+   },
+   "b": {
+    "d": 3,
+    "q": "In Year 11 at a Ballarat school, Pr(plays sport) = 0.5, Pr(plays music) = 0.4 and Pr(both) = 0.2. What is the probability a student does neither?",
+    "opts": [
+     "0.3",
+     "0.1",
+     "0.5",
+     "0.7"
+    ],
+    "why": "Fill each region: sport only 0.5 − 0.2 = 0.3, both 0.2, music only 0.4 − 0.2 = 0.2. These add to 0.7, so neither is 1 − 0.7 = 0.3. Giving 0.1 comes from 1 − 0.5 − 0.4, which counts the overlap twice.",
+    "clue": "Fill the three regions inside the circles first."
+   }
+  }
+ }
 }

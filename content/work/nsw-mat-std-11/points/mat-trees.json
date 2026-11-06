@@ -10,7 +10,8 @@
   "2026-10-29T12:30:22Z write: done",
   "2026-10-29T12:39:10Z check: flagged",
   "2026-10-29T12:41:46Z fix: suggested",
-  "2026-10-29T14:30:29Z autoreview: cleared with the fix (card other)"
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (card other)",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -144,10 +145,10 @@
   "card": [
    "A network is connected if there is a route between every pair of vertices.",
    "A tree is a connected network that contains no circuits. Take away any one edge and it is no longer connected.",
-   "A tree with n vertices has n − 1 edges. Example: a tree with 6 vertices has 6 − 1 = 5 edges.",
-   "To test a network, check that it is connected and has no circuits. If a connected network has n vertices and more than n − 1 edges, it must contain a circuit, so it is not a tree."
+   "A tree with \\(n\\) vertices has \\(n - 1\\) edges. Example: a tree with 6 vertices has \\(6 - 1 = 5\\) edges.",
+   "To test a network, check that it is connected and has no circuits. If a connected network has \\(n\\) vertices and more than \\(n - 1\\) edges, it must contain a circuit, so it is not a tree."
   ],
-  "remember": "A tree is connected with no circuits, and n vertices means n − 1 edges.",
+  "remember": "A tree is connected with no circuits, and \\(n\\) vertices means \\(n - 1\\) edges.",
   "a": {
    "q": "A tree has 9 vertices. How many edges does it have?",
    "opts": [
@@ -156,7 +157,7 @@
     "10",
     "7"
    ],
-   "why": "A tree with n vertices has n − 1 edges, so 9 − 1 = 8. Choosing 9 mixes up the number of edges with the number of vertices.",
+   "why": "A tree with \\(n\\) vertices has \\(n - 1\\) edges, so \\(9 - 1 = 8\\). Choosing 9 mixes up the number of edges with the number of vertices.",
    "clue": "Take one away from the number of vertices."
   },
   "b": {
@@ -168,9 +169,46 @@
     "Yes, because it has as many edges as vertices",
     "No, because a tree would have 8 edges"
    ],
-   "why": "A tree with 7 vertices has 7 − 1 = 6 edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
+   "why": "A tree with 7 vertices has \\(7 - 1 = 6\\) edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
    "clue": "Work out how many edges a tree with 7 vertices has, then compare."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Trees",
+   "card": [
+    "A network is connected if there is a route between every pair of vertices.",
+    "A tree is a connected network that contains no circuits. Take away any one edge and it is no longer connected.",
+    "A tree with n vertices has n − 1 edges. Example: a tree with 6 vertices has 6 − 1 = 5 edges.",
+    "To test a network, check that it is connected and has no circuits. If a connected network has n vertices and more than n − 1 edges, it must contain a circuit, so it is not a tree."
+   ],
+   "remember": "A tree is connected with no circuits, and n vertices means n − 1 edges.",
+   "a": {
+    "q": "A tree has 9 vertices. How many edges does it have?",
+    "opts": [
+     "8",
+     "9",
+     "10",
+     "7"
+    ],
+    "why": "A tree with n vertices has n − 1 edges, so 9 − 1 = 8. Choosing 9 mixes up the number of edges with the number of vertices.",
+    "clue": "Take one away from the number of vertices."
+   },
+   "b": {
+    "d": 3,
+    "q": "A council plans a path network joining 7 parks in Orange. It has 7 vertices, is connected and has 7 edges. Is it a tree?",
+    "opts": [
+     "No, because a tree would have only 6 edges",
+     "Yes, because it is connected",
+     "Yes, because it has as many edges as vertices",
+     "No, because a tree would have 8 edges"
+    ],
+    "why": "A tree with 7 vertices has 7 − 1 = 6 edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
+    "clue": "Work out how many edges a tree with 7 vertices has, then compare."
+   }
+  }
+ }
 }

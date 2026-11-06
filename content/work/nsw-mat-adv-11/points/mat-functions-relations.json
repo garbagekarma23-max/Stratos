@@ -12,7 +12,8 @@
   "2026-10-28T08:46:50Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
   "2026-10-28T11:49:39Z review: approved with the fix (a spot check)",
   "2026-10-29T11:03:05Z rebalance: new wrong options for question b, waiting for the check",
-  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b"
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 2,
@@ -163,13 +164,13 @@
   "card": [
    [
     "Relation",
-    "A relation is any rule or set of pairs that links inputs (x values) to outputs (y values). Example: {(1, 2), (1, 5), (3, 4)}."
+    "A relation is any rule or set of pairs that links inputs (\\(x\\) values) to outputs (\\(y\\) values). Example: {(1, 2), \\((1, 5)\\), (3, 4)}."
    ],
    [
     "Function",
     "A function is a relation where each input has exactly one output. Two different inputs may share the same output."
    ],
-   "To check a set of pairs, look for an x value that appears twice with different y values. In the example above, x = 1 gives both 2 and 5, so it is a relation but not a function.",
+   "To check a set of pairs, look for an \\(x\\) value that appears twice with different \\(y\\) values. In the example above, \\(x = 1\\) gives both 2 and 5, so it is a relation but not a function.",
    [
     "Vertical line test",
     "Draw vertical lines on a graph. If some vertical line cuts the graph more than once, it is not a function. If every vertical line cuts it at most once, it is a function."
@@ -179,24 +180,24 @@
   "a": {
    "q": "Which set of pairs is a function?",
    "opts": [
-    "{(1, 4), (2, 4), (3, 7)}",
-    "{(1, 4), (1, 7), (2, 5)}",
-    "{(2, 3), (5, 1), (2, 6)}",
-    "{(0, 1), (3, 2), (0, 2)}"
+    "{(1, 4), \\((2, 4)\\), (3, 7)}",
+    "{(1, 4), \\((1, 7)\\), (2, 5)}",
+    "{(2, 3), \\((5, 1)\\), (2, 6)}",
+    "{(0, 1), \\((3, 2)\\), (0, 2)}"
    ],
-   "why": "In {(1, 4), (2, 4), (3, 7)}, each x value (1, 2 and 3) has one output. Sharing the output 4 is allowed. Each other set repeats an x value with different y values, so that input has two outputs.",
-   "clue": "Look for an x value that is repeated with different y values."
+   "why": "In {(1, 4), \\((2, 4)\\), (3, 7)}, each \\(x\\) value (1, 2 and 3) has one output. Sharing the output 4 is allowed. Each other set repeats an \\(x\\) value with different \\(y\\) values, so that input has two outputs.",
+   "clue": "Look for an \\(x\\) value that is repeated with different \\(y\\) values."
   },
   "b": {
    "d": 2,
-   "q": "A circle on a graph is cut twice by the vertical line x = 0. What does this tell you?",
+   "q": "A circle on a graph is cut twice by the vertical line \\(x = 0\\). What does this tell you?",
    "opts": [
     "The circle is not the graph of a function",
     "The circle is the graph of a valid function",
-    "The circle is a function only when x is above 0",
-    "The circle is not a relation of x and y values"
+    "The circle is a function only when \\(x\\) is above 0",
+    "The circle is not a relation of \\(x\\) and \\(y\\) values"
    ],
-   "why": "A vertical line that cuts the graph twice means one x value has two y values. So it fails the vertical line test and is not a function. It is still a relation, because it pairs x values with y values.",
+   "why": "A vertical line that cuts the graph twice means one \\(x\\) value has two \\(y\\) values. So it fails the vertical line test and is not a function. It is still a relation, because it pairs \\(x\\) values with \\(y\\) values.",
    "clue": "One vertical line cutting twice means one input has two outputs."
   }
  },
@@ -229,6 +230,52 @@
     "The circle is a function only for x > 0",
     "The circle is not a relation"
    ]
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Functions and relations",
+   "card": [
+    [
+     "Relation",
+     "A relation is any rule or set of pairs that links inputs (x values) to outputs (y values). Example: {(1, 2), (1, 5), (3, 4)}."
+    ],
+    [
+     "Function",
+     "A function is a relation where each input has exactly one output. Two different inputs may share the same output."
+    ],
+    "To check a set of pairs, look for an x value that appears twice with different y values. In the example above, x = 1 gives both 2 and 5, so it is a relation but not a function.",
+    [
+     "Vertical line test",
+     "Draw vertical lines on a graph. If some vertical line cuts the graph more than once, it is not a function. If every vertical line cuts it at most once, it is a function."
+    ]
+   ],
+   "remember": "A function never gives two different outputs for one input.",
+   "a": {
+    "q": "Which set of pairs is a function?",
+    "opts": [
+     "{(1, 4), (2, 4), (3, 7)}",
+     "{(1, 4), (1, 7), (2, 5)}",
+     "{(2, 3), (5, 1), (2, 6)}",
+     "{(0, 1), (3, 2), (0, 2)}"
+    ],
+    "why": "In {(1, 4), (2, 4), (3, 7)}, each x value (1, 2 and 3) has one output. Sharing the output 4 is allowed. Each other set repeats an x value with different y values, so that input has two outputs.",
+    "clue": "Look for an x value that is repeated with different y values."
+   },
+   "b": {
+    "d": 2,
+    "q": "A circle on a graph is cut twice by the vertical line x = 0. What does this tell you?",
+    "opts": [
+     "The circle is not the graph of a function",
+     "The circle is the graph of a valid function",
+     "The circle is a function only when x is above 0",
+     "The circle is not a relation of x and y values"
+    ],
+    "why": "A vertical line that cuts the graph twice means one x value has two y values. So it fails the vertical line test and is not a function. It is still a relation, because it pairs x values with y values.",
+    "clue": "One vertical line cutting twice means one input has two outputs."
+   }
   }
  }
 }

@@ -32,7 +32,8 @@
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -217,7 +218,7 @@
   "card": [
    [
     "Relation",
-    "a set of ordered pairs (x, y) linking inputs to outputs. Any rule that pairs numbers is a relation."
+    "a set of ordered pairs \\((x, y)\\) linking inputs to outputs. Any rule that pairs numbers is a relation."
    ],
    [
     "Function",
@@ -225,37 +226,86 @@
    ],
    [
     "Notation",
-    "f(x) names the rule and its output. If f(x) = 2x + 1, then f(3) = 2 × 3 + 1 = 7."
+    "f(x) names the rule and its output. If \\(f(x) = 2x + 1\\), then \\(f(3) = 2 \\times 3 + 1 = 7\\)."
    ],
    [
     "Domain and range",
-    "The domain is the set of allowed inputs. The range is the set of outputs that result. For {(1, 4), (2, 4), (3, 5)}, the domain is {1, 2, 3} and the range is {4, 5}."
+    "The domain is the set of allowed inputs. The range is the set of outputs that result. For {(1, 4), \\((2, 4)\\), (3, 5)}, the domain is {1, 2, 3} and the range is {4, 5}."
    ]
   ],
-  "remember": "A function never sends one input to two outputs. f(x) is the output for input x.",
+  "remember": "A function never sends one input to two outputs. f(x) is the output for input \\(x\\).",
   "a": {
    "q": "Which set of ordered pairs is a function?",
    "opts": [
-    "{(1, 2), (2, 2), (3, 5)}",
-    "{(1, 2), (1, 3), (2, 5)}",
-    "{(2, 1), (2, 4), (3, 5)}",
-    "{(0, 3), (4, 1), (4, 6)}"
+    "{(1, 2), \\((2, 2)\\), (3, 5)}",
+    "{(1, 2), \\((1, 3)\\), (2, 5)}",
+    "{(2, 1), \\((2, 4)\\), (3, 5)}",
+    "{(0, 3), \\((4, 1)\\), (4, 6)}"
    ],
-   "why": "Each input appears once, so each x has one output. It is fine for two inputs to share an output, as 1 and 2 both give 2. The other sets pair one input with two outputs.",
+   "why": "Each input appears once, so each \\(x\\) has one output. It is fine for two inputs to share an output, as 1 and 2 both give 2. The other sets pair one input with two outputs.",
    "clue": "Look for an x-value that appears twice."
   },
   "b": {
    "d": 2,
-   "q": "Given f(x) = 3x − 4, what is f(−2)?",
+   "q": "Given \\(f(x) = 3x - 4\\), what is \\(f(-2)\\)?",
    "opts": [
-    "−10",
+    "\\(-10\\)",
     "2",
-    "−2",
+    "\\(-2\\)",
     "10"
    ],
-   "why": "f(−2) = 3 × (−2) − 4 = −6 − 4 = −10. The answer −2 comes from working out −6 + 4, but the 4 is subtracted, so the result goes further below zero. The answer 2 comes from treating 3 × (−2) as 6.",
-   "clue": "Replace x with −2 in brackets, then follow the order of operations."
+   "why": "\\(f(-2) = 3 \\times (-2) - 4 = -6 - 4 = -10\\). The answer \\(-2\\) comes from working out \\(-6 + 4\\), but the 4 is subtracted, so the result goes further below zero. The answer 2 comes from treating \\(3 \\times (-2)\\) as 6.",
+   "clue": "Replace \\(x\\) with \\(-2\\) in brackets, then follow the order of operations."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Relations and functions",
+   "card": [
+    [
+     "Relation",
+     "a set of ordered pairs (x, y) linking inputs to outputs. Any rule that pairs numbers is a relation."
+    ],
+    [
+     "Function",
+     "a relation where each input gives exactly one output. No x-value is paired with two different y-values."
+    ],
+    [
+     "Notation",
+     "f(x) names the rule and its output. If f(x) = 2x + 1, then f(3) = 2 × 3 + 1 = 7."
+    ],
+    [
+     "Domain and range",
+     "The domain is the set of allowed inputs. The range is the set of outputs that result. For {(1, 4), (2, 4), (3, 5)}, the domain is {1, 2, 3} and the range is {4, 5}."
+    ]
+   ],
+   "remember": "A function never sends one input to two outputs. f(x) is the output for input x.",
+   "a": {
+    "q": "Which set of ordered pairs is a function?",
+    "opts": [
+     "{(1, 2), (2, 2), (3, 5)}",
+     "{(1, 2), (1, 3), (2, 5)}",
+     "{(2, 1), (2, 4), (3, 5)}",
+     "{(0, 3), (4, 1), (4, 6)}"
+    ],
+    "why": "Each input appears once, so each x has one output. It is fine for two inputs to share an output, as 1 and 2 both give 2. The other sets pair one input with two outputs.",
+    "clue": "Look for an x-value that appears twice."
+   },
+   "b": {
+    "d": 2,
+    "q": "Given f(x) = 3x − 4, what is f(−2)?",
+    "opts": [
+     "−10",
+     "2",
+     "−2",
+     "10"
+    ],
+    "why": "f(−2) = 3 × (−2) − 4 = −6 − 4 = −10. The answer −2 comes from working out −6 + 4, but the 4 is subtracted, so the result goes further below zero. The answer 2 comes from treating 3 × (−2) as 6.",
+    "clue": "Replace x with −2 in brackets, then follow the order of operations."
+   }
+  }
+ }
 }

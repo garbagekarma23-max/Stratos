@@ -32,7 +32,8 @@
   "2026-11-01T08:24:33Z adapt: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -235,11 +236,11 @@
   "title": "Compound interest",
   "card": [
    "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
-   "The formula is A = P(1 + r/100)ⁿ. A is the final amount, P is the amount invested at the start, r is the percentage rate per period (6 means 6%), and n is the number of periods.",
-   "Both r and n must use the compounding period. For 6% per year compounded monthly, r = 6 ÷ 12 = 0.5 per month, so the multiplier is 1 + 0.5/100 = 1.005. Then n is the number of months.",
-   "Example: $2000 at 5% per year, compounded yearly, for 3 years. A = 2000 × (1 + 5/100)³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+   "The formula is \\(A = P(1 + \\frac{r}{100})^{n}\\). A is the final amount, P is the amount invested at the start, \\(r\\) is the percentage rate per period (6 means 6%), and \\(n\\) is the number of periods.",
+   "Both \\(r\\) and \\(n\\) must use the compounding period. For 6% per year compounded monthly, \\(r = 6 \\div 12 = 0.5\\) per month, so the multiplier is \\(1 + \\frac{0.5}{100} = 1.005\\). Then \\(n\\) is the number of months.",
+   "Example: $2000 at 5% per year, compounded yearly, for 3 years. \\(A = 2000 \\times (1 + \\frac{5}{100})^{3} = 2000 \\times 1.157625 = \\$2315.25\\). The interest earned is $315.25."
   ],
-  "remember": "Multiply by (1 + r/100) once for each period, with r and n both set to the compounding period.",
+  "remember": "Multiply by \\((1 + \\frac{r}{100})\\) once for each period, with \\(r\\) and \\(n\\) both set to the compounding period.",
   "a": {
    "q": "Priya invests $2000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
    "opts": [
@@ -248,21 +249,58 @@
     "$2200",
     "$2040"
    ],
-   "why": "A = 2000 × (1 + 10/100)² = 2000 × 1.21 = $2420. The answer $2400 is simple interest, which does not let the interest earn interest.",
+   "why": "\\(A = 2000 \\times (1 + \\frac{10}{100})^{2} = 2000 \\times 1.21 = \\$2420\\). The answer $2400 is simple interest, which does not let the interest earn interest.",
    "clue": "Is year 2 interest found on $2000 or on the new balance?"
   },
   "b": {
    "d": 3,
    "q": "Tom invests $3000 at 12% per year, compounded monthly, for 3 years. Which calculation gives the final amount?",
    "opts": [
-    "3000 × (1 + 1/100)³⁶",
-    "3000 × (1 + 1/100)³",
-    "3000 × (1 + 12/100)³⁶",
-    "3000 × (1 + 12/100)³"
+    "\\(3000 \\times (1 + \\frac{1}{100})^{36}\\)",
+    "\\(3000 \\times (1 + \\frac{1}{100})^{3}\\)",
+    "\\(3000 \\times (1 + \\frac{12}{100})^{36}\\)",
+    "\\(3000 \\times (1 + \\frac{12}{100})^{3}\\)"
    ],
-   "why": "Interest is compounded monthly, so the rate per month is 12 ÷ 12 = 1 and there are 3 × 12 = 36 months. So A = 3000 × (1 + 1/100)³⁶. Using 12% with 3 periods works in years, so neither r nor n matches the monthly compounding period.",
+   "why": "Interest is compounded monthly, so the rate per month is \\(12 \\div 12 = 1\\) and there are \\(3 \\times 12 = 36\\) months. So \\(A = 3000 \\times (1 + \\frac{1}{100})^{36}\\). Using 12% with 3 periods works in years, so neither \\(r\\) nor \\(n\\) matches the monthly compounding period.",
    "clue": "Convert both the rate and the time to months."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Compound interest",
+   "card": [
+    "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
+    "The formula is A = P(1 + r/100)ⁿ. A is the final amount, P is the amount invested at the start, r is the percentage rate per period (6 means 6%), and n is the number of periods.",
+    "Both r and n must use the compounding period. For 6% per year compounded monthly, r = 6 ÷ 12 = 0.5 per month, so the multiplier is 1 + 0.5/100 = 1.005. Then n is the number of months.",
+    "Example: $2000 at 5% per year, compounded yearly, for 3 years. A = 2000 × (1 + 5/100)³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+   ],
+   "remember": "Multiply by (1 + r/100) once for each period, with r and n both set to the compounding period.",
+   "a": {
+    "q": "Priya invests $2000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
+    "opts": [
+     "$2420",
+     "$2400",
+     "$2200",
+     "$2040"
+    ],
+    "why": "A = 2000 × (1 + 10/100)² = 2000 × 1.21 = $2420. The answer $2400 is simple interest, which does not let the interest earn interest.",
+    "clue": "Is year 2 interest found on $2000 or on the new balance?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Tom invests $3000 at 12% per year, compounded monthly, for 3 years. Which calculation gives the final amount?",
+    "opts": [
+     "3000 × (1 + 1/100)³⁶",
+     "3000 × (1 + 1/100)³",
+     "3000 × (1 + 12/100)³⁶",
+     "3000 × (1 + 12/100)³"
+    ],
+    "why": "Interest is compounded monthly, so the rate per month is 12 ÷ 12 = 1 and there are 3 × 12 = 36 months. So A = 3000 × (1 + 1/100)³⁶. Using 12% with 3 periods works in years, so neither r nor n matches the monthly compounding period.",
+    "clue": "Convert both the rate and the time to months."
+   }
+  }
+ }
 }

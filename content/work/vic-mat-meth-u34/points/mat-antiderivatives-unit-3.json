@@ -29,7 +29,8 @@
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:23:30Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:23:30Z review: approved with the fix (a spot check)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -219,44 +220,90 @@
  "final": {
   "title": "Antiderivatives",
   "card": [
-   "An antiderivative of f(x) is a function whose derivative is f(x). A constant disappears when we differentiate, so the general antiderivative, written ∫f(x) dx, includes + c, where c is any constant.",
+   "An antiderivative of \\(f(x)\\) is a function whose derivative is \\(f(x)\\). A constant disappears when we differentiate, so the general antiderivative, written \\(\\int f(x) \\, dx\\), includes \\(+ c\\), where \\(c\\) is any constant.",
    [
     "Powers",
-    "∫xⁿ dx = xⁿ⁺¹/(n + 1) + c, for n ≠ −1. Add 1 to the power, then divide by the new power. For 1/x, ∫1/x dx = loge|x| + c."
+    "\\(\\int x^{n} \\, dx = \\frac{x^{n + 1}}{n + 1} + c\\), for \\(n \\ne -1\\). Add 1 to the power, then divide by the new power. For \\(\\frac{1}{x}\\), \\(\\int \\frac{1}{x} \\, dx = \\log_{e} |x| + c\\)."
    ],
    [
     "Exponential",
-    "∫e^(kx) dx = (1/k)e^(kx) + c, for k ≠ 0. Divide by the number k in front of x."
+    "\\(\\int e^{kx} \\, dx = \\frac{1}{k} e^{kx} + c\\), for \\(k \\ne 0\\). Divide by the number \\(k\\) in front of \\(x\\)."
    ],
    [
     "Trig",
-    "∫sin(kx) dx = −(1/k)cos(kx) + c and ∫cos(kx) dx = (1/k)sin(kx) + c. Example: ∫cos(2x) dx = (1/2)sin(2x) + c."
+    "\\(\\int \\sin(kx) \\, dx = -\\frac{1}{k} \\cos(kx) + c\\) and \\(\\int \\cos(kx) \\, dx = \\frac{1}{k} \\sin(kx) + c\\). Example: \\(\\int \\cos(2x) \\, dx = \\frac{1}{2} \\sin(2x) + c\\)."
    ]
   ],
-  "remember": "Raise the power and divide by the new power, or divide by k. The general antiderivative adds + c.",
+  "remember": "Raise the power and divide by the new power, or divide by \\(k\\). The general antiderivative adds \\(+ c\\).",
   "a": {
-   "q": "What is ∫6x² dx?",
+   "q": "What is \\(\\int 6x^{2} \\, dx\\)?",
    "opts": [
-    "2x³ + c",
-    "3x³ + c",
-    "12x + c",
-    "6x³ + c"
+    "\\(2x^{3} + c\\)",
+    "\\(3x^{3} + c\\)",
+    "\\(12x + c\\)",
+    "\\(6x^{3} + c\\)"
    ],
-   "why": "Add 1 to the power to get x³, then divide by the new power 3: 6x³/3 = 2x³. The option 12x comes from differentiating instead: multiplying by the power and lowering it by 1. The option 3x³ divides by the old power 2, and 6x³ forgets to divide at all.",
+   "why": "Add 1 to the power to get \\(x^{3}\\), then divide by the new power 3: \\(\\frac{6x^{3}}{3} = 2x^{3}\\). The option \\(12x\\) comes from differentiating instead: multiplying by the power and lowering it by 1. The option \\(3x^{3}\\) divides by the old power 2, and \\(6x^{3}\\) forgets to divide at all.",
    "clue": "Raise the power by 1, then divide by the new power."
   },
   "b": {
    "d": 3,
-   "q": "What is ∫(e^(3x) + sin(2x)) dx?",
+   "q": "What is \\(\\int (e^{3x} + \\sin(2x)) \\, dx\\)?",
    "opts": [
-    "(1/3)e^(3x) − (1/2)cos(2x) + c",
-    "(1/3)e^(3x) + (1/2)cos(2x) + c",
-    "3e^(3x) − 2cos(2x) + c",
-    "(1/3)e^(3x) − 2cos(2x) + c"
+    "\\(\\frac{1}{3} e^{3x} - \\frac{1}{2} \\cos(2x) + c\\)",
+    "\\(\\frac{1}{3} e^{3x} + \\frac{1}{2} \\cos(2x) + c\\)",
+    "\\(3e^{3x} - 2\\cos(2x) + c\\)",
+    "\\(\\frac{1}{3} e^{3x} - 2\\cos(2x) + c\\)"
    ],
-   "why": "Integrate each term. e^(3x) gives (1/3)e^(3x), and sin(2x) gives −(1/2)cos(2x). The sign is negative because the derivative of cos is −sin, and multiplying by k instead of dividing is a common slip.",
-   "clue": "Divide by k in each term, and check the sign for sin."
+   "why": "Integrate each term. \\(e^{3x}\\) gives \\(\\frac{1}{3} e^{3x}\\), and \\(\\sin(2x)\\) gives \\(-\\frac{1}{2} \\cos(2x)\\). The sign is negative because the derivative of \\(\\cos x\\) is \\(-\\sin x\\), and multiplying by \\(k\\) instead of dividing is a common slip.",
+   "clue": "Divide by \\(k\\) in each term, and check the sign for \\(\\sin\\)."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Antiderivatives",
+   "card": [
+    "An antiderivative of f(x) is a function whose derivative is f(x). A constant disappears when we differentiate, so the general antiderivative, written ∫f(x) dx, includes + c, where c is any constant.",
+    [
+     "Powers",
+     "∫xⁿ dx = xⁿ⁺¹/(n + 1) + c, for n ≠ −1. Add 1 to the power, then divide by the new power. For 1/x, ∫1/x dx = loge|x| + c."
+    ],
+    [
+     "Exponential",
+     "∫e^(kx) dx = (1/k)e^(kx) + c, for k ≠ 0. Divide by the number k in front of x."
+    ],
+    [
+     "Trig",
+     "∫sin(kx) dx = −(1/k)cos(kx) + c and ∫cos(kx) dx = (1/k)sin(kx) + c. Example: ∫cos(2x) dx = (1/2)sin(2x) + c."
+    ]
+   ],
+   "remember": "Raise the power and divide by the new power, or divide by k. The general antiderivative adds + c.",
+   "a": {
+    "q": "What is ∫6x² dx?",
+    "opts": [
+     "2x³ + c",
+     "3x³ + c",
+     "12x + c",
+     "6x³ + c"
+    ],
+    "why": "Add 1 to the power to get x³, then divide by the new power 3: 6x³/3 = 2x³. The option 12x comes from differentiating instead: multiplying by the power and lowering it by 1. The option 3x³ divides by the old power 2, and 6x³ forgets to divide at all.",
+    "clue": "Raise the power by 1, then divide by the new power."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is ∫(e^(3x) + sin(2x)) dx?",
+    "opts": [
+     "(1/3)e^(3x) − (1/2)cos(2x) + c",
+     "(1/3)e^(3x) + (1/2)cos(2x) + c",
+     "3e^(3x) − 2cos(2x) + c",
+     "(1/3)e^(3x) − 2cos(2x) + c"
+    ],
+    "why": "Integrate each term. e^(3x) gives (1/3)e^(3x), and sin(2x) gives −(1/2)cos(2x). The sign is negative because the derivative of cos is −sin, and multiplying by k instead of dividing is a common slip.",
+    "clue": "Divide by k in each term, and check the sign for sin."
+   }
+  }
+ }
 }

@@ -8,7 +8,8 @@
   "2026-11-01T14:36:27Z new, write",
   "2026-11-01T14:46:40Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T14:56:05Z write: done",
-  "2026-11-01T15:05:29Z check: passed, cleared"
+  "2026-11-01T15:05:29Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 2,
@@ -75,32 +76,69 @@
    "A counterexample is one case where a statement about all values fails. Finding a single counterexample proves the statement is false.",
    "Many examples that work do not prove a statement true. A statement is only proved true for every case by a proof.",
    "To disprove a claim, pick a value that makes the conditions true but the conclusion false, then check it by working it out.",
-   "Worked example: \"n² + n + 41 is prime for every whole number n.\" Try n = 41: 41² + 41 + 41 = 41 × 43 = 1763. This is not prime, so n = 41 is a counterexample."
+   "Worked example: \"\\(n^{2} + n + 41\\) is prime for every whole number \\(n\\).\" Try \\(n = 41\\): \\(41^{2} + 41 + 41 = 41 \\times 43 = 1763\\). This is not prime, so \\(n = 41\\) is a counterexample."
   ],
   "remember": "One failing case disproves a claim for all. Many working cases never prove it.",
   "a": {
-   "q": "Claim: \"n² > n for every whole number n.\" Which value of n is a counterexample?",
+   "q": "Claim: \"\\(n^{2} > n\\) for every whole number \\(n\\).\" Which value of \\(n\\) is a counterexample?",
    "opts": [
-    "n = 1",
-    "n = 2",
-    "n = 3",
-    "n = 10"
+    "\\(n = 1\\)",
+    "\\(n = 2\\)",
+    "\\(n = 3\\)",
+    "\\(n = 10\\)"
    ],
-   "why": "For n = 1, n² = 1 and n = 1, so n² > n is false. For n = 2, 3 and 10 the claim holds (4 > 2, 9 > 3, 100 > 10), so they cannot disprove it.",
+   "why": "For \\(n = 1\\), \\(n^{2} = 1\\) and \\(n = 1\\), so \\(n^{2} > n\\) is false. For \\(n = 2\\), 3 and 10 the claim holds \\((4 > 2, 9 > 3, 100 > 10)\\), so they cannot disprove it.",
    "clue": "Which value makes both sides equal?"
   },
   "b": {
    "d": 3,
-   "q": "Mia claims that \"if n is a prime number, then n + 2 is also prime\". She checks n = 3, 5 and 11 and finds it works each time. What does this show?",
+   "q": "Mia claims that \"if \\(n\\) is a prime number, then \\(n + 2\\) is also prime\". She checks \\(n = 3\\), 5 and 11 and finds it works each time. What does this show?",
    "opts": [
-    "Nothing is proved, and n = 7 disproves the claim",
+    "Nothing is proved, and \\(n = 7\\) disproves the claim",
     "The claim is proved, because three cases work",
     "The claim is proved, because 3, 5 and 11 are all odd",
-    "Nothing is proved, and n = 11 disproves the claim"
+    "Nothing is proved, and \\(n = 11\\) disproves the claim"
    ],
-   "why": "For n = 3, 5 and 11 the claim holds, but working cases never prove it for all primes. For n = 7, n + 2 = 9 = 3 × 3, which is not prime, so n = 7 is a counterexample. For n = 11, n + 2 = 13 is prime, so n = 11 does not disprove it.",
+   "why": "For \\(n = 3\\), 5 and 11 the claim holds, but working cases never prove it for all primes. For \\(n = 7\\), \\(n + 2 = 9 = 3 \\times 3\\), which is not prime, so \\(n = 7\\) is a counterexample. For \\(n = 11\\), \\(n + 2 = 13\\) is prime, so \\(n = 11\\) does not disprove it.",
    "clue": "Test the next prime after 5."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Counterexamples",
+   "card": [
+    "A counterexample is one case where a statement about all values fails. Finding a single counterexample proves the statement is false.",
+    "Many examples that work do not prove a statement true. A statement is only proved true for every case by a proof.",
+    "To disprove a claim, pick a value that makes the conditions true but the conclusion false, then check it by working it out.",
+    "Worked example: \"n² + n + 41 is prime for every whole number n.\" Try n = 41: 41² + 41 + 41 = 41 × 43 = 1763. This is not prime, so n = 41 is a counterexample."
+   ],
+   "remember": "One failing case disproves a claim for all. Many working cases never prove it.",
+   "a": {
+    "q": "Claim: \"n² > n for every whole number n.\" Which value of n is a counterexample?",
+    "opts": [
+     "n = 1",
+     "n = 2",
+     "n = 3",
+     "n = 10"
+    ],
+    "why": "For n = 1, n² = 1 and n = 1, so n² > n is false. For n = 2, 3 and 10 the claim holds (4 > 2, 9 > 3, 100 > 10), so they cannot disprove it.",
+    "clue": "Which value makes both sides equal?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia claims that \"if n is a prime number, then n + 2 is also prime\". She checks n = 3, 5 and 11 and finds it works each time. What does this show?",
+    "opts": [
+     "Nothing is proved, and n = 7 disproves the claim",
+     "The claim is proved, because three cases work",
+     "The claim is proved, because 3, 5 and 11 are all odd",
+     "Nothing is proved, and n = 11 disproves the claim"
+    ],
+    "why": "For n = 3, 5 and 11 the claim holds, but working cases never prove it for all primes. For n = 7, n + 2 = 9 = 3 × 3, which is not prime, so n = 7 is a counterexample. For n = 11, n + 2 = 13 is prime, so n = 11 does not disprove it.",
+    "clue": "Test the next prime after 5."
+   }
+  }
+ }
 }

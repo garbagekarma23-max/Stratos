@@ -30,7 +30,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -105,34 +106,71 @@
   "title": "Inverse functions",
   "card": [
    "A function is one-to-one if each y-value comes from only one x-value. A horizontal line cuts its graph at most once. Only a one-to-one function has an inverse function.",
-   "The inverse f⁻¹ undoes f. Its domain is the range of f, and its range is the domain of f. The graphs are reflections of each other in the line y = x.",
-   "To find f⁻¹, swap x and y, then solve for y. Example: f(x) = 2x + 3. Swap: x = 2y + 3. Solve: y = (x − 3)/2. So f⁻¹(x) = (x − 3)/2.",
-   "y = x² is not one-to-one, as x = 2 and x = −2 both give 4. Restrict the domain, such as x ≥ 0, and it becomes one-to-one. Then the inverse is f⁻¹(x) = √x."
+   "The inverse \\(f^{-1}\\) undoes \\(f\\). Its domain is the range of \\(f\\), and its range is the domain of \\(f\\). The graphs are reflections of each other in the line \\(y = x\\).",
+   "To find \\(f^{-1}\\), swap \\(x\\) and \\(y\\), then solve for \\(y\\). Example: \\(f(x) = 2x + 3\\). Swap: \\(x = 2y + 3\\). Solve: \\(y = \\frac{x - 3}{2}\\). So \\(f^{-1}(x) = \\frac{x - 3}{2}\\).",
+   "\\(y = x^{2}\\) is not one-to-one, as \\(x = 2\\) and \\(x = -2\\) both give 4. Restrict the domain, such as \\(x \\ge 0\\), and it becomes one-to-one. Then the inverse is \\(f^{-1}(x) = \\sqrt{x}\\)."
   ],
-  "remember": "Swap x and y to find the inverse. Its domain is the range of f.",
+  "remember": "Swap \\(x\\) and \\(y\\) to find the inverse. Its domain is the range of \\(f\\).",
   "a": {
-   "q": "f(x) = 3x − 6 is a one-to-one function. What is f⁻¹(x)?",
+   "q": "\\(f(x) = 3x - 6\\) is a one-to-one function. What is \\(f^{-1}(x)\\)?",
    "opts": [
-    "(x + 6)/3",
-    "(x − 6)/3",
-    "x/3 + 6",
-    "−3x + 6"
+    "\\(\\frac{x + 6}{3}\\)",
+    "\\(\\frac{x - 6}{3}\\)",
+    "\\(\\frac{x}{3} + 6\\)",
+    "\\(-3x + 6\\)"
    ],
-   "why": "Swap to get x = 3y − 6. Add 6 to get x + 6 = 3y, so y = (x + 6)/3. (x − 6)/3 is tempting, but it subtracts 6 when the inverse must undo the subtraction by adding 6.",
-   "clue": "Swap x and y, then solve for y."
+   "why": "Swap to get \\(x = 3y - 6\\). Add 6 to get \\(x + 6 = 3y\\), so \\(y = \\frac{x + 6}{3}\\). \\(\\frac{x - 6}{3}\\) is tempting, but it subtracts 6 when the inverse must undo the subtraction by adding 6.",
+   "clue": "Swap \\(x\\) and \\(y\\), then solve for \\(y\\)."
   },
   "b": {
    "d": 3,
-   "q": "g(x) = (x − 2)², with domain x ≥ 2. What are the domain and rule of g⁻¹?",
+   "q": "\\(g(x) = (x - 2)^{2}\\), with domain \\(x \\ge 2\\). What are the domain and rule of \\(g^{-1}\\)?",
    "opts": [
-    "x ≥ 0, g⁻¹(x) = √x + 2",
-    "x ≥ 2, g⁻¹(x) = √x + 2",
-    "x ≥ 0, g⁻¹(x) = √x − 2",
-    "x ≥ 2, g⁻¹(x) = √x − 2"
+    "\\(x \\ge 0\\), \\(g^{-1}(x) = \\sqrt{x} + 2\\)",
+    "\\(x \\ge 2\\), \\(g^{-1}(x) = \\sqrt{x} + 2\\)",
+    "\\(x \\ge 0\\), \\(g^{-1}(x) = \\sqrt{x} - 2\\)",
+    "\\(x \\ge 2\\), \\(g^{-1}(x) = \\sqrt{x} - 2\\)"
    ],
-   "why": "The range of g is y ≥ 0, so the domain of g⁻¹ is x ≥ 0. Swap: x = (y − 2)², so y − 2 = √x since y ≥ 2, and y = √x + 2. Using the domain of g as the domain of g⁻¹ is the tempting mistake.",
-   "clue": "The domain of the inverse is the range of g, not the domain of g."
+   "why": "The range of \\(g\\) is \\(y \\ge 0\\), so the domain of \\(g^{-1}\\) is \\(x \\ge 0\\). Swap: \\(x = (y - 2)^{2}\\), so \\(y - 2 = \\sqrt{x}\\) since \\(y \\ge 2\\), and \\(y = \\sqrt{x} + 2\\). Using the domain of \\(g\\) as the domain of \\(g^{-1}\\) is the tempting mistake.",
+   "clue": "The domain of the inverse is the range of \\(g\\), not the domain of \\(g\\)."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Inverse functions",
+   "card": [
+    "A function is one-to-one if each y-value comes from only one x-value. A horizontal line cuts its graph at most once. Only a one-to-one function has an inverse function.",
+    "The inverse f⁻¹ undoes f. Its domain is the range of f, and its range is the domain of f. The graphs are reflections of each other in the line y = x.",
+    "To find f⁻¹, swap x and y, then solve for y. Example: f(x) = 2x + 3. Swap: x = 2y + 3. Solve: y = (x − 3)/2. So f⁻¹(x) = (x − 3)/2.",
+    "y = x² is not one-to-one, as x = 2 and x = −2 both give 4. Restrict the domain, such as x ≥ 0, and it becomes one-to-one. Then the inverse is f⁻¹(x) = √x."
+   ],
+   "remember": "Swap x and y to find the inverse. Its domain is the range of f.",
+   "a": {
+    "q": "f(x) = 3x − 6 is a one-to-one function. What is f⁻¹(x)?",
+    "opts": [
+     "(x + 6)/3",
+     "(x − 6)/3",
+     "x/3 + 6",
+     "−3x + 6"
+    ],
+    "why": "Swap to get x = 3y − 6. Add 6 to get x + 6 = 3y, so y = (x + 6)/3. (x − 6)/3 is tempting, but it subtracts 6 when the inverse must undo the subtraction by adding 6.",
+    "clue": "Swap x and y, then solve for y."
+   },
+   "b": {
+    "d": 3,
+    "q": "g(x) = (x − 2)², with domain x ≥ 2. What are the domain and rule of g⁻¹?",
+    "opts": [
+     "x ≥ 0, g⁻¹(x) = √x + 2",
+     "x ≥ 2, g⁻¹(x) = √x + 2",
+     "x ≥ 0, g⁻¹(x) = √x − 2",
+     "x ≥ 2, g⁻¹(x) = √x − 2"
+    ],
+    "why": "The range of g is y ≥ 0, so the domain of g⁻¹ is x ≥ 0. Swap: x = (y − 2)², so y − 2 = √x since y ≥ 2, and y = √x + 2. Using the domain of g as the domain of g⁻¹ is the tempting mistake.",
+    "clue": "The domain of the inverse is the range of g, not the domain of g."
+   }
+  }
+ }
 }

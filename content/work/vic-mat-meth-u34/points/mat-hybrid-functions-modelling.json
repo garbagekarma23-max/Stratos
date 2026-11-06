@@ -26,7 +26,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -101,34 +102,71 @@
   "title": "Hybrid functions and modelling",
   "card": [
    "A hybrid (piecewise) function uses different rules on different parts of its domain. Each rule is written with the x-values it applies to.",
-   "Example: a taxi charges $3 per km up to 10 km, then $2 per km after that. For x ≤ 10, C(x) = 3x. For x > 10, C(x) = 30 + 2(x − 10).",
-   "To find a value, first check which x-interval the input is in. Then use only that rule. For x = 14, use the second rule: C(14) = 30 + 2 × 4 = 38.",
-   "If the pieces meet at the boundary, the graph has no jump there. Here 3 × 10 = 30 and the second rule also gives 30 at x = 10, so the graph joins up."
+   "Example: a taxi charges $3 per km up to 10 km, then $2 per km after that. For \\(x \\le 10\\), \\(C(x) = 3x\\). For \\(x > 10\\), \\(C(x) = 30 + 2(x - 10)\\).",
+   "To find a value, first check which x-interval the input is in. Then use only that rule. For \\(x = 14\\), use the second rule: \\(C(14) = 30 + 2 \\times 4 = 38\\).",
+   "If the pieces meet at the boundary, the graph has no jump there. Here \\(3 \\times 10 = 30\\) and the second rule also gives 30 at \\(x = 10\\), so the graph joins up."
   ],
   "remember": "Pick the rule by the interval the input falls in, then use only that rule.",
   "a": {
-   "q": "A function is f(x) = 2x + 1 for x < 3, and f(x) = 10 − x for x ≥ 3. What is f(5)?",
+   "q": "A function is \\(f(x) = 2x + 1\\) for \\(x < 3\\), and \\(f(x) = 10 - x\\) for \\(x \\ge 3\\). What is f(5)?",
    "opts": [
     "5",
     "11",
     "6",
-    "−5"
+    "\\(-5\\)"
    ],
-   "why": "Since 5 ≥ 3, use the second rule: f(5) = 10 − 5 = 5. The first rule gives 11, but it only applies for x < 3.",
+   "why": "Since \\(5 \\ge 3\\), use the second rule: \\(f(5) = 10 - 5 = 5\\). The first rule gives 11, but it only applies for \\(x < 3\\).",
    "clue": "Check which interval 5 is in first."
   },
   "b": {
    "d": 3,
-   "q": "Mia's gym charges C(x) = 20x dollars for x ≤ 8 visits, and C(x) = 160 + 12(x − 8) for x > 8. What is the cost for 11 visits?",
+   "q": "Mia's gym charges \\(C(x) = 20x\\) dollars for \\(x \\le 8\\) visits, and \\(C(x) = 160 + 12(x - 8)\\) for \\(x > 8\\). What is the cost for 11 visits?",
    "opts": [
     "$196",
     "$220",
     "$132",
     "$36"
    ],
-   "why": "Since 11 > 8, use the second rule: 160 + 12 × 3 = 160 + 36 = 196. The tempting $220 applies 20 to every visit, but the cheaper rate applies only after 8 visits.",
+   "why": "Since \\(11 > 8\\), use the second rule: \\(160 + 12 \\times 3 = 160 + 36 = 196\\). The tempting $220 applies 20 to every visit, but the cheaper rate applies only after 8 visits.",
    "clue": "Only the visits after the 8th use the second rate, and 160 is the cost of the first 8."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Hybrid functions and modelling",
+   "card": [
+    "A hybrid (piecewise) function uses different rules on different parts of its domain. Each rule is written with the x-values it applies to.",
+    "Example: a taxi charges $3 per km up to 10 km, then $2 per km after that. For x ≤ 10, C(x) = 3x. For x > 10, C(x) = 30 + 2(x − 10).",
+    "To find a value, first check which x-interval the input is in. Then use only that rule. For x = 14, use the second rule: C(14) = 30 + 2 × 4 = 38.",
+    "If the pieces meet at the boundary, the graph has no jump there. Here 3 × 10 = 30 and the second rule also gives 30 at x = 10, so the graph joins up."
+   ],
+   "remember": "Pick the rule by the interval the input falls in, then use only that rule.",
+   "a": {
+    "q": "A function is f(x) = 2x + 1 for x < 3, and f(x) = 10 − x for x ≥ 3. What is f(5)?",
+    "opts": [
+     "5",
+     "11",
+     "6",
+     "−5"
+    ],
+    "why": "Since 5 ≥ 3, use the second rule: f(5) = 10 − 5 = 5. The first rule gives 11, but it only applies for x < 3.",
+    "clue": "Check which interval 5 is in first."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia's gym charges C(x) = 20x dollars for x ≤ 8 visits, and C(x) = 160 + 12(x − 8) for x > 8. What is the cost for 11 visits?",
+    "opts": [
+     "$196",
+     "$220",
+     "$132",
+     "$36"
+    ],
+    "why": "Since 11 > 8, use the second rule: 160 + 12 × 3 = 160 + 36 = 196. The tempting $220 applies 20 to every visit, but the cheaper rate applies only after 8 visits.",
+    "clue": "Only the visits after the 8th use the second rate, and 160 is the cost of the first 8."
+   }
+  }
+ }
 }

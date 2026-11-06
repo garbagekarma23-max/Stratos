@@ -18,7 +18,8 @@
   "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-01T13:35:05Z autoreject: rejected, to be written again (card wording)",
   "2026-11-01T13:41:59Z write: done",
-  "2026-11-01T13:47:17Z check: passed, cleared"
+  "2026-11-01T13:47:17Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -315,44 +316,93 @@
   "card": [
    [
     "Remainder theorem",
-    "When P(x) is divided by (x − a), the remainder is P(a). To find it, substitute x = a. No long division is needed."
+    "When \\(P(x)\\) is divided by \\((x - a)\\), the remainder is \\(P(a)\\). To find it, substitute \\(x = a\\). No long division is needed."
    ],
    [
     "Factor theorem",
-    "If P(a) = 0, then (x − a) is a factor of P(x). If P(a) is not 0, then (x − a) is not a factor."
+    "If \\(P(a) = 0\\), then \\((x - a)\\) is a factor of \\(P(x)\\). If \\(P(a)\\) is not 0, then \\((x - a)\\) is not a factor."
    ],
    [
     "Rational root theorem",
-    "Take P(x) with integer coefficients, which may be negative. Any rational root p/q in lowest terms has p dividing the constant term and q dividing the leading coefficient."
+    "Take \\(P(x)\\) with integer coefficients, which may be negative. Any rational root \\(\\frac{p}{q}\\) in lowest terms has \\(p\\) dividing the constant term and \\(q\\) dividing the leading coefficient."
    ],
    [
     "Example",
-    "Let P(x) = x³ − 2x² − 5x + 6. P(1) = 1 − 2 − 5 + 6 = 0, so (x − 1) is a factor. P(2) = 8 − 8 − 10 + 6 = −4, so dividing by (x − 2) leaves remainder −4."
+    "Let \\(P(x) = x^{3} - 2x^{2} - 5x + 6\\). \\(P(1) = 1 - 2 - 5 + 6 = 0\\), so \\((x - 1)\\) is a factor. \\(P(2) = 8 - 8 - 10 + 6 = -4\\), so dividing by \\((x - 2)\\) leaves remainder \\(-4\\)."
    ]
   ],
-  "remember": "Substitute a into P(x): the answer is the remainder, and 0 means (x − a) is a factor.",
+  "remember": "Substitute \\(a\\) into \\(P(x)\\): the answer is the remainder, and 0 means \\((x - a)\\) is a factor.",
   "a": {
-   "q": "What is the remainder when P(x) = x³ + 2x − 5 is divided by (x − 2)?",
+   "q": "What is the remainder when \\(P(x) = x^{3} + 2x - 5\\) is divided by \\((x - 2)\\)?",
    "opts": [
     "7",
-    "−17",
+    "\\(-17\\)",
     "5",
     "17"
    ],
-   "why": "The remainder is P(2) = 8 + 4 − 5 = 7. The option −17 comes from substituting x = −2, giving −8 − 4 − 5 = −17, but the divisor (x − 2) means x = 2.",
-   "clue": "Substitute the value that makes x − 2 equal zero."
+   "why": "The remainder is \\(P(2) = 8 + 4 - 5 = 7\\). The option \\(-17\\) comes from substituting \\(x = -2\\), giving \\(-8 - 4 - 5 = -17\\), but the divisor \\((x - 2)\\) means \\(x = 2\\).",
+   "clue": "Substitute the value that makes \\(x - 2\\) equal zero."
   },
   "b": {
    "d": 3,
-   "q": "For which value of k is (x + 3) a factor of P(x) = x³ + kx² − 4x − 12?",
+   "q": "For which value of \\(k\\) is \\((x + 3)\\) a factor of \\(P(x) = x^{3} + kx^{2} - 4x - 12\\)?",
    "opts": [
-    "k = 3",
-    "k = −3",
-    "k = 1",
-    "k = −1"
+    "\\(k = 3\\)",
+    "\\(k = -3\\)",
+    "\\(k = 1\\)",
+    "\\(k = -1\\)"
    ],
-   "why": "(x + 3) is a factor when P(−3) = 0. P(−3) = −27 + 9k + 12 − 12 = 9k − 27, so k = 3. Substituting x = 3 instead is a common slip: it gives 9k + 3 = 0, which does not match any option.",
-   "clue": "Set P(−3) = 0 and solve for k."
+   "why": "\\((x + 3)\\) is a factor when \\(P(-3) = 0\\). \\(P(-3) = -27 + 9k + 12 - 12 = 9k - 27\\), so \\(k = 3\\). Substituting \\(x = 3\\) instead is a common slip: it gives \\(9k + 3 = 0\\), which does not match any option.",
+   "clue": "Set \\(P(-3) = 0\\) and solve for \\(k\\)."
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The remainder and factor theorems",
+   "card": [
+    [
+     "Remainder theorem",
+     "When P(x) is divided by (x − a), the remainder is P(a). To find it, substitute x = a. No long division is needed."
+    ],
+    [
+     "Factor theorem",
+     "If P(a) = 0, then (x − a) is a factor of P(x). If P(a) is not 0, then (x − a) is not a factor."
+    ],
+    [
+     "Rational root theorem",
+     "Take P(x) with integer coefficients, which may be negative. Any rational root p/q in lowest terms has p dividing the constant term and q dividing the leading coefficient."
+    ],
+    [
+     "Example",
+     "Let P(x) = x³ − 2x² − 5x + 6. P(1) = 1 − 2 − 5 + 6 = 0, so (x − 1) is a factor. P(2) = 8 − 8 − 10 + 6 = −4, so dividing by (x − 2) leaves remainder −4."
+    ]
+   ],
+   "remember": "Substitute a into P(x): the answer is the remainder, and 0 means (x − a) is a factor.",
+   "a": {
+    "q": "What is the remainder when P(x) = x³ + 2x − 5 is divided by (x − 2)?",
+    "opts": [
+     "7",
+     "−17",
+     "5",
+     "17"
+    ],
+    "why": "The remainder is P(2) = 8 + 4 − 5 = 7. The option −17 comes from substituting x = −2, giving −8 − 4 − 5 = −17, but the divisor (x − 2) means x = 2.",
+    "clue": "Substitute the value that makes x − 2 equal zero."
+   },
+   "b": {
+    "d": 3,
+    "q": "For which value of k is (x + 3) a factor of P(x) = x³ + kx² − 4x − 12?",
+    "opts": [
+     "k = 3",
+     "k = −3",
+     "k = 1",
+     "k = −1"
+    ],
+    "why": "(x + 3) is a factor when P(−3) = 0. P(−3) = −27 + 9k + 12 − 12 = 9k − 27, so k = 3. Substituting x = 3 instead is a common slip: it gives 9k + 3 = 0, which does not match any option.",
+    "clue": "Set P(−3) = 0 and solve for k."
+   }
   }
  }
 }

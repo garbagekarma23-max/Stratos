@@ -30,7 +30,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 may adapt mat-solving-exponential-equations, but is not highly sure, so to the Opus match check",
   "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -131,45 +132,94 @@
   "card": [
    [
     "Same base",
-    "If both sides can be written with the same base, equate the indices. Example: 2^(x+1) = 32 = 2⁵, so x + 1 = 5 and x = 4."
+    "If both sides can be written with the same base, equate the indices. Example: \\(2^{x + 1} = 32 = 2^{5}\\), so \\(x + 1 = 5\\) and \\(x = 4\\)."
    ],
    [
     "Take logs",
-    "If the bases cannot match, take logs of both sides. Example: 3^x = 20 gives x = log₃(20) = log(20) ÷ log(3), which is about 2.73."
+    "If the bases cannot match, take logs of both sides. Example: \\(3^{x} = 20\\) gives \\(x = \\log_{3} 20 = \\frac{\\log_{e} 20}{\\log_{e} 3}\\), which is about 2.73."
    ],
    [
     "Log equations",
-    "Combine the logs into one using the log laws, then rewrite in index form. Example: log₂(x) + log₂(x − 2) = 3 gives log₂(x(x − 2)) = 3, so x² − 2x = 8."
+    "Combine the logs into one using the log laws, then rewrite in index form. Example: \\(\\log_{2}(x) + \\log_{2}(x - 2) = 3\\) gives \\(\\log_{2}(x(x - 2)) = 3\\), so \\(x^{2} - 2x = 8\\)."
    ],
    [
     "Domain check",
-    "A log needs a positive input. Test each answer in the original equation. For x² − 2x = 8, x = 4 or x = −2. Only x = 4 works, as log₂(−2) is undefined."
+    "A log needs a positive input. Test each answer in the original equation. For \\(x^{2} - 2x = 8\\), \\(x = 4\\) or \\(x = -2\\). Only \\(x = 4\\) works, as \\(\\log_{2}(-2)\\) is undefined."
    ]
   ],
   "remember": "Match the base or take logs, then check every answer against the log's domain.",
   "a": {
-   "q": "Solve 3^(2x) = 81.",
+   "q": "Solve \\(3^{2x} = 81\\).",
    "opts": [
-    "x = 2",
-    "x = 4",
-    "x = 9",
-    "x = 40"
+    "\\(x = 2\\)",
+    "\\(x = 4\\)",
+    "\\(x = 9\\)",
+    "\\(x = 40\\)"
    ],
-   "why": "81 = 3⁴, so 2x = 4 and x = 2. Choosing x = 4 comes from stopping at the index 4 and forgetting to divide by 2.",
+   "why": "\\(81 = 3^{4}\\), so \\(2x = 4\\) and \\(x = 2\\). Choosing \\(x = 4\\) comes from stopping at the index 4 and forgetting to divide by 2.",
    "clue": "Write 81 as a power of 3, then equate the indices."
   },
   "b": {
    "d": 3,
-   "q": "Solve log₃(x) + log₃(x − 6) = 3 for x.",
+   "q": "Solve \\(\\log_{3}(x) + \\log_{3}(x - 6) = 3\\) for \\(x\\).",
    "opts": [
-    "x = 9",
-    "x = −3",
-    "x = 9 or x = −3",
-    "x = 27"
+    "\\(x = 9\\)",
+    "\\(x = -3\\)",
+    "\\(x = 9\\) or \\(x = -3\\)",
+    "\\(x = 27\\)"
    ],
-   "why": "Combining gives x(x − 6) = 27, so x² − 6x − 27 = 0 and (x − 9)(x + 3) = 0. The input of a log must be positive, so x = −3 is rejected and only x = 9 remains. Giving both values skips the domain check.",
+   "why": "Combining gives \\(x(x - 6) = 27\\), so \\(x^{2} - 6x - 27 = 0\\) and \\((x - 9)(x + 3) = 0\\). The input of a log must be positive, so \\(x = -3\\) is rejected and only \\(x = 9\\) remains. Giving both values skips the domain check.",
    "clue": "Test each solution in the original equation."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Exponential and logarithmic equations",
+   "card": [
+    [
+     "Same base",
+     "If both sides can be written with the same base, equate the indices. Example: 2^(x+1) = 32 = 2⁵, so x + 1 = 5 and x = 4."
+    ],
+    [
+     "Take logs",
+     "If the bases cannot match, take logs of both sides. Example: 3^x = 20 gives x = log₃(20) = log(20) ÷ log(3), which is about 2.73."
+    ],
+    [
+     "Log equations",
+     "Combine the logs into one using the log laws, then rewrite in index form. Example: log₂(x) + log₂(x − 2) = 3 gives log₂(x(x − 2)) = 3, so x² − 2x = 8."
+    ],
+    [
+     "Domain check",
+     "A log needs a positive input. Test each answer in the original equation. For x² − 2x = 8, x = 4 or x = −2. Only x = 4 works, as log₂(−2) is undefined."
+    ]
+   ],
+   "remember": "Match the base or take logs, then check every answer against the log's domain.",
+   "a": {
+    "q": "Solve 3^(2x) = 81.",
+    "opts": [
+     "x = 2",
+     "x = 4",
+     "x = 9",
+     "x = 40"
+    ],
+    "why": "81 = 3⁴, so 2x = 4 and x = 2. Choosing x = 4 comes from stopping at the index 4 and forgetting to divide by 2.",
+    "clue": "Write 81 as a power of 3, then equate the indices."
+   },
+   "b": {
+    "d": 3,
+    "q": "Solve log₃(x) + log₃(x − 6) = 3 for x.",
+    "opts": [
+     "x = 9",
+     "x = −3",
+     "x = 9 or x = −3",
+     "x = 27"
+    ],
+    "why": "Combining gives x(x − 6) = 27, so x² − 6x − 27 = 0 and (x − 9)(x + 3) = 0. The input of a log must be positive, so x = −3 is rejected and only x = 9 remains. Giving both values skips the domain check.",
+    "clue": "Test each solution in the original equation."
+   }
+  }
+ }
 }

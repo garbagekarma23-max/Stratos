@@ -23,7 +23,8 @@
   "2026-11-01T08:14:07Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:24:33Z write: failed the content check, writing again",
   "2026-11-01T08:33:52Z write: done",
-  "2026-11-01T08:42:07Z check: passed, cleared"
+  "2026-11-01T08:42:07Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -119,44 +120,90 @@
  "final": {
   "title": "Cubic and quartic graphs",
   "card": [
-   "A factorised polynomial shows its x-intercepts. Set each bracket to zero. For y = (x + 2)(x − 1)(x − 3), the x-intercepts are x = −2, 1 and 3.",
+   "A factorised polynomial shows its x-intercepts. Set each bracket to zero. For \\(y = (x + 2)(x - 1)(x - 3)\\), the x-intercepts are \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\).",
    [
     "Single factor",
-    "a bracket that appears once, such as (x − 1). The graph crosses the x-axis at that point."
+    "a bracket that appears once, such as \\((x - 1)\\). The graph crosses the x-axis at that point."
    ],
    [
     "Squared factor",
-    "a bracket that appears twice, such as (x − 1)². The graph touches the axis and turns back without crossing."
+    "a bracket that appears twice, such as \\((x - 1)^{2}\\). The graph touches the axis at a turning point, without crossing."
    ],
    [
     "Cubed factor",
-    "a bracket that appears three times, such as (x − 1)³. The graph flattens at the axis as it crosses."
+    "a bracket that appears three times, such as \\((x - 1)^{3}\\). The graph crosses the axis at a stationary point of inflection."
    ]
   ],
-  "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches, a cubed factor flattens.",
+  "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches at a turning point, a cubed factor crosses at a point of inflection.",
   "a": {
-   "q": "For y = (x − 4)²(x + 1), what does the graph do at x = 4?",
+   "q": "For \\(y = (x - 4)^{2}(x + 1)\\), what does the graph do at \\(x = 4\\)?",
    "opts": [
-    "Touches the x-axis and turns back",
-    "Crosses the x-axis without flattening",
-    "Flattens as it crosses the x-axis",
+    "Touches the x-axis at a turning point",
+    "Crosses the x-axis with no stationary point",
+    "Crosses the x-axis at a point of inflection",
     "Does not meet the x-axis"
    ],
-   "why": "The factor (x − 4) is squared, so x = 4 is an x-intercept where the graph touches the axis and turns. A single factor would cross. A cubed factor would flatten as it crosses.",
-   "clue": "Look at the power on the bracket (x − 4)."
+   "why": "The factor \\((x - 4)\\) is squared, so \\(x = 4\\) is an x-intercept where the graph touches the axis at a turning point. A single factor would cross. A cubed factor would cross at a stationary point of inflection.",
+   "clue": "Look at the power on the bracket \\((x - 4)\\)."
   },
   "b": {
    "d": 3,
-   "q": "A graph is y = (x + 2)(x − 3)³. What does it do at x = 3 and at x = −2?",
+   "q": "A graph is \\(y = (x + 2)(x - 3)^{3}\\). What does it do at \\(x = 3\\) and at \\(x = -2\\)?",
    "opts": [
-    "Flattens as it crosses at x = 3, crosses at x = −2",
-    "Crosses at x = 3, flattens as it crosses at x = −2",
-    "Touches and turns at x = 3, crosses at x = −2",
-    "Flattens as it crosses at both x = 3 and x = −2"
+    "Point of inflection at \\(x = 3\\), crosses at \\(x = -2\\)",
+    "Crosses at \\(x = 3\\), point of inflection at \\(x = -2\\)",
+    "Turning point at \\(x = 3\\), crosses at \\(x = -2\\)",
+    "Points of inflection at both \\(x = 3\\) and \\(x = -2\\)"
    ],
-   "why": "The bracket (x − 3) is cubed, so the graph flattens as it crosses at x = 3. The bracket (x + 2) appears once, so the graph simply crosses at x = −2. The powers belong to the brackets, not to the numbers inside them.",
+   "why": "The bracket \\((x - 3)\\) is cubed, so the graph crosses at \\(x = 3\\) with a stationary point of inflection. The bracket \\((x + 2)\\) appears once, so the graph simply crosses at \\(x = -2\\). The powers belong to the brackets, not to the numbers inside them.",
    "clue": "Match each power to its own bracket, then set each bracket to zero."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Cubic and quartic graphs",
+   "card": [
+    "A factorised polynomial shows its x-intercepts. Set each bracket to zero. For y = (x + 2)(x − 1)(x − 3), the x-intercepts are x = −2, 1 and 3.",
+    [
+     "Single factor",
+     "a bracket that appears once, such as (x − 1). The graph crosses the x-axis at that point."
+    ],
+    [
+     "Squared factor",
+     "a bracket that appears twice, such as (x − 1)². The graph touches the axis and turns back without crossing."
+    ],
+    [
+     "Cubed factor",
+     "a bracket that appears three times, such as (x − 1)³. The graph flattens at the axis as it crosses."
+    ]
+   ],
+   "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches, a cubed factor flattens.",
+   "a": {
+    "q": "For y = (x − 4)²(x + 1), what does the graph do at x = 4?",
+    "opts": [
+     "Touches the x-axis and turns back",
+     "Crosses the x-axis without flattening",
+     "Flattens as it crosses the x-axis",
+     "Does not meet the x-axis"
+    ],
+    "why": "The factor (x − 4) is squared, so x = 4 is an x-intercept where the graph touches the axis and turns. A single factor would cross. A cubed factor would flatten as it crosses.",
+    "clue": "Look at the power on the bracket (x − 4)."
+   },
+   "b": {
+    "d": 3,
+    "q": "A graph is y = (x + 2)(x − 3)³. What does it do at x = 3 and at x = −2?",
+    "opts": [
+     "Flattens as it crosses at x = 3, crosses at x = −2",
+     "Crosses at x = 3, flattens as it crosses at x = −2",
+     "Touches and turns at x = 3, crosses at x = −2",
+     "Flattens as it crosses at both x = 3 and x = −2"
+    ],
+    "why": "The bracket (x − 3) is cubed, so the graph flattens as it crosses at x = 3. The bracket (x + 2) appears once, so the graph simply crosses at x = −2. The powers belong to the brackets, not to the numbers inside them.",
+    "clue": "Match each power to its own bracket, then set each bracket to zero."
+   }
+  }
+ }
 }

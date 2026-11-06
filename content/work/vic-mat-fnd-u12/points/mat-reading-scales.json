@@ -17,7 +17,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:05Z write: done",
-  "2026-11-01T08:24:32Z check: passed, cleared"
+  "2026-11-01T08:24:32Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -98,7 +99,7 @@
    "For a jug, read at eye level, at the flat top of the liquid. Always include the unit, such as mL, °C or kg.",
    [
     "Example",
-    "The marks 0 and 100 mL have 5 spaces between them. Each space is 100 ÷ 5 = 20 mL. The third mark after 0 reads 60 mL."
+    "The marks 0 and 100 mL have 5 spaces between them. Each space is \\(100 \\div 5 = 20\\) mL. The third mark after 0 reads 60 mL."
    ]
   ],
   "remember": "Work out what each small mark is worth before you read the value.",
@@ -110,7 +111,7 @@
     "4 mL",
     "100 mL"
    ],
-   "why": "The gap is 300 − 200 = 100 mL, shared over 4 spaces: 100 ÷ 4 = 25 mL. Using 20 mL would mean dividing by 5, which is the number of marks, not the number of spaces.",
+   "why": "The gap is \\(300 - 200 = 100\\) mL, shared over 4 spaces: \\(100 \\div 4 = 25\\) mL. Using 20 mL would mean dividing by 5, which is the number of marks, not the number of spaces.",
    "clue": "Divide the gap between the numbers by the number of spaces."
   },
   "b": {
@@ -126,5 +127,45 @@
    "clue": "What is each small mark worth on this scale?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Reading scales",
+   "card": [
+    "First find what each small mark is worth. Pick two marked numbers next to each other, find the gap between them, then divide by the number of spaces.",
+    "Read the scale at the mark the pointer or liquid is closest to. Give the answer to the nearest marked unit.",
+    "For a jug, read at eye level, at the flat top of the liquid. Always include the unit, such as mL, °C or kg.",
+    [
+     "Example",
+     "The marks 0 and 100 mL have 5 spaces between them. Each space is 100 ÷ 5 = 20 mL. The third mark after 0 reads 60 mL."
+    ]
+   ],
+   "remember": "Work out what each small mark is worth before you read the value.",
+   "a": {
+    "q": "On a jug, the marks 200 mL and 300 mL have 4 equal spaces between them. What does each small mark count for?",
+    "opts": [
+     "25 mL",
+     "20 mL",
+     "4 mL",
+     "100 mL"
+    ],
+    "why": "The gap is 300 − 200 = 100 mL, shared over 4 spaces: 100 ÷ 4 = 25 mL. Using 20 mL would mean dividing by 5, which is the number of marks, not the number of spaces.",
+    "clue": "Divide the gap between the numbers by the number of spaces."
+   },
+   "b": {
+    "d": 3,
+    "q": "A thermometer is marked every 2 °C. The 20 °C mark is labelled, and the liquid ends one small mark above 20 °C. What is the reading?",
+    "opts": [
+     "22 °C",
+     "21 °C",
+     "20 °C",
+     "24 °C"
+    ],
+    "why": "Each small mark is worth 2 °C, so one mark above 20 °C is 22 °C. Reading 21 °C treats each mark as 1 °C, which the scale does not show.",
+    "clue": "What is each small mark worth on this scale?"
+   }
+  }
+ }
 }

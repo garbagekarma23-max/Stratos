@@ -35,7 +35,8 @@
   "2026-11-02T06:22:57Z review: rejected, to be written again",
   "2026-11-03T10:25:23Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
-  "2026-11-03T10:44:36Z check: passed, cleared"
+  "2026-11-03T10:44:36Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -278,10 +279,56 @@
     "6",
     "32"
    ],
-   "why": "The degrees add to 4 + 3 + 3 + 2 + 2 + 2 = 16. Each road adds 1 to the degree at both of its ends, so it is counted twice: 16 ÷ 2 = 8 roads. The answer 16 forgets to halve.",
+   "why": "The degrees add to \\(4 + 3 + 3 + 2 + 2 + 2 = 16\\). Each road adds 1 to the degree at both of its ends, so it is counted twice: \\(16 \\div 2 = 8\\) roads. The answer 16 forgets to halve.",
    "clue": "Each road is counted once at each end."
   }
  },
  "cleared_by": "checker",
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Vertices, edges and degree",
+   "card": [
+    [
+     "Vertex",
+     "a point on a graph, drawn as a dot. It can stand for a place, a person or a team."
+    ],
+    [
+     "Edge",
+     "a line joining two vertices. It can stand for a road, a friendship or a game between two teams."
+    ],
+    [
+     "Degree",
+     "the number of edges that meet a vertex. With edges AB, AC, AD and BC, vertex A has degree 3 and D has degree 1."
+    ],
+    "Each edge adds 1 to the degree at each of its two ends. So the degrees of all the vertices add up to twice the number of edges."
+   ],
+   "remember": "Degree counts the edges at one vertex. All the degrees together make twice the number of edges.",
+   "a": {
+    "q": "A graph has vertices P, Q, R, S and T, with edges PQ, QR, QS, RS and ST. What is the degree of vertex S?",
+    "opts": [
+     "3",
+     "2",
+     "5",
+     "4"
+    ],
+    "why": "The edges that meet S are QS, RS and ST, so its degree is 3. The answer 5 is the number of edges in the whole graph, not the edges at S.",
+    "clue": "List only the edges that include the letter S."
+   },
+   "b": {
+    "d": 3,
+    "q": "A network of 6 towns has roads joining them. The towns have degrees 4, 3, 3, 2, 2 and 2. How many roads are in the network?",
+    "opts": [
+     "8",
+     "16",
+     "6",
+     "32"
+    ],
+    "why": "The degrees add to 4 + 3 + 3 + 2 + 2 + 2 = 16. Each road adds 1 to the degree at both of its ends, so it is counted twice: 16 ÷ 2 = 8 roads. The answer 16 forgets to halve.",
+    "clue": "Each road is counted once at each end."
+   }
+  }
+ }
 }

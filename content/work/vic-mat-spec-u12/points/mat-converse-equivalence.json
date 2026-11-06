@@ -14,7 +14,8 @@
   "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-01T13:35:05Z autoreject: rejected, to be written again (a other, b other, b wording)",
   "2026-11-01T13:41:59Z write: done",
-  "2026-11-01T13:47:17Z check: passed, cleared"
+  "2026-11-01T13:47:17Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 4,
@@ -280,27 +281,64 @@
   ],
   "remember": "Swapping the parts of a true statement may make it false. If both directions are true, P and Q are equivalent.",
   "a": {
-   "q": "For a whole number n, what is the converse of \"If n is divisible by 10, then n is divisible by 5\"?",
+   "q": "For a whole number \\(n\\), what is the converse of \"If \\(n\\) is divisible by 10, then \\(n\\) is divisible by 5\"?",
    "opts": [
-    "If n is divisible by 5, then n is divisible by 10",
-    "If n is not divisible by 10, then n is not divisible by 5",
-    "If n is not divisible by 5, then n is not divisible by 10",
-    "If n is divisible by 10, then n is not divisible by 5"
+    "If \\(n\\) is divisible by 5, then \\(n\\) is divisible by 10",
+    "If \\(n\\) is not divisible by 10, then \\(n\\) is not divisible by 5",
+    "If \\(n\\) is not divisible by 5, then \\(n\\) is not divisible by 10",
+    "If \\(n\\) is divisible by 10, then \\(n\\) is not divisible by 5"
    ],
    "why": "The converse only swaps the two parts, so it starts with divisible by 5 and ends with divisible by 10. The options with \"not\" change the parts by negating them, which the converse never does.",
    "clue": "Swap the two parts without changing either one."
   },
   "b": {
    "d": 3,
-   "q": "Which statement about \"If x = 3, then x² = 9\" and its converse is correct?",
+   "q": "Which statement about \"If \\(x = 3\\), then \\(x^{2} = 9\\)\" and its converse is correct?",
    "opts": [
-    "The converse is false, because x = −3 gives x² = 9",
-    "The converse is true, so x = 3 and x² = 9 are equivalent",
-    "The converse is false, because x = 3 does not give x² = 9",
+    "The converse is false, because \\(x = -3\\) gives \\(x^{2} = 9\\)",
+    "The converse is true, so \\(x = 3\\) and \\(x^{2} = 9\\) are equivalent",
+    "The converse is false, because \\(x = 3\\) does not give \\(x^{2} = 9\\)",
     "The original is false, so the converse cannot be true"
    ],
-   "why": "The converse is \"If x² = 9, then x = 3\". Taking x = −3 gives x² = 9 but x ≠ 3, so this counterexample makes the converse false. The original is true but the converse is false, so P and Q are not equivalent.",
+   "why": "The converse is \"If \\(x^{2} = 9\\), then \\(x = 3\\)\". Taking \\(x = -3\\) gives \\(x^{2} = 9\\) but \\(x \\ne 3\\), so this counterexample makes the converse false. The original is true but the converse is false, so P and Q are not equivalent.",
    "clue": "Write the converse first, then test whether Q can be true while P is false."
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Converse and equivalence",
+   "card": [
+    "The converse of \"if P then Q\" swaps the two parts to give \"if Q then P\". Neither part is changed or negated. Example: \"If a shape is a square, then it has four sides\" has the converse \"If a shape has four sides, then it is a square\".",
+    "The converse is not always true when the original is true. In the example, a rectangle has four sides but is not a square.",
+    "To show a converse is false, find one case where Q is true and P is false. One such case is called a counterexample.",
+    "If \"if P then Q\" and its converse \"if Q then P\" are both true, then P and Q are equivalent. This is written \"P if and only if Q\"."
+   ],
+   "remember": "Swapping the parts of a true statement may make it false. If both directions are true, P and Q are equivalent.",
+   "a": {
+    "q": "For a whole number n, what is the converse of \"If n is divisible by 10, then n is divisible by 5\"?",
+    "opts": [
+     "If n is divisible by 5, then n is divisible by 10",
+     "If n is not divisible by 10, then n is not divisible by 5",
+     "If n is not divisible by 5, then n is not divisible by 10",
+     "If n is divisible by 10, then n is not divisible by 5"
+    ],
+    "why": "The converse only swaps the two parts, so it starts with divisible by 5 and ends with divisible by 10. The options with \"not\" change the parts by negating them, which the converse never does.",
+    "clue": "Swap the two parts without changing either one."
+   },
+   "b": {
+    "d": 3,
+    "q": "Which statement about \"If x = 3, then x² = 9\" and its converse is correct?",
+    "opts": [
+     "The converse is false, because x = −3 gives x² = 9",
+     "The converse is true, so x = 3 and x² = 9 are equivalent",
+     "The converse is false, because x = 3 does not give x² = 9",
+     "The original is false, so the converse cannot be true"
+    ],
+    "why": "The converse is \"If x² = 9, then x = 3\". Taking x = −3 gives x² = 9 but x ≠ 3, so this counterexample makes the converse false. The original is true but the converse is false, so P and Q are not equivalent.",
+    "clue": "Write the converse first, then test whether Q can be true while P is false."
+   }
   }
  }
 }

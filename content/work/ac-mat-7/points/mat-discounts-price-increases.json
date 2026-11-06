@@ -7,7 +7,8 @@
  "log": [
   "2026-11-04T09:23:39Z new, write",
   "2026-11-04T09:36:56Z write: done",
-  "2026-11-04T09:47:07Z check: passed, cleared"
+  "2026-11-04T09:47:07Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 1,
@@ -79,13 +80,13 @@
    "A percentage discount lowers a price. A percentage increase raises it. Both are a percentage of the original price.",
    [
     "Discount",
-    "find the percentage of the price, then subtract it. For 20% off $50: 20% of $50 is $10, so the sale price is $50 − $10 = $40."
+    "find the percentage of the price, then subtract it. For 20% off $50: 20% of $50 is $10, so the sale price is \\(\\$50 - \\$10 = \\$40\\)."
    ],
    [
     "Increase",
     "find the percentage of the price, then add it. GST is an increase of 10%. On $30, 10% is $3, so the price with GST is $33."
    ],
-   "To find 10% divide by 10. To find 5% halve the 10%. Add or subtract the amounts to build other percentages, such as 15% = 10% + 5%."
+   "To find 10% divide by 10. To find 5% halve the 10%. Add or subtract the amounts to build other percentages, such as \\(15\\% = 10\\% + 5\\%\\)."
   ],
   "remember": "Find the percentage of the original price, then take it off for a discount or add it on for an increase.",
   "a": {
@@ -96,7 +97,7 @@
     "$100",
     "$55"
    ],
-   "why": "25% of $80 is $20, and a discount is taken off, so the sale price is $80 − $20 = $60. The answer $20 is the amount saved, not the price to pay.",
+   "why": "25% of $80 is $20, and a discount is taken off, so the sale price is \\(\\$80 - \\$20 = \\$60\\). The answer $20 is the amount saved, not the price to pay.",
    "clue": "Subtract the discount from the original price."
   },
   "b": {
@@ -108,9 +109,52 @@
     "$54",
     "$70"
    ],
-   "why": "10% of $60 is $6. GST is added, so the price is $60 + $6 = $66. The answer $54 comes from taking the GST off instead of adding it.",
+   "why": "10% of $60 is $6. GST is added, so the price is \\(\\$60 + \\$6 = \\$66\\). The answer $54 comes from taking the GST off instead of adding it.",
    "clue": "Find 10% by dividing by 10, then add it on."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Discounts and price increases",
+   "card": [
+    "A percentage discount lowers a price. A percentage increase raises it. Both are a percentage of the original price.",
+    [
+     "Discount",
+     "find the percentage of the price, then subtract it. For 20% off $50: 20% of $50 is $10, so the sale price is $50 − $10 = $40."
+    ],
+    [
+     "Increase",
+     "find the percentage of the price, then add it. GST is an increase of 10%. On $30, 10% is $3, so the price with GST is $33."
+    ],
+    "To find 10% divide by 10. To find 5% halve the 10%. Add or subtract the amounts to build other percentages, such as 15% = 10% + 5%."
+   ],
+   "remember": "Find the percentage of the original price, then take it off for a discount or add it on for an increase.",
+   "a": {
+    "q": "A skateboard costs $80. It is on sale for 25% off. What is the sale price?",
+    "opts": [
+     "$60",
+     "$20",
+     "$100",
+     "$55"
+    ],
+    "why": "25% of $80 is $20, and a discount is taken off, so the sale price is $80 − $20 = $60. The answer $20 is the amount saved, not the price to pay.",
+    "clue": "Subtract the discount from the original price."
+   },
+   "b": {
+    "d": 3,
+    "q": "A bike helmet at a shop in Perth costs $60 before GST. GST of 10% is added. What is the price with GST?",
+    "opts": [
+     "$66",
+     "$6",
+     "$54",
+     "$70"
+    ],
+    "why": "10% of $60 is $6. GST is added, so the price is $60 + $6 = $66. The answer $54 comes from taking the GST off instead of adding it.",
+    "clue": "Find 10% by dividing by 10, then add it on."
+   }
+  }
+ }
 }

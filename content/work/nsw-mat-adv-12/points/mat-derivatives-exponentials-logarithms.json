@@ -7,7 +7,8 @@
   "2026-10-26T13:29:57Z new, write",
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: done",
-  "2026-10-27T01:08:33Z check: passed, cleared"
+  "2026-10-27T01:08:33Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -71,35 +72,72 @@
  "final": {
   "title": "Derivatives of exponentials and logarithms",
   "card": [
-   "The derivative of eˣ is eˣ. For a general power, use the chain rule: the derivative of e^f(x) is f'(x) × e^f(x).",
-   "The derivative of ln x is 1/x. In general, the derivative of ln f(x) is f'(x)/f(x), which is the derivative of the inside divided by the inside.",
-   "Example: for y = e^(3x²), the inside is 3x², with derivative 6x. So dy/dx = 6x × e^(3x²).",
-   "Example: for y = ln(x² + 1), the inside is x² + 1, with derivative 2x. So dy/dx = 2x/(x² + 1)."
+   "The derivative of \\(e^{x}\\) is \\(e^{x}\\). For a general power, use the chain rule: the derivative of \\(e^{f(x)}\\) is \\(f'(x) \\times e^{f(x)}\\).",
+   "The derivative of \\(\\ln x\\) is \\(\\frac{1}{x}\\). In general, the derivative of \\(\\ln f(x)\\) is \\(\\frac{f'(x)}{f(x)}\\), which is the derivative of the inside divided by the inside.",
+   "Example: for \\(y = e^{3x^{2}}\\), the inside is \\(3x^{2}\\), with derivative \\(6x\\). So \\(\\frac{dy}{dx} = 6x \\times e^{3x^{2}}\\).",
+   "Example: for \\(y = \\ln(x^{2} + 1)\\), the inside is \\(x^{2} + 1\\), with derivative \\(2x\\). So \\(\\frac{dy}{dx} = \\frac{2x}{x^{2} + 1}\\)."
   ],
-  "remember": "Find the derivative of the inside. Multiply it by e^f(x), or put it over f(x) for ln.",
+  "remember": "Find the derivative of the inside. Multiply it by \\(e^{f(x)}\\), or put it over \\(f(x)\\) for \\(\\ln f(x)\\).",
   "a": {
-   "q": "What is the derivative of e^(5x)?",
+   "q": "What is the derivative of \\(e^{5x}\\)?",
    "opts": [
-    "5e^(5x)",
-    "e^(5x)",
-    "5x e^(5x−1)",
-    "e^(5x)/5"
+    "\\(5e^{5x}\\)",
+    "\\(e^{5x}\\)",
+    "\\(5x e^{5x - 1}\\)",
+    "\\(\\frac{e^{5x}}{5}\\)"
    ],
-   "why": "The inside is 5x, with derivative 5. So the derivative is 5 × e^(5x). Leaving out the 5 is tempting because eˣ is its own derivative, but the chain rule needs the derivative of the inside.",
+   "why": "The inside is \\(5x\\), with derivative 5. So the derivative is \\(5 \\times e^{5x}\\). Leaving out the 5 is tempting because \\(e^{x}\\) is its own derivative, but the chain rule needs the derivative of the inside.",
    "clue": "Multiply by the derivative of the power."
   },
   "b": {
    "d": 3,
-   "q": "Mia is given y = ln(x³ + 4x). What is dy/dx?",
+   "q": "Mia is given \\(y = \\ln(x^{3} + 4x)\\). What is \\(\\frac{dy}{dx}\\)?",
    "opts": [
-    "(3x² + 4)/(x³ + 4x)",
-    "1/(x³ + 4x)",
-    "(x³ + 4x)/(3x² + 4)",
-    "(3x² + 4) ln(x³ + 4x)"
+    "\\(\\frac{3x^{2} + 4}{x^{3} + 4x}\\)",
+    "\\(\\frac{1}{x^{3} + 4x}\\)",
+    "\\(\\frac{x^{3} + 4x}{3x^{2} + 4}\\)",
+    "\\((3x^{2} + 4) \\ln(x^{3} + 4x)\\)"
    ],
-   "why": "The inside is x³ + 4x, with derivative 3x² + 4. The derivative of ln f(x) is f'(x)/f(x), so the answer is (3x² + 4)/(x³ + 4x). Writing only 1/(x³ + 4x) skips the derivative of the inside.",
+   "why": "The inside is \\(x^{3} + 4x\\), with derivative \\(3x^{2} + 4\\). The derivative of \\(\\ln f(x)\\) is \\(\\frac{f'(x)}{f(x)}\\), so the answer is \\(\\frac{3x^{2} + 4}{x^{3} + 4x}\\). Writing only \\(\\frac{1}{x^{3} + 4x}\\) skips the derivative of the inside.",
    "clue": "Put the derivative of the inside on top."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Derivatives of exponentials and logarithms",
+   "card": [
+    "The derivative of eˣ is eˣ. For a general power, use the chain rule: the derivative of e^f(x) is f'(x) × e^f(x).",
+    "The derivative of ln x is 1/x. In general, the derivative of ln f(x) is f'(x)/f(x), which is the derivative of the inside divided by the inside.",
+    "Example: for y = e^(3x²), the inside is 3x², with derivative 6x. So dy/dx = 6x × e^(3x²).",
+    "Example: for y = ln(x² + 1), the inside is x² + 1, with derivative 2x. So dy/dx = 2x/(x² + 1)."
+   ],
+   "remember": "Find the derivative of the inside. Multiply it by e^f(x), or put it over f(x) for ln.",
+   "a": {
+    "q": "What is the derivative of e^(5x)?",
+    "opts": [
+     "5e^(5x)",
+     "e^(5x)",
+     "5x e^(5x−1)",
+     "e^(5x)/5"
+    ],
+    "why": "The inside is 5x, with derivative 5. So the derivative is 5 × e^(5x). Leaving out the 5 is tempting because eˣ is its own derivative, but the chain rule needs the derivative of the inside.",
+    "clue": "Multiply by the derivative of the power."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia is given y = ln(x³ + 4x). What is dy/dx?",
+    "opts": [
+     "(3x² + 4)/(x³ + 4x)",
+     "1/(x³ + 4x)",
+     "(x³ + 4x)/(3x² + 4)",
+     "(3x² + 4) ln(x³ + 4x)"
+    ],
+    "why": "The inside is x³ + 4x, with derivative 3x² + 4. The derivative of ln f(x) is f'(x)/f(x), so the answer is (3x² + 4)/(x³ + 4x). Writing only 1/(x³ + 4x) skips the derivative of the inside.",
+    "clue": "Put the derivative of the inside on top."
+   }
+  }
+ }
 }

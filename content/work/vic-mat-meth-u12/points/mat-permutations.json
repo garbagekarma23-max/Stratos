@@ -7,7 +7,8 @@
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:34Z write: done",
-  "2026-11-01T08:14:07Z check: passed, cleared"
+  "2026-11-01T08:14:07Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 1,
@@ -78,11 +79,11 @@
   "card": [
    [
     "Multiplication",
-    "When choices are made one after another, multiply the number of ways for each step. A meal with 3 mains and then 4 drinks gives 3 × 4 = 12 meals."
+    "When choices are made one after another, multiply the number of ways for each step. A meal with 3 mains and then 4 drinks gives \\(3 \\times 4 = 12\\) meals."
    ],
    [
     "Addition",
-    "When you pick one option from separate groups, and only one choice is made, add the numbers. Choosing one book from 5 novels or 6 atlases gives 5 + 6 = 11 books."
+    "When you pick one option from separate groups, and only one choice is made, add the numbers. Choosing one book from 5 novels or 6 atlases gives \\(5 + 6 = 11\\) books."
    ],
    "Ask first: do I make one choice after another, or do I pick just one item from different groups?",
    "Some problems use both. Work out each part, then combine them with the right principle."
@@ -96,7 +97,7 @@
     "16",
     "25"
    ],
-   "why": "The two choices are made one after another, so multiply: 4 × 5 = 20. Adding gives 9, which would count only a single item from the two groups, not an outfit of both.",
+   "why": "The two choices are made one after another, so multiply: \\(4 \\times 5 = 20\\). Adding gives 9, which would count only a single item from the two groups, not an outfit of both.",
    "clue": "She picks a hat and then a scarf."
   },
   "b": {
@@ -108,9 +109,52 @@
     "72",
     "24"
    ],
-   "why": "The drink is one choice from two groups, so add: 6 + 4 = 10 drinks. The snack comes after, so multiply: 10 × 3 = 30. Using 6 × 4 × 3 = 72 wrongly multiplies the two drink groups, which are alternatives.",
+   "why": "The drink is one choice from two groups, so add: \\(6 + 4 = 10\\) drinks. The snack comes after, so multiply: \\(10 \\times 3 = 30\\). Using \\(6 \\times 4 \\times 3 = 72\\) wrongly multiplies the two drink groups, which are alternatives.",
    "clue": "Hot and cold drinks are alternatives. The snack is a second step."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Counting principles",
+   "card": [
+    [
+     "Multiplication",
+     "When choices are made one after another, multiply the number of ways for each step. A meal with 3 mains and then 4 drinks gives 3 × 4 = 12 meals."
+    ],
+    [
+     "Addition",
+     "When you pick one option from separate groups, and only one choice is made, add the numbers. Choosing one book from 5 novels or 6 atlases gives 5 + 6 = 11 books."
+    ],
+    "Ask first: do I make one choice after another, or do I pick just one item from different groups?",
+    "Some problems use both. Work out each part, then combine them with the right principle."
+   ],
+   "remember": "Steps one after another: multiply. Alternatives: add.",
+   "a": {
+    "q": "Priya chooses one of 4 hats and then one of 5 scarves. How many hat and scarf outfits are possible?",
+    "opts": [
+     "20",
+     "9",
+     "16",
+     "25"
+    ],
+    "why": "The two choices are made one after another, so multiply: 4 × 5 = 20. Adding gives 9, which would count only a single item from the two groups, not an outfit of both.",
+    "clue": "She picks a hat and then a scarf."
+   },
+   "b": {
+    "d": 3,
+    "q": "A café sells 6 hot drinks and 4 cold drinks. Sam buys one drink, then picks one of 3 snacks. How many drink and snack choices are there?",
+    "opts": [
+     "30",
+     "13",
+     "72",
+     "24"
+    ],
+    "why": "The drink is one choice from two groups, so add: 6 + 4 = 10 drinks. The snack comes after, so multiply: 10 × 3 = 30. Using 6 × 4 × 3 = 72 wrongly multiplies the two drink groups, which are alternatives.",
+    "clue": "Hot and cold drinks are alternatives. The snack is a second step."
+   }
+  }
+ }
 }

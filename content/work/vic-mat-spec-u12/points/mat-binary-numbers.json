@@ -18,7 +18,8 @@
   "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-01T13:35:05Z autoreject: rejected, to be written again (remember wording)",
   "2026-11-01T13:41:59Z write: done",
-  "2026-11-01T13:47:17Z check: passed, cleared"
+  "2026-11-01T13:47:17Z check: passed, cleared",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -267,8 +268,8 @@
   "card": [
    "Binary is base 2. It uses only the digits 0 and 1. Computers store numbers this way because a circuit can be off (0) or on (1).",
    "Place values go up in powers of 2 from the right: 1, 2, 4, 8, 16 and so on. Each place is worth double the one to its right.",
-   "To convert to base 10, add the place values where there is a 1. For example, 1011 = 8 + 2 + 1 = 11.",
-   "To convert from base 10, take away the largest power of 2 that fits, and repeat. For 13: 8 fits, leaving 5. 4 fits, leaving 1. 1 fits. So 13 = 8 + 4 + 1 = 1101."
+   "To convert to base 10, add the place values where there is a 1. For example, \\(1011 = 8 + 2 + 1 = 11\\).",
+   "To convert from base 10, take away the largest power of 2 that fits, and repeat. For 13: 8 fits, leaving 5. 4 fits, leaving 1. 1 fits. So \\(13 = 8 + 4 + 1 = 1101\\)."
   ],
   "remember": "Binary place values double from the right: 1, 2, 4, 8, 16. Add the place values that have a 1 to get base 10.",
   "a": {
@@ -279,7 +280,7 @@
     "11",
     "20"
    ],
-   "why": "The places with a 1 are 16, 4 and 2, and 16 + 4 + 2 = 22. The answer 20 comes from leaving out the 2. The answer 26 comes from using 8 instead of 4: 16 + 8 + 2 = 26.",
+   "why": "The places with a 1 are 16, 4 and 2, and \\(16 + 4 + 2 = 22\\). The answer 20 comes from leaving out the 2. The answer 26 comes from using 8 instead of 4: \\(16 + 8 + 2 = 26\\).",
    "clue": "Write the place values 16, 8, 4, 2, 1 under the digits."
   },
   "b": {
@@ -291,8 +292,45 @@
     "100011",
     "110101"
    ],
-   "why": "32 fits in 37, leaving 5. Then 4 fits, leaving 1, and 1 fits. So 37 = 32 + 4 + 1, which is 100101. The option 101001 equals 32 + 8 + 1 = 41, so it has the 4 in the wrong place.",
+   "why": "32 fits in 37, leaving 5. Then 4 fits, leaving 1, and 1 fits. So \\(37 = 32 + 4 + 1\\), which is 100101. The option 101001 equals \\(32 + 8 + 1 = 41\\), so it has the 4 in the wrong place.",
    "clue": "Take away 32 first, then work with what is left."
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Binary numbers",
+   "card": [
+    "Binary is base 2. It uses only the digits 0 and 1. Computers store numbers this way because a circuit can be off (0) or on (1).",
+    "Place values go up in powers of 2 from the right: 1, 2, 4, 8, 16 and so on. Each place is worth double the one to its right.",
+    "To convert to base 10, add the place values where there is a 1. For example, 1011 = 8 + 2 + 1 = 11.",
+    "To convert from base 10, take away the largest power of 2 that fits, and repeat. For 13: 8 fits, leaving 5. 4 fits, leaving 1. 1 fits. So 13 = 8 + 4 + 1 = 1101."
+   ],
+   "remember": "Binary place values double from the right: 1, 2, 4, 8, 16. Add the place values that have a 1 to get base 10.",
+   "a": {
+    "q": "What is 10110 in base 10?",
+    "opts": [
+     "22",
+     "26",
+     "11",
+     "20"
+    ],
+    "why": "The places with a 1 are 16, 4 and 2, and 16 + 4 + 2 = 22. The answer 20 comes from leaving out the 2. The answer 26 comes from using 8 instead of 4: 16 + 8 + 2 = 26.",
+    "clue": "Write the place values 16, 8, 4, 2, 1 under the digits."
+   },
+   "b": {
+    "d": 2,
+    "q": "What is 37 written in binary?",
+    "opts": [
+     "100101",
+     "101001",
+     "100011",
+     "110101"
+    ],
+    "why": "32 fits in 37, leaving 5. Then 4 fits, leaving 1, and 1 fits. So 37 = 32 + 4 + 1, which is 100101. The option 101001 equals 32 + 8 + 1 = 41, so it has the 4 in the wrong place.",
+    "clue": "Take away 32 first, then work with what is left."
+   }
   }
  }
 }

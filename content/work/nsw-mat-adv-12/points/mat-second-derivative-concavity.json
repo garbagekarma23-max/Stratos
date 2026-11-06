@@ -10,7 +10,8 @@
   "2026-10-27T01:08:33Z write: done",
   "2026-10-27T01:22:58Z check: passed, cleared",
   "2026-10-29T11:03:06Z rebalance: new wrong options for question b, waiting for the check",
-  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b"
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "write": 3,
@@ -88,37 +89,37 @@
    "The second derivative f''(x) is the derivative of f'(x). It tells you how the gradient is changing.",
    [
     "Concave up",
-    "f''(x) > 0. The gradient is increasing and the curve bends upwards like a cup."
+    "\\(f''(x) > 0\\). The gradient is increasing and the curve bends upwards like a cup."
    ],
    [
     "Concave down",
-    "f''(x) < 0. The gradient is decreasing and the curve bends downwards like a cap."
+    "\\(f''(x) < 0\\). The gradient is decreasing and the curve bends downwards like a cap."
    ],
-   "A point of inflection is where concavity changes, so f''(x) changes sign there. Example: f(x) = x³ has f'(x) = 3x² and f''(x) = 6x. This is negative for x < 0 and positive for x > 0, so the concavity changes at x = 0."
+   "A point of inflection is where concavity changes, so f''(x) changes sign there. Example: \\(f(x) = x^{3}\\) has \\(f'(x) = 3x^{2}\\) and \\(f''(x) = 6x\\). This is negative for \\(x < 0\\) and positive for \\(x > 0\\), so the concavity changes at \\(x = 0\\)."
   ],
   "remember": "Sign of f''(x) gives the concavity. A change of sign gives a point of inflection.",
   "a": {
-   "q": "For f(x) = x³ − 3x², f''(x) = 6x − 6. Where is the curve concave up?",
+   "q": "For \\(f(x) = x^{3} - 3x^{2}\\), \\(f''(x) = 6x - 6\\). Where is the curve concave up?",
    "opts": [
-    "x > 1",
-    "x < 1",
-    "x > 0",
-    "x > 2"
+    "\\(x > 1\\)",
+    "\\(x < 1\\)",
+    "\\(x > 0\\)",
+    "\\(x > 2\\)"
    ],
-   "why": "The curve is concave up where 6x − 6 > 0, which gives x > 1. The option x < 1 is tempting, but there f''(x) is negative, so the curve is concave down.",
-   "clue": "Solve f''(x) > 0."
+   "why": "The curve is concave up where \\(6x - 6 > 0\\), which gives \\(x > 1\\). The option \\(x < 1\\) is tempting, but there f''(x) is negative, so the curve is concave down.",
+   "clue": "Solve \\(f''(x) > 0\\)."
   },
   "b": {
    "d": 3,
-   "q": "f(x) = x⁴ has f''(x) = 12x². Which statement about the point (0, 0) is true?",
+   "q": "\\(f(x) = x^{4}\\) has \\(f''(x) = 12x^{2}\\). Which statement about the point \\((0, 0)\\) is true?",
    "opts": [
     "Not an inflection point, as f''(x) does not change sign",
-    "An inflection point, as f''(x) = 0 when x = 0 on the curve",
-    "An inflection point, as the curve is concave up near x = 0",
-    "Not an inflection point, as f''(x) is negative near x = 0"
+    "An inflection point, as \\(f''(x) = 0\\) when \\(x = 0\\) on the curve",
+    "An inflection point, as the curve is concave up near \\(x = 0\\)",
+    "Not an inflection point, as f''(x) is negative near \\(x = 0\\)"
    ],
-   "why": "f''(x) = 12x² is positive on both sides of x = 0, so the concavity does not change and there is no point of inflection. The tempting option says f''(0) = 0 is enough, but the sign of f''(x) must change.",
-   "clue": "Check the sign of f''(x) on each side of x = 0."
+   "why": "\\(f''(x) = 12x^{2}\\) is positive on both sides of \\(x = 0\\), so the concavity does not change and there is no point of inflection. The tempting option says \\(f''(0) = 0\\) is enough, but the sign of f''(x) must change.",
+   "clue": "Check the sign of f''(x) on each side of \\(x = 0\\)."
   }
  },
  "cleared_by": "checker",
@@ -150,6 +151,49 @@
     "An inflection point, as the curve is concave up",
     "Not an inflection point, as f''(x) is negative there"
    ]
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "The second derivative and concavity",
+   "card": [
+    "The second derivative f''(x) is the derivative of f'(x). It tells you how the gradient is changing.",
+    [
+     "Concave up",
+     "f''(x) > 0. The gradient is increasing and the curve bends upwards like a cup."
+    ],
+    [
+     "Concave down",
+     "f''(x) < 0. The gradient is decreasing and the curve bends downwards like a cap."
+    ],
+    "A point of inflection is where concavity changes, so f''(x) changes sign there. Example: f(x) = x³ has f'(x) = 3x² and f''(x) = 6x. This is negative for x < 0 and positive for x > 0, so the concavity changes at x = 0."
+   ],
+   "remember": "Sign of f''(x) gives the concavity. A change of sign gives a point of inflection.",
+   "a": {
+    "q": "For f(x) = x³ − 3x², f''(x) = 6x − 6. Where is the curve concave up?",
+    "opts": [
+     "x > 1",
+     "x < 1",
+     "x > 0",
+     "x > 2"
+    ],
+    "why": "The curve is concave up where 6x − 6 > 0, which gives x > 1. The option x < 1 is tempting, but there f''(x) is negative, so the curve is concave down.",
+    "clue": "Solve f''(x) > 0."
+   },
+   "b": {
+    "d": 3,
+    "q": "f(x) = x⁴ has f''(x) = 12x². Which statement about the point (0, 0) is true?",
+    "opts": [
+     "Not an inflection point, as f''(x) does not change sign",
+     "An inflection point, as f''(x) = 0 when x = 0 on the curve",
+     "An inflection point, as the curve is concave up near x = 0",
+     "Not an inflection point, as f''(x) is negative near x = 0"
+    ],
+    "why": "f''(x) = 12x² is positive on both sides of x = 0, so the concavity does not change and there is no point of inflection. The tempting option says f''(0) = 0 is enough, but the sign of f''(x) must change.",
+    "clue": "Check the sign of f''(x) on each side of x = 0."
+   }
   }
  }
 }

@@ -13,7 +13,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:08Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -86,9 +87,9 @@
  "final": {
   "title": "The inclusion-exclusion principle",
   "card": [
-   "To count items in A or B (or both), add the count of A and the count of B. Then subtract the count of items in both.",
-   "In symbols: |A or B| = |A| + |B| − |A and B|. Items in both were counted twice, so one count is taken away.",
-   "Example: of 30 students, 18 play netball, 12 swim and 5 do both. Students doing at least one: 18 + 12 − 5 = 25.",
+   "To count items in \\(A\\) or \\(B\\) (or both), add the count of \\(A\\) and the count of \\(B\\). Then subtract the count of items in both.",
+   "In symbols: \\(|A \\cup B| = |A| + |B| - |A \\cap B|\\). Items in both were counted twice, so one count is taken away.",
+   "Example: of 30 students, 18 play netball, 12 swim and 5 do both. Students doing at least one: \\(18 + 12 - 5 = 25\\).",
    "Sometimes the overlap must be worked out. Whole numbers divisible by both 2 and 3 are the multiples of 6."
   ],
   "remember": "Add the two groups, then subtract the overlap once so nothing is counted twice.",
@@ -100,7 +101,7 @@
     "27",
     "18"
    ],
-   "why": "24 + 15 − 6 = 33. Adding only 24 + 15 = 39 counts the 6 students in both subjects twice.",
+   "why": "\\(24 + 15 - 6 = 33\\). Adding only \\(24 + 15 = 39\\) counts the 6 students in both subjects twice.",
    "clue": "Students in both subjects appear in both counts."
   },
   "b": {
@@ -112,9 +113,46 @@
     "20",
     "13"
    ],
-   "why": "There are 16 multiples of 3, 10 multiples of 5 and 3 multiples of 15, so 16 + 10 − 3 = 23. The option 26 adds without taking away the overlap.",
+   "why": "There are 16 multiples of 3, 10 multiples of 5 and 3 multiples of 15, so \\(16 + 10 - 3 = 23\\). The option 26 adds without taking away the overlap.",
    "clue": "A number divisible by both 3 and 5 is a multiple of 15."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The inclusion-exclusion principle",
+   "card": [
+    "To count items in A or B (or both), add the count of A and the count of B. Then subtract the count of items in both.",
+    "In symbols: |A or B| = |A| + |B| − |A and B|. Items in both were counted twice, so one count is taken away.",
+    "Example: of 30 students, 18 play netball, 12 swim and 5 do both. Students doing at least one: 18 + 12 − 5 = 25.",
+    "Sometimes the overlap must be worked out. Whole numbers divisible by both 2 and 3 are the multiples of 6."
+   ],
+   "remember": "Add the two groups, then subtract the overlap once so nothing is counted twice.",
+   "a": {
+    "q": "In a year group of 40, 24 study French, 15 study Italian and 6 study both. How many study French or Italian?",
+    "opts": [
+     "33",
+     "39",
+     "27",
+     "18"
+    ],
+    "why": "24 + 15 − 6 = 33. Adding only 24 + 15 = 39 counts the 6 students in both subjects twice.",
+    "clue": "Students in both subjects appear in both counts."
+   },
+   "b": {
+    "d": 3,
+    "q": "How many whole numbers from 1 to 50 are divisible by 3 or by 5?",
+    "opts": [
+     "23",
+     "26",
+     "20",
+     "13"
+    ],
+    "why": "There are 16 multiples of 3, 10 multiples of 5 and 3 multiples of 15, so 16 + 10 − 3 = 23. The option 26 adds without taking away the overlap.",
+    "clue": "A number divisible by both 3 and 5 is a multiple of 15."
+   }
+  }
+ }
 }

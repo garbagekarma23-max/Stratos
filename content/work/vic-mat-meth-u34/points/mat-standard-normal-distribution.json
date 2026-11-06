@@ -31,7 +31,8 @@
   "2026-11-01T14:56:04Z write: done",
   "2026-11-01T15:05:29Z check: flagged",
   "2026-11-01T15:14:48Z fix: suggested",
-  "2026-11-02T04:35:42Z autoreview: cleared with the fix (remember other)"
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (remember other)",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -166,35 +167,72 @@
  "final": {
   "title": "The standard normal distribution",
   "card": [
-   "The standard normal variable Z has mean 0 and standard deviation 1. Any normal variable X with mean μ and standard deviation σ can be turned into Z.",
-   "The rule is Z = (X − μ)/σ. Subtract the mean, then divide by the standard deviation.",
-   "The value of Z says how many standard deviations X is from the mean. It is negative below the mean and positive above it.",
-   "To go back, use X = μ + σZ. Example: if μ = 50 and σ = 4, then X = 58 gives Z = (58 − 50)/4 = 2. The probability Pr(X < 58) equals Pr(Z < 2)."
+   "The standard normal variable \\(Z\\) has mean 0 and standard deviation 1. Any normal variable \\(X\\) with mean \\(\\mu\\) and standard deviation \\(\\sigma\\) can be turned into \\(Z\\).",
+   "The rule is \\(Z = \\frac{X - \\mu}{\\sigma}\\). Subtract the mean, then divide by the standard deviation.",
+   "The value of \\(Z\\) says how many standard deviations \\(X\\) is from the mean. It is negative below the mean and positive above it.",
+   "To go back, use \\(X = \\mu + \\sigma Z\\). Example: if \\(\\mu = 50\\) and \\(\\sigma = 4\\), then \\(X = 58\\) gives \\(Z = \\frac{58 - 50}{4} = 2\\). The probability \\(\\text{Pr}(X < 58)\\) equals \\(\\text{Pr}(Z < 2)\\)."
   ],
-  "remember": "Z counts standard deviations from the mean, so a probability for X equals the matching probability for Z.",
+  "remember": "\\(Z\\) counts standard deviations from the mean, so a probability for \\(X\\) equals the matching probability for \\(Z\\).",
   "a": {
-   "q": "A machine fills bags with mass X grams, normal with mean 250 and standard deviation 8. What is Z for a bag of 234 g?",
+   "q": "A machine fills bags with mass \\(X\\) grams, normal with mean 250 and standard deviation 8. What is \\(Z\\) for a bag of 234 g?",
    "opts": [
-    "−2",
+    "\\(-2\\)",
     "2",
-    "−16",
-    "−0.5"
+    "\\(-16\\)",
+    "\\(-0.5\\)"
    ],
-   "why": "Z = (234 − 250)/8 = −16/8 = −2. The value −16 is only the top line: it skips the division by the standard deviation. The bag is below the mean, so Z must be negative, which rules out 2.",
+   "why": "\\(Z = \\frac{234 - 250}{8} = \\frac{-16}{8} = -2\\). The value \\(-16\\) is only the top line: it skips the division by the standard deviation. The bag is below the mean, so \\(Z\\) must be negative, which rules out 2.",
    "clue": "Subtract the mean first, then divide."
   },
   "b": {
    "d": 3,
-   "q": "Daniel's bus journey time X, in minutes, is normal with mean 40 and standard deviation 6. One trip has a Z value of 1.5. How long did the trip take?",
+   "q": "Daniel's bus journey time \\(X\\), in minutes, is normal with mean 40 and standard deviation 6. One trip has a \\(Z\\) value of 1.5. How long did the trip take?",
    "opts": [
     "49 minutes",
     "31 minutes",
     "41.5 minutes",
     "60 minutes"
    ],
-   "why": "X = μ + σZ = 40 + 6 × 1.5 = 49. A positive Z means above the mean, so 31 is wrong. The value 41.5 adds Z without multiplying by σ, and 60 multiplies the mean by Z.",
-   "clue": "Z is a number of standard deviations. Turn it into minutes before adding."
+   "why": "\\(X = \\mu + \\sigma Z = 40 + 6 \\times 1.5 = 49\\). A positive \\(Z\\) means above the mean, so 31 is wrong. The value 41.5 adds \\(Z\\) without multiplying by \\(\\sigma\\), and 60 multiplies the mean by \\(Z\\).",
+   "clue": "\\(Z\\) is a number of standard deviations. Turn it into minutes before adding."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "The standard normal distribution",
+   "card": [
+    "The standard normal variable Z has mean 0 and standard deviation 1. Any normal variable X with mean μ and standard deviation σ can be turned into Z.",
+    "The rule is Z = (X − μ)/σ. Subtract the mean, then divide by the standard deviation.",
+    "The value of Z says how many standard deviations X is from the mean. It is negative below the mean and positive above it.",
+    "To go back, use X = μ + σZ. Example: if μ = 50 and σ = 4, then X = 58 gives Z = (58 − 50)/4 = 2. The probability Pr(X < 58) equals Pr(Z < 2)."
+   ],
+   "remember": "Z counts standard deviations from the mean, so a probability for X equals the matching probability for Z.",
+   "a": {
+    "q": "A machine fills bags with mass X grams, normal with mean 250 and standard deviation 8. What is Z for a bag of 234 g?",
+    "opts": [
+     "−2",
+     "2",
+     "−16",
+     "−0.5"
+    ],
+    "why": "Z = (234 − 250)/8 = −16/8 = −2. The value −16 is only the top line: it skips the division by the standard deviation. The bag is below the mean, so Z must be negative, which rules out 2.",
+    "clue": "Subtract the mean first, then divide."
+   },
+   "b": {
+    "d": 3,
+    "q": "Daniel's bus journey time X, in minutes, is normal with mean 40 and standard deviation 6. One trip has a Z value of 1.5. How long did the trip take?",
+    "opts": [
+     "49 minutes",
+     "31 minutes",
+     "41.5 minutes",
+     "60 minutes"
+    ],
+    "why": "X = μ + σZ = 40 + 6 × 1.5 = 49. A positive Z means above the mean, so 31 is wrong. The value 41.5 adds Z without multiplying by σ, and 60 multiplies the mean by Z.",
+    "clue": "Z is a number of standard deviations. Turn it into minutes before adding."
+   }
+  }
+ }
 }

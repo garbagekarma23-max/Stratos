@@ -30,7 +30,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -104,35 +105,72 @@
  "final": {
   "title": "Area under and between curves",
   "card": [
-   "The area between two curves from x = a to x = b is the integral of (top curve − bottom curve). Area = ∫ from a to b of [f(x) − g(x)] dx, where f(x) ≥ g(x) on [a, b].",
-   "For the area between a curve and the x-axis, the axis is the bottom curve (g(x) = 0). Where the curve is below the axis, the integral is negative, so take the positive size of that part.",
-   "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top − bottom each time.",
-   "Example: f(x) = x and g(x) = x² between x = 0 and x = 1. They meet where x = x², at x = 0 and x = 1, and x ≥ x² between them. Area = ∫ from 0 to 1 of (x − x²) dx = 1/2 − 1/3 = 1/6."
+   "The area between two curves from \\(x = a\\) to \\(x = b\\) is the integral of top curve minus bottom curve. Area \\(= \\int_{a}^{b} [f(x) - g(x)] \\, dx\\), where \\(f(x) \\ge g(x)\\) on \\([a, b]\\).",
+   "For the area between a curve and the x-axis, the axis is the bottom curve (\\(g(x) = 0\\)). Where the curve is below the axis, the integral is negative, so take the positive size of that part.",
+   "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top minus bottom each time.",
+   "Example: \\(f(x) = x\\) and \\(g(x) = x^{2}\\) between \\(x = 0\\) and \\(x = 1\\). They meet where \\(x = x^{2}\\), at \\(x = 0\\) and \\(x = 1\\), and \\(x \\ge x^{2}\\) between them. Area \\(= \\int_{0}^{1} (x - x^{2}) \\, dx = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6}\\)."
   ],
-  "remember": "Area = integral of top − bottom, and split at every crossing.",
+  "remember": "Area is the integral of top minus bottom, and split at every crossing.",
   "a": {
-   "q": "Between x = 0 and x = 2, the line y = 4 lies above the curve y = x². Which integral gives the area between them?",
+   "q": "Between \\(x = 0\\) and \\(x = 2\\), the line \\(y = 4\\) lies above the curve \\(y = x^{2}\\). Which integral gives the area between them?",
    "opts": [
-    "∫ from 0 to 2 of (4 − x²) dx",
-    "∫ from 0 to 2 of (x² − 4) dx",
-    "∫ from 0 to 2 of (4 + x²) dx",
-    "∫ from 0 to 4 of (4 − x²) dx"
+    "\\(\\int_{0}^{2} (4 - x^{2}) \\, dx\\)",
+    "\\(\\int_{0}^{2} (x^{2} - 4) \\, dx\\)",
+    "\\(\\int_{0}^{2} (4 + x^{2}) \\, dx\\)",
+    "\\(\\int_{0}^{4} (4 - x^{2}) \\, dx\\)"
    ],
-   "why": "The top curve is y = 4, so the integrand is top − bottom = 4 − x², over the x-values 0 to 2. Using x² − 4 reverses the order and gives a negative number, which is not an area.",
+   "why": "The top curve is \\(y = 4\\), so the integrand is top minus bottom, \\(4 - x^{2}\\), over the x-values 0 to 2. Using \\(x^{2} - 4\\) reverses the order and gives a negative number, which is not an area.",
    "clue": "Subtract the lower curve from the upper curve."
   },
   "b": {
    "d": 3,
-   "q": "What is the total area enclosed between y = x² − 4 and the x-axis, from x = 0 to x = 3?",
+   "q": "What is the total area enclosed between \\(y = x^{2} - 4\\) and the x-axis, from \\(x = 0\\) to \\(x = 3\\)?",
    "opts": [
-    "23/3",
-    "5/3",
-    "−23/3",
-    "7/3"
+    "\\(\\frac{23}{3}\\)",
+    "\\(\\frac{5}{3}\\)",
+    "\\(-\\frac{23}{3}\\)",
+    "\\(\\frac{7}{3}\\)"
    ],
-   "why": "The curve crosses the axis at x = 2, so split there. From 0 to 2 the integral is [x³/3 − 4x] = 8/3 − 8 = −16/3, so that area is 16/3. From 2 to 3 it is (9 − 12) − (8/3 − 8) = −3 + 16/3 = 7/3. The total is 16/3 + 7/3 = 23/3. Integrating straight from 0 to 3 gives −16/3 + 7/3 = −3, which cancels the parts instead of adding them.",
+   "why": "The curve crosses the axis at \\(x = 2\\), so split there. From 0 to 2 the integral is \\(\\left[\\frac{x^{3}}{3} - 4x\\right]_{0}^{2} = \\frac{8}{3} - 8 = -\\frac{16}{3}\\), so that area is \\(\\frac{16}{3}\\). From 2 to 3 it is \\((9 - 12) - (\\frac{8}{3} - 8) = -3 + \\frac{16}{3} = \\frac{7}{3}\\). The total is \\(\\frac{16}{3} + \\frac{7}{3} = \\frac{23}{3}\\). Integrating straight from 0 to 3 gives \\(-\\frac{16}{3} + \\frac{7}{3} = -3\\), which cancels the parts instead of adding them.",
    "clue": "Find where the curve crosses the axis, and add the two areas as positive numbers."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T07:25:09Z",
+  "by": "hand",
+  "before": {
+   "title": "Area under and between curves",
+   "card": [
+    "The area between two curves from x = a to x = b is the integral of (top curve − bottom curve). Area = ∫ from a to b of [f(x) − g(x)] dx, where f(x) ≥ g(x) on [a, b].",
+    "For the area between a curve and the x-axis, the axis is the bottom curve (g(x) = 0). Where the curve is below the axis, the integral is negative, so take the positive size of that part.",
+    "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top − bottom each time.",
+    "Example: f(x) = x and g(x) = x² between x = 0 and x = 1. They meet where x = x², at x = 0 and x = 1, and x ≥ x² between them. Area = ∫ from 0 to 1 of (x − x²) dx = 1/2 − 1/3 = 1/6."
+   ],
+   "remember": "Area = integral of top − bottom, and split at every crossing.",
+   "a": {
+    "q": "Between x = 0 and x = 2, the line y = 4 lies above the curve y = x². Which integral gives the area between them?",
+    "opts": [
+     "∫ from 0 to 2 of (4 − x²) dx",
+     "∫ from 0 to 2 of (x² − 4) dx",
+     "∫ from 0 to 2 of (4 + x²) dx",
+     "∫ from 0 to 4 of (4 − x²) dx"
+    ],
+    "why": "The top curve is y = 4, so the integrand is top − bottom = 4 − x², over the x-values 0 to 2. Using x² − 4 reverses the order and gives a negative number, which is not an area.",
+    "clue": "Subtract the lower curve from the upper curve."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is the total area enclosed between y = x² − 4 and the x-axis, from x = 0 to x = 3?",
+    "opts": [
+     "23/3",
+     "5/3",
+     "−23/3",
+     "7/3"
+    ],
+    "why": "The curve crosses the axis at x = 2, so split there. From 0 to 2 the integral is [x³/3 − 4x] = 8/3 − 8 = −16/3, so that area is 16/3. From 2 to 3 it is (9 − 12) − (8/3 − 8) = −3 + 16/3 = 7/3. The total is 16/3 + 7/3 = 23/3. Integrating straight from 0 to 3 gives −16/3 + 7/3 = −3, which cancels the parts instead of adding them.",
+    "clue": "Find where the curve crosses the axis, and add the two areas as positive numbers."
+   }
+  }
+ }
 }

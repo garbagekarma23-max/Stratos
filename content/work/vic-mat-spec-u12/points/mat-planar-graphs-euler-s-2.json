@@ -24,7 +24,8 @@
   "2026-11-01T08:24:34Z write: done",
   "2026-11-01T08:33:52Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -184,11 +185,11 @@
   "title": "Planar graphs and Euler's formula",
   "card": [
    "A planar graph can be drawn on a flat page so that no edges cross. A face is a region bounded by edges, and the outside region counts as one face.",
-   "Euler's formula is for a connected planar graph: v − e + f = 2. Here v is the number of vertices, e the number of edges and f the number of faces.",
-   "Worked example: a connected planar graph has 6 vertices and 9 edges. Then 6 − 9 + f = 2, so f = 5.",
+   "Euler's formula is for a connected planar graph: \\(v - e + f = 2\\). Here \\(v\\) is the number of vertices, \\(e\\) the number of edges and \\(f\\) the number of faces.",
+   "Worked example: a connected planar graph has 6 vertices and 9 edges. Then \\(6 - 9 + f = 2\\), so \\(f = 5\\).",
    "A common slip is to forget the outside face when counting. Also, a graph that is drawn with crossing edges may still be planar, if it can be redrawn with no crossings."
   ],
-  "remember": "For a connected planar graph, v − e + f = 2, and the outside face counts.",
+  "remember": "For a connected planar graph, \\(v - e + f = 2\\), and the outside face counts.",
   "a": {
    "q": "A connected planar graph has 7 vertices and 10 edges. How many faces does it have?",
    "opts": [
@@ -197,8 +198,8 @@
     "4",
     "6"
    ],
-   "why": "Use v − e + f = 2. Then 7 − 10 + f = 2, so −3 + f = 2 and f = 5. Choosing 3 comes from calculating 10 − 7 and stopping before adding the 2.",
-   "clue": "Put the numbers into v − e + f = 2, then solve for f."
+   "why": "Use \\(v - e + f = 2\\). Then \\(7 - 10 + f = 2\\), so \\(-3 + f = 2\\) and \\(f = 5\\). Choosing 3 comes from calculating \\(10 - 7\\) and stopping before adding the 2.",
+   "clue": "Put the numbers into \\(v - e + f = 2\\), then solve for \\(f\\)."
   },
   "b": {
    "d": 3,
@@ -209,9 +210,46 @@
     "7",
     "18"
    ],
-   "why": "Use v − e + f = 2. Then v − 12 + 8 = 2, so v − 4 = 2 and v = 6. Choosing 4 comes from leaving out the 2 on the right side, which gives v − 12 + 8 = 0. Choosing 7 comes from taking away the outside face as well, so f becomes 7.",
+   "why": "Use \\(v - e + f = 2\\). Then \\(v - 12 + 8 = 2\\), so \\(v - 4 = 2\\) and \\(v = 6\\). Choosing 4 comes from leaving out the 2 on the right side, which gives \\(v - 12 + 8 = 0\\). Choosing 7 comes from taking away the outside face as well, so \\(f\\) becomes 7.",
    "clue": "The 8 faces already include the outside one."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Planar graphs and Euler's formula",
+   "card": [
+    "A planar graph can be drawn on a flat page so that no edges cross. A face is a region bounded by edges, and the outside region counts as one face.",
+    "Euler's formula is for a connected planar graph: v − e + f = 2. Here v is the number of vertices, e the number of edges and f the number of faces.",
+    "Worked example: a connected planar graph has 6 vertices and 9 edges. Then 6 − 9 + f = 2, so f = 5.",
+    "A common slip is to forget the outside face when counting. Also, a graph that is drawn with crossing edges may still be planar, if it can be redrawn with no crossings."
+   ],
+   "remember": "For a connected planar graph, v − e + f = 2, and the outside face counts.",
+   "a": {
+    "q": "A connected planar graph has 7 vertices and 10 edges. How many faces does it have?",
+    "opts": [
+     "5",
+     "3",
+     "4",
+     "6"
+    ],
+    "why": "Use v − e + f = 2. Then 7 − 10 + f = 2, so −3 + f = 2 and f = 5. Choosing 3 comes from calculating 10 − 7 and stopping before adding the 2.",
+    "clue": "Put the numbers into v − e + f = 2, then solve for f."
+   },
+   "b": {
+    "d": 3,
+    "q": "A connected planar graph has 8 faces, counting the outside face, and 12 edges. How many vertices does it have?",
+    "opts": [
+     "6",
+     "4",
+     "7",
+     "18"
+    ],
+    "why": "Use v − e + f = 2. Then v − 12 + 8 = 2, so v − 4 = 2 and v = 6. Choosing 4 comes from leaving out the 2 on the right side, which gives v − 12 + 8 = 0. Choosing 7 comes from taking away the outside face as well, so f becomes 7.",
+    "clue": "The 8 faces already include the outside one."
+   }
+  }
+ }
 }

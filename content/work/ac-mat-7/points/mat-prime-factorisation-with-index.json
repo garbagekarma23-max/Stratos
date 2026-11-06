@@ -15,7 +15,8 @@
   "2026-11-04T09:47:08Z write: done",
   "2026-11-04T09:58:30Z check: flagged",
   "2026-11-04T10:08:04Z fix: suggested",
-  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
  ],
  "sent": {
   "match": 1,
@@ -186,34 +187,71 @@
   "title": "Prime factorisation with index notation",
   "card": [
    "A prime number has exactly two factors, 1 and itself. Examples are 2, 3, 5, 7 and 11.",
-   "A factor tree splits a number into factor pairs again and again until every branch ends in a prime. For 72: 72 = 8 × 9, 8 = 2 × 4, 4 = 2 × 2, 9 = 3 × 3.",
-   "Multiply the primes at the ends: 72 = 2 × 2 × 2 × 3 × 3.",
-   "Index form counts repeated primes with a small power. Three 2s make 2³ and two 3s make 3², so 72 = 2³ × 3²."
+   "A factor tree splits a number into factor pairs again and again until every branch ends in a prime. For 72: \\(72 = 8 \\times 9\\), \\(8 = 2 \\times 4\\), \\(4 = 2 \\times 2\\), \\(9 = 3 \\times 3\\).",
+   "Multiply the primes at the ends: \\(72 = 2 \\times 2 \\times 2 \\times 3 \\times 3\\).",
+   "Index form counts repeated primes with a small power. Three 2s make \\(2^{3}\\) and two 3s make \\(3^{2}\\), so \\(72 = 2^{3} \\times 3^{2}\\)."
   ],
   "remember": "Split into primes, then write repeated primes with an index.",
   "a": {
    "q": "Which is 40 written as a product of primes in index form?",
    "opts": [
-    "2³ × 5",
-    "2² × 10",
-    "2 × 4 × 5",
-    "2⁴ × 5"
+    "\\(2^{3} \\times 5\\)",
+    "\\(2^{2} \\times 10\\)",
+    "\\(2 \\times 4 \\times 5\\)",
+    "\\(2^{4} \\times 5\\)"
    ],
-   "why": "40 = 2 × 2 × 2 × 5, which is 2³ × 5. The option 2² × 10 is wrong because 10 is not a prime, and 2⁴ × 5 equals 80.",
+   "why": "\\(40 = 2 \\times 2 \\times 2 \\times 5\\), which is \\(2^{3} \\times 5\\). The option \\(2^{2} \\times 10\\) is wrong because 10 is not a prime, and \\(2^{4} \\times 5\\) equals 80.",
    "clue": "Keep splitting until every number is prime."
   },
   "b": {
    "d": 3,
    "q": "Mia writes 180 as a product of primes in index form. Which answer is correct?",
    "opts": [
-    "2² × 3² × 5",
-    "2 × 3² × 10",
-    "2² × 3 × 15",
-    "2³ × 3² × 5"
+    "\\(2^{2} \\times 3^{2} \\times 5\\)",
+    "\\(2 \\times 3^{2} \\times 10\\)",
+    "\\(2^{2} \\times 3 \\times 15\\)",
+    "\\(2^{3} \\times 3^{2} \\times 5\\)"
    ],
-   "why": "180 = 2 × 2 × 3 × 3 × 5, which is 2² × 3² × 5. The option 2 × 3² × 10 does equal 180, but 10 = 2 × 5 is not a prime, so the tree was not finished. The option 2³ × 3² × 5 equals 360.",
+   "why": "\\(180 = 2 \\times 2 \\times 3 \\times 3 \\times 5\\), which is \\(2^{2} \\times 3^{2} \\times 5\\). The option \\(2 \\times 3^{2} \\times 10\\) does equal 180, but \\(10 = 2 \\times 5\\) is not a prime, so the tree was not finished. The option \\(2^{3} \\times 3^{2} \\times 5\\) equals 360.",
    "clue": "Check that every number is prime and that the total is 180."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T07:12:11Z",
+  "by": "script",
+  "before": {
+   "title": "Prime factorisation with index notation",
+   "card": [
+    "A prime number has exactly two factors, 1 and itself. Examples are 2, 3, 5, 7 and 11.",
+    "A factor tree splits a number into factor pairs again and again until every branch ends in a prime. For 72: 72 = 8 × 9, 8 = 2 × 4, 4 = 2 × 2, 9 = 3 × 3.",
+    "Multiply the primes at the ends: 72 = 2 × 2 × 2 × 3 × 3.",
+    "Index form counts repeated primes with a small power. Three 2s make 2³ and two 3s make 3², so 72 = 2³ × 3²."
+   ],
+   "remember": "Split into primes, then write repeated primes with an index.",
+   "a": {
+    "q": "Which is 40 written as a product of primes in index form?",
+    "opts": [
+     "2³ × 5",
+     "2² × 10",
+     "2 × 4 × 5",
+     "2⁴ × 5"
+    ],
+    "why": "40 = 2 × 2 × 2 × 5, which is 2³ × 5. The option 2² × 10 is wrong because 10 is not a prime, and 2⁴ × 5 equals 80.",
+    "clue": "Keep splitting until every number is prime."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia writes 180 as a product of primes in index form. Which answer is correct?",
+    "opts": [
+     "2² × 3² × 5",
+     "2 × 3² × 10",
+     "2² × 3 × 15",
+     "2³ × 3² × 5"
+    ],
+    "why": "180 = 2 × 2 × 3 × 3 × 5, which is 2² × 3² × 5. The option 2 × 3² × 10 does equal 180, but 10 = 2 × 5 is not a prime, so the tree was not finished. The option 2³ × 3² × 5 equals 360.",
+    "clue": "Check that every number is prime and that the total is 180."
+   }
+  }
+ }
 }
