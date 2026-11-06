@@ -405,7 +405,10 @@ def copy_repo(dst):
     for d in ['src', 'supabase']: shutil.copytree(os.path.join(REPO, d), os.path.join(dst, d), ignore=shutil.ignore_patterns('bank', 'courses'))
     os.makedirs(os.path.join(dst, 'lab')); os.makedirs(os.path.join(dst, 'content'))
     for f in ['topics.js', 'maths.js', 'keypad.js', 'sheet.js', 'keys.css']: shutil.copy(os.path.join(REPO, 'lab', f), os.path.join(dst, 'lab', f))
-    for f in ['load.mjs', 'dump.mjs']: shutil.copy(os.path.join(HERE, f), os.path.join(dst, 'content', f))
+    for f in ['load.mjs', 'dump.mjs', 'latex.mjs']: shutil.copy(os.path.join(HERE, f), os.path.join(dst, 'content', f))
+    # MathLive's build for Node, which the content check uses to parse LaTeX (content/latex.mjs).
+    os.makedirs(os.path.join(dst, 'lab', 'mathlive'))
+    shutil.copy(os.path.join(REPO, 'lab', 'mathlive', 'mathlive-ssr.min.mjs'), os.path.join(dst, 'lab', 'mathlive'))
     for f in ['build.py', 'check_content.mjs']: shutil.copy(os.path.join(REPO, f), os.path.join(dst, f))
 
 
@@ -1497,6 +1500,19 @@ def main():
     check(call('/api/items', tok=None).get('status') == 403 and call('/api/decide', {'course': 'tst-course', 'id': 'tst-flag-one', 'action': 'fix'}, tok='wrong').get('status') == 403,
           'without the page\'s token, nothing can be read or changed')
     check(call('/api/items', host='evil.example.com').get('status') == 403, 'and a request for another website\'s name is refused')
+    # The page draws maths with MathLive from the app's own copy: only its script and its fonts, by name.
+    def raw(path):
+        try:
+            r = urllib.request.urlopen('http://127.0.0.1:' + str(port) + path); return r.status, r.headers.get('Content-Type')
+        except urllib.error.HTTPError as e:
+            return e.code, None
+    shutil.copy(os.path.join(REPO, 'lab', 'mathlive', 'mathlive.min.js'), os.path.join(repo, 'lab', 'mathlive'))
+    check(raw('/mathlive/mathlive.min.js') == (200, 'text/javascript') and raw('/mathlive/mathlive-ssr.min.mjs')[0] == 404 and
+          raw('/mathlive/../check_content.mjs')[0] == 404 and raw('/mathlive/fonts/none.woff2')[0] == 404 and raw('/mathlive/fonts/../../build.py')[0] == 404,
+          'the review page gets MathLive\'s script for the maths in a point, and no other file')
+    check(pipeline.shown_len('\\(x = -\\frac{b}{2a}\\)') == 7 and pipeline.shown_len('Centre \\((-1, 4)\\)') == 14 and
+          not pipeline.clearly_longest(['\\(\\frac{1200}{5}\\)', '2400', '1205', '240']) and pipeline.clearly_longest(['\\(x = 120\\) and \\(y = 5\\)', '1', '2', '3']),
+          'rebalance measures maths as it looks: a fraction is as wide as its wider part')
     check(call('/api/decide', {'course': '../x', 'id': 'tst-flag-one', 'action': 'fix'}).get('ok') is False, 'an unknown course is refused')
     r = call('/api/decide', {'course': 'tst-course', 'id': 'tst-flag-one', 'action': 'fix'})
     check(r['ok'] and st('tst-flag-one') == 'cleared' and W.load('tst-flag-one')['final'] == W.load('tst-flag-one')['proposal'], 'Use the fix clears the point with the fix')

@@ -18,12 +18,17 @@ export const BANK = new Function(fs.readFileSync(new URL('../src/econ-points.js'
 export const EDEXCEL = new Function(fs.readFileSync(new URL('../src/edexcel-content.js', import.meta.url), 'utf8') + '; return EDEXCEL;')();
 // Every multiple-choice question, by its text, so pick() can find the right answer in any course with options.
 // The made banks (src/bank) are added too. keyBank adds another bank, such as the made course in tests/made.
+// A question with maths in it (LaTeX between \( and \)) reads on the page as its text with those marks taken out, since
+// each piece is a <math-span> holding its LaTeX. onPage gives that text, and each question is keyed both ways.
+export const onPage = t => t.replace(/\\\(|\\\)/g, '');
 export const KEYED = new Map();
 export function keyBank(bank) {
   for (const id of Object.keys(bank)) for (const k of ['a', 'b']) {
     const p = Object.assign({id: id}, bank[id]);
     if (KEYED.has(p[k].q)) throw new Error('two questions share the text: ' + p[k].q);
-    KEYED.set(p[k].q, {right: p[k].opts[0], id: p.id + k, p: p, k: k});
+    const key = {right: p[k].opts[0], id: p.id + k, p: p, k: k};
+    KEYED.set(p[k].q, key);
+    if (onPage(p[k].q) !== p[k].q) KEYED.set(onPage(p[k].q), key);
   }
 }
 keyBank(Object.fromEntries(TOPIC.chapters.flatMap(ch => ch.points).map(p => [p.id, p])));
@@ -100,7 +105,7 @@ export async function pick(p, feed, wantRight) {
   const s = waiting(p, feed), q = await s.locator('.qtext').textContent(), key = KEYED.get(q);
   if (!key) throw new Error('unknown question: ' + q);
   const texts = await s.locator('.opt .txt').allTextContents();
-  const n = wantRight ? texts.indexOf(key.right) : texts.findIndex(t => t !== key.right);
+  const right = onPage(key.right), n = wantRight ? texts.indexOf(right) : texts.findIndex(t => t !== right);
   if (n < 0) throw new Error('right answer not on screen for: ' + q);
   await s.locator('.opt').nth(n).click();
   await p.waitForTimeout(80);

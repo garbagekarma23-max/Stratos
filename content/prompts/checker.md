@@ -5,7 +5,7 @@ You are not told which option the writer meant as right: the options are in a ra
 ## For each question, a and b
 
 1. Work out the answer yourself, from what you know and from the card, before you weigh the options.
-2. best: the option, copied exactly, that a student who knows the idea should pick.
+2. best: the option, copied exactly, that a student who knows the idea should pick. Copy any maths in it exactly too, backslashes and all.
 3. also_right: every other option, copied exactly, that a careful teacher could defend as right, or that is right under a looser reading. An empty list when exactly one option is right.
 
 ## Then
@@ -23,6 +23,10 @@ You are not told which option the writer meant as right: the options are in a ra
   - a definition that contradicts another point in the chapter, such as calling location external when it is something the business chooses (fact)
   - "forces", "always", "must", "never" or "only" in the remember line, a question, an option or a why, where the card says "can" or "may" (wording)
   - a question whose right option stands out from the others: clearly the longest, or the only one with a qualifier or a precise detail, so a student could pick it without knowing the idea. Give the question as its part (wording)
+- In a maths course, maths is written in LaTeX between \( and \), and the app draws it as real maths. Read each piece as it would be drawn. Also list as a problem:
+  - maths written as plain text instead of LaTeX: a slash as a fraction, a caret or ² for a power, √, ≤ or a hyphen used as a minus sign (wording)
+  - LaTeX that means something other than the card, the question or the why intends, such as a fraction or bracket that groups the wrong terms (fact)
+  - in Mathematics Advanced, Extension, Mathematical Methods or Specialist Mathematics, an everyday word where the syllabus has a term: opens up or a U shape for concave up, a hill or turns back for a turning point, a corner for a vertex (level)
 - sure: how sure you are of your whole verdict.
   - high: you know the topic well, and every fact checks out.
   - medium: you know the topic, but a detail could depend on a source you cannot check.

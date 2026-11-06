@@ -9,14 +9,7 @@ const drawn = Sheet.drawnWith(MPAD.macros);
 let mathsLoad = null, mathsReady = false, pad = null, mRow = 0;
 
 function loadMaths() {
-  if (!mathsLoad) mathsLoad = new Promise((ok, fail) => {
-    if (window.MathfieldElement) { ok(); return; }
-    const s = document.createElement('script');
-    s.src = 'lab/mathlive/mathlive.min.js';
-    s.onload = ok;
-    s.onerror = () => { mathsLoad = null; fail(new Error('MathLive did not load')); };
-    document.head.appendChild(s);
-  }).then(() => {
+  if (!mathsLoad) mathsLoad = loadMathLive().then(() => {
     mathsReady = true;
     if (!pad) pad = Sheet.create({
       keys: $('#mKeys'), calc: $('#mCalc'), strip: $('#mStrip'), done: $('#mDone'), topic: MPAD,
@@ -33,7 +26,7 @@ function loadMaths() {
     });
     paintWork();
   });
-  mathsLoad.catch(() => toast('Maths could not load. Check the connection, then open Learn again.'));
+  mathsLoad.catch(() => { mathsLoad = null; toast('Maths could not load. Check the connection, then open Learn again.'); });
   return mathsLoad;
 }
 /* Let go of the question on the keypad, for example when the session is rebuilt. */

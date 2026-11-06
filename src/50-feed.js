@@ -1,6 +1,6 @@
 /* ---------- slides: the pieces Learn and Practice share ---------- */
 const actBtn = (name, ic, label) => '<button class="act" type="button" data-act="' + name + '">' + ic + label + '</button>';
-const whyHtml = q => '<b>Why</b><p>' + esc(q.why) + '</p>';
+const whyHtml = q => '<b>Why</b><p>' + tx(q.why) + '</p>';
 
 /* One question as a slide. S is the session it belongs to and i is its place in S.items. */
 function qEl(S, i, learn) {
@@ -16,9 +16,9 @@ function qEl(S, i, learn) {
   sec.className = 'slide q'; sec.dataset.i = i;
   sec.innerHTML =
     '<p class="meta">' + meta + '</p>' +
-    '<h2 class="qtext">' + esc(q.q) + '</h2>' +
+    '<h2 class="qtext">' + tx(q.q) + '</h2>' +
     '<div class="opts" role="group" aria-label="Answer choices">' +
-      it.perm.map((oi, n) => '<button class="opt" type="button" data-act="opt" data-n="' + n + '"><span class="key">' + 'ABCD'.charAt(n) + '</span><span class="txt">' + esc(q.opts[oi]) + '</span><span class="mk">' + IC.tick + IC.cross + '</span></button>').join('') +
+      it.perm.map((oi, n) => '<button class="opt" type="button" data-act="opt" data-n="' + n + '"><span class="key">' + 'ABCD'.charAt(n) + '</span><span class="txt">' + tx(q.opts[oi]) + '</span><span class="mk">' + IC.tick + IC.cross + '</span></button>').join('') +
     '</div>' +
     '<div class="note" hidden></div>' +
     '<div class="foot">' + (acts ? '<div class="actions">' + acts + '</div>' : '') + '<button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
@@ -54,7 +54,7 @@ function paintResolved(S, sec, i, learn) {
 function paintClue(sec, q) {
   const note = $('.note', sec), b = $('[data-act="clue"]', sec);
   note.hidden = false; note.className = 'note';
-  note.innerHTML = '<b>Clue</b><p>' + esc(q.clue) + '</p>';
+  note.innerHTML = '<b>Clue</b><p>' + tx(q.clue) + '</p>';
   if (b) b.disabled = true;
 }
 /* The slide that fills the screen right now. */
@@ -146,7 +146,7 @@ function cardEl(i) {
     '<p class="meta"><span>Point ' + (p.pi + 1) + ' of ' + ch.points.length + '</span>' + (isDraft(ch) ? DRAFT : '') + '</p>' +
     '<h2 class="ctitle">' + esc(p.title) + '</h2>' +
     '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
-    '<p class="rem"><b>Remember</b>' + esc(p.remember) + '</p>' +
+    '<p class="rem"><b>Remember</b>' + tx(p.remember) + '</p>' +
     '<div class="foot"><button class="next" type="button" data-act="nextslide">Check it' + IC.down + '</button></div>';
   return sec;
 }
@@ -197,11 +197,11 @@ function learnAnswer(sec, n) {
     anim(btn, 'pop');
     burst(p.x, p.y, 18, sparkColours(1));
     sound.correct(L.row, 0);
-    say('Correct. ' + c.q.why);
+    say('Correct. ' + spoken(c.q.why));
   } else {
     anim(btn, 'shake');
     sound.wrong();
-    say('Not this time. The answer is ' + c.q.opts[0] + '. ' + c.q.why);
+    say('Not this time. The answer is ' + spoken(c.q.opts[0]) + '. ' + spoken(c.q.why));
   }
   buzzFor(right, 0);
   if (L.shown < L.items.length) fillLearn();
@@ -213,7 +213,7 @@ function learnAnswer(sec, n) {
   paintLearnBar();
   showFoot(c.sec);
 }
-function learnClue() { const c = learnCurrent(); if (!c) return; paintClue(c.sec, c.q); say('Clue. ' + c.q.clue); }
+function learnClue() { const c = learnCurrent(); if (!c) return; paintClue(c.sec, c.q); say('Clue. ' + spoken(c.q.clue)); }
 /* The bar above the cards: the chapter, and one segment for each question in this session.
    A segment fills when its question is finished: blue if it was right first time, the weak-point colour if not.
    The segment for the question on screen (or the one a card leads to) is darker until it is done. */

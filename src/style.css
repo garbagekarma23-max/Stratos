@@ -242,6 +242,10 @@ svg{display:block;flex:none}
 .opt.is-wrong .mk .cross{opacity:1}
 .opt.pop{animation:pop .4s cubic-bezier(.2,1.5,.4,1)}
 .opt.shake{animation:shake .34s ease-in-out}
+/* Maths inside a point's text (tx in 10-core.js), drawn by MathLive: the colour of the words around it, a touch larger
+   to match their height. A long expression scrolls sideways inside its own box, so it never makes the page wider. */
+.mxw{white-space:nowrap}
+math-span.mx{color:inherit;font-size:1.06em;display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;scrollbar-width:thin}
 @keyframes pop{0%{transform:scale(.96)}55%{transform:scale(1.035)}100%{transform:scale(1)}}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}60%{transform:translateX(4px)}85%{transform:translateX(-2px)}}
 

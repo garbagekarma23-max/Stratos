@@ -519,6 +519,29 @@ py content/pipeline.py cc-review --undo --dry-run
 py content/pipeline.py cc-review --undo
 ```
 
+## 12. Maths written as real maths
+
+A maths point writes its maths in LaTeX between `\(` and `\)`, inside the sentence: `The axis of symmetry is \(x = -\frac{b}{2a}\).` The app draws it with MathLive, the way the Maths Lab does, and reads it aloud to screen readers. Dollar signs are never used to mark maths, because `$20` is money. `content/prompts/kinds/maths.md` tells the writer which commands to use, and the checker, the adapter, rebalance and the Claude Code reviewer are told to look for maths written as plain text.
+
+The content check (`check_content.mjs`, with `content/latex.mjs`) fails a point when a piece of LaTeX does not parse, and fails a maths point that writes maths as plain text: a slash as a fraction, a caret or ² for a power, `log_`, `sqrt`, `<=` or `>=`, ≤ ≥ × ÷ − π and the like, an equals sign, or a hyphen used as a minus sign, outside `\( \)`. Numbers, money, percentages, coordinates such as (3, 4), degrees, `km/h`, `and/or` and words such as `x-axis` are fine as text. Every new point is checked this way. The maths points written before this rule get a warning in the full check, not a failure, until they are converted.
+
+`content/convert_maths.py` converts them. It changes only the point files in `content/work/`, never `src/`:
+
+```powershell
+py content/convert_maths.py
+```
+
+reports how many maths points need converting, how many it can convert safely on its own, and how many a person needs to read, with the reasons. It changes nothing. Then, when you decide to:
+
+```powershell
+py content/convert_maths.py --write --dry-run
+py content/convert_maths.py --write
+```
+
+makes the safe swaps (each run of maths is read back as plain text and must match the original). `--write ID ID` does only those points, and `--show ID` shows one point before and after. Points converted by hand go in a JSON file, `{id: point}`, and in with `--apply FILE`, after passing the content check. `--undo ID` puts a point back. Each converted point keeps its version before under `latex` in its file. Afterwards the script lists the courses that use the points it changed: publish each one (step 9), then build and test.
+
+The first chapter converted by hand is Mathematics Advanced, Year 11, Families of graphs (`nsw-mat-adv-11-1-2`).
+
 ## Writing an outline
 
 Copy `content/outlines/nsw-bus-11.yaml` and change it. Each line:
@@ -533,7 +556,7 @@ Copy `content/outlines/nsw-bus-11.yaml` and change it. Each line:
 | `years` | The years it is for, from 7 to 12, such as `[11]` or `[7, 8]`. Matching uses them, so keep them for a course named by units too. |
 | `level` | Optional. The heading the course is listed under, for a state that names its years another way, such as `Units 1 and 2`. Short, in sentence case. Without it, the course is listed under its year. |
 | `place` | `nsw`, `vic`, `qld`, `sa`, `wa`, `tas`, `act` or `nt`, or `international`. Or a list of two or more states that teach the same curriculum, such as `[qld, sa, wa, tas, act, nt]` for the Australian Curriculum: the course shows under each of them. |
-| `kind` | `standard`; `english` (techniques, text types, modules, context and themes of set texts, essay structure, and never more than 10 words quoted); `maths` (cards and multiple choice until the keypad comes to the course); or `theory` (for practical subjects such as Visual Arts, Music, Drama and practical PDHPE: theory and history only). |
+| `kind` | `standard`; `english` (techniques, text types, modules, context and themes of set texts, essay structure, and never more than 10 words quoted); `maths` (cards and multiple choice until the keypad comes to the course, with every piece of maths in LaTeX, step 12); or `theory` (for practical subjects such as Visual Arts, Music, Drama and practical PDHPE: theory and history only). |
 | `syllabus` | Which syllabus and part, in a few words, so Claude pitches it right. |
 | `note` | The line under the course name on Home and the subject sheet. |
 | `chips` | Optional. Words to try on the Search page. |
@@ -559,4 +582,6 @@ Rules:
 | `outlines/` | One outline per course. `outlines/later/` holds outlines that are not ready to run: `run-many content/outlines` reads only the files directly in `outlines/`, so it skips them, and the README there says why each one waits. |
 | `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's, recheck's or autoreject's decision and yours, the old options rebalance replaced, and what Claude Code wrote, checked and decided). Commit it with the content. `work/_claude-code/` holds the Claude Code steps' tasks and answers until they are imported: never commit it. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
+| `latex.mjs` | The rules for maths in LaTeX between `\(` and `\)` (step 12): parsing it, with MathLive's Node build in `lab/mathlive/mathlive-ssr.min.mjs`, finding maths written as plain text, and measuring an option as it looks. |
+| `convert_maths.py` | Converts the maths points written before step 12 to LaTeX: a report, the safe swaps, points converted by hand, and undo. |
 | `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. `tests/made/` and `tests/units/` are courses it publishes, which the browser tests open. |

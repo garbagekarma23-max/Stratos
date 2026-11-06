@@ -157,168 +157,178 @@ MADE_BANKS.mat = {
   "mat-quadratic-functions": {
     "title": "Quadratic functions",
     "card": [
-      "A quadratic function is y = ax² + bx + c, with a ≠ 0. Its graph is a parabola. If a > 0 it opens up. If a < 0 it opens down. The y-intercept is c.",
-      "The axis of symmetry is the line x = -b/2a. The vertex lies on this line. Put this x-value into the function to get the y-value of the vertex.",
-      "The x-intercepts are the roots, where y = 0. Find them by factorising, by completing the square, or by the quadratic formula x = (-b ± √(b² - 4ac)) ÷ 2a.",
-      "Example: y = x² - 6x + 5. The axis is x = 6/2 = 3. At x = 3, y = 9 - 18 + 5 = -4, so the vertex is (3, -4). Factorising gives (x - 1)(x - 5) = 0, so the roots are x = 1 and x = 5."
+      "A quadratic function is \\(y = ax^{2} + bx + c\\), with \\(a \\ne 0\\). Its graph is a parabola. If \\(a > 0\\) it is concave up. If \\(a < 0\\) it is concave down. The y-intercept is \\(c\\).",
+      "The axis of symmetry is the line \\(x = -\\frac{b}{2a}\\). The vertex, the turning point, lies on this line. Put this \\(x\\) value into the function to get the \\(y\\) value of the vertex.",
+      "The x-intercepts are the roots, where \\(y = 0\\). Find them by factorising, by completing the square, or by the quadratic formula \\(x = \\frac{-b \\pm \\sqrt{b^{2} - 4ac}}{2a}\\).",
+      "Example: \\(y = x^{2} - 6x + 5\\). The axis is \\(x = \\frac{6}{2} = 3\\). At \\(x = 3\\), \\(y = 9 - 18 + 5 = -4\\), so the vertex is \\((3, -4)\\). Factorising gives \\((x - 1)(x - 5) = 0\\), so the roots are \\(x = 1\\) and \\(x = 5\\)."
     ],
-    "remember": "Axis x = -b/2a gives the vertex. Roots are where y = 0. The sign of a sets the direction.",
+    "remember": "The axis \\(x = -\\frac{b}{2a}\\) gives the vertex. Roots are where \\(y = 0\\). The sign of \\(a\\) sets the concavity.",
     "a": {
-      "q": "What is the vertex of y = x² - 8x + 7?",
-      "opts": ["(4, -9)", "(-4, -9)", "(4, 7)", "(8, 7)"],
-      "why": "The axis is x = -(-8)/(2×1) = 4. Then y = 16 - 32 + 7 = -9, so the vertex is (4, -9). (-4, -9) comes from a sign error in -b/2a.",
-      "clue": "Find x = -b/2a first, then put it back into the function."
+      "q": "What is the vertex of \\(y = x^{2} - 8x + 7\\)?",
+      "opts": ["\\((4, -9)\\)", "\\((-4, -9)\\)", "\\((4, 7)\\)", "\\((8, 7)\\)"],
+      "why": "The axis is \\(x = -\\frac{-8}{2 \\times 1} = 4\\). Then \\(y = 16 - 32 + 7 = -9\\), so the vertex is \\((4, -9)\\). \\((-4, -9)\\) comes from a sign error in \\(-\\frac{b}{2a}\\).",
+      "clue": "Find \\(x = -\\frac{b}{2a}\\) first, then put it back into the function."
     },
     "b": {
       "d": 3,
-      "q": "Mia studies y = -x² + 2x + 8. Which statement is correct?",
+      "q": "Mia studies \\(y = -x^{2} + 2x + 8\\). Which statement is correct?",
       "opts": [
-        "It opens down and has roots x = -2 and x = 4",
-        "It opens down and has roots x = 2 and x = -4",
-        "It opens up and has roots x = -2 and x = 4",
-        "It opens up and has a y-intercept of -8"
+        "It is concave down and has roots \\(x = -2\\) and \\(x = 4\\)",
+        "It is concave down and has roots \\(x = 2\\) and \\(x = -4\\)",
+        "It is concave up and has roots \\(x = -2\\) and \\(x = 4\\)",
+        "It is concave up and has a y-intercept of \\(-8\\)"
       ],
-      "why": "Here a = -1, so it opens down. Multiply by -1: x² - 2x - 8 = 0, which gives (x - 4)(x + 2) = 0, so x = 4 or x = -2. Check: -16 + 8 + 8 = 0. The option with roots 2 and -4 has the signs swapped, and -4 gives -16 - 8 + 8 = -16, not 0.",
-      "clue": "Check the sign of a, then set y = 0 and factorise."
+      "why": "Here \\(a = -1\\), so it is concave down. Multiply by \\(-1\\): \\(x^{2} - 2x - 8 = 0\\), which gives \\((x - 4)(x + 2) = 0\\), so \\(x = 4\\) or \\(x = -2\\). Check: \\(-16 + 8 + 8 = 0\\). The option with roots 2 and \\(-4\\) has the signs swapped, and \\(x = -4\\) gives \\(-16 - 8 + 8 = -16\\), not 0.",
+      "clue": "Check the sign of \\(a\\), then set \\(y = 0\\) and factorise."
     }
   },
   "mat-discriminant": {
     "title": "The discriminant",
     "card": [
-      "For a quadratic ax² + bx + c = 0, the discriminant is Δ = b² − 4ac. It is the part under the square root in the quadratic formula.",
-      "If Δ > 0, there are two real roots. If Δ = 0, there is one real root. If Δ < 0, there are no real roots, so the parabola does not meet the x-axis.",
-      "Example: x² + 4x + 5 = 0 has a = 1, b = 4, c = 5. Δ = 4² − 4×1×5 = 16 − 20 = −4, which is negative, so there are no real roots.",
-      "To test a line and a parabola, set their equations equal and rearrange to a quadratic. Find Δ: positive means the line cuts the parabola twice, zero means it touches once, negative means it misses."
+      "For a quadratic \\(ax^{2} + bx + c = 0\\), the discriminant is \\(\\Delta = b^{2} - 4ac\\). It is the part under the square root in the quadratic formula.",
+      "If \\(\\Delta > 0\\), there are two real roots. If \\(\\Delta = 0\\), there is one real root. If \\(\\Delta < 0\\), there are no real roots, so the parabola does not meet the x-axis.",
+      "Example: \\(x^{2} + 4x + 5 = 0\\) has \\(a = 1\\), \\(b = 4\\), \\(c = 5\\). \\(\\Delta = 4^{2} - 4 \\times 1 \\times 5 = 16 - 20 = -4\\), which is negative, so there are no real roots.",
+      "To test a line and a parabola, set their equations equal and rearrange to a quadratic. Find \\(\\Delta\\): positive means the line cuts the parabola twice, zero means it touches once, negative means it misses."
     ],
-    "remember": "Δ = b² − 4ac: positive gives two roots, zero gives one, negative gives none.",
+    "remember": "\\(\\Delta = b^{2} - 4ac\\): positive gives two roots, zero gives one, negative gives none.",
     "a": {
-      "q": "What is the discriminant of 2x² − 3x − 5 = 0, and how many real roots does it have?",
-      "opts": ["49, so two real roots", "−31, so no real roots", "19, so two real roots", "49, so one real root"],
-      "why": "a = 2, b = −3, c = −5, so Δ = (−3)² − 4×2×(−5) = 9 + 40 = 49. This is positive, so there are two real roots. Forgetting that −4ac becomes +40 gives 9 − 40 = −31, which is the tempting wrong answer.",
-      "clue": "Take care with the signs when c is negative."
+      "q": "What is the discriminant of \\(2x^{2} - 3x - 5 = 0\\), and how many real roots does it have?",
+      "opts": [
+        "\\(49\\), so two real roots",
+        "\\(-31\\), so no real roots",
+        "\\(19\\), so two real roots",
+        "\\(49\\), so one real root"
+      ],
+      "why": "\\(a = 2\\), \\(b = -3\\), \\(c = -5\\), so \\(\\Delta = (-3)^{2} - 4 \\times 2 \\times (-5) = 9 + 40 = 49\\). This is positive, so there are two real roots. Forgetting that \\(-4ac\\) becomes \\(+40\\) gives \\(9 - 40 = -31\\), which is the tempting wrong answer.",
+      "clue": "Take care with the signs when \\(c\\) is negative."
     },
     "b": {
       "d": 3,
-      "q": "The line y = 2x − 5 and the parabola y = x² − 2x − 1 are drawn on the same axes. What happens?",
+      "q": "The line \\(y = 2x - 5\\) and the parabola \\(y = x^{2} - 2x - 1\\) are drawn on the same axes. What happens?",
       "opts": [
         "The line touches the parabola at one point",
         "The line cuts the parabola at two points",
         "The line does not meet the parabola",
         "The line meets the parabola at the vertex only"
       ],
-      "why": "Setting them equal: x² − 2x − 1 = 2x − 5, so x² − 4x + 4 = 0. Then Δ = 16 − 16 = 0, so the line meets the parabola at exactly one point and touches it. Two points would need Δ to be positive.",
-      "clue": "Make one side zero, then find Δ."
+      "why": "Setting them equal: \\(x^{2} - 2x - 1 = 2x - 5\\), so \\(x^{2} - 4x + 4 = 0\\). Then \\(\\Delta = 16 - 16 = 0\\), so the line meets the parabola at exactly one point and touches it. Two points would need \\(\\Delta\\) to be positive.",
+      "clue": "Make one side zero, then find \\(\\Delta\\)."
     }
   },
   "mat-cubic-polynomial-graphs": {
     "title": "Cubic and polynomial graphs",
     "card": [
-      "A cubic such as y = (x − 1)(x + 2)(x − 3) has roots where each factor is zero: x = 1, −2 and 3. The graph crosses the x-axis at each of these single roots.",
-      "For the y-intercept, put x = 0. Here y = (−1)(2)(−3) = 6, so the graph meets the y-axis at (0, 6).",
-      "Look at the sign of the x³ term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
-      "A squared factor, such as (x − 2)², gives a double root. The graph touches the x-axis there and turns back. A cubed factor, such as (x − 2)³, still crosses, but flattens as it passes through."
+      "A cubic such as \\(y = (x - 1)(x + 2)(x - 3)\\) has roots where each factor is zero: \\(x = 1\\), \\(-2\\) and \\(3\\). The graph crosses the x-axis at each of these single roots.",
+      "For the y-intercept, put \\(x = 0\\). Here \\(y = (-1)(2)(-3) = 6\\), so the graph meets the y-axis at \\((0, 6)\\).",
+      "Look at the sign of the \\(x^{3}\\) term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
+      "A squared factor, such as \\((x - 2)^{2}\\), gives a double root. The graph touches the x-axis there, at a turning point. A cubed factor, such as \\((x - 2)^{3}\\), still crosses, but flattens as it passes through."
     ],
-    "remember": "Single roots cross, a double (squared) root touches, x = 0 gives the y-intercept and the x³ sign sets the ends.",
+    "remember": "Single roots cross, a double (squared) root touches at a turning point, \\(x = 0\\) gives the y-intercept and the sign of the \\(x^{3}\\) term sets the ends.",
     "a": {
-      "q": "The graph of y = (x − 2)²(x + 1) is sketched. What happens at x = 2?",
+      "q": "The graph of \\(y = (x - 2)^{2}(x + 1)\\) is sketched. What happens at \\(x = 2\\)?",
       "opts": [
-        "It touches the x-axis and turns back",
+        "It touches the x-axis at a turning point",
         "It crosses the x-axis",
         "It crosses, flattening as it passes through",
         "It has a gap in the graph"
       ],
-      "why": "The factor (x − 2) is squared, so x = 2 is a double root and the graph touches the axis there and turns back. Crossing with a flat point happens for a cubed factor, not a squared one. The graph crosses only at the single root x = −1.",
-      "clue": "What power is the factor (x − 2) raised to?"
+      "why": "The factor \\((x - 2)\\) is squared, so \\(x = 2\\) is a double root and the graph touches the axis there, at a turning point. Crossing with a flat point happens for a cubed factor, not a squared one. The graph crosses only at the single root \\(x = -1\\).",
+      "clue": "What power is the factor \\((x - 2)\\) raised to?"
     },
     "b": {
       "d": 3,
-      "q": "What is the y-intercept of y = −(x − 1)(x + 4)(x − 2)?",
-      "opts": ["−8", "8", "−2", "2"],
-      "why": "Put x = 0: y = −(−1)(4)(−2) = −8. Here (−1)(4)(−2) = 8, and the minus sign in front makes it −8. Dropping that sign gives 8, which is wrong.",
-      "clue": "Put x = 0 and keep the minus sign at the front."
+      "q": "What is the y-intercept of \\(y = -(x - 1)(x + 4)(x - 2)\\)?",
+      "opts": ["\\(-8\\)", "\\(8\\)", "\\(-2\\)", "\\(2\\)"],
+      "why": "Put \\(x = 0\\): \\(y = -(-1)(4)(-2) = -8\\). Here \\((-1)(4)(-2) = 8\\), and the minus sign in front makes it \\(-8\\). Dropping that sign gives 8, which is wrong.",
+      "clue": "Put \\(x = 0\\) and keep the minus sign at the front."
     }
   },
   "mat-reciprocal-functions": {
     "title": "Reciprocal functions",
     "card": [
-      "A reciprocal function has the form y = k/x, where k is a number that is not zero. Its graph is a hyperbola, made of two separate curves.",
-      "x = 0 makes the fraction undefined, so the curve never meets the y-axis. A large x makes y very small, so the curve gets close to the x-axis but never touches it. These lines, x = 0 and y = 0, are the asymptotes.",
-      "If k is positive, x and y have the same sign. The curves lie in quadrants 1 and 3. If k is negative, x and y have opposite signs. The curves lie in quadrants 2 and 4.",
-      "Example: y = 6/x has k = 6. At x = 2, y = 3. At x = −2, y = −3. The points are in quadrants 1 and 3, as expected."
+      "A reciprocal function has the form \\(y = \\frac{k}{x}\\), where \\(k\\) is a number that is not zero. Its graph is a hyperbola, made of two separate curves.",
+      "\\(x = 0\\) makes the fraction undefined, so the curve never meets the y-axis. A large \\(x\\) makes \\(y\\) very small, so the curve gets close to the x-axis but never touches it. These lines, \\(x = 0\\) and \\(y = 0\\), are the asymptotes.",
+      "If \\(k\\) is positive, \\(x\\) and \\(y\\) have the same sign. The curves lie in quadrants 1 and 3. If \\(k\\) is negative, \\(x\\) and \\(y\\) have opposite signs. The curves lie in quadrants 2 and 4.",
+      "Example: \\(y = \\frac{6}{x}\\) has \\(k = 6\\). At \\(x = 2\\), \\(y = 3\\). At \\(x = -2\\), \\(y = -3\\). The points are in quadrants 1 and 3, as expected."
     ],
-    "remember": "y = k/x has both axes as asymptotes. The sign of k decides which quadrants hold the curves.",
+    "remember": "\\(y = \\frac{k}{x}\\) has both axes as asymptotes. The sign of \\(k\\) decides which quadrants hold the curves.",
     "a": {
-      "q": "The graph of y = −4/x is drawn. In which quadrants do its two curves lie?",
+      "q": "The graph of \\(y = -\\frac{4}{x}\\) is drawn. In which quadrants do its two curves lie?",
       "opts": ["Quadrants 2 and 4", "Quadrants 1 and 3", "Quadrants 1 and 2", "Quadrants 3 and 4"],
-      "why": "k = −4 is negative, so x and y have opposite signs. For example, x = 1 gives y = −4, which is in quadrant 4, and x = −1 gives y = 4, which is in quadrant 2. Quadrants 1 and 3 are for a positive k.",
-      "clue": "Try x = 1 and see the sign of y."
+      "why": "\\(k = -4\\) is negative, so \\(x\\) and \\(y\\) have opposite signs. For example, \\(x = 1\\) gives \\(y = -4\\), which is in quadrant 4, and \\(x = -1\\) gives \\(y = 4\\), which is in quadrant 2. Quadrants 1 and 3 are for a positive \\(k\\).",
+      "clue": "Try \\(x = 1\\) and see the sign of \\(y\\)."
     },
     "b": {
       "d": 2,
-      "q": "Which statement about the graph of y = 5/x is correct?",
+      "q": "Which statement about the graph of \\(y = \\frac{5}{x}\\) is correct?",
       "opts": [
-        "It has no point with x = 0",
-        "It crosses the x-axis at x = 5",
-        "It crosses the y-axis at y = 5",
+        "It has no point with \\(x = 0\\)",
+        "It crosses the x-axis at \\(x = 5\\)",
+        "It crosses the y-axis at \\(y = 5\\)",
         "It lies in quadrants 2 and 4"
       ],
-      "why": "x = 0 would need division by zero, so no point has x = 0 and the curve never meets the y-axis. The curve never meets the x-axis either, since 5/x is never 0. The tempting y = 5 is just the numerator and is not an intercept.",
-      "clue": "What happens to 5/x if x is 0?"
+      "why": "\\(x = 0\\) would need division by zero, so no point has \\(x = 0\\) and the curve never meets the y-axis. The curve never meets the x-axis either, since \\(\\frac{5}{x}\\) is never 0. The tempting \\(y = 5\\) is just the numerator and is not an intercept.",
+      "clue": "What happens to \\(\\frac{5}{x}\\) if \\(x\\) is 0?"
     }
   },
   "mat-absolute-value-functions": {
     "title": "Absolute value functions",
     "card": [
-      "The absolute value |x| is the distance of x from zero on the number line. It is never negative. So |5| = 5 and |−5| = 5.",
-      "The graph of y = |x| is a V shape with its corner at the origin. For x ≥ 0 it is the line y = x. For x < 0 it is the line y = −x.",
-      "|x − a| is the distance of x from a. So |x − a| = b asks for the points that are b units from a. If b > 0, there are two: x = a + b and x = a − b.",
-      "Example: solve |x − 3| = 4. The points 4 units from 3 are 3 + 4 = 7 and 3 − 4 = −1. Check: |7 − 3| = 4 and |−1 − 3| = |−4| = 4."
+      "The absolute value \\(|x|\\) is the distance of \\(x\\) from zero on the number line. It is never negative. So \\(|5| = 5\\) and \\(|-5| = 5\\).",
+      "The graph of \\(y = |x|\\) is a V shape with its vertex at the origin. For \\(x \\ge 0\\) it is the line \\(y = x\\). For \\(x < 0\\) it is the line \\(y = -x\\).",
+      "\\(|x - a|\\) is the distance of \\(x\\) from \\(a\\). So \\(|x - a| = b\\) asks for the points that are \\(b\\) units from \\(a\\). If \\(b > 0\\), there are two: \\(x = a + b\\) and \\(x = a - b\\).",
+      "Example: solve \\(|x - 3| = 4\\). The points 4 units from 3 are \\(3 + 4 = 7\\) and \\(3 - 4 = -1\\). Check: \\(|7 - 3| = 4\\) and \\(|-1 - 3| = |-4| = 4\\)."
     ],
-    "remember": "If b > 0, |x − a| = b means x is b units from a, so x = a + b or x = a − b.",
+    "remember": "If \\(b > 0\\), \\(|x - a| = b\\) means \\(x\\) is \\(b\\) units from \\(a\\), so \\(x = a + b\\) or \\(x = a - b\\).",
     "a": {
-      "q": "What are the solutions of |x − 2| = 5?",
-      "opts": ["x = 7 and x = −3", "x = 7 only", "x = 3 and x = −3", "x = −7 and x = 3"],
-      "why": "The points 5 units from 2 are 2 + 5 = 7 and 2 − 5 = −3. Giving x = 7 only is tempting, but a distance can be measured in either direction from 2.",
+      "q": "What are the solutions of \\(|x - 2| = 5\\)?",
+      "opts": [
+        "\\(x = 7\\) and \\(x = -3\\)",
+        "\\(x = 7\\) only",
+        "\\(x = 3\\) and \\(x = -3\\)",
+        "\\(x = -7\\) and \\(x = 3\\)"
+      ],
+      "why": "The points 5 units from 2 are \\(2 + 5 = 7\\) and \\(2 - 5 = -3\\). Giving \\(x = 7\\) only is tempting, but a distance can be measured in either direction from 2.",
       "clue": "Which numbers are 5 units from 2 on the number line?"
     },
     "b": {
       "d": 3,
-      "q": "Which equation has the solutions x = −1 and x = 9?",
-      "opts": ["|x − 4| = 5", "|x + 4| = 5", "|x − 5| = 4", "|x − 4| = 9"],
-      "why": "The midpoint of −1 and 9 is 4, and each is 5 units from 4, so |x − 4| = 5. |x + 4| = 5 is tempting, but it is centred at −4 and gives x = 1 and x = −9.",
-      "clue": "Find the number halfway between −1 and 9, then the distance to each."
+      "q": "Which equation has the solutions \\(x = -1\\) and \\(x = 9\\)?",
+      "opts": ["\\(|x - 4| = 5\\)", "\\(|x + 4| = 5\\)", "\\(|x - 5| = 4\\)", "\\(|x - 4| = 9\\)"],
+      "why": "The midpoint of \\(-1\\) and 9 is 4, and each is 5 units from 4, so \\(|x - 4| = 5\\). \\(|x + 4| = 5\\) is tempting, but it is centred at \\(-4\\) and gives \\(x = 1\\) and \\(x = -9\\).",
+      "clue": "Find the number halfway between \\(-1\\) and 9, then the distance to each."
     }
   },
   "mat-circles": {
     "title": "Circles",
     "card": [
-      "A circle with centre (h, k) and radius r has the equation (x − h)² + (y − k)² = r². The right side is r², not r.",
-      "Read the centre from the brackets and flip the signs. In (x − 3)² + (y + 2)² = 25, the centre is (3, −2) and r² = 25, so r = 5.",
-      "A general equation such as x² + y² − 6x + 4y − 12 = 0 can be rewritten by completing the square. Add half the x coefficient, squared, and the same for y, to both sides.",
-      "Worked example: x² − 6x + 9 + y² + 4y + 4 = 12 + 9 + 4. This gives (x − 3)² + (y + 2)² = 25, so the centre is (3, −2) and the radius is 5."
+      "A circle with centre \\((h, k)\\) and radius \\(r\\) has the equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\). The right side is \\(r^{2}\\), not \\(r\\).",
+      "Read the centre from the brackets and flip the signs. In \\((x - 3)^{2} + (y + 2)^{2} = 25\\), the centre is \\((3, -2)\\) and \\(r^{2} = 25\\), so \\(r = 5\\).",
+      "A general equation such as \\(x^{2} + y^{2} - 6x + 4y - 12 = 0\\) can be rewritten by completing the square. Add half the \\(x\\) coefficient, squared, and the same for \\(y\\), to both sides.",
+      "Worked example: \\(x^{2} - 6x + 9 + y^{2} + 4y + 4 = 12 + 9 + 4\\). This gives \\((x - 3)^{2} + (y + 2)^{2} = 25\\), so the centre is \\((3, -2)\\) and the radius is 5."
     ],
-    "remember": "Flip the signs inside the brackets for the centre. The right side is r², so take a square root for the radius.",
+    "remember": "Flip the signs inside the brackets for the centre. The right side is \\(r^{2}\\), so take a square root for the radius.",
     "a": {
-      "q": "What are the centre and radius of the circle (x + 1)² + (y − 4)² = 49?",
+      "q": "What are the centre and radius of the circle \\((x + 1)^{2} + (y - 4)^{2} = 49\\)?",
       "opts": [
-        "Centre (−1, 4), radius 7",
-        "Centre (1, −4), radius 7",
-        "Centre (−1, 4), radius 49",
-        "Centre (1, −4), radius 49"
+        "Centre \\((-1, 4)\\), radius 7",
+        "Centre \\((1, -4)\\), radius 7",
+        "Centre \\((-1, 4)\\), radius 49",
+        "Centre \\((1, -4)\\), radius 49"
       ],
-      "why": "The brackets show x + 1 = x − (−1) and y − 4, so the centre is (−1, 4). The right side is r² = 49, so r = 7. Choosing (1, −4) copies the signs instead of flipping them.",
+      "why": "The brackets show \\(x + 1 = x - (-1)\\) and \\(y - 4\\), so the centre is \\((-1, 4)\\). The right side is \\(r^{2} = 49\\), so \\(r = 7\\). Choosing \\((1, -4)\\) copies the signs instead of flipping them.",
       "clue": "Flip the signs for the centre, then take a square root."
     },
     "b": {
       "d": 3,
-      "q": "The circle x² + y² − 8x + 2y − 8 = 0 is rewritten by completing the square. What are its centre and radius?",
+      "q": "The circle \\(x^{2} + y^{2} - 8x + 2y - 8 = 0\\) is rewritten by completing the square. What are its centre and radius?",
       "opts": [
-        "Centre (4, −1), radius 5",
-        "Centre (4, −1), radius 25",
-        "Centre (−4, 1), radius 5",
-        "Centre (8, −2), radius 5"
+        "Centre \\((4, -1)\\), radius 5",
+        "Centre \\((4, -1)\\), radius 25",
+        "Centre \\((-4, 1)\\), radius 5",
+        "Centre \\((8, -2)\\), radius 5"
       ],
-      "why": "Add 16 and 1 to both sides: (x − 4)² + (y + 1)² = 8 + 16 + 1 = 25. The centre is (4, −1) and r = 5. Radius 25 forgets that the right side is r², not r.",
+      "why": "Add 16 and 1 to both sides: \\((x - 4)^{2} + (y + 1)^{2} = 8 + 16 + 1 = 25\\). The centre is \\((4, -1)\\) and \\(r = 5\\). Radius 25 forgets that the right side is \\(r^{2}\\), not \\(r\\).",
       "clue": "Move the constant across, then add 16 and 1 to both sides."
     }
   },

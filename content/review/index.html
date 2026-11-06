@@ -73,6 +73,9 @@ header .tabs button[aria-pressed="true"]{background:var(--blue-wash);color:var(-
 .picks button,.compare .toggle{font:inherit;border-radius:8px;padding:6px 12px;cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
 .picks button[aria-pressed="true"],.compare .toggle[aria-pressed="true"]{background:var(--blue-wash);color:var(--blue);border-color:var(--blue)}
 @media (max-width:900px){main{grid-template-columns:1fr}nav,.pane{border:0;border-bottom:1px solid var(--line)}.pair{grid-template-columns:1fr}}
+/* Maths drawn by MathLive (mt in the script): hidden until it is ready, and a long piece scrolls inside its own box. */
+math-span{display:inline-block;max-width:100%;overflow-x:auto;overflow-y:hidden;vertical-align:middle;color:inherit;font-size:1.05em}
+math-span:not(:defined){visibility:hidden}
 </style>
 </head>
 <body>
@@ -88,25 +91,38 @@ const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&am
 
 /* Words that changed between two texts: added ones in blue, removed ones crossed out. */
 function diff(a, b) {
-  const x = String(a || '').split(/(\s+)/), y = String(b || '').split(/(\s+)/), m = x.length, n = y.length;
+  const x = pieces(a), y = pieces(b), m = x.length, n = y.length;
   const t = Array.from({length: m + 1}, () => new Array(n + 1).fill(0));
   for (let i = m - 1; i >= 0; i--) for (let j = n - 1; j >= 0; j--) t[i][j] = x[i] === y[j] ? t[i + 1][j + 1] + 1 : Math.max(t[i + 1][j], t[i][j + 1]);
   let i = 0, j = 0, out = '';
   while (i < m && j < n) {
-    if (x[i] === y[j]) { out += esc(x[i]); i++; j++; }
-    else if (t[i + 1][j] >= t[i][j + 1]) { if (x[i].trim()) out += '<del>' + esc(x[i]) + '</del>'; i++; }
-    else { out += y[j].trim() ? '<ins>' + esc(y[j]) + '</ins>' : esc(y[j]); j++; }
+    if (x[i] === y[j]) { out += mt(x[i]); i++; j++; }
+    else if (t[i + 1][j] >= t[i][j + 1]) { if (x[i].trim()) out += '<del>' + mt(x[i]) + '</del>'; i++; }
+    else { out += y[j].trim() ? '<ins>' + mt(y[j]) + '</ins>' : mt(y[j]); j++; }
   }
-  while (i < m) { if (x[i].trim()) out += '<del>' + esc(x[i]) + '</del>'; i++; }
-  while (j < n) { out += y[j].trim() ? '<ins>' + esc(y[j]) + '</ins>' : esc(y[j]); j++; }
+  while (i < m) { if (x[i].trim()) out += '<del>' + mt(x[i]) + '</del>'; i++; }
+  while (j < n) { out += y[j].trim() ? '<ins>' + mt(y[j]) + '</ins>' : mt(y[j]); j++; }
   return out;
 }
-const line = l => Array.isArray(l) ? '<b>' + esc(l[0]) + ':</b> ' + esc(l[1]) : esc(l);
+/* Maths is written in LaTeX between \( and \), as in the app. mt() draws each piece with MathLive, which the server
+   gives from the app's own copy (lab/mathlive), loaded the first time a point has maths in it. Until it is ready the
+   pieces stay hidden, so the LaTeX itself never shows; the edit form shows it. */
+const MX = /\\\((.+?)\\\)/;
+let mathLive = null;
+function mt(s) {
+  s = String(s == null ? '' : s);
+  if (s.indexOf('\\(') < 0) return esc(s);
+  if (!mathLive) { mathLive = document.createElement('script'); mathLive.src = '/mathlive/mathlive.min.js'; document.head.appendChild(mathLive); }
+  return s.split(MX).map((part, i) => i % 2 ? '<math-span>' + esc(part) + '</math-span>' : esc(part)).join('');
+}
+/* Text in pieces for diff(): words, spaces, and each piece of maths whole. */
+const pieces = s => String(s || '').split(/(\\\(.+?\\\)|\s+)/).filter(x => x !== '');
+const line = l => Array.isArray(l) ? '<b>' + mt(l[0]) + ':</b> ' + mt(l[1]) : mt(l);
 const plain = l => Array.isArray(l) ? l[0] + ': ' + l[1] : l;
 
 /* A point as students see it. With base, words changed from base are marked. */
 function pointHtml(p, base) {
-  const t = (a, b) => base ? diff(b, a) : esc(a);
+  const t = (a, b) => base ? diff(b, a) : mt(a);
   const q = k => '<div class="q"><div class="qt">' + (k === 'a' ? 'Check question' : 'Practice question, difficulty ' + p.b.d) + '</div><p>' + t(p[k].q, base && base[k].q) + '</p>' +
     p[k].opts.map((o, i) => '<div class="opt' + (i ? '' : ' right') + '"><span class="mark">' + (i ? 'Wrong' : 'Right') + '</span><span>' + t(o, base && base[k].opts[i]) + '</span></div>').join('') +
     '<p class="small"><b>Why:</b> ' + t(p[k].why, base && base[k].why) + '</p><p class="small"><b>Clue:</b> ' + t(p[k].clue, base && base[k].clue) + '</p></div>';
@@ -122,7 +138,7 @@ function formHtml(p) {
     (k === 'b' ? '<label>Difficulty</label><select data-f="b.d"><option value="2"' + (p.b.d === 2 ? ' selected' : '') + '>2</option><option value="3"' + (p.b.d === 3 ? ' selected' : '') + '>3</option></select>' : '') +
     p[k].opts.map((o, i) => '<label>' + (i ? 'Wrong option ' + i : 'Right option') + '</label><input data-f="' + k + '.opts" data-i="' + i + '" value="' + esc(o) + '">').join('') +
     '<label>Why</label><textarea data-f="' + k + '.why">' + esc(p[k].why) + '</textarea><label>Clue</label><input data-f="' + k + '.clue" value="' + esc(p[k].clue) + '">';
-  return '<form id="edit"><label>Title</label><input data-f="title" value="' + esc(p.title) + '"><label>Card lines (3 or 4). Leave a line empty to drop it.</label>' + card +
+  return '<form id="edit"><p class="small">Write maths in LaTeX between \\( and \\), such as \\(x = -\\frac{b}{2a}\\). The content check runs before saving.</p><label>Title</label><input data-f="title" value="' + esc(p.title) + '"><label>Card lines (3 or 4). Leave a line empty to drop it.</label>' + card +
     (p.card.length < 4 ? '<div class="row"><input data-f="label" data-i="' + p.card.length + '" placeholder="Label (optional)"><textarea data-f="line" data-i="' + p.card.length + '" placeholder="A fourth line (optional)"></textarea></div>' : '') +
     '<label>Remember</label><input data-f="remember" value="' + esc(p.remember) + '">' + q('a') + q('b') + '</form>';
 }

@@ -322,7 +322,7 @@ function answer(sec, n) {
     anim(btn, 'shake');
     sound.wrong(); buzzFor(false);
     if (prevCombo >= 3) { const p = centre(comboEl); puff(p.x, p.y); }
-    say('Not this time. The answer is ' + c.q.opts[0] + '.');
+    say('Not this time. The answer is ' + spoken(c.q.opts[0]) + '.');
     settle(c.sec, 1300);
     showFoot(c.sec);
   }
@@ -330,7 +330,7 @@ function answer(sec, n) {
 function clue() {
   const c = current(); if (!c || !solo() || P.clue) return;
   P.clue = true; paintClue(c.sec, c.q);
-  say('Clue. ' + c.q.clue);
+  say('Clue. ' + spoken(c.q.clue));
 }
 function skip() {
   const c = current(); if (!c || !solo() || c.it.back) return;
@@ -354,7 +354,7 @@ function reveal() {
   paintResolved(P, c.sec, c.i);
   paintHud(false);
   if (prevCombo >= 3) { const p = centre(comboEl); puff(p.x, p.y); }
-  say('The answer is ' + c.q.opts[0] + '.');
+  say('The answer is ' + spoken(c.q.opts[0]) + '.');
   settle(c.sec, 1300);
   showFoot(c.sec);
 }

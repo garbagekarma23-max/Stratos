@@ -7,6 +7,7 @@ const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.f
 const plural = (n, word) => n + ' ' + word + (n === 1 ? '' : 's');
 const reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
+
 /* ---------- icons and rockets, drawn as small SVG pictures ---------- */
 const icon = d => '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">' + d + '</svg>';
 const IC = {
@@ -263,7 +264,12 @@ const SUBJECTS = {};
 COURSE_LIST.forEach(c => { SUBJECTS[c.id] = c.data.units ? indexCourse(c.data, c.id) : indexTopic(c.data, c.id); });
 const COURSES = COURSE_LIST.filter(c => c.data.units).map(c => c.id);
 let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
-function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; ALL.forEach(p => { PT[p.id] = p; }); }
+function setSubject(id) {
+  SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; ALL.forEach(p => { PT[p.id] = p; });
+  /* A course whose points have maths in them starts loading MathLive at once, so it is ready before the first card. */
+  if (SUB.mx === undefined) SUB.mx = SUB.id !== 'maths' && ALL.some(p => hasMx(JSON.stringify([p.card, p.remember, p.a, p.b])));
+  if (SUB.mx) setTimeout(() => loadMathLive().catch(() => {}), 0);
+}
 const isMaths = () => SUB.id === 'maths';
 /* A chapter with points, from any subject. Coming soon chapters are left out, so nothing can open one. */
 function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x => x.id === id); if (c) return c; } return null; }

@@ -7,8 +7,9 @@ const to = new URL('./mathlive/', import.meta.url);
 const version = JSON.parse(fs.readFileSync(new URL('package.json', from), 'utf8')).version;
 fs.rmSync(to, {recursive: true, force: true});
 fs.mkdirSync(new URL('fonts/', to), {recursive: true});
-// The script and its licence.
-for (const f of ['mathlive.min.js', 'LICENSE.txt']) fs.copyFileSync(new URL(f, from), new URL(f, to));
+// The script and its licence, and the smaller build that runs in Node with no browser (no editor in it).
+// check_content.mjs uses that one to check that every piece of LaTeX in the content parses (content/latex.mjs).
+for (const f of ['mathlive.min.js', 'mathlive-ssr.min.mjs', 'LICENSE.txt']) fs.copyFileSync(new URL(f, from), new URL(f, to));
 // The maths fonts. MathLive loads them itself from MathfieldElement.fontsDirectory.
 for (const f of fs.readdirSync(new URL('fonts/', from))) if (f.endsWith('.woff2')) fs.copyFileSync(new URL('fonts/' + f, from), new URL('fonts/' + f, to));
 fs.writeFileSync(new URL('VERSION', to), version + '\n');
