@@ -30,7 +30,8 @@
   "2026-11-04T09:36:54Z match: Claude Haiku 5.5 may adapt mat-conditional-probability, but is not highly sure, so to the Opus match check",
   "2026-11-04T09:47:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:58:30Z write: done",
-  "2026-11-04T10:08:03Z check: passed, cleared"
+  "2026-11-04T10:08:03Z check: passed, cleared",
+  "2026-11-06T10:44:50Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -118,33 +119,70 @@
   "card": [
    "A two-way table sorts people or things by two features at once. Each cell counts those with both features.",
    "When a condition is given, only the row or column for that condition counts. That row or column total becomes the new total.",
-   "Probability given the condition = number with both features ÷ total for the condition. Do not use the grand total.",
-   "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. P(Year 7 given bus) = 6/24 = 1/4."
+   "Probability given the condition \\(=\\) number with both features \\(\\div\\) total for the condition. Do not use the grand total.",
+   "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. \\(P(\\text{Year 7 given bus}) = \\frac{6}{24} = \\frac{1}{4}\\)."
   ],
   "remember": "Given a condition, shrink the total to that row or column.",
   "a": {
-   "q": "A table shows 30 members of a club. 18 are juniors, and 12 of the juniors play netball. What is P(plays netball given junior)?",
+   "q": "A table shows 30 members of a club. 18 are juniors, and 12 of the juniors play netball. What is \\(P(\\text{plays netball given junior})\\)?",
    "opts": [
-    "12/18",
-    "12/30",
-    "18/30",
-    "6/18"
+    "\\(\\frac{12}{18}\\)",
+    "\\(\\frac{12}{30}\\)",
+    "\\(\\frac{18}{30}\\)",
+    "\\(\\frac{6}{18}\\)"
    ],
-   "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving 12/18. Using 30 would divide by everyone, which ignores the condition.",
+   "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving \\(\\frac{12}{18}\\). Using 30 would divide by everyone, which ignores the condition.",
    "clue": "Which group are we told about?"
   },
   "b": {
    "d": 3,
-   "q": "At a Perth school, 50 students were asked about a sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. What is P(football given cricket)?",
+   "q": "At a Perth school, 50 students were asked about a sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. What is \\(P(\\text{football given cricket})\\)?",
    "opts": [
-    "8/23",
-    "8/20",
-    "8/50",
-    "15/23"
+    "\\(\\frac{8}{23}\\)",
+    "\\(\\frac{8}{20}\\)",
+    "\\(\\frac{8}{50}\\)",
+    "\\(\\frac{15}{23}\\)"
    ],
-   "why": "Cricket players are 8 + 15 = 23, so that is the total. Of them, 8 play football, giving 8/23. The tempting 8/20 uses the football total, which reverses the condition.",
+   "why": "Cricket players are \\(8 + 15 = 23\\), so that is the total. Of them, 8 play football, giving \\(\\frac{8}{23}\\). The tempting \\(\\frac{8}{20}\\) uses the football total, which reverses the condition.",
    "clue": "Find the total for the group named after the word given."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:44:50Z",
+  "by": "hand",
+  "before": {
+   "title": "Conditional probability from a two-way table",
+   "card": [
+    "A two-way table sorts people or things by two features at once. Each cell counts those with both features.",
+    "When a condition is given, only the row or column for that condition counts. That row or column total becomes the new total.",
+    "Probability given the condition = number with both features ÷ total for the condition. Do not use the grand total.",
+    "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. P(Year 7 given bus) = 6/24 = 1/4."
+   ],
+   "remember": "Given a condition, shrink the total to that row or column.",
+   "a": {
+    "q": "A table shows 30 members of a club. 18 are juniors, and 12 of the juniors play netball. What is P(plays netball given junior)?",
+    "opts": [
+     "12/18",
+     "12/30",
+     "18/30",
+     "6/18"
+    ],
+    "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving 12/18. Using 30 would divide by everyone, which ignores the condition.",
+    "clue": "Which group are we told about?"
+   },
+   "b": {
+    "d": 3,
+    "q": "At a Perth school, 50 students were asked about a sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. What is P(football given cricket)?",
+    "opts": [
+     "8/23",
+     "8/20",
+     "8/50",
+     "15/23"
+    ],
+    "why": "Cricket players are 8 + 15 = 23, so that is the total. Of them, 8 play football, giving 8/23. The tempting 8/20 uses the football total, which reverses the condition.",
+    "clue": "Find the total for the group named after the word given."
+   }
+  }
+ }
 }

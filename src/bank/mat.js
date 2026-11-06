@@ -103,7 +103,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "If \\(f(x) = x^{2} + 2x\\), what is \\(f(a + 1)\\)?",
       "opts": ["\\(a^{2} + 4a + 3\\)", "\\(a^{2} + 2a + 3\\)", "\\(a^{2} + 2a + 1\\)", "\\(a^{2} + 4a + 1\\)"],
-      "why": "\\(f(a + 1) = (a + 1)^{2} + 2(a + 1) = a^{2} + 2a + 1 + 2a + 2 = a^{2} + 4a + 3\\). The option \\(a^{2} + 2a + 3\\) comes from writing \\((a + 1)^{2}\\) as \\(a^{2} + 1\\), which skips the middle term.",
+      "why": "\\(f(a + 1) = (a + 1)^{2} + 2(a + 1)\\), which is \\(a^{2} + 2a + 1 + 2a + 2\\), so \\(f(a + 1) = a^{2} + 4a + 3\\). The option \\(a^{2} + 2a + 3\\) comes from writing \\((a + 1)^{2}\\) as \\(a^{2} + 1\\), which skips the middle term.",
       "clue": "Put the whole bracket in place of \\(x\\), then expand \\((a + 1)^{2}\\) fully."
     }
   },
@@ -663,7 +663,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Mia cuts a slice of pizza shaped as a sector with radius 10 cm and angle 0.8 radians. What is the area of the slice?",
       "opts": ["\\(40 \\text{ cm}^{2}\\)", "\\(80 \\text{ cm}^{2}\\)", "\\(8 \\text{ cm}^{2}\\)", "\\(4 \\text{ cm}^{2}\\)"],
-      "why": "\\(A = \\frac{1}{2}r^{2}\\theta = \\frac{1}{2} \\times 10^{2} \\times 0.8 = \\frac{1}{2} \\times 100 \\times 0.8 = 40 \\text{ cm}^{2}\\). Forgetting the \\(\\frac{1}{2}\\) gives \\(80 \\text{ cm}^{2}\\). Using \\(r\\theta\\) gives 8, which is the arc length.",
+      "why": "\\(A = \\frac{1}{2}r^{2}\\theta = \\frac{1}{2} \\times 10^{2} \\times 0.8\\), which is \\(\\frac{1}{2} \\times 100 \\times 0.8 = 40 \\text{ cm}^{2}\\). Forgetting the \\(\\frac{1}{2}\\) gives \\(80 \\text{ cm}^{2}\\). Using \\(r\\theta\\) gives 8, which is the arc length.",
       "clue": "Square the radius first, then halve."
     }
   },
@@ -702,7 +702,7 @@ MADE_BANKS.mat = {
     "a": {
       "q": "Two trails leave a campsite at an angle of 60°. One is 6 km long and the other is 10 km long. How far apart are their ends, to 1 decimal place?",
       "opts": ["8.7 km", "14.0 km", "76.0 km", "2.8 km"],
-      "why": "\\(c^{2} = 6^{2} + 10^{2} - 2 \\times 6 \\times 10 \\times \\cos 60^{\\circ} = 136 - 60 = 76\\), so \\(c = 8.7\\) km. Stopping at 76 forgets the square root.",
+      "why": "\\(c^{2} = 6^{2} + 10^{2} - 2 \\times 6 \\times 10 \\times \\cos 60^{\\circ}\\), which is \\(136 - 60 = 76\\), so \\(c = 8.7\\) km. Stopping at 76 forgets the square root.",
       "clue": "The 60° angle sits between the two known sides."
     },
     "b": {
@@ -730,7 +730,7 @@ MADE_BANKS.mat = {
         "\\(69.4 \\text{ m}^{2}\\)",
         "\\(108.0 \\text{ m}^{2}\\)"
       ],
-      "why": "\\(\\text{Area} = \\frac{1}{2} \\times 9 \\times 12 \\times \\sin 40^{\\circ} = 54 \\times 0.6428 = 34.7 \\text{ m}^{2}\\). Using \\(\\cos 40^{\\circ}\\) gives \\(41.4 \\text{ m}^{2}\\), which uses the wrong ratio.",
+      "why": "\\(\\text{Area} = \\frac{1}{2} \\times 9 \\times 12 \\times \\sin 40^{\\circ}\\), which is \\(54 \\times 0.6428 = 34.7 \\text{ m}^{2}\\). Using \\(\\cos 40^{\\circ}\\) gives \\(41.4 \\text{ m}^{2}\\), which uses the wrong ratio.",
       "clue": "Half, times both sides, times the sine."
     },
     "b": {
@@ -962,7 +962,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Using first principles, what is \\(f'(x)\\) for \\(f(x) = x^{2} + 3x\\)?",
       "opts": ["\\(2x + 3\\)", "\\(2x + 3h\\)", "\\(x^{2} + 3\\)", "\\(2x\\)"],
-      "why": "The secant gradient is \\(\\frac{(x + h)^{2} + 3(x + h) - x^{2} - 3x}{h} = \\frac{2xh + h^{2} + 3h}{h} = 2x + h + 3\\). As \\(h\\) approaches 0, this approaches \\(2x + 3\\). The option \\(2x + 3h\\) keeps \\(h\\), which has gone to 0 in the limit.",
+      "why": "The secant gradient is \\(\\frac{(x + h)^{2} + 3(x + h) - x^{2} - 3x}{h}\\), which simplifies to \\(\\frac{2xh + h^{2} + 3h}{h} = 2x + h + 3\\). As \\(h\\) approaches 0, this approaches \\(2x + 3\\). The option \\(2x + 3h\\) keeps \\(h\\), which has gone to 0 in the limit.",
       "clue": "Expand, cancel the \\(h\\) in the denominator, then let \\(h\\) approach 0."
     }
   },
@@ -1306,7 +1306,7 @@ MADE_BANKS.mat = {
       "d": 2,
       "q": "Mia uses a calculator to find \\(\\log_{3} 50\\). What is the value, to 2 decimal places?",
       "opts": ["3.56", "0.28", "1.70", "16.67"],
-      "why": "\\(\\log_{3} 50 = \\log 50 \\div \\log 3 = 1.6990 \\div 0.4771 = 3.56\\). The value 0.28 comes from dividing the wrong way round. Check: \\(3^{3} = 27\\) and \\(3^{4} = 81\\), and 50 lies between them.",
+      "why": "\\(\\log_{3} 50 = \\log 50 \\div \\log 3\\), which is \\(1.6990 \\div 0.4771 = 3.56\\). The value 0.28 comes from dividing the wrong way round. Check: \\(3^{3} = 27\\) and \\(3^{4} = 81\\), and 50 lies between them.",
       "clue": "Which log goes on top, and which goes in the bottom?"
     }
   },
@@ -1428,7 +1428,7 @@ MADE_BANKS.mat = {
     "a": {
       "q": "In a group, \\(P(A \\cap B) = 0.2\\) and \\(P(B) = 0.5\\). What is \\(P(A \\mid B)\\)?",
       "opts": ["0.4", "0.1", "0.7", "2.5"],
-      "why": "\\(P(A \\mid B) = P(A \\cap B) \\div P(B) = 0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+      "why": "\\(P(A \\mid B) = P(A \\cap B) \\div P(B)\\), which is \\(0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
       "clue": "The event after the bar goes on the bottom."
     },
     "b": {
@@ -1905,7 +1905,7 @@ MADE_BANKS.mat = {
     "a": {
       "q": "What is \\(\\sum_{k=1}^{3} (k^{2} + 1)\\)?",
       "opts": ["17", "14", "15", "9"],
-      "why": "The terms are \\((1 + 1) + (4 + 1) + (9 + 1) = 2 + 5 + 10 = 17\\). The answer 14 comes from adding \\(1^{2} + 2^{2} + 3^{2}\\) and forgetting the \\(+1\\) in each term.",
+      "why": "The terms are \\((1 + 1) + (4 + 1) + (9 + 1)\\), which is \\(2 + 5 + 10 = 17\\). The answer 14 comes from adding \\(1^{2} + 2^{2} + 3^{2}\\) and forgetting the \\(+1\\) in each term.",
       "clue": "Put \\(k = 1\\), 2 and 3 into the rule, then add."
     },
     "b": {
@@ -2222,7 +2222,7 @@ MADE_BANKS.mat = {
       "d": 2,
       "q": "The line \\(y = 4\\) and the curve \\(y = x^{2}\\) meet at \\(x = -2\\) and \\(x = 2\\), with the line on top. What is the area between them?",
       "opts": ["\\(\\frac{32}{3}\\)", "\\(\\frac{16}{3}\\)", "16", "\\(\\frac{64}{3}\\)"],
-      "why": "The area is \\(\\int_{-2}^{2} (4 - x^{2}) \\, dx = \\left[4x - \\frac{x^{3}}{3}\\right]_{-2}^{2} = (8 - \\frac{8}{3}) - (-8 + \\frac{8}{3}) = \\frac{32}{3}\\). Using only 0 to 2 gives \\(\\frac{16}{3}\\), which is just half of the area.",
+      "why": "The area is \\(\\int_{-2}^{2} (4 - x^{2}) \\, dx\\), which is \\(\\left[4x - \\frac{x^{3}}{3}\\right]_{-2}^{2}\\). That gives \\((8 - \\frac{8}{3}) - (-8 + \\frac{8}{3}) = \\frac{32}{3}\\). Using only 0 to 2 gives \\(\\frac{16}{3}\\), which is just half of the area.",
       "clue": "The region runs from \\(x = -2\\) to \\(x = 2\\), not from 0."
     }
   },
@@ -2245,7 +2245,7 @@ MADE_BANKS.mat = {
       "d": 2,
       "q": "A function has values 2, 5, 6 and 3 at \\(x = 0\\), 1, 2 and 3. Using the trapezoidal rule with 3 strips, what is the estimate of the integral from 0 to 3?",
       "opts": ["13.5", "10.5", "8", "27"],
-      "why": "Here \\(h = 1\\), so \\(\\text{area} \\approx \\frac{1}{2} \\times [2 + 3 + 2 \\times (5 + 6)] = \\frac{1}{2} \\times 27 = 13.5\\). Adding the three trapezia gives the same: \\(3.5 + 5.5 + 4.5 = 13.5\\). The answer 10.5 comes from doubling the first and last values instead of the middle ones.",
+      "why": "Here \\(h = 1\\), so \\(\\text{area} \\approx \\frac{1}{2} \\times [2 + 3 + 2 \\times (5 + 6)]\\), which is \\(\\frac{1}{2} \\times 27 = 13.5\\). Adding the three trapezia gives the same: \\(3.5 + 5.5 + 4.5 = 13.5\\). The answer 10.5 comes from doubling the first and last values instead of the middle ones.",
       "clue": "Which values sit inside the interval and get doubled?"
     }
   },
@@ -2370,7 +2370,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "A colony of bacteria in a lab follows \\(N = 200e^{0.3t}\\), where \\(t\\) is in hours. What is \\(N\\) after 2 hours, to the nearest whole number?",
       "opts": ["364", "120", "1478", "320"],
-      "why": "\\(N = 200e^{0.3 \\times 2} = 200e^{0.6} \\approx 200 \\times 1.822 = 364\\). The value 320 comes from adding 30% of 200, which is 60, in each of the 2 hours. That treats the growth as a fixed amount per hour, but in this model \\(N\\) grows faster as it gets bigger, so you must use \\(e^{0.6}\\).",
+      "why": "\\(N = 200e^{0.3 \\times 2} = 200e^{0.6}\\), and \\(200e^{0.6} \\approx 200 \\times 1.822 = 364\\). The value 320 comes from adding 30% of 200, which is 60, in each of the 2 hours. That treats the growth as a fixed amount per hour, but in this model \\(N\\) grows faster as it gets bigger, so you must use \\(e^{0.6}\\).",
       "clue": "Work out \\(kt\\) first, then use \\(e\\) to that power."
     }
   },
@@ -2432,14 +2432,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "\\(X\\) has \\(P(1) = 0.5\\), \\(P(2) = 0.3\\) and \\(P(5) = 0.2\\). What is \\(E(X)\\)?",
       "opts": ["2.1", "2.67", "1.0", "8"],
-      "why": "\\(E(X) = 1 \\times 0.5 + 2 \\times 0.3 + 5 \\times 0.2 = 0.5 + 0.6 + 1.0 = 2.1\\). The value 2.67 comes from averaging 1, 2 and 5 without using the probabilities.",
+      "why": "\\(E(X) = 1 \\times 0.5 + 2 \\times 0.3 + 5 \\times 0.2\\), which is \\(0.5 + 0.6 + 1.0 = 2.1\\). The value 2.67 comes from averaging 1, 2 and 5 without using the probabilities.",
       "clue": "Weight each value by its probability."
     },
     "b": {
       "d": 3,
       "q": "A game at a fete in Orange costs nothing to play. You win $0 with probability 0.7, $4 with probability 0.2 and $10 with probability 0.1. What is the expected win in dollars?",
       "opts": ["1.80", "4.67", "14", "0.90"],
-      "why": "\\(E(X) = 0 \\times 0.7 + 4 \\times 0.2 + 10 \\times 0.1 = 0.8 + 1.0 = 1.80\\). The value 4.67 is the plain average of 0, 4 and 10, which ignores how likely each prize is.",
+      "why": "\\(E(X) = 0 \\times 0.7 + 4 \\times 0.2 + 10 \\times 0.1\\), which is \\(0.8 + 1.0 = 1.80\\). The value 4.67 is the plain average of 0, 4 and 10, which ignores how likely each prize is.",
       "clue": "Do not average the prizes. Weight them by probability."
     }
   },
@@ -5201,22 +5201,22 @@ MADE_BANKS.mat = {
     "card": [
       "When a calculation has more than one operation, do them in a set order. Brackets come first, then powers, then multiplication and division, then addition and subtraction.",
       "Multiplication and division have equal rank, so work through them from left to right. Addition and subtraction also have equal rank, so work through them from left to right.",
-      "Example: 20 − 4 × 3. Multiply first: 4 × 3 = 12. Then subtract: 20 − 12 = 8.",
-      "Example: 24 ÷ 4 × 2. Division and multiplication have equal rank, so go left to right: 24 ÷ 4 = 6, then 6 × 2 = 12."
+      "Example: \\(20 - 4 \\times 3\\). Multiply first: \\(4 \\times 3 = 12\\). Then subtract: \\(20 - 12 = 8\\).",
+      "Example: \\(24 \\div 4 \\times 2\\). Division and multiplication have equal rank, so go left to right: \\(24 \\div 4 = 6\\), then \\(6 \\times 2 = 12\\)."
     ],
-    "remember": "Brackets, powers, then × and ÷, then + and −, working left to right within each rank.",
+    "remember": "Brackets, powers, then \\(\\times\\) and \\(\\div\\), then \\(+\\) and \\(-\\), working left to right within each rank.",
     "a": {
-      "q": "What is the value of 5 + 3 × 4?",
+      "q": "What is the value of \\(5 + 3 \\times 4\\)?",
       "opts": ["17", "32", "12", "27"],
-      "why": "Multiplication comes before addition, so 3 × 4 = 12, then 5 + 12 = 17. The answer 32 comes from adding first (5 + 3 = 8, then 8 × 4), which ignores the order.",
-      "clue": "Which operation is done first, + or ×?"
+      "why": "Multiplication comes before addition, so \\(3 \\times 4 = 12\\), then \\(5 + 12 = 17\\). The answer 32 comes from adding first (\\(5 + 3 = 8\\), then \\(8 \\times 4\\)), which ignores the order.",
+      "clue": "Which operation is done first, \\(+\\) or \\(\\times\\)?"
     },
     "b": {
       "d": 3,
-      "q": "Mia works out 30 − 12 ÷ 3 + 2 for a bake sale. What is the correct value?",
+      "q": "Mia works out \\(30 - 12 \\div 3 + 2\\) for a bake sale. What is the correct value?",
       "opts": ["28", "24", "8", "27.6"],
-      "why": "Divide first: 12 ÷ 3 = 4. Then work left to right: 30 − 4 = 26, and 26 + 2 = 28. The answer 24 comes from adding 4 + 2 before subtracting, but addition and subtraction have equal rank, so they go left to right.",
-      "clue": "After dividing, which comes first from the left, − or +?"
+      "why": "Divide first: \\(12 \\div 3 = 4\\). Then work left to right: \\(30 - 4 = 26\\), and \\(26 + 2 = 28\\). The answer 24 comes from adding \\(4 + 2\\) before subtracting, but addition and subtraction have equal rank, so they go left to right.",
+      "clue": "After dividing, which comes first from the left, \\(-\\) or \\(+\\)?"
     }
   },
   "mat-fractions-decimals-percentages": {
@@ -5286,9 +5286,9 @@ MADE_BANKS.mat = {
       ],
       [
         "Sharing",
-        "To share in a ratio, add the parts, then divide the total by that number to find one part. Example: share $40 in the ratio 1:3. Parts = 1 + 3 = 4, so one part = 40 ÷ 4 = $10. The shares are $10 and $30."
+        "To share in a ratio, add the parts, then divide the total by that number to find one part. Example: share $40 in the ratio 1:3. Parts \\(= 1 + 3 = 4\\), so one part \\(= \\$40 \\div 4 = \\$10\\). The shares are $10 and $30."
       ],
-      "Rate example: 150 km in 3 hours is 150 ÷ 3 = 50 km per hour."
+      "Rate example: 150 km in 3 hours is \\(150 \\div 3 = 50\\) km per hour."
     ],
     "remember": "A ratio compares the same units. A rate compares different units.",
     "a": {
@@ -5306,7 +5306,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Liam and Ava share $350 in the ratio 3:4. How much does Ava get?",
       "opts": ["$200", "$150", "$262.50", "$140"],
-      "why": "Parts = 3 + 4 = 7, so one part = 350 ÷ 7 = $50. Ava has 4 parts, so 4 × 50 = $200. Liam's share is $150, which is the tempting wrong answer.",
+      "why": "Parts \\(= 3 + 4 = 7\\), so one part \\(= \\$350 \\div 7 = \\$50\\). Ava has 4 parts, so \\(4 \\times \\$50 = \\$200\\). Liam's share is $150, which is the tempting wrong answer.",
       "clue": "Find the value of one part first."
     }
   },
@@ -5315,8 +5315,8 @@ MADE_BANKS.mat = {
     "card": [
       "To round, look at the digit just after the place you want. If it is 5 or more, round up. If it is 4 or less, leave the digit as it is.",
       "Round to a sensible place for the job. Money is usually rounded to the nearest cent, and a count of people is a whole number.",
-      "To estimate, round each number to one or two non-zero digits, then work with the easy numbers. For 38 × 52, think 40 × 50 = 2000.",
-      "Estimate before you use a calculator. If the calculator shows 1976 for 38 × 52, it is close to 2000, so it is sensible. An answer of 19 760 is about ten times too big, so a typing slip is likely."
+      "To estimate, round each number to one or two non-zero digits, then work with the easy numbers. For \\(38 \\times 52\\), think \\(40 \\times 50 = 2000\\).",
+      "Estimate before you use a calculator. If the calculator shows 1976 for \\(38 \\times 52\\), it is close to 2000, so it is sensible. An answer of 19,760 is about ten times too big, so a typing slip is likely."
     ],
     "remember": "Estimate first with easy numbers, then check that the calculator answer is close.",
     "a": {
@@ -5327,14 +5327,14 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 3,
-      "q": "Sam uses a calculator for 49 × 21 and gets 10 290. Which estimate shows the answer is about ten times too big?",
+      "q": "Sam uses a calculator for \\(49 \\times 21\\) and gets 10,290. Which estimate shows the answer is about ten times too big?",
       "opts": [
-        "50 × 20 = 1000, so the answer should be near 1000",
-        "50 × 20 = 100, so the answer should be near 100",
-        "50 × 20 = 10 000, so the answer should be near 10 000",
-        "50 × 20 = 700, so the answer should be near 700"
+        "\\(50 \\times 20 = 1000\\), so the answer should be near 1000",
+        "\\(50 \\times 20 = 100\\), so the answer should be near 100",
+        "\\(50 \\times 20 = 10{,}000\\), so the answer should be near 10,000",
+        "\\(50 \\times 20 = 700\\), so the answer should be near 700"
       ],
-      "why": "49 rounds to 50 and 21 rounds to 20, and 50 × 20 = 1000. The calculator answer of 10 290 is about ten times that, so a typing slip is likely. The correct answer is 1029.",
+      "why": "49 rounds to 50 and 21 rounds to 20, and \\(50 \\times 20 = 1000\\). The calculator answer of 10,290 is about ten times that, so a typing slip is likely. The correct answer is 1029.",
       "clue": "Round each number, then multiply the easy numbers."
     }
   },
@@ -5343,26 +5343,26 @@ MADE_BANKS.mat = {
     "card": [
       "A pattern is a list of numbers that follows a rule. Some patterns change by the same amount each step. A rule is a short sentence or formula that gives any value in the pattern.",
       "When a pattern goes up by the same amount each step, that amount multiplies the step number. Then check whether anything extra is added or taken away.",
-      "Example: a gym charges $5, $10, $15, $20 for 1, 2, 3, 4 classes. It goes up by 5 each time, so cost = 5 × number of classes.",
-      "Once you have the rule, put in any number. For 12 classes, cost = 5 × 12 = $60. You do not need to list every step."
+      "Example: a gym charges $5, $10, $15, $20 for 1, 2, 3, 4 classes. It goes up by 5 each time, so cost \\(= 5 \\times\\) number of classes.",
+      "Once you have the rule, put in any number. For 12 classes, cost \\(= 5 \\times 12 = \\$60\\). You do not need to list every step."
     ],
     "remember": "Find the change each step, write it as a rule, then use the rule for any value.",
     "a": {
       "q": "A pattern of costs is $3, $6, $9, $12 for 1, 2, 3, 4 items. Which rule fits?",
       "opts": [
-        "cost = 3 × number of items",
-        "cost = 3 + number of items",
-        "cost = 6 × number of items",
-        "cost = 12 × number of items"
+        "cost \\(= 3 \\times\\) number of items",
+        "cost \\(= 3 +\\) number of items",
+        "cost \\(= 6 \\times\\) number of items",
+        "cost \\(= 12 \\times\\) number of items"
       ],
-      "why": "Each extra item adds $3, so the cost is 3 times the number of items. Check: 3 × 4 = 12. The rule 3 + number of items gives $4 for 1 item, which is wrong.",
+      "why": "Each extra item adds $3, so the cost is 3 times the number of items. Check: \\(3 \\times 4 = 12\\). The rule cost \\(= 3 +\\) number of items gives $4 for 1 item, which is wrong.",
       "clue": "How much does the cost go up for each extra item?"
     },
     "b": {
       "d": 2,
-      "q": "Sam's rule for a pizza night is cost = 8 × number of people. What is the cost for 7 people?",
+      "q": "Sam's rule for a pizza night is cost \\(= 8 \\times\\) number of people. What is the cost for 7 people?",
       "opts": ["$56", "$15", "$48", "$64"],
-      "why": "Put 7 into the rule: 8 × 7 = 56, so the cost is $56. Adding gives $15, which treats the rule as 8 + 7, but the rule multiplies.",
+      "why": "Put 7 into the rule: \\(8 \\times 7 = 56\\), so the cost is $56. Adding gives $15, which treats the rule as \\(8 + 7\\), but the rule multiplies.",
       "clue": "Replace the number of people with 7, then follow the operation in the rule."
     }
   },
@@ -5392,32 +5392,35 @@ MADE_BANKS.mat = {
   "mat-mean-median-range-context": {
     "title": "Mean, median and spread",
     "card": [
-      ["Mean", "Add all the values, then divide by how many there are. Example: 2, 4, 9 has a mean of 15 ÷ 3 = 5."],
+      [
+        "Mean",
+        "Add all the values, then divide by how many there are. Example: 2, 4, 9 has a mean of \\(15 \\div 3 = 5\\)."
+      ],
       [
         "Median",
         "Put the values in order and take the middle one. With two middle values, take the number halfway between them. For 2, 4, 9 the median is 4."
       ],
       [
         "Range",
-        "Range = highest value − lowest value. For 2, 4, 9 it is 9 − 2 = 7. One very high or low value changes the mean and range a lot, but the median and IQR much less."
+        "Range \\(=\\) highest value \\(-\\) lowest value. For 2, 4, 9 it is \\(9 - 2 = 7\\). One very high or low value changes the mean and range a lot, but the median and IQR much less."
       ],
       [
         "IQR",
-        "Split the ordered data into a lower and upper half. Q1 is the median of the lower half, Q3 the median of the upper half, and IQR = Q3 − Q1. For 2, 4, 6, 8, 10, 12: Q1 = 4, Q3 = 10, IQR = 6."
+        "Split the ordered data into a lower and upper half. \\(Q_{1}\\) is the median of the lower half, \\(Q_{3}\\) the median of the upper half, and \\(\\text{IQR} = Q_{3} - Q_{1}\\). For 2, 4, 6, 8, 10, 12: \\(Q_{1} = 4\\), \\(Q_{3} = 10\\), \\(\\text{IQR} = 6\\)."
       ]
     ],
     "remember": "Mean and median give a typical value. Range and IQR give the spread.",
     "a": {
       "q": "What is the mean of these quiz scores: 4, 7, 5, 8, 6?",
       "opts": ["6", "5", "7", "30"],
-      "why": "Add the scores: 4 + 7 + 5 + 8 + 6 = 30. Divide by 5 scores to get 6. The answer 30 is only the total, and the division step has been skipped.",
+      "why": "Add the scores: \\(4 + 7 + 5 + 8 + 6 = 30\\). Divide by 5 scores to get 6. The answer 30 is only the total, and the division step has been skipped.",
       "clue": "Add them up, then divide by how many scores there are."
     },
     "b": {
       "d": 3,
-      "q": "Five houses in a street sold for $500 000, $520 000, $540 000, $560 000 and $2 400 000. Which measure is changed least by the $2.4 million sale, and what is its value?",
-      "opts": ["The median, $540 000", "The mean, $904 000", "The range, $1 900 000", "The mean, $540 000"],
-      "why": "The middle of the five ordered prices is $540 000, and the very high sale barely moves it. The mean is 4 520 000 ÷ 5 = $904 000 and the range is $1 900 000, and both are pulled up a lot by that one sale.",
+      "q": "Five houses in a street sold for $500,000, $520,000, $540,000, $560,000 and $2,400,000. Which measure is changed least by the $2.4 million sale, and what is its value?",
+      "opts": ["The median, $540,000", "The mean, $904,000", "The range, $1,900,000", "The mean, $540,000"],
+      "why": "The middle of the five ordered prices is $540,000, and the very high sale barely moves it. The mean is \\(\\$4{,}520{,}000 \\div 5\\), which is $904,000, and the range is $1,900,000, and both are pulled up a lot by that one sale.",
       "clue": "Picture each measure with and without the $2.4 million sale."
     }
   },
@@ -5457,8 +5460,8 @@ MADE_BANKS.mat = {
   "mat-unit-pricing": {
     "title": "Comparing products",
     "card": [
-      "To compare products of different sizes, work out the price per unit. Price per unit = price ÷ amount.",
-      "Example: a 500 g jar of peanut butter costs $4.00 and a 750 g jar costs $5.25. $4.00 ÷ 500 = $0.008 per g, and $5.25 ÷ 750 = $0.007 per g. The 750 g jar is cheaper per gram.",
+      "To compare products of different sizes, work out the price per unit. Price per unit \\(=\\) price \\(\\div\\) amount.",
+      "Example: a 500 g jar of peanut butter costs $4.00 and a 750 g jar costs $5.25. \\(\\$4.00 \\div 500 = \\$0.008\\) per g, and \\(\\$5.25 \\div 750 = \\$0.007\\) per g. The 750 g jar is cheaper per gram.",
       "Check that the units match before you divide. Change kg to g, or mL to L, so both products use the same unit.",
       "Price is not the only thing to compare. Look at features, such as data in a phone plan, and terms, such as contract length or extra fees. The cheapest price per unit may not suit your needs."
     ],
@@ -5471,7 +5474,7 @@ MADE_BANKS.mat = {
         "The 2 L bottle, at $1.80 per 100 mL",
         "The 750 mL bottle, at $1.50 per litre"
       ],
-      "why": "$3.60 ÷ 2 = $1.80 per litre. For the small bottle, 750 mL is 0.75 L, so $1.50 ÷ 0.75 = $2.00 per litre. The 2 L bottle is cheaper per litre. Using $1.50 as the price per litre skips the unit change.",
+      "why": "\\(\\$3.60 \\div 2 = \\$1.80\\) per litre. For the small bottle, 750 mL is 0.75 L, so \\(\\$1.50 \\div 0.75 = \\$2.00\\) per litre. The 2 L bottle is cheaper per litre. Using $1.50 as the price per litre skips the unit change.",
       "clue": "Change 750 mL to litres before you divide."
     },
     "b": {
@@ -5553,7 +5556,7 @@ MADE_BANKS.mat = {
       "d": 2,
       "q": "Priya's child-care costs $120 a day. A government payment covers $70 of it. How much does Priya pay for each day?",
       "opts": ["$50", "$70", "$120", "$190"],
-      "why": "The government pays part of the cost, so Priya pays the rest: $120 − $70 = $50. Paying $70 is a mistake, because that is the amount the government covers.",
+      "why": "The government pays part of the cost, so Priya pays the rest: \\(\\$120 - \\$70 = \\$50\\). Paying $70 is a mistake, because that is the amount the government covers.",
       "clue": "Take the government's share away from the full cost."
     }
   },
@@ -5569,13 +5572,13 @@ MADE_BANKS.mat = {
         "Wages",
         "Wages show what people earn. If prices rise by 5% and wages rise by 2%, a worker can buy less than before, even though their pay went up."
       ],
-      "Percentage change = (new − old) ÷ old × 100. Example: a wage rises from $1000 to $1030 a week. The change is 30 ÷ 1000 × 100 = 3%."
+      "Percentage change \\(=\\) (new \\(-\\) old) \\(\\div\\) old \\(\\times\\) 100. Example: a wage rises from $1000 to $1030 a week. The change is $30, so the percentage change is \\(30 \\div 1000 \\times 100 = 3\\%\\)."
     ],
     "remember": "Compare how fast prices and wages change: if prices rise faster than wages, buying power falls.",
     "a": {
       "q": "The CPI rises from 120 to 126 over a year. By what percentage have prices risen?",
       "opts": ["5%", "6%", "4.8%", "126%"],
-      "why": "The change is 126 − 120 = 6. Then 6 ÷ 120 × 100 = 5%. Using 6 as the percentage forgets to divide by the old value, which is the tempting mistake.",
+      "why": "The change is \\(126 - 120 = 6\\). Then \\(6 \\div 120 \\times 100 = 5\\%\\). Using 6 as the percentage forgets to divide by the old value, which is the tempting mistake.",
       "clue": "Divide the change by the starting value."
     },
     "b": {
@@ -5619,7 +5622,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Jo draws a flat shape made of a square with an equilateral triangle joined along one of its sides, with no gap. How many sides does the new outline have?",
       "opts": ["5", "7", "6", "4"],
-      "why": "The square has 4 sides and the triangle has 3, which makes 7. The shared side is inside the shape, and it was counted once for each part, so 7 − 2 = 5 sides. 7 counts the shared side twice, and 6 still counts it once.",
+      "why": "The square has 4 sides and the triangle has 3, which makes 7. The shared side is inside the shape, and it was counted once for each part, so \\(7 - 2 = 5\\) sides. 7 counts the shared side twice, and 6 still counts it once.",
       "clue": "The joined side is no longer on the outside."
     }
   },
@@ -5627,117 +5630,117 @@ MADE_BANKS.mat = {
     "title": "Reading plans and diagrams",
     "card": [
       "A plan is a drawing of a place seen from above. Its scale tells you how much smaller it is: 1:100 means 1 cm on the plan is 100 cm in real life.",
-      "To find a real length, multiply the plan length by the scale number, then change units (100 cm = 1 m). Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
-      "The scale applies to each length, not to an area. For a real area, change the length and width to real lengths first, then multiply. Example: 2 cm by 4 cm on a 1:50 plan is 1 m by 2 m, so the area is 2 m².",
+      "To find a real length, multiply the plan length by the scale number, then change units (\\(100 \\text{ cm} = 1 \\text{ m}\\)). Example: 4 cm on a 1:50 plan is \\(4 \\times 50 = 200\\) cm, which is 2 m.",
+      "The scale applies to each length, not to an area. For a real area, change the length and width to real lengths first, then multiply. Example: 2 cm by 4 cm on a 1:50 plan is 1 m by 2 m, so the area is \\(2 \\text{ m}^{2}\\).",
       "Symbols show features such as doors, windows and stairs. A legend on the plan explains what each symbol means."
     ],
-    "remember": "Real length = plan length × scale number. For an area, scale each length first, then multiply.",
+    "remember": "Real length \\(=\\) plan length \\(\\times\\) scale number. For an area, scale each length first, then multiply.",
     "a": {
       "q": "A bedroom is 6 cm long on a plan with a scale of 1:50. How long is the real bedroom?",
       "opts": ["3 m", "300 m", "30 m", "30 cm"],
-      "why": "6 × 50 = 300 cm, which is 3 m. The option 300 m is tempting, but it forgets to change centimetres to metres.",
+      "why": "\\(6 \\times 50 = 300\\) cm, which is 3 m. The option 300 m is tempting, but it forgets to change centimetres to metres.",
       "clue": "Multiply by 50, then change cm to m."
     },
     "b": {
       "d": 3,
       "q": "On a 1:100 plan, Ava's deck is 5 cm long and 3 cm wide. What is the real area of the deck?",
-      "opts": ["15 m²", "1500 m²", "0.15 m²", "8 m²"],
-      "why": "The real deck is 5 m by 3 m, because 5 × 100 = 500 cm and 3 × 100 = 300 cm. Then 5 × 3 = 15 m². Multiplying the plan area of 15 cm² by 100 gives 0.15 m², which is wrong because the scale applies to each length, not to the area.",
+      "opts": ["\\(15 \\text{ m}^{2}\\)", "\\(1500 \\text{ m}^{2}\\)", "\\(0.15 \\text{ m}^{2}\\)", "\\(8 \\text{ m}^{2}\\)"],
+      "why": "The real deck is 5 m by 3 m, because \\(5 \\times 100 = 500\\) cm and \\(3 \\times 100 = 300\\) cm. Then \\(5 \\times 3 = 15\\), so the area is \\(15 \\text{ m}^{2}\\). Multiplying the plan area of \\(15 \\text{ cm}^{2}\\) by 100 gives \\(0.15 \\text{ m}^{2}\\), which is wrong because the scale applies to each length, not to the area.",
       "clue": "Find the real length and width first, in metres."
     }
   },
   "mat-scale-maps": {
     "title": "Scale and maps",
     "card": [
-      "A map scale such as 1:50 000 means 1 unit on the map is 50 000 of the same unit in real life. So 1 cm on the map is 50 000 cm on the ground.",
+      "A map scale such as 1:50,000 means 1 unit on the map is 50,000 of the same unit in real life. So 1 cm on the map is 50,000 cm on the ground.",
       "To find a real distance, measure the map distance and multiply by the second number in the scale. Then change the units to something sensible.",
-      "Useful changes: 100 cm = 1 m, 1000 m = 1 km, and 100 000 cm = 1 km. So on a 1:50 000 map, 2 cm on the map is 100 000 cm, which is 1 km.",
-      "Worked example: on a 1:25 000 map, two towns are 6 cm apart. 6 × 25 000 = 150 000 cm. Divide by 100 000 to get 1.5 km."
+      "Useful changes: 100 cm \\(=\\) 1 m, 1000 m \\(=\\) 1 km, and 100,000 cm \\(=\\) 1 km. So on a 1:50,000 map, 2 cm on the map is 100,000 cm, which is 1 km.",
+      "Worked example: on a 1:25,000 map, two towns are 6 cm apart. \\(6 \\times 25{,}000 = 150{,}000\\) cm. Divide by 100,000 to get 1.5 km."
     ],
-    "remember": "Map length × scale number gives real length. Then change the units.",
+    "remember": "Map length \\(\\times\\) scale number gives real length. Then change the units.",
     "a": {
-      "q": "On a 1:50 000 map, a walking track measures 4 cm. What is its real length?",
+      "q": "On a 1:50,000 map, a walking track measures 4 cm. What is its real length?",
       "opts": ["2 km", "200 m", "20 km", "4 km"],
-      "why": "4 × 50 000 = 200 000 cm. Dividing by 100 000 gives 2 km. The option 200 m comes from dividing by 1000 instead of 100 000, which is a unit mistake.",
-      "clue": "Multiply by 50 000, then change cm to km."
+      "why": "\\(4 \\times 50{,}000 = 200{,}000\\) cm. Dividing by 100,000 gives 2 km. The option 200 m comes from dividing by 1000 instead of 100,000, which is a unit mistake.",
+      "clue": "Multiply by 50,000, then change cm to km."
     },
     "b": {
       "d": 3,
-      "q": "On a 1:25 000 map, Priya measures 7.2 cm from a campsite to a lake. What is the real distance?",
+      "q": "On a 1:25,000 map, Priya measures 7.2 cm from a campsite to a lake. What is the real distance?",
       "opts": ["1.8 km", "18 km", "180 m", "3.6 km"],
-      "why": "7.2 × 25 000 = 180 000 cm. Dividing by 100 000 gives 1.8 km. The option 18 km comes from dividing by 10 000, which mixes up the cm to km change.",
-      "clue": "Multiply by 25 000, then use 100 000 cm = 1 km."
+      "why": "\\(7.2 \\times 25{,}000 = 180{,}000\\) cm. Dividing by 100,000 gives 1.8 km. The option 18 km comes from dividing by 10,000, which mixes up the cm to km change.",
+      "clue": "Multiply by 25,000, then use 100,000 cm \\(=\\) 1 km."
     }
   },
   "mat-routes-travel-times": {
     "title": "Routes and travel times",
     "card": [
       "A map or app gives the distance of each route. Speed is how far you travel in one hour, such as 60 km/h.",
-      "Time = distance ÷ speed. The answer is in hours when distance is in km and speed is in km/h.",
+      "Time \\(=\\) distance \\(\\div\\) speed. The answer is in hours when distance is in km and speed is in km/h.",
       "To turn hours into minutes, multiply by 60. So 0.5 hours is 30 minutes, and 0.25 hours is 15 minutes.",
-      "Example: 90 km at 60 km/h takes 90 ÷ 60 = 1.5 hours, which is 1 hour 30 minutes. Real trips can take longer because of traffic and stops."
+      "Example: 90 km at 60 km/h takes \\(90 \\div 60 = 1.5\\) hours, which is 1 hour 30 minutes. Real trips can take longer because of traffic and stops."
     ],
-    "remember": "Time = distance ÷ speed, then change hours to minutes if needed.",
+    "remember": "Time \\(=\\) distance \\(\\div\\) speed, then change hours to minutes if needed.",
     "a": {
       "q": "Noah drives 120 km at an average speed of 80 km/h. How long does the trip take?",
       "opts": ["1 hour 30 minutes", "1 hour 20 minutes", "1 hour 50 minutes", "1 hour 5 minutes"],
-      "why": "120 ÷ 80 = 1.5 hours, which is 1 hour 30 minutes. 1 hour 50 minutes is tempting, but it reads the .5 as 50 minutes instead of 0.5 × 60 = 30 minutes.",
+      "why": "\\(120 \\div 80 = 1.5\\) hours, which is 1 hour 30 minutes. 1 hour 50 minutes is tempting, but it reads the .5 as 50 minutes instead of \\(0.5 \\times 60 = 30\\) minutes.",
       "clue": "Divide distance by speed, then change any part of an hour to minutes."
     },
     "b": {
       "d": 3,
       "q": "Priya cycles 18 km at 24 km/h, stops for a 10 minute break, then cycles 6 km at 12 km/h. How long is the whole trip?",
       "opts": ["1 hour 25 minutes", "1 hour 15 minutes", "1 hour 10 minutes", "1 hour 35 minutes"],
-      "why": "The first part takes 18 ÷ 24 = 0.75 hours, or 45 minutes. The second takes 6 ÷ 12 = 0.5 hours, or 30 minutes. 45 + 10 + 30 = 85 minutes. Leaving out the break gives 1 hour 15 minutes, which is wrong.",
+      "why": "The first part takes \\(18 \\div 24 = 0.75\\) hours, or 45 minutes. The second takes \\(6 \\div 12 = 0.5\\) hours, or 30 minutes. \\(45 + 10 + 30 = 85\\) minutes, which is 1 hour 25 minutes. Leaving out the break gives 1 hour 15 minutes, which is wrong.",
       "clue": "Work out each ride separately, then add the break."
     }
   },
   "mat-finding-linear-rule": {
     "title": "Finding a linear rule",
     "card": [
-      "A straight line has a rule y = mx + c. Two points on the line are enough to find m and c.",
+      "A straight line has a rule \\(y = mx + c\\). Two points on the line are enough to find \\(m\\) and \\(c\\).",
       [
         "Step 1",
-        "Find the gradient. m = (y₂ − y₁) ÷ (x₂ − x₁). Subtract the y values and the x values in the same order."
+        "Find the gradient. \\(m = \\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\). Subtract the \\(y\\) values and the \\(x\\) values in the same order."
       ],
-      ["Step 2", "Substitute m and one of the points into y = mx + c. Then solve for c."],
+      ["Step 2", "Substitute \\(m\\) and one of the points into \\(y = mx + c\\). Then solve for \\(c\\)."],
       [
         "Example",
-        "The line passes through (1, 5) and (3, 11). m = (11 − 5) ÷ (3 − 1) = 6 ÷ 2 = 3. Using (1, 5): 5 = 3 × 1 + c, so c = 2. The rule is y = 3x + 2."
+        "The line passes through \\((1, 5)\\) and \\((3, 11)\\). \\(m = \\frac{11 - 5}{3 - 1} = \\frac{6}{2} = 3\\). Using \\((1, 5)\\): \\(5 = 3 \\times 1 + c\\), so \\(c = 2\\). The rule is \\(y = 3x + 2\\)."
       ]
     ],
-    "remember": "Gradient from the two points first, then substitute one point to get c.",
+    "remember": "Gradient from the two points first, then substitute one point to get \\(c\\).",
     "a": {
-      "q": "A line passes through (2, 7) and (5, 16). What is its gradient?",
-      "opts": ["3", "9", "3/9", "−3"],
-      "why": "m = (16 − 7) ÷ (5 − 2) = 9 ÷ 3 = 3. Dividing the x change by the y change gives 3/9, which is the wrong way up.",
-      "clue": "Divide the change in y by the change in x."
+      "q": "A line passes through \\((2, 7)\\) and \\((5, 16)\\). What is its gradient?",
+      "opts": ["3", "9", "\\(\\frac{3}{9}\\)", "\\(-3\\)"],
+      "why": "\\(m = \\frac{16 - 7}{5 - 2} = \\frac{9}{3} = 3\\). Dividing the \\(x\\) change by the \\(y\\) change gives \\(\\frac{3}{9}\\), which is the wrong way up.",
+      "clue": "Divide the change in \\(y\\) by the change in \\(x\\)."
     },
     "b": {
       "d": 3,
-      "q": "A line passes through (2, 3) and (4, 11). What is its rule?",
-      "opts": ["y = 4x − 5", "y = 4x + 5", "y = 4x − 1", "y = 2x − 1"],
-      "why": "m = (11 − 3) ÷ (4 − 2) = 8 ÷ 2 = 4. Using (2, 3): 3 = 4 × 2 + c, so c = −5. The rule is y = 4x − 5, and it also gives 11 when x = 4. Writing y = 4x + 5 comes from a sign error when solving for c.",
-      "clue": "Your rule should give the right y value for both points."
+      "q": "A line passes through \\((2, 3)\\) and \\((4, 11)\\). What is its rule?",
+      "opts": ["\\(y = 4x - 5\\)", "\\(y = 4x + 5\\)", "\\(y = 4x - 1\\)", "\\(y = 2x - 1\\)"],
+      "why": "\\(m = \\frac{11 - 3}{4 - 2} = \\frac{8}{2} = 4\\). Using \\((2, 3)\\): \\(3 = 4 \\times 2 + c\\), so \\(c = -5\\). The rule is \\(y = 4x - 5\\), and it also gives 11 when \\(x = 4\\). Writing \\(y = 4x + 5\\) comes from a sign error when solving for \\(c\\).",
+      "clue": "Your rule should give the right \\(y\\) value for both points."
     }
   },
   "mat-linear-models-context": {
     "title": "Linear models in context",
     "card": [
-      "A linear model has the form y = mx + c. It fits a situation where something changes by the same amount for each step.",
+      "A linear model has the form \\(y = mx + c\\). It fits a situation where something changes by the same amount for each step.",
       [
         "Gradient",
-        "m is a rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre."
+        "\\(m\\) is a rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as dollars per kilometre."
       ],
       [
         "Intercept",
-        "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+        "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as a call-out fee paid before any work is done."
       ],
-      "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+      "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\)."
     ],
     "remember": "In a linear model, the gradient is the rate and the intercept is the starting value.",
     "a": {
-      "q": "A taxi fare in Geelong is F = 2.5d + 4, where d is the distance in km. What does the 2.5 mean?",
+      "q": "A taxi fare in Geelong is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 mean?",
       "opts": [
         "The fare rises by $2.50 for each extra kilometre",
         "The fare for a trip of 0 km is $2.50",
@@ -5745,43 +5748,48 @@ MADE_BANKS.mat = {
         "The fare rises by $4 for each extra kilometre"
       ],
       "why": "The 2.5 is the gradient, so it is the rate: $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
-      "clue": "Which number multiplies d?"
+      "clue": "Which number multiplies \\(d\\)?"
     },
     "b": {
       "d": 2,
-      "q": "Priya hires a ladder in Bendigo. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+      "q": "Priya hires a ladder in Bendigo. The cost is \\(C = 12n + 30\\), where \\(n\\) is the number of days. What is the cost for 5 days?",
       "opts": ["$90", "$60", "$150", "$102"],
-      "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+      "why": "\\(C = 12 \\times 5 + 30\\), which is \\(60 + 30 = \\$90\\). Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
       "clue": "Multiply the daily rate by 5, then add the fixed amount."
     }
   },
   "mat-simultaneous-linear-equations-2": {
     "title": "Simultaneous linear equations",
     "card": [
-      "Two linear equations are simultaneous when we want the x and y values that make both true. This is the point where their graphs cross. A break-even point is one such point: where cost equals income, so there is no profit or loss.",
+      "Two linear equations are simultaneous when we want the \\(x\\) and \\(y\\) values that make both true. This is the point where their graphs cross. A break-even point is one such point: where cost equals revenue, so there is no profit or loss.",
       ["Graphing", "Draw both lines and read off the point where they intersect."],
       [
         "Substitution",
-        "Write one equation as y = ..., then put that into the other equation and solve for x. Then find y. For break-even, set the cost rule equal to the income rule and solve."
+        "Write one equation as \\(y = \\ldots\\), then put that into the other equation and solve for \\(x\\). Then find \\(y\\). For break-even, set the cost rule equal to the revenue rule and solve."
       ],
       [
         "Elimination",
-        "Add or subtract the equations to cancel one variable. Example: x + y = 10 and x − y = 4. Adding gives 2x = 14, so x = 7, and then y = 3."
+        "Add or subtract the equations to cancel one variable. Example: \\(x + y = 10\\) and \\(x - y = 4\\). Adding gives \\(2x = 14\\), so \\(x = 7\\), and then \\(y = 3\\)."
       ]
     ],
     "remember": "The solution is the point where both equations are true, which is where the lines cross.",
     "a": {
-      "q": "Solve x + y = 12 and x − y = 2. What is the solution?",
-      "opts": ["x = 7, y = 5", "x = 5, y = 7", "x = 10, y = 2", "x = 6, y = 6"],
-      "why": "Adding the equations gives 2x = 14, so x = 7. Then y = 12 − 7 = 5. Swapping the values gives x = 5, y = 7, which fails x − y = 2.",
-      "clue": "Add the two equations to cancel y."
+      "q": "Solve \\(x + y = 12\\) and \\(x - y = 2\\). What is the solution?",
+      "opts": [
+        "\\(x = 7\\), \\(y = 5\\)",
+        "\\(x = 5\\), \\(y = 7\\)",
+        "\\(x = 10\\), \\(y = 2\\)",
+        "\\(x = 6\\), \\(y = 6\\)"
+      ],
+      "why": "Adding the equations gives \\(2x = 14\\), so \\(x = 7\\). Then \\(y = 12 - 7 = 5\\). Swapping the values gives \\(x = 5\\), \\(y = 7\\), which fails \\(x - y = 2\\).",
+      "clue": "Add the two equations to cancel \\(y\\)."
     },
     "b": {
       "d": 3,
-      "q": "Leo sells mugs in Ballarat. His cost is C = 400 + 5n and his income is R = 13n, where n is the number of mugs. How many mugs give the break-even point?",
+      "q": "Leo sells mugs in Ballarat. His cost is \\(C = 400 + 5n\\) and his revenue is \\(R = 13n\\), where \\(n\\) is the number of mugs. How many mugs give the break-even point?",
       "opts": ["50", "30", "80", "400"],
-      "why": "Break-even is where cost equals income: 400 + 5n = 13n, so 400 = 8n and n = 50. Check: C = 400 + 250 = 650 and R = 13 × 50 = 650. Dividing 400 by 5 gives 80, but that ignores the income of 13 per mug.",
-      "clue": "Set the cost rule equal to the income rule."
+      "why": "Break-even is where cost equals revenue: \\(400 + 5n = 13n\\), so \\(400 = 8n\\) and \\(n = 50\\). Check: \\(C = 400 + 250 = 650\\) and \\(R = 13 \\times 50 = 650\\). Dividing 400 by 5 gives 80, but that ignores the revenue of 13 per mug.",
+      "clue": "Set the cost rule equal to the revenue rule."
     }
   },
   "mat-piecewise-step-graphs": {
@@ -5823,97 +5831,117 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Direct",
-        "y = kx, where k is a constant. When x doubles, y doubles. The graph is a straight line through the origin."
+        "\\(y = kx\\), where \\(k\\) is a constant. When \\(x\\) doubles, \\(y\\) doubles. The graph is a straight line through the origin."
       ],
       [
         "Inverse",
-        "y = k/x, where k is a constant. When x doubles, y halves. The graph is a curve that falls and never touches either axis."
+        "\\(y = \\frac{k}{x}\\), where \\(k\\) is a constant. When \\(x\\) doubles, \\(y\\) halves. The graph is a curve that falls and never touches either axis."
       ],
-      "From a table, test the pattern. In direct variation y ÷ x is always the same. In inverse variation x × y is always the same.",
-      "Example: x = 2, 4, 5 and y = 20, 10, 8. Here x × y = 40 every time, so y = 40/x and the variation is inverse."
+      "From a table, test the pattern. In direct variation \\(y \\div x\\) is always the same. In inverse variation \\(x \\times y\\) is always the same.",
+      "Example: \\(x = 2, 4, 5\\) and \\(y = 20, 10, 8\\). Here \\(x \\times y = 40\\) every time, so \\(y = \\frac{40}{x}\\) and the variation is inverse."
     ],
-    "remember": "Direct: y ÷ x stays constant. Inverse: x × y stays constant.",
+    "remember": "Direct: \\(y \\div x\\) stays constant. Inverse: \\(x \\times y\\) stays constant.",
     "a": {
-      "q": "A table gives x = 2, 4, 6 and y = 6, 12, 18. Which rule fits?",
-      "opts": ["y = 3x", "y = 12/x", "y = x + 4", "y = 3/x"],
-      "why": "Each y ÷ x equals 3, so y = 3x and the variation is direct. The rule y = 12/x is tempting because 12 appears in the table, but x × y is not constant: 2 × 6 = 12 and 4 × 12 = 48.",
-      "clue": "Divide each y by its x and compare."
+      "q": "A table gives \\(x = 2, 4, 6\\) and \\(y = 6, 12, 18\\). Which rule fits?",
+      "opts": ["\\(y = 3x\\)", "\\(y = \\frac{12}{x}\\)", "\\(y = x + 4\\)", "\\(y = \\frac{3}{x}\\)"],
+      "why": "Each \\(y \\div x\\) equals 3, so \\(y = 3x\\) and the variation is direct. The rule \\(y = \\frac{12}{x}\\) is tempting because 12 appears in the table, but \\(x \\times y\\) is not constant: \\(2 \\times 6 = 12\\) and \\(4 \\times 12 = 48\\).",
+      "clue": "Divide each \\(y\\) by its \\(x\\) and compare."
     },
     "b": {
       "d": 2,
-      "q": "Cars on a road travel the same 120 km. Time taken t hours varies with speed v km/h as t = 120/v. What happens to t when v is doubled?",
-      "opts": ["t is halved", "t is doubled", "t is reduced by 120", "t stays the same"],
-      "why": "The rule is inverse variation, so doubling v halves t. Doubling t would be direct variation, which is the tempting mistake.",
-      "clue": "Is the rule y = kx or y = k/x?"
+      "q": "Cars on a road travel the same 120 km. Time taken \\(t\\) hours varies with speed \\(v\\) km/h as \\(t = \\frac{120}{v}\\). What happens to \\(t\\) when \\(v\\) is doubled?",
+      "opts": ["\\(t\\) is halved", "\\(t\\) is doubled", "\\(t\\) is reduced by 120", "\\(t\\) stays the same"],
+      "why": "The rule is inverse variation, so doubling \\(v\\) halves \\(t\\). Doubling \\(t\\) would be direct variation, which is the tempting mistake.",
+      "clue": "Is the rule \\(y = kx\\) or \\(y = \\frac{k}{x}\\)?"
     }
   },
   "mat-transforming-data-linearity": {
     "title": "Transforming data to linearity",
     "card": [
-      "Some data form a curve when y is plotted against x. We can replace x with a transformed value, such as x², and plot again. If the new plot is a straight line, the transformation suits the data.",
-      "Use x² when y rises more and more steeply, as in y = kx². Use log x when y rises quickly at first, then levels off.",
-      "Use 1/x when y falls quickly and then levels off, as in y = k/x. Plotting y against 1/x then gives a straight line.",
-      "Example: x = 1, 2, 3 and y = 3, 12, 27. Then x² = 1, 4, 9, and each y ÷ x² is 3. So the points (1, 3), (4, 12) and (9, 27) lie on a straight line."
+      "Some data form a curve when \\(y\\) is plotted against \\(x\\). We can replace \\(x\\) with a transformed value, such as \\(x^{2}\\), and plot again. If the new plot is a straight line, the transformation suits the data.",
+      "Use \\(x^{2}\\) when \\(y\\) rises more and more steeply, as in \\(y = kx^{2}\\). Use \\(\\log x\\) when \\(y\\) rises quickly at first, then levels off.",
+      "Use \\(\\frac{1}{x}\\) when \\(y\\) falls quickly and then levels off, as in \\(y = \\frac{k}{x}\\). Plotting \\(y\\) against \\(\\frac{1}{x}\\) then gives a straight line.",
+      "Example: \\(x\\) is 1, 2, 3 and \\(y\\) is 3, 12, 27. Then \\(x^{2}\\) is 1, 4, 9, and each \\(y \\div x^{2}\\) is 3. So the points (1, 3), (4, 12) and (9, 27) lie on a straight line."
     ],
-    "remember": "Match the shape: x² for steepening rises, log x for rises that level off, 1/x for falls that level off.",
+    "remember": "Match the shape: \\(x^{2}\\) for steepening rises, \\(\\log x\\) for rises that level off, \\(\\frac{1}{x}\\) for falls that level off.",
     "a": {
-      "q": "Data follow the rule y = 5x². Which plot gives a straight line?",
-      "opts": ["y against x²", "y against 1/x", "y against log x", "y against x"],
-      "why": "Since y = 5 × x², each y is 5 times its x² value, so y against x² gives a straight line. Plotting y against x gives a curve that rises more and more steeply, so it is not a line.",
-      "clue": "Which form of x appears in the rule?"
+      "q": "Data follow the rule \\(y = 5x^{2}\\). Which plot gives a straight line?",
+      "opts": [
+        "\\(y\\) against \\(x^{2}\\)",
+        "\\(y\\) against \\(\\frac{1}{x}\\)",
+        "\\(y\\) against \\(\\log x\\)",
+        "\\(y\\) against \\(x\\)"
+      ],
+      "why": "Since \\(y = 5 \\times x^{2}\\), each \\(y\\) is 5 times its \\(x^{2}\\) value, so \\(y\\) against \\(x^{2}\\) gives a straight line. Plotting \\(y\\) against \\(x\\) gives a curve that rises more and more steeply, so it is not a line.",
+      "clue": "Which form of \\(x\\) appears in the rule?"
     },
     "b": {
       "d": 3,
-      "q": "A table shows x = 1, 2, 4 and y = 12, 6, 3. Which plot gives a straight line?",
-      "opts": ["y against 1/x", "y against log x", "y against x²", "y against x"],
-      "why": "As x grows, y falls quickly and then levels off, which suits 1/x. The 1/x values are 1, 0.5 and 0.25, and each y is 12 times its 1/x value, so the points lie on a line. Log x is tempting because the data level off, but it suits data that rise, not fall.",
-      "clue": "Is y rising or falling as x grows?"
+      "q": "A table shows \\(x\\) values of 1, 2, 4 and \\(y\\) values of 12, 6, 3. Which plot gives a straight line?",
+      "opts": [
+        "\\(y\\) against \\(\\frac{1}{x}\\)",
+        "\\(y\\) against \\(\\log x\\)",
+        "\\(y\\) against \\(x^{2}\\)",
+        "\\(y\\) against \\(x\\)"
+      ],
+      "why": "As \\(x\\) grows, \\(y\\) falls quickly and then levels off, which suits \\(\\frac{1}{x}\\). The \\(\\frac{1}{x}\\) values are 1, 0.5 and 0.25, and each \\(y\\) is 12 times its \\(\\frac{1}{x}\\) value, so the points lie on a line. \\(\\log x\\) is tempting because the data level off, but it suits data that rise, not fall.",
+      "clue": "Is \\(y\\) rising or falling as \\(x\\) grows?"
     }
   },
   "mat-modelling-non-linear-data": {
     "title": "Modelling non-linear data",
     "card": [
-      "Some curved data fit a rule y = kx^n, where n is a power such as 2, 3 or 1/2. The constant k sets the size of y.",
-      "Once you pick the power n, plot y against x^n. If the points lie on a straight line through the origin, the rule fits.",
-      "The gradient of that line is k. Find it as y ÷ x^n for any point on the line.",
-      "Example: x = 2 and y = 24 fit y = kx³. Then x³ = 8, so k = 24 ÷ 8 = 3 and the rule is y = 3x³."
+      "Some curved data fit a rule \\(y = kx^{n}\\), where \\(n\\) is a power such as 2, 3 or \\(\\frac{1}{2}\\). The constant \\(k\\) sets the size of \\(y\\).",
+      "Once you pick the power \\(n\\), plot \\(y\\) against \\(x^{n}\\). If the points lie on a straight line through the origin, the rule fits.",
+      "The gradient of that line is \\(k\\). Find it as \\(y \\div x^{n}\\) for any point on the line.",
+      "Example: \\(x = 2\\) and \\(y = 24\\) fit \\(y = kx^{3}\\). Then \\(x^{3} = 8\\), so \\(k = 24 \\div 8 = 3\\) and the rule is \\(y = 3x^{3}\\)."
     ],
-    "remember": "Plot y against x^n. The gradient of the straight line is k.",
+    "remember": "Plot \\(y\\) against \\(x^{n}\\). The gradient of the straight line is \\(k\\).",
     "a": {
-      "q": "Data fit y = kx². The point x = 3, y = 45 lies on the curve. What is k?",
+      "q": "Data fit \\(y = kx^{2}\\). The point \\(x = 3\\), \\(y = 45\\) lies on the curve. What is \\(k\\)?",
       "opts": ["5", "15", "135", "7.5"],
-      "why": "x² = 9, so k = 45 ÷ 9 = 5. The value 15 comes from dividing by x instead of x².",
-      "clue": "Square x before you divide."
+      "why": "\\(x^{2} = 9\\), so \\(k = 45 \\div 9 = 5\\). The value 15 comes from dividing by \\(x\\) instead of \\(x^{2}\\).",
+      "clue": "Square \\(x\\) before you divide."
     },
     "b": {
       "d": 3,
-      "q": "The area of a circular garden bed is modelled as A = kr². When r = 2 m, A = 12.56 m². Which is the area when r = 5 m?",
-      "opts": ["78.5 m²", "31.4 m²", "62.8 m²", "25.12 m²"],
-      "why": "k = 12.56 ÷ 4 = 3.14. Then A = 3.14 × 25 = 78.5. The value 31.4 comes from scaling the area by 5 ÷ 2 instead of squaring the radius ratio.",
-      "clue": "Find k first, then square 5."
+      "q": "The area of a circular garden bed is modelled as \\(A = kr^{2}\\). When \\(r = 2\\) m, \\(A = 12.56\\text{ m}^{2}\\). Which is the area when \\(r = 5\\) m?",
+      "opts": [
+        "\\(78.5\\text{ m}^{2}\\)",
+        "\\(31.4\\text{ m}^{2}\\)",
+        "\\(62.8\\text{ m}^{2}\\)",
+        "\\(25.12\\text{ m}^{2}\\)"
+      ],
+      "why": "\\(k = 12.56 \\div 4 = 3.14\\). Then \\(A = 3.14 \\times 25 = 78.5\\). The value 31.4 comes from scaling the area by \\(5 \\div 2\\) instead of squaring the radius ratio.",
+      "clue": "Find \\(k\\) first, then square 5."
     }
   },
   "mat-units-precision": {
     "title": "Units and precision",
     "card": [
-      "Convert units by multiplying or dividing. 1 m = 100 cm = 1000 mm, and 1 km = 1000 m. For area, square the factor: 1 m² = 10 000 cm². For volume, cube it: 1 m³ = 1 000 000 cm³.",
-      "Capacity is how much a container holds. 1 L = 1000 mL, and 1 L = 1000 cm³. So 1 mL = 1 cm³.",
-      "Scientific notation writes a number as a × 10ⁿ, with a from 1 up to (but not including) 10. So 45 000 = 4.5 × 10⁴ and 0.0032 = 3.2 × 10⁻³.",
-      "Significant figures start at the first non-zero digit. 0.004 07 has 3 significant figures. To round, look at the next digit: 5 or more rounds up. So 0.004 07 to 2 significant figures is 0.0041."
+      "Convert units by multiplying or dividing. 1 m \\(=\\) 100 cm \\(=\\) 1000 mm, and 1 km \\(=\\) 1000 m. For area, square the factor: \\(1\\text{ m}^{2} = 10{,}000\\text{ cm}^{2}\\). For volume, cube it: \\(1\\text{ m}^{3} = 1{,}000{,}000\\text{ cm}^{3}\\).",
+      "Capacity is how much a container holds. 1 L \\(=\\) 1000 mL, and \\(1\\text{ L} = 1000\\text{ cm}^{3}\\). So \\(1\\text{ mL} = 1\\text{ cm}^{3}\\).",
+      "Scientific notation writes a number as \\(a \\times 10^{n}\\), with \\(a\\) from 1 up to (but not including) 10. So \\(45{,}000 = 4.5 \\times 10^{4}\\) and \\(0.0032 = 3.2 \\times 10^{-3}\\).",
+      "Significant figures start at the first non-zero digit. 0.00407 has 3 significant figures. To round, look at the next digit: 5 or more rounds up. So 0.00407 to 2 significant figures is 0.0041."
     ],
     "remember": "Square the factor for area, cube it for volume. Count significant figures from the first non-zero digit.",
     "a": {
-      "q": "What is 3 m² written in cm²?",
-      "opts": ["30 000 cm²", "300 cm²", "3000 cm²", "300 000 cm²"],
-      "why": "1 m = 100 cm, so 1 m² = 100 × 100 = 10 000 cm². Then 3 × 10 000 = 30 000 cm². Using 100 instead of 10 000 gives 300, which is the length factor, not the area factor.",
+      "q": "What is \\(3\\text{ m}^{2}\\) written in \\(\\text{cm}^{2}\\)?",
+      "opts": [
+        "\\(30{,}000\\text{ cm}^{2}\\)",
+        "\\(300\\text{ cm}^{2}\\)",
+        "\\(3000\\text{ cm}^{2}\\)",
+        "\\(300{,}000\\text{ cm}^{2}\\)"
+      ],
+      "why": "1 m \\(=\\) 100 cm, so \\(1\\text{ m}^{2} = 100 \\times 100\\), which is \\(10{,}000\\text{ cm}^{2}\\). Then \\(3 \\times 10{,}000 = 30{,}000\\text{ cm}^{2}\\). Using 100 instead of 10,000 gives 300, which is the length factor, not the area factor.",
       "clue": "Square the length factor first."
     },
     "b": {
       "d": 3,
-      "q": "A tank holds 2.5 m³ of water. How many litres is this?",
-      "opts": ["2500 L", "250 L", "25 000 L", "2 500 000 L"],
-      "why": "1 m³ = 1 000 000 cm³, and 1000 cm³ = 1 L, so 1 m³ = 1000 L. Then 2.5 × 1000 = 2500 L. Choosing 2 500 000 stops at cm³ and does not convert to litres.",
-      "clue": "Change m³ to cm³ first, then use 1 L = 1000 cm³."
+      "q": "A tank holds \\(2.5\\text{ m}^{3}\\) of water. How many litres is this?",
+      "opts": ["2500 L", "250 L", "25,000 L", "2,500,000 L"],
+      "why": "\\(1\\text{ m}^{3} = 1{,}000{,}000\\text{ cm}^{3}\\), and \\(1000\\text{ cm}^{3} = 1\\text{ L}\\), so \\(1\\text{ m}^{3}\\) holds 1000 L. Then \\(2.5 \\times 1000 = 2500\\) L. Choosing 2,500,000 stops at \\(\\text{cm}^{3}\\) and does not convert to litres.",
+      "clue": "Change \\(\\text{m}^{3}\\) to \\(\\text{cm}^{3}\\) first, then use \\(1\\text{ L} = 1000\\text{ cm}^{3}\\)."
     }
   },
   "mat-perimeter-area-2": {
@@ -5921,34 +5949,34 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Perimeter",
-        "the distance around the outside of a shape, in units such as cm. For a circle it is called the circumference: C = 2πr."
+        "the distance around the outside of a shape, in units such as cm. For a circle it is called the circumference: \\(C = 2\\pi r\\)."
       ],
       [
         "Area",
-        "the space inside a shape, in square units such as cm². Rectangle: length × width. Triangle: ½ × base × perpendicular height. Parallelogram: base × perpendicular height. Circle: πr²."
+        "the space inside a shape, in square units such as \\(\\text{cm}^{2}\\). Rectangle: length \\(\\times\\) width. Triangle: \\(\\frac{1}{2} \\times\\) base \\(\\times\\) perpendicular height. Parallelogram: base \\(\\times\\) perpendicular height. Circle: \\(\\pi r^{2}\\)."
       ],
       [
         "Arcs and sectors",
-        "A sector is a slice of a circle, and its arc is the curved edge. Take the fraction θ/360 of the whole circle. Arc length = θ/360 × 2πr. Sector area = θ/360 × πr²."
+        "A sector is a slice of a circle, and its arc is the curved edge. Take the fraction \\(\\frac{\\theta}{360}\\) of the whole circle. Arc length \\(= \\frac{\\theta}{360} \\times 2\\pi r\\). Sector area \\(= \\frac{\\theta}{360} \\times \\pi r^{2}\\)."
       ],
       [
         "Composite shapes",
-        "Split the shape into simple parts, find each area, then add or subtract. Example: a 10 cm by 6 cm rectangle with a 4 cm by 3 cm rectangle cut out has area 60 − 12 = 48 cm²."
+        "Split the shape into simple parts, find each area, then add or subtract. Example: a 10 cm by 6 cm rectangle with a 4 cm by 3 cm rectangle cut out has area \\(60 - 12 = 48\\text{ cm}^{2}\\)."
       ]
     ],
     "remember": "Perimeter is the distance around. Area is the space inside. Split composite shapes into simple parts.",
     "a": {
       "q": "A triangle has a base of 10 cm and a perpendicular height of 6 cm. What is its area?",
-      "opts": ["30 cm²", "60 cm²", "16 cm²", "32 cm²"],
-      "why": "Area = ½ × 10 × 6 = 30 cm². 60 cm² is wrong because it leaves out the ½, which is the rectangle's area. 16 comes from adding the base and height.",
+      "opts": ["\\(30\\text{ cm}^{2}\\)", "\\(60\\text{ cm}^{2}\\)", "\\(16\\text{ cm}^{2}\\)", "\\(32\\text{ cm}^{2}\\)"],
+      "why": "Area \\(= \\frac{1}{2} \\times 10 \\times 6 = 30\\text{ cm}^{2}\\). \\(60\\text{ cm}^{2}\\) is wrong because it leaves out the \\(\\frac{1}{2}\\), which is the rectangle's area. 16 comes from adding the base and height.",
       "clue": "A triangle is half of a rectangle with the same base and height."
     },
     "b": {
       "d": 3,
-      "q": "A sector has a radius of 6 cm and an angle of 90°. What is its area, to the nearest cm²?",
-      "opts": ["28 cm²", "113 cm²", "9 cm²", "57 cm²"],
-      "why": "The sector is 90/360 = 1/4 of a circle. Area = 1/4 × π × 6² = 9π, which is about 28 cm². 113 cm² is the whole circle. 57 cm² uses 1/2 instead of 1/4.",
-      "clue": "Find the fraction of the circle first, then use πr²."
+      "q": "A sector has a radius of 6 cm and an angle of 90°. What is its area, to the nearest \\(\\text{cm}^{2}\\)?",
+      "opts": ["\\(28\\text{ cm}^{2}\\)", "\\(113\\text{ cm}^{2}\\)", "\\(9\\text{ cm}^{2}\\)", "\\(57\\text{ cm}^{2}\\)"],
+      "why": "The sector is \\(\\frac{90}{360} = \\frac{1}{4}\\) of a circle. Area \\(= \\frac{1}{4} \\times \\pi \\times 6^{2} = 9\\pi\\), which is about \\(28\\text{ cm}^{2}\\). \\(113\\text{ cm}^{2}\\) is the whole circle. \\(57\\text{ cm}^{2}\\) uses \\(\\frac{1}{2}\\) instead of \\(\\frac{1}{4}\\).",
+      "clue": "Find the fraction of the circle first, then use \\(\\pi r^{2}\\)."
     }
   },
   "mat-surface-area-volume": {
@@ -5956,30 +5984,33 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Volume",
-        "A prism has the same cross-section (base) all the way along. Volume of a prism = base area × height, where height is the distance between the two ends."
+        "A prism has the same cross-section (base) all the way along. Volume of a prism \\(=\\) base area \\(\\times\\) height, where height is the distance between the two ends."
       ],
       [
         "Surface area",
         "Surface area is the total area of every face of a solid. Add the areas of all the faces, including the two ends."
       ],
-      ["Units", "Volume is in cubic units such as cm³. Surface area is in square units such as cm²."],
+      [
+        "Units",
+        "Volume is in cubic units such as \\(\\text{cm}^{3}\\). Surface area is in square units such as \\(\\text{cm}^{2}\\)."
+      ],
       [
         "Worked example",
-        "A box is 5 cm by 3 cm by 4 cm. Volume = (5 × 3) × 4 = 60 cm³. Faces: 2 × (5×3) + 2 × (5×4) + 2 × (3×4) = 30 + 40 + 24 = 94 cm²."
+        "A box is 5 cm by 3 cm by 4 cm. Volume \\(= (5 \\times 3) \\times 4 = 60\\text{ cm}^{3}\\). Faces: \\(2 \\times (5 \\times 3)\\), \\(2 \\times (5 \\times 4)\\) and \\(2 \\times (3 \\times 4)\\) give \\(30 + 40 + 24 = 94\\text{ cm}^{2}\\)."
       ]
     ],
-    "remember": "Volume is base area × height in cubic units. Surface area adds every face in square units.",
+    "remember": "Volume is base area \\(\\times\\) height in cubic units. Surface area adds every face in square units.",
     "a": {
-      "q": "A prism has a base area of 12 cm² and a height of 7 cm. What is its volume?",
-      "opts": ["84 cm³", "19 cm³", "84 cm²", "38 cm³"],
-      "why": "Volume = base area × height = 12 × 7 = 84 cm³. Adding 12 and 7 gives 19, which mixes up the operation. Volume is measured in cubic units, so cm² is wrong.",
+      "q": "A prism has a base area of \\(12\\text{ cm}^{2}\\) and a height of 7 cm. What is its volume?",
+      "opts": ["\\(84\\text{ cm}^{3}\\)", "\\(19\\text{ cm}^{3}\\)", "\\(84\\text{ cm}^{2}\\)", "\\(38\\text{ cm}^{3}\\)"],
+      "why": "Volume \\(=\\) base area \\(\\times\\) height \\(= 12 \\times 7 = 84\\text{ cm}^{3}\\). Adding 12 and 7 gives 19, which mixes up the operation. Volume is measured in cubic units, so \\(\\text{cm}^{2}\\) is wrong.",
       "clue": "Multiply the base area by the height."
     },
     "b": {
       "d": 3,
       "q": "A closed box measures 6 cm by 2 cm by 5 cm. What is its surface area?",
-      "opts": ["104 cm²", "60 cm²", "52 cm²", "104 cm³"],
-      "why": "The faces are 2 × (6×2) + 2 × (6×5) + 2 × (2×5) = 24 + 60 + 20 = 104 cm². Finding 6 × 2 × 5 = 60 gives the volume, not the surface area. Using each face type only once gives 52, which skips the pairs of faces.",
+      "opts": ["\\(104\\text{ cm}^{2}\\)", "\\(60\\text{ cm}^{2}\\)", "\\(52\\text{ cm}^{2}\\)", "\\(104\\text{ cm}^{3}\\)"],
+      "why": "The faces are \\(2 \\times (6 \\times 2)\\), \\(2 \\times (6 \\times 5)\\) and \\(2 \\times (2 \\times 5)\\), which give \\(24 + 60 + 20 = 104\\text{ cm}^{2}\\). Finding \\(6 \\times 2 \\times 5 = 60\\) gives the volume, not the surface area. Using each face type only once gives 52, which skips the pairs of faces.",
       "clue": "A box has three pairs of matching faces."
     }
   },
@@ -5987,57 +6018,57 @@ MADE_BANKS.mat = {
     "title": "Similarity and scale factors",
     "card": [
       "Two shapes are similar if they have the same shape but may differ in size. Matching angles are equal, and matching sides are in the same ratio.",
-      "The scale factor is the ratio of matching sides: new length ÷ original length. Example: a side of 4 cm becomes 10 cm, so the scale factor is 10 ÷ 4 = 2.5.",
-      "To find a missing side, multiply or divide by the scale factor. If the scale factor from small to large is 2.5, a 6 cm side on the small shape matches 6 × 2.5 = 15 cm on the large one.",
+      "The scale factor is the ratio of matching sides: new length \\(\\div\\) original length. Example: a side of 4 cm becomes 10 cm, so the scale factor is \\(10 \\div 4 = 2.5\\).",
+      "To find a missing side, multiply or divide by the scale factor. If the scale factor from small to large is 2.5, a 6 cm side on the small shape matches \\(6 \\times 2.5 = 15\\) cm on the large one.",
       "Two triangles are similar if two pairs of angles are equal, or if all three pairs of sides are in the same ratio. Two equal angles are enough, as the third angle must then match too."
     ],
     "remember": "Similar shapes have equal angles and sides in a constant ratio, the scale factor.",
     "a": {
       "q": "Triangle ABC is similar to triangle PQR. Side AB is 6 cm and matching side PQ is 15 cm. Side BC is 8 cm. How long is the matching side QR?",
       "opts": ["20 cm", "3.2 cm", "17 cm", "23 cm"],
-      "why": "The scale factor is 15 ÷ 6 = 2.5, so QR = 8 × 2.5 = 20 cm. Adding the difference of 9 cm to get 17 cm is tempting, but similar shapes scale by multiplying, not adding.",
+      "why": "The scale factor is \\(15 \\div 6 = 2.5\\), so \\(QR = 8 \\times 2.5 = 20\\) cm. Adding the difference of 9 cm to get 17 cm is tempting, but similar shapes scale by multiplying, not adding.",
       "clue": "Find the scale factor first, then multiply."
     },
     "b": {
       "d": 3,
-      "q": "In triangle DEF, angle D is 50° and angle E is 70°. In triangle XYZ, angle X is 50° and angle Z is 60°. What can be said about the two triangles?",
+      "q": "In triangle DEF, angle D is \\(50^{\\circ}\\) and angle E is \\(70^{\\circ}\\). In triangle XYZ, angle X is \\(50^{\\circ}\\) and angle Z is \\(60^{\\circ}\\). What can be said about the two triangles?",
       "opts": [
         "They are similar, because two pairs of angles are equal",
         "They are not similar, because the sides are not given",
         "They are not similar, because only one angle matches",
         "They are similar only if the side lengths are equal"
       ],
-      "why": "Angle F = 180° − 50° − 70° = 60°, and angle Y = 180° − 50° − 60° = 70°. So all three angles match (D and X, E and Y, F and Z), and the triangles are similar. Side lengths are not needed, as equal angles are enough.",
+      "why": "Angle \\(F = 180^{\\circ} - 50^{\\circ} - 70^{\\circ}\\), which is \\(60^{\\circ}\\), and angle \\(Y = 180^{\\circ} - 50^{\\circ} - 60^{\\circ}\\), which is \\(70^{\\circ}\\). So all three angles match (D and X, E and Y, F and Z), and the triangles are similar. Side lengths are not needed, as equal angles are enough.",
       "clue": "Find the missing angle in each triangle first."
     }
   },
   "mat-scaling-area-volume": {
     "title": "Scaling area and volume",
     "card": [
-      "When every length of a shape or solid is multiplied by k, the new shape is similar to the old one. Here k is the scale factor for lengths.",
+      "When every length of a shape or solid is multiplied by \\(k\\), the new shape is similar to the old one. Here \\(k\\) is the scale factor for lengths.",
       [
         "Area",
-        "area scales by k². Area is length × length, so both lengths are multiplied by k. Example: k = 3 makes every area 9 times as large."
+        "area scales by \\(k^{2}\\). Area is length \\(\\times\\) length, so both lengths are multiplied by \\(k\\). Example: \\(k = 3\\) makes every area 9 times as large."
       ],
       [
         "Volume",
-        "volume scales by k³. Volume is length × length × length, so three lengths are multiplied by k. Example: k = 2 makes every volume 8 times as large."
+        "volume scales by \\(k^{3}\\). Volume is length \\(\\times\\) length \\(\\times\\) length, so three lengths are multiplied by \\(k\\). Example: \\(k = 2\\) makes every volume 8 times as large."
       ],
-      "To find k from areas or volumes, go backwards. If the area ratio is 25, then k = √25 = 5. If the volume ratio is 27, then k = ∛27 = 3."
+      "To find \\(k\\) from areas or volumes, go backwards. If the area ratio is 25, then \\(k = \\sqrt{25} = 5\\). If the volume ratio is 27, then \\(k = \\sqrt[3]{27} = 3\\)."
     ],
-    "remember": "Lengths × k, areas × k², volumes × k³.",
+    "remember": "Lengths \\(\\times k\\), areas \\(\\times k^{2}\\), volumes \\(\\times k^{3}\\).",
     "a": {
-      "q": "A small tin has a base area of 12 cm². A larger similar tin has all lengths 3 times as long. What is the base area of the larger tin?",
-      "opts": ["108 cm²", "36 cm²", "324 cm²", "27 cm²"],
-      "why": "Area scales by k² = 3² = 9, so the base area is 12 × 9 = 108 cm². Multiplying by 3 gives 36 cm², which scales the area as if it were a length.",
-      "clue": "Area is length × length, so k is used twice."
+      "q": "A small tin has a base area of \\(12\\text{ cm}^{2}\\). A larger similar tin has all lengths 3 times as long. What is the base area of the larger tin?",
+      "opts": ["\\(108\\text{ cm}^{2}\\)", "\\(36\\text{ cm}^{2}\\)", "\\(324\\text{ cm}^{2}\\)", "\\(27\\text{ cm}^{2}\\)"],
+      "why": "Area scales by \\(k^{2} = 3^{2} = 9\\), so the base area is \\(12 \\times 9 = 108\\text{ cm}^{2}\\). Multiplying by 3 gives \\(36\\text{ cm}^{2}\\), which scales the area as if it were a length.",
+      "clue": "Area is length \\(\\times\\) length, so \\(k\\) is used twice."
     },
     "b": {
       "d": 3,
       "q": "Two similar water tanks hold 40 L and 320 L. The small tank is 50 cm tall. How tall is the large tank?",
       "opts": ["100 cm", "200 cm", "400 cm", "150 cm"],
-      "why": "The volume ratio is 320 ÷ 40 = 8, so k³ = 8 and k = 2. The height is 50 × 2 = 100 cm. Using 8 as the length factor gives 400 cm, which forgets that volume scales by k³.",
-      "clue": "Find k by going backwards from the volume ratio."
+      "why": "The volume ratio is \\(320 \\div 40 = 8\\), so \\(k^{3} = 8\\) and \\(k = 2\\). The height is \\(50 \\times 2 = 100\\) cm. Using 8 as the length factor gives 400 cm, which forgets that volume scales by \\(k^{3}\\).",
+      "clue": "Find \\(k\\) by going backwards from the volume ratio."
     }
   },
   "mat-quadratic-graphs": {
@@ -6379,7 +6410,7 @@ MADE_BANKS.mat = {
     "a": {
       "q": "For two events, \\(\\text{Pr}(A \\cap B) = 0.2\\) and \\(\\text{Pr}(B) = 0.5\\). Find \\(\\text{Pr}(A \\mid B)\\).",
       "opts": ["0.4", "0.1", "0.7", "2.5"],
-      "why": "\\(\\text{Pr}(A \\mid B) = \\text{Pr}(A \\cap B) \\div \\text{Pr}(B) = 0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+      "why": "\\(\\text{Pr}(A \\mid B) = \\text{Pr}(A \\cap B) \\div \\text{Pr}(B)\\), which is \\(0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
       "clue": "The event after the bar goes on the bottom."
     },
     "b": {
@@ -6402,14 +6433,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "\\(\\text{Pr}(A) = 0.3\\), \\(\\text{Pr}(B \\mid A) = 0.6\\) and \\(\\text{Pr}(B \\mid A') = 0.1\\). What is \\(\\text{Pr}(B)\\)?",
       "opts": ["0.25", "0.18", "0.70", "0.35"],
-      "why": "\\(\\text{Pr}(B) = 0.6 \\times 0.3 + 0.1 \\times 0.7 = 0.18 + 0.07 = 0.25\\). Giving 0.18 counts only the path through \\(A\\) and misses the path through not \\(A\\).",
+      "why": "\\(\\text{Pr}(B) = 0.6 \\times 0.3 + 0.1 \\times 0.7\\), which is \\(0.18 + 0.07 = 0.25\\). Giving 0.18 counts only the path through \\(A\\) and misses the path through not \\(A\\).",
       "clue": "\\(B\\) can happen after \\(A\\) or after not \\(A\\)."
     },
     "b": {
       "d": 3,
       "q": "Priya cycles to school in Geelong on 20% of days, and otherwise takes the bus. She is late on 10% of cycling days and 30% of bus days. What is the probability she is late on a random day?",
       "opts": ["0.26", "0.20", "0.40", "0.06"],
-      "why": "\\(\\text{Pr}(\\text{late}) = 0.1 \\times 0.2 + 0.3 \\times 0.8 = 0.02 + 0.24 = 0.26\\). Giving 0.40 adds 0.1 and 0.3 without weighting each by how often that path is used.",
+      "why": "\\(\\text{Pr}(\\text{late}) = 0.1 \\times 0.2 + 0.3 \\times 0.8\\), which is \\(0.02 + 0.24 = 0.26\\). Giving 0.40 adds 0.1 and 0.3 without weighting each by how often that path is used.",
       "clue": "Weight each lateness chance by how often she uses that way."
     }
   },
@@ -6595,7 +6626,7 @@ MADE_BANKS.mat = {
       "A matrix is a rectangle of numbers in rows and columns. Its order is \\(\\text{rows} \\times \\text{columns}\\), so a matrix with 2 rows and 3 columns has order \\(2 \\times 3\\).",
       "To add matrices, they must have the same order. Add the entries in matching positions. To scale a matrix, multiply every entry by the number.",
       "To multiply \\(A \\times B\\), the number of columns in \\(A\\) must equal the number of rows in \\(B\\). The result has \\(A\\)'s rows and \\(B\\)'s columns.",
-      "Each entry of the product is a row of \\(A\\) times a column of \\(B\\): multiply in pairs, then add. Example: \\((2 \\quad 3) \\times (4 \\quad 5)^{T}\\), where the column is 4 then 5, gives \\(2 \\times 4 + 3 \\times 5 = 23\\)."
+      "Each entry of the product is a row of \\(A\\) times a column of \\(B\\): multiply in pairs, then add. Example: \\(\\begin{bmatrix} 2 & 3 \\end{bmatrix} \\times \\begin{bmatrix} 4 \\\\ 5 \\end{bmatrix}\\) gives \\(2 \\times 4 + 3 \\times 5 = 23\\)."
     ],
     "remember": "Add needs equal orders. Multiply needs columns of the first to equal rows of the second.",
     "a": {
@@ -6606,7 +6637,7 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 3,
-      "q": "A shop sells 2 items. Row matrix \\(P = (10 \\quad 20)\\) holds the prices in dollars. Column matrix \\(Q\\) holds the numbers sold on one day: 3 of the first item and 4 of the second. What does \\(P \\times Q\\) give?",
+      "q": "A shop sells 2 items. Row matrix \\(P = \\begin{bmatrix} 10 & 20 \\end{bmatrix}\\) holds the prices in dollars. Column matrix \\(Q = \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix}\\) holds the numbers sold on one day. What does \\(P \\times Q\\) give?",
       "opts": [
         "110, the total takings in dollars",
         "70, the total takings in dollars",
@@ -6620,21 +6651,21 @@ MADE_BANKS.mat = {
   "mat-determinants-matrix-equations": {
     "title": "Determinants and matrix equations",
     "card": [
-      "For a \\(2 \\times 2\\) matrix \\(A\\) with rows \\((a \\quad b)\\) and \\((c \\quad d)\\), the determinant is \\(\\text{det}(A) = ad - bc\\).",
+      "For a \\(2 \\times 2\\) matrix \\(A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), the determinant is \\(\\text{det}(A) = ad - bc\\).",
       "A square matrix has an inverse only if its determinant is not 0. If \\(\\text{det}(A) = 0\\), there is no inverse.",
-      "When \\(\\text{det}(A) = D\\) is not 0, the inverse \\(A^{-1}\\) is \\(\\frac{1}{D}\\) times the matrix with rows \\((d \\quad -b)\\) and \\((-c \\quad a)\\).",
+      "When \\(\\text{det}(A) = D\\) is not 0, the inverse is \\(A^{-1} = \\frac{1}{D}\\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}\\).",
       "To solve \\(AX = B\\), multiply both sides on the left by \\(A^{-1}\\). This gives \\(X = A^{-1}B\\). The order matters: \\(A^{-1}\\) goes before \\(B\\)."
     ],
     "remember": "No inverse if \\(\\text{det} = 0\\). Otherwise \\(X = A^{-1}B\\), with \\(A^{-1}\\) on the left.",
     "a": {
-      "q": "Matrix \\(A\\) has rows \\((3 \\quad 2)\\) and \\((4 \\quad 5)\\). What is \\(\\text{det}(A)\\)?",
+      "q": "Matrix \\(A = \\begin{bmatrix} 3 & 2 \\\\ 4 & 5 \\end{bmatrix}\\). What is \\(\\text{det}(A)\\)?",
       "opts": ["7", "23", "\\(-7\\)", "15"],
       "why": "\\(\\text{det}(A) = ad - bc = 3 \\times 5 - 2 \\times 4\\), which is \\(15 - 8 = 7\\). The answer 23 comes from adding the products instead of subtracting.",
       "clue": "Main diagonal product, take away the other."
     },
     "b": {
       "d": 3,
-      "q": "For which value of \\(k\\) does the matrix with rows \\((2 \\quad k)\\) and \\((6 \\quad 3)\\) have no inverse?",
+      "q": "For which value of \\(k\\) does the matrix \\(\\begin{bmatrix} 2 & k \\\\ 6 & 3 \\end{bmatrix}\\) have no inverse?",
       "opts": ["\\(k = 1\\)", "\\(k = 9\\)", "\\(k = 0\\)", "\\(k = 4\\)"],
       "why": "\\(\\text{det} = 2 \\times 3 - 6k = 6 - 6k\\). There is no inverse when this is 0, so \\(k = 1\\). The value \\(k = 9\\) does not give 0, since \\(6 - 54 = -48\\).",
       "clue": "Set the determinant equal to 0."
@@ -6850,14 +6881,14 @@ MADE_BANKS.mat = {
   "mat-matrices-as-transformations": {
     "title": "Matrices as transformations",
     "card": [
-      "A \\(2 \\times 2\\) matrix can move every point \\((x, y)\\) in the plane. Write the point as a column and multiply: \\([a \\;\\; b;\\;\\; c \\;\\; d]\\) times \\((x, y)\\) gives \\((ax + by, cx + dy)\\).",
+      "A \\(2 \\times 2\\) matrix can move every point \\((x, y)\\) in the plane. Write the point as a column and multiply: \\(\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} ax + by \\\\ cx + dy \\end{bmatrix}\\).",
       "The first column of the matrix is where the point \\((1, 0)\\) lands. The second column is where \\((0, 1)\\) lands.",
-      "Some common matrices: \\([k \\;\\; 0;\\;\\; 0 \\;\\; k]\\) is a dilation by factor \\(k\\) from the origin. \\([1 \\;\\; 0;\\;\\; 0 \\;\\; -1]\\) reflects in the x-axis. \\([0 \\;\\; -1;\\;\\; 1 \\;\\; 0]\\) rotates 90° anticlockwise about the origin. \\([1 \\;\\; k;\\;\\; 0 \\;\\; 1]\\) is a shear that moves points parallel to the x-axis.",
-      "Example: \\([2 \\;\\; 0;\\;\\; 0 \\;\\; 2]\\) sends \\((3, 1)\\) to \\((2 \\times 3 + 0 \\times 1, 0 \\times 3 + 2 \\times 1) = (6, 2)\\). Every coordinate doubles."
+      "Some common matrices: \\(\\begin{bmatrix} k & 0 \\\\ 0 & k \\end{bmatrix}\\) is a dilation by factor \\(k\\) from the origin. \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\) reflects in the x-axis. \\(\\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}\\) rotates 90° anticlockwise about the origin. \\(\\begin{bmatrix} 1 & k \\\\ 0 & 1 \\end{bmatrix}\\) is a shear that moves points parallel to the x-axis.",
+      "Example: \\(\\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix}\\) sends \\((3, 1)\\) to \\((2 \\times 3 + 0 \\times 1, 0 \\times 3 + 2 \\times 1) = (6, 2)\\). Every coordinate doubles."
     ],
     "remember": "Multiply the matrix by the point's column. The columns show where \\((1, 0)\\) and \\((0, 1)\\) go.",
     "a": {
-      "q": "What does the matrix \\([1 \\;\\; 0;\\;\\; 0 \\;\\; -1]\\) do to the point \\((4, 3)\\)?",
+      "q": "What does the matrix \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\) do to the point \\((4, 3)\\)?",
       "opts": [
         "Sends it to \\((4, -3)\\)",
         "Sends it to \\((-4, 3)\\)",
@@ -6865,13 +6896,13 @@ MADE_BANKS.mat = {
         "Sends it to \\((3, 4)\\)"
       ],
       "why": "The new point is \\((1 \\times 4 + 0 \\times 3, 0 \\times 4 + (-1) \\times 3) = (4, -3)\\). The x-value stays and the y-value changes sign, so this is a reflection in the x-axis. Reflection in the y-axis would give \\((-4, 3)\\).",
-      "clue": "Multiply each row of the matrix by the column \\((4, 3)\\)."
+      "clue": "Multiply each row of the matrix by the column \\(\\begin{bmatrix} 4 \\\\ 3 \\end{bmatrix}\\)."
     },
     "b": {
       "d": 3,
       "q": "A matrix sends \\((1, 0)\\) to \\((0, 1)\\) and \\((0, 1)\\) to \\((-1, 0)\\). Where does it send the point \\((2, 5)\\)?",
       "opts": ["\\((-5, 2)\\)", "\\((5, -2)\\)", "\\((-2, 5)\\)", "\\((2, -5)\\)"],
-      "why": "The columns are \\((0, 1)\\) and \\((-1, 0)\\), so the matrix is \\([0 \\;\\; -1;\\;\\; 1 \\;\\; 0]\\), a 90° anticlockwise rotation. Then \\((2, 5)\\) goes to \\((0 \\times 2 + (-1) \\times 5, 1 \\times 2 + 0 \\times 5) = (-5, 2)\\). Putting the columns in as rows would give \\((5, -2)\\).",
+      "why": "The columns are \\((0, 1)\\) and \\((-1, 0)\\), so the matrix is \\(\\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}\\), a 90° anticlockwise rotation. Then \\((2, 5)\\) goes to \\((0 \\times 2 + (-1) \\times 5, 1 \\times 2 + 0 \\times 5) = (-5, 2)\\). Putting the columns in as rows would give \\((5, -2)\\).",
       "clue": "Where \\((1, 0)\\) and \\((0, 1)\\) land are the columns of the matrix."
     }
   },
@@ -6879,48 +6910,48 @@ MADE_BANKS.mat = {
     "title": "Composition and inverse transformations",
     "card": [
       "To do transformation \\(A\\) and then transformation \\(B\\), multiply the matrices as \\(BA\\). The matrix for the first transformation is written on the right, next to the point.",
-      "Order matters. For \\(A = [1 \\;\\; 0;\\;\\; 0 \\;\\; -1]\\) and \\(B = [0 \\;\\; -1;\\;\\; 1 \\;\\; 0]\\), \\(BA = [0 \\;\\; 1;\\;\\; 1 \\;\\; 0]\\) but \\(AB = [0 \\;\\; -1;\\;\\; -1 \\;\\; 0]\\). Swapping the order can give a different result.",
-      "The inverse of a matrix \\(M\\) is written \\(M^{-1}\\). It undoes \\(M\\), so \\(M^{-1}M\\) is the identity matrix \\([1 \\;\\; 0;\\;\\; 0 \\;\\; 1]\\), which leaves every point unchanged.",
-      "For \\([a \\;\\; b;\\;\\; c \\;\\; d]\\), the inverse is \\(\\frac{1}{ad - bc} \\times [d \\;\\; -b;\\;\\; -c \\;\\; a]\\), when \\(ad - bc\\) is not 0. Example: the inverse of the dilation \\([2 \\;\\; 0;\\;\\; 0 \\;\\; 2]\\) is \\(\\frac{1}{4} \\times [2 \\;\\; 0;\\;\\; 0 \\;\\; 2] = [\\frac{1}{2} \\;\\; 0;\\;\\; 0 \\;\\; \\frac{1}{2}]\\), a dilation by \\(\\frac{1}{2}\\)."
+      "Order matters. For \\(A = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}\\), \\(BA = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}\\) but \\(AB = \\begin{bmatrix} 0 & -1 \\\\ -1 & 0 \\end{bmatrix}\\). Swapping the order can give a different result.",
+      "The inverse of a matrix \\(M\\) is written \\(M^{-1}\\). It undoes \\(M\\), so \\(M^{-1}M\\) is the identity matrix \\(\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\), which leaves every point unchanged.",
+      "For \\(\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), the inverse is \\(\\frac{1}{ad - bc} \\times \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}\\), when \\(ad - bc\\) is not 0. Example: the inverse of the dilation \\(\\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix}\\) is \\(\\frac{1}{4} \\times \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{2} & 0 \\\\ 0 & \\frac{1}{2} \\end{bmatrix}\\), a dilation by \\(\\frac{1}{2}\\)."
     ],
     "remember": "Do \\(A\\) then \\(B\\) is \\(BA\\). The inverse matrix undoes the transformation.",
     "a": {
-      "q": "\\(A = [1 \\;\\; 0;\\;\\; 0 \\;\\; -1]\\) reflects in the x-axis. \\(B = [0 \\;\\; -1;\\;\\; 1 \\;\\; 0]\\) rotates 90° anticlockwise about the origin. Where does \\(A\\) then \\(B\\) send \\((1, 2)\\)?",
+      "q": "\\(A = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}\\) reflects in the x-axis. \\(B = \\begin{bmatrix} 0 & -1 \\\\ 1 & 0 \\end{bmatrix}\\) rotates 90° anticlockwise about the origin. Where does \\(A\\) then \\(B\\) send \\((1, 2)\\)?",
       "opts": ["\\((2, 1)\\)", "\\((-2, -1)\\)", "\\((1, -2)\\)", "\\((-2, 1)\\)"],
-      "why": "\\(A\\) then \\(B\\) is \\(BA = [0 \\;\\; 1;\\;\\; 1 \\;\\; 0]\\), which sends \\((1, 2)\\) to \\((2, 1)\\). Step by step, the reflection gives \\((1, -2)\\) and the rotation then gives \\((2, 1)\\). Doing \\(B\\) first, using \\(AB\\), gives \\((-2, -1)\\), which is the wrong order.",
+      "why": "\\(A\\) then \\(B\\) is \\(BA = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}\\), which sends \\((1, 2)\\) to \\((2, 1)\\). Step by step, the reflection gives \\((1, -2)\\) and the rotation then gives \\((2, 1)\\). Doing \\(B\\) first, using \\(AB\\), gives \\((-2, -1)\\), which is the wrong order.",
       "clue": "The matrix closest to the point acts first."
     },
     "b": {
       "d": 2,
-      "q": "\\(M = [3 \\;\\; 0;\\;\\; 0 \\;\\; 5]\\) stretches the plane. What is \\(M^{-1}\\)?",
+      "q": "\\(M = \\begin{bmatrix} 3 & 0 \\\\ 0 & 5 \\end{bmatrix}\\) stretches the plane. What is \\(M^{-1}\\)?",
       "opts": [
-        "\\([\\frac{1}{3} \\;\\; 0;\\;\\; 0 \\;\\; \\frac{1}{5}]\\)",
-        "\\([-3 \\;\\; 0;\\;\\; 0 \\;\\; -5]\\)",
-        "\\([5 \\;\\; 0;\\;\\; 0 \\;\\; 3]\\)",
-        "\\([\\frac{1}{5} \\;\\; 0;\\;\\; 0 \\;\\; \\frac{1}{3}]\\)"
+        "\\(\\begin{bmatrix} \\frac{1}{3} & 0 \\\\ 0 & \\frac{1}{5} \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} -3 & 0 \\\\ 0 & -5 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 5 & 0 \\\\ 0 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} \\frac{1}{5} & 0 \\\\ 0 & \\frac{1}{3} \\end{bmatrix}\\)"
       ],
-      "why": "Here \\(ad - bc = 15\\), so \\(M^{-1} = \\frac{1}{15} \\times [5 \\;\\; 0;\\;\\; 0 \\;\\; 3] = [\\frac{1}{3} \\;\\; 0;\\;\\; 0 \\;\\; \\frac{1}{5}]\\). It undoes the stretch, so it scales \\(x\\) by \\(\\frac{1}{3}\\) and \\(y\\) by \\(\\frac{1}{5}\\). Swapping \\(d\\) and \\(a\\) without dividing by the 15 gives \\([5 \\;\\; 0;\\;\\; 0 \\;\\; 3]\\), which is wrong.",
+      "why": "Here \\(ad - bc = 15\\), so \\(M^{-1} = \\frac{1}{15} \\times \\begin{bmatrix} 5 & 0 \\\\ 0 & 3 \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{3} & 0 \\\\ 0 & \\frac{1}{5} \\end{bmatrix}\\). It undoes the stretch, so it scales \\(x\\) by \\(\\frac{1}{3}\\) and \\(y\\) by \\(\\frac{1}{5}\\). Swapping \\(d\\) and \\(a\\) without dividing by the 15 gives \\(\\begin{bmatrix} 5 & 0 \\\\ 0 & 3 \\end{bmatrix}\\), which is wrong.",
       "clue": "The inverse must undo the stretch of 3 in \\(x\\) and 5 in \\(y\\)."
     }
   },
   "mat-determinants-area": {
     "title": "Determinants and area",
     "card": [
-      "For the matrix \\([a \\;\\; b;\\;\\; c \\;\\; d]\\), the determinant is \\(\\text{det} = ad - bc\\).",
+      "For the matrix \\(\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), the determinant is \\(\\text{det} = ad - bc\\).",
       "A transformation scales every area by the absolute value of the determinant. \\(\\text{New area} = |\\text{det}| \\times \\text{old area}\\).",
       "If \\(\\text{det}\\) is negative, the shape is flipped over (its orientation reverses), and the area still scales by \\(|\\text{det}|\\). If \\(\\text{det} = 0\\), the plane collapses onto a line or a point.",
-      "Example: \\([3 \\;\\; 1;\\;\\; 2 \\;\\; 2]\\) has \\(\\text{det} = 3 \\times 2 - 1 \\times 2 = 4\\), so a triangle of area 5 becomes area 20. Rotations, reflections and shears have \\(|\\text{det}| = 1\\), so they keep areas the same, though a shear can change lengths."
+      "Example: \\(\\begin{bmatrix} 3 & 1 \\\\ 2 & 2 \\end{bmatrix}\\) has \\(\\text{det} = 3 \\times 2 - 1 \\times 2 = 4\\), so a triangle of area 5 becomes area 20. Rotations, reflections and shears have \\(|\\text{det}| = 1\\), so they keep areas the same, though a shear can change lengths."
     ],
     "remember": "Area scales by \\(|ad - bc|\\). The sign of the determinant tells you whether the shape is flipped.",
     "a": {
-      "q": "A matrix \\([4 \\;\\; 1;\\;\\; 2 \\;\\; 3]\\) is applied to a shape of area 6. What is the area of the image?",
+      "q": "A matrix \\(\\begin{bmatrix} 4 & 1 \\\\ 2 & 3 \\end{bmatrix}\\) is applied to a shape of area 6. What is the area of the image?",
       "opts": ["60", "84", "72", "10"],
       "why": "\\(\\text{det} = 4 \\times 3 - 1 \\times 2 = 10\\), so the new area is \\(10 \\times 6 = 60\\). Adding instead of subtracting gives 14 and an area of 84, which uses the wrong formula.",
       "clue": "Work out \\(ad - bc\\) first, then multiply by the old area."
     },
     "b": {
       "d": 3,
-      "q": "The matrix \\([1 \\;\\; 2;\\;\\; 3 \\;\\; 1]\\) is applied to a square of area 4. What is the area of the image, and what happens to its orientation?",
+      "q": "The matrix \\(\\begin{bmatrix} 1 & 2 \\\\ 3 & 1 \\end{bmatrix}\\) is applied to a square of area 4. What is the area of the image, and what happens to its orientation?",
       "opts": ["20, and it is flipped", "20, and it is not flipped", "\\(-20\\), and it is flipped", "28, and it is flipped"],
       "why": "\\(\\text{det} = 1 \\times 1 - 2 \\times 3 = -5\\). Area scales by \\(|-5| = 5\\), so the new area is 20. The negative sign means the orientation is reversed, but an area is never negative.",
       "clue": "Area uses the absolute value, but the sign still tells you about flipping."
@@ -7412,32 +7443,35 @@ MADE_BANKS.mat = {
   "mat-wages-salaries-2": {
     "title": "Pay and payslips",
     "card": [
-      ["Hourly pay", "Pay = hours worked × hourly rate. At $25 an hour, 6 hours pays 6 × 25 = $150."],
+      [
+        "Hourly pay",
+        "Pay \\(=\\) hours worked \\(\\times\\) hourly rate. At $25 an hour, 6 hours pays \\(6 \\times \\$25 = \\$150\\)."
+      ],
       [
         "Overtime and penalty rates",
-        "Some hours are paid at a higher rate, such as overtime or a weekend shift. A rate of time and a half means rate × 1.5. Double time means rate × 2."
+        "Some hours are paid at a higher rate, such as overtime or a weekend shift. A rate of time and a half means rate \\(\\times\\) 1.5. Double time means rate \\(\\times\\) 2."
       ],
       [
         "Salary",
-        "A salary is a fixed yearly amount. Pay for one period = yearly salary ÷ number of pay periods. A salary of $52 000 paid fortnightly gives 52 000 ÷ 26 = $2000 each fortnight."
+        "A salary is a fixed yearly amount. Pay for one period \\(=\\) yearly salary \\(\\div\\) number of pay periods. A salary of $52,000 paid fortnightly gives \\(\\$52{,}000 \\div 26 = \\$2000\\) each fortnight."
       ],
       [
         "Payslip",
-        "A payslip shows the pay period, hours and rates, gross pay (pay before anything is taken out), deductions and net pay (pay after deductions). Net pay = gross pay − deductions."
+        "A payslip shows the pay period, hours and rates, gross pay (pay before anything is taken out), deductions and net pay (pay after deductions). Net pay \\(=\\) gross pay \\(-\\) deductions."
       ]
     ],
-    "remember": "Pay is hours × rate, with a higher rate for penalty hours. Net pay is gross pay minus deductions.",
+    "remember": "Pay is hours \\(\\times\\) rate, with a higher rate for penalty hours. Net pay is gross pay minus deductions.",
     "a": {
       "q": "Sam earns $20 an hour. On Sunday the rate is double time. How much does Sam earn for a 5 hour Sunday shift?",
       "opts": ["$200", "$100", "$120", "$40"],
-      "why": "Double time means 20 × 2 = $40 an hour, so 5 hours pays 5 × 40 = $200. $100 is the answer if the double rate is forgotten.",
+      "why": "Double time means \\(\\$20 \\times 2 = \\$40\\) an hour, so 5 hours pays \\(5 \\times \\$40 = \\$200\\). $100 is the answer if the double rate is forgotten.",
       "clue": "Work out the Sunday hourly rate first."
     },
     "b": {
       "d": 3,
       "q": "Priya's payslip shows gross pay of $1850 and deductions of $370 for the fortnight. What is her net pay?",
       "opts": ["$1480", "$2220", "$370", "$1850"],
-      "why": "Net pay = gross pay − deductions = 1850 − 370 = $1480. Adding the deductions gives $2220, which mixes up the direction: deductions are taken out of gross pay.",
+      "why": "Net pay \\(=\\) gross pay \\(-\\) deductions, so \\(\\$1850 - \\$370 = \\$1480\\). Adding the deductions gives $2220, which mixes up the direction: deductions are taken out of gross pay.",
       "clue": "Net pay is what is left after deductions come out."
     }
   },
@@ -7458,10 +7492,10 @@ MADE_BANKS.mat = {
       ],
       [
         "Borrowing",
-        "When you borrow, you usually repay more than you borrowed, and the extra is the cost of borrowing. Example: borrow $500 and repay $550 in total, so the cost is $550 − $500 = $50."
+        "When you borrow, you usually repay more than you borrowed, and the extra is the cost of borrowing. Example: borrow $500 and repay $550 in total, so the cost is \\(\\$550 - \\$500 = \\$50\\)."
       ]
     ],
-    "remember": "Cost of borrowing = total repaid − amount borrowed. It is usually more than zero.",
+    "remember": "Cost of borrowing \\(=\\) total repaid \\(-\\) amount borrowed. It is usually more than zero.",
     "a": {
       "q": "Tom pays for a $40 meal with his debit card. What happens?",
       "opts": [
@@ -7477,7 +7511,7 @@ MADE_BANKS.mat = {
       "d": 2,
       "q": "Priya borrows $2000 for a laptop. She repays $2300 in total. What did the borrowing cost her?",
       "opts": ["$300", "$2000", "$2300", "$4300"],
-      "why": "The cost is the total repaid minus the amount borrowed: $2300 − $2000 = $300. Choosing $2300 gives the total repaid, not the extra cost.",
+      "why": "The cost is the total repaid minus the amount borrowed: \\(\\$2300 - \\$2000 = \\$300\\). Choosing $2300 gives the total repaid, not the extra cost.",
       "clue": "Subtract what she borrowed from what she repaid."
     }
   },
@@ -7492,21 +7526,21 @@ MADE_BANKS.mat = {
         "Superannuation",
         "Super is money an employer pays into a fund for the worker's retirement. It is a share of earnings set by law, 12% from 1 July 2025, paid on top of wages, not taken out of them."
       ],
-      "Take-home pay = pay − tax. Super goes straight into the fund, so it is not part of take-home pay and is not subtracted from it.",
-      "Example: Sam earns $1000 in a week, with a simple tax rate of 20%. Tax = 0.2 × 1000 = $200, so take-home pay is $800. Super = 0.12 × 1000 = $120, paid into Sam's fund."
+      "Take-home pay \\(=\\) pay \\(-\\) tax. Super goes straight into the fund, so it is not part of take-home pay and is not subtracted from it.",
+      "Example: Sam earns $1000 in a week, with a simple tax rate of 20%. Tax \\(= 0.2 \\times \\$1000 = \\$200\\), so take-home pay is $800. Super \\(= 0.12 \\times \\$1000 = \\$120\\), paid into Sam's fund."
     ],
     "remember": "Tax is taken out of pay. Super is paid in addition by the employer, and both are a share of earnings.",
     "a": {
       "q": "Lena earns $800 in a week. Her tax is 25% of her pay. What is her take-home pay?",
       "opts": ["$600", "$200", "$1000", "$775"],
-      "why": "Tax = 0.25 × 800 = $200, and take-home pay = 800 − 200 = $600. The $200 is the tax taken out, not what Lena keeps.",
+      "why": "Tax \\(= 0.25 \\times \\$800 = \\$200\\), and take-home pay \\(= \\$800 - \\$200 = \\$600\\). The $200 is the tax taken out, not what Lena keeps.",
       "clue": "Find the tax first, then take it away from the pay."
     },
     "b": {
       "d": 3,
       "q": "Omar earns $2000 a fortnight. His tax is 15% of his pay. His employer pays super of 12% of his pay into a fund. How much does Omar take home?",
       "opts": ["$1700", "$1460", "$1760", "$1940"],
-      "why": "Tax = 0.15 × 2000 = $300, so take-home pay = 2000 − 300 = $1700. The super of 0.12 × 2000 = $240 is paid by the employer on top of wages, so subtracting it as well to get $1460 is wrong.",
+      "why": "Tax \\(= 0.15 \\times \\$2000 = \\$300\\), so take-home pay \\(= \\$2000 - \\$300 = \\$1700\\). The super of \\(0.12 \\times \\$2000 = \\$240\\) is paid by the employer on top of wages, so subtracting it as well to get $1460 is wrong.",
       "clue": "Does the super come out of Omar's pay?"
     }
   },
@@ -7556,22 +7590,22 @@ MADE_BANKS.mat = {
     "title": "Fees and interest",
     "card": [
       "Fees add to what you pay. An account fee is charged for keeping an account, often each month. A late fee is charged when a bill is paid after its due date.",
-      "Interest is the cost of borrowing money. Simple interest is worked out on the original amount only. I = P × r × t, where P is the amount, r is the yearly rate as a decimal, and t is the time in years.",
-      "Worked example: borrow $2000 at 6% per year for 3 years. I = 2000 × 0.06 × 3 = $360. The total to repay is 2000 + 360 = $2360.",
-      "If the time is in months, change it to years first. 6 months is 6 ÷ 12 = 0.5 years."
+      "Interest is the cost of borrowing money. Simple interest is worked out on the original amount only. \\(I = P \\times r \\times t\\), where \\(P\\) is the amount, \\(r\\) is the yearly rate as a decimal, and \\(t\\) is the time in years.",
+      "Worked example: borrow $2000 at 6% per year for 3 years. \\(I = \\$2000 \\times 0.06 \\times 3 = \\$360\\). The total to repay is \\(\\$2000 + \\$360 = \\$2360\\).",
+      "If the time is in months, change it to years first. 6 months is \\(6 \\div 12 = 0.5\\) years."
     ],
-    "remember": "Fees and interest add to the cost. Simple interest = amount × rate × time in years.",
+    "remember": "Fees and interest add to the cost. Simple interest \\(=\\) amount \\(\\times\\) rate \\(\\times\\) time in years.",
     "a": {
       "q": "Sam borrows $1500 at 4% simple interest per year for 2 years. How much interest does he pay?",
       "opts": ["$120", "$60", "$1200", "$1620"],
-      "why": "I = 1500 × 0.04 × 2 = $120. The answer $60 is for one year only, because the time was left out. $1200 comes from writing 4% as 0.4, and $1620 is the total to repay, not the interest.",
+      "why": "\\(I = \\$1500 \\times 0.04 \\times 2 = \\$120\\). The answer $60 is for one year only, because the time was left out. $1200 comes from writing 4% as 0.4, and $1620 is the total to repay, not the interest.",
       "clue": "Change 4% to a decimal, then multiply all three numbers."
     },
     "b": {
       "d": 3,
       "q": "Priya borrows $3000 at 5% simple interest per year for 18 months. What is the total she must repay?",
       "opts": ["$3225", "$3150", "$5700", "$225"],
-      "why": "18 months is 18 ÷ 12 = 1.5 years. I = 3000 × 0.05 × 1.5 = $225, so the total is 3000 + 225 = $3225. $3150 comes from using 1 year, $5700 from using 18 as the time, and $225 is the interest only, not the total.",
+      "why": "18 months is \\(18 \\div 12 = 1.5\\) years. \\(I = \\$3000 \\times 0.05 \\times 1.5 = \\$225\\), so the total is \\(\\$3000 + \\$225 = \\$3225\\). $3150 comes from using 1 year, $5700 from using 18 as the time, and $225 is the interest only, not the total.",
       "clue": "Turn 18 months into years, then add the interest to the amount."
     }
   },
@@ -7607,23 +7641,23 @@ MADE_BANKS.mat = {
   "mat-units-converting": {
     "title": "Units and converting",
     "card": [
-      "Length: 10 mm = 1 cm, 100 cm = 1 m, 1000 m = 1 km. Mass: 1000 g = 1 kg. Capacity: 1000 mL = 1 L.",
+      "Length: 10 mm \\(=\\) 1 cm, 100 cm \\(=\\) 1 m, 1000 m \\(=\\) 1 km. Mass: 1000 g \\(=\\) 1 kg. Capacity: 1000 mL \\(=\\) 1 L.",
       "To change to a smaller unit, multiply. There are more of the small units. To change to a larger unit, divide.",
       "Check that the answer makes sense. A smaller unit gives a bigger number, and a larger unit gives a smaller number.",
-      ["Example", "3.5 kg to g: kg is the larger unit, so multiply by 1000. 3.5 × 1000 = 3500 g."]
+      ["Example", "3.5 kg to g: kg is the larger unit, so multiply by 1000. \\(3.5 \\times 1000 = 3500\\) g."]
     ],
     "remember": "Larger to smaller unit: multiply. Smaller to larger unit: divide.",
     "a": {
       "q": "A ribbon is 2.4 m long. How long is it in centimetres?",
       "opts": ["240 cm", "24 cm", "2400 cm", "0.024 cm"],
-      "why": "A centimetre is smaller than a metre, so multiply by 100: 2.4 × 100 = 240 cm. Multiplying by 10 gives 24 cm, but there are 100 cm in 1 m, not 10.",
+      "why": "A centimetre is smaller than a metre, so multiply by 100: \\(2.4 \\times 100 = 240\\) cm. Multiplying by 10 gives 24 cm, but there are 100 cm in 1 m, not 10.",
       "clue": "How many centimetres are in 1 m?"
     },
     "b": {
       "d": 3,
       "q": "Priya runs 850 m each morning. How many kilometres does she run in 4 mornings?",
       "opts": ["3.4 km", "34 km", "0.34 km", "3400 km"],
-      "why": "In 4 mornings she runs 850 × 4 = 3400 m. Metres to kilometres means divide by 1000, so 3400 ÷ 1000 = 3.4 km. Dividing by 100 instead gives 34 km, but there are 1000 m in 1 km, not 100.",
+      "why": "In 4 mornings she runs \\(850 \\times 4 = 3400\\) m. Metres to kilometres means divide by 1000, so \\(3400 \\div 1000 = 3.4\\) km. Dividing by 100 instead gives 34 km, but there are 1000 m in 1 km, not 100.",
       "clue": "Find the total in metres first, then change the unit."
     }
   },
@@ -7658,21 +7692,21 @@ MADE_BANKS.mat = {
     "card": [
       "24-hour time runs from 0000 (midnight) to 2359. Times from 1:00 am to 12:59 pm keep their hour: 7:40 am is 0740 and 12:30 pm is 1230.",
       "From 1:00 pm onwards, add 12 to the hour: 3:15 pm is 1515 and 11:20 pm is 2320.",
-      "For a time difference, count up to the next whole hour, then add whole hours and leftover minutes, as 1 hour is 60 minutes, not 100. From 1445 to 1710: 15 min + 2 h + 10 min = 2 h 25 min.",
+      "For a time difference, count up to the next whole hour, then add whole hours and leftover minutes, as 1 hour is 60 minutes, not 100. From 1445 to 1710: 15 min \\(+\\) 2 h \\(+\\) 10 min \\(=\\) 2 h 25 min.",
       "In a timetable, read across the row for your stop and down the column for your service. If you change services, check you reach the changeover stop before your connecting service leaves."
     ],
     "remember": "An hour has 60 minutes, so count up through the hours instead of subtracting times like ordinary numbers.",
     "a": {
       "q": "What is 7:40 pm in 24-hour time?",
       "opts": ["1940", "0740", "1840", "1960"],
-      "why": "7:40 pm is after 1:00 pm, so add 12 to the hour: 7 + 12 = 19, giving 1940. 0740 is 7:40 am, and 1960 cannot be a time, as minutes only go up to 59.",
+      "why": "7:40 pm is after 1:00 pm, so add 12 to the hour: \\(7 + 12 = 19\\), giving 1940. 0740 is 7:40 am, and 1960 cannot be a time, as minutes only go up to 59.",
       "clue": "Is 7:40 pm before or after 1:00 pm?"
     },
     "b": {
       "d": 3,
       "q": "A train leaves Ballarat at 0955 and arrives in Melbourne at 1138. How long is the trip?",
       "opts": ["1 h 43 min", "2 h 17 min", "1 h 83 min", "1 h 17 min"],
-      "why": "0955 to 1000 is 5 min, 1000 to 1100 is 1 h, and 1100 to 1138 is 38 min, which makes 1 h 43 min. Taking 1138 − 0955 as ordinary numbers gives 183, which wrongly reads as 1 h 83 min.",
+      "why": "0955 to 1000 is 5 min, 1000 to 1100 is 1 h, and 1100 to 1138 is 38 min, which makes 1 h 43 min. Taking \\(1138 - 0955\\) as ordinary numbers gives 183, which wrongly reads as 1 h 83 min.",
       "clue": "Count up to 1000 first, then add the hours and minutes."
     }
   },
@@ -7771,23 +7805,23 @@ MADE_BANKS.mat = {
   "mat-percentage-error": {
     "title": "Percentage error",
     "card": [
-      "Error = estimate − true value. Ignore the sign to find the size of the error: it is the gap between the two.",
-      "Percentage error = error ÷ true value × 100%. Always divide by the true value, not by the estimate.",
+      "Error \\(=\\) estimate \\(-\\) true value. Ignore the sign to find the size of the error: it is the gap between the two.",
+      "Percentage error \\(=\\) error \\(\\div\\) true value \\(\\times 100\\%\\). Always divide by the true value, not by the estimate.",
       "A small percentage error means the estimate is close to the true value. The same error matters more when the true value is small.",
-      "Example: you estimate 45 people, and the true number is 50. The error is 5, so 5 ÷ 50 × 100% = 10%."
+      "Example: you estimate 45 people, and the true number is 50. The error is 5, so \\(5 \\div 50 \\times 100\\% = 10\\%\\)."
     ],
     "remember": "Divide the size of the error by the true value, then multiply by 100.",
     "a": {
       "q": "Sam measures a board as 2.4 m. Its true length is 2.5 m. What is the percentage error?",
       "opts": ["4%", "4.17%", "0.1%", "10%"],
-      "why": "The error is 0.1 m. Then 0.1 ÷ 2.5 × 100% = 4%. The answer 4.17% divides by the estimate 2.4 instead of the true value.",
+      "why": "The error is 0.1 m. Then \\(0.1 \\div 2.5 \\times 100\\% = 4\\%\\). The answer 4.17% divides by the estimate 2.4 instead of the true value.",
       "clue": "Which number goes on the bottom of the fraction?"
     },
     "b": {
       "d": 3,
       "q": "A crowd is estimated at 1200. The true count is 1000. What is the percentage error?",
       "opts": ["20%", "16.7%", "200%", "2%"],
-      "why": "The error is 1200 − 1000 = 200. Then 200 ÷ 1000 × 100% = 20%. The answer 16.7% divides by the estimate 1200 instead of the true value.",
+      "why": "The error is \\(1200 - 1000 = 200\\). Then \\(200 \\div 1000 \\times 100\\% = 20\\%\\). The answer 16.7% divides by the estimate 1200 instead of the true value.",
       "clue": "The true value is the number that was actually counted."
     }
   },
@@ -7861,7 +7895,7 @@ MADE_BANKS.mat = {
     "title": "Tables and spreadsheets",
     "card": [
       "A table organises data in rows and columns. Give each column a clear heading, and keep one kind of data in each column, with the unit in the heading.",
-      "A spreadsheet is a table on a computer. Each box is a cell, named by its column letter and row number, so B3 is column B, row 3. A formula starts with = and works out a value from other cells, such as =B2+B3.",
+      "A spreadsheet is a table on a computer. Each box is a cell, named by its column letter and row number, so B3 is column B, row 3. A formula starts with \\(=\\) and works out a value from other cells, such as \\(\\text{=B2+B3}\\).",
       [
         "Two-way table",
         "a table that sorts people by two categories at once. One category runs down the rows and the other across the columns. Each cell counts the people in both."
@@ -7870,16 +7904,16 @@ MADE_BANKS.mat = {
     ],
     "remember": "Put one kind of data in each column. In a two-way table, rows and columns must add to the totals.",
     "a": {
-      "q": "In a spreadsheet, cell B2 holds 15 and cell B3 holds 9. What value does the formula =B2+B3 give?",
+      "q": "In a spreadsheet, cell B2 holds 15 and cell B3 holds 9. What value does the formula \\(\\text{=B2+B3}\\) give?",
       "opts": ["24", "159", "6", "135"],
-      "why": "The formula adds the values in the two cells: 15 + 9 = 24. Joining the digits to make 159 is tempting, but the formula adds numbers and does not write them side by side.",
+      "why": "The formula adds the values in the two cells: \\(15 + 9 = 24\\). Joining the digits to make 159 is tempting, but the formula adds numbers and does not write them side by side.",
       "clue": "A formula works with the values in the cells."
     },
     "b": {
       "d": 3,
       "q": "Of 40 people at a club, 25 are members and 15 are not. 18 of the members are adults. How many members are not adults?",
       "opts": ["7", "18", "22", "15"],
-      "why": "The members row totals 25, so the members who are not adults number 25 − 18 = 7. The 15 is tempting, but that is the total of non-members, a different row of the table.",
+      "why": "The members row totals 25, so the members who are not adults number \\(25 - 18 = 7\\). The 15 is tempting, but that is the total of non-members, a different row of the table.",
       "clue": "Use the members row: its two cells must add to its total."
     }
   },
@@ -8059,7 +8093,7 @@ MADE_BANKS.mat = {
       "Debt consolidation means combining several debts into one new loan. The new loan pays off the old debts, and you then make one repayment.",
       "It can cut the interest if the new loan has a lower rate than the old debts. It can also lower each repayment.",
       "A lower repayment may mean a longer loan. A longer loan can mean more interest, so the total paid may rise.",
-      "Example: Sam pays $120 a month on a credit card and $80 a month on a personal loan. Both would be cleared in 12 months, so the total is $200 × 12 = $2,400. One new loan at $100 a month for 36 months costs $100 × 36 = $3,600, which is $1,200 more."
+      "Example: Sam pays $120 a month on a credit card and $80 a month on a personal loan. Both would be cleared in 12 months, so the total is \\(\\$200 \\times 12 = \\$2{,}400\\). One new loan at $100 a month for 36 months costs \\(\\$100 \\times 36 = \\$3{,}600\\), which is $1,200 more."
     ],
     "remember": "Consolidation can give one smaller repayment, but a longer loan may cost more in total.",
     "a": {
@@ -8082,7 +8116,7 @@ MADE_BANKS.mat = {
         "Her repayment rises, and she pays $1,800 more in total",
         "Her repayment falls, and she pays the same in total"
       ],
-      "why": "Her old debts total $300 × 10 = $3,000. The new loan costs $200 × 24 = $4,800, which is $1,800 more. The lower repayment looks better each month, but it is spread over a longer time, so the total paid rises.",
+      "why": "Her old debts total \\(\\$300 \\times 10 = \\$3{,}000\\). The new loan costs \\(\\$200 \\times 24 = \\$4{,}800\\), which is $1,800 more. The lower repayment looks better each month, but it is spread over a longer time, so the total paid rises.",
       "clue": "Compare the total of the old debts with the total of the new loan."
     }
   },
@@ -8098,20 +8132,20 @@ MADE_BANKS.mat = {
         "Renting",
         "regular rent payments, plus any extra costs the rental has. Nothing comes back at the end, because the owner keeps the item."
       ],
-      "Example: a car costs $12 000 to buy. Running it costs $2000 a year, and after 3 years it sells for $7000. Cost of owning = 12 000 + 3 × 2000 − 7000 = $11 000. Renting costs $300 a month with running costs included, so 36 × 300 = $10 800. Renting is $200 cheaper."
+      "Example: a car costs $12,000 to buy. Running it costs $2000 a year, and after 3 years it sells for $7000. Cost of owning \\(= \\$12{,}000 + 3 \\times \\$2000 - \\$7000\\), which is $11,000. Renting costs $300 a month with running costs included, so \\(36 \\times \\$300 = \\$10{,}800\\). Renting is $200 cheaper."
     ],
     "remember": "Compare total costs over the same time, and take off any money you get back.",
     "a": {
-      "q": "Using the card's method, a van costs $20 000 to buy, $1500 a year to run, and sells for $12 000 after 4 years. What is the total cost of owning it for 4 years?",
-      "opts": ["$14 000", "$26 000", "$8000", "$34 000"],
-      "why": "Total cost = 20 000 + 4 × 1500 − 12 000 = 20 000 + 6000 − 12 000 = $14 000. The $8000 answer is the price less the resale value only, which leaves out the running costs.",
+      "q": "Using the card's method, a van costs $20,000 to buy, $1500 a year to run, and sells for $12,000 after 4 years. What is the total cost of owning it for 4 years?",
+      "opts": ["$14,000", "$26,000", "$8000", "$34,000"],
+      "why": "Running costs are \\(4 \\times \\$1500 = \\$6000\\). Total cost \\(= \\$20{,}000 + \\$6000 - \\$12{,}000\\), which is $14,000. The $8000 answer is the price less the resale value only, which leaves out the running costs.",
       "clue": "Add the price and 4 years of running costs, then take off the sale money."
     },
     "b": {
       "d": 3,
       "q": "Tariq can buy a scooter for $5000, which costs $400 a year to run and sells for $2000 after 3 years. Or he can rent one for $190 a month, with running costs included. Which is cheaper over 3 years, and by how much?",
       "opts": ["Owning, by $2640", "Owning, by $640", "Renting, by $1360", "Renting, by $1920"],
-      "why": "Owning costs 5000 + 3 × 400 − 2000 = $4200. Renting costs 36 × 190 = $6840, so owning is cheaper by 6840 − 4200 = $2640. Owning by $640 comes from forgetting to take off the $2000 he gets back from selling the scooter.",
+      "why": "Owning costs \\(\\$5000 + 3 \\times \\$400 - \\$2000\\), which is $4200. Renting costs \\(36 \\times \\$190 = \\$6840\\), so owning is cheaper by \\(\\$6840 - \\$4200 = \\$2640\\). Owning by $640 comes from forgetting to take off the $2000 he gets back from selling the scooter.",
       "clue": "Find both totals over 36 months, then subtract."
     }
   },
@@ -8132,21 +8166,21 @@ MADE_BANKS.mat = {
       ],
       [
         "Company tax",
-        "Companies pay company tax as a flat percentage of their profit. Example: at a rate of 30%, a profit of $200 000 gives 0.3 × 200 000 = $60 000."
+        "Companies pay company tax as a flat percentage of their profit. Example: at a rate of 30%, a profit of $200,000 gives \\(0.3 \\times \\$200{,}000 = \\$60{,}000\\)."
       ]
     ],
     "remember": "Income tax goes bracket by bracket with the levy on top, super funds retirement, rates go to councils, and companies are taxed on profit.",
     "a": {
-      "q": "Ben has taxable income of $40 000. The Medicare levy is 2%. How much levy does he pay?",
+      "q": "Ben has taxable income of $40,000. The Medicare levy is 2%. How much levy does he pay?",
       "opts": ["$800", "$80", "$8000", "$2000"],
-      "why": "Levy = 2% × 40 000 = 0.02 × 40 000 = $800. $80 comes from moving the decimal point one place too far.",
+      "why": "Levy \\(= 2\\% \\times \\$40{,}000\\), which is \\(0.02 \\times \\$40{,}000 = \\$800\\). $80 comes from moving the decimal point one place too far.",
       "clue": "Change 2% to a decimal, then multiply by taxable income."
     },
     "b": {
       "d": 3,
-      "q": "A tax scale taxes the first $18 000 at 0% and every dollar above that at 20%. Priya's taxable income is $30 000. How much income tax does she pay?",
+      "q": "A tax scale taxes the first $18,000 at 0% and every dollar above that at 20%. Priya's taxable income is $30,000. How much income tax does she pay?",
       "opts": ["$2400", "$6000", "$3600", "$600"],
-      "why": "Only the income above $18 000 is taxed at 20%. That is 30 000 − 18 000 = $12 000, and 0.2 × 12 000 = $2400. $6000 is wrong because it taxes all $30 000 at 20%.",
+      "why": "Only the income above $18,000 is taxed at 20%. That is \\(\\$30{,}000 - \\$18{,}000 = \\$12{,}000\\), and \\(0.2 \\times \\$12{,}000 = \\$2400\\). $6000 is wrong because it taxes all $30,000 at 20%.",
       "clue": "Only the income inside the 20% bracket is taxed at 20%."
     }
   },
@@ -8156,7 +8190,7 @@ MADE_BANKS.mat = {
       ["GST", "GST is the goods and services tax. It is 10% of the price of most goods and services in Australia."],
       [
         "Invoice",
-        "A business adds GST to the price on an invoice. Price without GST × 1.1 gives the price with GST. Price with GST ÷ 11 gives the GST part."
+        "A business adds GST to the price on an invoice. Price without GST \\(\\times 1.1\\) gives the price with GST. Price with GST \\(\\div 11\\) gives the GST part."
       ],
       [
         "BAS",
@@ -8164,21 +8198,21 @@ MADE_BANKS.mat = {
       ],
       [
         "Amount owed",
-        "GST collected − GST paid = amount sent to the tax office. Example: collected $900 and paid $400 gives 900 − 400 = $500 to send."
+        "GST collected \\(-\\) GST paid \\(=\\) amount sent to the tax office. Example: collected $900 and paid $400 gives \\(\\$900 - \\$400 = \\$500\\) to send."
       ]
     ],
     "remember": "GST is 10% added to the price, and the BAS works out collected minus paid.",
     "a": {
       "q": "Kofi's workshop charges $350 for a job, before GST. What is the invoice total including GST?",
       "opts": ["$385", "$35", "$315", "$350.10"],
-      "why": "GST is 10% of 350 = $35, so the total is 350 + 35 = $385. $35 is only the GST, not the total.",
+      "why": "GST is 10% of $350, which is $35, so the total is \\(\\$350 + \\$35 = \\$385\\). $35 is only the GST, not the total.",
       "clue": "Work out 10% of the price, then add it on."
     },
     "b": {
       "d": 3,
       "q": "Lena's bakery collected $2200 GST from customers and paid $1500 GST on supplies this quarter. What does her BAS show she sends to the tax office?",
       "opts": ["$700", "$3700", "$1500", "$2200"],
-      "why": "The amount sent is GST collected minus GST paid: 2200 − 1500 = $700. Adding them to get $3700 is wrong because the GST paid on supplies is taken off.",
+      "why": "The amount sent is GST collected minus GST paid: \\(\\$2200 - \\$1500 = \\$700\\). Adding them to get $3700 is wrong because the GST paid on supplies is taken off.",
       "clue": "Take away the GST the business paid."
     }
   },
@@ -8187,24 +8221,24 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Premium",
-        "the amount you pay to the insurer for the policy, often monthly or yearly. Yearly cost = monthly premium × 12."
+        "the amount you pay to the insurer for the policy, often monthly or yearly. Yearly cost \\(=\\) monthly premium \\(\\times 12\\)."
       ],
       ["Excess", "the amount you pay first when you make a claim. The insurer pays the rest, up to the policy limit."],
       ["Cover", "what the policy pays for. Read what is included and what is left out before you choose."],
-      "A lower premium often comes with a higher excess or less cover. To compare, check the cover is the same, then add the yearly premium and the excess for a claim year. Example: $50 a month with a $400 excess costs $600 + $400 = $1000 in a year with one claim."
+      "A lower premium often comes with a higher excess or less cover. To compare, check the cover is the same, then add the yearly premium and the excess for a claim year. Example: $50 a month with a $400 excess costs \\(\\$600 + \\$400 = \\$1000\\) in a year with one claim."
     ],
     "remember": "Compare cover first, then the premium and excess together, not the premium alone.",
     "a": {
       "q": "Policy A costs $40 a month with a $500 excess. What is the total cost in a year with one claim?",
       "opts": ["$980", "$540", "$480", "$500"],
-      "why": "Yearly premium = $40 × 12 = $480. Adding the $500 excess gives $980. $540 is wrong because it adds only one month of premium to the excess.",
+      "why": "Yearly premium \\(= \\$40 \\times 12 = \\$480\\). Adding the $500 excess gives $980. $540 is wrong because it adds only one month of premium to the excess.",
       "clue": "Turn the monthly premium into a yearly amount first."
     },
     "b": {
       "d": 3,
       "q": "Both policies cover the same things. Policy X costs $35 a month with a $600 excess. Policy Y costs $45 a month with a $200 excess. Mia expects to make one claim this year. Which is cheaper, and by how much?",
       "opts": ["Y is cheaper by $280", "X is cheaper by $280", "Y is cheaper by $120", "X is cheaper by $120"],
-      "why": "X costs $35 × 12 + $600 = $1020. Y costs $45 × 12 + $200 = $740. Y is cheaper by $280. X only looks cheaper if you compare premiums alone, and that gap is $120 a year.",
+      "why": "X costs \\(\\$35 \\times 12 + \\$600 = \\$1020\\). Y costs \\(\\$45 \\times 12 + \\$200 = \\$740\\). Y is cheaper by $280. X only looks cheaper if you compare premiums alone, and that gap is $120 a year.",
       "clue": "Find each policy's yearly premium, then add its excess."
     }
   },
@@ -8278,25 +8312,25 @@ MADE_BANKS.mat = {
       ],
       [
         "Percentage change",
-        "Percentage change = change ÷ starting value × 100. Example: a share price goes from $20 to $25. The change is 5, and 5 ÷ 20 × 100 = 25%."
+        "Percentage change \\(=\\) change \\(\\div\\) starting value \\(\\times 100\\). Example: a share price goes from $20 to $25. The change is $5, and \\(\\$5 \\div \\$20 \\times 100 = 25\\%\\)."
       ],
       [
         "Exchange rate",
-        "An exchange rate says how much of one currency you get for one unit of another. If A$1 = US$0.60, you get US$0.60 for each Australian dollar, so A$100 buys 100 × 0.60 = US$60."
+        "An exchange rate says how much of one currency you get for one unit of another. If \\(\\text{A}\\$1 = \\text{US}\\$0.60\\), you get US$0.60 for each Australian dollar, so A$100 buys \\(100 \\times 0.60 = \\text{US}\\$60\\)."
       ]
     ],
     "remember": "Read the change from the graph, then divide by the starting value for a percentage.",
     "a": {
       "q": "A share price rises from $40 to $50. What is the percentage increase?",
       "opts": ["25%", "20%", "10%", "50%"],
-      "why": "The change is 50 − 40 = 10. Then 10 ÷ 40 × 100 = 25%. 20% is wrong because it divides by the new price instead of the starting price.",
+      "why": "The change is \\(\\$50 - \\$40 = \\$10\\). Then \\(\\$10 \\div \\$40 \\times 100 = 25\\%\\). 20% is wrong because it divides by the new price instead of the starting price.",
       "clue": "Divide the change by the starting value."
     },
     "b": {
       "d": 3,
-      "q": "The exchange rate is A$1 = 0.65 euros. Sam changes A$200 into euros. How many euros does he get?",
+      "q": "The exchange rate is \\(\\text{A}\\$1 = 0.65\\) euros. Sam changes A$200 into euros. How many euros does he get?",
       "opts": ["130 euros", "307.69 euros", "200.65 euros", "65 euros"],
-      "why": "Sam gets 0.65 euros for each Australian dollar, so 200 × 0.65 = 130 euros. Dividing 200 by 0.65 gives 307.69, which uses the rate the wrong way round.",
+      "why": "Sam gets 0.65 euros for each Australian dollar, so \\(200 \\times 0.65 = 130\\) euros. Dividing 200 by 0.65 gives 307.69, which uses the rate the wrong way round.",
       "clue": "Multiply the dollars by the euros you get per dollar."
     }
   },
@@ -8339,53 +8373,56 @@ MADE_BANKS.mat = {
     "card": [
       "A scale compares a length on a plan or model with the real length. A scale of 1:50 means 1 unit on the plan is 50 of the same unit in real life.",
       "To find a real length, multiply the plan length by the scale number. To find a plan length, divide the real length by the scale number.",
-      "Change units after you scale. Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
-      "A scale factor applies to lengths only. Area changes by the scale factor squared, so on a 1:50 plan every real area is 50² = 2500 times the plan area."
+      "Change units after you scale. Example: 4 cm on a 1:50 plan is \\(4 \\times 50 = 200\\) cm, which is 2 m.",
+      "A scale factor applies to lengths only. Area changes by the scale factor squared, so on a 1:50 plan every real area is \\(50^{2} = 2500\\) times the plan area."
     ],
     "remember": "Multiply by the scale number to go from plan to real. Divide to go from real to plan.",
     "a": {
       "q": "A plan has a scale of 1:200. A wall measures 3 cm on the plan. How long is the real wall?",
       "opts": ["6 m", "600 m", "0.6 m", "60 m"],
-      "why": "Real length = 3 × 200 = 600 cm, which is 6 m. The option 600 m forgets to change the units from centimetres to metres.",
+      "why": "Real length \\(= 3 \\times 200 = 600\\) cm, which is 6 m. The option 600 m forgets to change the units from centimetres to metres.",
       "clue": "Multiply, then change cm to m."
     },
     "b": {
       "d": 3,
       "q": "Priya builds a model of a bridge in Geelong at a scale of 1:80. The real bridge is 24 m long. How long is her model?",
       "opts": ["30 cm", "1920 m", "3 cm", "0.3 cm"],
-      "why": "Model length = 24 ÷ 80 = 0.3 m, and 0.3 m is 30 cm. The option 1920 m multiplies instead of dividing, which is the wrong direction for going from real to model. The option 0.3 cm keeps the number but forgets to change metres to centimetres.",
+      "why": "Model length \\(= 24 \\div 80 = 0.3\\) m, and 0.3 m is 30 cm. The option 1920 m multiplies instead of dividing, which is the wrong direction for going from real to model. The option 0.3 cm keeps the number but forgets to change metres to centimetres.",
       "clue": "Real to model means divide. Then change the units."
     }
   },
   "mat-rates-practice": {
     "title": "Derived and non-metric measures",
     "card": [
-      ["Speed", "is distance ÷ time. A car that travels 150 km in 2 hours has a speed of 150 ÷ 2 = 75 km/h."],
+      [
+        "Speed",
+        "is distance \\(\\div\\) time. A car that travels 150 km in 2 hours has a speed of \\(150 \\div 2 = 75\\) km/h."
+      ],
       [
         "Fuel use",
-        "is shown as litres per 100 km. If a car uses 8 L to go 100 km, it uses 8 ÷ 100 = 0.08 L for each km."
+        "is shown as litres per 100 km. If a car uses 8 L to go 100 km, it uses \\(8 \\div 100 = 0.08\\) L for each km."
       ],
       [
         "Flow rate",
-        "is volume ÷ time, such as litres per minute. A tap that fills 12 L in 3 minutes runs at 12 ÷ 3 = 4 L/min."
+        "is volume \\(\\div\\) time, such as litres per minute. A tap that fills 12 L in 3 minutes runs at \\(12 \\div 3 = 4\\) L/min."
       ],
       [
         "Inches",
-        "are still used in trades. 1 inch = 25.4 mm. To convert 3 inches to mm, multiply: 3 × 25.4 = 76.2 mm. To go from mm to inches, divide by 25.4."
+        "are still used in trades. \\(1 \\text{ inch} = 25.4 \\text{ mm}\\). To convert 3 inches to mm, multiply: \\(3 \\times 25.4 = 76.2\\) mm. To go from mm to inches, divide by 25.4."
       ]
     ],
     "remember": "Rates divide one measure by another. To change units, multiply or divide by the conversion number.",
     "a": {
       "q": "A tank pipe fills 90 L in 6 minutes. What is the flow rate?",
       "opts": ["15 L/min", "540 L/min", "0.07 L/min", "96 L/min"],
-      "why": "Flow rate = 90 ÷ 6 = 15 L/min. Multiplying 90 × 6 = 540 is wrong because a rate divides volume by time.",
+      "why": "Flow rate \\(= 90 \\div 6 = 15\\) L/min. Multiplying \\(90 \\times 6 = 540\\) is wrong because a rate divides volume by time.",
       "clue": "Divide volume by time."
     },
     "b": {
       "d": 3,
       "q": "A carpenter in Geelong needs a pipe 4 inches wide. What is this in mm?",
-      "opts": ["101.6 mm", "6.35 mm", "29.4 mm", "4 000 mm"],
-      "why": "Inches are larger than mm, so multiply: 4 × 25.4 = 101.6 mm. Dividing 25.4 by 4 gives 6.35, which is wrong because it uses the wrong operation.",
+      "opts": ["101.6 mm", "6.35 mm", "29.4 mm", "4,000 mm"],
+      "why": "Inches are larger than mm, so multiply: \\(4 \\times 25.4 = 101.6\\) mm. Dividing 25.4 by 4 gives 6.35, which is wrong because it uses the wrong operation.",
       "clue": "1 inch is 25.4 mm, and a mm is smaller."
     }
   },
@@ -8393,22 +8430,22 @@ MADE_BANKS.mat = {
     "title": "Area and volume for jobs",
     "card": [
       "Split a compound shape into simple shapes such as rectangles and triangles. Find each area, then add them. Perimeter is the total length around the outside.",
-      "Volume of a rectangular prism = length × width × height. Concrete for a slab is its volume, so all three lengths must be in the same unit, such as metres.",
-      "1 m³ = 1000 litres, and 1 m² = 10 000 cm². Convert before you multiply.",
-      "Allow for waste by adding a percentage. Example: 40 m² of tiles plus 10% waste is 40 × 1.1 = 44 m²."
+      "Volume of a rectangular prism \\(=\\) length \\(\\times\\) width \\(\\times\\) height. Concrete for a slab is its volume, so all three lengths must be in the same unit, such as metres.",
+      "\\(1 \\text{ m}^{3} = 1000\\) litres, and \\(1 \\text{ m}^{2} = 10{,}000 \\text{ cm}^{2}\\). Convert before you multiply.",
+      "Allow for waste by adding a percentage. Example: \\(40 \\text{ m}^{2}\\) of tiles plus 10% waste is \\(40 \\times 1.1 = 44 \\text{ m}^{2}\\)."
     ],
     "remember": "Split into simple shapes, keep units the same, then add the waste allowance last.",
     "a": {
       "q": "An L-shaped floor is made from a 6 m by 4 m rectangle and a 2 m by 3 m rectangle. What is its area?",
-      "opts": ["30 m²", "24 m²", "36 m²", "10 m²"],
-      "why": "Area = 6 × 4 + 2 × 3 = 24 + 6 = 30 m². The option 24 m² leaves out the second rectangle.",
+      "opts": ["\\(30 \\text{ m}^{2}\\)", "\\(24 \\text{ m}^{2}\\)", "\\(36 \\text{ m}^{2}\\)", "\\(10 \\text{ m}^{2}\\)"],
+      "why": "Area \\(= 6 \\times 4 + 2 \\times 3\\), which is \\(24 + 6 = 30 \\text{ m}^{2}\\). The option \\(24 \\text{ m}^{2}\\) leaves out the second rectangle.",
       "clue": "Find each rectangle's area, then add."
     },
     "b": {
       "d": 3,
       "q": "Sam pours a concrete slab 5 m long, 4 m wide and 0.1 m thick in Bendigo. He orders 10% extra. How much concrete does he order?",
-      "opts": ["2.2 m³", "2 m³", "22 m³", "2.1 m³"],
-      "why": "Volume = 5 × 4 × 0.1 = 2 m³. Adding 10% gives 2 × 1.1 = 2.2 m³. The option 2.1 m³ adds 0.1 instead of 10% of the volume.",
+      "opts": ["\\(2.2 \\text{ m}^{3}\\)", "\\(2 \\text{ m}^{3}\\)", "\\(22 \\text{ m}^{3}\\)", "\\(2.1 \\text{ m}^{3}\\)"],
+      "why": "Volume \\(= 5 \\times 4 \\times 0.1 = 2 \\text{ m}^{3}\\). Adding 10% gives \\(2 \\times 1.1 = 2.2 \\text{ m}^{3}\\). The option \\(2.1 \\text{ m}^{3}\\) adds 0.1 instead of 10% of the volume.",
       "clue": "Find the volume first, then add 10% of it."
     }
   },
@@ -8417,7 +8454,7 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Tolerance",
-        "the error allowed in a measurement. A part of 50 mm ± 0.2 mm must be between 49.8 mm and 50.2 mm."
+        "the error allowed in a measurement. A part of \\(50 \\text{ mm} \\pm 0.2 \\text{ mm}\\) must be between 49.8 mm and 50.2 mm."
       ],
       [
         "Accuracy",
@@ -8431,7 +8468,7 @@ MADE_BANKS.mat = {
     ],
     "remember": "Tolerance is the allowed error, accuracy is closeness to true, precision is how fine the scale is.",
     "a": {
-      "q": "A steel rod must be 120 mm ± 0.5 mm. Which length is within tolerance?",
+      "q": "A steel rod must be \\(120 \\text{ mm} \\pm 0.5 \\text{ mm}\\). Which length is within tolerance?",
       "opts": ["119.6 mm", "119.4 mm", "120.6 mm", "121 mm"],
       "why": "The allowed range is 119.5 mm to 120.5 mm. 119.6 mm is inside it. 119.4 mm is just outside, so it is not allowed.",
       "clue": "Work out the lowest and highest allowed lengths."
@@ -8493,13 +8530,13 @@ MADE_BANKS.mat = {
         "Segmented bar chart",
         "splits each bar into parts to compare groups. It is often drawn with percentages, so groups of different sizes can be compared fairly."
       ],
-      "Example: a class of 25 students has 10 who walk to school. The relative frequency of walking is 10 ÷ 25 = 0.4, so the percentage frequency is 0.4 × 100 = 40%."
+      "Example: a class of 25 students has 10 who walk to school. The relative frequency of walking is \\(10 \\div 25 = 0.4\\), so the percentage frequency is \\(0.4 \\times 100 = 40\\%\\)."
     ],
     "remember": "Frequency counts each category. Percentages let groups of different sizes be compared.",
     "a": {
       "q": "In a survey of 40 students, 14 chose pizza as their favourite lunch. What is the percentage frequency of pizza?",
       "opts": ["35%", "14%", "28%", "40%"],
-      "why": "Percentage frequency = 14 ÷ 40 × 100 = 35%. The number 14 is the frequency, not the percentage, and it only equals a percentage when the total is 100.",
+      "why": "Percentage frequency \\(= 14 \\div 40 \\times 100 = 35\\%\\). The number 14 is the frequency, not the percentage, and it only equals a percentage when the total is 100.",
       "clue": "Divide the frequency by the total, then change to a percentage."
     },
     "b": {
@@ -8511,7 +8548,7 @@ MADE_BANKS.mat = {
         "The same percentage of each class ride a bike",
         "Class B has a higher frequency of bike riders"
       ],
-      "why": "Class A: 10 ÷ 20 = 50%. Class B: 10 ÷ 50 = 20%. The frequencies are equal at 10, which is tempting, but the class sizes differ, so the percentages differ.",
+      "why": "Class A: \\(10 \\div 20 = 50\\%\\). Class B: \\(10 \\div 50 = 20\\%\\). The frequencies are equal at 10, which is tempting, but the class sizes differ, so the percentages differ.",
       "clue": "Work out each class's percentage, not just its count."
     }
   },
@@ -8555,28 +8592,28 @@ MADE_BANKS.mat = {
   "mat-five-number-summary-boxplots": {
     "title": "The five-number summary and boxplots",
     "card": [
-      "The five-number summary lists the minimum, Q1, median, Q3 and maximum. Q1 is the median of the lower half of the data, and Q3 is the median of the upper half.",
-      "A boxplot draws these five values. The box runs from Q1 to Q3 with a line at the median. Whiskers reach out to the smallest and largest values that are not outliers.",
-      "The fences are 1.5 × IQR below Q1 and 1.5 × IQR above Q3, where IQR = Q3 − Q1. A value beyond a fence is a possible outlier, and it is shown as a separate dot.",
-      "Example: Q1 = 12 and Q3 = 20. IQR = 8, and 1.5 × 8 = 12. The fences are 12 − 12 = 0 and 20 + 12 = 32. A value of 35 is a possible outlier."
+      "The five-number summary lists the minimum, \\(Q_{1}\\), median, \\(Q_{3}\\) and maximum. \\(Q_{1}\\) is the median of the lower half of the data, and \\(Q_{3}\\) is the median of the upper half.",
+      "A boxplot draws these five values. The box runs from \\(Q_{1}\\) to \\(Q_{3}\\) with a line at the median. Whiskers reach out to the smallest and largest values that are not outliers.",
+      "The fences are \\(1.5 \\times \\text{IQR}\\) below \\(Q_{1}\\) and \\(1.5 \\times \\text{IQR}\\) above \\(Q_{3}\\), where \\(\\text{IQR} = Q_{3} - Q_{1}\\). A value beyond a fence is a possible outlier, and it is shown as a separate dot.",
+      "Example: \\(Q_{1} = 12\\) and \\(Q_{3} = 20\\). \\(\\text{IQR} = 8\\), and \\(1.5 \\times 8 = 12\\). The fences are \\(12 - 12 = 0\\) and \\(20 + 12 = 32\\). A value of 35 is a possible outlier."
     ],
     "remember": "A boxplot shows five values, and anything beyond a fence is a possible outlier.",
     "a": {
-      "q": "A data set has Q1 = 30 and Q3 = 50. What is the upper fence for outliers?",
+      "q": "A data set has \\(Q_{1} = 30\\) and \\(Q_{3} = 50\\). What is the upper fence for outliers?",
       "opts": ["80", "70", "60", "75"],
-      "why": "IQR = 50 − 30 = 20, and 1.5 × 20 = 30. The upper fence is Q3 + 30 = 80. Adding only the IQR to Q3 gives 70, adding 30 to Q1 instead of Q3 gives 60, and multiplying Q3 by 1.5 gives 75.",
+      "why": "\\(\\text{IQR} = 50 - 30 = 20\\), and \\(1.5 \\times 20 = 30\\). The upper fence is \\(Q_{3} + 30 = 80\\). Adding only the IQR to \\(Q_{3}\\) gives 70, adding 30 to \\(Q_{1}\\) instead of \\(Q_{3}\\) gives 60, and multiplying \\(Q_{3}\\) by 1.5 gives 75.",
       "clue": "Find the IQR first, then multiply it by 1.5."
     },
     "b": {
       "d": 3,
-      "q": "Mia's daily steps (in hundreds) have Q1 = 40 and Q3 = 60. Her minimum is 8 and her maximum is 88. Which statement is correct?",
+      "q": "Mia's daily steps (in hundreds) have \\(Q_{1} = 40\\) and \\(Q_{3} = 60\\). Her minimum is 8 and her maximum is 88. Which statement is correct?",
       "opts": [
         "Only the minimum of 8 is a possible outlier",
         "Only the maximum of 88 is a possible outlier",
         "Both 8 and 88 are possible outliers",
         "Neither 8 nor 88 is a possible outlier"
       ],
-      "why": "IQR = 20, and 1.5 × 20 = 30, so the fences are 40 − 30 = 10 and 60 + 30 = 90. The value 8 is below 10, so it is a possible outlier, but 88 is inside the upper fence of 90. Using the IQR alone gives fences of 20 and 80, which wrongly flags both values.",
+      "why": "\\(\\text{IQR} = 20\\), and \\(1.5 \\times 20 = 30\\), so the fences are \\(40 - 30 = 10\\) and \\(60 + 30 = 90\\). The value 8 is below 10, so it is a possible outlier, but 88 is inside the upper fence of 90. Using the IQR alone gives fences of 20 and 80, which wrongly flags both values.",
       "clue": "Work out both fences, then check each end value against them."
     }
   },
@@ -8698,9 +8735,9 @@ MADE_BANKS.mat = {
     "title": "Linear growth and decay",
     "card": [
       "In linear growth, the same amount is added at each step. In linear decay, the same amount is taken away at each step.",
-      "As a recurrence relation, growth is u(n+1) = u(n) + d and decay is u(n+1) = u(n) − d. The amount d stays fixed.",
+      "As a recurrence relation, growth is \\(u_{n+1} = u_{n} + d\\) and decay is \\(u_{n+1} = u_{n} - d\\). The amount \\(d\\) stays fixed.",
       "Simple interest is linear growth. The interest is worked out on the original amount only, so the same dollar amount is added each year.",
-      "Flat-rate depreciation is linear decay. An item loses the same dollar amount each year. Example: a $2000 laptop losing $300 a year is worth $2000 − 3 × $300 = $1100 after 3 years."
+      "Flat-rate depreciation is linear decay. An item loses the same dollar amount each year. Example: a $2000 laptop losing $300 a year is worth \\(\\$2000 - 3 \\times \\$300 = \\$1100\\) after 3 years."
     ],
     "remember": "Linear means the same amount is added or taken away at each step.",
     "a": {
@@ -8711,9 +8748,9 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 3,
-      "q": "A van bought for $42 000 loses $6000 in value each year under flat-rate depreciation. What is its value after 4 years?",
-      "opts": ["$18 000", "$24 000", "$36 000", "$12 000"],
-      "why": "The loss is 4 × $6000 = $24 000. So the value is $42 000 − $24 000 = $18 000. The answer $24 000 is the total loss, not the value left.",
+      "q": "A van bought for $42,000 loses $6000 in value each year under flat-rate depreciation. What is its value after 4 years?",
+      "opts": ["$18,000", "$24,000", "$36,000", "$12,000"],
+      "why": "The loss is \\(4 \\times \\$6000 = \\$24{,}000\\). So the value is \\(\\$42{,}000 - \\$24{,}000\\), which is $18,000. The answer $24,000 is the total loss, not the value left.",
       "clue": "Find the total loss, then subtract it from the start."
     }
   },
@@ -8746,26 +8783,29 @@ MADE_BANKS.mat = {
       "GST is the goods and services tax. In Australia it is 10% of the price before tax. It is added to the price of most goods and services.",
       [
         "Adding GST",
-        "price with GST = price without GST × 1.1. Example: a $200 bike has GST of $20, so it costs $200 × 1.1 = $220."
+        "price with GST \\(=\\) price without GST \\(\\times 1.1\\). Example: a $200 bike has GST of $20, so it costs \\(\\$200 \\times 1.1 = \\$220\\)."
       ],
       [
         "Removing GST",
-        "price without GST = price with GST ÷ 1.1. GST is 10% of the price without GST, not 10% of the total."
+        "price without GST \\(=\\) price with GST \\(\\div 1.1\\). GST is 10% of the price without GST, not 10% of the total."
       ],
-      ["Example", "A jacket costs $330 with GST. Without GST it is $330 ÷ 1.1 = $300. The GST is $330 − $300 = $30."]
+      [
+        "Example",
+        "A jacket costs $330 with GST. Without GST it is \\(\\$330 \\div 1.1 = \\$300\\). The GST is \\(\\$330 - \\$300 = \\$30\\)."
+      ]
     ],
     "remember": "Times 1.1 to add GST. Divide by 1.1 to take it off.",
     "a": {
       "q": "A printer costs $450 before GST. What is its price including GST?",
       "opts": ["$495", "$405", "$450.10", "$409.09"],
-      "why": "Price with GST = $450 × 1.1 = $495. Subtracting 10% to get $405 is simply wrong, because adding GST makes the price go up. Dividing by 1.1 gives $409.09, which is how you would remove GST, not add it.",
+      "why": "Price with GST \\(= \\$450 \\times 1.1 = \\$495\\). Subtracting 10% to get $405 is simply wrong, because adding GST makes the price go up. Dividing by 1.1 gives $409.09, which is how you would remove GST, not add it.",
       "clue": "Adding GST means multiplying the price before GST."
     },
     "b": {
       "d": 3,
       "q": "Mia buys a desk for $1100 including GST. How much of that price is GST?",
       "opts": ["$100", "$110", "$1000", "$990"],
-      "why": "Price without GST = $1100 ÷ 1.1 = $1000, so the GST is $1100 − $1000 = $100. Taking 10% of $1100 gives $110, but GST is 10% of the price before GST, not of the total.",
+      "why": "Price without GST \\(= \\$1100 \\div 1.1 = \\$1000\\), so the GST is \\(\\$1100 - \\$1000 = \\$100\\). Taking 10% of $1100 gives $110, but GST is 10% of the price before GST, not of the total.",
       "clue": "Find the price without GST first, then subtract."
     }
   },
@@ -8801,22 +8841,22 @@ MADE_BANKS.mat = {
     "title": "Simple interest",
     "card": [
       "Simple interest is worked out only on the starting amount, called the principal. The interest is not added to the principal each period, so it never earns interest itself.",
-      "The formula is I = PrT/100. I is the interest, P is the principal, r is the yearly interest rate as a percentage, and T is the time in years.",
-      "The rate is per year, so T must be in years. For 6 months, T = 0.5. Put r in as 6, not 0.06, because the 100 in the formula does that job.",
-      "Example: $2000 at 5% per year for 3 years. I = 2000 × 5 × 3/100 = $300. The total amount after 3 years is $2000 + $300 = $2300."
+      "The formula is \\(I = \\frac{PrT}{100}\\). \\(I\\) is the interest, \\(P\\) is the principal, \\(r\\) is the yearly interest rate as a percentage, and \\(T\\) is the time in years.",
+      "The rate is per year, so \\(T\\) must be in years. For 6 months, \\(T = 0.5\\). Put \\(r\\) in as 6, not 0.06, because the 100 in the formula does that job.",
+      "Example: $2000 at 5% per year for 3 years. \\(I = \\frac{2000 \\times 5 \\times 3}{100} = \\$300\\). The total amount after 3 years is \\(\\$2000 + \\$300 = \\$2300\\)."
     ],
     "remember": "Simple interest is the same every period, because it is always worked out on the principal.",
     "a": {
       "q": "Mia puts $4000 into an account paying 3% per year simple interest. She leaves it for 2 years. How much interest does she earn?",
-      "opts": ["$240", "$120", "$4240", "$24 000"],
-      "why": "I = 4000 × 3 × 2/100 = $240. $4240 is the total balance, but the question asks for the interest alone. $24 000 comes from leaving out the ÷ 100.",
-      "clue": "Use I = PrT/100 with r = 3 and T = 2."
+      "opts": ["$240", "$120", "$4240", "$24,000"],
+      "why": "\\(I = \\frac{4000 \\times 3 \\times 2}{100} = \\$240\\). $4240 is the total balance, but the question asks for the interest alone. $24,000 comes from leaving out the \\(\\div 100\\).",
+      "clue": "Use \\(I = \\frac{PrT}{100}\\) with \\(r = 3\\) and \\(T = 2\\)."
     },
     "b": {
       "d": 3,
       "q": "Sam takes a loan of $5000 at 8% per year simple interest. He repays it after 18 months. How much interest does he pay in total?",
       "opts": ["$600", "$7200", "$400", "$720"],
-      "why": "The rate is per year, so 18 months is T = 1.5 years. I = 5000 × 8 × 1.5/100 = $600. Using T = 18 gives $7200, which mixes months with a yearly rate.",
+      "why": "The rate is per year, so 18 months is \\(T = 1.5\\) years. \\(I = \\frac{5000 \\times 8 \\times 1.5}{100} = \\$600\\). Using \\(T = 18\\) gives $7200, which mixes months with a yearly rate.",
       "clue": "Change the months into years before using the formula."
     }
   },
@@ -8832,7 +8872,7 @@ MADE_BANKS.mat = {
     "a": {
       "q": "Priya invests $2000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
       "opts": ["$2420", "$2400", "$2200", "$2040"],
-      "why": "\\(A = 2000 \\times (1 + \\frac{10}{100})^{2} = 2000 \\times 1.21 = \\$2420\\). The answer $2400 is simple interest, which does not let the interest earn interest.",
+      "why": "\\(A = 2000 \\times (1 + \\frac{10}{100})^{2}\\), which is \\(2000 \\times 1.21 = \\$2420\\). The answer $2400 is simple interest, which does not let the interest earn interest.",
       "clue": "Is year 2 interest found on $2000 or on the new balance?"
     },
     "b": {
@@ -8859,14 +8899,14 @@ MADE_BANKS.mat = {
       ],
       [
         "Loan or BNPL",
-        "you pay in instalments, and loan repayments include interest. Total = instalment × number of instalments + any fees, so $55 a month for 12 months is 55 × 12 = $660."
+        "you pay in instalments, and loan repayments include interest. Total \\(=\\) instalment \\(\\times\\) number of instalments \\(+\\) any fees, so $55 a month for 12 months is \\(\\$55 \\times 12 = \\$660\\)."
       ]
     ],
     "remember": "Compare the totals you pay in the end, not the size of each instalment.",
     "a": {
       "q": "A $450 bike can be bought on a loan with $40 a month for 12 months. How much more than the cash price does the loan cost?",
       "opts": ["$30", "$40", "$480", "$10"],
-      "why": "Loan total = 40 × 12 = $480. Extra cost = 480 − 450 = $30. The $480 is the total cost, not the extra amount paid.",
+      "why": "Loan total \\(= \\$40 \\times 12 = \\$480\\). Extra cost \\(= \\$480 - \\$450 = \\$30\\). The $480 is the total cost, not the extra amount paid.",
       "clue": "Find the loan total first, then compare it with the cash price."
     },
     "b": {
@@ -8878,7 +8918,7 @@ MADE_BANKS.mat = {
         "Option B costs $60 more than option A",
         "Option B costs $12 less than option A"
       ],
-      "why": "The instalments are 4 × 60 = $240. Adding the $12 fee gives $252, which is $12 more than the $240 cash price. Splitting the payments does not change the total, but the fee does.",
+      "why": "The instalments are \\(4 \\times \\$60 = \\$240\\). Adding the $12 fee gives $252, which is $12 more than the $240 cash price. Splitting the payments does not change the total, but the fee does.",
       "clue": "Add the instalments and the fee, then compare with the cash price."
     }
   },
@@ -8919,21 +8959,21 @@ MADE_BANKS.mat = {
     "title": "What a matrix is",
     "card": [
       "A matrix is a rectangular array of numbers in rows and columns. It stores information, such as sales figures in a table or the links between places in a network.",
-      "The order of a matrix is its number of rows × its number of columns. A matrix with 2 rows and 3 columns has order 2 × 3. Each number in it is an element.",
+      "The order of a matrix is its number of rows \\(\\times\\) its number of columns. A matrix with 2 rows and 3 columns has order \\(2 \\times 3\\). Each number in it is an element.",
       [
         "Row and column",
-        "a row matrix has one row, such as [4 7 9], which has order 1 × 3. A column matrix has one column."
+        "a row matrix has one row, such as \\(\\begin{bmatrix} 4 & 7 & 9 \\end{bmatrix}\\), which has order \\(1 \\times 3\\). A column matrix has one column."
       ],
       [
         "Square, zero, identity",
         "a square matrix has equal numbers of rows and columns. A zero matrix has every element 0. An identity matrix is square, with 1s down the diagonal from top left and 0s elsewhere."
       ]
     ],
-    "remember": "Order is rows × columns. A square matrix has equal rows and columns.",
+    "remember": "Order is rows \\(\\times\\) columns. A square matrix has equal rows and columns.",
     "a": {
       "q": "A matrix has 3 rows and 2 columns. What is its order?",
-      "opts": ["3 × 2", "2 × 3", "3 × 3", "6 × 1"],
-      "why": "Order is written as rows × columns, so 3 rows and 2 columns gives 3 × 2. The option 2 × 3 swaps the two numbers, which is the most common mistake.",
+      "opts": ["\\(3 \\times 2\\)", "\\(2 \\times 3\\)", "\\(3 \\times 3\\)", "\\(6 \\times 1\\)"],
+      "why": "Order is written as rows \\(\\times\\) columns, so 3 rows and 2 columns gives \\(3 \\times 2\\). The option \\(2 \\times 3\\) swaps the two numbers, which is the most common mistake.",
       "clue": "Say rows first, then columns."
     },
     "b": {
@@ -8947,52 +8987,65 @@ MADE_BANKS.mat = {
   "mat-adding-scaling-matrices": {
     "title": "Adding and scaling matrices",
     "card": [
-      "The order of a matrix is its number of rows × its number of columns. Two matrices can be added only if they have the same order.",
-      ["Adding", "add the elements in the same position. For example, [2 5] + [3 −1] = [5 4]."],
+      "The order of a matrix is its number of rows \\(\\times\\) its number of columns. Two matrices can be added only if they have the same order.",
+      [
+        "Adding",
+        "add the elements in the same position. For example, \\(\\begin{bmatrix} 2 & 5 \\end{bmatrix} + \\begin{bmatrix} 3 & -1 \\end{bmatrix} = \\begin{bmatrix} 5 & 4 \\end{bmatrix}\\)."
+      ],
       [
         "Scalar multiplication",
-        "a scalar is an ordinary number. To multiply a matrix by it, multiply every element. For example, 3 × [2 −4] = [6 −12]."
+        "a scalar is an ordinary number. To multiply a matrix by it, multiply every element. For example, \\(3 \\times \\begin{bmatrix} 2 & -4 \\end{bmatrix} = \\begin{bmatrix} 6 & -12 \\end{bmatrix}\\)."
       ],
       "Subtracting works the same way as adding. Take away the element in the same position, and watch the signs."
     ],
     "remember": "Add matching positions. A scalar multiplies every element.",
     "a": {
-      "q": "What is 2 × [3 −5] + [1 4]?",
-      "opts": ["[7 −6]", "[4 −1]", "[7 −1]", "[7 −14]"],
-      "why": "First, 2 × [3 −5] = [6 −10]. Then add [1 4] to get [7 −6]. Multiplying only the first element by 2 would give [7 −1], but a scalar multiplies every element.",
+      "q": "What is \\(2 \\times \\begin{bmatrix} 3 & -5 \\end{bmatrix} + \\begin{bmatrix} 1 & 4 \\end{bmatrix}\\)?",
+      "opts": [
+        "\\(\\begin{bmatrix} 7 & -6 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 4 & -1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 7 & -1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 7 & -14 \\end{bmatrix}\\)"
+      ],
+      "why": "First, \\(2 \\times \\begin{bmatrix} 3 & -5 \\end{bmatrix} = \\begin{bmatrix} 6 & -10 \\end{bmatrix}\\). Then add \\(\\begin{bmatrix} 1 & 4 \\end{bmatrix}\\) to get \\(\\begin{bmatrix} 7 & -6 \\end{bmatrix}\\). Multiplying only the first element by 2 would give \\(\\begin{bmatrix} 7 & -1 \\end{bmatrix}\\), but a scalar multiplies every element.",
       "clue": "Scale first, then add matching positions."
     },
     "b": {
       "d": 3,
-      "q": "A = [5 −3] and B = [2 4]. What is 2 × (A − B)?",
-      "opts": ["[6 −14]", "[8 −10]", "[6 2]", "[6 −7]"],
-      "why": "A − B = [5 − 2 −3 − 4] = [3 −7], and 2 × [3 −7] = [6 −14]. The answer [8 −10] comes from 2A − B, which doubles A but not B. The scalar multiplies the whole bracket.",
-      "clue": "Work out the bracket first, and watch the sign of −3 − 4."
+      "q": "\\(A = \\begin{bmatrix} 5 & -3 \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} 2 & 4 \\end{bmatrix}\\). What is \\(2 \\times (A - B)\\)?",
+      "opts": [
+        "\\(\\begin{bmatrix} 6 & -14 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 8 & -10 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 6 & 2 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 6 & -7 \\end{bmatrix}\\)"
+      ],
+      "why": "\\(A - B = \\begin{bmatrix} 5 - 2 & -3 - 4 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 3 & -7 \\end{bmatrix}\\), and \\(2 \\times \\begin{bmatrix} 3 & -7 \\end{bmatrix} = \\begin{bmatrix} 6 & -14 \\end{bmatrix}\\). The answer \\(\\begin{bmatrix} 8 & -10 \\end{bmatrix}\\) comes from \\(2A - B\\), which doubles \\(A\\) but not \\(B\\). The scalar multiplies the whole bracket.",
+      "clue": "Work out the bracket first, and watch the sign of \\(-3 - 4\\)."
     }
   },
   "mat-multiplying-matrices": {
     "title": "Multiplying matrices",
     "card": [
-      "The order of a matrix is its number of rows × its number of columns. A 2 × 3 matrix has 2 rows and 3 columns.",
-      "Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second. An m × n matrix times an n × p matrix gives an m × p matrix.",
+      "The order of a matrix is its number of rows \\(\\times\\) its number of columns. A \\(2 \\times 3\\) matrix has 2 rows and 3 columns.",
+      "Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second. An \\(m \\times n\\) matrix times an \\(n \\times p\\) matrix gives an \\(m \\times p\\) matrix.",
       "Each element of the answer is a row of the first matrix times a column of the second. Multiply the pairs in order, then add them.",
       [
         "Example",
-        "Row [2 3] times column [4 5] (read down) = 2 × 4 + 3 × 5 = 8 + 15 = 23. This is one element of the answer."
+        "the row \\(\\begin{bmatrix} 2 & 3 \\end{bmatrix}\\) times the column \\(\\begin{bmatrix} 4 \\\\ 5 \\end{bmatrix}\\) is \\(2 \\times 4 + 3 \\times 5\\), which is \\(8 + 15 = 23\\). This is one element of the answer."
       ]
     ],
     "remember": "Columns of the first must match rows of the second. Each element is row times column, then add.",
     "a": {
-      "q": "A is a 2 × 3 matrix and B is a 3 × 4 matrix. What is the order of the product AB?",
-      "opts": ["2 × 4", "3 × 3", "2 × 3", "3 × 4"],
-      "why": "The inner numbers (3 and 3) match, so the product exists. The answer has the outer numbers: 2 rows from A and 4 columns from B. 3 × 3 is wrong because it uses the inner numbers, which are used up in the multiplying.",
+      "q": "\\(A\\) is a \\(2 \\times 3\\) matrix and \\(B\\) is a \\(3 \\times 4\\) matrix. What is the order of the product \\(AB\\)?",
+      "opts": ["\\(2 \\times 4\\)", "\\(3 \\times 3\\)", "\\(2 \\times 3\\)", "\\(3 \\times 4\\)"],
+      "why": "The inner numbers (3 and 3) match, so the product exists. The answer has the outer numbers: 2 rows from \\(A\\) and 4 columns from \\(B\\). \\(3 \\times 3\\) is wrong because it uses the inner numbers, which are used up in the multiplying.",
       "clue": "Look at the outer numbers once the inner ones match."
     },
     "b": {
       "d": 2,
-      "q": "A is the row [1 2 3] and B is the column [4 5 6], read down. AB has one element. What is it?",
+      "q": "\\(A = \\begin{bmatrix} 1 & 2 & 3 \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} 4 \\\\ 5 \\\\ 6 \\end{bmatrix}\\). \\(AB\\) has one element. What is it?",
       "opts": ["32", "28", "21", "18"],
-      "why": "Multiply the pairs in order and add: 1 × 4 + 2 × 5 + 3 × 6 = 4 + 10 + 18 = 32. The answer 28 comes from reading the column upwards, pairing 1 with 6 and 3 with 4. The answer 21 adds all six numbers instead of multiplying pairs.",
+      "why": "Multiply the pairs in order and add: \\(1 \\times 4 + 2 \\times 5 + 3 \\times 6\\), which is \\(4 + 10 + 18 = 32\\). The answer 28 comes from reading the column upwards, pairing 1 with 6 and 3 with 4. The answer 21 adds all six numbers instead of multiplying pairs.",
       "clue": "Pair the first of the row with the top of the column."
     }
   },
@@ -9001,31 +9054,34 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Identity",
-        "The identity matrix I is a square matrix with 1s down the main diagonal and 0s elsewhere. For a square matrix A, using I of the same order, A × I = A and I × A = A."
+        "The identity matrix \\(I\\) is a square matrix with 1s down the main diagonal and 0s elsewhere. For a square matrix \\(A\\), using \\(I\\) of the same order, \\(A \\times I = A\\) and \\(I \\times A = A\\)."
       ],
       [
         "Inverse",
-        "The inverse of A is written A⁻¹. It is the matrix where A × A⁻¹ = I. Only a square matrix can have an inverse, and not every square matrix has one."
+        "The inverse of \\(A\\) is written \\(A^{-1}\\). It is the matrix where \\(A \\times A^{-1} = I\\). Only a square matrix can have an inverse, and not every square matrix has one."
       ],
       [
-        "2 × 2 rule",
-        "For A = [a b; c d], the determinant is ad − bc. If it is 0, there is no inverse. If not, A⁻¹ = 1/(ad − bc) × [d −b; −c a]."
+        "2 by 2 rule",
+        "For \\(A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), the determinant is \\(ad - bc\\). If it is 0, there is no inverse. If not, \\(A^{-1} = \\frac{1}{ad - bc} \\times \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}\\)."
       ],
-      ["Example", "For A = [3 1; 5 2], ad − bc = 3×2 − 1×5 = 1. So A⁻¹ = 1/1 × [2 −1; −5 3] = [2 −1; −5 3]."]
+      [
+        "Example",
+        "For \\(A = \\begin{bmatrix} 3 & 1 \\\\ 5 & 2 \\end{bmatrix}\\), \\(ad - bc = 3 \\times 2 - 1 \\times 5 = 1\\). So \\(A^{-1} = \\frac{1}{1} \\times \\begin{bmatrix} 2 & -1 \\\\ -5 & 3 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 2 & -1 \\\\ -5 & 3 \\end{bmatrix}\\)."
+      ]
     ],
-    "remember": "A matrix times its inverse gives I. No inverse if the determinant is 0.",
+    "remember": "A matrix times its inverse gives \\(I\\). No inverse if the determinant is 0.",
     "a": {
-      "q": "What is the determinant of the matrix [4 3; 2 5]?",
-      "opts": ["14", "26", "−14", "6"],
-      "why": "The determinant is ad − bc = 4×5 − 3×2 = 20 − 6 = 14. The value 26 comes from adding the products instead of subtracting them.",
+      "q": "What is the determinant of the matrix \\(\\begin{bmatrix} 4 & 3 \\\\ 2 & 5 \\end{bmatrix}\\)?",
+      "opts": ["14", "26", "\\(-14\\)", "6"],
+      "why": "The determinant is \\(ad - bc = 4 \\times 5 - 3 \\times 2\\), which is \\(20 - 6 = 14\\). The value 26 comes from adding the products instead of subtracting them.",
       "clue": "Multiply the main diagonal, then take away the other diagonal's product."
     },
     "b": {
       "d": 3,
-      "q": "For which value of k does the matrix [2 k; 3 6] have no inverse?",
-      "opts": ["k = 4", "k = 9", "k = −4", "k = 0"],
-      "why": "The determinant is 2×6 − k×3 = 12 − 3k. It equals 0 when k = 4, so there is no inverse. When k = 0 the determinant is 12, which is not 0, so an inverse exists.",
-      "clue": "Set the determinant equal to 0 and solve for k."
+      "q": "For which value of \\(k\\) does the matrix \\(\\begin{bmatrix} 2 & k \\\\ 3 & 6 \\end{bmatrix}\\) have no inverse?",
+      "opts": ["\\(k = 4\\)", "\\(k = 9\\)", "\\(k = -4\\)", "\\(k = 0\\)"],
+      "why": "The determinant is \\(2 \\times 6 - k \\times 3 = 12 - 3k\\). It equals 0 when \\(k = 4\\), so there is no inverse. When \\(k = 0\\) the determinant is 12, which is not 0, so an inverse exists.",
+      "clue": "Set the determinant equal to 0 and solve for \\(k\\)."
     }
   },
   "mat-matrices-context": {
@@ -9033,21 +9089,26 @@ MADE_BANKS.mat = {
     "card": [
       "A matrix can store data in a table. Each row and each column stands for something, such as a shop and a month. Each element is one value, such as the number of items sold.",
       "To total costs or revenue, put the quantities in one matrix and the prices in another. Multiply them so each row of the first meets the column of prices.",
-      "Each element of the answer is a sum of quantity × price. The answer has one row for each row of quantities, so each row gives one total, such as one shop's revenue.",
-      "Example: a shop sells 10 hats and 4 scarves. Hats cost $8 and scarves cost $5. Revenue = [10 4] × (column with 8 above 5) = 10 × 8 + 4 × 5 = 80 + 20 = $100."
+      "Each element of the answer is a sum of quantity \\(\\times\\) price. The answer has one row for each row of quantities, so each row gives one total, such as one shop's revenue.",
+      "Example: a shop sells 10 hats and 4 scarves. Hats cost $8 and scarves cost $5. Revenue \\(= \\begin{bmatrix} 10 & 4 \\end{bmatrix} \\begin{bmatrix} 8 \\\\ 5 \\end{bmatrix}\\), which is \\(10 \\times 8 + 4 \\times 5 = 80 + 20\\), or $100."
     ],
     "remember": "Quantities times prices, row by column, give one total for each row.",
     "a": {
       "q": "Cara sells 6 mugs and 3 plates. Mugs cost $7 each and plates cost $10 each. Her quantities are in a row matrix and the prices in a column matrix. What is the product?",
-      "opts": ["[72]", "[81]", "[26]", "[42]"],
-      "why": "Multiply each quantity by its own price and add: 6 × 7 + 3 × 10 = 42 + 30 = 72, so the product is [72] dollars. The answer 81 comes from pairing mugs with the plate price, 6 × 10 + 3 × 7, and 42 leaves out the plates.",
+      "opts": [
+        "\\(\\begin{bmatrix} 72 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 81 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 26 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 42 \\end{bmatrix}\\)"
+      ],
+      "why": "Multiply each quantity by its own price and add: \\(6 \\times 7 + 3 \\times 10 = 42 + 30\\), which is 72, so the product is \\(\\begin{bmatrix} 72 \\end{bmatrix}\\), in dollars. The answer 81 comes from pairing mugs with the plate price, \\(6 \\times 10 + 3 \\times 7\\), and 42 leaves out the plates.",
       "clue": "Pair each quantity with its own price, then add."
     },
     "b": {
       "d": 3,
-      "q": "Two shops sell hats and scarves. Their sales matrix has rows [5 2] for Shop A and [3 6] for Shop B. Prices are in the column with $10 above $4. What is each shop's revenue?",
+      "q": "Two shops sell hats and scarves. Their sales matrix is \\(\\begin{bmatrix} 5 & 2 \\\\ 3 & 6 \\end{bmatrix}\\), with Shop A's sales in the top row and Shop B's in the bottom row. The price matrix is \\(\\begin{bmatrix} 10 \\\\ 4 \\end{bmatrix}\\), with $10 for a hat and $4 for a scarf. What is each shop's revenue?",
       "opts": ["Shop A $58, Shop B $54", "Shop A $40, Shop B $72", "Shop A $50, Shop B $30", "Shop A $98, Shop B $126"],
-      "why": "Each row meets the price column: Shop A is 5 × 10 + 2 × 4 = 50 + 8 = $58, and Shop B is 3 × 10 + 6 × 4 = 30 + 24 = $54. The answer $40 and $72 pairs hats with the scarf price, and $50 and $30 leaves out the scarves.",
+      "why": "Each row meets the price column: Shop A is \\(5 \\times 10 + 2 \\times 4 = 50 + 8\\), which is $58, and Shop B is \\(3 \\times 10 + 6 \\times 4 = 30 + 24\\), which is $54. The answer $40 and $72 pairs hats with the scarf price, and $50 and $30 leaves out the scarves.",
       "clue": "Each shop's row meets the price column. Add both products."
     }
   },
@@ -9055,22 +9116,22 @@ MADE_BANKS.mat = {
     "title": "Transition matrices",
     "card": [
       "A transition matrix shows the chance of moving from each state to each state in one step. Each column is the starting state and each row is the next state. Each column adds to 1.",
-      "Example: each week, 80% of people at gym A stay and 20% move to gym B. Of people at gym B, 10% move to A and 90% stay. T = [0.8 0.1 ; 0.2 0.9], written row by row, with a semicolon between rows.",
-      "Write the starting numbers as a column matrix S0. The next state is S1 = T × S0, and then S2 = T × S1. Each step is one more multiplication by T.",
-      "Example: if S0 = [100 ; 50], then S1 = [0.8×100 + 0.1×50 ; 0.2×100 + 0.9×50] = [85 ; 65]. After many steps, the numbers often settle to a steady state that stops changing."
+      "Example: each week, 80% of people at gym A stay and 20% move to gym B. Of people at gym B, 10% move to A and 90% stay. The transition matrix is \\(T = \\begin{bmatrix} 0.8 & 0.1 \\\\ 0.2 & 0.9 \\end{bmatrix}\\).",
+      "Write the starting numbers as a column matrix, the initial state matrix \\(S_{0}\\). The next state is \\(S_{1} = T \\times S_{0}\\), and then \\(S_{2} = T \\times S_{1}\\). Each step is one more multiplication by \\(T\\).",
+      "Example: if \\(S_{0} = \\begin{bmatrix} 100 \\\\ 50 \\end{bmatrix}\\), then \\(S_{1} = \\begin{bmatrix} 0.8 \\times 100 + 0.1 \\times 50 \\\\ 0.2 \\times 100 + 0.9 \\times 50 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 85 \\\\ 65 \\end{bmatrix}\\). After many steps, the numbers often settle to a steady state that stops changing."
     ],
-    "remember": "Next state = T × current state. Each column of T adds to 1.",
+    "remember": "Next state \\(= T \\times\\) current state. Each column of \\(T\\) adds to 1.",
     "a": {
-      "q": "Using the gym matrix T = [0.8 0.1 ; 0.2 0.9] and S0 = [50 ; 150], how many people are at gym A after one week?",
+      "q": "Using the gym matrix \\(T = \\begin{bmatrix} 0.8 & 0.1 \\\\ 0.2 & 0.9 \\end{bmatrix}\\) and \\(S_{0} = \\begin{bmatrix} 50 \\\\ 150 \\end{bmatrix}\\), how many people are at gym A after one week?",
       "opts": ["55", "70", "40", "145"],
-      "why": "Gym A keeps 0.8 × 50 = 40 and gains 0.1 × 150 = 15 from gym B, so 55. The answer 70 comes from using 0.2, the share that leaves A, instead of the 0.1 that arrives from B.",
-      "clue": "Multiply the top row of T by the column S0."
+      "why": "Gym A keeps \\(0.8 \\times 50 = 40\\) and gains \\(0.1 \\times 150 = 15\\) from gym B, so 55. The answer 70 comes from using 0.2, the share that leaves A, instead of the 0.1 that arrives from B.",
+      "clue": "Multiply the top row of \\(T\\) by the column \\(S_{0}\\)."
     },
     "b": {
       "d": 3,
       "q": "Each month, 70% of Mia's café customers stay and 30% move to a rival. Of the rival's customers, 20% move to Mia and 80% stay. Mia has 400 customers and the rival 100. How many does Mia have next month?",
       "opts": ["300", "280", "360", "200"],
-      "why": "Mia keeps 0.7 × 400 = 280 and gains 0.2 × 100 = 20, so 300. Choosing 280 forgets the customers who arrive from the rival, and 200 is the rival's new total, not Mia's.",
+      "why": "Mia keeps \\(0.7 \\times 400 = 280\\) and gains \\(0.2 \\times 100 = 20\\), so 300. Choosing 280 forgets the customers who arrive from the rival, and 200 is the rival's new total, not Mia's.",
       "clue": "Add those who stay to those who arrive."
     }
   },
@@ -9215,45 +9276,50 @@ MADE_BANKS.mat = {
     "title": "Pythagoras' theorem",
     "card": [
       "A right-angled triangle has one angle of 90°. The longest side, opposite the right angle, is the hypotenuse.",
-      "Pythagoras' theorem says a² + b² = c², where c is the hypotenuse and a and b are the other two sides.",
-      "To find the hypotenuse, add the squares and take the square root. To find a shorter side, subtract the square of the known short side from c², then take the root. Example: sides 6 and 8 give c² = 36 + 64 = 100, so c = 10.",
-      "In a box with length l, width w and height h, the longest straight line from corner to opposite corner is d, where d² = l² + w² + h²."
+      "Pythagoras' theorem says \\(a^{2} + b^{2} = c^{2}\\), where \\(c\\) is the hypotenuse and \\(a\\) and \\(b\\) are the other two sides.",
+      "To find the hypotenuse, add the squares and take the square root. To find a shorter side, subtract the square of the known short side from \\(c^{2}\\), then take the root. Example: sides 6 and 8 give \\(c^{2} = 36 + 64 = 100\\), so \\(c = 10\\).",
+      "In a box with length \\(l\\), width \\(w\\) and height \\(h\\), the longest straight line from corner to opposite corner is \\(d\\), where \\(d^{2} = l^{2} + w^{2} + h^{2}\\)."
     ],
     "remember": "Square the sides, add or subtract, then take the square root to get the length.",
     "a": {
       "q": "A right-angled triangle has shorter sides of 5 cm and 12 cm. How long is the hypotenuse?",
       "opts": ["13 cm", "17 cm", "169 cm", "60 cm"],
-      "why": "c² = 5² + 12² = 25 + 144 = 169, so c = √169 = 13 cm. The answer 169 stops one step early, because it is c² and not c.",
+      "why": "\\(c^{2} = 5^{2} + 12^{2}\\), which is \\(25 + 144 = 169\\), so \\(c = \\sqrt{169} = 13\\) cm. The answer 169 stops one step early, because it is \\(c^{2}\\) and not \\(c\\).",
       "clue": "Square both sides, add, then take the root."
     },
     "b": {
       "d": 3,
       "q": "Tariq has a storage box 2 m long, 3 m wide and 6 m high. What is the longest straight rod that fits inside it from corner to opposite corner?",
       "opts": ["7 m", "11 m", "49 m", "3.6 m"],
-      "why": "d² = 2² + 3² + 6² = 4 + 9 + 36 = 49, so d = 7 m. Adding the sides to get 11 m skips the squaring and rooting steps.",
+      "why": "\\(d^{2} = 2^{2} + 3^{2} + 6^{2}\\), which is \\(4 + 9 + 36 = 49\\), so \\(d = 7\\) m. Adding the sides to get 11 m skips the squaring and rooting steps.",
       "clue": "Use all three measurements, each squared."
     }
   },
   "mat-sine-cosine-tangent-ratios": {
     "title": "Sine, cosine and tangent ratios",
     "card": [
-      "In a right-angled triangle, name the sides from the angle θ you are using. The hypotenuse is opposite the right angle. The opposite side faces θ. The adjacent side touches θ.",
-      "sin θ = opposite ÷ hypotenuse. cos θ = adjacent ÷ hypotenuse. tan θ = opposite ÷ adjacent.",
-      "To find a side, put the ratio in an equation and solve it. Example: a 5 m ladder at 60° to the ground reaches 5 × sin 60° = 4.33 m high. To find an angle, use sin⁻¹, cos⁻¹ or tan⁻¹ with the calculator set to degrees.",
+      "In a right-angled triangle, name the sides from the angle \\(\\theta\\) you are using. The hypotenuse is opposite the right angle. The opposite side faces \\(\\theta\\). The adjacent side touches \\(\\theta\\).",
+      "\\(\\sin \\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}\\). \\(\\cos \\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}\\). \\(\\tan \\theta = \\frac{\\text{opposite}}{\\text{adjacent}}\\).",
+      "To find a side, put the ratio in an equation and solve it. Example: a 5 m ladder at \\(60^{\\circ}\\) to the ground reaches \\(5 \\sin 60^{\\circ} = 4.33\\) m high. To find an angle, use \\(\\sin^{-1}\\), \\(\\cos^{-1}\\) or \\(\\tan^{-1}\\) with the calculator set to degrees.",
       "An angle of elevation is measured up from the horizontal to a line of sight. An angle of depression is measured down from the horizontal. The angle of depression from A to B equals the angle of elevation from B to A, because the two horizontals are parallel."
     ],
     "remember": "Match the two sides you have or want to the ratio: opposite, adjacent, hypotenuse.",
     "a": {
-      "q": "A right-angled triangle has an angle θ with opposite side 6 cm and adjacent side 8 cm. Which ratio gives tan θ?",
-      "opts": ["6/8", "8/6", "6/10", "8/10"],
-      "why": "tan θ = opposite ÷ adjacent = 6/8. The option 8/6 turns the ratio upside down. The hypotenuse is not used in tan, so 6/10 and 8/10 are not tan θ.",
+      "q": "A right-angled triangle has an angle \\(\\theta\\) with opposite side 6 cm and adjacent side 8 cm. Which ratio gives \\(\\tan \\theta\\)?",
+      "opts": ["\\(\\frac{6}{8}\\)", "\\(\\frac{8}{6}\\)", "\\(\\frac{6}{10}\\)", "\\(\\frac{8}{10}\\)"],
+      "why": "\\(\\tan \\theta = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{6}{8}\\). The option \\(\\frac{8}{6}\\) turns the ratio upside down. The hypotenuse is not used in tan, so \\(\\frac{6}{10}\\) and \\(\\frac{8}{10}\\) are not \\(\\tan \\theta\\).",
       "clue": "Tan uses the two sides that are not the hypotenuse."
     },
     "b": {
       "d": 3,
-      "q": "From the top of a cliff, the angle of depression to a boat is 30°. The boat is 100 m from the base of the cliff, on level water. Which expression gives the cliff's height in metres?",
-      "opts": ["100 × tan 30°", "100 × sin 30°", "100 ÷ tan 30°", "100 × cos 30°"],
-      "why": "The angle of depression from the cliff top equals the angle of elevation from the boat, so the angle at the boat is 30°. The cliff is opposite it and the 100 m is adjacent, so tan 30° = height ÷ 100 and height = 100 × tan 30°. Dividing by tan 30° is a mistake in rearranging.",
+      "q": "From the top of a cliff, the angle of depression to a boat is \\(30^{\\circ}\\). The boat is 100 m from the base of the cliff, on level water. Which expression gives the cliff's height in metres?",
+      "opts": [
+        "\\(100 \\times \\tan 30^{\\circ}\\)",
+        "\\(100 \\times \\sin 30^{\\circ}\\)",
+        "\\(100 \\div \\tan 30^{\\circ}\\)",
+        "\\(100 \\times \\cos 30^{\\circ}\\)"
+      ],
+      "why": "The angle of depression from the cliff top equals the angle of elevation from the boat, so the angle at the boat is \\(30^{\\circ}\\). The cliff is opposite it and the 100 m is adjacent, so \\(\\tan 30^{\\circ} = \\frac{\\text{height}}{100}\\) and height \\(= 100 \\times \\tan 30^{\\circ}\\). Dividing by \\(\\tan 30^{\\circ}\\) is a mistake in rearranging.",
       "clue": "Put the angle at the boat, then name the sides opposite and adjacent to it."
     }
   },
@@ -9262,31 +9328,36 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Sine rule",
-        "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle. Example: A = 30°, B = 45°, a = 8 gives b = 8 × sin 45° ÷ sin 30° ≈ 11.3."
+        "\\(\\frac{a}{\\sin A} = \\frac{b}{\\sin B}\\). Use it when you know a side and the angle opposite it, plus one more side or angle. Example: \\(A = 30^{\\circ}\\), \\(B = 45^{\\circ}\\) and \\(a = 8\\) give \\(b = \\frac{8 \\sin 45^{\\circ}}{\\sin 30^{\\circ}} \\approx 11.3\\)."
       ],
       [
         "Cosine rule",
-        "c² = a² + b² − 2ab cos C. Use it when you know two sides and the angle between them, or all three sides."
+        "\\(c^{2} = a^{2} + b^{2} - 2ab \\cos C\\). Use it when you know two sides and the angle between them, or all three sides."
       ],
       "These rules work in triangles with no right angle. Pythagoras and the basic ratios need a right angle.",
       [
         "Ambiguous case",
-        "If you know two sides and an angle that is not between them, the sine rule gives sin B. Both B and 180° − B have that sine, so there may be two triangles. Check that each one has angles adding to less than 180°."
+        "If you know two sides and an angle that is not between them, the sine rule gives \\(\\sin B\\). Both \\(B\\) and \\(180^{\\circ} - B\\) have that sine, so there may be two triangles. Check that each one has angles adding to less than \\(180^{\\circ}\\)."
       ]
     ],
     "remember": "Sine rule for opposite pairs. Cosine rule for two sides and the angle between, or three sides.",
     "a": {
-      "q": "A triangle has sides of 7 cm and 9 cm with a 50° angle between them. Which rule finds the third side?",
+      "q": "A triangle has sides of 7 cm and 9 cm with a \\(50^{\\circ}\\) angle between them. Which rule finds the third side?",
       "opts": ["The cosine rule", "The sine rule", "Pythagoras' theorem", "The tangent ratio"],
       "why": "Two sides and the angle between them are known, so the cosine rule applies. The sine rule needs a side and its opposite angle, and neither is known here.",
       "clue": "Is there a side and angle that sit opposite each other?"
     },
     "b": {
       "d": 3,
-      "q": "In triangle ABC, A = 30°, a = 5 m and b = 8 m. Using the sine rule, sin B = 0.8. Which are the possible sizes of angle B?",
-      "opts": ["53.1° and 126.9°", "53.1° only", "53.1° and 36.9°", "126.9° only"],
-      "why": "sin B = 0.8 gives B = 53.1°, and the second angle is 180° − 53.1° = 126.9°. Both fit with 30°, as 30° + 126.9° is less than 180°. The value 36.9° is 90° − 53.1°, which is not the other angle with that sine.",
-      "clue": "Two angles between 0° and 180° share the same sine."
+      "q": "In triangle ABC, \\(A = 30^{\\circ}\\), \\(a = 5\\) m and \\(b = 8\\) m. Using the sine rule, \\(\\sin B = 0.8\\). Which are the possible sizes of angle \\(B\\)?",
+      "opts": [
+        "\\(53.1^{\\circ}\\) and \\(126.9^{\\circ}\\)",
+        "\\(53.1^{\\circ}\\) only",
+        "\\(53.1^{\\circ}\\) and \\(36.9^{\\circ}\\)",
+        "\\(126.9^{\\circ}\\) only"
+      ],
+      "why": "\\(\\sin B = 0.8\\) gives \\(B = 53.1^{\\circ}\\), and the second angle is \\(180^{\\circ} - 53.1^{\\circ} = 126.9^{\\circ}\\). Both fit with \\(30^{\\circ}\\), as \\(30^{\\circ} + 126.9^{\\circ}\\) is less than \\(180^{\\circ}\\). The value \\(36.9^{\\circ}\\) is \\(90^{\\circ} - 53.1^{\\circ}\\), which is not the other angle with that sine.",
+      "clue": "Two angles between \\(0^{\\circ}\\) and \\(180^{\\circ}\\) share the same sine."
     }
   },
   "mat-bearings-angles-elevation": {
@@ -9301,14 +9372,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "A hiker walks from camp to a lookout on a bearing of 125°T. What is the bearing from the lookout back to camp?",
       "opts": ["305°T", "235°T", "055°T", "215°T"],
-      "why": "The bearing is under 180°, so add 180°: 125° + 180° = 305°T. The answer 055°T comes from subtracting from 180° instead.",
+      "why": "The bearing is under 180°, so add 180°: \\(125^{\\circ} + 180^{\\circ} = 305^{\\circ}\\text{T}\\). The answer 055°T comes from subtracting from 180° instead.",
       "clue": "The return direction is exactly opposite."
     },
     "b": {
       "d": 3,
       "q": "A ship sails from P to Q on a bearing of 070°T, then from Q to R on a bearing of 150°T. What is the interior angle PQR?",
       "opts": ["100°", "80°", "70°", "120°"],
-      "why": "The bearing from Q back to P is 070° + 180° = 250°T. The angle between 250°T and 150°T is 100°. The angle 80° is how far the ship turns, not the angle inside the triangle.",
+      "why": "The bearing from Q back to P is \\(070^{\\circ} + 180^{\\circ} = 250^{\\circ}\\text{T}\\). The angle between 250°T and 150°T is 100°. The angle 80° is how far the ship turns, not the angle inside the triangle.",
       "clue": "Find the back bearing from Q to P first."
     }
   },
@@ -9329,7 +9400,7 @@ MADE_BANKS.mat = {
       ],
       [
         "Log scale",
-        "On a log base 10 scale, 1, 10, 100 and 1000 are equally spaced. Each step is ×10. It suits data spread over several powers of ten."
+        "On a log base 10 scale, 1, 10, 100 and 1000 are equally spaced. Each step is \\(\\times 10\\). It suits data spread over several powers of ten."
       ]
     ],
     "remember": "Categories: two-way tables and segmented bar charts. Numbers: dot plots, stem plots and histograms.",
@@ -9385,23 +9456,23 @@ MADE_BANKS.mat = {
   "mat-boxplots-outliers": {
     "title": "Boxplots and outliers",
     "card": [
-      "The IQR is Q3 − Q1. An outlier is a value below Q1 − 1.5 × IQR or above Q3 + 1.5 × IQR. These two numbers are the fences.",
-      "Example: Q1 = 20 and Q3 = 32. The IQR is 12 and 1.5 × 12 = 18. The fences are 20 − 18 = 2 and 32 + 18 = 50.",
+      "The IQR is \\(Q_{3} - Q_{1}\\). An outlier is a value below \\(Q_{1} - 1.5 \\times \\text{IQR}\\) or above \\(Q_{3} + 1.5 \\times \\text{IQR}\\). These two numbers are the fences.",
+      "Example: \\(Q_{1} = 20\\) and \\(Q_{3} = 32\\). The IQR is 12 and \\(1.5 \\times 12 = 18\\). The fences are \\(20 - 18 = 2\\) and \\(32 + 18 = 50\\).",
       "A value exactly on a fence is not an outlier. It must be beyond the fence, so 50 is not an outlier but 51 is.",
       "On a boxplot, outliers are drawn as separate points. The whiskers stop at the smallest and largest values that are not outliers."
     ],
-    "remember": "Find the IQR, build the fences with 1.5 × IQR, and plot anything beyond them as a point.",
+    "remember": "Find the IQR, build the fences with \\(1.5 \\times \\text{IQR}\\), and plot anything beyond them as a point.",
     "a": {
-      "q": "A data set has Q1 = 40 and Q3 = 52. What is the upper fence for outliers?",
+      "q": "A data set has \\(Q_{1} = 40\\) and \\(Q_{3} = 52\\). What is the upper fence for outliers?",
       "opts": ["70", "64", "88", "18"],
-      "why": "IQR = 52 − 40 = 12, and 1.5 × 12 = 18. The upper fence is 52 + 18 = 70. Adding only the IQR gives 64, which skips the 1.5.",
-      "clue": "Add 1.5 × IQR to Q3."
+      "why": "\\(\\text{IQR} = 52 - 40 = 12\\), and \\(1.5 \\times 12 = 18\\). The upper fence is \\(52 + 18 = 70\\). Adding only the IQR gives 64, which skips the 1.5.",
+      "clue": "Add \\(1.5 \\times \\text{IQR}\\) to \\(Q_{3}\\)."
     },
     "b": {
       "d": 3,
-      "q": "A boxplot of daily bike hires has Q1 = 15 and Q3 = 27. Which value would be drawn as a separate point?",
+      "q": "A boxplot of daily bike hires has \\(Q_{1} = 15\\) and \\(Q_{3} = 27\\). Which value would be drawn as a separate point?",
       "opts": ["46", "45", "44", "42"],
-      "why": "IQR = 12, so the upper fence is 27 + 18 = 45. Only 46 is above it. The value 45 is on the fence, so it is not an outlier.",
+      "why": "\\(\\text{IQR} = 12\\), so the upper fence is \\(27 + 18 = 45\\). Only 46 is above it. The value 45 is on the fence, so it is not an outlier.",
       "clue": "A value on the fence is not beyond it."
     }
   },
@@ -9561,43 +9632,43 @@ MADE_BANKS.mat = {
   "mat-least-squares-regression-line-2": {
     "title": "Least squares regression line",
     "card": [
-      "The least squares regression line is written y = a + bx. It is the line that makes the sum of the squared residuals as small as possible, which is where its name comes from.",
-      "The slope is b = r × sy/sx. Here r is the correlation coefficient, sy is the standard deviation of the response y, and sx is the standard deviation of the explanatory variable x.",
-      "The intercept is a = ȳ − b × x̄, where x̄ and ȳ are the means. This means the line always passes through the point (x̄, ȳ).",
-      "Worked example: r = 0.8, sx = 5, sy = 10. Then b = 0.8 × 10/5 = 1.6. If x̄ = 20 and ȳ = 50, then a = 50 − 1.6 × 20 = 50 − 32 = 18."
+      "The least squares regression line is written \\(y = a + bx\\). It is the line that makes the sum of the squared residuals as small as possible, which is where its name comes from.",
+      "The slope is \\(b = r \\times \\frac{s_{y}}{s_{x}}\\). Here \\(r\\) is the correlation coefficient, \\(s_{y}\\) is the standard deviation of the response \\(y\\), and \\(s_{x}\\) is the standard deviation of the explanatory variable \\(x\\).",
+      "The intercept is \\(a = \\overline{y} - b \\times \\overline{x}\\), where \\(\\overline{x}\\) and \\(\\overline{y}\\) are the means. This means the line always passes through the point \\((\\overline{x}, \\overline{y})\\).",
+      "Worked example: \\(r = 0.8\\), \\(s_{x} = 5\\), \\(s_{y} = 10\\). Then \\(b = 0.8 \\times \\frac{10}{5} = 1.6\\). If \\(\\overline{x} = 20\\) and \\(\\overline{y} = 50\\), then \\(a = 50 - 1.6 \\times 20\\), which is \\(50 - 32 = 18\\)."
     ],
-    "remember": "Slope b = r × sy/sx, and the line passes through (x̄, ȳ).",
+    "remember": "Slope \\(b = r \\times \\frac{s_{y}}{s_{x}}\\), and the line passes through \\((\\overline{x}, \\overline{y})\\).",
     "a": {
-      "q": "A data set has r = 0.6, sx = 4 and sy = 12. What is the slope of the least squares line?",
+      "q": "A data set has \\(r = 0.6\\), \\(s_{x} = 4\\) and \\(s_{y} = 12\\). What is the slope of the least squares line?",
       "opts": ["1.8", "0.2", "7.2", "3"],
-      "why": "b = r × sy/sx = 0.6 × 12/4 = 0.6 × 3 = 1.8. Using sx/sy instead gives 0.6 × 4/12 = 0.2, which turns the ratio upside down. Leaving out r gives 3.",
-      "clue": "The standard deviation of y goes on top."
+      "why": "\\(b = r \\times \\frac{s_{y}}{s_{x}}\\), so \\(b = 0.6 \\times \\frac{12}{4}\\), which is \\(0.6 \\times 3 = 1.8\\). Using \\(\\frac{s_{x}}{s_{y}}\\) instead gives \\(0.6 \\times \\frac{4}{12} = 0.2\\), which turns the ratio upside down. Leaving out \\(r\\) gives 3.",
+      "clue": "The standard deviation of \\(y\\) goes on top."
     },
     "b": {
       "d": 3,
-      "q": "For a group of runners, x̄ = 30, ȳ = 60, and the least squares line has slope 1.5. What is the intercept a?",
-      "opts": ["15", "−15", "45", "105"],
-      "why": "a = ȳ − b × x̄ = 60 − 1.5 × 30 = 60 − 45 = 15. The value 45 is just b × x̄ with the subtraction from ȳ skipped, and adding instead of subtracting gives 105. Subtracting the wrong way round, 45 − 60, gives −15.",
+      "q": "For a group of runners, \\(\\overline{x} = 30\\), \\(\\overline{y} = 60\\), and the least squares line has slope 1.5. What is the intercept \\(a\\)?",
+      "opts": ["15", "\\(-15\\)", "45", "105"],
+      "why": "\\(a = \\overline{y} - b \\times \\overline{x}\\), so \\(a = 60 - 1.5 \\times 30\\), which is \\(60 - 45 = 15\\). The value 45 is just \\(b \\times \\overline{x}\\) with the subtraction from \\(\\overline{y}\\) skipped, and adding instead of subtracting gives 105. Subtracting the wrong way round, \\(45 - 60\\), gives \\(-15\\).",
       "clue": "The line passes through the point of the two means."
     }
   },
   "mat-interpreting-slope-intercept": {
     "title": "Interpreting slope and intercept",
     "card": [
-      "In a fitted line y = a + bx, y is the response variable and x is the explanatory variable. The slope is b and the intercept is a.",
+      "In a fitted line \\(y = a + bx\\), \\(y\\) is the response variable and \\(x\\) is the explanatory variable. The slope is \\(b\\) and the intercept is \\(a\\).",
       [
         "Slope",
-        "the predicted change in y for each increase of 1 unit in x. If b is negative, y is predicted to fall as x rises."
+        "the predicted change in \\(y\\) for each increase of 1 unit in \\(x\\). If \\(b\\) is negative, \\(y\\) is predicted to fall as \\(x\\) rises."
       ],
       [
         "Intercept",
-        "the predicted value of y when x = 0. It only makes sense if x = 0 is a realistic value for the situation."
+        "the predicted value of \\(y\\) when \\(x = 0\\). It only makes sense if \\(x = 0\\) is a realistic value for the situation."
       ],
-      "Example: cost = 40 + 6 × hours, with cost in dollars and time in hours. Each extra hour adds $6 to the predicted cost. At 0 hours the predicted cost is $40."
+      "Example: cost \\(= 40 + 6 \\times\\) hours, with cost in dollars and time in hours. Each extra hour adds $6 to the predicted cost. At 0 hours the predicted cost is $40."
     ],
-    "remember": "Slope: change in y per 1 unit of x. Intercept: predicted y when x is 0.",
+    "remember": "Slope: change in \\(y\\) per 1 unit of \\(x\\). Intercept: predicted \\(y\\) when \\(x\\) is 0.",
     "a": {
-      "q": "A line predicts a plant's height (cm) from days of growth: height = 12 + 3 × days. What does the slope of 3 mean?",
+      "q": "A line predicts a plant's height (cm) from days of growth: height \\(= 12 + 3 \\times\\) days. What does the slope of 3 mean?",
       "opts": [
         "Height is predicted to rise by 3 cm each day",
         "Height is predicted to be 3 cm after 12 days",
@@ -9605,19 +9676,19 @@ MADE_BANKS.mat = {
         "Height is predicted to rise by 12 cm every 3 days"
       ],
       "why": "The slope is the change in height for each extra day, so 3 cm per day. The 12 is the intercept, which is the predicted height at 0 days, so the option about the start is the intercept's meaning wrongly given to the slope.",
-      "clue": "The slope is the change in y for each 1 unit of x."
+      "clue": "The slope is the change in \\(y\\) for each 1 unit of \\(x\\)."
     },
     "b": {
       "d": 3,
-      "q": "Leo's data give: phone battery left (%) = 95 − 8 × hours of use. Which statement is correct?",
+      "q": "Leo's data give: phone battery left (%) \\(= 95 - 8 \\times\\) hours of use. Which statement is correct?",
       "opts": [
         "Battery is predicted to fall 8 percentage points per hour",
         "Battery is predicted to be 8% after 95 hours of use",
         "Battery is predicted to rise 8 percentage points per hour",
         "Battery is predicted to fall 95 percentage points per hour"
       ],
-      "why": "The slope is −8, so each extra hour of use is predicted to lower the battery by 8 percentage points. The option saying it rises ignores the negative sign. The 95 is the intercept, the predicted battery at 0 hours.",
-      "clue": "Check the sign of the slope, then ask what 1 unit of x is."
+      "why": "The slope is \\(-8\\), so each extra hour of use is predicted to lower the battery by 8 percentage points. The option saying it rises ignores the negative sign. The 95 is the intercept, the predicted battery at 0 hours.",
+      "clue": "Check the sign of the slope, then ask what 1 unit of \\(x\\) is."
     }
   },
   "mat-coefficient-determination": {
@@ -9651,16 +9722,16 @@ MADE_BANKS.mat = {
   "mat-residuals-residual-plots": {
     "title": "Residuals and residual plots",
     "card": [
-      "A residual is the actual value minus the predicted value: residual = y − ŷ. The predicted value ŷ comes from the regression line.",
+      "A residual is the actual value minus the predicted value: residual \\(= y - \\hat{y}\\). The predicted value \\(\\hat{y}\\) comes from the regression line.",
       "A positive residual means the point is above the line, so the line predicted too low. A negative residual means the point is below the line.",
-      "A residual plot graphs the residuals against x. A plot with no clear pattern, with points scattered randomly about zero, supports a linear model.",
-      "A curve or other clear pattern in the residual plot shows a linear model is not suitable. Worked example: actual y = 40 and predicted ŷ = 46 gives a residual of 40 − 46 = −6."
+      "A residual plot graphs the residuals against \\(x\\). A plot with no clear pattern, with points scattered randomly about zero, supports a linear model.",
+      "A curve or other clear pattern in the residual plot shows a linear model is not suitable. Worked example: actual \\(y = 40\\) and predicted \\(\\hat{y} = 46\\) gives a residual of \\(40 - 46 = -6\\)."
     ],
-    "remember": "Residual = actual − predicted. A random scatter supports a line.",
+    "remember": "Residual \\(=\\) actual \\(-\\) predicted. A random scatter supports a line.",
     "a": {
       "q": "A line predicts a plant height of 25 cm. The plant is actually 22 cm tall. What is the residual?",
-      "opts": ["−3 cm", "3 cm", "−47 cm", "47 cm"],
-      "why": "Residual = actual − predicted = 22 − 25 = −3 cm. The answer 3 cm reverses the subtraction, which is the tempting sign error.",
+      "opts": ["\\(-3\\) cm", "3 cm", "\\(-47\\) cm", "47 cm"],
+      "why": "Residual \\(=\\) actual \\(-\\) predicted, which is \\(22 - 25 = -3\\) cm. The answer 3 cm reverses the subtraction, which is the tempting sign error.",
       "clue": "Actual comes first in the subtraction."
     },
     "b": {
@@ -9680,9 +9751,9 @@ MADE_BANKS.mat = {
     "title": "Data transformations",
     "card": [
       "A straight line fits poorly when a scatterplot is curved. A transformation changes one variable so the plot becomes closer to a straight line.",
-      "You can transform either variable. Common choices are squaring (x² or y²), taking the logarithm (log x or log y) and taking the reciprocal (1/x or 1/y).",
+      "You can transform either variable. Common choices are squaring (\\(x^{2}\\) or \\(y^{2}\\)), taking the logarithm (\\(\\log_{10} x\\) or \\(\\log_{10} y\\)) and taking the reciprocal (\\(\\frac{1}{x}\\) or \\(\\frac{1}{y}\\)).",
       "Choose the transformation by the shape of the curve. After transforming, plot the new variable against the other one and check that the plot looks straighter.",
-      "Then fit the least squares line to the transformed data. Example: if y rises more and more steeply as x increases, try y against x², which can straighten the plot."
+      "Then fit the least squares line to the transformed data. Example: if \\(y\\) rises more and more steeply as \\(x\\) increases, try \\(y\\) against \\(x^{2}\\), which can straighten the plot."
     ],
     "remember": "Transform a variable to straighten a curve, then fit a line to the straighter plot.",
     "a": {
@@ -9698,60 +9769,60 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 2,
-      "q": "Ava's scatterplot of y against x curves upward, getting steeper. She plots y against x² and the points now look roughly straight. What should she do next?",
+      "q": "Ava's scatterplot of \\(y\\) against \\(x\\) curves upward, getting steeper. She plots \\(y\\) against \\(x^{2}\\) and the points now look roughly straight. What should she do next?",
       "opts": [
-        "Fit a least squares line to y against x²",
-        "Fit a least squares line to the original y against x",
+        "Fit a least squares line to \\(y\\) against \\(x^{2}\\)",
+        "Fit a least squares line to the original \\(y\\) against \\(x\\)",
         "Delete the points that look furthest from the line",
-        "Swap the variables and plot x² against y"
+        "Swap the variables and plot \\(x^{2}\\) against \\(y\\)"
       ],
-      "why": "The straighter plot is y against x², so the line should be fitted to those transformed data. Fitting to the original data would use the curved plot, which a line fits poorly.",
+      "why": "The straighter plot is \\(y\\) against \\(x^{2}\\), so the line should be fitted to those transformed data. Fitting to the original data would use the curved plot, which a line fits poorly.",
       "clue": "Fit the line to the plot that looks straight."
     }
   },
   "mat-recurrence-relations-finance": {
     "title": "Recurrence relations for finance",
     "card": [
-      "A recurrence relation gives the next value from the one before it. In finance, V(n) is the balance after n periods, and V(0) is the starting balance.",
-      "A first-order linear recurrence has the form V(n+1) = R × V(n) + d. R is the number that multiplies the balance each period. d is the amount added each period, or taken off if d is negative.",
-      "On its own, R above 1 makes the balance grow and R between 0 and 1 makes it shrink. For example, R = 1.02 is a 2% rise each period. The d term can change whether the balance grows or shrinks overall.",
-      "Worked example: V(0) = 500, V(n+1) = 1.1 × V(n) + 50. Multiply first, then add d. V(1) = 1.1 × 500 + 50 = 600. Then V(2) = 1.1 × 600 + 50 = 710."
+      "A recurrence relation gives the next value from the one before it. In finance, \\(V_{n}\\) is the balance after \\(n\\) periods, and \\(V_{0}\\) is the starting balance.",
+      "A first-order linear recurrence has the form \\(V_{n+1} = RV_{n} + d\\). \\(R\\) is the number that multiplies the balance each period. \\(d\\) is the amount added each period, or taken off if \\(d\\) is negative.",
+      "On its own, \\(R\\) above 1 makes the balance grow and \\(R\\) between 0 and 1 makes it shrink. For example, \\(R = 1.02\\) is a 2% rise each period. The \\(d\\) term can change whether the balance grows or shrinks overall.",
+      "Worked example: \\(V_{0} = 500\\), \\(V_{n+1} = 1.1V_{n} + 50\\). Multiply first, then add \\(d\\). \\(V_{1} = 1.1 \\times 500 + 50 = 600\\). Then \\(V_{2} = 1.1 \\times 600 + 50 = 710\\)."
     ],
-    "remember": "Next balance = R × this balance + d. Work one period at a time.",
+    "remember": "Next balance \\(= R \\times\\) this balance \\(+ d\\). Work one period at a time.",
     "a": {
-      "q": "A balance starts at 200 and V(n+1) = 1.5 × V(n) − 40. What is V(2)?",
+      "q": "A balance starts at 200 and \\(V_{n+1} = 1.5V_{n} - 40\\). What is \\(V_{2}\\)?",
       "opts": ["350", "260", "300", "550"],
-      "why": "V(1) = 1.5 × 200 − 40 = 260. Then V(2) = 1.5 × 260 − 40 = 390 − 40 = 350. The option 260 is only V(1), one period too early.",
-      "clue": "Find V(1) first, then use it to find V(2)."
+      "why": "\\(V_{1} = 1.5 \\times 200 - 40 = 260\\). Then \\(V_{2} = 1.5 \\times 260 - 40\\), which is \\(390 - 40 = 350\\). The option 260 is only \\(V_{1}\\), one period too early.",
+      "clue": "Find \\(V_{1}\\) first, then use it to find \\(V_{2}\\)."
     },
     "b": {
       "d": 2,
-      "q": "Mia's savings in Bendigo follow V(n+1) = 1.01 × V(n) + 100, with V(0) = 1000. What is V(1)?",
+      "q": "Mia's savings in Bendigo follow \\(V_{n+1} = 1.01V_{n} + 100\\), with \\(V_{0} = 1000\\). What is \\(V_{1}\\)?",
       "opts": ["1110", "1100", "1010", "1111"],
-      "why": "V(1) = 1.01 × 1000 + 100 = 1010 + 100 = 1110. Adding 100 first and then multiplying gives 1.01 × 1100 = 1111, which uses the wrong order. Stopping at 1010 leaves out d.",
-      "clue": "Multiply by R first, then add d."
+      "why": "\\(V_{1} = 1.01 \\times 1000 + 100\\), which is \\(1010 + 100 = 1110\\). Adding 100 first and then multiplying gives \\(1.01 \\times 1100 = 1111\\), which uses the wrong order. Stopping at 1010 leaves out \\(d\\).",
+      "clue": "Multiply by \\(R\\) first, then add \\(d\\)."
     }
   },
   "mat-flat-rate-depreciation": {
     "title": "Flat-rate depreciation",
     "card": [
       "Depreciation is the fall in an asset's value over time. With flat-rate depreciation, the asset loses the same dollar amount each period.",
-      "The rule is V(n+1) = V(n) − d, where V(0) is the starting value and d is the amount lost each period. The value after n periods is V(n) = V(0) − d × n.",
-      "The graph of value against time is a straight line going down. The gradient is −d.",
-      "Example: a $12 000 printer loses $1500 each year. After 4 years, V(4) = 12 000 − 1500 × 4 = $6000."
+      "The rule is \\(V_{n+1} = V_{n} - d\\), where \\(V_{0}\\) is the starting value and \\(d\\) is the amount lost each period. The value after \\(n\\) periods is \\(V_{n} = V_{0} - d \\times n\\).",
+      "The graph of value against time is a straight line going down. The gradient is \\(-d\\).",
+      "Example: a $12,000 printer loses $1500 each year. After 4 years, \\(V_{4} = \\$12{,}000 - \\$1500 \\times 4\\), which is $6000."
     ],
     "remember": "Flat-rate depreciation takes off the same dollar amount every period, so the value falls in a straight line.",
     "a": {
-      "q": "A machine is bought for $20 000 and loses $2500 in value each year. What is its value after 3 years?",
-      "opts": ["$12 500", "$17 500", "$10 000", "$27 500"],
-      "why": "V(3) = 20 000 − 2500 × 3 = 20 000 − 7500 = $12 500. The value $17 500 is only the value after 1 year, because the loss was taken off once instead of three times.",
+      "q": "A machine is bought for $20,000 and loses $2500 in value each year. What is its value after 3 years?",
+      "opts": ["$12,500", "$17,500", "$10,000", "$27,500"],
+      "why": "\\(V_{3} = \\$20{,}000 - \\$2500 \\times 3\\), which is \\(\\$20{,}000 - \\$7500 = \\$12{,}500\\). The value $17,500 is only the value after 1 year, because the loss was taken off once instead of three times.",
       "clue": "Take the yearly loss off once for each year."
     },
     "b": {
       "d": 3,
       "q": "Mia's café buys an oven for $9000. After 5 years its value is $4000 using flat-rate depreciation. How much value does it lose each year?",
       "opts": ["$1000", "$800", "$1800", "$5000"],
-      "why": "The total loss is 9000 − 4000 = $5000 over 5 years. So d = 5000 ÷ 5 = $1000 a year. The value $5000 is the total loss, not the loss for one year.",
+      "why": "The total loss is \\(\\$9000 - \\$4000 = \\$5000\\) over 5 years. So \\(d = \\$5000 \\div 5 = \\$1000\\) a year. The value $5000 is the total loss, not the loss for one year.",
       "clue": "Find the total fall in value, then share it across the years."
     }
   },
@@ -9759,22 +9830,22 @@ MADE_BANKS.mat = {
     "title": "Unit cost depreciation",
     "card": [
       "Some assets lose value because of how much they are used, not how long they are owned. Unit cost depreciation takes off a fixed amount for each unit of use, such as each kilometre driven or each hour a machine runs.",
-      "Depreciation = cost per unit × number of units used. Value after use = purchase price − depreciation.",
-      "Example: a van costs $40 000 and depreciates by $0.20 per km. After 60 000 km, depreciation = 0.20 × 60 000 = $12 000. The value is 40 000 − 12 000 = $28 000.",
+      "Depreciation \\(=\\) cost per unit \\(\\times\\) number of units used. Value after use \\(=\\) purchase price \\(-\\) depreciation.",
+      "Example: a van costs $40,000 and depreciates by $0.20 per km. After 60,000 km, depreciation is \\(\\$0.20 \\times 60{,}000 = \\$12{,}000\\). The value is \\(\\$40{,}000 - \\$12{,}000 = \\$28{,}000\\).",
       "The value falls by the same amount for each unit used. If the asset is not used in a year, it does not lose value that year."
     ],
-    "remember": "Unit cost depreciation: value = purchase price − (cost per unit × units used).",
+    "remember": "Unit cost depreciation: value \\(=\\) purchase price \\(-\\) (cost per unit \\(\\times\\) units used).",
     "a": {
-      "q": "A delivery truck costs $90 000 and depreciates by $0.30 per km. What is its value after 50 000 km?",
-      "opts": ["$75 000", "$15 000", "$89 950", "$60 000"],
-      "why": "Depreciation = 0.30 × 50 000 = $15 000. The value is 90 000 − 15 000 = $75 000. The $15 000 option is the depreciation, not the value left.",
+      "q": "A delivery truck costs $90,000 and depreciates by $0.30 per km. What is its value after 50,000 km?",
+      "opts": ["$75,000", "$15,000", "$89,950", "$60,000"],
+      "why": "Depreciation is \\(\\$0.30 \\times 50{,}000 = \\$15{,}000\\). The value is \\(\\$90{,}000 - \\$15{,}000 = \\$75{,}000\\). The $15,000 option is the depreciation, not the value left.",
       "clue": "Find the amount lost first, then take it from the price."
     },
     "b": {
       "d": 3,
-      "q": "Priya's printing press cost $24 000. It depreciates by $0.05 per page printed. It has printed 200 000 pages and is not in use this month. What is its value now?",
-      "opts": ["$14 000", "$10 000", "$23 990", "$24 000"],
-      "why": "Depreciation = 0.05 × 200 000 = $10 000, so the value is 24 000 − 10 000 = $14 000. Time spent idle adds no depreciation, because this method depends only on use. The $10 000 option is the amount lost, not the value.",
+      "q": "Priya's printing press cost $24,000. It depreciates by $0.05 per page printed. It has printed 200,000 pages and is not in use this month. What is its value now?",
+      "opts": ["$14,000", "$10,000", "$23,990", "$24,000"],
+      "why": "Depreciation is \\(\\$0.05 \\times 200{,}000 = \\$10{,}000\\), so the value is \\(\\$24{,}000 - \\$10{,}000 = \\$14{,}000\\). Time spent idle adds no depreciation, because this method depends only on use. The $10,000 option is the amount lost, not the value.",
       "clue": "Only pages printed count, not the months passed."
     }
   },
@@ -9783,27 +9854,32 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Simple interest",
-        "The same dollar amount is added each period, found from the starting amount only. Interest per period = P × r, where P is the principal and r is the rate per period as a decimal."
+        "The same dollar amount is added each period, found from the starting amount only. Interest per period \\(= P \\times r\\), where \\(P\\) is the principal and \\(r\\) is the rate per period as a decimal."
       ],
       [
         "Compound interest",
-        "Interest is a percentage of the current balance, so it grows as the balance grows. Each period the balance is multiplied by 1 + r."
+        "Interest is a percentage of the current balance, so it grows as the balance grows. Each period the balance is multiplied by \\(1 + r\\)."
       ],
-      "Recurrence rules: simple interest is V(n+1) = V(n) + P × r. Compound interest is V(n+1) = (1 + r) × V(n).",
+      "Recurrence relations: simple interest is \\(V_{n+1} = V_{n} + P \\times r\\). Compound interest is \\(V_{n+1} = (1 + r) \\times V_{n}\\).",
       "Example: $2000 at 5% per year. Simple: $2000, $2100, $2200. Compound: $2000, $2100, $2205."
     ],
     "remember": "Simple adds the same dollars each period. Compound multiplies the balance each period.",
     "a": {
-      "q": "Which recurrence rule models $800 invested at 4% per year compound interest?",
-      "opts": ["V(n+1) = 1.04 × V(n)", "V(n+1) = V(n) + 0.04", "V(n+1) = V(n) + 32", "V(n+1) = 0.04 × V(n)"],
-      "why": "Compound interest multiplies the balance by 1 + 0.04 = 1.04 each year. V(n) + 32 is the rule for simple interest, because it adds the same amount each year. 0.04 × V(n) would leave only the interest, not the whole balance.",
+      "q": "Which recurrence relation models $800 invested at 4% per year compound interest?",
+      "opts": [
+        "\\(V_{n+1} = 1.04 \\times V_{n}\\)",
+        "\\(V_{n+1} = V_{n} + 0.04\\)",
+        "\\(V_{n+1} = V_{n} + 32\\)",
+        "\\(V_{n+1} = 0.04 \\times V_{n}\\)"
+      ],
+      "why": "Compound interest multiplies the balance by \\(1 + 0.04 = 1.04\\) each year. \\(V_{n} + 32\\) is the rule for simple interest, because it adds the same amount each year. \\(0.04 \\times V_{n}\\) would leave only the interest, not the whole balance.",
       "clue": "The balance is multiplied each year, and the old balance is kept."
     },
     "b": {
       "d": 3,
       "q": "Priya invests $5000 at 6% per year simple interest. What is the balance after 3 years?",
       "opts": ["$5900", "$5955.08", "$5300", "$5600"],
-      "why": "Simple interest is 5000 × 0.06 = $300 each year, so 3 years adds $900 and the balance is $5900. $5955.08 is the compound answer, 5000 × 1.06³, which multiplies the balance instead of adding the same sum each year. $5300 and $5600 are only one and two years of interest.",
+      "why": "Simple interest is \\(\\$5000 \\times 0.06 = \\$300\\) each year, so 3 years adds $900 and the balance is $5900. $5955.08 is the compound answer, \\(\\$5000 \\times 1.06^{3}\\), which multiplies the balance instead of adding the same sum each year. $5300 and $5600 are only one and two years of interest.",
       "clue": "Add the same dollar amount every year, found from the starting $5000."
     }
   },
@@ -9811,11 +9887,11 @@ MADE_BANKS.mat = {
     "title": "Effective annual interest rate",
     "card": [
       "A nominal rate is the yearly rate that is quoted. If it is compounded more often than once a year, the balance grows by more than the nominal rate over the year.",
-      "The effective annual rate is the single yearly rate that gives the same growth in one year. Formula: r(eff) = (1 + r/(100n))^n − 1, then × 100 for a percentage. Here r is the nominal rate in % and n is the number of compounding periods per year.",
-      "Example: 6% compounded quarterly. Each quarter earns 6 ÷ 4 = 1.5%. After one year the balance is 1.015⁴ = 1.0614 times the start, so the effective rate is about 6.14%.",
+      "The effective annual rate is the single yearly rate that gives the same growth in one year. Formula: \\(r_{\\text{eff}} = \\left(1 + \\frac{r}{100n}\\right)^{n} - 1\\), then \\(\\times 100\\) for a percentage. Here \\(r\\) is the nominal rate in % and \\(n\\) is the number of compounding periods per year.",
+      "Example: 6% compounded quarterly. Each quarter earns \\(6\\% \\div 4 = 1.5\\%\\). After one year the balance is \\(1.015^{4} \\approx 1.0614\\) times the start, so the effective rate is about 6.14%.",
       "More frequent compounding gives a higher effective rate. Compounding once a year gives an effective rate equal to the nominal rate."
     ],
-    "remember": "Effective rate = growth factor over one year, minus 1. More compounding means a higher effective rate.",
+    "remember": "Effective rate \\(=\\) growth factor over one year, minus 1. More compounding means a higher effective rate.",
     "a": {
       "q": "A savings account pays 4% per year, compounded annually. What is its effective annual interest rate?",
       "opts": ["4%", "4.04%", "2%", "8%"],
@@ -9839,22 +9915,22 @@ MADE_BANKS.mat = {
     "title": "Amortisation tables",
     "card": [
       "An amortisation table lists a loan period by period. Its columns are the payment, the interest, the reduction in principal and the balance.",
-      "Interest = balance at the start of the period × the interest rate for that period. Reduction in principal = payment − interest.",
-      "Each period the interest is added to the balance and the whole payment is taken off. So new balance = old balance + interest − payment, which equals old balance − reduction in principal.",
-      "Example: a $10 000 loan has interest of 6% per year, charged yearly, with a payment of $2000. Interest = 10 000 × 0.06 = $600. Reduction in principal = 2000 − 600 = $1400. New balance = 10 000 + 600 − 2000 = $8600."
+      "Interest \\(=\\) balance at the start of the period \\(\\times\\) the interest rate for that period. Reduction in principal \\(=\\) payment \\(-\\) interest.",
+      "Each period the interest is added to the balance and the whole payment is taken off. So new balance \\(=\\) old balance \\(+\\) interest \\(-\\) payment, which equals old balance \\(-\\) reduction in principal.",
+      "Example: a $10,000 loan has interest of 6% per year, charged yearly, with a payment of $2000. Interest \\(= \\$10{,}000 \\times 0.06 = \\$600\\). Reduction in principal \\(= \\$2000 - \\$600 = \\$1400\\). New balance \\(= \\$10{,}000 + \\$600 - \\$2000\\), which is $8600."
     ],
     "remember": "Part of each payment covers the interest. Only what is left over cuts the balance.",
     "a": {
       "q": "A loan balance is $5000 and the interest rate is 4% per period. The payment is $1000. What is the reduction in principal for this period?",
       "opts": ["$800", "$200", "$1000", "$1200"],
-      "why": "Interest = 5000 × 0.04 = $200. Reduction in principal = 1000 − 200 = $800. The $200 is the interest, which the payment must cover first, so it is not the amount that reduces the principal.",
+      "why": "Interest \\(= \\$5000 \\times 0.04 = \\$200\\). Reduction in principal \\(= \\$1000 - \\$200 = \\$800\\). The $200 is the interest, which the payment must cover first, so it is not the amount that reduces the principal.",
       "clue": "Find the interest first, then take it from the payment."
     },
     "b": {
       "d": 3,
       "q": "Priya has a loan with a balance of $8000. The interest is 3% per period and the payment is $1500. What is the balance after this payment?",
       "opts": ["$6740", "$6500", "$6260", "$7760"],
-      "why": "Interest = 8000 × 0.03 = $240. New balance = 8000 + 240 − 1500 = $6740, the same as 8000 − 1260. $6500 is wrong because it ignores the interest added to the balance, and $6260 takes the interest off instead of adding it.",
+      "why": "Interest \\(= \\$8000 \\times 0.03 = \\$240\\). New balance \\(= \\$8000 + \\$240 - \\$1500\\), which is $6740, the same as \\(\\$8000 - \\$1260\\). $6500 is wrong because it ignores the interest added to the balance, and $6260 takes the interest off instead of adding it.",
       "clue": "Interest is added to the balance before the payment comes off."
     }
   },
@@ -9862,22 +9938,22 @@ MADE_BANKS.mat = {
     "title": "Annuities",
     "card": [
       "An annuity is an investment that pays out a regular amount each period. The balance earns interest, but the payouts take money out, so the balance falls until it reaches zero.",
-      "Each period: new balance = old balance + interest − payout. Interest is worked out on the old balance. Repeat for the next period, starting from the new balance.",
-      "Example: $10 000 earns 6% per year and pays out $2000 at the end of each year. Interest = 6% × 10 000 = $600. New balance = 10 000 + 600 − 2000 = $8600.",
+      "Each period: new balance \\(=\\) old balance \\(+\\) interest \\(-\\) payout. Interest is worked out on the old balance. Repeat for the next period, starting from the new balance.",
+      "Example: $10,000 earns 6% per year and pays out $2000 at the end of each year. Interest \\(= 6\\% \\times \\$10{,}000 = \\$600\\). New balance \\(= \\$10{,}000 + \\$600 - \\$2000\\), which is $8600.",
       "If the payout is bigger than the interest, the balance falls. If the payout is smaller than the interest, the balance would rise, so it would not be run down to zero."
     ],
-    "remember": "Annuity: balance + interest − payout each period, so the balance falls.",
+    "remember": "Annuity: balance \\(+\\) interest \\(-\\) payout each period, so the balance falls.",
     "a": {
-      "q": "An annuity of $20 000 earns 5% per year and pays out $3000 at the end of each year. What is the balance after the first payout?",
-      "opts": ["$18 000", "$17 000", "$17 850", "$21 000"],
-      "why": "Interest = 5% × 20 000 = $1000. New balance = 20 000 + 1000 − 3000 = $18 000. Taking away only the payout gives $17 000, which leaves out the interest.",
+      "q": "An annuity of $20,000 earns 5% per year and pays out $3000 at the end of each year. What is the balance after the first payout?",
+      "opts": ["$18,000", "$17,000", "$17,850", "$21,000"],
+      "why": "Interest \\(= 5\\% \\times \\$20{,}000 = \\$1000\\). New balance \\(= \\$20{,}000 + \\$1000 - \\$3000\\), which is $18,000. Taking away only the payout gives $17,000, which leaves out the interest.",
       "clue": "Add the interest first, then take off the payout."
     },
     "b": {
       "d": 3,
-      "q": "Priya's annuity of $50 000 earns 4% per year. It pays out $6000 at the end of each year. What is the balance after two payouts?",
-      "opts": ["$41 840", "$42 000", "$38 000", "$46 000"],
-      "why": "Year 1: interest is 4% × 50 000 = $2000, so the balance is 50 000 + 2000 − 6000 = $46 000. Year 2: interest is 4% × 46 000 = $1840, so the balance is 46 000 + 1840 − 6000 = $41 840. $42 000 comes from using $2000 interest both years, but interest must be worked out on the new, smaller balance.",
+      "q": "Priya's annuity of $50,000 earns 4% per year. It pays out $6000 at the end of each year. What is the balance after two payouts?",
+      "opts": ["$41,840", "$42,000", "$38,000", "$46,000"],
+      "why": "Year 1: interest is \\(4\\% \\times \\$50{,}000 = \\$2000\\), so the balance is \\(\\$50{,}000 + \\$2000 - \\$6000\\), which is $46,000. Year 2: interest is \\(4\\% \\times \\$46{,}000 = \\$1840\\), so the balance is \\(\\$46{,}000 + \\$1840 - \\$6000\\), which is $41,840. $42,000 comes from using $2000 interest both years, but interest must be worked out on the new, smaller balance.",
       "clue": "Work out the interest again on the new balance in year 2."
     }
   },
@@ -9885,22 +9961,22 @@ MADE_BANKS.mat = {
     "title": "Perpetuities",
     "card": [
       "A perpetuity is an investment that pays out only the interest it earns each period. The balance stays the same, so the payments can go on forever.",
-      "Payment = principal × interest rate per period. The rate must match the payment period, so a yearly rate of 6% paid monthly becomes 0.5% per month.",
-      "Worked example: $200 000 invested at 5% per year, paid yearly. Payment = 200 000 × 0.05 = $10 000 each year, and the balance stays at $200 000.",
-      "To find the principal needed for a set payment, rearrange: principal = payment ÷ interest rate per period."
+      "Payment \\(=\\) principal \\(\\times\\) interest rate per period. The rate must match the payment period, so a yearly rate of 6% paid monthly becomes 0.5% per month.",
+      "Worked example: $200,000 invested at 5% per year, paid yearly. Payment \\(= \\$200{,}000 \\times 0.05\\), which is $10,000 each year, and the balance stays at $200,000.",
+      "To find the principal needed for a set payment, rearrange: principal \\(=\\) payment \\(\\div\\) interest rate per period."
     ],
     "remember": "A perpetuity pays only the interest, so the balance never falls.",
     "a": {
-      "q": "$300 000 is invested in a perpetuity at 4% per year, paid yearly. What is the yearly payment?",
-      "opts": ["$12 000", "$7 500 000", "$312 000", "$1 200"],
-      "why": "Payment = 300 000 × 0.04 = $12 000. Dividing by 0.04 instead gives 300 000 ÷ 0.04 = $7 500 000, which uses the rearranged rule for a principal, not a payment. $312 000 adds the interest to the balance, but a perpetuity pays out only the interest.",
+      "q": "$300,000 is invested in a perpetuity at 4% per year, paid yearly. What is the yearly payment?",
+      "opts": ["$12,000", "$7,500,000", "$312,000", "$1,200"],
+      "why": "Payment \\(= \\$300{,}000 \\times 0.04\\), which is $12,000. Dividing by 0.04 instead gives \\(\\$300{,}000 \\div 0.04\\), which is $7,500,000. That uses the rearranged rule for a principal, not a payment. $312,000 adds the interest to the balance, but a perpetuity pays out only the interest.",
       "clue": "Multiply the principal by the rate."
     },
     "b": {
       "d": 3,
-      "q": "Priya wants a perpetuity paying $2 000 each month. The interest rate is 6% per year, paid monthly. What principal does she need?",
-      "opts": ["$400 000", "$33 333", "$24 000", "$40 000"],
-      "why": "The monthly rate is 6% ÷ 12 = 0.5%. Principal = 2 000 ÷ 0.005 = $400 000. Using 6% gives $33 333, which mixes a yearly rate with a monthly payment.",
+      "q": "Priya wants a perpetuity paying $2,000 each month. The interest rate is 6% per year, paid monthly. What principal does she need?",
+      "opts": ["$400,000", "$33,333", "$24,000", "$40,000"],
+      "why": "The monthly rate is \\(6\\% \\div 12 = 0.5\\%\\). Principal \\(= \\$2{,}000 \\div 0.005\\), which is $400,000. Using 6% gives $33,333, which mixes a yearly rate with a monthly payment.",
       "clue": "Change the yearly rate to a monthly rate first."
     }
   },
@@ -9908,22 +9984,22 @@ MADE_BANKS.mat = {
     "title": "Compound interest with regular additions",
     "card": [
       "This investment earns compound interest, and the same amount is also added at the end of every period. The balance grows from both.",
-      "Each period: new balance = old balance × (1 + r) + deposit, where r is the interest rate for one period as a decimal. Divide an annual rate by the number of periods in a year.",
-      "Example: start with $1000, interest 10% per year, add $200 at the end of each year. After year 1: 1000 × 1.10 + 200 = $1300.",
-      "After year 2: 1300 × 1.10 + 200 = $1630. The interest is worked out on the whole balance, including earlier deposits and earlier interest."
+      "Each period: new balance \\(=\\) old balance \\(\\times\\) \\((1 + r)\\) \\(+\\) deposit, where \\(r\\) is the interest rate for one period as a decimal. Divide an annual rate by the number of periods in a year.",
+      "Example: start with $1000, interest 10% per year, add $200 at the end of each year. After year 1: \\(\\$1000 \\times 1.10 + \\$200 = \\$1300\\).",
+      "After year 2: \\(\\$1300 \\times 1.10 + \\$200 = \\$1630\\). The interest is worked out on the whole balance, including earlier deposits and earlier interest."
     ],
-    "remember": "Multiply the balance by (1 + r), then add the deposit, and repeat.",
+    "remember": "Multiply the balance by \\((1 + r)\\), then add the deposit, and repeat.",
     "a": {
       "q": "An account has $2000, earns 5% per year, and $500 is added at the end of each year. What is the balance after year 1?",
       "opts": ["$2600", "$2500", "$2100", "$2625"],
-      "why": "New balance = 2000 × 1.05 + 500 = 2100 + 500 = $2600. $2625 adds the deposit before the interest, but the deposit comes at the end of the year. $2500 skips the interest, and $2100 leaves out the deposit.",
+      "why": "New balance \\(= \\$2000 \\times 1.05 + \\$500\\), which is \\(\\$2100 + \\$500 = \\$2600\\). $2625 adds the deposit before the interest, but the deposit comes at the end of the year. $2500 skips the interest, and $2100 leaves out the deposit.",
       "clue": "Add the interest first, then the deposit."
     },
     "b": {
       "d": 3,
       "q": "Priya opens a savings account with $1000. It earns 6% per year, and she adds $100 at the end of each year. What is the balance after year 2?",
       "opts": ["$1329.60", "$1341.96", "$1320.00", "$1123.60"],
-      "why": "Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = 1229.60 + 100 = $1329.60. $1341.96 adds each deposit before the interest, $1320.00 pays interest only on the first $1000, and $1123.60 leaves out the deposits.",
+      "why": "Year 1: \\(\\$1000 \\times 1.06 + \\$100 = \\$1160\\). Year 2: \\(\\$1160 \\times 1.06 + \\$100\\), which is \\(\\$1229.60 + \\$100 = \\$1329.60\\). $1341.96 adds each deposit before the interest, $1320.00 pays interest only on the first $1000, and $1123.60 leaves out the deposits.",
       "clue": "Work out year 1 first, then use that balance for year 2."
     }
   },
@@ -9933,106 +10009,119 @@ MADE_BANKS.mat = {
       "A finance solver is a tool on a calculator or in software. You enter four of N, I%, PV, PMT and FV, and it finds the fifth. It also needs PPY, the payments per year, and CPY, the compounding periods per year.",
       "N is the number of payments. I% is the annual interest rate. PV is the amount at the start. PMT is the regular payment, or 0 if there is none. FV is the amount at the end.",
       "Choose one person's point of view and keep it. Money that person receives is positive. Money that person pays out is negative. If the signs are wrong, the solver gives a wrong or impossible answer.",
-      "Example: from your point of view, you borrow $20 000, so PV = 20 000. You repay PMT = -500 each month at 6% a year, and FV = 0 at the end. The solver then gives N, the number of months to repay."
+      "Example: from your point of view, you borrow $20,000, so \\(\\text{PV} = 20{,}000\\). You repay \\(\\text{PMT} = -500\\) each month at 6% a year, and \\(\\text{FV} = 0\\) at the end. The solver then gives N, the number of months to repay."
     ],
     "remember": "Enter four values, find the fifth, and sign money in and out from one point of view.",
     "a": {
-      "q": "Sam borrows $15 000 to buy a car. From Sam's point of view, how should PV and PMT be entered in a finance solver?",
+      "q": "Sam borrows $15,000 to buy a car. From Sam's point of view, how should PV and PMT be entered in a finance solver?",
       "opts": [
-        "PV = 15 000 and PMT as a negative number",
-        "PV = -15 000 and PMT as a negative number",
-        "PV = 15 000 and PMT as a positive number",
-        "PV = -15 000 and PMT as a positive number"
+        "\\(\\text{PV} = 15{,}000\\) and PMT as a negative number",
+        "\\(\\text{PV} = -15{,}000\\) and PMT as a negative number",
+        "\\(\\text{PV} = 15{,}000\\) and PMT as a positive number",
+        "\\(\\text{PV} = -15{,}000\\) and PMT as a positive number"
       ],
-      "why": "Sam receives the loan, so PV is positive for Sam. Sam pays out each repayment, so PMT is negative. PV = -15 000 with PMT positive is the lender's point of view, not Sam's.",
+      "why": "Sam receives the loan, so PV is positive for Sam. Sam pays out each repayment, so PMT is negative. \\(\\text{PV} = -15{,}000\\) with PMT positive is the lender's point of view, not Sam's.",
       "clue": "Which amount does Sam receive, and which does Sam pay out?"
     },
     "b": {
       "d": 3,
-      "q": "Priya puts $8 000 into an account. She will add nothing more and wants FV after 5 years. From Priya's point of view, what are PV and PMT?",
+      "q": "Priya puts $8,000 into an account. She will add nothing more and wants FV after 5 years. From Priya's point of view, what are PV and PMT?",
       "opts": [
-        "PV = -8 000 and PMT = 0",
-        "PV = 8 000 and PMT = 0",
-        "PV = -8 000 and PMT = 8 000",
-        "PV = 8 000 and PMT = -8 000"
+        "\\(\\text{PV} = -8{,}000\\) and \\(\\text{PMT} = 0\\)",
+        "\\(\\text{PV} = 8{,}000\\) and \\(\\text{PMT} = 0\\)",
+        "\\(\\text{PV} = -8{,}000\\) and \\(\\text{PMT} = 8{,}000\\)",
+        "\\(\\text{PV} = 8{,}000\\) and \\(\\text{PMT} = -8{,}000\\)"
       ],
-      "why": "Priya pays the $8 000 into the account, so it is money out for her and PV is negative. She makes no regular additions, so PMT is 0. Entering PV as positive is tempting because it is the starting amount, but for Priya it is money paid out.",
-      "clue": "Does Priya receive the $8 000 or pay it in?"
+      "why": "Priya pays the $8,000 into the account, so it is money out for her and PV is negative. She makes no regular additions, so PMT is 0. Entering PV as positive is tempting because it is the starting amount, but for Priya it is money paid out.",
+      "clue": "Does Priya receive the $8,000 or pay it in?"
     }
   },
   "mat-types-matrices": {
     "title": "Types of matrices",
     "card": [
-      "The order of a matrix is rows × columns, so a 2 × 3 matrix has 2 rows and 3 columns. A row matrix has one row, a column matrix has one column, and a square matrix has equal numbers of rows and columns.",
+      "The order of a matrix is rows \\(\\times\\) columns, so a \\(2 \\times 3\\) matrix has 2 rows and 3 columns. A row matrix has one row, a column matrix has one column, and a square matrix has equal numbers of rows and columns.",
       "The main diagonal of a square matrix runs from top left to bottom right. A diagonal matrix has 0s everywhere off it. An upper triangular matrix has 0s everywhere below it, and a lower triangular matrix has 0s everywhere above it.",
-      "A symmetric matrix is square, and each element equals the one in its mirror position across the main diagonal. The identity matrix I has 1s on the main diagonal and 0s elsewhere. A zero matrix has every element 0, and a binary matrix has only 0s and 1s.",
-      "The transpose swaps rows and columns, so row 1 becomes column 1. For example, the transpose of [1 2 3] is a column matrix with 1, 2, 3 going down. A 2 × 3 matrix has a 3 × 2 transpose."
+      "A symmetric matrix is square, and each element equals the one in its mirror position across the main diagonal. The identity matrix \\(I\\) has 1s on the main diagonal and 0s elsewhere. A zero matrix has every element 0, and a binary matrix has only 0s and 1s.",
+      "The transpose swaps rows and columns, so row 1 becomes column 1. For example, the transpose of \\(\\begin{bmatrix} 1 & 2 & 3 \\end{bmatrix}\\) is a column matrix with 1, 2, 3 going down. A \\(2 \\times 3\\) matrix has a \\(3 \\times 2\\) transpose."
     ],
-    "remember": "Order is rows × columns. The transpose swaps rows and columns, so the order flips.",
+    "remember": "Order is rows \\(\\times\\) columns. The transpose swaps rows and columns, so the order flips.",
     "a": {
-      "q": "Matrix M has 4 rows and 2 columns. What is the order of the transpose of M?",
-      "opts": ["2 × 4", "4 × 2", "2 × 2", "4 × 4"],
-      "why": "The transpose swaps rows and columns, so 4 rows and 2 columns become 2 rows and 4 columns. The order is 2 × 4. The order 4 × 2 is the original matrix, which comes from forgetting to swap.",
+      "q": "Matrix \\(M\\) has 4 rows and 2 columns. What is the order of the transpose of \\(M\\)?",
+      "opts": ["\\(2 \\times 4\\)", "\\(4 \\times 2\\)", "\\(2 \\times 2\\)", "\\(4 \\times 4\\)"],
+      "why": "The transpose swaps rows and columns, so 4 rows and 2 columns become 2 rows and 4 columns. The order is \\(2 \\times 4\\). The order \\(4 \\times 2\\) is the original matrix, which comes from forgetting to swap.",
       "clue": "Swap the number of rows and the number of columns."
     },
     "b": {
       "d": 3,
-      "q": "Which matrix is symmetric? Rows are separated by a semicolon.",
-      "opts": ["[2 5; 5 3]", "[2 5; 3 5]", "[2 0; 5 3]", "[2 5 3; 5 3 1]"],
-      "why": "In [2 5; 5 3] the elements in row 1, column 2 and row 2, column 1 are both 5, so it matches its mirror image. [2 0; 5 3] is lower triangular, not symmetric, because 0 and 5 differ. [2 5 3; 5 3 1] is not square, so it cannot be symmetric.",
+      "q": "Which matrix is symmetric?",
+      "opts": [
+        "\\(\\begin{bmatrix} 2 & 5 \\\\ 5 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & 5 \\\\ 3 & 5 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & 0 \\\\ 5 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & 5 & 3 \\\\ 5 & 3 & 1 \\end{bmatrix}\\)"
+      ],
+      "why": "In \\(\\begin{bmatrix} 2 & 5 \\\\ 5 & 3 \\end{bmatrix}\\) the elements in row 1, column 2 and row 2, column 1 are both 5, so it matches its mirror image. \\(\\begin{bmatrix} 2 & 0 \\\\ 5 & 3 \\end{bmatrix}\\) is lower triangular, not symmetric, because 0 and 5 differ. \\(\\begin{bmatrix} 2 & 5 & 3 \\\\ 5 & 3 & 1 \\end{bmatrix}\\) is not square, so it cannot be symmetric.",
       "clue": "A symmetric matrix must be square, and its mirror positions must match."
     }
   },
   "mat-building-matrix-from-rule": {
     "title": "Building a matrix from a rule",
     "card": [
-      "The element in row i and column j is written aᵢⱼ. The first number, i, is the row. The second number, j, is the column.",
-      "A rule gives aᵢⱼ in terms of i and j. To build the matrix, put each row number and column number into the rule, one position at a time.",
-      "The order tells you how many rows and columns to fill. A 2 × 3 matrix has i = 1, 2 and j = 1, 2, 3.",
-      "Example: for a 2 × 2 matrix with aᵢⱼ = 2i + j, a₁₁ = 2(1) + 1 = 3, a₁₂ = 2(1) + 2 = 4, a₂₁ = 2(2) + 1 = 5 and a₂₂ = 2(2) + 2 = 6. The matrix has rows [3 4] and [5 6]."
+      "The element in row \\(i\\) and column \\(j\\) is written \\(a_{ij}\\). The first number, \\(i\\), is the row. The second number, \\(j\\), is the column.",
+      "A rule gives \\(a_{ij}\\) in terms of \\(i\\) and \\(j\\). To build the matrix, put each row number and column number into the rule, one position at a time.",
+      "The order tells you how many rows and columns to fill. A \\(2 \\times 3\\) matrix has \\(i = 1, 2\\) and \\(j = 1, 2, 3\\).",
+      "Example: for a \\(2 \\times 2\\) matrix with \\(a_{ij} = 2i + j\\), \\(a_{11} = 2(1) + 1 = 3\\), \\(a_{12} = 2(1) + 2 = 4\\), \\(a_{21} = 2(2) + 1 = 5\\) and \\(a_{22} = 2(2) + 2 = 6\\). The matrix is \\(\\begin{bmatrix} 3 & 4 \\\\ 5 & 6 \\end{bmatrix}\\)."
     ],
-    "remember": "Put the row number in for i and the column number in for j, then fill the matrix position by position.",
+    "remember": "Put the row number in for \\(i\\) and the column number in for \\(j\\), then fill the matrix position by position.",
     "a": {
-      "q": "A 2 × 3 matrix has the rule aᵢⱼ = i + 3j. What is the element a₂₁?",
+      "q": "A \\(2 \\times 3\\) matrix has the rule \\(a_{ij} = i + 3j\\). What is the element \\(a_{21}\\)?",
       "opts": ["5", "7", "4", "9"],
-      "why": "a₂₁ has i = 2 and j = 1, so a₂₁ = 2 + 3(1) = 5. The answer 7 comes from swapping the numbers, which gives i = 1 and j = 2: 1 + 3(2) = 7.",
-      "clue": "The first number in 21 is the row, and the second is the column."
+      "why": "\\(a_{21}\\) has \\(i = 2\\) and \\(j = 1\\), so \\(a_{21} = 2 + 3(1) = 5\\). The answer 7 comes from swapping the numbers, which gives \\(i = 1\\) and \\(j = 2\\): \\(1 + 3(2) = 7\\).",
+      "clue": "The first number in \\(a_{21}\\) is the row, and the second is the column."
     },
     "b": {
       "d": 3,
-      "q": "A 2 × 3 matrix B has the rule bᵢⱼ = 3i − j. What is row 2 of B?",
-      "opts": ["[5 4 3]", "[1 4 7]", "[7 8 9]", "[2 1 0]"],
-      "why": "In row 2, i = 2 and j runs from 1 to 3: b₂₁ = 6 − 1 = 5, b₂₂ = 6 − 2 = 4 and b₂₃ = 6 − 3 = 3. The option [1 4 7] comes from mixing up i and j and using 3j − i instead. The option [2 1 0] is row 1, not row 2.",
-      "clue": "Along a row, which of i and j stays the same?"
+      "q": "A \\(2 \\times 3\\) matrix \\(B\\) has the rule \\(b_{ij} = 3i - j\\). What is row 2 of \\(B\\)?",
+      "opts": [
+        "\\(\\begin{bmatrix} 5 & 4 & 3 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 4 & 7 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 7 & 8 & 9 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 2 & 1 & 0 \\end{bmatrix}\\)"
+      ],
+      "why": "In row 2, \\(i = 2\\) and \\(j\\) runs from 1 to 3: \\(b_{21} = 6 - 1 = 5\\), \\(b_{22} = 6 - 2 = 4\\) and \\(b_{23} = 6 - 3 = 3\\). The option \\(\\begin{bmatrix} 1 & 4 & 7 \\end{bmatrix}\\) comes from mixing up \\(i\\) and \\(j\\) and using \\(3j - i\\) instead. The option \\(\\begin{bmatrix} 2 & 1 & 0 \\end{bmatrix}\\) is row 1, not row 2.",
+      "clue": "Along a row, which of \\(i\\) and \\(j\\) stays the same?"
     }
   },
   "mat-determinants-inverses": {
     "title": "Determinants and inverses",
     "card": [
-      "The inverse of a square matrix A is written A⁻¹. Multiplying A by A⁻¹ gives the identity matrix, so the inverse undoes what A did.",
+      "The inverse of a square matrix \\(A\\) is written \\(A^{-1}\\). Multiplying \\(A\\) by \\(A^{-1}\\) gives the identity matrix, so the inverse undoes what \\(A\\) did.",
       [
         "Determinant",
-        "for A = [a b; c d], det A = ad − bc. Multiply the main diagonal, then subtract the product of the other diagonal."
+        "for \\(A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\), \\(\\text{det}(A) = ad - bc\\). Multiply the main diagonal, then subtract the product of the other diagonal."
       ],
-      ["Inverse test", "if det A = 0, A has no inverse. If det A is not 0, A has an inverse."],
       [
-        "Finding A⁻¹",
-        "A⁻¹ = 1/det A × [d −b; −c a]. Example: A = [3 1; 5 2]. det A = 3×2 − 1×5 = 1, so A⁻¹ = [2 −1; −5 3]."
+        "Inverse test",
+        "if \\(\\text{det}(A) = 0\\), \\(A\\) has no inverse. If \\(\\text{det}(A)\\) is not 0, \\(A\\) has an inverse."
+      ],
+      [
+        "Finding the inverse",
+        "\\(A^{-1} = \\frac{1}{\\text{det}(A)} \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}\\). Example: \\(A = \\begin{bmatrix} 3 & 1 \\\\ 5 & 2 \\end{bmatrix}\\). \\(\\text{det}(A) = 3 \\times 2 - 1 \\times 5 = 1\\), so \\(A^{-1} = \\begin{bmatrix} 2 & -1 \\\\ -5 & 3 \\end{bmatrix}\\)."
       ]
     ],
-    "remember": "Work out ad − bc. If it is 0 there is no inverse. If not, there is one.",
+    "remember": "Work out \\(ad - bc\\). If it is 0 there is no inverse. If not, there is one.",
     "a": {
-      "q": "For the matrix [4 3; 2 1], what is the determinant?",
-      "opts": ["−2", "10", "2", "−10"],
-      "why": "det = 4×1 − 3×2 = 4 − 6 = −2. Adding the products to get 10 is the tempting mistake, but the second product must be subtracted. Since −2 is not 0, this matrix has an inverse.",
-      "clue": "Subtract the product of the other diagonal, 3 × 2."
+      "q": "For the matrix \\(\\begin{bmatrix} 4 & 3 \\\\ 2 & 1 \\end{bmatrix}\\), what is the determinant?",
+      "opts": ["\\(-2\\)", "10", "2", "\\(-10\\)"],
+      "why": "The determinant is \\(4 \\times 1 - 3 \\times 2\\), which is \\(4 - 6 = -2\\). Adding the products to get 10 is the tempting mistake, but the second product must be subtracted. Since \\(-2\\) is not 0, this matrix has an inverse.",
+      "clue": "Subtract the product of the other diagonal, \\(3 \\times 2\\)."
     },
     "b": {
       "d": 3,
-      "q": "For which value of k does the matrix [k 6; 2 3] have no inverse?",
-      "opts": ["k = 4", "k = 9", "k = 0", "k = 1"],
-      "why": "det = 3k − 6×2 = 3k − 12. No inverse needs det = 0, so 3k = 12 and k = 4. Setting k = 0 is tempting, but then det = −12, which is not 0, so an inverse exists.",
-      "clue": "Set the determinant equal to 0 and solve for k."
+      "q": "For which value of \\(k\\) does the matrix \\(\\begin{bmatrix} k & 6 \\\\ 2 & 3 \\end{bmatrix}\\) have no inverse?",
+      "opts": ["\\(k = 4\\)", "\\(k = 9\\)", "\\(k = 0\\)", "\\(k = 1\\)"],
+      "why": "The determinant is \\(3k - 6 \\times 2 = 3k - 12\\). No inverse needs a determinant of 0, so \\(3k = 12\\) and \\(k = 4\\). Setting \\(k = 0\\) is tempting, but then the determinant is \\(-12\\), which is not 0, so an inverse exists.",
+      "clue": "Set the determinant equal to 0 and solve for \\(k\\)."
     }
   },
   "mat-permutation-matrices": {
@@ -10048,31 +10137,36 @@ MADE_BANKS.mat = {
       ],
       [
         "Rows",
-        "P × A reorders the rows of A. Row i of P has its 1 in column j, so row i of the answer is row j of A. A × P reorders the columns instead."
+        "\\(P \\times A\\) reorders the rows of \\(A\\). Row \\(i\\) of \\(P\\) has its 1 in column \\(j\\), so row \\(i\\) of the answer is row \\(j\\) of \\(A\\). \\(A \\times P\\) reorders the columns instead."
       ],
       [
         "Example",
-        "P = [0 1; 1 0] and A = [2 3; 4 5], where ; starts a new row. Then P × A = [4 5; 2 3], so the two rows of A swap places."
+        "\\(P = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}\\) and \\(A = \\begin{bmatrix} 2 & 3 \\\\ 4 & 5 \\end{bmatrix}\\). Then \\(P \\times A = \\begin{bmatrix} 4 & 5 \\\\ 2 & 3 \\end{bmatrix}\\), so the two rows of \\(A\\) swap places."
       ]
     ],
     "remember": "A binary matrix records yes or no with 1 and 0. A permutation matrix on the left reorders rows.",
     "a": {
-      "q": "Which of these 3 × 3 matrices is a permutation matrix?",
+      "q": "Which of these \\(3 \\times 3\\) matrices is a permutation matrix?",
       "opts": [
-        "Row 1: 0 1 0, row 2: 0 0 1, row 3: 1 0 0",
-        "Row 1: 1 1 0, row 2: 0 0 1, row 3: 1 0 0",
-        "Row 1: 0 1 0, row 2: 0 1 0, row 3: 1 0 0",
-        "Row 1: 1 0 0, row 2: 0 2 0, row 3: 0 0 1"
+        "\\(\\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 0 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 0 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 0 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}\\)"
       ],
-      "why": "In the right matrix, each row and each column has exactly one 1, and every other element is 0. The matrix starting with 1 1 0 has two 1s in row 1. The one with 0 1 0 in both rows 1 and 2 has two 1s in column 2 and none in column 3. The one containing a 2 is not even binary.",
+      "why": "In the right matrix, each row and each column has exactly one 1, and every other element is 0. The matrix whose first row is \\(\\begin{bmatrix} 1 & 1 & 0 \\end{bmatrix}\\) has two 1s in row 1. The one with \\(\\begin{bmatrix} 0 & 1 & 0 \\end{bmatrix}\\) as both rows 1 and 2 has two 1s in column 2 and none in column 3. The one containing a 2 is not even binary.",
       "clue": "Count the 1s in every row and every column."
     },
     "b": {
       "d": 3,
-      "q": "P = [0 1; 1 0] and A = [3 6; 8 1]. What is P × A?",
-      "opts": ["Row 1: 8 1, row 2: 3 6", "Row 1: 6 3, row 2: 1 8", "Row 1: 3 6, row 2: 8 1", "Row 1: 1 8, row 2: 6 3"],
-      "why": "Row 1 of P has its 1 in column 2, so row 1 of the answer is row 2 of A: 8 1. Row 2 of P has its 1 in column 1, so row 2 is 3 6. Swapping columns instead gives 6 3 and 1 8, which is A × P.",
-      "clue": "P is on the left, so it moves rows, not columns."
+      "q": "\\(P = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}\\) and \\(A = \\begin{bmatrix} 3 & 6 \\\\ 8 & 1 \\end{bmatrix}\\). What is \\(P \\times A\\)?",
+      "opts": [
+        "\\(\\begin{bmatrix} 8 & 1 \\\\ 3 & 6 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 6 & 3 \\\\ 1 & 8 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 3 & 6 \\\\ 8 & 1 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 1 & 8 \\\\ 6 & 3 \\end{bmatrix}\\)"
+      ],
+      "why": "Row 1 of \\(P\\) has its 1 in column 2, so row 1 of the answer is row 2 of \\(A\\): \\(\\begin{bmatrix} 8 & 1 \\end{bmatrix}\\). Row 2 of \\(P\\) has its 1 in column 1, so row 2 is \\(\\begin{bmatrix} 3 & 6 \\end{bmatrix}\\). Swapping columns instead gives \\(\\begin{bmatrix} 6 & 3 \\\\ 1 & 8 \\end{bmatrix}\\), which is \\(A \\times P\\).",
+      "clue": "\\(P\\) is on the left, so it moves rows, not columns."
     }
   },
   "mat-communication-dominance-matrices": {
@@ -10091,14 +10185,14 @@ MADE_BANKS.mat = {
     ],
     "remember": "Row sums of \\(M\\) count direct links. Row sums of \\(M + M^{2}\\) count direct and two-step links.",
     "a": {
-      "q": "A dominance matrix \\(M\\) has rows and columns in the order P, Q, R, S: row P is 0 1 0 1, row Q is 0 0 1 1, row R is 1 0 0 0, row S is 0 0 1 0. What is P's row sum in \\(M + M^{2}\\)?",
+      "q": "A dominance matrix has rows and columns in the order P, Q, R, S: \\(M = \\begin{bmatrix} 0 & 1 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\end{bmatrix}\\). What is P's row sum in \\(M + M^{2}\\)?",
       "opts": ["5", "2", "3", "4"],
       "why": "P beat Q and S directly, so 2 direct wins. Two-step wins go through those players: P to Q to R, P to Q to S, and P to S to R, so 3 more. The total is 5, while 2 counts only the direct wins.",
       "clue": "Find who P beat, then who those players beat."
     },
     "b": {
       "d": 3,
-      "q": "Messages in a team are shown by this communication matrix, with rows and columns in the order A, B, C: row A is 0 1 1, row B is 0 0 1, row C is 1 0 0. How many two-step ways are there to send a message from A to C?",
+      "q": "Messages in a team are shown by this communication matrix, with rows and columns in the order A, B, C: \\(\\begin{bmatrix} 0 & 1 & 1 \\\\ 0 & 0 & 1 \\\\ 1 & 0 & 0 \\end{bmatrix}\\). How many two-step ways are there to send a message from A to C?",
       "opts": ["1", "2", "0", "3"],
       "why": "A two-step path from A to C goes through a middle person. A to B then B to C works. A to C then C to C does not, as C has a 0 for C to C. So there is 1 way. Counting the direct link A to C as well would give 2, but that is a one-step link.",
       "clue": "Check each middle person: can A reach them, and can they reach C?"
@@ -10107,14 +10201,14 @@ MADE_BANKS.mat = {
   "mat-transition-matrices-2": {
     "title": "Transition matrices",
     "card": [
-      "A transition matrix T shows the chance of moving between states in one step. Each column is one starting state, and the numbers in a column add to 1.",
-      "The entry in row i, column j is the chance of moving from state j to state i. The entry in row j, column j is the chance of staying put.",
-      "A state matrix S lists how many are in each state. The next state matrix is T × S.",
-      "Example: T = [0.8 0.3; 0.2 0.7] (rows separated by a semicolon) and S = [100; 50]. T × S = [0.8×100 + 0.3×50; 0.2×100 + 0.7×50] = [95; 55]."
+      "A transition matrix \\(T\\) shows the chance of moving between states in one step. Each column is one starting state, and the numbers in a column add to 1.",
+      "The entry in row \\(i\\), column \\(j\\) is the chance of moving from state \\(j\\) to state \\(i\\). The entry in row \\(j\\), column \\(j\\) is the chance of staying put.",
+      "A state matrix \\(S\\) lists how many are in each state. The next state matrix is \\(T \\times S\\).",
+      "Example: \\(T = \\begin{bmatrix} 0.8 & 0.3 \\\\ 0.2 & 0.7 \\end{bmatrix}\\) and \\(S = \\begin{bmatrix} 100 \\\\ 50 \\end{bmatrix}\\). The top entry of \\(T \\times S\\) is \\(0.8 \\times 100 + 0.3 \\times 50\\), which is 95. The bottom entry is \\(0.2 \\times 100 + 0.7 \\times 50\\), which is 55. So \\(T \\times S = \\begin{bmatrix} 95 \\\\ 55 \\end{bmatrix}\\)."
     ],
-    "remember": "Read a column as where that state's members go next. T × S gives the next state.",
+    "remember": "Read a column as where that state's members go next. \\(T \\times S\\) gives the next state.",
     "a": {
-      "q": "Commuters in a city use the bus or the train. T = [0.8 0.3; 0.2 0.7] has rows and columns in the order bus, train. What does the 0.3 in row 1, column 2 mean?",
+      "q": "Commuters in a city use the bus or the train. \\(T = \\begin{bmatrix} 0.8 & 0.3 \\\\ 0.2 & 0.7 \\end{bmatrix}\\) has rows and columns in the order bus, train. What does the 0.3 in row 1, column 2 mean?",
       "opts": [
         "Chance a train user switches to the bus",
         "Chance a bus user switches to the train",
@@ -10126,10 +10220,10 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 2,
-      "q": "Two cafés share a town. This week 600 customers use Café A and 400 use Café B. T = [0.9 0.2; 0.1 0.8] has rows and columns in the order A, B. How many customers will use Café A next week?",
+      "q": "Two cafés share a town. This week 600 customers use Café A and 400 use Café B. \\(T = \\begin{bmatrix} 0.9 & 0.2 \\\\ 0.1 & 0.8 \\end{bmatrix}\\) has rows and columns in the order A, B. How many customers will use Café A next week?",
       "opts": ["620", "580", "540", "380"],
-      "why": "Café A next week = 0.9 × 600 + 0.2 × 400 = 540 + 80 = 620. The 580 comes from using 0.1 instead of 0.2, which reads the column instead of the row. The 380 is the number at Café B.",
-      "clue": "Multiply row 1 of T by the column of customer numbers."
+      "why": "Café A next week \\(= 0.9 \\times 600 + 0.2 \\times 400\\), which is \\(540 + 80 = 620\\). The 580 comes from using 0.1 instead of 0.2, which reads the column instead of the row. The 380 is the number at Café B.",
+      "clue": "Multiply row 1 of \\(T\\) by the column of customer numbers."
     }
   },
   "mat-steady-state": {
@@ -10138,7 +10232,7 @@ MADE_BANKS.mat = {
       "After many steps, a regular transition matrix gives a steady state. The number in each state stops changing, whatever the starting split was.",
       "People or items still move between states in a steady state. The numbers moving out of each state equal the numbers moving in, so the totals stay put.",
       "To find it, write that balance for one state and keep the total fixed. Example: each month 10% of A move to B and 20% of B move to A, with 900 in total.",
-      "Balance: 10% of A = 20% of B, so A = 2 × B. With A + B = 900, B = 300 and A = 600. Check: 60 leave A and 60 join it."
+      "Balance: 10% of \\(A\\) \\(=\\) 20% of \\(B\\), so \\(A = 2 \\times B\\). With \\(A + B = 900\\), \\(B = 300\\) and \\(A = 600\\). Check: 60 leave A and 60 join it."
     ],
     "remember": "In a steady state the numbers stop changing because movement out equals movement in.",
     "a": {
@@ -10156,31 +10250,36 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Each month, 20% of train users in a town switch to the bus, and 30% of bus users switch to the train. The others stay. Of 1000 commuters, 100 use the train and 900 use the bus at the start. In the long run, how many use the train?",
       "opts": ["600", "400", "500", "800"],
-      "why": "At the steady state, 20% of train users = 30% of bus users, so train : bus = 3 : 2. Of 1000 commuters, that is 600 train and 400 bus. The starting split does not change the steady state, and 400 is the bus figure.",
+      "why": "At the steady state, 20% of train users \\(=\\) 30% of bus users, so train \\(:\\) bus \\(= 3 : 2\\). Of 1000 commuters, that is 600 train and 400 bus. The starting split does not change the steady state, and 400 is the bus figure.",
       "clue": "Balance the numbers switching each way. The starting split does not matter."
     }
   },
   "mat-matrix-recurrence-relations": {
     "title": "Matrix recurrence relations",
     "card": [
-      "A matrix recurrence relation builds each state matrix from the one before it. S(n+1) = T × S(n), where S(0) is the starting state matrix.",
-      "To find S(1), work out T × S(0). To find S(2), work out T × S(1). The matrix T always comes first in the product.",
-      "A column matrix B can be added at each step: S(n+1) = T × S(n) + B. Work out the product first, then add B. Add matching entries, so each row gains its own entry of B.",
-      "Example: T = [0.5 0.5; 0.5 0.5], S(0) = [40; 20]. S(1) = T × S(0) = [30; 30]. S(2) = T × S(1) = [30; 30]."
+      "A matrix recurrence relation builds each state matrix from the one before it. \\(S_{n+1} = TS_{n}\\), where \\(S_{0}\\) is the starting state matrix.",
+      "To find \\(S_{1}\\), work out \\(TS_{0}\\). To find \\(S_{2}\\), work out \\(TS_{1}\\). The matrix \\(T\\) always comes first in the product.",
+      "A column matrix \\(B\\) can be added at each step: \\(S_{n+1} = TS_{n} + B\\). Work out the product first, then add \\(B\\). Add matching entries, so each row gains its own entry of \\(B\\).",
+      "Example: \\(T = \\begin{bmatrix} 0.5 & 0.5 \\\\ 0.5 & 0.5 \\end{bmatrix}\\), \\(S_{0} = \\begin{bmatrix} 40 \\\\ 20 \\end{bmatrix}\\). \\(S_{1} = TS_{0} = \\begin{bmatrix} 30 \\\\ 30 \\end{bmatrix}\\). \\(S_{2} = TS_{1} = \\begin{bmatrix} 30 \\\\ 30 \\end{bmatrix}\\)."
     ],
-    "remember": "Each state matrix comes from the one just before it: multiply by T, then add any column.",
+    "remember": "Each state matrix comes from the one just before it: multiply by \\(T\\), then add any column.",
     "a": {
-      "q": "A recurrence relation is S(n+1) = T × S(n). Which calculation gives S(2)?",
-      "opts": ["T × S(1)", "T × S(0)", "S(1) × T", "T × T × S(1)"],
-      "why": "Each state matrix comes from the one before it, so S(2) comes from S(1), with T written first. T × S(0) would give S(1) instead.",
-      "clue": "S(2) is built from the state matrix just before it."
+      "q": "A recurrence relation is \\(S_{n+1} = TS_{n}\\). Which calculation gives \\(S_{2}\\)?",
+      "opts": ["\\(TS_{1}\\)", "\\(TS_{0}\\)", "\\(S_{1}T\\)", "\\(T^{2}S_{1}\\)"],
+      "why": "Each state matrix comes from the one before it, so \\(S_{2}\\) comes from \\(S_{1}\\), with \\(T\\) written first. \\(TS_{0}\\) would give \\(S_{1}\\) instead.",
+      "clue": "\\(S_{2}\\) is built from the state matrix just before it."
     },
     "b": {
       "d": 3,
-      "q": "A fish pond has S(n+1) = T × S(n) + B, with T = [0.8 0.3; 0.2 0.7], B = [10; 0] and S(0) = [200; 100]. What is S(1)?",
-      "opts": ["[200; 110]", "[190; 110]", "[198; 112]", "[200; 120]"],
-      "why": "T × S(0) = [0.8×200 + 0.3×100; 0.2×200 + 0.7×100] = [190; 110]. Adding B = [10; 0] entry by entry gives [200; 110]. The option [190; 110] leaves out B, [198; 112] adds B before multiplying, and [200; 120] adds 10 to both rows instead of 10 and 0.",
-      "clue": "Multiply by T first, then add each entry of B to its matching row."
+      "q": "A fish pond has \\(S_{n+1} = TS_{n} + B\\), with \\(T = \\begin{bmatrix} 0.8 & 0.3 \\\\ 0.2 & 0.7 \\end{bmatrix}\\), \\(B = \\begin{bmatrix} 10 \\\\ 0 \\end{bmatrix}\\) and \\(S_{0} = \\begin{bmatrix} 200 \\\\ 100 \\end{bmatrix}\\). What is \\(S_{1}\\)?",
+      "opts": [
+        "\\(\\begin{bmatrix} 200 \\\\ 110 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 190 \\\\ 110 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 198 \\\\ 112 \\end{bmatrix}\\)",
+        "\\(\\begin{bmatrix} 200 \\\\ 120 \\end{bmatrix}\\)"
+      ],
+      "why": "\\(TS_{0} = \\begin{bmatrix} 0.8 \\times 200 + 0.3 \\times 100 \\\\ 0.2 \\times 200 + 0.7 \\times 100 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 190 \\\\ 110 \\end{bmatrix}\\). Adding \\(B = \\begin{bmatrix} 10 \\\\ 0 \\end{bmatrix}\\) entry by entry gives \\(\\begin{bmatrix} 200 \\\\ 110 \\end{bmatrix}\\). The option \\(\\begin{bmatrix} 190 \\\\ 110 \\end{bmatrix}\\) leaves out \\(B\\), \\(\\begin{bmatrix} 198 \\\\ 112 \\end{bmatrix}\\) adds \\(B\\) before multiplying, and \\(\\begin{bmatrix} 200 \\\\ 120 \\end{bmatrix}\\) adds 10 to both rows instead of 10 and 0.",
+      "clue": "Multiply by \\(T\\) first, then add each entry of \\(B\\) to its matching row."
     }
   },
   "mat-leslie-matrices": {
@@ -10188,12 +10287,12 @@ MADE_BANKS.mat = {
     "card": [
       "A Leslie matrix models a population split into age groups. The state matrix lists the number in each age group, youngest first.",
       "The top row holds birth rates: the average number of young born to each member of an age group. Entries just below the main diagonal hold survival rates: the proportion of one age group that moves up to the next. All other entries are 0.",
-      "The next population is L × S, found by matrix multiplication, as with a transition matrix. Add the groups to get the total population.",
-      "Example: L = [0 2; 0.5 0] and S = [100; 40]. L × S = [0×100 + 2×40; 0.5×100 + 0×40] = [80; 50]."
+      "The next population is \\(L \\times S\\), found by matrix multiplication, as with a transition matrix. Add the groups to get the total population.",
+      "Example: \\(L = \\begin{bmatrix} 0 & 2 \\\\ 0.5 & 0 \\end{bmatrix}\\) and \\(S = \\begin{bmatrix} 100 \\\\ 40 \\end{bmatrix}\\). Then \\(L \\times S = \\begin{bmatrix} 0 \\times 100 + 2 \\times 40 \\\\ 0.5 \\times 100 + 0 \\times 40 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 80 \\\\ 50 \\end{bmatrix}\\)."
     ],
     "remember": "Top row: births. Below the diagonal: survival to the next age group.",
     "a": {
-      "q": "A Leslie matrix is L = [0 2 1; 0.5 0 0; 0 0.4 0]. What does the 0.4 in row 3, column 2 mean?",
+      "q": "A Leslie matrix is \\(L = \\begin{bmatrix} 0 & 2 & 1 \\\\ 0.5 & 0 & 0 \\\\ 0 & 0.4 & 0 \\end{bmatrix}\\). What does the 0.4 in row 3, column 2 mean?",
       "opts": [
         "Proportion of age group 2 that survive into group 3",
         "Average births per member of age group 2",
@@ -10205,38 +10304,38 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 3,
-      "q": "A population has L = [0 1.5 1; 0.6 0 0; 0 0.5 0] and S = [80; 50; 20], with age groups youngest first. What is the total population after one step?",
+      "q": "A population has \\(L = \\begin{bmatrix} 0 & 1.5 & 1 \\\\ 0.6 & 0 & 0 \\\\ 0 & 0.5 & 0 \\end{bmatrix}\\) and \\(S = \\begin{bmatrix} 80 \\\\ 50 \\\\ 20 \\end{bmatrix}\\), with age groups youngest first. What is the total population after one step?",
       "opts": ["168", "150", "95", "73"],
-      "why": "Youngest = 1.5×50 + 1×20 = 95. Second = 0.6×80 = 48. Oldest = 0.5×50 = 25. The total is 95 + 48 + 25 = 168. The option 73 leaves out the new births, and 150 is the starting total.",
+      "why": "Youngest \\(= 1.5 \\times 50 + 1 \\times 20 = 95\\). Second \\(= 0.6 \\times 80 = 48\\). Oldest \\(= 0.5 \\times 50 = 25\\). The total is \\(95 + 48 + 25 = 168\\). The option 73 leaves out the new births, and 150 is the starting total.",
       "clue": "Work out all three groups, then add them."
     }
   },
   "mat-culling-restocking": {
     "title": "Culling and restocking",
     "card": [
-      "Culling removes animals from a population. Restocking adds animals to it. Both can be built into a matrix recurrence by using a matrix B.",
-      "The rule is S(n+1) = T × S(n) + B. Multiply by T first, then add B.",
-      "A positive entry in B restocks that state. A negative entry in B culls that state.",
-      "Example: T × S(0) = [70; 80] and B = [−10; 20]. Then S(1) = [70 − 10; 80 + 20] = [60; 100]."
+      "Culling removes animals from a population. Restocking adds animals to it. Both can be built into a matrix recurrence by using a matrix \\(B\\).",
+      "The rule is \\(S_{n+1} = TS_{n} + B\\). Multiply by \\(T\\) first, then add \\(B\\).",
+      "A positive entry in \\(B\\) restocks that state. A negative entry in \\(B\\) culls that state.",
+      "Example: \\(TS_{0} = \\begin{bmatrix} 70 \\\\ 80 \\end{bmatrix}\\) and \\(B = \\begin{bmatrix} -10 \\\\ 20 \\end{bmatrix}\\). Then \\(S_{1} = \\begin{bmatrix} 70 - 10 \\\\ 80 + 20 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 60 \\\\ 100 \\end{bmatrix}\\)."
     ],
-    "remember": "Multiply by T first, then add B: a negative entry culls and a positive entry restocks.",
+    "remember": "Multiply by \\(T\\) first, then add \\(B\\): a negative entry culls and a positive entry restocks.",
     "a": {
-      "q": "In S(n+1) = T × S(n) + B, what does a negative entry in B mean?",
+      "q": "In \\(S_{n+1} = TS_{n} + B\\), what does a negative entry in \\(B\\) mean?",
       "opts": [
         "Animals are culled from that state each step",
         "Animals are restocked into that state each step",
         "That state's chance of staying is negative",
         "That state is left out of the model"
       ],
-      "why": "B is added after the transition, so a negative entry takes that many away from the state. Restocking is the opposite, and it needs a positive entry.",
-      "clue": "B is added to the population, so a negative number takes away."
+      "why": "\\(B\\) is added after the transition, so a negative entry takes that many away from the state. Restocking is the opposite, and it needs a positive entry.",
+      "clue": "\\(B\\) is added to the population, so a negative number takes away."
     },
     "b": {
       "d": 3,
-      "q": "Deer live in a forest and on a plain. Each year, T × S gives the new numbers after moving, where T = [0.8 0.1; 0.2 0.9]. Then B = [−20; 50] is added. At the start S(0) = [300; 200]. What is S(1), as forest then plain?",
+      "q": "Deer live in a forest and on a plain. Each year, \\(TS_{n}\\) gives the new numbers after moving, where \\(T = \\begin{bmatrix} 0.8 & 0.1 \\\\ 0.2 & 0.9 \\end{bmatrix}\\). Then \\(B = \\begin{bmatrix} -20 \\\\ 50 \\end{bmatrix}\\) is added. At the start \\(S_{0} = \\begin{bmatrix} 300 \\\\ 200 \\end{bmatrix}\\). What is \\(S_{1}\\), as forest then plain?",
       "opts": ["240 and 290", "249 and 281", "280 and 190", "280 and 250"],
-      "why": "T × S(0) = [0.8×300 + 0.1×200; 0.2×300 + 0.9×200] = [260; 240]. Adding B gives [240; 290]. Adding B before multiplying by T gives 249 and 281, which is the wrong order.",
-      "clue": "Find T × S(0) first, then add B to the result."
+      "why": "\\(TS_{0} = \\begin{bmatrix} 0.8 \\times 300 + 0.1 \\times 200 \\\\ 0.2 \\times 300 + 0.9 \\times 200 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 260 \\\\ 240 \\end{bmatrix}\\). Adding \\(B\\) gives \\(\\begin{bmatrix} 240 \\\\ 290 \\end{bmatrix}\\). Adding \\(B\\) before multiplying by \\(T\\) gives 249 and 281, which is the wrong order.",
+      "clue": "Find \\(TS_{0}\\) first, then add \\(B\\) to the result."
     }
   },
   "mat-graph-terms": {
@@ -10345,25 +10444,25 @@ MADE_BANKS.mat = {
         "Tree",
         "a connected graph with no cycles. A cycle is a walk that starts and ends at the same vertex without repeating any other vertex or any edge."
       ],
-      "A tree with n vertices has exactly n − 1 edges. For example, a tree with 6 vertices has 5 edges.",
+      "A tree with \\(n\\) vertices has exactly \\(n - 1\\) edges. For example, a tree with 6 vertices has 5 edges.",
       [
         "Spanning tree",
         "a tree made from some of the edges of a connected graph. It reaches every vertex of that graph."
       ],
-      "Example: a connected graph has 5 vertices and 7 edges. Any spanning tree of it has 5 − 1 = 4 edges, so 7 − 4 = 3 edges are left out to break every cycle."
+      "Example: a connected graph has 5 vertices and 7 edges. Any spanning tree of it has \\(5 - 1 = 4\\) edges, so \\(7 - 4 = 3\\) edges are left out to break every cycle."
     ],
     "remember": "A tree is connected with no cycles, and it has one fewer edge than vertices.",
     "a": {
       "q": "Mia draws a connected graph with no cycles on 12 vertices. How many edges does her graph have?",
       "opts": ["11", "12", "13", "10"],
-      "why": "A connected graph with no cycles is a tree, and a tree with n vertices has n − 1 edges, so 12 − 1 = 11. The answer 12 is tempting, but a connected graph with 12 edges on 12 vertices would contain a cycle.",
+      "why": "A connected graph with no cycles is a tree, and a tree with \\(n\\) vertices has \\(n - 1\\) edges, so \\(12 - 1 = 11\\). The answer 12 is tempting, but a connected graph with 12 edges on 12 vertices would contain a cycle.",
       "clue": "No cycles and connected means it is a tree."
     },
     "b": {
       "d": 3,
       "q": "A connected graph has 8 vertices and 11 edges. How many edges must be removed to leave a spanning tree?",
       "opts": ["4", "3", "7", "10"],
-      "why": "A spanning tree reaches all 8 vertices, so it has 8 − 1 = 7 edges. Edges removed = 11 − 7 = 4. The answer 3 comes from taking 11 − 8, which forgets that a tree has one fewer edge than vertices.",
+      "why": "A spanning tree reaches all 8 vertices, so it has \\(8 - 1 = 7\\) edges. Edges removed \\(= 11 - 7 = 4\\). The answer 3 comes from taking \\(11 - 8\\), which forgets that a tree has one fewer edge than vertices.",
       "clue": "First find how many edges the spanning tree keeps."
     }
   },
@@ -10372,21 +10471,21 @@ MADE_BANKS.mat = {
     "card": [
       "A minimum spanning tree joins every vertex of a weighted graph using the smallest possible total weight. Prim's algorithm builds one step by step.",
       "Start at any vertex. Look at all the edges that join a vertex in the tree to a vertex not yet in the tree. Add the cheapest one.",
-      "Repeat until every vertex is in the tree. A graph with n vertices needs n − 1 edges. If two edges tie, either can be chosen, and the total weight is the same.",
-      "Example: edges AB = 4, AC = 2, BC = 3, BD = 5, CD = 6. Start at A and add AC (2). Then add BC (3), which brings in B. Then add BD (5), which brings in D. Total = 2 + 3 + 5 = 10."
+      "Repeat until every vertex is in the tree. A graph with \\(n\\) vertices needs \\(n - 1\\) edges. If two edges tie, either can be chosen, and the total weight is the same.",
+      "Example: edges AB \\(= 4\\), AC \\(= 2\\), BC \\(= 3\\), BD \\(= 5\\), CD \\(= 6\\). Start at A and add AC (2). Then add BC (3), which brings in B. Then add BD (5), which brings in D. Total \\(= 2 + 3 + 5 = 10\\)."
     ],
-    "remember": "Always add the cheapest edge that reaches a new vertex, and stop at n − 1 edges.",
+    "remember": "Always add the cheapest edge that reaches a new vertex, and stop at \\(n - 1\\) edges.",
     "a": {
-      "q": "A tree has A and C so far. Edges from the tree to new vertices are AB = 4, CB = 3, CD = 6. Which edge does Prim's algorithm add next?",
+      "q": "A tree has A and C so far. Edges from the tree to new vertices are AB \\(= 4\\), CB \\(= 3\\), CD \\(= 6\\). Which edge does Prim's algorithm add next?",
       "opts": ["CB, weight 3", "AB, weight 4", "CD, weight 6", "AC, weight 2"],
       "why": "Prim's algorithm adds the cheapest edge that joins a new vertex to the tree. Of the edges that reach B or D, CB at 3 is the smallest. AC cannot be chosen, even though its weight is 2, because both A and C are already in the tree.",
       "clue": "The edge must reach a vertex that is not yet in the tree."
     },
     "b": {
       "d": 3,
-      "q": "A network has edges PQ = 5, PR = 3, QR = 2, QS = 6, RS = 4, RT = 7, ST = 3. Using Prim's algorithm from P, what is the total weight of the minimum spanning tree?",
+      "q": "A network has edges PQ \\(= 5\\), PR \\(= 3\\), QR \\(= 2\\), QS \\(= 6\\), RS \\(= 4\\), RT \\(= 7\\), ST \\(= 3\\). Using Prim's algorithm from P, what is the total weight of the minimum spanning tree?",
       "opts": ["12", "15", "16", "17"],
-      "why": "From P add PR (3). Then QR (2), then RS (4), then ST (3). That is 4 edges for 5 vertices, and 3 + 2 + 4 + 3 = 12. A total of 15 comes from taking PQ (5) instead of QR (2) at the second step, but QR is cheaper and also brings in Q.",
+      "why": "From P add PR (3). Then QR (2), then RS (4), then ST (3). That is 4 edges for 5 vertices, and \\(3 + 2 + 4 + 3 = 12\\). A total of 15 comes from taking PQ (5) instead of QR (2) at the second step, but QR is cheaper and also brings in Q.",
       "clue": "At each step, list only the edges that reach a new vertex, then pick the smallest."
     }
   },
@@ -10394,7 +10493,7 @@ MADE_BANKS.mat = {
     "title": "Dijkstra's algorithm",
     "card": [
       "Dijkstra's algorithm finds the shortest path from one start vertex to every other vertex in a weighted network. The start gets the label 0. Every other vertex starts with no label.",
-      "Each step, fix the unvisited vertex with the smallest label. Then look at its neighbours. New label = fixed label + edge weight. Keep the new label only if it is smaller than the old one.",
+      "Each step, fix the unvisited vertex with the smallest label. Then look at its neighbours. New label \\(=\\) fixed label \\(+\\) edge weight. Keep the new label only if it is smaller than the old one.",
       [
         "Example",
         "Edges are A-B 4, A-C 2, C-B 1, B-D 5 and C-D 8. Fix A (0), so B gets 4 and C gets 2. Fix C (2): B drops from 4 to 3 via C, and D gets 10."
@@ -10417,7 +10516,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Four towns are joined by roads (in km): P-Q 7, P-R 3, R-Q 2, Q-S 4 and R-S 9. Using Dijkstra's algorithm from P, what is the shortest distance from P to S?",
       "opts": ["9 km", "11 km", "12 km", "5 km"],
-      "why": "Fix P (0). Then R gets 3 and Q gets 7. Fix R (3): Q drops to 5 via R, and S gets 12. Fix Q (5): S drops to 9, the path P-R-Q-S of 3 + 2 + 4. The 11 km answer comes from P-Q-S, which keeps the first label for Q and misses the cheaper route through R.",
+      "why": "Fix P (0). Then R gets 3 and Q gets 7. Fix R (3): Q drops to 5 via R, and S gets 12. Fix Q (5): S drops to 9, the path P-R-Q-S of \\(3 + 2 + 4\\). The 11 km answer comes from P-Q-S, which keeps the first label for Q and misses the cheaper route through R.",
       "clue": "Check whether going through R makes Q closer."
     }
   },
@@ -10735,7 +10834,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "For \\(f(x) = 2x^{2}\\), the chord from \\(x = 3\\) to \\(x = 3 + h\\) is used to find the rate at \\(x = 3\\). What is the instantaneous rate of change there?",
       "opts": ["12", "14", "18", "6"],
-      "why": "The chord gradient is \\((2(3 + h)^{2} - 18) \\div h = (12h + 2h^{2}) \\div h = 12 + 2h\\). As \\(h\\) gets close to 0, this gets close to 12. The value 14 is the chord gradient when \\(h = 1\\), which is not the limit.",
+      "why": "The chord gradient is \\((2(3 + h)^{2} - 18) \\div h\\), which is \\((12h + 2h^{2}) \\div h = 12 + 2h\\). As \\(h\\) gets close to 0, this gets close to 12. The value 14 is the chord gradient when \\(h = 1\\), which is not the limit.",
       "clue": "Work out \\(2(3 + h)^{2} - f(3)\\) first, and only then divide by \\(h\\)."
     }
   },
@@ -11632,7 +11731,7 @@ MADE_BANKS.mat = {
     "a": {
       "q": "\\(X\\) takes the values 1, 2, 3 with probabilities 0.2, 0.5, 0.3. What is \\(E(X)\\)?",
       "opts": ["2.1", "2", "4.9", "1.9"],
-      "why": "\\(E(X) = 1 \\times 0.2 + 2 \\times 0.5 + 3 \\times 0.3 = 0.2 + 1 + 0.9 = 2.1\\). Averaging the values 1, 2, 3 gives 2, which ignores the probabilities. 4.9 is \\(E(X^{2})\\), not \\(E(X)\\).",
+      "why": "\\(E(X) = 1 \\times 0.2 + 2 \\times 0.5 + 3 \\times 0.3\\), which is \\(0.2 + 1 + 0.9 = 2.1\\). Averaging the values 1, 2, 3 gives 2, which ignores the probabilities. 4.9 is \\(E(X^{2})\\), not \\(E(X)\\).",
       "clue": "Multiply each value by its own probability, then add."
     },
     "b": {
@@ -11984,7 +12083,7 @@ MADE_BANKS.mat = {
         "No, because it is odd, so no prime can divide it",
         "Yes, because adding 1 keeps every factor of the product"
       ],
-      "why": "The product \\(2 \\times 3 \\times 5 \\times 7 \\times 11 = 2310\\) is divisible by each of these primes, so 2311 leaves remainder 1 each time. Adding 1 breaks those factors rather than keeping them, and being odd only rules out 2. Numbers made this way are not always prime, since \\(2 \\times 3 \\times 5 \\times 7 \\times 11 \\times 13 + 1 = 30031 = 59 \\times 509\\), though 2311 happens to be prime.",
+      "why": "The product \\(2 \\times 3 \\times 5 \\times 7 \\times 11 = 2310\\) is divisible by each of these primes, so 2311 leaves remainder 1 each time. Adding 1 breaks those factors rather than keeping them, and being odd only rules out 2. Numbers made this way are not always prime, since \\(2 \\times 3 \\times 5 \\times 7 \\times 11 \\times 13 + 1\\) is \\(30031\\), which is \\(59 \\times 509\\). But 2311 happens to be prime.",
       "clue": "Divide the product part by each prime, then think about the extra 1."
     }
   },
@@ -14381,22 +14480,22 @@ MADE_BANKS.mat = {
     "card": [
       "A graph is planar if it can be drawn on a flat page with no edges crossing. Edges may only meet at vertices.",
       "A planar graph divides the page into regions called faces. The area outside the graph also counts as one face.",
-      "For a connected planar graph, v − e + f = 2. Here v is the number of vertices, e the number of edges and f the number of faces.",
-      "Example: a triangle has v = 3 and e = 3. Its faces are the inside and the outside, so f = 2. Check: 3 − 3 + 2 = 2."
+      "For a connected planar graph, \\(v - e + f = 2\\). Here \\(v\\) is the number of vertices, \\(e\\) the number of edges and \\(f\\) the number of faces.",
+      "Example: a triangle has \\(v = 3\\) and \\(e = 3\\). Its faces are the inside and the outside, so \\(f = 2\\). Check: \\(3 - 3 + 2 = 2\\)."
     ],
-    "remember": "For a connected planar graph, vertices − edges + faces = 2, and the outside counts as a face.",
+    "remember": "For a connected planar graph, vertices \\(-\\) edges \\(+\\) faces \\(= 2\\), and the outside counts as a face.",
     "a": {
       "q": "A connected planar graph has 6 vertices and 9 edges. How many faces does it have?",
       "opts": ["5", "3", "1", "17"],
-      "why": "v − e + f = 2, so 6 − 9 + f = 2. This gives f − 3 = 2, so f = 5. Choosing 3 comes from working out 9 − 6 and leaving out the 2 on the right side.",
-      "clue": "Put v and e into v − e + f = 2, then solve for f."
+      "why": "\\(v - e + f = 2\\), so \\(6 - 9 + f = 2\\). This gives \\(f - 3 = 2\\), so \\(f = 5\\). Choosing 3 comes from working out \\(9 - 6\\) and leaving out the 2 on the right side.",
+      "clue": "Put \\(v\\) and \\(e\\) into \\(v - e + f = 2\\), then solve for \\(f\\)."
     },
     "b": {
       "d": 3,
       "q": "A connected planar graph has 8 faces and 12 edges. How many vertices does it have?",
       "opts": ["6", "18", "2", "8"],
-      "why": "v − e + f = 2, so v − 12 + 8 = 2. This gives v − 4 = 2, so v = 6. Choosing 18 comes from writing v = e + f − 2, which mixes up the signs of e and f: 12 + 8 − 2 = 18.",
-      "clue": "Write the formula with e = 12 and f = 8, then find v."
+      "why": "\\(v - e + f = 2\\), so \\(v - 12 + 8 = 2\\). This gives \\(v - 4 = 2\\), so \\(v = 6\\). Choosing 18 comes from writing \\(v = e + f - 2\\), which mixes up the signs of \\(e\\) and \\(f\\): \\(12 + 8 - 2 = 18\\).",
+      "clue": "Write the formula with \\(e = 12\\) and \\(f = 8\\), then find \\(v\\)."
     }
   },
   "mat-walks-trails-paths-circuits": {
@@ -14438,7 +14537,7 @@ MADE_BANKS.mat = {
   "mat-trees-minimum-spanning-trees": {
     "title": "Trees and minimum spanning trees",
     "card": [
-      ["Tree", "a connected graph with no cycles. A tree with v vertices always has v − 1 edges."],
+      ["Tree", "a connected graph with no cycles. A tree with \\(v\\) vertices always has \\(v - 1\\) edges."],
       [
         "Spanning tree",
         "a tree that reaches every vertex of a connected graph, using only edges from that graph. A weighted graph can have many spanning trees."
@@ -14447,20 +14546,20 @@ MADE_BANKS.mat = {
         "Minimum spanning tree",
         "the spanning tree with the smallest total weight. Use Prim's algorithm: start at any vertex, then keep adding the lightest edge that joins a new vertex to the tree."
       ],
-      "Example: edges AB = 2, BC = 3, AC = 4 and CD = 5. Take AB (2), then BC (3), then CD (5). AC is skipped because it would make a cycle. Total weight = 2 + 3 + 5 = 10."
+      "Example: edges AB, BC, AC and CD have weights 2, 3, 4 and 5. Take AB (2), then BC (3), then CD (5). AC is skipped because it would make a cycle. Total weight \\(= 2 + 3 + 5 = 10\\)."
     ],
-    "remember": "A minimum spanning tree reaches every vertex with v − 1 edges and the least total weight.",
+    "remember": "A minimum spanning tree reaches every vertex with \\(v - 1\\) edges and the least total weight.",
     "a": {
       "q": "A connected graph has 7 vertices. How many edges does a spanning tree of this graph have?",
       "opts": ["6", "7", "8", "5"],
-      "why": "A tree with v vertices has v − 1 edges, so 7 − 1 = 6. Choosing 7 would mean one edge too many, and that edge would make a cycle.",
+      "why": "A tree with \\(v\\) vertices has \\(v - 1\\) edges, so \\(7 - 1 = 6\\). Choosing 7 would mean one edge too many, and that edge would make a cycle.",
       "clue": "Take one away from the number of vertices."
     },
     "b": {
       "d": 3,
       "q": "Roads join four towns: P to Q is 6 km, Q to R is 3 km, P to R is 5 km, R to S is 4 km and Q to S is 7 km. Cables must link all four towns using the least total length. What is that length?",
       "opts": ["12 km", "13 km", "14 km", "15 km"],
-      "why": "Start at Q and take QR (3), then RS (4), then PR (5). Total = 3 + 4 + 5 = 12 km. Adding PQ (6) or QS (7) would make a cycle. Picking 13 km comes from taking PQ (6) instead of PR (5), which is heavier.",
+      "why": "Start at Q and take QR (3), then RS (4), then PR (5). Total \\(= 3 + 4 + 5 = 12\\) km. Adding PQ (6) or QS (7) would make a cycle. Picking 13 km comes from taking PQ (6) instead of PR (5), which is heavier.",
       "clue": "A tree on 4 towns uses 3 roads. Add the lightest edge that reaches a new town each time."
     }
   },
@@ -14500,7 +14599,7 @@ MADE_BANKS.mat = {
     "title": "Smoothing with moving means",
     "card": [
       "Smoothing replaces each value in a time series with the mean of it and the values next to it. This evens out short-term ups and downs so the overall pattern is easier to see.",
-      "For a 3-point moving mean, average a value with the one before and the one after. Example: for 10, 14, 12, the smoothed middle value is (10 + 14 + 12) ÷ 3 = 12.",
+      "For a 3-point moving mean, average a value with the one before and the one after. Example: for 10, 14, 12, the smoothed middle value is \\(\\frac{10 + 14 + 12}{3} = 12\\).",
       "An odd-point mean lines up with a real data point. Values without a full set of neighbours get no smoothed value: the first and last for a 3-point mean, the first two and last two for a 5-point mean.",
       "An even-point mean, such as 4-point, falls halfway between two time points. Centre it by averaging two neighbouring 4-point means. The result lines up with a real time point."
     ],
@@ -14508,14 +14607,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "A 3-point moving mean is used on the values 8, 11, 17, 14. What is the smoothed value for the second point?",
       "opts": ["12", "11", "14", "9.5"],
-      "why": "The second point is averaged with its neighbours: (8 + 11 + 17) ÷ 3 = 36 ÷ 3 = 12. Answering 14 smooths the third point instead: (11 + 17 + 14) ÷ 3 = 14.",
+      "why": "The second point is averaged with its neighbours: \\(\\frac{8 + 11 + 17}{3} = \\frac{36}{3} = 12\\). Answering 14 smooths the third point instead: \\(\\frac{11 + 17 + 14}{3} = 14\\).",
       "clue": "Add the second value and the two beside it, then divide by 3."
     },
     "b": {
       "d": 3,
       "q": "Sales at a kiosk in Ballarat are 20, 26, 22, 28, 30 in five time periods. A 4-point moving mean gives 24 (between periods 2 and 3) and 26.5 (between periods 3 and 4). What is the centred 4-point mean for period 3?",
       "opts": ["25.25", "24", "26.5", "50.5"],
-      "why": "Centre it by averaging the two 4-point means: (24 + 26.5) ÷ 2 = 25.25. Giving 50.5 adds the two means but forgets to divide by 2.",
+      "why": "Centre it by averaging the two 4-point means: \\(\\frac{24 + 26.5}{2} = 25.25\\). Giving 50.5 adds the two means but forgets to divide by 2.",
       "clue": "Average the two means that sit either side of period 3."
     }
   },
@@ -14574,15 +14673,15 @@ MADE_BANKS.mat = {
     "title": "Deseasonalising data",
     "card": [
       "Seasonal effects can hide the trend. Deseasonalising removes them so we can see whether values are really rising or falling.",
-      "To deseasonalise, divide each value by the seasonal index for its season. Deseasonalised value = actual value ÷ seasonal index.",
-      "Example: sales are 120 in a season with index 1.2. The deseasonalised value is 120 ÷ 1.2 = 100. This is what sales would be in an average season.",
-      "A season with an index below 1 gets adjusted upwards. Sales of 72 with index 0.8 give 72 ÷ 0.8 = 90."
+      "To deseasonalise, divide each value by the seasonal index for its season. Deseasonalised value \\(=\\) actual value \\(\\div\\) seasonal index.",
+      "Example: sales are 120 in a season with index 1.2. The deseasonalised value is \\(120 \\div 1.2 = 100\\). This is what sales would be in an average season.",
+      "A season with an index below 1 gets adjusted upwards. Sales of 72 with index 0.8 give \\(72 \\div 0.8 = 90\\)."
     ],
     "remember": "Divide by the seasonal index to take the season out and reveal the trend.",
     "a": {
       "q": "Ice cream sales in Cairns are 150 boxes in a quarter with a seasonal index of 1.25. What is the deseasonalised value?",
       "opts": ["120", "187.5", "148.75", "151.25"],
-      "why": "Deseasonalised value = 150 ÷ 1.25 = 120. Multiplying gives 187.5, which adds the seasonal effect instead of removing it.",
+      "why": "Deseasonalised value \\(= 150 \\div 1.25 = 120\\). Multiplying gives 187.5, which adds the seasonal effect instead of removing it.",
       "clue": "Removing a season's effect means dividing, not multiplying."
     },
     "b": {
@@ -14594,7 +14693,7 @@ MADE_BANKS.mat = {
         "147, below the 210 actually sold",
         "147, above the 210 actually sold"
       ],
-      "why": "210 ÷ 0.70 = 300. The month is below average, so removing the season raises the value above 210. The 147 comes from multiplying by 0.70 instead.",
+      "why": "\\(210 \\div 0.70 = 300\\). The month is below average, so removing the season raises the value above 210. The 147 comes from multiplying by 0.70 instead.",
       "clue": "An index below 1 means the month was weaker than average."
     }
   },
@@ -14604,20 +14703,20 @@ MADE_BANKS.mat = {
       "Seasonal data has a repeating pattern that can hide the trend. To forecast, start with the deseasonalised data, where the seasonal effect has been taken out.",
       "Fit a least squares line to the deseasonalised data, with time as the explanatory variable. Substitute the future time period to predict a deseasonalised value.",
       "Then reseasonalise by multiplying the prediction by the seasonal index for that season. This puts the seasonal pattern back.",
-      "Example: the line gives 200 for a quarter with index 1.2. The forecast is 200 × 1.2 = 240."
+      "Example: the line gives 200 for a quarter with index 1.2. The forecast is \\(200 \\times 1.2 = 240\\)."
     ],
     "remember": "Predict from the line, then multiply by the seasonal index.",
     "a": {
       "q": "A least squares line fitted to deseasonalised data predicts 150 for a season with seasonal index 0.8. What is the forecast?",
       "opts": ["120", "187.5", "150", "149.2"],
-      "why": "Reseasonalising means multiplying: 150 × 0.8 = 120. Dividing gives 187.5, which does the reverse of putting the season back. Leaving 150 skips the reseasonalising step.",
+      "why": "Reseasonalising means multiplying: \\(150 \\times 0.8 = 120\\). Dividing gives 187.5, which does the reverse of putting the season back. Leaving 150 skips the reseasonalising step.",
       "clue": "Putting the season back means multiplying."
     },
     "b": {
       "d": 3,
-      "q": "A café in Mildura has the deseasonalised line sales = 400 + 12t. For t = 10, the seasonal index is 1.25. What is the forecast?",
+      "q": "A café in Mildura has the deseasonalised line sales \\(= 400 + 12t\\). For \\(t = 10\\), the seasonal index is 1.25. What is the forecast?",
       "opts": ["650", "416", "520", "550"],
-      "why": "The line gives 400 + 12 × 10 = 520. Multiply the whole prediction by the index: 520 × 1.25 = 650. Stopping at 520 skips reseasonalising, and 550 comes from multiplying only the 12t part by the index.",
+      "why": "The line gives \\(400 + 12 \\times 10 = 520\\). Multiply the whole prediction by the index: \\(520 \\times 1.25 = 650\\). Stopping at 520 skips reseasonalising, and 550 comes from multiplying only the \\(12t\\) part by the index.",
       "clue": "Find the line's full value first, then adjust for the season."
     }
   },
@@ -14627,25 +14726,25 @@ MADE_BANKS.mat = {
       "A bipartite graph has two groups, such as workers and tasks, with edges only between the groups. A cost table shows the same thing. Each worker gets exactly one task, and the aim is the least total cost.",
       "Subtract the smallest number in each row from every number in that row. Then subtract the smallest number in each column from every number in that column. This makes zeros.",
       "Cover all the zeros with as few lines as possible. If the number of lines equals the number of rows, assign using the zeros. If there are fewer lines, subtract the smallest uncovered number from every uncovered number, add it to numbers covered twice, and cover again.",
-      "Example: workers A, B, C cost 9, 7, 8 / 6, 5, 9 / 8, 4, 6 for tasks 1, 2, 3. Both steps give 1, 0, 0 / 0, 0, 3 / 3, 0, 1, which needs 3 lines. C has one zero, so C does task 2, B does 1 and A does 3. Add the original costs: 8 + 6 + 4 = 18."
+      "Example: workers A, B, C (rows) cost \\(\\begin{bmatrix} 9 & 7 & 8 \\\\ 6 & 5 & 9 \\\\ 8 & 4 & 6 \\end{bmatrix}\\) for tasks 1, 2, 3 (columns). Both steps give \\(\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 0 & 3 \\\\ 3 & 0 & 1 \\end{bmatrix}\\), which needs 3 lines. C has one zero, so C does task 2, B does 1 and A does 3. Add the original costs: \\(8 + 6 + 4 = 18\\)."
     ],
     "remember": "Reduce rows then columns, cover the zeros, and assign only when the lines equal the rows.",
     "a": {
       "q": "The first row of a cost table is 12, 9, 15. What does this row become after the row step?",
-      "opts": ["3, 0, 6", "-3, -6, 0", "0, -3, 3", "12, 0, 15"],
+      "opts": ["3, 0, 6", "\\(-3, -6, 0\\)", "\\(0, -3, 3\\)", "12, 0, 15"],
       "why": "The smallest number in the row is 9, so subtract 9 from every number: 3, 0, 6. Changing only the smallest number to zero is tempting, but every number in the row must change.",
       "clue": "Find the smallest number in the row, then subtract it from all three."
     },
     "b": {
       "d": 3,
-      "q": "After reducing rows and columns, a 3×3 table has all its zeros covered by 2 lines. What happens next?",
+      "q": "After reducing rows and columns, a \\(3 \\times 3\\) table has all its zeros covered by 2 lines. What happens next?",
       "opts": [
         "Adjust the table using the smallest uncovered number",
         "Assign using the zeros, as the table is now optimal",
         "Add a dummy row of zeros and cover again",
         "Reduce the rows again and then stop"
       ],
-      "why": "A 3×3 table needs 3 lines before an assignment can be made. With only 2 lines, subtract the smallest uncovered number from the uncovered numbers, add it to those covered twice, then cover again. Assigning now is tempting because zeros exist, but there are not enough of them in the right places.",
+      "why": "A \\(3 \\times 3\\) table needs 3 lines before an assignment can be made. With only 2 lines, subtract the smallest uncovered number from the uncovered numbers, add it to those covered twice, then cover again. Assigning now is tempting because zeros exist, but there are not enough of them in the right places.",
       "clue": "Compare the number of lines with the number of rows."
     }
   },
@@ -14687,22 +14786,22 @@ MADE_BANKS.mat = {
     "title": "Earliest and latest start times",
     "card": [
       "The earliest start time (EST) is the soonest an activity can begin. Scan forward from the start, where the first activities have EST 0.",
-      "EST of an activity = the largest of (EST + duration) over all its predecessors. It must wait for the one that finishes last.",
+      "EST of an activity \\(=\\) the largest of (EST \\(+\\) duration) over all its predecessors. It must wait for the one that finishes last.",
       "The latest start time (LST) is the last time an activity can begin without delaying the project. Scan backward from the finish, which is the project time.",
-      "LST = the smallest LST of its successors − its own duration. Example: A (3 days) then B (4) and C (2), then D (5). D has EST 7, so the project takes 12 days and D has LST 12 − 5 = 7."
+      "LST \\(=\\) the smallest LST of its successors \\(-\\) its own duration. Example: A (3 days) then B (4) and C (2), then D (5). D has EST 7, so the project takes 12 days and D has LST \\(12 - 5 = 7\\)."
     ],
     "remember": "Forward scan: take the largest. Backward scan: take the smallest, then subtract.",
     "a": {
       "q": "P (4 days) and Q (6 days) have no predecessors. R (3 days) needs P. S (5 days) needs P and Q. What is the EST of S?",
       "opts": ["6", "4", "10", "11"],
-      "why": "S cannot start until both P and Q are done. P finishes at 0 + 4 = 4 and Q finishes at 0 + 6 = 6, so the largest is 6. Taking 4 ignores that Q is still running.",
+      "why": "S cannot start until both P and Q are done. P finishes at \\(0 + 4 = 4\\) and Q finishes at \\(0 + 6 = 6\\), so the largest is 6. Taking 4 ignores that Q is still running.",
       "clue": "S waits for whichever predecessor finishes last."
     },
     "b": {
       "d": 3,
       "q": "A (2 days) has no predecessors. B (5 days) and C (3 days) both need A. D (4 days) needs B and C. The project takes 11 days. What is the LST of C?",
       "opts": ["4", "2", "5", "8"],
-      "why": "D must start by 11 − 4 = 7. C takes 3 days, so its LST is 7 − 3 = 4. The value 8 comes from forgetting that D takes time, and 2 is C's earliest start.",
+      "why": "D must start by \\(11 - 4 = 7\\). C takes 3 days, so its LST is \\(7 - 3 = 4\\). The value 8 comes from forgetting that D takes time, and 2 is C's earliest start.",
       "clue": "Work back from the finish, finding D's LST first."
     }
   },
@@ -14978,28 +15077,28 @@ MADE_BANKS.mat = {
   "mat-exact-values-approximations": {
     "title": "Exact values and approximations",
     "card": [
-      "An exact value is written precisely, such as √2, π or 9π. The decimals of √2 and π go on forever without repeating, so no decimal can write them exactly.",
-      "A decimal such as 1.414 is only an approximation of √2. Check: 1.414² = 1.999396, not 2. We write √2 ≈ 1.414, where ≈ means is approximately equal to.",
-      "A circle with radius 3 has area π × 3² = 9π. This is exact. 28.27 is an approximation of it.",
+      "An exact value is written precisely, such as \\(\\sqrt{2}\\), \\(\\pi\\) or \\(9\\pi\\). The decimals of \\(\\sqrt{2}\\) and \\(\\pi\\) go on forever without repeating, so no decimal can write them exactly.",
+      "A decimal such as 1.414 is only an approximation of \\(\\sqrt{2}\\). Check: \\(1.414^{2} = 1.999396\\), not 2. We write \\(\\sqrt{2} \\approx 1.414\\), where \\(\\approx\\) means is approximately equal to.",
+      "A circle with radius 3 has area \\(\\pi \\times 3^{2} = 9\\pi\\). This is exact. 28.27 is an approximation of it.",
       "Leave an answer in exact form when asked, and use a decimal only when an approximate value is wanted."
     ],
     "remember": "An exact value is kept as it is. A decimal is only an approximation of it.",
     "a": {
       "q": "Which is the exact area of a circle with radius 4?",
-      "opts": ["16π", "50.27", "50.3", "50"],
-      "why": "The area is π × 4² = 16π, which is kept as it is. The other three are decimals that only approximate 16π, which is about 50.265.",
+      "opts": ["\\(16\\pi\\)", "50.27", "50.3", "50"],
+      "why": "The area is \\(\\pi \\times 4^{2} = 16\\pi\\), which is kept as it is. The other three are decimals that only approximate \\(16\\pi\\), which is about 50.265.",
       "clue": "Which answer has no rounding in it?"
     },
     "b": {
       "d": 2,
-      "q": "Mia says the diagonal of a square with side 1 is 1.41. The exact diagonal is √2. Which statement is correct?",
+      "q": "Mia says the diagonal of a square with side 1 is 1.41. The exact diagonal is \\(\\sqrt{2}\\). Which statement is correct?",
       "opts": [
-        "1.41 is an approximation of the exact value √2",
+        "1.41 is an approximation of the exact value \\(\\sqrt{2}\\)",
         "1.41 is exact because the decimal stops after 2 places",
-        "√2 is an approximation of the exact value 1.41",
-        "1.41 and √2 are equal, so Mia has given the exact value"
+        "\\(\\sqrt{2}\\) is an approximation of the exact value 1.41",
+        "1.41 and \\(\\sqrt{2}\\) are equal, so Mia has given the exact value"
       ],
-      "why": "√2 is the exact value, and 1.41 is a rounded decimal close to it. Check: 1.41² = 1.9881, not 2. A decimal that stops is still not equal to √2.",
+      "why": "\\(\\sqrt{2}\\) is the exact value, and 1.41 is a rounded decimal close to it. Check: \\(1.41^{2} = 1.9881\\), not 2. A decimal that stops is still not equal to \\(\\sqrt{2}\\).",
       "clue": "Square 1.41 and see if you get exactly 2."
     }
   },
@@ -15040,110 +15139,118 @@ MADE_BANKS.mat = {
     "title": "How measurement errors affect results",
     "card": [
       "A measured length can be a little different from the actual length. This is a measurement error.",
-      "When the length is used in a calculation, the error grows. Area of a square = side × side, so the error is carried into both sides.",
-      "Example: a square has an actual side of 21 cm, but it is measured as 20 cm. The side is out by 1 cm. The area is 441 cm² actual and 400 cm² measured, so it is out by 41 cm².",
-      "Volume of a cube = edge × edge × edge, so a small error in the edge grows even more. Work out both results, then subtract."
+      "When the length is used in a calculation, the error grows. Area of a square \\(=\\) side \\(\\times\\) side, so the error is carried into both sides.",
+      "Example: a square has an actual side of 21 cm, but it is measured as 20 cm. The side is out by 1 cm. The area is \\(441 \\text{ cm}^{2}\\) actual and \\(400 \\text{ cm}^{2}\\) measured, so it is out by \\(41 \\text{ cm}^{2}\\).",
+      "Volume of a cube \\(=\\) edge \\(\\times\\) edge \\(\\times\\) edge, so a small error in the edge grows even more. Work out both results, then subtract."
     ],
     "remember": "A small error in a length becomes a larger error in area or volume.",
     "a": {
       "q": "Ava measures a square tile's side as 12 cm, but it is actually 13 cm. By how much is her area out?",
-      "opts": ["25 cm²", "1 cm²", "2 cm²", "24 cm²"],
-      "why": "The actual area is 13² = 169 cm² and the measured area is 12² = 144 cm². The difference is 25 cm². The side error of 1 cm does not stay at 1: it grows when the side is squared.",
+      "opts": ["\\(25 \\text{ cm}^{2}\\)", "\\(1 \\text{ cm}^{2}\\)", "\\(2 \\text{ cm}^{2}\\)", "\\(24 \\text{ cm}^{2}\\)"],
+      "why": "The actual area is \\(13^{2} = 169 \\text{ cm}^{2}\\) and the measured area is \\(12^{2} = 144 \\text{ cm}^{2}\\). The difference is \\(25 \\text{ cm}^{2}\\). The side error of 1 cm does not stay at 1: it grows when the side is squared.",
       "clue": "Find both areas, then subtract."
     },
     "b": {
       "d": 3,
       "q": "A cube's edge is measured as 10 cm, but it is actually 11 cm. By how much is the volume out?",
-      "opts": ["331 cm³", "1 cm³", "33 cm³", "300 cm³"],
-      "why": "The actual volume is 11³ = 1331 cm³ and the measured volume is 10³ = 1000 cm³. The difference is 331 cm³. A 1 cm error in the edge becomes a much larger error in volume.",
+      "opts": [
+        "\\(331 \\text{ cm}^{3}\\)",
+        "\\(1 \\text{ cm}^{3}\\)",
+        "\\(33 \\text{ cm}^{3}\\)",
+        "\\(300 \\text{ cm}^{3}\\)"
+      ],
+      "why": "The actual volume is \\(11^{3} = 1331 \\text{ cm}^{3}\\) and the measured volume is \\(10^{3} = 1000 \\text{ cm}^{3}\\). The difference is \\(331 \\text{ cm}^{3}\\). A 1 cm error in the edge becomes a much larger error in volume.",
       "clue": "Cube both edge lengths, then find the difference."
     }
   },
   "mat-simplifying-with-index-laws": {
     "title": "Simplifying with the index laws",
     "card": [
-      ["Multiply", "add the indices when the base is the same. x³ × x² = x⁵. Multiply the numbers in front as usual."],
+      [
+        "Multiply",
+        "add the indices when the base is the same. \\(x^{3} \\times x^{2} = x^{5}\\). Multiply the numbers in front as usual."
+      ],
       [
         "Divide",
-        "subtract the indices. x⁵ ÷ x² = x³. A negative index results when the power in the divisor is larger, so x² ÷ x⁵ = x⁻³. Divide the numbers in front as usual."
+        "subtract the indices. \\(x^{5} \\div x^{2} = x^{3}\\). A negative index results when the power in the divisor is larger, so \\(x^{2} \\div x^{5} = x^{-3}\\). Divide the numbers in front as usual."
       ],
       [
         "Power of a power",
-        "multiply the indices, and raise every factor inside the brackets to the power. (2x³)² = 2² × x⁶ = 4x⁶."
+        "multiply the indices, and raise every factor inside the brackets to the power. \\((2x^{3})^{2} = 2^{2} \\times x^{6} = 4x^{6}\\)."
       ],
       [
         "Worked example",
-        "(2x³y)² ÷ 4xy = 4x⁶y² ÷ 4xy. Divide the numbers: 4 ÷ 4 = 1. Subtract the indices: x⁶ ÷ x = x⁵ and y² ÷ y = y. The answer is x⁵y."
+        "\\((2x^{3}y)^{2} \\div 4xy = 4x^{6}y^{2} \\div 4xy\\). Divide the numbers: \\(4 \\div 4 = 1\\). Subtract the indices: \\(x^{6} \\div x = x^{5}\\) and \\(y^{2} \\div y = y\\). The answer is \\(x^{5}y\\)."
       ]
     ],
     "remember": "Work one base at a time: add indices to multiply, subtract to divide, multiply for a power of a power.",
     "a": {
-      "q": "Simplify (3x²)³",
-      "opts": ["27x⁶", "9x⁶", "27x⁵", "9x⁵"],
-      "why": "Cube every factor: 3³ = 27 and (x²)³ = x⁶, so the answer is 27x⁶. Writing 9 is tempting, but that multiplies 3 by 3 only, instead of cubing it.",
-      "clue": "The power applies to the 3 as well as to the x."
+      "q": "Simplify \\((3x^{2})^{3}\\)",
+      "opts": ["\\(27x^{6}\\)", "\\(9x^{6}\\)", "\\(27x^{5}\\)", "\\(9x^{5}\\)"],
+      "why": "Cube every factor: \\(3^{3} = 27\\) and \\((x^{2})^{3} = x^{6}\\), so the answer is \\(27x^{6}\\). Writing 9 is tempting, but that multiplies 3 by 3 only, instead of cubing it.",
+      "clue": "The power applies to the 3 as well as to the \\(x\\)."
     },
     "b": {
       "d": 3,
-      "q": "Simplify (4x⁵y)² ÷ 8x³y",
-      "opts": ["2x⁷y", "2x⁴y", "2x⁷y²", "8x⁷y"],
-      "why": "Squaring gives 16x¹⁰y². Then 16 ÷ 8 = 2, x¹⁰ ÷ x³ = x⁷ and y² ÷ y = y, so the answer is 2x⁷y. Leaving y² forgets to divide by the y, and 8x⁷y comes from squaring 4 as 4 × 2.",
+      "q": "Simplify \\((4x^{5}y)^{2} \\div 8x^{3}y\\)",
+      "opts": ["\\(2x^{7}y\\)", "\\(2x^{4}y\\)", "\\(2x^{7}y^{2}\\)", "\\(8x^{7}y\\)"],
+      "why": "Squaring gives \\(16x^{10}y^{2}\\). Then \\(16 \\div 8 = 2\\), \\(x^{10} \\div x^{3} = x^{7}\\) and \\(y^{2} \\div y = y\\), so the answer is \\(2x^{7}y\\). Leaving \\(y^{2}\\) forgets to divide by the \\(y\\), and \\(8x^{7}y\\) comes from subtracting the numbers, \\(16 - 8\\), instead of dividing them.",
       "clue": "Square everything in the brackets first, then divide."
     }
   },
   "mat-expanding-factorising-as-reverse": {
     "title": "Expanding and factorising as reverse processes",
     "card": [
-      "Expanding removes brackets by multiplying. For example, (x + 2)(x + 5) = x² + 5x + 2x + 10 = x² + 7x + 10.",
-      "Factorising goes the other way. It writes an expression as a product, so x² + 7x + 10 becomes (x + 2)(x + 5).",
+      "Expanding removes brackets by multiplying. For example, \\((x + 2)(x + 5) = x^{2} + 5x + 2x + 10\\), which is \\(x^{2} + 7x + 10\\).",
+      "Factorising goes the other way. It writes an expression as a product, so \\(x^{2} + 7x + 10\\) becomes \\((x + 2)(x + 5)\\).",
       "To check a factorised answer, expand it. If you get the original expression back, the factorising is right.",
-      "Example: x² − 9 = (x − 3)(x + 3). Check: (x − 3)(x + 3) = x² + 3x − 3x − 9 = x² − 9. The middle terms cancel, so the check works."
+      "Example: \\(x^{2} - 9 = (x - 3)(x + 3)\\). Check: \\((x - 3)(x + 3) = x^{2} + 3x - 3x - 9\\), which is \\(x^{2} - 9\\). The middle terms cancel, so the check works."
     ],
     "remember": "Expand to check a factorised answer. If you get the start back, it is right.",
     "a": {
-      "q": "Mia factorises x² − 25 as (x − 5)(x + 5). What is the best way to check her answer?",
+      "q": "Mia factorises \\(x^{2} - 25\\) as \\((x - 5)(x + 5)\\). What is the best way to check her answer?",
       "opts": [
-        "Expand (x − 5)(x + 5) and compare it with x² − 25",
-        "Factorise x² − 25 a second time in the same way",
-        "Substitute x = 0 into the brackets only",
-        "Add 5 and −5 to see if they make 0"
+        "Expand \\((x - 5)(x + 5)\\) and compare it with \\(x^{2} - 25\\)",
+        "Factorise \\(x^{2} - 25\\) a second time in the same way",
+        "Substitute \\(x = 0\\) into the brackets only",
+        "Add 5 and \\(-5\\) to see if they make 0"
       ],
-      "why": "Expanding undoes factorising, so it should give x² − 25 back: x² + 5x − 5x − 25 = x² − 25. Factorising again repeats the same step and does not test it. One value of x alone could match by chance.",
+      "why": "Expanding undoes factorising, so it should give \\(x^{2} - 25\\) back: \\(x^{2} + 5x - 5x - 25 = x^{2} - 25\\). Factorising again repeats the same step and does not test it. One value of \\(x\\) alone could match by chance.",
       "clue": "Use the reverse process."
     },
     "b": {
       "d": 3,
-      "q": "Liam factorises x² + 5x + 6 as (x + 1)(x + 6). Expanding his answer shows what?",
+      "q": "Liam factorises \\(x^{2} + 5x + 6\\) as \\((x + 1)(x + 6)\\). Expanding his answer shows what?",
       "opts": [
-        "It gives x² + 7x + 6, so his factorising is wrong",
-        "It gives x² + 5x + 6, so his factorising is right",
-        "It gives x² + 6x + 7, so his factorising is wrong",
-        "It gives x² + 7x + 6, so his factorising is right"
+        "It gives \\(x^{2} + 7x + 6\\), so his factorising is wrong",
+        "It gives \\(x^{2} + 5x + 6\\), so his factorising is right",
+        "It gives \\(x^{2} + 6x + 7\\), so his factorising is wrong",
+        "It gives \\(x^{2} + 7x + 6\\), so his factorising is right"
       ],
-      "why": "Expanding gives x² + 6x + x + 6 = x² + 7x + 6. This is not x² + 5x + 6, so the factorising is wrong. The constant term 6 matches, which is tempting, but the x term does not.",
-      "clue": "Check the x term as well as the number."
+      "why": "Expanding gives \\(x^{2} + 6x + x + 6 = x^{2} + 7x + 6\\). This is not \\(x^{2} + 5x + 6\\), so the factorising is wrong. The constant term 6 matches, which is tempting, but the \\(x\\) term does not.",
+      "clue": "Check the \\(x\\) term as well as the number."
     }
   },
   "mat-completing-square": {
     "title": "Completing the square",
     "card": [
-      "A monic quadratic has x² with a coefficient of 1, such as x² + 6x + 2. Completed square form looks like (x + p)² + q.",
-      "Take half the coefficient of x, then square it. Add that square and take it away, so the value of the expression does not change.",
-      "The x² term, the x term and the added square make a perfect square: x² + 6x + 9 = (x + 3)². Whatever is left over goes outside the bracket.",
-      "Example: x² + 6x + 2. Half of 6 is 3, and 3² = 9. So x² + 6x + 9 − 9 + 2 = (x + 3)² − 7."
+      "A monic quadratic has \\(x^{2}\\) with a coefficient of 1, such as \\(x^{2} + 6x + 2\\). Completed square form looks like \\((x + p)^{2} + q\\).",
+      "Take half the coefficient of \\(x\\), then square it. Add that square and take it away, so the value of the expression does not change.",
+      "The \\(x^{2}\\) term, the \\(x\\) term and the added square make a perfect square: \\(x^{2} + 6x + 9 = (x + 3)^{2}\\). Whatever is left over goes outside the bracket.",
+      "Example: \\(x^{2} + 6x + 2\\). Half of 6 is 3, and \\(3^{2} = 9\\). So \\(x^{2} + 6x + 9 - 9 + 2 = (x + 3)^{2} - 7\\)."
     ],
-    "remember": "Halve the x coefficient, square it, add it and take it away.",
+    "remember": "Halve the \\(x\\) coefficient, square it, add it and take it away.",
     "a": {
-      "q": "Which is x² + 10x + 3 in completed square form?",
-      "opts": ["(x + 5)² − 22", "(x + 5)² + 28", "(x + 10)² − 97", "(x + 5)² − 25"],
-      "why": "Half of 10 is 5, and 5² = 25. So x² + 10x + 25 − 25 + 3 = (x + 5)² − 22. Taking away 25 but forgetting to add the 3 gives (x + 5)² − 25, which is wrong.",
+      "q": "Which is \\(x^{2} + 10x + 3\\) in completed square form?",
+      "opts": ["\\((x + 5)^{2} - 22\\)", "\\((x + 5)^{2} + 28\\)", "\\((x + 10)^{2} - 97\\)", "\\((x + 5)^{2} - 25\\)"],
+      "why": "Half of 10 is 5, and \\(5^{2} = 25\\). So \\(x^{2} + 10x + 25 - 25 + 3 = (x + 5)^{2} - 22\\). Taking away 25 but forgetting to add the 3 gives \\((x + 5)^{2} - 25\\), which is wrong.",
       "clue": "Half of 10 goes inside the bracket. Then use its square."
     },
     "b": {
       "d": 3,
-      "q": "Mia writes x² − 8x + 5 in completed square form. What does she get?",
-      "opts": ["(x − 4)² − 11", "(x − 4)² + 21", "(x + 4)² − 11", "(x − 8)² − 59"],
-      "why": "Half of −8 is −4, and (−4)² = 16. So x² − 8x + 16 − 16 + 5 = (x − 4)² − 11. Using +21 comes from adding 16 instead of taking it away. Check by expanding: (x − 4)² − 11 = x² − 8x + 16 − 11 = x² − 8x + 5.",
+      "q": "Mia writes \\(x^{2} - 8x + 5\\) in completed square form. What does she get?",
+      "opts": ["\\((x - 4)^{2} - 11\\)", "\\((x - 4)^{2} + 21\\)", "\\((x + 4)^{2} - 11\\)", "\\((x - 8)^{2} - 59\\)"],
+      "why": "Half of \\(-8\\) is \\(-4\\), and \\((-4)^{2} = 16\\). So \\(x^{2} - 8x + 16 - 16 + 5 = (x - 4)^{2} - 11\\). Using \\(+21\\) comes from adding 16 instead of taking it away. Check by expanding: \\((x - 4)^{2} - 11\\) is \\(x^{2} - 8x + 16 - 11\\), which is \\(x^{2} - 8x + 5\\).",
       "clue": "Half of a negative number is still negative, and the bracket keeps that sign."
     }
   },
@@ -15178,51 +15285,51 @@ MADE_BANKS.mat = {
   "mat-solving-linear-inequalities": {
     "title": "Solving linear inequalities",
     "card": [
-      "An inequality compares two sides with <, >, ≤ or ≥. Its solution is a range of values, not one number.",
+      "An inequality compares two sides with \\(<\\), \\(>\\), \\(\\le\\) or \\(\\ge\\). Its solution is a range of values, not one number.",
       "Solve it like an equation. Do the same thing to both sides: add, subtract, multiply or divide.",
-      "If you multiply or divide both sides by a negative number, flip the sign. < becomes > and ≤ becomes ≥. Adding or subtracting never flips it.",
-      "Example: −2x < 6. Divide both sides by −2 and flip the sign, so x > −3. Check with x = 0: −2 × 0 = 0, and 0 < 6 is true."
+      "If you multiply or divide both sides by a negative number, flip the sign. \\(<\\) becomes \\(>\\) and \\(\\le\\) becomes \\(\\ge\\). Adding or subtracting never flips it.",
+      "Example: \\(-2x < 6\\). Divide both sides by \\(-2\\) and flip the sign, so \\(x > -3\\). Check with \\(x = 0\\): \\(-2 \\times 0 = 0\\), and \\(0 < 6\\) is true."
     ],
     "remember": "Solve as you would an equation, but flip the sign when you multiply or divide by a negative.",
     "a": {
-      "q": "Solve −3x ≥ 12.",
-      "opts": ["x ≤ −4", "x ≥ −4", "x ≤ 4", "x ≥ 4"],
-      "why": "Divide both sides by −3 and flip the sign, so x ≤ −4. The option x ≥ −4 divides correctly but forgets to flip the sign. Check x = −5: −3 × −5 = 15, and 15 ≥ 12 is true.",
+      "q": "Solve \\(-3x \\ge 12\\).",
+      "opts": ["\\(x \\le -4\\)", "\\(x \\ge -4\\)", "\\(x \\le 4\\)", "\\(x \\ge 4\\)"],
+      "why": "Divide both sides by \\(-3\\) and flip the sign, so \\(x \\le -4\\). The option \\(x \\ge -4\\) divides correctly but forgets to flip the sign. Check \\(x = -5\\): \\(-3 \\times (-5) = 15\\), and \\(15 \\ge 12\\) is true.",
       "clue": "Which way does the sign go after dividing by a negative?"
     },
     "b": {
       "d": 3,
-      "q": "Solve 5 − 2x > 11.",
-      "opts": ["x < −3", "x > −3", "x < 8", "x > 8"],
-      "why": "Subtract 5 from both sides: −2x > 6. Divide by −2 and flip the sign: x < −3. The option x > −3 forgets the flip. Check x = −4: 5 − 2 × −4 = 13, and 13 > 11 is true.",
-      "clue": "Subtracting 5 does not flip the sign. Dividing by −2 does."
+      "q": "Solve \\(5 - 2x > 11\\).",
+      "opts": ["\\(x < -3\\)", "\\(x > -3\\)", "\\(x < 8\\)", "\\(x > 8\\)"],
+      "why": "Subtract 5 from both sides: \\(-2x > 6\\). Divide by \\(-2\\) and flip the sign: \\(x < -3\\). The option \\(x > -3\\) forgets the flip. Check \\(x = -4\\): \\(5 - 2 \\times (-4) = 13\\), and \\(13 > 11\\) is true.",
+      "clue": "Subtracting 5 does not flip the sign. Dividing by \\(-2\\) does."
     }
   },
   "mat-inequalities-cartesian-plane": {
     "title": "Inequalities on the Cartesian plane",
     "card": [
-      "An inequality such as y > 2x + 1 is a region of the plane, not a single line. The line y = 2x + 1 is the edge of the region.",
-      "Draw the line first. Use a dashed line for > or <, because points on the line do not count. Use a solid line for ≥ or ≤, because they do.",
+      "An inequality such as \\(y > 2x + 1\\) is a region of the plane, not a single line. The line \\(y = 2x + 1\\) is the edge of the region.",
+      "Draw the line first. Use a dashed line for \\(>\\) or \\(<\\), because points on the line do not count. Use a solid line for \\(\\ge\\) or \\(\\le\\), because they do.",
       "To find which side to shade, pick a test point not on the line, such as (0, 0), and put it into the inequality. If it makes the inequality true, shade that side. If not, shade the other side.",
-      "Example: for y > 2x + 1, test (0, 0). 0 > 2 × 0 + 1 gives 0 > 1, which is false. So shade the side that does not contain (0, 0), with a dashed line."
+      "Example: for \\(y > 2x + 1\\), test (0, 0). \\(0 > 2 \\times 0 + 1\\) gives \\(0 > 1\\), which is false. So shade the side that does not contain (0, 0), with a dashed line."
     ],
     "remember": "Draw the boundary line, then use a test point to choose the side to shade.",
     "a": {
-      "q": "Which point lies in the region y > 2x + 1?",
+      "q": "Which point lies in the region \\(y > 2x + 1\\)?",
       "opts": ["(0, 3)", "(0, 0)", "(2, 5)", "(1, 1)"],
-      "why": "At (0, 3): 3 > 2 × 0 + 1 gives 3 > 1, which is true. At (0, 0), 0 > 1 is false. At (2, 5), 5 > 5 is false because the point is on the line, and the line is not included for >.",
-      "clue": "Put the x and y values of each point into the inequality."
+      "why": "At (0, 3): \\(3 > 2 \\times 0 + 1\\) gives \\(3 > 1\\), which is true. At (0, 0), \\(0 > 1\\) is false. At (2, 5), \\(5 > 5\\) is false because the point is on the line, and the line is not included for \\(>\\).",
+      "clue": "Put the \\(x\\) and \\(y\\) values of each point into the inequality."
     },
     "b": {
       "d": 3,
-      "q": "For the region y ≤ x − 2, a test point (0, 0) is checked. How should the region be drawn?",
+      "q": "For the region \\(y \\le x - 2\\), a test point (0, 0) is checked. How should the region be drawn?",
       "opts": [
         "Use a solid line and shade the side without (0, 0)",
         "Use a solid line and shade the side with (0, 0)",
         "Use a dashed line and shade the side without (0, 0)",
         "Use a dashed line and shade the side with (0, 0)"
       ],
-      "why": "At (0, 0): 0 ≤ 0 − 2 gives 0 ≤ −2, which is false, so shade the side without (0, 0). The sign is ≤, so points on the line count and the line is solid. A dashed line is for < or >, where points on the line do not count.",
+      "why": "At (0, 0): \\(0 \\le 0 - 2\\) gives \\(0 \\le -2\\), which is false, so shade the side without (0, 0). The sign is \\(\\le\\), so points on the line count and the line is solid. A dashed line is for \\(<\\) or \\(>\\), where points on the line do not count.",
       "clue": "Check the test point for the side, then check the sign for the line."
     }
   },
@@ -15291,27 +15398,27 @@ MADE_BANKS.mat = {
     "card": [
       "Simultaneous equations are two equations with the same two unknowns. Elimination adds or subtracts the equations so that one unknown cancels out.",
       "If the matching terms have the same sign, subtract the equations. If they have opposite signs, add them. If no pair matches, multiply one or both equations first to make a pair match.",
-      "Example: x + y = 11 and x − y = 3. The y terms have opposite signs, so add: 2x = 14, so x = 7.",
-      "Then put x = 7 into x + y = 11 to get y = 4. Check in the other equation: 7 − 4 = 3, which is true."
+      "Example: \\(x + y = 11\\) and \\(x - y = 3\\). The \\(y\\) terms have opposite signs, so add: \\(2x = 14\\), so \\(x = 7\\).",
+      "Then put \\(x = 7\\) into \\(x + y = 11\\) to get \\(y = 4\\). Check in the other equation: \\(7 - 4 = 3\\), which is true."
     ],
     "remember": "Make one pair of terms match, add or subtract to cancel it, then solve and substitute back.",
     "a": {
-      "q": "To solve 3x + y = 14 and x + y = 6 by elimination, which step cancels y?",
+      "q": "To solve \\(3x + y = 14\\) and \\(x + y = 6\\) by elimination, which step cancels \\(y\\)?",
       "opts": [
         "Subtract the second equation from the first",
         "Add the two equations together",
         "Multiply the second equation by 3, then subtract",
         "Multiply the first equation by 3, then add"
       ],
-      "why": "Both y terms are +y, so they have the same sign and subtracting cancels them, leaving 2x = 8. Adding gives 4x + 2y = 20, which still has y in it. Multiplying the second by 3 and subtracting cancels x, not y.",
-      "clue": "Both y terms have the same sign."
+      "why": "Both \\(y\\) terms are \\(+y\\), so they have the same sign and subtracting cancels them, leaving \\(2x = 8\\). Adding gives \\(4x + 2y = 20\\), which still has \\(y\\) in it. Multiplying the second by 3 and subtracting cancels \\(x\\), not \\(y\\).",
+      "clue": "Both \\(y\\) terms have the same sign."
     },
     "b": {
       "d": 3,
-      "q": "Solve 2x + 3y = 12 and 5x − y = 13 by elimination. What is the value of x?",
-      "opts": ["3", "2", "15", "−3"],
-      "why": "Multiply the second equation by 3 to get 15x − 3y = 39. Add it to the first: 17x = 51, so x = 3. Then y = 2. The value 2 is y, not x.",
-      "clue": "Multiply the second equation by 3 so the y terms are opposites."
+      "q": "Solve \\(2x + 3y = 12\\) and \\(5x - y = 13\\) by elimination. What is the value of \\(x\\)?",
+      "opts": ["3", "2", "15", "\\(-3\\)"],
+      "why": "Multiply the second equation by 3 to get \\(15x - 3y = 39\\). Add it to the first: \\(17x = 51\\), so \\(x = 3\\). Then \\(y = 2\\). The value 2 is \\(y\\), not \\(x\\).",
+      "clue": "Multiply the second equation by 3 so the \\(y\\) terms are opposites."
     }
   },
   "mat-solving-simple-exponential-equations": {
@@ -15343,27 +15450,27 @@ MADE_BANKS.mat = {
       "Depreciation is the fall in an item's value over time. Here the item loses a fixed percentage of its value each year.",
       [
         "Same factor",
-        "The value is multiplied by the same factor each year. For 15% depreciation the factor is 0.85. This is exponential decay, like y = aˣ with a between 0 and 1."
+        "The value is multiplied by the same factor each year. For 15% depreciation the factor is 0.85. This is exponential decay, like \\(y = a^{x}\\) with \\(a\\) between 0 and 1."
       ],
       [
         "Formula",
-        "V = V₀ × (1 − r)ⁿ. V is the value after n years, V₀ is the starting value and r is the yearly rate as a decimal."
+        "\\(V = V_{0} \\times (1 - r)^{n}\\). \\(V\\) is the value after \\(n\\) years, \\(V_{0}\\) is the starting value and \\(r\\) is the yearly rate as a decimal."
       ],
-      "Example: a $20 000 machine loses 10% a year for 3 years. V = 20 000 × 0.9³ = 20 000 × 0.729 = $14 580."
+      "Example: a $20,000 machine loses 10% a year for 3 years. \\(V = \\$20{,}000 \\times 0.9^{3}\\), which is \\(\\$20{,}000 \\times 0.729 = \\$14{,}580\\)."
     ],
-    "remember": "Multiply by (1 − r) once for each year. The value falls, but the rate stays the same.",
+    "remember": "Multiply by \\((1 - r)\\) once for each year. The value falls, but the rate stays the same.",
     "a": {
-      "q": "A ute is bought for $50 000 and its value drops by 10% each year. What is it worth after 2 years?",
-      "opts": ["$40 500", "$40 000", "$45 000", "$35 000"],
-      "why": "V = 50 000 × 0.9² = 50 000 × 0.81 = $40 500. The value $40 000 comes from taking 10% of $50 000 off each year, which ignores that each year's loss is taken from the smaller current value.",
+      "q": "A ute is bought for $50,000 and its value drops by 10% each year. What is it worth after 2 years?",
+      "opts": ["$40,500", "$40,000", "$45,000", "$35,000"],
+      "why": "\\(V = \\$50{,}000 \\times 0.9^{2}\\), which is \\(\\$50{,}000 \\times 0.81 = \\$40{,}500\\). The value $40,000 comes from taking 10% of $50,000 off each year, which ignores that each year's loss is taken from the smaller current value.",
       "clue": "Multiply by 0.9 twice."
     },
     "b": {
       "d": 3,
       "q": "Priya's laptop cost $2000 and loses 20% of its value each year. What is its value after 3 years?",
       "opts": ["$1024", "$800", "$1280", "$1200"],
-      "why": "V = 2000 × 0.8³ = 2000 × 0.512 = $1024. The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
-      "clue": "The factor each year is 1 − 0.20, used three times."
+      "why": "\\(V = \\$2000 \\times 0.8^{3}\\), which is \\(\\$2000 \\times 0.512 = \\$1024\\). The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+      "clue": "The factor each year is \\(1 - 0.20\\), used three times."
     }
   },
   "mat-choosing-linear-quadratic-or": {
@@ -15412,22 +15519,27 @@ MADE_BANKS.mat = {
     "title": "Volume of composite solids",
     "card": [
       "A composite solid is made of simpler solids joined together. Split it into prisms and cylinders.",
-      "Prism: volume = base area × height. Cylinder: volume = π × r² × h, where r is the radius.",
+      "Prism: volume \\(=\\) base area \\(\\times\\) height. Cylinder: volume \\(= \\pi \\times r^{2} \\times h\\), where \\(r\\) is the radius.",
       "If parts are joined on, add their volumes. If a part is cut out, such as a hole or notch, subtract its volume.",
-      "Example: a 6 cm by 5 cm by 2 cm block has a 2 cm cube cut from it. Volume = 60 − 8 = 52 cm³."
+      "Example: a 6 cm by 5 cm by 2 cm block has a 2 cm cube cut from it. Volume \\(= 60 - 8 = 52 \\text{ cm}^{3}\\)."
     ],
     "remember": "Find the volume of each part, then add the parts that are joined and subtract the parts that are removed.",
     "a": {
       "q": "A rectangular prism measures 6 cm by 4 cm by 3 cm. A cube of side 3 cm is cut out of one corner. What is the volume left?",
-      "opts": ["45 cm³", "99 cm³", "72 cm³", "63 cm³"],
-      "why": "The prism is 6 × 4 × 3 = 72 cm³ and the cube is 3 × 3 × 3 = 27 cm³. Removing it leaves 72 − 27 = 45 cm³. Adding gives 99 cm³, but the cube is taken away, not joined on.",
+      "opts": ["\\(45 \\text{ cm}^{3}\\)", "\\(99 \\text{ cm}^{3}\\)", "\\(72 \\text{ cm}^{3}\\)", "\\(63 \\text{ cm}^{3}\\)"],
+      "why": "The prism is \\(6 \\times 4 \\times 3 = 72 \\text{ cm}^{3}\\) and the cube is \\(3 \\times 3 \\times 3 = 27 \\text{ cm}^{3}\\). Removing it leaves \\(72 - 27 = 45 \\text{ cm}^{3}\\). Adding gives \\(99 \\text{ cm}^{3}\\), but the cube is taken away, not joined on.",
       "clue": "Material is removed, so one volume is taken from the other."
     },
     "b": {
       "d": 3,
       "q": "A block is 10 cm by 10 cm by 5 cm. A cylindrical hole of radius 2 cm is drilled through the 5 cm height. What is the volume left, to one decimal place?",
-      "opts": ["437.2 cm³", "562.8 cm³", "468.6 cm³", "248.7 cm³"],
-      "why": "Block = 500 cm³. Hole = π × 2² × 5 = 20π ≈ 62.8 cm³. Volume left = 500 − 62.8 = 437.2 cm³. Using r instead of r² gives 468.6 cm³, which is a common slip.",
+      "opts": [
+        "\\(437.2 \\text{ cm}^{3}\\)",
+        "\\(562.8 \\text{ cm}^{3}\\)",
+        "\\(468.6 \\text{ cm}^{3}\\)",
+        "\\(248.7 \\text{ cm}^{3}\\)"
+      ],
+      "why": "Block \\(= 500 \\text{ cm}^{3}\\). Hole \\(= \\pi \\times 2^{2} \\times 5 = 20\\pi\\), and \\(20\\pi \\approx 62.8 \\text{ cm}^{3}\\). Volume left \\(\\approx 500 - 62.8 = 437.2 \\text{ cm}^{3}\\). Using \\(r\\) instead of \\(r^{2}\\) gives \\(468.6 \\text{ cm}^{3}\\), which is a common slip.",
       "clue": "Square the radius before multiplying by the height."
     }
   },
@@ -15437,20 +15549,25 @@ MADE_BANKS.mat = {
       "Surface area is the total area of the faces on the outside of a solid.",
       "When two parts are joined, the areas that touch are hidden inside. Leave them out of the total.",
       "Method: add the surface areas of the parts, then subtract the touching area twice, once for each part. If a small part sits on a larger face, only the covered part of that face is hidden.",
-      "Example: two cubes of side 1 cm are stacked. Each has area 6 cm², so 12 − 2 = 10 cm², as a 1 cm² face is hidden on each cube."
+      "Example: two cubes of side 1 cm are stacked. Each has area \\(6 \\text{ cm}^{2}\\), so \\(12 - 2 = 10 \\text{ cm}^{2}\\), as a \\(1 \\text{ cm}^{2}\\) face is hidden on each cube."
     ],
     "remember": "Count the outside only. Subtract the touching area once for each part that touches.",
     "a": {
       "q": "Two cubes of side 2 cm are stacked to make a 2 cm by 2 cm by 4 cm prism. What is the surface area?",
-      "opts": ["40 cm²", "48 cm²", "44 cm²", "32 cm²"],
-      "why": "Each cube has surface area 6 × 4 = 24 cm², so 48 cm² together. The join hides one 4 cm² face on each cube, which is 8 cm², so 48 − 8 = 40 cm². Subtracting the hidden area only once gives 44 cm², which is wrong.",
+      "opts": ["\\(40 \\text{ cm}^{2}\\)", "\\(48 \\text{ cm}^{2}\\)", "\\(44 \\text{ cm}^{2}\\)", "\\(32 \\text{ cm}^{2}\\)"],
+      "why": "Each cube has surface area \\(6 \\times 4 = 24 \\text{ cm}^{2}\\), so \\(48 \\text{ cm}^{2}\\) together. The join hides one \\(4 \\text{ cm}^{2}\\) face on each cube, which is \\(8 \\text{ cm}^{2}\\), so \\(48 - 8 = 40 \\text{ cm}^{2}\\). Subtracting the hidden area only once gives \\(44 \\text{ cm}^{2}\\), which is wrong.",
       "clue": "Each cube loses a face where they touch."
     },
     "b": {
       "d": 3,
       "q": "A cube of side 4 cm has a cube of side 2 cm sitting on top of it. What is the total surface area?",
-      "opts": ["112 cm²", "120 cm²", "116 cm²", "108 cm²"],
-      "why": "The cubes have 96 + 24 = 120 cm² separately. The join hides the small cube's 4 cm² base and the 4 cm² of the large cube's top that it covers, so 120 − 8 = 112 cm². Subtracting the touching area only once gives 116 cm².",
+      "opts": [
+        "\\(112 \\text{ cm}^{2}\\)",
+        "\\(120 \\text{ cm}^{2}\\)",
+        "\\(116 \\text{ cm}^{2}\\)",
+        "\\(108 \\text{ cm}^{2}\\)"
+      ],
+      "why": "The cubes have \\(96 + 24 = 120 \\text{ cm}^{2}\\) separately. The join hides the small cube's \\(4 \\text{ cm}^{2}\\) base and the \\(4 \\text{ cm}^{2}\\) of the large cube's top that it covers, so \\(120 - 8 = 112 \\text{ cm}^{2}\\). Subtracting the touching area only once gives \\(116 \\text{ cm}^{2}\\).",
       "clue": "Only the covered part of the large cube's top is hidden."
     }
   },
@@ -15506,20 +15623,20 @@ MADE_BANKS.mat = {
       "Some problems hide two right-angled triangles that share a side. Draw both and mark the shared side.",
       "Use the triangle with enough information first. Find the shared side there, using a trigonometric ratio or Pythagoras' theorem.",
       "Then use that side in the second triangle to find what the problem asks for.",
-      "Example: a flagpole stands on a building. From a point 30 m from the base, the angle up to the bottom of the pole is 45° and to the top is 60°. The building is 30 × tan 45° = 30 m high. The top is 30 × tan 60° = 52.0 m high. The pole is 52.0 − 30 = 22.0 m long."
+      "Example: a flagpole stands on a building. From a point 30 m from the base, the angle up to the bottom of the pole is 45° and to the top is 60°. The building is \\(30 \\times \\tan 45^{\\circ} = 30\\) m high. The top is \\(30 \\times \\tan 60^{\\circ} \\approx 52.0\\) m high. The pole is \\(52.0 - 30 = 22.0\\) m long."
     ],
     "remember": "Solve the triangle you can, then pass its shared side to the next.",
     "a": {
-      "q": "Triangles ABD and CBD both have a right angle at D and share side BD. In triangle ABD, AB = 10 m and angle A = 30°. In triangle CBD, CD = 12 m. What is BC?",
+      "q": "Triangles ABD and CBD both have a right angle at D and share side BD. In triangle ABD, \\(AB = 10\\) m and angle \\(A = 30^{\\circ}\\). In triangle CBD, \\(CD = 12\\) m. What is BC?",
       "opts": ["13 m", "15.6 m", "17 m", "7 m"],
-      "why": "In triangle ABD, BD = 10 × sin 30° = 5 m. Then BC = √(5² + 12²) = 13 m. 15.6 m is tempting, but it comes from using 10 instead of the shared side 5.",
+      "why": "In triangle ABD, \\(BD = 10 \\times \\sin 30^{\\circ} = 5\\) m. Then \\(BC = \\sqrt{5^{2} + 12^{2}} = 13\\) m. 15.6 m is tempting, but it comes from using 10 instead of the shared side 5.",
       "clue": "Find BD first, then use it in the second triangle."
     },
     "b": {
       "d": 3,
       "q": "Hasan stands in Hobart, 50 m from the base of a building with a radio mast on its roof. The angle up to the bottom of the mast is 45° and to the top is 60°. How long is the mast?",
       "opts": ["36.6 m", "86.6 m", "50 m", "136.6 m"],
-      "why": "The building is 50 × tan 45° = 50 m high. The top of the mast is 50 × tan 60° = 86.6 m high. The mast is the difference: 86.6 − 50 = 36.6 m. 86.6 m is tempting, but that is the height of the top, not the mast.",
+      "why": "The building is \\(50 \\times \\tan 45^{\\circ} = 50\\) m high. The top of the mast is \\(50 \\times \\tan 60^{\\circ} \\approx 86.6\\) m high. The mast is the difference: \\(86.6 - 50 = 36.6\\) m. 86.6 m is tempting, but that is the height of the top, not the mast.",
       "clue": "The mast is the difference between two heights."
     }
   },
@@ -15568,25 +15685,25 @@ MADE_BANKS.mat = {
       "Two triangles are congruent if they are exactly the same shape and size. To prove it, you do not measure. You give reasons.",
       "Name each pair of matching sides or angles and give a reason for each, such as 'given', 'common side', 'vertically opposite angles' or 'alternate angles on parallel lines'.",
       "Then state the test. SSS: three pairs of equal sides. SAS: two pairs of equal sides and the equal angle between them. AAS: two pairs of equal angles and a pair of equal sides that are in matching positions. RHS: right angle, hypotenuse and one other pair of equal sides.",
-      "Example: in triangles ABC and DEF, AB = DE (given), BC = EF (given) and angle B = angle E (given). The angle lies between the two sides, so the triangles are congruent (SAS)."
+      "Example: in triangles ABC and DEF, \\(AB = DE\\) (given), \\(BC = EF\\) (given) and angle B \\(=\\) angle E (given). The angle lies between the two sides, so the triangles are congruent (SAS)."
     ],
     "remember": "Give a reason for each matching pair, then name the test that fits them.",
     "a": {
-      "q": "Triangles PQR and XYZ have PQ = XY, QR = YZ and PR = XZ, each given. Which test proves them congruent?",
+      "q": "Triangles PQR and XYZ have \\(PQ = XY\\), \\(QR = YZ\\) and \\(PR = XZ\\), each given. Which test proves them congruent?",
       "opts": ["SSS", "SAS", "AAS", "RHS"],
       "why": "All three pairs of sides are equal and no angles are used, so the test is SSS. SAS needs an equal angle between two equal sides, and none is given here.",
       "clue": "Count the pairs of equal sides, and look for any angles."
     },
     "b": {
       "d": 3,
-      "q": "In triangles ABC and ADC, AB = AD and BC = DC, each given, and they share side AC. Which test proves they are congruent, with the reason for AC?",
+      "q": "In triangles ABC and ADC, \\(AB = AD\\) and \\(BC = DC\\), each given, and they share side AC. Which test proves they are congruent, with the reason for AC?",
       "opts": [
         "SSS, AC is a common side",
         "SAS, AC is a common side",
         "SSS, AC is given as equal",
         "SAS, AC is vertically opposite"
       ],
-      "why": "The triangles have three pairs of equal sides: AB = AD, BC = DC and AC = AC (common side). That is SSS. SAS is tempting, but no angle is known, so it cannot be used.",
+      "why": "The triangles have three pairs of equal sides: \\(AB = AD\\), \\(BC = DC\\) and \\(AC = AC\\) (common side). That is SSS. SAS is tempting, but no angle is known, so it cannot be used.",
       "clue": "Check whether any angle is known before choosing a test."
     }
   },
@@ -15595,31 +15712,31 @@ MADE_BANKS.mat = {
     "card": [
       "Known angle facts can be used as reasons. Angles in a triangle add to 180°. Angles on a straight line add to 180°. Vertically opposite angles are equal. Alternate angles on parallel lines are equal.",
       "A proof chains these facts. Each step is a statement with a reason, and each step builds on earlier ones.",
-      "The exterior angle of a triangle is the angle formed outside by extending one side. Example: the interior angle at C is c, and the other two angles are a and b.",
-      "Then a + b + c = 180° (angles in a triangle). The exterior angle at C is 180° − c (angles on a straight line). So the exterior angle = a + b."
+      "The exterior angle of a triangle is the angle formed outside by extending one side. Example: the interior angle at C is \\(c\\), and the other two angles are \\(a\\) and \\(b\\).",
+      "Then \\(a + b + c = 180^{\\circ}\\) (angles in a triangle). The exterior angle at C is \\(180^{\\circ} - c\\) (angles on a straight line). So the exterior angle \\(= a + b\\)."
     ],
     "remember": "Chain known angle facts, giving a reason at every step, to prove a new result.",
     "a": {
-      "q": "In the proof, which reason shows that the exterior angle at C equals 180° − c?",
+      "q": "In the proof, which reason shows that the exterior angle at C equals \\(180^{\\circ} - c\\)?",
       "opts": [
         "Angles on a straight line add to 180°",
         "Angles in a triangle add to 180°",
         "Alternate angles on parallel lines are equal",
         "Vertically opposite angles are equal"
       ],
-      "why": "The exterior angle and angle c sit side by side on a straight line, so together they make 180°. The triangle fact gives a + b + c = 180°, which is a different step that uses all three angles.",
+      "why": "The exterior angle and angle \\(c\\) sit side by side on a straight line, so together they make 180°. The triangle fact gives \\(a + b + c = 180^{\\circ}\\), which is a different step that uses all three angles.",
       "clue": "Which fact uses only the angles at C, not the whole triangle?"
     },
     "b": {
       "d": 3,
-      "q": "In triangle PQR, angle P = 50° and angle Q = 70°. Side QR is extended to S. Which pair of steps proves that the exterior angle PRS is 120°?",
+      "q": "In triangle PQR, angle \\(P = 50^{\\circ}\\) and angle \\(Q = 70^{\\circ}\\). Side QR is extended to S. Which pair of steps proves that the exterior angle PRS is 120°?",
       "opts": [
-        "R = 60° (triangle), then PRS = 180° − 60° (straight line)",
-        "R = 60° (triangle), then PRS = 60° + 60° (straight line)",
-        "R = 120° (triangle), then PRS = 120° (straight line)",
-        "R = 60° (alternate), then PRS = 180° − 60° (straight line)"
+        "\\(R = 60^{\\circ}\\) (triangle), then \\(PRS = 180^{\\circ} - 60^{\\circ}\\) (straight line)",
+        "\\(R = 60^{\\circ}\\) (triangle), then \\(PRS = 60^{\\circ} + 60^{\\circ}\\) (straight line)",
+        "\\(R = 120^{\\circ}\\) (triangle), then \\(PRS = 120^{\\circ}\\) (straight line)",
+        "\\(R = 60^{\\circ}\\) (alternate), then \\(PRS = 180^{\\circ} - 60^{\\circ}\\) (straight line)"
       ],
-      "why": "The triangle gives angle R = 180° − 50° − 70° = 60°. Then PRS and R are on a straight line, so PRS = 180° − 60° = 120°. The option with alternate angles gets the numbers right, but there are no parallel lines here, so that reason cannot be used.",
+      "why": "The triangle gives angle \\(R = 180^{\\circ} - 50^{\\circ} - 70^{\\circ}\\), which is \\(60^{\\circ}\\). Then PRS and R are on a straight line, so \\(PRS = 180^{\\circ} - 60^{\\circ} = 120^{\\circ}\\). The option with alternate angles gets the numbers right, but there are no parallel lines here, so that reason cannot be used.",
       "clue": "Check each reason as well as each number."
     }
   },
@@ -15727,26 +15844,26 @@ MADE_BANKS.mat = {
   "mat-five-number-summary-interquartile": {
     "title": "Five-number summary and IQR",
     "card": [
-      "Put the data in order. The five-number summary is the minimum, lower quartile (Q1), median, upper quartile (Q3) and maximum.",
+      "Put the data in order. The five-number summary is the minimum, lower quartile (\\(Q_{1}\\)), median, upper quartile (\\(Q_{3}\\)) and maximum.",
       "The median splits the ordered data into a lower half and an upper half. If there is an odd number of values, leave the median out of both halves.",
-      "Q1 is the median of the lower half. Q3 is the median of the upper half. The interquartile range (IQR) = Q3 − Q1, the spread of the middle half of the data.",
+      "\\(Q_{1}\\) is the median of the lower half. \\(Q_{3}\\) is the median of the upper half. The interquartile range is \\(\\text{IQR} = Q_{3} - Q_{1}\\), the spread of the middle half of the data.",
       [
         "Example",
-        "3, 5, 6, 8, 9, 12, 14. The median is 8, Q1 is 5 and Q3 is 12. The minimum is 3 and the maximum is 14. IQR = 12 − 5 = 7."
+        "3, 5, 6, 8, 9, 12, 14. The median is 8, \\(Q_{1}\\) is 5 and \\(Q_{3}\\) is 12. The minimum is 3 and the maximum is 14. \\(\\text{IQR} = 12 - 5 = 7\\)."
       ]
     ],
-    "remember": "Order first, split at the median, then IQR = Q3 − Q1.",
+    "remember": "Order first, split at the median, then \\(\\text{IQR} = Q_{3} - Q_{1}\\).",
     "a": {
       "q": "Seven students read this many books last term: 4, 9, 2, 7, 5, 11, 6. What is the IQR?",
       "opts": ["5", "9", "7", "2"],
-      "why": "In order the data is 2, 4, 5, 6, 7, 9, 11. The median is 6, Q1 is 4 and Q3 is 9, so IQR = 9 − 4 = 5. Using 9 is tempting, but that is the range (11 − 2), which uses the minimum and maximum instead of the quartiles.",
+      "why": "In order the data is 2, 4, 5, 6, 7, 9, 11. The median is 6, \\(Q_{1}\\) is 4 and \\(Q_{3}\\) is 9, so \\(\\text{IQR} = 9 - 4 = 5\\). Using 9 is tempting, but that is the range (\\(11 - 2\\)), which uses the minimum and maximum instead of the quartiles.",
       "clue": "Put the values in order before you find any quartile."
     },
     "b": {
       "d": 3,
       "q": "Waiting times at a Hobart clinic, in minutes, are 3, 5, 6, 8, 10, 12, 15, 20. What is the IQR?",
       "opts": ["8", "13.5", "17", "4.5"],
-      "why": "There are 8 values, so the lower half is 3, 5, 6, 8 and the upper half is 10, 12, 15, 20. Q1 = 5.5 and Q3 = 13.5, so IQR = 13.5 − 5.5 = 8. The value 13.5 is only Q3, and 17 is the range.",
+      "why": "There are 8 values, so the lower half is 3, 5, 6, 8 and the upper half is 10, 12, 15, 20. \\(Q_{1} = 5.5\\) and \\(Q_{3} = 13.5\\), so \\(\\text{IQR} = 13.5 - 5.5 = 8\\). The value 13.5 is only \\(Q_{3}\\), and 17 is the range.",
       "clue": "With 8 values, split into two halves of 4 and find the middle of each."
     }
   },
@@ -15858,28 +15975,28 @@ MADE_BANKS.mat = {
   "mat-language-conditional-probability": {
     "title": "Language of conditional probability",
     "card": [
-      "A conditional probability is the chance of one event when we already know another event has happened. We write P(A | B) and say \"the probability of A given B\".",
+      "A conditional probability is the chance of one event when we already know another event has happened. We write \\(P(A \\mid B)\\) and say \"the probability of \\(A\\) given \\(B\\)\".",
       "The event after the bar is the condition: the event we know has happened. The event before the bar is the one whose chance we find.",
-      "Words such as given, if and knowing that introduce the condition. In \"if B, then A\", the word then introduces A, the event whose chance we find.",
-      "The condition shrinks the outcomes we count. Example: given a die shows an even number, the outcomes are 2, 4 and 6, so the chance of a 6 is 1/3, not 1/6."
+      "Words such as given, if and knowing that introduce the condition. In \"if \\(B\\), then \\(A\\)\", the word then introduces \\(A\\), the event whose chance we find.",
+      "The condition shrinks the outcomes we count. Example: given a die shows an even number, the outcomes are 2, 4 and 6, so the chance of a 6 is \\(\\frac{1}{3}\\), not \\(\\frac{1}{6}\\)."
     ],
-    "remember": "The condition is what we already know. It goes after the bar in P(A | B).",
+    "remember": "The condition is what we already know. It goes after the bar in \\(P(A \\mid B)\\).",
     "a": {
-      "q": "In P(rain | cloudy), which event is the condition?",
+      "q": "In \\(P(\\text{rain} \\mid \\text{cloudy})\\), which event is the condition?",
       "opts": ["Cloudy", "Rain", "Rain and cloudy", "Not cloudy"],
       "why": "The event after the bar is the condition, so cloudy is already known. Rain is the event whose chance we are finding.",
       "clue": "Look at the event after the bar."
     },
     "b": {
       "d": 3,
-      "q": "Of the students at a school in Perth, some walk to school and some own a bike. Which statement describes P(owns a bike | walks to school)?",
+      "q": "Of the students at a school in Perth, some walk to school and some own a bike. Which statement describes \\(P(\\text{owns a bike} \\mid \\text{walks to school})\\)?",
       "opts": [
         "Chance a student who walks owns a bike",
         "Chance a student who owns a bike walks",
         "Chance a student walks and owns a bike",
         "Chance a student walks or owns a bike"
       ],
-      "why": "The condition is after the bar, so we already know the student walks, and we ask about owning a bike. The option about a student who owns a bike walking swaps the two events: that would be P(walks | owns a bike).",
+      "why": "The condition is after the bar, so we already know the student walks, and we ask about owning a bike. The option about a student who owns a bike walking swaps the two events: that would be \\(P(\\text{walks} \\mid \\text{owns a bike})\\).",
       "clue": "Which event do we already know about?"
     }
   },
@@ -15888,21 +16005,21 @@ MADE_BANKS.mat = {
     "card": [
       "A two-way table sorts people or things by two features at once. Each cell counts those with both features.",
       "When a condition is given, only the row or column for that condition counts. That row or column total becomes the new total.",
-      "Probability given the condition = number with both features ÷ total for the condition. Do not use the grand total.",
-      "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. P(Year 7 given bus) = 6/24 = 1/4."
+      "Probability given the condition \\(=\\) number with both features \\(\\div\\) total for the condition. Do not use the grand total.",
+      "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. \\(P(\\text{Year 7 given bus}) = \\frac{6}{24} = \\frac{1}{4}\\)."
     ],
     "remember": "Given a condition, shrink the total to that row or column.",
     "a": {
-      "q": "A table shows 30 members of a club. 18 are juniors, and 12 of the juniors play netball. What is P(plays netball given junior)?",
-      "opts": ["12/18", "12/30", "18/30", "6/18"],
-      "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving 12/18. Using 30 would divide by everyone, which ignores the condition.",
+      "q": "A table shows 30 members of a club. 18 are juniors, and 12 of the juniors play netball. What is \\(P(\\text{plays netball given junior})\\)?",
+      "opts": ["\\(\\frac{12}{18}\\)", "\\(\\frac{12}{30}\\)", "\\(\\frac{18}{30}\\)", "\\(\\frac{6}{18}\\)"],
+      "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving \\(\\frac{12}{18}\\). Using 30 would divide by everyone, which ignores the condition.",
       "clue": "Which group are we told about?"
     },
     "b": {
       "d": 3,
-      "q": "At a Perth school, 50 students were asked about a sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. What is P(football given cricket)?",
-      "opts": ["8/23", "8/20", "8/50", "15/23"],
-      "why": "Cricket players are 8 + 15 = 23, so that is the total. Of them, 8 play football, giving 8/23. The tempting 8/20 uses the football total, which reverses the condition.",
+      "q": "At a Perth school, 50 students were asked about a sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. What is \\(P(\\text{football given cricket})\\)?",
+      "opts": ["\\(\\frac{8}{23}\\)", "\\(\\frac{8}{20}\\)", "\\(\\frac{8}{50}\\)", "\\(\\frac{15}{23}\\)"],
+      "why": "Cricket players are \\(8 + 15 = 23\\), so that is the total. Of them, 8 play football, giving \\(\\frac{8}{23}\\). The tempting \\(\\frac{8}{20}\\) uses the football total, which reverses the condition.",
       "clue": "Find the total for the group named after the word given."
     }
   },
@@ -15912,20 +16029,20 @@ MADE_BANKS.mat = {
       "In a tree diagram without replacement, the first branches show the chance of the first outcome. Nothing is put back, so the counts change.",
       "The second branches show probabilities given the first outcome. Use the new total and the new count after the first pick.",
       "Multiply along a path to get the chance of both outcomes happening in that order.",
-      "Example: a bag has 3 red and 2 blue counters. Two are drawn without replacement. P(red then red) = 3/5 × 2/4 = 6/20 = 3/10."
+      "Example: a bag has 3 red and 2 blue counters. Two are drawn without replacement. \\(P(\\text{red then red}) = \\frac{3}{5} \\times \\frac{2}{4}\\), which is \\(\\frac{6}{20} = \\frac{3}{10}\\)."
     ],
     "remember": "Second branches are given the first pick. Multiply along a path for the combined chance.",
     "a": {
-      "q": "A bag has 4 green and 3 yellow counters. One green is drawn and not replaced. What is P(green on the second draw | green first)?",
-      "opts": ["3/6", "4/7", "4/6", "3/7"],
-      "why": "After one green is removed, 3 green and 3 yellow remain, so there are 6 counters and 3 are green. 4/7 ignores the first draw.",
+      "q": "A bag has 4 green and 3 yellow counters. One green is drawn and not replaced. What is the probability of green on the second draw, given green first?",
+      "opts": ["\\(\\frac{3}{6}\\)", "\\(\\frac{4}{7}\\)", "\\(\\frac{4}{6}\\)", "\\(\\frac{3}{7}\\)"],
+      "why": "After one green is removed, 3 green and 3 yellow remain, so there are 6 counters and 3 are green. \\(\\frac{4}{7}\\) ignores the first draw.",
       "clue": "Count what is left in the bag after the first draw."
     },
     "b": {
       "d": 3,
-      "q": "A box has 5 milk and 3 dark chocolates. Mia eats two at random, one after the other. What is P(milk then dark)?",
-      "opts": ["15/56", "5/8", "3/7", "15/64"],
-      "why": "P(milk first) = 5/8. Then 7 remain, 3 of them dark, so 3/7. Multiply: 5/8 × 3/7 = 15/56. 15/64 forgets that one chocolate has been eaten.",
+      "q": "A box has 5 milk and 3 dark chocolates. Mia eats two at random, one after the other. What is \\(P(\\text{milk then dark})\\)?",
+      "opts": ["\\(\\frac{15}{56}\\)", "\\(\\frac{5}{8}\\)", "\\(\\frac{3}{7}\\)", "\\(\\frac{15}{64}\\)"],
+      "why": "\\(P(\\text{milk first}) = \\frac{5}{8}\\). Then 7 remain, 3 of them dark, so \\(\\frac{3}{7}\\). Multiply: \\(\\frac{5}{8} \\times \\frac{3}{7} = \\frac{15}{56}\\). \\(\\frac{15}{64}\\) forgets that one chocolate has been eaten.",
       "clue": "Multiply along the path, using the new total for the second branch."
     }
   },
@@ -16054,22 +16171,22 @@ MADE_BANKS.mat = {
     "title": "Equivalent fractions and simplest form",
     "card": [
       "Equivalent fractions name the same amount. To make one, multiply or divide the top (numerator) and the bottom (denominator) by the same number.",
-      "Example: 2/3 = (2×4)/(3×4) = 8/12. Both fractions are the same size, so they are equivalent.",
+      "Example: \\(\\frac{2}{3} = \\frac{2 \\times 4}{3 \\times 4} = \\frac{8}{12}\\). Both fractions are the same size, so they are equivalent.",
       "A fraction is in simplest form when the top and bottom share no factor except 1. To get there, divide both by their highest common factor (HCF), the largest number that goes into both.",
-      "Example: for 12/18, the HCF of 12 and 18 is 6. So 12/18 = (12÷6)/(18÷6) = 2/3, which is in simplest form."
+      "Example: for \\(\\frac{12}{18}\\), the HCF of 12 and 18 is 6. So \\(\\frac{12}{18} = \\frac{12 \\div 6}{18 \\div 6} = \\frac{2}{3}\\), which is in simplest form."
     ],
     "remember": "Do the same thing to the top and bottom. Divide by the HCF to reach simplest form.",
     "a": {
-      "q": "Which fraction is equivalent to 3/5?",
-      "opts": ["12/20", "6/8", "3/10", "9/12"],
-      "why": "Multiplying top and bottom of 3/5 by 4 gives 12/20. In 6/8 the top is doubled but the bottom has only 3 added, so the fraction changes size.",
+      "q": "Which fraction is equivalent to \\(\\frac{3}{5}\\)?",
+      "opts": ["\\(\\frac{12}{20}\\)", "\\(\\frac{6}{8}\\)", "\\(\\frac{3}{10}\\)", "\\(\\frac{9}{12}\\)"],
+      "why": "Multiplying top and bottom of \\(\\frac{3}{5}\\) by 4 gives \\(\\frac{12}{20}\\). In \\(\\frac{6}{8}\\) the top is doubled but the bottom has only 3 added, so the fraction changes size.",
       "clue": "Find the number that turns the 3 and the 5 into the new top and bottom."
     },
     "b": {
       "d": 3,
       "q": "Priya has 36 stickers and 24 of them are shiny. She writes the fraction of shiny stickers in simplest form. What does she get?",
-      "opts": ["2/3", "4/6", "6/9", "12/18"],
-      "why": "The fraction shiny is 24/36. The HCF of 24 and 36 is 12, so 24/36 = 2/3. The fractions 4/6, 6/9 and 12/18 are all equivalent to 2/3, but each can still be divided further, so none is in simplest form.",
+      "opts": ["\\(\\frac{2}{3}\\)", "\\(\\frac{4}{6}\\)", "\\(\\frac{6}{9}\\)", "\\(\\frac{12}{18}\\)"],
+      "why": "The fraction shiny is \\(\\frac{24}{36}\\). The HCF of 24 and 36 is 12, so \\(\\frac{24}{36} = \\frac{2}{3}\\). The fractions \\(\\frac{4}{6}\\), \\(\\frac{6}{9}\\) and \\(\\frac{12}{18}\\) are all equivalent to \\(\\frac{2}{3}\\), but each can still be divided further, so none is in simplest form.",
       "clue": "Divide by the largest number that goes into both, not just any common factor."
     }
   },
@@ -16136,45 +16253,45 @@ MADE_BANKS.mat = {
     "title": "Adding and subtracting fractions",
     "card": [
       "To add or subtract the tops, the fractions must first have the same denominator (bottom number). If they differ, rewrite them as equivalent fractions over a common denominator, such as the lowest common multiple of the denominators.",
-      "Example: 1/2 + 1/3. Over 6, this is 3/6 + 2/6 = 5/6.",
+      "Example: \\(\\frac{1}{2} + \\frac{1}{3}\\). Over 6, this is \\(\\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}\\).",
       "Once the denominators match, add or subtract the tops and keep the bottom the same. Do not add the denominators.",
-      "For mixed numbers, such as 2 1/4, work on the whole numbers and the fractions. Example: 2 1/4 − 1 1/2 = 2 1/4 − 1 2/4. The top 1 is smaller than 2, so regroup one whole as 4/4: 2 1/4 = 1 5/4. Then 1 5/4 − 1 2/4 = 3/4."
+      "For mixed numbers, such as \\(2\\frac{1}{4}\\), work on the whole numbers and the fractions. Example: \\(2\\frac{1}{4} - 1\\frac{1}{2} = 2\\frac{1}{4} - 1\\frac{2}{4}\\). The top 1 is smaller than 2, so regroup one whole as \\(\\frac{4}{4}\\): \\(2\\frac{1}{4} = 1\\frac{5}{4}\\). Then \\(1\\frac{5}{4} - 1\\frac{2}{4} = \\frac{3}{4}\\)."
     ],
     "remember": "Match the denominators first. Then add or subtract only the tops.",
     "a": {
-      "q": "What is 2/3 + 1/4?",
-      "opts": ["11/12", "3/7", "3/12", "9/12"],
-      "why": "Over 12, 2/3 = 8/12 and 1/4 = 3/12, and 8/12 + 3/12 = 11/12. The answer 3/7 comes from adding the tops and the bottoms, which is a common mistake.",
+      "q": "What is \\(\\frac{2}{3} + \\frac{1}{4}\\)?",
+      "opts": ["\\(\\frac{11}{12}\\)", "\\(\\frac{3}{7}\\)", "\\(\\frac{3}{12}\\)", "\\(\\frac{9}{12}\\)"],
+      "why": "Over 12, \\(\\frac{2}{3} = \\frac{8}{12}\\) and \\(\\frac{1}{4} = \\frac{3}{12}\\), and \\(\\frac{8}{12} + \\frac{3}{12} = \\frac{11}{12}\\). The answer \\(\\frac{3}{7}\\) comes from adding the tops and the bottoms, which is a common mistake.",
       "clue": "Rewrite both fractions over 12 before adding."
     },
     "b": {
       "d": 3,
-      "q": "Sam has 2 1/2 L of paint. He uses 3/4 L on a fence. How much paint is left?",
-      "opts": ["1 3/4 L", "2 1/4 L", "1 1/4 L", "1 2/4 L"],
-      "why": "Over 4, 2 1/2 = 2 2/4. The top 2 is smaller than 3, so regroup one whole: 2 2/4 = 1 6/4, and 1 6/4 − 3/4 = 1 3/4. The answer 2 1/4 L comes from taking the smaller top from the larger, doing 3 − 2 = 1 instead of regrouping.",
-      "clue": "Write 2 1/2 over 4, then you may need to regroup one whole."
+      "q": "Sam has \\(2\\frac{1}{2}\\) L of paint. He uses \\(\\frac{3}{4}\\) L on a fence. How much paint is left?",
+      "opts": ["\\(1\\frac{3}{4}\\) L", "\\(2\\frac{1}{4}\\) L", "\\(1\\frac{1}{4}\\) L", "\\(1\\frac{2}{4}\\) L"],
+      "why": "Over 4, \\(2\\frac{1}{2} = 2\\frac{2}{4}\\). The top 2 is smaller than 3, so regroup one whole: \\(2\\frac{2}{4} = 1\\frac{6}{4}\\), and \\(1\\frac{6}{4} - \\frac{3}{4} = 1\\frac{3}{4}\\). The answer \\(2\\frac{1}{4}\\) L comes from taking the smaller top from the larger, doing \\(3 - 2 = 1\\) instead of regrouping.",
+      "clue": "Write \\(2\\frac{1}{2}\\) over 4, then you may need to regroup one whole."
     }
   },
   "mat-multiplying-dividing-fractions": {
     "title": "Multiplying and dividing fractions",
     "card": [
-      "To multiply fractions, multiply the tops together and multiply the bottoms together. Example: 2/3 × 4/5 = 8/15.",
-      "Write a whole number as a fraction over 1. Example: 6 × 3/4 = 6/1 × 3/4 = 18/4 = 4 1/2.",
-      "The reciprocal of a fraction is the fraction turned upside down. The reciprocal of 3/5 is 5/3.",
-      "To divide, multiply by the reciprocal of the second fraction. Example: 1/2 ÷ 3/4 = 1/2 × 4/3 = 4/6 = 2/3. Only the second fraction is flipped."
+      "To multiply fractions, multiply the tops together and multiply the bottoms together. Example: \\(\\frac{2}{3} \\times \\frac{4}{5} = \\frac{8}{15}\\).",
+      "Write a whole number as a fraction over 1. Example: \\(6 \\times \\frac{3}{4} = \\frac{6}{1} \\times \\frac{3}{4}\\), which is \\(\\frac{18}{4} = 4\\frac{1}{2}\\).",
+      "The reciprocal of a fraction is the fraction turned upside down. The reciprocal of \\(\\frac{3}{5}\\) is \\(\\frac{5}{3}\\).",
+      "To divide, multiply by the reciprocal of the second fraction. Example: \\(\\frac{1}{2} \\div \\frac{3}{4} = \\frac{1}{2} \\times \\frac{4}{3}\\), which is \\(\\frac{4}{6} = \\frac{2}{3}\\). Only the second fraction is flipped."
     ],
     "remember": "Multiply tops and bottoms. To divide, flip the second fraction and multiply.",
     "a": {
-      "q": "Work out 3/5 × 2/7.",
-      "opts": ["6/35", "5/12", "6/12", "21/10"],
-      "why": "Multiply the tops, 3 × 2 = 6, and the bottoms, 5 × 7 = 35, to get 6/35. The answer 5/12 comes from adding the tops and adding the bottoms. That is a common mistake, and it is not a correct method for multiplying or for adding fractions.",
+      "q": "Work out \\(\\frac{3}{5} \\times \\frac{2}{7}\\).",
+      "opts": ["\\(\\frac{6}{35}\\)", "\\(\\frac{5}{12}\\)", "\\(\\frac{6}{12}\\)", "\\(\\frac{21}{10}\\)"],
+      "why": "Multiply the tops, \\(3 \\times 2 = 6\\), and the bottoms, \\(5 \\times 7 = 35\\), to get \\(\\frac{6}{35}\\). The answer \\(\\frac{5}{12}\\) comes from adding the tops and adding the bottoms. That is a common mistake, and it is not a correct method for multiplying or for adding fractions.",
       "clue": "Multiplying needs no common denominator."
     },
     "b": {
       "d": 3,
-      "q": "Leila cuts 3/4 of a pizza into slices that are each 1/8 of a whole pizza. How many slices does she get? Find 3/4 ÷ 1/8.",
-      "opts": ["6", "3/32", "1/6", "10 2/3"],
-      "why": "3/4 ÷ 1/8 = 3/4 × 8/1 = 24/4 = 6. The answer 3/32 comes from multiplying without flipping, and 1/6 comes from flipping the first fraction instead: 4/3 × 1/8 = 4/24 = 1/6.",
+      "q": "Leila cuts \\(\\frac{3}{4}\\) of a pizza into slices that are each \\(\\frac{1}{8}\\) of a whole pizza. How many slices does she get? Find \\(\\frac{3}{4} \\div \\frac{1}{8}\\).",
+      "opts": ["6", "\\(\\frac{3}{32}\\)", "\\(\\frac{1}{6}\\)", "\\(10\\frac{2}{3}\\)"],
+      "why": "\\(\\frac{3}{4} \\div \\frac{1}{8} = \\frac{3}{4} \\times \\frac{8}{1}\\), which is \\(\\frac{24}{4} = 6\\). The answer \\(\\frac{3}{32}\\) comes from multiplying without flipping, and \\(\\frac{1}{6}\\) comes from flipping the first fraction instead: \\(\\frac{4}{3} \\times \\frac{1}{8} = \\frac{4}{24} = \\frac{1}{6}\\).",
       "clue": "Flip the second fraction only, then multiply."
     }
   },
@@ -16204,23 +16321,23 @@ MADE_BANKS.mat = {
   "mat-ordering-integers-number-line": {
     "title": "Ordering integers on a number line",
     "card": [
-      "Integers are whole numbers that can be negative, zero or positive. Examples are −7, 0 and 12. Fractions and decimals are not integers.",
+      "Integers are whole numbers that can be negative, zero or positive. Examples are \\(-7\\), 0 and 12. Fractions and decimals are not integers.",
       "On a number line, zero is the point between the negatives and the positives. Positive integers are to its right and negative integers are to its left.",
-      "Numbers further to the right are larger. So 2 is greater than −5, and −2 is greater than −5 because −2 is further right.",
-      "With negatives, the number that looks bigger is smaller. −9 is less than −3, as −9 is further left. To order from least to greatest, go from left to right."
+      "Numbers further to the right are larger. So 2 is greater than \\(-5\\), and \\(-2\\) is greater than \\(-5\\) because \\(-2\\) is further right.",
+      "With negatives, the number that looks bigger is smaller. \\(-9\\) is less than \\(-3\\), as \\(-9\\) is further left. To order from least to greatest, go from left to right."
     ],
     "remember": "Further right is larger. Further left is smaller.",
     "a": {
       "q": "Which list puts these integers in order from least to greatest?",
-      "opts": ["−6, −1, 0, 4", "−1, −6, 0, 4", "4, 0, −1, −6", "0, −1, −6, 4"],
-      "why": "Least to greatest goes from left to right on the number line, so −6 comes first, then −1, 0 and 4. The list −1, −6, 0, 4 is tempting, but −6 is further left than −1, so it is smaller.",
+      "opts": ["\\(-6, -1, 0, 4\\)", "\\(-1, -6, 0, 4\\)", "\\(4, 0, -1, -6\\)", "\\(0, -1, -6, 4\\)"],
+      "why": "Least to greatest goes from left to right on the number line, so \\(-6\\) comes first, then \\(-1\\), 0 and 4. The list \\(-1, -6, 0, 4\\) is tempting, but \\(-6\\) is further left than \\(-1\\), so it is smaller.",
       "clue": "Picture the number line and read from left to right."
     },
     "b": {
       "d": 3,
-      "q": "Early on a winter morning, the temperatures were Alice Springs −3°C, Thredbo −8°C, Hobart 2°C and Canberra −5°C. Which place had the lowest temperature?",
+      "q": "Early on a winter morning, the temperatures were Alice Springs \\(-3\\)°C, Thredbo \\(-8\\)°C, Hobart 2°C and Canberra \\(-5\\)°C. Which place had the lowest temperature?",
       "opts": ["Thredbo", "Canberra", "Alice Springs", "Hobart"],
-      "why": "The lowest temperature is the number furthest left on the number line. −8 is further left than −5, −3 and 2, so Thredbo was the coldest. Canberra is tempting because −5 is also below zero, but −8 is further left, so it is smaller.",
+      "why": "The lowest temperature is the number furthest left on the number line. \\(-8\\) is further left than \\(-5\\), \\(-3\\) and 2, so Thredbo was the coldest. Canberra is tempting because \\(-5\\) is also below zero, but \\(-8\\) is further left, so it is smaller.",
       "clue": "The lowest is the number furthest to the left."
     }
   },
@@ -16228,22 +16345,22 @@ MADE_BANKS.mat = {
     "title": "Adding and subtracting integers",
     "card": [
       "To add or subtract integers, picture a number line. Adding a positive number moves you right, and subtracting a positive number moves you left.",
-      ["Adding a negative", "is the same as subtracting. For example, 5 + (−2) = 5 − 2 = 3."],
-      ["Subtracting a negative", "is the same as adding. For example, 3 − (−4) = 3 + 4 = 7."],
-      "Worked example: 2 − 6 starts at 2 and moves 6 left, so it equals −4. Then −4 − (−1) = −4 + 1 = −3."
+      ["Adding a negative", "is the same as subtracting. For example, \\(5 + (-2) = 5 - 2 = 3\\)."],
+      ["Subtracting a negative", "is the same as adding. For example, \\(3 - (-4) = 3 + 4 = 7\\)."],
+      "Worked example: \\(2 - 6\\) starts at 2 and moves 6 left, so it equals \\(-4\\). Then \\(-4 - (-1) = -4 + 1 = -3\\)."
     ],
     "remember": "Two negative signs side by side turn into a plus. A plus with a negative turns into a minus.",
     "a": {
-      "q": "What is 6 − (−3)?",
-      "opts": ["9", "3", "−9", "−3"],
-      "why": "Subtracting a negative is the same as adding, so 6 − (−3) = 6 + 3 = 9. The answer 3 comes from treating the two signs as a single minus.",
+      "q": "What is \\(6 - (-3)\\)?",
+      "opts": ["9", "3", "\\(-9\\)", "\\(-3\\)"],
+      "why": "Subtracting a negative is the same as adding, so \\(6 - (-3) = 6 + 3 = 9\\). The answer 3 comes from treating the two signs as a single minus.",
       "clue": "Subtracting a negative turns into adding."
     },
     "b": {
       "d": 3,
-      "q": "On a winter morning in Hobart the temperature is −2°C. By midday it has risen by 7°C, and by night it falls 9°C from midday. What is the night temperature, in °C?",
-      "opts": ["−4", "14", "−18", "4"],
-      "why": "Midday is −2 + 7 = 5. Night is 5 − 9 = −4. The answer 4 comes from dropping the sign after subtracting 9 from 5.",
+      "q": "On a winter morning in Hobart the temperature is \\(-2\\)°C. By midday it has risen by 7°C, and by night it falls 9°C from midday. What is the night temperature, in °C?",
+      "opts": ["\\(-4\\)", "14", "\\(-18\\)", "4"],
+      "why": "Midday is \\(-2 + 7 = 5\\). Night is \\(5 - 9 = -4\\). The answer 4 comes from dropping the sign after subtracting 9 from 5.",
       "clue": "Work in two steps: add 7 first, then subtract 9."
     }
   },
@@ -16253,13 +16370,13 @@ MADE_BANKS.mat = {
       "A ratio compares quantities in the same units. A ratio of 12 to 18 can be written 12:18.",
       "If the units differ, change them to the same unit first. For 50 cm to 2 m, change 2 m to 200 cm, so the ratio is 50:200.",
       "To simplify, divide each part by their highest common factor (HCF). That is the largest number that divides into both parts exactly.",
-      "Example: 12:18. The HCF of 12 and 18 is 6. 12 ÷ 6 = 2 and 18 ÷ 6 = 3, so 12:18 simplifies to 2:3."
+      "Example: 12:18. The HCF of 12 and 18 is 6. \\(12 \\div 6 = 2\\) and \\(18 \\div 6 = 3\\), so 12:18 simplifies to 2:3."
     ],
     "remember": "Use the same units, then divide both parts by the HCF.",
     "a": {
       "q": "What is 20:30 in simplest form?",
       "opts": ["2:3", "4:6", "10:15", "1:2"],
-      "why": "The HCF of 20 and 30 is 10. 20 ÷ 10 = 2 and 30 ÷ 10 = 3, so the answer is 2:3. The ratio 4:6 is the same ratio, but it can be simplified more by dividing by 2.",
+      "why": "The HCF of 20 and 30 is 10. \\(20 \\div 10 = 2\\) and \\(30 \\div 10 = 3\\), so the answer is 2:3. The ratio 4:6 is the same ratio, but it can be simplified more by dividing by 2.",
       "clue": "Find the largest number that divides into both 20 and 30."
     },
     "b": {
@@ -16325,46 +16442,46 @@ MADE_BANKS.mat = {
   "mat-writing-algebraic-expressions": {
     "title": "Writing algebraic expressions",
     "card": [
-      "A variable is a letter, such as n, that stands for a number we do not know or that can change. An expression uses variables, numbers and operations, such as 2n + 5.",
-      "Leave out the × sign between a number and a letter. Write 3 × n as 3n, and write the number first.",
-      "Words give the operations: more than means add, less than means subtract, double means × 2 and half means ÷ 2. Take care with order: 5 less than n is n − 5, not 5 − n.",
-      "Use brackets when an operation applies to a whole sum or difference. Example: 4 more than a number, then all tripled, is 3(n + 4). Without brackets, 3n + 4 would only triple the n."
+      "A variable is a letter, such as \\(n\\), that stands for a number we do not know or that can change. An expression uses variables, numbers and operations, such as \\(2n + 5\\).",
+      "Leave out the \\(\\times\\) sign between a number and a letter. Write \\(3 \\times n\\) as \\(3n\\), and write the number first.",
+      "Words give the operations: more than means add, less than means subtract, double means \\(\\times 2\\) and half means \\(\\div 2\\). Take care with order: 5 less than \\(n\\) is \\(n - 5\\), not \\(5 - n\\).",
+      "Use brackets when an operation applies to a whole sum or difference. Example: 4 more than a number, then all tripled, is \\(3(n + 4)\\). Without brackets, \\(3n + 4\\) would only triple the \\(n\\)."
     ],
     "remember": "Turn each phrase into its operation, check the order, and use brackets for a whole group.",
     "a": {
-      "q": "Which expression means 5 more than double a number n?",
-      "opts": ["2n + 5", "2(n + 5)", "5n + 2", "n + 10"],
-      "why": "Double a number is 2n, and 5 more than that is 2n + 5. The option 2(n + 5) adds 5 first and then doubles the whole sum, which is a different expression.",
+      "q": "Which expression means 5 more than double a number \\(n\\)?",
+      "opts": ["\\(2n + 5\\)", "\\(2(n + 5)\\)", "\\(5n + 2\\)", "\\(n + 10\\)"],
+      "why": "Double a number is \\(2n\\), and 5 more than that is \\(2n + 5\\). The option \\(2(n + 5)\\) adds 5 first and then doubles the whole sum, which is a different expression.",
       "clue": "Double the number first, then add 5."
     },
     "b": {
       "d": 3,
-      "q": "Priya has n stickers. She gets 3 more, then shares the total equally between 2 friends. Which expression shows how many each friend gets?",
-      "opts": ["(n + 3) ÷ 2", "n + 3 ÷ 2", "2(n + 3)", "(n − 3) ÷ 2"],
-      "why": "The 3 is added before sharing, so the whole sum n + 3 is divided by 2. Without brackets, n + 3 ÷ 2 would divide only the 3 by 2.",
+      "q": "Priya has \\(n\\) stickers. She gets 3 more, then shares the total equally between 2 friends. Which expression shows how many each friend gets?",
+      "opts": ["\\((n + 3) \\div 2\\)", "\\(n + 3 \\div 2\\)", "\\(2(n + 3)\\)", "\\((n - 3) \\div 2\\)"],
+      "why": "The 3 is added before sharing, so the whole sum \\(n + 3\\) is divided by 2. Without brackets, \\(n + 3 \\div 2\\) would divide only the 3 by 2.",
       "clue": "The sharing applies to the total, not just the 3."
     }
   },
   "mat-tables-values-from-rule": {
     "title": "Tables of values from a rule",
     "card": [
-      "A rule links two variables, such as y = 2x + 1. A table of values lists some x values and the y value that each one gives.",
-      "To fill the table, put each x into the rule and work out y. Multiply first, then add or subtract. For x = 3: y = 2 × 3 + 1 = 7.",
-      "Example: for y = 2x + 1, x = 1, 2, 3 gives y = 3, 5, 7. Each time x goes up by 1, y goes up by 2.",
-      "A growing pattern of shapes can give a rule too. If each step uses 4 more matches than the last, and step 1 uses 4, then matches = 4 × step number."
+      "A rule links two variables, such as \\(y = 2x + 1\\). A table of values lists some \\(x\\) values and the \\(y\\) value that each one gives.",
+      "To fill the table, put each \\(x\\) into the rule and work out \\(y\\). Multiply first, then add or subtract. For \\(x = 3\\): \\(y = 2 \\times 3 + 1 = 7\\).",
+      "Example: for \\(y = 2x + 1\\), \\(x = 1, 2, 3\\) gives \\(y = 3, 5, 7\\). Each time \\(x\\) goes up by 1, \\(y\\) goes up by 2.",
+      "A growing pattern of shapes can give a rule too. If each step uses 4 more matches than the last, and step 1 uses 4, then matches \\(= 4 \\times\\) step number."
     ],
-    "remember": "Put each x into the rule, multiply first, then add or subtract to get y.",
+    "remember": "Put each \\(x\\) into the rule, multiply first, then add or subtract to get \\(y\\).",
     "a": {
-      "q": "A rule is y = 3x − 2. What is y when x = 4?",
+      "q": "A rule is \\(y = 3x - 2\\). What is \\(y\\) when \\(x = 4\\)?",
       "opts": ["10", "14", "2", "7"],
-      "why": "Multiply first: 3 × 4 = 12. Then subtract 2 to get 10. The answer 14 comes from adding 2 instead of subtracting it.",
-      "clue": "Multiply 3 by x, then take away 2."
+      "why": "Multiply first: \\(3 \\times 4 = 12\\). Then subtract 2 to get 10. The answer 14 comes from adding 2 instead of subtracting it.",
+      "clue": "Multiply 3 by \\(x\\), then take away 2."
     },
     "b": {
       "d": 2,
-      "q": "Jin makes a pattern with squares. Step 1 uses 4 squares, step 2 uses 7, step 3 uses 10. The rule is squares = 3 × step + 1. How many squares are used at step 6?",
+      "q": "Jin makes a pattern with squares. Step 1 uses 4 squares, step 2 uses 7, step 3 uses 10. The rule is squares \\(= 3 \\times\\) step \\(+ 1\\). How many squares are used at step 6?",
       "opts": ["19", "18", "22", "16"],
-      "why": "Put 6 in the rule: 3 × 6 + 1 = 18 + 1 = 19. The answer 18 forgets to add the 1.",
+      "why": "Put 6 in the rule: \\(3 \\times 6 + 1 = 18 + 1 = 19\\). The answer 18 forgets to add the 1.",
       "clue": "Check the rule on step 2 first: it should give 7."
     }
   },
@@ -16428,51 +16545,54 @@ MADE_BANKS.mat = {
     "title": "Area of triangles and parallelograms",
     "card": [
       "The base is one side of the shape. The perpendicular height is the straight distance from the base to the opposite side or vertex (corner), at a right angle to the base.",
-      ["Parallelogram", "area = base × perpendicular height. The slanted side is not the height."],
+      ["Parallelogram", "area \\(=\\) base \\(\\times\\) perpendicular height. The slanted side is not the height."],
       [
         "Triangle",
-        "area = ½ × base × perpendicular height. It is half of a parallelogram with the same base and height."
+        "area \\(= \\frac{1}{2} \\times\\) base \\(\\times\\) perpendicular height. It is half of a parallelogram with the same base and height."
       ],
-      "Example: a triangle has base 10 cm and perpendicular height 6 cm. Area = ½ × 10 × 6 = 30 cm²."
+      "Example: a triangle has base 10 cm and perpendicular height 6 cm. Area \\(= \\frac{1}{2} \\times 10 \\times 6 = 30 \\text{ cm}^{2}\\)."
     ],
     "remember": "Use the perpendicular height, not a slanted side. A triangle is half the base times height.",
     "a": {
       "q": "A parallelogram has base 8 cm, perpendicular height 5 cm and a slanted side of 6 cm. What is its area?",
-      "opts": ["40 cm²", "20 cm²", "48 cm²", "24 cm²"],
-      "why": "Area = base × perpendicular height = 8 × 5 = 40 cm². Using the slanted side gives 48 cm², but the slanted side is not at right angles to the base.",
+      "opts": ["\\(40 \\text{ cm}^{2}\\)", "\\(20 \\text{ cm}^{2}\\)", "\\(48 \\text{ cm}^{2}\\)", "\\(24 \\text{ cm}^{2}\\)"],
+      "why": "Area \\(=\\) base \\(\\times\\) perpendicular height \\(= 8 \\times 5 = 40 \\text{ cm}^{2}\\). Using the slanted side gives \\(48 \\text{ cm}^{2}\\), but the slanted side is not at right angles to the base.",
       "clue": "Which length is at a right angle to the base?"
     },
     "b": {
       "d": 2,
       "q": "Zoe cuts a triangle of felt with base 12 cm and perpendicular height 7 cm. What is its area?",
-      "opts": ["42 cm²", "84 cm²", "19 cm²", "38 cm²"],
-      "why": "Area = ½ × 12 × 7 = 42 cm². The answer 84 cm² forgets to halve, which gives the area of a parallelogram instead.",
+      "opts": ["\\(42 \\text{ cm}^{2}\\)", "\\(84 \\text{ cm}^{2}\\)", "\\(19 \\text{ cm}^{2}\\)", "\\(38 \\text{ cm}^{2}\\)"],
+      "why": "Area \\(= \\frac{1}{2} \\times 12 \\times 7 = 42 \\text{ cm}^{2}\\). The answer \\(84 \\text{ cm}^{2}\\) forgets to halve, which gives the area of a parallelogram instead.",
       "clue": "A triangle is half of a parallelogram."
     }
   },
   "mat-volume-rectangular-triangular-prisms": {
     "title": "Volume of prisms",
     "card": [
-      "Volume is the amount of space inside a solid. It is measured in cubic units, such as cm³.",
-      "A right prism has the same cross-section all the way along its length. Volume = area of cross-section × length.",
-      ["Rectangular prism", "The cross-section is a rectangle, so volume = length × width × height."],
+      "Volume is the amount of space inside a solid. It is measured in cubic units, such as \\(\\text{cm}^{3}\\).",
+      "A right prism has the same cross-section all the way along its length. Volume \\(=\\) area of cross-section \\(\\times\\) length.",
+      [
+        "Rectangular prism",
+        "The cross-section is a rectangle, so volume \\(=\\) length \\(\\times\\) width \\(\\times\\) height."
+      ],
       [
         "Triangular prism",
-        "The cross-section is a triangle. Example: triangle area 6 cm² and length 10 cm gives volume 6 × 10 = 60 cm³."
+        "The cross-section is a triangle. Example: triangle area \\(6 \\text{ cm}^{2}\\) and length 10 cm gives volume \\(6 \\times 10 = 60 \\text{ cm}^{3}\\)."
       ]
     ],
     "remember": "Volume of a right prism is cross-section area times length, in cubic units.",
     "a": {
       "q": "A box is 5 cm long, 4 cm wide and 3 cm high. What is its volume?",
-      "opts": ["60 cm³", "12 cm³", "47 cm³", "94 cm³"],
-      "why": "Volume = 5 × 4 × 3 = 60 cm³. Adding the lengths to get 12 is a common mistake, but volume needs multiplying.",
+      "opts": ["\\(60 \\text{ cm}^{3}\\)", "\\(12 \\text{ cm}^{3}\\)", "\\(47 \\text{ cm}^{3}\\)", "\\(94 \\text{ cm}^{3}\\)"],
+      "why": "Volume \\(= 5 \\times 4 \\times 3 = 60 \\text{ cm}^{3}\\). Adding the lengths to get 12 is a common mistake, but volume needs multiplying.",
       "clue": "Multiply all three measurements."
     },
     "b": {
       "d": 3,
-      "q": "A tent is a triangular prism. Its triangular end has area 2 m² and the tent is 3 m long. What is its volume?",
-      "opts": ["6 m³", "5 m³", "3 m³", "12 m³"],
-      "why": "The end is the cross-section, so volume = 2 × 3 = 6 m³. Adding 2 and 3 gives 5, which is not how volume works.",
+      "q": "A tent is a triangular prism. Its triangular end has area \\(2 \\text{ m}^{2}\\) and the tent is 3 m long. What is its volume?",
+      "opts": ["\\(6 \\text{ m}^{3}\\)", "\\(5 \\text{ m}^{3}\\)", "\\(3 \\text{ m}^{3}\\)", "\\(12 \\text{ m}^{3}\\)"],
+      "why": "The end is the cross-section, so volume \\(= 2 \\times 3 = 6 \\text{ m}^{3}\\). Adding 2 and 3 gives 5, which is not how volume works.",
       "clue": "The triangle's area is already worked out."
     }
   },
@@ -16483,22 +16603,22 @@ MADE_BANKS.mat = {
       ["Diameter", "the distance straight across a circle through the centre. It is twice the radius."],
       [
         "Circumference",
-        "the distance around the circle. For every circle, circumference ÷ diameter is the same number, called pi (π), about 3.14."
+        "the distance around the circle. For every circle, circumference \\(\\div\\) diameter is the same number, called pi (\\(\\pi\\)), about 3.14."
       ],
-      "So circumference ≈ 3.14 × diameter. Example: a circle with diameter 10 cm has circumference about 3.14 × 10 = 31.4 cm."
+      "So circumference \\(\\approx 3.14 \\times\\) diameter. Example: a circle with diameter 10 cm has circumference about \\(3.14 \\times 10 = 31.4\\) cm."
     ],
     "remember": "Diameter is twice the radius. Circumference is about 3.14 times the diameter.",
     "a": {
       "q": "A circle has a radius of 7 cm. What is its diameter?",
       "opts": ["14 cm", "3.5 cm", "21.98 cm", "49 cm"],
-      "why": "The diameter is twice the radius, so 2 × 7 = 14 cm. Halving the radius gives 3.5 cm, which mixes up the two.",
+      "why": "The diameter is twice the radius, so \\(2 \\times 7 = 14\\) cm. Halving the radius gives 3.5 cm, which mixes up the two.",
       "clue": "The diameter goes all the way across."
     },
     "b": {
       "d": 3,
-      "q": "A round pond has a radius of 5 m. About how far is it around the edge? Use π ≈ 3.14.",
+      "q": "A round pond has a radius of 5 m. About how far is it around the edge? Use \\(\\pi \\approx 3.14\\).",
       "opts": ["31.4 m", "15.7 m", "78.5 m", "16.4 m"],
-      "why": "Diameter = 2 × 5 = 10 m, so circumference ≈ 3.14 × 10 = 31.4 m. Using the radius directly gives 15.7 m, which is only half the distance.",
+      "why": "Diameter \\(= 2 \\times 5 = 10\\) m, so circumference \\(\\approx 3.14 \\times 10 = 31.4\\) m. Using the radius directly gives 15.7 m, which is only half the distance.",
       "clue": "Find the diameter first."
     }
   },
@@ -16532,15 +16652,15 @@ MADE_BANKS.mat = {
     "title": "Co-interior angles",
     "card": [
       "A transversal is a line that crosses other lines. Co-interior angles are on the same side of the transversal and between the two lines. They make a C shape.",
-      "When the two lines are parallel, co-interior angles add to 180°. So one angle = 180° − the other.",
-      "Example: one co-interior angle is 115°. The other is 180° − 115° = 65°.",
+      "When the two lines are parallel, co-interior angles add to 180°. So one angle \\(= 180^{\\circ} -\\) the other.",
+      "Example: one co-interior angle is 115°. The other is \\(180^{\\circ} - 115^{\\circ} = 65^{\\circ}\\).",
       "This also works as a test. If a pair of co-interior angles adds to 180°, the lines are parallel. If it does not, they are not parallel."
     ],
     "remember": "Co-interior angles in a C shape add to 180° when the lines are parallel.",
     "a": {
       "q": "Two parallel lines are crossed by a transversal. One co-interior angle is 78°. What is the other co-interior angle?",
       "opts": ["102°", "78°", "12°", "282°"],
-      "why": "Co-interior angles between parallel lines add to 180°, so 180° − 78° = 102°. 78° is wrong because that would be the rule for equal angles, not co-interior ones.",
+      "why": "Co-interior angles between parallel lines add to 180°, so \\(180^{\\circ} - 78^{\\circ} = 102^{\\circ}\\). 78° is wrong because that would be the rule for equal angles, not co-interior ones.",
       "clue": "The two angles in a C shape add to a straight angle."
     },
     "b": {
@@ -16552,7 +16672,7 @@ MADE_BANKS.mat = {
         "The lines are perpendicular",
         "The lines are parallel, as 112° is obtuse"
       ],
-      "why": "112° + 70° = 182°, not 180°. Co-interior angles add to 180° only when the lines are parallel, so these lines are not parallel.",
+      "why": "\\(112^{\\circ} + 70^{\\circ} = 182^{\\circ}\\), not 180°. Co-interior angles add to 180° only when the lines are parallel, so these lines are not parallel.",
       "clue": "Add the two angles and compare the total with 180°."
     }
   },
@@ -16583,22 +16703,22 @@ MADE_BANKS.mat = {
     "title": "Angle sum of polygons",
     "card": [
       "A polygon is a closed shape with straight sides. Pick one vertex (corner) and draw lines to every other vertex that is not next to it. This splits the polygon into triangles.",
-      "Each triangle has an angle sum of 180°. A quadrilateral splits into 2 triangles, so its angles add to 2 × 180° = 360°.",
-      "A polygon with n sides splits into n − 2 triangles. Its angles add to (n − 2) × 180°.",
-      "Example: a hexagon has 6 sides. (6 − 2) × 180° = 4 × 180° = 720°."
+      "Each triangle has an angle sum of 180°. A quadrilateral splits into 2 triangles, so its angles add to \\(2 \\times 180^{\\circ} = 360^{\\circ}\\).",
+      "A polygon with \\(n\\) sides splits into \\(n - 2\\) triangles. Its angles add to \\((n - 2) \\times 180^{\\circ}\\).",
+      "Example: a hexagon has 6 sides. \\((6 - 2) \\times 180^{\\circ} = 4 \\times 180^{\\circ}\\), which is 720°."
     ],
-    "remember": "Number of triangles = n − 2, so the angle sum is (n − 2) × 180°.",
+    "remember": "Number of triangles \\(= n - 2\\), so the angle sum is \\((n - 2) \\times 180^{\\circ}\\).",
     "a": {
       "q": "What is the angle sum of a pentagon, which has 5 sides?",
       "opts": ["540°", "900°", "360°", "720°"],
-      "why": "A pentagon splits into 5 − 2 = 3 triangles, so the sum is 3 × 180° = 540°. 720° would be the sum for a hexagon, which has 6 sides.",
-      "clue": "Find n − 2 first, then multiply by 180°."
+      "why": "A pentagon splits into \\(5 - 2 = 3\\) triangles, so the sum is \\(3 \\times 180^{\\circ} = 540^{\\circ}\\). 720° would be the sum for a hexagon, which has 6 sides.",
+      "clue": "Find \\(n - 2\\) first, then multiply by 180°."
     },
     "b": {
       "d": 3,
       "q": "Three angles of a quadrilateral are 95°, 110° and 70°. What is the fourth angle?",
       "opts": ["85°", "275°", "95°", "180°"],
-      "why": "The four angles add to 360°. 95° + 110° + 70° = 275°, and 360° − 275° = 85°. 275° is the sum of the three known angles, not the missing one.",
+      "why": "The four angles add to 360°. \\(95^{\\circ} + 110^{\\circ} + 70^{\\circ} = 275^{\\circ}\\), and \\(360^{\\circ} - 275^{\\circ} = 85^{\\circ}\\). 275° is the sum of the three known angles, not the missing one.",
       "clue": "Subtract the three known angles from the quadrilateral's total."
     }
   },
@@ -16944,23 +17064,23 @@ MADE_BANKS.mat = {
   "mat-sample-spaces-probability-2": {
     "title": "Sample spaces and probability",
     "card": [
-      "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives {1, 2, 3, 4, 5, 6}.",
-      "An event is a set of outcomes we care about, such as rolling an even number: {2, 4, 6}.",
-      "If all outcomes are equally likely, P(event) = number of favourable outcomes ÷ total number of outcomes. For an even number, P = 3/6 = 1/2.",
+      "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives \\(\\{1, 2, 3, 4, 5, 6\\}\\).",
+      "An event is a set of outcomes we care about, such as rolling an even number: \\(\\{2, 4, 6\\}\\).",
+      "If all outcomes are equally likely, \\(P(\\text{event}) =\\) number of favourable outcomes \\(\\div\\) total number of outcomes. For an even number, \\(P = \\frac{3}{6} = \\frac{1}{2}\\).",
       "Every probability is between 0 and 1. An impossible event has probability 0 and a certain event has probability 1."
     ],
     "remember": "List equally likely outcomes, count the ones you want, then divide by the total.",
     "a": {
       "q": "One fair die is rolled. What is the probability of getting a number more than 4?",
-      "opts": ["1/3", "1/6", "2/3", "5/6"],
-      "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and 2/6 = 1/3. The option 1/6 is tempting, but it counts only one outcome, forgetting that 6 is also greater than 4.",
+      "opts": ["\\(\\frac{1}{3}\\)", "\\(\\frac{1}{6}\\)", "\\(\\frac{2}{3}\\)", "\\(\\frac{5}{6}\\)"],
+      "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and \\(\\frac{2}{6} = \\frac{1}{3}\\). The option \\(\\frac{1}{6}\\) is tempting, but it counts only one outcome, forgetting that 6 is also greater than 4.",
       "clue": "Count the outcomes that are above 4, not including 4."
     },
     "b": {
       "d": 3,
       "q": "A bag has 3 red, 2 blue and 5 green marbles. One marble is drawn without looking. What is the probability it is green?",
-      "opts": ["1/2", "1/3", "1/5", "5/6"],
-      "why": "The bag has 3 + 2 + 5 = 10 marbles, and all are equally likely to be drawn. There are 5 green marbles, so P = 5/10 = 1/2. The answer 1/3 comes from treating the 3 colours as equally likely outcomes. They are not, because there are different numbers of each colour.",
+      "opts": ["\\(\\frac{1}{2}\\)", "\\(\\frac{1}{3}\\)", "\\(\\frac{1}{5}\\)", "\\(\\frac{5}{6}\\)"],
+      "why": "The bag has \\(3 + 2 + 5 = 10\\) marbles, and all are equally likely to be drawn. There are 5 green marbles, so \\(P = \\frac{5}{10} = \\frac{1}{2}\\). The answer \\(\\frac{1}{3}\\) comes from treating the 3 colours as equally likely outcomes. They are not, because there are different numbers of each colour.",
       "clue": "Add up all the marbles first, then count the green ones."
     }
   },
@@ -16973,29 +17093,29 @@ MADE_BANKS.mat = {
       ],
       [
         "Expected frequency",
-        "the number of times you expect an event to happen. Expected frequency = probability × number of trials."
+        "the number of times you expect an event to happen. Expected frequency \\(=\\) probability \\(\\times\\) number of trials."
       ],
       [
         "Example",
-        "Sam spins a spinner 50 times and gets red 12 times. The relative frequency of red is 12/50 = 0.24."
+        "Sam spins a spinner 50 times and gets red 12 times. The relative frequency of red is \\(\\frac{12}{50} = 0.24\\)."
       ],
       [
         "Example",
-        "If the probability of red is 1/4, the expected frequency in 200 spins is 1/4 × 200 = 50. The real count may be different from this."
+        "If the probability of red is \\(\\frac{1}{4}\\), the expected frequency in 200 spins is \\(\\frac{1}{4} \\times 200 = 50\\). The real count may be different from this."
       ]
     ],
     "remember": "Relative frequency comes from results. Expected frequency comes from probability.",
     "a": {
       "q": "Priya flips a coin 40 times and gets heads 18 times. What is the relative frequency of heads?",
-      "opts": ["18/40", "18/22", "1/2", "40/18"],
-      "why": "Relative frequency is the number of heads divided by the number of trials: 18 ÷ 40. Using 22 divides by the number of tails, which is not the number of trials.",
+      "opts": ["\\(\\frac{18}{40}\\)", "\\(\\frac{18}{22}\\)", "\\(\\frac{1}{2}\\)", "\\(\\frac{40}{18}\\)"],
+      "why": "Relative frequency is the number of heads divided by the number of trials: \\(18 \\div 40\\). Using 22 divides by the number of tails, which is not the number of trials.",
       "clue": "Divide by the total number of flips."
     },
     "b": {
       "d": 3,
       "q": "A fair six-sided die is rolled 120 times. How many times is a number greater than 4 expected?",
       "opts": ["40", "20", "60", "80"],
-      "why": "Numbers greater than 4 are 5 and 6, so the probability is 2/6 = 1/3. Expected frequency = 1/3 × 120 = 40. The answer 20 comes from counting only the 5, which is 1/6 × 120.",
+      "why": "Numbers greater than 4 are 5 and 6, so the probability is \\(\\frac{2}{6} = \\frac{1}{3}\\). Expected frequency \\(= \\frac{1}{3} \\times 120 = 40\\). The answer 20 comes from counting only the 5, which is \\(\\frac{1}{6} \\times 120\\).",
       "clue": "Count the outcomes greater than 4, not including 4."
     }
   },
@@ -17037,17 +17157,20 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Rational",
-        "a number that can be written as a fraction of two integers, such as 3/4 or 5/1. Whole numbers, negative integers such as −6 and fractions such as −2/3 are all rational."
+        "a number that can be written as a fraction of two integers, such as \\(\\frac{3}{4}\\) or \\(\\frac{5}{1}\\). Whole numbers, negative integers such as \\(-6\\) and fractions such as \\(-\\frac{2}{3}\\) are all rational."
       ],
-      ["Irrational", "a number that cannot be written as a fraction of two integers. Examples are π and √2."],
+      [
+        "Irrational",
+        "a number that cannot be written as a fraction of two integers. Examples are \\(\\pi\\) and \\(\\sqrt{2}\\)."
+      ],
       "The decimal of an irrational number never ends and never repeats in a pattern. The decimal of a rational number either ends or repeats, and any decimal that ends or repeats can be written as a fraction.",
-      "For a whole number, its square root is rational only when the number is a perfect square. √49 = 7, which is 7/1, so it is rational. 10 is not a perfect square, so √10 is irrational."
+      "For a whole number, its square root is rational only when the number is a perfect square. \\(\\sqrt{49} = 7\\), which is \\(\\frac{7}{1}\\), so it is rational. 10 is not a perfect square, so \\(\\sqrt{10}\\) is irrational."
     ],
     "remember": "If it can be a fraction of integers, it is rational. If its decimal never ends or repeats, it is irrational.",
     "a": {
       "q": "Which number below is irrational?",
-      "opts": ["√7", "√81", "0.25", "−6"],
-      "why": "7 is not a perfect square, so √7 is irrational and its decimal never ends or repeats. √81 = 9 = 9/1, 0.25 = 1/4 and −6 = −6/1 are all fractions of integers, so they are rational.",
+      "opts": ["\\(\\sqrt{7}\\)", "\\(\\sqrt{81}\\)", "0.25", "\\(-6\\)"],
+      "why": "7 is not a perfect square, so \\(\\sqrt{7}\\) is irrational and its decimal never ends or repeats. \\(\\sqrt{81} = 9 = \\frac{9}{1}\\), \\(0.25 = \\frac{1}{4}\\) and \\(-6 = \\frac{-6}{1}\\) are all fractions of integers, so they are rational.",
       "clue": "Try to write each number as a fraction of two integers."
     },
     "b": {
@@ -17059,7 +17182,7 @@ MADE_BANKS.mat = {
         "It is irrational, because it is not a whole number",
         "It is rational, because it has only two repeating digits"
       ],
-      "why": "A decimal that repeats in a pattern can be written as a fraction of two integers, so the number is rational. In fact 2.636363... = 29/11. Length does not matter, and neither does how many digits repeat: an irrational decimal does not repeat at all.",
+      "why": "A decimal that repeats in a pattern can be written as a fraction of two integers, so the number is rational. In fact \\(2.636363\\ldots = \\frac{29}{11}\\). Length does not matter, and neither does how many digits repeat: an irrational decimal does not repeat at all.",
       "clue": "Does the decimal repeat in a pattern or not?"
     }
   },
@@ -17118,19 +17241,19 @@ MADE_BANKS.mat = {
   "mat-terminating-recurring-decimals": {
     "title": "Terminating and recurring decimals",
     "card": [
-      "To turn a fraction into a decimal, divide the top number by the bottom number. For 3/8, divide 3 by 8 to get 0.375.",
-      ["Terminating", "a decimal that ends, such as 3/8 = 0.375 or 1/4 = 0.25."],
+      "To turn a fraction into a decimal, divide the top number by the bottom number. For \\(\\frac{3}{8}\\), divide 3 by 8 to get 0.375.",
+      ["Terminating", "a decimal that ends, such as \\(\\frac{3}{8} = 0.375\\) or \\(\\frac{1}{4} = 0.25\\)."],
       [
         "Recurring",
-        "a decimal whose digits repeat forever, such as 1/3 = 0.333... A dot or bar over the repeating digits shows this, so 2/3 = 0.6 with a bar over the 6."
+        "a decimal whose digits repeat forever, such as \\(\\frac{1}{3} = 0.333\\ldots\\) A dot or bar over the repeating digits shows this, so \\(\\frac{2}{3} = 0.\\overline{6}\\), with a bar over the 6."
       ],
-      "Worked example: 5/6 = 5 ÷ 6 = 0.8333..., where only the 3 repeats. The 8 is not part of the repeat."
+      "Worked example: \\(\\frac{5}{6} = 5 \\div 6 = 0.8333\\ldots\\), where only the 3 repeats. The 8 is not part of the repeat."
     ],
     "remember": "Divide top by bottom. The decimal either ends or repeats.",
     "a": {
       "q": "Which fraction is a recurring decimal?",
-      "opts": ["2/9", "3/5", "7/8", "1/2"],
-      "why": "2 ÷ 9 = 0.222..., and the 2 repeats forever. The others end: 3/5 = 0.6, 7/8 = 0.875 and 1/2 = 0.5.",
+      "opts": ["\\(\\frac{2}{9}\\)", "\\(\\frac{3}{5}\\)", "\\(\\frac{7}{8}\\)", "\\(\\frac{1}{2}\\)"],
+      "why": "\\(2 \\div 9 = 0.222\\ldots\\), and the 2 repeats forever. The others end: \\(\\frac{3}{5} = 0.6\\), \\(\\frac{7}{8} = 0.875\\) and \\(\\frac{1}{2} = 0.5\\).",
       "clue": "Divide each top number by its bottom number and see which never stops."
     },
     "b": {
@@ -17150,23 +17273,26 @@ MADE_BANKS.mat = {
     "title": "Multiplying and dividing integers",
     "card": [
       "Integers are whole numbers, positive, negative or zero. To multiply or divide, first look at the signs of the two numbers.",
-      ["Same signs", "the answer is positive. For example, −6 × −3 = 18 and −20 ÷ −4 = 5."],
-      ["Different signs", "the answer is negative. For example, 7 × −2 = −14 and 20 ÷ −4 = −5."],
+      ["Same signs", "the answer is positive. For example, \\(-6 \\times (-3) = 18\\) and \\(-20 \\div (-4) = 5\\)."],
+      [
+        "Different signs",
+        "the answer is negative. For example, \\(7 \\times (-2) = -14\\) and \\(20 \\div (-4) = -5\\)."
+      ],
       "Work out the sign first, then multiply or divide the numbers as if they had no signs. Division uses the same sign rules as multiplication."
     ],
     "remember": "Same signs give a positive answer. Different signs give a negative answer.",
     "a": {
-      "q": "What is −8 × −5?",
-      "opts": ["40", "−40", "−13", "13"],
-      "why": "Both numbers are negative, so the signs are the same and the answer is positive. 8 × 5 = 40. The answer −40 comes from forgetting that two negatives make a positive.",
+      "q": "What is \\(-8 \\times (-5)\\)?",
+      "opts": ["40", "\\(-40\\)", "\\(-13\\)", "13"],
+      "why": "Both numbers are negative, so the signs are the same and the answer is positive. \\(8 \\times 5 = 40\\). The answer \\(-40\\) comes from forgetting that two negatives make a positive.",
       "clue": "Check whether the two signs match."
     },
     "b": {
       "d": 2,
-      "q": "A diver in Hobart goes down at a steady rate. Her height changes by −4 m each minute. What is the total change in her height over 6 minutes?",
-      "opts": ["−24 m", "24 m", "−10 m", "−2 m"],
-      "why": "Six lots of −4 m is 6 × −4. The signs are different, so the answer is negative, and 6 × 4 = 24, so the change is −24 m. The answer 24 m drops the sign, and −10 m adds the numbers instead of multiplying.",
-      "clue": "Each minute adds another −4 m. How many minutes are there?"
+      "q": "A diver in Hobart goes down at a steady rate. Her height changes by \\(-4\\) m each minute. What is the total change in her height over 6 minutes?",
+      "opts": ["\\(-24\\) m", "24 m", "\\(-10\\) m", "\\(-2\\) m"],
+      "why": "Six lots of \\(-4\\) m is \\(6 \\times (-4)\\). The signs are different, so the answer is negative, and \\(6 \\times 4 = 24\\), so the change is \\(-24\\) m. The answer 24 m drops the sign, and \\(-10\\) m adds the numbers instead of multiplying.",
+      "clue": "Each minute adds another \\(-4\\) m. How many minutes are there?"
     }
   },
   "mat-operations-with-negative-fractions": {
@@ -17207,26 +17333,26 @@ MADE_BANKS.mat = {
       "To change an amount by a percentage in one step, multiply by a single factor. The factor is the new amount as a decimal fraction of the original.",
       [
         "Increase",
-        "Add the percentage to 100%, then write it as a decimal. A 15% increase is 100% + 15% = 115%, so the factor is 1.15."
+        "Add the percentage to 100%, then write it as a decimal. A 15% increase is \\(100\\% + 15\\% = 115\\%\\), so the factor is 1.15."
       ],
       [
         "Decrease",
-        "Take the percentage from 100%, then write it as a decimal. A 20% decrease is 100% − 20% = 80%, so the factor is 0.8."
+        "Take the percentage from 100%, then write it as a decimal. A 20% decrease is \\(100\\% - 20\\% = 80\\%\\), so the factor is 0.8."
       ],
-      "Example: a $60 jacket rises in price by 15%. New price = 60 × 1.15 = $69."
+      "Example: a $60 jacket rises in price by 15%. New price \\(= 60 \\times 1.15 = \\$69\\)."
     ],
     "remember": "Increase: 100% plus the change. Decrease: 100% minus the change. Then multiply.",
     "a": {
       "q": "Which factor gives a 30% decrease?",
       "opts": ["0.7", "0.3", "1.3", "0.03"],
-      "why": "A 30% decrease leaves 100% − 30% = 70%, which is 0.7. The factor 0.3 is tempting, but multiplying by 0.3 leaves only 30% of the amount, so it is a 70% decrease.",
+      "why": "A 30% decrease leaves \\(100\\% - 30\\% = 70\\%\\), which is 0.7. The factor 0.3 is tempting, but multiplying by 0.3 leaves only 30% of the amount, so it is a 70% decrease.",
       "clue": "Work out what percentage is left after the decrease."
     },
     "b": {
       "d": 2,
       "q": "Ravi's gym fee is $40 a week. It rises by 15%. What is the new weekly fee?",
       "opts": ["$46", "$55", "$41.50", "$6"],
-      "why": "The factor is 1.15, so 40 × 1.15 = $46. The answer $6 is only the increase (15% of 40), not the new fee.",
+      "why": "The factor is 1.15, so \\(40 \\times 1.15 = \\$46\\). The answer $6 is only the increase (15% of 40), not the new fee.",
       "clue": "The question asks for the new fee, not the size of the rise."
     }
   },
@@ -17235,24 +17361,27 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Profit",
-        "Profit = selling price − cost price. It is a profit when the selling price is higher than the cost price."
+        "Profit \\(=\\) selling price \\(-\\) cost price. It is a profit when the selling price is higher than the cost price."
       ],
-      ["Loss", "Loss = cost price − selling price. It is a loss when the selling price is lower than the cost price."],
-      "Percentage change = change ÷ original amount × 100. The original amount is the one you started with, which for profit and loss is the cost price.",
-      "Example: Zoe buys a bike for $200 and sells it for $250. Profit = 250 − 200 = $50. Percentage profit = 50 ÷ 200 × 100 = 25%."
+      [
+        "Loss",
+        "Loss \\(=\\) cost price \\(-\\) selling price. It is a loss when the selling price is lower than the cost price."
+      ],
+      "Percentage change \\(=\\) change \\(\\div\\) original amount \\(\\times 100\\). The original amount is the one you started with, which for profit and loss is the cost price.",
+      "Example: Zoe buys a bike for $200 and sells it for $250. Profit \\(= 250 - 200 = \\$50\\). Percentage profit \\(= 50 \\div 200 \\times 100 = 25\\%\\)."
     ],
     "remember": "Find the change first, then divide by the original amount and times 100.",
     "a": {
       "q": "Sam buys a skateboard for $80 and sells it for $100. What is the profit?",
       "opts": ["$20", "$180", "$25", "$80"],
-      "why": "Profit = selling price − cost price = 100 − 80 = $20. The value $180 comes from adding the two prices instead of subtracting.",
+      "why": "Profit \\(=\\) selling price \\(-\\) cost price \\(= 100 - 80 = \\$20\\). The value $180 comes from adding the two prices instead of subtracting.",
       "clue": "Subtract the cost price from the selling price."
     },
     "b": {
       "d": 3,
       "q": "Leah buys a lamp for $50 and sells it for $40. What is her percentage loss?",
       "opts": ["20%", "25%", "10%", "80%"],
-      "why": "The loss is 50 − 40 = $10. Percentage loss = 10 ÷ 50 × 100 = 20%. Dividing by the selling price gives 25%, which is wrong because the change is divided by the original cost price.",
+      "why": "The loss is \\(50 - 40 = \\$10\\). Percentage loss \\(= 10 \\div 50 \\times 100 = 20\\%\\). Dividing by the selling price gives 25%, which is wrong because the change is divided by the original cost price.",
       "clue": "Divide the loss by the amount you started with."
     }
   },
@@ -17330,21 +17459,24 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Commutative",
-        "Order does not matter for adding or multiplying. a + b = b + a and a × b = b × a. Subtracting and dividing are not commutative."
+        "Order does not matter for adding or multiplying. \\(a + b = b + a\\) and \\(a \\times b = b \\times a\\). Subtracting and dividing are not commutative."
       ],
       [
         "Associative",
-        "Grouping does not matter for adding or multiplying. (a + b) + c = a + (b + c). Subtracting and dividing are not associative."
+        "Grouping does not matter for adding or multiplying. \\((a + b) + c = a + (b + c)\\). Subtracting and dividing are not associative."
       ],
-      ["Identity", "Adding 0 or multiplying by 1 leaves a number unchanged. a + 0 = a and a × 1 = a."],
+      [
+        "Identity",
+        "Adding 0 or multiplying by 1 leaves a number unchanged. \\(a + 0 = a\\) and \\(a \\times 1 = a\\)."
+      ],
       [
         "Inverse",
-        "Adding the opposite gives 0: a + (−a) = 0. Multiplying by the reciprocal gives 1: a × (1/a) = 1, for a not equal to 0."
+        "Adding the opposite gives 0: \\(a + (-a) = 0\\). Multiplying by the reciprocal gives 1: \\(a \\times \\frac{1}{a} = 1\\), for \\(a\\) not equal to 0."
       ]
     ],
     "remember": "These properties explain why we can reorder and regroup when adding or multiplying, but not when subtracting or dividing.",
     "a": {
-      "q": "Which property is used in 7x + 3 = 3 + 7x?",
+      "q": "Which property is used in \\(7x + 3 = 3 + 7x\\)?",
       "opts": [
         "Commutative property of addition",
         "Associative property of addition",
@@ -17356,9 +17488,9 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 3,
-      "q": "Which statement is true for all numbers a, b and c?",
-      "opts": ["a + b = b + a", "a − b = b − a", "(a − b) − c = a − (b − c)", "a ÷ b = b ÷ a"],
-      "why": "Addition is commutative, so a + b = b + a always holds. Subtraction is not commutative: 5 − 2 = 3 but 2 − 5 = −3. Division is not commutative either, and subtraction is not associative: (5 − 2) − 1 = 2 but 5 − (2 − 1) = 4.",
+      "q": "Which statement is true for all numbers \\(a\\), \\(b\\) and \\(c\\)?",
+      "opts": ["\\(a + b = b + a\\)", "\\(a - b = b - a\\)", "\\((a - b) - c = a - (b - c)\\)", "\\(a \\div b = b \\div a\\)"],
+      "why": "Addition is commutative, so \\(a + b = b + a\\) always holds. Subtraction is not commutative: \\(5 - 2 = 3\\) but \\(2 - 5 = -3\\). Division is not commutative either, and subtraction is not associative: \\((5 - 2) - 1 = 2\\) but \\(5 - (2 - 1) = 4\\).",
       "clue": "Test each one with small numbers such as 5, 2 and 1."
     }
   },
@@ -17388,28 +17520,28 @@ MADE_BANKS.mat = {
   "mat-solving-one-variable-inequalities": {
     "title": "Solving one-variable inequalities",
     "card": [
-      "An inequality uses <, >, ≤ or ≥. Solve it like an equation by doing the same thing to both sides.",
-      "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So −2x < 6 gives x > −3.",
-      "The answer is a range of values, such as x > 3. On a number line, an open circle means the end value is not included (< or >), and a closed circle means it is included (≤ or ≥).",
-      "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+      "An inequality uses \\(<\\), \\(>\\), \\(\\le\\) or \\(\\ge\\). Solve it like an equation by doing the same thing to both sides.",
+      "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So \\(-2x < 6\\) gives \\(x > -3\\).",
+      "The answer is a range of values, such as \\(x > 3\\). On a number line, an open circle means the end value is not included (\\(<\\) or \\(>\\)), and a closed circle means it is included (\\(\\le\\) or \\(\\ge\\)).",
+      "Example: \\(2x + 1 \\le 9\\). Subtract 1: \\(2x \\le 8\\). Divide by 2: \\(x \\le 4\\). Draw a closed circle at 4 with the line going left."
     ],
     "remember": "Flip the sign if you multiply or divide by a negative. A closed circle includes the end value, an open one does not.",
     "a": {
-      "q": "What is the solution of 3x − 2 > 10?",
-      "opts": ["x > 4", "x > 8/3", "x > 12", "x < 4"],
-      "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 12 comes from forgetting to divide by 3, x > 8/3 from subtracting 2 instead of adding it, and x < 4 flips the sign even though 3 is positive.",
+      "q": "What is the solution of \\(3x - 2 > 10\\)?",
+      "opts": ["\\(x > 4\\)", "\\(x > \\frac{8}{3}\\)", "\\(x > 12\\)", "\\(x < 4\\)"],
+      "why": "Add 2: \\(3x > 12\\). Divide by 3: \\(x > 4\\). The answer \\(x > 12\\) comes from forgetting to divide by 3, \\(x > \\frac{8}{3}\\) from subtracting 2 instead of adding it, and \\(x < 4\\) flips the sign even though 3 is positive.",
       "clue": "Undo the subtraction first, then undo the multiplication."
     },
     "b": {
       "d": 2,
-      "q": "Nadia solves 4x + 5 < 17. How should she draw the answer on a number line?",
+      "q": "Nadia solves \\(4x + 5 < 17\\). How should she draw the answer on a number line?",
       "opts": [
         "Open circle at 3, line going left",
         "Closed circle at 3, line going left",
         "Open circle at 3, line going right",
         "Open circle at 5.5, line going left"
       ],
-      "why": "Subtract 5: 4x < 12. Divide by 4: x < 3. The sign < leaves 3 out, so the circle is open, and values smaller than 3 go left. A closed circle would include 3, and 5.5 comes from adding 5 instead of subtracting it.",
+      "why": "Subtract 5: \\(4x < 12\\). Divide by 4: \\(x < 3\\). The sign \\(<\\) leaves 3 out, so the circle is open, and values smaller than 3 go left. A closed circle would include 3, and 5.5 comes from adding 5 instead of subtracting it.",
       "clue": "Is the end value included, and which way are the smaller numbers?"
     }
   },
@@ -17462,20 +17594,20 @@ MADE_BANKS.mat = {
   "mat-linear-models-2": {
     "title": "Linear models in context",
     "card": [
-      "A linear model has a rule like y = mx + c. It fits a situation where something changes by the same amount for each step.",
+      "A linear model has a rule like \\(y = mx + c\\). It fits a situation where something changes by the same amount for each step.",
       [
         "Rate",
-        "m is the rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
+        "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
       ],
       [
         "Intercept",
-        "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+        "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as a call-out fee paid before any work is done."
       ],
-      "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+      "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\)."
     ],
     "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
     "a": {
-      "q": "A taxi fare in Perth is F = 2.5d + 4, where d is the distance in km. What does the 2.5 tell you?",
+      "q": "A taxi fare in Perth is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 tell you?",
       "opts": [
         "The fare rises by $2.50 for each extra kilometre",
         "The fare for a trip of 0 km is $2.50",
@@ -17483,13 +17615,13 @@ MADE_BANKS.mat = {
         "The fare rises by $4 for each extra kilometre"
       ],
       "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
-      "clue": "Which number multiplies d?"
+      "clue": "Which number multiplies \\(d\\)?"
     },
     "b": {
       "d": 2,
-      "q": "Priya hires a ladder in Darwin. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+      "q": "Priya hires a ladder in Darwin. The cost is \\(C = 12n + 30\\), where \\(n\\) is the number of days. What is the cost for 5 days?",
       "opts": ["$90", "$60", "$150", "$102"],
-      "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+      "why": "\\(C = 12 \\times 5 + 30 = 60 + 30 = \\$90\\). Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
       "clue": "Multiply the daily rate by 5, then add the fixed amount."
     }
   },
@@ -17498,43 +17630,43 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Trapezium",
-        "A = ½ × (a + b) × h. Here a and b are the two parallel sides, and h is the height, measured at right angles to them."
+        "\\(A = \\frac{1}{2} \\times (a + b) \\times h\\). Here \\(a\\) and \\(b\\) are the two parallel sides, and \\(h\\) is the height, measured at right angles to them."
       ],
       [
         "Rhombus or kite",
-        "A = ½ × d₁ × d₂. Here d₁ and d₂ are the two diagonals, the lines joining opposite corners."
+        "\\(A = \\frac{1}{2} \\times d_{1} \\times d_{2}\\). Here \\(d_{1}\\) and \\(d_{2}\\) are the two diagonals, the lines joining opposite corners."
       ],
-      "Example: a trapezium has parallel sides 6 cm and 10 cm and a height of 4 cm. A = ½ × (6 + 10) × 4 = ½ × 16 × 4 = 32 cm².",
-      "Example: a kite has diagonals 8 cm and 5 cm. A = ½ × 8 × 5 = 20 cm²."
+      "Example: a trapezium has parallel sides 6 cm and 10 cm and a height of 4 cm. \\(A = \\frac{1}{2} \\times (6 + 10) \\times 4\\), which is \\(\\frac{1}{2} \\times 16 \\times 4 = 32 \\text{ cm}^{2}\\).",
+      "Example: a kite has diagonals 8 cm and 5 cm. \\(A = \\frac{1}{2} \\times 8 \\times 5 = 20 \\text{ cm}^{2}\\)."
     ],
     "remember": "Trapezium: half the sum of the parallel sides times height. Rhombus and kite: half the product of the diagonals.",
     "a": {
       "q": "A rhombus has diagonals of 12 cm and 7 cm. What is its area?",
-      "opts": ["42 cm²", "84 cm²", "19 cm²", "38 cm²"],
-      "why": "A = ½ × 12 × 7 = 42 cm². Using 12 × 7 = 84 cm² forgets to halve the product.",
+      "opts": ["42 \\(\\text{cm}^{2}\\)", "84 \\(\\text{cm}^{2}\\)", "19 \\(\\text{cm}^{2}\\)", "38 \\(\\text{cm}^{2}\\)"],
+      "why": "\\(A = \\frac{1}{2} \\times 12 \\times 7 = 42 \\text{ cm}^{2}\\). Using \\(12 \\times 7 = 84 \\text{ cm}^{2}\\) forgets to halve the product.",
       "clue": "Multiply the diagonals, then take half."
     },
     "b": {
       "d": 3,
       "q": "Mia's garden bed is a trapezium. Its parallel sides are 9 m and 5 m, and the slanted side is 4 m. The height is 3 m. What is its area?",
-      "opts": ["21 m²", "42 m²", "28 m²", "14 m²"],
-      "why": "A = ½ × (9 + 5) × 3 = ½ × 14 × 3 = 21 m². The slanted side is not the height, so using 4 m gives 28 m², which is wrong.",
+      "opts": ["21 \\(\\text{m}^{2}\\)", "42 \\(\\text{m}^{2}\\)", "28 \\(\\text{m}^{2}\\)", "14 \\(\\text{m}^{2}\\)"],
+      "why": "\\(A = \\frac{1}{2} \\times (9 + 5) \\times 3\\), which is \\(\\frac{1}{2} \\times 14 \\times 3 = 21 \\text{ m}^{2}\\). The slanted side is not the height, so using 4 m gives 28 \\(\\text{m}^{2}\\), which is wrong.",
       "clue": "The height meets the parallel sides at right angles."
     }
   },
   "mat-area-perimeter-composite-shapes": {
     "title": "Area and perimeter of composite shapes",
     "card": [
-      "A composite shape is made from simple shapes joined together. Split it into rectangles and triangles, find each area, then add them. A triangle's area is ½ × base × height.",
+      "A composite shape is made from simple shapes joined together. Split it into rectangles and triangles, find each area, then add them. A triangle's area is \\(\\frac{1}{2} \\times\\) base \\(\\times\\) height.",
       "Sometimes it is easier to start with a larger shape and subtract the part that is missing, such as a corner cut out.",
       "For the perimeter, add only the lengths along the outside edge. Lines you drew to split the shape are not part of it. Find missing sides by adding or subtracting known sides.",
-      "Example: a 10 m by 6 m rectangle has a 4 m by 3 m corner cut out. Area = 60 − 12 = 48 m². The outside edges are 10, 3, 4, 3, 6 and 6, so the perimeter is 32 m."
+      "Example: a 10 m by 6 m rectangle has a 4 m by 3 m corner cut out. Area \\(= 60 - 12 = 48 \\text{ m}^{2}\\). The outside edges are 10, 3, 4, 3, 6 and 6, so the perimeter is 32 m."
     ],
     "remember": "Area: add the parts or subtract the cut-out. Perimeter: trace the outside edge only.",
     "a": {
       "q": "A shape is a rectangle 6 m wide and 4 m tall, with a triangle on top. The triangle has a base of 6 m and a height of 2 m. What is the total area?",
-      "opts": ["30 m²", "36 m²", "26 m²", "24 m²"],
-      "why": "The rectangle is 6 × 4 = 24 m² and the triangle is ½ × 6 × 2 = 6 m², so the total is 30 m². Using 6 × 2 = 12 m² for the triangle gives 36 m², but that forgets the half.",
+      "opts": ["30 \\(\\text{m}^{2}\\)", "36 \\(\\text{m}^{2}\\)", "26 \\(\\text{m}^{2}\\)", "24 \\(\\text{m}^{2}\\)"],
+      "why": "The rectangle is \\(6 \\times 4 = 24 \\text{ m}^{2}\\) and the triangle is \\(\\frac{1}{2} \\times 6 \\times 2 = 6 \\text{ m}^{2}\\), so the total is 30 \\(\\text{m}^{2}\\). Using \\(6 \\times 2 = 12 \\text{ m}^{2}\\) for the triangle gives 36 \\(\\text{m}^{2}\\), but that forgets the half.",
       "clue": "Find each part separately, then add."
     },
     "b": {
@@ -17549,69 +17681,79 @@ MADE_BANKS.mat = {
     "title": "Circumference of a circle",
     "card": [
       "The circumference is the distance around a circle. The diameter is the distance across through the centre, and the radius is half of it.",
-      "C = π × d, where d is the diameter. Using the radius, C = 2 × π × r. Pi (π) is about 3.14.",
-      "Example: a circle has diameter 10 cm. C = π × 10 ≈ 3.14 × 10 = 31.4 cm.",
-      "Example: a circle has radius 3 cm. C = 2 × π × 3 ≈ 2 × 3.14 × 3 = 18.84 cm."
+      "\\(C = \\pi \\times d\\), where \\(d\\) is the diameter. Using the radius, \\(C = 2 \\times \\pi \\times r\\). Pi (\\(\\pi\\)) is about 3.14.",
+      "Example: a circle has diameter 10 cm. \\(C = \\pi \\times 10 \\approx 3.14 \\times 10\\), which is 31.4 cm.",
+      "Example: a circle has radius 3 cm. \\(C = 2 \\times \\pi \\times 3\\), which is about \\(2 \\times 3.14 \\times 3 = 18.84\\) cm."
     ],
-    "remember": "Circumference is π times the diameter, or 2 × π × the radius.",
+    "remember": "Circumference is \\(\\pi\\) times the diameter, or \\(2 \\times \\pi \\times\\) the radius.",
     "a": {
-      "q": "A round table has a diameter of 2 m. Using π ≈ 3.14, what is its circumference?",
+      "q": "A round table has a diameter of 2 m. Using \\(\\pi \\approx 3.14\\), what is its circumference?",
       "opts": ["6.28 m", "3.14 m", "12.56 m", "4 m"],
-      "why": "C = π × d ≈ 3.14 × 2 = 6.28 m. The answer 12.56 m comes from treating 2 m as the radius in C = 2 × π × r. The answer 3.14 m comes from halving the diameter to 1 m and then using C = π × d.",
-      "clue": "Multiply π by the distance across the circle."
+      "why": "\\(C = \\pi \\times d \\approx 3.14 \\times 2 = 6.28\\) m. The answer 12.56 m comes from treating 2 m as the radius in \\(C = 2 \\times \\pi \\times r\\). The answer 3.14 m comes from halving the diameter to 1 m and then using \\(C = \\pi \\times d\\).",
+      "clue": "Multiply \\(\\pi\\) by the distance across the circle."
     },
     "b": {
       "d": 3,
-      "q": "Ben rides a bike with wheels of radius 30 cm. Using π ≈ 3.14, how far does a wheel roll in one full turn?",
+      "q": "Ben rides a bike with wheels of radius 30 cm. Using \\(\\pi \\approx 3.14\\), how far does a wheel roll in one full turn?",
       "opts": ["188.4 cm", "94.2 cm", "60 cm", "2826 cm"],
-      "why": "C = 2 × π × 30 ≈ 2 × 3.14 × 30 = 188.4 cm. Using 3.14 × 30 = 94.2 cm treats the radius as the diameter.",
+      "why": "\\(C = 2 \\times \\pi \\times 30\\), which is about \\(2 \\times 3.14 \\times 30 = 188.4\\) cm. Using \\(3.14 \\times 30 = 94.2\\) cm treats the radius as the diameter.",
       "clue": "The length given is a radius, not a diameter."
     }
   },
   "mat-area-circle": {
     "title": "Area of a circle",
     "card": [
-      "The area of a circle is the space inside it. A = π × r², where r is the radius.",
-      "Square the radius first: r² = r × r. Then multiply by π, which is about 3.14.",
-      "Example: radius 5 cm. A = π × 5² = π × 25 ≈ 3.14 × 25 = 78.5 cm².",
+      "The area of a circle is the space inside it. \\(A = \\pi \\times r^{2}\\), where \\(r\\) is the radius.",
+      "Square the radius first: \\(r^{2} = r \\times r\\). Then multiply by \\(\\pi\\), which is about 3.14.",
+      "Example: radius 5 cm. \\(A = \\pi \\times 5^{2} = \\pi \\times 25\\), so \\(A \\approx 3.14 \\times 25 = 78.5 \\text{ cm}^{2}\\).",
       "If you are given the diameter, halve it to find the radius before you start."
     ],
-    "remember": "Area is π × radius × radius. Square the radius, not π.",
+    "remember": "Area is \\(\\pi \\times\\) radius \\(\\times\\) radius. Square the radius, not \\(\\pi\\).",
     "a": {
-      "q": "A circle has a radius of 4 cm. Using π ≈ 3.14, what is its area?",
-      "opts": ["50.24 cm²", "25.12 cm²", "100.48 cm²", "12.56 cm²"],
-      "why": "A = π × 4² = 3.14 × 16 = 50.24 cm². Using 3.14 × 4 × 2 = 25.12 cm² doubles the radius instead of squaring it.",
-      "clue": "Square the radius before multiplying by π."
+      "q": "A circle has a radius of 4 cm. Using \\(\\pi \\approx 3.14\\), what is its area?",
+      "opts": [
+        "50.24 \\(\\text{cm}^{2}\\)",
+        "25.12 \\(\\text{cm}^{2}\\)",
+        "100.48 \\(\\text{cm}^{2}\\)",
+        "12.56 \\(\\text{cm}^{2}\\)"
+      ],
+      "why": "\\(A = \\pi \\times 4^{2} \\approx 3.14 \\times 16\\), which is 50.24 \\(\\text{cm}^{2}\\). Using \\(3.14 \\times 4 \\times 2 = 25.12 \\text{ cm}^{2}\\) doubles the radius instead of squaring it.",
+      "clue": "Square the radius before multiplying by \\(\\pi\\)."
     },
     "b": {
       "d": 3,
-      "q": "A pizza at Tom's café has a diameter of 20 cm. Using π ≈ 3.14, what is its area?",
-      "opts": ["314 cm²", "1256 cm²", "62.8 cm²", "628 cm²"],
-      "why": "The radius is 20 ÷ 2 = 10 cm. A = 3.14 × 10² = 314 cm². Using 20 as the radius gives 1256 cm², which is wrong.",
+      "q": "A pizza at Tom's café has a diameter of 20 cm. Using \\(\\pi \\approx 3.14\\), what is its area?",
+      "opts": [
+        "314 \\(\\text{cm}^{2}\\)",
+        "1256 \\(\\text{cm}^{2}\\)",
+        "62.8 \\(\\text{cm}^{2}\\)",
+        "628 \\(\\text{cm}^{2}\\)"
+      ],
+      "why": "The radius is \\(20 \\div 2 = 10\\) cm. \\(A = 3.14 \\times 10^{2} = 314 \\text{ cm}^{2}\\). Using 20 as the radius gives 1256 \\(\\text{cm}^{2}\\), which is wrong.",
       "clue": "Find the radius first by halving the diameter."
     }
   },
   "mat-volume-capacity-prisms": {
     "title": "Volume and capacity of prisms",
     "card": [
-      "A prism has the same cross-section all along its length. Its volume is the area of the cross-section × the length.",
-      "Find the cross-section area first. For a triangle it is ½ × base × height, and for a rectangle it is width × height.",
-      "Capacity is how much a container holds. 1 cm³ holds 1 mL, and 1000 cm³ holds 1 L.",
-      "Example: a tank has a rectangular cross-section of 20 cm by 10 cm and is 50 cm long. Volume = 200 × 50 = 10 000 cm³, so its capacity is 10 000 mL, or 10 L."
+      "A prism has the same cross-section all along its length. Its volume is the area of the cross-section \\(\\times\\) the length.",
+      "Find the cross-section area first. For a triangle it is \\(\\frac{1}{2} \\times\\) base \\(\\times\\) height, and for a rectangle it is width \\(\\times\\) height.",
+      "Capacity is how much a container holds. \\(1\\text{ cm}^{3}\\) holds 1 mL, and \\(1000\\text{ cm}^{3}\\) holds 1 L.",
+      "Example: a tank has a rectangular cross-section of 20 cm by 10 cm and is 50 cm long. Volume \\(= 200 \\times 50 = 10{,}000\\text{ cm}^{3}\\), so its capacity is 10,000 mL, or 10 L."
     ],
-    "remember": "Volume = cross-section area × length. Then 1000 cm³ holds 1 L.",
+    "remember": "Volume \\(=\\) cross-section area \\(\\times\\) length. Then \\(1000\\text{ cm}^{3}\\) holds 1 L.",
     "a": {
       "q": "A prism has a triangular cross-section with a base of 6 cm and a height of 4 cm. It is 10 cm long. What is its volume?",
-      "opts": ["120 cm³", "240 cm³", "60 cm³", "20 cm³"],
-      "why": "The triangle's area is ½ × 6 × 4 = 12 cm². The volume is 12 × 10 = 120 cm³. Using 6 × 4 = 24 cm² for the triangle gives 240 cm³, but that forgets the half.",
+      "opts": ["\\(120\\text{ cm}^{3}\\)", "\\(240\\text{ cm}^{3}\\)", "\\(60\\text{ cm}^{3}\\)", "\\(20\\text{ cm}^{3}\\)"],
+      "why": "The triangle's area is \\(\\frac{1}{2} \\times 6 \\times 4 = 12\\text{ cm}^{2}\\). The volume is \\(12 \\times 10 = 120\\text{ cm}^{3}\\). Using \\(6 \\times 4 = 24\\text{ cm}^{2}\\) for the triangle gives \\(240\\text{ cm}^{3}\\), but that forgets the half.",
       "clue": "Find the area of the triangle first."
     },
     "b": {
       "d": 3,
       "q": "A fish tank is a rectangular prism 50 cm long, 30 cm wide and 40 cm high. How many litres of water does it hold when full?",
-      "opts": ["60 L", "6 L", "600 L", "60 000 L"],
-      "why": "The volume is 50 × 30 × 40 = 60 000 cm³. Since 1000 cm³ holds 1 L, the tank holds 60 L. Giving 60 000 L mixes up cm³ with litres, because 60 000 is the number of mL.",
-      "clue": "Find the volume in cm³, then divide by 1000."
+      "opts": ["60 L", "6 L", "600 L", "60,000 L"],
+      "why": "The volume is \\(50 \\times 30 \\times 40 = 60{,}000\\text{ cm}^{3}\\). Since \\(1000\\text{ cm}^{3}\\) holds 1 L, the tank holds 60 L. Giving 60,000 L mixes up \\(\\text{cm}^{3}\\) with litres, because 60,000 is the number of mL.",
+      "clue": "Find the volume in \\(\\text{cm}^{3}\\), then divide by 1000."
     }
   },
   "mat-duration-24-hour-time": {
@@ -17626,14 +17768,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "Write 7:05 pm as a 24-hour time.",
       "opts": ["1905", "0705", "1705", "1950"],
-      "why": "7 pm is after 1 pm, so add 12: 7 + 12 = 19, and 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
+      "why": "7 pm is after 1 pm, so add 12: \\(7 + 12 = 19\\), and 7:05 pm is 1905. 0705 is the tempting option, but that is 7:05 am because no 12 was added.",
       "clue": "From 1 pm on, add 12 to the hour."
     },
     "b": {
       "d": 3,
       "q": "A film in Mount Gambier begins at 1650 and finishes at 1905. What is its running time?",
       "opts": ["2 hours 15 minutes", "2 hours 55 minutes", "2 hours 45 minutes", "1 hour 55 minutes"],
-      "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting 1905 − 1650 as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
+      "why": "From 1650 to 1700 is 10 minutes, then 2 hours to 1900, then 5 minutes: 2 hours 15 minutes. Subtracting \\(1905 - 1650\\) as plain numbers gives 255, which wrongly reads as 2 hours 55 minutes, because an hour has 60 minutes, not 100.",
       "clue": "Go to the next whole hour first, then count on."
     }
   },
@@ -17643,20 +17785,20 @@ MADE_BANKS.mat = {
       "Earth turns, so the sun rises at different times in different places. Places are put into time zones, and each zone keeps its own clock time.",
       "Places further east are usually ahead, but zones follow borders, not just position. During daylight saving, Sydney is ahead of Brisbane, even though Brisbane is a little further east.",
       "To find the time somewhere else, use the time difference. If the other place is ahead, add it. If the other place is behind, subtract it.",
-      "Example: City A is 3 hours ahead of City B. When it is 2:00 pm in B, it is 2:00 pm + 3 hours = 5:00 pm in A."
+      "Example: City A is 3 hours ahead of City B. When it is 2:00 pm in B, it is 2:00 pm \\(+\\) 3 hours \\(=\\) 5:00 pm in A."
     ],
     "remember": "Ahead means a later clock time, so add. Behind means an earlier clock time, so subtract.",
     "a": {
       "q": "Town P is 2 hours ahead of Town Q. It is 4:00 pm in Town Q. What time is it in Town P?",
       "opts": ["6:00 pm", "2:00 pm", "4:00 pm", "8:00 pm"],
-      "why": "Town P is ahead, so its clock shows a later time: 4:00 pm + 2 hours = 6:00 pm. Choosing 2:00 pm subtracts instead, which would be right only if P were behind Q.",
+      "why": "Town P is ahead, so its clock shows a later time: 4:00 pm \\(+\\) 2 hours \\(=\\) 6:00 pm. Choosing 2:00 pm subtracts instead, which would be right only if P were behind Q.",
       "clue": "Ahead means a later time on the clock."
     },
     "b": {
       "d": 3,
       "q": "Perth is 2 hours behind Brisbane. Mei in Brisbane phones her cousin in Perth at 9:30 pm Brisbane time. What is the time in Perth?",
       "opts": ["7:30 pm", "11:30 pm", "9:30 pm", "7:30 am"],
-      "why": "Perth is behind, so its clock shows an earlier time: 9:30 pm − 2 hours = 7:30 pm. Adding 2 hours gives 11:30 pm, which is the mistake of moving the clock the wrong way.",
+      "why": "Perth is behind, so its clock shows an earlier time: 9:30 pm \\(-\\) 2 hours \\(=\\) 7:30 pm. Adding 2 hours gives 11:30 pm, which is the mistake of moving the clock the wrong way.",
       "clue": "Behind means an earlier time, so take hours away."
     }
   },
@@ -17692,45 +17834,45 @@ MADE_BANKS.mat = {
     "title": "Pythagoras' theorem: hypotenuse",
     "card": [
       "The hypotenuse is the longest side of a right-angled triangle. It is opposite the right angle.",
-      "Pythagoras' theorem says c² = a² + b², where c is the hypotenuse and a and b are the other two sides.",
+      "Pythagoras' theorem says \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse and \\(a\\) and \\(b\\) are the other two sides.",
       "To find the hypotenuse, square both short sides, add the results, then take the square root.",
-      "Example: the short sides are 6 and 8. c² = 6² + 8² = 36 + 64 = 100. So c = √100 = 10."
+      "Example: the short sides are 6 and 8. \\(c^{2} = 6^{2} + 8^{2}\\), which is \\(36 + 64 = 100\\). So \\(c = \\sqrt{100} = 10\\)."
     ],
     "remember": "Square the two short sides, add them, then take the square root.",
     "a": {
       "q": "A right-angled triangle has short sides of 5 cm and 12 cm. What is the length of the hypotenuse?",
       "opts": ["13 cm", "17 cm", "7 cm", "169 cm"],
-      "why": "c² = 5² + 12² = 25 + 144 = 169, and √169 = 13. Choosing 17 adds the sides without squaring them. Choosing 169 forgets the square root.",
+      "why": "\\(c^{2} = 5^{2} + 12^{2}\\), which is \\(25 + 144 = 169\\), and \\(\\sqrt{169} = 13\\). Choosing 17 adds the sides without squaring them. Choosing 169 forgets the square root.",
       "clue": "Square each short side, add, then take the root."
     },
     "b": {
       "d": 2,
       "q": "A ramp rises 9 m up a wall and the ground below it is 12 m long. The wall meets the ground at a right angle. How long is the ramp's sloping surface?",
       "opts": ["15 m", "21 m", "225 m", "3 m"],
-      "why": "The slope is the hypotenuse: c² = 9² + 12² = 81 + 144 = 225, and √225 = 15. Choosing 21 adds 9 and 12 without squaring. Choosing 225 stops before the square root.",
+      "why": "The slope is the hypotenuse: \\(c^{2} = 9^{2} + 12^{2}\\), which is \\(81 + 144 = 225\\), and \\(\\sqrt{225} = 15\\). Choosing 21 adds 9 and 12 without squaring. Choosing 225 stops before the square root.",
       "clue": "The sloping side is opposite the right angle."
     }
   },
   "mat-pythagoras-theorem-shorter-side": {
     "title": "Pythagoras' theorem for a shorter side",
     "card": [
-      "In a right-angled triangle, c² = a² + b², where c is the hypotenuse. The hypotenuse is always the longest side.",
-      "To find a shorter side, rearrange to a² = c² − b². Square the hypotenuse, subtract the square of the known short side, then take the square root.",
+      "In a right-angled triangle, \\(c^{2} = a^{2} + b^{2}\\), where \\(c\\) is the hypotenuse. The hypotenuse is always the longest side.",
+      "To find a shorter side, rearrange to \\(a^{2} = c^{2} - b^{2}\\). Square the hypotenuse, subtract the square of the known short side, then take the square root.",
       "Take care to subtract, not add. A shorter side must come out smaller than the hypotenuse.",
-      "Example: the hypotenuse is 10 and one short side is 6. a² = 10² − 6² = 100 − 36 = 64. So a = √64 = 8."
+      "Example: the hypotenuse is 10 and one short side is 6. \\(a^{2} = 10^{2} - 6^{2}\\), which is \\(100 - 36 = 64\\). So \\(a = \\sqrt{64} = 8\\)."
     ],
     "remember": "Hypotenuse squared, minus the known short side squared, then the square root.",
     "a": {
       "q": "A right-angled triangle has a hypotenuse of 17 cm and one short side of 8 cm. What is the other short side?",
       "opts": ["15 cm", "9 cm", "19 cm", "225 cm"],
-      "why": "a² = 17² − 8² = 289 − 64 = 225, and √225 = 15. Choosing 9 subtracts the sides without squaring them. Choosing 225 forgets the square root.",
+      "why": "\\(a^{2} = 17^{2} - 8^{2}\\), which is \\(289 - 64 = 225\\), and \\(\\sqrt{225} = 15\\). Choosing 9 subtracts the sides without squaring them. Choosing 225 forgets the square root.",
       "clue": "Subtract the squares, then take the root."
     },
     "b": {
       "d": 3,
       "q": "A 13 m ladder leans against a vertical wall. Its foot is 5 m from the wall on level ground. How high up the wall does the ladder reach?",
       "opts": ["12 m", "8 m", "14 m", "144 m"],
-      "why": "The ladder is the hypotenuse: a² = 13² − 5² = 169 − 25 = 144, and √144 = 12. Choosing 14 comes from adding the squares: √194 is about 14, which is longer than the ladder. Choosing 8 subtracts the sides without squaring them.",
+      "why": "The ladder is the hypotenuse: \\(a^{2} = 13^{2} - 5^{2}\\), which is \\(169 - 25 = 144\\), and \\(\\sqrt{144} = 12\\). Choosing 14 comes from adding the squares: \\(\\sqrt{194}\\) is about 14, which is longer than the ladder. Choosing 8 subtracts the sides without squaring them.",
       "clue": "The ladder is the longest side, so it goes first."
     }
   },
@@ -17765,21 +17907,21 @@ MADE_BANKS.mat = {
     "card": [
       "Similar shapes have the same shape but can be different sizes. Their matching angles are equal, and their matching sides are in the same ratio.",
       "The scale factor is a side of the image divided by the matching side of the original. The image is the new shape and the original is the shape you started with.",
-      "Example: a rectangle 4 cm by 6 cm is enlarged to 10 cm by 15 cm. The scale factor is 10 ÷ 4 = 2.5. Check: 6 × 2.5 = 15.",
+      "Example: a rectangle 4 cm by 6 cm is enlarged to 10 cm by 15 cm. The scale factor is \\(10 \\div 4 = 2.5\\). Check: \\(6 \\times 2.5 = 15\\).",
       "A scale factor above 1 makes the image bigger. A scale factor below 1 makes it smaller. To find a missing side, multiply the original side by the scale factor."
     ],
-    "remember": "Image side ÷ original side gives the scale factor, and every matching side uses the same one.",
+    "remember": "Image side \\(\\div\\) original side gives the scale factor, and every matching side uses the same one.",
     "a": {
       "q": "Triangle B is similar to triangle A. A side of 6 cm in A matches a side of 15 cm in B. What is the scale factor from A to B?",
       "opts": ["2.5", "0.4", "9", "90"],
-      "why": "Scale factor = image side ÷ original side = 15 ÷ 6 = 2.5. The option 0.4 comes from dividing the other way round, which gives the scale factor from B to A.",
+      "why": "Scale factor \\(=\\) image side \\(\\div\\) original side \\(= 15 \\div 6 = 2.5\\). The option 0.4 comes from dividing the other way round, which gives the scale factor from B to A.",
       "clue": "Image over original: which triangle is the image?"
     },
     "b": {
       "d": 3,
       "q": "Rectangle Q is similar to rectangle P. P is 8 cm by 5 cm. The 8 cm side matches a 20 cm side in Q. What is the length of Q's shorter side?",
       "opts": ["12.5 cm", "17 cm", "2 cm", "7.5 cm"],
-      "why": "The scale factor is 20 ÷ 8 = 2.5, so Q's shorter side is 5 × 2.5 = 12.5 cm. The option 17 cm comes from adding 12 to 5, since 8 + 12 = 20, but adding the same amount to each side does not keep the ratio equal. The option 2 cm divides 5 by 2.5 instead of multiplying, which would make Q smaller than P.",
+      "why": "The scale factor is \\(20 \\div 8 = 2.5\\), so Q's shorter side is \\(5 \\times 2.5 = 12.5\\) cm. The option 17 cm comes from adding 12 to 5, since \\(8 + 12 = 20\\), but adding the same amount to each side does not keep the ratio equal. The option 2 cm divides 5 by 2.5 instead of multiplying, which would make Q smaller than P.",
       "clue": "Find the scale factor first, then use it on the 5 cm side."
     }
   },
@@ -17787,22 +17929,22 @@ MADE_BANKS.mat = {
     "title": "Properties of quadrilaterals",
     "card": [
       "A parallelogram has two pairs of parallel sides. In parallelogram ABCD, diagonal AC splits it into triangles ABC and CDA.",
-      "The triangles share side AC. Since AB ∥ DC and AD ∥ BC, the angles each triangle makes with AC are equal alternate angles. So the triangles are congruent by AAS.",
-      "Matching sides of congruent triangles are equal, so AB = CD and AD = BC. For example, if AB = 5 cm, then CD = 5 cm.",
+      "The triangles share side AC. Since \\(AB \\parallel DC\\) and \\(AD \\parallel BC\\), the angles each triangle makes with AC are equal alternate angles. So the triangles are congruent by AAS.",
+      "Matching sides of congruent triangles are equal, so \\(AB = CD\\) and \\(AD = BC\\). For example, if \\(AB = 5\\) cm, then \\(CD = 5\\) cm.",
       "Both diagonals together make four triangles. Opposite triangles, such as AMB and CMD, are congruent by AAS, so the diagonals bisect each other: they cut each other in half."
     ],
     "remember": "Congruent triangles inside a parallelogram explain why its opposite sides are equal and its diagonals bisect each other.",
     "a": {
-      "q": "Parallelogram ABCD has AB = 7 cm and BC = 4 cm. What is the length of CD?",
+      "q": "Parallelogram ABCD has \\(AB = 7\\) cm and \\(BC = 4\\) cm. What is the length of CD?",
       "opts": ["7 cm", "4 cm", "11 cm", "3 cm"],
-      "why": "CD is opposite AB, and opposite sides of a parallelogram are equal, so CD = 7 cm. 4 cm is wrong because that is the length of BC, a neighbouring side.",
+      "why": "CD is opposite AB, and opposite sides of a parallelogram are equal, so \\(CD = 7\\) cm. 4 cm is wrong because that is the length of BC, a neighbouring side.",
       "clue": "Which side is opposite CD?"
     },
     "b": {
       "d": 2,
       "q": "The diagonals of parallelogram PQRS meet at M. PM is 6 cm. What is the length of the whole diagonal PR?",
       "opts": ["12 cm", "6 cm", "3 cm", "18 cm"],
-      "why": "The diagonals bisect each other, so M is the midpoint of PR. PR = 6 + 6 = 12 cm. Giving 6 cm forgets that PM is only half of the diagonal.",
+      "why": "The diagonals bisect each other, so M is the midpoint of PR. \\(PR = 6 + 6 = 12\\) cm. Giving 6 cm forgets that PM is only half of the diagonal.",
       "clue": "Bisect means cut in half."
     }
   },
@@ -18017,45 +18159,45 @@ MADE_BANKS.mat = {
     "title": "Two-way tables",
     "card": [
       "A two-way table lists the outcomes of one event down the side and the outcomes of a second event across the top. Each cell shows one combined outcome.",
-      "Count the cells to find the total number of combined outcomes. A die and a coin give 6 rows × 2 columns = 12 cells.",
+      "Count the cells to find the total number of combined outcomes. A die and a coin give 6 rows \\(\\times\\) 2 columns \\(=\\) 12 cells.",
       "To find a probability, count the cells that match the event and divide by the total number of cells. This works when every cell is equally likely.",
-      "Example: roll a die and toss a coin. Cells with an even number and a head are 2H, 4H and 6H. That is 3 cells, so P(even and head) = 3/12 = 1/4."
+      "Example: roll a die and toss a coin. Cells with an even number and a head are 2H, 4H and 6H. That is 3 cells, so \\(P(\\text{even and head}) = \\frac{3}{12} = \\frac{1}{4}\\)."
     ],
     "remember": "Count the matching cells, then divide by the total number of cells.",
     "a": {
       "q": "A spinner has 4 equal sections and a coin is tossed. A two-way table lists every combined outcome. How many cells does it have?",
       "opts": ["8", "6", "4", "16"],
-      "why": "The spinner gives 4 rows and the coin gives 2 columns, so 4 × 2 = 8 cells. Adding 4 + 2 = 6 is the tempting mistake, but each spinner result pairs with both coin results.",
+      "why": "The spinner gives 4 rows and the coin gives 2 columns, so \\(4 \\times 2 = 8\\) cells. Adding \\(4 + 2 = 6\\) is the tempting mistake, but each spinner result pairs with both coin results.",
       "clue": "Multiply the rows by the columns."
     },
     "b": {
       "d": 3,
-      "q": "Leo rolls a die and tosses a coin. All 12 combined outcomes are equally likely. What is P(a number greater than 4 and a tail)?",
-      "opts": ["2/12", "2/6", "1/12", "4/12"],
-      "why": "Numbers greater than 4 are 5 and 6, so the matching cells are 5T and 6T. That is 2 cells out of 12, so the probability is 2/12. Using 2/6 forgets that the table has 12 cells, not 6.",
+      "q": "Leo rolls a die and tosses a coin. All 12 combined outcomes are equally likely. What is the probability of a number greater than 4 and a tail?",
+      "opts": ["\\(\\frac{2}{12}\\)", "\\(\\frac{2}{6}\\)", "\\(\\frac{1}{12}\\)", "\\(\\frac{4}{12}\\)"],
+      "why": "Numbers greater than 4 are 5 and 6, so the matching cells are 5T and 6T. That is 2 cells out of 12, so the probability is \\(\\frac{2}{12}\\). Using \\(\\frac{2}{6}\\) forgets that the table has 12 cells, not 6.",
       "clue": "List the matching cells, then divide by all the cells."
     }
   },
   "mat-venn-diagrams": {
     "title": "Venn diagrams",
     "card": [
-      "A Venn diagram uses overlapping circles to show events. Event A and event B each get a circle, which holds the outcomes in that event.",
+      "A Venn diagram uses overlapping circles to show events. Event \\(A\\) and event \\(B\\) each get a circle, which holds the outcomes in that event.",
       ["A and B", "the overlap, where outcomes are in both circles."],
       ["A or B", "everything inside either circle, including the overlap. Count the overlap once only."],
-      "Example: 30 students. 12 play netball (N), 9 play soccer (S), and 4 play both. Netball or soccer = 12 + 9 − 4 = 17, so P(N or S) = 17/30."
+      "Example: 30 students. 12 play netball (\\(N\\)), 9 play soccer (\\(S\\)), and 4 play both. Netball or soccer \\(= 12 + 9 - 4 = 17\\), so \\(P(N \\text{ or } S) = \\frac{17}{30}\\)."
     ],
     "remember": "Overlap means both. Anywhere in the circles means either, with the overlap counted once.",
     "a": {
       "q": "In a class of 24, 10 students have a dog, 8 have a cat, and 3 have both. How many students have a dog or a cat?",
       "opts": ["15", "18", "12", "21"],
-      "why": "Dog or cat = 10 + 8 − 3 = 15. The 3 students with both were counted in each circle, so they are taken off once. Adding 10 + 8 gives 18, which counts them twice.",
+      "why": "Dog or cat \\(= 10 + 8 - 3 = 15\\). The 3 students with both were counted in each circle, so they are taken off once. Adding \\(10 + 8\\) gives 18, which counts them twice.",
       "clue": "The overlap is counted twice when you add the circles."
     },
     "b": {
       "d": 3,
-      "q": "Of 40 students on a camp, 15 chose kayaking (K), 18 chose climbing (C), and 6 chose both. What is P(K or C)?",
-      "opts": ["27/40", "33/40", "21/40", "6/40"],
-      "why": "K or C = 15 + 18 − 6 = 27, so the probability is 27/40. The tempting 33/40 comes from adding 15 + 18 without removing the overlap, which counts 6 students twice. Taking the 6 off twice gives 21/40, which leaves out the students who chose both.",
+      "q": "Of 40 students on a camp, 15 chose kayaking (\\(K\\)), 18 chose climbing (\\(C\\)), and 6 chose both. What is \\(P(K \\text{ or } C)\\)?",
+      "opts": ["\\(\\frac{27}{40}\\)", "\\(\\frac{33}{40}\\)", "\\(\\frac{21}{40}\\)", "\\(\\frac{6}{40}\\)"],
+      "why": "\\(K \\text{ or } C = 15 + 18 - 6 = 27\\), so the probability is \\(\\frac{27}{40}\\). The tempting \\(\\frac{33}{40}\\) comes from adding \\(15 + 18\\) without removing the overlap, which counts 6 students twice. Taking the 6 off twice gives \\(\\frac{21}{40}\\), which leaves out the students who chose both.",
       "clue": "Find how many students are in either circle, then divide by 40."
     }
   },
@@ -18064,21 +18206,21 @@ MADE_BANKS.mat = {
     "card": [
       "A tree diagram shows the outcomes of one step as branches. Each outcome then splits into new branches for the second step.",
       "Follow one path from the start to the end of the branches. That path is one combined outcome, such as red then blue.",
-      "To list every combined outcome, follow every path. The number of paths is the number of outcomes in the first step × the number in the second.",
-      "Example: a bag has a red and a blue counter. Pick one, put it back, and pick again. The paths are RR, RB, BR and BB, so there are 2 × 2 = 4 outcomes."
+      "To list every combined outcome, follow every path. The number of paths is the number of outcomes in the first step \\(\\times\\) the number in the second.",
+      "Example: a bag has a red and a blue counter. Pick one, put it back, and pick again. The paths are RR, RB, BR and BB, so there are \\(2 \\times 2 = 4\\) outcomes."
     ],
     "remember": "Each path through the branches is one combined outcome.",
     "a": {
       "q": "Ava tosses a coin, then spins a spinner with 3 equal sections. How many paths are there on the tree diagram?",
       "opts": ["6", "5", "3", "9"],
-      "why": "The coin has 2 branches, and each one splits into 3 for the spinner. That gives 2 × 3 = 6 paths. Adding 2 + 3 = 5 is the wrong operation, because every coin branch splits into 3 new branches.",
+      "why": "The coin has 2 branches, and each one splits into 3 for the spinner. That gives \\(2 \\times 3 = 6\\) paths. Adding \\(2 + 3 = 5\\) is the wrong operation, because every coin branch splits into 3 new branches.",
       "clue": "Each first branch splits into the same number of new branches."
     },
     "b": {
       "d": 2,
       "q": "Sam picks one of three cards marked A, B and C, then tosses a coin. Which list shows all the outcomes on the tree?",
       "opts": ["AH, AT, BH, BT, CH, CT", "AH, AT, BH, BT", "AH, BT, CH", "AA, BB, CC, HH, TT, HT"],
-      "why": "Each of the 3 cards splits into heads and tails, giving 3 × 2 = 6 paths. The list with only 4 outcomes leaves out card C. Each path must have one card result then one coin result.",
+      "why": "Each of the 3 cards splits into heads and tails, giving \\(3 \\times 2 = 6\\) paths. The list with only 4 outcomes leaves out card C. Each path must have one card result then one coin result.",
       "clue": "Follow each card's branches to both coin results."
     }
   },
@@ -18146,45 +18288,50 @@ MADE_BANKS.mat = {
     "title": "Scientific notation for large numbers",
     "card": [
       "Scientific notation writes a large number as a number from 1 to less than 10, times a power of 10. The power is positive.",
-      "To write 3 400 000: put the point after the first non-zero digit to get 3.4. Count how many places the point moved. It moved 6 places.",
-      "So 3 400 000 = 3.4 × 10⁶. The power of 10 is the number of places the point moved.",
-      "To go back, multiply by the power of 10. 10⁶ is 1 000 000, so 3.4 × 10⁶ = 3 400 000. A number such as 34 × 10⁵ is not in scientific notation, because 34 is not less than 10."
+      "To write 3,400,000: put the point after the first non-zero digit to get 3.4. Count how many places the point moved. It moved 6 places.",
+      "So \\(3{,}400{,}000 = 3.4 \\times 10^{6}\\). The power of 10 is the number of places the point moved.",
+      "To go back, multiply by the power of 10. \\(10^{6}\\) is 1,000,000, so \\(3.4 \\times 10^{6} = 3{,}400{,}000\\). A number such as \\(34 \\times 10^{5}\\) is not in scientific notation, because 34 is not less than 10."
     ],
     "remember": "Large number: a number from 1 to less than 10, times 10 to a positive power.",
     "a": {
-      "q": "Which is 52 000 000 written in scientific notation?",
-      "opts": ["5.2 × 10⁷", "5.2 × 10⁶", "52 × 10⁶", "5.2 × 10⁸"],
-      "why": "The point moves 7 places to give 5.2, so the power is 7. 5.2 × 10⁶ is tempting, but it counts only the 6 zeros and not the places the point moved.",
+      "q": "Which is 52,000,000 written in scientific notation?",
+      "opts": ["\\(5.2 \\times 10^{7}\\)", "\\(5.2 \\times 10^{6}\\)", "\\(52 \\times 10^{6}\\)", "\\(5.2 \\times 10^{8}\\)"],
+      "why": "The point moves 7 places to give 5.2, so the power is 7. \\(5.2 \\times 10^{6}\\) is tempting, but it counts only the 6 zeros and not the places the point moved.",
       "clue": "Count the places from the end of the number to after the 5."
     },
     "b": {
       "d": 3,
-      "q": "A tank holds 7.8 × 10⁵ litres of water. How many litres is that?",
-      "opts": ["780 000", "78 000", "7 800 000", "7 800 005"],
-      "why": "10⁵ is 100 000, and 7.8 × 100 000 = 780 000. The point moves 5 places to the right. 78 000 is tempting, but it moves the point only 4 places.",
+      "q": "A tank holds \\(7.8 \\times 10^{5}\\) litres of water. How many litres is that?",
+      "opts": ["780,000", "78,000", "7,800,000", "7,800,005"],
+      "why": "\\(10^{5}\\) is 100,000, and \\(7.8 \\times 100{,}000 = 780{,}000\\). The point moves 5 places to the right. 78,000 is tempting, but it moves the point only 4 places.",
       "clue": "Move the decimal point right by the same number of places as the power."
     }
   },
   "mat-scientific-notation-small-numbers": {
     "title": "Scientific notation for small numbers",
     "card": [
-      "Scientific notation writes a number as a × 10ⁿ, where a is from 1 to less than 10. A very small number, between 0 and 1, uses a negative power of 10.",
+      "Scientific notation writes a number as \\(a \\times 10^{n}\\), where \\(a\\) is from 1 to less than 10. A very small number, between 0 and 1, uses a negative power of 10.",
       "To write a small number, move the decimal point right until you have a number from 1 to less than 10. The power of 10 is minus the number of places you moved it.",
-      "Example: 0.000 52. Move the point 4 places right to get 5.2. So 0.000 52 = 5.2 × 10⁻⁴.",
-      "To go back, move the point left by the number in the power. 3 × 10⁻² = 0.03, because the point moves 2 places left. A negative power makes a small number, not a negative number."
+      "Example: 0.00052. Move the point 4 places right to get 5.2. So \\(0.00052 = 5.2 \\times 10^{-4}\\).",
+      "To go back, move the point left by the number in the power. \\(3 \\times 10^{-2} = 0.03\\), because the point moves 2 places left. A negative power makes a small number, not a negative number."
     ],
-    "remember": "A small number is a × 10⁻ⁿ, where n counts the places the point moved to get a.",
+    "remember": "A small number is \\(a \\times 10^{-n}\\), where \\(n\\) counts the places the point moved to get \\(a\\).",
     "a": {
-      "q": "A cell is 0.000 073 m wide. How is this written in scientific notation?",
-      "opts": ["7.3 × 10⁻⁵ m", "7.3 × 10⁻⁴ m", "7.3 × 10⁵ m", "0.73 × 10⁻⁴ m"],
-      "why": "The point moves 5 places right to give 7.3, so the power is −5. Using −4 is tempting, but it comes from counting only the zeros after the point, which is 4, and missing a place.",
+      "q": "A cell is 0.000073 m wide. How is this written in scientific notation?",
+      "opts": [
+        "\\(7.3 \\times 10^{-5}\\) m",
+        "\\(7.3 \\times 10^{-4}\\) m",
+        "\\(7.3 \\times 10^{5}\\) m",
+        "\\(0.73 \\times 10^{-4}\\) m"
+      ],
+      "why": "The point moves 5 places right to give 7.3, so the power is \\(-5\\). Using \\(-4\\) is tempting, but it comes from counting only the zeros after the point, which is 4, and missing a place.",
       "clue": "Count the places the point moves to get 7.3."
     },
     "b": {
       "d": 2,
-      "q": "A dust particle has a width of 2.5 × 10⁻³ m. What is this as an ordinary decimal?",
-      "opts": ["0.0025 m", "0.025 m", "0.000 25 m", "−0.0025 m"],
-      "why": "A power of −3 means the point moves 3 places left: 2.5 becomes 0.0025. The option 0.025 moves it only 2 places. A negative power does not make the number negative.",
+      "q": "A dust particle has a width of \\(2.5 \\times 10^{-3}\\) m. What is this as an ordinary decimal?",
+      "opts": ["0.0025 m", "0.025 m", "0.00025 m", "\\(-0.0025\\) m"],
+      "why": "A power of \\(-3\\) means the point moves 3 places left: 2.5 becomes 0.0025. The option 0.025 moves it only 2 places. A negative power does not make the number negative.",
       "clue": "Move the point 3 places to the left."
     }
   },
@@ -18224,23 +18371,23 @@ MADE_BANKS.mat = {
     "title": "Negative indices",
     "card": [
       "A negative index means a reciprocal. The reciprocal of a number is 1 divided by that number.",
-      "The rule is a⁻ⁿ = 1/aⁿ. The negative sign in the index does not make the answer negative.",
-      "Worked example: 2⁻³ = 1/2³ = 1/(2 × 2 × 2) = 1/8.",
-      "A number in front is not moved. 3x⁻² = 3 × 1/x² = 3/x², because the index applies only to x."
+      "The rule is \\(a^{-n} = \\frac{1}{a^{n}}\\). The negative sign in the index does not make the answer negative.",
+      "Worked example: \\(2^{-3} = \\frac{1}{2^{3}} = \\frac{1}{2 \\times 2 \\times 2} = \\frac{1}{8}\\).",
+      "A number in front is not moved. \\(3x^{-2} = 3 \\times \\frac{1}{x^{2}} = \\frac{3}{x^{2}}\\), because the index applies only to \\(x\\)."
     ],
     "remember": "A negative index means 1 over the same power made positive. The minus sign in the index does not make the answer negative.",
     "a": {
-      "q": "What is the value of 5⁻²?",
-      "opts": ["1/25", "1/10", "−25", "−10"],
-      "why": "5⁻² = 1/5² = 1/25. The tempting answer 1/10 comes from multiplying 5 by 2 instead of using the power. The index makes a reciprocal, not a negative number.",
+      "q": "What is the value of \\(5^{-2}\\)?",
+      "opts": ["\\(\\frac{1}{25}\\)", "\\(\\frac{1}{10}\\)", "\\(-25\\)", "\\(-10\\)"],
+      "why": "\\(5^{-2} = \\frac{1}{5^{2}} = \\frac{1}{25}\\). The tempting answer \\(\\frac{1}{10}\\) comes from multiplying 5 by 2 instead of using the power. The index makes a reciprocal, not a negative number.",
       "clue": "Write 1 over the base with the index made positive."
     },
     "b": {
       "d": 3,
-      "q": "Which expression is the same as 4x⁻³?",
-      "opts": ["4/x³", "1/(4x³)", "x³/4", "−4x³"],
-      "why": "The index −3 applies only to x, so x⁻³ = 1/x³ and the 4 stays on top, giving 4/x³. The option 1/(4x³) is tempting but it wrongly moves the 4 to the bottom as well.",
-      "clue": "Which part of 4x⁻³ has the negative index?"
+      "q": "Which expression is the same as \\(4x^{-3}\\)?",
+      "opts": ["\\(\\frac{4}{x^{3}}\\)", "\\(\\frac{1}{4x^{3}}\\)", "\\(\\frac{x^{3}}{4}\\)", "\\(-4x^{3}\\)"],
+      "why": "The index \\(-3\\) applies only to \\(x\\), so \\(x^{-3} = \\frac{1}{x^{3}}\\) and the 4 stays on top, giving \\(\\frac{4}{x^{3}}\\). The option \\(\\frac{1}{4x^{3}}\\) is tempting but it wrongly moves the 4 to the bottom as well.",
+      "clue": "Which part of \\(4x^{-3}\\) has the negative index?"
     }
   },
   "mat-expanding-binomial-products": {
@@ -18271,71 +18418,74 @@ MADE_BANKS.mat = {
     "card": [
       [
         "Perfect square",
-        "(a + b)² = a² + 2ab + b². Square the first term, double the product of the two terms, then square the last term."
+        "\\((a + b)^{2} = a^{2} + 2ab + b^{2}\\). Square the first term, double the product of the two terms, then square the last term."
       ],
-      "Worked example: (x + 4)² = x² + 2 × x × 4 + 4² = x² + 8x + 16. Note that (x + 4)² is not x² + 16.",
-      ["Difference of two squares", "(a + b)(a − b) = a² − b². The middle terms cancel, so only two terms are left."],
-      "Worked example: (x + 5)(x − 5) = x² − 25. The brackets must have the same two terms, one with + and one with −."
+      "Worked example: \\((x + 4)^{2} = x^{2} + 2 \\times x \\times 4 + 4^{2}\\), which is \\(x^{2} + 8x + 16\\). Note that \\((x + 4)^{2}\\) is not \\(x^{2} + 16\\).",
+      [
+        "Difference of two squares",
+        "\\((a + b)(a - b) = a^{2} - b^{2}\\). The middle terms cancel, so only two terms are left."
+      ],
+      "Worked example: \\((x + 5)(x - 5) = x^{2} - 25\\). The brackets must have the same two terms, one with \\(+\\) and one with \\(-\\)."
     ],
-    "remember": "A squared bracket has a middle term 2ab. Matching brackets with + and − have no middle term.",
+    "remember": "A squared bracket has a middle term \\(2ab\\). Matching brackets with \\(+\\) and \\(-\\) have no middle term.",
     "a": {
-      "q": "What is (x + 6)² when expanded?",
-      "opts": ["x² + 12x + 36", "x² + 36", "x² + 6x + 36", "x² + 12x + 12"],
-      "why": "Using (a + b)², the middle term is 2 × x × 6 = 12x and the last is 6² = 36. The answer x² + 36 is tempting, but it leaves out the middle term.",
-      "clue": "Double the product of x and 6 for the middle term."
+      "q": "What is \\((x + 6)^{2}\\) when expanded?",
+      "opts": ["\\(x^{2} + 12x + 36\\)", "\\(x^{2} + 36\\)", "\\(x^{2} + 6x + 36\\)", "\\(x^{2} + 12x + 12\\)"],
+      "why": "Using \\((a + b)^{2}\\), the middle term is \\(2 \\times x \\times 6 = 12x\\) and the last is \\(6^{2} = 36\\). The answer \\(x^{2} + 36\\) is tempting, but it leaves out the middle term.",
+      "clue": "Double the product of \\(x\\) and 6 for the middle term."
     },
     "b": {
       "d": 2,
-      "q": "What is (y + 9)(y − 9) when expanded?",
-      "opts": ["y² − 81", "y² + 81", "y² − 18y − 81", "y² − 18"],
-      "why": "The brackets match except for the sign, so the middle terms cancel and the answer is y² − 9² = y² − 81. Writing y² + 81 mixes this up with a perfect square, which has a plus sign for the last term.",
-      "clue": "The y terms with 9 cancel out."
+      "q": "What is \\((y + 9)(y - 9)\\) when expanded?",
+      "opts": ["\\(y^{2} - 81\\)", "\\(y^{2} + 81\\)", "\\(y^{2} - 18y - 81\\)", "\\(y^{2} - 18\\)"],
+      "why": "The brackets match except for the sign, so the middle terms cancel and the answer is \\(y^{2} - 9^{2} = y^{2} - 81\\). Writing \\(y^{2} + 81\\) mixes this up with a perfect square, which has a plus sign for the last term.",
+      "clue": "The \\(y\\) terms with 9 cancel out."
     }
   },
   "mat-factorising-monic-quadratics": {
     "title": "Factorising monic quadratics",
     "card": [
-      "A monic quadratic is x² + bx + c, where the number in front of x² is 1. Factorising means writing it as two brackets multiplied together.",
-      "Find two numbers that multiply to c and add to b. Then the answer is (x + first number)(x + second number).",
-      "Worked example: x² + 7x + 12. The numbers 3 and 4 multiply to 12 and add to 7. So x² + 7x + 12 = (x + 3)(x + 4).",
-      "Signs matter. If c is positive, both numbers have the same sign as b. If c is negative, the numbers have different signs. Check by expanding the brackets."
+      "A monic quadratic is \\(x^{2} + bx + c\\), where the number in front of \\(x^{2}\\) is 1. Factorising means writing it as two brackets multiplied together.",
+      "Find two numbers that multiply to \\(c\\) and add to \\(b\\). Then the answer is \\((x + p)(x + q)\\), where \\(p\\) and \\(q\\) are the two numbers.",
+      "Worked example: \\(x^{2} + 7x + 12\\). The numbers 3 and 4 multiply to 12 and add to 7. So \\(x^{2} + 7x + 12 = (x + 3)(x + 4)\\).",
+      "Signs matter. If \\(c\\) is positive, both numbers have the same sign as \\(b\\). If \\(c\\) is negative, the numbers have different signs. Check by expanding the brackets."
     ],
-    "remember": "Find two numbers that multiply to c and add to b.",
+    "remember": "Find two numbers that multiply to \\(c\\) and add to \\(b\\).",
     "a": {
-      "q": "Which is the factorised form of x² + 9x + 20?",
-      "opts": ["(x + 4)(x + 5)", "(x + 2)(x + 10)", "(x + 3)(x + 6)", "(x + 9)(x + 20)"],
-      "why": "4 × 5 = 20 and 4 + 5 = 9, so the brackets are (x + 4)(x + 5). The pair 2 and 10 multiplies to 20 but adds to 12, so it fails the add test.",
+      "q": "Which is the factorised form of \\(x^{2} + 9x + 20\\)?",
+      "opts": ["\\((x + 4)(x + 5)\\)", "\\((x + 2)(x + 10)\\)", "\\((x + 3)(x + 6)\\)", "\\((x + 9)(x + 20)\\)"],
+      "why": "\\(4 \\times 5 = 20\\) and \\(4 + 5 = 9\\), so the brackets are \\((x + 4)(x + 5)\\). The pair 2 and 10 multiplies to 20 but adds to 12, so it fails the add test.",
       "clue": "Find a pair that multiplies to 20 and also adds to 9."
     },
     "b": {
       "d": 3,
-      "q": "Which is the factorised form of x² − 2x − 15?",
-      "opts": ["(x − 5)(x + 3)", "(x + 5)(x − 3)", "(x − 5)(x − 3)", "(x + 5)(x + 3)"],
-      "why": "The numbers must multiply to −15 and add to −2. These are −5 and 3, since −5 × 3 = −15 and −5 + 3 = −2. The pair 5 and −3 also multiplies to −15 but adds to +2, so it has the wrong signs.",
-      "clue": "Since c is negative, the two numbers have different signs. Check which pair adds to −2."
+      "q": "Which is the factorised form of \\(x^{2} - 2x - 15\\)?",
+      "opts": ["\\((x - 5)(x + 3)\\)", "\\((x + 5)(x - 3)\\)", "\\((x - 5)(x - 3)\\)", "\\((x + 5)(x + 3)\\)"],
+      "why": "The numbers must multiply to \\(-15\\) and add to \\(-2\\). These are \\(-5\\) and 3, since \\(-5 \\times 3 = -15\\) and \\(-5 + 3 = -2\\). The pair 5 and \\(-3\\) also multiplies to \\(-15\\) but adds to \\(+2\\), so it has the wrong signs.",
+      "clue": "Since \\(c\\) is negative, the two numbers have different signs. Check which pair adds to \\(-2\\)."
     }
   },
   "mat-gradient-interval": {
     "title": "Gradient of an interval",
     "card": [
-      "Gradient measures how steep a line is. Gradient = rise ÷ run, where rise is the change in y and run is the change in x.",
-      "For two points (x₁, y₁) and (x₂, y₂), the gradient is (y₂ − y₁) ÷ (x₂ − x₁). Subtract the coordinates in the same order on top and bottom.",
+      "Gradient measures how steep a line is. Gradient \\(=\\) rise \\(\\div\\) run, where rise is the change in \\(y\\) and run is the change in \\(x\\).",
+      "For two points \\((x_{1}, y_{1})\\) and \\((x_{2}, y_{2})\\), the gradient is \\(\\frac{y_{2} - y_{1}}{x_{2} - x_{1}}\\). Subtract the coordinates in the same order on top and bottom.",
       "A line that slopes up to the right has a positive gradient. A line that slopes down to the right has a negative gradient.",
-      "Example: from (1, 7) to (4, 1), rise = 1 − 7 = −6 and run = 4 − 1 = 3. Gradient = −6 ÷ 3 = −2."
+      "Example: from \\((1, 7)\\) to \\((4, 1)\\), rise \\(= 1 - 7 = -6\\) and run \\(= 4 - 1 = 3\\). Gradient \\(= -6 \\div 3 = -2\\)."
     ],
-    "remember": "Gradient is change in y over change in x, and it is negative when the line goes down to the right.",
+    "remember": "Gradient is change in \\(y\\) over change in \\(x\\), and it is negative when the line goes down to the right.",
     "a": {
-      "q": "What is the gradient of the interval from (2, 3) to (6, 11)?",
-      "opts": ["2", "1/2", "−2", "8"],
-      "why": "Rise = 11 − 3 = 8 and run = 6 − 2 = 4, so the gradient is 8 ÷ 4 = 2. The option 1/2 turns the fraction upside down by putting run over rise.",
-      "clue": "Put the change in y on top."
+      "q": "What is the gradient of the interval from \\((2, 3)\\) to \\((6, 11)\\)?",
+      "opts": ["2", "\\(\\frac{1}{2}\\)", "\\(-2\\)", "8"],
+      "why": "Rise \\(= 11 - 3 = 8\\) and run \\(= 6 - 2 = 4\\), so the gradient is \\(8 \\div 4 = 2\\). The option \\(\\frac{1}{2}\\) turns the fraction upside down by putting run over rise.",
+      "clue": "Put the change in \\(y\\) on top."
     },
     "b": {
       "d": 3,
-      "q": "A walking track on a map runs from A(1, 9) to B(5, 3). What is its gradient?",
-      "opts": ["−3/2", "3/2", "−2/3", "2/3"],
-      "why": "Rise = 3 − 9 = −6 and run = 5 − 1 = 4, so the gradient is −6/4 = −3/2. The track slopes down to the right, so the gradient is negative. The option 3/2 loses the sign.",
-      "clue": "Does the line go up or down as x increases?"
+      "q": "A walking track on a map runs from \\(A(1, 9)\\) to \\(B(5, 3)\\). What is its gradient?",
+      "opts": ["\\(-\\frac{3}{2}\\)", "\\(\\frac{3}{2}\\)", "\\(-\\frac{2}{3}\\)", "\\(\\frac{2}{3}\\)"],
+      "why": "Rise \\(= 3 - 9 = -6\\) and run \\(= 5 - 1 = 4\\), so the gradient is \\(\\frac{-6}{4} = -\\frac{3}{2}\\). The track slopes down to the right, so the gradient is negative. The option \\(\\frac{3}{2}\\) loses the sign.",
+      "clue": "Does the line go up or down as \\(x\\) increases?"
     }
   },
   "mat-midpoint-interval": {
@@ -18364,57 +18514,60 @@ MADE_BANKS.mat = {
   "mat-distance-between-two-points": {
     "title": "Distance between two points",
     "card": [
-      "The distance between two points is the length of the straight interval joining them. Find the change in x and the change in y between the points.",
+      "The distance between two points is the length of the straight interval joining them. Find the change in \\(x\\) and the change in \\(y\\) between the points.",
       "These two changes are the two shorter sides of a right-angled triangle. The interval is the longest side, the hypotenuse.",
-      "Pythagoras' theorem gives the formula: distance = √(change in x² + change in y²). Square each change, add, then take the square root.",
-      ["Example", "From (1, 2) to (4, 6): change in x = 3, change in y = 4. Distance = √(9 + 16) = √25 = 5."]
+      "Pythagoras' theorem gives the formula: distance \\(= \\sqrt{a^{2} + b^{2}}\\), where \\(a\\) is the change in \\(x\\) and \\(b\\) is the change in \\(y\\). Square each change, add, then take the square root.",
+      [
+        "Example",
+        "From \\((1, 2)\\) to \\((4, 6)\\): the change in \\(x\\) is 3 and the change in \\(y\\) is 4. Distance \\(= \\sqrt{9 + 16} = \\sqrt{25} = 5\\)."
+      ]
     ],
-    "remember": "Square the change in x and the change in y, add them, then take the square root.",
+    "remember": "Square the change in \\(x\\) and the change in \\(y\\), add them, then take the square root.",
     "a": {
-      "q": "What is the distance from (2, 1) to (5, 5)?",
+      "q": "What is the distance from \\((2, 1)\\) to \\((5, 5)\\)?",
       "opts": ["5", "7", "25", "3.5"],
-      "why": "Change in x = 3 and change in y = 4, so distance = √(9 + 16) = √25 = 5. The answer 25 is tempting, but it skips the final square root step.",
+      "why": "The change in \\(x\\) is 3 and the change in \\(y\\) is 4, so distance \\(= \\sqrt{9 + 16} = \\sqrt{25} = 5\\). The answer 25 is tempting, but it skips the final square root step.",
       "clue": "Square both changes, add, then take the root."
     },
     "b": {
       "d": 3,
-      "q": "A park map uses a grid in metres. A path runs from (−3, 2) to (5, −4). How long is the path?",
+      "q": "A park map uses a grid in metres. A path runs from \\((-3, 2)\\) to \\((5, -4)\\). How long is the path?",
       "opts": ["10 m", "14 m", "100 m", "2 m"],
-      "why": "Change in x = 5 − (−3) = 8 and change in y = −4 − 2 = −6. Distance = √(64 + 36) = √100 = 10 m. The answer 14 comes from adding the changes instead of using Pythagoras' theorem.",
+      "why": "The change in \\(x\\) is \\(5 - (-3) = 8\\) and the change in \\(y\\) is \\(-4 - 2 = -6\\). Distance \\(= \\sqrt{64 + 36} = \\sqrt{100} = 10\\) m. The answer 14 comes from adding the changes instead of using Pythagoras' theorem.",
       "clue": "Take care with the negative numbers when finding each change."
     }
   },
   "mat-gradient-y-intercept": {
     "title": "Gradient and y-intercept",
     "card": [
-      "A straight line can be written as y = mx + c. In this form, m is the gradient and c is the y-intercept.",
-      "The y-intercept is the point where the line cuts the y-axis. It is the point (0, c), because x is 0 there.",
-      "Changing m tilts the line, making it steeper or flatter. Changing c shifts the whole line up or down without tilting it.",
-      "Example: y = −3x + 5 has gradient −3 and cuts the y-axis at (0, 5). It slopes down to the right."
+      "A straight line can be written as \\(y = mx + c\\). In this form, \\(m\\) is the gradient and \\(c\\) is the y-intercept.",
+      "The y-intercept is the point where the line cuts the y-axis. It is the point \\((0, c)\\), because \\(x\\) is 0 there.",
+      "Changing \\(m\\) tilts the line, making it steeper or flatter. Changing \\(c\\) shifts the whole line up or down without tilting it.",
+      "Example: \\(y = -3x + 5\\) has gradient \\(-3\\) and cuts the y-axis at \\((0, 5)\\). It slopes down to the right."
     ],
-    "remember": "In y = mx + c, m sets the tilt and c sets where the line meets the y-axis.",
+    "remember": "In \\(y = mx + c\\), \\(m\\) sets the tilt and \\(c\\) sets where the line meets the y-axis.",
     "a": {
-      "q": "A line has the equation y = 4x − 7. What are its gradient and y-intercept?",
+      "q": "A line has the equation \\(y = 4x - 7\\). What are its gradient and y-intercept?",
       "opts": [
-        "Gradient 4, y-intercept −7",
-        "Gradient −7, y-intercept 4",
+        "Gradient 4, y-intercept \\(-7\\)",
+        "Gradient \\(-7\\), y-intercept 4",
         "Gradient 4, y-intercept 7",
-        "Gradient −4, y-intercept 7"
+        "Gradient \\(-4\\), y-intercept 7"
       ],
-      "why": "The number multiplying x is the gradient, 4. The number added on its own is the y-intercept, which is −7 here. Swapping the two numbers is a common mistake.",
-      "clue": "The gradient is the number multiplying x."
+      "why": "The number multiplying \\(x\\) is the gradient, 4. The number added on its own is the y-intercept, which is \\(-7\\) here. Swapping the two numbers is a common mistake.",
+      "clue": "The gradient is the number multiplying \\(x\\)."
     },
     "b": {
       "d": 3,
-      "q": "The line y = 2x + 1 is changed to y = 2x + 6. What happens to the line?",
+      "q": "The line \\(y = 2x + 1\\) is changed to \\(y = 2x + 6\\). What happens to the line?",
       "opts": [
         "It shifts up 5 units and stays parallel",
         "It becomes steeper and keeps its y-intercept",
         "It shifts up 6 units and stays parallel",
         "It becomes flatter and cuts the axis higher"
       ],
-      "why": "The gradient m stays at 2, so the tilt does not change. The y-intercept goes from 1 to 6, which moves the line up by 6 − 1 = 5 units. Shifting by 6 units forgets that the line started at 1.",
-      "clue": "Which number changed, m or c, and by how much?"
+      "why": "The gradient \\(m\\) stays at 2, so the tilt does not change. The y-intercept goes from 1 to 6, which moves the line up by \\(6 - 1 = 5\\) units. Shifting by 6 units forgets that the line started at 1.",
+      "clue": "Which number changed, \\(m\\) or \\(c\\), and by how much?"
     }
   },
   "mat-graphing-parabolas": {
@@ -18443,47 +18596,57 @@ MADE_BANKS.mat = {
   "mat-changing-parabola": {
     "title": "Changing a parabola",
     "card": [
-      "In y = ax² the number a is multiplied by x². Compare the graph with y = x², which has a = 1.",
-      "For a positive a, a larger a makes every y-value except at x = 0 bigger, so the parabola is narrower. For x = 2, y = x² gives 4 but y = 3x² gives 12.",
-      "If a is negative, the parabola turns upside down, with its turning point at the top. For x = 2, y = −x² gives −4.",
-      "Adding a number c, as in y = x² + c, shifts the whole parabola up by c. A negative c shifts it down. The turning point moves from (0, 0) to (0, c)."
+      "In \\(y = ax^{2}\\) the number \\(a\\) is multiplied by \\(x^{2}\\). Compare the graph with \\(y = x^{2}\\), which has \\(a = 1\\).",
+      "For a positive \\(a\\), a larger \\(a\\) makes every \\(y\\)-value except at \\(x = 0\\) bigger, so the parabola is narrower. For \\(x = 2\\), \\(y = x^{2}\\) gives 4 but \\(y = 3x^{2}\\) gives 12.",
+      "If \\(a\\) is negative, the parabola turns upside down, with its turning point at the top. For \\(x = 2\\), \\(y = -x^{2}\\) gives \\(-4\\).",
+      "Adding a number \\(c\\), as in \\(y = x^{2} + c\\), shifts the whole parabola up by \\(c\\). A negative \\(c\\) shifts it down. The turning point moves from \\((0, 0)\\) to \\((0, c)\\)."
     ],
-    "remember": "A larger positive a narrows the parabola, a negative a flips it, and adding c moves it up or down.",
+    "remember": "A larger positive \\(a\\) narrows the parabola, a negative \\(a\\) flips it, and adding \\(c\\) moves it up or down.",
     "a": {
       "q": "Which equation gives a parabola that opens downwards?",
-      "opts": ["y = −2x²", "y = 2x²", "y = x² − 2", "y = x² + 2"],
-      "why": "A negative a turns the parabola upside down, so y = −2x² opens downwards. y = x² − 2 is tempting, but the −2 only shifts the parabola down. It still opens upwards.",
-      "clue": "Look at the number multiplying x²."
+      "opts": ["\\(y = -2x^{2}\\)", "\\(y = 2x^{2}\\)", "\\(y = x^{2} - 2\\)", "\\(y = x^{2} + 2\\)"],
+      "why": "A negative \\(a\\) turns the parabola upside down, so \\(y = -2x^{2}\\) opens downwards. \\(y = x^{2} - 2\\) is tempting, but the \\(-2\\) only shifts the parabola down. It still opens upwards.",
+      "clue": "Look at the number multiplying \\(x^{2}\\)."
     },
     "b": {
       "d": 3,
-      "q": "What is the turning point of the parabola y = 3x² − 4?",
-      "opts": ["(0, −4)", "(0, 4)", "(−4, 0)", "(0, −12)"],
-      "why": "The −4 shifts the parabola down 4 units, so the turning point moves from (0, 0) to (0, −4). The 3 only makes the parabola narrower and does not move the turning point.",
-      "clue": "The turning point of y = 3x² is at the origin. Then shift it."
+      "q": "What is the turning point of the parabola \\(y = 3x^{2} - 4\\)?",
+      "opts": ["\\((0, -4)\\)", "\\((0, 4)\\)", "\\((-4, 0)\\)", "\\((0, -12)\\)"],
+      "why": "The \\(-4\\) shifts the parabola down 4 units, so the turning point moves from \\((0, 0)\\) to \\((0, -4)\\). The 3 only makes the parabola narrower and does not move the turning point.",
+      "clue": "The turning point of \\(y = 3x^{2}\\) is at the origin. Then shift it."
     }
   },
   "mat-solving-quadratics-by-factorising": {
     "title": "Solving quadratics by factorising",
     "card": [
-      "A quadratic equation has an x² term. To solve it by factorising, first move every term to one side so the other side is 0.",
-      "Factorise the quadratic into two brackets. For x² + bx + c, find two numbers that multiply to c and add to b.",
+      "A quadratic equation has an \\(x^{2}\\) term. To solve it by factorising, first move every term to one side so the other side is 0.",
+      "Factorise the quadratic into two brackets. For \\(x^{2} + bx + c\\), find two numbers that multiply to \\(c\\) and add to \\(b\\).",
       "If two things multiply to give 0, one of them must be 0. So set each bracket equal to 0 and solve each one.",
-      "Example: x² − 5x + 6 = 0. The numbers −2 and −3 multiply to 6 and add to −5. So (x − 2)(x − 3) = 0, which gives x = 2 or x = 3."
+      "Example: \\(x^{2} - 5x + 6 = 0\\). The numbers \\(-2\\) and \\(-3\\) multiply to 6 and add to \\(-5\\). So \\((x - 2)(x - 3) = 0\\), which gives \\(x = 2\\) or \\(x = 3\\)."
     ],
     "remember": "Get 0 on one side, factorise, then set each bracket to 0.",
     "a": {
-      "q": "What are the solutions of (x − 4)(x + 1) = 0?",
-      "opts": ["x = 4 or x = −1", "x = −4 or x = 1", "x = 4 or x = 1", "x = −4 or x = −1"],
-      "why": "Set each bracket to 0: x − 4 = 0 gives x = 4, and x + 1 = 0 gives x = −1. Taking the numbers in the brackets as the answers gives the wrong signs.",
-      "clue": "Solve x − 4 = 0 and x + 1 = 0 separately."
+      "q": "What are the solutions of \\((x - 4)(x + 1) = 0\\)?",
+      "opts": [
+        "\\(x = 4\\) or \\(x = -1\\)",
+        "\\(x = -4\\) or \\(x = 1\\)",
+        "\\(x = 4\\) or \\(x = 1\\)",
+        "\\(x = -4\\) or \\(x = -1\\)"
+      ],
+      "why": "Set each bracket to 0: \\(x - 4 = 0\\) gives \\(x = 4\\), and \\(x + 1 = 0\\) gives \\(x = -1\\). Taking the numbers in the brackets as the answers gives the wrong signs.",
+      "clue": "Solve \\(x - 4 = 0\\) and \\(x + 1 = 0\\) separately."
     },
     "b": {
       "d": 3,
-      "q": "Priya solves x² + 2x − 15 = 0 by factorising. What are the solutions?",
-      "opts": ["x = 3 or x = −5", "x = −3 or x = 5", "x = 3 or x = 5", "x = −3 or x = −5"],
-      "why": "The numbers 5 and −3 multiply to −15 and add to 2, so (x + 5)(x − 3) = 0. That gives x = −5 or x = 3. The option x = −3 or x = 5 comes from (x + 3)(x − 5), but its matching numbers 3 and −5 add to −2, not 2.",
-      "clue": "Find two numbers that multiply to −15 and add to +2."
+      "q": "Priya solves \\(x^{2} + 2x - 15 = 0\\) by factorising. What are the solutions?",
+      "opts": [
+        "\\(x = 3\\) or \\(x = -5\\)",
+        "\\(x = -3\\) or \\(x = 5\\)",
+        "\\(x = 3\\) or \\(x = 5\\)",
+        "\\(x = -3\\) or \\(x = -5\\)"
+      ],
+      "why": "The numbers 5 and \\(-3\\) multiply to \\(-15\\) and add to 2, so \\((x + 5)(x - 3) = 0\\). That gives \\(x = -5\\) or \\(x = 3\\). The option \\(x = -3\\) or \\(x = 5\\) comes from \\((x + 3)(x - 5)\\), but its matching numbers 3 and \\(-5\\) add to \\(-2\\), not 2.",
+      "clue": "Find two numbers that multiply to \\(-15\\) and add to \\(+2\\)."
     }
   },
   "mat-solving-quadratics-from-graph": {
@@ -18531,7 +18694,7 @@ MADE_BANKS.mat = {
         "the change itself changes by the same amount each step. The graph is a parabola. A path can rise then fall, like a thrown ball, or keep rising faster, like 1, 4, 9, 16."
       ],
       "To choose, find the change between each pair of values in a table. If every change is the same, use a linear model. If the changes go up or down by the same amount, use a quadratic model.",
-      "Example: 2, 5, 8, 11 adds 3 each time, so it is linear. 0, 3, 4, 3 changes by 3, 1, −1. These changes drop by 2 each time, so it is quadratic."
+      "Example: 2, 5, 8, 11 adds 3 each time, so it is linear. 0, 3, 4, 3 changes by \\(3, 1, -1\\). These changes drop by 2 each time, so it is quadratic."
     ],
     "remember": "Same change each step is linear. A change that itself changes steadily is quadratic.",
     "a": {
@@ -18542,7 +18705,7 @@ MADE_BANKS.mat = {
         "Linear, as the time steps are equal",
         "Quadratic, as the height starts at 0 m"
       ],
-      "why": "The changes are 8, 4, 0, −4, −8, which drop by 4 each step, so a quadratic model suits it. Equal time steps do not make a model linear: for that, the height itself must change by the same amount each step.",
+      "why": "The changes are \\(8, 4, 0, -4, -8\\), which drop by 4 each step, so a quadratic model suits it. Equal time steps do not make a model linear: for that, the height itself must change by the same amount each step.",
       "clue": "Find each change in height, then compare the changes."
     },
     "b": {
@@ -18561,46 +18724,51 @@ MADE_BANKS.mat = {
   "mat-surface-area-prisms": {
     "title": "Surface area of prisms",
     "card": [
-      "The surface area of a prism is the total area of all its faces. It is measured in square units, such as cm².",
+      "The surface area of a prism is the total area of all its faces. It is measured in square units, such as \\(\\text{cm}^{2}\\).",
       "A net is the prism folded out flat. It shows every face, so you can find each area and add them.",
       "A triangular prism has 2 triangle faces and 3 rectangle faces. A rectangular prism has 6 rectangle faces, in 3 matching pairs.",
-      "Example: a box is 5 cm long, 3 cm wide and 2 cm high. The faces are 2 × (5 × 3) + 2 × (5 × 2) + 2 × (3 × 2) = 30 + 20 + 12 = 62 cm²."
+      "Example: a box is 5 cm long, 3 cm wide and 2 cm high. The faces are \\(2 \\times (5 \\times 3)\\), \\(2 \\times (5 \\times 2)\\) and \\(2 \\times (3 \\times 2)\\), which add to \\(30 + 20 + 12 = 62\\text{ cm}^{2}\\)."
     ],
     "remember": "Find the area of every face, then add them all.",
     "a": {
       "q": "A rectangular prism is 4 cm long, 3 cm wide and 2 cm high. What is its surface area?",
-      "opts": ["52 cm²", "24 cm²", "26 cm²", "36 cm²"],
-      "why": "The pairs of faces are 2 × 12 = 24, 2 × 8 = 16 and 2 × 6 = 12. The total is 52 cm². 24 cm² is only the volume, not the area of the faces.",
+      "opts": ["\\(52\\text{ cm}^{2}\\)", "\\(24\\text{ cm}^{2}\\)", "\\(26\\text{ cm}^{2}\\)", "\\(36\\text{ cm}^{2}\\)"],
+      "why": "The pairs of faces are \\(2 \\times 12 = 24\\), \\(2 \\times 8 = 16\\) and \\(2 \\times 6 = 12\\). The total is \\(52\\text{ cm}^{2}\\). The answer 24 is only the volume, not the area of the faces.",
       "clue": "There are 3 pairs of matching faces."
     },
     "b": {
       "d": 3,
-      "q": "A tent is a triangular prism. Each triangle end has base 6 m and height 4 m. The three rectangle faces are 6 m × 10 m, 5 m × 10 m and 5 m × 10 m. What is the surface area of the tent, including the floor?",
-      "opts": ["184 m²", "160 m²", "172 m²", "208 m²"],
-      "why": "Each triangle is 6 × 4 ÷ 2 = 12 m², so two give 24 m². The rectangles give 60 + 50 + 50 = 160 m². The total is 184 m². 160 m² is wrong because it leaves out the two triangle ends.",
+      "q": "A tent is a triangular prism. Each triangle end has base 6 m and height 4 m. The three rectangle faces are \\(6 \\text{ m} \\times 10 \\text{ m}\\), \\(5 \\text{ m} \\times 10 \\text{ m}\\) and \\(5 \\text{ m} \\times 10 \\text{ m}\\). What is the surface area of the tent, including the floor?",
+      "opts": ["\\(184\\text{ m}^{2}\\)", "\\(160\\text{ m}^{2}\\)", "\\(172\\text{ m}^{2}\\)", "\\(208\\text{ m}^{2}\\)"],
+      "why": "Each triangle is \\(6 \\times 4 \\div 2 = 12\\text{ m}^{2}\\), so two give \\(24\\text{ m}^{2}\\). The rectangles give \\(60 + 50 + 50 = 160\\text{ m}^{2}\\). The total is \\(184\\text{ m}^{2}\\). \\(160\\text{ m}^{2}\\) is wrong because it leaves out the two triangle ends.",
       "clue": "Remember to halve each triangle, and count both ends."
     }
   },
   "mat-volume-cylinders": {
     "title": "Volume of cylinders",
     "card": [
-      "Volume is the amount of space inside a solid. It is measured in cubic units, such as cm³.",
-      "A cylinder has a circle as its base. The area of the base is πr², where r is the radius.",
-      "Volume = base area × height, so V = πr²h. Square the radius first, then multiply by π and by the height.",
-      "Example: r = 3 cm and h = 10 cm. V = π × 3² × 10 = π × 9 × 10 = 90π, which is about 283 cm³."
+      "Volume is the amount of space inside a solid. It is measured in cubic units, such as \\(\\text{cm}^{3}\\).",
+      "A cylinder has a circle as its base. The area of the base is \\(\\pi r^{2}\\), where \\(r\\) is the radius.",
+      "Volume \\(=\\) base area \\(\\times\\) height, so \\(V = \\pi r^{2}h\\). Square the radius first, then multiply by \\(\\pi\\) and by the height.",
+      "Example: \\(r = 3\\) cm and \\(h = 10\\) cm. \\(V = \\pi \\times 3^{2} \\times 10\\), which is \\(\\pi \\times 9 \\times 10 = 90\\pi\\), about \\(283\\text{ cm}^{3}\\)."
     ],
     "remember": "Volume of a cylinder is the circle's area times the height.",
     "a": {
-      "q": "A cylinder has radius 2 cm and height 5 cm. What is its volume, in terms of π?",
-      "opts": ["20π cm³", "10π cm³", "50π cm³", "100π cm³"],
-      "why": "V = π × 2² × 5 = π × 4 × 5 = 20π cm³. 10π comes from multiplying r by h without squaring r, which is a common slip.",
+      "q": "A cylinder has radius 2 cm and height 5 cm. What is its volume, in terms of \\(\\pi\\)?",
+      "opts": [
+        "\\(20\\pi\\text{ cm}^{3}\\)",
+        "\\(10\\pi\\text{ cm}^{3}\\)",
+        "\\(50\\pi\\text{ cm}^{3}\\)",
+        "\\(100\\pi\\text{ cm}^{3}\\)"
+      ],
+      "why": "\\(V = \\pi \\times 2^{2} \\times 5\\), which is \\(\\pi \\times 4 \\times 5 = 20\\pi\\text{ cm}^{3}\\). \\(10\\pi\\) comes from multiplying \\(r\\) by \\(h\\) without squaring \\(r\\), which is a common slip.",
       "clue": "Square the radius before you multiply."
     },
     "b": {
       "d": 3,
       "q": "A water tank is a cylinder with diameter 4 m and height 3 m. What is its volume, to the nearest cubic metre?",
-      "opts": ["38 m³", "151 m³", "75 m³", "19 m³"],
-      "why": "The radius is half the diameter, so r = 2 m. V = π × 2² × 3 = 12π, which is about 38 m³. Using 4 as the radius gives 48π, about 151 m³, which is wrong.",
+      "opts": ["\\(38\\text{ m}^{3}\\)", "\\(151\\text{ m}^{3}\\)", "\\(75\\text{ m}^{3}\\)", "\\(19\\text{ m}^{3}\\)"],
+      "why": "The radius is half the diameter, so \\(r = 2\\) m. \\(V = \\pi \\times 2^{2} \\times 3 = 12\\pi\\), which is about \\(38\\text{ m}^{3}\\). Using 4 as the radius gives \\(48\\pi\\), about \\(151\\text{ m}^{3}\\), which is wrong.",
       "clue": "The diameter is not the radius."
     }
   },
@@ -18608,22 +18776,27 @@ MADE_BANKS.mat = {
     "title": "Surface area of cylinders",
     "card": [
       "A closed cylinder has 2 circles, one at the top and one at the bottom, and one curved surface around the side.",
-      "The two circles each have area πr². Together they give 2πr².",
-      "The curved surface unrolls into a rectangle. Its width is the circle's circumference, 2πr, and its height is h. Its area is 2πrh.",
-      "SA = 2πr² + 2πrh. Example: r = 2 cm and h = 5 cm. SA = 2π × 4 + 2π × 2 × 5 = 8π + 20π = 28π, which is about 88 cm²."
+      "The two circles each have area \\(\\pi r^{2}\\). Together they give \\(2\\pi r^{2}\\).",
+      "The curved surface unrolls into a rectangle. Its width is the circle's circumference, \\(2\\pi r\\), and its height is \\(h\\). Its area is \\(2\\pi rh\\).",
+      "\\(SA = 2\\pi r^{2} + 2\\pi rh\\). Example: \\(r = 2\\) cm and \\(h = 5\\) cm. \\(SA = 2\\pi \\times 4 + 2\\pi \\times 2 \\times 5\\), which is \\(8\\pi + 20\\pi = 28\\pi\\), about \\(88\\text{ cm}^{2}\\)."
     ],
     "remember": "Add the two circles to the unrolled rectangle.",
     "a": {
-      "q": "A closed cylinder has radius 3 cm and height 4 cm. What is its surface area, in terms of π?",
-      "opts": ["42π cm²", "24π cm²", "30π cm²", "66π cm²"],
-      "why": "The circles give 2π × 9 = 18π. The curved part gives 2π × 3 × 4 = 24π. The total is 42π cm². 24π is only the curved part, so it leaves out the two circles.",
+      "q": "A closed cylinder has radius 3 cm and height 4 cm. What is its surface area, in terms of \\(\\pi\\)?",
+      "opts": [
+        "\\(42\\pi\\text{ cm}^{2}\\)",
+        "\\(24\\pi\\text{ cm}^{2}\\)",
+        "\\(30\\pi\\text{ cm}^{2}\\)",
+        "\\(66\\pi\\text{ cm}^{2}\\)"
+      ],
+      "why": "The circles give \\(2\\pi \\times 9 = 18\\pi\\). The curved part gives \\(2\\pi \\times 3 \\times 4 = 24\\pi\\). The total is \\(42\\pi\\text{ cm}^{2}\\). \\(24\\pi\\) is only the curved part, so it leaves out the two circles.",
       "clue": "Find the circles and the curved part separately."
     },
     "b": {
       "d": 3,
       "q": "A closed tin has diameter 10 cm and height 8 cm. What is its surface area, to the nearest square centimetre?",
-      "opts": ["408 cm²", "565 cm²", "251 cm²", "816 cm²"],
-      "why": "The radius is 5 cm. The circles give 2π × 25 = 50π and the side gives 2π × 5 × 8 = 80π. The total is 130π, about 408 cm². Using 10 as the radius gives a much larger wrong answer.",
+      "opts": ["\\(408\\text{ cm}^{2}\\)", "\\(565\\text{ cm}^{2}\\)", "\\(251\\text{ cm}^{2}\\)", "\\(816\\text{ cm}^{2}\\)"],
+      "why": "The radius is 5 cm. The circles give \\(2\\pi \\times 25 = 50\\pi\\) and the side gives \\(2\\pi \\times 5 \\times 8 = 80\\pi\\). The total is \\(130\\pi\\), about \\(408\\text{ cm}^{2}\\). Using 10 as the radius gives a much larger wrong answer.",
       "clue": "Halve the diameter first."
     }
   },
@@ -18631,31 +18804,31 @@ MADE_BANKS.mat = {
     "title": "The trigonometric ratios",
     "card": [
       "In a right-angled triangle, the hypotenuse is the longest side, across from the right angle. Pick one of the other angles. The opposite side faces that angle. The adjacent side is next to that angle and is not the hypotenuse.",
-      ["Sine", "sin = opposite ÷ hypotenuse."],
-      ["Cosine", "cos = adjacent ÷ hypotenuse."],
+      ["Sine", "For the angle \\(\\theta\\), \\(\\sin \\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}\\)."],
+      ["Cosine", "\\(\\cos \\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}\\)."],
       [
         "Tangent",
-        "tan = opposite ÷ adjacent. Example: sides 3, 4 and 5, with 3 opposite the angle and 4 adjacent. Then tan = 3/4 and sin = 3/5. Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
+        "\\(\\tan \\theta = \\frac{\\text{opposite}}{\\text{adjacent}}\\). Example: sides 3, 4 and 5, with 3 opposite the angle \\(\\theta\\) and 4 adjacent. Then \\(\\tan \\theta = \\frac{3}{4}\\) and \\(\\sin \\theta = \\frac{3}{5}\\). Similar triangles give the same ratios for the same angle, even though their sides are different lengths."
       ]
     ],
     "remember": "Label the sides from the angle you are using, then pick sin, cos or tan.",
     "a": {
-      "q": "A right-angled triangle has sides 5, 12 and 13. Angle B has the side 5 opposite it and the side 12 next to it. What is sin B?",
-      "opts": ["5/13", "12/13", "5/12", "13/5"],
-      "why": "Sine is opposite ÷ hypotenuse. The hypotenuse is 13, so sin B = 5/13. The ratio 5/12 is tempting, but that is tangent, which uses the adjacent side.",
+      "q": "A right-angled triangle has sides 5, 12 and 13. Angle \\(B\\) has the side 5 opposite it and the side 12 next to it. What is \\(\\sin B\\)?",
+      "opts": ["\\(\\frac{5}{13}\\)", "\\(\\frac{12}{13}\\)", "\\(\\frac{5}{12}\\)", "\\(\\frac{13}{5}\\)"],
+      "why": "Sine is opposite \\(\\div\\) hypotenuse. The hypotenuse is 13, so \\(\\sin B = \\frac{5}{13}\\). The ratio \\(\\frac{5}{12}\\) is tempting, but that is tangent, which uses the adjacent side.",
       "clue": "Sine uses the opposite side and the longest side."
     },
     "b": {
       "d": 3,
-      "q": "Triangle P has sides 8, 15 and 17, with 8 opposite angle A and 15 adjacent to it. Triangle Q has sides 16, 30 and 34 and the same angle A, with 16 opposite it. What is true about tan A?",
+      "q": "Triangle P has sides 8, 15 and 17, with 8 opposite angle \\(A\\) and 15 adjacent to it. Triangle Q has sides 16, 30 and 34 and the same angle \\(A\\), with 16 opposite it. What is true about \\(\\tan A\\)?",
       "opts": [
-        "It is 8/15 in both triangles",
-        "It is 8/17 in both triangles",
-        "It is 8/15 in P and 16/15 in Q",
+        "It is \\(\\frac{8}{15}\\) in both triangles",
+        "It is \\(\\frac{8}{17}\\) in both triangles",
+        "It is \\(\\frac{8}{15}\\) in P and \\(\\frac{16}{15}\\) in Q",
         "It is twice as large in Q as in P"
       ],
-      "why": "tan A = opposite ÷ adjacent. In P it is 8/15, and in Q it is 16/30, which is also 8/15. Similar triangles give the same ratios for the same angle, even though Q's sides are twice as long. 8/17 is sin A, not tan A, and 16/15 mixes a side from Q with a side from P.",
-      "clue": "Work out opposite ÷ adjacent in each triangle and compare."
+      "why": "\\(\\tan A = \\frac{\\text{opposite}}{\\text{adjacent}}\\). In P it is \\(\\frac{8}{15}\\), and in Q it is \\(\\frac{16}{30}\\), which is also \\(\\frac{8}{15}\\). Similar triangles give the same ratios for the same angle, even though Q's sides are twice as long. \\(\\frac{8}{17}\\) is \\(\\sin A\\), not \\(\\tan A\\), and \\(\\frac{16}{15}\\) mixes a side from Q with a side from P.",
+      "clue": "Work out opposite \\(\\div\\) adjacent in each triangle and compare."
     }
   },
   "mat-finding-side-with-trigonometry": {
@@ -18663,21 +18836,31 @@ MADE_BANKS.mat = {
     "card": [
       "Label the sides from the known angle: opposite, adjacent and hypotenuse. Choose the ratio that uses the known side and the unknown side.",
       "Use sin for opposite and hypotenuse, cos for adjacent and hypotenuse, and tan for opposite and adjacent.",
-      "Write the ratio as an equation, then rearrange to get x. If x is on top, multiply. If x is on the bottom, divide.",
-      "Example: hypotenuse 10, angle 30°, x is opposite. sin 30° = x ÷ 10, so x = 10 × sin 30° = 5. Example: adjacent 8, angle 60°, x is the hypotenuse. cos 60° = 8 ÷ x, so x = 8 ÷ cos 60° = 16."
+      "Write the ratio as an equation, then rearrange to get \\(x\\). If \\(x\\) is on top, multiply. If \\(x\\) is on the bottom, divide.",
+      "Example: hypotenuse 10, angle 30°, \\(x\\) is opposite. \\(\\sin 30^{\\circ} = \\frac{x}{10}\\), so \\(x = 10 \\times \\sin 30^{\\circ} = 5\\). Example: adjacent 8, angle 60°, \\(x\\) is the hypotenuse. \\(\\cos 60^{\\circ} = \\frac{8}{x}\\), so \\(x = 8 \\div \\cos 60^{\\circ} = 16\\)."
     ],
-    "remember": "Match the two sides and the angle to a ratio, then multiply or divide to get x.",
+    "remember": "Match the two sides and the angle to a ratio, then multiply or divide to get \\(x\\).",
     "a": {
-      "q": "A right-angled triangle has an angle of 30°, a hypotenuse of 20 and an opposite side x. Which equation gives x?",
-      "opts": ["x = 20 × sin 30°", "x = 20 ÷ sin 30°", "x = 20 × cos 30°", "x = 20 × tan 30°"],
-      "why": "Opposite and hypotenuse link to sine, so sin 30° = x ÷ 20 and x = 20 × sin 30° = 10. Dividing by sin 30° is a mistake, since x is on top of the fraction.",
+      "q": "A right-angled triangle has an angle of 30°, a hypotenuse of 20 and an opposite side \\(x\\). Which equation gives \\(x\\)?",
+      "opts": [
+        "\\(x = 20 \\times \\sin 30^{\\circ}\\)",
+        "\\(x = 20 \\div \\sin 30^{\\circ}\\)",
+        "\\(x = 20 \\times \\cos 30^{\\circ}\\)",
+        "\\(x = 20 \\times \\tan 30^{\\circ}\\)"
+      ],
+      "why": "Opposite and hypotenuse link to sine, so \\(\\sin 30^{\\circ} = \\frac{x}{20}\\) and \\(x = 20 \\times \\sin 30^{\\circ} = 10\\). Dividing by \\(\\sin 30^{\\circ}\\) is a mistake, since \\(x\\) is on top of the fraction.",
       "clue": "Which ratio uses opposite and hypotenuse?"
     },
     "b": {
       "d": 3,
-      "q": "A ramp rises at 20° to the ground. Its sloping surface is the hypotenuse. The ground length under it is 6 m, next to the 20° angle. Which equation gives the ramp length x?",
-      "opts": ["x = 6 ÷ cos 20°", "x = 6 × cos 20°", "x = 6 ÷ sin 20°", "x = 6 × tan 20°"],
-      "why": "Adjacent and hypotenuse link to cosine, so cos 20° = 6 ÷ x. Since x is on the bottom, divide: x = 6 ÷ cos 20°. Multiplying gives a ramp shorter than its own ground length, which cannot be right.",
+      "q": "A ramp rises at 20° to the ground. Its sloping surface is the hypotenuse. The ground length under it is 6 m, next to the 20° angle. Which equation gives the ramp length \\(x\\)?",
+      "opts": [
+        "\\(x = 6 \\div \\cos 20^{\\circ}\\)",
+        "\\(x = 6 \\times \\cos 20^{\\circ}\\)",
+        "\\(x = 6 \\div \\sin 20^{\\circ}\\)",
+        "\\(x = 6 \\times \\tan 20^{\\circ}\\)"
+      ],
+      "why": "Adjacent and hypotenuse link to cosine, so \\(\\cos 20^{\\circ} = \\frac{6}{x}\\). Since \\(x\\) is on the bottom, divide: \\(x = 6 \\div \\cos 20^{\\circ}\\). Multiplying gives a ramp shorter than its own ground length, which cannot be right.",
       "clue": "Name the 6 m side and the ramp from the 20° angle first."
     }
   },
@@ -18686,21 +18869,21 @@ MADE_BANKS.mat = {
     "card": [
       "When you know two sides of a right-angled triangle, you can find an angle. Start by naming the two known sides from the angle you want: opposite, adjacent or hypotenuse.",
       "Choose sin, cos or tan, whichever ratio uses both of your known sides. Divide one side by the other to get a number.",
-      "Then use the inverse function on a calculator (sin⁻¹, cos⁻¹ or tan⁻¹) to turn that number into the angle. It must match the ratio you chose.",
-      "Example: opposite = 3 and adjacent = 4, so use tan. tan θ = 3/4 = 0.75, so θ = tan⁻¹(0.75) ≈ 36.9°."
+      "Then use the inverse function on a calculator (\\(\\sin^{-1}\\), \\(\\cos^{-1}\\) or \\(\\tan^{-1}\\)) to turn that number into the angle. It must match the ratio you chose.",
+      "Example: opposite \\(= 3\\) and adjacent \\(= 4\\), so use tan. \\(\\tan \\theta = \\frac{3}{4} = 0.75\\), so \\(\\theta = \\tan^{-1}(0.75) \\approx 36.9^{\\circ}\\)."
     ],
     "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
     "a": {
       "q": "A 10 m ladder leans on a wall and reaches 5 m up. What is the angle between the ladder and the ground?",
       "opts": ["30°", "60°", "26.6°", "63.4°"],
-      "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. sin θ = 5/10 = 0.5, so θ = sin⁻¹(0.5) = 30°. Using tan⁻¹(0.5) gives 26.6°, but tan needs the adjacent side, which is not given.",
+      "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. \\(\\sin \\theta = \\frac{5}{10} = 0.5\\), so \\(\\theta = \\sin^{-1}(0.5) = 30^{\\circ}\\). Using \\(\\tan^{-1}(0.5)\\) gives 26.6°, but tan needs the adjacent side, which is not given.",
       "clue": "Which two sides do you know, seen from the angle at the ground?"
     },
     "b": {
       "d": 3,
       "q": "A steep driveway in Hobart rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
       "opts": ["13.5°", "13.9°", "76.5°", "76.1°"],
-      "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. tan θ = 1.2/5 = 0.24, so θ = tan⁻¹(0.24) ≈ 13.5°. Using sin⁻¹(0.24) gives 13.9°, but the 5 m is not the hypotenuse.",
+      "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. \\(\\tan \\theta = \\frac{1.2}{5} = 0.24\\), so \\(\\theta = \\tan^{-1}(0.24) \\approx 13.5^{\\circ}\\). Using \\(\\sin^{-1}(0.24)\\) gives 13.9°, but the 5 m is not the hypotenuse.",
       "clue": "The rise and the flat distance are opposite and adjacent."
     }
   },
@@ -18708,7 +18891,7 @@ MADE_BANKS.mat = {
     "title": "Direct proportion and scale",
     "card": [
       "Two quantities are in direct proportion when one is always the same multiple of the other. If one doubles, so does the other. The multiple is called the constant of proportion.",
-      "To find the constant, divide one quantity by the other. If 4 pens cost $6, the constant is 6 ÷ 4 = $1.50 per pen. Then 10 pens cost 10 × 1.50 = $15.",
+      "To find the constant, divide one quantity by the other. If 4 pens cost $6, the constant is \\(6 \\div 4 = \\$1.50\\) per pen. Then 10 pens cost \\(10 \\times 1.50 = \\$15\\).",
       "A scale drawing is a direct proportion. A scale of 1 cm to 2 m means every 1 cm on the drawing stands for 2 m in real life.",
       "To find a real length, multiply the drawing length by the real length for 1 cm. To find a drawing length, divide the real length by it. Check that the units match."
     ],
@@ -18716,14 +18899,14 @@ MADE_BANKS.mat = {
     "a": {
       "q": "A plan has a scale of 1 cm to 2 m. A deck is 7 cm long on the plan. What is its real length?",
       "opts": ["14 m", "3.5 m", "9 m", "14 cm"],
-      "why": "Each 1 cm stands for 2 m, so 7 cm stands for 7 × 2 = 14 m. Dividing 7 by 2 gives 3.5, which is the mistake of using the wrong operation for finding a real length.",
+      "why": "Each 1 cm stands for 2 m, so 7 cm stands for \\(7 \\times 2 = 14\\) m. Dividing 7 by 2 gives 3.5, which is the mistake of using the wrong operation for finding a real length.",
       "clue": "Each centimetre on the plan stands for 2 m."
     },
     "b": {
       "d": 3,
       "q": "Priya's map has a scale of 1 cm to 5 km. Two towns are 60 km apart in real life. How far apart are they on the map?",
       "opts": ["12 cm", "300 cm", "55 cm", "65 cm"],
-      "why": "You start with a real distance, so divide by the real length for 1 cm: 60 ÷ 5 = 12 cm. Multiplying 60 by 5 to get 300 uses the wrong operation. You multiply only when you start with a map length, such as 12 × 5 = 60 km.",
+      "why": "You start with a real distance, so divide by the real length for 1 cm: \\(60 \\div 5 = 12\\) cm. Multiplying 60 by 5 to get 300 uses the wrong operation. You multiply only when you start with a map length, such as \\(12 \\times 5 = 60\\) km.",
       "clue": "You start with the real distance and want the map distance."
     }
   },
@@ -18737,25 +18920,25 @@ MADE_BANKS.mat = {
       ],
       [
         "Relative error",
-        "absolute error ÷ actual value. It has no units, so it shows how big the gap is compared with the size of the thing measured."
+        "absolute error \\(\\div\\) actual value. It has no units, so it shows how big the gap is compared with the size of the thing measured."
       ],
       [
         "Percentage error",
-        "relative error × 100. Example: measured 52 cm, actual 50 cm. Absolute error = 2 cm, relative error = 2 ÷ 50 = 0.04, percentage error = 4%."
+        "relative error \\(\\times 100\\). Example: measured 52 cm, actual 50 cm. Absolute error \\(=\\) 2 cm, relative error \\(= 2 \\div 50 = 0.04\\), percentage error \\(=\\) 4%."
       ]
     ],
     "remember": "Gap first, then divide by the actual value, then multiply by 100 for a percentage.",
     "a": {
       "q": "A scale reads 84 g for an object that actually has a mass of 80 g. What is the relative error?",
       "opts": ["0.05", "0.048", "5", "4"],
-      "why": "The absolute error is 4 g. Relative error = 4 ÷ 80 = 0.05. Dividing by the measured value, 84, gives 0.048, but the actual value is the one to divide by.",
+      "why": "The absolute error is 4 g. Relative error \\(= 4 \\div 80 = 0.05\\). Dividing by the measured value, 84, gives 0.048, but the actual value is the one to divide by.",
       "clue": "Divide the gap by the actual value."
     },
     "b": {
       "d": 3,
       "q": "Ava estimates a tree in Perth is 9.5 m tall. Its actual height is 8 m. What is her percentage error?",
       "opts": ["18.75%", "15.8%", "1.5%", "0.1875%"],
-      "why": "The absolute error is 1.5 m. Relative error = 1.5 ÷ 8 = 0.1875, and × 100 gives 18.75%. Dividing by her estimate of 9.5 gives 15.8%, which uses the wrong value.",
+      "why": "The absolute error is 1.5 m. Relative error \\(= 1.5 \\div 8 = 0.1875\\), and \\(\\times 100\\) gives 18.75%. Dividing by her estimate of 9.5 gives 15.8%, which uses the wrong value.",
       "clue": "Divide by the actual height, then turn it into a percentage."
     }
   },
@@ -18791,22 +18974,22 @@ MADE_BANKS.mat = {
     "title": "What changes in an enlargement",
     "card": [
       ["Angles", "stay the same. A 50° angle in the original is still 50° in the image."],
-      ["Lengths", "are multiplied by the scale factor k. If k = 3, a 4 cm side becomes 12 cm."],
-      ["Area", "is multiplied by k². If k = 3, the area is multiplied by 3² = 9."],
-      "Example: a square has side 2 cm and area 4 cm². With k = 3, the side is 6 cm and the area is 36 cm², which is 4 × 9."
+      ["Lengths", "are multiplied by the scale factor \\(k\\). If \\(k = 3\\), a 4 cm side becomes 12 cm."],
+      ["Area", "is multiplied by \\(k^{2}\\). If \\(k = 3\\), the area is multiplied by \\(3^{2} = 9\\)."],
+      "Example: a square has side 2 cm and area 4 \\(\\text{cm}^{2}\\). With \\(k = 3\\), the side is 6 cm and the area is 36 \\(\\text{cm}^{2}\\), which is \\(4 \\times 9\\)."
     ],
-    "remember": "Angles stay put, lengths go × k, area goes × k².",
+    "remember": "Angles stay put, lengths go \\(\\times k\\), area goes \\(\\times k^{2}\\).",
     "a": {
-      "q": "A rectangle has area 10 cm². It is enlarged with scale factor 2. What is the area of the image?",
-      "opts": ["40 cm²", "20 cm²", "14 cm²", "100 cm²"],
-      "why": "Area is multiplied by k² = 2² = 4, so 10 × 4 = 40 cm². Multiplying by 2 gives 20 cm², which is the mistake of treating area like length.",
-      "clue": "Area is multiplied by k squared."
+      "q": "A rectangle has area 10 \\(\\text{cm}^{2}\\). It is enlarged with scale factor 2. What is the area of the image?",
+      "opts": ["40 \\(\\text{cm}^{2}\\)", "20 \\(\\text{cm}^{2}\\)", "14 \\(\\text{cm}^{2}\\)", "100 \\(\\text{cm}^{2}\\)"],
+      "why": "Area is multiplied by \\(k^{2} = 2^{2} = 4\\), so \\(10 \\times 4 = 40\\text{ cm}^{2}\\). Multiplying by 2 gives 20 \\(\\text{cm}^{2}\\), which is the mistake of treating area like length.",
+      "clue": "Area is multiplied by \\(k\\) squared."
     },
     "b": {
       "d": 3,
-      "q": "A triangle has angles 30°, 60° and 90° and a longest side of 8 cm. It is enlarged with k = 1.5. What are the angle sizes and longest side of the image?",
+      "q": "A triangle has angles 30°, 60° and 90° and a longest side of 8 cm. It is enlarged with \\(k = 1.5\\). What are the angle sizes and longest side of the image?",
       "opts": ["30°, 60°, 90° and 12 cm", "45°, 90°, 135° and 12 cm", "30°, 60°, 90° and 9.5 cm", "45°, 90°, 135° and 9.5 cm"],
-      "why": "Angles do not change in an enlargement, so they stay 30°, 60° and 90°. The side is 8 × 1.5 = 12 cm. Multiplying the angles by 1.5 is tempting but wrong, and 9.5 cm comes from adding.",
+      "why": "Angles do not change in an enlargement, so they stay 30°, 60° and 90°. The side is \\(8 \\times 1.5 = 12\\) cm. Multiplying the angles by 1.5 is tempting but wrong, and 9.5 cm comes from adding.",
       "clue": "One of these quantities does not change at all."
     }
   },
@@ -18815,21 +18998,21 @@ MADE_BANKS.mat = {
     "card": [
       "Similar triangles have the same shape but may be different sizes. Their matching sides are in the same ratio.",
       "Matching sides sit opposite equal angles. Pair them up first, then compare.",
-      "To find the scale factor, divide a side on the new triangle by the matching side on the original. Scale factor = new length ÷ original length.",
-      "Worked example: Triangle ABC has sides 3, 4 and 5. A similar triangle has a side of 9 matching the 3. Scale factor = 9 ÷ 3 = 3. The side matching 4 is 4 × 3 = 12."
+      "To find the scale factor, divide a side on the new triangle by the matching side on the original. Scale factor \\(=\\) new length \\(\\div\\) original length.",
+      "Worked example: Triangle ABC has sides 3, 4 and 5. A similar triangle has a side of 9 matching the 3. Scale factor \\(= 9 \\div 3 = 3\\). The side matching 4 is \\(4 \\times 3 = 12\\)."
     ],
     "remember": "Find the scale factor from one matching pair, then multiply or divide by it.",
     "a": {
       "q": "Two similar triangles have matching sides of 6 cm and 15 cm. The smaller triangle has another side of 8 cm. How long is the matching side on the larger triangle?",
       "opts": ["20 cm", "17 cm", "12 cm", "3.2 cm"],
-      "why": "The scale factor is 15 ÷ 6 = 2.5, so the matching side is 8 × 2.5 = 20 cm. Adding 9 to get 17 cm is tempting, but similar triangles are linked by multiplying, not adding.",
+      "why": "The scale factor is \\(15 \\div 6 = 2.5\\), so the matching side is \\(8 \\times 2.5 = 20\\) cm. Adding 9 to get 17 cm is tempting, but similar triangles are linked by multiplying, not adding.",
       "clue": "Find the scale factor from the pair you know, then use it."
     },
     "b": {
       "d": 3,
-      "q": "Triangle PQR is similar to triangle XYZ. PQ = 12 cm matches XY = 8 cm. QR = 18 cm. How long is the matching side YZ?",
+      "q": "Triangle PQR is similar to triangle XYZ. \\(PQ = 12\\) cm matches \\(XY = 8\\) cm. \\(QR = 18\\) cm. How long is the matching side \\(YZ\\)?",
       "opts": ["12 cm", "27 cm", "14 cm", "16 cm"],
-      "why": "Going from PQR to XYZ the scale factor is 8 ÷ 12 = 2/3, so YZ = 18 × 2/3 = 12 cm. Multiplying by 3/2 gives 27 cm, which is wrong because XYZ is the smaller triangle, so its sides must be shorter.",
+      "why": "Going from PQR to XYZ the scale factor is \\(8 \\div 12 = \\frac{2}{3}\\), so \\(YZ = 18 \\times \\frac{2}{3} = 12\\) cm. Multiplying by \\(\\frac{3}{2}\\) gives 27 cm, which is wrong because XYZ is the smaller triangle, so its sides must be shorter.",
       "clue": "Is XYZ larger or smaller than PQR?"
     }
   },
@@ -18953,14 +19136,14 @@ MADE_BANKS.mat = {
     "card": [
       "A back-to-back stem-and-leaf plot shares one set of stems down the middle. One data set has leaves on the left and the other has leaves on the right.",
       "A parallel dot plot stacks two dot plots on the same number line, one above the other. Both sets can be read against the same scale.",
-      "Compare centre first: find the median or mean of each set. Then compare spread: range = highest value − lowest value.",
+      "Compare centre first: find the median or mean of each set. Then compare spread: range \\(=\\) highest value \\(-\\) lowest value.",
       "Then compare shape, such as where the data bunches or whether it tails off to one side. Look for outliers, which are values far from the rest. Example: set A is 4, 6, 7, 9, 14 and set B is 5, 6, 7, 8, 9. Both medians are 7, but the range is 10 for A and 4 for B. A is more spread out."
     ],
     "remember": "Compare two sets on the same scale: centre, spread, shape and outliers.",
     "a": {
       "q": "Set P is 3, 5, 6, 8, 13. Set Q is 4, 6, 7, 9, 10. Which set has the larger range?",
       "opts": ["P, with a range of 10", "Q, with a range of 6", "P, with a range of 13", "Q, with a range of 10"],
-      "why": "The range of P is 13 − 3 = 10. The range of Q is 10 − 4 = 6. Q's highest value is 10, but its range is found by subtracting, so 10 alone is not its range.",
+      "why": "The range of P is \\(13 - 3 = 10\\). The range of Q is \\(10 - 4 = 6\\). Q's highest value is 10, but its range is found by subtracting, so 10 alone is not its range.",
       "clue": "Subtract the lowest value from the highest for each set."
     },
     "b": {
@@ -19024,21 +19207,21 @@ MADE_BANKS.mat = {
         "Without replacement",
         "The item is kept out after each pick. The total drops by 1, and the count of the picked type drops by 1. The counts of other types stay the same."
       ],
-      "Example: a bag has 3 red and 2 blue counters. P(red) = 3/5 on the first pick.",
-      "If a red is kept out, 2 red and 2 blue are left, so P(red) on the second pick = 2/4. If the red is put back, it is still 3/5."
+      "Example: a bag has 3 red and 2 blue counters. \\(P(\\text{red}) = \\frac{3}{5}\\) on the first pick.",
+      "If a red is kept out, 2 red and 2 blue are left, so on the second pick \\(P(\\text{red}) = \\frac{2}{4}\\). If the red is put back, it is still \\(\\frac{3}{5}\\)."
     ],
     "remember": "Replace it and the chances stay put. Keep it out and the counts and the total change.",
     "a": {
-      "q": "A bag has 4 green and 6 yellow marbles. One green marble is picked and kept out. What is P(green) on the next pick?",
-      "opts": ["3/9", "4/9", "3/10", "4/10"],
-      "why": "Without replacement, 9 marbles are left and 3 of them are green, so P(green) = 3/9. The answer 4/9 is tempting, but the green marble taken out also lowers the green count.",
+      "q": "A bag has 4 green and 6 yellow marbles. One green marble is picked and kept out. What is \\(P(\\text{green})\\) on the next pick?",
+      "opts": ["\\(\\frac{3}{9}\\)", "\\(\\frac{4}{9}\\)", "\\(\\frac{3}{10}\\)", "\\(\\frac{4}{10}\\)"],
+      "why": "Without replacement, 9 marbles are left and 3 of them are green, so \\(P(\\text{green}) = \\frac{3}{9}\\). The answer \\(\\frac{4}{9}\\) is tempting, but the green marble taken out also lowers the green count.",
       "clue": "Count what is left in the bag after the pick."
     },
     "b": {
       "d": 3,
-      "q": "Priya has 5 red pens and 3 black pens in a box. She takes out a black pen and keeps it, then takes out a red pen and keeps it. What is P(black) on her next pick?",
-      "opts": ["2/6", "3/6", "2/7", "3/8"],
-      "why": "Two pens are kept out, so 6 are left: 4 red and 2 black. P(black) = 2/6. The answer 3/6 is tempting, but it forgets that the first black pen was also kept out.",
+      "q": "Priya has 5 red pens and 3 black pens in a box. She takes out a black pen and keeps it, then takes out a red pen and keeps it. What is \\(P(\\text{black})\\) on her next pick?",
+      "opts": ["\\(\\frac{2}{6}\\)", "\\(\\frac{3}{6}\\)", "\\(\\frac{2}{7}\\)", "\\(\\frac{3}{8}\\)"],
+      "why": "Two pens are kept out, so 6 are left: 4 red and 2 black. \\(P(\\text{black}) = \\frac{2}{6}\\). The answer \\(\\frac{3}{6}\\) is tempting, but it forgets that the first black pen was also kept out.",
       "clue": "Each pen kept out changes the total and one of the counts."
     }
   },
@@ -19054,20 +19237,20 @@ MADE_BANKS.mat = {
         "Tree diagram",
         "each step is a set of branches, and each path from left to right is one outcome. It suits two or three steps."
       ],
-      "Example: toss a coin three times. Each toss has 2 results, so there are 2 × 2 × 2 = 8 outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is 3/8, if each outcome is equally likely."
+      "Example: toss a coin three times. Each toss has 2 results, so there are \\(2 \\times 2 \\times 2 = 8\\) outcomes. Exactly two heads happens in HHT, HTH and THH, so the probability is \\(\\frac{3}{8}\\), if each outcome is equally likely."
     ],
-    "remember": "List every outcome once. If they are equally likely, probability = outcomes you want ÷ all outcomes.",
+    "remember": "List every outcome once. If they are equally likely, probability \\(=\\) outcomes you want \\(\\div\\) all outcomes.",
     "a": {
       "q": "Ana tosses a coin and then rolls a six-sided die. How many different outcomes are possible?",
       "opts": ["12", "8", "7", "6"],
-      "why": "The coin has 2 results and the die has 6, so there are 2 × 6 = 12 outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
+      "why": "The coin has 2 results and the die has 6, so there are \\(2 \\times 6 = 12\\) outcomes. Adding gives 8, but each coin result pairs with every die result, so the counts are multiplied.",
       "clue": "Each coin result pairs with every die result."
     },
     "b": {
       "d": 3,
       "q": "Leila tosses a fair coin three times. What is the probability that she gets at least two heads?",
-      "opts": ["1/2", "3/8", "1/8", "2/3"],
-      "why": "The coin is fair, so the 8 outcomes are equally likely. At least two heads means two or three heads: HHT, HTH, THH and HHH. That is 4 out of 8, which is 1/2. The answer 3/8 counts exactly two heads and leaves out HHH.",
+      "opts": ["\\(\\frac{1}{2}\\)", "\\(\\frac{3}{8}\\)", "\\(\\frac{1}{8}\\)", "\\(\\frac{2}{3}\\)"],
+      "why": "The coin is fair, so the 8 outcomes are equally likely. At least two heads means two or three heads: HHT, HTH, THH and HHH. That is 4 out of 8, which is \\(\\frac{1}{2}\\). The answer \\(\\frac{3}{8}\\) counts exactly two heads and leaves out HHH.",
       "clue": "Count the paths with two heads and the path with three."
     }
   },
@@ -19098,27 +19281,32 @@ MADE_BANKS.mat = {
     "title": "Estimating probability from relative frequency",
     "card": [
       "A trial is one go at an experiment, such as one roll of a die. An event is an outcome you are counting, such as rolling a 6.",
-      "Relative frequency = number of times the event happened ÷ number of trials. It can be written as a fraction, a decimal or a percentage.",
-      "Example: Sam flips a drawing pin 50 times and it lands point up 30 times. Relative frequency = 30 ÷ 50 = 3/5 = 0.6 = 60%. Past data works too: if 12 of the last 40 days were rainy, the estimate is 12 ÷ 40 = 0.3.",
+      "Relative frequency \\(=\\) number of times the event happened \\(\\div\\) number of trials. It can be written as a fraction, a decimal or a percentage.",
+      "Example: Sam flips a drawing pin 50 times and it lands point up 30 times. Relative frequency \\(= 30 \\div 50 = \\frac{3}{5} = 0.6 = 60\\%\\). Past data works too: if 12 of the last 40 days were rainy, the estimate is \\(12 \\div 40 = 0.3\\).",
       "Use relative frequency when outcomes are not equally likely, like the drawing pin, so counting outcomes cannot give the probability. More trials usually give a better estimate."
     ],
-    "remember": "Relative frequency = times it happened ÷ total trials. More trials usually give a better estimate.",
+    "remember": "Relative frequency \\(=\\) times it happened \\(\\div\\) total trials. More trials usually give a better estimate.",
     "a": {
       "q": "Mia spins an uneven spinner 40 times. It stops on red 14 times. What is the relative frequency of red?",
-      "opts": ["14/40 = 0.35", "14/26 = 0.54", "40/14 = 2.86", "26/40 = 0.65"],
-      "why": "Relative frequency = 14 ÷ 40 = 0.35. The tempting option 14/26 divides by the number of non-red spins, but the total number of trials must go on the bottom.",
+      "opts": [
+        "\\(\\frac{14}{40} = 0.35\\)",
+        "\\(\\frac{14}{26} = 0.54\\)",
+        "\\(\\frac{40}{14} = 2.86\\)",
+        "\\(\\frac{26}{40} = 0.65\\)"
+      ],
+      "why": "Relative frequency \\(= 14 \\div 40 = 0.35\\). The tempting option \\(\\frac{14}{26}\\) divides by the number of non-red spins, but the total number of trials must go on the bottom.",
       "clue": "Divide by the total number of spins."
     },
     "b": {
       "d": 3,
       "q": "Lena flips a drawing pin 10 times and it lands point up 7 times. Ravi flips the same pin 500 times and it lands point up 270 times. Whose estimate of the probability of point up is likely to be better?",
       "opts": [
-        "Ravi's 270/500, because it uses more trials",
-        "Lena's 7/10, because it is a higher value",
-        "Lena's 7/10, because fewer flips mean fewer errors",
+        "Ravi's \\(\\frac{270}{500}\\), because it uses more trials",
+        "Lena's \\(\\frac{7}{10}\\), because it is a higher value",
+        "Lena's \\(\\frac{7}{10}\\), because fewer flips mean fewer errors",
         "Both are equally good, because it is one pin"
       ],
-      "why": "More trials usually give a better estimate, so Ravi's 270 ÷ 500 = 0.54 is likely closer to the true probability. Lena's 7 ÷ 10 = 0.7 comes from only 10 flips, so luck can change it a lot. Using the same pin does not make a short run as reliable as a long one.",
+      "why": "More trials usually give a better estimate, so Ravi's \\(270 \\div 500 = 0.54\\) is likely closer to the true probability. Lena's \\(7 \\div 10 = 0.7\\) comes from only 10 flips, so luck can change it a lot. Using the same pin does not make a short run as reliable as a long one.",
       "clue": "With only a few flips, how much can luck change the result?"
     }
   }

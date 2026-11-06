@@ -13,7 +13,8 @@
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:02Z write: done",
-  "2026-11-01T15:05:28Z check: passed, cleared"
+  "2026-11-01T15:05:28Z check: passed, cleared",
+  "2026-11-06T10:44:54Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -104,7 +105,7 @@
    ],
    [
     "Invoice",
-    "A business adds GST to the price on an invoice. Price without GST × 1.1 gives the price with GST. Price with GST ÷ 11 gives the GST part."
+    "A business adds GST to the price on an invoice. Price without GST \\(\\times 1.1\\) gives the price with GST. Price with GST \\(\\div 11\\) gives the GST part."
    ],
    [
     "BAS",
@@ -112,7 +113,7 @@
    ],
    [
     "Amount owed",
-    "GST collected − GST paid = amount sent to the tax office. Example: collected $900 and paid $400 gives 900 − 400 = $500 to send."
+    "GST collected \\(-\\) GST paid \\(=\\) amount sent to the tax office. Example: collected $900 and paid $400 gives \\(\\$900 - \\$400 = \\$500\\) to send."
    ]
   ],
   "remember": "GST is 10% added to the price, and the BAS works out collected minus paid.",
@@ -124,7 +125,7 @@
     "$315",
     "$350.10"
    ],
-   "why": "GST is 10% of 350 = $35, so the total is 350 + 35 = $385. $35 is only the GST, not the total.",
+   "why": "GST is 10% of $350, which is $35, so the total is \\(\\$350 + \\$35 = \\$385\\). $35 is only the GST, not the total.",
    "clue": "Work out 10% of the price, then add it on."
   },
   "b": {
@@ -136,9 +137,58 @@
     "$1500",
     "$2200"
    ],
-   "why": "The amount sent is GST collected minus GST paid: 2200 − 1500 = $700. Adding them to get $3700 is wrong because the GST paid on supplies is taken off.",
+   "why": "The amount sent is GST collected minus GST paid: \\(\\$2200 - \\$1500 = \\$700\\). Adding them to get $3700 is wrong because the GST paid on supplies is taken off.",
    "clue": "Take away the GST the business paid."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:44:54Z",
+  "by": "hand",
+  "before": {
+   "title": "GST, invoices and BAS",
+   "card": [
+    [
+     "GST",
+     "GST is the goods and services tax. It is 10% of the price of most goods and services in Australia."
+    ],
+    [
+     "Invoice",
+     "A business adds GST to the price on an invoice. Price without GST × 1.1 gives the price with GST. Price with GST ÷ 11 gives the GST part."
+    ],
+    [
+     "BAS",
+     "A business activity statement (BAS) reports the GST a business collected from customers and the GST it paid on its own purchases."
+    ],
+    [
+     "Amount owed",
+     "GST collected − GST paid = amount sent to the tax office. Example: collected $900 and paid $400 gives 900 − 400 = $500 to send."
+    ]
+   ],
+   "remember": "GST is 10% added to the price, and the BAS works out collected minus paid.",
+   "a": {
+    "q": "Kofi's workshop charges $350 for a job, before GST. What is the invoice total including GST?",
+    "opts": [
+     "$385",
+     "$35",
+     "$315",
+     "$350.10"
+    ],
+    "why": "GST is 10% of 350 = $35, so the total is 350 + 35 = $385. $35 is only the GST, not the total.",
+    "clue": "Work out 10% of the price, then add it on."
+   },
+   "b": {
+    "d": 3,
+    "q": "Lena's bakery collected $2200 GST from customers and paid $1500 GST on supplies this quarter. What does her BAS show she sends to the tax office?",
+    "opts": [
+     "$700",
+     "$3700",
+     "$1500",
+     "$2200"
+    ],
+    "why": "The amount sent is GST collected minus GST paid: 2200 − 1500 = $700. Adding them to get $3700 is wrong because the GST paid on supplies is taken off.",
+    "clue": "Take away the GST the business paid."
+   }
+  }
+ }
 }

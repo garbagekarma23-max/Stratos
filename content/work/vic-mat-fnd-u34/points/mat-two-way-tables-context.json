@@ -18,7 +18,8 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:02Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:28Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T10:44:54Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -96,7 +97,7 @@
   "title": "Tables and spreadsheets",
   "card": [
    "A table organises data in rows and columns. Give each column a clear heading, and keep one kind of data in each column, with the unit in the heading.",
-   "A spreadsheet is a table on a computer. Each box is a cell, named by its column letter and row number, so B3 is column B, row 3. A formula starts with = and works out a value from other cells, such as =B2+B3.",
+   "A spreadsheet is a table on a computer. Each box is a cell, named by its column letter and row number, so B3 is column B, row 3. A formula starts with \\(=\\) and works out a value from other cells, such as \\(\\text{=B2+B3}\\).",
    [
     "Two-way table",
     "a table that sorts people by two categories at once. One category runs down the rows and the other across the columns. Each cell counts the people in both."
@@ -105,14 +106,14 @@
   ],
   "remember": "Put one kind of data in each column. In a two-way table, rows and columns must add to the totals.",
   "a": {
-   "q": "In a spreadsheet, cell B2 holds 15 and cell B3 holds 9. What value does the formula =B2+B3 give?",
+   "q": "In a spreadsheet, cell B2 holds 15 and cell B3 holds 9. What value does the formula \\(\\text{=B2+B3}\\) give?",
    "opts": [
     "24",
     "159",
     "6",
     "135"
    ],
-   "why": "The formula adds the values in the two cells: 15 + 9 = 24. Joining the digits to make 159 is tempting, but the formula adds numbers and does not write them side by side.",
+   "why": "The formula adds the values in the two cells: \\(15 + 9 = 24\\). Joining the digits to make 159 is tempting, but the formula adds numbers and does not write them side by side.",
    "clue": "A formula works with the values in the cells."
   },
   "b": {
@@ -124,9 +125,49 @@
     "22",
     "15"
    ],
-   "why": "The members row totals 25, so the members who are not adults number 25 − 18 = 7. The 15 is tempting, but that is the total of non-members, a different row of the table.",
+   "why": "The members row totals 25, so the members who are not adults number \\(25 - 18 = 7\\). The 15 is tempting, but that is the total of non-members, a different row of the table.",
    "clue": "Use the members row: its two cells must add to its total."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:44:54Z",
+  "by": "hand",
+  "before": {
+   "title": "Tables and spreadsheets",
+   "card": [
+    "A table organises data in rows and columns. Give each column a clear heading, and keep one kind of data in each column, with the unit in the heading.",
+    "A spreadsheet is a table on a computer. Each box is a cell, named by its column letter and row number, so B3 is column B, row 3. A formula starts with = and works out a value from other cells, such as =B2+B3.",
+    [
+     "Two-way table",
+     "a table that sorts people by two categories at once. One category runs down the rows and the other across the columns. Each cell counts the people in both."
+    ],
+    "Add row totals and column totals. Example: 30 students, 18 in Year 11 and 12 in Year 12. If 10 of the 18 Year 11 students walk to school, then 8 of them do not. The row and column totals must add to the grand total of 30."
+   ],
+   "remember": "Put one kind of data in each column. In a two-way table, rows and columns must add to the totals.",
+   "a": {
+    "q": "In a spreadsheet, cell B2 holds 15 and cell B3 holds 9. What value does the formula =B2+B3 give?",
+    "opts": [
+     "24",
+     "159",
+     "6",
+     "135"
+    ],
+    "why": "The formula adds the values in the two cells: 15 + 9 = 24. Joining the digits to make 159 is tempting, but the formula adds numbers and does not write them side by side.",
+    "clue": "A formula works with the values in the cells."
+   },
+   "b": {
+    "d": 3,
+    "q": "Of 40 people at a club, 25 are members and 15 are not. 18 of the members are adults. How many members are not adults?",
+    "opts": [
+     "7",
+     "18",
+     "22",
+     "15"
+    ],
+    "why": "The members row totals 25, so the members who are not adults number 25 − 18 = 7. The 15 is tempting, but that is the total of non-members, a different row of the table.",
+    "clue": "Use the members row: its two cells must add to its total."
+   }
+  }
+ }
 }

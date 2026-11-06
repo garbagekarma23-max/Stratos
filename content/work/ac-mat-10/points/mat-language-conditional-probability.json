@@ -31,7 +31,8 @@
   "2026-11-04T09:47:06Z write: done",
   "2026-11-04T09:58:29Z check: flagged",
   "2026-11-04T10:08:03Z fix: suggested",
-  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:44:50Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -201,14 +202,14 @@
  "final": {
   "title": "Language of conditional probability",
   "card": [
-   "A conditional probability is the chance of one event when we already know another event has happened. We write P(A | B) and say \"the probability of A given B\".",
+   "A conditional probability is the chance of one event when we already know another event has happened. We write \\(P(A \\mid B)\\) and say \"the probability of \\(A\\) given \\(B\\)\".",
    "The event after the bar is the condition: the event we know has happened. The event before the bar is the one whose chance we find.",
-   "Words such as given, if and knowing that introduce the condition. In \"if B, then A\", the word then introduces A, the event whose chance we find.",
-   "The condition shrinks the outcomes we count. Example: given a die shows an even number, the outcomes are 2, 4 and 6, so the chance of a 6 is 1/3, not 1/6."
+   "Words such as given, if and knowing that introduce the condition. In \"if \\(B\\), then \\(A\\)\", the word then introduces \\(A\\), the event whose chance we find.",
+   "The condition shrinks the outcomes we count. Example: given a die shows an even number, the outcomes are 2, 4 and 6, so the chance of a 6 is \\(\\frac{1}{3}\\), not \\(\\frac{1}{6}\\)."
   ],
-  "remember": "The condition is what we already know. It goes after the bar in P(A | B).",
+  "remember": "The condition is what we already know. It goes after the bar in \\(P(A \\mid B)\\).",
   "a": {
-   "q": "In P(rain | cloudy), which event is the condition?",
+   "q": "In \\(P(\\text{rain} \\mid \\text{cloudy})\\), which event is the condition?",
    "opts": [
     "Cloudy",
     "Rain",
@@ -220,16 +221,53 @@
   },
   "b": {
    "d": 3,
-   "q": "Of the students at a school in Perth, some walk to school and some own a bike. Which statement describes P(owns a bike | walks to school)?",
+   "q": "Of the students at a school in Perth, some walk to school and some own a bike. Which statement describes \\(P(\\text{owns a bike} \\mid \\text{walks to school})\\)?",
    "opts": [
     "Chance a student who walks owns a bike",
     "Chance a student who owns a bike walks",
     "Chance a student walks and owns a bike",
     "Chance a student walks or owns a bike"
    ],
-   "why": "The condition is after the bar, so we already know the student walks, and we ask about owning a bike. The option about a student who owns a bike walking swaps the two events: that would be P(walks | owns a bike).",
+   "why": "The condition is after the bar, so we already know the student walks, and we ask about owning a bike. The option about a student who owns a bike walking swaps the two events: that would be \\(P(\\text{walks} \\mid \\text{owns a bike})\\).",
    "clue": "Which event do we already know about?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:44:50Z",
+  "by": "hand",
+  "before": {
+   "title": "Language of conditional probability",
+   "card": [
+    "A conditional probability is the chance of one event when we already know another event has happened. We write P(A | B) and say \"the probability of A given B\".",
+    "The event after the bar is the condition: the event we know has happened. The event before the bar is the one whose chance we find.",
+    "Words such as given, if and knowing that introduce the condition. In \"if B, then A\", the word then introduces A, the event whose chance we find.",
+    "The condition shrinks the outcomes we count. Example: given a die shows an even number, the outcomes are 2, 4 and 6, so the chance of a 6 is 1/3, not 1/6."
+   ],
+   "remember": "The condition is what we already know. It goes after the bar in P(A | B).",
+   "a": {
+    "q": "In P(rain | cloudy), which event is the condition?",
+    "opts": [
+     "Cloudy",
+     "Rain",
+     "Rain and cloudy",
+     "Not cloudy"
+    ],
+    "why": "The event after the bar is the condition, so cloudy is already known. Rain is the event whose chance we are finding.",
+    "clue": "Look at the event after the bar."
+   },
+   "b": {
+    "d": 3,
+    "q": "Of the students at a school in Perth, some walk to school and some own a bike. Which statement describes P(owns a bike | walks to school)?",
+    "opts": [
+     "Chance a student who walks owns a bike",
+     "Chance a student who owns a bike walks",
+     "Chance a student walks and owns a bike",
+     "Chance a student walks or owns a bike"
+    ],
+    "why": "The condition is after the bar, so we already know the student walks, and we ask about owning a bike. The option about a student who owns a bike walking swaps the two events: that would be P(walks | owns a bike).",
+    "clue": "Which event do we already know about?"
+   }
+  }
+ }
 }
