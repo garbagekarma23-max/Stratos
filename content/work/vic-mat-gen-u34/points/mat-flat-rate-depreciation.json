@@ -18,7 +18,8 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:28Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -93,20 +94,20 @@
   "title": "Flat-rate depreciation",
   "card": [
    "Depreciation is the fall in an asset's value over time. With flat-rate depreciation, the asset loses the same dollar amount each period.",
-   "The rule is V(n+1) = V(n) − d, where V(0) is the starting value and d is the amount lost each period. The value after n periods is V(n) = V(0) − d × n.",
-   "The graph of value against time is a straight line going down. The gradient is −d.",
-   "Example: a $12 000 printer loses $1500 each year. After 4 years, V(4) = 12 000 − 1500 × 4 = $6000."
+   "The rule is \\(V_{n+1} = V_{n} - d\\), where \\(V_{0}\\) is the starting value and \\(d\\) is the amount lost each period. The value after \\(n\\) periods is \\(V_{n} = V_{0} - d \\times n\\).",
+   "The graph of value against time is a straight line going down. The gradient is \\(-d\\).",
+   "Example: a $12,000 printer loses $1500 each year. After 4 years, \\(V_{4} = \\$12{,}000 - \\$1500 \\times 4\\), which is $6000."
   ],
   "remember": "Flat-rate depreciation takes off the same dollar amount every period, so the value falls in a straight line.",
   "a": {
-   "q": "A machine is bought for $20 000 and loses $2500 in value each year. What is its value after 3 years?",
+   "q": "A machine is bought for $20,000 and loses $2500 in value each year. What is its value after 3 years?",
    "opts": [
-    "$12 500",
-    "$17 500",
-    "$10 000",
-    "$27 500"
+    "$12,500",
+    "$17,500",
+    "$10,000",
+    "$27,500"
    ],
-   "why": "V(3) = 20 000 − 2500 × 3 = 20 000 − 7500 = $12 500. The value $17 500 is only the value after 1 year, because the loss was taken off once instead of three times.",
+   "why": "\\(V_{3} = \\$20{,}000 - \\$2500 \\times 3\\), which is \\(\\$20{,}000 - \\$7500 = \\$12{,}500\\). The value $17,500 is only the value after 1 year, because the loss was taken off once instead of three times.",
    "clue": "Take the yearly loss off once for each year."
   },
   "b": {
@@ -118,9 +119,46 @@
     "$1800",
     "$5000"
    ],
-   "why": "The total loss is 9000 − 4000 = $5000 over 5 years. So d = 5000 ÷ 5 = $1000 a year. The value $5000 is the total loss, not the loss for one year.",
+   "why": "The total loss is \\(\\$9000 - \\$4000 = \\$5000\\) over 5 years. So \\(d = \\$5000 \\div 5 = \\$1000\\) a year. The value $5000 is the total loss, not the loss for one year.",
    "clue": "Find the total fall in value, then share it across the years."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Flat-rate depreciation",
+   "card": [
+    "Depreciation is the fall in an asset's value over time. With flat-rate depreciation, the asset loses the same dollar amount each period.",
+    "The rule is V(n+1) = V(n) − d, where V(0) is the starting value and d is the amount lost each period. The value after n periods is V(n) = V(0) − d × n.",
+    "The graph of value against time is a straight line going down. The gradient is −d.",
+    "Example: a $12 000 printer loses $1500 each year. After 4 years, V(4) = 12 000 − 1500 × 4 = $6000."
+   ],
+   "remember": "Flat-rate depreciation takes off the same dollar amount every period, so the value falls in a straight line.",
+   "a": {
+    "q": "A machine is bought for $20 000 and loses $2500 in value each year. What is its value after 3 years?",
+    "opts": [
+     "$12 500",
+     "$17 500",
+     "$10 000",
+     "$27 500"
+    ],
+    "why": "V(3) = 20 000 − 2500 × 3 = 20 000 − 7500 = $12 500. The value $17 500 is only the value after 1 year, because the loss was taken off once instead of three times.",
+    "clue": "Take the yearly loss off once for each year."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia's café buys an oven for $9000. After 5 years its value is $4000 using flat-rate depreciation. How much value does it lose each year?",
+    "opts": [
+     "$1000",
+     "$800",
+     "$1800",
+     "$5000"
+    ],
+    "why": "The total loss is 9000 − 4000 = $5000 over 5 years. So d = 5000 ÷ 5 = $1000 a year. The value $5000 is the total loss, not the loss for one year.",
+    "clue": "Find the total fall in value, then share it across the years."
+   }
+  }
+ }
 }

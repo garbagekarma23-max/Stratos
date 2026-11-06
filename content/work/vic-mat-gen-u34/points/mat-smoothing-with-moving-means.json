@@ -9,7 +9,8 @@
   "2026-11-01T14:46:40Z write: done",
   "2026-11-01T14:56:02Z check: flagged",
   "2026-11-01T15:05:28Z fix: suggested",
-  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -135,7 +136,7 @@
   "title": "Smoothing with moving means",
   "card": [
    "Smoothing replaces each value in a time series with the mean of it and the values next to it. This evens out short-term ups and downs so the overall pattern is easier to see.",
-   "For a 3-point moving mean, average a value with the one before and the one after. Example: for 10, 14, 12, the smoothed middle value is (10 + 14 + 12) ÷ 3 = 12.",
+   "For a 3-point moving mean, average a value with the one before and the one after. Example: for 10, 14, 12, the smoothed middle value is \\(\\frac{10 + 14 + 12}{3} = 12\\).",
    "An odd-point mean lines up with a real data point. Values without a full set of neighbours get no smoothed value: the first and last for a 3-point mean, the first two and last two for a 5-point mean.",
    "An even-point mean, such as 4-point, falls halfway between two time points. Centre it by averaging two neighbouring 4-point means. The result lines up with a real time point."
   ],
@@ -148,7 +149,7 @@
     "14",
     "9.5"
    ],
-   "why": "The second point is averaged with its neighbours: (8 + 11 + 17) ÷ 3 = 36 ÷ 3 = 12. Answering 14 smooths the third point instead: (11 + 17 + 14) ÷ 3 = 14.",
+   "why": "The second point is averaged with its neighbours: \\(\\frac{8 + 11 + 17}{3} = \\frac{36}{3} = 12\\). Answering 14 smooths the third point instead: \\(\\frac{11 + 17 + 14}{3} = 14\\).",
    "clue": "Add the second value and the two beside it, then divide by 3."
   },
   "b": {
@@ -160,9 +161,46 @@
     "26.5",
     "50.5"
    ],
-   "why": "Centre it by averaging the two 4-point means: (24 + 26.5) ÷ 2 = 25.25. Giving 50.5 adds the two means but forgets to divide by 2.",
+   "why": "Centre it by averaging the two 4-point means: \\(\\frac{24 + 26.5}{2} = 25.25\\). Giving 50.5 adds the two means but forgets to divide by 2.",
    "clue": "Average the two means that sit either side of period 3."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Smoothing with moving means",
+   "card": [
+    "Smoothing replaces each value in a time series with the mean of it and the values next to it. This evens out short-term ups and downs so the overall pattern is easier to see.",
+    "For a 3-point moving mean, average a value with the one before and the one after. Example: for 10, 14, 12, the smoothed middle value is (10 + 14 + 12) ÷ 3 = 12.",
+    "An odd-point mean lines up with a real data point. Values without a full set of neighbours get no smoothed value: the first and last for a 3-point mean, the first two and last two for a 5-point mean.",
+    "An even-point mean, such as 4-point, falls halfway between two time points. Centre it by averaging two neighbouring 4-point means. The result lines up with a real time point."
+   ],
+   "remember": "Average each value with its neighbours. Even-point means need a second averaging to centre them.",
+   "a": {
+    "q": "A 3-point moving mean is used on the values 8, 11, 17, 14. What is the smoothed value for the second point?",
+    "opts": [
+     "12",
+     "11",
+     "14",
+     "9.5"
+    ],
+    "why": "The second point is averaged with its neighbours: (8 + 11 + 17) ÷ 3 = 36 ÷ 3 = 12. Answering 14 smooths the third point instead: (11 + 17 + 14) ÷ 3 = 14.",
+    "clue": "Add the second value and the two beside it, then divide by 3."
+   },
+   "b": {
+    "d": 3,
+    "q": "Sales at a kiosk in Ballarat are 20, 26, 22, 28, 30 in five time periods. A 4-point moving mean gives 24 (between periods 2 and 3) and 26.5 (between periods 3 and 4). What is the centred 4-point mean for period 3?",
+    "opts": [
+     "25.25",
+     "24",
+     "26.5",
+     "50.5"
+    ],
+    "why": "Centre it by averaging the two 4-point means: (24 + 26.5) ÷ 2 = 25.25. Giving 50.5 adds the two means but forgets to divide by 2.",
+    "clue": "Average the two means that sit either side of period 3."
+   }
+  }
+ }
 }

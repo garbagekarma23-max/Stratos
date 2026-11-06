@@ -20,7 +20,8 @@
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -169,9 +170,9 @@
   "title": "Data transformations",
   "card": [
    "A straight line fits poorly when a scatterplot is curved. A transformation changes one variable so the plot becomes closer to a straight line.",
-   "You can transform either variable. Common choices are squaring (x² or y²), taking the logarithm (log x or log y) and taking the reciprocal (1/x or 1/y).",
+   "You can transform either variable. Common choices are squaring (\\(x^{2}\\) or \\(y^{2}\\)), taking the logarithm (\\(\\log_{10} x\\) or \\(\\log_{10} y\\)) and taking the reciprocal (\\(\\frac{1}{x}\\) or \\(\\frac{1}{y}\\)).",
    "Choose the transformation by the shape of the curve. After transforming, plot the new variable against the other one and check that the plot looks straighter.",
-   "Then fit the least squares line to the transformed data. Example: if y rises more and more steeply as x increases, try y against x², which can straighten the plot."
+   "Then fit the least squares line to the transformed data. Example: if \\(y\\) rises more and more steeply as \\(x\\) increases, try \\(y\\) against \\(x^{2}\\), which can straighten the plot."
   ],
   "remember": "Transform a variable to straighten a curve, then fit a line to the straighter plot.",
   "a": {
@@ -187,16 +188,53 @@
   },
   "b": {
    "d": 2,
-   "q": "Ava's scatterplot of y against x curves upward, getting steeper. She plots y against x² and the points now look roughly straight. What should she do next?",
+   "q": "Ava's scatterplot of \\(y\\) against \\(x\\) curves upward, getting steeper. She plots \\(y\\) against \\(x^{2}\\) and the points now look roughly straight. What should she do next?",
    "opts": [
-    "Fit a least squares line to y against x²",
-    "Fit a least squares line to the original y against x",
+    "Fit a least squares line to \\(y\\) against \\(x^{2}\\)",
+    "Fit a least squares line to the original \\(y\\) against \\(x\\)",
     "Delete the points that look furthest from the line",
-    "Swap the variables and plot x² against y"
+    "Swap the variables and plot \\(x^{2}\\) against \\(y\\)"
    ],
-   "why": "The straighter plot is y against x², so the line should be fitted to those transformed data. Fitting to the original data would use the curved plot, which a line fits poorly.",
+   "why": "The straighter plot is \\(y\\) against \\(x^{2}\\), so the line should be fitted to those transformed data. Fitting to the original data would use the curved plot, which a line fits poorly.",
    "clue": "Fit the line to the plot that looks straight."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Data transformations",
+   "card": [
+    "A straight line fits poorly when a scatterplot is curved. A transformation changes one variable so the plot becomes closer to a straight line.",
+    "You can transform either variable. Common choices are squaring (x² or y²), taking the logarithm (log x or log y) and taking the reciprocal (1/x or 1/y).",
+    "Choose the transformation by the shape of the curve. After transforming, plot the new variable against the other one and check that the plot looks straighter.",
+    "Then fit the least squares line to the transformed data. Example: if y rises more and more steeply as x increases, try y against x², which can straighten the plot."
+   ],
+   "remember": "Transform a variable to straighten a curve, then fit a line to the straighter plot.",
+   "a": {
+    "q": "Why would a student transform a variable before fitting a line to a curved scatterplot?",
+    "opts": [
+     "To make the relationship closer to a straight line",
+     "To make every data point sit exactly on the line",
+     "To change the response variable into the explanatory one",
+     "To remove the data points that are far from the others"
+    ],
+    "why": "A transformation changes the scale of one variable so a curved plot becomes closer to linear. It does not make every point lie exactly on a line, and it does not remove any points.",
+    "clue": "Think about what shape a line fits well."
+   },
+   "b": {
+    "d": 2,
+    "q": "Ava's scatterplot of y against x curves upward, getting steeper. She plots y against x² and the points now look roughly straight. What should she do next?",
+    "opts": [
+     "Fit a least squares line to y against x²",
+     "Fit a least squares line to the original y against x",
+     "Delete the points that look furthest from the line",
+     "Swap the variables and plot x² against y"
+    ],
+    "why": "The straighter plot is y against x², so the line should be fitted to those transformed data. Fitting to the original data would use the curved plot, which a line fits poorly.",
+    "clue": "Fit the line to the plot that looks straight."
+   }
+  }
+ }
 }

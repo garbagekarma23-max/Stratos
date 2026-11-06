@@ -9,7 +9,8 @@
   "2026-11-01T14:46:40Z write: done",
   "2026-11-01T14:56:03Z check: flagged",
   "2026-11-01T15:05:28Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -183,35 +184,72 @@
  "final": {
   "title": "Recurrence relations for finance",
   "card": [
-   "A recurrence relation gives the next value from the one before it. In finance, V(n) is the balance after n periods, and V(0) is the starting balance.",
-   "A first-order linear recurrence has the form V(n+1) = R × V(n) + d. R is the number that multiplies the balance each period. d is the amount added each period, or taken off if d is negative.",
-   "On its own, R above 1 makes the balance grow and R between 0 and 1 makes it shrink. For example, R = 1.02 is a 2% rise each period. The d term can change whether the balance grows or shrinks overall.",
-   "Worked example: V(0) = 500, V(n+1) = 1.1 × V(n) + 50. Multiply first, then add d. V(1) = 1.1 × 500 + 50 = 600. Then V(2) = 1.1 × 600 + 50 = 710."
+   "A recurrence relation gives the next value from the one before it. In finance, \\(V_{n}\\) is the balance after \\(n\\) periods, and \\(V_{0}\\) is the starting balance.",
+   "A first-order linear recurrence has the form \\(V_{n+1} = RV_{n} + d\\). \\(R\\) is the number that multiplies the balance each period. \\(d\\) is the amount added each period, or taken off if \\(d\\) is negative.",
+   "On its own, \\(R\\) above 1 makes the balance grow and \\(R\\) between 0 and 1 makes it shrink. For example, \\(R = 1.02\\) is a 2% rise each period. The \\(d\\) term can change whether the balance grows or shrinks overall.",
+   "Worked example: \\(V_{0} = 500\\), \\(V_{n+1} = 1.1V_{n} + 50\\). Multiply first, then add \\(d\\). \\(V_{1} = 1.1 \\times 500 + 50 = 600\\). Then \\(V_{2} = 1.1 \\times 600 + 50 = 710\\)."
   ],
-  "remember": "Next balance = R × this balance + d. Work one period at a time.",
+  "remember": "Next balance \\(= R \\times\\) this balance \\(+ d\\). Work one period at a time.",
   "a": {
-   "q": "A balance starts at 200 and V(n+1) = 1.5 × V(n) − 40. What is V(2)?",
+   "q": "A balance starts at 200 and \\(V_{n+1} = 1.5V_{n} - 40\\). What is \\(V_{2}\\)?",
    "opts": [
     "350",
     "260",
     "300",
     "550"
    ],
-   "why": "V(1) = 1.5 × 200 − 40 = 260. Then V(2) = 1.5 × 260 − 40 = 390 − 40 = 350. The option 260 is only V(1), one period too early.",
-   "clue": "Find V(1) first, then use it to find V(2)."
+   "why": "\\(V_{1} = 1.5 \\times 200 - 40 = 260\\). Then \\(V_{2} = 1.5 \\times 260 - 40\\), which is \\(390 - 40 = 350\\). The option 260 is only \\(V_{1}\\), one period too early.",
+   "clue": "Find \\(V_{1}\\) first, then use it to find \\(V_{2}\\)."
   },
   "b": {
    "d": 2,
-   "q": "Mia's savings in Bendigo follow V(n+1) = 1.01 × V(n) + 100, with V(0) = 1000. What is V(1)?",
+   "q": "Mia's savings in Bendigo follow \\(V_{n+1} = 1.01V_{n} + 100\\), with \\(V_{0} = 1000\\). What is \\(V_{1}\\)?",
    "opts": [
     "1110",
     "1100",
     "1010",
     "1111"
    ],
-   "why": "V(1) = 1.01 × 1000 + 100 = 1010 + 100 = 1110. Adding 100 first and then multiplying gives 1.01 × 1100 = 1111, which uses the wrong order. Stopping at 1010 leaves out d.",
-   "clue": "Multiply by R first, then add d."
+   "why": "\\(V_{1} = 1.01 \\times 1000 + 100\\), which is \\(1010 + 100 = 1110\\). Adding 100 first and then multiplying gives \\(1.01 \\times 1100 = 1111\\), which uses the wrong order. Stopping at 1010 leaves out \\(d\\).",
+   "clue": "Multiply by \\(R\\) first, then add \\(d\\)."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Recurrence relations for finance",
+   "card": [
+    "A recurrence relation gives the next value from the one before it. In finance, V(n) is the balance after n periods, and V(0) is the starting balance.",
+    "A first-order linear recurrence has the form V(n+1) = R × V(n) + d. R is the number that multiplies the balance each period. d is the amount added each period, or taken off if d is negative.",
+    "On its own, R above 1 makes the balance grow and R between 0 and 1 makes it shrink. For example, R = 1.02 is a 2% rise each period. The d term can change whether the balance grows or shrinks overall.",
+    "Worked example: V(0) = 500, V(n+1) = 1.1 × V(n) + 50. Multiply first, then add d. V(1) = 1.1 × 500 + 50 = 600. Then V(2) = 1.1 × 600 + 50 = 710."
+   ],
+   "remember": "Next balance = R × this balance + d. Work one period at a time.",
+   "a": {
+    "q": "A balance starts at 200 and V(n+1) = 1.5 × V(n) − 40. What is V(2)?",
+    "opts": [
+     "350",
+     "260",
+     "300",
+     "550"
+    ],
+    "why": "V(1) = 1.5 × 200 − 40 = 260. Then V(2) = 1.5 × 260 − 40 = 390 − 40 = 350. The option 260 is only V(1), one period too early.",
+    "clue": "Find V(1) first, then use it to find V(2)."
+   },
+   "b": {
+    "d": 2,
+    "q": "Mia's savings in Bendigo follow V(n+1) = 1.01 × V(n) + 100, with V(0) = 1000. What is V(1)?",
+    "opts": [
+     "1110",
+     "1100",
+     "1010",
+     "1111"
+    ],
+    "why": "V(1) = 1.01 × 1000 + 100 = 1010 + 100 = 1110. Adding 100 first and then multiplying gives 1.01 × 1100 = 1111, which uses the wrong order. Stopping at 1010 leaves out d.",
+    "clue": "Multiply by R first, then add d."
+   }
+  }
+ }
 }

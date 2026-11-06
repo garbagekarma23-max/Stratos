@@ -20,7 +20,8 @@
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -163,7 +164,7 @@
   "title": "Dijkstra's algorithm",
   "card": [
    "Dijkstra's algorithm finds the shortest path from one start vertex to every other vertex in a weighted network. The start gets the label 0. Every other vertex starts with no label.",
-   "Each step, fix the unvisited vertex with the smallest label. Then look at its neighbours. New label = fixed label + edge weight. Keep the new label only if it is smaller than the old one.",
+   "Each step, fix the unvisited vertex with the smallest label. Then look at its neighbours. New label \\(=\\) fixed label \\(+\\) edge weight. Keep the new label only if it is smaller than the old one.",
    [
     "Example",
     "Edges are A-B 4, A-C 2, C-B 1, B-D 5 and C-D 8. Fix A (0), so B gets 4 and C gets 2. Fix C (2): B drops from 4 to 3 via C, and D gets 10."
@@ -191,9 +192,49 @@
     "12 km",
     "5 km"
    ],
-   "why": "Fix P (0). Then R gets 3 and Q gets 7. Fix R (3): Q drops to 5 via R, and S gets 12. Fix Q (5): S drops to 9, the path P-R-Q-S of 3 + 2 + 4. The 11 km answer comes from P-Q-S, which keeps the first label for Q and misses the cheaper route through R.",
+   "why": "Fix P (0). Then R gets 3 and Q gets 7. Fix R (3): Q drops to 5 via R, and S gets 12. Fix Q (5): S drops to 9, the path P-R-Q-S of \\(3 + 2 + 4\\). The 11 km answer comes from P-Q-S, which keeps the first label for Q and misses the cheaper route through R.",
    "clue": "Check whether going through R makes Q closer."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Dijkstra's algorithm",
+   "card": [
+    "Dijkstra's algorithm finds the shortest path from one start vertex to every other vertex in a weighted network. The start gets the label 0. Every other vertex starts with no label.",
+    "Each step, fix the unvisited vertex with the smallest label. Then look at its neighbours. New label = fixed label + edge weight. Keep the new label only if it is smaller than the old one.",
+    [
+     "Example",
+     "Edges are A-B 4, A-C 2, C-B 1, B-D 5 and C-D 8. Fix A (0), so B gets 4 and C gets 2. Fix C (2): B drops from 4 to 3 via C, and D gets 10."
+    ],
+    "Fix B (3): D drops from 10 to 8. Fix D (8). The shortest distance from A to D is 8, and tracing back through the labels gives the path A-C-B-D."
+   ],
+   "remember": "Fix the smallest label, update its neighbours, and keep only smaller labels.",
+   "a": {
+    "q": "After the start is fixed, the unvisited vertices have labels B 6, C 3 and D 9. Which vertex is fixed next?",
+    "opts": [
+     "C, as it has the smallest label",
+     "D, as it has the largest label",
+     "B, as it comes next after A in order",
+     "D, as it is furthest from the start"
+    ],
+    "why": "The algorithm always fixes the unvisited vertex with the smallest label, so C is fixed. Choosing B because of its place in the alphabet ignores the labels, which is what the method is based on.",
+    "clue": "Look at the numbers, not the letters."
+   },
+   "b": {
+    "d": 3,
+    "q": "Four towns are joined by roads (in km): P-Q 7, P-R 3, R-Q 2, Q-S 4 and R-S 9. Using Dijkstra's algorithm from P, what is the shortest distance from P to S?",
+    "opts": [
+     "9 km",
+     "11 km",
+     "12 km",
+     "5 km"
+    ],
+    "why": "Fix P (0). Then R gets 3 and Q gets 7. Fix R (3): Q drops to 5 via R, and S gets 12. Fix Q (5): S drops to 9, the path P-R-Q-S of 3 + 2 + 4. The 11 km answer comes from P-Q-S, which keeps the first label for Q and misses the cheaper route through R.",
+    "clue": "Check whether going through R makes Q closer."
+   }
+  }
+ }
 }

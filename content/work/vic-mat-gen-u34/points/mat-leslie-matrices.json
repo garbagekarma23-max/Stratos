@@ -15,7 +15,8 @@
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: flagged",
   "2026-11-01T15:14:47Z fix: suggested",
-  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -152,12 +153,12 @@
   "card": [
    "A Leslie matrix models a population split into age groups. The state matrix lists the number in each age group, youngest first.",
    "The top row holds birth rates: the average number of young born to each member of an age group. Entries just below the main diagonal hold survival rates: the proportion of one age group that moves up to the next. All other entries are 0.",
-   "The next population is L × S, found by matrix multiplication, as with a transition matrix. Add the groups to get the total population.",
-   "Example: L = [0 2; 0.5 0] and S = [100; 40]. L × S = [0×100 + 2×40; 0.5×100 + 0×40] = [80; 50]."
+   "The next population is \\(L \\times S\\), found by matrix multiplication, as with a transition matrix. Add the groups to get the total population.",
+   "Example: \\(L = \\begin{bmatrix} 0 & 2 \\\\ 0.5 & 0 \\end{bmatrix}\\) and \\(S = \\begin{bmatrix} 100 \\\\ 40 \\end{bmatrix}\\). Then \\(L \\times S = \\begin{bmatrix} 0 \\times 100 + 2 \\times 40 \\\\ 0.5 \\times 100 + 0 \\times 40 \\end{bmatrix}\\), which is \\(\\begin{bmatrix} 80 \\\\ 50 \\end{bmatrix}\\)."
   ],
   "remember": "Top row: births. Below the diagonal: survival to the next age group.",
   "a": {
-   "q": "A Leslie matrix is L = [0 2 1; 0.5 0 0; 0 0.4 0]. What does the 0.4 in row 3, column 2 mean?",
+   "q": "A Leslie matrix is \\(L = \\begin{bmatrix} 0 & 2 & 1 \\\\ 0.5 & 0 & 0 \\\\ 0 & 0.4 & 0 \\end{bmatrix}\\). What does the 0.4 in row 3, column 2 mean?",
    "opts": [
     "Proportion of age group 2 that survive into group 3",
     "Average births per member of age group 2",
@@ -169,16 +170,53 @@
   },
   "b": {
    "d": 3,
-   "q": "A population has L = [0 1.5 1; 0.6 0 0; 0 0.5 0] and S = [80; 50; 20], with age groups youngest first. What is the total population after one step?",
+   "q": "A population has \\(L = \\begin{bmatrix} 0 & 1.5 & 1 \\\\ 0.6 & 0 & 0 \\\\ 0 & 0.5 & 0 \\end{bmatrix}\\) and \\(S = \\begin{bmatrix} 80 \\\\ 50 \\\\ 20 \\end{bmatrix}\\), with age groups youngest first. What is the total population after one step?",
    "opts": [
     "168",
     "150",
     "95",
     "73"
    ],
-   "why": "Youngest = 1.5×50 + 1×20 = 95. Second = 0.6×80 = 48. Oldest = 0.5×50 = 25. The total is 95 + 48 + 25 = 168. The option 73 leaves out the new births, and 150 is the starting total.",
+   "why": "Youngest \\(= 1.5 \\times 50 + 1 \\times 20 = 95\\). Second \\(= 0.6 \\times 80 = 48\\). Oldest \\(= 0.5 \\times 50 = 25\\). The total is \\(95 + 48 + 25 = 168\\). The option 73 leaves out the new births, and 150 is the starting total.",
    "clue": "Work out all three groups, then add them."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Leslie matrices",
+   "card": [
+    "A Leslie matrix models a population split into age groups. The state matrix lists the number in each age group, youngest first.",
+    "The top row holds birth rates: the average number of young born to each member of an age group. Entries just below the main diagonal hold survival rates: the proportion of one age group that moves up to the next. All other entries are 0.",
+    "The next population is L × S, found by matrix multiplication, as with a transition matrix. Add the groups to get the total population.",
+    "Example: L = [0 2; 0.5 0] and S = [100; 40]. L × S = [0×100 + 2×40; 0.5×100 + 0×40] = [80; 50]."
+   ],
+   "remember": "Top row: births. Below the diagonal: survival to the next age group.",
+   "a": {
+    "q": "A Leslie matrix is L = [0 2 1; 0.5 0 0; 0 0.4 0]. What does the 0.4 in row 3, column 2 mean?",
+    "opts": [
+     "Proportion of age group 2 that survive into group 3",
+     "Average births per member of age group 2",
+     "Proportion of age group 3 that survive another step",
+     "Proportion of age group 3 born to group 2"
+    ],
+    "why": "An entry below the diagonal is a survival rate from one age group to the next. Column 2 is the group that starts and row 3 is where it ends up. Births appear only in the top row.",
+    "clue": "It is not in the top row, so it is not about births."
+   },
+   "b": {
+    "d": 3,
+    "q": "A population has L = [0 1.5 1; 0.6 0 0; 0 0.5 0] and S = [80; 50; 20], with age groups youngest first. What is the total population after one step?",
+    "opts": [
+     "168",
+     "150",
+     "95",
+     "73"
+    ],
+    "why": "Youngest = 1.5×50 + 1×20 = 95. Second = 0.6×80 = 48. Oldest = 0.5×50 = 25. The total is 95 + 48 + 25 = 168. The option 73 leaves out the new births, and 150 is the starting total.",
+    "clue": "Work out all three groups, then add them."
+   }
+  }
+ }
 }

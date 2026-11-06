@@ -13,7 +13,8 @@
   "2026-11-04T09:23:39Z new, match",
   "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:06Z write: done",
-  "2026-11-04T09:58:29Z check: passed, cleared"
+  "2026-11-04T09:58:29Z check: passed, cleared",
+  "2026-11-06T10:44:50Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -89,15 +90,15 @@
  "final": {
   "title": "Five-number summary and IQR",
   "card": [
-   "Put the data in order. The five-number summary is the minimum, lower quartile (Q1), median, upper quartile (Q3) and maximum.",
+   "Put the data in order. The five-number summary is the minimum, lower quartile (\\(Q_{1}\\)), median, upper quartile (\\(Q_{3}\\)) and maximum.",
    "The median splits the ordered data into a lower half and an upper half. If there is an odd number of values, leave the median out of both halves.",
-   "Q1 is the median of the lower half. Q3 is the median of the upper half. The interquartile range (IQR) = Q3 − Q1, the spread of the middle half of the data.",
+   "\\(Q_{1}\\) is the median of the lower half. \\(Q_{3}\\) is the median of the upper half. The interquartile range is \\(\\text{IQR} = Q_{3} - Q_{1}\\), the spread of the middle half of the data.",
    [
     "Example",
-    "3, 5, 6, 8, 9, 12, 14. The median is 8, Q1 is 5 and Q3 is 12. The minimum is 3 and the maximum is 14. IQR = 12 − 5 = 7."
+    "3, 5, 6, 8, 9, 12, 14. The median is 8, \\(Q_{1}\\) is 5 and \\(Q_{3}\\) is 12. The minimum is 3 and the maximum is 14. \\(\\text{IQR} = 12 - 5 = 7\\)."
    ]
   ],
-  "remember": "Order first, split at the median, then IQR = Q3 − Q1.",
+  "remember": "Order first, split at the median, then \\(\\text{IQR} = Q_{3} - Q_{1}\\).",
   "a": {
    "q": "Seven students read this many books last term: 4, 9, 2, 7, 5, 11, 6. What is the IQR?",
    "opts": [
@@ -106,7 +107,7 @@
     "7",
     "2"
    ],
-   "why": "In order the data is 2, 4, 5, 6, 7, 9, 11. The median is 6, Q1 is 4 and Q3 is 9, so IQR = 9 − 4 = 5. Using 9 is tempting, but that is the range (11 − 2), which uses the minimum and maximum instead of the quartiles.",
+   "why": "In order the data is 2, 4, 5, 6, 7, 9, 11. The median is 6, \\(Q_{1}\\) is 4 and \\(Q_{3}\\) is 9, so \\(\\text{IQR} = 9 - 4 = 5\\). Using 9 is tempting, but that is the range (\\(11 - 2\\)), which uses the minimum and maximum instead of the quartiles.",
    "clue": "Put the values in order before you find any quartile."
   },
   "b": {
@@ -118,9 +119,49 @@
     "17",
     "4.5"
    ],
-   "why": "There are 8 values, so the lower half is 3, 5, 6, 8 and the upper half is 10, 12, 15, 20. Q1 = 5.5 and Q3 = 13.5, so IQR = 13.5 − 5.5 = 8. The value 13.5 is only Q3, and 17 is the range.",
+   "why": "There are 8 values, so the lower half is 3, 5, 6, 8 and the upper half is 10, 12, 15, 20. \\(Q_{1} = 5.5\\) and \\(Q_{3} = 13.5\\), so \\(\\text{IQR} = 13.5 - 5.5 = 8\\). The value 13.5 is only \\(Q_{3}\\), and 17 is the range.",
    "clue": "With 8 values, split into two halves of 4 and find the middle of each."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:44:50Z",
+  "by": "hand",
+  "before": {
+   "title": "Five-number summary and IQR",
+   "card": [
+    "Put the data in order. The five-number summary is the minimum, lower quartile (Q1), median, upper quartile (Q3) and maximum.",
+    "The median splits the ordered data into a lower half and an upper half. If there is an odd number of values, leave the median out of both halves.",
+    "Q1 is the median of the lower half. Q3 is the median of the upper half. The interquartile range (IQR) = Q3 − Q1, the spread of the middle half of the data.",
+    [
+     "Example",
+     "3, 5, 6, 8, 9, 12, 14. The median is 8, Q1 is 5 and Q3 is 12. The minimum is 3 and the maximum is 14. IQR = 12 − 5 = 7."
+    ]
+   ],
+   "remember": "Order first, split at the median, then IQR = Q3 − Q1.",
+   "a": {
+    "q": "Seven students read this many books last term: 4, 9, 2, 7, 5, 11, 6. What is the IQR?",
+    "opts": [
+     "5",
+     "9",
+     "7",
+     "2"
+    ],
+    "why": "In order the data is 2, 4, 5, 6, 7, 9, 11. The median is 6, Q1 is 4 and Q3 is 9, so IQR = 9 − 4 = 5. Using 9 is tempting, but that is the range (11 − 2), which uses the minimum and maximum instead of the quartiles.",
+    "clue": "Put the values in order before you find any quartile."
+   },
+   "b": {
+    "d": 3,
+    "q": "Waiting times at a Hobart clinic, in minutes, are 3, 5, 6, 8, 10, 12, 15, 20. What is the IQR?",
+    "opts": [
+     "8",
+     "13.5",
+     "17",
+     "4.5"
+    ],
+    "why": "There are 8 values, so the lower half is 3, 5, 6, 8 and the upper half is 10, 12, 15, 20. Q1 = 5.5 and Q3 = 13.5, so IQR = 13.5 − 5.5 = 8. The value 13.5 is only Q3, and 17 is the range.",
+    "clue": "With 8 values, split into two halves of 4 and find the middle of each."
+   }
+  }
+ }
 }

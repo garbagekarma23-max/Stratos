@@ -11,7 +11,8 @@
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:22:53Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:22:53Z review: approved with the fix (a spot check)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -177,33 +178,70 @@
   "card": [
    "A matrix can store data in a table. Each row and each column stands for something, such as a shop and a month. Each element is one value, such as the number of items sold.",
    "To total costs or revenue, put the quantities in one matrix and the prices in another. Multiply them so each row of the first meets the column of prices.",
-   "Each element of the answer is a sum of quantity × price. The answer has one row for each row of quantities, so each row gives one total, such as one shop's revenue.",
-   "Example: a shop sells 10 hats and 4 scarves. Hats cost $8 and scarves cost $5. Revenue = [10 4] × (column with 8 above 5) = 10 × 8 + 4 × 5 = 80 + 20 = $100."
+   "Each element of the answer is a sum of quantity \\(\\times\\) price. The answer has one row for each row of quantities, so each row gives one total, such as one shop's revenue.",
+   "Example: a shop sells 10 hats and 4 scarves. Hats cost $8 and scarves cost $5. Revenue \\(= \\begin{bmatrix} 10 & 4 \\end{bmatrix} \\begin{bmatrix} 8 \\\\ 5 \\end{bmatrix}\\), which is \\(10 \\times 8 + 4 \\times 5 = 80 + 20\\), or $100."
   ],
   "remember": "Quantities times prices, row by column, give one total for each row.",
   "a": {
    "q": "Cara sells 6 mugs and 3 plates. Mugs cost $7 each and plates cost $10 each. Her quantities are in a row matrix and the prices in a column matrix. What is the product?",
    "opts": [
-    "[72]",
-    "[81]",
-    "[26]",
-    "[42]"
+    "\\(\\begin{bmatrix} 72 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 81 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 26 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 42 \\end{bmatrix}\\)"
    ],
-   "why": "Multiply each quantity by its own price and add: 6 × 7 + 3 × 10 = 42 + 30 = 72, so the product is [72] dollars. The answer 81 comes from pairing mugs with the plate price, 6 × 10 + 3 × 7, and 42 leaves out the plates.",
+   "why": "Multiply each quantity by its own price and add: \\(6 \\times 7 + 3 \\times 10 = 42 + 30\\), which is 72, so the product is \\(\\begin{bmatrix} 72 \\end{bmatrix}\\), in dollars. The answer 81 comes from pairing mugs with the plate price, \\(6 \\times 10 + 3 \\times 7\\), and 42 leaves out the plates.",
    "clue": "Pair each quantity with its own price, then add."
   },
   "b": {
    "d": 3,
-   "q": "Two shops sell hats and scarves. Their sales matrix has rows [5 2] for Shop A and [3 6] for Shop B. Prices are in the column with $10 above $4. What is each shop's revenue?",
+   "q": "Two shops sell hats and scarves. Their sales matrix is \\(\\begin{bmatrix} 5 & 2 \\\\ 3 & 6 \\end{bmatrix}\\), with Shop A's sales in the top row and Shop B's in the bottom row. The price matrix is \\(\\begin{bmatrix} 10 \\\\ 4 \\end{bmatrix}\\), with $10 for a hat and $4 for a scarf. What is each shop's revenue?",
    "opts": [
     "Shop A $58, Shop B $54",
     "Shop A $40, Shop B $72",
     "Shop A $50, Shop B $30",
     "Shop A $98, Shop B $126"
    ],
-   "why": "Each row meets the price column: Shop A is 5 × 10 + 2 × 4 = 50 + 8 = $58, and Shop B is 3 × 10 + 6 × 4 = 30 + 24 = $54. The answer $40 and $72 pairs hats with the scarf price, and $50 and $30 leaves out the scarves.",
+   "why": "Each row meets the price column: Shop A is \\(5 \\times 10 + 2 \\times 4 = 50 + 8\\), which is $58, and Shop B is \\(3 \\times 10 + 6 \\times 4 = 30 + 24\\), which is $54. The answer $40 and $72 pairs hats with the scarf price, and $50 and $30 leaves out the scarves.",
    "clue": "Each shop's row meets the price column. Add both products."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Matrices in context",
+   "card": [
+    "A matrix can store data in a table. Each row and each column stands for something, such as a shop and a month. Each element is one value, such as the number of items sold.",
+    "To total costs or revenue, put the quantities in one matrix and the prices in another. Multiply them so each row of the first meets the column of prices.",
+    "Each element of the answer is a sum of quantity × price. The answer has one row for each row of quantities, so each row gives one total, such as one shop's revenue.",
+    "Example: a shop sells 10 hats and 4 scarves. Hats cost $8 and scarves cost $5. Revenue = [10 4] × (column with 8 above 5) = 10 × 8 + 4 × 5 = 80 + 20 = $100."
+   ],
+   "remember": "Quantities times prices, row by column, give one total for each row.",
+   "a": {
+    "q": "Cara sells 6 mugs and 3 plates. Mugs cost $7 each and plates cost $10 each. Her quantities are in a row matrix and the prices in a column matrix. What is the product?",
+    "opts": [
+     "[72]",
+     "[81]",
+     "[26]",
+     "[42]"
+    ],
+    "why": "Multiply each quantity by its own price and add: 6 × 7 + 3 × 10 = 42 + 30 = 72, so the product is [72] dollars. The answer 81 comes from pairing mugs with the plate price, 6 × 10 + 3 × 7, and 42 leaves out the plates.",
+    "clue": "Pair each quantity with its own price, then add."
+   },
+   "b": {
+    "d": 3,
+    "q": "Two shops sell hats and scarves. Their sales matrix has rows [5 2] for Shop A and [3 6] for Shop B. Prices are in the column with $10 above $4. What is each shop's revenue?",
+    "opts": [
+     "Shop A $58, Shop B $54",
+     "Shop A $40, Shop B $72",
+     "Shop A $50, Shop B $30",
+     "Shop A $98, Shop B $126"
+    ],
+    "why": "Each row meets the price column: Shop A is 5 × 10 + 2 × 4 = 50 + 8 = $58, and Shop B is 3 × 10 + 6 × 4 = 30 + 24 = $54. The answer $40 and $72 pairs hats with the scarf price, and $50 and $30 leaves out the scarves.",
+    "clue": "Each shop's row meets the price column. Add both products."
+   }
+  }
+ }
 }

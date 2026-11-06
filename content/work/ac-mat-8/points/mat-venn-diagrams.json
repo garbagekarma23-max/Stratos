@@ -19,7 +19,8 @@
   "2026-11-04T09:47:09Z write: done",
   "2026-11-04T09:58:30Z check: flagged",
   "2026-11-04T10:08:04Z fix: suggested",
-  "2026-11-04T17:58:54Z autoreview: cleared with the fix (card wording)"
+  "2026-11-04T17:58:54Z autoreview: cleared with the fix (card wording)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -166,7 +167,7 @@
  "final": {
   "title": "Venn diagrams",
   "card": [
-   "A Venn diagram uses overlapping circles to show events. Event A and event B each get a circle, which holds the outcomes in that event.",
+   "A Venn diagram uses overlapping circles to show events. Event \\(A\\) and event \\(B\\) each get a circle, which holds the outcomes in that event.",
    [
     "A and B",
     "the overlap, where outcomes are in both circles."
@@ -175,7 +176,7 @@
     "A or B",
     "everything inside either circle, including the overlap. Count the overlap once only."
    ],
-   "Example: 30 students. 12 play netball (N), 9 play soccer (S), and 4 play both. Netball or soccer = 12 + 9 − 4 = 17, so P(N or S) = 17/30."
+   "Example: 30 students. 12 play netball (\\(N\\)), 9 play soccer (\\(S\\)), and 4 play both. Netball or soccer \\(= 12 + 9 - 4 = 17\\), so \\(P(N \\text{ or } S) = \\frac{17}{30}\\)."
   ],
   "remember": "Overlap means both. Anywhere in the circles means either, with the overlap counted once.",
   "a": {
@@ -186,21 +187,64 @@
     "12",
     "21"
    ],
-   "why": "Dog or cat = 10 + 8 − 3 = 15. The 3 students with both were counted in each circle, so they are taken off once. Adding 10 + 8 gives 18, which counts them twice.",
+   "why": "Dog or cat \\(= 10 + 8 - 3 = 15\\). The 3 students with both were counted in each circle, so they are taken off once. Adding \\(10 + 8\\) gives 18, which counts them twice.",
    "clue": "The overlap is counted twice when you add the circles."
   },
   "b": {
    "d": 3,
-   "q": "Of 40 students on a camp, 15 chose kayaking (K), 18 chose climbing (C), and 6 chose both. What is P(K or C)?",
+   "q": "Of 40 students on a camp, 15 chose kayaking (\\(K\\)), 18 chose climbing (\\(C\\)), and 6 chose both. What is \\(P(K \\text{ or } C)\\)?",
    "opts": [
-    "27/40",
-    "33/40",
-    "21/40",
-    "6/40"
+    "\\(\\frac{27}{40}\\)",
+    "\\(\\frac{33}{40}\\)",
+    "\\(\\frac{21}{40}\\)",
+    "\\(\\frac{6}{40}\\)"
    ],
-   "why": "K or C = 15 + 18 − 6 = 27, so the probability is 27/40. The tempting 33/40 comes from adding 15 + 18 without removing the overlap, which counts 6 students twice. Taking the 6 off twice gives 21/40, which leaves out the students who chose both.",
+   "why": "\\(K \\text{ or } C = 15 + 18 - 6 = 27\\), so the probability is \\(\\frac{27}{40}\\). The tempting \\(\\frac{33}{40}\\) comes from adding \\(15 + 18\\) without removing the overlap, which counts 6 students twice. Taking the 6 off twice gives \\(\\frac{21}{40}\\), which leaves out the students who chose both.",
    "clue": "Find how many students are in either circle, then divide by 40."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Venn diagrams",
+   "card": [
+    "A Venn diagram uses overlapping circles to show events. Event A and event B each get a circle, which holds the outcomes in that event.",
+    [
+     "A and B",
+     "the overlap, where outcomes are in both circles."
+    ],
+    [
+     "A or B",
+     "everything inside either circle, including the overlap. Count the overlap once only."
+    ],
+    "Example: 30 students. 12 play netball (N), 9 play soccer (S), and 4 play both. Netball or soccer = 12 + 9 − 4 = 17, so P(N or S) = 17/30."
+   ],
+   "remember": "Overlap means both. Anywhere in the circles means either, with the overlap counted once.",
+   "a": {
+    "q": "In a class of 24, 10 students have a dog, 8 have a cat, and 3 have both. How many students have a dog or a cat?",
+    "opts": [
+     "15",
+     "18",
+     "12",
+     "21"
+    ],
+    "why": "Dog or cat = 10 + 8 − 3 = 15. The 3 students with both were counted in each circle, so they are taken off once. Adding 10 + 8 gives 18, which counts them twice.",
+    "clue": "The overlap is counted twice when you add the circles."
+   },
+   "b": {
+    "d": 3,
+    "q": "Of 40 students on a camp, 15 chose kayaking (K), 18 chose climbing (C), and 6 chose both. What is P(K or C)?",
+    "opts": [
+     "27/40",
+     "33/40",
+     "21/40",
+     "6/40"
+    ],
+    "why": "K or C = 15 + 18 − 6 = 27, so the probability is 27/40. The tempting 33/40 comes from adding 15 + 18 without removing the overlap, which counts 6 students twice. Taking the 6 off twice gives 21/40, which leaves out the students who chose both.",
+    "clue": "Find how many students are in either circle, then divide by 40."
+   }
+  }
+ }
 }

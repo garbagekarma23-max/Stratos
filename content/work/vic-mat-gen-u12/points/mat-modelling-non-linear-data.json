@@ -21,7 +21,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:06Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -94,35 +95,72 @@
  "final": {
   "title": "Modelling non-linear data",
   "card": [
-   "Some curved data fit a rule y = kx^n, where n is a power such as 2, 3 or 1/2. The constant k sets the size of y.",
-   "Once you pick the power n, plot y against x^n. If the points lie on a straight line through the origin, the rule fits.",
-   "The gradient of that line is k. Find it as y ÷ x^n for any point on the line.",
-   "Example: x = 2 and y = 24 fit y = kx³. Then x³ = 8, so k = 24 ÷ 8 = 3 and the rule is y = 3x³."
+   "Some curved data fit a rule \\(y = kx^{n}\\), where \\(n\\) is a power such as 2, 3 or \\(\\frac{1}{2}\\). The constant \\(k\\) sets the size of \\(y\\).",
+   "Once you pick the power \\(n\\), plot \\(y\\) against \\(x^{n}\\). If the points lie on a straight line through the origin, the rule fits.",
+   "The gradient of that line is \\(k\\). Find it as \\(y \\div x^{n}\\) for any point on the line.",
+   "Example: \\(x = 2\\) and \\(y = 24\\) fit \\(y = kx^{3}\\). Then \\(x^{3} = 8\\), so \\(k = 24 \\div 8 = 3\\) and the rule is \\(y = 3x^{3}\\)."
   ],
-  "remember": "Plot y against x^n. The gradient of the straight line is k.",
+  "remember": "Plot \\(y\\) against \\(x^{n}\\). The gradient of the straight line is \\(k\\).",
   "a": {
-   "q": "Data fit y = kx². The point x = 3, y = 45 lies on the curve. What is k?",
+   "q": "Data fit \\(y = kx^{2}\\). The point \\(x = 3\\), \\(y = 45\\) lies on the curve. What is \\(k\\)?",
    "opts": [
     "5",
     "15",
     "135",
     "7.5"
    ],
-   "why": "x² = 9, so k = 45 ÷ 9 = 5. The value 15 comes from dividing by x instead of x².",
-   "clue": "Square x before you divide."
+   "why": "\\(x^{2} = 9\\), so \\(k = 45 \\div 9 = 5\\). The value 15 comes from dividing by \\(x\\) instead of \\(x^{2}\\).",
+   "clue": "Square \\(x\\) before you divide."
   },
   "b": {
    "d": 3,
-   "q": "The area of a circular garden bed is modelled as A = kr². When r = 2 m, A = 12.56 m². Which is the area when r = 5 m?",
+   "q": "The area of a circular garden bed is modelled as \\(A = kr^{2}\\). When \\(r = 2\\) m, \\(A = 12.56\\text{ m}^{2}\\). Which is the area when \\(r = 5\\) m?",
    "opts": [
-    "78.5 m²",
-    "31.4 m²",
-    "62.8 m²",
-    "25.12 m²"
+    "\\(78.5\\text{ m}^{2}\\)",
+    "\\(31.4\\text{ m}^{2}\\)",
+    "\\(62.8\\text{ m}^{2}\\)",
+    "\\(25.12\\text{ m}^{2}\\)"
    ],
-   "why": "k = 12.56 ÷ 4 = 3.14. Then A = 3.14 × 25 = 78.5. The value 31.4 comes from scaling the area by 5 ÷ 2 instead of squaring the radius ratio.",
-   "clue": "Find k first, then square 5."
+   "why": "\\(k = 12.56 \\div 4 = 3.14\\). Then \\(A = 3.14 \\times 25 = 78.5\\). The value 31.4 comes from scaling the area by \\(5 \\div 2\\) instead of squaring the radius ratio.",
+   "clue": "Find \\(k\\) first, then square 5."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Modelling non-linear data",
+   "card": [
+    "Some curved data fit a rule y = kx^n, where n is a power such as 2, 3 or 1/2. The constant k sets the size of y.",
+    "Once you pick the power n, plot y against x^n. If the points lie on a straight line through the origin, the rule fits.",
+    "The gradient of that line is k. Find it as y ÷ x^n for any point on the line.",
+    "Example: x = 2 and y = 24 fit y = kx³. Then x³ = 8, so k = 24 ÷ 8 = 3 and the rule is y = 3x³."
+   ],
+   "remember": "Plot y against x^n. The gradient of the straight line is k.",
+   "a": {
+    "q": "Data fit y = kx². The point x = 3, y = 45 lies on the curve. What is k?",
+    "opts": [
+     "5",
+     "15",
+     "135",
+     "7.5"
+    ],
+    "why": "x² = 9, so k = 45 ÷ 9 = 5. The value 15 comes from dividing by x instead of x².",
+    "clue": "Square x before you divide."
+   },
+   "b": {
+    "d": 3,
+    "q": "The area of a circular garden bed is modelled as A = kr². When r = 2 m, A = 12.56 m². Which is the area when r = 5 m?",
+    "opts": [
+     "78.5 m²",
+     "31.4 m²",
+     "62.8 m²",
+     "25.12 m²"
+    ],
+    "why": "k = 12.56 ÷ 4 = 3.14. Then A = 3.14 × 25 = 78.5. The value 31.4 comes from scaling the area by 5 ÷ 2 instead of squaring the radius ratio.",
+    "clue": "Find k first, then square 5."
+   }
+  }
+ }
 }

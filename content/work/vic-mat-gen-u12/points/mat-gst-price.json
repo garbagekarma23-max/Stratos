@@ -16,7 +16,8 @@
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -217,15 +218,15 @@
    "GST is the goods and services tax. In Australia it is 10% of the price before tax. It is added to the price of most goods and services.",
    [
     "Adding GST",
-    "price with GST = price without GST × 1.1. Example: a $200 bike has GST of $20, so it costs $200 × 1.1 = $220."
+    "price with GST \\(=\\) price without GST \\(\\times 1.1\\). Example: a $200 bike has GST of $20, so it costs \\(\\$200 \\times 1.1 = \\$220\\)."
    ],
    [
     "Removing GST",
-    "price without GST = price with GST ÷ 1.1. GST is 10% of the price without GST, not 10% of the total."
+    "price without GST \\(=\\) price with GST \\(\\div 1.1\\). GST is 10% of the price without GST, not 10% of the total."
    ],
    [
     "Example",
-    "A jacket costs $330 with GST. Without GST it is $330 ÷ 1.1 = $300. The GST is $330 − $300 = $30."
+    "A jacket costs $330 with GST. Without GST it is \\(\\$330 \\div 1.1 = \\$300\\). The GST is \\(\\$330 - \\$300 = \\$30\\)."
    ]
   ],
   "remember": "Times 1.1 to add GST. Divide by 1.1 to take it off.",
@@ -237,7 +238,7 @@
     "$450.10",
     "$409.09"
    ],
-   "why": "Price with GST = $450 × 1.1 = $495. Subtracting 10% to get $405 is simply wrong, because adding GST makes the price go up. Dividing by 1.1 gives $409.09, which is how you would remove GST, not add it.",
+   "why": "Price with GST \\(= \\$450 \\times 1.1 = \\$495\\). Subtracting 10% to get $405 is simply wrong, because adding GST makes the price go up. Dividing by 1.1 gives $409.09, which is how you would remove GST, not add it.",
    "clue": "Adding GST means multiplying the price before GST."
   },
   "b": {
@@ -249,9 +250,55 @@
     "$1000",
     "$990"
    ],
-   "why": "Price without GST = $1100 ÷ 1.1 = $1000, so the GST is $1100 − $1000 = $100. Taking 10% of $1100 gives $110, but GST is 10% of the price before GST, not of the total.",
+   "why": "Price without GST \\(= \\$1100 \\div 1.1 = \\$1000\\), so the GST is \\(\\$1100 - \\$1000 = \\$100\\). Taking 10% of $1100 gives $110, but GST is 10% of the price before GST, not of the total.",
    "clue": "Find the price without GST first, then subtract."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "GST and price",
+   "card": [
+    "GST is the goods and services tax. In Australia it is 10% of the price before tax. It is added to the price of most goods and services.",
+    [
+     "Adding GST",
+     "price with GST = price without GST × 1.1. Example: a $200 bike has GST of $20, so it costs $200 × 1.1 = $220."
+    ],
+    [
+     "Removing GST",
+     "price without GST = price with GST ÷ 1.1. GST is 10% of the price without GST, not 10% of the total."
+    ],
+    [
+     "Example",
+     "A jacket costs $330 with GST. Without GST it is $330 ÷ 1.1 = $300. The GST is $330 − $300 = $30."
+    ]
+   ],
+   "remember": "Times 1.1 to add GST. Divide by 1.1 to take it off.",
+   "a": {
+    "q": "A printer costs $450 before GST. What is its price including GST?",
+    "opts": [
+     "$495",
+     "$405",
+     "$450.10",
+     "$409.09"
+    ],
+    "why": "Price with GST = $450 × 1.1 = $495. Subtracting 10% to get $405 is simply wrong, because adding GST makes the price go up. Dividing by 1.1 gives $409.09, which is how you would remove GST, not add it.",
+    "clue": "Adding GST means multiplying the price before GST."
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia buys a desk for $1100 including GST. How much of that price is GST?",
+    "opts": [
+     "$100",
+     "$110",
+     "$1000",
+     "$990"
+    ],
+    "why": "Price without GST = $1100 ÷ 1.1 = $1000, so the GST is $1100 − $1000 = $100. Taking 10% of $1100 gives $110, but GST is 10% of the price before GST, not of the total.",
+    "clue": "Find the price without GST first, then subtract."
+   }
+  }
+ }
 }

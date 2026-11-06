@@ -29,7 +29,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 says adapt mat-simple-interest (2 changes)",
   "2026-11-01T08:14:06Z adapt: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -125,9 +126,9 @@
   "title": "Simple interest",
   "card": [
    "Simple interest is worked out only on the starting amount, called the principal. The interest is not added to the principal each period, so it never earns interest itself.",
-   "The formula is I = PrT/100. I is the interest, P is the principal, r is the yearly interest rate as a percentage, and T is the time in years.",
-   "The rate is per year, so T must be in years. For 6 months, T = 0.5. Put r in as 6, not 0.06, because the 100 in the formula does that job.",
-   "Example: $2000 at 5% per year for 3 years. I = 2000 × 5 × 3/100 = $300. The total amount after 3 years is $2000 + $300 = $2300."
+   "The formula is \\(I = \\frac{PrT}{100}\\). \\(I\\) is the interest, \\(P\\) is the principal, \\(r\\) is the yearly interest rate as a percentage, and \\(T\\) is the time in years.",
+   "The rate is per year, so \\(T\\) must be in years. For 6 months, \\(T = 0.5\\). Put \\(r\\) in as 6, not 0.06, because the 100 in the formula does that job.",
+   "Example: $2000 at 5% per year for 3 years. \\(I = \\frac{2000 \\times 5 \\times 3}{100} = \\$300\\). The total amount after 3 years is \\(\\$2000 + \\$300 = \\$2300\\)."
   ],
   "remember": "Simple interest is the same every period, because it is always worked out on the principal.",
   "a": {
@@ -136,10 +137,10 @@
     "$240",
     "$120",
     "$4240",
-    "$24 000"
+    "$24,000"
    ],
-   "why": "I = 4000 × 3 × 2/100 = $240. $4240 is the total balance, but the question asks for the interest alone. $24 000 comes from leaving out the ÷ 100.",
-   "clue": "Use I = PrT/100 with r = 3 and T = 2."
+   "why": "\\(I = \\frac{4000 \\times 3 \\times 2}{100} = \\$240\\). $4240 is the total balance, but the question asks for the interest alone. $24,000 comes from leaving out the \\(\\div 100\\).",
+   "clue": "Use \\(I = \\frac{PrT}{100}\\) with \\(r = 3\\) and \\(T = 2\\)."
   },
   "b": {
    "d": 3,
@@ -150,9 +151,46 @@
     "$400",
     "$720"
    ],
-   "why": "The rate is per year, so 18 months is T = 1.5 years. I = 5000 × 8 × 1.5/100 = $600. Using T = 18 gives $7200, which mixes months with a yearly rate.",
+   "why": "The rate is per year, so 18 months is \\(T = 1.5\\) years. \\(I = \\frac{5000 \\times 8 \\times 1.5}{100} = \\$600\\). Using \\(T = 18\\) gives $7200, which mixes months with a yearly rate.",
    "clue": "Change the months into years before using the formula."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Simple interest",
+   "card": [
+    "Simple interest is worked out only on the starting amount, called the principal. The interest is not added to the principal each period, so it never earns interest itself.",
+    "The formula is I = PrT/100. I is the interest, P is the principal, r is the yearly interest rate as a percentage, and T is the time in years.",
+    "The rate is per year, so T must be in years. For 6 months, T = 0.5. Put r in as 6, not 0.06, because the 100 in the formula does that job.",
+    "Example: $2000 at 5% per year for 3 years. I = 2000 × 5 × 3/100 = $300. The total amount after 3 years is $2000 + $300 = $2300."
+   ],
+   "remember": "Simple interest is the same every period, because it is always worked out on the principal.",
+   "a": {
+    "q": "Mia puts $4000 into an account paying 3% per year simple interest. She leaves it for 2 years. How much interest does she earn?",
+    "opts": [
+     "$240",
+     "$120",
+     "$4240",
+     "$24 000"
+    ],
+    "why": "I = 4000 × 3 × 2/100 = $240. $4240 is the total balance, but the question asks for the interest alone. $24 000 comes from leaving out the ÷ 100.",
+    "clue": "Use I = PrT/100 with r = 3 and T = 2."
+   },
+   "b": {
+    "d": 3,
+    "q": "Sam takes a loan of $5000 at 8% per year simple interest. He repays it after 18 months. How much interest does he pay in total?",
+    "opts": [
+     "$600",
+     "$7200",
+     "$400",
+     "$720"
+    ],
+    "why": "The rate is per year, so 18 months is T = 1.5 years. I = 5000 × 8 × 1.5/100 = $600. Using T = 18 gives $7200, which mixes months with a yearly rate.",
+    "clue": "Change the months into years before using the formula."
+   }
+  }
+ }
 }

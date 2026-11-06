@@ -13,7 +13,8 @@
   "2026-11-05T02:17:43Z autoreject: rejected, to be written again (b level)",
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
-  "2026-11-05T02:37:17Z check: passed, cleared"
+  "2026-11-05T02:37:17Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -315,35 +316,72 @@
  "final": {
   "title": "Solving one-variable inequalities",
   "card": [
-   "An inequality uses <, >, ≤ or ≥. Solve it like an equation by doing the same thing to both sides.",
-   "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So −2x < 6 gives x > −3.",
-   "The answer is a range of values, such as x > 3. On a number line, an open circle means the end value is not included (< or >), and a closed circle means it is included (≤ or ≥).",
-   "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+   "An inequality uses \\(<\\), \\(>\\), \\(\\le\\) or \\(\\ge\\). Solve it like an equation by doing the same thing to both sides.",
+   "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So \\(-2x < 6\\) gives \\(x > -3\\).",
+   "The answer is a range of values, such as \\(x > 3\\). On a number line, an open circle means the end value is not included (\\(<\\) or \\(>\\)), and a closed circle means it is included (\\(\\le\\) or \\(\\ge\\)).",
+   "Example: \\(2x + 1 \\le 9\\). Subtract 1: \\(2x \\le 8\\). Divide by 2: \\(x \\le 4\\). Draw a closed circle at 4 with the line going left."
   ],
   "remember": "Flip the sign if you multiply or divide by a negative. A closed circle includes the end value, an open one does not.",
   "a": {
-   "q": "What is the solution of 3x − 2 > 10?",
+   "q": "What is the solution of \\(3x - 2 > 10\\)?",
    "opts": [
-    "x > 4",
-    "x > 8/3",
-    "x > 12",
-    "x < 4"
+    "\\(x > 4\\)",
+    "\\(x > \\frac{8}{3}\\)",
+    "\\(x > 12\\)",
+    "\\(x < 4\\)"
    ],
-   "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 12 comes from forgetting to divide by 3, x > 8/3 from subtracting 2 instead of adding it, and x < 4 flips the sign even though 3 is positive.",
+   "why": "Add 2: \\(3x > 12\\). Divide by 3: \\(x > 4\\). The answer \\(x > 12\\) comes from forgetting to divide by 3, \\(x > \\frac{8}{3}\\) from subtracting 2 instead of adding it, and \\(x < 4\\) flips the sign even though 3 is positive.",
    "clue": "Undo the subtraction first, then undo the multiplication."
   },
   "b": {
    "d": 2,
-   "q": "Nadia solves 4x + 5 < 17. How should she draw the answer on a number line?",
+   "q": "Nadia solves \\(4x + 5 < 17\\). How should she draw the answer on a number line?",
    "opts": [
     "Open circle at 3, line going left",
     "Closed circle at 3, line going left",
     "Open circle at 3, line going right",
     "Open circle at 5.5, line going left"
    ],
-   "why": "Subtract 5: 4x < 12. Divide by 4: x < 3. The sign < leaves 3 out, so the circle is open, and values smaller than 3 go left. A closed circle would include 3, and 5.5 comes from adding 5 instead of subtracting it.",
+   "why": "Subtract 5: \\(4x < 12\\). Divide by 4: \\(x < 3\\). The sign \\(<\\) leaves 3 out, so the circle is open, and values smaller than 3 go left. A closed circle would include 3, and 5.5 comes from adding 5 instead of subtracting it.",
    "clue": "Is the end value included, and which way are the smaller numbers?"
   }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Solving one-variable inequalities",
+   "card": [
+    "An inequality uses <, >, ≤ or ≥. Solve it like an equation by doing the same thing to both sides.",
+    "One exception: when you multiply or divide both sides by a negative number, reverse the sign. So −2x < 6 gives x > −3.",
+    "The answer is a range of values, such as x > 3. On a number line, an open circle means the end value is not included (< or >), and a closed circle means it is included (≤ or ≥).",
+    "Example: 2x + 1 ≤ 9. Subtract 1: 2x ≤ 8. Divide by 2: x ≤ 4. Draw a closed circle at 4 with the line going left."
+   ],
+   "remember": "Flip the sign if you multiply or divide by a negative. A closed circle includes the end value, an open one does not.",
+   "a": {
+    "q": "What is the solution of 3x − 2 > 10?",
+    "opts": [
+     "x > 4",
+     "x > 8/3",
+     "x > 12",
+     "x < 4"
+    ],
+    "why": "Add 2: 3x > 12. Divide by 3: x > 4. The answer x > 12 comes from forgetting to divide by 3, x > 8/3 from subtracting 2 instead of adding it, and x < 4 flips the sign even though 3 is positive.",
+    "clue": "Undo the subtraction first, then undo the multiplication."
+   },
+   "b": {
+    "d": 2,
+    "q": "Nadia solves 4x + 5 < 17. How should she draw the answer on a number line?",
+    "opts": [
+     "Open circle at 3, line going left",
+     "Closed circle at 3, line going left",
+     "Open circle at 3, line going right",
+     "Open circle at 5.5, line going left"
+    ],
+    "why": "Subtract 5: 4x < 12. Divide by 4: x < 3. The sign < leaves 3 out, so the circle is open, and values smaller than 3 go left. A closed circle would include 3, and 5.5 comes from adding 5 instead of subtracting it.",
+    "clue": "Is the end value included, and which way are the smaller numbers?"
+   }
+  }
+ }
 }

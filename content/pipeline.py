@@ -2251,11 +2251,29 @@ def cmd_autoreject(args):
 
 # ---------- rebalance: wrong options as long and detailed as the right one ----------
 MX = re.compile(r'\\\((.*?)\\\)')
+MATRIX = re.compile(r'\\begin\{bmatrix\}(.*?)\\end\{bmatrix\}')
+
+def matrix_rows(body):
+    """The rows of a matrix's body (between \\begin{bmatrix} and \\end{bmatrix}), each a list of its entries: rows are split
+    by \\\\ and entries by &, only outside braces. The same as matrixRows in content/latex.mjs."""
+    rows, depth, cur, i = [[]], 0, '', 0
+    while i < len(body):
+        c = body[i]
+        if c == '\\' and body[i + 1:i + 2] == '\\' and not depth: rows[-1].append(cur.strip()); rows.append([]); cur = ''; i += 2; continue
+        if c == '\\': cur += body[i:i + 2]; i += 2; continue
+        depth += c == '{'
+        depth -= c == '}'
+        if c == '&' and not depth: rows[-1].append(cur.strip()); cur = ''; i += 1; continue
+        cur += c; i += 1
+    rows[-1].append(cur.strip())
+    return rows
 
 def shown_maths(s):
     """A piece of LaTeX as it looks, roughly, one character for each character drawn: a fraction is as wide as its wider
     part, a command such as \\pi or \\le is one character. The same as shownMaths in content/latex.mjs."""
     wider = lambda m: m.group(1) if len(m.group(1)) >= len(m.group(2)) else m.group(2)
+    # A matrix is as wide as its widest row, in square brackets.
+    s = MATRIX.sub(lambda m: '[' + max(('  '.join(shown_maths(e) for e in row) for row in matrix_rows(m.group(1))), key=len) + ']', s)
     s = re.sub(r'\\(?:left|right)\b|\\[,;:!]|\\q?quad\b', '', s)
     s = re.sub(r'\\(?:text|mathrm|mathbb)\{([^{}]*)\}', r'\1', s)
     for _ in range(8):

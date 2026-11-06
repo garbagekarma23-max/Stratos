@@ -28,7 +28,8 @@
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -201,35 +202,72 @@
  "final": {
   "title": "Building a matrix from a rule",
   "card": [
-   "The element in row i and column j is written aᵢⱼ. The first number, i, is the row. The second number, j, is the column.",
-   "A rule gives aᵢⱼ in terms of i and j. To build the matrix, put each row number and column number into the rule, one position at a time.",
-   "The order tells you how many rows and columns to fill. A 2 × 3 matrix has i = 1, 2 and j = 1, 2, 3.",
-   "Example: for a 2 × 2 matrix with aᵢⱼ = 2i + j, a₁₁ = 2(1) + 1 = 3, a₁₂ = 2(1) + 2 = 4, a₂₁ = 2(2) + 1 = 5 and a₂₂ = 2(2) + 2 = 6. The matrix has rows [3 4] and [5 6]."
+   "The element in row \\(i\\) and column \\(j\\) is written \\(a_{ij}\\). The first number, \\(i\\), is the row. The second number, \\(j\\), is the column.",
+   "A rule gives \\(a_{ij}\\) in terms of \\(i\\) and \\(j\\). To build the matrix, put each row number and column number into the rule, one position at a time.",
+   "The order tells you how many rows and columns to fill. A \\(2 \\times 3\\) matrix has \\(i = 1, 2\\) and \\(j = 1, 2, 3\\).",
+   "Example: for a \\(2 \\times 2\\) matrix with \\(a_{ij} = 2i + j\\), \\(a_{11} = 2(1) + 1 = 3\\), \\(a_{12} = 2(1) + 2 = 4\\), \\(a_{21} = 2(2) + 1 = 5\\) and \\(a_{22} = 2(2) + 2 = 6\\). The matrix is \\(\\begin{bmatrix} 3 & 4 \\\\ 5 & 6 \\end{bmatrix}\\)."
   ],
-  "remember": "Put the row number in for i and the column number in for j, then fill the matrix position by position.",
+  "remember": "Put the row number in for \\(i\\) and the column number in for \\(j\\), then fill the matrix position by position.",
   "a": {
-   "q": "A 2 × 3 matrix has the rule aᵢⱼ = i + 3j. What is the element a₂₁?",
+   "q": "A \\(2 \\times 3\\) matrix has the rule \\(a_{ij} = i + 3j\\). What is the element \\(a_{21}\\)?",
    "opts": [
     "5",
     "7",
     "4",
     "9"
    ],
-   "why": "a₂₁ has i = 2 and j = 1, so a₂₁ = 2 + 3(1) = 5. The answer 7 comes from swapping the numbers, which gives i = 1 and j = 2: 1 + 3(2) = 7.",
-   "clue": "The first number in 21 is the row, and the second is the column."
+   "why": "\\(a_{21}\\) has \\(i = 2\\) and \\(j = 1\\), so \\(a_{21} = 2 + 3(1) = 5\\). The answer 7 comes from swapping the numbers, which gives \\(i = 1\\) and \\(j = 2\\): \\(1 + 3(2) = 7\\).",
+   "clue": "The first number in \\(a_{21}\\) is the row, and the second is the column."
   },
   "b": {
    "d": 3,
-   "q": "A 2 × 3 matrix B has the rule bᵢⱼ = 3i − j. What is row 2 of B?",
+   "q": "A \\(2 \\times 3\\) matrix \\(B\\) has the rule \\(b_{ij} = 3i - j\\). What is row 2 of \\(B\\)?",
    "opts": [
-    "[5 4 3]",
-    "[1 4 7]",
-    "[7 8 9]",
-    "[2 1 0]"
+    "\\(\\begin{bmatrix} 5 & 4 & 3 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 1 & 4 & 7 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 7 & 8 & 9 \\end{bmatrix}\\)",
+    "\\(\\begin{bmatrix} 2 & 1 & 0 \\end{bmatrix}\\)"
    ],
-   "why": "In row 2, i = 2 and j runs from 1 to 3: b₂₁ = 6 − 1 = 5, b₂₂ = 6 − 2 = 4 and b₂₃ = 6 − 3 = 3. The option [1 4 7] comes from mixing up i and j and using 3j − i instead. The option [2 1 0] is row 1, not row 2.",
-   "clue": "Along a row, which of i and j stays the same?"
+   "why": "In row 2, \\(i = 2\\) and \\(j\\) runs from 1 to 3: \\(b_{21} = 6 - 1 = 5\\), \\(b_{22} = 6 - 2 = 4\\) and \\(b_{23} = 6 - 3 = 3\\). The option \\(\\begin{bmatrix} 1 & 4 & 7 \\end{bmatrix}\\) comes from mixing up \\(i\\) and \\(j\\) and using \\(3j - i\\) instead. The option \\(\\begin{bmatrix} 2 & 1 & 0 \\end{bmatrix}\\) is row 1, not row 2.",
+   "clue": "Along a row, which of \\(i\\) and \\(j\\) stays the same?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Building a matrix from a rule",
+   "card": [
+    "The element in row i and column j is written aᵢⱼ. The first number, i, is the row. The second number, j, is the column.",
+    "A rule gives aᵢⱼ in terms of i and j. To build the matrix, put each row number and column number into the rule, one position at a time.",
+    "The order tells you how many rows and columns to fill. A 2 × 3 matrix has i = 1, 2 and j = 1, 2, 3.",
+    "Example: for a 2 × 2 matrix with aᵢⱼ = 2i + j, a₁₁ = 2(1) + 1 = 3, a₁₂ = 2(1) + 2 = 4, a₂₁ = 2(2) + 1 = 5 and a₂₂ = 2(2) + 2 = 6. The matrix has rows [3 4] and [5 6]."
+   ],
+   "remember": "Put the row number in for i and the column number in for j, then fill the matrix position by position.",
+   "a": {
+    "q": "A 2 × 3 matrix has the rule aᵢⱼ = i + 3j. What is the element a₂₁?",
+    "opts": [
+     "5",
+     "7",
+     "4",
+     "9"
+    ],
+    "why": "a₂₁ has i = 2 and j = 1, so a₂₁ = 2 + 3(1) = 5. The answer 7 comes from swapping the numbers, which gives i = 1 and j = 2: 1 + 3(2) = 7.",
+    "clue": "The first number in 21 is the row, and the second is the column."
+   },
+   "b": {
+    "d": 3,
+    "q": "A 2 × 3 matrix B has the rule bᵢⱼ = 3i − j. What is row 2 of B?",
+    "opts": [
+     "[5 4 3]",
+     "[1 4 7]",
+     "[7 8 9]",
+     "[2 1 0]"
+    ],
+    "why": "In row 2, i = 2 and j runs from 1 to 3: b₂₁ = 6 − 1 = 5, b₂₂ = 6 − 2 = 4 and b₂₃ = 6 − 3 = 3. The option [1 4 7] comes from mixing up i and j and using 3j − i instead. The option [2 1 0] is row 1, not row 2.",
+    "clue": "Along a row, which of i and j stays the same?"
+   }
+  }
+ }
 }

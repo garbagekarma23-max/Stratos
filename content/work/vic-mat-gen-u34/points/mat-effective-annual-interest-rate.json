@@ -30,7 +30,8 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:28Z write: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -105,11 +106,11 @@
   "title": "Effective annual interest rate",
   "card": [
    "A nominal rate is the yearly rate that is quoted. If it is compounded more often than once a year, the balance grows by more than the nominal rate over the year.",
-   "The effective annual rate is the single yearly rate that gives the same growth in one year. Formula: r(eff) = (1 + r/(100n))^n − 1, then × 100 for a percentage. Here r is the nominal rate in % and n is the number of compounding periods per year.",
-   "Example: 6% compounded quarterly. Each quarter earns 6 ÷ 4 = 1.5%. After one year the balance is 1.015⁴ = 1.0614 times the start, so the effective rate is about 6.14%.",
+   "The effective annual rate is the single yearly rate that gives the same growth in one year. Formula: \\(r_{\\text{eff}} = \\left(1 + \\frac{r}{100n}\\right)^{n} - 1\\), then \\(\\times 100\\) for a percentage. Here \\(r\\) is the nominal rate in % and \\(n\\) is the number of compounding periods per year.",
+   "Example: 6% compounded quarterly. Each quarter earns \\(6\\% \\div 4 = 1.5\\%\\). After one year the balance is \\(1.015^{4} \\approx 1.0614\\) times the start, so the effective rate is about 6.14%.",
    "More frequent compounding gives a higher effective rate. Compounding once a year gives an effective rate equal to the nominal rate."
   ],
-  "remember": "Effective rate = growth factor over one year, minus 1. More compounding means a higher effective rate.",
+  "remember": "Effective rate \\(=\\) growth factor over one year, minus 1. More compounding means a higher effective rate.",
   "a": {
    "q": "A savings account pays 4% per year, compounded annually. What is its effective annual interest rate?",
    "opts": [
@@ -134,5 +135,42 @@
    "clue": "Compare how often interest is added to the balance."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Effective annual interest rate",
+   "card": [
+    "A nominal rate is the yearly rate that is quoted. If it is compounded more often than once a year, the balance grows by more than the nominal rate over the year.",
+    "The effective annual rate is the single yearly rate that gives the same growth in one year. Formula: r(eff) = (1 + r/(100n))^n − 1, then × 100 for a percentage. Here r is the nominal rate in % and n is the number of compounding periods per year.",
+    "Example: 6% compounded quarterly. Each quarter earns 6 ÷ 4 = 1.5%. After one year the balance is 1.015⁴ = 1.0614 times the start, so the effective rate is about 6.14%.",
+    "More frequent compounding gives a higher effective rate. Compounding once a year gives an effective rate equal to the nominal rate."
+   ],
+   "remember": "Effective rate = growth factor over one year, minus 1. More compounding means a higher effective rate.",
+   "a": {
+    "q": "A savings account pays 4% per year, compounded annually. What is its effective annual interest rate?",
+    "opts": [
+     "4%",
+     "4.04%",
+     "2%",
+     "8%"
+    ],
+    "why": "With one compounding period a year, the balance grows by exactly 4% in a year, so the effective rate equals the nominal rate. 4.04% would be the rate if compounding were twice a year.",
+    "clue": "How many times a year is the interest added?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Mia's account pays 6% per year, compounded monthly. Her friend Sam's account pays 6% per year, compounded quarterly. Which statement is correct?",
+    "opts": [
+     "Mia's effective rate is higher than Sam's",
+     "Sam's effective rate is higher than Mia's",
+     "Both have an effective rate of exactly 6%",
+     "Both have the same effective rate above 6%"
+    ],
+    "why": "Both nominal rates are 6%, but monthly compounding adds interest to the balance more often than quarterly does. Mia's effective rate is about 6.17% and Sam's is about 6.14%. The equal nominal rate is the tempting trap, as it does not make the effective rates equal.",
+    "clue": "Compare how often interest is added to the balance."
+   }
+  }
+ }
 }

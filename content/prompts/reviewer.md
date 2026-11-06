@@ -25,7 +25,7 @@ Look for what the checker looks for, in the version you would clear:
 - a remember line that sorts or splits the ideas more neatly than the card does, or says something the card contradicts
 - "forces", "always", "must", "never" or "only" where the card says "can" or "may"
 - an em dash or en dash, or one of the banned words in the writer's rules
-- in a maths course: maths written as plain text instead of LaTeX between \( and \), LaTeX that groups the wrong terms (such as a fraction with the wrong part on the bottom), or, in Mathematics Advanced, Extension, Methods or Specialist, an everyday word where the syllabus has a term (opens up for concave up, turns back for a turning point)
+- in a maths course: maths written as plain text instead of LaTeX between \( and \) (a matrix written in a line instead of \begin{bmatrix} among it), LaTeX that groups the wrong terms (such as a fraction with the wrong part on the bottom), or, in Mathematics Advanced, Extension, Methods or Specialist, an everyday word where the syllabus has a term (opens up for concave up, turns back for a turning point)
 
 ## A possible match
 

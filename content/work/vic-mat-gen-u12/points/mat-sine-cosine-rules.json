@@ -25,7 +25,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:06Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -109,21 +110,21 @@
   "card": [
    [
     "Sine rule",
-    "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle. Example: A = 30°, B = 45°, a = 8 gives b = 8 × sin 45° ÷ sin 30° ≈ 11.3."
+    "\\(\\frac{a}{\\sin A} = \\frac{b}{\\sin B}\\). Use it when you know a side and the angle opposite it, plus one more side or angle. Example: \\(A = 30^{\\circ}\\), \\(B = 45^{\\circ}\\) and \\(a = 8\\) give \\(b = \\frac{8 \\sin 45^{\\circ}}{\\sin 30^{\\circ}} \\approx 11.3\\)."
    ],
    [
     "Cosine rule",
-    "c² = a² + b² − 2ab cos C. Use it when you know two sides and the angle between them, or all three sides."
+    "\\(c^{2} = a^{2} + b^{2} - 2ab \\cos C\\). Use it when you know two sides and the angle between them, or all three sides."
    ],
    "These rules work in triangles with no right angle. Pythagoras and the basic ratios need a right angle.",
    [
     "Ambiguous case",
-    "If you know two sides and an angle that is not between them, the sine rule gives sin B. Both B and 180° − B have that sine, so there may be two triangles. Check that each one has angles adding to less than 180°."
+    "If you know two sides and an angle that is not between them, the sine rule gives \\(\\sin B\\). Both \\(B\\) and \\(180^{\\circ} - B\\) have that sine, so there may be two triangles. Check that each one has angles adding to less than \\(180^{\\circ}\\)."
    ]
   ],
   "remember": "Sine rule for opposite pairs. Cosine rule for two sides and the angle between, or three sides.",
   "a": {
-   "q": "A triangle has sides of 7 cm and 9 cm with a 50° angle between them. Which rule finds the third side?",
+   "q": "A triangle has sides of 7 cm and 9 cm with a \\(50^{\\circ}\\) angle between them. Which rule finds the third side?",
    "opts": [
     "The cosine rule",
     "The sine rule",
@@ -135,16 +136,62 @@
   },
   "b": {
    "d": 3,
-   "q": "In triangle ABC, A = 30°, a = 5 m and b = 8 m. Using the sine rule, sin B = 0.8. Which are the possible sizes of angle B?",
+   "q": "In triangle ABC, \\(A = 30^{\\circ}\\), \\(a = 5\\) m and \\(b = 8\\) m. Using the sine rule, \\(\\sin B = 0.8\\). Which are the possible sizes of angle \\(B\\)?",
    "opts": [
-    "53.1° and 126.9°",
-    "53.1° only",
-    "53.1° and 36.9°",
-    "126.9° only"
+    "\\(53.1^{\\circ}\\) and \\(126.9^{\\circ}\\)",
+    "\\(53.1^{\\circ}\\) only",
+    "\\(53.1^{\\circ}\\) and \\(36.9^{\\circ}\\)",
+    "\\(126.9^{\\circ}\\) only"
    ],
-   "why": "sin B = 0.8 gives B = 53.1°, and the second angle is 180° − 53.1° = 126.9°. Both fit with 30°, as 30° + 126.9° is less than 180°. The value 36.9° is 90° − 53.1°, which is not the other angle with that sine.",
-   "clue": "Two angles between 0° and 180° share the same sine."
+   "why": "\\(\\sin B = 0.8\\) gives \\(B = 53.1^{\\circ}\\), and the second angle is \\(180^{\\circ} - 53.1^{\\circ} = 126.9^{\\circ}\\). Both fit with \\(30^{\\circ}\\), as \\(30^{\\circ} + 126.9^{\\circ}\\) is less than \\(180^{\\circ}\\). The value \\(36.9^{\\circ}\\) is \\(90^{\\circ} - 53.1^{\\circ}\\), which is not the other angle with that sine.",
+   "clue": "Two angles between \\(0^{\\circ}\\) and \\(180^{\\circ}\\) share the same sine."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "The sine and cosine rules",
+   "card": [
+    [
+     "Sine rule",
+     "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle. Example: A = 30°, B = 45°, a = 8 gives b = 8 × sin 45° ÷ sin 30° ≈ 11.3."
+    ],
+    [
+     "Cosine rule",
+     "c² = a² + b² − 2ab cos C. Use it when you know two sides and the angle between them, or all three sides."
+    ],
+    "These rules work in triangles with no right angle. Pythagoras and the basic ratios need a right angle.",
+    [
+     "Ambiguous case",
+     "If you know two sides and an angle that is not between them, the sine rule gives sin B. Both B and 180° − B have that sine, so there may be two triangles. Check that each one has angles adding to less than 180°."
+    ]
+   ],
+   "remember": "Sine rule for opposite pairs. Cosine rule for two sides and the angle between, or three sides.",
+   "a": {
+    "q": "A triangle has sides of 7 cm and 9 cm with a 50° angle between them. Which rule finds the third side?",
+    "opts": [
+     "The cosine rule",
+     "The sine rule",
+     "Pythagoras' theorem",
+     "The tangent ratio"
+    ],
+    "why": "Two sides and the angle between them are known, so the cosine rule applies. The sine rule needs a side and its opposite angle, and neither is known here.",
+    "clue": "Is there a side and angle that sit opposite each other?"
+   },
+   "b": {
+    "d": 3,
+    "q": "In triangle ABC, A = 30°, a = 5 m and b = 8 m. Using the sine rule, sin B = 0.8. Which are the possible sizes of angle B?",
+    "opts": [
+     "53.1° and 126.9°",
+     "53.1° only",
+     "53.1° and 36.9°",
+     "126.9° only"
+    ],
+    "why": "sin B = 0.8 gives B = 53.1°, and the second angle is 180° − 53.1° = 126.9°. Both fit with 30°, as 30° + 126.9° is less than 180°. The value 36.9° is 90° − 53.1°, which is not the other angle with that sine.",
+    "clue": "Two angles between 0° and 180° share the same sine."
+   }
+  }
+ }
 }

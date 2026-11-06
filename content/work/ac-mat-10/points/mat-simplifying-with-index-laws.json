@@ -14,7 +14,8 @@
   "2026-11-04T09:36:54Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:06Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:58:30Z write: done",
-  "2026-11-04T10:08:03Z check: passed, cleared"
+  "2026-11-04T10:08:03Z check: passed, cleared",
+  "2026-11-06T10:44:11Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -102,45 +103,94 @@
   "card": [
    [
     "Multiply",
-    "add the indices when the base is the same. x³ × x² = x⁵. Multiply the numbers in front as usual."
+    "add the indices when the base is the same. \\(x^{3} \\times x^{2} = x^{5}\\). Multiply the numbers in front as usual."
    ],
    [
     "Divide",
-    "subtract the indices. x⁵ ÷ x² = x³. A negative index results when the power in the divisor is larger, so x² ÷ x⁵ = x⁻³. Divide the numbers in front as usual."
+    "subtract the indices. \\(x^{5} \\div x^{2} = x^{3}\\). A negative index results when the power in the divisor is larger, so \\(x^{2} \\div x^{5} = x^{-3}\\). Divide the numbers in front as usual."
    ],
    [
     "Power of a power",
-    "multiply the indices, and raise every factor inside the brackets to the power. (2x³)² = 2² × x⁶ = 4x⁶."
+    "multiply the indices, and raise every factor inside the brackets to the power. \\((2x^{3})^{2} = 2^{2} \\times x^{6} = 4x^{6}\\)."
    ],
    [
     "Worked example",
-    "(2x³y)² ÷ 4xy = 4x⁶y² ÷ 4xy. Divide the numbers: 4 ÷ 4 = 1. Subtract the indices: x⁶ ÷ x = x⁵ and y² ÷ y = y. The answer is x⁵y."
+    "\\((2x^{3}y)^{2} \\div 4xy = 4x^{6}y^{2} \\div 4xy\\). Divide the numbers: \\(4 \\div 4 = 1\\). Subtract the indices: \\(x^{6} \\div x = x^{5}\\) and \\(y^{2} \\div y = y\\). The answer is \\(x^{5}y\\)."
    ]
   ],
   "remember": "Work one base at a time: add indices to multiply, subtract to divide, multiply for a power of a power.",
   "a": {
-   "q": "Simplify (3x²)³",
+   "q": "Simplify \\((3x^{2})^{3}\\)",
    "opts": [
-    "27x⁶",
-    "9x⁶",
-    "27x⁵",
-    "9x⁵"
+    "\\(27x^{6}\\)",
+    "\\(9x^{6}\\)",
+    "\\(27x^{5}\\)",
+    "\\(9x^{5}\\)"
    ],
-   "why": "Cube every factor: 3³ = 27 and (x²)³ = x⁶, so the answer is 27x⁶. Writing 9 is tempting, but that multiplies 3 by 3 only, instead of cubing it.",
-   "clue": "The power applies to the 3 as well as to the x."
+   "why": "Cube every factor: \\(3^{3} = 27\\) and \\((x^{2})^{3} = x^{6}\\), so the answer is \\(27x^{6}\\). Writing 9 is tempting, but that multiplies 3 by 3 only, instead of cubing it.",
+   "clue": "The power applies to the 3 as well as to the \\(x\\)."
   },
   "b": {
    "d": 3,
-   "q": "Simplify (4x⁵y)² ÷ 8x³y",
+   "q": "Simplify \\((4x^{5}y)^{2} \\div 8x^{3}y\\)",
    "opts": [
-    "2x⁷y",
-    "2x⁴y",
-    "2x⁷y²",
-    "8x⁷y"
+    "\\(2x^{7}y\\)",
+    "\\(2x^{4}y\\)",
+    "\\(2x^{7}y^{2}\\)",
+    "\\(8x^{7}y\\)"
    ],
-   "why": "Squaring gives 16x¹⁰y². Then 16 ÷ 8 = 2, x¹⁰ ÷ x³ = x⁷ and y² ÷ y = y, so the answer is 2x⁷y. Leaving y² forgets to divide by the y, and 8x⁷y comes from squaring 4 as 4 × 2.",
+   "why": "Squaring gives \\(16x^{10}y^{2}\\). Then \\(16 \\div 8 = 2\\), \\(x^{10} \\div x^{3} = x^{7}\\) and \\(y^{2} \\div y = y\\), so the answer is \\(2x^{7}y\\). Leaving \\(y^{2}\\) forgets to divide by the \\(y\\), and \\(8x^{7}y\\) comes from subtracting the numbers, \\(16 - 8\\), instead of dividing them.",
    "clue": "Square everything in the brackets first, then divide."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:44:11Z",
+  "by": "hand",
+  "before": {
+   "title": "Simplifying with the index laws",
+   "card": [
+    [
+     "Multiply",
+     "add the indices when the base is the same. x³ × x² = x⁵. Multiply the numbers in front as usual."
+    ],
+    [
+     "Divide",
+     "subtract the indices. x⁵ ÷ x² = x³. A negative index results when the power in the divisor is larger, so x² ÷ x⁵ = x⁻³. Divide the numbers in front as usual."
+    ],
+    [
+     "Power of a power",
+     "multiply the indices, and raise every factor inside the brackets to the power. (2x³)² = 2² × x⁶ = 4x⁶."
+    ],
+    [
+     "Worked example",
+     "(2x³y)² ÷ 4xy = 4x⁶y² ÷ 4xy. Divide the numbers: 4 ÷ 4 = 1. Subtract the indices: x⁶ ÷ x = x⁵ and y² ÷ y = y. The answer is x⁵y."
+    ]
+   ],
+   "remember": "Work one base at a time: add indices to multiply, subtract to divide, multiply for a power of a power.",
+   "a": {
+    "q": "Simplify (3x²)³",
+    "opts": [
+     "27x⁶",
+     "9x⁶",
+     "27x⁵",
+     "9x⁵"
+    ],
+    "why": "Cube every factor: 3³ = 27 and (x²)³ = x⁶, so the answer is 27x⁶. Writing 9 is tempting, but that multiplies 3 by 3 only, instead of cubing it.",
+    "clue": "The power applies to the 3 as well as to the x."
+   },
+   "b": {
+    "d": 3,
+    "q": "Simplify (4x⁵y)² ÷ 8x³y",
+    "opts": [
+     "2x⁷y",
+     "2x⁴y",
+     "2x⁷y²",
+     "8x⁷y"
+    ],
+    "why": "Squaring gives 16x¹⁰y². Then 16 ÷ 8 = 2, x¹⁰ ÷ x³ = x⁷ and y² ÷ y = y, so the answer is 2x⁷y. Leaving y² forgets to divide by the y, and 8x⁷y comes from squaring 4 as 4 × 2.",
+    "clue": "Square everything in the brackets first, then divide."
+   }
+  }
+ }
 }

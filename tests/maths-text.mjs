@@ -9,6 +9,7 @@
 // long expression scrolls inside its own option; the screen reader's line reads the maths in words; Learn through the
 // chapter, then a Practice flight on it, both with maths in every question; Search finds points by their words and
 // draws the maths in the line it shows, and finds nothing for a LaTeX command; and the point sheet draws the card.
+// speak() also reads a matrix by its size and rows ("the 2 by 2 matrix with rows 1, 2 and 3, 4").
 // node maths-text.mjs shots also saves maths-text-question and maths-text-solution, light and dark, at 360 by 760.
 import fs from 'fs';
 import vm from 'vm';
@@ -45,6 +46,10 @@ const CH = 'nsw-mat-adv-11-1-2';
     ['-', 'minus'],
     ['{} - \\$600', 'minus $600'],
     ['\\text{UTC}{-}5', 'UTC minus 5'],
+    ['\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}', 'the 2 by 2 matrix with rows 1, 2 and 3, 4'],
+    ['P = \\begin{bmatrix} 10 & 20 \\end{bmatrix}', 'P equals the 1 by 2 matrix with row 10, 20'],
+    ['\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}', 'the 3 by 3 matrix with rows 1, 0, 0; 0, negative 1, 0 and 0, 0, 1'],
+    ['\\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix} + B', 'the 2 by 1 matrix with rows 3 and 4, plus B'],
   ];
   for (const [t, words] of reads) { const got = ctx.speak(t); check(got === words, 'reads ' + t + ' as "' + words + '"' + (got === words ? '' : ' (got "' + got + '")'), R); }
   const html = ctx.tx('The axis is \\(x = -\\frac{b}{2a}\\), so <b> stays text.');

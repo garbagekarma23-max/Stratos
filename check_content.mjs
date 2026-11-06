@@ -11,10 +11,8 @@
 // No two questions may ask the same thing word for word, in any bank or in NSW Economics (content.js). The tests find
 // each answer by its question's text, and a student studying two courses would meet one question with two answers.
 // Maths in a point is LaTeX between \( and \) (content/latex.mjs). Every piece must parse, a title has no maths, and a
-// maths point that has been converted to LaTeX may not write maths as plain text anywhere (a slash as a fraction, a caret,
-// log_, sqrt, <=, ² and the like, PLAIN in latex.mjs). A maths point still written all in plain text gets a warning,
-// not a failure, until content/convert_maths.py and a read by hand convert it. Points checked with --json, which the
-// pipeline writes, always get the maths rule. Options are measured as they look on screen (shown in latex.mjs).
+// maths point may not write maths as plain text anywhere (a slash as a fraction, a caret, log_, sqrt, <=, ² and the like,
+// PLAIN in latex.mjs). Every maths point is in LaTeX now, so this fails in the full check and in --json alike. Options are measured as they look on screen (shown in latex.mjs).
 //   node check_content.mjs                 checks everything in src/
 //   node check_content.mjs --json FILE     checks only the points in FILE ({"kind": ..., "subject": ..., "points": {id: point}})
 //                                          and prints the problems for each as JSON. content/pipeline.py uses this.
@@ -54,10 +52,7 @@ const clearlyLongest = len => len[0] > Math.max(...len.slice(1)) && len[0] - (le
 /* One point with a card and two questions. tally counts its questions and how often the right answer is longest.
    kind is the made course's kind (english, maths, theory or standard), for the rules that only some subjects have.
    subject is the course's subject, for the subject terms the banned words let through (ALLOWED_IN). */
-/* strict: a maths point must write all its maths in LaTeX. In the full check that is only asked of a point that has
-   some LaTeX in it already; the --json check asks it of every maths point. */
-let unconverted = [];
-function checkPoint(id, p, tally, kind, subject, strict) {
+function checkPoint(id, p, tally, kind, subject) {
   tally.pts++;
   if (!p.title) problems.push(id + ' has no title');
   if (!Array.isArray(p.card) || p.card.length < 3 || p.card.length > 4) { problems.push(id + ' card has ' + (p.card || []).length + ' lines'); if (!Array.isArray(p.card)) return; }
@@ -81,8 +76,7 @@ function checkPoint(id, p, tally, kind, subject, strict) {
   if (hasMaths(p.title)) problems.push(id + ' has maths in its title. Titles are words only: ' + p.title);
   if (kind === 'maths') {
     const found = texts.map(t => [t, plainMaths(t)]).filter(([, m]) => m.length);
-    if (strict || texts.some(hasMaths)) for (const [t, m] of found) problems.push(id + ' writes maths as plain text, ' + m.join('; ') + ', in: ' + t + ' Write the maths in LaTeX between \\( and \\).');
-    else if (found.length && !unconverted.includes(id)) unconverted.push(id);
+    for (const [t, m] of found) problems.push(id + ' writes maths as plain text, ' + m.join('; ') + ', in: ' + t + ' Write the maths in LaTeX between \\( and \\).');
   }
   if (kind === 'english') for (const t of texts) { const q = typeof t === 'string' && longQuote(t); if (q) problems.push(id + ' quotes more than 10 words: ' + q); }
 }
@@ -120,7 +114,7 @@ if (process.argv[2] === '--json') {
   for (const [id, p] of Object.entries(input.points)) if (p && typeof p === 'object') qs.add(id, p);
   for (const [id, p] of Object.entries(input.points)) {
     problems = [];
-    try { checkPoint(id, p, tally(), input.kind, input.subject, true); } catch (e) { problems.push(id + ' could not be checked: ' + e.message); }
+    try { checkPoint(id, p, tally(), input.kind, input.subject); } catch (e) { problems.push(id + ' could not be checked: ' + e.message); }
     for (const k of ['a', 'b']) {
       const q = p && p[k] && p[k].q, same = typeof q === 'string' ? twins(qs.map, id, k, q) : [];
       if (same.length) problems.push(id + k + ' asks the same question, word for word, as ' + same.join(' and ') + ': ' + q.trim() + ' Word it differently.');
@@ -196,7 +190,6 @@ for (const ch of MATHS.chapters) for (const p of ch.points) {
   for (const t of texts) wordCheck(p.id, t);
 }
 console.log('maths:', mpts, 'points,', mforms, 'question templates');
-if (unconverted.length) warnings.push(unconverted.length + ' maths points still write their maths as plain text. content/convert_maths.py converts the simple ones (content/README.md, step 12).');
 if (warnings.length) console.log('WARNINGS (these do not fail the check):\n  ' + warnings.join('\n  '));
 console.log(problems.length ? 'PROBLEMS:\n  ' + problems.join('\n  ') : 'no problems found');
 process.exitCode = problems.length ? 1 : 0;

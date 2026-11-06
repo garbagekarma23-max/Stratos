@@ -15,7 +15,8 @@
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: flagged",
   "2026-11-01T15:14:47Z fix: suggested",
-  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card other)"
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card other)",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -153,7 +154,7 @@
    "Seasonal data has a repeating pattern that can hide the trend. To forecast, start with the deseasonalised data, where the seasonal effect has been taken out.",
    "Fit a least squares line to the deseasonalised data, with time as the explanatory variable. Substitute the future time period to predict a deseasonalised value.",
    "Then reseasonalise by multiplying the prediction by the seasonal index for that season. This puts the seasonal pattern back.",
-   "Example: the line gives 200 for a quarter with index 1.2. The forecast is 200 × 1.2 = 240."
+   "Example: the line gives 200 for a quarter with index 1.2. The forecast is \\(200 \\times 1.2 = 240\\)."
   ],
   "remember": "Predict from the line, then multiply by the seasonal index.",
   "a": {
@@ -164,21 +165,58 @@
     "150",
     "149.2"
    ],
-   "why": "Reseasonalising means multiplying: 150 × 0.8 = 120. Dividing gives 187.5, which does the reverse of putting the season back. Leaving 150 skips the reseasonalising step.",
+   "why": "Reseasonalising means multiplying: \\(150 \\times 0.8 = 120\\). Dividing gives 187.5, which does the reverse of putting the season back. Leaving 150 skips the reseasonalising step.",
    "clue": "Putting the season back means multiplying."
   },
   "b": {
    "d": 3,
-   "q": "A café in Mildura has the deseasonalised line sales = 400 + 12t. For t = 10, the seasonal index is 1.25. What is the forecast?",
+   "q": "A café in Mildura has the deseasonalised line sales \\(= 400 + 12t\\). For \\(t = 10\\), the seasonal index is 1.25. What is the forecast?",
    "opts": [
     "650",
     "416",
     "520",
     "550"
    ],
-   "why": "The line gives 400 + 12 × 10 = 520. Multiply the whole prediction by the index: 520 × 1.25 = 650. Stopping at 520 skips reseasonalising, and 550 comes from multiplying only the 12t part by the index.",
+   "why": "The line gives \\(400 + 12 \\times 10 = 520\\). Multiply the whole prediction by the index: \\(520 \\times 1.25 = 650\\). Stopping at 520 skips reseasonalising, and 550 comes from multiplying only the \\(12t\\) part by the index.",
    "clue": "Find the line's full value first, then adjust for the season."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Forecasting from a trend",
+   "card": [
+    "Seasonal data has a repeating pattern that can hide the trend. To forecast, start with the deseasonalised data, where the seasonal effect has been taken out.",
+    "Fit a least squares line to the deseasonalised data, with time as the explanatory variable. Substitute the future time period to predict a deseasonalised value.",
+    "Then reseasonalise by multiplying the prediction by the seasonal index for that season. This puts the seasonal pattern back.",
+    "Example: the line gives 200 for a quarter with index 1.2. The forecast is 200 × 1.2 = 240."
+   ],
+   "remember": "Predict from the line, then multiply by the seasonal index.",
+   "a": {
+    "q": "A least squares line fitted to deseasonalised data predicts 150 for a season with seasonal index 0.8. What is the forecast?",
+    "opts": [
+     "120",
+     "187.5",
+     "150",
+     "149.2"
+    ],
+    "why": "Reseasonalising means multiplying: 150 × 0.8 = 120. Dividing gives 187.5, which does the reverse of putting the season back. Leaving 150 skips the reseasonalising step.",
+    "clue": "Putting the season back means multiplying."
+   },
+   "b": {
+    "d": 3,
+    "q": "A café in Mildura has the deseasonalised line sales = 400 + 12t. For t = 10, the seasonal index is 1.25. What is the forecast?",
+    "opts": [
+     "650",
+     "416",
+     "520",
+     "550"
+    ],
+    "why": "The line gives 400 + 12 × 10 = 520. Multiply the whole prediction by the index: 520 × 1.25 = 650. Stopping at 520 skips reseasonalising, and 550 comes from multiplying only the 12t part by the index.",
+    "clue": "Find the line's full value first, then adjust for the season."
+   }
+  }
+ }
 }

@@ -10,6 +10,8 @@
 //   latexProblems(text)    every piece of LaTeX must parse: \( and \) in pairs, braces that match, \frac with two
 //                          parts, a power or a subscript with something after it, \left and \right in pairs, only the
 //                          commands in COMMANDS, and MathLive's own parser finding nothing wrong.
+//                          A matrix is \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}: square brackets, as VCAA and NSW
+//                          write matrices, & between the entries of a row and \\ (with a space after it) between rows.
 //   plainMaths(text)       maths written as plain text outside \( \), which fails in a maths point (see PLAIN).
 //   shown(text)            the text as it looks on screen, roughly, for measuring options: \frac{12}{5} is as wide as 12.
 //   sameMaths(text)        a piece of LaTeX written one standard way, so the copy check sees x^{2} and x^2 as the same.
@@ -36,11 +38,30 @@ export const COMMANDS = new Set(`frac dfrac tfrac sqrt binom times div pm mp cdo
   infty to rightarrow Rightarrow leftarrow Leftarrow leftrightarrow iff implies in notin subset subseteq cup cap emptyset varnothing
   mathbb mathrm text left right lim int sum prod log ln sin cos tan sec csc cot arcsin arccos arctan exp min max
   circ angle triangle parallel perp quad qquad ldots cdots dots overline vec hat bar prime mid colon therefore because
-  lvert rvert vert langle rangle lfloor rfloor lceil rceil cup forall exists neg land lor sim`.split(/\s+/));
+  lvert rvert vert langle rangle lfloor rfloor lceil rceil cup forall exists neg land lor sim begin end`.split(/\s+/));
 /* \, \; \! \  (spaces) and the escaped characters \{ \} \$ \% \& \# \_ \| are fine too. */
 const ESCAPED = /^\\[,;:! {}$%&#_|]/;
 /* Commands that take two parts in braces, and one. */
 const TWO = new Set(['frac', 'dfrac', 'tfrac', 'binom']), ONE = new Set(['sqrt', 'text', 'mathrm', 'mathbb', 'overline', 'vec', 'hat', 'bar']);
+
+/* A matrix: the only environment allowed. Its body is rows split by \\ and entries split by &. */
+export const MATRIX = /\\begin\{bmatrix\}(.*?)\\end\{bmatrix\}/g;
+/* The rows of a matrix body, each a list of its entries, split only at the top level (not inside braces). */
+export function matrixRows(body) {
+  const rows = [[]];
+  let depth = 0, cur = '';
+  for (let i = 0; i < body.length; i++) {
+    const c = body[i];
+    if (c === '\\' && body[i + 1] === '\\' && !depth) { rows[rows.length - 1].push(cur.trim()); rows.push([]); cur = ''; i++; continue; }
+    if (c === '\\') { cur += c + (body[i + 1] || ''); i++; continue; }
+    if (c === '{') depth++;
+    if (c === '}') depth--;
+    if (c === '&' && !depth) { rows[rows.length - 1].push(cur.trim()); cur = ''; continue; }
+    cur += c;
+  }
+  rows[rows.length - 1].push(cur.trim());
+  return rows;
+}
 
 /* Splits text into words and maths: [{maths: false, t}, {maths: true, t}, ...]. bad is set when \( and \) do not pair up. */
 export function split(text) {
@@ -96,8 +117,16 @@ export function pieceProblems(s) {
     const c = s[i];
     if (c === '\\') {
       const m = /^\\([a-zA-Z]+)/.exec(s.slice(i));
+      if (s[i + 1] === '\\') {
+        if (!inMatrix(s, i)) out.push('has \\\\ outside a matrix: \\\\ only starts a new row of \\begin{bmatrix}, in ' + show);
+        else if (s[i + 2] !== ' ') out.push('needs a space after \\\\ in ' + show);
+        i++; continue;
+      }
       if (!m) { if (!ESCAPED.test(s.slice(i, i + 2))) out.push('has a backslash that starts no command in ' + show); i++; continue; }
       const name = m[1];
+      if (name === 'begin' || name === 'end') {
+        if (!s.startsWith('{bmatrix}', i + m[0].length)) out.push('uses \\' + name + ' with an environment other than {bmatrix}: a matrix is \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}, in ' + show);
+      }
       if (!COMMANDS.has(name)) out.push('uses \\' + name + ', which is not on the list of maths commands, in ' + show);
       let j = i + m[0].length;
       if (TWO.has(name)) {
@@ -113,6 +142,8 @@ export function pieceProblems(s) {
         if (s[j] !== '{') out.push('needs \\' + name + '{...} with its part in braces, in ' + show);
       }
       i += m[0].length - 1;
+    } else if (c === '&') {
+      if (!inMatrix(s, i)) out.push('has & outside a matrix in ' + show);
     } else if (c === '^' || c === '_') {
       if (groupEnd(s, i + 1) < 0) out.push('has a ' + (c === '^' ? 'power ^' : 'subscript _') + ' with nothing after it in ' + show);
       else if (s[i + 1] === c) out.push('has ' + c + c + ' in ' + show);
@@ -120,11 +151,25 @@ export function pieceProblems(s) {
   }
   const lefts = (s.match(/\\left\b/g) || []).length, rights = (s.match(/\\right\b/g) || []).length;
   if (lefts !== rights) out.push('has \\left and \\right that do not pair up in ' + show);
+  const begins = (s.match(/\\begin\b/g) || []).length, ends = (s.match(/\\end\b/g) || []).length;
+  if (begins !== ends) out.push('has \\begin and \\end that do not pair up in ' + show);
+  else if (begins && /\\begin\{bmatrix\}(?:(?!\\end\{bmatrix\}).)*\\begin/.test(s)) out.push('has a matrix inside a matrix in ' + show);
+  else for (const [, body] of s.matchAll(MATRIX)) {
+    const rows = matrixRows(body);
+    if (rows.some(r => r.some(e => !e))) out.push('has a matrix with an empty entry in ' + show);
+    else if (new Set(rows.map(r => r.length)).size > 1) out.push('has a matrix whose rows have different numbers of entries in ' + show);
+  }
   if (ML && !out.length) {
     const errs = ML.validateLatex(s) || [];
     if (errs.length) out.push('does not parse (MathLive: ' + errs.map(e => e.code + (e.arg ? ' ' + e.arg : '')).join(', ') + ') in ' + show);
   }
   return [...new Set(out)];
+}
+
+/* Whether position i of a piece of LaTeX is inside a matrix. */
+function inMatrix(s, i) {
+  const a = s.lastIndexOf('\\begin{bmatrix}', i), b = s.lastIndexOf('\\end{bmatrix}', i);
+  return a >= 0 && a > b && s.indexOf('\\end{bmatrix}', i) >= 0;
 }
 
 /* Every problem with the LaTeX in a piece of text. */
@@ -167,6 +212,8 @@ export function plainMaths(text) {
 /* LaTeX as it looks, roughly, one character for each character drawn: a fraction is as wide as its wider part, a
    command such as \pi or \le is one character, a function name such as \sin keeps its letters. */
 export function shownMaths(s) {
+  /* A matrix is as wide as its widest row, in square brackets. */
+  s = s.replace(MATRIX, (m, body) => '[' + matrixRows(body).map(r => r.map(shownMaths).join('  ')).sort((a, b) => b.length - a.length)[0] + ']');
   s = s.replace(/\\(?:left|right)\b|\\[,;:!]|\\q?quad\b/g, '').replace(/\\(?:text|mathrm|mathbb)\{([^{}]*)\}/g, '$1');
   for (let n = 0; n < 8; n++) {
     const t = s.replace(/\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}/g, (m, a, b) => (a.length >= b.length ? a : b))

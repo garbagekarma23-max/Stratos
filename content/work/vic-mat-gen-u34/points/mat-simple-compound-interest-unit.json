@@ -32,7 +32,8 @@
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: flagged",
   "2026-11-01T15:19:04Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -205,25 +206,25 @@
   "card": [
    [
     "Simple interest",
-    "The same dollar amount is added each period, found from the starting amount only. Interest per period = P × r, where P is the principal and r is the rate per period as a decimal."
+    "The same dollar amount is added each period, found from the starting amount only. Interest per period \\(= P \\times r\\), where \\(P\\) is the principal and \\(r\\) is the rate per period as a decimal."
    ],
    [
     "Compound interest",
-    "Interest is a percentage of the current balance, so it grows as the balance grows. Each period the balance is multiplied by 1 + r."
+    "Interest is a percentage of the current balance, so it grows as the balance grows. Each period the balance is multiplied by \\(1 + r\\)."
    ],
-   "Recurrence rules: simple interest is V(n+1) = V(n) + P × r. Compound interest is V(n+1) = (1 + r) × V(n).",
+   "Recurrence relations: simple interest is \\(V_{n+1} = V_{n} + P \\times r\\). Compound interest is \\(V_{n+1} = (1 + r) \\times V_{n}\\).",
    "Example: $2000 at 5% per year. Simple: $2000, $2100, $2200. Compound: $2000, $2100, $2205."
   ],
   "remember": "Simple adds the same dollars each period. Compound multiplies the balance each period.",
   "a": {
-   "q": "Which recurrence rule models $800 invested at 4% per year compound interest?",
+   "q": "Which recurrence relation models $800 invested at 4% per year compound interest?",
    "opts": [
-    "V(n+1) = 1.04 × V(n)",
-    "V(n+1) = V(n) + 0.04",
-    "V(n+1) = V(n) + 32",
-    "V(n+1) = 0.04 × V(n)"
+    "\\(V_{n+1} = 1.04 \\times V_{n}\\)",
+    "\\(V_{n+1} = V_{n} + 0.04\\)",
+    "\\(V_{n+1} = V_{n} + 32\\)",
+    "\\(V_{n+1} = 0.04 \\times V_{n}\\)"
    ],
-   "why": "Compound interest multiplies the balance by 1 + 0.04 = 1.04 each year. V(n) + 32 is the rule for simple interest, because it adds the same amount each year. 0.04 × V(n) would leave only the interest, not the whole balance.",
+   "why": "Compound interest multiplies the balance by \\(1 + 0.04 = 1.04\\) each year. \\(V_{n} + 32\\) is the rule for simple interest, because it adds the same amount each year. \\(0.04 \\times V_{n}\\) would leave only the interest, not the whole balance.",
    "clue": "The balance is multiplied each year, and the old balance is kept."
   },
   "b": {
@@ -235,9 +236,52 @@
     "$5300",
     "$5600"
    ],
-   "why": "Simple interest is 5000 × 0.06 = $300 each year, so 3 years adds $900 and the balance is $5900. $5955.08 is the compound answer, 5000 × 1.06³, which multiplies the balance instead of adding the same sum each year. $5300 and $5600 are only one and two years of interest.",
+   "why": "Simple interest is \\(\\$5000 \\times 0.06 = \\$300\\) each year, so 3 years adds $900 and the balance is $5900. $5955.08 is the compound answer, \\(\\$5000 \\times 1.06^{3}\\), which multiplies the balance instead of adding the same sum each year. $5300 and $5600 are only one and two years of interest.",
    "clue": "Add the same dollar amount every year, found from the starting $5000."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Simple and compound interest",
+   "card": [
+    [
+     "Simple interest",
+     "The same dollar amount is added each period, found from the starting amount only. Interest per period = P × r, where P is the principal and r is the rate per period as a decimal."
+    ],
+    [
+     "Compound interest",
+     "Interest is a percentage of the current balance, so it grows as the balance grows. Each period the balance is multiplied by 1 + r."
+    ],
+    "Recurrence rules: simple interest is V(n+1) = V(n) + P × r. Compound interest is V(n+1) = (1 + r) × V(n).",
+    "Example: $2000 at 5% per year. Simple: $2000, $2100, $2200. Compound: $2000, $2100, $2205."
+   ],
+   "remember": "Simple adds the same dollars each period. Compound multiplies the balance each period.",
+   "a": {
+    "q": "Which recurrence rule models $800 invested at 4% per year compound interest?",
+    "opts": [
+     "V(n+1) = 1.04 × V(n)",
+     "V(n+1) = V(n) + 0.04",
+     "V(n+1) = V(n) + 32",
+     "V(n+1) = 0.04 × V(n)"
+    ],
+    "why": "Compound interest multiplies the balance by 1 + 0.04 = 1.04 each year. V(n) + 32 is the rule for simple interest, because it adds the same amount each year. 0.04 × V(n) would leave only the interest, not the whole balance.",
+    "clue": "The balance is multiplied each year, and the old balance is kept."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya invests $5000 at 6% per year simple interest. What is the balance after 3 years?",
+    "opts": [
+     "$5900",
+     "$5955.08",
+     "$5300",
+     "$5600"
+    ],
+    "why": "Simple interest is 5000 × 0.06 = $300 each year, so 3 years adds $900 and the balance is $5900. $5955.08 is the compound answer, 5000 × 1.06³, which multiplies the balance instead of adding the same sum each year. $5300 and $5600 are only one and two years of interest.",
+    "clue": "Add the same dollar amount every year, found from the starting $5000."
+   }
+  }
+ }
 }

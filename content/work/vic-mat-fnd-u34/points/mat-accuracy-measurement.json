@@ -15,7 +15,8 @@
   "2026-11-01T14:56:02Z write: done",
   "2026-11-01T15:05:28Z check: flagged",
   "2026-11-01T15:14:47Z fix: suggested",
-  "2026-11-02T04:35:41Z autoreview: cleared with the fix (b wording)"
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (b wording)",
+  "2026-11-06T10:44:54Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -170,7 +171,7 @@
   "card": [
    [
     "Tolerance",
-    "the error allowed in a measurement. A part of 50 mm ± 0.2 mm must be between 49.8 mm and 50.2 mm."
+    "the error allowed in a measurement. A part of \\(50 \\text{ mm} \\pm 0.2 \\text{ mm}\\) must be between 49.8 mm and 50.2 mm."
    ],
    [
     "Accuracy",
@@ -184,7 +185,7 @@
   ],
   "remember": "Tolerance is the allowed error, accuracy is closeness to true, precision is how fine the scale is.",
   "a": {
-   "q": "A steel rod must be 120 mm ± 0.5 mm. Which length is within tolerance?",
+   "q": "A steel rod must be \\(120 \\text{ mm} \\pm 0.5 \\text{ mm}\\). Which length is within tolerance?",
    "opts": [
     "119.6 mm",
     "119.4 mm",
@@ -207,5 +208,51 @@
    "clue": "Precision is how fine the scale is. Accuracy is how close to 500 g."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T10:44:54Z",
+  "by": "hand",
+  "before": {
+   "title": "Tolerance, accuracy and precision",
+   "card": [
+    [
+     "Tolerance",
+     "the error allowed in a measurement. A part of 50 mm ± 0.2 mm must be between 49.8 mm and 50.2 mm."
+    ],
+    [
+     "Accuracy",
+     "how close a measurement is to the true value. Every measurement has some error, so the closer it is, the more accurate it is."
+    ],
+    [
+     "Precision",
+     "how fine the measure is. A ruler marked in millimetres is more precise than one marked in centimetres."
+    ],
+    "A measure can be precise but not accurate, such as a scale that reads 2.35 kg for a true mass of 2.00 kg. A reading is within tolerance if it falls inside the allowed range."
+   ],
+   "remember": "Tolerance is the allowed error, accuracy is closeness to true, precision is how fine the scale is.",
+   "a": {
+    "q": "A steel rod must be 120 mm ± 0.5 mm. Which length is within tolerance?",
+    "opts": [
+     "119.6 mm",
+     "119.4 mm",
+     "120.6 mm",
+     "121 mm"
+    ],
+    "why": "The allowed range is 119.5 mm to 120.5 mm. 119.6 mm is inside it. 119.4 mm is just outside, so it is not allowed.",
+    "clue": "Work out the lowest and highest allowed lengths."
+   },
+   "b": {
+    "d": 2,
+    "q": "A bag has a true mass of 500 g. Ali's scale reads to 0.01 g and shows 512.35 g. Jo's scale reads to 1 g and shows 499 g. Which describes the scales?",
+    "opts": [
+     "Ali's is more precise, Jo's is more accurate",
+     "Ali's is more accurate, Jo's is more precise",
+     "Ali's is more precise and more accurate",
+     "Jo's is more precise and more accurate"
+    ],
+    "why": "Ali's scale reads to 0.01 g, which is finer than 1 g, so it is more precise. But its reading is 12.35 g from the true mass, while Jo's is only 1 g away, so Jo's is more accurate. A finer scale does not mean a reading closer to the true value.",
+    "clue": "Precision is how fine the scale is. Accuracy is how close to 500 g."
+   }
+  }
+ }
 }

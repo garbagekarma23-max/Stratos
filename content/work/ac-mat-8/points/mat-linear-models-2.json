@@ -16,7 +16,8 @@
   "2026-11-05T06:08:56Z match: claude-code says adapt mat-linear-models-context (2 changes)",
   "2026-11-05T06:08:56Z claude-code review: adapting mat-linear-models-context on the next run",
   "2026-11-05T06:46:38Z adapt: done",
-  "2026-11-05T06:53:51Z check: passed, cleared"
+  "2026-11-05T06:53:51Z check: passed, cleared",
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -186,20 +187,20 @@
  "final": {
   "title": "Linear models in context",
   "card": [
-   "A linear model has a rule like y = mx + c. It fits a situation where something changes by the same amount for each step.",
+   "A linear model has a rule like \\(y = mx + c\\). It fits a situation where something changes by the same amount for each step.",
    [
     "Rate",
-    "m is the rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
+    "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
    ],
    [
     "Intercept",
-    "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+    "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as a call-out fee paid before any work is done."
    ],
-   "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+   "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\)."
   ],
   "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
   "a": {
-   "q": "A taxi fare in Perth is F = 2.5d + 4, where d is the distance in km. What does the 2.5 tell you?",
+   "q": "A taxi fare in Perth is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 tell you?",
    "opts": [
     "The fare rises by $2.50 for each extra kilometre",
     "The fare for a trip of 0 km is $2.50",
@@ -207,19 +208,62 @@
     "The fare rises by $4 for each extra kilometre"
    ],
    "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
-   "clue": "Which number multiplies d?"
+   "clue": "Which number multiplies \\(d\\)?"
   },
   "b": {
    "d": 2,
-   "q": "Priya hires a ladder in Darwin. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+   "q": "Priya hires a ladder in Darwin. The cost is \\(C = 12n + 30\\), where \\(n\\) is the number of days. What is the cost for 5 days?",
    "opts": [
     "$90",
     "$60",
     "$150",
     "$102"
    ],
-   "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+   "why": "\\(C = 12 \\times 5 + 30 = 60 + 30 = \\$90\\). Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
    "clue": "Multiply the daily rate by 5, then add the fixed amount."
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Linear models in context",
+   "card": [
+    "A linear model has a rule like y = mx + c. It fits a situation where something changes by the same amount for each step.",
+    [
+     "Rate",
+     "m is the rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
+    ],
+    [
+     "Intercept",
+     "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+    ],
+    "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+   ],
+   "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
+   "a": {
+    "q": "A taxi fare in Perth is F = 2.5d + 4, where d is the distance in km. What does the 2.5 tell you?",
+    "opts": [
+     "The fare rises by $2.50 for each extra kilometre",
+     "The fare for a trip of 0 km is $2.50",
+     "The fare for a trip of 4 km is $2.50",
+     "The fare rises by $4 for each extra kilometre"
+    ],
+    "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
+    "clue": "Which number multiplies d?"
+   },
+   "b": {
+    "d": 2,
+    "q": "Priya hires a ladder in Darwin. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+    "opts": [
+     "$90",
+     "$60",
+     "$150",
+     "$102"
+    ],
+    "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+    "clue": "Multiply the daily rate by 5, then add the fixed amount."
+   }
   }
  }
 }

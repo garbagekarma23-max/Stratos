@@ -6,8 +6,10 @@
 // caret, log_, sqrt, <= and >=, ² and the like, = outside maths, a hyphen as a minus sign, a sum written as text),
 // while the allowed plain text passes (numbers, money, percentages, coordinates, degrees, km/h, and/or, x-axis); the
 // same plain text passes in a course that is not maths; options are measured as they look; the copy check sees x^{2}
-// and x^2 as the same question; the full check on src/ passes; and convert_maths.py makes the safe swaps and leaves
-// what it cannot be sure of (-b/2a, $100 000, L/100 km, A-B-C, Pr(A)) for a person.
+// and x^2 as the same question; the full check on src/ passes with no maths point left in plain text; and convert_maths.py makes the safe swaps and leaves
+// what it cannot be sure of (-b/2a, $100 000, L/100 km, A-B-C, Pr(A)) for a person. Matrices: \begin{bmatrix} passes,
+// and a pmatrix, rows of different lengths, an empty entry, a row break with no space after it or outside a matrix,
+// & outside a matrix and \begin with no \end each fail; a matrix is measured as wide as its widest row.
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
@@ -59,6 +61,23 @@ check(has(line('The angle is \\(\\left| x \\right\\).', 'standard', 'Physics'), 
 check(has(line('The line is \\(y = 2x + 1.', 'standard', 'Physics'), 'with no \\)'), 'LaTeX is checked in a course that is not maths too', R);
 check(has(probs(point({title: 'Gradient \\(m\\)'})), 'title'), 'maths in a title fails', R);
 
+// ---------- matrices: \begin{bmatrix} with & between entries and \\ between rows ----------
+check(line('So \\(A = \\begin{bmatrix} 1 & 2 \\\\ 3 & -4 \\end{bmatrix}\\) and \\(\\begin{bmatrix} 10 & 20 \\end{bmatrix}\\) are matrices.').length === 0,
+  'a matrix in \\begin{bmatrix}, and a row matrix, pass', R);
+const badMatrix = [
+  ['So \\(\\begin{pmatrix} 1 & 2 \\end{pmatrix}\\) here.', 'other than {bmatrix}', 'a matrix in round brackets (pmatrix) fails'],
+  ['So \\(\\begin{bmatrix} 1 & 2 \\\\ 3 \\end{bmatrix}\\) here.', 'different numbers of entries', 'a matrix whose rows differ in length fails'],
+  ['So \\(\\begin{bmatrix} 1 & \\\\ 3 & 4 \\end{bmatrix}\\) here.', 'empty entry', 'a matrix with an empty entry fails'],
+  ['So \\(\\begin{bmatrix} 1 & 2 \\\\3 & 4 \\end{bmatrix}\\) here.', 'space after', 'a row break with no space after it fails'],
+  ['So \\(\\begin{bmatrix} 1 & 2\\) here.', 'pair up', '\\begin with no \\end fails'],
+  ['So \\(x = 1 \\\\ y = 2\\) here.', 'outside a matrix', 'a row break outside a matrix fails'],
+  ['So \\(a & b\\) here.', 'outside a matrix', '& outside a matrix fails'],
+];
+for (const [t, word, what] of badMatrix) check(has(line(t), word), what, R);
+const mOpts = ['\\(\\begin{bmatrix} 12 & 0 \\\\ 0 & 12 \\end{bmatrix}\\)', '\\(\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}\\)', '\\(\\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix}\\)', '\\(\\begin{bmatrix} 3 & 0 \\\\ 0 & 3 \\end{bmatrix}\\)'];
+const shownM = spawnSync('node', ['-e', 'import("./content/latex.mjs").then(L => console.log(JSON.stringify(process.argv.slice(1).map(L.shown))))', ...mOpts], {cwd: ROOT, encoding: 'utf8'});
+check(JSON.parse(shownM.stdout)[0] === '[12 0]', 'a matrix is measured as wide as its widest row, in square brackets', R);
+
 // ---------- plain-text maths fails in a maths point ----------
 const plain = [
   ['The axis is x = -b/2a here.', 'slash', 'a slash as a fraction'],
@@ -100,7 +119,7 @@ check(has(both['tst-two'], 'same question'), 'two questions that differ only in 
 // ---------- the whole of src/ ----------
 const full = spawnSync('node', ['check_content.mjs'], {cwd: ROOT, encoding: 'utf8'});
 check(full.status === 0 && /no problems found/.test(full.stdout), 'the full check passes on src/', R);
-check(/maths points still write their maths as plain text/.test(full.stdout), 'and warns about the maths points not converted yet', R);
+check(!/plain text/.test(full.stdout), 'and every maths point in src/ writes its maths in LaTeX, with no warning left', R);
 
 // ---------- the safe swaps in content/convert_maths.py ----------
 const py = process.platform === 'win32' ? 'py' : 'python3';

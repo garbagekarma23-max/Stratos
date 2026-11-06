@@ -16,7 +16,8 @@
   "2026-11-01T08:24:32Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
   "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:22:38Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:22:38Z review: approved with the fix (a spot check)",
+  "2026-11-06T10:41:34Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -192,7 +193,7 @@
   "card": [
    "24-hour time runs from 0000 (midnight) to 2359. Times from 1:00 am to 12:59 pm keep their hour: 7:40 am is 0740 and 12:30 pm is 1230.",
    "From 1:00 pm onwards, add 12 to the hour: 3:15 pm is 1515 and 11:20 pm is 2320.",
-   "For a time difference, count up to the next whole hour, then add whole hours and leftover minutes, as 1 hour is 60 minutes, not 100. From 1445 to 1710: 15 min + 2 h + 10 min = 2 h 25 min.",
+   "For a time difference, count up to the next whole hour, then add whole hours and leftover minutes, as 1 hour is 60 minutes, not 100. From 1445 to 1710: 15 min \\(+\\) 2 h \\(+\\) 10 min \\(=\\) 2 h 25 min.",
    "In a timetable, read across the row for your stop and down the column for your service. If you change services, check you reach the changeover stop before your connecting service leaves."
   ],
   "remember": "An hour has 60 minutes, so count up through the hours instead of subtracting times like ordinary numbers.",
@@ -204,7 +205,7 @@
     "1840",
     "1960"
    ],
-   "why": "7:40 pm is after 1:00 pm, so add 12 to the hour: 7 + 12 = 19, giving 1940. 0740 is 7:40 am, and 1960 cannot be a time, as minutes only go up to 59.",
+   "why": "7:40 pm is after 1:00 pm, so add 12 to the hour: \\(7 + 12 = 19\\), giving 1940. 0740 is 7:40 am, and 1960 cannot be a time, as minutes only go up to 59.",
    "clue": "Is 7:40 pm before or after 1:00 pm?"
   },
   "b": {
@@ -216,9 +217,46 @@
     "1 h 83 min",
     "1 h 17 min"
    ],
-   "why": "0955 to 1000 is 5 min, 1000 to 1100 is 1 h, and 1100 to 1138 is 38 min, which makes 1 h 43 min. Taking 1138 − 0955 as ordinary numbers gives 183, which wrongly reads as 1 h 83 min.",
+   "why": "0955 to 1000 is 5 min, 1000 to 1100 is 1 h, and 1100 to 1138 is 38 min, which makes 1 h 43 min. Taking \\(1138 - 0955\\) as ordinary numbers gives 183, which wrongly reads as 1 h 83 min.",
    "clue": "Count up to 1000 first, then add the hours and minutes."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "latex": {
+  "at": "2026-11-06T10:41:34Z",
+  "by": "hand",
+  "before": {
+   "title": "Time and timetables",
+   "card": [
+    "24-hour time runs from 0000 (midnight) to 2359. Times from 1:00 am to 12:59 pm keep their hour: 7:40 am is 0740 and 12:30 pm is 1230.",
+    "From 1:00 pm onwards, add 12 to the hour: 3:15 pm is 1515 and 11:20 pm is 2320.",
+    "For a time difference, count up to the next whole hour, then add whole hours and leftover minutes, as 1 hour is 60 minutes, not 100. From 1445 to 1710: 15 min + 2 h + 10 min = 2 h 25 min.",
+    "In a timetable, read across the row for your stop and down the column for your service. If you change services, check you reach the changeover stop before your connecting service leaves."
+   ],
+   "remember": "An hour has 60 minutes, so count up through the hours instead of subtracting times like ordinary numbers.",
+   "a": {
+    "q": "What is 7:40 pm in 24-hour time?",
+    "opts": [
+     "1940",
+     "0740",
+     "1840",
+     "1960"
+    ],
+    "why": "7:40 pm is after 1:00 pm, so add 12 to the hour: 7 + 12 = 19, giving 1940. 0740 is 7:40 am, and 1960 cannot be a time, as minutes only go up to 59.",
+    "clue": "Is 7:40 pm before or after 1:00 pm?"
+   },
+   "b": {
+    "d": 3,
+    "q": "A train leaves Ballarat at 0955 and arrives in Melbourne at 1138. How long is the trip?",
+    "opts": [
+     "1 h 43 min",
+     "2 h 17 min",
+     "1 h 83 min",
+     "1 h 17 min"
+    ],
+    "why": "0955 to 1000 is 5 min, 1000 to 1100 is 1 h, and 1100 to 1138 is 38 min, which makes 1 h 43 min. Taking 1138 − 0955 as ordinary numbers gives 183, which wrongly reads as 1 h 83 min.",
+    "clue": "Count up to 1000 first, then add the hours and minutes."
+   }
+  }
+ }
 }

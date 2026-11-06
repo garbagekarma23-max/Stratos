@@ -120,6 +120,17 @@ function speak(tex) {
       const a = arg(), root = k === null ? 'the square root of' : k === '3' ? 'the cube root of' : 'the ' + k + 'th root of';
       return {w: post([root, ...end(a, ', end root')]), operand: true};
     }
+    /* A matrix, \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, is read by its size and rows: "the 2 by 2 matrix with rows
+       1, 2 and 3, 4". Each entry is read on its own. */
+    if (n === 'begin') {
+      raw();
+      const j = tex.indexOf('\\end{bmatrix}', i), body = j < 0 ? tex.slice(i) : tex.slice(i, j);
+      i = j < 0 ? tex.length : j + '\\end{bmatrix}'.length;
+      const rows = body.split(/\\\\(?![a-zA-Z])/).map(r => r.split('&').map(e => speak(e)));
+      const said = rows.map(r => r.join(', '));
+      const list = said.length === 1 ? 'row ' + said[0] : 'rows ' + said.slice(0, -1).join('; ') + ' and ' + said[said.length - 1];
+      return {w: post(['the ' + rows.length + ' by ' + rows[0].length + ' matrix with ' + list + ',']), operand: true};
+    }
     if (n === 'binom') { const a = arg(), b = arg(); return {w: post([...a, 'choose', ...b]), operand: true}; }
     if (n === 'text' || n === 'mathrm' || n === 'mathbb') return {w: post([raw()]), operand: true};
     if (n === 'overline' || n === 'bar') return {w: post([...arg(), 'bar']), operand: true};
