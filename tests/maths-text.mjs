@@ -56,6 +56,12 @@ const CH = 'nsw-mat-adv-11-1-2';
   check(html === 'The axis is <span class="mxw"><math-span class="mx" role="img" aria-label="x equals negative b over 2 a">x = -\\frac{b}{2a}</math-span>,</span> so &lt;b&gt; stays text.' && ctx.loads === 1,
     'tx() makes a <math-span> with a role and its reading, keeps the comma after it on its line, escapes the words, and asks for MathLive', R);
   check(ctx.tx('No maths here, 2 < 3.') === 'No maths here, 2 &lt; 3.' && ctx.loads === 1, 'text with no maths is only escaped, and never asks for MathLive', R);
+  // A \text{} word goes to MathLive in braces, so it gets a space before = (MathLive gives it none otherwise), while its
+  // reading, Search and the spoken line still read the LaTeX as written.
+  const word = 'Daily rate \\(\\text{Daily rate} = \\text{annual rate} \\div 365\\) here.';
+  check(ctx.tx(word) === 'Daily rate <math-span class="mx" role="img" aria-label="Daily rate equals annual rate divided by 365">{\\text{Daily rate}} = {\\text{annual rate}} \\div 365</math-span> here.' &&
+    ctx.plainTx(word) === 'Daily rate Daily rate = annual rate ÷ 365 here.' && ctx.spoken(word) === 'Daily rate Daily rate equals annual rate divided by 365 here.',
+    'tx() gives MathLive each \\text{} word in braces, and the reading, Search and the spoken line are unchanged', R);
   check(ctx.plainTx('The axis is \\(x = -\\frac{b}{2a}\\).') === 'The axis is x = −(b)/(2a).' && ctx.spoken('So \\(y = 0\\).') === 'So y equals 0.', 'Search and the screen reader\'s line get plain words', R);
 }
 

@@ -131906,6 +131906,12 @@ const Sheet = (() => {
    tests/maths-text.mjs can run it with no browser. */
 const MX_SPLIT = /\\\((.+?)\\\)/;
 const hasMx = s => typeof s === 'string' && s.indexOf('\\(') >= 0;
+/* MathLive draws a word in \text{} with no space before a sign after it: \text{rate} = 5 shows as "rate= 5". In braces,
+   {\text{rate}}, the word counts as one piece of maths, so it gets the usual space either side of =, +, \times and the
+   rest, as in printed maths. mxDraw() adds those braces to the LaTeX MathLive is given; the point's text keeps its
+   LaTeX as written, and speak() and Search read that. tests/lib.mjs (onPage) and the review page
+   (content/review/index.html) use the same braces. */
+const mxDraw = t => t.replace(/\\text\{([^{}]*)\}/g, '{\\text{$1}}');
 let mathLiveLoad = null;
 function loadMathLive() {
   if (!mathLiveLoad) mathLiveLoad = new Promise((ok, fail) => {
@@ -131930,7 +131936,7 @@ function tx(s) {
     const open = before ? before[0] : '', close = after ? after[0] : '';
     parts[i - 1] = esc(parts[i - 1].slice(0, parts[i - 1].length - open.length));
     parts[i + 1] = parts[i + 1].slice(close.length);
-    const m = '<math-span class="mx" role="img" aria-label="' + esc(speak(parts[i])) + '">' + esc(parts[i]) + '</math-span>';
+    const m = '<math-span class="mx" role="img" aria-label="' + esc(speak(parts[i])) + '">' + esc(mxDraw(parts[i])) + '</math-span>';
     parts[i] = open || close ? '<span class="mxw">' + esc(open) + m + esc(close) + '</span>' : m;
   }
   parts[parts.length - 1] = esc(parts[parts.length - 1]);
