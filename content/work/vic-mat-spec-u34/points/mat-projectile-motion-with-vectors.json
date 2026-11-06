@@ -14,7 +14,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:48Z check: passed, cleared"
+  "2026-11-01T15:14:48Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -88,35 +89,72 @@
  "final": {
   "title": "Projectile motion with vectors",
   "card": [
-   "A projectile moves under gravity alone. Take i as horizontal and j as vertical (up), and ignore air resistance. Then acceleration is a = −g j, with g = 9.8 m/s².",
-   "Horizontal motion has no acceleration, so the horizontal velocity stays constant. Vertical velocity changes at a steady rate of −g.",
-   "For a launch from the origin with speed u at angle θ above the horizontal: r(t) = (u cos θ)t i + ((u sin θ)t − 4.9t²) j.",
-   "Example: a ball leaves the origin with velocity 12i + 20j m/s. Then r(t) = 12t i + (20t − 4.9t²) j. It lands when the j part is 0 again: 20t − 4.9t² = 0, so t = 20/4.9 ≈ 4.08 s."
+   "A projectile moves under gravity alone. Take \\(i\\) as horizontal and \\(j\\) as vertical (up), and ignore air resistance. Then acceleration is \\(a = -gj\\), with \\(g = 9.8\\ \\text{m/s}^{2}\\).",
+   "Horizontal motion has no acceleration, so the horizontal velocity stays constant. Vertical velocity changes at a steady rate of \\(-g\\).",
+   "For a launch from the origin with speed \\(u\\) at angle \\(\\theta\\) above the horizontal: \\(r(t) = (u \\cos \\theta)t\\,i + ((u \\sin \\theta)t - 4.9t^{2})j\\).",
+   "Example: a ball leaves the origin with velocity \\(12i + 20j\\) m/s. Then \\(r(t) = 12ti + (20t - 4.9t^{2})j\\). It lands when the \\(j\\) part is 0 again: \\(20t - 4.9t^{2} = 0\\), so \\(t = \\frac{20}{4.9} \\approx 4.08\\) s."
   ],
-  "remember": "Horizontal: constant velocity. Vertical: constant acceleration of −g.",
+  "remember": "Horizontal: constant velocity. Vertical: constant acceleration of \\(-g\\).",
   "a": {
-   "q": "A projectile is launched from the origin with velocity 15i + 10j m/s. Which is its position vector at time t seconds, in metres?",
+   "q": "A projectile is launched from the origin with velocity \\(15i + 10j\\) m/s. Which is its position vector at time \\(t\\) seconds, in metres?",
    "opts": [
-    "15t i + (10t − 4.9t²) j",
-    "15t i + (10t − 9.8t²) j",
-    "(15t − 4.9t²) i + 10t j",
-    "15t i + (10 − 4.9t²) j"
+    "\\(15ti + (10t - 4.9t^{2})j\\)",
+    "\\(15ti + (10t - 9.8t^{2})j\\)",
+    "\\((15t - 4.9t^{2})i + 10tj\\)",
+    "\\(15ti + (10 - 4.9t^{2})j\\)"
    ],
-   "why": "Horizontal velocity is constant, so the i part is 15t. The j part is 10t − ½gt² = 10t − 4.9t². Using 9.8t² forgets the half that comes from integrating the acceleration twice.",
-   "clue": "Gravity acts only on the j part, and the half matters."
+   "why": "Horizontal velocity is constant, so the \\(i\\) part is \\(15t\\). The \\(j\\) part is \\(10t - \\frac{1}{2}gt^{2} = 10t - 4.9t^{2}\\). Using \\(9.8t^{2}\\) forgets the half that comes from integrating the acceleration twice.",
+   "clue": "Gravity acts only on the \\(j\\) part, and the half matters."
   },
   "b": {
    "d": 3,
-   "q": "A ball is thrown from the origin with velocity 8i + 14.7j m/s. How far horizontally has it travelled when it returns to j = 0?",
+   "q": "A ball is thrown from the origin with velocity \\(8i + 14.7j\\) m/s. How far horizontally has it travelled when its \\(j\\) component is 0 again?",
    "opts": [
     "24 m",
     "12 m",
     "48 m",
     "3 m"
    ],
-   "why": "The j part is 14.7t − 4.9t² = 4.9t(3 − t), so it returns to 0 at t = 3 s. Horizontal distance is 8 × 3 = 24 m. Using t = 1.5 s, the time to the top, gives 12 m, which is only halfway.",
-   "clue": "Find t when the j part is zero again, then use the i part."
+   "why": "The \\(j\\) part is \\(14.7t - 4.9t^{2} = 4.9t(3 - t)\\), so it returns to 0 at \\(t = 3\\) s. Horizontal distance is \\(8 \\times 3 = 24\\) m. Using \\(t = 1.5\\) s, the time to the top, gives 12 m, which is only halfway.",
+   "clue": "Find \\(t\\) when the \\(j\\) part is zero again, then use the \\(i\\) part."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Projectile motion with vectors",
+   "card": [
+    "A projectile moves under gravity alone. Take i as horizontal and j as vertical (up), and ignore air resistance. Then acceleration is a = −g j, with g = 9.8 m/s².",
+    "Horizontal motion has no acceleration, so the horizontal velocity stays constant. Vertical velocity changes at a steady rate of −g.",
+    "For a launch from the origin with speed u at angle θ above the horizontal: r(t) = (u cos θ)t i + ((u sin θ)t − 4.9t²) j.",
+    "Example: a ball leaves the origin with velocity 12i + 20j m/s. Then r(t) = 12t i + (20t − 4.9t²) j. It lands when the j part is 0 again: 20t − 4.9t² = 0, so t = 20/4.9 ≈ 4.08 s."
+   ],
+   "remember": "Horizontal: constant velocity. Vertical: constant acceleration of −g.",
+   "a": {
+    "q": "A projectile is launched from the origin with velocity 15i + 10j m/s. Which is its position vector at time t seconds, in metres?",
+    "opts": [
+     "15t i + (10t − 4.9t²) j",
+     "15t i + (10t − 9.8t²) j",
+     "(15t − 4.9t²) i + 10t j",
+     "15t i + (10 − 4.9t²) j"
+    ],
+    "why": "Horizontal velocity is constant, so the i part is 15t. The j part is 10t − ½gt² = 10t − 4.9t². Using 9.8t² forgets the half that comes from integrating the acceleration twice.",
+    "clue": "Gravity acts only on the j part, and the half matters."
+   },
+   "b": {
+    "d": 3,
+    "q": "A ball is thrown from the origin with velocity 8i + 14.7j m/s. How far horizontally has it travelled when it returns to j = 0?",
+    "opts": [
+     "24 m",
+     "12 m",
+     "48 m",
+     "3 m"
+    ],
+    "why": "The j part is 14.7t − 4.9t² = 4.9t(3 − t), so it returns to 0 at t = 3 s. Horizontal distance is 8 × 3 = 24 m. Using t = 1.5 s, the time to the top, gives 12 m, which is only halfway.",
+    "clue": "Find t when the j part is zero again, then use the i part."
+   }
+  }
+ }
 }

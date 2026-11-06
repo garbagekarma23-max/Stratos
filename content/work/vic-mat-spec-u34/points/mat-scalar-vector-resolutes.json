@@ -20,7 +20,8 @@
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
-  "2026-11-02T04:35:42Z autoreview: cleared with the fix (b other, remember wording)"
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (b other, remember wording)",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -182,39 +183,82 @@
   "card": [
    [
     "Scalar resolute",
-    "The scalar resolute of a in the direction of b is a·b ÷ |b|. It is a number: the signed length of a along b. It is negative if a points against b."
+    "The scalar resolute of \\(a\\) in the direction of \\(b\\) is \\(\\frac{a \\cdot b}{|b|}\\). It is a number: the signed length of \\(a\\) along \\(b\\). It is negative if \\(a\\) points against \\(b\\)."
    ],
    [
     "Vector resolute",
-    "The vector resolute of a parallel to b is (a·b ÷ |b|²) b. It is a vector along b. Its length is the size of the scalar resolute."
+    "The vector resolute of \\(a\\) parallel to \\(b\\) is \\(\\left(\\frac{a \\cdot b}{|b|^{2}}\\right)b\\). It is a vector along \\(b\\). Its length is the size of the scalar resolute."
    ],
-   "The part of a perpendicular to b is a − (the vector resolute). Its scalar product with b is 0.",
-   "Example: a = 2i + 3j + 6k, b = i + 2j + 2k. Then a·b = 20 and |b| = 3. The scalar resolute is 20/3. The vector resolute is (20/9)(i + 2j + 2k)."
+   "The part of \\(a\\) perpendicular to \\(b\\) is \\(a - (\\text{the vector resolute})\\). Its scalar product with \\(b\\) is 0.",
+   "Example: \\(a = 2i + 3j + 6k\\), \\(b = i + 2j + 2k\\). Then \\(a \\cdot b = 20\\) and \\(|b| = 3\\). The scalar resolute is \\(\\frac{20}{3}\\). The vector resolute is \\(\\frac{20}{9}(i + 2j + 2k)\\)."
   ],
-  "remember": "The scalar resolute is a signed length along b. The vector resolute is that signed length times the unit vector of b.",
+  "remember": "The scalar resolute is a signed length along \\(b\\). The vector resolute is that signed length times the unit vector of \\(b\\).",
   "a": {
-   "q": "What is the scalar resolute of a = 3i + 2j + 2k in the direction of b = 2i + j + 2k?",
+   "q": "What is the scalar resolute of \\(a = 3i + 2j + 2k\\) in the direction of \\(b = 2i + j + 2k\\)?",
    "opts": [
     "4",
     "12",
-    "4/3",
-    "12/√17"
+    "\\(\\frac{4}{3}\\)",
+    "\\(\\frac{12}{\\sqrt{17}}\\)"
    ],
-   "why": "a·b = 6 + 2 + 4 = 12 and |b| = √(4 + 1 + 4) = 3, so the scalar resolute is 12 ÷ 3 = 4. Dividing by |b|² gives 4/3, which is the mistake of using the vector resolute's divisor.",
-   "clue": "Divide a·b by the length of b, the vector you project onto."
+   "why": "\\(a \\cdot b = 6 + 2 + 4 = 12\\) and \\(|b| = \\sqrt{4 + 1 + 4} = 3\\), so the scalar resolute is \\(12 \\div 3 = 4\\). Dividing by \\(|b|^{2}\\) gives \\(\\frac{4}{3}\\), which is the mistake of using the vector resolute's divisor.",
+   "clue": "Divide \\(a \\cdot b\\) by the length of \\(b\\), the vector you project onto."
   },
   "b": {
    "d": 3,
-   "q": "What is the vector resolute of a = i + 4j + 3k parallel to b = 2i − j + 2k?",
+   "q": "What is the vector resolute of \\(a = i + 4j + 3k\\) parallel to \\(b = 2i - j + 2k\\)?",
    "opts": [
-    "(8/9)i − (4/9)j + (8/9)k",
-    "(8/3)i − (4/3)j + (8/3)k",
-    "8i − 4j + 8k",
-    "(1/9)i + (40/9)j + (19/9)k"
+    "\\(\\frac{8}{9}i - \\frac{4}{9}j + \\frac{8}{9}k\\)",
+    "\\(\\frac{8}{3}i - \\frac{4}{3}j + \\frac{8}{3}k\\)",
+    "\\(8i - 4j + 8k\\)",
+    "\\(\\frac{1}{9}i + \\frac{40}{9}j + \\frac{19}{9}k\\)"
    ],
-   "why": "a·b = 2 − 4 + 6 = 4 and |b|² = 9, so the vector resolute is (4/9)(2i − j + 2k) = (8/9)i − (4/9)j + (8/9)k. Dividing by |b| instead of |b|² gives (8/3)i − (4/3)j + (8/3)k. The answer (1/9)i + (40/9)j + (19/9)k is the perpendicular part, a minus the resolute.",
-   "clue": "Divide by |b|², not |b|, then multiply by b."
+   "why": "\\(a \\cdot b = 2 - 4 + 6 = 4\\) and \\(|b|^{2} = 9\\), so the vector resolute is \\(\\frac{4}{9}(2i - j + 2k) = \\frac{8}{9}i - \\frac{4}{9}j + \\frac{8}{9}k\\). Dividing by \\(|b|\\) instead of \\(|b|^{2}\\) gives \\(\\frac{8}{3}i - \\frac{4}{3}j + \\frac{8}{3}k\\). The answer \\(\\frac{1}{9}i + \\frac{40}{9}j + \\frac{19}{9}k\\) is the perpendicular part, \\(a\\) minus the resolute.",
+   "clue": "Divide by \\(|b|^{2}\\), not \\(|b|\\), then multiply by \\(b\\)."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Scalar and vector resolutes",
+   "card": [
+    [
+     "Scalar resolute",
+     "The scalar resolute of a in the direction of b is a·b ÷ |b|. It is a number: the signed length of a along b. It is negative if a points against b."
+    ],
+    [
+     "Vector resolute",
+     "The vector resolute of a parallel to b is (a·b ÷ |b|²) b. It is a vector along b. Its length is the size of the scalar resolute."
+    ],
+    "The part of a perpendicular to b is a − (the vector resolute). Its scalar product with b is 0.",
+    "Example: a = 2i + 3j + 6k, b = i + 2j + 2k. Then a·b = 20 and |b| = 3. The scalar resolute is 20/3. The vector resolute is (20/9)(i + 2j + 2k)."
+   ],
+   "remember": "The scalar resolute is a signed length along b. The vector resolute is that signed length times the unit vector of b.",
+   "a": {
+    "q": "What is the scalar resolute of a = 3i + 2j + 2k in the direction of b = 2i + j + 2k?",
+    "opts": [
+     "4",
+     "12",
+     "4/3",
+     "12/√17"
+    ],
+    "why": "a·b = 6 + 2 + 4 = 12 and |b| = √(4 + 1 + 4) = 3, so the scalar resolute is 12 ÷ 3 = 4. Dividing by |b|² gives 4/3, which is the mistake of using the vector resolute's divisor.",
+    "clue": "Divide a·b by the length of b, the vector you project onto."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is the vector resolute of a = i + 4j + 3k parallel to b = 2i − j + 2k?",
+    "opts": [
+     "(8/9)i − (4/9)j + (8/9)k",
+     "(8/3)i − (4/3)j + (8/3)k",
+     "8i − 4j + 8k",
+     "(1/9)i + (40/9)j + (19/9)k"
+    ],
+    "why": "a·b = 2 − 4 + 6 = 4 and |b|² = 9, so the vector resolute is (4/9)(2i − j + 2k) = (8/9)i − (4/9)j + (8/9)k. Dividing by |b| instead of |b|² gives (8/3)i − (4/3)j + (8/3)k. The answer (1/9)i + (40/9)j + (19/9)k is the perpendicular part, a minus the resolute.",
+    "clue": "Divide by |b|², not |b|, then multiply by b."
+   }
+  }
+ }
 }

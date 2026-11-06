@@ -21,7 +21,8 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:08Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -94,12 +95,12 @@
  "final": {
   "title": "Radians, arcs and segments",
   "card": [
-   "One radian is the angle at the centre of a circle when the arc is as long as the radius. A half turn is π radians, so π radians = 180°.",
-   "To change degrees to radians, multiply by π/180. To change radians to degrees, multiply by 180/π.",
-   "With θ in radians, arc length = rθ and sector area = ½r²θ. These formulas only work when θ is in radians.",
-   "A segment is a sector with its triangle removed. The triangle has area ½r² sin θ, so segment area = ½r²(θ − sin θ). Example: r = 6 and θ = π/3 give arc length 2π and sector area 6π."
+   "One radian is the angle at the centre of a circle when the arc is as long as the radius. A half turn is \\(\\pi\\) radians, so \\(\\pi \\text{ radians} = 180^{\\circ}\\).",
+   "To change degrees to radians, multiply by \\(\\frac{\\pi}{180}\\). To change radians to degrees, multiply by \\(\\frac{180}{\\pi}\\).",
+   "With \\(\\theta\\) in radians, \\(\\text{arc length} = r\\theta\\) and \\(\\text{sector area} = \\frac{1}{2}r^{2}\\theta\\). These formulas only work when \\(\\theta\\) is in radians.",
+   "A segment is a sector with its triangle removed. The triangle has area \\(\\frac{1}{2}r^{2}\\sin\\theta\\), so \\(\\text{segment area} = \\frac{1}{2}r^{2}(\\theta - \\sin\\theta)\\). Example: \\(r = 6\\) and \\(\\theta = \\frac{\\pi}{3}\\) give arc length \\(2\\pi\\) and sector area \\(6\\pi\\)."
   ],
-  "remember": "Use radians in the formulas: arc = rθ, sector = ½r²θ, segment = sector − triangle.",
+  "remember": "Use radians in the formulas: \\(\\text{arc} = r\\theta\\), \\(\\text{sector} = \\frac{1}{2}r^{2}\\theta\\), \\(\\text{segment} = \\text{sector} - \\text{triangle}\\).",
   "a": {
    "q": "A sector of a circle has radius 5 cm and centre angle 2 radians. What is its arc length?",
    "opts": [
@@ -108,21 +109,58 @@
     "5 cm",
     "20 cm"
    ],
-   "why": "Arc length = rθ = 5 × 2 = 10 cm. The value 25 comes from the sector area formula ½r²θ, which gives an area in cm², not a length.",
+   "why": "\\(\\text{Arc length} = r\\theta = 5 \\times 2 = 10\\) cm. The value 25 comes from the sector area formula \\(\\frac{1}{2}r^{2}\\theta\\), which gives an area in \\(\\text{cm}^{2}\\), not a length.",
    "clue": "Multiply the radius by the angle in radians."
   },
   "b": {
    "d": 3,
-   "q": "A circle has radius 4 cm. A chord cuts off a segment with centre angle π/2. What is the area of the segment?",
+   "q": "A circle has radius 4 cm. A chord cuts off a segment with centre angle \\(\\frac{\\pi}{2}\\). What is the area of the segment?",
    "opts": [
-    "4π − 8 cm²",
-    "4π cm²",
-    "8π − 8 cm²",
-    "4π − 4 cm²"
+    "\\((4\\pi - 8)\\text{ cm}^{2}\\)",
+    "\\(4\\pi\\text{ cm}^{2}\\)",
+    "\\((8\\pi - 8)\\text{ cm}^{2}\\)",
+    "\\((4\\pi - 4)\\text{ cm}^{2}\\)"
    ],
-   "why": "Sector = ½ × 16 × π/2 = 4π. Triangle = ½ × 16 × sin(π/2) = 8. Segment = 4π − 8 cm². Choosing 4π gives the whole sector, which still includes the triangle.",
+   "why": "\\(\\text{Sector} = \\frac{1}{2} \\times 16 \\times \\frac{\\pi}{2} = 4\\pi\\). \\(\\text{Triangle} = \\frac{1}{2} \\times 16 \\times \\sin\\left(\\frac{\\pi}{2}\\right) = 8\\). \\(\\text{Segment} = (4\\pi - 8)\\text{ cm}^{2}\\). Choosing \\(4\\pi\\) gives the whole sector, which still includes the triangle.",
    "clue": "Take the triangle's area away from the sector's area."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Radians, arcs and segments",
+   "card": [
+    "One radian is the angle at the centre of a circle when the arc is as long as the radius. A half turn is π radians, so π radians = 180°.",
+    "To change degrees to radians, multiply by π/180. To change radians to degrees, multiply by 180/π.",
+    "With θ in radians, arc length = rθ and sector area = ½r²θ. These formulas only work when θ is in radians.",
+    "A segment is a sector with its triangle removed. The triangle has area ½r² sin θ, so segment area = ½r²(θ − sin θ). Example: r = 6 and θ = π/3 give arc length 2π and sector area 6π."
+   ],
+   "remember": "Use radians in the formulas: arc = rθ, sector = ½r²θ, segment = sector − triangle.",
+   "a": {
+    "q": "A sector of a circle has radius 5 cm and centre angle 2 radians. What is its arc length?",
+    "opts": [
+     "10 cm",
+     "25 cm",
+     "5 cm",
+     "20 cm"
+    ],
+    "why": "Arc length = rθ = 5 × 2 = 10 cm. The value 25 comes from the sector area formula ½r²θ, which gives an area in cm², not a length.",
+    "clue": "Multiply the radius by the angle in radians."
+   },
+   "b": {
+    "d": 3,
+    "q": "A circle has radius 4 cm. A chord cuts off a segment with centre angle π/2. What is the area of the segment?",
+    "opts": [
+     "4π − 8 cm²",
+     "4π cm²",
+     "8π − 8 cm²",
+     "4π − 4 cm²"
+    ],
+    "why": "Sector = ½ × 16 × π/2 = 4π. Triangle = ½ × 16 × sin(π/2) = 8. Segment = 4π − 8 cm². Choosing 4π gives the whole sector, which still includes the triangle.",
+    "clue": "Take the triangle's area away from the sector's area."
+   }
+  }
+ }
 }

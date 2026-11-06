@@ -18,7 +18,8 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
-  "2026-11-01T15:14:48Z check: passed, cleared"
+  "2026-11-01T15:14:48Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -98,41 +99,84 @@
  "final": {
   "title": "Vector calculus",
   "card": [
-   "A position vector r(t) gives where a particle is at time t. Write r(t) = x(t) i + y(t) j, with one component for each direction.",
+   "A position vector \\(r(t)\\) gives where a particle is at time \\(t\\). Write \\(r(t) = x(t)i + y(t)j\\), with one component for each direction.",
    [
     "Velocity",
-    "the derivative of position, v(t) = r'(t). Differentiate each component separately and keep the i and j parts."
+    "the derivative of position, \\(v(t) = r'(t)\\). Differentiate each component separately and keep the \\(i\\) and \\(j\\) parts."
    ],
    [
     "Acceleration",
-    "the derivative of velocity, a(t) = v'(t) = r''(t). Differentiate the velocity components once more."
+    "the derivative of velocity, \\(a(t) = v'(t) = r''(t)\\). Differentiate the velocity components once more."
    ],
-   "Example: r(t) = 3t² i + (2t − 1) j. Then v(t) = 6t i + 2 j, and a(t) = 6 i + 0 j. At t = 2, v = 12 i + 2 j."
+   "Example: \\(r(t) = 3t^{2}i + (2t - 1)j\\). Then \\(v(t) = 6ti + 2j\\), and \\(a(t) = 6i + 0j\\). At \\(t = 2\\), \\(v = 12i + 2j\\)."
   ],
-  "remember": "Differentiate each component of r to get v, and again to get a.",
+  "remember": "Differentiate each component of \\(r\\) to get \\(v\\), and again to get \\(a\\).",
   "a": {
-   "q": "A particle has position r(t) = 4t³ i + t² j. What is its velocity v(t)?",
+   "q": "A particle has position \\(r(t) = 4t^{3}i + t^{2}j\\). What is its velocity \\(v(t)\\)?",
    "opts": [
-    "12t² i + 2t j",
-    "12t² i + 2t",
-    "4t³ i + 2t j",
-    "24t i + 2 j"
+    "\\(12t^{2}i + 2tj\\)",
+    "\\(12t^{2}i + 2t\\)",
+    "\\(4t^{3}i + 2tj\\)",
+    "\\(24ti + 2j\\)"
    ],
-   "why": "Differentiate each component: 4t³ becomes 12t² and t² becomes 2t, so v = 12t² i + 2t j. The option 24t i + 2 j is the acceleration, found by differentiating twice.",
+   "why": "Differentiate each component: \\(4t^{3}\\) becomes \\(12t^{2}\\) and \\(t^{2}\\) becomes \\(2t\\), so \\(v = 12t^{2}i + 2tj\\). The option \\(24ti + 2j\\) is the acceleration, found by differentiating twice.",
    "clue": "Differentiate once, and do it to each component."
   },
   "b": {
    "d": 3,
-   "q": "A drone has position r(t) = (t³ − 3t) i + 5t² j. What is its acceleration at t = 2?",
+   "q": "A drone has position \\(r(t) = (t^{3} - 3t)i + 5t^{2}j\\). What is its acceleration at \\(t = 2\\)?",
    "opts": [
-    "12 i + 10 j",
-    "9 i + 20 j",
-    "12 i + 20 j",
-    "6 i + 10 j"
+    "\\(12i + 10j\\)",
+    "\\(9i + 20j\\)",
+    "\\(12i + 20j\\)",
+    "\\(6i + 10j\\)"
    ],
-   "why": "v(t) = (3t² − 3) i + 10t j, so a(t) = 6t i + 10 j. At t = 2, a = 12 i + 10 j. The option 9 i + 20 j is the velocity at t = 2, which comes from differentiating only once.",
-   "clue": "Differentiate twice, then substitute t = 2 at the end."
+   "why": "\\(v(t) = (3t^{2} - 3)i + 10tj\\), so \\(a(t) = 6ti + 10j\\). At \\(t = 2\\), \\(a = 12i + 10j\\). The option \\(9i + 20j\\) is the velocity at \\(t = 2\\), which comes from differentiating only once.",
+   "clue": "Differentiate twice, then substitute \\(t = 2\\) at the end."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Vector calculus",
+   "card": [
+    "A position vector r(t) gives where a particle is at time t. Write r(t) = x(t) i + y(t) j, with one component for each direction.",
+    [
+     "Velocity",
+     "the derivative of position, v(t) = r'(t). Differentiate each component separately and keep the i and j parts."
+    ],
+    [
+     "Acceleration",
+     "the derivative of velocity, a(t) = v'(t) = r''(t). Differentiate the velocity components once more."
+    ],
+    "Example: r(t) = 3t² i + (2t − 1) j. Then v(t) = 6t i + 2 j, and a(t) = 6 i + 0 j. At t = 2, v = 12 i + 2 j."
+   ],
+   "remember": "Differentiate each component of r to get v, and again to get a.",
+   "a": {
+    "q": "A particle has position r(t) = 4t³ i + t² j. What is its velocity v(t)?",
+    "opts": [
+     "12t² i + 2t j",
+     "12t² i + 2t",
+     "4t³ i + 2t j",
+     "24t i + 2 j"
+    ],
+    "why": "Differentiate each component: 4t³ becomes 12t² and t² becomes 2t, so v = 12t² i + 2t j. The option 24t i + 2 j is the acceleration, found by differentiating twice.",
+    "clue": "Differentiate once, and do it to each component."
+   },
+   "b": {
+    "d": 3,
+    "q": "A drone has position r(t) = (t³ − 3t) i + 5t² j. What is its acceleration at t = 2?",
+    "opts": [
+     "12 i + 10 j",
+     "9 i + 20 j",
+     "12 i + 20 j",
+     "6 i + 10 j"
+    ],
+    "why": "v(t) = (3t² − 3) i + 10t j, so a(t) = 6t i + 10 j. At t = 2, a = 12 i + 10 j. The option 9 i + 20 j is the velocity at t = 2, which comes from differentiating only once.",
+    "clue": "Differentiate twice, then substitute t = 2 at the end."
+   }
+  }
+ }
 }

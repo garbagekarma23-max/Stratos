@@ -8,7 +8,8 @@
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:08Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 2,
@@ -75,38 +76,78 @@
  "final": {
   "title": "Magnitude and unit vectors",
   "card": [
-   "The magnitude of a vector is its length. It is written |v|. For v = ai + bj, |v| = √(a² + b²), from Pythagoras' theorem.",
-   "Example: for v = 3i − 4j, |v| = √(3² + (−4)²) = √(9 + 16) = √25 = 5. Squaring removes the minus sign.",
+   "The magnitude of a vector is its length. It is written \\(|v|\\). For \\(v = ai + bj\\), \\(|v| = \\sqrt{a^{2} + b^{2}}\\), from Pythagoras' theorem.",
+   "Example: for \\(v = 3i - 4j\\), \\(|v| = \\sqrt{3^{2} + (-4)^{2}}\\) \\(= \\sqrt{9 + 16} = \\sqrt{25} = 5\\). Squaring removes the minus sign.",
    [
     "Unit vector",
     "a vector with magnitude 1. It shows direction only."
    ],
-   "To find the unit vector in the direction of v, divide v by |v|. For v = 3i − 4j, the unit vector is (3/5)i − (4/5)j."
+   "To find the unit vector in the direction of \\(v\\), divide \\(v\\) by \\(|v|\\). For \\(v = 3i - 4j\\), the unit vector is \\(\\frac{3}{5}i - \\frac{4}{5}j\\)."
   ],
-  "remember": "Magnitude is √(a² + b²). Divide a vector by its magnitude to get a unit vector.",
+  "remember": "Magnitude is \\(\\sqrt{a^{2} + b^{2}}\\). Divide a vector by its magnitude to get a unit vector.",
   "a": {
-   "q": "What is the magnitude of the vector 5i − 12j?",
+   "q": "What is the magnitude of the vector \\(5i - 12j\\)?",
    "opts": [
     "13",
     "7",
     "17",
-    "−13"
+    "\\(-13\\)"
    ],
-   "why": "|v| = √(5² + (−12)²) = √(25 + 144) = √169 = 13. Adding 5 and 12 to get 17 skips the squaring and the square root. A magnitude is a length, so it is never negative.",
+   "why": "\\(|v| = \\sqrt{5^{2} + (-12)^{2}}\\) \\(= \\sqrt{25 + 144} = \\sqrt{169} = 13\\). Adding 5 and 12 to get 17 skips the squaring and the square root. A magnitude is a length, so it is never negative.",
    "clue": "Square each component, add, then take the square root."
   },
   "b": {
    "d": 3,
-   "q": "Which is the unit vector in the same direction as 6i + 8j?",
+   "q": "Which is the unit vector in the same direction as \\(6i + 8j\\)?",
    "opts": [
-    "(3/5)i + (4/5)j",
-    "(1/6)i + (1/8)j",
-    "(3/7)i + (4/7)j",
-    "(6/10)i − (8/10)j"
+    "\\(\\frac{3}{5}i + \\frac{4}{5}j\\)",
+    "\\(\\frac{1}{6}i + \\frac{1}{8}j\\)",
+    "\\(\\frac{3}{7}i + \\frac{4}{7}j\\)",
+    "\\(\\frac{6}{10}i - \\frac{8}{10}j\\)"
    ],
-   "why": "|6i + 8j| = √(36 + 64) = 10, so divide each component by 10 to get (3/5)i + (4/5)j. Check: (3/5)² + (4/5)² = 9/25 + 16/25 = 1. Dividing by 14, the sum of the components, gives (3/7)i + (4/7)j, which has magnitude less than 1.",
+   "why": "\\(|6i + 8j| = \\sqrt{36 + 64} = 10\\), so divide each component by 10 to get \\(\\frac{3}{5}i + \\frac{4}{5}j\\). Check: \\(\\left(\\frac{3}{5}\\right)^{2} + \\left(\\frac{4}{5}\\right)^{2} = \\frac{9}{25} + \\frac{16}{25} = 1\\). Dividing by 14, the sum of the components, gives \\(\\frac{3}{7}i + \\frac{4}{7}j\\), which has magnitude less than 1.",
    "clue": "Find the magnitude first, then divide both components by it."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Magnitude and unit vectors",
+   "card": [
+    "The magnitude of a vector is its length. It is written |v|. For v = ai + bj, |v| = √(a² + b²), from Pythagoras' theorem.",
+    "Example: for v = 3i − 4j, |v| = √(3² + (−4)²) = √(9 + 16) = √25 = 5. Squaring removes the minus sign.",
+    [
+     "Unit vector",
+     "a vector with magnitude 1. It shows direction only."
+    ],
+    "To find the unit vector in the direction of v, divide v by |v|. For v = 3i − 4j, the unit vector is (3/5)i − (4/5)j."
+   ],
+   "remember": "Magnitude is √(a² + b²). Divide a vector by its magnitude to get a unit vector.",
+   "a": {
+    "q": "What is the magnitude of the vector 5i − 12j?",
+    "opts": [
+     "13",
+     "7",
+     "17",
+     "−13"
+    ],
+    "why": "|v| = √(5² + (−12)²) = √(25 + 144) = √169 = 13. Adding 5 and 12 to get 17 skips the squaring and the square root. A magnitude is a length, so it is never negative.",
+    "clue": "Square each component, add, then take the square root."
+   },
+   "b": {
+    "d": 3,
+    "q": "Which is the unit vector in the same direction as 6i + 8j?",
+    "opts": [
+     "(3/5)i + (4/5)j",
+     "(1/6)i + (1/8)j",
+     "(3/7)i + (4/7)j",
+     "(6/10)i − (8/10)j"
+    ],
+    "why": "|6i + 8j| = √(36 + 64) = 10, so divide each component by 10 to get (3/5)i + (4/5)j. Check: (3/5)² + (4/5)² = 9/25 + 16/25 = 1. Dividing by 14, the sum of the components, gives (3/7)i + (4/7)j, which has magnitude less than 1.",
+    "clue": "Find the magnitude first, then divide both components by it."
+   }
+  }
+ }
 }

@@ -16,7 +16,8 @@
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
-  "2026-11-02T04:35:42Z autoreview: cleared with the fix (remember wording)"
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (remember wording)",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -152,35 +153,72 @@
  "final": {
   "title": "Factorising polynomials over C",
   "card": [
-   "The fundamental theorem of algebra says a polynomial of degree n has exactly n roots over C, counting repeated roots as many times as they occur.",
-   "So over C every polynomial of degree n factorises fully into n linear factors. If a is a root, then (z − a) is a factor.",
-   "Example: z² + 4 has roots 2i and −2i, because (2i)² = −4. So z² + 4 = (z − 2i)(z + 2i).",
-   "A repeated root counts each time. In (z − 3)²(z + 1), the root 3 is counted twice, so the polynomial has 3 roots and degree 3."
+   "The fundamental theorem of algebra says a polynomial of degree \\(n\\) has exactly \\(n\\) roots over \\(\\mathbb{C}\\), counting repeated roots as many times as they occur.",
+   "So over \\(\\mathbb{C}\\) every polynomial of degree \\(n\\) factorises fully into \\(n\\) linear factors. If \\(a\\) is a root, then \\((z - a)\\) is a factor.",
+   "Example: \\(z^{2} + 4\\) has roots \\(2i\\) and \\(-2i\\), because \\((2i)^{2} = -4\\). So \\(z^{2} + 4 = (z - 2i)(z + 2i)\\).",
+   "A repeated root counts each time. In \\((z - 3)^{2}(z + 1)\\), the root 3 is counted twice, so the polynomial has 3 roots and degree 3."
   ],
-  "remember": "Degree n means n linear factors over C, one for each root, counting repeats.",
+  "remember": "Degree \\(n\\) means \\(n\\) linear factors over \\(\\mathbb{C}\\), one for each root, counting repeats.",
   "a": {
-   "q": "Which is the full factorisation of z² + 9 over C?",
+   "q": "Which is the full factorisation of \\(z^{2} + 9\\) over \\(\\mathbb{C}\\)?",
    "opts": [
-    "(z − 3i)(z + 3i)",
-    "(z − 3)(z + 3)",
-    "(z − 9i)(z + 9i)",
-    "(z + 3i)²"
+    "\\((z - 3i)(z + 3i)\\)",
+    "\\((z - 3)(z + 3)\\)",
+    "\\((z - 9i)(z + 9i)\\)",
+    "\\((z + 3i)^{2}\\)"
    ],
-   "why": "The roots satisfy z² = −9, so z = 3i or z = −3i, giving (z − 3i)(z + 3i). (z − 3)(z + 3) expands to z² − 9, which is a sign error.",
-   "clue": "Solve z² = −9, then write one factor for each root."
+   "why": "The roots satisfy \\(z^{2} = -9\\), so \\(z = 3i\\) or \\(z = -3i\\), giving \\((z - 3i)(z + 3i)\\). \\((z - 3)(z + 3)\\) expands to \\(z^{2} - 9\\), which is a sign error.",
+   "clue": "Solve \\(z^{2} = -9\\), then write one factor for each root."
   },
   "b": {
    "d": 3,
-   "q": "P(z) = (z − 2)³(z + i) is a polynomial. How many roots does it have over C, counting repeats?",
+   "q": "\\(P(z) = (z - 2)^{3}(z + i)\\) is a polynomial. How many roots does it have over \\(\\mathbb{C}\\), counting repeats?",
    "opts": [
     "4",
     "2",
     "3",
     "5"
    ],
-   "why": "The factor (z − 2) appears three times and (z + i) once, so the roots are counted 3 + 1 = 4. This matches the degree, which is 4. Counting only distinct roots gives 2, which ignores the repeats.",
+   "why": "The factor \\((z - 2)\\) appears three times and \\((z + i)\\) once, so the roots are counted \\(3 + 1 = 4\\). This matches the degree, which is 4. Counting only distinct roots gives 2, which ignores the repeats.",
    "clue": "Add up the powers on all the linear factors."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Factorising polynomials over C",
+   "card": [
+    "The fundamental theorem of algebra says a polynomial of degree n has exactly n roots over C, counting repeated roots as many times as they occur.",
+    "So over C every polynomial of degree n factorises fully into n linear factors. If a is a root, then (z − a) is a factor.",
+    "Example: z² + 4 has roots 2i and −2i, because (2i)² = −4. So z² + 4 = (z − 2i)(z + 2i).",
+    "A repeated root counts each time. In (z − 3)²(z + 1), the root 3 is counted twice, so the polynomial has 3 roots and degree 3."
+   ],
+   "remember": "Degree n means n linear factors over C, one for each root, counting repeats.",
+   "a": {
+    "q": "Which is the full factorisation of z² + 9 over C?",
+    "opts": [
+     "(z − 3i)(z + 3i)",
+     "(z − 3)(z + 3)",
+     "(z − 9i)(z + 9i)",
+     "(z + 3i)²"
+    ],
+    "why": "The roots satisfy z² = −9, so z = 3i or z = −3i, giving (z − 3i)(z + 3i). (z − 3)(z + 3) expands to z² − 9, which is a sign error.",
+    "clue": "Solve z² = −9, then write one factor for each root."
+   },
+   "b": {
+    "d": 3,
+    "q": "P(z) = (z − 2)³(z + i) is a polynomial. How many roots does it have over C, counting repeats?",
+    "opts": [
+     "4",
+     "2",
+     "3",
+     "5"
+    ],
+    "why": "The factor (z − 2) appears three times and (z + i) once, so the roots are counted 3 + 1 = 4. This matches the degree, which is 4. Counting only distinct roots gives 2, which ignores the repeats.",
+    "clue": "Add up the powers on all the linear factors."
+   }
+  }
+ }
 }

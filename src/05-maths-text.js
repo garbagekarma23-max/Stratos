@@ -47,7 +47,7 @@ const spoken = s => hasMx(s) ? String(s).split(MX_SPLIT).map((part, i) => i % 2 
 /* A piece of LaTeX read aloud, the way a teacher in Australia would say it. It knows the commands content/latex.mjs
    allows (COMMANDS there), so every piece the content check passes has a reading. */
 const SPEAK = {le: 'is less than or equal to', leq: 'is less than or equal to', ge: 'is greater than or equal to', geq: 'is greater than or equal to',
-  ne: 'is not equal to', neq: 'is not equal to', approx: 'is approximately equal to', equiv: 'is equivalent to', lt: 'is less than', gt: 'is greater than',
+  ne: 'is not equal to', neq: 'is not equal to', approx: 'is approximately equal to', sim: 'is distributed as', equiv: 'is equivalent to', lt: 'is less than', gt: 'is greater than',
   pm: 'plus or minus', mp: 'minus or plus', times: 'times', cdot: 'times', div: 'divided by', to: 'approaches', rightarrow: 'gives', Rightarrow: 'implies',
   implies: 'implies', iff: 'if and only if', leftarrow: 'from', Leftarrow: 'is implied by', leftrightarrow: 'if and only if', in: 'is in', notin: 'is not in',
   subset: 'is a subset of', subseteq: 'is a subset of', cup: 'union', cap: 'intersection', emptyset: 'the empty set', varnothing: 'the empty set',
@@ -62,6 +62,8 @@ const SAY_CHAR = {'+': 'plus', '=': 'equals', '<': 'is less than', '>': 'is grea
 function speak(tex) {
   /* nCr written as {}^{n}C_{r} is read as n choose r, and a number's thousands comma {,} is part of the number. */
   tex = tex.replace(/\{\}\^\{([^{}]+)\}C_\{([^{}]+)\}/g, '\\binom{$1}{$2}').replace(/(\d)\{,\}(?=\d)/g, '$1,');
+  /* A sign on its own between words, as in "highest score \(-\) lowest score", takes one thing from another. */
+  if (tex.trim() === '-') return 'minus';
   let i = 0;
   const sp = () => { while (tex[i] === ' ') i++; };
   const raw = () => { sp(); if (tex[i] !== '{') return ''; const j = tex.indexOf('}', i); const t = tex.slice(i + 1, j); i = j + 1; return t; };
@@ -97,7 +99,10 @@ function speak(tex) {
     let m = /^\d+(?:,\d{3})*(?:\.\d+)?/.exec(tex.slice(i));
     if (m) { i += m[0].length; return {w: post([m[0]]), operand: true}; }
     if (/[a-zA-Z]/.test(c)) { i++; return {w: post([c]), operand: true}; }
-    if (c === '{') { i++; const w = run('}'); i++; return {w: post(w), operand: w.length > 0}; }
+    /* {-} is a minus sign kept tight to what is around it (UTC{-}5), and an empty {} before a sign makes it take one thing
+       from another, as LaTeX does: both read "minus". */
+    if (tex.startsWith('{-}', i)) { i += 3; return {w: ['minus'], operand: false}; }
+    if (c === '{') { i++; const w = run('}'); i++; return {w: post(w), operand: true}; }
     if (c === '-') { i++; return {w: [operand ? 'minus' : 'negative'], operand: false}; }
     if (c === '|') { i++; const w = run('|'); i++; return {w: post(['the absolute value of', ...end(w, ', end absolute value')]), operand: true}; }
     if (c === ')' || c === ']') { i++; return {w: post([SAY_CHAR[c]]), operand: true}; }
@@ -146,7 +151,7 @@ function speak(tex) {
 
 /* LaTeX as plain characters, for Search: \frac{-b}{2a} becomes (−b)/(2a), x^{2} becomes x^2. */
 function mxPlain(t) {
-  const SYM = {le: '≤', ge: '≥', ne: '≠', pm: '±', times: '×', div: '÷', pi: 'π', theta: 'θ', infty: '∞', to: '→', cdot: '·', circ: '°', approx: '≈', int: '∫', sum: 'Σ', Delta: 'Δ'};
+  const SYM = {le: '≤', ge: '≥', ne: '≠', pm: '±', times: '×', div: '÷', pi: 'π', theta: 'θ', infty: '∞', to: '→', cdot: '·', circ: '°', approx: '≈', sim: '~', int: '∫', sum: 'Σ', Delta: 'Δ'};
   let out = t.replace(/\\left|\\right|\\[,;!]|\\quad/g, ' ').replace(/\\(?:text|mathrm)\{([^{}]*)\}/g, '$1');
   for (let n = 0; n < 6; n++) out = out.replace(/\\[dt]?frac\{([^{}]*)\}\{([^{}]*)\}/g, '($1)/($2)').replace(/\\sqrt\{([^{}]*)\}/g, '√($1)');
   return out.replace(/\\([a-zA-Z]+)/g, (m, w) => SYM[w] || w).replace(/\\(.)/g, '$1').replace(/[{}]/g, '').replace(/-/g, '−').replace(/\s+/g, ' ').trim();

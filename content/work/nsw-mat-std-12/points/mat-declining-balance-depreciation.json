@@ -8,7 +8,8 @@
   "2026-10-29T12:14:27Z match: none",
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
-  "2026-10-29T12:39:10Z check: passed, cleared"
+  "2026-10-29T12:39:10Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -79,11 +80,11 @@
   "title": "Declining balance depreciation",
   "card": [
    "Depreciation is the fall in an asset's value over time. Declining balance depreciation takes off a fixed percentage of the asset's current value each year.",
-   "S = V₀(1 − r)ⁿ. S is the salvage value (the value after n years), V₀ is the starting value, r is the yearly rate as a decimal and n is the number of years.",
+   "\\(S = V_{0}(1 - r)^{n}\\). \\(S\\) is the salvage value (the value after \\(n\\) years), \\(V_{0}\\) is the starting value, \\(r\\) is the yearly rate as a decimal and \\(n\\) is the number of years.",
    "The percentage is taken from a smaller value each year, so the dollar loss gets smaller each year.",
-   "Example: a $20 000 machine loses 10% a year for 3 years. S = 20 000 × (1 − 0.10)³ = 20 000 × 0.9³ = 20 000 × 0.729 = $14 580."
+   "Example: a $20 000 machine loses 10% a year for 3 years. \\(S = 20\\,000 \\times (1 - 0.10)^{3}\\), which is \\(20\\,000 \\times 0.9^{3}\\), or \\(20\\,000 \\times 0.729 = \\$14\\,580\\)."
   ],
-  "remember": "Multiply by (1 − r) once for each year. The value falls, but the rate stays the same.",
+  "remember": "Multiply by \\((1 - r)\\) once for each year. The value falls, but the rate stays the same.",
   "a": {
    "q": "A van is worth $40 000 and loses 15% of its value each year. What is its value after 2 years?",
    "opts": [
@@ -92,7 +93,7 @@
     "$34 000",
     "$27 100"
    ],
-   "why": "S = 40 000 × 0.85² = 40 000 × 0.7225 = $28 900. The value $28 000 comes from taking 15% of $40 000 off each year, which ignores that the percentage applies to the smaller current value.",
+   "why": "\\(S = 40\\,000 \\times 0.85^{2}\\), which is \\(40\\,000 \\times 0.7225 = \\$28\\,900\\). The value $28 000 comes from taking 15% of $40 000 off each year, which ignores that the percentage applies to the smaller current value.",
    "clue": "Multiply by 0.85 twice."
   },
   "b": {
@@ -104,9 +105,46 @@
     "$1280",
     "$1200"
    ],
-   "why": "S = 2000 × 0.8³ = 2000 × 0.512 = $1024. The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
-   "clue": "The factor each year is 1 − 0.20, used three times."
+   "why": "\\(S = 2000 \\times 0.8^{3} = 2000 \\times 0.512 = \\$1024\\). The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+   "clue": "The factor each year is \\(1 - 0.20\\), used three times."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Declining balance depreciation",
+   "card": [
+    "Depreciation is the fall in an asset's value over time. Declining balance depreciation takes off a fixed percentage of the asset's current value each year.",
+    "S = V₀(1 − r)ⁿ. S is the salvage value (the value after n years), V₀ is the starting value, r is the yearly rate as a decimal and n is the number of years.",
+    "The percentage is taken from a smaller value each year, so the dollar loss gets smaller each year.",
+    "Example: a $20 000 machine loses 10% a year for 3 years. S = 20 000 × (1 − 0.10)³ = 20 000 × 0.9³ = 20 000 × 0.729 = $14 580."
+   ],
+   "remember": "Multiply by (1 − r) once for each year. The value falls, but the rate stays the same.",
+   "a": {
+    "q": "A van is worth $40 000 and loses 15% of its value each year. What is its value after 2 years?",
+    "opts": [
+     "$28 900",
+     "$28 000",
+     "$34 000",
+     "$27 100"
+    ],
+    "why": "S = 40 000 × 0.85² = 40 000 × 0.7225 = $28 900. The value $28 000 comes from taking 15% of $40 000 off each year, which ignores that the percentage applies to the smaller current value.",
+    "clue": "Multiply by 0.85 twice."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya's laptop cost $2000 and depreciates by 20% each year on the declining balance. What is its value after 3 years?",
+    "opts": [
+     "$1024",
+     "$800",
+     "$1280",
+     "$1200"
+    ],
+    "why": "S = 2000 × 0.8³ = 2000 × 0.512 = $1024. The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+    "clue": "The factor each year is 1 − 0.20, used three times."
+   }
+  }
+ }
 }

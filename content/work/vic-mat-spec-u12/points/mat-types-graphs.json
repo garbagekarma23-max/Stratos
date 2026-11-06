@@ -31,7 +31,8 @@
   "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:34Z write: failed the content check, writing again",
   "2026-11-01T08:33:52Z write: done",
-  "2026-11-01T08:42:07Z check: passed, cleared"
+  "2026-11-01T08:42:07Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -124,7 +125,7 @@
    ],
    [
     "Complete",
-    "every pair of vertices is joined by an edge. Kn has n vertices and n(n − 1)/2 edges. K5 has 5 × 4 ÷ 2 = 10 edges."
+    "every pair of vertices is joined by an edge. \\(K_{n}\\) has \\(n\\) vertices and \\(\\frac{n(n - 1)}{2}\\) edges. \\(K_{5}\\) has \\(5 \\times 4 \\div 2 = 10\\) edges."
    ],
    [
     "Regular",
@@ -144,7 +145,7 @@
     "12",
     "36"
    ],
-   "why": "K6 has 6 × 5 ÷ 2 = 15 edges. Choosing 6 × 5 = 30 forgets that each edge is counted twice, once from each end.",
+   "why": "\\(K_{6}\\) has \\(6 \\times 5 \\div 2 = 15\\) edges. Choosing \\(6 \\times 5 = 30\\) forgets that each edge is counted twice, once from each end.",
    "clue": "Count each edge once, not from both ends."
   },
   "b": {
@@ -156,9 +157,58 @@
     "10",
     "5"
    ],
-   "why": "K5 has 5 × 4 ÷ 2 = 10 edges. The graph and its complement together make K5, so the complement has 10 − 4 = 6 edges. Giving 4 wrongly treats the complement as having the same edges.",
+   "why": "\\(K_{5}\\) has \\(5 \\times 4 \\div 2 = 10\\) edges. The graph and its complement together make \\(K_{5}\\), so the complement has \\(10 - 4 = 6\\) edges. Giving 4 wrongly treats the complement as having the same edges.",
    "clue": "Find the edges of the complete graph on 5 vertices first."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Types of graphs",
+   "card": [
+    [
+     "Simple",
+     "a graph with no loops and no more than one edge between any two vertices. Every graph here is simple."
+    ],
+    [
+     "Complete",
+     "every pair of vertices is joined by an edge. Kn has n vertices and n(n − 1)/2 edges. K5 has 5 × 4 ÷ 2 = 10 edges."
+    ],
+    [
+     "Regular",
+     "every vertex has the same degree. A regular graph with degree 3 is called 3-regular."
+    ],
+    [
+     "Complement",
+     "the complement of a simple graph has the same vertices and exactly the edges the graph lacks. A graph and its complement together make a complete graph."
+    ]
+   ],
+   "remember": "A complete graph has every possible edge. The complement has exactly the edges that are missing.",
+   "a": {
+    "q": "A simple graph has 6 vertices and is complete. How many edges does it have?",
+    "opts": [
+     "15",
+     "30",
+     "12",
+     "36"
+    ],
+    "why": "K6 has 6 × 5 ÷ 2 = 15 edges. Choosing 6 × 5 = 30 forgets that each edge is counted twice, once from each end.",
+    "clue": "Count each edge once, not from both ends."
+   },
+   "b": {
+    "d": 3,
+    "q": "A simple graph has 5 vertices and 4 edges. What is the number of edges in its complement?",
+    "opts": [
+     "6",
+     "4",
+     "10",
+     "5"
+    ],
+    "why": "K5 has 5 × 4 ÷ 2 = 10 edges. The graph and its complement together make K5, so the complement has 10 − 4 = 6 edges. Giving 4 wrongly treats the complement as having the same edges.",
+    "clue": "Find the edges of the complete graph on 5 vertices first."
+   }
+  }
+ }
 }

@@ -28,7 +28,8 @@
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
-  "2026-11-02T04:35:42Z autoreview: cleared with the fix (b wording)"
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (b wording)",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -164,35 +165,72 @@
  "final": {
   "title": "Integration by parts",
   "card": [
-   "Integration by parts is used when the integrand is a product that substitution cannot simplify. The rule is ∫u dv = uv − ∫v du, where du is the derivative of u times dx, and v is the integral of dv.",
-   "Split the integrand into two parts. Call one part u, which you differentiate, and the other dv, which you integrate. Choose u so that du is simpler than u.",
-   "Example: ∫x e^x dx. Let u = x and dv = e^x dx. Then du = dx and v = e^x.",
-   "Put these in the rule: ∫x e^x dx = x e^x − ∫e^x dx = x e^x − e^x + c."
+   "Integration by parts is used when the integrand is a product that substitution cannot simplify. The rule is \\(\\int u \\, dv = uv - \\int v \\, du\\), where \\(du\\) is the derivative of \\(u\\) times \\(dx\\), and \\(v\\) is the integral of \\(dv\\).",
+   "Split the integrand into two parts. Call one part \\(u\\), which you differentiate, and the other \\(dv\\), which you integrate. Choose \\(u\\) so that \\(du\\) is simpler than \\(u\\).",
+   "Example: \\(\\int x e^{x} \\, dx\\). Let \\(u = x\\) and \\(dv = e^{x} \\, dx\\). Then \\(du = dx\\) and \\(v = e^{x}\\).",
+   "Put these in the rule: \\(\\int x e^{x} \\, dx = x e^{x} - \\int e^{x} \\, dx = x e^{x} - e^{x} + c\\)."
   ],
-  "remember": "∫u dv = uv − ∫v du. Pick u so that differentiating it makes it simpler.",
+  "remember": "\\(\\int u \\, dv = uv - \\int v \\, du\\). Pick \\(u\\) so that differentiating it makes it simpler.",
   "a": {
-   "q": "For ∫x e^x dx, we set u = x and dv = e^x dx. What is the integral ∫v du that must be subtracted from uv?",
+   "q": "For \\(\\int x e^{x} \\, dx\\), we set \\(u = x\\) and \\(dv = e^{x} \\, dx\\). What is the integral \\(\\int v \\, du\\) that must be subtracted from \\(uv\\)?",
    "opts": [
-    "∫e^x dx",
-    "∫x e^x dx",
-    "∫x dx",
-    "∫(x²/2) e^x dx"
+    "\\(\\int e^{x} \\, dx\\)",
+    "\\(\\int x e^{x} \\, dx\\)",
+    "\\(\\int x \\, dx\\)",
+    "\\(\\int \\frac{x^{2}}{2} e^{x} \\, dx\\)"
    ],
-   "why": "Here du = dx and v = e^x, so v du = e^x dx. Using ∫x e^x dx again would just repeat the original problem, because the rule subtracts the integral of v du, not of u dv.",
-   "clue": "Find v and du first, then multiply them."
+   "why": "Here \\(du = dx\\) and \\(v = e^{x}\\), so \\(v \\, du = e^{x} \\, dx\\). Using \\(\\int x e^{x} \\, dx\\) again would just repeat the original problem, because the rule subtracts the integral of \\(v \\, du\\), not of \\(u \\, dv\\).",
+   "clue": "Find \\(v\\) and \\(du\\) first, then multiply them."
   },
   "b": {
    "d": 3,
-   "q": "Using integration by parts with u = x and dv = cos x dx, what is ∫x cos x dx?",
+   "q": "Using integration by parts with \\(u = x\\) and \\(dv = \\cos x \\, dx\\), what is \\(\\int x \\cos x \\, dx\\)?",
    "opts": [
-    "x sin x + cos x + c",
-    "x sin x − cos x + c",
-    "x sin x + sin x + c",
-    "−x sin x + cos x + c"
+    "\\(x \\sin x + \\cos x + c\\)",
+    "\\(x \\sin x - \\cos x + c\\)",
+    "\\(x \\sin x + \\sin x + c\\)",
+    "\\(-x \\sin x + \\cos x + c\\)"
    ],
-   "why": "Here du = dx and v = sin x, so ∫x cos x dx = x sin x − ∫sin x dx. Since ∫sin x dx = −cos x, this gives x sin x + cos x + c. The option with −cos x comes from forgetting that subtracting −cos x gives +cos x. Check: the derivative of x sin x + cos x is sin x + x cos x − sin x = x cos x.",
-   "clue": "The integral of sin x is −cos x, and the rule subtracts it."
+   "why": "Here \\(du = dx\\) and \\(v = \\sin x\\), so \\(\\int x \\cos x \\, dx = x \\sin x - \\int \\sin x \\, dx\\). Since \\(\\int \\sin x \\, dx = -\\cos x\\), this gives \\(x \\sin x + \\cos x + c\\). The option with \\(-\\cos x\\) comes from forgetting that subtracting \\(-\\cos x\\) gives \\(+\\cos x\\). Check: the derivative of \\(x \\sin x + \\cos x\\) is \\(\\sin x + x \\cos x - \\sin x = x \\cos x\\).",
+   "clue": "The integral of \\(\\sin x\\) is \\(-\\cos x\\), and the rule subtracts it."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Integration by parts",
+   "card": [
+    "Integration by parts is used when the integrand is a product that substitution cannot simplify. The rule is ∫u dv = uv − ∫v du, where du is the derivative of u times dx, and v is the integral of dv.",
+    "Split the integrand into two parts. Call one part u, which you differentiate, and the other dv, which you integrate. Choose u so that du is simpler than u.",
+    "Example: ∫x e^x dx. Let u = x and dv = e^x dx. Then du = dx and v = e^x.",
+    "Put these in the rule: ∫x e^x dx = x e^x − ∫e^x dx = x e^x − e^x + c."
+   ],
+   "remember": "∫u dv = uv − ∫v du. Pick u so that differentiating it makes it simpler.",
+   "a": {
+    "q": "For ∫x e^x dx, we set u = x and dv = e^x dx. What is the integral ∫v du that must be subtracted from uv?",
+    "opts": [
+     "∫e^x dx",
+     "∫x e^x dx",
+     "∫x dx",
+     "∫(x²/2) e^x dx"
+    ],
+    "why": "Here du = dx and v = e^x, so v du = e^x dx. Using ∫x e^x dx again would just repeat the original problem, because the rule subtracts the integral of v du, not of u dv.",
+    "clue": "Find v and du first, then multiply them."
+   },
+   "b": {
+    "d": 3,
+    "q": "Using integration by parts with u = x and dv = cos x dx, what is ∫x cos x dx?",
+    "opts": [
+     "x sin x + cos x + c",
+     "x sin x − cos x + c",
+     "x sin x + sin x + c",
+     "−x sin x + cos x + c"
+    ],
+    "why": "Here du = dx and v = sin x, so ∫x cos x dx = x sin x − ∫sin x dx. Since ∫sin x dx = −cos x, this gives x sin x + cos x + c. The option with −cos x comes from forgetting that subtracting −cos x gives +cos x. Check: the derivative of x sin x + cos x is sin x + x cos x − sin x = x cos x.",
+    "clue": "The integral of sin x is −cos x, and the rule subtracts it."
+   }
+  }
+ }
 }

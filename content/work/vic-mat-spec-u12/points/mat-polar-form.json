@@ -9,7 +9,8 @@
   "2026-11-01T08:04:35Z write: done",
   "2026-11-01T08:14:08Z check: flagged",
   "2026-11-01T08:24:34Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -157,35 +158,72 @@
  "final": {
   "title": "Polar form",
   "card": [
-   "Polar form writes a complex number as z = r cis θ, where r is the modulus and θ is the argument. cis θ means cos θ + i sin θ.",
-   "To convert from a + bi, find r = √(a² + b²) and the angle θ from the position of the point. For example, 1 + i = √2 cis(π/4).",
-   "To multiply, multiply the moduli and add the arguments: (r₁ cis θ₁)(r₂ cis θ₂) = r₁r₂ cis(θ₁ + θ₂). For example, (2 cis(π/6))(3 cis(π/3)) = 6 cis(π/2), which is 6i.",
-   "The principal argument lies in the range −π < θ ≤ π. If a sum of arguments falls outside it, add or subtract 2π, which gives the same point. For example, cis(5π/4) = cis(−3π/4)."
+   "Polar form writes a complex number as \\(z = r\\,\\text{cis}\\,\\theta\\), where \\(r\\) is the modulus and \\(\\theta\\) is the argument. \\(\\text{cis}\\,\\theta\\) means \\(\\cos\\theta + i\\sin\\theta\\).",
+   "To convert from \\(a + bi\\), find \\(r = \\sqrt{a^{2} + b^{2}}\\) and the angle \\(\\theta\\) from the position of the point. For example, \\(1 + i = \\sqrt{2}\\,\\text{cis}\\left(\\frac{\\pi}{4}\\right)\\).",
+   "To multiply, multiply the moduli and add the arguments: \\((r_{1}\\,\\text{cis}\\,\\theta_{1})(r_{2}\\,\\text{cis}\\,\\theta_{2}) = r_{1}r_{2}\\,\\text{cis}(\\theta_{1} + \\theta_{2})\\). For example, \\(\\left(2\\,\\text{cis}\\left(\\frac{\\pi}{6}\\right)\\right)\\left(3\\,\\text{cis}\\left(\\frac{\\pi}{3}\\right)\\right) = 6\\,\\text{cis}\\left(\\frac{\\pi}{2}\\right)\\), which is \\(6i\\).",
+   "The principal argument lies in the range \\(-\\pi < \\theta \\le \\pi\\). If a sum of arguments falls outside it, add or subtract \\(2\\pi\\), which gives the same point. For example, \\(\\text{cis}\\left(\\frac{5\\pi}{4}\\right) = \\text{cis}\\left(-\\frac{3\\pi}{4}\\right)\\)."
   ],
-  "remember": "Multiply the moduli, add the arguments, then add or subtract 2π if the angle leaves the range −π to π.",
+  "remember": "Multiply the moduli, add the arguments, then add or subtract \\(2\\pi\\) if the angle leaves the range \\(-\\pi\\) to \\(\\pi\\).",
   "a": {
-   "q": "What is (4 cis(π/5))(2 cis(π/10)) in polar form?",
+   "q": "What is \\(\\left(4\\,\\text{cis}\\left(\\frac{\\pi}{5}\\right)\\right)\\left(2\\,\\text{cis}\\left(\\frac{\\pi}{10}\\right)\\right)\\) in polar form?",
    "opts": [
-    "8 cis(3π/10)",
-    "8 cis(π/50)",
-    "6 cis(3π/10)",
-    "6 cis(π/50)"
+    "\\(8\\,\\text{cis}\\left(\\frac{3\\pi}{10}\\right)\\)",
+    "\\(8\\,\\text{cis}\\left(\\frac{\\pi^{2}}{50}\\right)\\)",
+    "\\(6\\,\\text{cis}\\left(\\frac{3\\pi}{10}\\right)\\)",
+    "\\(6\\,\\text{cis}\\left(\\frac{\\pi^{2}}{50}\\right)\\)"
    ],
-   "why": "Multiply the moduli: 4 × 2 = 8. Add the arguments: π/5 + π/10 = 2π/10 + π/10 = 3π/10. Adding the moduli or multiplying the arguments are the tempting mistakes.",
+   "why": "Multiply the moduli: \\(4 \\times 2 = 8\\). Add the arguments: \\(\\frac{\\pi}{5} + \\frac{\\pi}{10} = \\frac{2\\pi}{10} + \\frac{\\pi}{10} = \\frac{3\\pi}{10}\\). Adding the moduli or multiplying the arguments are the tempting mistakes.",
    "clue": "Moduli are multiplied. Arguments are added."
   },
   "b": {
    "d": 3,
-   "q": "What is 3 cis(2π/3) × 2 cis(π/2) written with its argument in the range −π < θ ≤ π?",
+   "q": "What is \\(3\\,\\text{cis}\\left(\\frac{2\\pi}{3}\\right) \\times 2\\,\\text{cis}\\left(\\frac{\\pi}{2}\\right)\\) written with its argument in the range \\(-\\pi < \\theta \\le \\pi\\)?",
    "opts": [
-    "6 cis(−5π/6)",
-    "6 cis(7π/6)",
-    "5 cis(−5π/6)",
-    "6 cis(π/6)"
+    "\\(6\\,\\text{cis}\\left(-\\frac{5\\pi}{6}\\right)\\)",
+    "\\(6\\,\\text{cis}\\left(\\frac{7\\pi}{6}\\right)\\)",
+    "\\(5\\,\\text{cis}\\left(-\\frac{5\\pi}{6}\\right)\\)",
+    "\\(6\\,\\text{cis}\\left(\\frac{\\pi}{6}\\right)\\)"
    ],
-   "why": "The modulus is 3 × 2 = 6. The arguments add to 2π/3 + π/2 = 7π/6, which is above π, so subtract 2π to get −5π/6. The option 6 cis(7π/6) is the same number, but its argument is outside the range asked for.",
-   "clue": "After adding, check whether the angle is bigger than π."
+   "why": "The modulus is \\(3 \\times 2 = 6\\). The arguments add to \\(\\frac{2\\pi}{3} + \\frac{\\pi}{2} = \\frac{7\\pi}{6}\\), which is above \\(\\pi\\), so subtract \\(2\\pi\\) to get \\(-\\frac{5\\pi}{6}\\). The option \\(6\\,\\text{cis}\\left(\\frac{7\\pi}{6}\\right)\\) is the same number, but its argument is outside the range asked for.",
+   "clue": "After adding, check whether the angle is bigger than \\(\\pi\\)."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Polar form",
+   "card": [
+    "Polar form writes a complex number as z = r cis θ, where r is the modulus and θ is the argument. cis θ means cos θ + i sin θ.",
+    "To convert from a + bi, find r = √(a² + b²) and the angle θ from the position of the point. For example, 1 + i = √2 cis(π/4).",
+    "To multiply, multiply the moduli and add the arguments: (r₁ cis θ₁)(r₂ cis θ₂) = r₁r₂ cis(θ₁ + θ₂). For example, (2 cis(π/6))(3 cis(π/3)) = 6 cis(π/2), which is 6i.",
+    "The principal argument lies in the range −π < θ ≤ π. If a sum of arguments falls outside it, add or subtract 2π, which gives the same point. For example, cis(5π/4) = cis(−3π/4)."
+   ],
+   "remember": "Multiply the moduli, add the arguments, then add or subtract 2π if the angle leaves the range −π to π.",
+   "a": {
+    "q": "What is (4 cis(π/5))(2 cis(π/10)) in polar form?",
+    "opts": [
+     "8 cis(3π/10)",
+     "8 cis(π/50)",
+     "6 cis(3π/10)",
+     "6 cis(π/50)"
+    ],
+    "why": "Multiply the moduli: 4 × 2 = 8. Add the arguments: π/5 + π/10 = 2π/10 + π/10 = 3π/10. Adding the moduli or multiplying the arguments are the tempting mistakes.",
+    "clue": "Moduli are multiplied. Arguments are added."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is 3 cis(2π/3) × 2 cis(π/2) written with its argument in the range −π < θ ≤ π?",
+    "opts": [
+     "6 cis(−5π/6)",
+     "6 cis(7π/6)",
+     "5 cis(−5π/6)",
+     "6 cis(π/6)"
+    ],
+    "why": "The modulus is 3 × 2 = 6. The arguments add to 2π/3 + π/2 = 7π/6, which is above π, so subtract 2π to get −5π/6. The option 6 cis(7π/6) is the same number, but its argument is outside the range asked for.",
+    "clue": "After adding, check whether the angle is bigger than π."
+   }
+  }
+ }
 }

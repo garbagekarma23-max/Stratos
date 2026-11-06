@@ -18,7 +18,8 @@
   "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:30Z write: done",
-  "2026-11-01T15:14:48Z check: passed, cleared"
+  "2026-11-01T15:14:48Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -92,35 +93,72 @@
  "final": {
   "title": "Confidence intervals for a mean",
   "card": [
-   "An approximate 95% confidence interval for the population mean μ is x̄ ± 1.96 × σ/√n. Here x̄ is the sample mean, σ is the population standard deviation and n is the sample size.",
-   "Example: x̄ = 50, σ = 10, n = 100. Then σ/√n = 10/10 = 1, so the margin is 1.96 × 1 = 1.96. The interval is 48.04 to 51.96.",
-   "The 95% describes the method. If we took many samples and built an interval from each, about 95% of those intervals would contain μ.",
-   "A larger n gives a smaller margin, because n is under a square root. Four times the sample size halves the margin."
+   "An approximate 95% confidence interval for the population mean \\(\\mu\\) is \\(\\bar{x} \\pm 1.96 \\times \\frac{\\sigma}{\\sqrt{n}}\\). Here \\(\\bar{x}\\) is the sample mean, \\(\\sigma\\) is the population standard deviation and \\(n\\) is the sample size.",
+   "Example: \\(\\bar{x} = 50\\), \\(\\sigma = 10\\), \\(n = 100\\). Then \\(\\frac{\\sigma}{\\sqrt{n}} = \\frac{10}{10} = 1\\), so the margin is \\(1.96 \\times 1 = 1.96\\). The interval is 48.04 to 51.96.",
+   "The 95% describes the method. If we took many samples and built an interval from each, about 95% of those intervals would contain \\(\\mu\\).",
+   "A larger \\(n\\) gives a smaller margin, because \\(n\\) is under a square root. Four times the sample size halves the margin."
   ],
-  "remember": "Interval = sample mean ± 1.96 × σ/√n. A bigger sample gives a narrower interval.",
+  "remember": "Interval \\(=\\) sample mean \\(\\pm 1.96 \\times \\frac{\\sigma}{\\sqrt{n}}\\). A bigger sample gives a narrower interval.",
   "a": {
-   "q": "Mia weighs 64 packets of rice and finds a mean of 200 g. The population standard deviation is 16 g. What is the approximate 95% interval for μ?",
+   "q": "Mia weighs 64 packets of rice and finds a mean of 200 g. The population standard deviation is 16 g. What is the approximate 95% interval for \\(\\mu\\)?",
    "opts": [
     "196.08 g to 203.92 g",
     "168.64 g to 231.36 g",
     "199.51 g to 200.49 g",
     "198.00 g to 202.00 g"
    ],
-   "why": "σ/√n = 16/8 = 2, so the margin is 1.96 × 2 = 3.92. The interval is 200 ± 3.92. The wide interval 168.64 to 231.36 comes from forgetting to divide by √n.",
-   "clue": "Divide σ by the square root of 64 before multiplying."
+   "why": "\\(\\frac{\\sigma}{\\sqrt{n}} = \\frac{16}{8} = 2\\), so the margin is \\(1.96 \\times 2 = 3.92\\). The interval is \\(200 \\pm 3.92\\). The wide interval 168.64 to 231.36 comes from forgetting to divide by \\(\\sqrt{n}\\).",
+   "clue": "Divide \\(\\sigma\\) by the square root of 64 before multiplying."
   },
   "b": {
    "d": 3,
-   "q": "A 95% interval for a mean has a margin of 4.0 from a sample of 25. A new sample of 100 is taken from the same population, with the same σ. What is the approximate new margin?",
+   "q": "A 95% interval for a mean has a margin of 4.0 from a sample of 25. A new sample of 100 is taken from the same population, with the same \\(\\sigma\\). What is the approximate new margin?",
    "opts": [
     "About 2.0",
     "About 1.0",
     "About 4.0",
     "About 8.0"
    ],
-   "why": "The sample size is four times larger and √4 = 2, so the margin is halved to about 2.0. A margin of 1.0 comes from dividing by 4 instead of by √4.",
-   "clue": "The margin changes with √n, not with n."
+   "why": "The sample size is four times larger and \\(\\sqrt{4} = 2\\), so the margin is halved to about 2.0. A margin of 1.0 comes from dividing by 4 instead of by \\(\\sqrt{4}\\).",
+   "clue": "The margin changes with \\(\\sqrt{n}\\), not with \\(n\\)."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Confidence intervals for a mean",
+   "card": [
+    "An approximate 95% confidence interval for the population mean μ is x̄ ± 1.96 × σ/√n. Here x̄ is the sample mean, σ is the population standard deviation and n is the sample size.",
+    "Example: x̄ = 50, σ = 10, n = 100. Then σ/√n = 10/10 = 1, so the margin is 1.96 × 1 = 1.96. The interval is 48.04 to 51.96.",
+    "The 95% describes the method. If we took many samples and built an interval from each, about 95% of those intervals would contain μ.",
+    "A larger n gives a smaller margin, because n is under a square root. Four times the sample size halves the margin."
+   ],
+   "remember": "Interval = sample mean ± 1.96 × σ/√n. A bigger sample gives a narrower interval.",
+   "a": {
+    "q": "Mia weighs 64 packets of rice and finds a mean of 200 g. The population standard deviation is 16 g. What is the approximate 95% interval for μ?",
+    "opts": [
+     "196.08 g to 203.92 g",
+     "168.64 g to 231.36 g",
+     "199.51 g to 200.49 g",
+     "198.00 g to 202.00 g"
+    ],
+    "why": "σ/√n = 16/8 = 2, so the margin is 1.96 × 2 = 3.92. The interval is 200 ± 3.92. The wide interval 168.64 to 231.36 comes from forgetting to divide by √n.",
+    "clue": "Divide σ by the square root of 64 before multiplying."
+   },
+   "b": {
+    "d": 3,
+    "q": "A 95% interval for a mean has a margin of 4.0 from a sample of 25. A new sample of 100 is taken from the same population, with the same σ. What is the approximate new margin?",
+    "opts": [
+     "About 2.0",
+     "About 1.0",
+     "About 4.0",
+     "About 8.0"
+    ],
+    "why": "The sample size is four times larger and √4 = 2, so the margin is halved to about 2.0. A margin of 1.0 comes from dividing by 4 instead of by √4.",
+    "clue": "The margin changes with √n, not with n."
+   }
+  }
+ }
 }

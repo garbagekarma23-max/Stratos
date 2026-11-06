@@ -36,7 +36,7 @@ export const COMMANDS = new Set(`frac dfrac tfrac sqrt binom times div pm mp cdo
   infty to rightarrow Rightarrow leftarrow Leftarrow leftrightarrow iff implies in notin subset subseteq cup cap emptyset varnothing
   mathbb mathrm text left right lim int sum prod log ln sin cos tan sec csc cot arcsin arccos arctan exp min max
   circ angle triangle parallel perp quad qquad ldots cdots dots overline vec hat bar prime mid colon therefore because
-  lvert rvert vert langle rangle lfloor rfloor lceil rceil cup forall exists neg land lor`.split(/\s+/));
+  lvert rvert vert langle rangle lfloor rfloor lceil rceil cup forall exists neg land lor sim`.split(/\s+/));
 /* \, \; \! \  (spaces) and the escaped characters \{ \} \$ \% \& \# \_ \| are fine too. */
 const ESCAPED = /^\\[,;:! {}$%&#_|]/;
 /* Commands that take two parts in braces, and one. */

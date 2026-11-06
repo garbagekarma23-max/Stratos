@@ -9,7 +9,9 @@
   "2026-11-01T14:46:40Z write: failed the content check, writing again",
   "2026-11-01T14:56:04Z write: done",
   "2026-11-01T15:05:29Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-06T08:20:00Z maths: LaTeX changed by hand",
+  "2026-11-06T08:55:08Z maths: LaTeX changed by hand"
  ],
  "sent": {
   "write": 2,
@@ -74,9 +76,9 @@
   "title": "The binomial distribution",
   "card": [
    "A Bernoulli trial has two outcomes, success or failure. The chance of success is \\(p\\), and the chance of failure is \\(1 - p\\).",
-   "Let \\(X\\) be the number of successes in \\(n\\) trials. \\(X\\) is binomial if \\(n\\) is fixed, the trials are independent and \\(p\\) is the same every time. We say \\(X\\) has the distribution \\(\\text{Bin}(n, p)\\).",
+   "Let \\(X\\) be the number of successes in \\(n\\) trials. \\(X\\) is binomial if \\(n\\) is fixed, the trials are independent and \\(p\\) is the same every time. We write \\(X \\sim \\text{Bin}(n, p)\\).",
    "The chance of exactly \\(x\\) successes is \\(\\text{Pr}(X = x) = \\binom{n}{x} p^{x} (1 - p)^{n - x}\\). Here \\(\\binom{n}{x}\\) counts the ways to place \\(x\\) successes among \\(n\\) trials.",
-   "Example: a fair coin is tossed 3 times and \\(X\\) is the number of heads. So \\(X\\) has the distribution \\(\\text{Bin}(3, 0.5)\\). \\(\\text{Pr}(X = 2) = 3 \\times 0.5^{2} \\times 0.5 = 0.375\\)."
+   "Example: a fair coin is tossed 3 times and \\(X\\) is the number of heads. So \\(X \\sim \\text{Bin}(3, 0.5)\\). \\(\\text{Pr}(X = 2) = 3 \\times 0.5^{2} \\times 0.5 = 0.375\\)."
   ],
   "remember": "Fixed \\(n\\), independent trials, same \\(p\\) each time: count the successes and you have a binomial.",
   "a": {
@@ -87,7 +89,7 @@
     "0.5",
     "0.125"
    ],
-   "why": "\\(X\\) has the distribution \\(\\text{Bin}(4, 0.5)\\), so \\(\\text{Pr}(X = 3) = 4 \\times 0.5^{3} \\times 0.5 = 4 \\times 0.0625 = 0.25\\). The option 0.0625 leaves out the factor 4 for the ways to place the 3 heads.",
+   "why": "\\(X \\sim \\text{Bin}(4, 0.5)\\), so \\(\\text{Pr}(X = 3) = 4 \\times 0.5^{3} \\times 0.5\\), which is \\(4 \\times 0.0625 = 0.25\\). The option 0.0625 leaves out the factor 4 for the ways to place the 3 heads.",
    "clue": "Count the ways to place 3 heads among 4 tosses."
   },
   "b": {
@@ -105,7 +107,7 @@
  },
  "cleared_by": "checker",
  "latex": {
-  "at": "2026-11-06T07:25:09Z",
+  "at": "2026-11-06T08:55:08Z",
   "by": "hand",
   "before": {
    "title": "The binomial distribution",

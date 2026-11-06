@@ -41,6 +41,10 @@ const CH = 'nsw-mat-adv-11-1-2';
     ['30^{\\circ}', '30 degrees'],
     ['\\$12.50 \\div 5', '$12.50 divided by 5'],
     ['\\pi r^{2}', 'pi r squared'],
+    ['X \\sim \\text{Bin}(n, p)', 'X is distributed as Bin open bracket n, p close bracket'],
+    ['-', 'minus'],
+    ['{} - \\$600', 'minus $600'],
+    ['\\text{UTC}{-}5', 'UTC minus 5'],
   ];
   for (const [t, words] of reads) { const got = ctx.speak(t); check(got === words, 'reads ' + t + ' as "' + words + '"' + (got === words ? '' : ' (got "' + got + '")'), R); }
   const html = ctx.tx('The axis is \\(x = -\\frac{b}{2a}\\), so <b> stays text.');

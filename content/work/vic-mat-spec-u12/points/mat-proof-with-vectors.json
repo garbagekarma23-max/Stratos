@@ -13,7 +13,8 @@
   "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-01T13:35:05Z autoreject: rejected, to be written again (card wording)",
   "2026-11-01T13:41:59Z write: done",
-  "2026-11-01T13:47:17Z check: passed, cleared"
+  "2026-11-01T13:47:17Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 3,
@@ -251,34 +252,71 @@
  "final": {
   "title": "Proof with vectors",
   "card": [
-   "Set up a shape using vectors from one origin O. The position vector of a point P is OP. For a parallelogram OABC, let a = OA and c = OC. Then OB = a + c, because B is reached by going along OA and then along AB, which equals c.",
-   "Opposite sides of a parallelogram are parallel and equal in length, so AB = OC = c and CB = OA = a.",
-   "To show the diagonals bisect each other, find the midpoint of each diagonal. The midpoint of OB is ½(a + c). The diagonal AC = c − a, so the midpoint of AC is a + ½(c − a) = ½(a + c).",
+   "Set up a shape using vectors from one origin \\(O\\). The position vector of a point \\(P\\) is \\(OP\\). For a parallelogram OABC, let \\(a = OA\\) and \\(c = OC\\). Then \\(OB = a + c\\), because \\(B\\) is reached by going along \\(OA\\) and then along \\(AB\\), which equals \\(c\\).",
+   "Opposite sides of a parallelogram are parallel and equal in length, so \\(AB = OC = c\\) and \\(CB = OA = a\\).",
+   "To show the diagonals bisect each other, find the midpoint of each diagonal. The midpoint of \\(OB\\) is \\(\\frac{1}{2}(a + c)\\). The diagonal \\(AC = c - a\\), so the midpoint of \\(AC\\) is \\(a + \\frac{1}{2}(c - a) = \\frac{1}{2}(a + c)\\).",
    "Both midpoints have the same position vector, so they are the same point. The diagonals cross at their midpoints, so they bisect each other."
   ],
   "remember": "Write each point as a vector from one origin, then show two routes give the same vector.",
   "a": {
-   "q": "In parallelogram OABC, a = OA and c = OC. Which vector is the diagonal OB?",
+   "q": "In parallelogram OABC, \\(a = OA\\) and \\(c = OC\\). Which vector is the diagonal \\(OB\\)?",
    "opts": [
-    "a + c",
-    "a − c",
-    "c − a",
-    "½(a + c)"
+    "\\(a + c\\)",
+    "\\(a - c\\)",
+    "\\(c - a\\)",
+    "\\(\\frac{1}{2}(a + c)\\)"
    ],
-   "why": "B is reached by going along OA and then along AB, which equals c, so OB = a + c. The vector c − a is the other diagonal AC, and ½(a + c) is only the midpoint of OB.",
-   "clue": "Go from O to A, then from A to B."
+   "why": "\\(B\\) is reached by going along \\(OA\\) and then along \\(AB\\), which equals \\(c\\), so \\(OB = a + c\\). The vector \\(c - a\\) is the other diagonal \\(AC\\), and \\(\\frac{1}{2}(a + c)\\) is only the midpoint of \\(OB\\).",
+   "clue": "Go from \\(O\\) to \\(A\\), then from \\(A\\) to \\(B\\)."
   },
   "b": {
    "d": 3,
-   "q": "In parallelogram OABC, a = OA and c = OC. M is the midpoint of side AB. What is the position vector of M?",
+   "q": "In parallelogram OABC, \\(a = OA\\) and \\(c = OC\\). \\(M\\) is the midpoint of side \\(AB\\). What is the position vector of \\(M\\)?",
    "opts": [
-    "a + ½c",
-    "½(a + c)",
-    "½c",
-    "a − ½c"
+    "\\(a + \\frac{1}{2}c\\)",
+    "\\(\\frac{1}{2}(a + c)\\)",
+    "\\(\\frac{1}{2}c\\)",
+    "\\(a - \\frac{1}{2}c\\)"
    ],
-   "why": "Start at A, then go half of AB, which equals c: OM = a + ½c. The vector ½(a + c) is where the diagonals meet, not the midpoint of side AB. Using ½c alone leaves out the start at A.",
-   "clue": "Start at A, then add half of the vector AB."
+   "why": "Start at \\(A\\), then go half of \\(AB\\), which equals \\(c\\): \\(OM = a + \\frac{1}{2}c\\). The vector \\(\\frac{1}{2}(a + c)\\) is where the diagonals meet, not the midpoint of side \\(AB\\). Using \\(\\frac{1}{2}c\\) alone leaves out the start at \\(A\\).",
+   "clue": "Start at \\(A\\), then add half of the vector \\(AB\\)."
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Proof with vectors",
+   "card": [
+    "Set up a shape using vectors from one origin O. The position vector of a point P is OP. For a parallelogram OABC, let a = OA and c = OC. Then OB = a + c, because B is reached by going along OA and then along AB, which equals c.",
+    "Opposite sides of a parallelogram are parallel and equal in length, so AB = OC = c and CB = OA = a.",
+    "To show the diagonals bisect each other, find the midpoint of each diagonal. The midpoint of OB is ½(a + c). The diagonal AC = c − a, so the midpoint of AC is a + ½(c − a) = ½(a + c).",
+    "Both midpoints have the same position vector, so they are the same point. The diagonals cross at their midpoints, so they bisect each other."
+   ],
+   "remember": "Write each point as a vector from one origin, then show two routes give the same vector.",
+   "a": {
+    "q": "In parallelogram OABC, a = OA and c = OC. Which vector is the diagonal OB?",
+    "opts": [
+     "a + c",
+     "a − c",
+     "c − a",
+     "½(a + c)"
+    ],
+    "why": "B is reached by going along OA and then along AB, which equals c, so OB = a + c. The vector c − a is the other diagonal AC, and ½(a + c) is only the midpoint of OB.",
+    "clue": "Go from O to A, then from A to B."
+   },
+   "b": {
+    "d": 3,
+    "q": "In parallelogram OABC, a = OA and c = OC. M is the midpoint of side AB. What is the position vector of M?",
+    "opts": [
+     "a + ½c",
+     "½(a + c)",
+     "½c",
+     "a − ½c"
+    ],
+    "why": "Start at A, then go half of AB, which equals c: OM = a + ½c. The vector ½(a + c) is where the diagonals meet, not the midpoint of side AB. Using ½c alone leaves out the start at A.",
+    "clue": "Start at A, then add half of the vector AB."
+   }
   }
  }
 }

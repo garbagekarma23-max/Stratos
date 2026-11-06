@@ -13,7 +13,8 @@
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:05Z write: done",
-  "2026-11-01T15:05:29Z check: passed, cleared"
+  "2026-11-01T15:05:29Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -86,35 +87,72 @@
  "final": {
   "title": "Partial fractions in Unit 3",
   "card": [
-   "A rational function whose numerator has lower degree than its denominator can be split into simpler fractions. If the denominator is (x − a)(x − b) with a ≠ b, then p(x)/((x − a)(x − b)) = A/(x − a) + B/(x − b).",
-   "To find A and B, multiply both sides by the denominator. This gives p(x) = A(x − b) + B(x − a). Then substitute x = a and x = b to remove one unknown at a time.",
-   "Example: (5x + 1)/((x − 1)(x + 2)). Then 5x + 1 = A(x + 2) + B(x − 1). Putting x = 1 gives 6 = 3A, so A = 2. Putting x = −2 gives −9 = −3B, so B = 3.",
-   "The split makes integration easy, because the integral of 1/(x − a) is ln|x − a|. So the integral of A/(x − a) is A ln|x − a|."
+   "A rational function whose numerator has lower degree than its denominator can be split into simpler fractions. If the denominator is \\((x - a)(x - b)\\) with \\(a \\ne b\\), then \\(\\frac{p(x)}{(x - a)(x - b)} = \\frac{A}{x - a} + \\frac{B}{x - b}\\).",
+   "To find \\(A\\) and \\(B\\), multiply both sides by the denominator. This gives \\(p(x) = A(x - b) + B(x - a)\\). Then substitute \\(x = a\\) and \\(x = b\\) to remove one unknown at a time.",
+   "Example: \\(\\frac{5x + 1}{(x - 1)(x + 2)}\\). Then \\(5x + 1 = A(x + 2) + B(x - 1)\\). Putting \\(x = 1\\) gives \\(6 = 3A\\), so \\(A = 2\\). Putting \\(x = -2\\) gives \\(-9 = -3B\\), so \\(B = 3\\).",
+   "The split makes integration easy, because the integral of \\(\\frac{1}{x - a}\\) is \\(\\ln|x - a|\\). So the integral of \\(\\frac{A}{x - a}\\) is \\(A\\ln|x - a|\\)."
   ],
   "remember": "Split the fraction, find each constant by substitution, then integrate each part as a logarithm.",
   "a": {
-   "q": "Write (3x + 5)/((x + 1)(x + 2)) as partial fractions.",
+   "q": "Write \\(\\frac{3x + 5}{(x + 1)(x + 2)}\\) as partial fractions.",
    "opts": [
-    "2/(x + 1) + 1/(x + 2)",
-    "1/(x + 1) + 2/(x + 2)",
-    "2/(x + 1) − 1/(x + 2)",
-    "3/(x + 1) + 5/(x + 2)"
+    "\\(\\frac{2}{x + 1} + \\frac{1}{x + 2}\\)",
+    "\\(\\frac{1}{x + 1} + \\frac{2}{x + 2}\\)",
+    "\\(\\frac{2}{x + 1} - \\frac{1}{x + 2}\\)",
+    "\\(\\frac{3}{x + 1} + \\frac{5}{x + 2}\\)"
    ],
-   "why": "We need 3x + 5 = A(x + 2) + B(x + 1). Putting x = −1 gives 2 = A, and x = −2 gives −1 = −B, so B = 1. The swapped answer 1/(x + 1) + 2/(x + 2) mixes up which constant goes with which factor.",
-   "clue": "Put x = −1 to find A, then x = −2 to find B."
+   "why": "We need \\(3x + 5 = A(x + 2) + B(x + 1)\\). Putting \\(x = -1\\) gives \\(2 = A\\), and \\(x = -2\\) gives \\(-1 = -B\\), so \\(B = 1\\). The swapped answer \\(\\frac{1}{x + 1} + \\frac{2}{x + 2}\\) mixes up which constant goes with which factor.",
+   "clue": "Put \\(x = -1\\) to find \\(A\\), then \\(x = -2\\) to find \\(B\\)."
   },
   "b": {
    "d": 3,
-   "q": "What is the integral of 7/((x − 3)(x + 4)) with respect to x?",
+   "q": "What is the integral of \\(\\frac{7}{(x - 3)(x + 4)}\\) with respect to \\(x\\)?",
    "opts": [
-    "ln|x − 3| − ln|x + 4| + c",
-    "ln|x − 3| + ln|x + 4| + c",
-    "ln|x + 4| − ln|x − 3| + c",
-    "7 ln|(x − 3)(x + 4)| + c"
+    "\\(\\ln|x - 3| - \\ln|x + 4| + c\\)",
+    "\\(\\ln|x - 3| + \\ln|x + 4| + c\\)",
+    "\\(\\ln|x + 4| - \\ln|x - 3| + c\\)",
+    "\\(7\\ln|(x - 3)(x + 4)| + c\\)"
    ],
-   "why": "Write 7 = A(x + 4) + B(x − 3). Putting x = 3 gives A = 1, and x = −4 gives B = −1. So the fraction is 1/(x − 3) − 1/(x + 4), which integrates to ln|x − 3| − ln|x + 4| + c. Adding the logarithms ignores the negative sign on B.",
+   "why": "Write \\(7 = A(x + 4) + B(x - 3)\\). Putting \\(x = 3\\) gives \\(A = 1\\), and \\(x = -4\\) gives \\(B = -1\\). So the fraction is \\(\\frac{1}{x - 3} - \\frac{1}{x + 4}\\), which integrates to \\(\\ln|x - 3| - \\ln|x + 4| + c\\). Adding the logarithms ignores the negative sign on \\(B\\).",
    "clue": "Split first, then check the sign of the second constant."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Partial fractions in Unit 3",
+   "card": [
+    "A rational function whose numerator has lower degree than its denominator can be split into simpler fractions. If the denominator is (x − a)(x − b) with a ≠ b, then p(x)/((x − a)(x − b)) = A/(x − a) + B/(x − b).",
+    "To find A and B, multiply both sides by the denominator. This gives p(x) = A(x − b) + B(x − a). Then substitute x = a and x = b to remove one unknown at a time.",
+    "Example: (5x + 1)/((x − 1)(x + 2)). Then 5x + 1 = A(x + 2) + B(x − 1). Putting x = 1 gives 6 = 3A, so A = 2. Putting x = −2 gives −9 = −3B, so B = 3.",
+    "The split makes integration easy, because the integral of 1/(x − a) is ln|x − a|. So the integral of A/(x − a) is A ln|x − a|."
+   ],
+   "remember": "Split the fraction, find each constant by substitution, then integrate each part as a logarithm.",
+   "a": {
+    "q": "Write (3x + 5)/((x + 1)(x + 2)) as partial fractions.",
+    "opts": [
+     "2/(x + 1) + 1/(x + 2)",
+     "1/(x + 1) + 2/(x + 2)",
+     "2/(x + 1) − 1/(x + 2)",
+     "3/(x + 1) + 5/(x + 2)"
+    ],
+    "why": "We need 3x + 5 = A(x + 2) + B(x + 1). Putting x = −1 gives 2 = A, and x = −2 gives −1 = −B, so B = 1. The swapped answer 1/(x + 1) + 2/(x + 2) mixes up which constant goes with which factor.",
+    "clue": "Put x = −1 to find A, then x = −2 to find B."
+   },
+   "b": {
+    "d": 3,
+    "q": "What is the integral of 7/((x − 3)(x + 4)) with respect to x?",
+    "opts": [
+     "ln|x − 3| − ln|x + 4| + c",
+     "ln|x − 3| + ln|x + 4| + c",
+     "ln|x + 4| − ln|x − 3| + c",
+     "7 ln|(x − 3)(x + 4)| + c"
+    ],
+    "why": "Write 7 = A(x + 4) + B(x − 3). Putting x = 3 gives A = 1, and x = −4 gives B = −1. So the fraction is 1/(x − 3) − 1/(x + 4), which integrates to ln|x − 3| − ln|x + 4| + c. Adding the logarithms ignores the negative sign on B.",
+    "clue": "Split first, then check the sign of the second constant."
+   }
+  }
+ }
 }

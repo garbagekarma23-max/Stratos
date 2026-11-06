@@ -14,7 +14,8 @@
   "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-01T13:35:05Z autoreject: rejected, to be written again (b other)",
   "2026-11-01T13:41:59Z write: done",
-  "2026-11-01T13:47:17Z check: passed, cleared"
+  "2026-11-01T13:47:17Z check: passed, cleared",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 4,
@@ -257,33 +258,70 @@
   "title": "Direct proof",
   "card": [
    "A direct proof starts from what is known and reasons step by step to the result. Every step must follow from the one before. Checking a few cases is not a proof.",
-   "To prove something about all even numbers, write them with a letter. An even number is 2k, where k is any integer. An odd number is 2k + 1.",
-   "Example: prove that the sum of two even numbers is even. Let the numbers be 2m and 2n, where m and n are integers. Their sum is 2m + 2n = 2(m + n).",
-   "Since m + n is an integer, 2(m + n) is a multiple of 2, so it is even. The letters stand for any integers, so this works for every pair of even numbers."
+   "To prove something about all even numbers, write them with a letter. An even number is \\(2k\\), where \\(k\\) is any integer. An odd number is \\(2k + 1\\).",
+   "Example: prove that the sum of two even numbers is even. Let the numbers be \\(2m\\) and \\(2n\\), where \\(m\\) and \\(n\\) are integers. Their sum is \\(2m + 2n = 2(m + n)\\).",
+   "Since \\(m + n\\) is an integer, \\(2(m + n)\\) is a multiple of 2, so it is even. The letters stand for any integers, so this works for every pair of even numbers."
   ],
   "remember": "Use letters for any case, then reason step by step to the result.",
   "a": {
-   "q": "Why does writing two even numbers as 2m and 2n give a proof, when testing 4 + 6 does not?",
+   "q": "Why does writing two even numbers as \\(2m\\) and \\(2n\\) give a proof, when testing \\(4 + 6\\) does not?",
    "opts": [
     "The letters can be any integers, so every pair is covered",
     "The letters make the working shorter than checking numbers",
-    "Testing a number such as 4 + 6 always gives a wrong answer",
+    "Testing a number such as \\(4 + 6\\) always gives a wrong answer",
     "Two letters are enough to cover every possible number"
    ],
-   "why": "Because m and n can be any integers, the argument covers every pair of even numbers at once. Testing 4 + 6 gives a correct result, but it only covers one pair.",
+   "why": "Because \\(m\\) and \\(n\\) can be any integers, the argument covers every pair of even numbers at once. Testing \\(4 + 6\\) gives a correct result, but it only covers one pair.",
    "clue": "Think about how many cases the letters cover."
   },
   "b": {
    "d": 3,
-   "q": "Which line completes a direct proof that the sum of an even number 2m and an odd number 2n + 1 is odd?",
+   "q": "Which line completes a direct proof that the sum of an even number \\(2m\\) and an odd number \\(2n + 1\\) is odd?",
    "opts": [
-    "2m + 2n + 1 = 2(m + n) + 1, which is odd",
-    "2m + 2n + 1 = 2(m + n + 1), which is even",
-    "2m + 2n + 1 = 4mn + 1, which is odd",
-    "2m + 2n + 1 = 2(m + n), which is even"
+    "\\(2m + 2n + 1 = 2(m + n) + 1\\), which is odd",
+    "\\(2m + 2n + 1 = 2(m + n + 1)\\), which is even",
+    "\\(2m + 2n + 1 = 4mn + 1\\), which is odd",
+    "\\(2m + 2n + 1 = 2(m + n)\\), which is even"
    ],
-   "why": "Taking out a factor of 2 from 2m + 2n leaves 2(m + n) + 1. Since m + n is an integer, this is one more than a multiple of 2, so it is odd. The option 2(m + n + 1) is false: it expands to 2m + 2n + 2, which is 1 more than the sum.",
+   "why": "Taking out a factor of 2 from \\(2m + 2n\\) leaves \\(2(m + n) + 1\\). Since \\(m + n\\) is an integer, this is one more than a multiple of 2, so it is odd. The option \\(2(m + n + 1)\\) is false: it expands to \\(2m + 2n + 2\\), which is 1 more than the sum.",
    "clue": "Take a common factor out of the terms that have a 2, then check each line expands back to the sum."
+  }
+ },
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Direct proof",
+   "card": [
+    "A direct proof starts from what is known and reasons step by step to the result. Every step must follow from the one before. Checking a few cases is not a proof.",
+    "To prove something about all even numbers, write them with a letter. An even number is 2k, where k is any integer. An odd number is 2k + 1.",
+    "Example: prove that the sum of two even numbers is even. Let the numbers be 2m and 2n, where m and n are integers. Their sum is 2m + 2n = 2(m + n).",
+    "Since m + n is an integer, 2(m + n) is a multiple of 2, so it is even. The letters stand for any integers, so this works for every pair of even numbers."
+   ],
+   "remember": "Use letters for any case, then reason step by step to the result.",
+   "a": {
+    "q": "Why does writing two even numbers as 2m and 2n give a proof, when testing 4 + 6 does not?",
+    "opts": [
+     "The letters can be any integers, so every pair is covered",
+     "The letters make the working shorter than checking numbers",
+     "Testing a number such as 4 + 6 always gives a wrong answer",
+     "Two letters are enough to cover every possible number"
+    ],
+    "why": "Because m and n can be any integers, the argument covers every pair of even numbers at once. Testing 4 + 6 gives a correct result, but it only covers one pair.",
+    "clue": "Think about how many cases the letters cover."
+   },
+   "b": {
+    "d": 3,
+    "q": "Which line completes a direct proof that the sum of an even number 2m and an odd number 2n + 1 is odd?",
+    "opts": [
+     "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+     "2m + 2n + 1 = 2(m + n + 1), which is even",
+     "2m + 2n + 1 = 4mn + 1, which is odd",
+     "2m + 2n + 1 = 2(m + n), which is even"
+    ],
+    "why": "Taking out a factor of 2 from 2m + 2n leaves 2(m + n) + 1. Since m + n is an integer, this is one more than a multiple of 2, so it is odd. The option 2(m + n + 1) is false: it expands to 2m + 2n + 2, which is 1 more than the sum.",
+    "clue": "Take a common factor out of the terms that have a 2, then check each line expands back to the sum."
+   }
   }
  }
 }

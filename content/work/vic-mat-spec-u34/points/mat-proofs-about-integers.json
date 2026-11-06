@@ -15,7 +15,8 @@
   "2026-11-01T14:56:05Z write: done",
   "2026-11-01T15:05:29Z check: flagged",
   "2026-11-01T15:14:48Z fix: suggested",
-  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -185,41 +186,84 @@
  "final": {
   "title": "Proofs about integers",
   "card": [
-   "Every even integer can be written as 2k, and every odd integer as 2k + 1, where k is an integer. A multiple of 3 can be written as 3k.",
+   "Every even integer can be written as \\(2k\\), and every odd integer as \\(2k + 1\\), where \\(k\\) is an integer. A multiple of 3 can be written as \\(3k\\).",
    [
     "Direct proof",
-    "Start from what is given, write it in this algebraic form, and simplify until the result is clear. Example: for odd n = 2k + 1, n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd."
+    "Start from what is given, write it in this algebraic form, and simplify until the result is clear. Example: for odd \\(n = 2k + 1\\), \\(n^{2} = 4k^{2} + 4k + 1 = 2(2k^{2} + 2k) + 1\\), which is odd."
    ],
    [
     "Contradiction",
     "Assume the statement is false and work forward. If this leads to something impossible, the assumption was wrong, so the statement is true."
    ],
-   "Use different letters when two integers are named, such as 2a and 2b. A prime has exactly two positive factors, 1 and itself."
+   "Use different letters when two integers are named, such as \\(2a\\) and \\(2b\\). A prime has exactly two positive factors, 1 and itself."
   ],
   "remember": "Write integers in algebraic form, then show the result by direct proof or by contradiction.",
   "a": {
-   "q": "Let m = 2a + 1 and n = 2b + 1 be two odd integers. Which expression equals m + n and shows that it is even?",
+   "q": "Let \\(m = 2a + 1\\) and \\(n = 2b + 1\\) be two odd integers. Which expression equals \\(m + n\\) and shows that it is even?",
    "opts": [
-    "2(a + b + 1)",
-    "2(a + b) + 1",
-    "2ab + 1",
-    "2(a + b)"
+    "\\(2(a + b + 1)\\)",
+    "\\(2(a + b) + 1\\)",
+    "\\(2ab + 1\\)",
+    "\\(2(a + b)\\)"
    ],
-   "why": "m + n = 2a + 2b + 2 = 2(a + b + 1), which is 2 times an integer, so it is even. The option 2(a + b) + 1 keeps only one of the two 1s, so it does not equal m + n.",
+   "why": "\\(m + n = 2a + 2b + 2 = 2(a + b + 1)\\), which is 2 times an integer, so it is even. The option \\(2(a + b) + 1\\) keeps only one of the two 1s, so it does not equal \\(m + n\\).",
    "clue": "Add the two forms, then take out a factor of 2."
   },
   "b": {
    "d": 3,
-   "q": "To prove that the sum of three consecutive integers is a multiple of 3, let the integers be n, n + 1 and n + 2. What is the sum, written to show this?",
+   "q": "To prove that the sum of three consecutive integers is a multiple of 3, let the integers be \\(n\\), \\(n + 1\\) and \\(n + 2\\). What is the sum, written to show this?",
    "opts": [
-    "3(n + 1)",
-    "3n + 2",
-    "3n + 1",
-    "3(n + 2)"
+    "\\(3(n + 1)\\)",
+    "\\(3n + 2\\)",
+    "\\(3n + 1\\)",
+    "\\(3(n + 2)\\)"
    ],
-   "why": "n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1), which is 3 times an integer. The sum 3n + 2 comes from adding the 2 but leaving out the 1, so the constants should total 1 + 2 = 3.",
+   "why": "\\(n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1)\\), which is 3 times an integer. The sum \\(3n + 2\\) comes from adding the 2 but leaving out the 1, so the constants should total \\(1 + 2 = 3\\).",
    "clue": "Add the three terms, then take out a factor of 3."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Proofs about integers",
+   "card": [
+    "Every even integer can be written as 2k, and every odd integer as 2k + 1, where k is an integer. A multiple of 3 can be written as 3k.",
+    [
+     "Direct proof",
+     "Start from what is given, write it in this algebraic form, and simplify until the result is clear. Example: for odd n = 2k + 1, n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd."
+    ],
+    [
+     "Contradiction",
+     "Assume the statement is false and work forward. If this leads to something impossible, the assumption was wrong, so the statement is true."
+    ],
+    "Use different letters when two integers are named, such as 2a and 2b. A prime has exactly two positive factors, 1 and itself."
+   ],
+   "remember": "Write integers in algebraic form, then show the result by direct proof or by contradiction.",
+   "a": {
+    "q": "Let m = 2a + 1 and n = 2b + 1 be two odd integers. Which expression equals m + n and shows that it is even?",
+    "opts": [
+     "2(a + b + 1)",
+     "2(a + b) + 1",
+     "2ab + 1",
+     "2(a + b)"
+    ],
+    "why": "m + n = 2a + 2b + 2 = 2(a + b + 1), which is 2 times an integer, so it is even. The option 2(a + b) + 1 keeps only one of the two 1s, so it does not equal m + n.",
+    "clue": "Add the two forms, then take out a factor of 2."
+   },
+   "b": {
+    "d": 3,
+    "q": "To prove that the sum of three consecutive integers is a multiple of 3, let the integers be n, n + 1 and n + 2. What is the sum, written to show this?",
+    "opts": [
+     "3(n + 1)",
+     "3n + 2",
+     "3n + 1",
+     "3(n + 2)"
+    ],
+    "why": "n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1), which is 3 times an integer. The sum 3n + 2 comes from adding the 2 but leaving out the 1, so the constants should total 1 + 2 = 3.",
+    "clue": "Add the three terms, then take out a factor of 3."
+   }
+  }
+ }
 }

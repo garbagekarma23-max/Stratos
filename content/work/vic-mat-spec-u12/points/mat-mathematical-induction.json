@@ -9,7 +9,8 @@
   "2026-11-01T08:04:35Z write: done",
   "2026-11-01T08:14:07Z check: flagged",
   "2026-11-01T08:24:34Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "write": 1,
@@ -171,39 +172,82 @@
   "card": [
    [
     "Basis step",
-    "show the statement is true for the first case, such as n = 1."
+    "show the statement is true for the first case, such as \\(n = 1\\)."
    ],
    [
     "Inductive step",
-    "assume the statement is true for n = k. Then show it must be true for n = k + 1."
+    "assume the statement is true for \\(n = k\\). Then show it must be true for \\(n = k + 1\\)."
    ],
-   "If both steps work, the statement is true for n = 1. Then it is true for 2, then 3, and so on, so it holds for every whole number from the first case.",
-   "Example: 1 + 2 + ... + n = n(n + 1)/2. For n = 1, both sides equal 1. Assuming it holds for k, adding k + 1 to both sides gives the formula for k + 1."
+   "If both steps work, the statement is true for \\(n = 1\\). Then it is true for 2, then 3, and so on, so it holds for every whole number from the first case.",
+   "Example: \\(1 + 2 + \\cdots + n = \\frac{n(n + 1)}{2}\\). For \\(n = 1\\), both sides equal 1. Assuming it holds for \\(k\\), adding \\(k + 1\\) to both sides gives the formula for \\(k + 1\\)."
   ],
   "remember": "Prove the first case, then prove that one case leads to the next.",
   "a": {
    "q": "In an induction proof, what must the inductive step show?",
    "opts": [
-    "If the statement is true for n = k, it is true for n = k + 1",
-    "The statement is true for n = k and for n = k + 1 by testing",
-    "The statement is true for every n up to a large number",
-    "If the statement is true for n = k + 1, it is true for n = k"
+    "If the statement is true for \\(n = k\\), it is true for \\(n = k + 1\\)",
+    "The statement is true for \\(n = k\\) and for \\(n = k + 1\\) by testing",
+    "The statement is true for every \\(n\\) up to a large number",
+    "If the statement is true for \\(n = k + 1\\), it is true for \\(n = k\\)"
    ],
-   "why": "The inductive step assumes the statement for k and shows it follows for k + 1. Reversing the direction is a mistake, as it would not carry the first case forward.",
+   "why": "The inductive step assumes the statement for \\(k\\) and shows it follows for \\(k + 1\\). Reversing the direction is a mistake, as it would not carry the first case forward.",
    "clue": "The chain moves from one case to the next one up."
   },
   "b": {
    "d": 3,
-   "q": "Ana shows that if 2k > k + 5, then 2(k + 1) > (k + 1) + 5. She concludes that 2n > n + 5 for every whole number n ≥ 1. Which is correct?",
+   "q": "Ana shows that if \\(2k > k + 5\\), then \\(2(k + 1) > (k + 1) + 5\\). She concludes that \\(2n > n + 5\\) for every whole number \\(n \\ge 1\\). Which is correct?",
    "opts": [
-    "It fails, since the statement is false for n = 1",
-    "It is complete, since the inductive step works for all k",
-    "It fails, since the inductive step should go from k + 1 to k",
+    "It fails, since the statement is false for \\(n = 1\\)",
+    "It is complete, since the inductive step works for all \\(k\\)",
+    "It fails, since the inductive step should go from \\(k + 1\\) to \\(k\\)",
     "It is complete, since inequalities need no basis step"
    ],
-   "why": "For n = 1, 2 > 6 is false, so the basis step fails and the chain never starts. Her inductive step is correct, but it only passes truth from one case to the next. On its own it proves nothing, so the proof is not complete.",
+   "why": "For \\(n = 1\\), \\(2 > 6\\) is false, so the basis step fails and the chain never starts. Her inductive step is correct, but it only passes truth from one case to the next. On its own it proves nothing, so the proof is not complete.",
    "clue": "Test the first case she claims."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Mathematical induction",
+   "card": [
+    [
+     "Basis step",
+     "show the statement is true for the first case, such as n = 1."
+    ],
+    [
+     "Inductive step",
+     "assume the statement is true for n = k. Then show it must be true for n = k + 1."
+    ],
+    "If both steps work, the statement is true for n = 1. Then it is true for 2, then 3, and so on, so it holds for every whole number from the first case.",
+    "Example: 1 + 2 + ... + n = n(n + 1)/2. For n = 1, both sides equal 1. Assuming it holds for k, adding k + 1 to both sides gives the formula for k + 1."
+   ],
+   "remember": "Prove the first case, then prove that one case leads to the next.",
+   "a": {
+    "q": "In an induction proof, what must the inductive step show?",
+    "opts": [
+     "If the statement is true for n = k, it is true for n = k + 1",
+     "The statement is true for n = k and for n = k + 1 by testing",
+     "The statement is true for every n up to a large number",
+     "If the statement is true for n = k + 1, it is true for n = k"
+    ],
+    "why": "The inductive step assumes the statement for k and shows it follows for k + 1. Reversing the direction is a mistake, as it would not carry the first case forward.",
+    "clue": "The chain moves from one case to the next one up."
+   },
+   "b": {
+    "d": 3,
+    "q": "Ana shows that if 2k > k + 5, then 2(k + 1) > (k + 1) + 5. She concludes that 2n > n + 5 for every whole number n ≥ 1. Which is correct?",
+    "opts": [
+     "It fails, since the statement is false for n = 1",
+     "It is complete, since the inductive step works for all k",
+     "It fails, since the inductive step should go from k + 1 to k",
+     "It is complete, since inequalities need no basis step"
+    ],
+    "why": "For n = 1, 2 > 6 is false, so the basis step fails and the chain never starts. Her inductive step is correct, but it only passes truth from one case to the next. On its own it proves nothing, so the proof is not complete.",
+    "clue": "Test the first case she claims."
+   }
+  }
+ }
 }

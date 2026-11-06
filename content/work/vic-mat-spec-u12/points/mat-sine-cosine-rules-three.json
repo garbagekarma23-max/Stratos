@@ -27,7 +27,8 @@
   "2026-11-01T08:14:08Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b wording)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b wording)",
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
  ],
  "sent": {
   "match": 1,
@@ -177,38 +178,81 @@
    "To solve a solid shape, find a flat triangle inside it. Draw that triangle on its own and label the sides and angles you know.",
    [
     "Cosine rule",
-    "c² = a² + b² − 2ab cos C, where side c is opposite angle C. Use it when you know two sides and the angle between them, or all three sides."
+    "\\(c^{2} = a^{2} + b^{2} - 2ab\\cos C\\), where side \\(c\\) is opposite angle \\(C\\). Use it when you know two sides and the angle between them, or all three sides."
    ],
    [
     "Sine rule",
-    "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle."
+    "\\(\\frac{a}{\\sin A} = \\frac{b}{\\sin B}\\). Use it when you know a side and the angle opposite it, plus one more side or angle."
    ],
-   "To find an angle from three sides, rearrange: cos C = (a² + b² − c²) ÷ (2ab). Example: sides 3, 4 and 5 give cos C = (9 + 16 − 25) ÷ 24 = 0, so C = 90°."
+   "To find an angle from three sides, rearrange: \\(\\cos C = \\frac{a^{2} + b^{2} - c^{2}}{2ab}\\). Example: sides 3, 4 and 5 give \\(\\cos C = \\frac{9 + 16 - 25}{24} = 0\\), so \\(C = 90^{\\circ}\\)."
   ],
   "remember": "Pull a flat triangle out of the solid, then pick the sine or cosine rule to suit what you know.",
   "a": {
-   "q": "Triangle ABC lies on one face of a box. AB = 5 m, AC = 7 m and angle BAC = 60°. What is BC?",
+   "q": "Triangle ABC lies on one face of a box. \\(AB = 5\\) m, \\(AC = 7\\) m and angle \\(BAC = 60^{\\circ}\\). What is \\(BC\\)?",
    "opts": [
-    "√39 m",
-    "√109 m",
-    "√74 m",
+    "\\(\\sqrt{39}\\) m",
+    "\\(\\sqrt{109}\\) m",
+    "\\(\\sqrt{74}\\) m",
     "12 m"
    ],
-   "why": "BC² = 25 + 49 − 2 × 5 × 7 × cos 60° = 74 − 35 = 39, so BC = √39 m. Adding 35 instead of taking it away gives √109, which is a sign error.",
+   "why": "\\(BC^{2} = 25 + 49 - 2 \\times 5 \\times 7 \\times \\cos 60^{\\circ}\\), which is \\(74 - 35 = 39\\), so \\(BC = \\sqrt{39}\\) m. Adding 35 instead of taking it away gives \\(\\sqrt{109}\\), which is a sign error.",
    "clue": "The angle is between the two known sides."
   },
   "b": {
    "d": 3,
-   "q": "In a pyramid, triangle PQR has PQ = 8 m, PR = 10 m and QR = 6 m. What is angle QPR, to one decimal place?",
+   "q": "In a pyramid, triangle PQR has \\(PQ = 8\\) m, \\(PR = 10\\) m and \\(QR = 6\\) m. What is angle \\(QPR\\), to one decimal place?",
    "opts": [
     "36.9°",
     "53.1°",
     "90.0°",
     "143.1°"
    ],
-   "why": "QR is opposite P, so cos P = (64 + 100 − 36) ÷ (2 × 8 × 10) = 128 ÷ 160 = 0.8 and P ≈ 36.9°. The angle 53.1° is the angle at R, found by using PQ as the opposite side instead of QR. Getting cos P = −0.8 from a sign error gives 143.1°.",
-   "clue": "Which side is opposite angle P?"
+   "why": "\\(QR\\) is opposite \\(P\\), so \\(\\cos P = \\frac{64 + 100 - 36}{2 \\times 8 \\times 10} = \\frac{128}{160} = 0.8\\) and \\(P \\approx 36.9^{\\circ}\\). The angle 53.1° is the angle at \\(R\\), found by using \\(PQ\\) as the opposite side instead of \\(QR\\). Getting \\(\\cos P = -0.8\\) from a sign error gives 143.1°.",
+   "clue": "Which side is opposite angle \\(P\\)?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "Sine and cosine rules in three dimensions",
+   "card": [
+    "To solve a solid shape, find a flat triangle inside it. Draw that triangle on its own and label the sides and angles you know.",
+    [
+     "Cosine rule",
+     "c² = a² + b² − 2ab cos C, where side c is opposite angle C. Use it when you know two sides and the angle between them, or all three sides."
+    ],
+    [
+     "Sine rule",
+     "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle."
+    ],
+    "To find an angle from three sides, rearrange: cos C = (a² + b² − c²) ÷ (2ab). Example: sides 3, 4 and 5 give cos C = (9 + 16 − 25) ÷ 24 = 0, so C = 90°."
+   ],
+   "remember": "Pull a flat triangle out of the solid, then pick the sine or cosine rule to suit what you know.",
+   "a": {
+    "q": "Triangle ABC lies on one face of a box. AB = 5 m, AC = 7 m and angle BAC = 60°. What is BC?",
+    "opts": [
+     "√39 m",
+     "√109 m",
+     "√74 m",
+     "12 m"
+    ],
+    "why": "BC² = 25 + 49 − 2 × 5 × 7 × cos 60° = 74 − 35 = 39, so BC = √39 m. Adding 35 instead of taking it away gives √109, which is a sign error.",
+    "clue": "The angle is between the two known sides."
+   },
+   "b": {
+    "d": 3,
+    "q": "In a pyramid, triangle PQR has PQ = 8 m, PR = 10 m and QR = 6 m. What is angle QPR, to one decimal place?",
+    "opts": [
+     "36.9°",
+     "53.1°",
+     "90.0°",
+     "143.1°"
+    ],
+    "why": "QR is opposite P, so cos P = (64 + 100 − 36) ÷ (2 × 8 × 10) = 128 ÷ 160 = 0.8 and P ≈ 36.9°. The angle 53.1° is the angle at R, found by using PQ as the opposite side instead of QR. Getting cos P = −0.8 from a sign error gives 143.1°.",
+    "clue": "Which side is opposite angle P?"
+   }
+  }
+ }
 }
