@@ -185,7 +185,8 @@ check(s.th.aisha[0].state === 'done' && s.th.aisha[0].me === 4, 'Aisha\'s race c
 
 // --- the sample friends' pace: maths is slower than Economics, and chapter 2 slower than chapter 1
 // The numbers come from src/10-core.js: FRIENDS (pace and mpace) and MATHS_SLOW.
-const core = read('src/10-core.js'), grab = name => new Function('return ' + core.match(new RegExp('const ' + name + ' = ([\\s\\S]*?);\\n'))[1])();
+// A line can end in \r\n on Windows (Git's autocrlf), so the \r is optional.
+const core = read('src/10-core.js'), grab = name => new Function('return ' + core.match(new RegExp('const ' + name + ' = ([\\s\\S]*?);\\r?\\n'))[1])();
 const FRIENDS = grab('FRIENDS'), SLOW = grab('MATHS_SLOW');
 const paces = FRIENDS.map(f => [f.name, f.pace, f.mpace * SLOW.m1, f.mpace * SLOW.m2]);
 check(paces.every(x => x[2] >= 2 * x[1] && x[3] > x[2]), 'each friend takes over twice as long for maths, longer still in chapter 2: ' + paces.map(x => x[0] + ' ' + x.slice(1).map(v => Math.round(v)).join('/')).join(', '), R);
