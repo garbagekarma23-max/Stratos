@@ -16,6 +16,7 @@ const IC = {
   eye: icon('<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>'),
   skip: icon('<path d="M5 5l9 7-9 7z"/><path d="M19 5v14"/>'),
   down: icon('<path d="M6 9l6 6 6-6"/>'),
+  up: icon('<path d="M6 15l6-6 6 6"/>'),
   right: icon('<path d="M9 6l6 6-6 6"/>'),
   left: icon('<path d="M15 6l-6 6 6 6"/>'),
   lock: icon('<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
