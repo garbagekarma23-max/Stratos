@@ -14,11 +14,16 @@ function qEl(S, i, learn) {
     if (S.mode === 'mix' || S.mode === 'chapter') acts = actBtn('clue', IC.clue, 'Clue') + actBtn('reveal', IC.eye, 'Answer') + (it.back ? '' : actBtn('skip', IC.skip, 'Skip'));
   }
   sec.className = 'slide q'; sec.dataset.i = i;
+  /* With graphs as its options (optFigs), each option shows its graph, and its text is read out instead of shown. */
+  const figs = q.optFigs;
   sec.innerHTML =
     '<p class="meta">' + meta + '</p>' +
     '<h2 class="qtext">' + tx(q.q) + '</h2>' +
-    '<div class="opts" role="group" aria-label="Answer choices">' +
-      it.perm.map((oi, n) => '<button class="opt" type="button" data-act="opt" data-n="' + n + '"><span class="key">' + 'ABCD'.charAt(n) + '</span><span class="txt">' + tx(q.opts[oi]) + '</span><span class="mk">' + IC.tick + IC.cross + '</span></button>').join('') +
+    (q.fig ? figHtml(q.fig, 'card') : '') +
+    '<div class="opts' + (figs ? ' fopts' : '') + '" role="group" aria-label="Answer choices">' +
+      it.perm.map((oi, n) => '<button class="opt' + (figs ? ' fopt' : '') + '" type="button" data-act="opt" data-n="' + n + '"><span class="key">' + 'ABCD'.charAt(n) + '</span>' +
+        (figs ? figHtml(figs[oi], 'opt') + '<span class="txt sr">' + tx(q.opts[oi]) + '</span>' : '<span class="txt">' + tx(q.opts[oi]) + '</span>') +
+        '<span class="mk">' + IC.tick + IC.cross + '</span></button>').join('') +
     '</div>' +
     '<div class="note" hidden></div>' +
     '<div class="foot">' + (acts ? '<div class="actions">' + acts + '</div>' : '') + '<button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
@@ -145,7 +150,7 @@ function cardEl(i) {
   sec.innerHTML =
     '<p class="meta"><span>Point ' + (p.pi + 1) + ' of ' + ch.points.length + '</span>' + (isDraft(ch) ? DRAFT : '') + '</p>' +
     '<h2 class="ctitle">' + esc(p.title) + '</h2>' +
-    '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
+    '<div class="lines">' + cardHtml(p) + '</div>' +
     '<p class="rem"><b>Remember</b>' + tx(p.remember) + '</p>' +
     '<div class="foot"><button class="next" type="button" data-act="nextslide">Check it' + IC.down + '</button></div>';
   return sec;

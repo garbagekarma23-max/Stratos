@@ -27,6 +27,12 @@ You are not told which option the writer meant as right: the options are in a ra
   - maths written as plain text instead of LaTeX: a slash as a fraction, a caret or ² for a power, √, ≤, a hyphen used as a minus sign, or a matrix written in a line such as [1 2; 3 4] instead of \begin{bmatrix} (wording)
   - LaTeX that means something other than the card, the question or the why intends, such as a fraction or bracket that groups the wrong terms (fact)
   - in Mathematics Advanced, Extension, Mathematical Methods or Specialist Mathematics, an everyday word where the syllabus has a term: opens up or a U shape for concave up, a hill or turns back for a turning point, a corner for a vertex (level)
+- Graphs: a card line or a question may have a graph, and a question's options may be graphs. Each is given as data (the format is in src/06-figure.js: axes, then items such as fn with its expr, curve through points, point, guide, shade, arrow and asymptote). Read the data, work out what the graph shows, and check it against the card, the question, the right answer and the why. Also list as a problem:
+  - a graph that shows something other than the text says: a different function, the wrong roots, a turning point or intercept in the wrong place, a shift the wrong way, a region that is not the area the text names (fact)
+  - a curve or point with a label that does not match its data or the text's names (fact)
+  - for options that are graphs: an option's text that does not describe its own graph, two graphs a student could not tell apart, or a wrong graph that is also right (part a or b, fact)
+  - a graph under a question that gives the answer away, or a graph a student needs that is missing a label or a number to be read (wording)
+  - an alt that does not say what the graph shows, for a student who cannot see it (wording)
 - sure: how sure you are of your whole verdict.
   - high: you know the topic well, and every fact checks out.
   - medium: you know the topic, but a detail could depend on a source you cannot check.

@@ -8,7 +8,8 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T05:46:30Z maths: written in LaTeX (by hand)"
+  "2026-11-06T05:46:30Z maths: written in LaTeX (by hand)",
+  "2026-11-06T12:00:00Z figures: graphs added by hand (the figures pilot)"
  ],
  "sent": {
   "write": 2,
@@ -100,6 +101,78 @@
    ],
    "why": "Add 16 and 1 to both sides: \\((x - 4)^{2} + (y + 1)^{2} = 8 + 16 + 1 = 25\\). The centre is \\((4, -1)\\) and \\(r = 5\\). Radius 25 forgets that the right side is \\(r^{2}\\), not \\(r\\).",
    "clue": "Move the constant across, then add 16 and 1 to both sides."
+  },
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The circle \\((x - 3)^{2} + (y + 2)^{2} = 25\\) on equal scales, with centre \\((3, -2)\\). A dashed radius of 5 runs from the centre to \\((8, -2)\\).",
+    "x": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -8,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "id": "c",
+      "centre": [
+       3,
+       -2
+      ],
+      "r": 5,
+      "label": "\\((x - 3)^{2} + (y + 2)^{2} = 25\\)"
+     },
+     {
+      "type": "curve",
+      "id": "r",
+      "points": [
+       [
+        3,
+        -2
+       ],
+       [
+        8,
+        -2
+       ]
+      ],
+      "style": "dash",
+      "label": "\\(r = 5\\)",
+      "labelAt": 5.5,
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       -2
+      ],
+      "label": "\\((3, -2)\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       -2
+      ],
+      "on": [
+       "c",
+       "r"
+      ]
+     }
+    ]
+   }
   }
  },
  "cleared_by": "checker",
@@ -138,6 +211,39 @@
     "why": "Add 16 and 1 to both sides: (x − 4)² + (y + 1)² = 8 + 16 + 1 = 25. The centre is (4, −1) and r = 5. Radius 25 forgets that the right side is r², not r.",
     "clue": "Move the constant across, then add 16 and 1 to both sides."
    }
+  }
+ },
+ "figures": {
+  "title": "Circles",
+  "card": [
+   "A circle with centre \\((h, k)\\) and radius \\(r\\) has the equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\). The right side is \\(r^{2}\\), not \\(r\\).",
+   "Read the centre from the brackets and flip the signs. In \\((x - 3)^{2} + (y + 2)^{2} = 25\\), the centre is \\((3, -2)\\) and \\(r^{2} = 25\\), so \\(r = 5\\).",
+   "A general equation such as \\(x^{2} + y^{2} - 6x + 4y - 12 = 0\\) can be rewritten by completing the square. Add half the \\(x\\) coefficient, squared, and the same for \\(y\\), to both sides.",
+   "Worked example: \\(x^{2} - 6x + 9 + y^{2} + 4y + 4 = 12 + 9 + 4\\). This gives \\((x - 3)^{2} + (y + 2)^{2} = 25\\), so the centre is \\((3, -2)\\) and the radius is 5."
+  ],
+  "remember": "Flip the signs inside the brackets for the centre. The right side is \\(r^{2}\\), so take a square root for the radius.",
+  "a": {
+   "q": "What are the centre and radius of the circle \\((x + 1)^{2} + (y - 4)^{2} = 49\\)?",
+   "opts": [
+    "Centre \\((-1, 4)\\), radius 7",
+    "Centre \\((1, -4)\\), radius 7",
+    "Centre \\((-1, 4)\\), radius 49",
+    "Centre \\((1, -4)\\), radius 49"
+   ],
+   "why": "The brackets show \\(x + 1 = x - (-1)\\) and \\(y - 4\\), so the centre is \\((-1, 4)\\). The right side is \\(r^{2} = 49\\), so \\(r = 7\\). Choosing \\((1, -4)\\) copies the signs instead of flipping them.",
+   "clue": "Flip the signs for the centre, then take a square root."
+  },
+  "b": {
+   "d": 3,
+   "q": "The circle \\(x^{2} + y^{2} - 8x + 2y - 8 = 0\\) is rewritten by completing the square. What are its centre and radius?",
+   "opts": [
+    "Centre \\((4, -1)\\), radius 5",
+    "Centre \\((4, -1)\\), radius 25",
+    "Centre \\((-4, 1)\\), radius 5",
+    "Centre \\((8, -2)\\), radius 5"
+   ],
+   "why": "Add 16 and 1 to both sides: \\((x - 4)^{2} + (y + 1)^{2} = 8 + 16 + 1 = 25\\). The centre is \\((4, -1)\\) and \\(r = 5\\). Radius 25 forgets that the right side is \\(r^{2}\\), not \\(r\\).",
+   "clue": "Move the constant across, then add 16 and 1 to both sides."
   }
  }
 }

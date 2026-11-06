@@ -23,6 +23,12 @@ A point has a title, a card of 3 or 4 lines (each with an optional label), a rem
 - Write fresh. Never copy a syllabus document, textbook, past paper or marking guideline.
 - Keep everything suitable for a school classroom.
 
+## Graphs
+
+Some parts are graphs, stored as data: card1 fig is the graph under card line 1, a.fig the graph under question a, and a.optFigs the four graphs that are question a's options. If a change touches a graph, or a question or card line a graph shows, name the graph part and give the whole new graph as JSON text, or "" to take it out. A graph must still agree with its card line, its question and the right answer, with every number exact. The rules for writing one are below.
+
+{figures}
+
 {kind_rules}
 
 Answer with JSON only: changes, a list with an entry for each part you change, giving the part's name and its whole new text. A part named card4 on a card of 3 lines adds a fourth line.

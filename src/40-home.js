@@ -1,5 +1,9 @@
 /* ---------- home: the chapter in progress, its bar, and the list of chapters ---------- */
 const lineHtml = l => '<p>' + (Array.isArray(l) ? '<b>' + tx(l[0]) + ':</b> ' + tx(l[1]) : tx(l)) + '</p>';
+/* A figure (a graph, see 06-figure.js) drawn with the app's maths and its words read aloud. size is 'card' or 'opt'. */
+const figHtml = (f, size) => FIG.html(f, size, {tx: tx, say: spoken});
+/* A point's card lines, each with the figure that goes under it, if any (cardFigs counts lines from 1). */
+const cardHtml = p => p.card.map((l, i) => lineHtml(l) + (p.cardFigs && p.cardFigs[i + 1] ? figHtml(p.cardFigs[i + 1], 'card') : '')).join('');
 /* New messages from the sample friends, friend requests waiting (75-friends.js), unread messages and message requests
    (77-messages.js), and challenges to play and new results (78-challenges.js). */
 const unreadCount = () => FRIENDS.reduce((n, f) => n + (saved.unread[f.id] || 0), 0) + frRequests() + msUnread() + chUnread();
@@ -105,7 +109,7 @@ function pointSheet(pid) {
   if (p.sub === 'maths') { mathsSheet(p, st); return; }
   openSheet(p.title,
     '<p class="statusline"><i class="st ' + st + '"></i><span>' + STATUS[st] + '. ' + STATUS_MEANS[st] + '</span></p>' +
-    '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
+    '<div class="lines">' + cardHtml(p) + '</div>' +
     '<p class="rem"><b>Remember</b>' + tx(p.remember) + '</p>' +
     '<p class="sub">' + esc(chName(chOf(p.ch))) + ': ' + esc(chOf(p.ch).title) + '</p>' +
     (isDraft(chOf(p.ch)) ? '<p class="sub">' + DRAFT + ' This chapter has not been checked by a teacher yet.</p>' : '') +

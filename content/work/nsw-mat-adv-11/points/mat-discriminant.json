@@ -8,7 +8,8 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T05:46:30Z maths: written in LaTeX (by hand)"
+  "2026-11-06T05:46:30Z maths: written in LaTeX (by hand)",
+  "2026-11-06T12:00:00Z figures: graphs added by hand (the figures pilot)"
  ],
  "sent": {
   "write": 2,
@@ -100,6 +101,97 @@
    ],
    "why": "Setting them equal: \\(x^{2} - 2x - 1 = 2x - 5\\), so \\(x^{2} - 4x + 4 = 0\\). Then \\(\\Delta = 16 - 16 = 0\\), so the line meets the parabola at exactly one point and touches it. Two points would need \\(\\Delta\\) to be positive.",
    "clue": "Make one side zero, then find \\(\\Delta\\)."
+  },
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Three parabolas. The left one, with \\(\\Delta > 0\\), crosses the x-axis twice. The middle one, with \\(\\Delta = 0\\), touches it once at its vertex. The right one, with \\(\\Delta < 0\\), stays above the x-axis and never meets it.",
+    "x": {
+     "min": -10,
+     "max": 10,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "two",
+      "expr": "(x + 6)^{2} - 1",
+      "domain": [
+       -8.4,
+       -3.6
+      ],
+      "label": "\\(\\Delta > 0\\)",
+      "labelAt": -6,
+      "pos": "below"
+     },
+     {
+      "type": "fn",
+      "id": "one",
+      "expr": "x^{2}",
+      "domain": [
+       -2.4,
+       2.4
+      ],
+      "label": "\\(\\Delta = 0\\)",
+      "labelAt": 1.2,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "none",
+      "expr": "(x - 6)^{2} + 1",
+      "domain": [
+       3.6,
+       8.4
+      ],
+      "label": "\\(\\Delta < 0\\)",
+      "labelAt": 6,
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       -7,
+       0
+      ],
+      "on": [
+       "two"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       -5,
+       0
+      ],
+      "on": [
+       "two"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "one"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
   }
  },
  "cleared_by": "checker",
@@ -138,6 +230,39 @@
     "why": "Setting them equal: x² − 2x − 1 = 2x − 5, so x² − 4x + 4 = 0. Then Δ = 16 − 16 = 0, so the line meets the parabola at exactly one point and touches it. Two points would need Δ to be positive.",
     "clue": "Make one side zero, then find Δ."
    }
+  }
+ },
+ "figures": {
+  "title": "The discriminant",
+  "card": [
+   "For a quadratic \\(ax^{2} + bx + c = 0\\), the discriminant is \\(\\Delta = b^{2} - 4ac\\). It is the part under the square root in the quadratic formula.",
+   "If \\(\\Delta > 0\\), there are two real roots. If \\(\\Delta = 0\\), there is one real root. If \\(\\Delta < 0\\), there are no real roots, so the parabola does not meet the x-axis.",
+   "Example: \\(x^{2} + 4x + 5 = 0\\) has \\(a = 1\\), \\(b = 4\\), \\(c = 5\\). \\(\\Delta = 4^{2} - 4 \\times 1 \\times 5 = 16 - 20 = -4\\), which is negative, so there are no real roots.",
+   "To test a line and a parabola, set their equations equal and rearrange to a quadratic. Find \\(\\Delta\\): positive means the line cuts the parabola twice, zero means it touches once, negative means it misses."
+  ],
+  "remember": "\\(\\Delta = b^{2} - 4ac\\): positive gives two roots, zero gives one, negative gives none.",
+  "a": {
+   "q": "What is the discriminant of \\(2x^{2} - 3x - 5 = 0\\), and how many real roots does it have?",
+   "opts": [
+    "\\(49\\), so two real roots",
+    "\\(-31\\), so no real roots",
+    "\\(19\\), so two real roots",
+    "\\(49\\), so one real root"
+   ],
+   "why": "\\(a = 2\\), \\(b = -3\\), \\(c = -5\\), so \\(\\Delta = (-3)^{2} - 4 \\times 2 \\times (-5) = 9 + 40 = 49\\). This is positive, so there are two real roots. Forgetting that \\(-4ac\\) becomes \\(+40\\) gives \\(9 - 40 = -31\\), which is the tempting wrong answer.",
+   "clue": "Take care with the signs when \\(c\\) is negative."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line \\(y = 2x - 5\\) and the parabola \\(y = x^{2} - 2x - 1\\) are drawn on the same axes. What happens?",
+   "opts": [
+    "The line touches the parabola at one point",
+    "The line cuts the parabola at two points",
+    "The line does not meet the parabola",
+    "The line meets the parabola at the vertex only"
+   ],
+   "why": "Setting them equal: \\(x^{2} - 2x - 1 = 2x - 5\\), so \\(x^{2} - 4x + 4 = 0\\). Then \\(\\Delta = 16 - 16 = 0\\), so the line meets the parabola at exactly one point and touches it. Two points would need \\(\\Delta\\) to be positive.",
+   "clue": "Make one side zero, then find \\(\\Delta\\)."
   }
  }
 }

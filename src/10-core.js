@@ -267,7 +267,7 @@ let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
 function setSubject(id) {
   SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; ALL.forEach(p => { PT[p.id] = p; });
   /* A course whose points have maths in them starts loading MathLive at once, so it is ready before the first card. */
-  if (SUB.mx === undefined) SUB.mx = SUB.id !== 'maths' && ALL.some(p => hasMx(JSON.stringify([p.card, p.remember, p.a, p.b])));
+  if (SUB.mx === undefined) SUB.mx = SUB.id !== 'maths' && ALL.some(p => hasMx(JSON.stringify([p.card, p.cardFigs, p.remember, p.a, p.b])));
   if (SUB.mx) setTimeout(() => loadMathLive().catch(() => {}), 0);
 }
 const isMaths = () => SUB.id === 'maths';

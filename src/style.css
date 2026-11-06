@@ -241,6 +241,14 @@ svg{display:block;flex:none}
 .opt.is-wrong .mk{color:var(--wrong-line,var(--bad))}
 .opt.is-wrong .mk .cross{opacity:1}
 .opt.pop{animation:pop .4s cubic-bezier(.2,1.5,.4,1)}
+/* Graphs as options ("Which graph shows ...?"): two by two, the letter and the mark above each graph. The graph takes
+   the button's text colour, so it stays readable when the option is marked right or wrong. */
+.opts.fopts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.opt.fopt{grid-template-columns:26px minmax(0,1fr) 20px;grid-template-rows:auto auto;align-items:start;row-gap:2px;column-gap:6px;padding:7px 7px 8px;min-height:0}
+.opt.fopt .key{grid-area:1/1}
+.opt.fopt .mk{grid-area:1/3}
+.opt.fopt .fig{grid-area:2/1/3/4;margin:0;color:inherit}
+.qtext + .fig{margin-top:0}
 .opt.shake{animation:shake .34s ease-in-out}
 /* Maths inside a point's text (tx in 10-core.js), drawn by MathLive: the colour of the words around it, a touch larger
    to match their height. A long expression scrolls sideways inside its own box, so it never makes the page wider. */

@@ -82,6 +82,8 @@ const spans = loc => loc.evaluate(el => [...el.querySelectorAll('math-span')].ma
 const wide = p => p.evaluate(() => document.scrollingElement.scrollWidth);
 // MathLive draws a piece only once it comes near the screen, so a part below the fold is scrolled to first.
 const seen = async loc => { await loc.evaluate(el => el.scrollIntoView({block: 'center'})); await loc.page().waitForTimeout(600); return spans(loc); };
+// Every piece, each brought near the screen in turn: a card with a graph has maths labels below the fold.
+const allSeen = async loc => { const m = loc.locator('math-span'); for (let i = 0; i < await m.count(); i++) await m.nth(i).scrollIntoViewIfNeeded(); await loc.page().waitForTimeout(600); return spans(loc); };
 
 if (!SHOTS_ONLY) {
   // ---------- Economics never loads MathLive; a maths course does ----------
@@ -99,7 +101,7 @@ if (!SHOTS_ONLY) {
     'while MathLive loads, every piece of maths on the card is hidden', R);
   check(!/\\|frac|\^\{/.test(await shownText(card)) && /A quadratic function is/.test(await shownText(card)), 'so no LaTeX shows, and the words are there already', R);
   await mathsReady(p); await p.waitForTimeout(600);
-  const after = await spans(card);
+  const after = await allSeen(card);
   check(after.every(s => s.vis === 'visible' && s.drawn), 'once MathLive is here, every piece on the card is drawn', R);
   const axis = after.find(s => s.tex === 'x = -\\frac{b}{2a}');
   check(axis && axis.role === 'img' && axis.label === 'x equals negative b over 2 a', 'each piece has its reading as its label, for screen readers: x equals negative b over 2 a', R);
@@ -162,7 +164,7 @@ if (!SHOTS_ONLY) {
   check(await p.locator('.res').count() === 0, 'LaTeX as written, such as frac{b}, finds nothing', R);
   await p.fill('#q', 'vertex'); await p.waitForTimeout(300);
   await p.locator('.res[data-p="mat-quadratic-functions"]').click(); await p.waitForTimeout(600);
-  const sheetMaths = await spans(p.locator('#sheetBody'));
+  const sheetMaths = await allSeen(p.locator('#sheetBody'));
   check(sheetMaths.length > 5 && sheetMaths.every(s => s.drawn && s.label) && !/\\/.test(await shownText(p.locator('#sheetBody'))), 'the point sheet draws the card\'s maths', R);
   check(!errs.length, 'no script errors' + (errs.length ? ': ' + errs.join(' | ') : ''), R);
   await b.close();

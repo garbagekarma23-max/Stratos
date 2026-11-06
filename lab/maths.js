@@ -13,11 +13,11 @@ const LabMaths = (() => {
     times: 'times', cdot: 'times', ast: 'times', div: 'div',
     pm: 'pm', mp: 'mp', or: 'or', lor: 'or',
     frac: 'frac', dfrac: 'frac', tfrac: 'frac', cfrac: 'frac', sqrt: 'sqrt',
-    placeholder: 'ph', lparen: '(', rparen: ')', lbrack: '[', rbrack: ']'
+    placeholder: 'ph', lparen: '(', rparen: ')', lbrack: '[', rbrack: ']', lvert: 'abs', rvert: 'abs', vert: 'abs'
   };
   const SPACE = new Set([';', ',', '!', ':', '>', ' ', 'quad', 'qquad', 'enspace', 'thinspace', 'medspace', 'thickspace', 'displaystyle', 'textstyle']);
   const WORD = new Set(['mathrm', 'text', 'textrm', 'operatorname', 'mathit', 'textit']);
-  const SIGN = {'+': '+', '-': '-', '−': '-', '*': 'times', '×': 'times', '·': 'times', '/': 'div', '÷': 'div', '±': 'pm', '=': 'eq', '(': '(', ')': ')', '[': '[', ']': ']', '{': '{', '}': '}', '^': '^'};
+  const SIGN = {'|': 'abs', '+': '+', '-': '-', '−': '-', '*': 'times', '×': 'times', '·': 'times', '/': 'div', '÷': 'div', '±': 'pm', '=': 'eq', '(': '(', ')': ')', '[': '[', ']': ']', '{': '{', '}': '}', '^': '^'};
 
   class Stop extends Error { constructor(why) { super(why); this.why = why; } }
 
@@ -41,10 +41,11 @@ const LabMaths = (() => {
           if (d === '\\') {        /* \left\lbrack and friends */
             let j2 = i + 1; while (/[a-zA-Z]/.test(src[j2] || '')) j2++;
             const dn = src.slice(i + 1, j2); i = j2;
-            d = dn === 'lbrack' ? '[' : dn === 'rbrack' ? ']' : dn === 'lparen' ? '(' : dn === 'rparen' ? ')' : '?';
+            d = dn === 'lbrack' ? '[' : dn === 'rbrack' ? ']' : dn === 'lparen' ? '(' : dn === 'rparen' ? ')' : /^[lr]?vert$/.test(dn) ? '|' : '?';
           } else i++;
           const open = /left|bigl/.test(name);
           if (d === '.') out.push({t: open ? '(' : ')', a: a, b: i, quiet: true});
+          else if (d === '|') out.push({t: 'abs', a: a, b: i});
           else if (d === '(' || d === '[') out.push({t: d, a: a, b: i});
           else if (d === ')' || d === ']') out.push({t: d, a: a, b: i});
           else throw new Stop('sign');
@@ -84,13 +85,15 @@ const LabMaths = (() => {
   }
 
   /* ---------- the tree ----------
-     Kinds of node: n (a number), x, add, sub, mul, div, neg, pow, root, pm (plus or minus).
+     Kinds of node: n (a number), x, add, sub, mul, div, neg, pow, root, abs (|x|, for the graphs in a point's figures),
+     pm (plus or minus).
      A pm node has a number (k) so the checker can try it as + and as -. */
   function reader(toks) {
-    let i = 0, pmCount = 0;
+    let i = 0, pmCount = 0, inAbs = 0;
     const peek = () => toks[i], take = () => toks[i++];
     const want = t => { const k = take(); if (!k) throw new Stop('unfinished'); if (k.t !== t) throw new Stop(k.t === 'ph' ? 'unfinished' : 'unfinished'); return k; };
-    const startsAtom = k => !!k && (k.t === 'd' || k.t === 'x' || k.t === '(' || k.t === '[' || k.t === '{' || k.t === 'frac' || k.t === 'sqrt' || k.t === 'ph');
+    /* A bar starts |x| only outside another pair of bars: inside, the next bar is the closing one. */
+    const startsAtom = k => !!k && (k.t === 'd' || k.t === 'x' || k.t === '(' || k.t === '[' || k.t === '{' || k.t === 'frac' || k.t === 'sqrt' || k.t === 'ph' || (k.t === 'abs' && !inAbs));
     function expr() {
       let left = term();
       for (;;) {
@@ -155,6 +158,11 @@ const LabMaths = (() => {
         if (!c || (c.t !== close && !((c.t === ')' || c.t === ']') && close !== '}'))) throw new Stop('unfinished');
         return k.t === '{' ? e : {t: 'br', a: e};
       }
+      if (k.t === 'abs') {
+        if (inAbs) throw new Stop('unfinished');
+        inAbs++; const e = expr(); want('abs'); inAbs--;
+        return {t: 'abs', a: e};
+      }
       if (k.t === 'frac') { const top = arg(), bottom = arg(); return {t: 'div', a: top, b: bottom, frac: true}; }
       if (k.t === 'sqrt') {
         let index = null;
@@ -209,6 +217,7 @@ const LabMaths = (() => {
       case 'mul': return value(n.a, x, signs) * value(n.b, x, signs);
       case 'div': { const d = value(n.b, x, signs); return d === 0 ? NaN : value(n.a, x, signs) / d; }
       case 'neg': return -value(n.a, x, signs);
+      case 'abs': return Math.abs(value(n.a, x, signs));
       case 'pm': { const s = (signs ? signs[n.k] : 1) * (n.flip ? -1 : 1), b = value(n.b, x, signs); return (n.a ? value(n.a, x, signs) : 0) + s * b; }
       case 'pow': {
         const a = value(n.a, x, signs), b = value(n.b, x, signs);
@@ -529,6 +538,16 @@ const LabMaths = (() => {
     return value(line.parts[0].sides[0], 0, []);
   }
 
-  return {read: read, checkLine: checkLine, checkAnswer: checkAnswer, calc: calc, number: number, solve: solve};
+  /* A function of x from a piece of LaTeX with no = sign, such as x^{2} - 6x + 5 or \frac{1}{x - 2}, for a graph in a
+     point's figure (src/06-figure.js). Returns a function that gives y for any x (NaN where it has no value), or null
+     when the LaTeX is not a single expression this reader knows. Nothing is run as code. */
+  function func(latex) {
+    const line = read(latex);
+    if (line.stop || line.parts.length !== 1 || line.parts[0].sides.length !== 1 || line.parts[0].pms) return null;
+    const tree = line.parts[0].sides[0];
+    return x => value(tree, x, []);
+  }
+
+  return {read: read, checkLine: checkLine, checkAnswer: checkAnswer, calc: calc, number: number, solve: solve, func: func};
 })();
 if (typeof module !== 'undefined') module.exports = LabMaths;

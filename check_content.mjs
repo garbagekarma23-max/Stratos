@@ -13,6 +13,9 @@
 // Maths in a point is LaTeX between \( and \) (content/latex.mjs). Every piece must parse, a title has no maths, and a
 // maths point may not write maths as plain text anywhere (a slash as a fraction, a caret, log_, sqrt, <=, ² and the like,
 // PLAIN in latex.mjs). Every maths point is in LaTeX now, so this fails in the full check and in --json alike. Options are measured as they look on screen (shown in latex.mjs).
+// A point's figures (cardFigs, q.fig and q.optFigs, see src/06-figure.js) must match the format and their data must agree
+// with itself (FIG.pointProblems). Their words go through the same word and maths checks as the rest of the point. A
+// question with graphs as its options shows no option text, so it is left out of the longest-option count.
 //   node check_content.mjs                 checks everything in src/
 //   node check_content.mjs --json FILE     checks only the points in FILE ({"kind": ..., "subject": ..., "points": {id: point}})
 //                                          and prints the problems for each as JSON. content/pipeline.py uses this.
@@ -23,6 +26,11 @@ await ready();
 const C = loadContent();
 const {TOPIC, MATHS, ECON_POINTS} = C;
 const MAKE = new Function(fs.readFileSync(new URL('./src/15-maths-make.js', import.meta.url), 'utf8') + '; return MAKE;')();
+/* Figures (graphs stored as data with a point, src/06-figure.js) are checked by the app's own figure code, with the Maths
+   Lab's reader for their functions: the shape, each point said to be on a line really on it, each intercept and turning
+   point where it is said to be, coordinates written in a label matching the dot, a description, and everything fitting
+   inside the axes at the size the app draws it. */
+const FIG = new Function(fs.readFileSync(new URL('./lab/maths.js', import.meta.url), 'utf8') + '\n' + fs.readFileSync(new URL('./src/06-figure.js', import.meta.url), 'utf8') + '; return FIG;')();
 const BANK = allBankPoints(C);
 const COURSES = unitCourses(C);
 // key(?!nes) lets the economist Keynes through, as the ban is on the word key.
@@ -65,12 +73,16 @@ function checkPoint(id, p, tally, kind, subject) {
     if (!Array.isArray(q.opts) || q.opts.length !== 4 || new Set(q.opts).size !== 4) problems.push(id + k + ' needs four different options');
     if (k === 'b' && ![2, 3].includes(q.d)) problems.push(id + k + ' has no difficulty');
     const len = q.opts.map(o => shown(o).length), rest = Math.max(...len.slice(1));
-    if (len[0] > rest) tally.longest++;
-    if (clearlyLongest(len)) tally.clear++;
-    tally.margins.push([id + k, len[0] - rest, len.join('/')]);
+    if (!q.optFigs) {
+      if (len[0] > rest) tally.longest++;
+      if (clearlyLongest(len)) tally.clear++;
+      tally.margins.push([id + k, len[0] - rest, len.join('/')]);
+    }
     q.opts.forEach(o => { if (shown(o).length > 60) problems.push(id + k + ' option is ' + shown(o).length + ' characters' + (hasMaths(o) ? ' as shown' : '') + ': ' + o); if (/[.]$/.test(o)) problems.push(id + k + ' option ends with a full stop: ' + o); });
     texts.push(q.q, q.why, q.clue, ...q.opts);
   }
+  for (const w of FIG.of(p)) texts.push(...FIG.texts(w.fig));
+  for (const m of FIG.pointProblems(p)) problems.push(id + ' ' + m);
   for (const t of texts) wordCheck(id, t, subject);
   for (const t of texts) for (const m of latexProblems(t)) problems.push(id + ' ' + m);
   if (hasMaths(p.title)) problems.push(id + ' has maths in its title. Titles are words only: ' + p.title);
@@ -98,13 +110,16 @@ const tally = () => ({pts: 0, qs: 0, longest: 0, clear: 0, margins: []});
 /* Two questions share the same text when they match ignoring capitals, spaces and the mark at the end. asked() lists
    every question of NSW Economics and every bank, by its text, as [id, a or b], leaving out the points in skip. */
 const sameText = q => sameMaths(q).toLowerCase().replace(/\s+/g, ' ').replace(/[\s?.!:]+$/, '').trim();
+/* A question's text with its graphs, if it has any: "Which graph shows y = x^2?" over two different graphs is two
+   different questions. */
+const askedKey = q => sameText(q.q) + (q.fig || q.optFigs ? ' with figures ' + FIG.key([q.fig || null, q.optFigs || null]) : '');
 function asked(skip) {
-  const out = new Map(), add = (id, p) => { for (const k of ['a', 'b']) if (p[k] && typeof p[k].q === 'string') { const t = sameText(p[k].q); (out.get(t) || out.set(t, []).get(t)).push([id, k]); } };
+  const out = new Map(), add = (id, p) => { for (const k of ['a', 'b']) if (p[k] && typeof p[k].q === 'string') { const t = askedKey(p[k]); (out.get(t) || out.set(t, []).get(t)).push([id, k]); } };
   for (const ch of TOPIC.chapters) for (const p of ch.points) if (!skip.has(p.id)) add(p.id, p);
   for (const [id, p] of Object.entries(BANK)) if (!skip.has(id)) add(id, p);
   return {map: out, add: add};
 }
-const twins = (map, id, k, q) => (map.get(sameText(q)) || []).filter(([i, j]) => i !== id || j !== k).map(([i, j]) => i + j);
+const twins = (map, id, k, q) => (map.get(askedKey(q)) || []).filter(([i, j]) => i !== id || j !== k).map(([i, j]) => i + j);
 
 /* --json FILE: check only the points in it, for content/pipeline.py, and print each point's problems. */
 if (process.argv[2] === '--json') {
@@ -116,7 +131,7 @@ if (process.argv[2] === '--json') {
     problems = [];
     try { checkPoint(id, p, tally(), input.kind, input.subject); } catch (e) { problems.push(id + ' could not be checked: ' + e.message); }
     for (const k of ['a', 'b']) {
-      const q = p && p[k] && p[k].q, same = typeof q === 'string' ? twins(qs.map, id, k, q) : [];
+      const q = p && p[k] && p[k].q, same = typeof q === 'string' ? twins(qs.map, id, k, p[k]) : [];
       if (same.length) problems.push(id + k + ' asks the same question, word for word, as ' + same.join(' and ') + ': ' + q.trim() + ' Word it differently.');
     }
     out[id] = problems;
@@ -179,7 +194,7 @@ for (const c of COURSES) {
   report(c.course + ', ' + c.year, t, isMade && c.id);
 }
 for (const id of Object.keys(BANK)) if (!used.has(id)) problems.push(id + ' is in the bank but no course lists it');
-for (const [q, where] of asked(new Set()).map) if (where.length > 1) problems.push(where.map(([i, k]) => i + k).join(' and ') + ' ask the same question, word for word: ' + q);
+for (const [q, where] of asked(new Set()).map) if (where.length > 1) problems.push(where.map(([i, k]) => i + k).join(' and ') + ' ask the same question, word for word: ' + q.replace(/ with figures .*/, ' (with the same figures)'));
 for (const id of [...TOPIC.chapters.map(c => c.id), ...MATHS.chapters.map(c => c.id)]) if (ids.has(id)) problems.push(id + ' clashes with a course chapter id');
 for (const id of ids) if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) problems.push(id + ' is not a chapter id: lower-case letters and numbers joined by dashes');
 
