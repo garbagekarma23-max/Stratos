@@ -396,7 +396,7 @@ git commit -m "Add Business Studies, Year 11: Nature of business"
 git push -u origin content/nsw-bus-11
 ```
 
-Open the pull request on GitHub, but do not merge it yet. Every test must pass first, every time. GitHub runs them on the pull request by itself: the **Tests** check at the bottom of the pull request builds `v2.html`, runs the content check, the pipeline's tests and the whole browser suite, and turns green when everything passes (about 45 minutes). If it fails, **Details** shows which test and why. To run the suite yourself, open a Claude Code session on the web on the branch (it has Chromium) and ask it to run:
+Open the pull request on GitHub, but do not merge it yet. Every test must pass first, every time. GitHub runs them on the pull request by itself: the **Tests** check at the bottom of the pull request builds `v2.html`, runs the content check, the pipeline's tests and the whole browser suite, and turns green when everything passes (about 20 minutes). If it fails, **Details** shows which test and why. To run the suite yourself, open a Claude Code session on the web on the branch (it has Chromium) and ask it to run:
 
 ```
 cd tests && npm install && npm test

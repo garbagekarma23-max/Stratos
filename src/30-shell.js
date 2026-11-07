@@ -63,11 +63,27 @@ function pageIs(name, arg) { const t = topPage(); return !!t && t.name === name 
 function openPage(name, arg) {
   const t = topPage(), body = $('.p-body', pagesEl);
   if (t && body) t.scroll = body.scrollTop;
-  pages.push({name: name, arg: arg, scroll: 0});
+  pages.push({name: name, arg: arg, scroll: 0, from: focusFrom()});
   paintPage('push');
 }
-function closePage() { pages.pop(); paintPage('pop'); if (!pages.length) paint(); }
-function closeAllPages() { if (!pages.length) return; pages = []; paintPage('pop'); }
+function closePage() { const t = pages.pop(); paintPage('pop'); if (!pages.length) paint(); focusBack(t && t.from); }
+function closeAllPages() { if (!pages.length) return; const from = pages[0].from; pages = []; paintPage('pop'); focusBack(from); }
+// Closing a page takes away the button that had focus. Without this, focus is nowhere, and in newer browsers the next
+// Tab leaves the page. So, as the sheet does, focus goes back to the button that opened the page. The view or page
+// under it is drawn again, so that button is found again by its data-act, data-page and data-id, on screen (views
+// off screen are only hidden, so Home's store icon is skipped while You is open); failing that, the tab of the view. Focus somewhere else already (a tab tapped, a sheet opened) is left where it is.
+function focusFrom() {
+  const el = document.activeElement;
+  return el && el !== document.body ? {el: el, act: el.dataset.act, page: el.dataset.page, id: el.dataset.id} : null;
+}
+function focusBack(from) {
+  const now = document.activeElement;
+  if (now && now !== document.body && now.isConnected) return;
+  let el = from && from.el.isConnected ? from.el : null;
+  if (!el && from && from.act) el = $$('[data-act="' + CSS.escape(from.act) + '"]').find(b => b.dataset.page === from.page && b.dataset.id === from.id && b.getClientRects().length && getComputedStyle(b).visibility === 'visible');
+  if (!el) el = $('.tab[aria-current="page"]');
+  if (el) try { el.focus({preventScroll: true}); } catch (e) {}
+}
 function paintPage(how) {
   const t = topPage(), old = $('.p-body', pagesEl), keep = old ? old.scrollTop : 0;
   pagesEl.textContent = '';

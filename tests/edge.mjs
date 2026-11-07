@@ -65,6 +65,8 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   check(await p.locator('#sheet[hidden]').count() === 1 && await p.locator('.page').count() === 1, 'Escape closes the sheet first', R);
   await p.keyboard.press('Escape'); await p.waitForTimeout(40);
   check(await p.locator('.page').count() === 0, 'then the page', R);
+  // Closing the page puts focus back on the row that opened it, so Tab carries on from there in every browser.
+  check(await p.evaluate(() => { const el = document.activeElement; return el.dataset.act === 'page' && el.dataset.page === 'store'; }), 'focus goes back to the Store row that opened the page', R);
   await p.keyboard.press('Tab');
   const focus = await p.evaluate(() => { const el = document.activeElement; return {ok: !!el && el !== document.body && getComputedStyle(el).outlineStyle !== 'none',
     el: el ? el.tagName.toLowerCase() + (el.id ? '#' + el.id : '') + (el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).join('.') : '') + (el.dataset && el.dataset.act ? ' [' + el.dataset.act + ']' : '') : 'nothing'}; });

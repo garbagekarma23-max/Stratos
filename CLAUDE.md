@@ -466,6 +466,7 @@ Stratos is a school app, not an Economics app: it is to cover every core subject
 
 - Each point has a card, a check question (`a`) and a practice question (`b`). A point is new until one is answered, weak while either was last answered wrong, proven when both were last right, learned in between.
 - Home's top bar: the courses button and, while signed out, Sign in on the left; the logo in the middle; the store and the friends button on the right. The icons at each end sit 8 px into the page margin so they line up with the text below. The store opens the same page as You's Store row.
+- Focus for keyboard users: opening a page or the sheet moves focus into it, and closing it puts focus back on the button that opened it (`sheetFrom`, and `focusFrom` and `focusBack` in `30-shell.js`). A page's opener is found again by its `data-act`, `data-page` and `data-id`, since the view under it is drawn again. Without this, newer Chromium sends the next Tab out of the page.
 - Home's bar shows the current chapter's points learned and points proven, and each chapter row says its stage in words. Home's button picks the next step, and it is always something that can change progress now.
 - Practice only asks about points that are not new: weak questions first, then untried, then the ones right longest ago.
 - Scoring: each correct answer multiplies altitude by 2 x combo x difficulty. Combo tiers start at 3, 5, 8 and 12.
