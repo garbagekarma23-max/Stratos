@@ -38,6 +38,9 @@ keyBank(Object.fromEntries(TOPIC.chapters.flatMap(ch => ch.points).map(p => [p.i
 keyBank(BANK);
 Object.values(loadContent().MADE_BANKS).forEach(keyBank);
 export async function open(o = {}) {
+  // v2.html is built, not kept in git (python3 build.py, or py build.py on Windows), so say so if it is missing.
+  const page = o.page || 'v2.html';
+  if (!fs.existsSync(new URL('../' + page, import.meta.url))) throw new Error('There is no ' + page + ' to test. Build it first: ' + (page === 'v2.html' ? (process.platform === 'win32' ? 'py' : 'python3') + ' build.py' : 'the test that uses it builds it'));
   const b = await chromium.launch(EXE ? {executablePath: EXE} : {});
   // The phone's language and time zone. The subject sheet guesses the country from them. Tests are an Australian
   // phone unless they say otherwise.
@@ -76,7 +79,7 @@ export async function open(o = {}) {
   p.on('pageerror', e => errs.push('PAGEERROR ' + e.message + (process.env.STACK ? '\n' + e.stack : '')));
   if (!server) server = await serve();
   // page opens another build of v2, such as v2-made.html (tests/made.mjs).
-  await p.goto(server.url + (o.page || 'v2.html') + (o.query || ''), {waitUntil: o.waitUntil || 'load'});
+  await p.goto(server.url + page + (o.query || ''), {waitUntil: o.waitUntil || 'load'});
   await p.waitForTimeout(300);
   return {b, ctx, p, errs};
 }

@@ -6,7 +6,7 @@ A study app prototype. Learn a chapter, then practise it, weak points first.
 - Second prototype: https://garbagekarma23-max.github.io/Stratos/v2.html
 - Maths Lab, writing maths working on a phone: https://garbagekarma23-max.github.io/Stratos/maths-lab.html
 
-`v2.html` is built from the files in `src/` with `python3 build.py`. It has two subjects, Economics and Maths. `maths-lab.html` needs no build; its code is in `lab/`. The keypad, the working sheet and the line checker in `lab/` are shared by both pages. `CLAUDE.md` explains how the project is laid out and the rules it follows.
+`v2.html` is built from the files in `src/` with `python3 build.py`. It is not kept in git: GitHub builds it and puts the site on GitHub Pages on each push to `main`, and runs every test on each pull request (`.github/workflows/`). It has two subjects, Economics and Maths. `maths-lab.html` needs no build; its code is in `lab/`. The keypad, the working sheet and the line checker in `lab/` are shared by both pages. `CLAUDE.md` explains how the project is laid out and the rules it follows.
 
 The friends in the app are samples, buying is switched off, and the study notes are a first draft.
 

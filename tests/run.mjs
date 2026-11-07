@@ -1,4 +1,5 @@
-// Runs every test file in turn and says how many checks passed. Build v2.html first: python3 build.py
+// Runs every test file in turn and says how many checks passed. Build v2.html first: python3 build.py (py build.py on
+// Windows). v2.html is not kept in git, so a fresh copy of the repository has none until it is built.
 // The Maths Lab tests (lab-maths.mjs, lab.mjs) need no build: maths-lab.html is the page itself.
 // maths-content.mjs checks the maths worked examples and templates without a browser. maths.mjs runs maths in v2,
 // maths-practice.mjs runs a maths Practice flight, maths-back.mjs looking back from a maths question, and maths-games.mjs runs maths challenges and races. altitude.mjs checks altitude is written out in full and fits.
@@ -36,9 +37,15 @@
 // grouped by Units 1 and 2 and Units 3 and 4, and a state's courses showing once it has one.
 // figures.mjs checks graphs stored as data (src/06-figure.js): the format and the content check's maths with no browser, and
 // the pilot graphs in v2 (Edexcel's Price determination and Mathematics Advanced's Families of graphs), tapped and keyed.
+// site.mjs builds the live site the way GitHub does (build.py --site) and checks every file the pages use is in it.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-back.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['welcome.mjs'], ['first-open.mjs'], ['start.mjs'], ['pipeline.mjs'], ['made.mjs'], ['units.mjs'], ['words.mjs'], ['questions.mjs'], ['latex.mjs'], ['maths-text.mjs'], ['figures.mjs']];
+import fs from 'fs';
+if (!fs.existsSync(new URL('../v2.html', import.meta.url))) {
+  console.log('There is no v2.html to test. Build it first, from the repository folder: ' + (process.platform === 'win32' ? 'py' : 'python3') + ' build.py');
+  process.exit(1);
+}
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-back.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['welcome.mjs'], ['first-open.mjs'], ['start.mjs'], ['pipeline.mjs'], ['made.mjs'], ['units.mjs'], ['words.mjs'], ['questions.mjs'], ['latex.mjs'], ['maths-text.mjs'], ['figures.mjs'], ['site.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});

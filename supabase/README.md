@@ -74,7 +74,7 @@ The publishable key is meant to be public. It only lets a browser ask, and the r
 may do. It replaces the older "anon" key, which Supabase is retiring at the end of 2026. Nothing in Stratos needs
 the secret key, because it passes every rule.
 
-After the values are in, run `python3 build.py`, run the tests, and commit `src/` and `v2.html` together.
+After the values are in, run `python3 build.py`, run the tests, and commit `src/`. `v2.html` is not kept in git: GitHub builds it for the live site once the pull request is merged.
 
 ## 8. Check it with two accounts
 
