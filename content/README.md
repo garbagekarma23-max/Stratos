@@ -598,7 +598,7 @@ Follow content/README.md step 14.
 
 ### The pilot
 
-Five pictures, each through these steps and each checked by a fresh Opus subagent: a box plot with an outlier under the five-number summary example (`mat-five-number-summary-boxplots`, Victorian General Mathematics Units 1 and 2); a plant cell and an animal cell (`bio-plant-animal-cells-compared-2`, Biology Units 1 and 2); a series circuit (`phys-series-circuits`, Physics Units 1 and 2); The Blood Vote, a 1916 anti-conscription leaflet (`his-conscription-referendums`, History Year 9); and a map of the Murray-Darling Basin (`geo-water-use-murray-darling`, Geography Year 10).
+Five pictures went through these steps, each checked by a fresh Opus subagent. Four were kept and published: a box plot with an outlier under the five-number summary example (`mat-five-number-summary-boxplots`, Victorian General Mathematics Units 1 and 2); a plant cell and an animal cell (`bio-plant-animal-cells-compared-2`, Biology Units 1 and 2); a series circuit (`phys-series-circuits`, Physics Units 1 and 2); and The Blood Vote, a 1916 anti-conscription leaflet (`his-conscription-referendums`, History Year 9). The map of the Murray-Darling Basin (`geo-water-use-murray-darling`, Geography Year 10) was turned down twice: the Murray-Darling Basin Authority's map for its small print and its credit, then Martyman's 2004 catchment map because its labels are 6 to 8 px on a phone. It now waits for you: a map cropped to the basin, or one drawn for Stratos as a diagram, are the ways on.
 
 ## Writing an outline
 
