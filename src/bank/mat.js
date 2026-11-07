@@ -379,8 +379,8 @@ MADE_BANKS.mat = {
             "expr": "(x - 6)^{2} + 1",
             "domain": [3.6, 8.4],
             "label": "\\(\\Delta < 0\\)",
-            "labelAt": 6,
-            "pos": "below"
+            "labelAt": 7.6,
+            "pos": "right"
           },
           {"type": "point", "at": [-7, 0], "on": ["two"], "is": "x-intercept"},
           {"type": "point", "at": [-5, 0], "on": ["two"], "is": "x-intercept"},
