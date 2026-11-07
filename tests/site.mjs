@@ -38,9 +38,15 @@ const local = new Set();
 const add = (from, ref) => { if (!/^(https?:|data:|mailto:|#|\/\/)/.test(ref)) local.add(path.posix.normalize(path.posix.join(path.posix.dirname(from), ref.split(/[?#]/)[0]))); };
 for (const page of ['index.html', 'v2.html', 'maths-lab.html']) {
   const h = read(page);
-  for (const m of h.matchAll(/<(?:link|script|img)\b[^>]*?\b(?:href|src)="([^"]+)"/g)) add(page, m[1]);
+  // A tag written by the page's script with its address put in at runtime (an image's src, from its figure) is not a
+  // fixed address: the pictures it can name are checked below, from their records.
+  for (const m of h.matchAll(/<(?:link|script|img)\b[^>]*?\b(?:href|src)="([^"]+)"/g)) if (!/' \+ /.test(m[1])) add(page, m[1]);
   // Scripts loaded later by the page itself: MathLive when maths opens, Supabase for a student who signs in.
   for (const m of h.matchAll(/['"]((?:lab|vendor|icons)\/[^'"\s]+\.(?:js|css|png|svg|woff2))['"]/g)) add(page, m[1]);
+  // Pictures the page shows, each named in the records build.py put into it (PICS) and in the points that show it.
+  const pics = /\/\*PICS\*\/(.*?)\/\*PICS-END\*\//s.exec(h);
+  if (pics) { const r = JSON.parse(pics[1].replace(/<\\\//g, '</')); for (const src of [...Object.keys(r.images), ...Object.keys(r.diagrams)]) add(page, src); }
+  for (const m of h.matchAll(/"src": ?"(pictures\/(?:images|diagrams)\/[^"]+)"/g)) add(page, m[1]);
 }
 for (const f of ['manifest-v2.webmanifest', 'manifest-lab.webmanifest']) {
   const m = JSON.parse(read(f));

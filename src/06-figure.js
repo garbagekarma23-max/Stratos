@@ -726,7 +726,7 @@ const FIG = (() => {
   /* ---------- pictures: diagrams and images ----------
      A picture is a file in the repository, never loaded from another site:
        {"kind": "diagram", "src": "pictures/diagrams/plant-and-animal-cells.svg", "alt": "..."}
-       {"kind": "image", "src": "pictures/images/murray-darling-basin.png", "alt": "..."}
+       {"kind": "image", "src": "pictures/images/the-blood-vote-1916.webp", "alt": "..."}
      alt is required, except on an option, whose text is its description. Every picture has a record in
      pictures/licences.json, under "diagrams" or "images" by its src: its title and its size in pixels ([width, height],
      the viewBox for a diagram), and for an image the creator, the licence, the page it came from and what was changed
