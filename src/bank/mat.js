@@ -496,9 +496,9 @@ MADE_BANKS.mat = {
     "cardFigs": {
       "4": {
         "kind": "graph",
-        "alt": "The hyperbola \\(y = \\frac{6}{x}\\): one curve in quadrant 1 through \\((2, 3)\\) and one in quadrant 3 through \\((-2, -3)\\). Neither curve meets the axes, which are its asymptotes.",
-        "x": {"min": -8, "max": 8, "label": "\\(x\\)", "step": 2},
-        "y": {"min": -8, "max": 8, "label": "\\(y\\)", "step": 2},
+        "alt": "The hyperbola \\(y = \\frac{6}{x}\\): one curve in quadrant 1 through \\((2, 3)\\) and one in quadrant 3 through \\((-2, -3)\\). Quadrants 2 and 4 are empty. Neither curve meets the axes, which are its asymptotes: each curve gets closer to both axes without touching them.",
+        "x": {"min": -7, "max": 7, "label": "\\(x\\)", "step": 2},
+        "y": {"min": -7, "max": 7, "label": "\\(y\\)", "step": 2},
         "equal": true,
         "items": [
           {
@@ -512,8 +512,10 @@ MADE_BANKS.mat = {
           },
           {"type": "point", "at": [2, 3], "on": ["f"], "label": "\\((2, 3)\\)", "pos": "above-right"},
           {"type": "point", "at": [-2, -3], "on": ["f"], "label": "\\((-2, -3)\\)", "pos": "below-left"},
-          {"type": "text", "at": [-7.5, 6.5], "label": "quadrant 2", "pos": "right"},
-          {"type": "text", "at": [7.5, -6.5], "label": "quadrant 4", "pos": "left"}
+          {"type": "text", "at": [6.8, 6], "label": "quadrant 1", "pos": "left"},
+          {"type": "text", "at": [-6.8, 6], "label": "quadrant 2", "pos": "right"},
+          {"type": "text", "at": [-6.8, -6], "label": "quadrant 3", "pos": "right"},
+          {"type": "text", "at": [6.8, -6], "label": "quadrant 4", "pos": "left"}
         ]
       }
     }
