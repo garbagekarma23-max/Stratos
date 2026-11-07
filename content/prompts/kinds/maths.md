@@ -29,6 +29,13 @@ Write every piece of maths in LaTeX between \( and \), inside the sentence: "The
 - A title is words only, with no maths.
 - In JSON every backslash is written twice: "\\(x = -\\frac{b}{2a}\\)".
 
+## Graphs in maths
+
+- A graph helps when the point is about the shape of a function, its intercepts, turning points or asymptotes, or a region under a curve. Write the function's expr as LaTeX, with no "y =": "-x^{2} + 2x + 8".
+- Mark every intercept and turning point the card or question names, with "is" and "on", so the content check works each one out. Label an intercept with its coordinates or its x value.
+- Choose axes so the curve's turning points and intercepts are well inside them, with a step that keeps the numbers apart (about 8 to 12 steps on an axis). Use equal: true for a circle.
+- "Which graph shows ...?" is a good practice question: four graphs of one family, three of them showing real mistakes.
+
 ## Terms
 
 In Mathematics Advanced, Extension 1 and 2, Mathematical Methods and Specialist Mathematics, use the syllabus's terms, never everyday words for them: concave up and concave down, not opens up or a U shape; turning point and stationary point, not a hill, a valley or where it turns back; vertex, not corner; point of inflection, not where it flattens.

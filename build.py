@@ -17,6 +17,7 @@ How the pieces fit:
                        and src/courses (the courses). content/pipeline.py publish writes those two folders.
   src/places.js        every course, which countries and states teach which, and the country codes for the subject sheet
   src/05-maths-text.js maths written as LaTeX inside a point's text: drawing it with MathLive and reading it aloud
+  src/06-figure.js     figures: graphs stored as data with a point and drawn as SVG, and their content check
   src/10-core.js ...   the script, in the order listed in JS below
   src/75-friends.js    real friends: usernames, search, friend codes, requests, remove, block and unblock
   src/76-week.js       the weekly table with real friends: sending right answers, the table and its switch
@@ -40,7 +41,7 @@ SRC = HERE + 'src/'
 LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
 JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'made.js', 'MADE', 'places.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
-      '05-maths-text.js', '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
+      '05-maths-text.js', '06-figure.js', '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
       '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '76-week.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '84-merge.js', '85-account.js', '90-boot.js']
 
 def read(name):

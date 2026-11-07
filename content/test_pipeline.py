@@ -55,14 +55,14 @@ def check(ok, what):
 def fake_point(title, dash=False):
     words = ' '.join(title.lower().split()[:3])
     return {'title': title,
-            'card': [{'label': '', 'text': 'The first line teaches ' + title.lower() + '.'},
-                     {'label': 'Part', 'text': 'The second line is about ' + words + '.'},
-                     {'label': '', 'text': 'The third line ends the card.'}],
+            'card': [{'label': '', 'text': 'The first line teaches ' + title.lower() + '.', 'fig': ''},
+                     {'label': 'Part', 'text': 'The second line is about ' + words + '.', 'fig': ''},
+                     {'label': '', 'text': 'The third line ends the card.', 'fig': ''}],
             'remember': 'Hold on to ' + words + ('— always' if dash else '.'),
             'a': {'q': 'Which is true of ' + title.lower() + '?', 'opts': ['Right: ' + words, 'Wrong one', 'Wrong two', 'Wrong three'],
-                  'why': 'The first option is right.', 'clue': 'Read the card.'},
+                  'why': 'The first option is right.', 'clue': 'Read the card.', 'fig': '', 'optFigs': ''},
             'b': {'d': 2, 'q': 'In a new case, what shows ' + title.lower() + '?', 'opts': ['Right: ' + words + ' again', 'Wrong four', 'Wrong five', 'Wrong six'],
-                  'why': 'The first option is right again.', 'clue': 'Think of the case.'}}
+                  'why': 'The first option is right again.', 'clue': 'Think of the case.', 'fig': '', 'optFigs': ''}}
 
 class FakeBatches:
     def __init__(self, api): self.api = api
@@ -1389,6 +1389,51 @@ def cc_review_tests(tmp, repo, printed, api):
     os.environ['ANTHROPIC_API_KEY'] = KEY
 
 
+def figure_tests(repo):
+    """Figures (graphs stored as data, src/06-figure.js) through the pipeline: the writer answers each as JSON text, to_bank
+    makes it data in the bank's shape and to_claude turns it back, text that is not JSON reaches the content check as a
+    problem, the checker reads the graphs as data with the options' graphs shuffled with their options, adapt can change a
+    figure, and a question whose options are graphs is never rebalanced."""
+    g = lambda **k: dict({'kind': 'graph', 'x': {'min': -5, 'max': 5, 'label': '\\(x\\)', 'step': 1}, 'y': {'min': -5, 'max': 10, 'label': '\\(y\\)', 'step': 5},
+                          'items': [{'type': 'fn', 'id': 'f', 'expr': k.pop('expr', 'x^{2}')}]}, **k)
+    card_fig = g(alt='The parabola \\(y = x^{2}\\), with its vertex at the origin.')
+    opts = [dict(g(expr=e), x={'min': -5, 'max': 5, 'label': '\\(x\\)', 'step': 1, 'nums': False}) for e in ['x^{2}', 'x^{2} - 4', '-x^{2}', 'x^{2} + 4']]
+    p = fake_point('Graphs here')
+    p['card'][1]['fig'] = json.dumps(card_fig)
+    p['a']['fig'] = json.dumps(card_fig)
+    p['b']['optFigs'] = json.dumps(opts)
+    b = pipeline.to_bank(p)
+    check(b['cardFigs'] == {'2': card_fig} and list(b)[:3] == ['title', 'card', 'cardFigs'] and b['a']['fig'] == card_fig and b['b']['optFigs'] == opts and
+          'fig' not in b['b'] and 'optFigs' not in b['a'] and b['card'][1] == ['Part', 'The second line is about graphs here.'],
+          'a figure written as JSON text goes into the bank as data: under its card line in cardFigs, on the question, and on the options')
+    check(pipeline.to_bank(pipeline.to_claude(b)) == b and pipeline.to_claude(b)['card'][0]['fig'] == '' and pipeline.to_bank(fake_point('No graphs')) == pipeline.to_bank(pipeline.to_claude(pipeline.to_bank(fake_point('No graphs')))),
+          'to_claude gives it back as JSON text ("" for none), and a point with no figures keeps its old shape')
+    bad = fake_point('Broken graph'); bad['a']['fig'] = '{"kind": "graph", "x": '
+    probs = pipeline.check_points({'tst-broken': pipeline.to_bank(bad), 'tst-graphs': b}, 'maths', repo, tempfile.mkdtemp())
+    check(any('could not be read as JSON' in m for m in probs['tst-broken']) and not [m for m in probs['tst-graphs'] if 'figure' in m],
+          'a figure that is not JSON reaches the content check as a problem, so the writer writes it again; good figures pass')
+    wrong = json.loads(json.dumps(b)); wrong['cardFigs']['2']['items'].append({'type': 'point', 'at': [2, 3], 'on': ['f'], 'label': '\\((2, 3)\\)'})
+    probs = pipeline.check_points({'tst-graphs': wrong}, 'maths', repo, tempfile.mkdtemp())
+    check(any('is said to be on f, but is not' in m for m in probs['tst-graphs']), 'and a dot said to be on a graph that is not on it is caught')
+    course = {'subject': 'Testing', 'years': [11], 'about': 'Test', 'place': 'nsw', 'units': [{'title': 'U', 'chapters': [{'title': 'C', 'points': [{'title': 'Graphs here', 'brief': ''}]}]}]}
+    pt = {'unit': 0, 'chapter': 0, 'id': 'tst-graphs', 'title': 'Graphs here', 'brief': '', 'codes': []}
+    text = pipeline.check_user(course, pt, {'id': 'tst-graphs', 'draft': b})
+    order = pipeline.shuffled('tst-graphs', 'b', b['b']['opts'])
+    lines = text.split('\n')
+    graph_after = all(lines[lines.index('- ' + o) + 1] == '  Its graph, as data: ' + json.dumps(opts[b['b']['opts'].index(o)], ensure_ascii=False) for o in order)
+    check('Figure under this line, as data: ' + json.dumps(card_fig, ensure_ascii=False) in text and 'Figure under the question, as data:' in text and graph_after and
+          'Each option\'s text is its description' in text, 'the checker gets every figure as data, each option\'s graph under it in the shuffled order')
+    src = pipeline.to_bank(fake_point('Adapt graphs'))
+    new, done = pipeline.adapted(src, [{'part': 'card1 fig', 'text': json.dumps(card_fig)}, {'part': 'a.optFigs', 'text': json.dumps(opts)}])
+    check(new['cardFigs'] == {'1': card_fig} and new['a']['optFigs'] == opts and done == ['card1 fig', 'a.optFigs'] and
+          'card1 fig' in pipeline.ADAPT_PARTS and 'b.optFigs' in pipeline.ADAPT_PARTS, 'adapt can add or change a figure by naming it')
+    gone, _ = pipeline.adapted(b, [{'part': 'card2 fig', 'text': ''}])
+    check('cardFigs' not in gone, 'and take one out with ""')
+    long = pipeline.to_bank(fake_point('Long right'))
+    long['b']['opts'][0] = 'A right option far longer than any of the wrong ones here'
+    check(pipeline.rebalance_qs(long) == ['a', 'b'] and pipeline.rebalance_qs(dict(long, b=dict(long['b'], optFigs=opts))) == ['a'],
+          'a question whose options are graphs is never rebalanced: its option text is not shown')
+
 def main():
     tmp = tempfile.mkdtemp(prefix='stratos-pipeline-')
     repo, work = os.path.join(tmp, 'repo'), os.path.join(tmp, 'work')
@@ -1510,6 +1555,9 @@ def main():
     check(raw('/mathlive/mathlive.min.js') == (200, 'text/javascript') and raw('/mathlive/mathlive-ssr.min.mjs')[0] == 404 and
           raw('/mathlive/../check_content.mjs')[0] == 404 and raw('/mathlive/fonts/none.woff2')[0] == 404 and raw('/mathlive/fonts/../../build.py')[0] == 404,
           'the review page gets MathLive\'s script for the maths in a point, and no other file')
+    fig_js = urllib.request.urlopen('http://127.0.0.1:' + str(port) + '/figure.js').read().decode('utf-8')
+    check(raw('/figure.js') == (200, 'text/javascript; charset=utf-8') and 'const LabMaths' in fig_js and 'const FIG' in fig_js and raw('/src/06-figure.js')[0] == 404,
+          'the review page gets the app\'s figure code, to draw a point\'s graphs as the app does')
     check(pipeline.shown_len('\\(x = -\\frac{b}{2a}\\)') == 7 and pipeline.shown_len('Centre \\((-1, 4)\\)') == 14 and
           not pipeline.clearly_longest(['\\(\\frac{1200}{5}\\)', '2400', '1205', '240']) and pipeline.clearly_longest(['\\(x = 120\\) and \\(y = 5\\)', '1', '2', '3']),
           'rebalance measures maths as it looks: a fraction is as wide as its wider part')
@@ -1766,6 +1814,8 @@ def main():
     recheck_tests(tmp, repo, printed, api)
     autoreject_tests(tmp, repo, printed, api)
     rebalance_tests(tmp, printed, api)
+
+    figure_tests(repo)
 
     # ---------- Claude Code instead of the API ----------
     claude_code_tests(tmp, printed, api)

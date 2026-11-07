@@ -412,9 +412,13 @@ def obj(props, required=None):
     return {'type': 'object', 'properties': props, 'required': required or list(props), 'additionalProperties': False}
 
 STR = {'type': 'string'}
-QUESTION = obj({'q': STR, 'opts': {'type': 'array', 'items': STR}, 'why': STR, 'clue': STR})
-PRACTICE = obj({'d': {'type': 'integer', 'enum': [2, 3]}, 'q': STR, 'opts': {'type': 'array', 'items': STR}, 'why': STR, 'clue': STR})
-POINT_SCHEMA = obj({'title': STR, 'card': {'type': 'array', 'items': obj({'label': STR, 'text': STR})}, 'remember': STR, 'a': QUESTION, 'b': PRACTICE})
+# A figure (a graph stored as data, src/06-figure.js) is written as JSON text inside the answer, or "" for none: under a card
+# line (fig), under a question (fig), or one for each option (optFigs, a JSON list of four). A figure has many optional
+# parts, and the API allows only 16 fields with a choice of types in a request, so the shape stays text here and the
+# content check holds each figure to the format (FIG.pointProblems), as it holds the rest of the point.
+QUESTION = obj({'q': STR, 'opts': {'type': 'array', 'items': STR}, 'why': STR, 'clue': STR, 'fig': STR, 'optFigs': STR})
+PRACTICE = obj({'d': {'type': 'integer', 'enum': [2, 3]}, 'q': STR, 'opts': {'type': 'array', 'items': STR}, 'why': STR, 'clue': STR, 'fig': STR, 'optFigs': STR})
+POINT_SCHEMA = obj({'title': STR, 'card': {'type': 'array', 'items': obj({'label': STR, 'text': STR, 'fig': STR})}, 'remember': STR, 'a': QUESTION, 'b': PRACTICE})
 PICK = obj({'best': STR, 'also_right': {'type': 'array', 'items': STR}})
 CHECK_SCHEMA = obj({
     'a': PICK, 'b': PICK,
@@ -425,34 +429,62 @@ CHECK_SCHEMA = obj({
     'summary': STR})
 MATCH_SCHEMA = obj({'verdict': {'type': 'string', 'enum': ['reuse', 'adapt', 'new']}, 'same': STR, 'changes': {'type': 'array', 'items': STR},
                     'sure': {'type': 'string', 'enum': ['high', 'medium', 'low']}, 'reason': STR})
-# The parts of a point an adapt can change, by name. card1 is the first card line's text, card1 label its label.
-ADAPT_PARTS = (['title'] + [f'card{i}' + x for i in range(1, 5) for x in ('', ' label')] + ['remember'] +
-               [k + '.' + x for k in 'ab' for x in ['q', 'opt1', 'opt2', 'opt3', 'opt4', 'why', 'clue']])
+# The parts of a point an adapt can change, by name. card1 is the first card line's text, card1 label its label, card1 fig
+# the figure under it, as JSON text ("" takes it out). a.fig is the figure under question a, a.optFigs its options' graphs.
+ADAPT_PARTS = (['title'] + [f'card{i}' + x for i in range(1, 5) for x in ('', ' label', ' fig')] + ['remember'] +
+               [k + '.' + x for k in 'ab' for x in ['q', 'opt1', 'opt2', 'opt3', 'opt4', 'why', 'clue', 'fig', 'optFigs']])
 ADAPT_SCHEMA = obj({'changes': {'type': 'array', 'items': obj({'part': {'type': 'string', 'enum': ADAPT_PARTS}, 'text': STR})}})
 WRONG = obj({'wrong': {'type': 'array', 'items': STR}})
 SCHEMAS = {'match': MATCH_SCHEMA, 'confirm': MATCH_SCHEMA, 'adapt': ADAPT_SCHEMA, 'write': POINT_SCHEMA, 'fix': POINT_SCHEMA, 'check': CHECK_SCHEMA, 'screen': CHECK_SCHEMA}
 
+def fig_data(text):
+    """A figure written as JSON text, as data. "" is no figure (None). Text that is not JSON is kept with what went wrong,
+    so the content check names it and the writer gets one more try, like any other problem."""
+    if text is None or (isinstance(text, str) and not text.strip()): return None
+    if not isinstance(text, str): return text
+    try: return json.loads(text)
+    except ValueError as e: return {'kind': 'graph', 'unreadable': str(e)}
+
+def fig_text(fig):
+    return json.dumps(fig, ensure_ascii=False) if fig is not None else ''
+
 def to_bank(p):
-    """A point as Claude writes it (card lines with labels) to the bank's shape (a label line is [label, text])."""
+    """A point as Claude writes it (card lines with labels, figures as JSON text) to the bank's shape (a label line is
+    [label, text], and a card line's figure goes in cardFigs under its number, counting from 1)."""
     card = [[l['label'].strip(), l['text'].strip()] if l['label'].strip() else l['text'].strip() for l in p['card']]
-    q = lambda x, d=False: dict(({'d': x['d']} if d else {}), q=x['q'].strip(), opts=[o.strip() for o in x['opts']], why=x['why'].strip(), clue=x['clue'].strip())
-    return {'title': p['title'].strip(), 'card': card, 'remember': p['remember'].strip(), 'a': q(p['a']), 'b': q(p['b'], True)}
+    def q(x, d=False):
+        out = dict(({'d': x['d']} if d else {}), q=x['q'].strip(), opts=[o.strip() for o in x['opts']], why=x['why'].strip(), clue=x['clue'].strip())
+        fig, figs = fig_data(x.get('fig')), fig_data(x.get('optFigs'))
+        if fig is not None: out['fig'] = fig
+        if figs is not None: out['optFigs'] = figs
+        return out
+    out = {'title': p['title'].strip(), 'card': card, 'remember': p['remember'].strip(), 'a': q(p['a']), 'b': q(p['b'], True)}
+    figs = {str(i): fig_data(l.get('fig')) for i, l in enumerate(p['card'], 1) if fig_data(l.get('fig')) is not None}
+    if figs: out = dict(list(out.items())[:2] + [('cardFigs', figs)] + list(out.items())[2:])
+    return out
 
 def to_claude(p):
     """A bank point back to the shape Claude writes in."""
-    card = [{'label': l[0], 'text': l[1]} if isinstance(l, list) else {'label': '', 'text': l} for l in p['card']]
-    return {'title': p['title'], 'card': card, 'remember': p['remember'], 'a': p['a'], 'b': p['b']}
+    figs = p.get('cardFigs') or {}
+    card = [dict({'label': l[0], 'text': l[1]} if isinstance(l, list) else {'label': '', 'text': l}, fig=fig_text(figs.get(str(i))))
+            for i, l in enumerate(p['card'], 1)]
+    q = lambda x: dict({k: v for k, v in x.items() if k not in ('fig', 'optFigs')}, fig=fig_text(x.get('fig')), optFigs=fig_text(x.get('optFigs')))
+    return {'title': p['title'], 'card': card, 'remember': p['remember'], 'a': q(p['a']), 'b': q(p['b'])}
 
 def parts(p):
     """A bank point as named parts, one a line, for an adapt request: title, card1, card1 label, ..., b.clue."""
     out = ['title: ' + p['title']]
+    figs = p.get('cardFigs') or {}
     for i, l in enumerate(p['card'], 1):
         if isinstance(l, list): out.append(f'card{i} label: ' + l[0])
         out.append(f'card{i}: ' + (l[1] if isinstance(l, list) else l))
+        if figs.get(str(i)) is not None: out.append(f'card{i} fig: ' + fig_text(figs[str(i)]))
     out.append('remember: ' + p['remember'])
     for k in 'ab':
         out.append(k + '.q: ' + p[k]['q'])
+        if p[k].get('fig') is not None: out.append(k + '.fig: ' + fig_text(p[k]['fig']))
         out += [k + '.opt' + str(i) + ': ' + o + (' (right)' if i == 1 else '') for i, o in enumerate(p[k]['opts'], 1)]
+        if p[k].get('optFigs') is not None: out.append(k + '.optFigs: ' + fig_text(p[k]['optFigs']))
         out += [k + '.why: ' + p[k]['why'], k + '.clue: ' + p[k]['clue']]
     return out
 
@@ -462,14 +494,14 @@ def adapted(src, changes):
     p, done = json.loads(json.dumps(to_claude(src))), []
     for ch in changes:
         part, text = ch.get('part', ''), (ch.get('text') or '').strip()
-        m = re.fullmatch(r'card([1-4])( label)?', part)
+        m = re.fullmatch(r'card([1-4])( label| fig)?', part)
         if m:
             i = int(m.group(1)) - 1
-            if i == len(p['card']): p['card'].append({'label': '', 'text': ''})
+            if i == len(p['card']): p['card'].append({'label': '', 'text': '', 'fig': ''})
             if i >= len(p['card']): continue
-            p['card'][i]['label' if m.group(2) else 'text'] = text
+            p['card'][i]['label' if m.group(2) == ' label' else 'fig' if m.group(2) == ' fig' else 'text'] = text
         elif re.fullmatch(r'[ab]\.opt[1-4]', part): p[part[0]]['opts'][int(part[-1]) - 1] = text
-        elif re.fullmatch(r'[ab]\.(q|why|clue)', part): p[part[0]][part[2:]] = text
+        elif re.fullmatch(r'[ab]\.(q|why|clue|fig|optFigs)', part): p[part[0]][part[2:]] = text
         elif part in ('title', 'remember'): p[part] = text
         else: continue
         done.append(part)
@@ -482,7 +514,7 @@ def prompt(name):
 
 def writer_system(course, d):
     examples = '\n\n'.join(json.dumps(to_claude(d['banks']['e'][i]), ensure_ascii=False, indent=1) for i in EXAMPLES)
-    return prompt('writer.md').replace('{kind_rules}', prompt(os.path.join('kinds', course['kind'] + '.md'))).replace('{examples}', examples)
+    return prompt('writer.md').replace('{figures}', prompt('figures.md')).replace('{kind_rules}', prompt(os.path.join('kinds', course['kind'] + '.md'))).replace('{examples}', examples)
 
 def context(course, pt):
     """The course, the chapter and its other points, so Claude writes this point to fit them."""
@@ -531,10 +563,34 @@ def shuffled(pid, k, opts):
     random.Random(pid + k).shuffle(out)
     return out
 
+def card_md(p):
+    """A point's card as lines, each with the figure under it, if any, as its data. A reader checks a graph by its data:
+    src/06-figure.js has the format."""
+    figs, out = p.get('cardFigs') or {}, []
+    for i, l in enumerate(p['card'], 1):
+        out.append('- ' + (l[0] + ': ' + l[1] if isinstance(l, list) else l))
+        if figs.get(str(i)) is not None: out.append('  Figure under this line, as data: ' + fig_text(figs[str(i)]))
+    return out
+
+def q_figs(q):
+    """The figure under a question, as a line, or nothing."""
+    return ['Figure under the question, as data: ' + fig_text(q['fig'])] if q.get('fig') is not None else []
+
 def check_user(course, pt, rec):
     p = rec['draft']
-    card = '\n'.join('- ' + (l[0] + ': ' + l[1] if isinstance(l, list) else l) for l in p['card'])
-    q = lambda k: '\n'.join(['Question ' + k + ': ' + p[k]['q']] + ['- ' + o for o in shuffled(rec['id'], k, p[k]['opts'])] + ['Clue: ' + p[k]['clue']])
+    card = '\n'.join(card_md(p))
+    def q(k):
+        x = p[k]
+        # The options in a fixed random order (shuffled), each with its graph when the options are graphs, so the checker
+        # picks by the graphs. The same shuffle as shuffled(), which moves the positions, never the content.
+        order = shuffled(rec['id'], k, list(range(len(x['opts']))))
+        figs = x.get('optFigs') if isinstance(x.get('optFigs'), list) and len(x['optFigs']) == len(x['opts']) else None
+        opts = []
+        for n in order:
+            opts.append('- ' + x['opts'][n])
+            if figs: opts.append('  Its graph, as data: ' + fig_text(figs[n]))
+        lead = ['The options are graphs. Each option\'s text is its description for screen readers: check that it describes its graph.'] if figs else []
+        return '\n'.join(['Question ' + k + ': ' + x['q']] + q_figs(x) + lead + opts + ['Clue: ' + x['clue']])
     return '\n'.join([context(course, pt), '', 'Check this point.', '', 'Title: ' + p['title'], 'Card:', card, 'Remember: ' + p['remember'], '', q('a'), '', q('b'),
                       '', 'The writer\'s explanations, which name the intended answers. Decide best and also_right before you read them.',
                       'Why (a): ' + p['a']['why'], 'Why (b): ' + p['b']['why']])
@@ -556,13 +612,14 @@ def match_user(course, pt, cands, d):
     lines += ['Chapter: ' + unit['chapters'][pt['chapter']]['title'], '', 'The new point:', brief(pt), '', 'Bank points that may teach the same idea, most likely first:']
     for i in cands:
         p = bank_point(d, i)
-        card = ['- ' + (l[0] + ': ' + l[1] if isinstance(l, list) else l) for l in p['card']]
-        q = lambda k: ['Question ' + k + ': ' + p[k]['q']] + ['- ' + o + (' (right)' if n == 0 else '') for n, o in enumerate(p[k]['opts'])]
+        card = card_md(p)
+        q = lambda k: ['Question ' + k + ': ' + p[k]['q']] + q_figs(p[k]) + ['- ' + o + (' (right)' if n == 0 else '') for n, o in enumerate(p[k]['opts'])] + \
+            (['Its options are graphs: ' + fig_text(p[k]['optFigs'])] if p[k].get('optFigs') is not None else [])
         lines += ['', 'Id: ' + i, 'Used in: ' + used_text(d, i), 'Title: ' + p['title'], 'Card:'] + card + ['Remember: ' + p['remember']] + q('a') + q('b')
     return '\n'.join(lines)
 
 def adapter_system(course):
-    return prompt('adapter.md').replace('{kind_rules}', prompt(os.path.join('kinds', course['kind'] + '.md')))
+    return prompt('adapter.md').replace('{figures}', prompt('figures.md')).replace('{kind_rules}', prompt(os.path.join('kinds', course['kind'] + '.md')))
 
 def adapt_user(course, pt, rec, d):
     """The bank point part by part, with the changes the match step asked for. A rewrite after the content check
@@ -2298,8 +2355,9 @@ def clearly_longest(opts):
     return n > max(rest) and n - sum(rest) / len(rest) >= LONG_MARGIN
 
 def rebalance_qs(p):
-    """The questions of a point whose right option is clearly the longest: a, b, both or neither."""
-    return [k for k in ('a', 'b') if clearly_longest(p[k]['opts'])]
+    """The questions of a point whose right option is clearly the longest: a, b, both or neither. A question whose
+    options are graphs (optFigs) shows no option text, so its lengths give nothing away and it is never rebalanced."""
+    return [k for k in ('a', 'b') if p[k].get('optFigs') is None and clearly_longest(p[k]['opts'])]
 
 def rebalance_skip(rec):
     """Why a point is not rebalanced, or None if it can be (or its rewrite is waiting for the check). Only a point with a
@@ -2325,13 +2383,13 @@ def rebalance_range(right):
     return max(1, n - 4), min(60, n + 4)
 
 def rebalance_user(course, pt, p, ks):
-    card = '\n'.join('- ' + (l[0] + ': ' + l[1] if isinstance(l, list) else l) for l in p['card'])
+    card = '\n'.join(card_md(p))
     parts = [context(course, pt), '', 'Rewrite the wrong options of ' + ('question ' + ks[0] if len(ks) == 1 else 'both questions') + ' of this point.',
              '', 'Title: ' + p['title'], 'Card:', card, 'Remember: ' + p['remember']]
     for k in ks:
         q = p[k]
         lo, hi = rebalance_range(q['opts'][0])
-        parts += ['', 'Question ' + k + ': ' + q['q'], 'Right option, ' + str(shown_len(q['opts'][0])) + ' characters (keep it as it is): ' + q['opts'][0], 'Wrong options now:']
+        parts += ['', 'Question ' + k + ': ' + q['q']] + q_figs(q) + ['Right option, ' + str(shown_len(q['opts'][0])) + ' characters (keep it as it is): ' + q['opts'][0], 'Wrong options now:']
         parts += ['- ' + o + ' (' + str(shown_len(o)) + ' characters)' for o in q['opts'][1:]]
         parts += ['Why: ' + q['why'], 'Clue: ' + q['clue'], 'Write each new wrong option in ' + str(lo) + ' to ' + str(hi) + ' characters. '
                   'Make at least one of them as long as the right option or longer.']
@@ -2656,8 +2714,11 @@ def decide_rec(rec, body, by='owner', content_check=None):
     if action == 'edit' and by == 'owner':
         p = body.get('point')
         try:
-            p = {'title': p['title'], 'card': p['card'], 'remember': p['remember'], 'a': {k: p['a'][k] for k in ['q', 'opts', 'why', 'clue']},
-                 'b': {k: p['b'][k] for k in ['d', 'q', 'opts', 'why', 'clue']}}
+            # The figures come along when there are any (cardFigs, and fig or optFigs on a question): the content check
+            # holds them to the format like the rest.
+            q = lambda x, ks: dict({k: x[k] for k in ks}, **{k: x[k] for k in ('fig', 'optFigs') if x.get(k) is not None})
+            p = dict({'title': p['title'], 'card': p['card']}, **({'cardFigs': p['cardFigs']} if p.get('cardFigs') else {}),
+                     remember=p['remember'], a=q(p['a'], ['q', 'opts', 'why', 'clue']), b=q(p['b'], ['d', 'q', 'opts', 'why', 'clue']))
         except (KeyError, TypeError):
             return {'ok': False, 'message': 'The edited point is missing a part.'}
         probs = content_check(p)
@@ -2743,6 +2804,10 @@ def review_server(root, repo, port):
                 f = os.path.join(repo, 'lab', 'mathlive', *m.group(1).split('/'))
                 if not os.path.isfile(f): return self.send(404, {'ok': False})
                 with open(f, 'rb') as fh: return self.send(200, fh.read(), 'text/javascript' if f.endswith('.js') else 'font/woff2')
+            # The app's figure code, to draw a point's graphs as the app does: the Maths Lab's reader, then src/06-figure.js.
+            if path == '/figure.js':
+                code = ''.join(open(os.path.join(repo, *f), encoding='utf-8').read() + '\n' for f in (('lab', 'maths.js'), ('src', '06-figure.js')))
+                return self.send(200, code, 'text/javascript')
             if path in ('/api/items', '/api/compare'):
                 if self.headers.get('X-Review-Token') != token: return self.send(403, {'ok': False})
                 try: return self.send(200, review_items(root, repo) if path == '/api/items' else compare_items(root))
@@ -2860,11 +2925,14 @@ def cc_read(path):
 
 def point_md(p, right=True):
     """A point as plain text lines, with the right option marked, for a review task."""
-    out = ['Title: ' + p['title'], 'Card:'] + ['- ' + (l[0] + ': ' + l[1] if isinstance(l, list) else l) for l in p['card']] + ['Remember: ' + p['remember']]
+    out = ['Title: ' + p['title'], 'Card:'] + card_md(p) + ['Remember: ' + p['remember']]
     for k in 'ab':
         q = p[k]
-        out += ['', 'Question ' + k + (' (difficulty ' + str(q['d']) + ')' if 'd' in q else '') + ': ' + q['q']]
-        out += ['- ' + o + (' (right)' if right and i == 0 else '') for i, o in enumerate(q['opts'])]
+        out += ['', 'Question ' + k + (' (difficulty ' + str(q['d']) + ')' if 'd' in q else '') + ': ' + q['q']] + q_figs(q)
+        figs = q.get('optFigs') if isinstance(q.get('optFigs'), list) else []
+        for i, o in enumerate(q['opts']):
+            out.append('- ' + o + (' (right)' if right and i == 0 else ''))
+            if i < len(figs): out.append('  Its graph, as data: ' + fig_text(figs[i]))
         out += ['Why: ' + q['why'], 'Clue: ' + q['clue']]
     return out
 

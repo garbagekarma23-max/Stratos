@@ -197,15 +197,123 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 3,
-      "q": "Mia studies \\(y = -x^{2} + 2x + 8\\). Which statement is correct?",
+      "q": "Which graph shows \\(y = -x^{2} + 2x + 8\\)?",
       "opts": [
-        "It is concave down and has roots \\(x = -2\\) and \\(x = 4\\)",
-        "It is concave down and has roots \\(x = 2\\) and \\(x = -4\\)",
-        "It is concave up and has roots \\(x = -2\\) and \\(x = 4\\)",
-        "It is concave up and has a y-intercept of \\(-8\\)"
+        "Concave down, with roots \\(x = -2\\) and \\(x = 4\\)",
+        "Concave down, with roots \\(x = -4\\) and \\(x = 2\\)",
+        "Concave up, with roots \\(x = -2\\) and \\(x = 4\\)",
+        "Concave down, with roots \\(x = -1\\) and \\(x = 3\\)"
       ],
-      "why": "Here \\(a = -1\\), so it is concave down. Multiply by \\(-1\\): \\(x^{2} - 2x - 8 = 0\\), which gives \\((x - 4)(x + 2) = 0\\), so \\(x = 4\\) or \\(x = -2\\). Check: \\(-16 + 8 + 8 = 0\\). The option with roots 2 and \\(-4\\) has the signs swapped, and \\(x = -4\\) gives \\(-16 - 8 + 8 = -16\\), not 0.",
+      "optFigs": [
+        {
+          "kind": "graph",
+          "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+          "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 5, "nums": false},
+          "items": [
+            {"type": "fn", "id": "f", "expr": "-x^{2} + 2x + 8"},
+            {
+              "type": "point",
+              "at": [-2, 0],
+              "on": ["f"],
+              "is": "x-intercept",
+              "label": "\\(-2\\)",
+              "pos": "below-right"
+            },
+            {"type": "point", "at": [4, 0], "on": ["f"], "is": "x-intercept", "label": "\\(4\\)", "pos": "below-left"}
+          ]
+        },
+        {
+          "kind": "graph",
+          "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+          "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 5, "nums": false},
+          "items": [
+            {"type": "fn", "id": "f", "expr": "-x^{2} - 2x + 8"},
+            {
+              "type": "point",
+              "at": [-4, 0],
+              "on": ["f"],
+              "is": "x-intercept",
+              "label": "\\(-4\\)",
+              "pos": "below-right"
+            },
+            {"type": "point", "at": [2, 0], "on": ["f"], "is": "x-intercept", "label": "\\(2\\)", "pos": "below-left"}
+          ]
+        },
+        {
+          "kind": "graph",
+          "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+          "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 5, "nums": false},
+          "items": [
+            {"type": "fn", "id": "f", "expr": "x^{2} - 2x - 8"},
+            {
+              "type": "point",
+              "at": [-2, 0],
+              "on": ["f"],
+              "is": "x-intercept",
+              "label": "\\(-2\\)",
+              "pos": "above-right"
+            },
+            {"type": "point", "at": [4, 0], "on": ["f"], "is": "x-intercept", "label": "\\(4\\)", "pos": "above-left"}
+          ]
+        },
+        {
+          "kind": "graph",
+          "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+          "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 5, "nums": false},
+          "items": [
+            {"type": "fn", "id": "f", "expr": "-x^{2} + 2x + 3"},
+            {
+              "type": "point",
+              "at": [-1, 0],
+              "on": ["f"],
+              "is": "x-intercept",
+              "label": "\\(-1\\)",
+              "pos": "above-left"
+            },
+            {"type": "point", "at": [3, 0], "on": ["f"], "is": "x-intercept", "label": "\\(3\\)", "pos": "below-left"}
+          ]
+        }
+      ],
+      "why": "Here \\(a = -1\\), so the graph is concave down. Setting \\(y = 0\\) and multiplying by \\(-1\\) gives \\(x^{2} - 2x - 8 = 0\\), so \\((x - 4)(x + 2) = 0\\) and the roots are \\(x = -2\\) and \\(x = 4\\). The graph with roots \\(-4\\) and 2 has the signs swapped, and the concave up graph has the wrong sign of \\(a\\). The graph with roots \\(-1\\) and \\(3\\) has the right axis, \\(x = 1\\), but crosses the y-axis at 3, not 8.",
       "clue": "Check the sign of \\(a\\), then set \\(y = 0\\) and factorise."
+    },
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2} - 6x + 5\\), concave up. It crosses the x-axis at \\(x = 1\\) and \\(x = 5\\), meets the y-axis at \\((0, 5)\\), and has its vertex at \\((3, -4)\\), on the dashed axis of symmetry \\(x = 3\\).",
+        "x": {"min": -1, "max": 7, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -5, "max": 7, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "axis",
+            "points": [[3, -5], [3, 7]],
+            "style": "dash",
+            "label": "\\(x = 3\\)",
+            "pos": "below-left"
+          },
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2} - 6x + 5",
+            "label": "\\(y = x^{2} - 6x + 5\\)",
+            "labelAt": 6.2,
+            "pos": "left"
+          },
+          {"type": "point", "at": [1, 0], "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [5, 0], "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [0, 5], "on": ["f"], "is": "y-intercept", "label": "\\((0, 5)\\)", "pos": "right"},
+          {
+            "type": "point",
+            "at": [3, -4],
+            "on": ["f"],
+            "is": "turning point",
+            "label": "\\((3, -4)\\)",
+            "pos": "below-right"
+          }
+        ]
+      }
     }
   },
   "mat-discriminant": {
@@ -239,6 +347,46 @@ MADE_BANKS.mat = {
       ],
       "why": "Setting them equal: \\(x^{2} - 2x - 1 = 2x - 5\\), so \\(x^{2} - 4x + 4 = 0\\). Then \\(\\Delta = 16 - 16 = 0\\), so the line meets the parabola at exactly one point and touches it. Two points would need \\(\\Delta\\) to be positive.",
       "clue": "Make one side zero, then find \\(\\Delta\\)."
+    },
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Three concave up parabolas of the same shape at different heights. The left one, with \\(\\Delta > 0\\), dips below the x-axis and crosses it twice. The middle one, with \\(\\Delta = 0\\), touches it once at its turning point, the origin. The right one, with \\(\\Delta < 0\\), stays above the x-axis and never meets it.",
+        "x": {"min": -10, "max": 10, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -2, "max": 7, "label": "\\(y\\)", "step": 1, "nums": false},
+        "items": [
+          {
+            "type": "fn",
+            "id": "two",
+            "expr": "(x + 6)^{2} - 1",
+            "domain": [-8.4, -3.6],
+            "label": "\\(\\Delta > 0\\)",
+            "labelAt": -6,
+            "pos": "below"
+          },
+          {
+            "type": "fn",
+            "id": "one",
+            "expr": "x^{2}",
+            "domain": [-2.4, 2.4],
+            "label": "\\(\\Delta = 0\\)",
+            "labelAt": 1.2,
+            "pos": "right"
+          },
+          {
+            "type": "fn",
+            "id": "none",
+            "expr": "(x - 6)^{2} + 1",
+            "domain": [3.6, 8.4],
+            "label": "\\(\\Delta < 0\\)",
+            "labelAt": 7.6,
+            "pos": "right"
+          },
+          {"type": "point", "at": [-7, 0], "on": ["two"], "is": "x-intercept"},
+          {"type": "point", "at": [-5, 0], "on": ["two"], "is": "x-intercept"},
+          {"type": "point", "at": [0, 0], "on": ["one"], "is": "turning point"}
+        ]
+      }
     }
   },
   "mat-cubic-polynomial-graphs": {
@@ -267,6 +415,56 @@ MADE_BANKS.mat = {
       "opts": ["\\(-8\\)", "\\(8\\)", "\\(-2\\)", "\\(2\\)"],
       "why": "Put \\(x = 0\\): \\(y = -(-1)(4)(-2) = -8\\). Here \\((-1)(4)(-2) = 8\\), and the minus sign in front makes it \\(-8\\). Dropping that sign gives 8, which is wrong.",
       "clue": "Put \\(x = 0\\) and keep the minus sign at the front."
+    },
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "The cubic \\(y = (x - 1)(x + 2)(x - 3)\\). It rises on the right and falls on the left, crosses the x-axis at \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\), and meets the y-axis at \\((0, 6)\\).",
+        "x": {"min": -3, "max": 4, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -8, "max": 10, "label": "\\(y\\)", "step": 2},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "(x - 1)(x + 2)(x - 3)",
+            "label": "\\(y = (x - 1)(x + 2)(x - 3)\\)",
+            "labelAt": 2.1,
+            "pos": "below"
+          },
+          {"type": "point", "at": [-2, 0], "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [1, 0], "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [3, 0], "on": ["f"], "is": "x-intercept"},
+          {
+            "type": "point",
+            "at": [0, 6],
+            "on": ["f"],
+            "is": "y-intercept",
+            "label": "\\((0, 6)\\)",
+            "pos": "above-right"
+          }
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "The cubic \\(y = (x - 1)^{2}(x + 2)\\). It falls on the left and rises on the right. At the single root \\(x = -2\\) it crosses the x-axis. At the double root \\(x = 1\\) it touches the x-axis at a turning point and turns back up.",
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -5, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "(x - 1)^{2}(x + 2)",
+            "label": "\\(y = (x - 1)^{2}(x + 2)\\)",
+            "labelAt": 2.05,
+            "pos": "left"
+          },
+          {"type": "point", "at": [1, 0], "on": ["f"], "is": "turning point"},
+          {"type": "point", "at": [-2, 0], "on": ["f"], "is": "x-intercept", "label": "crosses", "pos": "above-left"},
+          {"type": "text", "at": [1, -1.2], "label": "touches", "pos": "right"}
+        ]
+      }
     }
   },
   "mat-reciprocal-functions": {
@@ -295,6 +493,32 @@ MADE_BANKS.mat = {
       ],
       "why": "\\(x = 0\\) would need division by zero, so no point has \\(x = 0\\) and the curve never meets the y-axis. The curve never meets the x-axis either, since \\(\\frac{5}{x}\\) is never 0. The tempting \\(y = 5\\) is just the numerator and is not an intercept.",
       "clue": "What happens to \\(\\frac{5}{x}\\) if \\(x\\) is 0?"
+    },
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The hyperbola \\(y = \\frac{6}{x}\\): one curve in quadrant 1 through \\((2, 3)\\) and one in quadrant 3 through \\((-2, -3)\\). Quadrants 2 and 4 are empty. Neither curve meets the axes, which are its asymptotes: each curve gets closer to both axes without touching them.",
+        "x": {"min": -7, "max": 7, "label": "\\(x\\)", "step": 2},
+        "y": {"min": -7, "max": 7, "label": "\\(y\\)", "step": 2},
+        "equal": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{6}{x}",
+            "breaks": [0],
+            "label": "\\(y = \\frac{6}{x}\\)",
+            "labelAt": 6,
+            "pos": "above"
+          },
+          {"type": "point", "at": [2, 3], "on": ["f"], "label": "\\((2, 3)\\)", "pos": "above-right"},
+          {"type": "point", "at": [-2, -3], "on": ["f"], "label": "\\((-2, -3)\\)", "pos": "below-left"},
+          {"type": "text", "at": [6.8, 6], "label": "quadrant 1", "pos": "left"},
+          {"type": "text", "at": [-6.8, 6], "label": "quadrant 2", "pos": "right"},
+          {"type": "text", "at": [-6.8, -6], "label": "quadrant 3", "pos": "right"},
+          {"type": "text", "at": [6.8, -6], "label": "quadrant 4", "pos": "left"}
+        ]
+      }
     }
   },
   "mat-absolute-value-functions": {
@@ -323,6 +547,46 @@ MADE_BANKS.mat = {
       "opts": ["\\(|x - 4| = 5\\)", "\\(|x + 4| = 5\\)", "\\(|x - 5| = 4\\)", "\\(|x - 4| = 9\\)"],
       "why": "The midpoint of \\(-1\\) and 9 is 4, and each is 5 units from 4, so \\(|x - 4| = 5\\). \\(|x + 4| = 5\\) is tempting, but it is centred at \\(-4\\) and gives \\(x = 1\\) and \\(x = -9\\).",
       "clue": "Find the number halfway between \\(-1\\) and 9, then the distance to each."
+    },
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The V-shaped graph \\(y = |x - 3|\\), which is \\(y = |x|\\) moved 3 units right, with its vertex at \\((3, 0)\\), and the line \\(y = 4\\). They meet at \\((-1, 4)\\) and \\((7, 4)\\). Dashed lines go down from these points to \\(-1\\) and \\(7\\) on the x-axis, the two numbers 4 units from 3.",
+        "x": {"min": -3, "max": 9, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -1, "max": 6, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "|x - 3|",
+            "label": "\\(y = |x - 3|\\)",
+            "labelAt": 8.6,
+            "pos": "above-left"
+          },
+          {"type": "fn", "id": "g", "expr": "4", "label": "\\(y = 4\\)", "labelAt": 3, "pos": "above"},
+          {"type": "guide", "at": [-1, 4], "xLabel": ""},
+          {"type": "guide", "at": [7, 4], "xLabel": ""},
+          {"type": "point", "at": [3, 0], "on": ["f"], "is": "turning point"},
+          {
+            "type": "point",
+            "at": [-1, 4],
+            "on": ["f", "g"],
+            "is": "intersection",
+            "label": "\\((-1, 4)\\)",
+            "pos": "below-left"
+          },
+          {
+            "type": "point",
+            "at": [7, 4],
+            "on": ["f", "g"],
+            "is": "intersection",
+            "label": "\\((7, 4)\\)",
+            "pos": "below-right"
+          }
+        ],
+        "equal": true
+      }
     }
   },
   "mat-circles": {
@@ -356,6 +620,30 @@ MADE_BANKS.mat = {
       ],
       "why": "Add 16 and 1 to both sides: \\((x - 4)^{2} + (y + 1)^{2} = 8 + 16 + 1 = 25\\). The centre is \\((4, -1)\\) and \\(r = 5\\). Radius 25 forgets that the right side is \\(r^{2}\\), not \\(r\\).",
       "clue": "Move the constant across, then add 16 and 1 to both sides."
+    },
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The circle \\((x - 3)^{2} + (y + 2)^{2} = 25\\) on equal scales, with its centre \\((3, -2)\\) marked, 3 squares right and 2 squares down from the origin. A dashed radius of 5 runs right from the centre to \\((8, -2)\\). The circle reaches from \\(x = -2\\) to \\(x = 8\\) and from \\(y = -7\\) to \\(y = 3\\).",
+        "x": {"min": -3, "max": 9, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -8, "max": 4, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "equal": true,
+        "items": [
+          {"type": "circle", "id": "c", "centre": [3, -2], "r": 5, "label": "\\((x - 3)^{2} + (y + 2)^{2} = 25\\)"},
+          {
+            "type": "curve",
+            "id": "r",
+            "points": [[3, -2], [8, -2]],
+            "style": "dash",
+            "label": "\\(r = 5\\)",
+            "labelAt": 5.5,
+            "pos": "above"
+          },
+          {"type": "point", "at": [3, -2], "label": "\\((3, -2)\\)", "pos": "below"},
+          {"type": "point", "at": [8, -2], "on": ["c", "r"]}
+        ]
+      }
     }
   },
   "mat-vertical-translations": {

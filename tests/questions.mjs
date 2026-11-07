@@ -47,6 +47,8 @@ for (const f of ['load.mjs', 'latex.mjs']) fs.copyFileSync(path.join(ROOT, 'cont
 // MathLive's build for Node, which the check uses to parse the LaTeX in maths points (content/latex.mjs).
 fs.mkdirSync(path.join(copy, 'lab', 'mathlive'), {recursive: true});
 fs.copyFileSync(path.join(ROOT, 'lab', 'mathlive', 'mathlive-ssr.min.mjs'), path.join(copy, 'lab', 'mathlive', 'mathlive-ssr.min.mjs'));
+// The Maths Lab's reader, which the check uses to read the functions in a point's graphs (src/06-figure.js).
+fs.copyFileSync(path.join(ROOT, 'lab', 'maths.js'), path.join(copy, 'lab', 'maths.js'));
 fs.copyFileSync(path.join(ROOT, 'check_content.mjs'), path.join(copy, 'check_content.mjs'));
 const full = () => spawnSync('node', ['check_content.mjs'], {cwd: copy, encoding: 'utf8'});
 check(full().status === 0, 'the full check passes on src/ as it is', R);

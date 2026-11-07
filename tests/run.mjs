@@ -34,9 +34,11 @@
 // browser, and maths-text.mjs draws that maths in v2 on the pilot chapter (Mathematics Advanced, Families of graphs).
 // units.mjs runs two Victorian test courses the pipeline made (tests/units/) in v2, built as v2-units.html: courses
 // grouped by Units 1 and 2 and Units 3 and 4, and a state's courses showing once it has one.
+// figures.mjs checks graphs stored as data (src/06-figure.js): the format and the content check's maths with no browser, and
+// the pilot graphs in v2 (Edexcel's Price determination and Mathematics Advanced's Families of graphs), tapped and keyed.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-back.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['welcome.mjs'], ['first-open.mjs'], ['start.mjs'], ['pipeline.mjs'], ['made.mjs'], ['units.mjs'], ['words.mjs'], ['questions.mjs'], ['latex.mjs'], ['maths-text.mjs']];
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-back.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['welcome.mjs'], ['first-open.mjs'], ['start.mjs'], ['pipeline.mjs'], ['made.mjs'], ['units.mjs'], ['words.mjs'], ['questions.mjs'], ['latex.mjs'], ['maths-text.mjs'], ['figures.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});
