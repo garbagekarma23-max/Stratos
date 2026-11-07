@@ -1,0 +1,93 @@
+# Tests: runs every check on each pull request and each push to main, and fails if any of them fails.
+# It builds v2.html, runs the content check, the content pipeline's tests and then the whole test suite in Chromium,
+# the same commands as on a computer (CLAUDE.md, Build and test). Each check after the build runs even if one before
+# it failed, so one run shows every problem. Screenshots from a failed run are kept for a week under Artifacts.
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A new push to a pull request stops the run for the push before it. Runs on main always finish.
+concurrency:
+  group: tests-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: content/requirements.txt
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      # npm's downloads, kept between runs. The lock file is not in git, so the key is package.json.
+      - uses: actions/cache@v5
+        with:
+          path: ~/.npm
+          key: npm-${{ runner.os }}-${{ hashFiles('tests/package.json') }}
+          restore-keys: npm-${{ runner.os }}-
+
+      - name: Install the pipeline's Python packages
+        run: pip install -r content/requirements.txt
+
+      - name: Install the test packages
+        working-directory: tests
+        run: npm install --no-audit --no-fund
+
+      - name: Find the Playwright version
+        id: pw
+        working-directory: tests
+        run: echo "version=$(node -p "require('playwright/package.json').version")" >> "$GITHUB_OUTPUT"
+
+      # Playwright's Chromium, kept between runs for each Playwright version.
+      - uses: actions/cache@v5
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}
+
+      # Downloads Chromium only if the cache did not have it, and installs the system libraries it needs.
+      - name: Install Chromium
+        working-directory: tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Build v2.html
+        id: build
+        run: python3 build.py
+
+      - name: Content check
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node check_content.mjs
+
+      - name: Pipeline tests
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: python3 content/test_pipeline.py
+
+      - name: Test suite
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        working-directory: tests
+        run: npm test
+
+      - name: Keep the screenshots from a failed run
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v6
+        with:
+          name: shots
+          path: tests/shots/
+          retention-days: 7
+          if-no-files-found: ignore

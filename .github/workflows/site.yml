@@ -1,0 +1,56 @@
+# Site: builds v2.html and the rest of the live site, and puts it on GitHub Pages, on each push to main.
+# python3 build.py --site _site writes v2.html into the folder _site with every other file the site serves (SITE in
+# build.py): index.html, maths-lab.html, the manifests, icons/, lab/ and vendor/supabase/.
+# On a pull request it only builds the site, to check it builds. Only main is ever put on the live site.
+# The repository's Pages setting must be Source: GitHub Actions (see the pull request that added this file).
+name: Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One deploy at a time. A deploy that has started always finishes, and the newest push goes live after it.
+concurrency:
+  group: site-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Build the site
+        run: python3 build.py --site _site
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+          retention-days: 1
+
+  deploy:
+    name: Deploy
+    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

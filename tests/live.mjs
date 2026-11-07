@@ -216,7 +216,10 @@ await B.p.click('[data-act="msend"]');
 check(await until(async () => (await bubbles(A.p)).includes('Yes, 42'), 2500), 'and the other way', R);
 const sends = f.rt.log.filter(x => x.send);
 check(sends.length > 0 && sends.every(x => ['typing', 'stop', 'new'].includes(x.event) && Object.keys(x.payload).every(k => k === 'n') && x.ok), 'Realtime only carried typing, stop and new with a message number, never text', R);
-check(!JSON.stringify(sends).includes('question 4') && !JSON.stringify(sends).includes('42"'), 'no message text went through Realtime', R);
+// Only what went through: each send's event and payload. The log's channel name and user id are random, and one
+// ending in 42 would look like the message text.
+const carried = JSON.stringify(sends.map(x => [x.event, x.payload]));
+check(!carried.includes('question 4') && !carried.includes('42"'), 'no message text went through Realtime', R);
 check((await f.admin('select count(*)::int c from realtime.messages')).rows[0].c === 0, 'and nothing was kept in realtime.messages', R);
 
 // ---------- leaving the chat ----------

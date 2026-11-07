@@ -383,24 +383,28 @@ node challenges-db.mjs
 cd ..
 ```
 
+`py build.py` writes `v2.html` on your computer, for trying the course in a browser and for the tests. It is not kept in git: GitHub builds it again for the live site when the pull request is merged.
+
 `node check_content.mjs` fails if two questions anywhere in the banks (or in NSW Economics) share the same text, ignoring capitals, spaces and the mark at the end. The pipeline runs the same check on each point as it is written or adapted, so a copy is written again before it reaches you.
 
 `publish` never publishes a trial (step 10). It writes the cleared points into `src/bank/bus.js`, the course into `src/courses/nsw-bus-11.js`, and the course's lines into `supabase/week.sql` and `supabase/challenges.sql`. A chapter goes in only when every point in it is cleared. Until then it shows on Home as Coming soon. Then commit everything on a new branch:
 
 ```powershell
 git checkout -b content/nsw-bus-11
-git add content/outlines/nsw-bus-11.yaml content/work/nsw-bus-11 src/bank src/courses supabase/week.sql supabase/challenges.sql v2.html
+git add content/outlines/nsw-bus-11.yaml content/work/nsw-bus-11 src/bank src/courses supabase/week.sql supabase/challenges.sql
 git commit -m "Add Business Studies, Year 11: Nature of business"
 git push -u origin content/nsw-bus-11
 ```
 
-Open the pull request on GitHub, but do not merge it yet. The browser tests must pass first, every time. They need Chromium, which a Claude Code session on the web has, so open one on the branch and ask it to run the full suite:
+Open the pull request on GitHub, but do not merge it yet. Every test must pass first, every time. GitHub runs them on the pull request by itself: the **Tests** check at the bottom of the pull request builds `v2.html`, runs the content check, the pipeline's tests and the whole browser suite, and turns green when everything passes (about 20 minutes). If it fails, **Details** shows which test and why. To run the suite yourself, open a Claude Code session on the web on the branch (it has Chromium) and ask it to run:
 
 ```
 cd tests && npm install && npm test
 ```
 
-Merge only when every test passes. A new course changes the subject sheet, so tests that list a place's courses (such as `places.mjs` and `first-open.mjs`) may need the new course added. Ask the session to add it to them, never to loosen or remove a check, and to push the change to the same branch. Then run the suite again.
+Merge only when the Tests check is green. A new course changes the subject sheet, so tests that list a place's courses (such as `places.mjs` and `first-open.mjs`) may need the new course added. Ask a Claude Code session to add it to them, never to loosen or remove a check, and to push the change to the same branch. The Tests check runs again on each push.
+
+Merging puts the course on the live site: GitHub builds `v2.html` from `main` and publishes it a few minutes later (the **Site** workflow under the **Actions** tab).
 
 After it is merged, paste `supabase/week.sql` and then `supabase/challenges.sql` into the Supabase SQL Editor and run each, so the weekly table counts the new points.
 

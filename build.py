@@ -1,7 +1,9 @@
 """Build Stratos from the files in src/.
 
-Run it with:  python3 build.py
-It writes v2.html next to this file.
+Run it with:  python3 build.py   (py build.py on Windows)
+It writes v2.html next to this file. v2.html is not kept in git: build it before opening it or running the tests.
+GitHub builds it again for the live site (.github/workflows/site.yml), with  python3 build.py --site _site  which
+writes v2.html into the folder _site with every other file the site serves (SITE below), ready for GitHub Pages.
 The tests also run  python3 build.py --extra tests/made --out v2-made.html  to add a made course from another folder
 (with bank/ and courses/ in it) and write the page under another name. That one file is the whole app and can be opened in a browser or put on GitHub Pages.
 
@@ -34,7 +36,7 @@ How the pieces fit:
   vendor/supabase      the Supabase library, for accounts. Not copied in either: v2.html loads it only for a student
                        who signs in.
 """
-import glob, json, os, re, sys
+import fnmatch, glob, json, os, re, shutil, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__)) + '/'
 SRC = HERE + 'src/'
@@ -81,12 +83,34 @@ def standalone(extra=None):
             '<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}[hidden]{display:none!important}</style>\n'
             '</head>\n<body>\n' + body + '</body>\n</html>\n')
 
+# The files and folders the live site serves next to v2.html, from the repository folder. --site copies them.
+SITE = ['index.html', 'maths-lab.html', 'manifest-v2.webmanifest', 'manifest-lab.webmanifest', 'icons', 'lab', 'vendor/supabase']
+# Files inside those folders that only the tools on a computer use, never a page on the site: the npm files, the
+# scripts that copy MathLive and Supabase in, and MathLive's build for Node (the content check uses it).
+NOT_SITE = ['node_modules', 'package.json', 'package-lock.json', 'copy-*.mjs', 'mathlive-ssr.min.mjs']
+
+def site(folder, page):
+    """Write the whole site into folder: v2.html (page) and a copy of everything in SITE. The folder must be new or empty."""
+    folder = os.path.abspath(folder)
+    assert not os.path.exists(folder) or not os.listdir(folder), folder + ' is not empty. Pick a new folder, or empty this one.'
+    os.makedirs(folder, exist_ok=True)
+    skip = lambda d, names: [n for n in names if any(fnmatch.fnmatch(n, x) for x in NOT_SITE)]
+    for name in SITE:
+        src, dst = HERE + name, os.path.join(folder, name)
+        if os.path.isdir(src): shutil.copytree(src, dst, ignore=skip)
+        else: shutil.copy(src, dst)
+    open(os.path.join(folder, 'v2.html'), 'w', encoding='utf8').write(page)
+
 def option(name):
     """The value after --name on the command line, or None."""
     return sys.argv[sys.argv.index(name) + 1] if name in sys.argv else None
 
 if __name__ == '__main__':
-    out = option('--out') or 'v2.html'
     page = standalone(option('--extra'))
-    open(HERE + out, 'w', encoding='utf8').write(page)
-    print('wrote ' + out + ',', round(len(page) / 1024), 'KB')
+    if option('--site'):
+        site(option('--site'), page)
+        print('wrote the site into ' + option('--site') + ', with v2.html at', round(len(page) / 1024), 'KB')
+    else:
+        out = option('--out') or 'v2.html'
+        open(HERE + out, 'w', encoding='utf8').write(page)
+        print('wrote ' + out + ',', round(len(page) / 1024), 'KB')
