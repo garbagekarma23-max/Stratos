@@ -38,6 +38,8 @@ A graph has kind, alt, x, y, items, and may have grid and equal:
 - Every number must be exact. A point said to be on a curve is on it. An intercept is where the curve meets the axis, a turning point is where it turns, and coordinates in a label match the dot. Work each one out before you write it. The content check works them out too, and sends back any that are wrong.
 - The graph must agree with the card, the question, the right answer and the why. Label what the text names, with the same names.
 - Curves are told apart by labels, line style and position, never by colour: the app draws every curve in one colour. With two or more curves, label every one.
+- When a curve shifts, draw the original dashed and the new one solid, with an arrow from the old to the new. Use dashed lines for nothing else that could be read as a curve: asymptotes and guides are drawn in their own lighter dashes, and a line the student solves against (such as \(y = 4\)) is solid.
+- Label all the parts a question turns on evenly. Never label only the parts that give the answer away, such as only the two empty quadrants.
 - Everything fits inside the axes. Labels are a word or two, or short maths. Keep option graphs simple: few labels, numbers only where the student needs them.
 - Economics diagrams use "Price" and "Quantity" (or the course's own terms) with no numbers, and plain labels such as D, S, S1, S2, P*, Q*, P1, Q1.
 
