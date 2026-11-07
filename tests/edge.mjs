@@ -66,8 +66,9 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   await p.keyboard.press('Escape'); await p.waitForTimeout(40);
   check(await p.locator('.page').count() === 0, 'then the page', R);
   await p.keyboard.press('Tab');
-  const focusOk = await p.evaluate(() => { const el = document.activeElement; return !!el && el !== document.body && getComputedStyle(el).outlineStyle !== 'none'; });
-  check(focusOk, 'Tab gives a visible focus ring', R);
+  const focus = await p.evaluate(() => { const el = document.activeElement; return {ok: !!el && el !== document.body && getComputedStyle(el).outlineStyle !== 'none',
+    el: el ? el.tagName.toLowerCase() + (el.id ? '#' + el.id : '') + (el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).join('.') : '') + (el.dataset && el.dataset.act ? ' [' + el.dataset.act + ']' : '') : 'nothing'}; });
+  check(focus.ok, 'Tab gives a visible focus ring' + (focus.ok ? '' : ' (Tab reached ' + focus.el + ')'), R);
   await shot(p, 'edge-focus');
   console.log('part 2 errors:', errs); await b.close();
 }

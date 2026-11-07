@@ -37,7 +37,7 @@ jobs:
           node-version: '22'
 
       # npm's downloads, kept between runs. The lock file is not in git, so the key is package.json.
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: ~/.npm
           key: npm-${{ runner.os }}-${{ hashFiles('tests/package.json') }}
@@ -56,7 +56,7 @@ jobs:
         run: echo "version=$(node -p "require('playwright/package.json').version")" >> "$GITHUB_OUTPUT"
 
       # Playwright's Chromium, kept between runs for each Playwright version.
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ steps.pw.outputs.version }}
@@ -85,7 +85,7 @@ jobs:
 
       - name: Keep the screenshots from a failed run
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: shots
           path: tests/shots/
