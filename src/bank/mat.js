@@ -268,13 +268,13 @@ MADE_BANKS.mat = {
               "on": ["f"],
               "is": "x-intercept",
               "label": "\\(-1\\)",
-              "pos": "below-right"
+              "pos": "above-left"
             },
             {"type": "point", "at": [3, 0], "on": ["f"], "is": "x-intercept", "label": "\\(3\\)", "pos": "below-left"}
           ]
         }
       ],
-      "why": "Here \\(a = -1\\), so the graph is concave down. Setting \\(y = 0\\) and multiplying by \\(-1\\) gives \\(x^{2} - 2x - 8 = 0\\), so \\((x - 4)(x + 2) = 0\\) and the roots are \\(x = -2\\) and \\(x = 4\\). The graph with roots \\(-4\\) and 2 has the signs swapped, and the concave up graph has the wrong sign of \\(a\\).",
+      "why": "Here \\(a = -1\\), so the graph is concave down. Setting \\(y = 0\\) and multiplying by \\(-1\\) gives \\(x^{2} - 2x - 8 = 0\\), so \\((x - 4)(x + 2) = 0\\) and the roots are \\(x = -2\\) and \\(x = 4\\). The graph with roots \\(-4\\) and 2 has the signs swapped, and the concave up graph has the wrong sign of \\(a\\). The graph with roots \\(-1\\) and \\(3\\) has the right axis, \\(x = 1\\), but crosses the y-axis at 3, not 8.",
       "clue": "Check the sign of \\(a\\), then set \\(y = 0\\) and factorise."
     },
     "cardFigs": {
@@ -351,9 +351,9 @@ MADE_BANKS.mat = {
     "cardFigs": {
       "2": {
         "kind": "graph",
-        "alt": "Three parabolas. The left one, with \\(\\Delta > 0\\), crosses the x-axis twice. The middle one, with \\(\\Delta = 0\\), touches it once at its vertex. The right one, with \\(\\Delta < 0\\), stays above the x-axis and never meets it.",
+        "alt": "Three concave up parabolas of the same shape at different heights. The left one, with \\(\\Delta > 0\\), dips below the x-axis and crosses it twice. The middle one, with \\(\\Delta = 0\\), touches it once at its turning point, the origin. The right one, with \\(\\Delta < 0\\), stays above the x-axis and never meets it.",
         "x": {"min": -10, "max": 10, "label": "\\(x\\)", "step": 1, "nums": false},
-        "y": {"min": -2, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "y": {"min": -2, "max": 7, "label": "\\(y\\)", "step": 1, "nums": false},
         "items": [
           {
             "type": "fn",
@@ -447,7 +447,7 @@ MADE_BANKS.mat = {
       },
       "4": {
         "kind": "graph",
-        "alt": "The cubic \\(y = (x + 1)^{2}(x - 2)\\). At the double root \\(x = -1\\) it touches the x-axis at a turning point. At the single root \\(x = 2\\) it crosses.",
+        "alt": "The cubic \\(y = (x - 1)^{2}(x + 2)\\). It falls on the left and rises on the right. At the single root \\(x = -2\\) it crosses the x-axis. At the double root \\(x = 1\\) it touches the x-axis at a turning point and turns back up.",
         "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1},
         "y": {"min": -5, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
         "grid": true,
@@ -455,13 +455,13 @@ MADE_BANKS.mat = {
           {
             "type": "fn",
             "id": "f",
-            "expr": "(x + 1)^{2}(x - 2)",
-            "label": "\\(y = (x + 1)^{2}(x - 2)\\)",
-            "labelAt": 2.4,
+            "expr": "(x - 1)^{2}(x + 2)",
+            "label": "\\(y = (x - 1)^{2}(x + 2)\\)",
+            "labelAt": 2.05,
             "pos": "left"
           },
-          {"type": "point", "at": [-1, 0], "on": ["f"], "is": "turning point", "label": "touches", "pos": "above"},
-          {"type": "point", "at": [2, 0], "on": ["f"], "is": "x-intercept", "label": "crosses", "pos": "above-left"}
+          {"type": "point", "at": [1, 0], "on": ["f"], "is": "turning point", "label": "touches", "pos": "below-left"},
+          {"type": "point", "at": [-2, 0], "on": ["f"], "is": "x-intercept", "label": "crosses", "pos": "above-left"}
         ]
       }
     }
@@ -548,21 +548,20 @@ MADE_BANKS.mat = {
     "cardFigs": {
       "4": {
         "kind": "graph",
-        "alt": "The V-shaped graph \\(y = |x - 3|\\), with its vertex at \\((3, 0)\\), and the line \\(y = 4\\). They meet at \\((-1, 4)\\) and \\((7, 4)\\), the points 4 units from 3, with dashed lines down to \\(x = -1\\) and \\(x = 7\\).",
+        "alt": "The V-shaped graph \\(y = |x - 3|\\), which is \\(y = |x|\\) moved 3 units right, with its vertex at \\((3, 0)\\), and the line \\(y = 4\\). They meet at \\((-1, 4)\\) and \\((7, 4)\\). Dashed lines go down from these points to \\(-1\\) and \\(7\\) on the x-axis, the two numbers 4 units from 3.",
         "x": {"min": -3, "max": 9, "label": "\\(x\\)", "step": 1},
         "y": {"min": -1, "max": 6, "label": "\\(y\\)", "step": 1},
         "grid": true,
         "items": [
-          {"type": "fn", "id": "f", "expr": "|x - 3|", "label": "\\(y = |x - 3|\\)", "labelAt": 8.6, "pos": "left"},
           {
             "type": "fn",
-            "id": "g",
-            "expr": "4",
-            "label": "\\(y = 4\\)",
-            "labelAt": 3,
-            "pos": "above",
-            "style": "dash"
+            "id": "f",
+            "expr": "|x - 3|",
+            "label": "\\(y = |x - 3|\\)",
+            "labelAt": 8.6,
+            "pos": "above-left"
           },
+          {"type": "fn", "id": "g", "expr": "4", "label": "\\(y = 4\\)", "labelAt": 3, "pos": "above"},
           {"type": "guide", "at": [-1, 4], "xLabel": ""},
           {"type": "guide", "at": [7, 4], "xLabel": ""},
           {"type": "point", "at": [3, 0], "on": ["f"], "is": "turning point"},
@@ -582,7 +581,8 @@ MADE_BANKS.mat = {
             "label": "\\((7, 4)\\)",
             "pos": "below-right"
           }
-        ]
+        ],
+        "equal": true
       }
     }
   },
@@ -621,7 +621,7 @@ MADE_BANKS.mat = {
     "cardFigs": {
       "2": {
         "kind": "graph",
-        "alt": "The circle \\((x - 3)^{2} + (y + 2)^{2} = 25\\) on equal scales, with centre \\((3, -2)\\). A dashed radius of 5 runs from the centre to \\((8, -2)\\).",
+        "alt": "The circle \\((x - 3)^{2} + (y + 2)^{2} = 25\\) on equal scales, with its centre \\((3, -2)\\) marked, 3 squares right and 2 squares down from the origin. A dashed radius of 5 runs right from the centre to \\((8, -2)\\). The circle reaches from \\(x = -2\\) to \\(x = 8\\) and from \\(y = -7\\) to \\(y = 3\\).",
         "x": {"min": -3, "max": 9, "label": "\\(x\\)", "step": 1, "nums": false},
         "y": {"min": -8, "max": 4, "label": "\\(y\\)", "step": 1, "nums": false},
         "grid": true,

@@ -11,7 +11,8 @@
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
   "2026-11-06T05:46:30Z maths: written in LaTeX (by hand)",
-  "2026-11-06T12:00:00Z figures: graphs added by hand (the figures pilot)"
+  "2026-11-06T12:00:00Z figures: graphs added by hand (the figures pilot)",
+  "2026-11-07T00:00:00Z figures: the double root graph changed to (x - 1)^2(x + 2), so it no longer labels x = 2 as crossing under a line about (x - 2)^2, after the graph check"
  ],
  "sent": {
   "write": 2,
@@ -277,7 +278,7 @@
    },
    "4": {
     "kind": "graph",
-    "alt": "The cubic \\(y = (x + 1)^{2}(x - 2)\\). At the double root \\(x = -1\\) it touches the x-axis at a turning point. At the single root \\(x = 2\\) it crosses.",
+    "alt": "The cubic \\(y = (x - 1)^{2}(x + 2)\\). It falls on the left and rises on the right. At the single root \\(x = -2\\) it crosses the x-axis. At the double root \\(x = 1\\) it touches the x-axis at a turning point and turns back up.",
     "x": {
      "min": -3,
      "max": 3,
@@ -296,15 +297,15 @@
      {
       "type": "fn",
       "id": "f",
-      "expr": "(x + 1)^{2}(x - 2)",
-      "label": "\\(y = (x + 1)^{2}(x - 2)\\)",
-      "labelAt": 2.4,
+      "expr": "(x - 1)^{2}(x + 2)",
+      "label": "\\(y = (x - 1)^{2}(x + 2)\\)",
+      "labelAt": 2.05,
       "pos": "left"
      },
      {
       "type": "point",
       "at": [
-       -1,
+       1,
        0
       ],
       "on": [
@@ -312,12 +313,12 @@
       ],
       "is": "turning point",
       "label": "touches",
-      "pos": "above"
+      "pos": "below-left"
      },
      {
       "type": "point",
       "at": [
-       2,
+       -2,
        0
       ],
       "on": [
