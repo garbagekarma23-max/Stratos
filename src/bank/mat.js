@@ -207,7 +207,7 @@ MADE_BANKS.mat = {
       "optFigs": [
         {
           "kind": "graph",
-          "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+          "x": {"min": -5, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
           "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 5, "nums": false},
           "items": [
             {"type": "fn", "id": "f", "expr": "-x^{2} + 2x + 8"},
@@ -224,7 +224,7 @@ MADE_BANKS.mat = {
         },
         {
           "kind": "graph",
-          "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+          "x": {"min": -5, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
           "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 5, "nums": false},
           "items": [
             {"type": "fn", "id": "f", "expr": "-x^{2} - 2x + 8"},
@@ -241,7 +241,7 @@ MADE_BANKS.mat = {
         },
         {
           "kind": "graph",
-          "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+          "x": {"min": -5, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
           "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 5, "nums": false},
           "items": [
             {"type": "fn", "id": "f", "expr": "x^{2} - 2x - 8"},
@@ -258,7 +258,7 @@ MADE_BANKS.mat = {
         },
         {
           "kind": "graph",
-          "x": {"min": -5, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+          "x": {"min": -5, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
           "y": {"min": -10, "max": 10, "label": "\\(y\\)", "step": 5, "nums": false},
           "items": [
             {"type": "fn", "id": "f", "expr": "-x^{2} + 2x + 3"},
@@ -281,14 +281,14 @@ MADE_BANKS.mat = {
       "4": {
         "kind": "graph",
         "alt": "The parabola \\(y = x^{2} - 6x + 5\\), concave up. It crosses the x-axis at \\(x = 1\\) and \\(x = 5\\), meets the y-axis at \\((0, 5)\\), and has its vertex at \\((3, -4)\\), on the dashed axis of symmetry \\(x = 3\\).",
-        "x": {"min": -1, "max": 7, "label": "\\(x\\)", "step": 1},
-        "y": {"min": -5, "max": 7, "label": "\\(y\\)", "step": 1},
+        "x": {"min": -1, "max": 7, "label": "\\(x\\)", "step": 2},
+        "y": {"min": -5, "max": 5.5, "label": "\\(y\\)", "step": 1},
         "grid": true,
         "items": [
           {
             "type": "curve",
             "id": "axis",
-            "points": [[3, -5], [3, 7]],
+            "points": [[3, -5], [3, 5.5]],
             "style": "dash",
             "label": "\\(x = 3\\)",
             "pos": "below-left"
@@ -420,8 +420,8 @@ MADE_BANKS.mat = {
       "1": {
         "kind": "graph",
         "alt": "The cubic \\(y = (x - 1)(x + 2)(x - 3)\\). It rises on the right and falls on the left, crosses the x-axis at \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\), and meets the y-axis at \\((0, 6)\\).",
-        "x": {"min": -3, "max": 4, "label": "\\(x\\)", "step": 1},
-        "y": {"min": -8, "max": 10, "label": "\\(y\\)", "step": 2},
+        "x": {"min": -3, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -8, "max": 12, "label": "\\(y\\)", "step": 4},
         "grid": true,
         "items": [
           {
@@ -432,9 +432,16 @@ MADE_BANKS.mat = {
             "labelAt": 2.1,
             "pos": "below"
           },
-          {"type": "point", "at": [-2, 0], "on": ["f"], "is": "x-intercept"},
-          {"type": "point", "at": [1, 0], "on": ["f"], "is": "x-intercept"},
-          {"type": "point", "at": [3, 0], "on": ["f"], "is": "x-intercept"},
+          {
+            "type": "point",
+            "at": [-2, 0],
+            "on": ["f"],
+            "is": "x-intercept",
+            "label": "\\(-2\\)",
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [1, 0], "on": ["f"], "is": "x-intercept", "label": "\\(1\\)", "pos": "below-left"},
+          {"type": "point", "at": [3, 0], "on": ["f"], "is": "x-intercept", "label": "\\(3\\)", "pos": "below-right"},
           {
             "type": "point",
             "at": [0, 6],
@@ -448,7 +455,7 @@ MADE_BANKS.mat = {
       "4": {
         "kind": "graph",
         "alt": "The cubic \\(y = (x - 1)^{2}(x + 2)\\). It falls on the left and rises on the right. At the single root \\(x = -2\\) it crosses the x-axis. At the double root \\(x = 1\\) it touches the x-axis at a turning point and turns back up.",
-        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1},
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
         "y": {"min": -5, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
         "grid": true,
         "items": [
@@ -460,9 +467,10 @@ MADE_BANKS.mat = {
             "labelAt": 2.05,
             "pos": "left"
           },
-          {"type": "point", "at": [1, 0], "on": ["f"], "is": "turning point"},
+          {"type": "point", "at": [1, 0], "on": ["f"], "is": "turning point", "label": "\\(1\\)", "pos": "below"},
           {"type": "point", "at": [-2, 0], "on": ["f"], "is": "x-intercept", "label": "crosses", "pos": "above-left"},
-          {"type": "text", "at": [1, -1.2], "label": "touches", "pos": "right"}
+          {"type": "text", "at": [1, -1.2], "label": "touches", "pos": "right"},
+          {"type": "text", "at": [-2, 0], "label": "\\(-2\\)", "pos": "below-right"}
         ]
       }
     }
@@ -508,8 +516,8 @@ MADE_BANKS.mat = {
             "expr": "\\frac{6}{x}",
             "breaks": [0],
             "label": "\\(y = \\frac{6}{x}\\)",
-            "labelAt": 6,
-            "pos": "above"
+            "labelAt": 3,
+            "pos": "above-right"
           },
           {"type": "point", "at": [2, 3], "on": ["f"], "label": "\\((2, 3)\\)", "pos": "above-right"},
           {"type": "point", "at": [-2, -3], "on": ["f"], "label": "\\((-2, -3)\\)", "pos": "below-left"},
@@ -552,8 +560,8 @@ MADE_BANKS.mat = {
       "4": {
         "kind": "graph",
         "alt": "The V-shaped graph \\(y = |x - 3|\\), which is \\(y = |x|\\) moved 3 units right, with its vertex at \\((3, 0)\\), and the line \\(y = 4\\). They meet at \\((-1, 4)\\) and \\((7, 4)\\). Dashed lines go down from these points to \\(-1\\) and \\(7\\) on the x-axis, the two numbers 4 units from 3.",
-        "x": {"min": -3, "max": 9, "label": "\\(x\\)", "step": 1},
-        "y": {"min": -1, "max": 6, "label": "\\(y\\)", "step": 1},
+        "x": {"min": -3, "max": 9, "label": "\\(x\\)", "step": 2},
+        "y": {"min": -1, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
         "grid": true,
         "items": [
           {
@@ -8885,6 +8893,17 @@ MADE_BANKS.mat = {
       "The fences are \\(1.5 \\times \\text{IQR}\\) below \\(Q_{1}\\) and \\(1.5 \\times \\text{IQR}\\) above \\(Q_{3}\\), where \\(\\text{IQR} = Q_{3} - Q_{1}\\). A value beyond a fence is a possible outlier, and it is shown as a separate dot.",
       "Example: \\(Q_{1} = 12\\) and \\(Q_{3} = 20\\). \\(\\text{IQR} = 8\\), and \\(1.5 \\times 8 = 12\\). The fences are \\(12 - 12 = 0\\) and \\(20 + 12 = 32\\). A value of 35 is a possible outlier."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "A boxplot on a number line from 0 to 40. The box runs from \\(Q_{1} = 12\\) to \\(Q_{3} = 20\\), with the median at 16. The whiskers reach 5 and 23, the smallest and largest values inside the fences of 0 and 32, and the value 35 is a separate dot beyond the upper fence.",
+        "x": {"min": 0, "max": 40, "step": 5, "label": "Value"},
+        "outliers": true,
+        "sets": [{"data": [5, 8, 12, 13, 14, 16, 18, 19, 20, 23, 35]}],
+        "stats": {"q1": 12, "q3": 20, "iqr": 8, "median": 16}
+      }
+    },
     "remember": "A boxplot shows five values, and anything beyond a fence is a possible outlier.",
     "a": {
       "q": "A data set has \\(Q_{1} = 30\\) and \\(Q_{3} = 50\\). What is the upper fence for outliers?",

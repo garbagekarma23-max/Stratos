@@ -303,7 +303,7 @@ await E.p.waitForSelector('#codeIn');
 await E.p.fill('#codeIn', f.codes['eve@example.com']);
 await E.p.click('[data-act="verifycode"]');
 check(await until(async () => (await E.p.locator('#nameErr:not([hidden])').count()) === 1, 8000), 'signing in with a banned call sign from before opens the call sign sheet', R);
-check((await text(E.p, '#nameErr')) === 'That call sign has a word Stratos doesn’t allow. Try another.' && !(await E.p.evaluate(() => JSON.parse(localStorage.getItem('stratos2.v1') || '{}').name)), 'with the message, and the device no longer has it', R);
+check((await text(E.p, '#nameErr')) === 'That call sign has a word Stratos doesn’t allow. Try another.' && await until(async () => !(await E.p.evaluate(() => JSON.parse(localStorage.getItem('stratos2.v1') || '{}').name))), 'with the message, and the device no longer has it', R);
 check((await f.admin('select call_sign from public.profiles where id = $1', [await uid('eve@example.com')])).rows[0].call_sign === null, 'and the account never got it', R);
 
 // ---------- signing out and deleting the account erase the list here ----------
@@ -311,7 +311,7 @@ check(await B.p.evaluate(() => !!localStorage.getItem('stratos2.friends')), 'the
 await tab(B.p, 'you');
 await B.p.click('#v-you [data-act="account"]'); await B.p.waitForTimeout(150);
 await B.p.click('[data-act="signout"]'); await B.p.waitForTimeout(400);
-check(await B.p.evaluate(() => !localStorage.getItem('stratos2.friends')), 'signing out erases it', R);
+check(await until(async () => B.p.evaluate(() => !localStorage.getItem('stratos2.friends'))), 'signing out erases it', R);
 await tab(C.p, 'you');
 await C.p.click('#v-you [data-act="account"]'); await C.p.waitForTimeout(150);
 await C.p.click('[data-act="delacct"]'); await C.p.click('[data-act="delacct"]');

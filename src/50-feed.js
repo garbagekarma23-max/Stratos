@@ -14,7 +14,8 @@ function qEl(S, i, learn) {
     if (S.mode === 'mix' || S.mode === 'chapter') acts = actBtn('clue', IC.clue, 'Clue') + actBtn('reveal', IC.eye, 'Answer') + (it.back ? '' : actBtn('skip', IC.skip, 'Skip'));
   }
   sec.className = 'slide q'; sec.dataset.i = i;
-  /* With graphs as its options (optFigs), each option shows its graph, and its text is read out instead of shown. */
+  /* With figures as its options (optFigs), each option shows its figure, and its text is read out instead of shown. Images
+     used as options have their credits under the options, never inside a button. */
   const figs = q.optFigs;
   sec.innerHTML =
     '<p class="meta">' + meta + '</p>' +
@@ -24,7 +25,7 @@ function qEl(S, i, learn) {
       it.perm.map((oi, n) => '<button class="opt' + (figs ? ' fopt' : '') + '" type="button" data-act="opt" data-n="' + n + '"><span class="key">' + 'ABCD'.charAt(n) + '</span>' +
         (figs ? figHtml(figs[oi], 'opt') + '<span class="txt sr">' + tx(q.opts[oi]) + '</span>' : '<span class="txt">' + tx(q.opts[oi]) + '</span>') +
         '<span class="mk">' + IC.tick + IC.cross + '</span></button>').join('') +
-    '</div>' +
+    '</div>' + (figs ? FIG.optCredits(figs, it.perm) : '') +
     '<div class="note" hidden></div>' +
     '<div class="foot">' + (acts ? '<div class="actions">' + acts + '</div>' : '') + '<button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
   return sec;

@@ -16,12 +16,17 @@
 // A point's figures (cardFigs, q.fig and q.optFigs, see src/06-figure.js) must match the format and their data must agree
 // with itself (FIG.pointProblems). Their words go through the same word and maths checks as the rest of the point. A
 // question with graphs as its options shows no option text, so it is left out of the longest-option count.
+// Figures are graphs, charts, diagrams and images. A chart's stated values and the text beside it are held to its data.
+// A diagram or image must have its file in pictures/, a record in pictures/licences.json (an image with its creator, an
+// allowed licence and its source), a file under the size limit, and, for a diagram, nothing a diagram may not hold
+// (content/pictures.mjs reads the files). Every picture file must have a record, and every record a point that shows it.
 //   node check_content.mjs                 checks everything in src/
 //   node check_content.mjs --json FILE     checks only the points in FILE ({"kind": ..., "subject": ..., "points": {id: point}})
 //                                          and prints the problems for each as JSON. content/pipeline.py uses this.
 import fs from 'fs';
 import { loadContent, allBankPoints, unitCourses } from './content/load.mjs';
 import { ready, latexProblems, plainMaths, shown, sameMaths, hasMaths } from './content/latex.mjs';
+import { pictureEnv, folderProblems } from './content/pictures.mjs';
 await ready();
 const C = loadContent();
 const {TOPIC, MATHS, ECON_POINTS} = C;
@@ -31,6 +36,8 @@ const MAKE = new Function(fs.readFileSync(new URL('./src/15-maths-make.js', impo
    point where it is said to be, coordinates written in a label matching the dot, a description, and everything fitting
    inside the axes at the size the app draws it. */
 const FIG = new Function(fs.readFileSync(new URL('./lab/maths.js', import.meta.url), 'utf8') + '\n' + fs.readFileSync(new URL('./src/06-figure.js', import.meta.url), 'utf8') + '; return FIG;')();
+const PIC_ENV = pictureEnv();
+FIG.use(PIC_ENV.records);
 const BANK = allBankPoints(C);
 const COURSES = unitCourses(C);
 // key(?!nes) lets the economist Keynes through, as the ban is on the word key.
@@ -82,7 +89,8 @@ function checkPoint(id, p, tally, kind, subject) {
     texts.push(q.q, q.why, q.clue, ...q.opts);
   }
   for (const w of FIG.of(p)) texts.push(...FIG.texts(w.fig));
-  for (const m of FIG.pointProblems(p)) problems.push(id + ' ' + m);
+  if (p.wants !== undefined) for (const m of wantProblems(p)) problems.push(id + ' ' + m);
+  for (const m of FIG.pointProblems(p, PIC_ENV)) problems.push(id + ' ' + m);
   for (const t of texts) wordCheck(id, t, subject);
   for (const t of texts) for (const m of latexProblems(t)) problems.push(id + ' ' + m);
   if (hasMaths(p.title)) problems.push(id + ' has maths in its title. Titles are words only: ' + p.title);
@@ -91,6 +99,23 @@ function checkPoint(id, p, tally, kind, subject) {
     for (const [t, m] of found) problems.push(id + ' writes maths as plain text, ' + m.join('; ') + ', in: ' + t + ' Write the maths in LaTeX between \\( and \\).');
   }
   if (kind === 'english') for (const t of texts) { const q = typeof t === 'string' && longQuote(t); if (q) problems.push(id + ' quotes more than 10 words: ' + q); }
+}
+/* A point's wants: the pictures the writer could not draw itself, for content/pipeline.py cc-picture. Each names a place
+   the point has and no figure fills yet, a kind, and what the picture shows. Publish leaves them out of the bank. */
+const PLACE = /^(card [1-4]|[ab]( options)?)$/;
+function wantProblems(p) {
+  if (!Array.isArray(p.wants)) return ['has wants that are not a list' + (p.wants && p.wants.unreadable ? ' (they could not be read as JSON: ' + p.wants.unreadable + ')' : '') + '. Write pictures as a JSON list, or "" for none'];
+  const out = [];
+  p.wants.forEach((w, n) => {
+    const at = w && typeof w.at === 'string' ? w.at.trim() : '', k = 'want ' + (n + 1) + ' ';
+    if (!w || typeof w !== 'object') { out.push(k + 'is not an object'); return; }
+    for (const key of Object.keys(w)) if (!['at', 'kind', 'brief', 'why', 'tries', 'notes', 'waiting'].includes(key)) out.push(k + 'has a part it does not take: ' + key);
+    if (!['diagram', 'image', 'chart'].includes(w.kind)) out.push(k + 'needs kind: diagram, image or chart');
+    if (!PLACE.test(at) || (at.startsWith('card') && +at.slice(5) > (p.card || []).length)) out.push(k + 'has at ' + JSON.stringify(w.at) + ', which the point does not have. Use card 1 to card ' + (p.card || []).length + ', a, b, a options or b options');
+    else if (at.startsWith('card') ? (p.cardFigs || {})[at.slice(5)] : p[at[0]] && p[at[0]][at.endsWith('options') ? 'optFigs' : 'fig']) { if (!w.waiting) out.push(k + 'is for ' + at + ', which already has a figure'); }
+    if (typeof w.brief !== 'string' || w.brief.trim().split(/\s+/).length < 5) out.push(k + 'needs a brief: what the picture shows, with every label');
+  });
+  return out;
 }
 /* A course's right option is the longest well above chance when the count is at least 2 standard deviations above a
    quarter of its questions (a binomial count with p = 1/4). By luck alone, that happens to about 1 course in 40. A course
@@ -193,8 +218,13 @@ for (const c of COURSES) {
   }
   report(c.course + ', ' + c.year, t, isMade && c.id);
 }
+for (const [id, p] of Object.entries(BANK)) if (p.wants !== undefined) problems.push(id + ' has wants in the bank. Publish leaves them out: publish its course again');
 for (const id of Object.keys(BANK)) if (!used.has(id)) problems.push(id + ' is in the bank but no course lists it');
 for (const [q, where] of asked(new Set()).map) if (where.length > 1) problems.push(where.map(([i, k]) => i + k).join(' and ') + ' ask the same question, word for word: ' + q.replace(/ with figures .*/, ' (with the same figures)'));
+/* The picture files: each has a record, each record a file and a point that shows it. */
+const shownPics = new Set();
+for (const p of [...TOPIC.chapters.flatMap(c => c.points), ...Object.values(BANK)]) for (const w of FIG.of(p)) if (w.fig && /^(diagram|image)$/.test(w.fig.kind)) shownPics.add(w.fig.src);
+for (const m of folderProblems(shownPics)) problems.push(m);
 for (const id of [...TOPIC.chapters.map(c => c.id), ...MATHS.chapters.map(c => c.id)]) if (ids.has(id)) problems.push(id + ' clashes with a course chapter id');
 for (const id of ids) if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) problems.push(id + ' is not a chapter id: lower-case letters and numbers joined by dashes');
 

@@ -244,9 +244,9 @@ check(await until(async () => (await A.p.locator('[data-act="account"] .val').te
 await A.p.click('[data-act="account"]'); await A.p.waitForTimeout(100);
 await A.p.click('[data-act="signout"]');
 check(await until(async () => Object.keys((await saved(A.p)).ans || {}).length === 0), 'signing out erases this device’s copy', R);
-check(await A.p.evaluate(() => !localStorage.getItem('stratos2.auth') && !localStorage.getItem('stratos2.sync')), 'and forgets the account on this device', R);
+check(await until(async () => A.p.evaluate(() => !localStorage.getItem('stratos2.auth') && !localStorage.getItem('stratos2.sync'))), 'and forgets the account on this device', R);
 check(!!(await row('a@example.com')).data.ans[offId], 'the account keeps its progress', R);
-check(await A.p.locator('#v-home.on').count() === 1 && await A.p.locator('#v-home .top .signin').count() === 1, 'and goes back to Home, with Sign in in its top bar again', R);
+check(await until(async () => await A.p.locator('#v-home.on').count() === 1 && await A.p.locator('#v-home .top .signin').count() === 1), 'and goes back to Home, with Sign in in its top bar again', R);
 await tab(A.p, 'you');
 check(await A.p.locator('#v-you [data-act="signin"]').count() === 1, 'You offers signing in again', R);
 
@@ -254,7 +254,7 @@ check(await A.p.locator('#v-you [data-act="signin"]').count() === 1, 'You offers
 await tab(B.p, 'you');
 check((await B.p.locator('.you .fine').last().textContent()).includes('signs you out. Your account keeps its progress.'), 'signed in, the Reset line says the account keeps its progress', R);
 await B.p.click('[data-act="reset"]'); await B.p.click('[data-act="reset"]'); await B.p.waitForTimeout(300);
-check(await B.p.evaluate(() => !localStorage.getItem('stratos2.sync')), 'Reset while signed in signs the device out', R);
+check(await until(async () => B.p.evaluate(() => !localStorage.getItem('stratos2.sync'))), 'Reset while signed in signs the device out', R);
 check(Object.keys((await row('a@example.com')).data.ans).length >= 6, 'and the account keeps its progress', R);
 
 // ---------- deleting an account ----------

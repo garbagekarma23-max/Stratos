@@ -30,6 +30,10 @@ How the pieces fit:
   src/84-merge.js      the part of the save that goes to an account, and how two copies are put together
   src/85-account.js    signing in by email and keeping progress in step with the account (optional)
   src/recordings.json  the three sound recordings, stored as text
+  pictures/            the diagrams and images figures show (see src/06-figure.js). pictures/licences.json, the record
+                       of each one (its size, and for an image its creator, licence and source), goes into the page as
+                       PICS, so the app can show each image's credit. The files themselves are not copied in: the page
+                       loads each one when it comes near the screen, so --site copies the folder next to v2.html.
   lab/...              the Maths Lab's keypad, working sheet and line checker. They are read from lab/ so there is
                        one copy, shared with maths-lab.html. MathLive itself is not copied in: v2.html loads it from
                        lab/mathlive the first time maths is opened.
@@ -42,6 +46,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)) + '/'
 SRC = HERE + 'src/'
 LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
+PICS = '/*PICS*/{"images": {}, "diagrams": {}}/*PICS-END*/'
 JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'made.js', 'MADE', 'places.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '05-maths-text.js', '06-figure.js', '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
       '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '76-week.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '84-merge.js', '85-account.js', '90-boot.js']
@@ -66,6 +71,9 @@ def parts(extra=None):
     script = '\n\n'.join(read(n) for n in names)
     assert script.count(MARK) == 1, 'the marker for the recordings is missing from 20-sound.js'
     script = script.replace(MARK, '/*REC*/' + json.dumps(rec, separators=(',', ':')) + '/*REC-END*/')
+    assert script.count(PICS) == 1, 'the marker for the picture records is missing from 06-figure.js'
+    pics = json.load(open(HERE + 'pictures/licences.json', encoding='utf8'))
+    script = script.replace(PICS, '/*PICS*/' + json.dumps(pics, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + '/*PICS-END*/')
     head = read('head.html')
     m = re.match(r'<title>(.*?)</title>\n', head)
     assert m, 'head.html must start with the title'
@@ -84,7 +92,7 @@ def standalone(extra=None):
             '</head>\n<body>\n' + body + '</body>\n</html>\n')
 
 # The files and folders the live site serves next to v2.html, from the repository folder. --site copies them.
-SITE = ['index.html', 'maths-lab.html', 'manifest-v2.webmanifest', 'manifest-lab.webmanifest', 'icons', 'lab', 'vendor/supabase']
+SITE = ['index.html', 'maths-lab.html', 'manifest-v2.webmanifest', 'manifest-lab.webmanifest', 'icons', 'lab', 'vendor/supabase', 'pictures']
 # Files inside those folders that only the tools on a computer use, never a page on the site: the npm files, the
 # scripts that copy MathLive and Supabase in, and MathLive's build for Node (the content check uses it).
 NOT_SITE = ['node_modules', 'package.json', 'package-lock.json', 'copy-*.mjs', 'mathlive-ssr.min.mjs']
