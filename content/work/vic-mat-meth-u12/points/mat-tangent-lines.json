@@ -41,7 +41,8 @@
   "2026-11-08T12:52:10Z pictures: the owner asked for a graph at card 1",
   "2026-11-08T13:07:48Z pictures: 1 picture waiting for the check",
   "2026-11-08T13:14:24Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The description says the three tangents are the same length, but as drawn the horizontal tangent is clearly shorter than the two sloped ones (about 83 px against about 138 px at this scale), because all three span 1.2 units of x and the sloped ones also rise or fall 3.6 units of y; either shorten the sloped segments to about x = 1.14 to 1.86 and x = 4.14 to 4.86 so all three look equal, as was asked for, or take \"of the same length\" out of the description.",
-  "2026-11-08T13:16:19Z pictures: 1 picture waiting for the check"
+  "2026-11-08T13:16:19Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:17:35Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The sloping tangents at x = 1.5 and x = 4.5 run only 0.36 either side of their points (not about 0.6 as asked), so they leave the curve by about 0.13 units, a few pixels, and in both light and dark they cannot be seen as lines apart from the curve; the picture does not show a tangent sloping down or up, which is what the card line is about.; Make the sloping tangents clearly visible: longer (about 0.8 either side, which stays inside the axes and above the lowest point) and drawn in a different line style from the curve, such as dashed, so each tangent reads as its own straight line.; The label positive sits with its first letter against the curve (the curve passes through about (4.95, 5.8), right at the start of the word); move it clear of the curve.; The label negative is placed above-right of its segment, not above-left as asked; it is clear of the curve, but the three labels should be placed consistently as the request says.. Now waiting for you: graph at card 1"
  ],
  "sent": {
   "match": 1,
@@ -261,10 +262,16 @@
     "kind": "graph",
     "brief": "A concave up curve y = f(x), with f(x) = x^2 - 6x + 11 (turning point (3, 2)), and three short tangent segments of equal length: at x = 1.5 (gradient -3), at x = 3 (horizontal, gradient 0) and at x = 4.5 (gradient 3). Each segment is short (about 0.6 either side of its point) so that none crosses another or runs below the curve's lowest point. Each has a label of the same style placed the same way relative to its segment and clear of it: negative above-left of the left one, zero below the middle one, positive above-right of the right one. No axis numbers, so no point from the questions can be read off.",
     "why": "It shows a tangent's direction matching the curve, with negative, zero and positive gradients.",
-    "tries": 1,
+    "tries": 2,
     "notes": [
      [
       "The description says the three tangents are the same length, but as drawn the horizontal tangent is clearly shorter than the two sloped ones (about 83 px against about 138 px at this scale), because all three span 1.2 units of x and the sloped ones also rise or fall 3.6 units of y; either shorten the sloped segments to about x = 1.14 to 1.86 and x = 4.14 to 4.86 so all three look equal, as was asked for, or take \"of the same length\" out of the description."
+     ],
+     [
+      "The sloping tangents at x = 1.5 and x = 4.5 run only 0.36 either side of their points (not about 0.6 as asked), so they leave the curve by about 0.13 units, a few pixels, and in both light and dark they cannot be seen as lines apart from the curve; the picture does not show a tangent sloping down or up, which is what the card line is about.",
+      "Make the sloping tangents clearly visible: longer (about 0.8 either side, which stays inside the axes and above the lowest point) and drawn in a different line style from the curve, such as dashed, so each tangent reads as its own straight line.",
+      "The label positive sits with its first letter against the curve (the curve passes through about (4.95, 5.8), right at the start of the word); move it clear of the curve.",
+      "The label negative is placed above-right of its segment, not above-left as asked; it is clear of the curve, but the three labels should be placed consistently as the request says."
      ]
     ]
    }
@@ -722,170 +729,7 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-08T13:14:24Z"
-  }
- ],
- "picture_draft": {
-  "title": "Tangent lines",
-  "card": [
-   "A tangent line touches the curve at a point and has the same direction as the curve there. Its gradient, rise divided by run between any two points on the line, is the instantaneous rate of change at that point.",
-   [
-    "Positive gradient",
-    "the tangent slopes up, so the function is increasing at that point."
-   ],
-   [
-    "Negative gradient",
-    "the tangent slopes down, so the function is decreasing at that point."
-   ],
-   [
-    "Zero gradient",
-    "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to \\(y = x^{2}\\) at \\(x = 0\\) is horizontal, so the rate there is 0."
-   ]
-  ],
-  "cardFigs": {
-   "1": {
-    "kind": "graph",
-    "alt": "A concave up curve \\(y = f(x)\\) with three short tangents. On the left, where the curve falls, the tangent slopes down: its gradient is negative. At the lowest point the tangent is horizontal: its gradient is zero. On the right, where the curve rises, the tangent slopes up: its gradient is positive.",
-    "x": {
-     "min": -1,
-     "max": 7,
-     "label": "\\(x\\)",
-     "step": 1,
-     "nums": false
-    },
-    "y": {
-     "min": -1,
-     "max": 11,
-     "label": "\\(y\\)",
-     "step": 1,
-     "nums": false
-    },
-    "grid": true,
-    "items": [
-     {
-      "type": "fn",
-      "id": "f",
-      "expr": "x^{2} - 6x + 11",
-      "domain": [
-       -0.2,
-       6.2
-      ],
-      "label": "\\(y = f(x)\\)",
-      "labelAt": 0.2,
-      "pos": "right"
-     },
-     {
-      "type": "fn",
-      "id": "n",
-      "expr": "-3x + 8.75",
-      "domain": [
-       1.14,
-       1.86
-      ],
-      "label": "negative",
-      "labelAt": 1.14,
-      "pos": "above-right"
-     },
-     {
-      "type": "fn",
-      "id": "z",
-      "expr": "2",
-      "domain": [
-       2.4,
-       3.6
-      ],
-      "label": "zero",
-      "labelAt": 3,
-      "pos": "below"
-     },
-     {
-      "type": "fn",
-      "id": "p",
-      "expr": "3x - 9.25",
-      "domain": [
-       4.14,
-       4.86
-      ],
-      "label": "positive",
-      "labelAt": 4.86,
-      "pos": "right"
-     },
-     {
-      "type": "point",
-      "at": [
-       1.5,
-       4.25
-      ],
-      "on": [
-       "f",
-       "n"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       3,
-       2
-      ],
-      "on": [
-       "f"
-      ],
-      "is": "turning point"
-     },
-     {
-      "type": "point",
-      "at": [
-       4.5,
-       4.25
-      ],
-      "on": [
-       "f",
-       "p"
-      ]
-     }
-    ]
-   }
   },
-  "remember": "Tangent up is positive, down is negative, horizontal is zero.",
-  "a": {
-   "q": "The tangent to a curve at point \\(P\\) is horizontal. What does this tell you about the curve at \\(P\\)?",
-   "opts": [
-    "The rate of change at \\(P\\) is zero",
-    "The rate of change at \\(P\\) is 1",
-    "The curve is decreasing at \\(P\\)",
-    "The rate of change at \\(P\\) is undefined"
-   ],
-   "why": "A horizontal line has gradient 0, so the instantaneous rate of change at \\(P\\) is 0. It is not decreasing, because a decreasing curve has a tangent that slopes down.",
-   "clue": "What is the gradient of a horizontal line?"
-  },
-  "b": {
-   "d": 3,
-   "q": "A tangent to a curve at \\((0, 5)\\) also passes through \\((2, 1)\\). What is the instantaneous rate of change at \\((0, 5)\\)?",
-   "opts": [
-    "\\(-2\\)",
-    "2",
-    "\\(-4\\)",
-    "\\(-\\frac{1}{2}\\)"
-   ],
-   "why": "The gradient is \\(\\frac{1 - 5}{2 - 0} = \\frac{-4}{2} = -2\\), so the curve is decreasing at that point. The value \\(-4\\) is only the rise and has not been divided by the run.",
-   "clue": "Rise over run, and check which way the line slopes."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "A concave up curve y = f(x), with f(x) = x^2 - 6x + 11 (turning point (3, 2)), and three short tangent segments of equal length: at x = 1.5 (gradient -3), at x = 3 (horizontal, gradient 0) and at x = 4.5 (gradient 3). Each segment is short (about 0.6 either side of its point) so that none crosses another or runs below the curve's lowest point. Each has a label of the same style placed the same way relative to its segment and clear of it: negative above-left of the left one, zero below the middle one, positive above-right of the right one. No axis numbers, so no point from the questions can be read off.",
-    "why": "It shows a tangent's direction matching the curve, with negative, zero and positive gradients.",
-    "tries": 1,
-    "notes": [
-     [
-      "The description says the three tangents are the same length, but as drawn the horizontal tangent is clearly shorter than the two sloped ones (about 83 px against about 138 px at this scale), because all three span 1.2 units of x and the sloped ones also rise or fall 3.6 units of y; either shorten the sloped segments to about x = 1.14 to 1.86 and x = 4.14 to 4.86 so all three look equal, as was asked for, or take \"of the same length\" out of the description."
-     ]
-    ],
-    "waiting": true
-   }
-  ]
- },
- "pictures_waiting": [
   {
    "want": 1,
    "at": "card 1",
@@ -996,7 +840,27 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T13:16:18Z"
+   "made": "2026-11-08T13:16:18Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The sloping tangents at x = 1.5 and x = 4.5 run only 0.36 either side of their points (not about 0.6 as asked), so they leave the curve by about 0.13 units, a few pixels, and in both light and dark they cannot be seen as lines apart from the curve; the picture does not show a tangent sloping down or up, which is what the card line is about.",
+     "Make the sloping tangents clearly visible: longer (about 0.8 either side, which stays inside the axes and above the lowest point) and drawn in a different line style from the curve, such as dashed, so each tangent reads as its own straight line.",
+     "The label positive sits with its first letter against the curve (the curve passes through about (4.95, 5.8), right at the start of the word); move it clear of the curve.",
+     "The label negative is placed above-right of its segment, not above-left as asked; it is clear of the curve, but the three labels should be placed consistently as the request says."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:17:35Z"
   }
  ]
 }
