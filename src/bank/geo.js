@@ -2767,6 +2767,13 @@ MADE_BANKS.geo = {
       "Towns and cities along the rivers also take water for drinking, homes and industry. Some towns rely on the rivers for most of their supply.",
       "The rivers and wetlands need water too, to keep plants, animals and water quality healthy. Every drop taken out leaves less in the river, so the water must be shared between these uses."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/murray-darling-basin.svg",
+        "alt": "A map of south-eastern Australia with the Murray-Darling Basin shaded. The basin covers southern Queensland, most of New South Wales, the whole of the ACT, northern Victoria and the east of South Australia. The Darling River flows south-west from Bourke across New South Wales and joins the Murray River, which flows west along the border of New South Wales and Victoria and through South Australia to the sea."
+      }
+    },
     "remember": "The basin's water is shared between irrigation, towns and the rivers themselves.",
     "a": {
       "q": "Why must the water of the Murray-Darling Basin be shared?",
