@@ -1984,8 +1984,8 @@ MADE_BANKS.bio = {
     "cardFigs": {
       "1": {
         "kind": "diagram",
-        "src": "pictures/diagrams/plant-and-animal-cells.svg",
-        "alt": "Two cells. The plant cell is box-shaped, with a cell wall outside its plasma membrane, a large vacuole filling much of the middle, chloroplasts, a nucleus and a mitochondrion. The rounded animal cell has a plasma membrane, a nucleus and mitochondria, but no cell wall, chloroplasts or large vacuole."
+        "src": "pictures/diagrams/plant-and-animal-cell-parts.svg",
+        "alt": "Two cells. The box-shaped plant cell has a cell wall outside its plasma membrane and a large central vacuole filling the middle, with the nucleus, chloroplasts, mitochondria and ribosomes around the edges. Each chloroplast is smaller than the nucleus but larger than a mitochondrion. The rounded animal cell has a plasma membrane, a nucleus, mitochondria and ribosomes, but no cell wall, chloroplasts or large vacuole."
       }
     },
     "remember": "A cell wall marks a plant cell. Chloroplasts and a large central vacuole are plant features, but not every plant cell has them.",
