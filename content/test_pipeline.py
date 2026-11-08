@@ -1458,7 +1458,7 @@ def picture_tests(tmp, repo, printed):
     dg = {'kind': 'diagram', 'src': 'pictures/diagrams/tst-one.svg', 'alt': 'A test diagram of the first line, with its label.'}
     im = {'kind': 'image', 'src': 'pictures/images/tst-two.png', 'alt': 'A test photo of the thing question a is about.'}
     rec_img = {'title': 'A test photo', 'creator': 'A. Person', 'licence': 'CC BY-NC 4.0', 'source': 'https://commons.wikimedia.org/wiki/File:Test.png', 'size': [800, 600], 'changes': 'Resized', 'why': 'Its Commons page gives this licence.'}
-    answer('tpc-one', {'pictures': [{'want': 1, 'skip': '', 'figures': [dg], 'records': {dg['src']: {'title': 'A test diagram', 'made': 'Drawn for Stratos', 'size': [320, 120]}}}]})
+    answer('tpc-one', {'pictures': [{'want': 1, 'skip': '', 'figures': [dg], 'records': {dg['src']: {'title': 'A test diagram', 'made': 'Drawn for Stratos', 'creator': 'Stratos', 'licence': 'CC BY 4.0', 'size': [320, 120]}}}]})
     answer('tpc-two', {'pictures': [{'want': 1, 'skip': '', 'figures': [im], 'records': {im['src']: rec_img}}]})
     before = W.load('tpc-one')
     code, out = go('cc-picture', 'import', '--dry-run')
@@ -1495,6 +1495,41 @@ def picture_tests(tmp, repo, printed):
     check('tpc-two' in out and 'Last time the check found: The source page gives another licence.' in open(os.path.join(folder, 'tst-pic', 'tpc-two.md'), encoding='utf-8').read(),
           'the next export asks again, with what the check found')
     shutil.rmtree(folder)
+    # the owner's new ask in place of a want turned down twice
+    code, out = go('want-picture', outline, '--point', 'tpc-held', '--at', 'b', '--kind', 'diagram', '--brief', 'A diagram drawn for Stratos in place of the photo.')
+    held = W.load('tpc-held')
+    check(code == 0 and [w['kind'] for w in held['final']['wants']] == ['diagram'] and held['pictures'][-1]['status'] == "replaced by the owner's new ask",
+          'want-picture puts the owner\'s new ask in place of a want turned down twice')
+    # a new picture in place of one that passed: the old one stays until the new one passes
+    code, out = go('want-picture', outline, '--point', 'tpc-one', '--at', 'card 1', '--kind', 'diagram', '--brief', 'The same diagram redrawn with every part at its right size.')
+    check(code == 1 and '--replace' in out, 'asking for a picture where one is already needs --replace')
+    go('want-picture', outline, '--point', 'tpc-one', '--at', 'card 1', '--kind', 'diagram', '--replace', '--brief', 'The same diagram redrawn with every part at its right size.')
+    one = W.load('tpc-one')
+    check(one['final']['cardFigs']['1'] == dg and one['final']['wants'][0]['replaces'] == dg, 'with --replace, the old picture stays on the point and the want names it')
+    go('cc-picture', 'export')
+    dg2 = dict(dg, src='pictures/diagrams/tst-one-redrawn.svg')
+    with open(os.path.join(repo, dg2['src']), 'w', encoding='utf-8') as f: f.write(PIC_SVG)
+    rec_dg2 = {'title': 'A test diagram, redrawn', 'made': 'Drawn for Stratos', 'creator': 'Stratos', 'licence': 'CC BY 4.0', 'size': [320, 120]}
+    answer('tpc-one', {'pictures': [{'want': 1, 'skip': '', 'figures': [dg2], 'records': {dg2['src']: rec_dg2}}]})
+    answer('tpc-held', {'pictures': [{'want': 1, 'skip': 'Not needed for the test.', 'figures': [], 'records': {}}]})
+    code, out = go('cc-picture', 'import')
+    check(W.load('tpc-one')['picture_draft']['cardFigs']['1'] == dg2 and W.load('tpc-one')['final']['cardFigs']['1'] == dg, 'the redrawn picture waits for the check while the old one stays on the point')
+    go('cc-picture-check', 'export')
+    answer2('tpc-one', {'pictures': [dict(ok, verdict='redo', sure='high', problems=['A part is still the wrong size.'])]})
+    go('cc-picture-check', 'import')
+    one = W.load('tpc-one')
+    check(one['final']['cardFigs']['1'] == dg and one['final']['wants'][0]['tries'] == 1 and not os.path.exists(os.path.join(repo, dg2['src'])) and os.path.exists(os.path.join(repo, dg['src'])),
+          'a redrawn picture the check turns down comes out, and the old one is back on the point with its file')
+    go('cc-picture', 'export')
+    answer('tpc-one', {'pictures': [{'want': 1, 'skip': '', 'figures': [dg2], 'records': {dg2['src']: rec_dg2}}]})
+    with open(os.path.join(repo, dg2['src']), 'w', encoding='utf-8') as f: f.write(PIC_SVG)
+    go('cc-picture', 'import'); go('cc-picture-check', 'export')
+    answer2('tpc-one', {'pictures': [ok]})
+    go('cc-picture-check', 'import')
+    one = W.load('tpc-one')
+    check(one['final']['cardFigs']['1'] == dg2 and 'wants' not in one['final'] and one['pictures'][-1]['status'] == 'replaced' and one['pictures'][-1]['figures'] == [dg],
+          'one it keeps takes the old one\'s place, and the old one is marked replaced, for publish to take out once no point shows it')
+    shutil.rmtree(folder, ignore_errors=True); shutil.rmtree(cfolder, ignore_errors=True)
     for d in ('images', 'diagrams'): shutil.rmtree(os.path.join(repo, 'pictures', d))
     pipeline.write_json(os.path.join(repo, 'pictures', 'licences.json'), {'images': {}, 'diagrams': {}})
 

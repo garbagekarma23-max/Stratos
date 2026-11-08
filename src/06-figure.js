@@ -729,9 +729,10 @@ const FIG = (() => {
        {"kind": "image", "src": "pictures/images/the-blood-vote-1916.webp", "alt": "..."}
      alt is required, except on an option, whose text is its description. Every picture has a record in
      pictures/licences.json, under "diagrams" or "images" by its src: its title and its size in pixels ([width, height],
-     the viewBox for a diagram), and for an image the creator, the licence, the page it came from and what was changed
-     (such as "resized"). build.py puts that file into the page as PICS, and the app shows an image's credit under it from
-     there. Only public domain, CC0, CC BY and CC BY-SA images are allowed (LICENCES).
+     the viewBox for a diagram), its creator and its licence; for an image also the page it came from, what was changed
+     (such as "resized") and why the licence applies. A diagram drawn for Stratos is CC BY 4.0, credited to Stratos.
+     build.py puts that file into the page as PICS, and the app shows each picture's credit under it from there. Only
+     public domain, CC0, CC BY and CC BY-SA are allowed (LICENCES).
      A diagram is drawn for Stratos as SVG. It is put into the page itself, not shown as a picture file, so its lines and
      words take the app's colours: it may use only currentColor and the app's colour names (var(--ink) and the others in
      COLOURS), never a colour of its own, and its labels are real text, large enough to read on a 360 px phone. It may have
@@ -770,13 +771,13 @@ const FIG = (() => {
   /* The record must say what the picture is and, for an image, who made it, under which licence, and where it came from. */
   function recordProblems(kind, src, rec) {
     const bad = [], w = 'has a record for ' + src + ' ';
-    const keys = kind === 'image' ? ['title', 'creator', 'licence', 'source', 'size', 'changes', 'why'] : ['title', 'made', 'size'];
+    const keys = kind === 'image' ? ['title', 'creator', 'licence', 'source', 'size', 'changes', 'why'] : ['title', 'made', 'creator', 'licence', 'size'];
     for (const k of Object.keys(rec)) if (!keys.includes(k)) bad.push(w + 'with a part it does not take: ' + k);
     if (!str(rec.title) || !rec.title.trim()) bad.push(w + 'with no title');
     if (!(Array.isArray(rec.size) && rec.size.length === 2 && rec.size.every(v => Number.isInteger(v) && v > 0))) bad.push(w + 'with no size: [width, height] in pixels');
-    if (kind === 'diagram') { if (!str(rec.made) || !rec.made.trim()) bad.push(w + 'that does not say who drew it (made)'); return bad; }
     if (!str(rec.creator) || !rec.creator.trim()) bad.push(w + 'with no creator, for the credit');
     if (!LICENCES.includes(rec.licence)) bad.push(w + 'with the licence ' + JSON.stringify(rec.licence) + '. Only ' + LICENCES.join(', ') + ' are allowed');
+    if (kind === 'diagram') { if (!str(rec.made) || !rec.made.trim()) bad.push(w + 'that does not say who drew it (made)'); return bad; }
     if (!str(rec.source) || !/^https:\/\/[a-z0-9.-]+\.[a-z]{2,}\//i.test(rec.source)) bad.push(w + 'with no source: the https address of the page it came from');
     if (!str(rec.why) || rec.why.trim().split(/\s+/).length < 4) bad.push(w + 'with no why: why the licence applies, as the source page says');
     if (rec.changes !== undefined && !str(rec.changes)) bad.push(w + 'with changes that are not text');
@@ -930,13 +931,15 @@ const FIG = (() => {
       .observe(document.documentElement, {childList: true, subtree: true});
     scan(document);
   }
-  /* An image's credit, as HTML: the creator, the licence (a link to it), what was changed, and the page it came from. */
+  /* A picture's credit, as HTML: the creator, the licence (a link to it), and for an image what was changed and the page
+     it came from. A diagram drawn for Stratos reads "Stratos, CC BY 4.0." */
   function credit(f) {
     const r = record(f);
-    if (f.kind !== 'image' || !r) return '';
-    const lic = licenceUrl(r.licence), host = /commons\.wikimedia\.org/.test(r.source) ? 'Wikimedia Commons' : 'source';
+    if (!r || !r.creator) return '';
+    const lic = licenceUrl(r.licence), from = f.kind === 'image' && str(r.source) ? r.source : '';
+    const host = /commons\.wikimedia\.org/.test(from) ? 'Wikimedia Commons' : 'source';
     return ESC(r.creator) + ', ' + (lic ? '<a href="' + ESC(lic) + '" target="_blank" rel="noopener">' + ESC(r.licence) + '</a>' : 'public domain') +
-      (r.changes ? ', ' + ESC(r.changes.charAt(0).toLowerCase() + r.changes.slice(1)) : '') + '. <a href="' + ESC(r.source) + '" target="_blank" rel="noopener">' + host + '</a>';
+      (r.changes ? ', ' + ESC(r.changes.charAt(0).toLowerCase() + r.changes.slice(1)) : '') + '.' + (from ? ' <a href="' + ESC(from) + '" target="_blank" rel="noopener">' + host + '</a>' : '');
   }
   /* One picture as HTML. An option's picture has no description of its own and no credit: the button's text says what it
      is, and the credits go under the options (optCredits). */
@@ -947,11 +950,12 @@ const FIG = (() => {
       ? '<img src="' + ESC(f.src) + '" alt="" width="' + w + '" height="' + h + '" loading="lazy" decoding="async">'
       : '<div class="fdg" data-src="' + ESC(f.src) + '"></div>';
     const fig = '<div class="fig fpic fig-' + size + ' f' + f.kind + '"' + label + ' style="max-width:' + (opt ? 'none' : Math.round(w * 1.25) + 'px') + ';aspect-ratio:' + w + '/' + h + '">' + inner + '</div>';
-    return opt || f.kind !== 'image' ? fig : '<div class="fwrap">' + fig + '<p class="fcr">' + credit(f) + '</p></div>';
+    const cr = opt ? '' : credit(f);
+    return cr ? '<div class="fwrap">' + fig + '<p class="fcr">' + cr + '</p></div>' : fig;
   }
-  /* The credits for images used as options, in the order the options are shown: "A: ... B: ...". */
+  /* The credits for pictures used as options, in the order the options are shown: "A: ... B: ...". */
   function optCredits(figs, order) {
-    const out = order.map((oi, n) => figs[oi] && figs[oi].kind === 'image' ? 'ABCD'.charAt(n) + ': ' + credit(figs[oi]) + '.' : '').filter(Boolean);
+    const out = order.map((oi, n) => figs[oi] && /^(image|diagram)$/.test(figs[oi].kind) && credit(figs[oi]) ? 'ABCD'.charAt(n) + ': ' + credit(figs[oi]).replace(/\.$/, '') + '.' : '').filter(Boolean);
     return out.length ? '<p class="fcr fcr-opts">' + out.join(' ') + '</p>' : '';
   }
 

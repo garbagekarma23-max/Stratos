@@ -18,7 +18,7 @@ MADE_BANKS.tpc = {
       "opts": ["A series circuit with a cell and two resistors", "A plant cell and an animal cell", "A leaflet from 1916", "A box plot with one outlier"],
       "optFigs": [
         {"kind": "diagram", "src": "pictures/diagrams/series-circuit.svg"},
-        {"kind": "diagram", "src": "pictures/diagrams/plant-and-animal-cells.svg"},
+        {"kind": "diagram", "src": "pictures/diagrams/plant-and-animal-cell-parts.svg"},
         {"kind": "image", "src": "pictures/images/the-blood-vote-1916.webp"},
         {"kind": "chart", "chart": "box", "x": {"min": 0, "max": 40, "step": 10}, "outliers": true, "sets": [{"data": [5, 8, 12, 13, 14, 16, 18, 19, 20, 23, 35]}]}
       ],
@@ -32,7 +32,7 @@ MADE_BANKS.tpc = {
       "optFigs": [
         {"kind": "image", "src": "pictures/images/the-blood-vote-1916.webp"},
         {"kind": "diagram", "src": "pictures/diagrams/series-circuit.svg"},
-        {"kind": "diagram", "src": "pictures/diagrams/plant-and-animal-cells.svg"},
+        {"kind": "diagram", "src": "pictures/diagrams/plant-and-animal-cell-parts.svg"},
         {"kind": "chart", "chart": "bar", "x": {}, "y": {"min": 0, "max": 8, "step": 4}, "bars": [["A", 8], ["B", 6], ["C", 4], ["D", 6]]}
       ],
       "why": "The first picture is the leaflet.",

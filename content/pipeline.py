@@ -1825,7 +1825,11 @@ def cmd_publish(args):
                '   being reviewed, and shows on Home as Coming soon. */\n'
                'MADE_COURSES.push(' + js(data) + ');\n')
     sql_blocks(repo)
+    # A picture a new one replaced (cc-picture-check) leaves the repository once no published point shows it.
+    old = [s for r in recs.values() if r for e in r.get('pictures') or [] if e.get('status') == 'replaced' for s in pic_srcs(e.get('figures') or [])]
+    gone = drop_picture_files(sorted(set(old)), repo) if old else []
     out = subprocess.run(['node', 'check_content.mjs'], cwd=repo, capture_output=True, text=True, encoding='utf-8')
+    if gone: say('Took out the pictures replaced by new ones: ' + ', '.join(gone) + '.')
     say('Published', course['name'] + ':', ready, 'chapters ready' + ('. Held back as Coming soon: ' + ', '.join(held) if held else '') + '.')
     say('Wrote src/bank/' + bank_name + '.js, src/courses/' + course['id'] + '.js, and the made lines in supabase/week.sql and supabase/challenges.sql.')
     if out.returncode != 0:
@@ -3426,6 +3430,7 @@ def drop_picture_files(srcs, repo, keep_ids=()):
 
 def want_line(n, w):
     return (str(n) + '. ' + w['kind'] + ' at ' + w['at'] + ': ' + w['brief'] + (' Why: ' + w['why'] if w.get('why') else '') +
+            (' It replaces the figure there now, which stays until this one passes the check. Save it as a new file with a new name, and leave the old file as it is. The figure there now: ' + fig_text(w['replaces']) if w.get('replaces') is not None else '') +
             (' Last time the check found: ' + '; '.join(w['notes'][-1]) if w.get('notes') else ''))
 
 def open_wants(rec):
@@ -3446,13 +3451,25 @@ def cmd_want_picture(args):
     if not rec: raise Stop('No point ' + args.point + ' in ' + cid + '.')
     if rec['stage'] != 'cleared': raise Stop(args.point + ' is not cleared yet. A picture is added once its text is settled.')
     p = rec['final']
+    if rec.get('picture_draft'): raise Stop(args.point + ' has a picture waiting for the check. Run cc-picture-check first.')
     w = {'at': args.at, 'kind': args.kind, 'brief': args.brief}
     if args.why: w['why'] = args.why
     probs = want_problems([w], p)
     if probs: raise Stop('; '.join(probs))
-    if picture_taken(p, picture_place(args.at, p)): raise Stop(args.point + ' already has a figure at ' + args.at + '.')
+    place = picture_place(args.at, p)
+    # A want for the same place that the check turned down twice waits for the owner: a new ask takes its place.
+    same = [x for x in p.get('wants') or [] if picture_place(x.get('at'), p) == place]
+    if [x for x in same if (x.get('tries') or 0) < PICTURE_TRIES]: raise Stop(args.point + ' already asks for a picture at ' + args.at + '.')
+    if same:
+        p['wants'] = [x for x in p['wants'] if x not in same]
+        rec.setdefault('pictures', []).append({'want': same, 'status': 'replaced by the owner\'s new ask', 'at_time': now()})
+    if picture_taken(p, place):
+        if not args.replace: raise Stop(args.point + ' already has a figure at ' + args.at + '. Add --replace to ask for a new one in its place.')
+        # The figure there stays on the point until its replacement passes the check.
+        part, k = place
+        w['replaces'] = (p.get('cardFigs') or {}).get(k) if part == 'card' else p[part][k]
     p.setdefault('wants', []).append(w)
-    log(rec, 'pictures: the owner asked for ' + ('an ' if args.kind == 'image' else 'a ') + args.kind + ' at ' + args.at)
+    log(rec, 'pictures: the owner asked for ' + ('an ' if args.kind == 'image' else 'a ') + args.kind + ' at ' + args.at + (', in place of the one there' if w.get('replaces') else ''))
     work.put(rec)
     say('Added to ' + args.point + ': ' + ('an ' if args.kind == 'image' else 'a ') + args.kind + ' at ' + args.at + '. Next: py content/pipeline.py cc-picture export')
 
@@ -3596,7 +3613,7 @@ def picture_import_one(work, meta, rec, data, repo, dry):
         place = picture_place(w['at'], p)
         need = 4 if place[1] == 'optFigs' else 1
         if len(x['figures']) != need: probs.append('want ' + str(n) + ' needs ' + str(need) + ' figure' + ('s' if need > 1 else '')); continue
-        if picture_taken(new, place): probs.append('want ' + str(n) + ' goes where the point already has a figure: ' + w['at']); continue
+        if picture_taken(new, place) and not w.get('replaces'): probs.append('want ' + str(n) + ' goes where the point already has a figure: ' + w['at']); continue
         kinds = {f.get('kind') for f in x['figures']}
         if kinds != {w['kind']}: probs.append('want ' + str(n) + ' asked for a ' + w['kind'] + ', but the answer has ' + ', '.join(sorted(map(str, kinds))))
         srcs = pic_srcs(x['figures'])
@@ -3608,7 +3625,8 @@ def picture_import_one(work, meta, rec, data, repo, dry):
         for src in x['records']:
             if src not in srcs: probs.append('want ' + str(n) + ' has a record for ' + src + ', which none of its figures shows')
         new = put_picture(new, place, x['figures'])
-        waiting.append({'want': n, 'at': w['at'], 'kind': w['kind'], 'brief': w['brief'], 'figures': x['figures'], 'by': 'claude-code', 'made': now()})
+        waiting.append(dict({'want': n, 'at': w['at'], 'kind': w['kind'], 'brief': w['brief'], 'figures': x['figures'], 'by': 'claude-code', 'made': now()},
+                            **({'replaces': w['replaces']} if w.get('replaces') else {})))
     if probs: return probs, ''
     # The content check reads pictures/licences.json, so the records go in first, and come out again if it fails.
     before = json.loads(json.dumps(recs))
@@ -3657,7 +3675,10 @@ def picture_check_one(work, meta, rec, data, repo, dry):
         line += '. Picture ' + str(x['want']) + ' (' + x['kind'] + ' at ' + x['at'] + '): ' + c['verdict'] + ', ' + c['sure'] + ' sure' + ('. ' + '; '.join(c['problems']) if c['problems'] else '')
     if dry: return [], line
     point = draft
-    for x, c in dropped: point = take_picture(point, picture_place(x['at'], final))
+    for x, c in dropped:
+        place = picture_place(x['at'], final)
+        point = take_picture(point, place)
+        if x.get('replaces') is not None: point = put_picture(point, place, x['replaces'] if place[1] == 'optFigs' else [x['replaces']])
     wants = []
     for w in point.get('wants') or []:
         if not w.get('waiting'): wants.append(w); continue
@@ -3673,6 +3694,10 @@ def picture_check_one(work, meta, rec, data, repo, dry):
     rec['final'] = point
     for x, c in kept + dropped:
         rec.setdefault('pictures', []).append(dict(x, status='kept' if (x, c) in kept else 'turned down', check=c, checked_by='claude-code', checked=now()))
+        # The picture a kept one replaced: its files go once publish has taken it off every point (replaced_srcs).
+        if (x, c) in kept and x.get('replaces') is not None:
+            old = x['replaces'] if isinstance(x['replaces'], list) else [x['replaces']]
+            rec['pictures'].append({'status': 'replaced', 'figures': old, 'by': x['at'], 'at_time': now()})
     rec.pop('picture_draft', None); rec.pop('pictures_waiting', None)
     gone = drop_picture_files([s for x, _ in dropped for s in pic_srcs(x['figures'])], repo)
     held = [w for w in wants if (w.get('tries') or 0) >= PICTURE_TRIES]
@@ -3768,6 +3793,7 @@ def main(argv=None):
     wp.add_argument('--kind', required=True, choices=list(PICTURE_KINDS))
     wp.add_argument('--brief', required=True, help='what it shows, with every label')
     wp.add_argument('--why', help='how it helps a student')
+    wp.add_argument('--replace', action='store_true', help='ask for a new picture where the point already has one; the old one stays until the new one passes the check')
     r = sub.add_parser('review', help='the review page, on this computer only')
     r.add_argument('--port', type=int, default=8765)
     r.add_argument('--no-browser', action='store_true')

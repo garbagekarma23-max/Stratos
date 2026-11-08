@@ -109,10 +109,10 @@ function wantProblems(p) {
   p.wants.forEach((w, n) => {
     const at = w && typeof w.at === 'string' ? w.at.trim() : '', k = 'want ' + (n + 1) + ' ';
     if (!w || typeof w !== 'object') { out.push(k + 'is not an object'); return; }
-    for (const key of Object.keys(w)) if (!['at', 'kind', 'brief', 'why', 'tries', 'notes', 'waiting'].includes(key)) out.push(k + 'has a part it does not take: ' + key);
+    for (const key of Object.keys(w)) if (!['at', 'kind', 'brief', 'why', 'tries', 'notes', 'waiting', 'replaces'].includes(key)) out.push(k + 'has a part it does not take: ' + key);
     if (!['diagram', 'image', 'chart'].includes(w.kind)) out.push(k + 'needs kind: diagram, image or chart');
     if (!PLACE.test(at) || (at.startsWith('card') && +at.slice(5) > (p.card || []).length)) out.push(k + 'has at ' + JSON.stringify(w.at) + ', which the point does not have. Use card 1 to card ' + (p.card || []).length + ', a, b, a options or b options');
-    else if (at.startsWith('card') ? (p.cardFigs || {})[at.slice(5)] : p[at[0]] && p[at[0]][at.endsWith('options') ? 'optFigs' : 'fig']) { if (!w.waiting) out.push(k + 'is for ' + at + ', which already has a figure'); }
+    else if (at.startsWith('card') ? (p.cardFigs || {})[at.slice(5)] : p[at[0]] && p[at[0]][at.endsWith('options') ? 'optFigs' : 'fig']) { if (!w.waiting && w.replaces === undefined) out.push(k + 'is for ' + at + ', which already has a figure'); }
     if (typeof w.brief !== 'string' || w.brief.trim().split(/\s+/).length < 5) out.push(k + 'needs a brief: what the picture shows, with every label');
   });
   return out;

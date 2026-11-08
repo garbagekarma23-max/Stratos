@@ -11,6 +11,7 @@
 // an image loaded lazily with its credit and licence links under it; a chart; every description read by screen
 // readers; pictures as options, answered by keyboard and by tap, with the image's credit under the options; no
 // sideways scroll at 360 px; and the site build carrying pictures/.
+// Diagrams drawn for Stratos are CC BY 4.0, credited to Stratos, with their credit under them too.
 // Run: node pictures.mjs     node pictures.mjs shots   saves pic-chart, pic-cells, pic-circuit, pic-source, pic-map and
 // pic-options, light and dark, at 360 by 760.
 import fs from 'fs';
@@ -112,7 +113,7 @@ fs.writeFileSync(path.join(tmp, 'pictures/images/stray.png'), png(800, 600));
 fs.writeFileSync(path.join(tmp, 'pictures/diagrams/d.svg'), GOOD_SVG);
 const REC = {title: 'A test picture', creator: 'A. Person', licence: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Test.png', size: [800, 600], changes: 'Resized', why: 'Its Commons page gives this licence.'};
 const recs = {images: {'pictures/images/good.png': REC, 'pictures/images/huge.png': Object.assign(copy(REC), {size: [2400, 1600]}), 'pictures/images/heavy.png': REC, 'pictures/images/gone.png': REC},
-  diagrams: {'pictures/diagrams/d.svg': {title: 'A test diagram', made: 'Drawn for Stratos', size: [320, 120]}}};
+  diagrams: {'pictures/diagrams/d.svg': {title: 'A test diagram', made: 'Drawn for Stratos', creator: 'Stratos', licence: 'CC BY 4.0', size: [320, 120]}}};
 fs.writeFileSync(path.join(tmp, 'pictures/licences.json'), JSON.stringify(recs));
 const env = pictureEnv(tmp);
 const IMG = {kind: 'image', src: 'pictures/images/good.png', alt: 'A test picture of something real.'};
@@ -131,6 +132,17 @@ check(has(FIG.problems({kind: 'image', src: 'pictures/images/gone.png', alt: 'A 
   has(FIG.problems({kind: 'image', src: 'pictures/images/../../x.png', alt: 'A picture outside the folder.'}, false, env), 'needs a src in this repository') &&
   has(FIG.problems({kind: 'image', src: 'pictures/images/good.png'}, false, env), 'needs an alt') && !FIG.problems({kind: 'image', src: 'pictures/images/good.png'}, true, env).length,
   'a missing file or record, an image too large or too heavy, a picture from another site or outside pictures/, and a missing description are caught; an option needs none', R);
+{
+  const DG = {kind: 'diagram', src: 'pictures/diagrams/d.svg', alt: 'A test diagram with a label.'};
+  const dgBad = change => { const e = pictureEnv(tmp); change(e.records.diagrams['pictures/diagrams/d.svg']); return FIG.problems(DG, false, e); };
+  check(has(dgBad(r => { delete r.licence; }), 'with the licence undefined') && has(dgBad(r => { delete r.creator; }), 'no creator') && has(dgBad(r => { r.licence = 'All rights reserved'; }), 'Only Public domain'),
+    'a diagram drawn for Stratos needs its creator and an allowed licence too', R);
+  FIG.use(env.records);
+  check(FIG.credit(DG) === 'Stratos, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.' &&
+    FIG.credit(IMG).startsWith('A. Person, <a href="https://creativecommons.org/licenses/by-sa/4.0/"') && FIG.credit(IMG).endsWith('Wikimedia Commons</a>'),
+    'a diagram\'s credit is "Stratos, CC BY 4.0." with the licence linked; an image\'s also says what changed and links its source', R);
+  FIG.use(ENV.records);
+}
 const folder = folderProblems(new Set(['pictures/images/good.png', 'pictures/images/huge.png', 'pictures/images/heavy.png', 'pictures/diagrams/d.svg']), tmp);
 check(has(folder, 'stray.png has no record') && has(folder, 'gone.png, but there is no such file') && has(folder, 'gone.png is in pictures/licences.json, but no point shows it'),
   'the folder: a file with no record, a record with no file, and a record no point shows', R);
@@ -184,10 +196,15 @@ for (const scheme of ['light', 'dark']) {
   await p.waitForSelector('#learnFeed .card:not(.endslide) .fdg svg text', {timeout: 5000}).catch(() => {});
   const dg = card.locator('.fig.fdiagram');
   const look = await dg.evaluate(el => { const t = el.querySelector('svg text'); return {svg: !!el.querySelector('.fdg > svg'), texts: el.querySelectorAll('svg text').length, fill: t && getComputedStyle(t).fill, scripts: el.querySelectorAll('script').length, w: el.getBoundingClientRect().width}; });
-  check(look.svg && look.texts === 11 && look.fill === ink && !look.scripts && look.w <= 330 && fetched.includes('pictures/diagrams/plant-and-animal-cells.svg'),
+  check(look.svg && look.texts === 11 && look.fill === ink && !look.scripts && look.w <= 330 && fetched.includes('pictures/diagrams/plant-and-animal-cell-parts.svg'),
     scheme + ': the cell diagram is fetched when Learn reaches it, put in as SVG with its 11 labels as text in the text colour (' + look.fill + ')', R);
   check((await dg.getAttribute('role')) === 'img' && (await dg.getAttribute('aria-label')).startsWith('Two cells. The plant cell is box-shaped') && (await dg.locator('svg').getAttribute('aria-hidden')) === 'true',
     scheme + ': the diagram is one image for screen readers, read by its description', R);
+  const dcr = await card.locator('.fcr').first().evaluate(c => [c.textContent, c.querySelector('a').href]);
+  check(dcr[0] === 'Stratos, CC BY 4.0.' && dcr[1] === 'https://creativecommons.org/licenses/by/4.0/', scheme + ': the diagram\'s credit is under it: Stratos, CC BY 4.0, with the licence linked', R);
+  /* chloroplasts drawn larger than mitochondria: the widest ellipse with lines inside is a chloroplast, the ones with a wavy line are mitochondria */
+  const sizes = await dg.evaluate(el => [...el.querySelectorAll('svg ellipse')].map(e => +e.getAttribute('rx')));
+  check(Math.max(...sizes) >= 2 * Math.min(...sizes), scheme + ': the chloroplasts are drawn more than twice as long as the mitochondria: ' + [...new Set(sizes)].join(', '), R);
   if (SHOTS) await shot(p, 'pic-cells-' + scheme);
   check(!fetched.includes('pictures/images/the-blood-vote-1916.webp'), scheme + ': the image further on is not loaded yet', R);
   await card.locator('.next').click(); await p.waitForTimeout(80);
@@ -217,14 +234,15 @@ for (const scheme of ['light', 'dark']) {
   if (SHOTS) await shot(p, 'pic-source-' + scheme);
   await card.locator('.next').click(); await p.waitForTimeout(80);
   await answerFirst(p);
-  // the map, when the pilot has it
+  // the map, drawn for Stratos
   card = await learnOne(p);
-  if (await card.locator('.fimage').count()) {
-    await card.locator('.fwrap').first().scrollIntoViewIfNeeded(); await p.waitForTimeout(400);
-    const lic = await card.locator('.fcr a').first().evaluate(a => [a.textContent, a.href]);
-    check(/^CC BY/.test(lic[0]) && lic[1].startsWith('https://creativecommons.org/licenses/'), scheme + ': the map\'s credit links its licence: ' + lic.join(' '), R);
-    if (SHOTS) await shot(p, 'pic-map-' + scheme);
-  }
+  await card.locator('.fwrap').first().scrollIntoViewIfNeeded();
+  await p.waitForSelector('#learnFeed .card:not(.endslide) .fdg svg text', {timeout: 5000}).catch(() => {});
+  const map = await card.locator('.fig.fdiagram').evaluate(el => ({labels: [...el.querySelectorAll('svg text')].map(t => t.textContent), label: el.getAttribute('aria-label')}));
+  check(['Queensland', 'New South Wales', 'Victoria', 'ACT', 'Darling River', 'Murray River', 'Murray–Darling Basin'].every(t => map.labels.includes(t)) && map.label.startsWith('A map of south-eastern Australia'),
+    scheme + ': the map of the basin is a diagram, with the states, the ACT, both rivers and the basin labelled as text', R);
+  check((await card.locator('.fcr').first().textContent()) === 'Stratos, CC BY 4.0.', scheme + ': and its credit, Stratos, CC BY 4.0', R);
+  if (SHOTS) await shot(p, 'pic-map-' + scheme);
   check(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth && [...document.querySelectorAll('.fig')].every(f => f.getBoundingClientRect().right <= innerWidth + 0.5)),
     scheme + ': at 360 px nothing scrolls sideways and every picture fits', R);
   check(!errs.length, scheme + ': no script errors: ' + errs.join(' | '), R);
@@ -252,9 +270,10 @@ for (const scheme of ['light', 'dark']) {
   check(texts.length === 4 && texts.includes('A series circuit with a cell and two resistors') && await q.locator('.opt.fopt .fig[aria-hidden="true"]').count() === 4,
     scheme + ': each option is named by its text for screen readers, and its picture is hidden from them', R);
   const credit = await q.locator('.fcr-opts').textContent();
-  const letter = 'ABCD'.charAt(texts.indexOf('A leaflet from 1916'));
-  check(credit === letter + ': W. R. Winspear (words) and Claude Marquet (drawing), public domain, resized and compressed. Wikimedia Commons.' && await q.locator('.opt .fcr').count() === 0,
-    scheme + ': the image\'s credit is under the options, with its letter, never inside a button', R);
+  const want = texts.map((t, n) => t === 'A leaflet from 1916' ? 'ABCD'.charAt(n) + ': W. R. Winspear (words) and Claude Marquet (drawing), public domain, resized and compressed. Wikimedia Commons.'
+    : t === 'A box plot with one outlier' ? '' : 'ABCD'.charAt(n) + ': Stratos, CC BY 4.0.').filter(Boolean).join(' ');
+  check(credit === want && await q.locator('.opt .fcr').count() === 0,
+    scheme + ': each picture\'s credit is under the options, with its letter, never inside a button (a chart has none)', R);
   await p.waitForSelector('#learnFeed .slide.q .fopt .fdg svg', {timeout: 5000}).catch(() => {});
   if (SHOTS) await shot(p, 'pic-options-' + scheme);
   // by keyboard: the letter of the right option

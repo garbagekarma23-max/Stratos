@@ -22,7 +22,8 @@ Draw the diagram yourself, as an SVG file in pictures/diagrams/, named in lower-
 - Labels are real text (<text>), never shapes, so they stay sharp and a reader can find them. Give each text, or a g round several, a font-size of at least 13 in a 320-wide viewBox: the app draws the diagram about 296 px wide on a 360 px phone, and every label must be at least 11 px there. Use text-anchor to keep each label inside the viewBox. Use no scale or matrix transform on text.
 - Keep it clean and clinical: thin, even lines (stroke-width 1.5 to 2), few parts, a short leader line from each label to its part. Put labels where they do not cross lines or each other. No decoration, shading or 3D.
 - Draw what is true at this level: a plant cell's wall outside its membrane, a cell's parts in sensible sizes, a circuit with standard symbols (a cell's long line is the positive terminal, conventional current flows from positive to negative outside the cell), arrows that point the right way.
-- Its record in pictures/licences.json, under "diagrams": {"title": "...", "made": "Drawn for Stratos", "size": [W, H]}, with the viewBox's width and height.
+- Its record in pictures/licences.json, under "diagrams": {"title": "...", "made": "Drawn for Stratos", "creator": "Stratos", "licence": "CC BY 4.0", "size": [W, H]}, with the viewBox's width and height. Every diagram drawn for Stratos is CC BY 4.0, credited to Stratos, and the app shows that under it.
+- A diagram that replaces one already on the point is a new file with a new name. Never change the old file: it stays on the point until the new one passes the check.
 
 ## Images: photos, artwork, sources and maps
 
