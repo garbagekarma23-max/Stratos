@@ -198,7 +198,7 @@ for (const scheme of ['light', 'dark']) {
   const look = await dg.evaluate(el => { const t = el.querySelector('svg text'); return {svg: !!el.querySelector('.fdg > svg'), texts: el.querySelectorAll('svg text').length, fill: t && getComputedStyle(t).fill, scripts: el.querySelectorAll('script').length, w: el.getBoundingClientRect().width}; });
   check(look.svg && look.texts === 13 && look.fill === ink && !look.scripts && look.w <= 330 && fetched.includes('pictures/diagrams/plant-and-animal-cell-parts.svg'),
     scheme + ': the cell diagram is fetched when Learn reaches it, put in as SVG with its 13 labels and titles as text in the text colour (' + look.fill + ')', R);
-  check((await dg.getAttribute('role')) === 'img' && (await dg.getAttribute('aria-label')).startsWith('Two cells. The plant cell is box-shaped') && (await dg.locator('svg').getAttribute('aria-hidden')) === 'true',
+  check((await dg.getAttribute('role')) === 'img' && (await dg.getAttribute('aria-label')).startsWith('Two cells. The box-shaped plant cell has a cell wall') && (await dg.locator('svg').getAttribute('aria-hidden')) === 'true',
     scheme + ': the diagram is one image for screen readers, read by its description', R);
   const dcr = await card.locator('.fcr').first().evaluate(c => [c.textContent, c.querySelector('a').href]);
   check(dcr[0] === 'Stratos, CC BY 4.0.' && dcr[1] === 'https://creativecommons.org/licenses/by/4.0/', scheme + ': the diagram\'s credit is under it: Stratos, CC BY 4.0, with the licence linked', R);
@@ -247,7 +247,7 @@ for (const scheme of ['light', 'dark']) {
   await card.locator('.fwrap').first().scrollIntoViewIfNeeded();
   await p.waitForSelector('#learnFeed .card:not(.endslide) .fdg svg text', {timeout: 5000}).catch(() => {});
   const map = await card.locator('.fig.fdiagram').evaluate(el => ({labels: [...el.querySelectorAll('svg text')].map(t => t.textContent), label: el.getAttribute('aria-label')}));
-  check(['Queensland', 'New South Wales', 'Victoria', 'ACT', 'Darling River', 'Murray River', 'Murray–Darling Basin'].every(t => map.labels.includes(t)) && map.label.startsWith('A map of south-eastern Australia'),
+  check(['Queensland', 'New South Wales', 'Victoria', 'ACT', 'Darling River', 'Murray River', 'Murray-Darling Basin'].every(t => map.labels.includes(t)) && map.label.startsWith('A map of south-eastern Australia'),
     scheme + ': the map of the basin is a diagram, with the states, the ACT, both rivers and the basin labelled as text', R);
   check((await card.locator('.fcr').first().textContent()) === 'Stratos, CC BY 4.0.', scheme + ': and its credit, Stratos, CC BY 4.0', R);
   if (SHOTS) await shot(p, 'pic-map-' + scheme);
