@@ -153,7 +153,7 @@ const C = loadContent(), BANK = allBankPoints(C);
 const pilot = ['mat-five-number-summary-boxplots', 'bio-plant-animal-cells-compared-2', 'phys-series-circuits', 'his-conscription-referendums', 'geo-water-use-murray-darling'];
 const shownPilot = pilot.filter(id => FIG.of(BANK[id]).length);
 check(shownPilot.length >= 4 && shownPilot.every(id => !FIG.pointProblems(BANK[id], ENV).length), 'the pilot points have their pictures, and all pass: ' + shownPilot.join(', '), R);
-check(['pictures/diagrams/series-circuit.svg', 'pictures/diagrams/plant-and-animal-cells.svg', 'pictures/images/the-blood-vote-1916.webp'].every(s => ENV.records[s.includes('/images/') ? 'images' : 'diagrams'][s] && fs.existsSync(path.join(ROOT, s))) &&
+check(['pictures/diagrams/series-circuit.svg', 'pictures/diagrams/plant-and-animal-cell-parts.svg', 'pictures/diagrams/murray-darling-basin.svg', 'pictures/images/the-blood-vote-1916.webp'].every(s => ENV.records[s.includes('/images/') ? 'images' : 'diagrams'][s] && fs.existsSync(path.join(ROOT, s))) &&
   ENV.records.images['pictures/images/the-blood-vote-1916.webp'].licence === 'Public domain',
   'each pilot picture has its file and its record', R);
 {
@@ -196,15 +196,23 @@ for (const scheme of ['light', 'dark']) {
   await p.waitForSelector('#learnFeed .card:not(.endslide) .fdg svg text', {timeout: 5000}).catch(() => {});
   const dg = card.locator('.fig.fdiagram');
   const look = await dg.evaluate(el => { const t = el.querySelector('svg text'); return {svg: !!el.querySelector('.fdg > svg'), texts: el.querySelectorAll('svg text').length, fill: t && getComputedStyle(t).fill, scripts: el.querySelectorAll('script').length, w: el.getBoundingClientRect().width}; });
-  check(look.svg && look.texts === 11 && look.fill === ink && !look.scripts && look.w <= 330 && fetched.includes('pictures/diagrams/plant-and-animal-cell-parts.svg'),
-    scheme + ': the cell diagram is fetched when Learn reaches it, put in as SVG with its 11 labels as text in the text colour (' + look.fill + ')', R);
+  check(look.svg && look.texts === 13 && look.fill === ink && !look.scripts && look.w <= 330 && fetched.includes('pictures/diagrams/plant-and-animal-cell-parts.svg'),
+    scheme + ': the cell diagram is fetched when Learn reaches it, put in as SVG with its 13 labels and titles as text in the text colour (' + look.fill + ')', R);
   check((await dg.getAttribute('role')) === 'img' && (await dg.getAttribute('aria-label')).startsWith('Two cells. The plant cell is box-shaped') && (await dg.locator('svg').getAttribute('aria-hidden')) === 'true',
     scheme + ': the diagram is one image for screen readers, read by its description', R);
   const dcr = await card.locator('.fcr').first().evaluate(c => [c.textContent, c.querySelector('a').href]);
   check(dcr[0] === 'Stratos, CC BY 4.0.' && dcr[1] === 'https://creativecommons.org/licenses/by/4.0/', scheme + ': the diagram\'s credit is under it: Stratos, CC BY 4.0, with the licence linked', R);
-  /* chloroplasts drawn larger than mitochondria: the widest ellipse with lines inside is a chloroplast, the ones with a wavy line are mitochondria */
-  const sizes = await dg.evaluate(el => [...el.querySelectorAll('svg ellipse')].map(e => +e.getAttribute('rx')));
-  check(Math.max(...sizes) >= 2 * Math.min(...sizes), scheme + ': the chloroplasts are drawn more than twice as long as the mitochondria: ' + [...new Set(sizes)].join(', '), R);
+  /* believable sizes: the nucleus is wider than a chloroplast is long, and a chloroplast (the soft blue ellipses) is more
+     than twice as long as a mitochondrion (the small ellipses) */
+  const sz = await dg.evaluate(el => {
+    const soft = getComputedStyle(document.body).getPropertyValue('--accent-soft').trim(), all = [...el.querySelectorAll('svg ellipse')];
+    const blue = all.filter(e => e.parentElement.getAttribute('style') && e.parentElement.getAttribute('style').includes('accent-soft')).map(e => +e.getAttribute('rx'));
+    const mito = all.filter(e => +e.getAttribute('rx') < 8).map(e => +e.getAttribute('rx'));
+    const nuc = [...el.querySelectorAll('svg circle')].map(c => +c.getAttribute('r')).filter(r => r > 8);
+    return {blue, mito, nuc, soft};
+  });
+  check(sz.blue.length === 6 && sz.mito.length === 5 && sz.nuc.length === 2 && Math.min(...sz.blue) > 2 * Math.max(...sz.mito) && Math.min(...sz.nuc) * 2 > Math.max(...sz.blue) * 2 && sz.nuc[0] === sz.nuc[1],
+    scheme + ': the chloroplasts are more than twice as long as the mitochondria, each nucleus is wider than a chloroplast is long, and both nuclei match', R);
   if (SHOTS) await shot(p, 'pic-cells-' + scheme);
   check(!fetched.includes('pictures/images/the-blood-vote-1916.webp'), scheme + ': the image further on is not loaded yet', R);
   await card.locator('.next').click(); await p.waitForTimeout(80);
