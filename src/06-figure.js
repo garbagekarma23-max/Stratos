@@ -1113,7 +1113,7 @@ const FIG = (() => {
         if (Math.abs(want - got) > 0.01 * Math.max(1, Math.abs(want))) { bad.push('item ' + (n + 1) + ' (fn ' + it.expr + ') is said to solve the slope field ' + it.solves + ', but at x = ' + +vx.toFixed(3) + ' its gradient is ' + +got.toFixed(3) + ', not ' + +want.toFixed(3)); break; }
       }
     });
-    for (const it of f.items) if (it.type === 'fn' && !LabMaths.func(it.expr)) bad.push('has an expr that cannot be read as a function of x: ' + it.expr + '. Write only the right side, in LaTeX, with x as the only letter (no y =)');
+    for (const it of f.items) if (it.type === 'fn' && !LabMaths.func(it.expr)) bad.push('has an expr that cannot be read as a function of x: ' + it.expr + '. Write only the right side, in LaTeX, with x as the only variable (no y =)');
     if (curves.length > 1) for (const it of curves) if (!it.label) bad.push('has ' + curves.length + ' lines or curves, so each needs a label. Curves are told apart by labels, never by colour');
     const inX = v => v >= x.min - xs * 1e-6 && v <= x.max + xs * 1e-6, inY = v => v >= y.min - ys * 1e-6 && v <= y.max + ys * 1e-6;
     const inside = (q, what) => { if (!inX(q[0]) || !inY(q[1])) bad.push(what + ' at (' + q.join(', ') + ') is outside the axes'); };
