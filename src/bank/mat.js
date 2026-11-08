@@ -121,6 +121,47 @@ MADE_BANKS.mat = {
       "To test a function, replace \\(x\\) with \\(-x\\) and simplify. Compare the result with f(x) and with \\(-f(x)\\). If it matches neither, the function is neither odd nor even.",
       "Example: \\(f(x) = x^{3} + x\\). Then \\(f(-x) = (-x)^{3} + (-x) = -x^{3} - x = -(x^{3} + x) = -f(x)\\), so \\(f\\) is odd."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "The even function \\(y = x^{2} - 2\\). The left side mirrors the right side in the y-axis. The points \\((-2, 2)\\) and \\((2, 2)\\) have the same \\(y\\) value, so \\(f(-2) = f(2)\\).",
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -3, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2} - 2",
+            "label": "\\(y = x^{2} - 2\\)",
+            "labelAt": -2.7,
+            "pos": "right"
+          },
+          {"type": "point", "at": [-2, 2], "label": "\\((-2, 2)\\)", "pos": "above-right", "on": ["f"]},
+          {"type": "point", "at": [2, 2], "label": "\\((2, 2)\\)", "pos": "above-left", "on": ["f"]}
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "The odd function \\(y = x^{3} + x\\). Turning it half a turn about the origin leaves it unchanged. The points \\((1, 2)\\) and \\((-1, -2)\\) match, so \\(f(-1) = -f(1)\\).",
+        "x": {"min": -2, "max": 2, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -5, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{3} + x",
+            "label": "\\(y = x^{3} + x\\)",
+            "labelAt": -1.4,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [1, 2], "label": "\\((1, 2)\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [-1, -2], "label": "\\((-1, -2)\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [0, 0], "on": ["f"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "Put in \\(-x\\). Equal to f(x) means even, equal to \\(-f(x)\\) means odd, and matching neither means neither.",
     "a": {
       "q": "\\(f(x) = x^{2} + 5\\). What is \\(f(-x)\\) in simplest form, and what type of function is \\(f\\)?",
@@ -160,6 +201,29 @@ MADE_BANKS.mat = {
       ],
       "Parallel lines have equal gradients. Perpendicular lines have gradients that multiply to \\(-1\\), so a line with gradient 2 is perpendicular to a line with gradient \\(-\\frac{1}{2}\\)."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The line \\(y = 2x - 5\\). It passes through \\((3, 1)\\) and crosses the y-axis at \\((0, -5)\\). From \\((3, 1)\\), a run of 1 to the right and a rise of 2 up reach \\((4, 3)\\), so the gradient is 2.",
+        "x": {"min": -2, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -6, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "l", "expr": "2x - 5", "label": "\\(y = 2x - 5\\)", "labelAt": 0, "pos": "above-left"},
+          {"type": "arrow", "from": [3, 1], "to": [4, 1], "label": "run 1", "pos": "below"},
+          {"type": "arrow", "from": [4, 1], "to": [4, 3], "label": "rise 2", "pos": "right"},
+          {"type": "point", "at": [3, 1], "label": "\\((3, 1)\\)", "pos": "above-left", "on": ["l"]},
+          {
+            "type": "point",
+            "at": [0, -5],
+            "label": "\\((0, -5)\\)",
+            "pos": "below-right",
+            "on": ["l"],
+            "is": "y-intercept"
+          }
+        ]
+      }
+    },
     "remember": "Gradient is rise over run. Parallel: same \\(m\\). Perpendicular: \\(m_{1} \\times m_{2} = -1\\).",
     "a": {
       "q": "What is the gradient of the line through \\((1, 2)\\) and \\((4, 11)\\)?",
@@ -395,7 +459,7 @@ MADE_BANKS.mat = {
       "A cubic such as \\(y = (x - 1)(x + 2)(x - 3)\\) has roots where each factor is zero: \\(x = 1\\), \\(-2\\) and \\(3\\). The graph crosses the x-axis at each of these single roots.",
       "For the y-intercept, put \\(x = 0\\). Here \\(y = (-1)(2)(-3) = 6\\), so the graph meets the y-axis at \\((0, 6)\\).",
       "Look at the sign of the \\(x^{3}\\) term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
-      "A squared factor, such as \\((x - 2)^{2}\\), gives a double root. The graph touches the x-axis there, at a turning point. A cubed factor, such as \\((x - 2)^{3}\\), still crosses, but flattens as it passes through."
+      "A squared factor, such as \\((x - 1)^{2}\\) in \\(y = (x - 1)^{2}(x + 2)\\), gives a double root at \\(x = 1\\). The graph touches the x-axis there, at a turning point. A cubed factor, such as \\((x - 1)^{3}\\), still crosses, but flattens as it passes through."
     ],
     "remember": "Single roots cross, a double (squared) root touches at a turning point, \\(x = 0\\) gives the y-intercept and the sign of the \\(x^{3}\\) term sets the ends.",
     "a": {
@@ -459,18 +523,12 @@ MADE_BANKS.mat = {
         "y": {"min": -5, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
         "grid": true,
         "items": [
-          {
-            "type": "fn",
-            "id": "f",
-            "expr": "(x - 1)^{2}(x + 2)",
-            "label": "\\(y = (x - 1)^{2}(x + 2)\\)",
-            "labelAt": 2.05,
-            "pos": "left"
-          },
+          {"type": "fn", "id": "f", "expr": "(x - 1)^{2}(x + 2)"},
           {"type": "point", "at": [1, 0], "on": ["f"], "is": "turning point", "label": "\\(1\\)", "pos": "below"},
           {"type": "point", "at": [-2, 0], "on": ["f"], "is": "x-intercept", "label": "crosses", "pos": "above-left"},
           {"type": "text", "at": [1, -1.2], "label": "touches", "pos": "right"},
-          {"type": "text", "at": [-2, 0], "label": "\\(-2\\)", "pos": "below-right"}
+          {"type": "text", "at": [-2, 0], "label": "\\(-2\\)", "pos": "below-right"},
+          {"type": "text", "at": [0.3, -2.5], "label": "\\(y = (x - 1)^{2}(x + 2)\\)", "pos": "right"}
         ]
       }
     }
@@ -662,6 +720,44 @@ MADE_BANKS.mat = {
       "Every point \\((x, y)\\) on \\(y = f(x)\\) moves to \\((x, y + c)\\). The \\(x\\) value stays the same.",
       "Worked example: \\(y = x^{2}\\) has its vertex at \\((0, 0)\\). For \\(y = x^{2} - 2\\), the vertex moves to \\((0, -2)\\), which is 2 units down."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2}\\), dashed, and \\(y = x^{2} - 2\\), solid. Every point moves 2 units down, so the vertex moves from \\((0, 0)\\) to \\((0, -2)\\).",
+        "x": {"min": -3, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -3, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2}",
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": -2.3,
+            "pos": "right",
+            "style": "dash"
+          },
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "x^{2} - 2",
+            "label": "\\(y = x^{2} - 2\\)",
+            "labelAt": 2.25,
+            "pos": "right"
+          },
+          {"type": "arrow", "from": [1.6, 2.56], "to": [1.6, 0.56]},
+          {"type": "point", "at": [0, 0], "on": ["f"], "is": "turning point"},
+          {
+            "type": "point",
+            "at": [0, -2],
+            "label": "\\((0, -2)\\)",
+            "pos": "below-right",
+            "on": ["g"],
+            "is": "turning point"
+          }
+        ]
+      }
+    },
     "remember": "Adding \\(c\\) outside \\(f(x)\\) moves every point up \\(c\\) units, or down if \\(c\\) is negative.",
     "a": {
       "q": "The graph of \\(y = f(x)\\) is moved to \\(y = f(x) - 4\\). What happens to the graph?",
@@ -685,6 +781,51 @@ MADE_BANKS.mat = {
       "Why: in \\(y = f(x + 3)\\), the input \\(x + 3\\) reaches the old value of \\(x\\) when \\(x\\) is 3 less. So each point appears 3 units further left.",
       "Example: \\(y = x^{2}\\) has its vertex at \\((0, 0)\\). For \\(y = (x - 5)^{2}\\), the vertex is at \\((5, 0)\\), so the graph has moved 5 units right."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2}\\), dashed, and \\(y = (x - 5)^{2}\\), solid. Every point moves 5 units to the right, so the vertex moves from \\((0, 0)\\) to \\((5, 0)\\).",
+        "x": {"min": -3, "max": 8, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -2.5, "max": 9, "label": "\\(y\\)", "step": 2},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2}",
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": -2.45,
+            "pos": "right",
+            "style": "dash"
+          },
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "(x - 5)^{2}",
+            "label": "\\(y = (x - 5)^{2}\\)",
+            "labelAt": 7.3,
+            "pos": "left"
+          },
+          {"type": "arrow", "from": [-2, 4], "to": [3, 4]},
+          {
+            "type": "point",
+            "at": [0, 0],
+            "label": "\\((0, 0)\\)",
+            "pos": "below-right",
+            "on": ["f"],
+            "is": "turning point"
+          },
+          {
+            "type": "point",
+            "at": [5, 0],
+            "label": "\\((5, 0)\\)",
+            "pos": "below-right",
+            "on": ["g"],
+            "is": "turning point"
+          }
+        ]
+      }
+    },
     "remember": "Inside the brackets, the shift is the opposite of the sign: \\(+b\\) moves left, \\(-b\\) moves right.",
     "a": {
       "q": "The graph of \\(y = f(x)\\) is moved 4 units to the left. What is the equation of the new graph?",
@@ -708,6 +849,46 @@ MADE_BANKS.mat = {
       "Points on the x-axis stay where they are, because \\(0 \\times k = 0\\). So the x-intercepts do not move. The y-intercept is multiplied by \\(k\\).",
       "Example: \\(f(x) = x^{2} - 4\\) has the point \\((3, 5)\\). For \\(y = 2f(x)\\), the point becomes \\((3, 10)\\). The x-intercepts at \\(x = -2\\) and \\(x = 2\\) stay the same."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = f(x) = x^{2} - 4\\), dashed, and \\(y = 2f(x)\\), solid. Every \\(y\\) value doubles: \\((3, 5)\\) moves up to \\((3, 10)\\). The x-intercepts at \\(x = -2\\) and \\(x = 2\\) stay where they are.",
+        "x": {"min": -5, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -10, "max": 12, "label": "\\(y\\)", "step": 2, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2} - 4",
+            "label": "\\(y = f(x)\\)",
+            "labelAt": 3.9,
+            "pos": "right",
+            "style": "dash"
+          },
+          {"type": "fn", "id": "g", "expr": "2x^{2} - 8", "label": "\\(y = 2f(x)\\)", "labelAt": -2.8, "pos": "right"},
+          {"type": "arrow", "from": [3, 5.4], "to": [3, 9.6]},
+          {"type": "point", "at": [3, 5], "label": "\\((3, 5)\\)", "pos": "right", "on": ["f"]},
+          {"type": "point", "at": [3, 10], "label": "\\((3, 10)\\)", "pos": "left", "on": ["g"]},
+          {
+            "type": "point",
+            "at": [-2, 0],
+            "label": "\\(-2\\)",
+            "pos": "below-left",
+            "on": ["f", "g"],
+            "is": "intersection"
+          },
+          {
+            "type": "point",
+            "at": [2, 0],
+            "label": "\\(2\\)",
+            "pos": "below-right",
+            "on": ["f", "g"],
+            "is": "intersection"
+          }
+        ]
+      }
+    },
     "remember": "In \\(y = kf(x)\\), multiply every \\(y\\) value by \\(k\\). The \\(x\\) values and x-intercepts stay put.",
     "a": {
       "q": "The graph of \\(y = f(x)\\) passes through \\((4, 6)\\). Which point must lie on \\(y = 3f(x)\\)?",
@@ -736,6 +917,40 @@ MADE_BANKS.mat = {
       "Points on the y-axis stay where they are, because dividing 0 by \\(a\\) gives 0.",
       "Example: \\((6, 4)\\) is on \\(y = f(x)\\). On \\(y = f(2x)\\), the point is \\((6 \\div 2, 4) = (3, 4)\\). Check: \\(f(2 \\times 3) = f(6) = 4\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A curve \\(y = f(x)\\), dashed, through \\((6, 4)\\), and \\(y = f(2x)\\), solid. Every \\(x\\) value is halved, so the graph is compressed towards the y-axis and \\((6, 4)\\) moves to \\((3, 4)\\). The point on the y-axis stays where it is.",
+        "x": {"min": -1, "max": 8, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{x^{2}}{9}",
+            "domain": [0, 7.3],
+            "label": "\\(y = f(x)\\)",
+            "labelAt": 5,
+            "pos": "below-right",
+            "style": "dash"
+          },
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "\\frac{4x^{2}}{9}",
+            "domain": [0, 3.65],
+            "label": "\\(y = f(2x)\\)",
+            "labelAt": 3.55,
+            "pos": "left"
+          },
+          {"type": "arrow", "from": [5.6, 4], "to": [3.4, 4]},
+          {"type": "point", "at": [6, 4], "label": "\\((6, 4)\\)", "pos": "below-right", "on": ["f"]},
+          {"type": "point", "at": [3, 4], "label": "\\((3, 4)\\)", "pos": "left", "on": ["g"]},
+          {"type": "point", "at": [0, 0], "on": ["f", "g"], "is": "intersection"}
+        ]
+      }
+    },
     "remember": "In \\(y = f(ax)\\), the \\(x\\) values are divided by \\(a\\) and the \\(y\\) values stay the same.",
     "a": {
       "q": "The point \\((8, 5)\\) is on \\(y = f(x)\\). Which point must be on \\(y = f(2x)\\)?",
@@ -765,6 +980,38 @@ MADE_BANKS.mat = {
       ],
       "Example: the point \\((2, 5)\\) is on \\(y = f(x)\\). Then \\((2, -5)\\) is on \\(y = -f(x)\\), and \\((-2, 5)\\) is on \\(y = f(-x)\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A curve \\(y = f(x)\\), dashed, through \\((2, 5)\\). Its reflection in the x-axis, \\(y = -f(x)\\), passes through \\((2, -5)\\). Its reflection in the y-axis, \\(y = f(-x)\\), passes through \\((-2, 5)\\).",
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -8, "max": 8, "label": "\\(y\\)", "step": 2, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "2^{x} + 1",
+            "label": "\\(y = f(x)\\)",
+            "labelAt": -2.7,
+            "pos": "above-right",
+            "style": "dash"
+          },
+          {"type": "fn", "id": "g", "expr": "-2^{x} - 1", "label": "\\(y = -f(x)\\)", "labelAt": -2, "pos": "below"},
+          {
+            "type": "fn",
+            "id": "h",
+            "expr": "2^{-x} + 1",
+            "label": "\\(y = f(-x)\\)",
+            "labelAt": -2.7,
+            "pos": "above-right"
+          },
+          {"type": "point", "at": [2, 5], "label": "\\((2, 5)\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [2, -5], "label": "\\((2, -5)\\)", "pos": "above-right", "on": ["g"]},
+          {"type": "point", "at": [-2, 5], "label": "\\((-2, 5)\\)", "pos": "above-right", "on": ["h"]}
+        ]
+      }
+    },
     "remember": "A minus outside \\(f\\) flips up and down. A minus inside \\(f\\) flips left and right.",
     "a": {
       "q": "The point \\((3, 4)\\) is on \\(y = f(x)\\). Which point must be on \\(y = -f(x)\\)?",
@@ -788,6 +1035,37 @@ MADE_BANKS.mat = {
       "The number of intersection points is the number of solutions. Two crossing points mean two solutions, one touching point means one, and no meeting means none.",
       "Example: \\(y = x^{2}\\) and \\(y = 4\\) meet at \\((-2, 4)\\) and \\((2, 4)\\). So \\(x^{2} = 4\\) has two solutions, \\(x = -2\\) and \\(x = 2\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2}\\) and the line \\(y = 4\\). They meet at \\((-2, 4)\\) and \\((2, 4)\\). Dashed lines down to the x-axis show the solutions of \\(x^{2} = 4\\): \\(x = -2\\) and \\(x = 2\\).",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 7, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "x^{2}", "label": "\\(y = x^{2}\\)", "labelAt": 2.5, "pos": "right"},
+          {"type": "fn", "id": "g", "expr": "4", "label": "\\(y = 4\\)", "labelAt": -3.6, "pos": "below"},
+          {"type": "guide", "at": [-2, 4], "xLabel": "\\(-2\\)"},
+          {"type": "guide", "at": [2, 4], "xLabel": "\\(2\\)"},
+          {
+            "type": "point",
+            "at": [-2, 4],
+            "label": "\\((-2, 4)\\)",
+            "pos": "above-right",
+            "on": ["f", "g"],
+            "is": "intersection"
+          },
+          {
+            "type": "point",
+            "at": [2, 4],
+            "label": "\\((2, 4)\\)",
+            "pos": "below-right",
+            "on": ["f", "g"],
+            "is": "intersection"
+          }
+        ]
+      }
+    },
     "remember": "Solutions of \\(f(x) = g(x)\\) are the \\(x\\) values where the graphs meet, one for each meeting point.",
     "a": {
       "q": "The graphs of \\(y = f(x)\\) and \\(y = g(x)\\) meet at \\((1, 5)\\) and \\((3, 5)\\). What are the solutions of \\(f(x) = g(x)\\)?",
@@ -1108,6 +1386,313 @@ MADE_BANKS.mat = {
         "\\(\\tan 0^{\\circ} = 0\\) and \\(\\tan 45^{\\circ} = 1\\). Between the asymptotes at \\(-90^{\\circ}\\) and 90°, the graph rises through the origin. It falls without limit as \\(x\\) nears \\(-90^{\\circ}\\) and climbs without limit as \\(x\\) nears 90°."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The graphs of \\(y = \\sin x\\) and \\(y = \\cos x\\) from 0° to 360°. Both are waves between \\(-1\\) and 1. The sine graph starts at 0 and rises. The cosine graph, dotted, starts at its maximum, 1.",
+        "x": {"min": 0, "max": 400, "label": "\\(x^{\\circ}\\)", "step": 90, "nums": false},
+        "y": {"min": -1.5, "max": 1.5, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "s",
+            "points": [
+              [0, 0],
+              [7.5, 0.1305],
+              [15, 0.2588],
+              [22.5, 0.3827],
+              [30, 0.5],
+              [37.5, 0.6088],
+              [45, 0.7071],
+              [52.5, 0.7934],
+              [60, 0.866],
+              [67.5, 0.9239],
+              [75, 0.9659],
+              [82.5, 0.9914],
+              [90, 1],
+              [97.5, 0.9914],
+              [105, 0.9659],
+              [112.5, 0.9239],
+              [120, 0.866],
+              [127.5, 0.7934],
+              [135, 0.7071],
+              [142.5, 0.6088],
+              [150, 0.5],
+              [157.5, 0.3827],
+              [165, 0.2588],
+              [172.5, 0.1305],
+              [180, 0],
+              [187.5, -0.1305],
+              [195, -0.2588],
+              [202.5, -0.3827],
+              [210, -0.5],
+              [217.5, -0.6088],
+              [225, -0.7071],
+              [232.5, -0.7934],
+              [240, -0.866],
+              [247.5, -0.9239],
+              [255, -0.9659],
+              [262.5, -0.9914],
+              [270, -1],
+              [277.5, -0.9914],
+              [285, -0.9659],
+              [292.5, -0.9239],
+              [300, -0.866],
+              [307.5, -0.7934],
+              [315, -0.7071],
+              [322.5, -0.6088],
+              [330, -0.5],
+              [337.5, -0.3827],
+              [345, -0.2588],
+              [352.5, -0.1305],
+              [360, 0]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\sin x\\)",
+            "labelAt": 112.5,
+            "pos": "above-right"
+          },
+          {
+            "type": "curve",
+            "id": "c",
+            "points": [
+              [0, 1],
+              [7.5, 0.9914],
+              [15, 0.9659],
+              [22.5, 0.9239],
+              [30, 0.866],
+              [37.5, 0.7934],
+              [45, 0.7071],
+              [52.5, 0.6088],
+              [60, 0.5],
+              [67.5, 0.3827],
+              [75, 0.2588],
+              [82.5, 0.1305],
+              [90, 0],
+              [97.5, -0.1305],
+              [105, -0.2588],
+              [112.5, -0.3827],
+              [120, -0.5],
+              [127.5, -0.6088],
+              [135, -0.7071],
+              [142.5, -0.7934],
+              [150, -0.866],
+              [157.5, -0.9239],
+              [165, -0.9659],
+              [172.5, -0.9914],
+              [180, -1],
+              [187.5, -0.9914],
+              [195, -0.9659],
+              [202.5, -0.9239],
+              [210, -0.866],
+              [217.5, -0.7934],
+              [225, -0.7071],
+              [232.5, -0.6088],
+              [240, -0.5],
+              [247.5, -0.3827],
+              [255, -0.2588],
+              [262.5, -0.1305],
+              [270, 0],
+              [277.5, 0.1305],
+              [285, 0.2588],
+              [292.5, 0.3827],
+              [300, 0.5],
+              [307.5, 0.6088],
+              [315, 0.7071],
+              [322.5, 0.7934],
+              [330, 0.866],
+              [337.5, 0.9239],
+              [345, 0.9659],
+              [352.5, 0.9914],
+              [360, 1]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\cos x\\)",
+            "labelAt": 315,
+            "pos": "below-right",
+            "style": "dot"
+          },
+          {"type": "point", "at": [0, 0], "on": ["s"]},
+          {"type": "point", "at": [0, 1], "on": ["c"]},
+          {"type": "text", "at": [90, 0], "label": "\\(90^{\\circ}\\)", "pos": "below-left"},
+          {"type": "text", "at": [180, 0], "label": "\\(180^{\\circ}\\)", "pos": "above-right"},
+          {"type": "text", "at": [270, 0], "label": "\\(270^{\\circ}\\)", "pos": "below-right"},
+          {"type": "text", "at": [360, 0], "label": "\\(360^{\\circ}\\)", "pos": "above"}
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = \\tan x\\) from \\(-180\\)° to 180°. Between the dashed asymptotes at \\(-90\\)° and 90°, marked on the x-axis, it rises through the origin and through \\((45^{\\circ}, 1)\\), marked with dashed lines to the axes, falling without limit near \\(-90\\)° and climbing without limit near 90°. The pattern repeats every 180°.",
+        "x": {"min": -200, "max": 200, "label": "\\(x^{\\circ}\\)", "step": 90, "nums": false},
+        "y": {"min": -4, "max": 4, "label": "\\(y\\)", "step": 2},
+        "grid": true,
+        "items": [
+          {"type": "asymptote", "x": -90},
+          {"type": "asymptote", "x": 90},
+          {"type": "text", "at": [-90, 0], "label": "\\(-90^{\\circ}\\)", "pos": "below-left"},
+          {"type": "text", "at": [90, 0], "label": "\\(90^{\\circ}\\)", "pos": "below-right"},
+          {
+            "type": "curve",
+            "id": "l",
+            "points": [
+              [-180, 0],
+              [-178.1281, 0.0327],
+              [-176.2562, 0.0654],
+              [-174.3843, 0.0983],
+              [-172.5124, 0.1314],
+              [-170.6405, 0.1648],
+              [-168.7686, 0.1986],
+              [-166.8967, 0.2328],
+              [-165.0248, 0.2675],
+              [-163.1529, 0.3028],
+              [-161.281, 0.3389],
+              [-159.4091, 0.3757],
+              [-157.5372, 0.4135],
+              [-155.6653, 0.4522],
+              [-153.7934, 0.4922],
+              [-151.9215, 0.5335],
+              [-150.0496, 0.5762],
+              [-148.1777, 0.6206],
+              [-146.3058, 0.6668],
+              [-144.4339, 0.715],
+              [-142.562, 0.7656],
+              [-140.6901, 0.8188],
+              [-138.8182, 0.8749],
+              [-136.9463, 0.9343],
+              [-135.0744, 0.9974],
+              [-135, 1],
+              [-133.2025, 1.0648],
+              [-131.3306, 1.1371],
+              [-129.4587, 1.2149],
+              [-127.5868, 1.2991],
+              [-125.7149, 1.3909],
+              [-123.843, 1.4914],
+              [-121.9711, 1.6021],
+              [-120.0992, 1.7251],
+              [-118.2273, 1.8629],
+              [-116.3554, 2.0184],
+              [-114.4835, 2.196],
+              [-112.6116, 2.401],
+              [-110.7397, 2.6409],
+              [-108.8678, 2.9261],
+              [-106.9959, 3.2717],
+              [-105.124, 3.7]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\tan x\\)",
+            "labelAt": -104.2,
+            "pos": "above"
+          },
+          {
+            "type": "curve",
+            "id": "m",
+            "points": [
+              [-74.876, -3.7],
+              [-71.1322, -2.9261],
+              [-67.3884, -2.401],
+              [-63.6446, -2.0184],
+              [-59.9008, -1.7251],
+              [-56.157, -1.4914],
+              [-52.4132, -1.2991],
+              [-48.6694, -1.1371],
+              [-44.9256, -0.9974],
+              [-41.1818, -0.8749],
+              [-37.438, -0.7656],
+              [-33.6942, -0.6668],
+              [-29.9504, -0.5762],
+              [-26.2066, -0.4922],
+              [-22.4628, -0.4135],
+              [-18.719, -0.3389],
+              [-14.9752, -0.2675],
+              [-11.2314, -0.1986],
+              [-7.4876, -0.1314],
+              [-3.7438, -0.0654],
+              [0, 0],
+              [3.7438, 0.0654],
+              [7.4876, 0.1314],
+              [11.2314, 0.1986],
+              [14.9752, 0.2675],
+              [18.719, 0.3389],
+              [22.4628, 0.4135],
+              [26.2066, 0.4922],
+              [29.9504, 0.5762],
+              [33.6942, 0.6668],
+              [37.438, 0.7656],
+              [41.1818, 0.8749],
+              [44.9256, 0.9974],
+              [45, 1],
+              [48.6694, 1.1371],
+              [52.4132, 1.2991],
+              [56.157, 1.4914],
+              [59.9008, 1.7251],
+              [63.6446, 2.0184],
+              [67.3884, 2.401],
+              [71.1322, 2.9261],
+              [74.876, 3.7]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\tan x\\)",
+            "labelAt": 74.8,
+            "pos": "above-right"
+          },
+          {
+            "type": "curve",
+            "id": "h",
+            "points": [
+              [105.124, -3.7],
+              [106.9959, -3.2717],
+              [108.8678, -2.9261],
+              [110.7397, -2.6409],
+              [112.6116, -2.401],
+              [114.4835, -2.196],
+              [116.3554, -2.0184],
+              [118.2273, -1.8629],
+              [120.0992, -1.7251],
+              [121.9711, -1.6021],
+              [123.843, -1.4914],
+              [125.7149, -1.3909],
+              [127.5868, -1.2991],
+              [129.4587, -1.2149],
+              [131.3306, -1.1371],
+              [133.2025, -1.0648],
+              [135.0744, -0.9974],
+              [136.9463, -0.9343],
+              [138.8182, -0.8749],
+              [140.6901, -0.8188],
+              [142.562, -0.7656],
+              [144.4339, -0.715],
+              [146.3058, -0.6668],
+              [148.1777, -0.6206],
+              [150.0496, -0.5762],
+              [151.9215, -0.5335],
+              [153.7934, -0.4922],
+              [155.6653, -0.4522],
+              [157.5372, -0.4135],
+              [159.4091, -0.3757],
+              [161.281, -0.3389],
+              [163.1529, -0.3028],
+              [165.0248, -0.2675],
+              [166.8967, -0.2328],
+              [168.7686, -0.1986],
+              [170.6405, -0.1648],
+              [172.5124, -0.1314],
+              [174.3843, -0.0983],
+              [176.2562, -0.0654],
+              [178, -0.0349],
+              [178.1281, -0.0327],
+              [180, 0]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\tan x\\)",
+            "labelAt": 178,
+            "pos": "above-left"
+          },
+          {"type": "guide", "at": [45, 1], "xLabel": "\\(45^{\\circ}\\)", "yLabel": "\\(1\\)"},
+          {"type": "point", "at": [45, 1], "on": ["m"]}
+        ]
+      }
+    },
     "remember": "Sine and cosine repeat every 360° with amplitude 1. Tangent repeats every 180° and has asymptotes.",
     "a": {
       "q": "What is the period of \\(y = \\tan x\\)?",
@@ -1219,6 +1804,50 @@ MADE_BANKS.mat = {
       "Worked example: for \\(f(x) = x^{2}\\), find the average rate of change from \\(x = 1\\) to \\(x = 3\\). \\(f(3) = 9\\) and \\(f(1) = 1\\), so the rate is \\(\\frac{9 - 1}{3 - 1} = \\frac{8}{2} = 4\\).",
       "The answer is an average over the whole interval. The curve can be steeper or flatter at points inside it. If \\(x\\) and \\(f(x)\\) have units, the rate is in units of \\(f\\) per unit of \\(x\\)."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{2}\\) and the secant through \\((1, 1)\\) and \\((3, 9)\\) on it. The secant is a straight line with gradient \\(\\frac{9 - 1}{3 - 1} = 4\\), the average rate of change from \\(x = 1\\) to \\(x = 3\\).",
+        "x": {"min": -1, "max": 4, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -2, "max": 12, "label": "\\(y\\)", "step": 2, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2}",
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": -0.75,
+            "pos": "above-right"
+          },
+          {
+            "type": "fn",
+            "id": "s",
+            "expr": "4x - 3",
+            "domain": [0.25, 3.5],
+            "label": "secant",
+            "labelAt": 0.5,
+            "pos": "below-right"
+          },
+          {
+            "type": "point",
+            "at": [1, 1],
+            "label": "\\((1, 1)\\)",
+            "pos": "above-left",
+            "on": ["f", "s"],
+            "is": "intersection"
+          },
+          {
+            "type": "point",
+            "at": [3, 9],
+            "label": "\\((3, 9)\\)",
+            "pos": "above-left",
+            "on": ["f", "s"],
+            "is": "intersection"
+          }
+        ]
+      }
+    },
     "remember": "Average rate of change is the change in \\(f\\) divided by the change in \\(x\\), which is the secant gradient.",
     "a": {
       "q": "For \\(f(x) = x^{2} + 2x\\), what is the average rate of change from \\(x = 1\\) to \\(x = 4\\)?",
@@ -1299,6 +1928,38 @@ MADE_BANKS.mat = {
       "Example: \\(f(x) = x^{2}\\), at \\(x = 3\\). The point is \\((3, 9)\\) and \\(f'(x) = 2x\\), so the tangent gradient is 6. Tangent: \\(y - 9 = 6(x - 3)\\), so \\(y = 6x - 9\\).",
       "The normal gradient is \\(-\\frac{1}{6}\\), so the normal is \\(y - 9 = -\\frac{1}{6}(x - 3)\\), which gives \\(y = -\\frac{x}{6} + \\frac{19}{2}\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{2}\\) and the point \\((3, 9)\\). The tangent \\(y = 6x - 9\\) touches the curve there. The normal \\(y = -\\frac{x}{6} + \\frac{19}{2}\\) passes through the same point at right angles to the tangent.",
+        "x": {"min": -3, "max": 9, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 12, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "equal": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "x^{2}", "label": "\\(y = x^{2}\\)", "labelAt": -2.4, "pos": "right"},
+          {
+            "type": "fn",
+            "id": "t",
+            "expr": "6x - 9",
+            "domain": [1.4, 3.6],
+            "label": "tangent",
+            "labelAt": 3.6,
+            "pos": "right"
+          },
+          {
+            "type": "fn",
+            "id": "n",
+            "expr": "-\\frac{x}{6} + \\frac{19}{2}",
+            "label": "normal",
+            "labelAt": 8.2,
+            "pos": "above",
+            "style": "dot"
+          },
+          {"type": "point", "at": [3, 9], "label": "\\((3, 9)\\)", "pos": "above-right", "on": ["f", "t", "n"]}
+        ]
+      }
+    },
     "remember": "Use \\(f'(a)\\) for the tangent gradient, then flip it and change the sign for the normal.",
     "a": {
       "q": "The tangent to a curve at a point has gradient 4. What is the gradient of the normal at that point?",
@@ -1331,6 +1992,41 @@ MADE_BANKS.mat = {
         "the tangent is a vertical line, which has no gradient. For \\(f(x) = \\sqrt[3]{x}\\) at \\(x = 0\\), the curve is continuous but the gradient grows without limit. So a function can be continuous at a point and still not differentiable there."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = |x|\\). It has a sharp corner at the origin. The gradient is \\(-1\\) on the left and 1 on the right, so there is no single tangent at \\(x = 0\\).",
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 3.5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "|x|", "label": "\\(y = |x|\\)", "labelAt": -2.7, "pos": "above-right"},
+          {"type": "text", "at": [-1.7, 1.7], "label": "gradient \\(-1\\)", "pos": "above-right"},
+          {"type": "text", "at": [1.7, 1.7], "label": "gradient 1", "pos": "above-left"},
+          {"type": "point", "at": [0, 0], "label": "corner", "pos": "below-right", "on": ["f"], "is": "turning point"}
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = \\sqrt[3]{x}\\). It passes through the origin with no break, but there the curve is vertical: an arrow labelled vertical tangent points to \\((0, 0)\\), where the tangent is the vertical line \\(x = 0\\), which has no gradient.",
+        "x": {"min": -8, "max": 8, "label": "\\(x\\)", "step": 2, "nums": false},
+        "y": {"min": -3, "max": 3, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\sqrt[3]{x}",
+            "label": "\\(y = \\sqrt[3]{x}\\)",
+            "labelAt": -7.2,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [0, 0], "on": ["f"], "is": "x-intercept"},
+          {"type": "text", "at": [1.2, -1.6], "label": "vertical tangent", "pos": "right"},
+          {"type": "arrow", "from": [1.1, -1.35], "to": [0.15, -0.15]}
+        ]
+      }
+    },
     "remember": "No derivative where the graph has a corner, a jump or a vertical tangent.",
     "a": {
       "q": "Which function is continuous at \\(x = 0\\) but has no derivative there?",
@@ -1472,6 +2168,40 @@ MADE_BANKS.mat = {
       ],
       "Both graphs pass through \\((0, 1)\\), because \\(a^{0} = 1\\). Both stay above the x-axis and get closer to the line \\(y = 0\\) on one side without touching it. This line is the horizontal asymptote. Example: \\(y = 2^{x}\\) has points \\((0, 1)\\), \\((1, 2)\\) and \\((3, 8)\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The graphs of \\(y = 2^{x}\\), which rises, and \\(y = \\left(\\frac{1}{2}\\right)^{x}\\), which falls. Both pass through \\((0, 1)\\), stay above the x-axis and get closer to \\(y = 0\\) without touching it. \\(y = 2^{x}\\) also passes through \\((1, 2)\\) and \\((3, 8)\\).",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -1, "max": 9, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "2^{x}",
+            "domain": [-2, 3.16],
+            "label": "\\(y = 2^{x}\\)",
+            "labelAt": 2.6,
+            "pos": "left"
+          },
+          {
+            "type": "fn",
+            "id": "d",
+            "expr": "\\left(\\frac{1}{2}\\right)^{x}",
+            "domain": [-3.16, 2],
+            "label": "\\(y = \\left(\\frac{1}{2}\\right)^{x}\\)",
+            "labelAt": -2.9,
+            "pos": "right"
+          },
+          {"type": "point", "at": [0, 1], "on": ["g", "d"], "is": "intersection"},
+          {"type": "text", "at": [0.3, 3.6], "label": "\\((0, 1)\\)", "pos": "right"},
+          {"type": "arrow", "from": [0.3, 3.2], "to": [0.06, 1.25]},
+          {"type": "point", "at": [1, 2], "label": "\\((1, 2)\\)", "pos": "below-right", "on": ["g"]},
+          {"type": "point", "at": [3, 8], "label": "\\((3, 8)\\)", "pos": "left", "on": ["g"]}
+        ]
+      }
+    },
     "remember": "Every \\(y = a^{x}\\) passes through \\((0, 1)\\), stays above the x-axis and has \\(y = 0\\) as its asymptote.",
     "a": {
       "q": "Which statement is true for the graph of \\(y = \\left(\\frac{1}{2}\\right)^{x}\\)?",
@@ -1637,6 +2367,121 @@ MADE_BANKS.mat = {
       "The horizontal asymptote \\(y = 0\\) of \\(y = a^{x}\\) becomes a vertical asymptote \\(x = 0\\). The graph only exists for \\(x > 0\\), because a positive base raised to any power never gives zero or a negative number.",
       "Example: \\(2^{3} = 8\\) puts \\((3, 8)\\) on \\(y = 2^{x}\\), so \\((8, 3)\\) is on \\(y = \\log_{2}(x)\\). For \\(a > 1\\) the graph rises. Its gradient is steep near \\(x = 0\\) and flattens as \\(x\\) grows."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "The graphs of \\(y = 2^{x}\\) and \\(y = \\log_{2}(x)\\), reflections of each other in the dotted line \\(y = x\\). The point \\((0, 1)\\) on \\(y = 2^{x}\\) matches \\((1, 0)\\) on the log graph, and \\((2, 4)\\) matches \\((4, 2)\\).",
+        "x": {"min": -2, "max": 6, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -2, "max": 6, "label": "\\(y\\)", "step": 2},
+        "grid": true,
+        "equal": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "m",
+            "expr": "x",
+            "label": "\\(y = x\\)",
+            "labelAt": 5.2,
+            "pos": "above-left",
+            "style": "dot"
+          },
+          {"type": "fn", "id": "e", "expr": "2^{x}", "label": "\\(y = 2^{x}\\)", "labelAt": 2.45, "pos": "left"},
+          {
+            "type": "curve",
+            "id": "l",
+            "points": [
+              [0.25, -2],
+              [0.3458, -1.5319],
+              [0.4417, -1.179],
+              [0.5, -1],
+              [0.5375, -0.8957],
+              [0.6333, -0.659],
+              [0.7292, -0.4557],
+              [0.825, -0.2775],
+              [0.9208, -0.119],
+              [1, 0],
+              [1.0167, 0.0238],
+              [1.1125, 0.1538],
+              [1.2083, 0.273],
+              [1.3042, 0.3831],
+              [1.4, 0.4854],
+              [1.4958, 0.5809],
+              [1.5917, 0.6705],
+              [1.6875, 0.7549],
+              [1.7833, 0.8346],
+              [1.8792, 0.9101],
+              [1.975, 0.9819],
+              [2, 1],
+              [2.0708, 1.0502],
+              [2.1667, 1.1155],
+              [2.2625, 1.1779],
+              [2.3583, 1.2378],
+              [2.4542, 1.2952],
+              [2.55, 1.3505],
+              [2.6458, 1.4037],
+              [2.7417, 1.4551],
+              [2.8375, 1.5046],
+              [2.9333, 1.5525],
+              [3.0292, 1.5989],
+              [3.125, 1.6439],
+              [3.2208, 1.6874],
+              [3.3167, 1.7297],
+              [3.4125, 1.7708],
+              [3.5083, 1.8108],
+              [3.6042, 1.8497],
+              [3.7, 1.8875],
+              [3.7958, 1.9244],
+              [3.8917, 1.9604],
+              [3.9875, 1.9955],
+              [4, 2],
+              [4.0833, 2.0297],
+              [4.1792, 2.0632],
+              [4.275, 2.0959],
+              [4.3708, 2.1279],
+              [4.4667, 2.1592],
+              [4.5625, 2.1898],
+              [4.6583, 2.2198],
+              [4.7542, 2.2492],
+              [4.85, 2.278],
+              [4.9458, 2.3062],
+              [5.0417, 2.3339],
+              [5.1375, 2.3611],
+              [5.2333, 2.3877],
+              [5.3292, 2.4139],
+              [5.425, 2.4396],
+              [5.5208, 2.4649],
+              [5.6167, 2.4897],
+              [5.7125, 2.5141],
+              [5.8083, 2.5381],
+              [5.9042, 2.5617],
+              [6, 2.585]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\log_{2}(x)\\)",
+            "labelAt": 0.54,
+            "pos": "right"
+          },
+          {
+            "type": "point",
+            "at": [0, 1],
+            "label": "\\((0, 1)\\)",
+            "pos": "above-left",
+            "on": ["e"],
+            "is": "y-intercept"
+          },
+          {
+            "type": "point",
+            "at": [1, 0],
+            "label": "\\((1, 0)\\)",
+            "pos": "below-right",
+            "on": ["l"],
+            "is": "x-intercept"
+          },
+          {"type": "point", "at": [2, 4], "label": "\\((2, 4)\\)", "pos": "right", "on": ["e"]},
+          {"type": "point", "at": [4, 2], "label": "\\((4, 2)\\)", "pos": "below-right", "on": ["l"]}
+        ]
+      }
+    },
     "remember": "Swap the coordinates of \\(y = a^{x}\\) to get the log graph: through \\((1, 0)\\), with a vertical asymptote at \\(x = 0\\).",
     "a": {
       "q": "Which point lies on the graph of \\(y = \\log_{3}(x)\\)?",
@@ -1906,6 +2751,24 @@ MADE_BANKS.mat = {
         "Fences: \\(\\text{lower} = Q_{1} - 1.5 \\times \\text{IQR}\\) and \\(\\text{upper} = Q_{3} + 1.5 \\times \\text{IQR}\\). A value outside the fences is an outlier. Example: \\(Q_{1} = 10\\) and \\(Q_{3} = 18\\), so \\(\\text{IQR} = 8\\) and \\(1.5 \\times 8 = 12\\). The fences are \\(10 - 12 = -2\\) and \\(18 + 12 = 30\\), so a value of 34 is an outlier."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "chart",
+        "chart": "histogram",
+        "alt": "A positively skewed histogram. The tallest bars are at the low values on the left, and the bars get shorter towards the right, making a long tail towards the larger values.",
+        "x": {"min": 0, "max": 60, "label": "Value", "step": 10},
+        "y": {"min": 0, "max": 14, "label": "Frequency", "step": 2},
+        "classes": [[0, 10, 12], [10, 20, 9], [20, 30, 5], [30, 40, 3], [40, 50, 2], [50, 60, 1]]
+      },
+      "3": {
+        "kind": "chart",
+        "chart": "histogram",
+        "alt": "A negatively skewed histogram. The tallest bars are at the high values on the right, and the bars get shorter towards the left, making a long tail towards the smaller values.",
+        "x": {"min": 0, "max": 60, "label": "Value", "step": 10},
+        "y": {"min": 0, "max": 14, "label": "Frequency", "step": 2},
+        "classes": [[0, 10, 1], [10, 20, 2], [20, 30, 3], [30, 40, 5], [40, 50, 9], [50, 60, 12]]
+      }
+    },
     "remember": "The tail names the skew. Outliers lie more than \\(1.5 \\times \\text{IQR}\\) beyond \\(Q_{1}\\) or \\(Q_{3}\\).",
     "a": {
       "q": "A histogram of house prices has most values at the low end and a long tail stretching to the right. How is it described?",
@@ -2274,6 +3137,41 @@ MADE_BANKS.mat = {
       "If the gradient has the same sign on both sides, such as positive, zero, positive, the point is a horizontal point of inflection.",
       "Example: \\(f(x) = x^{3} - 3x^{2}\\), so \\(f'(x) = 3x^{2} - 6x = 3x(x - 2) = 0\\) at \\(x = 0\\) or 2. At \\(x = -1\\), 1 and 3, f' is 9, \\(-3\\) and 9, so \\((0, 0)\\) is a maximum and \\((2, -4)\\) is a minimum."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{3} - 3x^{2}\\). It rises to a maximum at \\((0, 0)\\), falls to a minimum at \\((2, -4)\\), then rises again.",
+        "x": {"min": -1.5, "max": 3.5, "label": "\\(x\\)", "step": 0.5, "nums": false},
+        "y": {"min": -6, "max": 3, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{3} - 3x^{2}",
+            "label": "\\(y = x^{3} - 3x^{2}\\)",
+            "labelAt": 3.25,
+            "pos": "left"
+          },
+          {
+            "type": "point",
+            "at": [0, 0],
+            "label": "maximum \\((0, 0)\\)",
+            "pos": "above",
+            "on": ["f"],
+            "is": "turning point"
+          },
+          {
+            "type": "point",
+            "at": [2, -4],
+            "label": "minimum \\((2, -4)\\)",
+            "pos": "below",
+            "on": ["f"],
+            "is": "turning point"
+          }
+        ]
+      }
+    },
     "remember": "Solve \\(f'(x) = 0\\), then test the gradient on each side to name the type.",
     "a": {
       "q": "A curve has \\(f'(x) = 0\\) at \\(x = 4\\). The gradient is negative just before \\(x = 4\\) and positive just after. What type of stationary point is it?",
@@ -2530,6 +3428,40 @@ MADE_BANKS.mat = {
       "Adding the strips: \\(\\text{area} \\approx \\frac{h}{2} \\times [y_{0} + y_{n} + 2(y_{1} + y_{2} + \\cdots + y_{n - 1})]\\). The first and last values are used once. Every middle value is used twice.",
       "Example: estimate \\(\\int_{0}^{2} x^{2} \\, dx\\) using 2 strips. \\(h = 1\\), and \\(y_{0} = 0\\), \\(y_{1} = 1\\), \\(y_{2} = 4\\). \\(\\text{Area} \\approx \\frac{1}{2} \\times [0 + 4 + 2 \\times 1] = 3\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{2}\\) from 0 to 2, split into two strips of width 1. Each strip is shaded as a trapezium whose top is a straight line joining \\((0, 0)\\), \\((1, 1)\\) and \\((2, 4)\\). The heights are \\(y_{0} = 0\\), \\(y_{1} = 1\\) and \\(y_{2} = 4\\). The trapezia sit just above the curve.",
+        "x": {"min": -0.5, "max": 3, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -0.5, "max": 5, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {"type": "shade", "poly": [[0, 0], [1, 1], [1, 0]]},
+          {"type": "shade", "poly": [[1, 0], [1, 1], [2, 4], [2, 0]], "hatch": true},
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2}",
+            "domain": [-0.3, 2.25],
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": 2.2,
+            "pos": "right"
+          },
+          {
+            "type": "curve",
+            "id": "t",
+            "points": [[0, 0], [1, 1], [2, 4]],
+            "label": "trapezia",
+            "labelAt": 1.5,
+            "pos": "above-left",
+            "style": "dot"
+          },
+          {"type": "point", "at": [1, 1], "label": "\\(y_{1} = 1\\)", "pos": "above-left", "on": ["f", "t"]},
+          {"type": "point", "at": [2, 4], "label": "\\(y_{2} = 4\\)", "pos": "above-left", "on": ["f", "t"]},
+          {"type": "point", "at": [0, 0], "label": "\\(y_{0} = 0\\)", "pos": "above-left", "on": ["f", "t"]}
+        ]
+      }
+    },
     "remember": "Use \\(\\frac{h}{2} \\times [\\text{first} + \\text{last} + 2 \\times (\\text{all the middle values})]\\).",
     "a": {
       "q": "Using the trapezoidal rule with 2 strips, what is the estimate for \\(\\int_{0}^{4} x^{2} \\, dx\\)?",
@@ -2770,6 +3702,20 @@ MADE_BANKS.mat = {
       "A density function must follow two rules. \\(f(x) \\ge 0\\) for every \\(x\\), so no area is negative. The total area under the whole curve is 1.",
       "Example: \\(f(x) = 0.25\\) for \\(0 \\le x \\le 4\\), and 0 elsewhere. The total area is \\(0.25 \\times 4 = 1\\). \\(P(1 \\le X \\le 3) = 0.25 \\times 2 = 0.5\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The density \\(f(x) = 0.25\\) for \\(0 \\le x \\le 4\\), and 0 elsewhere, a rectangle of area 1. The shaded part from \\(x = 1\\) to \\(x = 3\\) has area \\(0.25 \\times 2 = 0.5\\), which is \\(P(1 \\le X \\le 3)\\).",
+        "x": {"min": -1, "max": 5, "label": "\\(x\\)", "step": 1},
+        "y": {"min": 0, "max": 0.4, "label": "\\(f(x)\\)", "step": 0.05, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "shade", "poly": [[1, 0], [1, 0.25], [3, 0.25], [3, 0]], "label": "0.5", "at": [2, 0.125]},
+          {"type": "curve", "id": "f", "points": [[-1, 0], [0, 0], [0, 0.25], [4, 0.25], [4, 0], [5, 0]]},
+          {"type": "text", "at": [4, 0.25], "label": "\\(0.25\\)", "pos": "above-right"}
+        ]
+      }
+    },
     "remember": "For a continuous variable, probability is area under \\(f(x)\\), and the total area is 1.",
     "a": {
       "q": "\\(f(x) = k\\) for \\(0 \\le x \\le 5\\), and 0 elsewhere, is a probability density function. What is \\(k\\)?",
@@ -2816,6 +3762,92 @@ MADE_BANKS.mat = {
       "The empirical rule: about 68% of values lie within \\(1\\sigma\\) of the mean, about 95% within \\(2\\sigma\\), and about 99.7% within \\(3\\sigma\\).",
       "Example: if \\(\\mu = 50\\) and \\(\\sigma = 4\\), about 95% of values lie within \\(2 \\times 4 = 8\\) of the mean, so between 42 and 58."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A normal curve with mean 50 and standard deviation 4. It is bell shaped, with its peak at 50 and the two sides mirroring each other. The shaded area from 42 to 58, within 2 standard deviations of the mean, holds about 95% of values. Dashed lines mark 42, 50 and 58 on the axis.",
+        "x": {"min": 34, "max": 66, "label": "Value", "step": 4, "nums": false},
+        "y": {"min": 0, "max": 0.12, "label": "\\(y\\)"},
+        "items": [
+          {"type": "shade", "under": "n", "span": [42, 58], "label": "95%", "at": [50, 0.035]},
+          {
+            "type": "curve",
+            "id": "n",
+            "points": [
+              [34, 0],
+              [34.5, 0.0001],
+              [35, 0.0001],
+              [35.5, 0.0001],
+              [36, 0.0002],
+              [36.5, 0.0003],
+              [37, 0.0005],
+              [37.5, 0.0008],
+              [38, 0.0011],
+              [38.5, 0.0016],
+              [39, 0.0023],
+              [39.5, 0.0032],
+              [40, 0.0044],
+              [40.5, 0.0059],
+              [41, 0.0079],
+              [41.5, 0.0104],
+              [42, 0.0135],
+              [42.5, 0.0172],
+              [43, 0.0216],
+              [43.5, 0.0266],
+              [44, 0.0324],
+              [44.5, 0.0388],
+              [45, 0.0457],
+              [45.5, 0.053],
+              [46, 0.0605],
+              [46.5, 0.068],
+              [47, 0.0753],
+              [47.5, 0.082],
+              [48, 0.088],
+              [48.5, 0.093],
+              [49, 0.0967],
+              [49.5, 0.099],
+              [50, 0.0997],
+              [50.5, 0.099],
+              [51, 0.0967],
+              [51.5, 0.093],
+              [52, 0.088],
+              [52.5, 0.082],
+              [53, 0.0753],
+              [53.5, 0.068],
+              [54, 0.0605],
+              [54.5, 0.053],
+              [55, 0.0457],
+              [55.5, 0.0388],
+              [56, 0.0324],
+              [56.5, 0.0266],
+              [57, 0.0216],
+              [57.5, 0.0172],
+              [58, 0.0135],
+              [58.5, 0.0104],
+              [59, 0.0079],
+              [59.5, 0.0059],
+              [60, 0.0044],
+              [60.5, 0.0032],
+              [61, 0.0023],
+              [61.5, 0.0016],
+              [62, 0.0011],
+              [62.5, 0.0008],
+              [63, 0.0005],
+              [63.5, 0.0003],
+              [64, 0.0002],
+              [64.5, 0.0001],
+              [65, 0.0001],
+              [65.5, 0.0001],
+              [66, 0]
+            ],
+            "smooth": true
+          },
+          {"type": "guide", "at": [42, 0.0135], "xLabel": "\\(42\\)"},
+          {"type": "guide", "at": [50, 0.0997], "xLabel": "\\(50\\)"},
+          {"type": "guide", "at": [58, 0.0135], "xLabel": "\\(58\\)"}
+        ]
+      }
+    },
     "remember": "Mean sets the centre, standard deviation sets the spread: 68%, 95% and 99.7% within \\(1\\sigma\\), \\(2\\sigma\\) and \\(3\\sigma\\).",
     "a": {
       "q": "A normal variable has mean 100 and standard deviation 10. About 95% of values lie between which two numbers?",
@@ -6375,6 +7407,43 @@ MADE_BANKS.mat = {
       "For the y-intercept, put \\(x = 0\\). For the x-intercepts, put \\(y = 0\\), then solve by factorising or by the quadratic formula.",
       "Example: \\(y = (x - 2)^{2} - 9\\) has vertex \\((2, -9)\\). Setting \\(y = 0\\) gives \\((x - 2)^{2} = 9\\), so \\(x - 2 = 3\\) or \\(x - 2 = -3\\), and \\(x = 5\\) or \\(x = -1\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = (x - 2)^{2} - 9\\), concave up, with its vertex at \\((2, -9)\\). It crosses the x-axis at \\(x = -1\\) and \\(x = 5\\), and the y-axis at \\((0, -5)\\).",
+        "x": {"min": -3, "max": 10, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -11, "max": 9, "label": "\\(y\\)", "step": 2, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "(x - 2)^{2} - 9",
+            "label": "\\(y = (x - 2)^{2} - 9\\)",
+            "labelAt": 4.475,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [-1, 0], "label": "\\(-1\\)", "pos": "below-left", "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [5, 0], "label": "\\(5\\)", "pos": "below-right", "on": ["f"], "is": "x-intercept"},
+          {
+            "type": "point",
+            "at": [0, -5],
+            "label": "\\((0, -5)\\)",
+            "pos": "above-right",
+            "on": ["f"],
+            "is": "y-intercept"
+          },
+          {
+            "type": "point",
+            "at": [2, -9],
+            "label": "\\((2, -9)\\)",
+            "pos": "below",
+            "on": ["f"],
+            "is": "turning point"
+          }
+        ]
+      }
+    },
     "remember": "To get \\(h\\), flip the sign of the number inside the bracket. \\(k\\) is read as it is. Set \\(y = 0\\) for x-intercepts.",
     "a": {
       "q": "What is the vertex of \\(y = 2(x + 4)^{2} - 7\\)?",
@@ -6412,6 +7481,48 @@ MADE_BANKS.mat = {
         "a bracket that appears three times, such as \\((x - 1)^{3}\\). The graph crosses the axis at a stationary point of inflection."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "The cubic \\(y = (x + 2)(x - 1)(x - 3)\\). It crosses the x-axis at \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\), one crossing for each single factor.",
+        "x": {"min": -3, "max": 4.8, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -12, "max": 12, "label": "\\(y\\)", "step": 4, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "(x + 2)(x - 1)(x - 3)"},
+          {"type": "text", "at": [0.02, -8], "label": "\\(y = (x + 2)(x - 1)(x - 3)\\)", "pos": "right"},
+          {
+            "type": "point",
+            "at": [-2, 0],
+            "label": "\\(-2\\)",
+            "pos": "below-right",
+            "on": ["f"],
+            "is": "x-intercept"
+          },
+          {"type": "point", "at": [1, 0], "label": "\\(1\\)", "pos": "above-right", "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [3, 0], "label": "\\(3\\)", "pos": "below-right", "on": ["f"], "is": "x-intercept"}
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "The cubic \\(y = (x + 2)(x - 1)^{2}\\). At \\(x = 1\\), from the squared factor \\((x - 1)^{2}\\), the graph touches the x-axis at a turning point and turns back without crossing. At \\(x = -2\\), a single factor, it crosses.",
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -5, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "(x + 2)(x - 1)^{2}",
+            "label": "\\(y = (x + 2)(x - 1)^{2}\\)",
+            "labelAt": -2.4,
+            "pos": "right"
+          },
+          {"type": "point", "at": [1, 0], "label": "touches", "pos": "below", "on": ["f"], "is": "turning point"},
+          {"type": "point", "at": [-2, 0], "label": "crosses", "pos": "above-left", "on": ["f"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches at a turning point, a cubed factor crosses at a point of inflection.",
     "a": {
       "q": "For \\(y = (x - 4)^{2}(x + 1)\\), what does the graph do at \\(x = 4\\)?",
@@ -6451,6 +7562,56 @@ MADE_BANKS.mat = {
       ],
       "Example: \\(y = \\frac{1}{x}\\) has no point at \\(x = 0\\). When \\(x = 2\\), \\(y = \\frac{1}{2}\\). When \\(x = -2\\), \\(y = -\\frac{1}{2}\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The graphs of \\(y = \\frac{1}{x}\\) and \\(y = \\frac{1}{x^{2}}\\). Neither has a point at \\(x = 0\\), and both get closer to the y-axis and the x-axis without touching them. \\(y = \\frac{1}{x}\\) has one branch in the top right and one in the bottom left. \\(y = \\frac{1}{x^{2}}\\) has both branches above the x-axis.",
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -2.5, "max": 2.5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "a",
+            "expr": "\\frac{1}{x}",
+            "breaks": [0],
+            "label": "\\(y = \\frac{1}{x}\\)",
+            "labelAt": -1.8,
+            "pos": "below-left"
+          },
+          {
+            "type": "fn",
+            "id": "b",
+            "expr": "\\frac{1}{x^{2}}",
+            "breaks": [0],
+            "label": "\\(y = \\frac{1}{x^{2}}\\)",
+            "labelAt": -0.9,
+            "pos": "above-left",
+            "style": "dot"
+          }
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = \\sqrt{x}\\). It starts at the origin, \\((0, 0)\\), and rises to the right through \\((4, 2)\\). It has no part to the left of the y-axis, because \\(x\\) cannot be negative.",
+        "x": {"min": -2, "max": 9, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 4, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\sqrt{x}",
+            "domain": [0, 9],
+            "label": "\\(y = \\sqrt{x}\\)",
+            "labelAt": 7,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [0, 0], "label": "\\((0, 0)\\)", "pos": "below-right", "on": ["f"]},
+          {"type": "point", "at": [4, 2], "label": "\\((4, 2)\\)", "pos": "below-right", "on": ["f"]}
+        ]
+      }
+    },
     "remember": "The values a power function cannot use, such as \\(x = 0\\) for \\(\\frac{1}{x}\\) or negative \\(x\\) for \\(\\sqrt{x}\\), set its shape.",
     "a": {
       "q": "Which statement is true for the graph of \\(y = \\frac{1}{x^{2}}\\)?",
@@ -6485,6 +7646,44 @@ MADE_BANKS.mat = {
       ],
       "Each point \\((x, y)\\) moves in a set way. For example, \\(y = (x + 1)^{2} - 4\\) is \\(y = x^{2}\\) moved 1 left and 4 down, so its vertex is \\((-1, -4)\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2}\\), dashed, and \\(y = (x + 1)^{2} - 4\\), solid. An arrow shows the vertex moving 1 left and 4 down, from \\((0, 0)\\) to \\((-1, -4)\\).",
+        "x": {"min": -4, "max": 4.5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -5, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2}",
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": -2.2,
+            "pos": "right",
+            "style": "dash"
+          },
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "(x + 1)^{2} - 4",
+            "label": "\\(y = (x + 1)^{2} - 4\\)",
+            "labelAt": 1.31,
+            "pos": "right"
+          },
+          {"type": "arrow", "from": [-0.3, -1.2], "to": [-0.92, -3.68]},
+          {"type": "point", "at": [0, 0], "on": ["f"], "is": "turning point"},
+          {
+            "type": "point",
+            "at": [-1, -4],
+            "label": "\\((-1, -4)\\)",
+            "pos": "below-left",
+            "on": ["g"],
+            "is": "turning point"
+          }
+        ]
+      }
+    },
     "remember": "Outside the bracket changes \\(y\\). Inside the bracket changes \\(x\\), and in the opposite way to how it looks.",
     "a": {
       "q": "The graph of \\(y = x^{2}\\) is translated 3 units right and 2 units down. What is the new rule?",
@@ -6513,6 +7712,21 @@ MADE_BANKS.mat = {
       "To find the rule for one member of the family, put a given point into the rule and solve for the parameter.",
       "Example: \\(y = ax^{2}\\) passes through \\((2, 12)\\). Then \\(12 = a \\times 2^{2}\\), so \\(12 = 4a\\) and \\(a = 3\\). The rule is \\(y = 3x^{2}\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Three members of the family \\(y = ax^{2}\\). With \\(a = 3\\) the parabola is concave up and narrow. With \\(a = 1\\) it is concave up and wider. With \\(a = -1\\) it is concave down. All three have their vertex at the origin.",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -6, "max": 9, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "p", "expr": "3x^{2}", "label": "\\(a = 3\\)", "labelAt": -1.6, "pos": "right"},
+          {"type": "fn", "id": "q", "expr": "x^{2}", "label": "\\(a = 1\\)", "labelAt": 2.8, "pos": "right"},
+          {"type": "fn", "id": "n", "expr": "-x^{2}", "label": "\\(a = -1\\)", "labelAt": -2.4, "pos": "above-left"},
+          {"type": "point", "at": [0, 0], "on": ["p", "q", "n"], "is": "turning point"}
+        ]
+      }
+    },
     "remember": "A parameter names a family. A point on the graph fixes which member it is.",
     "a": {
       "q": "The graph of \\(y = ax^{2}\\) passes through \\((3, 18)\\). What is the value of \\(a\\)?",
@@ -10898,6 +12112,35 @@ MADE_BANKS.mat = {
       "An inverse exists only if \\(f\\) is one-to-one: each output comes from exactly one input. A horizontal line must cut the graph at most once. So \\(y = x^{2}\\) on all of \\(\\mathbb{R}\\) has no inverse, because 2 and \\(-2\\) both give 4.",
       "The graph of \\(f^{-1}\\) is the graph of \\(f\\) reflected in the line \\(y = x\\). The domain of \\(f^{-1}\\) is the range of \\(f\\), and the range of \\(f^{-1}\\) is the domain of \\(f\\)."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2}\\) and the horizontal line \\(y = 4\\). The line cuts the parabola twice, at \\((-2, 4)\\) and \\((2, 4)\\), so \\(y = x^{2}\\) is not one-to-one and has no inverse.",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -1, "max": 7, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "x^{2}", "label": "\\(y = x^{2}\\)", "labelAt": 2.5, "pos": "right"},
+          {"type": "fn", "id": "h", "expr": "4", "label": "\\(y = 4\\)", "labelAt": -3.6, "pos": "below"},
+          {
+            "type": "point",
+            "at": [-2, 4],
+            "label": "\\((-2, 4)\\)",
+            "pos": "above-right",
+            "on": ["f", "h"],
+            "is": "intersection"
+          },
+          {
+            "type": "point",
+            "at": [2, 4],
+            "label": "\\((2, 4)\\)",
+            "pos": "below-right",
+            "on": ["f", "h"],
+            "is": "intersection"
+          }
+        ]
+      }
+    },
     "remember": "Swap \\(x\\) and \\(y\\) to reverse a function. Only a one-to-one function has an inverse.",
     "a": {
       "q": "What is the inverse of \\(f(x) = 3x - 6\\)?",
@@ -10940,6 +12183,22 @@ MADE_BANKS.mat = {
         "Where the graph meets the vertical axis, the input is 0. Where it meets the horizontal axis, the output is 0."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "The depth of water in a tank against time. It starts at 10 cm on the vertical axis, rises to 30 cm at 4 minutes, stays flat at 30 cm from 4 to 7 minutes, then falls and meets the horizontal axis at 12 minutes, when the depth is 0.",
+        "x": {"min": 0, "max": 13, "label": "Time (min)", "step": 2},
+        "y": {"min": 0, "max": 40, "label": "Depth (cm)", "step": 10},
+        "items": [
+          {"type": "curve", "id": "d", "points": [[0, 10], [4, 30], [7, 30], [12, 0]]},
+          {"type": "text", "at": [2.4, 17], "label": "rising", "pos": "right"},
+          {"type": "text", "at": [5.5, 30], "label": "flat", "pos": "above"},
+          {"type": "text", "at": [10, 12], "label": "falling", "pos": "above-right"},
+          {"type": "point", "at": [0, 10], "on": ["d"], "is": "y-intercept"},
+          {"type": "point", "at": [12, 0], "label": "12", "pos": "above-right", "on": ["d"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "Read left to right: up is increasing, down is decreasing, flat is no change, and an axis crossing means a zero.",
     "a": {
       "q": "A graph shows the depth of water in a tank (in cm) against time (in minutes). It is flat from 5 to 9 minutes. What happens to the depth then?",
@@ -11102,6 +12361,36 @@ MADE_BANKS.mat = {
       "Repeat. Each step halves the interval, so the root is trapped in a smaller and smaller interval. You can stop when the interval is as small as the accuracy you need.",
       "Example: \\(f(x) = x^{2} - 5\\) has \\(f(2) = -1\\) and \\(f(3) = 4\\). The midpoint is 2.5 and \\(f(2.5) = 1.25\\), which is positive. So the root lies between 2 and 2.5."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{2} - 5\\). At \\(x = 2\\) it is below the x-axis, at \\(-1\\). At the midpoint \\(x = 2.5\\) it is above, at 1.25, and at \\(x = 3\\) it is above, at 4. It crosses the x-axis between 2 and 2.5, so the root is in that half.",
+        "x": {"min": 1.5, "max": 3.5, "label": "\\(x\\)", "step": 0.5, "nums": false},
+        "y": {"min": -2, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2} - 5",
+            "label": "\\(y = x^{2} - 5\\)",
+            "labelAt": 1.9,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [2, -1], "label": "\\(f(2) = -1\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [2.5, 1.25], "label": "\\(f(2.5) = 1.25\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [3, 4], "label": "\\(f(3) = 4\\)", "pos": "above-left", "on": ["f"]},
+          {
+            "type": "point",
+            "at": [2.2361, 0],
+            "label": "root",
+            "pos": "below-right",
+            "on": ["f"],
+            "is": "x-intercept"
+          }
+        ]
+      }
+    },
     "remember": "Halve the interval and keep the half where \\(f\\) changes sign. The root stays trapped inside.",
     "a": {
       "q": "\\(f(x) = x^{3} - 10\\) has \\(f(2) = -2\\) and \\(f(3) = 17\\). Which interval does the method keep after one bisection step?",
@@ -11130,6 +12419,53 @@ MADE_BANKS.mat = {
       "The chord gradients settle towards one number. That number is the limit, and it is the instantaneous rate of change.",
       "Example: for \\(f(x) = x^{2}\\), the chord from \\(x = 1\\) to \\(x = 1 + h\\) has gradient \\(((1 + h)^{2} - 1) \\div h = 2 + h\\). As \\(h\\) shrinks towards 0, this gets close to 2. So the rate at \\(x = 1\\) is 2."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{2}\\) and the point \\((1, 1)\\). The dotted chord to \\((2, 4)\\), with \\(h = 1\\), has gradient 3. The tangent at \\((1, 1)\\) has gradient 2. As \\(h\\) shrinks, the chord turns towards the tangent and its gradient \\(2 + h\\) settles on 2.",
+        "x": {"min": -0.5, "max": 3.5, "label": "\\(x\\)", "step": 0.5, "nums": false},
+        "y": {"min": -1, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2}",
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": -0.3,
+            "pos": "above-right"
+          },
+          {
+            "type": "fn",
+            "id": "c",
+            "expr": "3x - 2",
+            "domain": [0.3, 2.4],
+            "label": "\\(\\text{chord}, h = 1\\)",
+            "labelAt": 1.6,
+            "pos": "above-left",
+            "style": "dot"
+          },
+          {
+            "type": "fn",
+            "id": "t",
+            "expr": "2x - 1",
+            "domain": [0.1, 3.2],
+            "label": "tangent",
+            "labelAt": 2.6,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [1, 1], "label": "\\((1, 1)\\)", "pos": "above-left", "on": ["f", "t"]},
+          {
+            "type": "point",
+            "at": [2, 4],
+            "label": "\\((2, 4)\\)",
+            "pos": "above-left",
+            "on": ["f", "c"],
+            "is": "intersection"
+          }
+        ]
+      }
+    },
     "remember": "Shrink the gap \\(h\\) towards 0. The chord gradient settles on the instantaneous rate.",
     "a": {
       "q": "For \\(f(x) = x^{2}\\), the chord from \\(x = 3\\) to \\(x = 3 + h\\) has gradient \\(6 + h\\). What is the instantaneous rate of change at \\(x = 3\\)?",
@@ -11153,6 +12489,20 @@ MADE_BANKS.mat = {
       "A line that slopes up means the quantity is increasing. A line that slopes down means it is decreasing.",
       "Water filling a container at a steady rate: the depth rises quickly where the container is narrow and slowly where it is wide. A container with straight sides of the same width gives a straight line."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A cyclist's distance (km) against time (hours). From 0 to 1 hour the graph is steep, rising to 20 km. From 1 to 1.5 hours it is flat, so she has stopped. From 1.5 to 3 hours it rises less steeply, to 35 km, so she is riding more slowly.",
+        "x": {"min": 0, "max": 3.5, "label": "Time (h)", "step": 0.5},
+        "y": {"min": 0, "max": 40, "label": "Distance (km)", "step": 10},
+        "items": [
+          {"type": "curve", "id": "d", "points": [[0, 0], [1, 20], [1.5, 20], [3, 35]]},
+          {"type": "text", "at": [0.45, 14], "label": "fast", "pos": "left"},
+          {"type": "text", "at": [1.25, 20], "label": "stopped", "pos": "above"},
+          {"type": "text", "at": [2.25, 26], "label": "slower", "pos": "below-right"}
+        ]
+      }
+    },
     "remember": "Read the gradient as a rate. Steeper means faster, flat means no change.",
     "a": {
       "q": "A graph of a cyclist's distance (km) against time (hours) is steepest between 2 and 3 hours. What does this show?",
@@ -11226,6 +12576,119 @@ MADE_BANKS.mat = {
         "The mean value is \\(k\\). It is the height of the middle line. Example: \\(y = 3 \\sin(2x) + 1\\) has amplitude 3, period \\(2\\pi \\div 2 = \\pi\\), mean 1, and goes from \\(-2\\) to 4."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The wave \\(y = 3 \\sin(2x) + 1\\) from 0 to \\(2\\pi\\). Its middle line is \\(y = 1\\). It rises 3 above the middle line to 4 and falls 3 below it to \\(-2\\). One full wave is \\(\\pi\\) long along the x-axis.",
+        "x": {"min": 0, "max": 6.9, "label": "\\(x\\)", "step": 0.7854, "nums": false},
+        "y": {"min": -3, "max": 5, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "w",
+            "points": [
+              [0, 1],
+              [0.0982, 1.5853],
+              [0.1963, 2.1481],
+              [0.2945, 2.6667],
+              [0.3927, 3.1213],
+              [0.4909, 3.4944],
+              [0.589, 3.7716],
+              [0.6872, 3.9424],
+              [0.7854, 4],
+              [0.8836, 3.9424],
+              [0.9817, 3.7716],
+              [1.0799, 3.4944],
+              [1.1781, 3.1213],
+              [1.2763, 2.6667],
+              [1.3744, 2.1481],
+              [1.4726, 1.5853],
+              [1.5708, 1],
+              [1.669, 0.4147],
+              [1.7671, -0.1481],
+              [1.8653, -0.6667],
+              [1.9635, -1.1213],
+              [2.0617, -1.4944],
+              [2.1598, -1.7716],
+              [2.258, -1.9424],
+              [2.3562, -2],
+              [2.4544, -1.9424],
+              [2.5525, -1.7716],
+              [2.6507, -1.4944],
+              [2.7489, -1.1213],
+              [2.8471, -0.6667],
+              [2.9452, -0.1481],
+              [3.0434, 0.4147],
+              [3.1416, 1],
+              [3.2398, 1.5853],
+              [3.3379, 2.1481],
+              [3.4361, 2.6667],
+              [3.5343, 3.1213],
+              [3.6325, 3.4944],
+              [3.7306, 3.7716],
+              [3.8288, 3.9424],
+              [3.927, 4],
+              [4.0252, 3.9424],
+              [4.1233, 3.7716],
+              [4.2215, 3.4944],
+              [4.3197, 3.1213],
+              [4.4179, 2.6667],
+              [4.516, 2.1481],
+              [4.6142, 1.5853],
+              [4.7124, 1],
+              [4.8106, 0.4147],
+              [4.9087, -0.1481],
+              [5.0069, -0.6667],
+              [5.1051, -1.1213],
+              [5.2033, -1.4944],
+              [5.3014, -1.7716],
+              [5.3996, -1.9424],
+              [5.4978, -2],
+              [5.596, -1.9424],
+              [5.6941, -1.7716],
+              [5.7923, -1.4944],
+              [5.8905, -1.1213],
+              [5.9887, -0.6667],
+              [6.0868, -0.1481],
+              [6.185, 0.4147],
+              [6.2832, 1]
+            ],
+            "smooth": true,
+            "label": "\\(y = 3 \\sin(2x) + 1\\)",
+            "labelAt": 3.77,
+            "pos": "above"
+          },
+          {
+            "type": "fn",
+            "id": "m",
+            "expr": "1",
+            "label": "mean \\(y = 1\\)",
+            "labelAt": 4.83,
+            "pos": "above-right",
+            "style": "dot"
+          },
+          {
+            "type": "point",
+            "at": [0.7854, 4],
+            "label": "peak",
+            "pos": "above-right",
+            "on": ["w"],
+            "is": "turning point"
+          },
+          {
+            "type": "point",
+            "at": [2.3562, -2],
+            "label": "trough",
+            "pos": "below-right",
+            "on": ["w"],
+            "is": "turning point"
+          },
+          {"type": "text", "at": [3.1416, 0], "label": "\\(\\pi\\)", "pos": "below"},
+          {"type": "text", "at": [6.2832, 0], "label": "\\(2\\pi\\)", "pos": "below"}
+        ]
+      }
+    },
     "remember": "\\(a\\) is the distance from the middle to a peak, \\(2\\pi \\div n\\) is the length of one wave, and \\(k\\) is the height of the middle line.",
     "a": {
       "q": "What is the period of \\(y = 2 \\cos(4x) + 5\\)?",
@@ -11249,6 +12712,191 @@ MADE_BANKS.mat = {
       "In one period from \\(-\\frac{\\pi}{2}\\) to \\(\\frac{\\pi}{2}\\), the asymptotes are at \\(x = -\\frac{\\pi}{2}\\) and \\(x = \\frac{\\pi}{2}\\). Others are at \\(x = \\frac{3\\pi}{2}\\), \\(x = -\\frac{3\\pi}{2}\\) and so on, every \\(\\pi\\) apart.",
       "The graph crosses the x-axis where \\(\\sin x = 0\\), so at \\(x = 0, \\pi, -\\pi, 2\\pi\\) and so on. Between each pair of asymptotes, the curve rises from left to right."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = \\tan x\\). Between each pair of vertical asymptotes the curve rises from left to right. The dashed asymptotes \\(x = -\\frac{\\pi}{2}\\) and \\(x = \\frac{\\pi}{2}\\), marked on the x-axis, bound the period from \\(-\\frac{\\pi}{2}\\) to \\(\\frac{\\pi}{2}\\). The curve crosses the x-axis at \\(-\\pi\\), 0 and \\(\\pi\\).",
+        "x": {"min": -4.7124, "max": 4.7124, "label": "\\(x\\)", "step": 1.5708, "nums": false},
+        "y": {"min": -6, "max": 6, "label": "\\(y\\)", "step": 2},
+        "items": [
+          {"type": "asymptote", "x": -1.5708},
+          {"type": "asymptote", "x": 1.5708},
+          {"type": "text", "at": [-1.5708, 0], "label": "\\(-\\frac{\\pi}{2}\\)", "pos": "below-left"},
+          {"type": "text", "at": [1.5708, 0], "label": "\\(\\frac{\\pi}{2}\\)", "pos": "below-right"},
+          {
+            "type": "curve",
+            "id": "l",
+            "points": [
+              [-4.5357, -5.6],
+              [-4.466, -3.9758],
+              [-4.3963, -3.0573],
+              [-4.3266, -2.462],
+              [-4.2569, -2.0413],
+              [-4.1872, -1.7255],
+              [-4.1175, -1.4777],
+              [-4.0477, -1.2762],
+              [-3.978, -1.1077],
+              [-3.9083, -0.9634],
+              [-3.8386, -0.8372],
+              [-3.7689, -0.725],
+              [-3.6992, -0.6237],
+              [-3.6295, -0.5307],
+              [-3.5598, -0.4444],
+              [-3.4901, -0.3634],
+              [-3.4204, -0.2863],
+              [-3.3507, -0.2122],
+              [-3.281, -0.1403],
+              [-3.2113, -0.0698],
+              [-3.1416, 0],
+              [-3.0719, 0.0698],
+              [-3.0022, 0.1403],
+              [-2.9325, 0.2122],
+              [-2.8628, 0.2863],
+              [-2.7931, 0.3634],
+              [-2.7234, 0.4444],
+              [-2.6537, 0.5307],
+              [-2.584, 0.6237],
+              [-2.5143, 0.725],
+              [-2.4445, 0.8372],
+              [-2.3748, 0.9634],
+              [-2.3051, 1.1077],
+              [-2.2354, 1.2762],
+              [-2.1657, 1.4777],
+              [-2.096, 1.7255],
+              [-2.0263, 2.0413],
+              [-1.9566, 2.462],
+              [-1.8869, 3.0573],
+              [-1.8172, 3.9758],
+              [-1.7475, 5.6]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\tan x\\)",
+            "labelAt": -1.7516,
+            "pos": "above"
+          },
+          {
+            "type": "curve",
+            "id": "m",
+            "points": [
+              [-1.3941, -5.6],
+              [-1.3244, -3.9758],
+              [-1.2547, -3.0573],
+              [-1.185, -2.462],
+              [-1.1153, -2.0413],
+              [-1.0456, -1.7255],
+              [-0.9759, -1.4777],
+              [-0.9062, -1.2762],
+              [-0.8365, -1.1077],
+              [-0.7667, -0.9634],
+              [-0.697, -0.8372],
+              [-0.6273, -0.725],
+              [-0.5576, -0.6237],
+              [-0.4879, -0.5307],
+              [-0.4182, -0.4444],
+              [-0.3485, -0.3634],
+              [-0.2788, -0.2863],
+              [-0.2091, -0.2122],
+              [-0.1394, -0.1403],
+              [-0.0697, -0.0698],
+              [0, 0],
+              [0.0697, 0.0698],
+              [0.1394, 0.1403],
+              [0.2091, 0.2122],
+              [0.2788, 0.2863],
+              [0.3485, 0.3634],
+              [0.4182, 0.4444],
+              [0.4879, 0.5307],
+              [0.5576, 0.6237],
+              [0.6273, 0.725],
+              [0.697, 0.8372],
+              [0.7667, 0.9634],
+              [0.8365, 1.1077],
+              [0.9062, 1.2762],
+              [0.9759, 1.4777],
+              [1.0456, 1.7255],
+              [1.1153, 2.0413],
+              [1.185, 2.462],
+              [1.2547, 3.0573],
+              [1.3244, 3.9758],
+              [1.3941, 5.6]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\tan x\\)",
+            "labelAt": 1.39,
+            "pos": "above"
+          },
+          {
+            "type": "curve",
+            "id": "h",
+            "points": [
+              [1.7475, -5.6],
+              [1.8172, -3.9758],
+              [1.8869, -3.0573],
+              [1.9566, -2.462],
+              [2.0263, -2.0413],
+              [2.096, -1.7255],
+              [2.1657, -1.4777],
+              [2.2354, -1.2762],
+              [2.3051, -1.1077],
+              [2.3748, -0.9634],
+              [2.4445, -0.8372],
+              [2.5143, -0.725],
+              [2.584, -0.6237],
+              [2.6537, -0.5307],
+              [2.7234, -0.4444],
+              [2.7931, -0.3634],
+              [2.8628, -0.2863],
+              [2.9325, -0.2122],
+              [3, -0.1425],
+              [3.0022, -0.1403],
+              [3.0719, -0.0698],
+              [3.1416, 0],
+              [3.2113, 0.0698],
+              [3.281, 0.1403],
+              [3.3507, 0.2122],
+              [3.4204, 0.2863],
+              [3.4901, 0.3634],
+              [3.5598, 0.4444],
+              [3.6295, 0.5307],
+              [3.6992, 0.6237],
+              [3.7689, 0.725],
+              [3.8386, 0.8372],
+              [3.9083, 0.9634],
+              [3.978, 1.1077],
+              [4.0477, 1.2762],
+              [4.1175, 1.4777],
+              [4.1872, 1.7255],
+              [4.2569, 2.0413],
+              [4.3266, 2.462],
+              [4.3963, 3.0573],
+              [4.466, 3.9758],
+              [4.5357, 5.6]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\tan x\\)",
+            "labelAt": 4.5316,
+            "pos": "above-left"
+          },
+          {
+            "type": "point",
+            "at": [-3.1416, 0],
+            "label": "\\(-\\pi\\)",
+            "pos": "above-left",
+            "on": ["l"],
+            "is": "x-intercept"
+          },
+          {"type": "point", "at": [0, 0], "label": "\\(0\\)", "pos": "above-left", "on": ["m"], "is": "x-intercept"},
+          {
+            "type": "point",
+            "at": [3.1416, 0],
+            "label": "\\(\\pi\\)",
+            "pos": "below-right",
+            "on": ["h"],
+            "is": "x-intercept"
+          }
+        ]
+      }
+    },
     "remember": "\\(\\tan x = \\sin x \\div \\cos x\\): period \\(\\pi\\), with asymptotes wherever \\(\\cos x = 0\\).",
     "a": {
       "q": "Which of these is a vertical asymptote of \\(y = \\tan x\\)?",
@@ -11281,6 +12929,86 @@ MADE_BANKS.mat = {
         "The period is the time for one full cycle, and it equals \\(2\\pi \\div n\\). Example: a tide with high 5 m, low 1 m and a 12 hour cycle has mean 3 m, amplitude 2 m and \\(n = 2\\pi \\div 12 = \\frac{\\pi}{6}\\)."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The depth of a tide against time over 24 hours. The depth goes between a low of 1 m and a high of 5 m. The mean, 3 m, is the dotted middle line, halfway between them. One full cycle takes 12 hours.",
+        "x": {"min": 0, "max": 24, "label": "Time (h)", "step": 3},
+        "y": {"min": 0, "max": 6, "label": "Depth (m)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "d",
+            "points": [
+              [0, 3],
+              [0.5, 3.5176],
+              [1, 4],
+              [1.5, 4.4142],
+              [2, 4.7321],
+              [2.5, 4.9319],
+              [3, 5],
+              [3.5, 4.9319],
+              [4, 4.7321],
+              [4.5, 4.4142],
+              [5, 4],
+              [5.5, 3.5176],
+              [6, 3],
+              [6.5, 2.4824],
+              [7, 2],
+              [7.5, 1.5858],
+              [8, 1.2679],
+              [8.5, 1.0681],
+              [9, 1],
+              [9.5, 1.0681],
+              [10, 1.2679],
+              [10.5, 1.5858],
+              [11, 2],
+              [11.5, 2.4824],
+              [12, 3],
+              [12.5, 3.5176],
+              [13, 4],
+              [13.5, 4.4142],
+              [14, 4.7321],
+              [14.5, 4.9319],
+              [15, 5],
+              [15.5, 4.9319],
+              [16, 4.7321],
+              [16.5, 4.4142],
+              [17, 4],
+              [17.5, 3.5176],
+              [18, 3],
+              [18.5, 2.4824],
+              [19, 2],
+              [19.5, 1.5858],
+              [20, 1.2679],
+              [20.5, 1.0681],
+              [21, 1],
+              [21.5, 1.0681],
+              [22, 1.2679],
+              [22.5, 1.5858],
+              [23, 2],
+              [23.5, 2.4824],
+              [24, 3]
+            ],
+            "smooth": true,
+            "label": "depth",
+            "labelAt": 13.5,
+            "pos": "left"
+          },
+          {"type": "fn", "id": "m", "expr": "3", "label": "mean 3 m", "labelAt": 21, "pos": "above", "style": "dot"},
+          {
+            "type": "point",
+            "at": [3, 5],
+            "label": "high 5 m",
+            "pos": "above-right",
+            "on": ["d"],
+            "is": "turning point"
+          },
+          {"type": "point", "at": [9, 1], "label": "low 1 m", "pos": "below", "on": ["d"], "is": "turning point"}
+        ]
+      }
+    },
     "remember": "Mean is halfway between the extremes, amplitude is half the gap, period is one cycle.",
     "a": {
       "q": "The temperature in a cool room cycles between 14°C and 22°C. What is the amplitude of a sine model for it?",
@@ -11336,6 +13064,35 @@ MADE_BANKS.mat = {
       "Example: $200 grows 10% each year, so \\(y = 200 \\times 1.1^{t}\\). After 2 years, \\(y = 200 \\times 1.21 = 242\\), which is $242.",
       "If a quantity doubles every \\(d\\) hours (its doubling time), \\(y = a \\times 2^{\\frac{t}{d}}\\). If it halves every \\(h\\) hours (its half-life), \\(y = a \\times \\left(\\frac{1}{2}\\right)^{\\frac{t}{h}}\\)."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Two exponential models that start at 200 when \\(t = 0\\). \\(y = 200 \\times 1.1^{t}\\), a 10% rise each step, curves upwards and passes through \\((2, 242)\\). \\(y = 200 \\times 0.8^{t}\\), a 20% fall each step, curves down towards 0.",
+        "x": {"min": 0, "max": 8, "label": "\\(t\\)", "step": 1},
+        "y": {"min": 0, "max": 500, "label": "\\(y\\)", "step": 100},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "200 \\times 1.1^{x}",
+            "label": "\\(y = 200 \\times 1.1^{t}\\)",
+            "labelAt": 5.4,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "d",
+            "expr": "200 \\times 0.8^{x}",
+            "label": "\\(y = 200 \\times 0.8^{t}\\)",
+            "labelAt": 4,
+            "pos": "above-right"
+          },
+          {"type": "point", "at": [0, 200], "on": ["g", "d"], "is": "intersection"},
+          {"type": "point", "at": [2, 242], "label": "\\((2, 242)\\)", "pos": "above-left", "on": ["g"]}
+        ]
+      }
+    },
     "remember": "Start value \\(a\\), then multiply by \\(b\\) each step: \\(b = 1 + \\frac{r}{100}\\) for growth, \\(b = 1 - \\frac{r}{100}\\) for decay.",
     "a": {
       "q": "A town of 4000 people grows by 3% each year. Which rule gives its population \\(P\\) after \\(t\\) years?",
@@ -11387,6 +13144,37 @@ MADE_BANKS.mat = {
       "At a stationary point, such as a peak or a dip, the tangent is flat. The gradient is zero, so the graph of f′ touches or crosses the x-axis there.",
       "Example: a curve falls until \\(x = 2\\), then rises. So f′ is negative for \\(x < 2\\), zero at \\(x = 2\\) and positive for \\(x > 2\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(y = f(x) = (x - 2)^{2} - 1\\) falls until \\(x = 2\\), then rises. Its derivative \\(y = f'(x) = 2x - 4\\) is below the x-axis for \\(x < 2\\), crosses it at \\(x = 2\\), where \\(f\\) is flat, and is above it for \\(x > 2\\).",
+        "x": {"min": -1, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -4, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "text", "at": [2, 0], "label": "\\(2\\)", "pos": "above-left"},
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "(x - 2)^{2} - 1",
+            "label": "\\(y = f(x)\\)",
+            "labelAt": 2.3,
+            "pos": "below-right"
+          },
+          {
+            "type": "fn",
+            "id": "d",
+            "expr": "2x - 4",
+            "label": "\\(y = f'(x)\\)",
+            "labelAt": 1,
+            "pos": "below-right",
+            "style": "dot"
+          },
+          {"type": "point", "at": [2, -1], "on": ["f"], "is": "turning point"},
+          {"type": "point", "at": [2, 0], "on": ["d"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "Read f′ from the slope of \\(f\\): above the axis means rising, below means falling.",
     "a": {
       "q": "The graph of \\(f\\) falls for \\(x < 1\\) and rises for \\(x > 1\\). Which describes f′?",
@@ -11397,7 +13185,53 @@ MADE_BANKS.mat = {
         "Zero for \\(x < 1\\) and positive for \\(x > 1\\)"
       ],
       "why": "A falling graph has a negative gradient, and a rising graph has a positive one. The flat point at \\(x = 1\\) gives zero. Swapping the signs is the tempting mistake.",
-      "clue": "Falling means a negative gradient."
+      "clue": "Falling means a negative gradient.",
+      "optFigs": [
+        {
+          "kind": "graph",
+          "x": {"min": -1, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+          "y": {"min": -2.5, "max": 2.5, "label": "\\(y\\)", "step": 1, "nums": false},
+          "grid": true,
+          "items": [
+            {"type": "fn", "id": "f", "expr": "x - 1"},
+            {"type": "point", "at": [1, 0], "on": ["f"]},
+            {"type": "text", "at": [1, 0], "label": "\\(1\\)", "pos": "below-right"}
+          ]
+        },
+        {
+          "kind": "graph",
+          "x": {"min": -1, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+          "y": {"min": -2.5, "max": 2.5, "label": "\\(y\\)", "step": 1, "nums": false},
+          "grid": true,
+          "items": [
+            {"type": "fn", "id": "f", "expr": "1 - x"},
+            {"type": "point", "at": [1, 0], "on": ["f"]},
+            {"type": "text", "at": [1, 0], "label": "\\(1\\)", "pos": "above"}
+          ]
+        },
+        {
+          "kind": "graph",
+          "x": {"min": -1, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+          "y": {"min": -2.5, "max": 2.5, "label": "\\(y\\)", "step": 1, "nums": false},
+          "grid": true,
+          "items": [
+            {"type": "fn", "id": "f", "expr": "-(x - 1)^{2}"},
+            {"type": "point", "at": [1, 0], "on": ["f"]},
+            {"type": "text", "at": [1, 0], "label": "\\(1\\)", "pos": "below-right"}
+          ]
+        },
+        {
+          "kind": "graph",
+          "x": {"min": -1, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+          "y": {"min": -2.5, "max": 2.5, "label": "\\(y\\)", "step": 1, "nums": false},
+          "grid": true,
+          "items": [
+            {"type": "fn", "id": "f", "expr": "\\frac{x - 1 + |x - 1|}{2}"},
+            {"type": "point", "at": [1, 0], "on": ["f"]},
+            {"type": "text", "at": [1, 0], "label": "\\(1\\)", "pos": "below-right"}
+          ]
+        }
+      ]
     },
     "b": {
       "d": 3,
@@ -11448,6 +13282,46 @@ MADE_BANKS.mat = {
       "Example: \\(f(x) = x^{3} - 8\\) with \\(x_{0} = 3\\). \\(f(3) = 19\\) and \\(f'(x) = 3x^{2}\\), so \\(f'(3) = 27\\).",
       "Then \\(x_{1} = 3 - \\frac{19}{27} \\approx 2.30\\). This is closer to the root \\(x = 2\\). The method fails if \\(f'(x_{0}) = 0\\), and a poor guess can overshoot or move away."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{3} - 8\\) and its tangent at \\(x_{0} = 3\\), the point \\((3, 19)\\). The tangent meets the x-axis at \\(x_{1} \\approx 2.30\\), which is closer than 3 to the root \\(x = 2\\).",
+        "x": {"min": 1.5, "max": 3.3, "label": "\\(x\\)", "step": 0.5, "nums": false},
+        "y": {"min": -6, "max": 22, "label": "\\(y\\)", "step": 4, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{3} - 8",
+            "label": "\\(y = x^{3} - 8\\)",
+            "labelAt": 2.22,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "t",
+            "expr": "27x - 62",
+            "domain": [2.05, 3.2],
+            "label": "tangent",
+            "labelAt": 2.17,
+            "pos": "below-right",
+            "style": "dot"
+          },
+          {"type": "point", "at": [3, 19], "label": "\\((3, 19)\\)", "pos": "above-left", "on": ["f", "t"]},
+          {
+            "type": "point",
+            "at": [2.2963, 0],
+            "label": "\\(x_{1}\\)",
+            "pos": "below-right",
+            "on": ["t"],
+            "is": "x-intercept"
+          },
+          {"type": "point", "at": [2, 0], "label": "root", "pos": "above-left", "on": ["f"], "is": "x-intercept"},
+          {"type": "text", "at": [3, 0], "label": "\\(x_{0}\\)", "pos": "below"}
+        ]
+      }
+    },
     "remember": "\\(\\text{new guess} = \\text{old guess} - \\frac{f}{f'}\\), found where the tangent meets the axis.",
     "a": {
       "q": "For \\(f(x) = x^{3} - 8\\) with \\(x_{0} = 2.5\\), what is \\(x_{1}\\) using Newton's method?",
@@ -11488,6 +13362,46 @@ MADE_BANKS.mat = {
         "These are points where the gradient is 0. A stationary point of inflection also has a curve that changes concavity, as in \\(y = x^{3}\\) at \\((0, 0)\\). A cubic can have two turning points or none."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The cubic \\(y = x^{3} - 4x\\). It crosses the x-axis at \\(x = -2\\), \\(x = 0\\) and \\(x = 2\\), and the origin is also its y-intercept.",
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -6, "max": 6, "label": "\\(y\\)", "step": 2, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{3} - 4x",
+            "label": "\\(y = x^{3} - 4x\\)",
+            "labelAt": -2.4,
+            "pos": "right"
+          },
+          {"type": "point", "at": [-2, 0], "label": "\\(-2\\)", "pos": "above-left", "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [0, 0], "label": "\\(0\\)", "pos": "above-right", "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [2, 0], "label": "\\(2\\)", "pos": "above-left", "on": ["f"], "is": "x-intercept"}
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = \\frac{1}{x^{2}}\\). It has no point at \\(x = 0\\). Both branches are above the x-axis, rising without limit near \\(x = 0\\) and getting closer to \\(y = 0\\) as \\(x\\) grows, so its asymptotes are \\(x = 0\\) and \\(y = 0\\).",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{1}{x^{2}}",
+            "breaks": [0],
+            "label": "\\(y = \\frac{1}{x^{2}}\\)",
+            "labelAt": -3,
+            "pos": "above"
+          }
+        ]
+      }
+    },
     "remember": "Polynomials have no asymptotes and a domain of all reals. Negative powers have asymptotes and leave out \\(x = 0\\).",
     "a": {
       "q": "What are the x-intercepts of \\(y = x^{3} - 9x\\)?",
@@ -11511,6 +13425,189 @@ MADE_BANKS.mat = {
       "A translation moves the asymptote with the graph. For \\(y = e^{x} + c\\), the asymptote is \\(y = c\\). For \\(y = \\log_{e}(x - h)\\), the asymptote is \\(x = h\\).",
       "Example: \\(y = e^{x} + 3\\) has asymptote \\(y = 3\\). Its y-intercept is \\(e^{0} + 3 = 4\\), so the point is \\((0, 4)\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The graphs of \\(y = e^{x}\\) and \\(y = \\log_{e} x\\), reflections of each other in the dotted line \\(y = x\\). \\(y = e^{x}\\) passes through \\((0, 1)\\) and gets closer to \\(y = 0\\) on the left. \\(y = \\log_{e} x\\) passes through \\((1, 0)\\) and gets closer to \\(x = 0\\) as \\(x\\) gets close to 0.",
+        "x": {"min": -3, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -3, "max": 5, "label": "\\(y\\)", "step": 2},
+        "grid": true,
+        "equal": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "m",
+            "expr": "x",
+            "label": "\\(y = x\\)",
+            "labelAt": 4.2,
+            "pos": "above-left",
+            "style": "dot"
+          },
+          {
+            "type": "curve",
+            "id": "e",
+            "points": [
+              [-3, 0.0498],
+              [-2.9232, 0.0538],
+              [-2.8464, 0.0581],
+              [-2.7695, 0.0627],
+              [-2.6927, 0.0677],
+              [-2.6159, 0.0731],
+              [-2.5391, 0.0789],
+              [-2.4622, 0.0852],
+              [-2.3854, 0.0921],
+              [-2.3086, 0.0994],
+              [-2.2318, 0.1073],
+              [-2.1549, 0.1159],
+              [-2.0781, 0.1252],
+              [-2.0013, 0.1352],
+              [-1.9245, 0.146],
+              [-1.8476, 0.1576],
+              [-1.7708, 0.1702],
+              [-1.694, 0.1838],
+              [-1.6172, 0.1985],
+              [-1.5403, 0.2143],
+              [-1.4635, 0.2314],
+              [-1.3867, 0.2499],
+              [-1.3099, 0.2699],
+              [-1.233, 0.2914],
+              [-1.1562, 0.3147],
+              [-1.0794, 0.3398],
+              [-1.0026, 0.3669],
+              [-0.9258, 0.3962],
+              [-0.8489, 0.4279],
+              [-0.7721, 0.462],
+              [-0.6953, 0.4989],
+              [-0.6185, 0.5388],
+              [-0.5416, 0.5818],
+              [-0.4648, 0.6283],
+              [-0.388, 0.6784],
+              [-0.3112, 0.7326],
+              [-0.2343, 0.7911],
+              [-0.1575, 0.8543],
+              [-0.0807, 0.9225],
+              [-0.0039, 0.9961],
+              [0, 1],
+              [0.073, 1.0757],
+              [0.1498, 1.1616],
+              [0.2266, 1.2543],
+              [0.3034, 1.3545],
+              [0.3803, 1.4627],
+              [0.4571, 1.5795],
+              [0.5339, 1.7056],
+              [0.6107, 1.8418],
+              [0.6876, 1.9888],
+              [0.7644, 2.1477],
+              [0.8412, 2.3191],
+              [0.918, 2.5043],
+              [0.9948, 2.7043],
+              [1, 2.7183],
+              [1.0717, 2.9203],
+              [1.1485, 3.1534],
+              [1.2253, 3.4052],
+              [1.3021, 3.6772],
+              [1.379, 3.9708],
+              [1.4558, 4.2879],
+              [1.5326, 4.6303],
+              [1.6094, 5]
+            ],
+            "smooth": true,
+            "label": "\\(y = e^{x}\\)",
+            "labelAt": 1.3,
+            "pos": "left"
+          },
+          {
+            "type": "curve",
+            "id": "l",
+            "points": [
+              [0.0498, -3],
+              [0.1323, -2.0228],
+              [0.2148, -1.5381],
+              [0.2973, -1.213],
+              [0.3798, -0.9681],
+              [0.4623, -0.7715],
+              [0.5448, -0.6073],
+              [0.6273, -0.4663],
+              [0.7098, -0.3428],
+              [0.7923, -0.2328],
+              [0.8748, -0.1337],
+              [0.9573, -0.0436],
+              [1, 0],
+              [1.0398, 0.0391],
+              [1.1223, 0.1154],
+              [1.2048, 0.1863],
+              [1.2873, 0.2526],
+              [1.3698, 0.3147],
+              [1.4523, 0.3732],
+              [1.5349, 0.4284],
+              [1.6174, 0.4808],
+              [1.6999, 0.5305],
+              [1.7824, 0.5779],
+              [1.8649, 0.6232],
+              [1.9474, 0.6665],
+              [2.0299, 0.708],
+              [2.1124, 0.7478],
+              [2.1949, 0.7861],
+              [2.2774, 0.823],
+              [2.3599, 0.8586],
+              [2.4424, 0.893],
+              [2.5249, 0.9262],
+              [2.6074, 0.9584],
+              [2.6899, 0.9895],
+              [2.7183, 1],
+              [2.7724, 1.0197],
+              [2.8549, 1.049],
+              [2.9374, 1.0775],
+              [3.0199, 1.1052],
+              [3.1024, 1.1322],
+              [3.1849, 1.1584],
+              [3.2674, 1.184],
+              [3.3499, 1.2089],
+              [3.4324, 1.2333],
+              [3.5149, 1.257],
+              [3.5974, 1.2802],
+              [3.6799, 1.3029],
+              [3.7624, 1.3251],
+              [3.845, 1.3468],
+              [3.9275, 1.368],
+              [4.01, 1.3888],
+              [4.0925, 1.4091],
+              [4.175, 1.4291],
+              [4.2575, 1.4487],
+              [4.34, 1.4679],
+              [4.4225, 1.4867],
+              [4.505, 1.5052],
+              [4.5875, 1.5233],
+              [4.67, 1.5412],
+              [4.7525, 1.5587],
+              [4.835, 1.5759],
+              [4.9175, 1.5928],
+              [5, 1.6094]
+            ],
+            "smooth": true,
+            "label": "\\(y = \\log_{e} x\\)",
+            "labelAt": 0.3,
+            "pos": "right"
+          },
+          {
+            "type": "point",
+            "at": [0, 1],
+            "label": "\\((0, 1)\\)",
+            "pos": "above-left",
+            "on": ["e"],
+            "is": "y-intercept"
+          },
+          {
+            "type": "point",
+            "at": [1, 0],
+            "label": "\\((1, 0)\\)",
+            "pos": "below-right",
+            "on": ["l"],
+            "is": "x-intercept"
+          }
+        ]
+      }
+    },
     "remember": "\\(e^{x}\\) and \\(\\log_{e} x\\) mirror each other in \\(y = x\\). Translations move the asymptote too.",
     "a": {
       "q": "What is the vertical asymptote of \\(y = \\log_{e}(x - 2)\\)?",
@@ -11543,6 +13640,178 @@ MADE_BANKS.mat = {
         "\\(y = 3 \\sin\\left(2\\left(x - \\frac{\\pi}{4}\\right)\\right) + 1\\) has amplitude 3, period \\(2\\pi \\div 2 = \\pi\\), centre line \\(y = 1\\), and a shift of \\(\\frac{\\pi}{4}\\) right. Its range is from \\(-2\\) to 4."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The wave \\(y = 3 \\sin\\left(2\\left(x - \\frac{\\pi}{4}\\right)\\right) + 1\\), solid, and \\(y = 3 \\sin(2x) + 1\\), dashed. The solid wave is the dashed one moved \\(\\frac{\\pi}{4}\\) to the right. Both have amplitude 3 and period \\(\\pi\\), and go from \\(-2\\) to 4 about the centre line \\(y = 1\\).",
+        "x": {"min": 0, "max": 6.2832, "label": "\\(x\\)", "step": 0.7854, "nums": false},
+        "y": {"min": -3, "max": 6, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "o",
+            "points": [
+              [0, 1],
+              [0.0982, 1.5853],
+              [0.1963, 2.1481],
+              [0.2945, 2.6667],
+              [0.3927, 3.1213],
+              [0.4909, 3.4944],
+              [0.589, 3.7716],
+              [0.6872, 3.9424],
+              [0.7854, 4],
+              [0.8836, 3.9424],
+              [0.9817, 3.7716],
+              [1.0799, 3.4944],
+              [1.1781, 3.1213],
+              [1.2763, 2.6667],
+              [1.3744, 2.1481],
+              [1.4726, 1.5853],
+              [1.5708, 1],
+              [1.669, 0.4147],
+              [1.7671, -0.1481],
+              [1.8653, -0.6667],
+              [1.9635, -1.1213],
+              [2.0617, -1.4944],
+              [2.1598, -1.7716],
+              [2.258, -1.9424],
+              [2.3562, -2],
+              [2.4544, -1.9424],
+              [2.5525, -1.7716],
+              [2.6507, -1.4944],
+              [2.7489, -1.1213],
+              [2.8471, -0.6667],
+              [2.9452, -0.1481],
+              [3.0434, 0.4147],
+              [3.1416, 1],
+              [3.2398, 1.5853],
+              [3.3379, 2.1481],
+              [3.4361, 2.6667],
+              [3.5343, 3.1213],
+              [3.6325, 3.4944],
+              [3.7306, 3.7716],
+              [3.8288, 3.9424],
+              [3.927, 4],
+              [4.0252, 3.9424],
+              [4.1233, 3.7716],
+              [4.2215, 3.4944],
+              [4.3197, 3.1213],
+              [4.4179, 2.6667],
+              [4.516, 2.1481],
+              [4.6142, 1.5853],
+              [4.7124, 1],
+              [4.8106, 0.4147],
+              [4.9087, -0.1481],
+              [5.0069, -0.6667],
+              [5.1051, -1.1213],
+              [5.2033, -1.4944],
+              [5.3014, -1.7716],
+              [5.3996, -1.9424],
+              [5.4978, -2],
+              [5.596, -1.9424],
+              [5.6941, -1.7716],
+              [5.7923, -1.4944],
+              [5.8905, -1.1213],
+              [5.9887, -0.6667],
+              [6.0868, -0.1481],
+              [6.185, 0.4147],
+              [6.2832, 1]
+            ],
+            "smooth": true,
+            "label": "\\(b = 0\\)",
+            "labelAt": 5.4978,
+            "pos": "below",
+            "style": "dash"
+          },
+          {
+            "type": "curve",
+            "id": "s",
+            "points": [
+              [0, -2],
+              [0.0982, -1.9424],
+              [0.1963, -1.7716],
+              [0.2945, -1.4944],
+              [0.3927, -1.1213],
+              [0.4909, -0.6667],
+              [0.589, -0.1481],
+              [0.6872, 0.4147],
+              [0.7854, 1],
+              [0.8836, 1.5853],
+              [0.9817, 2.1481],
+              [1.0799, 2.6667],
+              [1.1781, 3.1213],
+              [1.2763, 3.4944],
+              [1.3744, 3.7716],
+              [1.4726, 3.9424],
+              [1.5708, 4],
+              [1.669, 3.9424],
+              [1.7671, 3.7716],
+              [1.8653, 3.4944],
+              [1.9635, 3.1213],
+              [2.0617, 2.6667],
+              [2.1598, 2.1481],
+              [2.258, 1.5853],
+              [2.3562, 1],
+              [2.4544, 0.4147],
+              [2.5525, -0.1481],
+              [2.6507, -0.6667],
+              [2.7489, -1.1213],
+              [2.8471, -1.4944],
+              [2.9452, -1.7716],
+              [3.0434, -1.9424],
+              [3.1416, -2],
+              [3.2398, -1.9424],
+              [3.3379, -1.7716],
+              [3.4361, -1.4944],
+              [3.5343, -1.1213],
+              [3.6325, -0.6667],
+              [3.7306, -0.1481],
+              [3.8288, 0.4147],
+              [3.927, 1],
+              [4.0252, 1.5853],
+              [4.1233, 2.1481],
+              [4.2215, 2.6667],
+              [4.3197, 3.1213],
+              [4.4179, 3.4944],
+              [4.516, 3.7716],
+              [4.6142, 3.9424],
+              [4.7124, 4],
+              [4.8106, 3.9424],
+              [4.9087, 3.7716],
+              [5.0069, 3.4944],
+              [5.1051, 3.1213],
+              [5.2033, 2.6667],
+              [5.3014, 2.1481],
+              [5.3996, 1.5853],
+              [5.4978, 1],
+              [5.596, 0.4147],
+              [5.6941, -0.1481],
+              [5.7923, -0.6667],
+              [5.8905, -1.1213],
+              [5.9887, -1.4944],
+              [6.0868, -1.7716],
+              [6.185, -1.9424],
+              [6.2832, -2]
+            ],
+            "smooth": true,
+            "label": "\\(b = \\frac{\\pi}{4}\\)",
+            "labelAt": 3.1416,
+            "pos": "below"
+          },
+          {
+            "type": "arrow",
+            "from": [0.8654, 4.5],
+            "to": [1.4908, 4.5],
+            "label": "\\(\\frac{\\pi}{4}\\)",
+            "pos": "above"
+          },
+          {"type": "point", "at": [0.7854, 4], "on": ["o"], "is": "turning point"},
+          {"type": "point", "at": [1.5708, 4], "on": ["s"], "is": "turning point"},
+          {"type": "text", "at": [3.1416, 0], "label": "\\(\\pi\\)", "pos": "below-right"}
+        ]
+      }
+    },
     "remember": "\\(a\\) sets the height, \\(n\\) the period, \\(b\\) the shift right, \\(c\\) the centre line.",
     "a": {
       "q": "For \\(y = 5 \\cos(4x) - 2\\), what are the amplitude and the period?",
@@ -11655,6 +13924,48 @@ MADE_BANKS.mat = {
       "To find \\(f^{-1}\\), swap \\(x\\) and \\(y\\), then solve for \\(y\\). Example: \\(f(x) = 2x + 3\\). Swap: \\(x = 2y + 3\\). Solve: \\(y = \\frac{x - 3}{2}\\). So \\(f^{-1}(x) = \\frac{x - 3}{2}\\).",
       "\\(y = x^{2}\\) is not one-to-one, as \\(x = 2\\) and \\(x = -2\\) both give 4. Restrict the domain, such as \\(x \\ge 0\\), and it becomes one-to-one. Then the inverse is \\(f^{-1}(x) = \\sqrt{x}\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = x^{2}\\) for \\(x \\ge 0\\) and its inverse \\(y = \\sqrt{x}\\), reflections of each other in the dotted line \\(y = x\\). The point \\((2, 4)\\) on \\(y = x^{2}\\) matches \\((4, 2)\\) on \\(y = \\sqrt{x}\\). Both start at the origin.",
+        "x": {"min": -1, "max": 6, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -1, "max": 6, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "equal": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "m",
+            "expr": "x",
+            "label": "\\(y = x\\)",
+            "labelAt": 4.6,
+            "pos": "above-left",
+            "style": "dot"
+          },
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2}",
+            "domain": [0, 2.45],
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": 2.3,
+            "pos": "left"
+          },
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "\\sqrt{x}",
+            "domain": [0, 6],
+            "label": "\\(y = \\sqrt{x}\\)",
+            "labelAt": 5.25,
+            "pos": "above-left"
+          },
+          {"type": "point", "at": [2, 4], "label": "\\((2, 4)\\)", "pos": "right", "on": ["f"]},
+          {"type": "point", "at": [4, 2], "label": "\\((4, 2)\\)", "pos": "above-left", "on": ["g"]},
+          {"type": "point", "at": [0, 0], "on": ["f", "g"], "is": "intersection"}
+        ]
+      }
+    },
     "remember": "Swap \\(x\\) and \\(y\\) to find the inverse. Its domain is the range of \\(f\\).",
     "a": {
       "q": "\\(f(x) = 3x - 6\\) is a one-to-one function. What is \\(f^{-1}(x)\\)?",
@@ -11683,6 +13994,20 @@ MADE_BANKS.mat = {
       "To find a value, first check which x-interval the input is in. Then use only that rule. For \\(x = 14\\), use the second rule: \\(C(14) = 30 + 2 \\times 4 = 38\\).",
       "If the pieces meet at the boundary, the graph has no jump there. Here \\(3 \\times 10 = 30\\) and the second rule also gives 30 at \\(x = 10\\), so the graph joins up."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The taxi cost \\(C\\) in dollars against distance \\(x\\) in km. For \\(x \\le 10\\) the line \\(C = 3x\\) rises steeply. For \\(x > 10\\) the line \\(C = 30 + 2(x - 10)\\) rises less steeply. The pieces meet at \\((10, 30)\\), so the graph has no jump. The point \\((14, 38)\\) is on the second piece.",
+        "x": {"min": 0, "max": 20, "label": "Distance (km)", "step": 2},
+        "y": {"min": 0, "max": 60, "label": "Cost ($)", "step": 10},
+        "grid": true,
+        "items": [
+          {"type": "curve", "id": "c", "points": [[0, 0], [10, 30], [20, 50]]},
+          {"type": "point", "at": [10, 30], "label": "\\((10, 30)\\)", "pos": "above-left", "on": ["c"]},
+          {"type": "point", "at": [14, 38], "label": "\\((14, 38)\\)", "pos": "below-right", "on": ["c"]}
+        ]
+      }
+    },
     "remember": "Pick the rule by the interval the input falls in, then use only that rule.",
     "a": {
       "q": "A function is \\(f(x) = 2x + 1\\) for \\(x < 3\\), and \\(f(x) = 10 - x\\) for \\(x \\ge 3\\). What is f(5)?",
@@ -11832,6 +14157,63 @@ MADE_BANKS.mat = {
       ],
       "With a parameter \\(k\\), find the \\(k\\) that makes the gradients equal, then compare the y-intercepts. For \\(kx + y = 3\\) and \\(2x + y = 5\\), the gradients are \\(-k\\) and \\(-2\\), so \\(k = 2\\). The intercepts 3 and 5 differ, so \\(k = 2\\) gives no solution."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "The lines \\(y = 2x + 1\\) and \\(y = -x + 4\\). Their gradients differ, so they cross at exactly one point, \\((1, 3)\\), the one solution of the system.",
+        "x": {"min": -3, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -3, "max": 7, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "a",
+            "expr": "2x + 1",
+            "label": "\\(y = 2x + 1\\)",
+            "labelAt": 2.6,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "b",
+            "expr": "-x + 4",
+            "domain": [-3, 4.3],
+            "label": "\\(y = -x + 4\\)",
+            "labelAt": -2.63,
+            "pos": "above-right"
+          },
+          {"type": "guide", "at": [1, 3], "xLabel": "\\(1\\)", "yLabel": "\\(3\\)"},
+          {"type": "point", "at": [1, 3], "on": ["a", "b"], "is": "intersection"}
+        ]
+      },
+      "2": {
+        "kind": "graph",
+        "alt": "The lines \\(y = 2x + 1\\) and \\(y = 2x + 5\\). They have the same gradient, 2, but different y-intercepts, 1 and 5, so they are parallel and never meet: the system has no solution.",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -3, "max": 9, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "a", "expr": "2x + 1", "label": "\\(y = 2x + 1\\)", "labelAt": 2, "pos": "below-right"},
+          {"type": "fn", "id": "b", "expr": "2x + 5", "label": "\\(y = 2x + 5\\)", "labelAt": -2, "pos": "above-left"},
+          {
+            "type": "point",
+            "at": [0, 1],
+            "label": "\\((0, 1)\\)",
+            "pos": "above-left",
+            "on": ["a"],
+            "is": "y-intercept"
+          },
+          {
+            "type": "point",
+            "at": [0, 5],
+            "label": "\\((0, 5)\\)",
+            "pos": "above-left",
+            "on": ["b"],
+            "is": "y-intercept"
+          }
+        ]
+      }
+    },
     "remember": "Different gradients give one solution. Equal gradients give none or infinitely many, depending on the intercepts.",
     "a": {
       "q": "Which pair of equations has no solution?",
@@ -11860,6 +14242,29 @@ MADE_BANKS.mat = {
       "Find the midpoint \\(m\\). Keep the half of the interval where the signs still differ, and repeat. Each step halves the interval, so the answer can be found to any accuracy.",
       "Example: \\(f(x) = x^{2} - 2\\) has \\(f(1) = -1\\) and \\(f(2) = 2\\). The midpoint is 1.5 and \\(f(1.5) = 0.25\\), which is positive. The solution lies in \\([1, 1.5]\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{2} - 2\\). At \\(x = 1\\) it is below the x-axis, at \\(-1\\). At the midpoint \\(x = 1.5\\) it is just above, at 0.25, and at \\(x = 2\\) it is above, at 2. It crosses the x-axis between 1 and 1.5, so the solution is in \\([1, 1.5]\\).",
+        "x": {"min": 0.75, "max": 2.25, "label": "\\(x\\)", "step": 0.5},
+        "y": {"min": -1.5, "max": 2.5, "label": "\\(y\\)", "step": 0.5, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2} - 2",
+            "label": "\\(y = x^{2} - 2\\)",
+            "labelAt": 0.82,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [1, -1], "label": "\\(f(1) = -1\\)", "pos": "below-right", "on": ["f"]},
+          {"type": "point", "at": [1.5, 0.25], "label": "\\(f(1.5) = 0.25\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [2, 2], "label": "\\(f(2) = 2\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [1.4142, 0], "on": ["f"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "Bisection: check for a sign change, halve the interval, and keep the half with the sign change.",
     "a": {
       "q": "For \\(f(x) = x^{3} - 5\\), \\(f(1) = -4\\) and \\(f(2) = 3\\). Bisection is used on \\([1, 2]\\). Which interval holds the solution after one step?",
@@ -11930,6 +14335,36 @@ MADE_BANKS.mat = {
       "Going the other way, an antiderivative has the given graph as its gradient. Where the given graph is positive, the antiderivative rises. Where it is negative, it falls.",
       "Example: a parabola that is concave up has a derivative that is a straight line with positive gradient, crossing the x-axis at the parabola's turning point."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A concave up parabola \\(y = f(x) = (x - 1)^{2} - 2\\) and its derivative \\(y = f'(x) = 2(x - 1)\\), a straight line with positive gradient. The line crosses the x-axis at \\(x = 1\\), the x-value of the parabola's turning point.",
+        "x": {"min": -2, "max": 4, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -4, "max": 5, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "(x - 1)^{2} - 2",
+            "label": "\\(y = f(x)\\)",
+            "labelAt": -1.6,
+            "pos": "right"
+          },
+          {
+            "type": "fn",
+            "id": "d",
+            "expr": "2(x - 1)",
+            "label": "\\(y = f'(x)\\)",
+            "labelAt": -0.8,
+            "pos": "above-left",
+            "style": "dot"
+          },
+          {"type": "point", "at": [1, -2], "on": ["f"], "is": "turning point"},
+          {"type": "point", "at": [1, 0], "on": ["d"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "The original's gradient is the derivative's height.",
     "a": {
       "q": "A graph rises to a local maximum, then falls. What does its derivative graph do around the local maximum?",
@@ -11972,6 +14407,42 @@ MADE_BANKS.mat = {
         "For \\(f(x) = x^{3} - 3x\\), \\(f'(x) = 3x^{2} - 3 = 0\\) gives \\(x = -1\\) or \\(x = 1\\). \\(f' < 0\\) between them, so \\(f\\) is strictly decreasing on \\([-1, 1]\\), endpoints included."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(y = x^{3} - 3x\\). It has a local maximum at \\((-1, 2)\\) and a local minimum at \\((1, -2)\\), where \\(f'(x) = 0\\). Between them the curve falls, so \\(f\\) is strictly decreasing on \\([-1, 1]\\).",
+        "x": {"min": -2.5, "max": 3.5, "label": "\\(x\\)", "step": 0.5, "nums": false},
+        "y": {"min": -4, "max": 4, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{3} - 3x",
+            "label": "\\(y = x^{3} - 3x\\)",
+            "labelAt": 2,
+            "pos": "right"
+          },
+          {
+            "type": "point",
+            "at": [-1, 2],
+            "label": "\\((-1, 2)\\)",
+            "pos": "above",
+            "on": ["f"],
+            "is": "turning point"
+          },
+          {
+            "type": "point",
+            "at": [1, -2],
+            "label": "\\((1, -2)\\)",
+            "pos": "below",
+            "on": ["f"],
+            "is": "turning point"
+          },
+          {"type": "text", "at": [0, 0.4], "label": "decreasing", "pos": "above-right"}
+        ]
+      }
+    },
     "remember": "Set \\(f'(x) = 0\\) to find stationary points, then use the sign of \\(f'\\) to decide their nature.",
     "a": {
       "q": "What are the x-values of the stationary points of \\(f(x) = x^{2} - 6x + 5\\)?",
@@ -12120,6 +14591,30 @@ MADE_BANKS.mat = {
         "Let \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). Mean \\(= \\int_{0}^{1} 2x^{2} \\, dx = \\frac{2}{3}\\). Median: \\(m^{2} = \\frac{1}{2}\\), so \\(m = \\frac{\\sqrt{2}}{2}\\). \\(E(X^{2}) = \\int_{0}^{1} 2x^{3} \\, dx = \\frac{1}{2}\\), so \\(\\text{Var}(X) = \\frac{1}{2} - \\frac{4}{9} = \\frac{1}{18}\\)."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The density \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). The median \\(m = \\frac{\\sqrt{2}}{2} \\approx 0.71\\) splits the area under the line into two halves: the shaded triangle on the left has area \\(\\frac{1}{2}\\), and the part on the right has area \\(\\frac{1}{2}\\).",
+        "x": {"min": -0.2, "max": 1.25, "label": "\\(x\\)", "step": 0.5},
+        "y": {"min": 0, "max": 2.25, "label": "\\(y\\)", "step": 0.5},
+        "grid": true,
+        "items": [
+          {"type": "shade", "under": "f", "span": [0, 0.7071], "label": "\\(\\frac{1}{2}\\)", "at": [0.5, 0.35]},
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "2x",
+            "domain": [0, 1],
+            "label": "\\(y = 2x\\)",
+            "labelAt": 0.6,
+            "pos": "above-left"
+          },
+          {"type": "guide", "at": [1, 2], "xLabel": ""},
+          {"type": "guide", "at": [0.7071, 1.4142], "xLabel": "\\(m\\)"},
+          {"type": "text", "at": [0.86, 0.6], "label": "\\(\\frac{1}{2}\\)"}
+        ]
+      }
+    },
     "remember": "Mean uses \\(x\\) times \\(f(x)\\). Median uses half the area. Variance is \\(E(X^{2})\\) minus the mean squared.",
     "a": {
       "q": "\\(X\\) has pdf \\(f(x) = 3x^{2}\\) for \\(0 \\le x \\le 1\\), and 0 otherwise. What is \\(E(X)\\)?",
@@ -12143,6 +14638,82 @@ MADE_BANKS.mat = {
       "The value of \\(Z\\) says how many standard deviations \\(X\\) is from the mean. It is negative below the mean and positive above it.",
       "To go back, use \\(X = \\mu + \\sigma Z\\). Example: if \\(\\mu = 50\\) and \\(\\sigma = 4\\), then \\(X = 58\\) gives \\(Z = \\frac{58 - 50}{4} = 2\\). The probability \\(\\text{Pr}(X < 58)\\) equals \\(\\text{Pr}(Z < 2)\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The standard normal curve for \\(Z\\), with mean 0 and standard deviation 1. The area to the left of \\(z = 2\\) is shaded: it is \\(\\text{Pr}(Z < 2)\\), the same as \\(\\text{Pr}(X < 58)\\) when \\(\\mu = 50\\) and \\(\\sigma = 4\\).",
+        "x": {"min": -3.5, "max": 3.5, "label": "\\(z\\)", "step": 1},
+        "y": {"min": 0, "max": 0.5, "label": "\\(y\\)"},
+        "items": [
+          {"type": "shade", "under": "n", "span": [-3.5, 2], "label": "\\(\\text{Pr}(Z < 2)\\)", "at": [1, 0.04]},
+          {
+            "type": "curve",
+            "id": "n",
+            "points": [
+              [-3.5, 0.0009],
+              [-3.375, 0.0013],
+              [-3.25, 0.002],
+              [-3.125, 0.003],
+              [-3, 0.0044],
+              [-2.875, 0.0064],
+              [-2.75, 0.0091],
+              [-2.625, 0.0127],
+              [-2.5, 0.0175],
+              [-2.375, 0.0238],
+              [-2.25, 0.0317],
+              [-2.125, 0.0417],
+              [-2, 0.054],
+              [-1.875, 0.0688],
+              [-1.75, 0.0863],
+              [-1.625, 0.1065],
+              [-1.5, 0.1295],
+              [-1.375, 0.155],
+              [-1.25, 0.1826],
+              [-1.125, 0.2119],
+              [-1, 0.242],
+              [-0.875, 0.2721],
+              [-0.75, 0.3011],
+              [-0.625, 0.3282],
+              [-0.5, 0.3521],
+              [-0.375, 0.3719],
+              [-0.25, 0.3867],
+              [-0.125, 0.3958],
+              [0, 0.3989],
+              [0.125, 0.3958],
+              [0.25, 0.3867],
+              [0.375, 0.3719],
+              [0.5, 0.3521],
+              [0.625, 0.3282],
+              [0.75, 0.3011],
+              [0.875, 0.2721],
+              [1, 0.242],
+              [1.125, 0.2119],
+              [1.25, 0.1826],
+              [1.375, 0.155],
+              [1.5, 0.1295],
+              [1.625, 0.1065],
+              [1.75, 0.0863],
+              [1.875, 0.0688],
+              [2, 0.054],
+              [2.125, 0.0417],
+              [2.25, 0.0317],
+              [2.375, 0.0238],
+              [2.5, 0.0175],
+              [2.625, 0.0127],
+              [2.75, 0.0091],
+              [2.875, 0.0064],
+              [3, 0.0044],
+              [3.125, 0.003],
+              [3.25, 0.002],
+              [3.375, 0.0013],
+              [3.5, 0.0009]
+            ],
+            "smooth": true
+          },
+          {"type": "guide", "at": [2, 0.054], "xLabel": ""}
+        ]
+      }
+    },
     "remember": "\\(Z\\) counts standard deviations from the mean, so a probability for \\(X\\) equals the matching probability for \\(Z\\).",
     "a": {
       "q": "A machine fills bags with mass \\(X\\) grams, normal with mean 250 and standard deviation 8. What is \\(Z\\) for a bag of 234 g?",
@@ -15269,6 +17840,30 @@ MADE_BANKS.mat = {
       "Splitting: for \\(c\\) between \\(a\\) and \\(b\\), \\(\\int_{a}^{b} f(x) \\, dx = \\int_{a}^{c} f(x) \\, dx + \\int_{c}^{b} f(x) \\, dx\\). Example: if \\(\\int_{0}^{2} f(x) \\, dx = 5\\) and \\(\\int_{2}^{6} f(x) \\, dx = 3\\), then \\(\\int_{0}^{6} f(x) \\, dx = 8\\).",
       "Swapping the limits reverses the sign: \\(\\int_{b}^{a} f(x) \\, dx = -\\int_{a}^{b} f(x) \\, dx\\). Example: if \\(\\int_{0}^{6} f(x) \\, dx = 8\\), then \\(\\int_{6}^{0} f(x) \\, dx = -8\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The curve \\(y = \\frac{x(3 - x)}{2}\\) from \\(x = 0\\) to \\(x = 5\\). From 0 to 3 it is above the x-axis, and that area counts as positive. From 3 to 5 it is below the x-axis, and that area, hatched, counts as negative.",
+        "x": {"min": -0.5, "max": 5.5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -6, "max": 2, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "shade", "under": "f", "span": [0, 3], "label": "positive", "at": [1.5, 0.45]},
+          {"type": "shade", "under": "f", "span": [3, 5], "label": "negative", "at": [4.3, -0.8], "hatch": true},
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{x(3 - x)}{2}",
+            "domain": [0, 5.2],
+            "label": "\\(y = \\frac{x(3 - x)}{2}\\)",
+            "labelAt": 1.5,
+            "pos": "above"
+          },
+          {"type": "point", "at": [0, 0], "on": ["f"], "is": "x-intercept"},
+          {"type": "point", "at": [3, 0], "on": ["f"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "Join pieces across an interval by adding them with their signs. Swap the limits and the sign flips.",
     "a": {
       "q": "Given \\(\\int_{1}^{4} f(x) \\, dx = 7\\) and \\(\\int_{4}^{9} f(x) \\, dx = -2\\), what is \\(\\int_{1}^{9} f(x) \\, dx\\)?",
@@ -15338,6 +17933,36 @@ MADE_BANKS.mat = {
       "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top minus bottom each time.",
       "Example: \\(f(x) = x\\) and \\(g(x) = x^{2}\\) between \\(x = 0\\) and \\(x = 1\\). They meet where \\(x = x^{2}\\), at \\(x = 0\\) and \\(x = 1\\), and \\(x \\ge x^{2}\\) between them. Area \\(= \\int_{0}^{1} (x - x^{2}) \\, dx = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6}\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The line \\(y = x\\) and the curve \\(y = x^{2}\\) meet at \\((0, 0)\\) and \\((1, 1)\\). Between \\(x = 0\\) and \\(x = 1\\) the line is on top. The shaded area between them is \\(\\frac{1}{6}\\).",
+        "x": {"min": -0.4, "max": 1.6, "label": "\\(x\\)", "step": 0.5},
+        "y": {"min": -0.5, "max": 1.75, "label": "\\(y\\)", "step": 0.5, "nums": false},
+        "grid": true,
+        "items": [
+          {"type": "shade", "between": ["f", "g"], "span": [0, 1]},
+          {"type": "fn", "id": "f", "expr": "x", "label": "\\(y = x\\)", "labelAt": -0.3, "pos": "below-right"},
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "x^{2}",
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": -0.3,
+            "pos": "above-right"
+          },
+          {"type": "point", "at": [0, 0], "on": ["f", "g"], "is": "intersection"},
+          {
+            "type": "point",
+            "at": [1, 1],
+            "label": "\\((1, 1)\\)",
+            "pos": "above-left",
+            "on": ["f", "g"],
+            "is": "intersection"
+          }
+        ]
+      }
+    },
     "remember": "Area is the integral of top minus bottom, and split at every crossing.",
     "a": {
       "q": "Between \\(x = 0\\) and \\(x = 2\\), the line \\(y = 4\\) lies above the curve \\(y = x^{2}\\). Which integral gives the area between them?",

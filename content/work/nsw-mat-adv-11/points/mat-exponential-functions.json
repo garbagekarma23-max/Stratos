@@ -14,7 +14,8 @@
   "2026-11-08T08:48:36Z pictures: the owner asked for a graph at card 4",
   "2026-11-08T08:48:56Z pictures: 1 picture waiting for the check",
   "2026-11-08T09:04:26Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The point (0, 1), which the card line is mainly about, is drawn but not labelled, and the y-axis has no numbers, so a student can only find its height by counting grid lines; label it (0, 1) as (1, 2) and (3, 8) are.; At the far left and far right the curves sit within about 2 px of the x-axis and look as if they lie on it, which works against 'without touching it'; a narrower x range (such as -3 to 3) or a slightly taller y scale near 0 would keep a visible gap.; The left edge of the label y = (1/2)^x and the closing bracket of the label (3, 8) touch the curve and the dot; move each a little clear.",
-  "2026-11-08T09:20:31Z pictures: 1 picture waiting for the check"
+  "2026-11-08T09:20:31Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:24:09Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -99,6 +100,108 @@
    ],
    "Both graphs pass through \\((0, 1)\\), because \\(a^{0} = 1\\). Both stay above the x-axis and get closer to the line \\(y = 0\\) on one side without touching it. This line is the horizontal asymptote. Example: \\(y = 2^{x}\\) has points \\((0, 1)\\), \\((1, 2)\\) and \\((3, 8)\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graphs of \\(y = 2^{x}\\), which rises, and \\(y = \\left(\\frac{1}{2}\\right)^{x}\\), which falls. Both pass through \\((0, 1)\\), stay above the x-axis and get closer to \\(y = 0\\) without touching it. \\(y = 2^{x}\\) also passes through \\((1, 2)\\) and \\((3, 8)\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "2^{x}",
+      "domain": [
+       -2,
+       3.16
+      ],
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "fn",
+      "id": "d",
+      "expr": "\\left(\\frac{1}{2}\\right)^{x}",
+      "domain": [
+       -3.16,
+       2
+      ],
+      "label": "\\(y = \\left(\\frac{1}{2}\\right)^{x}\\)",
+      "labelAt": -2.9,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "g",
+       "d"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       0.3,
+       3.6
+      ],
+      "label": "\\((0, 1)\\)",
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       0.3,
+       3.2
+      ],
+      "to": [
+       0.06,
+       1.25
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "below-right",
+      "on": [
+       "g"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       8
+      ],
+      "label": "\\((3, 8)\\)",
+      "pos": "left",
+      "on": [
+       "g"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Every \\(y = a^{x}\\) passes through \\((0, 1)\\), stays above the x-axis and has \\(y = 0\\) as its asymptote.",
   "a": {
    "q": "Which statement is true for the graph of \\(y = \\left(\\frac{1}{2}\\right)^{x}\\)?",
@@ -122,22 +225,7 @@
    ],
    "why": "Both have positive bases not equal to 1, so both have y-intercept 1 and get closer to \\(y = 0\\) without touching it. The graph of \\(y = 3^{x}\\) rises but \\(y = \\left(\\frac{1}{3}\\right)^{x}\\) falls, so rising is not true for both.",
    "clue": "Think about what both graphs share, whatever the base."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "The graphs of y = 2^x (rising, growth) and y = (1/2)^x (falling, decay) on the same axes, both through (0, 1) and both approaching y = 0 without touching it, with the points (1, 2) and (3, 8) on y = 2^x from card line 4.",
-    "tries": 1,
-    "notes": [
-     [
-      "The point (0, 1), which the card line is mainly about, is drawn but not labelled, and the y-axis has no numbers, so a student can only find its height by counting grid lines; label it (0, 1) as (1, 2) and (3, 8) are.",
-      "At the far left and far right the curves sit within about 2 px of the x-axis and look as if they lie on it, which works against 'without touching it'; a narrower x range (such as -3 to 3) or a slightly taller y scale near 0 would keep a visible gap.",
-      "The left edge of the label y = (1/2)^x and the closing bracket of the label (3, 8) touch the curve and the dot; move each a little clear."
-     ]
-    ]
-   }
-  ]
+  }
  },
  "cleared_by": "checker",
  "rebalance": {
@@ -314,166 +402,7 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-08T09:04:25Z"
-  }
- ],
- "picture_draft": {
-  "title": "Exponential functions",
-  "card": [
-   "An exponential function has the form \\(y = a^{x}\\), where the base \\(a\\) is a positive number and \\(a \\ne 1\\). The variable \\(x\\) is the power.",
-   [
-    "\\(a > 1\\)",
-    "the graph rises from left to right. It is growth: \\(y\\) gets bigger as \\(x\\) increases, and \\(y\\) gets closer to 0 as \\(x\\) becomes very negative."
-   ],
-   [
-    "\\(0 < a < 1\\)",
-    "the graph falls from left to right. It is decay: \\(y\\) gets smaller as \\(x\\) increases, and \\(y\\) gets very large as \\(x\\) becomes very negative."
-   ],
-   "Both graphs pass through \\((0, 1)\\), because \\(a^{0} = 1\\). Both stay above the x-axis and get closer to the line \\(y = 0\\) on one side without touching it. This line is the horizontal asymptote. Example: \\(y = 2^{x}\\) has points \\((0, 1)\\), \\((1, 2)\\) and \\((3, 8)\\)."
-  ],
-  "cardFigs": {
-   "4": {
-    "kind": "graph",
-    "alt": "The graphs of \\(y = 2^{x}\\), which rises, and \\(y = \\left(\\frac{1}{2}\\right)^{x}\\), which falls. Both pass through \\((0, 1)\\), stay above the x-axis and get closer to \\(y = 0\\) without touching it. \\(y = 2^{x}\\) also passes through \\((1, 2)\\) and \\((3, 8)\\).",
-    "x": {
-     "min": -4,
-     "max": 4,
-     "label": "\\(x\\)",
-     "step": 1
-    },
-    "y": {
-     "min": -1,
-     "max": 9,
-     "label": "\\(y\\)",
-     "step": 1,
-     "nums": false
-    },
-    "grid": true,
-    "items": [
-     {
-      "type": "fn",
-      "id": "g",
-      "expr": "2^{x}",
-      "domain": [
-       -2,
-       3.16
-      ],
-      "label": "\\(y = 2^{x}\\)",
-      "labelAt": 2.6,
-      "pos": "left"
-     },
-     {
-      "type": "fn",
-      "id": "d",
-      "expr": "\\left(\\frac{1}{2}\\right)^{x}",
-      "domain": [
-       -3.16,
-       2
-      ],
-      "label": "\\(y = \\left(\\frac{1}{2}\\right)^{x}\\)",
-      "labelAt": -2.9,
-      "pos": "right"
-     },
-     {
-      "type": "point",
-      "at": [
-       0,
-       1
-      ],
-      "on": [
-       "g",
-       "d"
-      ],
-      "is": "intersection"
-     },
-     {
-      "type": "text",
-      "at": [
-       0.3,
-       3.6
-      ],
-      "label": "\\((0, 1)\\)",
-      "pos": "right"
-     },
-     {
-      "type": "arrow",
-      "from": [
-       0.3,
-       3.2
-      ],
-      "to": [
-       0.06,
-       1.25
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       1,
-       2
-      ],
-      "label": "\\((1, 2)\\)",
-      "pos": "below-right",
-      "on": [
-       "g"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       3,
-       8
-      ],
-      "label": "\\((3, 8)\\)",
-      "pos": "left",
-      "on": [
-       "g"
-      ]
-     }
-    ]
-   }
   },
-  "remember": "Every \\(y = a^{x}\\) passes through \\((0, 1)\\), stays above the x-axis and has \\(y = 0\\) as its asymptote.",
-  "a": {
-   "q": "Which statement is true for the graph of \\(y = \\left(\\frac{1}{2}\\right)^{x}\\)?",
-   "opts": [
-    "It falls from left to right and passes through \\((0, 1)\\)",
-    "It rises from left to right and passes through \\((0, 1)\\)",
-    "It falls from left to right and passes through \\((0, 0)\\)",
-    "It rises from left to right and passes through \\((1, 0)\\)"
-   ],
-   "why": "The base \\(\\frac{1}{2}\\) is between 0 and 1, so the graph falls. Any base to the power 0 is 1, so it passes through \\((0, 1)\\). Through \\((0, 0)\\) is wrong because \\(a^{x}\\) is never 0.",
-   "clue": "Is the base more than 1 or between 0 and 1? What is \\(a^{0}\\)?"
-  },
-  "b": {
-   "d": 3,
-   "q": "Mia graphs \\(y = 3^{x}\\) and \\(y = \\left(\\frac{1}{3}\\right)^{x}\\) on the same axes. Which statement is true for both graphs?",
-   "opts": [
-    "Both have the horizontal asymptote \\(y = 0\\)",
-    "Both rise steadily from left to right",
-    "Both cross the x-axis at the point \\(x = 1\\)",
-    "Both have the y-intercept 3 on the y-axis"
-   ],
-   "why": "Both have positive bases not equal to 1, so both have y-intercept 1 and get closer to \\(y = 0\\) without touching it. The graph of \\(y = 3^{x}\\) rises but \\(y = \\left(\\frac{1}{3}\\right)^{x}\\) falls, so rising is not true for both.",
-   "clue": "Think about what both graphs share, whatever the base."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "The graphs of y = 2^x (rising, growth) and y = (1/2)^x (falling, decay) on the same axes, both through (0, 1) and both approaching y = 0 without touching it, with the points (1, 2) and (3, 8) on y = 2^x from card line 4.",
-    "tries": 1,
-    "notes": [
-     [
-      "The point (0, 1), which the card line is mainly about, is drawn but not labelled, and the y-axis has no numbers, so a student can only find its height by counting grid lines; label it (0, 1) as (1, 2) and (3, 8) are.",
-      "At the far left and far right the curves sit within about 2 px of the x-axis and look as if they lie on it, which works against 'without touching it'; a narrower x range (such as -3 to 3) or a slightly taller y scale near 0 would keep a visible gap.",
-      "The left edge of the label y = (1/2)^x and the closing bracket of the label (3, 8) touch the curve and the dot; move each a little clear."
-     ]
-    ],
-    "waiting": true
-   }
-  ]
- },
- "pictures_waiting": [
   {
    "want": 1,
    "at": "card 4",
@@ -582,7 +511,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T09:20:31Z"
+   "made": "2026-11-08T09:20:31Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:09Z"
   }
  ]
 }

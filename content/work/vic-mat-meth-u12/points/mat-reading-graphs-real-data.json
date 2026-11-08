@@ -34,7 +34,8 @@
   "2026-11-08T08:48:33Z pictures: the owner asked for a graph at card 1",
   "2026-11-08T08:48:58Z pictures: 1 picture waiting for the check",
   "2026-11-08T09:04:29Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The x-axis numbers stop at 8: the ticks at 10 and 12 have no number, because Time (min) takes their place, so the student cannot read that the graph meets the horizontal axis at 12 minutes, which the description says and which the card's Crossing an axis line is about.; Give the x-intercept a readable value, for example by labelling the dot at (12, 0) with 12 or moving the axis label so 10 and 12 show.; The 40 on the vertical axis sits tight against the arrowhead and the Depth (cm) label; it can be read but is cramped.",
-  "2026-11-08T09:20:32Z pictures: 1 picture waiting for the check"
+  "2026-11-08T09:20:32Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:24:10Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -115,184 +116,6 @@
  "sensitive": "none",
  "flags": [],
  "final": {
-  "title": "Reading graphs of real data",
-  "card": [
-   "A graph of real data shows how one quantity changes with another, such as water depth against time. You can describe it even without a rule.",
-   [
-    "Rising or falling",
-    "Read the graph from left to right. If the line goes up, the quantity is increasing. If it goes down, the quantity is decreasing."
-   ],
-   [
-    "Levelling off",
-    "A flat section means the quantity is not changing for those inputs. The graph is steady there, and the output stays at the same value."
-   ],
-   [
-    "Crossing an axis",
-    "Where the graph meets the vertical axis, the input is 0. Where it meets the horizontal axis, the output is 0."
-   ]
-  ],
-  "remember": "Read left to right: up is increasing, down is decreasing, flat is no change, and an axis crossing means a zero.",
-  "a": {
-   "q": "A graph shows the depth of water in a tank (in cm) against time (in minutes). It is flat from 5 to 9 minutes. What happens to the depth then?",
-   "opts": [
-    "It stays the same",
-    "It rises slowly",
-    "It falls slowly",
-    "It is zero"
-   ],
-   "why": "A flat section means the output does not change for those inputs, so the depth stays the same. It is not zero, because a flat line can sit at any height. It only reaches zero where it meets the horizontal axis.",
-   "clue": "A flat line has the same height all the way along."
-  },
-  "b": {
-   "d": 3,
-   "q": "A graph shows the height of a drone (in m) above the ground against time (in s). It starts at the vertical axis at 20, falls, and meets the horizontal axis at 8. What does the point at 8 on the horizontal axis mean?",
-   "opts": [
-    "The drone lands after 8 seconds",
-    "The drone starts 8 metres above the ground",
-    "The drone lands after 20 seconds",
-    "The drone is 8 metres up after 20 seconds"
-   ],
-   "why": "On the horizontal axis the output, the height, is 0, so the drone is on the ground. The input there is 8, so this happens at 8 seconds. The 20 is the starting height, where the graph meets the vertical axis.",
-   "clue": "On the horizontal axis, which quantity is 0?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "A graph of water depth (cm) against time (min) that starts at 10 cm on the vertical axis, rises to 30 cm by 4 minutes, stays flat from 4 to 7 minutes, then falls to 0 at 12 minutes, with the rising, flat and falling parts labelled. Different numbers from both questions.",
-    "tries": 1,
-    "notes": [
-     [
-      "The x-axis numbers stop at 8: the ticks at 10 and 12 have no number, because Time (min) takes their place, so the student cannot read that the graph meets the horizontal axis at 12 minutes, which the description says and which the card's Crossing an axis line is about.",
-      "Give the x-intercept a readable value, for example by labelling the dot at (12, 0) with 12 or moving the axis label so 10 and 12 show.",
-      "The 40 on the vertical axis sits tight against the arrowhead and the Depth (cm) label; it can be read but is cramped."
-     ]
-    ]
-   }
-  ]
- },
- "cleared_by": "checker",
- "pictures": [
-  {
-   "want": 1,
-   "at": "card 1",
-   "kind": "graph",
-   "brief": "A graph of water depth (cm) against time (min) that starts at 10 cm on the vertical axis, rises to 30 cm by 4 minutes, stays flat from 4 to 7 minutes, then falls to 0 at 12 minutes, with the rising, flat and falling parts labelled. Different numbers from both questions.",
-   "figures": [
-    {
-     "kind": "graph",
-     "alt": "The depth of water in a tank against time. It starts at 10 cm on the vertical axis, rises to 30 cm at 4 minutes, stays flat at 30 cm from 4 to 7 minutes, then falls and meets the horizontal axis at 12 minutes, when the depth is 0.",
-     "x": {
-      "min": 0,
-      "max": 13,
-      "label": "Time (min)",
-      "step": 2
-     },
-     "y": {
-      "min": 0,
-      "max": 40,
-      "label": "Depth (cm)",
-      "step": 10
-     },
-     "items": [
-      {
-       "type": "curve",
-       "id": "d",
-       "points": [
-        [
-         0,
-         10
-        ],
-        [
-         4,
-         30
-        ],
-        [
-         7,
-         30
-        ],
-        [
-         12,
-         0
-        ]
-       ]
-      },
-      {
-       "type": "text",
-       "at": [
-        2.4,
-        17
-       ],
-       "label": "rising",
-       "pos": "right"
-      },
-      {
-       "type": "text",
-       "at": [
-        5.5,
-        30
-       ],
-       "label": "flat",
-       "pos": "above"
-      },
-      {
-       "type": "text",
-       "at": [
-        10,
-        12
-       ],
-       "label": "falling",
-       "pos": "above-right"
-      },
-      {
-       "type": "point",
-       "at": [
-        0,
-        10
-       ],
-       "on": [
-        "d"
-       ],
-       "is": "y-intercept"
-      },
-      {
-       "type": "point",
-       "at": [
-        12,
-        0
-       ],
-       "on": [
-        "d"
-       ],
-       "is": "x-intercept"
-      }
-     ]
-    }
-   ],
-   "by": "claude-code",
-   "made": "2026-11-08T08:48:58Z",
-   "status": "turned down",
-   "check": {
-    "want": 1,
-    "verdict": "redo",
-    "matches_text": true,
-    "agrees_with_answer": true,
-    "gives_answer_away": false,
-    "labels_correct": true,
-    "readable": false,
-    "licence_ok": true,
-    "problems": [
-     "The x-axis numbers stop at 8: the ticks at 10 and 12 have no number, because Time (min) takes their place, so the student cannot read that the graph meets the horizontal axis at 12 minutes, which the description says and which the card's Crossing an axis line is about.",
-     "Give the x-intercept a readable value, for example by labelling the dot at (12, 0) with 12 or moving the axis label so 10 and 12 show.",
-     "The 40 on the vertical axis sits tight against the arrowhead and the Depth (cm) label; it can be read but is cramped."
-    ],
-    "sure": "high"
-   },
-   "checked_by": "claude-code",
-   "checked": "2026-11-08T09:04:28Z"
-  }
- ],
- "picture_draft": {
   "title": "Reading graphs of real data",
   "card": [
    "A graph of real data shows how one quantity changes with another, such as water depth against time. You can describe it even without a rule.",
@@ -425,25 +248,128 @@
    ],
    "why": "On the horizontal axis the output, the height, is 0, so the drone is on the ground. The input there is 8, so this happens at 8 seconds. The 20 is the starting height, where the graph meets the vertical axis.",
    "clue": "On the horizontal axis, which quantity is 0?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "A graph of water depth (cm) against time (min) that starts at 10 cm on the vertical axis, rises to 30 cm by 4 minutes, stays flat from 4 to 7 minutes, then falls to 0 at 12 minutes, with the rising, flat and falling parts labelled. Different numbers from both questions.",
-    "tries": 1,
-    "notes": [
-     [
-      "The x-axis numbers stop at 8: the ticks at 10 and 12 have no number, because Time (min) takes their place, so the student cannot read that the graph meets the horizontal axis at 12 minutes, which the description says and which the card's Crossing an axis line is about.",
-      "Give the x-intercept a readable value, for example by labelling the dot at (12, 0) with 12 or moving the axis label so 10 and 12 show.",
-      "The 40 on the vertical axis sits tight against the arrowhead and the Depth (cm) label; it can be read but is cramped."
-     ]
-    ],
-    "waiting": true
-   }
-  ]
+  }
  },
- "pictures_waiting": [
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A graph of water depth (cm) against time (min) that starts at 10 cm on the vertical axis, rises to 30 cm by 4 minutes, stays flat from 4 to 7 minutes, then falls to 0 at 12 minutes, with the rising, flat and falling parts labelled. Different numbers from both questions.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The depth of water in a tank against time. It starts at 10 cm on the vertical axis, rises to 30 cm at 4 minutes, stays flat at 30 cm from 4 to 7 minutes, then falls and meets the horizontal axis at 12 minutes, when the depth is 0.",
+     "x": {
+      "min": 0,
+      "max": 13,
+      "label": "Time (min)",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 40,
+      "label": "Depth (cm)",
+      "step": 10
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "d",
+       "points": [
+        [
+         0,
+         10
+        ],
+        [
+         4,
+         30
+        ],
+        [
+         7,
+         30
+        ],
+        [
+         12,
+         0
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        2.4,
+        17
+       ],
+       "label": "rising",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        5.5,
+        30
+       ],
+       "label": "flat",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        10,
+        12
+       ],
+       "label": "falling",
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        10
+       ],
+       "on": [
+        "d"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        12,
+        0
+       ],
+       "on": [
+        "d"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:58Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The x-axis numbers stop at 8: the ticks at 10 and 12 have no number, because Time (min) takes their place, so the student cannot read that the graph meets the horizontal axis at 12 minutes, which the description says and which the card's Crossing an axis line is about.",
+     "Give the x-intercept a readable value, for example by labelling the dot at (12, 0) with 12 or moving the axis label so 10 and 12 show.",
+     "The 40 on the vertical axis sits tight against the arrowhead and the Depth (cm) label; it can be read but is cramped."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:28Z"
+  },
   {
    "want": 1,
    "at": "card 1",
@@ -543,7 +469,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T09:20:32Z"
+   "made": "2026-11-08T09:20:32Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:10Z"
   }
  ]
 }
