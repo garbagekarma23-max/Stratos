@@ -8,7 +8,12 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:37Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:53Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:22Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The label \\(y = f(x)\\) sits below the x-axis beside the origin, where both curves start, so it is not clearly attached to the dashed curve; put it beside the dashed curve away from the origin, for example near its top end, as \\(y = f(2x)\\) is placed on the solid curve.",
+  "2026-11-08T09:20:30Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:24:07Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -77,6 +82,101 @@
    "Points on the y-axis stay where they are, because dividing 0 by \\(a\\) gives 0.",
    "Example: \\((6, 4)\\) is on \\(y = f(x)\\). On \\(y = f(2x)\\), the point is \\((6 \\div 2, 4) = (3, 4)\\). Check: \\(f(2 \\times 3) = f(6) = 4\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A curve \\(y = f(x)\\), dashed, through \\((6, 4)\\), and \\(y = f(2x)\\), solid. Every \\(x\\) value is halved, so the graph is compressed towards the y-axis and \\((6, 4)\\) moves to \\((3, 4)\\). The point on the y-axis stays where it is.",
+    "x": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{x^{2}}{9}",
+      "domain": [
+       0,
+       7.3
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 5,
+      "pos": "below-right",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\frac{4x^{2}}{9}",
+      "domain": [
+       0,
+       3.65
+      ],
+      "label": "\\(y = f(2x)\\)",
+      "labelAt": 3.55,
+      "pos": "left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       5.6,
+       4
+      ],
+      "to": [
+       3.4,
+       4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       4
+      ],
+      "label": "\\((6, 4)\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       4
+      ],
+      "label": "\\((3, 4)\\)",
+      "pos": "left",
+      "on": [
+       "g"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
   "remember": "In \\(y = f(ax)\\), the \\(x\\) values are divided by \\(a\\) and the \\(y\\) values stay the same.",
   "a": {
    "q": "The point \\((8, 5)\\) is on \\(y = f(x)\\). Which point must be on \\(y = f(2x)\\)?",
@@ -139,5 +239,245 @@
     "clue": "Find the x that makes 3x equal 12."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: a curve y = f(x) through (6, 4), dashed, and y = f(2x), solid, compressed towards the y-axis, with an arrow from (6, 4) to (3, 4) and both points marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A curve \\(y = f(x)\\), dashed, through \\((6, 4)\\), and \\(y = f(2x)\\), solid. Every \\(x\\) value is halved, so the graph is compressed towards the y-axis and \\((6, 4)\\) moves to \\((3, 4)\\). The point on the y-axis stays where it is.",
+     "x": {
+      "min": -1,
+      "max": 8,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{x^{2}}{9}",
+       "domain": [
+        0,
+        7.3
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 0.36,
+       "pos": "below-right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "\\frac{4x^{2}}{9}",
+       "domain": [
+        0,
+        3.65
+       ],
+       "label": "\\(y = f(2x)\\)",
+       "labelAt": 3.55,
+       "pos": "left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        5.6,
+        4
+       ],
+       "to": [
+        3.4,
+        4
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        4
+       ],
+       "label": "\\((6, 4)\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        4
+       ],
+       "label": "\\((3, 4)\\)",
+       "pos": "left",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:53Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The label \\(y = f(x)\\) sits below the x-axis beside the origin, where both curves start, so it is not clearly attached to the dashed curve; put it beside the dashed curve away from the origin, for example near its top end, as \\(y = f(2x)\\) is placed on the solid curve."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:22Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: a curve y = f(x) through (6, 4), dashed, and y = f(2x), solid, compressed towards the y-axis, with an arrow from (6, 4) to (3, 4) and both points marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A curve \\(y = f(x)\\), dashed, through \\((6, 4)\\), and \\(y = f(2x)\\), solid. Every \\(x\\) value is halved, so the graph is compressed towards the y-axis and \\((6, 4)\\) moves to \\((3, 4)\\). The point on the y-axis stays where it is.",
+     "x": {
+      "min": -1,
+      "max": 8,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{x^{2}}{9}",
+       "domain": [
+        0,
+        7.3
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 5,
+       "pos": "below-right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "\\frac{4x^{2}}{9}",
+       "domain": [
+        0,
+        3.65
+       ],
+       "label": "\\(y = f(2x)\\)",
+       "labelAt": 3.55,
+       "pos": "left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        5.6,
+        4
+       ],
+       "to": [
+        3.4,
+        4
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        4
+       ],
+       "label": "\\((6, 4)\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        4
+       ],
+       "label": "\\((3, 4)\\)",
+       "pos": "left",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:30Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:07Z"
+  }
+ ]
 }

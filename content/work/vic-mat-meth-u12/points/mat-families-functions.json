@@ -26,7 +26,10 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: done",
   "2026-11-01T08:24:33Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:34Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T08:49:00Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:31Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -104,6 +107,66 @@
    "To find the rule for one member of the family, put a given point into the rule and solve for the parameter.",
    "Example: \\(y = ax^{2}\\) passes through \\((2, 12)\\). Then \\(12 = a \\times 2^{2}\\), so \\(12 = 4a\\) and \\(a = 3\\). The rule is \\(y = 3x^{2}\\)."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Three members of the family \\(y = ax^{2}\\). With \\(a = 3\\) the parabola is concave up and narrow. With \\(a = 1\\) it is concave up and wider. With \\(a = -1\\) it is concave down. All three have their vertex at the origin.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "p",
+      "expr": "3x^{2}",
+      "label": "\\(a = 3\\)",
+      "labelAt": -1.6,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "q",
+      "expr": "x^{2}",
+      "label": "\\(a = 1\\)",
+      "labelAt": 2.8,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "-x^{2}",
+      "label": "\\(a = -1\\)",
+      "labelAt": -2.4,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "p",
+       "q",
+       "n"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
+  },
   "remember": "A parameter names a family. A point on the graph fixes which member it is.",
   "a": {
    "q": "The graph of \\(y = ax^{2}\\) passes through \\((3, 18)\\). What is the value of \\(a\\)?",
@@ -166,5 +229,90 @@
     "clue": "Subtract the constant from both sides before dividing."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Three members of the family y = ax^2 from card line 2 on one set of axes: a = 3 (narrow, concave up), a = 1 (concave up) and a = -1 (concave down), each labelled with its value of a.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Three members of the family \\(y = ax^{2}\\). With \\(a = 3\\) the parabola is concave up and narrow. With \\(a = 1\\) it is concave up and wider. With \\(a = -1\\) it is concave down. All three have their vertex at the origin.",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -6,
+      "max": 9,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "p",
+       "expr": "3x^{2}",
+       "label": "\\(a = 3\\)",
+       "labelAt": -1.6,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "q",
+       "expr": "x^{2}",
+       "label": "\\(a = 1\\)",
+       "labelAt": 2.8,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "-x^{2}",
+       "label": "\\(a = -1\\)",
+       "labelAt": -2.4,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "p",
+        "q",
+        "n"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:00Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:31Z"
+  }
+ ]
 }

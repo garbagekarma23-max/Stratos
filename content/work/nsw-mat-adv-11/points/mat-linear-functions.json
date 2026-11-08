@@ -8,7 +8,10 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:05Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:33Z pictures: the owner asked for a graph at card 3",
+  "2026-11-08T08:48:52Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -89,6 +92,88 @@
    ],
    "Parallel lines have equal gradients. Perpendicular lines have gradients that multiply to \\(-1\\), so a line with gradient 2 is perpendicular to a line with gradient \\(-\\frac{1}{2}\\)."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The line \\(y = 2x - 5\\). It passes through \\((3, 1)\\) and crosses the y-axis at \\((0, -5)\\). From \\((3, 1)\\), a run of 1 to the right and a rise of 2 up reach \\((4, 3)\\), so the gradient is 2.",
+    "x": {
+     "min": -2,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "2x - 5",
+      "label": "\\(y = 2x - 5\\)",
+      "labelAt": 0,
+      "pos": "above-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       1
+      ],
+      "to": [
+       4,
+       1
+      ],
+      "label": "run 1",
+      "pos": "below"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       4,
+       1
+      ],
+      "to": [
+       4,
+       3
+      ],
+      "label": "rise 2",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       1
+      ],
+      "label": "\\((3, 1)\\)",
+      "pos": "above-left",
+      "on": [
+       "l"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -5
+      ],
+      "label": "\\((0, -5)\\)",
+      "pos": "below-right",
+      "on": [
+       "l"
+      ],
+      "is": "y-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Gradient is rise over run. Parallel: same \\(m\\). Perpendicular: \\(m_{1} \\times m_{2} = -1\\).",
   "a": {
    "q": "What is the gradient of the line through \\((1, 2)\\) and \\((4, 11)\\)?",
@@ -157,5 +242,112 @@
     "clue": "Flip the fraction and change the sign."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The line y = 2x - 5 from card line 3, through (3, 1) with gradient 2, its y-intercept (0, -5) marked, and a run of 1 and rise of 2 drawn from (3, 1) to (4, 3).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line \\(y = 2x - 5\\). It passes through \\((3, 1)\\) and crosses the y-axis at \\((0, -5)\\). From \\((3, 1)\\), a run of 1 to the right and a rise of 2 up reach \\((4, 3)\\), so the gradient is 2.",
+     "x": {
+      "min": -2,
+      "max": 6,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -6,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "2x - 5",
+       "label": "\\(y = 2x - 5\\)",
+       "labelAt": 0,
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        3,
+        1
+       ],
+       "to": [
+        4,
+        1
+       ],
+       "label": "run 1",
+       "pos": "below"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        4,
+        1
+       ],
+       "to": [
+        4,
+        3
+       ],
+       "label": "rise 2",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        1
+       ],
+       "label": "\\((3, 1)\\)",
+       "pos": "above-left",
+       "on": [
+        "l"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        -5
+       ],
+       "label": "\\((0, -5)\\)",
+       "pos": "below-right",
+       "on": [
+        "l"
+       ],
+       "is": "y-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:52Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:20Z"
+  }
+ ]
 }

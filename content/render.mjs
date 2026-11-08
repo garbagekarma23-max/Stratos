@@ -2,7 +2,8 @@
 // looking at one by hand: each SVG put into the page with the app's colours, 296 px wide as on a 360 px phone, in light
 // and dark, saved as PNG. It needs Playwright and its browser (cd tests && npm install).
 //   node content/render.mjs OUT_FOLDER pictures/diagrams/a.svg ...   prints {"pictures/diagrams/a.svg": ["OUT/a-light.png", ...]}
-// A .json file instead of a diagram holds one figure, such as a chart, and is drawn the same way. An image is drawn with
+// A .json file instead of a diagram holds one figure, a chart or a graph, and is drawn the same way, with its maths drawn by
+// MathLive. An image is drawn with
 // its credit, from pictures/licences.json.
 import fs from 'fs';
 import path from 'path';
@@ -18,7 +19,8 @@ fs.mkdirSync(out, {recursive: true});
 const css = fs.readFileSync(path.join(ROOT, 'src', 'style.css'), 'utf8');
 const page = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <style>${css}</style><style>body{display:block!important;width:auto!important;margin:0;padding:12px 32px;background:var(--paper);color:var(--ink);font-family:var(--f)}#w{width:296px}</style>
-<script src="lab/maths.js"></script><script src="src/06-figure.js"></script></head><body><div id="w"></div></body></html>`;
+<script>const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[c]);</script>
+<script src="lab/maths.js"></script><script src="src/05-maths-text.js"></script><script src="src/06-figure.js"></script></head><body><div id="w"></div></body></html>`;
 const name = '_render-' + process.pid + '.html';
 const exe = process.env.CHROMIUM_PATH || (fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined);
 const srv = await serve(), b = await chromium.launch(exe ? {executablePath: exe} : {}), done = {};
@@ -30,8 +32,15 @@ try {
       const p = await b.newPage({viewport: {width: 360, height: 800}, colorScheme: scheme, deviceScaleFactor: 2});
       await p.goto(srv.url + name);
       if (src.endsWith('.json')) {
+        // A graph with no description of its own is an option's graph, drawn at an option's size. Maths in a label is
+        // drawn by MathLive, as in the app.
         const fig = JSON.parse(fs.readFileSync(path.resolve(ROOT, src), 'utf8'));
-        await p.evaluate(f => { document.getElementById('w').innerHTML = FIG.html(f, 'card'); }, fig);
+        await p.evaluate(f => {
+          const w = document.getElementById('w'), opt = f.kind === 'graph' && f.alt === undefined;
+          if (opt) w.style.width = '140px';
+          w.innerHTML = FIG.html(f, opt ? 'opt' : 'card', {tx});
+        }, fig);
+        await p.waitForFunction(() => [...document.querySelectorAll('#w math-span')].every(m => m.shadowRoot && m.shadowRoot.childElementCount), null, {timeout: 8000}).catch(() => {});
       } else if (src.startsWith('pictures/images/')) {
         const recs = JSON.parse(fs.readFileSync(path.join(ROOT, 'pictures', 'licences.json'), 'utf8'));
         await p.evaluate(([s, r]) => { FIG.use(r); document.getElementById('w').innerHTML = FIG.html({kind: 'image', src: s, alt: 'An image to check.'}, 'card'); }, [src, recs]);

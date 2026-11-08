@@ -27,7 +27,10 @@
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:47Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T08:48:40Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:49:04Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:36Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -106,6 +109,69 @@
    "To find a value, first check which x-interval the input is in. Then use only that rule. For \\(x = 14\\), use the second rule: \\(C(14) = 30 + 2 \\times 4 = 38\\).",
    "If the pieces meet at the boundary, the graph has no jump there. Here \\(3 \\times 10 = 30\\) and the second rule also gives 30 at \\(x = 10\\), so the graph joins up."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The taxi cost \\(C\\) in dollars against distance \\(x\\) in km. For \\(x \\le 10\\) the line \\(C = 3x\\) rises steeply. For \\(x > 10\\) the line \\(C = 30 + 2(x - 10)\\) rises less steeply. The pieces meet at \\((10, 30)\\), so the graph has no jump. The point \\((14, 38)\\) is on the second piece.",
+    "x": {
+     "min": 0,
+     "max": 20,
+     "label": "Distance (km)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 60,
+     "label": "Cost ($)",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "c",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        10,
+        30
+       ],
+       [
+        20,
+        50
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       30
+      ],
+      "label": "\\((10, 30)\\)",
+      "pos": "above-left",
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       14,
+       38
+      ],
+      "label": "\\((14, 38)\\)",
+      "pos": "below-right",
+      "on": [
+       "c"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Pick the rule by the interval the input falls in, then use only that rule.",
   "a": {
    "q": "A function is \\(f(x) = 2x + 1\\) for \\(x < 3\\), and \\(f(x) = 10 - x\\) for \\(x \\ge 3\\). What is f(5)?",
@@ -168,5 +234,93 @@
     "clue": "Only the visits after the 8th use the second rate, and 160 is the cost of the first 8."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The taxi example on cards 2 to 4: cost C ($) against distance x (km), C = 3x up to 10 km then C = 30 + 2(x - 10), the two pieces meeting at (10, 30) with no jump, and (14, 38) from card line 3 marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The taxi cost \\(C\\) in dollars against distance \\(x\\) in km. For \\(x \\le 10\\) the line \\(C = 3x\\) rises steeply. For \\(x > 10\\) the line \\(C = 30 + 2(x - 10)\\) rises less steeply. The pieces meet at \\((10, 30)\\), so the graph has no jump. The point \\((14, 38)\\) is on the second piece.",
+     "x": {
+      "min": 0,
+      "max": 20,
+      "label": "Distance (km)",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 60,
+      "label": "Cost ($)",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "curve",
+       "id": "c",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         10,
+         30
+        ],
+        [
+         20,
+         50
+        ]
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        30
+       ],
+       "label": "\\((10, 30)\\)",
+       "pos": "above-left",
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        14,
+        38
+       ],
+       "label": "\\((14, 38)\\)",
+       "pos": "below-right",
+       "on": [
+        "c"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:04Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:36Z"
+  }
+ ]
 }

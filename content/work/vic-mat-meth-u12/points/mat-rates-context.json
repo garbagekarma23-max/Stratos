@@ -29,7 +29,10 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-08T08:48:35Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T08:49:00Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:32Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -107,6 +110,75 @@
    "A line that slopes up means the quantity is increasing. A line that slopes down means it is decreasing.",
    "Water filling a container at a steady rate: the depth rises quickly where the container is narrow and slowly where it is wide. A container with straight sides of the same width gives a straight line."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A cyclist's distance (km) against time (hours). From 0 to 1 hour the graph is steep, rising to 20 km. From 1 to 1.5 hours it is flat, so she has stopped. From 1.5 to 3 hours it rises less steeply, to 35 km, so she is riding more slowly.",
+    "x": {
+     "min": 0,
+     "max": 3.5,
+     "label": "Time (h)",
+     "step": 0.5
+    },
+    "y": {
+     "min": 0,
+     "max": 40,
+     "label": "Distance (km)",
+     "step": 10
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        20
+       ],
+       [
+        1.5,
+        20
+       ],
+       [
+        3,
+        35
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       0.45,
+       14
+      ],
+      "label": "fast",
+      "pos": "left"
+     },
+     {
+      "type": "text",
+      "at": [
+       1.25,
+       20
+      ],
+      "label": "stopped",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       2.25,
+       26
+      ],
+      "label": "slower",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
   "remember": "Read the gradient as a rate. Steeper means faster, flat means no change.",
   "a": {
    "q": "A graph of a cyclist's distance (km) against time (hours) is steepest between 2 and 3 hours. What does this show?",
@@ -132,5 +204,99 @@
    "clue": "Steep depth graph means the water level is climbing quickly."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A distance-time graph for a cyclist: a steep rise from 0 to 1 hour (20 km), flat from 1 to 1.5 hours (stopped), then a gentler rise to 35 km at 3 hours, with the steeper, flat and less steep parts labelled. Different times from question a.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A cyclist's distance (km) against time (hours). From 0 to 1 hour the graph is steep, rising to 20 km. From 1 to 1.5 hours it is flat, so she has stopped. From 1.5 to 3 hours it rises less steeply, to 35 km, so she is riding more slowly.",
+     "x": {
+      "min": 0,
+      "max": 3.5,
+      "label": "Time (h)",
+      "step": 0.5
+     },
+     "y": {
+      "min": 0,
+      "max": 40,
+      "label": "Distance (km)",
+      "step": 10
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "d",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         20
+        ],
+        [
+         1.5,
+         20
+        ],
+        [
+         3,
+         35
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        0.45,
+        14
+       ],
+       "label": "fast",
+       "pos": "left"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.25,
+        20
+       ],
+       "label": "stopped",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        2.25,
+        26
+       ],
+       "label": "slower",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:00Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:31Z"
+  }
+ ]
 }

@@ -24,7 +24,13 @@
   "2026-11-01T08:24:33Z write: failed the content check, writing again",
   "2026-11-01T08:33:52Z write: done",
   "2026-11-01T08:42:07Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:33Z pictures: the owner asked for a graph at card 1",
+  "2026-11-08T08:48:33Z pictures: the owner asked for a graph at card 3",
+  "2026-11-08T08:48:59Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T09:04:29Z pictures: 1 picture kept, 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The curve label \\(y = (x + 2)(x - 1)(x - 3)\\) sits at the bottom edge where the curve runs through its first letter y and the y-axis runs through \\((x - 3)\\), so the label is drawn over two lines; move it clear, for example to the upper right beside the rising branch near x = 3.5.; The label's anchor labelAt -2.65 gives y = (-0.65)(-3.65)(-5.65) = -13.4, below the y-axis minimum of -12, so the label is placed off the curve at the frame's edge.",
+  "2026-11-08T09:20:33Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:24:11Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -134,6 +140,137 @@
     "a bracket that appears three times, such as \\((x - 1)^{3}\\). The graph crosses the axis at a stationary point of inflection."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The cubic \\(y = (x + 2)(x - 1)(x - 3)\\). It crosses the x-axis at \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\), one crossing for each single factor.",
+    "x": {
+     "min": -3,
+     "max": 4.8,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -12,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 4,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x + 2)(x - 1)(x - 3)"
+     },
+     {
+      "type": "text",
+      "at": [
+       0.02,
+       -8
+      ],
+      "label": "\\(y = (x + 2)(x - 1)(x - 3)\\)",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "label": "\\(-2\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "label": "\\(1\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "label": "\\(3\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "The cubic \\(y = (x + 2)(x - 1)^{2}\\). At \\(x = 1\\), from the squared factor \\((x - 1)^{2}\\), the graph touches the x-axis at a turning point and turns back without crossing. At \\(x = -2\\), a single factor, it crosses.",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -5,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x + 2)(x - 1)^{2}",
+      "label": "\\(y = (x + 2)(x - 1)^{2}\\)",
+      "labelAt": -2.4,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "label": "touches",
+      "pos": "below",
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "label": "crosses",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches at a turning point, a cubed factor crosses at a point of inflection.",
   "a": {
    "q": "For \\(y = (x - 4)^{2}(x + 1)\\), what does the graph do at \\(x = 4\\)?",
@@ -205,5 +342,282 @@
     "clue": "Match each power to its own bracket, then set each bracket to zero."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The cubic y = (x + 2)(x - 1)^2, with the squared factor (x - 1)^2 from card line 3: the graph touches the x-axis at a turning point at x = 1 without crossing, and crosses at x = -2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The cubic \\(y = (x + 2)(x - 1)^{2}\\). At \\(x = 1\\), from the squared factor \\((x - 1)^{2}\\), the graph touches the x-axis at a turning point and turns back without crossing. At \\(x = -2\\), a single factor, it crosses.",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -5,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x + 2)(x - 1)^{2}",
+       "label": "\\(y = (x + 2)(x - 1)^{2}\\)",
+       "labelAt": -2.4,
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "label": "touches",
+       "pos": "below",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        0
+       ],
+       "label": "crosses",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:59Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:29Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "The cubic y = (x + 2)(x - 1)(x - 3) from card line 1, crossing the x-axis at x = -2, x = 1 and x = 3, each marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The cubic \\(y = (x + 2)(x - 1)(x - 3)\\). It crosses the x-axis at \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\), one crossing for each single factor.",
+     "x": {
+      "min": -3,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -12,
+      "max": 12,
+      "label": "\\(y\\)",
+      "step": 4,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x + 2)(x - 1)(x - 3)",
+       "label": "\\(y = (x + 2)(x - 1)(x - 3)\\)",
+       "labelAt": -2.65,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        0
+       ],
+       "label": "\\(-2\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        0
+       ],
+       "label": "\\(3\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:59Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The curve label \\(y = (x + 2)(x - 1)(x - 3)\\) sits at the bottom edge where the curve runs through its first letter y and the y-axis runs through \\((x - 3)\\), so the label is drawn over two lines; move it clear, for example to the upper right beside the rising branch near x = 3.5.",
+     "The label's anchor labelAt -2.65 gives y = (-0.65)(-3.65)(-5.65) = -13.4, below the y-axis minimum of -12, so the label is placed off the curve at the frame's edge."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:29Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "The cubic y = (x + 2)(x - 1)(x - 3) from card line 1, crossing the x-axis at x = -2, x = 1 and x = 3, each marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The cubic \\(y = (x + 2)(x - 1)(x - 3)\\). It crosses the x-axis at \\(x = -2\\), \\(x = 1\\) and \\(x = 3\\), one crossing for each single factor.",
+     "x": {
+      "min": -3,
+      "max": 4.8,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -12,
+      "max": 12,
+      "label": "\\(y\\)",
+      "step": 4,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x + 2)(x - 1)(x - 3)"
+      },
+      {
+       "type": "text",
+       "at": [
+        0.02,
+        -8
+       ],
+       "label": "\\(y = (x + 2)(x - 1)(x - 3)\\)",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        0
+       ],
+       "label": "\\(-2\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        0
+       ],
+       "label": "\\(3\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:32Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:10Z"
+  }
+ ]
 }

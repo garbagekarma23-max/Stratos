@@ -8,7 +8,10 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:07Z write: done",
   "2026-10-27T01:08:33Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:41Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:57Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:28Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -77,6 +80,93 @@
    "A density function must follow two rules. \\(f(x) \\ge 0\\) for every \\(x\\), so no area is negative. The total area under the whole curve is 1.",
    "Example: \\(f(x) = 0.25\\) for \\(0 \\le x \\le 4\\), and 0 elsewhere. The total area is \\(0.25 \\times 4 = 1\\). \\(P(1 \\le X \\le 3) = 0.25 \\times 2 = 0.5\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The density \\(f(x) = 0.25\\) for \\(0 \\le x \\le 4\\), and 0 elsewhere, a rectangle of area 1. The shaded part from \\(x = 1\\) to \\(x = 3\\) has area \\(0.25 \\times 2 = 0.5\\), which is \\(P(1 \\le X \\le 3)\\).",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 0.4,
+     "label": "\\(f(x)\\)",
+     "step": 0.05,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        0.25
+       ],
+       [
+        3,
+        0.25
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "label": "0.5",
+      "at": [
+       2,
+       0.125
+      ]
+     },
+     {
+      "type": "curve",
+      "id": "f",
+      "points": [
+       [
+        -1,
+        0
+       ],
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        0.25
+       ],
+       [
+        4,
+        0.25
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        5,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       4,
+       0.25
+      ],
+      "label": "\\(0.25\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
   "remember": "For a continuous variable, probability is area under \\(f(x)\\), and the total area is 1.",
   "a": {
    "q": "\\(f(x) = k\\) for \\(0 \\le x \\le 5\\), and 0 elsewhere, is a probability density function. What is \\(k\\)?",
@@ -139,5 +229,117 @@
     "clue": "Find the width of the interval from 7 to the end of the curve."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: the density f(x) = 0.25 for 0 <= x <= 4 as a rectangle, with the area from x = 1 to x = 3 shaded and labelled 0.5, the probability P(1 <= X <= 3).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The density \\(f(x) = 0.25\\) for \\(0 \\le x \\le 4\\), and 0 elsewhere, a rectangle of area 1. The shaded part from \\(x = 1\\) to \\(x = 3\\) has area \\(0.25 \\times 2 = 0.5\\), which is \\(P(1 \\le X \\le 3)\\).",
+     "x": {
+      "min": -1,
+      "max": 5,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 0.4,
+      "label": "\\(f(x)\\)",
+      "step": 0.05,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         1,
+         0
+        ],
+        [
+         1,
+         0.25
+        ],
+        [
+         3,
+         0.25
+        ],
+        [
+         3,
+         0
+        ]
+       ],
+       "label": "0.5",
+       "at": [
+        2,
+        0.125
+       ]
+      },
+      {
+       "type": "curve",
+       "id": "f",
+       "points": [
+        [
+         -1,
+         0
+        ],
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         0.25
+        ],
+        [
+         4,
+         0.25
+        ],
+        [
+         4,
+         0
+        ],
+        [
+         5,
+         0
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        4,
+        0.25
+       ],
+       "label": "\\(0.25\\)",
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:57Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:27Z"
+  }
+ ]
 }

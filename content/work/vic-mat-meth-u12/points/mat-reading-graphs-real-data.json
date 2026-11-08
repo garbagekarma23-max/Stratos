@@ -30,7 +30,12 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:33Z write: done",
-  "2026-11-01T08:33:51Z check: passed, cleared"
+  "2026-11-01T08:33:51Z check: passed, cleared",
+  "2026-11-08T08:48:33Z pictures: the owner asked for a graph at card 1",
+  "2026-11-08T08:48:58Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:29Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The x-axis numbers stop at 8: the ticks at 10 and 12 have no number, because Time (min) takes their place, so the student cannot read that the graph meets the horizontal axis at 12 minutes, which the description says and which the card's Crossing an axis line is about.; Give the x-intercept a readable value, for example by labelling the dot at (12, 0) with 12 or moving the axis label so 10 and 12 show.; The 40 on the vertical axis sits tight against the arrowhead and the Depth (cm) label; it can be read but is cramped.",
+  "2026-11-08T09:20:32Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:24:10Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -127,6 +132,99 @@
     "Where the graph meets the vertical axis, the input is 0. Where it meets the horizontal axis, the output is 0."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The depth of water in a tank against time. It starts at 10 cm on the vertical axis, rises to 30 cm at 4 minutes, stays flat at 30 cm from 4 to 7 minutes, then falls and meets the horizontal axis at 12 minutes, when the depth is 0.",
+    "x": {
+     "min": 0,
+     "max": 13,
+     "label": "Time (min)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 40,
+     "label": "Depth (cm)",
+     "step": 10
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        0,
+        10
+       ],
+       [
+        4,
+        30
+       ],
+       [
+        7,
+        30
+       ],
+       [
+        12,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       2.4,
+       17
+      ],
+      "label": "rising",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       5.5,
+       30
+      ],
+      "label": "flat",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       10,
+       12
+      ],
+      "label": "falling",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       10
+      ],
+      "on": [
+       "d"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       12,
+       0
+      ],
+      "label": "12",
+      "pos": "above-right",
+      "on": [
+       "d"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Read left to right: up is increasing, down is decreasing, flat is no change, and an axis crossing means a zero.",
   "a": {
    "q": "A graph shows the depth of water in a tank (in cm) against time (in minutes). It is flat from 5 to 9 minutes. What happens to the depth then?",
@@ -152,5 +250,241 @@
    "clue": "On the horizontal axis, which quantity is 0?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A graph of water depth (cm) against time (min) that starts at 10 cm on the vertical axis, rises to 30 cm by 4 minutes, stays flat from 4 to 7 minutes, then falls to 0 at 12 minutes, with the rising, flat and falling parts labelled. Different numbers from both questions.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The depth of water in a tank against time. It starts at 10 cm on the vertical axis, rises to 30 cm at 4 minutes, stays flat at 30 cm from 4 to 7 minutes, then falls and meets the horizontal axis at 12 minutes, when the depth is 0.",
+     "x": {
+      "min": 0,
+      "max": 13,
+      "label": "Time (min)",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 40,
+      "label": "Depth (cm)",
+      "step": 10
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "d",
+       "points": [
+        [
+         0,
+         10
+        ],
+        [
+         4,
+         30
+        ],
+        [
+         7,
+         30
+        ],
+        [
+         12,
+         0
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        2.4,
+        17
+       ],
+       "label": "rising",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        5.5,
+        30
+       ],
+       "label": "flat",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        10,
+        12
+       ],
+       "label": "falling",
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        10
+       ],
+       "on": [
+        "d"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        12,
+        0
+       ],
+       "on": [
+        "d"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:58Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The x-axis numbers stop at 8: the ticks at 10 and 12 have no number, because Time (min) takes their place, so the student cannot read that the graph meets the horizontal axis at 12 minutes, which the description says and which the card's Crossing an axis line is about.",
+     "Give the x-intercept a readable value, for example by labelling the dot at (12, 0) with 12 or moving the axis label so 10 and 12 show.",
+     "The 40 on the vertical axis sits tight against the arrowhead and the Depth (cm) label; it can be read but is cramped."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:28Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A graph of water depth (cm) against time (min) that starts at 10 cm on the vertical axis, rises to 30 cm by 4 minutes, stays flat from 4 to 7 minutes, then falls to 0 at 12 minutes, with the rising, flat and falling parts labelled. Different numbers from both questions.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The depth of water in a tank against time. It starts at 10 cm on the vertical axis, rises to 30 cm at 4 minutes, stays flat at 30 cm from 4 to 7 minutes, then falls and meets the horizontal axis at 12 minutes, when the depth is 0.",
+     "x": {
+      "min": 0,
+      "max": 13,
+      "label": "Time (min)",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 40,
+      "label": "Depth (cm)",
+      "step": 10
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "d",
+       "points": [
+        [
+         0,
+         10
+        ],
+        [
+         4,
+         30
+        ],
+        [
+         7,
+         30
+        ],
+        [
+         12,
+         0
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        2.4,
+        17
+       ],
+       "label": "rising",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        5.5,
+        30
+       ],
+       "label": "flat",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        10,
+        12
+       ],
+       "label": "falling",
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        10
+       ],
+       "on": [
+        "d"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        12,
+        0
+       ],
+       "label": "12",
+       "pos": "above-right",
+       "on": [
+        "d"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:32Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:10Z"
+  }
+ ]
 }

@@ -13,7 +13,9 @@
   "2026-11-06T05:46:30Z maths: written in LaTeX (by hand)",
   "2026-11-06T12:00:00Z figures: graphs added by hand (the figures pilot)",
   "2026-11-07T00:00:00Z figures: the double root graph changed to (x - 1)^2(x + 2), so it no longer labels x = 2 as crossing under a line about (x - 2)^2, after the graph check",
-  "2026-11-07T15:41:42Z figures: labels and axis numbers moved off the curves, after the content check learned to look for words on a curve"
+  "2026-11-07T15:41:42Z figures: labels and axis numbers moved off the curves, after the content check learned to look for words on a curve",
+  "2026-11-08T08:51:05Z text: card line 4 now uses (x - 1)^2 from y = (x - 1)^2(x + 2), the curve its graph shows, in place of (x - 2)^2",
+  "2026-11-08T08:53:21Z figures: the card 4 graph label moved below the x-axis, off the y-axis, after the check of the new card line"
  ],
  "sent": {
   "write": 2,
@@ -177,7 +179,7 @@
    "A cubic such as \\(y = (x - 1)(x + 2)(x - 3)\\) has roots where each factor is zero: \\(x = 1\\), \\(-2\\) and \\(3\\). The graph crosses the x-axis at each of these single roots.",
    "For the y-intercept, put \\(x = 0\\). Here \\(y = (-1)(2)(-3) = 6\\), so the graph meets the y-axis at \\((0, 6)\\).",
    "Look at the sign of the \\(x^{3}\\) term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
-   "A squared factor, such as \\((x - 2)^{2}\\), gives a double root. The graph touches the x-axis there, at a turning point. A cubed factor, such as \\((x - 2)^{3}\\), still crosses, but flattens as it passes through."
+   "A squared factor, such as \\((x - 1)^{2}\\) in \\(y = (x - 1)^{2}(x + 2)\\), gives a double root at \\(x = 1\\). The graph touches the x-axis there, at a turning point. A cubed factor, such as \\((x - 1)^{3}\\), still crosses, but flattens as it passes through."
   ],
   "remember": "Single roots cross, a double (squared) root touches at a turning point, \\(x = 0\\) gives the y-intercept and the sign of the \\(x^{3}\\) term sets the ends.",
   "a": {
@@ -306,10 +308,7 @@
      {
       "type": "fn",
       "id": "f",
-      "expr": "(x - 1)^{2}(x + 2)",
-      "label": "\\(y = (x - 1)^{2}(x + 2)\\)",
-      "labelAt": 2.05,
-      "pos": "left"
+      "expr": "(x - 1)^{2}(x + 2)"
      },
      {
       "type": "point",
@@ -354,6 +353,15 @@
       ],
       "label": "\\(-2\\)",
       "pos": "below-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       0.3,
+       -2.5
+      ],
+      "label": "\\(y = (x - 1)^{2}(x + 2)\\)",
+      "pos": "right"
      }
     ]
    }
@@ -429,5 +437,94 @@
    "why": "Put \\(x = 0\\): \\(y = -(-1)(4)(-2) = -8\\). Here \\((-1)(4)(-2) = 8\\), and the minus sign in front makes it \\(-8\\). Dropping that sign gives 8, which is wrong.",
    "clue": "Put \\(x = 0\\) and keep the minus sign at the front."
   }
- }
+ },
+ "edits": [
+  {
+   "part": "card 4",
+   "before": "A squared factor, such as \\((x - 2)^{2}\\), gives a double root. The graph touches the x-axis there, at a turning point. A cubed factor, such as \\((x - 2)^{3}\\), still crosses, but flattens as it passes through.",
+   "after": "A squared factor, such as \\((x - 1)^{2}\\) in \\(y = (x - 1)^{2}(x + 2)\\), gives a double root at \\(x = 1\\). The graph touches the x-axis there, at a turning point. A cubed factor, such as \\((x - 1)^{3}\\), still crosses, but flattens as it passes through.",
+   "by": "claude-code",
+   "why": "The graph under card line 4 shows y = (x - 1)^2(x + 2), so the example names that factor.",
+   "at_time": "2026-11-08T08:51:05Z"
+  }
+ ],
+ "figures_before": [
+  {
+   "card 4": {
+    "kind": "graph",
+    "alt": "The cubic \\(y = (x - 1)^{2}(x + 2)\\). It falls on the left and rises on the right. At the single root \\(x = -2\\) it crosses the x-axis. At the double root \\(x = 1\\) it touches the x-axis at a turning point and turns back up.",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -5,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x - 1)^{2}(x + 2)",
+      "label": "\\(y = (x - 1)^{2}(x + 2)\\)",
+      "labelAt": 2.05,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\(1\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "crosses",
+      "pos": "above-left"
+     },
+     {
+      "type": "text",
+      "at": [
+       1,
+       -1.2
+      ],
+      "label": "touches",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       -2,
+       0
+      ],
+      "label": "\\(-2\\)",
+      "pos": "below-right"
+     }
+    ]
+   },
+   "why": "the curve label crossed the y-axis",
+   "at_time": "2026-11-08T08:53:21Z"
+  }
+ ]
 }

@@ -30,7 +30,10 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:04Z write: done",
   "2026-11-01T15:05:29Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:41Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:49:06Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:39Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -132,6 +135,76 @@
     "Let \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). Mean \\(= \\int_{0}^{1} 2x^{2} \\, dx = \\frac{2}{3}\\). Median: \\(m^{2} = \\frac{1}{2}\\), so \\(m = \\frac{\\sqrt{2}}{2}\\). \\(E(X^{2}) = \\int_{0}^{1} 2x^{3} \\, dx = \\frac{1}{2}\\), so \\(\\text{Var}(X) = \\frac{1}{2} - \\frac{4}{9} = \\frac{1}{18}\\)."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The density \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). The median \\(m = \\frac{\\sqrt{2}}{2} \\approx 0.71\\) splits the area under the line into two halves: the shaded triangle on the left has area \\(\\frac{1}{2}\\), and the part on the right has area \\(\\frac{1}{2}\\).",
+    "x": {
+     "min": -0.2,
+     "max": 1.25,
+     "label": "\\(x\\)",
+     "step": 0.5
+    },
+    "y": {
+     "min": 0,
+     "max": 2.25,
+     "label": "\\(y\\)",
+     "step": 0.5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "shade",
+      "under": "f",
+      "span": [
+       0,
+       0.7071
+      ],
+      "label": "\\(\\frac{1}{2}\\)",
+      "at": [
+       0.5,
+       0.35
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x",
+      "domain": [
+       0,
+       1
+      ],
+      "label": "\\(y = 2x\\)",
+      "labelAt": 0.6,
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       1,
+       2
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.7071,
+       1.4142
+      ],
+      "xLabel": "\\(m\\)"
+     },
+     {
+      "type": "text",
+      "at": [
+       0.86,
+       0.6
+      ],
+      "label": "\\(\\frac{1}{2}\\)"
+     }
+    ]
+   }
+  },
   "remember": "Mean uses \\(x\\) times \\(f(x)\\). Median uses half the area. Variance is \\(E(X^{2})\\) minus the mean squared.",
   "a": {
    "q": "\\(X\\) has pdf \\(f(x) = 3x^{2}\\) for \\(0 \\le x \\le 1\\), and 0 otherwise. What is \\(E(X)\\)?",
@@ -206,5 +279,100 @@
     "clue": "Set the area from 0 to m equal to 1/2, then solve for m."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: the density f(x) = 2x on [0, 1], with the median m = sqrt(2)/2 marked by a guide, splitting the area under the line into two halves of 1/2 each, the left half shaded.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The density \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). The median \\(m = \\frac{\\sqrt{2}}{2} \\approx 0.71\\) splits the area under the line into two halves: the shaded triangle on the left has area \\(\\frac{1}{2}\\), and the part on the right has area \\(\\frac{1}{2}\\).",
+     "x": {
+      "min": -0.2,
+      "max": 1.25,
+      "label": "\\(x\\)",
+      "step": 0.5
+     },
+     "y": {
+      "min": 0,
+      "max": 2.25,
+      "label": "\\(y\\)",
+      "step": 0.5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "shade",
+       "under": "f",
+       "span": [
+        0,
+        0.7071
+       ],
+       "label": "\\(\\frac{1}{2}\\)",
+       "at": [
+        0.5,
+        0.35
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2x",
+       "domain": [
+        0,
+        1
+       ],
+       "label": "\\(y = 2x\\)",
+       "labelAt": 0.6,
+       "pos": "above-left"
+      },
+      {
+       "type": "guide",
+       "at": [
+        1,
+        2
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "guide",
+       "at": [
+        0.7071,
+        1.4142
+       ],
+       "xLabel": "\\(m\\)"
+      },
+      {
+       "type": "text",
+       "at": [
+        0.86,
+        0.6
+       ],
+       "label": "\\(\\frac{1}{2}\\)"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:06Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:39Z"
+  }
+ ]
 }

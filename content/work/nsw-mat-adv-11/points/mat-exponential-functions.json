@@ -10,7 +10,12 @@
   "2026-10-27T01:08:32Z check: passed, cleared",
   "2026-10-29T11:03:05Z rebalance: new wrong options for question b, waiting for the check",
   "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:36Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:56Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:26Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The point (0, 1), which the card line is mainly about, is drawn but not labelled, and the y-axis has no numbers, so a student can only find its height by counting grid lines; label it (0, 1) as (1, 2) and (3, 8) are.; At the far left and far right the curves sit within about 2 px of the x-axis and look as if they lie on it, which works against 'without touching it'; a narrower x range (such as -3 to 3) or a slightly taller y scale near 0 would keep a visible gap.; The left edge of the label y = (1/2)^x and the closing bracket of the label (3, 8) touch the curve and the dot; move each a little clear.",
+  "2026-11-08T09:20:31Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:24:09Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -95,6 +100,108 @@
    ],
    "Both graphs pass through \\((0, 1)\\), because \\(a^{0} = 1\\). Both stay above the x-axis and get closer to the line \\(y = 0\\) on one side without touching it. This line is the horizontal asymptote. Example: \\(y = 2^{x}\\) has points \\((0, 1)\\), \\((1, 2)\\) and \\((3, 8)\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graphs of \\(y = 2^{x}\\), which rises, and \\(y = \\left(\\frac{1}{2}\\right)^{x}\\), which falls. Both pass through \\((0, 1)\\), stay above the x-axis and get closer to \\(y = 0\\) without touching it. \\(y = 2^{x}\\) also passes through \\((1, 2)\\) and \\((3, 8)\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "2^{x}",
+      "domain": [
+       -2,
+       3.16
+      ],
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "fn",
+      "id": "d",
+      "expr": "\\left(\\frac{1}{2}\\right)^{x}",
+      "domain": [
+       -3.16,
+       2
+      ],
+      "label": "\\(y = \\left(\\frac{1}{2}\\right)^{x}\\)",
+      "labelAt": -2.9,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "g",
+       "d"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       0.3,
+       3.6
+      ],
+      "label": "\\((0, 1)\\)",
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       0.3,
+       3.2
+      ],
+      "to": [
+       0.06,
+       1.25
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "below-right",
+      "on": [
+       "g"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       8
+      ],
+      "label": "\\((3, 8)\\)",
+      "pos": "left",
+      "on": [
+       "g"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Every \\(y = a^{x}\\) passes through \\((0, 1)\\), stays above the x-axis and has \\(y = 0\\) as its asymptote.",
   "a": {
    "q": "Which statement is true for the graph of \\(y = \\left(\\frac{1}{2}\\right)^{x}\\)?",
@@ -193,5 +300,233 @@
     "clue": "Think about what both graphs share, whatever the base."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The graphs of y = 2^x (rising, growth) and y = (1/2)^x (falling, decay) on the same axes, both through (0, 1) and both approaching y = 0 without touching it, with the points (1, 2) and (3, 8) on y = 2^x from card line 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graphs of \\(y = 2^{x}\\), which rises, and \\(y = \\left(\\frac{1}{2}\\right)^{x}\\), which falls. Both pass through \\((0, 1)\\), stay above the x-axis and get closer to \\(y = 0\\) without touching it. \\(y = 2^{x}\\) also passes through \\((1, 2)\\) and \\((3, 8)\\).",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -1,
+      "max": 9,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "2^{x}",
+       "label": "\\(y = 2^{x}\\)",
+       "labelAt": 2.6,
+       "pos": "left"
+      },
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "\\left(\\frac{1}{2}\\right)^{x}",
+       "label": "\\(y = \\left(\\frac{1}{2}\\right)^{x}\\)",
+       "labelAt": -2.9,
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        1
+       ],
+       "on": [
+        "g",
+        "d"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        2
+       ],
+       "label": "\\((1, 2)\\)",
+       "pos": "above-left",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        8
+       ],
+       "label": "\\((3, 8)\\)",
+       "pos": "left",
+       "on": [
+        "g"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:56Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The point (0, 1), which the card line is mainly about, is drawn but not labelled, and the y-axis has no numbers, so a student can only find its height by counting grid lines; label it (0, 1) as (1, 2) and (3, 8) are.",
+     "At the far left and far right the curves sit within about 2 px of the x-axis and look as if they lie on it, which works against 'without touching it'; a narrower x range (such as -3 to 3) or a slightly taller y scale near 0 would keep a visible gap.",
+     "The left edge of the label y = (1/2)^x and the closing bracket of the label (3, 8) touch the curve and the dot; move each a little clear."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:25Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The graphs of y = 2^x (rising, growth) and y = (1/2)^x (falling, decay) on the same axes, both through (0, 1) and both approaching y = 0 without touching it, with the points (1, 2) and (3, 8) on y = 2^x from card line 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graphs of \\(y = 2^{x}\\), which rises, and \\(y = \\left(\\frac{1}{2}\\right)^{x}\\), which falls. Both pass through \\((0, 1)\\), stay above the x-axis and get closer to \\(y = 0\\) without touching it. \\(y = 2^{x}\\) also passes through \\((1, 2)\\) and \\((3, 8)\\).",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -1,
+      "max": 9,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "2^{x}",
+       "domain": [
+        -2,
+        3.16
+       ],
+       "label": "\\(y = 2^{x}\\)",
+       "labelAt": 2.6,
+       "pos": "left"
+      },
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "\\left(\\frac{1}{2}\\right)^{x}",
+       "domain": [
+        -3.16,
+        2
+       ],
+       "label": "\\(y = \\left(\\frac{1}{2}\\right)^{x}\\)",
+       "labelAt": -2.9,
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        1
+       ],
+       "on": [
+        "g",
+        "d"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "text",
+       "at": [
+        0.3,
+        3.6
+       ],
+       "label": "\\((0, 1)\\)",
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        0.3,
+        3.2
+       ],
+       "to": [
+        0.06,
+        1.25
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        2
+       ],
+       "label": "\\((1, 2)\\)",
+       "pos": "below-right",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        8
+       ],
+       "label": "\\((3, 8)\\)",
+       "pos": "left",
+       "on": [
+        "g"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:31Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:09Z"
+  }
+ ]
 }

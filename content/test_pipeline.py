@@ -1529,6 +1529,24 @@ def picture_tests(tmp, repo, printed):
     one = W.load('tpc-one')
     check(one['final']['cardFigs']['1'] == dg2 and 'wants' not in one['final'] and one['pictures'][-1]['status'] == 'replaced' and one['pictures'][-1]['figures'] == [dg],
           'one it keeps takes the old one\'s place, and the old one is marked replaced, for publish to take out once no point shows it')
+    # a graph: written as data, with no file or record, and drawn for the checker
+    code, out = go('want-picture', outline, '--point', 'tpc-held', '--at', 'a', '--kind', 'graph', '--brief', 'The parabola y = x squared, with its vertex at the origin.')
+    check(code == 0 and W.load('tpc-held')['final']['wants'][-1]['kind'] == 'graph', 'want-picture takes a graph')
+    go('cc-picture', 'export')
+    gr = {'kind': 'graph', 'alt': 'The parabola \\(y = x^{2}\\), with its vertex at the origin.', 'x': {'min': -3, 'max': 3, 'label': '\\(x\\)', 'step': 1},
+          'y': {'min': -2, 'max': 9, 'label': '\\(y\\)', 'step': 2}, 'items': [{'type': 'fn', 'id': 'f', 'expr': 'x^{2}'}, {'type': 'point', 'at': [0, 0], 'on': ['f'], 'is': 'turning point'}]}
+    answer('tpc-held', {'pictures': [{'want': 1, 'skip': '', 'figures': [dict(gr, kind='chart')], 'records': {}}]})
+    code, out = go('cc-picture', 'import')
+    check('asked for a graph, but the answer has chart' in out, 'a graph want needs a graph')
+    answer('tpc-held', {'pictures': [{'want': 1, 'skip': '', 'figures': [gr], 'records': {}}]})
+    code, out = go('cc-picture', 'import')
+    code, out = go('cc-picture-check', 'export')
+    gtask = open(os.path.join(cfolder, 'tst-pic', 'tpc-held.md'), encoding='utf-8').read()
+    check(W.load('tpc-held')['picture_draft']['a']['fig'] == gr and 'Its figure, as data: ' in gtask and 'x^{2}' in gtask,
+          'a graph goes into a copy of the point to wait for the check, which gets it as data')
+    answer2('tpc-held', {'pictures': [ok]})
+    go('cc-picture-check', 'import')
+    check(W.load('tpc-held')['final']['a']['fig'] == gr, 'a graph the check keeps goes into the point')
     shutil.rmtree(folder, ignore_errors=True); shutil.rmtree(cfolder, ignore_errors=True)
     for d in ('images', 'diagrams'): shutil.rmtree(os.path.join(repo, 'pictures', d))
     pipeline.write_json(os.path.join(repo, 'pictures', 'licences.json'), {'images': {}, 'diagrams': {}})

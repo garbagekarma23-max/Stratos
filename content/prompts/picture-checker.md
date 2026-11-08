@@ -7,9 +7,11 @@ For each picture, check:
 - gives_answer_away: true if the picture under a question shows the answer outright, so the question no longer tests anything.
 - labels_correct: every label names the right part and is spelled as the card spells it.
 - readable: on a 360 px phone every label can be read and nothing overlaps or runs off the edge. Look at the drawing of it as the app shows it, in light and dark.
-- licence_ok: for an image, open its source page and check its creator, its licence (only Public domain, CC0 1.0, CC BY or CC BY-SA are allowed) and that it is what the record says it is. False if the page gives another licence, the creator is wrong, the image is from a textbook, an exam or a site that does not give an open licence, or you cannot tell. A diagram drawn for Stratos (CC BY 4.0, credited to Stratos) and a chart are true.
+- licence_ok: for an image, open its source page and check its creator, its licence (only Public domain, CC0 1.0, CC BY or CC BY-SA are allowed) and that it is what the record says it is. False if the page gives another licence, the creator is wrong, the image is from a textbook, an exam or a site that does not give an open licence, or you cannot tell. A diagram drawn for Stratos (CC BY 4.0, credited to Stratos), a chart and a graph are true.
 - problems: each thing that is wrong or should change, in one plain sentence each. Empty when there is nothing.
 - sure: high only when you have looked at the picture and are certain of every check. medium or low otherwise.
 - verdict: keep when everything above is right, redo when it should be made again with the problems fixed, drop when this picture should not be on the point at all.
+
+For a graph or chart, work out every number it shows from its data and the text: each intercept, turning point, asymptote, labelled point and stat. A curve given as points must follow the function the text names. An option's graph must show exactly what its option's text says.
 
 Be strict. A picture stays only when you are highly sure and find nothing wrong.

@@ -31,7 +31,11 @@
   "2026-11-01T08:14:07Z write: failed the content check, writing again",
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:33Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T08:48:34Z pictures: the owner asked for a graph at card 3",
+  "2026-11-08T08:48:59Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T09:04:30Z pictures: 2 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -122,6 +126,109 @@
    ],
    "Example: \\(y = \\frac{1}{x}\\) has no point at \\(x = 0\\). When \\(x = 2\\), \\(y = \\frac{1}{2}\\). When \\(x = -2\\), \\(y = -\\frac{1}{2}\\)."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The graphs of \\(y = \\frac{1}{x}\\) and \\(y = \\frac{1}{x^{2}}\\). Neither has a point at \\(x = 0\\), and both get closer to the y-axis and the x-axis without touching them. \\(y = \\frac{1}{x}\\) has one branch in the top right and one in the bottom left. \\(y = \\frac{1}{x^{2}}\\) has both branches above the x-axis.",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -2.5,
+     "max": 2.5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "\\frac{1}{x}",
+      "breaks": [
+       0
+      ],
+      "label": "\\(y = \\frac{1}{x}\\)",
+      "labelAt": -1.8,
+      "pos": "below-left"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "\\frac{1}{x^{2}}",
+      "breaks": [
+       0
+      ],
+      "label": "\\(y = \\frac{1}{x^{2}}\\)",
+      "labelAt": -0.9,
+      "pos": "above-left",
+      "style": "dot"
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\sqrt{x}\\). It starts at the origin, \\((0, 0)\\), and rises to the right through \\((4, 2)\\). It has no part to the left of the y-axis, because \\(x\\) cannot be negative.",
+    "x": {
+     "min": -2,
+     "max": 9,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\sqrt{x}",
+      "domain": [
+       0,
+       9
+      ],
+      "label": "\\(y = \\sqrt{x}\\)",
+      "labelAt": 7,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "\\((0, 0)\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       2
+      ],
+      "label": "\\((4, 2)\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "The values a power function cannot use, such as \\(x = 0\\) for \\(\\frac{1}{x}\\) or negative \\(x\\) for \\(\\sqrt{x}\\), set its shape.",
   "a": {
    "q": "Which statement is true for the graph of \\(y = \\frac{1}{x^{2}}\\)?",
@@ -190,5 +297,158 @@
     "clue": "Which x-value would put a negative number under the root?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The graphs of y = 1/x and y = 1/x^2 from card line 2 on the same axes, each labelled: 1/x with branches in opposite quadrants, 1/x^2 with both branches above the x-axis, both with the y-axis and y = 0 as asymptotes.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graphs of \\(y = \\frac{1}{x}\\) and \\(y = \\frac{1}{x^{2}}\\). Neither has a point at \\(x = 0\\), and both get closer to the y-axis and the x-axis without touching them. \\(y = \\frac{1}{x}\\) has one branch in the top right and one in the bottom left. \\(y = \\frac{1}{x^{2}}\\) has both branches above the x-axis.",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "\\frac{1}{x}",
+       "breaks": [
+        0
+       ],
+       "label": "\\(y = \\frac{1}{x}\\)",
+       "labelAt": -1.8,
+       "pos": "below-left"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "\\frac{1}{x^{2}}",
+       "breaks": [
+        0
+       ],
+       "label": "\\(y = \\frac{1}{x^{2}}\\)",
+       "labelAt": -0.9,
+       "pos": "above-left",
+       "style": "dot"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:59Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:29Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The graph of y = sqrt(x) from card line 3, starting at (0, 0) and rising to the right, with (4, 2) marked and nothing to the left of the y-axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\sqrt{x}\\). It starts at the origin, \\((0, 0)\\), and rises to the right through \\((4, 2)\\). It has no part to the left of the y-axis, because \\(x\\) cannot be negative.",
+     "x": {
+      "min": -2,
+      "max": 9,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 4,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\sqrt{x}",
+       "domain": [
+        0,
+        9
+       ],
+       "label": "\\(y = \\sqrt{x}\\)",
+       "labelAt": 7,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "label": "\\((0, 0)\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        2
+       ],
+       "label": "\\((4, 2)\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:59Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:29Z"
+  }
+ ]
 }

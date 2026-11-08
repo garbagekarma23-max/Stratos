@@ -31,7 +31,13 @@
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:47Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:39Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T08:48:39Z pictures: the owner asked for a graph at card 3",
+  "2026-11-08T08:49:03Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T09:04:35Z pictures: 2 pictures turned down. Picture 1 (graph at card 2): redo, high sure. The label for the intercept at x = -2 sits to the left of its dot on the x-axis, so its minus sign lies on top of the axis line and blends into it; in both light and dark it can be read as 2, so move the label off the axis (for example below-left or above-left of the dot).. Picture 2 (graph at card 3): redo, high sure. The curve label y = 1/x^2, placed below the curve near the bottom left, has its denominator x^2 cut off at the bottom in both the light and dark drawings, so the label reads as an incomplete fraction; move it higher, for example above the left branch around x = -3, y = 1.",
+  "2026-11-08T09:20:35Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T09:24:14Z pictures: 2 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -134,6 +140,108 @@
     "These are points where the gradient is 0. A stationary point of inflection also has a curve that changes concavity, as in \\(y = x^{3}\\) at \\((0, 0)\\). A cubic can have two turning points or none."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The cubic \\(y = x^{3} - 4x\\). It crosses the x-axis at \\(x = -2\\), \\(x = 0\\) and \\(x = 2\\), and the origin is also its y-intercept.",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{3} - 4x",
+      "label": "\\(y = x^{3} - 4x\\)",
+      "labelAt": -2.4,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "label": "\\(-2\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "\\(0\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "label": "\\(2\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\frac{1}{x^{2}}\\). It has no point at \\(x = 0\\). Both branches are above the x-axis, rising without limit near \\(x = 0\\) and getting closer to \\(y = 0\\) as \\(x\\) grows, so its asymptotes are \\(x = 0\\) and \\(y = 0\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{1}{x^{2}}",
+      "breaks": [
+       0
+      ],
+      "label": "\\(y = \\frac{1}{x^{2}}\\)",
+      "labelAt": -3,
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Polynomials have no asymptotes and a domain of all reals. Negative powers have asymptotes and leave out \\(x = 0\\).",
   "a": {
    "q": "What are the x-intercepts of \\(y = x^{3} - 9x\\)?",
@@ -208,5 +316,311 @@
     "clue": "Look for the function where x = 0 is not in the domain."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The cubic y = x^3 - 4x from card line 2, crossing the x-axis at x = -2, 0 and 2, each marked, with no asymptotes.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The cubic \\(y = x^{3} - 4x\\). It crosses the x-axis at \\(x = -2\\), \\(x = 0\\) and \\(x = 2\\), and the origin is also its y-intercept.",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -6,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{3} - 4x",
+       "label": "\\(y = x^{3} - 4x\\)",
+       "labelAt": -2.4,
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        0
+       ],
+       "label": "\\(-2\\)",
+       "pos": "left",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "label": "\\(0\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0
+       ],
+       "label": "\\(2\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:03Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label for the intercept at x = -2 sits to the left of its dot on the x-axis, so its minus sign lies on top of the axis line and blends into it; in both light and dark it can be read as 2, so move the label off the axis (for example below-left or above-left of the dot)."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:35Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The power function y = 1/x^2 from card line 3, with both branches above the x-axis and the asymptotes x = 0 and y = 0.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\frac{1}{x^{2}}\\). It has no point at \\(x = 0\\). Both branches are above the x-axis, rising without limit near \\(x = 0\\) and getting closer to \\(y = 0\\) as \\(x\\) grows, so its asymptotes are \\(x = 0\\) and \\(y = 0\\).",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{1}{x^{2}}",
+       "breaks": [
+        0
+       ],
+       "label": "\\(y = \\frac{1}{x^{2}}\\)",
+       "labelAt": -3.6,
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:03Z",
+   "status": "turned down",
+   "check": {
+    "want": 2,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The curve label y = 1/x^2, placed below the curve near the bottom left, has its denominator x^2 cut off at the bottom in both the light and dark drawings, so the label reads as an incomplete fraction; move it higher, for example above the left branch around x = -3, y = 1."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:35Z"
+  },
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The cubic y = x^3 - 4x from card line 2, crossing the x-axis at x = -2, 0 and 2, each marked, with no asymptotes.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The cubic \\(y = x^{3} - 4x\\). It crosses the x-axis at \\(x = -2\\), \\(x = 0\\) and \\(x = 2\\), and the origin is also its y-intercept.",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -6,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{3} - 4x",
+       "label": "\\(y = x^{3} - 4x\\)",
+       "labelAt": -2.4,
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        0
+       ],
+       "label": "\\(-2\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "label": "\\(0\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0
+       ],
+       "label": "\\(2\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:35Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:13Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The power function y = 1/x^2 from card line 3, with both branches above the x-axis and the asymptotes x = 0 and y = 0.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\frac{1}{x^{2}}\\). It has no point at \\(x = 0\\). Both branches are above the x-axis, rising without limit near \\(x = 0\\) and getting closer to \\(y = 0\\) as \\(x\\) grows, so its asymptotes are \\(x = 0\\) and \\(y = 0\\).",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{1}{x^{2}}",
+       "breaks": [
+        0
+       ],
+       "label": "\\(y = \\frac{1}{x^{2}}\\)",
+       "labelAt": -3,
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:35Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:13Z"
+  }
+ ]
 }

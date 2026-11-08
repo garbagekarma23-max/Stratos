@@ -22,7 +22,12 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: done",
   "2026-11-01T08:24:33Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:35Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:49:01Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:32Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The 2π label at the end of the x-axis runs straight into the axis label x, so it reads as \"2πx\"; put 2π below the axis at its tick, clear of the x label.; The 5π/6 label sits above the x-axis with its denominator 6 on the axis line, so the 6 is cut by the line; place it below the axis like π/6.; The 5π/6 label is set to the left of its tick, so it is centred nearer 3π/4 than under the dot at 5π/6; centre it under its point.",
+  "2026-11-08T09:20:34Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:24:12Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The 6 under the 5π in the label at x = 5π/6 is cut off at the bottom in both light and dark, and the whole fraction sits lower than the π/6 label beside it, so give that label room (or move it) so the whole fraction shows.. Now waiting for you: graph at card 4"
  ],
  "sent": {
   "match": 1,
@@ -123,7 +128,25 @@
    ],
    "why": "\\(\\frac{4\\pi}{3} = \\pi + \\frac{\\pi}{3}\\), which is in quadrant 3, where cosine is negative. So \\(\\cos\\left(\\frac{4\\pi}{3}\\right) = -\\cos\\left(\\frac{\\pi}{3}\\right) = -\\frac{1}{2}\\). The option \\(-\\frac{\\sqrt{3}}{2}\\) is tempting, but it is the value of \\(\\sin\\left(\\frac{4\\pi}{3}\\right)\\) and \\(\\cos\\left(\\frac{7\\pi}{6}\\right)\\), not of \\(\\cos\\left(\\frac{4\\pi}{3}\\right)\\).",
    "clue": "Write \\(\\frac{4\\pi}{3}\\) as \\(\\pi + \\frac{\\pi}{3}\\), then check the quadrant."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The graph of y = sin x from 0 to 2 pi with the line y = 1/2 crossing it at x = pi/6 and x = 5pi/6, both marked, to show sin(5pi/6) = sin(pi/6) = 1/2 from card line 4.",
+    "tries": 2,
+    "notes": [
+     [
+      "The 2π label at the end of the x-axis runs straight into the axis label x, so it reads as \"2πx\"; put 2π below the axis at its tick, clear of the x label.",
+      "The 5π/6 label sits above the x-axis with its denominator 6 on the axis line, so the 6 is cut by the line; place it below the axis like π/6.",
+      "The 5π/6 label is set to the left of its tick, so it is centred nearer 3π/4 than under the dot at 5π/6; centre it under its point."
+     ],
+     [
+      "The 6 under the 5π in the label at x = 5π/6 is cut off at the bottom in both light and dark, and the whole fraction sits lower than the π/6 label beside it, so give that label room (or move it) so the whole fraction shows."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -162,5 +185,653 @@
     "clue": "Write 4π/3 as π + π/3, then check the quadrant."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The graph of y = sin x from 0 to 2 pi with the line y = 1/2 crossing it at x = pi/6 and x = 5pi/6, both marked, to show sin(5pi/6) = sin(pi/6) = 1/2 from card line 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\sin x\\) from 0 to \\(2\\pi\\), and the line \\(y = \\frac{1}{2}\\). The line meets the curve at \\(x = \\frac{\\pi}{6}\\) and \\(x = \\frac{5\\pi}{6}\\), mirror images about \\(x = \\frac{\\pi}{2}\\), so \\(\\sin\\left(\\frac{5\\pi}{6}\\right) = \\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\).",
+     "x": {
+      "min": 0,
+      "max": 6.9,
+      "label": "\\(x\\)",
+      "step": 0.5236,
+      "nums": false
+     },
+     "y": {
+      "min": -1.5,
+      "max": 1.5,
+      "label": "\\(y\\)",
+      "step": 0.5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         0.1309,
+         0.1305
+        ],
+        [
+         0.2618,
+         0.2588
+        ],
+        [
+         0.3927,
+         0.3827
+        ],
+        [
+         0.5236,
+         0.5
+        ],
+        [
+         0.6545,
+         0.6088
+        ],
+        [
+         0.7854,
+         0.7071
+        ],
+        [
+         0.9163,
+         0.7934
+        ],
+        [
+         1.0472,
+         0.866
+        ],
+        [
+         1.1781,
+         0.9239
+        ],
+        [
+         1.309,
+         0.9659
+        ],
+        [
+         1.4399,
+         0.9914
+        ],
+        [
+         1.5708,
+         1
+        ],
+        [
+         1.7017,
+         0.9914
+        ],
+        [
+         1.8326,
+         0.9659
+        ],
+        [
+         1.9635,
+         0.9239
+        ],
+        [
+         2.0944,
+         0.866
+        ],
+        [
+         2.2253,
+         0.7934
+        ],
+        [
+         2.3562,
+         0.7071
+        ],
+        [
+         2.4871,
+         0.6088
+        ],
+        [
+         2.618,
+         0.5
+        ],
+        [
+         2.7489,
+         0.3827
+        ],
+        [
+         2.8798,
+         0.2588
+        ],
+        [
+         3.0107,
+         0.1305
+        ],
+        [
+         3.1416,
+         0
+        ],
+        [
+         3.2725,
+         -0.1305
+        ],
+        [
+         3.4034,
+         -0.2588
+        ],
+        [
+         3.5343,
+         -0.3827
+        ],
+        [
+         3.6652,
+         -0.5
+        ],
+        [
+         3.7961,
+         -0.6088
+        ],
+        [
+         3.927,
+         -0.7071
+        ],
+        [
+         4.0579,
+         -0.7934
+        ],
+        [
+         4.1888,
+         -0.866
+        ],
+        [
+         4.3197,
+         -0.9239
+        ],
+        [
+         4.4506,
+         -0.9659
+        ],
+        [
+         4.5815,
+         -0.9914
+        ],
+        [
+         4.7124,
+         -1
+        ],
+        [
+         4.8433,
+         -0.9914
+        ],
+        [
+         4.9742,
+         -0.9659
+        ],
+        [
+         5.1051,
+         -0.9239
+        ],
+        [
+         5.236,
+         -0.866
+        ],
+        [
+         5.3669,
+         -0.7934
+        ],
+        [
+         5.4978,
+         -0.7071
+        ],
+        [
+         5.6287,
+         -0.6088
+        ],
+        [
+         5.7596,
+         -0.5
+        ],
+        [
+         5.8905,
+         -0.3827
+        ],
+        [
+         6.0214,
+         -0.2588
+        ],
+        [
+         6.1523,
+         -0.1305
+        ],
+        [
+         6.2832,
+         0
+        ]
+       ],
+       "smooth": true,
+       "label": "\\(y = \\sin x\\)",
+       "labelAt": 1.5708,
+       "pos": "above"
+      },
+      {
+       "type": "fn",
+       "id": "h",
+       "expr": "0.5",
+       "label": "\\(y = \\frac{1}{2}\\)",
+       "labelAt": 5.4978,
+       "pos": "above",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        0.5236,
+        0.5
+       ],
+       "on": [
+        "s",
+        "h"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        2.618,
+        0.5
+       ],
+       "on": [
+        "s",
+        "h"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "text",
+       "at": [
+        0.5236,
+        0
+       ],
+       "label": "\\(\\frac{\\pi}{6}\\)",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        2.618,
+        0
+       ],
+       "label": "\\(\\frac{5\\pi}{6}\\)",
+       "pos": "left"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.1416,
+        0
+       ],
+       "label": "\\(\\pi\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.2832,
+        0
+       ],
+       "label": "\\(2\\pi\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:01Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The 2π label at the end of the x-axis runs straight into the axis label x, so it reads as \"2πx\"; put 2π below the axis at its tick, clear of the x label.",
+     "The 5π/6 label sits above the x-axis with its denominator 6 on the axis line, so the 6 is cut by the line; place it below the axis like π/6.",
+     "The 5π/6 label is set to the left of its tick, so it is centred nearer 3π/4 than under the dot at 5π/6; centre it under its point."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:32Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The graph of y = sin x from 0 to 2 pi with the line y = 1/2 crossing it at x = pi/6 and x = 5pi/6, both marked, to show sin(5pi/6) = sin(pi/6) = 1/2 from card line 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\sin x\\) from 0 to \\(2\\pi\\), and the line \\(y = \\frac{1}{2}\\). The line meets the curve at \\(x = \\frac{\\pi}{6}\\) and \\(x = \\frac{5\\pi}{6}\\), mirror images about \\(x = \\frac{\\pi}{2}\\), so \\(\\sin\\left(\\frac{5\\pi}{6}\\right) = \\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\).",
+     "x": {
+      "min": 0,
+      "max": 6.9,
+      "label": "\\(x\\)",
+      "step": 0.5236,
+      "nums": false
+     },
+     "y": {
+      "min": -1.5,
+      "max": 1.5,
+      "label": "\\(y\\)",
+      "step": 0.5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         0.1309,
+         0.1305
+        ],
+        [
+         0.2618,
+         0.2588
+        ],
+        [
+         0.3927,
+         0.3827
+        ],
+        [
+         0.5236,
+         0.5
+        ],
+        [
+         0.6545,
+         0.6088
+        ],
+        [
+         0.7854,
+         0.7071
+        ],
+        [
+         0.9163,
+         0.7934
+        ],
+        [
+         1.0472,
+         0.866
+        ],
+        [
+         1.1781,
+         0.9239
+        ],
+        [
+         1.309,
+         0.9659
+        ],
+        [
+         1.4399,
+         0.9914
+        ],
+        [
+         1.5708,
+         1
+        ],
+        [
+         1.7017,
+         0.9914
+        ],
+        [
+         1.8326,
+         0.9659
+        ],
+        [
+         1.9635,
+         0.9239
+        ],
+        [
+         2.0944,
+         0.866
+        ],
+        [
+         2.2253,
+         0.7934
+        ],
+        [
+         2.3562,
+         0.7071
+        ],
+        [
+         2.4871,
+         0.6088
+        ],
+        [
+         2.618,
+         0.5
+        ],
+        [
+         2.7489,
+         0.3827
+        ],
+        [
+         2.8798,
+         0.2588
+        ],
+        [
+         3.0107,
+         0.1305
+        ],
+        [
+         3.1416,
+         0
+        ],
+        [
+         3.2725,
+         -0.1305
+        ],
+        [
+         3.4034,
+         -0.2588
+        ],
+        [
+         3.5343,
+         -0.3827
+        ],
+        [
+         3.6652,
+         -0.5
+        ],
+        [
+         3.7961,
+         -0.6088
+        ],
+        [
+         3.927,
+         -0.7071
+        ],
+        [
+         4.0579,
+         -0.7934
+        ],
+        [
+         4.1888,
+         -0.866
+        ],
+        [
+         4.3197,
+         -0.9239
+        ],
+        [
+         4.4506,
+         -0.9659
+        ],
+        [
+         4.5815,
+         -0.9914
+        ],
+        [
+         4.7124,
+         -1
+        ],
+        [
+         4.8433,
+         -0.9914
+        ],
+        [
+         4.9742,
+         -0.9659
+        ],
+        [
+         5.1051,
+         -0.9239
+        ],
+        [
+         5.236,
+         -0.866
+        ],
+        [
+         5.3669,
+         -0.7934
+        ],
+        [
+         5.4978,
+         -0.7071
+        ],
+        [
+         5.6287,
+         -0.6088
+        ],
+        [
+         5.7596,
+         -0.5
+        ],
+        [
+         5.8905,
+         -0.3827
+        ],
+        [
+         6.0214,
+         -0.2588
+        ],
+        [
+         6.1523,
+         -0.1305
+        ],
+        [
+         6.2832,
+         0
+        ]
+       ],
+       "smooth": true,
+       "label": "\\(y = \\sin x\\)",
+       "labelAt": 1.5708,
+       "pos": "above"
+      },
+      {
+       "type": "fn",
+       "id": "h",
+       "expr": "0.5",
+       "label": "\\(y = \\frac{1}{2}\\)",
+       "labelAt": 5.4978,
+       "pos": "above",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        0.5236,
+        0.5
+       ],
+       "on": [
+        "s",
+        "h"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        2.618,
+        0.5
+       ],
+       "on": [
+        "s",
+        "h"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "text",
+       "at": [
+        0.5236,
+        0
+       ],
+       "label": "\\(\\frac{\\pi}{6}\\)",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        2.618,
+        0
+       ],
+       "label": "\\(\\frac{5\\pi}{6}\\)",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.1416,
+        0
+       ],
+       "label": "\\(\\pi\\)",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.2832,
+        0
+       ],
+       "label": "\\(2\\pi\\)",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:34Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The 6 under the 5π in the label at x = 5π/6 is cut off at the bottom in both light and dark, and the whole fraction sits lower than the π/6 label beside it, so give that label room (or move it) so the whole fraction shows."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:12Z"
+  }
+ ]
 }

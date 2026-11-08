@@ -32,7 +32,10 @@
   "2026-11-01T15:05:29Z check: flagged",
   "2026-11-01T15:14:48Z fix: suggested",
   "2026-11-02T04:35:42Z autoreview: cleared with the fix (b other)",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:40Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:49:05Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:37Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -172,6 +175,67 @@
    "Going the other way, an antiderivative has the given graph as its gradient. Where the given graph is positive, the antiderivative rises. Where it is negative, it falls.",
    "Example: a parabola that is concave up has a derivative that is a straight line with positive gradient, crossing the x-axis at the parabola's turning point."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A concave up parabola \\(y = f(x) = (x - 1)^{2} - 2\\) and its derivative \\(y = f'(x) = 2(x - 1)\\), a straight line with positive gradient. The line crosses the x-axis at \\(x = 1\\), the x-value of the parabola's turning point.",
+    "x": {
+     "min": -2,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -4,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x - 1)^{2} - 2",
+      "label": "\\(y = f(x)\\)",
+      "labelAt": -1.6,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "d",
+      "expr": "2(x - 1)",
+      "label": "\\(y = f'(x)\\)",
+      "labelAt": -0.8,
+      "pos": "above-left",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       -2
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "on": [
+       "d"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "The original's gradient is the derivative's height.",
   "a": {
    "q": "A graph rises to a local maximum, then falls. What does its derivative graph do around the local maximum?",
@@ -234,5 +298,91 @@
     "clue": "The sign of f gives the gradient of the antiderivative, not its height."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: a concave up parabola y = f(x) and its derivative y = f'(x), a straight line with positive gradient crossing the x-axis at the x-value of the parabola's turning point, each labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A concave up parabola \\(y = f(x) = (x - 1)^{2} - 2\\) and its derivative \\(y = f'(x) = 2(x - 1)\\), a straight line with positive gradient. The line crosses the x-axis at \\(x = 1\\), the x-value of the parabola's turning point.",
+     "x": {
+      "min": -2,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -4,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x - 1)^{2} - 2",
+       "label": "\\(y = f(x)\\)",
+       "labelAt": -1.6,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "2(x - 1)",
+       "label": "\\(y = f'(x)\\)",
+       "labelAt": -0.8,
+       "pos": "above-left",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        -2
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "d"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:05Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:37Z"
+  }
+ ]
 }

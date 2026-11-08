@@ -10,7 +10,11 @@
   "2026-10-27T01:08:32Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T08:46:50Z autoreview: cleared with the fix (remember other, b wording)",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T08:48:37Z pictures: the owner asked for a graph at card 1",
+  "2026-11-08T08:48:37Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:52Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T09:04:20Z pictures: 2 pictures kept"
  ],
  "sent": {
   "write": 2,
@@ -171,6 +175,125 @@
    "To test a function, replace \\(x\\) with \\(-x\\) and simplify. Compare the result with f(x) and with \\(-f(x)\\). If it matches neither, the function is neither odd nor even.",
    "Example: \\(f(x) = x^{3} + x\\). Then \\(f(-x) = (-x)^{3} + (-x) = -x^{3} - x = -(x^{3} + x) = -f(x)\\), so \\(f\\) is odd."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The even function \\(y = x^{2} - 2\\). The left side mirrors the right side in the y-axis. The points \\((-2, 2)\\) and \\((2, 2)\\) have the same \\(y\\) value, so \\(f(-2) = f(2)\\).",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 2",
+      "label": "\\(y = x^{2} - 2\\)",
+      "labelAt": -2.7,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       2
+      ],
+      "label": "\\((-2, 2)\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       2
+      ],
+      "label": "\\((2, 2)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The odd function \\(y = x^{3} + x\\). Turning it half a turn about the origin leaves it unchanged. The points \\((1, 2)\\) and \\((-1, -2)\\) match, so \\(f(-1) = -f(1)\\).",
+    "x": {
+     "min": -2,
+     "max": 2,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -5,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{3} + x",
+      "label": "\\(y = x^{3} + x\\)",
+      "labelAt": -1.4,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       -2
+      ],
+      "label": "\\((-1, -2)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Put in \\(-x\\). Equal to f(x) means even, equal to \\(-f(x)\\) means odd, and matching neither means neither.",
   "a": {
    "q": "\\(f(x) = x^{2} + 5\\). What is \\(f(-x)\\) in simplest form, and what type of function is \\(f\\)?",
@@ -239,5 +362,174 @@
     "clue": "Find f(-x), then compare it with both f(x) and -f(x)."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "An even function, y = x^2 - 2, symmetric in the y-axis, with the mirror points (-2, 2) and (2, 2) marked to show f(-x) = f(x).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The even function \\(y = x^{2} - 2\\). The left side mirrors the right side in the y-axis. The points \\((-2, 2)\\) and \\((2, 2)\\) have the same \\(y\\) value, so \\(f(-2) = f(2)\\).",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -3,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2} - 2",
+       "label": "\\(y = x^{2} - 2\\)",
+       "labelAt": -2.7,
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        2
+       ],
+       "label": "\\((-2, 2)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        2
+       ],
+       "label": "\\((2, 2)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:52Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:20Z"
+  },
+  {
+   "want": 2,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The odd function from card line 4, y = x^3 + x, with point symmetry about the origin: the points (1, 2) and (-1, -2) marked to show f(-x) = -f(x).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The odd function \\(y = x^{3} + x\\). Turning it half a turn about the origin leaves it unchanged. The points \\((1, 2)\\) and \\((-1, -2)\\) match, so \\(f(-1) = -f(1)\\).",
+     "x": {
+      "min": -2,
+      "max": 2,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -5,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{3} + x",
+       "label": "\\(y = x^{3} + x\\)",
+       "labelAt": -1.4,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        2
+       ],
+       "label": "\\((1, 2)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        -2
+       ],
+       "label": "\\((-1, -2)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:52Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:20Z"
+  }
+ ]
 }

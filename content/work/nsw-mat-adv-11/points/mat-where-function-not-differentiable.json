@@ -9,7 +9,13 @@
   "2026-10-27T01:00:05Z write: failed the content check, writing again",
   "2026-10-27T01:08:33Z write: done",
   "2026-10-27T01:22:57Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:38Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T08:48:38Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:56Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T09:04:25Z pictures: 1 picture kept, 1 picture turned down. Picture 2 (graph at card 4): redo, high sure. The label \"vertical tangent\" sits at (0.3, 2.2), near the top of the graph above the flatter part of the curve, with nothing tying it to the origin where the vertical tangent is, so a student cannot tell what it names.; The vertical tangent x = 0 at the origin is not drawn or pointed to; add an arrow from the label to (0, 0), or place the label next to the origin, so the picture shows the tangent the card describes.",
+  "2026-11-08T09:20:31Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:24:09Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 3,
@@ -97,6 +103,128 @@
     "the tangent is a vertical line, which has no gradient. For \\(f(x) = \\sqrt[3]{x}\\) at \\(x = 0\\), the curve is continuous but the gradient grows without limit. So a function can be continuous at a point and still not differentiable there."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = |x|\\). It has a sharp corner at the origin. The gradient is \\(-1\\) on the left and 1 on the right, so there is no single tangent at \\(x = 0\\).",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 3.5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "|x|",
+      "label": "\\(y = |x|\\)",
+      "labelAt": -2.7,
+      "pos": "above-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       -1.7,
+       1.7
+      ],
+      "label": "gradient \\(-1\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       1.7,
+       1.7
+      ],
+      "label": "gradient 1",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "corner",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\sqrt[3]{x}\\). It passes through the origin with no break, but there the curve is vertical: an arrow labelled vertical tangent points to \\((0, 0)\\), where the tangent is the vertical line \\(x = 0\\), which has no gradient.",
+    "x": {
+     "min": -8,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 2,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\sqrt[3]{x}",
+      "label": "\\(y = \\sqrt[3]{x}\\)",
+      "labelAt": -7.2,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "text",
+      "at": [
+       1.2,
+       -1.6
+      ],
+      "label": "vertical tangent",
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1.1,
+       -1.35
+      ],
+      "to": [
+       0.15,
+       -0.15
+      ]
+     }
+    ]
+   }
+  },
   "remember": "No derivative where the graph has a corner, a jump or a vertical tangent.",
   "a": {
    "q": "Which function is continuous at \\(x = 0\\) but has no derivative there?",
@@ -168,5 +296,254 @@
     "clue": "Check whether the graph is joined at x = 3 before comparing gradients."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The graph of y = |x| from card line 2, with the sharp corner at the origin, gradient -1 on the left and 1 on the right, labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = |x|\\). It has a sharp corner at the origin. The gradient is \\(-1\\) on the left and 1 on the right, so there is no single tangent at \\(x = 0\\).",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 3.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "|x|",
+       "label": "\\(y = |x|\\)",
+       "labelAt": -2.7,
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        -1.7,
+        1.7
+       ],
+       "label": "gradient \\(-1\\)",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.7,
+        1.7
+       ],
+       "label": "gradient 1",
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "label": "corner",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:55Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:25Z"
+  },
+  {
+   "want": 2,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The graph of y = cube root of x from card line 4: continuous through the origin, where the curve becomes vertical, so the tangent at (0, 0) is a vertical line, labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\sqrt[3]{x}\\). It passes through the origin with no break, but there the curve is vertical: the tangent at \\((0, 0)\\) is the vertical line \\(x = 0\\), which has no gradient.",
+     "x": {
+      "min": -8,
+      "max": 8,
+      "label": "\\(x\\)",
+      "step": 2,
+      "nums": false
+     },
+     "y": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\sqrt[3]{x}",
+       "label": "\\(y = \\sqrt[3]{x}\\)",
+       "labelAt": -7.2,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "text",
+       "at": [
+        0.3,
+        2.2
+       ],
+       "label": "vertical tangent",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:55Z",
+   "status": "turned down",
+   "check": {
+    "want": 2,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The label \"vertical tangent\" sits at (0.3, 2.2), near the top of the graph above the flatter part of the curve, with nothing tying it to the origin where the vertical tangent is, so a student cannot tell what it names.",
+     "The vertical tangent x = 0 at the origin is not drawn or pointed to; add an arrow from the label to (0, 0), or place the label next to the origin, so the picture shows the tangent the card describes."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:25Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The graph of y = cube root of x from card line 4: continuous through the origin, where the curve becomes vertical, so the tangent at (0, 0) is a vertical line, labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\sqrt[3]{x}\\). It passes through the origin with no break, but there the curve is vertical: an arrow labelled vertical tangent points to \\((0, 0)\\), where the tangent is the vertical line \\(x = 0\\), which has no gradient.",
+     "x": {
+      "min": -8,
+      "max": 8,
+      "label": "\\(x\\)",
+      "step": 2,
+      "nums": false
+     },
+     "y": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\sqrt[3]{x}",
+       "label": "\\(y = \\sqrt[3]{x}\\)",
+       "labelAt": -7.2,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.2,
+        -1.6
+       ],
+       "label": "vertical tangent",
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1.1,
+        -1.35
+       ],
+       "to": [
+        0.15,
+        -0.15
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:31Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:24:08Z"
+  }
+ ]
 }
