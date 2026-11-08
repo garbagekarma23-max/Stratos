@@ -4902,6 +4902,13 @@ MADE_BANKS.his = {
       "Both referendums were defeated, so Australia's soldiers stayed volunteers. The votes were close, and the second was lost by a larger margin than the first.",
       "The issue split the nation. Families, churches, unions, political parties and even Hughes's own Labor Party were divided, and Hughes was expelled from Labor."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "image",
+        "src": "pictures/images/the-blood-vote-1916.webp",
+        "alt": "The Blood Vote, a leaflet from the No side of the 1916 conscription referendum. A woman drops a Yes vote into a box marked Conscription ballot-box while a dark figure watches, and a poem beside her says her vote has sentenced a man to death."
+      }
+    },
     "remember": "Hughes asked twice, voters said no twice, and the argument divided Australians.",
     "a": {
       "q": "What did Prime Minister Hughes ask voters to decide in 1916 and 1917?",

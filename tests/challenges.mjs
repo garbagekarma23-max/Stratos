@@ -132,7 +132,7 @@ const c1s = await lastChallenge();
 check(c1s.sent_at && c1s.from_right === 6 && c1s.from_ms >= 12000, 'the database has Ana\'s score, and a time of at least 1.5 seconds a question: ' + c1s.from_ms, R);
 check(await until(async () => (await text(A.p, '#fClock')) === (await text(A.p, '#feed .summary .myT'))) && (await text(A.p, '#fClock')) === Math.floor(c1s.from_ms / 60000) + ':' + String(Math.floor(c1s.from_ms / 1000) % 60).padStart(2, '0'),
   'the clock and Your time both show the time the database saved', R);
-check(!(await A.p.evaluate(() => localStorage.getItem('stratos2.chal'))), 'nothing waits on the phone once it is saved', R);
+check(await until(async () => !(await A.p.evaluate(() => localStorage.getItem('stratos2.chal')))), 'nothing waits on the phone once it is saved', R);
 await both(A.p, 'chal-sent');
 await A.p.click('#feed [data-act="tochat"]');
 await A.p.waitForSelector('.p-body .ch-msg');
@@ -164,7 +164,7 @@ check(JSON.parse(await B.p.evaluate(() => localStorage.getItem('stratos2.chal'))
 await B.p.reload(); await B.p.waitForTimeout(400);
 check(await until(async () => (await lastChallenge()).to_done !== null, 8000), 'after a reload part way, the score so far is sent', R);
 const c1d = await lastChallenge();
-check(c1d.to_right === 3 && !(await B.p.evaluate(() => localStorage.getItem('stratos2.chal'))), 'with the 3 answered right, the rest wrong, and nothing left waiting', R);
+check(c1d.to_right === 3 && await until(async () => !(await B.p.evaluate(() => localStorage.getItem('stratos2.chal')))), 'with the 3 answered right, the rest wrong, and nothing left waiting', R);
 await chat(B.p);
 await B.p.waitForSelector('.ch-msg');
 check((await text(B.p, '.ch-msg .out')) === 'Ana won.' && (await text(B.p, '.ch-msg .sc')).includes('You3 of 8'), 'Ben\'s chat shows the result: Ana won, 3 of 8', R);
@@ -275,7 +275,7 @@ await tab(A.p, 'you');
 await A.p.click('#v-you [data-act="account"]'); await A.p.waitForTimeout(150);
 await A.p.click('#sheetBody [data-act="signout"]'); await A.p.waitForTimeout(400);
 if (await A.p.locator('[data-act="signoutanyway"]').count()) { await A.p.click('[data-act="signoutanyway"]'); await A.p.waitForTimeout(400); }
-check(!(await A.p.evaluate(() => localStorage.getItem('stratos2.chal'))), 'signing out erases a score waiting on the phone', R);
+check(await until(async () => !(await A.p.evaluate(() => localStorage.getItem('stratos2.chal')))), 'signing out erases a score waiting on the phone', R);
 
 const errs = all.flatMap(d => d.errs);
 console.log(R.join('\n'));

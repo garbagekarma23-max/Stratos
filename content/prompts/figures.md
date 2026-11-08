@@ -54,3 +54,35 @@ A card line's fig, for consumer surplus:
 {"kind": "graph", "alt": "Demand D and supply S cross at price P* and quantity Q*. Consumer surplus CS is the shaded triangle below demand and above P*.", "x": {"min": 0, "max": 10, "label": "Quantity"}, "y": {"min": 0, "max": 10, "label": "Price"}, "items": [{"type": "shade", "poly": [[0, 10], [0, 6], [4, 6]], "label": "CS", "at": [1.3, 7.3]}, {"type": "curve", "id": "D", "points": [[0, 10], [10, 0]], "label": "D", "pos": "above"}, {"type": "curve", "id": "S", "points": [[0, 2], [8, 10]], "label": "S", "pos": "right"}, {"type": "guide", "at": [4, 6], "xLabel": "Q*", "yLabel": "P*"}, {"type": "point", "at": [4, 6], "on": ["D", "S"], "is": "intersection"}]}
 
 Each is shown as JSON. In your answer it is the text of fig, so each quote and backslash in it is escaped once more.
+
+## Charts
+
+A chart is drawn from data too: "kind": "chart", with "chart" one of bar, histogram, box, dot or stem, and an alt. Use one when a point is about reading or comparing data: a bar chart of categories, a histogram of grouped data, a box plot of a five-number summary, a dot plot or a stem-and-leaf plot of a small data set.
+
+- bar: "bars": [["Soccer", 8], ["Netball", 6]] (a label and a value each, 2 to 12), "y": an axis with min 0, max and step, and "x": {"label": "Sport"}. "truncated": true lets y start above 0, only for a point about misleading graphs.
+- histogram: "classes": [[0, 10, 3], [10, 20, 7]] (from, to and count, each class touching the next, all the same width), on "x" and "y" axes with steps. The x step should match the class width.
+- box: "sets": [{"label": "Route 1", "data": [...]}], or {"label": ..., "five": [min, Q1, median, Q3, max]}, one to three sets, across an "x" axis with a step. "outliers": true shows values more than 1.5 IQR beyond the box as dots (it needs data).
+- dot: "data": [...] on an "x" axis with a step: one dot for each value.
+- stem: "data": [...] (or "sets": two {"label", "data"} for a back-to-back plot), "leaf": 1 (or 0.1 for one decimal place) and "key": "2 | 3 means 23".
+- "stats": {"median": 16, "q1": 12} lists any value the text states about the data. The content check works out every stat from the data, and also reads "the median is 16", "Q1 = 12" and "IQR = 8" in the card line or question beside the chart, and sends back any that do not match. Quartiles are the medians of the lower and upper halves, leaving out the median when the number of values is odd.
+
+A box plot under a card line, for a data set with one outlier:
+
+{"kind": "chart", "chart": "box", "alt": "A box plot from 5 to 23, with the box from 12 to 20, the median at 16, and an outlier at 35 shown as a dot.", "x": {"min": 0, "max": 40, "step": 5, "label": "Value"}, "outliers": true, "sets": [{"data": [5, 8, 12, 13, 14, 16, 18, 19, 20, 23, 35]}], "stats": {"q1": 12, "q3": 20, "iqr": 8}}
+
+## Slope fields
+
+A graph can show a slope field: {"type": "slope", "id": "s", "expr": "x - y"}, with dy/dx in LaTeX in x and y. It draws a short line at each grid point (each step on both axes, or "every": [dx, dy]). A fn with "solves": "s" is checked to follow the field.
+
+## Pictures
+
+Some ideas are a picture that is not a graph or a chart: the parts of a cell, a circuit, the water cycle, a labelled triangle, a food web, a historical photo, a primary source, a map. You cannot draw these here, so ask for one in pictures, and a separate step draws or finds it.
+
+- Ask only when the picture teaches: a student understands the idea better by seeing it. Most points need none. Never more than two on a point.
+- pictures is a JSON list as text, or "" for none. Each entry is {"at": "card 2", "kind": "diagram", "brief": "...", "why": "..."}:
+  - at: where it goes. card 1 to card 4 (under that card line), a or b (under that question), or a options or b options (four pictures as the options, for "Which diagram shows ...?").
+  - kind: diagram (drawn for Stratos: a cell, a circuit, a cycle, a labelled shape), image (a real photo, artwork, primary source or map, found with an open licence), or chart (data you could not finish).
+  - brief: what it shows, with every label, in the card's own words and names. For an image, say what kind of source (a photo of the event, a poster from the campaign, a map of the basin) and what it must show. Never name a textbook, an exam paper or a picture you cannot be sure is free to use.
+  - why: one sentence on how it helps.
+- The picture must agree with the card, the question and the right answer, and must not give the answer away.
+- Never ask for a picture of a real student, a private person or anything a student should not see.

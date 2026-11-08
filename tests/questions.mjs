@@ -43,7 +43,9 @@ check(copies(problems({'e-ped': BANK['e-ped']})['e-ped']).length === 0, 'a point
 const copy = fs.mkdtempSync(path.join(os.tmpdir(), 'stratos-questions-src-'));
 fs.cpSync(path.join(ROOT, 'src'), path.join(copy, 'src'), {recursive: true});
 fs.mkdirSync(path.join(copy, 'content'));
-for (const f of ['load.mjs', 'latex.mjs']) fs.copyFileSync(path.join(ROOT, 'content', f), path.join(copy, 'content', f));
+for (const f of ['load.mjs', 'latex.mjs', 'pictures.mjs']) fs.copyFileSync(path.join(ROOT, 'content', f), path.join(copy, 'content', f));
+// The picture files the points show, which the full check reads.
+fs.cpSync(path.join(ROOT, 'pictures'), path.join(copy, 'pictures'), {recursive: true});
 // MathLive's build for Node, which the check uses to parse the LaTeX in maths points (content/latex.mjs).
 fs.mkdirSync(path.join(copy, 'lab', 'mathlive'), {recursive: true});
 fs.copyFileSync(path.join(ROOT, 'lab', 'mathlive', 'mathlive-ssr.min.mjs'), path.join(copy, 'lab', 'mathlive', 'mathlive-ssr.min.mjs'));

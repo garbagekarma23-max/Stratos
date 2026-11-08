@@ -12,7 +12,8 @@
   "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
   "2026-11-06T05:46:30Z maths: written in LaTeX (by hand)",
   "2026-11-06T12:00:00Z figures: graphs added by hand (the figures pilot)",
-  "2026-11-07T00:00:00Z figures: the double root graph changed to (x - 1)^2(x + 2), so it no longer labels x = 2 as crossing under a line about (x - 2)^2, after the graph check"
+  "2026-11-07T00:00:00Z figures: the double root graph changed to (x - 1)^2(x + 2), so it no longer labels x = 2 as crossing under a line about (x - 2)^2, after the graph check",
+  "2026-11-07T15:41:42Z figures: labels and axis numbers moved off the curves, after the content check learned to look for words on a curve"
  ],
  "sent": {
   "write": 2,
@@ -210,13 +211,14 @@
      "min": -3,
      "max": 4,
      "label": "\\(x\\)",
-     "step": 1
+     "step": 1,
+     "nums": false
     },
     "y": {
      "min": -8,
-     "max": 10,
+     "max": 12,
      "label": "\\(y\\)",
-     "step": 2
+     "step": 4
     },
     "grid": true,
     "items": [
@@ -237,7 +239,9 @@
       "on": [
        "f"
       ],
-      "is": "x-intercept"
+      "is": "x-intercept",
+      "label": "\\(-2\\)",
+      "pos": "below-right"
      },
      {
       "type": "point",
@@ -248,7 +252,9 @@
       "on": [
        "f"
       ],
-      "is": "x-intercept"
+      "is": "x-intercept",
+      "label": "\\(1\\)",
+      "pos": "below-left"
      },
      {
       "type": "point",
@@ -259,7 +265,9 @@
       "on": [
        "f"
       ],
-      "is": "x-intercept"
+      "is": "x-intercept",
+      "label": "\\(3\\)",
+      "pos": "below-right"
      },
      {
       "type": "point",
@@ -283,7 +291,8 @@
      "min": -3,
      "max": 3,
      "label": "\\(x\\)",
-     "step": 1
+     "step": 1,
+     "nums": false
     },
     "y": {
      "min": -5,
@@ -311,7 +320,9 @@
       "on": [
        "f"
       ],
-      "is": "turning point"
+      "is": "turning point",
+      "label": "\\(1\\)",
+      "pos": "below"
      },
      {
       "type": "point",
@@ -334,6 +345,15 @@
       ],
       "label": "touches",
       "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       -2,
+       0
+      ],
+      "label": "\\(-2\\)",
+      "pos": "below-right"
      }
     ]
    }

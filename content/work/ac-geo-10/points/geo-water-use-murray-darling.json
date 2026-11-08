@@ -17,7 +17,17 @@
   "2026-11-04T10:08:00Z write: done (still fails the content check)",
   "2026-11-04T10:10:49Z check: flagged",
   "2026-11-04T10:14:00Z fix: suggested",
-  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-04T18:10:12Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-07T15:29:50Z pictures: the owner asked for an image at card 1",
+  "2026-11-07T15:33:15Z pictures: 1 picture waiting for the check",
+  "2026-11-07T15:36:30Z pictures: 1 picture turned down. Picture 1 (image at card 1): redo, medium sure. At 360 px the map's legend, town names, source line and credit block are far too small to read, so most of its labels cannot be read on a phone; a simpler map with only the basin, the states, the ACT and the main rivers would suit the card.; The card and the request name the ACT, but the map does not label it: only a tiny Canberra dot inside a faint dashed border shows it.; The map adds a Murrumbidgee label that the card never mentions, and a miles scale an Australian student does not need.; The Commons file is not the MDBA's map as published: a Commons user (SCHolar44) added the state and river names and the scale bars, as the line under the map says, so the record should credit those changes and not only 'Resized and compressed'.; The Commons page's attribution note says the Government of South Australia owns the copyright, which contradicts the MDBA as creator, so who to credit is not clear from the page.. Took out pictures/images/murray-darling-basin-map.webp",
+  "2026-11-07T16:27:42Z pictures: 1 picture waiting for the check",
+  "2026-11-07T16:28:46Z pictures: 1 picture turned down. Picture 1 (image at card 1): redo, medium sure. At the width the app draws it on a 360 px phone (about 296 px, so the 500 px map shrinks to about 0.6), the city names, the legend and the Australian Capital Territory label come out at roughly 6 to 8 px and are too small to read.; The whole map is used, including the Northern Territory, most of Queensland and Tasmania, which the card does not need; cropping to the basin and the states it crosses would make the labels about half as large again.; The Australian Capital Territory and Victoria labels sit across river and state boundary lines, and the Canberra dot sits on a tributary, which makes them harder to read once the map is shrunk.. Now waiting for you: image at card 1. Took out pictures/images/murray-darling-basin-catchment-map.png",
+  "2026-11-08T05:46:32Z pictures: the owner asked for a diagram at card 1",
+  "2026-11-08T05:46:44Z pictures: 1 picture waiting for the check",
+  "2026-11-08T05:49:36Z pictures: 1 picture turned down. Picture 1 (diagram at card 1): redo, high sure. The ACT is filled with the paper colour, so it shows as a white (dark in dark mode) hole in the shaded basin, and with the legend it reads as not part of the basin, which contradicts the card and the description that say the basin covers the ACT; fill the ACT with the basin colour and mark it by its outline and label only.; The line labelled Darling River starts on the Queensland border near Goondiwindi, but upstream of Bourke that river is the Barwon (and the Macintyre along the border), so end the Darling line near Bourke or show the upstream part as a thinner, unlabelled tributary.; The legend spells the name Murray–Darling Basin with an en dash, while the card writes Murray-Darling with a hyphen; use the card's spelling.. Took out pictures/diagrams/murray-darling-basin.svg",
+  "2026-11-08T05:49:46Z pictures: 1 picture waiting for the check",
+  "2026-11-08T05:51:42Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -186,6 +196,13 @@
    "Towns and cities along the rivers also take water for drinking, homes and industry. Some towns rely on the rivers for most of their supply.",
    "The rivers and wetlands need water too, to keep plants, animals and water quality healthy. Every drop taken out leaves less in the river, so the water must be shared between these uses."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/murray-darling-basin.svg",
+    "alt": "A map of south-eastern Australia with the Murray-Darling Basin shaded. The basin covers southern Queensland, most of New South Wales, the whole of the ACT, northern Victoria and the east of South Australia. The Darling River flows south-west from Bourke across New South Wales and joins the Murray River, which flows west along the border of New South Wales and Victoria and through South Australia to the sea."
+   }
+  },
   "remember": "The basin's water is shared between irrigation, towns and the rivers themselves.",
   "a": {
    "q": "Why must the water of the Murray-Darling Basin be shared?",
@@ -211,5 +228,168 @@
    "clue": "What is Sam using the water to do?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "image",
+   "brief": "A map of the Murray-Darling Basin showing its extent across inland south-eastern Australia, with the states it crosses (Queensland, New South Wales, Victoria and South Australia) and the ACT, and its main rivers, the Murray and the Darling.",
+   "figures": [
+    {
+     "kind": "image",
+     "src": "pictures/images/murray-darling-basin-map.webp",
+     "alt": "A map of the Murray-Darling Basin. The basin covers a large part of inland south-eastern Australia: southern Queensland, much of New South Wales, northern Victoria, the ACT around Canberra, and the east of South Australia. The Darling River runs south-west across New South Wales to join the Murray, which flows west to the sea in South Australia."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-07T15:33:15Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": false,
+    "problems": [
+     "At 360 px the map's legend, town names, source line and credit block are far too small to read, so most of its labels cannot be read on a phone; a simpler map with only the basin, the states, the ACT and the main rivers would suit the card.",
+     "The card and the request name the ACT, but the map does not label it: only a tiny Canberra dot inside a faint dashed border shows it.",
+     "The map adds a Murrumbidgee label that the card never mentions, and a miles scale an Australian student does not need.",
+     "The Commons file is not the MDBA's map as published: a Commons user (SCHolar44) added the state and river names and the scale bars, as the line under the map says, so the record should credit those changes and not only 'Resized and compressed'.",
+     "The Commons page's attribution note says the Government of South Australia owns the copyright, which contradicts the MDBA as creator, so who to credit is not clear from the page."
+    ],
+    "sure": "medium"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-07T15:36:30Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "image",
+   "brief": "A map of the Murray-Darling Basin showing its extent across inland south-eastern Australia, with the states it crosses (Queensland, New South Wales, Victoria and South Australia) and the ACT, and its main rivers, the Murray and the Darling.",
+   "figures": [
+    {
+     "kind": "image",
+     "src": "pictures/images/murray-darling-basin-catchment-map.png",
+     "alt": "A map of south-eastern Australia with the Murray-Darling Basin shaded. The basin covers southern Queensland, most of New South Wales, northern Victoria, the Australian Capital Territory and the east of South Australia. The Darling River runs south-west across New South Wales to join the Murray, which flows west along the border with Victoria to the sea in South Australia."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-07T16:27:42Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "At the width the app draws it on a 360 px phone (about 296 px, so the 500 px map shrinks to about 0.6), the city names, the legend and the Australian Capital Territory label come out at roughly 6 to 8 px and are too small to read.",
+     "The whole map is used, including the Northern Territory, most of Queensland and Tasmania, which the card does not need; cropping to the basin and the states it crosses would make the labels about half as large again.",
+     "The Australian Capital Territory and Victoria labels sit across river and state boundary lines, and the Canberra dot sits on a tributary, which makes them harder to read once the map is shrunk."
+    ],
+    "sure": "medium"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-07T16:28:46Z"
+  },
+  {
+   "want": [
+    {
+     "at": "card 1",
+     "kind": "image",
+     "brief": "A map of the Murray-Darling Basin showing its extent across inland south-eastern Australia, with the states it crosses (Queensland, New South Wales, Victoria and South Australia) and the ACT, and its main rivers, the Murray and the Darling.",
+     "why": "Students see how large the basin is and that it crosses several states, which is why its water must be shared.",
+     "tries": 2,
+     "notes": [
+      [
+       "At 360 px the map's legend, town names, source line and credit block are far too small to read, so most of its labels cannot be read on a phone; a simpler map with only the basin, the states, the ACT and the main rivers would suit the card.",
+       "The card and the request name the ACT, but the map does not label it: only a tiny Canberra dot inside a faint dashed border shows it.",
+       "The map adds a Murrumbidgee label that the card never mentions, and a miles scale an Australian student does not need.",
+       "The Commons file is not the MDBA's map as published: a Commons user (SCHolar44) added the state and river names and the scale bars, as the line under the map says, so the record should credit those changes and not only 'Resized and compressed'.",
+       "The Commons page's attribution note says the Government of South Australia owns the copyright, which contradicts the MDBA as creator, so who to credit is not clear from the page."
+      ],
+      [
+       "At the width the app draws it on a 360 px phone (about 296 px, so the 500 px map shrinks to about 0.6), the city names, the legend and the Australian Capital Territory label come out at roughly 6 to 8 px and are too small to read.",
+       "The whole map is used, including the Northern Territory, most of Queensland and Tasmania, which the card does not need; cropping to the basin and the states it crosses would make the labels about half as large again.",
+       "The Australian Capital Territory and Victoria labels sit across river and state boundary lines, and the Canberra dot sits on a tributary, which makes them harder to read once the map is shrunk."
+      ]
+     ]
+    }
+   ],
+   "status": "replaced by the owner's new ask",
+   "at_time": "2026-11-08T05:46:32Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A simple map drawn for Stratos of south-eastern Australia with the Murray-Darling Basin shaded: the coast, the borders of Queensland, New South Wales, Victoria and South Australia, the ACT inside the basin, and the Murray and Darling rivers labelled. Only what the card needs, with every label readable on a phone.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/murray-darling-basin.svg",
+     "alt": "A map of south-eastern Australia with the Murray-Darling Basin shaded. The basin covers southern Queensland, most of New South Wales, the ACT, northern Victoria and the east of South Australia. The Darling River flows south-west across New South Wales and joins the Murray River, which flows west along the border of New South Wales and Victoria and through South Australia to the sea."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T05:46:43Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The ACT is filled with the paper colour, so it shows as a white (dark in dark mode) hole in the shaded basin, and with the legend it reads as not part of the basin, which contradicts the card and the description that say the basin covers the ACT; fill the ACT with the basin colour and mark it by its outline and label only.",
+     "The line labelled Darling River starts on the Queensland border near Goondiwindi, but upstream of Bourke that river is the Barwon (and the Macintyre along the border), so end the Darling line near Bourke or show the upstream part as a thinner, unlabelled tributary.",
+     "The legend spells the name Murray–Darling Basin with an en dash, while the card writes Murray-Darling with a hyphen; use the card's spelling."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T05:49:35Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A simple map drawn for Stratos of south-eastern Australia with the Murray-Darling Basin shaded: the coast, the borders of Queensland, New South Wales, Victoria and South Australia, the ACT inside the basin, and the Murray and Darling rivers labelled. Only what the card needs, with every label readable on a phone.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/murray-darling-basin.svg",
+     "alt": "A map of south-eastern Australia with the Murray-Darling Basin shaded. The basin covers southern Queensland, most of New South Wales, the whole of the ACT, northern Victoria and the east of South Australia. The Darling River flows south-west from Bourke across New South Wales and joins the Murray River, which flows west along the border of New South Wales and Victoria and through South Australia to the sea."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T05:49:46Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T05:51:41Z"
+  }
+ ]
 }

@@ -1981,6 +1981,13 @@ MADE_BANKS.bio = {
         "a plant cell often has one large central vacuole that stores water and dissolved substances. Animal cells have no large central vacuole, though some have small ones."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/plant-and-animal-cell-parts.svg",
+        "alt": "Two cells. The box-shaped plant cell has a cell wall outside its plasma membrane and a large central vacuole filling the middle, with the nucleus, chloroplasts, mitochondria and ribosomes around the edges. Each chloroplast is smaller than the nucleus but larger than a mitochondrion. The rounded animal cell has a plasma membrane, a nucleus, mitochondria and ribosomes, but no cell wall, chloroplasts or large vacuole."
+      }
+    },
     "remember": "A cell wall marks a plant cell. Chloroplasts and a large central vacuole are plant features, but not every plant cell has them.",
     "a": {
       "q": "Which structure is found in a plant cell but not in an animal cell?",

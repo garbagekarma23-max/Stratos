@@ -2966,6 +2966,13 @@ MADE_BANKS.phys = {
         "adds up. The total is R = R1 + R2 + ... and it is larger than any single resistor. Current then follows from I = V ÷ R."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "diagram",
+        "src": "pictures/diagrams/series-circuit.svg",
+        "alt": "A series circuit: a cell and two resistors, R1 and R2, joined one after another in a single loop. An arrow labelled I shows the current leaving the cell's positive terminal and flowing round the one path."
+      }
+    },
     "remember": "In series, current is the same everywhere. Voltages add up to the supply, and resistances add.",
     "a": {
       "q": "Two resistors are connected in series to a 12 V supply. The voltage across one is 5 V. What is the voltage across the other?",

@@ -33,6 +33,8 @@ You are not told which option the writer meant as right: the options are in a ra
   - for options that are graphs: an option's text that does not describe its own graph, two graphs a student could not tell apart, or a wrong graph that is also right (part a or b, fact)
   - a graph under a question that gives the answer away, or a graph a student needs that is missing a label or a number to be read (wording)
   - an alt that does not say what the graph shows, for a student who cannot see it (wording)
+- Charts (kind chart: a bar chart, histogram, box plot, dot plot or stem-and-leaf plot) are given as data too. Work out what each shows: the five-number summary of a box plot, the class widths and total of a histogram, and the mean or median of a data set. List as a fact problem any value the text states that the data does not give, and any chart that shows something other than the text says.
+- A diagram or image (kind diagram or image) is given only by its file name and its alt: a separate check looks at the picture itself. Check only that its alt agrees with the text.
 - sure: how sure you are of your whole verdict.
   - high: you know the topic well, and every fact checks out.
   - medium: you know the topic, but a detail could depend on a source you cannot check.

@@ -26,14 +26,14 @@ const has = (list, bit) => list.some(m => m.includes(bit));
 
 // ---------- the format and its checks, with no browser ----------
 const GOOD = {kind: 'graph', alt: 'The parabola \\(y = x^{2} - 4\\), with roots at \\(x = -2\\) and \\(x = 2\\) and its vertex at \\((0, -4)\\).',
-  x: {min: -4, max: 4, label: '\\(x\\)', step: 1}, y: {min: -5, max: 6, label: '\\(y\\)', step: 1}, grid: true, items: [
+  x: {min: -4, max: 4, label: '\\(x\\)', step: 1, nums: false}, y: {min: -5, max: 6, label: '\\(y\\)', step: 1, nums: false}, grid: true, items: [
     {type: 'fn', id: 'f', expr: 'x^{2} - 4', label: '\\(y = x^{2} - 4\\)', labelAt: 3, pos: 'left'},
     {type: 'point', at: [-2, 0], on: ['f'], is: 'x-intercept'},
     {type: 'point', at: [2, 0], on: ['f'], is: 'x-intercept', label: '\\((2, 0)\\)', pos: 'above-left'},
-    {type: 'point', at: [0, -4], on: ['f'], is: 'turning point', label: '\\((0, -4)\\)', pos: 'right'}]};
+    {type: 'point', at: [0, -4], on: ['f'], is: 'turning point', label: '\\((0, -4)\\)', pos: 'below'}]};
 const bad = (change, f = GOOD, opt = false) => { const g = copy(f); change(g); return FIG.problems(g, opt); };
 check(FIG.problems(GOOD).length === 0, 'a good graph passes', R);
-check(has(bad(g => { g.kind = 'picture'; }), 'The only kind is "graph"') && has(bad(g => { g.alt = ''; }), 'needs an alt') &&
+check(has(bad(g => { g.kind = 'picture'; }), 'Use graph, chart, diagram or image') && has(bad(g => { g.alt = ''; }), 'needs an alt') &&
   has(bad(g => { g.colour = 'red'; }), 'does not have: colour') && has(bad(g => { g.x.min = 5; }), 'min smaller than its max') &&
   has(bad(g => { g.items[1].type = 'blob'; }), 'no type') && has(bad(g => { g.items[0].wobble = 1; }), 'does not take: wobble') &&
   has(bad(g => { g.items[2].pos = 'up'; }), 'has pos "up"') && has(bad(g => { g.items = []; }), 'no items'),
@@ -54,11 +54,20 @@ check(has(bad(g => { g.items[2].label = '\\((3, 0)\\)'; }), 'is labelled \\((3, 
   'coordinates written in a label must match the dot', R);
 check(has(bad(g => { g.items.push({type: 'guide', at: [2, 0], xLabel: '3'}); }), 'has xLabel 3, but its point is at 2'),
   'a number on a guide must match its point', R);
-const recip = {kind: 'graph', alt: 'The hyperbola y = 1 over x minus 2, with asymptotes x = 2 and y = 0.', x: {min: -2, max: 6, step: 1}, y: {min: -5, max: 5, step: 1},
-  items: [{type: 'fn', id: 'h', expr: '\\frac{1}{x - 2}', breaks: [2]}, {type: 'asymptote', x: 2, label: '\\(x = 2\\)'}]};
+const recip = {kind: 'graph', alt: 'The hyperbola y = 1 over x minus 2, with asymptotes x = 2 and y = 0.', x: {min: -2, max: 6, step: 1, nums: false}, y: {min: -5, max: 5, step: 1},
+  items: [{type: 'fn', id: 'h', expr: '\\frac{1}{x - 2}', breaks: [2]}, {type: 'asymptote', x: 2, label: '\\(x = 2\\)', pos: 'below-left'}]};
 check(!FIG.problems(recip).length && has(bad(g => { g.items[1].label = '\\(x = 3\\)'; }, recip), 'labelled \\(x = 3\\) but is drawn at x = 2') &&
   has(bad(g => { g.items[1].x = 3; g.items[1].label = '\\(x = 3\\)'; }, recip), 'no fn goes off to infinity at x = 3'),
   'an asymptote must match its label, and a function must really go off to infinity there', R);
+/* A word on a curve: the quadratic in Families of graphs as it was, whose curve ran through the y-axis numbers 6 and 7
+   and the x-axis numbers at its roots. */
+const OLDQ = {kind: 'graph', alt: 'The parabola y = x squared minus 6x plus 5, before its numbers were moved.', x: {min: -1, max: 7, label: '\\(x\\)', step: 1}, y: {min: -5, max: 7, label: '\\(y\\)', step: 1}, grid: true,
+  items: [{type: 'fn', id: 'f', expr: 'x^{2} - 6x + 5'}]};
+const oldq = FIG.problems(OLDQ);
+check(['6', '7', '1', '5'].every(n => has(oldq, 'has the axis number ' + n + ' on a curve')) && !has(oldq, 'axis number 4 on') &&
+  has(bad(g => { g.items.push({type: 'text', at: [3, -4], label: 'the lowest point', pos: 'above'}); }, OLDQ), 'has the label the lowest point on a curve') &&
+  !FIG.problems(Object.assign(copy(OLDQ), {x: Object.assign(copy(OLDQ.x), {step: 2}), y: Object.assign(copy(OLDQ.y), {max: 5.5})})).length,
+  'an axis number or a label a curve runs through is caught (the old quadratic\'s 6 and 7, and its roots 1 and 5), and the fixed axes pass', R);
 check(has(bad(g => { g.items[3].at = [0, -7]; }), 'outside the axes') && has(bad(g => { g.items.push({type: 'arrow', from: [0, 0], to: [9, 0]}); }), 'ends at (9, 0) is outside the axes'),
   'everything must be inside the axes', R);
 check(has(bad(g => { g.x = {min: -20, max: 20, step: 1}; }), 'numbers that run into each other') && has(bad(g => { g.items[0].labelAt = -3.9; g.items[0].pos = 'left'; }), 'does not fit inside the graph'),
@@ -86,7 +95,7 @@ const point = () => ({title: 'A graph point', remember: 'One line to remember.',
   card: ['The first line of the card.', 'The second line of the card.', 'The third line of the card.'], cardFigs: {2: copy(GOOD)},
   a: {q: 'Which graph is this one?', opts: ['The right one', 'A wrong one', 'Another wrong one', 'A third wrong one'], why: 'Because it is right.', clue: 'Read the card.', fig: copy(GOOD)},
   b: {d: 2, q: 'Which graph shows it?', opts: ['The right one', 'A wrong one', 'Another wrong one', 'A third wrong one'], why: 'Because it is right.', clue: 'Read the card.',
-    optFigs: ['x^{2} - 4', 'x^{2} + 4', '4 - x^{2}', 'x^{2}'].map(e => ({kind: 'graph', x: {min: -4, max: 4, step: 2}, y: {min: -5, max: 6}, items: [{type: 'fn', expr: e}]}))}});
+    optFigs: ['x^{2} - 4', 'x^{2} + 4', '4 - x^{2}', 'x^{2}'].map(e => ({kind: 'graph', x: {min: -4, max: 4, step: 2, nums: false}, y: {min: -5, max: 6}, items: [{type: 'fn', expr: e}]}))}});
 check(problems({'tst-fig': point()})['tst-fig'].length === 0, 'a point with a card graph, a question graph and graph options passes check_content.mjs --json', R);
 const p1 = point(); p1.cardFigs[2].items[3].at = [0, -3];
 const p2 = point(); p2.cardFigs = {7: copy(GOOD)}; p2.b.optFigs.pop();

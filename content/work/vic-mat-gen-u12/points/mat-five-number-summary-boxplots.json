@@ -22,7 +22,10 @@
   "2026-11-01T08:42:07Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
   "2026-11-02T06:22:49Z review: approved with the fix (a spot check)",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-07T15:29:49Z pictures: the owner asked for a chart at card 4",
+  "2026-11-07T15:31:55Z pictures: 1 picture waiting for the check",
+  "2026-11-07T15:33:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -208,6 +211,43 @@
    "The fences are \\(1.5 \\times \\text{IQR}\\) below \\(Q_{1}\\) and \\(1.5 \\times \\text{IQR}\\) above \\(Q_{3}\\), where \\(\\text{IQR} = Q_{3} - Q_{1}\\). A value beyond a fence is a possible outlier, and it is shown as a separate dot.",
    "Example: \\(Q_{1} = 12\\) and \\(Q_{3} = 20\\). \\(\\text{IQR} = 8\\), and \\(1.5 \\times 8 = 12\\). The fences are \\(12 - 12 = 0\\) and \\(20 + 12 = 32\\). A value of 35 is a possible outlier."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A boxplot on a number line from 0 to 40. The box runs from \\(Q_{1} = 12\\) to \\(Q_{3} = 20\\), with the median at 16. The whiskers reach 5 and 23, the smallest and largest values inside the fences of 0 and 32, and the value 35 is a separate dot beyond the upper fence.",
+    "x": {
+     "min": 0,
+     "max": 40,
+     "step": 5,
+     "label": "Value"
+    },
+    "outliers": true,
+    "sets": [
+     {
+      "data": [
+       5,
+       8,
+       12,
+       13,
+       14,
+       16,
+       18,
+       19,
+       20,
+       23,
+       35
+      ]
+     }
+    ],
+    "stats": {
+     "q1": 12,
+     "q3": 20,
+     "iqr": 8,
+     "median": 16
+    }
+   }
+  },
   "remember": "A boxplot shows five values, and anything beyond a fence is a possible outlier.",
   "a": {
    "q": "A data set has \\(Q_{1} = 30\\) and \\(Q_{3} = 50\\). What is the upper fence for outliers?",
@@ -270,5 +310,67 @@
     "clue": "Work out both fences, then check each end value against them."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "chart",
+   "brief": "A box plot of a data set with Q1 = 12 and Q3 = 20, as in the example, so the fences are 0 and 32. It shows the whiskers stopping at the last values inside the fences and the value 35 as a separate dot, a possible outlier.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "box",
+     "alt": "A boxplot on a number line from 0 to 40. The box runs from \\(Q_{1} = 12\\) to \\(Q_{3} = 20\\), with the median at 16. The whiskers reach 5 and 23, the smallest and largest values inside the fences of 0 and 32, and the value 35 is a separate dot beyond the upper fence.",
+     "x": {
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "label": "Value"
+     },
+     "outliers": true,
+     "sets": [
+      {
+       "data": [
+        5,
+        8,
+        12,
+        13,
+        14,
+        16,
+        18,
+        19,
+        20,
+        23,
+        35
+       ]
+      }
+     ],
+     "stats": {
+      "q1": 12,
+      "q3": 20,
+      "iqr": 8,
+      "median": 16
+     }
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-07T15:31:55Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-07T15:33:20Z"
+  }
+ ]
 }

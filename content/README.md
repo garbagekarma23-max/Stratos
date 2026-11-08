@@ -11,7 +11,7 @@ If you are Claude Code helping the owner with these steps:
 - Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many`, `recheck`, `rebalance` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
 - You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` and `autoreject` (they make no API calls), `recheck --dry-run` and `rebalance --dry-run` (rough estimates, with no key), the Claude Code steps, `review`, `publish`, the build, the checks and git.
 - `py content/pipeline.py review` keeps running until it is stopped: start it in the background, then tell the owner the address.
-- The Claude Code steps (`cc-write`, `cc-check` and `cc-review`, step 11) make no API calls. Run them when the owner pastes their prompt. Never check a point yourself: each check goes to a new subagent that sees only its task file.
+- The Claude Code steps (`cc-write`, `cc-check` and `cc-review`, step 11, and `cc-picture` and `cc-picture-check`, step 14) make no API calls. Run them when the owner pastes their prompt. Never check a point yourself: each check goes to a new subagent that sees only its task file.
 - Never edit `src/bank/` or `src/courses/` by hand. A change to a point goes through the review page, then `publish`.
 - Follow CLAUDE.md in the repository folder, as in any session.
 
@@ -546,7 +546,7 @@ makes the safe swaps (each run of maths is read back as plain text and must matc
 
 The first chapter converted by hand is Mathematics Advanced, Year 11, Families of graphs (`nsw-mat-adv-11-1-2`). Every maths point written before this rule is converted now, so `py content/convert_maths.py` reports 0 to convert. The script stays for any maths point found in plain text later.
 
-## 13. Graphs
+## 13. Graphs and charts
 
 A point can show graphs, stored as data with the point and drawn by the app as SVG, in its own colours, light and dark. There are no pictures of graphs. The format is at the top of `src/06-figure.js`, and `content/prompts/figures.md` tells the writer and the adapter when a graph helps and how to write one.
 
@@ -557,7 +557,48 @@ A point can show graphs, stored as data with the point and drawn by the app as S
 - The checker gets each graph as data, with each option's graph under it in the shuffled order, and checks it against the card, the question and the right answer. The reviewer and the Claude Code steps see the same. Adapt can change a graph by naming it (`card1 fig`, `a.fig`, `a.optFigs`). Rebalance never changes a question whose options are graphs: their text is not shown, so their lengths give nothing away.
 - The review page draws each graph as the app does, and its edit form has the graphs as JSON, checked before saving.
 - `content/graphs-to-add.md` lists the points that would clearly be better with a graph, by bank and by course, with the graph each needs, for planning the sessions that add them.
+- No word sits on a curve: the content check also fails a label or an axis number that a curve passes through, worked out at the size the app draws. When the curve crosses an axis at a tick, use a larger step, `nums: false` with the numbers as labels at the dots, or move the axis. Every graph in the banks passes.
+- Charts and slope fields: a figure can also be a chart (`"kind": "chart"`: a bar chart, histogram, box plot, dot plot or stem-and-leaf plot), drawn from its data like a graph, and a graph can have a slope field (`"type": "slope"`). The content check works out again what the data gives: a box plot's five-number summary (quartiles as the medians of each half, leaving out the median for an odd count), a histogram's class widths and total, a mean, median, mode or range. It holds the chart's `stats`, and any "the median is 16" or "\(Q_{1} = 12\)" in the card line or question beside it, to the data. A fn that `solves` a slope field must follow it. The writer writes charts as it writes graphs (`prompts/figures.md`).
 - The pilot: Mathematics Advanced, Year 11, Families of graphs (`nsw-mat-adv-11-1-2`), with a graph on every point and a "Which graph shows ...?" practice question on quadratics; and the Edexcel course's Price determination chapter (Unit 1, chapter 4, in `src/econ-points.js`), with supply and demand, a demand shift, consumer and producer surplus, and a tax, and a "Which diagram shades the consumer surplus?" check question. The maths graphs were added by hand to the point files in `work/nsw-mat-adv-11/points/` (each keeps its version before under `figures`), then published.
+
+## 14. Pictures: diagrams and images
+
+The API writer can write graphs and charts as data, but it cannot draw a diagram or find a photo. So pictures come from a Claude Code session on your plan, with no API calls, and a separate check of each one.
+
+- **Diagrams** (a cell, a circuit, the water cycle, a labelled triangle, a food web) are drawn for Stratos as SVG files in `pictures/diagrams/`. The app puts each one into the page, so it takes the app's colours in light, dark and Sky: it may use only `currentColor` and the app's colour names (`var(--ink-2)`, `var(--accent-soft)` and the others), never a colour of its own. Its labels are real text, at least 11 px on a 360 px phone.
+- **Images** (a photo, an artwork, a historical source, a map) come from Wikimedia Commons with an open licence: public domain, CC0, CC BY or CC BY-SA only. Never a textbook, exam or other copyrighted figure. Each is resized and compressed (at most 1200 px on its longer side, under 200 KB) and saved in `pictures/images/`. The page loads it only when it comes near the screen, and shows its credit under it: the creator, the licence (a link to it), what was changed, and a link to its Commons page.
+- **`pictures/licences.json`** is the one record of every picture: its title, size, creator and licence, and for an image its source page, changes and why the licence applies. A diagram drawn for Stratos is CC BY 4.0, credited to Stratos, and shows "Stratos, CC BY 4.0" under it. `build.py` puts it into the page, and `build.py --site` copies the whole `pictures/` folder next to `v2.html`.
+- **The content check** fails a missing file, a missing record or credit, a licence not on the list, an SVG with anything a diagram may not hold (a script, a link, an event handler, anything from outside the file, a colour of its own, text too small to read or off its edge), a file over its limit (30 KB for a diagram, 200 KB for an image), a missing description, a picture file with no record and a record no point shows.
+- A picture goes wherever a graph can: under a card line, under a question, or as the four options. Images used as options have their credits under the options.
+
+### How a point gets a picture
+
+1. **The ask.** The writer answers `pictures`: a list of the pictures it would add, each with where it goes (`card 1` to `card 4`, `a`, `b`, `a options` or `b options`), the kind (`diagram`, `image` or `chart`), what it shows with every label, and why it helps. These become the point's wants. To ask for one on a point already written, run (with the course's outline):
+
+       py content/pipeline.py want-picture content/outlines/ac-geo-10.yaml --point geo-water-use-murray-darling --at "card 1" --kind image --brief "A map of the Murray-Darling Basin ..."
+
+   Only a cleared point gets a picture, so the picture is checked against text that will not change. A point's wants wait until it is cleared. Run it again for a place whose want was turned down twice to put your new ask in its place, with another kind if you like. Add `--replace` to ask for a new picture where one is already: the old one stays until the new one passes the check, comes back if the new one is turned down, and `publish` takes its file out once no point shows it.
+2. **`cc-picture`.** `export` writes a task for each cleared point with wants, and `_pictures.md` (the rules in `prompts/pictures.md` and the graph and chart rules). The session draws each diagram, finds each image or writes each chart, saves the files and answers with each figure and its record. `import` puts the pictures into a copy of the point, adds the records, and runs the content check. A failing answer stays in the folder with what is wrong. A passing one waits for the check, and the published point does not change yet.
+3. **`cc-picture-check`.** `export` writes a task per point with `prompts/picture-checker.md`, the point with its right answers, and each new picture: its data, its file, a drawing of it as the app shows it in light and dark (`content/render.mjs`, which needs the test packages), and its record. Each task goes to a fresh Opus subagent, which also opens the image's Commons page to check the licence. It answers whether the picture matches the text, agrees with the right answers, gives an answer away, has correct and readable labels, and has an allowed licence, with its problems and how sure it is. `import` keeps a picture only when the check says keep, is highly sure and finds nothing wrong. Any other picture comes out, with its files and record, and its want comes back with the check's problems, for one more try. After two turned down (`PICTURE_TRIES`), the want waits for you: `cc-picture export` lists it, and the point's log says why.
+4. **Publish** each course whose points changed, as step 9 says. The wants never go into the bank.
+
+### The prompts to paste
+
+To draw and find pictures:
+
+```
+Follow content/README.md step 14.
+1. Run: py content/pipeline.py cc-picture export
+2. Read content/work/_claude-code/picture/_pictures.md: these are your rules. For each task file it lists, make each picture it asks for, save the files, and write the answer as JSON only to the answer file the task names. Skip a want you cannot do well, and say why.
+3. Run: py content/pipeline.py cc-picture import. If it lists an answer with a problem, fix it and import again.
+4. Run: py content/pipeline.py cc-picture-check export. For each task file it lists, start a new general-purpose subagent with the Agent tool, on the Opus model, never a fork, and never check a picture yourself. Tell it to read that task file, open every file it names, and write its answer to the answer file it names.
+5. Run: py content/pipeline.py cc-picture-check import. If a picture was turned down, run step 1 again for its want, with the check's problems in mind.
+6. Publish each course whose points changed (step 9). Tell me in a short list what was kept, what was turned down and why, and what waits for me. Don't commit.
+```
+
+### The pilot
+
+Five pictures went through these steps, each checked by a fresh Opus subagent. Four were kept and published: a box plot with an outlier under the five-number summary example (`mat-five-number-summary-boxplots`, Victorian General Mathematics Units 1 and 2); a plant cell and an animal cell (`bio-plant-animal-cells-compared-2`, Biology Units 1 and 2); a series circuit (`phys-series-circuits`, Physics Units 1 and 2); and The Blood Vote, a 1916 anti-conscription leaflet (`his-conscription-referendums`, History Year 9). The map of the Murray-Darling Basin (`geo-water-use-murray-darling`, Geography Year 10) was turned down twice as a photo: the Murray-Darling Basin Authority's map for its small print and its credit, then Martyman's 2004 catchment map because its labels are 6 to 8 px on a phone. At your ask it became a diagram drawn for Stratos (the coast, the state borders, the ACT, the basin and the two rivers), turned down once (the ACT showed as a hole, the Darling ran past Bourke) and then kept. The cell diagram was redrawn with `--replace` so each part has a believable size; the old one stayed on the point through three turned-down tries, and publish took its file out once the new one was kept.
 
 ## Writing an outline
 
@@ -594,11 +635,13 @@ Rules:
 | File | What it holds |
 | --- | --- |
 | `pipeline.py` | The pipeline: the commands, the requests, saving, the review page's server, and publishing. The settings at the top set the model and how hard it thinks at each step, the prices, and the limits for `--now` and batches. |
-| `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `figures.md` (when a graph helps and how to write one, step 13, which the writer and the adapter get), `checker.md` (which looks for the same things), `matcher.md` (reuse, adapt or new), `adapter.md` (only the changes an adapted point needs), `rebalance.md` (rewriting wrong options to match the right one), `reviewer.md` (the Claude Code reviewer's rules, step 11), and the extra rules for each kind in `kinds/`. |
+| `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `figures.md` (when a graph or chart helps and how to write one, step 13, and when to ask for a picture, step 14, which the writer and the adapter get), `pictures.md` and `picture-checker.md` (drawing, finding and checking pictures, step 14), `checker.md` (which looks for the same things), `matcher.md` (reuse, adapt or new), `adapter.md` (only the changes an adapted point needs), `rebalance.md` (rewriting wrong options to match the right one), `reviewer.md` (the Claude Code reviewer's rules, step 11), and the extra rules for each kind in `kinds/`. |
 | `review/index.html` | The review page, and its Compare tab. |
 | `outlines/` | One outline per course. `outlines/later/` holds outlines that are not ready to run: `run-many content/outlines` reads only the files directly in `outlines/`, so it skips them, and the README there says why each one waits. |
 | `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's, recheck's or autoreject's decision and yours, the old options rebalance replaced, and what Claude Code wrote, checked and decided). Commit it with the content. `work/_claude-code/` holds the Claude Code steps' tasks and answers until they are imported: never commit it. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
+| `pictures.mjs` | Reads the picture files for the content check: each image's size from its file, each diagram's text, and the folder as a whole against `pictures/licences.json` (step 14). |
+| `render.mjs` | Draws diagrams, charts and images as the app shows them, light and dark, at 360 px, for the picture checker (step 14). |
 | `latex.mjs` | The rules for maths in LaTeX between `\(` and `\)` (step 12): parsing it, with MathLive's Node build in `lab/mathlive/mathlive-ssr.min.mjs`, finding maths written as plain text, and measuring an option as it looks. |
 | `convert_maths.py` | Converts the maths points written before step 12 to LaTeX: a report, the safe swaps, points converted by hand, and undo. |
 | `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. `tests/made/` and `tests/units/` are courses it publishes, which the browser tests open. |

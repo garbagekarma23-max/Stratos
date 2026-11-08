@@ -62,7 +62,8 @@ def fake_point(title, dash=False):
             'a': {'q': 'Which is true of ' + title.lower() + '?', 'opts': ['Right: ' + words, 'Wrong one', 'Wrong two', 'Wrong three'],
                   'why': 'The first option is right.', 'clue': 'Read the card.', 'fig': '', 'optFigs': ''},
             'b': {'d': 2, 'q': 'In a new case, what shows ' + title.lower() + '?', 'opts': ['Right: ' + words + ' again', 'Wrong four', 'Wrong five', 'Wrong six'],
-                  'why': 'The first option is right again.', 'clue': 'Think of the case.', 'fig': '', 'optFigs': ''}}
+                  'why': 'The first option is right again.', 'clue': 'Think of the case.', 'fig': '', 'optFigs': ''},
+            'pictures': ''}
 
 class FakeBatches:
     def __init__(self, api): self.api = api
@@ -405,7 +406,10 @@ def copy_repo(dst):
     for d in ['src', 'supabase']: shutil.copytree(os.path.join(REPO, d), os.path.join(dst, d), ignore=shutil.ignore_patterns('bank', 'courses'))
     os.makedirs(os.path.join(dst, 'lab')); os.makedirs(os.path.join(dst, 'content'))
     for f in ['topics.js', 'maths.js', 'keypad.js', 'sheet.js', 'keys.css']: shutil.copy(os.path.join(REPO, 'lab', f), os.path.join(dst, 'lab', f))
-    for f in ['load.mjs', 'dump.mjs', 'latex.mjs']: shutil.copy(os.path.join(HERE, f), os.path.join(dst, 'content', f))
+    for f in ['load.mjs', 'dump.mjs', 'latex.mjs', 'pictures.mjs']: shutil.copy(os.path.join(HERE, f), os.path.join(dst, 'content', f))
+    # The pictures figures show, with no files: the copy has none of the banks whose points show them.
+    os.makedirs(os.path.join(dst, 'pictures'))
+    with open(os.path.join(dst, 'pictures', 'licences.json'), 'w', encoding='utf-8') as f: f.write('{"images": {}, "diagrams": {}}\n')
     # MathLive's build for Node, which the content check uses to parse LaTeX (content/latex.mjs).
     os.makedirs(os.path.join(dst, 'lab', 'mathlive'))
     shutil.copy(os.path.join(REPO, 'lab', 'mathlive', 'mathlive-ssr.min.mjs'), os.path.join(dst, 'lab', 'mathlive'))
@@ -1389,6 +1393,146 @@ def cc_review_tests(tmp, repo, printed, api):
     os.environ['ANTHROPIC_API_KEY'] = KEY
 
 
+PIC_COURSE = {'id': 'tst-pic', 'subject': 'Testing', 'name': 'Testing Pictures, Year 9', 'about': 'NSW, Picture topic', 'kind': 'standard', 'years': [9]}
+PIC_SVG = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120"><rect x="10" y="10" width="100" height="60" fill="none" stroke="currentColor"/>'
+           '<text x="120" y="60" font-size="14" fill="currentColor">A test label</text></svg>\n')
+
+def fake_png(w, h):
+    """The start of a PNG file: enough for the content check to read its size."""
+    return bytes([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0, 0, 0, 13]) + b'IHDR' + w.to_bytes(4, 'big') + h.to_bytes(4, 'big') + bytes(13)
+
+def picture_tests(tmp, repo, printed):
+    """Pictures through the pipeline: the writer's pictures become wants and come back, want-picture, cc-picture export
+    and import (the content check on the point with its picture, a licence not allowed kept in the folder, the dry run),
+    and cc-picture-check (a highly sure keep goes into the point, anything else comes out with its files and record, and
+    its want comes back with the problems, then waits for the owner after two)."""
+    work = os.path.join(tmp, 'work-pic')
+    def go(*argv):
+        code, out = run(['--repo', repo, '--work', work] + list(argv)); printed.append(out); return code, out
+    # the writer's answer
+    p = fake_point('Pictures here')
+    p['pictures'] = json.dumps([{'at': 'card 2', 'kind': 'diagram', 'brief': 'A labelled diagram of the part named on card line two.', 'why': 'It helps.'}])
+    b = pipeline.to_bank(p)
+    check(b['wants'][0]['at'] == 'card 2' and pipeline.to_claude(b)['pictures'] == p['pictures'] and 'wants' not in pipeline.to_bank(fake_point('No pictures')),
+          'the writer\'s pictures become the point\'s wants, and go back to it as JSON text ("" for none)')
+    bad = dict(b, wants=[{'at': 'card 9', 'kind': 'photo', 'brief': 'short'}])
+    probs = pipeline.check_points({'tst-wants': bad}, 'standard', repo, tempfile.mkdtemp()).get('tst-wants', [])
+    check(any('which the point does not have' in m for m in probs) and any('needs kind' in m for m in probs) and any('needs a brief' in m for m in probs),
+          'the content check holds each want to a place the point has, a kind and a brief')
+    # a work folder: two cleared points, one not cleared, and one whose want waits for the owner
+    W = pipeline.Work(work, 'tst-pic')
+    pts = []
+    def point(name, stage='cleared', wants=None):
+        pid = 'tpc-' + name
+        f = pipeline.to_bank(fake_point('Picture ' + name))
+        if wants: f['wants'] = wants
+        rec = {'id': pid, 'title': f['title'], 'brief': 'x', 'stage': stage, 'log': [], 'sensitive': 'none'}
+        rec.update(final=f) if stage == 'cleared' else rec.update(draft=f)
+        W.put(rec)
+        pts.append({'id': pid, 'title': f['title'], 'brief': 'The brief of ' + name + '.', 'codes': [], 'reuse': None, 'unit': 0, 'chapter': 0})
+    point('one'); point('two'); point('draft', 'review', [{'at': 'a', 'kind': 'image', 'brief': 'A photo that waits until the point is cleared.'}])
+    point('held', wants=[{'at': 'b', 'kind': 'image', 'brief': 'A photo the check turned down twice already.', 'tries': 2, 'notes': [['no'], ['no']]}])
+    pipeline.write_json(os.path.join(W.dir, 'course.json'), dict(PIC_COURSE, units=[{'title': 'A unit', 'chapters': [{'id': 'tpc-1-1', 'title': 'A chapter', 'points': pts}]}]))
+    outline = os.path.join(tmp, 'tst-pic.yaml')
+    with open(outline, 'w', encoding='utf-8') as f: f.write('id: tst-pic\n')
+    code, out = go('want-picture', outline, '--point', 'tpc-draft', '--at', 'card 1', '--kind', 'diagram', '--brief', 'A diagram of the first line, with labels.')
+    check(code == 1 and 'not cleared yet' in out, 'want-picture refuses a point that is not cleared')
+    code, out = go('want-picture', outline, '--point', 'tpc-one', '--at', 'card 7', '--kind', 'diagram', '--brief', 'A diagram of the first line, with labels.')
+    check(code == 1 and 'which this point does not have' in out, 'and a place the point does not have')
+    code, out = go('want-picture', outline, '--point', 'tpc-one', '--at', 'card 1', '--kind', 'diagram', '--brief', 'A diagram of the first line, with every label.')
+    go('want-picture', outline, '--point', 'tpc-two', '--at', 'a', '--kind', 'image', '--brief', 'A photo of the thing question a is about.')
+    check(code == 0 and W.load('tpc-one')['final']['wants'][0]['kind'] == 'diagram' and 'asked for a diagram' in W.load('tpc-one')['log'][-1],
+          'want-picture adds a want to a cleared point, in its log')
+    # cc-picture export
+    code, out = go('cc-picture', 'export')
+    folder = os.path.join(work, pipeline.CC_DIR, 'picture')
+    t = pipeline.read_json(os.path.join(folder, 'tasks.json'))
+    task = open(os.path.join(folder, 'tst-pic', 'tpc-one.md'), encoding='utf-8').read()
+    check(code == 0 and sorted(x['id'] for x in t['tasks']) == ['tpc-one', 'tpc-two'] and os.path.exists(os.path.join(folder, '_pictures.md')) and
+          'tpc-held: image at b' in out and '1. diagram at card 1: A diagram of the first line, with every label.' in task and '(right)' in task,
+          'cc-picture export writes a task for each cleared point with wants, with the rules, the point and its right answers; a want turned down twice is listed for the owner')
+    answer = lambda pid, data: pipeline.write_json(os.path.join(folder, 'tst-pic', pid + '.json'), data)
+    os.makedirs(os.path.join(repo, 'pictures', 'diagrams'), exist_ok=True); os.makedirs(os.path.join(repo, 'pictures', 'images'), exist_ok=True)
+    with open(os.path.join(repo, 'pictures', 'diagrams', 'tst-one.svg'), 'w', encoding='utf-8') as f: f.write(PIC_SVG)
+    with open(os.path.join(repo, 'pictures', 'images', 'tst-two.png'), 'wb') as f: f.write(fake_png(800, 600))
+    dg = {'kind': 'diagram', 'src': 'pictures/diagrams/tst-one.svg', 'alt': 'A test diagram of the first line, with its label.'}
+    im = {'kind': 'image', 'src': 'pictures/images/tst-two.png', 'alt': 'A test photo of the thing question a is about.'}
+    rec_img = {'title': 'A test photo', 'creator': 'A. Person', 'licence': 'CC BY-NC 4.0', 'source': 'https://commons.wikimedia.org/wiki/File:Test.png', 'size': [800, 600], 'changes': 'Resized', 'why': 'Its Commons page gives this licence.'}
+    answer('tpc-one', {'pictures': [{'want': 1, 'skip': '', 'figures': [dg], 'records': {dg['src']: {'title': 'A test diagram', 'made': 'Drawn for Stratos', 'creator': 'Stratos', 'licence': 'CC BY 4.0', 'size': [320, 120]}}}]})
+    answer('tpc-two', {'pictures': [{'want': 1, 'skip': '', 'figures': [im], 'records': {im['src']: rec_img}}]})
+    before = W.load('tpc-one')
+    code, out = go('cc-picture', 'import', '--dry-run')
+    check(W.load('tpc-one') == before and pipeline.read_json(os.path.join(repo, 'pictures', 'licences.json'))['diagrams'] == {} and 'tpc-one: 1 picture waiting for the check' in out,
+          'the import\'s dry run says what it would do and changes nothing')
+    code, out = go('cc-picture', 'import')
+    one, two, recs = W.load('tpc-one'), W.load('tpc-two'), pipeline.read_json(os.path.join(repo, 'pictures', 'licences.json'))
+    check(one['picture_draft']['cardFigs']['1'] == dg and 'cardFigs' not in one['final'] and recs['diagrams'][dg['src']]['made'] == 'Drawn for Stratos',
+          'import puts the diagram into a copy of the point to wait for the check, and records it; the published point does not change yet')
+    check('Only Public domain' in out and 'picture_draft' not in two and im['src'] not in recs['images'] and os.path.exists(os.path.join(folder, 'tst-pic', 'tpc-two.json')),
+          'an image with a licence not on the list fails the content check: its answer stays in the folder, and nothing is recorded')
+    rec_img['licence'] = 'CC BY 4.0'
+    answer('tpc-two', {'pictures': [{'want': 1, 'skip': '', 'figures': [im], 'records': {im['src']: rec_img}}]})
+    code, out = go('cc-picture', 'import')
+    check(W.load('tpc-two')['picture_draft']['a']['fig'] == im and not os.path.exists(os.path.join(folder, 'tasks.json')), 'fixed, it goes in, and the folder is emptied')
+    # cc-picture-check
+    code, out = go('cc-picture-check', 'export')
+    cfolder = os.path.join(work, pipeline.CC_DIR, 'picture-check')
+    ctask = open(os.path.join(cfolder, 'tst-pic', 'tpc-two.md'), encoding='utf-8').read()
+    check(code == 0 and 'You check pictures added to study points' in ctask and 'pictures/images/tst-two.png' in ctask and '"licence": "CC BY 4.0"' in ctask and '(right)' in ctask,
+          'cc-picture-check export gives each checker the rules, the point with its right answers, the picture\'s file and its record')
+    ok = {'want': 1, 'verdict': 'keep', 'matches_text': True, 'agrees_with_answer': True, 'gives_answer_away': False, 'labels_correct': True, 'readable': True, 'licence_ok': True, 'problems': [], 'sure': 'high'}
+    answer2 = lambda pid, data: pipeline.write_json(os.path.join(cfolder, 'tst-pic', pid + '.json'), data)
+    answer2('tpc-one', {'pictures': [ok]})
+    answer2('tpc-two', {'pictures': [dict(ok, verdict='redo', licence_ok=False, sure='medium', problems=['The source page gives another licence.'])]})
+    code, out = go('cc-picture-check', 'import')
+    one, two, recs = W.load('tpc-one'), W.load('tpc-two'), pipeline.read_json(os.path.join(repo, 'pictures', 'licences.json'))
+    check(one['final']['cardFigs']['1'] == dg and 'wants' not in one['final'] and 'picture_draft' not in one and one['pictures'][-1]['status'] == 'kept' and one['pictures'][-1]['checked_by'] == 'claude-code',
+          'a picture the check keeps, highly sure, goes into the point, its want done and the check recorded')
+    check('fig' not in two['final']['a'] and two['final']['wants'][0]['tries'] == 1 and two['final']['wants'][0]['notes'][-1] == ['The source page gives another licence.'] and
+          not os.path.exists(os.path.join(repo, im['src'])) and im['src'] not in recs['images'] and two['pictures'][-1]['status'] == 'turned down' and 'turned down' in out,
+          'a picture the check turns down comes out with its file and record, and its want comes back with the problems')
+    code, out = go('cc-picture', 'export')
+    check('tpc-two' in out and 'Last time the check found: The source page gives another licence.' in open(os.path.join(folder, 'tst-pic', 'tpc-two.md'), encoding='utf-8').read(),
+          'the next export asks again, with what the check found')
+    shutil.rmtree(folder)
+    # the owner's new ask in place of a want turned down twice
+    code, out = go('want-picture', outline, '--point', 'tpc-held', '--at', 'b', '--kind', 'diagram', '--brief', 'A diagram drawn for Stratos in place of the photo.')
+    held = W.load('tpc-held')
+    check(code == 0 and [w['kind'] for w in held['final']['wants']] == ['diagram'] and held['pictures'][-1]['status'] == "replaced by the owner's new ask",
+          'want-picture puts the owner\'s new ask in place of a want turned down twice')
+    # a new picture in place of one that passed: the old one stays until the new one passes
+    code, out = go('want-picture', outline, '--point', 'tpc-one', '--at', 'card 1', '--kind', 'diagram', '--brief', 'The same diagram redrawn with every part at its right size.')
+    check(code == 1 and '--replace' in out, 'asking for a picture where one is already needs --replace')
+    go('want-picture', outline, '--point', 'tpc-one', '--at', 'card 1', '--kind', 'diagram', '--replace', '--brief', 'The same diagram redrawn with every part at its right size.')
+    one = W.load('tpc-one')
+    check(one['final']['cardFigs']['1'] == dg and one['final']['wants'][0]['replaces'] == dg, 'with --replace, the old picture stays on the point and the want names it')
+    go('cc-picture', 'export')
+    dg2 = dict(dg, src='pictures/diagrams/tst-one-redrawn.svg')
+    with open(os.path.join(repo, dg2['src']), 'w', encoding='utf-8') as f: f.write(PIC_SVG)
+    rec_dg2 = {'title': 'A test diagram, redrawn', 'made': 'Drawn for Stratos', 'creator': 'Stratos', 'licence': 'CC BY 4.0', 'size': [320, 120]}
+    answer('tpc-one', {'pictures': [{'want': 1, 'skip': '', 'figures': [dg2], 'records': {dg2['src']: rec_dg2}}]})
+    answer('tpc-held', {'pictures': [{'want': 1, 'skip': 'Not needed for the test.', 'figures': [], 'records': {}}]})
+    code, out = go('cc-picture', 'import')
+    check(W.load('tpc-one')['picture_draft']['cardFigs']['1'] == dg2 and W.load('tpc-one')['final']['cardFigs']['1'] == dg, 'the redrawn picture waits for the check while the old one stays on the point')
+    go('cc-picture-check', 'export')
+    answer2('tpc-one', {'pictures': [dict(ok, verdict='redo', sure='high', problems=['A part is still the wrong size.'])]})
+    go('cc-picture-check', 'import')
+    one = W.load('tpc-one')
+    check(one['final']['cardFigs']['1'] == dg and one['final']['wants'][0]['tries'] == 1 and not os.path.exists(os.path.join(repo, dg2['src'])) and os.path.exists(os.path.join(repo, dg['src'])),
+          'a redrawn picture the check turns down comes out, and the old one is back on the point with its file')
+    go('cc-picture', 'export')
+    answer('tpc-one', {'pictures': [{'want': 1, 'skip': '', 'figures': [dg2], 'records': {dg2['src']: rec_dg2}}]})
+    with open(os.path.join(repo, dg2['src']), 'w', encoding='utf-8') as f: f.write(PIC_SVG)
+    go('cc-picture', 'import'); go('cc-picture-check', 'export')
+    answer2('tpc-one', {'pictures': [ok]})
+    go('cc-picture-check', 'import')
+    one = W.load('tpc-one')
+    check(one['final']['cardFigs']['1'] == dg2 and 'wants' not in one['final'] and one['pictures'][-1]['status'] == 'replaced' and one['pictures'][-1]['figures'] == [dg],
+          'one it keeps takes the old one\'s place, and the old one is marked replaced, for publish to take out once no point shows it')
+    shutil.rmtree(folder, ignore_errors=True); shutil.rmtree(cfolder, ignore_errors=True)
+    for d in ('images', 'diagrams'): shutil.rmtree(os.path.join(repo, 'pictures', d))
+    pipeline.write_json(os.path.join(repo, 'pictures', 'licences.json'), {'images': {}, 'diagrams': {}})
+
 def figure_tests(repo):
     """Figures (graphs stored as data, src/06-figure.js) through the pipeline: the writer answers each as JSON text, to_bank
     makes it data in the bank's shape and to_claude turns it back, text that is not JSON reaches the content check as a
@@ -1397,7 +1541,8 @@ def figure_tests(repo):
     g = lambda **k: dict({'kind': 'graph', 'x': {'min': -5, 'max': 5, 'label': '\\(x\\)', 'step': 1}, 'y': {'min': -5, 'max': 10, 'label': '\\(y\\)', 'step': 5},
                           'items': [{'type': 'fn', 'id': 'f', 'expr': k.pop('expr', 'x^{2}')}]}, **k)
     card_fig = g(alt='The parabola \\(y = x^{2}\\), with its vertex at the origin.')
-    opts = [dict(g(expr=e), x={'min': -5, 'max': 5, 'label': '\\(x\\)', 'step': 1, 'nums': False}) for e in ['x^{2}', 'x^{2} - 4', '-x^{2}', 'x^{2} + 4']]
+    opts = [dict(g(expr=e), x={'min': -5, 'max': 5, 'label': '\\(x\\)', 'step': 1, 'nums': False}, y={'min': -5, 'max': 10, 'label': '\\(y\\)', 'step': 5, 'nums': False})
+            for e in ['x^{2}', 'x^{2} - 4', '-x^{2}', 'x^{2} + 4']]
     p = fake_point('Graphs here')
     p['card'][1]['fig'] = json.dumps(card_fig)
     p['a']['fig'] = json.dumps(card_fig)
@@ -1820,6 +1965,7 @@ def main():
     # ---------- Claude Code instead of the API ----------
     claude_code_tests(tmp, printed, api)
     cc_review_tests(tmp, repo, printed, api)
+    picture_tests(tmp, repo, printed)
 
     # ---------- the key ----------
     saved =''.join(open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(tmp) for f in fs if f.endswith(('.json', '.js', '.sql', '.yaml')))

@@ -11,7 +11,10 @@
   "2026-11-01T08:24:35Z check: flagged",
   "2026-11-01T08:33:53Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:24:53Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:24:53Z review: approved with the fix (a spot check)",
+  "2026-11-07T15:29:50Z pictures: the owner asked for a diagram at card 1",
+  "2026-11-07T15:31:55Z pictures: 1 picture waiting for the check",
+  "2026-11-07T15:33:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -205,6 +208,13 @@
     "adds up. The total is R = R1 + R2 + ... and it is larger than any single resistor. Current then follows from I = V ÷ R."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "diagram",
+    "src": "pictures/diagrams/series-circuit.svg",
+    "alt": "A series circuit: a cell and two resistors, R1 and R2, joined one after another in a single loop. An arrow labelled I shows the current leaving the cell's positive terminal and flowing round the one path."
+   }
+  },
   "remember": "In series, current is the same everywhere. Voltages add up to the supply, and resistances add.",
   "a": {
    "q": "Two resistors are connected in series to a 12 V supply. The voltage across one is 5 V. What is the voltage across the other?",
@@ -230,5 +240,37 @@
    "clue": "Add the resistances first, then use I = V ÷ R."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "diagram",
+   "brief": "A series circuit drawn with standard symbols: one cell and two resistors labelled R1 and R2, one after another in a single loop, with an arrow labelled I beside the wire showing conventional current leaving the positive terminal of the cell.",
+   "figures": [
+    {
+     "kind": "diagram",
+     "src": "pictures/diagrams/series-circuit.svg",
+     "alt": "A series circuit: a cell and two resistors, R1 and R2, joined one after another in a single loop. An arrow labelled I shows the current leaving the cell's positive terminal and flowing round the one path."
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-07T15:31:55Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-07T15:33:21Z"
+  }
+ ]
 }

@@ -17,6 +17,10 @@ Run it from the repository folder. On Windows, type py where this says python3.
   python3 content/pipeline.py cc-write import                               rewrites written by a Claude Code session,
   python3 content/pipeline.py cc-check export (then import)                 each checked by a separate subagent,
   python3 content/pipeline.py cc-review export (then import, or --undo)     and some review list decisions
+  python3 content/pipeline.py want-picture OUTLINE --point ID --at "card 1" --kind diagram --brief "..."
+                                                                            asks for a picture on a cleared point
+  python3 content/pipeline.py cc-picture export (then import)               Claude Code draws diagrams, finds images and
+  python3 content/pipeline.py cc-picture-check export (then import)         writes charts, each checked by a fresh subagent
   python3 content/pipeline.py review                                      the review page, at http://localhost:8765
   python3 content/pipeline.py publish content/outlines/nsw-bus-11.yaml    writes the cleared points into src/
 content/README.md walks through each step.
@@ -418,7 +422,10 @@ STR = {'type': 'string'}
 # content check holds each figure to the format (FIG.pointProblems), as it holds the rest of the point.
 QUESTION = obj({'q': STR, 'opts': {'type': 'array', 'items': STR}, 'why': STR, 'clue': STR, 'fig': STR, 'optFigs': STR})
 PRACTICE = obj({'d': {'type': 'integer', 'enum': [2, 3]}, 'q': STR, 'opts': {'type': 'array', 'items': STR}, 'why': STR, 'clue': STR, 'fig': STR, 'optFigs': STR})
-POINT_SCHEMA = obj({'title': STR, 'card': {'type': 'array', 'items': obj({'label': STR, 'text': STR, 'fig': STR})}, 'remember': STR, 'a': QUESTION, 'b': PRACTICE})
+# pictures is the writer's list of pictures it cannot draw itself (diagrams and images), as JSON text, or "" for none:
+# each says where it goes, the kind, what it shows and why. They become the point's wants, for the cc-picture step.
+POINT_SCHEMA = obj({'title': STR, 'card': {'type': 'array', 'items': obj({'label': STR, 'text': STR, 'fig': STR})}, 'remember': STR, 'a': QUESTION, 'b': PRACTICE,
+                    'pictures': STR})
 PICK = obj({'best': STR, 'also_right': {'type': 'array', 'items': STR}})
 CHECK_SCHEMA = obj({
     'a': PICK, 'b': PICK,
@@ -461,6 +468,8 @@ def to_bank(p):
     out = {'title': p['title'].strip(), 'card': card, 'remember': p['remember'].strip(), 'a': q(p['a']), 'b': q(p['b'], True)}
     figs = {str(i): fig_data(l.get('fig')) for i, l in enumerate(p['card'], 1) if fig_data(l.get('fig')) is not None}
     if figs: out = dict(list(out.items())[:2] + [('cardFigs', figs)] + list(out.items())[2:])
+    wants = fig_data(p.get('pictures'))
+    if wants is not None and wants != []: out['wants'] = wants if isinstance(wants, list) or 'unreadable' not in wants else {'unreadable': wants['unreadable']}
     return out
 
 def to_claude(p):
@@ -469,7 +478,8 @@ def to_claude(p):
     card = [dict({'label': l[0], 'text': l[1]} if isinstance(l, list) else {'label': '', 'text': l}, fig=fig_text(figs.get(str(i))))
             for i, l in enumerate(p['card'], 1)]
     q = lambda x: dict({k: v for k, v in x.items() if k not in ('fig', 'optFigs')}, fig=fig_text(x.get('fig')), optFigs=fig_text(x.get('optFigs')))
-    return {'title': p['title'], 'card': card, 'remember': p['remember'], 'a': q(p['a']), 'b': q(p['b'])}
+    return {'title': p['title'], 'card': card, 'remember': p['remember'], 'a': q(p['a']), 'b': q(p['b']),
+            'pictures': json.dumps(p['wants'], ensure_ascii=False) if p.get('wants') else ''}
 
 def parts(p):
     """A bank point as named parts, one a line, for an adapt request: title, card1, card1 label, ..., b.clue."""
@@ -1797,7 +1807,7 @@ def cmd_publish(args):
     for u in units:
         for c in u['chapters']:
             for pid in c['points']:
-                if recs.get(pid) and recs[pid]['stage'] == 'cleared': bank[pid] = recs[pid]['final']
+                if recs.get(pid) and recs[pid]['stage'] == 'cleared': bank[pid] = {k: v for k, v in recs[pid]['final'].items() if k != 'wants'}
     chips = course['chips'] or [p['title'].lower() for p in course['points'] if recs[p['id']]['stage'] == 'cleared'][:5]
     # year is the course's heading on Home ("Economics, Units 1 and 2"), so a course with a level line uses it. level is
     # also what the subject sheet groups it under (yearGroup in src/places.js).
@@ -1815,7 +1825,11 @@ def cmd_publish(args):
                '   being reviewed, and shows on Home as Coming soon. */\n'
                'MADE_COURSES.push(' + js(data) + ');\n')
     sql_blocks(repo)
+    # A picture a new one replaced (cc-picture-check) leaves the repository once no published point shows it.
+    old = [s for r in recs.values() if r for e in r.get('pictures') or [] if e.get('status') == 'replaced' for s in pic_srcs(e.get('figures') or [])]
+    gone = drop_picture_files(sorted(set(old)), repo) if old else []
     out = subprocess.run(['node', 'check_content.mjs'], cwd=repo, capture_output=True, text=True, encoding='utf-8')
+    if gone: say('Took out the pictures replaced by new ones: ' + ', '.join(gone) + '.')
     say('Published', course['name'] + ':', ready, 'chapters ready' + ('. Held back as Coming soon: ' + ', '.join(held) if held else '') + '.')
     say('Wrote src/bank/' + bank_name + '.js, src/courses/' + course['id'] + '.js, and the made lines in supabase/week.sql and supabase/challenges.sql.')
     if out.returncode != 0:
@@ -2807,7 +2821,17 @@ def review_server(root, repo, port):
             # The app's figure code, to draw a point's graphs as the app does: the Maths Lab's reader, then src/06-figure.js.
             if path == '/figure.js':
                 code = ''.join(open(os.path.join(repo, *f), encoding='utf-8').read() + '\n' for f in (('lab', 'maths.js'), ('src', '06-figure.js')))
+                # The picture records, as build.py puts them in, so the page shows each picture at its size with its credit.
+                pics = json.dumps(pic_records(repo), ensure_ascii=False).replace('</', '<\\/')
+                code = code.replace('/*PICS*/{"images": {}, "diagrams": {}}/*PICS-END*/', '/*PICS*/' + pics + '/*PICS-END*/')
                 return self.send(200, code, 'text/javascript')
+            # The picture files a figure shows (pictures/diagrams and pictures/images), and nothing else from the repository.
+            m = re.fullmatch(r'/pictures/(diagrams/[a-z0-9-]+\.svg|images/[a-z0-9-]+\.(?:jpg|png|webp))', path)
+            if m:
+                f = os.path.join(repo, 'pictures', *m.group(1).split('/'))
+                if not os.path.isfile(f): return self.send(404, {'ok': False})
+                kind = {'svg': 'image/svg+xml', 'jpg': 'image/jpeg', 'png': 'image/png', 'webp': 'image/webp'}[f.rsplit('.', 1)[1]]
+                with open(f, 'rb') as fh: return self.send(200, fh.read(), kind)
             if path in ('/api/items', '/api/compare'):
                 if self.headers.get('X-Review-Token') != token: return self.send(403, {'ok': False})
                 try: return self.send(200, review_items(root, repo) if path == '/api/items' else compare_items(root))
@@ -2867,6 +2891,7 @@ def fits(data, schema, where='the answer'):
     t, out = schema.get('type'), []
     if t == 'object':
         if not isinstance(data, dict): return [where + ' must be a JSON object']
+        if 'properties' not in schema: return []
         out += [where + ' is missing ' + k for k in schema.get('required', []) if k not in data]
         out += [where + ' has ' + k + ', which is not part of the shape' for k in data if k not in schema['properties']]
         for k, s in schema['properties'].items():
@@ -2877,6 +2902,7 @@ def fits(data, schema, where='the answer'):
         return [p for i, x in enumerate(data) for p in fits(x, schema['items'], where + '[' + str(i) + ']')]
     if t == 'string' and not isinstance(data, str): return [where + ' must be text']
     if t == 'integer' and (not isinstance(data, int) or isinstance(data, bool)): return [where + ' must be a whole number']
+    if t == 'boolean' and not isinstance(data, bool): return [where + ' must be true or false']
     if 'enum' in schema and data not in schema['enum']: return [where + ' must be one of ' + ', '.join(map(str, schema['enum']))]
     return []
 
@@ -3311,6 +3337,376 @@ def cc_lines(recs):
                    '. Left for you after its look: ' + str(len(left)) + '.')
     return out
 
+# ---------- pictures: diagrams and images, added by Claude Code ----------
+# The API writer can draw graphs and charts as data, but it cannot draw a diagram or find a photo. So it marks where a
+# picture would help, as a want on the point: where it goes, the kind (diagram or image, or a chart it could not write),
+# what it shows and why it helps. The owner can add a want too (want-picture). Then, with no API calls:
+#   cc-picture export|import         a Claude Code session draws each diagram as SVG, finds each image on Wikimedia
+#                                    Commons (only an allowed licence), or writes each chart, saves the files in
+#                                    pictures/ and answers with the figure and its record. Import runs the content check
+#                                    on the point with its picture, and keeps it waiting for the check.
+#   cc-picture-check export|import   a fresh Opus subagent for each point, which sees the point, the right answers and
+#                                    each picture (a diagram drawn as the app draws it), checks it against the text, the
+#                                    right answer and the licence. Import keeps a picture only when the check is highly
+#                                    sure and finds nothing wrong. Otherwise the picture goes, its files too, and the want
+#                                    comes back with what was wrong, for one more try, then for the owner.
+# Only cleared points get pictures, so the picture is checked against text that will not change. publish writes the
+# point with its pictures, and leaves its wants out of the bank.
+PICTURE_KINDS = ('diagram', 'image', 'chart')
+PICTURE_TRIES = 2                 # a want whose picture the check turns down this many times goes to the owner
+ANY_OBJ = {'type': 'object'}      # any JSON object: the content check holds a figure to the format
+PICTURE_SCHEMA = obj({'pictures': {'type': 'array', 'items': obj({
+    'want': {'type': 'integer'}, 'skip': STR, 'figures': {'type': 'array', 'items': ANY_OBJ}, 'records': ANY_OBJ})}})
+PICTURE_CHECK_SCHEMA = obj({'pictures': {'type': 'array', 'items': obj({
+    'want': {'type': 'integer'}, 'verdict': {'type': 'string', 'enum': ['keep', 'redo', 'drop']},
+    'matches_text': {'type': 'boolean'}, 'agrees_with_answer': {'type': 'boolean'}, 'gives_answer_away': {'type': 'boolean'},
+    'labels_correct': {'type': 'boolean'}, 'readable': {'type': 'boolean'}, 'licence_ok': {'type': 'boolean'},
+    'problems': {'type': 'array', 'items': STR}, 'sure': {'type': 'string', 'enum': ['high', 'medium', 'low']}})}})
+PICS_FILE = os.path.join('pictures', 'licences.json')
+
+def want_problems(wants, p):
+    """What is wrong with a point's wants: each names a place the point has, a kind, and says what to show."""
+    if not isinstance(wants, list): return ['wants must be a list']
+    out = []
+    for n, w in enumerate(wants, 1):
+        if not isinstance(w, dict): out.append('want ' + str(n) + ' is not an object'); continue
+        if w.get('kind') not in PICTURE_KINDS: out.append('want ' + str(n) + ' needs kind: diagram, image or chart')
+        if not picture_place(w.get('at'), p): out.append('want ' + str(n) + ' has at ' + json.dumps(w.get('at')) + ', which this point does not have. Use card 1 to card ' + str(len(p['card'])) + ', a, b, a options or b options')
+        if len(str(w.get('brief') or '').split()) < 5: out.append('want ' + str(n) + ' needs a brief: what the picture shows, with every label')
+    return out
+
+def picture_place(at, p):
+    """Where a want's picture goes, as (part, key): ('card', '2'), ('a', 'fig') or ('b', 'optFigs'). None if the point has
+    no such place."""
+    m = re.fullmatch(r'card ([1-4])|([ab])( options)?', str(at or '').strip())
+    if not m: return None
+    if m.group(1): return ('card', m.group(1)) if int(m.group(1)) <= len(p['card']) else None
+    return (m.group(2), 'optFigs' if m.group(3) else 'fig')
+
+def picture_taken(p, place):
+    """True when a point already has a figure where a want would put one."""
+    part, k = place
+    return (p.get('cardFigs') or {}).get(k) is not None if part == 'card' else p[part].get(k) is not None
+
+def put_picture(p, place, figs):
+    """The point with figures put in a place: one figure, or four for an option's place."""
+    p = json.loads(json.dumps(p))
+    part, k = place
+    if part == 'card':
+        cf = dict(p.get('cardFigs') or {}, **{k: figs[0]})
+        p = dict(list((x, y) for x, y in p.items() if x != 'cardFigs')[:2] + [('cardFigs', dict(sorted(cf.items())))] + list((x, y) for x, y in p.items() if x != 'cardFigs')[2:])
+    else: p[part][k] = figs if k == 'optFigs' else figs[0]
+    return p
+
+def take_picture(p, place):
+    """The point with the figure in a place taken out."""
+    p = json.loads(json.dumps(p))
+    part, k = place
+    if part == 'card':
+        cf = dict(p.get('cardFigs') or {}); cf.pop(k, None)
+        if cf: p['cardFigs'] = cf
+        else: p.pop('cardFigs', None)
+    else: p[part].pop(k, None)
+    return p
+
+def pic_records(repo):
+    return read_json(os.path.join(repo, PICS_FILE), {'images': {}, 'diagrams': {}})
+
+def pic_srcs(figs):
+    return [f['src'] for f in figs if isinstance(f, dict) and f.get('kind') in ('diagram', 'image') and isinstance(f.get('src'), str)]
+
+def drop_picture_files(srcs, repo, keep_ids=()):
+    """Takes picture files and their records out, unless a published point still shows them."""
+    recs, d = pic_records(repo), dump(repo)
+    shown = json.dumps([p for bank in d['banks'].values() for pid, p in bank.items() if pid not in keep_ids], ensure_ascii=False)
+    gone = []
+    for src in srcs:
+        if '"' + src + '"' in shown: continue
+        for group in ('images', 'diagrams'): recs[group].pop(src, None)
+        path = os.path.join(repo, src)
+        if os.path.exists(path): os.remove(path); gone.append(src)
+    write_json(os.path.join(repo, PICS_FILE), recs)
+    return gone
+
+def want_line(n, w):
+    return (str(n) + '. ' + w['kind'] + ' at ' + w['at'] + ': ' + w['brief'] + (' Why: ' + w['why'] if w.get('why') else '') +
+            (' It replaces the figure there now, which stays until this one passes the check. Save it as a new file with a new name, and leave the old file as it is. The figure there now: ' + fig_text(w['replaces']) if w.get('replaces') is not None else '') +
+            (' Last time the check found: ' + '; '.join(w['notes'][-1]) if w.get('notes') else ''))
+
+def open_wants(rec):
+    """A cleared point's wants still to be drawn: not held for the owner after too many tries."""
+    if rec.get('stage') != 'cleared' or rec.get('picture_draft'): return []
+    return [(n, w) for n, w in enumerate((rec.get('final') or {}).get('wants') or [], 1) if (w.get('tries') or 0) < PICTURE_TRIES]
+
+def cmd_want_picture(args):
+    """Adds a want to a cleared point, for the cc-picture step."""
+    repo = args.repo or REPO
+    root = work_root(args, repo)
+    cid = None
+    for path in outline_paths([args.outline]):
+        yaml, text = load_yaml(path)
+        cid = (yaml.safe_load(text) or {}).get('id')
+    work = Work(root, cid)
+    rec = work.load(args.point)
+    if not rec: raise Stop('No point ' + args.point + ' in ' + cid + '.')
+    if rec['stage'] != 'cleared': raise Stop(args.point + ' is not cleared yet. A picture is added once its text is settled.')
+    p = rec['final']
+    if rec.get('picture_draft'): raise Stop(args.point + ' has a picture waiting for the check. Run cc-picture-check first.')
+    w = {'at': args.at, 'kind': args.kind, 'brief': args.brief}
+    if args.why: w['why'] = args.why
+    probs = want_problems([w], p)
+    if probs: raise Stop('; '.join(probs))
+    place = picture_place(args.at, p)
+    # A want for the same place that the check turned down twice waits for the owner: a new ask takes its place.
+    same = [x for x in p.get('wants') or [] if picture_place(x.get('at'), p) == place]
+    if [x for x in same if (x.get('tries') or 0) < PICTURE_TRIES]: raise Stop(args.point + ' already asks for a picture at ' + args.at + '.')
+    if same:
+        p['wants'] = [x for x in p['wants'] if x not in same]
+        rec.setdefault('pictures', []).append({'want': same, 'status': 'replaced by the owner\'s new ask', 'at_time': now()})
+    if picture_taken(p, place):
+        if not args.replace: raise Stop(args.point + ' already has a figure at ' + args.at + '. Add --replace to ask for a new one in its place.')
+        # The figure there stays on the point until its replacement passes the check.
+        part, k = place
+        w['replaces'] = (p.get('cardFigs') or {}).get(k) if part == 'card' else p[part][k]
+    p.setdefault('wants', []).append(w)
+    log(rec, 'pictures: the owner asked for ' + ('an ' if args.kind == 'image' else 'a ') + args.kind + ' at ' + args.at + (', in place of the one there' if w.get('replaces') else ''))
+    work.put(rec)
+    say('Added to ' + args.point + ': ' + ('an ' if args.kind == 'image' else 'a ') + args.kind + ' at ' + args.at + '. Next: py content/pipeline.py cc-picture export')
+
+def render_diagrams(srcs, folder, repo):
+    """Draws each diagram as the app does, light and dark, at 360 px, as PNGs for the checker to look at
+    (content/render.mjs). Returns {src: [png paths]}, or {} when the browser is not installed."""
+    if not srcs: return {}
+    try:
+        out = node([os.path.join('content', 'render.mjs'), folder] + srcs, repo)
+        return json.loads(out)
+    except (Stop, ValueError):
+        return {}
+
+def picture_tasks(args, repo, step, held=None):
+    """(work, meta, pt, rec) for each point a picture step has work for. held, a list, gets 'id: kind at place' for each
+    want the check turned down PICTURE_TRIES times, which waits for the owner."""
+    out = []
+    for work, meta in cc_courses(args, repo, step):
+        course = [pt for u in meta['units'] for c in u['chapters'] for pt in c['points']]
+        for pt in course:
+            rec = work.load(pt['id'])
+            if not rec: continue
+            if held is not None and rec.get('stage') == 'cleared':
+                held += [rec['id'] + ': ' + w['kind'] + ' at ' + w['at'] for w in (rec.get('final') or {}).get('wants') or [] if (w.get('tries') or 0) >= PICTURE_TRIES]
+            if step == 'picture' and open_wants(rec): out.append((work, meta, pt, rec))
+            if step == 'picture-check' and rec.get('picture_draft'): out.append((work, meta, pt, rec))
+    return out
+
+def cc_picture_export(args, repo):
+    step = args.step
+    folder = cc_folder(args, repo, step)
+    cc_start(folder, step)
+    tasks, held = [], []
+    for work, meta, pt, rec in picture_tasks(args, repo, step, held):
+        here = os.path.join(folder, meta['id'])
+        task, answer = os.path.join(here, rec['id'] + '.md'), os.path.join(here, rec['id'] + '.json')
+        p = rec['final'] if step == 'picture' else rec['picture_draft']
+        head = ['Course: ' + meta['name'] + '. Point id: ' + rec['id'] + '.', '']
+        if step == 'picture':
+            wants = open_wants(rec)
+            text = ['# Pictures for a point: ' + p['title'], ''] + head + [
+                'The rules are in _pictures.md, in the folder above. Follow them exactly.', '', '## The point', ''] + point_md(p) + [
+                '', '## The pictures it wants', ''] + [want_line(n, w) for n, w in wants] + [''] + answer_md(
+                shown(answer), PICTURE_SCHEMA, 'One entry for each want above, by its number: its figures (one, or four for an option\'s place) and '
+                'records (an object with the record of each new diagram or image file by its src, as pictures/licences.json holds them), '
+                'or a skip with the reason and no figures.')
+        else:
+            new = rec['pictures_waiting']
+            srcs = [s for x in new for s in pic_srcs(x['figures'])]
+            # Charts are drawn too, from their data, so the checker sees what a student sees.
+            charts = {}
+            for x in new:
+                for i, f in enumerate(x['figures'], 1):
+                    if f.get('kind') == 'chart':
+                        path = os.path.join(here, rec['id'], 'chart-' + str(x['want']) + '-' + str(i) + '.json')
+                        write_json(path, f); charts[id(f)] = os.path.relpath(path, repo)
+            pngs = render_diagrams(srcs + list(charts.values()), os.path.join(here, rec['id']), repo)
+            recs = pic_records(repo)
+            text = [rec['id'] + ': check the pictures on this point.', '', open(os.path.join(HERE, 'prompts', 'picture-checker.md'), encoding='utf-8').read().strip(), '',
+                    '---', '', '## The point, with the right answers marked', ''] + point_md(p) + ['', '## The new pictures', '']
+            for x in new:
+                text += ['Picture ' + str(x['want']) + ': ' + ('an ' if x['kind'] == 'image' else 'a ') + x['kind'] + ' at ' + x['at'] + '. It was asked for as: ' + x['brief'], '']
+                for f in x['figures']:
+                    text.append('Its figure, as data: ' + fig_text(f))
+                    for png in pngs.get(charts.get(id(f), ''), []): text.append('As the app draws it: ' + shown(png) + '. Open it to see it.')
+                    if f.get('kind') in ('diagram', 'image'):
+                        group = 'images' if f['kind'] == 'image' else 'diagrams'
+                        text.append('Its file: ' + shown(os.path.join(repo, f['src'])) + '. Open it to see it.')
+                        for png in pngs.get(f['src'], []): text.append('As the app draws it: ' + shown(png) + '. Open it to see it.')
+                        text.append('Its record in pictures/licences.json: ' + json.dumps(recs.get(group, {}).get(f['src']), ensure_ascii=False))
+                text.append('')
+            text += ['---', '', 'Read only the files named above. Change no file, and run no command but to open a source page named in a record.', ''] + answer_md(
+                shown(answer), PICTURE_CHECK_SCHEMA, 'One entry for each picture above, by its number.')
+        write_text(task, '\n'.join(text) + '\n')
+        tasks.append({'course': meta['id'], 'id': rec['id'], 'hash': cc_state(rec), 'task': os.path.relpath(task, folder).replace(os.sep, '/'),
+                      'answer': os.path.relpath(answer, folder).replace(os.sep, '/')})
+    if step == 'picture' and tasks:
+        write_text(os.path.join(folder, '_pictures.md'), prompt('pictures.md') + '\n\n' + prompt('figures.md') + '\n')
+    cc_save_tasks(folder, step, tasks)
+    if held and step == 'picture':
+        say('Waiting for you, after ' + str(PICTURE_TRIES) + ' pictures were turned down (content/README.md, step 14):')
+        for h in held: say('  ' + h)
+    if not tasks:
+        say('No pictures to ' + ('draw or find' if step == 'picture' else 'check') + ' with Claude Code.'); return
+    say('Exported ' + many_of(len(tasks), 'task') + ' for Claude Code (' + ('pictures' if step == 'picture' else 'picture checks') + ') in ' + shown(folder) + ':')
+    for t in tasks: say('  ' + shown(os.path.join(folder, t['task'])) + '  ->  ' + shown(os.path.join(folder, t['answer'])))
+    say('Next: answer each task with its JSON file, then run py content/pipeline.py cc-' + step + ' import (content/README.md, step 14).')
+
+def cc_picture_import(args, repo):
+    step, dry = args.step, args.dry_run
+    folder = cc_folder(args, repo, step)
+    t = cc_tasks(folder)
+    if not t or not t.get('tasks'):
+        say('Nothing to import: no tasks in ' + shown(folder) + '. Run py content/pipeline.py cc-' + step + ' export first.'); return
+    if dry: say('Dry run: nothing is changed.')
+    root = work_root(args, repo)
+    keep, done, stale, bad, lines = [], [], [], [], []
+    for task in t['tasks']:
+        meta = read_json(os.path.join(root, task['course'], 'course.json'))
+        work = Work(root, task['course']) if meta else None
+        rec = work.load(task['id']) if work else None
+        if not rec or cc_state(rec) != task['hash']: stale.append(task); continue
+        path = os.path.join(folder, task['answer'])
+        if not os.path.exists(path): keep.append(task); continue
+        data, probs = cc_read(path)
+        if not probs: probs = fits(data, PICTURE_SCHEMA if step == 'picture' else PICTURE_CHECK_SCHEMA)
+        if not probs:
+            probs, line = (picture_import_one if step == 'picture' else picture_check_one)(work, meta, rec, data, repo, dry)
+            if line: lines.append(line)
+        if probs: bad.append((task, probs)); keep.append(task); continue
+        done.append(task)
+    for line in lines: say(line)
+    if not dry:
+        for task in stale + done:
+            for k in ('task', 'answer'):
+                p = os.path.join(folder, task[k])
+                if os.path.exists(p): os.remove(p)
+        cc_save_tasks(folder, step, keep)
+    if stale: say(('Would drop' if dry else 'Dropped') + ' ' + many_of(len(stale), 'task') + ' whose point changed since the export: ' + ', '.join(x['id'] for x in stale) + '.')
+    if bad:
+        say('Answers with a problem, kept in the folder. ' + ('Fix each one and import again:' if step == 'picture' else 'Delete each one, have a fresh subagent check it again, and import again:'))
+        for task, probs in bad: say('  ' + shown(os.path.join(folder, task['answer'])) + ': ' + '; '.join(probs))
+    if not dry and step == 'picture' and done: say('Next: py content/pipeline.py cc-picture-check export, so a fresh subagent checks each picture.')
+    if not dry and step == 'picture-check' and done: say('Next: publish each course whose points changed, as content/README.md step 9 says.')
+
+def picture_import_one(work, meta, rec, data, repo, dry):
+    """One point's pictures: put them in, record their files, and run the content check. Returns (problems, line)."""
+    p, wants = rec['final'], open_wants(rec)
+    by_n = dict(wants)
+    got = {x['want']: x for x in data['pictures']}
+    probs = ['the answer has no entry for want ' + str(n) for n in by_n if n not in got]
+    probs += ['the answer has want ' + str(n) + ', which is not one of the point\'s open wants' for n in got if n not in by_n]
+    if probs: return probs, ''
+    new, skipped, recs = p, [], pic_records(repo)
+    added_recs, waiting = {}, []
+    for n, x in sorted(got.items()):
+        w = by_n[n]
+        if x['skip'].strip():
+            if x['figures']: probs.append('want ' + str(n) + ' is skipped but has figures')
+            skipped.append((n, x['skip'].strip())); continue
+        place = picture_place(w['at'], p)
+        need = 4 if place[1] == 'optFigs' else 1
+        if len(x['figures']) != need: probs.append('want ' + str(n) + ' needs ' + str(need) + ' figure' + ('s' if need > 1 else '')); continue
+        if picture_taken(new, place) and not w.get('replaces'): probs.append('want ' + str(n) + ' goes where the point already has a figure: ' + w['at']); continue
+        kinds = {f.get('kind') for f in x['figures']}
+        if kinds != {w['kind']}: probs.append('want ' + str(n) + ' asked for a ' + w['kind'] + ', but the answer has ' + ', '.join(sorted(map(str, kinds))))
+        srcs = pic_srcs(x['figures'])
+        for src in srcs:
+            group = 'images' if src.startswith('pictures/images/') else 'diagrams'
+            r = x['records'].get(src) or recs.get(group, {}).get(src)
+            if r is None: probs.append('want ' + str(n) + ' has no record for ' + src); continue
+            added_recs[(group, src)] = r
+        for src in x['records']:
+            if src not in srcs: probs.append('want ' + str(n) + ' has a record for ' + src + ', which none of its figures shows')
+        new = put_picture(new, place, x['figures'])
+        waiting.append(dict({'want': n, 'at': w['at'], 'kind': w['kind'], 'brief': w['brief'], 'figures': x['figures'], 'by': 'claude-code', 'made': now()},
+                            **({'replaces': w['replaces']} if w.get('replaces') else {})))
+    if probs: return probs, ''
+    # The content check reads pictures/licences.json, so the records go in first, and come out again if it fails.
+    before = json.loads(json.dumps(recs))
+    for (group, src), r in added_recs.items(): recs.setdefault(group, {})[src] = r
+    write_json(os.path.join(repo, PICS_FILE), recs)
+    check = dict(new); check.pop('wants', None)
+    found = check_points({rec['id']: check}, meta['kind'], repo, work.dir, meta.get('subject')).get(rec['id'], [])
+    if found or dry: write_json(os.path.join(repo, PICS_FILE), before)
+    if found: return ['the point with its pictures fails the content check: ' + '; '.join(found)], ''
+    line = rec['id'] + ': ' + (many_of(len(waiting), 'picture') + ' waiting for the check' if waiting else 'no pictures') + \
+        (', ' + many_of(len(skipped), 'want') + ' skipped (' + '; '.join(s for _, s in skipped) + ')' if skipped else '')
+    if dry: return [], line
+    left = [w for n, w in enumerate(p.get('wants') or [], 1) if n not in got]
+    for n, why in skipped:
+        rec.setdefault('pictures', []).append({'want': by_n[n], 'status': 'skipped', 'why': why, 'by': 'claude-code', 'at_time': now()})
+    if waiting:
+        draft = dict(new)
+        draft['wants'] = left + [dict(by_n[x['want']], waiting=True) for x in waiting]
+        rec['picture_draft'] = draft
+        rec['pictures_waiting'] = waiting
+    rec['final'] = dict(p, wants=left + [by_n[x['want']] for x in waiting])
+    if not rec['final']['wants']: rec['final'].pop('wants', None)
+    log(rec, 'pictures: ' + line.split(': ', 1)[1])
+    work.put(rec)
+    return [], line
+
+def picture_ok(c):
+    """A picture the check passed: highly sure, keep, and nothing wrong."""
+    return (c['verdict'] == 'keep' and c['sure'] == 'high' and c['matches_text'] and c['agrees_with_answer'] and c['labels_correct'] and
+            c['readable'] and c['licence_ok'] and not c['gives_answer_away'] and not c['problems'])
+
+def picture_check_one(work, meta, rec, data, repo, dry):
+    """One point's picture checks. A picture the check passes goes into the point; any other comes out with its files,
+    and its want comes back with what was wrong, for another try or, after PICTURE_TRIES, for the owner."""
+    waiting = rec['pictures_waiting']
+    got = {x['want']: x for x in data['pictures']}
+    probs = ['the answer has no entry for picture ' + str(x['want']) for x in waiting if x['want'] not in got]
+    if probs: return probs, ''
+    draft, final = rec['picture_draft'], rec['final']
+    kept, dropped = [], []
+    for x in waiting:
+        c = got[x['want']]
+        (kept if picture_ok(c) else dropped).append((x, c))
+    line = rec['id'] + ': ' + ', '.join(([many_of(len(kept), 'picture') + ' kept'] if kept else []) + ([many_of(len(dropped), 'picture') + ' turned down'] if dropped else []))
+    for x, c in dropped:
+        line += '. Picture ' + str(x['want']) + ' (' + x['kind'] + ' at ' + x['at'] + '): ' + c['verdict'] + ', ' + c['sure'] + ' sure' + ('. ' + '; '.join(c['problems']) if c['problems'] else '')
+    if dry: return [], line
+    point = draft
+    for x, c in dropped:
+        place = picture_place(x['at'], final)
+        point = take_picture(point, place)
+        if x.get('replaces') is not None: point = put_picture(point, place, x['replaces'] if place[1] == 'optFigs' else [x['replaces']])
+    wants = []
+    for w in point.get('wants') or []:
+        if not w.get('waiting'): wants.append(w); continue
+        x, c = next(((x, c) for x, c in dropped if x['at'] == w['at'] and x['kind'] == w['kind']), (None, None))
+        if x is None: continue          # its picture was kept
+        w = {k: v for k, v in w.items() if k != 'waiting'}
+        w['tries'] = (w.get('tries') or 0) + 1
+        w['notes'] = (w.get('notes') or []) + [c['problems'] or ['the check was ' + c['sure'] + ' sure and said ' + c['verdict']]]
+        wants.append(w)
+    point = dict(point)
+    if wants: point['wants'] = wants
+    else: point.pop('wants', None)
+    rec['final'] = point
+    for x, c in kept + dropped:
+        rec.setdefault('pictures', []).append(dict(x, status='kept' if (x, c) in kept else 'turned down', check=c, checked_by='claude-code', checked=now()))
+        # The picture a kept one replaced: its files go once publish has taken it off every point (replaced_srcs).
+        if (x, c) in kept and x.get('replaces') is not None:
+            old = x['replaces'] if isinstance(x['replaces'], list) else [x['replaces']]
+            rec['pictures'].append({'status': 'replaced', 'figures': old, 'by': x['at'], 'at_time': now()})
+    rec.pop('picture_draft', None); rec.pop('pictures_waiting', None)
+    gone = drop_picture_files([s for x, _ in dropped for s in pic_srcs(x['figures'])], repo)
+    held = [w for w in wants if (w.get('tries') or 0) >= PICTURE_TRIES]
+    if held: line += '. Now waiting for you: ' + ', '.join(w['kind'] + ' at ' + w['at'] for w in held)
+    log(rec, 'pictures: ' + line.split(': ', 1)[1] + ('. Took out ' + ', '.join(gone) if gone else ''))
+    work.put(rec)
+    return [], line
+
+
 def cmd_cc(args):
     words = list(args.words)
     step = args.cmd[3:]
@@ -3324,8 +3720,8 @@ def cmd_cc(args):
     if not action: raise Stop('Say export or import, such as: py content/pipeline.py cc-' + step + ' export')
     if action == 'export':
         if args.dry_run: raise Stop('--dry-run works with import' + (' and --undo' if step == 'review' else '') + '. Export changes no point.')
-        return cc_export(args, repo)
-    return cc_import(args, repo)
+        return (cc_picture_export if step.startswith('picture') else cc_export)(args, repo)
+    return (cc_picture_import if step.startswith('picture') else cc_import)(args, repo)
 
 
 def main(argv=None):
@@ -3384,6 +3780,20 @@ def main(argv=None):
         if name == 'cc-review':
             c.add_argument('--undo', action='store_true', help='send the points it decided back to the review list')
             c.add_argument('--point', help='with --undo, only this point id')
+    for name, text in [('cc-picture', 'Claude Code draws the diagrams, finds the images and writes the charts that points want, with no API calls'),
+                       ('cc-picture-check', 'a fresh Claude Code subagent checks each new picture against its point and its licence')]:
+        c = sub.add_parser(name, help=text)
+        c.add_argument('words', nargs='*', metavar='export|import [outline ...]',
+                       help='export writes the tasks, import reads the answers. Then outline files or folders; with none, every course in content/work')
+        c.add_argument('--dry-run', action='store_true', help='with import, show what it would do, and change nothing')
+    wp = sub.add_parser('want-picture', help='ask for a picture on a cleared point, for cc-picture')
+    wp.add_argument('outline', help='the outline file of the course the point is in')
+    wp.add_argument('--point', required=True, help='the point id')
+    wp.add_argument('--at', required=True, help='where it goes: card 1 to card 4, a, b, a options or b options')
+    wp.add_argument('--kind', required=True, choices=list(PICTURE_KINDS))
+    wp.add_argument('--brief', required=True, help='what it shows, with every label')
+    wp.add_argument('--why', help='how it helps a student')
+    wp.add_argument('--replace', action='store_true', help='ask for a new picture where the point already has one; the old one stays until the new one passes the check')
     r = sub.add_parser('review', help='the review page, on this computer only')
     r.add_argument('--port', type=int, default=8765)
     r.add_argument('--no-browser', action='store_true')
@@ -3391,7 +3801,8 @@ def main(argv=None):
     try:
         {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review,
          'autoreview': cmd_autoreview, 'recheck': cmd_recheck, 'autoreject': cmd_autoreject, 'rebalance': cmd_rebalance,
-         'cc-write': cmd_cc, 'cc-check': cmd_cc, 'cc-review': cmd_cc}[args.cmd](args)
+         'cc-write': cmd_cc, 'cc-check': cmd_cc, 'cc-review': cmd_cc, 'cc-picture': cmd_cc, 'cc-picture-check': cmd_cc,
+         'want-picture': cmd_want_picture}[args.cmd](args)
     except Stop as e:
         say(str(e))
         return 1
