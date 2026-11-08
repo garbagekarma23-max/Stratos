@@ -29,7 +29,8 @@
   "2026-11-08T09:20:34Z pictures: 1 picture waiting for the check",
   "2026-11-08T09:24:12Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The 6 under the 5π in the label at x = 5π/6 is cut off at the bottom in both light and dark, and the whole fraction sits lower than the π/6 label beside it, so give that label room (or move it) so the whole fraction shows.. Now waiting for you: graph at card 4",
   "2026-11-08T12:52:10Z pictures: the owner asked for a graph at card 4",
-  "2026-11-08T13:07:48Z pictures: 1 picture waiting for the check"
+  "2026-11-08T13:07:48Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:25Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -107,6 +108,109 @@
    "Going half a turn round gives \\(\\pi + \\theta\\): \\(\\sin(\\pi + \\theta) = -\\sin \\theta\\) and \\(\\cos(\\pi + \\theta) = -\\cos \\theta\\). Reflecting in the x-axis gives \\(-\\theta\\) or \\(2\\pi - \\theta\\): \\(\\sin(-\\theta) = -\\sin \\theta\\) and \\(\\cos(-\\theta) = \\cos \\theta\\).",
    "Worked example: \\(\\sin\\left(\\frac{5\\pi}{6}\\right) = \\sin\\left(\\pi - \\frac{\\pi}{6}\\right) = \\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\). The angle \\(\\frac{5\\pi}{6}\\) is in quadrant 2, where sine is positive."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\sin x\\) from 0 to \\(2\\pi\\), and the dotted line \\(y = \\frac{1}{2}\\). The line meets the curve at \\(x = \\frac{\\pi}{6}\\) and \\(x = \\frac{5\\pi}{6}\\), mirror images about \\(x = \\frac{\\pi}{2}\\), so \\(\\sin\\left(\\frac{5\\pi}{6}\\right) = \\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\).",
+    "x": {
+     "min": 0,
+     "max": 7.2,
+     "label": "\\(x\\)",
+     "step": 0.5235987755982988,
+     "nums": false
+    },
+    "y": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "\\(y\\)",
+     "step": 0.5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "s",
+      "expr": "\\sin x",
+      "domain": [
+       0,
+       6.2832
+      ],
+      "label": "\\(y = \\sin x\\)",
+      "labelAt": 1.5708,
+      "pos": "above"
+     },
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "\\frac{1}{2}",
+      "label": "\\(y = \\frac{1}{2}\\)",
+      "labelAt": 5.5,
+      "pos": "above",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       0.5236,
+       0.5
+      ],
+      "on": [
+       "s",
+       "h"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       2.618,
+       0.5
+      ],
+      "on": [
+       "s",
+       "h"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       0.5236,
+       0
+      ],
+      "label": "\\(\\frac{\\pi}{6}\\)",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       2.618,
+       0
+      ],
+      "label": "\\(\\frac{5\\pi}{6}\\)",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       3.1416,
+       0
+      ],
+      "label": "\\(\\pi\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       6.2832,
+       0
+      ],
+      "label": "\\(2\\pi\\)",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Find the matching angle in quadrant 1, then fix the sign using the quadrant.",
   "a": {
    "q": "Which expression is equal to \\(\\cos(\\pi - \\theta)\\)?",
@@ -130,15 +234,7 @@
    ],
    "why": "\\(\\frac{4\\pi}{3} = \\pi + \\frac{\\pi}{3}\\), which is in quadrant 3, where cosine is negative. So \\(\\cos\\left(\\frac{4\\pi}{3}\\right) = -\\cos\\left(\\frac{\\pi}{3}\\right) = -\\frac{1}{2}\\). The option \\(-\\frac{\\sqrt{3}}{2}\\) is tempting, but it is the value of \\(\\sin\\left(\\frac{4\\pi}{3}\\right)\\) and \\(\\cos\\left(\\frac{7\\pi}{6}\\right)\\), not of \\(\\cos\\left(\\frac{4\\pi}{3}\\right)\\).",
    "clue": "Write \\(\\frac{4\\pi}{3}\\) as \\(\\pi + \\frac{\\pi}{3}\\), then check the quadrant."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "y = sin x (fn \\sin x) from 0 to 2 pi, and the dotted line y = 1/2 meeting it at x = pi/6 and x = 5pi/6, both marked as intersections. Label pi/6 and 5pi/6 below the x-axis, each centred under its point, with the whole fraction showing. Put 2 pi below the axis at its tick, clear of the x label. Label pi too. No grid numbers that crowd the fractions.",
-    "why": "It shows sin(5pi/6) = sin(pi/6) by the symmetry of the sine curve."
-   }
-  ]
+  }
  },
  "cleared_by": "checker",
  "latex": {
@@ -846,154 +942,7 @@
    ],
    "status": "replaced by the owner's new ask",
    "at_time": "2026-11-08T12:52:10Z"
-  }
- ],
- "picture_draft": {
-  "title": "Symmetry and periodicity",
-  "card": [
-   "Sine and cosine repeat every \\(2\\pi\\), so \\(\\sin(\\theta + 2\\pi) = \\sin \\theta\\) and \\(\\cos(\\theta + 2\\pi) = \\cos \\theta\\). Tangent repeats every \\(\\pi\\), so \\(\\tan(\\theta + \\pi) = \\tan \\theta\\).",
-   "Reflecting an angle in the y-axis gives \\(\\pi - \\theta\\): \\(\\sin(\\pi - \\theta) = \\sin \\theta\\) and \\(\\cos(\\pi - \\theta) = -\\cos \\theta\\).",
-   "Going half a turn round gives \\(\\pi + \\theta\\): \\(\\sin(\\pi + \\theta) = -\\sin \\theta\\) and \\(\\cos(\\pi + \\theta) = -\\cos \\theta\\). Reflecting in the x-axis gives \\(-\\theta\\) or \\(2\\pi - \\theta\\): \\(\\sin(-\\theta) = -\\sin \\theta\\) and \\(\\cos(-\\theta) = \\cos \\theta\\).",
-   "Worked example: \\(\\sin\\left(\\frac{5\\pi}{6}\\right) = \\sin\\left(\\pi - \\frac{\\pi}{6}\\right) = \\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\). The angle \\(\\frac{5\\pi}{6}\\) is in quadrant 2, where sine is positive."
-  ],
-  "cardFigs": {
-   "4": {
-    "kind": "graph",
-    "alt": "The graph of \\(y = \\sin x\\) from 0 to \\(2\\pi\\), and the dotted line \\(y = \\frac{1}{2}\\). The line meets the curve at \\(x = \\frac{\\pi}{6}\\) and \\(x = \\frac{5\\pi}{6}\\), mirror images about \\(x = \\frac{\\pi}{2}\\), so \\(\\sin\\left(\\frac{5\\pi}{6}\\right) = \\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\).",
-    "x": {
-     "min": 0,
-     "max": 7.2,
-     "label": "\\(x\\)",
-     "step": 0.5235987755982988,
-     "nums": false
-    },
-    "y": {
-     "min": -1.5,
-     "max": 1.5,
-     "label": "\\(y\\)",
-     "step": 0.5
-    },
-    "grid": true,
-    "items": [
-     {
-      "type": "fn",
-      "id": "s",
-      "expr": "\\sin x",
-      "domain": [
-       0,
-       6.2832
-      ],
-      "label": "\\(y = \\sin x\\)",
-      "labelAt": 1.5708,
-      "pos": "above"
-     },
-     {
-      "type": "fn",
-      "id": "h",
-      "expr": "\\frac{1}{2}",
-      "label": "\\(y = \\frac{1}{2}\\)",
-      "labelAt": 5.5,
-      "pos": "above",
-      "style": "dot"
-     },
-     {
-      "type": "point",
-      "at": [
-       0.5236,
-       0.5
-      ],
-      "on": [
-       "s",
-       "h"
-      ],
-      "is": "intersection"
-     },
-     {
-      "type": "point",
-      "at": [
-       2.618,
-       0.5
-      ],
-      "on": [
-       "s",
-       "h"
-      ],
-      "is": "intersection"
-     },
-     {
-      "type": "text",
-      "at": [
-       0.5236,
-       0
-      ],
-      "label": "\\(\\frac{\\pi}{6}\\)",
-      "pos": "below"
-     },
-     {
-      "type": "text",
-      "at": [
-       2.618,
-       0
-      ],
-      "label": "\\(\\frac{5\\pi}{6}\\)",
-      "pos": "below"
-     },
-     {
-      "type": "text",
-      "at": [
-       3.1416,
-       0
-      ],
-      "label": "\\(\\pi\\)",
-      "pos": "above-right"
-     },
-     {
-      "type": "text",
-      "at": [
-       6.2832,
-       0
-      ],
-      "label": "\\(2\\pi\\)",
-      "pos": "above"
-     }
-    ]
-   }
   },
-  "remember": "Find the matching angle in quadrant 1, then fix the sign using the quadrant.",
-  "a": {
-   "q": "Which expression is equal to \\(\\cos(\\pi - \\theta)\\)?",
-   "opts": [
-    "\\(-\\cos \\theta\\)",
-    "\\(\\cos \\theta\\)",
-    "\\(-\\sin \\theta\\)",
-    "\\(\\sin \\theta\\)"
-   ],
-   "why": "Reflecting in the y-axis keeps the height but flips the x-coordinate, so cosine changes sign: \\(\\cos(\\pi - \\theta) = -\\cos \\theta\\). The option \\(\\cos \\theta\\) is tempting, but that is the rule for sine, which keeps its sign.",
-   "clue": "Reflecting in the y-axis changes the x-coordinate."
-  },
-  "b": {
-   "d": 3,
-   "q": "What is the value of \\(\\cos\\left(\\frac{4\\pi}{3}\\right)\\)?",
-   "opts": [
-    "\\(-\\frac{1}{2}\\)",
-    "\\(\\frac{1}{2}\\)",
-    "\\(-\\frac{\\sqrt{3}}{2}\\)",
-    "\\(\\frac{\\sqrt{3}}{2}\\)"
-   ],
-   "why": "\\(\\frac{4\\pi}{3} = \\pi + \\frac{\\pi}{3}\\), which is in quadrant 3, where cosine is negative. So \\(\\cos\\left(\\frac{4\\pi}{3}\\right) = -\\cos\\left(\\frac{\\pi}{3}\\right) = -\\frac{1}{2}\\). The option \\(-\\frac{\\sqrt{3}}{2}\\) is tempting, but it is the value of \\(\\sin\\left(\\frac{4\\pi}{3}\\right)\\) and \\(\\cos\\left(\\frac{7\\pi}{6}\\right)\\), not of \\(\\cos\\left(\\frac{4\\pi}{3}\\right)\\).",
-   "clue": "Write \\(\\frac{4\\pi}{3}\\) as \\(\\pi + \\frac{\\pi}{3}\\), then check the quadrant."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "y = sin x (fn \\sin x) from 0 to 2 pi, and the dotted line y = 1/2 meeting it at x = pi/6 and x = 5pi/6, both marked as intersections. Label pi/6 and 5pi/6 below the x-axis, each centred under its point, with the whole fraction showing. Put 2 pi below the axis at its tick, clear of the x label. Label pi too. No grid numbers that crowd the fractions.",
-    "why": "It shows sin(5pi/6) = sin(pi/6) by the symmetry of the sine curve.",
-    "waiting": true
-   }
-  ]
- },
- "pictures_waiting": [
   {
    "want": 1,
    "at": "card 4",
@@ -1103,7 +1052,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T13:07:48Z"
+   "made": "2026-11-08T13:07:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:24Z"
   }
  ]
 }

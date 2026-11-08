@@ -31,7 +31,9 @@
   "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
   "2026-11-08T12:52:17Z pictures: the owner asked for a graph at card 1",
   "2026-11-08T12:52:17Z pictures: the owner asked for a graph at card 4",
-  "2026-11-08T13:07:47Z pictures: 2 pictures waiting for the check"
+  "2026-11-08T13:07:47Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T13:14:23Z pictures: 2 pictures turned down. Picture 1 (graph at card 1): redo, high sure. The label (1, 3) sits on the x-axis, which runs through the bottom of its brackets in light and dark; place it to the right of the dot or above-left, clear of the axis.. Picture 2 (graph at card 4): redo, high sure. The label (1, 3) sits on the x-axis, which runs through the bottom of its brackets in light and dark; place it above-left of the dot, clear of the axis and the line.",
+  "2026-11-08T13:16:18Z pictures: 2 pictures waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -235,13 +237,25 @@
     "at": "card 1",
     "kind": "graph",
     "brief": "The points (1, 3), (2, 12) and (3, 27) plotted against x, on the curve y = 3x^2 (dashed), showing a curve rising more and more steeply. Axes x from 0 to 4, y from 0 to 30.",
-    "why": "It shows data that curve before transforming."
+    "why": "It shows data that curve before transforming.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label (1, 3) sits on the x-axis, which runs through the bottom of its brackets in light and dark; place it to the right of the dot or above-left, clear of the axis."
+     ]
+    ]
    },
    {
     "at": "card 4",
     "kind": "graph",
     "brief": "The same data plotted against x^2: the points (1, 3), (4, 12) and (9, 27) on a straight line through the origin, y = 3x, with the horizontal axis labelled x^2. Axes from 0 to 10 and 0 to 30.",
-    "why": "It shows the transformed data lying on a straight line."
+    "why": "It shows the transformed data lying on a straight line.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label (1, 3) sits on the x-axis, which runs through the bottom of its brackets in light and dark; place it above-left of the dot, clear of the axis and the line."
+     ]
+    ]
    }
   ]
  },
@@ -283,193 +297,7 @@
    }
   }
  },
- "picture_draft": {
-  "title": "Transforming data to linearity",
-  "card": [
-   "Some data form a curve when \\(y\\) is plotted against \\(x\\). We can replace \\(x\\) with a transformed value, such as \\(x^{2}\\), and plot again. If the new plot is a straight line, the transformation suits the data.",
-   "Use \\(x^{2}\\) when \\(y\\) rises more and more steeply, as in \\(y = kx^{2}\\). Use \\(\\log x\\) when \\(y\\) rises quickly at first, then levels off.",
-   "Use \\(\\frac{1}{x}\\) when \\(y\\) falls quickly and then levels off, as in \\(y = \\frac{k}{x}\\). Plotting \\(y\\) against \\(\\frac{1}{x}\\) then gives a straight line.",
-   "Example: \\(x\\) is 1, 2, 3 and \\(y\\) is 3, 12, 27. Then \\(x^{2}\\) is 1, 4, 9, and each \\(y \\div x^{2}\\) is 3. So the points (1, 3), (4, 12) and (9, 27) lie on a straight line."
-  ],
-  "cardFigs": {
-   "1": {
-    "kind": "graph",
-    "alt": "The points \\((1, 3)\\), \\((2, 12)\\) and \\((3, 27)\\) plotted against \\(x\\). They lie on the dashed curve \\(y = 3x^{2}\\), which rises more and more steeply.",
-    "x": {
-     "min": 0,
-     "max": 4,
-     "label": "\\(x\\)",
-     "step": 1
-    },
-    "y": {
-     "min": 0,
-     "max": 32,
-     "label": "\\(y\\)",
-     "step": 5
-    },
-    "grid": true,
-    "items": [
-     {
-      "type": "fn",
-      "id": "f",
-      "expr": "3x^{2}",
-      "domain": [
-       0,
-       3.25
-      ],
-      "label": "\\(y = 3x^{2}\\)",
-      "labelAt": 2.3833,
-      "pos": "above-left",
-      "style": "dash"
-     },
-     {
-      "type": "point",
-      "at": [
-       1,
-       3
-      ],
-      "label": "\\((1, 3)\\)",
-      "pos": "below-right",
-      "on": [
-       "f"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       2,
-       12
-      ],
-      "label": "\\((2, 12)\\)",
-      "pos": "above-left",
-      "on": [
-       "f"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       3,
-       27
-      ],
-      "label": "\\((3, 27)\\)",
-      "pos": "above-left",
-      "on": [
-       "f"
-      ]
-     }
-    ]
-   },
-   "4": {
-    "kind": "graph",
-    "alt": "The same data plotted against \\(x^{2}\\): the points \\((1, 3)\\), \\((4, 12)\\) and \\((9, 27)\\) lie on a straight line through the origin.",
-    "x": {
-     "min": 0,
-     "max": 10,
-     "label": "\\(x^{2}\\)",
-     "step": 1
-    },
-    "y": {
-     "min": 0,
-     "max": 32,
-     "label": "\\(y\\)",
-     "step": 5
-    },
-    "grid": true,
-    "items": [
-     {
-      "type": "fn",
-      "id": "f",
-      "expr": "3x",
-      "domain": [
-       0,
-       10
-      ],
-      "label": "straight line",
-      "labelAt": 6,
-      "pos": "above-left"
-     },
-     {
-      "type": "point",
-      "at": [
-       1,
-       3
-      ],
-      "label": "\\((1, 3)\\)",
-      "pos": "below-right",
-      "on": [
-       "f"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       4,
-       12
-      ],
-      "label": "\\((4, 12)\\)",
-      "pos": "above-left",
-      "on": [
-       "f"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       9,
-       27
-      ],
-      "label": "\\((9, 27)\\)",
-      "pos": "above-left",
-      "on": [
-       "f"
-      ]
-     }
-    ]
-   }
-  },
-  "remember": "Match the shape: \\(x^{2}\\) for steepening rises, \\(\\log x\\) for rises that level off, \\(\\frac{1}{x}\\) for falls that level off.",
-  "a": {
-   "q": "Data follow the rule \\(y = 5x^{2}\\). Which plot gives a straight line?",
-   "opts": [
-    "\\(y\\) against \\(x^{2}\\)",
-    "\\(y\\) against \\(\\frac{1}{x}\\)",
-    "\\(y\\) against \\(\\log x\\)",
-    "\\(y\\) against \\(x\\)"
-   ],
-   "why": "Since \\(y = 5 \\times x^{2}\\), each \\(y\\) is 5 times its \\(x^{2}\\) value, so \\(y\\) against \\(x^{2}\\) gives a straight line. Plotting \\(y\\) against \\(x\\) gives a curve that rises more and more steeply, so it is not a line.",
-   "clue": "Which form of \\(x\\) appears in the rule?"
-  },
-  "b": {
-   "d": 3,
-   "q": "A table shows \\(x\\) values of 1, 2, 4 and \\(y\\) values of 12, 6, 3. Which plot gives a straight line?",
-   "opts": [
-    "\\(y\\) against \\(\\frac{1}{x}\\)",
-    "\\(y\\) against \\(\\log x\\)",
-    "\\(y\\) against \\(x^{2}\\)",
-    "\\(y\\) against \\(x\\)"
-   ],
-   "why": "As \\(x\\) grows, \\(y\\) falls quickly and then levels off, which suits \\(\\frac{1}{x}\\). The \\(\\frac{1}{x}\\) values are 1, 0.5 and 0.25, and each \\(y\\) is 12 times its \\(\\frac{1}{x}\\) value, so the points lie on a line. \\(\\log x\\) is tempting because the data level off, but it suits data that rise, not fall.",
-   "clue": "Is \\(y\\) rising or falling as \\(x\\) grows?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "The points (1, 3), (2, 12) and (3, 27) plotted against x, on the curve y = 3x^2 (dashed), showing a curve rising more and more steeply. Axes x from 0 to 4, y from 0 to 30.",
-    "why": "It shows data that curve before transforming.",
-    "waiting": true
-   },
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "The same data plotted against x^2: the points (1, 3), (4, 12) and (9, 27) on a straight line through the origin, y = 3x, with the horizontal axis labelled x^2. Axes from 0 to 10 and 0 to 30.",
-    "why": "It shows the transformed data lying on a straight line.",
-    "waiting": true
-   }
-  ]
- },
- "pictures_waiting": [
+ "pictures": [
   {
    "want": 1,
    "at": "card 1",
@@ -546,7 +374,24 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T13:07:47Z"
+   "made": "2026-11-08T13:07:47Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label (1, 3) sits on the x-axis, which runs through the bottom of its brackets in light and dark; place it to the right of the dot or above-left, clear of the axis."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:23Z"
   },
   {
    "want": 2,
@@ -623,7 +468,393 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T13:07:47Z"
+   "made": "2026-11-08T13:07:47Z",
+   "status": "turned down",
+   "check": {
+    "want": 2,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label (1, 3) sits on the x-axis, which runs through the bottom of its brackets in light and dark; place it above-left of the dot, clear of the axis and the line."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:23Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Transforming data to linearity",
+  "card": [
+   "Some data form a curve when \\(y\\) is plotted against \\(x\\). We can replace \\(x\\) with a transformed value, such as \\(x^{2}\\), and plot again. If the new plot is a straight line, the transformation suits the data.",
+   "Use \\(x^{2}\\) when \\(y\\) rises more and more steeply, as in \\(y = kx^{2}\\). Use \\(\\log x\\) when \\(y\\) rises quickly at first, then levels off.",
+   "Use \\(\\frac{1}{x}\\) when \\(y\\) falls quickly and then levels off, as in \\(y = \\frac{k}{x}\\). Plotting \\(y\\) against \\(\\frac{1}{x}\\) then gives a straight line.",
+   "Example: \\(x\\) is 1, 2, 3 and \\(y\\) is 3, 12, 27. Then \\(x^{2}\\) is 1, 4, 9, and each \\(y \\div x^{2}\\) is 3. So the points (1, 3), (4, 12) and (9, 27) lie on a straight line."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The points \\((1, 3)\\), \\((2, 12)\\) and \\((3, 27)\\) plotted against \\(x\\). They lie on the dashed curve \\(y = 3x^{2}\\), which rises more and more steeply.",
+    "x": {
+     "min": 0,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 32,
+     "label": "\\(y\\)",
+     "step": 5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "3x^{2}",
+      "domain": [
+       0,
+       3.25
+      ],
+      "label": "\\(y = 3x^{2}\\)",
+      "labelAt": 2.3833,
+      "pos": "above-left",
+      "style": "dash"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       3
+      ],
+      "label": "\\((1, 3)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       12
+      ],
+      "label": "\\((2, 12)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       27
+      ],
+      "label": "\\((3, 27)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The same data plotted against \\(x^{2}\\): the points \\((1, 3)\\), \\((4, 12)\\) and \\((9, 27)\\) lie on a straight line through the origin.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "\\(x^{2}\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 32,
+     "label": "\\(y\\)",
+     "step": 5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "3x",
+      "domain": [
+       0,
+       10
+      ],
+      "label": "straight line",
+      "labelAt": 6,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       3
+      ],
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       12
+      ],
+      "label": "\\((4, 12)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       9,
+       27
+      ],
+      "label": "\\((9, 27)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       1.3,
+       2.04
+      ],
+      "label": "\\((1, 3)\\)",
+      "pos": "right"
+     }
+    ]
+   }
+  },
+  "remember": "Match the shape: \\(x^{2}\\) for steepening rises, \\(\\log x\\) for rises that level off, \\(\\frac{1}{x}\\) for falls that level off.",
+  "a": {
+   "q": "Data follow the rule \\(y = 5x^{2}\\). Which plot gives a straight line?",
+   "opts": [
+    "\\(y\\) against \\(x^{2}\\)",
+    "\\(y\\) against \\(\\frac{1}{x}\\)",
+    "\\(y\\) against \\(\\log x\\)",
+    "\\(y\\) against \\(x\\)"
+   ],
+   "why": "Since \\(y = 5 \\times x^{2}\\), each \\(y\\) is 5 times its \\(x^{2}\\) value, so \\(y\\) against \\(x^{2}\\) gives a straight line. Plotting \\(y\\) against \\(x\\) gives a curve that rises more and more steeply, so it is not a line.",
+   "clue": "Which form of \\(x\\) appears in the rule?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A table shows \\(x\\) values of 1, 2, 4 and \\(y\\) values of 12, 6, 3. Which plot gives a straight line?",
+   "opts": [
+    "\\(y\\) against \\(\\frac{1}{x}\\)",
+    "\\(y\\) against \\(\\log x\\)",
+    "\\(y\\) against \\(x^{2}\\)",
+    "\\(y\\) against \\(x\\)"
+   ],
+   "why": "As \\(x\\) grows, \\(y\\) falls quickly and then levels off, which suits \\(\\frac{1}{x}\\). The \\(\\frac{1}{x}\\) values are 1, 0.5 and 0.25, and each \\(y\\) is 12 times its \\(\\frac{1}{x}\\) value, so the points lie on a line. \\(\\log x\\) is tempting because the data level off, but it suits data that rise, not fall.",
+   "clue": "Is \\(y\\) rising or falling as \\(x\\) grows?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "The points (1, 3), (2, 12) and (3, 27) plotted against x, on the curve y = 3x^2 (dashed), showing a curve rising more and more steeply. Axes x from 0 to 4, y from 0 to 30.",
+    "why": "It shows data that curve before transforming.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label (1, 3) sits on the x-axis, which runs through the bottom of its brackets in light and dark; place it to the right of the dot or above-left, clear of the axis."
+     ]
+    ],
+    "waiting": true
+   },
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The same data plotted against x^2: the points (1, 3), (4, 12) and (9, 27) on a straight line through the origin, y = 3x, with the horizontal axis labelled x^2. Axes from 0 to 10 and 0 to 30.",
+    "why": "It shows the transformed data lying on a straight line.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label (1, 3) sits on the x-axis, which runs through the bottom of its brackets in light and dark; place it above-left of the dot, clear of the axis and the line."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "The points (1, 3), (2, 12) and (3, 27) plotted against x, on the curve y = 3x^2 (dashed), showing a curve rising more and more steeply. Axes x from 0 to 4, y from 0 to 30.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The points \\((1, 3)\\), \\((2, 12)\\) and \\((3, 27)\\) plotted against \\(x\\). They lie on the dashed curve \\(y = 3x^{2}\\), which rises more and more steeply.",
+     "x": {
+      "min": 0,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 32,
+      "label": "\\(y\\)",
+      "step": 5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "3x^{2}",
+       "domain": [
+        0,
+        3.25
+       ],
+       "label": "\\(y = 3x^{2}\\)",
+       "labelAt": 2.3833,
+       "pos": "above-left",
+       "style": "dash"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        3
+       ],
+       "label": "\\((1, 3)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        12
+       ],
+       "label": "\\((2, 12)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        27
+       ],
+       "label": "\\((3, 27)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:16:18Z"
+  },
+  {
+   "want": 2,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The same data plotted against x^2: the points (1, 3), (4, 12) and (9, 27) on a straight line through the origin, y = 3x, with the horizontal axis labelled x^2. Axes from 0 to 10 and 0 to 30.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The same data plotted against \\(x^{2}\\): the points \\((1, 3)\\), \\((4, 12)\\) and \\((9, 27)\\) lie on a straight line through the origin.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "\\(x^{2}\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 32,
+      "label": "\\(y\\)",
+      "step": 5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "3x",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "straight line",
+       "labelAt": 6,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        3
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        12
+       ],
+       "label": "\\((4, 12)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        9,
+        27
+       ],
+       "label": "\\((9, 27)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1.3,
+        2.04
+       ],
+       "label": "\\((1, 3)\\)",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:16:18Z"
   }
  ]
 }

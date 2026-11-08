@@ -18,7 +18,8 @@
   "2026-11-01T08:42:07Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
   "2026-11-08T12:52:16Z pictures: the owner asked for a chart at card 3",
-  "2026-11-08T13:07:44Z pictures: 1 picture waiting for the check"
+  "2026-11-08T13:07:44Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:20Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -200,54 +201,6 @@
    ],
    "Write the comparison in context, using both centre and spread. Take care with the range, as one extreme value can stretch it."
   ],
-  "remember": "Compare medians for centre and IQRs for spread, in context.",
-  "a": {
-   "q": "Parallel boxplots show test scores. Class P has median 70 and IQR 8. Class Q has median 70 and IQR 20. What is the best comparison?",
-   "opts": [
-    "Same centre, but Q's scores are more spread out",
-    "Same centre, but P's scores are more spread out",
-    "Q has a higher centre and a wider spread",
-    "P has a higher centre and a narrower spread"
-   ],
-   "why": "Both medians are 70, so the centres are the same. Q's IQR of 20 is larger than P's IQR of 8, so Q is more spread out. Saying P is more spread out reverses what a larger IQR means.",
-   "clue": "Compare the medians first, then the IQRs."
-  },
-  "b": {
-   "d": 3,
-   "q": "Parallel boxplots show daily sales (in dollars) at two Geelong cafés. Café X: median 400, IQR 120, range 500. Café Y: median 360, IQR 200, range 380. Using medians and IQRs, which comparison is correct?",
-   "opts": [
-    "X is centred higher, and Y is more spread out",
-    "X is centred higher, and X is more spread out",
-    "Y is centred higher, and Y is more spread out",
-    "Y is centred higher, and X is more spread out"
-   ],
-   "why": "X's median of 400 is higher than Y's 360, so X is centred higher. Y's IQR of 200 is larger than X's 120, so Y's middle half is more spread out. X's larger range is tempting, but one extreme day can stretch the range.",
-   "clue": "Ignore the ranges and compare the IQRs."
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "chart",
-    "brief": "Parallel boxplots on one scale: group A (min 45, Q1 57, median 62, Q3 67, max 78, IQR 10) and group B (min 35, Q1 46, median 55, Q3 64, max 80, IQR 18).",
-    "why": "It shows comparing centres and spreads on one scale."
-   }
-  ]
- },
- "cleared_by": "recheck",
- "picture_draft": {
-  "title": "Comparing distributions",
-  "card": [
-   "To compare groups, look at the same variable in each group. Back-to-back stem plots share one stem. Parallel boxplots sit on one scale, one above the other.",
-   [
-    "Centre",
-    "Compare the medians. Example: group A has median 62 and group B has median 55. Group A is centred 7 higher."
-   ],
-   [
-    "Spread",
-    "Compare the IQRs. A larger IQR means the middle half of the data is more spread out. Example: A has IQR 10 and B has IQR 18, so B is more spread out."
-   ],
-   "Write the comparison in context, using both centre and spread. Take care with the range, as one extreme value can stretch it."
-  ],
   "cardFigs": {
    "3": {
     "kind": "chart",
@@ -306,18 +259,10 @@
    ],
    "why": "X's median of 400 is higher than Y's 360, so X is centred higher. Y's IQR of 200 is larger than X's 120, so Y's middle half is more spread out. X's larger range is tempting, but one extreme day can stretch the range.",
    "clue": "Ignore the ranges and compare the IQRs."
-  },
-  "wants": [
-   {
-    "at": "card 3",
-    "kind": "chart",
-    "brief": "Parallel boxplots on one scale: group A (min 45, Q1 57, median 62, Q3 67, max 78, IQR 10) and group B (min 35, Q1 46, median 55, Q3 64, max 80, IQR 18).",
-    "why": "It shows comparing centres and spreads on one scale.",
-    "waiting": true
-   }
-  ]
+  }
  },
- "pictures_waiting": [
+ "cleared_by": "recheck",
+ "pictures": [
   {
    "want": 1,
    "at": "card 3",
@@ -359,7 +304,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T13:07:44Z"
+   "made": "2026-11-08T13:07:44Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:20Z"
   }
  ]
 }

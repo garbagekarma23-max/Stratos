@@ -19,7 +19,8 @@
   "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
   "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
   "2026-11-08T12:52:13Z pictures: the owner asked for a graph at card 4",
-  "2026-11-08T13:07:55Z pictures: 1 picture waiting for the check"
+  "2026-11-08T13:07:55Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:32Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -225,97 +226,6 @@
    "A one-tail test counts extreme results only in the tail named by \\(H_{1}\\). A two-tail test counts results far from the null mean in either direction, so its p-value uses both tails.",
    "For a symmetric distribution such as the normal, when the sample result lies on the side named in \\(H_{1}\\), the two-tail p-value is double the one-tail p-value. Example: if \\(\\text{Pr}(Z > 1.5) = 0.067\\), the two-tail p-value is \\(2 \\times 0.067 = 0.134\\)."
   ],
-  "remember": "The wording of \\(H_{1}\\) sets the tails. One tail looks one way, two tails look both ways.",
-  "a": {
-   "q": "A tyre maker claims its tyres last 40 000 km on average. A tester wants to know if the mean differs from this. Which \\(H_{1}\\) is used?",
-   "opts": [
-    "\\(\\mu \\ne 40\\,000\\), a two-tail test",
-    "\\(\\mu < 40\\,000\\), a one-tail test",
-    "\\(\\mu > 40\\,000\\), a one-tail test",
-    "\\(\\mu = 40\\,000\\), a two-tail test"
-   ],
-   "why": "The tester asks if the mean differs, with no direction given, so the alternative allows a change either way: \\(\\mu \\ne 40\\,000\\). The option \\(\\mu = 40\\,000\\) is wrong because it is the null hypothesis, not the alternative.",
-   "clue": "No direction is mentioned in the question."
-  },
-  "b": {
-   "d": 3,
-   "q": "A test of \\(H_{0}: \\mu = 12\\) against \\(H_{1}: \\mu > 12\\) uses a normal distribution and gives a one-tail p-value of 0.03. The same data is used for \\(H_{1}: \\mu \\ne 12\\). What is the two-tail p-value?",
-   "opts": [
-    "0.06",
-    "0.03",
-    "0.015",
-    "0.97"
-   ],
-   "why": "A one-tail p-value of 0.03 means the sample mean lies above 12, on the side named in \\(H_{1}\\). The normal is symmetric, so counting both tails doubles it: \\(2 \\times 0.03 = 0.06\\). Halving to 0.015 goes the wrong way, because two tails hold more probability than one.",
-   "clue": "A two-tail test counts extreme results in both directions."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "The standard normal curve for Z from -3.5 to 3.5 with both tails beyond z = -1.5 and z = 1.5 shaded, each labelled 0.067, for a two-tail test.",
-    "why": "It shows the two-tail p-value as the area in both tails."
-   }
-  ]
- },
- "cleared_by": "recheck",
- "latex": {
-  "at": "2026-11-06T08:49:32Z",
-  "by": "hand",
-  "before": {
-   "title": "One-tail and two-tail tests",
-   "card": [
-    [
-     "One-tail test",
-     "The alternative hypothesis names one direction only: H₁: μ > 50 or H₁: μ < 50. Use it when the question asks about an increase only, or a decrease only."
-    ],
-    [
-     "Two-tail test",
-     "The alternative hypothesis allows a change either way: H₁: μ ≠ 50. Use it when the question asks whether the mean has changed, with no direction given."
-    ],
-    "A one-tail test counts extreme results only in the tail named by H₁. A two-tail test counts results far from the null mean in either direction, so its p-value uses both tails.",
-    "For a symmetric distribution such as the normal, when the sample result lies on the side named in H₁, the two-tail p-value is double the one-tail p-value. Example: if P(Z > 1.5) = 0.067, the two-tail p-value is 2 × 0.067 = 0.134."
-   ],
-   "remember": "The wording of H₁ sets the tails. One tail looks one way, two tails look both ways.",
-   "a": {
-    "q": "A tyre maker claims its tyres last 40 000 km on average. A tester wants to know if the mean differs from this. Which H₁ is used?",
-    "opts": [
-     "μ ≠ 40 000, a two-tail test",
-     "μ < 40 000, a one-tail test",
-     "μ > 40 000, a one-tail test",
-     "μ = 40 000, a two-tail test"
-    ],
-    "why": "The tester asks if the mean differs, with no direction given, so the alternative allows a change either way: μ ≠ 40 000. The option μ = 40 000 is wrong because it is the null hypothesis, not the alternative.",
-    "clue": "No direction is mentioned in the question."
-   },
-   "b": {
-    "d": 3,
-    "q": "A test of H₀: μ = 12 against H₁: μ > 12 uses a normal distribution and gives a one-tail p-value of 0.03. The same data is used for H₁: μ ≠ 12. What is the two-tail p-value?",
-    "opts": [
-     "0.06",
-     "0.03",
-     "0.015",
-     "0.97"
-    ],
-    "why": "A one-tail p-value of 0.03 means the sample mean lies above 12, on the side named in H₁. The normal is symmetric, so counting both tails doubles it: 2 × 0.03 = 0.06. Halving to 0.015 goes the wrong way, because two tails hold more probability than one.",
-    "clue": "A two-tail test counts extreme results in both directions."
-   }
-  }
- },
- "picture_draft": {
-  "title": "One-tail and two-tail tests",
-  "card": [
-   [
-    "One-tail test",
-    "The alternative hypothesis names one direction only: \\(H_{1}: \\mu > 50\\) or \\(H_{1}: \\mu < 50\\). Use it when the question asks about an increase only, or a decrease only."
-   ],
-   [
-    "Two-tail test",
-    "The alternative hypothesis allows a change either way: \\(H_{1}: \\mu \\ne 50\\). Use it when the question asks whether the mean has changed, with no direction given."
-   ],
-   "A one-tail test counts extreme results only in the tail named by \\(H_{1}\\). A two-tail test counts results far from the null mean in either direction, so its p-value uses both tails.",
-   "For a symmetric distribution such as the normal, when the sample result lies on the side named in \\(H_{1}\\), the two-tail p-value is double the one-tail p-value. Example: if \\(\\text{Pr}(Z > 1.5) = 0.067\\), the two-tail p-value is \\(2 \\times 0.067 = 0.134\\)."
-  ],
   "cardFigs": {
    "4": {
     "kind": "graph",
@@ -400,18 +310,53 @@
    ],
    "why": "A one-tail p-value of 0.03 means the sample mean lies above 12, on the side named in \\(H_{1}\\). The normal is symmetric, so counting both tails doubles it: \\(2 \\times 0.03 = 0.06\\). Halving to 0.015 goes the wrong way, because two tails hold more probability than one.",
    "clue": "A two-tail test counts extreme results in both directions."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "The standard normal curve for Z from -3.5 to 3.5 with both tails beyond z = -1.5 and z = 1.5 shaded, each labelled 0.067, for a two-tail test.",
-    "why": "It shows the two-tail p-value as the area in both tails.",
-    "waiting": true
-   }
-  ]
+  }
  },
- "pictures_waiting": [
+ "cleared_by": "recheck",
+ "latex": {
+  "at": "2026-11-06T08:49:32Z",
+  "by": "hand",
+  "before": {
+   "title": "One-tail and two-tail tests",
+   "card": [
+    [
+     "One-tail test",
+     "The alternative hypothesis names one direction only: H₁: μ > 50 or H₁: μ < 50. Use it when the question asks about an increase only, or a decrease only."
+    ],
+    [
+     "Two-tail test",
+     "The alternative hypothesis allows a change either way: H₁: μ ≠ 50. Use it when the question asks whether the mean has changed, with no direction given."
+    ],
+    "A one-tail test counts extreme results only in the tail named by H₁. A two-tail test counts results far from the null mean in either direction, so its p-value uses both tails.",
+    "For a symmetric distribution such as the normal, when the sample result lies on the side named in H₁, the two-tail p-value is double the one-tail p-value. Example: if P(Z > 1.5) = 0.067, the two-tail p-value is 2 × 0.067 = 0.134."
+   ],
+   "remember": "The wording of H₁ sets the tails. One tail looks one way, two tails look both ways.",
+   "a": {
+    "q": "A tyre maker claims its tyres last 40 000 km on average. A tester wants to know if the mean differs from this. Which H₁ is used?",
+    "opts": [
+     "μ ≠ 40 000, a two-tail test",
+     "μ < 40 000, a one-tail test",
+     "μ > 40 000, a one-tail test",
+     "μ = 40 000, a two-tail test"
+    ],
+    "why": "The tester asks if the mean differs, with no direction given, so the alternative allows a change either way: μ ≠ 40 000. The option μ = 40 000 is wrong because it is the null hypothesis, not the alternative.",
+    "clue": "No direction is mentioned in the question."
+   },
+   "b": {
+    "d": 3,
+    "q": "A test of H₀: μ = 12 against H₁: μ > 12 uses a normal distribution and gives a one-tail p-value of 0.03. The same data is used for H₁: μ ≠ 12. What is the two-tail p-value?",
+    "opts": [
+     "0.06",
+     "0.03",
+     "0.015",
+     "0.97"
+    ],
+    "why": "A one-tail p-value of 0.03 means the sample mean lies above 12, on the side named in H₁. The normal is symmetric, so counting both tails doubles it: 2 × 0.03 = 0.06. Halving to 0.015 goes the wrong way, because two tails hold more probability than one.",
+    "clue": "A two-tail test counts extreme results in both directions."
+   }
+  }
+ },
+ "pictures": [
   {
    "want": 1,
    "at": "card 4",
@@ -479,7 +424,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T13:07:55Z"
+   "made": "2026-11-08T13:07:55Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:32Z"
   }
  ]
 }

@@ -15,7 +15,8 @@
   "2026-11-08T09:20:30Z pictures: 1 picture waiting for the check",
   "2026-11-08T09:24:07Z pictures: 1 picture turned down. Picture 1 (graph at card 2): redo, high sure. The theta label sits at about (0.1, 0.39), to the left of the radius OP and between it and the y-axis, so it reads as naming the angle between OP and the y-axis (40 degrees here), not the angle turned from the positive x-axis (50 degrees); move it inside the angle, to the right of the arc, near (0.35, 0.15).; The theta label and the radius label 1 sit close together on the same side of the radius, which makes it hard to tell which belongs to what; once theta is moved inside the angle this clears.. Now waiting for you: graph at card 2",
   "2026-11-08T12:52:09Z pictures: the owner asked for a graph at card 2",
-  "2026-11-08T13:07:38Z pictures: 1 picture waiting for the check"
+  "2026-11-08T13:07:38Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:13Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -84,6 +85,163 @@
    "Signs follow from the coordinates. In quadrant 1, \\(x\\) and \\(y\\) are both positive. In quadrant 2, \\(x\\) is negative and \\(y\\) is positive. In quadrant 3, both are negative. In quadrant 4, \\(x\\) is positive and \\(y\\) is negative.",
    "Example: at \\(\\theta = 90^{\\circ}\\), \\(P = (0, 1)\\), so \\(\\cos 90^{\\circ} = 0\\) and \\(\\sin 90^{\\circ} = 1\\). At \\(\\theta = 180^{\\circ}\\), \\(P = (-1, 0)\\), so \\(\\cos 180^{\\circ} = -1\\) and \\(\\sin 180^{\\circ} = 0\\)."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The unit circle, centre the origin and radius 1. Turning anticlockwise by \\(\\theta\\) from \\((1, 0)\\), shown by the small arc with an arrow, reaches the point \\(P\\). Dashed lines from \\(P\\) to the axes show its x-coordinate, \\(\\cos \\theta\\), and its y-coordinate, \\(\\sin \\theta\\).",
+    "x": {
+     "min": -1.5,
+     "max": 1.9,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -1.25,
+     "max": 1.25,
+     "label": "\\(y\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "id": "c",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 1,
+      "label": "unit circle",
+      "pos": "above-left"
+     },
+     {
+      "type": "curve",
+      "id": "rad",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        0.6428,
+        0.766
+       ]
+      ],
+      "label": "\\(1\\)",
+      "labelAt": 0.3,
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.6428,
+       0.766
+      ],
+      "xLabel": "\\(\\cos \\theta\\)",
+      "yLabel": "\\(\\sin \\theta\\)"
+     },
+     {
+      "type": "curve",
+      "id": "arc",
+      "points": [
+       [
+        0.18,
+        0.2145
+       ],
+       [
+        0.1951,
+        0.2008
+       ],
+       [
+        0.2092,
+        0.1861
+       ],
+       [
+        0.2221,
+        0.1705
+       ],
+       [
+        0.2339,
+        0.1539
+       ],
+       [
+        0.2445,
+        0.1365
+       ],
+       [
+        0.2538,
+        0.1183
+       ],
+       [
+        0.2617,
+        0.0996
+       ],
+       [
+        0.2682,
+        0.0803
+       ],
+       [
+        0.2734,
+        0.0606
+       ],
+       [
+        0.277,
+        0.0406
+       ],
+       [
+        0.2793,
+        0.0203
+       ],
+       [
+        0.28,
+        0
+       ]
+      ],
+      "label": "\\(\\theta\\)",
+      "labelAt": 0.26,
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       0.2145,
+       0.18
+      ],
+      "to": [
+       0.18,
+       0.2145
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.6428,
+       0.766
+      ],
+      "label": "\\(P\\)",
+      "pos": "above-right",
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "label": "\\((1, 0)\\)",
+      "pos": "below-right",
+      "on": [
+       "c"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "On the unit circle, \\(P = (\\cos \\theta, \\sin \\theta)\\), so the signs of \\(x\\) and \\(y\\) give the signs of \\(\\cos \\theta\\) and \\(\\sin \\theta\\).",
   "a": {
    "q": "What is the value of \\(\\sin 180^{\\circ}\\)?",
@@ -107,15 +265,7 @@
    ],
    "why": "In quadrant 3, \\(P\\) is to the left of the y-axis and below the x-axis, so \\(x\\) and \\(y\\) are both negative. Cos is \\(x\\) and sin is \\(y\\), so \\(\\cos \\theta\\) and \\(\\sin \\theta\\) are both negative. Quadrant 2 is the one where only \\(\\cos \\theta\\) is negative.",
    "clue": "Think about which side of each axis quadrant 3 lies on."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "graph",
-    "brief": "The unit circle, centre the origin and radius 1, on equal scales, with (1, 0) marked below-right of its dot, clear of the dashed guide. A radius from the origin to P at about 50 degrees, labelled 1 on its upper-left side. A small arc with an arrowhead from the positive x-axis up to the radius, showing the turn theta anticlockwise. The label theta sits inside the angle, between the x-axis and the radius, to the right of the arc (near (0.35, 0.15)), on the correct side of the radius, never between the radius and the y-axis. Dashed guides from P to the axes, labelled cos theta on the x-axis and sin theta on the y-axis.",
-    "why": "It shows that P's coordinates are (cos theta, sin theta)."
-   }
-  ]
+  }
  },
  "cleared_by": "checker",
  "latex": {
@@ -472,208 +622,7 @@
    ],
    "status": "replaced by the owner's new ask",
    "at_time": "2026-11-08T12:52:09Z"
-  }
- ],
- "picture_draft": {
-  "title": "The unit circle",
-  "card": [
-   "The unit circle has its centre at the origin and radius 1. Start at the point \\((1, 0)\\) and turn anticlockwise by an angle \\(\\theta\\). You land on a point \\(P\\) on the circle.",
-   "The x-coordinate of \\(P\\) is \\(\\cos \\theta\\). The y-coordinate of \\(P\\) is \\(\\sin \\theta\\). So \\(P = (\\cos \\theta, \\sin \\theta)\\).",
-   "Signs follow from the coordinates. In quadrant 1, \\(x\\) and \\(y\\) are both positive. In quadrant 2, \\(x\\) is negative and \\(y\\) is positive. In quadrant 3, both are negative. In quadrant 4, \\(x\\) is positive and \\(y\\) is negative.",
-   "Example: at \\(\\theta = 90^{\\circ}\\), \\(P = (0, 1)\\), so \\(\\cos 90^{\\circ} = 0\\) and \\(\\sin 90^{\\circ} = 1\\). At \\(\\theta = 180^{\\circ}\\), \\(P = (-1, 0)\\), so \\(\\cos 180^{\\circ} = -1\\) and \\(\\sin 180^{\\circ} = 0\\)."
-  ],
-  "cardFigs": {
-   "2": {
-    "kind": "graph",
-    "alt": "The unit circle, centre the origin and radius 1. Turning anticlockwise by \\(\\theta\\) from \\((1, 0)\\), shown by the small arc with an arrow, reaches the point \\(P\\). Dashed lines from \\(P\\) to the axes show its x-coordinate, \\(\\cos \\theta\\), and its y-coordinate, \\(\\sin \\theta\\).",
-    "x": {
-     "min": -1.5,
-     "max": 1.9,
-     "label": "\\(x\\)",
-     "step": 0.5,
-     "nums": false
-    },
-    "y": {
-     "min": -1.25,
-     "max": 1.25,
-     "label": "\\(y\\)",
-     "step": 0.5,
-     "nums": false
-    },
-    "equal": true,
-    "items": [
-     {
-      "type": "circle",
-      "id": "c",
-      "centre": [
-       0,
-       0
-      ],
-      "r": 1,
-      "label": "unit circle",
-      "pos": "above-left"
-     },
-     {
-      "type": "curve",
-      "id": "rad",
-      "points": [
-       [
-        0,
-        0
-       ],
-       [
-        0.6428,
-        0.766
-       ]
-      ],
-      "label": "\\(1\\)",
-      "labelAt": 0.3,
-      "pos": "above-left"
-     },
-     {
-      "type": "guide",
-      "at": [
-       0.6428,
-       0.766
-      ],
-      "xLabel": "\\(\\cos \\theta\\)",
-      "yLabel": "\\(\\sin \\theta\\)"
-     },
-     {
-      "type": "curve",
-      "id": "arc",
-      "points": [
-       [
-        0.18,
-        0.2145
-       ],
-       [
-        0.1951,
-        0.2008
-       ],
-       [
-        0.2092,
-        0.1861
-       ],
-       [
-        0.2221,
-        0.1705
-       ],
-       [
-        0.2339,
-        0.1539
-       ],
-       [
-        0.2445,
-        0.1365
-       ],
-       [
-        0.2538,
-        0.1183
-       ],
-       [
-        0.2617,
-        0.0996
-       ],
-       [
-        0.2682,
-        0.0803
-       ],
-       [
-        0.2734,
-        0.0606
-       ],
-       [
-        0.277,
-        0.0406
-       ],
-       [
-        0.2793,
-        0.0203
-       ],
-       [
-        0.28,
-        0
-       ]
-      ],
-      "label": "\\(\\theta\\)",
-      "labelAt": 0.26,
-      "pos": "right"
-     },
-     {
-      "type": "arrow",
-      "from": [
-       0.2145,
-       0.18
-      ],
-      "to": [
-       0.18,
-       0.2145
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       0.6428,
-       0.766
-      ],
-      "label": "\\(P\\)",
-      "pos": "above-right",
-      "on": [
-       "c"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       1,
-       0
-      ],
-      "label": "\\((1, 0)\\)",
-      "pos": "below-right",
-      "on": [
-       "c"
-      ],
-      "is": "x-intercept"
-     }
-    ]
-   }
   },
-  "remember": "On the unit circle, \\(P = (\\cos \\theta, \\sin \\theta)\\), so the signs of \\(x\\) and \\(y\\) give the signs of \\(\\cos \\theta\\) and \\(\\sin \\theta\\).",
-  "a": {
-   "q": "What is the value of \\(\\sin 180^{\\circ}\\)?",
-   "opts": [
-    "0",
-    "\\(-1\\)",
-    "1",
-    "180"
-   ],
-   "why": "At 180° the point on the unit circle is \\((-1, 0)\\). Sin is the y-coordinate, so \\(\\sin 180^{\\circ} = 0\\). The value \\(-1\\) is the x-coordinate, which is \\(\\cos 180^{\\circ}\\).",
-   "clue": "Sin is one of the two coordinates. Which one?"
-  },
-  "b": {
-   "d": 3,
-   "q": "An angle \\(\\theta\\) has its point \\(P\\) on the unit circle in quadrant 3. Which pair of signs is correct?",
-   "opts": [
-    "\\(\\cos \\theta\\) is negative and \\(\\sin \\theta\\) is negative",
-    "\\(\\cos \\theta\\) is negative and \\(\\sin \\theta\\) is positive",
-    "\\(\\cos \\theta\\) is positive and \\(\\sin \\theta\\) is negative",
-    "\\(\\cos \\theta\\) is positive and \\(\\sin \\theta\\) is positive"
-   ],
-   "why": "In quadrant 3, \\(P\\) is to the left of the y-axis and below the x-axis, so \\(x\\) and \\(y\\) are both negative. Cos is \\(x\\) and sin is \\(y\\), so \\(\\cos \\theta\\) and \\(\\sin \\theta\\) are both negative. Quadrant 2 is the one where only \\(\\cos \\theta\\) is negative.",
-   "clue": "Think about which side of each axis quadrant 3 lies on."
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "graph",
-    "brief": "The unit circle, centre the origin and radius 1, on equal scales, with (1, 0) marked below-right of its dot, clear of the dashed guide. A radius from the origin to P at about 50 degrees, labelled 1 on its upper-left side. A small arc with an arrowhead from the positive x-axis up to the radius, showing the turn theta anticlockwise. The label theta sits inside the angle, between the x-axis and the radius, to the right of the arc (near (0.35, 0.15)), on the correct side of the radius, never between the radius and the y-axis. Dashed guides from P to the axes, labelled cos theta on the x-axis and sin theta on the y-axis.",
-    "why": "It shows that P's coordinates are (cos theta, sin theta).",
-    "waiting": true
-   }
-  ]
- },
- "pictures_waiting": [
   {
    "want": 1,
    "at": "card 2",
@@ -837,7 +786,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-08T13:07:38Z"
+   "made": "2026-11-08T13:07:38Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:13Z"
   }
  ]
 }
