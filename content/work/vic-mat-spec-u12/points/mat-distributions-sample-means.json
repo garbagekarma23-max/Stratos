@@ -17,7 +17,9 @@
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:08Z write: done",
-  "2026-11-01T08:24:33Z check: passed, cleared"
+  "2026-11-01T08:24:33Z check: passed, cleared",
+  "2026-11-08T12:52:13Z pictures: the owner asked for a chart at card 1",
+  "2026-11-08T13:07:48Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -118,7 +120,137 @@
    ],
    "why": "Larger samples give means that vary less, so the plot is narrower. The number of samples is 100 both times, so it is not the reason.",
    "clue": "Compare the sample size, not the number of samples."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "chart",
+    "brief": "A dot plot of 20 sample means, each from a sample of size 4, with values spread from about 10 to 30 and most near 20, on a number line labelled Sample mean.",
+    "why": "It shows what a plot of sample means looks like and its spread."
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "Distributions of sample means",
+  "card": [
+   "Take many samples of the same size from one population. Find each sample's mean, then plot all the means on a dot plot or histogram. This shows the distribution of sample means.",
+   "The spread of this plot shows how much the sample means vary.",
+   "When the sample size is larger, the plot is narrower. The means bunch more tightly.",
+   "Example: means of samples of 4 might range from 10 to 30. Means of samples of 40 from the same population might range from 18 to 22."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of 20 sample means, each the mean of a sample of size 4. They spread from 12 to 29, with most near 20.",
+    "x": {
+     "min": 10,
+     "max": 30,
+     "label": "Sample mean",
+     "step": 2
+    },
+    "data": [
+     12,
+     15,
+     16,
+     17,
+     18,
+     18,
+     19,
+     19,
+     20,
+     20,
+     20,
+     21,
+     21,
+     22,
+     22,
+     23,
+     24,
+     25,
+     27,
+     29
+    ]
+   }
+  },
+  "remember": "Plot many sample means to see their spread: bigger samples give a narrower plot.",
+  "a": {
+   "q": "What does each dot represent in a dot plot of sample means?",
+   "opts": [
+    "The mean of one sample",
+    "One value from the population",
+    "The size of one sample",
+    "The mean of the whole population"
+   ],
+   "why": "Each dot is the mean of one sample. A single value from the population is not a sample mean. The sample size is the same for every dot.",
+   "clue": "The plot is made after finding a mean for each sample."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots 100 means of samples of size 10. She repeats it with samples of size 100 from the same population. How will the second plot look?",
+   "opts": [
+    "Narrower, with means closer together",
+    "Wider, with means further apart",
+    "The same width, only shifted",
+    "Narrower, because there are fewer samples"
+   ],
+   "why": "Larger samples give means that vary less, so the plot is narrower. The number of samples is 100 both times, so it is not the reason.",
+   "clue": "Compare the sample size, not the number of samples."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "chart",
+    "brief": "A dot plot of 20 sample means, each from a sample of size 4, with values spread from about 10 to 30 and most near 20, on a number line labelled Sample mean.",
+    "why": "It shows what a plot of sample means looks like and its spread.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "chart",
+   "brief": "A dot plot of 20 sample means, each from a sample of size 4, with values spread from about 10 to 30 and most near 20, on a number line labelled Sample mean.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "dot",
+     "alt": "A dot plot of 20 sample means, each the mean of a sample of size 4. They spread from 12 to 29, with most near 20.",
+     "x": {
+      "min": 10,
+      "max": 30,
+      "label": "Sample mean",
+      "step": 2
+     },
+     "data": [
+      12,
+      15,
+      16,
+      17,
+      18,
+      18,
+      19,
+      19,
+      20,
+      20,
+      20,
+      21,
+      21,
+      22,
+      22,
+      23,
+      24,
+      25,
+      27,
+      29
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:48Z"
+  }
+ ]
 }

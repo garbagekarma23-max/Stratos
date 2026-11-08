@@ -10,7 +10,9 @@
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:10Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:40Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 2,
@@ -226,7 +228,15 @@
    ],
    "why": "The amplitude is 2 and the centre line is \\(y = -4\\), so the maximum is \\(-4 + 2 = -2\\) and the minimum is \\(-4 - 2 = -6\\). Using 3 as the amplitude gives \\(-1\\) and \\(-7\\), but 3 only sets the period, and the shift does not change the heights. Ignoring the \\(-4\\) gives 2 and \\(-2\\).",
    "clue": "Go up and down from the centre line by the amplitude."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "One wave y = 3sin(2(x - pi/4)) + 1 (fn) for x from 0 to 2 pi, with the dotted centre line y = 1 labelled, and guides or labels showing the maximum 4 and minimum -2. Mark one full period of length pi with a double-headed arrow or two points. Axes in radians with ticks at multiples of pi/4 (nums false, labels pi/4, pi as text).",
+    "why": "It shows amplitude, period, shift and centre line on one graph."
+   }
+  ]
  },
  "cleared_by": "recheck",
  "latex": {
@@ -274,5 +284,230 @@
     "clue": "Go up and down from the centre line by the amplitude."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Transforming trigonometric graphs",
+  "card": [
+   "In \\(y = k\\sin(a(x + b)) + c\\), each letter changes the graph of \\(y = \\sin x\\) in one way. Use the form with \\(a(x + b)\\) so that \\(b\\) is read straight off.",
+   [
+    "Amplitude and period",
+    "The amplitude is \\(|k|\\), the distance from the centre line to a peak. The period is \\(\\frac{2\\pi}{a}\\) (with \\(a > 0\\)), the length of one full cycle."
+   ],
+   [
+    "Shift and centre line",
+    "\\(b\\) is the horizontal shift: the graph moves left by \\(b\\), so \\(x + b\\) with \\(b = \\frac{\\pi}{6}\\) means a shift left by \\(\\frac{\\pi}{6}\\). \\(c\\) is the vertical shift, and the centre line is \\(y = c\\)."
+   ],
+   [
+    "Example",
+    "\\(y = 3\\sin(2(x - \\frac{\\pi}{4})) + 1\\) has amplitude 3, period \\(\\frac{2\\pi}{2} = \\pi\\), a shift right by \\(\\frac{\\pi}{4}\\) and centre line \\(y = 1\\). Its maximum is \\(1 + 3 = 4\\) and its minimum is \\(1 - 3 = -2\\)."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The wave \\(y = 3\\sin\\left(2\\left(x - \\frac{\\pi}{4}\\right)\\right) + 1\\) for \\(x\\) from 0 to \\(2\\pi\\). Its centre line is the dotted line \\(y = 1\\). It rises 3 above the centre line to a maximum of 4, at \\(x = \\frac{\\pi}{2}\\) and again at \\(x = \\frac{3\\pi}{2}\\), one period of \\(\\pi\\) later, and falls 3 below it to a minimum of \\(-2\\) at \\(x = \\pi\\).",
+    "x": {
+     "min": 0,
+     "max": 7.2,
+     "label": "\\(x\\)",
+     "step": 0.7853981633974483,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 5.5,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "w",
+      "expr": "3\\sin\\left(2\\left(x - \\frac{\\pi}{4}\\right)\\right) + 1",
+      "domain": [
+       0,
+       6.2832
+      ],
+      "label": "wave",
+      "labelAt": 0.35,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "c",
+      "expr": "1",
+      "label": "\\(y = 1\\)",
+      "labelAt": 6.7,
+      "pos": "above",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5708,
+       4
+      ],
+      "label": "\\(\\left(\\frac{\\pi}{2}, 4\\right)\\)",
+      "pos": "above",
+      "on": [
+       "w"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       4.7124,
+       4
+      ],
+      "label": "\\(\\left(\\frac{3\\pi}{2}, 4\\right)\\)",
+      "pos": "above",
+      "on": [
+       "w"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       3.1416,
+       -2
+      ],
+      "label": "\\((\\pi, -2)\\)",
+      "pos": "below",
+      "on": [
+       "w"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
+  },
+  "remember": "Amplitude \\(|k|\\) is centre line to peak, period is \\(\\frac{2\\pi}{a}\\), \\(x + b\\) moves the graph left by \\(b\\), and \\(y = c\\) is the centre line.",
+  "a": {
+   "q": "What is the period of \\(y = 5\\sin(4x) + 2\\)?",
+   "opts": [
+    "\\(\\frac{\\pi}{2}\\)",
+    "\\(8\\pi\\)",
+    "\\(\\frac{2}{\\pi}\\)",
+    "\\(\\frac{\\pi}{4}\\)"
+   ],
+   "why": "The period is \\(\\frac{2\\pi}{a}\\) with \\(a = 4\\), so \\(\\frac{2\\pi}{4} = \\frac{\\pi}{2}\\). The 5 changes the amplitude and the 2 moves the centre line, so neither changes the period. Multiplying \\(2\\pi\\) by 4 gives \\(8\\pi\\), and dividing 4 by \\(2\\pi\\) gives \\(\\frac{2}{\\pi}\\), which both use the formula the wrong way.",
+   "clue": "Use \\(2\\pi\\) divided by the number multiplying \\(x\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "What are the maximum and minimum values of \\(y = 2\\sin(3(x + \\frac{\\pi}{6})) - 4\\)?",
+   "opts": [
+    "Maximum \\(-2\\), minimum \\(-6\\)",
+    "Maximum \\(-1\\), minimum \\(-7\\)",
+    "Maximum 2, minimum \\(-2\\)",
+    "Maximum 6, minimum 2"
+   ],
+   "why": "The amplitude is 2 and the centre line is \\(y = -4\\), so the maximum is \\(-4 + 2 = -2\\) and the minimum is \\(-4 - 2 = -6\\). Using 3 as the amplitude gives \\(-1\\) and \\(-7\\), but 3 only sets the period, and the shift does not change the heights. Ignoring the \\(-4\\) gives 2 and \\(-2\\).",
+   "clue": "Go up and down from the centre line by the amplitude."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "One wave y = 3sin(2(x - pi/4)) + 1 (fn) for x from 0 to 2 pi, with the dotted centre line y = 1 labelled, and guides or labels showing the maximum 4 and minimum -2. Mark one full period of length pi with a double-headed arrow or two points. Axes in radians with ticks at multiples of pi/4 (nums false, labels pi/4, pi as text).",
+    "why": "It shows amplitude, period, shift and centre line on one graph.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "One wave y = 3sin(2(x - pi/4)) + 1 (fn) for x from 0 to 2 pi, with the dotted centre line y = 1 labelled, and guides or labels showing the maximum 4 and minimum -2. Mark one full period of length pi with a double-headed arrow or two points. Axes in radians with ticks at multiples of pi/4 (nums false, labels pi/4, pi as text).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The wave \\(y = 3\\sin\\left(2\\left(x - \\frac{\\pi}{4}\\right)\\right) + 1\\) for \\(x\\) from 0 to \\(2\\pi\\). Its centre line is the dotted line \\(y = 1\\). It rises 3 above the centre line to a maximum of 4, at \\(x = \\frac{\\pi}{2}\\) and again at \\(x = \\frac{3\\pi}{2}\\), one period of \\(\\pi\\) later, and falls 3 below it to a minimum of \\(-2\\) at \\(x = \\pi\\).",
+     "x": {
+      "min": 0,
+      "max": 7.2,
+      "label": "\\(x\\)",
+      "step": 0.7853981633974483,
+      "nums": false
+     },
+     "y": {
+      "min": -3,
+      "max": 5.5,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "w",
+       "expr": "3\\sin\\left(2\\left(x - \\frac{\\pi}{4}\\right)\\right) + 1",
+       "domain": [
+        0,
+        6.2832
+       ],
+       "label": "wave",
+       "labelAt": 0.35,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "c",
+       "expr": "1",
+       "label": "\\(y = 1\\)",
+       "labelAt": 6.7,
+       "pos": "above",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5708,
+        4
+       ],
+       "label": "\\(\\left(\\frac{\\pi}{2}, 4\\right)\\)",
+       "pos": "above",
+       "on": [
+        "w"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        4.7124,
+        4
+       ],
+       "label": "\\(\\left(\\frac{3\\pi}{2}, 4\\right)\\)",
+       "pos": "above",
+       "on": [
+        "w"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        3.1416,
+        -2
+       ],
+       "label": "\\((\\pi, -2)\\)",
+       "pos": "below",
+       "on": [
+        "w"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:39Z"
+  }
+ ]
 }

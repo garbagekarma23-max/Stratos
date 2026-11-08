@@ -31,7 +31,9 @@
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:48Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:13Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T13:07:55Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -133,7 +135,15 @@
    ],
    "why": "For \\(n = 9\\), \\(\\frac{6}{\\sqrt{9}} = 2\\). For \\(n = 36\\), \\(\\frac{6}{\\sqrt{36}} = 1\\). Sample size rose by a factor of 4, so the spread falls by a factor of \\(\\sqrt{4} = 2\\), not 4. The population \\(\\sigma\\) stays at 6, but it is not the spread of sample means.",
    "clue": "Work out \\(\\frac{\\sigma}{\\sqrt{n}}\\) for both sample sizes and compare."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "Two normal curves with the same mean 50: the distribution of sample means for n = 4 (standard deviation 6, dashed) and for n = 36 (standard deviation 2, solid), each labelled with its n. x from 30 to 70.",
+    "why": "It shows bigger samples giving a narrower spread around the same mean."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -172,5 +182,143 @@
     "clue": "Work out σ/√n for both sample sizes and compare."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "The distribution of sample means",
+  "card": [
+   "Take many random samples of size \\(n\\) from a population with mean \\(\\mu\\) and standard deviation \\(\\sigma\\). Each sample has its own mean, written \\(\\bar{x}\\). These sample means form a distribution.",
+   "The mean of the sample means is \\(\\mu\\). Their standard deviation is \\(\\frac{\\sigma}{\\sqrt{n}}\\). A bigger sample gives a smaller spread, because \\(\\sqrt{n}\\) is larger.",
+   "If the population is normal, \\(\\bar{x}\\) is normal for any \\(n\\). If not, \\(\\bar{x}\\) is roughly normal when \\(n\\) is large. This is the central limit theorem.",
+   "Example: \\(\\sigma = 12\\) and \\(n = 36\\). Then \\(\\frac{\\sigma}{\\sqrt{n}} = 12 \\div 6 = 2\\). The sample means have a standard deviation of 2."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Two distributions of sample means from the same population, both with mean 50. For samples of size \\(n = 4\\) (dashed), the standard deviation is 6 and the curve is wide. For \\(n = 36\\) (solid), it is 2 and the curve is narrow and tall.",
+    "x": {
+     "min": 30,
+     "max": 70,
+     "label": "\\(\\bar{x}\\)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 0.24
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "\\frac{1}{6\\sqrt{2\\pi}} e^{-\\frac{(x - 50)^{2}}{72}}",
+      "domain": [
+       30,
+       70
+      ],
+      "label": "\\(n = 4\\)",
+      "labelAt": 58,
+      "pos": "above-right",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "\\frac{1}{2\\sqrt{2\\pi}} e^{-\\frac{(x - 50)^{2}}{8}}",
+      "domain": [
+       30,
+       70
+      ],
+      "label": "\\(n = 36\\)",
+      "labelAt": 51.5,
+      "pos": "right"
+     }
+    ]
+   }
+  },
+  "remember": "Sample means centre on \\(\\mu\\), with spread \\(\\frac{\\sigma}{\\sqrt{n}}\\). Larger samples spread less.",
+  "a": {
+   "q": "A population has mean 50 and standard deviation 20. Samples of size 25 are taken. What is the standard deviation of the sample means?",
+   "opts": [
+    "4",
+    "20",
+    "0.8",
+    "100"
+   ],
+   "why": "The standard deviation is \\(\\frac{\\sigma}{\\sqrt{n}} = 20 \\div \\sqrt{25} = 20 \\div 5 = 4\\). Using 20 ignores the sample size, which is a common mistake. That is the spread of single values, not of sample means.",
+   "clue": "Divide \\(\\sigma\\) by the square root of \\(n\\), not by \\(n\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Machine parts have a mean length of 80 mm and a standard deviation of 6 mm. Sample size is increased from 9 to 36. What happens to the standard deviation of the sample means?",
+   "opts": [
+    "It halves, from 2 mm to 1 mm",
+    "It falls to a quarter, from 2 mm to 0.5 mm",
+    "It stays at 6 mm, as \\(\\sigma\\) does not change",
+    "It halves, from 6 mm to 3 mm"
+   ],
+   "why": "For \\(n = 9\\), \\(\\frac{6}{\\sqrt{9}} = 2\\). For \\(n = 36\\), \\(\\frac{6}{\\sqrt{36}} = 1\\). Sample size rose by a factor of 4, so the spread falls by a factor of \\(\\sqrt{4} = 2\\), not 4. The population \\(\\sigma\\) stays at 6, but it is not the spread of sample means.",
+   "clue": "Work out \\(\\frac{\\sigma}{\\sqrt{n}}\\) for both sample sizes and compare."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "Two normal curves with the same mean 50: the distribution of sample means for n = 4 (standard deviation 6, dashed) and for n = 36 (standard deviation 2, solid), each labelled with its n. x from 30 to 70.",
+    "why": "It shows bigger samples giving a narrower spread around the same mean.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Two normal curves with the same mean 50: the distribution of sample means for n = 4 (standard deviation 6, dashed) and for n = 36 (standard deviation 2, solid), each labelled with its n. x from 30 to 70.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Two distributions of sample means from the same population, both with mean 50. For samples of size \\(n = 4\\) (dashed), the standard deviation is 6 and the curve is wide. For \\(n = 36\\) (solid), it is 2 and the curve is narrow and tall.",
+     "x": {
+      "min": 30,
+      "max": 70,
+      "label": "\\(\\bar{x}\\)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 0.24
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "\\frac{1}{6\\sqrt{2\\pi}} e^{-\\frac{(x - 50)^{2}}{72}}",
+       "domain": [
+        30,
+        70
+       ],
+       "label": "\\(n = 4\\)",
+       "labelAt": 58,
+       "pos": "above-right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "\\frac{1}{2\\sqrt{2\\pi}} e^{-\\frac{(x - 50)^{2}}{8}}",
+       "domain": [
+        30,
+        70
+       ],
+       "label": "\\(n = 36\\)",
+       "labelAt": 51.5,
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:54Z"
+  }
+ ]
 }

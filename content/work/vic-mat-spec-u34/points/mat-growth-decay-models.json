@@ -25,7 +25,9 @@
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:35:42Z autoreview: cleared with the fix (card wording)",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:53Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -207,7 +209,15 @@
    ],
    "why": "The solution is \\(y = 4e^{0.5t}\\). At \\(t = 2\\), \\(y = 4e^{1} = 4 \\times 2.718 \\approx 10.9\\). Using \\(4 \\times 2 = 8.0\\) treats the rate as a plain multiple instead of using the exponential.",
    "clue": "Find \\(A\\) first, then put \\(t = 2\\) into \\(Ae^{kt}\\)."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "y = 50e^{-0.2t} (fn 50e^{-0.2x}) for t from 0 to 15, with (0, 50) and (5, 18.4) marked, axes t (hours) and y (mg).",
+    "why": "It shows the drug amount decaying towards 0."
+   }
+  ]
  },
  "cleared_by": "auto",
  "latex": {
@@ -252,5 +262,179 @@
     "clue": "Find A first, then put t = 2 into Ae^(kt)."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Growth and decay models",
+  "card": [
+   "If the rate of change of \\(y\\) is proportional to \\(y\\), then \\(\\frac{dy}{dt} = ky\\), where \\(k\\) is a constant. The solution is \\(y = Ae^{kt}\\), where \\(A\\) is the value of \\(y\\) at \\(t = 0\\).",
+   [
+    "Growth",
+    "\\(k > 0\\). The rate rises as \\(y\\) rises, so \\(y\\) grows exponentially. Example: \\(\\frac{dy}{dt} = 0.03y\\) gives \\(y = Ae^{0.03t}\\)."
+   ],
+   [
+    "Decay",
+    "\\(k < 0\\). The rate of decrease slows as \\(y\\) falls, so \\(y\\) shrinks towards 0. Example: \\(\\frac{dy}{dt} = -0.2y\\) gives \\(y = Ae^{-0.2t}\\)."
+   ],
+   "Worked example: a drug has \\(\\frac{dy}{dt} = -0.2y\\) and \\(y = 50\\) mg at \\(t = 0\\). Then \\(y = 50e^{-0.2t}\\). At \\(t = 5\\), \\(y = 50e^{-1} \\approx 18.4\\) mg."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The amount of the drug, \\(y = 50e^{-0.2t}\\) mg, against time \\(t\\) in hours. It starts at 50 mg, is about 18.4 mg at \\(t = 5\\), and keeps falling towards 0.",
+    "x": {
+     "min": 0,
+     "max": 16,
+     "label": "t (h)",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 60,
+     "label": "y (mg)",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "50e^{-0.2x}",
+      "domain": [
+       0,
+       16
+      ],
+      "label": "\\(y = 50e^{-0.2t}\\)",
+      "labelAt": 9,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       50
+      ],
+      "label": "\\((0, 50)\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       18.394
+      ],
+      "label": "\\((5, 18.4)\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "\\(\\frac{dy}{dt} = ky\\) gives \\(y = Ae^{kt}\\): growth if \\(k\\) is positive, decay if \\(k\\) is negative.",
+  "a": {
+   "q": "A quantity satisfies \\(\\frac{dy}{dt} = -0.4y\\), and \\(y = 10\\) when \\(t = 0\\). Which equation gives \\(y\\) in terms of \\(t\\)?",
+   "opts": [
+    "\\(y = 10e^{-0.4t}\\)",
+    "\\(y = 10e^{0.4t}\\)",
+    "\\(y = -0.4e^{10t}\\)",
+    "\\(y = 10 - 0.4t\\)"
+   ],
+   "why": "For \\(\\frac{dy}{dt} = ky\\) the solution is \\(y = Ae^{kt}\\), and \\(A = 10\\) because \\(y = 10\\) at \\(t = 0\\). Here \\(k = -0.4\\), so \\(y = 10e^{-0.4t}\\). The option with 0.4 instead of \\(-0.4\\) loses the sign, which would give growth rather than decay.",
+   "clue": "Match the form \\(y = Ae^{kt}\\) and keep the sign of \\(k\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A culture of bacteria in a lab in Geelong has \\(\\frac{dy}{dt} = 0.5y\\), with \\(y\\) in thousands and \\(t\\) in hours. At \\(t = 0\\), \\(y = 4\\). What is \\(y\\) at \\(t = 2\\), to one decimal place?",
+   "opts": [
+    "10.9 thousand",
+    "8.0 thousand",
+    "5.0 thousand",
+    "29.6 thousand"
+   ],
+   "why": "The solution is \\(y = 4e^{0.5t}\\). At \\(t = 2\\), \\(y = 4e^{1} = 4 \\times 2.718 \\approx 10.9\\). Using \\(4 \\times 2 = 8.0\\) treats the rate as a plain multiple instead of using the exponential.",
+   "clue": "Find \\(A\\) first, then put \\(t = 2\\) into \\(Ae^{kt}\\)."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "y = 50e^{-0.2t} (fn 50e^{-0.2x}) for t from 0 to 15, with (0, 50) and (5, 18.4) marked, axes t (hours) and y (mg).",
+    "why": "It shows the drug amount decaying towards 0.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y = 50e^{-0.2t} (fn 50e^{-0.2x}) for t from 0 to 15, with (0, 50) and (5, 18.4) marked, axes t (hours) and y (mg).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The amount of the drug, \\(y = 50e^{-0.2t}\\) mg, against time \\(t\\) in hours. It starts at 50 mg, is about 18.4 mg at \\(t = 5\\), and keeps falling towards 0.",
+     "x": {
+      "min": 0,
+      "max": 16,
+      "label": "t (h)",
+      "step": 5
+     },
+     "y": {
+      "min": 0,
+      "max": 60,
+      "label": "y (mg)",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "50e^{-0.2x}",
+       "domain": [
+        0,
+        16
+       ],
+       "label": "\\(y = 50e^{-0.2t}\\)",
+       "labelAt": 9,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        50
+       ],
+       "label": "\\((0, 50)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        18.394
+       ],
+       "label": "\\((5, 18.4)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:53Z"
+  }
+ ]
 }

@@ -11,7 +11,9 @@
   "2026-11-01T08:24:34Z fix: suggested",
   "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
   "2026-11-02T06:23:41Z review: approved with the fix (a spot check)",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:15Z pictures: the owner asked for a graph at card 1",
+  "2026-11-08T13:07:51Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 1,
@@ -192,7 +194,15 @@
    ],
    "why": "Compare \\(x^{2} = 8y\\) with \\(x^{2} = 4py\\). Then \\(4p = 8\\), so \\(p = 2\\) and the focus is \\((0, 2)\\). The answer \\((0, 4)\\) uses \\(p = 8 \\div 2\\) instead of \\(8 \\div 4\\).",
    "clue": "Match 8 with \\(4p\\), then put \\(p\\) on the y-axis."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "The parabola x^2 = 20y (fn \\frac{x^{2}}{20}) with its focus (0, 5) marked, the dashed directrix y = -5 labelled, and a point P (10, 5) on the parabola with dashed segments to the focus and straight down to the directrix, both of length 10.",
+    "why": "It shows the parabola as the points equally far from the focus and the directrix."
+   }
+  ]
  },
  "cleared_by": "owner",
  "latex": {
@@ -240,5 +250,268 @@
     "clue": "Match 8 with 4p, then put p on the y-axis."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Parabolas and hyperbolas",
+  "card": [
+   [
+    "Parabola",
+    "A parabola is the locus of points the same distance from a point (the focus) and a line (the directrix). With vertex at the origin and focus \\((0, p)\\), the directrix is \\(y = -p\\) and the equation is \\(x^{2} = 4py\\)."
+   ],
+   [
+    "Hyperbola",
+    "The hyperbola \\(\\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1\\) has two branches opening left and right, with vertices \\((\\pm a, 0)\\). If the \\(y^{2}\\) term is the positive one, as in \\(\\frac{y^{2}}{a^{2}} - \\frac{x^{2}}{b^{2}} = 1\\), the branches open up and down instead."
+   ],
+   [
+    "Asymptotes",
+    "The branches of \\(\\frac{x^{2}}{a^{2}} - \\frac{y^{2}}{b^{2}} = 1\\) get closer and closer to the lines \\(y = \\pm\\frac{b}{a}x\\) without touching them. These lines are the asymptotes."
+   ],
+   "Example: \\(x^{2} = 20y\\) has \\(4p = 20\\), so \\(p = 5\\) and the focus is \\((0, 5)\\). For \\(\\frac{x^{2}}{4} - \\frac{y^{2}}{25} = 1\\), \\(a = 2\\) and \\(b = 5\\), so the asymptotes are \\(y = \\pm\\frac{5}{2}x\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The parabola \\(x^{2} = 20y\\), with its focus \\((0, 5)\\) and its dashed directrix \\(y = -5\\). The point \\(P(10, 5)\\) on the parabola is 10 from the focus and 10 from the directrix, as every point on it is the same distance from both.",
+    "x": {
+     "min": -13,
+     "max": 13,
+     "label": "\\(x\\)",
+     "step": 5,
+     "nums": false
+    },
+    "y": {
+     "min": -7,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 5,
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "d",
+      "expr": "-5",
+      "label": "directrix \\(y = -5\\)",
+      "labelAt": -8,
+      "pos": "above",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "p",
+      "expr": "\\frac{x^{2}}{20}",
+      "domain": [
+       -13,
+       13
+      ],
+      "label": "\\(x^{2} = 20y\\)",
+      "labelAt": -12.1333,
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "pf",
+      "points": [
+       [
+        0,
+        5
+       ],
+       [
+        10,
+        5
+       ]
+      ],
+      "label": "\\(10\\)",
+      "labelAt": 5,
+      "pos": "above",
+      "style": "dot"
+     },
+     {
+      "type": "curve",
+      "id": "pd",
+      "points": [
+       [
+        10,
+        -5
+       ],
+       [
+        10,
+        5
+       ]
+      ],
+      "label": "\\(10\\)",
+      "labelAt": 10,
+      "pos": "below-right",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       5
+      ],
+      "label": "focus",
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       5
+      ],
+      "label": "\\(P\\)",
+      "pos": "above-left",
+      "on": [
+       "p"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A parabola is equally far from focus and directrix. A hyperbola follows its asymptotes.",
+  "a": {
+   "q": "What are the asymptotes of the hyperbola \\(\\frac{x^{2}}{16} - \\frac{y^{2}}{9} = 1\\)?",
+   "opts": [
+    "\\(y = \\pm\\frac{3}{4}x\\)",
+    "\\(y = \\pm\\frac{4}{3}x\\)",
+    "\\(y = \\pm\\frac{9}{16}x\\)",
+    "\\(y = \\pm\\frac{16}{9}x\\)"
+   ],
+   "why": "Here \\(a^{2} = 16\\) and \\(b^{2} = 9\\), so \\(a = 4\\) and \\(b = 3\\). The asymptotes are \\(y = \\pm\\frac{b}{a}x = \\pm\\frac{3}{4}x\\). Using \\(\\frac{4}{3}\\) turns the fraction upside down.",
+   "clue": "Take square roots first, then use \\(b\\) over \\(a\\)."
+  },
+  "b": {
+   "d": 2,
+   "q": "What is the focus of the parabola \\(x^{2} = 8y\\)?",
+   "opts": [
+    "\\((0, 2)\\)",
+    "\\((2, 0)\\)",
+    "\\((0, 8)\\)",
+    "\\((0, 4)\\)"
+   ],
+   "why": "Compare \\(x^{2} = 8y\\) with \\(x^{2} = 4py\\). Then \\(4p = 8\\), so \\(p = 2\\) and the focus is \\((0, 2)\\). The answer \\((0, 4)\\) uses \\(p = 8 \\div 2\\) instead of \\(8 \\div 4\\).",
+   "clue": "Match 8 with \\(4p\\), then put \\(p\\) on the y-axis."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "The parabola x^2 = 20y (fn \\frac{x^{2}}{20}) with its focus (0, 5) marked, the dashed directrix y = -5 labelled, and a point P (10, 5) on the parabola with dashed segments to the focus and straight down to the directrix, both of length 10.",
+    "why": "It shows the parabola as the points equally far from the focus and the directrix.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "The parabola x^2 = 20y (fn \\frac{x^{2}}{20}) with its focus (0, 5) marked, the dashed directrix y = -5 labelled, and a point P (10, 5) on the parabola with dashed segments to the focus and straight down to the directrix, both of length 10.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(x^{2} = 20y\\), with its focus \\((0, 5)\\) and its dashed directrix \\(y = -5\\). The point \\(P(10, 5)\\) on the parabola is 10 from the focus and 10 from the directrix, as every point on it is the same distance from both.",
+     "x": {
+      "min": -13,
+      "max": 13,
+      "label": "\\(x\\)",
+      "step": 5,
+      "nums": false
+     },
+     "y": {
+      "min": -7,
+      "max": 10,
+      "label": "\\(y\\)",
+      "step": 5,
+      "nums": false
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "-5",
+       "label": "directrix \\(y = -5\\)",
+       "labelAt": -8,
+       "pos": "above",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "p",
+       "expr": "\\frac{x^{2}}{20}",
+       "domain": [
+        -13,
+        13
+       ],
+       "label": "\\(x^{2} = 20y\\)",
+       "labelAt": -12.1333,
+       "pos": "above-right"
+      },
+      {
+       "type": "curve",
+       "id": "pf",
+       "points": [
+        [
+         0,
+         5
+        ],
+        [
+         10,
+         5
+        ]
+       ],
+       "label": "\\(10\\)",
+       "labelAt": 5,
+       "pos": "above",
+       "style": "dot"
+      },
+      {
+       "type": "curve",
+       "id": "pd",
+       "points": [
+        [
+         10,
+         -5
+        ],
+        [
+         10,
+         5
+        ]
+       ],
+       "label": "\\(10\\)",
+       "labelAt": 10,
+       "pos": "below-right",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        5
+       ],
+       "label": "focus",
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        5
+       ],
+       "label": "\\(P\\)",
+       "pos": "above-left",
+       "on": [
+        "p"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:51Z"
+  }
+ ]
 }

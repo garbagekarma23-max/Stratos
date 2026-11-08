@@ -21,7 +21,7 @@ A graph has kind, alt, x, y, items, and may have grid and equal:
 - x and y: the axes. min and max; label (a word or two, or maths: "\(x\)", "Price", "Quantity"); step for a tick and a number at every step. No step means no ticks and no numbers, as an economics diagram has. "nums": false keeps the ticks with no numbers. Leave room around the curves: a turning point or label right at the edge does not fit.
 - grid: true for grid lines at each step. equal: true when one unit must be as long on both axes, such as for a circle.
 - items, drawn in order (shading first, so the curves sit on top). Each has a type:
-  - fn: a function of x, "expr" in LaTeX with x as the only letter and no "y =": "x^{2} - 6x + 5", "\frac{6}{x}", "|x - 3|", "\sqrt{9 - x^{2}}". "domain": [a, b] limits it. "breaks": [0] stops the line at an asymptote. "id" names it ("f").
+  - fn: a function of x, "expr" in LaTeX with x as the only variable and no "y =": "x^{2} - 6x + 5", "\frac{6}{x}", "|x - 3|", "\sqrt{9 - x^{2}}", "2\sin(3x) + 1", "e^{-0.5x}", "\ln x", "\log_{2} x", "\arctan x". It reads e, \pi, \sin, \cos, \tan, their inverses, \exp, \ln, \log and \log_{b}, in radians. "domain": [a, b] limits it. "breaks": [0] stops the line at an asymptote. "id" names it ("f").
   - curve: a line or curve through points, for economics: "points": [[0, 10], [10, 0]]. "smooth": true bends it through them, with x rising from point to point.
   - circle: "centre": [3, -2], "r": 5, with equal: true.
   - fn, curve and circle take "label" (maths allowed: "\(y = x^{2}\)", "D", "S1"), "labelAt" (the x where the label sits), "pos" and "style" ("solid", "dash" or "dot").

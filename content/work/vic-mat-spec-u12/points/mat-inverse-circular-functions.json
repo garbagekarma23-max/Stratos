@@ -24,7 +24,9 @@
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
   "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:14Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:50Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -214,7 +216,15 @@
    ],
    "why": "The answer must lie in \\(\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\), and \\(\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\frac{1}{2}\\). The value \\(\\frac{11\\pi}{6}\\) also has sine \\(-\\frac{1}{2}\\), but it is outside the range of arcsin. The positive \\(\\frac{\\pi}{6}\\) gives sine \\(+\\frac{1}{2}\\).",
    "clue": "Check which angles fall inside the range of arcsin."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "y = arctan x (fn \\arctan x) for x from -6 to 6, with dashed horizontal asymptotes y = pi/2 and y = -pi/2, each labelled.",
+    "why": "It shows arctan's domain of all real numbers and its range between the asymptotes."
+   }
+  ]
  },
  "cleared_by": "auto",
  "latex": {
@@ -262,5 +272,148 @@
     "clue": "Check which angles fall inside the range of arcsin."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Inverse circular functions",
+  "card": [
+   "Sin, cos and tan repeat, so each is restricted to a domain where it is one-to-one before it can have an inverse. The inverse swaps domain and range, and its graph is the reflection of the restricted graph in \\(y = x\\).",
+   [
+    "arcsin",
+    "the inverse of \\(\\sin x\\) on \\(\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\), so it has domain \\([-1, 1]\\) and range \\(\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\). For example, \\(\\arcsin\\left(\\frac{1}{2}\\right) = \\frac{\\pi}{6}\\), because \\(\\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\)."
+   ],
+   [
+    "arccos",
+    "the inverse of \\(\\cos x\\) on \\([0, \\pi]\\). It has domain \\([-1, 1]\\) and range \\([0, \\pi]\\)."
+   ],
+   [
+    "arctan",
+    "the inverse of \\(\\tan x\\) on \\(\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\\). It has domain all real numbers and range \\(\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\\)."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\arctan x\\) for all real \\(x\\). It rises through the origin and levels off towards the dashed horizontal asymptotes \\(y = \\frac{\\pi}{2}\\) and \\(y = -\\frac{\\pi}{2}\\), which it never reaches.",
+    "x": {
+     "min": -6,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 2
+    },
+    "y": {
+     "min": -2.5,
+     "max": 2.5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "asymptote",
+      "y": 1.5708,
+      "label": "\\(y = \\frac{\\pi}{2}\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "asymptote",
+      "y": -1.5708,
+      "label": "\\(y = -\\frac{\\pi}{2}\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\arctan x",
+      "label": "\\(y = \\arctan x\\)",
+      "labelAt": 1.5,
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Many angles share a sine, cosine or tangent. The inverse gives the one in its restricted range.",
+  "a": {
+   "q": "What is the exact value of \\(\\arccos(0)\\)?",
+   "opts": [
+    "\\(\\frac{\\pi}{2}\\)",
+    "0",
+    "\\(\\pi\\)",
+    "\\(\\frac{3\\pi}{2}\\)"
+   ],
+   "why": "\\(\\arccos(0)\\) is the angle in \\([0, \\pi]\\) with cosine 0, which is \\(\\frac{\\pi}{2}\\). The value \\(\\frac{3\\pi}{2}\\) also has cosine 0, but it lies outside the range \\([0, \\pi]\\).",
+   "clue": "The answer must lie between 0 and \\(\\pi\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the exact value of \\(\\arcsin\\left(-\\frac{1}{2}\\right)\\)?",
+   "opts": [
+    "\\(-\\frac{\\pi}{6}\\)",
+    "\\(\\frac{\\pi}{6}\\)",
+    "\\(\\frac{11\\pi}{6}\\)",
+    "\\(-\\frac{\\pi}{3}\\)"
+   ],
+   "why": "The answer must lie in \\(\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\), and \\(\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\frac{1}{2}\\). The value \\(\\frac{11\\pi}{6}\\) also has sine \\(-\\frac{1}{2}\\), but it is outside the range of arcsin. The positive \\(\\frac{\\pi}{6}\\) gives sine \\(+\\frac{1}{2}\\).",
+   "clue": "Check which angles fall inside the range of arcsin."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "y = arctan x (fn \\arctan x) for x from -6 to 6, with dashed horizontal asymptotes y = pi/2 and y = -pi/2, each labelled.",
+    "why": "It shows arctan's domain of all real numbers and its range between the asymptotes.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y = arctan x (fn \\arctan x) for x from -6 to 6, with dashed horizontal asymptotes y = pi/2 and y = -pi/2, each labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\arctan x\\) for all real \\(x\\). It rises through the origin and levels off towards the dashed horizontal asymptotes \\(y = \\frac{\\pi}{2}\\) and \\(y = -\\frac{\\pi}{2}\\), which it never reaches.",
+     "x": {
+      "min": -6,
+      "max": 6,
+      "label": "\\(x\\)",
+      "step": 2
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "items": [
+      {
+       "type": "asymptote",
+       "y": 1.5708,
+       "label": "\\(y = \\frac{\\pi}{2}\\)",
+       "pos": "above-left"
+      },
+      {
+       "type": "asymptote",
+       "y": -1.5708,
+       "label": "\\(y = -\\frac{\\pi}{2}\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\arctan x",
+       "label": "\\(y = \\arctan x\\)",
+       "labelAt": 1.5,
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:50Z"
+  }
+ ]
 }

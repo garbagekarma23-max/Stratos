@@ -8,7 +8,9 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:33Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:11Z pictures: the owner asked for a graph at card 3",
+  "2026-11-08T13:07:42Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 2,
@@ -100,7 +102,15 @@
    ],
    "why": "\\(F(x) = x^{2}\\), so \\(P = F(0.8) - F(0.5) = 0.64 - 0.25 = 0.39\\). Using \\(F(0.8)\\) alone gives 0.64, which wrongly includes the area below 0.5.",
    "clue": "Subtract the area up to 0.5 from the area up to 0.8."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "For 0 <= x <= 1, the density y = f(x) = 2x (dashed) and the CDF y = F(x) = x^2 (solid), both labelled, with (0.5, 0.25) marked on F with a guide. Axes x from 0 to 1.2 and y from 0 to 2.2, no grid.",
+    "why": "It shows F rising from 0 to 1 as the area under f builds up."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -139,5 +149,227 @@
     "clue": "Subtract the area up to 0.5 from the area up to 0.8."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Cumulative distribution functions",
+  "card": [
+   "The cumulative distribution function (CDF), \\(F(x)\\), gives \\(P(X \\le x)\\). It is the area under the density curve \\(f\\) from the lowest value of \\(X\\) up to \\(x\\).",
+   "Find it by integrating: \\(F(x) = \\int f(t) \\, dt\\), from the lowest value up to \\(x\\). Use \\(t\\) inside the integral so \\(x\\) is only the upper limit.",
+   "Worked example: \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). Then \\(F(x) = \\int_{0}^{x} 2t \\, dt = x^{2}\\). So \\(P(X \\le 0.5) = 0.5^{2} = 0.25\\).",
+   "\\(F\\) rises from 0 to 1 and never falls. For an interval, \\(P(a \\le X \\le b) = F(b) - F(a)\\). Differentiating \\(F\\) gives back \\(f\\)."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "For \\(0 \\le x \\le 1\\), the dashed density \\(y = f(x) = 2x\\) and the solid cumulative distribution function \\(y = F(x) = x^{2}\\). \\(F\\) rises from 0 at \\(x = 0\\) to 1 at \\(x = 1\\), and the guide marks \\(F(0.5) = 0.25\\).",
+    "x": {
+     "min": 0,
+     "max": 1.3,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": 0,
+     "max": 2.2,
+     "label": "\\(y\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x",
+      "domain": [
+       0,
+       1
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 1,
+      "pos": "right",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "F",
+      "expr": "x^{2}",
+      "domain": [
+       0,
+       1
+      ],
+      "label": "\\(y = F(x)\\)",
+      "labelAt": 1,
+      "pos": "right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.5,
+       0.25
+      ],
+      "xLabel": "\\(0.5\\)",
+      "yLabel": "\\(0.25\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       0.5,
+       0.25
+      ],
+      "on": [
+       "F"
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       1,
+       1
+      ],
+      "xLabel": "\\(1\\)",
+      "yLabel": "\\(1\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "on": [
+       "F"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "\\(F(x)\\) is the area so far: integrate \\(f\\) up to \\(x\\).",
+  "a": {
+   "q": "A variable has density \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). What is \\(P(X \\le 0.6)\\)?",
+   "opts": [
+    "0.36",
+    "0.6",
+    "1.2",
+    "0.72"
+   ],
+   "why": "\\(F(x) = x^{2}\\), so \\(P(X \\le 0.6) = 0.6^{2} = 0.36\\). Substituting 0.6 into \\(f\\) gives 1.2, which is the height of the curve, not the area up to 0.6.",
+   "clue": "Integrate \\(f\\) from 0 up to 0.6."
+  },
+  "b": {
+   "d": 3,
+   "q": "A variable has density \\(f(x) = 2x\\) for \\(0 \\le x \\le 1\\). What is \\(P(0.5 \\le X \\le 0.8)\\)?",
+   "opts": [
+    "0.39",
+    "0.64",
+    "0.25",
+    "0.30"
+   ],
+   "why": "\\(F(x) = x^{2}\\), so \\(P = F(0.8) - F(0.5) = 0.64 - 0.25 = 0.39\\). Using \\(F(0.8)\\) alone gives 0.64, which wrongly includes the area below 0.5.",
+   "clue": "Subtract the area up to 0.5 from the area up to 0.8."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "For 0 <= x <= 1, the density y = f(x) = 2x (dashed) and the CDF y = F(x) = x^2 (solid), both labelled, with (0.5, 0.25) marked on F with a guide. Axes x from 0 to 1.2 and y from 0 to 2.2, no grid.",
+    "why": "It shows F rising from 0 to 1 as the area under f builds up.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "For 0 <= x <= 1, the density y = f(x) = 2x (dashed) and the CDF y = F(x) = x^2 (solid), both labelled, with (0.5, 0.25) marked on F with a guide. Axes x from 0 to 1.2 and y from 0 to 2.2, no grid.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "For \\(0 \\le x \\le 1\\), the dashed density \\(y = f(x) = 2x\\) and the solid cumulative distribution function \\(y = F(x) = x^{2}\\). \\(F\\) rises from 0 at \\(x = 0\\) to 1 at \\(x = 1\\), and the guide marks \\(F(0.5) = 0.25\\).",
+     "x": {
+      "min": 0,
+      "max": 1.3,
+      "label": "\\(x\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 2.2,
+      "label": "\\(y\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2x",
+       "domain": [
+        0,
+        1
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 1,
+       "pos": "right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "F",
+       "expr": "x^{2}",
+       "domain": [
+        0,
+        1
+       ],
+       "label": "\\(y = F(x)\\)",
+       "labelAt": 1,
+       "pos": "right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        0.5,
+        0.25
+       ],
+       "xLabel": "\\(0.5\\)",
+       "yLabel": "\\(0.25\\)"
+      },
+      {
+       "type": "point",
+       "at": [
+        0.5,
+        0.25
+       ],
+       "on": [
+        "F"
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        1,
+        1
+       ],
+       "xLabel": "\\(1\\)",
+       "yLabel": "\\(1\\)"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        1
+       ],
+       "on": [
+        "F"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:42Z"
+  }
+ ]
 }

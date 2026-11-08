@@ -12,7 +12,7 @@ You add pictures to study points for Stratos, a study app for Australian high sc
 
 A graph or chart want is written as data, as the graph and chart rules below say. Its figure is the graph or chart. It has no file and no record. A graph's figure has kind "graph", a chart's kind "chart". Every number in it is worked out exactly, and the content check works each one out again. A graph's words, numbers and examples are the card's or the question's own, never new ones that the text does not have.
 
-A function the reader cannot read (it reads polynomials, fractions, roots, powers, |x| and bases such as 2 or \frac{1}{2}, but not \sin, \cos, \tan, e, \log or \pi) is drawn as a smooth curve through points worked out from it, close enough together that the curve is exact to the eye, with a peak, a trough or a crossing as one of the points.
+Write every curve that has a formula as a fn with its real expression, so the content check can test it. The reader reads polynomials, fractions, roots, powers, |x|, e, \pi, \sin, \cos, \tan, their inverses (\arcsin or \sin^{-1}), e^{...}, \exp, \ln, \log (base 10) and \log_{b}, in radians: for degrees, write \sin\left(\frac{\pi x}{180}\right). Use a curve through points only for something with no formula, such as real data.
 
 ## Diagrams: drawn for Stratos as SVG
 

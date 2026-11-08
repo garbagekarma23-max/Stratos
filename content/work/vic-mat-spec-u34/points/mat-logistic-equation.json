@@ -25,7 +25,9 @@
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:13Z pictures: the owner asked for a graph at card 1",
+  "2026-11-08T13:07:54Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -226,7 +228,15 @@
    ],
    "why": "\\(\\frac{dP}{dt} = 0.1 \\times 100 \\times \\left(1 - \\frac{100}{200}\\right)\\), which is \\(10 \\times 0.5 = 5\\). The value 10 comes from leaving out the bracket. The value 0 mixes up the point where the rate is largest, \\(P = \\frac{N}{2}\\), with a rate of zero.",
    "clue": "Work out the bracket first, then multiply by \\(0.1P\\)."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "The S-shaped logistic curve P = 500/(1 + 24e^{-0.2t}) for t from 0 to 40, the dashed horizontal asymptote P = 500 labelled carrying capacity N, and the point of fastest growth (about (15.9, 250)) marked and labelled P = N/2.",
+    "why": "It shows slow, then fast, then slowing growth towards N."
+   }
+  ]
  },
  "cleared_by": "recheck",
  "latex": {
@@ -265,5 +275,143 @@
     "clue": "Work out the bracket first, then multiply by 0.1P."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "The logistic equation",
+  "card": [
+   "The logistic equation models a population \\(P\\) with a limit \\(N\\), the carrying capacity: the largest population the environment can support. From a small start, \\(P\\) grows slowly, speeds up until \\(P = \\frac{N}{2}\\), then slows as it nears \\(N\\).",
+   "The equation is \\(\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{N}\\right)\\), where \\(k > 0\\) and \\(N > 0\\). The factor \\(\\left(1 - \\frac{P}{N}\\right)\\) is close to 1 when \\(P\\) is small and close to 0 when \\(P\\) is near \\(N\\).",
+   "If \\(0 < P < N\\), then \\(\\frac{dP}{dt} > 0\\) and the population rises towards \\(N\\). If \\(P > N\\), then \\(\\frac{dP}{dt} < 0\\) and it falls towards \\(N\\). If \\(P = N\\) or \\(P = 0\\), then \\(\\frac{dP}{dt} = 0\\) and the population does not change.",
+   "Example: \\(\\frac{dP}{dt} = 0.2P\\left(1 - \\frac{P}{500}\\right)\\). When \\(P = 100\\), \\(\\frac{dP}{dt} = 0.2 \\times 100 \\times \\left(1 - \\frac{100}{500}\\right)\\), which is \\(20 \\times 0.8 = 16\\). The population is growing at 16 per unit of time."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A logistic curve, \\(P = \\frac{500}{1 + 24e^{-0.2t}}\\), for a population with carrying capacity \\(N = 500\\), shown as a dashed line. From a small start the population grows slowly, then fastest at \\(P = \\frac{N}{2}\\) (250), then more slowly as it nears \\(N\\).",
+    "x": {
+     "min": 0,
+     "max": 42,
+     "label": "\\(t\\)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 600,
+     "label": "\\(P\\)",
+     "step": 100
+    },
+    "items": [
+     {
+      "type": "asymptote",
+      "y": 500,
+      "label": "carrying capacity \\(N = 500\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "p",
+      "expr": "\\frac{500}{1 + 24e^{-0.2x}}"
+     },
+     {
+      "type": "point",
+      "at": [
+       15.8903,
+       250
+      ],
+      "label": "\\(P = \\frac{N}{2}\\)",
+      "pos": "above-left",
+      "on": [
+       "p"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "The rate \\(kP\\left(1 - \\frac{P}{N}\\right)\\) peaks at \\(P = \\frac{N}{2}\\) and falls to 0 as \\(P\\) reaches \\(N\\).",
+  "a": {
+   "q": "A population follows \\(\\frac{dP}{dt} = 0.3P\\left(1 - \\frac{P}{800}\\right)\\). What is the carrying capacity?",
+   "opts": [
+    "800",
+    "0.3",
+    "2400",
+    "400"
+   ],
+   "why": "The equation has the form \\(\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{N}\\right)\\), so \\(N = 800\\). The number 0.3 is the growth constant \\(k\\), not a population limit, and 400 is \\(\\frac{N}{2}\\), where growth is fastest.",
+   "clue": "Match the equation to the form with \\(N\\) inside the bracket."
+  },
+  "b": {
+   "d": 3,
+   "q": "A pond population follows \\(\\frac{dP}{dt} = 0.1P\\left(1 - \\frac{P}{200}\\right)\\). At \\(P = 100\\), what is \\(\\frac{dP}{dt}\\)?",
+   "opts": [
+    "5",
+    "10",
+    "2.5",
+    "0"
+   ],
+   "why": "\\(\\frac{dP}{dt} = 0.1 \\times 100 \\times \\left(1 - \\frac{100}{200}\\right)\\), which is \\(10 \\times 0.5 = 5\\). The value 10 comes from leaving out the bracket. The value 0 mixes up the point where the rate is largest, \\(P = \\frac{N}{2}\\), with a rate of zero.",
+   "clue": "Work out the bracket first, then multiply by \\(0.1P\\)."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "The S-shaped logistic curve P = 500/(1 + 24e^{-0.2t}) for t from 0 to 40, the dashed horizontal asymptote P = 500 labelled carrying capacity N, and the point of fastest growth (about (15.9, 250)) marked and labelled P = N/2.",
+    "why": "It shows slow, then fast, then slowing growth towards N.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "The S-shaped logistic curve P = 500/(1 + 24e^{-0.2t}) for t from 0 to 40, the dashed horizontal asymptote P = 500 labelled carrying capacity N, and the point of fastest growth (about (15.9, 250)) marked and labelled P = N/2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A logistic curve, \\(P = \\frac{500}{1 + 24e^{-0.2t}}\\), for a population with carrying capacity \\(N = 500\\), shown as a dashed line. From a small start the population grows slowly, then fastest at \\(P = \\frac{N}{2}\\) (250), then more slowly as it nears \\(N\\).",
+     "x": {
+      "min": 0,
+      "max": 42,
+      "label": "\\(t\\)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 600,
+      "label": "\\(P\\)",
+      "step": 100
+     },
+     "items": [
+      {
+       "type": "asymptote",
+       "y": 500,
+       "label": "carrying capacity \\(N = 500\\)",
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "p",
+       "expr": "\\frac{500}{1 + 24e^{-0.2x}}"
+      },
+      {
+       "type": "point",
+       "at": [
+        15.8903,
+        250
+       ],
+       "label": "\\(P = \\frac{N}{2}\\)",
+       "pos": "above-left",
+       "on": [
+        "p"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:53Z"
+  }
+ ]
 }

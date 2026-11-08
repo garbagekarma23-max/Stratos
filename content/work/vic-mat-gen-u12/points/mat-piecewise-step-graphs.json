@@ -15,7 +15,9 @@
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)",
+  "2026-11-08T12:52:16Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:45Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -205,7 +207,250 @@
    ],
    "why": "The first step covers up to and including 2 hours, so the dot at 2 hours is closed on $6. The $11 step starts just after 2 hours, so it has an open dot there. A stay has one charge, not an average or a total.",
    "clue": "Check which step has the closed dot at 2 hours."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A step graph of car park cost against hours: $5 for over 0 up to 1 hour, then $9 for over 1 up to 2 hours. Open dots at (0, 5) and (1, 9); closed dots at (1, 5) and (2, 9). Axes Hours (0 to 2.5) and Cost ($) (0 to 10).",
+    "why": "It shows which end of each step is included."
+   }
+  ]
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "picture_draft": {
+  "title": "Piecewise and step graphs",
+  "card": [
+   [
+    "Piecewise graph",
+    "A piecewise graph is made of line segments, each with its own rule over its own range of x values. The segments can join up where the rule changes, as on a tax scale."
+   ],
+   [
+    "Step graph",
+    "A step graph is made of horizontal segments with jumps between them. The value stays fixed over a range, then jumps to a new amount."
+   ],
+   [
+    "Open and closed dots",
+    "A closed dot means the end value is included. An open dot means it is not."
+   ],
+   "Example: a car park charges $5 for up to 1 hour, then $9 for over 1 hour up to 2 hours. A stay of exactly 1 hour costs $5. A stay of 1.5 hours costs $9."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A step graph of car park cost against hours. The cost is $5 for more than 0 up to 1 hour: an open dot at 0 and a closed dot at 1 hour. It then jumps to $9 for more than 1 up to 2 hours: an open dot at 1 hour and a closed dot at 2 hours. A stay of exactly 1 hour costs $5.",
+    "x": {
+     "min": 0,
+     "max": 2.5,
+     "label": "Hours",
+     "step": 0.5
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Cost ($)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "5",
+      "domain": [
+       0,
+       1
+      ],
+      "label": "$5",
+      "labelAt": 0.5,
+      "pos": "above"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "9",
+      "domain": [
+       1,
+       2
+      ],
+      "label": "$9",
+      "labelAt": 1.5,
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       5
+      ],
+      "open": true,
+      "on": [
+       "a"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       5
+      ],
+      "on": [
+       "a"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       9
+      ],
+      "open": true,
+      "on": [
+       "b"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       9
+      ],
+      "on": [
+       "b"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Piecewise graphs change rule at set points. Step graphs hold a value, then jump.",
+  "a": {
+   "q": "A car park charges $4 for up to 1 hour, $7 for over 1 hour up to 2 hours, and $10 for over 2 hours up to 3 hours. What does a stay of 2.5 hours cost?",
+   "opts": [
+    "$10",
+    "$7",
+    "$4",
+    "$17"
+   ],
+   "why": "2.5 hours is over 2 hours and up to 3 hours, so the charge is $10. The charge is read from one step, not added up across steps, so $17 is wrong.",
+   "clue": "Find which time range 2.5 hours falls in."
+  },
+  "b": {
+   "d": 3,
+   "q": "A step graph for a car park shows $6 for up to 2 hours, then $11 for over 2 hours up to 4 hours. Which cost applies to a stay of exactly 2 hours?",
+   "opts": [
+    "$6, because the first step includes 2 hours",
+    "$11, because the next step starts at 2 hours",
+    "$8.50, the average of the two steps",
+    "$17, as both steps are charged"
+   ],
+   "why": "The first step covers up to and including 2 hours, so the dot at 2 hours is closed on $6. The $11 step starts just after 2 hours, so it has an open dot there. A stay has one charge, not an average or a total.",
+   "clue": "Check which step has the closed dot at 2 hours."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A step graph of car park cost against hours: $5 for over 0 up to 1 hour, then $9 for over 1 up to 2 hours. Open dots at (0, 5) and (1, 9); closed dots at (1, 5) and (2, 9). Axes Hours (0 to 2.5) and Cost ($) (0 to 10).",
+    "why": "It shows which end of each step is included.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A step graph of car park cost against hours: $5 for over 0 up to 1 hour, then $9 for over 1 up to 2 hours. Open dots at (0, 5) and (1, 9); closed dots at (1, 5) and (2, 9). Axes Hours (0 to 2.5) and Cost ($) (0 to 10).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A step graph of car park cost against hours. The cost is $5 for more than 0 up to 1 hour: an open dot at 0 and a closed dot at 1 hour. It then jumps to $9 for more than 1 up to 2 hours: an open dot at 1 hour and a closed dot at 2 hours. A stay of exactly 1 hour costs $5.",
+     "x": {
+      "min": 0,
+      "max": 2.5,
+      "label": "Hours",
+      "step": 0.5
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Cost ($)",
+      "step": 1
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "5",
+       "domain": [
+        0,
+        1
+       ],
+       "label": "$5",
+       "labelAt": 0.5,
+       "pos": "above"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "9",
+       "domain": [
+        1,
+        2
+       ],
+       "label": "$9",
+       "labelAt": 1.5,
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        5
+       ],
+       "open": true,
+       "on": [
+        "a"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        5
+       ],
+       "on": [
+        "a"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        9
+       ],
+       "open": true,
+       "on": [
+        "b"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        9
+       ],
+       "on": [
+        "b"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:45Z"
+  }
+ ]
 }

@@ -11,7 +11,9 @@
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: kept for you (the fresh check found a problem)",
   "2026-10-28T11:49:42Z review: approved with the fix",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:42Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 2,
@@ -206,7 +208,15 @@
    ],
    "why": "\\(z = \\frac{450 - 400}{25} = 2\\). About 95% of values lie within 2 standard deviations, so 5% lie outside, split equally between the two tails. The upper tail is 0.025. The value 0.05 is wrong because it counts both tails.",
    "clue": "The 5% outside 2 standard deviations is split between both tails, but this question asks about one."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A normal curve with mean 170 and standard deviation 10 (fn of the normal density), x from 140 to 200, with ticks at 150, 160, 170, 180, 190. Shade the tail above 180 and label it about 0.16.",
+    "why": "It shows the tail area as the probability above one standard deviation."
+   }
+  ]
  },
  "cleared_by": "owner",
  "latex": {
@@ -254,5 +264,146 @@
     "clue": "The 5% outside 2 standard deviations is split between both tails, but this question asks about one."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Probabilities from the normal distribution",
+  "card": [
+   "Step 1: turn each end of the interval into a z-score using \\(z = \\frac{x - \\mu}{\\sigma}\\). Step 2: use the z-scores to find the area under the standard normal curve. That area is the probability.",
+   [
+    "Empirical rule",
+    "About 68% of values lie within 1 standard deviation of the mean, 95% within 2 and 99.7% within 3. The curve is symmetric, so half of the area lies on each side of the mean."
+   ],
+   [
+    "Table or calculator",
+    "A z-table gives \\(P(Z \\le z)\\). For an interval, \\(P(a < Z < b) = P(Z \\le b) - P(Z \\le a)\\). For a value above \\(z\\), \\(P(Z > z) = 1 - P(Z \\le z)\\)."
+   ],
+   [
+    "Example",
+    "Heights have \\(\\mu = 170\\) and \\(\\sigma = 10\\). For 150 to 190, \\(z = -2\\) to 2, so \\(P(150 < X < 190)\\) is about 0.95. For above 180, \\(z = 1\\). Within 1 standard deviation is 68%, so the two tails share 32%. Each tail is 16%, so \\(P(X > 180)\\) is about 0.16."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A normal curve for heights with mean 170 and standard deviation 10. The area to the right of 180, one standard deviation above the mean, is shaded: about 0.16.",
+    "x": {
+     "min": 135,
+     "max": 205,
+     "label": "Height",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 0.046
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "n",
+      "span": [
+       180,
+       205
+      ],
+      "label": "about 0.16",
+      "at": [
+       195,
+       0.013
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "\\frac{1}{10\\sqrt{2\\pi}} e^{-\\frac{(x - 170)^{2}}{200}}",
+      "domain": [
+       135,
+       205
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Convert to z-scores, then read the area from the empirical rule or a table.",
+  "a": {
+   "q": "Test marks are normal with mean 60 and standard deviation 8. What is the approximate probability that a mark is between 44 and 76?",
+   "opts": [
+    "0.95",
+    "0.68",
+    "0.997",
+    "0.475"
+   ],
+   "why": "\\(z = \\frac{44 - 60}{8} = -2\\) and \\(z = \\frac{76 - 60}{8} = 2\\). The interval is within 2 standard deviations of the mean, so the probability is about 0.95. The value 0.68 is for 1 standard deviation, not 2.",
+   "clue": "Find the z-scores of 44 and 76 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "The lifetime of a battery is normal with mean 400 hours and standard deviation 25 hours. What is the approximate probability that a battery lasts more than 450 hours?",
+   "opts": [
+    "0.025",
+    "0.05",
+    "0.95",
+    "0.975"
+   ],
+   "why": "\\(z = \\frac{450 - 400}{25} = 2\\). About 95% of values lie within 2 standard deviations, so 5% lie outside, split equally between the two tails. The upper tail is 0.025. The value 0.05 is wrong because it counts both tails.",
+   "clue": "The 5% outside 2 standard deviations is split between both tails, but this question asks about one."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A normal curve with mean 170 and standard deviation 10 (fn of the normal density), x from 140 to 200, with ticks at 150, 160, 170, 180, 190. Shade the tail above 180 and label it about 0.16.",
+    "why": "It shows the tail area as the probability above one standard deviation.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A normal curve with mean 170 and standard deviation 10 (fn of the normal density), x from 140 to 200, with ticks at 150, 160, 170, 180, 190. Shade the tail above 180 and label it about 0.16.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A normal curve for heights with mean 170 and standard deviation 10. The area to the right of 180, one standard deviation above the mean, is shaded: about 0.16.",
+     "x": {
+      "min": 135,
+      "max": 205,
+      "label": "Height",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 0.046
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "n",
+       "span": [
+        180,
+        205
+       ],
+       "label": "about 0.16",
+       "at": [
+        195,
+        0.013
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "\\frac{1}{10\\sqrt{2\\pi}} e^{-\\frac{(x - 170)^{2}}{200}}",
+       "domain": [
+        135,
+        205
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:42Z"
+  }
+ ]
 }

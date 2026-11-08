@@ -31,7 +31,9 @@
   "2026-11-01T08:14:06Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T12:52:15Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:44Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -151,7 +153,15 @@
    ],
    "why": "About 68% of values lie within 1 standard deviation of the mean, so \\(40 - 4 = 36\\) and \\(40 + 4 = 44\\). The range 32 cm to 48 cm is within 2 standard deviations, which holds about 95%.",
    "clue": "Which percentage matches 1 standard deviation?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A bell-shaped curve for test scores, mean 60 and standard deviation 5 (normal density), x from 40 to 80 with ticks at 50, 55, 60, 65, 70. Shade from 50 to 70 and label it about 95%.",
+    "why": "It shows about 95% of scores within 2 standard deviations."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -199,5 +209,146 @@
     "clue": "Which percentage matches 1 standard deviation?"
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Shapes of distributions",
+  "card": [
+   [
+    "Symmetric",
+    "The two sides of the display are roughly mirror images, with the peak near the middle."
+   ],
+   [
+    "Skewed",
+    "One side has a long tail. If the tail points to the higher values, it is positively skewed (skewed right). If it points to the lower values, it is negatively skewed (skewed left)."
+   ],
+   [
+    "Bell-shaped",
+    "A symmetric distribution with one peak in the middle that tapers off evenly on both sides. About 68% of values lie within 1 standard deviation of the mean, about 95% within 2, and about 99.7% within 3."
+   ],
+   "Example: test scores have a mean of 60 and a standard deviation of 5. If they are bell-shaped, about 95% of scores lie within 2 standard deviations, which is from 50 to 70."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A bell-shaped curve of test scores with mean 60 and standard deviation 5. It is symmetric, with its peak at 60. The area from 50 to 70, within 2 standard deviations of the mean, is shaded: about 95% of scores.",
+    "x": {
+     "min": 40,
+     "max": 80,
+     "label": "Score",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 0.095
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "n",
+      "span": [
+       50,
+       70
+      ],
+      "label": "about 95%",
+      "at": [
+       60,
+       0.03
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "\\frac{1}{5\\sqrt{2\\pi}} e^{-\\frac{(x - 60)^{2}}{50}}",
+      "domain": [
+       40,
+       80
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "The tail names the skew. In a bell shape, 68%, 95% and 99.7% lie within 1, 2 and 3 standard deviations.",
+  "a": {
+   "q": "A histogram has its peak at the low values and a long tail stretching to the high values. What is its shape?",
+   "opts": [
+    "Positively skewed",
+    "Negatively skewed",
+    "Symmetric",
+    "Bell-shaped"
+   ],
+   "why": "The long tail points to the higher values, so the distribution is positively skewed. It is not negatively skewed, because that name follows the tail and not the side where the peak sits.",
+   "clue": "Name the shape by the direction of the tail."
+  },
+  "b": {
+   "d": 3,
+   "q": "The heights of plants in a nursery are bell-shaped, with a mean of 40 cm and a standard deviation of 4 cm. About 68% of the plants have heights between which values?",
+   "opts": [
+    "36 cm and 44 cm",
+    "32 cm and 48 cm",
+    "28 cm and 52 cm",
+    "38 cm and 42 cm"
+   ],
+   "why": "About 68% of values lie within 1 standard deviation of the mean, so \\(40 - 4 = 36\\) and \\(40 + 4 = 44\\). The range 32 cm to 48 cm is within 2 standard deviations, which holds about 95%.",
+   "clue": "Which percentage matches 1 standard deviation?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A bell-shaped curve for test scores, mean 60 and standard deviation 5 (normal density), x from 40 to 80 with ticks at 50, 55, 60, 65, 70. Shade from 50 to 70 and label it about 95%.",
+    "why": "It shows about 95% of scores within 2 standard deviations.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A bell-shaped curve for test scores, mean 60 and standard deviation 5 (normal density), x from 40 to 80 with ticks at 50, 55, 60, 65, 70. Shade from 50 to 70 and label it about 95%.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A bell-shaped curve of test scores with mean 60 and standard deviation 5. It is symmetric, with its peak at 60. The area from 50 to 70, within 2 standard deviations of the mean, is shaded: about 95% of scores.",
+     "x": {
+      "min": 40,
+      "max": 80,
+      "label": "Score",
+      "step": 5
+     },
+     "y": {
+      "min": 0,
+      "max": 0.095
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "n",
+       "span": [
+        50,
+        70
+       ],
+       "label": "about 95%",
+       "at": [
+        60,
+        0.03
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "\\frac{1}{5\\sqrt{2\\pi}} e^{-\\frac{(x - 60)^{2}}{50}}",
+       "domain": [
+        40,
+        80
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:44Z"
+  }
+ ]
 }

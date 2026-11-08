@@ -31,7 +31,9 @@
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:48Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:53Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -133,7 +135,15 @@
    ],
    "why": "\\(V = \\pi \\int_{1}^{2} (2x)^{2} \\, dx = \\pi \\int_{1}^{2} 4x^{2} \\, dx\\), which is \\(\\pi \\left[\\frac{4x^{3}}{3}\\right]_{1}^{2} = \\pi\\left(\\frac{32}{3} - \\frac{4}{3}\\right) = \\frac{28\\pi}{3}\\). Forgetting to square the 2 gives \\(\\frac{14\\pi}{3}\\), which is wrong because the radius is \\(2x\\), so the 2 is squared too.",
    "clue": "The radius is \\(2x\\), so square the whole of it, including the 2."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The line y = x from x = 0 to 3 with the region under it shaded, and a vertical segment at x = 2 from the x-axis up to the line, labelled radius y, showing one disc's radius. Axes x from 0 to 4, y from 0 to 4.",
+    "why": "It shows the region that is turned and a disc's radius."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -172,5 +182,165 @@
     "clue": "The radius is 2x, so square the whole of it, including the 2."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Volumes of solids of revolution",
+  "card": [
+   "Rotate the region under a curve \\(y = f(x)\\), from \\(x = a\\) to \\(x = b\\), once around the x-axis. This makes a solid. Each slice of it is a thin disc with radius \\(y\\).",
+   "A disc has area \\(\\pi y^{2}\\), so the volume is \\(V = \\pi \\int y^{2} \\, dx\\), from \\(x = a\\) to \\(x = b\\). Square \\(y\\) first, then integrate.",
+   "For a rotation about the y-axis, swap the roles of \\(x\\) and \\(y\\): \\(V = \\pi \\int x^{2} \\, dy\\), from \\(y = c\\) to \\(y = d\\). Write \\(x\\) in terms of \\(y\\) first.",
+   "Example: \\(y = x\\) from \\(x = 0\\) to \\(x = 3\\) gives a cone. \\(V = \\pi \\int_{0}^{3} x^{2} \\, dx = \\pi \\left[\\frac{x^{3}}{3}\\right]_{0}^{3}\\), which is \\(\\pi(9 - 0) = 9\\pi\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(y = x\\) from \\(x = 0\\) to \\(x = 3\\), with the region under it shaded. Turning this region once around the x-axis makes a cone. At \\(x = 2\\) an arrow from the x-axis up to the line shows one disc's radius, \\(y\\).",
+    "x": {
+     "min": 0,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "shade",
+      "under": "f",
+      "span": [
+       0,
+       3
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x",
+      "domain": [
+       0,
+       3
+      ],
+      "label": "\\(y = x\\)",
+      "labelAt": 3,
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       0
+      ],
+      "to": [
+       2,
+       2
+      ],
+      "label": "radius \\(y\\)",
+      "pos": "right"
+     }
+    ]
+   }
+  },
+  "remember": "Square the radius, multiply by \\(\\pi\\), then integrate along the axis of rotation.",
+  "a": {
+   "q": "The curve \\(y = \\sqrt{x}\\), from \\(x = 0\\) to \\(x = 4\\), is rotated about the x-axis. What is the volume of the solid?",
+   "opts": [
+    "\\(8\\pi\\)",
+    "\\(\\frac{16\\pi}{3}\\)",
+    "\\(4\\pi\\)",
+    "\\(2\\pi\\)"
+   ],
+   "why": "\\(V = \\pi \\int_{0}^{4} (\\sqrt{x})^{2} \\, dx = \\pi \\int_{0}^{4} x \\, dx\\), which is \\(\\pi \\left[\\frac{x^{2}}{2}\\right]_{0}^{4} = \\pi \\times 8 = 8\\pi\\). Writing \\(\\pi \\int \\sqrt{x} \\, dx\\) gives \\(\\frac{16\\pi}{3}\\), which is wrong because \\(y\\) was not squared first.",
+   "clue": "Square \\(y\\) before you integrate, and \\((\\sqrt{x})^{2}\\) is simple."
+  },
+  "b": {
+   "d": 3,
+   "q": "The region under \\(y = 2x\\) from \\(x = 1\\) to \\(x = 2\\) is rotated about the x-axis. What is the volume of the solid?",
+   "opts": [
+    "\\(\\frac{28\\pi}{3}\\)",
+    "\\(\\frac{14\\pi}{3}\\)",
+    "\\(\\frac{28}{3}\\)",
+    "\\(\\frac{56\\pi}{3}\\)"
+   ],
+   "why": "\\(V = \\pi \\int_{1}^{2} (2x)^{2} \\, dx = \\pi \\int_{1}^{2} 4x^{2} \\, dx\\), which is \\(\\pi \\left[\\frac{4x^{3}}{3}\\right]_{1}^{2} = \\pi\\left(\\frac{32}{3} - \\frac{4}{3}\\right) = \\frac{28\\pi}{3}\\). Forgetting to square the 2 gives \\(\\frac{14\\pi}{3}\\), which is wrong because the radius is \\(2x\\), so the 2 is squared too.",
+   "clue": "The radius is \\(2x\\), so square the whole of it, including the 2."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The line y = x from x = 0 to 3 with the region under it shaded, and a vertical segment at x = 2 from the x-axis up to the line, labelled radius y, showing one disc's radius. Axes x from 0 to 4, y from 0 to 4.",
+    "why": "It shows the region that is turned and a disc's radius.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The line y = x from x = 0 to 3 with the region under it shaded, and a vertical segment at x = 2 from the x-axis up to the line, labelled radius y, showing one disc's radius. Axes x from 0 to 4, y from 0 to 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line \\(y = x\\) from \\(x = 0\\) to \\(x = 3\\), with the region under it shaded. Turning this region once around the x-axis makes a cone. At \\(x = 2\\) an arrow from the x-axis up to the line shows one disc's radius, \\(y\\).",
+     "x": {
+      "min": 0,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 4,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "shade",
+       "under": "f",
+       "span": [
+        0,
+        3
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x",
+       "domain": [
+        0,
+        3
+       ],
+       "label": "\\(y = x\\)",
+       "labelAt": 3,
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        2,
+        2
+       ],
+       "label": "radius \\(y\\)",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:53Z"
+  }
+ ]
 }

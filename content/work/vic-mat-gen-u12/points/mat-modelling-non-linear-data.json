@@ -22,7 +22,9 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:33Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:17Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:47Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -123,7 +125,15 @@
    ],
    "why": "\\(k = 12.56 \\div 4 = 3.14\\). Then \\(A = 3.14 \\times 25 = 78.5\\). The value 31.4 comes from scaling the area by \\(5 \\div 2\\) instead of squaring the radius ratio.",
    "clue": "Find \\(k\\) first, then square 5."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "y plotted against x^3 for data from y = 3x^3: points at x^3 = 1, 8, 27 with y = 3, 24, 81, on the straight line y = 3x through the origin, the point (8, 24) labelled, horizontal axis labelled x^3.",
+    "why": "It shows the straight line whose gradient is k."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -162,5 +172,187 @@
     "clue": "Find k first, then square 5."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Modelling non-linear data",
+  "card": [
+   "Some curved data fit a rule \\(y = kx^{n}\\), where \\(n\\) is a power such as 2, 3 or \\(\\frac{1}{2}\\). The constant \\(k\\) sets the size of \\(y\\).",
+   "Once you pick the power \\(n\\), plot \\(y\\) against \\(x^{n}\\). If the points lie on a straight line through the origin, the rule fits.",
+   "The gradient of that line is \\(k\\). Find it as \\(y \\div x^{n}\\) for any point on the line.",
+   "Example: \\(x = 2\\) and \\(y = 24\\) fit \\(y = kx^{3}\\). Then \\(x^{3} = 8\\), so \\(k = 24 \\div 8 = 3\\) and the rule is \\(y = 3x^{3}\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Data from \\(y = 3x^{3}\\) plotted as \\(y\\) against \\(x^{3}\\). The points \\((1, 3)\\), \\((8, 24)\\) and \\((27, 81)\\) lie on a straight line through the origin, so the rule fits. Its gradient, \\(24 \\div 8 = 3\\), is \\(k\\).",
+    "x": {
+     "min": 0,
+     "max": 30,
+     "label": "\\(x^{3}\\)",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 90,
+     "label": "\\(y\\)",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "3x",
+      "domain": [
+       0,
+       30
+      ],
+      "label": "\\(y = 3x^{3}\\)",
+      "labelAt": 18,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       3
+      ],
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       24
+      ],
+      "label": "\\((8, 24)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       27,
+       81
+      ],
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Plot \\(y\\) against \\(x^{n}\\). The gradient of the straight line is \\(k\\).",
+  "a": {
+   "q": "Data fit \\(y = kx^{2}\\). The point \\(x = 3\\), \\(y = 45\\) lies on the curve. What is \\(k\\)?",
+   "opts": [
+    "5",
+    "15",
+    "135",
+    "7.5"
+   ],
+   "why": "\\(x^{2} = 9\\), so \\(k = 45 \\div 9 = 5\\). The value 15 comes from dividing by \\(x\\) instead of \\(x^{2}\\).",
+   "clue": "Square \\(x\\) before you divide."
+  },
+  "b": {
+   "d": 3,
+   "q": "The area of a circular garden bed is modelled as \\(A = kr^{2}\\). When \\(r = 2\\) m, \\(A = 12.56\\text{ m}^{2}\\). Which is the area when \\(r = 5\\) m?",
+   "opts": [
+    "\\(78.5\\text{ m}^{2}\\)",
+    "\\(31.4\\text{ m}^{2}\\)",
+    "\\(62.8\\text{ m}^{2}\\)",
+    "\\(25.12\\text{ m}^{2}\\)"
+   ],
+   "why": "\\(k = 12.56 \\div 4 = 3.14\\). Then \\(A = 3.14 \\times 25 = 78.5\\). The value 31.4 comes from scaling the area by \\(5 \\div 2\\) instead of squaring the radius ratio.",
+   "clue": "Find \\(k\\) first, then square 5."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "y plotted against x^3 for data from y = 3x^3: points at x^3 = 1, 8, 27 with y = 3, 24, 81, on the straight line y = 3x through the origin, the point (8, 24) labelled, horizontal axis labelled x^3.",
+    "why": "It shows the straight line whose gradient is k.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y plotted against x^3 for data from y = 3x^3: points at x^3 = 1, 8, 27 with y = 3, 24, 81, on the straight line y = 3x through the origin, the point (8, 24) labelled, horizontal axis labelled x^3.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Data from \\(y = 3x^{3}\\) plotted as \\(y\\) against \\(x^{3}\\). The points \\((1, 3)\\), \\((8, 24)\\) and \\((27, 81)\\) lie on a straight line through the origin, so the rule fits. Its gradient, \\(24 \\div 8 = 3\\), is \\(k\\).",
+     "x": {
+      "min": 0,
+      "max": 30,
+      "label": "\\(x^{3}\\)",
+      "step": 5
+     },
+     "y": {
+      "min": 0,
+      "max": 90,
+      "label": "\\(y\\)",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "3x",
+       "domain": [
+        0,
+        30
+       ],
+       "label": "\\(y = 3x^{3}\\)",
+       "labelAt": 18,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        3
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        8,
+        24
+       ],
+       "label": "\\((8, 24)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        27,
+        81
+       ],
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:47Z"
+  }
+ ]
 }

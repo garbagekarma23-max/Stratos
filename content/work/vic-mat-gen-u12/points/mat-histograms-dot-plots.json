@@ -24,7 +24,9 @@
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card other)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card other)",
+  "2026-11-08T12:52:15Z pictures: the owner asked for a chart at card 3",
+  "2026-11-08T13:07:44Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -227,7 +229,178 @@
    ],
    "why": "With 400 measured values, grouping into intervals keeps the shape clear. A dot plot or stem plot would be very crowded, as each shows every value. A segmented bar chart is for categorical data, not heights.",
    "clue": "Which display groups values instead of showing each one?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "chart",
+    "brief": "A histogram of travel times for 50 students in equal 10-minute classes from 0 to 60 minutes, with touching bars and counts 6, 14, 15, 9, 4, 2.",
+    "why": "It shows touching bars over equal-width intervals."
+   }
+  ]
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "picture_draft": {
+  "title": "Histograms, stem plots and dot plots",
+  "card": [
+   [
+    "Dot plot",
+    "One dot for each value, stacked above a number line. It suits a small set of data with few different values, such as 20 quiz scores out of 10."
+   ],
+   [
+    "Stem plot",
+    "Each value is split into a stem (the leading digits) and a leaf (the last digit). 47 has stem 4 and leaf 7. It keeps every value and suits small to medium sets."
+   ],
+   [
+    "Histogram",
+    "Bars show how many values fall in each equal-width interval, and the bars touch. It suits large sets, but the individual values are lost."
+   ],
+   "All three show shape, centre and spread. A possible outlier can show up as a value well apart from the rest of the data."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of the travel times of 50 students, in equal 10-minute intervals from 0 to 60 minutes. The touching bars have heights 6, 14, 15, 9, 4 and 2.",
+    "x": {
+     "min": 0,
+     "max": 60,
+     "label": "Travel time (min)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 16,
+     "label": "Frequency",
+     "step": 2
+    },
+    "classes": [
+     [
+      0,
+      10,
+      6
+     ],
+     [
+      10,
+      20,
+      14
+     ],
+     [
+      20,
+      30,
+      15
+     ],
+     [
+      30,
+      40,
+      9
+     ],
+     [
+      40,
+      50,
+      4
+     ],
+     [
+      50,
+      60,
+      2
+     ]
+    ]
+   }
+  },
+  "remember": "Dot and stem plots keep each value. A histogram groups values into intervals.",
+  "a": {
+   "q": "A stem plot has the row 3 | 2 5 5 8. Which values does this row show?",
+   "opts": [
+    "32, 35, 35 and 38",
+    "32, 35 and 38",
+    "3, 2, 5, 5 and 8",
+    "23, 53, 53 and 83"
+   ],
+   "why": "The stem 3 is the leading digit and each leaf is a last digit, so the row shows 32, 35, 35 and 38. Each leaf is one value, so the repeated 5 means 35 appears twice. Writing the leaf first, or reading the stem as its own value, misreads the plot.",
+   "clue": "Put the stem in front of each leaf, one value per leaf."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi records the heights of 400 students in Geelong. Which display suits this large set best?",
+   "opts": [
+    "A histogram with equal-width intervals",
+    "A dot plot with one dot per student",
+    "A stem plot listing all 400 values",
+    "A segmented bar chart of the heights"
+   ],
+   "why": "With 400 measured values, grouping into intervals keeps the shape clear. A dot plot or stem plot would be very crowded, as each shows every value. A segmented bar chart is for categorical data, not heights.",
+   "clue": "Which display groups values instead of showing each one?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "chart",
+    "brief": "A histogram of travel times for 50 students in equal 10-minute classes from 0 to 60 minutes, with touching bars and counts 6, 14, 15, 9, 4, 2.",
+    "why": "It shows touching bars over equal-width intervals.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "chart",
+   "brief": "A histogram of travel times for 50 students in equal 10-minute classes from 0 to 60 minutes, with touching bars and counts 6, 14, 15, 9, 4, 2.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "histogram",
+     "alt": "A histogram of the travel times of 50 students, in equal 10-minute intervals from 0 to 60 minutes. The touching bars have heights 6, 14, 15, 9, 4 and 2.",
+     "x": {
+      "min": 0,
+      "max": 60,
+      "label": "Travel time (min)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 16,
+      "label": "Frequency",
+      "step": 2
+     },
+     "classes": [
+      [
+       0,
+       10,
+       6
+      ],
+      [
+       10,
+       20,
+       14
+      ],
+      [
+       20,
+       30,
+       15
+      ],
+      [
+       30,
+       40,
+       9
+      ],
+      [
+       40,
+       50,
+       4
+      ],
+      [
+       50,
+       60,
+       2
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:43Z"
+  }
+ ]
 }
