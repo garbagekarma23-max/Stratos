@@ -223,7 +223,7 @@ const FIG = (() => {
   /* A slope field's gradient dy/dx at (x, y), from LaTeX in x and y. y is put in as a number in brackets, and the Maths
      Lab's reader reads what is left as a function of x, so nothing is run as code. Null when it cannot be read. */
   function slopeFn(expr) {
-    if (typeof LabMaths === 'undefined' || !str(expr) || /[a-wzA-Z]/.test(expr.replace(/\\[a-zA-Z]+/g, ''))) return null;
+    if (typeof LabMaths === 'undefined' || !str(expr) || /[a-df-wzA-Z]/.test(expr.replace(/\\[a-zA-Z]+/g, ''))) return null;
     const cache = new Map();
     const at = y => {
       const k = (Math.abs(y) < 1e-12 ? 0 : y).toFixed(9);
@@ -282,11 +282,22 @@ const FIG = (() => {
   /* Where a label sits from its spot, as a move in its own width and height, and a gap in pixels. */
   const PLACE = {centre: [-0.5, -0.5, 0, 0], above: [-0.5, -1, 0, -1], below: [-0.5, 0, 0, 1], left: [-1, -0.5, -1, 0], right: [0, -0.5, 1, 0],
     'above-left': [-1, -1, -1, -1], 'above-right': [0, -1, 1, -1], 'below-left': [-1, 0, -1, 1], 'below-right': [0, 0, 1, 1]};
-  /* A label's box in layout pixels, from its estimated size, to check it fits. */
+  /* How tall a label is, in its font size: its line (which pos moves it by) and how far MathLive draws past it at the
+     top and bottom. Measured in Chromium at 12 px: a word 1.25 (15 px), and maths on one line about the same (a power
+     or subscript reaches about 2 px more, inside the halo); a fraction 1.85, with 0.26 drawn past each end (28 px in
+     all); an integral or sum with limits 2.45, with 0.2. */
+  function tall(text) {
+    const s = String(text);
+    if (/\\(int|sum|prod)\s*[_^]/.test(s)) return [2.45, 0.2];
+    if (/\\[dt]?frac|\\binom/.test(s)) return [1.85, 0.26];
+    return [1.25, 0];
+  }
+  /* A label's box in layout pixels, from its estimated size, to check it fits: everything drawn, so a fraction whose
+     bottom would be cut off at an edge of the figure is caught. */
   function box(L, wd) {
-    const fw = wd.cls === 'fn' ? L.fw - 1 : L.fw, w = shownLen(wd.text) * cw(fw), h = fw * 1.25, g = PLACE[wd.pos];
+    const fw = wd.cls === 'fn' ? L.fw - 1 : L.fw, w = shownLen(wd.text) * cw(fw), [k, past] = tall(wd.text), h = fw * k, e = fw * past, g = PLACE[wd.pos];
     const l = wd.sx + g[0] * w + g[2] * wd.gap, t = wd.sy + g[1] * h + g[3] * wd.gap;
-    return {l, t, r: l + w, b: t + h};
+    return {l, t: t - e, r: l + w, b: t + h + e};
   }
 
   /* Everything to draw: lines for the SVG and words for the HTML on top, in layout pixels. */
@@ -984,7 +995,8 @@ const FIG = (() => {
     '.fig .fl.fn{color:var(--ink-2);font-weight:400}' +
     '.fig .fl.fx{color:var(--ink-2)}' +
     '.fig .fl.fr{font-weight:700}' +
-    '.fig .fl math-span{font-size:1em;vertical-align:baseline}' +
+    /* maths in a label never scrolls or clips: the text's own rule (style.css) would cut off the bottom of a fraction */
+    '.fig .fl math-span{font-size:1em;vertical-align:baseline;overflow:visible;max-width:none}' +
     /* charts: bars and boxes in the soft blue with an ink edge, whiskers and the median in ink */
     '.fig .fb{fill:var(--accent-soft);stroke:currentColor;stroke-width:1.3}' +
     '.fig .fe{stroke:currentColor;stroke-width:1.5}.fig .fm{stroke:currentColor;stroke-width:2.6}' +
@@ -1049,10 +1061,12 @@ const FIG = (() => {
       const [p, q] = [boxes[i].b, boxes[j].b], ox = Math.min(p.r, q.r) - Math.max(p.l, q.l), oy = Math.min(p.b, q.b) - Math.max(p.t, q.t);
       if (ox > 2 && oy > 2) bad.push('has labels that run into each other: ' + boxes[i].wd.text + ' and ' + boxes[j].wd.text + '. Move one with pos or labelAt');
     }
-    /* a word on a curve: any piece of a curve that crosses the word's box, with a pixel round it for its halo */
+    /* a word on a curve: any piece of a curve that crosses the word's box, with a pixel round it for its halo. A curve is
+       drawn only inside the axes (clipped), so only that part counts: a label in the margin where a curve runs off the
+       top is clear of it. */
     for (const {wd, b} of boxes) {
-      const r = {l: b.l, t: b.t, r: b.r, b: b.b};
-      const hit = (lines || []).some(pts => pts.some((q, i) => i && segBox(pts[i - 1], q, r)));
+      const r = {l: Math.max(b.l, L.left), t: Math.max(b.t, L.top), r: Math.min(b.r, L.left + L.pw), b: Math.min(b.b, L.top + L.ph)};
+      const hit = r.l < r.r && r.t < r.b && (lines || []).some(pts => pts.some((q, i) => i && segBox(pts[i - 1], q, r)));
       if (hit) bad.push((wd.cls === 'fn' ? 'has the axis number ' : 'has the label ') + wd.text + ' on a curve. Move it with pos or labelAt, ' + (wd.cls === 'fn' ? 'change the axes or the step, or use nums: false' : 'or move the curve'));
     }
     return bad;

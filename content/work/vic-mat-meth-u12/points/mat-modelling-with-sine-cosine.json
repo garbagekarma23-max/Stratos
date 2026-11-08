@@ -32,7 +32,8 @@
   "2026-11-08T08:49:02Z pictures: 1 picture waiting for the check",
   "2026-11-08T09:04:33Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The label \"mean 3 m\" starts at the left edge of the plot, so its first letter sits on the y-axis line; move it further right along the mean line (for example near x = 20 or 21, below the line) so it is clear of the axis.; The label \"depth\" ends right against the rising curve near x = 13.5 in both light and dark, so it reads as touching the line; give it more room from the curve.",
   "2026-11-08T09:20:34Z pictures: 1 picture waiting for the check",
-  "2026-11-08T09:24:13Z pictures: 1 picture kept"
+  "2026-11-08T09:24:13Z pictures: 1 picture kept",
+  "2026-11-08T12:38:45Z pictures: the graph at card 4 now draws d from the real expression (fn), not a curve through worked-out points; it draws within 0.1 px of before"
  ],
  "sent": {
   "match": 1,
@@ -348,207 +349,13 @@
     "grid": true,
     "items": [
      {
-      "type": "curve",
+      "type": "fn",
       "id": "d",
-      "points": [
-       [
-        0,
-        3
-       ],
-       [
-        0.5,
-        3.5176
-       ],
-       [
-        1,
-        4
-       ],
-       [
-        1.5,
-        4.4142
-       ],
-       [
-        2,
-        4.7321
-       ],
-       [
-        2.5,
-        4.9319
-       ],
-       [
-        3,
-        5
-       ],
-       [
-        3.5,
-        4.9319
-       ],
-       [
-        4,
-        4.7321
-       ],
-       [
-        4.5,
-        4.4142
-       ],
-       [
-        5,
-        4
-       ],
-       [
-        5.5,
-        3.5176
-       ],
-       [
-        6,
-        3
-       ],
-       [
-        6.5,
-        2.4824
-       ],
-       [
-        7,
-        2
-       ],
-       [
-        7.5,
-        1.5858
-       ],
-       [
-        8,
-        1.2679
-       ],
-       [
-        8.5,
-        1.0681
-       ],
-       [
-        9,
-        1
-       ],
-       [
-        9.5,
-        1.0681
-       ],
-       [
-        10,
-        1.2679
-       ],
-       [
-        10.5,
-        1.5858
-       ],
-       [
-        11,
-        2
-       ],
-       [
-        11.5,
-        2.4824
-       ],
-       [
-        12,
-        3
-       ],
-       [
-        12.5,
-        3.5176
-       ],
-       [
-        13,
-        4
-       ],
-       [
-        13.5,
-        4.4142
-       ],
-       [
-        14,
-        4.7321
-       ],
-       [
-        14.5,
-        4.9319
-       ],
-       [
-        15,
-        5
-       ],
-       [
-        15.5,
-        4.9319
-       ],
-       [
-        16,
-        4.7321
-       ],
-       [
-        16.5,
-        4.4142
-       ],
-       [
-        17,
-        4
-       ],
-       [
-        17.5,
-        3.5176
-       ],
-       [
-        18,
-        3
-       ],
-       [
-        18.5,
-        2.4824
-       ],
-       [
-        19,
-        2
-       ],
-       [
-        19.5,
-        1.5858
-       ],
-       [
-        20,
-        1.2679
-       ],
-       [
-        20.5,
-        1.0681
-       ],
-       [
-        21,
-        1
-       ],
-       [
-        21.5,
-        1.0681
-       ],
-       [
-        22,
-        1.2679
-       ],
-       [
-        22.5,
-        1.5858
-       ],
-       [
-        23,
-        2
-       ],
-       [
-        23.5,
-        2.4824
-       ],
-       [
-        24,
-        3
-       ]
+      "expr": "2\\sin\\left(\\frac{\\pi x}{6}\\right) + 3",
+      "domain": [
+       0,
+       24
       ],
-      "smooth": true,
       "label": "depth",
       "labelAt": 13.5,
       "pos": "left"
@@ -1235,6 +1042,275 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-08T09:24:13Z"
+  },
+  {
+   "status": "curves to fn",
+   "at": "card 4",
+   "figure": {
+    "kind": "graph",
+    "alt": "The depth of a tide against time over 24 hours. The depth goes between a low of 1 m and a high of 5 m. The mean, 3 m, is the dotted middle line, halfway between them. One full cycle takes 12 hours.",
+    "x": {
+     "min": 0,
+     "max": 24,
+     "label": "Time (h)",
+     "step": 3
+    },
+    "y": {
+     "min": 0,
+     "max": 6,
+     "label": "Depth (m)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        0,
+        3
+       ],
+       [
+        0.5,
+        3.5176
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        1.5,
+        4.4142
+       ],
+       [
+        2,
+        4.7321
+       ],
+       [
+        2.5,
+        4.9319
+       ],
+       [
+        3,
+        5
+       ],
+       [
+        3.5,
+        4.9319
+       ],
+       [
+        4,
+        4.7321
+       ],
+       [
+        4.5,
+        4.4142
+       ],
+       [
+        5,
+        4
+       ],
+       [
+        5.5,
+        3.5176
+       ],
+       [
+        6,
+        3
+       ],
+       [
+        6.5,
+        2.4824
+       ],
+       [
+        7,
+        2
+       ],
+       [
+        7.5,
+        1.5858
+       ],
+       [
+        8,
+        1.2679
+       ],
+       [
+        8.5,
+        1.0681
+       ],
+       [
+        9,
+        1
+       ],
+       [
+        9.5,
+        1.0681
+       ],
+       [
+        10,
+        1.2679
+       ],
+       [
+        10.5,
+        1.5858
+       ],
+       [
+        11,
+        2
+       ],
+       [
+        11.5,
+        2.4824
+       ],
+       [
+        12,
+        3
+       ],
+       [
+        12.5,
+        3.5176
+       ],
+       [
+        13,
+        4
+       ],
+       [
+        13.5,
+        4.4142
+       ],
+       [
+        14,
+        4.7321
+       ],
+       [
+        14.5,
+        4.9319
+       ],
+       [
+        15,
+        5
+       ],
+       [
+        15.5,
+        4.9319
+       ],
+       [
+        16,
+        4.7321
+       ],
+       [
+        16.5,
+        4.4142
+       ],
+       [
+        17,
+        4
+       ],
+       [
+        17.5,
+        3.5176
+       ],
+       [
+        18,
+        3
+       ],
+       [
+        18.5,
+        2.4824
+       ],
+       [
+        19,
+        2
+       ],
+       [
+        19.5,
+        1.5858
+       ],
+       [
+        20,
+        1.2679
+       ],
+       [
+        20.5,
+        1.0681
+       ],
+       [
+        21,
+        1
+       ],
+       [
+        21.5,
+        1.0681
+       ],
+       [
+        22,
+        1.2679
+       ],
+       [
+        22.5,
+        1.5858
+       ],
+       [
+        23,
+        2
+       ],
+       [
+        23.5,
+        2.4824
+       ],
+       [
+        24,
+        3
+       ]
+      ],
+      "smooth": true,
+      "label": "depth",
+      "labelAt": 13.5,
+      "pos": "left"
+     },
+     {
+      "type": "fn",
+      "id": "m",
+      "expr": "3",
+      "label": "mean 3 m",
+      "labelAt": 21,
+      "pos": "above",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       5
+      ],
+      "label": "high 5 m",
+      "pos": "above-right",
+      "on": [
+       "d"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       9,
+       1
+      ],
+      "label": "low 1 m",
+      "pos": "below",
+      "on": [
+       "d"
+      ],
+      "is": "turning point"
+     }
+    ]
+   },
+   "curves": [
+    "d"
+   ],
+   "by": "claude-code",
+   "at_time": "2026-11-08T12:38:45Z"
   }
  ]
 }

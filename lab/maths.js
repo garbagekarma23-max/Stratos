@@ -15,6 +15,10 @@ const LabMaths = (() => {
     frac: 'frac', dfrac: 'frac', tfrac: 'frac', cfrac: 'frac', sqrt: 'sqrt',
     placeholder: 'ph', lparen: '(', rparen: ')', lbrack: '[', rbrack: ']', lvert: 'abs', rvert: 'abs', vert: 'abs'
   };
+  /* Only for a graph's function (func, below): the functions a point's maths may hold, read in radians. The Lab's own
+     lines never get these, so its checker and calculator read a line exactly as before. */
+  const FN = {sin: 'sin', cos: 'cos', tan: 'tan', arcsin: 'asin', arccos: 'acos', arctan: 'atan', exp: 'exp', ln: 'ln', log: 'log'};
+  const TRIG = new Set(['sin', 'cos', 'tan']);
   const SPACE = new Set([';', ',', '!', ':', '>', ' ', 'quad', 'qquad', 'enspace', 'thinspace', 'medspace', 'thickspace', 'displaystyle', 'textstyle']);
   const WORD = new Set(['mathrm', 'text', 'textrm', 'operatorname', 'mathit', 'textit']);
   const SIGN = {'|': 'abs', '+': '+', '-': '-', '−': '-', '*': 'times', '×': 'times', '·': 'times', '/': 'div', '÷': 'div', '±': 'pm', '=': 'eq', '(': '(', ')': ')', '[': '[', ']': ']', '{': '{', '}': '}', '^': '^'};
@@ -23,7 +27,7 @@ const LabMaths = (() => {
 
   /* Each token has a type (t), sometimes a value (v), and where it starts and ends in the text (a, b).
      Digits come out one at a time, because \frac12 means 1 over 2. The reader joins them back into numbers. */
-  function tokens(src) {
+  function tokens(src, graph) {
     const out = [];
     let i = 0;
     while (i < src.length) {
@@ -61,6 +65,8 @@ const LabMaths = (() => {
           else throw new Stop('sign');
           continue;
         }
+        if (graph && FN[name]) { out.push({t: 'fn', v: FN[name], a: a, b: i}); continue; }
+        if (graph && name === 'pi') { out.push({t: 'c', v: Math.PI, a: a, b: i}); continue; }
         const t = CMD[name];
         if (!t) throw new Stop('sign');
         if (t === 'ph') {             /* \placeholder{} is an empty box */
@@ -74,6 +80,8 @@ const LabMaths = (() => {
       }
       if (/[0-9.]/.test(c)) { out.push({t: 'd', v: c, a: a, b: i + 1}); i++; continue; }
       if (c === 'x') { out.push({t: 'x', a: a, b: i + 1}); i++; continue; }
+      if (graph && c === 'e') { out.push({t: 'c', v: Math.E, a: a, b: i + 1}); i++; continue; }      /* e, as in e^{x} */
+      if (graph && c === '_') { out.push({t: '_', a: a, b: i + 1}); i++; continue; }                 /* the base in \log_{2} */
       if (/[a-zA-Z]/.test(c)) throw new Stop('letter');
       if (c === '▢' || c === '⬚') { out.push({t: 'ph', a: a, b: i + 1}); i++; continue; }
       const s = SIGN[c];
@@ -86,14 +94,26 @@ const LabMaths = (() => {
 
   /* ---------- the tree ----------
      Kinds of node: n (a number), x, add, sub, mul, div, neg, pow, root, abs (|x|, for the graphs in a point's figures),
-     pm (plus or minus).
+     pm (plus or minus). Only in a graph's function: c (e or pi) and fn (sin, cos, tan, their inverses, exp, ln and log,
+     with base for \log_{b}).
      A pm node has a number (k) so the checker can try it as + and as -. */
   function reader(toks) {
     let i = 0, pmCount = 0, inAbs = 0;
     const peek = () => toks[i], take = () => toks[i++];
     const want = t => { const k = take(); if (!k) throw new Stop('unfinished'); if (k.t !== t) throw new Stop(k.t === 'ph' ? 'unfinished' : 'unfinished'); return k; };
     /* A bar starts |x| only outside another pair of bars: inside, the next bar is the closing one. */
-    const startsAtom = k => !!k && (k.t === 'd' || k.t === 'x' || k.t === '(' || k.t === '[' || k.t === '{' || k.t === 'frac' || k.t === 'sqrt' || k.t === 'ph' || (k.t === 'abs' && !inAbs));
+    const startsAtom = k => !!k && (k.t === 'd' || k.t === 'x' || k.t === '(' || k.t === '[' || k.t === '{' || k.t === 'frac' || k.t === 'sqrt' || k.t === 'ph' || k.t === 'c' || k.t === 'fn' || (k.t === 'abs' && !inAbs));
+    const minusOne = n => n.t === 'neg' && n.a.t === 'n' && n.a.v === 1;
+    /* What a function such as \sin works on: a bracket, as in \sin(2x), or else the run of factors after it, as in
+       \sin 2x or \ln x^{2}, up to a sign, a bracket or another function. So \sin x \cos x is sin(x) times cos(x). */
+    function fnArg() {
+      const k = peek();
+      if (!k) throw new Stop('unfinished');
+      if (k.t === '(' || k.t === '[') return atom();
+      let a = power();
+      while (peek() && startsAtom(peek()) && peek().t !== 'fn' && peek().t !== '(' && peek().t !== '[') a = {t: 'mul', a: a, b: power(), implied: true};
+      return a;
+    }
     function expr() {
       let left = term();
       for (;;) {
@@ -149,6 +169,16 @@ const LabMaths = (() => {
         return {t: 'n', v: parseFloat(s), s: s};
       }
       if (k.t === 'x') return {t: 'x'};
+      if (k.t === 'c') return {t: 'c', v: k.v};
+      if (k.t === 'fn') {
+        /* \log_{2} x has a base. \sin^{2} x is (sin x) squared, and \sin^{-1} x is arcsin x. */
+        let f = k.v, base = null, pw = null;
+        if (peek() && peek().t === '_') { if (f !== 'log') throw new Stop('sign'); take(); base = arg(); }
+        if (peek() && peek().t === '^') { take(); pw = arg(); }
+        if (pw && minusOne(pw)) { if (!TRIG.has(f)) throw new Stop('sign'); f = 'a' + f; pw = null; }
+        const node = {t: 'fn', f: f, a: fnArg(), base: base};
+        return pw ? {t: 'pow', a: node, b: pw} : node;
+      }
       if (k.t === 'ph') throw new Stop('unfinished');
       if (k.t === '(' || k.t === '[' || k.t === '{') {
         const close = k.t === '(' ? ')' : k.t === '[' ? ']' : '}';
@@ -180,9 +210,9 @@ const LabMaths = (() => {
 
   /* Read a whole line. A line is one or more parts joined by "or". Each part is sides joined by = signs.
      Returns {parts: [{sides, pms}], hasEq, hasX, eqAt} or {stop: reason}. */
-  function read(latex) {
+  function read(latex, graph) {
     let toks;
-    try { toks = tokens(String(latex || '')); } catch (e) { if (e instanceof Stop) return {stop: e.why}; throw e; }
+    try { toks = tokens(String(latex || ''), graph); } catch (e) { if (e instanceof Stop) return {stop: e.why}; throw e; }
     if (!toks.length) return {stop: 'empty'};
     /* An empty box anywhere (from the fraction, root, power or square keys) is named on its own. Some boxes are
        small and easy to miss, such as an empty power left after 49, which makes a line look finished when it is not. */
@@ -210,7 +240,28 @@ const LabMaths = (() => {
   function value(n, x, signs) {
     switch (n.t) {
       case 'n': return n.v;
+      case 'c': return n.v;
       case 'x': return x;
+      case 'fn': {
+        const a = value(n.a, x, signs);
+        switch (n.f) {
+          case 'sin': return Math.sin(a);
+          case 'cos': return Math.cos(a);
+          case 'tan': { const c = Math.cos(a); return Math.abs(c) < 1e-12 ? NaN : Math.sin(a) / c; }
+          case 'asin': return a < -1 || a > 1 ? NaN : Math.asin(a);
+          case 'acos': return a < -1 || a > 1 ? NaN : Math.acos(a);
+          case 'atan': return Math.atan(a);
+          case 'exp': return Math.exp(a);
+          case 'ln': return a > 0 ? Math.log(a) : NaN;
+          case 'log': {
+            if (!(a > 0)) return NaN;
+            if (!n.base) return Math.log10(a);
+            const b = value(n.base, x, signs);
+            return b > 0 && b !== 1 ? Math.log(a) / Math.log(b) : NaN;
+          }
+        }
+        return NaN;
+      }
       case 'br': return value(n.a, x, signs);
       case 'add': return value(n.a, x, signs) + value(n.b, x, signs);
       case 'sub': return value(n.a, x, signs) - value(n.b, x, signs);
@@ -540,9 +591,11 @@ const LabMaths = (() => {
 
   /* A function of x from a piece of LaTeX with no = sign, such as x^{2} - 6x + 5 or \frac{1}{x - 2}, for a graph in a
      point's figure (src/06-figure.js). Returns a function that gives y for any x (NaN where it has no value), or null
-     when the LaTeX is not a single expression this reader knows. Nothing is run as code. */
+     when the LaTeX is not a single expression this reader knows. Nothing is run as code. Here, and only here, it also
+     reads e, \pi, \sin, \cos, \tan, their inverses (\arcsin or \sin^{-1}), e^{...}, \exp, \ln, \log (base 10) and
+     \log_{b}, in radians. */
   function func(latex) {
-    const line = read(latex);
+    const line = read(latex, true);
     if (line.stop || line.parts.length !== 1 || line.parts[0].sides.length !== 1 || line.parts[0].pms) return null;
     const tree = line.parts[0].sides[0];
     return x => value(tree, x, []);

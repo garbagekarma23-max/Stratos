@@ -83,6 +83,29 @@ check(!FIG.problems(circle).length && has(bad(g => { g.items[1].at = [3, 2]; }, 
 check(LabMaths.func('2|x - 1| + 3')(4) === 9 && LabMaths.func('\\left|x\\right|')(-3) === 3 && LabMaths.func('\\frac{6}{x}')(2) === 3 &&
   LabMaths.func('y = x') === null && LabMaths.func('alert(1)') === null && !/\beval\(|new Function/.test(src('src/06-figure.js')),
   'functions are read by the Maths Lab\'s reader (with |x| now), never run as code', R);
+{
+  const wave = {kind: 'graph', alt: 'The graph of y = sin x from 0 to 2 pi, with its maximum at pi/2.', x: {min: 0, max: 6.5, step: 1, nums: false}, y: {min: -1.5, max: 1.5, step: 1},
+    items: [{type: 'fn', id: 'f', expr: '\\sin x', domain: [0, 6.3]}, {type: 'point', at: [Math.PI / 2, 1], on: ['f'], is: 'turning point'}]};
+  const grow = {kind: 'graph', alt: 'The graphs of y = e^x and y = ln x.', equal: true, x: {min: -3, max: 4, step: 2}, y: {min: -3, max: 4, step: 2},
+    items: [{type: 'fn', id: 'e', expr: 'e^{x}', domain: [-3, 1.35], label: '\\(y = e^{x}\\)', labelAt: 1.2, pos: 'left'},
+      {type: 'fn', id: 'l', expr: '\\ln x', domain: [0.05, 4], label: '\\(y = \\ln x\\)', labelAt: 3, pos: 'below-right'},
+      {type: 'point', at: [0, 1], on: ['e'], is: 'y-intercept'}, {type: 'point', at: [1, 0], on: ['l'], is: 'x-intercept'}]};
+  check(!FIG.problems(wave).length && !FIG.problems(grow).length &&
+    has(bad(g => { g.items[1].at = [Math.PI / 2, 0.8]; }, wave), 'is said to be on f') && has(bad(g => { g.items[3].at = [1.5, 0]; }, grow), 'on l'),
+    'trig, exponential and log functions are read and checked: a point on them, an intercept, a turning point', R);
+}
+{
+  // A label is measured at its full drawn height: a fraction is about twice as tall as a word, so a fraction at an edge
+  // whose bottom (or top, or end) would be cut off is caught, where a word in the same place fits.
+  const edge = (label, at, pos) => FIG.problems({kind: 'graph', alt: 'A label near an edge.', x: {min: 1, max: 11, step: 1, nums: false}, y: {min: 1, max: 11, step: 1, nums: false},
+    items: [{type: 'text', at, label, pos}]}).some(m => m.includes('does not fit'));
+  const frac = '\\(\\frac{5\\pi}{6}\\)';
+  check(edge(frac, [6, 1.6], 'below') && !edge('6 m', [6, 1.6], 'below'), 'a fraction cut off at the bottom edge is caught, and a word in its place fits', R);
+  check(edge(frac, [6, 10.4], 'above') && !edge('6 m', [6, 10.4], 'above'), 'a fraction cut off at the top edge is caught, and a word in its place fits', R);
+  check(edge(frac, [1.2, 6], 'left') && !edge(frac, [1.8, 6], 'left') && edge(frac, [10.8, 6], 'right') && !edge(frac, [10.2, 6], 'right'),
+    'a fraction cut off at the left or right edge is caught, and one a little further in fits', R);
+  check(edge('\\(\\int_{0}^{1} f(x)\\)', [6, 10], 'above') && !edge('\\(x^{2}\\)', [6, 10], 'above'), 'an integral with limits is measured taller too', R);
+}
 
 // ---------- check_content.mjs --json ----------
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'stratos-figures-'));
@@ -211,6 +234,8 @@ for (const scheme of ['light', 'dark']) {
       check(info.length === 4 && info.every(f => f.opt && !f.out && f.w >= 120), 'its four graphs fit their buttons at 360 px, every label inside (' + scheme + ')', R);
       const drawn = await s.locator('.fig .fl math-span').evaluateAll(els => els.length && els.every(e => !!e.shadowRoot && getComputedStyle(e).visibility === 'visible'));
       check(drawn, 'the roots on each graph are drawn as maths (' + scheme + ')', R);
+      const clear = await s.locator('.fig .fl math-span').evaluateAll(els => els.every(e => { const c = getComputedStyle(e); return c.overflowX === 'visible' && c.overflowY === 'visible'; }));
+      check(clear, 'maths in a graph\'s label never scrolls or clips, so the bottom of a fraction shows (' + scheme + ')', R);
       if (SHOTS) { await p.setViewportSize({width: 390, height: 844}); await p.waitForTimeout(300); await shot(p, 'fig-maths-' + scheme); await p.setViewportSize({width: 360, height: 760}); }
       const texts = await s.locator('.opt .txt').allTextContents();
       const k = await pick(p, '#feed', true);

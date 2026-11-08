@@ -67,6 +67,25 @@ for (const [line, ans, kind, sentence] of LINES) {
   check(r && r.kind === kind && (!sentence || r.say === sentence), 'line ' + line + ' for x = ' + ans.join(' or ') + ' is ' + kind + (sentence ? ': ' + sentence : '') + (r && (r.kind !== kind || (sentence && r.say !== sentence)) ? '  [got ' + r.kind + ': ' + r.say + ']' : ''));
 }
 check(M.checkLine('', [4]) === null, 'an empty line gives nothing');
+// A graph's function (func) also reads e, \pi, the trig functions and their inverses, exp, ln and log, in radians.
+// A line typed in the Lab never does: its checker and calculator read exactly as before.
+{
+  const near = (s, x, y) => { const f = M.func(s); return !!f && Math.abs(f(x) - y) < 1e-9; };
+  const FNS = [['\\sin x', Math.PI / 2, 1], ['\\sin(2x)', Math.PI / 4, 1], ['2\\sin\\left(x - \\frac{\\pi}{3}\\right) + 1', Math.PI / 3, 1],
+    ['\\cos 2x', 0, 1], ['\\tan x', Math.PI / 4, 1], ['\\sin^{-1} x', 1, Math.PI / 2], ['\\arcsin x', 0.5, Math.PI / 6],
+    ['\\cos^{-1} x', 0, Math.PI / 2], ['\\arccos x', 1, 0], ['\\tan^{-1}(x)', 1, Math.PI / 4], ['\\arctan x', 0, 0],
+    ['e^{x}', 1, Math.E], ['e^{-0.5x}', 2, Math.exp(-1)], ['\\exp(x)', 0, 1], ['\\ln x', Math.E, 1], ['\\ln(x + 1)', 0, 0],
+    ['\\log x', 100, 2], ['\\log_{2} x', 8, 3], ['\\log_{e} x', Math.E, 1], ['\\sqrt{x}', 9, 3], ['\\sin^{2} x + \\cos^{2} x', 0.7, 1],
+    ['x e^{-x}', 1, Math.exp(-1)], ['\\sin x \\cos x', Math.PI / 4, 0.5], ['\\frac{1}{1 + e^{-x}}', 0, 0.5], ['\\ln|x|', -Math.E, 1],
+    ['\\sin \\frac{\\pi x}{6}', 3, 1], ['\\ln x^{2}', Math.E, 2]];
+  for (const [s, x, y] of FNS) check(near(s, x, y), 'a graph reads ' + s + ' at x = ' + x.toFixed(3) + ' as ' + y.toFixed(3));
+  check(Number.isNaN(M.func('\\tan x')(Math.PI / 2)) && Number.isNaN(M.func('\\ln x')(-1)) && Number.isNaN(M.func('\\ln x')(0)) &&
+    Number.isNaN(M.func('\\arcsin x')(2)) && Number.isNaN(M.func('\\log_{2} x')(0)), 'a graph\'s function has no value where it is not defined');
+  check(M.func('e^{x} y') === null && M.func('\\sec x') === null && M.func('\\ln^{-1} x') === null && M.func('\\sin_{2} x') === null && M.func('alert(1)') === null,
+    'a graph\'s function refuses other letters and commands');
+  check(M.read('e^{x}=3').stop === 'letter' && M.read('x=\\sin 3').stop === 'sign' && M.read('x=\\pi').stop === 'sign' && M.calc('\\frac{1}{2}+\\frac{1}{3}').text === '5/6',
+    'a line typed in the Lab still reads e, \\sin and \\pi as before');
+}
 // Speed: the search must feel instant.
 {
   const t0 = performance.now();
