@@ -11,7 +11,10 @@
   "2026-11-01T08:24:33Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
   "2026-11-02T06:23:15Z review: approved with the fix (a spot check)",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:34Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:59Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:30Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -169,6 +172,86 @@
    "Repeat. Each step halves the interval, so the root is trapped in a smaller and smaller interval. You can stop when the interval is as small as the accuracy you need.",
    "Example: \\(f(x) = x^{2} - 5\\) has \\(f(2) = -1\\) and \\(f(3) = 4\\). The midpoint is 2.5 and \\(f(2.5) = 1.25\\), which is positive. So the root lies between 2 and 2.5."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2} - 5\\). At \\(x = 2\\) it is below the x-axis, at \\(-1\\). At the midpoint \\(x = 2.5\\) it is above, at 1.25, and at \\(x = 3\\) it is above, at 4. It crosses the x-axis between 2 and 2.5, so the root is in that half.",
+    "x": {
+     "min": 1.5,
+     "max": 3.5,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 5",
+      "label": "\\(y = x^{2} - 5\\)",
+      "labelAt": 1.9,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       -1
+      ],
+      "label": "\\(f(2) = -1\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       1.25
+      ],
+      "label": "\\(f(2.5) = 1.25\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       4
+      ],
+      "label": "\\(f(3) = 4\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.2361,
+       0
+      ],
+      "label": "root",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Halve the interval and keep the half where \\(f\\) changes sign. The root stays trapped inside.",
   "a": {
    "q": "\\(f(x) = x^{3} - 10\\) has \\(f(2) = -2\\) and \\(f(3) = 17\\). Which interval does the method keep after one bisection step?",
@@ -231,5 +314,110 @@
     "clue": "Square 2.5 first, then subtract 7."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The curve y = x^2 - 5 from card line 4 between x = 2 and x = 3, with f(2) = -1, f(2.5) = 1.25 and f(3) = 4 marked, and the root between 2 and 2.5 where the curve crosses the x-axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = x^{2} - 5\\). At \\(x = 2\\) it is below the x-axis, at \\(-1\\). At the midpoint \\(x = 2.5\\) it is above, at 1.25, and at \\(x = 3\\) it is above, at 4. It crosses the x-axis between 2 and 2.5, so the root is in that half.",
+     "x": {
+      "min": 1.5,
+      "max": 3.5,
+      "label": "\\(x\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": -2,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2} - 5",
+       "label": "\\(y = x^{2} - 5\\)",
+       "labelAt": 1.9,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -1
+       ],
+       "label": "\\(f(2) = -1\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2.5,
+        1.25
+       ],
+       "label": "\\(f(2.5) = 1.25\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        4
+       ],
+       "label": "\\(f(3) = 4\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2.2361,
+        0
+       ],
+       "label": "root",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:59Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:30Z"
+  }
+ ]
 }

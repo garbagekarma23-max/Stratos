@@ -8,7 +8,10 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:34Z pictures: the owner asked for a graph at card 3",
+  "2026-11-08T08:48:55Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:24Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -77,6 +80,76 @@
    "Worked example: for \\(f(x) = x^{2}\\), find the average rate of change from \\(x = 1\\) to \\(x = 3\\). \\(f(3) = 9\\) and \\(f(1) = 1\\), so the rate is \\(\\frac{9 - 1}{3 - 1} = \\frac{8}{2} = 4\\).",
    "The answer is an average over the whole interval. The curve can be steeper or flatter at points inside it. If \\(x\\) and \\(f(x)\\) have units, the rate is in units of \\(f\\) per unit of \\(x\\)."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2}\\) and the secant through \\((1, 1)\\) and \\((3, 9)\\) on it. The secant is a straight line with gradient \\(\\frac{9 - 1}{3 - 1} = 4\\), the average rate of change from \\(x = 1\\) to \\(x = 3\\).",
+    "x": {
+     "min": -1,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -2,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": -0.75,
+      "pos": "above-right"
+     },
+     {
+      "type": "fn",
+      "id": "s",
+      "expr": "4x - 3",
+      "domain": [
+       0.25,
+       3.5
+      ],
+      "label": "secant",
+      "labelAt": 0.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "label": "\\((1, 1)\\)",
+      "pos": "above-left",
+      "on": [
+       "f",
+       "s"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       9
+      ],
+      "label": "\\((3, 9)\\)",
+      "pos": "above-left",
+      "on": [
+       "f",
+       "s"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
   "remember": "Average rate of change is the change in \\(f\\) divided by the change in \\(x\\), which is the secant gradient.",
   "a": {
    "q": "For \\(f(x) = x^{2} + 2x\\), what is the average rate of change from \\(x = 1\\) to \\(x = 4\\)?",
@@ -139,5 +212,100 @@
     "clue": "Find both heights, then divide by the time taken."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The worked example on card line 3: y = x^2 with the secant through (1, 1) and (3, 9), labelled secant, whose gradient is 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = x^{2}\\) and the secant through \\((1, 1)\\) and \\((3, 9)\\) on it. The secant is a straight line with gradient \\(\\frac{9 - 1}{3 - 1} = 4\\), the average rate of change from \\(x = 1\\) to \\(x = 3\\).",
+     "x": {
+      "min": -1,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -2,
+      "max": 12,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": -0.75,
+       "pos": "above-right"
+      },
+      {
+       "type": "fn",
+       "id": "s",
+       "expr": "4x - 3",
+       "domain": [
+        0.25,
+        3.5
+       ],
+       "label": "secant",
+       "labelAt": 0.5,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        1
+       ],
+       "label": "\\((1, 1)\\)",
+       "pos": "above-left",
+       "on": [
+        "f",
+        "s"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        9
+       ],
+       "label": "\\((3, 9)\\)",
+       "pos": "above-left",
+       "on": [
+        "f",
+        "s"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:55Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:24Z"
+  }
+ ]
 }

@@ -3339,7 +3339,7 @@ def cc_lines(recs):
 
 # ---------- pictures: diagrams and images, added by Claude Code ----------
 # The API writer can draw graphs and charts as data, but it cannot draw a diagram or find a photo. So it marks where a
-# picture would help, as a want on the point: where it goes, the kind (diagram or image, or a chart it could not write),
+# picture would help, as a want on the point: where it goes, the kind (diagram or image, or a chart or graph it could not write),
 # what it shows and why it helps. The owner can add a want too (want-picture). Then, with no API calls:
 #   cc-picture export|import         a Claude Code session draws each diagram as SVG, finds each image on Wikimedia
 #                                    Commons (only an allowed licence), or writes each chart, saves the files in
@@ -3352,7 +3352,7 @@ def cc_lines(recs):
 #                                    comes back with what was wrong, for one more try, then for the owner.
 # Only cleared points get pictures, so the picture is checked against text that will not change. publish writes the
 # point with its pictures, and leaves its wants out of the bank.
-PICTURE_KINDS = ('diagram', 'image', 'chart')
+PICTURE_KINDS = ('diagram', 'image', 'chart', 'graph')
 PICTURE_TRIES = 2                 # a want whose picture the check turns down this many times goes to the owner
 ANY_OBJ = {'type': 'object'}      # any JSON object: the content check holds a figure to the format
 PICTURE_SCHEMA = obj({'pictures': {'type': 'array', 'items': obj({
@@ -3370,7 +3370,7 @@ def want_problems(wants, p):
     out = []
     for n, w in enumerate(wants, 1):
         if not isinstance(w, dict): out.append('want ' + str(n) + ' is not an object'); continue
-        if w.get('kind') not in PICTURE_KINDS: out.append('want ' + str(n) + ' needs kind: diagram, image or chart')
+        if w.get('kind') not in PICTURE_KINDS: out.append('want ' + str(n) + ' needs kind: diagram, image, chart or graph')
         if not picture_place(w.get('at'), p): out.append('want ' + str(n) + ' has at ' + json.dumps(w.get('at')) + ', which this point does not have. Use card 1 to card ' + str(len(p['card'])) + ', a, b, a options or b options')
         if len(str(w.get('brief') or '').split()) < 5: out.append('want ' + str(n) + ' needs a brief: what the picture shows, with every label')
     return out
@@ -3519,12 +3519,12 @@ def cc_picture_export(args, repo):
         else:
             new = rec['pictures_waiting']
             srcs = [s for x in new for s in pic_srcs(x['figures'])]
-            # Charts are drawn too, from their data, so the checker sees what a student sees.
+            # Charts and graphs are drawn too, from their data, so the checker sees what a student sees.
             charts = {}
             for x in new:
                 for i, f in enumerate(x['figures'], 1):
-                    if f.get('kind') == 'chart':
-                        path = os.path.join(here, rec['id'], 'chart-' + str(x['want']) + '-' + str(i) + '.json')
+                    if f.get('kind') in ('chart', 'graph'):
+                        path = os.path.join(here, rec['id'], f['kind'] + '-' + str(x['want']) + '-' + str(i) + '.json')
                         write_json(path, f); charts[id(f)] = os.path.relpath(path, repo)
             pngs = render_diagrams(srcs + list(charts.values()), os.path.join(here, rec['id']), repo)
             recs = pic_records(repo)

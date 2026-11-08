@@ -8,7 +8,10 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T08:48:38Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:54Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:23Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -77,6 +80,89 @@
    "The number of intersection points is the number of solutions. Two crossing points mean two solutions, one touching point means one, and no meeting means none.",
    "Example: \\(y = x^{2}\\) and \\(y = 4\\) meet at \\((-2, 4)\\) and \\((2, 4)\\). So \\(x^{2} = 4\\) has two solutions, \\(x = -2\\) and \\(x = 2\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2}\\) and the line \\(y = 4\\). They meet at \\((-2, 4)\\) and \\((2, 4)\\). Dashed lines down to the x-axis show the solutions of \\(x^{2} = 4\\): \\(x = -2\\) and \\(x = 2\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2.5,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "4",
+      "label": "\\(y = 4\\)",
+      "labelAt": -3.6,
+      "pos": "below"
+     },
+     {
+      "type": "guide",
+      "at": [
+       -2,
+       4
+      ],
+      "xLabel": "\\(-2\\)"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       4
+      ],
+      "xLabel": "\\(2\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       4
+      ],
+      "label": "\\((-2, 4)\\)",
+      "pos": "above-right",
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       4
+      ],
+      "label": "\\((2, 4)\\)",
+      "pos": "below-right",
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
   "remember": "Solutions of \\(f(x) = g(x)\\) are the \\(x\\) values where the graphs meet, one for each meeting point.",
   "a": {
    "q": "The graphs of \\(y = f(x)\\) and \\(y = g(x)\\) meet at \\((1, 5)\\) and \\((3, 5)\\). What are the solutions of \\(f(x) = g(x)\\)?",
@@ -139,5 +225,113 @@
     "clue": "Compare the height of the line with the lowest point of the parabola."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = x^2 and the line y = 4 meeting at (-2, 4) and (2, 4), with the solutions x = -2 and x = 2 shown on the x-axis by guides.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = x^{2}\\) and the line \\(y = 4\\). They meet at \\((-2, 4)\\) and \\((2, 4)\\). Dashed lines down to the x-axis show the solutions of \\(x^{2} = 4\\): \\(x = -2\\) and \\(x = 2\\).",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 7,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": 2.5,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "4",
+       "label": "\\(y = 4\\)",
+       "labelAt": -3.6,
+       "pos": "below"
+      },
+      {
+       "type": "guide",
+       "at": [
+        -2,
+        4
+       ],
+       "xLabel": "\\(-2\\)"
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        4
+       ],
+       "xLabel": "\\(2\\)"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        4
+       ],
+       "label": "\\((-2, 4)\\)",
+       "pos": "above-right",
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "label": "\\((2, 4)\\)",
+       "pos": "below-right",
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:54Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:23Z"
+  }
+ ]
 }

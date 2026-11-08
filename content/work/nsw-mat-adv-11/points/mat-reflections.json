@@ -8,7 +8,10 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:05Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T08:48:38Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:54Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:23Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -89,6 +92,90 @@
    ],
    "Example: the point \\((2, 5)\\) is on \\(y = f(x)\\). Then \\((2, -5)\\) is on \\(y = -f(x)\\), and \\((-2, 5)\\) is on \\(y = f(-x)\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A curve \\(y = f(x)\\), dashed, through \\((2, 5)\\). Its reflection in the x-axis, \\(y = -f(x)\\), passes through \\((2, -5)\\). Its reflection in the y-axis, \\(y = f(-x)\\), passes through \\((-2, 5)\\).",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -8,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x} + 1",
+      "label": "\\(y = f(x)\\)",
+      "labelAt": -2.7,
+      "pos": "above-right",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "-2^{x} - 1",
+      "label": "\\(y = -f(x)\\)",
+      "labelAt": -2,
+      "pos": "below"
+     },
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "2^{-x} + 1",
+      "label": "\\(y = f(-x)\\)",
+      "labelAt": -2.7,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       5
+      ],
+      "label": "\\((2, 5)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       -5
+      ],
+      "label": "\\((2, -5)\\)",
+      "pos": "above-right",
+      "on": [
+       "g"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       5
+      ],
+      "label": "\\((-2, 5)\\)",
+      "pos": "above-right",
+      "on": [
+       "h"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "A minus outside \\(f\\) flips up and down. A minus inside \\(f\\) flips left and right.",
   "a": {
    "q": "The point \\((3, 4)\\) is on \\(y = f(x)\\). Which point must be on \\(y = -f(x)\\)?",
@@ -157,5 +244,114 @@
     "clue": "The minus is inside the brackets, so it acts on x."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: a curve y = f(x) through (2, 5), dashed, its reflection y = -f(x) in the x-axis through (2, -5) and its reflection y = f(-x) in the y-axis through (-2, 5), each curve and point labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A curve \\(y = f(x)\\), dashed, through \\((2, 5)\\). Its reflection in the x-axis, \\(y = -f(x)\\), passes through \\((2, -5)\\). Its reflection in the y-axis, \\(y = f(-x)\\), passes through \\((-2, 5)\\).",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -8,
+      "max": 8,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2^{x} + 1",
+       "label": "\\(y = f(x)\\)",
+       "labelAt": -2.7,
+       "pos": "above-right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "-2^{x} - 1",
+       "label": "\\(y = -f(x)\\)",
+       "labelAt": -2,
+       "pos": "below"
+      },
+      {
+       "type": "fn",
+       "id": "h",
+       "expr": "2^{-x} + 1",
+       "label": "\\(y = f(-x)\\)",
+       "labelAt": -2.7,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        5
+       ],
+       "label": "\\((2, 5)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -5
+       ],
+       "label": "\\((2, -5)\\)",
+       "pos": "above-right",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        5
+       ],
+       "label": "\\((-2, 5)\\)",
+       "pos": "above-right",
+       "on": [
+        "h"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:22Z"
+  }
+ ]
 }

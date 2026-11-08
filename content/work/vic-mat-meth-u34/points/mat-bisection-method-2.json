@@ -15,7 +15,10 @@
   "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:47Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:40Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:49:05Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:37Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -94,6 +97,83 @@
    "Find the midpoint \\(m\\). Keep the half of the interval where the signs still differ, and repeat. Each step halves the interval, so the answer can be found to any accuracy.",
    "Example: \\(f(x) = x^{2} - 2\\) has \\(f(1) = -1\\) and \\(f(2) = 2\\). The midpoint is 1.5 and \\(f(1.5) = 0.25\\), which is positive. The solution lies in \\([1, 1.5]\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2} - 2\\). At \\(x = 1\\) it is below the x-axis, at \\(-1\\). At the midpoint \\(x = 1.5\\) it is just above, at 0.25, and at \\(x = 2\\) it is above, at 2. It crosses the x-axis between 1 and 1.5, so the solution is in \\([1, 1.5]\\).",
+    "x": {
+     "min": 0.75,
+     "max": 2.25,
+     "label": "\\(x\\)",
+     "step": 0.5
+    },
+    "y": {
+     "min": -1.5,
+     "max": 2.5,
+     "label": "\\(y\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 2",
+      "label": "\\(y = x^{2} - 2\\)",
+      "labelAt": 0.82,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       -1
+      ],
+      "label": "\\(f(1) = -1\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       0.25
+      ],
+      "label": "\\(f(1.5) = 0.25\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       2
+      ],
+      "label": "\\(f(2) = 2\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.4142,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Bisection: check for a sign change, halve the interval, and keep the half with the sign change.",
   "a": {
    "q": "For \\(f(x) = x^{3} - 5\\), \\(f(1) = -4\\) and \\(f(2) = 3\\). Bisection is used on \\([1, 2]\\). Which interval holds the solution after one step?",
@@ -156,5 +236,107 @@
     "clue": "Take the midpoint of the current interval, then check the sign of f there."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = x^2 - 2 on [1, 2] with f(1) = -1, f(1.5) = 0.25 and f(2) = 2 marked, and the crossing of the x-axis between 1 and 1.5.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = x^{2} - 2\\). At \\(x = 1\\) it is below the x-axis, at \\(-1\\). At the midpoint \\(x = 1.5\\) it is just above, at 0.25, and at \\(x = 2\\) it is above, at 2. It crosses the x-axis between 1 and 1.5, so the solution is in \\([1, 1.5]\\).",
+     "x": {
+      "min": 0.75,
+      "max": 2.25,
+      "label": "\\(x\\)",
+      "step": 0.5
+     },
+     "y": {
+      "min": -1.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2} - 2",
+       "label": "\\(y = x^{2} - 2\\)",
+       "labelAt": 0.82,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        -1
+       ],
+       "label": "\\(f(1) = -1\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        0.25
+       ],
+       "label": "\\(f(1.5) = 0.25\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        2
+       ],
+       "label": "\\(f(2) = 2\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1.4142,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:04Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:37Z"
+  }
+ ]
 }

@@ -30,7 +30,11 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:07Z write: done",
   "2026-11-01T08:24:33Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:34Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:49:00Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:30Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The label y = x^2 is drawn in the top-left corner, just above where the solid curve's left branch leaves the graph and well away from the dashed curve (which leaves the top at about x = -2.45), so a student can read it as naming the solid curve; its labelAt of -2.73 puts it at y = 7.45, above the y-axis maximum of 6, so it should be moved to a point on the dashed curve inside the axes, for example on its right branch.; The y-axis runs through the y of the label y = (x + 1)^2 - 4, which starts right on the axis line; move it further right.; The arrow from (0, 0) to (-1, -4) runs into the O at the origin; move the O or leave it out.",
+  "2026-11-08T09:20:33Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -149,7 +153,22 @@
    ],
    "why": "Replacing \\(x\\) with \\(\\frac{x}{2}\\) stretches the graph by a factor of 2 from the y-axis, so \\(x\\) goes from 6 to 12. The negative sign outside reflects in the x-axis, so \\(y\\) goes from 4 to \\(-4\\). \\((3, -4)\\) is tempting, but it halves \\(x\\) instead of doubling it.",
    "clue": "Deal with \\(x\\) and \\(y\\) separately: one is stretched, one is reflected."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The example on card line 4: y = x^2 dashed and y = (x + 1)^2 - 4 solid, an arrow from (0, 0) to the new vertex (-1, -4), each curve labelled.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label y = x^2 is drawn in the top-left corner, just above where the solid curve's left branch leaves the graph and well away from the dashed curve (which leaves the top at about x = -2.45), so a student can read it as naming the solid curve; its labelAt of -2.73 puts it at y = 7.45, above the y-axis maximum of 6, so it should be moved to a point on the dashed curve inside the axes, for example on its right branch.",
+      "The y-axis runs through the y of the label y = (x + 1)^2 - 4, which starts right on the axis line; move it further right.",
+      "The arrow from (0, 0) to (-1, -4) runs into the O at the origin; move the O or leave it out."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -197,5 +216,327 @@
     "clue": "Deal with x and y separately: one is stretched, one is flipped."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = x^2 dashed and y = (x + 1)^2 - 4 solid, an arrow from (0, 0) to the new vertex (-1, -4), each curve labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = x^{2}\\), dashed, and \\(y = (x + 1)^{2} - 4\\), solid. An arrow shows the vertex moving 1 left and 4 down, from \\((0, 0)\\) to \\((-1, -4)\\).",
+     "x": {
+      "min": -4,
+      "max": 4.5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -5,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": -2.73,
+       "pos": "below-left",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "(x + 1)^{2} - 4",
+       "label": "\\(y = (x + 1)^{2} - 4\\)",
+       "labelAt": -0.17,
+       "pos": "below-right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        -1,
+        -4
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        -4
+       ],
+       "label": "\\((-1, -4)\\)",
+       "pos": "below",
+       "on": [
+        "g"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:59Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label y = x^2 is drawn in the top-left corner, just above where the solid curve's left branch leaves the graph and well away from the dashed curve (which leaves the top at about x = -2.45), so a student can read it as naming the solid curve; its labelAt of -2.73 puts it at y = 7.45, above the y-axis maximum of 6, so it should be moved to a point on the dashed curve inside the axes, for example on its right branch.",
+     "The y-axis runs through the y of the label y = (x + 1)^2 - 4, which starts right on the axis line; move it further right.",
+     "The arrow from (0, 0) to (-1, -4) runs into the O at the origin; move the O or leave it out."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:30Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Transformations of graphs",
+  "card": [
+   [
+    "Translation",
+    "\\(y = f(x - h) + k\\) moves the graph \\(h\\) units right and \\(k\\) units up. A minus inside the bracket moves the graph right."
+   ],
+   [
+    "Reflection",
+    "\\(y = -f(x)\\) reflects the graph in the x-axis. \\(y = f(-x)\\) reflects it in the y-axis."
+   ],
+   [
+    "Dilation",
+    "\\(y = af(x)\\) stretches the graph by a factor of \\(a\\) from the x-axis. \\(y = f\\left(\\frac{x}{b}\\right)\\) stretches it by a factor of \\(b\\) from the y-axis."
+   ],
+   "Each point \\((x, y)\\) moves in a set way. For example, \\(y = (x + 1)^{2} - 4\\) is \\(y = x^{2}\\) moved 1 left and 4 down, so its vertex is \\((-1, -4)\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2}\\), dashed, and \\(y = (x + 1)^{2} - 4\\), solid. An arrow shows the vertex moving 1 left and 4 down, from \\((0, 0)\\) to \\((-1, -4)\\).",
+    "x": {
+     "min": -4,
+     "max": 4.5,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -5,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": -2.2,
+      "pos": "right",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "(x + 1)^{2} - 4",
+      "label": "\\(y = (x + 1)^{2} - 4\\)",
+      "labelAt": 1.31,
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       -0.3,
+       -1.2
+      ],
+      "to": [
+       -0.92,
+       -3.68
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       -4
+      ],
+      "label": "\\((-1, -4)\\)",
+      "pos": "below-left",
+      "on": [
+       "g"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
+  },
+  "remember": "Outside the bracket changes \\(y\\). Inside the bracket changes \\(x\\), and in the opposite way to how it looks.",
+  "a": {
+   "q": "The graph of \\(y = x^{2}\\) is translated 3 units right and 2 units down. What is the new rule?",
+   "opts": [
+    "\\(y = (x - 3)^{2} - 2\\)",
+    "\\(y = (x + 3)^{2} - 2\\)",
+    "\\(y = (x - 3)^{2} + 2\\)",
+    "\\(y = (x + 3)^{2} + 2\\)"
+   ],
+   "why": "Moving right by 3 means \\(x\\) is replaced by \\((x - 3)\\), and moving down by 2 means subtracting 2. The option with \\((x + 3)\\) moves the graph left, which is the tempting mistake.",
+   "clue": "Right 3 puts a minus inside the bracket."
+  },
+  "b": {
+   "d": 3,
+   "q": "The point \\((6, 4)\\) lies on \\(y = f(x)\\). Which point lies on \\(y = -f\\left(\\frac{x}{2}\\right)\\)?",
+   "opts": [
+    "\\((12, -4)\\)",
+    "\\((3, -4)\\)",
+    "\\((-12, 4)\\)",
+    "\\((12, 4)\\)"
+   ],
+   "why": "Replacing \\(x\\) with \\(\\frac{x}{2}\\) stretches the graph by a factor of 2 from the y-axis, so \\(x\\) goes from 6 to 12. The negative sign outside reflects in the x-axis, so \\(y\\) goes from 4 to \\(-4\\). \\((3, -4)\\) is tempting, but it halves \\(x\\) instead of doubling it.",
+   "clue": "Deal with \\(x\\) and \\(y\\) separately: one is stretched, one is reflected."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The example on card line 4: y = x^2 dashed and y = (x + 1)^2 - 4 solid, an arrow from (0, 0) to the new vertex (-1, -4), each curve labelled.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label y = x^2 is drawn in the top-left corner, just above where the solid curve's left branch leaves the graph and well away from the dashed curve (which leaves the top at about x = -2.45), so a student can read it as naming the solid curve; its labelAt of -2.73 puts it at y = 7.45, above the y-axis maximum of 6, so it should be moved to a point on the dashed curve inside the axes, for example on its right branch.",
+      "The y-axis runs through the y of the label y = (x + 1)^2 - 4, which starts right on the axis line; move it further right.",
+      "The arrow from (0, 0) to (-1, -4) runs into the O at the origin; move the O or leave it out."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = x^2 dashed and y = (x + 1)^2 - 4 solid, an arrow from (0, 0) to the new vertex (-1, -4), each curve labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = x^{2}\\), dashed, and \\(y = (x + 1)^{2} - 4\\), solid. An arrow shows the vertex moving 1 left and 4 down, from \\((0, 0)\\) to \\((-1, -4)\\).",
+     "x": {
+      "min": -4,
+      "max": 4.5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -5,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": -2.2,
+       "pos": "right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "(x + 1)^{2} - 4",
+       "label": "\\(y = (x + 1)^{2} - 4\\)",
+       "labelAt": 1.31,
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        -0.3,
+        -1.2
+       ],
+       "to": [
+        -0.92,
+        -3.68
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        -4
+       ],
+       "label": "\\((-1, -4)\\)",
+       "pos": "below-left",
+       "on": [
+        "g"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:33Z"
+  }
+ ]
 }

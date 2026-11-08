@@ -32,7 +32,12 @@
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T08:48:36Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:36Z pictures: the owner asked for a graph at a options",
+  "2026-11-08T08:49:02Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T09:04:34Z pictures: 1 picture kept, 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The label y = f(x) sits above the top right corner, where both curves leave the axes together (f at about x = 4.45 and f' at x = 4.5, after crossing at x = 3 + √2), so a student cannot tell whether it names the solid curve or the dotted line; label f where it is clearly apart from f', for example on its left arm near x = 0.; The y-axis runs through the label y = f'(x) at the bottom left (through its (x)), because the label is placed at x = 0.2 right beside where the dotted line enters at x = 0; move it to the right along the dotted line, clear of the axis.",
+  "2026-11-08T09:20:35Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -221,7 +226,185 @@
     "Zero for \\(x < 1\\) and positive for \\(x > 1\\)"
    ],
    "why": "A falling graph has a negative gradient, and a rising graph has a positive one. The flat point at \\(x = 1\\) gives zero. Swapping the signs is the tempting mistake.",
-   "clue": "Falling means a negative gradient."
+   "clue": "Falling means a negative gradient.",
+   "optFigs": [
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x - 1"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "1 - x"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "above"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "-(x - 1)^{2}"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{x - 1 + |x - 1|}{2}"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ]
   },
   "b": {
    "d": 3,
@@ -234,7 +417,21 @@
    ],
    "why": "After a peak the graph falls until the dip, so f′ is negative between \\(-1\\) and 3. Before the peak \\(f\\) rises, so f′ is positive for \\(x < -1\\), which rules out all \\(x\\) less than 3. At \\(-1\\) and 3 the gradient is zero, not negative.",
    "clue": "What does the graph do just after a peak?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The example on card line 4: a curve y = f(x) that falls until x = 2 then rises, drawn with its derivative y = f'(x) on the same axes: f' below the x-axis for x < 2, zero at x = 2 and above for x > 2, each labelled.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label y = f(x) sits above the top right corner, where both curves leave the axes together (f at about x = 4.45 and f' at x = 4.5, after crossing at x = 3 + √2), so a student cannot tell whether it names the solid curve or the dotted line; label f where it is clearly apart from f', for example on its left arm near x = 0.",
+      "The y-axis runs through the label y = f'(x) at the bottom left (through its (x)), because the label is placed at x = 0.2 right beside where the dotted line enters at x = 0; move it to the right along the dotted line, clear of the axis."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "recheck",
  "latex": {
@@ -273,5 +470,683 @@
     "clue": "What does the graph do just after a peak?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 2,
+   "at": "a options",
+   "kind": "graph",
+   "brief": "Four graphs of y = f'(x), one for each option, so the student reads the sign of f' from a graph: a line below the axis before x = 1 and above after (right), a line above before and below after, a curve below the axis everywhere touching it at x = 1, and a graph at zero for x < 1 rising after. x = 1 is marked on each.",
+   "figures": [
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x - 1"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "1 - x"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "above"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "-(x - 1)^{2}"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{x - 1 + |x - 1|}{2}"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:02Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:34Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: a curve y = f(x) that falls until x = 2 then rises, drawn with its derivative y = f'(x) on the same axes: f' below the x-axis for x < 2, zero at x = 2 and above for x > 2, each labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = f(x) = (x - 2)^{2} - 1\\) falls until \\(x = 2\\), then rises. Its derivative \\(y = f'(x) = 2x - 4\\) is below the x-axis for \\(x < 2\\), crosses it at \\(x = 2\\), where \\(f\\) is flat, and is above it for \\(x > 2\\).",
+     "x": {
+      "min": -1,
+      "max": 5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -4,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "text",
+       "at": [
+        2,
+        0
+       ],
+       "label": "\\(2\\)",
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x - 2)^{2} - 1",
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 4.6,
+       "pos": "left"
+      },
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "2x - 4",
+       "label": "\\(y = f'(x)\\)",
+       "labelAt": 0.2,
+       "pos": "above-left",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -1
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0
+       ],
+       "on": [
+        "d"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:02Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label y = f(x) sits above the top right corner, where both curves leave the axes together (f at about x = 4.45 and f' at x = 4.5, after crossing at x = 3 + √2), so a student cannot tell whether it names the solid curve or the dotted line; label f where it is clearly apart from f', for example on its left arm near x = 0.",
+     "The y-axis runs through the label y = f'(x) at the bottom left (through its (x)), because the label is placed at x = 0.2 right beside where the dotted line enters at x = 0; move it to the right along the dotted line, clear of the axis."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:34Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Graphs of derivative functions",
+  "card": [
+   "The derivative f′(x) gives the gradient of the graph of \\(f\\) at each \\(x\\). So its graph shows how steep \\(f\\) is and which way it slopes.",
+   "Where \\(f\\) rises as \\(x\\) increases, the gradient is positive, so f′ is above the x-axis. Where \\(f\\) falls, f′ is below the x-axis.",
+   "At a stationary point, such as a peak or a dip, the tangent is flat. The gradient is zero, so the graph of f′ touches or crosses the x-axis there.",
+   "Example: a curve falls until \\(x = 2\\), then rises. So f′ is negative for \\(x < 2\\), zero at \\(x = 2\\) and positive for \\(x > 2\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curve \\(y = f(x) = (x - 2)^{2} - 1\\) falls until \\(x = 2\\), then rises. Its derivative \\(y = f'(x) = 2x - 4\\) is below the x-axis for \\(x < 2\\), crosses it at \\(x = 2\\), where \\(f\\) is flat, and is above it for \\(x > 2\\).",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "text",
+      "at": [
+       2,
+       0
+      ],
+      "label": "\\(2\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x - 2)^{2} - 1",
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 2.3,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "d",
+      "expr": "2x - 4",
+      "label": "\\(y = f'(x)\\)",
+      "labelAt": 1,
+      "pos": "below-right",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "on": [
+       "d"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
+  "remember": "Read f′ from the slope of \\(f\\): above the axis means rising, below means falling.",
+  "a": {
+   "q": "The graph of \\(f\\) falls for \\(x < 1\\) and rises for \\(x > 1\\). Which describes f′?",
+   "opts": [
+    "Negative for \\(x < 1\\), zero at \\(x = 1\\), positive after",
+    "Positive for \\(x < 1\\), zero at \\(x = 1\\), negative after",
+    "Negative everywhere, with a zero at \\(x = 1\\)",
+    "Zero for \\(x < 1\\) and positive for \\(x > 1\\)"
+   ],
+   "why": "A falling graph has a negative gradient, and a rising graph has a positive one. The flat point at \\(x = 1\\) gives zero. Swapping the signs is the tempting mistake.",
+   "clue": "Falling means a negative gradient.",
+   "optFigs": [
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x - 1"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "1 - x"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "above"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "-(x - 1)^{2}"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    },
+    {
+     "kind": "graph",
+     "x": {
+      "min": -1,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{x - 1 + |x - 1|}{2}"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ]
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of \\(f\\) has a peak at \\(x = -1\\), a dip at \\(x = 3\\) and no other stationary points. Where is f′ negative?",
+   "opts": [
+    "Between \\(x = -1\\) and \\(x = 3\\)",
+    "For \\(x < -1\\) and for \\(x > 3\\)",
+    "At \\(x = -1\\) and at \\(x = 3\\)",
+    "For all \\(x\\) less than 3"
+   ],
+   "why": "After a peak the graph falls until the dip, so f′ is negative between \\(-1\\) and 3. Before the peak \\(f\\) rises, so f′ is positive for \\(x < -1\\), which rules out all \\(x\\) less than 3. At \\(-1\\) and 3 the gradient is zero, not negative.",
+   "clue": "What does the graph do just after a peak?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The example on card line 4: a curve y = f(x) that falls until x = 2 then rises, drawn with its derivative y = f'(x) on the same axes: f' below the x-axis for x < 2, zero at x = 2 and above for x > 2, each labelled.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label y = f(x) sits above the top right corner, where both curves leave the axes together (f at about x = 4.45 and f' at x = 4.5, after crossing at x = 3 + √2), so a student cannot tell whether it names the solid curve or the dotted line; label f where it is clearly apart from f', for example on its left arm near x = 0.",
+      "The y-axis runs through the label y = f'(x) at the bottom left (through its (x)), because the label is placed at x = 0.2 right beside where the dotted line enters at x = 0; move it to the right along the dotted line, clear of the axis."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: a curve y = f(x) that falls until x = 2 then rises, drawn with its derivative y = f'(x) on the same axes: f' below the x-axis for x < 2, zero at x = 2 and above for x > 2, each labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = f(x) = (x - 2)^{2} - 1\\) falls until \\(x = 2\\), then rises. Its derivative \\(y = f'(x) = 2x - 4\\) is below the x-axis for \\(x < 2\\), crosses it at \\(x = 2\\), where \\(f\\) is flat, and is above it for \\(x > 2\\).",
+     "x": {
+      "min": -1,
+      "max": 5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -4,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "text",
+       "at": [
+        2,
+        0
+       ],
+       "label": "\\(2\\)",
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x - 2)^{2} - 1",
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 2.3,
+       "pos": "below-right"
+      },
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "2x - 4",
+       "label": "\\(y = f'(x)\\)",
+       "labelAt": 1,
+       "pos": "below-right",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -1
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0
+       ],
+       "on": [
+        "d"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:34Z"
+  }
+ ]
 }

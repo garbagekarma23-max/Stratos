@@ -34,7 +34,12 @@
   "2026-11-01T08:42:07Z fix: suggested",
   "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording)",
   "2026-11-02T06:23:14Z review: approved with the fix (a spot check)",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:32Z pictures: the owner asked for a graph at card 3",
+  "2026-11-08T08:48:33Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:58Z pictures: 2 pictures waiting for the check",
+  "2026-11-08T09:04:28Z pictures: 1 picture kept, 1 picture turned down. Picture 2 (graph at card 4): redo, high sure. The label y = f^{-1}(x) sits at (-3, -3), where f, f^{-1} and y = x all cross, so it is unclear which line it names; put it on the right part of the f^{-1} line, for example near x = 4.5, well away from the crossing.; The y axis step of 4 leaves horizontal grid lines only at -4, 0 and 4 while vertical ones are every 1, so the grid is not square and a student cannot count squares to see the reflection; use a y step of 1 (with numbers hidden or only some shown) to match the x grid.",
+  "2026-11-08T09:20:32Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -176,6 +181,72 @@
    "An inverse exists only if \\(f\\) is one-to-one: each output comes from exactly one input. A horizontal line must cut the graph at most once. So \\(y = x^{2}\\) on all of \\(\\mathbb{R}\\) has no inverse, because 2 and \\(-2\\) both give 4.",
    "The graph of \\(f^{-1}\\) is the graph of \\(f\\) reflected in the line \\(y = x\\). The domain of \\(f^{-1}\\) is the range of \\(f\\), and the range of \\(f^{-1}\\) is the domain of \\(f\\)."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2}\\) and the horizontal line \\(y = 4\\). The line cuts the parabola twice, at \\((-2, 4)\\) and \\((2, 4)\\), so \\(y = x^{2}\\) is not one-to-one and has no inverse.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2.5,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "4",
+      "label": "\\(y = 4\\)",
+      "labelAt": -3.6,
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       4
+      ],
+      "label": "\\((-2, 4)\\)",
+      "pos": "above-right",
+      "on": [
+       "f",
+       "h"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       4
+      ],
+      "label": "\\((2, 4)\\)",
+      "pos": "below-right",
+      "on": [
+       "f",
+       "h"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
   "remember": "Swap \\(x\\) and \\(y\\) to reverse a function. Only a one-to-one function has an inverse.",
   "a": {
    "q": "What is the inverse of \\(f(x) = 3x - 6\\)?",
@@ -199,7 +270,21 @@
    ],
    "why": "Only \\(f(x) = 2x + 1\\) is one-to-one, so any horizontal line cuts it once. The other three each give the same output for \\(x\\) and \\(-x\\), such as 2 and \\(-2\\), so a horizontal line can cut them twice. Having a rule that can be rearranged does not make a function one-to-one.",
    "clue": "Does any output come from two different inputs, such as 2 and \\(-2\\)?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The line y = 2x + 3 and its inverse y = (x - 3)/2 from card line 2, as reflections of each other in the line y = x, with (0, 3) and (3, 0) marked.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label y = f^{-1}(x) sits at (-3, -3), where f, f^{-1} and y = x all cross, so it is unclear which line it names; put it on the right part of the f^{-1} line, for example near x = 4.5, well away from the crossing.",
+      "The y axis step of 4 leaves horizontal grid lines only at -4, 0 and 4 while vertical ones are every 1, so the grid is not square and a student cannot count squares to see the reflection; use a y step of 1 (with numbers hidden or only some shown) to match the x grid."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "owner",
  "latex": {
@@ -238,5 +323,464 @@
     "clue": "Does any output come from two different inputs, such as 2 and −2?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The parabola y = x^2 with the horizontal line y = 4 cutting it twice, at (-2, 4) and (2, 4), to show the horizontal line test failing, as card line 3 says.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = x^{2}\\) and the horizontal line \\(y = 4\\). The line cuts the parabola twice, at \\((-2, 4)\\) and \\((2, 4)\\), so \\(y = x^{2}\\) is not one-to-one and has no inverse.",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -1,
+      "max": 7,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": 2.5,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "h",
+       "expr": "4",
+       "label": "\\(y = 4\\)",
+       "labelAt": -3.6,
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        4
+       ],
+       "label": "\\((-2, 4)\\)",
+       "pos": "above-right",
+       "on": [
+        "f",
+        "h"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "label": "\\((2, 4)\\)",
+       "pos": "below-right",
+       "on": [
+        "f",
+        "h"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:58Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:28Z"
+  },
+  {
+   "want": 2,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The line y = 2x + 3 and its inverse y = (x - 3)/2 from card line 2, as reflections of each other in the line y = x, with (0, 3) and (3, 0) marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line \\(y = f(x) = 2x + 3\\) and its inverse \\(y = f^{-1}(x) = \\frac{x - 3}{2}\\), reflections of each other in the line \\(y = x\\). The point \\((0, 3)\\) on \\(f\\) matches \\((3, 0)\\) on \\(f^{-1}\\).",
+     "x": {
+      "min": -5,
+      "max": 5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -5,
+      "max": 5,
+      "label": "\\(y\\)",
+      "step": 4
+     },
+     "grid": true,
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "m",
+       "expr": "x",
+       "label": "\\(y = x\\)",
+       "labelAt": 3.9,
+       "pos": "above-left",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2x + 3",
+       "label": "\\(y = f(x)\\)",
+       "labelAt": -4,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "\\frac{x - 3}{2}",
+       "label": "\\(y = f^{-1}(x)\\)",
+       "labelAt": -3,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        3
+       ],
+       "label": "\\((0, 3)\\)",
+       "pos": "right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        0
+       ],
+       "label": "\\((3, 0)\\)",
+       "pos": "above-left",
+       "on": [
+        "g"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:58Z",
+   "status": "turned down",
+   "check": {
+    "want": 2,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The label y = f^{-1}(x) sits at (-3, -3), where f, f^{-1} and y = x all cross, so it is unclear which line it names; put it on the right part of the f^{-1} line, for example near x = 4.5, well away from the crossing.",
+     "The y axis step of 4 leaves horizontal grid lines only at -4, 0 and 4 while vertical ones are every 1, so the grid is not square and a student cannot count squares to see the reflection; use a y step of 1 (with numbers hidden or only some shown) to match the x grid."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:28Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Inverse functions",
+  "card": [
+   "The inverse of \\(f\\), written \\(f^{-1}\\), reverses \\(f\\). If \\(f\\) takes 2 to 7, then \\(f^{-1}\\) takes 7 back to 2.",
+   "To find it, write \\(y = f(x)\\), swap \\(x\\) and \\(y\\), then solve for \\(y\\). Example: \\(f(x) = 2x + 3\\). Write \\(y = 2x + 3\\), swap to \\(x = 2y + 3\\), so \\(y = \\frac{x - 3}{2}\\). This gives \\(f^{-1}(x) = \\frac{x - 3}{2}\\).",
+   "An inverse exists only if \\(f\\) is one-to-one: each output comes from exactly one input. A horizontal line must cut the graph at most once. So \\(y = x^{2}\\) on all of \\(\\mathbb{R}\\) has no inverse, because 2 and \\(-2\\) both give 4.",
+   "The graph of \\(f^{-1}\\) is the graph of \\(f\\) reflected in the line \\(y = x\\). The domain of \\(f^{-1}\\) is the range of \\(f\\), and the range of \\(f^{-1}\\) is the domain of \\(f\\)."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2}\\) and the horizontal line \\(y = 4\\). The line cuts the parabola twice, at \\((-2, 4)\\) and \\((2, 4)\\), so \\(y = x^{2}\\) is not one-to-one and has no inverse.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2.5,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "4",
+      "label": "\\(y = 4\\)",
+      "labelAt": -3.6,
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       4
+      ],
+      "label": "\\((-2, 4)\\)",
+      "pos": "above-right",
+      "on": [
+       "f",
+       "h"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       4
+      ],
+      "label": "\\((2, 4)\\)",
+      "pos": "below-right",
+      "on": [
+       "f",
+       "h"
+      ],
+      "is": "intersection"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(y = f(x) = 2x + 3\\) and its inverse \\(y = f^{-1}(x) = \\frac{x - 3}{2}\\), reflections of each other in the line \\(y = x\\). The point \\((0, 3)\\) on \\(f\\) matches \\((3, 0)\\) on \\(f^{-1}\\). The graph shows the part where both coordinates are from 0 to 5.",
+    "x": {
+     "min": 0,
+     "max": 5.5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 5.5,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "m",
+      "expr": "x",
+      "label": "\\(y = x\\)",
+      "labelAt": 4.8,
+      "pos": "above-left",
+      "style": "dot"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 3",
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 1,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\frac{x - 3}{2}",
+      "label": "\\(y = f^{-1}(x)\\)",
+      "labelAt": 4.263,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       3
+      ],
+      "label": "\\((0, 3)\\)",
+      "pos": "right",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "label": "\\((3, 0)\\)",
+      "pos": "above-left",
+      "on": [
+       "g"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
+  "remember": "Swap \\(x\\) and \\(y\\) to reverse a function. Only a one-to-one function has an inverse.",
+  "a": {
+   "q": "What is the inverse of \\(f(x) = 3x - 6\\)?",
+   "opts": [
+    "\\(f^{-1}(x) = \\frac{x + 6}{3}\\)",
+    "\\(f^{-1}(x) = \\frac{x - 6}{3}\\)",
+    "\\(f^{-1}(x) = \\frac{x}{3} + 6\\)",
+    "\\(f^{-1}(x) = 3x + 6\\)"
+   ],
+   "why": "Swap to \\(x = 3y - 6\\), so \\(3y = x + 6\\) and \\(y = \\frac{x + 6}{3}\\). Check: \\(f(4) = 6\\), and \\(f^{-1}(6) = \\frac{12}{3} = 4\\) gives back 4. The option \\(\\frac{x - 6}{3}\\) has a sign error when moving the 6 across.",
+   "clue": "Swap \\(x\\) and \\(y\\) first, then undo the subtraction before the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which function, on the domain given, has an inverse function?",
+   "opts": [
+    "\\(f(x) = 2x + 1\\), for \\(x \\in \\mathbb{R}\\)",
+    "\\(f(x) = x^{2}\\), for \\(x \\in \\mathbb{R}\\)",
+    "\\(f(x) = |x|\\), for \\(x \\in \\mathbb{R}\\)",
+    "\\(f(x) = 4 - x^{2}\\), for \\(x \\in \\mathbb{R}\\)"
+   ],
+   "why": "Only \\(f(x) = 2x + 1\\) is one-to-one, so any horizontal line cuts it once. The other three each give the same output for \\(x\\) and \\(-x\\), such as 2 and \\(-2\\), so a horizontal line can cut them twice. Having a rule that can be rearranged does not make a function one-to-one.",
+   "clue": "Does any output come from two different inputs, such as 2 and \\(-2\\)?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The line y = 2x + 3 and its inverse y = (x - 3)/2 from card line 2, as reflections of each other in the line y = x, with (0, 3) and (3, 0) marked.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label y = f^{-1}(x) sits at (-3, -3), where f, f^{-1} and y = x all cross, so it is unclear which line it names; put it on the right part of the f^{-1} line, for example near x = 4.5, well away from the crossing.",
+      "The y axis step of 4 leaves horizontal grid lines only at -4, 0 and 4 while vertical ones are every 1, so the grid is not square and a student cannot count squares to see the reflection; use a y step of 1 (with numbers hidden or only some shown) to match the x grid."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The line y = 2x + 3 and its inverse y = (x - 3)/2 from card line 2, as reflections of each other in the line y = x, with (0, 3) and (3, 0) marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line \\(y = f(x) = 2x + 3\\) and its inverse \\(y = f^{-1}(x) = \\frac{x - 3}{2}\\), reflections of each other in the line \\(y = x\\). The point \\((0, 3)\\) on \\(f\\) matches \\((3, 0)\\) on \\(f^{-1}\\). The graph shows the part where both coordinates are from 0 to 5.",
+     "x": {
+      "min": 0,
+      "max": 5.5,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 5.5,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "m",
+       "expr": "x",
+       "label": "\\(y = x\\)",
+       "labelAt": 4.8,
+       "pos": "above-left",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2x + 3",
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 1,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "\\frac{x - 3}{2}",
+       "label": "\\(y = f^{-1}(x)\\)",
+       "labelAt": 4.263,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        3
+       ],
+       "label": "\\((0, 3)\\)",
+       "pos": "right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        0
+       ],
+       "label": "\\((3, 0)\\)",
+       "pos": "above-left",
+       "on": [
+        "g"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:32Z"
+  }
+ ]
 }

@@ -8,7 +8,11 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:05Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:35Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T08:48:54Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:23Z pictures: 1 picture turned down. Picture 1 (graph at card 2): redo, high sure. The label (1, 0) is squeezed between the dashed guide from P and the circle, and its opening bracket touches the dashed line in both light and dark, so it reads as crowded and could be taken as labelling where the guide meets the x-axis; place it below-right or right of its dot, clear of the guide.; The angle theta has no arc from the positive x-axis to the radius, so the turn anticlockwise from (1, 0) that the card describes is not shown; add a small arc (ideally with an arrowhead) for theta.",
+  "2026-11-08T09:20:30Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 2,
@@ -100,7 +104,21 @@
    ],
    "why": "In quadrant 3, \\(P\\) is to the left of the y-axis and below the x-axis, so \\(x\\) and \\(y\\) are both negative. Cos is \\(x\\) and sin is \\(y\\), so \\(\\cos \\theta\\) and \\(\\sin \\theta\\) are both negative. Quadrant 2 is the one where only \\(\\cos \\theta\\) is negative.",
    "clue": "Think about which side of each axis quadrant 3 lies on."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "The unit circle centred at the origin, radius 1, with (1, 0) marked, an angle theta turned anticlockwise to a point P, and dashed guides from P to the axes labelled cos theta (on the x-axis) and sin theta (on the y-axis).",
+    "tries": 1,
+    "notes": [
+     [
+      "The label (1, 0) is squeezed between the dashed guide from P and the circle, and its opening bracket touches the dashed line in both light and dark, so it reads as crowded and could be taken as labelling where the guide meets the x-axis; place it below-right or right of its dot, clear of the guide.",
+      "The angle theta has no arc from the positive x-axis to the radius, so the turn anticlockwise from (1, 0) that the card describes is not shown; add a small arc (ideally with an arrowhead) for theta."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -139,5 +157,483 @@
     "clue": "Think about which side of each axis quadrant 3 lies on."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The unit circle centred at the origin, radius 1, with (1, 0) marked, an angle theta turned anticlockwise to a point P, and dashed guides from P to the axes labelled cos theta (on the x-axis) and sin theta (on the y-axis).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The unit circle, centre the origin and radius 1. Turning anticlockwise by \\(\\theta\\) from \\((1, 0)\\) reaches the point \\(P\\). Dashed lines from \\(P\\) to the axes show its x-coordinate, \\(\\cos \\theta\\), and its y-coordinate, \\(\\sin \\theta\\).",
+     "x": {
+      "min": -1.5,
+      "max": 1.5,
+      "label": "\\(x\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": -1.25,
+      "max": 1.25,
+      "label": "\\(y\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "circle",
+       "id": "c",
+       "centre": [
+        0,
+        0
+       ],
+       "r": 1,
+       "label": "unit circle",
+       "pos": "above-right"
+      },
+      {
+       "type": "curve",
+       "id": "rad",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         0.6428,
+         0.766
+        ]
+       ],
+       "label": "\\(1\\)",
+       "labelAt": 0.3,
+       "pos": "above-left"
+      },
+      {
+       "type": "guide",
+       "at": [
+        0.6428,
+        0.766
+       ],
+       "xLabel": "\\(\\cos \\theta\\)",
+       "yLabel": "\\(\\sin \\theta\\)"
+      },
+      {
+       "type": "text",
+       "at": [
+        0.3,
+        0.12
+       ],
+       "label": "\\(\\theta\\)",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0.6428,
+        0.766
+       ],
+       "label": "\\(P\\)",
+       "pos": "above-right",
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\((1, 0)\\)",
+       "pos": "above-left",
+       "on": [
+        "c"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:54Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label (1, 0) is squeezed between the dashed guide from P and the circle, and its opening bracket touches the dashed line in both light and dark, so it reads as crowded and could be taken as labelling where the guide meets the x-axis; place it below-right or right of its dot, clear of the guide.",
+     "The angle theta has no arc from the positive x-axis to the radius, so the turn anticlockwise from (1, 0) that the card describes is not shown; add a small arc (ideally with an arrowhead) for theta."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:23Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "The unit circle",
+  "card": [
+   "The unit circle has its centre at the origin and radius 1. Start at the point \\((1, 0)\\) and turn anticlockwise by an angle \\(\\theta\\). You land on a point \\(P\\) on the circle.",
+   "The x-coordinate of \\(P\\) is \\(\\cos \\theta\\). The y-coordinate of \\(P\\) is \\(\\sin \\theta\\). So \\(P = (\\cos \\theta, \\sin \\theta)\\).",
+   "Signs follow from the coordinates. In quadrant 1, \\(x\\) and \\(y\\) are both positive. In quadrant 2, \\(x\\) is negative and \\(y\\) is positive. In quadrant 3, both are negative. In quadrant 4, \\(x\\) is positive and \\(y\\) is negative.",
+   "Example: at \\(\\theta = 90^{\\circ}\\), \\(P = (0, 1)\\), so \\(\\cos 90^{\\circ} = 0\\) and \\(\\sin 90^{\\circ} = 1\\). At \\(\\theta = 180^{\\circ}\\), \\(P = (-1, 0)\\), so \\(\\cos 180^{\\circ} = -1\\) and \\(\\sin 180^{\\circ} = 0\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The unit circle, centre the origin and radius 1. Turning anticlockwise by \\(\\theta\\) from \\((1, 0)\\), shown by the small arc with an arrow, reaches the point \\(P\\). Dashed lines from \\(P\\) to the axes show its x-coordinate, \\(\\cos \\theta\\), and its y-coordinate, \\(\\sin \\theta\\).",
+    "x": {
+     "min": -1.5,
+     "max": 1.9,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -1.25,
+     "max": 1.25,
+     "label": "\\(y\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "id": "c",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 1,
+      "label": "unit circle",
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "rad",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        0.6428,
+        0.766
+       ]
+      ],
+      "label": "\\(1\\)",
+      "labelAt": 0.3,
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.6428,
+       0.766
+      ],
+      "xLabel": "\\(\\cos \\theta\\)",
+      "yLabel": "\\(\\sin \\theta\\)"
+     },
+     {
+      "type": "curve",
+      "id": "arc",
+      "points": [
+       [
+        0.28,
+        0
+       ],
+       [
+        0.2789,
+        0.0244
+       ],
+       [
+        0.2757,
+        0.0486
+       ],
+       [
+        0.2705,
+        0.0725
+       ],
+       [
+        0.2631,
+        0.0958
+       ],
+       [
+        0.2538,
+        0.1183
+       ],
+       [
+        0.2425,
+        0.14
+       ],
+       [
+        0.2294,
+        0.1606
+       ],
+       [
+        0.2145,
+        0.18
+       ],
+       [
+        0.198,
+        0.198
+       ],
+       [
+        0.18,
+        0.2145
+       ]
+      ],
+      "label": "\\(\\theta\\)",
+      "labelAt": 0.28,
+      "pos": "above-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       0.2145,
+       0.18
+      ],
+      "to": [
+       0.18,
+       0.2145
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.6428,
+       0.766
+      ],
+      "label": "\\(P\\)",
+      "pos": "above-right",
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "label": "\\((1, 0)\\)",
+      "pos": "below-right",
+      "on": [
+       "c"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
+  "remember": "On the unit circle, \\(P = (\\cos \\theta, \\sin \\theta)\\), so the signs of \\(x\\) and \\(y\\) give the signs of \\(\\cos \\theta\\) and \\(\\sin \\theta\\).",
+  "a": {
+   "q": "What is the value of \\(\\sin 180^{\\circ}\\)?",
+   "opts": [
+    "0",
+    "\\(-1\\)",
+    "1",
+    "180"
+   ],
+   "why": "At 180° the point on the unit circle is \\((-1, 0)\\). Sin is the y-coordinate, so \\(\\sin 180^{\\circ} = 0\\). The value \\(-1\\) is the x-coordinate, which is \\(\\cos 180^{\\circ}\\).",
+   "clue": "Sin is one of the two coordinates. Which one?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An angle \\(\\theta\\) has its point \\(P\\) on the unit circle in quadrant 3. Which pair of signs is correct?",
+   "opts": [
+    "\\(\\cos \\theta\\) is negative and \\(\\sin \\theta\\) is negative",
+    "\\(\\cos \\theta\\) is negative and \\(\\sin \\theta\\) is positive",
+    "\\(\\cos \\theta\\) is positive and \\(\\sin \\theta\\) is negative",
+    "\\(\\cos \\theta\\) is positive and \\(\\sin \\theta\\) is positive"
+   ],
+   "why": "In quadrant 3, \\(P\\) is to the left of the y-axis and below the x-axis, so \\(x\\) and \\(y\\) are both negative. Cos is \\(x\\) and sin is \\(y\\), so \\(\\cos \\theta\\) and \\(\\sin \\theta\\) are both negative. Quadrant 2 is the one where only \\(\\cos \\theta\\) is negative.",
+   "clue": "Think about which side of each axis quadrant 3 lies on."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "The unit circle centred at the origin, radius 1, with (1, 0) marked, an angle theta turned anticlockwise to a point P, and dashed guides from P to the axes labelled cos theta (on the x-axis) and sin theta (on the y-axis).",
+    "tries": 1,
+    "notes": [
+     [
+      "The label (1, 0) is squeezed between the dashed guide from P and the circle, and its opening bracket touches the dashed line in both light and dark, so it reads as crowded and could be taken as labelling where the guide meets the x-axis; place it below-right or right of its dot, clear of the guide.",
+      "The angle theta has no arc from the positive x-axis to the radius, so the turn anticlockwise from (1, 0) that the card describes is not shown; add a small arc (ideally with an arrowhead) for theta."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The unit circle centred at the origin, radius 1, with (1, 0) marked, an angle theta turned anticlockwise to a point P, and dashed guides from P to the axes labelled cos theta (on the x-axis) and sin theta (on the y-axis).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The unit circle, centre the origin and radius 1. Turning anticlockwise by \\(\\theta\\) from \\((1, 0)\\), shown by the small arc with an arrow, reaches the point \\(P\\). Dashed lines from \\(P\\) to the axes show its x-coordinate, \\(\\cos \\theta\\), and its y-coordinate, \\(\\sin \\theta\\).",
+     "x": {
+      "min": -1.5,
+      "max": 1.9,
+      "label": "\\(x\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": -1.25,
+      "max": 1.25,
+      "label": "\\(y\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "circle",
+       "id": "c",
+       "centre": [
+        0,
+        0
+       ],
+       "r": 1,
+       "label": "unit circle",
+       "pos": "above-right"
+      },
+      {
+       "type": "curve",
+       "id": "rad",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         0.6428,
+         0.766
+        ]
+       ],
+       "label": "\\(1\\)",
+       "labelAt": 0.3,
+       "pos": "above-left"
+      },
+      {
+       "type": "guide",
+       "at": [
+        0.6428,
+        0.766
+       ],
+       "xLabel": "\\(\\cos \\theta\\)",
+       "yLabel": "\\(\\sin \\theta\\)"
+      },
+      {
+       "type": "curve",
+       "id": "arc",
+       "points": [
+        [
+         0.28,
+         0
+        ],
+        [
+         0.2789,
+         0.0244
+        ],
+        [
+         0.2757,
+         0.0486
+        ],
+        [
+         0.2705,
+         0.0725
+        ],
+        [
+         0.2631,
+         0.0958
+        ],
+        [
+         0.2538,
+         0.1183
+        ],
+        [
+         0.2425,
+         0.14
+        ],
+        [
+         0.2294,
+         0.1606
+        ],
+        [
+         0.2145,
+         0.18
+        ],
+        [
+         0.198,
+         0.198
+        ],
+        [
+         0.18,
+         0.2145
+        ]
+       ],
+       "label": "\\(\\theta\\)",
+       "labelAt": 0.28,
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        0.2145,
+        0.18
+       ],
+       "to": [
+        0.18,
+        0.2145
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.6428,
+        0.766
+       ],
+       "label": "\\(P\\)",
+       "pos": "above-right",
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\((1, 0)\\)",
+       "pos": "below-right",
+       "on": [
+        "c"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:30Z"
+  }
+ ]
 }

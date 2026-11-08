@@ -8,7 +8,11 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:05Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:37Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:53Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:22Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The label y = f(x) sits on the x-axis at the left edge, and the axis line runs straight through the text in both light and dark, so it reads as struck through.; The label y = f(x) is far from the dashed curve it names and sits next to (-2, 0), where both curves meet, so it is not clear whether it names the dashed curve, the solid curve or the x-axis; place it beside the dashed curve, clear of the axis and of the solid curve (for example near the dashed curve's upper left, above y = 4).",
+  "2026-11-08T09:20:30Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 2,
@@ -100,7 +104,21 @@
    ],
    "why": "On the x-axis \\(y = 0\\), and \\(2 \\times 0 = 0\\), so the x-intercepts stay at 1 and 5. The y-intercept is multiplied by 2, giving \\((0, 20)\\). Doubling the x-intercepts is wrong, as \\(x\\) values do not change.",
    "clue": "Which values does \\(k\\) multiply, and what is \\(0 \\times k\\)?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The example on card line 4: y = f(x) = x^2 - 4 dashed and y = 2f(x) solid, the point (3, 5) moving to (3, 10) with an arrow, and the x-intercepts x = -2 and x = 2 staying put.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label y = f(x) sits on the x-axis at the left edge, and the axis line runs straight through the text in both light and dark, so it reads as struck through.",
+      "The label y = f(x) is far from the dashed curve it names and sits next to (-2, 0), where both curves meet, so it is not clear whether it names the dashed curve, the solid curve or the x-axis; place it beside the dashed curve, clear of the axis and of the solid curve (for example near the dashed curve's upper left, above y = 4)."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -139,5 +157,400 @@
     "clue": "Which values does k multiply, and what is 0 × k?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = f(x) = x^2 - 4 dashed and y = 2f(x) solid, the point (3, 5) moving to (3, 10) with an arrow, and the x-intercepts x = -2 and x = 2 staying put.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = f(x) = x^{2} - 4\\), dashed, and \\(y = 2f(x)\\), solid. Every \\(y\\) value doubles: \\((3, 5)\\) moves up to \\((3, 10)\\). The x-intercepts at \\(x = -2\\) and \\(x = 2\\) stay where they are.",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -10,
+      "max": 12,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2} - 4",
+       "label": "\\(y = f(x)\\)",
+       "labelAt": -2.4,
+       "pos": "below-left",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "2x^{2} - 8",
+       "label": "\\(y = 2f(x)\\)",
+       "labelAt": -3.2,
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        3,
+        5.4
+       ],
+       "to": [
+        3,
+        9.6
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        5
+       ],
+       "label": "\\((3, 5)\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        10
+       ],
+       "label": "\\((3, 10)\\)",
+       "pos": "left",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        0
+       ],
+       "label": "\\(-2\\)",
+       "pos": "below-left",
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0
+       ],
+       "label": "\\(2\\)",
+       "pos": "below-right",
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:53Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label y = f(x) sits on the x-axis at the left edge, and the axis line runs straight through the text in both light and dark, so it reads as struck through.",
+     "The label y = f(x) is far from the dashed curve it names and sits next to (-2, 0), where both curves meet, so it is not clear whether it names the dashed curve, the solid curve or the x-axis; place it beside the dashed curve, clear of the axis and of the solid curve (for example near the dashed curve's upper left, above y = 4)."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:22Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Vertical dilations",
+  "card": [
+   "The graph of \\(y = kf(x)\\) is the graph of \\(y = f(x)\\) with every \\(y\\) value multiplied by \\(k\\). The graph is stretched away from the x-axis, or squashed towards it, in the vertical direction.",
+   "If \\(k\\) is greater than 1, the graph stretches away from the x-axis. If \\(k\\) is between 0 and 1, it is squashed towards the x-axis. The \\(x\\) values do not change.",
+   "Points on the x-axis stay where they are, because \\(0 \\times k = 0\\). So the x-intercepts do not move. The y-intercept is multiplied by \\(k\\).",
+   "Example: \\(f(x) = x^{2} - 4\\) has the point \\((3, 5)\\). For \\(y = 2f(x)\\), the point becomes \\((3, 10)\\). The x-intercepts at \\(x = -2\\) and \\(x = 2\\) stay the same."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = f(x) = x^{2} - 4\\), dashed, and \\(y = 2f(x)\\), solid. Every \\(y\\) value doubles: \\((3, 5)\\) moves up to \\((3, 10)\\). The x-intercepts at \\(x = -2\\) and \\(x = 2\\) stay where they are.",
+    "x": {
+     "min": -5,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -10,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 4",
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 3.9,
+      "pos": "right",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "2x^{2} - 8",
+      "label": "\\(y = 2f(x)\\)",
+      "labelAt": -2.8,
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       5.4
+      ],
+      "to": [
+       3,
+       9.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       5
+      ],
+      "label": "\\((3, 5)\\)",
+      "pos": "right",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       10
+      ],
+      "label": "\\((3, 10)\\)",
+      "pos": "left",
+      "on": [
+       "g"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       0
+      ],
+      "label": "\\(-2\\)",
+      "pos": "below-left",
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "label": "\\(2\\)",
+      "pos": "below-right",
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = kf(x)\\), multiply every \\(y\\) value by \\(k\\). The \\(x\\) values and x-intercepts stay put.",
+  "a": {
+   "q": "The graph of \\(y = f(x)\\) passes through \\((4, 6)\\). Which point must lie on \\(y = 3f(x)\\)?",
+   "opts": [
+    "\\((4, 18)\\)",
+    "\\((12, 6)\\)",
+    "\\((4, 2)\\)",
+    "\\((4, 9)\\)"
+   ],
+   "why": "Multiplying the \\(y\\) value by 3 gives \\(6 \\times 3 = 18\\), and \\(x\\) stays at 4. The point \\((12, 6)\\) is tempting, but that multiplies \\(x\\), which a vertical dilation does not do.",
+   "clue": "Only the \\(y\\) value is multiplied by \\(k\\)."
+  },
+  "b": {
+   "d": 2,
+   "q": "The graph of \\(y = f(x)\\) has x-intercepts at \\(x = 1\\) and \\(x = 5\\), and a y-intercept at \\((0, 10)\\). What are the intercepts of \\(y = 2f(x)\\)?",
+   "opts": [
+    "x-intercepts 1 and 5, y-intercept \\((0, 20)\\)",
+    "x-intercepts 2 and 10, y-intercept \\((0, 20)\\)",
+    "x-intercepts 1 and 5, y-intercept \\((0, 10)\\)",
+    "x-intercepts 2 and 10, y-intercept \\((0, 10)\\)"
+   ],
+   "why": "On the x-axis \\(y = 0\\), and \\(2 \\times 0 = 0\\), so the x-intercepts stay at 1 and 5. The y-intercept is multiplied by 2, giving \\((0, 20)\\). Doubling the x-intercepts is wrong, as \\(x\\) values do not change.",
+   "clue": "Which values does \\(k\\) multiply, and what is \\(0 \\times k\\)?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The example on card line 4: y = f(x) = x^2 - 4 dashed and y = 2f(x) solid, the point (3, 5) moving to (3, 10) with an arrow, and the x-intercepts x = -2 and x = 2 staying put.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label y = f(x) sits on the x-axis at the left edge, and the axis line runs straight through the text in both light and dark, so it reads as struck through.",
+      "The label y = f(x) is far from the dashed curve it names and sits next to (-2, 0), where both curves meet, so it is not clear whether it names the dashed curve, the solid curve or the x-axis; place it beside the dashed curve, clear of the axis and of the solid curve (for example near the dashed curve's upper left, above y = 4)."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = f(x) = x^2 - 4 dashed and y = 2f(x) solid, the point (3, 5) moving to (3, 10) with an arrow, and the x-intercepts x = -2 and x = 2 staying put.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = f(x) = x^{2} - 4\\), dashed, and \\(y = 2f(x)\\), solid. Every \\(y\\) value doubles: \\((3, 5)\\) moves up to \\((3, 10)\\). The x-intercepts at \\(x = -2\\) and \\(x = 2\\) stay where they are.",
+     "x": {
+      "min": -5,
+      "max": 6,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -10,
+      "max": 12,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2} - 4",
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 3.9,
+       "pos": "right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "2x^{2} - 8",
+       "label": "\\(y = 2f(x)\\)",
+       "labelAt": -2.8,
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        3,
+        5.4
+       ],
+       "to": [
+        3,
+        9.6
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        5
+       ],
+       "label": "\\((3, 5)\\)",
+       "pos": "right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        10
+       ],
+       "label": "\\((3, 10)\\)",
+       "pos": "left",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        0
+       ],
+       "label": "\\(-2\\)",
+       "pos": "below-left",
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0
+       ],
+       "label": "\\(2\\)",
+       "pos": "below-right",
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:29Z"
+  }
+ ]
 }

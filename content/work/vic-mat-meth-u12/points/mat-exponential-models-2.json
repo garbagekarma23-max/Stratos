@@ -28,7 +28,10 @@
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:36Z pictures: the owner asked for a graph at card 3",
+  "2026-11-08T08:49:02Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:34Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -209,6 +212,67 @@
    "Example: $200 grows 10% each year, so \\(y = 200 \\times 1.1^{t}\\). After 2 years, \\(y = 200 \\times 1.21 = 242\\), which is $242.",
    "If a quantity doubles every \\(d\\) hours (its doubling time), \\(y = a \\times 2^{\\frac{t}{d}}\\). If it halves every \\(h\\) hours (its half-life), \\(y = a \\times \\left(\\frac{1}{2}\\right)^{\\frac{t}{h}}\\)."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Two exponential models that start at 200 when \\(t = 0\\). \\(y = 200 \\times 1.1^{t}\\), a 10% rise each step, curves upwards and passes through \\((2, 242)\\). \\(y = 200 \\times 0.8^{t}\\), a 20% fall each step, curves down towards 0.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "\\(t\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 500,
+     "label": "\\(y\\)",
+     "step": 100
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "200 \\times 1.1^{x}",
+      "label": "\\(y = 200 \\times 1.1^{t}\\)",
+      "labelAt": 5.4,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "d",
+      "expr": "200 \\times 0.8^{x}",
+      "label": "\\(y = 200 \\times 0.8^{t}\\)",
+      "labelAt": 4,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       200
+      ],
+      "on": [
+       "g",
+       "d"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       242
+      ],
+      "label": "\\((2, 242)\\)",
+      "pos": "above-left",
+      "on": [
+       "g"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Start value \\(a\\), then multiply by \\(b\\) each step: \\(b = 1 + \\frac{r}{100}\\) for growth, \\(b = 1 - \\frac{r}{100}\\) for decay.",
   "a": {
    "q": "A town of 4000 people grows by 3% each year. Which rule gives its population \\(P\\) after \\(t\\) years?",
@@ -271,5 +335,91 @@
     "clue": "Count how many half-lives fit into 12 hours."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Growth and decay from the same start: y = 200 x 1.1^t from card line 3 rising through (0, 200) and (2, 242), and y = 200 x 0.8^t (a 20% fall each step, from card line 2) falling, t from 0 to 8, each labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Two exponential models that start at 200 when \\(t = 0\\). \\(y = 200 \\times 1.1^{t}\\), a 10% rise each step, curves upwards and passes through \\((2, 242)\\). \\(y = 200 \\times 0.8^{t}\\), a 20% fall each step, curves down towards 0.",
+     "x": {
+      "min": 0,
+      "max": 8,
+      "label": "\\(t\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 500,
+      "label": "\\(y\\)",
+      "step": 100
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "200 \\times 1.1^{x}",
+       "label": "\\(y = 200 \\times 1.1^{t}\\)",
+       "labelAt": 5.4,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "200 \\times 0.8^{x}",
+       "label": "\\(y = 200 \\times 0.8^{t}\\)",
+       "labelAt": 4,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        200
+       ],
+       "on": [
+        "g",
+        "d"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        242
+       ],
+       "label": "\\((2, 242)\\)",
+       "pos": "above-left",
+       "on": [
+        "g"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:02Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:33Z"
+  }
+ ]
 }

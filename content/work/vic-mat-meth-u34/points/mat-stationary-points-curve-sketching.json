@@ -20,7 +20,10 @@
   "2026-11-01T15:05:28Z check: flagged",
   "2026-11-01T15:14:48Z fix: suggested",
   "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:40Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:49:05Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:38Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -219,6 +222,72 @@
     "For \\(f(x) = x^{3} - 3x\\), \\(f'(x) = 3x^{2} - 3 = 0\\) gives \\(x = -1\\) or \\(x = 1\\). \\(f' < 0\\) between them, so \\(f\\) is strictly decreasing on \\([-1, 1]\\), endpoints included."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{3} - 3x\\). It has a local maximum at \\((-1, 2)\\) and a local minimum at \\((1, -2)\\), where \\(f'(x) = 0\\). Between them the curve falls, so \\(f\\) is strictly decreasing on \\([-1, 1]\\).",
+    "x": {
+     "min": -2.5,
+     "max": 3.5,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{3} - 3x",
+      "label": "\\(y = x^{3} - 3x\\)",
+      "labelAt": 2,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       2
+      ],
+      "label": "\\((-1, 2)\\)",
+      "pos": "above",
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       -2
+      ],
+      "label": "\\((1, -2)\\)",
+      "pos": "below",
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "text",
+      "at": [
+       0,
+       0.4
+      ],
+      "label": "decreasing",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
   "remember": "Set \\(f'(x) = 0\\) to find stationary points, then use the sign of \\(f'\\) to decide their nature.",
   "a": {
    "q": "What are the x-values of the stationary points of \\(f(x) = x^{2} - 6x + 5\\)?",
@@ -293,5 +362,96 @@
     "clue": "Factorise f′ and decide where it is negative."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: f(x) = x^3 - 3x with its local maximum at (-1, 2) and local minimum at (1, -2) marked, strictly decreasing between them.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = x^{3} - 3x\\). It has a local maximum at \\((-1, 2)\\) and a local minimum at \\((1, -2)\\), where \\(f'(x) = 0\\). Between them the curve falls, so \\(f\\) is strictly decreasing on \\([-1, 1]\\).",
+     "x": {
+      "min": -2.5,
+      "max": 3.5,
+      "label": "\\(x\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{3} - 3x",
+       "label": "\\(y = x^{3} - 3x\\)",
+       "labelAt": 2,
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        2
+       ],
+       "label": "\\((-1, 2)\\)",
+       "pos": "above",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        -2
+       ],
+       "label": "\\((1, -2)\\)",
+       "pos": "below",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "text",
+       "at": [
+        0,
+        0.4
+       ],
+       "label": "decreasing",
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:05Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:37Z"
+  }
+ ]
 }

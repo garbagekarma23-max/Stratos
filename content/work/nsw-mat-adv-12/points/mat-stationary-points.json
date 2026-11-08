@@ -10,7 +10,10 @@
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T08:48:36Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:57Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:27Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -170,6 +173,63 @@
    "If the gradient has the same sign on both sides, such as positive, zero, positive, the point is a horizontal point of inflection.",
    "Example: \\(f(x) = x^{3} - 3x^{2}\\), so \\(f'(x) = 3x^{2} - 6x = 3x(x - 2) = 0\\) at \\(x = 0\\) or 2. At \\(x = -1\\), 1 and 3, f' is 9, \\(-3\\) and 9, so \\((0, 0)\\) is a maximum and \\((2, -4)\\) is a minimum."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{3} - 3x^{2}\\). It rises to a maximum at \\((0, 0)\\), falls to a minimum at \\((2, -4)\\), then rises again.",
+    "x": {
+     "min": -1.5,
+     "max": 3.5,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 3,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{3} - 3x^{2}",
+      "label": "\\(y = x^{3} - 3x^{2}\\)",
+      "labelAt": 3.25,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "maximum \\((0, 0)\\)",
+      "pos": "above",
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       -4
+      ],
+      "label": "minimum \\((2, -4)\\)",
+      "pos": "below",
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
+  },
   "remember": "Solve \\(f'(x) = 0\\), then test the gradient on each side to name the type.",
   "a": {
    "q": "A curve has \\(f'(x) = 0\\) at \\(x = 4\\). The gradient is negative just before \\(x = 4\\) and positive just after. What type of stationary point is it?",
@@ -232,5 +292,87 @@
     "clue": "Test the gradient at x = 2 and x = 4, then find f(3)."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = x^3 - 3x^2 with its maximum at (0, 0) and its minimum at (2, -4) marked and labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = x^{3} - 3x^{2}\\). It rises to a maximum at \\((0, 0)\\), falls to a minimum at \\((2, -4)\\), then rises again.",
+     "x": {
+      "min": -1.5,
+      "max": 3.5,
+      "label": "\\(x\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": -6,
+      "max": 3,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{3} - 3x^{2}",
+       "label": "\\(y = x^{3} - 3x^{2}\\)",
+       "labelAt": 3.25,
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "label": "maximum \\((0, 0)\\)",
+       "pos": "above",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -4
+       ],
+       "label": "minimum \\((2, -4)\\)",
+       "pos": "below",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:56Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:26Z"
+  }
+ ]
 }

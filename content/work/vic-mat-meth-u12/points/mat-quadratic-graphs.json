@@ -32,7 +32,11 @@
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
   "2026-11-01T09:24:24Z autoreview: cleared with the fix (remember wording)",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:33Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:59Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:29Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The label -1 sits right against the x-intercept dot at (-1, 0), and the dot covers part of the 1, so in light and dark it reads like a dash and a blob; move the label further left or above the point.; The curve's own label y = (x - 2)^2 - 9 runs into the curve: its last characters, the minus sign and 9, touch the right branch near y = 4, so move the label further left or lower the labelAt value.",
+  "2026-11-08T09:20:32Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -195,7 +199,21 @@
    ],
    "why": "Set \\(y = 0\\): \\((x - 1)^{2} = 16\\), so \\(x - 1 = 4\\) or \\(x - 1 = -4\\). That gives \\(x = 5\\) or \\(x = -3\\). The option \\(x = -5\\) and \\(x = 3\\) comes from taking \\(h\\) as \\(-1\\).",
    "clue": "Set \\(y = 0\\), then take the square root of both sides, remembering both signs."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The parabola y = (x - 2)^2 - 9 from card line 4, concave up, with its vertex (2, -9), its x-intercepts x = -1 and x = 5, and its y-intercept (0, -5) marked.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label -1 sits right against the x-intercept dot at (-1, 0), and the dot covers part of the 1, so in light and dark it reads like a dash and a blob; move the label further left or above the point.",
+      "The curve's own label y = (x - 2)^2 - 9 runs into the curve: its last characters, the minus sign and 9, touch the right branch near y = 4, so move the label further left or lower the labelAt value."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "auto",
  "latex": {
@@ -234,5 +252,340 @@
     "clue": "Set y = 0, then take the square root of both sides, remembering both signs."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The parabola y = (x - 2)^2 - 9 from card line 4, concave up, with its vertex (2, -9), its x-intercepts x = -1 and x = 5, and its y-intercept (0, -5) marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = (x - 2)^{2} - 9\\), concave up, with its vertex at \\((2, -9)\\). It crosses the x-axis at \\(x = -1\\) and \\(x = 5\\), and the y-axis at \\((0, -5)\\).",
+     "x": {
+      "min": -3,
+      "max": 7,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -11,
+      "max": 9,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x - 2)^{2} - 9",
+       "label": "\\(y = (x - 2)^{2} - 9\\)",
+       "labelAt": 5.6,
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        0
+       ],
+       "label": "\\(-1\\)",
+       "pos": "left",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        0
+       ],
+       "label": "\\(5\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        -5
+       ],
+       "label": "\\((0, -5)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -9
+       ],
+       "label": "\\((2, -9)\\)",
+       "pos": "below",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:58Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label -1 sits right against the x-intercept dot at (-1, 0), and the dot covers part of the 1, so in light and dark it reads like a dash and a blob; move the label further left or above the point.",
+     "The curve's own label y = (x - 2)^2 - 9 runs into the curve: its last characters, the minus sign and 9, touch the right branch near y = 4, so move the label further left or lower the labelAt value."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:29Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Quadratic graphs",
+  "card": [
+   "A quadratic graph is a parabola. In turning point form, \\(y = a(x - h)^{2} + k\\), the vertex (turning point) is \\((h, k)\\). Note the sign: \\((x - 3)\\) gives \\(h = 3\\), and \\((x + 3) = (x - (-3))\\) gives \\(h = -3\\).",
+   "If \\(a\\) is positive, the parabola is concave up and the vertex is the lowest point. If \\(a\\) is negative, it is concave down and the vertex is the highest point.",
+   "For the y-intercept, put \\(x = 0\\). For the x-intercepts, put \\(y = 0\\), then solve by factorising or by the quadratic formula.",
+   "Example: \\(y = (x - 2)^{2} - 9\\) has vertex \\((2, -9)\\). Setting \\(y = 0\\) gives \\((x - 2)^{2} = 9\\), so \\(x - 2 = 3\\) or \\(x - 2 = -3\\), and \\(x = 5\\) or \\(x = -1\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = (x - 2)^{2} - 9\\), concave up, with its vertex at \\((2, -9)\\). It crosses the x-axis at \\(x = -1\\) and \\(x = 5\\), and the y-axis at \\((0, -5)\\).",
+    "x": {
+     "min": -3,
+     "max": 10,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -11,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x - 2)^{2} - 9",
+      "label": "\\(y = (x - 2)^{2} - 9\\)",
+      "labelAt": 4.475,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       0
+      ],
+      "label": "\\(-1\\)",
+      "pos": "below-left",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       0
+      ],
+      "label": "\\(5\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -5
+      ],
+      "label": "\\((0, -5)\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       -9
+      ],
+      "label": "\\((2, -9)\\)",
+      "pos": "below",
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
+  },
+  "remember": "To get \\(h\\), flip the sign of the number inside the bracket. \\(k\\) is read as it is. Set \\(y = 0\\) for x-intercepts.",
+  "a": {
+   "q": "What is the vertex of \\(y = 2(x + 4)^{2} - 7\\)?",
+   "opts": [
+    "\\((-4, -7)\\)",
+    "\\((4, -7)\\)",
+    "\\((-4, 7)\\)",
+    "\\((4, 7)\\)"
+   ],
+   "why": "Write \\((x + 4)\\) as \\((x - (-4))\\), so \\(h = -4\\). The \\(k\\) value is \\(-7\\), so the vertex is \\((-4, -7)\\). The option \\((4, -7)\\) is tempting but copies the sign inside the bracket.",
+   "clue": "Whatever is added inside the bracket, \\(h\\) has the opposite sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya graphs \\(y = -(x - 1)^{2} + 16\\). What are the x-intercepts?",
+   "opts": [
+    "\\(x = -3\\) and \\(x = 5\\)",
+    "\\(x = -5\\) and \\(x = 3\\)",
+    "\\(x = 1\\) and \\(x = 16\\)",
+    "\\(x = 0\\) and \\(x = 2\\)"
+   ],
+   "why": "Set \\(y = 0\\): \\((x - 1)^{2} = 16\\), so \\(x - 1 = 4\\) or \\(x - 1 = -4\\). That gives \\(x = 5\\) or \\(x = -3\\). The option \\(x = -5\\) and \\(x = 3\\) comes from taking \\(h\\) as \\(-1\\).",
+   "clue": "Set \\(y = 0\\), then take the square root of both sides, remembering both signs."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The parabola y = (x - 2)^2 - 9 from card line 4, concave up, with its vertex (2, -9), its x-intercepts x = -1 and x = 5, and its y-intercept (0, -5) marked.",
+    "tries": 1,
+    "notes": [
+     [
+      "The label -1 sits right against the x-intercept dot at (-1, 0), and the dot covers part of the 1, so in light and dark it reads like a dash and a blob; move the label further left or above the point.",
+      "The curve's own label y = (x - 2)^2 - 9 runs into the curve: its last characters, the minus sign and 9, touch the right branch near y = 4, so move the label further left or lower the labelAt value."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The parabola y = (x - 2)^2 - 9 from card line 4, concave up, with its vertex (2, -9), its x-intercepts x = -1 and x = 5, and its y-intercept (0, -5) marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = (x - 2)^{2} - 9\\), concave up, with its vertex at \\((2, -9)\\). It crosses the x-axis at \\(x = -1\\) and \\(x = 5\\), and the y-axis at \\((0, -5)\\).",
+     "x": {
+      "min": -3,
+      "max": 10,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -11,
+      "max": 9,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x - 2)^{2} - 9",
+       "label": "\\(y = (x - 2)^{2} - 9\\)",
+       "labelAt": 4.475,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        0
+       ],
+       "label": "\\(-1\\)",
+       "pos": "below-left",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        0
+       ],
+       "label": "\\(5\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        -5
+       ],
+       "label": "\\((0, -5)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -9
+       ],
+       "label": "\\((2, -9)\\)",
+       "pos": "below",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:32Z"
+  }
+ ]
 }

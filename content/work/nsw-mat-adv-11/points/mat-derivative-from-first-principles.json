@@ -9,7 +9,11 @@
   "2026-10-27T01:00:05Z write: done",
   "2026-10-27T01:08:32Z check: passed, cleared",
   "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
-  "2026-11-06T10:41:22Z maths: LaTeX changed by hand"
+  "2026-11-06T10:41:22Z maths: LaTeX changed by hand",
+  "2026-11-08T08:48:36Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T08:48:55Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:25Z pictures: 1 picture turned down. Picture 1 (graph at card 2): redo, high sure. The tangent label sits under P, below where the lines meet, and its left end is closer to the dotted secant (which runs below the tangent left of P) than to the solid tangent, so it is not clear which line it names; put it at the tangent's free end at the upper right, where the solid line now ends unlabelled beside the secant label.; The tangent label sits on the x-axis (its text spans about y = -0.15 to 0.27), so the axis line runs through the word; it should sit clear of the axis.; The y = x^2 label straddles the y-axis, which runs between the = and the x; moving it to the right of the y-axis, clear of the curve, would read more cleanly.",
+  "2026-11-08T09:20:31Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 2,
@@ -101,7 +105,22 @@
    ],
    "why": "The secant gradient is \\(\\frac{(x + h)^{2} + 3(x + h) - x^{2} - 3x}{h}\\), which simplifies to \\(\\frac{2xh + h^{2} + 3h}{h} = 2x + h + 3\\). As \\(h\\) approaches 0, this approaches \\(2x + 3\\). The option \\(2x + 3h\\) keeps \\(h\\), which has gone to 0 in the limit.",
    "clue": "Expand, cancel the \\(h\\) in the denominator, then let \\(h\\) approach 0."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "The curve y = x^2 with a point P at x = 1, a second point Q at x = 1 + h, the secant PQ, the tangent at P, and an arrow along the curve from Q towards P to show the secant turning into the tangent as h approaches 0.",
+    "tries": 1,
+    "notes": [
+     [
+      "The tangent label sits under P, below where the lines meet, and its left end is closer to the dotted secant (which runs below the tangent left of P) than to the solid tangent, so it is not clear which line it names; put it at the tangent's free end at the upper right, where the solid line now ends unlabelled beside the secant label.",
+      "The tangent label sits on the x-axis (its text spans about y = -0.15 to 0.27), so the axis line runs through the word; it should sit clear of the axis.",
+      "The y = x^2 label straddles the y-axis, which runs between the = and the x; moving it to the right of the y-axis, clear of the curve, would read more cleanly."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -140,5 +159,381 @@
     "clue": "Expand, cancel the h in the denominator, then let h approach 0."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The curve y = x^2 with a point P at x = 1, a second point Q at x = 1 + h, the secant PQ, the tangent at P, and an arrow along the curve from Q towards P to show the secant turning into the tangent as h approaches 0.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = x^{2}\\) with \\(P\\) at \\((1, 1)\\) and \\(Q\\) at \\((2, 4)\\), a gap of \\(h = 1\\). The dotted secant joins \\(P\\) and \\(Q\\). As \\(h\\) approaches 0, \\(Q\\) slides down the curve towards \\(P\\), and the secant turns into the tangent at \\(P\\).",
+     "x": {
+      "min": -0.5,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": -0.33,
+       "pos": "above-right"
+      },
+      {
+       "type": "fn",
+       "id": "s",
+       "expr": "3x - 2",
+       "domain": [
+        0.4,
+        2.35
+       ],
+       "label": "secant",
+       "labelAt": 2.35,
+       "pos": "right",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "2x - 1",
+       "domain": [
+        0.1,
+        2.8
+       ],
+       "label": "tangent",
+       "labelAt": 0.77,
+       "pos": "below-right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1.65,
+        4.4
+       ],
+       "to": [
+        1.12,
+        2.1
+       ],
+       "label": "\\(h \\to 0\\)",
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        1
+       ],
+       "label": "\\(P\\)",
+       "pos": "above-left",
+       "on": [
+        "f",
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "label": "\\(Q\\)",
+       "pos": "above-left",
+       "on": [
+        "f",
+        "s"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:55Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The tangent label sits under P, below where the lines meet, and its left end is closer to the dotted secant (which runs below the tangent left of P) than to the solid tangent, so it is not clear which line it names; put it at the tangent's free end at the upper right, where the solid line now ends unlabelled beside the secant label.",
+     "The tangent label sits on the x-axis (its text spans about y = -0.15 to 0.27), so the axis line runs through the word; it should sit clear of the axis.",
+     "The y = x^2 label straddles the y-axis, which runs between the = and the x; moving it to the right of the y-axis, clear of the curve, would read more cleanly."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:24Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "The derivative from first principles",
+  "card": [
+   "The gradient of a secant through \\((x, f(x))\\) and \\((x + h, f(x + h))\\) is \\(\\frac{f(x + h) - f(x)}{h}\\). Here \\(h\\) is the gap in \\(x\\) between the two points.",
+   "As \\(h\\) gets closer to 0, the second point slides towards the first. The secant turns into the tangent at that point.",
+   "The derivative is that limit: \\(f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}\\), the limit as \\(h\\) approaches 0. It gives the gradient of the tangent at \\(x\\).",
+   "Example: \\(f(x) = x^{2}\\). Then \\(\\frac{f(x + h) - f(x)}{h} = \\frac{2xh + h^{2}}{h} = 2x + h\\). As \\(h\\) approaches 0, this approaches \\(2x\\), so \\(f'(x) = 2x\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2}\\) with \\(P\\) at \\((1, 1)\\) and \\(Q\\) at \\((2, 4)\\), a gap of \\(h = 1\\). The dotted secant joins \\(P\\) and \\(Q\\). As \\(h\\) approaches 0, \\(Q\\) slides down the curve towards \\(P\\), and the secant turns into the tangent at \\(P\\).",
+    "x": {
+     "min": -1.2,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 0.27,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "s",
+      "expr": "3x - 2",
+      "domain": [
+       0.4,
+       2.35
+      ],
+      "label": "secant",
+      "labelAt": 2.35,
+      "pos": "right",
+      "style": "dot"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "expr": "2x - 1",
+      "domain": [
+       0.1,
+       2.8
+      ],
+      "label": "tangent",
+      "labelAt": 2.2,
+      "pos": "below-right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1.65,
+       4.4
+      ],
+      "to": [
+       1.12,
+       2.1
+      ],
+      "label": "\\(h \\to 0\\)",
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "label": "\\(P\\)",
+      "pos": "above-left",
+      "on": [
+       "f",
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       4
+      ],
+      "label": "\\(Q\\)",
+      "pos": "above-left",
+      "on": [
+       "f",
+       "s"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Find the secant gradient, simplify it, then let \\(h\\) approach 0.",
+  "a": {
+   "q": "What does \\(f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}\\) give?",
+   "opts": [
+    "The gradient of the tangent at \\(x\\)",
+    "The gradient of the secant between two fixed points",
+    "The average rate of change over an interval",
+    "The value of the function at \\(x\\)"
+   ],
+   "why": "As \\(h\\) approaches 0, the secant becomes the tangent, so the limit is the tangent's gradient. A secant gradient needs two separate points, so it is not the limit.",
+   "clue": "What does the secant turn into as \\(h\\) shrinks?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Using first principles, what is \\(f'(x)\\) for \\(f(x) = x^{2} + 3x\\)?",
+   "opts": [
+    "\\(2x + 3\\)",
+    "\\(2x + 3h\\)",
+    "\\(x^{2} + 3\\)",
+    "\\(2x\\)"
+   ],
+   "why": "The secant gradient is \\(\\frac{(x + h)^{2} + 3(x + h) - x^{2} - 3x}{h}\\), which simplifies to \\(\\frac{2xh + h^{2} + 3h}{h} = 2x + h + 3\\). As \\(h\\) approaches 0, this approaches \\(2x + 3\\). The option \\(2x + 3h\\) keeps \\(h\\), which has gone to 0 in the limit.",
+   "clue": "Expand, cancel the \\(h\\) in the denominator, then let \\(h\\) approach 0."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "The curve y = x^2 with a point P at x = 1, a second point Q at x = 1 + h, the secant PQ, the tangent at P, and an arrow along the curve from Q towards P to show the secant turning into the tangent as h approaches 0.",
+    "tries": 1,
+    "notes": [
+     [
+      "The tangent label sits under P, below where the lines meet, and its left end is closer to the dotted secant (which runs below the tangent left of P) than to the solid tangent, so it is not clear which line it names; put it at the tangent's free end at the upper right, where the solid line now ends unlabelled beside the secant label.",
+      "The tangent label sits on the x-axis (its text spans about y = -0.15 to 0.27), so the axis line runs through the word; it should sit clear of the axis.",
+      "The y = x^2 label straddles the y-axis, which runs between the = and the x; moving it to the right of the y-axis, clear of the curve, would read more cleanly."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The curve y = x^2 with a point P at x = 1, a second point Q at x = 1 + h, the secant PQ, the tangent at P, and an arrow along the curve from Q towards P to show the secant turning into the tangent as h approaches 0.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = x^{2}\\) with \\(P\\) at \\((1, 1)\\) and \\(Q\\) at \\((2, 4)\\), a gap of \\(h = 1\\). The dotted secant joins \\(P\\) and \\(Q\\). As \\(h\\) approaches 0, \\(Q\\) slides down the curve towards \\(P\\), and the secant turns into the tangent at \\(P\\).",
+     "x": {
+      "min": -1.2,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": 0.27,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "s",
+       "expr": "3x - 2",
+       "domain": [
+        0.4,
+        2.35
+       ],
+       "label": "secant",
+       "labelAt": 2.35,
+       "pos": "right",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "2x - 1",
+       "domain": [
+        0.1,
+        2.8
+       ],
+       "label": "tangent",
+       "labelAt": 2.2,
+       "pos": "below-right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1.65,
+        4.4
+       ],
+       "to": [
+        1.12,
+        2.1
+       ],
+       "label": "\\(h \\to 0\\)",
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        1
+       ],
+       "label": "\\(P\\)",
+       "pos": "above-left",
+       "on": [
+        "f",
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "label": "\\(Q\\)",
+       "pos": "above-left",
+       "on": [
+        "f",
+        "s"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:30Z"
+  }
+ ]
 }

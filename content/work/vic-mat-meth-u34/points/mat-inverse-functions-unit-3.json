@@ -31,7 +31,11 @@
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:47Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:40Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:49:04Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:36Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The y-axis has numbers 1 to 6 but the x-axis has none (nums false), so on a graph about swapping x and y the two axes do not match and the student cannot read x = 4 for the point (4, 2) from the axis as they can read y = 4 for (2, 4); give the x-axis numbers too, or take them off both.; The label y = \\sqrt{x} sits just under (1, 1), where all three graphs cross, so it is not clear at a glance which curve it names; place it under the flatter part of the square root curve further right (for example near x = 5).",
+  "2026-11-08T09:20:35Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -133,7 +137,21 @@
    ],
    "why": "The range of \\(g\\) is \\(y \\ge 0\\), so the domain of \\(g^{-1}\\) is \\(x \\ge 0\\). Swap: \\(x = (y - 2)^{2}\\), so \\(y - 2 = \\sqrt{x}\\) since \\(y \\ge 2\\), and \\(y = \\sqrt{x} + 2\\). Using the domain of \\(g\\) as the domain of \\(g^{-1}\\) is the tempting mistake.",
    "clue": "The domain of the inverse is the range of \\(g\\), not the domain of \\(g\\)."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The example on card line 4: y = x^2 restricted to x >= 0 and its inverse y = sqrt(x), as reflections in the line y = x, with equal scales and the points (2, 4) and (4, 2) marked.",
+    "tries": 1,
+    "notes": [
+     [
+      "The y-axis has numbers 1 to 6 but the x-axis has none (nums false), so on a graph about swapping x and y the two axes do not match and the student cannot read x = 4 for the point (4, 2) from the axis as they can read y = 4 for (2, 4); give the x-axis numbers too, or take them off both.",
+      "The label y = \\sqrt{x} sits just under (1, 1), where all three graphs cross, so it is not clear at a glance which curve it names; place it under the flatter part of the square root curve further right (for example near x = 5)."
+     ]
+    ]
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -172,5 +190,365 @@
     "clue": "The domain of the inverse is the range of g, not the domain of g."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = x^2 restricted to x >= 0 and its inverse y = sqrt(x), as reflections in the line y = x, with equal scales and the points (2, 4) and (4, 2) marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = x^{2}\\) for \\(x \\ge 0\\) and its inverse \\(y = \\sqrt{x}\\), reflections of each other in the dotted line \\(y = x\\). The point \\((2, 4)\\) on \\(y = x^{2}\\) matches \\((4, 2)\\) on \\(y = \\sqrt{x}\\). Both start at the origin.",
+     "x": {
+      "min": -1,
+      "max": 6,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "m",
+       "expr": "x",
+       "label": "\\(y = x\\)",
+       "labelAt": 4.6,
+       "pos": "above-left",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "domain": [
+        0,
+        2.45
+       ],
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": 2.3,
+       "pos": "left"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "\\sqrt{x}",
+       "domain": [
+        0,
+        6
+       ],
+       "label": "\\(y = \\sqrt{x}\\)",
+       "labelAt": 0.9,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "label": "\\((2, 4)\\)",
+       "pos": "right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        2
+       ],
+       "label": "\\((4, 2)\\)",
+       "pos": "above-left",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:49:04Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The y-axis has numbers 1 to 6 but the x-axis has none (nums false), so on a graph about swapping x and y the two axes do not match and the student cannot read x = 4 for the point (4, 2) from the axis as they can read y = 4 for (2, 4); give the x-axis numbers too, or take them off both.",
+     "The label y = \\sqrt{x} sits just under (1, 1), where all three graphs cross, so it is not clear at a glance which curve it names; place it under the flatter part of the square root curve further right (for example near x = 5)."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:36Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Inverse functions",
+  "card": [
+   "A function is one-to-one if each y-value comes from only one x-value. A horizontal line cuts its graph at most once. Only a one-to-one function has an inverse function.",
+   "The inverse \\(f^{-1}\\) undoes \\(f\\). Its domain is the range of \\(f\\), and its range is the domain of \\(f\\). The graphs are reflections of each other in the line \\(y = x\\).",
+   "To find \\(f^{-1}\\), swap \\(x\\) and \\(y\\), then solve for \\(y\\). Example: \\(f(x) = 2x + 3\\). Swap: \\(x = 2y + 3\\). Solve: \\(y = \\frac{x - 3}{2}\\). So \\(f^{-1}(x) = \\frac{x - 3}{2}\\).",
+   "\\(y = x^{2}\\) is not one-to-one, as \\(x = 2\\) and \\(x = -2\\) both give 4. Restrict the domain, such as \\(x \\ge 0\\), and it becomes one-to-one. Then the inverse is \\(f^{-1}(x) = \\sqrt{x}\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = x^{2}\\) for \\(x \\ge 0\\) and its inverse \\(y = \\sqrt{x}\\), reflections of each other in the dotted line \\(y = x\\). The point \\((2, 4)\\) on \\(y = x^{2}\\) matches \\((4, 2)\\) on \\(y = \\sqrt{x}\\). Both start at the origin.",
+    "x": {
+     "min": -1,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "m",
+      "expr": "x",
+      "label": "\\(y = x\\)",
+      "labelAt": 4.6,
+      "pos": "above-left",
+      "style": "dot"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "domain": [
+       0,
+       2.45
+      ],
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2.3,
+      "pos": "left"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\sqrt{x}",
+      "domain": [
+       0,
+       6
+      ],
+      "label": "\\(y = \\sqrt{x}\\)",
+      "labelAt": 5.25,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       4
+      ],
+      "label": "\\((2, 4)\\)",
+      "pos": "right",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       2
+      ],
+      "label": "\\((4, 2)\\)",
+      "pos": "above-left",
+      "on": [
+       "g"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f",
+       "g"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Swap \\(x\\) and \\(y\\) to find the inverse. Its domain is the range of \\(f\\).",
+  "a": {
+   "q": "\\(f(x) = 3x - 6\\) is a one-to-one function. What is \\(f^{-1}(x)\\)?",
+   "opts": [
+    "\\(\\frac{x + 6}{3}\\)",
+    "\\(\\frac{x - 6}{3}\\)",
+    "\\(\\frac{x}{3} + 6\\)",
+    "\\(-3x + 6\\)"
+   ],
+   "why": "Swap to get \\(x = 3y - 6\\). Add 6 to get \\(x + 6 = 3y\\), so \\(y = \\frac{x + 6}{3}\\). \\(\\frac{x - 6}{3}\\) is tempting, but it subtracts 6 when the inverse must undo the subtraction by adding 6.",
+   "clue": "Swap \\(x\\) and \\(y\\), then solve for \\(y\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(g(x) = (x - 2)^{2}\\), with domain \\(x \\ge 2\\). What are the domain and rule of \\(g^{-1}\\)?",
+   "opts": [
+    "\\(x \\ge 0\\), \\(g^{-1}(x) = \\sqrt{x} + 2\\)",
+    "\\(x \\ge 2\\), \\(g^{-1}(x) = \\sqrt{x} + 2\\)",
+    "\\(x \\ge 0\\), \\(g^{-1}(x) = \\sqrt{x} - 2\\)",
+    "\\(x \\ge 2\\), \\(g^{-1}(x) = \\sqrt{x} - 2\\)"
+   ],
+   "why": "The range of \\(g\\) is \\(y \\ge 0\\), so the domain of \\(g^{-1}\\) is \\(x \\ge 0\\). Swap: \\(x = (y - 2)^{2}\\), so \\(y - 2 = \\sqrt{x}\\) since \\(y \\ge 2\\), and \\(y = \\sqrt{x} + 2\\). Using the domain of \\(g\\) as the domain of \\(g^{-1}\\) is the tempting mistake.",
+   "clue": "The domain of the inverse is the range of \\(g\\), not the domain of \\(g\\)."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The example on card line 4: y = x^2 restricted to x >= 0 and its inverse y = sqrt(x), as reflections in the line y = x, with equal scales and the points (2, 4) and (4, 2) marked.",
+    "tries": 1,
+    "notes": [
+     [
+      "The y-axis has numbers 1 to 6 but the x-axis has none (nums false), so on a graph about swapping x and y the two axes do not match and the student cannot read x = 4 for the point (4, 2) from the axis as they can read y = 4 for (2, 4); give the x-axis numbers too, or take them off both.",
+      "The label y = \\sqrt{x} sits just under (1, 1), where all three graphs cross, so it is not clear at a glance which curve it names; place it under the flatter part of the square root curve further right (for example near x = 5)."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on card line 4: y = x^2 restricted to x >= 0 and its inverse y = sqrt(x), as reflections in the line y = x, with equal scales and the points (2, 4) and (4, 2) marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = x^{2}\\) for \\(x \\ge 0\\) and its inverse \\(y = \\sqrt{x}\\), reflections of each other in the dotted line \\(y = x\\). The point \\((2, 4)\\) on \\(y = x^{2}\\) matches \\((4, 2)\\) on \\(y = \\sqrt{x}\\). Both start at the origin.",
+     "x": {
+      "min": -1,
+      "max": 6,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -1,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "m",
+       "expr": "x",
+       "label": "\\(y = x\\)",
+       "labelAt": 4.6,
+       "pos": "above-left",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "domain": [
+        0,
+        2.45
+       ],
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": 2.3,
+       "pos": "left"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "\\sqrt{x}",
+       "domain": [
+        0,
+        6
+       ],
+       "label": "\\(y = \\sqrt{x}\\)",
+       "labelAt": 5.25,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "label": "\\((2, 4)\\)",
+       "pos": "right",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        2
+       ],
+       "label": "\\((4, 2)\\)",
+       "pos": "above-left",
+       "on": [
+        "g"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f",
+        "g"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T09:20:35Z"
+  }
+ ]
 }

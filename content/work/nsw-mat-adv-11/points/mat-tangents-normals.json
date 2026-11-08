@@ -11,7 +11,10 @@
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T11:40:40Z recheck: kept for you (the fresh check found a problem)",
   "2026-10-28T11:49:40Z review: approved with the fix",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T08:48:38Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T08:48:55Z pictures: 1 picture waiting for the check",
+  "2026-11-08T09:04:25Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -180,6 +183,73 @@
    "Example: \\(f(x) = x^{2}\\), at \\(x = 3\\). The point is \\((3, 9)\\) and \\(f'(x) = 2x\\), so the tangent gradient is 6. Tangent: \\(y - 9 = 6(x - 3)\\), so \\(y = 6x - 9\\).",
    "The normal gradient is \\(-\\frac{1}{6}\\), so the normal is \\(y - 9 = -\\frac{1}{6}(x - 3)\\), which gives \\(y = -\\frac{x}{6} + \\frac{19}{2}\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curve \\(y = x^{2}\\) and the point \\((3, 9)\\). The tangent \\(y = 6x - 9\\) touches the curve there. The normal \\(y = -\\frac{x}{6} + \\frac{19}{2}\\) passes through the same point at right angles to the tangent.",
+    "x": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 12,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": -2.4,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "expr": "6x - 9",
+      "domain": [
+       1.4,
+       3.6
+      ],
+      "label": "tangent",
+      "labelAt": 3.6,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "-\\frac{x}{6} + \\frac{19}{2}",
+      "label": "normal",
+      "labelAt": 8.2,
+      "pos": "above",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       9
+      ],
+      "label": "\\((3, 9)\\)",
+      "pos": "above-right",
+      "on": [
+       "f",
+       "t",
+       "n"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Use \\(f'(a)\\) for the tangent gradient, then flip it and change the sign for the normal.",
   "a": {
    "q": "The tangent to a curve at a point has gradient 4. What is the gradient of the normal at that point?",
@@ -248,5 +318,97 @@
     "clue": "Find the point and f'(1) first, then use y − y₁ = m(x − x₁)."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The example on cards 3 and 4: y = x^2 at the point (3, 9), the tangent y = 6x - 9 and the normal y = -x/6 + 19/2 through it, drawn with equal scales so the normal is visibly perpendicular, each line labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(y = x^{2}\\) and the point \\((3, 9)\\). The tangent \\(y = 6x - 9\\) touches the curve there. The normal \\(y = -\\frac{x}{6} + \\frac{19}{2}\\) passes through the same point at right angles to the tangent.",
+     "x": {
+      "min": -3,
+      "max": 9,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 12,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": -2.4,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "6x - 9",
+       "domain": [
+        1.4,
+        3.6
+       ],
+       "label": "tangent",
+       "labelAt": 3.6,
+       "pos": "right"
+      },
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "-\\frac{x}{6} + \\frac{19}{2}",
+       "label": "normal",
+       "labelAt": 8.2,
+       "pos": "above",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        9
+       ],
+       "label": "\\((3, 9)\\)",
+       "pos": "above-right",
+       "on": [
+        "f",
+        "t",
+        "n"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T08:48:55Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T09:04:25Z"
+  }
+ ]
 }
