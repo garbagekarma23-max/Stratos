@@ -9,7 +9,8 @@
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: passed, cleared",
-  "2026-11-10T13:55:59Z pictures: the owner asked for a graph at card 4"
+  "2026-11-10T13:55:59Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:50Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -117,5 +118,173 @@
    }
   ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "The empirical rule",
+  "card": [
+   "In a normal distribution, scores cluster around the mean. The empirical rule says how much of the data lies within 1, 2 and 3 standard deviations of the mean.",
+   "About 68% of scores lie within 1 standard deviation of the mean. About 95% lie within 2, and about 99.7% lie within 3.",
+   "The distribution is symmetric, so the percentages split evenly either side of the mean. Within 1 standard deviation, about 34% lie on each side.",
+   "Example: test marks have mean 60 and standard deviation 10. Within 2 standard deviations means 40 to 80, so about 95% of marks are in that range. The other 5% are split evenly, so about 2.5% score above 80."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A normal curve of test marks with mean 60 and standard deviation 10. The area under the curve from 40 to 80, within 2 standard deviations of the mean, is shaded and holds about 95% of marks. The two tails, below 40 and above 80, each hold about 2.5%.",
+    "x": {
+     "min": 20,
+     "max": 100,
+     "label": "Mark",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 0.05
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "f",
+      "span": [
+       40,
+       80
+      ],
+      "label": "about 95%",
+      "at": [
+       60,
+       0.017
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}",
+      "domain": [
+       20,
+       100
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       30,
+       0.004
+      ],
+      "label": "2.5%",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       90,
+       0.004
+      ],
+      "label": "2.5%",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "Within 1, 2 and 3 standard deviations of the mean: about 68%, 95% and 99.7%.",
+  "a": {
+   "q": "Heights of Year 12 students are normally distributed, with mean 170 cm and standard deviation 8 cm. About what percentage of heights lie between 154 cm and 186 cm?",
+   "opts": [
+    "95%",
+    "68%",
+    "99.7%",
+    "50%"
+   ],
+   "why": "154 and 186 are each 16 cm from the mean, which is 2 standard deviations. About 95% of scores lie within 2 standard deviations. 68% is tempting, but that is the share within only 1 standard deviation, 162 to 178.",
+   "clue": "Find how many standard deviations 154 is below the mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Bags of rice have a normal distribution of mass, with mean 1000 g and standard deviation 20 g. About what percentage of bags have a mass above 1040 g?",
+   "opts": [
+    "2.5%",
+    "5%",
+    "0.15%",
+    "16%"
+   ],
+   "why": "1040 g is 2 standard deviations above the mean. About 95% of bags lie within 2 standard deviations, so about 5% lie outside, split evenly between the two ends. That gives 2.5% above 1040 g. 5% is wrong because it counts both ends.",
+   "clue": "The scores outside the range are split evenly between both ends."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A normal curve of test marks with mean 60 and standard deviation 10 (Mark, 20 to 100). The area under it from 40 to 80 is shaded and labelled about 95%, and each tail, below 40 and above 80, is labelled 2.5%. No numbers on the vertical axis.",
+    "why": "It shows the card's example: 95% of marks within 2 standard deviations, with the other 5% split evenly between the two tails.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A normal curve of test marks with mean 60 and standard deviation 10 (Mark, 20 to 100). The area under it from 40 to 80 is shaded and labelled about 95%, and each tail, below 40 and above 80, is labelled 2.5%. No numbers on the vertical axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A normal curve of test marks with mean 60 and standard deviation 10. The area under the curve from 40 to 80, within 2 standard deviations of the mean, is shaded and holds about 95% of marks. The two tails, below 40 and above 80, each hold about 2.5%.",
+     "x": {
+      "min": 20,
+      "max": 100,
+      "label": "Mark",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 0.05
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "f",
+       "span": [
+        40,
+        80
+       ],
+       "label": "about 95%",
+       "at": [
+        60,
+        0.017
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}",
+       "domain": [
+        20,
+        100
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        30,
+        0.004
+       ],
+       "label": "2.5%",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        90,
+        0.004
+       ],
+       "label": "2.5%",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:50Z"
+  }
+ ]
 }

@@ -31,7 +31,10 @@
   "2026-11-04T09:47:09Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:58:31Z write: done",
   "2026-11-04T10:08:04Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:57:08Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T13:57:08Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:44Z pictures: 2 pictures waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -145,7 +148,21 @@
    ],
    "why": "The gradient \\(m\\) stays at 2, so the tilt does not change. The y-intercept goes from 1 to 6, which moves the line up by \\(6 - 1 = 5\\) units. Shifting by 6 units forgets that the line started at 1.",
    "clue": "Which number changed, \\(m\\) or \\(c\\), and by how much?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "The dashed line y = x + 1, the steeper line y = 3x + 1 through the same point (0, 1), and the line y = x + 4, moved up 3 units with an arrow labelled up 3. No axis numbers.",
+    "why": "It shows that changing m tilts the line while changing c moves it up without tilting it."
+   },
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The line y = -3x + 5 crossing the y-axis at (0, 5), with a run arrow labelled run 1 and a rise arrow labelled rise -3 reaching (1, 2). No axis numbers.",
+    "why": "It links the gradient -3 and the y-intercept 5 in the equation to what the line looks like."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
@@ -184,5 +201,408 @@
     "clue": "Which number changed, m or c, and by how much?"
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Gradient and y-intercept",
+  "card": [
+   "A straight line can be written as \\(y = mx + c\\). In this form, \\(m\\) is the gradient and \\(c\\) is the y-intercept.",
+   "The y-intercept is the point where the line cuts the y-axis. It is the point \\((0, c)\\), because \\(x\\) is 0 there.",
+   "Changing \\(m\\) tilts the line, making it steeper or flatter. Changing \\(c\\) shifts the whole line up or down without tilting it.",
+   "Example: \\(y = -3x + 5\\) has gradient \\(-3\\) and cuts the y-axis at \\((0, 5)\\). It slopes down to the right."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Three lines. The dashed line is \\(y = x + 1\\). Changing \\(m\\) to 3 gives \\(y = 3x + 1\\), which is steeper and still crosses the y-axis at \\((0, 1)\\). Changing \\(c\\) to 4 gives \\(y = x + 4\\), the dashed line moved up 3 units with the same steepness.",
+    "x": {
+     "min": -3,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "o",
+      "expr": "x + 1",
+      "style": "dash",
+      "label": "\\(y = x + 1\\)",
+      "labelAt": 2.3,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "m",
+      "expr": "3x + 1",
+      "domain": [
+       -1.3333,
+       2.6667
+      ],
+      "label": "\\(y = 3x + 1\\)",
+      "labelAt": 2.3,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "c",
+      "expr": "x + 4",
+      "domain": [
+       -3,
+       4
+      ],
+      "label": "\\(y = x + 4\\)",
+      "labelAt": -1,
+      "pos": "above-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       -2,
+       -1
+      ],
+      "to": [
+       -2,
+       2
+      ],
+      "label": "up 3",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "o",
+       "m"
+      ],
+      "is": "intersection",
+      "label": "\\((0, 1)\\)",
+      "pos": "below-right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(y = -3x + 5\\). It crosses the y-axis at \\((0, 5)\\) and slopes down to the right: a run of 1 across gives a rise of \\(-3\\), reaching \\((1, 2)\\), so the gradient is \\(-3\\).",
+    "x": {
+     "min": -1.5,
+     "max": 4.5,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "-3x + 5",
+      "domain": [
+       -1,
+       3
+      ],
+      "label": "\\(y = -3x + 5\\)",
+      "labelAt": 2.4,
+      "pos": "above-right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       1,
+       5
+      ],
+      "label": "run 1",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       5
+      ],
+      "to": [
+       1,
+       2
+      ],
+      "label": "rise \\(-3\\)",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       5
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 5)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "below-left"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = mx + c\\), \\(m\\) sets the tilt and \\(c\\) sets where the line meets the y-axis.",
+  "a": {
+   "q": "A line has the equation \\(y = 4x - 7\\). What are its gradient and y-intercept?",
+   "opts": [
+    "Gradient 4, y-intercept \\(-7\\)",
+    "Gradient \\(-7\\), y-intercept 4",
+    "Gradient 4, y-intercept 7",
+    "Gradient \\(-4\\), y-intercept 7"
+   ],
+   "why": "The number multiplying \\(x\\) is the gradient, 4. The number added on its own is the y-intercept, which is \\(-7\\) here. Swapping the two numbers is a common mistake.",
+   "clue": "The gradient is the number multiplying \\(x\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line \\(y = 2x + 1\\) is changed to \\(y = 2x + 6\\). What happens to the line?",
+   "opts": [
+    "It shifts up 5 units and stays parallel",
+    "It becomes steeper and keeps its y-intercept",
+    "It shifts up 6 units and stays parallel",
+    "It becomes flatter and cuts the axis higher"
+   ],
+   "why": "The gradient \\(m\\) stays at 2, so the tilt does not change. The y-intercept goes from 1 to 6, which moves the line up by \\(6 - 1 = 5\\) units. Shifting by 6 units forgets that the line started at 1.",
+   "clue": "Which number changed, \\(m\\) or \\(c\\), and by how much?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "The dashed line y = x + 1, the steeper line y = 3x + 1 through the same point (0, 1), and the line y = x + 4, moved up 3 units with an arrow labelled up 3. No axis numbers.",
+    "why": "It shows that changing m tilts the line while changing c moves it up without tilting it.",
+    "waiting": true
+   },
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The line y = -3x + 5 crossing the y-axis at (0, 5), with a run arrow labelled run 1 and a rise arrow labelled rise -3 reaching (1, 2). No axis numbers.",
+    "why": "It links the gradient -3 and the y-intercept 5 in the equation to what the line looks like.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The dashed line y = x + 1, the steeper line y = 3x + 1 through the same point (0, 1), and the line y = x + 4, moved up 3 units with an arrow labelled up 3. No axis numbers.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Three lines. The dashed line is \\(y = x + 1\\). Changing \\(m\\) to 3 gives \\(y = 3x + 1\\), which is steeper and still crosses the y-axis at \\((0, 1)\\). Changing \\(c\\) to 4 gives \\(y = x + 4\\), the dashed line moved up 3 units with the same steepness.",
+     "x": {
+      "min": -3,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -3,
+      "max": 9,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "o",
+       "expr": "x + 1",
+       "style": "dash",
+       "label": "\\(y = x + 1\\)",
+       "labelAt": 2.3,
+       "pos": "below-right"
+      },
+      {
+       "type": "fn",
+       "id": "m",
+       "expr": "3x + 1",
+       "domain": [
+        -1.3333,
+        2.6667
+       ],
+       "label": "\\(y = 3x + 1\\)",
+       "labelAt": 2.3,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "c",
+       "expr": "x + 4",
+       "domain": [
+        -3,
+        4
+       ],
+       "label": "\\(y = x + 4\\)",
+       "labelAt": -1,
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        -2,
+        -1
+       ],
+       "to": [
+        -2,
+        2
+       ],
+       "label": "up 3",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        1
+       ],
+       "on": [
+        "o",
+        "m"
+       ],
+       "is": "intersection",
+       "label": "\\((0, 1)\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:44Z"
+  },
+  {
+   "want": 2,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The line y = -3x + 5 crossing the y-axis at (0, 5), with a run arrow labelled run 1 and a rise arrow labelled rise -3 reaching (1, 2). No axis numbers.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line \\(y = -3x + 5\\). It crosses the y-axis at \\((0, 5)\\) and slopes down to the right: a run of 1 across gives a rise of \\(-3\\), reaching \\((1, 2)\\), so the gradient is \\(-3\\).",
+     "x": {
+      "min": -1.5,
+      "max": 4.5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -4,
+      "max": 8,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "-3x + 5",
+       "domain": [
+        -1,
+        3
+       ],
+       "label": "\\(y = -3x + 5\\)",
+       "labelAt": 2.4,
+       "pos": "above-right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        0,
+        5
+       ],
+       "to": [
+        1,
+        5
+       ],
+       "label": "run 1",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        5
+       ],
+       "to": [
+        1,
+        2
+       ],
+       "label": "rise \\(-3\\)",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        5
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept",
+       "label": "\\((0, 5)\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        2
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((1, 2)\\)",
+       "pos": "below-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:44Z"
+  }
+ ]
 }

@@ -46,7 +46,8 @@
   "2026-11-10T13:45:50Z pictures: the owner's new ask takes the place of the graph at card 1: three graphs, one under each of card lines 2 to 4, each with one dashed tangent",
   "2026-11-10T13:45:58Z pictures: the owner asked for a graph at card 2",
   "2026-11-10T13:45:59Z pictures: the owner asked for a graph at card 3",
-  "2026-11-10T13:45:59Z pictures: the owner asked for a graph at card 4"
+  "2026-11-10T13:45:59Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:54Z pictures: 3 pictures waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -889,6 +890,423 @@
    ],
    "status": "replaced by the owner's new ask: three graphs, one under each of card lines 2 to 4",
    "at_time": "2026-11-10T13:45:50Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Tangent lines",
+  "card": [
+   "A tangent line touches the curve at a point and has the same direction as the curve there. Its gradient, rise divided by run between any two points on the line, is the instantaneous rate of change at that point.",
+   [
+    "Positive gradient",
+    "the tangent slopes up, so the function is increasing at that point."
+   ],
+   [
+    "Negative gradient",
+    "the tangent slopes down, so the function is decreasing at that point."
+   ],
+   [
+    "Zero gradient",
+    "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to \\(y = x^{2}\\) at \\(x = 0\\) is horizontal, so the rate there is 0."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve rises, to the right of its lowest point. The tangent touches the curve at one dot and slopes up, so its gradient is positive.",
+    "x": {
+     "min": -0.4,
+     "max": 6,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -0.4,
+     "max": 3.6,
+     "label": "\\(y\\)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+      "domain": [
+       0.5,
+       5.5
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 1.0,
+      "pos": "above-right"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "style": "dash",
+      "expr": "x - 2.75",
+      "domain": [
+       3.44,
+       5.56
+      ],
+      "label": "tangent",
+      "labelAt": 3.6,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       1.75
+      ],
+      "on": [
+       "f",
+       "t"
+      ]
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve falls, to the left of its lowest point. The tangent touches the curve at one dot and slopes down, so its gradient is negative.",
+    "x": {
+     "min": -0.4,
+     "max": 6,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -0.4,
+     "max": 3.6,
+     "label": "\\(y\\)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+      "domain": [
+       0.5,
+       5.5
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 5.0,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "style": "dash",
+      "expr": "-x + 3.25",
+      "domain": [
+       0.44,
+       2.56
+      ],
+      "label": "tangent",
+      "labelAt": 2.45,
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       1.75
+      ],
+      "on": [
+       "f",
+       "t"
+      ]
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent at its lowest point. The tangent touches the curve at one dot and is horizontal, so its gradient is zero.",
+    "x": {
+     "min": -0.4,
+     "max": 6,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -0.4,
+     "max": 3.6,
+     "label": "\\(y\\)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+      "domain": [
+       0.5,
+       5.5
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 5.0,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "style": "dash",
+      "expr": "1",
+      "domain": [
+       1.5,
+       4.5
+      ],
+      "label": "tangent",
+      "labelAt": 4.3,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       1
+      ],
+      "on": [
+       "f",
+       "t"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Tangent up is positive, down is negative, horizontal is zero.",
+  "a": {
+   "q": "The tangent to a curve at point \\(P\\) is horizontal. What does this tell you about the curve at \\(P\\)?",
+   "opts": [
+    "The rate of change at \\(P\\) is zero",
+    "The rate of change at \\(P\\) is 1",
+    "The curve is decreasing at \\(P\\)",
+    "The rate of change at \\(P\\) is undefined"
+   ],
+   "why": "A horizontal line has gradient 0, so the instantaneous rate of change at \\(P\\) is 0. It is not decreasing, because a decreasing curve has a tangent that slopes down.",
+   "clue": "What is the gradient of a horizontal line?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A tangent to a curve at \\((0, 5)\\) also passes through \\((2, 1)\\). What is the instantaneous rate of change at \\((0, 5)\\)?",
+   "opts": [
+    "\\(-2\\)",
+    "2",
+    "\\(-4\\)",
+    "\\(-\\frac{1}{2}\\)"
+   ],
+   "why": "The gradient is \\(\\frac{1 - 5}{2 - 0} = \\frac{-4}{2} = -2\\), so the curve is decreasing at that point. The value \\(-4\\) is only the rise and has not been divided by the run.",
+   "clue": "Rise over run, and check which way the line slopes."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at x = 4.5 where the curve rises (gradient 1), drawn dashed, about 3 units long, centred on its point of contact, with a dot at that point and the label tangent. The same curve as the graphs under lines 3 and 4, so the three read as a set.",
+    "why": "It shows a tangent that slopes up where the function is increasing, beside the line that says so.",
+    "waiting": true
+   },
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at x = 1.5 where the curve falls (gradient -1), drawn dashed, about 3 units long, centred on its point of contact, with a dot at that point and the label tangent. The same curve as the graphs under lines 2 and 4.",
+    "why": "It shows a tangent that slopes down where the function is decreasing, beside the line that says so.",
+    "waiting": true
+   },
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at the lowest point (3, 1), horizontal (gradient 0), drawn dashed, about 3 units long, centred on the lowest point, with a dot there and the label tangent. The same curve as the graphs under lines 2 and 3.",
+    "why": "It shows a horizontal tangent at a turning point, beside the line that says the gradient there is zero.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at x = 4.5 where the curve rises (gradient 1), drawn dashed, about 3 units long, centred on its point of contact, with a dot at that point and the label tangent. The same curve as the graphs under lines 3 and 4, so the three read as a set.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve rises, to the right of its lowest point. The tangent touches the curve at one dot and slopes up, so its gradient is positive.",
+     "x": {
+      "min": -0.4,
+      "max": 6,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -0.4,
+      "max": 3.6,
+      "label": "\\(y\\)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+       "domain": [
+        0.5,
+        5.5
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 1.0,
+       "pos": "above-right"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "style": "dash",
+       "expr": "x - 2.75",
+       "domain": [
+        3.44,
+        5.56
+       ],
+       "label": "tangent",
+       "labelAt": 3.6,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        4.5,
+        1.75
+       ],
+       "on": [
+        "f",
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:53Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at x = 1.5 where the curve falls (gradient -1), drawn dashed, about 3 units long, centred on its point of contact, with a dot at that point and the label tangent. The same curve as the graphs under lines 2 and 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve falls, to the left of its lowest point. The tangent touches the curve at one dot and slopes down, so its gradient is negative.",
+     "x": {
+      "min": -0.4,
+      "max": 6,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -0.4,
+      "max": 3.6,
+      "label": "\\(y\\)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+       "domain": [
+        0.5,
+        5.5
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 5.0,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "style": "dash",
+       "expr": "-x + 3.25",
+       "domain": [
+        0.44,
+        2.56
+       ],
+       "label": "tangent",
+       "labelAt": 2.45,
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        1.75
+       ],
+       "on": [
+        "f",
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:53Z"
+  },
+  {
+   "want": 3,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at the lowest point (3, 1), horizontal (gradient 0), drawn dashed, about 3 units long, centred on the lowest point, with a dot there and the label tangent. The same curve as the graphs under lines 2 and 3.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent at its lowest point. The tangent touches the curve at one dot and is horizontal, so its gradient is zero.",
+     "x": {
+      "min": -0.4,
+      "max": 6,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -0.4,
+      "max": 3.6,
+      "label": "\\(y\\)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+       "domain": [
+        0.5,
+        5.5
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 5.0,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "style": "dash",
+       "expr": "1",
+       "domain": [
+        1.5,
+        4.5
+       ],
+       "label": "tangent",
+       "labelAt": 4.3,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        1
+       ],
+       "on": [
+        "f",
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:53Z"
   }
  ]
 }

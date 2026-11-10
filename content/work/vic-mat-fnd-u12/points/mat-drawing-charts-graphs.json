@@ -27,7 +27,8 @@
   "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
   "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
   "2026-11-10T13:52:08Z pictures: the owner asked for a chart at card 1",
-  "2026-11-10T13:52:08Z pictures: the owner asked for a graph at card 2"
+  "2026-11-10T13:52:08Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T13:57:50Z pictures: 2 pictures waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -315,5 +316,385 @@
     "clue": "Find the fraction of the whole, then take that share of 360°."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Drawing charts and graphs",
+  "card": [
+   [
+    "Column graph",
+    "Use it to compare separate groups, such as the number of students in each year level. Draw gaps between the columns."
+   ],
+   [
+    "Line graph",
+    "Use it to show how something changes over time, such as a temperature each month. Join the points with a line."
+   ],
+   [
+    "Pie chart",
+    "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: \\(\\frac{1}{4}\\) of the whole is \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\)."
+   ],
+   "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A column graph of the number of students in each year level, with gaps between the columns: Year 7 has 150, Year 8 has 140, Year 9 has 130, Year 10 has 120, Year 11 has 100 and Year 12 has 90.",
+    "x": {
+     "label": "Year level"
+    },
+    "y": {
+     "min": 0,
+     "max": 160,
+     "step": 20,
+     "label": "Students"
+    },
+    "bars": [
+     [
+      "7",
+      150
+     ],
+     [
+      "8",
+      140
+     ],
+     [
+      "9",
+      130
+     ],
+     [
+      "10",
+      120
+     ],
+     [
+      "11",
+      100
+     ],
+     [
+      "12",
+      90
+     ]
+    ]
+   },
+   "2": {
+    "kind": "graph",
+    "alt": "A line graph of the average temperature each month for months 1 to 6 (January to June), with the points joined by a line: 26, 25, 22, 18, 15 and 12 degrees. The line falls as the months go by.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "Month",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 30,
+     "label": "Temperature (°C)",
+     "step": 5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "t",
+      "points": [
+       [
+        1,
+        26
+       ],
+       [
+        2,
+        25
+       ],
+       [
+        3,
+        22
+       ],
+       [
+        4,
+        18
+       ],
+       [
+        5,
+        15
+       ],
+       [
+        6,
+        12
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       26
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       25
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       22
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       18
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       15
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       12
+      ],
+      "on": [
+       "t"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Match the graph to the data, then add a title and clear labels.",
+  "a": {
+   "q": "Which graph best shows a town's rainfall each month over one year?",
+   "opts": [
+    "A line graph with a title and labels",
+    "A pie chart with a title and labels",
+    "A column graph with no axis labels",
+    "A table of values with no title"
+   ],
+   "why": "Rainfall each month is a change over time, so a labelled line graph suits it. A pie chart shows parts of a whole, and the monthly rainfall figures are not shares of a total that matter here. The other two are missing a title or labels.",
+   "clue": "Think about change over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a survey of 40 students, 10 chose bus to get to school. What angle is the bus slice on a pie chart?",
+   "opts": [
+    "90°",
+    "10°",
+    "40°",
+    "144°"
+   ],
+   "why": "The bus share is \\(\\frac{10}{40} = \\frac{1}{4}\\), and \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\). The answer 144° comes from wrongly using 40% as the share, since \\(0.4 \\times 360^{\\circ} = 144^{\\circ}\\). But 10 out of 40 is 25%, not 40%.",
+   "clue": "Find the fraction of the whole, then take that share of 360°."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "chart",
+    "brief": "A column graph with gaps between the columns of the number of students in each year level: 7 has 150, 8 has 140, 9 has 130, 10 has 120, 11 has 100, 12 has 90, x label Year level, y label Students.",
+    "why": "It shows the card's own column graph example for comparing separate groups.",
+    "waiting": true
+   },
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "A line graph of the average temperature each month for months 1 to 6 (January to June): 26, 25, 22, 18, 15, 12, with the points joined by a line, x label Month, y label Temperature (°C).",
+    "why": "It shows the card's own line graph example for a change over time.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "chart",
+   "brief": "A column graph with gaps between the columns of the number of students in each year level: 7 has 150, 8 has 140, 9 has 130, 10 has 120, 11 has 100, 12 has 90, x label Year level, y label Students.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "bar",
+     "alt": "A column graph of the number of students in each year level, with gaps between the columns: Year 7 has 150, Year 8 has 140, Year 9 has 130, Year 10 has 120, Year 11 has 100 and Year 12 has 90.",
+     "x": {
+      "label": "Year level"
+     },
+     "y": {
+      "min": 0,
+      "max": 160,
+      "step": 20,
+      "label": "Students"
+     },
+     "bars": [
+      [
+       "7",
+       150
+      ],
+      [
+       "8",
+       140
+      ],
+      [
+       "9",
+       130
+      ],
+      [
+       "10",
+       120
+      ],
+      [
+       "11",
+       100
+      ],
+      [
+       "12",
+       90
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:50Z"
+  },
+  {
+   "want": 2,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A line graph of the average temperature each month for months 1 to 6 (January to June): 26, 25, 22, 18, 15, 12, with the points joined by a line, x label Month, y label Temperature (°C).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A line graph of the average temperature each month for months 1 to 6 (January to June), with the points joined by a line: 26, 25, 22, 18, 15 and 12 degrees. The line falls as the months go by.",
+     "x": {
+      "min": 0,
+      "max": 8,
+      "label": "Month",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 30,
+      "label": "Temperature (°C)",
+      "step": 5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "curve",
+       "id": "t",
+       "points": [
+        [
+         1,
+         26
+        ],
+        [
+         2,
+         25
+        ],
+        [
+         3,
+         22
+        ],
+        [
+         4,
+         18
+        ],
+        [
+         5,
+         15
+        ],
+        [
+         6,
+         12
+        ]
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        26
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        25
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        22
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        18
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        15
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        12
+       ],
+       "on": [
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:50Z"
+  }
+ ]
 }

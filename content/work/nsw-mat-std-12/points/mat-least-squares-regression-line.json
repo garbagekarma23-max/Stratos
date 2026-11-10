@@ -13,7 +13,8 @@
   "2026-10-29T16:45:07Z recheck: kept for you (the fresh check found a problem)",
   "2026-10-30T11:59:08Z review: approved with the fix",
   "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
-  "2026-11-10T13:55:59Z pictures: the owner asked for a graph at card 4"
+  "2026-11-10T13:55:59Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:49Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -234,5 +235,307 @@
     "clue": "Multiply 2 by 8 before you add 12."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Least-squares regression line",
+  "card": [
+   "A least-squares regression line is the line of best fit for a scatterplot. A calculator finds it, and it is written as \\(y = a + bx\\), where \\(x\\) is the explanatory variable and \\(y\\) is the response variable.",
+   "The gradient \\(b\\) shows how much \\(y\\) changes, on average, when \\(x\\) increases by 1. The y-intercept \\(a\\) is the predicted value of \\(y\\) when \\(x = 0\\).",
+   "To predict, put a value of \\(x\\) into the equation and work out \\(y\\). The line is used to predict \\(y\\) from \\(x\\), not \\(x\\) from \\(y\\).",
+   "Example: a line for a bakery is \\(y = 20 + 3x\\), where \\(x\\) is the temperature in °C and \\(y\\) is the number of iced drinks sold. At \\(x = 30\\), \\(y = 20 + 3 \\times 30 = 110\\) drinks."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A scatterplot of temperature in °C against iced drinks sold for the bakery, with the regression line \\(y = 20 + 3x\\) drawn through the points. The line crosses the y-axis at 20. At \\(x = 30\\) the line gives \\(y = 110\\) drinks, marked as the point \\((30, 110)\\).",
+    "x": {
+     "min": 0,
+     "max": 50,
+     "label": "Temp (°C)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 160,
+     "label": "Drinks",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       14,
+       58
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       16,
+       72
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       18,
+       80
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       20,
+       76
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       22,
+       90
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       24,
+       87
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       26,
+       93
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       28,
+       107
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       32,
+       112
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       34,
+       127
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "20 + 3x",
+      "domain": [
+       0,
+       45
+      ],
+      "label": "\\(y = 20 + 3x\\)",
+      "labelAt": 5,
+      "pos": "below-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       30,
+       110
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       30,
+       110
+      ],
+      "on": [
+       "f"
+      ],
+      "open": true,
+      "label": "\\((30, 110)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Put \\(x\\) into \\(y = a + bx\\) to predict \\(y\\). The gradient is the change in \\(y\\) for each 1 increase in \\(x\\).",
+  "a": {
+   "q": "A regression line is \\(y = 20 + 3x\\), where \\(x\\) is the temperature in °C and \\(y\\) is the iced drinks sold. What does the gradient 3 tell us?",
+   "opts": [
+    "Each 1°C rise adds about 3 drinks sold",
+    "Each extra drink sold adds about 3°C",
+    "At 0°C, about 3 drinks are sold",
+    "At 3°C, about 20 drinks are sold"
+   ],
+   "why": "The gradient is the change in \\(y\\) for each 1 increase in \\(x\\). Here, \\(y\\) is drinks and \\(x\\) is temperature, so each 1°C rise adds about 3 drinks. The value 20 is the y-intercept, so saying 3 drinks are sold at 0°C mixes up the gradient and the intercept.",
+   "clue": "Gradient is the change in \\(y\\) for a 1 unit rise in \\(x\\)."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi's regression line is \\(y = 12 + 2x\\), where \\(x\\) is the hours studied and \\(y\\) is the test mark. What mark does the line predict for 8 hours of study?",
+   "opts": [
+    "28",
+    "20",
+    "112",
+    "22"
+   ],
+   "why": "Put \\(x = 8\\) into the line: \\(y = 12 + 2 \\times 8 = 12 + 16 = 28\\). Answering 112 comes from adding 12 and 2 first, then multiplying by 8: \\((12 + 2) \\times 8 = 112\\). That ignores the order of operations, as the multiplication must be done before the addition.",
+   "clue": "Multiply 2 by 8 before you add 12."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A scatterplot of the bakery's data, Temp (°C) 0 to 50 against Drinks 0 to 160, 10 points from 14 to 34 °C, with the regression line y = 20 + 3x (labelled) drawn through them from the y-axis at 20. The prediction at x = 30, the point (30, 110), is an open dot with dashed guides to the axes.",
+    "why": "It shows the line as the line of best fit through the points and how putting x = 30 into it gives a prediction on the line.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A scatterplot of the bakery's data, Temp (°C) 0 to 50 against Drinks 0 to 160, 10 points from 14 to 34 °C, with the regression line y = 20 + 3x (labelled) drawn through them from the y-axis at 20. The prediction at x = 30, the point (30, 110), is an open dot with dashed guides to the axes.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A scatterplot of temperature in °C against iced drinks sold for the bakery, with the regression line \\(y = 20 + 3x\\) drawn through the points. The line crosses the y-axis at 20. At \\(x = 30\\) the line gives \\(y = 110\\) drinks, marked as the point \\((30, 110)\\).",
+     "x": {
+      "min": 0,
+      "max": 50,
+      "label": "Temp (°C)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 160,
+      "label": "Drinks",
+      "step": 20
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "point",
+       "at": [
+        14,
+        58
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        16,
+        72
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        18,
+        80
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        20,
+        76
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        22,
+        90
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        24,
+        87
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        26,
+        93
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        28,
+        107
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        32,
+        112
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        34,
+        127
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "20 + 3x",
+       "domain": [
+        0,
+        45
+       ],
+       "label": "\\(y = 20 + 3x\\)",
+       "labelAt": 5,
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        30,
+        110
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        30,
+        110
+       ],
+       "on": [
+        "f"
+       ],
+       "open": true,
+       "label": "\\((30, 110)\\)",
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:49Z"
+  }
+ ]
 }

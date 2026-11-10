@@ -12,7 +12,8 @@
   "2026-10-29T12:41:46Z fix: suggested",
   "2026-10-29T14:30:29Z autoreview: cleared with the fix (card other)",
   "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
-  "2026-11-10T13:52:27Z pictures: the owner asked for a chart at card 3"
+  "2026-11-10T13:52:27Z pictures: the owner asked for a chart at card 3",
+  "2026-11-10T13:57:47Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -255,5 +256,138 @@
     "clue": "Find Q3 − Q1 for each student, not highest − lowest."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Spread and box plots",
+  "card": [
+   [
+    "Range",
+    "highest score \\(-\\) lowest score. It shows the full spread, but it can be pulled a long way by outliers."
+   ],
+   [
+    "Quartiles",
+    "Order the data. The median is \\(Q_{2}\\). \\(Q_{1}\\) is the median of the lower half and \\(Q_{3}\\) is the median of the upper half. \\(\\text{IQR} = Q_{3} - Q_{1}\\). It measures the spread of the middle half, so outliers barely change it."
+   ],
+   [
+    "Box plot",
+    "It is drawn from five numbers: lowest, \\(Q_{1}\\), median, \\(Q_{3}\\) and highest. The box runs from \\(Q_{1}\\) to \\(Q_{3}\\), with a line at the median. Whiskers reach to the lowest and highest scores."
+   ],
+   "Example: 2, 4, 5, 7, 8, 10, 12, 20. Median \\(= (7 + 8) \\div 2 = 7.5\\). \\(Q_{1} = (4 + 5) \\div 2 = 4.5\\). \\(Q_{3} = (10 + 12) \\div 2 = 11\\). \\(\\text{IQR} = 11 - 4.5 = 6.5\\). Range \\(= 20 - 2 = 18\\). To compare two sets, a smaller IQR means the middle of the data is less spread out."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot of 2, 4, 5, 7, 8, 10, 12, 20. The whiskers run from the lowest score 2 to the highest score 20. The box runs from \\(Q_{1} = 4.5\\) to \\(Q_{3} = 11\\), with a line at the median, 7.5.",
+    "x": {
+     "min": 0,
+     "max": 22,
+     "step": 2,
+     "label": "Score"
+    },
+    "sets": [
+     {
+      "data": [
+       2,
+       4,
+       5,
+       7,
+       8,
+       10,
+       12,
+       20
+      ]
+     }
+    ],
+    "stats": {
+     "min": 2,
+     "q1": 4.5,
+     "median": 7.5,
+     "q3": 11,
+     "max": 20,
+     "iqr": 6.5,
+     "range": 18
+    }
+   }
+  },
+  "remember": "Range uses the two ends. IQR uses the middle half, so outliers barely change it.",
+  "a": {
+   "q": "Which set of five numbers is used to draw a box plot?",
+   "opts": [
+    "Lowest, \\(Q_{1}\\), median, \\(Q_{3}\\), highest",
+    "Lowest, mean, median, mode, highest",
+    "\\(Q_{1}\\), \\(Q_{2}\\), \\(Q_{3}\\), range, IQR",
+    "Lowest, \\(Q_{1}\\), mean, \\(Q_{3}\\), highest"
+   ],
+   "why": "A box plot uses the lowest score, \\(Q_{1}\\), the median, \\(Q_{3}\\) and the highest score. Mean and mode are measures of centre, but they are not part of a box plot's five numbers.",
+   "clue": "The box runs from \\(Q_{1}\\) to \\(Q_{3}\\) with a line inside it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben's quiz scores have \\(Q_{1} = 12\\) and \\(Q_{3} = 20\\), lowest 4 and highest 30. Mia's scores have \\(Q_{1} = 10\\) and \\(Q_{3} = 24\\), lowest 8 and highest 26. Whose middle half of scores is less spread out, and what is that IQR?",
+   "opts": [
+    "Ben's, with an IQR of 8",
+    "Mia's, with an IQR of 14",
+    "Ben's, with an IQR of 26",
+    "Mia's, with an IQR of 18"
+   ],
+   "why": "Ben's \\(\\text{IQR} = 20 - 12 = 8\\) and Mia's \\(\\text{IQR} = 24 - 10 = 14\\). The smaller IQR means less spread in the middle half, so Ben's. Ben's range of 26 is larger than Mia's 18, but range uses only the two ends.",
+   "clue": "Find \\(Q_{3} - Q_{1}\\) for each student, not highest \\(-\\) lowest."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "chart",
+    "brief": "A box plot of the card's example data 2, 4, 5, 7, 8, 10, 12, 20 on a Score axis from 0 to 22: whiskers from 2 to 20, the box from Q1 = 4.5 to Q3 = 11, with a line at the median 7.5.",
+    "why": "It shows the five numbers the card names drawn as a box plot, using the card's own example data.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "chart",
+   "brief": "A box plot of the card's example data 2, 4, 5, 7, 8, 10, 12, 20 on a Score axis from 0 to 22: whiskers from 2 to 20, the box from Q1 = 4.5 to Q3 = 11, with a line at the median 7.5.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "box",
+     "alt": "A box plot of 2, 4, 5, 7, 8, 10, 12, 20. The whiskers run from the lowest score 2 to the highest score 20. The box runs from \\(Q_{1} = 4.5\\) to \\(Q_{3} = 11\\), with a line at the median, 7.5.",
+     "x": {
+      "min": 0,
+      "max": 22,
+      "step": 2,
+      "label": "Score"
+     },
+     "sets": [
+      {
+       "data": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        10,
+        12,
+        20
+       ]
+      }
+     ],
+     "stats": {
+      "min": 2,
+      "q1": 4.5,
+      "median": 7.5,
+      "q3": 11,
+      "max": 20,
+      "iqr": 6.5,
+      "range": 18
+     }
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:47Z"
+  }
+ ]
 }

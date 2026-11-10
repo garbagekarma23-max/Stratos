@@ -10,7 +10,9 @@
   "2026-11-04T09:47:09Z check: flagged",
   "2026-11-04T09:58:31Z fix: suggested",
   "2026-11-04T17:58:54Z autoreview: cleared with the fix (b wording)",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:57:09Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T13:57:45Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 1,
@@ -163,7 +165,15 @@
    ],
    "why": "The y-axis is the line of symmetry, so the point \\((5, 25)\\) has a mirror image at \\((-5, 25)\\). Changing the signs of both \\(x\\) and \\(y\\), as in \\((-5, -25)\\), would put the point below the x-axis, but the curve never goes below it.",
    "clue": "Reflect the point across the y-axis."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "The parabola y = x^2 from x = -3 to 3 on a grid, through the plotted points (-2, 4), (-1, 1), (0, 0), (1, 1) and (2, 4), each labelled, with the turning point at the origin.",
+    "why": "It shows the table of values from the example plotted and joined into the U-shaped curve."
+   }
+  ]
  },
  "cleared_by": "auto",
  "latex": {
@@ -202,5 +212,243 @@
     "clue": "Reflect the point across the y-axis."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Graphing parabolas",
+  "card": [
+   "The graph of \\(y = x^{2}\\) is a U-shaped curve called a parabola. To draw it, work out \\(y\\) for several x-values, plot the points and join them with a smooth curve.",
+   "Example: \\(x = -2\\), \\(-1\\), 0, 1, 2 give \\(y = 4\\), 1, 0, 1, 4. Squaring a negative number gives a positive answer, so \\(y\\) is never below 0.",
+   "The turning point is where the curve changes direction. For \\(y = x^{2}\\) it is at the origin \\((0, 0)\\), the lowest point.",
+   "The y-axis is the line of symmetry. The left side is a mirror image of the right side, so \\((3, 9)\\) and \\((-3, 9)\\) are both on the curve."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2}\\), a U-shaped curve, through the plotted points \\((-2, 4)\\), \\((-1, 1)\\), \\((0, 0)\\), \\((1, 1)\\) and \\((2, 4)\\). The curve never goes below the x-axis, and its lowest point is the origin.",
+    "x": {
+     "min": -3.5,
+     "max": 3.5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": false,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "domain": [
+       -2.8,
+       2.8
+      ],
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((-2, 4)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((-1, 1)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, 1)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((2, 4)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "\\(y = x^{2}\\) is a U-shaped parabola, with its turning point at \\((0, 0)\\) and a mirror line along the y-axis.",
+  "a": {
+   "q": "Which point lies on the graph of \\(y = x^{2}\\)?",
+   "opts": [
+    "\\((-4, 16)\\)",
+    "\\((-4, -16)\\)",
+    "\\((4, 8)\\)",
+    "\\((4, -16)\\)"
+   ],
+   "why": "When \\(x = -4\\), \\(y = (-4)^{2} = 16\\), because a negative number squared is positive. \\((4, 8)\\) is tempting, but it comes from doubling 4 instead of squaring it.",
+   "clue": "Square the x-value first."
+  },
+  "b": {
+   "d": 2,
+   "q": "The point \\((5, 25)\\) is on the graph of \\(y = x^{2}\\). Which other point must also be on the graph?",
+   "opts": [
+    "\\((-5, 25)\\)",
+    "\\((-5, -25)\\)",
+    "\\((25, 5)\\)",
+    "\\((5, -25)\\)"
+   ],
+   "why": "The y-axis is the line of symmetry, so the point \\((5, 25)\\) has a mirror image at \\((-5, 25)\\). Changing the signs of both \\(x\\) and \\(y\\), as in \\((-5, -25)\\), would put the point below the x-axis, but the curve never goes below it.",
+   "clue": "Reflect the point across the y-axis."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "The parabola y = x^2 from x = -3 to 3 on a grid, through the plotted points (-2, 4), (-1, 1), (0, 0), (1, 1) and (2, 4), each labelled, with the turning point at the origin.",
+    "why": "It shows the table of values from the example plotted and joined into the U-shaped curve.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The parabola y = x^2 from x = -3 to 3 on a grid, through the plotted points (-2, 4), (-1, 1), (0, 0), (1, 1) and (2, 4), each labelled, with the turning point at the origin.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = x^{2}\\), a U-shaped curve, through the plotted points \\((-2, 4)\\), \\((-1, 1)\\), \\((0, 0)\\), \\((1, 1)\\) and \\((2, 4)\\). The curve never goes below the x-axis, and its lowest point is the origin.",
+     "x": {
+      "min": -3.5,
+      "max": 3.5,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -1,
+      "max": 8,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "equal": false,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "domain": [
+        -2.8,
+        2.8
+       ],
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": 2.6,
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        4
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((-2, 4)\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        1
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((-1, 1)\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        1
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((1, 1)\\)",
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((2, 4)\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:44Z"
+  }
+ ]
 }

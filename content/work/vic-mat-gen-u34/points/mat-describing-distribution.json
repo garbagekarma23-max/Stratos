@@ -31,7 +31,8 @@
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: passed, cleared",
   "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
-  "2026-11-10T13:52:37Z pictures: the owner asked for a graph at card 1"
+  "2026-11-10T13:52:37Z pictures: the owner asked for a graph at card 1",
+  "2026-11-10T13:57:51Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -215,5 +216,167 @@
     "clue": "Which measures are pulled least by extreme values?"
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Describing a distribution",
+  "card": [
+   [
+    "Shape",
+    "A distribution is symmetric if both sides mirror each other. It is positively skewed if the tail stretches to the right, and negatively skewed if the tail stretches to the left."
+   ],
+   [
+    "Centre",
+    "The centre is the median (the middle value) or the mean (the average). In a skewed distribution, the mean is pulled towards the tail."
+   ],
+   [
+    "Spread",
+    "The spread is the IQR (\\(Q_{3} - Q_{1}\\)) or the standard deviation. Median and IQR go together, as do mean and standard deviation."
+   ],
+   [
+    "Outliers",
+    "An outlier is a value far from the rest. Outliers pull the mean and standard deviation more than the median and IQR, so with skew or outliers, median and IQR are the better pair."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A negatively skewed distribution. Most values are bunched at the right, where the curve peaks, and the tail stretches out to the left.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Value"
+    },
+    "y": {
+     "min": 0,
+     "max": 0.7,
+     "label": "Frequency"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(10 - x)^{2}e^{-(10 - x)}",
+      "domain": [
+       0,
+       10
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       4.6,
+       0.2
+      ],
+      "to": [
+       1.6,
+       0.2
+      ],
+      "label": "tail",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       8,
+       0.56
+      ],
+      "label": "most values",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "Describe shape, centre, spread and outliers, and use median and IQR when data is skewed.",
+  "a": {
+   "q": "Most scores in a histogram are bunched at the left, with a long tail to the right. What is the shape?",
+   "opts": [
+    "Positively skewed",
+    "Negatively skewed",
+    "Symmetric",
+    "Symmetric with outliers"
+   ],
+   "why": "The tail names the skew, and this tail points right, so it is positively skewed. It is not negatively skewed, which has its tail on the left.",
+   "clue": "Look at which way the tail points."
+  },
+  "b": {
+   "d": 3,
+   "q": "House prices in a suburb are positively skewed, with a few very expensive mansions. Which pair best describes centre and spread?",
+   "opts": [
+    "Median and IQR",
+    "Mean and standard deviation",
+    "Mean and IQR",
+    "Median and standard deviation"
+   ],
+   "why": "The mansions pull the mean and standard deviation upwards, so they misdescribe most houses. The median and IQR are less affected, and they are the matching pair.",
+   "clue": "Which measures are pulled least by extreme values?"
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "A smooth negatively skewed distribution curve, axes Value and Frequency with no numbers. The curve peaks near the right, labelled most values, and its tail stretches to the left, marked by an arrow labelled tail.",
+    "why": "It shows what a tail stretching to one side looks like, so the student can name the skew from its direction.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A smooth negatively skewed distribution curve, axes Value and Frequency with no numbers. The curve peaks near the right, labelled most values, and its tail stretches to the left, marked by an arrow labelled tail.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A negatively skewed distribution. Most values are bunched at the right, where the curve peaks, and the tail stretches out to the left.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Value"
+     },
+     "y": {
+      "min": 0,
+      "max": 0.7,
+      "label": "Frequency"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(10 - x)^{2}e^{-(10 - x)}",
+       "domain": [
+        0,
+        10
+       ]
+      },
+      {
+       "type": "arrow",
+       "from": [
+        4.6,
+        0.2
+       ],
+       "to": [
+        1.6,
+        0.2
+       ],
+       "label": "tail",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        8,
+        0.56
+       ],
+       "label": "most values",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:51Z"
+  }
+ ]
 }

@@ -10,7 +10,8 @@
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: passed, cleared",
   "2026-11-10T13:52:27Z pictures: the owner asked for a chart at card 1",
-  "2026-11-10T13:52:27Z pictures: the owner asked for a chart at card 3"
+  "2026-11-10T13:52:27Z pictures: the owner asked for a chart at card 3",
+  "2026-11-10T13:57:47Z pictures: 2 pictures waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -148,5 +149,242 @@
    }
   ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "Displaying data",
+  "card": [
+   [
+    "Column graph",
+    "uses separate bars with gaps between them. It suits categorical data, such as the favourite sport of each student in a class."
+   ],
+   [
+    "Dot plot",
+    "puts one dot above a number on a number line for each score. It suits small sets of numerical data, such as 12 test marks out of 10."
+   ],
+   [
+    "Histogram",
+    "uses touching bars, each covering a class interval, such as 0 to 9 or 10 to 19. It suits large sets of numerical data, especially measures."
+   ],
+   [
+    "Stem-and-leaf plot",
+    "splits each value into a stem and a leaf, so 47 has stem 4 and leaf 7. It shows the shape and keeps every original value."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A column graph of the favourite sport of each student in a class: Soccer 9, Netball 7, Cricket 5 and Tennis 4. The bars are separate, with gaps between them.",
+    "x": {
+     "label": "Sport"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "step": 2,
+     "label": "Students"
+    },
+    "bars": [
+     [
+      "Soccer",
+      9
+     ],
+     [
+      "Netball",
+      7
+     ],
+     [
+      "Cricket",
+      5
+     ],
+     [
+      "Tennis",
+      4
+     ]
+    ]
+   },
+   "3": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of the time students take to travel to school, in class intervals of 10 minutes from 0 to 50. The bars touch: 12 students in 0 to 10 minutes, 25 in 10 to 20, 18 in 20 to 30, 8 in 30 to 40 and 3 in 40 to 50.",
+    "x": {
+     "min": 0,
+     "max": 50,
+     "step": 10,
+     "label": "Time (minutes)"
+    },
+    "y": {
+     "min": 0,
+     "max": 30,
+     "step": 5,
+     "label": "Students"
+    },
+    "classes": [
+     [
+      0,
+      10,
+      12
+     ],
+     [
+      10,
+      20,
+      25
+     ],
+     [
+      20,
+      30,
+      18
+     ],
+     [
+      30,
+      40,
+      8
+     ],
+     [
+      40,
+      50,
+      3
+     ]
+    ]
+   }
+  },
+  "remember": "Gaps between bars suit categories. Touching bars suit grouped numbers.",
+  "a": {
+   "q": "Which display suits the data on the favourite pet of each student in a class?",
+   "opts": [
+    "Column graph",
+    "Histogram",
+    "Stem-and-leaf plot",
+    "Dot plot"
+   ],
+   "why": "Favourite pet is categorical, so separate bars with gaps suit it. A histogram is for grouped numerical data, and it has touching bars.",
+   "clue": "Pets are names of groups, not numbers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev records the exact height of each of 200 students and wants to group the heights in intervals. Which display suits this best?",
+   "opts": [
+    "Histogram",
+    "Column graph",
+    "Dot plot",
+    "Stem-and-leaf plot"
+   ],
+   "why": "Heights are numerical and there are many of them, so grouping them in class intervals with a histogram suits. A dot plot suits small sets, and a column graph suits categories.",
+   "clue": "Think of a large set of measures grouped in intervals."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "chart",
+    "brief": "A column graph of the favourite sport of each student in a class: Soccer 9, Netball 7, Cricket 5, Tennis 4, with gaps between the bars. Axes: Sport, Students.",
+    "why": "It shows what separate bars with gaps look like for categorical data.",
+    "waiting": true
+   },
+   {
+    "at": "card 3",
+    "kind": "chart",
+    "brief": "A histogram of Time (minutes) to travel to school, class intervals of 10 from 0 to 50 with touching bars: 12, 25, 18, 8 and 3 students. y-axis Students.",
+    "why": "Next to the column graph, it shows touching bars over class intervals, the difference the remember line names.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "chart",
+   "brief": "A column graph of the favourite sport of each student in a class: Soccer 9, Netball 7, Cricket 5, Tennis 4, with gaps between the bars. Axes: Sport, Students.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "bar",
+     "alt": "A column graph of the favourite sport of each student in a class: Soccer 9, Netball 7, Cricket 5 and Tennis 4. The bars are separate, with gaps between them.",
+     "x": {
+      "label": "Sport"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "step": 2,
+      "label": "Students"
+     },
+     "bars": [
+      [
+       "Soccer",
+       9
+      ],
+      [
+       "Netball",
+       7
+      ],
+      [
+       "Cricket",
+       5
+      ],
+      [
+       "Tennis",
+       4
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:46Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "chart",
+   "brief": "A histogram of Time (minutes) to travel to school, class intervals of 10 from 0 to 50 with touching bars: 12, 25, 18, 8 and 3 students. y-axis Students.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "histogram",
+     "alt": "A histogram of the time students take to travel to school, in class intervals of 10 minutes from 0 to 50. The bars touch: 12 students in 0 to 10 minutes, 25 in 10 to 20, 18 in 20 to 30, 8 in 30 to 40 and 3 in 40 to 50.",
+     "x": {
+      "min": 0,
+      "max": 50,
+      "step": 10,
+      "label": "Time (minutes)"
+     },
+     "y": {
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "label": "Students"
+     },
+     "classes": [
+      [
+       0,
+       10,
+       12
+      ],
+      [
+       10,
+       20,
+       25
+      ],
+      [
+       20,
+       30,
+       18
+      ],
+      [
+       30,
+       40,
+       8
+      ],
+      [
+       40,
+       50,
+       3
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:46Z"
+  }
+ ]
 }

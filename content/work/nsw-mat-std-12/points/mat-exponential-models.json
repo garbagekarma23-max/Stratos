@@ -13,7 +13,8 @@
   "2026-10-29T16:45:07Z recheck: kept for you (the fresh check found a problem)",
   "2026-10-30T11:57:24Z review: approved with the fix",
   "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
-  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4"
+  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:48Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -276,5 +277,200 @@
     "clue": "Multiply by 0.8 once for each year, so the power is 3."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Exponential models",
+  "card": [
+   "An exponential model changes by a fixed percentage each period. It has the form \\(y = a(b)^{x}\\), where \\(x\\) is the number of periods.",
+   [
+    "\\(a\\)",
+    "the starting value, when \\(x = 0\\). \\(b\\) is the multiplier for each period."
+   ],
+   [
+    "Growth",
+    "\\(b\\) is above 1. A rise of 5% each period gives \\(b = 1 + 0.05 = 1.05\\)."
+   ],
+   [
+    "Decay",
+    "\\(b\\) is between 0 and 1. A fall of 15% each period gives \\(b = 1 - 0.15 = 0.85\\). Example: a car worth $20 000 that loses 15% a year has \\(V = 20\\,000 \\times 0.85^{x}\\). After 2 years, \\(V = 20\\,000 \\times 0.85^{2} = \\$14\\,450\\)."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The car's value \\(V = 20\\,000 \\times 0.85^{x}\\) against years. The curve starts at $20 000 when \\(x = 0\\) and falls more slowly each year, because each fall is 15% of a smaller value. After 2 years the value is $14 450.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Years",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 25000,
+     "label": "Value ($)",
+     "step": 5000
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "v",
+      "expr": "20000(0.85)^{x}",
+      "domain": [
+       0,
+       10
+      ],
+      "label": "\\(V = 20\\,000 \\times 0.85^{x}\\)",
+      "labelAt": 4,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       20000
+      ],
+      "on": [
+       "v"
+      ],
+      "is": "y-intercept",
+      "label": "starting value",
+      "pos": "above-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       14450
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       14450
+      ],
+      "on": [
+       "v"
+      ],
+      "label": "\\((2, 14\\,450)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Find \\(b\\) by adding the percentage rate to 1 for growth, or taking it from 1 for decay.",
+  "a": {
+   "q": "A town of 4000 people grows by 3% each year. Which equation models the population \\(P\\) after \\(x\\) years?",
+   "opts": [
+    "\\(P = 4000 \\times 1.03^{x}\\)",
+    "\\(P = 4000 \\times 0.03^{x}\\)",
+    "\\(P = 4000 \\times 3^{x}\\)",
+    "\\(P = 4000 \\times 0.97^{x}\\)"
+   ],
+   "why": "Growth of 3% means the multiplier is \\(1 + 0.03 = 1.03\\). Using 0.97 is tempting, but that is the multiplier for a 3% fall, not a rise.",
+   "clue": "For growth, add the rate to 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya buys a laptop for $2000. It loses 20% of its value each year. What is it worth after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$3456"
+   ],
+   "why": "Decay of 20% gives \\(b = 0.8\\), so \\(V = 2000 \\times 0.8^{3} = 2000 \\times 0.512 = \\$1024\\). Subtracting $400 (20% of the original $2000) each year gives $800, which is wrong, because each year's fall is 20% of the current, smaller value.",
+   "clue": "Multiply by 0.8 once for each year, so the power is 3."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The car's value V = 20 000 x 0.85^x against Years (0 to 10), Value ($) 0 to 25 000, labelled with its equation. The point (0, 20 000) is labelled starting value, and the point (2, 14 450) is marked with dashed guides to the axes.",
+    "why": "A decay curve that falls more slowly each year shows why a fixed percentage fall is not a fixed dollar fall.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The car's value V = 20 000 x 0.85^x against Years (0 to 10), Value ($) 0 to 25 000, labelled with its equation. The point (0, 20 000) is labelled starting value, and the point (2, 14 450) is marked with dashed guides to the axes.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The car's value \\(V = 20\\,000 \\times 0.85^{x}\\) against years. The curve starts at $20 000 when \\(x = 0\\) and falls more slowly each year, because each fall is 15% of a smaller value. After 2 years the value is $14 450.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Years",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 25000,
+      "label": "Value ($)",
+      "step": 5000
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "v",
+       "expr": "20000(0.85)^{x}",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "\\(V = 20\\,000 \\times 0.85^{x}\\)",
+       "labelAt": 4,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        20000
+       ],
+       "on": [
+        "v"
+       ],
+       "is": "y-intercept",
+       "label": "starting value",
+       "pos": "above-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        14450
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        14450
+       ],
+       "on": [
+        "v"
+       ],
+       "label": "\\((2, 14\\,450)\\)",
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:48Z"
+  }
+ ]
 }

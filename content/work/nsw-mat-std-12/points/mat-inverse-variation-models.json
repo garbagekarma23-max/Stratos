@@ -10,7 +10,8 @@
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: passed, cleared",
   "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
-  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4"
+  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:48Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -155,5 +156,171 @@
     "clue": "Distance stays 240 km, so speed × time stays the same."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Inverse variation models",
+  "card": [
+   "In an inverse variation, \\(y = \\frac{k}{x}\\), where \\(k\\) is a fixed number called the constant. As \\(x\\) gets bigger, \\(y\\) gets smaller.",
+   "Doubling \\(x\\) halves \\(y\\). Tripling \\(x\\) divides \\(y\\) by 3. The product \\(x \\times y\\) always equals \\(k\\).",
+   "The graph is a curve called a hyperbola. It never touches either axis.",
+   "Example: a 120 km trip takes \\(t = \\frac{120}{s}\\) hours at a speed of \\(s\\) km/h. At 60 km/h, \\(t = 120 \\div 60 = 2\\) hours. At 120 km/h, \\(t = 1\\) hour. Doubling the speed halved the time."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The curve \\(t = \\frac{120}{s}\\), time in hours against speed in km/h for a 120 km trip. It falls as the speed rises and never touches either axis. It passes through \\((60, 2)\\) and \\((120, 1)\\): doubling the speed halves the time.",
+    "x": {
+     "min": 0,
+     "max": 150,
+     "label": "Speed (km/h)",
+     "step": 30
+    },
+    "y": {
+     "min": 0,
+     "max": 7,
+     "label": "Time (h)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "t",
+      "expr": "\\frac{120}{x}",
+      "domain": [
+       18,
+       150
+      ],
+      "label": "\\(t = \\frac{120}{s}\\)",
+      "labelAt": 30,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       60,
+       2
+      ],
+      "on": [
+       "t"
+      ],
+      "label": "\\((60, 2)\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       120,
+       1
+      ],
+      "on": [
+       "t"
+      ],
+      "label": "\\((120, 1)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "In \\(y = \\frac{k}{x}\\), \\(x \\times y\\) stays the same, so when one doubles the other halves.",
+  "a": {
+   "q": "\\(y\\) varies inversely with \\(x\\). When \\(x = 4\\), \\(y = 12\\). What is \\(y\\) when \\(x = 8\\)?",
+   "opts": [
+    "6",
+    "24",
+    "3",
+    "1.5"
+   ],
+   "why": "Here \\(k = x \\times y = 4 \\times 12 = 48\\), so \\(y = \\frac{48}{8} = 6\\). Doubling \\(x\\) halves \\(y\\). The answer 24 comes from doubling \\(y\\), which treats the relationship as direct rather than inverse.",
+   "clue": "Find \\(k\\) first by multiplying \\(x\\) and \\(y\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila's trip is 240 km. At an average speed of 80 km/h it takes 3 hours. If she slows to an average of 60 km/h, how long does the trip take?",
+   "opts": [
+    "4 hours",
+    "2.25 hours",
+    "3 hours",
+    "5 hours"
+   ],
+   "why": "\\(\\text{Time} = \\frac{240}{\\text{speed}}\\), so \\(t = 240 \\div 60 = 4\\) hours. Check: \\(80 \\times 3 = 240\\) and \\(60 \\times 4 = 240\\), so the product stays the same. Slower speed means more time, so 2.25 hours is wrong. That answer comes from multiplying 3 by \\(\\frac{60}{80}\\), which treats the relationship as direct.",
+   "clue": "Distance stays 240 km, so \\(\\text{speed} \\times \\text{time}\\) stays the same."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The curve t = 120/s, Time (h) 0 to 7 against Speed (km/h) 0 to 150, labelled with its equation, with the points (60, 2) and (120, 1) marked and labelled. The curve never touches either axis.",
+    "why": "It shows the hyperbola's shape and that doubling the speed halves the time.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The curve t = 120/s, Time (h) 0 to 7 against Speed (km/h) 0 to 150, labelled with its equation, with the points (60, 2) and (120, 1) marked and labelled. The curve never touches either axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The curve \\(t = \\frac{120}{s}\\), time in hours against speed in km/h for a 120 km trip. It falls as the speed rises and never touches either axis. It passes through \\((60, 2)\\) and \\((120, 1)\\): doubling the speed halves the time.",
+     "x": {
+      "min": 0,
+      "max": 150,
+      "label": "Speed (km/h)",
+      "step": 30
+     },
+     "y": {
+      "min": 0,
+      "max": 7,
+      "label": "Time (h)",
+      "step": 1
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "\\frac{120}{x}",
+       "domain": [
+        18,
+        150
+       ],
+       "label": "\\(t = \\frac{120}{s}\\)",
+       "labelAt": 30,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        60,
+        2
+       ],
+       "on": [
+        "t"
+       ],
+       "label": "\\((60, 2)\\)",
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        120,
+        1
+       ],
+       "on": [
+        "t"
+       ],
+       "label": "\\((120, 1)\\)",
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:48Z"
+  }
+ ]
 }

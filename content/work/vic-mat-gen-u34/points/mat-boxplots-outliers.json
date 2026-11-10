@@ -19,7 +19,8 @@
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: passed, cleared",
   "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
-  "2026-11-10T13:52:37Z pictures: the owner asked for a chart at card 4"
+  "2026-11-10T13:52:37Z pictures: the owner asked for a chart at card 4",
+  "2026-11-10T13:57:52Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -167,5 +168,129 @@
     "clue": "A value on the fence is not beyond it."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Boxplots and outliers",
+  "card": [
+   "The IQR is \\(Q_{3} - Q_{1}\\). An outlier is a value below \\(Q_{1} - 1.5 \\times \\text{IQR}\\) or above \\(Q_{3} + 1.5 \\times \\text{IQR}\\). These two numbers are the fences.",
+   "Example: \\(Q_{1} = 20\\) and \\(Q_{3} = 32\\). The IQR is 12 and \\(1.5 \\times 12 = 18\\). The fences are \\(20 - 18 = 2\\) and \\(32 + 18 = 50\\).",
+   "A value exactly on a fence is not an outlier. It must be beyond the fence, so 50 is not an outlier but 51 is.",
+   "On a boxplot, outliers are drawn as separate points. The whiskers stop at the smallest and largest values that are not outliers."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A boxplot with the box from \\(Q_{1} = 20\\) to \\(Q_{3} = 32\\) and the median at 26. The fences are 2 and 50. The lower whisker stops at 8. The upper whisker stops at 50, which is on the fence, so it is not an outlier. The value 56 is beyond the fence and is drawn as a separate point.",
+    "x": {
+     "min": 0,
+     "max": 60,
+     "step": 10,
+     "label": "Value"
+    },
+    "outliers": true,
+    "sets": [
+     {
+      "data": [
+       8,
+       15,
+       20,
+       22,
+       24,
+       26,
+       29,
+       31,
+       32,
+       50,
+       56
+      ]
+     }
+    ],
+    "stats": {
+     "q1": 20,
+     "q3": 32,
+     "iqr": 12
+    }
+   }
+  },
+  "remember": "Find the IQR, build the fences with \\(1.5 \\times \\text{IQR}\\), and plot anything beyond them as a point.",
+  "a": {
+   "q": "A data set has \\(Q_{1} = 40\\) and \\(Q_{3} = 52\\). What is the upper fence for outliers?",
+   "opts": [
+    "70",
+    "64",
+    "88",
+    "18"
+   ],
+   "why": "\\(\\text{IQR} = 52 - 40 = 12\\), and \\(1.5 \\times 12 = 18\\). The upper fence is \\(52 + 18 = 70\\). Adding only the IQR gives 64, which skips the 1.5.",
+   "clue": "Add \\(1.5 \\times \\text{IQR}\\) to \\(Q_{3}\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A boxplot of daily bike hires has \\(Q_{1} = 15\\) and \\(Q_{3} = 27\\). Which value would be drawn as a separate point?",
+   "opts": [
+    "46",
+    "45",
+    "44",
+    "42"
+   ],
+   "why": "\\(\\text{IQR} = 12\\), so the upper fence is \\(27 + 18 = 45\\). Only 46 is above it. The value 45 is on the fence, so it is not an outlier.",
+   "clue": "A value on the fence is not beyond it."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "chart",
+    "brief": "A boxplot on a Value axis from 0 to 60, data 8, 15, 20, 22, 24, 26, 29, 31, 32, 50, 56: box from Q1 = 20 to Q3 = 32, median 26, lower whisker to 8, upper whisker to 50 (on the upper fence, so not an outlier), and 56 drawn as a separate point.",
+    "why": "It shows outliers drawn as separate points and the whisker stopping at the largest value that is not an outlier, the card's example fences of 2 and 50.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "chart",
+   "brief": "A boxplot on a Value axis from 0 to 60, data 8, 15, 20, 22, 24, 26, 29, 31, 32, 50, 56: box from Q1 = 20 to Q3 = 32, median 26, lower whisker to 8, upper whisker to 50 (on the upper fence, so not an outlier), and 56 drawn as a separate point.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "box",
+     "alt": "A boxplot with the box from \\(Q_{1} = 20\\) to \\(Q_{3} = 32\\) and the median at 26. The fences are 2 and 50. The lower whisker stops at 8. The upper whisker stops at 50, which is on the fence, so it is not an outlier. The value 56 is beyond the fence and is drawn as a separate point.",
+     "x": {
+      "min": 0,
+      "max": 60,
+      "step": 10,
+      "label": "Value"
+     },
+     "outliers": true,
+     "sets": [
+      {
+       "data": [
+        8,
+        15,
+        20,
+        22,
+        24,
+        26,
+        29,
+        31,
+        32,
+        50,
+        56
+       ]
+      }
+     ],
+     "stats": {
+      "q1": 20,
+      "q3": 32,
+      "iqr": 12
+     }
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:51Z"
+  }
+ ]
 }

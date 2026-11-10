@@ -18,7 +18,8 @@
   "2026-11-05T06:46:38Z adapt: done",
   "2026-11-05T06:53:51Z check: passed, cleared",
   "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
-  "2026-11-10T13:52:09Z pictures: the owner asked for a graph at card 4"
+  "2026-11-10T13:52:09Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:44Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -274,5 +275,249 @@
     "clue": "Multiply the daily rate by 5, then add the fixed amount."
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Linear models in context",
+  "card": [
+   "A linear model has a rule like \\(y = mx + c\\). It fits a situation where something changes by the same amount for each step.",
+   [
+    "Rate",
+    "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
+   ],
+   [
+    "Intercept",
+    "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as a call-out fee paid before any work is done."
+   ],
+   "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\)."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
+    "x": {
+     "min": 0,
+     "max": 5.5,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 350,
+     "label": "Cost ($)",
+     "step": 50
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "45x + 80",
+      "domain": [
+       0,
+       5.5
+      ],
+      "label": "\\(C = 45t + 80\\)",
+      "labelAt": 4.2,
+      "pos": "above-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       125
+      ],
+      "to": [
+       2,
+       125
+      ],
+      "label": "1 hour",
+      "pos": "below"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       125
+      ],
+      "to": [
+       2,
+       170
+      ],
+      "label": "+$45",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       80
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "call-out fee",
+      "pos": "below-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       3,
+       215
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       215
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((3, 215)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
+  "a": {
+   "q": "A taxi fare in Perth is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 tell you?",
+   "opts": [
+    "The fare rises by $2.50 for each extra kilometre",
+    "The fare for a trip of 0 km is $2.50",
+    "The fare for a trip of 4 km is $2.50",
+    "The fare rises by $4 for each extra kilometre"
+   ],
+   "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
+   "clue": "Which number multiplies \\(d\\)?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya hires a ladder in Darwin. The cost is \\(C = 12n + 30\\), where \\(n\\) is the number of days. What is the cost for 5 days?",
+   "opts": [
+    "$90",
+    "$60",
+    "$150",
+    "$102"
+   ],
+   "why": "\\(C = 12 \\times 5 + 30 = 60 + 30 = \\$90\\). Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+   "clue": "Multiply the daily rate by 5, then add the fixed amount."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "The plumber's cost C = 45t + 80 against Hours, y label Cost ($), with the start at 80 labelled call-out fee, a step of 1 hour across and +$45 up between hours 1 and 2, and guide lines to the point (3, 215), labelled.",
+    "why": "It shows the starting value as where the line begins and the rate as how much it goes up each hour.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The plumber's cost C = 45t + 80 against Hours, y label Cost ($), with the start at 80 labelled call-out fee, a step of 1 hour across and +$45 up between hours 1 and 2, and guide lines to the point (3, 215), labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
+     "x": {
+      "min": 0,
+      "max": 5.5,
+      "label": "Hours",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 350,
+      "label": "Cost ($)",
+      "step": 50
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "45x + 80",
+       "domain": [
+        0,
+        5.5
+       ],
+       "label": "\\(C = 45t + 80\\)",
+       "labelAt": 4.2,
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        125
+       ],
+       "to": [
+        2,
+        125
+       ],
+       "label": "1 hour",
+       "pos": "below"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        2,
+        125
+       ],
+       "to": [
+        2,
+        170
+       ],
+       "label": "+$45",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        80
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept",
+       "label": "call-out fee",
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        215
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        215
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((3, 215)\\)",
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:43Z"
+  }
+ ]
 }

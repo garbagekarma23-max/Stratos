@@ -12,7 +12,8 @@
   "2026-10-29T12:41:47Z fix: suggested",
   "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix",
   "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
-  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4"
+  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:48Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -242,5 +243,259 @@
     "clue": "How much profit does each candle add towards the fixed cost?"
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Break-even analysis",
+  "card": [
+   "A business has a cost line and a revenue line. Cost \\(=\\) fixed cost \\(+\\) cost per item \\(\\times\\) number of items. Revenue \\(=\\) price per item \\(\\times\\) number of items.",
+   "The break-even point is where the two lines meet. Cost equals revenue there, so the profit is zero.",
+   "Past the break-even point, revenue is above cost and the business makes a profit. Before it, cost is above revenue and the business makes a loss. \\(\\text{Profit} = \\text{revenue} - \\text{cost}\\).",
+   "Example: Ravi sells scarves. Fixed cost is $300 and each scarf costs $10 to make and sells for $25. Set \\(300 + 10n = 25n\\). Then \\(300 = 15n\\), so \\(n = 20\\). He breaks even at 20 scarves."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Ravi's cost line, \\(C = 300 + 10n\\), starts at $300 and rises slowly. His revenue line, \\(R = 25n\\), starts at $0 and rises faster. They meet at the break-even point, 20 scarves and $500. The gap before it is a loss and the gap after it is a profit.",
+    "x": {
+     "min": 0,
+     "max": 40,
+     "label": "Scarves",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 1000,
+     "label": "Dollars",
+     "step": 200
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "shade",
+      "between": [
+       "c",
+       "r"
+      ],
+      "span": [
+       0,
+       20
+      ],
+      "label": "Loss",
+      "at": [
+       4,
+       230
+      ],
+      "hatch": true
+     },
+     {
+      "type": "shade",
+      "between": [
+       "r",
+       "c"
+      ],
+      "span": [
+       20,
+       40
+      ],
+      "label": "Profit",
+      "at": [
+       36,
+       770
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "c",
+      "expr": "300 + 10x",
+      "domain": [
+       0,
+       40
+      ],
+      "label": "Cost",
+      "labelAt": 32,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "r",
+      "expr": "25x",
+      "domain": [
+       0,
+       40
+      ],
+      "label": "Revenue",
+      "labelAt": 30,
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       20,
+       500
+      ],
+      "xLabel": "",
+      "yLabel": "500"
+     },
+     {
+      "type": "point",
+      "at": [
+       20,
+       500
+      ],
+      "on": [
+       "c",
+       "r"
+      ],
+      "is": "intersection",
+      "label": "break-even",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Break even where \\(\\text{cost} = \\text{revenue}\\). \\(\\text{Profit} = \\text{revenue} - \\text{cost}\\).",
+  "a": {
+   "q": "At 50 items, a business has revenue of $900 and cost of $900. What does this show?",
+   "opts": [
+    "It breaks even at 50 items",
+    "It makes a profit at 50 items",
+    "It makes a loss at 50 items",
+    "Its fixed cost is $0"
+   ],
+   "why": "Revenue equals cost, so profit is $0 and 50 items is the break-even point. A profit would need revenue above cost. Fixed cost cannot be found from these two figures alone.",
+   "clue": "Compare revenue with cost."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sells candles. Fixed cost is $400, each candle costs $6 to make and sells for $14. How many candles must she sell to break even?",
+   "opts": [
+    "50",
+    "29",
+    "67",
+    "20"
+   ],
+   "why": "Set \\(400 + 6n = 14n\\), so \\(400 = 8n\\) and \\(n = 50\\). Check: cost is \\(400 + 300 = \\$700\\) and revenue is \\(14 \\times 50 = \\$700\\). Dividing by the price of $14 gives 29, which ignores that each candle also costs $6 to make.",
+   "clue": "How much profit does each candle add towards the fixed cost?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "Ravi's cost line (Cost, from $300, rising $10 a scarf) and revenue line (Revenue, from $0, rising $25 a scarf), Scarves 0 to 40 against Dollars 0 to 1000, meeting at the point labelled break-even at 20 scarves and $500 (guide labelled 500). The gap between the lines before it is hatched and labelled Loss, and after it is shaded and labelled Profit.",
+    "why": "It shows the break-even point as the crossing of cost and revenue, and where the loss and profit lie on either side of it.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Ravi's cost line (Cost, from $300, rising $10 a scarf) and revenue line (Revenue, from $0, rising $25 a scarf), Scarves 0 to 40 against Dollars 0 to 1000, meeting at the point labelled break-even at 20 scarves and $500 (guide labelled 500). The gap between the lines before it is hatched and labelled Loss, and after it is shaded and labelled Profit.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Ravi's cost line, \\(C = 300 + 10n\\), starts at $300 and rises slowly. His revenue line, \\(R = 25n\\), starts at $0 and rises faster. They meet at the break-even point, 20 scarves and $500. The gap before it is a loss and the gap after it is a profit.",
+     "x": {
+      "min": 0,
+      "max": 40,
+      "label": "Scarves",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 1000,
+      "label": "Dollars",
+      "step": 200
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "shade",
+       "between": [
+        "c",
+        "r"
+       ],
+       "span": [
+        0,
+        20
+       ],
+       "label": "Loss",
+       "at": [
+        4,
+        230
+       ],
+       "hatch": true
+      },
+      {
+       "type": "shade",
+       "between": [
+        "r",
+        "c"
+       ],
+       "span": [
+        20,
+        40
+       ],
+       "label": "Profit",
+       "at": [
+        36,
+        770
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "c",
+       "expr": "300 + 10x",
+       "domain": [
+        0,
+        40
+       ],
+       "label": "Cost",
+       "labelAt": 32,
+       "pos": "below-right"
+      },
+      {
+       "type": "fn",
+       "id": "r",
+       "expr": "25x",
+       "domain": [
+        0,
+        40
+       ],
+       "label": "Revenue",
+       "labelAt": 30,
+       "pos": "above-left"
+      },
+      {
+       "type": "guide",
+       "at": [
+        20,
+        500
+       ],
+       "xLabel": "",
+       "yLabel": "500"
+      },
+      {
+       "type": "point",
+       "at": [
+        20,
+        500
+       ],
+       "on": [
+        "c",
+        "r"
+       ],
+       "is": "intersection",
+       "label": "break-even",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:47Z"
+  }
+ ]
 }

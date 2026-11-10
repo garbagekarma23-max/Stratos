@@ -24,7 +24,10 @@
   "2026-11-04T09:58:31Z check: flagged",
   "2026-11-04T10:08:05Z fix: suggested",
   "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:57:09Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T13:57:09Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:45Z pictures: 2 pictures waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -222,7 +225,21 @@
    ],
    "why": "Solutions are where the parabola meets the x-axis. This graph never does, so there are no solutions. The y-axis crossing at 2 is a y-value, not a solution.",
    "clue": "How many times does the graph meet the x-axis?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "The parabola y = x^2 - 4x + 3, labelled, crossing the x-axis at points labelled x = 1 and x = 3, and the y-axis at (0, 3). No axis numbers.",
+    "why": "It shows that the solutions are read where the parabola meets the x-axis, not the y-axis."
+   },
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "Three parabolas side by side with no numbers: one crossing the x-axis twice, labelled 2 solutions; one touching it at its turning point, labelled 1 solution; one staying above it, labelled 0 solutions.",
+    "why": "It shows how counting the meetings with the x-axis counts the solutions."
+   }
+  ]
  },
  "cleared_by": "recheck",
  "latex": {
@@ -261,5 +278,392 @@
     "clue": "How many times does the graph meet the x-axis?"
    }
   }
- }
+ },
+ "picture_draft": {
+  "title": "Solving quadratics from a graph",
+  "card": [
+   "The graph of \\(y = x^{2} - 4x + 3\\) is a parabola. To solve \\(x^{2} - 4x + 3 = 0\\), we ask where \\(y\\) is 0. On a graph, \\(y = 0\\) is the x-axis.",
+   "So the solutions are the x-values where the parabola meets the x-axis. Read them off the x-axis, not the y-axis.",
+   "Example: this parabola crosses the x-axis at 1 and 3, so the solutions are \\(x = 1\\) and \\(x = 3\\). Check: \\(1^{2} - 4 \\times 1 + 3 = 0\\).",
+   "Crossing the x-axis twice gives two solutions. Touching it once gives one. If the parabola never meets the x-axis, there are no solutions."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2} - 4x + 3\\). It crosses the x-axis at \\(x = 1\\) and \\(x = 3\\), the two solutions of \\(x^{2} - 4x + 3 = 0\\). It crosses the y-axis at 3, which is not a solution.",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2} - 4x + 3",
+      "domain": [
+       -0.6,
+       4.6
+      ],
+      "label": "\\(y = x^{2} - 4x + 3\\)",
+      "labelAt": 3.6,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(x = 1\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(x = 3\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       3
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 3)\\)",
+      "pos": "right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "Three parabolas. The left one crosses the x-axis twice: 2 solutions. The middle one touches the x-axis once, at its turning point: 1 solution. The right one stays above the x-axis: 0 solutions.",
+    "x": {
+     "min": 0,
+     "max": 14,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -2.5,
+     "max": 5,
+     "label": "\\(y\\)"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "p",
+      "expr": "(x - 2.5)^{2} - 1",
+      "domain": [
+       0.5,
+       4.5
+      ],
+      "label": "2 solutions",
+      "labelAt": 2.5,
+      "pos": "below"
+     },
+     {
+      "type": "fn",
+      "id": "q",
+      "expr": "(x - 7)^{2}",
+      "domain": [
+       5.2,
+       8.8
+      ],
+      "label": "1 solution",
+      "labelAt": 7,
+      "pos": "below"
+     },
+     {
+      "type": "fn",
+      "id": "r",
+      "expr": "(x - 11.5)^{2} + 1.5",
+      "domain": [
+       9.8,
+       13.2
+      ],
+      "label": "0 solutions",
+      "labelAt": 11.5,
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       0
+      ],
+      "on": [
+       "p"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       0
+      ],
+      "on": [
+       "p"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       0
+      ],
+      "on": [
+       "q"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
+  },
+  "remember": "Solutions are the x-values where \\(y = 0\\). Count the x-axis meetings to count the solutions.",
+  "a": {
+   "q": "A parabola crosses the x-axis at \\(x = -2\\) and \\(x = 5\\), and crosses the y-axis at \\(y = -10\\). What are the solutions of its equation when \\(y = 0\\)?",
+   "opts": [
+    "\\(x = -2\\) and \\(x = 5\\)",
+    "\\(x = -10\\) only",
+    "\\(x = -2\\) and \\(x = -10\\)",
+    "\\(x = 5\\) and \\(x = -10\\)"
+   ],
+   "why": "The solutions are the x-values where the graph meets the x-axis, so \\(x = -2\\) and \\(x = 5\\). The y-axis crossing at \\(-10\\) is a y-value, so it is not a solution.",
+   "clue": "Which axis is the line \\(y = 0\\)?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of \\(y = x^{2} + 2\\) stays above the x-axis and crosses the y-axis at \\(y = 2\\). How many solutions does \\(x^{2} + 2 = 0\\) have?",
+   "opts": [
+    "No solutions, as the graph never meets the x-axis",
+    "One solution, \\(x = 2\\), where it crosses the y-axis",
+    "Two solutions, \\(x = \\sqrt{2}\\) and \\(x = -\\sqrt{2}\\), from \\(x^{2} = 2\\)",
+    "One solution, \\(x = 0\\), where the graph is lowest"
+   ],
+   "why": "Solutions are where the parabola meets the x-axis. This graph never does, so there are no solutions. The y-axis crossing at 2 is a y-value, not a solution.",
+   "clue": "How many times does the graph meet the x-axis?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "The parabola y = x^2 - 4x + 3, labelled, crossing the x-axis at points labelled x = 1 and x = 3, and the y-axis at (0, 3). No axis numbers.",
+    "why": "It shows that the solutions are read where the parabola meets the x-axis, not the y-axis.",
+    "waiting": true
+   },
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "Three parabolas side by side with no numbers: one crossing the x-axis twice, labelled 2 solutions; one touching it at its turning point, labelled 1 solution; one staying above it, labelled 0 solutions.",
+    "why": "It shows how counting the meetings with the x-axis counts the solutions.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The parabola y = x^2 - 4x + 3, labelled, crossing the x-axis at points labelled x = 1 and x = 3, and the y-axis at (0, 3). No axis numbers.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = x^{2} - 4x + 3\\). It crosses the x-axis at \\(x = 1\\) and \\(x = 3\\), the two solutions of \\(x^{2} - 4x + 3 = 0\\). It crosses the y-axis at 3, which is not a solution.",
+     "x": {
+      "min": -1,
+      "max": 5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2} - 4x + 3",
+       "domain": [
+        -0.6,
+        4.6
+       ],
+       "label": "\\(y = x^{2} - 4x + 3\\)",
+       "labelAt": 3.6,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept",
+       "label": "\\(x = 1\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept",
+       "label": "\\(x = 3\\)",
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        3
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept",
+       "label": "\\((0, 3)\\)",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:45Z"
+  },
+  {
+   "want": 2,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Three parabolas side by side with no numbers: one crossing the x-axis twice, labelled 2 solutions; one touching it at its turning point, labelled 1 solution; one staying above it, labelled 0 solutions.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Three parabolas. The left one crosses the x-axis twice: 2 solutions. The middle one touches the x-axis once, at its turning point: 1 solution. The right one stays above the x-axis: 0 solutions.",
+     "x": {
+      "min": 0,
+      "max": 14,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -2.5,
+      "max": 5,
+      "label": "\\(y\\)"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "p",
+       "expr": "(x - 2.5)^{2} - 1",
+       "domain": [
+        0.5,
+        4.5
+       ],
+       "label": "2 solutions",
+       "labelAt": 2.5,
+       "pos": "below"
+      },
+      {
+       "type": "fn",
+       "id": "q",
+       "expr": "(x - 7)^{2}",
+       "domain": [
+        5.2,
+        8.8
+       ],
+       "label": "1 solution",
+       "labelAt": 7,
+       "pos": "below"
+      },
+      {
+       "type": "fn",
+       "id": "r",
+       "expr": "(x - 11.5)^{2} + 1.5",
+       "domain": [
+        9.8,
+        13.2
+       ],
+       "label": "0 solutions",
+       "labelAt": 11.5,
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        0
+       ],
+       "on": [
+        "p"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        3.5,
+        0
+       ],
+       "on": [
+        "p"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        7,
+        0
+       ],
+       "on": [
+        "q"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:45Z"
+  }
+ ]
 }
