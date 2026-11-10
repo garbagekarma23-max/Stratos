@@ -14,7 +14,9 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:52:37Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T13:52:38Z pictures: the owner asked for a graph at card 3"
  ],
  "sent": {
   "match": 1,
@@ -115,7 +117,21 @@
    ],
    "why": "A clear pattern such as a curve means the line is missing structure in the data, so a linear model is not suitable. A good fit would show random scatter with no pattern.",
    "clue": "Which kind of residual plot supports a line?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "A line labelled regression line with one point above it and one below it, axes x and y with no numbers. An arrow up from the line to the point above is labelled positive residual, and an arrow down from the line to the point below is labelled negative residual.",
+    "why": "It shows that a positive residual is a point above the line and a negative residual a point below it."
+   },
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A residual plot, Residual on the vertical axis from -4 to 4 and x along the horizontal axis, with a bold zero line and 12 points scattered above and below it with no pattern.",
+    "why": "It shows the random scatter about zero that supports a linear model."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {

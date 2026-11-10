@@ -18,7 +18,8 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:52:37Z pictures: the owner asked for a chart at card 4"
  ],
  "sent": {
   "match": 1,
@@ -119,7 +120,15 @@
    ],
    "why": "\\(\\text{IQR} = 12\\), so the upper fence is \\(27 + 18 = 45\\). Only 46 is above it. The value 45 is on the fence, so it is not an outlier.",
    "clue": "A value on the fence is not beyond it."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "chart",
+    "brief": "A boxplot on a Value axis from 0 to 60, data 8, 15, 20, 22, 24, 26, 29, 31, 32, 50, 56: box from Q1 = 20 to Q3 = 32, median 26, lower whisker to 8, upper whisker to 50 (on the upper fence, so not an outlier), and 56 drawn as a separate point.",
+    "why": "It shows outliers drawn as separate points and the whisker stopping at the largest value that is not an outlier, the card's example fences of 2 and 50."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {

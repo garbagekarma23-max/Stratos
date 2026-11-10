@@ -26,7 +26,8 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 says adapt mat-interpolation-extrapolation (1 change)",
   "2026-11-01T14:56:02Z adapt: done",
   "2026-11-01T15:05:28Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:52:27Z pictures: the owner asked for a graph at card 4"
  ],
  "sent": {
   "match": 1,
@@ -153,7 +154,15 @@
    ],
    "why": "The value 6 hours is inside the range of 2 to 10, so it is interpolation and fairly reliable. The value 14 hours is outside the range, so it is extrapolation and less reliable, even though both use the same line.",
    "clue": "Which prediction has data on both sides of it?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "A scatterplot of 8 data points with x from 10 to 40, a solid line of best fit y = 2x + 10 through them labelled line of best fit, and the same line continued dotted from 40 to 66, labelled beyond the data. Open points on the line at x = 25 labelled interpolation and at x = 60 labelled extrapolation, each with a dashed guide down to the x-axis.",
+    "why": "It shows that x = 25 sits inside the data and x = 60 sits beyond it, the card's example."
+   }
+  ]
  },
  "cleared_by": "checker",
  "latex": {
