@@ -29,7 +29,8 @@
   "2026-11-10T15:37:17Z pictures: the owner asked for a graph at card 4, in place of the one there",
   "2026-11-10T15:38:19Z text: card line 4 says the tank already has 20 L in it, so 20 L reads as the starting amount, not the tank's size, after the check of the new example",
   "2026-11-10T16:00:00Z text: the first check asked for card line 4 to be reworded; a fresh check of the whole fix kept it",
-  "2026-11-10T15:55:22Z pictures: 1 picture waiting for the check"
+  "2026-11-10T15:55:22Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:52Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -213,77 +214,77 @@
   "cardFigs": {
    "4": {
     "kind": "graph",
-    "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
+    "alt": "The tank's volume \\(V = 10t + 20\\) against time in minutes. The line starts at 20 L on the volume axis, the starting value, and goes up 10 L for each minute. After 6 minutes the tank holds 80 L.",
     "x": {
      "min": 0,
-     "max": 5.5,
-     "label": "Hours",
+     "max": 8.5,
+     "label": "Minutes",
      "step": 1
     },
     "y": {
      "min": 0,
-     "max": 350,
-     "label": "Cost ($)",
-     "step": 50
+     "max": 120,
+     "label": "Volume (L)",
+     "step": 20
     },
     "grid": true,
     "items": [
      {
       "type": "fn",
       "id": "f",
-      "expr": "45x + 80",
+      "expr": "10x + 20",
       "domain": [
        0,
-       5.5
+       8.5
       ],
-      "label": "\\(C = 45t + 80\\)",
-      "labelAt": 4.2,
+      "label": "\\(V = 10t + 20\\)",
+      "labelAt": 3.6,
       "pos": "above-left"
      },
      {
       "type": "arrow",
       "from": [
-       1,
-       125
+       2,
+       40
       ],
       "to": [
-       2,
-       125
+       3,
+       40
       ],
-      "label": "1 hour",
-      "pos": "below"
+      "label": "1 minute",
+      "pos": "below-right"
      },
      {
       "type": "arrow",
       "from": [
-       2,
-       125
+       3,
+       40
       ],
       "to": [
-       2,
-       170
+       3,
+       50
       ],
-      "label": "+$45",
+      "label": "+10 L",
       "pos": "right"
      },
      {
       "type": "point",
       "at": [
        0,
-       80
+       20
       ],
       "on": [
        "f"
       ],
       "is": "y-intercept",
-      "label": "call-out fee",
+      "label": "starting value",
       "pos": "below-right"
      },
      {
       "type": "guide",
       "at": [
-       3,
-       215
+       6,
+       80
       ],
       "xLabel": "",
       "yLabel": ""
@@ -291,13 +292,13 @@
      {
       "type": "point",
       "at": [
-       3,
-       215
+       6,
+       80
       ],
       "on": [
        "f"
       ],
-      "label": "\\((3, 215)\\)",
+      "label": "\\((6, 80)\\)",
       "pos": "above-left"
      }
     ]
@@ -326,106 +327,7 @@
    ],
    "why": "\\(C = 8 \\times 4 + 5 = 32 + 5 = \\$37\\). Leaving out the $5 starting fee gives $32. Adding 8 and 5 before multiplying by 4 gives $52.",
    "clue": "Multiply the hourly rate by 4, then add the fixed amount."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "The tank example from card line 4: V = 10t + 20, volume in litres against time in minutes, from t = 0 to about 8. The line starts at 20 L on the volume axis (the starting value), an arrow step shows 1 minute across and +10 L up, and the point (6, 80) is marked with dashed guides.",
-    "why": "The card's example changed from the plumber to a tank filling, so the graph must show the new rule.",
-    "replaces": {
-     "kind": "graph",
-     "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
-     "x": {
-      "min": 0,
-      "max": 5.5,
-      "label": "Hours",
-      "step": 1
-     },
-     "y": {
-      "min": 0,
-      "max": 350,
-      "label": "Cost ($)",
-      "step": 50
-     },
-     "grid": true,
-     "items": [
-      {
-       "type": "fn",
-       "id": "f",
-       "expr": "45x + 80",
-       "domain": [
-        0,
-        5.5
-       ],
-       "label": "\\(C = 45t + 80\\)",
-       "labelAt": 4.2,
-       "pos": "above-left"
-      },
-      {
-       "type": "arrow",
-       "from": [
-        1,
-        125
-       ],
-       "to": [
-        2,
-        125
-       ],
-       "label": "1 hour",
-       "pos": "below"
-      },
-      {
-       "type": "arrow",
-       "from": [
-        2,
-        125
-       ],
-       "to": [
-        2,
-        170
-       ],
-       "label": "+$45",
-       "pos": "right"
-      },
-      {
-       "type": "point",
-       "at": [
-        0,
-        80
-       ],
-       "on": [
-        "f"
-       ],
-       "is": "y-intercept",
-       "label": "call-out fee",
-       "pos": "below-right"
-      },
-      {
-       "type": "guide",
-       "at": [
-        3,
-        215
-       ],
-       "xLabel": "",
-       "yLabel": ""
-      },
-      {
-       "type": "point",
-       "at": [
-        3,
-        215
-       ],
-       "on": [
-        "f"
-       ],
-       "label": "\\((3, 215)\\)",
-       "pos": "above-left"
-      }
-     ]
-    }
-   }
-  ]
+  }
  },
  "latex": {
   "at": "2026-11-06T10:41:22Z",
@@ -586,425 +488,7 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-10T14:03:07Z"
-  }
- ],
- "edits": [
-  {
-   "part": "card 2",
-   "before": [
-    "Rate",
-    "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
-   ],
-   "after": [
-    "Rate",
-    "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as litres per minute. The rate sets the steepness of the graph. Gradient is another name for it."
-   ],
-   "by": "claude-code",
-   "why": "The Year 8 point repeated the General Units 1 and 2 point's examples. It now has its own, at a Year 8 level.",
-   "at_time": "2026-11-10T15:37:11Z",
-   "check": {
-    "verdict": "redo",
-    "sure": "medium",
-    "problems": [
-     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
-    ],
-    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
-    "by": "claude-code"
-   },
-   "check2": {
-    "verdict": "keep",
-    "sure": "high",
-    "problems": [],
-    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
-    "by": "claude-code"
-   }
   },
-  {
-   "part": "card 3",
-   "before": [
-    "Intercept",
-    "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as a call-out fee paid before any work is done."
-   ],
-   "after": [
-    "Intercept",
-    "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as the water already in a tank before a hose is turned on."
-   ],
-   "by": "claude-code",
-   "why": "The Year 8 point repeated the General Units 1 and 2 point's examples. It now has its own, at a Year 8 level.",
-   "at_time": "2026-11-10T15:37:11Z",
-   "check": {
-    "verdict": "redo",
-    "sure": "medium",
-    "problems": [
-     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
-    ],
-    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
-    "by": "claude-code"
-   },
-   "check2": {
-    "verdict": "keep",
-    "sure": "high",
-    "problems": [],
-    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
-    "by": "claude-code"
-   }
-  },
-  {
-   "part": "card 4",
-   "before": "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\).",
-   "after": "Example: a tank holds 20 L of water, and a hose adds 10 L each minute. The rule is \\(V = 10t + 20\\), where \\(t\\) is the time in minutes. The rate is 10 L per minute and the starting value is 20 L. After 6 minutes, \\(V = 10 \\times 6 + 20 = 80\\) L.",
-   "by": "claude-code",
-   "why": "The Year 8 point repeated the General Units 1 and 2 point's plumber example. It now has its own, at a Year 8 level.",
-   "at_time": "2026-11-10T15:37:11Z",
-   "check": {
-    "verdict": "redo",
-    "sure": "medium",
-    "problems": [
-     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
-    ],
-    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
-    "by": "claude-code"
-   },
-   "check2": {
-    "verdict": "keep",
-    "sure": "high",
-    "problems": [],
-    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
-    "by": "claude-code"
-   }
-  },
-  {
-   "part": "a",
-   "before": {
-    "q": "A taxi fare in Perth is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 tell you?",
-    "opts": [
-     "The fare rises by $2.50 for each extra kilometre",
-     "The fare for a trip of 0 km is $2.50",
-     "The fare for a trip of 4 km is $2.50",
-     "The fare rises by $4 for each extra kilometre"
-    ],
-    "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
-    "clue": "Which number multiplies \\(d\\)?"
-   },
-   "after": {
-    "q": "Sam's savings are \\(S = 15w + 40\\) dollars, where \\(w\\) is the number of weeks. What does the 15 tell you?",
-    "opts": [
-     "Sam saves $15 each week",
-     "Sam started with $15 saved",
-     "Sam has $15 after 40 weeks",
-     "Sam saves $40 each week"
-    ],
-    "why": "The 15 multiplies \\(w\\), so it is the rate: Sam's savings go up by $15 each week. The 40 is the starting value, the $40 Sam had before the first week, so saving $40 each week mixes up the two.",
-    "clue": "Which number multiplies \\(w\\)?"
-   },
-   "by": "claude-code",
-   "why": "Question a was the General Units 1 and 2 point's taxi question with only the town changed. It now has its own question, at a Year 8 level.",
-   "at_time": "2026-11-10T15:37:11Z",
-   "check": {
-    "verdict": "redo",
-    "sure": "medium",
-    "problems": [
-     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
-    ],
-    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
-    "by": "claude-code"
-   },
-   "check2": {
-    "verdict": "keep",
-    "sure": "high",
-    "problems": [],
-    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
-    "by": "claude-code"
-   }
-  },
-  {
-   "part": "b",
-   "before": {
-    "d": 2,
-    "q": "Priya hires a ladder in Darwin. The cost is \\(C = 12n + 30\\), where \\(n\\) is the number of days. What is the cost for 5 days?",
-    "opts": [
-     "$90",
-     "$60",
-     "$150",
-     "$102"
-    ],
-    "why": "\\(C = 12 \\times 5 + 30 = 60 + 30 = \\$90\\). Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
-    "clue": "Multiply the daily rate by 5, then add the fixed amount."
-   },
-   "after": {
-    "d": 2,
-    "q": "Bike hire at a park costs \\(C = 8h + 5\\) dollars, where \\(h\\) is the number of hours. What is the cost for 4 hours?",
-    "opts": [
-     "$37",
-     "$32",
-     "$52",
-     "$17"
-    ],
-    "why": "\\(C = 8 \\times 4 + 5 = 32 + 5 = \\$37\\). Leaving out the $5 starting fee gives $32. Adding 8 and 5 before multiplying by 4 gives $52.",
-    "clue": "Multiply the hourly rate by 4, then add the fixed amount."
-   },
-   "by": "claude-code",
-   "why": "Question b was the General Units 1 and 2 point's ladder hire question with only the town changed. It now has its own question, at a Year 8 level.",
-   "at_time": "2026-11-10T15:37:11Z",
-   "check": {
-    "verdict": "redo",
-    "sure": "medium",
-    "problems": [
-     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
-    ],
-    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
-    "by": "claude-code"
-   }
-  },
-  {
-   "part": "card 4",
-   "before": "Example: a tank holds 20 L of water, and a hose adds 10 L each minute. The rule is \\(V = 10t + 20\\), where \\(t\\) is the time in minutes. The rate is 10 L per minute and the starting value is 20 L. After 6 minutes, \\(V = 10 \\times 6 + 20 = 80\\) L.",
-   "after": "Example: a tank already has 20 L of water in it, and a hose adds 10 L each minute. The rule is \\(V = 10t + 20\\), where \\(t\\) is the time in minutes. The rate is 10 L per minute and the starting value is 20 L. After 6 minutes, \\(V = 10 \\times 6 + 20 = 80\\) L.",
-   "by": "claude-code",
-   "why": "The check of the new example read \"a tank holds 20 L\" as the tank's size, so it now says the tank already has 20 L in it.",
-   "at_time": "2026-11-10T15:38:19Z",
-   "check": {
-    "verdict": "keep",
-    "sure": "high",
-    "problems": [],
-    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
-    "by": "claude-code"
-   }
-  }
- ],
- "picture_draft": {
-  "title": "Linear models in context",
-  "card": [
-   "A linear model has a rule like \\(y = mx + c\\). It fits a situation where something changes by the same amount for each step.",
-   [
-    "Rate",
-    "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as litres per minute. The rate sets the steepness of the graph. Gradient is another name for it."
-   ],
-   [
-    "Intercept",
-    "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as the water already in a tank before a hose is turned on."
-   ],
-   "Example: a tank already has 20 L of water in it, and a hose adds 10 L each minute. The rule is \\(V = 10t + 20\\), where \\(t\\) is the time in minutes. The rate is 10 L per minute and the starting value is 20 L. After 6 minutes, \\(V = 10 \\times 6 + 20 = 80\\) L."
-  ],
-  "cardFigs": {
-   "4": {
-    "kind": "graph",
-    "alt": "The tank's volume \\(V = 10t + 20\\) against time in minutes. The line starts at 20 L on the volume axis, the starting value, and goes up 10 L for each minute. After 6 minutes the tank holds 80 L.",
-    "x": {
-     "min": 0,
-     "max": 8.5,
-     "label": "Minutes",
-     "step": 1
-    },
-    "y": {
-     "min": 0,
-     "max": 120,
-     "label": "Volume (L)",
-     "step": 20
-    },
-    "grid": true,
-    "items": [
-     {
-      "type": "fn",
-      "id": "f",
-      "expr": "10x + 20",
-      "domain": [
-       0,
-       8.5
-      ],
-      "label": "\\(V = 10t + 20\\)",
-      "labelAt": 3.6,
-      "pos": "above-left"
-     },
-     {
-      "type": "arrow",
-      "from": [
-       2,
-       40
-      ],
-      "to": [
-       3,
-       40
-      ],
-      "label": "1 minute",
-      "pos": "below-right"
-     },
-     {
-      "type": "arrow",
-      "from": [
-       3,
-       40
-      ],
-      "to": [
-       3,
-       50
-      ],
-      "label": "+10 L",
-      "pos": "right"
-     },
-     {
-      "type": "point",
-      "at": [
-       0,
-       20
-      ],
-      "on": [
-       "f"
-      ],
-      "is": "y-intercept",
-      "label": "starting value",
-      "pos": "below-right"
-     },
-     {
-      "type": "guide",
-      "at": [
-       6,
-       80
-      ],
-      "xLabel": "",
-      "yLabel": ""
-     },
-     {
-      "type": "point",
-      "at": [
-       6,
-       80
-      ],
-      "on": [
-       "f"
-      ],
-      "label": "\\((6, 80)\\)",
-      "pos": "above-left"
-     }
-    ]
-   }
-  },
-  "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
-  "a": {
-   "q": "Sam's savings are \\(S = 15w + 40\\) dollars, where \\(w\\) is the number of weeks. What does the 15 tell you?",
-   "opts": [
-    "Sam saves $15 each week",
-    "Sam started with $15 saved",
-    "Sam has $15 after 40 weeks",
-    "Sam saves $40 each week"
-   ],
-   "why": "The 15 multiplies \\(w\\), so it is the rate: Sam's savings go up by $15 each week. The 40 is the starting value, the $40 Sam had before the first week, so saving $40 each week mixes up the two.",
-   "clue": "Which number multiplies \\(w\\)?"
-  },
-  "b": {
-   "d": 2,
-   "q": "Bike hire at a park costs \\(C = 8h + 5\\) dollars, where \\(h\\) is the number of hours. What is the cost for 4 hours?",
-   "opts": [
-    "$37",
-    "$32",
-    "$52",
-    "$17"
-   ],
-   "why": "\\(C = 8 \\times 4 + 5 = 32 + 5 = \\$37\\). Leaving out the $5 starting fee gives $32. Adding 8 and 5 before multiplying by 4 gives $52.",
-   "clue": "Multiply the hourly rate by 4, then add the fixed amount."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "The tank example from card line 4: V = 10t + 20, volume in litres against time in minutes, from t = 0 to about 8. The line starts at 20 L on the volume axis (the starting value), an arrow step shows 1 minute across and +10 L up, and the point (6, 80) is marked with dashed guides.",
-    "why": "The card's example changed from the plumber to a tank filling, so the graph must show the new rule.",
-    "replaces": {
-     "kind": "graph",
-     "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
-     "x": {
-      "min": 0,
-      "max": 5.5,
-      "label": "Hours",
-      "step": 1
-     },
-     "y": {
-      "min": 0,
-      "max": 350,
-      "label": "Cost ($)",
-      "step": 50
-     },
-     "grid": true,
-     "items": [
-      {
-       "type": "fn",
-       "id": "f",
-       "expr": "45x + 80",
-       "domain": [
-        0,
-        5.5
-       ],
-       "label": "\\(C = 45t + 80\\)",
-       "labelAt": 4.2,
-       "pos": "above-left"
-      },
-      {
-       "type": "arrow",
-       "from": [
-        1,
-        125
-       ],
-       "to": [
-        2,
-        125
-       ],
-       "label": "1 hour",
-       "pos": "below"
-      },
-      {
-       "type": "arrow",
-       "from": [
-        2,
-        125
-       ],
-       "to": [
-        2,
-        170
-       ],
-       "label": "+$45",
-       "pos": "right"
-      },
-      {
-       "type": "point",
-       "at": [
-        0,
-        80
-       ],
-       "on": [
-        "f"
-       ],
-       "is": "y-intercept",
-       "label": "call-out fee",
-       "pos": "below-right"
-      },
-      {
-       "type": "guide",
-       "at": [
-        3,
-        215
-       ],
-       "xLabel": "",
-       "yLabel": ""
-      },
-      {
-       "type": "point",
-       "at": [
-        3,
-        215
-       ],
-       "on": [
-        "f"
-       ],
-       "label": "\\((3, 215)\\)",
-       "pos": "above-left"
-      }
-     ]
-    },
-    "waiting": true
-   }
-  ]
- },
- "pictures_waiting": [
   {
    "want": 1,
    "at": "card 4",
@@ -1195,6 +679,303 @@
       "pos": "above-left"
      }
     ]
+   },
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:52Z"
+  },
+  {
+   "status": "replaced",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
+     "x": {
+      "min": 0,
+      "max": 5.5,
+      "label": "Hours",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 350,
+      "label": "Cost ($)",
+      "step": 50
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "45x + 80",
+       "domain": [
+        0,
+        5.5
+       ],
+       "label": "\\(C = 45t + 80\\)",
+       "labelAt": 4.2,
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        125
+       ],
+       "to": [
+        2,
+        125
+       ],
+       "label": "1 hour",
+       "pos": "below"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        2,
+        125
+       ],
+       "to": [
+        2,
+        170
+       ],
+       "label": "+$45",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        80
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept",
+       "label": "call-out fee",
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        215
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        215
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((3, 215)\\)",
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "card 4",
+   "at_time": "2026-11-10T16:02:52Z"
+  }
+ ],
+ "edits": [
+  {
+   "part": "card 2",
+   "before": [
+    "Rate",
+    "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
+   ],
+   "after": [
+    "Rate",
+    "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as litres per minute. The rate sets the steepness of the graph. Gradient is another name for it."
+   ],
+   "by": "claude-code",
+   "why": "The Year 8 point repeated the General Units 1 and 2 point's examples. It now has its own, at a Year 8 level.",
+   "at_time": "2026-11-10T15:37:11Z",
+   "check": {
+    "verdict": "redo",
+    "sure": "medium",
+    "problems": [
+     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
+    ],
+    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
+    "by": "claude-code"
+   },
+   "check2": {
+    "verdict": "keep",
+    "sure": "high",
+    "problems": [],
+    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
+    "by": "claude-code"
+   }
+  },
+  {
+   "part": "card 3",
+   "before": [
+    "Intercept",
+    "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as a call-out fee paid before any work is done."
+   ],
+   "after": [
+    "Intercept",
+    "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as the water already in a tank before a hose is turned on."
+   ],
+   "by": "claude-code",
+   "why": "The Year 8 point repeated the General Units 1 and 2 point's examples. It now has its own, at a Year 8 level.",
+   "at_time": "2026-11-10T15:37:11Z",
+   "check": {
+    "verdict": "redo",
+    "sure": "medium",
+    "problems": [
+     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
+    ],
+    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
+    "by": "claude-code"
+   },
+   "check2": {
+    "verdict": "keep",
+    "sure": "high",
+    "problems": [],
+    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
+    "by": "claude-code"
+   }
+  },
+  {
+   "part": "card 4",
+   "before": "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\).",
+   "after": "Example: a tank holds 20 L of water, and a hose adds 10 L each minute. The rule is \\(V = 10t + 20\\), where \\(t\\) is the time in minutes. The rate is 10 L per minute and the starting value is 20 L. After 6 minutes, \\(V = 10 \\times 6 + 20 = 80\\) L.",
+   "by": "claude-code",
+   "why": "The Year 8 point repeated the General Units 1 and 2 point's plumber example. It now has its own, at a Year 8 level.",
+   "at_time": "2026-11-10T15:37:11Z",
+   "check": {
+    "verdict": "redo",
+    "sure": "medium",
+    "problems": [
+     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
+    ],
+    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
+    "by": "claude-code"
+   },
+   "check2": {
+    "verdict": "keep",
+    "sure": "high",
+    "problems": [],
+    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
+    "by": "claude-code"
+   }
+  },
+  {
+   "part": "a",
+   "before": {
+    "q": "A taxi fare in Perth is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 tell you?",
+    "opts": [
+     "The fare rises by $2.50 for each extra kilometre",
+     "The fare for a trip of 0 km is $2.50",
+     "The fare for a trip of 4 km is $2.50",
+     "The fare rises by $4 for each extra kilometre"
+    ],
+    "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
+    "clue": "Which number multiplies \\(d\\)?"
+   },
+   "after": {
+    "q": "Sam's savings are \\(S = 15w + 40\\) dollars, where \\(w\\) is the number of weeks. What does the 15 tell you?",
+    "opts": [
+     "Sam saves $15 each week",
+     "Sam started with $15 saved",
+     "Sam has $15 after 40 weeks",
+     "Sam saves $40 each week"
+    ],
+    "why": "The 15 multiplies \\(w\\), so it is the rate: Sam's savings go up by $15 each week. The 40 is the starting value, the $40 Sam had before the first week, so saving $40 each week mixes up the two.",
+    "clue": "Which number multiplies \\(w\\)?"
+   },
+   "by": "claude-code",
+   "why": "Question a was the General Units 1 and 2 point's taxi question with only the town changed. It now has its own question, at a Year 8 level.",
+   "at_time": "2026-11-10T15:37:11Z",
+   "check": {
+    "verdict": "redo",
+    "sure": "medium",
+    "problems": [
+     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
+    ],
+    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
+    "by": "claude-code"
+   },
+   "check2": {
+    "verdict": "keep",
+    "sure": "high",
+    "problems": [],
+    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
+    "by": "claude-code"
+   }
+  },
+  {
+   "part": "b",
+   "before": {
+    "d": 2,
+    "q": "Priya hires a ladder in Darwin. The cost is \\(C = 12n + 30\\), where \\(n\\) is the number of days. What is the cost for 5 days?",
+    "opts": [
+     "$90",
+     "$60",
+     "$150",
+     "$102"
+    ],
+    "why": "\\(C = 12 \\times 5 + 30 = 60 + 30 = \\$90\\). Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+    "clue": "Multiply the daily rate by 5, then add the fixed amount."
+   },
+   "after": {
+    "d": 2,
+    "q": "Bike hire at a park costs \\(C = 8h + 5\\) dollars, where \\(h\\) is the number of hours. What is the cost for 4 hours?",
+    "opts": [
+     "$37",
+     "$32",
+     "$52",
+     "$17"
+    ],
+    "why": "\\(C = 8 \\times 4 + 5 = 32 + 5 = \\$37\\). Leaving out the $5 starting fee gives $32. Adding 8 and 5 before multiplying by 4 gives $52.",
+    "clue": "Multiply the hourly rate by 4, then add the fixed amount."
+   },
+   "by": "claude-code",
+   "why": "Question b was the General Units 1 and 2 point's ladder hire question with only the town changed. It now has its own question, at a Year 8 level.",
+   "at_time": "2026-11-10T15:37:11Z",
+   "check": {
+    "verdict": "redo",
+    "sure": "medium",
+    "problems": [
+     "Card 4 says \"a tank holds 20 L of water\", which can be read as the tank's capacity, and then 80 L after 6 minutes would not fit; change it to \"a tank has 20 L of water in it\" (or \"already has 20 L of water\") so 20 L is clearly the starting amount."
+    ],
+    "summary": "Every sum and option is correct (10 x 6 + 20 = 80 L, 8 x 4 + 5 = 37, with $32 and $52 explained), the examples and questions are new and at Year 8 level, and nothing repeats the General Units 1 and 2 point, but card 4's \"holds 20 L\" reads as a capacity and needs rewording.",
+    "by": "claude-code"
+   }
+  },
+  {
+   "part": "card 4",
+   "before": "Example: a tank holds 20 L of water, and a hose adds 10 L each minute. The rule is \\(V = 10t + 20\\), where \\(t\\) is the time in minutes. The rate is 10 L per minute and the starting value is 20 L. After 6 minutes, \\(V = 10 \\times 6 + 20 = 80\\) L.",
+   "after": "Example: a tank already has 20 L of water in it, and a hose adds 10 L each minute. The rule is \\(V = 10t + 20\\), where \\(t\\) is the time in minutes. The rate is 10 L per minute and the starting value is 20 L. After 6 minutes, \\(V = 10 \\times 6 + 20 = 80\\) L.",
+   "by": "claude-code",
+   "why": "The check of the new example read \"a tank holds 20 L\" as the tank's size, so it now says the tank already has 20 L in it.",
+   "at_time": "2026-11-10T15:38:19Z",
+   "check": {
+    "verdict": "keep",
+    "sure": "high",
+    "problems": [],
+    "summary": "The tank example, the savings question and the bike hire question are new, correct (10 x 6 + 20 = 80, 8 x 4 + 5 = 37, with $32, $52 and $17 each from a real mistake), consistent with the card and remember line, plain at a Year 8 level, and no longer repeat the General Mathematics point's plumber, taxi or ladder examples or name any place.",
+    "by": "claude-code"
    }
   }
  ]
