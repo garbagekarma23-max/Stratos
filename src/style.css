@@ -254,6 +254,12 @@ svg{display:block;flex:none}
    to match their height. A long expression scrolls sideways inside its own box, so it never makes the page wider. */
 .mxw{white-space:nowrap}
 math-span.mx{color:inherit;font-size:1.06em;display:inline-block;max-width:calc(100% + 6px);padding:0 3px;margin:0 -3px;overflow-x:auto;overflow-y:hidden;vertical-align:middle;scrollbar-width:thin}
+/* Every block of a point's text: a card line, the Remember line, a question, an option, the Why and the clue, and a
+   Search result's line. The maths box above reaches 3 px past its words on each side, so a piece of maths at the end
+   of a line would poke out of its block and make the sheet or the slide scroll sideways. So each block clips its own
+   sides (overflow-x: clip leaves the height alone and makes no scroll box). A card line is a grid item, which would
+   otherwise grow to fit its widest piece of maths, so each is held to its column too (min-width: 0). */
+.lines > p,.rem,.qtext,.opt .txt,.note p,.res .snip{min-width:0;overflow-x:clip}
 @keyframes pop{0%{transform:scale(.96)}55%{transform:scale(1.035)}100%{transform:scale(1)}}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}60%{transform:translateX(4px)}85%{transform:translateX(-2px)}}
 
