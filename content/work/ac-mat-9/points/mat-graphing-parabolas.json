@@ -10,7 +10,12 @@
   "2026-11-04T09:47:09Z check: flagged",
   "2026-11-04T09:58:31Z fix: suggested",
   "2026-11-04T17:58:54Z autoreview: cleared with the fix (b wording)",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:57:09Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T13:57:45Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:08Z pictures: 1 picture turned down. Picture 1 (graph at card 2): redo, high sure. The point at the origin has no label, though the request asked for each plotted point to be labelled and the card line lists x = 0 giving y = 0; label it (0, 0) where it clears the axis numbers and the curve.",
+  "2026-11-10T14:05:25Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:06:30Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -140,6 +145,102 @@
    "The turning point is where the curve changes direction. For \\(y = x^{2}\\) it is at the origin \\((0, 0)\\), the lowest point.",
    "The y-axis is the line of symmetry. The left side is a mirror image of the right side, so \\((3, 9)\\) and \\((-3, 9)\\) are both on the curve."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2}\\), a U-shaped curve, through the plotted points \\((-2, 4)\\), \\((-1, 1)\\), \\((0, 0)\\), \\((1, 1)\\) and \\((2, 4)\\). The curve never goes below the x-axis, and its lowest point is the origin.",
+    "x": {
+     "min": -3.5,
+     "max": 3.5,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": false,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "domain": [
+       -2.8,
+       2.8
+      ],
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       -2,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((-2, 4)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((-1, 1)\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "\\((0, 0)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, 1)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((2, 4)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
   "remember": "\\(y = x^{2}\\) is a U-shaped parabola, with its turning point at \\((0, 0)\\) and a mirror line along the y-axis.",
   "a": {
    "q": "Which point lies on the graph of \\(y = x^{2}\\)?",
@@ -202,5 +303,244 @@
     "clue": "Reflect the point across the y-axis."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The parabola y = x^2 from x = -3 to 3 on a grid, through the plotted points (-2, 4), (-1, 1), (0, 0), (1, 1) and (2, 4), each labelled, with the turning point at the origin.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = x^{2}\\), a U-shaped curve, through the plotted points \\((-2, 4)\\), \\((-1, 1)\\), \\((0, 0)\\), \\((1, 1)\\) and \\((2, 4)\\). The curve never goes below the x-axis, and its lowest point is the origin.",
+     "x": {
+      "min": -3.5,
+      "max": 3.5,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -1,
+      "max": 8,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "equal": false,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "domain": [
+        -2.8,
+        2.8
+       ],
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": 2.6,
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        4
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((-2, 4)\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        1
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((-1, 1)\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        1
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((1, 1)\\)",
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((2, 4)\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:44Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The point at the origin has no label, though the request asked for each plotted point to be labelled and the card line lists x = 0 giving y = 0; label it (0, 0) where it clears the axis numbers and the curve."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:08Z"
+  },
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The parabola y = x^2 from x = -3 to 3 on a grid, through the plotted points (-2, 4), (-1, 1), (0, 0), (1, 1) and (2, 4), each labelled, with the turning point at the origin.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The parabola \\(y = x^{2}\\), a U-shaped curve, through the plotted points \\((-2, 4)\\), \\((-1, 1)\\), \\((0, 0)\\), \\((1, 1)\\) and \\((2, 4)\\). The curve never goes below the x-axis, and its lowest point is the origin.",
+     "x": {
+      "min": -3.5,
+      "max": 3.5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -1,
+      "max": 8,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "equal": false,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x^{2}",
+       "domain": [
+        -2.8,
+        2.8
+       ],
+       "label": "\\(y = x^{2}\\)",
+       "labelAt": 2.6,
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        -2,
+        4
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((-2, 4)\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        1
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((-1, 1)\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point",
+       "label": "\\((0, 0)\\)",
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        1
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((1, 1)\\)",
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((2, 4)\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T14:05:25Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:06:30Z"
+  }
+ ]
 }

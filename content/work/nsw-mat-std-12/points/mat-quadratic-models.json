@@ -9,7 +9,10 @@
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:48Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:13Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -96,6 +99,58 @@
    ],
    "To read the answer from a graph, find the vertex. Its y-value is the maximum or minimum value. Its x-value is where that value happens. Example: a ball's height \\(h\\) (metres) after \\(t\\) seconds peaks at the point (2, 20). The maximum height is 20 m, reached after 2 seconds."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A parabola that opens downwards, showing a ball's height in metres against time in seconds. It starts at 0, rises to its vertex at \\((2, 20)\\), then falls back to 0 at 4 seconds. The maximum height is 20 m, reached after 2 seconds.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "Time (s)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 25,
+     "label": "Height (m)",
+     "step": 5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "20x - 5x^{2}",
+      "domain": [
+       0,
+       4
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       20
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       20
+      ],
+      "on": [
+       "h"
+      ],
+      "is": "turning point",
+      "label": "vertex \\((2, 20)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
   "remember": "The vertex gives the best value (its \\(y\\)) and when or where it happens (its \\(x\\)).",
   "a": {
    "q": "A graph of a ball's height (m) against time (s) is a parabola with its vertex at (3, 45). What is the maximum height?",
@@ -164,5 +219,82 @@
     "clue": "Price is on the x-axis. Which part of the vertex tells you where the maximum happens?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The ball's height h = 20t - 5t^2 against Time (s) 0 to 6 and Height (m) 0 to 25: a parabola opening downwards from 0 at 0 s to 0 at 4 s, with its vertex labelled vertex (2, 20) and dashed guides to both axes.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A parabola that opens downwards, showing a ball's height in metres against time in seconds. It starts at 0, rises to its vertex at \\((2, 20)\\), then falls back to 0 at 4 seconds. The maximum height is 20 m, reached after 2 seconds.",
+     "x": {
+      "min": 0,
+      "max": 6,
+      "label": "Time (s)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 25,
+      "label": "Height (m)",
+      "step": 5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "h",
+       "expr": "20x - 5x^{2}",
+       "domain": [
+        0,
+        4
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        20
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        20
+       ],
+       "on": [
+        "h"
+       ],
+       "is": "turning point",
+       "label": "vertex \\((2, 20)\\)",
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:13Z"
+  }
+ ]
 }

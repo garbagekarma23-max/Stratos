@@ -22,7 +22,10 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 says adapt mat-scatterplots (1 change)",
   "2026-11-01T14:56:03Z adapt: failed the content check, writing again",
   "2026-11-01T15:05:28Z adapt: done",
-  "2026-11-01T15:14:47Z check: passed, cleared"
+  "2026-11-01T15:14:47Z check: passed, cleared",
+  "2026-11-10T13:52:37Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:52Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:18Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -126,6 +129,113 @@
    ],
    "Example: Sam records hours of study and test mark for 12 students. Hours may explain the mark, so hours go on the x-axis and mark on the y-axis. A student with 3 hours and a mark of 60 is plotted at (3, 60)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A scatterplot of hours of study (Hours, on the x-axis) against test mark (Mark, on the y-axis) for 12 students. Each dot is one student. Marks tend to rise with hours. The student with 3 hours and a mark of 60 is labelled \\((3, 60)\\).",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Hours",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Mark",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       45
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       50
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       48
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       55
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       58
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       66
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       70
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       68
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       78
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.5,
+       75
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       85
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       60
+      ],
+      "label": "\\((3, 60)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
   "remember": "Plot each pair as a point, with the explanatory variable on the x-axis.",
   "a": {
    "q": "A teacher compares each student's hours of sleep the night before with their number of mistakes on a maths quiz. Which variable is placed on the horizontal axis of the scatterplot?",
@@ -151,5 +261,137 @@
    "clue": "Which variable might explain the other? It is the x value."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A scatterplot of Sam's 12 students, Hours on the x-axis (0 to 10) and Mark on the y-axis (0 to 100), one dot per student, with the dot at (3, 60) labelled (3, 60).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A scatterplot of hours of study (Hours, on the x-axis) against test mark (Mark, on the y-axis) for 12 students. Each dot is one student. Marks tend to rise with hours. The student with 3 hours and a mark of 60 is labelled \\((3, 60)\\).",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Hours",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 100,
+      "label": "Mark",
+      "step": 20
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "point",
+       "at": [
+        1,
+        45
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        50
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        48
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2.5,
+        55
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3.5,
+        58
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        66
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4.5,
+        70
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        68
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        78
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6.5,
+        75
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        7,
+        85
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        60
+       ],
+       "label": "\\((3, 60)\\)",
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:52Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:18Z"
+  }
+ ]
 }

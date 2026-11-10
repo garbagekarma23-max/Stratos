@@ -20,7 +20,10 @@
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
   "2026-11-05T02:37:17Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:52:08Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T13:57:43Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:07Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -344,6 +347,73 @@
    "Check by putting the x-value back in the rule: \\(2 \\times 3 - 1 = 5\\). It works.",
    "If two different lines cross, they cross at exactly one point. At that point both rules give the same \\(x\\) and the same \\(y\\). So the x-value of the crossing point solves the equation made by setting the two rules equal."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The line \\(y = 2x - 1\\). An arrow starts at 5 on the y-axis and goes across to the line at the point \\((3, 5)\\). A second arrow goes straight down from there to 3 on the x-axis, so \\(x = 3\\).",
+    "x": {
+     "min": 0,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x - 1",
+      "label": "\\(y = 2x - 1\\)",
+      "labelAt": 3.9,
+      "pos": "above-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       0,
+       5
+      ],
+      "to": [
+       2.85,
+       5
+      ],
+      "label": "across",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       5
+      ],
+      "to": [
+       3,
+       0.15
+      ],
+      "label": "down",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       5
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((3, 5)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
   "remember": "Read across from the y-value to the line, then down to \\(x\\). A crossing point fits both rules.",
   "a": {
    "q": "The point \\((2, 8)\\) lies on the graph of \\(y = 3x + 2\\). Use it to solve \\(3x + 2 = 8\\).",
@@ -406,5 +476,97 @@
     "clue": "What do the two rules have in common where the lines meet?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The line y = 2x - 1, labelled, on a grid, with an arrow labelled across from 5 on the y-axis to the line at the point (3, 5), labelled, and an arrow labelled down from there to 3 on the x-axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line \\(y = 2x - 1\\). An arrow starts at 5 on the y-axis and goes across to the line at the point \\((3, 5)\\). A second arrow goes straight down from there to 3 on the x-axis, so \\(x = 3\\).",
+     "x": {
+      "min": 0,
+      "max": 5,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 8,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2x - 1",
+       "label": "\\(y = 2x - 1\\)",
+       "labelAt": 3.9,
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        0,
+        5
+       ],
+       "to": [
+        2.85,
+        5
+       ],
+       "label": "across",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        3,
+        5
+       ],
+       "to": [
+        3,
+        0.15
+       ],
+       "label": "down",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        5
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((3, 5)\\)",
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:43Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:07Z"
+  }
+ ]
 }

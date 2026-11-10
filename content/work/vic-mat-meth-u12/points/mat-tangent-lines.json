@@ -42,7 +42,13 @@
   "2026-11-08T13:07:48Z pictures: 1 picture waiting for the check",
   "2026-11-08T13:14:24Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The description says the three tangents are the same length, but as drawn the horizontal tangent is clearly shorter than the two sloped ones (about 83 px against about 138 px at this scale), because all three span 1.2 units of x and the sloped ones also rise or fall 3.6 units of y; either shorten the sloped segments to about x = 1.14 to 1.86 and x = 4.14 to 4.86 so all three look equal, as was asked for, or take \"of the same length\" out of the description.",
   "2026-11-08T13:16:19Z pictures: 1 picture waiting for the check",
-  "2026-11-08T13:17:35Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The sloping tangents at x = 1.5 and x = 4.5 run only 0.36 either side of their points (not about 0.6 as asked), so they leave the curve by about 0.13 units, a few pixels, and in both light and dark they cannot be seen as lines apart from the curve; the picture does not show a tangent sloping down or up, which is what the card line is about.; Make the sloping tangents clearly visible: longer (about 0.8 either side, which stays inside the axes and above the lowest point) and drawn in a different line style from the curve, such as dashed, so each tangent reads as its own straight line.; The label positive sits with its first letter against the curve (the curve passes through about (4.95, 5.8), right at the start of the word); move it clear of the curve.; The label negative is placed above-right of its segment, not above-left as asked; it is clear of the curve, but the three labels should be placed consistently as the request says.. Now waiting for you: graph at card 1"
+  "2026-11-08T13:17:35Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The sloping tangents at x = 1.5 and x = 4.5 run only 0.36 either side of their points (not about 0.6 as asked), so they leave the curve by about 0.13 units, a few pixels, and in both light and dark they cannot be seen as lines apart from the curve; the picture does not show a tangent sloping down or up, which is what the card line is about.; Make the sloping tangents clearly visible: longer (about 0.8 either side, which stays inside the axes and above the lowest point) and drawn in a different line style from the curve, such as dashed, so each tangent reads as its own straight line.; The label positive sits with its first letter against the curve (the curve passes through about (4.95, 5.8), right at the start of the word); move it clear of the curve.; The label negative is placed above-right of its segment, not above-left as asked; it is clear of the curve, but the three labels should be placed consistently as the request says.. Now waiting for you: graph at card 1",
+  "2026-11-10T13:45:50Z pictures: the owner's new ask takes the place of the graph at card 1: three graphs, one under each of card lines 2 to 4, each with one dashed tangent",
+  "2026-11-10T13:45:58Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T13:45:59Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T13:45:59Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:54Z pictures: 3 pictures waiting for the check",
+  "2026-11-10T14:03:20Z pictures: 3 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -232,6 +238,167 @@
     "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to \\(y = x^{2}\\) at \\(x = 0\\) is horizontal, so the rate there is 0."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve rises, to the right of its lowest point. The tangent touches the curve at one dot and slopes up, so its gradient is positive.",
+    "x": {
+     "min": -0.4,
+     "max": 6,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -0.4,
+     "max": 3.6,
+     "label": "\\(y\\)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+      "domain": [
+       0.5,
+       5.5
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 1.0,
+      "pos": "above-right"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "style": "dash",
+      "expr": "x - 2.75",
+      "domain": [
+       3.44,
+       5.56
+      ],
+      "label": "tangent",
+      "labelAt": 3.6,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       1.75
+      ],
+      "on": [
+       "f",
+       "t"
+      ]
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve falls, to the left of its lowest point. The tangent touches the curve at one dot and slopes down, so its gradient is negative.",
+    "x": {
+     "min": -0.4,
+     "max": 6,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -0.4,
+     "max": 3.6,
+     "label": "\\(y\\)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+      "domain": [
+       0.5,
+       5.5
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 5.0,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "style": "dash",
+      "expr": "-x + 3.25",
+      "domain": [
+       0.44,
+       2.56
+      ],
+      "label": "tangent",
+      "labelAt": 2.45,
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       1.75
+      ],
+      "on": [
+       "f",
+       "t"
+      ]
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent at its lowest point. The tangent touches the curve at one dot and is horizontal, so its gradient is zero.",
+    "x": {
+     "min": -0.4,
+     "max": 6,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -0.4,
+     "max": 3.6,
+     "label": "\\(y\\)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+      "domain": [
+       0.5,
+       5.5
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 5.0,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "style": "dash",
+      "expr": "1",
+      "domain": [
+       1.5,
+       4.5
+      ],
+      "label": "tangent",
+      "labelAt": 4.3,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       1
+      ],
+      "on": [
+       "f",
+       "t"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Tangent up is positive, down is negative, horizontal is zero.",
   "a": {
    "q": "The tangent to a curve at point \\(P\\) is horizontal. What does this tell you about the curve at \\(P\\)?",
@@ -255,27 +422,7 @@
    ],
    "why": "The gradient is \\(\\frac{1 - 5}{2 - 0} = \\frac{-4}{2} = -2\\), so the curve is decreasing at that point. The value \\(-4\\) is only the rise and has not been divided by the run.",
    "clue": "Rise over run, and check which way the line slopes."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "A concave up curve y = f(x), with f(x) = x^2 - 6x + 11 (turning point (3, 2)), and three short tangent segments of equal length: at x = 1.5 (gradient -3), at x = 3 (horizontal, gradient 0) and at x = 4.5 (gradient 3). Each segment is short (about 0.6 either side of its point) so that none crosses another or runs below the curve's lowest point. Each has a label of the same style placed the same way relative to its segment and clear of it: negative above-left of the left one, zero below the middle one, positive above-right of the right one. No axis numbers, so no point from the questions can be read off.",
-    "why": "It shows a tangent's direction matching the curve, with negative, zero and positive gradients.",
-    "tries": 2,
-    "notes": [
-     [
-      "The description says the three tangents are the same length, but as drawn the horizontal tangent is clearly shorter than the two sloped ones (about 83 px against about 138 px at this scale), because all three span 1.2 units of x and the sloped ones also rise or fall 3.6 units of y; either shorten the sloped segments to about x = 1.14 to 1.86 and x = 4.14 to 4.86 so all three look equal, as was asked for, or take \"of the same length\" out of the description."
-     ],
-     [
-      "The sloping tangents at x = 1.5 and x = 4.5 run only 0.36 either side of their points (not about 0.6 as asked), so they leave the curve by about 0.13 units, a few pixels, and in both light and dark they cannot be seen as lines apart from the curve; the picture does not show a tangent sloping down or up, which is what the card line is about.",
-      "Make the sloping tangents clearly visible: longer (about 0.8 either side, which stays inside the axes and above the lowest point) and drawn in a different line style from the curve, such as dashed, so each tangent reads as its own straight line.",
-      "The label positive sits with its first letter against the curve (the curve passes through about (4.95, 5.8), right at the start of the word); move it clear of the curve.",
-      "The label negative is placed above-right of its segment, not above-left as asked; it is clear of the curve, but the three labels should be placed consistently as the request says."
-     ]
-    ]
-   }
-  ]
+  }
  },
  "cleared_by": "recheck",
  "latex": {
@@ -861,6 +1008,264 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-08T13:17:35Z"
+  },
+  {
+   "want": [
+    {
+     "at": "card 1",
+     "kind": "graph",
+     "brief": "A concave up curve y = f(x), with f(x) = x^2 - 6x + 11 (turning point (3, 2)), and three short tangent segments of equal length: at x = 1.5 (gradient -3), at x = 3 (horizontal, gradient 0) and at x = 4.5 (gradient 3). Each segment is short (about 0.6 either side of its point) so that none crosses another or runs below the curve's lowest point. Each has a label of the same style placed the same way relative to its segment and clear of it: negative above-left of the left one, zero below the middle one, positive above-right of the right one. No axis numbers, so no point from the questions can be read off.",
+     "why": "It shows a tangent's direction matching the curve, with negative, zero and positive gradients.",
+     "tries": 2,
+     "notes": [
+      [
+       "The description says the three tangents are the same length, but as drawn the horizontal tangent is clearly shorter than the two sloped ones (about 83 px against about 138 px at this scale), because all three span 1.2 units of x and the sloped ones also rise or fall 3.6 units of y; either shorten the sloped segments to about x = 1.14 to 1.86 and x = 4.14 to 4.86 so all three look equal, as was asked for, or take \"of the same length\" out of the description."
+      ],
+      [
+       "The sloping tangents at x = 1.5 and x = 4.5 run only 0.36 either side of their points (not about 0.6 as asked), so they leave the curve by about 0.13 units, a few pixels, and in both light and dark they cannot be seen as lines apart from the curve; the picture does not show a tangent sloping down or up, which is what the card line is about.",
+       "Make the sloping tangents clearly visible: longer (about 0.8 either side, which stays inside the axes and above the lowest point) and drawn in a different line style from the curve, such as dashed, so each tangent reads as its own straight line.",
+       "The label positive sits with its first letter against the curve (the curve passes through about (4.95, 5.8), right at the start of the word); move it clear of the curve.",
+       "The label negative is placed above-right of its segment, not above-left as asked; it is clear of the curve, but the three labels should be placed consistently as the request says."
+      ]
+     ]
+    }
+   ],
+   "status": "replaced by the owner's new ask: three graphs, one under each of card lines 2 to 4",
+   "at_time": "2026-11-10T13:45:50Z"
+  },
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at x = 4.5 where the curve rises (gradient 1), drawn dashed, about 3 units long, centred on its point of contact, with a dot at that point and the label tangent. The same curve as the graphs under lines 3 and 4, so the three read as a set.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve rises, to the right of its lowest point. The tangent touches the curve at one dot and slopes up, so its gradient is positive.",
+     "x": {
+      "min": -0.4,
+      "max": 6,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -0.4,
+      "max": 3.6,
+      "label": "\\(y\\)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+       "domain": [
+        0.5,
+        5.5
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 1.0,
+       "pos": "above-right"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "style": "dash",
+       "expr": "x - 2.75",
+       "domain": [
+        3.44,
+        5.56
+       ],
+       "label": "tangent",
+       "labelAt": 3.6,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        4.5,
+        1.75
+       ],
+       "on": [
+        "f",
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:20Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at x = 1.5 where the curve falls (gradient -1), drawn dashed, about 3 units long, centred on its point of contact, with a dot at that point and the label tangent. The same curve as the graphs under lines 2 and 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve falls, to the left of its lowest point. The tangent touches the curve at one dot and slopes down, so its gradient is negative.",
+     "x": {
+      "min": -0.4,
+      "max": 6,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -0.4,
+      "max": 3.6,
+      "label": "\\(y\\)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+       "domain": [
+        0.5,
+        5.5
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 5.0,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "style": "dash",
+       "expr": "-x + 3.25",
+       "domain": [
+        0.44,
+        2.56
+       ],
+       "label": "tangent",
+       "labelAt": 2.45,
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        1.75
+       ],
+       "on": [
+        "f",
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:53Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:20Z"
+  },
+  {
+   "want": 3,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A small graph with equal scales and no axis numbers (so no point from the questions can be read off): the concave up curve y = f(x), f(x) = (x - 3)^2/3 + 1, labelled, with its lowest point at (3, 1). One tangent only, at the lowest point (3, 1), horizontal (gradient 0), drawn dashed, about 3 units long, centred on the lowest point, with a dot there and the label tangent. The same curve as the graphs under lines 2 and 3.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent at its lowest point. The tangent touches the curve at one dot and is horizontal, so its gradient is zero.",
+     "x": {
+      "min": -0.4,
+      "max": 6,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -0.4,
+      "max": 3.6,
+      "label": "\\(y\\)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+       "domain": [
+        0.5,
+        5.5
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 5.0,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "style": "dash",
+       "expr": "1",
+       "domain": [
+        1.5,
+        4.5
+       ],
+       "label": "tangent",
+       "labelAt": 4.3,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        1
+       ],
+       "on": [
+        "f",
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:53Z",
+   "status": "kept",
+   "check": {
+    "want": 3,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:20Z"
   }
  ]
 }

@@ -9,7 +9,10 @@
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:49Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:14Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -84,6 +87,76 @@
    "On a distance-time graph, time is across and distance is up. The gradient (rise \\(\\div\\) run) is the speed, so a steeper line means a faster speed.",
    "A flat line means distance is not changing, so the object is stopped. A line going back down towards zero means the object is returning to the start."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A distance-time graph of the cyclist's day. The line rises from 0 km to 45 km over the first 3 hours, a speed of 15 km/h. It is flat from 3 to 4 hours, so the cyclist is stopped. It then goes back down to 0 km at 6 hours, which is a steeper line, so the ride back to the start is faster.",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "label": "Time (h)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 60,
+     "label": "Distance (km)",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        3,
+        45
+       ],
+       [
+        4,
+        45
+       ],
+       [
+        6,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       1.5,
+       22.5
+      ],
+      "label": "15 km/h",
+      "pos": "above-left"
+     },
+     {
+      "type": "text",
+      "at": [
+       3.5,
+       45
+      ],
+      "label": "stopped",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       5,
+       28
+      ],
+      "label": "returning",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Speed \\(=\\) distance \\(\\div\\) time, and on a distance-time graph the gradient is the speed.",
   "a": {
    "q": "A train travels 240 km at a steady speed of 80 km/h. How long does the trip take?",
@@ -146,5 +219,100 @@
     "clue": "Use only the first 2 hours, and ask what a gradient of zero means."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The cyclist's distance-time graph, Time (h) 0 to 7 and Distance (km) 0 to 60: a line from 0 km to 45 km over 3 hours labelled 15 km/h, a flat part from 3 to 4 hours labelled stopped, and a steeper line back down to 0 km at 6 hours labelled returning.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A distance-time graph of the cyclist's day. The line rises from 0 km to 45 km over the first 3 hours, a speed of 15 km/h. It is flat from 3 to 4 hours, so the cyclist is stopped. It then goes back down to 0 km at 6 hours, which is a steeper line, so the ride back to the start is faster.",
+     "x": {
+      "min": 0,
+      "max": 7,
+      "label": "Time (h)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 60,
+      "label": "Distance (km)",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "curve",
+       "id": "d",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         3,
+         45
+        ],
+        [
+         4,
+         45
+        ],
+        [
+         6,
+         0
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1.5,
+        22.5
+       ],
+       "label": "15 km/h",
+       "pos": "above-left"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.5,
+        45
+       ],
+       "label": "stopped",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        5,
+        28
+       ],
+       "label": "returning",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:13Z"
+  }
+ ]
 }

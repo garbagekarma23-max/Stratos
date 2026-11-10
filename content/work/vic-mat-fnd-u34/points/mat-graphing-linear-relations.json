@@ -33,7 +33,10 @@
   "2026-11-01T15:14:47Z fix: suggested",
   "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
   "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
-  "2026-11-06T08:20:00Z maths: LaTeX changed by hand"
+  "2026-11-06T08:20:00Z maths: LaTeX changed by hand",
+  "2026-11-10T13:52:27Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:51Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:17Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -226,6 +229,64 @@
    ],
    "To plot, find two points. At \\(n = 0\\), \\(C = 20\\). At \\(n = 4\\), \\(C = 20 + 5 \\times 4 = 40\\). Mark \\((0, 20)\\) and \\((4, 40)\\), then join them with a straight line."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(C = 20 + 5n\\), with \\(n\\) across and \\(C\\) up. The points \\((0, 20)\\) and \\((4, 40)\\) are marked and joined by a straight line. The line starts at 20 on the vertical axis and rises 5 for each 1 step across.",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "label": "\\(n\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 60,
+     "label": "\\(C\\)",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "20 + 5x",
+      "domain": [
+       0,
+       7
+      ],
+      "label": "\\(C = 20 + 5n\\)",
+      "labelAt": 2.5,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       20
+      ],
+      "label": "\\((0, 20)\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       40
+      ],
+      "label": "\\((4, 40)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "The start is where the line crosses the vertical axis. The rate is how much it rises for each 1 step across.",
   "a": {
    "q": "A taxi fare is \\(F = 4 + 3d\\), where \\(d\\) is the distance in km. What does the graph of \\(F\\) against \\(d\\) look like?",
@@ -294,5 +355,88 @@
     "clue": "Multiply the rate by h first, then add the start."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The graph of C = 20 + 5n, n across and C up, with the points (0, 20) and (4, 40) marked, labelled and joined by a straight line labelled C = 20 + 5n.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(C = 20 + 5n\\), with \\(n\\) across and \\(C\\) up. The points \\((0, 20)\\) and \\((4, 40)\\) are marked and joined by a straight line. The line starts at 20 on the vertical axis and rises 5 for each 1 step across.",
+     "x": {
+      "min": 0,
+      "max": 7,
+      "label": "\\(n\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 60,
+      "label": "\\(C\\)",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "20 + 5x",
+       "domain": [
+        0,
+        7
+       ],
+       "label": "\\(C = 20 + 5n\\)",
+       "labelAt": 2.5,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        20
+       ],
+       "label": "\\((0, 20)\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        40
+       ],
+       "label": "\\((4, 40)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:51Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:16Z"
+  }
+ ]
 }

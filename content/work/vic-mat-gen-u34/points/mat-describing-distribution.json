@@ -30,7 +30,10 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:52:37Z pictures: the owner asked for a graph at card 1",
+  "2026-11-10T13:57:51Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:17Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -132,6 +135,55 @@
     "An outlier is a value far from the rest. Outliers pull the mean and standard deviation more than the median and IQR, so with skew or outliers, median and IQR are the better pair."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A negatively skewed distribution. Most values are bunched at the right, where the curve peaks, and the tail stretches out to the left.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Value"
+    },
+    "y": {
+     "min": 0,
+     "max": 0.7,
+     "label": "Frequency"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(10 - x)^{2}e^{-(10 - x)}",
+      "domain": [
+       0,
+       10
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       4.6,
+       0.2
+      ],
+      "to": [
+       1.6,
+       0.2
+      ],
+      "label": "tail",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       8,
+       0.56
+      ],
+      "label": "most values",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Describe shape, centre, spread and outliers, and use median and IQR when data is skewed.",
   "a": {
    "q": "Most scores in a histogram are bunched at the left, with a long tail to the right. What is the shape?",
@@ -206,5 +258,79 @@
     "clue": "Which measures are pulled least by extreme values?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A smooth negatively skewed distribution curve, axes Value and Frequency with no numbers. The curve peaks near the right, labelled most values, and its tail stretches to the left, marked by an arrow labelled tail.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A negatively skewed distribution. Most values are bunched at the right, where the curve peaks, and the tail stretches out to the left.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Value"
+     },
+     "y": {
+      "min": 0,
+      "max": 0.7,
+      "label": "Frequency"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(10 - x)^{2}e^{-(10 - x)}",
+       "domain": [
+        0,
+        10
+       ]
+      },
+      {
+       "type": "arrow",
+       "from": [
+        4.6,
+        0.2
+       ],
+       "to": [
+        1.6,
+        0.2
+       ],
+       "label": "tail",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        8,
+        0.56
+       ],
+       "label": "most values",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:51Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:17Z"
+  }
+ ]
 }

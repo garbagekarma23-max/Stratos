@@ -9,7 +9,10 @@
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
   "2026-10-29T12:39:10Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:52:26Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:46Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:10Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -84,6 +87,49 @@
    "To find it from a table, look for the row where \\(x = 0\\). If there is no such row, work backwards using the rate of change.",
    "Example: a plumber charges $60 to arrive, then $40 for each hour of work. When \\(\\text{hours} = 0\\), the cost is $60. So the y-intercept is $60, the call-out fee."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A line graph of the plumber's cost in dollars against hours of work. The line crosses the vertical axis at $60, the call-out fee, when hours are 0, and rises $40 for each hour.",
+    "x": {
+     "min": 0,
+     "max": 5.5,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 300,
+     "label": "Cost ($)",
+     "step": 50
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "60 + 40x",
+      "domain": [
+       0,
+       5.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       60
+      ],
+      "label": "call-out fee $60",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     }
+    ]
+   }
+  },
   "remember": "The y-intercept is the value of \\(y\\) when \\(x\\) is zero: the starting amount.",
   "a": {
    "q": "A tutor's cost \\(C\\) (in dollars) for \\(h\\) hours is shown on a graph. The line crosses the vertical axis at \\(C = 25\\). What does this 25 mean?",
@@ -146,5 +192,73 @@
     "clue": "Work backwards one hour from h = 1 using the rise in cost."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A line graph of Cost ($) against Hours for the plumber, C = 60 + 40h from 0 to 5.5 hours. The y-intercept (0, 60) is marked with a dot labelled call-out fee $60.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A line graph of the plumber's cost in dollars against hours of work. The line crosses the vertical axis at $60, the call-out fee, when hours are 0, and rises $40 for each hour.",
+     "x": {
+      "min": 0,
+      "max": 5.5,
+      "label": "Hours",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 300,
+      "label": "Cost ($)",
+      "step": 50
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "60 + 40x",
+       "domain": [
+        0,
+        5.5
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        60
+       ],
+       "label": "call-out fee $60",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:46Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:10Z"
+  }
+ ]
 }

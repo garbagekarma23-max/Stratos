@@ -26,7 +26,10 @@
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 says adapt mat-interpolation-extrapolation (1 change)",
   "2026-11-01T14:56:02Z adapt: done",
   "2026-11-01T15:05:28Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:52:27Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:51Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:17Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -130,6 +133,150 @@
    ],
    "Example: a line is fitted to data for \\(x\\) from 10 to 40. Predicting at \\(x = 25\\) is interpolation. Predicting at \\(x = 60\\) is extrapolation."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A scatterplot with data for \\(x\\) from 10 to 40 and a line of best fit drawn solid through them. The line continues dotted beyond the data. A point on the line at \\(x = 25\\), inside the data, is labelled interpolation; a point at \\(x = 60\\), outside the data, is labelled extrapolation.",
+    "x": {
+     "min": 0,
+     "max": 70,
+     "label": "\\(x\\)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 150,
+     "label": "\\(y\\)",
+     "step": 25
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       10,
+       26
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       13,
+       39
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       17,
+       41
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       21,
+       55
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       28,
+       63
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       31,
+       75
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       35,
+       77
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       92
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 10",
+      "domain": [
+       10,
+       40
+      ],
+      "label": "line of best fit",
+      "labelAt": 33,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "2x + 10",
+      "domain": [
+       40,
+       66
+      ],
+      "style": "dot",
+      "label": "beyond the data",
+      "labelAt": 44,
+      "pos": "below-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       25,
+       60
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "guide",
+      "at": [
+       60,
+       130
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       25,
+       60
+      ],
+      "open": true,
+      "label": "interpolation",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       60,
+       130
+      ],
+      "open": true,
+      "label": "extrapolation",
+      "pos": "above-left",
+      "on": [
+       "g"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
   "a": {
    "q": "A line of best fit is fitted to data with x-values from 20 to 50. Which prediction is extrapolation?",
@@ -198,5 +345,174 @@
     "clue": "Which prediction has data on both sides of it?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A scatterplot of 8 data points with x from 10 to 40, a solid line of best fit y = 2x + 10 through them labelled line of best fit, and the same line continued dotted from 40 to 66, labelled beyond the data. Open points on the line at x = 25 labelled interpolation and at x = 60 labelled extrapolation, each with a dashed guide down to the x-axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A scatterplot with data for \\(x\\) from 10 to 40 and a line of best fit drawn solid through them. The line continues dotted beyond the data. A point on the line at \\(x = 25\\), inside the data, is labelled interpolation; a point at \\(x = 60\\), outside the data, is labelled extrapolation.",
+     "x": {
+      "min": 0,
+      "max": 70,
+      "label": "\\(x\\)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 150,
+      "label": "\\(y\\)",
+      "step": 25
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "point",
+       "at": [
+        10,
+        26
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        13,
+        39
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        17,
+        41
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        21,
+        55
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        28,
+        63
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        31,
+        75
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        35,
+        77
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        40,
+        92
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2x + 10",
+       "domain": [
+        10,
+        40
+       ],
+       "label": "line of best fit",
+       "labelAt": 33,
+       "pos": "below-right"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "2x + 10",
+       "domain": [
+        40,
+        66
+       ],
+       "style": "dot",
+       "label": "beyond the data",
+       "labelAt": 44,
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        25,
+        60
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "guide",
+       "at": [
+        60,
+        130
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        25,
+        60
+       ],
+       "open": true,
+       "label": "interpolation",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        60,
+        130
+       ],
+       "open": true,
+       "label": "extrapolation",
+       "pos": "above-left",
+       "on": [
+        "g"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:51Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:17Z"
+  }
+ ]
 }

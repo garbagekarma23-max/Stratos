@@ -11,7 +11,10 @@
   "2026-11-04T09:58:30Z fix: suggested",
   "2026-11-04T17:58:53Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording)",
   "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)",
-  "2026-11-06T10:44:50Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:44:50Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:57:09Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:42Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:05Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -142,6 +145,68 @@
    "To find which side to shade, pick a test point not on the line, such as (0, 0), and put it into the inequality. If it makes the inequality true, shade that side. If not, shade the other side.",
    "Example: for \\(y > 2x + 1\\), test (0, 0). \\(0 > 2 \\times 0 + 1\\) gives \\(0 > 1\\), which is false. So shade the side that does not contain (0, 0), with a dashed line."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The boundary line \\(y = 2x + 1\\) is drawn dashed, because points on it do not count. The test point \\((0, 0)\\) is below the line, so the shaded region is the side above the line, which is \\(y > 2x + 1\\).",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -3,
+     "max": 5,
+     "label": "\\(y\\)"
+    },
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        -3,
+        -3
+       ],
+       [
+        -2,
+        -3
+       ],
+       [
+        2,
+        5
+       ],
+       [
+        -3,
+        5
+       ]
+      ],
+      "label": "\\(y > 2x + 1\\)",
+      "at": [
+       -1.6,
+       3.3
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 1",
+      "style": "dash",
+      "label": "\\(y = 2x + 1\\)",
+      "labelAt": 0.8,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "test point \\((0, 0)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
   "remember": "Draw the boundary line, then use a test point to choose the side to shade.",
   "a": {
    "q": "Which point lies in the region \\(y > 2x + 1\\)?",
@@ -344,5 +409,92 @@
     "clue": "Check the test point for the side, then check the sign for the line."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The dashed boundary line y = 2x + 1, labelled, with the region above it shaded and labelled y > 2x + 1, and the dot at the origin labelled test point (0, 0) on the unshaded side. No axis numbers.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The boundary line \\(y = 2x + 1\\) is drawn dashed, because points on it do not count. The test point \\((0, 0)\\) is below the line, so the shaded region is the side above the line, which is \\(y > 2x + 1\\).",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -3,
+      "max": 5,
+      "label": "\\(y\\)"
+     },
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         -3,
+         -3
+        ],
+        [
+         -2,
+         -3
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         -3,
+         5
+        ]
+       ],
+       "label": "\\(y > 2x + 1\\)",
+       "at": [
+        -1.6,
+        3.3
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2x + 1",
+       "style": "dash",
+       "label": "\\(y = 2x + 1\\)",
+       "labelAt": 0.8,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "label": "test point \\((0, 0)\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:41Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:04Z"
+  }
+ ]
 }

@@ -14,7 +14,10 @@
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
   "2026-11-05T02:37:17Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:52:09Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T13:57:43Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:06Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -315,6 +318,81 @@
    "Example: \\((-3, 2)\\) means 3 units left, then 2 units up. The order matters, so \\((2, -3)\\) is a different point. Any point on the x-axis has \\(y = 0\\).",
    "The rule \\(y = x + 1\\) gives the points \\((0, 1)\\), \\((1, 2)\\) and \\((2, 3)\\). As \\(x\\) goes up by 1, \\(y\\) goes up by the same amount each time (here, 1), so the points sit on a straight line."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A Cartesian plane with the origin marked. The point \\((-3, 2)\\) is reached by going 3 units left, then 2 units up. The point \\((2, -3)\\) is a different point, 2 units right and 3 units down.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "arrow",
+      "from": [
+       0,
+       0
+      ],
+      "to": [
+       -3,
+       0
+      ],
+      "label": "3 left",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       -3,
+       0
+      ],
+      "to": [
+       -3,
+       2
+      ],
+      "label": "2 up",
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "origin",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       -3,
+       2
+      ],
+      "label": "\\((-3, 2)\\)",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       -3
+      ],
+      "label": "\\((2, -3)\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Write \\((x, y)\\): across first, then up or down.",
   "a": {
    "q": "Starting at the origin, how do you reach the point \\((4, -2)\\)?",
@@ -377,5 +455,105 @@
     "clue": "Check how much y changes each time x goes up by 1."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A Cartesian plane from -4 to 4 on both axes with the origin labelled, arrows labelled 3 left and 2 up from the origin to the point (-3, 2), labelled, and the different point (2, -3), labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A Cartesian plane with the origin marked. The point \\((-3, 2)\\) is reached by going 3 units left, then 2 units up. The point \\((2, -3)\\) is a different point, 2 units right and 3 units down.",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "equal": true,
+     "items": [
+      {
+       "type": "arrow",
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        -3,
+        0
+       ],
+       "label": "3 left",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        -3,
+        0
+       ],
+       "to": [
+        -3,
+        2
+       ],
+       "label": "2 up",
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "label": "origin",
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        -3,
+        2
+       ],
+       "label": "\\((-3, 2)\\)",
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -3
+       ],
+       "label": "\\((2, -3)\\)",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:43Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:06Z"
+  }
+ ]
 }

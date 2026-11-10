@@ -8,7 +8,10 @@
   "2026-10-29T12:14:27Z match: none",
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
-  "2026-10-29T12:39:10Z check: passed, cleared"
+  "2026-10-29T12:39:10Z check: passed, cleared",
+  "2026-11-10T13:55:59Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T13:57:50Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:15Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -83,6 +86,54 @@
    "The mean, median and mode are all equal, and they sit at the peak. For example, if the mean mark is 60, the median and mode are also 60.",
    "Scores near the centre are common. Scores far from the centre, in either tail, are rare."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A normal curve of marks with mean 60. It is a symmetric bell with one peak at 60, where the mean, median and mode all sit. The curve falls away evenly on both sides into the two tails.",
+    "x": {
+     "min": 20,
+     "max": 100,
+     "label": "Mark",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 0.05
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}",
+      "domain": [
+       20,
+       100
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       60,
+       0.0399
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       60,
+       0.0399
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point",
+      "label": "mean, median and mode",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "A normal distribution is a symmetric bell with the mean, median and mode all at the centre.",
   "a": {
    "q": "The heights of a large group of students follow a normal distribution with a mean of 168 cm. What is the median height?",
@@ -108,5 +159,78 @@
    "clue": "Think of the shape of a bell, with the peak at the centre."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A normal curve of marks (Mark, 20 to 100) with mean 60, a symmetric bell with its peak at 60 labelled mean, median and mode, and a dashed line from the peak down to 60. No numbers on the vertical axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A normal curve of marks with mean 60. It is a symmetric bell with one peak at 60, where the mean, median and mode all sit. The curve falls away evenly on both sides into the two tails.",
+     "x": {
+      "min": 20,
+      "max": 100,
+      "label": "Mark",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 0.05
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}",
+       "domain": [
+        20,
+        100
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        60,
+        0.0399
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        60,
+        0.0399
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point",
+       "label": "mean, median and mode",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:49Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:15Z"
+  }
+ ]
 }

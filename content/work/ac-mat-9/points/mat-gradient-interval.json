@@ -23,7 +23,10 @@
   "2026-11-04T09:47:10Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:58:31Z write: done",
   "2026-11-04T10:08:04Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:57:08Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:44Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:08Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -116,6 +119,86 @@
    "A line that slopes up to the right has a positive gradient. A line that slopes down to the right has a negative gradient.",
    "Example: from \\((1, 7)\\) to \\((4, 1)\\), rise \\(= 1 - 7 = -6\\) and run \\(= 4 - 1 = 3\\). Gradient \\(= -6 \\div 3 = -2\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The interval from \\((1, 7)\\) to \\((4, 1)\\). From \\((1, 7)\\), the run goes 3 across to the right and the rise goes 6 down, so the rise is \\(-6\\). The interval slopes down to the right, so its gradient \\(-6 \\div 3 = -2\\) is negative.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "-2x + 9",
+      "domain": [
+       1,
+       4
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       7
+      ],
+      "to": [
+       4,
+       7
+      ],
+      "label": "run 3",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       4,
+       7
+      ],
+      "to": [
+       4,
+       1
+      ],
+      "label": "rise \\(-6\\)",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       7
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((1, 7)\\)",
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((4, 1)\\)",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Gradient is change in \\(y\\) over change in \\(x\\), and it is negative when the line goes down to the right.",
   "a": {
    "q": "What is the gradient of the interval from \\((2, 3)\\) to \\((6, 11)\\)?",
@@ -178,5 +261,110 @@
     "clue": "Does the line go up or down as x increases?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The interval from (1, 7) to (4, 1) on a grid, with both end points labelled. A run arrow 3 across labelled run 3 and a rise arrow 6 down labelled rise -6, showing a gradient of -2 for a line that slopes down to the right.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The interval from \\((1, 7)\\) to \\((4, 1)\\). From \\((1, 7)\\), the run goes 3 across to the right and the rise goes 6 down, so the rise is \\(-6\\). The interval slopes down to the right, so its gradient \\(-6 \\div 3 = -2\\) is negative.",
+     "x": {
+      "min": 0,
+      "max": 6,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 9,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "-2x + 9",
+       "domain": [
+        1,
+        4
+       ]
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        7
+       ],
+       "to": [
+        4,
+        7
+       ],
+       "label": "run 3",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        4,
+        7
+       ],
+       "to": [
+        4,
+        1
+       ],
+       "label": "rise \\(-6\\)",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        7
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((1, 7)\\)",
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        1
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((4, 1)\\)",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:44Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:07Z"
+  }
+ ]
 }

@@ -31,7 +31,10 @@
   "2026-11-04T09:47:06Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:58:30Z write: done",
   "2026-11-04T10:08:03Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:57:10Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:42Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:05Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -110,6 +113,80 @@
    "To solve: graph both lines, read the crossing point \\((x, y)\\), then check it by putting \\(x\\) and \\(y\\) into both equations.",
    "Example: \\(y = x + 1\\) and \\(y = 7 - x\\). The lines cross at \\((3, 4)\\). Check: \\(4 = 3 + 1\\) is true, and \\(7 - 3 = 4\\) is true. So \\(x = 3\\) and \\(y = 4\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The lines \\(y = x + 1\\) and \\(y = 7 - x\\) cross at \\((3, 4)\\). That point is on both lines, so \\(x = 3\\) and \\(y = 4\\) make both equations true.",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "x + 1",
+      "domain": [
+       0,
+       6.5
+      ],
+      "label": "\\(y = x + 1\\)",
+      "labelAt": 5.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "7 - x",
+      "domain": [
+       0,
+       7
+      ],
+      "label": "\\(y = 7 - x\\)",
+      "labelAt": 5,
+      "pos": "above-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       3,
+       4
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       4
+      ],
+      "on": [
+       "a",
+       "b"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       4.2,
+       4
+      ],
+      "label": "\\((3, 4)\\)"
+     }
+    ]
+   }
+  },
   "remember": "The solution is the crossing point, and it must work in both equations.",
   "a": {
    "q": "Two lines cross at the point \\((2, 5)\\). What is the solution of the pair of equations?",
@@ -172,5 +249,104 @@
     "clue": "Put each point into both equations. It must work in both."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The lines y = x + 1 and y = 7 - x, each labelled, crossing at a dot labelled (3, 4), with dashed guides from it to 3 on the x-axis and 4 on the y-axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The lines \\(y = x + 1\\) and \\(y = 7 - x\\) cross at \\((3, 4)\\). That point is on both lines, so \\(x = 3\\) and \\(y = 4\\) make both equations true.",
+     "x": {
+      "min": 0,
+      "max": 7,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 8,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "x + 1",
+       "domain": [
+        0,
+        6.5
+       ],
+       "label": "\\(y = x + 1\\)",
+       "labelAt": 5.5,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "7 - x",
+       "domain": [
+        0,
+        7
+       ],
+       "label": "\\(y = 7 - x\\)",
+       "labelAt": 5,
+       "pos": "above-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        4
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        4
+       ],
+       "on": [
+        "a",
+        "b"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "text",
+       "at": [
+        4.2,
+        4
+       ],
+       "label": "\\((3, 4)\\)"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:42Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:05Z"
+  }
+ ]
 }

@@ -8,7 +8,10 @@
   "2026-10-29T12:14:27Z match: none",
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:23Z write: done",
-  "2026-10-29T12:39:10Z check: passed, cleared"
+  "2026-10-29T12:39:10Z check: passed, cleared",
+  "2026-11-10T13:55:59Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:50Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:15Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -83,6 +86,64 @@
    "The distribution is symmetric, so the percentages split evenly either side of the mean. Within 1 standard deviation, about 34% lie on each side.",
    "Example: test marks have mean 60 and standard deviation 10. Within 2 standard deviations means 40 to 80, so about 95% of marks are in that range. The other 5% are split evenly, so about 2.5% score above 80."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A normal curve of test marks with mean 60 and standard deviation 10. The area under the curve from 40 to 80, within 2 standard deviations of the mean, is shaded and holds about 95% of marks. The two tails, below 40 and above 80, each hold about 2.5%.",
+    "x": {
+     "min": 20,
+     "max": 100,
+     "label": "Mark",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 0.05
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "f",
+      "span": [
+       40,
+       80
+      ],
+      "label": "about 95%",
+      "at": [
+       60,
+       0.017
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}",
+      "domain": [
+       20,
+       100
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       30,
+       0.004
+      ],
+      "label": "2.5%",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       90,
+       0.004
+      ],
+      "label": "2.5%",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Within 1, 2 and 3 standard deviations of the mean: about 68%, 95% and 99.7%.",
   "a": {
    "q": "Heights of Year 12 students are normally distributed, with mean 170 cm and standard deviation 8 cm. About what percentage of heights lie between 154 cm and 186 cm?",
@@ -108,5 +169,88 @@
    "clue": "The scores outside the range are split evenly between both ends."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A normal curve of test marks with mean 60 and standard deviation 10 (Mark, 20 to 100). The area under it from 40 to 80 is shaded and labelled about 95%, and each tail, below 40 and above 80, is labelled 2.5%. No numbers on the vertical axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A normal curve of test marks with mean 60 and standard deviation 10. The area under the curve from 40 to 80, within 2 standard deviations of the mean, is shaded and holds about 95% of marks. The two tails, below 40 and above 80, each hold about 2.5%.",
+     "x": {
+      "min": 20,
+      "max": 100,
+      "label": "Mark",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 0.05
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "f",
+       "span": [
+        40,
+        80
+       ],
+       "label": "about 95%",
+       "at": [
+        60,
+        0.017
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}",
+       "domain": [
+        20,
+        100
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        30,
+        0.004
+       ],
+       "label": "2.5%",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        90,
+        0.004
+       ],
+       "label": "2.5%",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:50Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:15Z"
+  }
+ ]
 }

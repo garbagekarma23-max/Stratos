@@ -36,7 +36,10 @@
   "2026-11-05T02:27:43Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
   "2026-11-05T02:37:17Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:57:10Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:42Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:05Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -401,6 +404,74 @@
    ],
    "To choose a model, check the differences first, then the ratios, then look for a turn in the values."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The three examples drawn against \\(x\\) from 0 to 4. Linear, through 4, 7, 10, 13, is a straight line. Exponential, through 3, 6, 12, 24, curves up more steeply each step. Quadratic, through 2, 5, 6, 5, 2, rises then falls, with its one turning point marked at \\((2, 6)\\).",
+    "x": {
+     "min": 0,
+     "max": 4.5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 26,
+     "label": "\\(y\\)",
+     "step": 5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "3x + 4",
+      "domain": [
+       0,
+       4
+      ],
+      "label": "linear",
+      "labelAt": 4,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "e",
+      "expr": "3(2)^{x}",
+      "domain": [
+       0,
+       3.1
+      ],
+      "label": "exponential",
+      "labelAt": 2.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "q",
+      "expr": "-x^{2} + 4x + 2",
+      "domain": [
+       0,
+       4
+      ],
+      "label": "quadratic",
+      "labelAt": 3.8,
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       6
+      ],
+      "on": [
+       "q"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
+  },
   "remember": "Equal differences suggest linear, equal ratios suggest exponential, and a rise then fall suggests quadratic.",
   "a": {
    "q": "As \\(x\\) goes 0, 1, 2, 3, the \\(y\\) values in a table are 5, 10, 20, 40. Which model suits the data best?",
@@ -472,5 +543,98 @@
     "clue": "Check the differences and ratios, then look at what the heights do."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The card's three examples drawn against x from 0 to 4: a straight line labelled linear through 4, 7, 10, 13; a curve labelled exponential through 3, 6, 12, 24; and a curve labelled quadratic through 2, 5, 6, 5, 2 with its turning point (2, 6) marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The three examples drawn against \\(x\\) from 0 to 4. Linear, through 4, 7, 10, 13, is a straight line. Exponential, through 3, 6, 12, 24, curves up more steeply each step. Quadratic, through 2, 5, 6, 5, 2, rises then falls, with its one turning point marked at \\((2, 6)\\).",
+     "x": {
+      "min": 0,
+      "max": 4.5,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 26,
+      "label": "\\(y\\)",
+      "step": 5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "3x + 4",
+       "domain": [
+        0,
+        4
+       ],
+       "label": "linear",
+       "labelAt": 4,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "3(2)^{x}",
+       "domain": [
+        0,
+        3.1
+       ],
+       "label": "exponential",
+       "labelAt": 2.5,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "q",
+       "expr": "-x^{2} + 4x + 2",
+       "domain": [
+        0,
+        4
+       ],
+       "label": "quadratic",
+       "labelAt": 3.8,
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        6
+       ],
+       "on": [
+        "q"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:42Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:05Z"
+  }
+ ]
 }

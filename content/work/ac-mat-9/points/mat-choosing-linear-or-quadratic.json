@@ -20,7 +20,10 @@
   "2026-11-04T09:58:31Z check: flagged",
   "2026-11-04T10:08:05Z fix: suggested",
   "2026-11-04T18:10:13Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:57:09Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:45Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:09Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -201,6 +204,131 @@
    "To choose, find the change between each pair of values in a table. If every change is the same, use a linear model. If the changes go up or down by the same amount, use a quadratic model.",
    "Example: 2, 5, 8, 11 adds 3 each time, so it is linear. 0, 3, 4, 3 changes by \\(3, 1, -1\\). These changes drop by 2 each time, so it is quadratic."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The values 2, 5, 8, 11 plotted at steps 0 to 3 lie on a straight line, labelled linear. The values 0, 3, 4, 3 lie on a parabola that rises then falls, labelled quadratic.",
+    "x": {
+     "min": 0,
+     "max": 3.5,
+     "label": "Step",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 12,
+     "label": "Value",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "3x + 2",
+      "domain": [
+       0,
+       3.2
+      ],
+      "label": "linear",
+      "labelAt": 2.2,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "q",
+      "expr": "-x^{2} + 4x",
+      "domain": [
+       0,
+       3.4
+      ],
+      "label": "quadratic",
+      "labelAt": 2,
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       2
+      ],
+      "on": [
+       "l"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       5
+      ],
+      "on": [
+       "l"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       8
+      ],
+      "on": [
+       "l"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       11
+      ],
+      "on": [
+       "l"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "q"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       3
+      ],
+      "on": [
+       "q"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       4
+      ],
+      "on": [
+       "q"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       3
+      ],
+      "on": [
+       "q"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Same change each step is linear. A change that itself changes steadily is quadratic.",
   "a": {
    "q": "The height of a kicked football is 0 m, 8 m, 12 m, 12 m, 8 m, 0 m at equal time steps. Which model suits it?",
@@ -269,5 +397,155 @@
     "clue": "Subtract each cost from the next one."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The card's two examples plotted against Step 0 to 3: 2, 5, 8, 11 on a straight line labelled linear, and 0, 3, 4, 3 on a parabola labelled quadratic, with each value as a dot.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The values 2, 5, 8, 11 plotted at steps 0 to 3 lie on a straight line, labelled linear. The values 0, 3, 4, 3 lie on a parabola that rises then falls, labelled quadratic.",
+     "x": {
+      "min": 0,
+      "max": 3.5,
+      "label": "Step",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 12,
+      "label": "Value",
+      "step": 2
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "3x + 2",
+       "domain": [
+        0,
+        3.2
+       ],
+       "label": "linear",
+       "labelAt": 2.2,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "q",
+       "expr": "-x^{2} + 4x",
+       "domain": [
+        0,
+        3.4
+       ],
+       "label": "quadratic",
+       "labelAt": 2,
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        2
+       ],
+       "on": [
+        "l"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        5
+       ],
+       "on": [
+        "l"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        8
+       ],
+       "on": [
+        "l"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        11
+       ],
+       "on": [
+        "l"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "q"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        3
+       ],
+       "on": [
+        "q"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        4
+       ],
+       "on": [
+        "q"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        3
+       ],
+       "on": [
+        "q"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:45Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:09Z"
+  }
+ ]
 }

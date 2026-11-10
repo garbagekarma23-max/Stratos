@@ -29,7 +29,11 @@
   "2026-11-04T09:23:39Z new, match",
   "2026-11-04T09:36:55Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:06Z write: done",
-  "2026-11-04T09:58:29Z check: passed, cleared"
+  "2026-11-04T09:58:29Z check: passed, cleared",
+  "2026-11-10T13:57:10Z pictures: the owner asked for a chart at card 1",
+  "2026-11-10T13:57:10Z pictures: the owner asked for a chart at card 3",
+  "2026-11-10T13:57:42Z pictures: 2 pictures waiting for the check",
+  "2026-11-10T14:03:06Z pictures: 2 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -107,6 +111,76 @@
    "To compare two data sets, draw both box plots on the same scale. Compare the centre (the medians), the spread (the box lengths and the whisker ends) and the shape.",
    "For shape, look at where the median sits in the box and which whisker is longer. A longer whisker on one side means the data stretches out further that way."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot of 11 quiz scores on a number line from 0 to 20. The left whisker starts at the minimum, 4. The box runs from Q1, 8, to Q3, 15, with the median line at 11. The right whisker ends at the maximum, 18.",
+    "x": {
+     "min": 0,
+     "max": 20,
+     "step": 2,
+     "label": "Quiz score"
+    },
+    "sets": [
+     {
+      "data": [
+       4,
+       6,
+       8,
+       9,
+       10,
+       11,
+       12,
+       14,
+       15,
+       17,
+       18
+      ]
+     }
+    ],
+    "stats": {
+     "min": 4,
+     "q1": 8,
+     "median": 11,
+     "q3": 15,
+     "max": 18
+    }
+   },
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "Box plots of the times, in seconds, two classes took to run 100 m, on the same scale. Class A: minimum 14, Q1 16, median 17, Q3 19, maximum 24. Class B: minimum 13, Q1 14, median 15, Q3 16, maximum 18. Class B has the lower median and a shorter box, so its times are faster and less spread out. Class A's right whisker is longer, so its times stretch out further to the slow side.",
+    "x": {
+     "min": 12,
+     "max": 26,
+     "step": 2,
+     "label": "Time (seconds)"
+    },
+    "sets": [
+     {
+      "label": "Class A",
+      "five": [
+       14,
+       16,
+       17,
+       19,
+       24
+      ]
+     },
+     {
+      "label": "Class B",
+      "five": [
+       13,
+       14,
+       15,
+       16,
+       18
+      ]
+     }
+    ]
+   }
+  },
   "remember": "The box holds about half the data. Compare medians for centre and box length for spread.",
   "a": {
    "q": "A box plot of test scores has a box from 55 to 75, with the median line at 62. Which statement is true?",
@@ -132,5 +206,125 @@
    "clue": "Compare the median lines first, then the box lengths."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "chart",
+   "brief": "A box plot of 11 quiz scores on a number line from 0 to 20 labelled Quiz score: minimum 4, Q1 8, median 11, Q3 15, maximum 18.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "box",
+     "alt": "A box plot of 11 quiz scores on a number line from 0 to 20. The left whisker starts at the minimum, 4. The box runs from Q1, 8, to Q3, 15, with the median line at 11. The right whisker ends at the maximum, 18.",
+     "x": {
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "label": "Quiz score"
+     },
+     "sets": [
+      {
+       "data": [
+        4,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        17,
+        18
+       ]
+      }
+     ],
+     "stats": {
+      "min": 4,
+      "q1": 8,
+      "median": 11,
+      "q3": 15,
+      "max": 18
+     }
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:42Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:05Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "chart",
+   "brief": "Box plots of two classes' 100 m times, labelled Class A (14, 16, 17, 19, 24) and Class B (13, 14, 15, 16, 18), on one scale labelled Time (seconds) from 12 to 26.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "box",
+     "alt": "Box plots of the times, in seconds, two classes took to run 100 m, on the same scale. Class A: minimum 14, Q1 16, median 17, Q3 19, maximum 24. Class B: minimum 13, Q1 14, median 15, Q3 16, maximum 18. Class B has the lower median and a shorter box, so its times are faster and less spread out. Class A's right whisker is longer, so its times stretch out further to the slow side.",
+     "x": {
+      "min": 12,
+      "max": 26,
+      "step": 2,
+      "label": "Time (seconds)"
+     },
+     "sets": [
+      {
+       "label": "Class A",
+       "five": [
+        14,
+        16,
+        17,
+        19,
+        24
+       ]
+      },
+      {
+       "label": "Class B",
+       "five": [
+        13,
+        14,
+        15,
+        16,
+        18
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:42Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:05Z"
+  }
+ ]
 }

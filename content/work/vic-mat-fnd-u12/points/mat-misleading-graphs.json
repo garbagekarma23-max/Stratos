@@ -23,7 +23,10 @@
   "2026-11-01T08:44:27Z fix: suggested",
   "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
   "2026-11-02T06:22:35Z review: approved with the fix (a spot check)",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-10T13:52:08Z pictures: the owner asked for a chart at card 2",
+  "2026-11-10T13:57:51Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:16Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -193,6 +196,37 @@
     "if a picture is made twice as tall and also twice as wide, its area is 4 times bigger. Example: sales double from 10 to 20, but the picture looks 4 times as large."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A column graph of a shop's sales in March, April and May: 52, 54 and 56. The vertical axis starts at 50, not 0, so the May column looks 3 times as tall as the March column, though sales rose by only 4.",
+    "x": {
+     "label": "Month"
+    },
+    "y": {
+     "min": 50,
+     "max": 57,
+     "step": 1,
+     "label": "Sales"
+    },
+    "truncated": true,
+    "bars": [
+     [
+      "March",
+      52
+     ],
+     [
+      "April",
+      54
+     ],
+     [
+      "May",
+      56
+     ]
+    ]
+   }
+  },
   "remember": "Read the axis numbers first. Then ask if the shape matches the real change.",
   "a": {
    "q": "A column graph of phone sales starts its vertical axis at 90, not 0. Sales of 100 and 110 are shown. What is the effect?",
@@ -264,5 +298,61 @@
     "clue": "Area depends on height and width together."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "chart",
+   "brief": "A column graph (bar chart, truncated: true) of a shop's sales: March 52, April 54, May 56, x label Month, y label Sales, with the vertical axis starting at 50, not 0, so May's column looks 3 times as tall as March's though sales rose by only 4.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "bar",
+     "alt": "A column graph of a shop's sales in March, April and May: 52, 54 and 56. The vertical axis starts at 50, not 0, so the May column looks 3 times as tall as the March column, though sales rose by only 4.",
+     "x": {
+      "label": "Month"
+     },
+     "y": {
+      "min": 50,
+      "max": 57,
+      "step": 1,
+      "label": "Sales"
+     },
+     "truncated": true,
+     "bars": [
+      [
+       "March",
+       52
+      ],
+      [
+       "April",
+       54
+      ],
+      [
+       "May",
+       56
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:50Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:16Z"
+  }
+ ]
 }

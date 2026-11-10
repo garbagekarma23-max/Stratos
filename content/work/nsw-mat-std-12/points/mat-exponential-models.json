@@ -12,7 +12,10 @@
   "2026-10-29T12:41:47Z fix: suggested",
   "2026-10-29T16:45:07Z recheck: kept for you (the fresh check found a problem)",
   "2026-10-30T11:57:24Z review: approved with the fix",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:48Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:13Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -196,6 +199,73 @@
     "\\(b\\) is between 0 and 1. A fall of 15% each period gives \\(b = 1 - 0.15 = 0.85\\). Example: a car worth $20 000 that loses 15% a year has \\(V = 20\\,000 \\times 0.85^{x}\\). After 2 years, \\(V = 20\\,000 \\times 0.85^{2} = \\$14\\,450\\)."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The car's value \\(V = 20\\,000 \\times 0.85^{x}\\) against years. The curve starts at $20 000 when \\(x = 0\\) and falls more slowly each year, because each fall is 15% of a smaller value. After 2 years the value is $14 450.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Years",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 25000,
+     "label": "Value ($)",
+     "step": 5000
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "v",
+      "expr": "20000(0.85)^{x}",
+      "domain": [
+       0,
+       10
+      ],
+      "label": "\\(V = 20\\,000 \\times 0.85^{x}\\)",
+      "labelAt": 4,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       20000
+      ],
+      "on": [
+       "v"
+      ],
+      "is": "y-intercept",
+      "label": "starting value",
+      "pos": "above-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       14450
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       14450
+      ],
+      "on": [
+       "v"
+      ],
+      "label": "\\((2, 14\\,450)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
   "remember": "Find \\(b\\) by adding the percentage rate to 1 for growth, or taking it from 1 for decay.",
   "a": {
    "q": "A town of 4000 people grows by 3% each year. Which equation models the population \\(P\\) after \\(x\\) years?",
@@ -267,5 +337,97 @@
     "clue": "Multiply by 0.8 once for each year, so the power is 3."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The car's value V = 20 000 x 0.85^x against Years (0 to 10), Value ($) 0 to 25 000, labelled with its equation. The point (0, 20 000) is labelled starting value, and the point (2, 14 450) is marked with dashed guides to the axes.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The car's value \\(V = 20\\,000 \\times 0.85^{x}\\) against years. The curve starts at $20 000 when \\(x = 0\\) and falls more slowly each year, because each fall is 15% of a smaller value. After 2 years the value is $14 450.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Years",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 25000,
+      "label": "Value ($)",
+      "step": 5000
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "v",
+       "expr": "20000(0.85)^{x}",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "\\(V = 20\\,000 \\times 0.85^{x}\\)",
+       "labelAt": 4,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        20000
+       ],
+       "on": [
+        "v"
+       ],
+       "is": "y-intercept",
+       "label": "starting value",
+       "pos": "above-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        14450
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        14450
+       ],
+       "on": [
+        "v"
+       ],
+       "label": "\\((2, 14\\,450)\\)",
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:12Z"
+  }
+ ]
 }

@@ -11,7 +11,10 @@
   "2026-10-29T12:39:10Z check: flagged",
   "2026-10-29T12:41:46Z fix: suggested",
   "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:52:27Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T13:57:46Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:11Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -171,6 +174,60 @@
    "To find \\(x\\) from a known \\(y\\), put \\(y\\) into the equation and solve. If \\(C = 17\\), then \\(17 = 3 + 2d\\), so \\(2d = 14\\) and \\(d = 7\\) km.",
    "A model is only built from real data in a certain range. Predicting outside that range is extrapolation, and the model may stop being accurate there, because the real pattern may not stay a straight line."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The taxi model \\(C = 3 + 2d\\), cost in dollars against distance in km. The line starts at $3 on the cost axis and rises $2 for each km. Dashed guides from the point \\((10, 23)\\) show that 10 km costs $23.",
+    "x": {
+     "min": 0,
+     "max": 20,
+     "label": "Distance (km)",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 40,
+     "label": "Cost ($)",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "3 + 2x",
+      "domain": [
+       0,
+       18.5
+      ],
+      "label": "\\(C = 3 + 2d\\)",
+      "labelAt": 14,
+      "pos": "below-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       10,
+       23
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       23
+      ],
+      "label": "\\((10, 23)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Put \\(x\\) in to predict \\(y\\), but be careful of predictions outside the data the model came from.",
   "a": {
    "q": "A plumber's charge is \\(C = 60 + 45h\\), where \\(C\\) is the cost in dollars and \\(h\\) is the hours worked. What is the cost of a 3 hour job?",
@@ -233,5 +290,84 @@
     "clue": "Which day is furthest from the data used to make the model?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A line graph of the taxi model C = 3 + 2d, Cost ($) against Distance (km), labelled C = 3 + 2d, with dashed guides from the point (10, 23) to both axes and the point labelled (10, 23).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The taxi model \\(C = 3 + 2d\\), cost in dollars against distance in km. The line starts at $3 on the cost axis and rises $2 for each km. Dashed guides from the point \\((10, 23)\\) show that 10 km costs $23.",
+     "x": {
+      "min": 0,
+      "max": 20,
+      "label": "Distance (km)",
+      "step": 5
+     },
+     "y": {
+      "min": 0,
+      "max": 40,
+      "label": "Cost ($)",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "3 + 2x",
+       "domain": [
+        0,
+        18.5
+       ],
+       "label": "\\(C = 3 + 2d\\)",
+       "labelAt": 14,
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        10,
+        23
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        23
+       ],
+       "label": "\\((10, 23)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:46Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:10Z"
+  }
+ ]
 }

@@ -18,7 +18,10 @@
   "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
   "2026-11-02T04:50:15Z write: done",
-  "2026-11-02T04:56:46Z check: passed, cleared"
+  "2026-11-02T04:56:46Z check: passed, cleared",
+  "2026-11-10T13:52:37Z pictures: the owner asked for a chart at card 4",
+  "2026-11-10T13:57:53Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:19Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -270,6 +273,41 @@
    "If the medians are clearly different, there is an association between the two variables. A difference is clear when it is large compared with the spread of the data. Similar medians alone do not rule out an association, as spread or shape may still differ.",
    "Example: Group A has a median of 40 and Group B has a median of 55, and both have an IQR of about 5. The medians are far apart compared with the spread, so the numerical variable is associated with the group."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "Parallel boxplots of the same numerical variable for two groups. Group A has a median of 40 and Group B a median of 55. Both boxes are about 5 wide, so the medians are far apart compared with the spread.",
+    "x": {
+     "min": 30,
+     "max": 65,
+     "step": 5,
+     "label": "Value"
+    },
+    "sets": [
+     {
+      "label": "Group A",
+      "five": [
+       33,
+       38,
+       40,
+       43,
+       47
+      ]
+     },
+     {
+      "label": "Group B",
+      "five": [
+       48,
+       52,
+       55,
+       57,
+       62
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Compare the centre, spread and shape of each group. Medians that are far apart compared with the spread suggest an association.",
   "a": {
    "q": "Parallel boxplots show the times to run 1 km for Year 9 students (median 5.5 minutes, IQR 0.2) and Year 12 students (median 4.5 minutes, IQR 0.2). What does this suggest?",
@@ -294,5 +332,65 @@
    "why": "Both medians are 8000, so the centres match. Y has the larger IQR, so its steps vary more from person to person. Equal medians do not mean the groups are alike in spread.",
    "clue": "A larger IQR means a wider middle half."
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "chart",
+   "brief": "Parallel boxplots on a Value axis from 30 to 65: Group A with median 40 and box from 38 to 43, Group B with median 55 and box from 52 to 57, both IQRs about 5.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "box",
+     "alt": "Parallel boxplots of the same numerical variable for two groups. Group A has a median of 40 and Group B a median of 55. Both boxes are about 5 wide, so the medians are far apart compared with the spread.",
+     "x": {
+      "min": 30,
+      "max": 65,
+      "step": 5,
+      "label": "Value"
+     },
+     "sets": [
+      {
+       "label": "Group A",
+       "five": [
+        33,
+        38,
+        40,
+        43,
+        47
+       ]
+      },
+      {
+       "label": "Group B",
+       "five": [
+        48,
+        52,
+        55,
+        57,
+        62
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:52Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:18Z"
+  }
+ ]
 }

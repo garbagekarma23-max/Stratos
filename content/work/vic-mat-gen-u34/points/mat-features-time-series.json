@@ -21,7 +21,10 @@
   "2026-11-01T14:36:27Z new, match",
   "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:03Z write: done",
-  "2026-11-01T15:05:28Z check: passed, cleared"
+  "2026-11-01T15:05:28Z check: passed, cleared",
+  "2026-11-10T13:52:38Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T13:57:53Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:20Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -117,6 +120,112 @@
     "Structural change is a sudden, lasting shift, such as a new road changing visitor numbers for good. An outlier is a single value far from the rest."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A time series of sales over 16 quarters, 4 years. The values peak in the first quarter of every year, a pattern that repeats each year, which is seasonality. A dotted trend line rises steadily under the ups and downs, showing a long-term rise.",
+    "x": {
+     "min": 0,
+     "max": 20,
+     "label": "Quarter",
+     "step": 4
+    },
+    "y": {
+     "min": 0,
+     "max": 50,
+     "label": "Sales",
+     "step": 10
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "s",
+      "points": [
+       [
+        1,
+        27
+       ],
+       [
+        2,
+        22
+       ],
+       [
+        3,
+        17
+       ],
+       [
+        4,
+        24
+       ],
+       [
+        5,
+        31
+       ],
+       [
+        6,
+        26
+       ],
+       [
+        7,
+        21
+       ],
+       [
+        8,
+        28
+       ],
+       [
+        9,
+        35
+       ],
+       [
+        10,
+        30
+       ],
+       [
+        11,
+        25
+       ],
+       [
+        12,
+        32
+       ],
+       [
+        13,
+        39
+       ],
+       [
+        14,
+        34
+       ],
+       [
+        15,
+        29
+       ],
+       [
+        16,
+        36
+       ]
+      ],
+      "label": "sales",
+      "labelAt": 13,
+      "pos": "above"
+     },
+     {
+      "type": "fn",
+      "id": "t",
+      "expr": "20 + x",
+      "domain": [
+       1,
+       16
+      ],
+      "style": "dot",
+      "label": "trend",
+      "labelAt": 16,
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Trend is long-term, seasonality repeats on a fixed period, and a cycle repeats without one.",
   "a": {
    "q": "Ice cream sales at a kiosk in Geelong peak every summer and drop every winter, year after year. Which feature is this?",
@@ -142,5 +251,136 @@
    "clue": "Does the change last, or is it only one point?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A time series of sales over 16 quarters, Quarter 0 to 20 and Sales 0 to 50. The sales line peaks in the first quarter of every year, and a dotted line labelled trend rises steadily from 21 to 36 under it.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A time series of sales over 16 quarters, 4 years. The values peak in the first quarter of every year, a pattern that repeats each year, which is seasonality. A dotted trend line rises steadily under the ups and downs, showing a long-term rise.",
+     "x": {
+      "min": 0,
+      "max": 20,
+      "label": "Quarter",
+      "step": 4
+     },
+     "y": {
+      "min": 0,
+      "max": 50,
+      "label": "Sales",
+      "step": 10
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         1,
+         27
+        ],
+        [
+         2,
+         22
+        ],
+        [
+         3,
+         17
+        ],
+        [
+         4,
+         24
+        ],
+        [
+         5,
+         31
+        ],
+        [
+         6,
+         26
+        ],
+        [
+         7,
+         21
+        ],
+        [
+         8,
+         28
+        ],
+        [
+         9,
+         35
+        ],
+        [
+         10,
+         30
+        ],
+        [
+         11,
+         25
+        ],
+        [
+         12,
+         32
+        ],
+        [
+         13,
+         39
+        ],
+        [
+         14,
+         34
+        ],
+        [
+         15,
+         29
+        ],
+        [
+         16,
+         36
+        ]
+       ],
+       "label": "sales",
+       "labelAt": 13,
+       "pos": "above"
+      },
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "20 + x",
+       "domain": [
+        1,
+        16
+       ],
+       "style": "dot",
+       "label": "trend",
+       "labelAt": 16,
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:19Z"
+  }
+ ]
 }

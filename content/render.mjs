@@ -51,7 +51,9 @@ try {
         await p.waitForSelector('#w svg', {timeout: 5000}).catch(() => {});
       }
       const file = path.join(out, path.basename(src).replace(/\.(svg|json|jpg|png|webp)$/, '') + '-' + scheme + '.png');
-      await p.locator('#w').screenshot({path: file});
+      // 8 px round the figure, as the card's margin in the app: a word just past its edge (the origin's O) shows there too.
+      const r = await p.locator('#w').boundingBox();
+      await p.screenshot({path: file, clip: {x: r.x - 8, y: r.y - 8, width: r.width + 16, height: r.height + 16}});
       done[src].push(file);
       await p.close();
     }

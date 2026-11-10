@@ -17,7 +17,10 @@
   "2026-11-05T06:08:56Z claude-code review: adapting mat-linear-models-context on the next run",
   "2026-11-05T06:46:38Z adapt: done",
   "2026-11-05T06:53:51Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:52:09Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:44Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:07Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -198,6 +201,99 @@
    ],
    "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
+    "x": {
+     "min": 0,
+     "max": 5.5,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 350,
+     "label": "Cost ($)",
+     "step": 50
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "45x + 80",
+      "domain": [
+       0,
+       5.5
+      ],
+      "label": "\\(C = 45t + 80\\)",
+      "labelAt": 4.2,
+      "pos": "above-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       125
+      ],
+      "to": [
+       2,
+       125
+      ],
+      "label": "1 hour",
+      "pos": "below"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       125
+      ],
+      "to": [
+       2,
+       170
+      ],
+      "label": "+$45",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       80
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "call-out fee",
+      "pos": "below-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       3,
+       215
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       215
+      ],
+      "on": [
+       "f"
+      ],
+      "label": "\\((3, 215)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
   "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
   "a": {
    "q": "A taxi fare in Perth is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 tell you?",
@@ -265,5 +361,123 @@
     "clue": "Multiply the daily rate by 5, then add the fixed amount."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The plumber's cost C = 45t + 80 against Hours, y label Cost ($), with the start at 80 labelled call-out fee, a step of 1 hour across and +$45 up between hours 1 and 2, and guide lines to the point (3, 215), labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
+     "x": {
+      "min": 0,
+      "max": 5.5,
+      "label": "Hours",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 350,
+      "label": "Cost ($)",
+      "step": 50
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "45x + 80",
+       "domain": [
+        0,
+        5.5
+       ],
+       "label": "\\(C = 45t + 80\\)",
+       "labelAt": 4.2,
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        125
+       ],
+       "to": [
+        2,
+        125
+       ],
+       "label": "1 hour",
+       "pos": "below"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        2,
+        125
+       ],
+       "to": [
+        2,
+        170
+       ],
+       "label": "+$45",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        80
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept",
+       "label": "call-out fee",
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        215
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        215
+       ],
+       "on": [
+        "f"
+       ],
+       "label": "\\((3, 215)\\)",
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:43Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:07Z"
+  }
+ ]
 }

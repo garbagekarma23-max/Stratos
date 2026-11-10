@@ -23,7 +23,10 @@
   "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-01T15:05:28Z write: done",
   "2026-11-01T15:14:47Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:52:37Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T13:57:53Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:19Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -123,6 +126,84 @@
    ],
    "Example: cost \\(= 40 + 6 \\times\\) hours, with cost in dollars and time in hours. Each extra hour adds $6 to the predicted cost. At 0 hours the predicted cost is $40."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The fitted line cost \\(= 40 + 6 \\times\\) hours. It meets the cost axis at $40, the intercept, the predicted cost at 0 hours. A small step under the line shows that 1 more hour adds $6 to the predicted cost, the slope.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "Cost ($)",
+     "step": 20
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        3,
+        58
+       ],
+       [
+        4,
+        58
+       ],
+       [
+        4,
+        64
+       ]
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "40 + 6x",
+      "domain": [
+       0,
+       6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       40
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "intercept $40",
+      "pos": "below-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       3.5,
+       58
+      ],
+      "label": "1 hour",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       4,
+       61
+      ],
+      "label": "$6",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Slope: change in \\(y\\) per 1 unit of \\(x\\). Intercept: predicted \\(y\\) when \\(x\\) is 0.",
   "a": {
    "q": "A line predicts a plant's height (cm) from days of growth: height \\(= 12 + 3 \\times\\) days. What does the slope of 3 mean?",
@@ -191,5 +272,108 @@
     "clue": "Check the sign of the slope, then ask what 1 unit of x is."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The fitted line cost = 40 + 6 x hours, Hours 0 to 6 and Cost ($) 0 to 80. The point (0, 40) is labelled intercept $40, and a small step under the line from 3 to 4 hours is labelled 1 hour and $6.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The fitted line cost \\(= 40 + 6 \\times\\) hours. It meets the cost axis at $40, the intercept, the predicted cost at 0 hours. A small step under the line shows that 1 more hour adds $6 to the predicted cost, the slope.",
+     "x": {
+      "min": 0,
+      "max": 6,
+      "label": "Hours",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 80,
+      "label": "Cost ($)",
+      "step": 20
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         3,
+         58
+        ],
+        [
+         4,
+         58
+        ],
+        [
+         4,
+         64
+        ]
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "40 + 6x",
+       "domain": [
+        0,
+        6
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        40
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept",
+       "label": "intercept $40",
+       "pos": "below-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.5,
+        58
+       ],
+       "label": "1 hour",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        4,
+        61
+       ],
+       "label": "$6",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:19Z"
+  }
+ ]
 }

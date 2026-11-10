@@ -31,7 +31,11 @@
   "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:32Z write: done",
   "2026-11-01T08:33:51Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-10T13:52:08Z pictures: the owner asked for a chart at card 2",
+  "2026-11-10T13:52:08Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T13:57:50Z pictures: 2 pictures waiting for the check",
+  "2026-11-10T14:03:16Z pictures: 2 pictures kept"
  ],
  "sent": {
   "match": 1,
@@ -110,6 +114,190 @@
    "A line graph shows a trend. A line going up means the values rise over time. A line going down means they fall. A flat line means no change.",
    "A pie chart shows parts of a whole. A bigger slice is a bigger share. Example: a pie chart of 200 students shows 25% walk to school. 25% of 200 is 50 students."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar graph of the favourite sport of a class. The bars reach 12 for soccer, 8 for netball, 10 for cricket and 6 for basketball on the Students scale.",
+    "x": {
+     "label": "Sport"
+    },
+    "y": {
+     "min": 0,
+     "max": 14,
+     "step": 2,
+     "label": "Students"
+    },
+    "bars": [
+     [
+      "Soccer",
+      12
+     ],
+     [
+      "Netball",
+      8
+     ],
+     [
+      "Cricket",
+      10
+     ],
+     [
+      "Basketball",
+      6
+     ]
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "A line graph of visitors each day for 7 days. The line goes up from 10 on day 1 to 30 on day 3, so visitors rise. It stays flat at 30 from day 3 to day 5, so there is no change. Then it goes down to 10 on day 7, so visitors fall.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "Day",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 40,
+     "label": "Visitors",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "v",
+      "points": [
+       [
+        1,
+        10
+       ],
+       [
+        2,
+        20
+       ],
+       [
+        3,
+        30
+       ],
+       [
+        4,
+        30
+       ],
+       [
+        5,
+        30
+       ],
+       [
+        6,
+        20
+       ],
+       [
+        7,
+        10
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       10
+      ],
+      "on": [
+       "v"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       20
+      ],
+      "on": [
+       "v"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       30
+      ],
+      "on": [
+       "v"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       30
+      ],
+      "on": [
+       "v"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       30
+      ],
+      "on": [
+       "v"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       20
+      ],
+      "on": [
+       "v"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       10
+      ],
+      "on": [
+       "v"
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       1.6,
+       24
+      ],
+      "label": "rise",
+      "pos": "above-left"
+     },
+     {
+      "type": "text",
+      "at": [
+       4,
+       32
+      ],
+      "label": "no change",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       6.4,
+       24
+      ],
+      "label": "fall",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
   "remember": "Read the labels and scale first, then find the value, trend or share.",
   "a": {
    "q": "A pie chart shows how 80 students get to school. The bus slice is 50%. How many students take the bus?",
@@ -172,5 +360,239 @@
     "clue": "Look for where the line goes down."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "chart",
+   "brief": "A bar graph of a class's favourite sport: Soccer 12, Netball 8, Cricket 10, Basketball 6, x label Sport, y label Students from 0 to 14 in steps of 2.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "bar",
+     "alt": "A bar graph of the favourite sport of a class. The bars reach 12 for soccer, 8 for netball, 10 for cricket and 6 for basketball on the Students scale.",
+     "x": {
+      "label": "Sport"
+     },
+     "y": {
+      "min": 0,
+      "max": 14,
+      "step": 2,
+      "label": "Students"
+     },
+     "bars": [
+      [
+       "Soccer",
+       12
+      ],
+      [
+       "Netball",
+       8
+      ],
+      [
+       "Cricket",
+       10
+      ],
+      [
+       "Basketball",
+       6
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:50Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:15Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A line graph of visitors on days 1 to 7 (10, 20, 30, 30, 30, 20, 10), x label Day, y label Visitors, with the parts labelled rise, no change and fall.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A line graph of visitors each day for 7 days. The line goes up from 10 on day 1 to 30 on day 3, so visitors rise. It stays flat at 30 from day 3 to day 5, so there is no change. Then it goes down to 10 on day 7, so visitors fall.",
+     "x": {
+      "min": 0,
+      "max": 8,
+      "label": "Day",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 40,
+      "label": "Visitors",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "curve",
+       "id": "v",
+       "points": [
+        [
+         1,
+         10
+        ],
+        [
+         2,
+         20
+        ],
+        [
+         3,
+         30
+        ],
+        [
+         4,
+         30
+        ],
+        [
+         5,
+         30
+        ],
+        [
+         6,
+         20
+        ],
+        [
+         7,
+         10
+        ]
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        10
+       ],
+       "on": [
+        "v"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        20
+       ],
+       "on": [
+        "v"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        30
+       ],
+       "on": [
+        "v"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        30
+       ],
+       "on": [
+        "v"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        30
+       ],
+       "on": [
+        "v"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        20
+       ],
+       "on": [
+        "v"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        7,
+        10
+       ],
+       "on": [
+        "v"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1.6,
+        24
+       ],
+       "label": "rise",
+       "pos": "above-left"
+      },
+      {
+       "type": "text",
+       "at": [
+        4,
+        32
+       ],
+       "label": "no change",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.4,
+        24
+       ],
+       "label": "fall",
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T13:57:50Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:15Z"
+  }
+ ]
 }
