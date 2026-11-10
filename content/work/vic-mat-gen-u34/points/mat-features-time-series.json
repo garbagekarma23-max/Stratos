@@ -23,7 +23,8 @@
   "2026-11-01T14:56:03Z write: done",
   "2026-11-01T15:05:28Z check: passed, cleared",
   "2026-11-10T13:52:38Z pictures: the owner asked for a graph at card 2",
-  "2026-11-10T13:57:53Z pictures: 1 picture waiting for the check"
+  "2026-11-10T13:57:53Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:20Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -103,57 +104,6 @@
  "sensitive": "none",
  "flags": [],
  "final": {
-  "title": "Features of a time series",
-  "card": [
-   "A time series is data recorded over time, plotted with time on the horizontal axis. We look at the plot for patterns.",
-   [
-    "Trend",
-    "a long-term rise or fall in the values. Seasonality is a pattern that repeats at a fixed, known period, such as every year or every week."
-   ],
-   [
-    "Cycles",
-    "rises and falls that repeat, but not at a fixed period, so their timing cannot be predicted exactly. Irregular fluctuations are random ups and downs with no pattern."
-   ],
-   [
-    "Other features",
-    "Structural change is a sudden, lasting shift, such as a new road changing visitor numbers for good. An outlier is a single value far from the rest."
-   ]
-  ],
-  "remember": "Trend is long-term, seasonality repeats on a fixed period, and a cycle repeats without one.",
-  "a": {
-   "q": "Ice cream sales at a kiosk in Geelong peak every summer and drop every winter, year after year. Which feature is this?",
-   "opts": [
-    "Seasonality",
-    "A cycle",
-    "Structural change",
-    "An outlier"
-   ],
-   "why": "The peaks come at the same time each year, which is a fixed period, so this is seasonality. It is not a cycle, because a cycle has no fixed period.",
-   "clue": "Look at whether the pattern repeats on a fixed schedule."
-  },
-  "b": {
-   "d": 3,
-   "q": "Monthly visitors to a Bendigo museum were steady for years. After a new wing opened, they jumped by about 30% and stayed there. Which feature is this?",
-   "opts": [
-    "Structural change",
-    "An outlier",
-    "Seasonality",
-    "Irregular fluctuation"
-   ],
-   "why": "The values shifted suddenly and stayed at the new level, which is structural change. An outlier is a single value far from the rest, so it is the tempting wrong answer, but here the shift lasted.",
-   "clue": "Does the change last, or is it only one point?"
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "graph",
-    "brief": "A time series of sales over 16 quarters, Quarter 0 to 20 and Sales 0 to 50. The sales line peaks in the first quarter of every year, and a dotted line labelled trend rises steadily from 21 to 36 under it.",
-    "why": "It shows trend and seasonality together: a long-term rise with a pattern that repeats every year."
-   }
-  ]
- },
- "cleared_by": "checker",
- "picture_draft": {
   "title": "Features of a time series",
   "card": [
    "A time series is data recorded over time, plotted with time on the horizontal axis. We look at the plot for patterns.",
@@ -299,18 +249,10 @@
    ],
    "why": "The values shifted suddenly and stayed at the new level, which is structural change. An outlier is a single value far from the rest, so it is the tempting wrong answer, but here the shift lasted.",
    "clue": "Does the change last, or is it only one point?"
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "graph",
-    "brief": "A time series of sales over 16 quarters, Quarter 0 to 20 and Sales 0 to 50. The sales line peaks in the first quarter of every year, and a dotted line labelled trend rises steadily from 21 to 36 under it.",
-    "why": "It shows trend and seasonality together: a long-term rise with a pattern that repeats every year.",
-    "waiting": true
-   }
-  ]
+  }
  },
- "pictures_waiting": [
+ "cleared_by": "checker",
+ "pictures": [
   {
    "want": 1,
    "at": "card 2",
@@ -423,7 +365,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-10T13:57:53Z"
+   "made": "2026-11-10T13:57:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:19Z"
   }
  ]
 }

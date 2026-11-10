@@ -17,7 +17,9 @@
   "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
   "2026-11-10T13:52:37Z pictures: the owner asked for a graph at card 2",
   "2026-11-10T13:52:38Z pictures: the owner asked for a graph at card 3",
-  "2026-11-10T13:57:53Z pictures: 2 pictures waiting for the check"
+  "2026-11-10T13:57:53Z pictures: 2 pictures waiting for the check",
+  "2026-11-10T14:03:19Z pictures: 1 picture kept, 1 picture turned down. Picture 2 (graph at card 3): redo, medium sure. The 12 residuals alternate exactly above, below, above, below from left to right, which is a regular pattern rather than the random scatter the card describes; mix the signs so some neighbours are on the same side of zero.; The residuals add to -0.7 rather than about 0, as residuals from a least squares line should; balance the points above and below the zero line.",
+  "2026-11-10T14:05:25Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -95,91 +97,6 @@
    "A residual plot graphs the residuals against \\(x\\). A plot with no clear pattern, with points scattered randomly about zero, supports a linear model.",
    "A curve or other clear pattern in the residual plot shows a linear model is not suitable. Worked example: actual \\(y = 40\\) and predicted \\(\\hat{y} = 46\\) gives a residual of \\(40 - 46 = -6\\)."
   ],
-  "remember": "Residual \\(=\\) actual \\(-\\) predicted. A random scatter supports a line.",
-  "a": {
-   "q": "A line predicts a plant height of 25 cm. The plant is actually 22 cm tall. What is the residual?",
-   "opts": [
-    "\\(-3\\) cm",
-    "3 cm",
-    "\\(-47\\) cm",
-    "47 cm"
-   ],
-   "why": "Residual \\(=\\) actual \\(-\\) predicted, which is \\(22 - 25 = -3\\) cm. The answer 3 cm reverses the subtraction, which is the tempting sign error.",
-   "clue": "Actual comes first in the subtraction."
-  },
-  "b": {
-   "d": 2,
-   "q": "The residual plot for a linear model shows a clear U-shaped curve. What does this suggest?",
-   "opts": [
-    "A linear model is not suitable",
-    "A linear model is a good fit",
-    "The correlation must be zero",
-    "The data has no outliers"
-   ],
-   "why": "A clear pattern such as a curve means the line is missing structure in the data, so a linear model is not suitable. A good fit would show random scatter with no pattern.",
-   "clue": "Which kind of residual plot supports a line?"
-  },
-  "wants": [
-   {
-    "at": "card 2",
-    "kind": "graph",
-    "brief": "A line labelled regression line with one point above it and one below it, axes x and y with no numbers. An arrow up from the line to the point above is labelled positive residual, and an arrow down from the line to the point below is labelled negative residual.",
-    "why": "It shows that a positive residual is a point above the line and a negative residual a point below it."
-   },
-   {
-    "at": "card 3",
-    "kind": "graph",
-    "brief": "A residual plot, Residual on the vertical axis from -4 to 4 and x along the horizontal axis, with a bold zero line and 12 points scattered above and below it with no pattern.",
-    "why": "It shows the random scatter about zero that supports a linear model."
-   }
-  ]
- },
- "cleared_by": "checker",
- "latex": {
-  "at": "2026-11-06T10:41:22Z",
-  "by": "hand",
-  "before": {
-   "title": "Residuals and residual plots",
-   "card": [
-    "A residual is the actual value minus the predicted value: residual = y − ŷ. The predicted value ŷ comes from the regression line.",
-    "A positive residual means the point is above the line, so the line predicted too low. A negative residual means the point is below the line.",
-    "A residual plot graphs the residuals against x. A plot with no clear pattern, with points scattered randomly about zero, supports a linear model.",
-    "A curve or other clear pattern in the residual plot shows a linear model is not suitable. Worked example: actual y = 40 and predicted ŷ = 46 gives a residual of 40 − 46 = −6."
-   ],
-   "remember": "Residual = actual − predicted. A random scatter supports a line.",
-   "a": {
-    "q": "A line predicts a plant height of 25 cm. The plant is actually 22 cm tall. What is the residual?",
-    "opts": [
-     "−3 cm",
-     "3 cm",
-     "−47 cm",
-     "47 cm"
-    ],
-    "why": "Residual = actual − predicted = 22 − 25 = −3 cm. The answer 3 cm reverses the subtraction, which is the tempting sign error.",
-    "clue": "Actual comes first in the subtraction."
-   },
-   "b": {
-    "d": 2,
-    "q": "The residual plot for a linear model shows a clear U-shaped curve. What does this suggest?",
-    "opts": [
-     "A linear model is not suitable",
-     "A linear model is a good fit",
-     "The correlation must be zero",
-     "The data has no outliers"
-    ],
-    "why": "A clear pattern such as a curve means the line is missing structure in the data, so a linear model is not suitable. A good fit would show random scatter with no pattern.",
-    "clue": "Which kind of residual plot supports a line?"
-   }
-  }
- },
- "picture_draft": {
-  "title": "Residuals and residual plots",
-  "card": [
-   "A residual is the actual value minus the predicted value: residual \\(= y - \\hat{y}\\). The predicted value \\(\\hat{y}\\) comes from the regression line.",
-   "A positive residual means the point is above the line, so the line predicted too low. A negative residual means the point is below the line.",
-   "A residual plot graphs the residuals against \\(x\\). A plot with no clear pattern, with points scattered randomly about zero, supports a linear model.",
-   "A curve or other clear pattern in the residual plot shows a linear model is not suitable. Worked example: actual \\(y = 40\\) and predicted \\(\\hat{y} = 46\\) gives a residual of \\(40 - 46 = -6\\)."
-  ],
   "cardFigs": {
    "2": {
     "kind": "graph",
@@ -248,116 +165,6 @@
       ]
      }
     ]
-   },
-   "3": {
-    "kind": "graph",
-    "alt": "A residual plot with residuals on the vertical axis against \\(x\\). The points are scattered above and below the zero line with no clear pattern, which supports a linear model.",
-    "x": {
-     "min": 0,
-     "max": 10,
-     "label": "\\(x\\)"
-    },
-    "y": {
-     "min": -4,
-     "max": 4,
-     "label": "Residual",
-     "step": 2
-    },
-    "items": [
-     {
-      "type": "fn",
-      "id": "z",
-      "expr": "0",
-      "domain": [
-       0,
-       10
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       1,
-       1.2
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       1.5,
-       -0.9
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       2.5,
-       2.1
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       3,
-       -1.8
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       4,
-       0.5
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       4.5,
-       -2.6
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       5.5,
-       1.6
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       6,
-       -0.4
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       7,
-       2.5
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       7.5,
-       -1.5
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       8.5,
-       0.8
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       9,
-       -2.2
-      ]
-     }
-    ]
    }
   },
   "remember": "Residual \\(=\\) actual \\(-\\) predicted. A random scatter supports a line.",
@@ -386,22 +193,59 @@
   },
   "wants": [
    {
-    "at": "card 2",
-    "kind": "graph",
-    "brief": "A line labelled regression line with one point above it and one below it, axes x and y with no numbers. An arrow up from the line to the point above is labelled positive residual, and an arrow down from the line to the point below is labelled negative residual.",
-    "why": "It shows that a positive residual is a point above the line and a negative residual a point below it.",
-    "waiting": true
-   },
-   {
     "at": "card 3",
     "kind": "graph",
     "brief": "A residual plot, Residual on the vertical axis from -4 to 4 and x along the horizontal axis, with a bold zero line and 12 points scattered above and below it with no pattern.",
     "why": "It shows the random scatter about zero that supports a linear model.",
-    "waiting": true
+    "tries": 1,
+    "notes": [
+     [
+      "The 12 residuals alternate exactly above, below, above, below from left to right, which is a regular pattern rather than the random scatter the card describes; mix the signs so some neighbours are on the same side of zero.",
+      "The residuals add to -0.7 rather than about 0, as residuals from a least squares line should; balance the points above and below the zero line."
+     ]
+    ]
    }
   ]
  },
- "pictures_waiting": [
+ "cleared_by": "checker",
+ "latex": {
+  "at": "2026-11-06T10:41:22Z",
+  "by": "hand",
+  "before": {
+   "title": "Residuals and residual plots",
+   "card": [
+    "A residual is the actual value minus the predicted value: residual = y − ŷ. The predicted value ŷ comes from the regression line.",
+    "A positive residual means the point is above the line, so the line predicted too low. A negative residual means the point is below the line.",
+    "A residual plot graphs the residuals against x. A plot with no clear pattern, with points scattered randomly about zero, supports a linear model.",
+    "A curve or other clear pattern in the residual plot shows a linear model is not suitable. Worked example: actual y = 40 and predicted ŷ = 46 gives a residual of 40 − 46 = −6."
+   ],
+   "remember": "Residual = actual − predicted. A random scatter supports a line.",
+   "a": {
+    "q": "A line predicts a plant height of 25 cm. The plant is actually 22 cm tall. What is the residual?",
+    "opts": [
+     "−3 cm",
+     "3 cm",
+     "−47 cm",
+     "47 cm"
+    ],
+    "why": "Residual = actual − predicted = 22 − 25 = −3 cm. The answer 3 cm reverses the subtraction, which is the tempting sign error.",
+    "clue": "Actual comes first in the subtraction."
+   },
+   "b": {
+    "d": 2,
+    "q": "The residual plot for a linear model shows a clear U-shaped curve. What does this suggest?",
+    "opts": [
+     "A linear model is not suitable",
+     "A linear model is a good fit",
+     "The correlation must be zero",
+     "The data has no outliers"
+    ],
+    "why": "A clear pattern such as a curve means the line is missing structure in the data, so a linear model is not suitable. A good fit would show random scatter with no pattern.",
+    "clue": "Which kind of residual plot supports a line?"
+   }
+  }
+ },
+ "pictures": [
   {
    "want": 1,
    "at": "card 2",
@@ -478,7 +322,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-10T13:57:53Z"
+   "made": "2026-11-10T13:57:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:19Z"
   },
   {
    "want": 2,
@@ -598,7 +457,376 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-10T13:57:53Z"
+   "made": "2026-11-10T13:57:53Z",
+   "status": "turned down",
+   "check": {
+    "want": 2,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The 12 residuals alternate exactly above, below, above, below from left to right, which is a regular pattern rather than the random scatter the card describes; mix the signs so some neighbours are on the same side of zero.",
+     "The residuals add to -0.7 rather than about 0, as residuals from a least squares line should; balance the points above and below the zero line."
+    ],
+    "sure": "medium"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:19Z"
+  }
+ ],
+ "picture_draft": {
+  "title": "Residuals and residual plots",
+  "card": [
+   "A residual is the actual value minus the predicted value: residual \\(= y - \\hat{y}\\). The predicted value \\(\\hat{y}\\) comes from the regression line.",
+   "A positive residual means the point is above the line, so the line predicted too low. A negative residual means the point is below the line.",
+   "A residual plot graphs the residuals against \\(x\\). A plot with no clear pattern, with points scattered randomly about zero, supports a linear model.",
+   "A curve or other clear pattern in the residual plot shows a linear model is not suitable. Worked example: actual \\(y = 40\\) and predicted \\(\\hat{y} = 46\\) gives a residual of \\(40 - 46 = -6\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A regression line with two points marked. One point is above the line, with an arrow up from the line to it: a positive residual. The other is below the line, with an arrow down from the line to it: a negative residual.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "\\(y\\)"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "1 + 0.6x",
+      "domain": [
+       0,
+       10
+      ],
+      "label": "regression line",
+      "labelAt": 9,
+      "pos": "above-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       4.5,
+       3.7
+      ],
+      "to": [
+       4.5,
+       7.2
+      ],
+      "label": "positive residual",
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       7.2
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       5.5,
+       4.3
+      ],
+      "to": [
+       5.5,
+       1.3
+      ],
+      "label": "negative residual",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       5.5,
+       1.3
+      ]
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "A residual plot with residuals on the vertical axis against \\(x\\). The points are scattered above and below the zero line with no clear pattern, which supports a linear model.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "\\(x\\)"
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "Residual",
+     "step": 2
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "z",
+      "expr": "0",
+      "domain": [
+       0,
+       10
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       1.2
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       0.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       -1.8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       2.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       -0.9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       -2.4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.5,
+       1.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       -0.5
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       2.3
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7.5,
+       0.4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8.5,
+       -1.6
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       9,
+       -0.9
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Residual \\(=\\) actual \\(-\\) predicted. A random scatter supports a line.",
+  "a": {
+   "q": "A line predicts a plant height of 25 cm. The plant is actually 22 cm tall. What is the residual?",
+   "opts": [
+    "\\(-3\\) cm",
+    "3 cm",
+    "\\(-47\\) cm",
+    "47 cm"
+   ],
+   "why": "Residual \\(=\\) actual \\(-\\) predicted, which is \\(22 - 25 = -3\\) cm. The answer 3 cm reverses the subtraction, which is the tempting sign error.",
+   "clue": "Actual comes first in the subtraction."
+  },
+  "b": {
+   "d": 2,
+   "q": "The residual plot for a linear model shows a clear U-shaped curve. What does this suggest?",
+   "opts": [
+    "A linear model is not suitable",
+    "A linear model is a good fit",
+    "The correlation must be zero",
+    "The data has no outliers"
+   ],
+   "why": "A clear pattern such as a curve means the line is missing structure in the data, so a linear model is not suitable. A good fit would show random scatter with no pattern.",
+   "clue": "Which kind of residual plot supports a line?"
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A residual plot, Residual on the vertical axis from -4 to 4 and x along the horizontal axis, with a bold zero line and 12 points scattered above and below it with no pattern.",
+    "why": "It shows the random scatter about zero that supports a linear model.",
+    "tries": 1,
+    "notes": [
+     [
+      "The 12 residuals alternate exactly above, below, above, below from left to right, which is a regular pattern rather than the random scatter the card describes; mix the signs so some neighbours are on the same side of zero.",
+      "The residuals add to -0.7 rather than about 0, as residuals from a least squares line should; balance the points above and below the zero line."
+     ]
+    ],
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A residual plot, Residual on the vertical axis from -4 to 4 and x along the horizontal axis, with a bold zero line and 12 points scattered above and below it with no pattern.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A residual plot with residuals on the vertical axis against \\(x\\). The points are scattered above and below the zero line with no clear pattern, which supports a linear model.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "\\(x\\)"
+     },
+     "y": {
+      "min": -4,
+      "max": 4,
+      "label": "Residual",
+      "step": 2
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "z",
+       "expr": "0",
+       "domain": [
+        0,
+        10
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        1.2
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        0.6
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2.5,
+        -1.8
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        2.1
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        -0.9
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4.5,
+        -2.4
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5.5,
+        1.5
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        -0.5
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        7,
+        2.3
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        7.5,
+        0.4
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        8.5,
+        -1.6
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        9,
+        -0.9
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T14:05:25Z"
   }
  ]
 }

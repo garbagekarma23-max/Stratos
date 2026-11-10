@@ -33,7 +33,8 @@
   "2026-11-01T15:14:47Z adapt: done",
   "2026-11-01T15:19:04Z check: passed, cleared",
   "2026-11-10T13:52:37Z pictures: the owner asked for a graph at card 4",
-  "2026-11-10T13:57:52Z pictures: 1 picture waiting for the check"
+  "2026-11-10T13:57:52Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:03:18Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -150,48 +151,6 @@
    "The distribution is symmetric, so the percentages split evenly either side of the mean. Within 1 standard deviation, about 34% lie on each side.",
    "Example: test marks have mean 60 and standard deviation 10. Within 2 standard deviations means 40 to 80, so about 95% of marks are in that range. The other 5% are split evenly, so about 2.5% score above 80."
   ],
-  "remember": "The 68-95-99.7% rule: within 1, 2 and 3 standard deviations of the mean lie about 68%, 95% and 99.7%.",
-  "a": {
-   "q": "The masses of apples from an orchard are bell-shaped, with mean 150 g and standard deviation 10 g. About what percentage of apples have a mass between 130 g and 170 g?",
-   "opts": [
-    "95%",
-    "68%",
-    "99.7%",
-    "50%"
-   ],
-   "why": "130 g and 170 g are each 20 g from the mean, which is 2 standard deviations. About 95% of values lie within 2 standard deviations. 68% is tempting, but that is the share within only 1 standard deviation, 140 g to 160 g.",
-   "clue": "Find how many standard deviations 130 g is below the mean."
-  },
-  "b": {
-   "d": 3,
-   "q": "The times taken to travel to school are bell-shaped, with mean 30 minutes and standard deviation 5 minutes. About what percentage of trips take more than 40 minutes?",
-   "opts": [
-    "2.5%",
-    "5%",
-    "0.15%",
-    "16%"
-   ],
-   "why": "40 minutes is 2 standard deviations above the mean. About 95% of trips lie within 2 standard deviations, so about 5% lie outside, split evenly between the two ends. That gives 2.5% above 40 minutes. 5% is wrong because it counts both ends.",
-   "clue": "The values outside the range are split evenly between both ends."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "A bell-shaped curve of test marks with mean 60 and standard deviation 10, x-axis Mark from 20 to 100. The area from 40 to 80 is shaded and labelled 95%, and each end beyond it is labelled 2.5%.",
-    "why": "It pictures the card's example: 95% within 2 standard deviations, with the other 5% split evenly between the two ends."
-   }
-  ]
- },
- "cleared_by": "checker",
- "picture_draft": {
-  "title": "The 68-95-99.7% rule",
-  "card": [
-   "In a bell-shaped distribution, scores cluster around the mean. The 68-95-99.7% rule says how much of the data lies within 1, 2 and 3 standard deviations of the mean.",
-   "About 68% of scores lie within 1 standard deviation of the mean. About 95% lie within 2, and about 99.7% lie within 3.",
-   "The distribution is symmetric, so the percentages split evenly either side of the mean. Within 1 standard deviation, about 34% lie on each side.",
-   "Example: test marks have mean 60 and standard deviation 10. Within 2 standard deviations means 40 to 80, so about 95% of marks are in that range. The other 5% are split evenly, so about 2.5% score above 80."
-  ],
   "cardFigs": {
    "4": {
     "kind": "graph",
@@ -269,18 +228,10 @@
    ],
    "why": "40 minutes is 2 standard deviations above the mean. About 95% of trips lie within 2 standard deviations, so about 5% lie outside, split evenly between the two ends. That gives 2.5% above 40 minutes. 5% is wrong because it counts both ends.",
    "clue": "The values outside the range are split evenly between both ends."
-  },
-  "wants": [
-   {
-    "at": "card 4",
-    "kind": "graph",
-    "brief": "A bell-shaped curve of test marks with mean 60 and standard deviation 10, x-axis Mark from 20 to 100. The area from 40 to 80 is shaded and labelled 95%, and each end beyond it is labelled 2.5%.",
-    "why": "It pictures the card's example: 95% within 2 standard deviations, with the other 5% split evenly between the two ends.",
-    "waiting": true
-   }
-  ]
+  }
  },
- "pictures_waiting": [
+ "cleared_by": "checker",
+ "pictures": [
   {
    "want": 1,
    "at": "card 4",
@@ -341,7 +292,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-10T13:57:52Z"
+   "made": "2026-11-10T13:57:52Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:03:18Z"
   }
  ]
 }
