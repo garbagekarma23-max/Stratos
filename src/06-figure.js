@@ -515,11 +515,23 @@ const FIG = (() => {
   /* Values a piece of text states about data, such as "the median is 23", "\(Q_{1} = 12\)" or "IQR = 8", as
      [stat name, the number as written]. "about" before the number leaves it out, as an estimate. */
   const STAT_WORDS = {'interquartile range': 'iqr', iqr: 'iqr', 'lower quartile': 'q1', 'upper quartile': 'q3', q1: 'q1', q3: 'q3', median: 'median', mean: 'mean', average: 'mean', mode: 'mode', range: 'range', minimum: 'min', maximum: 'max'};
+  /* A chain of working counts by its last value: "IQR = 11 − 4.5 = 6.5" says the IQR is 6.5, not 11, and
+     "IQR = Q3 − Q1 = 11 − 4.5 = 6.5" and "Median = (7 + 8) ÷ 2 = 7.5" work the same way. A stat word inside the
+     working ("− Q1 =") states nothing. */
+  const NUM = '−?-?\\d+(?:,\\d{3})*(?:\\.\\d+)?';
+  const OP = '(?:[−+×÷*\\/-]|\\\\times|\\\\div|\\\\cdot)';
+  const WORK = new RegExp('^\\s*' + OP + '(?:\\s|\\d|\\.|,|[()]|q[13]|' + OP + ')*?=\\s*(about\\s+|approximately\\s+)?(' + NUM + ')(?!\\d|\\.\\d)');
   function statedIn(text) {
     const t = String(text || '').replace(/\\\(|\\\)/g, ' ').replace(/Q_\{?([13])\}?/g, 'Q$1').replace(/\\text\{([^{}]*)\}/g, '$1').replace(/[{}]/g, '').toLowerCase();
-    const out = [], re = /\b(interquartile range|iqr|lower quartile|upper quartile|q1|q3|median|mean|average|mode|range|minimum|maximum)\s+(?:is|was|=|equals|of)\s+(about\s+|approximately\s+)?(−?-?\d+(?:,\d{3})*(?:\.\d+)?)\b/g;
+    const out = [], re = new RegExp('\\b(interquartile range|iqr|lower quartile|upper quartile|q1|q3|median|mean|average|mode|range|minimum|maximum)\\s+(?:is|was|=|equals|of)\\s+(?:(?:q[13]|[\\s\\d.,()]|' + OP + ')+?=\\s*)?(about\\s+|approximately\\s+)?(' + NUM + ')(?!\\d|\\.\\d)', 'g');
     let m;
-    while ((m = re.exec(t))) if (!m[2]) out.push([STAT_WORDS[m[1]], m[3].replace(/,/g, '').replace('−', '-')]);
+    while ((m = re.exec(t))) {
+      if (/(?:[−+×÷*\/-]|\\times|\\div|\\cdot)\s*$/.test(t.slice(0, m.index))) continue;
+      let about = m[2], v = m[3], end = m.index + m[0].length, w;
+      while ((w = WORK.exec(t.slice(end)))) { about = w[1]; v = w[2]; end += w[0].length; }
+      re.lastIndex = end;
+      if (!about) out.push([STAT_WORDS[m[1]], v.replace(/,/g, '').replace('−', '-')]);
+    }
     return out;
   }
   function axisShape(ax, a, numeric) {
