@@ -129,8 +129,13 @@ for (const how of ['tap', 'click', 'key']) {
   await wait(200);
   check(await p.locator('#v-home.on').count() === 1 && await p.locator('#sheet').isHidden() && await p.locator('#pages .page').count() === 0,
     'the ' + how + ' that skipped it did not press the button underneath', R);
-  if (how === 'tap') await p.touchscreen.tap(x, y); else await p.mouse.click(x, y);
-  await p.waitForSelector('#v-learn.on', {timeout: 3000}).catch(() => {});
+  // The page opened before its fonts and layout settled, so find the button again before pressing it for real.
+  await p.evaluate(() => document.fonts.ready);
+  await p.waitForSelector('#v-home.on .hero .primary', {timeout: 3000}).catch(() => {});
+  const again = await p.locator('.hero .primary').boundingBox();
+  if (how === 'tap') await p.touchscreen.tap(again.x + again.width / 2, again.y + again.height / 2);
+  else await p.mouse.click(again.x + again.width / 2, again.y + again.height / 2);
+  await p.waitForSelector('#v-learn.on', {timeout: 5000}).catch(() => {});
   check(await p.locator('#v-learn.on').count() === 1, 'after a ' + how + ' skip, Home works', R);
   check(errs.length === 0, 'no script errors: ' + errs.join(' | '), R);
   await b.close();

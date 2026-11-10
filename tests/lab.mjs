@@ -53,6 +53,8 @@ const lines = p => p.$$eval('.line', ls => ls.map(l => ({v: l.querySelector('mat
 const active = p => p.$eval('.line.active math-field', m => m.value).catch(() => null);
 const calcText = p => p.$eval('#calc', b => b.disabled ? (b.classList.contains('err') ? 'error' : '') : b.getAttribute('aria-label'));
 const saved = p => p.evaluate(() => JSON.parse(localStorage.getItem('stratos-lab.v1') || '{}'));
+// Asks again until fn is true, or gives up after ms, for anything the page does a moment after a tap.
+const until = async (fn, ms = 6000) => { const end = Date.now() + ms; while (Date.now() < end) { if (await fn()) return true; await new Promise(r => setTimeout(r, 100)); } return false; };
 const qText = p => p.textContent('#qnum');
 
 // ---------- 1. all ten questions, keypad taps only ----------
@@ -388,8 +390,9 @@ for (const scheme of ['light', 'dark']) {
   const loud = await p.evaluate(async () => ({click: await labSound.measure('click'), ping: await labSound.measure('ping')}));
   check(loud.click.peak > 0.01 && loud.click.peak < loud.ping.peak / 2 && loud.click.energy < loud.ping.energy / 4, 'the key click is quieter than the ping (click energy ' + loud.click.energy.toExponential(2) + ', ping ' + loud.ping.energy.toExponential(2) + ')');
   // The sound switch is saved.
+  // A tap's click comes after the touch ends, which can be late on a busy machine, so wait for the save.
   await tap(p, '#mute');
-  check((await saved(p)).sound === false && await p.getAttribute('#mute', 'aria-pressed') === 'false', 'the sound switch turns sound off and is saved');
+  check(await until(async () => (await saved(p)).sound === false && await p.getAttribute('#mute', 'aria-pressed') === 'false'), 'the sound switch turns sound off and is saved');
   await ctx.close();
 }
 
