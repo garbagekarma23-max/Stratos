@@ -25,7 +25,10 @@
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:13Z pictures: the owner asked for a graph at card 1",
+  "2026-11-08T13:07:54Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:31Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -203,6 +206,49 @@
    "If \\(0 < P < N\\), then \\(\\frac{dP}{dt} > 0\\) and the population rises towards \\(N\\). If \\(P > N\\), then \\(\\frac{dP}{dt} < 0\\) and it falls towards \\(N\\). If \\(P = N\\) or \\(P = 0\\), then \\(\\frac{dP}{dt} = 0\\) and the population does not change.",
    "Example: \\(\\frac{dP}{dt} = 0.2P\\left(1 - \\frac{P}{500}\\right)\\). When \\(P = 100\\), \\(\\frac{dP}{dt} = 0.2 \\times 100 \\times \\left(1 - \\frac{100}{500}\\right)\\), which is \\(20 \\times 0.8 = 16\\). The population is growing at 16 per unit of time."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A logistic curve, \\(P = \\frac{500}{1 + 24e^{-0.2t}}\\), for a population with carrying capacity \\(N = 500\\), shown as a dashed line. From a small start the population grows slowly, then fastest at \\(P = \\frac{N}{2}\\) (250), then more slowly as it nears \\(N\\).",
+    "x": {
+     "min": 0,
+     "max": 42,
+     "label": "\\(t\\)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 600,
+     "label": "\\(P\\)",
+     "step": 100
+    },
+    "items": [
+     {
+      "type": "asymptote",
+      "y": 500,
+      "label": "carrying capacity \\(N = 500\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "p",
+      "expr": "\\frac{500}{1 + 24e^{-0.2x}}"
+     },
+     {
+      "type": "point",
+      "at": [
+       15.8903,
+       250
+      ],
+      "label": "\\(P = \\frac{N}{2}\\)",
+      "pos": "above-left",
+      "on": [
+       "p"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "The rate \\(kP\\left(1 - \\frac{P}{N}\\right)\\) peaks at \\(P = \\frac{N}{2}\\) and falls to 0 as \\(P\\) reaches \\(N\\).",
   "a": {
    "q": "A population follows \\(\\frac{dP}{dt} = 0.3P\\left(1 - \\frac{P}{800}\\right)\\). What is the carrying capacity?",
@@ -265,5 +311,73 @@
     "clue": "Work out the bracket first, then multiply by 0.1P."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "The S-shaped logistic curve P = 500/(1 + 24e^{-0.2t}) for t from 0 to 40, the dashed horizontal asymptote P = 500 labelled carrying capacity N, and the point of fastest growth (about (15.9, 250)) marked and labelled P = N/2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A logistic curve, \\(P = \\frac{500}{1 + 24e^{-0.2t}}\\), for a population with carrying capacity \\(N = 500\\), shown as a dashed line. From a small start the population grows slowly, then fastest at \\(P = \\frac{N}{2}\\) (250), then more slowly as it nears \\(N\\).",
+     "x": {
+      "min": 0,
+      "max": 42,
+      "label": "\\(t\\)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 600,
+      "label": "\\(P\\)",
+      "step": 100
+     },
+     "items": [
+      {
+       "type": "asymptote",
+       "y": 500,
+       "label": "carrying capacity \\(N = 500\\)",
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "p",
+       "expr": "\\frac{500}{1 + 24e^{-0.2x}}"
+      },
+      {
+       "type": "point",
+       "at": [
+        15.8903,
+        250
+       ],
+       "label": "\\(P = \\frac{N}{2}\\)",
+       "pos": "above-left",
+       "on": [
+        "p"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:30Z"
+  }
+ ]
 }

@@ -18,7 +18,10 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:33Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:17Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T13:07:47Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:23Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -108,6 +111,51 @@
    "From a table, test the pattern. In direct variation \\(y \\div x\\) is always the same. In inverse variation \\(x \\times y\\) is always the same.",
    "Example: \\(x = 2, 4, 5\\) and \\(y = 20, 10, 8\\). Here \\(x \\times y = 40\\) every time, so \\(y = \\frac{40}{x}\\) and the variation is inverse."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Direct variation, \\(y = 2x\\), is a straight line through the origin. Inverse variation, \\(y = \\frac{8}{x}\\), is a curve that falls as \\(x\\) grows and never touches either axis.",
+    "x": {
+     "min": 0,
+     "max": 8.5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "d",
+      "expr": "2x",
+      "domain": [
+       0,
+       5
+      ],
+      "label": "\\(y = 2x\\)",
+      "labelAt": 4.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "i",
+      "expr": "\\frac{8}{x}",
+      "domain": [
+       0.8,
+       8.5
+      ],
+      "label": "\\(y = \\frac{8}{x}\\)",
+      "labelAt": 6.4467,
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
   "remember": "Direct: \\(y \\div x\\) stays constant. Inverse: \\(x \\times y\\) stays constant.",
   "a": {
    "q": "A table gives \\(x = 2, 4, 6\\) and \\(y = 6, 12, 18\\). Which rule fits?",
@@ -176,5 +224,75 @@
     "clue": "Is the rule y = kx or y = k/x?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "For x from 0 to 8, the line y = 2x through the origin and the curve y = 8/x, each labelled, axes y from 0 to 10.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Direct variation, \\(y = 2x\\), is a straight line through the origin. Inverse variation, \\(y = \\frac{8}{x}\\), is a curve that falls as \\(x\\) grows and never touches either axis.",
+     "x": {
+      "min": 0,
+      "max": 8.5,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "\\(y\\)",
+      "step": 2
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "2x",
+       "domain": [
+        0,
+        5
+       ],
+       "label": "\\(y = 2x\\)",
+       "labelAt": 4.5,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "i",
+       "expr": "\\frac{8}{x}",
+       "domain": [
+        0.8,
+        8.5
+       ],
+       "label": "\\(y = \\frac{8}{x}\\)",
+       "labelAt": 6.4467,
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:46Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:23Z"
+  }
+ ]
 }

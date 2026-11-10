@@ -11,7 +11,10 @@
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T08:46:50Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
   "2026-10-28T11:49:41Z review: approved with the fix (a spot check)",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:10Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:40Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:15Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -161,6 +164,66 @@
    ],
    "Example: a parabola has turning point \\((2, -3)\\) and passes through \\((0, 1)\\). Then \\(y = a(x - 2)^{2} - 3\\). Put in \\(x = 0\\), \\(y = 1\\): \\(1 = 4a - 3\\), so \\(a = 1\\). The rule is \\(y = (x - 2)^{2} - 3\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A parabola, concave up, with its turning point at \\((2, -3)\\), passing through \\((0, 1)\\) on the y-axis. Its rule is \\(y = (x - 2)^{2} - 3\\).",
+    "x": {
+     "min": -1,
+     "max": 5.5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -4,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "(x - 2)^{2} - 3",
+      "domain": [
+       -0.6,
+       4.6
+      ],
+      "label": "\\(y = (x - 2)^{2} - 3\\)",
+      "labelAt": 4.3,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       -3
+      ],
+      "label": "\\((2, -3)\\)",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "label": "\\((0, 1)\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Read the turning point or the max, min and period off the graph, then use one more point to finish the rule.",
   "a": {
    "q": "A parabola has turning point \\((1, 5)\\) and passes through \\((3, 1)\\). Which rule fits it?",
@@ -229,5 +292,90 @@
     "clue": "Half the gap between max and min is the amplitude. Midway between them is the centre line."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The parabola y = (x - 2)^2 - 3 with its turning point (2, -3) and the point (0, 1) marked and labelled, axes x from -1 to 5 and y from -4 to 6.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A parabola, concave up, with its turning point at \\((2, -3)\\), passing through \\((0, 1)\\) on the y-axis. Its rule is \\(y = (x - 2)^{2} - 3\\).",
+     "x": {
+      "min": -1,
+      "max": 5.5,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -4,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "(x - 2)^{2} - 3",
+       "domain": [
+        -0.6,
+        4.6
+       ],
+       "label": "\\(y = (x - 2)^{2} - 3\\)",
+       "labelAt": 4.3,
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -3
+       ],
+       "label": "\\((2, -3)\\)",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        1
+       ],
+       "label": "\\((0, 1)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:40Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:15Z"
+  }
+ ]
 }

@@ -31,7 +31,10 @@
   "2026-11-01T08:14:06Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T12:52:15Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:44Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:20Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -128,6 +131,46 @@
    ],
    "Example: test scores have a mean of 60 and a standard deviation of 5. If they are bell-shaped, about 95% of scores lie within 2 standard deviations, which is from 50 to 70."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A bell-shaped curve of test scores with mean 60 and standard deviation 5. It is symmetric, with its peak at 60. The area from 50 to 70, within 2 standard deviations of the mean, is shaded: about 95% of scores.",
+    "x": {
+     "min": 40,
+     "max": 80,
+     "label": "Score",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 0.095
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "n",
+      "span": [
+       50,
+       70
+      ],
+      "label": "about 95%",
+      "at": [
+       60,
+       0.03
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "\\frac{1}{5\\sqrt{2\\pi}} e^{-\\frac{(x - 60)^{2}}{50}}",
+      "domain": [
+       40,
+       80
+      ]
+     }
+    ]
+   }
+  },
   "remember": "The tail names the skew. In a bell shape, 68%, 95% and 99.7% lie within 1, 2 and 3 standard deviations.",
   "a": {
    "q": "A histogram has its peak at the low values and a long tail stretching to the high values. What is its shape?",
@@ -199,5 +242,70 @@
     "clue": "Which percentage matches 1 standard deviation?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A bell-shaped curve for test scores, mean 60 and standard deviation 5 (normal density), x from 40 to 80 with ticks at 50, 55, 60, 65, 70. Shade from 50 to 70 and label it about 95%.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A bell-shaped curve of test scores with mean 60 and standard deviation 5. It is symmetric, with its peak at 60. The area from 50 to 70, within 2 standard deviations of the mean, is shaded: about 95% of scores.",
+     "x": {
+      "min": 40,
+      "max": 80,
+      "label": "Score",
+      "step": 5
+     },
+     "y": {
+      "min": 0,
+      "max": 0.095
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "n",
+       "span": [
+        50,
+        70
+       ],
+       "label": "about 95%",
+       "at": [
+        60,
+        0.03
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "\\frac{1}{5\\sqrt{2\\pi}} e^{-\\frac{(x - 60)^{2}}{50}}",
+       "domain": [
+        40,
+        80
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:44Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:20Z"
+  }
+ ]
 }

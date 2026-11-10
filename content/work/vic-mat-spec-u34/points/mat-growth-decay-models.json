@@ -25,7 +25,10 @@
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:35:42Z autoreview: cleared with the fix (card wording)",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:53Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:30Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -184,6 +187,64 @@
    ],
    "Worked example: a drug has \\(\\frac{dy}{dt} = -0.2y\\) and \\(y = 50\\) mg at \\(t = 0\\). Then \\(y = 50e^{-0.2t}\\). At \\(t = 5\\), \\(y = 50e^{-1} \\approx 18.4\\) mg."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The amount of the drug, \\(y = 50e^{-0.2t}\\) mg, against time \\(t\\) in hours. It starts at 50 mg, is about 18.4 mg at \\(t = 5\\), and keeps falling towards 0.",
+    "x": {
+     "min": 0,
+     "max": 16,
+     "label": "t (h)",
+     "step": 5
+    },
+    "y": {
+     "min": 0,
+     "max": 60,
+     "label": "y (mg)",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "50e^{-0.2x}",
+      "domain": [
+       0,
+       16
+      ],
+      "label": "\\(y = 50e^{-0.2t}\\)",
+      "labelAt": 9,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       50
+      ],
+      "label": "\\((0, 50)\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       18.394
+      ],
+      "label": "\\((5, 18.4)\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "\\(\\frac{dy}{dt} = ky\\) gives \\(y = Ae^{kt}\\): growth if \\(k\\) is positive, decay if \\(k\\) is negative.",
   "a": {
    "q": "A quantity satisfies \\(\\frac{dy}{dt} = -0.4y\\), and \\(y = 10\\) when \\(t = 0\\). Which equation gives \\(y\\) in terms of \\(t\\)?",
@@ -252,5 +313,88 @@
     "clue": "Find A first, then put t = 2 into Ae^(kt)."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y = 50e^{-0.2t} (fn 50e^{-0.2x}) for t from 0 to 15, with (0, 50) and (5, 18.4) marked, axes t (hours) and y (mg).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The amount of the drug, \\(y = 50e^{-0.2t}\\) mg, against time \\(t\\) in hours. It starts at 50 mg, is about 18.4 mg at \\(t = 5\\), and keeps falling towards 0.",
+     "x": {
+      "min": 0,
+      "max": 16,
+      "label": "t (h)",
+      "step": 5
+     },
+     "y": {
+      "min": 0,
+      "max": 60,
+      "label": "y (mg)",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "50e^{-0.2x}",
+       "domain": [
+        0,
+        16
+       ],
+       "label": "\\(y = 50e^{-0.2t}\\)",
+       "labelAt": 9,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        50
+       ],
+       "label": "\\((0, 50)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        18.394
+       ],
+       "label": "\\((5, 18.4)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:30Z"
+  }
+ ]
 }

@@ -16,7 +16,10 @@
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
   "2026-11-01T09:24:24Z autoreview: cleared with the fix (card other)",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T12:52:17Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:46Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:23Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -188,6 +191,120 @@
    ],
    "Example: a line is fitted to data for \\(x\\) from 10 to 40. Predicting at \\(x = 25\\) is interpolation. Predicting at \\(x = 60\\) is extrapolation."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Data for \\(x\\) from 10 to 40 with a solid line of good fit over that range, and the line extended as a dotted line beyond the data to \\(x = 60\\). A prediction at \\(x = 25\\), inside the range, is interpolation. A prediction at \\(x = 60\\), outside it, is extrapolation.",
+    "x": {
+     "min": 0,
+     "max": 65,
+     "label": "\\(x\\)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 80,
+     "label": "\\(y\\)",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "x + 11",
+      "domain": [
+       10,
+       40
+      ],
+      "label": "line of good fit",
+      "labelAt": 12,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "e",
+      "expr": "x + 11",
+      "domain": [
+       40,
+       60
+      ],
+      "label": "extended",
+      "labelAt": 50,
+      "pos": "below-right",
+      "style": "dot"
+     },
+     {
+      "type": "point",
+      "at": [
+       25,
+       36
+      ],
+      "open": true,
+      "label": "interpolation",
+      "pos": "below-right",
+      "on": [
+       "l"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       60,
+       71
+      ],
+      "open": true,
+      "label": "extrapolation",
+      "pos": "above-left",
+      "on": [
+       "e"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       21
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       15,
+       28
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       20,
+       30
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       30,
+       43
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       35,
+       45
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       52
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
   "a": {
    "q": "A line of good fit is drawn for data with x-values from 20 to 50. Which prediction is extrapolation?",
@@ -256,5 +373,144 @@
     "clue": "Which prediction has data on both sides of it?"
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A scatterplot with points for x from 10 to 40, a solid line of good fit over that range and a dotted extension to x = 60. Mark the line at x = 25 (labelled interpolation) and x = 60 (labelled extrapolation).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Data for \\(x\\) from 10 to 40 with a solid line of good fit over that range, and the line extended as a dotted line beyond the data to \\(x = 60\\). A prediction at \\(x = 25\\), inside the range, is interpolation. A prediction at \\(x = 60\\), outside it, is extrapolation.",
+     "x": {
+      "min": 0,
+      "max": 65,
+      "label": "\\(x\\)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 80,
+      "label": "\\(y\\)",
+      "step": 10
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "x + 11",
+       "domain": [
+        10,
+        40
+       ],
+       "label": "line of good fit",
+       "labelAt": 12,
+       "pos": "below-right"
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "x + 11",
+       "domain": [
+        40,
+        60
+       ],
+       "label": "extended",
+       "labelAt": 50,
+       "pos": "below-right",
+       "style": "dot"
+      },
+      {
+       "type": "point",
+       "at": [
+        25,
+        36
+       ],
+       "open": true,
+       "label": "interpolation",
+       "pos": "below-right",
+       "on": [
+        "l"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        60,
+        71
+       ],
+       "open": true,
+       "label": "extrapolation",
+       "pos": "above-left",
+       "on": [
+        "e"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        21
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        15,
+        28
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        20,
+        30
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        30,
+        43
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        35,
+        45
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        40,
+        52
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:46Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:22Z"
+  }
+ ]
 }

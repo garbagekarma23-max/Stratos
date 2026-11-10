@@ -11,7 +11,10 @@
   "2026-10-27T01:22:58Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: kept for you (the fresh check found a problem)",
   "2026-10-28T11:49:42Z review: approved with the fix",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:42Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:18Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -183,6 +186,46 @@
     "Heights have \\(\\mu = 170\\) and \\(\\sigma = 10\\). For 150 to 190, \\(z = -2\\) to 2, so \\(P(150 < X < 190)\\) is about 0.95. For above 180, \\(z = 1\\). Within 1 standard deviation is 68%, so the two tails share 32%. Each tail is 16%, so \\(P(X > 180)\\) is about 0.16."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A normal curve for heights with mean 170 and standard deviation 10. The area to the right of 180, one standard deviation above the mean, is shaded: about 0.16.",
+    "x": {
+     "min": 135,
+     "max": 205,
+     "label": "Height",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 0.046
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "n",
+      "span": [
+       180,
+       205
+      ],
+      "label": "about 0.16",
+      "at": [
+       195,
+       0.013
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "\\frac{1}{10\\sqrt{2\\pi}} e^{-\\frac{(x - 170)^{2}}{200}}",
+      "domain": [
+       135,
+       205
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Convert to z-scores, then read the area from the empirical rule or a table.",
   "a": {
    "q": "Test marks are normal with mean 60 and standard deviation 8. What is the approximate probability that a mark is between 44 and 76?",
@@ -254,5 +297,70 @@
     "clue": "The 5% outside 2 standard deviations is split between both tails, but this question asks about one."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A normal curve with mean 170 and standard deviation 10 (fn of the normal density), x from 140 to 200, with ticks at 150, 160, 170, 180, 190. Shade the tail above 180 and label it about 0.16.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A normal curve for heights with mean 170 and standard deviation 10. The area to the right of 180, one standard deviation above the mean, is shaded: about 0.16.",
+     "x": {
+      "min": 135,
+      "max": 205,
+      "label": "Height",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 0.046
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "n",
+       "span": [
+        180,
+        205
+       ],
+       "label": "about 0.16",
+       "at": [
+        195,
+        0.013
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "\\frac{1}{10\\sqrt{2\\pi}} e^{-\\frac{(x - 170)^{2}}{200}}",
+       "domain": [
+        135,
+        205
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:42Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:18Z"
+  }
+ ]
 }

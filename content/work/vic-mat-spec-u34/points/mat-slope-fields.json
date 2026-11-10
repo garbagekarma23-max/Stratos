@@ -15,7 +15,10 @@
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:30Z write: done",
   "2026-11-01T15:14:48Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:13Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:54Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:31Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -94,6 +97,62 @@
    "Where \\(f(x, y) = 0\\), the segment is flat. Where \\(f(x, y)\\) is positive the segment rises to the right, and where it is negative it falls.",
    "A solution curve is drawn by starting at a given point and following the segments, so that the curve touches each segment it meets and has the same direction there. No solving is needed."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The slope field for \\(\\frac{dy}{dx} = x - y\\): a short segment at each grid point with that gradient. A solution curve starts at \\((0, 1)\\) and follows the segments, touching each one it meets.",
+    "x": {
+     "min": -2,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -2,
+     "max": 3,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "slope",
+      "id": "s",
+      "expr": "x - y",
+      "every": [
+       0.5,
+       0.5
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x - 1 + 2e^{-x}",
+      "domain": [
+       -0.8,
+       3
+      ],
+      "solves": "s",
+      "label": "solution",
+      "labelAt": 2.4,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "label": "\\((0, 1)\\)",
+      "pos": "above-right",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Each segment shows the gradient \\(f(x, y)\\) at its point. A solution curve follows the segments.",
   "a": {
    "q": "A slope field is drawn for \\(\\frac{dy}{dx} = x - y\\). What is the gradient of the segment at the point \\((4, 1)\\)?",
@@ -156,5 +215,86 @@
     "clue": "Find every point where xy = 0."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A slope field for dy/dx = x - y on x from -2 to 3 and y from -2 to 3, spaced every 0.5, and the solution curve y = x - 1 + 2e^{-x} through (0, 1), marked as solving the field, following the segments.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The slope field for \\(\\frac{dy}{dx} = x - y\\): a short segment at each grid point with that gradient. A solution curve starts at \\((0, 1)\\) and follows the segments, touching each one it meets.",
+     "x": {
+      "min": -2,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": -2,
+      "max": 3,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "slope",
+       "id": "s",
+       "expr": "x - y",
+       "every": [
+        0.5,
+        0.5
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x - 1 + 2e^{-x}",
+       "domain": [
+        -0.8,
+        3
+       ],
+       "solves": "s",
+       "label": "solution",
+       "labelAt": 2.4,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        1
+       ],
+       "label": "\\((0, 1)\\)",
+       "pos": "above-right",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:54Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:31Z"
+  }
+ ]
 }

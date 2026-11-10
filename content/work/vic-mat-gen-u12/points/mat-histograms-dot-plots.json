@@ -24,7 +24,10 @@
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card other)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card other)",
+  "2026-11-08T12:52:15Z pictures: the owner asked for a chart at card 3",
+  "2026-11-08T13:07:44Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:20Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -204,6 +207,57 @@
    ],
    "All three show shape, centre and spread. A possible outlier can show up as a value well apart from the rest of the data."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of the travel times of 50 students, in equal 10-minute intervals from 0 to 60 minutes. The touching bars have heights 6, 14, 15, 9, 4 and 2.",
+    "x": {
+     "min": 0,
+     "max": 60,
+     "label": "Travel time (min)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 16,
+     "label": "Frequency",
+     "step": 2
+    },
+    "classes": [
+     [
+      0,
+      10,
+      6
+     ],
+     [
+      10,
+      20,
+      14
+     ],
+     [
+      20,
+      30,
+      15
+     ],
+     [
+      30,
+      40,
+      9
+     ],
+     [
+      40,
+      50,
+      4
+     ],
+     [
+      50,
+      60,
+      2
+     ]
+    ]
+   }
+  },
   "remember": "Dot and stem plots keep each value. A histogram groups values into intervals.",
   "a": {
    "q": "A stem plot has the row 3 | 2 5 5 8. Which values does this row show?",
@@ -229,5 +283,81 @@
    "clue": "Which display groups values instead of showing each one?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "chart",
+   "brief": "A histogram of travel times for 50 students in equal 10-minute classes from 0 to 60 minutes, with touching bars and counts 6, 14, 15, 9, 4, 2.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "histogram",
+     "alt": "A histogram of the travel times of 50 students, in equal 10-minute intervals from 0 to 60 minutes. The touching bars have heights 6, 14, 15, 9, 4 and 2.",
+     "x": {
+      "min": 0,
+      "max": 60,
+      "label": "Travel time (min)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 16,
+      "label": "Frequency",
+      "step": 2
+     },
+     "classes": [
+      [
+       0,
+       10,
+       6
+      ],
+      [
+       10,
+       20,
+       14
+      ],
+      [
+       20,
+       30,
+       15
+      ],
+      [
+       30,
+       40,
+       9
+      ],
+      [
+       40,
+       50,
+       4
+      ],
+      [
+       50,
+       60,
+       2
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:43Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:19Z"
+  }
+ ]
 }

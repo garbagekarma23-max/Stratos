@@ -6,13 +6,13 @@ A census of every point in the banks, for planning the sessions that add graphs 
 
 A shared point is listed under every course that uses it, and counted once in its bank.
 
-The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11.
+The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2.
 
 ## By bank
 
 | Bank | Points | Better with a graph | Drawable now | Have one already |
 | --- | --- | --- | --- | --- |
-| mat | 666 | 151 | 136 | 55 |
+| mat | 666 | 151 | 136 | 105 |
 | phys | 135 | 25 | 25 | 0 |
 | eco | 154 | 21 | 21 | 0 |
 | e (Economics bank, Edexcel) | 53 | 16 | 16 | 3 |
@@ -34,35 +34,35 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | mod | 147 | 0 | 0 | 0 |
 | soc | 57 | 0 | 0 | 0 |
 | sor | 79 | 0 | 0 | 0 |
-| Total | 3467 | 257 | 240 | 58 |
+| Total | 3467 | 257 | 240 | 108 |
 
 ## By course
 
 | Course | Points | Better with a graph | Drawable now | Have one already |
 | --- | --- | --- | --- | --- |
-| `vic-mat-meth-u12` Mathematical Methods, Units 1 and 2 | 52 | 25 | 25 | 21 |
-| `nsw-mat-adv-11` Mathematics Advanced, Year 11 | 56 | 23 | 22 | 21 |
+| `vic-mat-meth-u12` Mathematical Methods, Units 1 and 2 | 52 | 25 | 25 | 24 |
+| `nsw-mat-adv-11` Mathematics Advanced, Year 11 | 56 | 23 | 22 | 23 |
 | `edexcel` Economics, International A Level (Edexcel), AS year | 53 | 16 | 16 | 3 |
-| `vic-mat-gen-u12` General Mathematics, Units 1 and 2 | 56 | 16 | 12 | 1 |
+| `vic-mat-gen-u12` General Mathematics, Units 1 and 2 | 56 | 16 | 12 | 16 |
 | `vic-mat-meth-u34` Mathematical Methods, Units 3 and 4 | 43 | 16 | 16 | 16 |
-| `nsw-mat-adv-12` Mathematics Advanced, Year 12 | 40 | 15 | 15 | 4 |
+| `nsw-mat-adv-12` Mathematics Advanced, Year 12 | 40 | 15 | 15 | 15 |
 | `vic-eco-u34` Economics, Units 3 and 4 | 68 | 15 | 15 | 0 |
-| `nsw-mat-std-12` Mathematics Standard 2, Year 12 | 53 | 12 | 12 | 0 |
-| `vic-mat-spec-u34` Specialist Mathematics, Units 3 and 4 | 51 | 12 | 11 | 0 |
+| `nsw-mat-std-12` Mathematics Standard 2, Year 12 | 53 | 12 | 12 | 1 |
+| `vic-mat-spec-u34` Specialist Mathematics, Units 3 and 4 | 51 | 12 | 11 | 12 |
 | `nsw-phys-12` Physics, Year 12 | 49 | 11 | 11 | 0 |
-| `vic-mat-spec-u12` Specialist Mathematics, Units 1 and 2 | 63 | 10 | 9 | 0 |
+| `vic-mat-spec-u12` Specialist Mathematics, Units 1 and 2 | 63 | 10 | 9 | 10 |
 | `vic-eco-u12` Economics, Units 1 and 2 | 53 | 9 | 9 | 0 |
 | `vic-phys-u12` Physics, Units 1 and 2 | 52 | 9 | 9 | 0 |
 | `vic-phys-u34` Physics, Units 3 and 4 | 51 | 9 | 9 | 0 |
 | `vic-chem-u34` Chemistry, Units 3 and 4 | 64 | 8 | 7 | 0 |
 | `vic-mat-gen-u34` General Mathematics, Units 3 and 4 | 57 | 8 | 6 | 0 |
 | `ac-mat-9` Mathematics, Year 9 | 39 | 7 | 6 | 0 |
-| `nsw-mat-std-11` Mathematics Standard, Year 11 | 43 | 7 | 5 | 0 |
+| `nsw-mat-std-11` Mathematics Standard, Year 11 | 43 | 7 | 5 | 1 |
 | `ac-ecb-8` Economics and Business, Year 8 | 34 | 6 | 6 | 0 |
 | `ac-mat-10` Mathematics, Year 10 | 38 | 6 | 5 | 1 |
 | `vic-bio-u34` Biology, Units 3 and 4 | 62 | 6 | 6 | 0 |
 | `nsw-eco-12` Economics, Year 12: Australia's economy | 67 | 5 | 5 | 0 |
-| `vic-mat-fnd-u34` Foundation Mathematics, Units 3 and 4 | 32 | 5 | 5 | 0 |
+| `vic-mat-fnd-u34` Foundation Mathematics, Units 3 and 4 | 32 | 5 | 5 | 2 |
 | `nsw-chem-12` Chemistry, Year 12 | 47 | 4 | 3 | 0 |
 | `vic-pe-u34` Physical Education, Units 3 and 4 | 39 | 4 | 4 | 0 |
 | `ac-mat-8` Mathematics, Year 8 | 40 | 3 | 3 | 0 |
@@ -108,8 +108,8 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
   - `mat-rates-context` Rates in context: distance-time and depth-time graphs. Has one already.
   - `mat-tangent-lines` Tangent lines: tangents on a curve
 - Circular functions (`vic-mat-meth-u12-1-3`)
-  - `mat-unit-circle` The unit circle: unit circle on axes
-  - `mat-symmetry-periodicity` Symmetry and periodicity: sine and cosine graphs
+  - `mat-unit-circle` The unit circle: unit circle on axes. Has one already.
+  - `mat-symmetry-periodicity` Symmetry and periodicity: sine and cosine graphs. Has one already.
 - Circular graphs and equations (`vic-mat-meth-u12-2-2`)
   - `mat-graphs-sine-cosine` Graphs of sine and cosine: sine wave with amplitude and period. Has one already.
   - `mat-tangent-graph` The tangent graph: tan graph with asymptotes. Has one already.
@@ -118,7 +118,7 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
   - `mat-exponential-functions` Exponential functions: growth and decay curves. Has one already.
   - `mat-exponential-models-2` Exponential models: exponential growth and decay curves. Has one already.
 - Differentiation (`vic-mat-meth-u12-2-4`)
-  - `mat-derivative-from-first-principles` The derivative from first principles: secant becoming tangent
+  - `mat-derivative-from-first-principles` The derivative from first principles: secant becoming tangent. Has one already.
   - `mat-graphs-derivative-functions` Graphs of derivative functions: f and its derivative graph. Has one already.
   - `mat-stationary-points` Stationary points: turning points on curve. Has one already.
   - `mat-newton-s-method` Newton's method: tangent steps to a root. Has one already.
@@ -143,11 +143,11 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
   - `mat-reflections` Reflections: curve reflected in axes. Has one already.
   - `mat-solving-equations-with-graphs` Solving equations with graphs: intersection of two graphs. Has one already.
 - Trigonometric identities and equations (`nsw-mat-adv-11-2-3`)
-  - `mat-unit-circle` The unit circle: unit circle on axes
+  - `mat-unit-circle` The unit circle: unit circle on axes. Has one already.
   - `mat-graphs-sine-cosine-tangent` Graphs of sine, cosine and tangent: sine, cosine, tangent waves. Has one already.
 - Rates of change and the derivative (`nsw-mat-adv-11-3-1`)
   - `mat-average-rate-change` Average rate of change: secant on a curve. Has one already.
-  - `mat-derivative-from-first-principles` The derivative from first principles: secant becoming tangent
+  - `mat-derivative-from-first-principles` The derivative from first principles: secant becoming tangent. Has one already.
   - `mat-tangents-normals` Tangents and normals: tangent and normal to curve. Has one already.
   - `mat-where-function-not-differentiable` Where a function is not differentiable: corner, jump, vertical tangent. Has one already.
 - Exponentials and logarithms (`nsw-mat-adv-11-4-1`)
@@ -188,25 +188,25 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### General Mathematics, Units 1 and 2 (`vic-mat-gen-u12`)
 
 - Investigating data distributions (`vic-mat-gen-u12-1-1`)
-  - `mat-displaying-categorical-data` Displaying categorical data: bar charts (needs: bar chart)
-  - `mat-histograms-dot-plots` Histograms, stem plots and dot plots: histogram and dot plot (needs: histogram)
+  - `mat-displaying-categorical-data` Displaying categorical data: bar charts (needs: bar chart). Has one already.
+  - `mat-histograms-dot-plots` Histograms, stem plots and dot plots: histogram and dot plot (needs: histogram). Has one already.
   - `mat-five-number-summary-boxplots` The five-number summary and boxplots: boxplot (needs: box plot). Has one already.
-  - `mat-shapes-distributions` Shapes of distributions: symmetric, skewed and bell curves
-  - `mat-comparing-distributions` Comparing distributions: parallel boxplots (needs: box plot)
+  - `mat-shapes-distributions` Shapes of distributions: symmetric, skewed and bell curves. Has one already.
+  - `mat-comparing-distributions` Comparing distributions: parallel boxplots (needs: box plot). Has one already.
 - Linear relations and modelling (`vic-mat-gen-u12-3-1`)
-  - `mat-equation-y-mx-c` The gradient-intercept form: plot line from m and c
-  - `mat-linear-models-context` Linear models in context: line with rate and intercept
-  - `mat-simultaneous-linear-equations-2` Simultaneous linear equations: two lines crossing
-  - `mat-piecewise-step-graphs` Piecewise and step graphs: piecewise and step graph with open/closed dots
+  - `mat-equation-y-mx-c` The gradient-intercept form: plot line from m and c. Has one already.
+  - `mat-linear-models-context` Linear models in context: line with rate and intercept. Has one already.
+  - `mat-simultaneous-linear-equations-2` Simultaneous linear equations: two lines crossing. Has one already.
+  - `mat-piecewise-step-graphs` Piecewise and step graphs: piecewise and step graph with open/closed dots. Has one already.
 - Investigating associations (`vic-mat-gen-u12-1-2`)
-  - `mat-scatterplots` Scatterplots: scatterplot points
-  - `mat-describing-association` Describing an association: scatterplots of direction, form, strength
-  - `mat-lines-good-fit` Lines of good fit: line of good fit on scatterplot
-  - `mat-interpolation-extrapolation-2` Interpolation and extrapolation: line of good fit with data range
+  - `mat-scatterplots` Scatterplots: scatterplot points. Has one already.
+  - `mat-describing-association` Describing an association: scatterplots of direction, form, strength. Has one already.
+  - `mat-lines-good-fit` Lines of good fit: line of good fit on scatterplot. Has one already.
+  - `mat-interpolation-extrapolation-2` Interpolation and extrapolation: line of good fit with data range. Has one already.
 - Variation (`vic-mat-gen-u12-2-3`)
-  - `mat-direct-inverse-variation` Direct and inverse variation: line through origin and hyperbola
-  - `mat-transforming-data-linearity` Transforming data to linearity: curved scatter vs straightened plot
-  - `mat-modelling-non-linear-data` Modelling non-linear data: y against x^n straight line
+  - `mat-direct-inverse-variation` Direct and inverse variation: line through origin and hyperbola. Has one already.
+  - `mat-transforming-data-linearity` Transforming data to linearity: curved scatter vs straightened plot. Has one already.
+  - `mat-modelling-non-linear-data` Modelling non-linear data: y against x^n straight line. Has one already.
 
 ### Mathematical Methods, Units 3 and 4 (`vic-mat-meth-u34`)
 
@@ -235,25 +235,25 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Mathematics Advanced, Year 12 (`nsw-mat-adv-12`)
 
 - Further graph transformations and modelling (`nsw-mat-adv-12-1-1`)
-  - `mat-combining-transformations` Combining transformations: transformed curve
-  - `mat-transforming-trigonometric-graphs` Transforming trigonometric graphs: amplitude, period, shifts of sine
-  - `mat-finding-rule-from-graph` Finding a rule from a graph: parabola and sine from graph
+  - `mat-combining-transformations` Combining transformations: transformed curve. Has one already.
+  - `mat-transforming-trigonometric-graphs` Transforming trigonometric graphs: amplitude, period, shifts of sine. Has one already.
+  - `mat-finding-rule-from-graph` Finding a rule from a graph: parabola and sine from graph. Has one already.
 - Differential calculus (`nsw-mat-adv-12-3-1`)
   - `mat-stationary-points` Stationary points: turning points on curve. Has one already.
-  - `mat-second-derivative-concavity` The second derivative and concavity: concave up and down curve
-  - `mat-curve-sketching-with-calculus` Curve sketching with calculus: sketch cubic with turning points
+  - `mat-second-derivative-concavity` The second derivative and concavity: concave up and down curve. Has one already.
+  - `mat-curve-sketching-with-calculus` Curve sketching with calculus: sketch cubic with turning points. Has one already.
 - Integral calculus (`nsw-mat-adv-12-3-2`)
-  - `mat-areas-under-curves` Areas under curves: shaded area under curve
-  - `mat-area-between-two-curves` Area between two curves: shaded area between curves
+  - `mat-areas-under-curves` Areas under curves: shaded area under curve. Has one already.
+  - `mat-area-between-two-curves` Area between two curves: shaded area between curves. Has one already.
   - `mat-trapezoidal-rule` The trapezoidal rule: trapezium strips under curve. Has one already.
 - Applications of calculus (`nsw-mat-adv-12-3-3`)
-  - `mat-reading-motion-from-graphs` Reading motion from graphs: velocity-time and displacement-time graphs
-  - `mat-exponential-growth-decay` Exponential growth and decay: growth and decay curves
+  - `mat-reading-motion-from-graphs` Reading motion from graphs: velocity-time and displacement-time graphs. Has one already.
+  - `mat-exponential-growth-decay` Exponential growth and decay: growth and decay curves. Has one already.
 - Continuous random variables (`nsw-mat-adv-12-4-2`)
   - `mat-probability-density-functions` Probability density functions: area under density curve. Has one already.
-  - `mat-cumulative-distribution-functions` Cumulative distribution functions: density and cumulative curve
+  - `mat-cumulative-distribution-functions` Cumulative distribution functions: density and cumulative curve. Has one already.
   - `mat-normal-distribution` The normal distribution: bell curve. Has one already.
-  - `mat-probabilities-from-normal-distribution` Probabilities from the normal distribution: shaded normal curve area
+  - `mat-probabilities-from-normal-distribution` Probabilities from the normal distribution: shaded normal curve area. Has one already.
 
 ### Economics, Units 3 and 4 (`vic-eco-u34`)
 
@@ -291,7 +291,7 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 - Ratios and rates (`nsw-mat-std-12-3-2`)
   - `mat-speed-distance-time` Speed, distance and time: distance-time graph
 - Bivariate data analysis (`nsw-mat-std-12-5-1`)
-  - `mat-scatterplots` Scatterplots: scatterplot points
+  - `mat-scatterplots` Scatterplots: scatterplot points. Has one already.
   - `mat-correlation` Correlation: scatterplots of different strength and direction
   - `mat-least-squares-regression-line` Least-squares regression line: scatter with regression line
   - `mat-interpolation-extrapolation` Interpolation and extrapolation: line of best fit with data range
@@ -302,24 +302,24 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Specialist Mathematics, Units 3 and 4 (`vic-mat-spec-u34`)
 
 - Rational functions (`vic-mat-spec-u34-2-1`)
-  - `mat-rational-functions` Rational functions: rational graph with asymptotes
-  - `mat-graphs-quotient-functions` Graphs of quotient functions: quotient function sketch
+  - `mat-rational-functions` Rational functions: rational graph with asymptotes. Has one already.
+  - `mat-graphs-quotient-functions` Graphs of quotient functions: quotient function sketch. Has one already.
 - Complex numbers in Unit 3 (`vic-mat-spec-u34-3-1`)
-  - `mat-roots-complex-numbers` Roots of complex numbers: roots evenly spaced on Argand circle
+  - `mat-roots-complex-numbers` Roots of complex numbers: roots evenly spaced on Argand circle. Has one already.
 - Differential calculus (`vic-mat-spec-u34-4-1`)
-  - `mat-second-derivative-concavity` The second derivative and concavity: concave up and down curve
-  - `mat-graphs-antiderivatives` Graphs of antiderivatives: f with antiderivative graphs
+  - `mat-second-derivative-concavity` The second derivative and concavity: concave up and down curve. Has one already.
+  - `mat-graphs-antiderivatives` Graphs of antiderivatives: f with antiderivative graphs. Has one already.
 - Integral calculus (`vic-mat-spec-u34-4-2`)
-  - `mat-volumes-solids-revolution` Volumes of solids of revolution: region under curve shaded
+  - `mat-volumes-solids-revolution` Volumes of solids of revolution: region under curve shaded. Has one already.
 - Differential equations (`vic-mat-spec-u34-4-3`)
-  - `mat-growth-decay-models` Growth and decay models: exponential growth and decay curves
-  - `mat-logistic-equation` The logistic equation: S-shaped logistic curve
-  - `mat-slope-fields` Slope fields: grid of gradient segments (needs: slope field)
+  - `mat-growth-decay-models` Growth and decay models: exponential growth and decay curves. Has one already.
+  - `mat-logistic-equation` The logistic equation: S-shaped logistic curve. Has one already.
+  - `mat-slope-fields` Slope fields: grid of gradient segments (needs: slope field). Has one already.
 - Kinematics (`vic-mat-spec-u34-4-4`)
-  - `mat-velocity-time-graphs` Velocity-time graphs: velocity-time graph with signed area
+  - `mat-velocity-time-graphs` Velocity-time graphs: velocity-time graph with signed area. Has one already.
 - Statistical inference (`vic-mat-spec-u34-6-1`)
-  - `mat-distribution-sample-means` The distribution of sample means: bell curves narrowing with sample size
-  - `mat-one-tail-two-tail` One-tail and two-tail tests: normal curve with shaded tails
+  - `mat-distribution-sample-means` The distribution of sample means: bell curves narrowing with sample size. Has one already.
+  - `mat-one-tail-two-tail` One-tail and two-tail tests: normal curve with shaded tails. Has one already.
 
 ### Physics, Year 12 (`nsw-phys-12`)
 
@@ -343,20 +343,20 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Specialist Mathematics, Units 1 and 2 (`vic-mat-spec-u12`)
 
 - Simulation and sampling (`vic-mat-spec-u12-5-1`)
-  - `mat-distributions-sample-means` Distributions of sample means: dot plot or histogram of sample means (needs: histogram)
+  - `mat-distributions-sample-means` Distributions of sample means: dot plot or histogram of sample means (needs: histogram). Has one already.
 - Complex numbers (`vic-mat-spec-u12-4-1`)
-  - `mat-argand-plane` The Argand plane: points on the Argand plane
+  - `mat-argand-plane` The Argand plane: points on the Argand plane. Has one already.
 - Polar form and the complex plane (`vic-mat-spec-u12-2-5`)
-  - `mat-modulus-argument` Modulus and argument: Argand point with modulus and argument
-  - `mat-regions-complex-plane` Regions in the complex plane: circles, lines and regions on Argand plane
+  - `mat-modulus-argument` Modulus and argument: Argand point with modulus and argument. Has one already.
+  - `mat-regions-complex-plane` Regions in the complex plane: circles, lines and regions on Argand plane. Has one already.
 - Rational and circular graphs (`vic-mat-spec-u12-2-6`)
-  - `mat-reciprocal-functions-2` Reciprocal functions: f and 1/f with asymptotes
-  - `mat-inverse-circular-functions` Inverse circular functions: arcsin, arccos, arctan graphs
-  - `mat-absolute-value-function` The absolute value function: V graph and reflected parts
+  - `mat-reciprocal-functions-2` Reciprocal functions: f and 1/f with asymptotes. Has one already.
+  - `mat-inverse-circular-functions` Inverse circular functions: arcsin, arccos, arctan graphs. Has one already.
+  - `mat-absolute-value-function` The absolute value function: V graph and reflected parts. Has one already.
 - Curves and loci (`vic-mat-spec-u12-2-1`)
-  - `mat-circles-ellipses` Circles and ellipses: circle and ellipse on axes
-  - `mat-hyperbolas` Parabolas and hyperbolas: parabola and hyperbola with asymptotes
-  - `mat-polar-coordinates` Polar coordinates: point with r and angle on axes
+  - `mat-circles-ellipses` Circles and ellipses: circle and ellipse on axes. Has one already.
+  - `mat-hyperbolas` Parabolas and hyperbolas: parabola and hyperbola with asymptotes. Has one already.
+  - `mat-polar-coordinates` Polar coordinates: point with r and angle on axes. Has one already.
 
 ### Economics, Units 1 and 2 (`vic-eco-u12`)
 
@@ -459,7 +459,7 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 - Linear relationships (`nsw-mat-std-11-1-2`)
   - `mat-gradient-as-rate-change` Gradient as a rate of change: line through two points
   - `mat-y-intercept-context` The y-intercept in context: line crossing vertical axis
-  - `mat-equation-y-mx-c` The gradient-intercept form: plot line from m and c
+  - `mat-equation-y-mx-c` The gradient-intercept form: plot line from m and c. Has one already.
   - `mat-direct-variation` Direct variation: line through origin
   - `mat-linear-models` Linear models: line model with prediction
 - Data analysis (`nsw-mat-std-11-5-1`)
@@ -518,10 +518,10 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Foundation Mathematics, Units 3 and 4 (`vic-mat-fnd-u34`)
 
 - Formulas and linear relations (`vic-mat-fnd-u34-1-1`)
-  - `mat-linear-models-context` Linear models in context: line with rate and intercept
+  - `mat-linear-models-context` Linear models in context: line with rate and intercept. Has one already.
   - `mat-graphing-linear-relations` Graphing linear relations: line C = 20 + 5n
   - `mat-break-even-analysis` Break-even analysis: cost and revenue lines
-  - `mat-direct-inverse-variation` Direct and inverse variation: line through origin and hyperbola
+  - `mat-direct-inverse-variation` Direct and inverse variation: line through origin and hyperbola. Has one already.
 - Analysing data (`vic-mat-fnd-u34-2-2`)
   - `mat-predicting-from-data` Interpolation and extrapolation: scatter with line of best fit, inside and outside range
 

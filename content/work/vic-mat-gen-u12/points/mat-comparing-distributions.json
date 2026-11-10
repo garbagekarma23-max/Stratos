@@ -16,7 +16,10 @@
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-08T12:52:16Z pictures: the owner asked for a chart at card 3",
+  "2026-11-08T13:07:44Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:20Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -198,6 +201,41 @@
    ],
    "Write the comparison in context, using both centre and spread. Take care with the range, as one extreme value can stretch it."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "Parallel boxplots on one scale. Group A: median 62, box from 57 to 67 (IQR 10), whiskers from 45 to 78. Group B: median 55, box from 46 to 64 (IQR 18), whiskers from 35 to 80. A is centred higher, and B is more spread out.",
+    "x": {
+     "min": 30,
+     "max": 85,
+     "label": "Score",
+     "step": 5
+    },
+    "sets": [
+     {
+      "label": "A",
+      "five": [
+       45,
+       57,
+       62,
+       67,
+       78
+      ]
+     },
+     {
+      "label": "B",
+      "five": [
+       35,
+       46,
+       55,
+       64,
+       80
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Compare medians for centre and IQRs for spread, in context.",
   "a": {
    "q": "Parallel boxplots show test scores. Class P has median 70 and IQR 8. Class Q has median 70 and IQR 20. What is the best comparison?",
@@ -223,5 +261,65 @@
    "clue": "Ignore the ranges and compare the IQRs."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "chart",
+   "brief": "Parallel boxplots on one scale: group A (min 45, Q1 57, median 62, Q3 67, max 78, IQR 10) and group B (min 35, Q1 46, median 55, Q3 64, max 80, IQR 18).",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "box",
+     "alt": "Parallel boxplots on one scale. Group A: median 62, box from 57 to 67 (IQR 10), whiskers from 45 to 78. Group B: median 55, box from 46 to 64 (IQR 18), whiskers from 35 to 80. A is centred higher, and B is more spread out.",
+     "x": {
+      "min": 30,
+      "max": 85,
+      "label": "Score",
+      "step": 5
+     },
+     "sets": [
+      {
+       "label": "A",
+       "five": [
+        45,
+        57,
+        62,
+        67,
+        78
+       ]
+      },
+      {
+       "label": "B",
+       "five": [
+        35,
+        46,
+        55,
+        64,
+        80
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:44Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:20Z"
+  }
+ ]
 }

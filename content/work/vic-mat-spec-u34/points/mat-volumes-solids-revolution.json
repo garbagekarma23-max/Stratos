@@ -31,7 +31,10 @@
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:48Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:53Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:30Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -110,6 +113,60 @@
    "For a rotation about the y-axis, swap the roles of \\(x\\) and \\(y\\): \\(V = \\pi \\int x^{2} \\, dy\\), from \\(y = c\\) to \\(y = d\\). Write \\(x\\) in terms of \\(y\\) first.",
    "Example: \\(y = x\\) from \\(x = 0\\) to \\(x = 3\\) gives a cone. \\(V = \\pi \\int_{0}^{3} x^{2} \\, dx = \\pi \\left[\\frac{x^{3}}{3}\\right]_{0}^{3}\\), which is \\(\\pi(9 - 0) = 9\\pi\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(y = x\\) from \\(x = 0\\) to \\(x = 3\\), with the region under it shaded. Turning this region once around the x-axis makes a cone. At \\(x = 2\\) an arrow from the x-axis up to the line shows one disc's radius, \\(y\\).",
+    "x": {
+     "min": 0,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "shade",
+      "under": "f",
+      "span": [
+       0,
+       3
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x",
+      "domain": [
+       0,
+       3
+      ],
+      "label": "\\(y = x\\)",
+      "labelAt": 3,
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       0
+      ],
+      "to": [
+       2,
+       2
+      ],
+      "label": "radius \\(y\\)",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Square the radius, multiply by \\(\\pi\\), then integrate along the axis of rotation.",
   "a": {
    "q": "The curve \\(y = \\sqrt{x}\\), from \\(x = 0\\) to \\(x = 4\\), is rotated about the x-axis. What is the volume of the solid?",
@@ -172,5 +229,84 @@
     "clue": "The radius is 2x, so square the whole of it, including the 2."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The line y = x from x = 0 to 3 with the region under it shaded, and a vertical segment at x = 2 from the x-axis up to the line, labelled radius y, showing one disc's radius. Axes x from 0 to 4, y from 0 to 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line \\(y = x\\) from \\(x = 0\\) to \\(x = 3\\), with the region under it shaded. Turning this region once around the x-axis makes a cone. At \\(x = 2\\) an arrow from the x-axis up to the line shows one disc's radius, \\(y\\).",
+     "x": {
+      "min": 0,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 4,
+      "label": "\\(y\\)",
+      "step": 1
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "shade",
+       "under": "f",
+       "span": [
+        0,
+        3
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x",
+       "domain": [
+        0,
+        3
+       ],
+       "label": "\\(y = x\\)",
+       "labelAt": 3,
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        2,
+        0
+       ],
+       "to": [
+        2,
+        2
+       ],
+       "label": "radius \\(y\\)",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:53Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:30Z"
+  }
+ ]
 }

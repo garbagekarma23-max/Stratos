@@ -8,7 +8,10 @@
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: done",
   "2026-11-01T08:14:07Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:14Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:49Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:25Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -76,6 +79,48 @@
    "To plot \\(z = a + bi\\), go \\(a\\) units along the real axis and \\(b\\) units up the imaginary axis. This gives the point \\((a, b)\\).",
    "Example: \\(3 - 2i\\) has real part 3 and imaginary part \\(-2\\). It is plotted at \\((3, -2)\\), which is 3 right and 2 down from the origin."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The Argand plane, with the real axis across and the imaginary axis up. The complex number \\(3 - 2i\\) is plotted at \\((3, -2)\\): 3 right along the real axis and 2 down.",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "Re",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3.5,
+     "max": 2,
+     "label": "Im",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "guide",
+      "at": [
+       3,
+       -2
+      ],
+      "xLabel": "\\(3\\)",
+      "yLabel": "\\(-2\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       -2
+      ],
+      "label": "\\(3 - 2i\\)",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Real part goes across, imaginary part goes up: \\(a + bi\\) is the point \\((a, b)\\).",
   "a": {
    "q": "At which point is the complex number \\(-4 + 5i\\) plotted on the Argand plane?",
@@ -138,5 +183,72 @@
     "clue": "Rewrite it as a + bi before reading off the parts."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "An Argand plane with axes labelled Re and Im, and the point 3 - 2i plotted at (3, -2) and labelled, with dashed guides to 3 on the real axis and -2 on the imaginary axis.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The Argand plane, with the real axis across and the imaginary axis up. The complex number \\(3 - 2i\\) is plotted at \\((3, -2)\\): 3 right along the real axis and 2 down.",
+     "x": {
+      "min": -1,
+      "max": 5,
+      "label": "Re",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -3.5,
+      "max": 2,
+      "label": "Im",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "equal": true,
+     "items": [
+      {
+       "type": "guide",
+       "at": [
+        3,
+        -2
+       ],
+       "xLabel": "\\(3\\)",
+       "yLabel": "\\(-2\\)"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        -2
+       ],
+       "label": "\\(3 - 2i\\)",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:48Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:25Z"
+  }
+ ]
 }

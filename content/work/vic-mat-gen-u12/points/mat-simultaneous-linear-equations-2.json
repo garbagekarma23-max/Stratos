@@ -32,7 +32,10 @@
   "2026-11-01T08:24:32Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
   "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:16Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T13:07:45Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -222,6 +225,74 @@
     "Add or subtract the equations to cancel one variable. Example: \\(x + y = 10\\) and \\(x - y = 4\\). Adding gives \\(2x = 14\\), so \\(x = 7\\), and then \\(y = 3\\)."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The lines \\(x + y = 10\\) and \\(x - y = 4\\) cross at \\((7, 3)\\). That point is the solution, \\(x = 7\\) and \\(y = 3\\), which makes both equations true.",
+    "x": {
+     "min": 0,
+     "max": 11,
+     "label": "\\(x\\)",
+     "step": 2,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 11,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "10 - x",
+      "domain": [
+       0,
+       10.4
+      ],
+      "label": "\\(x + y = 10\\)",
+      "labelAt": 1.3867,
+      "pos": "above-right"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "x - 4",
+      "domain": [
+       0,
+       11
+      ],
+      "label": "\\(x - y = 4\\)",
+      "labelAt": 9.9,
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       7,
+       3
+      ],
+      "xLabel": "\\(7\\)",
+      "yLabel": "\\(3\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       3
+      ],
+      "on": [
+       "a",
+       "b"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
   "remember": "The solution is the point where both equations are true, which is where the lines cross.",
   "a": {
    "q": "Solve \\(x + y = 12\\) and \\(x - y = 2\\). What is the solution?",
@@ -293,5 +364,98 @@
     "clue": "Set the cost rule equal to the income rule."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The lines x + y = 10 (y = 10 - x) and x - y = 4 (y = x - 4), each labelled, crossing at (7, 3), marked as their intersection. Axes x from 0 to 11, y from -4 to 11.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The lines \\(x + y = 10\\) and \\(x - y = 4\\) cross at \\((7, 3)\\). That point is the solution, \\(x = 7\\) and \\(y = 3\\), which makes both equations true.",
+     "x": {
+      "min": 0,
+      "max": 11,
+      "label": "\\(x\\)",
+      "step": 2,
+      "nums": false
+     },
+     "y": {
+      "min": -4,
+      "max": 11,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "10 - x",
+       "domain": [
+        0,
+        10.4
+       ],
+       "label": "\\(x + y = 10\\)",
+       "labelAt": 1.3867,
+       "pos": "above-right"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "x - 4",
+       "domain": [
+        0,
+        11
+       ],
+       "label": "\\(x - y = 4\\)",
+       "labelAt": 9.9,
+       "pos": "above-left"
+      },
+      {
+       "type": "guide",
+       "at": [
+        7,
+        3
+       ],
+       "xLabel": "\\(7\\)",
+       "yLabel": "\\(3\\)"
+      },
+      {
+       "type": "point",
+       "at": [
+        7,
+        3
+       ],
+       "on": [
+        "a",
+        "b"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:45Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:21Z"
+  }
+ ]
 }

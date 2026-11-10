@@ -18,7 +18,10 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:33Z check: passed, cleared",
-  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)"
+  "2026-11-06T07:12:11Z maths: written in LaTeX (convert_maths.py, the safe swaps)",
+  "2026-11-08T12:52:17Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:46Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:22Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -96,6 +99,120 @@
    "To predict, pick a value on the horizontal axis. Go up to the line, then across to the vertical axis and read off the value.",
    "Example: a line passes through \\((2, 10)\\) and \\((6, 30)\\). At \\(x = 4\\), the line is at \\(y = 20\\), the midway value. So the prediction is 20."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A scatterplot of 10 points with a line of good fit through \\((2, 10)\\) and \\((6, 30)\\), with 5 points above it and 5 below. A dashed guide goes up from \\(x = 4\\) to the line and across to \\(y = 20\\), the prediction.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": 0,
+     "max": 40,
+     "label": "\\(y\\)",
+     "step": 5,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "5x",
+      "domain": [
+       0.5,
+       7.5
+      ],
+      "label": "line of good fit",
+      "labelAt": 7.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       20
+      ],
+      "xLabel": "\\(4\\)",
+      "yLabel": "\\(20\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       7
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       14
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       14
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       19
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       18
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       26
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.5,
+       26
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       31
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       34
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Draw the line by eye through the middle of the points, then read predictions off it.",
   "a": {
    "q": "Which describes a well-drawn line of good fit?",
@@ -158,5 +275,144 @@
     "clue": "x = 20 is exactly halfway between 10 and 30."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A scatterplot of about 10 points with a line of good fit through (2, 10) and (6, 30), points spread on both sides, and a guide at x = 4 up to the line and across to y = 20.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A scatterplot of 10 points with a line of good fit through \\((2, 10)\\) and \\((6, 30)\\), with 5 points above it and 5 below. A dashed guide goes up from \\(x = 4\\) to the line and across to \\(y = 20\\), the prediction.",
+     "x": {
+      "min": 0,
+      "max": 8,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 40,
+      "label": "\\(y\\)",
+      "step": 5,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "5x",
+       "domain": [
+        0.5,
+        7.5
+       ],
+       "label": "line of good fit",
+       "labelAt": 7.5,
+       "pos": "above-left"
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        20
+       ],
+       "xLabel": "\\(4\\)",
+       "yLabel": "\\(20\\)"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        7
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        9
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2.5,
+        14
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        14
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3.5,
+        19
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        18
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        26
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5.5,
+        26
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        31
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        7,
+        34
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:46Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:22Z"
+  }
+ ]
 }

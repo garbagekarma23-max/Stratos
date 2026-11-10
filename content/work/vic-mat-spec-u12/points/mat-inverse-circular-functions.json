@@ -24,7 +24,10 @@
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
   "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:14Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:50Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:27Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -191,6 +194,47 @@
     "the inverse of \\(\\tan x\\) on \\(\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\\). It has domain all real numbers and range \\(\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)\\)."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\arctan x\\) for all real \\(x\\). It rises through the origin and levels off towards the dashed horizontal asymptotes \\(y = \\frac{\\pi}{2}\\) and \\(y = -\\frac{\\pi}{2}\\), which it never reaches.",
+    "x": {
+     "min": -6,
+     "max": 6,
+     "label": "\\(x\\)",
+     "step": 2
+    },
+    "y": {
+     "min": -2.5,
+     "max": 2.5,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "asymptote",
+      "y": 1.5708,
+      "label": "\\(y = \\frac{\\pi}{2}\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "asymptote",
+      "y": -1.5708,
+      "label": "\\(y = -\\frac{\\pi}{2}\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\arctan x",
+      "label": "\\(y = \\arctan x\\)",
+      "labelAt": 1.5,
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
   "remember": "Many angles share a sine, cosine or tangent. The inverse gives the one in its restricted range.",
   "a": {
    "q": "What is the exact value of \\(\\arccos(0)\\)?",
@@ -262,5 +306,71 @@
     "clue": "Check which angles fall inside the range of arcsin."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y = arctan x (fn \\arctan x) for x from -6 to 6, with dashed horizontal asymptotes y = pi/2 and y = -pi/2, each labelled.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(y = \\arctan x\\) for all real \\(x\\). It rises through the origin and levels off towards the dashed horizontal asymptotes \\(y = \\frac{\\pi}{2}\\) and \\(y = -\\frac{\\pi}{2}\\), which it never reaches.",
+     "x": {
+      "min": -6,
+      "max": 6,
+      "label": "\\(x\\)",
+      "step": 2
+     },
+     "y": {
+      "min": -2.5,
+      "max": 2.5,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "items": [
+      {
+       "type": "asymptote",
+       "y": 1.5708,
+       "label": "\\(y = \\frac{\\pi}{2}\\)",
+       "pos": "above-left"
+      },
+      {
+       "type": "asymptote",
+       "y": -1.5708,
+       "label": "\\(y = -\\frac{\\pi}{2}\\)",
+       "pos": "below-left"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\arctan x",
+       "label": "\\(y = \\arctan x\\)",
+       "labelAt": 1.5,
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:50Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:26Z"
+  }
+ ]
 }

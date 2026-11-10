@@ -33,7 +33,10 @@
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:35:42Z autoreview: cleared with the fix (card wording)",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:52Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:29Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -174,6 +177,74 @@
    "All \\(n\\) roots have the same modulus, \\(r^{\\frac{1}{n}}\\). Their arguments are \\(\\frac{2\\pi}{n}\\) apart, so they are evenly spaced on a circle centred at the origin.",
    "Example: the cube roots of 1 have modulus 1 and arguments 0, \\(\\frac{2\\pi}{3}\\) and \\(\\frac{4\\pi}{3}\\). So they are 1, \\(\\text{cis}\\left(\\frac{2\\pi}{3}\\right)\\) and \\(\\text{cis}\\left(\\frac{4\\pi}{3}\\right)\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The complex plane with the circle of radius 1 centred at the origin. The three cube roots of 1 lie on it: 1, \\(\\text{cis}\\left(\\frac{2\\pi}{3}\\right)\\) and \\(\\text{cis}\\left(\\frac{4\\pi}{3}\\right)\\). They are evenly spaced, with \\(\\frac{2\\pi}{3}\\) between neighbours.",
+    "x": {
+     "min": -1.8,
+     "max": 1.8,
+     "label": "Re",
+     "step": 0.5,
+     "nums": false
+    },
+    "y": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "Im",
+     "step": 0.5,
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "id": "c",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 1
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0
+      ],
+      "label": "\\(1\\)",
+      "pos": "below-right",
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -0.5,
+       0.866
+      ],
+      "label": "\\(\\text{cis}\\left(\\frac{2\\pi}{3}\\right)\\)",
+      "pos": "above-left",
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -0.5,
+       -0.866
+      ],
+      "label": "\\(\\text{cis}\\left(\\frac{4\\pi}{3}\\right)\\)",
+      "pos": "below-left",
+      "on": [
+       "c"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "\\(n\\) roots, the same modulus, and arguments \\(\\frac{2\\pi}{n}\\) apart.",
   "a": {
    "q": "The 5th roots of 1 are evenly spaced on a circle. What is the angle between neighbouring roots?",
@@ -236,5 +307,98 @@
     "clue": "Find the number that gives 16 when raised to the power 4."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "An Argand diagram on equal scales with the unit circle and the three cube roots of 1 marked: 1, cis(2pi/3) and cis(4pi/3), each labelled, evenly spaced on the circle. Axes labelled Re and Im.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The complex plane with the circle of radius 1 centred at the origin. The three cube roots of 1 lie on it: 1, \\(\\text{cis}\\left(\\frac{2\\pi}{3}\\right)\\) and \\(\\text{cis}\\left(\\frac{4\\pi}{3}\\right)\\). They are evenly spaced, with \\(\\frac{2\\pi}{3}\\) between neighbours.",
+     "x": {
+      "min": -1.8,
+      "max": 1.8,
+      "label": "Re",
+      "step": 0.5,
+      "nums": false
+     },
+     "y": {
+      "min": -1.5,
+      "max": 1.5,
+      "label": "Im",
+      "step": 0.5,
+      "nums": false
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "circle",
+       "id": "c",
+       "centre": [
+        0,
+        0
+       ],
+       "r": 1
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0
+       ],
+       "label": "\\(1\\)",
+       "pos": "below-right",
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        -0.5,
+        0.866
+       ],
+       "label": "\\(\\text{cis}\\left(\\frac{2\\pi}{3}\\right)\\)",
+       "pos": "above-left",
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        -0.5,
+        -0.866
+       ],
+       "label": "\\(\\text{cis}\\left(\\frac{4\\pi}{3}\\right)\\)",
+       "pos": "below-left",
+       "on": [
+        "c"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:52Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:29Z"
+  }
+ ]
 }

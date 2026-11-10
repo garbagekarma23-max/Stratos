@@ -26,7 +26,10 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:05Z write: done",
   "2026-11-01T15:05:29Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:13Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:54Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:31Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -104,6 +107,108 @@
    "Distance travelled adds up all the areas as positive numbers. Displacement keeps the signs.",
    "Example: \\(v = 4\\) m/s from \\(t = 0\\) to \\(t = 3\\), then \\(v = -2\\) m/s from \\(t = 3\\) to \\(t = 7\\). Displacement \\(= 4 \\times 3 + (-2) \\times 4 = 12 - 8 = 4\\) m. Distance \\(= 12 + 8 = 20\\) m."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A velocity-time graph. The velocity is 4 m/s from \\(t = 0\\) to 3, then \\(-2\\) m/s from \\(t = 3\\) to 7. The shaded area above the t-axis is 12 and counts as positive. The hatched area below is 8 and counts as negative. The displacement is \\(12 - 8 = 4\\) m.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "t (s)",
+     "step": 1
+    },
+    "y": {
+     "min": -3,
+     "max": 5,
+     "label": "v (m/s)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "label": "\\(+12\\)",
+      "at": [
+       1.5,
+       2
+      ]
+     },
+     {
+      "type": "shade",
+      "poly": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        -2
+       ],
+       [
+        7,
+        -2
+       ],
+       [
+        7,
+        0
+       ]
+      ],
+      "hatch": true
+     },
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "4",
+      "domain": [
+       0,
+       3
+      ],
+      "label": "\\(v = 4\\)",
+      "labelAt": 1.5,
+      "pos": "above"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "-2",
+      "domain": [
+       3,
+       7
+      ],
+      "label": "\\(v = -2\\)",
+      "labelAt": 5,
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       5,
+       -1
+      ],
+      "label": "\\(-8\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Gradient gives acceleration. Signed area gives displacement.",
   "a": {
    "q": "A particle has \\(v = 5\\) m/s from \\(t = 0\\) to \\(t = 2\\), then \\(v = -3\\) m/s from \\(t = 2\\) to \\(t = 6\\). What is its displacement from \\(t = 0\\) to \\(t = 6\\)?",
@@ -166,5 +271,132 @@
     "clue": "Gradient is rise over run. The area is a trapezium."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A velocity-time graph with v = 4 from t = 0 to 3 and v = -2 from t = 3 to 7. Shade the area above the axis (label +12) and the area below (hatched, label -8). Axes t (s) and v (m/s).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A velocity-time graph. The velocity is 4 m/s from \\(t = 0\\) to 3, then \\(-2\\) m/s from \\(t = 3\\) to 7. The shaded area above the t-axis is 12 and counts as positive. The hatched area below is 8 and counts as negative. The displacement is \\(12 - 8 = 4\\) m.",
+     "x": {
+      "min": 0,
+      "max": 8,
+      "label": "t (s)",
+      "step": 1
+     },
+     "y": {
+      "min": -3,
+      "max": 5,
+      "label": "v (m/s)",
+      "step": 1
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         4
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         3,
+         0
+        ]
+       ],
+       "label": "\\(+12\\)",
+       "at": [
+        1.5,
+        2
+       ]
+      },
+      {
+       "type": "shade",
+       "poly": [
+        [
+         3,
+         0
+        ],
+        [
+         3,
+         -2
+        ],
+        [
+         7,
+         -2
+        ],
+        [
+         7,
+         0
+        ]
+       ],
+       "hatch": true
+      },
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "4",
+       "domain": [
+        0,
+        3
+       ],
+       "label": "\\(v = 4\\)",
+       "labelAt": 1.5,
+       "pos": "above"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "-2",
+       "domain": [
+        3,
+        7
+       ],
+       "label": "\\(v = -2\\)",
+       "labelAt": 5,
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        5,
+        -1
+       ],
+       "label": "\\(-8\\)",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:54Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:31Z"
+  }
+ ]
 }

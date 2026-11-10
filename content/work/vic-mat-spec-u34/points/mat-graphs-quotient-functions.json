@@ -30,7 +30,12 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:05Z write: done",
   "2026-11-01T15:05:29Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:52Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:29Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The y-axis label \\(-2\\) sits on top of the y-axis right where the dashed guide from \\((-1, -2)\\) ends, so its minus sign runs into the guide's dashes and reads like another dash; move it clear of the axis and the guide, for example to the right of the axis with a gap, as the \\(2\\) is placed clear on the left.; The local maximum's x-value has no label (the guide at \\(x = -1\\) has an empty xLabel), while the minimum's \\(1\\) is labelled; add \\(-1\\) so both stationary points the card names at \\(x = \\pm 1\\) can be read off the graph.",
+  "2026-11-08T13:16:20Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:17:36Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -108,6 +113,88 @@
    "A point of inflection is where \\(f''(x) = 0\\) and \\(f''\\) changes sign, so the graph changes concavity. If \\(f''\\) is zero but does not change sign, there is no inflection.",
    "Example: \\(f(x) = x + \\frac{1}{x}\\). Then \\(f'(x) = 1 - \\frac{1}{x^{2}} = 0\\) gives \\(x = \\pm 1\\). Also \\(f''(x) = \\frac{2}{x^{3}}\\) is never zero, so there is no point of inflection."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(f(x) = x + \\frac{1}{x}\\), in two parts either side of its vertical asymptote, the y-axis. It approaches the dashed oblique asymptote \\(y = x\\). It has a local minimum at \\((1, 2)\\) and a local maximum at \\((-1, -2)\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 2
+    },
+    "y": {
+     "min": -6,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 2,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "o",
+      "expr": "x",
+      "label": "\\(y = x\\)",
+      "labelAt": 3.2,
+      "pos": "below-right",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x + \\frac{1}{x}",
+      "breaks": [
+       0
+      ],
+      "label": "\\(y = x + \\frac{1}{x}\\)",
+      "labelAt": 2.6,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       -1,
+       -2
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "text",
+      "at": [
+       1,
+       1.28
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       -1.24,
+       -2.72
+      ],
+      "label": "\\((-1, -2)\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Asymptotes first, then \\(f' = 0\\) for stationary points, then a sign change in \\(f''\\) for inflections.",
   "a": {
    "q": "At which x-values does \\(f(x) = x + \\frac{4}{x}\\) have stationary points?",
@@ -170,5 +257,220 @@
     "clue": "Solve g″(x) = 0, then check that the sign changes."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y = x + 1/x (fn with a break at 0), the dashed line y = x as its oblique asymptote, the y-axis as its vertical asymptote, and the turning points (1, 2) and (-1, -2) marked. Axes x from -4 to 4, y from -6 to 6, equal steps.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(f(x) = x + \\frac{1}{x}\\), in two parts either side of its vertical asymptote, the y-axis. It approaches the dashed oblique asymptote \\(y = x\\). It has a local minimum at \\((1, 2)\\) and a local maximum at \\((-1, -2)\\).",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 2
+     },
+     "y": {
+      "min": -6,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "o",
+       "expr": "x",
+       "label": "\\(y = x\\)",
+       "labelAt": 3.2,
+       "pos": "below-right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x + \\frac{1}{x}",
+       "breaks": [
+        0
+       ],
+       "label": "\\(y = x + \\frac{1}{x}\\)",
+       "labelAt": 2.6,
+       "pos": "above-left"
+      },
+      {
+       "type": "guide",
+       "at": [
+        1,
+        2
+       ],
+       "xLabel": "\\(1\\)",
+       "yLabel": "\\(2\\)"
+      },
+      {
+       "type": "guide",
+       "at": [
+        -1,
+        -2
+       ],
+       "xLabel": "",
+       "yLabel": "\\(-2\\)"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        2
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        -2
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:52Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The y-axis label \\(-2\\) sits on top of the y-axis right where the dashed guide from \\((-1, -2)\\) ends, so its minus sign runs into the guide's dashes and reads like another dash; move it clear of the axis and the guide, for example to the right of the axis with a gap, as the \\(2\\) is placed clear on the left.",
+     "The local maximum's x-value has no label (the guide at \\(x = -1\\) has an empty xLabel), while the minimum's \\(1\\) is labelled; add \\(-1\\) so both stationary points the card names at \\(x = \\pm 1\\) can be read off the graph."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:29Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y = x + 1/x (fn with a break at 0), the dashed line y = x as its oblique asymptote, the y-axis as its vertical asymptote, and the turning points (1, 2) and (-1, -2) marked. Axes x from -4 to 4, y from -6 to 6, equal steps.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(f(x) = x + \\frac{1}{x}\\), in two parts either side of its vertical asymptote, the y-axis. It approaches the dashed oblique asymptote \\(y = x\\). It has a local minimum at \\((1, 2)\\) and a local maximum at \\((-1, -2)\\).",
+     "x": {
+      "min": -4,
+      "max": 4,
+      "label": "\\(x\\)",
+      "step": 2
+     },
+     "y": {
+      "min": -6,
+      "max": 6,
+      "label": "\\(y\\)",
+      "step": 2,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "o",
+       "expr": "x",
+       "label": "\\(y = x\\)",
+       "labelAt": 3.2,
+       "pos": "below-right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x + \\frac{1}{x}",
+       "breaks": [
+        0
+       ],
+       "label": "\\(y = x + \\frac{1}{x}\\)",
+       "labelAt": 2.6,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        2
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        -1,
+        -2
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "text",
+       "at": [
+        1,
+        1.28
+       ],
+       "label": "\\((1, 2)\\)",
+       "pos": "below-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        -1.24,
+        -2.72
+       ],
+       "label": "\\((-1, -2)\\)",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:16:19Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:17:36Z"
+  }
+ ]
 }

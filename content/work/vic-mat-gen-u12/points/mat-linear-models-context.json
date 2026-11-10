@@ -30,7 +30,10 @@
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:32Z check: passed, cleared",
-  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)"
+  "2026-11-06T10:41:22Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:16Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:45Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -120,6 +123,73 @@
    ],
    "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and rises $45 for each hour. At 3 hours the cost is $215.",
+    "x": {
+     "min": 0,
+     "max": 5.5,
+     "label": "Hours",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 350,
+     "label": "Cost ($)",
+     "step": 50
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "45x + 80",
+      "domain": [
+       0,
+       5.5
+      ],
+      "label": "\\(C = 45t + 80\\)",
+      "labelAt": 4.2,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       80
+      ],
+      "label": "call-out fee",
+      "pos": "below-right",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "guide",
+      "at": [
+       3,
+       215
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       215
+      ],
+      "label": "\\((3, 215)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "In a linear model, the gradient is the rate and the intercept is the starting value.",
   "a": {
    "q": "A taxi fare in Geelong is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 mean?",
@@ -188,5 +258,97 @@
     "clue": "Multiply the daily rate by 5, then add the fixed amount."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The line C = 45t + 80 for t from 0 to 5 hours (axes Hours and Cost ($)), with (0, 80) marked as the call-out fee and (3, 215) marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and rises $45 for each hour. At 3 hours the cost is $215.",
+     "x": {
+      "min": 0,
+      "max": 5.5,
+      "label": "Hours",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 350,
+      "label": "Cost ($)",
+      "step": 50
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "45x + 80",
+       "domain": [
+        0,
+        5.5
+       ],
+       "label": "\\(C = 45t + 80\\)",
+       "labelAt": 4.2,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        80
+       ],
+       "label": "call-out fee",
+       "pos": "below-right",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        215
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        215
+       ],
+       "label": "\\((3, 215)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:44Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:20Z"
+  }
+ ]
 }

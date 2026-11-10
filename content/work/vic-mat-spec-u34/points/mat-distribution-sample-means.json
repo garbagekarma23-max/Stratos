@@ -31,7 +31,10 @@
   "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:29Z write: done",
   "2026-11-01T15:14:48Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:13Z pictures: the owner asked for a graph at card 2",
+  "2026-11-08T13:07:55Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:32Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -110,6 +113,49 @@
    "If the population is normal, \\(\\bar{x}\\) is normal for any \\(n\\). If not, \\(\\bar{x}\\) is roughly normal when \\(n\\) is large. This is the central limit theorem.",
    "Example: \\(\\sigma = 12\\) and \\(n = 36\\). Then \\(\\frac{\\sigma}{\\sqrt{n}} = 12 \\div 6 = 2\\). The sample means have a standard deviation of 2."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Two distributions of sample means from the same population, both with mean 50. For samples of size \\(n = 4\\) (dashed), the standard deviation is 6 and the curve is wide. For \\(n = 36\\) (solid), it is 2 and the curve is narrow and tall.",
+    "x": {
+     "min": 30,
+     "max": 70,
+     "label": "\\(\\bar{x}\\)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 0.24
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "\\frac{1}{6\\sqrt{2\\pi}} e^{-\\frac{(x - 50)^{2}}{72}}",
+      "domain": [
+       30,
+       70
+      ],
+      "label": "\\(n = 4\\)",
+      "labelAt": 58,
+      "pos": "above-right",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "\\frac{1}{2\\sqrt{2\\pi}} e^{-\\frac{(x - 50)^{2}}{8}}",
+      "domain": [
+       30,
+       70
+      ],
+      "label": "\\(n = 36\\)",
+      "labelAt": 51.5,
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Sample means centre on \\(\\mu\\), with spread \\(\\frac{\\sigma}{\\sqrt{n}}\\). Larger samples spread less.",
   "a": {
    "q": "A population has mean 50 and standard deviation 20. Samples of size 25 are taken. What is the standard deviation of the sample means?",
@@ -172,5 +218,73 @@
     "clue": "Work out σ/√n for both sample sizes and compare."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Two normal curves with the same mean 50: the distribution of sample means for n = 4 (standard deviation 6, dashed) and for n = 36 (standard deviation 2, solid), each labelled with its n. x from 30 to 70.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Two distributions of sample means from the same population, both with mean 50. For samples of size \\(n = 4\\) (dashed), the standard deviation is 6 and the curve is wide. For \\(n = 36\\) (solid), it is 2 and the curve is narrow and tall.",
+     "x": {
+      "min": 30,
+      "max": 70,
+      "label": "\\(\\bar{x}\\)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 0.24
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "\\frac{1}{6\\sqrt{2\\pi}} e^{-\\frac{(x - 50)^{2}}{72}}",
+       "domain": [
+        30,
+        70
+       ],
+       "label": "\\(n = 4\\)",
+       "labelAt": 58,
+       "pos": "above-right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "\\frac{1}{2\\sqrt{2\\pi}} e^{-\\frac{(x - 50)^{2}}{8}}",
+       "domain": [
+        30,
+        70
+       ],
+       "label": "\\(n = 36\\)",
+       "labelAt": 51.5,
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:54Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:31Z"
+  }
+ ]
 }

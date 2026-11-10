@@ -33,7 +33,12 @@
   "2026-11-01T15:14:48Z fix: suggested",
   "2026-11-02T04:35:42Z autoreview: picked as a spot check. It would have been cleared with the fix (remember other)",
   "2026-11-02T06:23:42Z review: approved with the fix (a spot check)",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:52Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:29Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The label y = x + 2 sits below the solid curve of f on the left (at x near -5, f is about -3.7 and the dashed line is at -3), so the solid curve lies between the label and the dashed line it names, and a student can read it as labelling y = f(x); place it above the dashed line instead, for example above-left near x = -4.",
+  "2026-11-08T13:16:19Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:17:36Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -174,6 +179,54 @@
    "If the degree of \\(p\\) is exactly one more than the degree of \\(q\\), the graph has an oblique asymptote. Divide \\(p\\) by \\(q\\): the quotient is the line, and the remainder term goes to 0 for large \\(x\\).",
    "Example: \\(f(x) = \\frac{x^{2} + 1}{x - 2}\\). Dividing gives \\(x + 2\\) with remainder 5, so \\(f(x) = x + 2 + \\frac{5}{x - 2}\\). The vertical asymptote is \\(x = 2\\) and the oblique asymptote is \\(y = x + 2\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The graph of \\(f(x) = \\frac{x^{2} + 1}{x - 2}\\). It has the dashed vertical asymptote \\(x = 2\\), and it approaches the dashed oblique asymptote \\(y = x + 2\\) for large positive and negative \\(x\\).",
+    "x": {
+     "min": -6,
+     "max": 10,
+     "label": "\\(x\\)",
+     "step": 2,
+     "nums": false
+    },
+    "y": {
+     "min": -15,
+     "max": 20,
+     "label": "\\(y\\)",
+     "step": 5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "asymptote",
+      "x": 2,
+      "label": "\\(x = 2\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "fn",
+      "id": "o",
+      "expr": "x + 2",
+      "label": "\\(y = x + 2\\)",
+      "labelAt": -2.2667,
+      "pos": "above-left",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{x^{2} + 1}{x - 2}",
+      "breaks": [
+       2
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 7.5,
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
   "remember": "Vertical asymptotes need \\(q(a) = 0\\) and \\(p(a) \\ne 0\\). Divide \\(p\\) by \\(q\\) to find an oblique one.",
   "a": {
    "q": "Where is the vertical asymptote of \\(f(x) = \\frac{2x + 5}{x - 4}\\)?",
@@ -236,5 +289,151 @@
     "clue": "Divide the top by x + 1 and ignore the remainder."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y = (x^2 + 1)/(x - 2) (fn with a break at x = 2), the dashed vertical asymptote x = 2 labelled, and the dashed oblique asymptote y = x + 2 labelled. Axes x from -6 to 10, y from -15 to 20.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(f(x) = \\frac{x^{2} + 1}{x - 2}\\). It has the dashed vertical asymptote \\(x = 2\\), and it approaches the dashed oblique asymptote \\(y = x + 2\\) for large positive and negative \\(x\\).",
+     "x": {
+      "min": -6,
+      "max": 10,
+      "label": "\\(x\\)",
+      "step": 2,
+      "nums": false
+     },
+     "y": {
+      "min": -15,
+      "max": 20,
+      "label": "\\(y\\)",
+      "step": 5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "asymptote",
+       "x": 2,
+       "label": "\\(x = 2\\)",
+       "pos": "above-right"
+      },
+      {
+       "type": "fn",
+       "id": "o",
+       "expr": "x + 2",
+       "label": "\\(y = x + 2\\)",
+       "labelAt": -4.9333,
+       "pos": "below-right",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{x^{2} + 1}{x - 2}",
+       "breaks": [
+        2
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 7.5,
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:52Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The label y = x + 2 sits below the solid curve of f on the left (at x near -5, f is about -3.7 and the dashed line is at -3), so the solid curve lies between the label and the dashed line it names, and a student can read it as labelling y = f(x); place it above the dashed line instead, for example above-left near x = -4."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:28Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "y = (x^2 + 1)/(x - 2) (fn with a break at x = 2), the dashed vertical asymptote x = 2 labelled, and the dashed oblique asymptote y = x + 2 labelled. Axes x from -6 to 10, y from -15 to 20.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The graph of \\(f(x) = \\frac{x^{2} + 1}{x - 2}\\). It has the dashed vertical asymptote \\(x = 2\\), and it approaches the dashed oblique asymptote \\(y = x + 2\\) for large positive and negative \\(x\\).",
+     "x": {
+      "min": -6,
+      "max": 10,
+      "label": "\\(x\\)",
+      "step": 2,
+      "nums": false
+     },
+     "y": {
+      "min": -15,
+      "max": 20,
+      "label": "\\(y\\)",
+      "step": 5
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "asymptote",
+       "x": 2,
+       "label": "\\(x = 2\\)",
+       "pos": "above-right"
+      },
+      {
+       "type": "fn",
+       "id": "o",
+       "expr": "x + 2",
+       "label": "\\(y = x + 2\\)",
+       "labelAt": -2.2667,
+       "pos": "above-left",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "\\frac{x^{2} + 1}{x - 2}",
+       "breaks": [
+        2
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 7.5,
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:16:19Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:17:35Z"
+  }
+ ]
 }

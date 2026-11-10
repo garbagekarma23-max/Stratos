@@ -30,7 +30,10 @@
   "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:05Z write: done",
   "2026-11-01T15:05:29Z check: passed, cleared",
-  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)"
+  "2026-11-06T07:25:09Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:12Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:53Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:30Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -108,6 +111,78 @@
    "Where \\(f\\) is positive, \\(F\\) is increasing. Where \\(f\\) is negative, \\(F\\) is decreasing. Where \\(f = 0\\), \\(F\\) has a stationary point.",
    "Example: if \\(f\\) is a straight line crossing the x-axis at \\(x = 2\\) from below to above, \\(F\\) has a minimum at \\(x = 2\\)."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The dashed line \\(y = f(x) = x - 2\\) crosses the x-axis at \\(x = 2\\), from below to above. The solid curve \\(y = F(x)\\), an antiderivative of \\(f\\), decreases while \\(f\\) is negative and increases while \\(f\\) is positive, so it has a minimum at \\((2, -1)\\).",
+    "x": {
+     "min": -1,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -3,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x - 2",
+      "domain": [
+       -1,
+       5
+      ],
+      "label": "\\(y = f(x)\\)",
+      "labelAt": 4.6,
+      "pos": "above-left",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "F",
+      "expr": "\\frac{(x - 2)^{2}}{2} - 1",
+      "domain": [
+       -0.6,
+       4.6
+      ],
+      "label": "\\(y = F(x)\\)",
+      "labelAt": -0.6,
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       -1
+      ],
+      "label": "\\((2, -1)\\)",
+      "pos": "below",
+      "on": [
+       "F"
+      ],
+      "is": "turning point"
+     }
+    ]
+   }
+  },
   "remember": "The sign of \\(f\\) gives the gradient of \\(F\\), and \\(F\\) can be shifted up or down.",
   "a": {
    "q": "The graph of \\(f\\) is above the x-axis for \\(1 < x < 4\\). What does the graph of an antiderivative \\(F\\) do on that interval?",
@@ -170,5 +245,102 @@
     "clue": "Check whether F rises or falls on each side of x = 3."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The dashed line y = f(x) = x - 2 crossing the x-axis at x = 2 from below to above, and the solid curve y = F(x) = (x - 2)^2/2 - 1 with its minimum at (2, -1) marked. Both labelled. Axes x from -1 to 5, y from -3 to 4.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The dashed line \\(y = f(x) = x - 2\\) crosses the x-axis at \\(x = 2\\), from below to above. The solid curve \\(y = F(x)\\), an antiderivative of \\(f\\), decreases while \\(f\\) is negative and increases while \\(f\\) is positive, so it has a minimum at \\((2, -1)\\).",
+     "x": {
+      "min": -1,
+      "max": 5,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -3,
+      "max": 4,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "x - 2",
+       "domain": [
+        -1,
+        5
+       ],
+       "label": "\\(y = f(x)\\)",
+       "labelAt": 4.6,
+       "pos": "above-left",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "F",
+       "expr": "\\frac{(x - 2)^{2}}{2} - 1",
+       "domain": [
+        -0.6,
+        4.6
+       ],
+       "label": "\\(y = F(x)\\)",
+       "labelAt": -0.6,
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0
+       ],
+       "on": [
+        "f"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        -1
+       ],
+       "label": "\\((2, -1)\\)",
+       "pos": "below",
+       "on": [
+        "F"
+       ],
+       "is": "turning point"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:52Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:29Z"
+  }
+ ]
 }

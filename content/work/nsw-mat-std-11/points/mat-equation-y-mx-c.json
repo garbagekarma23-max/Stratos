@@ -9,7 +9,10 @@
   "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:22Z write: done",
   "2026-10-29T12:39:10Z check: passed, cleared",
-  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)"
+  "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
+  "2026-11-08T12:52:16Z pictures: the owner asked for a graph at card 4",
+  "2026-11-08T13:07:43Z pictures: 1 picture waiting for the check",
+  "2026-11-08T13:14:18Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -102,6 +105,92 @@
     "for a line that crosses the y-axis at 4 and rises 2 for every 1 across, \\(m = 2\\) and \\(c = 4\\). So the equation is \\(y = 2x + 4\\)."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(y = 2x + 4\\). It crosses the y-axis at \\((0, 4)\\), so \\(c = 4\\). From there, a run of 1 across and a rise of 2 up reach \\((1, 6)\\), so \\(m = 2\\).",
+    "x": {
+     "min": -3,
+     "max": 3,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 8,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2x + 4",
+      "domain": [
+       -3,
+       2
+      ],
+      "label": "\\(y = 2x + 4\\)",
+      "labelAt": -2.3333,
+      "pos": "below-right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       0,
+       4
+      ],
+      "to": [
+       1,
+       4
+      ],
+      "label": "run 1",
+      "pos": "below"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       1,
+       6
+      ],
+      "label": "rise 2",
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       4
+      ],
+      "label": "\\((0, 4)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       6
+      ],
+      "label": "\\((1, 6)\\)",
+      "pos": "above-left",
+      "on": [
+       "f"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "In \\(y = mx + c\\), \\(m\\) is the steepness of the line and \\(c\\) is where it crosses the y-axis.",
   "a": {
    "q": "What is the equation of a line with gradient 2 and y-intercept \\(-5\\)?",
@@ -173,5 +262,116 @@
     "clue": "Divide the rise by the run to find m."
    }
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The line y = 2x + 4 with the y-intercept (0, 4) marked, and from it a run of 1 across and a rise of 2 up drawn as arrows labelled run 1 and rise 2, reaching (1, 6). Axes x from -3 to 3, y from -2 to 8.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line \\(y = 2x + 4\\). It crosses the y-axis at \\((0, 4)\\), so \\(c = 4\\). From there, a run of 1 across and a rise of 2 up reach \\((1, 6)\\), so \\(m = 2\\).",
+     "x": {
+      "min": -3,
+      "max": 3,
+      "label": "\\(x\\)",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": -2,
+      "max": 8,
+      "label": "\\(y\\)",
+      "step": 1,
+      "nums": false
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "2x + 4",
+       "domain": [
+        -3,
+        2
+       ],
+       "label": "\\(y = 2x + 4\\)",
+       "labelAt": -2.3333,
+       "pos": "below-right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        0,
+        4
+       ],
+       "to": [
+        1,
+        4
+       ],
+       "label": "run 1",
+       "pos": "below"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        4
+       ],
+       "to": [
+        1,
+        6
+       ],
+       "label": "rise 2",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        4
+       ],
+       "label": "\\((0, 4)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ],
+       "is": "y-intercept"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        6
+       ],
+       "label": "\\((1, 6)\\)",
+       "pos": "above-left",
+       "on": [
+        "f"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-08T13:07:42Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-08T13:14:18Z"
+  }
+ ]
 }
