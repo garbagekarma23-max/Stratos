@@ -11,7 +11,9 @@
   "2026-10-29T12:39:09Z check: flagged",
   "2026-10-29T12:41:46Z fix: suggested",
   "2026-10-29T16:45:05Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-30T11:53:21Z review: approved with the fix (a spot check)"
+  "2026-10-30T11:53:21Z review: approved with the fix (a spot check)",
+  "2026-11-10T15:54:26Z pictures: the owner asked for a graph at card 1",
+  "2026-11-10T15:55:22Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -234,7 +236,356 @@
    ],
    "why": "Australian rates are now lower compared with other countries, so investors shift money abroad and buy fewer Australian dollars. Demand falls, so the dollar tends to fall. Australian rates not changing does not matter, because it is the gap between rates that moves the dollar.",
    "clue": "Look at the difference between rates, not just Australia's rate."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "Something that makes foreigners want more Australian dollars shifts demand for the dollar right from D1, dashed, to D2, shown by an arrow. Supply S stays the same, so the dollar's value rises from e1 to e2."
+   }
+  ]
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "picture_draft": {
+  "title": "What moves the Australian dollar",
+  "card": [
+   "Four main forces move the floating Australian dollar: commodity prices, interest rate differences, confidence and speculation. Each works by changing how many Australian dollars foreigners want to buy.",
+   [
+    "Commodity prices",
+    "Australia exports a lot of commodities such as iron ore and coal. When their prices rise, foreign buyers need more Australian dollars to pay for them, and the dollar tends to rise."
+   ],
+   [
+    "Interest rates",
+    "If Australian interest rates rise compared with other countries, investors can earn more here and buy Australian dollars, so the dollar tends to rise. If the gap shrinks, the dollar tends to fall."
+   ],
+   [
+    "Confidence and speculation",
+    "Investors tend to buy the dollar when they are confident about Australia's economy. Speculators buy or sell it to profit from the changes they expect, and this can push the dollar further the same way."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "Something that makes foreigners want more Australian dollars shifts demand for the dollar right from D1, dashed, to D2, shown by an arrow. Supply S stays the same, so the dollar's value rises from e1 to e2.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity of A$"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Value of A$"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "S",
+      "pos": "right",
+      "labelAt": 9
+     },
+     {
+      "type": "curve",
+      "id": "D1",
+      "points": [
+       [
+        0,
+        8
+       ],
+       [
+        8,
+        0
+       ]
+      ],
+      "label": "D1",
+      "pos": "below-left",
+      "style": "dash",
+      "labelAt": 5.4
+     },
+     {
+      "type": "curve",
+      "id": "D2",
+      "points": [
+       [
+        2,
+        10
+       ],
+       [
+        10,
+        2
+       ]
+      ],
+      "label": "D2",
+      "pos": "above-right",
+      "labelAt": 9
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1.3,
+       7
+      ],
+      "to": [
+       4.7,
+       7
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       4
+      ],
+      "xLabel": "",
+      "yLabel": "e1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       6
+      ],
+      "xLabel": "",
+      "yLabel": "e2"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       4
+      ],
+      "on": [
+       "D1",
+       "S"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ],
+      "on": [
+       "D2",
+       "S"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       4.55,
+       4
+      ],
+      "label": "E1",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       6.55,
+       6
+      ],
+      "label": "E2",
+      "pos": "right"
+     }
+    ]
+   }
+  },
+  "remember": "Anything that raises foreign demand for Australian dollars tends to lift the dollar. Anything that lowers it tends to pull the dollar down.",
+  "a": {
+   "q": "The world price of iron ore rises sharply. What is the most likely effect on the Australian dollar?",
+   "opts": [
+    "It rises, as buyers need more Australian dollars",
+    "It falls, as buyers need fewer Australian dollars",
+    "It rises, as Australia imports more iron ore",
+    "It falls, as Australian interest rates drop"
+   ],
+   "why": "Australia exports iron ore, so higher prices mean foreign buyers need more Australian dollars to pay for it. Demand for the dollar rises, so the dollar tends to rise. The 'falls' option gets the direction wrong: higher prices mean buyers need more dollars, not fewer.",
+   "clue": "Who needs Australian dollars to buy iron ore?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Overseas interest rates rise while Australian rates stay the same. Investors expect higher returns abroad. What is the most likely effect on the Australian dollar?",
+   "opts": [
+    "It tends to fall, as demand for it weakens",
+    "It tends to rise, as demand for it strengthens",
+    "It tends to rise, as Australian rates are now lower",
+    "It stays the same, as Australian rates did not change"
+   ],
+   "why": "Australian rates are now lower compared with other countries, so investors shift money abroad and buy fewer Australian dollars. Demand falls, so the dollar tends to fall. Australian rates not changing does not matter, because it is the gap between rates that moves the dollar.",
+   "clue": "Look at the difference between rates, not just Australia's rate."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "Something that makes foreigners want more Australian dollars shifts demand for the dollar right from D1, dashed, to D2, shown by an arrow. Supply S stays the same, so the dollar's value rises from e1 to e2.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Something that makes foreigners want more Australian dollars shifts demand for the dollar right from D1, dashed, to D2, shown by an arrow. Supply S stays the same, so the dollar's value rises from e1 to e2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Something that makes foreigners want more Australian dollars shifts demand for the dollar right from D1, dashed, to D2, shown by an arrow. Supply S stays the same, so the dollar's value rises from e1 to e2.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity of A$"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Value of A$"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "S",
+       "points": [
+        [
+         1,
+         1
+        ],
+        [
+         9,
+         9
+        ]
+       ],
+       "label": "S",
+       "pos": "right",
+       "labelAt": 9
+      },
+      {
+       "type": "curve",
+       "id": "D1",
+       "points": [
+        [
+         0,
+         8
+        ],
+        [
+         8,
+         0
+        ]
+       ],
+       "label": "D1",
+       "pos": "below-left",
+       "style": "dash",
+       "labelAt": 5.4
+      },
+      {
+       "type": "curve",
+       "id": "D2",
+       "points": [
+        [
+         2,
+         10
+        ],
+        [
+         10,
+         2
+        ]
+       ],
+       "label": "D2",
+       "pos": "above-right",
+       "labelAt": 9
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1.3,
+        7
+       ],
+       "to": [
+        4.7,
+        7
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        4
+       ],
+       "xLabel": "",
+       "yLabel": "e1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        6
+       ],
+       "xLabel": "",
+       "yLabel": "e2"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        4
+       ],
+       "on": [
+        "D1",
+        "S"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        6
+       ],
+       "on": [
+        "D2",
+        "S"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "text",
+       "at": [
+        4.55,
+        4
+       ],
+       "label": "E1",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.55,
+        6
+       ],
+       "label": "E2",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:22Z"
+  }
+ ]
 }

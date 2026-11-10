@@ -7,7 +7,9 @@
  "log": [
   "2026-11-04T09:23:25Z new, write",
   "2026-11-04T09:36:47Z write: done",
-  "2026-11-04T09:46:54Z check: passed, cleared"
+  "2026-11-04T09:46:54Z check: passed, cleared",
+  "2026-11-10T15:54:24Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T15:55:21Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "write": 1,
@@ -98,7 +100,311 @@
    ],
    "why": "With more sellers chasing the same buyers, bakeries may cut prices to win sales. Costs are not said to have changed, so a rise is not the likely effect.",
    "clue": "What might sellers do to win buyers from each other?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "Sellers offer less, so the supply curve moves left from Supply 1, dashed, to Supply 2, shown by an arrow. Demand stays the same. The price rises from the old price to the new price."
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "What changes a price",
+  "card": [
+   "A price can change when demand changes. If more buyers want a product, its price tends to rise. If fewer want it, the price tends to fall.",
+   "A price can change when supply changes. If sellers offer less of a product, its price tends to rise. If they offer more, it tends to fall.",
+   "Costs of making a product matter too. If a business pays more for materials or wages, it may raise its price to cover them.",
+   "Competition also affects price. When many sellers compete for the same buyers, they may cut prices to win sales."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Sellers offer less, so the supply curve moves left from Supply 1, dashed, to Supply 2, shown by an arrow. Demand stays the same. The price rises from the old price to the new price.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "Demand",
+      "pos": "above-right",
+      "labelAt": 1.6
+     },
+     {
+      "type": "curve",
+      "id": "S1",
+      "points": [
+       [
+        2,
+        0
+       ],
+       [
+        10,
+        8
+       ]
+      ],
+      "label": "Supply 1",
+      "pos": "above-left",
+      "style": "dash",
+      "labelAt": 10
+     },
+     {
+      "type": "curve",
+      "id": "S2",
+      "points": [
+       [
+        0,
+        2
+       ],
+       [
+        8,
+        10
+       ]
+      ],
+      "label": "Supply 2",
+      "pos": "above",
+      "labelAt": 8
+     },
+     {
+      "type": "arrow",
+      "from": [
+       8.6,
+       7
+      ],
+      "to": [
+       5.4,
+       7
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       4
+      ],
+      "xLabel": "",
+      "yLabel": "old price"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       6
+      ],
+      "xLabel": "",
+      "yLabel": "new price"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       4
+      ],
+      "on": [
+       "D",
+       "S1"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "D",
+       "S2"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Demand, supply, costs and competition can all push a price up or down.",
+  "a": {
+   "q": "A heatwave in Perth leads many more people to want ice cream. What is the most likely effect on the price of ice cream?",
+   "opts": [
+    "It rises, because demand has increased",
+    "It falls, because demand has increased",
+    "It rises, because competition has increased",
+    "It falls, because costs have increased"
+   ],
+   "why": "More buyers wanting a product tends to push its price up. A rise in demand does not usually lower the price.",
+   "clue": "Think about what more buyers means for sellers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Many new bakeries open on one street in Darwin, all selling similar bread. What is the most likely effect on the price of bread there?",
+   "opts": [
+    "It falls, as bakeries compete for buyers",
+    "It rises, as bakeries have higher costs",
+    "It rises, as there are more bakeries to buy from",
+    "It stays the same, as competition has no effect"
+   ],
+   "why": "With more sellers chasing the same buyers, bakeries may cut prices to win sales. Costs are not said to have changed, so a rise is not the likely effect.",
+   "clue": "What might sellers do to win buyers from each other?"
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "Sellers offer less, so the supply curve moves left from Supply 1, dashed, to Supply 2, shown by an arrow. Demand stays the same. The price rises from the old price to the new price.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Sellers offer less, so the supply curve moves left from Supply 1, dashed, to Supply 2, shown by an arrow. Demand stays the same. The price rises from the old price to the new price.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Sellers offer less, so the supply curve moves left from Supply 1, dashed, to Supply 2, shown by an arrow. Demand stays the same. The price rises from the old price to the new price.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "Demand",
+       "pos": "above-right",
+       "labelAt": 1.6
+      },
+      {
+       "type": "curve",
+       "id": "S1",
+       "points": [
+        [
+         2,
+         0
+        ],
+        [
+         10,
+         8
+        ]
+       ],
+       "label": "Supply 1",
+       "pos": "above-left",
+       "style": "dash",
+       "labelAt": 10
+      },
+      {
+       "type": "curve",
+       "id": "S2",
+       "points": [
+        [
+         0,
+         2
+        ],
+        [
+         8,
+         10
+        ]
+       ],
+       "label": "Supply 2",
+       "pos": "above",
+       "labelAt": 8
+      },
+      {
+       "type": "arrow",
+       "from": [
+        8.6,
+        7
+       ],
+       "to": [
+        5.4,
+        7
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        4
+       ],
+       "xLabel": "",
+       "yLabel": "old price"
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        6
+       ],
+       "xLabel": "",
+       "yLabel": "new price"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        4
+       ],
+       "on": [
+        "D",
+        "S1"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        6
+       ],
+       "on": [
+        "D",
+        "S2"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:21Z"
+  }
+ ]
 }

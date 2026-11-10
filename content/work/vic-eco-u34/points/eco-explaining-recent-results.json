@@ -15,7 +15,9 @@
   "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:26Z write: failed the content check, writing again",
   "2026-11-01T15:14:45Z write: done",
-  "2026-11-01T15:19:03Z check: passed, cleared"
+  "2026-11-01T15:19:03Z check: passed, cleared",
+  "2026-11-10T15:54:25Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T15:55:26Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -130,7 +132,317 @@
    ],
    "why": "Lower costs and fewer delays let firms produce more at each price level, so aggregate supply rises. This tends to ease price pressure and help bring inflation down. A fall in supply would have the opposite effect on prices.",
    "clue": "Falling costs for firms mean they can supply more at each price."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2."
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "Explaining recent results",
+  "card": [
+   "Australia's goals are strong and sustainable growth, low unemployment and low and stable inflation. Changes in aggregate demand (total spending) and aggregate supply (total output firms can produce at each price level) help explain how well they have been met.",
+   [
+    "Demand shift",
+    "A rise in aggregate demand tends to lift output and jobs, but it can also push prices up if the economy is near full capacity. A fall in aggregate demand tends to slow growth and raise unemployment, and it eases price pressure."
+   ],
+   [
+    "Supply shift",
+    "A fall in aggregate supply, such as higher energy costs or supply chain delays, tends to raise prices and slow output. A rise in aggregate supply tends to lower prices and lift output."
+   ],
+   "In the past two years, inflation has eased from its recent peak, while the labour market has stayed fairly strong. Weaker demand from higher interest rates and easing supply problems both help explain this. Exact figures change with each data release, so check the latest ones."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Real GDP"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price level"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "AD",
+      "pos": "above-right",
+      "labelAt": 1.6
+     },
+     {
+      "type": "curve",
+      "id": "S1",
+      "points": [
+       [
+        2,
+        0
+       ],
+       [
+        10,
+        8
+       ]
+      ],
+      "label": "AS1",
+      "pos": "below-right",
+      "style": "dash",
+      "labelAt": 8.6
+     },
+     {
+      "type": "curve",
+      "id": "S2",
+      "points": [
+       [
+        0,
+        2
+       ],
+       [
+        8,
+        10
+       ]
+      ],
+      "label": "AS2",
+      "pos": "right",
+      "labelAt": 8
+     },
+     {
+      "type": "arrow",
+      "from": [
+       8.6,
+       7
+      ],
+      "to": [
+       5.4,
+       7
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       4
+      ],
+      "xLabel": "Y1",
+      "yLabel": "P1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       6
+      ],
+      "xLabel": "Y2",
+      "yLabel": "P2"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       4
+      ],
+      "on": [
+       "D",
+       "S1"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "D",
+       "S2"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Shifts in aggregate demand and supply change output, jobs and prices together, so they help explain how well the goals were met.",
+  "a": {
+   "q": "An economy near full capacity sees a rise in aggregate demand. Which result is most likely?",
+   "opts": [
+    "Higher output and jobs, but also upward pressure on prices",
+    "Lower output and jobs, with downward pressure on prices",
+    "Higher output and jobs, with lower prices as costs fall",
+    "Steady output and jobs, with prices rising from less supply"
+   ],
+   "why": "More spending lifts output and jobs, but firms near capacity cannot easily produce more, so prices tend to rise. Lower prices with higher output is more likely after a rise in aggregate supply, not demand.",
+   "clue": "Think about what spending does when firms are already busy."
+  },
+  "b": {
+   "d": 3,
+   "q": "Supply chain delays ease and energy costs fall in an economy. Other things equal, which change in aggregate supply and which effect on the goals is most likely?",
+   "opts": [
+    "Aggregate supply rises, which helps lower inflation",
+    "Aggregate supply rises, which pushes inflation higher",
+    "Aggregate supply falls, which helps lower inflation",
+    "Aggregate supply falls, which pushes inflation higher"
+   ],
+   "why": "Lower costs and fewer delays let firms produce more at each price level, so aggregate supply rises. This tends to ease price pressure and help bring inflation down. A fall in supply would have the opposite effect on prices.",
+   "clue": "Falling costs for firms mean they can supply more at each price."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price level"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "AD",
+       "pos": "above-right",
+       "labelAt": 1.6
+      },
+      {
+       "type": "curve",
+       "id": "S1",
+       "points": [
+        [
+         2,
+         0
+        ],
+        [
+         10,
+         8
+        ]
+       ],
+       "label": "AS1",
+       "pos": "below-right",
+       "style": "dash",
+       "labelAt": 8.6
+      },
+      {
+       "type": "curve",
+       "id": "S2",
+       "points": [
+        [
+         0,
+         2
+        ],
+        [
+         8,
+         10
+        ]
+       ],
+       "label": "AS2",
+       "pos": "right",
+       "labelAt": 8
+      },
+      {
+       "type": "arrow",
+       "from": [
+        8.6,
+        7
+       ],
+       "to": [
+        5.4,
+        7
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        4
+       ],
+       "xLabel": "Y1",
+       "yLabel": "P1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        6
+       ],
+       "xLabel": "Y2",
+       "yLabel": "P2"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        4
+       ],
+       "on": [
+        "D",
+        "S1"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        6
+       ],
+       "on": [
+        "D",
+        "S2"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:26Z"
+  }
+ ]
 }

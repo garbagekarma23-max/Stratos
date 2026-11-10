@@ -30,7 +30,9 @@
   "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:26Z write: done",
-  "2026-11-01T15:14:45Z check: passed, cleared"
+  "2026-11-01T15:14:45Z check: passed, cleared",
+  "2026-11-10T15:54:25Z pictures: the owner asked for a graph at card 1",
+  "2026-11-10T15:55:25Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -150,7 +152,320 @@
    ],
    "why": "Slower growth in Asia means buyers there demand fewer Australian exports, so net exports and AD fall. A lower Australian dollar is tempting, but it makes exports cheaper overseas and tends to raise net exports.",
    "clue": "Think about what each change does to spending on Australian goods."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "A rise in spending shifts aggregate demand right from AD1, dashed, to AD2, shown by an arrow, while aggregate supply AS stays the same. Real GDP rises from Y1 to Y2 and the price level rises from P1 to P2."
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "Aggregate demand factors",
+  "card": [
+   "Aggregate demand (AD) is total planned spending on Australian goods and services: household consumption, investment, government spending and net exports. A factor that raises spending shifts AD right. One that cuts spending shifts it left.",
+   [
+    "Interest rates and confidence",
+    "Lower interest rates make borrowing cheaper and saving less rewarding, so consumption and investment tend to rise. Higher confidence among consumers and businesses also tends to lift spending, and falling confidence does the reverse."
+   ],
+   [
+    "Income and exchange rate",
+    "Higher disposable income (income after tax) lets households spend more. A lower Australian dollar makes exports cheaper overseas and imports dearer, which tends to raise net exports."
+   ],
+   [
+    "World growth",
+    "Stronger growth among trading partners raises their demand for Australian exports, which lifts net exports and AD. Weaker world growth tends to lower it."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A rise in spending shifts aggregate demand right from AD1, dashed, to AD2, shown by an arrow, while aggregate supply AS stays the same. Real GDP rises from Y1 to Y2 and the price level rises from P1 to P2.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Real GDP"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price level"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "AS",
+      "pos": "right",
+      "labelAt": 9
+     },
+     {
+      "type": "curve",
+      "id": "D1",
+      "points": [
+       [
+        0,
+        8
+       ],
+       [
+        8,
+        0
+       ]
+      ],
+      "label": "AD1",
+      "pos": "below-left",
+      "style": "dash",
+      "labelAt": 5.4
+     },
+     {
+      "type": "curve",
+      "id": "D2",
+      "points": [
+       [
+        2,
+        10
+       ],
+       [
+        10,
+        2
+       ]
+      ],
+      "label": "AD2",
+      "pos": "above-right",
+      "labelAt": 9
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1.3,
+       7
+      ],
+      "to": [
+       4.7,
+       7
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       4
+      ],
+      "xLabel": "Y1",
+      "yLabel": "P1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       6
+      ],
+      "xLabel": "Y2",
+      "yLabel": "P2"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       4
+      ],
+      "on": [
+       "D1",
+       "S"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ],
+      "on": [
+       "D2",
+       "S"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Anything that raises spending shifts AD right. Anything that cuts spending shifts it left.",
+  "a": {
+   "q": "Which change would most likely shift Australia's aggregate demand to the right?",
+   "opts": [
+    "A cut in interest rates that makes borrowing cheaper",
+    "A fall in disposable income after a rise in income tax",
+    "A fall in business confidence about future sales",
+    "Weaker growth in the economies of trading partners"
+   ],
+   "why": "Cheaper borrowing encourages households to spend and firms to invest, so total spending rises. The tax rise is tempting but it lowers disposable income, which cuts spending and shifts AD left.",
+   "clue": "Which change makes people and firms spend more?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia exports wine from the Barossa Valley to Asia. Which event would most likely lower Australian aggregate demand?",
+   "opts": [
+    "A slowdown in growth in Asian economies",
+    "A fall in the value of the Australian dollar",
+    "A rise in disposable income for Australian households",
+    "A rise in confidence among Australian businesses"
+   ],
+   "why": "Slower growth in Asia means buyers there demand fewer Australian exports, so net exports and AD fall. A lower Australian dollar is tempting, but it makes exports cheaper overseas and tends to raise net exports.",
+   "clue": "Think about what each change does to spending on Australian goods."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "A rise in spending shifts aggregate demand right from AD1, dashed, to AD2, shown by an arrow, while aggregate supply AS stays the same. Real GDP rises from Y1 to Y2 and the price level rises from P1 to P2.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A rise in spending shifts aggregate demand right from AD1, dashed, to AD2, shown by an arrow, while aggregate supply AS stays the same. Real GDP rises from Y1 to Y2 and the price level rises from P1 to P2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A rise in spending shifts aggregate demand right from AD1, dashed, to AD2, shown by an arrow, while aggregate supply AS stays the same. Real GDP rises from Y1 to Y2 and the price level rises from P1 to P2.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price level"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "S",
+       "points": [
+        [
+         1,
+         1
+        ],
+        [
+         9,
+         9
+        ]
+       ],
+       "label": "AS",
+       "pos": "right",
+       "labelAt": 9
+      },
+      {
+       "type": "curve",
+       "id": "D1",
+       "points": [
+        [
+         0,
+         8
+        ],
+        [
+         8,
+         0
+        ]
+       ],
+       "label": "AD1",
+       "pos": "below-left",
+       "style": "dash",
+       "labelAt": 5.4
+      },
+      {
+       "type": "curve",
+       "id": "D2",
+       "points": [
+        [
+         2,
+         10
+        ],
+        [
+         10,
+         2
+        ]
+       ],
+       "label": "AD2",
+       "pos": "above-right",
+       "labelAt": 9
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1.3,
+        7
+       ],
+       "to": [
+        4.7,
+        7
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        4
+       ],
+       "xLabel": "Y1",
+       "yLabel": "P1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        6
+       ],
+       "xLabel": "Y2",
+       "yLabel": "P2"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        4
+       ],
+       "on": [
+        "D1",
+        "S"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        6
+       ],
+       "on": [
+        "D2",
+        "S"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:25Z"
+  }
+ ]
 }

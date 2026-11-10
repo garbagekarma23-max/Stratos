@@ -29,7 +29,9 @@
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:55:59Z write: done",
-  "2026-11-01T15:05:25Z check: passed, cleared"
+  "2026-11-01T15:05:25Z check: passed, cleared",
+  "2026-11-10T15:54:24Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T15:55:25Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -142,7 +144,353 @@
    ],
    "why": "Both shifts are to the right, so quantity traded rises either way. The larger supply shift pulls price down more than the demand shift pushes it up, so price falls. Price would rise only if the demand shift were larger.",
    "clue": "Both shifts raise quantity, but they pull price in opposite ways."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A fall in supply shifts the supply curve left from S1, dashed, to S2, shown by an arrow, while demand D stays the same. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity traded falls from Q1 to Q2."
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "Shifts and new equilibrium",
+  "card": [
+   "Equilibrium is the price where quantity demanded equals quantity supplied. A change in a non-price factor shifts a curve and moves the market to a new equilibrium.",
+   [
+    "Demand shifts",
+    "a rise in demand (shift right) lifts both the equilibrium price and the quantity traded. A fall in demand (shift left) lowers both."
+   ],
+   [
+    "Supply shifts",
+    "a rise in supply (shift right) lowers the equilibrium price and raises the quantity traded. A fall in supply (shift left) raises the price and lowers the quantity."
+   ],
+   "Both curves can shift at once. Then the effect on one of price or quantity is clear, but the other depends on which shift is larger."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A fall in supply shifts the supply curve left from S1, dashed, to S2, shown by an arrow, while demand D stays the same. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity traded falls from Q1 to Q2.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "D",
+      "pos": "above-right",
+      "labelAt": 1.6
+     },
+     {
+      "type": "curve",
+      "id": "S1",
+      "points": [
+       [
+        2,
+        0
+       ],
+       [
+        10,
+        8
+       ]
+      ],
+      "label": "S1",
+      "pos": "below-right",
+      "style": "dash",
+      "labelAt": 8.6
+     },
+     {
+      "type": "curve",
+      "id": "S2",
+      "points": [
+       [
+        0,
+        2
+       ],
+       [
+        8,
+        10
+       ]
+      ],
+      "label": "S2",
+      "pos": "right",
+      "labelAt": 8
+     },
+     {
+      "type": "arrow",
+      "from": [
+       8.6,
+       7
+      ],
+      "to": [
+       5.4,
+       7
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       4
+      ],
+      "xLabel": "Q1",
+      "yLabel": "P1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       6
+      ],
+      "xLabel": "Q2",
+      "yLabel": "P2"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       4
+      ],
+      "on": [
+       "D",
+       "S1"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "D",
+       "S2"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       6.5,
+       4
+      ],
+      "label": "E1",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       4.5,
+       6
+      ],
+      "label": "E2",
+      "pos": "right"
+     }
+    ]
+   }
+  },
+  "remember": "Work out which curve moves and which way, then read off the new price and quantity.",
+  "a": {
+   "q": "A heatwave in Mildura raises demand for fans, and nothing else changes. What happens to the equilibrium price and quantity of fans?",
+   "opts": [
+    "Price rises and quantity traded rises",
+    "Price rises and quantity traded falls",
+    "Price falls and quantity traded rises",
+    "Price falls and quantity traded falls"
+   ],
+   "why": "Higher demand shifts the demand curve right. This lifts both the equilibrium price and the quantity traded. A rise in price with a fall in quantity would fit a fall in supply, not a rise in demand.",
+   "clue": "Demand shifts right along an unchanged supply curve."
+  },
+  "b": {
+   "d": 3,
+   "q": "In one year, a new machine lowers the cost of making bikes, and demand for bikes also rises. The shift in supply is larger than the shift in demand. What is the effect on the market?",
+   "opts": [
+    "Quantity traded rises and price falls",
+    "Quantity traded rises and price rises",
+    "Quantity traded falls and price falls",
+    "Quantity traded falls and price rises"
+   ],
+   "why": "Both shifts are to the right, so quantity traded rises either way. The larger supply shift pulls price down more than the demand shift pushes it up, so price falls. Price would rise only if the demand shift were larger.",
+   "clue": "Both shifts raise quantity, but they pull price in opposite ways."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A fall in supply shifts the supply curve left from S1, dashed, to S2, shown by an arrow, while demand D stays the same. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity traded falls from Q1 to Q2.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A fall in supply shifts the supply curve left from S1, dashed, to S2, shown by an arrow, while demand D stays the same. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity traded falls from Q1 to Q2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A fall in supply shifts the supply curve left from S1, dashed, to S2, shown by an arrow, while demand D stays the same. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity traded falls from Q1 to Q2.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "D",
+       "pos": "above-right",
+       "labelAt": 1.6
+      },
+      {
+       "type": "curve",
+       "id": "S1",
+       "points": [
+        [
+         2,
+         0
+        ],
+        [
+         10,
+         8
+        ]
+       ],
+       "label": "S1",
+       "pos": "below-right",
+       "style": "dash",
+       "labelAt": 8.6
+      },
+      {
+       "type": "curve",
+       "id": "S2",
+       "points": [
+        [
+         0,
+         2
+        ],
+        [
+         8,
+         10
+        ]
+       ],
+       "label": "S2",
+       "pos": "right",
+       "labelAt": 8
+      },
+      {
+       "type": "arrow",
+       "from": [
+        8.6,
+        7
+       ],
+       "to": [
+        5.4,
+        7
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        4
+       ],
+       "xLabel": "Q1",
+       "yLabel": "P1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        6
+       ],
+       "xLabel": "Q2",
+       "yLabel": "P2"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        4
+       ],
+       "on": [
+        "D",
+        "S1"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        6
+       ],
+       "on": [
+        "D",
+        "S2"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.5,
+        4
+       ],
+       "label": "E1",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        4.5,
+        6
+       ],
+       "label": "E2",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:25Z"
+  }
+ ]
 }

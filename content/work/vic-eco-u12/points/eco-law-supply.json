@@ -31,7 +31,9 @@
   "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:24:30Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:33:49Z write: done",
-  "2026-11-01T08:42:05Z check: passed, cleared"
+  "2026-11-01T08:42:05Z check: passed, cleared",
+  "2026-11-10T15:54:23Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T15:55:24Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -143,7 +145,241 @@
    ],
    "why": "The change started with the price of strawberries, so the farm moves along its existing supply curve to a higher quantity. A shift of the curve needs a change in something other than the good's own price.",
    "clue": "What caused the change: the good's own price or something else?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "An upward-sloping supply curve S. The price rises from P1 to P2, and producers move along the same curve from A to B, so the quantity supplied rises from Q1 to Q2. The curve does not shift."
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "The law of supply",
+  "card": [
+   "Supply is the quantity of a good that producers are willing and able to sell at each price over a period of time.",
+   "The law of supply says that as the price of a good rises, the quantity supplied rises, other things equal. As the price falls, the quantity supplied falls.",
+   "The reason is profit. A higher price makes each extra unit more profitable to sell, so producers are willing to make and sell more.",
+   "A change in the good's own price is a movement along the supply curve. It does not shift the curve. The curve slopes upward from left to right."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "An upward-sloping supply curve S. The price rises from P1 to P2, and producers move along the same curve from A to B, so the quantity supplied rises from Q1 to Q2. The curve does not shift.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "S",
+      "pos": "right",
+      "labelAt": 9
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       4
+      ],
+      "xLabel": "Q1",
+      "yLabel": "P1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       6
+      ],
+      "xLabel": "Q2",
+      "yLabel": "P2"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       4
+      ],
+      "on": [
+       "S"
+      ],
+      "label": "A",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ],
+      "on": [
+       "S"
+      ],
+      "label": "B",
+      "pos": "above-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       4.4,
+       4.9
+      ],
+      "to": [
+       5.6,
+       6.1
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "A higher price makes selling more profitable, so quantity supplied rises along the curve.",
+  "a": {
+   "q": "Why do producers supply a larger quantity when the price of their good rises?",
+   "opts": [
+    "Each extra unit sold becomes more profitable",
+    "Their costs of production fall as the price rises",
+    "Consumers demand less of the good at a higher price",
+    "Producers want to lower the price again quickly"
+   ],
+   "why": "A higher price raises the profit on each unit, so selling more is worth it. Costs of production are not changed by the good's own price rising, so the cost option is wrong.",
+   "clue": "Think about what a higher price does to profit."
+  },
+  "b": {
+   "d": 2,
+   "q": "The price of strawberries rises, and Priya's farm near Warragul picks and sells more of them. What does this show on a supply diagram?",
+   "opts": [
+    "A movement up along the supply curve",
+    "A shift of the supply curve to the right",
+    "A movement down along the supply curve",
+    "A shift of the supply curve to the left"
+   ],
+   "why": "The change started with the price of strawberries, so the farm moves along its existing supply curve to a higher quantity. A shift of the curve needs a change in something other than the good's own price.",
+   "clue": "What caused the change: the good's own price or something else?"
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "graph",
+    "brief": "An upward-sloping supply curve S. The price rises from P1 to P2, and producers move along the same curve from A to B, so the quantity supplied rises from Q1 to Q2. The curve does not shift.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "An upward-sloping supply curve S. The price rises from P1 to P2, and producers move along the same curve from A to B, so the quantity supplied rises from Q1 to Q2. The curve does not shift.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "An upward-sloping supply curve S. The price rises from P1 to P2, and producers move along the same curve from A to B, so the quantity supplied rises from Q1 to Q2. The curve does not shift.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "S",
+       "points": [
+        [
+         1,
+         1
+        ],
+        [
+         9,
+         9
+        ]
+       ],
+       "label": "S",
+       "pos": "right",
+       "labelAt": 9
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        4
+       ],
+       "xLabel": "Q1",
+       "yLabel": "P1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        6
+       ],
+       "xLabel": "Q2",
+       "yLabel": "P2"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        4
+       ],
+       "on": [
+        "S"
+       ],
+       "label": "A",
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        6
+       ],
+       "on": [
+        "S"
+       ],
+       "label": "B",
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        4.4,
+        4.9
+       ],
+       "to": [
+        5.6,
+        6.1
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:23Z"
+  }
+ ]
 }

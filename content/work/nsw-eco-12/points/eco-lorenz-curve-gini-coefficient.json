@@ -11,7 +11,9 @@
   "2026-10-29T12:39:08Z check: flagged",
   "2026-10-29T12:41:45Z fix: suggested",
   "2026-10-29T16:45:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-30T11:54:21Z review: approved with the fix (a spot check)"
+  "2026-10-30T11:54:21Z review: approved with the fix (a spot check)",
+  "2026-11-10T15:54:26Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T15:55:22Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -222,7 +224,196 @@
    ],
    "why": "Country Y's Lorenz curve sits above Country X's along its whole length, so it is closer to the line of equality everywhere. The gap is smaller, so Y's Gini coefficient is lower and its income is more evenly spread. The tempting wrong idea is that a higher curve means a higher Gini coefficient, but a higher curve means a smaller gap from the diagonal.",
    "clue": "Think about the size of the gap between each curve and the diagonal."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are."
+   }
+  ]
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "picture_draft": {
+  "title": "The Lorenz curve and Gini coefficient",
+  "card": [
+   [
+    "Lorenz curve",
+    "A graph of the cumulative share of income against the cumulative share of households, ranked from poorest to richest."
+   ],
+   [
+    "Line of equality",
+    "A straight diagonal line. Along it, every 10% of households holds 10% of income. The further the Lorenz curve bows below this line, the more unequal the distribution."
+   ],
+   [
+    "Gini coefficient",
+    "A number that sums up the gap between the Lorenz curve and the line of equality. It runs from 0 (everyone has the same income) to 1 (one household holds all the income)."
+   ],
+   "A higher Gini coefficient means a more unequal distribution. The Gini coefficient can be compared across countries or across years, but it does not show which households are rich or poor."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+    "x": {
+     "min": 0,
+     "max": 100,
+     "step": 20,
+     "label": "Households"
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "step": 20,
+     "label": "Income (%)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "shade",
+      "between": [
+       "e",
+       "l"
+      ],
+      "span": [
+       0,
+       100
+      ],
+      "label": "gap",
+      "at": [
+       55,
+       42
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "e",
+      "expr": "x",
+      "domain": [
+       0,
+       100
+      ],
+      "label": "line of equality",
+      "labelAt": 100,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "\\frac{x^{2}}{100}",
+      "domain": [
+       0,
+       100
+      ],
+      "label": "Lorenz curve",
+      "labelAt": 70,
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "A Lorenz curve bowed further from the diagonal means a higher Gini coefficient and more inequality.",
+  "a": {
+   "q": "A country's Lorenz curve moves closer to the line of equality over ten years. What has happened to its Gini coefficient and its income inequality?",
+   "opts": [
+    "The Gini coefficient fell and inequality fell",
+    "The Gini coefficient fell and inequality rose",
+    "The Gini coefficient rose and inequality fell",
+    "The Gini coefficient rose and inequality rose"
+   ],
+   "why": "A curve closer to the line of equality means incomes are more evenly spread. That gives a lower Gini coefficient. The tempting option is a rise in the Gini coefficient, but a higher number means a bigger gap from the line and more inequality.",
+   "clue": "The line of equality has a Gini coefficient of 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "At every point along the graph, the poorest households in Country Y hold a bigger share of income than the same share of households in Country X. What can be said about Country Y?",
+   "opts": [
+    "It has a lower Gini coefficient and less inequality",
+    "It has a higher Gini coefficient and less inequality",
+    "It has a higher Gini coefficient and more inequality",
+    "It has a lower Gini coefficient and more inequality"
+   ],
+   "why": "Country Y's Lorenz curve sits above Country X's along its whole length, so it is closer to the line of equality everywhere. The gap is smaller, so Y's Gini coefficient is lower and its income is more evenly spread. The tempting wrong idea is that a higher curve means a higher Gini coefficient, but a higher curve means a smaller gap from the diagonal.",
+   "clue": "Think about the size of the gap between each curve and the diagonal."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+     "x": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "label": "Households"
+     },
+     "y": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "label": "Income (%)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "shade",
+       "between": [
+        "e",
+        "l"
+       ],
+       "span": [
+        0,
+        100
+       ],
+       "label": "gap",
+       "at": [
+        55,
+        42
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "x",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "line of equality",
+       "labelAt": 100,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "\\frac{x^{2}}{100}",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "Lorenz curve",
+       "labelAt": 70,
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:22Z"
+  }
+ ]
 }

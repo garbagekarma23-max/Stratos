@@ -21,7 +21,9 @@
   "2026-11-01T07:54:18Z new, match",
   "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:02Z write: done",
-  "2026-11-01T08:24:29Z check: passed, cleared"
+  "2026-11-01T08:24:29Z check: passed, cleared",
+  "2026-11-10T15:54:26Z pictures: the owner asked for a graph at card 1",
+  "2026-11-10T15:55:23Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -134,7 +136,337 @@
    ],
    "why": "Sales levelling off with strong competition shows maturity. Adding a new flavour to lift sales again is an extension strategy. It is not decline, because sales have levelled off, not fallen.",
    "clue": "Sales have levelled off, not fallen."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "Sales over time through the product life cycle. In introduction, sales are low. In growth, they rise quickly. In maturity, they level off. In decline, they fall."
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "picture_draft": {
+  "title": "The product life cycle",
+  "card": [
+   "The product life cycle shows the stages a product goes through over time. The stages are introduction, growth, maturity and decline.",
+   [
+    "Introduction and growth",
+    "In introduction, the product is new and sales are low, so the business makes people aware of it. In growth, sales rise quickly and rivals may enter."
+   ],
+   [
+    "Maturity and decline",
+    "In maturity, sales level off and competition is strong. In decline, sales fall as customers move on to other products."
+   ],
+   "A business can try an extension strategy, such as a new flavour or a new market, to lift sales again. The best marketing changes at each stage."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "Sales over time through the product life cycle. In introduction, sales are low. In growth, they rise quickly. In maturity, they level off. In decline, they fall.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Sales"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "s",
+      "points": [
+       [
+        0,
+        0.4
+       ],
+       [
+        1,
+        0.7
+       ],
+       [
+        2,
+        1.4
+       ],
+       [
+        3,
+        2.6
+       ],
+       [
+        4,
+        4.6
+       ],
+       [
+        5,
+        6.6
+       ],
+       [
+        5.5,
+        7.3
+       ],
+       [
+        6.5,
+        7.9
+       ],
+       [
+        7.5,
+        7.6
+       ],
+       [
+        8,
+        7.1
+       ],
+       [
+        9,
+        5.6
+       ],
+       [
+        10,
+        4
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "guide",
+      "at": [
+       3,
+       2.6
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "guide",
+      "at": [
+       5.5,
+       7.3
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "guide",
+      "at": [
+       8,
+       7.1
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "text",
+      "at": [
+       1.5,
+       9.2
+      ],
+      "label": "Introduction",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       4.25,
+       9.2
+      ],
+      "label": "Growth",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       6.75,
+       9.2
+      ],
+      "label": "Maturity",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       9,
+       9.2
+      ],
+      "label": "Decline",
+      "pos": "below"
+     }
+    ]
+   }
+  },
+  "remember": "Products move through four stages, and a business can try an extension. Its marketing should change with the stage.",
+  "a": {
+   "q": "A new energy drink has just been released in Perth and few people know it. Which stage is it in, and what is the main marketing aim?",
+   "opts": [
+    "Introduction, to make people aware of it",
+    "Growth, to make people aware of it",
+    "Introduction, to beat the many rivals",
+    "Maturity, to beat the many rivals"
+   ],
+   "why": "A new product with low sales and little awareness is in introduction, so the main aim is to make people aware of it. Beating many rivals fits maturity, when competition is strong.",
+   "clue": "Few people know it, and it has only just launched."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Hobart chocolate maker sees sales of its dark chocolate bar level off, with many rivals. It adds a chilli flavour to lift sales. What is this?",
+   "opts": [
+    "An extension strategy used at maturity",
+    "A move into the growth stage",
+    "A move into the introduction stage",
+    "A sign the product has reached decline"
+   ],
+   "why": "Sales levelling off with strong competition shows maturity. Adding a new flavour to lift sales again is an extension strategy. It is not decline, because sales have levelled off, not fallen.",
+   "clue": "Sales have levelled off, not fallen."
+  },
+  "wants": [
+   {
+    "at": "card 1",
+    "kind": "graph",
+    "brief": "Sales over time through the product life cycle. In introduction, sales are low. In growth, they rise quickly. In maturity, they level off. In decline, they fall.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Sales over time through the product life cycle. In introduction, sales are low. In growth, they rise quickly. In maturity, they level off. In decline, they fall.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Sales over time through the product life cycle. In introduction, sales are low. In growth, they rise quickly. In maturity, they level off. In decline, they fall.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Sales"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         0,
+         0.4
+        ],
+        [
+         1,
+         0.7
+        ],
+        [
+         2,
+         1.4
+        ],
+        [
+         3,
+         2.6
+        ],
+        [
+         4,
+         4.6
+        ],
+        [
+         5,
+         6.6
+        ],
+        [
+         5.5,
+         7.3
+        ],
+        [
+         6.5,
+         7.9
+        ],
+        [
+         7.5,
+         7.6
+        ],
+        [
+         8,
+         7.1
+        ],
+        [
+         9,
+         5.6
+        ],
+        [
+         10,
+         4
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        2.6
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "guide",
+       "at": [
+        5.5,
+        7.3
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "guide",
+       "at": [
+        8,
+        7.1
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "text",
+       "at": [
+        1.5,
+        9.2
+       ],
+       "label": "Introduction",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        4.25,
+        9.2
+       ],
+       "label": "Growth",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.75,
+        9.2
+       ],
+       "label": "Maturity",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        9,
+        9.2
+       ],
+       "label": "Decline",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:22Z"
+  }
+ ]
 }

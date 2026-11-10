@@ -33,7 +33,9 @@
   "2026-11-01T08:33:49Z write: done",
   "2026-11-01T08:42:05Z check: flagged",
   "2026-11-01T08:44:26Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: cleared with the fix (remember other)"
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (remember other)",
+  "2026-11-10T15:54:23Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T15:55:24Z pictures: 1 picture waiting for the check"
  ],
  "sent": {
   "match": 1,
@@ -209,7 +211,197 @@
    ],
    "why": "The flood cuts how much growers can produce, so they supply less at every price. That shifts the whole curve left. Scarcer tomatoes mean less supply, not more, and a movement along the curve would need a change in the tomato price to start it.",
    "clue": "The flood changes what growers can produce, not the price they are offered."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price."
+   }
+  ]
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "picture_draft": {
+  "title": "Factors that shift supply",
+  "card": [
+   "A supply curve shows how much sellers will supply at each price. A change in the good's own price moves along the curve. A change in anything else shifts the whole curve.",
+   "Costs of production: if wages, rent or materials rise, selling is less profitable at each price. Supply falls and the curve shifts left. Lower costs shift it right.",
+   "Technology and productivity: productivity is output per unit of input. Better machines or methods let firms make more from the same inputs, at a lower cost per unit. Supply rises and the curve shifts right.",
+   "The weather and other disruptions: a drought, flood, fire or strike can cut how much sellers can produce. Supply falls at each price and the curve shifts left."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "S1",
+      "points": [
+       [
+        3,
+        0
+       ],
+       [
+        10,
+        7
+       ]
+      ],
+      "label": "S1",
+      "pos": "below-right",
+      "style": "dash",
+      "labelAt": 9
+     },
+     {
+      "type": "curve",
+      "id": "S2",
+      "points": [
+       [
+        0,
+        3
+       ],
+       [
+        7,
+        10
+       ]
+      ],
+      "label": "S2",
+      "pos": "right",
+      "labelAt": 7
+     },
+     {
+      "type": "arrow",
+      "from": [
+       8.6,
+       6
+      ],
+      "to": [
+       3.4,
+       6
+      ],
+      "label": "costs rise",
+      "pos": "above"
+     }
+    ]
+   }
+  },
+  "remember": "Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.",
+  "a": {
+   "q": "A new machine lets a bakery in Ballarat bake more loaves from the same flour and labour. What happens to the supply of its bread?",
+   "opts": [
+    "The supply curve shifts right",
+    "The supply curve shifts left",
+    "There is a movement up along the curve",
+    "There is a movement down along the curve"
+   ],
+   "why": "The machine raises productivity, so the bakery can supply more bread at every price. That shifts the whole curve right. A movement along the curve happens only when the bread's own price changes.",
+   "clue": "Did the price of bread change, or did the bakery's ability to produce?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A flood destroys much of the tomato crop in a Victorian farming region. What is the effect on the supply curve for tomatoes?",
+   "opts": [
+    "It shifts left, as less can be produced at each price",
+    "It shifts right, as tomatoes become scarcer and dearer",
+    "There is a movement along the curve to a higher price",
+    "There is a movement along the curve to a lower price"
+   ],
+   "why": "The flood cuts how much growers can produce, so they supply less at every price. That shifts the whole curve left. Scarcer tomatoes mean less supply, not more, and a movement along the curve would need a change in the tomato price to start it.",
+   "clue": "The flood changes what growers can produce, not the price they are offered."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "graph",
+    "brief": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price.",
+    "waiting": true
+   }
+  ]
+ },
+ "pictures_waiting": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "S1",
+       "points": [
+        [
+         3,
+         0
+        ],
+        [
+         10,
+         7
+        ]
+       ],
+       "label": "S1",
+       "pos": "below-right",
+       "style": "dash",
+       "labelAt": 9
+      },
+      {
+       "type": "curve",
+       "id": "S2",
+       "points": [
+        [
+         0,
+         3
+        ],
+        [
+         7,
+         10
+        ]
+       ],
+       "label": "S2",
+       "pos": "right",
+       "labelAt": 7
+      },
+      {
+       "type": "arrow",
+       "from": [
+        8.6,
+        6
+       ],
+       "to": [
+        3.4,
+        6
+       ],
+       "label": "costs rise",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:24Z"
+  }
+ ]
 }
