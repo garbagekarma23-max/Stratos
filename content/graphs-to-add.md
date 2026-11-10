@@ -6,13 +6,13 @@ A census of every point in the banks, for planning the sessions that add graphs 
 
 A shared point is listed under every course that uses it, and counted once in its bank.
 
-The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2.
+The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2. Session 3 added them to General Mathematics Units 3 and 4, Mathematics Standard Years 11 and 12, Foundation Mathematics Units 1 to 4 and Mathematics Years 7 to 10, which finishes the maths bank.
 
 ## By bank
 
 | Bank | Points | Better with a graph | Drawable now | Have one already |
 | --- | --- | --- | --- | --- |
-| mat | 666 | 151 | 136 | 105 |
+| mat | 666 | 151 | 136 | 151 |
 | phys | 135 | 25 | 25 | 0 |
 | eco | 154 | 21 | 21 | 0 |
 | e (Economics bank, Edexcel) | 53 | 16 | 16 | 3 |
@@ -34,20 +34,20 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | mod | 147 | 0 | 0 | 0 |
 | soc | 57 | 0 | 0 | 0 |
 | sor | 79 | 0 | 0 | 0 |
-| Total | 3467 | 257 | 240 | 108 |
+| Total | 3467 | 257 | 240 | 154 |
 
 ## By course
 
 | Course | Points | Better with a graph | Drawable now | Have one already |
 | --- | --- | --- | --- | --- |
-| `vic-mat-meth-u12` Mathematical Methods, Units 1 and 2 | 52 | 25 | 25 | 24 |
+| `vic-mat-meth-u12` Mathematical Methods, Units 1 and 2 | 52 | 25 | 25 | 25 |
 | `nsw-mat-adv-11` Mathematics Advanced, Year 11 | 56 | 23 | 22 | 23 |
 | `edexcel` Economics, International A Level (Edexcel), AS year | 53 | 16 | 16 | 3 |
 | `vic-mat-gen-u12` General Mathematics, Units 1 and 2 | 56 | 16 | 12 | 16 |
 | `vic-mat-meth-u34` Mathematical Methods, Units 3 and 4 | 43 | 16 | 16 | 16 |
 | `nsw-mat-adv-12` Mathematics Advanced, Year 12 | 40 | 15 | 15 | 15 |
 | `vic-eco-u34` Economics, Units 3 and 4 | 68 | 15 | 15 | 0 |
-| `nsw-mat-std-12` Mathematics Standard 2, Year 12 | 53 | 12 | 12 | 1 |
+| `nsw-mat-std-12` Mathematics Standard 2, Year 12 | 53 | 12 | 12 | 12 |
 | `vic-mat-spec-u34` Specialist Mathematics, Units 3 and 4 | 51 | 12 | 11 | 12 |
 | `nsw-phys-12` Physics, Year 12 | 49 | 11 | 11 | 0 |
 | `vic-mat-spec-u12` Specialist Mathematics, Units 1 and 2 | 63 | 10 | 9 | 10 |
@@ -55,22 +55,22 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | `vic-phys-u12` Physics, Units 1 and 2 | 52 | 9 | 9 | 0 |
 | `vic-phys-u34` Physics, Units 3 and 4 | 51 | 9 | 9 | 0 |
 | `vic-chem-u34` Chemistry, Units 3 and 4 | 64 | 8 | 7 | 0 |
-| `vic-mat-gen-u34` General Mathematics, Units 3 and 4 | 57 | 8 | 6 | 0 |
-| `ac-mat-9` Mathematics, Year 9 | 39 | 7 | 6 | 0 |
-| `nsw-mat-std-11` Mathematics Standard, Year 11 | 43 | 7 | 5 | 1 |
+| `vic-mat-gen-u34` General Mathematics, Units 3 and 4 | 57 | 8 | 6 | 8 |
+| `ac-mat-9` Mathematics, Year 9 | 39 | 7 | 6 | 7 |
+| `nsw-mat-std-11` Mathematics Standard, Year 11 | 43 | 7 | 5 | 7 |
 | `ac-ecb-8` Economics and Business, Year 8 | 34 | 6 | 6 | 0 |
-| `ac-mat-10` Mathematics, Year 10 | 38 | 6 | 5 | 1 |
+| `ac-mat-10` Mathematics, Year 10 | 38 | 6 | 5 | 6 |
 | `vic-bio-u34` Biology, Units 3 and 4 | 62 | 6 | 6 | 0 |
 | `nsw-eco-12` Economics, Year 12: Australia's economy | 67 | 5 | 5 | 0 |
-| `vic-mat-fnd-u34` Foundation Mathematics, Units 3 and 4 | 32 | 5 | 5 | 2 |
+| `vic-mat-fnd-u34` Foundation Mathematics, Units 3 and 4 | 32 | 5 | 5 | 5 |
 | `nsw-chem-12` Chemistry, Year 12 | 47 | 4 | 3 | 0 |
 | `vic-pe-u34` Physical Education, Units 3 and 4 | 39 | 4 | 4 | 0 |
-| `ac-mat-8` Mathematics, Year 8 | 40 | 3 | 3 | 0 |
+| `ac-mat-8` Mathematics, Year 8 | 40 | 3 | 3 | 3 |
 | `nsw-bio-12` Biology, Year 12 | 50 | 3 | 3 | 0 |
 | `nsw-chem-11` Chemistry, Year 11 | 39 | 3 | 3 | 0 |
 | `vic-chem-u12` Chemistry, Units 1 and 2 | 71 | 3 | 3 | 0 |
-| `vic-mat-fnd-u12` Foundation Mathematics, Units 1 and 2 | 34 | 3 | 0 | 0 |
-| `ac-mat-7` Mathematics, Year 7 | 42 | 2 | 2 | 1 |
+| `vic-mat-fnd-u12` Foundation Mathematics, Units 1 and 2 | 34 | 3 | 0 | 3 |
+| `ac-mat-7` Mathematics, Year 7 | 42 | 2 | 2 | 2 |
 | `ac-sci-9` Science, Year 9 | 40 | 2 | 2 | 0 |
 | `nsw-hms-11` Health and Movement Science, Year 11 | 31 | 2 | 2 | 0 |
 | `vic-bio-u12` Biology, Units 1 and 2 | 56 | 2 | 2 | 0 |
@@ -106,7 +106,7 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
   - `mat-average-rate-change` Average rate of change: secant on a curve. Has one already.
   - `mat-instantaneous-rate-change` Instantaneous rate of change: chord and tangent on curve. Has one already.
   - `mat-rates-context` Rates in context: distance-time and depth-time graphs. Has one already.
-  - `mat-tangent-lines` Tangent lines: tangents on a curve
+  - `mat-tangent-lines` Tangent lines: tangents on a curve. Has one already.
 - Circular functions (`vic-mat-meth-u12-1-3`)
   - `mat-unit-circle` The unit circle: unit circle on axes. Has one already.
   - `mat-symmetry-periodicity` Symmetry and periodicity: sine and cosine graphs. Has one already.
@@ -283,21 +283,21 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Mathematics Standard 2, Year 12 (`nsw-mat-std-12`)
 
 - Algebraic relationships (`nsw-mat-std-12-1-1`)
-  - `mat-simultaneous-linear-equations` Simultaneous linear equations: two lines crossing
-  - `mat-break-even-analysis` Break-even analysis: cost and revenue lines
-  - `mat-exponential-models` Exponential models: growth and decay curves
-  - `mat-quadratic-models` Quadratic models: parabola with vertex
-  - `mat-inverse-variation-models` Inverse variation models: hyperbola
+  - `mat-simultaneous-linear-equations` Simultaneous linear equations: two lines crossing. Has one already.
+  - `mat-break-even-analysis` Break-even analysis: cost and revenue lines. Has one already.
+  - `mat-exponential-models` Exponential models: growth and decay curves. Has one already.
+  - `mat-quadratic-models` Quadratic models: parabola with vertex. Has one already.
+  - `mat-inverse-variation-models` Inverse variation models: hyperbola. Has one already.
 - Ratios and rates (`nsw-mat-std-12-3-2`)
-  - `mat-speed-distance-time` Speed, distance and time: distance-time graph
+  - `mat-speed-distance-time` Speed, distance and time: distance-time graph. Has one already.
 - Bivariate data analysis (`nsw-mat-std-12-5-1`)
   - `mat-scatterplots` Scatterplots: scatterplot points. Has one already.
-  - `mat-correlation` Correlation: scatterplots of different strength and direction
-  - `mat-least-squares-regression-line` Least-squares regression line: scatter with regression line
-  - `mat-interpolation-extrapolation` Interpolation and extrapolation: line of best fit with data range
+  - `mat-correlation` Correlation: scatterplots of different strength and direction. Has one already.
+  - `mat-least-squares-regression-line` Least-squares regression line: scatter with regression line. Has one already.
+  - `mat-interpolation-extrapolation` Interpolation and extrapolation: line of best fit with data range. Has one already.
 - The normal distribution (`nsw-mat-std-12-5-3`)
-  - `mat-features-normal-distribution` Features of a normal distribution: bell curve
-  - `mat-empirical-rule` The empirical rule: bell curve with 68/95/99.7 shading
+  - `mat-features-normal-distribution` Features of a normal distribution: bell curve. Has one already.
+  - `mat-empirical-rule` The empirical rule: bell curve with 68/95/99.7 shading. Has one already.
 
 ### Specialist Mathematics, Units 3 and 4 (`vic-mat-spec-u34`)
 
@@ -429,42 +429,42 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### General Mathematics, Units 3 and 4 (`vic-mat-gen-u34`)
 
 - Investigating data distributions (`vic-mat-gen-u34-1-1`)
-  - `mat-describing-distribution` Describing a distribution: skewed distribution shapes
-  - `mat-boxplots-outliers` Boxplots and outliers: boxplot with outlier points (needs: box plot)
-  - `mat-68-95-99-7` The 68-95-99.7% rule: normal curve with shaded standard deviations
+  - `mat-describing-distribution` Describing a distribution: skewed distribution shapes. Has one already.
+  - `mat-boxplots-outliers` Boxplots and outliers: boxplot with outlier points (needs: box plot). Has one already.
+  - `mat-68-95-99-7` The 68-95-99.7% rule: normal curve with shaded standard deviations. Has one already.
 - Investigating associations (`vic-mat-gen-u34-1-2`)
-  - `mat-response-explanatory-variables-2` Scatterplots: scatterplot with axes and plotted point
-  - `mat-numerical-categorical-variable` A numerical and a categorical variable: parallel boxplots (needs: box plot)
+  - `mat-response-explanatory-variables-2` Scatterplots: scatterplot with axes and plotted point. Has one already.
+  - `mat-numerical-categorical-variable` A numerical and a categorical variable: parallel boxplots (needs: box plot). Has one already.
 - Linear regression (`vic-mat-gen-u34-1-3-2`)
-  - `mat-interpreting-slope-intercept` Interpreting slope and intercept: fitted line with slope and intercept
-  - `mat-residuals-residual-plots` Residuals and residual plots: residual plot scatter about zero
+  - `mat-interpreting-slope-intercept` Interpreting slope and intercept: fitted line with slope and intercept. Has one already.
+  - `mat-residuals-residual-plots` Residuals and residual plots: residual plot scatter about zero. Has one already.
 - Time series (`vic-mat-gen-u34-1-3`)
-  - `mat-features-time-series` Features of a time series: time series line plot showing trend, seasonality
+  - `mat-features-time-series` Features of a time series: time series line plot showing trend, seasonality. Has one already.
 
 ### Mathematics, Year 9 (`ac-mat-9`)
 
 - Coordinate geometry (`ac-mat-9-2-2`)
-  - `mat-gradient-interval` Gradient of an interval: rise and run on a line
-  - `mat-gradient-y-intercept` Gradient and y-intercept: lines with different m and c
+  - `mat-gradient-interval` Gradient of an interval: rise and run on a line. Has one already.
+  - `mat-gradient-y-intercept` Gradient and y-intercept: lines with different m and c. Has one already.
 - Quadratic equations and graphs (`ac-mat-9-2-3`)
-  - `mat-graphing-parabolas` Graphing parabolas: y=x^2 parabola
-  - `mat-changing-parabola` Changing a parabola: parabola family
-  - `mat-solving-quadratics-from-graph` Solving quadratics from a graph: parabola crossing x-axis
-  - `mat-choosing-linear-or-quadratic` Choosing a linear or quadratic model: line versus parabola
+  - `mat-graphing-parabolas` Graphing parabolas: y=x^2 parabola. Has one already.
+  - `mat-changing-parabola` Changing a parabola: parabola family. Has one already.
+  - `mat-solving-quadratics-from-graph` Solving quadratics from a graph: parabola crossing x-axis. Has one already.
+  - `mat-choosing-linear-or-quadratic` Choosing a linear or quadratic model: line versus parabola. Has one already.
 - Surveys and comparing data (`ac-mat-9-5-1`)
-  - `mat-misleading-graphs` Misleading graphs: truncated-axis columns (needs: bar chart)
+  - `mat-misleading-graphs` Misleading graphs: truncated-axis columns (needs: bar chart). Has one already.
 
 ### Mathematics Standard, Year 11 (`nsw-mat-std-11`)
 
 - Linear relationships (`nsw-mat-std-11-1-2`)
-  - `mat-gradient-as-rate-change` Gradient as a rate of change: line through two points
-  - `mat-y-intercept-context` The y-intercept in context: line crossing vertical axis
+  - `mat-gradient-as-rate-change` Gradient as a rate of change: line through two points. Has one already.
+  - `mat-y-intercept-context` The y-intercept in context: line crossing vertical axis. Has one already.
   - `mat-equation-y-mx-c` The gradient-intercept form: plot line from m and c. Has one already.
-  - `mat-direct-variation` Direct variation: line through origin
-  - `mat-linear-models` Linear models: line model with prediction
+  - `mat-direct-variation` Direct variation: line through origin. Has one already.
+  - `mat-linear-models` Linear models: line model with prediction. Has one already.
 - Data analysis (`nsw-mat-std-11-5-1`)
-  - `mat-displaying-data` Displaying data: column graph, dot plot, histogram (needs: bar chart)
-  - `mat-spread-box-plots` Spread and box plots: box plot (needs: box plot)
+  - `mat-displaying-data` Displaying data: column graph, dot plot, histogram (needs: bar chart). Has one already.
+  - `mat-spread-box-plots` Spread and box plots: box plot (needs: box plot). Has one already.
 
 ### Economics and Business, Year 8 (`ac-ecb-8`)
 
@@ -481,14 +481,14 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Mathematics, Year 10 (`ac-mat-10`)
 
 - Inequalities and simultaneous equations (`ac-mat-10-2-2`)
-  - `mat-inequalities-cartesian-plane` Inequalities on the Cartesian plane: boundary line with shaded region
-  - `mat-simultaneous-equations-by-graphing` Simultaneous equations by graphing: two lines crossing
+  - `mat-inequalities-cartesian-plane` Inequalities on the Cartesian plane: boundary line with shaded region. Has one already.
+  - `mat-simultaneous-equations-by-graphing` Simultaneous equations by graphing: two lines crossing. Has one already.
 - Exponential relations and models (`ac-mat-10-2-3`)
   - `mat-exponential-functions` Exponential functions: growth and decay curves. Has one already.
-  - `mat-choosing-linear-quadratic-or` Choosing a linear, quadratic or exponential model: linear, quadratic, exponential curves
+  - `mat-choosing-linear-quadratic-or` Choosing a linear, quadratic or exponential model: linear, quadratic, exponential curves. Has one already.
 - Distributions and bivariate data (`ac-mat-10-5-1`)
-  - `mat-box-plots` Box plots: box plots on a number line (needs: box plot)
-  - `mat-scatterplots-association` Describing an association: scatter plots of association
+  - `mat-box-plots` Box plots: box plots on a number line (needs: box plot). Has one already.
+  - `mat-scatterplots-association` Describing an association: scatter plots of association. Has one already.
 
 ### Biology, Units 3 and 4 (`vic-bio-u34`)
 
@@ -519,11 +519,11 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 
 - Formulas and linear relations (`vic-mat-fnd-u34-1-1`)
   - `mat-linear-models-context` Linear models in context: line with rate and intercept. Has one already.
-  - `mat-graphing-linear-relations` Graphing linear relations: line C = 20 + 5n
-  - `mat-break-even-analysis` Break-even analysis: cost and revenue lines
+  - `mat-graphing-linear-relations` Graphing linear relations: line C = 20 + 5n. Has one already.
+  - `mat-break-even-analysis` Break-even analysis: cost and revenue lines. Has one already.
   - `mat-direct-inverse-variation` Direct and inverse variation: line through origin and hyperbola. Has one already.
 - Analysing data (`vic-mat-fnd-u34-2-2`)
-  - `mat-predicting-from-data` Interpolation and extrapolation: scatter with line of best fit, inside and outside range
+  - `mat-predicting-from-data` Interpolation and extrapolation: scatter with line of best fit, inside and outside range. Has one already.
 
 ### Chemistry, Year 12 (`nsw-chem-12`)
 
@@ -549,9 +549,9 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Mathematics, Year 8 (`ac-mat-8`)
 
 - Linear equations, inequalities and graphs (`ac-mat-8-2-2`)
-  - `mat-graphing-linear-relations-2` Graphing linear relations: plotted line from table of values
-  - `mat-solving-equation-from-graph` Solving an equation from a graph: reading x from line at y value
-  - `mat-linear-models-2` Linear models in context: line with rate and intercept
+  - `mat-graphing-linear-relations-2` Graphing linear relations: plotted line from table of values. Has one already.
+  - `mat-solving-equation-from-graph` Solving an equation from a graph: reading x from line at y value. Has one already.
+  - `mat-linear-models-2` Linear models in context: line with rate and intercept. Has one already.
 
 ### Biology, Year 12 (`nsw-bio-12`)
 
@@ -582,14 +582,14 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Foundation Mathematics, Units 1 and 2 (`vic-mat-fnd-u12`)
 
 - Collecting and showing data (`vic-mat-fnd-u12-3-1`)
-  - `mat-reading-tables-graphs` Reading tables and graphs: bar, line and pie graphs (needs: bar chart)
-  - `mat-drawing-charts-graphs` Drawing charts and graphs: column, line and pie charts (needs: bar chart)
-  - `mat-misleading-graphs` Misleading graphs: truncated-axis columns (needs: bar chart)
+  - `mat-reading-tables-graphs` Reading tables and graphs: bar, line and pie graphs (needs: bar chart). Has one already.
+  - `mat-drawing-charts-graphs` Drawing charts and graphs: column, line and pie charts (needs: bar chart). Has one already.
+  - `mat-misleading-graphs` Misleading graphs: truncated-axis columns (needs: bar chart). Has one already.
 
 ### Mathematics, Year 7 (`ac-mat-7`)
 
 - Equations, patterns and graphs (`ac-mat-7-2-2`)
-  - `mat-plotting-points-cartesian-plane` Plotting points on the Cartesian plane: points and line on the plane
+  - `mat-plotting-points-cartesian-plane` Plotting points on the Cartesian plane: points and line on the plane. Has one already.
   - `mat-reading-graphs-real-data` Reading graphs of real data: rising, flat, falling real-data graph. Has one already.
 
 ### Science, Year 9 (`ac-sci-9`)

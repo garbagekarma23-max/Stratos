@@ -4298,6 +4298,22 @@ MADE_BANKS.mat = {
       "In context, the gradient is a rate: the change in \\(y\\) for each 1 unit of \\(x\\). Its unit is the \\(y\\) unit per \\(x\\) unit, such as dollars per hour or litres per minute.",
       "Example: a graph of money earned ($) against hours worked passes through (2, 30) and (5, 75). \\(\\text{Rise} = 75 - 30 = 45\\). \\(\\text{Run} = 5 - 2 = 3\\). \\(\\text{Gradient} = 45 \\div 3 = 15\\), so the rate is $15 per hour."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A line graph of money earned in dollars against hours worked. The line passes through \\((2, 30)\\) and \\((5, 75)\\). From \\((2, 30)\\), a run of 3 across and a rise of 45 up reach \\((5, 75)\\), so the gradient is \\(45 \\div 3 = 15\\), or $15 per hour.",
+        "x": {"min": 0, "max": 6.5, "label": "Hours", "step": 1},
+        "y": {"min": 0, "max": 100, "label": "Money ($)", "step": 20},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "15x", "domain": [0, 6.5]},
+          {"type": "arrow", "from": [2, 30], "to": [5, 30], "label": "run 3", "pos": "below"},
+          {"type": "arrow", "from": [5, 30], "to": [5, 75], "label": "rise 45", "pos": "right"},
+          {"type": "point", "at": [2, 30], "label": "\\((2, 30)\\)", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [5, 75], "label": "\\((5, 75)\\)", "pos": "above-left", "on": ["f"]}
+        ]
+      }
+    },
     "remember": "\\(\\text{Gradient} = \\text{rise} \\div \\text{run}\\), and in context it is the rate of change in \\(y\\) per 1 unit of \\(x\\).",
     "a": {
       "q": "A line passes through (1, 7) and (4, 19). What is its gradient?",
@@ -4321,6 +4337,26 @@ MADE_BANKS.mat = {
       "To find it from a table, look for the row where \\(x = 0\\). If there is no such row, work backwards using the rate of change.",
       "Example: a plumber charges $60 to arrive, then $40 for each hour of work. When \\(\\text{hours} = 0\\), the cost is $60. So the y-intercept is $60, the call-out fee."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A line graph of the plumber's cost in dollars against hours of work. The line crosses the vertical axis at $60, the call-out fee, when hours are 0, and rises $40 for each hour.",
+        "x": {"min": 0, "max": 5.5, "label": "Hours", "step": 1},
+        "y": {"min": 0, "max": 300, "label": "Cost ($)", "step": 50},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "60 + 40x", "domain": [0, 5.5]},
+          {
+            "type": "point",
+            "at": [0, 60],
+            "label": "call-out fee $60",
+            "pos": "below-right",
+            "on": ["f"],
+            "is": "y-intercept"
+          }
+        ]
+      }
+    },
     "remember": "The y-intercept is the value of \\(y\\) when \\(x\\) is zero: the starting amount.",
     "a": {
       "q": "A tutor's cost \\(C\\) (in dollars) for \\(h\\) hours is shown on a graph. The line crosses the vertical axis at \\(C = 25\\). What does this 25 mean?",
@@ -4417,6 +4453,29 @@ MADE_BANKS.mat = {
       "To find \\(k\\), divide \\(y\\) by \\(x\\) using one known pair. \\(k = y \\div x\\). Then use \\(y = kx\\) to find other values.",
       "Example: \\(y\\) is directly proportional to \\(x\\), and \\(y = 12\\) when \\(x = 3\\). Then \\(k = 12 \\div 3 = 4\\), so \\(y = 4x\\). When \\(x = 5\\), \\(y = 4 \\times 5 = 20\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The graph of \\(y = 4x\\), a straight line through the origin \\((0, 0)\\). It passes through \\((3, 12)\\) and \\((5, 20)\\).",
+        "x": {"min": 0, "max": 6.5, "label": "\\(x\\)", "step": 1},
+        "y": {"min": 0, "max": 28, "label": "\\(y\\)", "step": 4},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "4x",
+            "domain": [0, 6.5],
+            "label": "\\(y = 4x\\)",
+            "labelAt": 1.5,
+            "pos": "above-left"
+          },
+          {"type": "point", "at": [0, 0], "on": ["f"]},
+          {"type": "point", "at": [3, 12], "label": "\\((3, 12)\\)", "pos": "below-right", "on": ["f"]},
+          {"type": "point", "at": [5, 20], "label": "\\((5, 20)\\)", "pos": "below-right", "on": ["f"]}
+        ]
+      }
+    },
     "remember": "In direct variation, \\(y = kx\\): find \\(k\\) by dividing \\(y\\) by \\(x\\), and the line passes through the origin.",
     "a": {
       "q": "\\(y\\) is directly proportional to \\(x\\), and \\(y = 35\\) when \\(x = 7\\). What is the constant of variation \\(k\\)?",
@@ -4440,6 +4499,28 @@ MADE_BANKS.mat = {
       "To find \\(x\\) from a known \\(y\\), put \\(y\\) into the equation and solve. If \\(C = 17\\), then \\(17 = 3 + 2d\\), so \\(2d = 14\\) and \\(d = 7\\) km.",
       "A model is only built from real data in a certain range. Predicting outside that range is extrapolation, and the model may stop being accurate there, because the real pattern may not stay a straight line."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The taxi model \\(C = 3 + 2d\\), cost in dollars against distance in km. The line starts at $3 on the cost axis and rises $2 for each km. Dashed guides from the point \\((10, 23)\\) show that 10 km costs $23.",
+        "x": {"min": 0, "max": 20, "label": "Distance (km)", "step": 5},
+        "y": {"min": 0, "max": 40, "label": "Cost ($)", "step": 10},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "3 + 2x",
+            "domain": [0, 18.5],
+            "label": "\\(C = 3 + 2d\\)",
+            "labelAt": 14,
+            "pos": "below-right"
+          },
+          {"type": "guide", "at": [10, 23], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [10, 23], "label": "\\((10, 23)\\)", "pos": "above-left", "on": ["f"]}
+        ]
+      }
+    },
     "remember": "Put \\(x\\) in to predict \\(y\\), but be careful of predictions outside the data the model came from.",
     "a": {
       "q": "A plumber's charge is \\(C = 60 + 45h\\), where \\(C\\) is the cost in dollars and \\(h\\) is the hours worked. What is the cost of a 3 hour job?",
@@ -5320,6 +5401,24 @@ MADE_BANKS.mat = {
         "splits each value into a stem and a leaf, so 47 has stem 4 and leaf 7. It shows the shape and keeps every original value."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "A column graph of the favourite sport of each student in a class: Soccer 9, Netball 7, Cricket 5 and Tennis 4. The bars are separate, with gaps between them.",
+        "x": {"label": "Sport"},
+        "y": {"min": 0, "max": 10, "step": 2, "label": "Students"},
+        "bars": [["Soccer", 9], ["Netball", 7], ["Cricket", 5], ["Tennis", 4]]
+      },
+      "3": {
+        "kind": "chart",
+        "chart": "histogram",
+        "alt": "A histogram of the time students take to travel to school, in class intervals of 10 minutes from 0 to 50. The bars touch: 12 students in 0 to 10 minutes, 25 in 10 to 20, 18 in 20 to 30, 8 in 30 to 40 and 3 in 40 to 50.",
+        "x": {"min": 0, "max": 50, "step": 10, "label": "Time (minutes)"},
+        "y": {"min": 0, "max": 30, "step": 5, "label": "Students"},
+        "classes": [[0, 10, 12], [10, 20, 25], [20, 30, 18], [30, 40, 8], [40, 50, 3]]
+      }
+    },
     "remember": "Gaps between bars suit categories. Touching bars suit grouped numbers.",
     "a": {
       "q": "Which display suits the data on the favourite pet of each student in a class?",
@@ -5352,6 +5451,16 @@ MADE_BANKS.mat = {
       ],
       "Example: 2, 4, 5, 7, 8, 10, 12, 20. Median \\(= (7 + 8) \\div 2 = 7.5\\). \\(Q_{1} = (4 + 5) \\div 2 = 4.5\\). \\(Q_{3} = (10 + 12) \\div 2 = 11\\). \\(\\text{IQR} = 11 - 4.5 = 6.5\\). Range \\(= 20 - 2 = 18\\). To compare two sets, a smaller IQR means the middle of the data is less spread out."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "A box plot of 2, 4, 5, 7, 8, 10, 12, 20. The whiskers run from the lowest score 2 to the highest score 20. The box runs from \\(Q_{1} = 4.5\\) to \\(Q_{3} = 11\\), with a line at the median, 7.5.",
+        "x": {"min": 0, "max": 22, "step": 2, "label": "Score"},
+        "sets": [{"data": [2, 4, 5, 7, 8, 10, 12, 20]}],
+        "stats": {"min": 2, "q1": 4.5, "median": 7.5, "q3": 11, "max": 20, "iqr": 6.5, "range": 18}
+      }
+    },
     "remember": "Range uses the two ends. IQR uses the middle half, so outliers barely change it.",
     "a": {
       "q": "Which set of five numbers is used to draw a box plot?",
@@ -5386,6 +5495,44 @@ MADE_BANKS.mat = {
       ],
       "The meeting point shows where two things are equal. If two phone plans have costs \\(C = 20 + 5t\\) and \\(C = 8 + 8t\\), they cost the same at the t-value where the lines meet."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The lines \\(y = 2x + 5\\) and \\(y = 3x + 1\\) drawn on the same axes. They cross at the point \\((4, 13)\\), which satisfies both equations.",
+        "x": {"min": 0, "max": 6, "label": "\\(x\\)", "step": 1},
+        "y": {"min": 0, "max": 20, "label": "\\(y\\)", "step": 5},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "2x + 5",
+            "domain": [0, 6],
+            "label": "\\(y = 2x + 5\\)",
+            "labelAt": 2.6,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "3x + 1",
+            "domain": [0, 6],
+            "label": "\\(y = 3x + 1\\)",
+            "labelAt": 2.5,
+            "pos": "below-right"
+          },
+          {"type": "guide", "at": [4, 13], "xLabel": "", "yLabel": ""},
+          {
+            "type": "point",
+            "at": [4, 13],
+            "on": ["f", "g"],
+            "is": "intersection",
+            "label": "\\((4, 13)\\)",
+            "pos": "above-left"
+          }
+        ]
+      }
+    },
     "remember": "The crossing point is the one pair of values that fits both equations, so both quantities are equal there.",
     "a": {
       "q": "Solve \\(y = 2x + 1\\) and \\(y = x + 6\\) by substitution. Where do the lines meet?",
@@ -5409,6 +5556,46 @@ MADE_BANKS.mat = {
       "Past the break-even point, revenue is above cost and the business makes a profit. Before it, cost is above revenue and the business makes a loss. \\(\\text{Profit} = \\text{revenue} - \\text{cost}\\).",
       "Example: Ravi sells scarves. Fixed cost is $300 and each scarf costs $10 to make and sells for $25. Set \\(300 + 10n = 25n\\). Then \\(300 = 15n\\), so \\(n = 20\\). He breaks even at 20 scarves."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Ravi's cost line, \\(C = 300 + 10n\\), starts at $300 and rises slowly. His revenue line, \\(R = 25n\\), starts at $0 and rises faster. They meet at the break-even point, 20 scarves and $500. The gap before it is a loss and the gap after it is a profit.",
+        "x": {"min": 0, "max": 40, "label": "Scarves", "step": 10},
+        "y": {"min": 0, "max": 1000, "label": "Dollars", "step": 200},
+        "grid": true,
+        "items": [
+          {"type": "shade", "between": ["c", "r"], "span": [0, 20], "label": "Loss", "at": [4, 230], "hatch": true},
+          {"type": "shade", "between": ["r", "c"], "span": [20, 40], "label": "Profit", "at": [36, 770]},
+          {
+            "type": "fn",
+            "id": "c",
+            "expr": "300 + 10x",
+            "domain": [0, 40],
+            "label": "Cost",
+            "labelAt": 32,
+            "pos": "below-right"
+          },
+          {
+            "type": "fn",
+            "id": "r",
+            "expr": "25x",
+            "domain": [0, 40],
+            "label": "Revenue",
+            "labelAt": 30,
+            "pos": "above-left"
+          },
+          {"type": "guide", "at": [20, 500], "xLabel": "", "yLabel": "500"},
+          {
+            "type": "point",
+            "at": [20, 500],
+            "on": ["c", "r"],
+            "is": "intersection",
+            "label": "break-even",
+            "pos": "below-right"
+          }
+        ]
+      }
+    },
     "remember": "Break even where \\(\\text{cost} = \\text{revenue}\\). \\(\\text{Profit} = \\text{revenue} - \\text{cost}\\).",
     "a": {
       "q": "At 50 items, a business has revenue of $900 and cost of $900. What does this show?",
@@ -5440,6 +5627,36 @@ MADE_BANKS.mat = {
         "\\(b\\) is between 0 and 1. A fall of 15% each period gives \\(b = 1 - 0.15 = 0.85\\). Example: a car worth $20 000 that loses 15% a year has \\(V = 20\\,000 \\times 0.85^{x}\\). After 2 years, \\(V = 20\\,000 \\times 0.85^{2} = \\$14\\,450\\)."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The car's value \\(V = 20\\,000 \\times 0.85^{x}\\) against years. The curve starts at $20 000 when \\(x = 0\\) and falls more slowly each year, because each fall is 15% of a smaller value. After 2 years the value is $14 450.",
+        "x": {"min": 0, "max": 10, "label": "Years", "step": 2},
+        "y": {"min": 0, "max": 25000, "label": "Value ($)", "step": 5000},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "v",
+            "expr": "20000(0.85)^{x}",
+            "domain": [0, 10],
+            "label": "\\(V = 20\\,000 \\times 0.85^{x}\\)",
+            "labelAt": 4,
+            "pos": "above-right"
+          },
+          {
+            "type": "point",
+            "at": [0, 20000],
+            "on": ["v"],
+            "is": "y-intercept",
+            "label": "starting value",
+            "pos": "above-right"
+          },
+          {"type": "guide", "at": [2, 14450], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [2, 14450], "on": ["v"], "label": "\\((2, 14\\,450)\\)", "pos": "above-right"}
+        ]
+      }
+    },
     "remember": "Find \\(b\\) by adding the percentage rate to 1 for growth, or taking it from 1 for decay.",
     "a": {
       "q": "A town of 4000 people grows by 3% each year. Which equation models the population \\(P\\) after \\(x\\) years?",
@@ -5474,6 +5691,27 @@ MADE_BANKS.mat = {
       ],
       "To read the answer from a graph, find the vertex. Its y-value is the maximum or minimum value. Its x-value is where that value happens. Example: a ball's height \\(h\\) (metres) after \\(t\\) seconds peaks at the point (2, 20). The maximum height is 20 m, reached after 2 seconds."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A parabola that opens downwards, showing a ball's height in metres against time in seconds. It starts at 0, rises to its vertex at \\((2, 20)\\), then falls back to 0 at 4 seconds. The maximum height is 20 m, reached after 2 seconds.",
+        "x": {"min": 0, "max": 6, "label": "Time (s)", "step": 1},
+        "y": {"min": 0, "max": 25, "label": "Height (m)", "step": 5},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "h", "expr": "20x - 5x^{2}", "domain": [0, 4]},
+          {"type": "guide", "at": [2, 20], "xLabel": "", "yLabel": ""},
+          {
+            "type": "point",
+            "at": [2, 20],
+            "on": ["h"],
+            "is": "turning point",
+            "label": "vertex \\((2, 20)\\)",
+            "pos": "above-right"
+          }
+        ]
+      }
+    },
     "remember": "The vertex gives the best value (its \\(y\\)) and when or where it happens (its \\(x\\)).",
     "a": {
       "q": "A graph of a ball's height (m) against time (s) is a parabola with its vertex at (3, 45). What is the maximum height?",
@@ -5497,6 +5735,28 @@ MADE_BANKS.mat = {
       "The graph is a curve called a hyperbola. It never touches either axis.",
       "Example: a 120 km trip takes \\(t = \\frac{120}{s}\\) hours at a speed of \\(s\\) km/h. At 60 km/h, \\(t = 120 \\div 60 = 2\\) hours. At 120 km/h, \\(t = 1\\) hour. Doubling the speed halved the time."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The curve \\(t = \\frac{120}{s}\\), time in hours against speed in km/h for a 120 km trip. It falls as the speed rises and never touches either axis. It passes through \\((60, 2)\\) and \\((120, 1)\\): doubling the speed halves the time.",
+        "x": {"min": 0, "max": 150, "label": "Speed (km/h)", "step": 30},
+        "y": {"min": 0, "max": 7, "label": "Time (h)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "t",
+            "expr": "\\frac{120}{x}",
+            "domain": [18, 150],
+            "label": "\\(t = \\frac{120}{s}\\)",
+            "labelAt": 30,
+            "pos": "above-right"
+          },
+          {"type": "point", "at": [60, 2], "on": ["t"], "label": "\\((60, 2)\\)", "pos": "above-right"},
+          {"type": "point", "at": [120, 1], "on": ["t"], "label": "\\((120, 1)\\)", "pos": "above-right"}
+        ]
+      }
+    },
     "remember": "In \\(y = \\frac{k}{x}\\), \\(x \\times y\\) stays the same, so when one doubles the other halves.",
     "a": {
       "q": "\\(y\\) varies inversely with \\(x\\). When \\(x = 4\\), \\(y = 12\\). What is \\(y\\) when \\(x = 8\\)?",
@@ -5965,6 +6225,21 @@ MADE_BANKS.mat = {
       "On a distance-time graph, time is across and distance is up. The gradient (rise \\(\\div\\) run) is the speed, so a steeper line means a faster speed.",
       "A flat line means distance is not changing, so the object is stopped. A line going back down towards zero means the object is returning to the start."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A distance-time graph of the cyclist's day. The line rises from 0 km to 45 km over the first 3 hours, a speed of 15 km/h. It is flat from 3 to 4 hours, so the cyclist is stopped. It then goes back down to 0 km at 6 hours, which is a steeper line, so the ride back to the start is faster.",
+        "x": {"min": 0, "max": 7, "label": "Time (h)", "step": 1},
+        "y": {"min": 0, "max": 60, "label": "Distance (km)", "step": 10},
+        "grid": true,
+        "items": [
+          {"type": "curve", "id": "d", "points": [[0, 0], [3, 45], [4, 45], [6, 0]]},
+          {"type": "text", "at": [1.5, 22.5], "label": "15 km/h", "pos": "above-left"},
+          {"type": "text", "at": [3.5, 45], "label": "stopped", "pos": "above"},
+          {"type": "text", "at": [5, 28], "label": "returning", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Speed \\(=\\) distance \\(\\div\\) time, and on a distance-time graph the gradient is the speed.",
     "a": {
       "q": "A train travels 240 km at a steady speed of 80 km/h. How long does the trip take?",
@@ -6329,6 +6604,56 @@ MADE_BANKS.mat = {
       ],
       "Example: the points on a scatterplot of hours of study and test mark form a tight, upward straight-line pattern. That is a strong, positive, linear relationship."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A scatterplot whose points rise from left to right along a curve that gets steeper, not a straight line. This is a non-linear relationship.",
+        "x": {"min": 0, "max": 10, "label": "\\(x\\)", "step": 2},
+        "y": {"min": 0, "max": 10, "label": "\\(y\\)", "step": 2},
+        "items": [
+          {"type": "point", "at": [0.5, 0.8]},
+          {"type": "point", "at": [1.3, 0.5]},
+          {"type": "point", "at": [2, 1.1]},
+          {"type": "point", "at": [2.8, 0.9]},
+          {"type": "point", "at": [3.5, 1.6]},
+          {"type": "point", "at": [4.2, 1.9]},
+          {"type": "point", "at": [5, 2.4]},
+          {"type": "point", "at": [5.6, 3.4]},
+          {"type": "point", "at": [6.3, 3.8]},
+          {"type": "point", "at": [7, 5.1]},
+          {"type": "point", "at": [7.6, 5.6]},
+          {"type": "point", "at": [8.2, 7]},
+          {"type": "point", "at": [8.8, 7.6]},
+          {"type": "point", "at": [9.4, 9]}
+        ],
+        "grid": true
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "A scatterplot of hours of study against test mark. The points rise from left to right and sit tightly around a straight line, so the relationship is strong, positive and linear.",
+        "x": {"min": 0, "max": 10, "label": "Hours", "step": 2},
+        "y": {"min": 0, "max": 100, "label": "Mark", "step": 20},
+        "grid": true,
+        "items": [
+          {"type": "point", "at": [1, 38]},
+          {"type": "point", "at": [1.5, 44]},
+          {"type": "point", "at": [2, 45]},
+          {"type": "point", "at": [2.5, 50]},
+          {"type": "point", "at": [3, 51]},
+          {"type": "point", "at": [3.5, 57]},
+          {"type": "point", "at": [4, 58]},
+          {"type": "point", "at": [4.5, 64]},
+          {"type": "point", "at": [5, 63]},
+          {"type": "point", "at": [5.5, 69]},
+          {"type": "point", "at": [6, 71]},
+          {"type": "point", "at": [6.5, 74]},
+          {"type": "point", "at": [7, 77]},
+          {"type": "point", "at": [7.5, 82]},
+          {"type": "point", "at": [8, 83]},
+          {"type": "point", "at": [8.5, 88]}
+        ]
+      }
+    },
     "remember": "A full description names all three: how strong, which way and what shape.",
     "a": {
       "q": "A scatterplot shows the age of a car and its resale value. The points fall from left to right, close to a straight line. How is the relationship described?",
@@ -6385,6 +6710,45 @@ MADE_BANKS.mat = {
       "To predict, put a value of \\(x\\) into the equation and work out \\(y\\). The line is used to predict \\(y\\) from \\(x\\), not \\(x\\) from \\(y\\).",
       "Example: a line for a bakery is \\(y = 20 + 3x\\), where \\(x\\) is the temperature in °C and \\(y\\) is the number of iced drinks sold. At \\(x = 30\\), \\(y = 20 + 3 \\times 30 = 110\\) drinks."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A scatterplot of temperature in °C against iced drinks sold for the bakery, with the regression line \\(y = 20 + 3x\\) drawn through the points. The line crosses the y-axis at 20. At \\(x = 30\\) the line gives \\(y = 110\\) drinks, marked as the point \\((30, 110)\\).",
+        "x": {"min": 0, "max": 50, "label": "Temp (°C)", "step": 10},
+        "y": {"min": 0, "max": 160, "label": "Drinks", "step": 20},
+        "grid": true,
+        "items": [
+          {"type": "point", "at": [14, 58]},
+          {"type": "point", "at": [16, 72]},
+          {"type": "point", "at": [18, 80]},
+          {"type": "point", "at": [20, 76]},
+          {"type": "point", "at": [22, 90]},
+          {"type": "point", "at": [24, 87]},
+          {"type": "point", "at": [26, 93]},
+          {"type": "point", "at": [28, 107]},
+          {"type": "point", "at": [32, 112]},
+          {"type": "point", "at": [34, 127]},
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "20 + 3x",
+            "domain": [0, 45],
+            "label": "\\(y = 20 + 3x\\)",
+            "labelAt": 5,
+            "pos": "below-right"
+          },
+          {"type": "guide", "at": [30, 110], "xLabel": "", "yLabel": ""},
+          {
+            "type": "point",
+            "at": [30, 110],
+            "on": ["f"],
+            "open": true,
+            "label": "\\((30, 110)\\)",
+            "pos": "above-left"
+          }
+        ]
+      }
+    },
     "remember": "Put \\(x\\) into \\(y = a + bx\\) to predict \\(y\\). The gradient is the change in \\(y\\) for each 1 increase in \\(x\\).",
     "a": {
       "q": "A regression line is \\(y = 20 + 3x\\), where \\(x\\) is the temperature in °C and \\(y\\) is the iced drinks sold. What does the gradient 3 tell us?",
@@ -6419,6 +6783,42 @@ MADE_BANKS.mat = {
       ],
       "Example: a line is fitted to data for \\(x\\) from 10 to 40. Predicting at \\(x = 25\\) is interpolation. Predicting at \\(x = 60\\) is extrapolation."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A scatterplot with data from \\(x = 10\\) to \\(x = 40\\), shaded as the range of the data, and a line of best fit drawn on past it. The prediction at \\(x = 25\\) is inside the range, so it is interpolation. The prediction at \\(x = 60\\) is outside the range, so it is extrapolation.",
+        "x": {"min": 0, "max": 70, "label": "\\(x\\)", "step": 10},
+        "y": {"min": 0, "max": 10, "label": "\\(y\\)"},
+        "items": [
+          {
+            "type": "shade",
+            "poly": [[10, 0], [40, 0], [40, 10], [10, 10]],
+            "label": "range of the data",
+            "at": [25, 9.2]
+          },
+          {"type": "point", "at": [10, 2.3]},
+          {"type": "point", "at": [13, 1.8]},
+          {"type": "point", "at": [16, 2.9]},
+          {"type": "point", "at": [19, 2.6]},
+          {"type": "point", "at": [22, 3.6]},
+          {"type": "point", "at": [28, 3.9]},
+          {"type": "point", "at": [31, 4.3]},
+          {"type": "point", "at": [34, 4.1]},
+          {"type": "point", "at": [37, 5]},
+          {"type": "point", "at": [40, 4.9]},
+          {"type": "fn", "id": "f", "expr": "1 + 0.1x", "domain": [0, 70]},
+          {
+            "type": "point",
+            "at": [25, 3.5],
+            "on": ["f"],
+            "open": true,
+            "label": "interpolation",
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [60, 7], "on": ["f"], "open": true, "label": "extrapolation", "pos": "above-left"}
+        ]
+      }
+    },
     "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
     "a": {
       "q": "A line of best fit is drawn using data with x-values from 20 to 50. Which prediction is an example of extrapolation?",
@@ -6590,6 +6990,31 @@ MADE_BANKS.mat = {
       "The mean, median and mode are all equal, and they sit at the peak. For example, if the mean mark is 60, the median and mode are also 60.",
       "Scores near the centre are common. Scores far from the centre, in either tail, are rare."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A normal curve of marks with mean 60. It is a symmetric bell with one peak at 60, where the mean, median and mode all sit. The curve falls away evenly on both sides into the two tails.",
+        "x": {"min": 20, "max": 100, "label": "Mark", "step": 10},
+        "y": {"min": 0, "max": 0.05},
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}",
+            "domain": [20, 100]
+          },
+          {"type": "guide", "at": [60, 0.0399], "xLabel": ""},
+          {
+            "type": "point",
+            "at": [60, 0.0399],
+            "on": ["f"],
+            "is": "turning point",
+            "label": "mean, median and mode",
+            "pos": "above"
+          }
+        ]
+      }
+    },
     "remember": "A normal distribution is a symmetric bell with the mean, median and mode all at the centre.",
     "a": {
       "q": "The heights of a large group of students follow a normal distribution with a mean of 168 cm. What is the median height?",
@@ -6618,6 +7043,25 @@ MADE_BANKS.mat = {
       "The distribution is symmetric, so the percentages split evenly either side of the mean. Within 1 standard deviation, about 34% lie on each side.",
       "Example: test marks have mean 60 and standard deviation 10. Within 2 standard deviations means 40 to 80, so about 95% of marks are in that range. The other 5% are split evenly, so about 2.5% score above 80."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A normal curve of test marks with mean 60 and standard deviation 10. The area under the curve from 40 to 80, within 2 standard deviations of the mean, is shaded and holds about 95% of marks. The two tails, below 40 and above 80, each hold about 2.5%.",
+        "x": {"min": 20, "max": 100, "label": "Mark", "step": 10},
+        "y": {"min": 0, "max": 0.05},
+        "items": [
+          {"type": "shade", "under": "f", "span": [40, 80], "label": "about 95%", "at": [60, 0.017]},
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}",
+            "domain": [20, 100]
+          },
+          {"type": "text", "at": [30, 0.004], "label": "2.5%", "pos": "above"},
+          {"type": "text", "at": [90, 0.004], "label": "2.5%", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Within 1, 2 and 3 standard deviations of the mean: about 68%, 95% and 99.7%.",
     "a": {
       "q": "Heights of Year 12 students are normally distributed, with mean 170 cm and standard deviation 8 cm. About what percentage of heights lie between 154 cm and 186 cm?",
@@ -9413,6 +9857,36 @@ MADE_BANKS.mat = {
       "A line graph shows a trend. A line going up means the values rise over time. A line going down means they fall. A flat line means no change.",
       "A pie chart shows parts of a whole. A bigger slice is a bigger share. Example: a pie chart of 200 students shows 25% walk to school. 25% of 200 is 50 students."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "A bar graph of the favourite sport of a class. The bars reach 12 for soccer, 8 for netball, 10 for cricket and 6 for basketball on the Students scale.",
+        "x": {"label": "Sport"},
+        "y": {"min": 0, "max": 14, "step": 2, "label": "Students"},
+        "bars": [["Soccer", 12], ["Netball", 8], ["Cricket", 10], ["Basketball", 6]]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "A line graph of visitors each day for 7 days. The line goes up from 10 on day 1 to 30 on day 3, so visitors rise. It stays flat at 30 from day 3 to day 5, so there is no change. Then it goes down to 10 on day 7, so visitors fall.",
+        "x": {"min": 0, "max": 8, "label": "Day", "step": 1},
+        "y": {"min": 0, "max": 40, "label": "Visitors", "step": 10},
+        "grid": true,
+        "items": [
+          {"type": "curve", "id": "v", "points": [[1, 10], [2, 20], [3, 30], [4, 30], [5, 30], [6, 20], [7, 10]]},
+          {"type": "point", "at": [1, 10], "on": ["v"]},
+          {"type": "point", "at": [2, 20], "on": ["v"]},
+          {"type": "point", "at": [3, 30], "on": ["v"]},
+          {"type": "point", "at": [4, 30], "on": ["v"]},
+          {"type": "point", "at": [5, 30], "on": ["v"]},
+          {"type": "point", "at": [6, 20], "on": ["v"]},
+          {"type": "point", "at": [7, 10], "on": ["v"]},
+          {"type": "text", "at": [1.6, 24], "label": "rise", "pos": "above-left"},
+          {"type": "text", "at": [4, 32], "label": "no change", "pos": "above"},
+          {"type": "text", "at": [6.4, 24], "label": "fall", "pos": "above-right"}
+        ]
+      }
+    },
     "remember": "Read the labels and scale first, then find the value, trend or share.",
     "a": {
       "q": "A pie chart shows how 80 students get to school. The bus slice is 50%. How many students take the bus?",
@@ -9445,6 +9919,40 @@ MADE_BANKS.mat = {
       ],
       "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A column graph titled Students per year level, with gaps between the columns. Year level is on the horizontal axis and Students on the vertical axis, from 0 to 180 in steps of 20. Year 7 has 150, Year 8 has 140, Year 9 has 130, Year 10 has 120, Year 11 has 100 and Year 12 has 90.",
+        "x": {"min": 6.3, "max": 13.2, "label": "Year", "step": 1},
+        "y": {"min": 0, "max": 180, "label": "Students", "step": 20},
+        "items": [
+          {"type": "shade", "poly": [[6.7, 0], [6.7, 150], [7.3, 150], [7.3, 0]]},
+          {"type": "shade", "poly": [[7.7, 0], [7.7, 140], [8.3, 140], [8.3, 0]]},
+          {"type": "shade", "poly": [[8.7, 0], [8.7, 130], [9.3, 130], [9.3, 0]]},
+          {"type": "shade", "poly": [[9.7, 0], [9.7, 120], [10.3, 120], [10.3, 0]]},
+          {"type": "shade", "poly": [[10.7, 0], [10.7, 100], [11.3, 100], [11.3, 0]]},
+          {"type": "shade", "poly": [[11.7, 0], [11.7, 90], [12.3, 90], [12.3, 0]]},
+          {"type": "text", "at": [9.7, 178], "label": "Students per year level", "pos": "below"}
+        ]
+      },
+      "2": {
+        "kind": "graph",
+        "alt": "A line graph titled Temperature each month, for months 1 to 6 (January to June). Month is on the horizontal axis and Temperature in degrees Celsius on the vertical axis, from 0 to 35 in steps of 5. The points 26, 25, 22, 18, 15 and 12 are joined by a line, which falls as the months go by.",
+        "x": {"min": 0.5, "max": 7.3, "label": "Month", "step": 1},
+        "y": {"min": 0, "max": 35, "label": "Temperature (°C)", "step": 5},
+        "grid": true,
+        "items": [
+          {"type": "curve", "id": "t", "points": [[1, 26], [2, 25], [3, 22], [4, 18], [5, 15], [6, 12]]},
+          {"type": "point", "at": [1, 26], "on": ["t"]},
+          {"type": "point", "at": [2, 25], "on": ["t"]},
+          {"type": "point", "at": [3, 22], "on": ["t"]},
+          {"type": "point", "at": [4, 18], "on": ["t"]},
+          {"type": "point", "at": [5, 15], "on": ["t"]},
+          {"type": "point", "at": [6, 12], "on": ["t"]},
+          {"type": "text", "at": [4, 34], "label": "Temperature each month", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Match the graph to the data, then add a title and clear labels.",
     "a": {
       "q": "Which graph best shows a town's rainfall each month over one year?",
@@ -9482,6 +9990,17 @@ MADE_BANKS.mat = {
         "if a picture is made twice as tall and also twice as wide, its area is 4 times bigger. Example: sales double from 10 to 20, but the picture looks 4 times as large."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "A column graph of a shop's sales in March, April and May: 52, 54 and 56. The vertical axis starts at 50, not 0, so the May column looks 3 times as tall as the March column, though sales rose by only 4.",
+        "x": {"label": "Month"},
+        "y": {"min": 50, "max": 57, "step": 1, "label": "Sales"},
+        "truncated": true,
+        "bars": [["March", 52], ["April", 54], ["May", 56]]
+      }
+    },
     "remember": "Read the axis numbers first. Then ask if the shape matches the real change.",
     "a": {
       "q": "A column graph of phone sales starts its vertical axis at 90, not 0. Sales of 100 and 110 are shown. What is the effect?",
@@ -9791,6 +10310,35 @@ MADE_BANKS.mat = {
       ],
       "To plot, find two points. At \\(n = 0\\), \\(C = 20\\). At \\(n = 4\\), \\(C = 20 + 5 \\times 4 = 40\\). Mark \\((0, 20)\\) and \\((4, 40)\\), then join them with a straight line."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The graph of \\(C = 20 + 5n\\), with \\(n\\) across and \\(C\\) up. The points \\((0, 20)\\) and \\((4, 40)\\) are marked and joined by a straight line. The line starts at 20 on the vertical axis and rises 5 for each 1 step across.",
+        "x": {"min": 0, "max": 7, "label": "\\(n\\)", "step": 1},
+        "y": {"min": 0, "max": 60, "label": "\\(C\\)", "step": 10},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "20 + 5x",
+            "domain": [0, 7],
+            "label": "\\(C = 20 + 5n\\)",
+            "labelAt": 2.5,
+            "pos": "below-right"
+          },
+          {
+            "type": "point",
+            "at": [0, 20],
+            "label": "\\((0, 20)\\)",
+            "pos": "below-right",
+            "on": ["f"],
+            "is": "y-intercept"
+          },
+          {"type": "point", "at": [4, 40], "label": "\\((4, 40)\\)", "pos": "above-left", "on": ["f"]}
+        ]
+      }
+    },
     "remember": "The start is where the line crosses the vertical axis. The rate is how much it rises for each 1 step across.",
     "a": {
       "q": "A taxi fare is \\(F = 4 + 3d\\), where \\(d\\) is the distance in km. What does the graph of \\(F\\) against \\(d\\) look like?",
@@ -10089,6 +10637,48 @@ MADE_BANKS.mat = {
       ],
       "Example: a line is fitted to data for \\(x\\) from 10 to 40. Predicting at \\(x = 25\\) is interpolation. Predicting at \\(x = 60\\) is extrapolation."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A scatterplot with data for \\(x\\) from 10 to 40 and a line of best fit drawn solid through them. The line continues dotted beyond the data. A point on the line at \\(x = 25\\), inside the data, is labelled interpolation; a point at \\(x = 60\\), outside the data, is labelled extrapolation.",
+        "x": {"min": 0, "max": 70, "label": "\\(x\\)", "step": 10},
+        "y": {"min": 0, "max": 150, "label": "\\(y\\)", "step": 25},
+        "grid": true,
+        "items": [
+          {"type": "point", "at": [10, 26]},
+          {"type": "point", "at": [13, 39]},
+          {"type": "point", "at": [17, 41]},
+          {"type": "point", "at": [21, 55]},
+          {"type": "point", "at": [28, 63]},
+          {"type": "point", "at": [31, 75]},
+          {"type": "point", "at": [35, 77]},
+          {"type": "point", "at": [40, 92]},
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "2x + 10",
+            "domain": [10, 40],
+            "label": "line of best fit",
+            "labelAt": 33,
+            "pos": "below-right"
+          },
+          {
+            "type": "fn",
+            "id": "g",
+            "expr": "2x + 10",
+            "domain": [40, 66],
+            "style": "dot",
+            "label": "beyond the data",
+            "labelAt": 44,
+            "pos": "below-right"
+          },
+          {"type": "guide", "at": [25, 60], "xLabel": ""},
+          {"type": "guide", "at": [60, 130], "xLabel": ""},
+          {"type": "point", "at": [25, 60], "open": true, "label": "interpolation", "pos": "above-left", "on": ["f"]},
+          {"type": "point", "at": [60, 130], "open": true, "label": "extrapolation", "pos": "above-left", "on": ["g"]}
+        ]
+      }
+    },
     "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
     "a": {
       "q": "A line of best fit is fitted to data with x-values from 20 to 50. Which prediction is extrapolation?",
@@ -11657,6 +12247,19 @@ MADE_BANKS.mat = {
         "An outlier is a value far from the rest. Outliers pull the mean and standard deviation more than the median and IQR, so with skew or outliers, median and IQR are the better pair."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A negatively skewed distribution. Most values are bunched at the right, where the curve peaks, and the tail stretches out to the left.",
+        "x": {"min": 0, "max": 10, "label": "Value"},
+        "y": {"min": 0, "max": 0.7, "label": "Frequency"},
+        "items": [
+          {"type": "fn", "id": "f", "expr": "(10 - x)^{2}e^{-(10 - x)}", "domain": [0, 10]},
+          {"type": "arrow", "from": [4.6, 0.2], "to": [1.6, 0.2], "label": "tail", "pos": "above"},
+          {"type": "text", "at": [8, 0.56], "label": "most values", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Describe shape, centre, spread and outliers, and use median and IQR when data is skewed.",
     "a": {
       "q": "Most scores in a histogram are bunched at the left, with a long tail to the right. What is the shape?",
@@ -11680,6 +12283,17 @@ MADE_BANKS.mat = {
       "A value exactly on a fence is not an outlier. It must be beyond the fence, so 50 is not an outlier but 51 is.",
       "On a boxplot, outliers are drawn as separate points. The whiskers stop at the smallest and largest values that are not outliers."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "A boxplot with the box from \\(Q_{1} = 20\\) to \\(Q_{3} = 32\\) and the median at 26. The fences are 2 and 50. The lower whisker stops at 8. The upper whisker stops at 50, which is on the fence, so it is not an outlier. The value 56 is beyond the fence and is drawn as a separate point.",
+        "x": {"min": 0, "max": 60, "step": 10, "label": "Value"},
+        "outliers": true,
+        "sets": [{"data": [8, 15, 20, 22, 24, 26, 29, 31, 32, 50, 56]}],
+        "stats": {"q1": 20, "q3": 32, "iqr": 12}
+      }
+    },
     "remember": "Find the IQR, build the fences with \\(1.5 \\times \\text{IQR}\\), and plot anything beyond them as a point.",
     "a": {
       "q": "A data set has \\(Q_{1} = 40\\) and \\(Q_{3} = 52\\). What is the upper fence for outliers?",
@@ -11703,6 +12317,20 @@ MADE_BANKS.mat = {
       "The distribution is symmetric, so the percentages split evenly either side of the mean. Within 1 standard deviation, about 34% lie on each side.",
       "Example: test marks have mean 60 and standard deviation 10. Within 2 standard deviations means 40 to 80, so about 95% of marks are in that range. The other 5% are split evenly, so about 2.5% score above 80."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A bell-shaped curve of test marks with mean 60 and standard deviation 10. The area from 40 to 80, within 2 standard deviations, is shaded and labelled 95%. Each end beyond it is labelled 2.5%.",
+        "x": {"min": 20, "max": 100, "label": "Mark", "step": 10},
+        "y": {"min": 0, "max": 0.05},
+        "items": [
+          {"type": "shade", "under": "f", "span": [40, 80], "label": "95%", "at": [60, 0.016]},
+          {"type": "fn", "id": "f", "expr": "\\frac{1}{10\\sqrt{2\\pi}}e^{-\\frac{(x - 60)^{2}}{200}}"},
+          {"type": "text", "at": [32, 0.009], "label": "2.5%", "pos": "above"},
+          {"type": "text", "at": [88, 0.009], "label": "2.5%", "pos": "above"}
+        ]
+      }
+    },
     "remember": "The 68-95-99.7% rule: within 1, 2 and 3 standard deviations of the mean lie about 68%, 95% and 99.7%.",
     "a": {
       "q": "The masses of apples from an orchard are bell-shaped, with mean 150 g and standard deviation 10 g. About what percentage of apples have a mass between 130 g and 170 g?",
@@ -11729,6 +12357,29 @@ MADE_BANKS.mat = {
       ["Response variable", "the variable that may respond to the change. It goes on the y-axis (vertical)."],
       "Example: Sam records hours of study and test mark for 12 students. Hours may explain the mark, so hours go on the x-axis and mark on the y-axis. A student with 3 hours and a mark of 60 is plotted at (3, 60)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A scatterplot of hours of study (Hours, on the x-axis) against test mark (Mark, on the y-axis) for 12 students. Each dot is one student. Marks tend to rise with hours. The student with 3 hours and a mark of 60 is labelled \\((3, 60)\\).",
+        "x": {"min": 0, "max": 10, "label": "Hours", "step": 2},
+        "y": {"min": 0, "max": 100, "label": "Mark", "step": 20},
+        "grid": true,
+        "items": [
+          {"type": "point", "at": [1, 45]},
+          {"type": "point", "at": [1.5, 50]},
+          {"type": "point", "at": [2, 48]},
+          {"type": "point", "at": [2.5, 55]},
+          {"type": "point", "at": [3.5, 58]},
+          {"type": "point", "at": [4, 66]},
+          {"type": "point", "at": [4.5, 70]},
+          {"type": "point", "at": [5, 68]},
+          {"type": "point", "at": [6, 78]},
+          {"type": "point", "at": [6.5, 75]},
+          {"type": "point", "at": [7, 85]},
+          {"type": "point", "at": [3, 60], "label": "\\((3, 60)\\)", "pos": "above-left"}
+        ]
+      }
+    },
     "remember": "Plot each pair as a point, with the explanatory variable on the x-axis.",
     "a": {
       "q": "A teacher compares each student's hours of sleep the night before with their number of mistakes on a maths quiz. Which variable is placed on the horizontal axis of the scatterplot?",
@@ -11790,6 +12441,15 @@ MADE_BANKS.mat = {
       "If the medians are clearly different, there is an association between the two variables. A difference is clear when it is large compared with the spread of the data. Similar medians alone do not rule out an association, as spread or shape may still differ.",
       "Example: Group A has a median of 40 and Group B has a median of 55, and both have an IQR of about 5. The medians are far apart compared with the spread, so the numerical variable is associated with the group."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "Parallel boxplots of the same numerical variable for two groups. Group A has a median of 40 and Group B a median of 55. Both boxes are about 5 wide, so the medians are far apart compared with the spread.",
+        "x": {"min": 30, "max": 65, "step": 5, "label": "Value"},
+        "sets": [{"label": "Group A", "five": [33, 38, 40, 43, 47]}, {"label": "Group B", "five": [48, 52, 55, 57, 62]}]
+      }
+    },
     "remember": "Compare the centre, spread and shape of each group. Medians that are far apart compared with the spread suggest an association.",
     "a": {
       "q": "Parallel boxplots show the times to run 1 km for Year 9 students (median 5.5 minutes, IQR 0.2) and Year 12 students (median 4.5 minutes, IQR 0.2). What does this suggest?",
@@ -11885,6 +12545,29 @@ MADE_BANKS.mat = {
       ],
       "Example: cost \\(= 40 + 6 \\times\\) hours, with cost in dollars and time in hours. Each extra hour adds $6 to the predicted cost. At 0 hours the predicted cost is $40."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The fitted line cost \\(= 40 + 6 \\times\\) hours. It meets the cost axis at $40, the intercept, the predicted cost at 0 hours. A small step under the line shows that 1 more hour adds $6 to the predicted cost, the slope.",
+        "x": {"min": 0, "max": 6, "label": "Hours", "step": 1},
+        "y": {"min": 0, "max": 80, "label": "Cost ($)", "step": 20},
+        "grid": true,
+        "items": [
+          {"type": "shade", "poly": [[3, 58], [4, 58], [4, 64]]},
+          {"type": "fn", "id": "f", "expr": "40 + 6x", "domain": [0, 6]},
+          {
+            "type": "point",
+            "at": [0, 40],
+            "on": ["f"],
+            "is": "y-intercept",
+            "label": "intercept $40",
+            "pos": "below-right"
+          },
+          {"type": "text", "at": [3.5, 58], "label": "1 hour", "pos": "below"},
+          {"type": "text", "at": [4, 61], "label": "$6", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Slope: change in \\(y\\) per 1 unit of \\(x\\). Intercept: predicted \\(y\\) when \\(x\\) is 0.",
     "a": {
       "q": "A line predicts a plant's height (cm) from days of growth: height \\(= 12 + 3 \\times\\) days. What does the slope of 3 mean?",
@@ -11946,6 +12629,50 @@ MADE_BANKS.mat = {
       "A residual plot graphs the residuals against \\(x\\). A plot with no clear pattern, with points scattered randomly about zero, supports a linear model.",
       "A curve or other clear pattern in the residual plot shows a linear model is not suitable. Worked example: actual \\(y = 40\\) and predicted \\(\\hat{y} = 46\\) gives a residual of \\(40 - 46 = -6\\)."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A regression line with two points marked. One point is above the line, with an arrow up from the line to it: a positive residual. The other is below the line, with an arrow down from the line to it: a negative residual.",
+        "x": {"min": 0, "max": 10, "label": "\\(x\\)"},
+        "y": {"min": 0, "max": 10, "label": "\\(y\\)"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "1 + 0.6x",
+            "domain": [0, 10],
+            "label": "regression line",
+            "labelAt": 9,
+            "pos": "above-left"
+          },
+          {"type": "arrow", "from": [4.5, 3.7], "to": [4.5, 7.2], "label": "positive residual", "pos": "left"},
+          {"type": "point", "at": [4.5, 7.2]},
+          {"type": "arrow", "from": [5.5, 4.3], "to": [5.5, 1.3], "label": "negative residual", "pos": "right"},
+          {"type": "point", "at": [5.5, 1.3]}
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "A residual plot with residuals on the vertical axis against \\(x\\). The points are scattered above and below the zero line with no clear pattern, which supports a linear model.",
+        "x": {"min": 0, "max": 10, "label": "\\(x\\)"},
+        "y": {"min": -4, "max": 4, "label": "Residual", "step": 2},
+        "items": [
+          {"type": "fn", "id": "z", "expr": "0", "domain": [0, 10]},
+          {"type": "point", "at": [1, 1.2]},
+          {"type": "point", "at": [1.5, 0.6]},
+          {"type": "point", "at": [2.5, -1.8]},
+          {"type": "point", "at": [3, 2.1]},
+          {"type": "point", "at": [4, -0.9]},
+          {"type": "point", "at": [4.5, -2.4]},
+          {"type": "point", "at": [5.5, 1.5]},
+          {"type": "point", "at": [6, -0.5]},
+          {"type": "point", "at": [7, 2.3]},
+          {"type": "point", "at": [7.5, 0.4]},
+          {"type": "point", "at": [8.5, -1.6]},
+          {"type": "point", "at": [9, -0.9]}
+        ]
+      }
+    },
     "remember": "Residual \\(=\\) actual \\(-\\) predicted. A random scatter supports a line.",
     "a": {
       "q": "A line predicts a plant height of 25 cm. The plant is actually 22 cm tall. What is the residual?",
@@ -13274,6 +14001,95 @@ MADE_BANKS.mat = {
         "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to \\(y = x^{2}\\) at \\(x = 0\\) is horizontal, so the rate there is 0."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve rises, to the right of its lowest point. The tangent touches the curve at one dot and slopes up, so its gradient is positive.",
+        "x": {"min": -0.4, "max": 6, "label": "\\(x\\)"},
+        "y": {"min": -0.4, "max": 3.6, "label": "\\(y\\)"},
+        "equal": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+            "domain": [0.5, 5.5],
+            "label": "\\(y = f(x)\\)",
+            "labelAt": 1,
+            "pos": "above-right"
+          },
+          {
+            "type": "fn",
+            "id": "t",
+            "style": "dash",
+            "expr": "x - 2.75",
+            "domain": [3.44, 5.56],
+            "label": "tangent",
+            "labelAt": 3.6,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [4.5, 1.75], "on": ["f", "t"]}
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent where the curve falls, to the left of its lowest point. The tangent touches the curve at one dot and slopes down, so its gradient is negative.",
+        "x": {"min": -0.4, "max": 6, "label": "\\(x\\)"},
+        "y": {"min": -0.4, "max": 3.6, "label": "\\(y\\)"},
+        "equal": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+            "domain": [0.5, 5.5],
+            "label": "\\(y = f(x)\\)",
+            "labelAt": 5,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "t",
+            "style": "dash",
+            "expr": "-x + 3.25",
+            "domain": [0.44, 2.56],
+            "label": "tangent",
+            "labelAt": 2.45,
+            "pos": "below-left"
+          },
+          {"type": "point", "at": [1.5, 1.75], "on": ["f", "t"]}
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "The concave up curve \\(y = f(x)\\) with one dashed tangent at its lowest point. The tangent touches the curve at one dot and is horizontal, so its gradient is zero.",
+        "x": {"min": -0.4, "max": 6, "label": "\\(x\\)"},
+        "y": {"min": -0.4, "max": 3.6, "label": "\\(y\\)"},
+        "equal": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "\\frac{(x - 3)^{2}}{3} + 1",
+            "domain": [0.5, 5.5],
+            "label": "\\(y = f(x)\\)",
+            "labelAt": 5,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "t",
+            "style": "dash",
+            "expr": "1",
+            "domain": [1.5, 4.5],
+            "label": "tangent",
+            "labelAt": 4.3,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [3, 1], "on": ["f", "t"]}
+        ]
+      }
+    },
     "remember": "Tangent up is positive, down is negative, horizontal is zero.",
     "a": {
       "q": "The tangent to a curve at point \\(P\\) is horizontal. What does this tell you about the curve at \\(P\\)?",
@@ -18112,6 +18928,51 @@ MADE_BANKS.mat = {
         "Structural change is a sudden, lasting shift, such as a new road changing visitor numbers for good. An outlier is a single value far from the rest."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A time series of sales over 16 quarters, 4 years. The values peak in the first quarter of every year, a pattern that repeats each year, which is seasonality. A dotted trend line rises steadily under the ups and downs, showing a long-term rise.",
+        "x": {"min": 0, "max": 20, "label": "Quarter", "step": 4},
+        "y": {"min": 0, "max": 50, "label": "Sales", "step": 10},
+        "items": [
+          {
+            "type": "curve",
+            "id": "s",
+            "points": [
+              [1, 27],
+              [2, 22],
+              [3, 17],
+              [4, 24],
+              [5, 31],
+              [6, 26],
+              [7, 21],
+              [8, 28],
+              [9, 35],
+              [10, 30],
+              [11, 25],
+              [12, 32],
+              [13, 39],
+              [14, 34],
+              [15, 29],
+              [16, 36]
+            ],
+            "label": "sales",
+            "labelAt": 13,
+            "pos": "above"
+          },
+          {
+            "type": "fn",
+            "id": "t",
+            "expr": "20 + x",
+            "domain": [1, 16],
+            "style": "dot",
+            "label": "trend",
+            "labelAt": 16,
+            "pos": "right"
+          }
+        ]
+      }
+    },
     "remember": "Trend is long-term, seasonality repeats on a fixed period, and a cycle repeats without one.",
     "a": {
       "q": "Ice cream sales at a kiosk in Geelong peak every summer and drop every winter, year after year. Which feature is this?",
@@ -18934,6 +19795,32 @@ MADE_BANKS.mat = {
       "To find which side to shade, pick a test point not on the line, such as (0, 0), and put it into the inequality. If it makes the inequality true, shade that side. If not, shade the other side.",
       "Example: for \\(y > 2x + 1\\), test (0, 0). \\(0 > 2 \\times 0 + 1\\) gives \\(0 > 1\\), which is false. So shade the side that does not contain (0, 0), with a dashed line."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The boundary line \\(y = 2x + 1\\) is drawn dashed, because points on it do not count. The test point \\((0, 0)\\) is below the line, so the shaded region is the side above the line, which is \\(y > 2x + 1\\).",
+        "x": {"min": -3, "max": 3, "label": "\\(x\\)"},
+        "y": {"min": -3, "max": 5, "label": "\\(y\\)"},
+        "items": [
+          {
+            "type": "shade",
+            "poly": [[-3, -3], [-2, -3], [2, 5], [-3, 5]],
+            "label": "\\(y > 2x + 1\\)",
+            "at": [-1.6, 3.3]
+          },
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "2x + 1",
+            "style": "dash",
+            "label": "\\(y = 2x + 1\\)",
+            "labelAt": 0.8,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [0, 0], "label": "test point \\((0, 0)\\)", "pos": "below-right"}
+        ]
+      }
+    },
     "remember": "Draw the boundary line, then use a test point to choose the side to shade.",
     "a": {
       "q": "Which point lies in the region \\(y > 2x + 1\\)?",
@@ -18962,6 +19849,38 @@ MADE_BANKS.mat = {
       "To solve: graph both lines, read the crossing point \\((x, y)\\), then check it by putting \\(x\\) and \\(y\\) into both equations.",
       "Example: \\(y = x + 1\\) and \\(y = 7 - x\\). The lines cross at \\((3, 4)\\). Check: \\(4 = 3 + 1\\) is true, and \\(7 - 3 = 4\\) is true. So \\(x = 3\\) and \\(y = 4\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The lines \\(y = x + 1\\) and \\(y = 7 - x\\) cross at \\((3, 4)\\). That point is on both lines, so \\(x = 3\\) and \\(y = 4\\) make both equations true.",
+        "x": {"min": 0, "max": 7, "label": "\\(x\\)", "step": 1},
+        "y": {"min": 0, "max": 8, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "a",
+            "expr": "x + 1",
+            "domain": [0, 6.5],
+            "label": "\\(y = x + 1\\)",
+            "labelAt": 5.5,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "b",
+            "expr": "7 - x",
+            "domain": [0, 7],
+            "label": "\\(y = 7 - x\\)",
+            "labelAt": 5,
+            "pos": "above-right"
+          },
+          {"type": "guide", "at": [3, 4], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [3, 4], "on": ["a", "b"], "is": "intersection"},
+          {"type": "text", "at": [4.2, 4], "label": "\\((3, 4)\\)"}
+        ]
+      }
+    },
     "remember": "The solution is the crossing point, and it must work in both equations.",
     "a": {
       "q": "Two lines cross at the point \\((2, 5)\\). What is the solution of the pair of equations?",
@@ -19111,6 +20030,45 @@ MADE_BANKS.mat = {
       ],
       "To choose a model, check the differences first, then the ratios, then look for a turn in the values."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The three examples drawn against \\(x\\) from 0 to 4. Linear, through 4, 7, 10, 13, is a straight line. Exponential, through 3, 6, 12, 24, curves up more steeply each step. Quadratic, through 2, 5, 6, 5, 2, rises then falls, with its one turning point marked at \\((2, 6)\\).",
+        "x": {"min": 0, "max": 4.5, "label": "\\(x\\)", "step": 1},
+        "y": {"min": 0, "max": 26, "label": "\\(y\\)", "step": 5},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "l",
+            "expr": "3x + 4",
+            "domain": [0, 4],
+            "label": "linear",
+            "labelAt": 4,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "e",
+            "expr": "3(2)^{x}",
+            "domain": [0, 3.1],
+            "label": "exponential",
+            "labelAt": 2.5,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "q",
+            "expr": "-x^{2} + 4x + 2",
+            "domain": [0, 4],
+            "label": "quadratic",
+            "labelAt": 3.8,
+            "pos": "below-left"
+          },
+          {"type": "point", "at": [2, 6], "on": ["q"], "is": "turning point"}
+        ]
+      }
+    },
     "remember": "Equal differences suggest linear, equal ratios suggest exponential, and a rise then fall suggests quadratic.",
     "a": {
       "q": "As \\(x\\) goes 0, 1, 2, 3, the \\(y\\) values in a table are 5, 10, 20, 40. Which model suits the data best?",
@@ -19496,6 +20454,23 @@ MADE_BANKS.mat = {
       "To compare two data sets, draw both box plots on the same scale. Compare the centre (the medians), the spread (the box lengths and the whisker ends) and the shape.",
       "For shape, look at where the median sits in the box and which whisker is longer. A longer whisker on one side means the data stretches out further that way."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "A box plot of 11 quiz scores on a number line from 0 to 20. The left whisker starts at the minimum, 4. The box runs from Q1, 8, to Q3, 15, with the median line at 11. The right whisker ends at the maximum, 18.",
+        "x": {"min": 0, "max": 20, "step": 2, "label": "Quiz score"},
+        "sets": [{"data": [4, 6, 8, 9, 10, 11, 12, 14, 15, 17, 18]}],
+        "stats": {"min": 4, "q1": 8, "median": 11, "q3": 15, "max": 18}
+      },
+      "3": {
+        "kind": "chart",
+        "chart": "box",
+        "alt": "Box plots of the times, in seconds, two classes took to run 100 m, on the same scale. Class A: minimum 14, Q1 16, median 17, Q3 19, maximum 24. Class B: minimum 13, Q1 14, median 15, Q3 16, maximum 18. Class B has the lower median and a shorter box, so its times are faster and less spread out. Class A's right whisker is longer, so its times stretch out further to the slow side.",
+        "x": {"min": 12, "max": 26, "step": 2, "label": "Time (seconds)"},
+        "sets": [{"label": "Class A", "five": [14, 16, 17, 19, 24]}, {"label": "Class B", "five": [13, 14, 15, 16, 18]}]
+      }
+    },
     "remember": "The box holds about half the data. Compare medians for centre and box length for spread.",
     "a": {
       "q": "A box plot of test scores has a box from 55 to 75, with the median line at 62. Which statement is true?",
@@ -19535,6 +20510,29 @@ MADE_BANKS.mat = {
       ],
       "A strong association does not prove that one variable causes the other. Both may be affected by a third variable, or the link may be coincidence."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A scatterplot of hours of practice against test score for 12 students. Each dot is one student. As the hours of practice increase, the scores tend to increase, so the direction is positive.",
+        "x": {"min": 0, "max": 8, "label": "Hours", "step": 2},
+        "y": {"min": 40, "max": 90, "label": "Score", "step": 10},
+        "grid": true,
+        "items": [
+          {"type": "point", "at": [1, 48]},
+          {"type": "point", "at": [1.5, 52]},
+          {"type": "point", "at": [2, 50]},
+          {"type": "point", "at": [2.5, 58]},
+          {"type": "point", "at": [3, 55]},
+          {"type": "point", "at": [3.5, 62]},
+          {"type": "point", "at": [4, 66]},
+          {"type": "point", "at": [4.5, 63]},
+          {"type": "point", "at": [5, 70]},
+          {"type": "point", "at": [5.5, 74]},
+          {"type": "point", "at": [6, 72]},
+          {"type": "point", "at": [7, 80]}
+        ]
+      }
+    },
     "remember": "Describe direction, form and strength. A strong association does not prove cause.",
     "a": {
       "q": "A scatterplot has points that fall from left to right and sit close to a straight line. Which description fits best?",
@@ -20137,6 +21135,23 @@ MADE_BANKS.mat = {
       "Example: \\((-3, 2)\\) means 3 units left, then 2 units up. The order matters, so \\((2, -3)\\) is a different point. Any point on the x-axis has \\(y = 0\\).",
       "The rule \\(y = x + 1\\) gives the points \\((0, 1)\\), \\((1, 2)\\) and \\((2, 3)\\). As \\(x\\) goes up by 1, \\(y\\) goes up by the same amount each time (here, 1), so the points sit on a straight line."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A Cartesian plane with the origin marked. The point \\((-3, 2)\\) is reached by going 3 units left, then 2 units up. The point \\((2, -3)\\) is a different point, 2 units right and 3 units down.",
+        "x": {"min": -4, "max": 4, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -4, "max": 4, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "equal": true,
+        "items": [
+          {"type": "arrow", "from": [0, 0], "to": [-3, 0], "label": "3 left", "pos": "above"},
+          {"type": "arrow", "from": [-3, 0], "to": [-3, 2], "label": "2 up", "pos": "left"},
+          {"type": "point", "at": [0, 0], "label": "origin", "pos": "above-right"},
+          {"type": "point", "at": [-3, 2], "label": "\\((-3, 2)\\)", "pos": "above"},
+          {"type": "point", "at": [2, -3], "label": "\\((2, -3)\\)", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Write \\((x, y)\\): across first, then up or down.",
     "a": {
       "q": "Starting at the origin, how do you reach the point \\((4, -2)\\)?",
@@ -21174,6 +22189,36 @@ MADE_BANKS.mat = {
       "Write each pair as a point \\((x, y)\\): \\((0, -1)\\), \\((1, 1)\\), \\((2, 3)\\). The x-value is first and tells you how far across to go. The y-value is second and tells you how far up or down.",
       "Plot the points on a number plane. A rule like \\(y = 2x - 1\\) is called linear, because its points lie on a straight line. Draw a line through them with a ruler."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The points \\((0, -1)\\), \\((1, 1)\\) and \\((2, 3)\\) from the table of values, plotted on a number plane. A straight line, \\(y = 2x - 1\\), is drawn through all three with a ruler.",
+        "x": {"min": 0, "max": 3, "label": "\\(x\\)", "step": 1},
+        "y": {"min": -2, "max": 4, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "2x - 1",
+            "domain": [0, 2.5],
+            "label": "\\(y = 2x - 1\\)",
+            "labelAt": 1.6,
+            "pos": "above-left"
+          },
+          {
+            "type": "point",
+            "at": [0, -1],
+            "on": ["f"],
+            "is": "y-intercept",
+            "label": "\\((0, -1)\\)",
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [1, 1], "on": ["f"], "label": "\\((1, 1)\\)", "pos": "below-right"},
+          {"type": "point", "at": [2, 3], "on": ["f"], "label": "\\((2, 3)\\)", "pos": "below-right"}
+        ]
+      }
+    },
     "remember": "For a linear rule, put in x-values, plot each \\((x, y)\\), and the points lie on a straight line.",
     "a": {
       "q": "Using the rule \\(y = 3x + 2\\), what is the y-value when \\(x = 4\\)?",
@@ -21197,6 +22242,28 @@ MADE_BANKS.mat = {
       "Check by putting the x-value back in the rule: \\(2 \\times 3 - 1 = 5\\). It works.",
       "If two different lines cross, they cross at exactly one point. At that point both rules give the same \\(x\\) and the same \\(y\\). So the x-value of the crossing point solves the equation made by setting the two rules equal."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The line \\(y = 2x - 1\\). An arrow starts at 5 on the y-axis and goes across to the line at the point \\((3, 5)\\). A second arrow goes straight down from there to 3 on the x-axis, so \\(x = 3\\).",
+        "x": {"min": 0, "max": 5, "label": "\\(x\\)", "step": 1},
+        "y": {"min": 0, "max": 8, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "2x - 1",
+            "label": "\\(y = 2x - 1\\)",
+            "labelAt": 3.9,
+            "pos": "above-left"
+          },
+          {"type": "arrow", "from": [0, 5], "to": [2.85, 5], "label": "across", "pos": "above"},
+          {"type": "arrow", "from": [3, 5], "to": [3, 0.15], "label": "down", "pos": "right"},
+          {"type": "point", "at": [3, 5], "on": ["f"], "label": "\\((3, 5)\\)", "pos": "above-left"}
+        ]
+      }
+    },
     "remember": "Read across from the y-value to the line, then down to \\(x\\). A crossing point fits both rules.",
     "a": {
       "q": "The point \\((2, 8)\\) lies on the graph of \\(y = 3x + 2\\). Use it to solve \\(3x + 2 = 8\\).",
@@ -21226,6 +22293,38 @@ MADE_BANKS.mat = {
       ],
       "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
+        "x": {"min": 0, "max": 5.5, "label": "Hours", "step": 1},
+        "y": {"min": 0, "max": 350, "label": "Cost ($)", "step": 50},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "45x + 80",
+            "domain": [0, 5.5],
+            "label": "\\(C = 45t + 80\\)",
+            "labelAt": 4.2,
+            "pos": "above-left"
+          },
+          {"type": "arrow", "from": [1, 125], "to": [2, 125], "label": "1 hour", "pos": "below"},
+          {"type": "arrow", "from": [2, 125], "to": [2, 170], "label": "+$45", "pos": "right"},
+          {
+            "type": "point",
+            "at": [0, 80],
+            "on": ["f"],
+            "is": "y-intercept",
+            "label": "call-out fee",
+            "pos": "below-right"
+          },
+          {"type": "guide", "at": [3, 215], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [3, 215], "on": ["f"], "label": "\\((3, 215)\\)", "pos": "above-left"}
+        ]
+      }
+    },
     "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
     "a": {
       "q": "A taxi fare in Perth is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 tell you?",
@@ -22094,6 +23193,22 @@ MADE_BANKS.mat = {
       "A line that slopes up to the right has a positive gradient. A line that slopes down to the right has a negative gradient.",
       "Example: from \\((1, 7)\\) to \\((4, 1)\\), rise \\(= 1 - 7 = -6\\) and run \\(= 4 - 1 = 3\\). Gradient \\(= -6 \\div 3 = -2\\)."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The interval from \\((1, 7)\\) to \\((4, 1)\\). From \\((1, 7)\\), the run goes 3 across to the right and the rise goes 6 down, so the rise is \\(-6\\). The interval slopes down to the right, so its gradient \\(-6 \\div 3 = -2\\) is negative.",
+        "x": {"min": 0, "max": 6, "label": "\\(x\\)", "step": 1},
+        "y": {"min": 0, "max": 9, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "items": [
+          {"type": "fn", "id": "f", "expr": "-2x + 9", "domain": [1, 4]},
+          {"type": "arrow", "from": [1, 7], "to": [4, 7], "label": "run 3", "pos": "above"},
+          {"type": "arrow", "from": [4, 7], "to": [4, 1], "label": "rise \\(-6\\)", "pos": "right"},
+          {"type": "point", "at": [1, 7], "on": ["f"], "label": "\\((1, 7)\\)", "pos": "left"},
+          {"type": "point", "at": [4, 1], "on": ["f"], "label": "\\((4, 1)\\)", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Gradient is change in \\(y\\) over change in \\(x\\), and it is negative when the line goes down to the right.",
     "a": {
       "q": "What is the gradient of the interval from \\((2, 3)\\) to \\((6, 11)\\)?",
@@ -22166,6 +23281,82 @@ MADE_BANKS.mat = {
       "Changing \\(m\\) tilts the line, making it steeper or flatter. Changing \\(c\\) shifts the whole line up or down without tilting it.",
       "Example: \\(y = -3x + 5\\) has gradient \\(-3\\) and cuts the y-axis at \\((0, 5)\\). It slopes down to the right."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Three lines. The dashed line is \\(y = x + 1\\). Changing \\(m\\) to 3 gives \\(y = 3x + 1\\), which is steeper and still crosses the y-axis at \\((0, 1)\\). Changing \\(c\\) to 4 gives \\(y = x + 4\\), the dashed line moved up 3 units with the same steepness.",
+        "x": {"min": -3, "max": 4, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -3, "max": 9, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "o",
+            "expr": "x + 1",
+            "style": "dash",
+            "label": "\\(y = x + 1\\)",
+            "labelAt": 2.3,
+            "pos": "below-right"
+          },
+          {
+            "type": "fn",
+            "id": "m",
+            "expr": "3x + 1",
+            "domain": [-1.3333, 2.6667],
+            "label": "\\(y = 3x + 1\\)",
+            "labelAt": 2.3,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "c",
+            "expr": "x + 4",
+            "domain": [-3, 4],
+            "label": "\\(y = x + 4\\)",
+            "labelAt": -1,
+            "pos": "above-left"
+          },
+          {"type": "arrow", "from": [-2, -1], "to": [-2, 2], "label": "up 3", "pos": "right"},
+          {
+            "type": "point",
+            "at": [0, 1],
+            "on": ["o", "m"],
+            "is": "intersection",
+            "label": "\\((0, 1)\\)",
+            "pos": "below-right"
+          }
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "The line \\(y = -3x + 5\\). It crosses the y-axis at \\((0, 5)\\) and slopes down to the right: a run of 1 across gives a rise of \\(-3\\), reaching \\((1, 2)\\), so the gradient is \\(-3\\).",
+        "x": {"min": -1.5, "max": 4.5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -4, "max": 8, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "-3x + 5",
+            "domain": [-1, 3],
+            "label": "\\(y = -3x + 5\\)",
+            "labelAt": 2.4,
+            "pos": "above-right"
+          },
+          {"type": "arrow", "from": [0, 5], "to": [1, 5], "label": "run 1", "pos": "above"},
+          {"type": "arrow", "from": [1, 5], "to": [1, 2], "label": "rise \\(-3\\)", "pos": "right"},
+          {
+            "type": "point",
+            "at": [0, 5],
+            "on": ["f"],
+            "is": "y-intercept",
+            "label": "\\((0, 5)\\)",
+            "pos": "below-left"
+          },
+          {"type": "point", "at": [1, 2], "on": ["f"], "label": "\\((1, 2)\\)", "pos": "below-left"}
+        ]
+      }
+    },
     "remember": "In \\(y = mx + c\\), \\(m\\) sets the tilt and \\(c\\) sets where the line meets the y-axis.",
     "a": {
       "q": "A line has the equation \\(y = 4x - 7\\). What are its gradient and y-intercept?",
@@ -22199,6 +23390,39 @@ MADE_BANKS.mat = {
       "The turning point is where the curve changes direction. For \\(y = x^{2}\\) it is at the origin \\((0, 0)\\), the lowest point.",
       "The y-axis is the line of symmetry. The left side is a mirror image of the right side, so \\((3, 9)\\) and \\((-3, 9)\\) are both on the curve."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2}\\), a U-shaped curve, through the plotted points \\((-2, 4)\\), \\((-1, 1)\\), \\((0, 0)\\), \\((1, 1)\\) and \\((2, 4)\\). The curve never goes below the x-axis, and its lowest point is the origin.",
+        "x": {"min": -3.5, "max": 3.5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 8, "label": "\\(y\\)", "step": 1},
+        "grid": true,
+        "equal": false,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2}",
+            "domain": [-2.8, 2.8],
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": 2.6,
+            "pos": "left"
+          },
+          {"type": "point", "at": [-2, 4], "on": ["f"], "label": "\\((-2, 4)\\)", "pos": "below-left"},
+          {"type": "point", "at": [-1, 1], "on": ["f"], "label": "\\((-1, 1)\\)", "pos": "below-left"},
+          {
+            "type": "point",
+            "at": [0, 0],
+            "on": ["f"],
+            "is": "turning point",
+            "label": "\\((0, 0)\\)",
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [1, 1], "on": ["f"], "label": "\\((1, 1)\\)", "pos": "below-right"},
+          {"type": "point", "at": [2, 4], "on": ["f"], "label": "\\((2, 4)\\)", "pos": "below-right"}
+        ]
+      }
+    },
     "remember": "\\(y = x^{2}\\) is a U-shaped parabola, with its turning point at \\((0, 0)\\) and a mirror line along the y-axis.",
     "a": {
       "q": "Which point lies on the graph of \\(y = x^{2}\\)?",
@@ -22222,6 +23446,92 @@ MADE_BANKS.mat = {
       "If \\(a\\) is negative, the parabola turns upside down, with its turning point at the top. For \\(x = 2\\), \\(y = -x^{2}\\) gives \\(-4\\).",
       "Adding a number \\(c\\), as in \\(y = x^{2} + c\\), shifts the whole parabola up by \\(c\\). A negative \\(c\\) shifts it down. The turning point moves from \\((0, 0)\\) to \\((0, c)\\)."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Three parabolas with their turning point at the origin. \\(y = 3x^{2}\\) is narrower than \\(y = x^{2}\\): at \\(x = 2\\) it gives 12, against 4. \\(y = -x^{2}\\) is upside down, with its turning point at the top, and gives \\(-4\\) at \\(x = 2\\).",
+        "x": {"min": -5, "max": 3.5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -8, "max": 16, "label": "\\(y\\)", "step": 2},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "a",
+            "expr": "x^{2}",
+            "domain": [-3.7, 3],
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": -3.3,
+            "pos": "below-left"
+          },
+          {
+            "type": "fn",
+            "id": "b",
+            "expr": "3x^{2}",
+            "domain": [-2.1, 2.1],
+            "label": "\\(y = 3x^{2}\\)",
+            "labelAt": -2.1,
+            "pos": "above"
+          },
+          {
+            "type": "fn",
+            "id": "n",
+            "expr": "-x^{2}",
+            "domain": [-2.8, 2.8],
+            "label": "\\(y = -x^{2}\\)",
+            "labelAt": -2.4,
+            "pos": "above-left"
+          },
+          {"type": "point", "at": [2, 12], "on": ["b"], "label": "\\((2, 12)\\)", "pos": "left"},
+          {"type": "point", "at": [2, 4], "on": ["a"], "label": "\\((2, 4)\\)", "pos": "below-right"},
+          {"type": "point", "at": [2, -4], "on": ["n"], "label": "\\((2, -4)\\)", "pos": "below-left"}
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "The dashed parabola \\(y = x^{2}\\) and the solid parabola \\(y = x^{2} + 3\\), the same shape moved up 3 units, as the arrow shows. The turning point moves from \\((0, 0)\\) to \\((0, 3)\\).",
+        "x": {"min": -4.5, "max": 3.5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -1, "max": 10, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "a",
+            "expr": "x^{2}",
+            "style": "dash",
+            "domain": [-3.1, 3.1],
+            "label": "\\(y = x^{2}\\)",
+            "labelAt": -2.8,
+            "pos": "left"
+          },
+          {
+            "type": "fn",
+            "id": "b",
+            "expr": "x^{2} + 3",
+            "domain": [-2.6, 2.6],
+            "label": "\\(y = x^{2} + 3\\)",
+            "labelAt": 2.4,
+            "pos": "left"
+          },
+          {"type": "arrow", "from": [1.5, 2.25], "to": [1.5, 5.25]},
+          {
+            "type": "point",
+            "at": [0, 0],
+            "on": ["a"],
+            "is": "turning point",
+            "label": "\\((0, 0)\\)",
+            "pos": "below-right"
+          },
+          {
+            "type": "point",
+            "at": [0, 3],
+            "on": ["b"],
+            "is": "turning point",
+            "label": "\\((0, 3)\\)",
+            "pos": "below-right"
+          }
+        ]
+      }
+    },
     "remember": "A larger positive \\(a\\) narrows the parabola, a negative \\(a\\) flips it, and adding \\(c\\) moves it up or down.",
     "a": {
       "q": "Which equation gives a parabola that opens downwards?",
@@ -22278,6 +23588,81 @@ MADE_BANKS.mat = {
       "Example: this parabola crosses the x-axis at 1 and 3, so the solutions are \\(x = 1\\) and \\(x = 3\\). Check: \\(1^{2} - 4 \\times 1 + 3 = 0\\).",
       "Crossing the x-axis twice gives two solutions. Touching it once gives one. If the parabola never meets the x-axis, there are no solutions."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The parabola \\(y = x^{2} - 4x + 3\\). It crosses the x-axis at \\(x = 1\\) and \\(x = 3\\), the two solutions of \\(x^{2} - 4x + 3 = 0\\). It crosses the y-axis at 3, which is not a solution.",
+        "x": {"min": -1, "max": 5, "label": "\\(x\\)", "step": 1, "nums": false},
+        "y": {"min": -2, "max": 6, "label": "\\(y\\)", "step": 1, "nums": false},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "x^{2} - 4x + 3",
+            "domain": [-0.6, 4.6],
+            "label": "\\(y = x^{2} - 4x + 3\\)",
+            "labelAt": 3.6,
+            "pos": "above-left"
+          },
+          {
+            "type": "point",
+            "at": [1, 0],
+            "on": ["f"],
+            "is": "x-intercept",
+            "label": "\\(x = 1\\)",
+            "pos": "below-left"
+          },
+          {
+            "type": "point",
+            "at": [3, 0],
+            "on": ["f"],
+            "is": "x-intercept",
+            "label": "\\(x = 3\\)",
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [0, 3], "on": ["f"], "is": "y-intercept", "label": "\\((0, 3)\\)", "pos": "right"}
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "Three parabolas. The left one crosses the x-axis twice: 2 solutions. The middle one touches the x-axis once, at its turning point: 1 solution. The right one stays above the x-axis: 0 solutions.",
+        "x": {"min": 0, "max": 14, "label": "\\(x\\)"},
+        "y": {"min": -2.5, "max": 5, "label": "\\(y\\)"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "p",
+            "expr": "(x - 2.5)^{2} - 1",
+            "domain": [0.5, 4.5],
+            "label": "2 solutions",
+            "labelAt": 2.5,
+            "pos": "below"
+          },
+          {
+            "type": "fn",
+            "id": "q",
+            "expr": "(x - 7)^{2}",
+            "domain": [5.2, 8.8],
+            "label": "1 solution",
+            "labelAt": 7,
+            "pos": "below"
+          },
+          {
+            "type": "fn",
+            "id": "r",
+            "expr": "(x - 11.5)^{2} + 1.5",
+            "domain": [9.8, 13.2],
+            "label": "0 solutions",
+            "labelAt": 11.5,
+            "pos": "below"
+          },
+          {"type": "point", "at": [1.5, 0], "on": ["p"], "is": "x-intercept"},
+          {"type": "point", "at": [3.5, 0], "on": ["p"], "is": "x-intercept"},
+          {"type": "point", "at": [7, 0], "on": ["q"], "is": "turning point"}
+        ]
+      }
+    },
     "remember": "Solutions are the x-values where \\(y = 0\\). Count the x-axis meetings to count the solutions.",
     "a": {
       "q": "A parabola crosses the x-axis at \\(x = -2\\) and \\(x = 5\\), and crosses the y-axis at \\(y = -10\\). What are the solutions of its equation when \\(y = 0\\)?",
@@ -22317,6 +23702,43 @@ MADE_BANKS.mat = {
       "To choose, find the change between each pair of values in a table. If every change is the same, use a linear model. If the changes go up or down by the same amount, use a quadratic model.",
       "Example: 2, 5, 8, 11 adds 3 each time, so it is linear. 0, 3, 4, 3 changes by \\(3, 1, -1\\). These changes drop by 2 each time, so it is quadratic."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The values 2, 5, 8, 11 plotted at steps 0 to 3 lie on a straight line, labelled linear. The values 0, 3, 4, 3 lie on a parabola that rises then falls, labelled quadratic.",
+        "x": {"min": 0, "max": 3.5, "label": "Step", "step": 1},
+        "y": {"min": 0, "max": 12, "label": "Value", "step": 2},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "l",
+            "expr": "3x + 2",
+            "domain": [0, 3.2],
+            "label": "linear",
+            "labelAt": 2.2,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "q",
+            "expr": "-x^{2} + 4x",
+            "domain": [0, 3.4],
+            "label": "quadratic",
+            "labelAt": 2,
+            "pos": "above"
+          },
+          {"type": "point", "at": [0, 2], "on": ["l"]},
+          {"type": "point", "at": [1, 5], "on": ["l"]},
+          {"type": "point", "at": [2, 8], "on": ["l"]},
+          {"type": "point", "at": [3, 11], "on": ["l"]},
+          {"type": "point", "at": [0, 0], "on": ["q"]},
+          {"type": "point", "at": [1, 3], "on": ["q"]},
+          {"type": "point", "at": [2, 4], "on": ["q"]},
+          {"type": "point", "at": [3, 3], "on": ["q"]}
+        ]
+      }
+    },
     "remember": "Same change each step is linear. A change that itself changes steadily is quadratic.",
     "a": {
       "q": "The height of a kicked football is 0 m, 8 m, 12 m, 12 m, 8 m, 0 m at equal time steps. Which model suits it?",

@@ -33,7 +33,8 @@
   "2026-11-10T14:05:46Z pictures: 1 picture waiting for the check, 1 want skipped (The check asked for a title, as the card says a column graph needs one, and a chart has no title. Asked again as a graph with shaded columns and a title.)",
   "2026-11-10T14:06:30Z pictures: 1 picture kept",
   "2026-11-10T14:06:31Z pictures: the owner asked for a graph at card 1",
-  "2026-11-10T14:06:32Z pictures: 1 picture waiting for the check"
+  "2026-11-10T14:06:32Z pictures: 1 picture waiting for the check",
+  "2026-11-10T14:06:55Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -237,6 +238,159 @@
    "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
   ],
   "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A column graph titled Students per year level, with gaps between the columns. Year level is on the horizontal axis and Students on the vertical axis, from 0 to 180 in steps of 20. Year 7 has 150, Year 8 has 140, Year 9 has 130, Year 10 has 120, Year 11 has 100 and Year 12 has 90.",
+    "x": {
+     "min": 6.3,
+     "max": 13.2,
+     "label": "Year",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 180,
+     "label": "Students",
+     "step": 20
+    },
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        6.7,
+        0
+       ],
+       [
+        6.7,
+        150
+       ],
+       [
+        7.3,
+        150
+       ],
+       [
+        7.3,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "shade",
+      "poly": [
+       [
+        7.7,
+        0
+       ],
+       [
+        7.7,
+        140
+       ],
+       [
+        8.3,
+        140
+       ],
+       [
+        8.3,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "shade",
+      "poly": [
+       [
+        8.7,
+        0
+       ],
+       [
+        8.7,
+        130
+       ],
+       [
+        9.3,
+        130
+       ],
+       [
+        9.3,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "shade",
+      "poly": [
+       [
+        9.7,
+        0
+       ],
+       [
+        9.7,
+        120
+       ],
+       [
+        10.3,
+        120
+       ],
+       [
+        10.3,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "shade",
+      "poly": [
+       [
+        10.7,
+        0
+       ],
+       [
+        10.7,
+        100
+       ],
+       [
+        11.3,
+        100
+       ],
+       [
+        11.3,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "shade",
+      "poly": [
+       [
+        11.7,
+        0
+       ],
+       [
+        11.7,
+        90
+       ],
+       [
+        12.3,
+        90
+       ],
+       [
+        12.3,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       9.7,
+       178
+      ],
+      "label": "Students per year level",
+      "pos": "below"
+     }
+    ]
+   },
    "2": {
     "kind": "graph",
     "alt": "A line graph titled Temperature each month, for months 1 to 6 (January to June). Month is on the horizontal axis and Temperature in degrees Celsius on the vertical axis, from 0 to 35 in steps of 5. The points 26, 25, 22, 18, 15 and 12 are joined by a line, which falls as the months go by.",
@@ -379,15 +533,7 @@
    ],
    "why": "The bus share is \\(\\frac{10}{40} = \\frac{1}{4}\\), and \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\). The answer 144° comes from wrongly using 40% as the share, since \\(0.4 \\times 360^{\\circ} = 144^{\\circ}\\). But 10 out of 40 is 25%, not 40%.",
    "clue": "Find the fraction of the whole, then take that share of 360°."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "A column graph titled Students per year level, with gaps between the columns: Year 7 has 150, Year 8 has 140, Year 9 has 130, Year 10 has 120, Year 11 has 100 and Year 12 has 90, on a Students axis from 0 to 180 in steps of 20, with Year on the horizontal axis. Drawn as a graph with shaded columns so it can carry its title.",
-    "why": "It shows the card's own example of a column graph, with the title, labelled axes, even scale and gaps the card asks for."
-   }
-  ]
+  }
  },
  "cleared_by": "recheck",
  "latex": {
@@ -802,333 +948,7 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-10T14:06:30Z"
-  }
- ],
- "picture_draft": {
-  "title": "Drawing charts and graphs",
-  "card": [
-   [
-    "Column graph",
-    "Use it to compare separate groups, such as the number of students in each year level. Draw gaps between the columns."
-   ],
-   [
-    "Line graph",
-    "Use it to show how something changes over time, such as a temperature each month. Join the points with a line."
-   ],
-   [
-    "Pie chart",
-    "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: \\(\\frac{1}{4}\\) of the whole is \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\)."
-   ],
-   "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
-  ],
-  "cardFigs": {
-   "1": {
-    "kind": "graph",
-    "alt": "A column graph titled Students per year level, with gaps between the columns. Year level is on the horizontal axis and Students on the vertical axis, from 0 to 180 in steps of 20. Year 7 has 150, Year 8 has 140, Year 9 has 130, Year 10 has 120, Year 11 has 100 and Year 12 has 90.",
-    "x": {
-     "min": 6.3,
-     "max": 13.2,
-     "label": "Year",
-     "step": 1
-    },
-    "y": {
-     "min": 0,
-     "max": 180,
-     "label": "Students",
-     "step": 20
-    },
-    "items": [
-     {
-      "type": "shade",
-      "poly": [
-       [
-        6.7,
-        0
-       ],
-       [
-        6.7,
-        150
-       ],
-       [
-        7.3,
-        150
-       ],
-       [
-        7.3,
-        0
-       ]
-      ]
-     },
-     {
-      "type": "shade",
-      "poly": [
-       [
-        7.7,
-        0
-       ],
-       [
-        7.7,
-        140
-       ],
-       [
-        8.3,
-        140
-       ],
-       [
-        8.3,
-        0
-       ]
-      ]
-     },
-     {
-      "type": "shade",
-      "poly": [
-       [
-        8.7,
-        0
-       ],
-       [
-        8.7,
-        130
-       ],
-       [
-        9.3,
-        130
-       ],
-       [
-        9.3,
-        0
-       ]
-      ]
-     },
-     {
-      "type": "shade",
-      "poly": [
-       [
-        9.7,
-        0
-       ],
-       [
-        9.7,
-        120
-       ],
-       [
-        10.3,
-        120
-       ],
-       [
-        10.3,
-        0
-       ]
-      ]
-     },
-     {
-      "type": "shade",
-      "poly": [
-       [
-        10.7,
-        0
-       ],
-       [
-        10.7,
-        100
-       ],
-       [
-        11.3,
-        100
-       ],
-       [
-        11.3,
-        0
-       ]
-      ]
-     },
-     {
-      "type": "shade",
-      "poly": [
-       [
-        11.7,
-        0
-       ],
-       [
-        11.7,
-        90
-       ],
-       [
-        12.3,
-        90
-       ],
-       [
-        12.3,
-        0
-       ]
-      ]
-     },
-     {
-      "type": "text",
-      "at": [
-       9.7,
-       178
-      ],
-      "label": "Students per year level",
-      "pos": "below"
-     }
-    ]
-   },
-   "2": {
-    "kind": "graph",
-    "alt": "A line graph titled Temperature each month, for months 1 to 6 (January to June). Month is on the horizontal axis and Temperature in degrees Celsius on the vertical axis, from 0 to 35 in steps of 5. The points 26, 25, 22, 18, 15 and 12 are joined by a line, which falls as the months go by.",
-    "x": {
-     "min": 0.5,
-     "max": 7.3,
-     "label": "Month",
-     "step": 1
-    },
-    "y": {
-     "min": 0,
-     "max": 35,
-     "label": "Temperature (°C)",
-     "step": 5
-    },
-    "grid": true,
-    "items": [
-     {
-      "type": "curve",
-      "id": "t",
-      "points": [
-       [
-        1,
-        26
-       ],
-       [
-        2,
-        25
-       ],
-       [
-        3,
-        22
-       ],
-       [
-        4,
-        18
-       ],
-       [
-        5,
-        15
-       ],
-       [
-        6,
-        12
-       ]
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       1,
-       26
-      ],
-      "on": [
-       "t"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       2,
-       25
-      ],
-      "on": [
-       "t"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       3,
-       22
-      ],
-      "on": [
-       "t"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       4,
-       18
-      ],
-      "on": [
-       "t"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       5,
-       15
-      ],
-      "on": [
-       "t"
-      ]
-     },
-     {
-      "type": "point",
-      "at": [
-       6,
-       12
-      ],
-      "on": [
-       "t"
-      ]
-     },
-     {
-      "type": "text",
-      "at": [
-       4,
-       34
-      ],
-      "label": "Temperature each month",
-      "pos": "below"
-     }
-    ]
-   }
   },
-  "remember": "Match the graph to the data, then add a title and clear labels.",
-  "a": {
-   "q": "Which graph best shows a town's rainfall each month over one year?",
-   "opts": [
-    "A line graph with a title and labels",
-    "A pie chart with a title and labels",
-    "A column graph with no axis labels",
-    "A table of values with no title"
-   ],
-   "why": "Rainfall each month is a change over time, so a labelled line graph suits it. A pie chart shows parts of a whole, and the monthly rainfall figures are not shares of a total that matter here. The other two are missing a title or labels.",
-   "clue": "Think about change over time."
-  },
-  "b": {
-   "d": 3,
-   "q": "In a survey of 40 students, 10 chose bus to get to school. What angle is the bus slice on a pie chart?",
-   "opts": [
-    "90°",
-    "10°",
-    "40°",
-    "144°"
-   ],
-   "why": "The bus share is \\(\\frac{10}{40} = \\frac{1}{4}\\), and \\(\\frac{1}{4} \\times 360^{\\circ} = 90^{\\circ}\\). The answer 144° comes from wrongly using 40% as the share, since \\(0.4 \\times 360^{\\circ} = 144^{\\circ}\\). But 10 out of 40 is 25%, not 40%.",
-   "clue": "Find the fraction of the whole, then take that share of 360°."
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "A column graph titled Students per year level, with gaps between the columns: Year 7 has 150, Year 8 has 140, Year 9 has 130, Year 10 has 120, Year 11 has 100 and Year 12 has 90, on a Students axis from 0 to 180 in steps of 20, with Year on the horizontal axis. Drawn as a graph with shaded columns so it can carry its title.",
-    "why": "It shows the card's own example of a column graph, with the title, labelled axes, even scale and gaps the card asks for.",
-    "waiting": true
-   }
-  ]
- },
- "pictures_waiting": [
   {
    "want": 1,
    "at": "card 1",
@@ -1290,7 +1110,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-10T14:06:31Z"
+   "made": "2026-11-10T14:06:31Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T14:06:55Z"
   }
  ]
 }
