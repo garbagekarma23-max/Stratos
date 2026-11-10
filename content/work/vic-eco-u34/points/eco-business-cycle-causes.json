@@ -32,7 +32,8 @@
   "2026-11-10T15:54:26Z pictures: the owner asked for a graph at card 1",
   "2026-11-10T15:55:25Z pictures: 1 picture waiting for the check",
   "2026-11-10T16:02:58Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, medium sure. The curve is a perfect sine wave on a steady trend, so every cycle has the same length and size, which clashes with the card line it sits under saying growth does not follow a fixed timetable; make the cycles uneven in length and depth (for example a curve through points).; The contraction label sits centred over the trough, running from about x = 4 to x = 6.3, so half of it is over the start of the next expansion; place it beside the falling stretch between the first peak (x about 1.9) and the trough (x about 5.05).",
-  "2026-11-10T16:03:07Z pictures: 1 picture waiting for the check"
+  "2026-11-10T16:03:07Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:04:02Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -184,175 +185,6 @@
   ]
  },
  "final": {
-  "title": "The business cycle and its causes",
-  "card": [
-   "The business cycle is the pattern of ups and downs in real GDP, which is the total output of the economy after removing price changes. Growth speeds up and slows down over time, and it does not follow a fixed timetable.",
-   [
-    "Expansion and peak",
-    "In an expansion, real GDP grows and unemployment tends to fall. The peak is the high point, where growth stops and real GDP turns down."
-   ],
-   [
-    "Contraction and trough",
-    "In a contraction, growth slows or real GDP falls and unemployment tends to rise. The trough is the low point, where real GDP turns up again."
-   ],
-   [
-    "Causes",
-    "Aggregate demand (AD) is total spending in the economy, and aggregate supply (AS) is the total output firms are willing and able to produce. A rise in AD tends to push the economy into expansion, while a fall in AD, or a fall in AS, tends to push it into contraction."
-   ]
-  ],
-  "remember": "Rising AD tends to drive expansion. Falling AD, or falling AS, tends to drive contraction.",
-  "a": {
-   "q": "Which description fits the economy at a trough in the business cycle?",
-   "opts": [
-    "Real GDP has stopped falling and is about to rise",
-    "Real GDP has stopped rising and is about to fall",
-    "Real GDP is growing faster than in the last year",
-    "Real GDP is falling faster than in the last year"
-   ],
-   "why": "A trough is the low point, where a contraction ends and real GDP turns up. The option where real GDP has stopped rising and is about to fall describes a peak, the high point where growth turns down.",
-   "clue": "A trough is the lowest point of the cycle."
-  },
-  "b": {
-   "d": 3,
-   "q": "Households across a country cut their spending sharply, and firms see weaker sales. What is the most likely effect on the business cycle?",
-   "opts": [
-    "The economy moves toward contraction as AD falls",
-    "The economy moves toward expansion as AD falls",
-    "The economy moves toward contraction as AD rises",
-    "The economy moves toward a peak as AS rises"
-   ],
-   "why": "Less household spending means a fall in AD, which tends to slow real GDP growth and push the economy into contraction. Expansion is tempting but is linked to rising AD, not falling AD.",
-   "clue": "Spending is one part of total demand. Which way does it move?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
-    "tries": 1,
-    "notes": [
-     [
-      "The curve is a perfect sine wave on a steady trend, so every cycle has the same length and size, which clashes with the card line it sits under saying growth does not follow a fixed timetable; make the cycles uneven in length and depth (for example a curve through points).",
-      "The contraction label sits centred over the trough, running from about x = 4 to x = 6.3, so half of it is over the start of the next expansion; place it beside the falling stretch between the first peak (x about 1.9) and the trough (x about 5.05)."
-     ]
-    ]
-   }
-  ]
- },
- "cleared_by": "auto",
- "pictures": [
-  {
-   "want": 1,
-   "at": "card 1",
-   "kind": "graph",
-   "brief": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
-   "figures": [
-    {
-     "kind": "graph",
-     "alt": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
-     "x": {
-      "min": 0,
-      "max": 10,
-      "label": "Time"
-     },
-     "y": {
-      "min": 0,
-      "max": 10,
-      "label": "Real GDP"
-     },
-     "items": [
-      {
-       "type": "fn",
-       "id": "g",
-       "expr": "0.3x + 4 + 2\\sin(0.9x)",
-       "domain": [
-        0,
-        10
-       ],
-       "label": "real GDP",
-       "labelAt": 0.3,
-       "pos": "below-right"
-      },
-      {
-       "type": "point",
-       "at": [
-        1.93,
-        6.55
-       ],
-       "on": [
-        "g"
-       ],
-       "label": "peak",
-       "pos": "above"
-      },
-      {
-       "type": "point",
-       "at": [
-        5.05,
-        3.54
-       ],
-       "on": [
-        "g"
-       ],
-       "label": "trough",
-       "pos": "below"
-      },
-      {
-       "type": "point",
-       "at": [
-        8.91,
-        8.65
-       ],
-       "on": [
-        "g"
-       ],
-       "label": "peak",
-       "pos": "above"
-      },
-      {
-       "type": "text",
-       "at": [
-        3.9,
-        5.7
-       ],
-       "label": "contraction",
-       "pos": "above-right"
-      },
-      {
-       "type": "text",
-       "at": [
-        7.2,
-        5.4
-       ],
-       "label": "expansion",
-       "pos": "right"
-      }
-     ]
-    }
-   ],
-   "by": "claude-code",
-   "made": "2026-11-10T15:55:25Z",
-   "status": "turned down",
-   "check": {
-    "want": 1,
-    "verdict": "redo",
-    "matches_text": false,
-    "agrees_with_answer": true,
-    "gives_answer_away": false,
-    "labels_correct": false,
-    "readable": true,
-    "licence_ok": true,
-    "problems": [
-     "The curve is a perfect sine wave on a steady trend, so every cycle has the same length and size, which clashes with the card line it sits under saying growth does not follow a fixed timetable; make the cycles uneven in length and depth (for example a curve through points).",
-     "The contraction label sits centred over the trough, running from about x = 4 to x = 6.3, so half of it is over the start of the next expansion; place it beside the falling stretch between the first peak (x about 1.9) and the trough (x about 5.05)."
-    ],
-    "sure": "medium"
-   },
-   "checked_by": "claude-code",
-   "checked": "2026-11-10T16:02:58Z"
-  }
- ],
- "picture_draft": {
   "title": "The business cycle and its causes",
   "card": [
    "The business cycle is the pattern of ups and downs in real GDP, which is the total output of the economy after removing price changes. Growth speeds up and slows down over time, and it does not follow a fixed timetable.",
@@ -538,24 +370,120 @@
    ],
    "why": "Less household spending means a fall in AD, which tends to slow real GDP growth and push the economy into contraction. Expansion is tempting but is linked to rising AD, not falling AD.",
    "clue": "Spending is one part of total demand. Which way does it move?"
-  },
-  "wants": [
-   {
-    "at": "card 1",
-    "kind": "graph",
-    "brief": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
-    "tries": 1,
-    "notes": [
-     [
-      "The curve is a perfect sine wave on a steady trend, so every cycle has the same length and size, which clashes with the card line it sits under saying growth does not follow a fixed timetable; make the cycles uneven in length and depth (for example a curve through points).",
-      "The contraction label sits centred over the trough, running from about x = 4 to x = 6.3, so half of it is over the start of the next expansion; place it beside the falling stretch between the first peak (x about 1.9) and the trough (x about 5.05)."
-     ]
-    ],
-    "waiting": true
-   }
-  ]
+  }
  },
- "pictures_waiting": [
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "0.3x + 4 + 2\\sin(0.9x)",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "real GDP",
+       "labelAt": 0.3,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.93,
+        6.55
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "peak",
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        5.05,
+        3.54
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "trough",
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        8.91,
+        8.65
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "peak",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.9,
+        5.7
+       ],
+       "label": "contraction",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        7.2,
+        5.4
+       ],
+       "label": "expansion",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:25Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The curve is a perfect sine wave on a steady trend, so every cycle has the same length and size, which clashes with the card line it sits under saying growth does not follow a fixed timetable; make the cycles uneven in length and depth (for example a curve through points).",
+     "The contraction label sits centred over the trough, running from about x = 4 to x = 6.3, so half of it is over the start of the next expansion; place it beside the falling stretch between the first peak (x about 1.9) and the trough (x about 5.05)."
+    ],
+    "sure": "medium"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:58Z"
+  },
   {
    "want": 1,
    "at": "card 1",
@@ -708,7 +636,22 @@
     }
    ],
    "by": "claude-code",
-   "made": "2026-11-10T16:03:07Z"
+   "made": "2026-11-10T16:03:07Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:04:02Z"
   }
  ]
 }
