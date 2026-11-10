@@ -14,7 +14,9 @@
   "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
   "2026-11-10T13:55:58Z pictures: the owner asked for a graph at card 4",
   "2026-11-10T13:57:48Z pictures: 1 picture waiting for the check",
-  "2026-11-10T14:03:12Z pictures: 1 picture kept"
+  "2026-11-10T14:03:12Z pictures: 1 picture kept",
+  "2026-11-10T15:37:12Z text: question b's Why says 400 divided by 14 is about 28.6, so 29 candles, in place of saying it gives 29",
+  "2026-11-10T16:00:00Z text: a fresh check kept the fix"
  ],
  "sent": {
   "match": 1,
@@ -296,7 +298,7 @@
     "67",
     "20"
    ],
-   "why": "Set \\(400 + 6n = 14n\\), so \\(400 = 8n\\) and \\(n = 50\\). Check: cost is \\(400 + 300 = \\$700\\) and revenue is \\(14 \\times 50 = \\$700\\). Dividing by the price of $14 gives 29, which ignores that each candle also costs $6 to make.",
+   "why": "Set \\(400 + 6n = 14n\\), so \\(400 = 8n\\) and \\(n = 50\\). Check: cost is \\(400 + 300 = \\$700\\) and revenue is \\(14 \\times 50 = \\$700\\). Dividing $400 by the price of $14 gives about 28.6, so 29 candles, but that ignores that each candle also costs $6 to make.",
    "clue": "How much profit does each candle add towards the fixed cost?"
   }
  },
@@ -462,6 +464,23 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-10T14:03:12Z"
+  }
+ ],
+ "edits": [
+  {
+   "part": "b.why",
+   "before": "Set \\(400 + 6n = 14n\\), so \\(400 = 8n\\) and \\(n = 50\\). Check: cost is \\(400 + 300 = \\$700\\) and revenue is \\(14 \\times 50 = \\$700\\). Dividing by the price of $14 gives 29, which ignores that each candle also costs $6 to make.",
+   "after": "Set \\(400 + 6n = 14n\\), so \\(400 = 8n\\) and \\(n = 50\\). Check: cost is \\(400 + 300 = \\$700\\) and revenue is \\(14 \\times 50 = \\$700\\). Dividing $400 by the price of $14 gives about 28.6, so 29 candles, but that ignores that each candle also costs $6 to make.",
+   "by": "claude-code",
+   "why": "400 divided by 14 is about 28.6, not 29.",
+   "at_time": "2026-11-10T15:37:12Z",
+   "check": {
+    "verdict": "keep",
+    "sure": "high",
+    "problems": [],
+    "summary": "The fix is correct: 400 divided by 14 is about 28.57, which rounds up to 29 candles, and the why still explains the 29 option and agrees with the working that gives 50.",
+    "by": "claude-code"
+   }
   }
  ]
 }
