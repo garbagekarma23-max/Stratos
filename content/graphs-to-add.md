@@ -6,7 +6,7 @@ A census of every point in the banks, for planning the sessions that add graphs 
 
 A shared point is listed under every course that uses it, and counted once in its bank.
 
-The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2. Session 3 added them to General Mathematics Units 3 and 4, Mathematics Standard Years 11 and 12, Foundation Mathematics Units 1 to 4 and Mathematics Years 7 to 10, which finishes the maths bank.
+The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2. Session 3 added them to General Mathematics Units 3 and 4, Mathematics Standard Years 11 and 12, Foundation Mathematics Units 1 to 4 and Mathematics Years 7 to 10, which finishes the maths bank. Session 4 added them to the Edexcel course, Economics Units 1 to 4 (Victoria), Economics Year 12 (NSW), Economics and Business Year 8 and Business Management Units 1 and 2. The trade cycle graph for `e-outputgap` was turned down twice and waits for the owner; the point has its output gap graph.
 
 ## By bank
 
@@ -14,17 +14,17 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | --- | --- | --- | --- | --- |
 | mat | 666 | 151 | 136 | 151 |
 | phys | 135 | 25 | 25 | 0 |
-| eco | 154 | 21 | 21 | 0 |
-| e (Economics bank, Edexcel) | 53 | 16 | 16 | 3 |
+| eco | 154 | 21 | 21 | 21 |
+| e (Economics bank, Edexcel) | 53 | 16 | 16 | 16 |
 | chem | 199 | 14 | 13 | 0 |
 | bio | 162 | 9 | 9 | 0 |
-| ecb | 128 | 6 | 6 | 0 |
+| ecb | 128 | 6 | 6 | 6 |
 | geo | 204 | 4 | 3 | 0 |
 | pe | 80 | 3 | 3 | 0 |
 | sci | 156 | 3 | 3 | 0 |
 | hms | 61 | 2 | 2 | 0 |
 | psy | 110 | 2 | 2 | 0 |
-| bus | 259 | 1 | 1 | 0 |
+| bus | 259 | 1 | 1 | 1 |
 | acc | 89 | 0 | 0 | 0 |
 | anc | 38 | 0 | 0 | 0 |
 | eng | 260 | 0 | 0 | 0 |
@@ -34,7 +34,7 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | mod | 147 | 0 | 0 | 0 |
 | soc | 57 | 0 | 0 | 0 |
 | sor | 79 | 0 | 0 | 0 |
-| Total | 3467 | 257 | 240 | 154 |
+| Total | 3467 | 257 | 240 | 195 |
 
 ## By course
 
@@ -42,26 +42,26 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | --- | --- | --- | --- | --- |
 | `vic-mat-meth-u12` Mathematical Methods, Units 1 and 2 | 52 | 25 | 25 | 25 |
 | `nsw-mat-adv-11` Mathematics Advanced, Year 11 | 56 | 23 | 22 | 23 |
-| `edexcel` Economics, International A Level (Edexcel), AS year | 53 | 16 | 16 | 3 |
+| `edexcel` Economics, International A Level (Edexcel), AS year | 53 | 16 | 16 | 16 |
 | `vic-mat-gen-u12` General Mathematics, Units 1 and 2 | 56 | 16 | 12 | 16 |
 | `vic-mat-meth-u34` Mathematical Methods, Units 3 and 4 | 43 | 16 | 16 | 16 |
 | `nsw-mat-adv-12` Mathematics Advanced, Year 12 | 40 | 15 | 15 | 15 |
-| `vic-eco-u34` Economics, Units 3 and 4 | 68 | 15 | 15 | 0 |
+| `vic-eco-u34` Economics, Units 3 and 4 | 68 | 15 | 15 | 15 |
 | `nsw-mat-std-12` Mathematics Standard 2, Year 12 | 53 | 12 | 12 | 12 |
 | `vic-mat-spec-u34` Specialist Mathematics, Units 3 and 4 | 51 | 12 | 11 | 12 |
 | `nsw-phys-12` Physics, Year 12 | 49 | 11 | 11 | 0 |
 | `vic-mat-spec-u12` Specialist Mathematics, Units 1 and 2 | 63 | 10 | 9 | 10 |
-| `vic-eco-u12` Economics, Units 1 and 2 | 53 | 9 | 9 | 0 |
+| `vic-eco-u12` Economics, Units 1 and 2 | 53 | 9 | 9 | 9 |
 | `vic-phys-u12` Physics, Units 1 and 2 | 52 | 9 | 9 | 0 |
 | `vic-phys-u34` Physics, Units 3 and 4 | 51 | 9 | 9 | 0 |
 | `vic-chem-u34` Chemistry, Units 3 and 4 | 64 | 8 | 7 | 0 |
 | `vic-mat-gen-u34` General Mathematics, Units 3 and 4 | 57 | 8 | 6 | 8 |
 | `ac-mat-9` Mathematics, Year 9 | 39 | 7 | 6 | 7 |
 | `nsw-mat-std-11` Mathematics Standard, Year 11 | 43 | 7 | 5 | 7 |
-| `ac-ecb-8` Economics and Business, Year 8 | 34 | 6 | 6 | 0 |
+| `ac-ecb-8` Economics and Business, Year 8 | 34 | 6 | 6 | 6 |
 | `ac-mat-10` Mathematics, Year 10 | 38 | 6 | 5 | 6 |
 | `vic-bio-u34` Biology, Units 3 and 4 | 62 | 6 | 6 | 0 |
-| `nsw-eco-12` Economics, Year 12: Australia's economy | 67 | 5 | 5 | 0 |
+| `nsw-eco-12` Economics, Year 12: Australia's economy | 67 | 5 | 5 | 5 |
 | `vic-mat-fnd-u34` Foundation Mathematics, Units 3 and 4 | 32 | 5 | 5 | 5 |
 | `nsw-chem-12` Chemistry, Year 12 | 47 | 4 | 3 | 0 |
 | `vic-pe-u34` Physical Education, Units 3 and 4 | 39 | 4 | 4 | 0 |
@@ -80,7 +80,7 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | `ac-geo-9` Geography, Year 9 | 33 | 1 | 0 | 0 |
 | `ac-sci-7` Science, Year 7 | 40 | 1 | 1 | 0 |
 | `nsw-geo-11` Geography, Year 11 | 34 | 1 | 1 | 0 |
-| `vic-bus-u12` Business Management, Units 1 and 2 | 63 | 1 | 1 | 0 |
+| `vic-bus-u12` Business Management, Units 1 and 2 | 63 | 1 | 1 | 1 |
 
 No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `ac-ecb-9`, `ac-eng-10`, `ac-eng-7`, `ac-eng-8`, `ac-eng-9`, `ac-geo-7`, `ac-his-10`, `ac-his-7`, `ac-his-8`, `ac-his-9`, `ac-sci-10`, `ac-sci-8`, `nsw-anc-12`, `nsw-bus-11`, `nsw-bus-11b`, `nsw-bus-12`, `nsw-eng-adv-11`, `nsw-eng-adv-12`, `nsw-geo-12`, `nsw-hms-12`, `nsw-leg-12`, `nsw-mod-12`, `nsw-soc-11`, `nsw-soc-12`, `nsw-sor-11`, `nsw-sor-12`, `vic-acc-u12`, `vic-acc-u34`, `vic-bus-u34`, `vic-eng-u12`, `vic-eng-u34`, `vic-hhd-u12`, `vic-hhd-u34`, `vic-leg-u12`, `vic-leg-u34`, `vic-mod-u12`, `vic-pe-u12`, `vic-psy-u12`, `vic-rev-u34`.
 
@@ -159,31 +159,31 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Economics, International A Level (Edexcel), AS year (`edexcel`)
 
 - Introductory concepts (`x1c1`)
-  - `e-ppf` Production possibility frontiers: PPF curve
+  - `e-ppf` Production possibility frontiers: PPF curve Has one already.
 - Consumer behaviour and demand (`x1c2`)
-  - `e-demand` The demand curve: demand curve movement and shift
+  - `e-demand` The demand curve: demand curve movement and shift Has one already.
 - Supply (`x1c3`)
-  - `e-supply` The supply curve: supply curve movement and shift
+  - `e-supply` The supply curve: supply curve movement and shift Has one already.
 - Price determination (`x1c4`)
   - `e-equilibrium` Equilibrium price and quantity: supply and demand equilibrium. Has one already.
   - `e-surplus` Consumer and producer surplus: consumer and producer surplus. Has one already.
   - `e-taxsub` Indirect taxes and subsidies: tax and subsidy shifting supply. Has one already.
 - Market failure (`x1c5`)
-  - `e-externality` Externalities: MPC, MSC and welfare loss diagram
+  - `e-externality` Externalities: MPC, MSC and welfare loss diagram Has one already.
 - Government intervention (`x1c6`)
-  - `e-correct` Correcting externalities with taxes and subsidies: tax or subsidy on externality diagram
-  - `e-maxmin` Maximum and minimum prices: price ceiling and floor diagram
+  - `e-correct` Correcting externalities with taxes and subsidies: tax or subsidy on externality diagram Has one already.
+  - `e-maxmin` Maximum and minimum prices: price ceiling and floor diagram Has one already.
 - Aggregate demand (`x2c2`)
-  - `e-ad` Aggregate demand: AD curve movement and shift
+  - `e-ad` Aggregate demand: AD curve movement and shift Has one already.
 - Aggregate supply (`x2c3`)
-  - `e-sras` Short-run aggregate supply: SRAS shifts
-  - `e-lras` Long-run aggregate supply: classical and Keynesian LRAS
-  - `e-lrasshift` What shifts long-run aggregate supply: LRAS shift diagram
+  - `e-sras` Short-run aggregate supply: SRAS shifts Has one already.
+  - `e-lras` Long-run aggregate supply: classical and Keynesian LRAS Has one already.
+  - `e-lrasshift` What shifts long-run aggregate supply: LRAS shift diagram Has one already.
 - National income (`x2c4`)
-  - `e-macroeq` Equilibrium real output: AD/AS equilibrium shifts
+  - `e-macroeq` Equilibrium real output: AD/AS equilibrium shifts Has one already.
 - Economic growth (`x2c5`)
-  - `e-growthcause` Causes of growth: PPF and LRAS shift
-  - `e-outputgap` Output gaps and the trade cycle: trade cycle around trend
+  - `e-growthcause` Causes of growth: PPF and LRAS shift Has one already.
+  - `e-outputgap` Output gaps and the trade cycle: trade cycle around trend Has one already.
 
 ### General Mathematics, Units 1 and 2 (`vic-mat-gen-u12`)
 
@@ -258,27 +258,27 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Economics, Units 3 and 4 (`vic-eco-u34`)
 
 - Scarcity, efficiency and markets (`vic-eco-u34-1-1`)
-  - `eco-relative-scarcity-ppf` Relative scarcity and the PPF: production possibility frontier
+  - `eco-relative-scarcity-ppf` Relative scarcity and the PPF: production possibility frontier Has one already.
 - Demand, supply and elasticity (`vic-eco-u34-1-2-2`)
-  - `eco-theory-law-demand` The law of demand: demand curve, movement along it
-  - `eco-factors-that-shift-demand` Factors that shift demand: demand curve shifts
-  - `eco-law-supply` The law of supply: upward supply curve
-  - `eco-factors-that-shift-supply` Factors that shift supply: supply curve shifts
-  - `eco-shifts-new-equilibrium` Shifts and new equilibrium: supply and demand shifts
+  - `eco-theory-law-demand` The law of demand: demand curve, movement along it Has one already.
+  - `eco-factors-that-shift-demand` Factors that shift demand: demand curve shifts Has one already.
+  - `eco-law-supply` The law of supply: upward supply curve Has one already.
+  - `eco-factors-that-shift-supply` Factors that shift supply: supply curve shifts Has one already.
+  - `eco-shifts-new-equilibrium` Shifts and new equilibrium: supply and demand shifts Has one already.
 - Market failure and government intervention (`vic-eco-u34-1-2`)
-  - `e-externality` Externalities: MPC, MSC and welfare loss diagram
+  - `e-externality` Externalities: MPC, MSC and welfare loss diagram Has one already.
 - The macroeconomy (`vic-eco-u34-1-4-2`)
-  - `eco-business-cycle-causes` The business cycle and its causes: business cycle with peak and trough
-  - `eco-aggregate-demand-factors` Aggregate demand factors: AD/AS diagram with AD shift
-  - `eco-aggregate-supply-factors` Aggregate supply factors: AD/AS diagram with AS shift
+  - `eco-business-cycle-causes` The business cycle and its causes: business cycle with peak and trough Has one already.
+  - `eco-aggregate-demand-factors` Aggregate demand factors: AD/AS diagram with AD shift Has one already.
+  - `eco-aggregate-supply-factors` Aggregate supply factors: AD/AS diagram with AS shift Has one already.
 - Low and stable inflation (`vic-eco-u34-1-6`)
-  - `eco-demand-pull-cost-push` Demand-pull and cost-push inflation: AD/AS shifts
-  - `eco-explaining-recent-results` Explaining recent results: AD/AS diagram with shifts
+  - `eco-demand-pull-cost-push` Demand-pull and cost-push inflation: AD/AS shifts Has one already.
+  - `eco-explaining-recent-results` Explaining recent results: AD/AS diagram with shifts Has one already.
 - The exchange rate, terms of trade and competitiveness (`vic-eco-u34-1-8`)
-  - `eco-australian-dollar-set` How the Australian dollar is set: demand and supply of the Australian dollar
-  - `eco-factors-moving-exchange-rate` Factors moving the exchange rate: AUD demand and supply in forex market
+  - `eco-australian-dollar-set` How the Australian dollar is set: demand and supply of the Australian dollar Has one already.
+  - `eco-factors-moving-exchange-rate` Factors moving the exchange rate: AUD demand and supply in forex market Has one already.
 - Budgetary aggregate supply policies (`vic-eco-u34-2-3`)
-  - `eco-supply-side-policies-matter` Why supply-side policies matter: AS shift right on AD/AS
+  - `eco-supply-side-policies-matter` Why supply-side policies matter: AS shift right on AD/AS Has one already.
 
 ### Mathematics Standard 2, Year 12 (`nsw-mat-std-12`)
 
@@ -361,18 +361,18 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Economics, Units 1 and 2 (`vic-eco-u12`)
 
 - Thinking like an economist (`vic-eco-u12-1-1`)
-  - `eco-production-possibility-frontier` The production possibility frontier: PPF curve with inside point
+  - `eco-production-possibility-frontier` The production possibility frontier: PPF curve with inside point Has one already.
 - Demand, supply and price (`vic-eco-u12-1-2`)
-  - `eco-law-demand` The law of demand: downward demand curve
-  - `eco-factors-that-shift-demand` Factors that shift demand: demand curve shifts
-  - `eco-law-supply` The law of supply: upward supply curve
-  - `eco-factors-that-shift-supply` Factors that shift supply: supply curve shifts
-  - `eco-market-equilibrium` Market equilibrium: supply and demand with shortage and surplus
-  - `eco-changes-equilibrium` Changes in equilibrium: shifts to a new equilibrium
+  - `eco-law-demand` The law of demand: downward demand curve Has one already.
+  - `eco-factors-that-shift-demand` Factors that shift demand: demand curve shifts Has one already.
+  - `eco-law-supply` The law of supply: upward supply curve Has one already.
+  - `eco-factors-that-shift-supply` Factors that shift supply: supply curve shifts Has one already.
+  - `eco-market-equilibrium` Market equilibrium: supply and demand with shortage and surplus Has one already.
+  - `eco-changes-equilibrium` Changes in equilibrium: shifts to a new equilibrium Has one already.
 - The business cycle and growth (`vic-eco-u12-2-2-2`)
-  - `eco-business-cycle` The business cycle: real GDP cycle around trend
+  - `eco-business-cycle` The business cycle: real GDP cycle around trend Has one already.
 - Issue: the distribution of income and wealth (`vic-eco-u12-2-2`)
-  - `eco-lorenz-curve-gini-coefficient` The Lorenz curve and Gini coefficient: Lorenz curve and line of equality
+  - `eco-lorenz-curve-gini-coefficient` The Lorenz curve and Gini coefficient: Lorenz curve and line of equality Has one already.
 
 ### Physics, Units 1 and 2 (`vic-phys-u12`)
 
@@ -469,14 +469,14 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Economics and Business, Year 8 (`ac-ecb-8`)
 
 - Investigating economic issues (`ac-ecb-8-1-1`)
-  - `ecb-finding-trends-economic-data` Finding trends in economic data: line graph of prices over time
+  - `ecb-finding-trends-economic-data` Finding trends in economic data: line graph of prices over time Has one already.
 - Prices (`ac-ecb-8-2-2`)
-  - `ecb-demand` Demand: demand curve
-  - `ecb-supply` Supply: supply curve
-  - `ecb-equilibrium-price` The equilibrium price: supply and demand with shortage and surplus
-  - `ecb-changes-price` What changes a price: demand and supply shifts
+  - `ecb-demand` Demand: demand curve Has one already.
+  - `ecb-supply` Supply: supply curve Has one already.
+  - `ecb-equilibrium-price` The equilibrium price: supply and demand with shortage and surplus Has one already.
+  - `ecb-changes-price` What changes a price: demand and supply shifts Has one already.
 - Planning and budgeting (`ac-ecb-8-2-7`)
-  - `ecb-saving-interest` Saving and interest: simple vs compound interest growth
+  - `ecb-saving-interest` Saving and interest: simple vs compound interest growth Has one already.
 
 ### Mathematics, Year 10 (`ac-mat-10`)
 
@@ -507,13 +507,13 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Economics, Year 12: Australia's economy (`nsw-eco-12`)
 
 - Exchange rates (`nsw-eco-12-1-3`)
-  - `eco-australian-dollar-set` How the Australian dollar is set: demand and supply of the Australian dollar
-  - `eco-moves-australian-dollar` What moves the Australian dollar: shifts in demand for the dollar
+  - `eco-australian-dollar-set` How the Australian dollar is set: demand and supply of the Australian dollar Has one already.
+  - `eco-moves-australian-dollar` What moves the Australian dollar: shifts in demand for the dollar Has one already.
 - Economic growth (`nsw-eco-12-2-1`)
-  - `e-ad` Aggregate demand: AD curve movement and shift
-  - `eco-business-cycle` The business cycle: real GDP cycle around trend
+  - `e-ad` Aggregate demand: AD curve movement and shift Has one already.
+  - `eco-business-cycle` The business cycle: real GDP cycle around trend Has one already.
 - Distribution of income and wealth (`nsw-eco-12-2-5`)
-  - `eco-lorenz-curve-gini-coefficient` The Lorenz curve and Gini coefficient: Lorenz curve and line of equality
+  - `eco-lorenz-curve-gini-coefficient` The Lorenz curve and Gini coefficient: Lorenz curve and line of equality Has one already.
 
 ### Foundation Mathematics, Units 3 and 4 (`vic-mat-fnd-u34`)
 
@@ -647,4 +647,4 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Business Management, Units 1 and 2 (`vic-bus-u12`)
 
 - Building a customer base (`vic-bus-u12-2-2`)
-  - `bus-product-life-cycle` The product life cycle: sales against time life cycle curve
+  - `bus-product-life-cycle` The product life cycle: sales against time life cycle curve Has one already.
