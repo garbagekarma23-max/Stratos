@@ -32,7 +32,10 @@
   "2026-11-01T15:05:25Z check: flagged",
   "2026-11-01T15:14:45Z fix: suggested",
   "2026-11-02T04:35:39Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)",
-  "2026-11-02T06:19:02Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:19:02Z review: approved with the fix (a spot check)",
+  "2026-11-10T15:54:23Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T15:55:25Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:57Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -191,6 +194,94 @@
    ],
    "A change in the good's own price causes a movement along the demand curve. It does not shift the curve."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A demand curve D sloping down. The price falls from P1 to P2, and buyers move along the same curve from A to B, so the quantity demanded rises from Q1 to Q2. The curve does not shift.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "D",
+      "pos": "right",
+      "labelAt": 9
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       6
+      ],
+      "xLabel": "Q1",
+      "yLabel": "P1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       4
+      ],
+      "xLabel": "Q2",
+      "yLabel": "P2"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "D"
+      ],
+      "label": "A",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       4
+      ],
+      "on": [
+       "D"
+      ],
+      "label": "B",
+      "pos": "above-right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       4.5,
+       6.2
+      ],
+      "to": [
+       5.9,
+       4.8
+      ]
+     }
+    ]
+   }
+  },
   "remember": "A higher price cuts buying power and makes other goods look cheaper, so quantity demanded falls.",
   "a": {
    "q": "The price of pasta rises while the price of rice stays the same. Ravi buys less pasta and more rice. Which effect explains his change?",
@@ -216,5 +307,118 @@
    "clue": "Is Hana switching goods, or is her buying power shrinking?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A demand curve D sloping down. The price falls from P1 to P2, and buyers move along the same curve from A to B, so the quantity demanded rises from Q1 to Q2. The curve does not shift.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A demand curve D sloping down. The price falls from P1 to P2, and buyers move along the same curve from A to B, so the quantity demanded rises from Q1 to Q2. The curve does not shift.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "D",
+       "pos": "right",
+       "labelAt": 9
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        6
+       ],
+       "xLabel": "Q1",
+       "yLabel": "P1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        4
+       ],
+       "xLabel": "Q2",
+       "yLabel": "P2"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        6
+       ],
+       "on": [
+        "D"
+       ],
+       "label": "A",
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        4
+       ],
+       "on": [
+        "D"
+       ],
+       "label": "B",
+       "pos": "above-right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        4.5,
+        6.2
+       ],
+       "to": [
+        5.9,
+        4.8
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:24Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:57Z"
+  }
+ ]
 }

@@ -28,7 +28,12 @@
   "2026-11-01T15:05:26Z write: done",
   "2026-11-01T15:14:45Z check: flagged",
   "2026-11-01T15:19:03Z fix: suggested",
-  "2026-11-02T04:35:39Z autoreview: cleared with the fix (a other)"
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (a other)",
+  "2026-11-10T15:54:26Z pictures: the owner asked for a graph at card 1",
+  "2026-11-10T15:55:25Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:58Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, medium sure. The curve is a perfect sine wave on a steady trend, so every cycle has the same length and size, which clashes with the card line it sits under saying growth does not follow a fixed timetable; make the cycles uneven in length and depth (for example a curve through points).; The contraction label sits centred over the trough, running from about x = 4 to x = 6.3, so half of it is over the start of the next expansion; place it beside the falling stretch between the first peak (x about 1.9) and the trough (x about 5.05).",
+  "2026-11-10T16:03:07Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:04:02Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -196,6 +201,152 @@
     "Aggregate demand (AD) is total spending in the economy, and aggregate supply (AS) is the total output firms are willing and able to produce. A rise in AD tends to push the economy into expansion, while a fall in AD, or a fall in AS, tends to push it into contraction."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "Real GDP over time rises and falls, in cycles of different lengths and sizes. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Real GDP"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "g",
+      "points": [
+       [
+        0,
+        3.6
+       ],
+       [
+        0.8,
+        4.9
+       ],
+       [
+        1.5,
+        6
+       ],
+       [
+        2.5,
+        5.2
+       ],
+       [
+        3.5,
+        4
+       ],
+       [
+        4.6,
+        3.4
+       ],
+       [
+        5.5,
+        4.2
+       ],
+       [
+        6.4,
+        6
+       ],
+       [
+        7.3,
+        7.8
+       ],
+       [
+        7.9,
+        7.2
+       ],
+       [
+        8.7,
+        6.2
+       ],
+       [
+        9.4,
+        6.9
+       ],
+       [
+        10,
+        8
+       ]
+      ],
+      "smooth": true,
+      "label": "real GDP",
+      "labelAt": 0.3,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       6
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "peak",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       4.6,
+       3.4
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "trough",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       7.3,
+       7.8
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "peak",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       8.7,
+       6.2
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "trough",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       1.7,
+       6.1
+      ],
+      "label": "contraction",
+      "pos": "above-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       5.6,
+       3.6
+      ],
+      "label": "expansion",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Rising AD tends to drive expansion. Falling AD, or falling AS, tends to drive contraction.",
   "a": {
    "q": "Which description fits the economy at a trough in the business cycle?",
@@ -221,5 +372,286 @@
    "clue": "Spending is one part of total demand. Which way does it move?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "0.3x + 4 + 2\\sin(0.9x)",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "real GDP",
+       "labelAt": 0.3,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.93,
+        6.55
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "peak",
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        5.05,
+        3.54
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "trough",
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        8.91,
+        8.65
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "peak",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.9,
+        5.7
+       ],
+       "label": "contraction",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        7.2,
+        5.4
+       ],
+       "label": "expansion",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:25Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The curve is a perfect sine wave on a steady trend, so every cycle has the same length and size, which clashes with the card line it sits under saying growth does not follow a fixed timetable; make the cycles uneven in length and depth (for example a curve through points).",
+     "The contraction label sits centred over the trough, running from about x = 4 to x = 6.3, so half of it is over the start of the next expansion; place it beside the falling stretch between the first peak (x about 1.9) and the trough (x about 5.05)."
+    ],
+    "sure": "medium"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:58Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Real GDP over time rises and falls. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Real GDP over time rises and falls, in cycles of different lengths and sizes. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "g",
+       "points": [
+        [
+         0,
+         3.6
+        ],
+        [
+         0.8,
+         4.9
+        ],
+        [
+         1.5,
+         6
+        ],
+        [
+         2.5,
+         5.2
+        ],
+        [
+         3.5,
+         4
+        ],
+        [
+         4.6,
+         3.4
+        ],
+        [
+         5.5,
+         4.2
+        ],
+        [
+         6.4,
+         6
+        ],
+        [
+         7.3,
+         7.8
+        ],
+        [
+         7.9,
+         7.2
+        ],
+        [
+         8.7,
+         6.2
+        ],
+        [
+         9.4,
+         6.9
+        ],
+        [
+         10,
+         8
+        ]
+       ],
+       "smooth": true,
+       "label": "real GDP",
+       "labelAt": 0.3,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        6
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "peak",
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        4.6,
+        3.4
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "trough",
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        7.3,
+        7.8
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "peak",
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        8.7,
+        6.2
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "trough",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.7,
+        6.1
+       ],
+       "label": "contraction",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        5.6,
+        3.6
+       ],
+       "label": "expansion",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T16:03:07Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:04:02Z"
+  }
+ ]
 }

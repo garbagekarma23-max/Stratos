@@ -297,6 +297,20 @@ MADE_BANKS.eco = {
         "Australians supply Australian dollars when they swap them for foreign currency to buy imports, invest overseas or travel abroad. More supply, with demand unchanged, pushes the value down."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The forex market for the Australian dollar. Demand D for Australian dollars slopes down and supply S slopes up. Where they cross is the equilibrium, which sets the dollar's value.",
+        "x": {"min": 0, "max": 10, "label": "Quantity of A$"},
+        "y": {"min": 0, "max": 10, "label": "Value of A$"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[1, 9], [9, 1]], "label": "D", "pos": "right", "labelAt": 9},
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "S", "pos": "right", "labelAt": 9},
+          {"type": "point", "at": [5, 5], "on": ["D", "S"], "is": "intersection"},
+          {"type": "text", "at": [5.5, 5], "label": "equilibrium", "pos": "right"}
+        ]
+      }
+    },
     "remember": "A floating dollar's price comes from buyers and sellers in the forex market.",
     "a": {
       "q": "Why is the value of the Australian dollar not set by the government?",
@@ -339,6 +353,41 @@ MADE_BANKS.eco = {
         "Investors tend to buy the dollar when they are confident about Australia's economy. Speculators buy or sell it to profit from the changes they expect, and this can push the dollar further the same way."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Something that makes foreigners want more Australian dollars shifts demand for the dollar right from D1, dashed, to D2, shown by an arrow. Supply S stays the same, so the dollar's value rises from e1 to e2.",
+        "x": {"min": 0, "max": 10, "label": "Quantity of A$"},
+        "y": {"min": 0, "max": 10, "label": "Value of A$"},
+        "items": [
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "S", "pos": "right", "labelAt": 9},
+          {
+            "type": "curve",
+            "id": "D1",
+            "points": [[0, 8], [8, 0]],
+            "label": "D1",
+            "pos": "below-left",
+            "style": "dash",
+            "labelAt": 5.4
+          },
+          {
+            "type": "curve",
+            "id": "D2",
+            "points": [[2, 10], [10, 2]],
+            "label": "D2",
+            "pos": "above-right",
+            "labelAt": 9
+          },
+          {"type": "arrow", "from": [1.3, 7], "to": [4.7, 7]},
+          {"type": "guide", "at": [4, 4], "xLabel": "", "yLabel": "e1"},
+          {"type": "guide", "at": [6, 6], "xLabel": "", "yLabel": "e2"},
+          {"type": "point", "at": [4, 4], "on": ["D1", "S"], "is": "intersection"},
+          {"type": "point", "at": [6, 6], "on": ["D2", "S"], "is": "intersection"},
+          {"type": "text", "at": [4.55, 4], "label": "E1", "pos": "right"},
+          {"type": "text", "at": [6.55, 6], "label": "E2", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Anything that raises foreign demand for Australian dollars tends to lift the dollar. Anything that lowers it tends to pull the dollar down.",
     "a": {
       "q": "The world price of iron ore rises sharply. What is the most likely effect on the Australian dollar?",
@@ -661,6 +710,52 @@ MADE_BANKS.eco = {
       ],
       "The cycle is not regular. The length and size of upswings and downswings vary, and the economy moves around the trend instead of staying on it."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Real GDP rises and falls around its long-term trend, the dotted line, in cycles of different lengths and sizes. In an upswing it climbs to a peak, or boom. In a downswing growth slows or output falls, to a trough, then the next upswing begins.",
+        "x": {"min": 0, "max": 10, "label": "Time"},
+        "y": {"min": 0, "max": 10, "label": "Real GDP"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "t",
+            "points": [[0, 4.4], [10, 7.4]],
+            "label": "trend",
+            "pos": "below-right",
+            "style": "dot",
+            "labelAt": 0.4
+          },
+          {
+            "type": "curve",
+            "id": "g",
+            "points": [
+              [0, 3.6],
+              [0.8, 4.9],
+              [1.5, 6],
+              [2.5, 5.2],
+              [3.5, 4],
+              [4.6, 3.4],
+              [5.5, 4.2],
+              [6.4, 6],
+              [7.3, 7.8],
+              [7.9, 7.2],
+              [8.7, 6.2],
+              [9.4, 6.9],
+              [10, 8]
+            ],
+            "smooth": true,
+            "label": "real GDP",
+            "labelAt": 7.3,
+            "pos": "above"
+          },
+          {"type": "point", "at": [1.5, 6], "on": ["g"], "label": "boom", "pos": "above-left"},
+          {"type": "point", "at": [4.6, 3.4], "on": ["g"], "label": "trough", "pos": "below"},
+          {"type": "text", "at": [1.7, 6.1], "label": "downswing", "pos": "above-right"},
+          {"type": "text", "at": [5.6, 3.6], "label": "upswing", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Watch the growth rate: rising or strong growth is an upswing, slowing growth or falling output is a downswing.",
     "a": {
       "q": "Real GDP in Country Y falls for the third quarter in a row. Which phase is it in?",
@@ -1056,6 +1151,38 @@ MADE_BANKS.eco = {
       ],
       "A higher Gini coefficient means a more unequal distribution. The Gini coefficient can be compared across countries or across years, but it does not show which households are rich or poor."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Cumulative share of income against cumulative share of households, from poorest to richest, both from 0 to 100%. The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it: here the poorest 50% of households hold 25% of income. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+        "x": {"min": 0, "max": 100, "step": 20, "nums": false, "label": "Households (%)"},
+        "y": {"min": 0, "max": 100, "step": 20, "nums": false, "label": "Income (%)"},
+        "equal": true,
+        "items": [
+          {"type": "shade", "between": ["e", "l"], "span": [0, 100], "label": "gap", "at": [62, 50]},
+          {
+            "type": "fn",
+            "id": "e",
+            "expr": "x",
+            "domain": [0, 100],
+            "label": "line of equality",
+            "labelAt": 40,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "l",
+            "expr": "\\frac{x^{2}}{100}",
+            "domain": [0, 100],
+            "label": "Lorenz curve",
+            "labelAt": 72,
+            "pos": "below-right"
+          },
+          {"type": "guide", "at": [50, 25], "xLabel": "50", "yLabel": "25"},
+          {"type": "point", "at": [50, 25], "on": ["l"]}
+        ]
+      }
+    },
     "remember": "A Lorenz curve bowed further from the diagonal means a higher Gini coefficient and more inequality.",
     "a": {
       "q": "A country's Lorenz curve moves closer to the line of equality over ten years. What has happened to its Gini coefficient and its income inequality?",
@@ -2198,6 +2325,22 @@ MADE_BANKS.eco = {
       "A demand curve slopes downward. It shows price on the vertical axis and quantity demanded on the horizontal axis.",
       "A change in the good's own price moves buyers along the same demand curve. The curve itself does not move. Other things equal means that everything else that affects buying is held constant."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A demand curve D sloping down, with price on the vertical axis and quantity demanded on the horizontal axis. The price rises from P1 to P2, and buyers move along the same curve from A to B, so the quantity demanded falls from Q1 to Q2. The curve does not move.",
+        "x": {"min": 0, "max": 10, "label": "Quantity demanded"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[1, 9], [9, 1]], "label": "D", "pos": "right", "labelAt": 9},
+          {"type": "guide", "at": [5, 5], "xLabel": "Q1", "yLabel": "P1"},
+          {"type": "guide", "at": [3, 7], "xLabel": "Q2", "yLabel": "P2"},
+          {"type": "point", "at": [5, 5], "on": ["D"], "label": "A", "pos": "above-right"},
+          {"type": "point", "at": [3, 7], "on": ["D"], "label": "B", "pos": "above-right"},
+          {"type": "arrow", "from": [5.2, 5.8], "to": [3.8, 7.2]}
+        ]
+      }
+    },
     "remember": "A price change moves buyers along the demand curve: higher price, lower quantity demanded.",
     "a": {
       "q": "Which statement best describes the law of demand?",
@@ -2240,6 +2383,34 @@ MADE_BANKS.eco = {
         "Lower interest rates make borrowing cheaper, which can raise demand for goods bought on credit. A larger population and higher consumer confidence (optimism about the economy) can also raise demand."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A shift of demand. A change in a factor other than the good's own price shifts the whole demand curve right from D1, dashed, to D2, shown by an arrow, so more is demanded at every price. A shift left would move it the other way.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "D1",
+            "points": [[0, 8], [8, 0]],
+            "label": "D1",
+            "pos": "below-left",
+            "style": "dash",
+            "labelAt": 6.2
+          },
+          {
+            "type": "curve",
+            "id": "D2",
+            "points": [[2, 10], [10, 2]],
+            "label": "D2",
+            "pos": "above-right",
+            "labelAt": 9
+          },
+          {"type": "arrow", "from": [1.3, 7], "to": [4.7, 7]}
+        ]
+      }
+    },
     "remember": "Only a change in the good's own price moves along the curve. Other factors shift the whole curve.",
     "a": {
       "q": "The price of coffee rises sharply, and cafés in Geelong find that more customers buy tea at every price. What happened to the demand for tea?",
@@ -2273,6 +2444,22 @@ MADE_BANKS.eco = {
       "The reason is profit. A higher price makes each extra unit more profitable to sell, so producers are willing to make and sell more.",
       "A change in the good's own price is a movement along the supply curve. It does not shift the curve. The curve slopes upward from left to right."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "An upward-sloping supply curve S. The price rises from P1 to P2, and producers move along the same curve from A to B, so the quantity supplied rises from Q1 to Q2. The curve does not shift.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "S", "pos": "right", "labelAt": 9},
+          {"type": "guide", "at": [4, 4], "xLabel": "Q1", "yLabel": "P1"},
+          {"type": "guide", "at": [6, 6], "xLabel": "Q2", "yLabel": "P2"},
+          {"type": "point", "at": [4, 4], "on": ["S"], "label": "A", "pos": "above-left"},
+          {"type": "point", "at": [6, 6], "on": ["S"], "label": "B", "pos": "above-left"},
+          {"type": "arrow", "from": [4.4, 4.9], "to": [5.6, 6.1]}
+        ]
+      }
+    },
     "remember": "A higher price makes selling more profitable, so quantity supplied rises along the curve.",
     "a": {
       "q": "Why do producers supply a larger quantity when the price of their good rises?",
@@ -2306,6 +2493,27 @@ MADE_BANKS.eco = {
       "Technology and productivity: productivity is output per unit of input. Better machines or methods let firms make more from the same inputs, at a lower cost per unit. Supply rises and the curve shifts right.",
       "The weather and other disruptions: a drought, flood, fire or strike can cut how much sellers can produce. Supply falls at each price and the curve shifts left."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "S1",
+            "points": [[3, 0], [10, 7]],
+            "label": "S1",
+            "pos": "below-right",
+            "style": "dash",
+            "labelAt": 9
+          },
+          {"type": "curve", "id": "S2", "points": [[0, 3], [7, 10]], "label": "S2", "pos": "right", "labelAt": 7},
+          {"type": "arrow", "from": [8.6, 6], "to": [3.4, 6], "label": "costs rise", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.",
     "a": {
       "q": "A new machine lets a bakery in Ballarat bake more loaves from the same flour and labour. What happens to the supply of its bread?",
@@ -2345,6 +2553,22 @@ MADE_BANKS.eco = {
       ],
       "Prices keep moving until the shortage or surplus is gone. The market then settles at the equilibrium price and quantity."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Demand D and supply S cross at the equilibrium. At a price above it, quantity supplied is greater than quantity demanded: the gap between the curves is a surplus. At a price below it, quantity demanded is greater than quantity supplied: the gap is a shortage.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[1, 9], [9, 1]], "label": "D", "pos": "below-left", "labelAt": 8.6},
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "S", "pos": "above-left", "labelAt": 8.6},
+          {"type": "arrow", "from": [2, 8], "to": [8, 8], "label": "surplus", "pos": "above"},
+          {"type": "arrow", "from": [2, 2], "to": [8, 2], "label": "shortage", "pos": "below"},
+          {"type": "point", "at": [5, 5], "on": ["D", "S"], "is": "intersection"},
+          {"type": "text", "at": [4.5, 5], "label": "equilibrium", "pos": "left"}
+        ]
+      }
+    },
     "remember": "Shortage: price rises. Surplus: price falls. Both end at equilibrium.",
     "a": {
       "q": "A market has a surplus. Which statement describes it?",
@@ -2384,6 +2608,41 @@ MADE_BANKS.eco = {
       ],
       "First decide which curve shifted and which way. A change in something other than the good's own price shifts demand if it affects buyers, and shifts supply if it affects sellers."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A decrease in demand shifts the demand curve left from D1, dashed, to D2, shown by an arrow, while supply S stays the same. The equilibrium moves from E1 to E2: price falls from P1 to P2 and quantity falls from Q1 to Q2.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "S", "pos": "right", "labelAt": 9},
+          {
+            "type": "curve",
+            "id": "D1",
+            "points": [[2, 10], [10, 2]],
+            "label": "D1",
+            "pos": "above-right",
+            "style": "dash",
+            "labelAt": 9
+          },
+          {
+            "type": "curve",
+            "id": "D2",
+            "points": [[0, 8], [8, 0]],
+            "label": "D2",
+            "pos": "below-left",
+            "labelAt": 5.4
+          },
+          {"type": "arrow", "from": [4.7, 7], "to": [1.3, 7]},
+          {"type": "guide", "at": [6, 6], "xLabel": "Q1", "yLabel": "P1"},
+          {"type": "guide", "at": [4, 4], "xLabel": "Q2", "yLabel": "P2"},
+          {"type": "point", "at": [6, 6], "on": ["D1", "S"], "is": "intersection"},
+          {"type": "point", "at": [4, 4], "on": ["D2", "S"], "is": "intersection"},
+          {"type": "text", "at": [6.55, 6], "label": "E1", "pos": "right"},
+          {"type": "text", "at": [4.55, 4], "label": "E2", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Demand shifts move price and quantity the same way. Supply shifts move them in opposite ways.",
     "a": {
       "q": "Heavy rain destroys part of the tomato crop in Victoria, and nothing else changes. What happens in the tomato market?",
@@ -3480,6 +3739,28 @@ MADE_BANKS.eco = {
       "A production possibility frontier (PPF) shows the most of two goods an economy can make with its current resources and technology. A point on the curve uses all resources fully. A point inside leaves some unused. A point outside cannot be reached with current resources and technology.",
       "Moving along the PPF shows opportunity cost: more of one good means less of the other. The PPF illustrates the choice of what to produce and how much of each. It does not show who gets the output."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A production possibility frontier (PPF) for two goods, bowed outward. Point A is on the curve, where all resources are used fully. Point B is inside the curve, where some resources are unused. Point C is outside the curve, which cannot be reached with current resources and technology.",
+        "x": {"min": 0, "max": 10, "label": "Good X"},
+        "y": {"min": 0, "max": 10, "label": "Good Y"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "ppf",
+            "expr": "9\\sqrt{1 - \\frac{x^{2}}{81}}",
+            "domain": [0, 9],
+            "label": "PPF",
+            "pos": "above-right",
+            "labelAt": 3
+          },
+          {"type": "point", "at": [5.4, 7.2], "on": ["ppf"], "label": "A on the PPF", "pos": "below-left"},
+          {"type": "point", "at": [3, 3], "label": "B inside", "pos": "above"},
+          {"type": "point", "at": [8, 8], "label": "C outside", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Resources are limited, so every choice has an opportunity cost. The PPF shows the trade-off.",
     "a": {
       "q": "An economy moves along its PPF to make more wheat. What does the move show?",
@@ -3589,6 +3870,22 @@ MADE_BANKS.eco = {
       ],
       "A change in the good's own price causes a movement along the demand curve. It does not shift the curve."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A demand curve D sloping down. The price falls from P1 to P2, and buyers move along the same curve from A to B, so the quantity demanded rises from Q1 to Q2. The curve does not shift.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[1, 9], [9, 1]], "label": "D", "pos": "right", "labelAt": 9},
+          {"type": "guide", "at": [4, 6], "xLabel": "Q1", "yLabel": "P1"},
+          {"type": "guide", "at": [6, 4], "xLabel": "Q2", "yLabel": "P2"},
+          {"type": "point", "at": [4, 6], "on": ["D"], "label": "A", "pos": "above-right"},
+          {"type": "point", "at": [6, 4], "on": ["D"], "label": "B", "pos": "above-right"},
+          {"type": "arrow", "from": [4.5, 6.2], "to": [5.9, 4.8]}
+        ]
+      }
+    },
     "remember": "A higher price cuts buying power and makes other goods look cheaper, so quantity demanded falls.",
     "a": {
       "q": "The price of pasta rises while the price of rice stays the same. Ravi buys less pasta and more rice. Which effect explains his change?",
@@ -3628,6 +3925,34 @@ MADE_BANKS.eco = {
       ],
       "Both curves can shift at once. Then the effect on one of price or quantity is clear, but the other depends on which shift is larger."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A fall in supply shifts the supply curve left from S1, dashed, to S2, shown by an arrow, while demand D stays the same. The equilibrium moves from E1 to E2: the price rises from P1 to P2 and the quantity traded falls from Q1 to Q2.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[1, 9], [9, 1]], "label": "D", "pos": "above-right", "labelAt": 1.6},
+          {
+            "type": "curve",
+            "id": "S1",
+            "points": [[2, 0], [10, 8]],
+            "label": "S1",
+            "pos": "below-right",
+            "style": "dash",
+            "labelAt": 8.6
+          },
+          {"type": "curve", "id": "S2", "points": [[0, 2], [8, 10]], "label": "S2", "pos": "right", "labelAt": 8},
+          {"type": "arrow", "from": [8.6, 7], "to": [5.4, 7]},
+          {"type": "guide", "at": [6, 4], "xLabel": "Q1", "yLabel": "P1"},
+          {"type": "guide", "at": [4, 6], "xLabel": "Q2", "yLabel": "P2"},
+          {"type": "point", "at": [6, 4], "on": ["D", "S1"], "is": "intersection"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S2"], "is": "intersection"},
+          {"type": "text", "at": [6.5, 4], "label": "E1", "pos": "right"},
+          {"type": "text", "at": [4.5, 6], "label": "E2", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Work out which curve moves and which way, then read off the new price and quantity.",
     "a": {
       "q": "A heatwave in Mildura raises demand for fans, and nothing else changes. What happens to the equilibrium price and quantity of fans?",
@@ -3881,6 +4206,45 @@ MADE_BANKS.eco = {
         "Aggregate demand (AD) is total spending in the economy, and aggregate supply (AS) is the total output firms are willing and able to produce. A rise in AD tends to push the economy into expansion, while a fall in AD, or a fall in AS, tends to push it into contraction."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Real GDP over time rises and falls, in cycles of different lengths and sizes. It climbs in an expansion to a peak, its high point, then falls in a contraction to a trough, its low point, and turns up again.",
+        "x": {"min": 0, "max": 10, "label": "Time"},
+        "y": {"min": 0, "max": 10, "label": "Real GDP"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "g",
+            "points": [
+              [0, 3.6],
+              [0.8, 4.9],
+              [1.5, 6],
+              [2.5, 5.2],
+              [3.5, 4],
+              [4.6, 3.4],
+              [5.5, 4.2],
+              [6.4, 6],
+              [7.3, 7.8],
+              [7.9, 7.2],
+              [8.7, 6.2],
+              [9.4, 6.9],
+              [10, 8]
+            ],
+            "smooth": true,
+            "label": "real GDP",
+            "labelAt": 0.3,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [1.5, 6], "on": ["g"], "label": "peak", "pos": "above-left"},
+          {"type": "point", "at": [4.6, 3.4], "on": ["g"], "label": "trough", "pos": "below"},
+          {"type": "point", "at": [7.3, 7.8], "on": ["g"], "label": "peak", "pos": "above"},
+          {"type": "point", "at": [8.7, 6.2], "on": ["g"], "label": "trough", "pos": "below"},
+          {"type": "text", "at": [1.7, 6.1], "label": "contraction", "pos": "above-right"},
+          {"type": "text", "at": [5.6, 3.6], "label": "expansion", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Rising AD tends to drive expansion. Falling AD, or falling AS, tends to drive contraction.",
     "a": {
       "q": "Which description fits the economy at a trough in the business cycle?",
@@ -3923,6 +4287,39 @@ MADE_BANKS.eco = {
         "Stronger growth among trading partners raises their demand for Australian exports, which lifts net exports and AD. Weaker world growth tends to lower it."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A rise in spending shifts aggregate demand right from AD1, dashed, to AD2, shown by an arrow, while aggregate supply AS stays the same. Real GDP rises from Y1 to Y2 and the price level rises from P1 to P2.",
+        "x": {"min": 0, "max": 10, "label": "Real GDP"},
+        "y": {"min": 0, "max": 10, "label": "Price level"},
+        "items": [
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "AS", "pos": "right", "labelAt": 9},
+          {
+            "type": "curve",
+            "id": "D1",
+            "points": [[0, 8], [8, 0]],
+            "label": "AD1",
+            "pos": "below-left",
+            "style": "dash",
+            "labelAt": 5.4
+          },
+          {
+            "type": "curve",
+            "id": "D2",
+            "points": [[2, 10], [10, 2]],
+            "label": "AD2",
+            "pos": "above-right",
+            "labelAt": 9
+          },
+          {"type": "arrow", "from": [1.3, 7], "to": [4.7, 7]},
+          {"type": "guide", "at": [4, 4], "xLabel": "Y1", "yLabel": "P1"},
+          {"type": "guide", "at": [6, 6], "xLabel": "Y2", "yLabel": "P2"},
+          {"type": "point", "at": [4, 4], "on": ["D1", "S"], "is": "intersection"},
+          {"type": "point", "at": [6, 6], "on": ["D2", "S"], "is": "intersection"}
+        ]
+      }
+    },
     "remember": "Anything that raises spending shifts AD right. Anything that cuts spending shifts it left.",
     "a": {
       "q": "Which change would most likely shift Australia's aggregate demand to the right?",
@@ -3962,6 +4359,46 @@ MADE_BANKS.eco = {
       ],
       "A rise in AS means firms can produce more at each price level. This can allow growth in real GDP and put downward pressure on the price level."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A rise in aggregate supply shifts AS right from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. Real GDP rises from Y1 to Y2 and the price level falls from P1 to P2.",
+        "x": {"min": 0, "max": 10, "label": "Real GDP"},
+        "y": {"min": 0, "max": 10, "label": "Price level"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[1, 9], [9, 1]],
+            "label": "AD",
+            "pos": "above-right",
+            "labelAt": 1.6
+          },
+          {
+            "type": "curve",
+            "id": "S1",
+            "points": [[0, 2], [8, 10]],
+            "label": "AS1",
+            "pos": "right",
+            "style": "dash",
+            "labelAt": 8
+          },
+          {
+            "type": "curve",
+            "id": "S2",
+            "points": [[2, 0], [10, 8]],
+            "label": "AS2",
+            "pos": "below-right",
+            "labelAt": 8.6
+          },
+          {"type": "arrow", "from": [5.4, 7], "to": [8.6, 7]},
+          {"type": "guide", "at": [4, 6], "xLabel": "Y1", "yLabel": "P1"},
+          {"type": "guide", "at": [6, 4], "xLabel": "Y2", "yLabel": "P2"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S1"], "is": "intersection"},
+          {"type": "point", "at": [6, 4], "on": ["D", "S2"], "is": "intersection"}
+        ]
+      }
+    },
     "remember": "Anything that raises capacity or cuts input costs shifts AS out. Anything that cuts capacity or lifts input costs shifts it in.",
     "a": {
       "q": "Which change would most likely shift the aggregate supply curve to the right?",
@@ -4299,6 +4736,70 @@ MADE_BANKS.eco = {
       "Demand-pull shows up as a rise in aggregate demand. Cost-push shows up as a fall in aggregate supply, so the economy produces less at each price level.",
       "To tell them apart, ask what started the price rise: more spending pressing on limited capacity, or higher costs of making goods and services."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Demand-pull inflation. Spending rises, so aggregate demand shifts right from AD1, dashed, to AD2, shown by an arrow. The price level rises from P1 to P2 and real GDP rises from Y1 to Y2.",
+        "x": {"min": 0, "max": 10, "label": "Real GDP"},
+        "y": {"min": 0, "max": 10, "label": "Price level"},
+        "items": [
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "AS", "pos": "right", "labelAt": 9},
+          {
+            "type": "curve",
+            "id": "D1",
+            "points": [[0, 8], [8, 0]],
+            "label": "AD1",
+            "pos": "below-left",
+            "style": "dash",
+            "labelAt": 5.4
+          },
+          {
+            "type": "curve",
+            "id": "D2",
+            "points": [[2, 10], [10, 2]],
+            "label": "AD2",
+            "pos": "above-right",
+            "labelAt": 9
+          },
+          {"type": "arrow", "from": [1.3, 7], "to": [4.7, 7]},
+          {"type": "guide", "at": [4, 4], "xLabel": "Y1", "yLabel": "P1"},
+          {"type": "guide", "at": [6, 6], "xLabel": "Y2", "yLabel": "P2"},
+          {"type": "point", "at": [4, 4], "on": ["D1", "S"], "is": "intersection"},
+          {"type": "point", "at": [6, 6], "on": ["D2", "S"], "is": "intersection"}
+        ]
+      },
+      "2": {
+        "kind": "graph",
+        "alt": "Cost-push inflation. Costs of production rise, so aggregate supply shifts left from AS1, dashed, to AS2, shown by an arrow. The price level rises from P1 to P2 while real GDP falls from Y1 to Y2.",
+        "x": {"min": 0, "max": 10, "label": "Real GDP"},
+        "y": {"min": 0, "max": 10, "label": "Price level"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[1, 9], [9, 1]],
+            "label": "AD",
+            "pos": "above-right",
+            "labelAt": 1.6
+          },
+          {
+            "type": "curve",
+            "id": "S1",
+            "points": [[2, 0], [10, 8]],
+            "label": "AS1",
+            "pos": "below-right",
+            "style": "dash",
+            "labelAt": 8.6
+          },
+          {"type": "curve", "id": "S2", "points": [[0, 2], [8, 10]], "label": "AS2", "pos": "right", "labelAt": 8},
+          {"type": "arrow", "from": [8.6, 7], "to": [5.4, 7]},
+          {"type": "guide", "at": [6, 4], "xLabel": "Y1", "yLabel": "P1"},
+          {"type": "guide", "at": [4, 6], "xLabel": "Y2", "yLabel": "P2"},
+          {"type": "point", "at": [6, 4], "on": ["D", "S1"], "is": "intersection"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S2"], "is": "intersection"}
+        ]
+      }
+    },
     "remember": "Demand-pull starts with spending. Cost-push starts with the costs of production.",
     "a": {
       "q": "Which situation is an example of demand-pull inflation?",
@@ -4371,6 +4872,39 @@ MADE_BANKS.eco = {
       ],
       "In the past two years, inflation has eased from its recent peak, while the labour market has stayed fairly strong. Weaker demand from higher interest rates and easing supply problems both help explain this. Exact figures change with each data release, so check the latest ones."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2.",
+        "x": {"min": 0, "max": 10, "label": "Real GDP"},
+        "y": {"min": 0, "max": 10, "label": "Price level"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[1, 9], [9, 1]],
+            "label": "AD",
+            "pos": "above-right",
+            "labelAt": 1.6
+          },
+          {
+            "type": "curve",
+            "id": "S1",
+            "points": [[2, 0], [10, 8]],
+            "label": "AS1",
+            "pos": "below-right",
+            "style": "dash",
+            "labelAt": 8.6
+          },
+          {"type": "curve", "id": "S2", "points": [[0, 2], [8, 10]], "label": "AS2", "pos": "right", "labelAt": 8},
+          {"type": "arrow", "from": [8.6, 7], "to": [5.4, 7]},
+          {"type": "guide", "at": [6, 4], "xLabel": "Y1", "yLabel": "P1"},
+          {"type": "guide", "at": [4, 6], "xLabel": "Y2", "yLabel": "P2"},
+          {"type": "point", "at": [6, 4], "on": ["D", "S1"], "is": "intersection"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S2"], "is": "intersection"}
+        ]
+      }
+    },
     "remember": "Shifts in aggregate demand and supply change output, jobs and prices together, so they help explain how well the goals were met.",
     "a": {
       "q": "An economy near full capacity sees a rise in aggregate demand. Which result is most likely?",
@@ -4567,6 +5101,41 @@ MADE_BANKS.eco = {
         "Higher inflation in Australia than in partner countries makes our goods dearer, which cuts export demand and tends to lower the dollar. More foreign investment in Australia raises demand for the dollar."
       ]
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Stronger demand for imports means Australians sell more Australian dollars, so supply of the dollar shifts right from S1, dashed, to S2, shown by an arrow. Demand D stays the same, so the dollar's value falls from e1 to e2.",
+        "x": {"min": 0, "max": 10, "label": "Quantity of A$"},
+        "y": {"min": 0, "max": 10, "label": "Value of A$"},
+        "items": [
+          {"type": "curve", "id": "D", "points": [[1, 9], [9, 1]], "label": "D", "pos": "above-right", "labelAt": 1.6},
+          {
+            "type": "curve",
+            "id": "S1",
+            "points": [[0, 2], [8, 10]],
+            "label": "S1",
+            "pos": "right",
+            "style": "dash",
+            "labelAt": 8
+          },
+          {
+            "type": "curve",
+            "id": "S2",
+            "points": [[2, 0], [10, 8]],
+            "label": "S2",
+            "pos": "below-right",
+            "labelAt": 8.6
+          },
+          {"type": "arrow", "from": [5.4, 7], "to": [8.6, 7]},
+          {"type": "guide", "at": [4, 6], "xLabel": "", "yLabel": "e1"},
+          {"type": "guide", "at": [6, 4], "xLabel": "", "yLabel": "e2"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S1"], "is": "intersection"},
+          {"type": "point", "at": [6, 4], "on": ["D", "S2"], "is": "intersection"},
+          {"type": "text", "at": [4.5, 6], "label": "E1", "pos": "right"},
+          {"type": "text", "at": [6.5, 4], "label": "E2", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Higher relative interest rates, commodity prices, export demand and foreign investment tend to lift the dollar. More import demand and higher relative inflation tend to lower it.",
     "a": {
       "q": "The Reserve Bank raises interest rates while rates in other major economies stay the same. What is the likely effect on the Australian dollar?",
@@ -4892,6 +5461,46 @@ MADE_BANKS.eco = {
       "Supply-side policies shift aggregate supply to the right. The economy can then produce more at each price level, so output can grow with less pressure on prices.",
       "Supply-side effects usually take years to appear. So governments use them alongside demand policies, which act more quickly, to pursue sustainable growth and low inflation."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Supply-side policies shift aggregate supply right from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. Real GDP rises from Y1 to Y2 while the price level eases from P1 to P2.",
+        "x": {"min": 0, "max": 10, "label": "Real GDP"},
+        "y": {"min": 0, "max": 10, "label": "Price level"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[1, 9], [9, 1]],
+            "label": "AD",
+            "pos": "above-right",
+            "labelAt": 1.6
+          },
+          {
+            "type": "curve",
+            "id": "S1",
+            "points": [[0, 2], [8, 10]],
+            "label": "AS1",
+            "pos": "right",
+            "style": "dash",
+            "labelAt": 8
+          },
+          {
+            "type": "curve",
+            "id": "S2",
+            "points": [[2, 0], [10, 8]],
+            "label": "AS2",
+            "pos": "below-right",
+            "labelAt": 8.6
+          },
+          {"type": "arrow", "from": [5.4, 7], "to": [8.6, 7]},
+          {"type": "guide", "at": [4, 6], "xLabel": "Y1", "yLabel": "P1"},
+          {"type": "guide", "at": [6, 4], "xLabel": "Y2", "yLabel": "P2"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S1"], "is": "intersection"},
+          {"type": "point", "at": [6, 4], "on": ["D", "S2"], "is": "intersection"}
+        ]
+      }
+    },
     "remember": "Supply-side policies raise capacity, so growth can come with less pressure on prices.",
     "a": {
       "q": "Why can supply-side policies help the economy grow without causing inflation?",
@@ -5247,6 +5856,31 @@ MADE_BANKS.eco = {
       ],
       "Moving along the curve shows opportunity cost. To make more of one good, the economy gives up some of the other. A point outside the curve cannot be reached with current resources."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A production possibility frontier (PPF) for two goods. Moving along the curve from A to B, the economy makes more of good X and less of good Y. The arrow on the x-axis shows the extra good X gained, and the arrow on the y-axis shows the good Y given up, the opportunity cost.",
+        "x": {"min": 0, "max": 10, "label": "Good X"},
+        "y": {"min": 0, "max": 10, "label": "Good Y"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "ppf",
+            "expr": "9\\sqrt{1 - \\frac{x^{2}}{81}}",
+            "domain": [0, 9],
+            "label": "PPF",
+            "pos": "above-right",
+            "labelAt": 1.5
+          },
+          {"type": "point", "at": [5.4, 7.2], "on": ["ppf"], "label": "A", "pos": "above-right"},
+          {"type": "point", "at": [7.2, 5.4], "on": ["ppf"], "label": "B", "pos": "above-right"},
+          {"type": "guide", "at": [5.4, 7.2], "xLabel": "", "yLabel": ""},
+          {"type": "guide", "at": [7.2, 5.4], "xLabel": "", "yLabel": ""},
+          {"type": "arrow", "from": [5.4, 0.8], "to": [7.2, 0.8], "label": "gained", "pos": "above"},
+          {"type": "arrow", "from": [0.6, 7.2], "to": [0.6, 5.4], "label": "given up", "pos": "right"}
+        ]
+      }
+    },
     "remember": "On the PPF, more of one good means less of the other. Inside it, resources are wasted.",
     "a": {
       "q": "An economy is at a point inside its PPF. What does this show?",

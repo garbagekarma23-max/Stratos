@@ -14,7 +14,8 @@
   "2026-11-06T08:49:32Z maths: written in LaTeX (by hand)",
   "2026-11-10T13:52:27Z pictures: the owner asked for a chart at card 3",
   "2026-11-10T13:57:47Z pictures: 1 picture waiting for the check",
-  "2026-11-10T14:03:12Z pictures: 1 picture kept"
+  "2026-11-10T14:03:12Z pictures: 1 picture kept",
+  "2026-11-10T15:40:16Z figures: the box plot moved from card 3 to card 4, under the worked example whose data it draws, now that the content check reads \"IQR = 11 − 4.5 = 6.5\" as 6.5"
  ],
  "sent": {
   "match": 1,
@@ -179,7 +180,7 @@
    "Example: 2, 4, 5, 7, 8, 10, 12, 20. Median \\(= (7 + 8) \\div 2 = 7.5\\). \\(Q_{1} = (4 + 5) \\div 2 = 4.5\\). \\(Q_{3} = (10 + 12) \\div 2 = 11\\). \\(\\text{IQR} = 11 - 4.5 = 6.5\\). Range \\(= 20 - 2 = 18\\). To compare two sets, a smaller IQR means the middle of the data is less spread out."
   ],
   "cardFigs": {
-   "3": {
+   "4": {
     "kind": "chart",
     "chart": "box",
     "alt": "A box plot of 2, 4, 5, 7, 8, 10, 12, 20. The whiskers run from the lowest score 2 to the highest score 20. The box runs from \\(Q_{1} = 4.5\\) to \\(Q_{3} = 11\\), with a line at the median, 7.5.",
@@ -344,7 +345,48 @@
     "sure": "high"
    },
    "checked_by": "claude-code",
-   "checked": "2026-11-10T14:03:11Z"
+   "checked": "2026-11-10T14:03:11Z",
+   "moved_to": "card 4"
+  }
+ ],
+ "figures_before": [
+  {
+   "card 3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot of 2, 4, 5, 7, 8, 10, 12, 20. The whiskers run from the lowest score 2 to the highest score 20. The box runs from \\(Q_{1} = 4.5\\) to \\(Q_{3} = 11\\), with a line at the median, 7.5.",
+    "x": {
+     "min": 0,
+     "max": 22,
+     "step": 2,
+     "label": "Score"
+    },
+    "sets": [
+     {
+      "data": [
+       2,
+       4,
+       5,
+       7,
+       8,
+       10,
+       12,
+       20
+      ]
+     }
+    ],
+    "stats": {
+     "min": 2,
+     "q1": 4.5,
+     "median": 7.5,
+     "q3": 11,
+     "max": 20,
+     "iqr": 6.5,
+     "range": 18
+    }
+   },
+   "why": "the box plot moved under card line 4, the worked example whose data it draws, once the content check read a chain of working by its last value",
+   "at_time": "2026-11-10T15:40:16Z"
   }
  ]
 }

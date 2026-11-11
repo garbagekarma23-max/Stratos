@@ -10,7 +10,12 @@
   "2026-10-29T12:30:18Z check: flagged",
   "2026-10-29T12:39:09Z fix: suggested",
   "2026-10-29T16:45:05Z recheck: kept for you (the fresh check found a problem)",
-  "2026-10-30T11:54:19Z review: approved with the fix"
+  "2026-10-30T11:54:19Z review: approved with the fix",
+  "2026-11-10T15:54:26Z pictures: the owner asked for a graph at card 1",
+  "2026-11-10T15:55:22Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:53Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The downswing label is placed above-right of (3.9, 5.7), so it is drawn from about x = 4.1 to x = 6.5, mostly to the right of the trough at x = 5.05 where real GDP is already rising; it should sit over the falling part of the curve between the boom (x = 1.93) and the trough, for example centred near x = 3.5 with its words ending before x = 5.; The end of the downswing label runs into the dotted trend line near where the curve crosses it, so move it clear of both lines.",
+  "2026-11-10T16:03:07Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:04:01Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -193,6 +198,146 @@
    ],
    "The cycle is not regular. The length and size of upswings and downswings vary, and the economy moves around the trend instead of staying on it."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "Real GDP rises and falls around its long-term trend, the dotted line, in cycles of different lengths and sizes. In an upswing it climbs to a peak, or boom. In a downswing growth slows or output falls, to a trough, then the next upswing begins.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Time"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Real GDP"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "t",
+      "points": [
+       [
+        0,
+        4.4
+       ],
+       [
+        10,
+        7.4
+       ]
+      ],
+      "label": "trend",
+      "pos": "below-right",
+      "style": "dot",
+      "labelAt": 0.4
+     },
+     {
+      "type": "curve",
+      "id": "g",
+      "points": [
+       [
+        0,
+        3.6
+       ],
+       [
+        0.8,
+        4.9
+       ],
+       [
+        1.5,
+        6
+       ],
+       [
+        2.5,
+        5.2
+       ],
+       [
+        3.5,
+        4
+       ],
+       [
+        4.6,
+        3.4
+       ],
+       [
+        5.5,
+        4.2
+       ],
+       [
+        6.4,
+        6
+       ],
+       [
+        7.3,
+        7.8
+       ],
+       [
+        7.9,
+        7.2
+       ],
+       [
+        8.7,
+        6.2
+       ],
+       [
+        9.4,
+        6.9
+       ],
+       [
+        10,
+        8
+       ]
+      ],
+      "smooth": true,
+      "label": "real GDP",
+      "labelAt": 7.3,
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       6
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "boom",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       4.6,
+       3.4
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "trough",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       1.7,
+       6.1
+      ],
+      "label": "downswing",
+      "pos": "above-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       5.6,
+       3.6
+      ],
+      "label": "upswing",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Watch the growth rate: rising or strong growth is an upswing, slowing growth or falling output is a downswing.",
   "a": {
    "q": "Real GDP in Country Y falls for the third quarter in a row. Which phase is it in?",
@@ -218,5 +363,281 @@
    "clue": "Look at what the growth rate is doing, not just whether output rose."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Real GDP rises and falls around its long-term trend, the dotted line. In an upswing it climbs to a peak, or boom. In a downswing growth slows or output falls, to a trough, then the next upswing begins.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Real GDP rises and falls around its long-term trend, the dotted line. In an upswing it climbs to a peak, or boom. In a downswing growth slows or output falls, to a trough, then the next upswing begins.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "0.3x + 4",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "trend",
+       "labelAt": 0.4,
+       "pos": "below-right",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "0.3x + 4 + 2\\sin(0.9x)",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "real GDP",
+       "labelAt": 8.9,
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.93,
+        6.55
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "boom",
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        5.05,
+        3.54
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "trough",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.9,
+        5.7
+       ],
+       "label": "downswing",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        7.2,
+        5.4
+       ],
+       "label": "upswing",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:22Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The downswing label is placed above-right of (3.9, 5.7), so it is drawn from about x = 4.1 to x = 6.5, mostly to the right of the trough at x = 5.05 where real GDP is already rising; it should sit over the falling part of the curve between the boom (x = 1.93) and the trough, for example centred near x = 3.5 with its words ending before x = 5.",
+     "The end of the downswing label runs into the dotted trend line near where the curve crosses it, so move it clear of both lines."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:53Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Real GDP rises and falls around its long-term trend, the dotted line. In an upswing it climbs to a peak, or boom. In a downswing growth slows or output falls, to a trough, then the next upswing begins.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Real GDP rises and falls around its long-term trend, the dotted line, in cycles of different lengths and sizes. In an upswing it climbs to a peak, or boom. In a downswing growth slows or output falls, to a trough, then the next upswing begins.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "t",
+       "points": [
+        [
+         0,
+         4.4
+        ],
+        [
+         10,
+         7.4
+        ]
+       ],
+       "label": "trend",
+       "pos": "below-right",
+       "style": "dot",
+       "labelAt": 0.4
+      },
+      {
+       "type": "curve",
+       "id": "g",
+       "points": [
+        [
+         0,
+         3.6
+        ],
+        [
+         0.8,
+         4.9
+        ],
+        [
+         1.5,
+         6
+        ],
+        [
+         2.5,
+         5.2
+        ],
+        [
+         3.5,
+         4
+        ],
+        [
+         4.6,
+         3.4
+        ],
+        [
+         5.5,
+         4.2
+        ],
+        [
+         6.4,
+         6
+        ],
+        [
+         7.3,
+         7.8
+        ],
+        [
+         7.9,
+         7.2
+        ],
+        [
+         8.7,
+         6.2
+        ],
+        [
+         9.4,
+         6.9
+        ],
+        [
+         10,
+         8
+        ]
+       ],
+       "smooth": true,
+       "label": "real GDP",
+       "labelAt": 7.3,
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        6
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "boom",
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        4.6,
+        3.4
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "trough",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.7,
+        6.1
+       ],
+       "label": "downswing",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        5.6,
+        3.6
+       ],
+       "label": "upswing",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T16:03:07Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:04:01Z"
+  }
+ ]
 }

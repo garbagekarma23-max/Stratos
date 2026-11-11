@@ -7409,6 +7409,42 @@ MADE_BANKS.bus = {
       ],
       "A business can try an extension strategy, such as a new flavour or a new market, to lift sales again. The best marketing changes at each stage."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Sales over time through the product life cycle. In introduction, sales are low. In growth, they rise quickly. In maturity, they level off. In decline, they fall.",
+        "x": {"min": 0, "max": 10, "label": "Time"},
+        "y": {"min": 0, "max": 10, "label": "Sales"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "s",
+            "points": [
+              [0, 0.4],
+              [1, 0.7],
+              [2, 1.4],
+              [3, 2.6],
+              [4, 4.6],
+              [5, 6.6],
+              [5.5, 7.3],
+              [6.5, 7.9],
+              [7.5, 7.6],
+              [8, 7.1],
+              [9, 5.6],
+              [10, 4]
+            ],
+            "smooth": true
+          },
+          {"type": "guide", "at": [3, 2.6], "xLabel": ""},
+          {"type": "guide", "at": [5.5, 7.3], "xLabel": ""},
+          {"type": "guide", "at": [8, 7.1], "xLabel": ""},
+          {"type": "text", "at": [1.5, 9.2], "label": "Introduction", "pos": "below"},
+          {"type": "text", "at": [4.25, 9.2], "label": "Growth", "pos": "below"},
+          {"type": "text", "at": [6.75, 9.2], "label": "Maturity", "pos": "below"},
+          {"type": "text", "at": [9, 9.2], "label": "Decline", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Products move through four stages, and a business can try an extension. Its marketing should change with the stage.",
     "a": {
       "q": "A new energy drink has just been released in Perth and few people know it. Which stage is it in, and what is the main marketing aim?",

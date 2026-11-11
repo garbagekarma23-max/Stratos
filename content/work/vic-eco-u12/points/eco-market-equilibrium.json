@@ -33,7 +33,10 @@
   "2026-11-01T08:33:49Z write: done",
   "2026-11-01T08:42:05Z check: flagged",
   "2026-11-01T08:44:26Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a wording)"
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a wording)",
+  "2026-11-10T15:54:23Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T15:55:24Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:56Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -205,6 +208,105 @@
    ],
    "Prices keep moving until the shortage or surplus is gone. The market then settles at the equilibrium price and quantity."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Demand D and supply S cross at the equilibrium. At a price above it, quantity supplied is greater than quantity demanded: the gap between the curves is a surplus. At a price below it, quantity demanded is greater than quantity supplied: the gap is a shortage.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "D",
+      "pos": "below-left",
+      "labelAt": 8.6
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "S",
+      "pos": "above-left",
+      "labelAt": 8.6
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       8
+      ],
+      "to": [
+       8,
+       8
+      ],
+      "label": "surplus",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2,
+       2
+      ],
+      "to": [
+       8,
+       2
+      ],
+      "label": "shortage",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       5
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       4.5,
+       5
+      ],
+      "label": "equilibrium",
+      "pos": "left"
+     }
+    ]
+   }
+  },
   "remember": "Shortage: price rises. Surplus: price falls. Both end at equilibrium.",
   "a": {
    "q": "A market has a surplus. Which statement describes it?",
@@ -230,5 +332,129 @@
    "clue": "Leftover stock means sellers offered more than buyers wanted."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Demand D and supply S cross at the equilibrium. At a price above it, quantity supplied is greater than quantity demanded: the gap between the curves is a surplus. At a price below it, quantity demanded is greater than quantity supplied: the gap is a shortage.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Demand D and supply S cross at the equilibrium. At a price above it, quantity supplied is greater than quantity demanded: the gap between the curves is a surplus. At a price below it, quantity demanded is greater than quantity supplied: the gap is a shortage.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "D",
+       "pos": "below-left",
+       "labelAt": 8.6
+      },
+      {
+       "type": "curve",
+       "id": "S",
+       "points": [
+        [
+         1,
+         1
+        ],
+        [
+         9,
+         9
+        ]
+       ],
+       "label": "S",
+       "pos": "above-left",
+       "labelAt": 8.6
+      },
+      {
+       "type": "arrow",
+       "from": [
+        2,
+        8
+       ],
+       "to": [
+        8,
+        8
+       ],
+       "label": "surplus",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        2,
+        2
+       ],
+       "to": [
+        8,
+        2
+       ],
+       "label": "shortage",
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        5
+       ],
+       "on": [
+        "D",
+        "S"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "text",
+       "at": [
+        4.5,
+        5
+       ],
+       "label": "equilibrium",
+       "pos": "left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:24Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:56Z"
+  }
+ ]
 }

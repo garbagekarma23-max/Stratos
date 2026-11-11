@@ -74,6 +74,15 @@ check(!near('Example: \\(Q_{1} = 12\\) and \\(Q_{3} = 20\\). \\(\\text{IQR} = 8\
   'the text beside a chart (its card line) is held to the data: Q1, Q3, IQR and the median as written, with "about" left as an estimate', R);
 check(JSON.stringify(FIG.statedIn('The mean is 4.5, the range was 12 and the lower quartile = 3.')) === JSON.stringify([['mean', '4.5'], ['range', '12'], ['q1', '3']]),
   'statedIn reads the mean, the range and the lower quartile', R);
+check(JSON.stringify(FIG.statedIn('\\(\\text{IQR} = 11 - 4.5 = 6.5\\)')) === JSON.stringify([['iqr', '6.5']]) &&
+  JSON.stringify(FIG.statedIn('IQR = 11 − 4.5 = 6.5, and the median is 8.')) === JSON.stringify([['iqr', '6.5'], ['median', '8']]) &&
+  JSON.stringify(FIG.statedIn('\\(\\text{IQR} = Q_{3} - Q_{1} = 11 - 4.5 = 6.5\\)')) === JSON.stringify([['iqr', '6.5']]) &&
+  JSON.stringify(FIG.statedIn('The range is \\(20 - 2 \\times 3 = 14\\).')) === JSON.stringify([['range', '14']]) &&
+  JSON.stringify(FIG.statedIn('Median \\(= (7 + 8) \\div 2 = 7.5\\). \\(Q_{1} = (4 + 5) \\div 2 = 4.5\\).')) === JSON.stringify([['median', '7.5'], ['q1', '4.5']]) &&
+  !FIG.statedIn('IQR = 11 − 4.5 = about 6.5').length &&
+  !near('\\(\\text{IQR} = 20 - 12 = 8\\), and \\(\\text{IQR} = Q_{3} - Q_{1} = 20 - 12 = 8\\).', PLAIN).length &&
+  has(near('\\(\\text{IQR} = 20 - 12 = 9\\).', PLAIN), 'the text says the iqr is 9'),
+  'a chain of working counts by its last value: "IQR = 11 − 4.5 = 6.5" states 6.5, working in brackets is read the same way, a stat word inside the working states nothing, and a wrong last value is caught', R);
 
 // ---------- slope fields ----------
 const SLOPE = {kind: 'graph', alt: 'The slope field of dy/dx = x, with the solution through (0, -2).', x: {min: -3, max: 3, step: 1, label: '\\(x\\)', nums: false}, y: {min: -3, max: 3, step: 1, label: '\\(y\\)', nums: false},

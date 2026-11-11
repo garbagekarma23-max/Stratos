@@ -30,7 +30,10 @@
   "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:25Z write: done",
-  "2026-11-01T15:14:44Z check: passed, cleared"
+  "2026-11-01T15:14:44Z check: passed, cleared",
+  "2026-11-10T15:54:25Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T15:55:26Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:59Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -121,6 +124,129 @@
    ],
    "A rise in AS means firms can produce more at each price level. This can allow growth in real GDP and put downward pressure on the price level."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A rise in aggregate supply shifts AS right from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. Real GDP rises from Y1 to Y2 and the price level falls from P1 to P2.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Real GDP"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price level"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "AD",
+      "pos": "above-right",
+      "labelAt": 1.6
+     },
+     {
+      "type": "curve",
+      "id": "S1",
+      "points": [
+       [
+        0,
+        2
+       ],
+       [
+        8,
+        10
+       ]
+      ],
+      "label": "AS1",
+      "pos": "right",
+      "style": "dash",
+      "labelAt": 8
+     },
+     {
+      "type": "curve",
+      "id": "S2",
+      "points": [
+       [
+        2,
+        0
+       ],
+       [
+        10,
+        8
+       ]
+      ],
+      "label": "AS2",
+      "pos": "below-right",
+      "labelAt": 8.6
+     },
+     {
+      "type": "arrow",
+      "from": [
+       5.4,
+       7
+      ],
+      "to": [
+       8.6,
+       7
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       6
+      ],
+      "xLabel": "Y1",
+      "yLabel": "P1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       4
+      ],
+      "xLabel": "Y2",
+      "yLabel": "P2"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "D",
+       "S1"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       4
+      ],
+      "on": [
+       "D",
+       "S2"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
   "remember": "Anything that raises capacity or cuts input costs shifts AS out. Anything that cuts capacity or lifts input costs shifts it in.",
   "a": {
    "q": "Which change would most likely shift the aggregate supply curve to the right?",
@@ -146,5 +272,153 @@
    "clue": "Ask whether this changes what firms can produce, or what buyers want."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A rise in aggregate supply shifts AS right from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. Real GDP rises from Y1 to Y2 and the price level falls from P1 to P2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A rise in aggregate supply shifts AS right from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. Real GDP rises from Y1 to Y2 and the price level falls from P1 to P2.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price level"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "AD",
+       "pos": "above-right",
+       "labelAt": 1.6
+      },
+      {
+       "type": "curve",
+       "id": "S1",
+       "points": [
+        [
+         0,
+         2
+        ],
+        [
+         8,
+         10
+        ]
+       ],
+       "label": "AS1",
+       "pos": "right",
+       "style": "dash",
+       "labelAt": 8
+      },
+      {
+       "type": "curve",
+       "id": "S2",
+       "points": [
+        [
+         2,
+         0
+        ],
+        [
+         10,
+         8
+        ]
+       ],
+       "label": "AS2",
+       "pos": "below-right",
+       "labelAt": 8.6
+      },
+      {
+       "type": "arrow",
+       "from": [
+        5.4,
+        7
+       ],
+       "to": [
+        8.6,
+        7
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        6
+       ],
+       "xLabel": "Y1",
+       "yLabel": "P1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        4
+       ],
+       "xLabel": "Y2",
+       "yLabel": "P2"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        6
+       ],
+       "on": [
+        "D",
+        "S1"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        4
+       ],
+       "on": [
+        "D",
+        "S2"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:25Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:58Z"
+  }
+ ]
 }

@@ -35,7 +35,9 @@
   "2026-11-10T13:52:08Z pictures: the owner asked for a chart at card 2",
   "2026-11-10T13:52:08Z pictures: the owner asked for a graph at card 3",
   "2026-11-10T13:57:50Z pictures: 2 pictures waiting for the check",
-  "2026-11-10T14:03:16Z pictures: 2 pictures kept"
+  "2026-11-10T14:03:16Z pictures: 2 pictures kept",
+  "2026-11-10T15:37:11Z text: question b's café moved from Dubbo, a NSW town, to Shepparton, since only Victorian Foundation Mathematics uses this point",
+  "2026-11-10T16:00:00Z text: a fresh check kept the fix"
  ],
  "sent": {
   "match": 1,
@@ -312,7 +314,7 @@
   },
   "b": {
    "d": 2,
-   "q": "A line graph shows the weekly sales of Mia's café in Dubbo. Sales are $400 in week 1, $500 in week 2, $650 in week 3 and $600 in week 4. Between which two weeks did sales fall?",
+   "q": "A line graph shows the weekly sales of Mia's café in Shepparton. Sales are $400 in week 1, $500 in week 2, $650 in week 3 and $600 in week 4. Between which two weeks did sales fall?",
    "opts": [
     "Week 3 to week 4",
     "Week 1 to week 2",
@@ -593,6 +595,23 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-10T14:03:15Z"
+  }
+ ],
+ "edits": [
+  {
+   "part": "b.q",
+   "before": "A line graph shows the weekly sales of Mia's café in Dubbo. Sales are $400 in week 1, $500 in week 2, $650 in week 3 and $600 in week 4. Between which two weeks did sales fall?",
+   "after": "A line graph shows the weekly sales of Mia's café in Shepparton. Sales are $400 in week 1, $500 in week 2, $650 in week 3 and $600 in week 4. Between which two weeks did sales fall?",
+   "by": "claude-code",
+   "why": "Dubbo is a NSW town, and only a Victorian course uses this point.",
+   "at_time": "2026-11-10T15:37:11Z",
+   "check": {
+    "verdict": "keep",
+    "sure": "high",
+    "problems": [],
+    "summary": "Shepparton is a Victorian town, the change touches nothing else, and the point still agrees with itself: 50% of 80 is 40, and sales fall only from $650 in week 3 to $600 in week 4.",
+    "by": "claude-code"
+   }
   }
  ]
 }

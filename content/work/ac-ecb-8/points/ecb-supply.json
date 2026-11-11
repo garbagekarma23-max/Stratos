@@ -9,7 +9,10 @@
   "2026-11-04T09:36:47Z write: done",
   "2026-11-04T09:46:54Z check: flagged",
   "2026-11-04T09:58:21Z fix: suggested",
-  "2026-11-04T17:58:50Z autoreview: cleared with the fix (card other, remember wording)"
+  "2026-11-04T17:58:50Z autoreview: cleared with the fix (card other, remember wording)",
+  "2026-11-10T15:54:24Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T15:55:20Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:51Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -151,6 +154,94 @@
    "As the price falls, sellers usually offer less. Some items may no longer be worth making at a low price.",
    "Supply describes the sellers' side of a market. It is a different idea from demand."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A supply curve sloping up. When the price rises from a low price to a high price, sellers offer more: the quantity offered rises from fewer to more, from A to B along the curve.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "Supply",
+      "pos": "above",
+      "labelAt": 9
+     },
+     {
+      "type": "guide",
+      "at": [
+       2.5,
+       2.5
+      ],
+      "xLabel": "fewer",
+      "yLabel": "low price"
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       6
+      ],
+      "xLabel": "more",
+      "yLabel": "high price"
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       2.5
+      ],
+      "on": [
+       "S"
+      ],
+      "label": "A",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       6
+      ],
+      "on": [
+       "S"
+      ],
+      "label": "B",
+      "pos": "below-right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       3.7
+      ],
+      "to": [
+       5.4,
+       6.1
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Higher price, sellers usually offer more. Lower price, they usually offer less.",
   "a": {
    "q": "Which statement best describes supply?",
@@ -176,5 +267,118 @@
    "clue": "What does a higher price mean for the seller's income?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A supply curve sloping up. When the price rises from a low price to a high price, sellers offer more: the quantity offered rises from fewer to more, from A to B along the curve.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A supply curve sloping up. When the price rises from a low price to a high price, sellers offer more: the quantity offered rises from fewer to more, from A to B along the curve.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "S",
+       "points": [
+        [
+         1,
+         1
+        ],
+        [
+         9,
+         9
+        ]
+       ],
+       "label": "Supply",
+       "pos": "above",
+       "labelAt": 9
+      },
+      {
+       "type": "guide",
+       "at": [
+        2.5,
+        2.5
+       ],
+       "xLabel": "fewer",
+       "yLabel": "low price"
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        6
+       ],
+       "xLabel": "more",
+       "yLabel": "high price"
+      },
+      {
+       "type": "point",
+       "at": [
+        2.5,
+        2.5
+       ],
+       "on": [
+        "S"
+       ],
+       "label": "A",
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        6
+       ],
+       "on": [
+        "S"
+       ],
+       "label": "B",
+       "pos": "below-right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        3,
+        3.7
+       ],
+       "to": [
+        5.4,
+        6.1
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:20Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:50Z"
+  }
+ ]
 }

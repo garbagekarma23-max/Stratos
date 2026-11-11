@@ -34,7 +34,10 @@
   "2026-11-01T08:42:05Z write: done",
   "2026-11-01T08:44:26Z check: flagged",
   "2026-11-01T08:46:30Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a other)"
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a other)",
+  "2026-11-10T15:54:23Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T15:55:23Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:55Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -188,6 +191,94 @@
    "A demand curve slopes downward. It shows price on the vertical axis and quantity demanded on the horizontal axis.",
    "A change in the good's own price moves buyers along the same demand curve. The curve itself does not move. Other things equal means that everything else that affects buying is held constant."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A demand curve D sloping down, with price on the vertical axis and quantity demanded on the horizontal axis. The price rises from P1 to P2, and buyers move along the same curve from A to B, so the quantity demanded falls from Q1 to Q2. The curve does not move.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity demanded"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "D",
+      "pos": "right",
+      "labelAt": 9
+     },
+     {
+      "type": "guide",
+      "at": [
+       5,
+       5
+      ],
+      "xLabel": "Q1",
+      "yLabel": "P1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       3,
+       7
+      ],
+      "xLabel": "Q2",
+      "yLabel": "P2"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       5
+      ],
+      "on": [
+       "D"
+      ],
+      "label": "A",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       7
+      ],
+      "on": [
+       "D"
+      ],
+      "label": "B",
+      "pos": "above-right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       5.2,
+       5.8
+      ],
+      "to": [
+       3.8,
+       7.2
+      ]
+     }
+    ]
+   }
+  },
   "remember": "A price change moves buyers along the demand curve: higher price, lower quantity demanded.",
   "a": {
    "q": "Which statement best describes the law of demand?",
@@ -213,5 +304,118 @@
    "clue": "Only the pie's own price changed."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A demand curve D sloping down, with price on the vertical axis and quantity demanded on the horizontal axis. The price rises from P1 to P2, and buyers move along the same curve from A to B, so the quantity demanded falls from Q1 to Q2. The curve does not move.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A demand curve D sloping down, with price on the vertical axis and quantity demanded on the horizontal axis. The price rises from P1 to P2, and buyers move along the same curve from A to B, so the quantity demanded falls from Q1 to Q2. The curve does not move.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity demanded"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "D",
+       "pos": "right",
+       "labelAt": 9
+      },
+      {
+       "type": "guide",
+       "at": [
+        5,
+        5
+       ],
+       "xLabel": "Q1",
+       "yLabel": "P1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        7
+       ],
+       "xLabel": "Q2",
+       "yLabel": "P2"
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        5
+       ],
+       "on": [
+        "D"
+       ],
+       "label": "A",
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        7
+       ],
+       "on": [
+        "D"
+       ],
+       "label": "B",
+       "pos": "above-right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        5.2,
+        5.8
+       ],
+       "to": [
+        3.8,
+        7.2
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:23Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:55Z"
+  }
+ ]
 }

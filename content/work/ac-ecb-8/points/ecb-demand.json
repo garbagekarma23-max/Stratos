@@ -23,7 +23,12 @@
   "2026-11-05T02:17:40Z autoreject: rejected, to be written again (b wording)",
   "2026-11-05T02:27:40Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T02:37:17Z claude-code check: answered by a separate subagent",
-  "2026-11-05T02:37:17Z check: passed, cleared"
+  "2026-11-05T02:37:17Z check: passed, cleared",
+  "2026-11-10T15:54:24Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T15:55:20Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:50Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The Quantity axis label sits where the number 50 would be, so the last point on the curve (50 at $1) has no number under it while 10 to 40 do; move the axis label clear (for example widen the x-axis to 70) so 50 shows.",
+  "2026-11-10T16:03:07Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:04:01Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -340,6 +345,106 @@
    "Buyers cut back when prices rise for two reasons. Some cannot afford it any more, and some switch to a cheaper product instead.",
    "A demand schedule is a table that lists the quantity buyers would purchase at each price. A demand curve is a line that shows the same thing on a graph, and it slopes down."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+    "x": {
+     "min": 0,
+     "max": 70,
+     "step": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Price ($)"
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        10,
+        5
+       ],
+       [
+        20,
+        4
+       ],
+       [
+        30,
+        3
+       ],
+       [
+        40,
+        2
+       ],
+       [
+        50,
+        1
+       ]
+      ],
+      "label": "Demand",
+      "pos": "above-right",
+      "labelAt": 42
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       5
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       20,
+       4
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       30,
+       3
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       2
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       50,
+       1
+      ],
+      "on": [
+       "D"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Demand links price to the amount people buy: a higher price usually means less is bought.",
   "a": {
    "q": "A Hobart shop cuts the price of its sandwiches. What usually happens to the number of sandwiches people want to buy?",
@@ -365,5 +470,255 @@
    "clue": "Demand needs more than wanting a product."
   }
  },
- "checked_by": "claude-code"
+ "checked_by": "claude-code",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+     "x": {
+      "min": 0,
+      "max": 60,
+      "step": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "label": "Price ($)"
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         10,
+         5
+        ],
+        [
+         20,
+         4
+        ],
+        [
+         30,
+         3
+        ],
+        [
+         40,
+         2
+        ],
+        [
+         50,
+         1
+        ]
+       ],
+       "label": "Demand",
+       "pos": "above-right",
+       "labelAt": 42
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        5
+       ],
+       "on": [
+        "D"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        20,
+        4
+       ],
+       "on": [
+        "D"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        30,
+        3
+       ],
+       "on": [
+        "D"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        40,
+        2
+       ],
+       "on": [
+        "D"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        50,
+        1
+       ],
+       "on": [
+        "D"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:20Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The Quantity axis label sits where the number 50 would be, so the last point on the curve (50 at $1) has no number under it while 10 to 40 do; move the axis label clear (for example widen the x-axis to 70) so 50 shows."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:50Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+     "x": {
+      "min": 0,
+      "max": 70,
+      "step": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "label": "Price ($)"
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         10,
+         5
+        ],
+        [
+         20,
+         4
+        ],
+        [
+         30,
+         3
+        ],
+        [
+         40,
+         2
+        ],
+        [
+         50,
+         1
+        ]
+       ],
+       "label": "Demand",
+       "pos": "above-right",
+       "labelAt": 42
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        5
+       ],
+       "on": [
+        "D"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        20,
+        4
+       ],
+       "on": [
+        "D"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        30,
+        3
+       ],
+       "on": [
+        "D"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        40,
+        2
+       ],
+       "on": [
+        "D"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        50,
+        1
+       ],
+       "on": [
+        "D"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T16:03:06Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:04:01Z"
+  }
+ ]
 }

@@ -19,7 +19,10 @@
   "2026-11-01T14:55:59Z write: done",
   "2026-11-01T15:05:25Z check: flagged",
   "2026-11-01T15:14:45Z fix: suggested",
-  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-10T15:54:22Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T15:55:24Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:57Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -182,6 +185,66 @@
    "A production possibility frontier (PPF) shows the most of two goods an economy can make with its current resources and technology. A point on the curve uses all resources fully. A point inside leaves some unused. A point outside cannot be reached with current resources and technology.",
    "Moving along the PPF shows opportunity cost: more of one good means less of the other. The PPF illustrates the choice of what to produce and how much of each. It does not show who gets the output."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A production possibility frontier (PPF) for two goods, bowed outward. Point A is on the curve, where all resources are used fully. Point B is inside the curve, where some resources are unused. Point C is outside the curve, which cannot be reached with current resources and technology.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Good X"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Good Y"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "ppf",
+      "expr": "9\\sqrt{1 - \\frac{x^{2}}{81}}",
+      "domain": [
+       0,
+       9
+      ],
+      "label": "PPF",
+      "pos": "above-right",
+      "labelAt": 3
+     },
+     {
+      "type": "point",
+      "at": [
+       5.4,
+       7.2
+      ],
+      "on": [
+       "ppf"
+      ],
+      "label": "A on the PPF",
+      "pos": "below-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       3
+      ],
+      "label": "B inside",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       8
+      ],
+      "label": "C outside",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Resources are limited, so every choice has an opportunity cost. The PPF shows the trade-off.",
   "a": {
    "q": "An economy moves along its PPF to make more wheat. What does the move show?",
@@ -207,5 +270,90 @@
    "clue": "Compare the point with the curve, which shows the most that can be made."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A production possibility frontier (PPF) for two goods, bowed outward. Point A is on the curve, where all resources are used fully. Point B is inside the curve, where some resources are unused. Point C is outside the curve, which cannot be reached with current resources and technology.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A production possibility frontier (PPF) for two goods, bowed outward. Point A is on the curve, where all resources are used fully. Point B is inside the curve, where some resources are unused. Point C is outside the curve, which cannot be reached with current resources and technology.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Good X"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Good Y"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "ppf",
+       "expr": "9\\sqrt{1 - \\frac{x^{2}}{81}}",
+       "domain": [
+        0,
+        9
+       ],
+       "label": "PPF",
+       "pos": "above-right",
+       "labelAt": 3
+      },
+      {
+       "type": "point",
+       "at": [
+        5.4,
+        7.2
+       ],
+       "on": [
+        "ppf"
+       ],
+       "label": "A on the PPF",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        3
+       ],
+       "label": "B inside",
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        8,
+        8
+       ],
+       "label": "C outside",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:24Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:57Z"
+  }
+ ]
 }

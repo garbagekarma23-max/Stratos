@@ -8,7 +8,10 @@
   "2026-10-29T12:14:24Z match: none",
   "2026-10-29T12:22:33Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:30:19Z write: done",
-  "2026-10-29T12:39:09Z check: passed, cleared"
+  "2026-10-29T12:39:09Z check: passed, cleared",
+  "2026-11-10T15:54:26Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T15:55:22Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:53Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -95,6 +98,79 @@
     "Australians supply Australian dollars when they swap them for foreign currency to buy imports, invest overseas or travel abroad. More supply, with demand unchanged, pushes the value down."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The forex market for the Australian dollar. Demand D for Australian dollars slopes down and supply S slopes up. Where they cross is the equilibrium, which sets the dollar's value.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity of A$"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Value of A$"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "D",
+      "pos": "right",
+      "labelAt": 9
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        1,
+        1
+       ],
+       [
+        9,
+        9
+       ]
+      ],
+      "label": "S",
+      "pos": "right",
+      "labelAt": 9
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       5
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "text",
+      "at": [
+       5.5,
+       5
+      ],
+      "label": "equilibrium",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "A floating dollar's price comes from buyers and sellers in the forex market.",
   "a": {
    "q": "Why is the value of the Australian dollar not set by the government?",
@@ -120,5 +196,103 @@
    "clue": "Who is buying Australian dollars here?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The forex market for the Australian dollar. Demand D for Australian dollars slopes down and supply S slopes up. Where they cross is the equilibrium, which sets the dollar's value.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The forex market for the Australian dollar. Demand D for Australian dollars slopes down and supply S slopes up. Where they cross is the equilibrium, which sets the dollar's value.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity of A$"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Value of A$"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "D",
+       "pos": "right",
+       "labelAt": 9
+      },
+      {
+       "type": "curve",
+       "id": "S",
+       "points": [
+        [
+         1,
+         1
+        ],
+        [
+         9,
+         9
+        ]
+       ],
+       "label": "S",
+       "pos": "right",
+       "labelAt": 9
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        5
+       ],
+       "on": [
+        "D",
+        "S"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "text",
+       "at": [
+        5.5,
+        5
+       ],
+       "label": "equilibrium",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:22Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:52Z"
+  }
+ ]
 }

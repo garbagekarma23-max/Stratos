@@ -15,7 +15,10 @@
   "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:26Z write: failed the content check, writing again",
   "2026-11-01T15:14:45Z write: done",
-  "2026-11-01T15:19:03Z check: passed, cleared"
+  "2026-11-01T15:19:03Z check: passed, cleared",
+  "2026-11-10T15:54:25Z pictures: the owner asked for a graph at card 3",
+  "2026-11-10T15:55:26Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:59Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -107,6 +110,129 @@
    ],
    "In the past two years, inflation has eased from its recent peak, while the labour market has stayed fairly strong. Weaker demand from higher interest rates and easing supply problems both help explain this. Exact figures change with each data release, so check the latest ones."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Real GDP"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price level"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        1,
+        9
+       ],
+       [
+        9,
+        1
+       ]
+      ],
+      "label": "AD",
+      "pos": "above-right",
+      "labelAt": 1.6
+     },
+     {
+      "type": "curve",
+      "id": "S1",
+      "points": [
+       [
+        2,
+        0
+       ],
+       [
+        10,
+        8
+       ]
+      ],
+      "label": "AS1",
+      "pos": "below-right",
+      "style": "dash",
+      "labelAt": 8.6
+     },
+     {
+      "type": "curve",
+      "id": "S2",
+      "points": [
+       [
+        0,
+        2
+       ],
+       [
+        8,
+        10
+       ]
+      ],
+      "label": "AS2",
+      "pos": "right",
+      "labelAt": 8
+     },
+     {
+      "type": "arrow",
+      "from": [
+       8.6,
+       7
+      ],
+      "to": [
+       5.4,
+       7
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       4
+      ],
+      "xLabel": "Y1",
+      "yLabel": "P1"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       6
+      ],
+      "xLabel": "Y2",
+      "yLabel": "P2"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       4
+      ],
+      "on": [
+       "D",
+       "S1"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "D",
+       "S2"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
   "remember": "Shifts in aggregate demand and supply change output, jobs and prices together, so they help explain how well the goals were met.",
   "a": {
    "q": "An economy near full capacity sees a rise in aggregate demand. Which result is most likely?",
@@ -132,5 +258,153 @@
    "clue": "Falling costs for firms mean they can supply more at each price."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A fall in aggregate supply, such as from higher energy costs, shifts AS left from AS1, dashed, to AS2, shown by an arrow, while aggregate demand AD stays the same. The price level rises from P1 to P2 and real GDP falls from Y1 to Y2.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Real GDP"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price level"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "D",
+       "points": [
+        [
+         1,
+         9
+        ],
+        [
+         9,
+         1
+        ]
+       ],
+       "label": "AD",
+       "pos": "above-right",
+       "labelAt": 1.6
+      },
+      {
+       "type": "curve",
+       "id": "S1",
+       "points": [
+        [
+         2,
+         0
+        ],
+        [
+         10,
+         8
+        ]
+       ],
+       "label": "AS1",
+       "pos": "below-right",
+       "style": "dash",
+       "labelAt": 8.6
+      },
+      {
+       "type": "curve",
+       "id": "S2",
+       "points": [
+        [
+         0,
+         2
+        ],
+        [
+         8,
+         10
+        ]
+       ],
+       "label": "AS2",
+       "pos": "right",
+       "labelAt": 8
+      },
+      {
+       "type": "arrow",
+       "from": [
+        8.6,
+        7
+       ],
+       "to": [
+        5.4,
+        7
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        4
+       ],
+       "xLabel": "Y1",
+       "yLabel": "P1"
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        6
+       ],
+       "xLabel": "Y2",
+       "yLabel": "P2"
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        4
+       ],
+       "on": [
+        "D",
+        "S1"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        6
+       ],
+       "on": [
+        "D",
+        "S2"
+       ],
+       "is": "intersection"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:26Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:59Z"
+  }
+ ]
 }

@@ -33,7 +33,10 @@
   "2026-11-01T08:33:49Z write: done",
   "2026-11-01T08:42:05Z check: flagged",
   "2026-11-01T08:44:26Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: cleared with the fix (remember other)"
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (remember other)",
+  "2026-11-10T15:54:23Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T15:55:24Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:56Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -186,6 +189,72 @@
    "Technology and productivity: productivity is output per unit of input. Better machines or methods let firms make more from the same inputs, at a lower cost per unit. Supply rises and the curve shifts right.",
    "The weather and other disruptions: a drought, flood, fire or strike can cut how much sellers can produce. Supply falls at each price and the curve shifts left."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "S1",
+      "points": [
+       [
+        3,
+        0
+       ],
+       [
+        10,
+        7
+       ]
+      ],
+      "label": "S1",
+      "pos": "below-right",
+      "style": "dash",
+      "labelAt": 9
+     },
+     {
+      "type": "curve",
+      "id": "S2",
+      "points": [
+       [
+        0,
+        3
+       ],
+       [
+        7,
+        10
+       ]
+      ],
+      "label": "S2",
+      "pos": "right",
+      "labelAt": 7
+     },
+     {
+      "type": "arrow",
+      "from": [
+       8.6,
+       6
+      ],
+      "to": [
+       3.4,
+       6
+      ],
+      "label": "costs rise",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.",
   "a": {
    "q": "A new machine lets a bakery in Ballarat bake more loaves from the same flour and labour. What happens to the supply of its bread?",
@@ -211,5 +280,96 @@
    "clue": "The flood changes what growers can produce, not the price they are offered."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A rise in costs of production shifts the whole supply curve left from S1, dashed, to S2, shown by an arrow. Less is supplied at every price.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Quantity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Price"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "S1",
+       "points": [
+        [
+         3,
+         0
+        ],
+        [
+         10,
+         7
+        ]
+       ],
+       "label": "S1",
+       "pos": "below-right",
+       "style": "dash",
+       "labelAt": 9
+      },
+      {
+       "type": "curve",
+       "id": "S2",
+       "points": [
+        [
+         0,
+         3
+        ],
+        [
+         7,
+         10
+        ]
+       ],
+       "label": "S2",
+       "pos": "right",
+       "labelAt": 7
+      },
+      {
+       "type": "arrow",
+       "from": [
+        8.6,
+        6
+       ],
+       "to": [
+        3.4,
+        6
+       ],
+       "label": "costs rise",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:24Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:56Z"
+  }
+ ]
 }

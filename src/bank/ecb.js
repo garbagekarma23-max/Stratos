@@ -2212,6 +2212,41 @@ MADE_BANKS.ecb = {
       "A trend can still hold when some years go against it. One year that dips does not cancel a rise over five years.",
       "A longer period gives a better picture than one or two data points. Name the direction and the time period when you describe a trend."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A line graph of the price of a movie ticket over six years: $12, $12.50, $13.50, $13, $14 and $15. The price dips in year 4, but the dotted trend line rises across the six years.",
+        "x": {"min": 0, "max": 7, "step": 1, "label": "Year"},
+        "y": {"min": 10, "max": 16, "step": 1, "label": "Price ($)"},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "p",
+            "points": [[1, 12], [2, 12.5], [3, 13.5], [4, 13], [5, 14], [6, 15]],
+            "label": "price",
+            "labelAt": 2,
+            "pos": "above-left"
+          },
+          {
+            "type": "curve",
+            "id": "t",
+            "points": [[1, 12], [6, 15]],
+            "label": "trend",
+            "pos": "above-left",
+            "style": "dot",
+            "labelAt": 5.2
+          },
+          {"type": "point", "at": [1, 12], "on": ["p"]},
+          {"type": "point", "at": [2, 12.5], "on": ["p"]},
+          {"type": "point", "at": [3, 13.5], "on": ["p"]},
+          {"type": "point", "at": [4, 13], "on": ["p"]},
+          {"type": "point", "at": [5, 14], "on": ["p"]},
+          {"type": "point", "at": [6, 15], "on": ["p"]},
+          {"type": "text", "at": [4, 13], "label": "dip", "pos": "below"}
+        ]
+      }
+    },
     "remember": "A trend is the overall direction over a period, not what happens in one year.",
     "a": {
       "q": "Which statement describes a trend in this data? Bread prices: Year 1 $3.00, Year 2 $3.20, Year 3 $3.10, Year 4 $3.40, Year 5 $3.60.",
@@ -2452,6 +2487,30 @@ MADE_BANKS.ecb = {
       "Buyers cut back when prices rise for two reasons. Some cannot afford it any more, and some switch to a cheaper product instead.",
       "A demand schedule is a table that lists the quantity buyers would purchase at each price. A demand curve is a line that shows the same thing on a graph, and it slopes down."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+        "x": {"min": 0, "max": 70, "step": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 6, "step": 1, "label": "Price ($)"},
+        "grid": true,
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[10, 5], [20, 4], [30, 3], [40, 2], [50, 1]],
+            "label": "Demand",
+            "pos": "above-right",
+            "labelAt": 42
+          },
+          {"type": "point", "at": [10, 5], "on": ["D"]},
+          {"type": "point", "at": [20, 4], "on": ["D"]},
+          {"type": "point", "at": [30, 3], "on": ["D"]},
+          {"type": "point", "at": [40, 2], "on": ["D"]},
+          {"type": "point", "at": [50, 1], "on": ["D"]}
+        ]
+      }
+    },
     "remember": "Demand links price to the amount people buy: a higher price usually means less is bought.",
     "a": {
       "q": "A Hobart shop cuts the price of its sandwiches. What usually happens to the number of sandwiches people want to buy?",
@@ -2480,6 +2539,22 @@ MADE_BANKS.ecb = {
       "As the price falls, sellers usually offer less. Some items may no longer be worth making at a low price.",
       "Supply describes the sellers' side of a market. It is a different idea from demand."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A supply curve sloping up. When the price rises from a low price to a high price, sellers offer more: the quantity offered rises from fewer to more, from A to B along the curve.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {"type": "curve", "id": "S", "points": [[1, 1], [9, 9]], "label": "Supply", "pos": "above", "labelAt": 9},
+          {"type": "guide", "at": [2.5, 2.5], "xLabel": "fewer", "yLabel": "low price"},
+          {"type": "guide", "at": [6, 6], "xLabel": "more", "yLabel": "high price"},
+          {"type": "point", "at": [2.5, 2.5], "on": ["S"], "label": "A", "pos": "below-right"},
+          {"type": "point", "at": [6, 6], "on": ["S"], "label": "B", "pos": "below-right"},
+          {"type": "arrow", "from": [3, 3.7], "to": [5.4, 6.1]}
+        ]
+      }
+    },
     "remember": "Higher price, sellers usually offer more. Lower price, they usually offer less.",
     "a": {
       "q": "Which statement best describes supply?",
@@ -2519,6 +2594,36 @@ MADE_BANKS.ecb = {
       ],
       "Prices keep moving until the shortage or surplus is gone. The market then settles at the equilibrium price."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A demand curve and a supply curve cross at the equilibrium price. At a higher price, sellers offer more than buyers want: the gap between the curves is a surplus. At a lower price, buyers want more than sellers offer: the gap is a shortage.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[1, 9], [9, 1]],
+            "label": "Demand",
+            "pos": "below-left",
+            "labelAt": 8.6
+          },
+          {
+            "type": "curve",
+            "id": "S",
+            "points": [[1, 1], [9, 9]],
+            "label": "Supply",
+            "pos": "above-left",
+            "labelAt": 8.6
+          },
+          {"type": "arrow", "from": [2, 8], "to": [8, 8], "label": "surplus", "pos": "above"},
+          {"type": "arrow", "from": [2, 2], "to": [8, 2], "label": "shortage", "pos": "below"},
+          {"type": "point", "at": [5, 5], "on": ["D", "S"], "is": "intersection"},
+          {"type": "text", "at": [4.5, 5], "label": "equilibrium", "pos": "left"}
+        ]
+      }
+    },
     "remember": "Shortage: price rises. Surplus: price falls. Both end at equilibrium.",
     "a": {
       "q": "At the current price, a market has a surplus. Which statement fits?",
@@ -2552,6 +2657,46 @@ MADE_BANKS.ecb = {
       "Costs of making a product matter too. If a business pays more for materials or wages, it may raise its price to cover them.",
       "Competition also affects price. When many sellers compete for the same buyers, they may cut prices to win sales."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Sellers offer less, so the supply curve moves left from Supply 1, dashed, to Supply 2, shown by an arrow. Demand stays the same. The price rises from the old price to the new price.",
+        "x": {"min": 0, "max": 10, "label": "Quantity"},
+        "y": {"min": 0, "max": 10, "label": "Price"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "D",
+            "points": [[1, 9], [9, 1]],
+            "label": "Demand",
+            "pos": "above-right",
+            "labelAt": 1.6
+          },
+          {
+            "type": "curve",
+            "id": "S1",
+            "points": [[2, 0], [10, 8]],
+            "label": "Supply 1",
+            "pos": "above-left",
+            "style": "dash",
+            "labelAt": 10
+          },
+          {
+            "type": "curve",
+            "id": "S2",
+            "points": [[0, 2], [8, 10]],
+            "label": "Supply 2",
+            "pos": "above",
+            "labelAt": 8
+          },
+          {"type": "arrow", "from": [8.6, 7], "to": [5.4, 7]},
+          {"type": "guide", "at": [6, 4], "xLabel": "", "yLabel": "old price"},
+          {"type": "guide", "at": [4, 6], "xLabel": "", "yLabel": "new price"},
+          {"type": "point", "at": [6, 4], "on": ["D", "S1"], "is": "intersection"},
+          {"type": "point", "at": [4, 6], "on": ["D", "S2"], "is": "intersection"}
+        ]
+      }
+    },
     "remember": "Demand, supply, costs and competition can all push a price up or down.",
     "a": {
       "q": "A heatwave in Perth leads many more people to want ice cream. What is the most likely effect on the price of ice cream?",
@@ -3276,6 +3421,35 @@ MADE_BANKS.ecb = {
         "interest paid on the original amount and on interest already earned. Savings grow faster over time this way."
       ]
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "$1000 saved at 10% a year for 10 years. With simple interest the balance grows in a straight line, by $100 a year, to $2000. With compound interest it curves upward, because interest is earned on interest, and reaches about $2594.",
+        "x": {"min": 0, "max": 10, "step": 2, "label": "Years"},
+        "y": {"min": 0, "max": 3000, "step": 500, "label": "Balance ($)"},
+        "grid": true,
+        "items": [
+          {
+            "type": "fn",
+            "id": "s",
+            "expr": "1000 + 100x",
+            "domain": [0, 10],
+            "label": "Simple",
+            "labelAt": 8,
+            "pos": "below-right"
+          },
+          {
+            "type": "fn",
+            "id": "c",
+            "expr": "1000 \\times 1.1^{x}",
+            "domain": [0, 10],
+            "label": "Compound",
+            "labelAt": 7,
+            "pos": "above-left"
+          }
+        ]
+      }
+    },
     "remember": "Interest rewards saving, and compound interest grows savings faster.",
     "a": {
       "q": "Why does a bank pay interest to people who keep money in a savings account?",

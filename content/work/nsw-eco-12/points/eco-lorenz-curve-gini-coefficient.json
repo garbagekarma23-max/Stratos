@@ -11,7 +11,12 @@
   "2026-10-29T12:39:08Z check: flagged",
   "2026-10-29T12:41:45Z fix: suggested",
   "2026-10-29T16:45:06Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-30T11:54:21Z review: approved with the fix (a spot check)"
+  "2026-10-30T11:54:21Z review: approved with the fix (a spot check)",
+  "2026-11-10T15:54:26Z pictures: the owner asked for a graph at card 2",
+  "2026-11-10T15:55:22Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:54Z pictures: 1 picture turned down. Picture 1 (graph at card 2): redo, high sure. The x-axis label reads only \"Households\" while the y-axis reads \"Income (%)\", so the x-axis does not say it is a share of households in per cent, as the card and the line of equality's \"every 10% of households\" need; label it \"Households (%)\" to match.; The x-axis label sits where the numbers 80 and 100 would be, so the x-axis shows only 20, 40 and 60 while the y-axis runs to 100; move or shorten the label so both axes show the same numbers up to 100.",
+  "2026-11-10T16:03:07Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:04:02Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -199,6 +204,88 @@
    ],
    "A higher Gini coefficient means a more unequal distribution. The Gini coefficient can be compared across countries or across years, but it does not show which households are rich or poor."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Cumulative share of income against cumulative share of households, from poorest to richest, both from 0 to 100%. The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it: here the poorest 50% of households hold 25% of income. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+    "x": {
+     "min": 0,
+     "max": 100,
+     "step": 20,
+     "nums": false,
+     "label": "Households (%)"
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "step": 20,
+     "nums": false,
+     "label": "Income (%)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "shade",
+      "between": [
+       "e",
+       "l"
+      ],
+      "span": [
+       0,
+       100
+      ],
+      "label": "gap",
+      "at": [
+       62,
+       50
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "e",
+      "expr": "x",
+      "domain": [
+       0,
+       100
+      ],
+      "label": "line of equality",
+      "labelAt": 40,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "\\frac{x^{2}}{100}",
+      "domain": [
+       0,
+       100
+      ],
+      "label": "Lorenz curve",
+      "labelAt": 72,
+      "pos": "below-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       50,
+       25
+      ],
+      "xLabel": "50",
+      "yLabel": "25"
+     },
+     {
+      "type": "point",
+      "at": [
+       50,
+       25
+      ],
+      "on": [
+       "l"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "A Lorenz curve bowed further from the diagonal means a higher Gini coefficient and more inequality.",
   "a": {
    "q": "A country's Lorenz curve moves closer to the line of equality over ten years. What has happened to its Gini coefficient and its income inequality?",
@@ -224,5 +311,199 @@
    "clue": "Think about the size of the gap between each curve and the diagonal."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+     "x": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "label": "Households"
+     },
+     "y": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "label": "Income (%)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "shade",
+       "between": [
+        "e",
+        "l"
+       ],
+       "span": [
+        0,
+        100
+       ],
+       "label": "gap",
+       "at": [
+        55,
+        42
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "x",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "line of equality",
+       "labelAt": 100,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "\\frac{x^{2}}{100}",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "Lorenz curve",
+       "labelAt": 70,
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:22Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The x-axis label reads only \"Households\" while the y-axis reads \"Income (%)\", so the x-axis does not say it is a share of households in per cent, as the card and the line of equality's \"every 10% of households\" need; label it \"Households (%)\" to match.",
+     "The x-axis label sits where the numbers 80 and 100 would be, so the x-axis shows only 20, 40 and 60 while the y-axis runs to 100; move or shorten the label so both axes show the same numbers up to 100."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:53Z"
+  },
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Cumulative share of income against cumulative share of households, from poorest to richest, both from 0 to 100%. The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it: here the poorest 50% of households hold 25% of income. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+     "x": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "nums": false,
+      "label": "Households (%)"
+     },
+     "y": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "nums": false,
+      "label": "Income (%)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "shade",
+       "between": [
+        "e",
+        "l"
+       ],
+       "span": [
+        0,
+        100
+       ],
+       "label": "gap",
+       "at": [
+        62,
+        50
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "x",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "line of equality",
+       "labelAt": 40,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "\\frac{x^{2}}{100}",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "Lorenz curve",
+       "labelAt": 72,
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        50,
+        25
+       ],
+       "xLabel": "50",
+       "yLabel": "25"
+      },
+      {
+       "type": "point",
+       "at": [
+        50,
+        25
+       ],
+       "on": [
+        "l"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T16:03:07Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:04:01Z"
+  }
+ ]
 }

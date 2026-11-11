@@ -9,7 +9,10 @@
   "2026-11-04T09:36:48Z write: done",
   "2026-11-04T09:46:54Z check: flagged",
   "2026-11-04T09:58:21Z fix: suggested",
-  "2026-11-04T17:58:50Z autoreview: cleared with the fix (b other, a other)"
+  "2026-11-04T17:58:50Z autoreview: cleared with the fix (b other, a other)",
+  "2026-11-10T15:54:25Z pictures: the owner asked for a graph at card 4",
+  "2026-11-10T15:55:21Z pictures: 1 picture waiting for the check",
+  "2026-11-10T16:02:52Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -169,6 +172,51 @@
     "interest paid on the original amount and on interest already earned. Savings grow faster over time this way."
    ]
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "$1000 saved at 10% a year for 10 years. With simple interest the balance grows in a straight line, by $100 a year, to $2000. With compound interest it curves upward, because interest is earned on interest, and reaches about $2594.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "step": 2,
+     "label": "Years"
+    },
+    "y": {
+     "min": 0,
+     "max": 3000,
+     "step": 500,
+     "label": "Balance ($)"
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "s",
+      "expr": "1000 + 100x",
+      "domain": [
+       0,
+       10
+      ],
+      "label": "Simple",
+      "labelAt": 8,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "c",
+      "expr": "1000 \\times 1.1^{x}",
+      "domain": [
+       0,
+       10
+      ],
+      "label": "Compound",
+      "labelAt": 7,
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
   "remember": "Interest rewards saving, and compound interest grows savings faster.",
   "a": {
    "q": "Why does a bank pay interest to people who keep money in a savings account?",
@@ -194,5 +242,75 @@
    "clue": "Compare what each person's interest is worked out on."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "$1000 saved at 10% a year for 10 years. With simple interest the balance grows in a straight line, by $100 a year, to $2000. With compound interest it curves upward, because interest is earned on interest, and reaches about $2594.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "$1000 saved at 10% a year for 10 years. With simple interest the balance grows in a straight line, by $100 a year, to $2000. With compound interest it curves upward, because interest is earned on interest, and reaches about $2594.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "step": 2,
+      "label": "Years"
+     },
+     "y": {
+      "min": 0,
+      "max": 3000,
+      "step": 500,
+      "label": "Balance ($)"
+     },
+     "grid": true,
+     "items": [
+      {
+       "type": "fn",
+       "id": "s",
+       "expr": "1000 + 100x",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "Simple",
+       "labelAt": 8,
+       "pos": "below-right"
+      },
+      {
+       "type": "fn",
+       "id": "c",
+       "expr": "1000 \\times 1.1^{x}",
+       "domain": [
+        0,
+        10
+       ],
+       "label": "Compound",
+       "labelAt": 7,
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-10T15:55:21Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-10T16:02:52Z"
+  }
+ ]
 }

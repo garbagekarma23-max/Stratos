@@ -5452,7 +5452,7 @@ MADE_BANKS.mat = {
       "Example: 2, 4, 5, 7, 8, 10, 12, 20. Median \\(= (7 + 8) \\div 2 = 7.5\\). \\(Q_{1} = (4 + 5) \\div 2 = 4.5\\). \\(Q_{3} = (10 + 12) \\div 2 = 11\\). \\(\\text{IQR} = 11 - 4.5 = 6.5\\). Range \\(= 20 - 2 = 18\\). To compare two sets, a smaller IQR means the middle of the data is less spread out."
     ],
     "cardFigs": {
-      "3": {
+      "4": {
         "kind": "chart",
         "chart": "box",
         "alt": "A box plot of 2, 4, 5, 7, 8, 10, 12, 20. The whiskers run from the lowest score 2 to the highest score 20. The box runs from \\(Q_{1} = 4.5\\) to \\(Q_{3} = 11\\), with a line at the median, 7.5.",
@@ -5612,7 +5612,7 @@ MADE_BANKS.mat = {
       "d": 3,
       "q": "Mia sells candles. Fixed cost is $400, each candle costs $6 to make and sells for $14. How many candles must she sell to break even?",
       "opts": ["50", "29", "67", "20"],
-      "why": "Set \\(400 + 6n = 14n\\), so \\(400 = 8n\\) and \\(n = 50\\). Check: cost is \\(400 + 300 = \\$700\\) and revenue is \\(14 \\times 50 = \\$700\\). Dividing by the price of $14 gives 29, which ignores that each candle also costs $6 to make.",
+      "why": "Set \\(400 + 6n = 14n\\), so \\(400 = 8n\\) and \\(n = 50\\). Check: cost is \\(400 + 300 = \\$700\\) and revenue is \\(14 \\times 50 = \\$700\\). Dividing $400 by the price of $14 gives about 28.6, so 29 candles, but that ignores that each candle also costs $6 to make.",
       "clue": "How much profit does each candle add towards the fixed cost?"
     }
   },
@@ -5687,7 +5687,7 @@ MADE_BANKS.mat = {
       ],
       [
         "Minimum",
-        "if \\(a\\) is positive, the parabola opens upwards and its lowest point is the minimum. This point is called the vertex, as is the maximum point."
+        "if \\(a\\) is positive, the parabola opens upwards and its lowest point is the minimum. The maximum or minimum point is called the vertex."
       ],
       "To read the answer from a graph, find the vertex. Its y-value is the maximum or minimum value. Its x-value is where that value happens. Example: a ball's height \\(h\\) (metres) after \\(t\\) seconds peaks at the point (2, 20). The maximum height is 20 m, reached after 2 seconds."
     ],
@@ -9896,7 +9896,7 @@ MADE_BANKS.mat = {
     },
     "b": {
       "d": 2,
-      "q": "A line graph shows the weekly sales of Mia's café in Dubbo. Sales are $400 in week 1, $500 in week 2, $650 in week 3 and $600 in week 4. Between which two weeks did sales fall?",
+      "q": "A line graph shows the weekly sales of Mia's café in Shepparton. Sales are $400 in week 1, $500 in week 2, $650 in week 3 and $600 in week 4. Between which two weeks did sales fall?",
       "opts": ["Week 3 to week 4", "Week 1 to week 2", "Week 2 to week 3", "Week 1 to week 4"],
       "why": "Sales went from $650 in week 3 to $600 in week 4, so the line goes down there. The other steps go up. Week 1 to week 4 is a rise overall, from $400 to $600.",
       "clue": "Look for where the line goes down."
@@ -22285,64 +22285,64 @@ MADE_BANKS.mat = {
       "A linear model has a rule like \\(y = mx + c\\). It fits a situation where something changes by the same amount for each step.",
       [
         "Rate",
-        "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as dollars per kilometre. The rate sets the steepness of the graph. Gradient is another name for it."
+        "\\(m\\) is the rate. It tells you how much \\(y\\) changes for each 1 unit increase in \\(x\\), such as litres per minute. The rate sets the steepness of the graph. Gradient is another name for it."
       ],
       [
         "Intercept",
-        "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as a call-out fee paid before any work is done."
+        "\\(c\\) is the starting value, the value of \\(y\\) when \\(x = 0\\). It is a fixed amount, such as the water already in a tank before a hose is turned on."
       ],
-      "Example: a plumber charges \\(C = 45t + 80\\), where \\(t\\) is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, \\(C = 45 \\times 3 + 80 = \\$215\\)."
+      "Example: a tank already has 20 L of water in it, and a hose adds 10 L each minute. The rule is \\(V = 10t + 20\\), where \\(t\\) is the time in minutes. The rate is 10 L per minute and the starting value is 20 L. After 6 minutes, \\(V = 10 \\times 6 + 20 = 80\\) L."
     ],
     "cardFigs": {
       "4": {
         "kind": "graph",
-        "alt": "The plumber's cost \\(C = 45t + 80\\) against hours worked. The line starts at $80 on the cost axis, the call-out fee, and goes up $45 for each extra hour. At 3 hours the cost is $215.",
-        "x": {"min": 0, "max": 5.5, "label": "Hours", "step": 1},
-        "y": {"min": 0, "max": 350, "label": "Cost ($)", "step": 50},
+        "alt": "The tank's volume \\(V = 10t + 20\\) against time in minutes. The line starts at 20 L on the volume axis, the starting value, and goes up 10 L for each minute. After 6 minutes the tank holds 80 L.",
+        "x": {"min": 0, "max": 8.5, "label": "Minutes", "step": 1},
+        "y": {"min": 0, "max": 120, "label": "Volume (L)", "step": 20},
         "grid": true,
         "items": [
           {
             "type": "fn",
             "id": "f",
-            "expr": "45x + 80",
-            "domain": [0, 5.5],
-            "label": "\\(C = 45t + 80\\)",
-            "labelAt": 4.2,
+            "expr": "10x + 20",
+            "domain": [0, 8.5],
+            "label": "\\(V = 10t + 20\\)",
+            "labelAt": 3.6,
             "pos": "above-left"
           },
-          {"type": "arrow", "from": [1, 125], "to": [2, 125], "label": "1 hour", "pos": "below"},
-          {"type": "arrow", "from": [2, 125], "to": [2, 170], "label": "+$45", "pos": "right"},
+          {"type": "arrow", "from": [2, 40], "to": [3, 40], "label": "1 minute", "pos": "below-right"},
+          {"type": "arrow", "from": [3, 40], "to": [3, 50], "label": "+10 L", "pos": "right"},
           {
             "type": "point",
-            "at": [0, 80],
+            "at": [0, 20],
             "on": ["f"],
             "is": "y-intercept",
-            "label": "call-out fee",
+            "label": "starting value",
             "pos": "below-right"
           },
-          {"type": "guide", "at": [3, 215], "xLabel": "", "yLabel": ""},
-          {"type": "point", "at": [3, 215], "on": ["f"], "label": "\\((3, 215)\\)", "pos": "above-left"}
+          {"type": "guide", "at": [6, 80], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [6, 80], "on": ["f"], "label": "\\((6, 80)\\)", "pos": "above-left"}
         ]
       }
     },
     "remember": "In a linear model, the rate sets the steepness of the graph, and the intercept is the starting value.",
     "a": {
-      "q": "A taxi fare in Perth is \\(F = 2.5d + 4\\), where \\(d\\) is the distance in km. What does the 2.5 tell you?",
+      "q": "Sam's savings are \\(S = 15w + 40\\) dollars, where \\(w\\) is the number of weeks. What does the 15 tell you?",
       "opts": [
-        "The fare rises by $2.50 for each extra kilometre",
-        "The fare for a trip of 0 km is $2.50",
-        "The fare for a trip of 4 km is $2.50",
-        "The fare rises by $4 for each extra kilometre"
+        "Sam saves $15 each week",
+        "Sam started with $15 saved",
+        "Sam has $15 after 40 weeks",
+        "Sam saves $40 each week"
       ],
-      "why": "The 2.5 is the rate, so the fare rises by $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
-      "clue": "Which number multiplies \\(d\\)?"
+      "why": "The 15 multiplies \\(w\\), so it is the rate: Sam's savings go up by $15 each week. The 40 is the starting value, the $40 Sam had before the first week, so saving $40 each week mixes up the two.",
+      "clue": "Which number multiplies \\(w\\)?"
     },
     "b": {
       "d": 2,
-      "q": "Priya hires a ladder in Darwin. The cost is \\(C = 12n + 30\\), where \\(n\\) is the number of days. What is the cost for 5 days?",
-      "opts": ["$90", "$60", "$150", "$102"],
-      "why": "\\(C = 12 \\times 5 + 30 = 60 + 30 = \\$90\\). Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
-      "clue": "Multiply the daily rate by 5, then add the fixed amount."
+      "q": "Bike hire at a park costs \\(C = 8h + 5\\) dollars, where \\(h\\) is the number of hours. What is the cost for 4 hours?",
+      "opts": ["$37", "$32", "$52", "$17"],
+      "why": "\\(C = 8 \\times 4 + 5 = 32 + 5 = \\$37\\). Leaving out the $5 starting fee gives $32. Adding 8 and 5 before multiplying by 4 gives $52.",
+      "clue": "Multiply the hourly rate by 4, then add the fixed amount."
     }
   },
   "mat-area-trapeziums-rhombuses-kites": {
