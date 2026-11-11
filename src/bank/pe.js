@@ -1697,6 +1697,75 @@ MADE_BANKS.pe = {
       ],
       "A very hard effort may never reach a steady state. Its demand is above what the aerobic system can supply, so uptake cannot match it."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Oxygen uptake against time for a steady effort that is not maximal. At the start, oxygen demand jumps, the dashed line, but uptake rises more slowly: the shaded gap is the oxygen deficit. Uptake then levels off and meets demand, a steady state. After the exercise stops, uptake stays above its resting level for a while, falling slowly: the shaded area is EPOC.",
+        "x": {"min": 0, "max": 23.0, "label": "Time (min)", "step": 4},
+        "y": {"min": 0, "max": 4.5, "label": "Oxygen uptake"},
+        "items": [
+          {
+            "type": "shade",
+            "poly": [
+              [2, 3.0],
+              [2, 0.5],
+              [2.5, 1.4],
+              [3, 2.0],
+              [3.5, 2.4],
+              [4, 2.65],
+              [5, 2.88],
+              [6, 2.97],
+              [7, 3.0],
+              [7, 3.0]
+            ],
+            "label": "oxygen deficit",
+            "at": [4.6, 3.45]
+          },
+          {
+            "type": "shade",
+            "poly": [[12, 0.5], [12, 3.0], [12.5, 2.0], [13, 1.4], [14, 0.9], [15, 0.68], [16, 0.57], [18, 0.5]],
+            "hatch": true,
+            "label": "EPOC",
+            "at": [14.8, 1.6]
+          },
+          {
+            "type": "curve",
+            "id": "d",
+            "points": [[0, 0.5], [1.98, 0.5], [2.02, 3.0], [11.98, 3.0], [12.02, 0.5], [18, 0.5]],
+            "label": "demand",
+            "style": "dash",
+            "labelAt": 10.8,
+            "pos": "above"
+          },
+          {
+            "type": "curve",
+            "id": "u",
+            "points": [
+              [0, 0.5],
+              [2, 0.5],
+              [2.5, 1.4],
+              [3, 2.0],
+              [3.5, 2.4],
+              [4, 2.65],
+              [5, 2.88],
+              [6, 2.97],
+              [7, 3.0],
+              [12, 3.0],
+              [12.5, 2.0],
+              [13, 1.4],
+              [14, 0.9],
+              [15, 0.68],
+              [16, 0.57],
+              [18, 0.5]
+            ],
+            "label": "uptake",
+            "labelAt": 3.6,
+            "pos": "below-right"
+          },
+          {"type": "text", "at": [8.0, 2.8], "label": "steady state", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Uptake lags at the start, levels off if the effort is steady, and stays raised after.",
     "a": {
       "q": "Why is there an oxygen deficit at the start of a jog?",
@@ -2506,6 +2575,47 @@ MADE_BANKS.pe = {
       "A greater release speed gives a longer flight distance. A greater release height also adds distance, because the object has further to fall before it lands.",
       "A release angle near 45° gives the greatest distance when release and landing heights are equal. A steeper angle gives more height but less distance, and a lower angle gives less of both."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Flight paths of three objects released at the same speed, from the same height as they land, at 30°, 45° and 60°. The 45° path travels furthest. The 60° path goes much higher but not as far, and the 30° path is lower and also not as far.",
+        "x": {"min": 0, "max": 44, "label": "Horizontal distance"},
+        "y": {"min": 0, "max": 17.5, "label": "Height"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "a60",
+            "expr": "\\sqrt{3}x - \\frac{x^{2}}{20}",
+            "domain": [0, 34.641],
+            "label": "60°",
+            "labelAt": 17.32,
+            "pos": "above",
+            "style": "dot"
+          },
+          {
+            "type": "fn",
+            "id": "a45",
+            "expr": "x - \\frac{x^{2}}{40}",
+            "domain": [0, 40],
+            "label": "45°",
+            "labelAt": 20,
+            "pos": "above"
+          },
+          {
+            "type": "fn",
+            "id": "a30",
+            "expr": "\\frac{x}{\\sqrt{3}} - \\frac{x^{2}}{60}",
+            "domain": [0, 34.641],
+            "label": "30°",
+            "labelAt": 17.32,
+            "pos": "above",
+            "style": "dash"
+          },
+          {"type": "point", "at": [34.641, 0], "on": ["a30", "a60"], "is": "intersection"},
+          {"type": "point", "at": [40, 0], "on": ["a45"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "Speed, angle and height at release decide the flight. Nothing the athlete does in the air changes the path much.",
     "a": {
       "q": "A shot putter keeps the same release speed and height but changes the release angle from 40° to 70°. What is the most likely result?",
@@ -2894,6 +3004,38 @@ MADE_BANKS.pe = {
       "Muscle contractions become faster and stronger, which helps with speed and power.",
       "Lactate tolerance improves. The athlete can keep going at a high intensity even with more lactate in the muscles and blood."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Blood lactate against exercise intensity, before training (dashed) and after training (solid). Each curve stays low at first, then rises fast past the lactate inflection point, marked with a dot. After training, the inflection point is at a higher intensity, as the arrow shows, so the athlete can work harder before lactate builds up fast.",
+        "x": {"min": 30, "max": 100, "label": "Exercise intensity"},
+        "y": {"min": 0, "max": 9, "label": "Blood lactate"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "b",
+            "expr": "1 + e^{0.1(x - 60)}",
+            "domain": [30, 79],
+            "label": "before",
+            "style": "dash",
+            "labelAt": 72,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "a",
+            "expr": "1 + e^{0.1(x - 75)}",
+            "domain": [30, 94],
+            "label": "after",
+            "labelAt": 88,
+            "pos": "right"
+          },
+          {"type": "point", "at": [60, 2], "on": ["b"]},
+          {"type": "point", "at": [75, 2], "on": ["a"]},
+          {"type": "arrow", "from": [61.5, 1.6], "to": [73.5, 1.6]}
+        ]
+      }
+    },
     "remember": "Adaptations let an athlete work harder, for longer, with more speed, force and tolerance of lactate.",
     "a": {
       "q": "After training, an athlete's lactate inflection point rises. What does this change allow?",

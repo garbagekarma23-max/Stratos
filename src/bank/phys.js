@@ -16,6 +16,27 @@ MADE_BANKS.phys = {
       ],
       "The two directions do not affect each other, so we solve them separately. Time is the link: it is the same for both."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The path of a ball launched from level ground with no air resistance: height against horizontal distance, a parabola. Dots mark the ball at equal time steps. They are equally spaced sideways, because the horizontal velocity stays constant, but not up and down, because gravity changes the vertical velocity.",
+        "x": {"min": 0, "max": 44, "label": "Horizontal distance", "step": 5, "nums": false},
+        "y": {"min": 0, "max": 24, "label": "Height"},
+        "items": [
+          {"type": "fn", "id": "p", "expr": "1.96x - 0.049x^{2}", "domain": [0, 40]},
+          {"type": "point", "at": [0, 0], "on": ["p"]},
+          {"type": "point", "at": [5, 8.575], "on": ["p"]},
+          {"type": "point", "at": [10, 14.7], "on": ["p"]},
+          {"type": "point", "at": [15, 18.375], "on": ["p"]},
+          {"type": "point", "at": [20, 19.6], "on": ["p"]},
+          {"type": "point", "at": [25, 18.375], "on": ["p"]},
+          {"type": "point", "at": [30, 14.7], "on": ["p"]},
+          {"type": "point", "at": [35, 8.575], "on": ["p"]},
+          {"type": "point", "at": [40, 0], "on": ["p"]},
+          {"type": "text", "at": [20, 21], "label": "equal steps sideways", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Treat horizontal and vertical separately: constant velocity sideways, constant acceleration downwards.",
     "a": {
       "q": "A ball rolls off a table and flies through the air. Ignoring air resistance, which statement describes its motion?",
@@ -49,6 +70,47 @@ MADE_BANKS.phys = {
       "For a launch from level ground with no air resistance, time of flight = 2v sin θ ÷ g. Range = vx × time of flight = v² sin 2θ ÷ g.",
       "A larger launch speed gives a greater range and a longer time. For a fixed speed, 45° gives the longest range, and angles that add to 90° give equal ranges."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Paths of three balls launched from level ground at the same speed, with no air resistance. The 45° path goes furthest. The 30° and 60° paths land at the same place, so they have equal ranges, but the 60° path goes much higher, so it stays in the air longer.",
+        "x": {"min": 0, "max": 44, "label": "Horizontal distance"},
+        "y": {"min": 0, "max": 17.5, "label": "Height"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "a60",
+            "expr": "\\sqrt{3}x - \\frac{x^{2}}{20}",
+            "domain": [0, 34.641],
+            "label": "60°",
+            "labelAt": 17.32,
+            "pos": "above",
+            "style": "dot"
+          },
+          {
+            "type": "fn",
+            "id": "a45",
+            "expr": "x - \\frac{x^{2}}{40}",
+            "domain": [0, 40],
+            "label": "45°",
+            "labelAt": 20,
+            "pos": "above"
+          },
+          {
+            "type": "fn",
+            "id": "a30",
+            "expr": "\\frac{x}{\\sqrt{3}} - \\frac{x^{2}}{60}",
+            "domain": [0, 34.641],
+            "label": "30°",
+            "labelAt": 17.32,
+            "pos": "above",
+            "style": "dash"
+          },
+          {"type": "point", "at": [34.641, 0], "on": ["a30", "a60"], "is": "intersection"},
+          {"type": "point", "at": [40, 0], "on": ["a45"], "is": "x-intercept"}
+        ]
+      }
+    },
     "remember": "Vertical motion sets the time in the air. Range is horizontal speed times that time, and 45° gives the longest range.",
     "a": {
       "q": "Two balls are kicked from level ground at the same speed, one at 30° and one at 60°. Ignoring air resistance, which statement is correct?",
@@ -171,6 +233,21 @@ MADE_BANKS.phys = {
       "F is proportional to each mass. Doubling one mass doubles F.",
       "F is inversely proportional to r². Doubling the distance cuts F to one quarter, and halving the distance makes F four times larger."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Gravitational force against the distance between the centres of two masses: a curve that falls steeply, then flattens. At distance r the force is F. At distance 2r it is one quarter of F, because F is inversely proportional to r squared.",
+        "x": {"min": 0, "max": 8, "label": "Distance, r"},
+        "y": {"min": 0, "max": 6.4, "label": "Force, F"},
+        "items": [
+          {"type": "fn", "id": "f", "expr": "\\frac{18}{x^{2}}", "domain": [1.75, 8]},
+          {"type": "guide", "at": [2, 4.5], "xLabel": "\\(r\\)", "yLabel": "\\(F\\)"},
+          {"type": "point", "at": [2, 4.5], "on": ["f"]},
+          {"type": "guide", "at": [4, 1.125], "xLabel": "\\(2r\\)", "yLabel": "\\(\\frac{F}{4}\\)"},
+          {"type": "point", "at": [4, 1.125], "on": ["f"]}
+        ]
+      }
+    },
     "remember": "Force grows with both masses and falls with the square of the distance between centres.",
     "a": {
       "q": "The distance between the centres of two masses is tripled. The masses stay the same. What happens to the gravitational force between them?",
@@ -204,6 +281,21 @@ MADE_BANKS.phys = {
       "The field gets weaker with distance. Doubling r makes g one quarter as large. A larger M makes g larger.",
       "At the Earth's surface, g is about 9.8 N/kg. The force on a mass m is F = mg, so a 2.0 kg object feels about 19.6 N."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Gravitational field strength against distance from the Earth's centre, from the surface outwards. At the surface, a distance r from the centre, g is 9.8 N/kg. At 2r it is 2.45 N/kg, one quarter as large, and the field keeps getting weaker further out.",
+        "x": {"min": 0, "max": 5, "label": "Distance from centre"},
+        "y": {"min": 0, "max": 11, "label": "g (N/kg)"},
+        "items": [
+          {"type": "fn", "id": "g", "expr": "\\frac{9.8}{x^{2}}", "domain": [1, 5]},
+          {"type": "guide", "at": [1, 9.8], "xLabel": "\\(r\\)", "yLabel": "9.8"},
+          {"type": "point", "at": [1, 9.8], "on": ["g"], "label": "surface", "pos": "right"},
+          {"type": "guide", "at": [2, 2.45], "xLabel": "\\(2r\\)", "yLabel": "2.45"},
+          {"type": "point", "at": [2, 2.45], "on": ["g"]}
+        ]
+      }
+    },
     "remember": "g = GM/r²: it depends on the mass creating the field and the distance, not on the object in it.",
     "a": {
       "q": "A 3.0 kg object and a 6.0 kg object are placed at the same point near a planet. How do the field strengths at that point compare?",
@@ -292,6 +384,26 @@ MADE_BANKS.phys = {
       "Escape velocity is the launch speed needed to leave a planet's gravity with no further thrust. The object must reach infinity with at least zero kinetic energy.",
       "So the starting kinetic energy must cancel the negative U: ½mv² = GMm/r. This gives v = √(2GM/r). The mass m cancels, so escape velocity does not depend on the mass of the object."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Gravitational potential energy against the distance between the centres. The curve is below the axis everywhere, so U is negative. It rises steeply at first and then flattens, getting closer and closer to zero as the distance grows, without reaching it.",
+        "x": {"min": 0, "max": 10, "label": "\\(r\\)"},
+        "y": {"min": -5.5, "max": 1.6, "label": "Energy, U"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "u",
+            "expr": "-\\frac{4}{x}",
+            "domain": [0.75, 8.6],
+            "label": "\\(U = -\\frac{GMm}{r}\\)",
+            "labelAt": 3,
+            "pos": "below-right"
+          },
+          {"type": "text", "at": [7.4, -0.6], "label": "U rises to 0", "pos": "below"}
+        ]
+      }
+    },
     "remember": "U is negative and rises to zero at infinity. Escape speed is the launch speed that makes total energy zero.",
     "a": {
       "q": "A rocket moves from the Earth's surface to a point far above it. What happens to its gravitational potential energy U?",
@@ -860,6 +972,38 @@ MADE_BANKS.phys = {
       "So as an object gets hotter, the peak moves to a shorter wavelength, and the object gives off more energy overall. A cooler object peaks at a longer wavelength.",
       "Classical physics could not explain the shape of the spectrum. Planck fixed this by assuming energy is given off in separate packets, not in a smooth flow."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Intensity against wavelength for two black bodies. The 5000 K curve is higher at every wavelength, so it gives off more energy overall, and it peaks at a shorter wavelength, about 0.58 μm, than the 4000 K curve, which peaks at about 0.72 μm. An arrow from the cooler peak to the hotter peak shows the peak moving to a shorter wavelength.",
+        "x": {"min": 0, "max": 2.5, "label": "Wavelength (μm)", "step": 0.5},
+        "y": {"min": 0, "max": 10.5, "label": "Intensity"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "t4",
+            "expr": "\\frac{83.86}{x^{5}\\left(e^{\\frac{3.597}{x}} - 1\\right)}",
+            "domain": [0.15, 2.5],
+            "label": "4000 K",
+            "labelAt": 1.442,
+            "pos": "below-left",
+            "style": "dash"
+          },
+          {
+            "type": "fn",
+            "id": "t5",
+            "expr": "\\frac{83.86}{x^{5}\\left(e^{\\frac{2.8776}{x}} - 1\\right)}",
+            "domain": [0.15, 2.5],
+            "label": "5000 K",
+            "labelAt": 0.82,
+            "pos": "above-right"
+          },
+          {"type": "point", "at": [0.5796, 9.011], "on": ["t5"], "is": "turning point"},
+          {"type": "point", "at": [0.7244, 2.953], "on": ["t4"], "is": "turning point"},
+          {"type": "arrow", "from": [0.7244, 3.553], "to": [0.6096, 8.3], "label": "hotter", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Hotter means a shorter peak wavelength. Planck explained the spectrum with energy in packets.",
     "a": {
       "q": "A metal bar is heated in a furnace and its temperature rises. What happens to the peak wavelength of the radiation it gives off?",
@@ -921,6 +1065,20 @@ MADE_BANKS.phys = {
       "Above the threshold, even very dim light ejects electrons straight away. Brighter light ejects more electrons per second. A higher frequency raises the maximum kinetic energy of the photoelectrons, though many leave with less.",
       "The wave model predicted that a bright enough light of any frequency would eventually eject electrons. Einstein explained the effect with photons: one photon gives all its energy to one electron, and it must carry enough energy to free it."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Maximum kinetic energy of the photoelectrons against the frequency of the light. Below the threshold frequency no electrons are ejected. Above it, the maximum kinetic energy rises in a straight line as the frequency rises.",
+        "x": {"min": 0, "max": 10, "label": "Frequency"},
+        "y": {"min": 0, "max": 7, "label": "Max kinetic energy"},
+        "items": [
+          {"type": "fn", "id": "k", "expr": "0.9x - 3.6", "domain": [4, 10]},
+          {"type": "point", "at": [4, 0], "on": ["k"], "is": "x-intercept"},
+          {"type": "guide", "at": [4, 0], "xLabel": "threshold"},
+          {"type": "text", "at": [2, 0.2], "label": "no electrons", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Frequency decides whether electrons are ejected. Brightness decides how many.",
     "a": {
       "q": "Red light shining on a metal ejects no electrons, however bright it is. What does this show?",
@@ -1161,6 +1319,33 @@ MADE_BANKS.phys = {
       "The speed comes from the red shift of the galaxy's light. The distance is found by other methods, such as using standard candles, which are objects of known luminosity.",
       "H₀ is about 70 km/s per megaparsec. A galaxy 100 Mpc away would recede at about 7000 km/s. Hubble's law shows that space itself is expanding."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Recession speed against distance for a set of galaxies. The dots lie close to a straight line through the origin, so speed is proportional to distance. The gradient of the line is the Hubble constant, about 70 km/s per megaparsec: a galaxy 100 Mpc away recedes at about 7000 km/s.",
+        "x": {"min": 0, "max": 150, "label": "d (Mpc)", "step": 25, "nums": false},
+        "y": {"min": 0, "max": 11000, "label": "v (km/s)", "step": 2000, "nums": false},
+        "items": [
+          {
+            "type": "fn",
+            "id": "h",
+            "expr": "70x",
+            "domain": [0, 150],
+            "label": "\\(v = H_{0}d\\)",
+            "labelAt": 128,
+            "pos": "above-left"
+          },
+          {"type": "point", "at": [22, 1700]},
+          {"type": "point", "at": [40, 2600]},
+          {"type": "point", "at": [58, 4300]},
+          {"type": "point", "at": [75, 5000]},
+          {"type": "point", "at": [92, 6800]},
+          {"type": "point", "at": [118, 8000]},
+          {"type": "point", "at": [133, 9600]},
+          {"type": "guide", "at": [100, 7000], "xLabel": "100", "yLabel": "7000"}
+        ]
+      }
+    },
     "remember": "Recession speed is proportional to distance, so the universe is expanding.",
     "a": {
       "q": "Galaxy A is 200 Mpc from us. Galaxy B is 100 Mpc away. By Hubble's law, how do their recession speeds compare?",
@@ -1198,6 +1383,31 @@ MADE_BANKS.phys = {
         "hot but dim stars at the lower left, because they are very small. A Sun-like star leaves the main sequence to become a giant, then ends as a white dwarf."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A Hertzsprung-Russell diagram. Luminosity goes up the side. Surface temperature runs along the bottom backwards, with hot stars on the left and cool stars on the right, as the axis name and the arrow say. The main sequence is a band from the upper left to the lower right, with the Sun near its middle. Giants are at the upper right and white dwarfs at the lower left.",
+        "x": {"min": 0.4, "max": 10, "label": "Temperature, hot to cool"},
+        "y": {"min": 0, "max": 10, "label": "Luminosity"},
+        "items": [
+          {
+            "type": "shade",
+            "poly": [[0.6, 9.2], [1.8, 9.4], [5.2, 6.4], [9.4, 2.6], [9.4, 1.2], [8.6, 1.2], [4.6, 5], [0.6, 8]],
+            "label": "main sequence",
+            "at": [3.2, 7.3]
+          },
+          {"type": "shade", "poly": [[6.6, 7], [9.4, 8.4], [9.4, 6.4], [7, 5.6]], "label": "giants", "at": [8.2, 7]},
+          {
+            "type": "shade",
+            "poly": [[1, 2.6], [3.2, 1.6], [3.2, 0.8], [1, 1.8]],
+            "label": "white dwarfs",
+            "at": [2.1, 2.9]
+          },
+          {"type": "point", "at": [6.4, 4.1], "label": "Sun", "pos": "right"},
+          {"type": "arrow", "from": [4.6, 0.6], "to": [9.2, 0.6], "label": "cooler", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Position on the H-R diagram shows a star's temperature, luminosity and stage of life.",
     "a": {
       "q": "A star is cool at its surface but has very high luminosity. Where is it on the H-R diagram, and why is it so luminous?",
@@ -1462,6 +1672,24 @@ MADE_BANKS.phys = {
       "Decay is random. We cannot say when one nucleus will decay, but in a large sample the fraction decaying in a set time is predictable.",
       "After one half-life, 1/2 of the original nuclei remain. After two, 1/4 remain. After three, 1/8 remain."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The fraction of the original nuclei still undecayed against time, measured in half-lives. The curve starts at 1 and halves every half-life: 1/2 after one, 1/4 after two and 1/8 after three. It keeps falling but never reaches zero.",
+        "x": {"min": 0, "max": 5.75, "label": "Half-lives", "step": 1},
+        "y": {"min": 0, "max": 1.1, "label": "Fraction left"},
+        "items": [
+          {"type": "fn", "id": "n", "expr": "2^{-x}", "domain": [0, 4]},
+          {"type": "point", "at": [0, 1], "on": ["n"], "is": "y-intercept", "label": "1", "pos": "above-right"},
+          {"type": "guide", "at": [1, 0.5], "yLabel": "1/2"},
+          {"type": "point", "at": [1, 0.5], "on": ["n"]},
+          {"type": "guide", "at": [2, 0.25], "yLabel": "1/4"},
+          {"type": "point", "at": [2, 0.25], "on": ["n"]},
+          {"type": "guide", "at": [3, 0.125], "yLabel": "1/8"},
+          {"type": "point", "at": [3, 0.125], "on": ["n"]}
+        ]
+      }
+    },
     "remember": "Every half-life, the number of undecayed nuclei is cut in half.",
     "a": {
       "q": "An isotope has a half-life of 6 hours. What fraction of a sample's original nuclei remains undecayed after 12 hours?",
@@ -1529,6 +1757,37 @@ MADE_BANKS.phys = {
       "Binding energy per nucleon is the binding energy divided by the number of nucleons. It is greatest for nuclei near iron, so these are the most tightly bound.",
       "In both processes the products have a higher binding energy per nucleon than the starting nuclei. The total mass of the products is slightly less, and the missing mass is released as energy."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Binding energy per nucleon against mass number. It rises steeply from light nuclei such as hydrogen-2 to a peak of about 8.8 MeV near iron-56, the most tightly bound, then falls slowly to about 7.6 MeV for uranium-238. Arrows show fusion joining light nuclei and fission splitting heavy ones, both moving towards iron.",
+        "x": {"min": 0, "max": 250, "label": "Mass number", "step": 50},
+        "y": {"min": 0, "max": 11, "label": "MeV per nucleon", "step": 2},
+        "items": [
+          {
+            "type": "curve",
+            "id": "b",
+            "points": [
+              [2, 1.1],
+              [6, 5.3],
+              [12, 7.7],
+              [16, 8],
+              [30, 8.5],
+              [56, 8.8],
+              [90, 8.7],
+              [140, 8.4],
+              [200, 7.9],
+              [238, 7.6]
+            ],
+            "smooth": true
+          },
+          {"type": "point", "at": [56, 8.8], "on": ["b"], "label": "iron-56", "pos": "above"},
+          {"type": "point", "at": [238, 7.6], "on": ["b"], "label": "uranium", "pos": "below-left"},
+          {"type": "arrow", "from": [14, 4.2], "to": [40, 6.6], "label": "fusion", "pos": "right"},
+          {"type": "arrow", "from": [226, 6.4], "to": [130, 6.4], "label": "fission", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Fission and fusion both move nuclei towards more tightly bound products, and the difference is released as energy.",
     "a": {
       "q": "Why does fusion of two hydrogen nuclei release energy?",
@@ -1703,6 +1962,25 @@ MADE_BANKS.phys = {
       ],
       "L depends on the substance and the change. For water, melting ice takes about 3.3 × 10^5 J/kg. Boiling takes about 2.3 × 10^6 J/kg, which is much more."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "A heating curve for ice heated until it becomes steam: temperature against energy supplied. The temperature rises, then stays flat while the ice melts at 0 °C, rises again as the water warms, then stays flat for much longer while the water boils at 100 °C, because boiling takes much more energy than melting. It then rises as the steam heats.",
+        "x": {"min": 0, "max": 3200, "label": "Energy supplied"},
+        "y": {"min": 240, "max": 420, "label": "Temperature"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "h",
+            "points": [[0, 253], [42, 273], [372, 273], [792, 373], [3052, 373], [3092, 393]]
+          },
+          {"type": "text", "at": [50, 273], "label": "melting, 0 °C", "pos": "below-right"},
+          {"type": "text", "at": [1900, 373], "label": "boiling, 100 °C", "pos": "below"},
+          {"type": "text", "at": [600, 322], "label": "water", "pos": "above-left"},
+          {"type": "text", "at": [3072, 383], "label": "steam", "pos": "left"}
+        ]
+      }
+    },
     "remember": "During a change of state the energy goes into changing particle arrangement, so temperature stays constant. Use Q = mL.",
     "a": {
       "q": "A block of ice at 0 °C is heated and begins to melt. What happens to the energy supplied while it melts?",
@@ -1764,6 +2042,38 @@ MADE_BANKS.phys = {
       "The peak wavelength is the wavelength at which the most energy is emitted. Wien's law says it gets shorter as temperature rises, because peak wavelength is inversely proportional to temperature in kelvin.",
       "Real objects only approximate a black body. A heated piece of metal glows dull red, then orange, then white as its peak moves to shorter wavelengths and more visible light is emitted."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Intensity against wavelength for two black bodies. The 5000 K curve is higher at every wavelength, so it emits more energy in total each second, and its peak wavelength, about 0.58 μm, is shorter than the 4000 K curve's, about 0.72 μm. An arrow from the cooler peak to the hotter peak shows the peak moving to a shorter wavelength.",
+        "x": {"min": 0, "max": 2.5, "label": "Wavelength (μm)", "step": 0.5},
+        "y": {"min": 0, "max": 10.5, "label": "Intensity"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "t4",
+            "expr": "\\frac{83.86}{x^{5}\\left(e^{\\frac{3.597}{x}} - 1\\right)}",
+            "domain": [0.15, 2.5],
+            "label": "4000 K",
+            "labelAt": 1.442,
+            "pos": "below-left",
+            "style": "dash"
+          },
+          {
+            "type": "fn",
+            "id": "t5",
+            "expr": "\\frac{83.86}{x^{5}\\left(e^{\\frac{2.8776}{x}} - 1\\right)}",
+            "domain": [0.15, 2.5],
+            "label": "5000 K",
+            "labelAt": 0.82,
+            "pos": "above-right"
+          },
+          {"type": "point", "at": [0.5796, 9.011], "on": ["t5"], "is": "turning point"},
+          {"type": "point", "at": [0.7244, 2.953], "on": ["t4"], "is": "turning point"},
+          {"type": "arrow", "from": [0.7244, 3.553], "to": [0.6096, 8.3], "label": "hotter", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Hotter means more total energy emitted and a shorter peak wavelength.",
     "a": {
       "q": "A metal rod is heated until its temperature in kelvin doubles. What happens to the radiation it emits?",
@@ -1865,6 +2175,34 @@ MADE_BANKS.phys = {
         "a thermistor changes resistance with temperature. A light dependent resistor (LDR) changes resistance with light level. For a typical LDR, resistance falls as light gets brighter."
       ]
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Current against voltage for a resistor and a diode. The resistor's graph is a straight line through the origin, so it is ohmic. The diode carries almost no current when connected the other way (negative voltage) and very little at first the right way round, then the current rises steeply once the voltage passes about 0.6 V, so it is non-ohmic.",
+        "x": {"min": -0.6, "max": 1, "label": "Voltage (V)", "step": 0.2, "nums": false},
+        "y": {"min": -20, "max": 42, "label": "Current (mA)", "step": 10},
+        "items": [
+          {
+            "type": "fn",
+            "id": "r",
+            "expr": "30x",
+            "domain": [-0.6, 1],
+            "label": "resistor",
+            "labelAt": -0.4,
+            "pos": "below-right"
+          },
+          {
+            "type": "fn",
+            "id": "d",
+            "expr": "0.0001\\left(e^{20x} - 1\\right)",
+            "domain": [-0.6, 0.645],
+            "label": "diode",
+            "labelAt": 0.62,
+            "pos": "left"
+          }
+        ]
+      }
+    },
     "remember": "If the I-V graph is not a straight line through the origin, the device is non-ohmic.",
     "a": {
       "q": "The I-V graph of a component is a curve. What does this show about the component?",
@@ -2070,6 +2408,20 @@ MADE_BANKS.phys = {
       "On an acceleration-time graph, the area under the line is the change in velocity.",
       "A curved line means the gradient is changing. So a curve on a position-time graph shows changing velocity, and a curve on a velocity-time graph shows changing acceleration."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A velocity-time graph. The velocity rises in a straight line from 2 m/s to 8 m/s in the first 4 s, so the gradient there is the acceleration, 1.5 m/s squared. It then stays at 8 m/s, a zero gradient. The shaded area between the line and the time axis is the displacement.",
+        "x": {"min": 0, "max": 13.5, "label": "Time (s)", "step": 2},
+        "y": {"min": 0, "max": 13, "label": "Velocity (m/s)", "step": 2},
+        "items": [
+          {"type": "shade", "under": "v", "span": [0, 10], "label": "area = displacement", "at": [5.6, 3.2]},
+          {"type": "curve", "id": "v", "points": [[0, 2], [4, 8], [10, 8]]},
+          {"type": "text", "at": [4.6, 10.6], "label": "gradient = acceleration", "pos": "above"},
+          {"type": "arrow", "from": [2.6, 10.4], "to": [2.1, 5.6]}
+        ]
+      }
+    },
     "remember": "Position, velocity, acceleration: gradient gives the next one along, and area gives the change in the one before.",
     "a": {
       "q": "A cyclist's velocity-time graph is a straight line sloping upwards from the origin. What does this show?",
@@ -2323,6 +2675,21 @@ MADE_BANKS.phys = {
       "The minus sign shows that the spring's restoring force points opposite to the extension. The size of the force is kx.",
       "A stretched or compressed spring stores elastic potential energy. E = ½kx², so doubling the extension makes the stored energy four times greater."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Force against extension for an ideal spring with k = 40 N/m: a straight line through the origin. The stored energy is the area under the line. Up to 0.2 m the area is a small triangle, E. Doubling the extension to 0.4 m makes the area four times as large: the triangle E plus a strip of 3E.",
+        "x": {"min": 0, "max": 0.675, "label": "Extension (m)", "step": 0.1},
+        "y": {"min": 0, "max": 21, "label": "Force (N)", "step": 5},
+        "items": [
+          {"type": "shade", "under": "f", "span": [0, 0.2], "label": "E", "at": [0.14, 1.9]},
+          {"type": "shade", "under": "f", "span": [0.2, 0.4], "label": "3E", "at": [0.3, 4.6], "hatch": true},
+          {"type": "fn", "id": "f", "expr": "40x", "domain": [0, 0.45]},
+          {"type": "guide", "at": [0.2, 8], "xLabel": ""},
+          {"type": "guide", "at": [0.4, 16], "xLabel": ""}
+        ]
+      }
+    },
     "remember": "Force is proportional to extension, F = kx in size. Stored energy is ½kx².",
     "a": {
       "q": "A spring stretches 0.10 m when a 5.0 N force is applied. What is its spring constant k, assuming it is ideal?",
@@ -2929,6 +3296,36 @@ MADE_BANKS.phys = {
         "a device whose resistance changes as the voltage changes, such as a diode. Its current against voltage graph is not a straight line."
       ]
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Current against voltage for two ohmic resistors. Both graphs are straight lines through the origin, because each resistance stays constant. The 5 Ω resistor's line is steeper: at 10 V it carries 2.0 A. The 10 Ω resistor carries less current at every voltage, 1.0 A at 10 V.",
+        "x": {"min": 0, "max": 15.5, "label": "Voltage (V)", "step": 2},
+        "y": {"min": 0, "max": 2.8, "label": "Current (A)", "step": 0.5},
+        "items": [
+          {
+            "type": "fn",
+            "id": "a",
+            "expr": "\\frac{x}{5}",
+            "domain": [0, 11],
+            "label": "5 Ω",
+            "labelAt": 9,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "b",
+            "expr": "\\frac{x}{10}",
+            "domain": [0, 11],
+            "label": "10 Ω",
+            "labelAt": 9,
+            "pos": "below-right"
+          },
+          {"type": "point", "at": [10, 2], "on": ["a"]},
+          {"type": "point", "at": [10, 1], "on": ["b"]}
+        ]
+      }
+    },
     "remember": "V = IR. In an ohmic device, R stays constant, so current is proportional to voltage.",
     "a": {
       "q": "A resistor has 12 V across it and a current of 3.0 A through it. What is its resistance?",
@@ -3087,6 +3484,34 @@ MADE_BANKS.phys = {
       ],
       "Air resistance is a force that opposes the motion. It slows the object, so the real path is shorter than the path with no air resistance."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Two paths of the same launch. With no air resistance the path is a parabola, the same shape going up and coming down. With air resistance the path is lower, falls more steeply at the end, and lands much shorter.",
+        "x": {"min": 0, "max": 42, "label": "Horizontal distance"},
+        "y": {"min": 0, "max": 13.5, "label": "Height"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "n",
+            "expr": "x - \\frac{x^{2}}{40}",
+            "domain": [0, 40],
+            "label": "no air resistance",
+            "labelAt": 20,
+            "pos": "above"
+          },
+          {
+            "type": "curve",
+            "id": "a",
+            "points": [[0, 0], [6, 4.6], [12, 7.0], [17, 7.6], [21, 6.6], [25, 3.6], [27.5, 0]],
+            "smooth": true,
+            "label": "with air resistance",
+            "labelAt": 26.125,
+            "pos": "left"
+          }
+        ]
+      }
+    },
     "remember": "With no air resistance, horizontal velocity stays steady, vertical velocity changes steadily, and the two share only the time.",
     "a": {
       "q": "A ball is kicked off a cliff in a horizontal direction. Ignoring air resistance, what is true of its horizontal velocity as it falls?",
@@ -3187,6 +3612,18 @@ MADE_BANKS.phys = {
       "On a force-distance graph, the work done is the area under the line. This works even when the force changes.",
       "A force at right angles to the motion does no work. Work is positive if the force acts along the motion and negative if it acts against it."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Force against distance for a force that changes: it stays at 20 N for the first 4 m, then falls steadily to zero at 8 m. The shaded area under the line is the work done, even though the force changes.",
+        "x": {"min": 0, "max": 12.5, "label": "Distance (m)", "step": 2},
+        "y": {"min": 0, "max": 26, "label": "Force (N)", "step": 5},
+        "items": [
+          {"type": "shade", "poly": [[0, 0], [0, 20], [4, 20], [8, 0]], "label": "area = work done", "at": [3, 8]},
+          {"type": "curve", "id": "f", "points": [[0, 20], [4, 20], [8, 0]]}
+        ]
+      }
+    },
     "remember": "Work is the force along the motion times the distance moved, or the area under a force-distance graph.",
     "a": {
       "q": "Which force does no work on the object?",
@@ -3254,6 +3691,27 @@ MADE_BANKS.phys = {
       "Near Earth's surface, gravitational potential energy changes by mgΔh when an object's height changes by Δh.",
       "If no energy is lost, the total of kinetic, elastic and gravitational energy stays the same. Energy moves between these forms, so a released spring can give an object kinetic energy or lift it."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Force against extension for a spring that obeys Hooke's law, with k = 100 N/m: a straight line through the origin, F = kx. At an extension of 0.20 m the force is 20 N. The shaded triangle under the line is the stored elastic potential energy, one half of 0.20 m times 20 N, which is 2.0 J.",
+        "x": {"min": 0, "max": 0.35, "label": "Extension (m)", "step": 0.1},
+        "y": {"min": 0, "max": 25, "label": "Force (N)", "step": 5},
+        "items": [
+          {"type": "shade", "under": "f", "span": [0, 0.2], "label": "\\(E = \\frac{1}{2}kx^{2}\\)", "at": [0.135, 5]},
+          {
+            "type": "fn",
+            "id": "f",
+            "expr": "100x",
+            "domain": [0, 0.27],
+            "label": "\\(F = kx\\)",
+            "labelAt": 0.15,
+            "pos": "above-left"
+          },
+          {"type": "guide", "at": [0.2, 20], "xLabel": "", "yLabel": ""}
+        ]
+      }
+    },
     "remember": "Spring energy is ½kx², the area under the force-extension graph, and it can change into kinetic or gravitational energy.",
     "a": {
       "q": "A spring has a spring constant of 200 N/m. How much energy is stored when it is stretched by 0.10 m?",
@@ -3564,6 +4022,19 @@ MADE_BANKS.phys = {
       "The RMS value is smaller than the peak, because the AC voltage is at its peak only for an instant in each cycle.",
       "The same rule works for current: Irms = Ipeak ÷ √2. Mains voltage is quoted as an RMS value."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "An AC voltage against time: a sine wave swinging between plus 10 V and minus 10 V. The peak voltage, Vpeak, is 10 V. A horizontal line marks the RMS voltage, Vrms, about 7.1 V, which is 10 divided by root 2. The voltage is above Vrms only for part of each cycle.",
+        "x": {"min": 0, "max": 14.5, "label": "Time"},
+        "y": {"min": -12, "max": 14, "label": "Voltage (V)", "step": 5},
+        "items": [
+          {"type": "fn", "id": "v", "expr": "10\\sin(x)", "domain": [0, 12.566]},
+          {"type": "guide", "at": [12.566, 7.07], "yLabel": "Vrms"},
+          {"type": "point", "at": [1.5708, 10], "on": ["v"], "is": "turning point", "label": "Vpeak", "pos": "above"}
+        ]
+      }
+    },
     "remember": "RMS is the DC equivalent for power: peak divided by √2.",
     "a": {
       "q": "An AC supply has a peak voltage of 20 V. About what DC voltage would give the same power in a resistor?",
@@ -3744,6 +4215,20 @@ MADE_BANKS.phys = {
       "Above f0, even very dim light ejects electrons with no measurable delay. Brighter light ejects more electrons per second. A higher frequency, not brighter light, raises the electrons' maximum kinetic energy.",
       "The wave model said light energy spreads out and builds up over time. So bright enough light of any frequency should eject electrons, after a delay if the light is dim. Experiments showed neither, and Einstein explained the results with photons, a particle model of light."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Maximum kinetic energy of the photoelectrons against the frequency of the light. Below the threshold frequency f0 no electrons are ejected, however bright the light. Above f0, the maximum kinetic energy rises in a straight line as the frequency rises.",
+        "x": {"min": 0, "max": 10, "label": "Frequency"},
+        "y": {"min": 0, "max": 7, "label": "Kmax"},
+        "items": [
+          {"type": "fn", "id": "k", "expr": "0.9x - 3.6", "domain": [4, 10]},
+          {"type": "point", "at": [4, 0], "on": ["k"], "is": "x-intercept"},
+          {"type": "guide", "at": [4, 0], "xLabel": "\\(f_{0}\\)"},
+          {"type": "text", "at": [2, 0.2], "label": "no electrons", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Frequency decides whether electrons are ejected. Brightness decides how many.",
     "a": {
       "q": "A metal is lit with red light and no electrons are ejected, even when the lamp is made much brighter. What does this show?",
@@ -3814,6 +4299,51 @@ MADE_BANKS.phys = {
       ],
       "Measuring V₀ gives Kmax in electron volts. If V₀ is 2.0 V, then Kmax is 2.0 eV."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Kmax against the frequency of the light: a straight line, Kmax = hf minus φ, that starts at the threshold frequency f0 on the frequency axis. Extended back as a dashed line, it meets the energy axis at minus φ, the work function.",
+        "x": {"min": 0, "max": 10, "label": "Frequency"},
+        "y": {"min": -4.5, "max": 6.5, "label": "Kmax"},
+        "items": [
+          {
+            "type": "fn",
+            "id": "k",
+            "expr": "0.9x - 3.6",
+            "domain": [4, 10],
+            "label": "\\(K_{max} = hf - \\phi\\)",
+            "labelAt": 7,
+            "pos": "above-left"
+          },
+          {
+            "type": "fn",
+            "id": "e",
+            "expr": "0.9x - 3.6",
+            "domain": [0, 4],
+            "label": "extended",
+            "labelAt": 1.4,
+            "pos": "below-right",
+            "style": "dash"
+          },
+          {
+            "type": "point",
+            "at": [4, 0],
+            "on": ["k"],
+            "is": "x-intercept",
+            "label": "\\(f_{0}\\)",
+            "pos": "above-left"
+          },
+          {
+            "type": "point",
+            "at": [0, -3.6],
+            "on": ["e"],
+            "is": "y-intercept",
+            "label": "\\(-\\phi\\)",
+            "pos": "below-right"
+          }
+        ]
+      }
+    },
     "remember": "Kmax = hf - φ, and the stopping voltage V₀ measures Kmax through Kmax = eV₀.",
     "a": {
       "q": "A metal has a work function of 2.0 eV. A photon of energy 5.0 eV frees an electron with the most kinetic energy possible. What stopping voltage is needed?",
@@ -4180,6 +4710,36 @@ MADE_BANKS.phys = {
       "A straight line through the origin means the plotted quantities are directly proportional. A curve on the first graph shows the relationship is not linear.",
       "The gradient of the line has a physical meaning. For T² against L, gradient = 4π²/g, so g = 4π² ÷ gradient. The gradient has units too: the units of the y-axis divided by the units of the x-axis."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "The period T of a pendulum against its length L for five lengths from 0.2 m to 1.0 m. The points lie on a curve that rises less and less steeply, so T is not proportional to L.",
+        "x": {"min": 0, "max": 1.25, "label": "L (m)", "step": 0.2},
+        "y": {"min": 0, "max": 2.5, "label": "T (s)", "step": 0.5},
+        "items": [
+          {"type": "fn", "id": "t", "expr": "2.007\\sqrt{x}", "domain": [0, 1.1]},
+          {"type": "point", "at": [0.2, 0.898], "on": ["t"]},
+          {"type": "point", "at": [0.4, 1.269], "on": ["t"]},
+          {"type": "point", "at": [0.6, 1.555], "on": ["t"]},
+          {"type": "point", "at": [0.8, 1.795], "on": ["t"]},
+          {"type": "point", "at": [1.0, 2.007], "on": ["t"]}
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "The square of the period, T squared, against length L for the same five lengths. The points lie on a straight line through the origin, so T squared is directly proportional to L. Its gradient is about 4.0 s squared per metre.",
+        "x": {"min": 0, "max": 1.2, "label": "L (m)", "step": 0.2},
+        "y": {"min": 0, "max": 5, "label": "T² (s²)", "step": 1},
+        "items": [
+          {"type": "fn", "id": "t", "expr": "4.028x", "domain": [0, 1.1]},
+          {"type": "point", "at": [0.2, 0.806], "on": ["t"]},
+          {"type": "point", "at": [0.4, 1.611], "on": ["t"]},
+          {"type": "point", "at": [0.6, 2.417], "on": ["t"]},
+          {"type": "point", "at": [0.8, 3.222], "on": ["t"]},
+          {"type": "point", "at": [1.0, 4.028], "on": ["t"]}
+        ]
+      }
+    },
     "remember": "Plot the transformed quantity so the points form a straight line, then read the physics from the gradient.",
     "a": {
       "q": "Students plot T² (s²) against L (m) for a pendulum and get a straight line through the origin. What does the gradient allow them to find?",

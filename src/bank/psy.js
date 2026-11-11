@@ -2703,6 +2703,37 @@ MADE_BANKS.psy = {
       "In adolescence, the sleep-wake cycle shifts later. Teenagers tend to feel sleepy later at night and want to wake later in the morning.",
       "Early school start times can clash with this shift. A teenager may then get less sleep than their body needs."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Total sleep a day against age. Newborns sleep about 14 to 17 hours a day. Sleep falls fast through childhood, to about 8 to 10 hours in the teenage years, then slowly through adulthood to about 6 to 7 hours in older adults.",
+        "x": {"min": 0, "max": 95.0, "label": "Age (years)", "step": 30},
+        "y": {"min": 0, "max": 18, "label": "Sleep (hours a day)", "step": 3},
+        "items": [
+          {
+            "type": "curve",
+            "id": "s",
+            "points": [[0, 15.5], [1, 13], [5, 11], [10, 10], [16, 9], [30, 8], [60, 7], [80, 6.5]],
+            "smooth": true
+          },
+          {"type": "point", "at": [16, 9], "on": ["s"], "label": "teenagers", "pos": "above-right"}
+        ]
+      },
+      "2": {
+        "kind": "graph",
+        "alt": "The share of sleep spent in REM sleep against age. Infants spend about half their sleep in REM. The share falls quickly in childhood to about a fifth in adults, and a little less in older adults.",
+        "x": {"min": 0, "max": 95.0, "label": "Age (years)", "step": 30},
+        "y": {"min": 0, "max": 60, "label": "REM share (%)", "step": 10},
+        "items": [
+          {
+            "type": "curve",
+            "id": "m",
+            "points": [[0, 50], [2, 30], [10, 22], [20, 20], [50, 19], [80, 16]],
+            "smooth": true
+          }
+        ]
+      }
+    },
     "remember": "With age, total sleep and the share of REM fall. Teenagers' sleep timing moves later.",
     "a": {
       "q": "Which change in sleep is typical as a person moves from infancy to old age?",
@@ -3308,6 +3339,28 @@ MADE_BANKS.psy = {
         "if the stressor lasts too long, the body's resources run low. Resistance falls, and the person becomes more open to illness."
       ]
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Resistance to a stressor against time, in the general adaptation syndrome. The dashed line marks the normal level. In the alarm reaction, resistance first dips below normal, in shock, then rises above it, in countershock. In the resistance stage it stays raised while the stressor continues. In exhaustion it falls below normal as the body's resources run low.",
+        "x": {"min": 0, "max": 11.5, "label": "Time"},
+        "y": {"min": 0, "max": 10.5, "label": "Resistance"},
+        "items": [
+          {"type": "guide", "at": [11.5, 5], "yLabel": "normal"},
+          {
+            "type": "curve",
+            "id": "r",
+            "points": [[0, 5], [2, 5], [2.7, 3.4], [3.6, 6.5], [4.3, 7.2], [8, 7.2], [9, 6.7], [10.2, 3.4], [11, 2.6]],
+            "smooth": true
+          },
+          {"type": "text", "at": [2.7, 3.4], "label": "shock", "pos": "below"},
+          {"type": "text", "at": [3.6, 5.5], "label": "countershock", "pos": "right"},
+          {"type": "text", "at": [2.2, 9.0], "label": "alarm reaction", "pos": "above"},
+          {"type": "text", "at": [6.4, 9.0], "label": "resistance", "pos": "above"},
+          {"type": "text", "at": [10.0, 9.0], "label": "exhaustion", "pos": "above"}
+        ]
+      }
+    },
     "remember": "GAS runs in order: alarm reaction, resistance, then exhaustion. Resources are used up over time.",
     "a": {
       "q": "Which description fits the resistance stage of the GAS?",

@@ -2587,6 +2587,22 @@ MADE_BANKS.sci = {
       ["Anomaly", "a result that does not fit the pattern of the others. It stands out as unusually high or low."],
       "An anomaly may come from an error, such as a misread instrument or a spill. Scientists look for the cause and may repeat that trial to check it."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A plant's height measured each day for 5 days: 3, 5, 7, 4 and 11 cm. The straight line shows the trend: the height rises by about 2 cm a day. Four results sit on the line. The day 4 result, 4 cm, is far below it, so it is an anomaly.",
+        "x": {"min": 0, "max": 6, "label": "Day", "step": 1},
+        "y": {"min": 0, "max": 14, "label": "Height (cm)", "step": 2},
+        "items": [
+          {"type": "fn", "id": "t", "expr": "2x + 1", "domain": [0.5, 5.5], "label": "trend"},
+          {"type": "point", "at": [1, 3], "on": ["t"]},
+          {"type": "point", "at": [2, 5], "on": ["t"]},
+          {"type": "point", "at": [3, 7], "on": ["t"]},
+          {"type": "point", "at": [5, 11], "on": ["t"]},
+          {"type": "point", "at": [4, 4], "label": "anomaly", "pos": "below-right"}
+        ]
+      }
+    },
     "remember": "A trend is the overall direction. An anomaly is the result that breaks the pattern.",
     "a": {
       "q": "Hana times how long ice takes to melt in water at 10, 20, 30, 40 and 50 °C. The times fall as the water gets warmer. What does this describe?",
@@ -4644,6 +4660,19 @@ MADE_BANKS.sci = {
       ],
       "For sound, a higher frequency gives a higher pitch. Pitch is how high or low a note sounds."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A wave drawn along its rest position, the horizontal line. The wavelength is the distance from one peak to the next peak, shown by the arrow along the top. The amplitude is the height from the rest position up to a peak, shown by the upright arrow.",
+        "x": {"min": 0, "max": 19, "label": "Distance"},
+        "y": {"min": -3, "max": 4, "label": "Height"},
+        "items": [
+          {"type": "fn", "id": "w", "expr": "2\\sin(x)", "domain": [0, 14.137]},
+          {"type": "arrow", "from": [1.571, 2.6], "to": [7.854, 2.6], "label": "wavelength", "pos": "above"},
+          {"type": "arrow", "from": [14.137, 0], "to": [14.137, 2], "label": "amplitude", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Wavelength is a distance, amplitude is a height, and frequency is a count each second that sets pitch.",
     "a": {
       "q": "Which part of a wave is the distance from one peak to the next peak?",
@@ -4981,6 +5010,19 @@ MADE_BANKS.sci = {
       "Carbon-14 has a half-life of about 5,700 years. Comparing the carbon-14 left in charcoal, bone or shell with a living sample shows how long ago it died.",
       "Radiocarbon dating has dated many First Peoples' campsites and burials in Australia. It works up to about 50,000 years ago, so older sites need other dating methods."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The percentage of carbon-14 left in a sample against time since the living thing died. It starts at 100% and halves every half-life of about 5,700 years: the dashed lines show 50% left at 5,700 years. The curve keeps falling, more slowly, so less carbon-14 means an older sample.",
+        "x": {"min": 0, "max": 30000, "label": "Time (years)", "step": 5000, "nums": false},
+        "y": {"min": 0, "max": 110, "label": "Carbon-14 left (%)", "step": 25},
+        "items": [
+          {"type": "fn", "id": "c", "expr": "100\\cdot 2^{-\\frac{x}{5700}}", "domain": [0, 30000]},
+          {"type": "guide", "at": [5700, 50], "xLabel": "5,700", "yLabel": ""},
+          {"type": "point", "at": [5700, 50], "on": ["c"]}
+        ]
+      }
+    },
     "remember": "Less carbon-14 left means more half-lives have passed, so the sample is older.",
     "a": {
       "q": "A sample has 1,200 unstable atoms, and its half-life is 3 days. How many unstable atoms are left after 9 days?",

@@ -735,6 +735,43 @@ MADE_BANKS.hms = {
       "A very short, all-out effort draws mostly on the ATP-PC system. A hard effort lasting up to a couple of minutes draws mostly on anaerobic glycolysis.",
       "A long, steady effort draws mostly on the aerobic system. When the intensity or length of the activity changes, the main supplier changes too."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "The share of the energy each system supplies against time, in a hard effort that keeps going. The three shares add to 100% at every moment. The ATP-PC system supplies most for the first few seconds, then falls fast. Anaerobic glycolysis supplies most from about 10 seconds to about a minute and a half. The aerobic system rises steadily and supplies most after that. All three supply some energy at every moment.",
+        "x": {"min": 0, "max": 255.0, "label": "Time (s)", "step": 60},
+        "y": {"min": 0, "max": 100, "label": "Share of energy (%)"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "p",
+            "points": [[0, 80], [5, 60], [10, 40], [20, 20], [40, 8], [60, 5], [90, 4], [120, 3], [180, 2]],
+            "smooth": true,
+            "label": "ATP-PC",
+            "labelAt": 2,
+            "pos": "above-right"
+          },
+          {
+            "type": "curve",
+            "id": "g",
+            "points": [[0, 15], [5, 32], [10, 50], [20, 62], [40, 64], [60, 55], [90, 48], [120, 41], [180, 32]],
+            "smooth": true,
+            "label": "anaerobic glycolysis",
+            "labelAt": 171,
+            "pos": "below"
+          },
+          {
+            "type": "curve",
+            "id": "a",
+            "points": [[0, 5], [5, 8], [10, 10], [20, 18], [40, 28], [60, 40], [90, 48], [120, 56], [180, 66]],
+            "smooth": true,
+            "label": "aerobic",
+            "labelAt": 200,
+            "pos": "above-left"
+          }
+        ]
+      }
+    },
     "remember": "All three systems work at once. Intensity and length decide which one does most of the work.",
     "a": {
       "q": "Which statement best describes how the energy systems work during exercise?",
@@ -957,6 +994,20 @@ MADE_BANKS.hms = {
       "Arousal is how alert and physically stirred up an athlete feels, from very calm to very excited. Performance is usually best at a moderate level of arousal.",
       "Too little arousal can leave an athlete flat and slow to react. Too much, especially when it brings anxiety (worry and tension), can harm performance."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Performance against arousal, an upside-down U. With very little arousal, performance is low: the athlete is flat and slow to react. It is best at a moderate level of arousal. With too much arousal, especially with anxiety, performance falls again.",
+        "x": {"min": 0, "max": 10, "label": "Arousal"},
+        "y": {"min": 0, "max": 11, "label": "Performance"},
+        "items": [
+          {"type": "fn", "id": "p", "expr": "8 - 0.28(x - 5)^{2}", "domain": [0.2, 9.8]},
+          {"type": "point", "at": [5, 8], "on": ["p"], "is": "turning point", "label": "best", "pos": "above"},
+          {"type": "text", "at": [1.2, 3], "label": "too low", "pos": "above-right"},
+          {"type": "text", "at": [8.8, 3], "label": "too high", "pos": "above-left"}
+        ]
+      }
+    },
     "remember": "Motivation is about why you play. Arousal is about how stirred up you feel, and a moderate level usually works best.",
     "a": {
       "q": "Dani swims on cold mornings only because she loves the feeling of gliding through the water. What type of motivation is this?",

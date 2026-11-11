@@ -6,24 +6,24 @@ A census of every point in the banks, for planning the sessions that add graphs 
 
 A shared point is listed under every course that uses it, and counted once in its bank.
 
-The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2. Session 3 added them to General Mathematics Units 3 and 4, Mathematics Standard Years 11 and 12, Foundation Mathematics Units 1 to 4 and Mathematics Years 7 to 10, which finishes the maths bank. Session 4 added them to the Edexcel course, Economics Units 1 to 4 (Victoria), Economics Year 12 (NSW), Economics and Business Year 8 and Business Management Units 1 and 2. The trade cycle graph for `e-outputgap` was turned down twice and waits for the owner; the point has its output gap graph.
+The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2. Session 3 added them to General Mathematics Units 3 and 4, Mathematics Standard Years 11 and 12, Foundation Mathematics Units 1 to 4 and Mathematics Years 7 to 10, which finishes the maths bank. Session 4 added them to the Edexcel course, Economics Units 1 to 4 (Victoria), Economics Year 12 (NSW), Economics and Business Year 8 and Business Management Units 1 and 2. Session 5 added them to Physics, Chemistry and Biology (NSW Years 11 and 12, Victoria Units 1 to 4), Physical Education Units 3 and 4, Health and Movement Science Year 11, Psychology Units 3 and 4, Science Years 7 and 9 and Geography Years 8 to 11, which finishes the census. Three were turned down twice and wait for the owner: the decay series on `phys-decay-series` (labels crowd at phone width), the IR spectrum on `chem-infrared-spectroscopy` (the graph format has no axis that runs from high to low, as IR spectra are drawn) and the temperature line on `geo-reading-climate-graph` (card line 3; its rainfall chart on card line 2 was kept). The trade cycle graph for `e-outputgap` was asked for again in session 5 and turned down twice more (the slowdown drawn as a fall in real GDP), so it still waits for the owner; the point has its output gap graph.
 
 ## By bank
 
 | Bank | Points | Better with a graph | Drawable now | Have one already |
 | --- | --- | --- | --- | --- |
 | mat | 666 | 151 | 136 | 151 |
-| phys | 135 | 25 | 25 | 0 |
+| phys | 135 | 25 | 25 | 24 |
 | eco | 154 | 21 | 21 | 21 |
 | e (Economics bank, Edexcel) | 53 | 16 | 16 | 16 |
-| chem | 199 | 14 | 13 | 0 |
-| bio | 162 | 9 | 9 | 0 |
+| chem | 199 | 14 | 13 | 13 |
+| bio | 162 | 9 | 9 | 9 |
 | ecb | 128 | 6 | 6 | 6 |
-| geo | 204 | 4 | 3 | 0 |
-| pe | 80 | 3 | 3 | 0 |
-| sci | 156 | 3 | 3 | 0 |
-| hms | 61 | 2 | 2 | 0 |
-| psy | 110 | 2 | 2 | 0 |
+| geo | 204 | 4 | 3 | 4 |
+| pe | 80 | 3 | 3 | 3 |
+| sci | 156 | 3 | 3 | 3 |
+| hms | 61 | 2 | 2 | 2 |
+| psy | 110 | 2 | 2 | 2 |
 | bus | 259 | 1 | 1 | 1 |
 | acc | 89 | 0 | 0 | 0 |
 | anc | 38 | 0 | 0 | 0 |
@@ -34,7 +34,7 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | mod | 147 | 0 | 0 | 0 |
 | soc | 57 | 0 | 0 | 0 |
 | sor | 79 | 0 | 0 | 0 |
-| Total | 3467 | 257 | 240 | 195 |
+| Total | 3467 | 257 | 240 | 255 |
 
 ## By course
 
@@ -49,37 +49,37 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | `vic-eco-u34` Economics, Units 3 and 4 | 68 | 15 | 15 | 15 |
 | `nsw-mat-std-12` Mathematics Standard 2, Year 12 | 53 | 12 | 12 | 12 |
 | `vic-mat-spec-u34` Specialist Mathematics, Units 3 and 4 | 51 | 12 | 11 | 12 |
-| `nsw-phys-12` Physics, Year 12 | 49 | 11 | 11 | 0 |
+| `nsw-phys-12` Physics, Year 12 | 49 | 11 | 11 | 11 |
 | `vic-mat-spec-u12` Specialist Mathematics, Units 1 and 2 | 63 | 10 | 9 | 10 |
 | `vic-eco-u12` Economics, Units 1 and 2 | 53 | 9 | 9 | 9 |
-| `vic-phys-u12` Physics, Units 1 and 2 | 52 | 9 | 9 | 0 |
-| `vic-phys-u34` Physics, Units 3 and 4 | 51 | 9 | 9 | 0 |
-| `vic-chem-u34` Chemistry, Units 3 and 4 | 64 | 8 | 7 | 0 |
+| `vic-phys-u12` Physics, Units 1 and 2 | 52 | 9 | 9 | 8 |
+| `vic-phys-u34` Physics, Units 3 and 4 | 51 | 9 | 9 | 9 |
+| `vic-chem-u34` Chemistry, Units 3 and 4 | 64 | 8 | 7 | 7 |
 | `vic-mat-gen-u34` General Mathematics, Units 3 and 4 | 57 | 8 | 6 | 8 |
 | `ac-mat-9` Mathematics, Year 9 | 39 | 7 | 6 | 7 |
 | `nsw-mat-std-11` Mathematics Standard, Year 11 | 43 | 7 | 5 | 7 |
 | `ac-ecb-8` Economics and Business, Year 8 | 34 | 6 | 6 | 6 |
 | `ac-mat-10` Mathematics, Year 10 | 38 | 6 | 5 | 6 |
-| `vic-bio-u34` Biology, Units 3 and 4 | 62 | 6 | 6 | 0 |
+| `vic-bio-u34` Biology, Units 3 and 4 | 62 | 6 | 6 | 6 |
 | `nsw-eco-12` Economics, Year 12: Australia's economy | 67 | 5 | 5 | 5 |
 | `vic-mat-fnd-u34` Foundation Mathematics, Units 3 and 4 | 32 | 5 | 5 | 5 |
-| `nsw-chem-12` Chemistry, Year 12 | 47 | 4 | 3 | 0 |
-| `vic-pe-u34` Physical Education, Units 3 and 4 | 39 | 4 | 4 | 0 |
+| `nsw-chem-12` Chemistry, Year 12 | 47 | 4 | 3 | 3 |
+| `vic-pe-u34` Physical Education, Units 3 and 4 | 39 | 4 | 4 | 4 |
 | `ac-mat-8` Mathematics, Year 8 | 40 | 3 | 3 | 3 |
-| `nsw-bio-12` Biology, Year 12 | 50 | 3 | 3 | 0 |
-| `nsw-chem-11` Chemistry, Year 11 | 39 | 3 | 3 | 0 |
-| `vic-chem-u12` Chemistry, Units 1 and 2 | 71 | 3 | 3 | 0 |
+| `nsw-bio-12` Biology, Year 12 | 50 | 3 | 3 | 3 |
+| `nsw-chem-11` Chemistry, Year 11 | 39 | 3 | 3 | 3 |
+| `vic-chem-u12` Chemistry, Units 1 and 2 | 71 | 3 | 3 | 3 |
 | `vic-mat-fnd-u12` Foundation Mathematics, Units 1 and 2 | 34 | 3 | 0 | 3 |
 | `ac-mat-7` Mathematics, Year 7 | 42 | 2 | 2 | 2 |
-| `ac-sci-9` Science, Year 9 | 40 | 2 | 2 | 0 |
-| `nsw-hms-11` Health and Movement Science, Year 11 | 31 | 2 | 2 | 0 |
-| `vic-bio-u12` Biology, Units 1 and 2 | 56 | 2 | 2 | 0 |
-| `vic-psy-u34` Psychology, Units 3 and 4 | 54 | 2 | 2 | 0 |
-| `ac-geo-10` Geography, Year 10 | 33 | 1 | 1 | 0 |
-| `ac-geo-8` Geography, Year 8 | 38 | 1 | 1 | 0 |
-| `ac-geo-9` Geography, Year 9 | 33 | 1 | 0 | 0 |
-| `ac-sci-7` Science, Year 7 | 40 | 1 | 1 | 0 |
-| `nsw-geo-11` Geography, Year 11 | 34 | 1 | 1 | 0 |
+| `ac-sci-9` Science, Year 9 | 40 | 2 | 2 | 2 |
+| `nsw-hms-11` Health and Movement Science, Year 11 | 31 | 2 | 2 | 2 |
+| `vic-bio-u12` Biology, Units 1 and 2 | 56 | 2 | 2 | 2 |
+| `vic-psy-u34` Psychology, Units 3 and 4 | 54 | 2 | 2 | 2 |
+| `ac-geo-10` Geography, Year 10 | 33 | 1 | 1 | 1 |
+| `ac-geo-8` Geography, Year 8 | 38 | 1 | 1 | 1 |
+| `ac-geo-9` Geography, Year 9 | 33 | 1 | 0 | 1 |
+| `ac-sci-7` Science, Year 7 | 40 | 1 | 1 | 1 |
+| `nsw-geo-11` Geography, Year 11 | 34 | 1 | 1 | 1 |
 | `vic-bus-u12` Business Management, Units 1 and 2 | 63 | 1 | 1 | 1 |
 
 No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `ac-ecb-9`, `ac-eng-10`, `ac-eng-7`, `ac-eng-8`, `ac-eng-9`, `ac-geo-7`, `ac-his-10`, `ac-his-7`, `ac-his-8`, `ac-his-9`, `ac-sci-10`, `ac-sci-8`, `nsw-anc-12`, `nsw-bus-11`, `nsw-bus-11b`, `nsw-bus-12`, `nsw-eng-adv-11`, `nsw-eng-adv-12`, `nsw-geo-12`, `nsw-hms-12`, `nsw-leg-12`, `nsw-mod-12`, `nsw-soc-11`, `nsw-soc-12`, `nsw-sor-11`, `nsw-sor-12`, `vic-acc-u12`, `vic-acc-u34`, `vic-bus-u34`, `vic-eng-u12`, `vic-eng-u34`, `vic-hhd-u12`, `vic-hhd-u34`, `vic-leg-u12`, `vic-leg-u34`, `vic-mod-u12`, `vic-pe-u12`, `vic-psy-u12`, `vic-rev-u34`.
@@ -324,21 +324,21 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Physics, Year 12 (`nsw-phys-12`)
 
 - Projectiles and circular motion (`nsw-phys-12-1-1`)
-  - `phys-projectile-motion` Projectile motion: projectile path (parabola)
-  - `phys-range-time-flight` Range and time of flight: trajectories and range against angle
+  - `phys-projectile-motion` Projectile motion: projectile path (parabola) Has one already.
+  - `phys-range-time-flight` Range and time of flight: trajectories and range against angle Has one already.
 - Gravity and orbits (`nsw-phys-12-1-2`)
-  - `phys-newton-s-law-universal` Newton's law of universal gravitation: force against distance, inverse square
-  - `phys-gravitational-field-strength` Gravitational field strength: g against distance, inverse square
-  - `phys-escape-velocity-gravitational-potential` Escape velocity and gravitational potential energy: potential energy against distance
+  - `phys-newton-s-law-universal` Newton's law of universal gravitation: force against distance, inverse square Has one already.
+  - `phys-gravitational-field-strength` Gravitational field strength: g against distance, inverse square Has one already.
+  - `phys-escape-velocity-gravitational-potential` Escape velocity and gravitational potential energy: potential energy against distance Has one already.
 - Light as particles (`nsw-phys-12-3-2`)
-  - `phys-black-body-radiation` Black body radiation: intensity against wavelength curves
-  - `phys-photoelectric-effect` The photoelectric effect: max kinetic energy against frequency
+  - `phys-black-body-radiation` Black body radiation: intensity against wavelength curves Has one already.
+  - `phys-photoelectric-effect` The photoelectric effect: max kinetic energy against frequency Has one already.
 - Stars and the universe (`nsw-phys-12-4-1`)
-  - `phys-hubble-s-law` Hubble's law: recession speed against distance line
-  - `phys-hertzsprung-russell-diagram` The Hertzsprung-Russell diagram: luminosity against temperature plot
+  - `phys-hubble-s-law` Hubble's law: recession speed against distance line Has one already.
+  - `phys-hertzsprung-russell-diagram` The Hertzsprung-Russell diagram: luminosity against temperature plot Has one already.
 - The nucleus (`nsw-phys-12-4-3`)
-  - `phys-half-life` Half-life: decay curve
-  - `phys-fission-fusion` Fission and fusion: binding energy per nucleon curve
+  - `phys-half-life` Half-life: decay curve Has one already.
+  - `phys-fission-fusion` Fission and fusion: binding energy per nucleon curve Has one already.
 
 ### Specialist Mathematics, Units 1 and 2 (`vic-mat-spec-u12`)
 
@@ -377,54 +377,54 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Physics, Units 1 and 2 (`vic-phys-u12`)
 
 - Heat (`vic-phys-u12-1-2-2`)
-  - `phys-latent-heat-2` Latent heat: heating curve with plateaus
-  - `phys-black-body-radiation-2` Black body radiation: intensity against wavelength curves
+  - `phys-latent-heat-2` Latent heat: heating curve with plateaus Has one already.
+  - `phys-black-body-radiation-2` Black body radiation: intensity against wavelength curves Has one already.
 - Radiation from the nucleus (`vic-phys-u12-1-2`)
   - `phys-decay-series` Decay series: mass number against atomic number with arrows
-  - `phys-half-life` Half-life: decay curve
+  - `phys-half-life` Half-life: decay curve Has one already.
 - Nuclear energy (`vic-phys-u12-1-4`)
-  - `phys-fission-fusion` Fission and fusion: binding energy per nucleon curve
+  - `phys-fission-fusion` Fission and fusion: binding energy per nucleon curve Has one already.
 - Circuits (`vic-phys-u12-1-3`)
-  - `phys-resistance-ohm-s-law` Resistance and Ohm's law: I-V graphs
+  - `phys-resistance-ohm-s-law` Resistance and Ohm's law: I-V graphs Has one already.
 - Using electricity (`vic-phys-u12-1-6`)
-  - `phys-non-ohmic-devices` Non-ohmic devices: I-V graphs
+  - `phys-non-ohmic-devices` Non-ohmic devices: I-V graphs Has one already.
 - Describing motion (`vic-phys-u12-2-1`)
-  - `phys-motion-graphs` Motion graphs: position, velocity, acceleration time graphs
+  - `phys-motion-graphs` Motion graphs: position, velocity, acceleration time graphs Has one already.
 - Energy and momentum (`vic-phys-u12-2-3`)
-  - `phys-hooke-s-law` Hooke's law: force against extension line, area as energy
+  - `phys-hooke-s-law` Hooke's law: force against extension line, area as energy Has one already.
 
 ### Physics, Units 3 and 4 (`vic-phys-u34`)
 
 - Motion in two dimensions (`vic-phys-u34-1-1`)
-  - `phys-projectile-motion-physics` Projectile motion in physics: projectile path (parabola)
+  - `phys-projectile-motion-physics` Projectile motion in physics: projectile path (parabola) Has one already.
 - Energy and momentum in Unit 3 (`vic-phys-u34-1-2-2`)
-  - `phys-work-done-by-force` Work done by a force: force-distance graph, area as work
-  - `phys-springs-energy` Springs and energy: force-extension graph, area as energy
+  - `phys-work-done-by-force` Work done by a force: force-distance graph, area as work Has one already.
+  - `phys-springs-energy` Springs and energy: force-extension graph, area as energy Has one already.
 - Fields (`vic-phys-u34-1-2`)
-  - `phys-gravitational-field-strength` Gravitational field strength: g against distance, inverse square
-  - `phys-newton-s-law-universal` Newton's law of universal gravitation: force against distance, inverse square
+  - `phys-gravitational-field-strength` Gravitational field strength: g against distance, inverse square Has one already.
+  - `phys-newton-s-law-universal` Newton's law of universal gravitation: force against distance, inverse square Has one already.
 - Generating electricity (`vic-phys-u34-1-3`)
-  - `phys-peak-rms-values` Peak and RMS values: sine wave voltage against time
+  - `phys-peak-rms-values` Peak and RMS values: sine wave voltage against time Has one already.
 - Light and matter (`vic-phys-u34-2-2`)
-  - `phys-photoelectric-effect-2` The photoelectric effect: max kinetic energy against frequency
-  - `phys-work-function-stopping-voltage` Work function and stopping voltage: Kmax against frequency line
+  - `phys-photoelectric-effect-2` The photoelectric effect: max kinetic energy against frequency Has one already.
+  - `phys-work-function-stopping-voltage` Work function and stopping voltage: Kmax against frequency line Has one already.
 - Science skills: the investigation (`vic-phys-u34-2-5`)
-  - `phys-linearising-data` Linearising data: T against L curve and T squared against L line
+  - `phys-linearising-data` Linearising data: T against L curve and T squared against L line Has one already.
 
 ### Chemistry, Units 3 and 4 (`vic-chem-u34`)
 
 - Measuring energy changes (`vic-chem-u34-1-2-2`)
-  - `chem-energy-profile-diagrams` Energy profile diagrams: energy profile with Ea and dH
-  - `chem-calorimetry-2` Calorimetry: temperature-time graph with extrapolation
+  - `chem-energy-profile-diagrams` Energy profile diagrams: energy profile with Ea and dH Has one already.
+  - `chem-calorimetry-2` Calorimetry: temperature-time graph with extrapolation Has one already.
 - Reaction rates (`vic-chem-u34-1-3`)
-  - `chem-maxwell-boltzmann-distributions` Maxwell-Boltzmann distributions: Maxwell-Boltzmann curves
-  - `chem-catalysts` Catalysts: energy profile with lower activation energy
+  - `chem-maxwell-boltzmann-distributions` Maxwell-Boltzmann distributions: Maxwell-Boltzmann curves Has one already.
+  - `chem-catalysts` Catalysts: energy profile with lower activation energy Has one already.
 - Equilibrium and yield (`vic-chem-u34-1-5`)
-  - `chem-dynamic-equilibrium` Dynamic equilibrium: concentration against time levelling off
+  - `chem-dynamic-equilibrium` Dynamic equilibrium: concentration against time levelling off Has one already.
 - Instrumental analysis (`vic-chem-u34-2-4`)
-  - `chem-mass-spectrometry` Mass spectrometry: mass spectrum peaks (needs: bar chart)
+  - `chem-mass-spectrometry` Mass spectrometry: mass spectrum peaks (needs: bar chart) Has one already.
   - `chem-infrared-spectroscopy` Infrared spectroscopy: IR spectrum, transmittance against wavenumber
-  - `chem-chromatography-2` Chromatography: calibration curve of peak area against concentration
+  - `chem-chromatography-2` Chromatography: calibration curve of peak area against concentration Has one already.
 
 ### General Mathematics, Units 3 and 4 (`vic-mat-gen-u34`)
 
@@ -493,16 +493,16 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Biology, Units 3 and 4 (`vic-bio-u34`)
 
 - Enzymes in pathways (`vic-bio-u34-1-3`)
-  - `bio-enzymes-as-catalysts` Enzymes as catalysts: energy profile with and without enzyme
-  - `bio-factors-affecting-enzymes` Factors affecting enzymes: rate against temperature, pH and substrate
+  - `bio-enzymes-as-catalysts` Enzymes as catalysts: energy profile with and without enzyme Has one already.
+  - `bio-factors-affecting-enzymes` Factors affecting enzymes: rate against temperature, pH and substrate Has one already.
 - Photosynthesis (`vic-bio-u34-1-4`)
-  - `bio-factors-affecting-photosynthesis` Factors affecting photosynthesis: rate against light intensity, levelling off
+  - `bio-factors-affecting-photosynthesis` Factors affecting photosynthesis: rate against light intensity, levelling off Has one already.
 - Cellular respiration (`vic-bio-u34-1-5`)
-  - `bio-factors-affecting-respiration` Factors affecting respiration: rate against temperature and glucose
+  - `bio-factors-affecting-respiration` Factors affecting respiration: rate against temperature and glucose Has one already.
 - Adaptive immunity (`vic-bio-u34-2-2-2`)
-  - `bio-immune-memory` Immune memory: primary vs secondary antibody response over time
+  - `bio-immune-memory` Immune memory: primary vs secondary antibody response over time Has one already.
 - Change over geological time (`vic-bio-u34-2-3`)
-  - `bio-relative-absolute-dating` Relative and absolute dating: half-life decay curve
+  - `bio-relative-absolute-dating` Relative and absolute dating: half-life decay curve Has one already.
 
 ### Economics, Year 12: Australia's economy (`nsw-eco-12`)
 
@@ -528,23 +528,23 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Chemistry, Year 12 (`nsw-chem-12`)
 
 - Neutralisation and analysis (`nsw-chem-12-2-2`)
-  - `chem-titration-curves` Titration curves: pH against volume curve
+  - `chem-titration-curves` Titration curves: pH against volume curve Has one already.
 - Analysing inorganic substances (`nsw-chem-12-4-1`)
-  - `chem-colorimetry-uv-visible-spectroscopy` Colorimetry and UV-visible spectroscopy: calibration curve line
+  - `chem-colorimetry-uv-visible-spectroscopy` Colorimetry and UV-visible spectroscopy: calibration curve line Has one already.
 - Analysing organic substances (`nsw-chem-12-4-2`)
-  - `chem-mass-spectrometry` Mass spectrometry: mass spectrum peaks (needs: bar chart)
+  - `chem-mass-spectrometry` Mass spectrometry: mass spectrum peaks (needs: bar chart) Has one already.
   - `chem-infrared-spectroscopy` Infrared spectroscopy: IR spectrum, transmittance against wavenumber
 
 ### Physical Education, Units 3 and 4 (`vic-pe-u34`)
 
 - Biomechanics (`vic-pe-u34-1-2`)
-  - `pe-projectile-motion` Projectile motion: flight paths at different release angles
+  - `pe-projectile-motion` Projectile motion: flight paths at different release angles Has one already.
 - Producing energy (`vic-pe-u34-1-3`)
-  - `hms-energy-systems-working-together` Energy systems working together: energy system contribution curves vs time
+  - `hms-energy-systems-working-together` Energy systems working together: energy system contribution curves vs time Has one already.
 - Oxygen use, fatigue and fuel (`vic-pe-u34-1-4`)
-  - `pe-oxygen-deficit-steady-state` Oxygen uptake: oxygen uptake against time curve
+  - `pe-oxygen-deficit-steady-state` Oxygen uptake: oxygen uptake against time curve Has one already.
 - Chronic adaptations (`vic-pe-u34-2-3-2`)
-  - `pe-adaptations-improve` What adaptations improve: lactate against intensity curve, inflection point
+  - `pe-adaptations-improve` What adaptations improve: lactate against intensity curve, inflection point Has one already.
 
 ### Mathematics, Year 8 (`ac-mat-8`)
 
@@ -556,28 +556,28 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Biology, Year 12 (`nsw-bio-12`)
 
 - The immune system (`nsw-bio-12-3-2`)
-  - `bio-immune-memory` Immune memory: primary vs secondary antibody response over time
+  - `bio-immune-memory` Immune memory: primary vs secondary antibody response over time Has one already.
 - Homeostasis (`nsw-bio-12-4-1`)
-  - `bio-homeostasis-negative-feedback` Homeostasis and negative feedback: variable oscillating around a set point
-  - `bio-controlling-blood-glucose` Controlling blood glucose: blood glucose and insulin/glucagon over time
+  - `bio-homeostasis-negative-feedback` Homeostasis and negative feedback: variable oscillating around a set point Has one already.
+  - `bio-controlling-blood-glucose` Controlling blood glucose: blood glucose and insulin/glucagon over time Has one already.
 
 ### Chemistry, Year 11 (`nsw-chem-11`)
 
 - Solutions and gases (`nsw-chem-11-2-2`)
-  - `chem-gas-laws` Gas laws: P-V and V-T graphs
+  - `chem-gas-laws` Gas laws: P-V and V-T graphs Has one already.
 - Types of reactions (`nsw-chem-11-3-1`)
-  - `chem-activation-energy-catalysts` Activation energy and catalysts: energy profile with and without catalyst
+  - `chem-activation-energy-catalysts` Activation energy and catalysts: energy profile with and without catalyst Has one already.
 - Energy in reactions (`nsw-chem-11-4-1`)
-  - `chem-energy-profile-diagrams` Energy profile diagrams: energy profile with Ea and dH
+  - `chem-energy-profile-diagrams` Energy profile diagrams: energy profile with Ea and dH Has one already.
 
 ### Chemistry, Units 1 and 2 (`vic-chem-u12`)
 
 - Water (`vic-chem-u12-2-1`)
-  - `chem-water-s-unusual-properties` Water's unusual properties: boiling points of group 16 hydrides
+  - `chem-water-s-unusual-properties` Water's unusual properties: boiling points of group 16 hydrides Has one already.
 - Solutions and concentration (`vic-chem-u12-2-3`)
-  - `chem-water-as-solvent` Solubility: solubility curve
+  - `chem-water-as-solvent` Solubility: solubility curve Has one already.
 - Analysing salts (`vic-chem-u12-2-6`)
-  - `chem-colorimetry-uv-visible-spectroscopy` Colorimetry and UV-visible spectroscopy: calibration curve line
+  - `chem-colorimetry-uv-visible-spectroscopy` Colorimetry and UV-visible spectroscopy: calibration curve line Has one already.
 
 ### Foundation Mathematics, Units 1 and 2 (`vic-mat-fnd-u12`)
 
@@ -595,54 +595,54 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
 ### Science, Year 9 (`ac-sci-9`)
 
 - Heat and sound (`ac-sci-9-1-4`)
-  - `sci-parts-wave` Parts of a wave: wave with wavelength and amplitude
+  - `sci-parts-wave` Parts of a wave: wave with wavelength and amplitude Has one already.
 - Atoms and radioactivity (`ac-sci-9-1-6`)
-  - `sci-half-life-radiocarbon-dating` Half-life and radiocarbon dating: decay curve and half-lives
+  - `sci-half-life-radiocarbon-dating` Half-life and radiocarbon dating: decay curve and half-lives Has one already.
 
 ### Health and Movement Science, Year 11 (`nsw-hms-11`)
 
 - Energy for movement (`nsw-hms-11-2-2`)
-  - `hms-energy-systems-working-together` Energy systems working together: energy system contribution curves vs time
+  - `hms-energy-systems-working-together` Energy systems working together: energy system contribution curves vs time Has one already.
 - Biomechanics and skill (`nsw-hms-11-2-3`)
-  - `hms-motivation-arousal` Motivation and arousal: inverted-U arousal vs performance
+  - `hms-motivation-arousal` Motivation and arousal: inverted-U arousal vs performance Has one already.
 
 ### Biology, Units 1 and 2 (`vic-bio-u12`)
 
 - Homeostasis (`vic-bio-u12-1-4`)
-  - `bio-homeostasis-negative-feedback` Homeostasis and negative feedback: variable oscillating around a set point
-  - `bio-regulating-blood-glucose` Regulating blood glucose: blood glucose after a meal, with and without insulin
+  - `bio-homeostasis-negative-feedback` Homeostasis and negative feedback: variable oscillating around a set point Has one already.
+  - `bio-regulating-blood-glucose` Regulating blood glucose: blood glucose after a meal, with and without insulin Has one already.
 
 ### Psychology, Units 3 and 4 (`vic-psy-u34`)
 
 - Stress (`vic-psy-u34-1-2`)
-  - `psy-general-adaptation-syndrome` General adaptation syndrome: GAS resistance level against time curve
+  - `psy-general-adaptation-syndrome` General adaptation syndrome: GAS resistance level against time curve Has one already.
 - The demand for sleep (`vic-psy-u34-2-1`)
-  - `psy-sleep-across-lifespan` Sleep across the lifespan: sleep hours and REM share against age
+  - `psy-sleep-across-lifespan` Sleep across the lifespan: sleep hours and REM share against age Has one already.
 
 ### Geography, Year 10 (`ac-geo-10`)
 
 - Evidence and decisions (`ac-geo-10-1-1`)
-  - `geo-scatter-graphs-correlation` Scatter graphs and correlation: scatter plots showing positive, negative, no correlation
+  - `geo-scatter-graphs-correlation` Scatter graphs and correlation: scatter plots showing positive, negative, no correlation Has one already.
 
 ### Geography, Year 8 (`ac-geo-8`)
 
 - Reading the land and its people (`ac-geo-8-1-1`)
-  - `geo-drawing-cross-section` Drawing a cross-section: cross-section: height against distance
+  - `geo-drawing-cross-section` Drawing a cross-section: cross-section: height against distance Has one already.
 
 ### Geography, Year 9 (`ac-geo-9`)
 
 - Graphs and maps for patterns (`ac-geo-9-1-1`)
-  - `geo-reading-climate-graph` Reading a climate graph: climate graph: rainfall columns with temperature line (needs: bar chart)
+  - `geo-reading-climate-graph` Reading a climate graph: climate graph: rainfall columns with temperature line (needs: bar chart) Has one already.
 
 ### Science, Year 7 (`ac-sci-7`)
 
 - Investigating like a scientist (`ac-sci-7-2-2`)
-  - `sci-patterns-trends-anomalies` Patterns, trends and anomalies: line graph of 5 daily heights with anomaly
+  - `sci-patterns-trends-anomalies` Patterns, trends and anomalies: line graph of 5 daily heights with anomaly Has one already.
 
 ### Geography, Year 11 (`nsw-geo-11`)
 
 - Population (`nsw-geo-11-2-1`)
-  - `geo-demographic-transition-model` The demographic transition model: birth and death rate curves across stages 1-4
+  - `geo-demographic-transition-model` The demographic transition model: birth and death rate curves across stages 1-4 Has one already.
 
 ### Business Management, Units 1 and 2 (`vic-bus-u12`)
 

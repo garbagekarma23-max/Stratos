@@ -608,6 +608,28 @@ MADE_BANKS.chem = {
       ],
       "Always convert temperature to kelvin first: K = °C + 273.15. Celsius cannot be used, because 0°C is not absolute zero."
     ],
+    "cardFigs": {
+      "1": {
+        "kind": "graph",
+        "alt": "Boyle's law: pressure against volume for a fixed amount of gas at constant temperature. The curve falls as the volume rises, because pressure is inversely proportional to volume. Halving the volume from 4 L to 2 L doubles the pressure from 100 kPa to 200 kPa.",
+        "x": {"min": 0, "max": 11, "label": "Volume (L)", "step": 2},
+        "y": {"min": 0, "max": 250, "label": "Pressure (kPa)", "step": 50},
+        "items": [
+          {"type": "fn", "id": "p", "expr": "\\frac{400}{x}", "domain": [1.7, 10.5]},
+          {"type": "guide", "at": [2, 200], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [2, 200], "on": ["p"]},
+          {"type": "guide", "at": [4, 100], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [4, 100], "on": ["p"]}
+        ]
+      },
+      "2": {
+        "kind": "graph",
+        "alt": "Charles's law: volume against temperature in kelvin for a fixed amount of gas at constant pressure. The graph is a straight line through the origin, so volume is directly proportional to the kelvin temperature. The line meets zero volume at 0 K, absolute zero.",
+        "x": {"min": 0, "max": 450, "label": "Temperature (K)", "step": 100},
+        "y": {"min": 0, "max": 30, "label": "Volume (L)", "step": 5},
+        "items": [{"type": "fn", "id": "v", "expr": "0.06x", "domain": [0, 420]}]
+      }
+    },
     "remember": "Each law keeps the amount of gas and one other quantity constant. Temperature must be in kelvin.",
     "a": {
       "q": "A sealed syringe of air is pushed in at constant temperature, halving its volume. What happens to the gas pressure?",
@@ -820,6 +842,38 @@ MADE_BANKS.chem = {
       ],
       "A catalyst is not used up in the reaction. It can be recovered at the end, and it does not change the products that form."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Energy profiles for the same reaction without a catalyst (dashed) and with a catalyst (solid). Both start at the same reactants' level and end at the same products' level, but the catalysed path has a lower peak, so it has a lower activation energy. An arrow points down from the higher peak to the lower one.",
+        "x": {"min": 0, "max": 12, "label": "Progress of reaction"},
+        "y": {"min": 0, "max": 11.5, "label": "Energy"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "n",
+            "points": [[0, 4], [3, 4], [6, 9], [9, 2], [12, 2]],
+            "smooth": true,
+            "label": "no catalyst",
+            "style": "dash",
+            "labelAt": 6,
+            "pos": "above"
+          },
+          {
+            "type": "curve",
+            "id": "c",
+            "points": [[0, 4], [3, 4], [6, 6.2], [9, 2], [12, 2]],
+            "smooth": true,
+            "label": "with catalyst",
+            "labelAt": 7.8,
+            "pos": "below-left"
+          },
+          {"type": "arrow", "from": [6, 8.7], "to": [6, 6.5]},
+          {"type": "text", "at": [1.5, 4], "label": "reactants", "pos": "below"},
+          {"type": "text", "at": [10.5, 2], "label": "products", "pos": "below"}
+        ]
+      }
+    },
     "remember": "A catalyst lowers the activation energy, so more collisions succeed, and it is not used up.",
     "a": {
       "q": "How does a catalyst make a reaction faster?",
@@ -1065,6 +1119,24 @@ MADE_BANKS.chem = {
       ],
       "If the products sit lower than the reactants, ΔH is negative. If the products sit higher, ΔH is positive."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "An energy profile diagram: energy against the progress of the reaction. The reactants' level is at the start and the products' level, lower, is at the end, with a peak between them. The activation energy is the height from the reactants' level up to the top of the peak. ΔH is measured from the reactants' level down to the products' level, so here it is negative.",
+        "x": {"min": 0, "max": 12, "label": "Progress of reaction"},
+        "y": {"min": 0, "max": 11.5, "label": "Energy"},
+        "items": [
+          {"type": "curve", "id": "e", "points": [[0, 4], [3, 4], [6, 9], [9, 2], [12, 2]], "smooth": true},
+          {"type": "guide", "at": [6, 9], "yLabel": ""},
+          {"type": "guide", "at": [12, 4], "yLabel": ""},
+          {"type": "arrow", "from": [1, 4], "to": [1, 9]},
+          {"type": "text", "at": [2.6, 9], "label": "activation energy", "pos": "above"},
+          {"type": "arrow", "from": [11, 4], "to": [11, 2], "label": "ΔH", "pos": "left"},
+          {"type": "text", "at": [1.6, 4], "label": "reactants", "pos": "below"},
+          {"type": "text", "at": [10.3, 2], "label": "products", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Activation energy is reactants up to the peak. ΔH is reactants to products.",
     "a": {
       "q": "On an energy profile diagram, what does the height from the reactants' level to the top of the peak show?",
@@ -1821,6 +1893,41 @@ MADE_BANKS.chem = {
       "For a strong acid and a strong base, the equivalence point is at pH 7 at 25°C. For a weak acid titrated with a strong base, it is above 7, because the conjugate base of the weak acid makes the solution basic.",
       "A weak acid curve also has a flatter buffer region before the steep section. Here the flask holds both the weak acid and its conjugate base, so the pH changes only slowly as base is added."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A titration curve for a weak acid titrated with a strong base: pH against the volume of base added. The pH starts near 3, rises slowly through a flatter buffer region, then rises steeply near 25 mL. The equivalence point is the middle of this steep section, at about pH 8.7, above 7. After it, the curve levels off near pH 12.5.",
+        "x": {"min": 0, "max": 50, "label": "Base added (mL)", "step": 10},
+        "y": {"min": 0, "max": 14, "label": "pH", "step": 2},
+        "items": [
+          {
+            "type": "curve",
+            "id": "t",
+            "points": [
+              [0, 2.88],
+              [2, 3.7],
+              [5, 4.16],
+              [10, 4.58],
+              [12.5, 4.76],
+              [15, 4.94],
+              [20, 5.36],
+              [23, 5.82],
+              [24, 6.14],
+              [24.8, 6.85],
+              [25, 8.72],
+              [25.2, 10.6],
+              [26, 11.29],
+              [30, 11.96],
+              [40, 12.36],
+              [50, 12.52]
+            ],
+            "smooth": true
+          },
+          {"type": "point", "at": [25, 8.72], "on": ["t"], "label": "equivalence point", "pos": "right"},
+          {"type": "text", "at": [12.5, 4.6], "label": "buffer region", "pos": "below-right"}
+        ]
+      }
+    },
     "remember": "The equivalence point is the middle of the steep rise. A weak acid curve also has a flat buffer region before it.",
     "a": {
       "q": "On a titration curve, which part shows the equivalence point?",
@@ -2497,6 +2604,24 @@ MADE_BANKS.chem = {
       "Measure the absorbance of several standards, which are solutions of known concentration. Plot absorbance against concentration to make a calibration curve, then read the unknown's concentration from its absorbance.",
       "The curve is only reliable within the range of the standards. If the unknown's absorbance is too high, dilute it, remeasure, then multiply by the dilution factor."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A calibration curve: absorbance against concentration for five standards, which lie on a straight line through the origin. An unknown with an absorbance of 0.40 is read across to the line and down, giving a concentration of 0.05 mol/L, inside the range of the standards.",
+        "x": {"min": 0, "max": 0.14, "label": "Concentration (mol/L)", "step": 0.02, "nums": false},
+        "y": {"min": 0, "max": 1, "label": "Absorbance", "step": 0.2, "nums": false},
+        "items": [
+          {"type": "fn", "id": "c", "expr": "8x", "domain": [0, 0.11000000000000001]},
+          {"type": "point", "at": [0.02, 0.16], "on": ["c"]},
+          {"type": "point", "at": [0.04, 0.32], "on": ["c"]},
+          {"type": "point", "at": [0.06, 0.48], "on": ["c"]},
+          {"type": "point", "at": [0.08, 0.64], "on": ["c"]},
+          {"type": "point", "at": [0.1, 0.8], "on": ["c"]},
+          {"type": "guide", "at": [0.05, 0.4], "xLabel": "0.05", "yLabel": "0.40"},
+          {"type": "point", "at": [0.05, 0.4], "on": ["c"], "open": true, "label": "unknown", "pos": "above-left"}
+        ]
+      }
+    },
     "remember": "Standards of known concentration give a curve that turns a measured absorbance into a concentration.",
     "a": {
       "q": "Why is a calibration curve needed to find the concentration of a copper(II) sulfate solution by colorimetry?",
@@ -2564,6 +2689,44 @@ MADE_BANKS.chem = {
       "The peak with the highest m/z is usually the molecular ion. Its m/z value equals the molar mass of the molecule, in g/mol.",
       "The gaps between peaks show which pieces were lost. A loss of 15 fits a CH3 group, and a loss of 29 fits a C2H5 group. The pattern of fragments gives clues to the structure."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A mass spectrum: relative abundance against mass-to-charge ratio, with each peak a thin bar. The peak with the highest m/z, at 46, is the molecular ion, so the molar mass is 46 g/mol. The tallest peak is at 31, which is 46 minus 15: the loss of a CH3 group. Smaller peaks are at 15, 27, 29 and 45.",
+        "x": {"min": 0, "max": 70, "label": "m/z", "step": 10},
+        "y": {"min": 0, "max": 135, "label": "Abundance (%)", "step": 20},
+        "items": [
+          {
+            "type": "curve",
+            "id": "s",
+            "points": [
+              [0, 0],
+              [15, 0],
+              [15, 6],
+              [15, 0],
+              [27, 0],
+              [27, 22],
+              [27, 0],
+              [29, 0],
+              [29, 23],
+              [29, 0],
+              [31, 0],
+              [31, 100],
+              [31, 0],
+              [45, 0],
+              [45, 51],
+              [45, 0],
+              [46, 0],
+              [46, 17],
+              [46, 0],
+              [70, 0]
+            ]
+          },
+          {"type": "text", "at": [47, 17], "label": "molecular ion", "pos": "right"},
+          {"type": "arrow", "from": [46, 110], "to": [31.6, 110], "label": "loss of 15, CH3", "pos": "above"}
+        ]
+      }
+    },
     "remember": "The molecular ion peak gives the molar mass. The fragment peaks give clues to the structure.",
     "a": {
       "q": "A compound has a mass spectrum with its highest m/z peak at 72. What does this peak most likely show?",
@@ -2951,6 +3114,16 @@ MADE_BANKS.chem = {
       "In liquid water, hydrogen bonds keep forming and breaking as the molecules move past each other and sit close together.",
       "In ice, each molecule is held by hydrogen bonds in a fixed, open lattice with gaps in it. This spaces the molecules further apart than in the liquid, so ice is less dense than liquid water and floats."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "A bar chart of the boiling points of the Group 16 hydrides, in kelvin: H2O 373 K, H2S 213 K, H2Se 232 K and H2Te 271 K. From H2S to H2Te the boiling point rises as the molecules get larger, but water's boiling point is far higher than all of them.",
+        "x": {"label": "Hydride"},
+        "y": {"min": 0, "max": 400, "step": 100, "label": "Boiling point (K)"},
+        "bars": [["H2O", 373], ["H2S", 213], ["H2Se", 232], ["H2Te", 271]]
+      }
+    },
     "remember": "Hydrogen bonding lifts water's boiling point and gives ice an open structure, so ice floats.",
     "a": {
       "q": "Why does water boil at a higher temperature than H2S, even though H2S molecules are larger?",
@@ -3177,6 +3350,24 @@ MADE_BANKS.chem = {
       "For most solids, solubility rises as temperature rises, so the curve slopes up. If a saturated solution is cooled, the extra solute comes out as crystals.",
       "For gases, solubility falls as temperature rises, so the curve slopes down. A warm drink holds less dissolved carbon dioxide than a cold one."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A solubility curve for a solid in water: solubility, in grams per 100 g of water, against temperature. The curve rises, so the solid dissolves better when hot. A point on the curve, at 30 °C and 46 g, is a saturated solution. A point below the curve, at 60 °C and 50 g, is unsaturated: more solid can still dissolve.",
+        "x": {"min": 0, "max": 80, "label": "Temperature (°C)", "step": 20},
+        "y": {"min": 0, "max": 150, "label": "Solubility (g/100 g)", "step": 50},
+        "items": [
+          {
+            "type": "curve",
+            "id": "s",
+            "points": [[0, 13], [10, 21], [20, 32], [30, 46], [40, 64], [50, 85], [60, 110], [70, 138]],
+            "smooth": true
+          },
+          {"type": "point", "at": [30, 46], "on": ["s"], "label": "saturated", "pos": "above-left"},
+          {"type": "point", "at": [60, 50], "label": "unsaturated", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Solids usually dissolve better when hot. Gases dissolve better when cold.",
     "a": {
       "q": "A solubility curve shows a solid dissolving at 40 g per 100 g of water at 50 °C. A solution at 50 °C holds 25 g in 100 g of water. How is it best described?",
@@ -5119,6 +5310,38 @@ MADE_BANKS.chem = {
       "Energy change = calibration factor × temperature change. A rise in temperature means the reaction is exothermic, and a fall means it is endothermic.",
       "Even with insulation, some heat moves between the mixture and the surroundings. A warm mixture loses heat and a cold one gains it. Extending the temperature-time graph lines back to the time of mixing gives the temperature change with no heat exchange."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A temperature-time graph for a reaction in a calorimeter. The temperature is steady at 20 °C until the solutions are mixed at 2 minutes. It rises quickly, peaks, then falls slowly in a straight line as the warm mixture loses heat. Extending that line back to the time of mixing gives 27 °C, so the temperature change with no heat exchange is 7 °C, more than the highest reading shows.",
+        "x": {"min": 0, "max": 12.0, "label": "Time (min)", "step": 4},
+        "y": {"min": 17, "max": 30, "label": "Temperature (°C)"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "t",
+            "points": [[0, 20], [2, 20], [2.5, 24.6], [3, 26.0], [3.5, 26.4], [6, 25.4], [8, 24.6]],
+            "smooth": true,
+            "label": "readings",
+            "labelAt": 5,
+            "pos": "above-right"
+          },
+          {
+            "type": "fn",
+            "id": "e",
+            "expr": "27 - 0.4(x - 2)",
+            "domain": [2, 3.5],
+            "label": "extended",
+            "style": "dash",
+            "labelAt": 2.45,
+            "pos": "above-right"
+          },
+          {"type": "guide", "at": [2, 20], "yLabel": "20"},
+          {"type": "guide", "at": [2, 27], "yLabel": "27"},
+          {"type": "arrow", "from": [1.1, 20.3], "to": [1.1, 26.7], "label": "ΔT", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Energy = calibration factor × temperature change. Extrapolating the graph corrects for heat exchange with the surroundings.",
     "a": {
       "q": "A calorimeter has a calibration factor of 450 J °C⁻¹. A reaction in it raises the temperature by 3.0 °C. How much energy was released?",
@@ -5455,6 +5678,38 @@ MADE_BANKS.chem = {
       "The activation energy is marked as a line on the energy axis, and temperature does not move it. Only particles to the right of that line have enough energy to react in a collision.",
       "At a higher temperature the curve flattens and shifts right, with a lower peak. The area stays the same, but more particles lie past the activation energy."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Maxwell-Boltzmann distributions: number of particles against energy, at a lower temperature (dashed) and a higher temperature (solid). At the higher temperature the curve is flatter, with a lower peak further right, and the same area under it. The activation energy is a line on the energy axis that does not move. The shaded area past it, under the higher temperature curve, is larger than under the lower one, so more particles have enough energy to react.",
+        "x": {"min": 0, "max": 6, "label": "Energy"},
+        "y": {"min": 0, "max": 6, "label": "Number of particles"},
+        "items": [
+          {"type": "shade", "under": "h", "span": [3, 6]},
+          {
+            "type": "fn",
+            "id": "l",
+            "expr": "11.28\\sqrt{x}e^{-x}",
+            "domain": [0, 6],
+            "label": "lower temperature",
+            "style": "dash",
+            "labelAt": 0.9,
+            "pos": "above-right"
+          },
+          {
+            "type": "fn",
+            "id": "h",
+            "expr": "6.14\\sqrt{x}e^{-\\frac{x}{1.5}}",
+            "domain": [0, 6],
+            "label": "higher temperature",
+            "labelAt": 2.4,
+            "pos": "above-right"
+          },
+          {"type": "guide", "at": [3, 4.2], "xLabel": "activation energy"},
+          {"type": "arrow", "from": [0.6, 5.1], "to": [1.0, 3.6]}
+        ]
+      }
+    },
     "remember": "Higher temperature moves the curve right, so more particles pass the activation energy.",
     "a": {
       "q": "On a Maxwell-Boltzmann graph, which particles have enough energy to react?",
@@ -5488,6 +5743,38 @@ MADE_BANKS.chem = {
       "The catalyst takes part in the reaction but is regenerated by the end. It is the same amount and chemical form afterwards, so a small amount can be used again and again.",
       "A catalyst does not change the energy of the reactants or products, so it does not change the overall energy released or absorbed."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Energy profiles for the same reaction without a catalyst (dashed) and with a catalyst (solid). Here the products sit higher than the reactants. Both paths start and end at the same levels, so the overall energy change is the same, but the catalysed path has a lower peak: a lower activation energy. An arrow points down from the higher peak to the lower one.",
+        "x": {"min": 0, "max": 12, "label": "Progress of reaction"},
+        "y": {"min": 0, "max": 11.5, "label": "Energy"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "n",
+            "points": [[0, 2], [3, 2], [6, 9.5], [9, 5], [12, 5]],
+            "smooth": true,
+            "label": "no catalyst",
+            "style": "dash",
+            "labelAt": 6,
+            "pos": "above"
+          },
+          {
+            "type": "curve",
+            "id": "c",
+            "points": [[0, 2], [3, 2], [6, 7], [9, 5], [12, 5]],
+            "smooth": true,
+            "label": "with catalyst",
+            "labelAt": 4.5,
+            "pos": "below-right"
+          },
+          {"type": "arrow", "from": [6, 9.2], "to": [6, 7.3]},
+          {"type": "text", "at": [1.5, 2], "label": "reactants", "pos": "below"},
+          {"type": "text", "at": [10.5, 5], "label": "products", "pos": "below"}
+        ]
+      }
+    },
     "remember": "A catalyst lowers activation energy by a new path and is not used up.",
     "a": {
       "q": "What change inside a reaction explains why adding a catalyst increases the rate?",
@@ -5560,6 +5847,19 @@ MADE_BANKS.chem = {
       "Because the two rates are equal, each substance is made as fast as it is used up. Its amount and concentration stay constant, though they need not be equal to each other.",
       "The equilibrium is dynamic, as particles keep reacting in both directions. It looks still on the large scale only. If the reaction had truly stopped, no particles would be reacting."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Concentration against time for a reversible reaction in a closed system. The reactant's concentration falls and the product's rises, quickly at first, then more slowly. Once equilibrium is reached both level off and stay constant, at different concentrations, because the forward and reverse reactions go at equal rates.",
+        "x": {"min": 0, "max": 7, "label": "Time"},
+        "y": {"min": 0, "max": 1.15, "label": "Concentration"},
+        "items": [
+          {"type": "fn", "id": "a", "expr": "0.4 + 0.6e^{-x}", "domain": [0, 7], "label": "reactant"},
+          {"type": "fn", "id": "b", "expr": "0.6 - 0.6e^{-x}", "domain": [0, 7], "label": "product"},
+          {"type": "text", "at": [4.0, 0.44], "label": "equilibrium", "pos": "above"}
+        ]
+      }
+    },
     "remember": "At equilibrium, reactions keep going both ways at equal rates, so amounts stay constant.",
     "a": {
       "q": "What is the best reason the concentrations stay constant at equilibrium in a closed system?",
@@ -6464,6 +6764,24 @@ MADE_BANKS.chem = {
       "A peak that matches a known standard's retention time is likely that compound. It is not proof, because different compounds can share a retention time.",
       "Peak area grows with the amount of a component. Run standards of known concentration and plot peak area against concentration to make a calibration curve. Then read the unknown's concentration at its peak area."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A calibration curve for HPLC: peak area against concentration for five standards, which lie on a straight line through the origin. An unknown's peak area is read across to the line and down, giving a concentration of about 26 mg/L, between two standards.",
+        "x": {"min": 0, "max": 70, "label": "Concentration (mg/L)", "step": 10, "nums": false},
+        "y": {"min": 0, "max": 140, "label": "Peak area", "step": 20, "nums": false},
+        "items": [
+          {"type": "fn", "id": "c", "expr": "2.4x", "domain": [0, 55.00000000000001]},
+          {"type": "point", "at": [10, 24.0], "on": ["c"]},
+          {"type": "point", "at": [20, 48.0], "on": ["c"]},
+          {"type": "point", "at": [30, 72.0], "on": ["c"]},
+          {"type": "point", "at": [40, 96.0], "on": ["c"]},
+          {"type": "point", "at": [50, 120.0], "on": ["c"]},
+          {"type": "guide", "at": [26, 62.4], "xLabel": "26", "yLabel": ""},
+          {"type": "point", "at": [26, 62.4], "on": ["c"], "open": true, "label": "unknown", "pos": "above-left"}
+        ]
+      }
+    },
     "remember": "Retention time suggests what a component is. Peak area, read off a calibration curve, shows how much.",
     "a": {
       "q": "An HPLC run of a soft drink shows a peak at the same retention time as a caffeine standard. What can you conclude?",
