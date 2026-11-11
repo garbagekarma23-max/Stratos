@@ -22,7 +22,10 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other)",
   "2026-11-02T04:50:13Z write: done",
-  "2026-11-02T04:56:45Z check: passed, cleared"
+  "2026-11-02T04:56:45Z check: passed, cleared",
+  "2026-11-11T11:43:57Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:33Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:42Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -274,6 +277,105 @@
    "Energy change = calibration factor × temperature change. A rise in temperature means the reaction is exothermic, and a fall means it is endothermic.",
    "Even with insulation, some heat moves between the mixture and the surroundings. A warm mixture loses heat and a cold one gains it. Extending the temperature-time graph lines back to the time of mixing gives the temperature change with no heat exchange."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A temperature-time graph for a reaction in a calorimeter. The temperature is steady at 20 °C until the solutions are mixed at 2 minutes. It rises quickly, peaks, then falls slowly in a straight line as the warm mixture loses heat. Extending that line back to the time of mixing gives 27 °C, so the temperature change with no heat exchange is 7 °C, more than the highest reading shows.",
+    "x": {
+     "min": 0,
+     "max": 12.0,
+     "label": "Time (min)",
+     "step": 4
+    },
+    "y": {
+     "min": 17,
+     "max": 30,
+     "label": "Temperature (°C)"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "t",
+      "points": [
+       [
+        0,
+        20
+       ],
+       [
+        2,
+        20
+       ],
+       [
+        2.5,
+        24.6
+       ],
+       [
+        3,
+        26.0
+       ],
+       [
+        3.5,
+        26.4
+       ],
+       [
+        6,
+        25.4
+       ],
+       [
+        8,
+        24.6
+       ]
+      ],
+      "smooth": true,
+      "label": "readings",
+      "labelAt": 5,
+      "pos": "above-right"
+     },
+     {
+      "type": "fn",
+      "id": "e",
+      "expr": "27 - 0.4(x - 2)",
+      "domain": [
+       2,
+       3.5
+      ],
+      "label": "extended",
+      "style": "dash",
+      "labelAt": 2.45,
+      "pos": "above-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       20
+      ],
+      "yLabel": "20"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       27
+      ],
+      "yLabel": "27"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1.1,
+       20.3
+      ],
+      "to": [
+       1.1,
+       26.7
+      ],
+      "label": "ΔT",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Energy = calibration factor × temperature change. Extrapolating the graph corrects for heat exchange with the surroundings.",
   "a": {
    "q": "A calorimeter has a calibration factor of 450 J °C⁻¹. A reaction in it raises the temperature by 3.0 °C. How much energy was released?",
@@ -298,5 +400,129 @@
    "why": "While the reaction happens, heat moves between the mixture and the room, so the recorded temperature change is smaller than the true one. Extending the lines gives the change if no heat had been exchanged. The calibration factor is found separately, using a known amount of electrical energy.",
    "clue": "Ask what the thermometer reading at the moment of mixing would be if the insulation were perfect."
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A temperature-time graph for a reaction in a calorimeter: steady at 20 °C, mixing at 2 min, a quick rise, then a slow straight fall as heat is lost; the falling line extended back to the time of mixing reaches 27 °C, so the temperature change with no heat exchange is 7 °C.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A temperature-time graph for a reaction in a calorimeter. The temperature is steady at 20 °C until the solutions are mixed at 2 minutes. It rises quickly, peaks, then falls slowly in a straight line as the warm mixture loses heat. Extending that line back to the time of mixing gives 27 °C, so the temperature change with no heat exchange is 7 °C, more than the highest reading shows.",
+     "x": {
+      "min": 0,
+      "max": 12.0,
+      "label": "Time (min)",
+      "step": 4
+     },
+     "y": {
+      "min": 17,
+      "max": 30,
+      "label": "Temperature (°C)"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "t",
+       "points": [
+        [
+         0,
+         20
+        ],
+        [
+         2,
+         20
+        ],
+        [
+         2.5,
+         24.6
+        ],
+        [
+         3,
+         26.0
+        ],
+        [
+         3.5,
+         26.4
+        ],
+        [
+         6,
+         25.4
+        ],
+        [
+         8,
+         24.6
+        ]
+       ],
+       "smooth": true,
+       "label": "readings",
+       "labelAt": 5,
+       "pos": "above-right"
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "27 - 0.4(x - 2)",
+       "domain": [
+        2,
+        3.5
+       ],
+       "label": "extended",
+       "style": "dash",
+       "labelAt": 2.45,
+       "pos": "above-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        20
+       ],
+       "yLabel": "20"
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        27
+       ],
+       "yLabel": "27"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1.1,
+        20.3
+       ],
+       "to": [
+        1.1,
+        26.7
+       ],
+       "label": "ΔT",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:33Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:41Z"
+  }
+ ]
 }

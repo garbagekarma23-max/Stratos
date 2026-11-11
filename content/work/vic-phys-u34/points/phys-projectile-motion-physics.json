@@ -29,7 +29,10 @@
   "2026-11-01T15:14:48Z check: flagged",
   "2026-11-01T15:19:05Z fix: suggested",
   "2026-11-02T04:35:43Z autoreview: picked as a spot check. It would have been cleared with the fix (b other, card wording, b wording)",
-  "2026-11-02T06:24:54Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:24:54Z review: approved with the fix (a spot check)",
+  "2026-11-11T11:43:54Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:38Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:48Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -224,6 +227,74 @@
    ],
    "Air resistance is a force that opposes the motion. It slows the object, so the real path is shorter than the path with no air resistance."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Two paths of the same launch. With no air resistance the path is a parabola, the same shape going up and coming down. With air resistance the path is lower, falls more steeply at the end, and lands much shorter.",
+    "x": {
+     "min": 0,
+     "max": 42,
+     "label": "Horizontal distance"
+    },
+    "y": {
+     "min": 0,
+     "max": 13.5,
+     "label": "Height"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "x - \\frac{x^{2}}{40}",
+      "domain": [
+       0,
+       40
+      ],
+      "label": "no air resistance",
+      "labelAt": 20,
+      "pos": "above"
+     },
+     {
+      "type": "curve",
+      "id": "a",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        6,
+        4.6
+       ],
+       [
+        12,
+        7.0
+       ],
+       [
+        17,
+        7.6
+       ],
+       [
+        21,
+        6.6
+       ],
+       [
+        25,
+        3.6
+       ],
+       [
+        27.5,
+        0
+       ]
+      ],
+      "smooth": true,
+      "label": "with air resistance",
+      "labelAt": 26.125,
+      "pos": "left"
+     }
+    ]
+   }
+  },
   "remember": "With no air resistance, horizontal velocity stays steady, vertical velocity changes steadily, and the two share only the time.",
   "a": {
    "q": "A ball is kicked off a cliff in a horizontal direction. Ignoring air resistance, what is true of its horizontal velocity as it falls?",
@@ -249,5 +320,98 @@
    "clue": "Compare how each stone starts moving up or down."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Two paths of the same launch: with no air resistance a symmetrical parabola, and with air resistance a lower path that falls more steeply at the end and lands much shorter.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Two paths of the same launch. With no air resistance the path is a parabola, the same shape going up and coming down. With air resistance the path is lower, falls more steeply at the end, and lands much shorter.",
+     "x": {
+      "min": 0,
+      "max": 42,
+      "label": "Horizontal distance"
+     },
+     "y": {
+      "min": 0,
+      "max": 13.5,
+      "label": "Height"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "x - \\frac{x^{2}}{40}",
+       "domain": [
+        0,
+        40
+       ],
+       "label": "no air resistance",
+       "labelAt": 20,
+       "pos": "above"
+      },
+      {
+       "type": "curve",
+       "id": "a",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         6,
+         4.6
+        ],
+        [
+         12,
+         7.0
+        ],
+        [
+         17,
+         7.6
+        ],
+        [
+         21,
+         6.6
+        ],
+        [
+         25,
+         3.6
+        ],
+        [
+         27.5,
+         0
+        ]
+       ],
+       "smooth": true,
+       "label": "with air resistance",
+       "labelAt": 26.125,
+       "pos": "left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:38Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:48Z"
+  }
+ ]
 }

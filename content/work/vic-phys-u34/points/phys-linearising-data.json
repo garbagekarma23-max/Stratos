@@ -9,7 +9,11 @@
   "2026-11-01T14:46:42Z write: done",
   "2026-11-01T14:56:06Z check: flagged",
   "2026-11-01T15:05:31Z fix: suggested",
-  "2026-11-02T04:35:43Z autoreview: cleared with the fix (a other)"
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (a other)",
+  "2026-11-11T11:43:55Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:43:55Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:40Z pictures: 2 pictures waiting for the check",
+  "2026-11-11T12:01:51Z pictures: 2 pictures kept"
  ],
  "sent": {
   "write": 1,
@@ -139,6 +143,162 @@
    "A straight line through the origin means the plotted quantities are directly proportional. A curve on the first graph shows the relationship is not linear.",
    "The gradient of the line has a physical meaning. For T² against L, gradient = 4π²/g, so g = 4π² ÷ gradient. The gradient has units too: the units of the y-axis divided by the units of the x-axis."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The period T of a pendulum against its length L for five lengths from 0.2 m to 1.0 m. The points lie on a curve that rises less and less steeply, so T is not proportional to L.",
+    "x": {
+     "min": 0,
+     "max": 1.25,
+     "label": "L (m)",
+     "step": 0.2
+    },
+    "y": {
+     "min": 0,
+     "max": 2.5,
+     "label": "T (s)",
+     "step": 0.5
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "t",
+      "expr": "2.007\\sqrt{x}",
+      "domain": [
+       0,
+       1.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.2,
+       0.898
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.4,
+       1.269
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.6,
+       1.555
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.8,
+       1.795
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.0,
+       2.007
+      ],
+      "on": [
+       "t"
+      ]
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "The square of the period, T squared, against length L for the same five lengths. The points lie on a straight line through the origin, so T squared is directly proportional to L. Its gradient is about 4.0 s squared per metre.",
+    "x": {
+     "min": 0,
+     "max": 1.2,
+     "label": "L (m)",
+     "step": 0.2
+    },
+    "y": {
+     "min": 0,
+     "max": 5,
+     "label": "T² (s²)",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "t",
+      "expr": "4.028x",
+      "domain": [
+       0,
+       1.1
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.2,
+       0.806
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.4,
+       1.611
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.6,
+       2.417
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.8,
+       3.222
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.0,
+       4.028
+      ],
+      "on": [
+       "t"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Plot the transformed quantity so the points form a straight line, then read the physics from the gradient.",
   "a": {
    "q": "Students plot T² (s²) against L (m) for a pendulum and get a straight line through the origin. What does the gradient allow them to find?",
@@ -164,5 +324,211 @@
    "clue": "Which transformed quantity is proportional to L?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Two graphs for a pendulum. T against L: a curve that rises less and less steeply. T squared against L: a straight line through the origin with the same five points on it.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The period T of a pendulum against its length L for five lengths from 0.2 m to 1.0 m. The points lie on a curve that rises less and less steeply, so T is not proportional to L.",
+     "x": {
+      "min": 0,
+      "max": 1.25,
+      "label": "L (m)",
+      "step": 0.2
+     },
+     "y": {
+      "min": 0,
+      "max": 2.5,
+      "label": "T (s)",
+      "step": 0.5
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "2.007\\sqrt{x}",
+       "domain": [
+        0,
+        1.1
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.2,
+        0.898
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.4,
+        1.269
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.6,
+        1.555
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.8,
+        1.795
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1.0,
+        2.007
+       ],
+       "on": [
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:40Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:50Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "T squared against L for the same pendulum: a straight line through the origin with the five points on it.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The square of the period, T squared, against length L for the same five lengths. The points lie on a straight line through the origin, so T squared is directly proportional to L. Its gradient is about 4.0 s squared per metre.",
+     "x": {
+      "min": 0,
+      "max": 1.2,
+      "label": "L (m)",
+      "step": 0.2
+     },
+     "y": {
+      "min": 0,
+      "max": 5,
+      "label": "T² (s²)",
+      "step": 1
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "4.028x",
+       "domain": [
+        0,
+        1.1
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.2,
+        0.806
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.4,
+        1.611
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.6,
+        2.417
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.8,
+        3.222
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1.0,
+        4.028
+       ],
+       "on": [
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:40Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:50Z"
+  }
+ ]
 }

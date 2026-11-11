@@ -8,7 +8,10 @@
   "2026-11-01T07:54:21Z new, write",
   "2026-11-01T08:04:36Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:10Z write: done",
-  "2026-11-01T08:24:35Z check: passed, cleared"
+  "2026-11-01T08:24:35Z check: passed, cleared",
+  "2026-11-11T11:43:53Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:37Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:46Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -89,6 +92,70 @@
     "a device whose resistance changes as the voltage changes, such as a diode. Its current against voltage graph is not a straight line."
    ]
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Current against voltage for two ohmic resistors. Both graphs are straight lines through the origin, because each resistance stays constant. The 5 Ω resistor's line is steeper: at 10 V it carries 2.0 A. The 10 Ω resistor carries less current at every voltage, 1.0 A at 10 V.",
+    "x": {
+     "min": 0,
+     "max": 15.5,
+     "label": "Voltage (V)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 2.8,
+     "label": "Current (A)",
+     "step": 0.5
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "\\frac{x}{5}",
+      "domain": [
+       0,
+       11
+      ],
+      "label": "5 Ω",
+      "labelAt": 9,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "\\frac{x}{10}",
+      "domain": [
+       0,
+       11
+      ],
+      "label": "10 Ω",
+      "labelAt": 9,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       2
+      ],
+      "on": [
+       "a"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       1
+      ],
+      "on": [
+       "b"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "V = IR. In an ohmic device, R stays constant, so current is proportional to voltage.",
   "a": {
    "q": "A resistor has 12 V across it and a current of 3.0 A through it. What is its resistance?",
@@ -114,5 +181,94 @@
    "clue": "What shape of graph does a constant resistance give?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Current against voltage for two ohmic resistors, 5 Ω and 10 Ω: both straight lines through the origin, the 10 Ω line less steep, carrying less current at each voltage.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Current against voltage for two ohmic resistors. Both graphs are straight lines through the origin, because each resistance stays constant. The 5 Ω resistor's line is steeper: at 10 V it carries 2.0 A. The 10 Ω resistor carries less current at every voltage, 1.0 A at 10 V.",
+     "x": {
+      "min": 0,
+      "max": 15.5,
+      "label": "Voltage (V)",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 2.8,
+      "label": "Current (A)",
+      "step": 0.5
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "\\frac{x}{5}",
+       "domain": [
+        0,
+        11
+       ],
+       "label": "5 Ω",
+       "labelAt": 9,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "\\frac{x}{10}",
+       "domain": [
+        0,
+        11
+       ],
+       "label": "10 Ω",
+       "labelAt": 9,
+       "pos": "below-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        2
+       ],
+       "on": [
+        "a"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        1
+       ],
+       "on": [
+        "b"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:37Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:46Z"
+  }
+ ]
 }

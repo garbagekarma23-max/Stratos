@@ -7,7 +7,10 @@
   "2026-10-29T12:07:18Z new, write",
   "2026-10-29T12:14:25Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:22:35Z write: done",
-  "2026-10-29T12:30:20Z check: passed, cleared"
+  "2026-10-29T12:30:20Z check: passed, cleared",
+  "2026-11-11T11:44:01Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:27Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:20Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -88,6 +91,64 @@
    "Arousal is how alert and physically stirred up an athlete feels, from very calm to very excited. Performance is usually best at a moderate level of arousal.",
    "Too little arousal can leave an athlete flat and slow to react. Too much, especially when it brings anxiety (worry and tension), can harm performance."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Performance against arousal, an upside-down U. With very little arousal, performance is low: the athlete is flat and slow to react. It is best at a moderate level of arousal. With too much arousal, especially with anxiety, performance falls again.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Arousal"
+    },
+    "y": {
+     "min": 0,
+     "max": 11,
+     "label": "Performance"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "p",
+      "expr": "8 - 0.28(x - 5)^{2}",
+      "domain": [
+       0.2,
+       9.8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       8
+      ],
+      "on": [
+       "p"
+      ],
+      "is": "turning point",
+      "label": "best",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       1.2,
+       3
+      ],
+      "label": "too low",
+      "pos": "above-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       8.8,
+       3
+      ],
+      "label": "too high",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
   "remember": "Motivation is about why you play. Arousal is about how stirred up you feel, and a moderate level usually works best.",
   "a": {
    "q": "Dani swims on cold mornings only because she loves the feeling of gliding through the water. What type of motivation is this?",
@@ -113,5 +174,88 @@
    "clue": "Does tense and worried sound like too much or too little arousal?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Performance against arousal: an upside-down U, low when arousal is very low or very high and best at a moderate level.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Performance against arousal, an upside-down U. With very little arousal, performance is low: the athlete is flat and slow to react. It is best at a moderate level of arousal. With too much arousal, especially with anxiety, performance falls again.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Arousal"
+     },
+     "y": {
+      "min": 0,
+      "max": 11,
+      "label": "Performance"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "p",
+       "expr": "8 - 0.28(x - 5)^{2}",
+       "domain": [
+        0.2,
+        9.8
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        8
+       ],
+       "on": [
+        "p"
+       ],
+       "is": "turning point",
+       "label": "best",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.2,
+        3
+       ],
+       "label": "too low",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        8.8,
+        3
+       ],
+       "label": "too high",
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:27Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:20Z"
+  }
+ ]
 }

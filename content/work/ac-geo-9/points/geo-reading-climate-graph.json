@@ -7,7 +7,13 @@
  "log": [
   "2026-11-04T09:23:34Z new, write",
   "2026-11-04T09:36:52Z write: done",
-  "2026-11-04T09:47:01Z check: passed, cleared"
+  "2026-11-04T09:47:01Z check: passed, cleared",
+  "2026-11-11T11:44:02Z pictures: the owner asked for a chart at card 2",
+  "2026-11-11T11:44:03Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:21Z pictures: 2 pictures waiting for the check",
+  "2026-11-11T11:49:21Z pictures: 1 picture kept, 1 picture turned down. Picture 2 (graph at card 3): redo, high sure. The month axis has no label, so a student cannot tell that the numbers 1 to 12 are months or that 1 is January; it should say Month (1 is January) as the rainfall chart does.; The origin is drawn as the letter O, a maths habit that looks out of place on a geography climate graph; show 0 on the temperature scale instead, or no mark at the origin.",
+  "2026-11-11T11:55:18Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:33Z pictures: 1 picture turned down. Picture 1 (graph at card 3): redo, high sure. The January label sits across the y-axis line, between the 25 and 20 numbers, so it overlaps the axis and crowds its numbers; place it to the right of or above its dot, inside the plot.; The x-axis runs to 14.5, leaving two empty ticks after month 12; end it nearer 12.5 so the line fills the width and Month still fits.. Now waiting for you: graph at card 3"
  ],
  "sent": {
   "write": 1,
@@ -87,6 +93,72 @@
    ],
    "Months with tall columns are the wet season. Months with short columns are the dry season. Where the line is high it is hot, and where it is low it is cool."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "Columns of average rainfall for each month in one town, from month 1, January, to month 12, December. The columns are short from November to March, 10 to 25 mm, and tall from May to August, up to 145 mm in July. So this town has a dry summer and a wet winter.",
+    "x": {
+     "label": "Month (1 is January)"
+    },
+    "y": {
+     "min": 0,
+     "max": 160,
+     "step": 40,
+     "label": "Rainfall (mm)"
+    },
+    "bars": [
+     [
+      "1",
+      15
+     ],
+     [
+      "2",
+      10
+     ],
+     [
+      "3",
+      20
+     ],
+     [
+      "4",
+      35
+     ],
+     [
+      "5",
+      90
+     ],
+     [
+      "6",
+      125
+     ],
+     [
+      "7",
+      145
+     ],
+     [
+      "8",
+      120
+     ],
+     [
+      "9",
+      80
+     ],
+     [
+      "10",
+      40
+     ],
+     [
+      "11",
+      25
+     ],
+     [
+      "12",
+      10
+     ]
+    ]
+   }
+  },
   "remember": "Columns show rainfall, the line shows temperature, and both are monthly averages.",
   "a": {
    "q": "On a climate graph for a town, the columns are tallest in January and shortest in July. What does this show?",
@@ -110,7 +182,559 @@
    ],
    "why": "Tall columns from December to March show a wet season in the Australian summer, and short columns from June to August show a dry winter. The line stays high, so it is hot all year. A cool winter would need the line to drop, and it does not.",
    "clue": "Read the columns for rain and the line for temperature, one at a time."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A line of average monthly temperature for the same town, January to December: high in summer (about 25 °C) and low in winter (about 13 °C in July).",
+    "tries": 2,
+    "notes": [
+     [
+      "The month axis has no label, so a student cannot tell that the numbers 1 to 12 are months or that 1 is January; it should say Month (1 is January) as the rainfall chart does.",
+      "The origin is drawn as the letter O, a maths habit that looks out of place on a geography climate graph; show 0 on the temperature scale instead, or no mark at the origin."
+     ],
+     [
+      "The January label sits across the y-axis line, between the 25 and 20 numbers, so it overlaps the axis and crowds its numbers; place it to the right of or above its dot, inside the plot.",
+      "The x-axis runs to 14.5, leaving two empty ticks after month 12; end it nearer 12.5 so the line fills the width and Month still fits."
+     ]
+    ]
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "chart",
+   "brief": "Columns of average monthly rainfall for one town, January to December: short columns in summer (10 to 20 mm), tall columns in winter (up to 145 mm in July).",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "bar",
+     "alt": "Columns of average rainfall for each month in one town, from month 1, January, to month 12, December. The columns are short from November to March, 10 to 25 mm, and tall from May to August, up to 145 mm in July. So this town has a dry summer and a wet winter.",
+     "x": {
+      "label": "Month (1 is January)"
+     },
+     "y": {
+      "min": 0,
+      "max": 160,
+      "step": 40,
+      "label": "Rainfall (mm)"
+     },
+     "bars": [
+      [
+       "1",
+       15
+      ],
+      [
+       "2",
+       10
+      ],
+      [
+       "3",
+       20
+      ],
+      [
+       "4",
+       35
+      ],
+      [
+       "5",
+       90
+      ],
+      [
+       "6",
+       125
+      ],
+      [
+       "7",
+       145
+      ],
+      [
+       "8",
+       120
+      ],
+      [
+       "9",
+       80
+      ],
+      [
+       "10",
+       40
+      ],
+      [
+       "11",
+       25
+      ],
+      [
+       "12",
+       10
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:21Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:20Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A line of average monthly temperature for the same town, January to December: high in summer (about 25 °C) and low in winter (about 13 °C in July).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A line of the average temperature for each month in the same town, from month 1, January, to month 12, December. It is highest in summer, about 25 °C in February, and lowest in winter, about 13 °C in July. So this town is hot in summer and cool in winter.",
+     "x": {
+      "min": 0,
+      "max": 12.6,
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 30,
+      "label": "Temperature (°C)",
+      "step": 5
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "t",
+       "points": [
+        [
+         1,
+         24.5
+        ],
+        [
+         2,
+         24.8
+        ],
+        [
+         3,
+         23
+        ],
+        [
+         4,
+         19.8
+        ],
+        [
+         5,
+         16.5
+        ],
+        [
+         6,
+         14
+        ],
+        [
+         7,
+         13.2
+        ],
+        [
+         8,
+         13.5
+        ],
+        [
+         9,
+         14.8
+        ],
+        [
+         10,
+         17
+        ],
+        [
+         11,
+         20
+        ],
+        [
+         12,
+         22.5
+        ]
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        24.5
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        24.8
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        23
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        19.8
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        16.5
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        14
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        7,
+        13.2
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        8,
+        13.5
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        9,
+        14.8
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        17
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        11,
+        20
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        12,
+        22.5
+       ],
+       "on": [
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:21Z",
+   "status": "turned down",
+   "check": {
+    "want": 2,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The month axis has no label, so a student cannot tell that the numbers 1 to 12 are months or that 1 is January; it should say Month (1 is January) as the rainfall chart does.",
+     "The origin is drawn as the letter O, a maths habit that looks out of place on a geography climate graph; show 0 on the temperature scale instead, or no mark at the origin."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:20Z"
+  },
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A line of average monthly temperature for the same town, January to December: high in summer (about 25 °C) and low in winter (about 13 °C in July).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A line of the average temperature for each month in the same town, from month 1, January, to month 12, December. It is highest in summer, about 25 °C in February, and lowest in winter, about 13 °C in July. So this town is hot in summer and cool in winter.",
+     "x": {
+      "min": 0.5,
+      "max": 14.5,
+      "label": "Month",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 30,
+      "label": "Temperature (°C)",
+      "step": 5
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "t",
+       "points": [
+        [
+         1,
+         24.5
+        ],
+        [
+         2,
+         24.8
+        ],
+        [
+         3,
+         23
+        ],
+        [
+         4,
+         19.8
+        ],
+        [
+         5,
+         16.5
+        ],
+        [
+         6,
+         14
+        ],
+        [
+         7,
+         13.2
+        ],
+        [
+         8,
+         13.5
+        ],
+        [
+         9,
+         14.8
+        ],
+        [
+         10,
+         17
+        ],
+        [
+         11,
+         20
+        ],
+        [
+         12,
+         22.5
+        ]
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        24.5
+       ],
+       "on": [
+        "t"
+       ],
+       "label": "January",
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        24.8
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        23
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        19.8
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        16.5
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6,
+        14
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        7,
+        13.2
+       ],
+       "on": [
+        "t"
+       ],
+       "label": "July",
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        8,
+        13.5
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        9,
+        14.8
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        10,
+        17
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        11,
+        20
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        12,
+        22.5
+       ],
+       "on": [
+        "t"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:55:17Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The January label sits across the y-axis line, between the 25 and 20 numbers, so it overlaps the axis and crowds its numbers; place it to the right of or above its dot, inside the plot.",
+     "The x-axis runs to 14.5, leaving two empty ticks after month 12; end it nearer 12.5 so the line fills the width and Month still fits."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:33Z"
+  }
+ ]
 }

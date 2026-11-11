@@ -10,7 +10,10 @@
   "2026-10-27T01:08:36Z check: flagged",
   "2026-10-27T01:23:01Z fix: suggested",
   "2026-10-28T08:46:50Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)",
-  "2026-10-28T11:49:49Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:49:49Z review: approved with the fix (a spot check)",
+  "2026-11-11T11:43:50Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:28Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:36Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -142,6 +145,85 @@
    "For a launch from level ground with no air resistance, time of flight = 2v sin θ ÷ g. Range = vx × time of flight = v² sin 2θ ÷ g.",
    "A larger launch speed gives a greater range and a longer time. For a fixed speed, 45° gives the longest range, and angles that add to 90° give equal ranges."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Paths of three balls launched from level ground at the same speed, with no air resistance. The 45° path goes furthest. The 30° and 60° paths land at the same place, so they have equal ranges, but the 60° path goes much higher, so it stays in the air longer.",
+    "x": {
+     "min": 0,
+     "max": 44,
+     "label": "Horizontal distance"
+    },
+    "y": {
+     "min": 0,
+     "max": 17.5,
+     "label": "Height"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "a60",
+      "expr": "\\sqrt{3}x - \\frac{x^{2}}{20}",
+      "domain": [
+       0,
+       34.641
+      ],
+      "label": "60°",
+      "labelAt": 17.32,
+      "pos": "above",
+      "style": "dot"
+     },
+     {
+      "type": "fn",
+      "id": "a45",
+      "expr": "x - \\frac{x^{2}}{40}",
+      "domain": [
+       0,
+       40
+      ],
+      "label": "45°",
+      "labelAt": 20,
+      "pos": "above"
+     },
+     {
+      "type": "fn",
+      "id": "a30",
+      "expr": "\\frac{x}{\\sqrt{3}} - \\frac{x^{2}}{60}",
+      "domain": [
+       0,
+       34.641
+      ],
+      "label": "30°",
+      "labelAt": 17.32,
+      "pos": "above",
+      "style": "dash"
+     },
+     {
+      "type": "point",
+      "at": [
+       34.641,
+       0
+      ],
+      "on": [
+       "a30",
+       "a60"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       0
+      ],
+      "on": [
+       "a45"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Vertical motion sets the time in the air. Range is horizontal speed times that time, and 45° gives the longest range.",
   "a": {
    "q": "Two balls are kicked from level ground at the same speed, one at 30° and one at 60°. Ignoring air resistance, which statement is correct?",
@@ -167,5 +249,109 @@
    "clue": "Range depends on both horizontal speed and time in the air."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Paths of three balls launched from level ground at the same speed, at 30°, 45° and 60°, ignoring air resistance: 45° goes furthest, and 30° and 60° land at the same place, with 60° going higher and staying up longer.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Paths of three balls launched from level ground at the same speed, with no air resistance. The 45° path goes furthest. The 30° and 60° paths land at the same place, so they have equal ranges, but the 60° path goes much higher, so it stays in the air longer.",
+     "x": {
+      "min": 0,
+      "max": 44,
+      "label": "Horizontal distance"
+     },
+     "y": {
+      "min": 0,
+      "max": 17.5,
+      "label": "Height"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "a60",
+       "expr": "\\sqrt{3}x - \\frac{x^{2}}{20}",
+       "domain": [
+        0,
+        34.641
+       ],
+       "label": "60°",
+       "labelAt": 17.32,
+       "pos": "above",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "a45",
+       "expr": "x - \\frac{x^{2}}{40}",
+       "domain": [
+        0,
+        40
+       ],
+       "label": "45°",
+       "labelAt": 20,
+       "pos": "above"
+      },
+      {
+       "type": "fn",
+       "id": "a30",
+       "expr": "\\frac{x}{\\sqrt{3}} - \\frac{x^{2}}{60}",
+       "domain": [
+        0,
+        34.641
+       ],
+       "label": "30°",
+       "labelAt": 17.32,
+       "pos": "above",
+       "style": "dash"
+      },
+      {
+       "type": "point",
+       "at": [
+        34.641,
+        0
+       ],
+       "on": [
+        "a30",
+        "a60"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        40,
+        0
+       ],
+       "on": [
+        "a45"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:27Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:35Z"
+  }
+ ]
 }

@@ -10,7 +10,10 @@
   "2026-10-27T01:08:36Z write: done",
   "2026-10-27T01:23:00Z check: passed, cleared",
   "2026-10-29T11:03:06Z rebalance: new wrong options for question a, waiting for the check",
-  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a",
+  "2026-11-11T11:43:50Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:27Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:35Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 3,
@@ -96,6 +99,134 @@
    ],
    "The two directions do not affect each other, so we solve them separately. Time is the link: it is the same for both."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The path of a ball launched from level ground with no air resistance: height against horizontal distance, a parabola. Dots mark the ball at equal time steps. They are equally spaced sideways, because the horizontal velocity stays constant, but not up and down, because gravity changes the vertical velocity.",
+    "x": {
+     "min": 0,
+     "max": 44,
+     "label": "Horizontal distance",
+     "step": 5,
+     "nums": false
+    },
+    "y": {
+     "min": 0,
+     "max": 24,
+     "label": "Height"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "p",
+      "expr": "1.96x - 0.049x^{2}",
+      "domain": [
+       0,
+       40
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.0,
+       8.575
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       10.0,
+       14.7
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       15.0,
+       18.375
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       20.0,
+       19.6
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       25.0,
+       18.375
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       30.0,
+       14.7
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       35.0,
+       8.575
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       0
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       20,
+       21
+      ],
+      "label": "equal steps sideways",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Treat horizontal and vertical separately: constant velocity sideways, constant acceleration downwards.",
   "a": {
    "q": "A ball rolls off a table and flies through the air. Ignoring air resistance, which statement describes its motion?",
@@ -151,5 +282,158 @@
     "Vertical velocity is constant at 9.8 m/s"
    ]
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The path of a ball launched from level ground, ignoring air resistance: height against horizontal distance, a parabola, with dots at equal time steps that are equally spaced sideways but not up and down.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The path of a ball launched from level ground with no air resistance: height against horizontal distance, a parabola. Dots mark the ball at equal time steps. They are equally spaced sideways, because the horizontal velocity stays constant, but not up and down, because gravity changes the vertical velocity.",
+     "x": {
+      "min": 0,
+      "max": 44,
+      "label": "Horizontal distance",
+      "step": 5,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 24,
+      "label": "Height"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "p",
+       "expr": "1.96x - 0.049x^{2}",
+       "domain": [
+        0,
+        40
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        0
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5.0,
+        8.575
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        10.0,
+        14.7
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        15.0,
+        18.375
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        20.0,
+        19.6
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        25.0,
+        18.375
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        30.0,
+        14.7
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        35.0,
+        8.575
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        40,
+        0
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        20,
+        21
+       ],
+       "label": "equal steps sideways",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:27Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:35Z"
+  }
+ ]
 }

@@ -7,7 +7,10 @@
  "log": [
   "2026-11-01T14:36:25Z new, write",
   "2026-11-01T14:46:35Z write: done",
-  "2026-11-01T14:55:57Z check: passed, cleared"
+  "2026-11-01T14:55:57Z check: passed, cleared",
+  "2026-11-11T11:43:58Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:31Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:38Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -75,6 +78,114 @@
    "The substrate is the molecule an enzyme acts on. It binds to the active site, a small region of the enzyme with a particular shape and chemistry.",
    "In the induced fit model, the active site changes shape slightly as the substrate binds, so it grips the substrate more closely. The enzyme then releases the products."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Energy against the progress of a reaction, without an enzyme (dashed) and with an enzyme (solid). Both start at the same level and end at the same level, but the path with the enzyme has a much lower peak: the enzyme lowers the activation energy. An arrow points down from the higher peak to the lower one.",
+    "x": {
+     "min": 0,
+     "max": 12,
+     "label": "Progress of reaction"
+    },
+    "y": {
+     "min": 0,
+     "max": 11.5,
+     "label": "Energy"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "n",
+      "points": [
+       [
+        0,
+        4
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        6,
+        9
+       ],
+       [
+        9,
+        2
+       ],
+       [
+        12,
+        2
+       ]
+      ],
+      "smooth": true,
+      "label": "without enzyme",
+      "labelAt": 6,
+      "pos": "above",
+      "style": "dash"
+     },
+     {
+      "type": "curve",
+      "id": "c",
+      "points": [
+       [
+        0,
+        4
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        6,
+        6.2
+       ],
+       [
+        9,
+        2
+       ],
+       [
+        12,
+        2
+       ]
+      ],
+      "smooth": true,
+      "label": "with enzyme",
+      "labelAt": 7.8,
+      "pos": "below-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       6,
+       8.7
+      ],
+      "to": [
+       6,
+       6.5
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       1.5,
+       4
+      ],
+      "label": "substrate",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       10.5,
+       2
+      ],
+      "label": "products",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Enzymes speed up reactions by lowering activation energy, and each binds its own substrate at its active site.",
   "a": {
    "q": "How does an enzyme make a reaction in a cell go faster?",
@@ -100,5 +211,138 @@
    "clue": "Look at what the active site does when the sugar binds."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Energy profile for one reaction without an enzyme (dashed, higher peak) and with an enzyme (solid, lower peak), the same start and end levels, an arrow down from the higher peak to the lower one.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Energy against the progress of a reaction, without an enzyme (dashed) and with an enzyme (solid). Both start at the same level and end at the same level, but the path with the enzyme has a much lower peak: the enzyme lowers the activation energy. An arrow points down from the higher peak to the lower one.",
+     "x": {
+      "min": 0,
+      "max": 12,
+      "label": "Progress of reaction"
+     },
+     "y": {
+      "min": 0,
+      "max": 11.5,
+      "label": "Energy"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "n",
+       "points": [
+        [
+         0,
+         4
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         6,
+         9
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         12,
+         2
+        ]
+       ],
+       "smooth": true,
+       "label": "without enzyme",
+       "labelAt": 6,
+       "pos": "above",
+       "style": "dash"
+      },
+      {
+       "type": "curve",
+       "id": "c",
+       "points": [
+        [
+         0,
+         4
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         6,
+         6.2
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         12,
+         2
+        ]
+       ],
+       "smooth": true,
+       "label": "with enzyme",
+       "labelAt": 7.8,
+       "pos": "below-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        6,
+        8.7
+       ],
+       "to": [
+        6,
+        6.5
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1.5,
+        4
+       ],
+       "label": "substrate",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        10.5,
+        2
+       ],
+       "label": "products",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:31Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:38Z"
+  }
+ ]
 }

@@ -32,7 +32,10 @@
   "2026-11-01T15:05:30Z check: flagged",
   "2026-11-01T15:14:49Z fix: suggested",
   "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-11-02T06:24:55Z review: approved with the fix (a spot check)"
+  "2026-11-02T06:24:55Z review: approved with the fix (a spot check)",
+  "2026-11-11T11:43:54Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:39Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:49Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -208,6 +211,60 @@
    "Near Earth's surface, gravitational potential energy changes by mgΔh when an object's height changes by Δh.",
    "If no energy is lost, the total of kinetic, elastic and gravitational energy stays the same. Energy moves between these forms, so a released spring can give an object kinetic energy or lift it."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Force against extension for a spring that obeys Hooke's law, with k = 100 N/m: a straight line through the origin, F = kx. At an extension of 0.20 m the force is 20 N. The shaded triangle under the line is the stored elastic potential energy, one half of 0.20 m times 20 N, which is 2.0 J.",
+    "x": {
+     "min": 0,
+     "max": 0.35,
+     "label": "Extension (m)",
+     "step": 0.1
+    },
+    "y": {
+     "min": 0,
+     "max": 25,
+     "label": "Force (N)",
+     "step": 5
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "f",
+      "span": [
+       0,
+       0.2
+      ],
+      "label": "\\(E = \\frac{1}{2}kx^{2}\\)",
+      "at": [
+       0.135,
+       5
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "100x",
+      "domain": [
+       0,
+       0.27
+      ],
+      "label": "\\(F = kx\\)",
+      "labelAt": 0.15,
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.2,
+       20
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     }
+    ]
+   }
+  },
   "remember": "Spring energy is ½kx², the area under the force-extension graph, and it can change into kinetic or gravitational energy.",
   "a": {
    "q": "A spring has a spring constant of 200 N/m. How much energy is stored when it is stretched by 0.10 m?",
@@ -233,5 +290,84 @@
    "clue": "Find the spring energy first, then set it equal to mgh."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Force against extension for a spring that obeys Hooke's law, k = 100 N/m: a straight line F = kx through the origin, with the triangle under it up to 0.20 m shaded as the stored energy E = ½kx², 2.0 J.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Force against extension for a spring that obeys Hooke's law, with k = 100 N/m: a straight line through the origin, F = kx. At an extension of 0.20 m the force is 20 N. The shaded triangle under the line is the stored elastic potential energy, one half of 0.20 m times 20 N, which is 2.0 J.",
+     "x": {
+      "min": 0,
+      "max": 0.35,
+      "label": "Extension (m)",
+      "step": 0.1
+     },
+     "y": {
+      "min": 0,
+      "max": 25,
+      "label": "Force (N)",
+      "step": 5
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "f",
+       "span": [
+        0,
+        0.2
+       ],
+       "label": "\\(E = \\frac{1}{2}kx^{2}\\)",
+       "at": [
+        0.135,
+        5
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "100x",
+       "domain": [
+        0,
+        0.27
+       ],
+       "label": "\\(F = kx\\)",
+       "labelAt": 0.15,
+       "pos": "above-left"
+      },
+      {
+       "type": "guide",
+       "at": [
+        0.2,
+        20
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:39Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:49Z"
+  }
+ ]
 }

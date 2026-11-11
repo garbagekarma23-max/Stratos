@@ -19,7 +19,10 @@
   "2026-11-01T14:56:06Z adapt: done",
   "2026-11-01T15:05:30Z check: flagged",
   "2026-11-01T15:14:49Z fix: suggested",
-  "2026-11-02T04:35:43Z autoreview: cleared with the fix (card other, card other, card wording)"
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (card other, card other, card wording)",
+  "2026-11-11T11:43:52Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:40Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:50Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -203,6 +206,61 @@
    "Above f0, even very dim light ejects electrons with no measurable delay. Brighter light ejects more electrons per second. A higher frequency, not brighter light, raises the electrons' maximum kinetic energy.",
    "The wave model said light energy spreads out and builds up over time. So bright enough light of any frequency should eject electrons, after a delay if the light is dim. Experiments showed neither, and Einstein explained the results with photons, a particle model of light."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Maximum kinetic energy of the photoelectrons against the frequency of the light. Below the threshold frequency f0 no electrons are ejected, however bright the light. Above f0, the maximum kinetic energy rises in a straight line as the frequency rises.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Frequency"
+    },
+    "y": {
+     "min": 0,
+     "max": 7,
+     "label": "Kmax"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "k",
+      "expr": "0.9x - 3.6",
+      "domain": [
+       4,
+       10
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       0
+      ],
+      "on": [
+       "k"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       0
+      ],
+      "xLabel": "\\(f_{0}\\)"
+     },
+     {
+      "type": "text",
+      "at": [
+       2,
+       0.2
+      ],
+      "label": "no electrons",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Frequency decides whether electrons are ejected. Brightness decides how many.",
   "a": {
    "q": "A metal is lit with red light and no electrons are ejected, even when the lamp is made much brighter. What does this show?",
@@ -228,5 +286,85 @@
    "clue": "Which property of the light was kept the same?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Maximum kinetic energy of the photoelectrons against frequency: zero below the threshold frequency f0, then a straight line rising from f0.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Maximum kinetic energy of the photoelectrons against the frequency of the light. Below the threshold frequency f0 no electrons are ejected, however bright the light. Above f0, the maximum kinetic energy rises in a straight line as the frequency rises.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Frequency"
+     },
+     "y": {
+      "min": 0,
+      "max": 7,
+      "label": "Kmax"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "k",
+       "expr": "0.9x - 3.6",
+       "domain": [
+        4,
+        10
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        0
+       ],
+       "on": [
+        "k"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        0
+       ],
+       "xLabel": "\\(f_{0}\\)"
+      },
+      {
+       "type": "text",
+       "at": [
+        2,
+        0.2
+       ],
+       "label": "no electrons",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:39Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:49Z"
+  }
+ ]
 }

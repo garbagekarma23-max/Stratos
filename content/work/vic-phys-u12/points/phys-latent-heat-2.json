@@ -18,7 +18,10 @@
   "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:09Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:35Z write: done",
-  "2026-11-01T08:33:53Z check: passed, cleared"
+  "2026-11-01T08:33:53Z check: passed, cleared",
+  "2026-11-11T11:43:53Z pictures: the owner asked for a graph at card 1",
+  "2026-11-11T11:44:36Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:45Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -109,6 +112,90 @@
    ],
    "L depends on the substance and the change. For water, melting ice takes about 3.3 × 10^5 J/kg. Boiling takes about 2.3 × 10^6 J/kg, which is much more."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A heating curve for ice heated until it becomes steam: temperature against energy supplied. The temperature rises, then stays flat while the ice melts at 0 °C, rises again as the water warms, then stays flat for much longer while the water boils at 100 °C, because boiling takes much more energy than melting. It then rises as the steam heats.",
+    "x": {
+     "min": 0,
+     "max": 3200,
+     "label": "Energy supplied"
+    },
+    "y": {
+     "min": 240,
+     "max": 420,
+     "label": "Temperature"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "h",
+      "points": [
+       [
+        0,
+        253
+       ],
+       [
+        42,
+        273
+       ],
+       [
+        372,
+        273
+       ],
+       [
+        792,
+        373
+       ],
+       [
+        3052,
+        373
+       ],
+       [
+        3092,
+        393
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       50,
+       273
+      ],
+      "label": "melting, 0 °C",
+      "pos": "below-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       1900,
+       373
+      ],
+      "label": "boiling, 100 °C",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       600,
+       322
+      ],
+      "label": "water",
+      "pos": "above-left"
+     },
+     {
+      "type": "text",
+      "at": [
+       3072,
+       383
+      ],
+      "label": "steam",
+      "pos": "left"
+     }
+    ]
+   }
+  },
   "remember": "During a change of state the energy goes into changing particle arrangement, so temperature stays constant. Use Q = mL.",
   "a": {
    "q": "A block of ice at 0 °C is heated and begins to melt. What happens to the energy supplied while it melts?",
@@ -134,5 +221,114 @@
    "clue": "Multiply the mass by L, and check the mass is not 1 kg."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A heating curve for ice heated steadily into steam: temperature against energy supplied, rising, flat while melting at 0 °C, rising, then a much longer flat stretch while boiling at 100 °C, then rising again.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A heating curve for ice heated until it becomes steam: temperature against energy supplied. The temperature rises, then stays flat while the ice melts at 0 °C, rises again as the water warms, then stays flat for much longer while the water boils at 100 °C, because boiling takes much more energy than melting. It then rises as the steam heats.",
+     "x": {
+      "min": 0,
+      "max": 3200,
+      "label": "Energy supplied"
+     },
+     "y": {
+      "min": 240,
+      "max": 420,
+      "label": "Temperature"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "h",
+       "points": [
+        [
+         0,
+         253
+        ],
+        [
+         42,
+         273
+        ],
+        [
+         372,
+         273
+        ],
+        [
+         792,
+         373
+        ],
+        [
+         3052,
+         373
+        ],
+        [
+         3092,
+         393
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        50,
+        273
+       ],
+       "label": "melting, 0 °C",
+       "pos": "below-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        1900,
+        373
+       ],
+       "label": "boiling, 100 °C",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        600,
+        322
+       ],
+       "label": "water",
+       "pos": "above-left"
+      },
+      {
+       "type": "text",
+       "at": [
+        3072,
+        383
+       ],
+       "label": "steam",
+       "pos": "left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:36Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:45Z"
+  }
+ ]
 }

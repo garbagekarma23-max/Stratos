@@ -16,7 +16,10 @@
   "2026-11-10T15:55:22Z pictures: 1 picture waiting for the check",
   "2026-11-10T16:02:54Z pictures: 1 picture turned down. Picture 1 (graph at card 2): redo, high sure. The x-axis label reads only \"Households\" while the y-axis reads \"Income (%)\", so the x-axis does not say it is a share of households in per cent, as the card and the line of equality's \"every 10% of households\" need; label it \"Households (%)\" to match.; The x-axis label sits where the numbers 80 and 100 would be, so the x-axis shows only 20, 40 and 60 while the y-axis runs to 100; move or shorten the label so both axes show the same numbers up to 100.",
   "2026-11-10T16:03:07Z pictures: 1 picture waiting for the check",
-  "2026-11-10T16:04:02Z pictures: 1 picture kept"
+  "2026-11-10T16:04:02Z pictures: 1 picture kept",
+  "2026-11-11T11:44:03Z pictures: the owner asked for a graph at card 2, in place of the one there",
+  "2026-11-11T11:44:26Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:27Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -213,14 +216,14 @@
      "max": 100,
      "step": 20,
      "nums": false,
-     "label": "Households (%)"
+     "label": "Cumulative % households"
     },
     "y": {
      "min": 0,
      "max": 100,
      "step": 20,
      "nums": false,
-     "label": "Income (%)"
+     "label": "Cumulative % of income"
     },
     "equal": true,
     "items": [
@@ -270,8 +273,8 @@
        50,
        25
       ],
-      "xLabel": "50",
-      "yLabel": "25"
+      "xLabel": "",
+      "yLabel": ""
      },
      {
       "type": "point",
@@ -281,7 +284,9 @@
       ],
       "on": [
        "l"
-      ]
+      ],
+      "label": "poorest 50% hold 25%",
+      "pos": "below-right"
      }
     ]
    }
@@ -504,6 +509,280 @@
    },
    "checked_by": "claude-code",
    "checked": "2026-11-10T16:04:01Z"
+  },
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The Lorenz curve with the line of equality and the shaded gap between them, the poorest 50% of households holding 25% of income marked, and the axes labelled Cumulative % of households and Cumulative % of income, in full or the closest that fits at 360 px.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Cumulative share of income against cumulative share of households, from poorest to richest, both from 0 to 100%. The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it: here the poorest 50% of households hold 25% of income. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+     "x": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "nums": false,
+      "label": "Cumulative % households"
+     },
+     "y": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "nums": false,
+      "label": "Cumulative % of income"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "shade",
+       "between": [
+        "e",
+        "l"
+       ],
+       "span": [
+        0,
+        100
+       ],
+       "label": "gap",
+       "at": [
+        62,
+        50
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "x",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "line of equality",
+       "labelAt": 40,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "\\frac{x^{2}}{100}",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "Lorenz curve",
+       "labelAt": 72,
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        50,
+        25
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        50,
+        25
+       ],
+       "on": [
+        "l"
+       ],
+       "label": "poorest 50% hold 25%",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:26Z",
+   "replaces": {
+    "kind": "graph",
+    "alt": "Cumulative share of income against cumulative share of households, from poorest to richest, both from 0 to 100%. The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it: here the poorest 50% of households hold 25% of income. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+    "x": {
+     "min": 0,
+     "max": 100,
+     "step": 20,
+     "nums": false,
+     "label": "Households (%)"
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "step": 20,
+     "nums": false,
+     "label": "Income (%)"
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "shade",
+      "between": [
+       "e",
+       "l"
+      ],
+      "span": [
+       0,
+       100
+      ],
+      "label": "gap",
+      "at": [
+       62,
+       50
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "e",
+      "expr": "x",
+      "domain": [
+       0,
+       100
+      ],
+      "label": "line of equality",
+      "labelAt": 40,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "\\frac{x^{2}}{100}",
+      "domain": [
+       0,
+       100
+      ],
+      "label": "Lorenz curve",
+      "labelAt": 72,
+      "pos": "below-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       50,
+       25
+      ],
+      "xLabel": "50",
+      "yLabel": "25"
+     },
+     {
+      "type": "point",
+      "at": [
+       50,
+       25
+      ],
+      "on": [
+       "l"
+      ]
+     }
+    ]
+   },
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:26Z"
+  },
+  {
+   "status": "replaced",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Cumulative share of income against cumulative share of households, from poorest to richest, both from 0 to 100%. The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it: here the poorest 50% of households hold 25% of income. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
+     "x": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "nums": false,
+      "label": "Households (%)"
+     },
+     "y": {
+      "min": 0,
+      "max": 100,
+      "step": 20,
+      "nums": false,
+      "label": "Income (%)"
+     },
+     "equal": true,
+     "items": [
+      {
+       "type": "shade",
+       "between": [
+        "e",
+        "l"
+       ],
+       "span": [
+        0,
+        100
+       ],
+       "label": "gap",
+       "at": [
+        62,
+        50
+       ]
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "x",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "line of equality",
+       "labelAt": 40,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "\\frac{x^{2}}{100}",
+       "domain": [
+        0,
+        100
+       ],
+       "label": "Lorenz curve",
+       "labelAt": 72,
+       "pos": "below-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        50,
+        25
+       ],
+       "xLabel": "50",
+       "yLabel": "25"
+      },
+      {
+       "type": "point",
+       "at": [
+        50,
+        25
+       ],
+       "on": [
+        "l"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "card 2",
+   "at_time": "2026-11-11T11:49:26Z"
   }
  ]
 }

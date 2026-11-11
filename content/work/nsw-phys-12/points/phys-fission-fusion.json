@@ -9,7 +9,10 @@
   "2026-10-27T01:00:10Z write: done",
   "2026-10-27T01:08:36Z check: passed, cleared",
   "2026-10-29T11:03:06Z rebalance: new wrong options for question b, waiting for the check",
-  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)",
+  "2026-11-11T11:43:53Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:31Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:23Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -94,6 +97,123 @@
    "Binding energy per nucleon is the binding energy divided by the number of nucleons. It is greatest for nuclei near iron, so these are the most tightly bound.",
    "In both processes the products have a higher binding energy per nucleon than the starting nuclei. The total mass of the products is slightly less, and the missing mass is released as energy."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Binding energy per nucleon against mass number. It rises steeply from light nuclei such as hydrogen-2 to a peak of about 8.8 MeV near iron-56, the most tightly bound, then falls slowly to about 7.6 MeV for uranium-238. Arrows show fusion joining light nuclei and fission splitting heavy ones, both moving towards iron.",
+    "x": {
+     "min": 0,
+     "max": 250,
+     "label": "Mass number",
+     "step": 50
+    },
+    "y": {
+     "min": 0,
+     "max": 11,
+     "label": "MeV per nucleon",
+     "step": 2
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "b",
+      "points": [
+       [
+        2,
+        1.1
+       ],
+       [
+        6,
+        5.3
+       ],
+       [
+        12,
+        7.7
+       ],
+       [
+        16,
+        8.0
+       ],
+       [
+        30,
+        8.5
+       ],
+       [
+        56,
+        8.8
+       ],
+       [
+        90,
+        8.7
+       ],
+       [
+        140,
+        8.4
+       ],
+       [
+        200,
+        7.9
+       ],
+       [
+        238,
+        7.6
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "point",
+      "at": [
+       56,
+       8.8
+      ],
+      "on": [
+       "b"
+      ],
+      "label": "iron-56",
+      "pos": "above"
+     },
+     {
+      "type": "point",
+      "at": [
+       238,
+       7.6
+      ],
+      "on": [
+       "b"
+      ],
+      "label": "uranium",
+      "pos": "below-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       14,
+       4.2
+      ],
+      "to": [
+       40,
+       6.6
+      ],
+      "label": "fusion",
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       226,
+       6.4
+      ],
+      "to": [
+       130,
+       6.4
+      ],
+      "label": "fission",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Fission and fusion both move nuclei towards more tightly bound products, and the difference is released as energy.",
   "a": {
    "q": "Why does fusion of two hydrogen nuclei release energy?",
@@ -186,5 +306,147 @@
    "sensitive": "none",
    "summary": "The card and both questions are correct. Why (a) loosely calls the product of fusing two hydrogen nuclei 'helium-type', which is not accurate for that reaction."
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Binding energy per nucleon against mass number: rising steeply from hydrogen to a peak near iron-56, then falling slowly to uranium. Fusion moves light nuclei up the left side, fission moves heavy nuclei up the right side, both towards iron.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Binding energy per nucleon against mass number. It rises steeply from light nuclei such as hydrogen-2 to a peak of about 8.8 MeV near iron-56, the most tightly bound, then falls slowly to about 7.6 MeV for uranium-238. Arrows show fusion joining light nuclei and fission splitting heavy ones, both moving towards iron.",
+     "x": {
+      "min": 0,
+      "max": 250,
+      "label": "Mass number",
+      "step": 50
+     },
+     "y": {
+      "min": 0,
+      "max": 11,
+      "label": "MeV per nucleon",
+      "step": 2
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "b",
+       "points": [
+        [
+         2,
+         1.1
+        ],
+        [
+         6,
+         5.3
+        ],
+        [
+         12,
+         7.7
+        ],
+        [
+         16,
+         8.0
+        ],
+        [
+         30,
+         8.5
+        ],
+        [
+         56,
+         8.8
+        ],
+        [
+         90,
+         8.7
+        ],
+        [
+         140,
+         8.4
+        ],
+        [
+         200,
+         7.9
+        ],
+        [
+         238,
+         7.6
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "point",
+       "at": [
+        56,
+        8.8
+       ],
+       "on": [
+        "b"
+       ],
+       "label": "iron-56",
+       "pos": "above"
+      },
+      {
+       "type": "point",
+       "at": [
+        238,
+        7.6
+       ],
+       "on": [
+        "b"
+       ],
+       "label": "uranium",
+       "pos": "below-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        14,
+        4.2
+       ],
+       "to": [
+        40,
+        6.6
+       ],
+       "label": "fusion",
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        226,
+        6.4
+       ],
+       "to": [
+        130,
+        6.4
+       ],
+       "label": "fission",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:30Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:23Z"
+  }
+ ]
 }

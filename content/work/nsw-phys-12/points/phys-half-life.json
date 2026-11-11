@@ -10,7 +10,12 @@
   "2026-10-27T01:08:36Z check: flagged",
   "2026-10-27T01:23:01Z fix: suggested",
   "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-28T11:49:51Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:49:51Z review: approved with the fix (a spot check)",
+  "2026-11-11T11:43:52Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:30Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:23Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The time axis shows only the numbers 1 and 2: the numbers 3, 4 and 5 are missing (the axis label sits where they would go), so the 1/8 point, which the card line places after three half-lives, has no 3 under it and a student must count ticks to read it.; The label 1 at the start of the curve is drawn against the dot and touches it, so it reads as part of the marker rather than a clear label.; Fix by making room for the axis numbers, for example ending the time axis at 4 or moving the axis label, so 1, 2 and 3 all show, and placing the 1 label clear of its dot.",
+  "2026-11-11T11:55:20Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:38Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -165,6 +170,101 @@
    "Decay is random. We cannot say when one nucleus will decay, but in a large sample the fraction decaying in a set time is predictable.",
    "After one half-life, 1/2 of the original nuclei remain. After two, 1/4 remain. After three, 1/8 remain."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The fraction of the original nuclei still undecayed against time, measured in half-lives. The curve starts at 1 and halves every half-life: 1/2 after one, 1/4 after two and 1/8 after three. It keeps falling but never reaches zero.",
+    "x": {
+     "min": 0,
+     "max": 5.75,
+     "label": "Half-lives",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 1.1,
+     "label": "Fraction left"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "2^{-x}",
+      "domain": [
+       0,
+       4
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "n"
+      ],
+      "is": "y-intercept",
+      "label": "1",
+      "pos": "above-right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       1,
+       0.5
+      ],
+      "yLabel": "1/2"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       0.5
+      ],
+      "on": [
+       "n"
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       0.25
+      ],
+      "yLabel": "1/4"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       0.25
+      ],
+      "on": [
+       "n"
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       3,
+       0.125
+      ],
+      "yLabel": "1/8"
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0.125
+      ],
+      "on": [
+       "n"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Every half-life, the number of undecayed nuclei is cut in half.",
   "a": {
    "q": "An isotope has a half-life of 6 hours. What fraction of a sample's original nuclei remains undecayed after 12 hours?",
@@ -190,5 +290,247 @@
    "clue": "Think about what fraction of each sample decays in one half-life."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Undecayed nuclei against time in half-lives: a decay curve from 1 falling to 1/2 after one half-life, 1/4 after two and 1/8 after three.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The fraction of the original nuclei still undecayed against time, measured in half-lives. The curve starts at 1 and halves every half-life: 1/2 after one, 1/4 after two and 1/8 after three. It keeps falling but never reaches zero.",
+     "x": {
+      "min": 0,
+      "max": 5,
+      "label": "Time (half-lives)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 1.1,
+      "label": "Fraction left"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "2^{-x}",
+       "domain": [
+        0,
+        5
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        1
+       ],
+       "on": [
+        "n"
+       ],
+       "is": "y-intercept",
+       "label": "1",
+       "pos": "right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        1,
+        0.5
+       ],
+       "yLabel": "1/2"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0.5
+       ],
+       "on": [
+        "n"
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        0.25
+       ],
+       "yLabel": "1/4"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0.25
+       ],
+       "on": [
+        "n"
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        0.125
+       ],
+       "yLabel": "1/8"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        0.125
+       ],
+       "on": [
+        "n"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:30Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The time axis shows only the numbers 1 and 2: the numbers 3, 4 and 5 are missing (the axis label sits where they would go), so the 1/8 point, which the card line places after three half-lives, has no 3 under it and a student must count ticks to read it.",
+     "The label 1 at the start of the curve is drawn against the dot and touches it, so it reads as part of the marker rather than a clear label.",
+     "Fix by making room for the axis numbers, for example ending the time axis at 4 or moving the axis label, so 1, 2 and 3 all show, and placing the 1 label clear of its dot."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:23Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Undecayed nuclei against time in half-lives: a decay curve from 1 falling to 1/2 after one half-life, 1/4 after two and 1/8 after three.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The fraction of the original nuclei still undecayed against time, measured in half-lives. The curve starts at 1 and halves every half-life: 1/2 after one, 1/4 after two and 1/8 after three. It keeps falling but never reaches zero.",
+     "x": {
+      "min": 0,
+      "max": 5.75,
+      "label": "Half-lives",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 1.1,
+      "label": "Fraction left"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "2^{-x}",
+       "domain": [
+        0,
+        4
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        1
+       ],
+       "on": [
+        "n"
+       ],
+       "is": "y-intercept",
+       "label": "1",
+       "pos": "above-right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        1,
+        0.5
+       ],
+       "yLabel": "1/2"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        0.5
+       ],
+       "on": [
+        "n"
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        0.25
+       ],
+       "yLabel": "1/4"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        0.25
+       ],
+       "on": [
+        "n"
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        0.125
+       ],
+       "yLabel": "1/8"
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        0.125
+       ],
+       "on": [
+        "n"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:55:19Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:37Z"
+  }
+ ]
 }

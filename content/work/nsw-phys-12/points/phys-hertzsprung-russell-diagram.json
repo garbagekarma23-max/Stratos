@@ -8,7 +8,12 @@
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:10Z write: failed the content check, writing again",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:00Z check: passed, cleared"
+  "2026-10-27T01:23:00Z check: passed, cleared",
+  "2026-11-11T11:43:52Z pictures: the owner asked for a graph at card 1",
+  "2026-11-11T11:44:30Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:23Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The O at the origin and the right-pointing arrowhead on the temperature axis read as surface temperature starting at zero on the left and rising to the right, which contradicts the card's point that temperature is drawn backwards with hot stars on the left.; Make the temperature axis itself show that temperature falls to the right, for example by labelling it with hotter at the left end and cooler at the right end, or with an axis label such as Surface temperature (hotter to the left), and drop the O at the origin, which suggests a zero temperature and a zero luminosity that an H-R diagram does not have.",
+  "2026-11-11T11:55:19Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:37Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 3,
@@ -96,6 +101,140 @@
     "hot but dim stars at the lower left, because they are very small. A Sun-like star leaves the main sequence to become a giant, then ends as a white dwarf."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A Hertzsprung-Russell diagram. Luminosity goes up the side. Surface temperature runs along the bottom backwards, with hot stars on the left and cool stars on the right, as the axis name and the arrow say. The main sequence is a band from the upper left to the lower right, with the Sun near its middle. Giants are at the upper right and white dwarfs at the lower left.",
+    "x": {
+     "min": 0.4,
+     "max": 10,
+     "label": "Temperature, hot to cool"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Luminosity"
+    },
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        0.6,
+        9.2
+       ],
+       [
+        1.8,
+        9.4
+       ],
+       [
+        5.2,
+        6.4
+       ],
+       [
+        9.4,
+        2.6
+       ],
+       [
+        9.4,
+        1.2
+       ],
+       [
+        8.6,
+        1.2
+       ],
+       [
+        4.6,
+        5.0
+       ],
+       [
+        0.6,
+        8.0
+       ]
+      ],
+      "label": "main sequence",
+      "at": [
+       3.2,
+       7.3
+      ]
+     },
+     {
+      "type": "shade",
+      "poly": [
+       [
+        6.6,
+        7.0
+       ],
+       [
+        9.4,
+        8.4
+       ],
+       [
+        9.4,
+        6.4
+       ],
+       [
+        7.0,
+        5.6
+       ]
+      ],
+      "label": "giants",
+      "at": [
+       8.2,
+       7.0
+      ]
+     },
+     {
+      "type": "shade",
+      "poly": [
+       [
+        1.0,
+        2.6
+       ],
+       [
+        3.2,
+        1.6
+       ],
+       [
+        3.2,
+        0.8
+       ],
+       [
+        1.0,
+        1.8
+       ]
+      ],
+      "label": "white dwarfs",
+      "at": [
+       2.1,
+       2.9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6.4,
+       4.1
+      ],
+      "label": "Sun",
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       4.6,
+       0.6
+      ],
+      "to": [
+       9.2,
+       0.6
+      ],
+      "label": "cooler",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Position on the H-R diagram shows a star's temperature, luminosity and stage of life.",
   "a": {
    "q": "A star is cool at its surface but has very high luminosity. Where is it on the H-R diagram, and why is it so luminous?",
@@ -121,5 +260,324 @@
    "clue": "Hot surface but little total light means very little surface."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A Hertzsprung-Russell diagram: luminosity up the side, surface temperature along the bottom with hot stars on the left and cool stars on the right, the main sequence band from upper left to lower right with the Sun on it, giants at the upper right and white dwarfs at the lower left.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A Hertzsprung-Russell diagram. Luminosity goes up the side. Surface temperature runs along the bottom with hot stars on the left and cool stars on the right, as the arrow shows. The main sequence is a band from the upper left to the lower right, with the Sun near its middle. Giants are at the upper right and white dwarfs at the lower left.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Surface temperature"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Luminosity"
+     },
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         0.6,
+         9.2
+        ],
+        [
+         1.8,
+         9.4
+        ],
+        [
+         5.2,
+         6.4
+        ],
+        [
+         9.4,
+         2.6
+        ],
+        [
+         9.4,
+         1.2
+        ],
+        [
+         8.6,
+         1.2
+        ],
+        [
+         4.6,
+         5.0
+        ],
+        [
+         0.6,
+         8.0
+        ]
+       ],
+       "label": "main sequence",
+       "at": [
+        3.2,
+        7.3
+       ]
+      },
+      {
+       "type": "shade",
+       "poly": [
+        [
+         6.6,
+         7.0
+        ],
+        [
+         9.4,
+         8.4
+        ],
+        [
+         9.4,
+         6.4
+        ],
+        [
+         7.0,
+         5.6
+        ]
+       ],
+       "label": "giants",
+       "at": [
+        8.2,
+        7.0
+       ]
+      },
+      {
+       "type": "shade",
+       "poly": [
+        [
+         1.0,
+         2.6
+        ],
+        [
+         3.2,
+         1.6
+        ],
+        [
+         3.2,
+         0.8
+        ],
+        [
+         1.0,
+         1.8
+        ]
+       ],
+       "label": "white dwarfs",
+       "at": [
+        2.1,
+        2.9
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6.4,
+        4.1
+       ],
+       "label": "Sun",
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        4.6,
+        0.6
+       ],
+       "to": [
+        9.2,
+        0.6
+       ],
+       "label": "cooler",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:29Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The O at the origin and the right-pointing arrowhead on the temperature axis read as surface temperature starting at zero on the left and rising to the right, which contradicts the card's point that temperature is drawn backwards with hot stars on the left.",
+     "Make the temperature axis itself show that temperature falls to the right, for example by labelling it with hotter at the left end and cooler at the right end, or with an axis label such as Surface temperature (hotter to the left), and drop the O at the origin, which suggests a zero temperature and a zero luminosity that an H-R diagram does not have."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:22Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "A Hertzsprung-Russell diagram: luminosity up the side, surface temperature along the bottom with hot stars on the left and cool stars on the right, the main sequence band from upper left to lower right with the Sun on it, giants at the upper right and white dwarfs at the lower left.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A Hertzsprung-Russell diagram. Luminosity goes up the side. Surface temperature runs along the bottom backwards, with hot stars on the left and cool stars on the right, as the axis name and the arrow say. The main sequence is a band from the upper left to the lower right, with the Sun near its middle. Giants are at the upper right and white dwarfs at the lower left.",
+     "x": {
+      "min": 0.4,
+      "max": 10,
+      "label": "Temperature, hot to cool"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Luminosity"
+     },
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         0.6,
+         9.2
+        ],
+        [
+         1.8,
+         9.4
+        ],
+        [
+         5.2,
+         6.4
+        ],
+        [
+         9.4,
+         2.6
+        ],
+        [
+         9.4,
+         1.2
+        ],
+        [
+         8.6,
+         1.2
+        ],
+        [
+         4.6,
+         5.0
+        ],
+        [
+         0.6,
+         8.0
+        ]
+       ],
+       "label": "main sequence",
+       "at": [
+        3.2,
+        7.3
+       ]
+      },
+      {
+       "type": "shade",
+       "poly": [
+        [
+         6.6,
+         7.0
+        ],
+        [
+         9.4,
+         8.4
+        ],
+        [
+         9.4,
+         6.4
+        ],
+        [
+         7.0,
+         5.6
+        ]
+       ],
+       "label": "giants",
+       "at": [
+        8.2,
+        7.0
+       ]
+      },
+      {
+       "type": "shade",
+       "poly": [
+        [
+         1.0,
+         2.6
+        ],
+        [
+         3.2,
+         1.6
+        ],
+        [
+         3.2,
+         0.8
+        ],
+        [
+         1.0,
+         1.8
+        ]
+       ],
+       "label": "white dwarfs",
+       "at": [
+        2.1,
+        2.9
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        6.4,
+        4.1
+       ],
+       "label": "Sun",
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        4.6,
+        0.6
+       ],
+       "to": [
+        9.2,
+        0.6
+       ],
+       "label": "cooler",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:55:19Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:37Z"
+  }
+ ]
 }

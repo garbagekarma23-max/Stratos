@@ -7,7 +7,10 @@
  "log": [
   "2026-11-01T07:54:21Z new, write",
   "2026-11-01T08:04:36Z write: done",
-  "2026-11-01T08:14:09Z check: passed, cleared"
+  "2026-11-01T08:14:09Z check: passed, cleared",
+  "2026-11-11T11:43:54Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:38Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:48Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -75,6 +78,78 @@
    "The minus sign shows that the spring's restoring force points opposite to the extension. The size of the force is kx.",
    "A stretched or compressed spring stores elastic potential energy. E = ½kx², so doubling the extension makes the stored energy four times greater."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Force against extension for an ideal spring with k = 40 N/m: a straight line through the origin. The stored energy is the area under the line. Up to 0.2 m the area is a small triangle, E. Doubling the extension to 0.4 m makes the area four times as large: the triangle E plus a strip of 3E.",
+    "x": {
+     "min": 0,
+     "max": 0.675,
+     "label": "Extension (m)",
+     "step": 0.1
+    },
+    "y": {
+     "min": 0,
+     "max": 21,
+     "label": "Force (N)",
+     "step": 5
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "f",
+      "span": [
+       0,
+       0.2
+      ],
+      "label": "E",
+      "at": [
+       0.14,
+       1.9
+      ]
+     },
+     {
+      "type": "shade",
+      "under": "f",
+      "span": [
+       0.2,
+       0.4
+      ],
+      "label": "3E",
+      "at": [
+       0.3,
+       4.6
+      ],
+      "hatch": true
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "40x",
+      "domain": [
+       0,
+       0.45
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.2,
+       8
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.4,
+       16
+      ],
+      "xLabel": ""
+     }
+    ]
+   }
+  },
   "remember": "Force is proportional to extension, F = kx in size. Stored energy is ½kx².",
   "a": {
    "q": "A spring stretches 0.10 m when a 5.0 N force is applied. What is its spring constant k, assuming it is ideal?",
@@ -100,5 +175,102 @@
    "clue": "Energy depends on x squared, not x."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Force against extension for an ideal spring: a straight line through the origin. The area under the line up to 0.2 m is E, and up to 0.4 m, double the extension, it is four times as large, E plus 3E.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Force against extension for an ideal spring with k = 40 N/m: a straight line through the origin. The stored energy is the area under the line. Up to 0.2 m the area is a small triangle, E. Doubling the extension to 0.4 m makes the area four times as large: the triangle E plus a strip of 3E.",
+     "x": {
+      "min": 0,
+      "max": 0.675,
+      "label": "Extension (m)",
+      "step": 0.1
+     },
+     "y": {
+      "min": 0,
+      "max": 21,
+      "label": "Force (N)",
+      "step": 5
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "f",
+       "span": [
+        0,
+        0.2
+       ],
+       "label": "E",
+       "at": [
+        0.14,
+        1.9
+       ]
+      },
+      {
+       "type": "shade",
+       "under": "f",
+       "span": [
+        0.2,
+        0.4
+       ],
+       "label": "3E",
+       "at": [
+        0.3,
+        4.6
+       ],
+       "hatch": true
+      },
+      {
+       "type": "fn",
+       "id": "f",
+       "expr": "40x",
+       "domain": [
+        0,
+        0.45
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        0.2,
+        8
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "guide",
+       "at": [
+        0.4,
+        16
+       ],
+       "xLabel": ""
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:38Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:47Z"
+  }
+ ]
 }

@@ -8,7 +8,12 @@
   "2026-10-29T12:14:25Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:22:34Z write: failed the content check, writing again",
   "2026-10-29T12:30:19Z write: done",
-  "2026-10-29T14:07:05Z check: passed, cleared"
+  "2026-10-29T14:07:05Z check: passed, cleared",
+  "2026-11-11T11:44:03Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:26Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:20Z pictures: 1 picture turned down. Picture 1 (graph at card 3): redo, high sure. The shading starts sharply partway through stage 1 (x = 0.6), which shows growth in stage 1 where the card says population stays low and steady; start the shading at the stage 1 and 2 boundary or let it begin from nothing at x = 0.; From the data the gap is widest exactly at the stage 2 and 3 boundary (about 22 per 1000 at x = 2), and the growth label sits on that boundary, so stage 3 looks to grow as fast as stage 2; drop the death rate earlier in stage 2 and keep the birth rate flat until stage 3 so the widest gap, and the label, fall inside stage 2 as the alt text and question a say.; The stages are not marked in the plot: the numbers 1 to 4 float at the top with only small ticks on the bottom axis, so a student cannot easily see where one stage ends; add dashed vertical lines at x = 1, 2 and 3 through the plot.",
+  "2026-11-11T11:55:19Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:35Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 3,
@@ -78,6 +83,195 @@
    "Stage 3: birth rates begin to fall, so the gap narrows and growth slows. Stage 4: birth and death rates are both low, so population levels off.",
    "Birth rates fall later than death rates because family habits and beliefs about family size change slowly. Some versions of the model add a fifth stage, where birth rates fall below death rates."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The demographic transition model: birth rate and death rate across stages 1 to 4, with a dashed line between each stage. In stage 1 both are high and close together. In stage 2 the death rate falls fast but the birth rate stays high, so the shaded gap, the population's natural increase, grows widest. In stage 3 the birth rate falls and the gap narrows. In stage 4 both are low.",
+    "x": {
+     "min": 0,
+     "max": 4,
+     "label": "Stage",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": 0,
+     "max": 50,
+     "label": "Rate per 1000 people"
+    },
+    "items": [
+     {
+      "type": "shade",
+      "between": [
+       "b",
+       "d"
+      ],
+      "span": [
+       1,
+       4
+      ],
+      "label": "growth",
+      "at": [
+       1.7,
+       27
+      ]
+     },
+     {
+      "type": "curve",
+      "id": "b",
+      "points": [
+       [
+        0,
+        40
+       ],
+       [
+        1,
+        40
+       ],
+       [
+        1.8,
+        40
+       ],
+       [
+        2.1,
+        37
+       ],
+       [
+        2.5,
+        28
+       ],
+       [
+        3,
+        19
+       ],
+       [
+        3.5,
+        14
+       ],
+       [
+        4,
+        13
+       ]
+      ],
+      "smooth": true,
+      "label": "birth rate",
+      "labelAt": 2.9,
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        0,
+        38
+       ],
+       [
+        0.5,
+        36
+       ],
+       [
+        1,
+        37
+       ],
+       [
+        1.2,
+        31
+       ],
+       [
+        1.4,
+        22
+       ],
+       [
+        1.7,
+        15
+       ],
+       [
+        2,
+        14
+       ],
+       [
+        2.5,
+        12.5
+       ],
+       [
+        3,
+        12
+       ],
+       [
+        4,
+        11
+       ]
+      ],
+      "smooth": true,
+      "label": "death rate",
+      "labelAt": 3.4,
+      "pos": "below",
+      "style": "dash"
+     },
+     {
+      "type": "guide",
+      "at": [
+       1,
+       48
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       48
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "guide",
+      "at": [
+       3,
+       48
+      ],
+      "xLabel": ""
+     },
+     {
+      "type": "text",
+      "at": [
+       0.5,
+       46
+      ],
+      "label": "1",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       1.5,
+       46
+      ],
+      "label": "2",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       2.5,
+       46
+      ],
+      "label": "3",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       3.5,
+       46
+      ],
+      "label": "4",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Death rates fall first and birth rates follow later, so growth is fastest in between.",
   "a": {
    "q": "Why does a country's population grow fastest in Stage 2 of the model?",
@@ -103,5 +297,403 @@
    "clue": "Slow growth happens in more than one stage. Check the size of each rate."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The demographic transition model: birth rate and death rate across stages 1 to 4. Both high in stage 1; the death rate falls in stage 2 while the birth rate stays high; the birth rate falls in stage 3; both low in stage 4. The gap between them, natural increase, is shaded.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The demographic transition model: birth rate and death rate across stages 1 to 4. In stage 1 both are high. In stage 2 the death rate falls but the birth rate stays high, so the shaded gap, the population's natural increase, is widest. In stage 3 the birth rate falls and the gap narrows. In stage 4 both are low.",
+     "x": {
+      "min": 0,
+      "max": 4,
+      "label": "Stage",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 50,
+      "label": "Rate per 1000 people"
+     },
+     "items": [
+      {
+       "type": "shade",
+       "between": [
+        "b",
+        "d"
+       ],
+       "span": [
+        0.6,
+        3.6
+       ],
+       "label": "growth",
+       "at": [
+        2.0,
+        26
+       ]
+      },
+      {
+       "type": "curve",
+       "id": "b",
+       "points": [
+        [
+         0,
+         40
+        ],
+        [
+         1,
+         40
+        ],
+        [
+         1.6,
+         39
+        ],
+        [
+         2,
+         37
+        ],
+        [
+         2.5,
+         28
+        ],
+        [
+         3,
+         18
+        ],
+        [
+         3.5,
+         13
+        ],
+        [
+         4,
+         12
+        ]
+       ],
+       "smooth": true,
+       "label": "birth rate",
+       "labelAt": 2.9,
+       "pos": "above-right"
+      },
+      {
+       "type": "curve",
+       "id": "d",
+       "points": [
+        [
+         0,
+         38
+        ],
+        [
+         0.6,
+         37
+        ],
+        [
+         1,
+         34
+        ],
+        [
+         1.5,
+         22
+        ],
+        [
+         2,
+         15
+        ],
+        [
+         2.5,
+         12
+        ],
+        [
+         3,
+         11
+        ],
+        [
+         4,
+         10
+        ]
+       ],
+       "smooth": true,
+       "label": "death rate",
+       "style": "dash",
+       "labelAt": 3.4,
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        0.5,
+        46
+       ],
+       "label": "1",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.5,
+        46
+       ],
+       "label": "2",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        2.5,
+        46
+       ],
+       "label": "3",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.5,
+        46
+       ],
+       "label": "4",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:26Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The shading starts sharply partway through stage 1 (x = 0.6), which shows growth in stage 1 where the card says population stays low and steady; start the shading at the stage 1 and 2 boundary or let it begin from nothing at x = 0.",
+     "From the data the gap is widest exactly at the stage 2 and 3 boundary (about 22 per 1000 at x = 2), and the growth label sits on that boundary, so stage 3 looks to grow as fast as stage 2; drop the death rate earlier in stage 2 and keep the birth rate flat until stage 3 so the widest gap, and the label, fall inside stage 2 as the alt text and question a say.",
+     "The stages are not marked in the plot: the numbers 1 to 4 float at the top with only small ticks on the bottom axis, so a student cannot easily see where one stage ends; add dashed vertical lines at x = 1, 2 and 3 through the plot."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:19Z"
+  },
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "The demographic transition model: birth rate and death rate across stages 1 to 4. Both high in stage 1; the death rate falls in stage 2 while the birth rate stays high; the birth rate falls in stage 3; both low in stage 4. The gap between them, natural increase, is shaded.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The demographic transition model: birth rate and death rate across stages 1 to 4, with a dashed line between each stage. In stage 1 both are high and close together. In stage 2 the death rate falls fast but the birth rate stays high, so the shaded gap, the population's natural increase, grows widest. In stage 3 the birth rate falls and the gap narrows. In stage 4 both are low.",
+     "x": {
+      "min": 0,
+      "max": 4,
+      "label": "Stage",
+      "step": 1,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 50,
+      "label": "Rate per 1000 people"
+     },
+     "items": [
+      {
+       "type": "shade",
+       "between": [
+        "b",
+        "d"
+       ],
+       "span": [
+        1,
+        4
+       ],
+       "label": "growth",
+       "at": [
+        1.7,
+        27
+       ]
+      },
+      {
+       "type": "curve",
+       "id": "b",
+       "points": [
+        [
+         0,
+         40
+        ],
+        [
+         1,
+         40
+        ],
+        [
+         1.8,
+         40
+        ],
+        [
+         2.1,
+         37
+        ],
+        [
+         2.5,
+         28
+        ],
+        [
+         3,
+         19
+        ],
+        [
+         3.5,
+         14
+        ],
+        [
+         4,
+         13
+        ]
+       ],
+       "smooth": true,
+       "label": "birth rate",
+       "labelAt": 2.9,
+       "pos": "above-right"
+      },
+      {
+       "type": "curve",
+       "id": "d",
+       "points": [
+        [
+         0,
+         38
+        ],
+        [
+         0.5,
+         36
+        ],
+        [
+         1,
+         37
+        ],
+        [
+         1.2,
+         31
+        ],
+        [
+         1.4,
+         22
+        ],
+        [
+         1.7,
+         15
+        ],
+        [
+         2,
+         14
+        ],
+        [
+         2.5,
+         12.5
+        ],
+        [
+         3,
+         12
+        ],
+        [
+         4,
+         11
+        ]
+       ],
+       "smooth": true,
+       "label": "death rate",
+       "labelAt": 3.4,
+       "pos": "below",
+       "style": "dash"
+      },
+      {
+       "type": "guide",
+       "at": [
+        1,
+        48
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        48
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "guide",
+       "at": [
+        3,
+        48
+       ],
+       "xLabel": ""
+      },
+      {
+       "type": "text",
+       "at": [
+        0.5,
+        46
+       ],
+       "label": "1",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.5,
+        46
+       ],
+       "label": "2",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        2.5,
+        46
+       ],
+       "label": "3",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.5,
+        46
+       ],
+       "label": "4",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:55:18Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:34Z"
+  }
+ ]
 }

@@ -7,7 +7,10 @@
   "2026-10-26T13:30:03Z new, write",
   "2026-10-27T00:53:13Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:10Z write: done",
-  "2026-10-27T01:08:35Z check: passed, cleared"
+  "2026-10-27T01:08:35Z check: passed, cleared",
+  "2026-11-11T11:43:51Z pictures: the owner asked for a graph at card 1",
+  "2026-11-11T11:44:28Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -76,6 +79,45 @@
    "Escape velocity is the launch speed needed to leave a planet's gravity with no further thrust. The object must reach infinity with at least zero kinetic energy.",
    "So the starting kinetic energy must cancel the negative U: ½mv² = GMm/r. This gives v = √(2GM/r). The mass m cancels, so escape velocity does not depend on the mass of the object."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "Gravitational potential energy against the distance between the centres. The curve is below the axis everywhere, so U is negative. It rises steeply at first and then flattens, getting closer and closer to zero as the distance grows, without reaching it.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "\\(r\\)"
+    },
+    "y": {
+     "min": -5.5,
+     "max": 1.6,
+     "label": "Energy, U"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "u",
+      "expr": "-\\frac{4}{x}",
+      "domain": [
+       0.75,
+       8.6
+      ],
+      "label": "\\(U = -\\frac{GMm}{r}\\)",
+      "labelAt": 3,
+      "pos": "below-right"
+     },
+     {
+      "type": "text",
+      "at": [
+       7.4,
+       -0.6
+      ],
+      "label": "U rises to 0",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "U is negative and rises to zero at infinity. Escape speed is the launch speed that makes total energy zero.",
   "a": {
    "q": "A rocket moves from the Earth's surface to a point far above it. What happens to its gravitational potential energy U?",
@@ -101,5 +143,69 @@
    "clue": "Look at what happens to m when kinetic energy is set equal to GMm/r."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Gravitational potential energy U against distance r between centres: U = -GMm/r, negative everywhere, rising towards zero as r grows.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Gravitational potential energy against the distance between the centres. The curve is below the axis everywhere, so U is negative. It rises steeply at first and then flattens, getting closer and closer to zero as the distance grows, without reaching it.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "\\(r\\)"
+     },
+     "y": {
+      "min": -5.5,
+      "max": 1.6,
+      "label": "Energy, U"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "u",
+       "expr": "-\\frac{4}{x}",
+       "domain": [
+        0.75,
+        8.6
+       ],
+       "label": "\\(U = -\\frac{GMm}{r}\\)",
+       "labelAt": 3,
+       "pos": "below-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        7.4,
+        -0.6
+       ],
+       "label": "U rises to 0",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:28Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:21Z"
+  }
+ ]
 }

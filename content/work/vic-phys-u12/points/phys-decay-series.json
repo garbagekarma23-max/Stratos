@@ -17,7 +17,12 @@
   "2026-11-01T07:54:21Z new, match",
   "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:10Z write: done",
-  "2026-11-01T08:24:34Z check: passed, cleared"
+  "2026-11-01T08:24:34Z check: passed, cleared",
+  "2026-11-11T11:43:53Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:37Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:46Z pictures: 1 picture turned down. Picture 1 (graph at card 3): redo, high sure. The label Pa-234, placed below its dot, runs into the lower alpha arrow from U-234: the arrow's line touches the end of the label in both light and dark, so move the label (for example to below-left) or start the arrow further from it.; The two beta arrows are labelled only β, but the card names them beta-minus decays and question b offers beta-plus as an option, so they should read β⁻ (beta-minus) to match the card.; The x-axis has ticks at 93, 94 and 95 with no numbers, because the axis label sits there; end the axis nearer 93 or move the label so every tick shown has its number.",
+  "2026-11-11T12:03:02Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:03:38Z pictures: 1 picture turned down. Picture 1 (graph at card 3): redo, high sure. The first beta-minus label sits against the arrowhead of the first alpha arrow near Th-234, so the two run into each other; move the label or shorten the alpha arrow so they are clear.; The Pa-234 label sits under the first beta-minus arrow, between the Th-234 dot and the Pa-234 dot, so it is not clear which dot it names; put it directly under or above the Pa-234 dot.; The x-axis is labelled only Z while the y-axis says Mass number, A; label it Atomic number, Z to match the card line.. Now waiting for you: graph at card 3"
  ],
  "sent": {
   "match": 1,
@@ -118,7 +123,317 @@
    ],
    "why": "A falls by 4 and Z falls by 2, which matches an alpha particle. Beta-minus would leave A unchanged and raise Z by 1.",
    "clue": "Compare the change in A and the change in Z with each decay."
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "A decay series diagram, mass number A against atomic number Z, for the start of the uranium-238 series: U-238 to Th-234 by alpha decay, Th-234 to Pa-234 and Pa-234 to U-234 by beta-minus decay, then U-234 to Th-230 by alpha decay.",
+    "tries": 2,
+    "notes": [
+     [
+      "The label Pa-234, placed below its dot, runs into the lower alpha arrow from U-234: the arrow's line touches the end of the label in both light and dark, so move the label (for example to below-left) or start the arrow further from it.",
+      "The two beta arrows are labelled only β, but the card names them beta-minus decays and question b offers beta-plus as an option, so they should read β⁻ (beta-minus) to match the card.",
+      "The x-axis has ticks at 93, 94 and 95 with no numbers, because the axis label sits there; end the axis nearer 93 or move the label so every tick shown has its number."
+     ],
+     [
+      "The first beta-minus label sits against the arrowhead of the first alpha arrow near Th-234, so the two run into each other; move the label or shorten the alpha arrow so they are clear.",
+      "The Pa-234 label sits under the first beta-minus arrow, between the Th-234 dot and the Pa-234 dot, so it is not clear which dot it names; put it directly under or above the Pa-234 dot.",
+      "The x-axis is labelled only Z while the y-axis says Mass number, A; label it Atomic number, Z to match the card line."
+     ]
+    ]
+   }
+  ]
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A decay series diagram, mass number A against atomic number Z, for the start of the uranium-238 series: U-238 to Th-234 by alpha decay, Th-234 to Pa-234 and Pa-234 to U-234 by beta-minus decay, then U-234 to Th-230 by alpha decay.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A decay series diagram for the first steps of the uranium-238 series, with mass number A up the side and atomic number Z along the bottom. Each isotope is a dot and each decay is an arrow. Alpha decays go down 4 and left 2: U-238 to Th-234, and U-234 to Th-230. Beta-minus decays go 1 to the right at the same height: Th-234 to Pa-234, and Pa-234 to U-234.",
+     "x": {
+      "min": 88,
+      "max": 95.75,
+      "label": "Atomic number, Z",
+      "step": 1
+     },
+     "y": {
+      "min": 228,
+      "max": 240,
+      "label": "Mass number, A",
+      "step": 2
+     },
+     "items": [
+      {
+       "type": "point",
+       "at": [
+        92,
+        238
+       ],
+       "label": "U-238",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        90,
+        234
+       ],
+       "label": "Th-234",
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        91,
+        234
+       ],
+       "label": "Pa-234",
+       "pos": "below"
+      },
+      {
+       "type": "point",
+       "at": [
+        92,
+        234
+       ],
+       "label": "U-234",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        90,
+        230
+       ],
+       "label": "Th-230",
+       "pos": "left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        91.8,
+        237.6
+       ],
+       "to": [
+        90.2,
+        234.4
+       ],
+       "label": "α",
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        90.25,
+        234
+       ],
+       "to": [
+        90.75,
+        234
+       ],
+       "label": "β",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        91.25,
+        234
+       ],
+       "to": [
+        91.75,
+        234
+       ],
+       "label": "β",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        91.8,
+        233.6
+       ],
+       "to": [
+        90.2,
+        230.4
+       ],
+       "label": "α",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:36Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The label Pa-234, placed below its dot, runs into the lower alpha arrow from U-234: the arrow's line touches the end of the label in both light and dark, so move the label (for example to below-left) or start the arrow further from it.",
+     "The two beta arrows are labelled only β, but the card names them beta-minus decays and question b offers beta-plus as an option, so they should read β⁻ (beta-minus) to match the card.",
+     "The x-axis has ticks at 93, 94 and 95 with no numbers, because the axis label sits there; end the axis nearer 93 or move the label so every tick shown has its number."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:45Z"
+  },
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A decay series diagram, mass number A against atomic number Z, for the start of the uranium-238 series: U-238 to Th-234 by alpha decay, Th-234 to Pa-234 and Pa-234 to U-234 by beta-minus decay, then U-234 to Th-230 by alpha decay.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A decay series diagram for the first steps of the uranium-238 series, with mass number A up the side and atomic number Z along the bottom. Each isotope is a dot and each decay is an arrow. Alpha decays go down 4 and left 2: U-238 to Th-234, and U-234 to Th-230. Beta-minus decays, marked β⁻, go 1 to the right at the same height: Th-234 to Pa-234, and Pa-234 to U-234.",
+     "x": {
+      "min": 88,
+      "max": 93.5,
+      "label": "Z",
+      "step": 1
+     },
+     "y": {
+      "min": 228,
+      "max": 240,
+      "label": "Mass number, A",
+      "step": 2
+     },
+     "items": [
+      {
+       "type": "point",
+       "at": [
+        92,
+        238
+       ],
+       "label": "U-238",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        90,
+        234
+       ],
+       "label": "Th-234",
+       "pos": "left"
+      },
+      {
+       "type": "point",
+       "at": [
+        91,
+        234
+       ],
+       "label": "Pa-234",
+       "pos": "below-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        92,
+        234
+       ],
+       "label": "U-234",
+       "pos": "right"
+      },
+      {
+       "type": "point",
+       "at": [
+        90,
+        230
+       ],
+       "label": "Th-230",
+       "pos": "left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        91.8,
+        237.6
+       ],
+       "to": [
+        90.2,
+        234.4
+       ],
+       "label": "α",
+       "pos": "above-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        90.25,
+        234
+       ],
+       "to": [
+        90.75,
+        234
+       ],
+       "label": "β⁻",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        91.25,
+        234
+       ],
+       "to": [
+        91.75,
+        234
+       ],
+       "label": "β⁻",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        91.8,
+        233.6
+       ],
+       "to": [
+        90.2,
+        230.4
+       ],
+       "label": "α",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T12:03:01Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "The first beta-minus label sits against the arrowhead of the first alpha arrow near Th-234, so the two run into each other; move the label or shorten the alpha arrow so they are clear.",
+     "The Pa-234 label sits under the first beta-minus arrow, between the Th-234 dot and the Pa-234 dot, so it is not clear which dot it names; put it directly under or above the Pa-234 dot.",
+     "The x-axis is labelled only Z while the y-axis says Mass number, A; label it Atomic number, Z to match the card line."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:03:38Z"
+  }
+ ]
 }

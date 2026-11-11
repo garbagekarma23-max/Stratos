@@ -9,7 +9,11 @@
   "2026-10-27T01:00:07Z write: done",
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:59Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-11T11:43:55Z pictures: the owner asked for a graph at card 1",
+  "2026-11-11T11:43:55Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:24Z pictures: 2 pictures waiting for the check",
+  "2026-11-11T11:49:24Z pictures: 2 pictures kept"
  ],
  "sent": {
   "write": 2,
@@ -202,6 +206,100 @@
    ],
    "Always convert temperature to kelvin first: K = °C + 273.15. Celsius cannot be used, because 0°C is not absolute zero."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "Boyle's law: pressure against volume for a fixed amount of gas at constant temperature. The curve falls as the volume rises, because pressure is inversely proportional to volume. Halving the volume from 4 L to 2 L doubles the pressure from 100 kPa to 200 kPa.",
+    "x": {
+     "min": 0,
+     "max": 11,
+     "label": "Volume (L)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 250,
+     "label": "Pressure (kPa)",
+     "step": 50
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "p",
+      "expr": "\\frac{400}{x}",
+      "domain": [
+       1.7,
+       10.5
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       200
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       200
+      ],
+      "on": [
+       "p"
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       100
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       100
+      ],
+      "on": [
+       "p"
+      ]
+     }
+    ]
+   },
+   "2": {
+    "kind": "graph",
+    "alt": "Charles's law: volume against temperature in kelvin for a fixed amount of gas at constant pressure. The graph is a straight line through the origin, so volume is directly proportional to the kelvin temperature. The line meets zero volume at 0 K, absolute zero.",
+    "x": {
+     "min": 0,
+     "max": 450,
+     "label": "Temperature (K)",
+     "step": 100
+    },
+    "y": {
+     "min": 0,
+     "max": 30,
+     "label": "Volume (L)",
+     "step": 5
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "v",
+      "expr": "0.06x",
+      "domain": [
+       0,
+       420
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Each law keeps the amount of gas and one other quantity constant. Temperature must be in kelvin.",
   "a": {
    "q": "A sealed syringe of air is pushed in at constant temperature, halving its volume. What happens to the gas pressure?",
@@ -227,5 +325,149 @@
    "clue": "Convert both temperatures to kelvin before you divide."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Boyle's law: pressure against volume at constant temperature, a curve falling as volume rises; halving the volume from 4 L to 2 L doubles the pressure from 100 kPa to 200 kPa.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Boyle's law: pressure against volume for a fixed amount of gas at constant temperature. The curve falls as the volume rises, because pressure is inversely proportional to volume. Halving the volume from 4 L to 2 L doubles the pressure from 100 kPa to 200 kPa.",
+     "x": {
+      "min": 0,
+      "max": 11,
+      "label": "Volume (L)",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 250,
+      "label": "Pressure (kPa)",
+      "step": 50
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "p",
+       "expr": "\\frac{400}{x}",
+       "domain": [
+        1.7,
+        10.5
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        200
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        200
+       ],
+       "on": [
+        "p"
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        100
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        100
+       ],
+       "on": [
+        "p"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:23Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:23Z"
+  },
+  {
+   "want": 2,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Charles's law: volume against temperature in kelvin at constant pressure, a straight line through the origin at 0 K.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Charles's law: volume against temperature in kelvin for a fixed amount of gas at constant pressure. The graph is a straight line through the origin, so volume is directly proportional to the kelvin temperature. The line meets zero volume at 0 K, absolute zero.",
+     "x": {
+      "min": 0,
+      "max": 450,
+      "label": "Temperature (K)",
+      "step": 100
+     },
+     "y": {
+      "min": 0,
+      "max": 30,
+      "label": "Volume (L)",
+      "step": 5
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "v",
+       "expr": "0.06x",
+       "domain": [
+        0,
+        420
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:23Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:23Z"
+  }
+ ]
 }

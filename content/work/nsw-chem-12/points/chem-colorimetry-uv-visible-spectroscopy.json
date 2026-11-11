@@ -10,7 +10,10 @@
   "2026-10-27T01:08:34Z check: flagged",
   "2026-10-27T01:22:59Z fix: suggested",
   "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-28T11:49:19Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:49:19Z review: approved with the fix (a spot check)",
+  "2026-11-11T11:43:56Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:25Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:25Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -165,6 +168,109 @@
    "Measure the absorbance of several standards, which are solutions of known concentration. Plot absorbance against concentration to make a calibration curve, then read the unknown's concentration from its absorbance.",
    "The curve is only reliable within the range of the standards. If the unknown's absorbance is too high, dilute it, remeasure, then multiply by the dilution factor."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A calibration curve: absorbance against concentration for five standards, which lie on a straight line through the origin. An unknown with an absorbance of 0.40 is read across to the line and down, giving a concentration of 0.05 mol/L, inside the range of the standards.",
+    "x": {
+     "min": 0,
+     "max": 0.14,
+     "label": "Concentration (mol/L)",
+     "step": 0.02,
+     "nums": false
+    },
+    "y": {
+     "min": 0,
+     "max": 1.0,
+     "label": "Absorbance",
+     "step": 0.2,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "c",
+      "expr": "8x",
+      "domain": [
+       0,
+       0.11000000000000001
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.02,
+       0.16
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.04,
+       0.32
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.06,
+       0.48
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.08,
+       0.64
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.1,
+       0.8
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       0.05,
+       0.4
+      ],
+      "xLabel": "0.05",
+      "yLabel": "0.40"
+     },
+     {
+      "type": "point",
+      "at": [
+       0.05,
+       0.4
+      ],
+      "on": [
+       "c"
+      ],
+      "open": true,
+      "label": "unknown",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
   "remember": "Standards of known concentration give a curve that turns a measured absorbance into a concentration.",
   "a": {
    "q": "Why is a calibration curve needed to find the concentration of a copper(II) sulfate solution by colorimetry?",
@@ -190,5 +296,133 @@
    "clue": "Is the sample's reading inside the range the curve covers?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A calibration curve: absorbance against concentration, five standards on a straight line through the origin, and an unknown's absorbance read across to the line and down to its concentration.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A calibration curve: absorbance against concentration for five standards, which lie on a straight line through the origin. An unknown with an absorbance of 0.40 is read across to the line and down, giving a concentration of 0.05 mol/L, inside the range of the standards.",
+     "x": {
+      "min": 0,
+      "max": 0.14,
+      "label": "Concentration (mol/L)",
+      "step": 0.02,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 1.0,
+      "label": "Absorbance",
+      "step": 0.2,
+      "nums": false
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "c",
+       "expr": "8x",
+       "domain": [
+        0,
+        0.11000000000000001
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.02,
+        0.16
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.04,
+        0.32
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.06,
+        0.48
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.08,
+        0.64
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.1,
+        0.8
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        0.05,
+        0.4
+       ],
+       "xLabel": "0.05",
+       "yLabel": "0.40"
+      },
+      {
+       "type": "point",
+       "at": [
+        0.05,
+        0.4
+       ],
+       "on": [
+        "c"
+       ],
+       "open": true,
+       "label": "unknown",
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:25Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:25Z"
+  }
+ ]
 }

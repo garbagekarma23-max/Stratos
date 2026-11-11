@@ -7,7 +7,10 @@
   "2026-10-26T13:29:58Z new, write",
   "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:07Z write: done",
-  "2026-10-27T01:08:34Z check: passed, cleared"
+  "2026-10-27T01:08:34Z check: passed, cleared",
+  "2026-11-11T11:43:55Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:24Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:24Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -88,6 +91,114 @@
    ],
    "A catalyst is not used up in the reaction. It can be recovered at the end, and it does not change the products that form."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Energy profiles for the same reaction without a catalyst (dashed) and with a catalyst (solid). Both start at the same reactants' level and end at the same products' level, but the catalysed path has a lower peak, so it has a lower activation energy. An arrow points down from the higher peak to the lower one.",
+    "x": {
+     "min": 0,
+     "max": 12,
+     "label": "Progress of reaction"
+    },
+    "y": {
+     "min": 0,
+     "max": 11.5,
+     "label": "Energy"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "n",
+      "points": [
+       [
+        0,
+        4
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        6,
+        9
+       ],
+       [
+        9,
+        2
+       ],
+       [
+        12,
+        2
+       ]
+      ],
+      "smooth": true,
+      "label": "no catalyst",
+      "style": "dash",
+      "labelAt": 6,
+      "pos": "above"
+     },
+     {
+      "type": "curve",
+      "id": "c",
+      "points": [
+       [
+        0,
+        4
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        6,
+        6.2
+       ],
+       [
+        9,
+        2
+       ],
+       [
+        12,
+        2
+       ]
+      ],
+      "smooth": true,
+      "label": "with catalyst",
+      "labelAt": 7.8,
+      "pos": "below-left"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       6,
+       8.7
+      ],
+      "to": [
+       6,
+       6.5
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       1.5,
+       4
+      ],
+      "label": "reactants",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       10.5,
+       2
+      ],
+      "label": "products",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "A catalyst lowers the activation energy, so more collisions succeed, and it is not used up.",
   "a": {
    "q": "How does a catalyst make a reaction faster?",
@@ -113,5 +224,138 @@
    "clue": "Is a catalyst a reactant that gets used up?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Energy profile for one reaction without a catalyst (dashed, higher peak) and with a catalyst (solid, lower peak), the same reactants and products, an arrow down from the higher peak to the lower one.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Energy profiles for the same reaction without a catalyst (dashed) and with a catalyst (solid). Both start at the same reactants' level and end at the same products' level, but the catalysed path has a lower peak, so it has a lower activation energy. An arrow points down from the higher peak to the lower one.",
+     "x": {
+      "min": 0,
+      "max": 12,
+      "label": "Progress of reaction"
+     },
+     "y": {
+      "min": 0,
+      "max": 11.5,
+      "label": "Energy"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "n",
+       "points": [
+        [
+         0,
+         4
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         6,
+         9
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         12,
+         2
+        ]
+       ],
+       "smooth": true,
+       "label": "no catalyst",
+       "style": "dash",
+       "labelAt": 6,
+       "pos": "above"
+      },
+      {
+       "type": "curve",
+       "id": "c",
+       "points": [
+        [
+         0,
+         4
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         6,
+         6.2
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         12,
+         2
+        ]
+       ],
+       "smooth": true,
+       "label": "with catalyst",
+       "labelAt": 7.8,
+       "pos": "below-left"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        6,
+        8.7
+       ],
+       "to": [
+        6,
+        6.5
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        1.5,
+        4
+       ],
+       "label": "reactants",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        10.5,
+        2
+       ],
+       "label": "products",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:24Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:24Z"
+  }
+ ]
 }

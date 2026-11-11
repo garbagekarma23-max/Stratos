@@ -20,7 +20,10 @@
   "2026-11-01T08:24:30Z write: done",
   "2026-11-01T08:33:49Z check: flagged",
   "2026-11-01T08:42:05Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b wording)"
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b wording)",
+  "2026-11-11T11:43:57Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:33Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:41Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -161,6 +164,86 @@
    "For most solids, solubility rises as temperature rises, so the curve slopes up. If a saturated solution is cooled, the extra solute comes out as crystals.",
    "For gases, solubility falls as temperature rises, so the curve slopes down. A warm drink holds less dissolved carbon dioxide than a cold one."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A solubility curve for a solid in water: solubility, in grams per 100 g of water, against temperature. The curve rises, so the solid dissolves better when hot. A point on the curve, at 30 °C and 46 g, is a saturated solution. A point below the curve, at 60 °C and 50 g, is unsaturated: more solid can still dissolve.",
+    "x": {
+     "min": 0,
+     "max": 80,
+     "label": "Temperature (°C)",
+     "step": 20
+    },
+    "y": {
+     "min": 0,
+     "max": 150,
+     "label": "Solubility (g/100 g)",
+     "step": 50
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "s",
+      "points": [
+       [
+        0,
+        13
+       ],
+       [
+        10,
+        21
+       ],
+       [
+        20,
+        32
+       ],
+       [
+        30,
+        46
+       ],
+       [
+        40,
+        64
+       ],
+       [
+        50,
+        85
+       ],
+       [
+        60,
+        110
+       ],
+       [
+        70,
+        138
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "point",
+      "at": [
+       30,
+       46
+      ],
+      "on": [
+       "s"
+      ],
+      "label": "saturated",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       60,
+       50
+      ],
+      "label": "unsaturated",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Solids usually dissolve better when hot. Gases dissolve better when cold.",
   "a": {
    "q": "A solubility curve shows a solid dissolving at 40 g per 100 g of water at 50 °C. A solution at 50 °C holds 25 g in 100 g of water. How is it best described?",
@@ -186,5 +269,110 @@
    "clue": "Think about how much solid the water can hold once it is cooler."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A solubility curve for a solid in water: solubility against temperature, rising. A point on the curve is marked saturated, and a point below the curve is marked unsaturated.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A solubility curve for a solid in water: solubility, in grams per 100 g of water, against temperature. The curve rises, so the solid dissolves better when hot. A point on the curve, at 30 °C and 46 g, is a saturated solution. A point below the curve, at 60 °C and 50 g, is unsaturated: more solid can still dissolve.",
+     "x": {
+      "min": 0,
+      "max": 80,
+      "label": "Temperature (°C)",
+      "step": 20
+     },
+     "y": {
+      "min": 0,
+      "max": 150,
+      "label": "Solubility (g/100 g)",
+      "step": 50
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         0,
+         13
+        ],
+        [
+         10,
+         21
+        ],
+        [
+         20,
+         32
+        ],
+        [
+         30,
+         46
+        ],
+        [
+         40,
+         64
+        ],
+        [
+         50,
+         85
+        ],
+        [
+         60,
+         110
+        ],
+        [
+         70,
+         138
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "point",
+       "at": [
+        30,
+        46
+       ],
+       "on": [
+        "s"
+       ],
+       "label": "saturated",
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        60,
+        50
+       ],
+       "label": "unsaturated",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:33Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:41Z"
+  }
+ ]
 }

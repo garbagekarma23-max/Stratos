@@ -9,7 +9,10 @@
   "2026-10-27T01:00:08Z write: done",
   "2026-10-27T01:08:34Z check: passed, cleared",
   "2026-10-29T11:03:04Z rebalance: new wrong options for question a, waiting for the check",
-  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a",
+  "2026-11-11T11:43:56Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:25Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:26Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -82,6 +85,134 @@
    "The peak with the highest m/z is usually the molecular ion. Its m/z value equals the molar mass of the molecule, in g/mol.",
    "The gaps between peaks show which pieces were lost. A loss of 15 fits a CH3 group, and a loss of 29 fits a C2H5 group. The pattern of fragments gives clues to the structure."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A mass spectrum: relative abundance against mass-to-charge ratio, with each peak a thin bar. The peak with the highest m/z, at 46, is the molecular ion, so the molar mass is 46 g/mol. The tallest peak is at 31, which is 46 minus 15: the loss of a CH3 group. Smaller peaks are at 15, 27, 29 and 45.",
+    "x": {
+     "min": 0,
+     "max": 70,
+     "label": "m/z",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 135,
+     "label": "Abundance (%)",
+     "step": 20
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "s",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        15,
+        0
+       ],
+       [
+        15,
+        6
+       ],
+       [
+        15,
+        0
+       ],
+       [
+        27,
+        0
+       ],
+       [
+        27,
+        22
+       ],
+       [
+        27,
+        0
+       ],
+       [
+        29,
+        0
+       ],
+       [
+        29,
+        23
+       ],
+       [
+        29,
+        0
+       ],
+       [
+        31,
+        0
+       ],
+       [
+        31,
+        100
+       ],
+       [
+        31,
+        0
+       ],
+       [
+        45,
+        0
+       ],
+       [
+        45,
+        51
+       ],
+       [
+        45,
+        0
+       ],
+       [
+        46,
+        0
+       ],
+       [
+        46,
+        17
+       ],
+       [
+        46,
+        0
+       ],
+       [
+        70,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       47,
+       17
+      ],
+      "label": "molecular ion",
+      "pos": "right"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       46,
+       110
+      ],
+      "to": [
+       31.6,
+       110
+      ],
+      "label": "loss of 15, CH3",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "The molecular ion peak gives the molar mass. The fragment peaks give clues to the structure.",
   "a": {
    "q": "A compound has a mass spectrum with its highest m/z peak at 72. What does this peak most likely show?",
@@ -137,5 +268,158 @@
     "The compound has a CH3 group of mass 72"
    ]
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A mass spectrum: abundance against m/z, with peaks as thin bars. The highest m/z peak, at 46, is the molecular ion. The tallest peak is at 31, which is 46 minus 15, so the molecule has lost a CH3 group.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A mass spectrum: relative abundance against mass-to-charge ratio, with each peak a thin bar. The peak with the highest m/z, at 46, is the molecular ion, so the molar mass is 46 g/mol. The tallest peak is at 31, which is 46 minus 15: the loss of a CH3 group. Smaller peaks are at 15, 27, 29 and 45.",
+     "x": {
+      "min": 0,
+      "max": 70,
+      "label": "m/z",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 135,
+      "label": "Abundance (%)",
+      "step": 20
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         15,
+         0
+        ],
+        [
+         15,
+         6
+        ],
+        [
+         15,
+         0
+        ],
+        [
+         27,
+         0
+        ],
+        [
+         27,
+         22
+        ],
+        [
+         27,
+         0
+        ],
+        [
+         29,
+         0
+        ],
+        [
+         29,
+         23
+        ],
+        [
+         29,
+         0
+        ],
+        [
+         31,
+         0
+        ],
+        [
+         31,
+         100
+        ],
+        [
+         31,
+         0
+        ],
+        [
+         45,
+         0
+        ],
+        [
+         45,
+         51
+        ],
+        [
+         45,
+         0
+        ],
+        [
+         46,
+         0
+        ],
+        [
+         46,
+         17
+        ],
+        [
+         46,
+         0
+        ],
+        [
+         70,
+         0
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        47,
+        17
+       ],
+       "label": "molecular ion",
+       "pos": "right"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        46,
+        110
+       ],
+       "to": [
+        31.6,
+        110
+       ],
+       "label": "loss of 15, CH3",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:25Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:25Z"
+  }
+ ]
 }

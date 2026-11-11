@@ -23,7 +23,10 @@
   "2026-11-01T14:56:05Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T15:05:30Z write: failed the content check, writing again",
   "2026-11-01T15:14:48Z write: done",
-  "2026-11-01T17:33:07Z check: passed, cleared"
+  "2026-11-01T17:33:07Z check: passed, cleared",
+  "2026-11-11T11:44:00Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:35Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:44Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -103,6 +106,85 @@
    "A greater release speed gives a longer flight distance. A greater release height also adds distance, because the object has further to fall before it lands.",
    "A release angle near 45° gives the greatest distance when release and landing heights are equal. A steeper angle gives more height but less distance, and a lower angle gives less of both."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Flight paths of three objects released at the same speed, from the same height as they land, at 30°, 45° and 60°. The 45° path travels furthest. The 60° path goes much higher but not as far, and the 30° path is lower and also not as far.",
+    "x": {
+     "min": 0,
+     "max": 44,
+     "label": "Horizontal distance"
+    },
+    "y": {
+     "min": 0,
+     "max": 17.5,
+     "label": "Height"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "a60",
+      "expr": "\\sqrt{3}x - \\frac{x^{2}}{20}",
+      "domain": [
+       0,
+       34.641
+      ],
+      "label": "60°",
+      "labelAt": 17.32,
+      "pos": "above",
+      "style": "dot"
+     },
+     {
+      "type": "fn",
+      "id": "a45",
+      "expr": "x - \\frac{x^{2}}{40}",
+      "domain": [
+       0,
+       40
+      ],
+      "label": "45°",
+      "labelAt": 20,
+      "pos": "above"
+     },
+     {
+      "type": "fn",
+      "id": "a30",
+      "expr": "\\frac{x}{\\sqrt{3}} - \\frac{x^{2}}{60}",
+      "domain": [
+       0,
+       34.641
+      ],
+      "label": "30°",
+      "labelAt": 17.32,
+      "pos": "above",
+      "style": "dash"
+     },
+     {
+      "type": "point",
+      "at": [
+       34.641,
+       0
+      ],
+      "on": [
+       "a30",
+       "a60"
+      ],
+      "is": "intersection"
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       0
+      ],
+      "on": [
+       "a45"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
   "remember": "Speed, angle and height at release decide the flight. Nothing the athlete does in the air changes the path much.",
   "a": {
    "q": "A shot putter keeps the same release speed and height but changes the release angle from 40° to 70°. What is the most likely result?",
@@ -128,5 +210,109 @@
    "clue": "Which of the three release factors is different here?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Flight paths of three objects released from the same height as they land, at the same speed, at 30°, 45° and 60°: 45° goes furthest; 60° goes highest but less far; 30° goes lower and less far.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Flight paths of three objects released at the same speed, from the same height as they land, at 30°, 45° and 60°. The 45° path travels furthest. The 60° path goes much higher but not as far, and the 30° path is lower and also not as far.",
+     "x": {
+      "min": 0,
+      "max": 44,
+      "label": "Horizontal distance"
+     },
+     "y": {
+      "min": 0,
+      "max": 17.5,
+      "label": "Height"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "a60",
+       "expr": "\\sqrt{3}x - \\frac{x^{2}}{20}",
+       "domain": [
+        0,
+        34.641
+       ],
+       "label": "60°",
+       "labelAt": 17.32,
+       "pos": "above",
+       "style": "dot"
+      },
+      {
+       "type": "fn",
+       "id": "a45",
+       "expr": "x - \\frac{x^{2}}{40}",
+       "domain": [
+        0,
+        40
+       ],
+       "label": "45°",
+       "labelAt": 20,
+       "pos": "above"
+      },
+      {
+       "type": "fn",
+       "id": "a30",
+       "expr": "\\frac{x}{\\sqrt{3}} - \\frac{x^{2}}{60}",
+       "domain": [
+        0,
+        34.641
+       ],
+       "label": "30°",
+       "labelAt": 17.32,
+       "pos": "above",
+       "style": "dash"
+      },
+      {
+       "type": "point",
+       "at": [
+        34.641,
+        0
+       ],
+       "on": [
+        "a30",
+        "a60"
+       ],
+       "is": "intersection"
+      },
+      {
+       "type": "point",
+       "at": [
+        40,
+        0
+       ],
+       "on": [
+        "a45"
+       ],
+       "is": "x-intercept"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:35Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:43Z"
+  }
+ ]
 }

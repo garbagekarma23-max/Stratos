@@ -28,7 +28,10 @@
   "2026-11-01T15:05:25Z write: done",
   "2026-11-01T15:14:44Z check: flagged",
   "2026-11-01T15:19:03Z fix: suggested",
-  "2026-11-02T04:35:39Z autoreview: cleared with the fix (card wording)"
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (card wording)",
+  "2026-11-11T11:43:58Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:34Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:43Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -178,6 +181,53 @@
    "Because the two rates are equal, each substance is made as fast as it is used up. Its amount and concentration stay constant, though they need not be equal to each other.",
    "The equilibrium is dynamic, as particles keep reacting in both directions. It looks still on the large scale only. If the reaction had truly stopped, no particles would be reacting."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Concentration against time for a reversible reaction in a closed system. The reactant's concentration falls and the product's rises, quickly at first, then more slowly. Once equilibrium is reached both level off and stay constant, at different concentrations, because the forward and reverse reactions go at equal rates.",
+    "x": {
+     "min": 0,
+     "max": 7,
+     "label": "Time"
+    },
+    "y": {
+     "min": 0,
+     "max": 1.15,
+     "label": "Concentration"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "a",
+      "expr": "0.4 + 0.6e^{-x}",
+      "domain": [
+       0,
+       7
+      ],
+      "label": "reactant"
+     },
+     {
+      "type": "fn",
+      "id": "b",
+      "expr": "0.6 - 0.6e^{-x}",
+      "domain": [
+       0,
+       7
+      ],
+      "label": "product"
+     },
+     {
+      "type": "text",
+      "at": [
+       4.0,
+       0.44
+      ],
+      "label": "equilibrium",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "At equilibrium, reactions keep going both ways at equal rates, so amounts stay constant.",
   "a": {
    "q": "What is the best reason the concentrations stay constant at equilibrium in a closed system?",
@@ -203,5 +253,77 @@
    "clue": "A steady colour shows constant amounts, not a stopped reaction."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Concentration against time for a reversible reaction in a closed system: the reactant falls and the product rises, then both level off at different constant concentrations once equilibrium is reached.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Concentration against time for a reversible reaction in a closed system. The reactant's concentration falls and the product's rises, quickly at first, then more slowly. Once equilibrium is reached both level off and stay constant, at different concentrations, because the forward and reverse reactions go at equal rates.",
+     "x": {
+      "min": 0,
+      "max": 7,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 1.15,
+      "label": "Concentration"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "a",
+       "expr": "0.4 + 0.6e^{-x}",
+       "domain": [
+        0,
+        7
+       ],
+       "label": "reactant"
+      },
+      {
+       "type": "fn",
+       "id": "b",
+       "expr": "0.6 - 0.6e^{-x}",
+       "domain": [
+        0,
+        7
+       ],
+       "label": "product"
+      },
+      {
+       "type": "text",
+       "at": [
+        4.0,
+        0.44
+       ],
+       "label": "equilibrium",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:34Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:42Z"
+  }
+ ]
 }
