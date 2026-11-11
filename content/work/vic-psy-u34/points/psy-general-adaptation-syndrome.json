@@ -11,7 +11,12 @@
   "2026-11-01T15:05:31Z write: done (still fails the content check)",
   "2026-11-01T17:33:07Z check: flagged",
   "2026-11-02T04:27:52Z fix: suggested",
-  "2026-11-02T04:35:43Z autoreview: cleared with the fix (a other, b other)"
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (a other, b other)",
+  "2026-11-11T11:44:01Z pictures: the owner asked for a graph at card 1",
+  "2026-11-11T11:44:41Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:51Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The first stage is labelled \"alarm\", but the card and the remember line name it \"alarm reaction\", so the label should read \"alarm reaction\" (on two lines or moved so it does not run into \"resistance\").; The card's next line names shock and countershock, and the curve shows both, but neither is labelled; small labels at the dip (shock) and the rise above normal (countershock) would tie the graph to the card's words.",
+  "2026-11-11T12:03:02Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:03:39Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 3,
@@ -186,6 +191,120 @@
     "if the stressor lasts too long, the body's resources run low. Resistance falls, and the person becomes more open to illness."
    ]
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "Resistance to a stressor against time, in the general adaptation syndrome. The dashed line marks the normal level. In the alarm reaction, resistance first dips below normal, in shock, then rises above it, in countershock. In the resistance stage it stays raised while the stressor continues. In exhaustion it falls below normal as the body's resources run low.",
+    "x": {
+     "min": 0,
+     "max": 11.5,
+     "label": "Time"
+    },
+    "y": {
+     "min": 0,
+     "max": 10.5,
+     "label": "Resistance"
+    },
+    "items": [
+     {
+      "type": "guide",
+      "at": [
+       11.5,
+       5
+      ],
+      "yLabel": "normal"
+     },
+     {
+      "type": "curve",
+      "id": "r",
+      "points": [
+       [
+        0,
+        5
+       ],
+       [
+        2,
+        5
+       ],
+       [
+        2.7,
+        3.4
+       ],
+       [
+        3.6,
+        6.5
+       ],
+       [
+        4.3,
+        7.2
+       ],
+       [
+        8,
+        7.2
+       ],
+       [
+        9,
+        6.7
+       ],
+       [
+        10.2,
+        3.4
+       ],
+       [
+        11,
+        2.6
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "text",
+      "at": [
+       2.7,
+       3.4
+      ],
+      "label": "shock",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       3.6,
+       5.5
+      ],
+      "label": "countershock",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       2.2,
+       9.0
+      ],
+      "label": "alarm reaction",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       6.4,
+       9.0
+      ],
+      "label": "resistance",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       10.0,
+       9.0
+      ],
+      "label": "exhaustion",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "GAS runs in order: alarm reaction, resistance, then exhaustion. Resources are used up over time.",
   "a": {
    "q": "Which description fits the resistance stage of the GAS?",
@@ -211,5 +330,272 @@
    "clue": "What does getting sick often say about her body's defences?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Resistance to a stressor against time in the general adaptation syndrome: a dip below normal (shock), a rise above normal (countershock), a long raised stretch (resistance), then a fall below normal (exhaustion), with the three stages named along the top.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Resistance to a stressor against time, in the general adaptation syndrome. The dashed line is the normal level. In the alarm reaction, resistance first dips below normal (shock), then rises above it (countershock). In the resistance stage it stays raised while the stressor continues. In exhaustion it falls below normal as the body's resources run low.",
+     "x": {
+      "min": 0,
+      "max": 10.5,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Resistance"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "5",
+       "domain": [
+        0,
+        10.5
+       ],
+       "label": "normal",
+       "style": "dash"
+      },
+      {
+       "type": "curve",
+       "id": "r",
+       "points": [
+        [
+         0,
+         5
+        ],
+        [
+         1,
+         5
+        ],
+        [
+         1.7,
+         3.4
+        ],
+        [
+         2.6,
+         6.5
+        ],
+        [
+         3.3,
+         7.2
+        ],
+        [
+         7,
+         7.2
+        ],
+        [
+         8,
+         6.7
+        ],
+        [
+         9.2,
+         3.4
+        ],
+        [
+         10,
+         2.6
+        ]
+       ],
+       "smooth": true,
+       "label": "resistance level",
+       "labelAt": 5.25,
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.6,
+        8.6
+       ],
+       "label": "alarm",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        5.2,
+        8.6
+       ],
+       "label": "resistance",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        9,
+        8.6
+       ],
+       "label": "exhaustion",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:40Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The first stage is labelled \"alarm\", but the card and the remember line name it \"alarm reaction\", so the label should read \"alarm reaction\" (on two lines or moved so it does not run into \"resistance\").",
+     "The card's next line names shock and countershock, and the curve shows both, but neither is labelled; small labels at the dip (shock) and the rise above normal (countershock) would tie the graph to the card's words."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:51Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Resistance to a stressor against time in the general adaptation syndrome: a dip below normal (shock), a rise above normal (countershock), a long raised stretch (resistance), then a fall below normal (exhaustion), with the three stages named along the top.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Resistance to a stressor against time, in the general adaptation syndrome. The dashed line marks the normal level. In the alarm reaction, resistance first dips below normal, in shock, then rises above it, in countershock. In the resistance stage it stays raised while the stressor continues. In exhaustion it falls below normal as the body's resources run low.",
+     "x": {
+      "min": 0,
+      "max": 11.5,
+      "label": "Time"
+     },
+     "y": {
+      "min": 0,
+      "max": 10.5,
+      "label": "Resistance"
+     },
+     "items": [
+      {
+       "type": "guide",
+       "at": [
+        11.5,
+        5
+       ],
+       "yLabel": "normal"
+      },
+      {
+       "type": "curve",
+       "id": "r",
+       "points": [
+        [
+         0,
+         5
+        ],
+        [
+         2,
+         5
+        ],
+        [
+         2.7,
+         3.4
+        ],
+        [
+         3.6,
+         6.5
+        ],
+        [
+         4.3,
+         7.2
+        ],
+        [
+         8,
+         7.2
+        ],
+        [
+         9,
+         6.7
+        ],
+        [
+         10.2,
+         3.4
+        ],
+        [
+         11,
+         2.6
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "text",
+       "at": [
+        2.7,
+        3.4
+       ],
+       "label": "shock",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        3.6,
+        5.5
+       ],
+       "label": "countershock",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        2.2,
+        9.0
+       ],
+       "label": "alarm reaction",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.4,
+        9.0
+       ],
+       "label": "resistance",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        10.0,
+        9.0
+       ],
+       "label": "exhaustion",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T12:03:02Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:03:38Z"
+  }
+ ]
 }

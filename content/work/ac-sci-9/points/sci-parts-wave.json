@@ -13,7 +13,10 @@
   "2026-11-04T09:23:45Z new, match",
   "2026-11-04T09:36:59Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-04T09:47:14Z write: done",
-  "2026-11-04T09:58:34Z check: passed, cleared"
+  "2026-11-04T09:58:34Z check: passed, cleared",
+  "2026-11-11T11:44:02Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:22Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -109,6 +112,59 @@
    ],
    "For sound, a higher frequency gives a higher pitch. Pitch is how high or low a note sounds."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A wave drawn along its rest position, the horizontal line. The wavelength is the distance from one peak to the next peak, shown by the arrow along the top. The amplitude is the height from the rest position up to a peak, shown by the upright arrow.",
+    "x": {
+     "min": 0,
+     "max": 19,
+     "label": "Distance"
+    },
+    "y": {
+     "min": -3,
+     "max": 4,
+     "label": "Height"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "w",
+      "expr": "2\\sin(x)",
+      "domain": [
+       0,
+       14.137
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1.571,
+       2.6
+      ],
+      "to": [
+       7.854,
+       2.6
+      ],
+      "label": "wavelength",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       14.137,
+       0
+      ],
+      "to": [
+       14.137,
+       2
+      ],
+      "label": "amplitude",
+      "pos": "right"
+     }
+    ]
+   }
+  },
   "remember": "Wavelength is a distance, amplitude is a height, and frequency is a count each second that sets pitch.",
   "a": {
    "q": "Which part of a wave is the distance from one peak to the next peak?",
@@ -134,5 +190,83 @@
    "clue": "Pitch is linked to how many waves pass each second."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A wave drawn along its rest position, with the wavelength marked by an arrow from one peak to the next peak and the amplitude by an arrow from the rest position up to a peak.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A wave drawn along its rest position, the horizontal line. The wavelength is the distance from one peak to the next peak, shown by the arrow along the top. The amplitude is the height from the rest position up to a peak, shown by the upright arrow.",
+     "x": {
+      "min": 0,
+      "max": 19,
+      "label": "Distance"
+     },
+     "y": {
+      "min": -3,
+      "max": 4,
+      "label": "Height"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "w",
+       "expr": "2\\sin(x)",
+       "domain": [
+        0,
+        14.137
+       ]
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1.571,
+        2.6
+       ],
+       "to": [
+        7.854,
+        2.6
+       ],
+       "label": "wavelength",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        14.137,
+        0
+       ],
+       "to": [
+        14.137,
+        2
+       ],
+       "label": "amplitude",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:22Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:21Z"
+  }
+ ]
 }

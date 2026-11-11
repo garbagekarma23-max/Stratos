@@ -9,7 +9,12 @@
   "2026-10-27T01:00:08Z write: done",
   "2026-10-27T01:08:34Z check: flagged",
   "2026-10-27T01:22:59Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-11T11:43:57Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:26Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:26Z pictures: 1 picture turned down. Picture 1 (graph at card 3): redo, high sure. A 0 is drawn at the bottom left corner, where the wavenumber axis starts at 4000 cm⁻¹, so it reads as a wavenumber of 0 next to 4000; the y axis should start its numbers at 20 or leave 0 off, or the corner should show nothing.; The wavenumber numbers 4000, 3000, 2000 and 1000 are drawn inside the plot at about 10% transmittance, well above their ticks on the axis, so they look like labels on the spectrum rather than axis numbers.; The C=O label sits on the same line as the axis numbers and runs straight into 1000, so it reads as \"C=O 1000\" and looks like another axis number; it should sit clearly beside the tip of the peak, away from the numbers.; The 2000 label sits right against the C=O peak line, which is crowded at 360 px.",
+  "2026-11-11T11:55:18Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:34Z pictures: 1 picture turned down. Picture 1 (graph at card 3): redo, high sure. The x values in the data are mirrored (4500 minus the wavenumber), so the C=O label sits at x = 2785 and the C-H label at x = 1530, and the figure's data no longer says what its labels say.; The x axis is drawn with its arrow pointing right, which reads as wavenumber rising to the right, yet C-H at 2970 is to the left of C=O at 1715, so the drawing contradicts itself and the 4000 to 500 order the alt describes.; With no numbers on the x axis, a student cannot see that the axis runs from 4000 down to 500 or place the peaks in the ranges the card gives; the axis needs numbers running from 4000 on the left to 500 on the right.; The curve is drawn as straight segments, so the peaks look jagged and the C-H peak has an odd notched shape, not like a real spectrum; it should be smooth.; The C-H peak near 2970 is only a small dip to 74%, shallower than two unlabelled fingerprint peaks that fall to 30%, which makes the spectrum less like a real ketone's and draws the eye to unexplained peaks.. Now waiting for you: graph at card 3"
  ],
  "sent": {
   "write": 2,
@@ -198,7 +203,478 @@
    ],
    "why": "The C=O peak and the very broad O-H peak together show a carboxylic acid, so ethanoic acid fits. Propanone and ethyl ethanoate have C=O but no O-H. Ethanol has a broad O-H peak but no C=O peak.",
    "clue": "Which compound has both a C=O bond and an O-H bond?"
-  }
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "graph",
+    "brief": "An IR spectrum: transmittance against wavenumber, running from 4000 cm⁻¹ on the left to 500 cm⁻¹ on the right, with peaks pointing down, and a strong, sharp C=O peak at about 1715 cm⁻¹ marked.",
+    "tries": 2,
+    "notes": [
+     [
+      "A 0 is drawn at the bottom left corner, where the wavenumber axis starts at 4000 cm⁻¹, so it reads as a wavenumber of 0 next to 4000; the y axis should start its numbers at 20 or leave 0 off, or the corner should show nothing.",
+      "The wavenumber numbers 4000, 3000, 2000 and 1000 are drawn inside the plot at about 10% transmittance, well above their ticks on the axis, so they look like labels on the spectrum rather than axis numbers.",
+      "The C=O label sits on the same line as the axis numbers and runs straight into 1000, so it reads as \"C=O 1000\" and looks like another axis number; it should sit clearly beside the tip of the peak, away from the numbers.",
+      "The 2000 label sits right against the C=O peak line, which is crowded at 360 px."
+     ],
+     [
+      "The x values in the data are mirrored (4500 minus the wavenumber), so the C=O label sits at x = 2785 and the C-H label at x = 1530, and the figure's data no longer says what its labels say.",
+      "The x axis is drawn with its arrow pointing right, which reads as wavenumber rising to the right, yet C-H at 2970 is to the left of C=O at 1715, so the drawing contradicts itself and the 4000 to 500 order the alt describes.",
+      "With no numbers on the x axis, a student cannot see that the axis runs from 4000 down to 500 or place the peaks in the ranges the card gives; the axis needs numbers running from 4000 on the left to 500 on the right.",
+      "The curve is drawn as straight segments, so the peaks look jagged and the C-H peak has an odd notched shape, not like a real spectrum; it should be smooth.",
+      "The C-H peak near 2970 is only a small dip to 74%, shallower than two unlabelled fingerprint peaks that fall to 30%, which makes the spectrum less like a real ketone's and draws the eye to unexplained peaks."
+     ]
+    ]
+   }
+  ]
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "An IR spectrum: transmittance against wavenumber, running from 4000 cm⁻¹ on the left to 500 cm⁻¹ on the right, with peaks pointing down, and a strong, sharp C=O peak at about 1715 cm⁻¹ marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "An IR spectrum: how much light passes through against wavenumber, running from 4000 cm⁻¹ on the left down to 500 cm⁻¹ on the right, as IR spectra are drawn. Each absorption is a peak pointing down. The strongest is a sharp peak at about 1715 cm⁻¹, in the C=O range. There is no broad O-H peak between 2500 and 3550 cm⁻¹.",
+     "x": {
+      "min": 0,
+      "max": 3500,
+      "label": "Wavenumber (cm⁻¹)",
+      "step": 500,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 110,
+      "label": "Transmittance (%)",
+      "step": 20
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         0,
+         95
+        ],
+        [
+         900,
+         95
+        ],
+        [
+         990,
+         88
+        ],
+        [
+         1000,
+         78
+        ],
+        [
+         1030,
+         74
+        ],
+        [
+         1070,
+         80
+        ],
+        [
+         1100,
+         90
+        ],
+        [
+         1200,
+         95
+        ],
+        [
+         2200,
+         95
+        ],
+        [
+         2240,
+         85
+        ],
+        [
+         2270,
+         30
+        ],
+        [
+         2285,
+         10
+        ],
+        [
+         2300,
+         30
+        ],
+        [
+         2320,
+         80
+        ],
+        [
+         2360,
+         92
+        ],
+        [
+         2540,
+         88
+        ],
+        [
+         2580,
+         55
+        ],
+        [
+         2600,
+         80
+        ],
+        [
+         2630,
+         35
+        ],
+        [
+         2640,
+         30
+        ],
+        [
+         2660,
+         70
+        ],
+        [
+         2700,
+         88
+        ],
+        [
+         2760,
+         50
+        ],
+        [
+         2780,
+         30
+        ],
+        [
+         2800,
+         55
+        ],
+        [
+         2850,
+         88
+        ],
+        [
+         2900,
+         80
+        ],
+        [
+         2910,
+         72
+        ],
+        [
+         2920,
+         82
+        ],
+        [
+         3000,
+         90
+        ],
+        [
+         3100,
+         85
+        ],
+        [
+         3400,
+         88
+        ],
+        [
+         3470,
+         62
+        ],
+        [
+         3500,
+         80
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        0,
+        2
+       ],
+       "label": "4000",
+       "pos": "above-right"
+      },
+      {
+       "type": "text",
+       "at": [
+        1000,
+        2
+       ],
+       "label": "3000",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        2000,
+        2
+       ],
+       "label": "2000",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        3000,
+        2
+       ],
+       "label": "1000",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        2300,
+        10
+       ],
+       "label": "C=O",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:25Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": false,
+    "readable": false,
+    "licence_ok": true,
+    "problems": [
+     "A 0 is drawn at the bottom left corner, where the wavenumber axis starts at 4000 cm⁻¹, so it reads as a wavenumber of 0 next to 4000; the y axis should start its numbers at 20 or leave 0 off, or the corner should show nothing.",
+     "The wavenumber numbers 4000, 3000, 2000 and 1000 are drawn inside the plot at about 10% transmittance, well above their ticks on the axis, so they look like labels on the spectrum rather than axis numbers.",
+     "The C=O label sits on the same line as the axis numbers and runs straight into 1000, so it reads as \"C=O 1000\" and looks like another axis number; it should sit clearly beside the tip of the peak, away from the numbers.",
+     "The 2000 label sits right against the C=O peak line, which is crowded at 360 px."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:26Z"
+  },
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "An IR spectrum: transmittance against wavenumber, running from 4000 cm⁻¹ on the left to 500 cm⁻¹ on the right, with peaks pointing down, and a strong, sharp C=O peak at about 1715 cm⁻¹ marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "An IR spectrum: how much light passes through against wavenumber, running from 4000 cm⁻¹ on the left down to 500 cm⁻¹ on the right, as IR spectra are drawn. Each absorption is a peak pointing down. The strongest is a sharp peak at about 1715 cm⁻¹, from a C=O bond. A small peak near 2970 cm⁻¹ is from C-H bonds. There is no broad O-H peak between 2500 and 3550 cm⁻¹.",
+     "x": {
+      "min": 500,
+      "max": 4000,
+      "label": "Wavenumber (cm⁻¹)",
+      "step": 500,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 110,
+      "label": "Transmittance (%)",
+      "step": 20
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         500,
+         95
+        ],
+        [
+         1400,
+         95
+        ],
+        [
+         1490,
+         88
+        ],
+        [
+         1500,
+         78
+        ],
+        [
+         1530,
+         74
+        ],
+        [
+         1570,
+         80
+        ],
+        [
+         1600,
+         90
+        ],
+        [
+         1700,
+         95
+        ],
+        [
+         2700,
+         95
+        ],
+        [
+         2740,
+         85
+        ],
+        [
+         2770,
+         30
+        ],
+        [
+         2785,
+         10
+        ],
+        [
+         2800,
+         30
+        ],
+        [
+         2820,
+         80
+        ],
+        [
+         2860,
+         92
+        ],
+        [
+         3040,
+         88
+        ],
+        [
+         3080,
+         55
+        ],
+        [
+         3100,
+         80
+        ],
+        [
+         3130,
+         35
+        ],
+        [
+         3140,
+         30
+        ],
+        [
+         3160,
+         70
+        ],
+        [
+         3200,
+         88
+        ],
+        [
+         3260,
+         50
+        ],
+        [
+         3280,
+         30
+        ],
+        [
+         3300,
+         55
+        ],
+        [
+         3350,
+         88
+        ],
+        [
+         3400,
+         80
+        ],
+        [
+         3410,
+         72
+        ],
+        [
+         3420,
+         82
+        ],
+        [
+         3500,
+         90
+        ],
+        [
+         3600,
+         85
+        ],
+        [
+         3900,
+         88
+        ],
+        [
+         3970,
+         62
+        ],
+        [
+         4000,
+         80
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        2785,
+        10
+       ],
+       "label": "C=O at 1715",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        1530,
+        74
+       ],
+       "label": "C-H at 2970",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:55:18Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The x values in the data are mirrored (4500 minus the wavenumber), so the C=O label sits at x = 2785 and the C-H label at x = 1530, and the figure's data no longer says what its labels say.",
+     "The x axis is drawn with its arrow pointing right, which reads as wavenumber rising to the right, yet C-H at 2970 is to the left of C=O at 1715, so the drawing contradicts itself and the 4000 to 500 order the alt describes.",
+     "With no numbers on the x axis, a student cannot see that the axis runs from 4000 down to 500 or place the peaks in the ranges the card gives; the axis needs numbers running from 4000 on the left to 500 on the right.",
+     "The curve is drawn as straight segments, so the peaks look jagged and the C-H peak has an odd notched shape, not like a real spectrum; it should be smooth.",
+     "The C-H peak near 2970 is only a small dip to 74%, shallower than two unlabelled fingerprint peaks that fall to 30%, which makes the spectrum less like a real ketone's and draws the eye to unexplained peaks."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:34Z"
+  }
+ ]
 }

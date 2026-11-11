@@ -1155,8 +1155,8 @@ MADE_BANKS.eco = {
       "2": {
         "kind": "graph",
         "alt": "Cumulative share of income against cumulative share of households, from poorest to richest, both from 0 to 100%. The line of equality is a straight diagonal: every 10% of households holds 10% of income. The Lorenz curve bows below it: here the poorest 50% of households hold 25% of income. The shaded gap between them is what the Gini coefficient sums up. The further the curve bows, the more unequal incomes are.",
-        "x": {"min": 0, "max": 100, "step": 20, "nums": false, "label": "Households (%)"},
-        "y": {"min": 0, "max": 100, "step": 20, "nums": false, "label": "Income (%)"},
+        "x": {"min": 0, "max": 100, "step": 20, "nums": false, "label": "Cumulative % households"},
+        "y": {"min": 0, "max": 100, "step": 20, "nums": false, "label": "Cumulative % of income"},
         "equal": true,
         "items": [
           {"type": "shade", "between": ["e", "l"], "span": [0, 100], "label": "gap", "at": [62, 50]},
@@ -1178,8 +1178,8 @@ MADE_BANKS.eco = {
             "labelAt": 72,
             "pos": "below-right"
           },
-          {"type": "guide", "at": [50, 25], "xLabel": "50", "yLabel": "25"},
-          {"type": "point", "at": [50, 25], "on": ["l"]}
+          {"type": "guide", "at": [50, 25], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [50, 25], "on": ["l"], "label": "poorest 50% hold 25%", "pos": "below-right"}
         ]
       }
     },

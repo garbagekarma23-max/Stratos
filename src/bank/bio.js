@@ -1249,6 +1249,40 @@ MADE_BANKS.bio = {
       "The second response (secondary response) is faster and stronger than the first. More antibodies are made in less time, so the pathogen is often cleared before the person feels ill.",
       "Memory cells are specific. They match only the antigen that caused the first infection, so a different pathogen starts a new, slower first response."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "Antibody level in the blood against time. After the first exposure to a pathogen, the antibody level rises slowly and stays low: the first response. After a second exposure to the same pathogen at day 40, it rises within days to a level many times higher: the second response, which is faster and stronger.",
+        "x": {"min": 0, "max": 75, "label": "Time (days)", "step": 10},
+        "y": {"min": 0, "max": 115, "label": "Antibody level"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "a",
+            "points": [
+              [0, 0],
+              [5, 0.5],
+              [10, 4],
+              [14, 10],
+              [18, 12],
+              [24, 8],
+              [32, 4],
+              [40, 3],
+              [42, 8],
+              [45, 55],
+              [49, 95],
+              [54, 88],
+              [62, 62],
+              [70, 45]
+            ],
+            "smooth": true
+          },
+          {"type": "text", "at": [18, 12], "label": "first response", "pos": "above"},
+          {"type": "text", "at": [49, 95], "label": "second response", "pos": "above-left"},
+          {"type": "arrow", "from": [40, 62], "to": [40, 8], "label": "second exposure", "pos": "left"}
+        ]
+      }
+    },
     "remember": "Memory cells let the body respond faster and harder to a pathogen it has met before.",
     "a": {
       "q": "Why is the immune response to a second exposure to the same pathogen faster than the first?",
@@ -1477,6 +1511,34 @@ MADE_BANKS.bio = {
       ],
       "Most homeostatic systems use negative feedback. A condition rarely stays at one exact value. It moves up and down around a set point."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Body temperature against time. It moves up and down around the set point, 37 °C, shown as a straight line. Each time it rises or falls a little, negative feedback reverses the change, so it stays close to the set point.",
+        "x": {"min": 0, "max": 12, "label": "Time"},
+        "y": {"min": 36, "max": 38.2, "label": "Temperature (°C)", "step": 0.5},
+        "items": [
+          {
+            "type": "fn",
+            "id": "s",
+            "expr": "37",
+            "domain": [0, 12],
+            "label": "set point",
+            "labelAt": 11,
+            "pos": "above"
+          },
+          {
+            "type": "fn",
+            "id": "t",
+            "expr": "37 + 0.4\\sin(1.5x)",
+            "domain": [0, 9.5],
+            "label": "body temperature",
+            "labelAt": 5.225,
+            "pos": "above"
+          }
+        ]
+      }
+    },
     "remember": "Negative feedback: detect a change, then respond to reverse it.",
     "a": {
       "q": "What makes a feedback loop a negative feedback loop?",
@@ -1555,6 +1617,26 @@ MADE_BANKS.bio = {
       ],
       "Each hormone reverses the change that triggered it. This is negative feedback, so blood glucose returns to its normal range."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Blood glucose against time. The shaded band is its normal range, about 4 to 8 mmol/L. After a meal, blood glucose rises above the range, and insulin brings it back down. Hours later it falls just below the range, and glucagon brings it back up. Each hormone reverses the change that triggered it.",
+        "x": {"min": 0, "max": 8.5, "label": "Time (h)", "step": 2},
+        "y": {"min": 2, "max": 12, "label": "Blood glucose (mmol/L)", "step": 1},
+        "items": [
+          {"type": "shade", "poly": [[0, 4], [8.5, 4], [8.5, 8], [0, 8]], "label": "normal range", "at": [5, 7]},
+          {
+            "type": "curve",
+            "id": "g",
+            "points": [[0, 5.5], [1, 5.5], [1.75, 9.4], [2.6, 7.6], [3.5, 6], [5, 5], [6.5, 3.8], [7.2, 4.3], [7.5, 4.8]],
+            "smooth": true
+          },
+          {"type": "arrow", "from": [1, 11], "to": [1, 6], "label": "meal", "pos": "above"},
+          {"type": "text", "at": [2.4, 8.6], "label": "insulin", "pos": "right"},
+          {"type": "text", "at": [6.5, 3.65], "label": "glucagon", "pos": "below"}
+        ]
+      }
+    },
     "remember": "High glucose brings insulin, which lowers it. Low glucose brings glucagon, which raises it.",
     "a": {
       "q": "Which response happens after a person eats a large meal and their blood glucose rises?",
@@ -2552,6 +2634,34 @@ MADE_BANKS.bio = {
       ],
       "In type 1 diabetes, the body cannot make insulin. Cells cannot take up glucose properly, so blood glucose stays high."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "Blood glucose against time after a meal. With insulin, it starts at a usual level, rises a little and falls back within about 3 hours, as cells take up the glucose. Without insulin, as in untreated type 1 diabetes, it is already high before the meal, rises much higher and stays high, because cells cannot take up glucose properly.",
+        "x": {"min": 0, "max": 4.5, "label": "Time (h)", "step": 1},
+        "y": {"min": 0, "max": 20, "label": "Blood glucose (mmol/L)", "step": 4},
+        "items": [
+          {
+            "type": "curve",
+            "id": "w",
+            "points": [[0, 5.2], [0.5, 7.2], [1, 7.9], [1.5, 7.2], [2, 6.2], [2.5, 5.6], [3, 5.3], [3.5, 5.2]],
+            "smooth": true,
+            "label": "with insulin",
+            "labelAt": 2.7,
+            "pos": "below"
+          },
+          {
+            "type": "curve",
+            "id": "n",
+            "points": [[0, 9.5], [0.5, 11.5], [1, 13.5], [1.5, 15], [2, 15.8], [2.5, 16.1], [3, 16.2], [3.5, 16.2]],
+            "smooth": true,
+            "label": "without insulin",
+            "labelAt": 2.7,
+            "pos": "above"
+          }
+        ]
+      }
+    },
     "remember": "Insulin lowers blood glucose, glucagon raises it, and without insulin blood glucose stays high.",
     "a": {
       "q": "Ravi has just eaten a large meal and his blood glucose rises. What does his pancreas do in response?",
@@ -3890,6 +4000,38 @@ MADE_BANKS.bio = {
       "The substrate is the molecule an enzyme acts on. It binds to the active site, a small region of the enzyme with a particular shape and chemistry.",
       "In the induced fit model, the active site changes shape slightly as the substrate binds, so it grips the substrate more closely. The enzyme then releases the products."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Energy against the progress of a reaction, without an enzyme (dashed) and with an enzyme (solid). Both start at the same level and end at the same level, but the path with the enzyme has a much lower peak: the enzyme lowers the activation energy. An arrow points down from the higher peak to the lower one.",
+        "x": {"min": 0, "max": 12, "label": "Progress of reaction"},
+        "y": {"min": 0, "max": 11.5, "label": "Energy"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "n",
+            "points": [[0, 4], [3, 4], [6, 9], [9, 2], [12, 2]],
+            "smooth": true,
+            "label": "without enzyme",
+            "labelAt": 6,
+            "pos": "above",
+            "style": "dash"
+          },
+          {
+            "type": "curve",
+            "id": "c",
+            "points": [[0, 4], [3, 4], [6, 6.2], [9, 2], [12, 2]],
+            "smooth": true,
+            "label": "with enzyme",
+            "labelAt": 7.8,
+            "pos": "below-left"
+          },
+          {"type": "arrow", "from": [6, 8.7], "to": [6, 6.5]},
+          {"type": "text", "at": [1.5, 4], "label": "substrate", "pos": "below"},
+          {"type": "text", "at": [10.5, 2], "label": "products", "pos": "below"}
+        ]
+      }
+    },
     "remember": "Enzymes speed up reactions by lowering activation energy, and each binds its own substrate at its active site.",
     "a": {
       "q": "How does an enzyme make a reaction in a cell go faster?",
@@ -3923,6 +4065,34 @@ MADE_BANKS.bio = {
       "pH also affects the shape of the active site. Each enzyme has an optimum pH. Away from it, the rate falls, and an extreme pH can denature the enzyme.",
       "More substrate raises the rate until all active sites are busy, then the rate levels off. More enzyme raises the rate if there is enough substrate to use it."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Rate of an enzyme reaction against temperature. The rate rises as the temperature rises towards the optimum, where it peaks. Above the optimum it falls steeply, because the enzyme's shape changes and it is denatured.",
+        "x": {"min": 0, "max": 90.0, "label": "Temperature (°C)", "step": 10},
+        "y": {"min": 0, "max": 72, "label": "Rate of reaction"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "t",
+            "points": [[0, 2], [10, 10], [20, 24], [30, 44], [37, 58], [42, 40], [47, 12], [50, 1]],
+            "smooth": true
+          },
+          {"type": "point", "at": [37, 58], "on": ["t"], "label": "optimum", "pos": "above"},
+          {"type": "text", "at": [46, 30], "label": "denatured", "pos": "right"}
+        ]
+      },
+      "4": {
+        "kind": "graph",
+        "alt": "Rate of an enzyme reaction against the amount of substrate. At first the rate rises steeply with more substrate. Then it levels off, getting closer and closer to a maximum rate, the dashed line, because all the active sites are busy.",
+        "x": {"min": 0, "max": 12, "label": "Amount of substrate"},
+        "y": {"min": 0, "max": 12, "label": "Rate of reaction"},
+        "items": [
+          {"type": "fn", "id": "s", "expr": "\\frac{10x}{x + 2}"},
+          {"type": "asymptote", "y": 10, "label": "maximum rate", "pos": "above-left"}
+        ]
+      }
+    },
     "remember": "Rate rises towards the optimum, then falls once shape is lost. Concentration raises the rate until something runs out.",
     "a": {
       "q": "A student heats an enzyme solution well above its optimum temperature, then cools it back to the optimum. Why does the reaction stay slow?",
@@ -4142,6 +4312,34 @@ MADE_BANKS.bio = {
       "Temperature affects the enzymes involved, such as Rubisco. The rate rises with warmth up to an optimum, then falls as the enzymes lose their shape (denature).",
       "Water is a reactant. When water is short, plants close their stomata to save it, which also limits carbon dioxide entering the leaf and so slows photosynthesis."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Rate of photosynthesis against light intensity, at two carbon dioxide concentrations. At low light the two curves are the same rising line, because light is the limiting factor. Each then levels off, when carbon dioxide becomes the factor in shortest supply. With more carbon dioxide the curve rises further and levels off at a higher rate.",
+        "x": {"min": 0, "max": 12, "label": "Light intensity"},
+        "y": {"min": 0, "max": 10, "label": "Rate of photosynthesis"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "h",
+            "points": [[0, 0], [1, 2], [2, 4], [3, 5.8], [4, 7.2], [5, 7.9], [6, 8.2], [8, 8.3], [12, 8.3]],
+            "smooth": true,
+            "label": "more carbon dioxide",
+            "labelAt": 9,
+            "pos": "above"
+          },
+          {
+            "type": "curve",
+            "id": "l",
+            "points": [[0, 0], [1, 2], [2, 4], [2.8, 5.2], [3.5, 5.6], [5, 5.8], [8, 5.9], [12, 5.9]],
+            "smooth": true,
+            "label": "less carbon dioxide",
+            "labelAt": 9,
+            "pos": "below"
+          }
+        ]
+      }
+    },
     "remember": "The rate is set by whichever factor is in shortest supply.",
     "a": {
       "q": "A graph shows the rate of photosynthesis rising with light intensity, then flattening out. What does the flat part show?",
@@ -4293,6 +4491,34 @@ MADE_BANKS.bio = {
         "oxygen is the final electron acceptor in the electron transport chain. With less oxygen the chain slows, so less ATP is made, and the cell relies more on anaerobic pathways."
       ]
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "Rate of cellular respiration against temperature. The rate rises with warmth up to the optimum, where it peaks. Past the optimum the enzymes denature and the rate drops sharply.",
+        "x": {"min": 0, "max": 90.0, "label": "Temperature (°C)", "step": 10},
+        "y": {"min": 0, "max": 72, "label": "Rate of respiration"},
+        "items": [
+          {
+            "type": "curve",
+            "id": "t",
+            "points": [[0, 3], [10, 12], [20, 28], [30, 50], [35, 58], [40, 48], [45, 18], [50, 4]],
+            "smooth": true
+          },
+          {"type": "point", "at": [35, 58], "on": ["t"], "label": "optimum", "pos": "above"},
+          {"type": "text", "at": [46, 30], "label": "denatured", "pos": "right"}
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "Rate of cellular respiration against glucose concentration. More glucose gives the enzymes more substrate, so the rate rises. It then levels off once the enzymes are working at their maximum rate.",
+        "x": {"min": 0, "max": 12, "label": "Glucose concentration"},
+        "y": {"min": 0, "max": 10, "label": "Rate of respiration"},
+        "items": [
+          {"type": "fn", "id": "g", "expr": "\\frac{8x}{x + 1.5}", "domain": [0, 12]},
+          {"type": "text", "at": [8, 7.2], "label": "levels off", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Warmth speeds respiration up to the optimum, then enzymes denature. Glucose and oxygen supply also set the rate.",
     "a": {
       "q": "A student warms yeast in glucose solution from 10 °C to 25 °C and the rate of respiration rises. What is the best explanation?",
@@ -4945,6 +5171,19 @@ MADE_BANKS.bio = {
       ],
       "The time taken for half of an isotope to decay is its half-life. Measuring how much of it remains in a sample shows how old the sample is."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "The percentage of a radioactive isotope left in a sample against time, measured in half-lives. It starts at 100% and halves every half-life: 50% is left after one half-life, as the dashed lines show. Measuring how much is left shows how many half-lives have passed.",
+        "x": {"min": 0, "max": 5.75, "label": "Half-lives", "step": 1},
+        "y": {"min": 0, "max": 110, "label": "Isotope left (%)", "step": 25},
+        "items": [
+          {"type": "fn", "id": "n", "expr": "100\\cdot 2^{-x}", "domain": [0, 4]},
+          {"type": "guide", "at": [1, 50], "xLabel": "", "yLabel": ""},
+          {"type": "point", "at": [1, 50], "on": ["n"]}
+        ]
+      }
+    },
     "remember": "Relative dating gives an order. Absolute dating gives an age in years from decay.",
     "a": {
       "q": "A scientist states that fossil X is older than fossil Y because X lies in a lower, undisturbed layer. What type of dating is this?",

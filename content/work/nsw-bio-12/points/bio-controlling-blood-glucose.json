@@ -9,7 +9,12 @@
   "2026-10-27T01:00:09Z write: done",
   "2026-10-27T01:08:35Z check: flagged",
   "2026-10-27T01:23:00Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-11T11:43:58Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:23Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:23Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, medium sure. The shaded normal range is 4 to 6 mmol/L, so a peak of 7.6 mmol/L after a meal is shown as abnormal, but Australian health sources give a normal range of about 4.0 to 7.8 mmol/L (and many school texts say 4 to 8), so the numbers clash with what students are taught.; The dip to 3.6 mmol/L a few hours after a meal is below 4 mmol/L, the level usually called hypoglycaemia, which is not what normally happens to a healthy person between meals.; Either give the y axis no numbers (nums false) so the graph is a schematic of rising above and falling below a set range, or use real values, such as a range of 4 to 8 mmol/L with the peak above 8 and the dip only just below 4.",
+  "2026-11-11T11:55:18Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:34Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -181,6 +186,126 @@
    ],
    "Each hormone reverses the change that triggered it. This is negative feedback, so blood glucose returns to its normal range."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Blood glucose against time. The shaded band is its normal range, about 4 to 8 mmol/L. After a meal, blood glucose rises above the range, and insulin brings it back down. Hours later it falls just below the range, and glucagon brings it back up. Each hormone reverses the change that triggered it.",
+    "x": {
+     "min": 0,
+     "max": 8.5,
+     "label": "Time (h)",
+     "step": 2
+    },
+    "y": {
+     "min": 2,
+     "max": 12,
+     "label": "Blood glucose (mmol/L)",
+     "step": 1
+    },
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        0,
+        4
+       ],
+       [
+        8.5,
+        4
+       ],
+       [
+        8.5,
+        8
+       ],
+       [
+        0,
+        8
+       ]
+      ],
+      "label": "normal range",
+      "at": [
+       5.0,
+       7.0
+      ]
+     },
+     {
+      "type": "curve",
+      "id": "g",
+      "points": [
+       [
+        0,
+        5.5
+       ],
+       [
+        1,
+        5.5
+       ],
+       [
+        1.75,
+        9.4
+       ],
+       [
+        2.6,
+        7.6
+       ],
+       [
+        3.5,
+        6.0
+       ],
+       [
+        5,
+        5.0
+       ],
+       [
+        6.5,
+        3.8
+       ],
+       [
+        7.2,
+        4.3
+       ],
+       [
+        7.5,
+        4.8
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       11.0
+      ],
+      "to": [
+       1,
+       6.0
+      ],
+      "label": "meal",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       2.4,
+       8.6
+      ],
+      "label": "insulin",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       6.5,
+       3.65
+      ],
+      "label": "glucagon",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "High glucose brings insulin, which lowers it. Low glucose brings glucagon, which raises it.",
   "a": {
    "q": "Which response happens after a person eats a large meal and their blood glucose rises?",
@@ -206,5 +331,297 @@
    "clue": "The response must reverse the fall, so glucose has to enter the blood."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Blood glucose against time over a day: it rises above its normal range after a meal, insulin brings it back down; between meals it falls below the range, glucagon brings it back up. The normal range is shaded.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Blood glucose against time. The shaded band is its normal range. After a meal, blood glucose rises above the range, and insulin brings it back down. Hours later it falls below the range, and glucagon brings it back up. Each hormone reverses the change that triggered it.",
+     "x": {
+      "min": 0,
+      "max": 8.5,
+      "label": "Time (h)",
+      "step": 2
+     },
+     "y": {
+      "min": 2,
+      "max": 9,
+      "label": "Blood glucose (mmol/L)",
+      "step": 1
+     },
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         0,
+         4
+        ],
+        [
+         8.5,
+         4
+        ],
+        [
+         8.5,
+         6
+        ],
+        [
+         0,
+         6
+        ]
+       ],
+       "label": "normal range",
+       "at": [
+        5.6,
+        5.6
+       ]
+      },
+      {
+       "type": "curve",
+       "id": "g",
+       "points": [
+        [
+         0,
+         5.0
+        ],
+        [
+         1,
+         5.0
+        ],
+        [
+         1.75,
+         7.6
+        ],
+        [
+         2.5,
+         6.6
+        ],
+        [
+         3.5,
+         5.2
+        ],
+        [
+         5,
+         4.6
+        ],
+        [
+         6.5,
+         3.6
+        ],
+        [
+         7.2,
+         4.1
+        ],
+        [
+         8,
+         4.9
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        8.4
+       ],
+       "to": [
+        1,
+        5.4
+       ],
+       "label": "meal",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        2.4,
+        7
+       ],
+       "label": "insulin",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.5,
+        3.45
+       ],
+       "label": "glucagon",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:23Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The shaded normal range is 4 to 6 mmol/L, so a peak of 7.6 mmol/L after a meal is shown as abnormal, but Australian health sources give a normal range of about 4.0 to 7.8 mmol/L (and many school texts say 4 to 8), so the numbers clash with what students are taught.",
+     "The dip to 3.6 mmol/L a few hours after a meal is below 4 mmol/L, the level usually called hypoglycaemia, which is not what normally happens to a healthy person between meals.",
+     "Either give the y axis no numbers (nums false) so the graph is a schematic of rising above and falling below a set range, or use real values, such as a range of 4 to 8 mmol/L with the peak above 8 and the dip only just below 4."
+    ],
+    "sure": "medium"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:23Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Blood glucose against time over a day: it rises above its normal range after a meal, insulin brings it back down; between meals it falls below the range, glucagon brings it back up. The normal range is shaded.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Blood glucose against time. The shaded band is its normal range, about 4 to 8 mmol/L. After a meal, blood glucose rises above the range, and insulin brings it back down. Hours later it falls just below the range, and glucagon brings it back up. Each hormone reverses the change that triggered it.",
+     "x": {
+      "min": 0,
+      "max": 8.5,
+      "label": "Time (h)",
+      "step": 2
+     },
+     "y": {
+      "min": 2,
+      "max": 12,
+      "label": "Blood glucose (mmol/L)",
+      "step": 1
+     },
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         0,
+         4
+        ],
+        [
+         8.5,
+         4
+        ],
+        [
+         8.5,
+         8
+        ],
+        [
+         0,
+         8
+        ]
+       ],
+       "label": "normal range",
+       "at": [
+        5.0,
+        7.0
+       ]
+      },
+      {
+       "type": "curve",
+       "id": "g",
+       "points": [
+        [
+         0,
+         5.5
+        ],
+        [
+         1,
+         5.5
+        ],
+        [
+         1.75,
+         9.4
+        ],
+        [
+         2.6,
+         7.6
+        ],
+        [
+         3.5,
+         6.0
+        ],
+        [
+         5,
+         5.0
+        ],
+        [
+         6.5,
+         3.8
+        ],
+        [
+         7.2,
+         4.3
+        ],
+        [
+         7.5,
+         4.8
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        11.0
+       ],
+       "to": [
+        1,
+        6.0
+       ],
+       "label": "meal",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        2.4,
+        8.6
+       ],
+       "label": "insulin",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        6.5,
+        3.65
+       ],
+       "label": "glucagon",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:55:18Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:33Z"
+  }
+ ]
 }

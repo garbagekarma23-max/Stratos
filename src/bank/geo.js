@@ -544,6 +544,43 @@ MADE_BANKS.geo = {
       "Stage 3: birth rates begin to fall, so the gap narrows and growth slows. Stage 4: birth and death rates are both low, so population levels off.",
       "Birth rates fall later than death rates because family habits and beliefs about family size change slowly. Some versions of the model add a fifth stage, where birth rates fall below death rates."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "The demographic transition model: birth rate and death rate across stages 1 to 4, with a dashed line between each stage. In stage 1 both are high and close together. In stage 2 the death rate falls fast but the birth rate stays high, so the shaded gap, the population's natural increase, grows widest. In stage 3 the birth rate falls and the gap narrows. In stage 4 both are low.",
+        "x": {"min": 0, "max": 4, "label": "Stage", "step": 1, "nums": false},
+        "y": {"min": 0, "max": 50, "label": "Rate per 1000 people"},
+        "items": [
+          {"type": "shade", "between": ["b", "d"], "span": [1, 4], "label": "growth", "at": [1.7, 27]},
+          {
+            "type": "curve",
+            "id": "b",
+            "points": [[0, 40], [1, 40], [1.8, 40], [2.1, 37], [2.5, 28], [3, 19], [3.5, 14], [4, 13]],
+            "smooth": true,
+            "label": "birth rate",
+            "labelAt": 2.9,
+            "pos": "above-right"
+          },
+          {
+            "type": "curve",
+            "id": "d",
+            "points": [[0, 38], [0.5, 36], [1, 37], [1.2, 31], [1.4, 22], [1.7, 15], [2, 14], [2.5, 12.5], [3, 12], [4, 11]],
+            "smooth": true,
+            "label": "death rate",
+            "labelAt": 3.4,
+            "pos": "below",
+            "style": "dash"
+          },
+          {"type": "guide", "at": [1, 48], "xLabel": ""},
+          {"type": "guide", "at": [2, 48], "xLabel": ""},
+          {"type": "guide", "at": [3, 48], "xLabel": ""},
+          {"type": "text", "at": [0.5, 46], "label": "1", "pos": "above"},
+          {"type": "text", "at": [1.5, 46], "label": "2", "pos": "above"},
+          {"type": "text", "at": [2.5, 46], "label": "3", "pos": "above"},
+          {"type": "text", "at": [3.5, 46], "label": "4", "pos": "above"}
+        ]
+      }
+    },
     "remember": "Death rates fall first and birth rates follow later, so growth is fastest in between.",
     "a": {
       "q": "Why does a country's population grow fastest in Stage 2 of the model?",
@@ -2264,6 +2301,50 @@ MADE_BANKS.geo = {
       ["Negative correlation", "the dots slope downward. As one measure rises, the other tends to fall."],
       "If the dots are scattered with no pattern, there is no correlation. A correlation shows a link, not a cause, because a third factor may affect both measures or the link may be chance."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "graph",
+        "alt": "A scatter graph of two measures for 13 places, one dot each. The dots slope upward from left to right: as the first measure rises, the second tends to rise too. This is a positive correlation.",
+        "x": {"min": 0, "max": 10, "label": "First measure"},
+        "y": {"min": 0, "max": 9, "label": "Second measure"},
+        "items": [
+          {"type": "point", "at": [1, 1.8]},
+          {"type": "point", "at": [1.6, 1.2]},
+          {"type": "point", "at": [2.2, 2.9]},
+          {"type": "point", "at": [2.9, 2.2]},
+          {"type": "point", "at": [3.5, 3.6]},
+          {"type": "point", "at": [4.1, 3]},
+          {"type": "point", "at": [4.8, 4.6]},
+          {"type": "point", "at": [5.4, 3.9]},
+          {"type": "point", "at": [6.1, 5.4]},
+          {"type": "point", "at": [6.7, 4.9]},
+          {"type": "point", "at": [7.4, 6.3]},
+          {"type": "point", "at": [8.2, 6]},
+          {"type": "point", "at": [8.8, 7.4]}
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "A scatter graph of two measures for 13 places, one dot each. The dots slope downward from left to right: as the first measure rises, the second tends to fall. This is a negative correlation.",
+        "x": {"min": 0, "max": 10, "label": "First measure"},
+        "y": {"min": 0, "max": 9, "label": "Second measure"},
+        "items": [
+          {"type": "point", "at": [1, 7.2]},
+          {"type": "point", "at": [1.6, 7.8]},
+          {"type": "point", "at": [2.2, 6.1]},
+          {"type": "point", "at": [2.9, 6.8]},
+          {"type": "point", "at": [3.5, 5.4]},
+          {"type": "point", "at": [4.1, 6]},
+          {"type": "point", "at": [4.8, 4.4]},
+          {"type": "point", "at": [5.4, 5.1]},
+          {"type": "point", "at": [6.1, 3.6]},
+          {"type": "point", "at": [6.7, 4.1]},
+          {"type": "point", "at": [7.4, 2.7]},
+          {"type": "point", "at": [8.2, 3]},
+          {"type": "point", "at": [8.8, 1.6]}
+        ]
+      }
+    },
     "remember": "A scatter graph shows whether two measures are linked. It does not show that one causes the other.",
     "a": {
       "q": "A scatter graph of 30 countries shows that the dots slope downward from left to right. What does this show about the two measures?",
@@ -4755,6 +4836,29 @@ MADE_BANKS.geo = {
       "Next, draw a graph with distance along the bottom and height up the side. Plot a point for each mark, at its distance and its height.",
       "Join the points with a smooth line. The line rises where the land climbs and falls where the land drops."
     ],
+    "cardFigs": {
+      "4": {
+        "kind": "graph",
+        "alt": "A cross-section drawn from a map: height against distance along the line. Each dot is a place where the line crosses a contour, plotted at its distance and its height: 200, 300, 400, 300, 200, 300 and 400 m. The dots are joined with a smooth line, which rises to a hill, falls into a valley and rises again.",
+        "x": {"min": 0, "max": 6.5, "label": "Distance (km)", "step": 1},
+        "y": {"min": 0, "max": 500, "label": "Height (m)", "step": 100},
+        "items": [
+          {
+            "type": "curve",
+            "id": "c",
+            "points": [[0, 200], [0.8, 300], [1.5, 400], [2.4, 300], [3, 200], [3.8, 300], [4.5, 400]],
+            "smooth": true
+          },
+          {"type": "point", "at": [0, 200], "on": ["c"]},
+          {"type": "point", "at": [0.8, 300], "on": ["c"]},
+          {"type": "point", "at": [1.5, 400], "on": ["c"]},
+          {"type": "point", "at": [2.4, 300], "on": ["c"]},
+          {"type": "point", "at": [3, 200], "on": ["c"]},
+          {"type": "point", "at": [3.8, 300], "on": ["c"]},
+          {"type": "point", "at": [4.5, 400], "on": ["c"]}
+        ]
+      }
+    },
     "remember": "Mark each contour crossing, plot its height, then join the points.",
     "a": {
       "q": "Which two pieces of information are plotted for each point on a cross-section?",
@@ -5998,6 +6102,29 @@ MADE_BANKS.geo = {
       ],
       "Months with tall columns are the wet season. Months with short columns are the dry season. Where the line is high it is hot, and where it is low it is cool."
     ],
+    "cardFigs": {
+      "2": {
+        "kind": "chart",
+        "chart": "bar",
+        "alt": "Columns of average rainfall for each month in one town, from month 1, January, to month 12, December. The columns are short from November to March, 10 to 25 mm, and tall from May to August, up to 145 mm in July. So this town has a dry summer and a wet winter.",
+        "x": {"label": "Month (1 is January)"},
+        "y": {"min": 0, "max": 160, "step": 40, "label": "Rainfall (mm)"},
+        "bars": [
+          ["1", 15],
+          ["2", 10],
+          ["3", 20],
+          ["4", 35],
+          ["5", 90],
+          ["6", 125],
+          ["7", 145],
+          ["8", 120],
+          ["9", 80],
+          ["10", 40],
+          ["11", 25],
+          ["12", 10]
+        ]
+      }
+    },
     "remember": "Columns show rainfall, the line shows temperature, and both are monthly averages.",
     "a": {
       "q": "On a climate graph for a town, the columns are tallest in January and shortest in July. What does this show?",

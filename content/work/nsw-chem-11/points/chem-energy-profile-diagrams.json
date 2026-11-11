@@ -7,7 +7,10 @@
   "2026-10-26T13:29:58Z new, write",
   "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:07Z write: done",
-  "2026-10-27T01:08:33Z check: passed, cleared"
+  "2026-10-27T01:08:33Z check: passed, cleared",
+  "2026-11-11T11:43:55Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:24Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:24Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -88,6 +91,118 @@
    ],
    "If the products sit lower than the reactants, ΔH is negative. If the products sit higher, ΔH is positive."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "An energy profile diagram: energy against the progress of the reaction. The reactants' level is at the start and the products' level, lower, is at the end, with a peak between them. The activation energy is the height from the reactants' level up to the top of the peak. ΔH is measured from the reactants' level down to the products' level, so here it is negative.",
+    "x": {
+     "min": 0,
+     "max": 12,
+     "label": "Progress of reaction"
+    },
+    "y": {
+     "min": 0,
+     "max": 11.5,
+     "label": "Energy"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "e",
+      "points": [
+       [
+        0,
+        4
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        6,
+        9
+       ],
+       [
+        9,
+        2
+       ],
+       [
+        12,
+        2
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "guide",
+      "at": [
+       6,
+       9
+      ],
+      "yLabel": ""
+     },
+     {
+      "type": "guide",
+      "at": [
+       12,
+       4
+      ],
+      "yLabel": ""
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       4
+      ],
+      "to": [
+       1,
+       9
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       2.6,
+       9
+      ],
+      "label": "activation energy",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       11,
+       4
+      ],
+      "to": [
+       11,
+       2
+      ],
+      "label": "ΔH",
+      "pos": "left"
+     },
+     {
+      "type": "text",
+      "at": [
+       1.6,
+       4
+      ],
+      "label": "reactants",
+      "pos": "below"
+     },
+     {
+      "type": "text",
+      "at": [
+       10.3,
+       2
+      ],
+      "label": "products",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Activation energy is reactants up to the peak. ΔH is reactants to products.",
   "a": {
    "q": "On an energy profile diagram, what does the height from the reactants' level to the top of the peak show?",
@@ -113,5 +228,142 @@
    "clue": "Both values start from the reactants' level."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "An energy profile for a reaction whose products sit lower than its reactants: the activation energy measured from the reactants' level up to the peak, and ΔH measured from the reactants' level down to the products' level.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "An energy profile diagram: energy against the progress of the reaction. The reactants' level is at the start and the products' level, lower, is at the end, with a peak between them. The activation energy is the height from the reactants' level up to the top of the peak. ΔH is measured from the reactants' level down to the products' level, so here it is negative.",
+     "x": {
+      "min": 0,
+      "max": 12,
+      "label": "Progress of reaction"
+     },
+     "y": {
+      "min": 0,
+      "max": 11.5,
+      "label": "Energy"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "e",
+       "points": [
+        [
+         0,
+         4
+        ],
+        [
+         3,
+         4
+        ],
+        [
+         6,
+         9
+        ],
+        [
+         9,
+         2
+        ],
+        [
+         12,
+         2
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "guide",
+       "at": [
+        6,
+        9
+       ],
+       "yLabel": ""
+      },
+      {
+       "type": "guide",
+       "at": [
+        12,
+        4
+       ],
+       "yLabel": ""
+      },
+      {
+       "type": "arrow",
+       "from": [
+        1,
+        4
+       ],
+       "to": [
+        1,
+        9
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        2.6,
+        9
+       ],
+       "label": "activation energy",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        11,
+        4
+       ],
+       "to": [
+        11,
+        2
+       ],
+       "label": "ΔH",
+       "pos": "left"
+      },
+      {
+       "type": "text",
+       "at": [
+        1.6,
+        4
+       ],
+       "label": "reactants",
+       "pos": "below"
+      },
+      {
+       "type": "text",
+       "at": [
+        10.3,
+        2
+       ],
+       "label": "products",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:24Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:24Z"
+  }
+ ]
 }

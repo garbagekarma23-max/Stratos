@@ -29,7 +29,10 @@
   "2026-11-01T08:33:49Z write: done (still fails the content check)",
   "2026-11-01T08:42:05Z check: flagged",
   "2026-11-01T08:44:26Z fix: suggested",
-  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-11T11:43:57Z pictures: the owner asked for a chart at card 2",
+  "2026-11-11T11:44:33Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:41Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -187,6 +190,40 @@
    "In liquid water, hydrogen bonds keep forming and breaking as the molecules move past each other and sit close together.",
    "In ice, each molecule is held by hydrogen bonds in a fixed, open lattice with gaps in it. This spaces the molecules further apart than in the liquid, so ice is less dense than liquid water and floats."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar chart of the boiling points of the Group 16 hydrides, in kelvin: H2O 373 K, H2S 213 K, H2Se 232 K and H2Te 271 K. From H2S to H2Te the boiling point rises as the molecules get larger, but water's boiling point is far higher than all of them.",
+    "x": {
+     "label": "Hydride"
+    },
+    "y": {
+     "min": 0,
+     "max": 400,
+     "step": 100,
+     "label": "Boiling point (K)"
+    },
+    "bars": [
+     [
+      "H2O",
+      373
+     ],
+     [
+      "H2S",
+      213
+     ],
+     [
+      "H2Se",
+      232
+     ],
+     [
+      "H2Te",
+      271
+     ]
+    ]
+   }
+  },
   "remember": "Hydrogen bonding lifts water's boiling point and gives ice an open structure, so ice floats.",
   "a": {
    "q": "Why does water boil at a higher temperature than H2S, even though H2S molecules are larger?",
@@ -212,5 +249,64 @@
    "clue": "The molecules are identical in ice and water, so think about how they are arranged."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "chart",
+   "brief": "A bar chart of the boiling points of the Group 16 hydrides in kelvin: H2O 373, H2S 213, H2Se 232 and H2Te 271. From H2S to H2Te the boiling point rises with size, but water's is far higher than all of them.",
+   "figures": [
+    {
+     "kind": "chart",
+     "chart": "bar",
+     "alt": "A bar chart of the boiling points of the Group 16 hydrides, in kelvin: H2O 373 K, H2S 213 K, H2Se 232 K and H2Te 271 K. From H2S to H2Te the boiling point rises as the molecules get larger, but water's boiling point is far higher than all of them.",
+     "x": {
+      "label": "Hydride"
+     },
+     "y": {
+      "min": 0,
+      "max": 400,
+      "step": 100,
+      "label": "Boiling point (K)"
+     },
+     "bars": [
+      [
+       "H2O",
+       373
+      ],
+      [
+       "H2S",
+       213
+      ],
+      [
+       "H2Se",
+       232
+      ],
+      [
+       "H2Te",
+       271
+      ]
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:33Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:40Z"
+  }
+ ]
 }

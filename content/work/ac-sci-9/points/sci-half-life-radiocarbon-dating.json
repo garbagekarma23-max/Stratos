@@ -22,7 +22,10 @@
   "2026-11-05T07:10:02Z claude-code write: done, waiting for the Claude Code check",
   "2026-11-05T07:18:39Z claude-code check: answered by a separate subagent",
   "2026-11-05T07:18:39Z check: for review (first-nations)",
-  "2026-11-05T12:51:43Z review: approved as written"
+  "2026-11-05T12:51:43Z review: approved as written",
+  "2026-11-11T11:44:02Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:22Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:22Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -251,6 +254,55 @@
    "Carbon-14 has a half-life of about 5,700 years. Comparing the carbon-14 left in charcoal, bone or shell with a living sample shows how long ago it died.",
    "Radiocarbon dating has dated many First Peoples' campsites and burials in Australia. It works up to about 50,000 years ago, so older sites need other dating methods."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The percentage of carbon-14 left in a sample against time since the living thing died. It starts at 100% and halves every half-life of about 5,700 years: the dashed lines show 50% left at 5,700 years. The curve keeps falling, more slowly, so less carbon-14 means an older sample.",
+    "x": {
+     "min": 0,
+     "max": 30000,
+     "label": "Time (years)",
+     "step": 5000,
+     "nums": false
+    },
+    "y": {
+     "min": 0,
+     "max": 110,
+     "label": "Carbon-14 left (%)",
+     "step": 25
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "c",
+      "expr": "100\\cdot 2^{-\\frac{x}{5700}}",
+      "domain": [
+       0,
+       30000
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       5700,
+       50
+      ],
+      "xLabel": "5,700",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       5700,
+       50
+      ],
+      "on": [
+       "c"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Less carbon-14 left means more half-lives have passed, so the sample is older.",
   "a": {
    "q": "A sample has 1,200 unstable atoms, and its half-life is 3 days. How many unstable atoms are left after 9 days?",
@@ -276,5 +328,79 @@
    "clue": "How many halvings turn the whole into an eighth?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Carbon-14 left in a sample against time since the living thing died: a decay curve from 100% that halves every 5,700 years, with 50% at 5,700 years marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The percentage of carbon-14 left in a sample against time since the living thing died. It starts at 100% and halves every half-life of about 5,700 years: the dashed lines show 50% left at 5,700 years. The curve keeps falling, more slowly, so less carbon-14 means an older sample.",
+     "x": {
+      "min": 0,
+      "max": 30000,
+      "label": "Time (years)",
+      "step": 5000,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 110,
+      "label": "Carbon-14 left (%)",
+      "step": 25
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "c",
+       "expr": "100\\cdot 2^{-\\frac{x}{5700}}",
+       "domain": [
+        0,
+        30000
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        5700,
+        50
+       ],
+       "xLabel": "5,700",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        5700,
+        50
+       ],
+       "on": [
+        "c"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:22Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:21Z"
+  }
+ ]
 }

@@ -9,7 +9,10 @@
   "2026-10-27T01:00:10Z write: done",
   "2026-10-27T01:08:36Z check: flagged",
   "2026-10-27T01:23:01Z fix: suggested",
-  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-11T11:43:51Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:29Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:37Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -175,6 +178,61 @@
    "Above the threshold, even very dim light ejects electrons straight away. Brighter light ejects more electrons per second. A higher frequency raises the maximum kinetic energy of the photoelectrons, though many leave with less.",
    "The wave model predicted that a bright enough light of any frequency would eventually eject electrons. Einstein explained the effect with photons: one photon gives all its energy to one electron, and it must carry enough energy to free it."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Maximum kinetic energy of the photoelectrons against the frequency of the light. Below the threshold frequency no electrons are ejected. Above it, the maximum kinetic energy rises in a straight line as the frequency rises.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Frequency"
+    },
+    "y": {
+     "min": 0,
+     "max": 7,
+     "label": "Max kinetic energy"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "k",
+      "expr": "0.9x - 3.6",
+      "domain": [
+       4,
+       10
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       0
+      ],
+      "on": [
+       "k"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       0
+      ],
+      "xLabel": "threshold"
+     },
+     {
+      "type": "text",
+      "at": [
+       2,
+       0.2
+      ],
+      "label": "no electrons",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Frequency decides whether electrons are ejected. Brightness decides how many.",
   "a": {
    "q": "Red light shining on a metal ejects no electrons, however bright it is. What does this show?",
@@ -200,5 +258,85 @@
    "clue": "The frequency stays the same, so the energy of each photon stays the same."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Maximum kinetic energy of the photoelectrons against the frequency of the light: zero below the threshold frequency, then a straight line rising above it.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Maximum kinetic energy of the photoelectrons against the frequency of the light. Below the threshold frequency no electrons are ejected. Above it, the maximum kinetic energy rises in a straight line as the frequency rises.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Frequency"
+     },
+     "y": {
+      "min": 0,
+      "max": 7,
+      "label": "Max kinetic energy"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "k",
+       "expr": "0.9x - 3.6",
+       "domain": [
+        4,
+        10
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        0
+       ],
+       "on": [
+        "k"
+       ],
+       "is": "x-intercept"
+      },
+      {
+       "type": "guide",
+       "at": [
+        4,
+        0
+       ],
+       "xLabel": "threshold"
+      },
+      {
+       "type": "text",
+       "at": [
+        2,
+        0.2
+       ],
+       "label": "no electrons",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:29Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:36Z"
+  }
+ ]
 }

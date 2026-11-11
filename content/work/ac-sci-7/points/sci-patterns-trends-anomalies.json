@@ -8,7 +8,10 @@
   "2026-11-04T09:23:43Z new, write",
   "2026-11-04T09:36:58Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-04T09:47:12Z write: done",
-  "2026-11-04T09:58:32Z check: passed, cleared"
+  "2026-11-04T09:58:32Z check: passed, cleared",
+  "2026-11-11T11:44:01Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:22Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -83,6 +86,85 @@
    ],
    "An anomaly may come from an error, such as a misread instrument or a spill. Scientists look for the cause and may repeat that trial to check it."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "A plant's height measured each day for 5 days: 3, 5, 7, 4 and 11 cm. The straight line shows the trend: the height rises by about 2 cm a day. Four results sit on the line. The day 4 result, 4 cm, is far below it, so it is an anomaly.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "label": "Day",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 14,
+     "label": "Height (cm)",
+     "step": 2
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "t",
+      "expr": "2x + 1",
+      "domain": [
+       0.5,
+       5.5
+      ],
+      "label": "trend"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       3
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       5
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       7
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       11
+      ],
+      "on": [
+       "t"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       4
+      ],
+      "label": "anomaly",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
   "remember": "A trend is the overall direction. An anomaly is the result that breaks the pattern.",
   "a": {
    "q": "Hana times how long ice takes to melt in water at 10, 20, 30, 40 and 50 °C. The times fall as the water gets warmer. What does this describe?",
@@ -108,5 +190,109 @@
    "clue": "Which result breaks the steady rise?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "A line graph of a plant's height over 5 days: 3, 5, 7, 4 and 11 cm. Four results fit a rising trend line; the day 4 result, 4 cm, is far below it and is marked as an anomaly.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A plant's height measured each day for 5 days: 3, 5, 7, 4 and 11 cm. The straight line shows the trend: the height rises by about 2 cm a day. Four results sit on the line. The day 4 result, 4 cm, is far below it, so it is an anomaly.",
+     "x": {
+      "min": 0,
+      "max": 6,
+      "label": "Day",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 14,
+      "label": "Height (cm)",
+      "step": 2
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "t",
+       "expr": "2x + 1",
+       "domain": [
+        0.5,
+        5.5
+       ],
+       "label": "trend"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        3
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        5
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3,
+        7
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        5,
+        11
+       ],
+       "on": [
+        "t"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        4
+       ],
+       "label": "anomaly",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:21Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:21Z"
+  }
+ ]
 }

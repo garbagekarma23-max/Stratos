@@ -27,7 +27,10 @@
   "2026-11-01T14:56:06Z write: done",
   "2026-11-01T15:05:30Z check: flagged",
   "2026-11-01T15:14:49Z fix: suggested",
-  "2026-11-02T04:35:43Z autoreview: cleared with the fix (b wording)"
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (b wording)",
+  "2026-11-11T11:43:52Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:40Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:50Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -194,6 +197,75 @@
    ],
    "Measuring V₀ gives Kmax in electron volts. If V₀ is 2.0 V, then Kmax is 2.0 eV."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Kmax against the frequency of the light: a straight line, Kmax = hf minus φ, that starts at the threshold frequency f0 on the frequency axis. Extended back as a dashed line, it meets the energy axis at minus φ, the work function.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Frequency"
+    },
+    "y": {
+     "min": -4.5,
+     "max": 6.5,
+     "label": "Kmax"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "k",
+      "expr": "0.9x - 3.6",
+      "domain": [
+       4,
+       10
+      ],
+      "label": "\\(K_{max} = hf - \\phi\\)",
+      "labelAt": 7,
+      "pos": "above-left"
+     },
+     {
+      "type": "fn",
+      "id": "e",
+      "expr": "0.9x - 3.6",
+      "domain": [
+       0,
+       4
+      ],
+      "label": "extended",
+      "labelAt": 1.4,
+      "pos": "below-right",
+      "style": "dash"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       0
+      ],
+      "on": [
+       "k"
+      ],
+      "is": "x-intercept",
+      "label": "\\(f_{0}\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -3.6
+      ],
+      "on": [
+       "e"
+      ],
+      "is": "y-intercept",
+      "label": "\\(-\\phi\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
   "remember": "Kmax = hf - φ, and the stopping voltage V₀ measures Kmax through Kmax = eV₀.",
   "a": {
    "q": "A metal has a work function of 2.0 eV. A photon of energy 5.0 eV frees an electron with the most kinetic energy possible. What stopping voltage is needed?",
@@ -219,5 +291,99 @@
    "clue": "Same photon energy: if more is spent freeing the electron, how much is left?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Kmax against frequency: a straight line Kmax = hf - φ crossing the frequency axis at the threshold f0, extended back as a dashed line to meet the energy axis at -φ.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Kmax against the frequency of the light: a straight line, Kmax = hf minus φ, that starts at the threshold frequency f0 on the frequency axis. Extended back as a dashed line, it meets the energy axis at minus φ, the work function.",
+     "x": {
+      "min": 0,
+      "max": 10,
+      "label": "Frequency"
+     },
+     "y": {
+      "min": -4.5,
+      "max": 6.5,
+      "label": "Kmax"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "k",
+       "expr": "0.9x - 3.6",
+       "domain": [
+        4,
+        10
+       ],
+       "label": "\\(K_{max} = hf - \\phi\\)",
+       "labelAt": 7,
+       "pos": "above-left"
+      },
+      {
+       "type": "fn",
+       "id": "e",
+       "expr": "0.9x - 3.6",
+       "domain": [
+        0,
+        4
+       ],
+       "label": "extended",
+       "labelAt": 1.4,
+       "pos": "below-right",
+       "style": "dash"
+      },
+      {
+       "type": "point",
+       "at": [
+        4,
+        0
+       ],
+       "on": [
+        "k"
+       ],
+       "is": "x-intercept",
+       "label": "\\(f_{0}\\)",
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        -3.6
+       ],
+       "on": [
+        "e"
+       ],
+       "is": "y-intercept",
+       "label": "\\(-\\phi\\)",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:40Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:50Z"
+  }
+ ]
 }

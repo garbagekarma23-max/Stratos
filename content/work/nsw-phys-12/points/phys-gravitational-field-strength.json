@@ -9,7 +9,10 @@
   "2026-10-27T01:00:10Z write: done",
   "2026-10-27T01:08:35Z check: passed, cleared",
   "2026-10-29T11:03:06Z rebalance: new wrong options for question a, waiting for the check",
-  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)",
+  "2026-11-11T11:43:51Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:28Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:21Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -82,6 +85,73 @@
    "The field gets weaker with distance. Doubling r makes g one quarter as large. A larger M makes g larger.",
    "At the Earth's surface, g is about 9.8 N/kg. The force on a mass m is F = mg, so a 2.0 kg object feels about 19.6 N."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Gravitational field strength against distance from the Earth's centre, from the surface outwards. At the surface, a distance r from the centre, g is 9.8 N/kg. At 2r it is 2.45 N/kg, one quarter as large, and the field keeps getting weaker further out.",
+    "x": {
+     "min": 0,
+     "max": 5,
+     "label": "Distance from centre"
+    },
+    "y": {
+     "min": 0,
+     "max": 11,
+     "label": "g (N/kg)"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\frac{9.8}{x^{2}}",
+      "domain": [
+       1,
+       5
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       1,
+       9.8
+      ],
+      "xLabel": "\\(r\\)",
+      "yLabel": "9.8"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       9.8
+      ],
+      "on": [
+       "g"
+      ],
+      "label": "surface",
+      "pos": "right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       2,
+       2.45
+      ],
+      "xLabel": "\\(2r\\)",
+      "yLabel": "2.45"
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       2.45
+      ],
+      "on": [
+       "g"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "g = GM/r²: it depends on the mass creating the field and the distance, not on the object in it.",
   "a": {
    "q": "A 3.0 kg object and a 6.0 kg object are placed at the same point near a planet. How do the field strengths at that point compare?",
@@ -173,5 +243,97 @@
    "sensitive": "none",
    "summary": "The physics and both intended answers are correct. Question a's clue gives the answer away, and question b's stem is awkwardly worded."
   }
- }
+ },
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Gravitational field strength g against distance from the Earth's centre, starting at the surface: 9.8 N/kg at the surface, distance r, falling to 2.45 N/kg, one quarter, at 2r.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Gravitational field strength against distance from the Earth's centre, from the surface outwards. At the surface, a distance r from the centre, g is 9.8 N/kg. At 2r it is 2.45 N/kg, one quarter as large, and the field keeps getting weaker further out.",
+     "x": {
+      "min": 0,
+      "max": 5,
+      "label": "Distance from centre"
+     },
+     "y": {
+      "min": 0,
+      "max": 11,
+      "label": "g (N/kg)"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "\\frac{9.8}{x^{2}}",
+       "domain": [
+        1,
+        5
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        1,
+        9.8
+       ],
+       "xLabel": "\\(r\\)",
+       "yLabel": "9.8"
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        9.8
+       ],
+       "on": [
+        "g"
+       ],
+       "label": "surface",
+       "pos": "right"
+      },
+      {
+       "type": "guide",
+       "at": [
+        2,
+        2.45
+       ],
+       "xLabel": "\\(2r\\)",
+       "yLabel": "2.45"
+      },
+      {
+       "type": "point",
+       "at": [
+        2,
+        2.45
+       ],
+       "on": [
+        "g"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:28Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:20Z"
+  }
+ ]
 }

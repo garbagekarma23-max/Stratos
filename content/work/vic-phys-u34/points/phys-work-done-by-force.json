@@ -29,7 +29,10 @@
   "2026-11-01T14:36:28Z new, match",
   "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T14:56:06Z write: done",
-  "2026-11-01T15:05:30Z check: passed, cleared"
+  "2026-11-01T15:05:30Z check: passed, cleared",
+  "2026-11-11T11:43:54Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:39Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:49Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -107,6 +110,70 @@
    "On a force-distance graph, the work done is the area under the line. This works even when the force changes.",
    "A force at right angles to the motion does no work. Work is positive if the force acts along the motion and negative if it acts against it."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Force against distance for a force that changes: it stays at 20 N for the first 4 m, then falls steadily to zero at 8 m. The shaded area under the line is the work done, even though the force changes.",
+    "x": {
+     "min": 0,
+     "max": 12.5,
+     "label": "Distance (m)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 26,
+     "label": "Force (N)",
+     "step": 5
+    },
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        20
+       ],
+       [
+        4,
+        20
+       ],
+       [
+        8,
+        0
+       ]
+      ],
+      "label": "area = work done",
+      "at": [
+       3,
+       8
+      ]
+     },
+     {
+      "type": "curve",
+      "id": "f",
+      "points": [
+       [
+        0,
+        20
+       ],
+       [
+        4,
+        20
+       ],
+       [
+        8,
+        0
+       ]
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Work is the force along the motion times the distance moved, or the area under a force-distance graph.",
   "a": {
    "q": "Which force does no work on the object?",
@@ -132,5 +199,94 @@
    "clue": "Find the part of the force that points along the motion."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Force against distance for a force that changes: 20 N for the first 4 m, then falling steadily to 0 N at 8 m. The area under the line is shaded as the work done.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Force against distance for a force that changes: it stays at 20 N for the first 4 m, then falls steadily to zero at 8 m. The shaded area under the line is the work done, even though the force changes.",
+     "x": {
+      "min": 0,
+      "max": 12.5,
+      "label": "Distance (m)",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 26,
+      "label": "Force (N)",
+      "step": 5
+     },
+     "items": [
+      {
+       "type": "shade",
+       "poly": [
+        [
+         0,
+         0
+        ],
+        [
+         0,
+         20
+        ],
+        [
+         4,
+         20
+        ],
+        [
+         8,
+         0
+        ]
+       ],
+       "label": "area = work done",
+       "at": [
+        3,
+        8
+       ]
+      },
+      {
+       "type": "curve",
+       "id": "f",
+       "points": [
+        [
+         0,
+         20
+        ],
+        [
+         4,
+         20
+        ],
+        [
+         8,
+         0
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:38Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:48Z"
+  }
+ ]
 }

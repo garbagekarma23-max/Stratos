@@ -7,7 +7,10 @@
  "log": [
   "2026-11-01T14:36:25Z new, write",
   "2026-11-01T14:46:35Z write: done",
-  "2026-11-01T14:55:56Z check: passed, cleared"
+  "2026-11-01T14:55:56Z check: passed, cleared",
+  "2026-11-11T11:44:00Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:33Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:40Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -87,6 +90,54 @@
    ],
    "The time taken for half of an isotope to decay is its half-life. Measuring how much of it remains in a sample shows how old the sample is."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The percentage of a radioactive isotope left in a sample against time, measured in half-lives. It starts at 100% and halves every half-life: 50% is left after one half-life, as the dashed lines show. Measuring how much is left shows how many half-lives have passed.",
+    "x": {
+     "min": 0,
+     "max": 5.75,
+     "label": "Half-lives",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 110,
+     "label": "Isotope left (%)",
+     "step": 25
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "n",
+      "expr": "100\\cdot 2^{-x}",
+      "domain": [
+       0,
+       4
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       1,
+       50
+      ],
+      "xLabel": "",
+      "yLabel": ""
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       50
+      ],
+      "on": [
+       "n"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Relative dating gives an order. Absolute dating gives an age in years from decay.",
   "a": {
    "q": "A scientist states that fossil X is older than fossil Y because X lies in a lower, undisturbed layer. What type of dating is this?",
@@ -112,5 +163,78 @@
    "clue": "Count how many times the amount has halved."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "The amount of a radioactive isotope left in a sample against time, in half-lives: a decay curve from 100% that halves each half-life, with 50% left after one half-life marked.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The percentage of a radioactive isotope left in a sample against time, measured in half-lives. It starts at 100% and halves every half-life: 50% is left after one half-life, as the dashed lines show. Measuring how much is left shows how many half-lives have passed.",
+     "x": {
+      "min": 0,
+      "max": 5.75,
+      "label": "Half-lives",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 110,
+      "label": "Isotope left (%)",
+      "step": 25
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "n",
+       "expr": "100\\cdot 2^{-x}",
+       "domain": [
+        0,
+        4
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        1,
+        50
+       ],
+       "xLabel": "",
+       "yLabel": ""
+      },
+      {
+       "type": "point",
+       "at": [
+        1,
+        50
+       ],
+       "on": [
+        "n"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:32Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:40Z"
+  }
+ ]
 }

@@ -7,7 +7,10 @@
   "2026-10-26T13:30:00Z new, write",
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:08Z write: done",
-  "2026-10-27T01:08:34Z check: passed, cleared"
+  "2026-10-27T01:08:34Z check: passed, cleared",
+  "2026-11-11T11:43:56Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:25Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:25Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -76,6 +79,118 @@
    "For a strong acid and a strong base, the equivalence point is at pH 7 at 25°C. For a weak acid titrated with a strong base, it is above 7, because the conjugate base of the weak acid makes the solution basic.",
    "A weak acid curve also has a flatter buffer region before the steep section. Here the flask holds both the weak acid and its conjugate base, so the pH changes only slowly as base is added."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A titration curve for a weak acid titrated with a strong base: pH against the volume of base added. The pH starts near 3, rises slowly through a flatter buffer region, then rises steeply near 25 mL. The equivalence point is the middle of this steep section, at about pH 8.7, above 7. After it, the curve levels off near pH 12.5.",
+    "x": {
+     "min": 0,
+     "max": 50,
+     "label": "Base added (mL)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 14,
+     "label": "pH",
+     "step": 2
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "t",
+      "points": [
+       [
+        0,
+        2.88
+       ],
+       [
+        2,
+        3.7
+       ],
+       [
+        5,
+        4.16
+       ],
+       [
+        10,
+        4.58
+       ],
+       [
+        12.5,
+        4.76
+       ],
+       [
+        15,
+        4.94
+       ],
+       [
+        20,
+        5.36
+       ],
+       [
+        23,
+        5.82
+       ],
+       [
+        24,
+        6.14
+       ],
+       [
+        24.8,
+        6.85
+       ],
+       [
+        25,
+        8.72
+       ],
+       [
+        25.2,
+        10.6
+       ],
+       [
+        26,
+        11.29
+       ],
+       [
+        30,
+        11.96
+       ],
+       [
+        40,
+        12.36
+       ],
+       [
+        50,
+        12.52
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "point",
+      "at": [
+       25,
+       8.72
+      ],
+      "on": [
+       "t"
+      ],
+      "label": "equivalence point",
+      "pos": "right"
+     },
+     {
+      "type": "text",
+      "at": [
+       12.5,
+       4.6
+      ],
+      "label": "buffer region",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
   "remember": "The equivalence point is the middle of the steep rise. A weak acid curve also has a flat buffer region before it.",
   "a": {
    "q": "On a titration curve, which part shows the equivalence point?",
@@ -101,5 +216,142 @@
    "clue": "Think about what is in the flask once all the weak acid has reacted."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A titration curve for a weak acid titrated with a strong base: pH against volume of base added, rising slowly through a flat buffer region, then a steep near vertical section whose midpoint, the equivalence point, is above pH 7, then levelling off.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A titration curve for a weak acid titrated with a strong base: pH against the volume of base added. The pH starts near 3, rises slowly through a flatter buffer region, then rises steeply near 25 mL. The equivalence point is the middle of this steep section, at about pH 8.7, above 7. After it, the curve levels off near pH 12.5.",
+     "x": {
+      "min": 0,
+      "max": 50,
+      "label": "Base added (mL)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 14,
+      "label": "pH",
+      "step": 2
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "t",
+       "points": [
+        [
+         0,
+         2.88
+        ],
+        [
+         2,
+         3.7
+        ],
+        [
+         5,
+         4.16
+        ],
+        [
+         10,
+         4.58
+        ],
+        [
+         12.5,
+         4.76
+        ],
+        [
+         15,
+         4.94
+        ],
+        [
+         20,
+         5.36
+        ],
+        [
+         23,
+         5.82
+        ],
+        [
+         24,
+         6.14
+        ],
+        [
+         24.8,
+         6.85
+        ],
+        [
+         25,
+         8.72
+        ],
+        [
+         25.2,
+         10.6
+        ],
+        [
+         26,
+         11.29
+        ],
+        [
+         30,
+         11.96
+        ],
+        [
+         40,
+         12.36
+        ],
+        [
+         50,
+         12.52
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "point",
+       "at": [
+        25,
+        8.72
+       ],
+       "on": [
+        "t"
+       ],
+       "label": "equivalence point",
+       "pos": "right"
+      },
+      {
+       "type": "text",
+       "at": [
+        12.5,
+        4.6
+       ],
+       "label": "buffer region",
+       "pos": "below-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:24Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:24Z"
+  }
+ ]
 }

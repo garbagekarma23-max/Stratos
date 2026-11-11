@@ -10,7 +10,10 @@
   "2026-11-01T08:14:10Z write: done",
   "2026-11-01T08:24:34Z check: flagged",
   "2026-11-01T08:33:53Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-11T11:43:53Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:37Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:47Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -212,6 +215,51 @@
     "a thermistor changes resistance with temperature. A light dependent resistor (LDR) changes resistance with light level. For a typical LDR, resistance falls as light gets brighter."
    ]
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Current against voltage for a resistor and a diode. The resistor's graph is a straight line through the origin, so it is ohmic. The diode carries almost no current when connected the other way (negative voltage) and very little at first the right way round, then the current rises steeply once the voltage passes about 0.6 V, so it is non-ohmic.",
+    "x": {
+     "min": -0.6,
+     "max": 1.0,
+     "label": "Voltage (V)",
+     "step": 0.2,
+     "nums": false
+    },
+    "y": {
+     "min": -20,
+     "max": 42,
+     "label": "Current (mA)",
+     "step": 10
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "r",
+      "expr": "30x",
+      "domain": [
+       -0.6,
+       1.0
+      ],
+      "label": "resistor",
+      "labelAt": -0.4,
+      "pos": "below-right"
+     },
+     {
+      "type": "fn",
+      "id": "d",
+      "expr": "0.0001\\left(e^{20x} - 1\\right)",
+      "domain": [
+       -0.6,
+       0.645
+      ],
+      "label": "diode",
+      "labelAt": 0.62,
+      "pos": "left"
+     }
+    ]
+   }
+  },
   "remember": "If the I-V graph is not a straight line through the origin, the device is non-ohmic.",
   "a": {
    "q": "The I-V graph of a component is a curve. What does this show about the component?",
@@ -237,5 +285,75 @@
    "clue": "What happens when she reverses the connection?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Current against voltage for a resistor and a diode: the resistor a straight line through the origin; the diode almost no current for negative voltage and small positive voltage, then rising steeply after about 0.6 V.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Current against voltage for a resistor and a diode. The resistor's graph is a straight line through the origin, so it is ohmic. The diode carries almost no current when connected the other way (negative voltage) and very little at first the right way round, then the current rises steeply once the voltage passes about 0.6 V, so it is non-ohmic.",
+     "x": {
+      "min": -0.6,
+      "max": 1.0,
+      "label": "Voltage (V)",
+      "step": 0.2,
+      "nums": false
+     },
+     "y": {
+      "min": -20,
+      "max": 42,
+      "label": "Current (mA)",
+      "step": 10
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "r",
+       "expr": "30x",
+       "domain": [
+        -0.6,
+        1.0
+       ],
+       "label": "resistor",
+       "labelAt": -0.4,
+       "pos": "below-right"
+      },
+      {
+       "type": "fn",
+       "id": "d",
+       "expr": "0.0001\\left(e^{20x} - 1\\right)",
+       "domain": [
+        -0.6,
+        0.645
+       ],
+       "label": "diode",
+       "labelAt": 0.62,
+       "pos": "left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:37Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:46Z"
+  }
+ ]
 }

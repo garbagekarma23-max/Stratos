@@ -16,7 +16,12 @@
   "2026-11-01T08:24:29Z write: done",
   "2026-11-01T08:33:48Z check: flagged",
   "2026-11-01T08:42:04Z fix: suggested",
-  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-11T11:43:58Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:31Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:38Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The without insulin curve starts at a normal 5 mmol/L, but in untreated type 1 diabetes blood glucose is already high before the meal, so this curve should start well above the usual range (about 9 to 10 mmol/L) and rise from there.; The with insulin curve has a visible kink just after 1 hour where the flat peak turns sharply into the fall; it should turn smoothly.; The x axis runs to 5.5 hours but both curves stop at 4, leaving an empty strip on the right; end the axis at about 4.5 or carry the curves to the end.",
+  "2026-11-11T12:03:01Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:03:38Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -198,6 +203,110 @@
    ],
    "In type 1 diabetes, the body cannot make insulin. Cells cannot take up glucose properly, so blood glucose stays high."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Blood glucose against time after a meal. With insulin, it starts at a usual level, rises a little and falls back within about 3 hours, as cells take up the glucose. Without insulin, as in untreated type 1 diabetes, it is already high before the meal, rises much higher and stays high, because cells cannot take up glucose properly.",
+    "x": {
+     "min": 0,
+     "max": 4.5,
+     "label": "Time (h)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 20,
+     "label": "Blood glucose (mmol/L)",
+     "step": 4
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "w",
+      "points": [
+       [
+        0,
+        5.2
+       ],
+       [
+        0.5,
+        7.2
+       ],
+       [
+        1,
+        7.9
+       ],
+       [
+        1.5,
+        7.2
+       ],
+       [
+        2,
+        6.2
+       ],
+       [
+        2.5,
+        5.6
+       ],
+       [
+        3,
+        5.3
+       ],
+       [
+        3.5,
+        5.2
+       ]
+      ],
+      "smooth": true,
+      "label": "with insulin",
+      "labelAt": 2.7,
+      "pos": "below"
+     },
+     {
+      "type": "curve",
+      "id": "n",
+      "points": [
+       [
+        0,
+        9.5
+       ],
+       [
+        0.5,
+        11.5
+       ],
+       [
+        1,
+        13.5
+       ],
+       [
+        1.5,
+        15
+       ],
+       [
+        2,
+        15.8
+       ],
+       [
+        2.5,
+        16.1
+       ],
+       [
+        3,
+        16.2
+       ],
+       [
+        3.5,
+        16.2
+       ]
+      ],
+      "smooth": true,
+      "label": "without insulin",
+      "labelAt": 2.7,
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Insulin lowers blood glucose, glucagon raises it, and without insulin blood glucose stays high.",
   "a": {
    "q": "Ravi has just eaten a large meal and his blood glucose rises. What does his pancreas do in response?",
@@ -223,5 +332,255 @@
    "clue": "Which hormone is missing in type 1 diabetes, and what does it do to glucose in cells?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Blood glucose against time after a meal, with insulin (rises, then falls back to its normal level within about 3 hours) and without insulin, as in untreated type 1 diabetes (rises much higher and stays high).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Blood glucose against time after a meal. With insulin, it rises a little and falls back to its usual level within about 3 hours, as cells take up the glucose. Without insulin, as in type 1 diabetes, it rises much higher and stays high, because cells cannot take up glucose properly.",
+     "x": {
+      "min": 0,
+      "max": 5.5,
+      "label": "Time (h)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 16,
+      "label": "Blood glucose (mmol/L)",
+      "step": 4
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "w",
+       "points": [
+        [
+         0,
+         5
+        ],
+        [
+         0.5,
+         7.5
+        ],
+        [
+         1,
+         8
+        ],
+        [
+         1.5,
+         7
+        ],
+        [
+         2,
+         6
+        ],
+        [
+         3,
+         5.2
+        ],
+        [
+         4,
+         5
+        ]
+       ],
+       "smooth": true,
+       "label": "with insulin",
+       "labelAt": 2.7,
+       "pos": "below"
+      },
+      {
+       "type": "curve",
+       "id": "n",
+       "points": [
+        [
+         0,
+         5
+        ],
+        [
+         0.5,
+         8
+        ],
+        [
+         1,
+         10.5
+        ],
+        [
+         1.5,
+         12.5
+        ],
+        [
+         2,
+         13.5
+        ],
+        [
+         3,
+         13.8
+        ],
+        [
+         4,
+         13.6
+        ]
+       ],
+       "smooth": true,
+       "label": "without insulin"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:31Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The without insulin curve starts at a normal 5 mmol/L, but in untreated type 1 diabetes blood glucose is already high before the meal, so this curve should start well above the usual range (about 9 to 10 mmol/L) and rise from there.",
+     "The with insulin curve has a visible kink just after 1 hour where the flat peak turns sharply into the fall; it should turn smoothly.",
+     "The x axis runs to 5.5 hours but both curves stop at 4, leaving an empty strip on the right; end the axis at about 4.5 or carry the curves to the end."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:38Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Blood glucose against time after a meal, with insulin (rises, then falls back to its normal level within about 3 hours) and without insulin, as in untreated type 1 diabetes (rises much higher and stays high).",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Blood glucose against time after a meal. With insulin, it starts at a usual level, rises a little and falls back within about 3 hours, as cells take up the glucose. Without insulin, as in untreated type 1 diabetes, it is already high before the meal, rises much higher and stays high, because cells cannot take up glucose properly.",
+     "x": {
+      "min": 0,
+      "max": 4.5,
+      "label": "Time (h)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 20,
+      "label": "Blood glucose (mmol/L)",
+      "step": 4
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "w",
+       "points": [
+        [
+         0,
+         5.2
+        ],
+        [
+         0.5,
+         7.2
+        ],
+        [
+         1,
+         7.9
+        ],
+        [
+         1.5,
+         7.2
+        ],
+        [
+         2,
+         6.2
+        ],
+        [
+         2.5,
+         5.6
+        ],
+        [
+         3,
+         5.3
+        ],
+        [
+         3.5,
+         5.2
+        ]
+       ],
+       "smooth": true,
+       "label": "with insulin",
+       "labelAt": 2.7,
+       "pos": "below"
+      },
+      {
+       "type": "curve",
+       "id": "n",
+       "points": [
+        [
+         0,
+         9.5
+        ],
+        [
+         0.5,
+         11.5
+        ],
+        [
+         1,
+         13.5
+        ],
+        [
+         1.5,
+         15
+        ],
+        [
+         2,
+         15.8
+        ],
+        [
+         2.5,
+         16.1
+        ],
+        [
+         3,
+         16.2
+        ],
+        [
+         3.5,
+         16.2
+        ]
+       ],
+       "smooth": true,
+       "label": "without insulin",
+       "labelAt": 2.7,
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T12:03:01Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:03:37Z"
+  }
+ ]
 }

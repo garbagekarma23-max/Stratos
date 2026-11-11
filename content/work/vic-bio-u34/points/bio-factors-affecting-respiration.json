@@ -10,7 +10,11 @@
   "2026-11-01T14:55:57Z write: done",
   "2026-11-01T15:05:23Z check: flagged",
   "2026-11-01T15:14:43Z fix: suggested",
-  "2026-11-02T04:35:38Z autoreview: cleared with the fix (remember other)"
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (remember other)",
+  "2026-11-11T11:43:59Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:43:59Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:32Z pictures: 2 pictures waiting for the check",
+  "2026-11-11T12:01:40Z pictures: 2 pictures kept"
  ],
  "sent": {
   "write": 2,
@@ -168,6 +172,119 @@
     "oxygen is the final electron acceptor in the electron transport chain. With less oxygen the chain slows, so less ATP is made, and the cell relies more on anaerobic pathways."
    ]
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Rate of cellular respiration against temperature. The rate rises with warmth up to the optimum, where it peaks. Past the optimum the enzymes denature and the rate drops sharply.",
+    "x": {
+     "min": 0,
+     "max": 90.0,
+     "label": "Temperature (°C)",
+     "step": 10
+    },
+    "y": {
+     "min": 0,
+     "max": 72,
+     "label": "Rate of respiration"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "t",
+      "points": [
+       [
+        0,
+        3
+       ],
+       [
+        10,
+        12
+       ],
+       [
+        20,
+        28
+       ],
+       [
+        30,
+        50
+       ],
+       [
+        35,
+        58
+       ],
+       [
+        40,
+        48
+       ],
+       [
+        45,
+        18
+       ],
+       [
+        50,
+        4
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "point",
+      "at": [
+       35,
+       58
+      ],
+      "on": [
+       "t"
+      ],
+      "label": "optimum",
+      "pos": "above"
+     },
+     {
+      "type": "text",
+      "at": [
+       46,
+       30
+      ],
+      "label": "denatured",
+      "pos": "right"
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "Rate of cellular respiration against glucose concentration. More glucose gives the enzymes more substrate, so the rate rises. It then levels off once the enzymes are working at their maximum rate.",
+    "x": {
+     "min": 0,
+     "max": 12,
+     "label": "Glucose concentration"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Rate of respiration"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "\\frac{8x}{x + 1.5}",
+      "domain": [
+       0,
+       12
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       8,
+       7.2
+      ],
+      "label": "levels off",
+      "pos": "above"
+     }
+    ]
+   }
+  },
   "remember": "Warmth speeds respiration up to the optimum, then enzymes denature. Glucose and oxygen supply also set the rate.",
   "a": {
    "q": "A student warms yeast in glucose solution from 10 °C to 25 °C and the rate of respiration rises. What is the best explanation?",
@@ -193,5 +310,168 @@
    "clue": "The glucose supply is high, so what else could limit the rate?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Rate of respiration against temperature: rising to a peak at the optimum, then dropping sharply as the enzymes denature.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Rate of cellular respiration against temperature. The rate rises with warmth up to the optimum, where it peaks. Past the optimum the enzymes denature and the rate drops sharply.",
+     "x": {
+      "min": 0,
+      "max": 90.0,
+      "label": "Temperature (°C)",
+      "step": 10
+     },
+     "y": {
+      "min": 0,
+      "max": 72,
+      "label": "Rate of respiration"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "t",
+       "points": [
+        [
+         0,
+         3
+        ],
+        [
+         10,
+         12
+        ],
+        [
+         20,
+         28
+        ],
+        [
+         30,
+         50
+        ],
+        [
+         35,
+         58
+        ],
+        [
+         40,
+         48
+        ],
+        [
+         45,
+         18
+        ],
+        [
+         50,
+         4
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "point",
+       "at": [
+        35,
+        58
+       ],
+       "on": [
+        "t"
+       ],
+       "label": "optimum",
+       "pos": "above"
+      },
+      {
+       "type": "text",
+       "at": [
+        46,
+        30
+       ],
+       "label": "denatured",
+       "pos": "right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:32Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:39Z"
+  },
+  {
+   "want": 2,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Rate of respiration against glucose concentration: rising, then levelling off once the enzymes work at their maximum rate.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Rate of cellular respiration against glucose concentration. More glucose gives the enzymes more substrate, so the rate rises. It then levels off once the enzymes are working at their maximum rate.",
+     "x": {
+      "min": 0,
+      "max": 12,
+      "label": "Glucose concentration"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Rate of respiration"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "g",
+       "expr": "\\frac{8x}{x + 1.5}",
+       "domain": [
+        0,
+        12
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        8,
+        7.2
+       ],
+       "label": "levels off",
+       "pos": "above"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:32Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:39Z"
+  }
+ ]
 }

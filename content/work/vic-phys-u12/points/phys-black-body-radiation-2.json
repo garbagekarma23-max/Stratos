@@ -16,7 +16,10 @@
   "2026-11-01T08:24:35Z write: done",
   "2026-11-01T08:33:53Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)",
+  "2026-11-11T11:43:51Z pictures: the owner asked for a graph at card 3",
+  "2026-11-11T11:44:36Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:45Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -157,6 +160,85 @@
    "The peak wavelength is the wavelength at which the most energy is emitted. Wien's law says it gets shorter as temperature rises, because peak wavelength is inversely proportional to temperature in kelvin.",
    "Real objects only approximate a black body. A heated piece of metal glows dull red, then orange, then white as its peak moves to shorter wavelengths and more visible light is emitted."
   ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Intensity against wavelength for two black bodies. The 5000 K curve is higher at every wavelength, so it emits more energy in total each second, and its peak wavelength, about 0.58 μm, is shorter than the 4000 K curve's, about 0.72 μm. An arrow from the cooler peak to the hotter peak shows the peak moving to a shorter wavelength.",
+    "x": {
+     "min": 0,
+     "max": 2.5,
+     "label": "Wavelength (μm)",
+     "step": 0.5
+    },
+    "y": {
+     "min": 0,
+     "max": 10.5,
+     "label": "Intensity"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "t4",
+      "expr": "\\frac{83.86}{x^{5}\\left(e^{\\frac{3.597}{x}} - 1\\right)}",
+      "domain": [
+       0.15,
+       2.5
+      ],
+      "label": "4000 K",
+      "labelAt": 1.442,
+      "pos": "below-left",
+      "style": "dash"
+     },
+     {
+      "type": "fn",
+      "id": "t5",
+      "expr": "\\frac{83.86}{x^{5}\\left(e^{\\frac{2.8776}{x}} - 1\\right)}",
+      "domain": [
+       0.15,
+       2.5
+      ],
+      "label": "5000 K",
+      "labelAt": 0.82,
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0.5796,
+       9.011
+      ],
+      "on": [
+       "t5"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       0.7244,
+       2.953
+      ],
+      "on": [
+       "t4"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       0.7244,
+       3.553
+      ],
+      "to": [
+       0.6096,
+       8.3
+      ],
+      "label": "hotter",
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "Hotter means more total energy emitted and a shorter peak wavelength.",
   "a": {
    "q": "A metal rod is heated until its temperature in kelvin doubles. What happens to the radiation it emits?",
@@ -182,5 +264,109 @@
    "clue": "Peak wavelength and temperature move in opposite directions."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 3",
+   "kind": "graph",
+   "brief": "Intensity against wavelength for black bodies at 4000 K and 5000 K: the hotter curve is higher everywhere, so more energy in total, and peaks at a shorter wavelength.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Intensity against wavelength for two black bodies. The 5000 K curve is higher at every wavelength, so it emits more energy in total each second, and its peak wavelength, about 0.58 μm, is shorter than the 4000 K curve's, about 0.72 μm. An arrow from the cooler peak to the hotter peak shows the peak moving to a shorter wavelength.",
+     "x": {
+      "min": 0,
+      "max": 2.5,
+      "label": "Wavelength (μm)",
+      "step": 0.5
+     },
+     "y": {
+      "min": 0,
+      "max": 10.5,
+      "label": "Intensity"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "t4",
+       "expr": "\\frac{83.86}{x^{5}\\left(e^{\\frac{3.597}{x}} - 1\\right)}",
+       "domain": [
+        0.15,
+        2.5
+       ],
+       "label": "4000 K",
+       "labelAt": 1.442,
+       "pos": "below-left",
+       "style": "dash"
+      },
+      {
+       "type": "fn",
+       "id": "t5",
+       "expr": "\\frac{83.86}{x^{5}\\left(e^{\\frac{2.8776}{x}} - 1\\right)}",
+       "domain": [
+        0.15,
+        2.5
+       ],
+       "label": "5000 K",
+       "labelAt": 0.82,
+       "pos": "above-right"
+      },
+      {
+       "type": "point",
+       "at": [
+        0.5796,
+        9.011
+       ],
+       "on": [
+        "t5"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "point",
+       "at": [
+        0.7244,
+        2.953
+       ],
+       "on": [
+        "t4"
+       ],
+       "is": "turning point"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        0.7244,
+        3.553
+       ],
+       "to": [
+        0.6096,
+        8.3
+       ],
+       "label": "hotter",
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:36Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:45Z"
+  }
+ ]
 }

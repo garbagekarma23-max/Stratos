@@ -7,7 +7,12 @@
   "2026-10-29T12:07:18Z new, write",
   "2026-10-29T12:14:25Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-29T12:22:35Z write: done",
-  "2026-10-29T12:30:20Z check: passed, cleared"
+  "2026-10-29T12:30:20Z check: passed, cleared",
+  "2026-11-11T11:44:00Z pictures: the owner asked for a graph at card 1",
+  "2026-11-11T11:44:27Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:20Z pictures: 1 picture turned down. Picture 1 (graph at card 1): redo, high sure. The aerobic curve crosses above anaerobic glycolysis at about 43 seconds (from the data, glycolysis 40 and aerobic about 42 at 45 s), so the graph shows the aerobic system supplying most of the energy from well under a minute, which contradicts card line 3: a hard effort lasting up to a couple of minutes draws mostly on anaerobic glycolysis.; It also misses what was asked for: the aerobic system should take over as the main supplier after about a minute or later, not at about 45 seconds; move the glycolysis and aerobic crossover later (and widen the time axis if needed, for example to 180 s) so glycolysis stays the main supplier into the second minute.; The curves are called shares of energy but do not add up to 100 in the middle of the effort (about 87 to 92 between 20 and 60 s), so the three shares should be made to sum to the whole at every time.; The ATP-PC label sits in the gap between the falling ATP-PC curve and the rising glycolysis curve, so it could be read as naming either; place it clearly beside the ATP-PC curve near its start.",
+  "2026-11-11T11:55:19Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:35Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -76,6 +81,163 @@
    "A very short, all-out effort draws mostly on the ATP-PC system. A hard effort lasting up to a couple of minutes draws mostly on anaerobic glycolysis.",
    "A long, steady effort draws mostly on the aerobic system. When the intensity or length of the activity changes, the main supplier changes too."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The share of the energy each system supplies against time, in a hard effort that keeps going. The three shares add to 100% at every moment. The ATP-PC system supplies most for the first few seconds, then falls fast. Anaerobic glycolysis supplies most from about 10 seconds to about a minute and a half. The aerobic system rises steadily and supplies most after that. All three supply some energy at every moment.",
+    "x": {
+     "min": 0,
+     "max": 255.0,
+     "label": "Time (s)",
+     "step": 60
+    },
+    "y": {
+     "min": 0,
+     "max": 100,
+     "label": "Share of energy (%)"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "p",
+      "points": [
+       [
+        0,
+        80
+       ],
+       [
+        5,
+        60
+       ],
+       [
+        10,
+        40
+       ],
+       [
+        20,
+        20
+       ],
+       [
+        40,
+        8
+       ],
+       [
+        60,
+        5
+       ],
+       [
+        90,
+        4
+       ],
+       [
+        120,
+        3
+       ],
+       [
+        180,
+        2
+       ]
+      ],
+      "smooth": true,
+      "label": "ATP-PC",
+      "labelAt": 2,
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "g",
+      "points": [
+       [
+        0,
+        15
+       ],
+       [
+        5,
+        32
+       ],
+       [
+        10,
+        50
+       ],
+       [
+        20,
+        62
+       ],
+       [
+        40,
+        64
+       ],
+       [
+        60,
+        55
+       ],
+       [
+        90,
+        48
+       ],
+       [
+        120,
+        41
+       ],
+       [
+        180,
+        32
+       ]
+      ],
+      "smooth": true,
+      "label": "anaerobic glycolysis",
+      "labelAt": 171,
+      "pos": "below"
+     },
+     {
+      "type": "curve",
+      "id": "a",
+      "points": [
+       [
+        0,
+        5
+       ],
+       [
+        5,
+        8
+       ],
+       [
+        10,
+        10
+       ],
+       [
+        20,
+        18
+       ],
+       [
+        40,
+        28
+       ],
+       [
+        60,
+        40
+       ],
+       [
+        90,
+        48
+       ],
+       [
+        120,
+        56
+       ],
+       [
+        180,
+        66
+       ]
+      ],
+      "smooth": true,
+      "label": "aerobic",
+      "labelAt": 200,
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
   "remember": "All three systems work at once. Intensity and length decide which one does most of the work.",
   "a": {
    "q": "Which statement best describes how the energy systems work during exercise?",
@@ -101,5 +263,334 @@
    "clue": "Look at how long and how hard the sprint is, not the jog before it."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Share of energy from each of the three energy systems against time in an all-out effort: ATP-PC supplies most at first and falls fast, anaerobic glycolysis rises to supply most at around 10 to 45 seconds, and the aerobic system rises steadily to supply most after about a minute. All three supply some energy at every moment.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The share of the energy each system supplies against time, in an all-out effort that keeps going. The ATP-PC system supplies most for the first few seconds, then falls fast. Anaerobic glycolysis supplies most from about 10 to 45 seconds. The aerobic system rises steadily and supplies most after about a minute. All three supply some energy at every moment.",
+     "x": {
+      "min": 0,
+      "max": 120,
+      "label": "Time (s)",
+      "step": 30
+     },
+     "y": {
+      "min": 0,
+      "max": 100,
+      "label": "Share of energy"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "p",
+       "points": [
+        [
+         0,
+         90
+        ],
+        [
+         5,
+         70
+        ],
+        [
+         10,
+         40
+        ],
+        [
+         20,
+         15
+        ],
+        [
+         40,
+         5
+        ],
+        [
+         120,
+         2
+        ]
+       ],
+       "smooth": true,
+       "label": "ATP-PC",
+       "labelAt": 6,
+       "pos": "right"
+      },
+      {
+       "type": "curve",
+       "id": "g",
+       "points": [
+        [
+         0,
+         8
+        ],
+        [
+         10,
+         50
+        ],
+        [
+         25,
+         55
+        ],
+        [
+         45,
+         40
+        ],
+        [
+         75,
+         20
+        ],
+        [
+         120,
+         12
+        ]
+       ],
+       "smooth": true,
+       "label": "anaerobic glycolysis",
+       "labelAt": 57,
+       "pos": "above-right"
+      },
+      {
+       "type": "curve",
+       "id": "a",
+       "points": [
+        [
+         0,
+         2
+        ],
+        [
+         10,
+         10
+        ],
+        [
+         30,
+         30
+        ],
+        [
+         60,
+         55
+        ],
+        [
+         90,
+         70
+        ],
+        [
+         120,
+         85
+        ]
+       ],
+       "smooth": true,
+       "label": "aerobic"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:26Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The aerobic curve crosses above anaerobic glycolysis at about 43 seconds (from the data, glycolysis 40 and aerobic about 42 at 45 s), so the graph shows the aerobic system supplying most of the energy from well under a minute, which contradicts card line 3: a hard effort lasting up to a couple of minutes draws mostly on anaerobic glycolysis.",
+     "It also misses what was asked for: the aerobic system should take over as the main supplier after about a minute or later, not at about 45 seconds; move the glycolysis and aerobic crossover later (and widen the time axis if needed, for example to 180 s) so glycolysis stays the main supplier into the second minute.",
+     "The curves are called shares of energy but do not add up to 100 in the middle of the effort (about 87 to 92 between 20 and 60 s), so the three shares should be made to sum to the whole at every time.",
+     "The ATP-PC label sits in the gap between the falling ATP-PC curve and the rising glycolysis curve, so it could be read as naming either; place it clearly beside the ATP-PC curve near its start."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:20Z"
+  },
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Share of energy from each of the three energy systems against time in an all-out effort: ATP-PC supplies most at first and falls fast, anaerobic glycolysis rises to supply most at around 10 to 45 seconds, and the aerobic system rises steadily to supply most after about a minute. All three supply some energy at every moment.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The share of the energy each system supplies against time, in a hard effort that keeps going. The three shares add to 100% at every moment. The ATP-PC system supplies most for the first few seconds, then falls fast. Anaerobic glycolysis supplies most from about 10 seconds to about a minute and a half. The aerobic system rises steadily and supplies most after that. All three supply some energy at every moment.",
+     "x": {
+      "min": 0,
+      "max": 255.0,
+      "label": "Time (s)",
+      "step": 60
+     },
+     "y": {
+      "min": 0,
+      "max": 100,
+      "label": "Share of energy (%)"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "p",
+       "points": [
+        [
+         0,
+         80
+        ],
+        [
+         5,
+         60
+        ],
+        [
+         10,
+         40
+        ],
+        [
+         20,
+         20
+        ],
+        [
+         40,
+         8
+        ],
+        [
+         60,
+         5
+        ],
+        [
+         90,
+         4
+        ],
+        [
+         120,
+         3
+        ],
+        [
+         180,
+         2
+        ]
+       ],
+       "smooth": true,
+       "label": "ATP-PC",
+       "labelAt": 2,
+       "pos": "above-right"
+      },
+      {
+       "type": "curve",
+       "id": "g",
+       "points": [
+        [
+         0,
+         15
+        ],
+        [
+         5,
+         32
+        ],
+        [
+         10,
+         50
+        ],
+        [
+         20,
+         62
+        ],
+        [
+         40,
+         64
+        ],
+        [
+         60,
+         55
+        ],
+        [
+         90,
+         48
+        ],
+        [
+         120,
+         41
+        ],
+        [
+         180,
+         32
+        ]
+       ],
+       "smooth": true,
+       "label": "anaerobic glycolysis",
+       "labelAt": 171,
+       "pos": "below"
+      },
+      {
+       "type": "curve",
+       "id": "a",
+       "points": [
+        [
+         0,
+         5
+        ],
+        [
+         5,
+         8
+        ],
+        [
+         10,
+         10
+        ],
+        [
+         20,
+         18
+        ],
+        [
+         40,
+         28
+        ],
+        [
+         60,
+         40
+        ],
+        [
+         90,
+         48
+        ],
+        [
+         120,
+         56
+        ],
+        [
+         180,
+         66
+        ]
+       ],
+       "smooth": true,
+       "label": "aerobic",
+       "labelAt": 200,
+       "pos": "above-left"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:55:19Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:35Z"
+  }
+ ]
 }

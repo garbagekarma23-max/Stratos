@@ -7,7 +7,10 @@
   "2026-10-26T13:30:03Z new, write",
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:10Z write: done",
-  "2026-10-27T01:08:36Z check: passed, cleared"
+  "2026-10-27T01:08:36Z check: passed, cleared",
+  "2026-11-11T11:43:52Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:29Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:51:22Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 2,
@@ -76,6 +79,98 @@
    "The speed comes from the red shift of the galaxy's light. The distance is found by other methods, such as using standard candles, which are objects of known luminosity.",
    "H₀ is about 70 km/s per megaparsec. A galaxy 100 Mpc away would recede at about 7000 km/s. Hubble's law shows that space itself is expanding."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "Recession speed against distance for a set of galaxies. The dots lie close to a straight line through the origin, so speed is proportional to distance. The gradient of the line is the Hubble constant, about 70 km/s per megaparsec: a galaxy 100 Mpc away recedes at about 7000 km/s.",
+    "x": {
+     "min": 0,
+     "max": 150,
+     "label": "d (Mpc)",
+     "step": 25,
+     "nums": false
+    },
+    "y": {
+     "min": 0,
+     "max": 11000,
+     "label": "v (km/s)",
+     "step": 2000,
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "70x",
+      "domain": [
+       0,
+       150
+      ],
+      "label": "\\(v = H_{0}d\\)",
+      "labelAt": 128,
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       22,
+       1700
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       2600
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       58,
+       4300
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       75,
+       5000
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       92,
+       6800
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       118,
+       8000
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       133,
+       9600
+      ]
+     },
+     {
+      "type": "guide",
+      "at": [
+       100,
+       7000
+      ],
+      "xLabel": "100",
+      "yLabel": "7000"
+     }
+    ]
+   }
+  },
   "remember": "Recession speed is proportional to distance, so the universe is expanding.",
   "a": {
    "q": "Galaxy A is 200 Mpc from us. Galaxy B is 100 Mpc away. By Hubble's law, how do their recession speeds compare?",
@@ -101,5 +196,122 @@
    "clue": "Rearrange v = H₀d to make d the subject."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "Recession speed against distance for galaxies: dots close to a straight line through the origin, v = H0d, with H0 about 70 km/s per Mpc, so a galaxy 100 Mpc away recedes at about 7000 km/s.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Recession speed against distance for a set of galaxies. The dots lie close to a straight line through the origin, so speed is proportional to distance. The gradient of the line is the Hubble constant, about 70 km/s per megaparsec: a galaxy 100 Mpc away recedes at about 7000 km/s.",
+     "x": {
+      "min": 0,
+      "max": 150,
+      "label": "d (Mpc)",
+      "step": 25,
+      "nums": false
+     },
+     "y": {
+      "min": 0,
+      "max": 11000,
+      "label": "v (km/s)",
+      "step": 2000,
+      "nums": false
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "h",
+       "expr": "70x",
+       "domain": [
+        0,
+        150
+       ],
+       "label": "\\(v = H_{0}d\\)",
+       "labelAt": 128,
+       "pos": "above-left"
+      },
+      {
+       "type": "point",
+       "at": [
+        22,
+        1700
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        40,
+        2600
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        58,
+        4300
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        75,
+        5000
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        92,
+        6800
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        118,
+        8000
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        133,
+        9600
+       ]
+      },
+      {
+       "type": "guide",
+       "at": [
+        100,
+        7000
+       ],
+       "xLabel": "100",
+       "yLabel": "7000"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:29Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:51:22Z"
+  }
+ ]
 }

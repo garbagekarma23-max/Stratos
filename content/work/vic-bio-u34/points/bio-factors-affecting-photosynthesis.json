@@ -15,7 +15,12 @@
   "2026-11-01T14:55:57Z write: done",
   "2026-11-01T15:05:23Z check: flagged",
   "2026-11-01T15:14:43Z fix: suggested",
-  "2026-11-02T04:35:38Z autoreview: cleared with the fix (b other, b other, a other)"
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (b other, b other, a other)",
+  "2026-11-11T11:43:59Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:32Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:39Z pictures: 1 picture turned down. Picture 1 (graph at card 2): redo, high sure. At low light the two curves are already far apart (at x = 1 the higher curve is about 3.2 and the lower about 2.25), so more carbon dioxide raises the rate even where the description says light is the limiting factor, which contradicts the card's rule that the rate is set by whichever factor is in shortest supply; the curves should share the same rising line at low light and only split where carbon dioxide starts to limit.; The higher carbon dioxide curve is still clearly rising at the right edge (from about 6.4 at x = 6 to 7.1 at x = 12, against a limit of 8), so it does not show the clear flat part the card and question a describe as levelling off; both curves should reach a visible plateau inside the axes.",
+  "2026-11-11T12:03:01Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:03:38Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -179,6 +184,112 @@
    "Temperature affects the enzymes involved, such as Rubisco. The rate rises with warmth up to an optimum, then falls as the enzymes lose their shape (denature).",
    "Water is a reactant. When water is short, plants close their stomata to save it, which also limits carbon dioxide entering the leaf and so slows photosynthesis."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "Rate of photosynthesis against light intensity, at two carbon dioxide concentrations. At low light the two curves are the same rising line, because light is the limiting factor. Each then levels off, when carbon dioxide becomes the factor in shortest supply. With more carbon dioxide the curve rises further and levels off at a higher rate.",
+    "x": {
+     "min": 0,
+     "max": 12,
+     "label": "Light intensity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Rate of photosynthesis"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "h",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        5.8
+       ],
+       [
+        4,
+        7.2
+       ],
+       [
+        5,
+        7.9
+       ],
+       [
+        6,
+        8.2
+       ],
+       [
+        8,
+        8.3
+       ],
+       [
+        12,
+        8.3
+       ]
+      ],
+      "smooth": true,
+      "label": "more carbon dioxide",
+      "labelAt": 9,
+      "pos": "above"
+     },
+     {
+      "type": "curve",
+      "id": "l",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        2.8,
+        5.2
+       ],
+       [
+        3.5,
+        5.6
+       ],
+       [
+        5,
+        5.8
+       ],
+       [
+        8,
+        5.9
+       ],
+       [
+        12,
+        5.9
+       ]
+      ],
+      "smooth": true,
+      "label": "less carbon dioxide",
+      "labelAt": 9,
+      "pos": "below"
+     }
+    ]
+   }
+  },
   "remember": "The rate is set by whichever factor is in shortest supply.",
   "a": {
    "q": "A graph shows the rate of photosynthesis rising with light intensity, then flattening out. What does the flat part show?",
@@ -204,5 +315,200 @@
    "clue": "How does a wilting plant cut its water loss?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Rate of photosynthesis against light intensity at a higher and a lower carbon dioxide concentration: each rises then levels off; the higher carbon dioxide curve levels off higher.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Rate of photosynthesis against light intensity, at two carbon dioxide concentrations. Each curve rises at first, when light is the limiting factor, then levels off, when carbon dioxide is in shortest supply. With more carbon dioxide the curve levels off at a higher rate.",
+     "x": {
+      "min": 0,
+      "max": 12,
+      "label": "Light intensity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Rate of photosynthesis"
+     },
+     "items": [
+      {
+       "type": "fn",
+       "id": "h",
+       "expr": "\\frac{8x}{x + 1.5}",
+       "domain": [
+        0,
+        12
+       ],
+       "label": "more carbon dioxide"
+      },
+      {
+       "type": "fn",
+       "id": "l",
+       "expr": "\\frac{4.5x}{x + 1}",
+       "domain": [
+        0,
+        12
+       ],
+       "label": "less carbon dioxide"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:31Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": false,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "At low light the two curves are already far apart (at x = 1 the higher curve is about 3.2 and the lower about 2.25), so more carbon dioxide raises the rate even where the description says light is the limiting factor, which contradicts the card's rule that the rate is set by whichever factor is in shortest supply; the curves should share the same rising line at low light and only split where carbon dioxide starts to limit.",
+     "The higher carbon dioxide curve is still clearly rising at the right edge (from about 6.4 at x = 6 to 7.1 at x = 12, against a limit of 8), so it does not show the clear flat part the card and question a describe as levelling off; both curves should reach a visible plateau inside the axes."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:39Z"
+  },
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "Rate of photosynthesis against light intensity at a higher and a lower carbon dioxide concentration: each rises then levels off; the higher carbon dioxide curve levels off higher.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Rate of photosynthesis against light intensity, at two carbon dioxide concentrations. At low light the two curves are the same rising line, because light is the limiting factor. Each then levels off, when carbon dioxide becomes the factor in shortest supply. With more carbon dioxide the curve rises further and levels off at a higher rate.",
+     "x": {
+      "min": 0,
+      "max": 12,
+      "label": "Light intensity"
+     },
+     "y": {
+      "min": 0,
+      "max": 10,
+      "label": "Rate of photosynthesis"
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "h",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         3,
+         5.8
+        ],
+        [
+         4,
+         7.2
+        ],
+        [
+         5,
+         7.9
+        ],
+        [
+         6,
+         8.2
+        ],
+        [
+         8,
+         8.3
+        ],
+        [
+         12,
+         8.3
+        ]
+       ],
+       "smooth": true,
+       "label": "more carbon dioxide",
+       "labelAt": 9,
+       "pos": "above"
+      },
+      {
+       "type": "curve",
+       "id": "l",
+       "points": [
+        [
+         0,
+         0
+        ],
+        [
+         1,
+         2
+        ],
+        [
+         2,
+         4
+        ],
+        [
+         2.8,
+         5.2
+        ],
+        [
+         3.5,
+         5.6
+        ],
+        [
+         5,
+         5.8
+        ],
+        [
+         8,
+         5.9
+        ],
+        [
+         12,
+         5.9
+        ]
+       ],
+       "smooth": true,
+       "label": "less carbon dioxide",
+       "labelAt": 9,
+       "pos": "below"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T12:03:01Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:03:38Z"
+  }
+ ]
 }

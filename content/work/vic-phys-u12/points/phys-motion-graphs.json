@@ -23,7 +23,10 @@
   "2026-11-01T08:14:10Z write: done",
   "2026-11-01T08:24:35Z check: flagged",
   "2026-11-01T08:33:53Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: cleared with the fix (remember other)"
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (remember other)",
+  "2026-11-11T11:43:53Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:38Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:47Z pictures: 1 picture kept"
  ],
  "sent": {
   "match": 1,
@@ -163,6 +166,77 @@
    "On an acceleration-time graph, the area under the line is the change in velocity.",
    "A curved line means the gradient is changing. So a curve on a position-time graph shows changing velocity, and a curve on a velocity-time graph shows changing acceleration."
   ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A velocity-time graph. The velocity rises in a straight line from 2 m/s to 8 m/s in the first 4 s, so the gradient there is the acceleration, 1.5 m/s squared. It then stays at 8 m/s, a zero gradient. The shaded area between the line and the time axis is the displacement.",
+    "x": {
+     "min": 0,
+     "max": 13.5,
+     "label": "Time (s)",
+     "step": 2
+    },
+    "y": {
+     "min": 0,
+     "max": 13,
+     "label": "Velocity (m/s)",
+     "step": 2
+    },
+    "items": [
+     {
+      "type": "shade",
+      "under": "v",
+      "span": [
+       0,
+       10
+      ],
+      "label": "area = displacement",
+      "at": [
+       5.6,
+       3.2
+      ]
+     },
+     {
+      "type": "curve",
+      "id": "v",
+      "points": [
+       [
+        0,
+        2
+       ],
+       [
+        4,
+        8
+       ],
+       [
+        10,
+        8
+       ]
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       4.6,
+       10.6
+      ],
+      "label": "gradient = acceleration",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       2.6,
+       10.4
+      ],
+      "to": [
+       2.1,
+       5.6
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Position, velocity, acceleration: gradient gives the next one along, and area gives the change in the one before.",
   "a": {
    "q": "A cyclist's velocity-time graph is a straight line sloping upwards from the origin. What does this show?",
@@ -188,5 +262,101 @@
    "clue": "Steeper means a larger gradient, and gradient means velocity."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "A velocity-time graph: velocity rises in a straight line from 2 m/s to 8 m/s over 4 s (gradient is acceleration), then stays at 8 m/s; the area under the line is shaded as the displacement.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A velocity-time graph. The velocity rises in a straight line from 2 m/s to 8 m/s in the first 4 s, so the gradient there is the acceleration, 1.5 m/s squared. It then stays at 8 m/s, a zero gradient. The shaded area between the line and the time axis is the displacement.",
+     "x": {
+      "min": 0,
+      "max": 13.5,
+      "label": "Time (s)",
+      "step": 2
+     },
+     "y": {
+      "min": 0,
+      "max": 13,
+      "label": "Velocity (m/s)",
+      "step": 2
+     },
+     "items": [
+      {
+       "type": "shade",
+       "under": "v",
+       "span": [
+        0,
+        10
+       ],
+       "label": "area = displacement",
+       "at": [
+        5.6,
+        3.2
+       ]
+      },
+      {
+       "type": "curve",
+       "id": "v",
+       "points": [
+        [
+         0,
+         2
+        ],
+        [
+         4,
+         8
+        ],
+        [
+         10,
+         8
+        ]
+       ]
+      },
+      {
+       "type": "text",
+       "at": [
+        4.6,
+        10.6
+       ],
+       "label": "gradient = acceleration",
+       "pos": "above"
+      },
+      {
+       "type": "arrow",
+       "from": [
+        2.6,
+        10.4
+       ],
+       "to": [
+        2.1,
+        5.6
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:37Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:47Z"
+  }
+ ]
 }

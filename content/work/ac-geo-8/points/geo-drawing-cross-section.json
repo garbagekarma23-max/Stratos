@@ -10,7 +10,12 @@
   "2026-11-04T09:47:00Z check: flagged",
   "2026-11-04T09:58:26Z fix: suggested",
   "2026-11-04T17:58:52Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording)",
-  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)"
+  "2026-11-05T06:08:56Z claude-code review: approved with the fix (a spot check)",
+  "2026-11-11T11:44:02Z pictures: the owner asked for a graph at card 4",
+  "2026-11-11T11:44:21Z pictures: 1 picture waiting for the check",
+  "2026-11-11T11:49:20Z pictures: 1 picture turned down. Picture 1 (graph at card 4): redo, high sure. The distance axis shows numbers only for 0 to 3: the axis label Distance (km) sits where 4 would go, so the tick at 4 has no number and the last two dots (at 3.8 and 4.5 km) are harder to place; move the label or widen the axis so 4 shows.",
+  "2026-11-11T11:55:17Z pictures: 1 picture waiting for the check",
+  "2026-11-11T12:01:33Z pictures: 1 picture kept"
  ],
  "sent": {
   "write": 1,
@@ -141,6 +146,131 @@
    "Next, draw a graph with distance along the bottom and height up the side. Plot a point for each mark, at its distance and its height.",
    "Join the points with a smooth line. The line rises where the land climbs and falls where the land drops."
   ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A cross-section drawn from a map: height against distance along the line. Each dot is a place where the line crosses a contour, plotted at its distance and its height: 200, 300, 400, 300, 200, 300 and 400 m. The dots are joined with a smooth line, which rises to a hill, falls into a valley and rises again.",
+    "x": {
+     "min": 0,
+     "max": 6.5,
+     "label": "Distance (km)",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 500,
+     "label": "Height (m)",
+     "step": 100
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "c",
+      "points": [
+       [
+        0,
+        200
+       ],
+       [
+        0.8,
+        300
+       ],
+       [
+        1.5,
+        400
+       ],
+       [
+        2.4,
+        300
+       ],
+       [
+        3.0,
+        200
+       ],
+       [
+        3.8,
+        300
+       ],
+       [
+        4.5,
+        400
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       200
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0.8,
+       300
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       400
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.4,
+       300
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.0,
+       200
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.8,
+       300
+      ],
+      "on": [
+       "c"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       400
+      ],
+      "on": [
+       "c"
+      ]
+     }
+    ]
+   }
+  },
   "remember": "Mark each contour crossing, plot its height, then join the points.",
   "a": {
    "q": "Which two pieces of information are plotted for each point on a cross-section?",
@@ -305,6 +435,306 @@
     "rewrites": 0
    },
    "after": "50850bbdd41a2c23"
+  }
+ ],
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A cross-section: height against distance along the line, with a point at each contour crossing (200, 300, 400, 300, 200, 300 and 400 m) joined by a smooth line that rises to a hill, falls into a valley and rises again.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A cross-section drawn from a map: height against distance along the line. Each dot is a place where the line crosses a contour, plotted at its distance and its height: 200, 300, 400, 300, 200, 300 and 400 m. The dots are joined with a smooth line, which rises to a hill, falls into a valley and rises again.",
+     "x": {
+      "min": 0,
+      "max": 5,
+      "label": "Distance (km)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 500,
+      "label": "Height (m)",
+      "step": 100
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "c",
+       "points": [
+        [
+         0,
+         200
+        ],
+        [
+         0.8,
+         300
+        ],
+        [
+         1.5,
+         400
+        ],
+        [
+         2.4,
+         300
+        ],
+        [
+         3.0,
+         200
+        ],
+        [
+         3.8,
+         300
+        ],
+        [
+         4.5,
+         400
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        200
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.8,
+        300
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        400
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2.4,
+        300
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3.0,
+        200
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3.8,
+        300
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4.5,
+        400
+       ],
+       "on": [
+        "c"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:21Z",
+   "status": "turned down",
+   "check": {
+    "want": 1,
+    "verdict": "redo",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [
+     "The distance axis shows numbers only for 0 to 3: the axis label Distance (km) sits where 4 would go, so the tick at 4 has no number and the last two dots (at 3.8 and 4.5 km) are harder to place; move the label or widen the axis so 4 shows."
+    ],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T11:49:20Z"
+  },
+  {
+   "want": 1,
+   "at": "card 4",
+   "kind": "graph",
+   "brief": "A cross-section: height against distance along the line, with a point at each contour crossing (200, 300, 400, 300, 200, 300 and 400 m) joined by a smooth line that rises to a hill, falls into a valley and rises again.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "A cross-section drawn from a map: height against distance along the line. Each dot is a place where the line crosses a contour, plotted at its distance and its height: 200, 300, 400, 300, 200, 300 and 400 m. The dots are joined with a smooth line, which rises to a hill, falls into a valley and rises again.",
+     "x": {
+      "min": 0,
+      "max": 6.5,
+      "label": "Distance (km)",
+      "step": 1
+     },
+     "y": {
+      "min": 0,
+      "max": 500,
+      "label": "Height (m)",
+      "step": 100
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "c",
+       "points": [
+        [
+         0,
+         200
+        ],
+        [
+         0.8,
+         300
+        ],
+        [
+         1.5,
+         400
+        ],
+        [
+         2.4,
+         300
+        ],
+        [
+         3.0,
+         200
+        ],
+        [
+         3.8,
+         300
+        ],
+        [
+         4.5,
+         400
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "point",
+       "at": [
+        0,
+        200
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        0.8,
+        300
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        1.5,
+        400
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        2.4,
+        300
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3.0,
+        200
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        3.8,
+        300
+       ],
+       "on": [
+        "c"
+       ]
+      },
+      {
+       "type": "point",
+       "at": [
+        4.5,
+        400
+       ],
+       "on": [
+        "c"
+       ]
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:55:17Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:32Z"
   }
  ]
 }

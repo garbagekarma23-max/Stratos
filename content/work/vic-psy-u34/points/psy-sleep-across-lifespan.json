@@ -11,7 +11,11 @@
   "2026-11-01T15:05:31Z write: done",
   "2026-11-01T17:33:07Z check: flagged",
   "2026-11-02T04:27:52Z fix: suggested",
-  "2026-11-02T04:35:43Z autoreview: cleared with the fix (a other)"
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (a other)",
+  "2026-11-11T11:44:01Z pictures: the owner asked for a graph at card 1",
+  "2026-11-11T11:44:01Z pictures: the owner asked for a graph at card 2",
+  "2026-11-11T11:44:41Z pictures: 2 pictures waiting for the check",
+  "2026-11-11T12:01:52Z pictures: 2 pictures kept"
  ],
  "sent": {
   "write": 3,
@@ -143,6 +147,126 @@
    "In adolescence, the sleep-wake cycle shifts later. Teenagers tend to feel sleepy later at night and want to wake later in the morning.",
    "Early school start times can clash with this shift. A teenager may then get less sleep than their body needs."
   ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "Total sleep a day against age. Newborns sleep about 14 to 17 hours a day. Sleep falls fast through childhood, to about 8 to 10 hours in the teenage years, then slowly through adulthood to about 6 to 7 hours in older adults.",
+    "x": {
+     "min": 0,
+     "max": 95.0,
+     "label": "Age (years)",
+     "step": 30
+    },
+    "y": {
+     "min": 0,
+     "max": 18,
+     "label": "Sleep (hours a day)",
+     "step": 3
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "s",
+      "points": [
+       [
+        0,
+        15.5
+       ],
+       [
+        1,
+        13
+       ],
+       [
+        5,
+        11
+       ],
+       [
+        10,
+        10
+       ],
+       [
+        16,
+        9
+       ],
+       [
+        30,
+        8
+       ],
+       [
+        60,
+        7
+       ],
+       [
+        80,
+        6.5
+       ]
+      ],
+      "smooth": true
+     },
+     {
+      "type": "point",
+      "at": [
+       16,
+       9
+      ],
+      "on": [
+       "s"
+      ],
+      "label": "teenagers",
+      "pos": "above-right"
+     }
+    ]
+   },
+   "2": {
+    "kind": "graph",
+    "alt": "The share of sleep spent in REM sleep against age. Infants spend about half their sleep in REM. The share falls quickly in childhood to about a fifth in adults, and a little less in older adults.",
+    "x": {
+     "min": 0,
+     "max": 95.0,
+     "label": "Age (years)",
+     "step": 30
+    },
+    "y": {
+     "min": 0,
+     "max": 60,
+     "label": "REM share (%)",
+     "step": 10
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "m",
+      "points": [
+       [
+        0,
+        50
+       ],
+       [
+        2,
+        30
+       ],
+       [
+        10,
+        22
+       ],
+       [
+        20,
+        20
+       ],
+       [
+        50,
+        19
+       ],
+       [
+        80,
+        16
+       ]
+      ],
+      "smooth": true
+     }
+    ]
+   }
+  },
   "remember": "With age, total sleep and the share of REM fall. Teenagers' sleep timing moves later.",
   "a": {
    "q": "Which change in sleep is typical as a person moves from infancy to old age?",
@@ -168,5 +292,175 @@
    "clue": "Think about when teenagers tend to feel sleepy."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "pictures": [
+  {
+   "want": 1,
+   "at": "card 1",
+   "kind": "graph",
+   "brief": "Total sleep a day against age: about 15.5 hours for newborns, falling fast in childhood to about 9 in the teens, then slowly to about 6.5 in older adults.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "Total sleep a day against age. Newborns sleep about 14 to 17 hours a day. Sleep falls fast through childhood, to about 8 to 10 hours in the teenage years, then slowly through adulthood to about 6 to 7 hours in older adults.",
+     "x": {
+      "min": 0,
+      "max": 95.0,
+      "label": "Age (years)",
+      "step": 30
+     },
+     "y": {
+      "min": 0,
+      "max": 18,
+      "label": "Sleep (hours a day)",
+      "step": 3
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "s",
+       "points": [
+        [
+         0,
+         15.5
+        ],
+        [
+         1,
+         13
+        ],
+        [
+         5,
+         11
+        ],
+        [
+         10,
+         10
+        ],
+        [
+         16,
+         9
+        ],
+        [
+         30,
+         8
+        ],
+        [
+         60,
+         7
+        ],
+        [
+         80,
+         6.5
+        ]
+       ],
+       "smooth": true
+      },
+      {
+       "type": "point",
+       "at": [
+        16,
+        9
+       ],
+       "on": [
+        "s"
+       ],
+       "label": "teenagers",
+       "pos": "above-right"
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:41Z",
+   "status": "kept",
+   "check": {
+    "want": 1,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:51Z"
+  },
+  {
+   "want": 2,
+   "at": "card 2",
+   "kind": "graph",
+   "brief": "The share of sleep spent in REM against age: about 50% in infants, falling to about 20% in adults and a little less in older adults.",
+   "figures": [
+    {
+     "kind": "graph",
+     "alt": "The share of sleep spent in REM sleep against age. Infants spend about half their sleep in REM. The share falls quickly in childhood to about a fifth in adults, and a little less in older adults.",
+     "x": {
+      "min": 0,
+      "max": 95.0,
+      "label": "Age (years)",
+      "step": 30
+     },
+     "y": {
+      "min": 0,
+      "max": 60,
+      "label": "REM share (%)",
+      "step": 10
+     },
+     "items": [
+      {
+       "type": "curve",
+       "id": "m",
+       "points": [
+        [
+         0,
+         50
+        ],
+        [
+         2,
+         30
+        ],
+        [
+         10,
+         22
+        ],
+        [
+         20,
+         20
+        ],
+        [
+         50,
+         19
+        ],
+        [
+         80,
+         16
+        ]
+       ],
+       "smooth": true
+      }
+     ]
+    }
+   ],
+   "by": "claude-code",
+   "made": "2026-11-11T11:44:41Z",
+   "status": "kept",
+   "check": {
+    "want": 2,
+    "verdict": "keep",
+    "matches_text": true,
+    "agrees_with_answer": true,
+    "gives_answer_away": false,
+    "labels_correct": true,
+    "readable": true,
+    "licence_ok": true,
+    "problems": [],
+    "sure": "high"
+   },
+   "checked_by": "claude-code",
+   "checked": "2026-11-11T12:01:51Z"
+  }
+ ]
 }
