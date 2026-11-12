@@ -2918,7 +2918,11 @@ def cc_folder(args, repo, step):
 
 def shown(path):
     """A path to print: from the current folder when it is inside it, with forward slashes, which every shell takes."""
-    p = os.path.relpath(path)
+    try:
+        p = os.path.relpath(path)
+    except ValueError:
+        # On Windows a path on another drive (D: when the current folder is on C:) has no relative form.
+        p = '..'
     return (path if p.startswith('..') else p).replace(os.sep, '/')
 
 def cc_job(work, meta, args, repo, d):
