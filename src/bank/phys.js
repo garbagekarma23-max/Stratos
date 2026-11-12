@@ -3101,6 +3101,23 @@ MADE_BANKS.phys = {
       "A decay series diagram plots mass number A against atomic number Z. Each isotope is a point, and each decay is an arrow to the next.",
       "An alpha decay lowers A by 4 and Z by 2. A beta-minus decay keeps A the same and raises Z by 1. This shows which decay each arrow stands for."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "A decay series diagram for the first three steps of the uranium-238 series, with mass number A up the side and atomic number Z along the bottom. Each isotope is a dot and each decay is an arrow labelled with its type. U-238 decays by alpha decay to Th-234: the arrow goes down 4 and left 2. Th-234 decays by beta-minus decay to Pa-234, and Pa-234 by beta-minus decay to U-234: each arrow goes 1 to the right at the same height.",
+        "x": {"min": 89, "max": 93, "label": "Atomic number, Z", "step": 1, "labelUnder": true},
+        "y": {"min": 232.5, "max": 239.5, "label": "Mass number, A", "step": 2},
+        "items": [
+          {"type": "arrow", "from": [91.88, 237.76], "to": [90.12, 234.24], "label": "α", "pos": "above-left"},
+          {"type": "arrow", "from": [90.12, 234], "to": [90.88, 234], "label": "β⁻", "pos": "below"},
+          {"type": "arrow", "from": [91.12, 234], "to": [91.88, 234], "label": "β⁻", "pos": "below"},
+          {"type": "point", "at": [92, 238], "label": "U-238", "pos": "right"},
+          {"type": "point", "at": [90, 234], "label": "Th-234", "pos": "left"},
+          {"type": "point", "at": [91, 234], "label": "Pa-234", "pos": "above"},
+          {"type": "point", "at": [92, 234], "label": "U-234", "pos": "right"}
+        ]
+      }
+    },
     "remember": "A decay series is a chain of decays that stops only at a stable isotope.",
     "a": {
       "q": "What happens at the end of a decay series?",

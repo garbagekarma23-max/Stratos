@@ -12,6 +12,6 @@ For each picture, check:
 - sure: high only when you have looked at the picture and are certain of every check. medium or low otherwise.
 - verdict: keep when everything above is right, redo when it should be made again with the problems fixed, drop when this picture should not be on the point at all.
 
-For a graph or chart, work out every number it shows from its data and the text: each intercept, turning point, asymptote, labelled point and stat. A curve given as points must follow the function the text names. An option's graph must show exactly what its option's text says.
+A graph's x-axis can run from high to low ("reverse": true in its data), as IR spectra are drawn: its numbers then fall from left to right, and it has no arrow. Its data are in real values, so read each point by the numbers on the axis. For a graph or chart, work out every number it shows from its data and the text: each intercept, turning point, asymptote, labelled point and stat. A curve given as points must follow the function the text names. An option's graph must show exactly what its option's text says.
 
 Be strict. A picture stays only when you are highly sure and find nothing wrong.

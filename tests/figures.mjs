@@ -107,6 +107,46 @@ check(LabMaths.func('2|x - 1| + 3')(4) === 9 && LabMaths.func('\\left|x\\right|'
   check(edge('\\(\\int_{0}^{1} f(x)\\)', [6, 10], 'above') && !edge('\\(x^{2}\\)', [6, 10], 'above'), 'an integral with limits is measured taller too', R);
 }
 
+{
+  // Axes that run from high to low ("reverse"), the name under the numbers ("labelUnder") and words in place of numbers
+  // ("names"), for the IR spectrum, the decay series and the climate graph.
+  const IR = {kind: 'graph', alt: 'An IR spectrum with one sharp peak at 1715 per centimetre.', x: {min: 500, max: 4000, step: 500, label: 'Wavenumber (cm⁻¹)', reverse: true},
+    y: {min: 0, max: 100, step: 20, label: 'Transmittance (%)'}, items: [{type: 'curve', id: 's', smooth: true, points: [[500, 90], [1690, 90], [1715, 10], [1740, 90], [4000, 90]]},
+      {type: 'text', at: [1715, 10], label: 'C=O', pos: 'right'}]};
+  check(!FIG.problems(IR).length, 'a graph whose x-axis runs from high to low passes', R);
+  const L = FIG.layout(IR, 'card'), {words, svg} = FIG.plan(IR, 'card'), nums = words.filter(w => w.cls === 'fn' && w.sy >= L.top + L.ph - 1e-6).sort((p, q) => p.sx - q.sx);
+  check(Math.abs(L.px(4000) - L.left) < 1e-9 && Math.abs(L.px(500) - (L.left + L.pw)) < 1e-9 && L.px(1715) > L.px(2970),
+    'a reversed x-axis puts its max at the left and its min at the right', R);
+  check(nums.map(w => w.text).join(' ') === '4000 3500 3000 2500 2000 1500 1000 500' && Math.abs(nums[0].sx - L.left) < 1e-9,
+    'its numbers fall from left to right, with 4000 kept at the corner, where the scale starts, and 500 at the far end', R);
+  const name = words.find(w => w.text === IR.x.label);
+  check(name && Math.abs(name.sx - (L.left + L.pw / 2)) < 1e-9 && name.sy > Math.max(...nums.map(w => w.sy)) && svg.filter(e => e[1] === 'fk').length === 1,
+    'its name is centred under its numbers, and only the y-axis has an arrow', R);
+  check(!words.some(w => w.text === '0') && has(bad(g => { g.items[1].at = [300, 50]; }, IR), 'outside the axes') && has(bad(g => { g.x.reverse = 'yes'; }, IR), 'reverse to be true or false'),
+    'the y-axis still leaves out its 0 at the corner, everything is still held inside the axes, and reverse must be true or false', R);
+  const down = copy(IR); down.y.reverse = true; delete down.items[1];
+  down.items = down.items.filter(Boolean);
+  const LD = FIG.layout(down, 'card');
+  check(!FIG.problems(down).length && Math.abs(LD.py(100) - (LD.top + LD.ph)) < 1e-9 && Math.abs(LD.py(0) - LD.top) < 1e-9 && !FIG.plan(down, 'card').svg.some(e => e[1] === 'fk'),
+    'a reversed y-axis runs from max at the bottom to min at the top, and with both reversed neither axis has an arrow', R);
+  const DECAY = {kind: 'graph', alt: 'U-238 decays to Th-234 by alpha decay.', x: {min: 89, max: 93, step: 1, label: 'Atomic number, Z'}, y: {min: 232.5, max: 239.5, step: 2, label: 'Mass number, A'},
+    items: [{type: 'arrow', from: [91.88, 237.76], to: [90.12, 234.24], label: 'α', pos: 'above-left'}, {type: 'point', at: [92, 238], label: 'U-238', pos: 'right'}, {type: 'point', at: [90, 234], label: 'Th-234', pos: 'left'}]};
+  const shown = f => FIG.plan(f, 'card').words.filter(w => w.cls === 'fn' && /^9/.test(w.text)).map(w => w.text).join(' ');
+  check(shown(DECAY) === '90 91' && shown(Object.assign(copy(DECAY), {x: Object.assign(copy(DECAY.x), {labelUnder: true})})) === '90 91 92 93',
+    'a long x-axis name at the end of its axis hides the numbers under it (92 and 93), and labelUnder puts it under them so every number shows', R);
+  check(has(bad(g => { g.y.labelUnder = true; }, DECAY), 'labelUnder only on the x-axis') && has(bad(g => { g.x.labelUnder = true; delete g.x.label; }, DECAY), 'with a label'),
+    'labelUnder is only for an x-axis with a name', R);
+  const M = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
+  const CLIMATE = {kind: 'graph', alt: 'The average temperature each month, highest in summer.', x: {min: 0.5, max: 12.5, step: 1, label: 'Month', labelUnder: true, names: M},
+    y: {min: 0, max: 30, step: 5, label: 'Temperature (°C)'}, items: [{type: 'curve', id: 't', points: M.map((_, i) => [i + 1, 19 + 6 * Math.cos((i - 1) * Math.PI / 6)])}]};
+  check(!FIG.problems(CLIMATE).length && FIG.plan(CLIMATE, 'card').words.filter(w => w.cls === 'fn' && /[A-Z]/.test(w.text)).map(w => w.text).join('') === M.join(''),
+    'names puts words in place of the x-axis numbers, one at each tick: the months as J F M A M J J A S O N D', R);
+  check(has(bad(g => { g.x.names = M.slice(1); }, CLIMATE), 'has 11 names on its x-axis but 12 ticks') && has(bad(g => { delete g.x.step; }, CLIMATE), 'no step') &&
+    has(bad(g => { g.x.nums = false; }, CLIMATE), 'names on its x-axis and nums: false') && has(bad(g => { g.y.names = ['a']; }, CLIMATE), 'names only on the x-axis') &&
+    has(bad(g => { g.x.names = M.map(m => m + 'anuary'); }, CLIMATE), 'names that run into each other') && FIG.texts(CLIMATE).includes('J'),
+    'one name for each tick, needing a step and numbers on, only on the x-axis, short enough not to run into each other, and checked as words', R);
+}
+
 // ---------- check_content.mjs --json ----------
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'stratos-figures-'));
 function problems(points, kind = 'maths', subject = 'Mathematics') {

@@ -6106,22 +6106,67 @@ MADE_BANKS.geo = {
       "2": {
         "kind": "chart",
         "chart": "bar",
-        "alt": "Columns of average rainfall for each month in one town, from month 1, January, to month 12, December. The columns are short from November to March, 10 to 25 mm, and tall from May to August, up to 145 mm in July. So this town has a dry summer and a wet winter.",
-        "x": {"label": "Month (1 is January)"},
+        "alt": "Columns of average rainfall for each month in one town, from January to December, with the months marked by their first letters, J F M A M J J A S O N D. The columns are short from November to March, 10 to 25 mm, and tall from May to August, up to 145 mm in July. So this town has a dry summer and a wet winter.",
+        "x": {"label": "Month"},
         "y": {"min": 0, "max": 160, "step": 40, "label": "Rainfall (mm)"},
         "bars": [
-          ["1", 15],
-          ["2", 10],
-          ["3", 20],
-          ["4", 35],
-          ["5", 90],
-          ["6", 125],
-          ["7", 145],
-          ["8", 120],
-          ["9", 80],
-          ["10", 40],
-          ["11", 25],
-          ["12", 10]
+          ["J", 15],
+          ["F", 10],
+          ["M", 20],
+          ["A", 35],
+          ["M", 90],
+          ["J", 125],
+          ["J", 145],
+          ["A", 120],
+          ["S", 80],
+          ["O", 40],
+          ["N", 25],
+          ["D", 10]
+        ]
+      },
+      "3": {
+        "kind": "graph",
+        "alt": "A line of the average temperature for each month in the same town, from January to December, with the months marked by their first letters, J F M A M J J A S O N D. It is highest in summer, about 25 °C in February, and lowest in winter, about 13 °C in July. So this town is hot in summer and cool in winter.",
+        "x": {
+          "min": 0.5,
+          "max": 12.5,
+          "label": "Month",
+          "step": 1,
+          "names": ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
+          "labelUnder": true
+        },
+        "y": {"min": 0, "max": 30, "label": "Temperature (°C)", "step": 5},
+        "items": [
+          {
+            "type": "curve",
+            "id": "t",
+            "points": [
+              [1, 24.5],
+              [2, 24.8],
+              [3, 23],
+              [4, 19.8],
+              [5, 16.5],
+              [6, 14],
+              [7, 13.2],
+              [8, 13.5],
+              [9, 14.8],
+              [10, 17],
+              [11, 20],
+              [12, 22.5]
+            ]
+          },
+          {"type": "point", "at": [1, 24.5], "on": ["t"]},
+          {"type": "point", "at": [2, 24.8], "on": ["t"]},
+          {"type": "point", "at": [3, 23], "on": ["t"]},
+          {"type": "point", "at": [4, 19.8], "on": ["t"]},
+          {"type": "point", "at": [5, 16.5], "on": ["t"]},
+          {"type": "point", "at": [6, 14], "on": ["t"]},
+          {"type": "point", "at": [7, 13.2], "on": ["t"]},
+          {"type": "point", "at": [8, 13.5], "on": ["t"]},
+          {"type": "point", "at": [9, 14.8], "on": ["t"]},
+          {"type": "point", "at": [10, 17], "on": ["t"]},
+          {"type": "point", "at": [11, 20], "on": ["t"]},
+          {"type": "point", "at": [12, 22.5], "on": ["t"]}
         ]
       }
     },
