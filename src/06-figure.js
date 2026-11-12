@@ -16,6 +16,18 @@
       "x": {"min": -2, "max": 6, "label": "\\(x\\)", "step": 1},       step: a tick every step, with a number at each.
       "y": {"min": -5, "max": 6, "label": "\\(y\\)", "step": 1},       No step: no ticks and no numbers, as economics draws.
                                                                        "nums": false keeps the ticks without numbers.
+                                                                       "reverse": true runs an axis from high to low: an
+                                                                       x-axis from max on the left to min on the right, as
+                                                                       an IR spectrum is drawn, or a y-axis from max at the
+                                                                       bottom to min at the top. A reversed axis has no
+                                                                       arrow, and keeps the number at its corner.
+                                                                       "labelUnder": true on the x-axis puts its name on a
+                                                                       line of its own, centred under its numbers, as a
+                                                                       chart's is, so a long name hides no numbers. A
+                                                                       reversed x-axis always has its name there.
+                                                                       "names": words in place of the x-axis's numbers, one
+                                                                       for each tick in order, such as the months as
+                                                                       ["J", "F", "M", ...] on a climate graph.
       "grid": true,                                                     grid lines at each step (needs a step)
       "equal": true,                                                    one unit is as long on both axes (a circle stays round)
       "items": [...]}                                                    drawn in order, so shading goes first
@@ -71,7 +83,8 @@ const FIG = (() => {
     slope: ['type', 'id', 'expr', 'every']
   };
   const FIGKEYS = ['kind', 'alt', 'x', 'y', 'grid', 'equal', 'items'];
-  const AXISKEYS = ['min', 'max', 'label', 'step', 'nums'];
+  const AXISKEYS = ['min', 'max', 'label', 'step', 'nums', 'reverse', 'labelUnder', 'names'];
+  const CHART_AXISKEYS = ['min', 'max', 'label', 'step', 'nums'];
   const num = v => typeof v === 'number' && isFinite(v);
   const pair = v => Array.isArray(v) && v.length === 2 && v.every(num);
   const str = v => typeof v === 'string';
@@ -94,7 +107,7 @@ const FIG = (() => {
   /* Every piece of text in a figure, for the word and maths checks. */
   function texts(f) {
     if (!f || typeof f !== 'object') return [];
-    const out = [f.alt, f.x && f.x.label, f.y && f.y.label, f.key];
+    const out = [f.alt, f.x && f.x.label, f.y && f.y.label, f.key].concat(f.x && Array.isArray(f.x.names) ? f.x.names : []);
     for (const it of Array.isArray(f.items) ? f.items : []) if (it && typeof it === 'object') out.push(it.label, it.xLabel, it.yLabel);
     for (const b of Array.isArray(f.bars) ? f.bars : []) if (Array.isArray(b)) out.push(b[0]);
     for (const s of Array.isArray(f.sets) ? f.sets : []) if (s && typeof s === 'object') out.push(s.label);
@@ -127,6 +140,14 @@ const FIG = (() => {
       if (ax.label !== undefined && !str(ax.label)) bad.push('has a ' + a + '-axis label that is not text');
       if (ax.step !== undefined && !(num(ax.step) && ax.step > 0)) bad.push('needs a ' + a + '-axis step above 0, or none');
       if (ax.nums !== undefined && typeof ax.nums !== 'boolean') bad.push('needs nums to be true or false');
+      if (ax.reverse !== undefined && typeof ax.reverse !== 'boolean') bad.push('needs reverse to be true or false');
+      if (ax.labelUnder !== undefined && (a === 'y' || typeof ax.labelUnder !== 'boolean' || !ax.label)) bad.push('takes labelUnder only on the x-axis, as true or false, with a label');
+      if (ax.names !== undefined) {
+        if (a === 'y' || !Array.isArray(ax.names) || !ax.names.every(n => str(n) && n.trim())) bad.push('takes names only on the x-axis, as a list of words');
+        else if (!num(ax.step) || !num(ax.min) || !num(ax.max) || ax.min >= ax.max) bad.push('has names on its x-axis but no step: a name goes at each tick');
+        else if (ax.names.length !== ticks(ax).length) bad.push('has ' + ax.names.length + ' names on its x-axis but ' + ticks(ax).length + ' ticks. Give one name for each tick');
+        if (ax.nums === false) bad.push('has names on its x-axis and nums: false. Leave out one or the other');
+      }
       if (num(ax.step) && num(ax.min) && num(ax.max) && (ax.max - ax.min) / ax.step > 40) bad.push('has more than 40 ticks on its ' + a + '-axis. Use a larger step');
     }
     if (f.grid !== undefined && typeof f.grid !== 'boolean') bad.push('needs grid to be true or false');
@@ -261,23 +282,31 @@ const FIG = (() => {
     for (let k = k0; k <= k1; k++) out.push(Math.round(k * ax.step * 1e9) / 1e9);
     return out;
   }
+  /* What shows at a tick on the x-axis: its number, or its name. */
+  const xName = (ax, t) => Array.isArray(ax.names) ? String(ax.names[ticks(ax).indexOf(t)]) : fmt(t);
   function layout(f, size) {
     const S = SIZE[size], x = f.x, y = f.y, fw = S.font;
-    const axX = x.min <= 0 && x.max >= 0 ? 0 : x.min > 0 ? x.min : x.max;      /* where the y-axis stands */
-    const axY = y.min <= 0 && y.max >= 0 ? 0 : y.min > 0 ? y.min : y.max;      /* where the x-axis lies */
+    /* the values at the left edge and the bottom edge: max on a reversed axis */
+    const xL = x.reverse ? x.max : x.min, yB = y.reverse ? y.max : y.min;
+    /* where the y-axis stands: at 0, or else at the end nearer 0, or for a reversed axis at its left edge */
+    const axX = x.min <= 0 && x.max >= 0 ? 0 : x.reverse ? xL : x.min > 0 ? x.min : x.max;
+    const axY = y.min <= 0 && y.max >= 0 ? 0 : y.reverse ? yB : y.min > 0 ? y.min : y.max;      /* where the x-axis lies */
     const guides = f.items.filter(it => it.type === 'guide');
     const yNums = y.step && y.nums !== false, xNums = x.step && x.nums !== false;
     const leftWords = [].concat(yNums ? ticks(y).map(fmt) : [], guides.map(g => g.yLabel || ''));
-    const left = axX === x.min && leftWords.some(Boolean) ? Math.max(...leftWords.map(s => shownLen(s) * cw(fw))) + 9 : 10;
-    const below = axY === y.min && (xNums || guides.some(g => g.xLabel) || x.label) ? fw + 9 : 10;
+    const left = axX === xL && leftWords.some(Boolean) ? Math.max(...leftWords.map(s => shownLen(s) * cw(fw))) + 9 : 10;
+    /* labelUnder, and a reversed x-axis, put the x-axis's name on a line of its own, centred under its numbers, as a
+       chart's is. */
+    const under = !!x.label && (x.reverse || x.labelUnder);
+    const below = (axY === yB && (xNums || guides.some(g => g.xLabel) || x.label) ? fw + 9 : 10) + (under ? fw + 7 : 0);
     const top = y.label ? fw + 11 : 10, right = 12;
     const W = S.w;
     let H = S.h;
     if (f.equal) H = Math.round(top + below + (W - left - right) * (y.max - y.min) / (x.max - x.min));
     const pw = W - left - right, ph = H - top - below;
-    return {S, W, H, left, top, pw, ph, axX, axY, fw,
-      px: v => left + (v - x.min) / (x.max - x.min) * pw,
-      py: v => top + (y.max - v) / (y.max - y.min) * ph};
+    return {S, W, H, left, top, pw, ph, axX, axY, xL, yB, under, fw,
+      px: v => left + (x.reverse ? x.max - v : v - x.min) / (x.max - x.min) * pw,
+      py: v => top + (y.reverse ? v - y.min : y.max - v) / (y.max - y.min) * ph};
   }
   /* Where a label sits from its spot, as a move in its own width and height, and a gap in pixels. */
   const PLACE = {centre: [-0.5, -0.5, 0, 0], above: [-0.5, -1, 0, -1], below: [-0.5, 0, 0, 1], left: [-1, -0.5, -1, 0], right: [0, -0.5, 1, 0],
@@ -358,26 +387,32 @@ const FIG = (() => {
       const r = region(it);
       if (r.length > 2) svg.push(['path', it.hatch ? 'fh' : 'fs', d(r.map(q => P(q[0], q[1]))) + 'Z', true]);
     }
-    svg.push(['path', 'fa', 'M' + L.left + ' ' + ay.toFixed(1) + 'H' + (L.left + L.pw + 6).toFixed(1)]);
-    svg.push(['path', 'fa', 'M' + ax.toFixed(1) + ' ' + (L.top + L.ph).toFixed(1) + 'V' + (L.top - 6).toFixed(1)]);
-    svg.push(['path', 'fk', 'M' + (L.left + L.pw + 6).toFixed(1) + ' ' + ay.toFixed(1) + 'l-6 -3.2v6.4z']);
-    svg.push(['path', 'fk', 'M' + ax.toFixed(1) + ' ' + (L.top - 6).toFixed(1) + 'l-3.2 6h6.4z']);
-    const crossX = L.axX === 0 && x.min < 0, crossY = L.axY === 0 && y.min < 0, xNums = x.step && x.nums !== false, yNums = y.step && y.nums !== false;
-    const xLabW = x.label ? shownLen(x.label) * cw(L.fw) + 6 : 0;
+    /* the axes, each with an arrow at its far end, pointing the way its numbers rise; a reversed axis has none */
+    svg.push(['path', 'fa', 'M' + L.left + ' ' + ay.toFixed(1) + 'H' + (L.left + L.pw + (x.reverse ? 0 : 6)).toFixed(1)]);
+    svg.push(['path', 'fa', 'M' + ax.toFixed(1) + ' ' + (L.top + L.ph).toFixed(1) + 'V' + (L.top - (y.reverse ? 0 : 6)).toFixed(1)]);
+    if (!x.reverse) svg.push(['path', 'fk', 'M' + (L.left + L.pw + 6).toFixed(1) + ' ' + ay.toFixed(1) + 'l-6 -3.2v6.4z']);
+    if (!y.reverse) svg.push(['path', 'fk', 'M' + ax.toFixed(1) + ' ' + (L.top - 6).toFixed(1) + 'l-3.2 6h6.4z']);
+    const crossX = L.axX === 0 && L.xL !== 0, crossY = L.axY === 0 && L.yB !== 0, xNums = x.step && x.nums !== false, yNums = y.step && y.nums !== false;
+    /* the numbers stop short of the x-axis's name at its end; a name under them hides none, so all show that fit */
+    const xLabW = x.label && !L.under ? shownLen(x.label) * cw(L.fw) + 6 : 0;
+    /* At the corner where the axes meet, neither number shows, as at an origin. A reversed axis keeps its own, since its
+       scale starts there (4000 on an IR spectrum). */
     for (const t of ticks(x)) {
-      if (Math.abs(t - L.axX) < 1e-9 && (crossX || crossY || L.axX === x.min)) continue;
+      if (Math.abs(t - L.axX) < 1e-9 && (crossX || crossY || (L.axX === L.xL && !x.reverse))) continue;
       svg.push(['path', 'fa', 'M' + px(t).toFixed(1) + ' ' + (ay - tk / 2).toFixed(1) + 'v' + tk]);
-      if (x.nums !== false && px(t) + cw(L.fw - 1) * fmt(t).length / 2 < L.left + L.pw - xLabW) word(t, L.axY, fmt(t), 'below', 'fn');
+      const text = xName(x, t), half = cw(L.fw - 1) * shownLen(text) / 2;
+      if (x.nums !== false && (L.under ? px(t) + half <= L.W : px(t) + half < L.left + L.pw - xLabW)) word(t, L.axY, text, 'below', 'fn');
     }
     for (const t of ticks(y)) {
-      if (Math.abs(t - L.axY) < 1e-9 && (crossX || crossY || L.axY === y.min)) continue;
+      if (Math.abs(t - L.axY) < 1e-9 && (crossX || crossY || (L.axY === L.yB && !y.reverse))) continue;
       svg.push(['path', 'fa', 'M' + (ax - tk / 2).toFixed(1) + ' ' + py(t).toFixed(1) + 'h' + tk]);
       if (y.nums !== false) word(L.axX, t, fmt(t), 'left', 'fn');
     }
     /* O marks the origin, unless numbers on the axes would run into it. A small graph, an option's, has none. */
     if (size === 'card' && L.axX === 0 && L.axY === 0 && !(xNums && crossX) && !(yNums && crossY)) word(0, 0, 'O', 'below-left', 'fn');
     /* the x-axis's name under its end, and the y-axis's name above its top, beside the arrow */
-    if (x.label) words.push({sx: L.left + L.pw + 6, sy: ay, text: x.label, pos: 'below-left', cls: 'fx', gap: 4});
+    if (L.under) words.push({sx: L.left + L.pw / 2, sy: L.H - 2, text: x.label, pos: 'above', cls: 'fx', gap: 0});
+    else if (x.label) words.push({sx: L.left + L.pw + 6, sy: ay, text: x.label, pos: 'below-left', cls: 'fx', gap: 4});
     if (y.label) words.push({sx: ax + 6, sy: L.top - 4, text: y.label, pos: 'above-right', cls: 'fx', gap: 0});
     /* guides, asymptotes, lines and curves */
     for (const it of f.items) {
@@ -386,8 +421,8 @@ const FIG = (() => {
         if (it.xLabel !== undefined) { svg.push(['path', 'fd', 'M' + px(gx).toFixed(1) + ' ' + py(gy).toFixed(1) + 'V' + ay.toFixed(1)]); if (it.xLabel) word(gx, L.axY, it.xLabel, 'below'); }
         if (it.yLabel !== undefined) { svg.push(['path', 'fd', 'M' + px(gx).toFixed(1) + ' ' + py(gy).toFixed(1) + 'H' + ax.toFixed(1)]); if (it.yLabel) word(L.axX, gy, it.yLabel, 'left'); }
       } else if (it.type === 'asymptote') {
-        if (num(it.x)) { svg.push(['path', 'fy', 'M' + px(it.x).toFixed(1) + ' ' + L.top + 'V' + (L.top + L.ph).toFixed(1)]); if (it.label) word(it.x, y.max, it.label, it.pos || 'below-right'); }
-        else { svg.push(['path', 'fy', 'M' + L.left + ' ' + py(it.y).toFixed(1) + 'H' + (L.left + L.pw).toFixed(1)]); if (it.label) word(x.max, it.y, it.label, it.pos || 'above-left'); }
+        if (num(it.x)) { svg.push(['path', 'fy', 'M' + px(it.x).toFixed(1) + ' ' + L.top + 'V' + (L.top + L.ph).toFixed(1)]); if (it.label) word(it.x, y.reverse ? y.min : y.max, it.label, it.pos || 'below-right'); }
+        else { svg.push(['path', 'fy', 'M' + L.left + ' ' + py(it.y).toFixed(1) + 'H' + (L.left + L.pw).toFixed(1)]); if (it.label) word(x.reverse ? x.min : x.max, it.y, it.label, it.pos || 'above-left'); }
       }
     }
     /* slope fields: a short line through each grid point, at the gradient there */
@@ -398,7 +433,7 @@ const FIG = (() => {
       for (let i = Math.ceil(x.min / ex - 1e-9); i * ex <= x.max + 1e-9; i++) for (let j = Math.ceil(y.min / ey - 1e-9); j * ey <= y.max + 1e-9; j++) {
         const vx = i * ex, vy = j * ey, m = g(vx, vy);
         if (Number.isNaN(m)) continue;
-        let ux = kx, uy = -m * ky;
+        let ux = x.reverse ? -kx : kx, uy = (y.reverse ? m : -m) * ky;
         if (!isFinite(m)) { ux = 0; uy = 1; }
         const n = Math.hypot(ux, uy) || 1, hx = ux / n * len / 2, hy = uy / n * len / 2, [cx, cy] = P(vx, vy);
         svg.push(['path', 'fsl', 'M' + (cx - hx).toFixed(1) + ' ' + (cy - hy).toFixed(1) + 'L' + (cx + hx).toFixed(1) + ' ' + (cy + hy).toFixed(1), true]);
@@ -542,7 +577,7 @@ const FIG = (() => {
       if (ax.label !== undefined && !str(ax.label)) bad.push('has a ' + a + '-axis label that is not text');
       return bad;
     }
-    for (const k of Object.keys(ax)) if (!AXISKEYS.includes(k)) bad.push('has a part its ' + a + '-axis does not have: ' + k);
+    for (const k of Object.keys(ax)) if (!CHART_AXISKEYS.includes(k)) bad.push('has a part its ' + a + '-axis does not have: ' + k);
     if (!num(ax.min) || !num(ax.max) || ax.min >= ax.max) bad.push('needs a ' + a + '-axis min smaller than its max');
     if (!(num(ax.step) && ax.step > 0)) bad.push('needs a ' + a + '-axis step above 0');
     else if (num(ax.min) && num(ax.max) && (ax.max - ax.min) / ax.step > 30) bad.push('has more than 30 ticks on its ' + a + '-axis. Use a larger step');
@@ -560,7 +595,12 @@ const FIG = (() => {
     if (c === 'bar') {
       bad.push(...axisShape(f.x, 'x', false), ...axisShape(f.y, 'y', true));
       if (!Array.isArray(f.bars) || f.bars.length < 2 || f.bars.length > 12 || !f.bars.every(b => Array.isArray(b) && b.length === 2 && str(b[0]) && b[0].trim() && num(b[1]) && b[1] >= 0)) bad.push('needs bars: 2 to 12 of [label, value], each value 0 or more');
-      else if (new Set(f.bars.map(b => b[0])).size !== f.bars.length) bad.push('has two bars with the same label');
+      else if (new Set(f.bars.map(b => b[0])).size !== f.bars.length) {
+        /* One-letter labels may repeat, as the months J F M A M J J A S O N D do on a climate graph. The mode is then
+           not one label, so the chart cannot state one. */
+        if (!f.bars.every(b => b[0].trim().length === 1)) bad.push('has two bars with the same label. Only one-letter labels, such as the months as J F M, may repeat');
+        else if (f.stats && f.stats.mode !== undefined) bad.push('has two bars with the same label, so its mode cannot name one bar. Leave out stats.mode');
+      }
       if (f.truncated !== undefined && typeof f.truncated !== 'boolean') bad.push('needs truncated to be true or false');
     }
     if (c === 'histogram') {
@@ -1202,8 +1242,8 @@ const FIG = (() => {
     /* It fits: numbers that do not run into each other, labels inside the figure, a shape that suits a phone. */
     for (const size of opt ? ['opt'] : ['card']) {
       const L = layout(f, size), {words, curves: lines} = plan(f, size), gap = (L.pw / xs) * (x.step || xs);
-      const widest = Math.max(0, ...ticks(x).map(t => fmt(t).length)) * cw(L.fw - 1);
-      if (x.step && x.nums !== false && gap < widest + 5) bad.push('has x-axis numbers that run into each other at this size. Use a larger step, or nums: false');
+      const widest = Math.max(0, ...ticks(x).map(t => shownLen(xName(x, t)))) * cw(L.fw - 1);
+      if (x.step && x.nums !== false && gap < widest + 5) bad.push('has x-axis ' + (x.names ? 'names' : 'numbers') + ' that run into each other at this size. Use ' + (x.names ? 'shorter names' : 'a larger step, or nums: false'));
       if (y.step && y.nums !== false && (L.ph / ys) * y.step < L.fw + 2) bad.push('has y-axis numbers that run into each other at this size. Use a larger step, or nums: false');
       if (f.equal && (L.H < L.W * 0.45 || L.H > L.W * 1.3)) bad.push('is too ' + (L.H > L.W ? 'tall' : 'wide') + ' with equal scales. Change the axes so the ranges are closer in size');
       bad.push(...fitProblems(L, words, lines, 'graph'));

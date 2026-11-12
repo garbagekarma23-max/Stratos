@@ -58,6 +58,12 @@ check(has(bad(HIST, f => { f.classes[1] = [10, 25, 7]; }), 'different widths') &
 check(has(bad(BAR, f => { f.y.min = 2; }), 'does not start at 0') && !bad(BAR, f => { f.y.min = 2; f.truncated = true; }).length && has(bad(BAR, f => { f.truncated = true; }), 'starts above 0') &&
   has(bad(BAR, f => { f.stats.total = 25; }), 'total of its data is 24') && has(bad(BAR, f => { f.stats.mode = 'Cricket'; }), 'is soccer') && has(bad(BAR, f => { f.bars[1][0] = 'Soccer'; }), 'same label'),
   'a bar chart: starting above 0 only when truncated, a wrong total or mode, two bars with one label', R);
+{
+  const months = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'], rain = copy(BAR);
+  rain.bars = months.map((m, i) => [m, 10 + i]); rain.y.max = 30; rain.y.step = 10; rain.x.label = 'Month'; delete rain.stats;
+  check(!FIG.problems(rain).length && has(bad(rain, f => { f.stats = {mode: 'D'}; }), 'mode cannot name one bar') && has(bad(rain, f => { f.bars[1][0] = 'Jan'; f.bars[0][0] = 'Jan'; }), 'Only one-letter labels'),
+    'one-letter bar labels may repeat, as the months J F M A M J J A S O N D, but then the chart states no mode; longer labels never repeat', R);
+}
 check(has(bad(DOT, f => { f.stats.mean = 2.1; }), 'the mean of its data is 2.1667') && !bad(DOT, f => { f.stats.mean = 2.2; }).length && has(bad(DOT, f => { f.stats.mode = 1; }), 'is 2'),
   'a dot plot: a mean is held to its written rounding (2.17 and 2.2 pass, 2.1 does not), and a wrong mode is caught', R);
 check(has(bad(STEM, f => { f.key = '2 | 3 means 2.3'; }), '2 | 3 means 23') && has(bad(STEM, f => { f.leaf = 0.1; }), 'means 2.3') && has(bad(STEM, f => { f.data.push(2.5); }), 'whole number of leaves') &&

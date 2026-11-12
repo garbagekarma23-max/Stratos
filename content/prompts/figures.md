@@ -19,6 +19,9 @@ A graph has kind, alt, x, y, items, and may have grid and equal:
 - kind: "graph".
 - alt: what the graph shows, in words, for a student who cannot see it. Name every curve, the points it marks, and what it shows. Required, except on an option's graph, which takes its description from the option.
 - x and y: the axes. min and max; label (a word or two, or maths: "\(x\)", "Price", "Quantity"); step for a tick and a number at every step. No step means no ticks and no numbers, as an economics diagram has. "nums": false keeps the ticks with no numbers. Leave room around the curves: a turning point or label right at the edge does not fit.
+  - "reverse": true runs an axis from high to low: an x-axis from max on the left to min on the right, as an IR spectrum runs from 4000 cm⁻¹ down to 500 cm⁻¹. Write the data in its real values; the app does the flipping. A reversed axis has no arrow, and a reversed x-axis has its name centred under its numbers.
+  - "labelUnder": true on the x-axis puts its name centred under its numbers, as a chart's is. Use it when a long name ("Atomic number, Z") would hide the numbers at the end of the axis.
+  - "names" on the x-axis puts words in place of its numbers, one for each tick in order, such as the months as ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"] on an axis from 0.5 to 12.5 with step 1.
 - grid: true for grid lines at each step. equal: true when one unit must be as long on both axes, such as for a circle.
 - items, drawn in order (shading first, so the curves sit on top). Each has a type:
   - fn: a function of x, "expr" in LaTeX with x as the only variable and no "y =": "x^{2} - 6x + 5", "\frac{6}{x}", "|x - 3|", "\sqrt{9 - x^{2}}", "2\sin(3x) + 1", "e^{-0.5x}", "\ln x", "\log_{2} x", "\arctan x". It reads e, \pi, \sin, \cos, \tan, their inverses, \exp, \ln, \log and \log_{b}, in radians. "domain": [a, b] limits it. "breaks": [0] stops the line at an asymptote. "id" names it ("f").
@@ -59,7 +62,7 @@ Each is shown as JSON. In your answer it is the text of fig, so each quote and b
 
 A chart is drawn from data too: "kind": "chart", with "chart" one of bar, histogram, box, dot or stem, and an alt. Use one when a point is about reading or comparing data: a bar chart of categories, a histogram of grouped data, a box plot of a five-number summary, a dot plot or a stem-and-leaf plot of a small data set.
 
-- bar: "bars": [["Soccer", 8], ["Netball", 6]] (a label and a value each, 2 to 12), "y": an axis with min 0, max and step, and "x": {"label": "Sport"}. "truncated": true lets y start above 0, only for a point about misleading graphs.
+- bar: "bars": [["Soccer", 8], ["Netball", 6]] (a label and a value each, 2 to 12; only one-letter labels, such as the months as J F M, may repeat), "y": an axis with min 0, max and step, and "x": {"label": "Sport"}. "truncated": true lets y start above 0, only for a point about misleading graphs.
 - histogram: "classes": [[0, 10, 3], [10, 20, 7]] (from, to and count, each class touching the next, all the same width), on "x" and "y" axes with steps. The x step should match the class width.
 - box: "sets": [{"label": "Route 1", "data": [...]}], or {"label": ..., "five": [min, Q1, median, Q3, max]}, one to three sets, across an "x" axis with a step. "outliers": true shows values more than 1.5 IQR beyond the box as dots (it needs data).
 - dot: "data": [...] on an "x" axis with a step: one dot for each value.

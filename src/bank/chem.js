@@ -2760,6 +2760,62 @@ MADE_BANKS.chem = {
       "Useful peaks: a strong, sharp C=O peak at about 1680 to 1750 cm⁻¹. A broad O-H peak from an alcohol at about 3230 to 3550 cm⁻¹. A very broad O-H peak from a carboxylic acid at about 2500 to 3000 cm⁻¹. An N-H peak at about 3300 to 3500 cm⁻¹.",
       "Peaks are matched to a data table to find which functional groups are present. IR does not give the molar mass or the full structure."
     ],
+    "cardFigs": {
+      "3": {
+        "kind": "graph",
+        "alt": "An IR spectrum of a compound with a C=O bond and no O-H bond. It plots how much light passes through, as a percentage, against wavenumber, running from 4000 cm⁻¹ on the left down to 500 cm⁻¹ on the right, as IR spectra are drawn. Each absorption is a peak pointing down. The strongest is a sharp peak at about 1715 cm⁻¹, labelled C=O. There is a smaller peak near 2970 cm⁻¹ and a few more below 1500 cm⁻¹. There is no broad O-H peak between 2500 and 3550 cm⁻¹.",
+        "x": {"min": 500, "max": 4000, "label": "Wavenumber (cm⁻¹)", "step": 500, "reverse": true},
+        "y": {"min": 0, "max": 100, "label": "Transmittance (%)", "step": 20},
+        "items": [
+          {
+            "type": "curve",
+            "id": "s",
+            "smooth": true,
+            "points": [
+              [500, 90],
+              [520, 86],
+              [540, 76],
+              [560, 86],
+              [600, 91],
+              [760, 91],
+              [790, 82],
+              [810, 85],
+              [850, 91],
+              [1060, 91],
+              [1090, 82],
+              [1110, 89],
+              [1180, 90],
+              [1205, 72],
+              [1220, 66],
+              [1235, 72],
+              [1260, 90],
+              [1340, 89],
+              [1355, 74],
+              [1365, 70],
+              [1380, 80],
+              [1405, 76],
+              [1420, 72],
+              [1440, 84],
+              [1480, 91],
+              [1660, 92],
+              [1690, 82],
+              [1705, 30],
+              [1715, 10],
+              [1725, 30],
+              [1740, 82],
+              [1770, 92],
+              [2900, 92],
+              [2940, 82],
+              [2970, 64],
+              [3000, 82],
+              [3040, 92],
+              [4000, 92]
+            ]
+          },
+          {"type": "text", "at": [1715, 10], "label": "C=O", "pos": "right"}
+        ]
+      }
+    },
     "remember": "Each bond absorbs within its own range of wavenumbers, so peaks point to functional groups.",
     "a": {
       "q": "An IR spectrum of an unknown compound has a strong, sharp peak at about 1700 cm⁻¹. What does this show?",

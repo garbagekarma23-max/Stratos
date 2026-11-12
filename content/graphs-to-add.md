@@ -6,17 +6,17 @@ A census of every point in the banks, for planning the sessions that add graphs 
 
 A shared point is listed under every course that uses it, and counted once in its bank.
 
-The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2. Session 3 added them to General Mathematics Units 3 and 4, Mathematics Standard Years 11 and 12, Foundation Mathematics Units 1 to 4 and Mathematics Years 7 to 10, which finishes the maths bank. Session 4 added them to the Edexcel course, Economics Units 1 to 4 (Victoria), Economics Year 12 (NSW), Economics and Business Year 8 and Business Management Units 1 and 2. Session 5 added them to Physics, Chemistry and Biology (NSW Years 11 and 12, Victoria Units 1 to 4), Physical Education Units 3 and 4, Health and Movement Science Year 11, Psychology Units 3 and 4, Science Years 7 and 9 and Geography Years 8 to 11, which finishes the census. Three were turned down twice and wait for the owner: the decay series on `phys-decay-series` (labels crowd at phone width), the IR spectrum on `chem-infrared-spectroscopy` (the graph format has no axis that runs from high to low, as IR spectra are drawn) and the temperature line on `geo-reading-climate-graph` (card line 3; its rainfall chart on card line 2 was kept). The trade cycle graph for `e-outputgap` was asked for again in session 5 and turned down twice more (the slowdown drawn as a fall in real GDP), so it still waits for the owner; the point has its output gap graph.
+The "Have one already" columns and the "Has one already" notes are updated as each session adds graphs. Session 1 added them to Mathematical Methods Units 1 to 4 and Mathematics Advanced Year 11. Session 2 added them to Mathematics Advanced Year 12, Specialist Mathematics Units 1 to 4 and General Mathematics Units 1 and 2. Session 3 added them to General Mathematics Units 3 and 4, Mathematics Standard Years 11 and 12, Foundation Mathematics Units 1 to 4 and Mathematics Years 7 to 10, which finishes the maths bank. Session 4 added them to the Edexcel course, Economics Units 1 to 4 (Victoria), Economics Year 12 (NSW), Economics and Business Year 8 and Business Management Units 1 and 2. Session 5 added them to Physics, Chemistry and Biology (NSW Years 11 and 12, Victoria Units 1 to 4), Physical Education Units 3 and 4, Health and Movement Science Year 11, Psychology Units 3 and 4, Science Years 7 and 9 and Geography Years 8 to 11, which finishes the census. Three were turned down twice and waited for the owner, and session 6 finished them at the owner's ask: the IR spectrum on `chem-infrared-spectroscopy`, drawn from 4000 cm⁻¹ down to 500 cm⁻¹ on a reversed axis (`reverse` in `src/06-figure.js`); the decay series on `phys-decay-series`, redrawn as mass number against atomic number with three steps, each an arrow labelled α or β⁻; and the temperature line on `geo-reading-climate-graph` (card line 3), with the months as J F M A M J J A S O N D, and its rainfall chart on card line 2 redrawn to match. The trade cycle graph for `e-outputgap`, turned down twice in session 4 and twice in session 5, was dropped at the owner's ask: the point keeps its output gap graph on card line 1. Every point listed now has its graph.
 
 ## By bank
 
 | Bank | Points | Better with a graph | Drawable now | Have one already |
 | --- | --- | --- | --- | --- |
 | mat | 666 | 151 | 136 | 151 |
-| phys | 135 | 25 | 25 | 24 |
+| phys | 135 | 25 | 25 | 25 |
 | eco | 154 | 21 | 21 | 21 |
 | e (Economics bank, Edexcel) | 53 | 16 | 16 | 16 |
-| chem | 199 | 14 | 13 | 13 |
+| chem | 199 | 14 | 13 | 14 |
 | bio | 162 | 9 | 9 | 9 |
 | ecb | 128 | 6 | 6 | 6 |
 | geo | 204 | 4 | 3 | 4 |
@@ -34,7 +34,7 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | mod | 147 | 0 | 0 | 0 |
 | soc | 57 | 0 | 0 | 0 |
 | sor | 79 | 0 | 0 | 0 |
-| Total | 3467 | 257 | 240 | 255 |
+| Total | 3467 | 257 | 240 | 257 |
 
 ## By course
 
@@ -52,9 +52,9 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | `nsw-phys-12` Physics, Year 12 | 49 | 11 | 11 | 11 |
 | `vic-mat-spec-u12` Specialist Mathematics, Units 1 and 2 | 63 | 10 | 9 | 10 |
 | `vic-eco-u12` Economics, Units 1 and 2 | 53 | 9 | 9 | 9 |
-| `vic-phys-u12` Physics, Units 1 and 2 | 52 | 9 | 9 | 8 |
+| `vic-phys-u12` Physics, Units 1 and 2 | 52 | 9 | 9 | 9 |
 | `vic-phys-u34` Physics, Units 3 and 4 | 51 | 9 | 9 | 9 |
-| `vic-chem-u34` Chemistry, Units 3 and 4 | 64 | 8 | 7 | 7 |
+| `vic-chem-u34` Chemistry, Units 3 and 4 | 64 | 8 | 7 | 8 |
 | `vic-mat-gen-u34` General Mathematics, Units 3 and 4 | 57 | 8 | 6 | 8 |
 | `ac-mat-9` Mathematics, Year 9 | 39 | 7 | 6 | 7 |
 | `nsw-mat-std-11` Mathematics Standard, Year 11 | 43 | 7 | 5 | 7 |
@@ -63,7 +63,7 @@ The "Have one already" columns and the "Has one already" notes are updated as ea
 | `vic-bio-u34` Biology, Units 3 and 4 | 62 | 6 | 6 | 6 |
 | `nsw-eco-12` Economics, Year 12: Australia's economy | 67 | 5 | 5 | 5 |
 | `vic-mat-fnd-u34` Foundation Mathematics, Units 3 and 4 | 32 | 5 | 5 | 5 |
-| `nsw-chem-12` Chemistry, Year 12 | 47 | 4 | 3 | 3 |
+| `nsw-chem-12` Chemistry, Year 12 | 47 | 4 | 3 | 4 |
 | `vic-pe-u34` Physical Education, Units 3 and 4 | 39 | 4 | 4 | 4 |
 | `ac-mat-8` Mathematics, Year 8 | 40 | 3 | 3 | 3 |
 | `nsw-bio-12` Biology, Year 12 | 50 | 3 | 3 | 3 |
@@ -183,7 +183,7 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
   - `e-macroeq` Equilibrium real output: AD/AS equilibrium shifts Has one already.
 - Economic growth (`x2c5`)
   - `e-growthcause` Causes of growth: PPF and LRAS shift Has one already.
-  - `e-outputgap` Output gaps and the trade cycle: trade cycle around trend Has one already.
+  - `e-outputgap` Output gaps and the trade cycle: output gap around trend Has one already.
 
 ### General Mathematics, Units 1 and 2 (`vic-mat-gen-u12`)
 
@@ -380,7 +380,7 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
   - `phys-latent-heat-2` Latent heat: heating curve with plateaus Has one already.
   - `phys-black-body-radiation-2` Black body radiation: intensity against wavelength curves Has one already.
 - Radiation from the nucleus (`vic-phys-u12-1-2`)
-  - `phys-decay-series` Decay series: mass number against atomic number with arrows
+  - `phys-decay-series` Decay series: mass number against atomic number with arrows Has one already.
   - `phys-half-life` Half-life: decay curve Has one already.
 - Nuclear energy (`vic-phys-u12-1-4`)
   - `phys-fission-fusion` Fission and fusion: binding energy per nucleon curve Has one already.
@@ -423,7 +423,7 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
   - `chem-dynamic-equilibrium` Dynamic equilibrium: concentration against time levelling off Has one already.
 - Instrumental analysis (`vic-chem-u34-2-4`)
   - `chem-mass-spectrometry` Mass spectrometry: mass spectrum peaks (needs: bar chart) Has one already.
-  - `chem-infrared-spectroscopy` Infrared spectroscopy: IR spectrum, transmittance against wavenumber
+  - `chem-infrared-spectroscopy` Infrared spectroscopy: IR spectrum, transmittance against wavenumber Has one already.
   - `chem-chromatography-2` Chromatography: calibration curve of peak area against concentration Has one already.
 
 ### General Mathematics, Units 3 and 4 (`vic-mat-gen-u34`)
@@ -533,7 +533,7 @@ No points that would clearly be better with a graph: `ac-ecb-10`, `ac-ecb-7`, `a
   - `chem-colorimetry-uv-visible-spectroscopy` Colorimetry and UV-visible spectroscopy: calibration curve line Has one already.
 - Analysing organic substances (`nsw-chem-12-4-2`)
   - `chem-mass-spectrometry` Mass spectrometry: mass spectrum peaks (needs: bar chart) Has one already.
-  - `chem-infrared-spectroscopy` Infrared spectroscopy: IR spectrum, transmittance against wavenumber
+  - `chem-infrared-spectroscopy` Infrared spectroscopy: IR spectrum, transmittance against wavenumber Has one already.
 
 ### Physical Education, Units 3 and 4 (`vic-pe-u34`)
 
