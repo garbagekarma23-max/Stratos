@@ -4,8 +4,10 @@
 // folder as a whole: every file has a record, every record has a file, and nothing else is in it.
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const ROOT = new URL('..', import.meta.url).pathname;
+// fileURLToPath, not .pathname: on Windows .pathname gives /C:/Users/..., which path.join turns into C:\C:\Users\...
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 
 /* The width and height of a JPEG, PNG or WebP from its bytes, or null when it is none of these. */
 export function imageSize(b) {

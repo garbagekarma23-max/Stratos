@@ -5,6 +5,7 @@
 // home screens and Messages), icons/icon-192.png and icons/icon-512.png (the same icon for Android home screens), icons/preview-v2.png and icons/preview-lab.png (1200 by 630, the picture a link shows
 // in Messages, Instagram and other apps). icons/favicon.svg is written by hand.
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 import { chromium } from 'playwright';
 import { serve } from './serve.mjs';
 const OUT = new URL('../icons/', import.meta.url);
@@ -30,7 +31,7 @@ async function render(file, w, h, html, wait) {
   await p.evaluate(() => document.fonts.ready);
   if (wait) await wait(p);
   await p.waitForTimeout(300);
-  await p.screenshot({path: new URL(file, OUT).pathname, omitBackground: file === 'favicon-32.png'});
+  await p.screenshot({path: fileURLToPath(new URL(file, OUT)), omitBackground: file === 'favicon-32.png'});
   await p.close();
 }
 

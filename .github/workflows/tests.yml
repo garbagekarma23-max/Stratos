@@ -2,6 +2,9 @@
 # It builds v2.html, runs the content check, the content pipeline's tests and then the whole test suite in Chromium,
 # the same commands as on a computer (CLAUDE.md, Build and test). Each check after the build runs even if one before
 # it failed, so one run shows every problem. Screenshots from a failed run are kept for a week under Artifacts.
+# A second job, Tests (Windows), runs the build, the content check and the pipeline tests on Windows, where the owner
+# runs the pipeline. It leaves out the browser suite. It is there to catch code that only works on Linux, such as a
+# path read from a web address with .pathname, which on Windows starts /C:/ and breaks every file path made from it.
 name: Tests
 
 on:
@@ -91,3 +94,36 @@ jobs:
           path: tests/shots/
           retention-days: 7
           if-no-files-found: ignore
+
+  windows:
+    name: Tests (Windows)
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: content/requirements.txt
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Install the pipeline's Python packages
+        run: pip install -r content/requirements.txt
+
+      # On Windows, Python is python (or py), not python3.
+      - name: Build v2.html
+        id: build
+        run: python build.py
+
+      - name: Content check
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node check_content.mjs
+
+      - name: Pipeline tests
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: python content/test_pipeline.py
