@@ -1,0 +1,774 @@
+{
+ "id": "mat-scatterplots-association-vic",
+ "title": "Scatterplots and association",
+ "brief": "943a5def48d3",
+ "shortlist": [
+  [
+   "mat-scatterplots-association",
+   0.537
+  ],
+  [
+   "mat-describing-association",
+   0.457
+  ],
+  [
+   "mat-two-way-tables-categorical",
+   0.307
+  ],
+  [
+   "mat-scatterplots",
+   0.295
+  ],
+  [
+   "mat-associations-between-categorical-variables",
+   0.223
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 says adapt mat-scatterplots-association (1 change)",
+  "2026-11-12T15:15:48Z adapt: failed the content check, writing again",
+  "2026-11-12T15:26:03Z adapt: done",
+  "2026-11-12T15:35:08Z check: flagged",
+  "2026-11-12T15:42:24Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "adapt": 0.01818,
+  "check": 0.01065,
+  "fix": 0.03377,
+  "recheck": 0.00915
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-scatterplots-association",
+  "changes": [
+   "In question b, replace the place Perth with a Victorian place, such as Geelong or Melbourne, so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at the right Year 10 depth, but its question b uses Perth, so it needs one local example change for Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-scatterplots-association",
+  "changes": [
+   "In question b, replace the place Perth with a Victorian place, such as Geelong or Melbourne, so the example is local to the course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q",
+   "b.opt1",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Describing an association",
+  "card": [
+   [
+    "Direction",
+    "Positive: as one variable increases, the other tends to increase. Negative: as one increases, the other tends to decrease. No direction: no clear trend."
+   ],
+   [
+    "Form",
+    "Linear if the points follow a straight line pattern. Non-linear if they follow a curve."
+   ],
+   [
+    "Strength",
+    "Strong if the points sit close to a clear pattern. Weak if they are widely scattered around it. Moderate sits in between."
+   ],
+   "A strong association does not prove that one variable causes the other. Both may be affected by a third variable, or the link may be coincidence."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A scatterplot of hours of practice against test score for 12 students. Each dot is one student. As the hours of practice increase, the scores tend to increase, so the direction is positive.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "Hours",
+     "step": 2
+    },
+    "y": {
+     "min": 40,
+     "max": 90,
+     "label": "Score",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       48
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       52
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       50
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       58
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       55
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       62
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       66
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       63
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       70
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.5,
+       74
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       72
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       80
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Describe direction, form and strength. A strong association does not prove cause.",
+  "a": {
+   "q": "The points on a scatterplot fall from left to right and sit close to a straight line. Which description fits best?",
+   "opts": [
+    "Negative, linear and strong",
+    "Positive, linear and strong",
+    "Negative, linear and weak",
+    "Negative, non-linear and strong"
+   ],
+   "why": "Points sloping down show a negative direction. A straight line pattern is linear, and points close to the line make it strong. Positive is wrong because the other variable decreases as the first increases.",
+   "clue": "Read the points from left to right: do they rise or fall?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Daily ice cream sales and sunburn cases in Melbourne have a strong positive linear association. What can we conclude?",
+   "opts": [
+    "Neither variable is shown to cause the other",
+    "Ice cream sales are shown to cause sunburn cases",
+    "Sunburn cases are shown to cause ice cream sales",
+    "The association is weak, as neither causes the other"
+   ],
+   "why": "A strong association does not prove cause. A third variable, such as hot sunny weather, may affect both. Saying ice cream sales cause sunburn is tempting, but strength only describes how close the points sit to the pattern.",
+   "clue": "Think about what else could affect both variables on a hot day."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Negative, linear and strong",
+   "also_right": []
+  },
+  "b": {
+   "best": "Neither variable is shown to cause the other",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The last card line explains that association does not prove cause, including third variables and coincidence. That is the idea of point 5 (Judging statistical claims: correlation sold as cause), so here it should at most be mentioned, not taught."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b tests correlation versus causation, which belongs to point 5 (Judging statistical claims), not to this point on describing direction, form and strength."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct and unique, and the graph matches its alt. The card's causation line and question b teach and test correlation versus cause, which belongs to point 5 of the chapter. Consider swapping b for a question on form or strength."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The last card line explains that association does not prove cause, including third variables and coincidence. That is the idea of point 5 (Judging statistical claims: correlation sold as cause), so here it should at most be mentioned, not taught.",
+  "Question b, other: Question b tests correlation versus causation, which belongs to point 5 (Judging statistical claims), not to this point on describing direction, form and strength."
+ ],
+ "proposal": {
+  "title": "Scatterplots and association",
+  "card": [
+   "A scatterplot shows two numerical variables measured on the same individuals. Each dot is one individual, with one variable on each axis.",
+   [
+    "Direction",
+    "Positive: as one variable increases, the other tends to increase. Negative: as one increases, the other tends to decrease. No direction: no clear trend."
+   ],
+   [
+    "Form",
+    "Linear if the points follow a straight line pattern. Non-linear if they follow a curve."
+   ],
+   [
+    "Strength",
+    "Strong if the points sit close to a clear pattern. Weak if they are widely scattered around it. Moderate sits in between."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A scatterplot of hours of practice against test score for 12 students. Each dot is one student. As the hours of practice increase, the scores tend to increase, so the direction is positive.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "Hours",
+     "step": 2
+    },
+    "y": {
+     "min": 40,
+     "max": 90,
+     "label": "Score",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       48
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       52
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       50
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       58
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       55
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       62
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       66
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       63
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       70
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.5,
+       74
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       72
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       80
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Describe an association by its direction, its form and its strength.",
+  "a": {
+   "q": "The points on a scatterplot fall from left to right and sit close to a straight line. Which description fits best?",
+   "opts": [
+    "Negative, linear and strong",
+    "Positive, linear and strong",
+    "Negative, linear and weak",
+    "Negative, non-linear and strong"
+   ],
+   "why": "Points sloping down show a negative direction. A straight line pattern is linear, and points close to the line make it strong. Positive is wrong because the other variable decreases as the first increases.",
+   "clue": "Read the points from left to right: do they rise or fall?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi records the age and resale value of 10 used cars in Geelong. Which description fits his scatterplot?",
+   "opts": [
+    "Negative, non-linear and strong",
+    "Negative, linear and strong",
+    "Positive, non-linear and strong",
+    "Negative, non-linear and weak"
+   ],
+   "why": "Value falls as age rises, so the direction is negative. The points drop steeply and then level off, which is a curve, so the form is non-linear, and they sit close to that curve, so it is strong. Linear is tempting, but a straight line would miss the bend.",
+   "clue": "Does the pattern drop by the same amount each year?",
+   "fig": {
+    "kind": "graph",
+    "alt": "A scatterplot of car age in years against resale value in thousands of dollars for 10 cars. The values are 33 at 1 year, 26 at 2, 21 at 3, 16 at 4, 13 at 5, 11 at 6, 9 at 7, 8 at 8, 7 at 9 and 6 at 10. The values fall quickly at first, then level off, with the dots close to a smooth curve.",
+    "x": {
+     "min": 0,
+     "max": 11,
+     "label": "Age (years)",
+     "step": 1,
+     "labelUnder": true
+    },
+    "y": {
+     "min": 0,
+     "max": 40,
+     "label": "Value ($1000s)",
+     "step": 5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       33
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       26
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       21
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       16
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       13
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       11
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       9,
+       7
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       6
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Negative, linear and strong",
+    "also_right": []
+   },
+   "b": {
+    "best": "Negative, non-linear and strong",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The last card line explains that association does not prove cause, including third variables and coincidence. That is the idea of point 5 (Judging statistical claims: correlation sold as cause), so here it should at most be mentioned, not taught."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b tests correlation versus causation, which belongs to point 5 (Judging statistical claims), not to this point on describing direction, form and strength."
+   }
+  ],
+  "flags": [
+   "Card, other: The last card line explains that association does not prove cause, including third variables and coincidence. That is the idea of point 5 (Judging statistical claims: correlation sold as cause), so here it should at most be mentioned, not taught.",
+   "Question b, other: Question b tests correlation versus causation, which belongs to point 5 (Judging statistical claims), not to this point on describing direction, form and strength."
+  ]
+ },
+ "final": {
+  "title": "Scatterplots and association",
+  "card": [
+   "A scatterplot shows two numerical variables measured on the same individuals. Each dot is one individual, with one variable on each axis.",
+   [
+    "Direction",
+    "Positive: as one variable increases, the other tends to increase. Negative: as one increases, the other tends to decrease. No direction: no clear trend."
+   ],
+   [
+    "Form",
+    "Linear if the points follow a straight line pattern. Non-linear if they follow a curve."
+   ],
+   [
+    "Strength",
+    "Strong if the points sit close to a clear pattern. Weak if they are widely scattered around it. Moderate sits in between."
+   ]
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "A scatterplot of hours of practice against test score for 12 students. Each dot is one student. As the hours of practice increase, the scores tend to increase, so the direction is positive.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "label": "Hours",
+     "step": 2
+    },
+    "y": {
+     "min": 40,
+     "max": 90,
+     "label": "Score",
+     "step": 10
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       48
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1.5,
+       52
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       50
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2.5,
+       58
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       55
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3.5,
+       62
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       66
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4.5,
+       63
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       70
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5.5,
+       74
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       72
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       80
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Describe an association by its direction, its form and its strength.",
+  "a": {
+   "q": "The points on a scatterplot fall from left to right and sit close to a straight line. Which description fits best?",
+   "opts": [
+    "Negative, linear and strong",
+    "Positive, linear and strong",
+    "Negative, linear and weak",
+    "Negative, non-linear and strong"
+   ],
+   "why": "Points sloping down show a negative direction. A straight line pattern is linear, and points close to the line make it strong. Positive is wrong because the other variable decreases as the first increases.",
+   "clue": "Read the points from left to right: do they rise or fall?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi records the age and resale value of 10 used cars in Geelong. Which description fits his scatterplot?",
+   "opts": [
+    "Negative, non-linear and strong",
+    "Negative, linear and strong",
+    "Positive, non-linear and strong",
+    "Negative, non-linear and weak"
+   ],
+   "why": "Value falls as age rises, so the direction is negative. The points drop steeply and then level off, which is a curve, so the form is non-linear, and they sit close to that curve, so it is strong. Linear is tempting, but a straight line would miss the bend.",
+   "clue": "Does the pattern drop by the same amount each year?",
+   "fig": {
+    "kind": "graph",
+    "alt": "A scatterplot of car age in years against resale value in thousands of dollars for 10 cars. The values are 33 at 1 year, 26 at 2, 21 at 3, 16 at 4, 13 at 5, 11 at 6, 9 at 7, 8 at 8, 7 at 9 and 6 at 10. The values fall quickly at first, then level off, with the dots close to a smooth curve.",
+    "x": {
+     "min": 0,
+     "max": 11,
+     "label": "Age (years)",
+     "step": 1,
+     "labelUnder": true
+    },
+    "y": {
+     "min": 0,
+     "max": 40,
+     "label": "Value ($1000s)",
+     "step": 5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "point",
+      "at": [
+       1,
+       33
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       2,
+       26
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       21
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       16
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       13
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       11
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       7,
+       9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       8,
+       8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       9,
+       7
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       6
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "cleared_by": "recheck"
+}

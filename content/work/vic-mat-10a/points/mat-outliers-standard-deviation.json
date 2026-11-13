@@ -1,0 +1,235 @@
+{
+ "id": "mat-outliers-standard-deviation",
+ "title": "Outliers and standard deviation",
+ "brief": "587563dd03ea",
+ "shortlist": [
+  [
+   "mat-standard-normal-distribution",
+   0.346
+  ],
+  [
+   "mat-empirical-rule",
+   0.293
+  ],
+  [
+   "mat-shapes-distributions",
+   0.287
+  ],
+  [
+   "mat-68-95-99-7",
+   0.245
+  ],
+  [
+   "mat-describing-distribution",
+   0.243
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: done",
+  "2026-11-12T15:26:04Z check: flagged",
+  "2026-11-12T15:35:09Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01223,
+  "check": 0.01471,
+  "fix": 0.01676,
+  "recheck": 0.01026
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches that standard deviation grows sharply with one outlier because it uses every value; the closest card, on describing distributions, only says outliers pull the mean and standard deviation, without showing the effect on standard deviation itself, so a new point is safer.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Outliers and standard deviation",
+  "card": [
+   "An outlier is a value far from the rest of the data. Standard deviation (SD) uses every value, so an outlier affects it.",
+   "One outlier pulls the mean towards it. It also makes the SD grow a lot, because that value is far from the mean.",
+   "Example: 10, 11, 12, 13, 14 has a mean of 12 and an SD of about 1.4. Change 14 to 40 and the mean becomes 17.2, while the SD jumps to about 11.6.",
+   "So a large SD can come from one extreme value, not from the whole data set being spread out."
+  ],
+  "remember": "One outlier pulls the mean towards it and makes the SD much larger.",
+  "a": {
+   "q": "A data set has an SD of about 2. One value is replaced by a much larger outlier. What happens to the SD?",
+   "opts": [
+    "It increases a lot",
+    "It stays the same",
+    "It decreases",
+    "It becomes 0"
+   ],
+   "why": "SD uses every value, and the outlier is far from the mean, so the SD grows a lot. It would stay the same only if the data were unchanged.",
+   "clue": "Think about how far the new value sits from the mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam records daily visitors to a shop: 20, 22, 21, 23, 24. A busy day of 90 is added to the data. Which change is correct?",
+   "opts": [
+    "The mean rises and the SD rises a lot",
+    "The mean rises and the SD stays the same",
+    "The mean falls and the SD rises a lot",
+    "The mean stays the same and the SD rises"
+   ],
+   "why": "The outlier of 90 pulls the mean up towards it. It is far from the mean, so the SD also grows a lot. The SD does not stay the same, because it uses every value.",
+   "clue": "Both the mean and the SD use every value."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It increases a lot",
+   "also_right": []
+  },
+  "b": {
+   "best": "The mean rises and the SD rises a lot",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "For 10, 11, 12, 13, 40 the mean is 17.2, but the SD is about 11.4 (population, matching the 1.4 given for the original set) or about 12.8 (sample), not 11.6. Change it to about 11.4."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says the SD 'would stay the same only if the data were unchanged'. This is false: changed data can keep the same SD (e.g. {1, 2, 3} becoming {0, 1, 2}). Say instead that adding a far-away value makes it grow."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's example gives the SD of 10, 11, 12, 13, 40 as about 11.6, but it is about 11.4 (population SD, as used for the original 1.4). Why (a) also wrongly claims the SD stays the same only if the data is unchanged. Both questions are otherwise sound."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: For 10, 11, 12, 13, 40 the mean is 17.2, but the SD is about 11.4 (population, matching the 1.4 given for the original set) or about 12.8 (sample), not 11.6. Change it to about 11.4.",
+  "Question a, fact: Why (a) says the SD 'would stay the same only if the data were unchanged'. This is false: changed data can keep the same SD (e.g. {1, 2, 3} becoming {0, 1, 2}). Say instead that adding a far-away value makes it grow."
+ ],
+ "proposal": {
+  "title": "Outliers and standard deviation",
+  "card": [
+   "An outlier is a value far from the rest of the data. Standard deviation (SD) uses every value, so an outlier affects it.",
+   "One outlier pulls the mean towards it. It also makes the SD grow a lot, because that value is far from the mean.",
+   "Example: 10, 11, 12, 13, 14 has a mean of 12 and an SD of about 1.4. Change 14 to 40 and the mean becomes 17.2, while the SD jumps to about 11.4.",
+   "So a large SD can come from one extreme value, not from the whole data set being spread out."
+  ],
+  "remember": "One outlier pulls the mean towards it and makes the SD much larger.",
+  "a": {
+   "q": "A data set has an SD of about 2. One value is replaced by a much larger outlier. What happens to the SD?",
+   "opts": [
+    "It increases a lot",
+    "It stays the same",
+    "It decreases",
+    "It becomes 0"
+   ],
+   "why": "SD uses every value, and the outlier sits far from the mean, so the SD grows a lot. Swapping in a value far from the rest adds spread, so the SD does not stay the same.",
+   "clue": "Think about how far the new value sits from the mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam records daily visitors to a shop: 20, 22, 21, 23, 24. A busy day of 90 is added to the data. Which change is correct?",
+   "opts": [
+    "The mean rises and the SD rises a lot",
+    "The mean rises and the SD stays the same",
+    "The mean falls and the SD rises a lot",
+    "The mean stays the same and the SD rises"
+   ],
+   "why": "The outlier of 90 pulls the mean up towards it, from 22 to about 33.3. It is far from the mean, so the SD also grows a lot. The SD does not stay the same, because it uses every value.",
+   "clue": "Both the mean and the SD use every value."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It increases a lot",
+    "also_right": []
+   },
+   "b": {
+    "best": "The mean rises and the SD rises a lot",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The worked example checks out with population SD (about 1.4 and 11.4, mean 17.2), and the new mean of about 33.3 in question b is right."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "For 10, 11, 12, 13, 40 the mean is 17.2, but the SD is about 11.4 (population, matching the 1.4 given for the original set) or about 12.8 (sample), not 11.6. Change it to about 11.4."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says the SD 'would stay the same only if the data were unchanged'. This is false: changed data can keep the same SD (e.g. {1, 2, 3} becoming {0, 1, 2}). Say instead that adding a far-away value makes it grow."
+   }
+  ],
+  "flags": [
+   "Card, fact: For 10, 11, 12, 13, 40 the mean is 17.2, but the SD is about 11.4 (population, matching the 1.4 given for the original set) or about 12.8 (sample), not 11.6. Change it to about 11.4.",
+   "Question a, fact: Why (a) says the SD 'would stay the same only if the data were unchanged'. This is false: changed data can keep the same SD (e.g. {1, 2, 3} becoming {0, 1, 2}). Say instead that adding a far-away value makes it grow."
+  ]
+ },
+ "final": {
+  "title": "Outliers and standard deviation",
+  "card": [
+   "An outlier is a value far from the rest of the data. Standard deviation (SD) uses every value, so an outlier affects it.",
+   "One outlier pulls the mean towards it. It also makes the SD grow a lot, because that value is far from the mean.",
+   "Example: 10, 11, 12, 13, 14 has a mean of 12 and an SD of about 1.4. Change 14 to 40 and the mean becomes 17.2, while the SD jumps to about 11.4.",
+   "So a large SD can come from one extreme value, not from the whole data set being spread out."
+  ],
+  "remember": "One outlier pulls the mean towards it and makes the SD much larger.",
+  "a": {
+   "q": "A data set has an SD of about 2. One value is replaced by a much larger outlier. What happens to the SD?",
+   "opts": [
+    "It increases a lot",
+    "It stays the same",
+    "It decreases",
+    "It becomes 0"
+   ],
+   "why": "SD uses every value, and the outlier sits far from the mean, so the SD grows a lot. Swapping in a value far from the rest adds spread, so the SD does not stay the same.",
+   "clue": "Think about how far the new value sits from the mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam records daily visitors to a shop: 20, 22, 21, 23, 24. A busy day of 90 is added to the data. Which change is correct?",
+   "opts": [
+    "The mean rises and the SD rises a lot",
+    "The mean rises and the SD stays the same",
+    "The mean falls and the SD rises a lot",
+    "The mean stays the same and the SD rises"
+   ],
+   "why": "The outlier of 90 pulls the mean up towards it, from 22 to about 33.3. It is far from the mean, so the SD also grows a lot. The SD does not stay the same, because it uses every value.",
+   "clue": "Both the mean and the SD use every value."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,292 @@
+{
+ "id": "mat-conditional-probability-3-vic",
+ "title": "Conditional probability",
+ "brief": "af4455765593",
+ "shortlist": [
+  [
+   "mat-language-conditional-probability",
+   0.563
+  ],
+  [
+   "mat-conditional-probability",
+   0.561
+  ],
+  [
+   "mat-conditional-probability-2",
+   0.558
+  ],
+  [
+   "mat-conditional-probability-from-tree",
+   0.471
+  ],
+  [
+   "mat-sample-spaces-probability",
+   0.452
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 says reuse mat-language-conditional-probability, so to the Opus match check, as every reuse is",
+  "2026-11-12T15:15:47Z confirm: Claude Opus 5.5 may reuse mat-conditional-probability-2, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-conditional-probability-2 (2 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-conditional-probability-2 on the next run",
+  "2026-11-13T13:04:53Z adapt: done",
+  "2026-11-13T13:11:25Z check: flagged",
+  "2026-11-13T13:13:39Z fix: suggested",
+  "2026-11-13T15:05:18Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0005,
+  "confirm": 0.01727,
+  "adapt": 0.00786,
+  "check": 0.00887,
+  "fix": 0.02111
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-language-conditional-probability",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The Year 10 language card already teaches P(A|B) as the probability of A given B and shows the condition shrinking the outcomes counted, at a depth suited to Year 10 with notation that matches the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-conditional-probability-2",
+  "changes": [],
+  "sure": "medium",
+  "reason": "This Victorian card teaches the same idea, that 'given B' shrinks the sample space to B, using the Pr notation Victorian students see. Its two-way count and simple formula questions are fair for Level 10, though the formula may sit slightly above what Level 10 strictly requires.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-conditional-probability-2",
+  "changes": [
+   "Drop the card line about finding Pr(A | B) from a table using only the row or column for B, since the chapter's two-way table point teaches that.",
+   "Replace the netball and tennis example with one that shows the sample space shrinking without a table, such as rolling a die: given the roll is even, the outcomes are 2, 4 and 6, so Pr(6 | even) is one third."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card3",
+   "card4",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "auto",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the sample space shrinking to B, in Victoria's Pr notation, and its answers check out. But its third card line teaches using a two-way table's row or column as the total, which is the next point in this chapter.",
+   "item": "56d645d8ca814894",
+   "result": "decided",
+   "saved": {
+    "id": "mat-conditional-probability-3-vic",
+    "title": "Conditional probability",
+    "brief": "af4455765593",
+    "shortlist": [
+     [
+      "mat-language-conditional-probability",
+      0.563
+     ],
+     [
+      "mat-conditional-probability",
+      0.561
+     ],
+     [
+      "mat-conditional-probability-2",
+      0.558
+     ],
+     [
+      "mat-conditional-probability-from-tree",
+      0.471
+     ],
+     [
+      "mat-sample-spaces-probability",
+      0.452
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.0005,
+     "confirm": 0.01727
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-language-conditional-probability",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The Year 10 language card already teaches P(A|B) as the probability of A given B and shows the condition shrinking the outcomes counted, at a depth suited to Year 10 with notation that matches the brief.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "mat-conditional-probability-2",
+     "changes": [],
+     "sure": "medium",
+     "reason": "This Victorian card teaches the same idea, that 'given B' shrinks the sample space to B, using the Pr notation Victorian students see. Its two-way count and simple formula questions are fair for Level 10, though the formula may sit slightly above what Level 10 strictly requires.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "e36269fd2cce1f26"
+  }
+ ],
+ "draft": {
+  "title": "Conditional probability",
+  "card": [
+   "\\(\\text{Pr}(A \\mid B)\\) is the probability of \\(A\\) given that \\(B\\) has happened. Knowing \\(B\\) has happened shrinks the sample space to just the outcomes in \\(B\\).",
+   "Formula: \\(\\text{Pr}(A \\mid B) = \\frac{\\text{Pr}(A \\cap B)}{\\text{Pr}(B)}\\). The bottom is the event we are given. The top is the part of it that is also \\(A\\).",
+   "Example: roll a die. Given the roll is even, the outcomes left are 2, 4 and 6. So \\(\\text{Pr}(6 \\mid \\text{even}) = \\frac{1}{3}\\). The total is 3, not 6.",
+   ""
+  ],
+  "remember": "Given \\(B\\) means \\(B\\) is the new total. Divide by \\(\\text{Pr}(B)\\), not by everything.",
+  "a": {
+   "q": "Events \\(A\\) and \\(B\\) have \\(\\text{Pr}(A \\cap B) = 0.2\\) and \\(\\text{Pr}(B) = 0.5\\). What is \\(\\text{Pr}(A \\mid B)\\)?",
+   "opts": [
+    "0.4",
+    "0.1",
+    "0.7",
+    "2.5"
+   ],
+   "why": "\\(\\text{Pr}(A \\mid B) = \\text{Pr}(A \\cap B) \\div \\text{Pr}(B)\\), which is \\(0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "clue": "The event after the bar goes on the bottom."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a camp, 40 students picked activities. Of the 25 who chose kayaking, 10 also chose archery. Another 5 chose archery only. A student who chose archery is picked at random. What is the probability they also chose kayaking?",
+   "opts": [
+    "\\(\\frac{2}{3}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{2}{5}\\)",
+    "\\(\\frac{3}{8}\\)"
+   ],
+   "why": "Archery has \\(10 + 5 = 15\\) students, and 10 of them chose kayaking, so the probability is \\(\\frac{10}{15} = \\frac{2}{3}\\). The option \\(\\frac{2}{5}\\) is \\(\\frac{10}{25}\\), which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+   "clue": "Find the total number who chose archery first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.4",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{2}{3}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card's last bullet is empty (a lone '- '), so a blank line will show on the card. Remove it or add the missing content."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct: 0.2 ÷ 0.5 = 0.4, and 10/15 = 2/3. The only problem is an empty bullet at the end of the card, which should be removed."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card's last bullet is empty (a lone '- '), so a blank line will show on the card. Remove it or add the missing content."
+ ],
+ "proposal": {
+  "title": "Conditional probability",
+  "card": [
+   "\\(\\text{Pr}(A \\mid B)\\) is the probability of \\(A\\) given that \\(B\\) has happened. Knowing \\(B\\) has happened shrinks the sample space to just the outcomes in \\(B\\).",
+   "Formula: \\(\\text{Pr}(A \\mid B) = \\frac{\\text{Pr}(A \\cap B)}{\\text{Pr}(B)}\\). The bottom is the event we are given. The top is the part of it that is also \\(A\\).",
+   "Example: roll a die. Given the roll is even, the outcomes left are 2, 4 and 6. So \\(\\text{Pr}(6 \\mid \\text{even}) = \\frac{1}{3}\\). The total is 3, not 6.",
+   "With counts, divide the number in both events by the number in the given event. Swapping the condition changes the bottom, so \\(\\text{Pr}(A \\mid B)\\) is usually not \\(\\text{Pr}(B \\mid A)\\)."
+  ],
+  "remember": "Given \\(B\\) means \\(B\\) is the new total. Divide by \\(\\text{Pr}(B)\\), not by everything.",
+  "a": {
+   "q": "Events \\(A\\) and \\(B\\) have \\(\\text{Pr}(A \\cap B) = 0.2\\) and \\(\\text{Pr}(B) = 0.5\\). What is \\(\\text{Pr}(A \\mid B)\\)?",
+   "opts": [
+    "0.4",
+    "0.1",
+    "0.7",
+    "2.5"
+   ],
+   "why": "\\(\\text{Pr}(A \\mid B) = \\text{Pr}(A \\cap B) \\div \\text{Pr}(B)\\), which is \\(0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "clue": "The event after the bar goes on the bottom."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a camp, 40 students picked activities. Of the 25 who chose kayaking, 10 also chose archery. Another 5 chose archery only. A student who chose archery is picked at random. What is the probability they also chose kayaking?",
+   "opts": [
+    "\\(\\frac{2}{3}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{2}{5}\\)",
+    "\\(\\frac{3}{8}\\)"
+   ],
+   "why": "Archery has \\(10 + 5 = 15\\) students, and 10 of them chose kayaking, so the probability is \\(\\frac{10}{15} = \\frac{2}{3}\\). The option \\(\\frac{2}{5}\\) is \\(\\frac{10}{25}\\), which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+   "clue": "Find the total number who chose archery first."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-13T15:05:18Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card's last bullet is empty (a lone '- '), so a blank line will show on the card. Remove it or add the missing content."
+   }
+  ],
+  "flags": [
+   "Card, other: The card's last bullet is empty (a lone '- '), so a blank line will show on the card. Remove it or add the missing content."
+  ]
+ },
+ "final": {
+  "title": "Conditional probability",
+  "card": [
+   "\\(\\text{Pr}(A \\mid B)\\) is the probability of \\(A\\) given that \\(B\\) has happened. Knowing \\(B\\) has happened shrinks the sample space to just the outcomes in \\(B\\).",
+   "Formula: \\(\\text{Pr}(A \\mid B) = \\frac{\\text{Pr}(A \\cap B)}{\\text{Pr}(B)}\\). The bottom is the event we are given. The top is the part of it that is also \\(A\\).",
+   "Example: roll a die. Given the roll is even, the outcomes left are 2, 4 and 6. So \\(\\text{Pr}(6 \\mid \\text{even}) = \\frac{1}{3}\\). The total is 3, not 6.",
+   "With counts, divide the number in both events by the number in the given event. Swapping the condition changes the bottom, so \\(\\text{Pr}(A \\mid B)\\) is usually not \\(\\text{Pr}(B \\mid A)\\)."
+  ],
+  "remember": "Given \\(B\\) means \\(B\\) is the new total. Divide by \\(\\text{Pr}(B)\\), not by everything.",
+  "a": {
+   "q": "Events \\(A\\) and \\(B\\) have \\(\\text{Pr}(A \\cap B) = 0.2\\) and \\(\\text{Pr}(B) = 0.5\\). What is \\(\\text{Pr}(A \\mid B)\\)?",
+   "opts": [
+    "0.4",
+    "0.1",
+    "0.7",
+    "2.5"
+   ],
+   "why": "\\(\\text{Pr}(A \\mid B) = \\text{Pr}(A \\cap B) \\div \\text{Pr}(B)\\), which is \\(0.2 \\div 0.5 = 0.4\\). Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "clue": "The event after the bar goes on the bottom."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a camp, 40 students picked activities. Of the 25 who chose kayaking, 10 also chose archery. Another 5 chose archery only. A student who chose archery is picked at random. What is the probability they also chose kayaking?",
+   "opts": [
+    "\\(\\frac{2}{3}\\)",
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{2}{5}\\)",
+    "\\(\\frac{3}{8}\\)"
+   ],
+   "why": "Archery has \\(10 + 5 = 15\\) students, and 10 of them chose kayaking, so the probability is \\(\\frac{10}{15} = \\frac{2}{3}\\). The option \\(\\frac{2}{5}\\) is \\(\\frac{10}{25}\\), which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+   "clue": "Find the total number who chose archery first."
+  }
+ }
+}

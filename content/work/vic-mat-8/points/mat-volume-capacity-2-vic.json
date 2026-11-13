@@ -1,0 +1,235 @@
+{
+ "id": "mat-volume-capacity-2-vic",
+ "title": "Volume and capacity",
+ "brief": "b8521422ca5b",
+ "shortlist": [
+  [
+   "mat-volume-capacity-prisms",
+   0.588
+  ],
+  [
+   "mat-volume-capacity",
+   0.306
+  ],
+  [
+   "mat-volume-rectangular-triangular-prisms",
+   0.292
+  ],
+  [
+   "mat-volume-cylinders",
+   0.25
+  ],
+  [
+   "mat-volume-composite-solids",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-volume-capacity-prisms, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:58Z confirm: Claude Opus 5.5 may adapt mat-volume-capacity-prisms, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-volume-capacity-prisms (1 change)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-volume-capacity-prisms on the next run",
+  "2026-11-13T13:04:54Z adapt: done",
+  "2026-11-13T13:11:26Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "confirm": 0.01291,
+  "adapt": 0.00476,
+  "check": 0.00832
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-volume-capacity-prisms",
+  "changes": [
+   "Add the fact that 1 m³ holds 1000 L, since the card only covers cm³ to mL and cm³ to L."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same prism-volume-to-capacity idea at Year 8 depth, but it omits the 1 m³ = 1000 L conversion that the new brief includes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-volume-capacity-prisms",
+  "changes": [
+   "Add the fact that 1 m³ holds 1000 L next to the cm³ to mL conversion, since the brief asks for both."
+  ],
+  "sure": "medium",
+  "reason": "The bank's Year 8 prisms card teaches the same idea at the right depth, turning a prism's volume into capacity, but it only covers cm³ to mL and L, so it needs the 1 m³ = 1000 L fact added.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-volume-capacity-prisms",
+  "changes": [
+   "Add the fact that 1 m³ holds 1000 L beside the cm³ to mL and L facts, in the card line and the remember line."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card3",
+   "remember",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches prism volume turned into capacity at Year 8 depth, and its sums are right, but it gives only the cm³ facts. The brief also asks for 1 m³ holding 1000 L.",
+   "item": "1fd9098ad67e32a1",
+   "result": "decided",
+   "saved": {
+    "id": "mat-volume-capacity-2-vic",
+    "title": "Volume and capacity",
+    "brief": "b8521422ca5b",
+    "shortlist": [
+     [
+      "mat-volume-capacity-prisms",
+      0.588
+     ],
+     [
+      "mat-volume-capacity",
+      0.306
+     ],
+     [
+      "mat-volume-rectangular-triangular-prisms",
+      0.292
+     ],
+     [
+      "mat-volume-cylinders",
+      0.25
+     ],
+     [
+      "mat-volume-composite-solids",
+      0.23
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00039,
+     "confirm": 0.01291
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-volume-capacity-prisms",
+     "changes": [
+      "Add the fact that 1 m³ holds 1000 L, since the card only covers cm³ to mL and cm³ to L."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same prism-volume-to-capacity idea at Year 8 depth, but it omits the 1 m³ = 1000 L conversion that the new brief includes.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-volume-capacity-prisms",
+     "changes": [
+      "Add the fact that 1 m³ holds 1000 L next to the cm³ to mL conversion, since the brief asks for both."
+     ],
+     "sure": "medium",
+     "reason": "The bank's Year 8 prisms card teaches the same idea at the right depth, turning a prism's volume into capacity, but it only covers cm³ to mL and L, so it needs the 1 m³ = 1000 L fact added.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "e69ebf124e0c3bb9"
+  }
+ ],
+ "draft": {
+  "title": "Volume and capacity of prisms",
+  "card": [
+   "A prism has the same cross-section all along its length. Its volume is the area of the cross-section \\(\\times\\) the length.",
+   "Find the cross-section area first. For a triangle it is \\(\\frac{1}{2} \\times\\) base \\(\\times\\) height, and for a rectangle it is width \\(\\times\\) height.",
+   "Capacity is how much a container holds. \\(1\\text{ cm}^{3}\\) holds 1 mL, and \\(1000\\text{ cm}^{3}\\) holds 1 L. Also, \\(1\\text{ m}^{3}\\) holds 1000 L.",
+   "Example: a tank has a rectangular cross-section of 20 cm by 10 cm and is 50 cm long. Volume \\(= 200 \\times 50 = 10{,}000\\text{ cm}^{3}\\), so its capacity is 10,000 mL, or 10 L."
+  ],
+  "remember": "Volume \\(=\\) cross-section area \\(\\times\\) length. Then \\(1000\\text{ cm}^{3}\\) holds 1 L, and \\(1\\text{ m}^{3}\\) holds 1000 L.",
+  "a": {
+   "q": "A prism is 10 cm long. Its cross-section is a triangle with base 6 cm and height 4 cm. Find the volume of the prism.",
+   "opts": [
+    "\\(120\\text{ cm}^{3}\\)",
+    "\\(240\\text{ cm}^{3}\\)",
+    "\\(60\\text{ cm}^{3}\\)",
+    "\\(20\\text{ cm}^{3}\\)"
+   ],
+   "why": "The triangle's area is \\(\\frac{1}{2} \\times 6 \\times 4 = 12\\text{ cm}^{2}\\). The volume is \\(12 \\times 10 = 120\\text{ cm}^{3}\\). Using \\(6 \\times 4 = 24\\text{ cm}^{2}\\) for the triangle gives \\(240\\text{ cm}^{3}\\), but that forgets the half.",
+   "clue": "Find the area of the triangle first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rectangular fish tank is 50 cm long, 30 cm wide and 40 cm high. When it is full, how many litres of water does it hold?",
+   "opts": [
+    "60 L",
+    "6 L",
+    "600 L",
+    "60,000 L"
+   ],
+   "why": "The volume is \\(50 \\times 30 \\times 40 = 60{,}000\\text{ cm}^{3}\\). Since \\(1000\\text{ cm}^{3}\\) holds 1 L, the tank holds 60 L. Giving 60,000 L mixes up \\(\\text{cm}^{3}\\) with litres, because 60,000 is the number of mL.",
+   "clue": "Find the volume in \\(\\text{cm}^{3}\\), then divide by 1000."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(120\\text{ cm}^{3}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "60 L",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Volume and capacity of prisms",
+  "card": [
+   "A prism has the same cross-section all along its length. Its volume is the area of the cross-section \\(\\times\\) the length.",
+   "Find the cross-section area first. For a triangle it is \\(\\frac{1}{2} \\times\\) base \\(\\times\\) height, and for a rectangle it is width \\(\\times\\) height.",
+   "Capacity is how much a container holds. \\(1\\text{ cm}^{3}\\) holds 1 mL, and \\(1000\\text{ cm}^{3}\\) holds 1 L. Also, \\(1\\text{ m}^{3}\\) holds 1000 L.",
+   "Example: a tank has a rectangular cross-section of 20 cm by 10 cm and is 50 cm long. Volume \\(= 200 \\times 50 = 10{,}000\\text{ cm}^{3}\\), so its capacity is 10,000 mL, or 10 L."
+  ],
+  "remember": "Volume \\(=\\) cross-section area \\(\\times\\) length. Then \\(1000\\text{ cm}^{3}\\) holds 1 L, and \\(1\\text{ m}^{3}\\) holds 1000 L.",
+  "a": {
+   "q": "A prism is 10 cm long. Its cross-section is a triangle with base 6 cm and height 4 cm. Find the volume of the prism.",
+   "opts": [
+    "\\(120\\text{ cm}^{3}\\)",
+    "\\(240\\text{ cm}^{3}\\)",
+    "\\(60\\text{ cm}^{3}\\)",
+    "\\(20\\text{ cm}^{3}\\)"
+   ],
+   "why": "The triangle's area is \\(\\frac{1}{2} \\times 6 \\times 4 = 12\\text{ cm}^{2}\\). The volume is \\(12 \\times 10 = 120\\text{ cm}^{3}\\). Using \\(6 \\times 4 = 24\\text{ cm}^{2}\\) for the triangle gives \\(240\\text{ cm}^{3}\\), but that forgets the half.",
+   "clue": "Find the area of the triangle first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rectangular fish tank is 50 cm long, 30 cm wide and 40 cm high. When it is full, how many litres of water does it hold?",
+   "opts": [
+    "60 L",
+    "6 L",
+    "600 L",
+    "60,000 L"
+   ],
+   "why": "The volume is \\(50 \\times 30 \\times 40 = 60{,}000\\text{ cm}^{3}\\). Since \\(1000\\text{ cm}^{3}\\) holds 1 L, the tank holds 60 L. Giving 60,000 L mixes up \\(\\text{cm}^{3}\\) with litres, because 60,000 is the number of mL.",
+   "clue": "Find the volume in \\(\\text{cm}^{3}\\), then divide by 1000."
+  }
+ }
+}

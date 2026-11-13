@@ -1,0 +1,242 @@
+{
+ "id": "sci-diffusion-gas-pressure-expansion",
+ "title": "Diffusion, gas pressure and expansion",
+ "brief": "c3aa5786f0c8",
+ "shortlist": [
+  [
+   "sci-diffusion",
+   0.619
+  ],
+  [
+   "sci-solids-liquids-gases",
+   0.257
+  ],
+  [
+   "sci-changes-state",
+   0.25
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:07Z write: done",
+  "2026-11-12T15:35:11Z check: flagged",
+  "2026-11-12T15:42:26Z fix: suggested",
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (a other, a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00635,
+  "check": 0.01255,
+  "fix": 0.01665
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Diffusion, covers only the spreading of particles, while the new point also needs gas pressure on container walls and expansion when heated, and no bank point teaches those ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Diffusion, gas pressure and expansion",
+  "card": [
+   [
+    "Diffusion",
+    "Particles are always moving, so they spread out from where there are many of them to where there are fewer. This happens in gases and liquids, and you can smell a perfume across a room because of it."
+   ],
+   [
+    "Gas pressure",
+    "Gas particles move fast and hit the walls of their container. Billions of tiny hits push on the walls, and this push is gas pressure."
+   ],
+   [
+    "Heating",
+    "Heating gives particles more energy, so they move faster. A gas in a closed container then hits the walls harder and more often, so its pressure rises."
+   ],
+   [
+    "Expansion",
+    "When most substances are heated, their particles move further apart. The particles themselves do not get bigger, but the substance takes up more space. This is expansion."
+   ]
+  ],
+  "remember": "Moving particles spread out, hit walls to make pressure, and move further apart when heated.",
+  "a": {
+   "q": "Why does the smell of baking bread spread through a house?",
+   "opts": [
+    "Moving particles spread from many to fewer",
+    "Smell particles are pushed out by gas pressure",
+    "The air particles all expand when they warm up",
+    "Smell particles are heavier so they sink and spread"
+   ],
+   "why": "Bread particles are always moving, so they spread out into the rest of the house by diffusion. Gas pressure is about particles hitting walls, not about spreading smells through a room.",
+   "clue": "Think about where there are many particles and where there are few."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom leaves a sealed, rigid bottle of air in a hot car. The air inside heats up. Why does the pressure inside the bottle rise?",
+   "opts": [
+    "The particles move faster and hit the walls harder",
+    "The particles get bigger and push on the walls",
+    "The particles slow down and crowd onto the walls",
+    "The bottle gets bigger and the particles diffuse out"
+   ],
+   "why": "Heating gives the particles more energy, so they move faster and hit the walls harder and more often. The particles do not get bigger. Expansion means they move further apart, not that each one grows.",
+   "clue": "What does heating do to the energy of the particles?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Moving particles spread from many to fewer",
+   "also_right": []
+  },
+  "b": {
+   "best": "The particles move faster and hit the walls harder",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('where there are many particles and where there are few') echoes the right option's own words 'from many to fewer', so a student can match it without understanding diffusion."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says 'Bread particles' spread through the house. It is smell particles given off by the bread that diffuse, not particles of the bread itself, so this could mislead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. Question a's clue repeats the right option's wording and gives the answer away, and its why loosely says 'bread particles' where it means smell particles from the bread."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue ('where there are many particles and where there are few') echoes the right option's own words 'from many to fewer', so a student can match it without understanding diffusion.",
+  "Question a, wording: The why says 'Bread particles' spread through the house. It is smell particles given off by the bread that diffuse, not particles of the bread itself, so this could mislead."
+ ],
+ "proposal": {
+  "title": "Diffusion, gas pressure and expansion",
+  "card": [
+   [
+    "Diffusion",
+    "Particles are always moving, so they spread out from where there are many of them to where there are fewer. This happens in gases and liquids, and you can smell a perfume across a room because of it."
+   ],
+   [
+    "Gas pressure",
+    "Gas particles move fast and hit the walls of their container. Billions of tiny hits push on the walls, and this push is gas pressure."
+   ],
+   [
+    "Heating",
+    "Heating gives particles more energy, so they move faster. A gas in a closed container then hits the walls harder and more often, so its pressure rises."
+   ],
+   [
+    "Expansion",
+    "When most substances are heated, their particles move further apart. The particles themselves do not get bigger, but the substance takes up more space. This is expansion."
+   ]
+  ],
+  "remember": "Moving particles spread out, hit walls to make pressure, and move further apart when heated.",
+  "a": {
+   "q": "Why does the smell of baking bread spread through a house?",
+   "opts": [
+    "Moving particles spread from many to fewer",
+    "Smell particles are pushed out by gas pressure",
+    "The air particles all expand when they warm up",
+    "Smell particles are heavier so they sink and spread"
+   ],
+   "why": "Smell particles given off by the bread are always moving, so they spread from the kitchen, where there are many, to the rest of the house, where there are fewer. This is diffusion. Gas pressure is about particles hitting the walls of a container, not about smells spreading through a room.",
+   "clue": "Think about what particles do on their own, even when nothing pushes them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom leaves a sealed, rigid bottle of air in a hot car. The air inside heats up. Why does the pressure inside the bottle rise?",
+   "opts": [
+    "The particles move faster and hit the walls harder",
+    "The particles get bigger and push on the walls",
+    "The particles slow down and crowd onto the walls",
+    "The bottle gets bigger and the particles diffuse out"
+   ],
+   "why": "Heating gives the particles more energy, so they move faster and hit the walls harder and more often. The particles do not get bigger. Expansion means they move further apart, not that each one grows.",
+   "clue": "What does heating do to the energy of the particles?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:55Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('where there are many particles and where there are few') echoes the right option's own words 'from many to fewer', so a student can match it without understanding diffusion."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says 'Bread particles' spread through the house. It is smell particles given off by the bread that diffuse, not particles of the bread itself, so this could mislead."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue ('where there are many particles and where there are few') echoes the right option's own words 'from many to fewer', so a student can match it without understanding diffusion.",
+   "Question a, wording: The why says 'Bread particles' spread through the house. It is smell particles given off by the bread that diffuse, not particles of the bread itself, so this could mislead."
+  ]
+ },
+ "final": {
+  "title": "Diffusion, gas pressure and expansion",
+  "card": [
+   [
+    "Diffusion",
+    "Particles are always moving, so they spread out from where there are many of them to where there are fewer. This happens in gases and liquids, and you can smell a perfume across a room because of it."
+   ],
+   [
+    "Gas pressure",
+    "Gas particles move fast and hit the walls of their container. Billions of tiny hits push on the walls, and this push is gas pressure."
+   ],
+   [
+    "Heating",
+    "Heating gives particles more energy, so they move faster. A gas in a closed container then hits the walls harder and more often, so its pressure rises."
+   ],
+   [
+    "Expansion",
+    "When most substances are heated, their particles move further apart. The particles themselves do not get bigger, but the substance takes up more space. This is expansion."
+   ]
+  ],
+  "remember": "Moving particles spread out, hit walls to make pressure, and move further apart when heated.",
+  "a": {
+   "q": "Why does the smell of baking bread spread through a house?",
+   "opts": [
+    "Moving particles spread from many to fewer",
+    "Smell particles are pushed out by gas pressure",
+    "The air particles all expand when they warm up",
+    "Smell particles are heavier so they sink and spread"
+   ],
+   "why": "Smell particles given off by the bread are always moving, so they spread from the kitchen, where there are many, to the rest of the house, where there are fewer. This is diffusion. Gas pressure is about particles hitting the walls of a container, not about smells spreading through a room.",
+   "clue": "Think about what particles do on their own, even when nothing pushes them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom leaves a sealed, rigid bottle of air in a hot car. The air inside heats up. Why does the pressure inside the bottle rise?",
+   "opts": [
+    "The particles move faster and hit the walls harder",
+    "The particles get bigger and push on the walls",
+    "The particles slow down and crowd onto the walls",
+    "The bottle gets bigger and the particles diffuse out"
+   ],
+   "why": "Heating gives the particles more energy, so they move faster and hit the walls harder and more often. The particles do not get bigger. Expansion means they move further apart, not that each one grows.",
+   "clue": "What does heating do to the energy of the particles?"
+  }
+ },
+ "cleared_by": "auto"
+}

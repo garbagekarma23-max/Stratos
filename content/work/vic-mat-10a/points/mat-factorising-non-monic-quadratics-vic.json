@@ -1,0 +1,144 @@
+{
+ "id": "mat-factorising-non-monic-quadratics-vic",
+ "title": "Factorising non-monic quadratics",
+ "brief": "a3a34f4cda35",
+ "shortlist": [
+  [
+   "mat-factorising-monic-quadratics",
+   0.572
+  ],
+  [
+   "mat-solving-quadratics-by-factorising",
+   0.466
+  ],
+  [
+   "mat-quadratic-functions",
+   0.26
+  ],
+  [
+   "mat-expanding-factorising-as-reverse",
+   0.255
+  ],
+  [
+   "mat-quadratic-graphs",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:09Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00788,
+  "check": 0.00916
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point teaches factorising non-monic quadratics by splitting the middle term (ac method), but the bank's only factorising card covers monic quadratics, so it is a different and narrower-to-broader skill rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Factorising non-monic quadratics",
+  "card": [
+   "A non-monic quadratic has the form \\(ax^{2} + bx + c\\) with \\(a \\ne 1\\). To factorise it, find two numbers that multiply to \\(ac\\) and add to \\(b\\).",
+   "Use those two numbers to split the middle term into two terms. Then factorise the four terms in pairs, taking out a common factor from each pair.",
+   [
+    "Example",
+    "Factorise \\(6x^{2} + 11x + 3\\). Here \\(ac = 18\\) and \\(b = 11\\). The numbers are 9 and 2, since \\(9 \\times 2 = 18\\) and \\(9 + 2 = 11\\)."
+   ],
+   "Split: \\(6x^{2} + 9x + 2x + 3\\). Pair: \\(3x(2x + 3) + 1(2x + 3)\\). Both pairs share \\((2x + 3)\\), so the answer is \\((2x + 3)(3x + 1)\\)."
+  ],
+  "remember": "Find two numbers that multiply to \\(ac\\) and add to \\(b\\), split the middle, then factorise in pairs.",
+  "a": {
+   "q": "To factorise \\(2x^{2} + 7x + 6\\) by splitting the middle term, which two numbers are used?",
+   "opts": [
+    "3 and 4",
+    "2 and 6",
+    "1 and 6",
+    "2 and 3"
+   ],
+   "why": "Here \\(ac = 12\\) and \\(b = 7\\). The numbers 3 and 4 multiply to 12 and add to 7. The pair 2 and 6 multiplies to 12, but adds to 8, not 7.",
+   "clue": "Multiply to \\(ac\\), add to \\(b\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the factorised form of \\(3x^{2} - 10x + 8\\)?",
+   "opts": [
+    "\\((3x - 4)(x - 2)\\)",
+    "\\((3x + 4)(x + 2)\\)",
+    "\\((3x - 2)(x - 4)\\)",
+    "\\((3x - 8)(x - 1)\\)"
+   ],
+   "why": "Here \\(ac = 24\\) and \\(b = -10\\), so the numbers are \\(-6\\) and \\(-4\\). Split: \\(3x^{2} - 6x - 4x + 8 = 3x(x - 2) - 4(x - 2)\\), which gives \\((3x - 4)(x - 2)\\). Expanding \\((3x - 2)(x - 4)\\) gives a middle term of \\(-14x\\), so it is wrong.",
+   "clue": "The numbers multiply to 24 and add to a negative number."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3 and 4",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((3x - 4)(x - 2)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Factorising non-monic quadratics",
+  "card": [
+   "A non-monic quadratic has the form \\(ax^{2} + bx + c\\) with \\(a \\ne 1\\). To factorise it, find two numbers that multiply to \\(ac\\) and add to \\(b\\).",
+   "Use those two numbers to split the middle term into two terms. Then factorise the four terms in pairs, taking out a common factor from each pair.",
+   [
+    "Example",
+    "Factorise \\(6x^{2} + 11x + 3\\). Here \\(ac = 18\\) and \\(b = 11\\). The numbers are 9 and 2, since \\(9 \\times 2 = 18\\) and \\(9 + 2 = 11\\)."
+   ],
+   "Split: \\(6x^{2} + 9x + 2x + 3\\). Pair: \\(3x(2x + 3) + 1(2x + 3)\\). Both pairs share \\((2x + 3)\\), so the answer is \\((2x + 3)(3x + 1)\\)."
+  ],
+  "remember": "Find two numbers that multiply to \\(ac\\) and add to \\(b\\), split the middle, then factorise in pairs.",
+  "a": {
+   "q": "To factorise \\(2x^{2} + 7x + 6\\) by splitting the middle term, which two numbers are used?",
+   "opts": [
+    "3 and 4",
+    "2 and 6",
+    "1 and 6",
+    "2 and 3"
+   ],
+   "why": "Here \\(ac = 12\\) and \\(b = 7\\). The numbers 3 and 4 multiply to 12 and add to 7. The pair 2 and 6 multiplies to 12, but adds to 8, not 7.",
+   "clue": "Multiply to \\(ac\\), add to \\(b\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the factorised form of \\(3x^{2} - 10x + 8\\)?",
+   "opts": [
+    "\\((3x - 4)(x - 2)\\)",
+    "\\((3x + 4)(x + 2)\\)",
+    "\\((3x - 2)(x - 4)\\)",
+    "\\((3x - 8)(x - 1)\\)"
+   ],
+   "why": "Here \\(ac = 24\\) and \\(b = -10\\), so the numbers are \\(-6\\) and \\(-4\\). Split: \\(3x^{2} - 6x - 4x + 8 = 3x(x - 2) - 4(x - 2)\\), which gives \\((3x - 4)(x - 2)\\). Expanding \\((3x - 2)(x - 4)\\) gives a middle term of \\(-14x\\), so it is wrong.",
+   "clue": "The numbers multiply to 24 and add to a negative number."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,268 @@
+{
+ "id": "his-chronology-dating",
+ "title": "Chronology and dating",
+ "brief": "18564380a71f",
+ "shortlist": [
+  [
+   "his-centuries-millennia",
+   0.45
+  ],
+  [
+   "his-bce-ce-bp",
+   0.229
+  ],
+  [
+   "his-dating-first-arrivals",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:50Z new, match",
+  "2026-11-12T12:44:19Z match: Claude Haiku 5.5 may adapt his-centuries-millennia, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:44Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:02Z write: done",
+  "2026-11-12T15:35:07Z check: flagged",
+  "2026-11-12T15:42:23Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.00622,
+  "write": 0.00711,
+  "check": 0.01358,
+  "fix": 0.01964,
+  "recheck": 0.00857
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "his-centuries-millennia",
+  "changes": [
+   "Add a worked example that links a decade-style date to its century, such as the 1400s being the 15th century, since the brief asks for this and the card does not state it.",
+   "Add a short note on ordering events along a timeline, since the brief asks for timelines and the card covers only centuries and BCE/CE dates."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same centuries and BCE/CE dating at a suitable depth, but it needs a 1400s-to-15th-century example and a timeline-ordering note to match the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point combines timelines, BCE/CE counting and grouping years into centuries, so it is broader than any one bank point: his-centuries-millennia covers only centuries and his-bce-ce-bp covers only date systems, including BP.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Chronology and dating",
+  "card": [
+   "Chronology means putting events in the order they happened. Historians show this on a timeline, with earlier events on the left and later events on the right.",
+   [
+    "BCE",
+    "\"Before Common Era\". Years are counted backwards towards year 1, so 500 BCE is earlier than 100 BCE."
+   ],
+   [
+    "CE",
+    "\"Common Era\". Years are counted forwards from year 1, so 100 CE is earlier than 500 CE. There is no year 0."
+   ],
+   [
+    "Centuries",
+    "A century is 100 years. Centuries are counted from year 1, so years 1 to 100 are the 1st century. The 1400s are the 15th century, and the 1800s are the 19th century."
+   ]
+  ],
+  "remember": "Order events on a timeline. BCE counts down to year 1, CE counts up from it, and the 1400s are the 15th century.",
+  "a": {
+   "q": "Which list puts these dates in order, from earliest to latest?",
+   "opts": [
+    "300 BCE, 50 BCE, 40 CE, 200 CE",
+    "50 BCE, 300 BCE, 40 CE, 200 CE",
+    "40 CE, 200 CE, 50 BCE, 300 BCE",
+    "200 CE, 40 CE, 50 BCE, 300 BCE"
+   ],
+   "why": "BCE years count down towards year 1, so 300 BCE comes before 50 BCE. All BCE dates come before CE dates, and CE years count up. The second list is tempting but wrongly puts 50 BCE before 300 BCE, as if BCE years counted up.",
+   "clue": "For BCE years, a bigger number means further back in time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A museum in Ballarat has a coin made in 1465. A student writes that it is from the 14th century. What is the mistake?",
+   "opts": [
+    "The 1400s are the 15th century, so it is from the 15th",
+    "The 1400s are the 14th century, but it should say BCE",
+    "Centuries are counted from year 0, so it is the 16th",
+    "A coin from 1465 is too old to be given a century"
+   ],
+   "why": "Centuries are counted from year 1, so years 1401 to 1500 are the 15th century. The student matched the number in 1400s to the century, which is the common slip. The BCE option is wrong because 1465 is a CE year, counted forwards.",
+   "clue": "The 1st century is years 1 to 100. Count up from there."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "300 BCE, 50 BCE, 40 CE, 200 CE",
+   "also_right": []
+  },
+  "b": {
+   "best": "The 1400s are the 15th century, so it is from the 15th",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) names a wrong option by position ('The second list is tempting'). Options appear in random order, so the position will not match what students see. It may even point to the correct list, which is second in this order. Name the option by its content instead (50 BCE, 300 BCE, 40 CE, 200 CE)."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says 'The 1400s are the 15th century', but Why (b) says the 15th century is years 1401 to 1500. Strictly, the year 1400 is in the 14th century and 1500 is in the 15th. A careful student may see these as clashing. Consider adding a short note that '1400s' is the everyday way of saying it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. Why (a) refers to 'the second list', which will not match the shuffled order. There is also a small mismatch between 'the 1400s are the 15th century' on the card and '1401 to 1500' in Why (b)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) names a wrong option by position ('The second list is tempting'). Options appear in random order, so the position will not match what students see. It may even point to the correct list, which is second in this order. Name the option by its content instead (50 BCE, 300 BCE, 40 CE, 200 CE).",
+  "Card, wording: The card says 'The 1400s are the 15th century', but Why (b) says the 15th century is years 1401 to 1500. Strictly, the year 1400 is in the 14th century and 1500 is in the 15th. A careful student may see these as clashing. Consider adding a short note that '1400s' is the everyday way of saying it."
+ ],
+ "proposal": {
+  "title": "Chronology and dating",
+  "card": [
+   "Chronology means putting events in the order they happened. Historians show this on a timeline, with earlier events on the left and later events on the right.",
+   [
+    "BCE",
+    "\"Before Common Era\". Years are counted backwards towards year 1, so 500 BCE is earlier than 100 BCE."
+   ],
+   [
+    "CE",
+    "\"Common Era\". Years are counted forwards from year 1, so 100 CE is earlier than 500 CE. There is no year 0."
+   ],
+   [
+    "Centuries",
+    "A century is 100 years, counted from year 1, so the 1st century is years 1 to 100 and the 15th century is 1401 to 1500. In everyday use, people call the 1400s the 15th century."
+   ]
+  ],
+  "remember": "Order events on a timeline. BCE counts down to year 1, CE counts up from it, and the 1400s are the 15th century.",
+  "a": {
+   "q": "Which list puts these dates in order, from earliest to latest?",
+   "opts": [
+    "300 BCE, 50 BCE, 40 CE, 200 CE",
+    "50 BCE, 300 BCE, 40 CE, 200 CE",
+    "40 CE, 200 CE, 50 BCE, 300 BCE",
+    "200 CE, 40 CE, 50 BCE, 300 BCE"
+   ],
+   "why": "BCE years count down towards year 1, so 300 BCE comes before 50 BCE. All BCE dates come before CE dates, and CE years count up. The list that starts with 50 BCE is tempting, but it puts 50 BCE before 300 BCE, as if BCE years counted up.",
+   "clue": "For BCE years, a bigger number means further back in time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A museum in Ballarat has a coin made in 1465. A student writes that it is from the 14th century. What is the mistake?",
+   "opts": [
+    "The 1400s are the 15th century, so it is from the 15th",
+    "The 1400s are the 14th century, but it should say BCE",
+    "Centuries are counted from year 0, so it is the 16th",
+    "A coin from 1465 is too old to be given a century"
+   ],
+   "why": "Centuries are counted from year 1, so years 1401 to 1500 are the 15th century, and 1465 falls in it. The student matched the 14 in 1465 to the century, which is a common slip. The BCE option is wrong because 1465 is a CE year, counted forwards.",
+   "clue": "The 1st century is years 1 to 100. Count up from there."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "300 BCE, 50 BCE, 40 CE, 200 CE",
+    "also_right": []
+   },
+   "b": {
+    "best": "The 1400s are the 15th century, so it is from the 15th",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) names a wrong option by position ('The second list is tempting'). Options appear in random order, so the position will not match what students see. It may even point to the correct list, which is second in this order. Name the option by its content instead (50 BCE, 300 BCE, 40 CE, 200 CE)."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says 'The 1400s are the 15th century', but Why (b) says the 15th century is years 1401 to 1500. Strictly, the year 1400 is in the 14th century and 1500 is in the 15th. A careful student may see these as clashing. Consider adding a short note that '1400s' is the everyday way of saying it."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) names a wrong option by position ('The second list is tempting'). Options appear in random order, so the position will not match what students see. It may even point to the correct list, which is second in this order. Name the option by its content instead (50 BCE, 300 BCE, 40 CE, 200 CE).",
+   "Card, wording: The card says 'The 1400s are the 15th century', but Why (b) says the 15th century is years 1401 to 1500. Strictly, the year 1400 is in the 14th century and 1500 is in the 15th. A careful student may see these as clashing. Consider adding a short note that '1400s' is the everyday way of saying it."
+  ]
+ },
+ "final": {
+  "title": "Chronology and dating",
+  "card": [
+   "Chronology means putting events in the order they happened. Historians show this on a timeline, with earlier events on the left and later events on the right.",
+   [
+    "BCE",
+    "\"Before Common Era\". Years are counted backwards towards year 1, so 500 BCE is earlier than 100 BCE."
+   ],
+   [
+    "CE",
+    "\"Common Era\". Years are counted forwards from year 1, so 100 CE is earlier than 500 CE. There is no year 0."
+   ],
+   [
+    "Centuries",
+    "A century is 100 years, counted from year 1, so the 1st century is years 1 to 100 and the 15th century is 1401 to 1500. In everyday use, people call the 1400s the 15th century."
+   ]
+  ],
+  "remember": "Order events on a timeline. BCE counts down to year 1, CE counts up from it, and the 1400s are the 15th century.",
+  "a": {
+   "q": "Which list puts these dates in order, from earliest to latest?",
+   "opts": [
+    "300 BCE, 50 BCE, 40 CE, 200 CE",
+    "50 BCE, 300 BCE, 40 CE, 200 CE",
+    "40 CE, 200 CE, 50 BCE, 300 BCE",
+    "200 CE, 40 CE, 50 BCE, 300 BCE"
+   ],
+   "why": "BCE years count down towards year 1, so 300 BCE comes before 50 BCE. All BCE dates come before CE dates, and CE years count up. The list that starts with 50 BCE is tempting, but it puts 50 BCE before 300 BCE, as if BCE years counted up.",
+   "clue": "For BCE years, a bigger number means further back in time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A museum in Ballarat has a coin made in 1465. A student writes that it is from the 14th century. What is the mistake?",
+   "opts": [
+    "The 1400s are the 15th century, so it is from the 15th",
+    "The 1400s are the 14th century, but it should say BCE",
+    "Centuries are counted from year 0, so it is the 16th",
+    "A coin from 1465 is too old to be given a century"
+   ],
+   "why": "Centuries are counted from year 1, so years 1401 to 1500 are the 15th century, and 1465 falls in it. The student matched the 14 in 1465 to the century, which is a common slip. The BCE option is wrong because 1465 is a CE year, counted forwards.",
+   "clue": "The 1st century is years 1 to 100. Count up from there."
+  }
+ },
+ "cleared_by": "recheck"
+}

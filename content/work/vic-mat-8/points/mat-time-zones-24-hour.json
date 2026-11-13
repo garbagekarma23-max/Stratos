@@ -1,0 +1,375 @@
+{
+ "id": "mat-time-zones-24-hour",
+ "title": "Time zones and 24-hour time",
+ "brief": "c96bb295f473",
+ "shortlist": [
+  [
+   "mat-duration-24-hour-time",
+   0.656
+  ],
+  [
+   "mat-time-zones-2",
+   0.431
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:01Z write: done",
+  "2026-11-12T15:15:50Z check: flagged",
+  "2026-11-12T15:26:06Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (a fact)",
+  "2026-11-13T09:32:54Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.02211,
+  "check": 0.01464,
+  "fix": 0.02313,
+  "recheck": 0.01272
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point covers the whole brief: the 24-hour time card handles conversion and durations but not time zones, and the time zones card handles time differences but not 24-hour time or durations, so combining them would need a new point rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, fact: Why (a) says keeping the hour unchanged 'is only right for an am time'. The card says the hour also stays the same for 12:00 pm to 12:59 pm, and changes to 00 for 12 am times. Suggest: 'which is right for times from 1:00 am to 12:59 pm, not pm times after 1:00 pm'.",
+ "rejected": {
+  "title": "Time zones and 24-hour time",
+  "card": [
+   "24-hour time counts hours from 00 to 23, with no am or pm. From 1:00 am to 12:59 pm the hour stays the same, but any time from 12:00 am to 12:59 am starts with 00, so 12:20 am is 00:20.",
+   "From 1:00 pm to 11:59 pm, add 12 to the hour, so 3:15 pm is 15:15. To go back, subtract 12 from any hour from 13 to 23, so 21:40 is 9:40 pm.",
+   "To find a duration, count from the start time to the end time. From 14:30 to 17:10 is 2 hours 40 minutes: 30 minutes to 15:00, then 2 hours to 17:00, then 10 minutes.",
+   "A place further east is usually ahead, so its clock shows a later time. Add hours going to a place that is ahead, and subtract going to one behind. During daylight saving, Perth is 3 hours behind Melbourne, so 15:00 in Melbourne is 12:00 in Perth."
+  ],
+  "remember": "Add 12 to hours from 1 pm to 11 pm. Add hours going to a zone ahead, subtract going to one behind.",
+  "a": {
+   "q": "Which is 8:45 pm written in 24-hour time?",
+   "opts": [
+    "\\(20{:}45\\)",
+    "\\(08{:}45\\)",
+    "\\(18{:}45\\)",
+    "\\(21{:}45\\)"
+   ],
+   "why": "8:45 pm is between 1:00 pm and 11:59 pm, so add 12 to the hour: \\(8 + 12 = 20\\), giving 20:45. The option 08:45 keeps the hour unchanged, which is only right for an am time.",
+   "clue": "The hour is a pm hour after 1:00 pm, so something is added."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam in Melbourne phones a friend in Perth at 19:30 Melbourne time. During daylight saving, Perth is 3 hours behind Melbourne. What time is it in Perth, in 12-hour time?",
+   "opts": [
+    "4:30 pm",
+    "10:30 pm",
+    "4:30 am",
+    "10:30 am"
+   ],
+   "why": "Perth is behind, so subtract 3 hours: 19:30 becomes 16:30. Subtracting 12 from the hour gives 4:30 pm. Adding 3 hours gives 22:30, which is 10:30 pm, but that moves the wrong way.",
+   "clue": "Behind means an earlier time. Then change 24-hour time back."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, fact: Why (a) says keeping the hour unchanged 'is only right for an am time'. The card says the hour also stays the same for 12:00 pm to 12:59 pm, and changes to 00 for 12 am times. Suggest: 'which is right for times from 1:00 am to 12:59 pm, not pm times after 1:00 pm'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Time zones and 24-hour time",
+     "card": [
+      "24-hour time counts hours from 0 to 23 with no am or pm. For am times up to 12:59 pm, the hour stays the same, except 12:00 am (midnight) is 00:00. From 1:00 pm, add 12 to the hour, so 3:15 pm is 15:15.",
+      "To go back to 12-hour time, subtract 12 from any hour above 12. So 21:40 is 9:40 pm.",
+      "To find a duration, count from the start time to the end time. From 14:30 to 17:10 is 2 hours 40 minutes: 30 minutes to 15:00, then 2 hours to 17:00, then 10 minutes.",
+      "A place east of another is ahead, so its clock shows a later time. A place west is behind. To change zone, add hours going to a place that is ahead and subtract hours going to a place that is behind. Example: Perth is 3 hours behind Melbourne (in the same season), so when it is 15:00 in Melbourne it is 12:00 in Perth."
+     ],
+     "remember": "Add 12 to pm hours for 24-hour time. Add hours going ahead, subtract going behind.",
+     "a": {
+      "q": "Which is 8:45 pm written in 24-hour time?",
+      "opts": [
+       "\\(20{:}45\\)",
+       "\\(08{:}45\\)",
+       "\\(18{:}45\\)",
+       "\\(21{:}45\\)"
+      ],
+      "why": "For a pm time, add 12 to the hour: \\(8 + 12 = 20\\), so the time is 20:45. The option 08:45 is the am time, and it is tempting because it keeps the hour unchanged.",
+      "clue": "The hour is a pm hour, so something is added."
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam in Melbourne phones a friend in Perth at 19:30 Melbourne time. Perth is 3 hours behind Melbourne. What time is it in Perth, in 12-hour time?",
+      "opts": [
+       "4:30 pm",
+       "10:30 pm",
+       "4:30 am",
+       "10:30 am"
+      ],
+      "why": "Perth is behind, so subtract 3 hours: 19:30 becomes 16:30. Subtracting 12 gives 4:30 pm. Adding 3 hours gives 22:30, which is 10:30 pm, but that is the mistake of moving the wrong way.",
+      "clue": "Behind means an earlier time. Then change 24-hour time back."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(20{:}45\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "4:30 pm",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "Perth is 3 hours behind Melbourne only while Victoria is on daylight saving (AEDT, UTC+11 vs AWST, UTC+8). In winter the gap is 2 hours. 'In the same season' wrongly implies the gap is always 3 hours. Say it is 3 hours during daylight saving, or 2 hours in winter."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'For am times up to 12:59 pm, the hour stays the same' mixes am and pm and is confusing. 'Except 12:00 am (midnight) is 00:00' also suggests only exactly 12:00 am changes, when every 12:xx am time becomes 00:xx."
+      },
+      {
+       "part": "remember",
+       "kind": "fact",
+       "detail": "'Add 12 to pm hours' is wrong for 12:xx pm times, which stay as 12:xx. The card correctly says 'from 1:00 pm', so the remember line overgeneralises it."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers check out (20:45 and 4:30 pm). However, the card says Perth is 3 hours behind Melbourne 'in the same season', when it is 2 hours in winter and 3 only during daylight saving. The am rule is also worded confusingly, and the remember line's 'add 12 to pm hours' fails for 12 pm times."
+    },
+    "flags": [
+     "Card, fact: Perth is 3 hours behind Melbourne only while Victoria is on daylight saving (AEDT, UTC+11 vs AWST, UTC+8). In winter the gap is 2 hours. 'In the same season' wrongly implies the gap is always 3 hours. Say it is 3 hours during daylight saving, or 2 hours in winter.",
+     "Card, wording: 'For am times up to 12:59 pm, the hour stays the same' mixes am and pm and is confusing. 'Except 12:00 am (midnight) is 00:00' also suggests only exactly 12:00 am changes, when every 12:xx am time becomes 00:xx.",
+     "Remember, fact: 'Add 12 to pm hours' is wrong for 12:xx pm times, which stay as 12:xx. The card correctly says 'from 1:00 pm', so the remember line overgeneralises it."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Time zones and 24-hour time",
+     "card": [
+      "24-hour time counts hours from 00 to 23, with no am or pm. From 1:00 am to 12:59 pm the hour stays the same, but any time from 12:00 am to 12:59 am starts with 00, so 12:20 am is 00:20.",
+      "From 1:00 pm to 11:59 pm, add 12 to the hour, so 3:15 pm is 15:15. To go back, subtract 12 from any hour from 13 to 23, so 21:40 is 9:40 pm.",
+      "To find a duration, count from the start time to the end time. From 14:30 to 17:10 is 2 hours 40 minutes: 30 minutes to 15:00, then 2 hours to 17:00, then 10 minutes.",
+      "A place further east is usually ahead, so its clock shows a later time. Add hours going to a place that is ahead, and subtract going to one behind. During daylight saving, Perth is 3 hours behind Melbourne, so 15:00 in Melbourne is 12:00 in Perth."
+     ],
+     "remember": "Add 12 to hours from 1 pm to 11 pm. Add hours going to a zone ahead, subtract going to one behind.",
+     "a": {
+      "q": "Which is 8:45 pm written in 24-hour time?",
+      "opts": [
+       "\\(20{:}45\\)",
+       "\\(08{:}45\\)",
+       "\\(18{:}45\\)",
+       "\\(21{:}45\\)"
+      ],
+      "why": "8:45 pm is between 1:00 pm and 11:59 pm, so add 12 to the hour: \\(8 + 12 = 20\\), giving 20:45. The option 08:45 keeps the hour unchanged, which is only right for an am time.",
+      "clue": "The hour is a pm hour after 1:00 pm, so something is added."
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam in Melbourne phones a friend in Perth at 19:30 Melbourne time. During daylight saving, Perth is 3 hours behind Melbourne. What time is it in Perth, in 12-hour time?",
+      "opts": [
+       "4:30 pm",
+       "10:30 pm",
+       "4:30 am",
+       "10:30 am"
+      ],
+      "why": "Perth is behind, so subtract 3 hours: 19:30 becomes 16:30. Subtracting 12 from the hour gives 4:30 pm. Adding 3 hours gives 22:30, which is 10:30 pm, but that moves the wrong way.",
+      "clue": "Behind means an earlier time. Then change 24-hour time back."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "\\(20{:}45\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "4:30 pm",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "fact",
+        "detail": "Why (a) says keeping the hour unchanged 'is only right for an am time'. The card says the hour also stays the same for 12:00 pm to 12:59 pm, and changes to 00 for 12 am times. Suggest: 'which is right for times from 1:00 am to 12:59 pm, not pm times after 1:00 pm'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card's facts are right, including Perth being 3 hours behind Melbourne during daylight saving, and both questions have one correct answer (20:45 and 4:30 pm). One small problem: why (a) says keeping the hour unchanged is right 'only' for am times, which contradicts the card's rule for 12 pm and 12 am."
+     },
+     "flags": [
+      "Question a, fact: Why (a) says keeping the hour unchanged 'is only right for an am time'. The card says the hour also stays the same for 12:00 pm to 12:59 pm, and changes to 00 for 12 am times. Suggest: 'which is right for times from 1:00 am to 12:59 pm, not pm times after 1:00 pm'."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:54Z",
+   "step": "write",
+   "version": {
+    "title": "Time zones and 24-hour time",
+    "card": [
+     "24-hour time counts hours from 00 to 23, with no am or pm. From 1:00 am to 12:59 pm the hour stays the same, but any time from 12:00 am to 12:59 am starts with 00, so 12:20 am is 00:20.",
+     "From 1:00 pm to 11:59 pm, add 12 to the hour, so 3:15 pm is 15:15. To go back, subtract 12 from any hour from 13 to 23, so 21:40 is 9:40 pm.",
+     "To find a duration, count from the start time to the end time. From 14:30 to 17:10 is 2 hours 40 minutes: 30 minutes to 15:00, then 2 hours to 17:00, then 10 minutes.",
+     "A place further east is usually ahead, so its clock shows a later time. Add hours going to a place that is ahead, and subtract going to one behind. During daylight saving, Perth is 3 hours behind Melbourne, so 15:00 in Melbourne is 12:00 in Perth."
+    ],
+    "remember": "Add 12 to hours from 1 pm to 11 pm. Add hours going to a zone ahead, subtract going to one behind.",
+    "a": {
+     "q": "Which is 8:45 pm written in 24-hour time?",
+     "opts": [
+      "\\(20{:}45\\)",
+      "\\(08{:}45\\)",
+      "\\(18{:}45\\)",
+      "\\(21{:}45\\)"
+     ],
+     "why": "8:45 pm is between 1:00 pm and 11:59 pm, so add 12 to the hour: \\(8 + 12 = 20\\), giving 20:45. The option 08:45 keeps the hour unchanged, which is right for times from 1:00 am to 12:59 pm, not for pm times from 1:00 pm on.",
+     "clue": "The hour is a pm hour after 1:00 pm, so something is added."
+    },
+    "b": {
+     "d": 3,
+     "q": "Sam in Melbourne phones a friend in Perth at 19:30 Melbourne time. During daylight saving, Perth is 3 hours behind Melbourne. What time is it in Perth, in 12-hour time?",
+     "opts": [
+      "4:30 pm",
+      "10:30 pm",
+      "4:30 am",
+      "10:30 am"
+     ],
+     "why": "Perth is behind, so subtract 3 hours: 19:30 becomes 16:30. Subtracting 12 from the hour gives 4:30 pm. Adding 3 hours gives 22:30, which is 10:30 pm, but that moves the wrong way.",
+     "clue": "Behind means an earlier time. Then change 24-hour time back."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "\\(20{:}45\\)",
+     "also_right": []
+    },
+    "b": {
+     "best": "4:30 pm",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Time zones and 24-hour time",
+  "card": [
+   "24-hour time counts hours from 00 to 23, with no am or pm. From 1:00 am to 12:59 pm the hour stays the same, but any time from 12:00 am to 12:59 am starts with 00, so 12:20 am is 00:20.",
+   "From 1:00 pm to 11:59 pm, add 12 to the hour, so 3:15 pm is 15:15. To go back, subtract 12 from any hour from 13 to 23, so 21:40 is 9:40 pm.",
+   "To find a duration, count from the start time to the end time. From 14:30 to 17:10 is 2 hours 40 minutes: 30 minutes to 15:00, then 2 hours to 17:00, then 10 minutes.",
+   "A place further east is usually ahead, so its clock shows a later time. Add hours going to a place that is ahead, and subtract going to one behind. During daylight saving, Perth is 3 hours behind Melbourne, so 15:00 in Melbourne is 12:00 in Perth."
+  ],
+  "remember": "Add 12 to hours from 1 pm to 11 pm. Add hours going to a zone ahead, subtract going to one behind.",
+  "a": {
+   "q": "Which is 8:45 pm written in 24-hour time?",
+   "opts": [
+    "\\(20{:}45\\)",
+    "\\(08{:}45\\)",
+    "\\(18{:}45\\)",
+    "\\(21{:}45\\)"
+   ],
+   "why": "8:45 pm is between 1:00 pm and 11:59 pm, so add 12 to the hour: \\(8 + 12 = 20\\), giving 20:45. The option 08:45 keeps the hour unchanged, which is right for times from 1:00 am to 12:59 pm, not for pm times from 1:00 pm on.",
+   "clue": "The hour is a pm hour after 1:00 pm, so something is added."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam in Melbourne phones a friend in Perth at 19:30 Melbourne time. During daylight saving, Perth is 3 hours behind Melbourne. What time is it in Perth, in 12-hour time?",
+   "opts": [
+    "4:30 pm",
+    "10:30 pm",
+    "4:30 am",
+    "10:30 am"
+   ],
+   "why": "Perth is behind, so subtract 3 hours: 19:30 becomes 16:30. Subtracting 12 from the hour gives 4:30 pm. Adding 3 hours gives 22:30, which is 10:30 pm, but that moves the wrong way.",
+   "clue": "Behind means an earlier time. Then change 24-hour time back."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(20{:}45\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "4:30 pm",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Time zones and 24-hour time",
+  "card": [
+   "24-hour time counts hours from 00 to 23, with no am or pm. From 1:00 am to 12:59 pm the hour stays the same, but any time from 12:00 am to 12:59 am starts with 00, so 12:20 am is 00:20.",
+   "From 1:00 pm to 11:59 pm, add 12 to the hour, so 3:15 pm is 15:15. To go back, subtract 12 from any hour from 13 to 23, so 21:40 is 9:40 pm.",
+   "To find a duration, count from the start time to the end time. From 14:30 to 17:10 is 2 hours 40 minutes: 30 minutes to 15:00, then 2 hours to 17:00, then 10 minutes.",
+   "A place further east is usually ahead, so its clock shows a later time. Add hours going to a place that is ahead, and subtract going to one behind. During daylight saving, Perth is 3 hours behind Melbourne, so 15:00 in Melbourne is 12:00 in Perth."
+  ],
+  "remember": "Add 12 to hours from 1 pm to 11 pm. Add hours going to a zone ahead, subtract going to one behind.",
+  "a": {
+   "q": "Which is 8:45 pm written in 24-hour time?",
+   "opts": [
+    "\\(20{:}45\\)",
+    "\\(08{:}45\\)",
+    "\\(18{:}45\\)",
+    "\\(21{:}45\\)"
+   ],
+   "why": "8:45 pm is between 1:00 pm and 11:59 pm, so add 12 to the hour: \\(8 + 12 = 20\\), giving 20:45. The option 08:45 keeps the hour unchanged, which is right for times from 1:00 am to 12:59 pm, not for pm times from 1:00 pm on.",
+   "clue": "The hour is a pm hour after 1:00 pm, so something is added."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam in Melbourne phones a friend in Perth at 19:30 Melbourne time. During daylight saving, Perth is 3 hours behind Melbourne. What time is it in Perth, in 12-hour time?",
+   "opts": [
+    "4:30 pm",
+    "10:30 pm",
+    "4:30 am",
+    "10:30 am"
+   ],
+   "why": "Perth is behind, so subtract 3 hours: 19:30 becomes 16:30. Subtracting 12 from the hour gives 4:30 pm. Adding 3 hours gives 22:30, which is 10:30 pm, but that moves the wrong way.",
+   "clue": "Behind means an earlier time. Then change 24-hour time back."
+  }
+ },
+ "checked_by": "claude-code"
+}

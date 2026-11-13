@@ -1,0 +1,382 @@
+{
+ "id": "geo-geomorphological-hazard",
+ "title": "What a geomorphological hazard is",
+ "brief": "d01659ce38f6",
+ "shortlist": [
+  [
+   "geo-reducing-geomorphological-hazard-s",
+   0.556
+  ],
+  [
+   "geo-makes-natural-hazard",
+   0.467
+  ],
+  [
+   "geo-volcanic-eruptions-as-hazards",
+   0.271
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:00Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (a other, remember wording)",
+  "2026-11-13T09:32:52Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00615,
+  "check": 0.01116,
+  "fix": 0.02154,
+  "recheck": 0.01245
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point defines geomorphological hazards: the reduction card is about managing impact, the natural hazard card is broader and covers atmospheric and hydrological hazards, and the volcano card covers only eruptions.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Which one is the ground itself moving?' gives the answer away: only the landslide fits, so a student needs no understanding of the idea.\n- Remember, wording: The rule 'if the cause lies in or on the crust, not in the weather' may confuse students, because landslides are often set off by heavy rain. A rain-triggered landslide is still geomorphological, since the hazard is the ground moving. The card does not address this.",
+ "rejected": {
+  "title": "What a geomorphological hazard is",
+  "card": [
+   "A geomorphological hazard is a threat to people that comes from processes in or on the Earth's crust. The crust is the rocky outer layer of the Earth.",
+   "Examples are earthquakes, volcanic eruptions, tsunamis and landslides. Each is caused by rock or ground moving or changing, such as a slope giving way or the sea floor shifting to set off a tsunami.",
+   "Hazards that come from the weather, such as floods, storms and heatwaves, are not geomorphological. A hazard is only a threat until it harms people or property.",
+   "Geomorphological hazards are most common along plate boundaries, where the Earth's plates meet and move against each other."
+  ],
+  "remember": "If the cause lies in or on the crust, not in the weather, the hazard is geomorphological. They are most common along plate boundaries.",
+  "a": {
+   "q": "Which of these is a geomorphological hazard?",
+   "opts": [
+    "A landslide on a steep hillside",
+    "A severe storm with strong winds",
+    "A heatwave in a city",
+    "A flood after days of heavy rain"
+   ],
+   "why": "A landslide is rock and soil moving on the Earth's surface, so it comes from processes in or on the crust. The storm, heatwave and flood all come from the weather, so they are not geomorphological hazards.",
+   "clue": "Which one is the ground itself moving?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Hana reads that a town sits on a plate boundary. Why does this make her think the town may face geomorphological hazards?",
+   "opts": [
+    "These hazards are most common where plates meet",
+    "Plate boundaries are always hit by heavy storms",
+    "Towns near boundaries have more people than elsewhere",
+    "Plates meeting cause cyclones in the sky above"
+   ],
+   "why": "Plates meet and move against each other at boundaries, so crust processes such as earthquakes and eruptions are most common there. Storms and cyclones come from the weather, not from the crust, so they are not geomorphological hazards.",
+   "clue": "Think about what happens in the crust where plates meet."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Which one is the ground itself moving?' gives the answer away: only the landslide fits, so a student needs no understanding of the idea.",
+    "Remember, wording: The rule 'if the cause lies in or on the crust, not in the weather' may confuse students, because landslides are often set off by heavy rain. A rain-triggered landslide is still geomorphological, since the hazard is the ground moving. The card does not address this."
+   ],
+   "saved": {
+    "draft": {
+     "title": "What a geomorphological hazard is",
+     "card": [
+      "A geomorphological hazard is a threat to people that comes from processes in or on the Earth's crust. The crust is the rock surface layer of the Earth.",
+      "Examples are earthquakes, volcanic eruptions, tsunamis and landslides. Each one is the Earth's surface or the rock under it moving or changing.",
+      "A hazard is only a threat. It becomes a disaster when it harms people or property.",
+      "These hazards are most common along plate boundaries, where the Earth's plates meet and move against each other."
+     ],
+     "remember": "Geomorphological hazards start in the Earth's crust, and many are found along plate boundaries.",
+     "a": {
+      "q": "Which of these is a geomorphological hazard?",
+      "opts": [
+       "A landslide on a steep hillside",
+       "A bushfire in a dry forest",
+       "A heatwave in a city",
+       "A flood after days of heavy rain"
+      ],
+      "why": "A landslide is rock and soil moving on the Earth's surface, so it comes from processes in or on the crust. The other three start in the weather or climate, so they are not geomorphological hazards.",
+      "clue": "Which one is the ground itself moving?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Hana reads that a town sits on a plate boundary. Why does this make her think the town may face geomorphological hazards?",
+      "opts": [
+       "These hazards are most common where plates meet",
+       "Plate boundaries are always hit by heavy storms",
+       "Towns near boundaries have more people than elsewhere",
+       "Plates meeting cause cyclones in the sky above"
+      ],
+      "why": "Plates meet and move against each other at boundaries, so crust processes such as earthquakes and eruptions are most common there. Storms and cyclones come from the weather, not from the crust.",
+      "clue": "Think about what happens in the crust where plates meet."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A landslide on a steep hillside",
+      "also_right": []
+     },
+     "b": {
+      "best": "These hazards are most common where plates meet",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says each example 'is the Earth's surface or the rock under it moving or changing', but a tsunami is a series of ocean waves. It is caused by the sea floor moving, but it is not itself the surface or rock moving."
+      },
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The remember line says these hazards 'start in the Earth's crust', but the card says 'in or on' the crust. Landslides happen on the surface, so the remember line is narrower than the card."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and have one clear answer each. The card wrongly says a tsunami is the surface or rock moving, when it is waves caused by that movement. The remember line says 'in the crust' where the card says 'in or on'."
+    },
+    "flags": [
+     "Card, fact: The card says each example 'is the Earth's surface or the rock under it moving or changing', but a tsunami is a series of ocean waves. It is caused by the sea floor moving, but it is not itself the surface or rock moving.",
+     "Remember, other: The remember line says these hazards 'start in the Earth's crust', but the card says 'in or on' the crust. Landslides happen on the surface, so the remember line is narrower than the card."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "What a geomorphological hazard is",
+     "card": [
+      "A geomorphological hazard is a threat to people that comes from processes in or on the Earth's crust. The crust is the rocky outer layer of the Earth.",
+      "Examples are earthquakes, volcanic eruptions, tsunamis and landslides. Each is caused by rock or ground moving or changing, such as a slope giving way or the sea floor shifting to set off a tsunami.",
+      "Hazards that come from the weather, such as floods, storms and heatwaves, are not geomorphological. A hazard is only a threat until it harms people or property.",
+      "Geomorphological hazards are most common along plate boundaries, where the Earth's plates meet and move against each other."
+     ],
+     "remember": "If the cause lies in or on the crust, not in the weather, the hazard is geomorphological. They are most common along plate boundaries.",
+     "a": {
+      "q": "Which of these is a geomorphological hazard?",
+      "opts": [
+       "A landslide on a steep hillside",
+       "A severe storm with strong winds",
+       "A heatwave in a city",
+       "A flood after days of heavy rain"
+      ],
+      "why": "A landslide is rock and soil moving on the Earth's surface, so it comes from processes in or on the crust. The storm, heatwave and flood all come from the weather, so they are not geomorphological hazards.",
+      "clue": "Which one is the ground itself moving?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Hana reads that a town sits on a plate boundary. Why does this make her think the town may face geomorphological hazards?",
+      "opts": [
+       "These hazards are most common where plates meet",
+       "Plate boundaries are always hit by heavy storms",
+       "Towns near boundaries have more people than elsewhere",
+       "Plates meeting cause cyclones in the sky above"
+      ],
+      "why": "Plates meet and move against each other at boundaries, so crust processes such as earthquakes and eruptions are most common there. Storms and cyclones come from the weather, not from the crust, so they are not geomorphological hazards.",
+      "clue": "Think about what happens in the crust where plates meet."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-12T17:07:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A landslide on a steep hillside",
+       "also_right": []
+      },
+      "b": {
+       "best": "These hazards are most common where plates meet",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Which one is the ground itself moving?' gives the answer away: only the landslide fits, so a student needs no understanding of the idea."
+       },
+       {
+        "part": "remember",
+        "kind": "wording",
+        "detail": "The rule 'if the cause lies in or on the crust, not in the weather' may confuse students, because landslides are often set off by heavy rain. A rain-triggered landslide is still geomorphological, since the hazard is the ground moving. The card does not address this."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Facts and answers are correct. Question a's clue gives the answer away, and the remember line's 'not in the weather' test may confuse students about landslides set off by rain."
+     },
+     "flags": [
+      "Question a, other: The clue 'Which one is the ground itself moving?' gives the answer away: only the landslide fits, so a student needs no understanding of the idea.",
+      "Remember, wording: The rule 'if the cause lies in or on the crust, not in the weather' may confuse students, because landslides are often set off by heavy rain. A rain-triggered landslide is still geomorphological, since the hazard is the ground moving. The card does not address this."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:52Z",
+   "step": "write",
+   "version": {
+    "title": "What a geomorphological hazard is",
+    "card": [
+     "A geomorphological hazard is a threat to people that comes from processes in or on the Earth's crust. The crust is the rocky outer layer of the Earth.",
+     "Examples are earthquakes, volcanic eruptions, tsunamis and landslides. Each comes from rock or ground moving or changing, such as a slope giving way or the sea floor shifting to set off a tsunami.",
+     "Hazards that are the weather itself, such as floods, storms and heatwaves, are not geomorphological. A landslide set off by heavy rain still is, because the hazard is the ground moving.",
+     "Geomorphological hazards are most common along plate boundaries, where the Earth's plates meet and move against each other."
+    ],
+    "remember": "If the hazard is rock or ground moving or changing, it is geomorphological. They are most common along plate boundaries.",
+    "a": {
+     "q": "Which of these is a geomorphological hazard?",
+     "opts": [
+      "A landslide on a steep hillside",
+      "A severe storm with strong winds",
+      "A heatwave in a city",
+      "A flood after days of heavy rain"
+     ],
+     "why": "A landslide is rock and soil moving on the Earth's surface, so it comes from processes in or on the crust. The storm, heatwave and flood are the weather itself, so they are not geomorphological hazards.",
+     "clue": "Think about where each hazard comes from: the crust or the weather."
+    },
+    "b": {
+     "d": 3,
+     "q": "Hana reads that a town sits on a plate boundary. Why does this make her think the town may face geomorphological hazards?",
+     "opts": [
+      "These hazards are most common where plates meet",
+      "Plate boundaries are always hit by heavy storms",
+      "Towns near boundaries have more people than elsewhere",
+      "Plates meeting cause cyclones in the sky above"
+     ],
+     "why": "Plates meet and move against each other at boundaries, so crust processes such as earthquakes and eruptions are most common there. Storms and cyclones are weather, not crust processes, so they are not geomorphological hazards.",
+     "clue": "Think about what happens in the crust where plates meet."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "A landslide on a steep hillside",
+     "also_right": []
+    },
+    "b": {
+     "best": "These hazards are most common where plates meet",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "What a geomorphological hazard is",
+  "card": [
+   "A geomorphological hazard is a threat to people that comes from processes in or on the Earth's crust. The crust is the rocky outer layer of the Earth.",
+   "Examples are earthquakes, volcanic eruptions, tsunamis and landslides. Each comes from rock or ground moving or changing, such as a slope giving way or the sea floor shifting to set off a tsunami.",
+   "Hazards that are the weather itself, such as floods, storms and heatwaves, are not geomorphological. A landslide set off by heavy rain still is, because the hazard is the ground moving.",
+   "Geomorphological hazards are most common along plate boundaries, where the Earth's plates meet and move against each other."
+  ],
+  "remember": "If the hazard is rock or ground moving or changing, it is geomorphological. They are most common along plate boundaries.",
+  "a": {
+   "q": "Which of these is a geomorphological hazard?",
+   "opts": [
+    "A landslide on a steep hillside",
+    "A severe storm with strong winds",
+    "A heatwave in a city",
+    "A flood after days of heavy rain"
+   ],
+   "why": "A landslide is rock and soil moving on the Earth's surface, so it comes from processes in or on the crust. The storm, heatwave and flood are the weather itself, so they are not geomorphological hazards.",
+   "clue": "Think about where each hazard comes from: the crust or the weather."
+  },
+  "b": {
+   "d": 3,
+   "q": "Hana reads that a town sits on a plate boundary. Why does this make her think the town may face geomorphological hazards?",
+   "opts": [
+    "These hazards are most common where plates meet",
+    "Plate boundaries are always hit by heavy storms",
+    "Towns near boundaries have more people than elsewhere",
+    "Plates meeting cause cyclones in the sky above"
+   ],
+   "why": "Plates meet and move against each other at boundaries, so crust processes such as earthquakes and eruptions are most common there. Storms and cyclones are weather, not crust processes, so they are not geomorphological hazards.",
+   "clue": "Think about what happens in the crust where plates meet."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A landslide on a steep hillside",
+   "also_right": []
+  },
+  "b": {
+   "best": "These hazards are most common where plates meet",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "What a geomorphological hazard is",
+  "card": [
+   "A geomorphological hazard is a threat to people that comes from processes in or on the Earth's crust. The crust is the rocky outer layer of the Earth.",
+   "Examples are earthquakes, volcanic eruptions, tsunamis and landslides. Each comes from rock or ground moving or changing, such as a slope giving way or the sea floor shifting to set off a tsunami.",
+   "Hazards that are the weather itself, such as floods, storms and heatwaves, are not geomorphological. A landslide set off by heavy rain still is, because the hazard is the ground moving.",
+   "Geomorphological hazards are most common along plate boundaries, where the Earth's plates meet and move against each other."
+  ],
+  "remember": "If the hazard is rock or ground moving or changing, it is geomorphological. They are most common along plate boundaries.",
+  "a": {
+   "q": "Which of these is a geomorphological hazard?",
+   "opts": [
+    "A landslide on a steep hillside",
+    "A severe storm with strong winds",
+    "A heatwave in a city",
+    "A flood after days of heavy rain"
+   ],
+   "why": "A landslide is rock and soil moving on the Earth's surface, so it comes from processes in or on the crust. The storm, heatwave and flood are the weather itself, so they are not geomorphological hazards.",
+   "clue": "Think about where each hazard comes from: the crust or the weather."
+  },
+  "b": {
+   "d": 3,
+   "q": "Hana reads that a town sits on a plate boundary. Why does this make her think the town may face geomorphological hazards?",
+   "opts": [
+    "These hazards are most common where plates meet",
+    "Plate boundaries are always hit by heavy storms",
+    "Towns near boundaries have more people than elsewhere",
+    "Plates meeting cause cyclones in the sky above"
+   ],
+   "why": "Plates meet and move against each other at boundaries, so crust processes such as earthquakes and eruptions are most common there. Storms and cyclones are weather, not crust processes, so they are not geomorphological hazards.",
+   "clue": "Think about what happens in the crust where plates meet."
+  }
+ },
+ "checked_by": "claude-code"
+}

@@ -1,0 +1,252 @@
+{
+ "id": "geo-internal-migration-australia-vic",
+ "title": "Internal migration in Australia",
+ "brief": "608ef563ed82",
+ "shortlist": [
+  [
+   "geo-internal-international-migration",
+   0.413
+  ],
+  [
+   "geo-internal-migration-china",
+   0.351
+  ],
+  [
+   "geo-types-migration",
+   0.342
+  ],
+  [
+   "geo-mining-internal-migration",
+   0.308
+  ],
+  [
+   "geo-comparing-australia-united-states",
+   0.293
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:59Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00606,
+  "check": 0.0097,
+  "fix": 0.02106,
+  "recheck": 0.00933
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-internal-international-migration, only defines internal migration and does not cover the Australian patterns in the new point, such as moves to Queensland and Western Australia for work or climate and sea change or tree change moves.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Internal migration in Australia",
+  "card": [
+   "Internal migration is when people move from one place to another inside their own country. Many Australians do this, moving between states and between cities and towns.",
+   [
+    "Interstate moves",
+    "Many people move to Queensland and Western Australia. Common reasons are a job, such as in mining or building, or a warmer climate."
+   ],
+   [
+    "Sea change",
+    "a move from a big city to a town on the coast, for a slower pace of life, a beach lifestyle or cheaper housing."
+   ],
+   [
+    "Tree change",
+    "a move from a big city to a country town or inland area, for similar reasons such as space, quiet and lower costs."
+   ]
+  ],
+  "remember": "Australians move within their country for work, climate or lifestyle, including sea changes and tree changes.",
+  "a": {
+   "q": "Priya leaves her flat in Melbourne to live in a small coastal town for a slower pace of life. What is this move called?",
+   "opts": [
+    "A sea change",
+    "A tree change",
+    "International migration",
+    "A move for work"
+   ],
+   "why": "Priya moves from a big city to a town on the coast for lifestyle reasons, so it is a sea change. A tree change is also a move from a city, but it is to a country or inland area, not the coast.",
+   "clue": "Look at where she is moving to: the coast or inland?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam moves from Adelaide to a country town inland to get more space and lower housing costs. Which description fits best?",
+   "opts": [
+    "Internal migration, as a tree change",
+    "Internal migration, as a sea change",
+    "International migration, as a tree change",
+    "International migration, as a sea change"
+   ],
+   "why": "Sam stays inside Australia, so this is internal migration. The move is from a city to an inland country town, so it is a tree change. A sea change would be a move to the coast.",
+   "clue": "Does Sam cross a national border, and is the new town on the coast?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A sea change",
+   "also_right": []
+  },
+  "b": {
+   "best": "Internal migration, as a tree change",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first card line fully defines internal migration ('when people move from one place to another inside their own country'), which is point 1's idea. This point could just mention the term and focus on Australian examples."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, each with one clear right answer that matches the explanations. One minor issue: the card re-defines internal migration, which belongs to point 1, instead of only mentioning it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The first card line fully defines internal migration ('when people move from one place to another inside their own country'), which is point 1's idea. This point could just mention the term and focus on Australian examples."
+ ],
+ "proposal": {
+  "title": "Internal migration in Australia",
+  "card": [
+   "Australians often move within their own country, between states and between cities, towns and the country. These moves are a form of internal migration.",
+   [
+    "Interstate move",
+    "a move from one state to another. Many people move to Queensland and Western Australia, often for a job, such as in mining or building, or for a warmer climate."
+   ],
+   [
+    "Sea change",
+    "a move from a big city to a town on the coast, for a slower pace of life, a beach lifestyle or cheaper housing."
+   ],
+   [
+    "Tree change",
+    "a move from a big city to a country town or inland area, for similar reasons such as space, quiet and lower costs."
+   ]
+  ],
+  "remember": "Australians move to other states for work or climate, and from big cities to the coast or the country for lifestyle.",
+  "a": {
+   "q": "Priya leaves her flat in Melbourne to live in a small coastal town in Victoria for a slower pace of life. What is this move called?",
+   "opts": [
+    "A sea change",
+    "A tree change",
+    "An interstate move",
+    "A move for work"
+   ],
+   "why": "Priya moves from a big city to a town on the coast for lifestyle reasons, so it is a sea change. A tree change is also a move from a city, but it is to a country or inland area, not the coast. She stays in Victoria, so it is not an interstate move.",
+   "clue": "Look at where she is moving to: the coast or inland?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo moves from Sydney to Perth to take a job at a mine in Western Australia. Which description fits his move best?",
+   "opts": [
+    "An interstate move for work",
+    "A sea change, as Perth is on the coast",
+    "A tree change, as mines are inland",
+    "An interstate move for a warmer climate"
+   ],
+   "why": "Leo moves from New South Wales to Western Australia to take a job, so it is an interstate move for work. Perth is on the coast, but it is a big city, not a coastal town, and he moves for a job rather than lifestyle, so it is not a sea change.",
+   "clue": "Why is Leo moving, and is Perth a small town?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A sea change",
+    "also_right": []
+   },
+   "b": {
+    "best": "An interstate move for work",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first card line fully defines internal migration ('when people move from one place to another inside their own country'), which is point 1's idea. This point could just mention the term and focus on Australian examples."
+   }
+  ],
+  "flags": [
+   "Card, other: The first card line fully defines internal migration ('when people move from one place to another inside their own country'), which is point 1's idea. This point could just mention the term and focus on Australian examples."
+  ]
+ },
+ "final": {
+  "title": "Internal migration in Australia",
+  "card": [
+   "Australians often move within their own country, between states and between cities, towns and the country. These moves are a form of internal migration.",
+   [
+    "Interstate move",
+    "a move from one state to another. Many people move to Queensland and Western Australia, often for a job, such as in mining or building, or for a warmer climate."
+   ],
+   [
+    "Sea change",
+    "a move from a big city to a town on the coast, for a slower pace of life, a beach lifestyle or cheaper housing."
+   ],
+   [
+    "Tree change",
+    "a move from a big city to a country town or inland area, for similar reasons such as space, quiet and lower costs."
+   ]
+  ],
+  "remember": "Australians move to other states for work or climate, and from big cities to the coast or the country for lifestyle.",
+  "a": {
+   "q": "Priya leaves her flat in Melbourne to live in a small coastal town in Victoria for a slower pace of life. What is this move called?",
+   "opts": [
+    "A sea change",
+    "A tree change",
+    "An interstate move",
+    "A move for work"
+   ],
+   "why": "Priya moves from a big city to a town on the coast for lifestyle reasons, so it is a sea change. A tree change is also a move from a city, but it is to a country or inland area, not the coast. She stays in Victoria, so it is not an interstate move.",
+   "clue": "Look at where she is moving to: the coast or inland?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo moves from Sydney to Perth to take a job at a mine in Western Australia. Which description fits his move best?",
+   "opts": [
+    "An interstate move for work",
+    "A sea change, as Perth is on the coast",
+    "A tree change, as mines are inland",
+    "An interstate move for a warmer climate"
+   ],
+   "why": "Leo moves from New South Wales to Western Australia to take a job, so it is an interstate move for work. Perth is on the coast, but it is a big city, not a coastal town, and he moves for a job rather than lifestyle, so it is not a sea change.",
+   "clue": "Why is Leo moving, and is Perth a small town?"
+  }
+ },
+ "cleared_by": "recheck"
+}

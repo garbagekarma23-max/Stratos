@@ -1,0 +1,230 @@
+{
+ "id": "ecb-super-living-standards",
+ "title": "Super and living standards",
+ "brief": "d84c3b586955",
+ "shortlist": [
+  [
+   "ecb-superannuation-age-pension",
+   0.559
+  ],
+  [
+   "ecb-superannuation",
+   0.522
+  ],
+  [
+   "ecb-managing-your-superannuation",
+   0.369
+  ],
+  [
+   "ecb-superannuation-guarantee",
+   0.283
+  ],
+  [
+   "ecb-ways-invest",
+   0.24
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:45Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 says reuse ecb-superannuation-age-pension, so to the Opus match check, as every reuse is",
+  "2026-11-12T15:15:33Z confirm: Claude Opus 5.5 may adapt ecb-superannuation-age-pension, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:14Z match: claude-code says adapt ecb-superannuation-age-pension (1 change)",
+  "2026-11-13T12:13:14Z claude-code review: adapting ecb-superannuation-age-pension on the next run",
+  "2026-11-13T13:04:51Z adapt: done",
+  "2026-11-13T13:11:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.01206,
+  "adapt": 0.00325,
+  "check": 0.00653
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "ecb-superannuation-age-pension",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same link between super savings, fewer full Age Pension recipients and easing the budget cost of an ageing population, at the right Year 10 depth, and the Age Pension is a national federal payment, so nothing needs to change for Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-superannuation-age-pension",
+  "changes": [
+   "In the second card line, say plainly that having more of their own income lets retirees enjoy a higher standard of living than the Age Pension alone would give."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches that more super means fewer retirees rely on the full Age Pension, which eases its cost as the population ages; it needs one line to make the living-standards benefit explicit, as the brief's title stresses it.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "ecb-superannuation-age-pension",
+  "changes": [
+   "In the second card line, say plainly that more of their own income lets retirees live better than the Age Pension alone would allow."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card2",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches how super eases the cost of the Age Pension as the population ages. It needs a plain line on super giving retirees a better standard of living, which the brief leads with.",
+   "item": "826f1ff9e3b6661f",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-super-living-standards",
+    "title": "Super and living standards",
+    "brief": "d84c3b586955",
+    "shortlist": [
+     [
+      "ecb-superannuation-age-pension",
+      0.559
+     ],
+     [
+      "ecb-superannuation",
+      0.522
+     ],
+     [
+      "ecb-managing-your-superannuation",
+      0.369
+     ],
+     [
+      "ecb-superannuation-guarantee",
+      0.283
+     ],
+     [
+      "ecb-ways-invest",
+      0.24
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00035,
+     "confirm": 0.01206
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "ecb-superannuation-age-pension",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same link between super savings, fewer full Age Pension recipients and easing the budget cost of an ageing population, at the right Year 10 depth, and the Age Pension is a national federal payment, so nothing needs to change for Victoria.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-superannuation-age-pension",
+     "changes": [
+      "In the second card line, say plainly that having more of their own income lets retirees enjoy a higher standard of living than the Age Pension alone would give."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches that more super means fewer retirees rely on the full Age Pension, which eases its cost as the population ages; it needs one line to make the living-standards benefit explicit, as the brief's title stresses it.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "3497aac78636310f"
+  }
+ ],
+ "draft": {
+  "title": "Superannuation and the Age Pension",
+  "card": [
+   "The Age Pension is a regular payment from the Australian Government to older people who need support. It is paid for from taxes.",
+   "People with more super have more of their own income in retirement. This lets them live better than the Age Pension alone would allow. Fewer of them need the full pension.",
+   "Australia's population is ageing. More people are retiring and fewer workers pay tax for each retiree, which pushes up the total cost of the Age Pension.",
+   "If more retirees can fund themselves with super, the cost of the Age Pension to government is eased."
+  ],
+  "remember": "More super means fewer retirees rely on the full Age Pension, easing its cost to government.",
+  "a": {
+   "q": "Across the population, what happens to the Age Pension when more people build up higher super savings?",
+   "opts": [
+    "Fewer people need the full pension, which eases the cost",
+    "More people need the full pension, which raises the cost",
+    "The pension is no longer paid to anyone at all",
+    "The pension costs more because retirees spend less"
+   ],
+   "why": "When retirees have more super, fewer need the full Age Pension, so the cost to government is eased. The pension does not stop being paid, because some people still need support.",
+   "clue": "Think about who needs government support if they have their own savings."
+  },
+  "b": {
+   "d": 3,
+   "q": "Why does Australia's ageing population make super matter more for government budgets?",
+   "opts": [
+    "Pension costs rise while fewer workers pay tax per retiree",
+    "Pension costs fall while more workers pay tax per retiree",
+    "Retirees need less super because they live longer lives",
+    "Pension costs fall because fewer people reach retirement age"
+   ],
+   "why": "As more people retire and fewer workers pay tax for each retiree, the total cost of the Age Pension goes up. Super helps because retirees who fund themselves need less from the pension. The option with more workers per retiree reverses what ageing does.",
+   "clue": "Compare the number of retirees with the workers who pay tax."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Fewer people need the full pension, which eases the cost",
+   "also_right": []
+  },
+  "b": {
+   "best": "Pension costs rise while fewer workers pay tax per retiree",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Superannuation and the Age Pension",
+  "card": [
+   "The Age Pension is a regular payment from the Australian Government to older people who need support. It is paid for from taxes.",
+   "People with more super have more of their own income in retirement. This lets them live better than the Age Pension alone would allow. Fewer of them need the full pension.",
+   "Australia's population is ageing. More people are retiring and fewer workers pay tax for each retiree, which pushes up the total cost of the Age Pension.",
+   "If more retirees can fund themselves with super, the cost of the Age Pension to government is eased."
+  ],
+  "remember": "More super means fewer retirees rely on the full Age Pension, easing its cost to government.",
+  "a": {
+   "q": "Across the population, what happens to the Age Pension when more people build up higher super savings?",
+   "opts": [
+    "Fewer people need the full pension, which eases the cost",
+    "More people need the full pension, which raises the cost",
+    "The pension is no longer paid to anyone at all",
+    "The pension costs more because retirees spend less"
+   ],
+   "why": "When retirees have more super, fewer need the full Age Pension, so the cost to government is eased. The pension does not stop being paid, because some people still need support.",
+   "clue": "Think about who needs government support if they have their own savings."
+  },
+  "b": {
+   "d": 3,
+   "q": "Why does Australia's ageing population make super matter more for government budgets?",
+   "opts": [
+    "Pension costs rise while fewer workers pay tax per retiree",
+    "Pension costs fall while more workers pay tax per retiree",
+    "Retirees need less super because they live longer lives",
+    "Pension costs fall because fewer people reach retirement age"
+   ],
+   "why": "As more people retire and fewer workers pay tax for each retiree, the total cost of the Age Pension goes up. Super helps because retirees who fund themselves need less from the pension. The option with more workers per retiree reverses what ageing does.",
+   "clue": "Compare the number of retirees with the workers who pay tax."
+  }
+ }
+}

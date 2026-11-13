@@ -1,0 +1,248 @@
+{
+ "id": "mat-sketching-line-from-intercepts",
+ "title": "Sketching a line from its intercepts",
+ "brief": "21843e88bb54",
+ "shortlist": [
+  [
+   "mat-gradient-y-intercept",
+   0.491
+  ],
+  [
+   "mat-y-intercept-context",
+   0.333
+  ],
+  [
+   "mat-equation-y-mx-c",
+   0.271
+  ],
+  [
+   "mat-vertical-dilations",
+   0.257
+  ],
+  [
+   "mat-quadratic-graphs",
+   0.231
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:02Z write: failed the content check, writing again",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:06Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "write": 0.07501,
+  "check": 0.0098
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches sketching a line by finding both intercepts and joining them; the closest cards cover gradient and y-intercept, or intercepts for other curves and contexts, so none is the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Sketching a line from its intercepts",
+  "card": [
+   "The y-intercept is where a line crosses the y-axis, where \\(x = 0\\). Put \\(x = 0\\) into the equation and solve for \\(y\\).",
+   "The x-intercept is where a line crosses the x-axis, where \\(y = 0\\). Put \\(y = 0\\) into the equation and solve for \\(x\\).",
+   "For \\(2x + 3y = 12\\): \\(x = 0\\) gives \\(3y = 12\\), so \\(y = 4\\). Then \\(y = 0\\) gives \\(2x = 12\\), so \\(x = 6\\).",
+   "Plot \\((0, 4)\\) and \\((6, 0)\\). Then draw a straight line through them with a ruler."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(2x + 3y = 12\\) through the y-intercept \\((0, 4)\\) and the x-intercept \\((6, 0)\\), going down to the right.",
+    "x": {
+     "min": -2,
+     "max": 8,
+     "label": "\\(x\\)",
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 6,
+     "label": "\\(y\\)",
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "4 - \\frac{2}{3}x",
+      "domain": [
+       -1,
+       7
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 4)\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((6, 0)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Two points fix a line: one with x equal to 0, one with y equal to 0.",
+  "a": {
+   "q": "What are the intercepts of the line \\(3x - 2y = 12\\)?",
+   "opts": [
+    "\\((0, -6)\\) and \\((4, 0)\\)",
+    "\\((0, 6)\\) and \\((4, 0)\\)",
+    "\\((0, 4)\\) and \\((-6, 0)\\)",
+    "\\((0, -6)\\) and \\((-4, 0)\\)"
+   ],
+   "why": "With \\(x = 0\\), \\(-2y = 12\\), so \\(y = -6\\). With \\(y = 0\\), \\(3x = 12\\), so \\(x = 4\\). The option \\((0, 6)\\) and \\((4, 0)\\) drops the negative sign when dividing by \\(-2\\).",
+   "clue": "Solve one equation with x as 0, then one with y as 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mei sketches \\(y = 3x + 6\\) by finding its intercepts. Which two points should she join?",
+   "opts": [
+    "\\((0, 6)\\) and \\((-2, 0)\\)",
+    "\\((0, 6)\\) and \\((2, 0)\\)",
+    "\\((0, -2)\\) and \\((6, 0)\\)",
+    "\\((0, 3)\\) and \\((-6, 0)\\)"
+   ],
+   "why": "With \\(x = 0\\), \\(y = 6\\). With \\(y = 0\\), \\(3x = -6\\), so \\(x = -2\\). The point \\((2, 0)\\) comes from losing the negative sign when moving the 6 across.",
+   "clue": "Check the sign when you solve \\(3x + 6 = 0\\)."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((0, -6)\\) and \\((4, 0)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((0, 6)\\) and \\((-2, 0)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sketching a line from its intercepts",
+  "card": [
+   "The y-intercept is where a line crosses the y-axis, where \\(x = 0\\). Put \\(x = 0\\) into the equation and solve for \\(y\\).",
+   "The x-intercept is where a line crosses the x-axis, where \\(y = 0\\). Put \\(y = 0\\) into the equation and solve for \\(x\\).",
+   "For \\(2x + 3y = 12\\): \\(x = 0\\) gives \\(3y = 12\\), so \\(y = 4\\). Then \\(y = 0\\) gives \\(2x = 12\\), so \\(x = 6\\).",
+   "Plot \\((0, 4)\\) and \\((6, 0)\\). Then draw a straight line through them with a ruler."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "The line \\(2x + 3y = 12\\) through the y-intercept \\((0, 4)\\) and the x-intercept \\((6, 0)\\), going down to the right.",
+    "x": {
+     "min": -2,
+     "max": 8,
+     "label": "\\(x\\)",
+     "nums": false
+    },
+    "y": {
+     "min": -2,
+     "max": 6,
+     "label": "\\(y\\)",
+     "nums": false
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "4 - \\frac{2}{3}x",
+      "domain": [
+       -1,
+       7
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       4
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 4)\\)",
+      "pos": "above-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       6,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\((6, 0)\\)",
+      "pos": "above-right"
+     }
+    ]
+   }
+  },
+  "remember": "Two points fix a line: one with x equal to 0, one with y equal to 0.",
+  "a": {
+   "q": "What are the intercepts of the line \\(3x - 2y = 12\\)?",
+   "opts": [
+    "\\((0, -6)\\) and \\((4, 0)\\)",
+    "\\((0, 6)\\) and \\((4, 0)\\)",
+    "\\((0, 4)\\) and \\((-6, 0)\\)",
+    "\\((0, -6)\\) and \\((-4, 0)\\)"
+   ],
+   "why": "With \\(x = 0\\), \\(-2y = 12\\), so \\(y = -6\\). With \\(y = 0\\), \\(3x = 12\\), so \\(x = 4\\). The option \\((0, 6)\\) and \\((4, 0)\\) drops the negative sign when dividing by \\(-2\\).",
+   "clue": "Solve one equation with x as 0, then one with y as 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mei sketches \\(y = 3x + 6\\) by finding its intercepts. Which two points should she join?",
+   "opts": [
+    "\\((0, 6)\\) and \\((-2, 0)\\)",
+    "\\((0, 6)\\) and \\((2, 0)\\)",
+    "\\((0, -2)\\) and \\((6, 0)\\)",
+    "\\((0, 3)\\) and \\((-6, 0)\\)"
+   ],
+   "why": "With \\(x = 0\\), \\(y = 6\\). With \\(y = 0\\), \\(3x = -6\\), so \\(x = -2\\). The point \\((2, 0)\\) comes from losing the negative sign when moving the 6 across.",
+   "clue": "Check the sign when you solve \\(3x + 6 = 0\\)."
+  }
+ },
+ "cleared_by": "checker"
+}

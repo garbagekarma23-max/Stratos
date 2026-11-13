@@ -1,0 +1,239 @@
+{
+ "id": "mat-exact-values-rounding-errors",
+ "title": "Exact values and rounding errors",
+ "brief": "bca66455d6aa",
+ "shortlist": [
+  [
+   "mat-rounding-errors-repeated-calculations",
+   0.691
+  ],
+  [
+   "mat-measurement-errors-affect-results",
+   0.363
+  ],
+  [
+   "mat-absolute-relative-percentage-error",
+   0.3
+  ],
+  [
+   "mat-exact-values-approximations",
+   0.288
+  ],
+  [
+   "mat-estimating-rounding",
+   0.285
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:03Z write: done",
+  "2026-11-12T15:35:08Z check: flagged",
+  "2026-11-12T15:42:24Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:15Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-13T15:25:46Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.00776,
+  "check": 0.01209,
+  "fix": 0.02252,
+  "recheck": 0.00799
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Rounding errors in repeated calculations, covers the same risk of early rounding but only advises keeping the full calculator value, not keeping exact forms such as √2 or 1/3, which is the main idea of the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Exact values and rounding errors",
+  "card": [
+   "An exact value is written without rounding, such as \\(\\sqrt{2}\\) or \\(\\frac{1}{3}\\). A rounded value, such as 1.41 or 0.33, is only close to it.",
+   "If you round a value early and then use it again and again, the small error is carried into every step and can grow.",
+   "So keep exact values through the working, and round only once, at the end.",
+   "Example: find \\(3 \\times \\frac{1}{3} \\times 3 \\times \\frac{1}{3}\\). Using exact values, the answer is 1. Using 0.33 each time gives \\(3 \\times 0.33 \\times 3 \\times 0.33 = 0.9801\\), which is not 1."
+  ],
+  "remember": "Keep exact values until the final step, then round once.",
+  "a": {
+   "q": "Why is it better to keep \\(\\sqrt{2}\\) exact until the end of a calculation?",
+   "opts": [
+    "Early rounding errors can be repeated and grow",
+    "Rounded values can never be used in a calculation",
+    "Exact values always give a whole number answer",
+    "Rounding at the end makes the error larger"
+   ],
+   "why": "Each time a rounded value is used, its small error is carried into the next step and can build up. Rounded values can still be used, but the answer is less accurate, so rounding once at the end is best.",
+   "clue": "Think about what happens to a small error that is used again and again."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam finds \\(\\frac{1}{3} \\times 6 \\times \\frac{1}{3} \\times 6\\) by using 0.33 for \\(\\frac{1}{3}\\). He gets 3.9204. What is the exact answer, and why is Sam's answer different?",
+   "opts": [
+    "4, because 0.33 is a rounded value of \\(\\frac{1}{3}\\)",
+    "4, because 6 should have been rounded as well",
+    "3.9204, because exact values give smaller answers",
+    "3.9204, because \\(\\frac{1}{3}\\) equals exactly 0.33"
+   ],
+   "why": "Exactly, \\(\\frac{1}{3} \\times 6 = 2\\), and \\(2 \\times 2 = 4\\). Sam's 0.33 is slightly less than \\(\\frac{1}{3}\\), and that error was repeated in two steps. The value \\(\\frac{1}{3}\\) is not exactly 0.33.",
+   "clue": "Work out each \\(\\frac{1}{3} \\times 6\\) without rounding first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Early rounding errors can be repeated and grow",
+   "also_right": []
+  },
+  "b": {
+   "best": "4, because 0.33 is a rounded value of \\(\\frac{1}{3}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two wrong options use absolute words ('can never be used', 'always give a whole number'), while the card says errors 'can' grow. Students can rule these out on the wording alone, which leaves fewer real choices."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's facts and arithmetic are correct (0.9801 and 3.9204 both check out), and both questions have one clear right answer. One minor issue: in question a, two distractors use 'never' and 'always', which makes them easy to rule out without knowing the idea."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: Two wrong options use absolute words ('can never be used', 'always give a whole number'), while the card says errors 'can' grow. Students can rule these out on the wording alone, which leaves fewer real choices."
+ ],
+ "proposal": {
+  "title": "Exact values and rounding errors",
+  "card": [
+   "An exact value is written without rounding, such as \\(\\sqrt{2}\\) or \\(\\frac{1}{3}\\). A rounded value, such as 1.41 or 0.33, is only close to it.",
+   "If you round a value early and then use it again and again, the small error is carried into every step and can grow.",
+   "So keep exact values through the working, and round only once, at the end.",
+   "Example: find \\(3 \\times \\frac{1}{3} \\times 3 \\times \\frac{1}{3}\\). Using exact values, the answer is 1. Using 0.33 each time gives \\(3 \\times 0.33 \\times 3 \\times 0.33 = 0.9801\\), which is not 1."
+  ],
+  "remember": "Keep exact values until the final step, then round once.",
+  "a": {
+   "q": "Why is it better to keep \\(\\sqrt{2}\\) exact until the end of a calculation?",
+   "opts": [
+    "A small early rounding error can be carried on and grow",
+    "Rounding once at the end makes the error grow larger",
+    "Rounding \\(\\sqrt{2}\\) once gives a large error by itself",
+    "Keeping it exact means the answer needs no rounding"
+   ],
+   "why": "A rounded value has a small error, and each time it is used that error is carried into the next step, where it can build up. Rounding once at the end does not make the error grow: it is the method the card recommends, because the error is added only once.",
+   "clue": "Think about what happens to a small error that is used again and again."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam finds \\(\\frac{1}{3} \\times 6 \\times \\frac{1}{3} \\times 6\\) by using 0.33 for \\(\\frac{1}{3}\\). He gets 3.9204. What is the exact answer, and why is Sam's answer different?",
+   "opts": [
+    "4, because 0.33 is a rounded value of \\(\\frac{1}{3}\\)",
+    "4, because 6 should have been rounded as well",
+    "3.9204, because exact values give smaller answers",
+    "3.9204, because \\(\\frac{1}{3}\\) equals exactly 0.33"
+   ],
+   "why": "Exactly, \\(\\frac{1}{3} \\times 6 = 2\\), and \\(2 \\times 2 = 4\\). Sam's 0.33 is slightly less than \\(\\frac{1}{3}\\), and that error was repeated in two steps. The value \\(\\frac{1}{3}\\) is not exactly 0.33, and 6 is already exact, so it needs no rounding.",
+   "clue": "Work out each \\(\\frac{1}{3} \\times 6\\) without rounding first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A small early rounding error can be carried on and grow",
+    "also_right": []
+   },
+   "b": {
+    "best": "4, because 0.33 is a rounded value of \\(\\frac{1}{3}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The arithmetic checks out (0.9801 and 3.9204), and the intended answers match the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Two wrong options use absolute words ('can never be used', 'always give a whole number'), while the card says errors 'can' grow. Students can rule these out on the wording alone, which leaves fewer real choices."
+   }
+  ],
+  "flags": [
+   "Question a, wording: Two wrong options use absolute words ('can never be used', 'always give a whole number'), while the card says errors 'can' grow. Students can rule these out on the wording alone, which leaves fewer real choices."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix removes the never and always options, but its right option in question a is now clearly the longest (55 characters against an average of about 50). The wrong option about needing no rounding could also be argued by a student whose exact answer is a whole number.",
+   "item": "272ae77ecf9cad3c",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Exact values and rounding errors",
+  "card": [
+   "An exact value is written without rounding, such as \\(\\sqrt{2}\\) or \\(\\frac{1}{3}\\). A rounded value, such as 1.41 or 0.33, is only close to it.",
+   "If you round a value early and then use it again and again, the small error is carried into every step and can grow.",
+   "So keep exact values through the working, and round only once, at the end.",
+   "Example: find \\(3 \\times \\frac{1}{3} \\times 3 \\times \\frac{1}{3}\\). Using exact values, the answer is 1. Using 0.33 each time gives \\(3 \\times 0.33 \\times 3 \\times 0.33 = 0.9801\\), which is not 1."
+  ],
+  "remember": "Keep exact values until the final step, then round once.",
+  "a": {
+   "q": "Why is it better to keep \\(\\sqrt{2}\\) exact until the end of a calculation?",
+   "opts": [
+    "A small early rounding error can be carried on and grow",
+    "Rounding once at the end makes the error grow larger",
+    "Rounding \\(\\sqrt{2}\\) once gives a large error by itself",
+    "Keeping it exact means the answer needs no rounding"
+   ],
+   "why": "A rounded value has a small error, and each time it is used that error is carried into the next step, where it can build up. Rounding once at the end does not make the error grow: it is the method the card recommends, because the error is added only once.",
+   "clue": "Think about what happens to a small error that is used again and again."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam finds \\(\\frac{1}{3} \\times 6 \\times \\frac{1}{3} \\times 6\\) by using 0.33 for \\(\\frac{1}{3}\\). He gets 3.9204. What is the exact answer, and why is Sam's answer different?",
+   "opts": [
+    "4, because 0.33 is a rounded value of \\(\\frac{1}{3}\\)",
+    "4, because 6 should have been rounded as well",
+    "3.9204, because exact values give smaller answers",
+    "3.9204, because \\(\\frac{1}{3}\\) equals exactly 0.33"
+   ],
+   "why": "Exactly, \\(\\frac{1}{3} \\times 6 = 2\\), and \\(2 \\times 2 = 4\\). Sam's 0.33 is slightly less than \\(\\frac{1}{3}\\), and that error was repeated in two steps. The value \\(\\frac{1}{3}\\) is not exactly 0.33, and 6 is already exact, so it needs no rounding.",
+   "clue": "Work out each \\(\\frac{1}{3} \\times 6\\) without rounding first."
+  }
+ },
+ "cleared_by": "owner"
+}

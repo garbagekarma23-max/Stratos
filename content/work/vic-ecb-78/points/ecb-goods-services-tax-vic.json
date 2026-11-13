@@ -1,0 +1,157 @@
+{
+ "id": "ecb-goods-services-tax-vic",
+ "title": "The goods and services tax",
+ "brief": "d54ea9ebeefc",
+ "shortlist": [
+  [
+   "ecb-goods-services-tax",
+   0.684
+  ],
+  [
+   "ecb-young-people-tax",
+   0.456
+  ],
+  [
+   "ecb-governments-collect-tax",
+   0.419
+  ],
+  [
+   "ecb-income-tax",
+   0.33
+  ],
+  [
+   "ecb-goods-services",
+   0.312
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 says adapt ecb-goods-services-tax (3 changes)",
+  "2026-11-12T15:15:32Z adapt: done",
+  "2026-11-12T15:25:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "adapt": 0.00415,
+  "check": 0.00722
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-goods-services-tax",
+  "changes": [
+   "Add to the exemptions that most health care and education are left out of GST, since the card only mentions fresh food.",
+   "Change 'most fresh food' to 'basic food' so the card matches the owner's brief and the Victorian syllabus wording.",
+   "Replace the Hobart shop in question b with a Victorian place, such as Melbourne or Geelong, so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank card teaches the same GST idea at the right depth, but it needs the health and education exemptions added and a Victorian example in place of the Tasmanian one.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "ecb-goods-services-tax",
+  "changes": [
+   "Add to the exemptions that most health care and education are left out of GST, since the card only mentions fresh food.",
+   "Change 'most fresh food' to 'basic food' so the card matches the owner's brief and the Victorian syllabus wording.",
+   "Replace the Hobart shop in question b with a Victorian place, such as Melbourne or Geelong, so the example is local to the course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card3",
+   "remember",
+   "a.q",
+   "b.q",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "The goods and services tax",
+  "card": [
+   "The goods and services tax (GST) is a tax of 10 per cent added to the price of most goods and services. The seller collects it from the buyer and passes it on to the government.",
+   "If an item costs $50 before tax, GST adds $5, so the buyer pays $55. To find the GST, divide the price before tax by 10.",
+   "Some things are left out of the GST, such as basic food, most health care and education. A bag of apples or a visit to the doctor has no GST added.",
+   "The GST applies to everyone who buys taxed goods and services, whatever their age or income. The money raised goes to the states and territories."
+  ],
+  "remember": "GST adds 10 per cent to most prices, but basic food, most health care and education are left out.",
+  "a": {
+   "q": "Jai wants a pair of headphones priced at $80 before tax. What is the total he pays once GST is added?",
+   "opts": [
+    "$88",
+    "$81",
+    "$90",
+    "$80"
+   ],
+   "why": "GST is one tenth of $80, which is $8, so Jai pays $88. Paying $90 adds $10 instead of one tenth of $80, which is $8.",
+   "clue": "Find one tenth of the price, then add it on."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a shop in Geelong, Tilly buys a bag of fresh carrots and a new bike helmet. Which statement about GST is correct?",
+   "opts": [
+    "GST is added to the helmet but not to the carrots",
+    "GST is added to the carrots but not to the helmet",
+    "GST is added to both, as it applies to all goods",
+    "GST is added to neither, as Tilly is a young shopper"
+   ],
+   "why": "Most goods carry GST, so the helmet has it. Basic food, such as carrots, is left out. GST does not depend on the age or income of the buyer, so being young does not remove it.",
+   "clue": "Think about which item is basic food."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$88",
+   "also_right": []
+  },
+  "b": {
+   "best": "GST is added to the helmet but not to the carrots",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The goods and services tax",
+  "card": [
+   "The goods and services tax (GST) is a tax of 10 per cent added to the price of most goods and services. The seller collects it from the buyer and passes it on to the government.",
+   "If an item costs $50 before tax, GST adds $5, so the buyer pays $55. To find the GST, divide the price before tax by 10.",
+   "Some things are left out of the GST, such as basic food, most health care and education. A bag of apples or a visit to the doctor has no GST added.",
+   "The GST applies to everyone who buys taxed goods and services, whatever their age or income. The money raised goes to the states and territories."
+  ],
+  "remember": "GST adds 10 per cent to most prices, but basic food, most health care and education are left out.",
+  "a": {
+   "q": "Jai wants a pair of headphones priced at $80 before tax. What is the total he pays once GST is added?",
+   "opts": [
+    "$88",
+    "$81",
+    "$90",
+    "$80"
+   ],
+   "why": "GST is one tenth of $80, which is $8, so Jai pays $88. Paying $90 adds $10 instead of one tenth of $80, which is $8.",
+   "clue": "Find one tenth of the price, then add it on."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a shop in Geelong, Tilly buys a bag of fresh carrots and a new bike helmet. Which statement about GST is correct?",
+   "opts": [
+    "GST is added to the helmet but not to the carrots",
+    "GST is added to the carrots but not to the helmet",
+    "GST is added to both, as it applies to all goods",
+    "GST is added to neither, as Tilly is a young shopper"
+   ],
+   "why": "Most goods carry GST, so the helmet has it. Basic food, such as carrots, is left out. GST does not depend on the age or income of the buyer, so being young does not remove it.",
+   "clue": "Think about which item is basic food."
+  }
+ },
+ "cleared_by": "checker"
+}

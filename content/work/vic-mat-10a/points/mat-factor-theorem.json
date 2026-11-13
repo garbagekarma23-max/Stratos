@@ -1,0 +1,484 @@
+{
+ "id": "mat-factor-theorem",
+ "title": "The factor theorem",
+ "brief": "d5cdf84ad930",
+ "shortlist": [
+  [
+   "mat-solving-polynomial-equations",
+   0.507
+  ],
+  [
+   "mat-remainder-factor-theorems",
+   0.313
+  ],
+  [
+   "mat-polynomial-equations-unit-3",
+   0.23
+  ],
+  [
+   "mat-cubic-quartic-graphs",
+   0.21
+  ],
+  [
+   "mat-cubic-polynomial-graphs",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:09Z check: flagged",
+  "2026-11-12T15:59:44Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "write": 0.00838,
+  "check": 0.02097,
+  "fix": 0.03133,
+  "recheck": 0.00916
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card, The remainder and factor theorems, covers the factor theorem but also adds the remainder and rational root theorems, which is broader than this point, and the solving card uses the factor theorem only as a step in solving equations.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The factor theorem",
+  "card": [
+   "If \\(P(a) = 0\\), then \\((x - a)\\) is a factor of \\(P(x)\\). The reverse is also true: if \\((x - a)\\) is a factor, then \\(P(a) = 0\\).",
+   "To test a factor, substitute. For \\(P(x) = x^{3} - 2x^{2} - 5x + 6\\), we get \\(P(1) = 1 - 2 - 5 + 6 = 0\\). So \\((x - 1)\\) is a factor.",
+   "To factorise a cubic, try small whole numbers such as \\(\\pm 1\\), \\(\\pm 2\\) and \\(\\pm 3\\) until one gives zero. Good numbers to try divide the constant term.",
+   "Care with signs: if \\(P(-2) = 0\\), the factor is \\((x + 2)\\), because \\(x - (-2) = x + 2\\)."
+  ],
+  "remember": "If substituting \\(a\\) gives zero, then \\((x - a)\\) is a factor.",
+  "a": {
+   "q": "For \\(P(x) = x^{3} + 2x^{2} - 5x - 6\\), \\(P(2) = 0\\). What does this tell us?",
+   "opts": [
+    "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+    "\\((x + 2)\\) is a factor of \\(P(x)\\)",
+    "The remainder on dividing by \\((x - 2)\\) is 2",
+    "\\((x - 2)\\) is not a factor of \\(P(x)\\)"
+   ],
+   "why": "Because \\(P(2) = 0\\), the factor theorem says \\((x - 2)\\) is a factor. The factor \\((x + 2)\\) is the tempting wrong choice: it would need \\(P(-2) = 0\\), not \\(P(2) = 0\\).",
+   "clue": "The factor has the opposite sign to the number that gives zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia tests \\(P(x) = x^{3} - 3x^{2} - 4x + 12\\). Which factor can she be sure of?",
+   "opts": [
+    "\\((x + 2)\\), because \\(P(-2) = 0\\)",
+    "\\((x - 2)\\), because \\(P(-2) = 0\\)",
+    "\\((x + 1)\\), because \\(P(1) = 4\\)",
+    "\\((x - 3)\\), because \\(P(3) = 12\\)"
+   ],
+   "why": "\\(P(-2) = -8 - 12 + 8 + 12 = 0\\), so \\((x + 2)\\) is a factor. The second option has the right value but the wrong sign in the factor. \\(P(1) = 1 - 3 - 4 + 12 = 6\\) and \\(P(3) = 27 - 27 - 12 + 12 = 0\\), so the last two options give wrong values.",
+   "clue": "Check which number gives zero, then flip its sign for the factor."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((x + 2)\\), because \\(P(-2) = 0\\)",
+   "also_right": [
+    "\\((x - 2)\\), because \\(P(-2) = 0\\)",
+    "\\((x - 3)\\), because \\(P(3) = 12\\)"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "P(x) = x³ − 3x² − 4x + 12 = (x − 3)(x − 2)(x + 2), so (x − 2) and (x − 3) are also factors. The question asks which factor Mia can be sure of, so a student who factorises fully could defend those options. The option '(x − 3), because P(3) = 12' gives a false value: P(3) = 0. Use a cubic where the distractor factors are genuinely not factors."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says (x − 2) has 'the right value but the wrong sign in the factor' and that P(3) = 0 makes the last option wrong. In fact (x − 2) is a factor (P(2) = 0), and P(3) = 0 shows (x − 3) is a factor too. The why contradicts the factor theorem the card teaches."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why refers to options by position ('the second option', 'the last two options'), but the options are shown in random order. As listed, the second option is (x + 1), not the one the why means."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is flawed: the cubic factorises as (x − 3)(x − 2)(x + 2), so the distractors (x − 2) and (x − 3) are real factors, and the why wrongly dismisses them. The why also refers to options by position. Card and question a are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “\\((x - 2)\\), because \\(P(-2) = 0\\)” could also be right.",
+  "Question b: the checker says “\\((x - 3)\\), because \\(P(3) = 12\\)” could also be right.",
+  "Question b, fact: P(x) = x³ − 3x² − 4x + 12 = (x − 3)(x − 2)(x + 2), so (x − 2) and (x − 3) are also factors. The question asks which factor Mia can be sure of, so a student who factorises fully could defend those options. The option '(x − 3), because P(3) = 12' gives a false value: P(3) = 0. Use a cubic where the distractor factors are genuinely not factors.",
+  "Question b, other: The why says (x − 2) has 'the right value but the wrong sign in the factor' and that P(3) = 0 makes the last option wrong. In fact (x − 2) is a factor (P(2) = 0), and P(3) = 0 shows (x − 3) is a factor too. The why contradicts the factor theorem the card teaches.",
+  "Question b, other: The why refers to options by position ('the second option', 'the last two options'), but the options are shown in random order. As listed, the second option is (x + 1), not the one the why means."
+ ],
+ "proposal": {
+  "title": "The factor theorem",
+  "card": [
+   "If \\(P(a) = 0\\), then \\((x - a)\\) is a factor of \\(P(x)\\). The reverse is also true: if \\((x - a)\\) is a factor, then \\(P(a) = 0\\).",
+   "To test a factor, substitute. For \\(P(x) = x^{3} - 2x^{2} - 5x + 6\\), we get \\(P(1) = 1 - 2 - 5 + 6 = 0\\). So \\((x - 1)\\) is a factor.",
+   "To factorise a cubic, try small whole numbers such as \\(\\pm 1\\), \\(\\pm 2\\) and \\(\\pm 3\\) until one gives zero. Good numbers to try divide the constant term.",
+   "Care with signs: if \\(P(-2) = 0\\), the factor is \\((x + 2)\\), because \\(x - (-2) = x + 2\\)."
+  ],
+  "remember": "If substituting \\(a\\) gives zero, then \\((x - a)\\) is a factor.",
+  "a": {
+   "q": "For \\(P(x) = x^{3} + 2x^{2} - 5x - 6\\), \\(P(2) = 0\\). What does this tell us?",
+   "opts": [
+    "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+    "\\((x + 2)\\) is a factor of \\(P(x)\\)",
+    "The remainder on dividing by \\((x - 2)\\) is 2",
+    "\\((x - 2)\\) is not a factor of \\(P(x)\\)"
+   ],
+   "why": "Because \\(P(2) = 0\\), the factor theorem says \\((x - 2)\\) is a factor. The factor \\((x + 2)\\) is the tempting wrong choice: it would need \\(P(-2) = 0\\), not \\(P(2) = 0\\).",
+   "clue": "The factor has the opposite sign to the number that gives zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia substitutes small whole numbers into \\(P(x) = x^{3} + x^{2} + x + 6\\). Which of these is a factor of \\(P(x)\\)?",
+   "opts": [
+    "\\((x + 2)\\)",
+    "\\((x - 2)\\)",
+    "\\((x + 1)\\)",
+    "\\((x - 1)\\)"
+   ],
+   "why": "\\(P(-2) = -8 + 4 - 2 + 6 = 0\\), so \\((x + 2)\\) is a factor. The tempting wrong choice is \\((x - 2)\\): it would need \\(P(2) = 0\\), but \\(P(2) = 20\\). Also \\(P(-1) = 5\\) and \\(P(1) = 9\\), so \\((x + 1)\\) and \\((x - 1)\\) are not factors.",
+   "clue": "Find the number that gives zero, then think about the sign in the factor."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\((x + 2)\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The worked values all check out: P(1) = 0 on the card, P(2) = 0 in question a, and P(-2) = 0, P(2) = 20, P(-1) = 5 and P(1) = 9 in question b."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "P(x) = x³ − 3x² − 4x + 12 = (x − 3)(x − 2)(x + 2), so (x − 2) and (x − 3) are also factors. The question asks which factor Mia can be sure of, so a student who factorises fully could defend those options. The option '(x − 3), because P(3) = 12' gives a false value: P(3) = 0. Use a cubic where the distractor factors are genuinely not factors."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says (x − 2) has 'the right value but the wrong sign in the factor' and that P(3) = 0 makes the last option wrong. In fact (x − 2) is a factor (P(2) = 0), and P(3) = 0 shows (x − 3) is a factor too. The why contradicts the factor theorem the card teaches."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why refers to options by position ('the second option', 'the last two options'), but the options are shown in random order. As listed, the second option is (x + 1), not the one the why means."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “\\((x - 2)\\), because \\(P(-2) = 0\\)” could also be right.",
+   "Question b: the checker says “\\((x - 3)\\), because \\(P(3) = 12\\)” could also be right.",
+   "Question b, fact: P(x) = x³ − 3x² − 4x + 12 = (x − 3)(x − 2)(x + 2), so (x − 2) and (x − 3) are also factors. The question asks which factor Mia can be sure of, so a student who factorises fully could defend those options. The option '(x − 3), because P(3) = 12' gives a false value: P(3) = 0. Use a cubic where the distractor factors are genuinely not factors.",
+   "Question b, other: The why says (x − 2) has 'the right value but the wrong sign in the factor' and that P(3) = 0 makes the last option wrong. In fact (x − 2) is a factor (P(2) = 0), and P(3) = 0 shows (x − 3) is a factor too. The why contradicts the factor theorem the card teaches.",
+   "Question b, other: The why refers to options by position ('the second option', 'the last two options'), but the options are shown in random order. As listed, the second option is (x + 1), not the one the why means."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "The factor theorem",
+  "card": [
+   "If \\(P(a) = 0\\), then \\((x - a)\\) is a factor of \\(P(x)\\). The reverse is also true: if \\((x - a)\\) is a factor, then \\(P(a) = 0\\).",
+   "To test a factor, substitute. For \\(P(x) = x^{3} - 2x^{2} - 5x + 6\\), we get \\(P(1) = 1 - 2 - 5 + 6 = 0\\). So \\((x - 1)\\) is a factor.",
+   "To factorise a cubic, try small whole numbers such as \\(\\pm 1\\), \\(\\pm 2\\) and \\(\\pm 3\\) until one gives zero. Good numbers to try divide the constant term.",
+   "Care with signs: if \\(P(-2) = 0\\), the factor is \\((x + 2)\\), because \\(x - (-2) = x + 2\\)."
+  ],
+  "remember": "If substituting \\(a\\) gives zero, then \\((x - a)\\) is a factor.",
+  "a": {
+   "q": "For \\(P(x) = x^{3} + 2x^{2} - 5x - 6\\), \\(P(2) = 0\\). What does this tell us?",
+   "opts": [
+    "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+    "\\((x + 2)\\) is a factor of \\(P(x)\\)",
+    "The remainder on dividing by \\((x - 2)\\) is 2",
+    "\\((x - 2)\\) is not a factor of \\(P(x)\\)"
+   ],
+   "why": "Because \\(P(2) = 0\\), the factor theorem says \\((x - 2)\\) is a factor. The factor \\((x + 2)\\) is the tempting wrong choice: it would need \\(P(-2) = 0\\), not \\(P(2) = 0\\).",
+   "clue": "The factor has the opposite sign to the number that gives zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia substitutes small whole numbers into \\(P(x) = x^{3} + x^{2} + x + 6\\). Which of these is a factor of \\(P(x)\\)?",
+   "opts": [
+    "\\((x + 2)\\)",
+    "\\((x - 2)\\)",
+    "\\((x + 1)\\)",
+    "\\((x - 1)\\)"
+   ],
+   "why": "\\(P(-2) = -8 + 4 - 2 + 6 = 0\\), so \\((x + 2)\\) is a factor. The tempting wrong choice is \\((x - 2)\\): it would need \\(P(2) = 0\\), but \\(P(2) = 20\\). Also \\(P(-1) = 5\\) and \\(P(1) = 9\\), so \\((x + 1)\\) and \\((x - 1)\\) are not factors.",
+   "clue": "Find the number that gives zero, then think about the sign in the factor."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The new cubic x³ + x² + x + 6 gives P(-2) = 0, P(2) = 20, P(-1) = 5 and P(1) = 9, so (x + 2) is the only factor among the options. This removes the original's wrong values and real factors as distractors, and the why no longer refers to options by position.",
+   "item": "4811e34b81a6b0fb",
+   "result": "decided",
+   "saved": {
+    "id": "mat-factor-theorem",
+    "title": "The factor theorem",
+    "brief": "d5cdf84ad930",
+    "shortlist": [
+     [
+      "mat-solving-polynomial-equations",
+      0.507
+     ],
+     [
+      "mat-remainder-factor-theorems",
+      0.313
+     ],
+     [
+      "mat-polynomial-equations-unit-3",
+      0.23
+     ],
+     [
+      "mat-cubic-quartic-graphs",
+      0.21
+     ],
+     [
+      "mat-cubic-polynomial-graphs",
+      0.209
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00043,
+     "write": 0.00838,
+     "check": 0.02097,
+     "fix": 0.03133,
+     "recheck": 0.00916
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank card, The remainder and factor theorems, covers the factor theorem but also adds the remainder and rational root theorems, which is broader than this point, and the solving card uses the factor theorem only as a step in solving equations.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "The factor theorem",
+     "card": [
+      "If \\(P(a) = 0\\), then \\((x - a)\\) is a factor of \\(P(x)\\). The reverse is also true: if \\((x - a)\\) is a factor, then \\(P(a) = 0\\).",
+      "To test a factor, substitute. For \\(P(x) = x^{3} - 2x^{2} - 5x + 6\\), we get \\(P(1) = 1 - 2 - 5 + 6 = 0\\). So \\((x - 1)\\) is a factor.",
+      "To factorise a cubic, try small whole numbers such as \\(\\pm 1\\), \\(\\pm 2\\) and \\(\\pm 3\\) until one gives zero. Good numbers to try divide the constant term.",
+      "Care with signs: if \\(P(-2) = 0\\), the factor is \\((x + 2)\\), because \\(x - (-2) = x + 2\\)."
+     ],
+     "remember": "If substituting \\(a\\) gives zero, then \\((x - a)\\) is a factor.",
+     "a": {
+      "q": "For \\(P(x) = x^{3} + 2x^{2} - 5x - 6\\), \\(P(2) = 0\\). What does this tell us?",
+      "opts": [
+       "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+       "\\((x + 2)\\) is a factor of \\(P(x)\\)",
+       "The remainder on dividing by \\((x - 2)\\) is 2",
+       "\\((x - 2)\\) is not a factor of \\(P(x)\\)"
+      ],
+      "why": "Because \\(P(2) = 0\\), the factor theorem says \\((x - 2)\\) is a factor. The factor \\((x + 2)\\) is the tempting wrong choice: it would need \\(P(-2) = 0\\), not \\(P(2) = 0\\).",
+      "clue": "The factor has the opposite sign to the number that gives zero."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia tests \\(P(x) = x^{3} - 3x^{2} - 4x + 12\\). Which factor can she be sure of?",
+      "opts": [
+       "\\((x + 2)\\), because \\(P(-2) = 0\\)",
+       "\\((x - 2)\\), because \\(P(-2) = 0\\)",
+       "\\((x + 1)\\), because \\(P(1) = 4\\)",
+       "\\((x - 3)\\), because \\(P(3) = 12\\)"
+      ],
+      "why": "\\(P(-2) = -8 - 12 + 8 + 12 = 0\\), so \\((x + 2)\\) is a factor. The second option has the right value but the wrong sign in the factor. \\(P(1) = 1 - 3 - 4 + 12 = 6\\) and \\(P(3) = 27 - 27 - 12 + 12 = 0\\), so the last two options give wrong values.",
+      "clue": "Check which number gives zero, then flip its sign for the factor."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\((x + 2)\\), because \\(P(-2) = 0\\)",
+      "also_right": [
+       "\\((x - 2)\\), because \\(P(-2) = 0\\)",
+       "\\((x - 3)\\), because \\(P(3) = 12\\)"
+      ]
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "P(x) = x³ − 3x² − 4x + 12 = (x − 3)(x − 2)(x + 2), so (x − 2) and (x − 3) are also factors. The question asks which factor Mia can be sure of, so a student who factorises fully could defend those options. The option '(x − 3), because P(3) = 12' gives a false value: P(3) = 0. Use a cubic where the distractor factors are genuinely not factors."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why says (x − 2) has 'the right value but the wrong sign in the factor' and that P(3) = 0 makes the last option wrong. In fact (x − 2) is a factor (P(2) = 0), and P(3) = 0 shows (x − 3) is a factor too. The why contradicts the factor theorem the card teaches."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why refers to options by position ('the second option', 'the last two options'), but the options are shown in random order. As listed, the second option is (x + 1), not the one the why means."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Question b is flawed: the cubic factorises as (x − 3)(x − 2)(x + 2), so the distractors (x − 2) and (x − 3) are real factors, and the why wrongly dismisses them. The why also refers to options by position. Card and question a are fine."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b: the checker says “\\((x - 2)\\), because \\(P(-2) = 0\\)” could also be right.",
+     "Question b: the checker says “\\((x - 3)\\), because \\(P(3) = 12\\)” could also be right.",
+     "Question b, fact: P(x) = x³ − 3x² − 4x + 12 = (x − 3)(x − 2)(x + 2), so (x − 2) and (x − 3) are also factors. The question asks which factor Mia can be sure of, so a student who factorises fully could defend those options. The option '(x − 3), because P(3) = 12' gives a false value: P(3) = 0. Use a cubic where the distractor factors are genuinely not factors.",
+     "Question b, other: The why says (x − 2) has 'the right value but the wrong sign in the factor' and that P(3) = 0 makes the last option wrong. In fact (x − 2) is a factor (P(2) = 0), and P(3) = 0 shows (x − 3) is a factor too. The why contradicts the factor theorem the card teaches.",
+     "Question b, other: The why refers to options by position ('the second option', 'the last two options'), but the options are shown in random order. As listed, the second option is (x + 1), not the one the why means."
+    ],
+    "proposal": {
+     "title": "The factor theorem",
+     "card": [
+      "If \\(P(a) = 0\\), then \\((x - a)\\) is a factor of \\(P(x)\\). The reverse is also true: if \\((x - a)\\) is a factor, then \\(P(a) = 0\\).",
+      "To test a factor, substitute. For \\(P(x) = x^{3} - 2x^{2} - 5x + 6\\), we get \\(P(1) = 1 - 2 - 5 + 6 = 0\\). So \\((x - 1)\\) is a factor.",
+      "To factorise a cubic, try small whole numbers such as \\(\\pm 1\\), \\(\\pm 2\\) and \\(\\pm 3\\) until one gives zero. Good numbers to try divide the constant term.",
+      "Care with signs: if \\(P(-2) = 0\\), the factor is \\((x + 2)\\), because \\(x - (-2) = x + 2\\)."
+     ],
+     "remember": "If substituting \\(a\\) gives zero, then \\((x - a)\\) is a factor.",
+     "a": {
+      "q": "For \\(P(x) = x^{3} + 2x^{2} - 5x - 6\\), \\(P(2) = 0\\). What does this tell us?",
+      "opts": [
+       "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+       "\\((x + 2)\\) is a factor of \\(P(x)\\)",
+       "The remainder on dividing by \\((x - 2)\\) is 2",
+       "\\((x - 2)\\) is not a factor of \\(P(x)\\)"
+      ],
+      "why": "Because \\(P(2) = 0\\), the factor theorem says \\((x - 2)\\) is a factor. The factor \\((x + 2)\\) is the tempting wrong choice: it would need \\(P(-2) = 0\\), not \\(P(2) = 0\\).",
+      "clue": "The factor has the opposite sign to the number that gives zero."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia substitutes small whole numbers into \\(P(x) = x^{3} + x^{2} + x + 6\\). Which of these is a factor of \\(P(x)\\)?",
+      "opts": [
+       "\\((x + 2)\\)",
+       "\\((x - 2)\\)",
+       "\\((x + 1)\\)",
+       "\\((x - 1)\\)"
+      ],
+      "why": "\\(P(-2) = -8 + 4 - 2 + 6 = 0\\), so \\((x + 2)\\) is a factor. The tempting wrong choice is \\((x - 2)\\): it would need \\(P(2) = 0\\), but \\(P(2) = 20\\). Also \\(P(-1) = 5\\) and \\(P(1) = 9\\), so \\((x + 1)\\) and \\((x - 1)\\) are not factors.",
+      "clue": "Find the number that gives zero, then think about the sign in the factor."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:12Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "\\((x - 2)\\) is a factor of \\(P(x)\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\((x + 2)\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found. The worked values all check out: P(1) = 0 on the card, P(2) = 0 in question a, and P(-2) = 0, P(2) = 20, P(-1) = 5 and P(1) = 9 in question b."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-12T17:07:12Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "P(x) = x³ − 3x² − 4x + 12 = (x − 3)(x − 2)(x + 2), so (x − 2) and (x − 3) are also factors. The question asks which factor Mia can be sure of, so a student who factorises fully could defend those options. The option '(x − 3), because P(3) = 12' gives a false value: P(3) = 0. Use a cubic where the distractor factors are genuinely not factors."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why says (x − 2) has 'the right value but the wrong sign in the factor' and that P(3) = 0 makes the last option wrong. In fact (x − 2) is a factor (P(2) = 0), and P(3) = 0 shows (x − 3) is a factor too. The why contradicts the factor theorem the card teaches."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why refers to options by position ('the second option', 'the last two options'), but the options are shown in random order. As listed, the second option is (x + 1), not the one the why means."
+      }
+     ],
+     "flags": [
+      "Question b: the checker says “\\((x - 2)\\), because \\(P(-2) = 0\\)” could also be right.",
+      "Question b: the checker says “\\((x - 3)\\), because \\(P(3) = 12\\)” could also be right.",
+      "Question b, fact: P(x) = x³ − 3x² − 4x + 12 = (x − 3)(x − 2)(x + 2), so (x − 2) and (x − 3) are also factors. The question asks which factor Mia can be sure of, so a student who factorises fully could defend those options. The option '(x − 3), because P(3) = 12' gives a false value: P(3) = 0. Use a cubic where the distractor factors are genuinely not factors.",
+      "Question b, other: The why says (x − 2) has 'the right value but the wrong sign in the factor' and that P(3) = 0 makes the last option wrong. In fact (x − 2) is a factor (P(2) = 0), and P(3) = 0 shows (x − 3) is a factor too. The why contradicts the factor theorem the card teaches.",
+      "Question b, other: The why refers to options by position ('the second option', 'the last two options'), but the options are shown in random order. As listed, the second option is (x + 1), not the one the why means."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "ac2f509355612f51"
+  }
+ ]
+}

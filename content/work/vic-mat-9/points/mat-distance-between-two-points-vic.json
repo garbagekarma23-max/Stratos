@@ -1,0 +1,637 @@
+{
+ "id": "mat-distance-between-two-points-vic",
+ "title": "Distance between two points",
+ "brief": "5ebbe35ddc75",
+ "shortlist": [
+  [
+   "mat-distance-between-two-points",
+   0.256
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 says reuse mat-distance-between-two-points, so to the Opus match check, as every reuse is",
+  "2026-11-12T12:53:59Z confirm: Claude Opus 5.5 may adapt mat-distance-between-two-points, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-distance-between-two-points (1 change)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-distance-between-two-points on the next run",
+  "2026-11-13T13:04:54Z adapt: done",
+  "2026-11-13T13:11:26Z check: flagged",
+  "2026-11-13T13:13:39Z fix: suggested",
+  "2026-11-13T15:26:31Z review: rejected, to be written again",
+  "2026-11-13T15:37:12Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "confirm": 0.00654,
+  "adapt": 0.00438,
+  "check": 0.00862,
+  "fix": 0.02878
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-distance-between-two-points",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at the right Year 9 depth, using Pythagoras on the horizontal and vertical gaps, and its terms, example and both questions suit a Victorian Level 9 course without change.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-distance-between-two-points",
+  "changes": [
+   "Write the formula in the coordinate form the brief uses, d = √((x₂ − x₁)² + (y₂ − y₁)²), and link it to the change in x and the change in y."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Pythagoras-based distance method at Year 9 depth, and its questions suit Victorian students, but it should show the subscript coordinate formula named in the brief.",
+  "model": "claude-opus-5-5"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same Pythagoras method at Year 9 depth and its answers are right. It needs the coordinate formula the brief names.",
+   "item": "675d0575218e8922",
+   "result": "decided",
+   "saved": {
+    "id": "mat-distance-between-two-points-vic",
+    "title": "Distance between two points",
+    "brief": "5ebbe35ddc75",
+    "shortlist": [
+     [
+      "mat-distance-between-two-points",
+      0.256
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00013,
+     "confirm": 0.00654
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-distance-between-two-points",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches the same idea at the right Year 9 depth, using Pythagoras on the horizontal and vertical gaps, and its terms, example and both questions suit a Victorian Level 9 course without change.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-distance-between-two-points",
+     "changes": [
+      "Write the formula in the coordinate form the brief uses, d = √((x₂ − x₁)² + (y₂ − y₁)²), and link it to the change in x and the change in y."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same Pythagoras-based distance method at Year 9 depth, and its questions suit Victorian students, but it should show the subscript coordinate formula named in the brief.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "aaea2c16ffb3a672"
+  },
+  {
+   "at": "2026-11-13T15:37:12Z",
+   "step": "write",
+   "version": {
+    "title": "Distance between two points",
+    "card": [
+     "To find the distance between two points, make a right-angled triangle. Its horizontal side is the gap in \\(x\\), its vertical side is the gap in \\(y\\), and the interval joining the points is the hypotenuse.",
+     "From \\((1, 2)\\) to \\((4, 6)\\), the gap in \\(x\\) is \\(4 - 1 = 3\\) and the gap in \\(y\\) is \\(6 - 2 = 4\\). By Pythagoras, \\(d^{2} = 3^{2} + 4^{2} = 25\\), so \\(d = 5\\).",
+     "As a formula, \\(d = \\sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}}\\). Square each gap, add, then take the square root. A negative gap is fine, because its square is positive.",
+     "The gaps are never just added: \\(\\sqrt{3^{2} + 4^{2}} = 5\\), not \\(3 + 4 = 7\\). If the total under the root is not a square number, leave it as a root, such as \\(\\sqrt{13}\\), or round it."
+    ],
+    "cardFigs": {
+     "2": {
+      "kind": "graph",
+      "alt": "The points \\((1, 2)\\) and \\((4, 6)\\) joined by an interval of length \\(d\\). A horizontal side of length 3 and a vertical side of length 4 make a right-angled triangle with it, with the right angle at \\((4, 2)\\).",
+      "x": {
+       "min": -1,
+       "max": 7,
+       "label": "\\(x\\)",
+       "step": 1
+      },
+      "y": {
+       "min": -1,
+       "max": 7,
+       "label": "\\(y\\)",
+       "step": 1
+      },
+      "grid": true,
+      "equal": true,
+      "items": [
+       {
+        "type": "shade",
+        "poly": [
+         [
+          1,
+          2
+         ],
+         [
+          4,
+          2
+         ],
+         [
+          4,
+          6
+         ]
+        ]
+       },
+       {
+        "type": "curve",
+        "id": "d",
+        "points": [
+         [
+          1,
+          2
+         ],
+         [
+          4,
+          6
+         ]
+        ],
+        "label": "\\(d\\)",
+        "labelAt": 2.5,
+        "pos": "above-left"
+       },
+       {
+        "type": "curve",
+        "id": "h",
+        "points": [
+         [
+          1,
+          2
+         ],
+         [
+          4,
+          2
+         ]
+        ],
+        "label": "3",
+        "labelAt": 2.5,
+        "pos": "below"
+       },
+       {
+        "type": "curve",
+        "id": "v",
+        "points": [
+         [
+          4,
+          2
+         ],
+         [
+          4,
+          6
+         ]
+        ],
+        "label": "4",
+        "labelAt": 4,
+        "pos": "right"
+       },
+       {
+        "type": "point",
+        "at": [
+         1,
+         2
+        ],
+        "on": [
+         "d",
+         "h"
+        ],
+        "label": "\\((1, 2)\\)",
+        "pos": "below"
+       },
+       {
+        "type": "point",
+        "at": [
+         4,
+         6
+        ],
+        "on": [
+         "d",
+         "v"
+        ],
+        "label": "\\((4, 6)\\)",
+        "pos": "above-left"
+       }
+      ]
+     }
+    },
+    "remember": "Square the two gaps, add them, then take the square root last.",
+    "a": {
+     "q": "What is the distance between \\((2, 3)\\) and \\((8, 11)\\)?",
+     "opts": [
+      "10",
+      "14",
+      "100",
+      "\\(\\sqrt{14}\\)"
+     ],
+     "why": "The gap in \\(x\\) is 6 and the gap in \\(y\\) is 8, so \\(d = \\sqrt{36 + 64} = \\sqrt{100} = 10\\). The answer 100 stops before the square root, and 14 adds the gaps without Pythagoras.",
+     "clue": "Square both gaps before you add them."
+    },
+    "b": {
+     "d": 3,
+     "q": "On a school map, each grid unit is 1 m. The canteen is at \\((-2, 5)\\) and the library is at \\((3, -7)\\). How far apart are they in a straight line?",
+     "opts": [
+      "13 m",
+      "17 m",
+      "169 m",
+      "\\(\\sqrt{29}\\) m"
+     ],
+     "why": "The gap in \\(x\\) is \\(3 - (-2) = 5\\) and the gap in \\(y\\) is \\(-7 - 5 = -12\\). So \\(d = \\sqrt{25 + 144} = \\sqrt{169} = 13\\) m. Working out the gap in \\(y\\) as \\(-7 + 5 = -2\\) is a sign error, which leads to \\(\\sqrt{29}\\) m.",
+     "clue": "Take care with the signs when you subtract."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "10",
+     "also_right": []
+    },
+    "b": {
+     "best": "13 m",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "note": "",
+ "rejected": {
+  "title": "Distance between two points",
+  "card": [
+   "The distance between two points is the length of the straight interval joining them. Find the change in \\(x\\) and the change in \\(y\\) between the points.",
+   "These two changes are the two shorter sides of a right-angled triangle. The interval is the longest side, the hypotenuse.",
+   "Pythagoras' theorem gives the formula \\(d = \\sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}}\\). Here \\(x_{2} - x_{1}\\) is the change in \\(x\\) and \\(y_{2} - y_{1}\\) is the change in \\(y\\). Square each change, add, then take the square root.",
+   [
+    "Example",
+    "From \\((1, 2)\\) to \\((4, 6)\\): the change in \\(x\\) is 3 and the change in \\(y\\) is 4. Distance \\(= \\sqrt{9 + 16} = \\sqrt{25} = 5\\)."
+   ]
+  ],
+  "remember": "Square the change in \\(x\\) and the change in \\(y\\), add them, then take the square root.",
+  "a": {
+   "q": "Points \\(A(2, 1)\\) and \\(B(5, 5)\\) are joined by an interval. How long is it?",
+   "opts": [
+    "5",
+    "7",
+    "25",
+    "3.5"
+   ],
+   "why": "The change in \\(x\\) is 3 and the change in \\(y\\) is 4, so distance \\(= \\sqrt{9 + 16} = \\sqrt{25} = 5\\). The answer 25 is tempting, but it skips the final square root step.",
+   "clue": "Square both changes, add, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a park map grid in metres, a path joins \\((-3, 2)\\) and \\((5, -4)\\). What is the length of the path?",
+   "opts": [
+    "10 m",
+    "14 m",
+    "100 m",
+    "2 m"
+   ],
+   "why": "The change in \\(x\\) is \\(5 - (-3) = 8\\) and the change in \\(y\\) is \\(-4 - 2 = -6\\). Distance \\(= \\sqrt{64 + 36} = \\sqrt{100} = 10\\) m. The answer 14 comes from adding the changes instead of using Pythagoras' theorem.",
+   "clue": "Take care with the negative numbers when finding each change."
+  }
+ },
+ "rewrites": 1,
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Distance between two points",
+  "card": [
+   "To find the distance between two points, make a right-angled triangle. Its horizontal side is the gap in \\(x\\), its vertical side is the gap in \\(y\\), and the interval joining the points is the hypotenuse.",
+   "From \\((1, 2)\\) to \\((4, 6)\\), the gap in \\(x\\) is \\(4 - 1 = 3\\) and the gap in \\(y\\) is \\(6 - 2 = 4\\). By Pythagoras, \\(d^{2} = 3^{2} + 4^{2} = 25\\), so \\(d = 5\\).",
+   "As a formula, \\(d = \\sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}}\\). Square each gap, add, then take the square root. A negative gap is fine, because its square is positive.",
+   "The gaps are never just added: \\(\\sqrt{3^{2} + 4^{2}} = 5\\), not \\(3 + 4 = 7\\). If the total under the root is not a square number, leave it as a root, such as \\(\\sqrt{13}\\), or round it."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The points \\((1, 2)\\) and \\((4, 6)\\) joined by an interval of length \\(d\\). A horizontal side of length 3 and a vertical side of length 4 make a right-angled triangle with it, with the right angle at \\((4, 2)\\).",
+    "x": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        1,
+        2
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        6
+       ]
+      ]
+     },
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        1,
+        2
+       ],
+       [
+        4,
+        6
+       ]
+      ],
+      "label": "\\(d\\)",
+      "labelAt": 2.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "curve",
+      "id": "h",
+      "points": [
+       [
+        1,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "label": "3",
+      "labelAt": 2.5,
+      "pos": "below"
+     },
+     {
+      "type": "curve",
+      "id": "v",
+      "points": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        6
+       ]
+      ],
+      "label": "4",
+      "labelAt": 4,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "d",
+       "h"
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "d",
+       "v"
+      ],
+      "label": "\\((4, 6)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Square the two gaps, add them, then take the square root last.",
+  "a": {
+   "q": "What is the distance between \\((2, 3)\\) and \\((8, 11)\\)?",
+   "opts": [
+    "10",
+    "14",
+    "100",
+    "\\(\\sqrt{14}\\)"
+   ],
+   "why": "The gap in \\(x\\) is 6 and the gap in \\(y\\) is 8, so \\(d = \\sqrt{36 + 64} = \\sqrt{100} = 10\\). The answer 100 stops before the square root, and 14 adds the gaps without Pythagoras.",
+   "clue": "Square both gaps before you add them."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a school map, each grid unit is 1 m. The canteen is at \\((-2, 5)\\) and the library is at \\((3, -7)\\). How far apart are they in a straight line?",
+   "opts": [
+    "13 m",
+    "17 m",
+    "169 m",
+    "\\(\\sqrt{29}\\) m"
+   ],
+   "why": "The gap in \\(x\\) is \\(3 - (-2) = 5\\) and the gap in \\(y\\) is \\(-7 - 5 = -12\\). So \\(d = \\sqrt{25 + 144} = \\sqrt{169} = 13\\) m. Working out the gap in \\(y\\) as \\(-7 + 5 = -2\\) is a sign error, which leads to \\(\\sqrt{29}\\) m.",
+   "clue": "Take care with the signs when you subtract."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10",
+   "also_right": []
+  },
+  "b": {
+   "best": "13 m",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Distance between two points",
+  "card": [
+   "To find the distance between two points, make a right-angled triangle. Its horizontal side is the gap in \\(x\\), its vertical side is the gap in \\(y\\), and the interval joining the points is the hypotenuse.",
+   "From \\((1, 2)\\) to \\((4, 6)\\), the gap in \\(x\\) is \\(4 - 1 = 3\\) and the gap in \\(y\\) is \\(6 - 2 = 4\\). By Pythagoras, \\(d^{2} = 3^{2} + 4^{2} = 25\\), so \\(d = 5\\).",
+   "As a formula, \\(d = \\sqrt{(x_{2} - x_{1})^{2} + (y_{2} - y_{1})^{2}}\\). Square each gap, add, then take the square root. A negative gap is fine, because its square is positive.",
+   "The gaps are never just added: \\(\\sqrt{3^{2} + 4^{2}} = 5\\), not \\(3 + 4 = 7\\). If the total under the root is not a square number, leave it as a root, such as \\(\\sqrt{13}\\), or round it."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The points \\((1, 2)\\) and \\((4, 6)\\) joined by an interval of length \\(d\\). A horizontal side of length 3 and a vertical side of length 4 make a right-angled triangle with it, with the right angle at \\((4, 2)\\).",
+    "x": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "shade",
+      "poly": [
+       [
+        1,
+        2
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        6
+       ]
+      ]
+     },
+     {
+      "type": "curve",
+      "id": "d",
+      "points": [
+       [
+        1,
+        2
+       ],
+       [
+        4,
+        6
+       ]
+      ],
+      "label": "\\(d\\)",
+      "labelAt": 2.5,
+      "pos": "above-left"
+     },
+     {
+      "type": "curve",
+      "id": "h",
+      "points": [
+       [
+        1,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "label": "3",
+      "labelAt": 2.5,
+      "pos": "below"
+     },
+     {
+      "type": "curve",
+      "id": "v",
+      "points": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        6
+       ]
+      ],
+      "label": "4",
+      "labelAt": 4,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "d",
+       "h"
+      ],
+      "label": "\\((1, 2)\\)",
+      "pos": "below"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "d",
+       "v"
+      ],
+      "label": "\\((4, 6)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Square the two gaps, add them, then take the square root last.",
+  "a": {
+   "q": "What is the distance between \\((2, 3)\\) and \\((8, 11)\\)?",
+   "opts": [
+    "10",
+    "14",
+    "100",
+    "\\(\\sqrt{14}\\)"
+   ],
+   "why": "The gap in \\(x\\) is 6 and the gap in \\(y\\) is 8, so \\(d = \\sqrt{36 + 64} = \\sqrt{100} = 10\\). The answer 100 stops before the square root, and 14 adds the gaps without Pythagoras.",
+   "clue": "Square both gaps before you add them."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a school map, each grid unit is 1 m. The canteen is at \\((-2, 5)\\) and the library is at \\((3, -7)\\). How far apart are they in a straight line?",
+   "opts": [
+    "13 m",
+    "17 m",
+    "169 m",
+    "\\(\\sqrt{29}\\) m"
+   ],
+   "why": "The gap in \\(x\\) is \\(3 - (-2) = 5\\) and the gap in \\(y\\) is \\(-7 - 5 = -12\\). So \\(d = \\sqrt{25 + 144} = \\sqrt{169} = 13\\) m. Working out the gap in \\(y\\) as \\(-7 + 5 = -2\\) is a sign error, which leads to \\(\\sqrt{29}\\) m.",
+   "clue": "Take care with the signs when you subtract."
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
+}

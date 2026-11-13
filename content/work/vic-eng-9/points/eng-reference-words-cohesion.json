@@ -1,0 +1,215 @@
+{
+ "id": "eng-reference-words-cohesion",
+ "title": "Reference words and cohesion",
+ "brief": "21999aebc2d7",
+ "shortlist": [
+  [
+   "eng-cohesion-through-pronouns-word",
+   0.386
+  ],
+  [
+   "eng-intertextual-references-literature",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:47Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:39Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:58Z write: failed the content check, writing again",
+  "2026-11-12T15:35:05Z write: done",
+  "2026-11-12T15:42:22Z check: flagged",
+  "2026-11-12T15:45:42Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01344,
+  "check": 0.01033,
+  "fix": 0.01677,
+  "recheck": 0.00772
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches pronouns and word chains, while the new point is about reference words such as this, these, such and the former, so it is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Reference words and cohesion",
+  "card": [
+   "Cohesion is how the sentences in a text link together so it reads as one piece. A reference word helps by pointing back to something already said.",
+   "Words such as this, that, these, those, such, it and they stand in for an earlier idea. Writers use them so they do not repeat the same words. Example: \"The council banned plastic bags. This reduced litter.\"",
+   "Reference words need a clear target. In \"Tom met Ravi, and he laughed\", the word he could mean either boy, so the link is unclear.",
+   "The former and the latter point back to two things named earlier. The former is the first one named, and the latter is the second one named."
+  ],
+  "remember": "A reference word points back to an earlier idea, so sentences link without repeats, but the target must be clear.",
+  "a": {
+   "q": "Read: \"Many schools have started later. These changes help tired teenagers.\" What does the word These do?",
+   "opts": [
+    "Points back to the schools' earlier starts",
+    "Adds a new fact about teenagers",
+    "Introduces a new topic for the text",
+    "Repeats the first sentence word for word"
+   ],
+   "why": "These points back to the idea in the first sentence, so the two sentences link. It does not add a new fact or topic, and it does not repeat the first sentence, because it only stands in for the idea.",
+   "clue": "Ask what idea the word sends you back to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Read: \"Mia met Zoe, and she gave her a gift.\" What is the main problem with the reference words?",
+   "opts": [
+    "She and her could each point to either girl",
+    "The word and should be replaced with a full stop",
+    "There are no reference words to link the sentence",
+    "The former should be used instead of the gift"
+   ],
+   "why": "Both she and her could mean Mia or Zoe, so a reader cannot tell who gave the gift to whom. The sentence does have reference words, so saying it has none is wrong.",
+   "clue": "Check whether each pointing word has one clear target."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Points back to the schools' earlier starts",
+   "also_right": []
+  },
+  "b": {
+   "best": "She and her could each point to either girl",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option says 'the schools' earlier starts', but the sentence says the schools have started later. A student could read 'earlier starts' as starting earlier, the opposite of the text. Better wording: 'Points back to the schools starting later'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts are sound. The right option in question a says 'earlier starts' when the schools start later, which could confuse students and should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option says 'the schools' earlier starts', but the sentence says the schools have started later. A student could read 'earlier starts' as starting earlier, the opposite of the text. Better wording: 'Points back to the schools starting later'."
+ ],
+ "proposal": {
+  "title": "Reference words and cohesion",
+  "card": [
+   "Cohesion is how the sentences in a text link together so it reads as one piece. A reference word helps by pointing back to something already said.",
+   "Words such as this, that, these, those, such, it and they stand in for an earlier idea. Writers use them so they do not repeat the same words. Example: \"The council banned plastic bags. This reduced litter.\"",
+   "Reference words need a clear target. In \"Tom met Ravi, and he laughed\", the word he could mean either boy, so the link is unclear.",
+   "The former and the latter point back to two things named earlier. The former is the first one named, and the latter is the second one named."
+  ],
+  "remember": "A reference word points back to an earlier idea, so sentences link without repeats, but the target must be clear.",
+  "a": {
+   "q": "Read: \"Many schools now start later. This helps tired teenagers.\" What does the word This do?",
+   "opts": [
+    "Points back to the schools starting later",
+    "Adds a new fact about teenagers",
+    "Introduces a new topic for the text",
+    "Repeats the first sentence word for word"
+   ],
+   "why": "This points back to the idea in the first sentence, the schools starting later, so the two sentences link. The fact about teenagers comes from the word helps, not from This, which only stands in for the earlier idea.",
+   "clue": "Ask what idea the word sends you back to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Read: \"Mia met Zoe, and she gave her a gift.\" What is the main problem with the reference words?",
+   "opts": [
+    "She and her could each point to either girl",
+    "The word and should be replaced with a full stop",
+    "There are no reference words to link the sentence",
+    "She and her point to the gift, not to a person"
+   ],
+   "why": "Both she and her could mean Mia or Zoe, so a reader cannot tell who gave the gift to whom. The sentence does have reference words, so saying it has none is wrong.",
+   "clue": "Check whether each pointing word has one clear target."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Points back to the schools starting later",
+    "also_right": []
+   },
+   "b": {
+    "best": "She and her could each point to either girl",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option says 'the schools' earlier starts', but the sentence says the schools have started later. A student could read 'earlier starts' as starting earlier, the opposite of the text. Better wording: 'Points back to the schools starting later'."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option says 'the schools' earlier starts', but the sentence says the schools have started later. A student could read 'earlier starts' as starting earlier, the opposite of the text. Better wording: 'Points back to the schools starting later'."
+  ]
+ },
+ "final": {
+  "title": "Reference words and cohesion",
+  "card": [
+   "Cohesion is how the sentences in a text link together so it reads as one piece. A reference word helps by pointing back to something already said.",
+   "Words such as this, that, these, those, such, it and they stand in for an earlier idea. Writers use them so they do not repeat the same words. Example: \"The council banned plastic bags. This reduced litter.\"",
+   "Reference words need a clear target. In \"Tom met Ravi, and he laughed\", the word he could mean either boy, so the link is unclear.",
+   "The former and the latter point back to two things named earlier. The former is the first one named, and the latter is the second one named."
+  ],
+  "remember": "A reference word points back to an earlier idea, so sentences link without repeats, but the target must be clear.",
+  "a": {
+   "q": "Read: \"Many schools now start later. This helps tired teenagers.\" What does the word This do?",
+   "opts": [
+    "Points back to the schools starting later",
+    "Adds a new fact about teenagers",
+    "Introduces a new topic for the text",
+    "Repeats the first sentence word for word"
+   ],
+   "why": "This points back to the idea in the first sentence, the schools starting later, so the two sentences link. The fact about teenagers comes from the word helps, not from This, which only stands in for the earlier idea.",
+   "clue": "Ask what idea the word sends you back to."
+  },
+  "b": {
+   "d": 3,
+   "q": "Read: \"Mia met Zoe, and she gave her a gift.\" What is the main problem with the reference words?",
+   "opts": [
+    "She and her could each point to either girl",
+    "The word and should be replaced with a full stop",
+    "There are no reference words to link the sentence",
+    "She and her point to the gift, not to a person"
+   ],
+   "why": "Both she and her could mean Mia or Zoe, so a reader cannot tell who gave the gift to whom. The sentence does have reference words, so saying it has none is wrong.",
+   "clue": "Check whether each pointing word has one clear target."
+  }
+ },
+ "cleared_by": "recheck"
+}

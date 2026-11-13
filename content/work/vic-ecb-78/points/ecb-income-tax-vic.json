@@ -1,0 +1,164 @@
+{
+ "id": "ecb-income-tax-vic",
+ "title": "Income tax",
+ "brief": "874503d92a68",
+ "shortlist": [
+  [
+   "ecb-income-tax",
+   0.757
+  ],
+  [
+   "ecb-young-people-tax",
+   0.572
+  ],
+  [
+   "ecb-progressive-taxation",
+   0.473
+  ],
+  [
+   "ecb-governments-collect-tax",
+   0.445
+  ],
+  [
+   "ecb-goods-services-tax",
+   0.313
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 says adapt ecb-income-tax (2 changes)",
+  "2026-11-12T15:15:32Z adapt: done",
+  "2026-11-12T15:25:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "adapt": 0.00351,
+  "check": 0.00845
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-income-tax",
+  "changes": [
+   "Replace Hobart with a Victorian city, such as Melbourne or Ballarat, in question b, since the course is for students in Victoria.",
+   "Add the $18,200 tax-free threshold figure to the card, because the new point's brief names it and the bank card only describes the threshold in general terms."
+  ],
+  "sure": "high",
+  "reason": "The bank card teaches the same progressive income tax idea at the right depth, but its Hobart example should be local to Victoria and it does not give the $18,200 threshold the new point names.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "ecb-income-tax",
+  "changes": [
+   "Replace Hobart with a Victorian city, such as Melbourne or Ballarat, in question b, since the course is for students in Victoria.",
+   "Add the $18,200 tax-free threshold figure to the card, because the new point's brief names it and the bank card only describes the threshold in general terms."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card2",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Income tax",
+  "card": [
+   "Income tax is a tax taken from the money people earn, such as wages and salaries.",
+   [
+    "Tax-free threshold",
+    "the amount a person can earn in a year before they pay income tax on it. In Australia, the first $18,200 a year is not taxed."
+   ],
+   [
+    "Tax brackets",
+    "income above the threshold is split into bands called tax brackets. Each higher bracket has a higher rate, which applies only to the dollars earned within it."
+   ],
+   "So people on higher incomes pay a higher rate on each extra dollar. Their first dollars are still taxed at the lower rates, the same as everyone else's."
+  ],
+  "remember": "Income tax rises in steps: nothing up to the threshold, then higher rates only on the dollars in higher brackets.",
+  "a": {
+   "q": "A worker in Australia earns a yearly income. What does the tax-free threshold do for them?",
+   "opts": [
+    "The first part of their yearly income is not taxed",
+    "All of their income is free of tax if they work part time",
+    "They pay the same tax rate on every dollar they earn",
+    "They only pay tax on money they spend in shops"
+   ],
+   "why": "The tax-free threshold is the amount a person can earn in a year without paying income tax on it. It does not make all income tax-free, even for part-time workers, because any income above it is taxed.",
+   "clue": "A threshold is a line. What happens on each side of it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila and Sam both work in Melbourne. Leila earns enough to reach a higher tax bracket than Sam. Which statement is correct?",
+   "opts": [
+    "Leila pays a higher rate than Sam on her extra dollars",
+    "Leila pays her top rate on every dollar she earns",
+    "Both pay the same rate, as both earn above the threshold",
+    "Sam pays a higher rate on his extra dollars than Leila"
+   ],
+   "why": "Leila's extra dollars fall in a higher bracket, so they are taxed at a higher rate than Sam's. It is tempting to think her top rate covers all her income, but each rate applies only to the dollars within its bracket, so her first dollars are taxed like Sam's.",
+   "clue": "Which of Leila's dollars does her higher rate apply to?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The first part of their yearly income is not taxed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Leila pays a higher rate than Sam on her extra dollars",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Income tax",
+  "card": [
+   "Income tax is a tax taken from the money people earn, such as wages and salaries.",
+   [
+    "Tax-free threshold",
+    "the amount a person can earn in a year before they pay income tax on it. In Australia, the first $18,200 a year is not taxed."
+   ],
+   [
+    "Tax brackets",
+    "income above the threshold is split into bands called tax brackets. Each higher bracket has a higher rate, which applies only to the dollars earned within it."
+   ],
+   "So people on higher incomes pay a higher rate on each extra dollar. Their first dollars are still taxed at the lower rates, the same as everyone else's."
+  ],
+  "remember": "Income tax rises in steps: nothing up to the threshold, then higher rates only on the dollars in higher brackets.",
+  "a": {
+   "q": "A worker in Australia earns a yearly income. What does the tax-free threshold do for them?",
+   "opts": [
+    "The first part of their yearly income is not taxed",
+    "All of their income is free of tax if they work part time",
+    "They pay the same tax rate on every dollar they earn",
+    "They only pay tax on money they spend in shops"
+   ],
+   "why": "The tax-free threshold is the amount a person can earn in a year without paying income tax on it. It does not make all income tax-free, even for part-time workers, because any income above it is taxed.",
+   "clue": "A threshold is a line. What happens on each side of it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila and Sam both work in Melbourne. Leila earns enough to reach a higher tax bracket than Sam. Which statement is correct?",
+   "opts": [
+    "Leila pays a higher rate than Sam on her extra dollars",
+    "Leila pays her top rate on every dollar she earns",
+    "Both pay the same rate, as both earn above the threshold",
+    "Sam pays a higher rate on his extra dollars than Leila"
+   ],
+   "why": "Leila's extra dollars fall in a higher bracket, so they are taxed at a higher rate than Sam's. It is tempting to think her top rate covers all her income, but each rate applies only to the dollars within its bracket, so her first dollars are taxed like Sam's.",
+   "clue": "Which of Leila's dollars does her higher rate apply to?"
+  }
+ },
+ "cleared_by": "checker"
+}

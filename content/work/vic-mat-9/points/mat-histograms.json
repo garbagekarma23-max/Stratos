@@ -1,0 +1,452 @@
+{
+ "id": "mat-histograms",
+ "title": "Histograms",
+ "brief": "b11457fb0bd6",
+ "shortlist": [
+  [
+   "mat-choosing-display",
+   0.316
+  ],
+  [
+   "mat-histograms-dot-plots",
+   0.242
+  ],
+  [
+   "mat-displaying-data",
+   0.227
+  ],
+  [
+   "mat-types-data",
+   0.224
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-histograms-dot-plots, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:51Z write: failed the content check, writing again",
+  "2026-11-12T15:26:06Z write: done",
+  "2026-11-12T15:35:10Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T16:19:54Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.00682,
+  "write": 0.02643,
+  "check": 0.01251,
+  "fix": 0.02423
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-histograms-dot-plots",
+  "changes": [
+   "Use the Victorian Curriculum 2.0 Level 9 wording and the VC2M9ST03 focus on histograms for grouped numerical data, rather than the Units 1 and 2 framing.",
+   "Set the example in a Victorian context, such as Melbourne or Geelong student travel times, instead of the Geelong heights example as written."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches histograms at the right depth and its figure and questions are fair for Year 9, but it is from a Victorian Units 1 and 2 course, so its framing and example need light adjustment for Level 9.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches histograms on their own: the closest cards compare several displays (dot plots, stem plots, column graphs) or teach how to choose a display, so they are broader than this point on grouping numerical data into equal class intervals with touching bars.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Histograms",
+  "card": [
+   "A histogram shows numerical data grouped into classes of equal width, such as 0 to 10 and 10 to 20. Each value fits in exactly one class, with no gaps and no overlaps.",
+   "Each bar stands over one class. The height of the bar is the frequency, which is the number of values in that class. The bars touch because the classes run on from one to the next.",
+   "Example: 20 students record minutes of homework. 3 did 0 to 10 minutes, 7 did 10 to 20, 6 did 20 to 30 and 4 did 30 to 40. A value on a boundary goes in the higher class, so 20 minutes is in 20 to 30.",
+   "To count the values in more than one class, add the heights of those bars. A histogram shows which class a value is in, not the exact value."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of homework minutes for 20 students. The bars touch. Class 0 to 10 has frequency 3, 10 to 20 has 7, 20 to 30 has 6 and 30 to 40 has 4.",
+    "x": {
+     "min": 0,
+     "max": 40,
+     "step": 10,
+     "label": "Minutes"
+    },
+    "y": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Frequency"
+    },
+    "classes": [
+     [
+      0,
+      10,
+      3
+     ],
+     [
+      10,
+      20,
+      7
+     ],
+     [
+      20,
+      30,
+      6
+     ],
+     [
+      30,
+      40,
+      4
+     ]
+    ]
+   }
+  },
+  "remember": "Equal classes, touching bars, and bar height is the frequency.",
+  "a": {
+   "q": "Using the histogram, how many students did 20 minutes or more of homework?",
+   "opts": [
+    "10",
+    "6",
+    "4",
+    "13"
+   ],
+   "why": "The bars for 20 to 30 and 30 to 40 give \\(6 + 4 = 10\\) students. Choosing 6 counts only one of these two classes.",
+   "clue": "Add the heights of every bar from 20 onwards.",
+   "fig": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of homework minutes for 20 students. Class 0 to 10 has frequency 3, 10 to 20 has 7, 20 to 30 has 6 and 30 to 40 has 4.",
+    "x": {
+     "min": 0,
+     "max": 40,
+     "step": 10,
+     "label": "Minutes"
+    },
+    "y": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Frequency"
+    },
+    "classes": [
+     [
+      0,
+      10,
+      3
+     ],
+     [
+      10,
+      20,
+      7
+     ],
+     [
+      20,
+      30,
+      6
+     ],
+     [
+      30,
+      40,
+      4
+     ]
+    ]
+   }
+  },
+  "b": {
+   "d": 3,
+   "q": "Jin records how late 30 trains are, from 0 to 40 minutes. Which set of classes suits a histogram?",
+   "opts": [
+    "0 to 10, 10 to 20, 20 to 30, 30 to 40",
+    "0 to 10, 10 to 30, 30 to 35, 35 to 40",
+    "0 to 10, 10 to 20, 30 to 40, 40 to 50",
+    "0 to 10, 5 to 15, 15 to 25, 25 to 40"
+   ],
+   "why": "The first set has equal widths, no gaps and no overlaps. The second set has unequal widths. The third leaves a gap from 20 to 30, and the fourth overlaps 5 to 10.",
+   "clue": "Check the widths, then look for gaps or overlaps."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10",
+   "also_right": []
+  },
+  "b": {
+   "best": "0 to 10, 10 to 20, 20 to 30, 30 to 40",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) names the options by position ('the first set', 'the second set', 'the fourth'), but options are shown in a random order. In the order shown, the right set is the fourth option, and the overlapping 5 to 15 set is the second, so a student would read an explanation that contradicts the options. Name each set by its classes instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the histogram data (total 20) and both answers check out (a: 10, b: 0 to 10, 10 to 20, 20 to 30, 30 to 40). However, Why (b) refers to the options by position ('first set', 'fourth'), which will not match the shuffled order students see, so it should name each set by its classes."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) names the options by position ('the first set', 'the second set', 'the fourth'), but options are shown in a random order. In the order shown, the right set is the fourth option, and the overlapping 5 to 15 set is the second, so a student would read an explanation that contradicts the options. Name each set by its classes instead."
+ ],
+ "proposal": {
+  "title": "Histograms",
+  "card": [
+   "A histogram shows numerical data grouped into classes of equal width, such as 0 to 10 and 10 to 20. Each value fits in exactly one class, with no gaps and no overlaps.",
+   "Each bar stands over one class. The height of the bar is the frequency, which is the number of values in that class. The bars touch because the classes run on from one to the next.",
+   "Example: 20 students record minutes of homework. 3 did 0 to 10 minutes, 7 did 10 to 20, 6 did 20 to 30 and 4 did 30 to 40. A value on a boundary goes in the higher class, so 20 minutes is in 20 to 30.",
+   "To count the values in more than one class, add the heights of those bars. A histogram shows which class a value is in, not the exact value."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of homework minutes for 20 students. The bars touch. Class 0 to 10 has frequency 3, 10 to 20 has 7, 20 to 30 has 6 and 30 to 40 has 4.",
+    "x": {
+     "min": 0,
+     "max": 40,
+     "step": 10,
+     "label": "Minutes"
+    },
+    "y": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Frequency"
+    },
+    "classes": [
+     [
+      0,
+      10,
+      3
+     ],
+     [
+      10,
+      20,
+      7
+     ],
+     [
+      20,
+      30,
+      6
+     ],
+     [
+      30,
+      40,
+      4
+     ]
+    ]
+   }
+  },
+  "remember": "Equal classes, touching bars, and bar height is the frequency.",
+  "a": {
+   "q": "Using the histogram, how many students did 20 minutes or more of homework?",
+   "opts": [
+    "10",
+    "6",
+    "4",
+    "13"
+   ],
+   "why": "The bars for 20 to 30 and 30 to 40 give \\(6 + 4 = 10\\) students. Choosing 6 counts only one of these two classes.",
+   "clue": "Add the heights of every bar from 20 onwards.",
+   "fig": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of homework minutes for 20 students. Class 0 to 10 has frequency 3, 10 to 20 has 7, 20 to 30 has 6 and 30 to 40 has 4.",
+    "x": {
+     "min": 0,
+     "max": 40,
+     "step": 10,
+     "label": "Minutes"
+    },
+    "y": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Frequency"
+    },
+    "classes": [
+     [
+      0,
+      10,
+      3
+     ],
+     [
+      10,
+      20,
+      7
+     ],
+     [
+      20,
+      30,
+      6
+     ],
+     [
+      30,
+      40,
+      4
+     ]
+    ]
+   }
+  },
+  "b": {
+   "d": 3,
+   "q": "Jin records how late 30 trains are, from 0 to 40 minutes. Which set of classes suits a histogram?",
+   "opts": [
+    "0 to 10, 10 to 20, 20 to 30, 30 to 40",
+    "0 to 10, 10 to 30, 30 to 35, 35 to 40",
+    "0 to 10, 10 to 20, 30 to 40, 40 to 50",
+    "0 to 10, 5 to 15, 15 to 25, 25 to 40"
+   ],
+   "why": "The set 0 to 10, 10 to 20, 20 to 30, 30 to 40 has equal widths, with no gaps and no overlaps. The set with 10 to 30 and 30 to 35 has unequal widths, and the set that jumps from 10 to 20 straight to 30 to 40 leaves a gap. The set with 0 to 10 and 5 to 15 overlaps from 5 to 10.",
+   "clue": "Check the widths, then look for gaps or overlaps."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:54Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) names the options by position ('the first set', 'the second set', 'the fourth'), but options are shown in a random order. In the order shown, the right set is the fourth option, and the overlapping 5 to 15 set is the second, so a student would read an explanation that contradicts the options. Name each set by its classes instead."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) names the options by position ('the first set', 'the second set', 'the fourth'), but options are shown in a random order. In the order shown, the right set is the fourth option, and the overlapping 5 to 15 set is the second, so a student would read an explanation that contradicts the options. Name each set by its classes instead."
+  ]
+ },
+ "final": {
+  "title": "Histograms",
+  "card": [
+   "A histogram shows numerical data grouped into classes of equal width, such as 0 to 10 and 10 to 20. Each value fits in exactly one class, with no gaps and no overlaps.",
+   "Each bar stands over one class. The height of the bar is the frequency, which is the number of values in that class. The bars touch because the classes run on from one to the next.",
+   "Example: 20 students record minutes of homework. 3 did 0 to 10 minutes, 7 did 10 to 20, 6 did 20 to 30 and 4 did 30 to 40. A value on a boundary goes in the higher class, so 20 minutes is in 20 to 30.",
+   "To count the values in more than one class, add the heights of those bars. A histogram shows which class a value is in, not the exact value."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of homework minutes for 20 students. The bars touch. Class 0 to 10 has frequency 3, 10 to 20 has 7, 20 to 30 has 6 and 30 to 40 has 4.",
+    "x": {
+     "min": 0,
+     "max": 40,
+     "step": 10,
+     "label": "Minutes"
+    },
+    "y": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Frequency"
+    },
+    "classes": [
+     [
+      0,
+      10,
+      3
+     ],
+     [
+      10,
+      20,
+      7
+     ],
+     [
+      20,
+      30,
+      6
+     ],
+     [
+      30,
+      40,
+      4
+     ]
+    ]
+   }
+  },
+  "remember": "Equal classes, touching bars, and bar height is the frequency.",
+  "a": {
+   "q": "Using the histogram, how many students did 20 minutes or more of homework?",
+   "opts": [
+    "10",
+    "6",
+    "4",
+    "13"
+   ],
+   "why": "The bars for 20 to 30 and 30 to 40 give \\(6 + 4 = 10\\) students. Choosing 6 counts only one of these two classes.",
+   "clue": "Add the heights of every bar from 20 onwards.",
+   "fig": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of homework minutes for 20 students. Class 0 to 10 has frequency 3, 10 to 20 has 7, 20 to 30 has 6 and 30 to 40 has 4.",
+    "x": {
+     "min": 0,
+     "max": 40,
+     "step": 10,
+     "label": "Minutes"
+    },
+    "y": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Frequency"
+    },
+    "classes": [
+     [
+      0,
+      10,
+      3
+     ],
+     [
+      10,
+      20,
+      7
+     ],
+     [
+      20,
+      30,
+      6
+     ],
+     [
+      30,
+      40,
+      4
+     ]
+    ]
+   }
+  },
+  "b": {
+   "d": 3,
+   "q": "Jin records how late 30 trains are, from 0 to 40 minutes. Which set of classes suits a histogram?",
+   "opts": [
+    "0 to 10, 10 to 20, 20 to 30, 30 to 40",
+    "0 to 10, 10 to 30, 30 to 35, 35 to 40",
+    "0 to 10, 10 to 20, 30 to 40, 40 to 50",
+    "0 to 10, 5 to 15, 15 to 25, 25 to 40"
+   ],
+   "why": "The set 0 to 10, 10 to 20, 20 to 30, 30 to 40 has equal widths, with no gaps and no overlaps. The set with 10 to 30 and 30 to 35 has unequal widths, and the set that jumps from 10 to 20 straight to 30 to 40 leaves a gap. The set with 0 to 10 and 5 to 15 overlaps from 5 to 10.",
+   "clue": "Check the widths, then look for gaps or overlaps."
+  }
+ },
+ "cleared_by": "auto"
+}

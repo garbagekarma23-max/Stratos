@@ -1,0 +1,545 @@
+{
+ "id": "mat-transforming-exponential-graphs",
+ "title": "Transforming exponential graphs",
+ "brief": "f0e370964257",
+ "shortlist": [
+  [
+   "mat-exponential-functions",
+   0.576
+  ],
+  [
+   "mat-tangent-graph",
+   0.454
+  ],
+  [
+   "mat-transformations-graphs",
+   0.379
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.371
+  ],
+  [
+   "mat-exponential-logarithmic-graphs",
+   0.366
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done (still fails the content check)",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0005,
+  "write": 0.04429,
+  "check": 0.01295,
+  "fix": 0.04011,
+  "recheck": 0.01009
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Exponential functions, covers y = a^x passing through (0, 1) with asymptote y = 0 but not the vertical shift that moves the asymptote to y = k, which is a new step, and the Exponential and logarithmic graphs point covers that shift only for e^x and log graphs at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Transforming exponential graphs",
+  "card": [
+   "For \\(a > 1\\), the graph of \\(y = a^{x}\\) passes through \\((0, 1)\\) and rises from left to right. The x-axis is an asymptote: the curve gets close to it but never touches it.",
+   "Adding \\(k\\) gives \\(y = a^{x} + k\\). Every point moves up by \\(k\\) units, or down if \\(k\\) is negative. The asymptote moves from \\(y = 0\\) to \\(y = k\\).",
+   "The y-intercept moves too. Put \\(x = 0\\) into \\(y = a^{x} + k\\) and you get \\(y = 1 + k\\).",
+   "Example: \\(y = 2^{x} - 3\\) has asymptote \\(y = -3\\). Its y-intercept is \\(1 - 3 = -2\\), so it passes through \\((0, -2)\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The curve \\(y = 2^{x}\\), rising from left to right, passing through the point \\((0, 1)\\) and getting closer to the x-axis on the left.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -2,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "below-right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The original curve \\(y = 2^{x}\\) dashed and the curve \\(y = 2^{x} - 3\\) solid, shifted down 3 units, with horizontal asymptote \\(y = -3\\) and y-intercept \\((0, -2)\\).",
+    "x": {
+     "min": -4,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -5,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "style": "dash",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.4,
+      "pos": "left"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "2^{x} - 3",
+      "label": "\\(y = 2^{x} - 3\\)",
+      "labelAt": 2.2,
+      "pos": "below-right"
+     },
+     {
+      "type": "asymptote",
+      "y": -3,
+      "label": "\\(y = -3\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -2
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, -2)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Adding \\(k\\) to \\(y = a^{x}\\) moves the whole graph and its asymptote to \\(y = k\\).",
+  "a": {
+   "q": "What is the asymptote of \\(y = 3^{x} + 2\\)?",
+   "opts": [
+    "\\(y = 2\\)",
+    "\\(y = -2\\)",
+    "\\(y = 0\\)",
+    "\\(x = 2\\)"
+   ],
+   "why": "Adding 2 moves the graph up 2 units, so the asymptote moves from \\(y = 0\\) to \\(y = 2\\). The option \\(y = -2\\) has the direction of the shift reversed.",
+   "clue": "The asymptote moves by the same amount as the graph."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = 5^{x} - 4\\). Where does her graph cross the y-axis?",
+   "opts": [
+    "\\((0, -3)\\)",
+    "\\((0, -4)\\)",
+    "\\((0, 1)\\)",
+    "\\((0, -5)\\)"
+   ],
+   "why": "Put \\(x = 0\\) in: \\(5^{0} - 4 = 1 - 4 = -3\\). The point \\((0, -4)\\) is tempting, but it is the asymptote level, which the curve never reaches.",
+   "clue": "Anything to the power 0 is 1."
+  }
+ },
+ "redone": true,
+ "local": [
+  "mat-transforming-exponential-graphs the figure on card line 4 has labels that run into each other: −1 and \\((0, -2)\\). Move one with pos or labelAt",
+  "mat-transforming-exponential-graphs the figure on card line 4 has the axis number 1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+  "mat-transforming-exponential-graphs the figure on card line 4 has the label \\(y = 2^{x}\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "\\(y = 2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((0, -3)\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"moves the whole graph and its asymptote to y = k\" reads as if the whole graph moves to y = k. It should say the graph moves up (or down) by k and the asymptote moves to y = k, as the card does."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The clue \"Anything to the power 0 is 1\" overgeneralises, because 0^0 is not defined. It should say any non-zero number (or the base a) to the power 0 is 1."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths, graphs and answers are correct (asymptote y = 2; y-intercept (0, -3)). The remember line's wording blurs the shift of the graph with the asymptote's new position, and the clue in (b) says \"anything\" to the power 0 is 1 without excluding 0."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"moves the whole graph and its asymptote to y = k\" reads as if the whole graph moves to y = k. It should say the graph moves up (or down) by k and the asymptote moves to y = k, as the card does.",
+  "Question b, fact: The clue \"Anything to the power 0 is 1\" overgeneralises, because 0^0 is not defined. It should say any non-zero number (or the base a) to the power 0 is 1.",
+  "Content check: mat-transforming-exponential-graphs the figure on card line 4 has labels that run into each other: −1 and \\((0, -2)\\). Move one with pos or labelAt",
+  "Content check: mat-transforming-exponential-graphs the figure on card line 4 has the axis number 1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+  "Content check: mat-transforming-exponential-graphs the figure on card line 4 has the label \\(y = 2^{x}\\) on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Transforming exponential graphs",
+  "card": [
+   "For \\(a > 1\\), the graph of \\(y = a^{x}\\) passes through \\((0, 1)\\) and rises from left to right. The x-axis is an asymptote: the curve gets close to it but never touches it.",
+   "Adding \\(k\\) gives \\(y = a^{x} + k\\). Every point moves up by \\(k\\) units, or down if \\(k\\) is negative. The asymptote moves from \\(y = 0\\) to \\(y = k\\).",
+   "The y-intercept moves too. Put \\(x = 0\\) into \\(y = a^{x} + k\\) and you get \\(y = 1 + k\\).",
+   "Example: \\(y = 2^{x} - 3\\) has asymptote \\(y = -3\\). Its y-intercept is \\(1 - 3 = -2\\), so it passes through \\((0, -2)\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The curve \\(y = 2^{x}\\), rising from left to right, passing through the point \\((0, 1)\\) and getting closer to the x-axis on the left.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -2,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "below-right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The original curve \\(y = 2^{x}\\) dashed and the curve \\(y = 2^{x} - 3\\) solid, shifted down 3 units, with horizontal asymptote \\(y = -3\\) and y-intercept \\((0, -2)\\).",
+    "x": {
+     "min": -4,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -5,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "style": "dash",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": -2.5,
+      "pos": "above"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "2^{x} - 3",
+      "label": "\\(y = 2^{x} - 3\\)",
+      "labelAt": 2.2,
+      "pos": "below-right"
+     },
+     {
+      "type": "asymptote",
+      "y": -3,
+      "label": "\\(y = -3\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -2
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, -2)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Adding \\(k\\) to \\(y = a^{x}\\) moves the graph up by \\(k\\) units (down if \\(k\\) is negative), and the asymptote moves to \\(y = k\\).",
+  "a": {
+   "q": "What is the asymptote of \\(y = 3^{x} + 2\\)?",
+   "opts": [
+    "\\(y = 2\\)",
+    "\\(y = -2\\)",
+    "\\(y = 0\\)",
+    "\\(x = 2\\)"
+   ],
+   "why": "Adding 2 moves the graph up 2 units, so the asymptote moves from \\(y = 0\\) to \\(y = 2\\). The option \\(y = -2\\) has the direction of the shift reversed.",
+   "clue": "The asymptote moves by the same amount as the graph."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = 5^{x} - 4\\). Where does her graph cross the y-axis?",
+   "opts": [
+    "\\((0, -3)\\)",
+    "\\((0, -4)\\)",
+    "\\((0, 1)\\)",
+    "\\((0, -5)\\)"
+   ],
+   "why": "Put \\(x = 0\\) in: \\(5^{0} - 4 = 1 - 4 = -3\\). The point \\((0, -4)\\) is tempting, but it is the level of the asymptote, which the curve never reaches.",
+   "clue": "Any non-zero number to the power 0 is 1."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(y = 2\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\((0, -3)\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"moves the whole graph and its asymptote to y = k\" reads as if the whole graph moves to y = k. It should say the graph moves up (or down) by k and the asymptote moves to y = k, as the card does."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The clue \"Anything to the power 0 is 1\" overgeneralises, because 0^0 is not defined. It should say any non-zero number (or the base a) to the power 0 is 1."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"moves the whole graph and its asymptote to y = k\" reads as if the whole graph moves to y = k. It should say the graph moves up (or down) by k and the asymptote moves to y = k, as the card does.",
+   "Question b, fact: The clue \"Anything to the power 0 is 1\" overgeneralises, because 0^0 is not defined. It should say any non-zero number (or the base a) to the power 0 is 1.",
+   "Content check: mat-transforming-exponential-graphs the figure on card line 4 has labels that run into each other: −1 and \\((0, -2)\\). Move one with pos or labelAt",
+   "Content check: mat-transforming-exponential-graphs the figure on card line 4 has the axis number 1 on a curve. Move it with pos or labelAt, change the axes or the step, or use nums: false",
+   "Content check: mat-transforming-exponential-graphs the figure on card line 4 has the label \\(y = 2^{x}\\) on a curve. Move it with pos or labelAt, or move the curve"
+  ]
+ },
+ "final": {
+  "title": "Transforming exponential graphs",
+  "card": [
+   "For \\(a > 1\\), the graph of \\(y = a^{x}\\) passes through \\((0, 1)\\) and rises from left to right. The x-axis is an asymptote: the curve gets close to it but never touches it.",
+   "Adding \\(k\\) gives \\(y = a^{x} + k\\). Every point moves up by \\(k\\) units, or down if \\(k\\) is negative. The asymptote moves from \\(y = 0\\) to \\(y = k\\).",
+   "The y-intercept moves too. Put \\(x = 0\\) into \\(y = a^{x} + k\\) and you get \\(y = 1 + k\\).",
+   "Example: \\(y = 2^{x} - 3\\) has asymptote \\(y = -3\\). Its y-intercept is \\(1 - 3 = -2\\), so it passes through \\((0, -2)\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The curve \\(y = 2^{x}\\), rising from left to right, passing through the point \\((0, 1)\\) and getting closer to the x-axis on the left.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -2,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.6,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "below-right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The original curve \\(y = 2^{x}\\) dashed and the curve \\(y = 2^{x} - 3\\) solid, shifted down 3 units, with horizontal asymptote \\(y = -3\\) and y-intercept \\((0, -2)\\).",
+    "x": {
+     "min": -4,
+     "max": 5,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -5,
+     "max": 7,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "style": "dash",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": -2.5,
+      "pos": "above"
+     },
+     {
+      "type": "fn",
+      "id": "g",
+      "expr": "2^{x} - 3",
+      "label": "\\(y = 2^{x} - 3\\)",
+      "labelAt": 2.2,
+      "pos": "below-right"
+     },
+     {
+      "type": "asymptote",
+      "y": -3,
+      "label": "\\(y = -3\\)"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       -2
+      ],
+      "on": [
+       "g"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, -2)\\)",
+      "pos": "below-right"
+     }
+    ]
+   }
+  },
+  "remember": "Adding \\(k\\) to \\(y = a^{x}\\) moves the graph up by \\(k\\) units (down if \\(k\\) is negative), and the asymptote moves to \\(y = k\\).",
+  "a": {
+   "q": "What is the asymptote of \\(y = 3^{x} + 2\\)?",
+   "opts": [
+    "\\(y = 2\\)",
+    "\\(y = -2\\)",
+    "\\(y = 0\\)",
+    "\\(x = 2\\)"
+   ],
+   "why": "Adding 2 moves the graph up 2 units, so the asymptote moves from \\(y = 0\\) to \\(y = 2\\). The option \\(y = -2\\) has the direction of the shift reversed.",
+   "clue": "The asymptote moves by the same amount as the graph."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = 5^{x} - 4\\). Where does her graph cross the y-axis?",
+   "opts": [
+    "\\((0, -3)\\)",
+    "\\((0, -4)\\)",
+    "\\((0, 1)\\)",
+    "\\((0, -5)\\)"
+   ],
+   "why": "Put \\(x = 0\\) in: \\(5^{0} - 4 = 1 - 4 = -3\\). The point \\((0, -4)\\) is tempting, but it is the level of the asymptote, which the curve never reaches.",
+   "clue": "Any non-zero number to the power 0 is 1."
+  }
+ },
+ "cleared_by": "recheck"
+}

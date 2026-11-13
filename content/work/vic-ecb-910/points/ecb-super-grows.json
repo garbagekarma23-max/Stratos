@@ -1,0 +1,245 @@
+{
+ "id": "ecb-super-grows",
+ "title": "How super grows",
+ "brief": "f089cf31fed3",
+ "shortlist": [
+  [
+   "ecb-managing-your-superannuation",
+   0.518
+  ],
+  [
+   "ecb-superannuation",
+   0.516
+  ],
+  [
+   "ecb-ways-invest",
+   0.352
+  ],
+  [
+   "ecb-superannuation-guarantee",
+   0.329
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:45Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:34Z write: failed the content check, writing again",
+  "2026-11-12T15:25:56Z write: done",
+  "2026-11-12T15:35:03Z check: flagged",
+  "2026-11-12T15:42:21Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01854,
+  "check": 0.01244,
+  "fix": 0.02171,
+  "recheck": 0.00904
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how compound returns grow super over decades. The closest, Managing your superannuation, covers fees and comparing funds but not compounding, so it is related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "How super grows",
+  "card": [
+   "Super money is invested, for example in shares and property. The fund earns returns, such as dividends and rent, and adds them to the balance.",
+   "Compound returns mean the returns earn returns of their own. Super is held for decades, so this effect builds up and the balance can grow a lot.",
+   "Fees are taken out of the balance each year. A small difference in fees, repeated over decades, can leave a much smaller final balance.",
+   "Funds differ in their fees and in their returns. Choosing a fund with lower fees or stronger returns can make a big difference to the final balance."
+  ],
+  "remember": "Time and compound returns grow super. Fees and the choice of fund can change how much it grows.",
+  "a": {
+   "q": "Why can super grow a lot over a working life?",
+   "opts": [
+    "Returns are added and then earn returns too, for decades",
+    "Returns are paid out each year, so the balance stays low",
+    "The fund adds the same amount each year, so growth is steady",
+    "Fees are removed, so the whole balance keeps growing"
+   ],
+   "why": "Compound returns mean past returns earn further returns, and decades give this time to build. Paying returns out would stop them compounding, and fees reduce the balance rather than remove it.",
+   "clue": "Think about returns that earn their own returns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya and Sam each have the same super balance and the same earnings. Priya's fund charges higher fees than Sam's. Which is the most likely result after 30 years?",
+   "opts": [
+    "Priya's balance is smaller, because fees come out each year",
+    "Priya's balance is larger, because higher fees buy growth",
+    "Both balances match, because the starting amounts match",
+    "Priya's balance is smaller, because fees stop compounding"
+   ],
+   "why": "Fees come out of the balance each year, and over 30 years the loss builds up. Fees do not stop compounding. They reduce the balance that earns returns, so the final balance is lower.",
+   "clue": "Fees leave the balance every year, for 30 years."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Returns are added and then earn returns too, for decades",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya's balance is smaller, because fees come out each year",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says fees 'reduce the balance rather than remove it', which is confusing because the card says fees are taken out of the balance. The distractor is wrong because fees shrink the balance, not because they are not removed."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'returns that earn their own returns' repeats the wording of the right option almost exactly, so a student can match it without understanding compounding."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Fees leave the balance every year' picks out the right option over the other 'smaller' option by echoing its reason ('fees come out each year'), which gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are sound. Both clues echo the wording of the right options and give the answers away, and the why for (a) confusingly says fees reduce rather than remove the balance."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why says fees 'reduce the balance rather than remove it', which is confusing because the card says fees are taken out of the balance. The distractor is wrong because fees shrink the balance, not because they are not removed.",
+  "Question a, other: The clue 'returns that earn their own returns' repeats the wording of the right option almost exactly, so a student can match it without understanding compounding.",
+  "Question b, other: The clue 'Fees leave the balance every year' picks out the right option over the other 'smaller' option by echoing its reason ('fees come out each year'), which gives the answer away."
+ ],
+ "proposal": {
+  "title": "How super grows",
+  "card": [
+   "Super money is invested, for example in shares and property. The fund earns returns, such as dividends and rent, and adds them to the balance.",
+   "Compound returns mean the returns earn returns of their own. Super is held for decades, so this effect builds up and the balance can grow a lot.",
+   "Fees are taken out of the balance each year. A small difference in fees, repeated over decades, can leave a much smaller final balance.",
+   "Funds differ in their fees and in their returns. Choosing a fund with lower fees or stronger returns can make a big difference to the final balance."
+  ],
+  "remember": "Time and compound returns grow super. Fees and the choice of fund can change how much it grows.",
+  "a": {
+   "q": "Why can super grow a lot over a working life?",
+   "opts": [
+    "Returns stay in the fund and build on each other for decades",
+    "Returns are paid out each year, so they never add up",
+    "The fund adds the same amount each year, so growth is steady",
+    "Fees are charged only once, so they barely touch the balance"
+   ],
+   "why": "Returns are added to the balance, so later returns are earned on them too, and decades let this build up. Returns paid out each year could not compound. Fees are taken out of the balance each year, not once, so they slow growth rather than barely touching it.",
+   "clue": "Think about what happens to last year's returns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya and Sam each start with the same super balance, and their funds earn the same returns before fees. Priya's fund charges higher fees than Sam's. What is the most likely result after 30 years?",
+   "opts": [
+    "Priya's balance is smaller, because fees come out each year",
+    "Priya's balance is larger, because higher fees buy growth",
+    "Both balances match, because the starting amounts match",
+    "Priya's balance is smaller, because fees stop compounding"
+   ],
+   "why": "Higher fees are taken out of Priya's balance each year, so less money is left to earn returns, and over 30 years the gap builds up. Her fund still earns compound returns, so fees do not stop compounding. They shrink the amount that compounds.",
+   "clue": "Does Priya's fund still earn returns on its returns?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Returns stay in the fund and build on each other for decades",
+    "also_right": []
+   },
+   "b": {
+    "best": "Priya's balance is smaller, because fees come out each year",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says fees 'reduce the balance rather than remove it', which is confusing because the card says fees are taken out of the balance. The distractor is wrong because fees shrink the balance, not because they are not removed."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'returns that earn their own returns' repeats the wording of the right option almost exactly, so a student can match it without understanding compounding."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Fees leave the balance every year' picks out the right option over the other 'smaller' option by echoing its reason ('fees come out each year'), which gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why says fees 'reduce the balance rather than remove it', which is confusing because the card says fees are taken out of the balance. The distractor is wrong because fees shrink the balance, not because they are not removed.",
+   "Question a, other: The clue 'returns that earn their own returns' repeats the wording of the right option almost exactly, so a student can match it without understanding compounding.",
+   "Question b, other: The clue 'Fees leave the balance every year' picks out the right option over the other 'smaller' option by echoing its reason ('fees come out each year'), which gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "How super grows",
+  "card": [
+   "Super money is invested, for example in shares and property. The fund earns returns, such as dividends and rent, and adds them to the balance.",
+   "Compound returns mean the returns earn returns of their own. Super is held for decades, so this effect builds up and the balance can grow a lot.",
+   "Fees are taken out of the balance each year. A small difference in fees, repeated over decades, can leave a much smaller final balance.",
+   "Funds differ in their fees and in their returns. Choosing a fund with lower fees or stronger returns can make a big difference to the final balance."
+  ],
+  "remember": "Time and compound returns grow super. Fees and the choice of fund can change how much it grows.",
+  "a": {
+   "q": "Why can super grow a lot over a working life?",
+   "opts": [
+    "Returns stay in the fund and build on each other for decades",
+    "Returns are paid out each year, so they never add up",
+    "The fund adds the same amount each year, so growth is steady",
+    "Fees are charged only once, so they barely touch the balance"
+   ],
+   "why": "Returns are added to the balance, so later returns are earned on them too, and decades let this build up. Returns paid out each year could not compound. Fees are taken out of the balance each year, not once, so they slow growth rather than barely touching it.",
+   "clue": "Think about what happens to last year's returns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya and Sam each start with the same super balance, and their funds earn the same returns before fees. Priya's fund charges higher fees than Sam's. What is the most likely result after 30 years?",
+   "opts": [
+    "Priya's balance is smaller, because fees come out each year",
+    "Priya's balance is larger, because higher fees buy growth",
+    "Both balances match, because the starting amounts match",
+    "Priya's balance is smaller, because fees stop compounding"
+   ],
+   "why": "Higher fees are taken out of Priya's balance each year, so less money is left to earn returns, and over 30 years the gap builds up. Her fund still earns compound returns, so fees do not stop compounding. They shrink the amount that compounds.",
+   "clue": "Does Priya's fund still earn returns on its returns?"
+  }
+ },
+ "cleared_by": "recheck"
+}

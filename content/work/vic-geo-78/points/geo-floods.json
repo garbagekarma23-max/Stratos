@@ -1,0 +1,259 @@
+{
+ "id": "geo-floods",
+ "title": "Floods",
+ "brief": "7b22f4f66b94",
+ "shortlist": [
+  [
+   "geo-river-regulation",
+   0.449
+  ],
+  [
+   "geo-floods-tropical-cyclones",
+   0.403
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:00Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00631,
+  "check": 0.01373,
+  "fix": 0.01914,
+  "recheck": 0.0055
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the brief's distinction between fast flash floods and slow river floods over plains: the cyclone card treats floods only as a general definition within a cyclone topic, and the river regulation card is about controlling flows, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Floods",
+  "card": [
+   "A flood happens when water covers land that is usually dry. It can occur when heavy rain makes a river overflow its banks.",
+   "It can also occur when rain falls faster than the ground and drains can take it away, so water pools on the surface.",
+   [
+    "Flash flood",
+    "water rises within hours of heavy rain, often with little warning. It can happen in small creeks and in towns where hard surfaces shed water quickly."
+   ],
+   [
+    "River flood",
+    "water builds up over days as rain far upstream flows down a river and spreads across a wide, flat plain. The flood can last for days or weeks."
+   ]
+  ],
+  "remember": "Floods come from rain arriving faster than water can drain. Flash floods are quick, river floods are slow.",
+  "a": {
+   "q": "Which event is a flash flood?",
+   "opts": [
+    "A creek rises in two hours after a heavy storm",
+    "A river slowly spreads over a plain across ten days",
+    "A dam is drained on purpose to water crops",
+    "A dry riverbed stays empty for a whole year"
+   ],
+   "why": "A flash flood rises within hours of heavy rain. The slow spread over ten days is a river flood, which builds over days across a wide plain.",
+   "clue": "Think about how quickly the water rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "Heavy rain falls over hills far inland. Five days later, the river near Priya's farm on a wide flat plain overflows and floods her paddocks. What type of flood is this?",
+   "opts": [
+    "A river flood, as water built up over days",
+    "A flash flood, as the rain fell on hills",
+    "A flash flood, as the paddocks were flooded",
+    "A river flood, as the rain fell far away"
+   ],
+   "why": "The water took days to reach the plain, so it is a river flood. The tempting answer is a flash flood because the rain was heavy, but flash floods rise within hours of the rain.",
+   "clue": "Count how long passed between the rain and the flooding."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A creek rises in two hours after a heavy storm",
+   "also_right": []
+  },
+  "b": {
+   "best": "A river flood, as water built up over days",
+   "also_right": [
+    "A river flood, as the rain fell far away"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two options both say 'river flood' and differ only in the reason. The card describes a river flood as rain far upstream flowing down a river, so 'A river flood, as the rain fell far away' is also defensible. A student who picks the right flood type could be marked wrong."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the tempting answer is a flash flood 'because the rain was heavy', but neither flash-flood option gives that reason. They say 'the paddocks were flooded' and 'the rain fell on hills'."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'Floods come from rain arriving faster than water can drain' folds the card's two causes (a river overflowing its banks, and water pooling on the surface) into one. It also states it as a general rule, where the card says floods 'can occur' these ways."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are sound. In question b, two options both say 'river flood' and the 'rain fell far away' option is also defensible, and the why names a tempting reason that no option gives. The remember line also oversimplifies the card's two flood causes into one rule."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “A river flood, as the rain fell far away” could also be right.",
+  "Question b, wording: Two options both say 'river flood' and differ only in the reason. The card describes a river flood as rain far upstream flowing down a river, so 'A river flood, as the rain fell far away' is also defensible. A student who picks the right flood type could be marked wrong.",
+  "Question b, other: The why says the tempting answer is a flash flood 'because the rain was heavy', but neither flash-flood option gives that reason. They say 'the paddocks were flooded' and 'the rain fell on hills'.",
+  "Remember, other: 'Floods come from rain arriving faster than water can drain' folds the card's two causes (a river overflowing its banks, and water pooling on the surface) into one. It also states it as a general rule, where the card says floods 'can occur' these ways."
+ ],
+ "proposal": {
+  "title": "Floods",
+  "card": [
+   "A flood happens when water covers land that is usually dry. It can occur when heavy rain makes a river overflow its banks.",
+   "It can also occur when rain falls faster than the ground and drains can take it away, so water pools on the surface.",
+   [
+    "Flash flood",
+    "water rises within hours of heavy rain, often with little warning. It can happen in small creeks and in towns where hard surfaces shed water quickly."
+   ],
+   [
+    "River flood",
+    "water builds up over days as rain far upstream flows down a river and spreads across a wide, flat plain. The flood can last for days or weeks."
+   ]
+  ],
+  "remember": "A flood can come from a river overflowing or from water pooling on the surface. Flash floods rise in hours, river floods build over days.",
+  "a": {
+   "q": "Which event is a flash flood?",
+   "opts": [
+    "A creek rises in two hours after a heavy storm",
+    "A river slowly spreads over a plain across ten days",
+    "A dam is drained on purpose to water crops",
+    "A dry riverbed stays empty for a whole year"
+   ],
+   "why": "A flash flood rises within hours of heavy rain. The slow spread over ten days is a river flood, which builds over days across a wide plain.",
+   "clue": "Think about how quickly the water rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "Heavy rain falls over hills far inland. Five days later, the river near Priya's farm overflows and floods her paddocks. Which detail best shows this is a river flood, not a flash flood?",
+   "opts": [
+    "The water took five days to reach her farm",
+    "The rain that caused it was very heavy",
+    "The water covered land that is usually dry",
+    "The flood happened on land used for farming"
+   ],
+   "why": "River floods build over days, while flash floods rise within hours, so the five-day gap shows a river flood. Heavy rain is tempting, but it can cause both types. Water covering usually dry land is true of every flood.",
+   "clue": "Which detail would be different if it were a flash flood?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A creek rises in two hours after a heavy storm",
+    "also_right": []
+   },
+   "b": {
+    "best": "The water took five days to reach her farm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two options both say 'river flood' and differ only in the reason. The card describes a river flood as rain far upstream flowing down a river, so 'A river flood, as the rain fell far away' is also defensible. A student who picks the right flood type could be marked wrong."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the tempting answer is a flash flood 'because the rain was heavy', but neither flash-flood option gives that reason. They say 'the paddocks were flooded' and 'the rain fell on hills'."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'Floods come from rain arriving faster than water can drain' folds the card's two causes (a river overflowing its banks, and water pooling on the surface) into one. It also states it as a general rule, where the card says floods 'can occur' these ways."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “A river flood, as the rain fell far away” could also be right.",
+   "Question b, wording: Two options both say 'river flood' and differ only in the reason. The card describes a river flood as rain far upstream flowing down a river, so 'A river flood, as the rain fell far away' is also defensible. A student who picks the right flood type could be marked wrong.",
+   "Question b, other: The why says the tempting answer is a flash flood 'because the rain was heavy', but neither flash-flood option gives that reason. They say 'the paddocks were flooded' and 'the rain fell on hills'.",
+   "Remember, other: 'Floods come from rain arriving faster than water can drain' folds the card's two causes (a river overflowing its banks, and water pooling on the surface) into one. It also states it as a general rule, where the card says floods 'can occur' these ways."
+  ]
+ },
+ "final": {
+  "title": "Floods",
+  "card": [
+   "A flood happens when water covers land that is usually dry. It can occur when heavy rain makes a river overflow its banks.",
+   "It can also occur when rain falls faster than the ground and drains can take it away, so water pools on the surface.",
+   [
+    "Flash flood",
+    "water rises within hours of heavy rain, often with little warning. It can happen in small creeks and in towns where hard surfaces shed water quickly."
+   ],
+   [
+    "River flood",
+    "water builds up over days as rain far upstream flows down a river and spreads across a wide, flat plain. The flood can last for days or weeks."
+   ]
+  ],
+  "remember": "A flood can come from a river overflowing or from water pooling on the surface. Flash floods rise in hours, river floods build over days.",
+  "a": {
+   "q": "Which event is a flash flood?",
+   "opts": [
+    "A creek rises in two hours after a heavy storm",
+    "A river slowly spreads over a plain across ten days",
+    "A dam is drained on purpose to water crops",
+    "A dry riverbed stays empty for a whole year"
+   ],
+   "why": "A flash flood rises within hours of heavy rain. The slow spread over ten days is a river flood, which builds over days across a wide plain.",
+   "clue": "Think about how quickly the water rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "Heavy rain falls over hills far inland. Five days later, the river near Priya's farm overflows and floods her paddocks. Which detail best shows this is a river flood, not a flash flood?",
+   "opts": [
+    "The water took five days to reach her farm",
+    "The rain that caused it was very heavy",
+    "The water covered land that is usually dry",
+    "The flood happened on land used for farming"
+   ],
+   "why": "River floods build over days, while flash floods rise within hours, so the five-day gap shows a river flood. Heavy rain is tempting, but it can cause both types. Water covering usually dry land is true of every flood.",
+   "clue": "Which detail would be different if it were a flash flood?"
+  }
+ },
+ "cleared_by": "recheck"
+}

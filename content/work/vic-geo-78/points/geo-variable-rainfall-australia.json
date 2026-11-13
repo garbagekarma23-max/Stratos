@@ -1,0 +1,224 @@
+{
+ "id": "geo-variable-rainfall-australia",
+ "title": "Variable rainfall in Australia",
+ "brief": "d54b1dcc77ba",
+ "shortlist": [
+  [
+   "geo-water-supply-varies",
+   0.283
+  ],
+  [
+   "geo-drought",
+   0.267
+  ],
+  [
+   "geo-where-australia-s-water",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:47Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:59Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T16:19:52Z autoreview: cleared with the fix (b other, a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.0067,
+  "check": 0.01325,
+  "fix": 0.01821
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points explains that Australian rainfall is driven by El Niño and La Niña, which is the central idea of the new point; the closest card, Why water supply varies, only notes that some years are wetter or drier without giving the cause.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Variable rainfall in Australia",
+  "card": [
+   "Variable rainfall means the amount of rain changes a lot from year to year. Australia has wet years and dry years, and a place can swing from one to the other.",
+   [
+    "El Niño",
+    "a pattern in the Pacific Ocean that is often linked to drier years in eastern and northern Australia. It does not always bring drought."
+   ],
+   [
+    "La Niña",
+    "a pattern in the Pacific Ocean that is often linked to wetter years in eastern and northern Australia. It does not always bring floods."
+   ],
+   "Because rainfall swings so much, droughts and floods are both common. Dams store water in wet years so that people can use it in dry years."
+  ],
+  "remember": "Rainfall swings from year to year. El Niño is often drier, La Niña is often wetter, and dams store water for dry years.",
+  "a": {
+   "q": "What does it mean to say Australia's rainfall is variable?",
+   "opts": [
+    "The amount of rain changes a lot from year to year",
+    "Rain falls evenly across the country each year",
+    "Rain falls only in the wet season each year",
+    "The amount of rain slowly rises every year"
+   ],
+   "why": "Variable means rainfall changes a lot from one year to the next, with wet years and dry years. Rain falling evenly would mean the amount stays steady, which is the opposite of variable.",
+   "clue": "Think about how rain differs from one year to the next."
+  },
+  "b": {
+   "d": 3,
+   "q": "A wheat farmer near Dubbo has had several dry years, and the Pacific Ocean is in an El Niño pattern. Why might the town's dam have been built?",
+   "opts": [
+    "To store water in wet years for use in dry years",
+    "To stop La Niña from bringing rain to the town",
+    "To make rainfall the same in every year",
+    "To store water because El Niño always brings drought"
+   ],
+   "why": "Rainfall swings between wet and dry years, so dams hold water from wet years to use when it is dry. The last option is tempting, but El Niño is often linked to drier years, not always, and dams are built because of the swings in rainfall.",
+   "clue": "Dams help when rainfall is uneven from year to year."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The amount of rain changes a lot from year to year",
+   "also_right": []
+  },
+  "b": {
+   "best": "To store water in wet years for use in dry years",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the 'always brings drought' option 'the last option', but options are shown in random order, and in this list the last option is the La Niña one. The explanation should name the option by its content, not its position."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says rain falling evenly 'would mean the amount stays steady', but the option 'Rain falls evenly across the country each year' is about rain spread across places (point 4), not change over time. The explanation mixes up the two ideas and could confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are correct. Why (b) refers to 'the last option' although option order is random, and Why (a) mixes up rain spread across the country with change from year to year."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) calls the 'always brings drought' option 'the last option', but options are shown in random order, and in this list the last option is the La Niña one. The explanation should name the option by its content, not its position.",
+  "Question a, other: Why (a) says rain falling evenly 'would mean the amount stays steady', but the option 'Rain falls evenly across the country each year' is about rain spread across places (point 4), not change over time. The explanation mixes up the two ideas and could confuse students."
+ ],
+ "proposal": {
+  "title": "Variable rainfall in Australia",
+  "card": [
+   "Variable rainfall means the amount of rain changes a lot from year to year. Australia has wet years and dry years, and a place can swing from one to the other.",
+   [
+    "El Niño",
+    "a pattern in the Pacific Ocean that is often linked to drier years in eastern and northern Australia. It does not always bring drought."
+   ],
+   [
+    "La Niña",
+    "a pattern in the Pacific Ocean that is often linked to wetter years in eastern and northern Australia. It does not always bring floods."
+   ],
+   "Because rainfall swings so much, droughts and floods are both common. Dams store water in wet years so that people can use it in dry years."
+  ],
+  "remember": "Rainfall swings from year to year. El Niño is often drier, La Niña is often wetter, and dams store water for dry years.",
+  "a": {
+   "q": "What does it mean to say Australia's rainfall is variable?",
+   "opts": [
+    "The amount of rain changes a lot from year to year",
+    "The amount of rain is about the same every year",
+    "Rain falls only in the wet season each year",
+    "The amount of rain slowly rises every year"
+   ],
+   "why": "Variable means the amount of rain changes a lot from one year to the next, with wet years and dry years. The option saying the amount is about the same every year is tempting to misread, but it describes steady rainfall, which is the opposite of variable.",
+   "clue": "Think about how rain differs from one year to the next."
+  },
+  "b": {
+   "d": 3,
+   "q": "A wheat farmer near Dubbo has had several dry years, and the Pacific Ocean is in an El Niño pattern. Why might the town's dam have been built?",
+   "opts": [
+    "To store water in wet years for use in dry years",
+    "To stop La Niña from bringing rain to the town",
+    "To make the rainfall the same in every year",
+    "To store water because El Niño always brings drought"
+   ],
+   "why": "Rainfall swings between wet and dry years, so dams hold water from wet years to use when it is dry. The option saying El Niño always brings drought is tempting, but El Niño is often linked to drier years, not always. Dams are built because of the swings in rainfall.",
+   "clue": "Dams help when rainfall is uneven from year to year."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:52Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the 'always brings drought' option 'the last option', but options are shown in random order, and in this list the last option is the La Niña one. The explanation should name the option by its content, not its position."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says rain falling evenly 'would mean the amount stays steady', but the option 'Rain falls evenly across the country each year' is about rain spread across places (point 4), not change over time. The explanation mixes up the two ideas and could confuse students."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) calls the 'always brings drought' option 'the last option', but options are shown in random order, and in this list the last option is the La Niña one. The explanation should name the option by its content, not its position.",
+   "Question a, other: Why (a) says rain falling evenly 'would mean the amount stays steady', but the option 'Rain falls evenly across the country each year' is about rain spread across places (point 4), not change over time. The explanation mixes up the two ideas and could confuse students."
+  ]
+ },
+ "final": {
+  "title": "Variable rainfall in Australia",
+  "card": [
+   "Variable rainfall means the amount of rain changes a lot from year to year. Australia has wet years and dry years, and a place can swing from one to the other.",
+   [
+    "El Niño",
+    "a pattern in the Pacific Ocean that is often linked to drier years in eastern and northern Australia. It does not always bring drought."
+   ],
+   [
+    "La Niña",
+    "a pattern in the Pacific Ocean that is often linked to wetter years in eastern and northern Australia. It does not always bring floods."
+   ],
+   "Because rainfall swings so much, droughts and floods are both common. Dams store water in wet years so that people can use it in dry years."
+  ],
+  "remember": "Rainfall swings from year to year. El Niño is often drier, La Niña is often wetter, and dams store water for dry years.",
+  "a": {
+   "q": "What does it mean to say Australia's rainfall is variable?",
+   "opts": [
+    "The amount of rain changes a lot from year to year",
+    "The amount of rain is about the same every year",
+    "Rain falls only in the wet season each year",
+    "The amount of rain slowly rises every year"
+   ],
+   "why": "Variable means the amount of rain changes a lot from one year to the next, with wet years and dry years. The option saying the amount is about the same every year is tempting to misread, but it describes steady rainfall, which is the opposite of variable.",
+   "clue": "Think about how rain differs from one year to the next."
+  },
+  "b": {
+   "d": 3,
+   "q": "A wheat farmer near Dubbo has had several dry years, and the Pacific Ocean is in an El Niño pattern. Why might the town's dam have been built?",
+   "opts": [
+    "To store water in wet years for use in dry years",
+    "To stop La Niña from bringing rain to the town",
+    "To make the rainfall the same in every year",
+    "To store water because El Niño always brings drought"
+   ],
+   "why": "Rainfall swings between wet and dry years, so dams hold water from wet years to use when it is dry. The option saying El Niño always brings drought is tempting, but El Niño is often linked to drier years, not always. Dams are built because of the swings in rainfall.",
+   "clue": "Dams help when rainfall is uneven from year to year."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,246 @@
+{
+ "id": "geo-cultural-burning",
+ "title": "Cultural burning",
+ "brief": "407029400990",
+ "shortlist": [
+  [
+   "geo-cultural-fire-management",
+   0.612
+  ],
+  [
+   "geo-traditional-knowledge-conservation",
+   0.325
+  ],
+  [
+   "geo-aboriginal-torres-strait-islander",
+   0.32
+  ],
+  [
+   "geo-first-nations-knowledge-managing",
+   0.27
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:49Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 may adapt geo-cultural-fire-management, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:42Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:01Z write: done",
+  "2026-11-12T15:35:06Z check: for review (first-nations)",
+  "2026-11-13T15:22:03Z review: rejected, to be written again",
+  "2026-11-13T15:37:11Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: for review (first-nations)",
+  "2026-11-13T16:11:05Z review: approved as written"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.01062,
+  "write": 0.01119,
+  "check": 0.00914
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-cultural-fire-management",
+  "changes": [
+   "Add a card line saying that fire agencies now work with Traditional Owners to bring cultural burning back, since the bank card does not cover this.",
+   "Add a Victorian example of cultural burning in place of or alongside the Northern Territory example, so the card suits a Victorian course."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same cool, patchy, well-timed burning idea at a suitable depth, but it lacks the brief's point that agencies now work with Traditional Owners to revive the practice and uses no Victorian example.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point on cultural fire management teaches the same burning practice, but the brief also asks students to learn that fire agencies now work with Traditional Owners to bring burning back, and adding that would be a new step rather than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Cultural burning",
+  "card": [
+   "Cultural burning is the use of fire to care for Country. It is a practice of Aboriginal and Torres Strait Islander Peoples built up over a very long time.",
+   "The fires are cool and patchy. They burn low to the ground and leave unburnt areas, so animals can shelter and escape.",
+   "They are lit at the right time of year, as judged from knowledge of the plants, weather and land. They reduce fuel such as dry leaves and twigs, renew plants and protect habitat.",
+   "Fire agencies now work with Traditional Owners to bring the practice back, with Traditional Owners guiding where and when to burn."
+  ],
+  "remember": "Cultural burning uses cool, patchy fires at the right time to care for Country.",
+  "a": {
+   "q": "Which description best fits a cultural burn?",
+   "opts": [
+    "A cool, patchy fire that burns low to the ground",
+    "A hot fire that burns every plant in the area",
+    "A fire lit to clear land for farming",
+    "A fire lit at any time that suits the crew"
+   ],
+   "why": "Cultural burns are cool and patchy, leaving unburnt areas for animals. A hot fire that burns everything is tempting, but that would harm habitat, which cultural burning aims to protect.",
+   "clue": "Think about what animals need during a burn."
+  },
+  "b": {
+   "d": 3,
+   "q": "A fire agency in Victoria plans burns on a grassy plain with Traditional Owners. Why do the Traditional Owners guide where and when to burn?",
+   "opts": [
+    "Their knowledge shows the right time and place",
+    "Their approval is needed to meet fire laws",
+    "Their burns are always hotter and faster",
+    "Their burns remove all fuel from the plain"
+   ],
+   "why": "Traditional Owners hold knowledge of the plants, weather and land that shows the right time and place for a cool, patchy burn. Removing all fuel is tempting, but cultural burns reduce fuel and leave patches unburnt.",
+   "clue": "Think about what knowledge guides the timing."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:11Z",
+   "step": "write",
+   "version": {
+    "title": "Cultural burning",
+    "card": [
+     "Cultural burning is fire lit by Traditional Owners to care for Country. The fires are cool: they burn slowly, low to the ground and in patches.",
+     "Each burn is timed by reading Country: the plants, the weather and how damp the ground is. A fire lit at the wrong time of year can grow hot and spread.",
+     "Cool, patchy burns reduce fuel such as dry grass and leaf litter, so a later bushfire can be less intense. Unburnt patches shelter animals, and many plants regrow.",
+     "Colonisation stopped cultural burning in many places. Fire agencies in Victoria and other states now work with Traditional Owners to bring it back."
+    ],
+    "remember": "A cool, patchy fire at the right time of year cuts fuel while plants and animals carry on.",
+    "a": {
+     "q": "Why does a cultural burn leave some patches of ground unburnt?",
+     "opts": [
+      "Animals can shelter there during and after the fire",
+      "The fire can then burn hotter through the rest",
+      "Burning every patch would cost the crew too much",
+      "The crew can then see where to start the next burn"
+     ],
+     "why": "Leaving unburnt patches gives animals places to shelter while the fire passes and after it. A cultural burn is meant to stay cool, so a hotter fire through the rest is the opposite of its aim.",
+     "clue": "Think about what lives in the area being burnt."
+    },
+    "b": {
+     "d": 3,
+     "q": "Traditional Owners plan a burn on a grassland in western Victoria. On the day, it is hot and windy, and both the grass and the soil are very dry. What fits cultural burning?",
+     "opts": [
+      "Wait for a cooler time when the ground is still damp",
+      "Burn now, since the dry grass will catch more easily",
+      "Burn now, but only the patches nearest the road",
+      "Burn the whole grassland at once to clear all fuel"
+     ],
+     "why": "A cultural burn is timed by reading the weather and how damp the ground is, so the fire stays cool. On a hot, windy day with dry soil, a fire can grow hot and spread, even if only a small patch is lit.",
+     "clue": "What could a fire do on a hot, windy day?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Animals can shelter there during and after the fire",
+     "also_right": []
+    },
+    "b": {
+     "best": "Wait for a cooler time when the ground is still damp",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "first-nations",
+    "summary": "No problems found. The point is about Aboriginal and Torres Strait Islander cultural practice, so it is marked first-nations for the owner's review."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Cultural burning",
+  "card": [
+   "Cultural burning is fire lit by Traditional Owners to care for Country. The fires are cool: they burn slowly, low to the ground and in patches.",
+   "Each burn is timed by reading Country: the plants, the weather and how damp the ground is. A fire lit at the wrong time of year can grow hot and spread.",
+   "Cool, patchy burns reduce fuel such as dry grass and leaf litter, so a later bushfire can be less intense. Unburnt patches shelter animals, and many plants regrow.",
+   "Colonisation stopped cultural burning in many places. Fire agencies in Victoria and other states now work with Traditional Owners to bring it back."
+  ],
+  "remember": "A cool, patchy fire at the right time of year cuts fuel while plants and animals carry on.",
+  "a": {
+   "q": "Why does a cultural burn leave some patches of ground unburnt?",
+   "opts": [
+    "Animals can shelter there during and after the fire",
+    "The fire can then burn hotter through the rest",
+    "Burning every patch would cost the crew too much",
+    "The crew can then see where to start the next burn"
+   ],
+   "why": "Leaving unburnt patches gives animals places to shelter while the fire passes and after it. A cultural burn is meant to stay cool, so a hotter fire through the rest is the opposite of its aim.",
+   "clue": "Think about what lives in the area being burnt."
+  },
+  "b": {
+   "d": 3,
+   "q": "Traditional Owners plan a burn on a grassland in western Victoria. On the day, it is hot and windy, and both the grass and the soil are very dry. What fits cultural burning?",
+   "opts": [
+    "Wait for a cooler time when the ground is still damp",
+    "Burn now, since the dry grass will catch more easily",
+    "Burn now, but only the patches nearest the road",
+    "Burn the whole grassland at once to clear all fuel"
+   ],
+   "why": "A cultural burn is timed by reading the weather and how damp the ground is, so the fire stays cool. On a hot, windy day with dry soil, a fire can grow hot and spread, even if only a small patch is lit.",
+   "clue": "What could a fire do on a hot, windy day?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Animals can shelter there during and after the fire",
+   "also_right": []
+  },
+  "b": {
+   "best": "Wait for a cooler time when the ground is still damp",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "first-nations",
+  "summary": "No problems found. The point is about Aboriginal and Torres Strait Islander cultural practice, so it is marked first-nations for the owner's review."
+ },
+ "sensitive": "first-nations",
+ "flags": [],
+ "checked_by": "claude-code",
+ "final": {
+  "title": "Cultural burning",
+  "card": [
+   "Cultural burning is fire lit by Traditional Owners to care for Country. The fires are cool: they burn slowly, low to the ground and in patches.",
+   "Each burn is timed by reading Country: the plants, the weather and how damp the ground is. A fire lit at the wrong time of year can grow hot and spread.",
+   "Cool, patchy burns reduce fuel such as dry grass and leaf litter, so a later bushfire can be less intense. Unburnt patches shelter animals, and many plants regrow.",
+   "Colonisation stopped cultural burning in many places. Fire agencies in Victoria and other states now work with Traditional Owners to bring it back."
+  ],
+  "remember": "A cool, patchy fire at the right time of year cuts fuel while plants and animals carry on.",
+  "a": {
+   "q": "Why does a cultural burn leave some patches of ground unburnt?",
+   "opts": [
+    "Animals can shelter there during and after the fire",
+    "The fire can then burn hotter through the rest",
+    "Burning every patch would cost the crew too much",
+    "The crew can then see where to start the next burn"
+   ],
+   "why": "Leaving unburnt patches gives animals places to shelter while the fire passes and after it. A cultural burn is meant to stay cool, so a hotter fire through the rest is the opposite of its aim.",
+   "clue": "Think about what lives in the area being burnt."
+  },
+  "b": {
+   "d": 3,
+   "q": "Traditional Owners plan a burn on a grassland in western Victoria. On the day, it is hot and windy, and both the grass and the soil are very dry. What fits cultural burning?",
+   "opts": [
+    "Wait for a cooler time when the ground is still damp",
+    "Burn now, since the dry grass will catch more easily",
+    "Burn now, but only the patches nearest the road",
+    "Burn the whole grassland at once to clear all fuel"
+   ],
+   "why": "A cultural burn is timed by reading the weather and how damp the ground is, so the fire stays cool. On a hot, windy day with dry soil, a fire can grow hot and spread, even if only a small patch is lit.",
+   "clue": "What could a fire do on a hot, windy day?"
+  }
+ },
+ "cleared_by": "owner"
+}

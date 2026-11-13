@@ -1,0 +1,227 @@
+{
+ "id": "mat-function-notation-2",
+ "title": "Function notation",
+ "brief": "a20a3ae61b19",
+ "shortlist": [
+  [
+   "mat-function-notation",
+   0.574
+  ],
+  [
+   "mat-functions-relations",
+   0.417
+  ],
+  [
+   "mat-relations-functions",
+   0.415
+  ],
+  [
+   "mat-inverse-functions",
+   0.233
+  ],
+  [
+   "mat-power-functions",
+   0.231
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 says reuse mat-function-notation, so to the Opus match check, as every reuse is",
+  "2026-11-12T15:15:49Z confirm: Claude Opus 5.5 may reuse mat-function-notation, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-function-notation (1 change)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-function-notation on the next run",
+  "2026-11-13T13:04:53Z adapt: done",
+  "2026-11-13T13:11:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "confirm": 0.01445,
+  "adapt": 0.00655,
+  "check": 0.00771
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-function-notation",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card teaches the same idea as the new point, evaluating f at an input by replacing x with that input, at a depth suited to Year 10 and with fair questions and no state-specific content.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-function-notation",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches function notation and evaluating f at a value, as the brief asks, and its extra step of substituting an expression such as a + 1 is still fair for Level 10A students who already expand brackets.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-function-notation",
+  "changes": [
+   "Write every f(x), f(3) and f(5) in the card and question a in LaTeX, such as \\(f(x)\\)."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card2",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches function notation at a depth that suits Level 10A and its answers are right, but f(x), f(3) and f(5) are written as plain text instead of LaTeX.",
+   "item": "3e956b72080a01f6",
+   "result": "decided",
+   "saved": {
+    "id": "mat-function-notation-2",
+    "title": "Function notation",
+    "brief": "a20a3ae61b19",
+    "shortlist": [
+     [
+      "mat-function-notation",
+      0.574
+     ],
+     [
+      "mat-functions-relations",
+      0.417
+     ],
+     [
+      "mat-relations-functions",
+      0.415
+     ],
+     [
+      "mat-inverse-functions",
+      0.233
+     ],
+     [
+      "mat-power-functions",
+      0.231
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00042,
+     "confirm": 0.01445
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-function-notation",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank card teaches the same idea as the new point, evaluating f at an input by replacing x with that input, at a depth suited to Year 10 and with fair questions and no state-specific content.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "mat-function-notation",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point teaches function notation and evaluating f at a value, as the brief asks, and its extra step of substituting an expression such as a + 1 is still fair for Level 10A students who already expand brackets.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "3c070ed038a78a18"
+  }
+ ],
+ "draft": {
+  "title": "Function notation",
+  "card": [
+   "\\(f(x)\\) is the output of the function \\(f\\) when the input is \\(x\\). It is read as \"\\(f\\) of \\(x\\)\". It does not mean \\(f\\) multiplied by \\(x\\).",
+   "To evaluate \\(f(3)\\), replace every \\(x\\) in the rule with 3. If \\(f(x) = 2x^{2} - 5\\), then \\(f(3) = 2 \\times 3^{2} - 5 = 2 \\times 9 - 5 = 13\\).",
+   "The input can be an expression. To find \\(f(a + 1)\\), put the whole bracket \\((a + 1)\\) in place of \\(x\\). For \\(f(x) = 3x - 2\\), \\(f(a + 1) = 3(a + 1) - 2 = 3a + 1\\).",
+   "A rule can be written in words and then in notation. \"Double the input and add 4\" is \\(f(x) = 2x + 4\\)."
+  ],
+  "remember": "To find \\(f\\) of something, put that something in place of every \\(x\\).",
+  "a": {
+   "q": "Given \\(f(x) = 4x - 7\\), find \\(f(5)\\).",
+   "opts": [
+    "13",
+    "\\(-13\\)",
+    "20",
+    "\\(-3\\)"
+   ],
+   "why": "Replace \\(x\\) with 5: \\(f(5) = 4 \\times 5 - 7 = 20 - 7 = 13\\). The answer 20 comes from forgetting to subtract 7.",
+   "clue": "Put 5 in place of \\(x\\), then follow the order of operations."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given \\(f(x) = x^{2} + 2x\\), find \\(f(a + 1)\\).",
+   "opts": [
+    "\\(a^{2} + 4a + 3\\)",
+    "\\(a^{2} + 2a + 3\\)",
+    "\\(a^{2} + 2a + 1\\)",
+    "\\(a^{2} + 4a + 1\\)"
+   ],
+   "why": "\\(f(a + 1) = (a + 1)^{2} + 2(a + 1)\\), which is \\(a^{2} + 2a + 1 + 2a + 2\\), so \\(f(a + 1) = a^{2} + 4a + 3\\). The option \\(a^{2} + 2a + 3\\) comes from writing \\((a + 1)^{2}\\) as \\(a^{2} + 1\\), which skips the middle term.",
+   "clue": "Put the whole bracket in place of \\(x\\), then expand \\((a + 1)^{2}\\) fully."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "13",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(a^{2} + 4a + 3\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Function notation",
+  "card": [
+   "\\(f(x)\\) is the output of the function \\(f\\) when the input is \\(x\\). It is read as \"\\(f\\) of \\(x\\)\". It does not mean \\(f\\) multiplied by \\(x\\).",
+   "To evaluate \\(f(3)\\), replace every \\(x\\) in the rule with 3. If \\(f(x) = 2x^{2} - 5\\), then \\(f(3) = 2 \\times 3^{2} - 5 = 2 \\times 9 - 5 = 13\\).",
+   "The input can be an expression. To find \\(f(a + 1)\\), put the whole bracket \\((a + 1)\\) in place of \\(x\\). For \\(f(x) = 3x - 2\\), \\(f(a + 1) = 3(a + 1) - 2 = 3a + 1\\).",
+   "A rule can be written in words and then in notation. \"Double the input and add 4\" is \\(f(x) = 2x + 4\\)."
+  ],
+  "remember": "To find \\(f\\) of something, put that something in place of every \\(x\\).",
+  "a": {
+   "q": "Given \\(f(x) = 4x - 7\\), find \\(f(5)\\).",
+   "opts": [
+    "13",
+    "\\(-13\\)",
+    "20",
+    "\\(-3\\)"
+   ],
+   "why": "Replace \\(x\\) with 5: \\(f(5) = 4 \\times 5 - 7 = 20 - 7 = 13\\). The answer 20 comes from forgetting to subtract 7.",
+   "clue": "Put 5 in place of \\(x\\), then follow the order of operations."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given \\(f(x) = x^{2} + 2x\\), find \\(f(a + 1)\\).",
+   "opts": [
+    "\\(a^{2} + 4a + 3\\)",
+    "\\(a^{2} + 2a + 3\\)",
+    "\\(a^{2} + 2a + 1\\)",
+    "\\(a^{2} + 4a + 1\\)"
+   ],
+   "why": "\\(f(a + 1) = (a + 1)^{2} + 2(a + 1)\\), which is \\(a^{2} + 2a + 1 + 2a + 2\\), so \\(f(a + 1) = a^{2} + 4a + 3\\). The option \\(a^{2} + 2a + 3\\) comes from writing \\((a + 1)^{2}\\) as \\(a^{2} + 1\\), which skips the middle term.",
+   "clue": "Put the whole bracket in place of \\(x\\), then expand \\((a + 1)^{2}\\) fully."
+  }
+ }
+}

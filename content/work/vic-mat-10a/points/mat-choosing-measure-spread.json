@@ -1,0 +1,162 @@
+{
+ "id": "mat-choosing-measure-spread",
+ "title": "Choosing a measure of spread",
+ "brief": "5203c25475a2",
+ "shortlist": [
+  [
+   "mat-types-data",
+   0.323
+  ],
+  [
+   "mat-types-data-2",
+   0.305
+  ],
+  [
+   "mat-measures-centre",
+   0.287
+  ],
+  [
+   "mat-measures-spread",
+   0.283
+  ],
+  [
+   "mat-comparing-data-sets-2",
+   0.278
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-measures-spread, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:49Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:09Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "confirm": 0.00688,
+  "write": 0.00677,
+  "check": 0.01007
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-measures-spread",
+  "changes": [
+   "The bank point teaches range, IQR and standard deviation together, so the card would need to be narrowed to the single decision of which spread measure suits skewed data or data with outliers, using the brief's rule that standard deviation suits symmetric data without outliers.",
+   "The card would need to add the standard deviation guidance for symmetric data without outliers, which the bank card currently describes only as typical distance from the mean."
+  ],
+  "sure": "low",
+  "reason": "The bank's measures of spread card covers the same spread measures but teaches them in general and does not state the choice rule for symmetric data versus skewed data or outliers, so it would need a reworked card rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Measures of spread, defines the range, IQR and standard deviation and notes outlier effects, but it does not teach how to choose between standard deviation and IQR based on the shape of the data, so this needs its own point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Choosing a measure of spread",
+  "card": [
+   [
+    "Standard deviation",
+    "It uses every value and is measured around the mean. It suits data that is roughly symmetric with no outliers."
+   ],
+   [
+    "Interquartile range",
+    "The interquartile range (IQR) is Q3 minus Q1, the spread of the middle half of the values. Extreme values do not change it much."
+   ],
+   "Skewed data has a long tail on one side. Data with outliers has a few extreme values. For both, the IQR is the better measure of spread.",
+   "Example: house prices in a suburb, with one mansion far above the rest, are skewed. The IQR describes the spread of typical prices better than the standard deviation."
+  ],
+  "remember": "Symmetric with no outliers: standard deviation. Skewed or with outliers: IQR.",
+  "a": {
+   "q": "Which data set is best described using the standard deviation as its measure of spread?",
+   "opts": [
+    "Heights of Year 10 students, roughly symmetric",
+    "Salaries at a firm, with one boss paid far more",
+    "Waiting times, with a long tail of very long waits",
+    "Test scores, with two students scoring zero by mistake"
+   ],
+   "why": "Symmetric data with no outliers suits standard deviation. The other three are skewed or have outliers, so the IQR describes them better.",
+   "clue": "Look for the data with no tail and no extreme values."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila records the daily number of visitors to her market stall in Ballarat. Most days are between 40 and 60, but one festival day had 400. Which measure of spread should she use, and why?",
+   "opts": [
+    "IQR, because the festival day is an outlier",
+    "Standard deviation, because it uses every value",
+    "Standard deviation, because the data is symmetric",
+    "IQR, because it uses every value in the data"
+   ],
+   "why": "The festival day is an outlier, and the IQR is not changed much by extreme values. Standard deviation is tempting because it uses every value, but that is why one outlier distorts it.",
+   "clue": "Think about which measure one extreme day would distort."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Heights of Year 10 students, roughly symmetric",
+   "also_right": []
+  },
+  "b": {
+   "best": "IQR, because the festival day is an outlier",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Choosing a measure of spread",
+  "card": [
+   [
+    "Standard deviation",
+    "It uses every value and is measured around the mean. It suits data that is roughly symmetric with no outliers."
+   ],
+   [
+    "Interquartile range",
+    "The interquartile range (IQR) is Q3 minus Q1, the spread of the middle half of the values. Extreme values do not change it much."
+   ],
+   "Skewed data has a long tail on one side. Data with outliers has a few extreme values. For both, the IQR is the better measure of spread.",
+   "Example: house prices in a suburb, with one mansion far above the rest, are skewed. The IQR describes the spread of typical prices better than the standard deviation."
+  ],
+  "remember": "Symmetric with no outliers: standard deviation. Skewed or with outliers: IQR.",
+  "a": {
+   "q": "Which data set is best described using the standard deviation as its measure of spread?",
+   "opts": [
+    "Heights of Year 10 students, roughly symmetric",
+    "Salaries at a firm, with one boss paid far more",
+    "Waiting times, with a long tail of very long waits",
+    "Test scores, with two students scoring zero by mistake"
+   ],
+   "why": "Symmetric data with no outliers suits standard deviation. The other three are skewed or have outliers, so the IQR describes them better.",
+   "clue": "Look for the data with no tail and no extreme values."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila records the daily number of visitors to her market stall in Ballarat. Most days are between 40 and 60, but one festival day had 400. Which measure of spread should she use, and why?",
+   "opts": [
+    "IQR, because the festival day is an outlier",
+    "Standard deviation, because it uses every value",
+    "Standard deviation, because the data is symmetric",
+    "IQR, because it uses every value in the data"
+   ],
+   "why": "The festival day is an outlier, and the IQR is not changed much by extreme values. Standard deviation is tempting because it uses every value, but that is why one outlier distorts it.",
+   "clue": "Think about which measure one extreme day would distort."
+  }
+ },
+ "cleared_by": "checker"
+}

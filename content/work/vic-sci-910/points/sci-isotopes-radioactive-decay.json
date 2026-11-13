@@ -1,0 +1,452 @@
+{
+ "id": "sci-isotopes-radioactive-decay",
+ "title": "Isotopes and radioactive decay",
+ "brief": "bb99b42921d7",
+ "shortlist": [
+  [
+   "sci-alpha-beta-gamma-radiation",
+   0.384
+  ],
+  [
+   "sci-atomic-number-mass-number",
+   0.351
+  ],
+  [
+   "phys-decay-series",
+   0.327
+  ],
+  [
+   "sci-half-life-radiocarbon-dating",
+   0.276
+  ],
+  [
+   "chem-isotopes",
+   0.25
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:56Z new, match",
+  "2026-11-12T12:44:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:54Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:08Z write: done",
+  "2026-11-12T15:35:12Z check: flagged",
+  "2026-11-12T15:42:26Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00647,
+  "check": 0.00975,
+  "fix": 0.0192,
+  "recheck": 0.0075
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers the whole new point: the closest cards each teach one part (isotopes, radiation types, or half-life), so the combined point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Isotopes and radioactive decay",
+  "card": [
+   [
+    "Isotopes",
+    "Isotopes are atoms of the same element with different numbers of neutrons. They have the same number of protons, so the same atomic number, but different mass numbers."
+   ],
+   "Some nuclei are unstable. An unstable nucleus can change by giving off radiation. This is called radioactive decay, and it happens by chance, not because of heat or a chemical reaction.",
+   "There are three types of radiation. Alpha particles are a group of two protons and two neutrons. Beta particles are fast electrons. Gamma rays are energy with no particles.",
+   [
+    "Half-life",
+    "the time it takes for half of the unstable nuclei in a sample to decay. After one half-life, half are left. After two half-lives, a quarter are left."
+   ]
+  ],
+  "remember": "Isotopes differ in neutrons. Unstable nuclei decay, and half-life is the time for half to go.",
+  "a": {
+   "q": "Carbon-12 and carbon-14 are both carbon atoms. What is different about them?",
+   "opts": [
+    "The number of neutrons in the nucleus",
+    "The number of protons in the nucleus",
+    "The atomic number of the atom",
+    "The element that each atom belongs to"
+   ],
+   "why": "Isotopes of one element have the same number of protons but different numbers of neutrons, so their mass numbers differ. The number of protons sets the atomic number and the element, so those stay the same.",
+   "clue": "Both are carbon, so one count in the nucleus must be the same."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of a radioactive isotope has a half-life of 6 hours. Mia starts with 80 g of it. How much of the isotope is left after 12 hours?",
+   "opts": [
+    "20 g",
+    "40 g",
+    "10 g",
+    "0 g"
+   ],
+   "why": "12 hours is two half-lives. After the first, 40 g is left, and after the second, half of that, 20 g, is left. 40 g is the amount after only one half-life, and the sample does not all decay after two.",
+   "clue": "Work out how many half-lives fit into 12 hours."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The number of neutrons in the nucleus",
+   "also_right": []
+  },
+  "b": {
+   "best": "20 g",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Gamma rays are energy with no particles\" is loose and slightly misleading. Gamma rays are high-energy electromagnetic waves with no mass and no charge, and they are carried by photons. Better: \"Gamma rays are high-energy electromagnetic waves with no mass or charge.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, and their intended answers (neutrons; 20 g) are correct. One minor issue: the card's description of gamma rays as \"energy with no particles\" should say they are electromagnetic waves with no mass or charge."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Gamma rays are energy with no particles\" is loose and slightly misleading. Gamma rays are high-energy electromagnetic waves with no mass and no charge, and they are carried by photons. Better: \"Gamma rays are high-energy electromagnetic waves with no mass or charge.\""
+ ],
+ "proposal": {
+  "title": "Isotopes and radioactive decay",
+  "card": [
+   [
+    "Isotopes",
+    "atoms of the same element with different numbers of neutrons. They have the same number of protons, so the same atomic number, but different mass numbers."
+   ],
+   "Some nuclei are unstable and can change by giving off radiation. This is radioactive decay, and it happens by chance, not because of heat or a chemical reaction.",
+   "Alpha particles are two protons and two neutrons, and beta particles are fast electrons. Gamma rays are high-energy electromagnetic waves with no mass or charge.",
+   [
+    "Half-life",
+    "the time it takes for half of the unstable nuclei in a sample to decay. After one half-life, half are left. After two half-lives, a quarter are left."
+   ]
+  ],
+  "remember": "Isotopes differ in neutrons. Unstable nuclei decay, and half-life is the time for half to go.",
+  "a": {
+   "q": "Carbon-12 and carbon-14 are both carbon atoms. What is different about them?",
+   "opts": [
+    "The number of neutrons in the nucleus",
+    "The number of protons in the nucleus",
+    "The atomic number of the atom",
+    "The element that each atom belongs to"
+   ],
+   "why": "Isotopes of one element have the same number of protons but different numbers of neutrons, so their mass numbers differ. The number of protons sets the atomic number and the element, so those stay the same.",
+   "clue": "Both are carbon, so one count in the nucleus must be the same."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of a radioactive isotope has a half-life of 6 hours. Mia starts with 80 g of it. How much of the isotope is left after 12 hours?",
+   "opts": [
+    "20 g",
+    "40 g",
+    "10 g",
+    "0 g"
+   ],
+   "why": "12 hours is two half-lives. After the first, 40 g is left, and after the second, half of that, 20 g, is left. 40 g is the amount after only one half-life, and the sample does not all decay after two.",
+   "clue": "Work out how many half-lives fit into 12 hours."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The number of neutrons in the nucleus",
+    "also_right": []
+   },
+   "b": {
+    "best": "20 g",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Gamma rays are energy with no particles\" is loose and slightly misleading. Gamma rays are high-energy electromagnetic waves with no mass and no charge, and they are carried by photons. Better: \"Gamma rays are high-energy electromagnetic waves with no mass or charge.\""
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Gamma rays are energy with no particles\" is loose and slightly misleading. Gamma rays are high-energy electromagnetic waves with no mass and no charge, and they are carried by photons. Better: \"Gamma rays are high-energy electromagnetic waves with no mass or charge.\""
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Isotopes and radioactive decay",
+  "card": [
+   [
+    "Isotopes",
+    "atoms of the same element with different numbers of neutrons. They have the same number of protons, so the same atomic number, but different mass numbers."
+   ],
+   "Some nuclei are unstable and can change by giving off radiation. This is radioactive decay, and it happens by chance, not because of heat or a chemical reaction.",
+   "Alpha particles are two protons and two neutrons, and beta particles are fast electrons. Gamma rays are high-energy electromagnetic waves with no mass or charge.",
+   [
+    "Half-life",
+    "the time it takes for half of the unstable nuclei in a sample to decay. After one half-life, half are left. After two half-lives, a quarter are left."
+   ]
+  ],
+  "remember": "Isotopes differ in neutrons. Unstable nuclei decay, and half-life is the time for half to go.",
+  "a": {
+   "q": "Carbon-12 and carbon-14 are both carbon atoms. What is different about them?",
+   "opts": [
+    "The number of neutrons in the nucleus",
+    "The number of protons in the nucleus",
+    "The atomic number of the atom",
+    "The element that each atom belongs to"
+   ],
+   "why": "Isotopes of one element have the same number of protons but different numbers of neutrons, so their mass numbers differ. The number of protons sets the atomic number and the element, so those stay the same.",
+   "clue": "Both are carbon, so one count in the nucleus must be the same."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of a radioactive isotope has a half-life of 6 hours. Mia starts with 80 g of it. How much of the isotope is left after 12 hours?",
+   "opts": [
+    "20 g",
+    "40 g",
+    "10 g",
+    "0 g"
+   ],
+   "why": "12 hours is two half-lives. After the first, 40 g is left, and after the second, half of that, 20 g, is left. 40 g is the amount after only one half-life, and the sample does not all decay after two.",
+   "clue": "Work out how many half-lives fit into 12 hours."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix describes gamma rays correctly as high-energy electromagnetic waves with no mass or charge. The rest is unchanged and right, and 80 g after two 6-hour half-lives is 20 g.",
+   "item": "cfc4dc37dfe969a7",
+   "result": "decided",
+   "saved": {
+    "id": "sci-isotopes-radioactive-decay",
+    "title": "Isotopes and radioactive decay",
+    "brief": "bb99b42921d7",
+    "shortlist": [
+     [
+      "sci-alpha-beta-gamma-radiation",
+      0.384
+     ],
+     [
+      "sci-atomic-number-mass-number",
+      0.351
+     ],
+     [
+      "phys-decay-series",
+      0.327
+     ],
+     [
+      "sci-half-life-radiocarbon-dating",
+      0.276
+     ],
+     [
+      "chem-isotopes",
+      0.25
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00026,
+     "write": 0.00647,
+     "check": 0.00975,
+     "fix": 0.0192,
+     "recheck": 0.0075
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "No single bank point covers the whole new point: the closest cards each teach one part (isotopes, radiation types, or half-life), so the combined point needs its own card.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Isotopes and radioactive decay",
+     "card": [
+      [
+       "Isotopes",
+       "Isotopes are atoms of the same element with different numbers of neutrons. They have the same number of protons, so the same atomic number, but different mass numbers."
+      ],
+      "Some nuclei are unstable. An unstable nucleus can change by giving off radiation. This is called radioactive decay, and it happens by chance, not because of heat or a chemical reaction.",
+      "There are three types of radiation. Alpha particles are a group of two protons and two neutrons. Beta particles are fast electrons. Gamma rays are energy with no particles.",
+      [
+       "Half-life",
+       "the time it takes for half of the unstable nuclei in a sample to decay. After one half-life, half are left. After two half-lives, a quarter are left."
+      ]
+     ],
+     "remember": "Isotopes differ in neutrons. Unstable nuclei decay, and half-life is the time for half to go.",
+     "a": {
+      "q": "Carbon-12 and carbon-14 are both carbon atoms. What is different about them?",
+      "opts": [
+       "The number of neutrons in the nucleus",
+       "The number of protons in the nucleus",
+       "The atomic number of the atom",
+       "The element that each atom belongs to"
+      ],
+      "why": "Isotopes of one element have the same number of protons but different numbers of neutrons, so their mass numbers differ. The number of protons sets the atomic number and the element, so those stay the same.",
+      "clue": "Both are carbon, so one count in the nucleus must be the same."
+     },
+     "b": {
+      "d": 3,
+      "q": "A sample of a radioactive isotope has a half-life of 6 hours. Mia starts with 80 g of it. How much of the isotope is left after 12 hours?",
+      "opts": [
+       "20 g",
+       "40 g",
+       "10 g",
+       "0 g"
+      ],
+      "why": "12 hours is two half-lives. After the first, 40 g is left, and after the second, half of that, 20 g, is left. 40 g is the amount after only one half-life, and the sample does not all decay after two.",
+      "clue": "Work out how many half-lives fit into 12 hours."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The number of neutrons in the nucleus",
+      "also_right": []
+     },
+     "b": {
+      "best": "20 g",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"Gamma rays are energy with no particles\" is loose and slightly misleading. Gamma rays are high-energy electromagnetic waves with no mass and no charge, and they are carried by photons. Better: \"Gamma rays are high-energy electromagnetic waves with no mass or charge.\""
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound, and their intended answers (neutrons; 20 g) are correct. One minor issue: the card's description of gamma rays as \"energy with no particles\" should say they are electromagnetic waves with no mass or charge."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: \"Gamma rays are energy with no particles\" is loose and slightly misleading. Gamma rays are high-energy electromagnetic waves with no mass and no charge, and they are carried by photons. Better: \"Gamma rays are high-energy electromagnetic waves with no mass or charge.\""
+    ],
+    "proposal": {
+     "title": "Isotopes and radioactive decay",
+     "card": [
+      [
+       "Isotopes",
+       "atoms of the same element with different numbers of neutrons. They have the same number of protons, so the same atomic number, but different mass numbers."
+      ],
+      "Some nuclei are unstable and can change by giving off radiation. This is radioactive decay, and it happens by chance, not because of heat or a chemical reaction.",
+      "Alpha particles are two protons and two neutrons, and beta particles are fast electrons. Gamma rays are high-energy electromagnetic waves with no mass or charge.",
+      [
+       "Half-life",
+       "the time it takes for half of the unstable nuclei in a sample to decay. After one half-life, half are left. After two half-lives, a quarter are left."
+      ]
+     ],
+     "remember": "Isotopes differ in neutrons. Unstable nuclei decay, and half-life is the time for half to go.",
+     "a": {
+      "q": "Carbon-12 and carbon-14 are both carbon atoms. What is different about them?",
+      "opts": [
+       "The number of neutrons in the nucleus",
+       "The number of protons in the nucleus",
+       "The atomic number of the atom",
+       "The element that each atom belongs to"
+      ],
+      "why": "Isotopes of one element have the same number of protons but different numbers of neutrons, so their mass numbers differ. The number of protons sets the atomic number and the element, so those stay the same.",
+      "clue": "Both are carbon, so one count in the nucleus must be the same."
+     },
+     "b": {
+      "d": 3,
+      "q": "A sample of a radioactive isotope has a half-life of 6 hours. Mia starts with 80 g of it. How much of the isotope is left after 12 hours?",
+      "opts": [
+       "20 g",
+       "40 g",
+       "10 g",
+       "0 g"
+      ],
+      "why": "12 hours is two half-lives. After the first, 40 g is left, and after the second, half of that, 20 g, is left. 40 g is the amount after only one half-life, and the sample does not all decay after two.",
+      "clue": "Work out how many half-lives fit into 12 hours."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:12Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "The number of neutrons in the nucleus",
+       "also_right": []
+      },
+      "b": {
+       "best": "20 g",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-12T17:07:12Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"Gamma rays are energy with no particles\" is loose and slightly misleading. Gamma rays are high-energy electromagnetic waves with no mass and no charge, and they are carried by photons. Better: \"Gamma rays are high-energy electromagnetic waves with no mass or charge.\""
+      }
+     ],
+     "flags": [
+      "Card, fact: \"Gamma rays are energy with no particles\" is loose and slightly misleading. Gamma rays are high-energy electromagnetic waves with no mass and no charge, and they are carried by photons. Better: \"Gamma rays are high-energy electromagnetic waves with no mass or charge.\""
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "1af02b29c00e9b1e"
+  }
+ ]
+}

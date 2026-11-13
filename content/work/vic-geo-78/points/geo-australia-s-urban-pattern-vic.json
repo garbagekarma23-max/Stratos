@@ -1,0 +1,214 @@
+{
+ "id": "geo-australia-s-urban-pattern-vic",
+ "title": "Australia's urban pattern",
+ "brief": "72b4cb6c7dec",
+ "shortlist": [
+  [
+   "geo-urban-concentration-australia",
+   0.716
+  ],
+  [
+   "geo-urban-growth-urbanisation",
+   0.521
+  ],
+  [
+   "geo-comparing-australia-united-states",
+   0.44
+  ],
+  [
+   "geo-causes-australia-s-urban",
+   0.352
+  ],
+  [
+   "geo-megacities-urban-corridors",
+   0.26
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 may adapt geo-urban-concentration-australia, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:40Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:00Z write: done",
+  "2026-11-12T15:35:05Z check: flagged",
+  "2026-11-12T15:59:43Z fix: suggested",
+  "2026-11-12T16:19:52Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.00958,
+  "write": 0.01114,
+  "check": 0.01121,
+  "fix": 0.01856
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-urban-concentration-australia",
+  "changes": [
+   "Add a sentence that Melbourne, the capital of Victoria, is far bigger than the next largest town in the state, such as Geelong.",
+   "Use Victorian places, such as Melbourne as the example capital, in place of the mainly interstate examples on the card."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of Australian urban concentration in coastal capitals, but it needs a Victorian example and a line about each capital dwarfing the next town in its state.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Urban concentration in Australia, covers high urbanisation and coastal capitals, but it does not teach that each capital is far bigger than the next town in its state, so matching it would need a new step on capital-city dominance.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Australia's urban pattern",
+  "card": [
+   "Australia is one of the most urbanised countries in the world. This means that most of its people live in towns and cities, not in rural areas.",
+   "Most Australians live in a few large capital cities, such as Sydney, Melbourne, Brisbane and Perth. Most of these cities are on or near the coast.",
+   "In most states, the capital is far bigger than the next largest town. For example, Melbourne has several million people, while Victoria's next largest cities, such as Geelong and Ballarat, are much smaller.",
+   "Large parts of the inland have very few people. The population is packed into a small share of the land, mainly along the coast."
+  ],
+  "remember": "Australia's people are mostly in a few big coastal capitals, each far larger than any other town in its state.",
+  "a": {
+   "q": "Which statement best describes where most Australians live?",
+   "opts": [
+    "In a few large capital cities near the coast",
+    "In many small towns spread across the inland",
+    "On farms and stations in rural areas",
+    "In several equal-sized cities across the country"
+   ],
+   "why": "Most Australians live in a few big capital cities, mostly near the coast. The inland has few people, so towns spread across it do not hold most of the population.",
+   "clue": "Think about the capitals and where they sit."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia looks at a map of Victoria. Melbourne has about five million people. Geelong has a few hundred thousand. What does this show about Victoria?",
+   "opts": [
+    "The capital is far bigger than the next city",
+    "Victoria has no large cities at all",
+    "Geelong is nearly as big as Melbourne",
+    "Most Victorians live in the inland countryside"
+   ],
+   "why": "Melbourne is many times larger than Geelong, which matches the pattern of a capital far bigger than the next town. Geelong is much smaller, so it is not close to Melbourne in size.",
+   "clue": "Compare the two numbers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "In a few large capital cities near the coast",
+   "also_right": []
+  },
+  "b": {
+   "best": "The capital is far bigger than the next city",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card says 'In most states, the capital is far bigger than the next largest town', but the remember line says 'each' capital is far larger than any other town in its state. The remember line claims more than the card teaches. Align the two, for example by having the card say every state."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound. The only problem is that the remember line says 'each' capital is far larger, while the card hedges with 'in most states'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The card says 'In most states, the capital is far bigger than the next largest town', but the remember line says 'each' capital is far larger than any other town in its state. The remember line claims more than the card teaches. Align the two, for example by having the card say every state."
+ ],
+ "proposal": {
+  "title": "Australia's urban pattern",
+  "card": [
+   "Australia is one of the most urbanised countries in the world. This means that most of its people live in towns and cities, not in rural areas.",
+   "Most Australians live in a few large capital cities, such as Sydney, Melbourne, Brisbane and Perth. Most of these cities are on or near the coast.",
+   "In every state, the capital is the largest city, and it is often many times bigger than the next largest. For example, Melbourne has about five million people, while Geelong and Ballarat are much smaller.",
+   "Large parts of the inland have very few people. The population is packed into a small share of the land, mainly along the coast."
+  ],
+  "remember": "Most Australians live in a few big capitals near the coast. Each is its state's largest city, often by far.",
+  "a": {
+   "q": "Which statement best describes where most Australians live?",
+   "opts": [
+    "In a few large capital cities near the coast",
+    "In many small towns spread across the inland",
+    "On farms and stations in rural areas",
+    "In several equal-sized cities across the country"
+   ],
+   "why": "Most Australians live in a few big capital cities, mostly near the coast. The inland has few people, so towns spread across it do not hold most of the population.",
+   "clue": "Think about the capitals and where they sit."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia looks at a map of Victoria. Melbourne has about five million people. Geelong has a few hundred thousand. What does this show about Victoria?",
+   "opts": [
+    "The capital is far bigger than the next city",
+    "Victoria has no large cities at all",
+    "Geelong is nearly as big as Melbourne",
+    "Most Victorians live in the inland countryside"
+   ],
+   "why": "Melbourne is many times larger than Geelong, which matches the pattern of a capital far bigger than the next city. Geelong has only a few hundred thousand people, so it is not close to Melbourne in size.",
+   "clue": "Compare the two numbers."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:52Z",
+  "rules": 1,
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card says 'In most states, the capital is far bigger than the next largest town', but the remember line says 'each' capital is far larger than any other town in its state. The remember line claims more than the card teaches. Align the two, for example by having the card say every state."
+   }
+  ],
+  "flags": [
+   "Remember, other: The card says 'In most states, the capital is far bigger than the next largest town', but the remember line says 'each' capital is far larger than any other town in its state. The remember line claims more than the card teaches. Align the two, for example by having the card say every state."
+  ]
+ },
+ "final": {
+  "title": "Australia's urban pattern",
+  "card": [
+   "Australia is one of the most urbanised countries in the world. This means that most of its people live in towns and cities, not in rural areas.",
+   "Most Australians live in a few large capital cities, such as Sydney, Melbourne, Brisbane and Perth. Most of these cities are on or near the coast.",
+   "In every state, the capital is the largest city, and it is often many times bigger than the next largest. For example, Melbourne has about five million people, while Geelong and Ballarat are much smaller.",
+   "Large parts of the inland have very few people. The population is packed into a small share of the land, mainly along the coast."
+  ],
+  "remember": "Most Australians live in a few big capitals near the coast. Each is its state's largest city, often by far.",
+  "a": {
+   "q": "Which statement best describes where most Australians live?",
+   "opts": [
+    "In a few large capital cities near the coast",
+    "In many small towns spread across the inland",
+    "On farms and stations in rural areas",
+    "In several equal-sized cities across the country"
+   ],
+   "why": "Most Australians live in a few big capital cities, mostly near the coast. The inland has few people, so towns spread across it do not hold most of the population.",
+   "clue": "Think about the capitals and where they sit."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia looks at a map of Victoria. Melbourne has about five million people. Geelong has a few hundred thousand. What does this show about Victoria?",
+   "opts": [
+    "The capital is far bigger than the next city",
+    "Victoria has no large cities at all",
+    "Geelong is nearly as big as Melbourne",
+    "Most Victorians live in the inland countryside"
+   ],
+   "why": "Melbourne is many times larger than Geelong, which matches the pattern of a capital far bigger than the next city. Geelong has only a few hundred thousand people, so it is not close to Melbourne in size.",
+   "clue": "Compare the two numbers."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,142 @@
+{
+ "id": "mat-three-step-experiments",
+ "title": "Three-step experiments",
+ "brief": "ba9f2eb5bfeb",
+ "shortlist": [
+  [
+   "mat-conditional-probability-from-tree",
+   0.3
+  ],
+  [
+   "mat-listing-outcomes-compound-events",
+   0.276
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: failed the content check, writing again",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:08Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01912,
+  "check": 0.00743
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point teaches extending a tree to three steps and multiplying along each branch: the first is about two-step trees without replacement, and the second is about listing and counting outcomes, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Three-step experiments",
+  "card": [
+   "A tree diagram can have three steps. Draw the branches for step 1, then add branches for step 2 from each end, then step 3 from each of those ends.",
+   "Each path from left to right is one outcome. Three tosses of a coin give \\(2 \\times 2 \\times 2 = 8\\) paths, such as HHT or TTH.",
+   "To find the probability of one outcome, multiply the probabilities along its path. For a fair coin, \\(P(\\text{HHT}) = \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{8}\\).",
+   "To find the probability of an event with more than one outcome, find each path that fits and add their probabilities. Exactly two heads can happen as HHT, HTH or THH, so \\(P = 3 \\times \\frac{1}{8} = \\frac{3}{8}\\)."
+  ],
+  "remember": "Multiply along a path for one outcome. Add the paths that fit the event.",
+  "a": {
+   "q": "A fair coin is tossed three times. What is the probability of getting tails, then heads, then tails, in that order?",
+   "opts": [
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{3}{8}\\)",
+    "\\(\\frac{1}{6}\\)",
+    "\\(\\frac{1}{2}\\)"
+   ],
+   "why": "This is one path, so multiply along it: \\(\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{8}\\). \\(\\frac{3}{8}\\) is tempting, but that is the chance of any order with two tails and one head, which has three paths.",
+   "clue": "One order means one path. Multiply along it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia spins a spinner three times. Each spin lands on red with probability \\(\\frac{1}{3}\\) and on blue with probability \\(\\frac{2}{3}\\). What is the probability that exactly one spin is red?",
+   "opts": [
+    "\\(\\frac{12}{27}\\)",
+    "\\(\\frac{4}{27}\\)",
+    "\\(\\frac{1}{3}\\)",
+    "\\(\\frac{8}{27}\\)"
+   ],
+   "why": "One path with one red is \\(\\frac{1}{3} \\times \\frac{2}{3} \\times \\frac{2}{3} = \\frac{4}{27}\\). The red can be first, second or third, so there are three such paths: \\(3 \\times \\frac{4}{27} = \\frac{12}{27}\\). \\(\\frac{4}{27}\\) is tempting, but it counts only one path.",
+   "clue": "List where the red can fall, then add those paths."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A three-step tree diagram for three tosses of a fair coin. Each branch is labelled H or T with probability \\(\\frac{1}{2}\\). The 8 outcomes are listed at the right ends: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT.",
+    "why": "Seeing the 8 paths shows how branches multiply at each step."
+   }
+  ]
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{1}{8}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{12}{27}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Three-step experiments",
+  "card": [
+   "A tree diagram can have three steps. Draw the branches for step 1, then add branches for step 2 from each end, then step 3 from each of those ends.",
+   "Each path from left to right is one outcome. Three tosses of a coin give \\(2 \\times 2 \\times 2 = 8\\) paths, such as HHT or TTH.",
+   "To find the probability of one outcome, multiply the probabilities along its path. For a fair coin, \\(P(\\text{HHT}) = \\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{8}\\).",
+   "To find the probability of an event with more than one outcome, find each path that fits and add their probabilities. Exactly two heads can happen as HHT, HTH or THH, so \\(P = 3 \\times \\frac{1}{8} = \\frac{3}{8}\\)."
+  ],
+  "remember": "Multiply along a path for one outcome. Add the paths that fit the event.",
+  "a": {
+   "q": "A fair coin is tossed three times. What is the probability of getting tails, then heads, then tails, in that order?",
+   "opts": [
+    "\\(\\frac{1}{8}\\)",
+    "\\(\\frac{3}{8}\\)",
+    "\\(\\frac{1}{6}\\)",
+    "\\(\\frac{1}{2}\\)"
+   ],
+   "why": "This is one path, so multiply along it: \\(\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{8}\\). \\(\\frac{3}{8}\\) is tempting, but that is the chance of any order with two tails and one head, which has three paths.",
+   "clue": "One order means one path. Multiply along it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia spins a spinner three times. Each spin lands on red with probability \\(\\frac{1}{3}\\) and on blue with probability \\(\\frac{2}{3}\\). What is the probability that exactly one spin is red?",
+   "opts": [
+    "\\(\\frac{12}{27}\\)",
+    "\\(\\frac{4}{27}\\)",
+    "\\(\\frac{1}{3}\\)",
+    "\\(\\frac{8}{27}\\)"
+   ],
+   "why": "One path with one red is \\(\\frac{1}{3} \\times \\frac{2}{3} \\times \\frac{2}{3} = \\frac{4}{27}\\). The red can be first, second or third, so there are three such paths: \\(3 \\times \\frac{4}{27} = \\frac{12}{27}\\). \\(\\frac{4}{27}\\) is tempting, but it counts only one path.",
+   "clue": "List where the red can fall, then add those paths."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A three-step tree diagram for three tosses of a fair coin. Each branch is labelled H or T with probability \\(\\frac{1}{2}\\). The 8 outcomes are listed at the right ends: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT.",
+    "why": "Seeing the 8 paths shows how branches multiply at each step."
+   }
+  ]
+ },
+ "cleared_by": "checker"
+}

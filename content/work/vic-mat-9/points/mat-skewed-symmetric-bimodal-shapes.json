@@ -1,0 +1,723 @@
+{
+ "id": "mat-skewed-symmetric-bimodal-shapes",
+ "title": "Skewed, symmetric and bimodal shapes",
+ "brief": "08ba1590fd23",
+ "shortlist": [
+  [
+   "mat-shape-distribution-2",
+   0.25
+  ],
+  [
+   "mat-shapes-distributions",
+   0.241
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T12:53:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:08Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:06:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:06Z check: flagged",
+  "2026-11-12T15:35:11Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00778,
+  "check": 0.01425,
+  "fix": 0.05209,
+  "recheck": 0.00752
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches bimodal data (two peaks), which the new point requires; the closest match, mat-shape-distribution-2, covers symmetric and skewed shapes at a Year 7 depth, and adding bimodal would be a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Skewed, symmetric and bimodal shapes",
+  "card": [
+   [
+    "Symmetric",
+    "the data is balanced, so the left side of the display mirrors the right. Most values sit in the middle and fewer sit at both ends."
+   ],
+   [
+    "Skewed",
+    "the data has one long tail. If the tail stretches to the right (high values), it is positively skewed. If it stretches to the left (low values), it is negatively skewed."
+   ],
+   [
+    "Bimodal",
+    "the data has two clear peaks, with a dip between them. It often means two different groups are mixed together."
+   ],
+   "Look at where the bars are tallest and where the tail goes. Example: most students in a class have 0 to 2 pets and a few have 8 or more. The tail points to the high values, so the data is positively skewed."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of pets per student in classes of width 2. The counts are 10, 8, 4, 2 and 1, so the tallest bar is on the left and a tail stretches to the right.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "step": 2,
+     "label": "Pets"
+    },
+    "y": {
+     "min": 0,
+     "max": 12,
+     "step": 2,
+     "label": "Students"
+    },
+    "classes": [
+     [
+      0,
+      2,
+      10
+     ],
+     [
+      2,
+      4,
+      8
+     ],
+     [
+      4,
+      6,
+      4
+     ],
+     [
+      6,
+      8,
+      2
+     ],
+     [
+      8,
+      10,
+      1
+     ]
+    ]
+   }
+  },
+  "remember": "Symmetric is balanced, skewed has one long tail, and bimodal has two peaks.",
+  "a": {
+   "q": "A histogram has its tallest bars on the right and a long tail stretching to the left. How is the data described?",
+   "opts": [
+    "Negatively skewed",
+    "Positively skewed",
+    "Symmetric",
+    "Bimodal"
+   ],
+   "why": "The tail points to the low values on the left, so the data is negatively skewed. It is not positively skewed, because the skew is named by the side of the tail, not by where the tall bars are.",
+   "clue": "Name the shape by the direction of the tail."
+  },
+  "b": {
+   "d": 3,
+   "q": "A shop records the ages of its customers. Many are about 15 to 20 and many are about 60 to 65, with few in between. What is the shape of the data?",
+   "opts": [
+    "Bimodal, as there are two peaks",
+    "Symmetric, as it is balanced",
+    "Positively skewed, as it has old customers",
+    "Negatively skewed, as it has young customers"
+   ],
+   "why": "There are two separate peaks with a dip between them, so the data is bimodal. It may look balanced, but a symmetric shape has one centre of tall bars, not two peaks.",
+   "clue": "Count the peaks first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Negatively skewed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Bimodal, as there are two peaks",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example says most students have 0 to 2 pets, but the histogram shows only 10 of 25 students in the 0–2 class (40%), so the chart does not show 'most'."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The symmetric line says most values sit in the middle with fewer at both ends. Symmetric data need not be like this: a uniform or two-peaked balanced shape is also symmetric."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says a symmetric shape has one centre of tall bars, not two peaks. Bimodal data can also be symmetric, so the two shapes are not mutually exclusive. Bimodal is still the best answer here."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The pets example says 'most' students have 0 to 2 pets, but the histogram puts only 10 of 25 there. The card and why (b) also wrongly suggest that symmetric data must have one central peak and cannot be bimodal."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The example says most students have 0 to 2 pets, but the histogram shows only 10 of 25 students in the 0–2 class (40%), so the chart does not show 'most'.",
+  "Card, fact: The symmetric line says most values sit in the middle with fewer at both ends. Symmetric data need not be like this: a uniform or two-peaked balanced shape is also symmetric.",
+  "Question b, fact: The why says a symmetric shape has one centre of tall bars, not two peaks. Bimodal data can also be symmetric, so the two shapes are not mutually exclusive. Bimodal is still the best answer here."
+ ],
+ "proposal": {
+  "title": "Skewed, symmetric and bimodal shapes",
+  "card": [
+   [
+    "Symmetric",
+    "the data is balanced, so the left half of the display roughly mirrors the right half. Often the tallest bars are in the middle, with shorter bars at both ends."
+   ],
+   [
+    "Skewed",
+    "the data has one long tail. If the tail stretches to the right (high values), it is positively skewed. If it stretches to the left (low values), it is negatively skewed."
+   ],
+   [
+    "Bimodal",
+    "the data has two clear peaks, with a dip between them. It often means two different groups are mixed together."
+   ],
+   "Look at where the bars are tallest and where the tail goes. Example: in a class, the tallest bar is for 0 to 1 pets, and the bars shrink towards 8 to 9 pets. The tail points to the high values, so the data is positively skewed."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of pets per student in classes of width 2. The counts are 12, 6, 3, 2 and 1, so the tallest bar is on the left and a tail stretches to the right.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "step": 2,
+     "label": "Pets"
+    },
+    "y": {
+     "min": 0,
+     "max": 14,
+     "step": 2,
+     "label": "Students"
+    },
+    "classes": [
+     [
+      0,
+      2,
+      12
+     ],
+     [
+      2,
+      4,
+      6
+     ],
+     [
+      4,
+      6,
+      3
+     ],
+     [
+      6,
+      8,
+      2
+     ],
+     [
+      8,
+      10,
+      1
+     ]
+    ]
+   }
+  },
+  "remember": "Symmetric is balanced, skewed has one long tail, and bimodal has two peaks.",
+  "a": {
+   "q": "A histogram has its tallest bars on the right and a long tail stretching to the left. How is the data described?",
+   "opts": [
+    "Negatively skewed",
+    "Positively skewed",
+    "Symmetric",
+    "Bimodal"
+   ],
+   "why": "The tail points to the low values on the left, so the data is negatively skewed. It is not positively skewed, because the skew is named by the side of the tail, not by where the tall bars are.",
+   "clue": "Name the shape by the direction of the tail."
+  },
+  "b": {
+   "d": 3,
+   "q": "A shop records the ages of its customers. Many are about 15 to 20 and many are about 60 to 65, with few in between. What is the shape of the data?",
+   "opts": [
+    "Bimodal, as there are two peaks",
+    "Symmetric, with one peak in the middle",
+    "Positively skewed, as it has old customers",
+    "Negatively skewed, as it has young customers"
+   ],
+   "why": "There are two separate peaks with a dip between them, so the data is bimodal. There is no peak in the middle: the middle ages have the fewest customers. It is not skewed either, as there is no single long tail.",
+   "clue": "Count the peaks first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Negatively skewed",
+    "also_right": []
+   },
+   "b": {
+    "best": "Bimodal, as there are two peaks",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example says most students have 0 to 2 pets, but the histogram shows only 10 of 25 students in the 0–2 class (40%), so the chart does not show 'most'."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The symmetric line says most values sit in the middle with fewer at both ends. Symmetric data need not be like this: a uniform or two-peaked balanced shape is also symmetric."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says a symmetric shape has one centre of tall bars, not two peaks. Bimodal data can also be symmetric, so the two shapes are not mutually exclusive. Bimodal is still the best answer here."
+   }
+  ],
+  "flags": [
+   "Card, fact: The example says most students have 0 to 2 pets, but the histogram shows only 10 of 25 students in the 0–2 class (40%), so the chart does not show 'most'.",
+   "Card, fact: The symmetric line says most values sit in the middle with fewer at both ends. Symmetric data need not be like this: a uniform or two-peaked balanced shape is also symmetric.",
+   "Question b, fact: The why says a symmetric shape has one centre of tall bars, not two peaks. Bimodal data can also be symmetric, so the two shapes are not mutually exclusive. Bimodal is still the best answer here."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Skewed, symmetric and bimodal shapes",
+  "card": [
+   [
+    "Symmetric",
+    "the data is balanced, so the left half of the display roughly mirrors the right half. Often the tallest bars are in the middle, with shorter bars at both ends."
+   ],
+   [
+    "Skewed",
+    "the data has one long tail. If the tail stretches to the right (high values), it is positively skewed. If it stretches to the left (low values), it is negatively skewed."
+   ],
+   [
+    "Bimodal",
+    "the data has two clear peaks, with a dip between them. It often means two different groups are mixed together."
+   ],
+   "Look at where the bars are tallest and where the tail goes. Example: in a class, the tallest bar is for 0 to 1 pets, and the bars shrink towards 8 to 9 pets. The tail points to the high values, so the data is positively skewed."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "chart",
+    "chart": "histogram",
+    "alt": "A histogram of pets per student in classes of width 2. The counts are 12, 6, 3, 2 and 1, so the tallest bar is on the left and a tail stretches to the right.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "step": 2,
+     "label": "Pets"
+    },
+    "y": {
+     "min": 0,
+     "max": 14,
+     "step": 2,
+     "label": "Students"
+    },
+    "classes": [
+     [
+      0,
+      2,
+      12
+     ],
+     [
+      2,
+      4,
+      6
+     ],
+     [
+      4,
+      6,
+      3
+     ],
+     [
+      6,
+      8,
+      2
+     ],
+     [
+      8,
+      10,
+      1
+     ]
+    ]
+   }
+  },
+  "remember": "Symmetric is balanced, skewed has one long tail, and bimodal has two peaks.",
+  "a": {
+   "q": "A histogram has its tallest bars on the right and a long tail stretching to the left. How is the data described?",
+   "opts": [
+    "Negatively skewed",
+    "Positively skewed",
+    "Symmetric",
+    "Bimodal"
+   ],
+   "why": "The tail points to the low values on the left, so the data is negatively skewed. It is not positively skewed, because the skew is named by the side of the tail, not by where the tall bars are.",
+   "clue": "Name the shape by the direction of the tail."
+  },
+  "b": {
+   "d": 3,
+   "q": "A shop records the ages of its customers. Many are about 15 to 20 and many are about 60 to 65, with few in between. What is the shape of the data?",
+   "opts": [
+    "Bimodal, as there are two peaks",
+    "Symmetric, with one peak in the middle",
+    "Positively skewed, as it has old customers",
+    "Negatively skewed, as it has young customers"
+   ],
+   "why": "There are two separate peaks with a dip between them, so the data is bimodal. There is no peak in the middle: the middle ages have the fewest customers. It is not skewed either, as there is no single long tail.",
+   "clue": "Count the peaks first."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix drops the claim that most students have 0 to 2 pets, softens the symmetric line so it no longer says symmetric data must peak in the middle, and makes the symmetric option in question b clearly wrong. The histogram's counts 12, 6, 3, 2, 1 do show a tail to the right.",
+   "item": "33a83d276fc84664",
+   "result": "decided",
+   "saved": {
+    "id": "mat-skewed-symmetric-bimodal-shapes",
+    "title": "Skewed, symmetric and bimodal shapes",
+    "brief": "08ba1590fd23",
+    "shortlist": [
+     [
+      "mat-shape-distribution-2",
+      0.25
+     ],
+     [
+      "mat-shapes-distributions",
+      0.241
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.0002,
+     "write": 0.00778,
+     "check": 0.01425,
+     "fix": 0.05209,
+     "recheck": 0.00752
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "Neither bank point teaches bimodal data (two peaks), which the new point requires; the closest match, mat-shape-distribution-2, covers symmetric and skewed shapes at a Year 7 depth, and adding bimodal would be a new idea rather than a small change.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Skewed, symmetric and bimodal shapes",
+     "card": [
+      [
+       "Symmetric",
+       "the data is balanced, so the left side of the display mirrors the right. Most values sit in the middle and fewer sit at both ends."
+      ],
+      [
+       "Skewed",
+       "the data has one long tail. If the tail stretches to the right (high values), it is positively skewed. If it stretches to the left (low values), it is negatively skewed."
+      ],
+      [
+       "Bimodal",
+       "the data has two clear peaks, with a dip between them. It often means two different groups are mixed together."
+      ],
+      "Look at where the bars are tallest and where the tail goes. Example: most students in a class have 0 to 2 pets and a few have 8 or more. The tail points to the high values, so the data is positively skewed."
+     ],
+     "cardFigs": {
+      "4": {
+       "kind": "chart",
+       "chart": "histogram",
+       "alt": "A histogram of pets per student in classes of width 2. The counts are 10, 8, 4, 2 and 1, so the tallest bar is on the left and a tail stretches to the right.",
+       "x": {
+        "min": 0,
+        "max": 10,
+        "step": 2,
+        "label": "Pets"
+       },
+       "y": {
+        "min": 0,
+        "max": 12,
+        "step": 2,
+        "label": "Students"
+       },
+       "classes": [
+        [
+         0,
+         2,
+         10
+        ],
+        [
+         2,
+         4,
+         8
+        ],
+        [
+         4,
+         6,
+         4
+        ],
+        [
+         6,
+         8,
+         2
+        ],
+        [
+         8,
+         10,
+         1
+        ]
+       ]
+      }
+     },
+     "remember": "Symmetric is balanced, skewed has one long tail, and bimodal has two peaks.",
+     "a": {
+      "q": "A histogram has its tallest bars on the right and a long tail stretching to the left. How is the data described?",
+      "opts": [
+       "Negatively skewed",
+       "Positively skewed",
+       "Symmetric",
+       "Bimodal"
+      ],
+      "why": "The tail points to the low values on the left, so the data is negatively skewed. It is not positively skewed, because the skew is named by the side of the tail, not by where the tall bars are.",
+      "clue": "Name the shape by the direction of the tail."
+     },
+     "b": {
+      "d": 3,
+      "q": "A shop records the ages of its customers. Many are about 15 to 20 and many are about 60 to 65, with few in between. What is the shape of the data?",
+      "opts": [
+       "Bimodal, as there are two peaks",
+       "Symmetric, as it is balanced",
+       "Positively skewed, as it has old customers",
+       "Negatively skewed, as it has young customers"
+      ],
+      "why": "There are two separate peaks with a dip between them, so the data is bimodal. It may look balanced, but a symmetric shape has one centre of tall bars, not two peaks.",
+      "clue": "Count the peaks first."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Negatively skewed",
+      "also_right": []
+     },
+     "b": {
+      "best": "Bimodal, as there are two peaks",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The example says most students have 0 to 2 pets, but the histogram shows only 10 of 25 students in the 0–2 class (40%), so the chart does not show 'most'."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The symmetric line says most values sit in the middle with fewer at both ends. Symmetric data need not be like this: a uniform or two-peaked balanced shape is also symmetric."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says a symmetric shape has one centre of tall bars, not two peaks. Bimodal data can also be symmetric, so the two shapes are not mutually exclusive. Bimodal is still the best answer here."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The pets example says 'most' students have 0 to 2 pets, but the histogram puts only 10 of 25 there. The card and why (b) also wrongly suggest that symmetric data must have one central peak and cannot be bimodal."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: The example says most students have 0 to 2 pets, but the histogram shows only 10 of 25 students in the 0–2 class (40%), so the chart does not show 'most'.",
+     "Card, fact: The symmetric line says most values sit in the middle with fewer at both ends. Symmetric data need not be like this: a uniform or two-peaked balanced shape is also symmetric.",
+     "Question b, fact: The why says a symmetric shape has one centre of tall bars, not two peaks. Bimodal data can also be symmetric, so the two shapes are not mutually exclusive. Bimodal is still the best answer here."
+    ],
+    "proposal": {
+     "title": "Skewed, symmetric and bimodal shapes",
+     "card": [
+      [
+       "Symmetric",
+       "the data is balanced, so the left half of the display roughly mirrors the right half. Often the tallest bars are in the middle, with shorter bars at both ends."
+      ],
+      [
+       "Skewed",
+       "the data has one long tail. If the tail stretches to the right (high values), it is positively skewed. If it stretches to the left (low values), it is negatively skewed."
+      ],
+      [
+       "Bimodal",
+       "the data has two clear peaks, with a dip between them. It often means two different groups are mixed together."
+      ],
+      "Look at where the bars are tallest and where the tail goes. Example: in a class, the tallest bar is for 0 to 1 pets, and the bars shrink towards 8 to 9 pets. The tail points to the high values, so the data is positively skewed."
+     ],
+     "cardFigs": {
+      "4": {
+       "kind": "chart",
+       "chart": "histogram",
+       "alt": "A histogram of pets per student in classes of width 2. The counts are 12, 6, 3, 2 and 1, so the tallest bar is on the left and a tail stretches to the right.",
+       "x": {
+        "min": 0,
+        "max": 10,
+        "step": 2,
+        "label": "Pets"
+       },
+       "y": {
+        "min": 0,
+        "max": 14,
+        "step": 2,
+        "label": "Students"
+       },
+       "classes": [
+        [
+         0,
+         2,
+         12
+        ],
+        [
+         2,
+         4,
+         6
+        ],
+        [
+         4,
+         6,
+         3
+        ],
+        [
+         6,
+         8,
+         2
+        ],
+        [
+         8,
+         10,
+         1
+        ]
+       ]
+      }
+     },
+     "remember": "Symmetric is balanced, skewed has one long tail, and bimodal has two peaks.",
+     "a": {
+      "q": "A histogram has its tallest bars on the right and a long tail stretching to the left. How is the data described?",
+      "opts": [
+       "Negatively skewed",
+       "Positively skewed",
+       "Symmetric",
+       "Bimodal"
+      ],
+      "why": "The tail points to the low values on the left, so the data is negatively skewed. It is not positively skewed, because the skew is named by the side of the tail, not by where the tall bars are.",
+      "clue": "Name the shape by the direction of the tail."
+     },
+     "b": {
+      "d": 3,
+      "q": "A shop records the ages of its customers. Many are about 15 to 20 and many are about 60 to 65, with few in between. What is the shape of the data?",
+      "opts": [
+       "Bimodal, as there are two peaks",
+       "Symmetric, with one peak in the middle",
+       "Positively skewed, as it has old customers",
+       "Negatively skewed, as it has young customers"
+      ],
+      "why": "There are two separate peaks with a dip between them, so the data is bimodal. There is no peak in the middle: the middle ages have the fewest customers. It is not skewed either, as there is no single long tail.",
+      "clue": "Count the peaks first."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:12Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "Negatively skewed",
+       "also_right": []
+      },
+      "b": {
+       "best": "Bimodal, as there are two peaks",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-12T17:07:12Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The example says most students have 0 to 2 pets, but the histogram shows only 10 of 25 students in the 0–2 class (40%), so the chart does not show 'most'."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The symmetric line says most values sit in the middle with fewer at both ends. Symmetric data need not be like this: a uniform or two-peaked balanced shape is also symmetric."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says a symmetric shape has one centre of tall bars, not two peaks. Bimodal data can also be symmetric, so the two shapes are not mutually exclusive. Bimodal is still the best answer here."
+      }
+     ],
+     "flags": [
+      "Card, fact: The example says most students have 0 to 2 pets, but the histogram shows only 10 of 25 students in the 0–2 class (40%), so the chart does not show 'most'.",
+      "Card, fact: The symmetric line says most values sit in the middle with fewer at both ends. Symmetric data need not be like this: a uniform or two-peaked balanced shape is also symmetric.",
+      "Question b, fact: The why says a symmetric shape has one centre of tall bars, not two peaks. Bimodal data can also be symmetric, so the two shapes are not mutually exclusive. Bimodal is still the best answer here."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "a03d952021bf098d"
+  }
+ ]
+}

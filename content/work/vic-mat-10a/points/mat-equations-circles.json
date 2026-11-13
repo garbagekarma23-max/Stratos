@@ -1,0 +1,222 @@
+{
+ "id": "mat-equations-circles",
+ "title": "Equations of circles",
+ "brief": "e98a5032615b",
+ "shortlist": [
+  [
+   "mat-circles",
+   0.504
+  ],
+  [
+   "mat-unit-circle",
+   0.412
+  ],
+  [
+   "mat-circles-ellipses",
+   0.367
+  ],
+  [
+   "mat-area-circle",
+   0.317
+  ],
+  [
+   "mat-circumference-circle",
+   0.297
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done",
+  "2026-11-12T15:59:43Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0005,
+  "write": 0.02113,
+  "check": 0.00729
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-circles, is written for NSW Year 11 and goes beyond the brief into completing the square, which its second question depends on, so it is not a close enough match at Year 10 depth, and mat-circles-ellipses is broader because it also covers ellipses.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Equations of circles",
+  "card": [
+   "A circle with centre \\((h, k)\\) and radius \\(r\\) has the equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\). Every point on the circle is \\(r\\) units from the centre.",
+   "Read the centre from the brackets, but flip the signs. \\((x - 3)^{2}\\) gives \\(h = 3\\), and \\((y + 2)^{2}\\) gives \\(k = -2\\).",
+   "The right-hand side is \\(r^{2}\\), not \\(r\\). Take the square root to find the radius. For \\(r^{2} = 25\\), the radius is 5.",
+   [
+    "Example",
+    "\\((x - 3)^{2} + (y + 2)^{2} = 25\\) has centre \\((3, -2)\\) and radius 5."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A circle with centre \\((3, -2)\\) and radius 5, drawn from the equation \\((x - 3)^{2} + (y + 2)^{2} = 25\\). The centre is marked.",
+    "x": {
+     "min": -4,
+     "max": 10,
+     "label": "\\(x\\)",
+     "nums": false
+    },
+    "y": {
+     "min": -9,
+     "max": 7,
+     "label": "\\(y\\)",
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       3,
+       -2
+      ],
+      "r": 5
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       -2
+      ],
+      "label": "\\((3, -2)\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
+  "remember": "Centre \\((h, k)\\) comes from the brackets with signs flipped. The number on the right is \\(r^{2}\\).",
+  "a": {
+   "q": "What are the centre and radius of \\((x + 4)^{2} + (y - 1)^{2} = 36\\)?",
+   "opts": [
+    "Centre \\((-4, 1)\\), radius 6",
+    "Centre \\((4, -1)\\), radius 6",
+    "Centre \\((-4, 1)\\), radius 36",
+    "Centre \\((4, -1)\\), radius 36"
+   ],
+   "why": "\\((x + 4)\\) means \\(h = -4\\), and \\((y - 1)\\) means \\(k = 1\\). The radius is \\(\\sqrt{36} = 6\\). Giving 36 as the radius forgets that the right-hand side is \\(r^{2}\\).",
+   "clue": "Flip the signs for the centre, then take a square root."
+  },
+  "b": {
+   "d": 3,
+   "q": "A circle has centre \\((-2, 5)\\) and radius 3. Which equation is its equation?",
+   "opts": [
+    "\\((x + 2)^{2} + (y - 5)^{2} = 9\\)",
+    "\\((x - 2)^{2} + (y + 5)^{2} = 9\\)",
+    "\\((x + 2)^{2} + (y - 5)^{2} = 3\\)",
+    "\\((x - 2)^{2} + (y + 5)^{2} = 3\\)"
+   ],
+   "why": "With \\(h = -2\\) the bracket is \\((x - (-2)) = (x + 2)\\), and with \\(k = 5\\) it is \\((y - 5)\\). The right-hand side is \\(r^{2} = 3^{2} = 9\\). Writing 3 forgets to square the radius.",
+   "clue": "Put \\(h\\) and \\(k\\) into \\((x - h)\\) and \\((y - k)\\), and square the radius."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Centre \\((-4, 1)\\), radius 6",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((x + 2)^{2} + (y - 5)^{2} = 9\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Equations of circles",
+  "card": [
+   "A circle with centre \\((h, k)\\) and radius \\(r\\) has the equation \\((x - h)^{2} + (y - k)^{2} = r^{2}\\). Every point on the circle is \\(r\\) units from the centre.",
+   "Read the centre from the brackets, but flip the signs. \\((x - 3)^{2}\\) gives \\(h = 3\\), and \\((y + 2)^{2}\\) gives \\(k = -2\\).",
+   "The right-hand side is \\(r^{2}\\), not \\(r\\). Take the square root to find the radius. For \\(r^{2} = 25\\), the radius is 5.",
+   [
+    "Example",
+    "\\((x - 3)^{2} + (y + 2)^{2} = 25\\) has centre \\((3, -2)\\) and radius 5."
+   ]
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A circle with centre \\((3, -2)\\) and radius 5, drawn from the equation \\((x - 3)^{2} + (y + 2)^{2} = 25\\). The centre is marked.",
+    "x": {
+     "min": -4,
+     "max": 10,
+     "label": "\\(x\\)",
+     "nums": false
+    },
+    "y": {
+     "min": -9,
+     "max": 7,
+     "label": "\\(y\\)",
+     "nums": false
+    },
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       3,
+       -2
+      ],
+      "r": 5
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       -2
+      ],
+      "label": "\\((3, -2)\\)",
+      "pos": "below"
+     }
+    ]
+   }
+  },
+  "remember": "Centre \\((h, k)\\) comes from the brackets with signs flipped. The number on the right is \\(r^{2}\\).",
+  "a": {
+   "q": "What are the centre and radius of \\((x + 4)^{2} + (y - 1)^{2} = 36\\)?",
+   "opts": [
+    "Centre \\((-4, 1)\\), radius 6",
+    "Centre \\((4, -1)\\), radius 6",
+    "Centre \\((-4, 1)\\), radius 36",
+    "Centre \\((4, -1)\\), radius 36"
+   ],
+   "why": "\\((x + 4)\\) means \\(h = -4\\), and \\((y - 1)\\) means \\(k = 1\\). The radius is \\(\\sqrt{36} = 6\\). Giving 36 as the radius forgets that the right-hand side is \\(r^{2}\\).",
+   "clue": "Flip the signs for the centre, then take a square root."
+  },
+  "b": {
+   "d": 3,
+   "q": "A circle has centre \\((-2, 5)\\) and radius 3. Which equation is its equation?",
+   "opts": [
+    "\\((x + 2)^{2} + (y - 5)^{2} = 9\\)",
+    "\\((x - 2)^{2} + (y + 5)^{2} = 9\\)",
+    "\\((x + 2)^{2} + (y - 5)^{2} = 3\\)",
+    "\\((x - 2)^{2} + (y + 5)^{2} = 3\\)"
+   ],
+   "why": "With \\(h = -2\\) the bracket is \\((x - (-2)) = (x + 2)\\), and with \\(k = 5\\) it is \\((y - 5)\\). The right-hand side is \\(r^{2} = 3^{2} = 9\\). Writing 3 forgets to square the radius.",
+   "clue": "Put \\(h\\) and \\(k\\) into \\((x - h)\\) and \\((y - k)\\), and square the radius."
+  }
+ },
+ "cleared_by": "checker"
+}

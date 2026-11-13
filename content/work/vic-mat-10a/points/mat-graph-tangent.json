@@ -1,0 +1,752 @@
+{
+ "id": "mat-graph-tangent",
+ "title": "The graph of tangent",
+ "brief": "ea64a128d1eb",
+ "shortlist": [
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.533
+  ],
+  [
+   "mat-tangent-graph",
+   0.476
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.351
+  ],
+  [
+   "mat-tangent-lines",
+   0.329
+  ],
+  [
+   "mat-tangents-normals",
+   0.267
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-tangent-graph, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:49Z confirm: Claude Opus 5.5 may adapt mat-tangent-graph, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-tangent-graph (4 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-tangent-graph on the next run",
+  "2026-11-13T13:04:53Z adapt: failed the content check, writing again",
+  "2026-11-13T13:11:26Z adapt: done (still fails the content check)",
+  "2026-11-13T13:13:39Z check: flagged",
+  "2026-11-13T14:23:57Z fix: suggested",
+  "2026-11-13T15:26:23Z review: rejected, to be written again",
+  "2026-11-13T15:37:12Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00072,
+  "confirm": 0.02281,
+  "adapt": 0.03447,
+  "check": 0.01122,
+  "fix": 0.03649
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-tangent-graph",
+  "changes": [
+   "Express the period and asymptote positions in degrees instead of radians, so the period is 180° and the asymptotes are at 90°, 270° and so on.",
+   "Rewrite the axis labels, the x-intercept labels and the answer options in degrees, replacing π-based values such as π/2 and 3π/2 with 90° and 270°.",
+   "Replace the radian-based remember line and the explanation of the period with the degree version."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same tangent graph, period and asymptotes at the right depth, but it is written in radians, so it needs converting to the degrees used in Year 10 Victorian Mathematics.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-tangent-graph",
+  "changes": [
+   "Change every angle from radians to degrees throughout the card, remember line and figure: period 180° instead of π, and asymptotes at ±90°, ±270° instead of ±π/2, ±3π/2.",
+   "Relabel the figure's x-axis in degrees (−270° to 270°) and mark the x-intercepts at −180°, 0° and 180°.",
+   "Rewrite question a's options in degrees: x = 90° (right), x = 180°, x = 0°, x = 360°.",
+   "Rewrite question b in degrees: the asymptote at x = 90°, with options 270° (right), 180°, 360°, 450°."
+  ],
+  "sure": "medium",
+  "reason": "The Victorian Units 1 and 2 tangent graph card teaches exactly this idea (period, and asymptotes where cos x = 0) at a suitable depth, but it works in radians, while Level 10A graphs these functions in degrees, so its angles need converting.",
+  "model": "claude-opus-5-5"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the tangent graph's period and asymptotes, but in radians. Level 10A and the other points in this chapter work in degrees, as the brief does.",
+   "item": "2b0a07cff7badca6",
+   "result": "decided",
+   "saved": {
+    "id": "mat-graph-tangent",
+    "title": "The graph of tangent",
+    "brief": "ea64a128d1eb",
+    "shortlist": [
+     [
+      "mat-graphs-sine-cosine-tangent",
+      0.533
+     ],
+     [
+      "mat-tangent-graph",
+      0.476
+     ],
+     [
+      "mat-graphs-logarithmic-functions",
+      0.351
+     ],
+     [
+      "mat-tangent-lines",
+      0.329
+     ],
+     [
+      "mat-tangents-normals",
+      0.267
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00072,
+     "confirm": 0.02281
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-tangent-graph",
+     "changes": [
+      "Express the period and asymptote positions in degrees instead of radians, so the period is 180° and the asymptotes are at 90°, 270° and so on.",
+      "Rewrite the axis labels, the x-intercept labels and the answer options in degrees, replacing π-based values such as π/2 and 3π/2 with 90° and 270°.",
+      "Replace the radian-based remember line and the explanation of the period with the degree version."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same tangent graph, period and asymptotes at the right depth, but it is written in radians, so it needs converting to the degrees used in Year 10 Victorian Mathematics.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-tangent-graph",
+     "changes": [
+      "Change every angle from radians to degrees throughout the card, remember line and figure: period 180° instead of π, and asymptotes at ±90°, ±270° instead of ±π/2, ±3π/2.",
+      "Relabel the figure's x-axis in degrees (−270° to 270°) and mark the x-intercepts at −180°, 0° and 180°.",
+      "Rewrite question a's options in degrees: x = 90° (right), x = 180°, x = 0°, x = 360°.",
+      "Rewrite question b in degrees: the asymptote at x = 90°, with options 270° (right), 180°, 360°, 450°."
+     ],
+     "sure": "medium",
+     "reason": "The Victorian Units 1 and 2 tangent graph card teaches exactly this idea (period, and asymptotes where cos x = 0) at a suitable depth, but it works in radians, while Level 10A graphs these functions in degrees, so its angles need converting.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "154814dc8be4fdea"
+  },
+  {
+   "at": "2026-11-13T15:37:12Z",
+   "step": "write",
+   "version": {
+    "title": "The graph of tangent",
+    "card": [
+     "For any angle, \\(\\tan x = \\frac{\\sin x}{\\cos x}\\). When \\(\\cos x = 0\\), this fraction is undefined, so \\(\\tan x\\) has no value at that angle.",
+     "Cosine is 0 at \\(90^{\\circ}\\), \\(270^{\\circ}\\) and every \\(180^{\\circ}\\) on from these. At each one, the graph of \\(y = \\tan x\\) has a vertical asymptote: a line the curve gets closer and closer to but never meets.",
+     "Between two asymptotes, the curve rises from left to right, with no highest or lowest point. It crosses the x-axis where \\(\\sin x = 0\\): at \\(0^{\\circ}\\), \\(180^{\\circ}\\), \\(360^{\\circ}\\) and so on.",
+     "The same shape repeats every \\(180^{\\circ}\\), so the period of \\(y = \\tan x\\) is \\(180^{\\circ}\\), half the period of sine and cosine. For example, \\(\\tan 225^{\\circ} = \\tan 45^{\\circ} = 1\\)."
+    ],
+    "cardFigs": {
+     "2": {
+      "kind": "graph",
+      "alt": "The graph of \\(y = \\tan x\\) for \\(x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). Dashed vertical asymptotes are at \\(x = 90^{\\circ}\\) and \\(x = 270^{\\circ}\\). Between the asymptotes the curve rises from left to right. It crosses the x-axis at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\).",
+      "x": {
+       "min": -30,
+       "max": 390,
+       "label": "\\(x\\)",
+       "step": 90,
+       "nums": false
+      },
+      "y": {
+       "min": -4,
+       "max": 4,
+       "label": "\\(y\\)"
+      },
+      "items": [
+       {
+        "type": "asymptote",
+        "x": 90
+       },
+       {
+        "type": "asymptote",
+        "x": 270
+       },
+       {
+        "type": "text",
+        "at": [
+         90,
+         0
+        ],
+        "label": "\\(90^{\\circ}\\)",
+        "pos": "below-left"
+       },
+       {
+        "type": "text",
+        "at": [
+         270,
+         0
+        ],
+        "label": "\\(270^{\\circ}\\)",
+        "pos": "below-left"
+       },
+       {
+        "type": "fn",
+        "id": "f",
+        "expr": "\\tan(\\frac{\\pi x}{180})",
+        "domain": [
+         0,
+         360
+        ],
+        "breaks": [
+         90,
+         270
+        ],
+        "label": "\\(y = \\tan x\\)",
+        "labelAt": 70,
+        "pos": "left"
+       },
+       {
+        "type": "point",
+        "at": [
+         0,
+         0
+        ],
+        "on": [
+         "f"
+        ],
+        "is": "x-intercept",
+        "label": "\\(0^{\\circ}\\)",
+        "pos": "below-right"
+       },
+       {
+        "type": "point",
+        "at": [
+         180,
+         0
+        ],
+        "on": [
+         "f"
+        ],
+        "is": "x-intercept",
+        "label": "\\(180^{\\circ}\\)",
+        "pos": "above-left"
+       },
+       {
+        "type": "point",
+        "at": [
+         360,
+         0
+        ],
+        "on": [
+         "f"
+        ],
+        "is": "x-intercept",
+        "label": "\\(360^{\\circ}\\)",
+        "pos": "above-left"
+       }
+      ]
+     }
+    },
+    "remember": "Asymptotes where \\(\\cos x = 0\\), at \\(90^{\\circ}\\) and every \\(180^{\\circ}\\) on. The shape repeats every \\(180^{\\circ}\\).",
+    "a": {
+     "q": "Why does the graph of \\(y = \\tan x\\) have a vertical asymptote at \\(x = 90^{\\circ}\\)?",
+     "opts": [
+      "\\(\\cos 90^{\\circ} = 0\\), so \\(\\tan 90^{\\circ}\\) is undefined",
+      "\\(\\sin 90^{\\circ} = 0\\), so \\(\\tan 90^{\\circ}\\) is undefined",
+      "\\(\\sin 90^{\\circ} = 1\\), so \\(\\tan 90^{\\circ}\\) is very large",
+      "\\(\\cos 90^{\\circ} = 1\\), so \\(\\tan 90^{\\circ}\\) is very large"
+     ],
+     "why": "Since \\(\\tan x = \\frac{\\sin x}{\\cos x}\\) and \\(\\cos 90^{\\circ} = 0\\), the fraction has 0 on the bottom, so \\(\\tan 90^{\\circ}\\) is undefined. It is true that \\(\\sin 90^{\\circ} = 1\\), but that does not cause the asymptote: the zero on the bottom does.",
+     "clue": "Look at the bottom of the fraction \\(\\frac{\\sin x}{\\cos x}\\)."
+    },
+    "b": {
+     "d": 3,
+     "q": "How many vertical asymptotes does the graph of \\(y = \\tan x\\) have from \\(0^{\\circ}\\) to \\(720^{\\circ}\\)?",
+     "opts": [
+      "4",
+      "2",
+      "5",
+      "8"
+     ],
+     "why": "Cosine is 0 at \\(90^{\\circ}\\), \\(270^{\\circ}\\), \\(450^{\\circ}\\) and \\(630^{\\circ}\\), one every \\(180^{\\circ}\\), so there are 4. The answer 5 counts the x-intercepts at \\(0^{\\circ}\\), \\(180^{\\circ}\\), \\(360^{\\circ}\\), \\(540^{\\circ}\\) and \\(720^{\\circ}\\) instead.",
+     "clue": "List the angles up to \\(720^{\\circ}\\) where \\(\\cos x = 0\\)."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "\\(\\cos 90^{\\circ} = 0\\), so \\(\\tan 90^{\\circ}\\) is undefined",
+     "also_right": []
+    },
+    "b": {
+     "best": "4",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "note": "",
+ "rejected": {
+  "title": "The tangent graph",
+  "card": [
+   "The graph of \\(y = \\tan x\\) comes from \\(\\tan x = \\sin x \\div \\cos x\\). It repeats every \\(180^{\\circ}\\), so its period is \\(180^{\\circ}\\).",
+   "When \\(\\cos x = 0\\), the fraction cannot be worked out. The graph has a vertical asymptote there, a line it gets closer to but never touches.",
+   "In one period from \\(-90^{\\circ}\\) to \\(90^{\\circ}\\), the asymptotes are at \\(x = -90^{\\circ}\\) and \\(x = 90^{\\circ}\\). Others are at \\(x = 270^{\\circ}\\), \\(x = -270^{\\circ}\\) and so on, every \\(180^{\\circ}\\) apart.",
+   "The graph crosses the x-axis where \\(\\sin x = 0\\), so at \\(x = 0^{\\circ}\\), \\(180^{\\circ}\\), \\(-180^{\\circ}\\) and so on. Between each pair of asymptotes, the curve rises from left to right."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\tan x\\) with x in degrees. Between each pair of vertical asymptotes the curve rises from left to right. The dashed asymptotes \\(x = -90^{\\circ}\\) and \\(x = 90^{\\circ}\\) are marked on the x-axis. The curve crosses the x-axis at \\(-180^{\\circ}\\), \\(0^{\\circ}\\) and \\(180^{\\circ}\\).",
+    "x": {
+     "min": -270,
+     "max": 270,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -6,
+     "max": 6,
+     "label": "\\(y\\)",
+     "step": 2
+    },
+    "items": [
+     {
+      "type": "asymptote",
+      "x": -90
+     },
+     {
+      "type": "asymptote",
+      "x": 90
+     },
+     {
+      "type": "text",
+      "at": [
+       -90,
+       0
+      ],
+      "label": "\\(-90^{\\circ}\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "text",
+      "at": [
+       90,
+       0
+      ],
+      "label": "\\(90^{\\circ}\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "fn",
+      "id": "l",
+      "expr": "\\tan(\\frac{\\pi x}{180})",
+      "domain": [
+       -270,
+       -90
+      ]
+     },
+     {
+      "type": "fn",
+      "id": "m",
+      "expr": "\\tan(\\frac{\\pi x}{180})",
+      "domain": [
+       -90,
+       90
+      ],
+      "label": "\\(y = \\tan x\\)",
+      "labelAt": 60,
+      "pos": "right"
+     },
+     {
+      "type": "fn",
+      "id": "h",
+      "expr": "\\tan(\\frac{\\pi x}{180})",
+      "domain": [
+       90,
+       270
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       -180,
+       0
+      ],
+      "label": "\\(-180^{\\circ}\\)",
+      "pos": "above-left",
+      "on": [
+       "l"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "label": "\\(0^{\\circ}\\)",
+      "pos": "above-left",
+      "on": [
+       "m"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       0
+      ],
+      "label": "\\(180^{\\circ}\\)",
+      "pos": "below-right",
+      "on": [
+       "h"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
+  "remember": "\\(\\tan x = \\sin x \\div \\cos x\\): period \\(180^{\\circ}\\), with asymptotes wherever \\(\\cos x = 0\\).",
+  "a": {
+   "q": "Which of these angles gives a vertical asymptote on \\(y = \\tan x\\)?",
+   "opts": [
+    "\\(x = 90^{\\circ}\\)",
+    "\\(x = 180^{\\circ}\\)",
+    "\\(x = 0^{\\circ}\\)",
+    "\\(x = 360^{\\circ}\\)"
+   ],
+   "why": "At \\(x = 90^{\\circ}\\), \\(\\cos x = 0\\), so \\(\\tan x\\) cannot be worked out and there is an asymptote. At \\(x = 180^{\\circ}\\), \\(\\sin x = 0\\) and \\(\\cos x = -1\\), so \\(\\tan 180^{\\circ} = 0\\) and the graph crosses the x-axis there.",
+   "clue": "Look for the angle where \\(\\cos x = 0\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "There is a vertical asymptote at \\(x = 90^{\\circ}\\) on the graph of \\(y = \\tan x\\). Where is the next one to the right?",
+   "opts": [
+    "\\(x = 270^{\\circ}\\)",
+    "\\(x = 180^{\\circ}\\)",
+    "\\(x = 360^{\\circ}\\)",
+    "\\(x = 450^{\\circ}\\)"
+   ],
+   "why": "Asymptotes repeat every period, which is \\(180^{\\circ}\\). So the next one is \\(90^{\\circ} + 180^{\\circ} = 270^{\\circ}\\). The angle \\(180^{\\circ}\\) is tempting, but \\(\\tan 180^{\\circ} = 0\\) there, so the graph crosses the axis.",
+   "clue": "Add one period to \\(90^{\\circ}\\)."
+  }
+ },
+ "rewrites": 1,
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The graph of tangent",
+  "card": [
+   "For any angle, \\(\\tan x = \\frac{\\sin x}{\\cos x}\\). When \\(\\cos x = 0\\), this fraction is undefined, so \\(\\tan x\\) has no value at that angle.",
+   "Cosine is 0 at \\(90^{\\circ}\\), \\(270^{\\circ}\\) and every \\(180^{\\circ}\\) on from these. At each one, the graph of \\(y = \\tan x\\) has a vertical asymptote: a line the curve gets closer and closer to but never meets.",
+   "Between two asymptotes, the curve rises from left to right, with no highest or lowest point. It crosses the x-axis where \\(\\sin x = 0\\): at \\(0^{\\circ}\\), \\(180^{\\circ}\\), \\(360^{\\circ}\\) and so on.",
+   "The same shape repeats every \\(180^{\\circ}\\), so the period of \\(y = \\tan x\\) is \\(180^{\\circ}\\), half the period of sine and cosine. For example, \\(\\tan 225^{\\circ} = \\tan 45^{\\circ} = 1\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\tan x\\) for \\(x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). Dashed vertical asymptotes are at \\(x = 90^{\\circ}\\) and \\(x = 270^{\\circ}\\). Between the asymptotes the curve rises from left to right. It crosses the x-axis at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\).",
+    "x": {
+     "min": -30,
+     "max": 390,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(y\\)"
+    },
+    "items": [
+     {
+      "type": "asymptote",
+      "x": 90
+     },
+     {
+      "type": "asymptote",
+      "x": 270
+     },
+     {
+      "type": "text",
+      "at": [
+       90,
+       0
+      ],
+      "label": "\\(90^{\\circ}\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "text",
+      "at": [
+       270,
+       0
+      ],
+      "label": "\\(270^{\\circ}\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\tan(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "breaks": [
+       90,
+       270
+      ],
+      "label": "\\(y = \\tan x\\)",
+      "labelAt": 70,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(0^{\\circ}\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(180^{\\circ}\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(360^{\\circ}\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Asymptotes where \\(\\cos x = 0\\), at \\(90^{\\circ}\\) and every \\(180^{\\circ}\\) on. The shape repeats every \\(180^{\\circ}\\).",
+  "a": {
+   "q": "Why does the graph of \\(y = \\tan x\\) have a vertical asymptote at \\(x = 90^{\\circ}\\)?",
+   "opts": [
+    "\\(\\cos 90^{\\circ} = 0\\), so \\(\\tan 90^{\\circ}\\) is undefined",
+    "\\(\\sin 90^{\\circ} = 0\\), so \\(\\tan 90^{\\circ}\\) is undefined",
+    "\\(\\sin 90^{\\circ} = 1\\), so \\(\\tan 90^{\\circ}\\) is very large",
+    "\\(\\cos 90^{\\circ} = 1\\), so \\(\\tan 90^{\\circ}\\) is very large"
+   ],
+   "why": "Since \\(\\tan x = \\frac{\\sin x}{\\cos x}\\) and \\(\\cos 90^{\\circ} = 0\\), the fraction has 0 on the bottom, so \\(\\tan 90^{\\circ}\\) is undefined. It is true that \\(\\sin 90^{\\circ} = 1\\), but that does not cause the asymptote: the zero on the bottom does.",
+   "clue": "Look at the bottom of the fraction \\(\\frac{\\sin x}{\\cos x}\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "How many vertical asymptotes does the graph of \\(y = \\tan x\\) have from \\(0^{\\circ}\\) to \\(720^{\\circ}\\)?",
+   "opts": [
+    "4",
+    "2",
+    "5",
+    "8"
+   ],
+   "why": "Cosine is 0 at \\(90^{\\circ}\\), \\(270^{\\circ}\\), \\(450^{\\circ}\\) and \\(630^{\\circ}\\), one every \\(180^{\\circ}\\), so there are 4. The answer 5 counts the x-intercepts at \\(0^{\\circ}\\), \\(180^{\\circ}\\), \\(360^{\\circ}\\), \\(540^{\\circ}\\) and \\(720^{\\circ}\\) instead.",
+   "clue": "List the angles up to \\(720^{\\circ}\\) where \\(\\cos x = 0\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\cos 90^{\\circ} = 0\\), so \\(\\tan 90^{\\circ}\\) is undefined",
+   "also_right": []
+  },
+  "b": {
+   "best": "4",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The graph of tangent",
+  "card": [
+   "For any angle, \\(\\tan x = \\frac{\\sin x}{\\cos x}\\). When \\(\\cos x = 0\\), this fraction is undefined, so \\(\\tan x\\) has no value at that angle.",
+   "Cosine is 0 at \\(90^{\\circ}\\), \\(270^{\\circ}\\) and every \\(180^{\\circ}\\) on from these. At each one, the graph of \\(y = \\tan x\\) has a vertical asymptote: a line the curve gets closer and closer to but never meets.",
+   "Between two asymptotes, the curve rises from left to right, with no highest or lowest point. It crosses the x-axis where \\(\\sin x = 0\\): at \\(0^{\\circ}\\), \\(180^{\\circ}\\), \\(360^{\\circ}\\) and so on.",
+   "The same shape repeats every \\(180^{\\circ}\\), so the period of \\(y = \\tan x\\) is \\(180^{\\circ}\\), half the period of sine and cosine. For example, \\(\\tan 225^{\\circ} = \\tan 45^{\\circ} = 1\\)."
+  ],
+  "cardFigs": {
+   "2": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\tan x\\) for \\(x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). Dashed vertical asymptotes are at \\(x = 90^{\\circ}\\) and \\(x = 270^{\\circ}\\). Between the asymptotes the curve rises from left to right. It crosses the x-axis at \\(0^{\\circ}\\), \\(180^{\\circ}\\) and \\(360^{\\circ}\\).",
+    "x": {
+     "min": -30,
+     "max": 390,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(y\\)"
+    },
+    "items": [
+     {
+      "type": "asymptote",
+      "x": 90
+     },
+     {
+      "type": "asymptote",
+      "x": 270
+     },
+     {
+      "type": "text",
+      "at": [
+       90,
+       0
+      ],
+      "label": "\\(90^{\\circ}\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "text",
+      "at": [
+       270,
+       0
+      ],
+      "label": "\\(270^{\\circ}\\)",
+      "pos": "below-left"
+     },
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\tan(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "breaks": [
+       90,
+       270
+      ],
+      "label": "\\(y = \\tan x\\)",
+      "labelAt": 70,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(0^{\\circ}\\)",
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(180^{\\circ}\\)",
+      "pos": "above-left"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept",
+      "label": "\\(360^{\\circ}\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Asymptotes where \\(\\cos x = 0\\), at \\(90^{\\circ}\\) and every \\(180^{\\circ}\\) on. The shape repeats every \\(180^{\\circ}\\).",
+  "a": {
+   "q": "Why does the graph of \\(y = \\tan x\\) have a vertical asymptote at \\(x = 90^{\\circ}\\)?",
+   "opts": [
+    "\\(\\cos 90^{\\circ} = 0\\), so \\(\\tan 90^{\\circ}\\) is undefined",
+    "\\(\\sin 90^{\\circ} = 0\\), so \\(\\tan 90^{\\circ}\\) is undefined",
+    "\\(\\sin 90^{\\circ} = 1\\), so \\(\\tan 90^{\\circ}\\) is very large",
+    "\\(\\cos 90^{\\circ} = 1\\), so \\(\\tan 90^{\\circ}\\) is very large"
+   ],
+   "why": "Since \\(\\tan x = \\frac{\\sin x}{\\cos x}\\) and \\(\\cos 90^{\\circ} = 0\\), the fraction has 0 on the bottom, so \\(\\tan 90^{\\circ}\\) is undefined. It is true that \\(\\sin 90^{\\circ} = 1\\), but that does not cause the asymptote: the zero on the bottom does.",
+   "clue": "Look at the bottom of the fraction \\(\\frac{\\sin x}{\\cos x}\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "How many vertical asymptotes does the graph of \\(y = \\tan x\\) have from \\(0^{\\circ}\\) to \\(720^{\\circ}\\)?",
+   "opts": [
+    "4",
+    "2",
+    "5",
+    "8"
+   ],
+   "why": "Cosine is 0 at \\(90^{\\circ}\\), \\(270^{\\circ}\\), \\(450^{\\circ}\\) and \\(630^{\\circ}\\), one every \\(180^{\\circ}\\), so there are 4. The answer 5 counts the x-intercepts at \\(0^{\\circ}\\), \\(180^{\\circ}\\), \\(360^{\\circ}\\), \\(540^{\\circ}\\) and \\(720^{\\circ}\\) instead.",
+   "clue": "List the angles up to \\(720^{\\circ}\\) where \\(\\cos x = 0\\)."
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
+}

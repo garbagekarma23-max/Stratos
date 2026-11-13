@@ -1,0 +1,273 @@
+{
+ "id": "geo-causes-river-decline-murray",
+ "title": "Causes of river decline in the Murray-Darling Basin",
+ "brief": "6a9155a94cbf",
+ "shortlist": [
+  [
+   "geo-water-use-murray-darling",
+   0.729
+  ],
+  [
+   "geo-murray-darling-basin-plan",
+   0.606
+  ],
+  [
+   "geo-river-health-basin",
+   0.509
+  ],
+  [
+   "geo-managing-water",
+   0.329
+  ],
+  [
+   "geo-first-nations-voices-water",
+   0.291
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:49Z new, match",
+  "2026-11-12T12:44:18Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:42Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:01Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:43Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-11-13T15:03:50Z autoreview: undone, back to the review list",
+  "2026-11-13T15:21:35Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "write": 0.00655,
+  "check": 0.01128,
+  "fix": 0.01905,
+  "recheck": 0.0086
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, River health in the basin, covers water extraction, dams and weirs, and land clearing, but it omits drought, which the brief names as a cause, and it adds algal blooms, which the brief does not mention, so it is not an exact match for this point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Causes of river decline in the Murray-Darling Basin",
+  "card": [
+   "The Murray-Darling Basin is a huge river system in south-eastern Australia. Its rivers are in poor health because of several pressures that often act together.",
+   [
+    "Water extraction",
+    "Taking water for irrigation and towns leaves less in the rivers. Less water flows along the river and into wetlands."
+   ],
+   [
+    "Dams and weirs",
+    "These hold water back and release it when people need it. This changes the natural pattern of flows, so the floods and low flows that native species rely on happen at the wrong times or not at all."
+   ],
+   [
+    "Land clearing",
+    "Removing native vegetation from the land beside rivers can let more soil and salt wash into them. Drought, a long period of low rainfall, cuts the water entering the rivers and adds to the other pressures."
+   ]
+  ],
+  "remember": "Less water taken, changed flows, cleared land and drought all harm the Basin's rivers.",
+  "a": {
+   "q": "Which of these is a human action that has reduced the health of the Basin's rivers?",
+   "opts": [
+    "Taking water out of rivers for irrigation",
+    "A long period of low rainfall across the Basin",
+    "Natural floods spreading over a wetland",
+    "Native trees growing beside a river bank"
+   ],
+   "why": "Taking water for irrigation leaves less in the rivers, which harms their health. Drought also reduces river health, but it is a natural period of low rainfall, not an action people take.",
+   "clue": "Look for something people do, not something the weather does."
+  },
+  "b": {
+   "d": 3,
+   "q": "A dam on a Basin river holds back water in spring and releases it in summer for farms downstream. Why might this harm native fish?",
+   "opts": [
+    "It changes the natural timing of flows they rely on",
+    "It adds more water than the river has ever held",
+    "It stops farmers from taking any water from the river",
+    "It clears the native plants from the river bank"
+   ],
+   "why": "Dams and weirs change the natural pattern of flows. Native species rely on floods at certain times, so holding water back in spring can disrupt breeding. The dam does not clear land, and it supplies water to farms rather than stopping them from taking it.",
+   "clue": "Think about when the river would naturally flood."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Taking water out of rivers for irrigation",
+   "also_right": []
+  },
+  "b": {
+   "best": "It changes the natural timing of flows they rely on",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Less water taken' says the opposite of the card. Taking too much water harms the rivers, not taking less. It should read something like 'Too much water taken' or 'Water extraction'."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Drought is placed inside the 'Land clearing' bullet, so it could read as part of land clearing. It would be clearer as its own pressure."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The remember line says 'Less water taken' harms the rivers, which reverses the card's point that too much water extraction causes decline. Drought is also tucked into the land clearing bullet. Both questions are sound."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, fact: 'Less water taken' says the opposite of the card. Taking too much water harms the rivers, not taking less. It should read something like 'Too much water taken' or 'Water extraction'.",
+  "Card, wording: Drought is placed inside the 'Land clearing' bullet, so it could read as part of land clearing. It would be clearer as its own pressure."
+ ],
+ "proposal": {
+  "title": "Causes of river decline in the Murray-Darling Basin",
+  "card": [
+   [
+    "Water extraction",
+    "Taking water for irrigation and towns leaves less in the rivers of the Murray-Darling Basin, in south-eastern Australia. Less water flows along the rivers and into wetlands."
+   ],
+   [
+    "Dams and weirs",
+    "These hold water back and release it when people need it. This changes the natural pattern of flows, so the floods and low flows that native species rely on happen at the wrong times or not at all."
+   ],
+   [
+    "Land clearing",
+    "Removing native vegetation from the land beside rivers can let more soil and salt wash into them."
+   ],
+   [
+    "Drought",
+    "A drought is a long period of low rainfall, a natural event. It cuts the water entering the rivers and adds to the human pressures, which often act together."
+   ]
+  ],
+  "remember": "Too much water taken, changed flows, cleared land and drought all harm the Basin's rivers.",
+  "a": {
+   "q": "Which of these is a human action that has reduced the health of the Basin's rivers?",
+   "opts": [
+    "Taking water out of rivers for irrigation",
+    "A long period of low rainfall across the Basin",
+    "Natural floods spreading over a wetland",
+    "Native trees growing beside a river bank"
+   ],
+   "why": "Taking water for irrigation leaves less in the rivers, which harms their health. Drought also reduces river health, but it is a natural period of low rainfall, not an action people take.",
+   "clue": "Look for something people do, not something the weather does."
+  },
+  "b": {
+   "d": 3,
+   "q": "A dam on a Basin river holds back water in spring and releases it in summer for farms downstream. Why might this harm native fish?",
+   "opts": [
+    "It changes the natural timing of flows they rely on",
+    "It adds more water than the river has ever held",
+    "It stops farmers from taking any water from the river",
+    "It clears the native plants from the river bank"
+   ],
+   "why": "Dams and weirs change the natural pattern of flows. Native species rely on floods at certain times, so holding water back in spring can disrupt them. The dam does not clear land, and it supplies water to farms rather than stopping them from taking it.",
+   "clue": "Think about when the river would naturally flood."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Taking water out of rivers for irrigation",
+    "also_right": []
+   },
+   "b": {
+    "best": "It changes the natural timing of flows they rely on",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto_undone": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 18,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Less water taken' says the opposite of the card. Taking too much water harms the rivers, not taking less. It should read something like 'Too much water taken' or 'Water extraction'."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Drought is placed inside the 'Land clearing' bullet, so it could read as part of land clearing. It would be clearer as its own pressure."
+   }
+  ],
+  "flags": [
+   "Remember, fact: 'Less water taken' says the opposite of the card. Taking too much water harms the rivers, not taking less. It should read something like 'Too much water taken' or 'Water extraction'.",
+   "Card, wording: Drought is placed inside the 'Land clearing' bullet, so it could read as part of land clearing. It would be clearer as its own pressure."
+  ],
+  "undone": "2026-11-13T15:03:50Z"
+ },
+ "final": {
+  "title": "Causes of river decline in the Murray-Darling Basin",
+  "card": [
+   [
+    "Water extraction",
+    "Taking water for irrigation and towns leaves less in the rivers of the Murray-Darling Basin, in south-eastern Australia. Less water flows along the rivers and into wetlands."
+   ],
+   [
+    "Dams and weirs",
+    "These hold water back and release it when people need it. This changes the natural pattern of flows, so the floods and low flows that native species rely on happen at the wrong times or not at all."
+   ],
+   [
+    "Land clearing",
+    "Removing native vegetation from the land beside rivers can let more soil and salt wash into them."
+   ],
+   [
+    "Drought",
+    "A drought is a long period of low rainfall, a natural event. It cuts the water entering the rivers and adds to the human pressures, which often act together."
+   ]
+  ],
+  "remember": "Too much water taken, changed flows, cleared land and drought all harm the Basin's rivers.",
+  "a": {
+   "q": "Which of these is a human action that has reduced the health of the Basin's rivers?",
+   "opts": [
+    "Taking water out of rivers for irrigation",
+    "A long period of low rainfall across the Basin",
+    "Natural floods spreading over a wetland",
+    "Native trees growing beside a river bank"
+   ],
+   "why": "Taking water for irrigation leaves less in the rivers, which harms their health. Drought also reduces river health, but it is a natural period of low rainfall, not an action people take.",
+   "clue": "Look for something people do, not something the weather does."
+  },
+  "b": {
+   "d": 3,
+   "q": "A dam on a Basin river holds back water in spring and releases it in summer for farms downstream. Why might this harm native fish?",
+   "opts": [
+    "It changes the natural timing of flows they rely on",
+    "It adds more water than the river has ever held",
+    "It stops farmers from taking any water from the river",
+    "It clears the native plants from the river bank"
+   ],
+   "why": "Dams and weirs change the natural pattern of flows. Native species rely on floods at certain times, so holding water back in spring can disrupt them. The dam does not clear land, and it supplies water to farms rather than stopping them from taking it.",
+   "clue": "Think about when the river would naturally flood."
+  }
+ },
+ "cleared_by": "owner"
+}

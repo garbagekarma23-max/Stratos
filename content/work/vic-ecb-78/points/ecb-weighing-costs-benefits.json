@@ -1,0 +1,513 @@
+{
+ "id": "ecb-weighing-costs-benefits",
+ "title": "Weighing costs and benefits",
+ "brief": "fdf8ee6183d0",
+ "shortlist": [
+  [
+   "ecb-costs-benefits-decision",
+   0.543
+  ],
+  [
+   "ecb-costs-benefits-different-groups",
+   0.329
+  ],
+  [
+   "eco-opportunity-cost",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:43Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:55Z write: done",
+  "2026-11-12T15:35:02Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (card other, b wording)",
+  "2026-11-13T09:32:51Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: flagged",
+  "2026-11-13T11:34:09Z fix: suggested",
+  "2026-11-13T12:06:37Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-11-13T12:13:14Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-13T15:13:47Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00652,
+  "check": 0.01975,
+  "fix": 0.0626,
+  "recheck": 0.01332
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, ecb-costs-benefits-decision, covers listing costs and benefits but does not teach opportunity cost or choosing the option with the greatest net benefit, which would need a new step, and the opportunity cost card is written for VCE Economics Units 1 and 2, which is too advanced for Levels 7 and 8.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: The card defines opportunity cost ('the next best option given up'), which is the term taught in point 5. It should only mention opportunity cost, not define it again.\n- Question b, wording: The card says costs include opportunity cost, but question b works out net benefit from the price alone ($90 − $50 = $40). Since Liam can buy only one, a student following the card might also subtract the option given up and get different figures. The question should say to use the price as the cost.",
+ "rejected": {
+  "title": "Weighing costs and benefits",
+  "card": [
+   [
+    "Benefits",
+    "what an option gives you, such as money, enjoyment or something useful."
+   ],
+   [
+    "Costs",
+    "what an option takes from you, such as money, time or effort. Costs include the opportunity cost, which is the next best option given up."
+   ],
+   "Net benefit is the benefits minus the costs. A sensible decision compares the net benefit of each option.",
+   "The best choice is the option with the greatest net benefit. An option can look good because of its benefits, but still be a poor choice if its costs are higher."
+  ],
+  "remember": "Compare the benefits and costs of each option, then pick the greatest net benefit.",
+  "a": {
+   "q": "What does a sensible decision maker do when choosing between options?",
+   "opts": [
+    "Picks the option with the greatest net benefit",
+    "Picks the option with the greatest benefits",
+    "Picks the option with the lowest price",
+    "Picks the option that most people choose"
+   ],
+   "why": "A sensible choice compares benefits with costs and takes the greatest net benefit. Choosing the greatest benefits alone is tempting, but it ignores costs, and an option with big benefits can still have bigger costs.",
+   "clue": "Look at both what an option gives and what it takes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam in Ballarat can buy only one: a concert ticket for $100, worth $120 to him, or a video game for $50, worth $90 to him. Which has the greatest net benefit?",
+   "opts": [
+    "The game, with a net benefit of $40",
+    "The concert, with a net benefit of $120",
+    "The concert, with a net benefit of $20",
+    "Either, as both have a net benefit above $0"
+   ],
+   "why": "Net benefit is benefits minus costs: the concert gives $120 − $100 = $20 and the game gives $90 − $50 = $40, so the game is the better choice. Picking the concert because $120 is the biggest number is tempting, but that ignores its $100 cost.",
+   "clue": "Take each option's cost away from its benefit, then compare."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "owner",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, other: The card defines opportunity cost ('the next best option given up'), which is the term taught in point 5. It should only mention opportunity cost, not define it again.",
+    "Question b, wording: The card says costs include opportunity cost, but question b works out net benefit from the price alone ($90 − $50 = $40). Since Liam can buy only one, a student following the card might also subtract the option given up and get different figures. The question should say to use the price as the cost."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Weighing costs and benefits",
+     "card": [
+      [
+       "Benefits",
+       "what an option gives you, such as money, enjoyment or something useful."
+      ],
+      [
+       "Costs",
+       "what an option takes from you, such as money, time or effort. Costs include the opportunity cost, which is the next best option given up."
+      ],
+      "Net benefit is the benefits minus the costs. A sensible decision compares the net benefit of each option.",
+      "The best choice is the option with the greatest net benefit. An option can look good because of its benefits, but still be a poor choice if its costs are higher."
+     ],
+     "remember": "Compare the benefits and costs of each option, then pick the greatest net benefit.",
+     "a": {
+      "q": "What does a sensible decision maker do when choosing between options?",
+      "opts": [
+       "Picks the option with the greatest net benefit",
+       "Picks the option with the greatest benefits",
+       "Picks the option with the lowest price",
+       "Picks the option that most people choose"
+      ],
+      "why": "A sensible choice compares benefits with costs and takes the greatest net benefit. Choosing the greatest benefits alone is tempting, but it ignores costs, and an option with big benefits can still have bigger costs.",
+      "clue": "Look at both what an option gives and what it takes."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia in Dubbo can spend Saturday at a job that pays $80 or at a footy clinic. She values the clinic at the equivalent of $60 and it costs her $10 to enter. Which choice has the greatest net benefit?",
+      "opts": [
+       "The job, because giving up the clinic costs her less",
+       "The clinic, because it has no opportunity cost",
+       "The job, because $80 is more than $60",
+       "The clinic, because she enjoys it more than work"
+      ],
+      "why": "The job gives $80 and its opportunity cost is the clinic's $60 benefit, so the net benefit is $20. The clinic gives $60 but costs $10 plus the $80 job given up, so it is a loss. Comparing only $80 with $60 is tempting, but it leaves out the costs.",
+      "clue": "Count the opportunity cost of each option as a cost."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Picks the option with the greatest net benefit",
+      "also_right": []
+     },
+     "b": {
+      "best": "The job, because giving up the clinic costs her less",
+      "also_right": [
+       "The job, because $80 is more than $60"
+      ]
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The distractor 'The job, because $80 is more than $60' picks the right option for a valid reason. The clinic also has a $10 entry cost, so $80 > $60 is enough to show the job has the greater net benefit. Two options name the job and both can be defended, so the question does not test whether students include opportunity cost."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "Why (b) gives the job's opportunity cost as the clinic's $60 benefit, so it gets a net benefit of $20. If Mia takes the job she also avoids the $10 entry fee, so the next best option given up is worth $60 − $10 = $50, and the job's net benefit is $30. The why ignores the entry fee here but counts it for the clinic."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "'She values the clinic at the equivalent of $60' does not say whether the $60 is before or after the $10 entry fee. This makes the opportunity-cost arithmetic unclear."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Question a is fine. In question b, the distractor 'The job, because $80 is more than $60' is also defensibly right, and the why miscounts the job's opportunity cost as $60 when it should be $50 once the $10 entry fee is netted off."
+    },
+    "flags": [
+     "Question b: the checker says “The job, because $80 is more than $60” could also be right.",
+     "Question b, other: The distractor 'The job, because $80 is more than $60' picks the right option for a valid reason. The clinic also has a $10 entry cost, so $80 > $60 is enough to show the job has the greater net benefit. Two options name the job and both can be defended, so the question does not test whether students include opportunity cost.",
+     "Question b, fact: Why (b) gives the job's opportunity cost as the clinic's $60 benefit, so it gets a net benefit of $20. If Mia takes the job she also avoids the $10 entry fee, so the next best option given up is worth $60 − $10 = $50, and the job's net benefit is $30. The why ignores the entry fee here but counts it for the clinic.",
+     "Question b, wording: 'She values the clinic at the equivalent of $60' does not say whether the $60 is before or after the $10 entry fee. This makes the opportunity-cost arithmetic unclear."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Weighing costs and benefits",
+     "card": [
+      [
+       "Benefits",
+       "what an option gives you, such as money, enjoyment or something useful."
+      ],
+      [
+       "Costs",
+       "what an option takes from you, such as money, time or effort. Costs include the opportunity cost, which is the next best option given up."
+      ],
+      "Net benefit is the benefits minus the costs. A sensible decision compares the net benefit of each option.",
+      "The best choice is the option with the greatest net benefit. An option can look good because of its benefits, but still be a poor choice if its costs are higher."
+     ],
+     "remember": "Compare the benefits and costs of each option, then pick the greatest net benefit.",
+     "a": {
+      "q": "What does a sensible decision maker do when choosing between options?",
+      "opts": [
+       "Picks the option with the greatest net benefit",
+       "Picks the option with the greatest benefits",
+       "Picks the option with the lowest price",
+       "Picks the option that most people choose"
+      ],
+      "why": "A sensible choice compares benefits with costs and takes the greatest net benefit. Choosing the greatest benefits alone is tempting, but it ignores costs, and an option with big benefits can still have bigger costs.",
+      "clue": "Look at both what an option gives and what it takes."
+     },
+     "b": {
+      "d": 3,
+      "q": "Liam in Ballarat can buy only one: a concert ticket for $100, worth $120 to him, or a video game for $50, worth $90 to him. Which has the greatest net benefit?",
+      "opts": [
+       "The game, with a net benefit of $40",
+       "The concert, with a net benefit of $120",
+       "The concert, with a net benefit of $20",
+       "Either, as both have a net benefit above $0"
+      ],
+      "why": "Net benefit is benefits minus costs: the concert gives $120 − $100 = $20 and the game gives $90 − $50 = $40, so the game is the better choice. Picking the concert because $120 is the biggest number is tempting, but that ignores its $100 cost.",
+      "clue": "Take each option's cost away from its benefit, then compare."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-12T17:07:10Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Picks the option with the greatest net benefit",
+       "also_right": []
+      },
+      "b": {
+       "best": "The game, with a net benefit of $40",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "The card defines opportunity cost ('the next best option given up'), which is the term taught in point 5. It should only mention opportunity cost, not define it again."
+       },
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The card says costs include opportunity cost, but question b works out net benefit from the price alone ($90 − $50 = $40). Since Liam can buy only one, a student following the card might also subtract the option given up and get different figures. The question should say to use the price as the cost."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both answers are clear and correct (greatest net benefit; the game at $40). The card re-defines opportunity cost from point 5, and question b leaves out the opportunity cost that the card says costs include, which could confuse careful students."
+     },
+     "flags": [
+      "Card, other: The card defines opportunity cost ('the next best option given up'), which is the term taught in point 5. It should only mention opportunity cost, not define it again.",
+      "Question b, wording: The card says costs include opportunity cost, but question b works out net benefit from the price alone ($90 − $50 = $40). Since Liam can buy only one, a student following the card might also subtract the option given up and get different figures. The question should say to use the price as the cost."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:51Z",
+   "step": "write",
+   "version": {
+    "title": "Weighing costs and benefits",
+    "card": [
+     [
+      "Benefits",
+      "what an option gives you, such as money, enjoyment or something useful."
+     ],
+     [
+      "Costs",
+      "what an option takes from you, such as money, time or effort. Costs also include the option's opportunity cost."
+     ],
+     "Net benefit is the benefits minus the costs. A sensible decision compares the net benefit of each option.",
+     "The best choice is the option with the greatest net benefit. An option can look good because of its benefits, but still be a poor choice if its costs are higher."
+    ],
+    "remember": "Compare the benefits and costs of each option, then pick the greatest net benefit.",
+    "a": {
+     "q": "What does a sensible decision maker do when choosing between options?",
+     "opts": [
+      "Picks the option with the greatest net benefit",
+      "Picks the option with the greatest benefits",
+      "Picks the option with the lowest price",
+      "Picks the option that most people choose"
+     ],
+     "why": "A sensible choice compares benefits with costs and takes the greatest net benefit. Choosing the greatest benefits alone is tempting, but it ignores costs, and an option with big benefits can still have bigger costs.",
+     "clue": "Look at both what an option gives and what it takes."
+    },
+    "b": {
+     "d": 3,
+     "q": "Liam in Ballarat can buy a concert ticket for $100, worth $120 to him, or a video game for $50, worth $90 to him. Using each price as its cost, which has the greatest net benefit?",
+     "opts": [
+      "The game, with a net benefit of $40",
+      "The concert, with a net benefit of $120",
+      "The concert, with a net benefit of $20",
+      "The game, with a net benefit of $90"
+     ],
+     "why": "Net benefit is benefits minus costs: the concert gives $120 minus $100, which is $20, and the game gives $90 minus $50, which is $40. Picking the concert because $120 is the biggest number is tempting, but that ignores its $100 cost.",
+     "clue": "Take each option's cost away from its benefit, then compare."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Picks the option with the greatest net benefit",
+     "also_right": []
+    },
+    "b": {
+     "best": "The game, with a net benefit of $40",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "card",
+      "kind": "wording",
+      "detail": "\"still be a poor choice if its costs are higher\" does not say higher than what (its own benefits, or another option's costs). Neither reading is the rule: the concert in question b has costs lower than its benefits and is still the poorer choice. Better: \"still be a poor choice if another option has a greater net benefit\"."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Both questions are correct (a: greatest net benefit; b: the game, $40) and the explanations agree. One card line is vague: \"if its costs are higher\" does not say higher than what, and neither reading matches the net-benefit rule."
+   }
+  },
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The fix states the net benefit rule clearly and the sums are right, but question a's right option is still clearly the longest by the pipeline's rule (46 characters against 38 to 43). The owner should decide whether that gives it away.",
+   "item": "a8de3b28c117ae0f",
+   "result": "left"
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Weighing costs and benefits",
+  "card": [
+   [
+    "Benefits",
+    "what an option gives you, such as money, enjoyment or something useful."
+   ],
+   [
+    "Costs",
+    "what an option takes from you, such as money, time or effort. Costs also include the option's opportunity cost."
+   ],
+   "Net benefit is the benefits minus the costs. A sensible decision compares the net benefit of each option.",
+   "The best choice is the option with the greatest net benefit. An option can look good because of its benefits, but still be a poor choice if its costs are higher."
+  ],
+  "remember": "Compare the benefits and costs of each option, then pick the greatest net benefit.",
+  "a": {
+   "q": "What does a sensible decision maker do when choosing between options?",
+   "opts": [
+    "Picks the option with the greatest net benefit",
+    "Picks the option with the greatest benefits",
+    "Picks the option with the lowest price",
+    "Picks the option that most people choose"
+   ],
+   "why": "A sensible choice compares benefits with costs and takes the greatest net benefit. Choosing the greatest benefits alone is tempting, but it ignores costs, and an option with big benefits can still have bigger costs.",
+   "clue": "Look at both what an option gives and what it takes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam in Ballarat can buy a concert ticket for $100, worth $120 to him, or a video game for $50, worth $90 to him. Using each price as its cost, which has the greatest net benefit?",
+   "opts": [
+    "The game, with a net benefit of $40",
+    "The concert, with a net benefit of $120",
+    "The concert, with a net benefit of $20",
+    "The game, with a net benefit of $90"
+   ],
+   "why": "Net benefit is benefits minus costs: the concert gives $120 minus $100, which is $20, and the game gives $90 minus $50, which is $40. Picking the concert because $120 is the biggest number is tempting, but that ignores its $100 cost.",
+   "clue": "Take each option's cost away from its benefit, then compare."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Picks the option with the greatest net benefit",
+   "also_right": []
+  },
+  "b": {
+   "best": "The game, with a net benefit of $40",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"still be a poor choice if its costs are higher\" does not say higher than what (its own benefits, or another option's costs). Neither reading is the rule: the concert in question b has costs lower than its benefits and is still the poorer choice. Better: \"still be a poor choice if another option has a greater net benefit\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct (a: greatest net benefit; b: the game, $40) and the explanations agree. One card line is vague: \"if its costs are higher\" does not say higher than what, and neither reading matches the net-benefit rule."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"still be a poor choice if its costs are higher\" does not say higher than what (its own benefits, or another option's costs). Neither reading is the rule: the concert in question b has costs lower than its benefits and is still the poorer choice. Better: \"still be a poor choice if another option has a greater net benefit\"."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Weighing costs and benefits",
+  "card": [
+   [
+    "Benefits",
+    "what an option gives you, such as money, enjoyment or something useful."
+   ],
+   [
+    "Costs",
+    "what an option takes from you, such as money, time or effort. Costs also include the option's opportunity cost."
+   ],
+   "Net benefit is the benefits minus the costs. A sensible decision compares the net benefit of each option.",
+   "The best choice is the option with the greatest net benefit. An option can look good because of its benefits, but still be a poor choice if another option has a greater net benefit."
+  ],
+  "remember": "Compare the benefits and costs of each option, then pick the greatest net benefit.",
+  "a": {
+   "q": "What does a sensible decision maker do when choosing between options?",
+   "opts": [
+    "Picks the option with the greatest net benefit",
+    "Picks the option with the greatest benefits",
+    "Picks the option with the lowest price",
+    "Picks the option that most people choose"
+   ],
+   "why": "A sensible choice compares benefits with costs and takes the greatest net benefit. Choosing the greatest benefits alone is tempting, but it ignores costs, and an option with big benefits can still have bigger costs.",
+   "clue": "Look at both what an option gives and what it takes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam in Ballarat can buy a concert ticket for $100, worth $120 to him, or a video game for $50, worth $90 to him. Using each price as its cost, which has the greatest net benefit?",
+   "opts": [
+    "The game, with a net benefit of $40",
+    "The concert, with a net benefit of $120",
+    "The concert, with a net benefit of $20",
+    "The game, with a net benefit of $90"
+   ],
+   "why": "Net benefit is benefits minus costs: the concert gives $120 minus $100, which is $20, and the game gives $90 minus $50, which is $40. Picking the concert because $120 is the biggest number is tempting, but that ignores its $100 cost.",
+   "clue": "Take each option's cost away from its benefit, then compare."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-13T12:06:37Z",
+  "rules": 1,
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"still be a poor choice if its costs are higher\" does not say higher than what (its own benefits, or another option's costs). Neither reading is the rule: the concert in question b has costs lower than its benefits and is still the poorer choice. Better: \"still be a poor choice if another option has a greater net benefit\"."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"still be a poor choice if its costs are higher\" does not say higher than what (its own benefits, or another option's costs). Neither reading is the rule: the concert in question b has costs lower than its benefits and is still the poorer choice. Better: \"still be a poor choice if another option has a greater net benefit\"."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Weighing costs and benefits",
+  "card": [
+   [
+    "Benefits",
+    "what an option gives you, such as money, enjoyment or something useful."
+   ],
+   [
+    "Costs",
+    "what an option takes from you, such as money, time or effort. Costs also include the option's opportunity cost."
+   ],
+   "Net benefit is the benefits minus the costs. A sensible decision compares the net benefit of each option.",
+   "The best choice is the option with the greatest net benefit. An option can look good because of its benefits, but still be a poor choice if another option has a greater net benefit."
+  ],
+  "remember": "Compare the benefits and costs of each option, then pick the greatest net benefit.",
+  "a": {
+   "q": "What does a sensible decision maker do when choosing between options?",
+   "opts": [
+    "Picks the option with the greatest net benefit",
+    "Picks the option with the greatest benefits",
+    "Picks the option with the lowest price",
+    "Picks the option that most people choose"
+   ],
+   "why": "A sensible choice compares benefits with costs and takes the greatest net benefit. Choosing the greatest benefits alone is tempting, but it ignores costs, and an option with big benefits can still have bigger costs.",
+   "clue": "Look at both what an option gives and what it takes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam in Ballarat can buy a concert ticket for $100, worth $120 to him, or a video game for $50, worth $90 to him. Using each price as its cost, which has the greatest net benefit?",
+   "opts": [
+    "The game, with a net benefit of $40",
+    "The concert, with a net benefit of $120",
+    "The concert, with a net benefit of $20",
+    "The game, with a net benefit of $90"
+   ],
+   "why": "Net benefit is benefits minus costs: the concert gives $120 minus $100, which is $20, and the game gives $90 minus $50, which is $40. Picking the concert because $120 is the biggest number is tempting, but that ignores its $100 cost.",
+   "clue": "Take each option's cost away from its benefit, then compare."
+  }
+ }
+}

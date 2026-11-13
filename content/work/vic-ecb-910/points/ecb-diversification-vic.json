@@ -1,0 +1,186 @@
+{
+ "id": "ecb-diversification-vic",
+ "title": "Diversification",
+ "brief": "814808b0e61f",
+ "shortlist": [
+  [
+   "ecb-risk-return",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:45Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:33Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:56Z write: done",
+  "2026-11-12T15:35:03Z check: flagged",
+  "2026-11-12T15:42:21Z fix: suggested",
+  "2026-11-12T16:19:51Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00612,
+  "check": 0.00962,
+  "fix": 0.01535
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Risk and return, is about the trade-off between risk and return and mentions spreading money only in passing, so it does not teach diversification as its own idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Diversification",
+  "card": [
+   "Diversification means spreading money across different investments instead of putting it all in one. It is the idea behind not putting all your eggs in one basket.",
+   "If one investment loses value, the others may not. So a single loss does less harm to the whole amount.",
+   "Investments that are different from each other protect better. Shares in five companies in the same industry can all fall for the same reason. Shares, property and bonds are less likely to all fall together.",
+   "Diversification lowers the harm from one loss. It does not remove risk, and it does not guarantee a profit."
+  ],
+  "remember": "Spread your money so one loss does less harm. Risk is reduced, not removed.",
+  "a": {
+   "q": "Why does diversification help an investor?",
+   "opts": [
+    "One investment falling does less harm to the total",
+    "It guarantees that every investment will make a profit",
+    "It removes all risk from the money that is invested",
+    "It makes sure the investor earns the highest return"
+   ],
+   "why": "With money spread out, a loss on one investment is only part of the total. It does not guarantee profit or remove risk, because some investments can still lose value.",
+   "clue": "Think about what happens to the total when just one basket drops."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kai has $10,000 to invest. Which plan is the most diversified?",
+   "opts": [
+    "$3,000 in shares, $3,000 in bonds and $4,000 in property",
+    "$10,000 in shares of one mining company",
+    "$5,000 in shares of one bank and $5,000 in another bank",
+    "$2,500 in each of four mining company shares"
+   ],
+   "why": "The first plan spreads money across three different types of investment, so a fall in one is less likely to hit them all. The other plans stay in one company or one industry, which can fall for the same reason. Several companies in the same industry is still a narrow spread.",
+   "clue": "Look for investments that are different in type, not just different in name."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "One investment falling does less harm to the total",
+   "also_right": []
+  },
+  "b": {
+   "best": "$3,000 in shares, $3,000 in bonds and $4,000 in property",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why for (b) says 'The first plan spreads money across three different types', but options are shown in random order. The right option (shares, bonds and property) may not be first, so students could be confused. Name the plan by its content instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and at the right level. The only problem is that the why for (b) calls the right answer 'the first plan', which will be wrong when the options are shuffled."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why for (b) says 'The first plan spreads money across three different types', but options are shown in random order. The right option (shares, bonds and property) may not be first, so students could be confused. Name the plan by its content instead."
+ ],
+ "proposal": {
+  "title": "Diversification",
+  "card": [
+   "Diversification means spreading money across different investments instead of putting it all in one. It is the idea behind not putting all your eggs in one basket.",
+   "If one investment loses value, the others may not. So a single loss does less harm to the whole amount.",
+   "Investments that are different from each other protect better. Shares in five companies in the same industry can all fall for the same reason. Shares, property and bonds are less likely to all fall together.",
+   "Diversification lowers the harm from one loss. It does not remove risk, and it does not guarantee a profit."
+  ],
+  "remember": "Spread your money so one loss does less harm. Risk is reduced, not removed.",
+  "a": {
+   "q": "Why does diversification help an investor?",
+   "opts": [
+    "One investment falling does less harm to the total",
+    "It guarantees that every investment will make a profit",
+    "It removes all risk from the money that is invested",
+    "It makes sure the investor earns the highest return"
+   ],
+   "why": "With money spread out, a loss on one investment is only part of the total. It does not guarantee profit or remove risk, because some investments can still lose value.",
+   "clue": "Think about what happens to the total when just one basket drops."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kai has $10,000 to invest. Which plan is the most diversified?",
+   "opts": [
+    "$3,000 in shares, $3,000 in bonds and $4,000 in property",
+    "$10,000 in shares of one large mining company",
+    "$5,000 in shares of one bank and $5,000 in another bank",
+    "$2,500 in shares of each of four mining companies"
+   ],
+   "why": "The plan with shares, bonds and property spreads money across three different types of investment, so a fall in one is less likely to hit them all. Two banks or four mining companies are still in one industry, which can all fall for the same reason. One mining company has no spread at all.",
+   "clue": "Look for investments that are different in type, not just different in name."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:51Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why for (b) says 'The first plan spreads money across three different types', but options are shown in random order. The right option (shares, bonds and property) may not be first, so students could be confused. Name the plan by its content instead."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why for (b) says 'The first plan spreads money across three different types', but options are shown in random order. The right option (shares, bonds and property) may not be first, so students could be confused. Name the plan by its content instead."
+  ]
+ },
+ "final": {
+  "title": "Diversification",
+  "card": [
+   "Diversification means spreading money across different investments instead of putting it all in one. It is the idea behind not putting all your eggs in one basket.",
+   "If one investment loses value, the others may not. So a single loss does less harm to the whole amount.",
+   "Investments that are different from each other protect better. Shares in five companies in the same industry can all fall for the same reason. Shares, property and bonds are less likely to all fall together.",
+   "Diversification lowers the harm from one loss. It does not remove risk, and it does not guarantee a profit."
+  ],
+  "remember": "Spread your money so one loss does less harm. Risk is reduced, not removed.",
+  "a": {
+   "q": "Why does diversification help an investor?",
+   "opts": [
+    "One investment falling does less harm to the total",
+    "It guarantees that every investment will make a profit",
+    "It removes all risk from the money that is invested",
+    "It makes sure the investor earns the highest return"
+   ],
+   "why": "With money spread out, a loss on one investment is only part of the total. It does not guarantee profit or remove risk, because some investments can still lose value.",
+   "clue": "Think about what happens to the total when just one basket drops."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kai has $10,000 to invest. Which plan is the most diversified?",
+   "opts": [
+    "$3,000 in shares, $3,000 in bonds and $4,000 in property",
+    "$10,000 in shares of one large mining company",
+    "$5,000 in shares of one bank and $5,000 in another bank",
+    "$2,500 in shares of each of four mining companies"
+   ],
+   "why": "The plan with shares, bonds and property spreads money across three different types of investment, so a fall in one is less likely to hit them all. Two banks or four mining companies are still in one industry, which can all fall for the same reason. One mining company has no spread at all.",
+   "clue": "Look for investments that are different in type, not just different in name."
+  }
+ },
+ "cleared_by": "auto"
+}

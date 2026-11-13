@@ -1,0 +1,231 @@
+{
+ "id": "sci-peer-review-replication",
+ "title": "Peer review and replication",
+ "brief": "77769d0052df",
+ "shortlist": [
+  [
+   "sci-peer-review-publication",
+   0.46
+  ],
+  [
+   "sci-science-corrects-itself",
+   0.255
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:56Z new, match",
+  "2026-11-12T12:44:23Z match: Claude Haiku 5.5 may adapt sci-peer-review-publication, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:54Z confirm: Claude Opus 5.5 may adapt sci-peer-review-publication, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt sci-peer-review-publication (3 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting sci-peer-review-publication on the next run",
+  "2026-11-13T13:04:55Z adapt: done",
+  "2026-11-13T13:11:26Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "confirm": 0.00939,
+  "adapt": 0.00417,
+  "check": 0.00656
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "sci-peer-review-publication",
+  "changes": [
+   "Add a sentence explaining that scientific ideas become accepted when evidence from many checks and repeated tests builds a scientific consensus.",
+   "Change the example places (Hobart and Darwin) to Victorian locations, such as Melbourne and Bendigo, so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers peer review and replication at a suitable depth, but it lacks the consensus idea in the brief and its example should be made Victorian.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "sci-peer-review-publication",
+  "changes": [
+   "Reword the last card line to say that an idea becomes accepted when evidence from many independent teams builds a consensus among scientists, while still being open to change.",
+   "Optionally set the replication example in Victoria, for instance with a team in Melbourne or Bendigo repeating the study."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches peer review before publication and replication afterwards at the right Year 9–10 depth, but it never names scientific consensus, which this brief asks for, so its last line needs a small rewording.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "sci-peer-review-publication",
+  "changes": [
+   "Reword the last card line to say an idea becomes accepted when evidence from many independent teams builds a consensus among scientists, while it can still change with new evidence.",
+   "Change the title to Peer review and replication.",
+   "In question b, set the study and the team that repeats it in Victoria, such as Melbourne and Bendigo."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "title",
+   "card4",
+   "a.q",
+   "b.q",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches peer review before publication and replication after it at the right depth, but it never names scientific consensus, which the brief asks for.",
+   "item": "a0cc087624da9ec5",
+   "result": "decided",
+   "saved": {
+    "id": "sci-peer-review-replication",
+    "title": "Peer review and replication",
+    "brief": "77769d0052df",
+    "shortlist": [
+     [
+      "sci-peer-review-publication",
+      0.46
+     ],
+     [
+      "sci-science-corrects-itself",
+      0.255
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "confirm": 0.00939
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "sci-peer-review-publication",
+     "changes": [
+      "Add a sentence explaining that scientific ideas become accepted when evidence from many checks and repeated tests builds a scientific consensus.",
+      "Change the example places (Hobart and Darwin) to Victorian locations, such as Melbourne and Bendigo, so the example is local to the course."
+     ],
+     "sure": "medium",
+     "reason": "The bank point covers peer review and replication at a suitable depth, but it lacks the consensus idea in the brief and its example should be made Victorian.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "sci-peer-review-publication",
+     "changes": [
+      "Reword the last card line to say that an idea becomes accepted when evidence from many independent teams builds a consensus among scientists, while still being open to change.",
+      "Optionally set the replication example in Victoria, for instance with a team in Melbourne or Bendigo repeating the study."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches peer review before publication and replication afterwards at the right Year 9–10 depth, but it never names scientific consensus, which this brief asks for, so its last line needs a small rewording.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "7a7f1deb09dd55c4"
+  }
+ ],
+ "draft": {
+  "title": "Peer review and replication",
+  "card": [
+   "Scientists publish their methods and results in journals. Other people can then see exactly what was done and how the conclusions were reached.",
+   [
+    "Peer review",
+    "before a journal publishes a study, independent experts in the same field read it. They check whether the methods suit the question and whether the results support the conclusions."
+   ],
+   [
+    "Replication",
+    "after publication, other scientists repeat the investigation using the published methods. If they get similar results, confidence in the finding grows."
+   ],
+   "An idea becomes accepted when evidence from many independent teams builds a consensus among scientists. Even then, it can still change with new evidence."
+  ],
+  "remember": "Checks by other experts, in review and by repeating the work, build confidence in a finding, but it can still change.",
+  "a": {
+   "q": "A journal article lists the methods as well as the results. Why is this done?",
+   "opts": [
+    "So other scientists can check and repeat the work",
+    "So other scientists can claim the findings as theirs",
+    "So the results can skip any further testing",
+    "So the journal can decide which topics get studied"
+   ],
+   "why": "Published methods let other experts judge whether the work was sound and repeat it to see if they get similar results. Publishing does not end testing: even well-checked findings can change when new evidence appears.",
+   "clue": "Think about what another scientist needs in order to repeat a study."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Nguyen in Melbourne publishes a study finding that a new feed helps hens lay more eggs. A team in Bendigo follows her published methods and gets similar results. Which step is this, and what does it do?",
+   "opts": [
+    "Replication, which builds confidence in her finding",
+    "Peer review, which builds confidence in her finding",
+    "Replication, which means no more testing is needed",
+    "Peer review, which means no more testing is needed"
+   ],
+   "why": "Repeating a published study with similar results is replication, and it builds confidence in the finding. Peer review is the check by experts before publication, so it is a different step. No check ends testing, because new evidence can still change a finding.",
+   "clue": "Did the Bendigo team check the work before or after it was published?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "So other scientists can check and repeat the work",
+   "also_right": []
+  },
+  "b": {
+   "best": "Replication, which builds confidence in her finding",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Peer review and replication",
+  "card": [
+   "Scientists publish their methods and results in journals. Other people can then see exactly what was done and how the conclusions were reached.",
+   [
+    "Peer review",
+    "before a journal publishes a study, independent experts in the same field read it. They check whether the methods suit the question and whether the results support the conclusions."
+   ],
+   [
+    "Replication",
+    "after publication, other scientists repeat the investigation using the published methods. If they get similar results, confidence in the finding grows."
+   ],
+   "An idea becomes accepted when evidence from many independent teams builds a consensus among scientists. Even then, it can still change with new evidence."
+  ],
+  "remember": "Checks by other experts, in review and by repeating the work, build confidence in a finding, but it can still change.",
+  "a": {
+   "q": "A journal article lists the methods as well as the results. Why is this done?",
+   "opts": [
+    "So other scientists can check and repeat the work",
+    "So other scientists can claim the findings as theirs",
+    "So the results can skip any further testing",
+    "So the journal can decide which topics get studied"
+   ],
+   "why": "Published methods let other experts judge whether the work was sound and repeat it to see if they get similar results. Publishing does not end testing: even well-checked findings can change when new evidence appears.",
+   "clue": "Think about what another scientist needs in order to repeat a study."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Nguyen in Melbourne publishes a study finding that a new feed helps hens lay more eggs. A team in Bendigo follows her published methods and gets similar results. Which step is this, and what does it do?",
+   "opts": [
+    "Replication, which builds confidence in her finding",
+    "Peer review, which builds confidence in her finding",
+    "Replication, which means no more testing is needed",
+    "Peer review, which means no more testing is needed"
+   ],
+   "why": "Repeating a published study with similar results is replication, and it builds confidence in the finding. Peer review is the check by experts before publication, so it is a different step. No check ends testing, because new evidence can still change a finding.",
+   "clue": "Did the Bendigo team check the work before or after it was published?"
+  }
+ }
+}

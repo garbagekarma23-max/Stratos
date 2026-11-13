@@ -1,0 +1,352 @@
+{
+ "id": "ecb-demand-vic",
+ "title": "Demand",
+ "brief": "8a18acfabf33",
+ "shortlist": [
+  [
+   "ecb-demand",
+   0.744
+  ],
+  [
+   "ecb-changes-price",
+   0.438
+  ],
+  [
+   "ecb-equilibrium-price",
+   0.305
+  ],
+  [
+   "ecb-supply",
+   0.253
+  ],
+  [
+   "eco-law-demand",
+   0.251
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 says adapt ecb-demand (2 changes)",
+  "2026-11-12T15:15:32Z adapt: done",
+  "2026-11-12T15:25:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "adapt": 0.00415,
+  "check": 0.00771
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-demand",
+  "changes": [
+   "Replace the Hobart sandwich shop in question a with a shop or place in Victoria, such as Melbourne or Geelong, so the example is local to the course.",
+   "Replace the Perth phone example in question b with a Victorian buyer, such as one in Melbourne or Bendigo, so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea of demand at the right depth, and only its two Tasmanian and Western Australian examples need to be made local to Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "ecb-demand",
+  "changes": [
+   "Replace the Hobart sandwich shop in question a with a shop or place in Victoria, such as Melbourne or Geelong, so the example is local to the course.",
+   "Replace the Perth phone example in question b with a Victorian buyer, such as one in Melbourne or Bendigo, so the example is local to the course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Demand",
+  "card": [
+   "Demand is how much of a product buyers want and can afford at each price. Wanting something is not enough. A buyer must also be able to pay for it.",
+   "As the price of a product rises, people usually buy less of it. As the price falls, they usually buy more.",
+   "Buyers cut back when prices rise for two reasons. Some cannot afford it any more, and some switch to a cheaper product instead.",
+   "A demand schedule is a table that lists the quantity buyers would purchase at each price. A demand curve is a line that shows the same thing on a graph, and it slopes down."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+    "x": {
+     "min": 0,
+     "max": 70,
+     "step": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Price ($)"
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        10,
+        5
+       ],
+       [
+        20,
+        4
+       ],
+       [
+        30,
+        3
+       ],
+       [
+        40,
+        2
+       ],
+       [
+        50,
+        1
+       ]
+      ],
+      "label": "Demand",
+      "pos": "above-right",
+      "labelAt": 42
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       5
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       20,
+       4
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       30,
+       3
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       2
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       50,
+       1
+      ],
+      "on": [
+       "D"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Demand links price to the amount people buy: a higher price usually means less is bought.",
+  "a": {
+   "q": "A shop in Geelong cuts the price of its sandwiches. What usually happens to the number of sandwiches people want to buy?",
+   "opts": [
+    "It usually goes up",
+    "It usually goes down",
+    "It stays about the same",
+    "It goes up for wealthy buyers alone"
+   ],
+   "why": "As price falls, people usually buy more. A lower price puts the sandwiches within reach of more buyers, and some switch from other lunches. The effect is not limited to wealthy buyers.",
+   "clue": "Think about what a lower price does to what buyers can afford."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia in Bendigo really wants a new phone that costs $900, but she has only $300 saved. Is she part of the demand for that phone at $900?",
+   "opts": [
+    "No, as she cannot pay that price now",
+    "Yes, as she wants the phone very much",
+    "No, as she has not been to a shop yet",
+    "Yes, as she could save the rest later"
+   ],
+   "why": "Demand needs buyers who both want a product and can afford it at that price. Mia wants the phone but cannot pay $900, so she is not part of demand at that price. Wanting it a lot, or saving later, does not change what she can pay now.",
+   "clue": "Demand needs more than wanting a product."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It usually goes up",
+   "also_right": []
+  },
+  "b": {
+   "best": "No, as she cannot pay that price now",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Demand",
+  "card": [
+   "Demand is how much of a product buyers want and can afford at each price. Wanting something is not enough. A buyer must also be able to pay for it.",
+   "As the price of a product rises, people usually buy less of it. As the price falls, they usually buy more.",
+   "Buyers cut back when prices rise for two reasons. Some cannot afford it any more, and some switch to a cheaper product instead.",
+   "A demand schedule is a table that lists the quantity buyers would purchase at each price. A demand curve is a line that shows the same thing on a graph, and it slopes down."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A demand curve drawn from a demand schedule. At $5 buyers want 10, at $4 they want 20, at $3 they want 30, at $2 they want 40 and at $1 they want 50. The line slopes down: a higher price means fewer are bought.",
+    "x": {
+     "min": 0,
+     "max": 70,
+     "step": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Price ($)"
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        10,
+        5
+       ],
+       [
+        20,
+        4
+       ],
+       [
+        30,
+        3
+       ],
+       [
+        40,
+        2
+       ],
+       [
+        50,
+        1
+       ]
+      ],
+      "label": "Demand",
+      "pos": "above-right",
+      "labelAt": 42
+     },
+     {
+      "type": "point",
+      "at": [
+       10,
+       5
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       20,
+       4
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       30,
+       3
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       40,
+       2
+      ],
+      "on": [
+       "D"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       50,
+       1
+      ],
+      "on": [
+       "D"
+      ]
+     }
+    ]
+   }
+  },
+  "remember": "Demand links price to the amount people buy: a higher price usually means less is bought.",
+  "a": {
+   "q": "A shop in Geelong cuts the price of its sandwiches. What usually happens to the number of sandwiches people want to buy?",
+   "opts": [
+    "It usually goes up",
+    "It usually goes down",
+    "It stays about the same",
+    "It goes up for wealthy buyers alone"
+   ],
+   "why": "As price falls, people usually buy more. A lower price puts the sandwiches within reach of more buyers, and some switch from other lunches. The effect is not limited to wealthy buyers.",
+   "clue": "Think about what a lower price does to what buyers can afford."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia in Bendigo really wants a new phone that costs $900, but she has only $300 saved. Is she part of the demand for that phone at $900?",
+   "opts": [
+    "No, as she cannot pay that price now",
+    "Yes, as she wants the phone very much",
+    "No, as she has not been to a shop yet",
+    "Yes, as she could save the rest later"
+   ],
+   "why": "Demand needs buyers who both want a product and can afford it at that price. Mia wants the phone but cannot pay $900, so she is not part of demand at that price. Wanting it a lot, or saving later, does not change what she can pay now.",
+   "clue": "Demand needs more than wanting a product."
+  }
+ },
+ "cleared_by": "checker"
+}

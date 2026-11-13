@@ -1,0 +1,176 @@
+{
+ "id": "mat-paths-connected-networks",
+ "title": "Paths and connected networks",
+ "brief": "f003854a6d9a",
+ "shortlist": [
+  [
+   "mat-connected-networks-paths",
+   0.634
+  ],
+  [
+   "mat-trees",
+   0.352
+  ],
+  [
+   "mat-trees-algorithms",
+   0.352
+  ],
+  [
+   "mat-network-terms",
+   0.302
+  ],
+  [
+   "mat-law-total-probability",
+   0.279
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: done",
+  "2026-11-12T15:26:03Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00731,
+  "check": 0.00771
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-connected-networks-paths, is broader than the new point because its main content is Euler paths, which the brief does not cover, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Paths and connected networks",
+  "card": [
+   [
+    "Path",
+    "A path is a route along edges from one vertex to another. It is written as a list of vertices, such as A, B, D."
+   ],
+   [
+    "Connected",
+    "A network is connected when there is a path between every pair of vertices. If even one vertex cannot be reached from another, the network is not connected."
+   ],
+   [
+    "Example",
+    "Roads join towns A and B, B and C, and C and D. You can travel from any town to any other, so the network is connected. Now suppose town E has no road to any other town. Then there is no path from A to E, so the network is not connected."
+   ],
+   [
+    "Use",
+    "Paths model real routes. Vertices can be towns, depots or houses, and edges can be roads or delivery routes. A path shows a trip that can be made."
+   ]
+  ],
+  "remember": "Connected means every vertex can be reached from every other vertex along edges.",
+  "a": {
+   "q": "A network has vertices P, Q, R and S. The edges are PQ, QR and PR. Why is the network not connected?",
+   "opts": [
+    "There is no path from S to any other vertex",
+    "There is no path from P to Q",
+    "The vertices P, Q and R form a closed loop",
+    "There are more edges than vertices"
+   ],
+   "why": "S has no edge, so no path reaches it from P, Q or R. A connected network needs a path between every pair of vertices. The loop PQR does not matter, as P, Q and R are all joined to each other.",
+   "clue": "Check whether every vertex can be reached from every other."
+  },
+  "b": {
+   "d": 3,
+   "q": "A courier uses roads between depots. The roads are A to B, B to C, C to D and D to B. Depot E has no road to the others. Which statement is correct?",
+   "opts": [
+    "No path from A to E, so the network is not connected",
+    "A to D has a path, so the network is connected",
+    "Every depot has a road, so the network is connected",
+    "B, C and D form a loop, so the network is not connected"
+   ],
+   "why": "A path exists from A to D, but none reaches E. A connected network needs a path between every pair, so one unreachable vertex means it is not connected. Having some paths is not enough.",
+   "clue": "One unreachable vertex is enough to break connection."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A network with vertices A, B, C, D joined by edges AB, BC and CD in a line, and a separate vertex E with no edges, labelled as a town with no road.",
+    "why": "It lets the student see why one unreachable vertex makes a network not connected."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "There is no path from S to any other vertex",
+   "also_right": []
+  },
+  "b": {
+   "best": "No path from A to E, so the network is not connected",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Paths and connected networks",
+  "card": [
+   [
+    "Path",
+    "A path is a route along edges from one vertex to another. It is written as a list of vertices, such as A, B, D."
+   ],
+   [
+    "Connected",
+    "A network is connected when there is a path between every pair of vertices. If even one vertex cannot be reached from another, the network is not connected."
+   ],
+   [
+    "Example",
+    "Roads join towns A and B, B and C, and C and D. You can travel from any town to any other, so the network is connected. Now suppose town E has no road to any other town. Then there is no path from A to E, so the network is not connected."
+   ],
+   [
+    "Use",
+    "Paths model real routes. Vertices can be towns, depots or houses, and edges can be roads or delivery routes. A path shows a trip that can be made."
+   ]
+  ],
+  "remember": "Connected means every vertex can be reached from every other vertex along edges.",
+  "a": {
+   "q": "A network has vertices P, Q, R and S. The edges are PQ, QR and PR. Why is the network not connected?",
+   "opts": [
+    "There is no path from S to any other vertex",
+    "There is no path from P to Q",
+    "The vertices P, Q and R form a closed loop",
+    "There are more edges than vertices"
+   ],
+   "why": "S has no edge, so no path reaches it from P, Q or R. A connected network needs a path between every pair of vertices. The loop PQR does not matter, as P, Q and R are all joined to each other.",
+   "clue": "Check whether every vertex can be reached from every other."
+  },
+  "b": {
+   "d": 3,
+   "q": "A courier uses roads between depots. The roads are A to B, B to C, C to D and D to B. Depot E has no road to the others. Which statement is correct?",
+   "opts": [
+    "No path from A to E, so the network is not connected",
+    "A to D has a path, so the network is connected",
+    "Every depot has a road, so the network is connected",
+    "B, C and D form a loop, so the network is not connected"
+   ],
+   "why": "A path exists from A to D, but none reaches E. A connected network needs a path between every pair, so one unreachable vertex means it is not connected. Having some paths is not enough.",
+   "clue": "One unreachable vertex is enough to break connection."
+  },
+  "wants": [
+   {
+    "at": "card 3",
+    "kind": "diagram",
+    "brief": "A network with vertices A, B, C, D joined by edges AB, BC and CD in a line, and a separate vertex E with no edges, labelled as a town with no road.",
+    "why": "It lets the student see why one unreachable vertex makes a network not connected."
+   }
+  ]
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,363 @@
+{
+ "id": "eng-spelling-plurals",
+ "title": "Spelling plurals",
+ "brief": "a7e6d9835305",
+ "shortlist": [
+  [
+   "eng-spelling-effect",
+   0.252
+  ],
+  [
+   "eng-spelling-patterns-from-other",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:47Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:39Z write: done",
+  "2026-11-12T15:25:58Z check: flagged",
+  "2026-11-12T15:35:05Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-13T09:32:52Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01117,
+  "check": 0.00982,
+  "fix": 0.01724,
+  "recheck": 0.00989
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches regular English plural patterns (-es, y to ies, f to ves, irregular plurals); one covers deliberate spelling for effect and the other borrowed-word spelling from other languages, so neither teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The why says an apostrophe 'never' makes a plural, but the card does not mention apostrophes. Some style guides allow apostrophes in plurals of single letters (mind your p's and q's), so 'does not make a plural here' or 'is not used for plurals of nouns like bench' would be safer.",
+ "rejected": {
+  "title": "Spelling plurals",
+  "card": [
+   "Most nouns add -s, but nouns ending in s, x, sh or ch usually add -es: fox becomes foxes, church becomes churches. When ch sounds like k, just add -s: stomach becomes stomachs.",
+   "If a noun ends in a consonant and then y, change the y to ies: city becomes cities. If a vowel comes before the y, just add -s: day becomes days.",
+   "Many nouns ending in f or fe change to ves: leaf becomes leaves, wolf becomes wolves, knife becomes knives. Some, such as roof, just add -s: roofs.",
+   "Some plurals change completely: child becomes children, mouse becomes mice, foot becomes feet. A few do not change at all, such as sheep."
+  ],
+  "remember": "Check the ending of the noun, then pick the pattern. Learn the odd ones.",
+  "a": {
+   "q": "What is the plural of the noun \"berry\"?",
+   "opts": [
+    "berries",
+    "berrys",
+    "berryes",
+    "berrees"
+   ],
+   "why": "Berry ends in a consonant and then y, so the y changes to ies. Adding only -s is tempting, but that pattern is for a vowel before the y, as in days.",
+   "clue": "Look at the letter before the y."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence spells every plural correctly?",
+   "opts": [
+    "The wolves left their paw prints near the benches",
+    "The wolfs left their paw prints near the benchs",
+    "The wolves left their paw prints near the bench's",
+    "The wolfs left their paw prints near the benches"
+   ],
+   "why": "Wolf changes to wolves, and bench ends in a ch that does not sound like k, so it takes -es to make benches. The other sentences miss one of these changes or add an apostrophe, which never makes a plural.",
+   "clue": "Check the ending of each noun in turn."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The why says an apostrophe 'never' makes a plural, but the card does not mention apostrophes. Some style guides allow apostrophes in plurals of single letters (mind your p's and q's), so 'does not make a plural here' or 'is not used for plurals of nouns like bench' would be safer."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Spelling plurals",
+     "card": [
+      "Most nouns add -s to make a plural: dog becomes dogs. If a noun ends in s, x, ch or sh, add -es: bus becomes buses, fox becomes foxes, church becomes churches.",
+      "If a noun ends in a consonant and then y, change the y to ies: city becomes cities. If a vowel comes before the y, just add -s: day becomes days.",
+      "Many nouns ending in f or fe change to ves: leaf becomes leaves, knife becomes knives. Some, such as roof, just add -s: roofs.",
+      "Some plurals change completely: child becomes children, mouse becomes mice, foot becomes feet. A few do not change at all, such as sheep."
+     ],
+     "remember": "Check the ending of the noun, then pick the pattern. Learn the odd ones.",
+     "a": {
+      "q": "What is the plural of the noun \"berry\"?",
+      "opts": [
+       "berries",
+       "berrys",
+       "berryes",
+       "berrees"
+      ],
+      "why": "Berry ends in a consonant and then y, so the y changes to ies. Adding only -s is tempting, but that pattern is for a vowel before the y, as in days.",
+      "clue": "Look at the letter before the y."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which sentence spells every plural correctly?",
+      "opts": [
+       "The wolves left their paw prints near the benches",
+       "The wolfs left their paw prints near the benchs",
+       "The wolves left their paw prints near the bench's",
+       "The wolfs left their paw prints near the benches"
+      ],
+      "why": "Wolf changes to wolves, and bench ends in ch so it takes -es to make benches. The other sentences miss one of these changes or add an apostrophe where none is needed.",
+      "clue": "Check the ending of each noun in turn."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "berries",
+      "also_right": []
+     },
+     "b": {
+      "best": "The wolves left their paw prints near the benches",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says any noun ending in ch adds -es, with no exceptions. Words where ch sounds like k just add -s (stomachs, monarchs, epochs), so a student could learn to write 'stomaches'. Adding 'usually' or naming the exception would fix this."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are correct, with one clear answer each. One minor issue: the card states the ch-to-es rule as absolute, missing exceptions such as stomachs."
+    },
+    "flags": [
+     "Card, fact: The card says any noun ending in ch adds -es, with no exceptions. Words where ch sounds like k just add -s (stomachs, monarchs, epochs), so a student could learn to write 'stomaches'. Adding 'usually' or naming the exception would fix this."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Spelling plurals",
+     "card": [
+      "Most nouns add -s, but nouns ending in s, x, sh or ch usually add -es: fox becomes foxes, church becomes churches. When ch sounds like k, just add -s: stomach becomes stomachs.",
+      "If a noun ends in a consonant and then y, change the y to ies: city becomes cities. If a vowel comes before the y, just add -s: day becomes days.",
+      "Many nouns ending in f or fe change to ves: leaf becomes leaves, wolf becomes wolves, knife becomes knives. Some, such as roof, just add -s: roofs.",
+      "Some plurals change completely: child becomes children, mouse becomes mice, foot becomes feet. A few do not change at all, such as sheep."
+     ],
+     "remember": "Check the ending of the noun, then pick the pattern. Learn the odd ones.",
+     "a": {
+      "q": "What is the plural of the noun \"berry\"?",
+      "opts": [
+       "berries",
+       "berrys",
+       "berryes",
+       "berrees"
+      ],
+      "why": "Berry ends in a consonant and then y, so the y changes to ies. Adding only -s is tempting, but that pattern is for a vowel before the y, as in days.",
+      "clue": "Look at the letter before the y."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which sentence spells every plural correctly?",
+      "opts": [
+       "The wolves left their paw prints near the benches",
+       "The wolfs left their paw prints near the benchs",
+       "The wolves left their paw prints near the bench's",
+       "The wolfs left their paw prints near the benches"
+      ],
+      "why": "Wolf changes to wolves, and bench ends in a ch that does not sound like k, so it takes -es to make benches. The other sentences miss one of these changes or add an apostrophe, which never makes a plural.",
+      "clue": "Check the ending of each noun in turn."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:10Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "berries",
+       "also_right": []
+      },
+      "b": {
+       "best": "The wolves left their paw prints near the benches",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The why says an apostrophe 'never' makes a plural, but the card does not mention apostrophes. Some style guides allow apostrophes in plurals of single letters (mind your p's and q's), so 'does not make a plural here' or 'is not used for plurals of nouns like bench' would be safer."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card's plural rules and both answers are correct, and each question has exactly one right option. One minor issue: the why for question b says an apostrophe 'never' makes a plural, which is an absolute the card does not teach."
+     },
+     "flags": [
+      "Question b, wording: The why says an apostrophe 'never' makes a plural, but the card does not mention apostrophes. Some style guides allow apostrophes in plurals of single letters (mind your p's and q's), so 'does not make a plural here' or 'is not used for plurals of nouns like bench' would be safer."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:52Z",
+   "step": "write",
+   "version": {
+    "title": "Spelling plurals",
+    "card": [
+     "Most nouns add -s, but nouns ending in s, x, sh or ch usually add -es: fox becomes foxes, church becomes churches. When ch sounds like k, just add -s: stomach becomes stomachs.",
+     "If a noun ends in a consonant and then y, change the y to ies: city becomes cities. If a vowel comes before the y, just add -s: day becomes days.",
+     "Many nouns ending in f or fe change to ves: leaf becomes leaves, wolf becomes wolves, knife becomes knives. Some, such as roof, just add -s: roofs.",
+     "Some plurals change completely: child becomes children, mouse becomes mice, foot becomes feet. A few do not change at all, such as sheep."
+    ],
+    "remember": "Check the ending of the noun, then pick the pattern. Learn the odd ones.",
+    "a": {
+     "q": "What is the plural of the noun \"berry\"?",
+     "opts": [
+      "berries",
+      "berrys",
+      "berryes",
+      "berrees"
+     ],
+     "why": "Berry ends in a consonant and then y, so the y changes to ies. Adding only -s is tempting, but that pattern is for a vowel before the y, as in days.",
+     "clue": "Look at the letter before the y."
+    },
+    "b": {
+     "d": 3,
+     "q": "Which sentence spells every plural correctly?",
+     "opts": [
+      "The wolves left their paw prints near the benches",
+      "The wolfs left their paw prints near the benchs",
+      "The wolves left their paw prints near the bench's",
+      "The wolfs left their paw prints near the benches"
+     ],
+     "why": "Wolf changes to wolves, and bench ends in a ch that does not sound like k, so it takes -es to make benches. The other sentences miss one of these changes or add an apostrophe, which is not used to make the plural of a noun like bench.",
+     "clue": "Check the ending of each noun in turn."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "berries",
+     "also_right": []
+    },
+    "b": {
+     "best": "The wolves left their paw prints near the benches",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Spelling plurals",
+  "card": [
+   "Most nouns add -s, but nouns ending in s, x, sh or ch usually add -es: fox becomes foxes, church becomes churches. When ch sounds like k, just add -s: stomach becomes stomachs.",
+   "If a noun ends in a consonant and then y, change the y to ies: city becomes cities. If a vowel comes before the y, just add -s: day becomes days.",
+   "Many nouns ending in f or fe change to ves: leaf becomes leaves, wolf becomes wolves, knife becomes knives. Some, such as roof, just add -s: roofs.",
+   "Some plurals change completely: child becomes children, mouse becomes mice, foot becomes feet. A few do not change at all, such as sheep."
+  ],
+  "remember": "Check the ending of the noun, then pick the pattern. Learn the odd ones.",
+  "a": {
+   "q": "What is the plural of the noun \"berry\"?",
+   "opts": [
+    "berries",
+    "berrys",
+    "berryes",
+    "berrees"
+   ],
+   "why": "Berry ends in a consonant and then y, so the y changes to ies. Adding only -s is tempting, but that pattern is for a vowel before the y, as in days.",
+   "clue": "Look at the letter before the y."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence spells every plural correctly?",
+   "opts": [
+    "The wolves left their paw prints near the benches",
+    "The wolfs left their paw prints near the benchs",
+    "The wolves left their paw prints near the bench's",
+    "The wolfs left their paw prints near the benches"
+   ],
+   "why": "Wolf changes to wolves, and bench ends in a ch that does not sound like k, so it takes -es to make benches. The other sentences miss one of these changes or add an apostrophe, which is not used to make the plural of a noun like bench.",
+   "clue": "Check the ending of each noun in turn."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "berries",
+   "also_right": []
+  },
+  "b": {
+   "best": "The wolves left their paw prints near the benches",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Spelling plurals",
+  "card": [
+   "Most nouns add -s, but nouns ending in s, x, sh or ch usually add -es: fox becomes foxes, church becomes churches. When ch sounds like k, just add -s: stomach becomes stomachs.",
+   "If a noun ends in a consonant and then y, change the y to ies: city becomes cities. If a vowel comes before the y, just add -s: day becomes days.",
+   "Many nouns ending in f or fe change to ves: leaf becomes leaves, wolf becomes wolves, knife becomes knives. Some, such as roof, just add -s: roofs.",
+   "Some plurals change completely: child becomes children, mouse becomes mice, foot becomes feet. A few do not change at all, such as sheep."
+  ],
+  "remember": "Check the ending of the noun, then pick the pattern. Learn the odd ones.",
+  "a": {
+   "q": "What is the plural of the noun \"berry\"?",
+   "opts": [
+    "berries",
+    "berrys",
+    "berryes",
+    "berrees"
+   ],
+   "why": "Berry ends in a consonant and then y, so the y changes to ies. Adding only -s is tempting, but that pattern is for a vowel before the y, as in days.",
+   "clue": "Look at the letter before the y."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which sentence spells every plural correctly?",
+   "opts": [
+    "The wolves left their paw prints near the benches",
+    "The wolfs left their paw prints near the benchs",
+    "The wolves left their paw prints near the bench's",
+    "The wolfs left their paw prints near the benches"
+   ],
+   "why": "Wolf changes to wolves, and bench ends in a ch that does not sound like k, so it takes -es to make benches. The other sentences miss one of these changes or add an apostrophe, which is not used to make the plural of a noun like bench.",
+   "clue": "Check the ending of each noun in turn."
+  }
+ },
+ "checked_by": "claude-code"
+}

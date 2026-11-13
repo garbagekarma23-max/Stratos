@@ -1,0 +1,237 @@
+{
+ "id": "geo-internal-migration-china-vic",
+ "title": "Internal migration in China",
+ "brief": "db77e44cb315",
+ "shortlist": [
+  [
+   "geo-internal-migration-china",
+   0.531
+  ],
+  [
+   "geo-types-migration",
+   0.357
+  ],
+  [
+   "geo-internal-international-migration",
+   0.33
+  ],
+  [
+   "geo-migration-cultural-diversity",
+   0.254
+  ],
+  [
+   "geo-mining-internal-migration",
+   0.241
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 may adapt geo-internal-migration-china, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:40Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:00Z write: done",
+  "2026-11-12T15:35:06Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.00859,
+  "write": 0.01114,
+  "check": 0.00953,
+  "fix": 0.01825,
+  "recheck": 0.0092
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "geo-internal-migration-china",
+  "changes": [
+   "Add a card line explaining the hukou household registration system, which limits city residents' access to services and housing and shapes where migrants can settle.",
+   "Add a remember or question element that links migration patterns to the hukou system, since the new point's brief names it."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same China rural-to-coastal-city migration at the right depth, but it does not cover the hukou registration system that the new point's brief names, so it needs that addition.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers the same rural-to-city migration in China, but it never mentions the hukou household registration system that this brief makes central, and adding that idea would be more than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Internal migration in China",
+  "card": [
+   "Since about 1980, hundreds of millions of people in China have moved from the countryside to cities. This is internal migration, because they stay inside China. It is one of the largest migrations in history.",
+   "Many moved to find work in factories and in service jobs, such as shops, restaurants and building sites. Wages in cities were often higher than farm incomes. These are pull factors.",
+   "The hukou is China's household registration system. It records where a family is officially registered, and access to services such as public schools and health care has often depended on that place.",
+   "Many rural migrants have worked in cities without a city hukou. This has made it harder for them to use city services, and some have left children with relatives in their home village."
+  ],
+  "remember": "Rural Chinese moved to cities for work, and the hukou system shaped what services they could use there.",
+  "a": {
+   "q": "What is the hukou system?",
+   "opts": [
+    "A household registration system tied to a place",
+    "A government program that builds new factory towns",
+    "A rule that bans people from leaving their country",
+    "A tax paid by workers who move to a city"
+   ],
+   "why": "The hukou records where a family is officially registered, and services have often depended on that place. It does not build towns, ban travel or collect a tax.",
+   "clue": "Think about what it records about a family."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wei moves from a farming village to a city factory in China. He keeps his village hukou, and his daughter cannot easily enrol in a city public school. What does this show?",
+   "opts": [
+    "The hukou can limit migrants' access to city services",
+    "Wei has made an international move between countries",
+    "Wei has moved because of a push factor only",
+    "Cities in China do not need factory workers"
+   ],
+   "why": "Services such as public schools have often depended on the place of registration, so a village hukou can limit access in the city. Wei stays inside China, so his move is not international.",
+   "clue": "Which option links the school problem to where he is registered?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A household registration system tied to a place",
+   "also_right": []
+  },
+  "b": {
+   "best": "The hukou can limit migrants' access to city services",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The second card line gives building sites as an example of service jobs. Construction is a secondary (industry) job, not a service job. It could be listed as its own example, or replaced with a service example such as cleaning or delivery."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card wrongly calls building sites a service job, since construction is secondary industry. Otherwise the facts and both questions check out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The second card line gives building sites as an example of service jobs. Construction is a secondary (industry) job, not a service job. It could be listed as its own example, or replaced with a service example such as cleaning or delivery."
+ ],
+ "proposal": {
+  "title": "Internal migration in China",
+  "card": [
+   "Since about 1980, hundreds of millions of people in China have moved from the countryside to cities. This is internal migration, because they stay inside China. It is one of the largest migrations in history.",
+   "Many moved to find work in factories, on building sites and in service jobs, such as shops, restaurants and delivery. Wages in cities were often higher than farm incomes. These are pull factors.",
+   "The hukou is China's household registration system. It records where a family is officially registered, and access to services such as public schools and health care has often depended on that place.",
+   "Many rural migrants have worked in cities without a city hukou. This has made it harder for them to use city services, and some have left children with relatives in their home village."
+  ],
+  "remember": "Rural Chinese moved to cities for work, and the hukou system shaped what services they could use there.",
+  "a": {
+   "q": "What is the hukou system?",
+   "opts": [
+    "A household registration system tied to a place",
+    "A government program that builds new factory towns",
+    "A rule that bans people from leaving their country",
+    "A tax paid by workers who move to a city"
+   ],
+   "why": "The hukou records where a family is officially registered, and services have often depended on that place. It does not build towns, ban travel or collect a tax.",
+   "clue": "Think about what it records about a family."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wei moves from a farming village to a city factory in China. He keeps his village hukou, and his daughter cannot easily enrol in a city public school. What does this show?",
+   "opts": [
+    "The hukou can limit migrants' access to city services",
+    "Wei has made an international move between countries",
+    "The hukou gives migrants full access to city schools",
+    "Wei's hukou moved with him to the city automatically"
+   ],
+   "why": "Services such as public schools have often depended on the place of registration, so a village hukou can limit access in the city. The hukou does not give migrants full access, which is why his daughter cannot easily enrol. Wei stays inside China, so his move is not international.",
+   "clue": "Which option links the school problem to where he is registered?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:11Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A household registration system tied to a place",
+    "also_right": []
+   },
+   "b": {
+    "best": "The hukou can limit migrants' access to city services",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:11Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The second card line gives building sites as an example of service jobs. Construction is a secondary (industry) job, not a service job. It could be listed as its own example, or replaced with a service example such as cleaning or delivery."
+   }
+  ],
+  "flags": [
+   "Card, fact: The second card line gives building sites as an example of service jobs. Construction is a secondary (industry) job, not a service job. It could be listed as its own example, or replaced with a service example such as cleaning or delivery."
+  ]
+ },
+ "final": {
+  "title": "Internal migration in China",
+  "card": [
+   "Since about 1980, hundreds of millions of people in China have moved from the countryside to cities. This is internal migration, because they stay inside China. It is one of the largest migrations in history.",
+   "Many moved to find work in factories, on building sites and in service jobs, such as shops, restaurants and delivery. Wages in cities were often higher than farm incomes. These are pull factors.",
+   "The hukou is China's household registration system. It records where a family is officially registered, and access to services such as public schools and health care has often depended on that place.",
+   "Many rural migrants have worked in cities without a city hukou. This has made it harder for them to use city services, and some have left children with relatives in their home village."
+  ],
+  "remember": "Rural Chinese moved to cities for work, and the hukou system shaped what services they could use there.",
+  "a": {
+   "q": "What is the hukou system?",
+   "opts": [
+    "A household registration system tied to a place",
+    "A government program that builds new factory towns",
+    "A rule that bans people from leaving their country",
+    "A tax paid by workers who move to a city"
+   ],
+   "why": "The hukou records where a family is officially registered, and services have often depended on that place. It does not build towns, ban travel or collect a tax.",
+   "clue": "Think about what it records about a family."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wei moves from a farming village to a city factory in China. He keeps his village hukou, and his daughter cannot easily enrol in a city public school. What does this show?",
+   "opts": [
+    "The hukou can limit migrants' access to city services",
+    "Wei has made an international move between countries",
+    "The hukou gives migrants full access to city schools",
+    "Wei's hukou moved with him to the city automatically"
+   ],
+   "why": "Services such as public schools have often depended on the place of registration, so a village hukou can limit access in the city. The hukou does not give migrants full access, which is why his daughter cannot easily enrol. Wei stays inside China, so his move is not international.",
+   "clue": "Which option links the school problem to where he is registered?"
+  }
+ },
+ "cleared_by": "recheck"
+}

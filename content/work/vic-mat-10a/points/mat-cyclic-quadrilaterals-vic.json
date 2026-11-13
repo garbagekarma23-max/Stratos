@@ -1,0 +1,372 @@
+{
+ "id": "mat-cyclic-quadrilaterals-vic",
+ "title": "Cyclic quadrilaterals",
+ "brief": "988ae141b330",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, write",
+  "2026-11-12T15:05:57Z write: done",
+  "2026-11-12T15:15:48Z check: flagged",
+  "2026-11-12T15:26:04Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.06465,
+  "check": 0.00712,
+  "fix": 0.02128,
+  "recheck": 0.00717
+ },
+ "draft": {
+  "title": "Cyclic quadrilaterals",
+  "card": [
+   "A cyclic quadrilateral is a four-sided shape with all four vertices on a circle.",
+   "Its opposite angles add to \\(180^{\\circ}\\). So the two angles at one pair of opposite corners are supplementary, and so are the other two.",
+   "Example: in cyclic quadrilateral \\(ABCD\\), angle \\(A = 70^{\\circ}\\). Angle \\(C\\) is opposite \\(A\\), so \\(C = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
+   "Only opposite angles pair up. Angles at neighbouring corners, such as \\(A\\) and \\(B\\), do not have to add to \\(180^{\\circ}\\)."
+  ],
+  "remember": "In a cyclic quadrilateral, opposite angles add to \\(180^{\\circ}\\).",
+  "a": {
+   "q": "\\(PQRS\\) is a cyclic quadrilateral. Angle \\(P = 85^{\\circ}\\). What is angle \\(R\\), opposite \\(P\\)?",
+   "opts": [
+    "\\(95^{\\circ}\\)",
+    "\\(85^{\\circ}\\)",
+    "\\(105^{\\circ}\\)",
+    "\\(170^{\\circ}\\)"
+   ],
+   "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(R = 180^{\\circ} - 85^{\\circ} = 95^{\\circ}\\). Choosing \\(85^{\\circ}\\) wrongly treats opposite angles as equal.",
+   "clue": "Opposite angles add to a straight angle."
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(ABCD\\) is a cyclic quadrilateral. Angle \\(A = 2x\\) and the opposite angle \\(C = x + 30^{\\circ}\\). What is angle \\(A\\)?",
+   "opts": [
+    "\\(110^{\\circ}\\)",
+    "\\(70^{\\circ}\\)",
+    "\\(50^{\\circ}\\)",
+    "\\(100^{\\circ}\\)"
+   ],
+   "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(2x + x + 30^{\\circ} = 180^{\\circ}\\). Then \\(3x = 150^{\\circ}\\) and \\(x = 50^{\\circ}\\), so \\(A = 100^{\\circ}\\). The option \\(50^{\\circ}\\) is only the value of \\(x\\), not angle \\(A\\).",
+   "clue": "Add the two opposite angles and set the sum to \\(180^{\\circ}\\)."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A circle with a quadrilateral ABCD drawn inside it, all four vertices A, B, C and D on the circle. Angles at A and C (opposite corners) are marked with arcs and labelled A and C.",
+    "why": "It shows what a cyclic quadrilateral looks like and which angles are opposite."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(95^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(100^{\\circ}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “\\(100^{\\circ}\\)”, not the writer’s answer “\\(110^{\\circ}\\)”."
+ ],
+ "proposal": {
+  "title": "Cyclic quadrilaterals",
+  "card": [
+   "A cyclic quadrilateral is a four-sided shape with all four vertices on a circle.",
+   "Its opposite angles add to \\(180^{\\circ}\\). So the angles at one pair of opposite vertices are supplementary, and so are the other two.",
+   "Example: in cyclic quadrilateral \\(ABCD\\), angle \\(A = 70^{\\circ}\\). Angle \\(C\\) is opposite \\(A\\), so \\(C = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
+   "Only opposite angles pair up. Angles at neighbouring vertices, such as \\(A\\) and \\(B\\), do not have to add to \\(180^{\\circ}\\)."
+  ],
+  "remember": "In a cyclic quadrilateral, each pair of opposite angles is supplementary.",
+  "a": {
+   "q": "\\(PQRS\\) is a cyclic quadrilateral. Angle \\(P = 85^{\\circ}\\). What is angle \\(R\\), opposite \\(P\\)?",
+   "opts": [
+    "\\(95^{\\circ}\\)",
+    "\\(85^{\\circ}\\)",
+    "\\(275^{\\circ}\\)",
+    "\\(170^{\\circ}\\)"
+   ],
+   "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(R = 180^{\\circ} - 85^{\\circ} = 95^{\\circ}\\). Choosing \\(85^{\\circ}\\) wrongly treats opposite angles as equal.",
+   "clue": "Opposite angles add to a straight angle."
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(ABCD\\) is a cyclic quadrilateral. Angle \\(A = 2x\\) and the opposite angle \\(C = x + 30^{\\circ}\\). What is angle \\(A\\)?",
+   "opts": [
+    "\\(100^{\\circ}\\)",
+    "\\(50^{\\circ}\\)",
+    "\\(80^{\\circ}\\)",
+    "\\(60^{\\circ}\\)"
+   ],
+   "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(2x + x + 30^{\\circ} = 180^{\\circ}\\). Then \\(3x = 150^{\\circ}\\) and \\(x = 50^{\\circ}\\), so \\(A = 2 \\times 50^{\\circ} = 100^{\\circ}\\). The option \\(50^{\\circ}\\) is only the value of \\(x\\), and \\(80^{\\circ}\\) is angle \\(C\\), not angle \\(A\\).",
+   "clue": "Add the two opposite angles and set the sum to \\(180^{\\circ}\\)."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A circle with a quadrilateral ABCD drawn inside it, all four vertices A, B, C and D on the circle. Angles at A and C (opposite vertices) are marked with arcs and labelled A and C.",
+    "why": "It shows what a cyclic quadrilateral looks like and which angles are opposite."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(95^{\\circ}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(100^{\\circ}\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Question b: the checker picked “\\(100^{\\circ}\\)”, not the writer’s answer “\\(110^{\\circ}\\)”."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Cyclic quadrilaterals",
+  "card": [
+   "A cyclic quadrilateral is a four-sided shape with all four vertices on a circle.",
+   "Its opposite angles add to \\(180^{\\circ}\\). So the angles at one pair of opposite vertices are supplementary, and so are the other two.",
+   "Example: in cyclic quadrilateral \\(ABCD\\), angle \\(A = 70^{\\circ}\\). Angle \\(C\\) is opposite \\(A\\), so \\(C = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
+   "Only opposite angles pair up. Angles at neighbouring vertices, such as \\(A\\) and \\(B\\), do not have to add to \\(180^{\\circ}\\)."
+  ],
+  "remember": "In a cyclic quadrilateral, each pair of opposite angles is supplementary.",
+  "a": {
+   "q": "\\(PQRS\\) is a cyclic quadrilateral. Angle \\(P = 85^{\\circ}\\). What is angle \\(R\\), opposite \\(P\\)?",
+   "opts": [
+    "\\(95^{\\circ}\\)",
+    "\\(85^{\\circ}\\)",
+    "\\(275^{\\circ}\\)",
+    "\\(170^{\\circ}\\)"
+   ],
+   "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(R = 180^{\\circ} - 85^{\\circ} = 95^{\\circ}\\). Choosing \\(85^{\\circ}\\) wrongly treats opposite angles as equal.",
+   "clue": "Opposite angles add to a straight angle."
+  },
+  "b": {
+   "d": 3,
+   "q": "\\(ABCD\\) is a cyclic quadrilateral. Angle \\(A = 2x\\) and the opposite angle \\(C = x + 30^{\\circ}\\). What is angle \\(A\\)?",
+   "opts": [
+    "\\(100^{\\circ}\\)",
+    "\\(50^{\\circ}\\)",
+    "\\(80^{\\circ}\\)",
+    "\\(60^{\\circ}\\)"
+   ],
+   "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(2x + x + 30^{\\circ} = 180^{\\circ}\\). Then \\(3x = 150^{\\circ}\\) and \\(x = 50^{\\circ}\\), so \\(A = 2 \\times 50^{\\circ} = 100^{\\circ}\\). The option \\(50^{\\circ}\\) is only the value of \\(x\\), and \\(80^{\\circ}\\) is angle \\(C\\), not angle \\(A\\).",
+   "clue": "Add the two opposite angles and set the sum to \\(180^{\\circ}\\)."
+  },
+  "wants": [
+   {
+    "at": "card 2",
+    "kind": "diagram",
+    "brief": "A circle with a quadrilateral ABCD drawn inside it, all four vertices A, B, C and D on the circle. Angles at A and C (opposite vertices) are marked with arcs and labelled A and C.",
+    "why": "It shows what a cyclic quadrilateral looks like and which angles are opposite."
+   }
+  ]
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The original marked 110° right for question b, but 3x + 30° = 180° gives x = 50° and A = 100°. The fix makes 100° the right option, with 50° and 80° clearly wrong, and everything else is right.",
+   "item": "67161be160369633",
+   "result": "decided",
+   "saved": {
+    "id": "mat-cyclic-quadrilaterals-vic",
+    "title": "Cyclic quadrilaterals",
+    "brief": "988ae141b330",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 1,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.06465,
+     "check": 0.00712,
+     "fix": 0.02128,
+     "recheck": 0.00717
+    },
+    "draft": {
+     "title": "Cyclic quadrilaterals",
+     "card": [
+      "A cyclic quadrilateral is a four-sided shape with all four vertices on a circle.",
+      "Its opposite angles add to \\(180^{\\circ}\\). So the two angles at one pair of opposite corners are supplementary, and so are the other two.",
+      "Example: in cyclic quadrilateral \\(ABCD\\), angle \\(A = 70^{\\circ}\\). Angle \\(C\\) is opposite \\(A\\), so \\(C = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
+      "Only opposite angles pair up. Angles at neighbouring corners, such as \\(A\\) and \\(B\\), do not have to add to \\(180^{\\circ}\\)."
+     ],
+     "remember": "In a cyclic quadrilateral, opposite angles add to \\(180^{\\circ}\\).",
+     "a": {
+      "q": "\\(PQRS\\) is a cyclic quadrilateral. Angle \\(P = 85^{\\circ}\\). What is angle \\(R\\), opposite \\(P\\)?",
+      "opts": [
+       "\\(95^{\\circ}\\)",
+       "\\(85^{\\circ}\\)",
+       "\\(105^{\\circ}\\)",
+       "\\(170^{\\circ}\\)"
+      ],
+      "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(R = 180^{\\circ} - 85^{\\circ} = 95^{\\circ}\\). Choosing \\(85^{\\circ}\\) wrongly treats opposite angles as equal.",
+      "clue": "Opposite angles add to a straight angle."
+     },
+     "b": {
+      "d": 3,
+      "q": "\\(ABCD\\) is a cyclic quadrilateral. Angle \\(A = 2x\\) and the opposite angle \\(C = x + 30^{\\circ}\\). What is angle \\(A\\)?",
+      "opts": [
+       "\\(110^{\\circ}\\)",
+       "\\(70^{\\circ}\\)",
+       "\\(50^{\\circ}\\)",
+       "\\(100^{\\circ}\\)"
+      ],
+      "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(2x + x + 30^{\\circ} = 180^{\\circ}\\). Then \\(3x = 150^{\\circ}\\) and \\(x = 50^{\\circ}\\), so \\(A = 100^{\\circ}\\). The option \\(50^{\\circ}\\) is only the value of \\(x\\), not angle \\(A\\).",
+      "clue": "Add the two opposite angles and set the sum to \\(180^{\\circ}\\)."
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "diagram",
+       "brief": "A circle with a quadrilateral ABCD drawn inside it, all four vertices A, B, C and D on the circle. Angles at A and C (opposite corners) are marked with arcs and labelled A and C.",
+       "why": "It shows what a cyclic quadrilateral looks like and which angles are opposite."
+      }
+     ]
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(95^{\\circ}\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(100^{\\circ}\\)",
+      "also_right": []
+     },
+     "problems": [],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "No problems found."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b: the checker picked “\\(100^{\\circ}\\)”, not the writer’s answer “\\(110^{\\circ}\\)”."
+    ],
+    "proposal": {
+     "title": "Cyclic quadrilaterals",
+     "card": [
+      "A cyclic quadrilateral is a four-sided shape with all four vertices on a circle.",
+      "Its opposite angles add to \\(180^{\\circ}\\). So the angles at one pair of opposite vertices are supplementary, and so are the other two.",
+      "Example: in cyclic quadrilateral \\(ABCD\\), angle \\(A = 70^{\\circ}\\). Angle \\(C\\) is opposite \\(A\\), so \\(C = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
+      "Only opposite angles pair up. Angles at neighbouring vertices, such as \\(A\\) and \\(B\\), do not have to add to \\(180^{\\circ}\\)."
+     ],
+     "remember": "In a cyclic quadrilateral, each pair of opposite angles is supplementary.",
+     "a": {
+      "q": "\\(PQRS\\) is a cyclic quadrilateral. Angle \\(P = 85^{\\circ}\\). What is angle \\(R\\), opposite \\(P\\)?",
+      "opts": [
+       "\\(95^{\\circ}\\)",
+       "\\(85^{\\circ}\\)",
+       "\\(275^{\\circ}\\)",
+       "\\(170^{\\circ}\\)"
+      ],
+      "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(R = 180^{\\circ} - 85^{\\circ} = 95^{\\circ}\\). Choosing \\(85^{\\circ}\\) wrongly treats opposite angles as equal.",
+      "clue": "Opposite angles add to a straight angle."
+     },
+     "b": {
+      "d": 3,
+      "q": "\\(ABCD\\) is a cyclic quadrilateral. Angle \\(A = 2x\\) and the opposite angle \\(C = x + 30^{\\circ}\\). What is angle \\(A\\)?",
+      "opts": [
+       "\\(100^{\\circ}\\)",
+       "\\(50^{\\circ}\\)",
+       "\\(80^{\\circ}\\)",
+       "\\(60^{\\circ}\\)"
+      ],
+      "why": "Opposite angles add to \\(180^{\\circ}\\), so \\(2x + x + 30^{\\circ} = 180^{\\circ}\\). Then \\(3x = 150^{\\circ}\\) and \\(x = 50^{\\circ}\\), so \\(A = 2 \\times 50^{\\circ} = 100^{\\circ}\\). The option \\(50^{\\circ}\\) is only the value of \\(x\\), and \\(80^{\\circ}\\) is angle \\(C\\), not angle \\(A\\).",
+      "clue": "Add the two opposite angles and set the sum to \\(180^{\\circ}\\)."
+     },
+     "wants": [
+      {
+       "at": "card 2",
+       "kind": "diagram",
+       "brief": "A circle with a quadrilateral ABCD drawn inside it, all four vertices A, B, C and D on the circle. Angles at A and C (opposite vertices) are marked with arcs and labelled A and C.",
+       "why": "It shows what a cyclic quadrilateral looks like and which angles are opposite."
+      }
+     ]
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:12Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "\\(95^{\\circ}\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(100^{\\circ}\\)",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-12T17:07:12Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [],
+     "flags": [
+      "Question b: the checker picked “\\(100^{\\circ}\\)”, not the writer’s answer “\\(110^{\\circ}\\)”."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "304a822df7f075f1"
+  }
+ ]
+}

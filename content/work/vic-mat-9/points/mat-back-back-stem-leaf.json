@@ -1,0 +1,537 @@
+{
+ "id": "mat-back-back-stem-leaf",
+ "title": "Back-to-back stem-and-leaf plots",
+ "brief": "ee2791bdc272",
+ "shortlist": [
+  [
+   "mat-comparing-data-sets-2",
+   0.521
+  ],
+  [
+   "mat-stem-leaf-plots",
+   0.355
+  ],
+  [
+   "mat-histograms-dot-plots",
+   0.238
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T12:53:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:08Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:06:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:51Z write: failed the content check, writing again",
+  "2026-11-12T15:26:06Z write: done",
+  "2026-11-12T15:35:10Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-13T15:26:38Z review: rejected, to be written again",
+  "2026-11-13T15:37:12Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.0239,
+  "check": 0.01356,
+  "fix": 0.02645
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Comparing data sets, covers comparing two sets in general, including parallel dot plots and summary statistics, and mentions back-to-back plots only briefly, so it is broader than the specific back-to-back stem-and-leaf layout this point teaches.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Back-to-back stem-and-leaf plots",
+  "card": [
+   "A back-to-back stem-and-leaf plot shows two data sets side by side. The stem is shared down the middle. One set's leaves go to the left and the other set's leaves go to the right.",
+   "Each leaf is the last digit of a value, and each stem is the digits before it. If the plot says \\(3 \\mid 4\\) means 34, a stem of 3 with a leaf of 4 is the value 34. Leaves are put in order, smallest next to the stem.",
+   "The centre is the middle value of a set. Count the leaves on one side and find the middle one. The spread is the highest value minus the lowest value, which is the range.",
+   "Example: Team A scores are 21, 24, 32, 35, 38 and Team B scores are 22, 31, 41, 45, 49. Team A's middle value is 32 and Team B's is 41. Team A's range is \\(38 - 21 = 17\\) and Team B's is \\(49 - 22 = 27\\)."
+  ],
+  "remember": "One shared stem, two sets of leaves. Find each set's middle value and range, then compare.",
+  "a": {
+   "q": "A back-to-back plot says \\(2 \\mid 4\\) means 24. For stem 2, the left leaves are 3 and 7 and the right leaves are 1, 5 and 9. What values does the right side show?",
+   "opts": [
+    "21, 25 and 29",
+    "12, 52 and 92",
+    "23, 27 and 29",
+    "3, 7 and 9"
+   ],
+   "why": "Each leaf is the last digit and the stem 2 comes before it, so the right leaves 1, 5 and 9 give 21, 25 and 29. Writing 12, 52 and 92 puts the leaf before the stem.",
+   "clue": "The stem digit comes first, then the leaf."
+  },
+  "b": {
+   "d": 3,
+   "q": "Class P test scores are 52, 55, 61, 68, 74. Class Q scores are 48, 60, 63, 70, 91. Which comparison is correct?",
+   "opts": [
+    "Class Q has the greater range, 43 compared with 22",
+    "Class P has the higher middle value, 63 compared with 61",
+    "The two classes have the same range, 22 each",
+    "Class Q has the lower range, 43 compared with 22"
+   ],
+   "why": "Class P's range is \\(74 - 52 = 22\\) and Class Q's is \\(91 - 48 = 43\\), so Q is more spread out. The middle values are 61 for P and 63 for Q, so the claim that P has the higher middle value swaps them.",
+   "clue": "Range is the highest value minus the lowest, for each class."
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:12Z",
+   "step": "write",
+   "version": {
+    "title": "Back-to-back stem-and-leaf plots",
+    "card": [
+     "A back-to-back stem-and-leaf plot shows two data sets on one shared stem down the middle. One set's leaves go to the left of the stem and the other set's go to the right.",
+     "Each leaf is a last digit, and the stem is the digits before it. On both sides the smallest leaf sits next to the stem, so leaves on the left are read outward, from right to left. Team A's leaves 2, 5 and 7 on stem 2 are the scores 22, 25 and 27.",
+     "For each set, count its leaves and find the middle value in order: that is its median. With 7 values, it is the 4th from the smallest. The range is the highest value minus the lowest.",
+     "Team A: median 27, range \\(40 - 18 = 22\\). Team B: median 23, range \\(45 - 12 = 33\\). So Team A scored more in a typical game, and Team B's scores were more spread out."
+    ],
+    "cardFigs": {
+     "1": {
+      "kind": "chart",
+      "chart": "stem",
+      "alt": "A back-to-back stem-and-leaf plot of points scored in seven games. The stems 1 to 4 run down the middle. Team A's leaves are on the left: 8 on stem 1; 2, 5 and 7 on stem 2; 1 and 4 on stem 3; 0 on stem 4. Team B's leaves are on the right: 2 and 5 on stem 1; 1, 3 and 4 on stem 2; 6 on stem 3; 5 on stem 4.",
+      "sets": [
+       {
+        "label": "Team A",
+        "data": [
+         18,
+         22,
+         25,
+         27,
+         31,
+         34,
+         40
+        ]
+       },
+       {
+        "label": "Team B",
+        "data": [
+         12,
+         15,
+         21,
+         23,
+         24,
+         36,
+         45
+        ]
+       }
+      ],
+      "leaf": 1,
+      "key": "1 | 8 means 18"
+     }
+    },
+    "remember": "Read each side outward from the stem. Then compare the two medians and the two ranges.",
+    "a": {
+     "q": "The plot shows quiz marks for class 9A on the left and class 9B on the right. What is the median mark for 9A?",
+     "opts": [
+      "33",
+      "35",
+      "34",
+      "23"
+     ],
+     "why": "In order, 9A's marks are 21, 26, 30, 33, 35, 38 and 44, so the 4th of the 7 is 33. Reading 9A's leaves from left to right gives the wrong order and leads to 35, but on the left the smallest leaf sits next to the stem.",
+     "clue": "On the left side, start each row next to the stem.",
+     "fig": {
+      "kind": "chart",
+      "chart": "stem",
+      "alt": "A back-to-back stem-and-leaf plot of quiz marks. The stems 1 to 4 run down the middle. Class 9A's leaves are on the left: 1 and 6 on stem 2; 0, 3, 5 and 8 on stem 3; 4 on stem 4. Class 9B's leaves are on the right: 8 on stem 1; 7 and 9 on stem 2; 4 on stem 3; 1, 6 and 9 on stem 4.",
+      "sets": [
+       {
+        "label": "9A",
+        "data": [
+         21,
+         26,
+         30,
+         33,
+         35,
+         38,
+         44
+        ]
+       },
+       {
+        "label": "9B",
+        "data": [
+         18,
+         27,
+         29,
+         34,
+         41,
+         46,
+         49
+        ]
+       }
+      ],
+      "leaf": 1,
+      "key": "2 | 1 means 21"
+     }
+    },
+    "b": {
+     "d": 3,
+     "q": "A gym recorded how many push-ups seven members could do before (left) and after (right) a training program. Which statement is correct?",
+     "opts": [
+      "After has the higher median and the larger range",
+      "After has the higher median and the smaller range",
+      "Before has the higher median and the larger range",
+      "Before has the higher median and the smaller range"
+     ],
+     "why": "Before has median 24 and range \\(31 - 12 = 19\\). After has median 35 and range \\(51 - 14 = 37\\). So After is higher in the middle and also more spread out, not less.",
+     "clue": "Find each side's 4th value, then its highest minus its lowest.",
+     "fig": {
+      "kind": "chart",
+      "chart": "stem",
+      "alt": "A back-to-back stem-and-leaf plot of push-ups. The stems 1 to 5 run down the middle. Before is on the left: 2 and 5 on stem 1; 3, 4, 6 and 8 on stem 2; 1 on stem 3. After is on the right: 4 on stem 1; 2 and 9 on stem 2; 5 and 8 on stem 3; 3 on stem 4; 1 on stem 5.",
+      "sets": [
+       {
+        "label": "Before",
+        "data": [
+         12,
+         15,
+         23,
+         24,
+         26,
+         28,
+         31
+        ]
+       },
+       {
+        "label": "After",
+        "data": [
+         14,
+         22,
+         29,
+         35,
+         38,
+         43,
+         51
+        ]
+       }
+      ],
+      "leaf": 1,
+      "key": "1 | 2 means 12"
+     }
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "33",
+     "also_right": []
+    },
+    "b": {
+     "best": "After has the higher median and the larger range",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Back-to-back stem-and-leaf plots",
+  "card": [
+   "A back-to-back stem-and-leaf plot shows two data sets on one shared stem down the middle. One set's leaves go to the left of the stem and the other set's go to the right.",
+   "Each leaf is a last digit, and the stem is the digits before it. On both sides the smallest leaf sits next to the stem, so leaves on the left are read outward, from right to left. Team A's leaves 2, 5 and 7 on stem 2 are the scores 22, 25 and 27.",
+   "For each set, count its leaves and find the middle value in order: that is its median. With 7 values, it is the 4th from the smallest. The range is the highest value minus the lowest.",
+   "Team A: median 27, range \\(40 - 18 = 22\\). Team B: median 23, range \\(45 - 12 = 33\\). So Team A scored more in a typical game, and Team B's scores were more spread out."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A back-to-back stem-and-leaf plot of points scored in seven games. The stems 1 to 4 run down the middle. Team A's leaves are on the left: 8 on stem 1; 2, 5 and 7 on stem 2; 1 and 4 on stem 3; 0 on stem 4. Team B's leaves are on the right: 2 and 5 on stem 1; 1, 3 and 4 on stem 2; 6 on stem 3; 5 on stem 4.",
+    "sets": [
+     {
+      "label": "Team A",
+      "data": [
+       18,
+       22,
+       25,
+       27,
+       31,
+       34,
+       40
+      ]
+     },
+     {
+      "label": "Team B",
+      "data": [
+       12,
+       15,
+       21,
+       23,
+       24,
+       36,
+       45
+      ]
+     }
+    ],
+    "leaf": 1,
+    "key": "1 | 8 means 18"
+   }
+  },
+  "remember": "Read each side outward from the stem. Then compare the two medians and the two ranges.",
+  "a": {
+   "q": "The plot shows quiz marks for class 9A on the left and class 9B on the right. What is the median mark for 9A?",
+   "opts": [
+    "33",
+    "35",
+    "34",
+    "23"
+   ],
+   "why": "In order, 9A's marks are 21, 26, 30, 33, 35, 38 and 44, so the 4th of the 7 is 33. Reading 9A's leaves from left to right gives the wrong order and leads to 35, but on the left the smallest leaf sits next to the stem.",
+   "clue": "On the left side, start each row next to the stem.",
+   "fig": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A back-to-back stem-and-leaf plot of quiz marks. The stems 1 to 4 run down the middle. Class 9A's leaves are on the left: 1 and 6 on stem 2; 0, 3, 5 and 8 on stem 3; 4 on stem 4. Class 9B's leaves are on the right: 8 on stem 1; 7 and 9 on stem 2; 4 on stem 3; 1, 6 and 9 on stem 4.",
+    "sets": [
+     {
+      "label": "9A",
+      "data": [
+       21,
+       26,
+       30,
+       33,
+       35,
+       38,
+       44
+      ]
+     },
+     {
+      "label": "9B",
+      "data": [
+       18,
+       27,
+       29,
+       34,
+       41,
+       46,
+       49
+      ]
+     }
+    ],
+    "leaf": 1,
+    "key": "2 | 1 means 21"
+   }
+  },
+  "b": {
+   "d": 3,
+   "q": "A gym recorded how many push-ups seven members could do before (left) and after (right) a training program. Which statement is correct?",
+   "opts": [
+    "After has the higher median and the larger range",
+    "After has the higher median and the smaller range",
+    "Before has the higher median and the larger range",
+    "Before has the higher median and the smaller range"
+   ],
+   "why": "Before has median 24 and range \\(31 - 12 = 19\\). After has median 35 and range \\(51 - 14 = 37\\). So After is higher in the middle and also more spread out, not less.",
+   "clue": "Find each side's 4th value, then its highest minus its lowest.",
+   "fig": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A back-to-back stem-and-leaf plot of push-ups. The stems 1 to 5 run down the middle. Before is on the left: 2 and 5 on stem 1; 3, 4, 6 and 8 on stem 2; 1 on stem 3. After is on the right: 4 on stem 1; 2 and 9 on stem 2; 5 and 8 on stem 3; 3 on stem 4; 1 on stem 5.",
+    "sets": [
+     {
+      "label": "Before",
+      "data": [
+       12,
+       15,
+       23,
+       24,
+       26,
+       28,
+       31
+      ]
+     },
+     {
+      "label": "After",
+      "data": [
+       14,
+       22,
+       29,
+       35,
+       38,
+       43,
+       51
+      ]
+     }
+    ],
+    "leaf": 1,
+    "key": "1 | 2 means 12"
+   }
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "33",
+   "also_right": []
+  },
+  "b": {
+   "best": "After has the higher median and the larger range",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Back-to-back stem-and-leaf plots",
+  "card": [
+   "A back-to-back stem-and-leaf plot shows two data sets on one shared stem down the middle. One set's leaves go to the left of the stem and the other set's go to the right.",
+   "Each leaf is a last digit, and the stem is the digits before it. On both sides the smallest leaf sits next to the stem, so leaves on the left are read outward, from right to left. Team A's leaves 2, 5 and 7 on stem 2 are the scores 22, 25 and 27.",
+   "For each set, count its leaves and find the middle value in order: that is its median. With 7 values, it is the 4th from the smallest. The range is the highest value minus the lowest.",
+   "Team A: median 27, range \\(40 - 18 = 22\\). Team B: median 23, range \\(45 - 12 = 33\\). So Team A scored more in a typical game, and Team B's scores were more spread out."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A back-to-back stem-and-leaf plot of points scored in seven games. The stems 1 to 4 run down the middle. Team A's leaves are on the left: 8 on stem 1; 2, 5 and 7 on stem 2; 1 and 4 on stem 3; 0 on stem 4. Team B's leaves are on the right: 2 and 5 on stem 1; 1, 3 and 4 on stem 2; 6 on stem 3; 5 on stem 4.",
+    "sets": [
+     {
+      "label": "Team A",
+      "data": [
+       18,
+       22,
+       25,
+       27,
+       31,
+       34,
+       40
+      ]
+     },
+     {
+      "label": "Team B",
+      "data": [
+       12,
+       15,
+       21,
+       23,
+       24,
+       36,
+       45
+      ]
+     }
+    ],
+    "leaf": 1,
+    "key": "1 | 8 means 18"
+   }
+  },
+  "remember": "Read each side outward from the stem. Then compare the two medians and the two ranges.",
+  "a": {
+   "q": "The plot shows quiz marks for class 9A on the left and class 9B on the right. What is the median mark for 9A?",
+   "opts": [
+    "33",
+    "35",
+    "34",
+    "23"
+   ],
+   "why": "In order, 9A's marks are 21, 26, 30, 33, 35, 38 and 44, so the 4th of the 7 is 33. Reading 9A's leaves from left to right gives the wrong order and leads to 35, but on the left the smallest leaf sits next to the stem.",
+   "clue": "On the left side, start each row next to the stem.",
+   "fig": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A back-to-back stem-and-leaf plot of quiz marks. The stems 1 to 4 run down the middle. Class 9A's leaves are on the left: 1 and 6 on stem 2; 0, 3, 5 and 8 on stem 3; 4 on stem 4. Class 9B's leaves are on the right: 8 on stem 1; 7 and 9 on stem 2; 4 on stem 3; 1, 6 and 9 on stem 4.",
+    "sets": [
+     {
+      "label": "9A",
+      "data": [
+       21,
+       26,
+       30,
+       33,
+       35,
+       38,
+       44
+      ]
+     },
+     {
+      "label": "9B",
+      "data": [
+       18,
+       27,
+       29,
+       34,
+       41,
+       46,
+       49
+      ]
+     }
+    ],
+    "leaf": 1,
+    "key": "2 | 1 means 21"
+   }
+  },
+  "b": {
+   "d": 3,
+   "q": "A gym recorded how many push-ups seven members could do before (left) and after (right) a training program. Which statement is correct?",
+   "opts": [
+    "After has the higher median and the larger range",
+    "After has the higher median and the smaller range",
+    "Before has the higher median and the larger range",
+    "Before has the higher median and the smaller range"
+   ],
+   "why": "Before has median 24 and range \\(31 - 12 = 19\\). After has median 35 and range \\(51 - 14 = 37\\). So After is higher in the middle and also more spread out, not less.",
+   "clue": "Find each side's 4th value, then its highest minus its lowest.",
+   "fig": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A back-to-back stem-and-leaf plot of push-ups. The stems 1 to 5 run down the middle. Before is on the left: 2 and 5 on stem 1; 3, 4, 6 and 8 on stem 2; 1 on stem 3. After is on the right: 4 on stem 1; 2 and 9 on stem 2; 5 and 8 on stem 3; 3 on stem 4; 1 on stem 5.",
+    "sets": [
+     {
+      "label": "Before",
+      "data": [
+       12,
+       15,
+       23,
+       24,
+       26,
+       28,
+       31
+      ]
+     },
+     {
+      "label": "After",
+      "data": [
+       14,
+       22,
+       29,
+       35,
+       38,
+       43,
+       51
+      ]
+     }
+    ],
+    "leaf": 1,
+    "key": "1 | 2 means 12"
+   }
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
+}

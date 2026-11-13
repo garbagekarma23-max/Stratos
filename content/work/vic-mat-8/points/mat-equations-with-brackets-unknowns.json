@@ -1,0 +1,273 @@
+{
+ "id": "mat-equations-with-brackets-unknowns",
+ "title": "Equations with brackets and unknowns on both sides",
+ "brief": "63ae1b2418d7",
+ "shortlist": [
+  [
+   "mat-equations-with-brackets-variables",
+   0.505
+  ],
+  [
+   "mat-expanding-brackets",
+   0.359
+  ],
+  [
+   "mat-solving-simple-equations",
+   0.323
+  ],
+  [
+   "mat-solving-quadratics-by-factorising",
+   0.274
+  ],
+  [
+   "mat-factorising-by-highest-common",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-equations-with-brackets-variables, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:58Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:05Z check: flagged",
+  "2026-11-12T15:35:10Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "confirm": 0.01134,
+  "write": 0.00732,
+  "check": 0.01828,
+  "fix": 0.03078,
+  "recheck": 0.00792
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-equations-with-brackets-variables",
+  "changes": [
+   "Add a final step that checks the solution by substituting it back into the original equation, as the brief requires, since the card does not include this step.",
+   "Use the term unknown alongside or in place of variable to match the Victorian Curriculum wording."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at the right depth, but it lacks the substitution check the brief asks for and uses slightly different terminology for Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point mat-equations-with-brackets-variables teaches the same method at the same depth, but it stops after dividing. Your brief also asks students to check their answer by substituting it back, which is an extra step on the card rather than a small change, so a new point is the safer choice.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Equations with brackets and unknowns on both sides",
+  "card": [
+   "First expand any brackets. For \\(3(x + 2) = 5x - 4\\), this gives \\(3x + 6 = 5x - 4\\).",
+   "Next collect the unknowns on one side by adding or subtracting the same amount on both sides. Subtract \\(3x\\) from both sides: \\(6 = 2x - 4\\).",
+   "Then get the numbers on the other side. Add 4 to both sides: \\(10 = 2x\\). Divide both sides by 2: \\(x = 5\\).",
+   "Check by substituting \\(x = 5\\) into both sides. Left: \\(3(5 + 2) = 21\\). Right: \\(5 \\times 5 - 4 = 21\\). The sides match, so the answer is right."
+  ],
+  "remember": "Expand, collect unknowns on one side, solve, then check both sides.",
+  "a": {
+   "q": "What is the first step in solving \\(4(x - 1) = 2x + 6\\)?",
+   "opts": [
+    "Expand the bracket to get \\(4x - 4\\)",
+    "Subtract 6 from both sides",
+    "Divide both sides by 4",
+    "Add \\(2x\\) to both sides"
+   ],
+   "why": "Brackets are expanded first, giving \\(4x - 4 = 2x + 6\\). The other steps come later, and dividing both sides by 4 would also mean dividing every term, including \\(2x\\) and 6.",
+   "clue": "Deal with the brackets before moving any terms."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves \\(2(x + 3) = 4x - 2\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 4\\)",
+    "\\(x = -4\\)",
+    "\\(x = 2\\)",
+    "\\(x = 1\\)"
+   ],
+   "why": "Expanding gives \\(2x + 6 = 4x - 2\\). Subtract \\(2x\\): \\(6 = 2x - 2\\). Add 2: \\(8 = 2x\\), so \\(x = 4\\). Check: left \\(2(7) = 14\\), right \\(16 - 2 = 14\\). The tempting \\(x = 2\\) comes from forgetting to multiply 3 by 2 inside the bracket.",
+   "clue": "Expand first, then check your answer in both sides."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Expand the bracket to get \\(4x - 4\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(x = 4\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out: it is the longest and the only one with a precise detail (the expanded result \\(4x - 4\\)). A student could pick it without knowing the method."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Deal with the brackets before moving any terms' gives the answer away directly."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'The first step' implies only one valid first move. Dividing both sides by 4 is also a valid first step, and the why only says it is less convenient. Consider asking for the first step 'in the method on the card'."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says \\(x = 2\\) comes from forgetting to multiply 3 by 2. That error gives \\(2x + 3 = 4x - 2\\), so \\(x = 2.5\\), not 2. The distractor \\(x = 2\\) more likely comes from a sign error, such as subtracting 2 instead of adding it (\\(6 - 2 = 2x\\))."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths and answers are correct (a: expand first; b: x = 4). Question a gives its answer away through the clue and the stand-out option, and the why for b explains the x = 2 distractor with an error that actually gives x = 2.5."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option stands out: it is the longest and the only one with a precise detail (the expanded result \\(4x - 4\\)). A student could pick it without knowing the method.",
+  "Question a, other: The clue 'Deal with the brackets before moving any terms' gives the answer away directly.",
+  "Question a, wording: 'The first step' implies only one valid first move. Dividing both sides by 4 is also a valid first step, and the why only says it is less convenient. Consider asking for the first step 'in the method on the card'.",
+  "Question b, fact: The why says \\(x = 2\\) comes from forgetting to multiply 3 by 2. That error gives \\(2x + 3 = 4x - 2\\), so \\(x = 2.5\\), not 2. The distractor \\(x = 2\\) more likely comes from a sign error, such as subtracting 2 instead of adding it (\\(6 - 2 = 2x\\))."
+ ],
+ "proposal": {
+  "title": "Equations with brackets and unknowns on both sides",
+  "card": [
+   "First expand any brackets. For \\(3(x + 2) = 5x - 4\\), this gives \\(3x + 6 = 5x - 4\\).",
+   "Next collect the unknowns on one side by adding or subtracting the same amount on both sides. Subtract \\(3x\\) from both sides: \\(6 = 2x - 4\\).",
+   "Then get the numbers on the other side. Add 4 to both sides: \\(10 = 2x\\). Divide both sides by 2: \\(x = 5\\).",
+   "Check by substituting \\(x = 5\\) into both sides. Left: \\(3(5 + 2) = 21\\). Right: \\(5 \\times 5 - 4 = 21\\). The sides match, so the answer is right."
+  ],
+  "remember": "Expand, collect unknowns on one side, solve, then check both sides.",
+  "a": {
+   "q": "Using the method on the card, you expand \\(4(x - 1) = 2x + 6\\), then subtract \\(2x\\) from both sides. Which equation do you get?",
+   "opts": [
+    "\\(2x - 4 = 6\\)",
+    "\\(2x + 4 = 6\\)",
+    "\\(2x - 1 = 6\\)",
+    "\\(6x - 4 = 6\\)"
+   ],
+   "why": "Expanding gives \\(4x - 4 = 2x + 6\\), and subtracting \\(2x\\) from both sides gives \\(2x - 4 = 6\\). The tempting \\(2x + 4 = 6\\) comes from a sign slip: 4 times \\(-1\\) is \\(-4\\), not 4.",
+   "clue": "What is 4 times \\(-1\\)?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves \\(2(x + 3) = 4x - 2\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 4\\)",
+    "\\(x = -4\\)",
+    "\\(x = 2\\)",
+    "\\(x = 2.5\\)"
+   ],
+   "why": "Expanding gives \\(2x + 6 = 4x - 2\\). Subtract \\(2x\\): \\(6 = 2x - 2\\). Add 2: \\(8 = 2x\\), so \\(x = 4\\). Check: left \\(2(7) = 14\\), right \\(16 - 2 = 14\\). The tempting \\(x = 2\\) comes from subtracting 2 instead of adding it, giving \\(4 = 2x\\).",
+   "clue": "To undo \\(-2\\), do the opposite to both sides."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(2x - 4 = 6\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(x = 4\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out: it is the longest and the only one with a precise detail (the expanded result \\(4x - 4\\)). A student could pick it without knowing the method."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Deal with the brackets before moving any terms' gives the answer away directly."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'The first step' implies only one valid first move. Dividing both sides by 4 is also a valid first step, and the why only says it is less convenient. Consider asking for the first step 'in the method on the card'."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says \\(x = 2\\) comes from forgetting to multiply 3 by 2. That error gives \\(2x + 3 = 4x - 2\\), so \\(x = 2.5\\), not 2. The distractor \\(x = 2\\) more likely comes from a sign error, such as subtracting 2 instead of adding it (\\(6 - 2 = 2x\\))."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option stands out: it is the longest and the only one with a precise detail (the expanded result \\(4x - 4\\)). A student could pick it without knowing the method.",
+   "Question a, other: The clue 'Deal with the brackets before moving any terms' gives the answer away directly.",
+   "Question a, wording: 'The first step' implies only one valid first move. Dividing both sides by 4 is also a valid first step, and the why only says it is less convenient. Consider asking for the first step 'in the method on the card'.",
+   "Question b, fact: The why says \\(x = 2\\) comes from forgetting to multiply 3 by 2. That error gives \\(2x + 3 = 4x - 2\\), so \\(x = 2.5\\), not 2. The distractor \\(x = 2\\) more likely comes from a sign error, such as subtracting 2 instead of adding it (\\(6 - 2 = 2x\\))."
+  ]
+ },
+ "final": {
+  "title": "Equations with brackets and unknowns on both sides",
+  "card": [
+   "First expand any brackets. For \\(3(x + 2) = 5x - 4\\), this gives \\(3x + 6 = 5x - 4\\).",
+   "Next collect the unknowns on one side by adding or subtracting the same amount on both sides. Subtract \\(3x\\) from both sides: \\(6 = 2x - 4\\).",
+   "Then get the numbers on the other side. Add 4 to both sides: \\(10 = 2x\\). Divide both sides by 2: \\(x = 5\\).",
+   "Check by substituting \\(x = 5\\) into both sides. Left: \\(3(5 + 2) = 21\\). Right: \\(5 \\times 5 - 4 = 21\\). The sides match, so the answer is right."
+  ],
+  "remember": "Expand, collect unknowns on one side, solve, then check both sides.",
+  "a": {
+   "q": "Using the method on the card, you expand \\(4(x - 1) = 2x + 6\\), then subtract \\(2x\\) from both sides. Which equation do you get?",
+   "opts": [
+    "\\(2x - 4 = 6\\)",
+    "\\(2x + 4 = 6\\)",
+    "\\(2x - 1 = 6\\)",
+    "\\(6x - 4 = 6\\)"
+   ],
+   "why": "Expanding gives \\(4x - 4 = 2x + 6\\), and subtracting \\(2x\\) from both sides gives \\(2x - 4 = 6\\). The tempting \\(2x + 4 = 6\\) comes from a sign slip: 4 times \\(-1\\) is \\(-4\\), not 4.",
+   "clue": "What is 4 times \\(-1\\)?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves \\(2(x + 3) = 4x - 2\\). What is the value of \\(x\\)?",
+   "opts": [
+    "\\(x = 4\\)",
+    "\\(x = -4\\)",
+    "\\(x = 2\\)",
+    "\\(x = 2.5\\)"
+   ],
+   "why": "Expanding gives \\(2x + 6 = 4x - 2\\). Subtract \\(2x\\): \\(6 = 2x - 2\\). Add 2: \\(8 = 2x\\), so \\(x = 4\\). Check: left \\(2(7) = 14\\), right \\(16 - 2 = 14\\). The tempting \\(x = 2\\) comes from subtracting 2 instead of adding it, giving \\(4 = 2x\\).",
+   "clue": "To undo \\(-2\\), do the opposite to both sides."
+  }
+ },
+ "cleared_by": "recheck"
+}

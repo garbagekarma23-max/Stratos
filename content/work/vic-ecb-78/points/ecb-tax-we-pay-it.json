@@ -1,0 +1,249 @@
+{
+ "id": "ecb-tax-we-pay-it",
+ "title": "What tax is and why we pay it",
+ "brief": "c5d8afb9e535",
+ "shortlist": [
+  [
+   "ecb-governments-collect-tax",
+   0.718
+  ],
+  [
+   "ecb-young-people-tax",
+   0.571
+  ],
+  [
+   "ecb-income-tax",
+   0.421
+  ],
+  [
+   "ecb-goods-services-tax",
+   0.359
+  ],
+  [
+   "ecb-progressive-taxation",
+   0.268
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 says adapt ecb-governments-collect-tax (1 change)",
+  "2026-11-12T15:15:33Z adapt: done",
+  "2026-11-12T15:25:54Z check: flagged",
+  "2026-11-12T15:35:03Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "adapt": 0.00988,
+  "check": 0.01093,
+  "fix": 0.02414,
+  "recheck": 0.00813
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-governments-collect-tax",
+  "changes": [
+   "Replace the Darwin bridge example in question b with a bridge or public facility in a Victorian location, such as Melbourne, so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea of tax as money paid to government for shared services at a suitable depth, but its Darwin example is in the Northern Territory and should be localised to Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "ecb-governments-collect-tax",
+  "changes": [
+   "Replace the Darwin bridge example in question b with a bridge or public facility in a Victorian location, such as Melbourne, so the example is local to the course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Why governments collect tax",
+  "card": [
+   "Tax is money that people and businesses must pay to the government. Governments in Australia collect it from many sources.",
+   "Governments use tax to pay for services that many people share, such as hospitals, schools, roads and defence.",
+   "Tax also pays for support payments, which give money to people who need help, such as people who are unemployed or retired.",
+   "Without tax, governments would have little money to provide these services."
+  ],
+  "remember": "Tax is how governments get the money to pay for shared services and support payments.",
+  "a": {
+   "q": "What is the main reason a government collects tax?",
+   "opts": [
+    "To pay for services like hospitals, schools and roads",
+    "To stop people from earning money from work",
+    "To give every business the same profit each year",
+    "To pay for goods that people choose to buy privately"
+   ],
+   "why": "Governments use tax to pay for shared services and support payments. Tax does not aim to stop people earning, and it does not pay for private purchases.",
+   "clue": "Think about who pays for public hospitals and roads."
+  },
+  "b": {
+   "d": 2,
+   "q": "A new bridge is built over the Yarra River in Melbourne, and all drivers can cross it for free. Where did the government most likely get the money to build it?",
+   "opts": [
+    "From tax collected from people and businesses",
+    "From fees paid only by the drivers who cross it",
+    "From the private savings of the workers who built it",
+    "From money the bank gave out without any limit"
+   ],
+   "why": "Governments pay for shared services like roads and bridges using tax collected from people and businesses. Drivers cross the bridge for free, so fees from them cannot be the source.",
+   "clue": "The bridge is free to use, so who else pays?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To pay for services like hospitals, schools and roads",
+   "also_right": []
+  },
+  "b": {
+   "best": "From tax collected from people and businesses",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about who pays for public hospitals and roads' repeats the words in the right option (hospitals, roads), so a student can match words without knowing the idea."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines and explains support payments (welfare for unemployed or retired people). Spending on social security and welfare belongs to point 5 (How tax revenue is spent). Here it should only be mentioned, and the remember line repeats it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Facts and answers are correct. However, question a's clue names hospitals and roads, which gives away the right option, and the card explains support payments, which belong to the later point on how tax revenue is spent."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think about who pays for public hospitals and roads' repeats the words in the right option (hospitals, roads), so a student can match words without knowing the idea.",
+  "Card, other: The card defines and explains support payments (welfare for unemployed or retired people). Spending on social security and welfare belongs to point 5 (How tax revenue is spent). Here it should only be mentioned, and the remember line repeats it."
+ ],
+ "proposal": {
+  "title": "What tax is and why we pay it",
+  "card": [
+   "Tax is money that people and businesses must pay to government. Paying it is not a choice: the law requires it.",
+   "Governments use tax to pay for services that everyone shares, such as schools, hospitals, roads and defence.",
+   "Many shared services, such as a public road or a public library, cost nothing to use. This is because tax has already paid for them.",
+   "Tax is collected from many people and businesses, so the cost of shared services is spread across the community. Without tax, governments would have little money to provide them."
+  ],
+  "remember": "Tax pools money from many people and businesses to pay for services we all share.",
+  "a": {
+   "q": "Which of these best describes tax?",
+   "opts": [
+    "Money people and businesses must pay to government",
+    "Money people choose to give to a charity they support",
+    "Money a business charges customers for what it sells",
+    "Money the government lends to people and businesses"
+   ],
+   "why": "Tax goes to government, and the law requires it to be paid. A gift to charity is a choice, and the price a business charges goes to the business, not to government.",
+   "clue": "Think about who receives the money and whether paying is optional."
+  },
+  "b": {
+   "d": 2,
+   "q": "A new bridge is built over the Yarra River in Melbourne, and all drivers can cross it for free. Where did the government most likely get the money to build it?",
+   "opts": [
+    "From tax collected from people and businesses",
+    "From fees paid only by the drivers who cross it",
+    "From the private savings of the workers who built it",
+    "From the profits of the shops near the new bridge"
+   ],
+   "why": "Governments pay for shared services like roads and bridges with tax collected from many people and businesses. Drivers cross the bridge for free, so fees from them cannot be the source.",
+   "clue": "The bridge is free to use, so who else pays?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Money people and businesses must pay to government",
+    "also_right": []
+   },
+   "b": {
+    "best": "From tax collected from people and businesses",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about who pays for public hospitals and roads' repeats the words in the right option (hospitals, roads), so a student can match words without knowing the idea."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines and explains support payments (welfare for unemployed or retired people). Spending on social security and welfare belongs to point 5 (How tax revenue is spent). Here it should only be mentioned, and the remember line repeats it."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think about who pays for public hospitals and roads' repeats the words in the right option (hospitals, roads), so a student can match words without knowing the idea.",
+   "Card, other: The card defines and explains support payments (welfare for unemployed or retired people). Spending on social security and welfare belongs to point 5 (How tax revenue is spent). Here it should only be mentioned, and the remember line repeats it."
+  ]
+ },
+ "final": {
+  "title": "What tax is and why we pay it",
+  "card": [
+   "Tax is money that people and businesses must pay to government. Paying it is not a choice: the law requires it.",
+   "Governments use tax to pay for services that everyone shares, such as schools, hospitals, roads and defence.",
+   "Many shared services, such as a public road or a public library, cost nothing to use. This is because tax has already paid for them.",
+   "Tax is collected from many people and businesses, so the cost of shared services is spread across the community. Without tax, governments would have little money to provide them."
+  ],
+  "remember": "Tax pools money from many people and businesses to pay for services we all share.",
+  "a": {
+   "q": "Which of these best describes tax?",
+   "opts": [
+    "Money people and businesses must pay to government",
+    "Money people choose to give to a charity they support",
+    "Money a business charges customers for what it sells",
+    "Money the government lends to people and businesses"
+   ],
+   "why": "Tax goes to government, and the law requires it to be paid. A gift to charity is a choice, and the price a business charges goes to the business, not to government.",
+   "clue": "Think about who receives the money and whether paying is optional."
+  },
+  "b": {
+   "d": 2,
+   "q": "A new bridge is built over the Yarra River in Melbourne, and all drivers can cross it for free. Where did the government most likely get the money to build it?",
+   "opts": [
+    "From tax collected from people and businesses",
+    "From fees paid only by the drivers who cross it",
+    "From the private savings of the workers who built it",
+    "From the profits of the shops near the new bridge"
+   ],
+   "why": "Governments pay for shared services like roads and bridges with tax collected from many people and businesses. Drivers cross the bridge for free, so fees from them cannot be the source.",
+   "clue": "The bridge is free to use, so who else pays?"
+  }
+ },
+ "cleared_by": "recheck"
+}

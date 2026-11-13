@@ -1,0 +1,449 @@
+{
+ "id": "mat-real-number-system-vic",
+ "title": "The real number system",
+ "brief": "78c1f32aa465",
+ "shortlist": [
+  [
+   "mat-real-number-system",
+   0.646
+  ],
+  [
+   "mat-rational-irrational-numbers",
+   0.377
+  ],
+  [
+   "mat-number-systems-sets",
+   0.352
+  ],
+  [
+   "mat-scientific-notation-small-numbers",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 says reuse mat-real-number-system, so to the Opus match check, as every reuse is",
+  "2026-11-12T12:53:58Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:51Z write: failed the content check, writing again",
+  "2026-11-12T15:26:06Z write: done",
+  "2026-11-12T15:35:10Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T16:19:54Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "confirm": 0.01236,
+  "write": 0.01558,
+  "check": 0.01054,
+  "fix": 0.01826
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-real-number-system",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches rational, irrational and real numbers, which is the same idea as the new point, but it does not show the nesting of natural numbers inside integers inside rationals inside reals that the brief asks for, so the match is close rather than exact.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-real-number-system, teaches rational versus irrational classification but never shows the nesting of natural numbers inside integers inside rationals, which is the core of this brief; Number systems and sets covers that nesting but goes much broader, into set operations and complex numbers, for a senior course.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The real number system",
+  "card": [
+   [
+    "Natural and integers",
+    "Natural numbers are the counting numbers \\(1, 2, 3\\) and so on. Integers add zero and the negative whole numbers, such as \\(-4\\)."
+   ],
+   [
+    "Rational",
+    "A rational number can be written as a fraction \\(\\frac{a}{b}\\) of two integers, with \\(b \\ne 0\\). So \\(-4\\), \\(\\frac{3}{5}\\) and \\(0.25\\) are rational. Every integer is rational, because \\(-4 = \\frac{-4}{1}\\)."
+   ],
+   [
+    "Irrational",
+    "An irrational number cannot be written as a fraction of integers. Its decimal never ends and never repeats. Examples are \\(\\pi\\) and \\(\\sqrt{2}\\)."
+   ],
+   [
+    "Real",
+    "Rational and irrational numbers together make the real numbers. A number is never both. Roots such as \\(\\sqrt{9}\\) are rational, because \\(\\sqrt{9} = 3\\)."
+   ]
+  ],
+  "remember": "Natural numbers sit inside integers, inside rationals. Add the irrationals to get the reals.",
+  "a": {
+   "q": "Which number cannot be written as a fraction of two integers?",
+   "opts": [
+    "\\(\\sqrt{7}\\)",
+    "\\(\\sqrt{16}\\)",
+    "\\(-\\frac{7}{2}\\)",
+    "\\(0.7\\)"
+   ],
+   "why": "\\(\\sqrt{7}\\) is not a whole number and its decimal never ends or repeats, so it cannot be a fraction of integers. \\(\\sqrt{16} = 4\\) looks like a root but is rational. The other two are fractions of integers.",
+   "clue": "Check which options are fractions of integers in disguise."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement about the number \\(-6\\) is true?",
+   "opts": [
+    "It is an integer and a rational number",
+    "It is a natural number and an integer",
+    "It is a rational number but not an integer",
+    "It is an integer but not a rational number"
+   ],
+   "why": "\\(-6\\) is a negative whole number, so it is an integer. It equals \\(\\frac{-6}{1}\\), so it is also rational. It is not natural, because natural numbers are the counting numbers, which are positive.",
+   "clue": "Every integer can be written over 1."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\sqrt{7}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is an integer and a rational number",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Roots such as \\(\\sqrt{9}\\) are rational\" can be read as saying roots in general are rational, which clashes with \\(\\sqrt{2}\\) being irrational two lines earlier. It should say that some roots, such as \\(\\sqrt{9}\\), are rational because they simplify to an integer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct. The card's line \"Roots such as \\(\\sqrt{9}\\) are rational\" could suggest all roots are rational and should say \"some roots\"."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"Roots such as \\(\\sqrt{9}\\) are rational\" can be read as saying roots in general are rational, which clashes with \\(\\sqrt{2}\\) being irrational two lines earlier. It should say that some roots, such as \\(\\sqrt{9}\\), are rational because they simplify to an integer."
+ ],
+ "proposal": {
+  "title": "The real number system",
+  "card": [
+   [
+    "Integers",
+    "Natural numbers are the counting numbers \\(1, 2, 3\\) and so on. Integers add zero and the negative whole numbers, such as \\(-4\\)."
+   ],
+   [
+    "Rational",
+    "A rational number can be written as a fraction \\(\\frac{a}{b}\\) of two integers, with \\(b \\ne 0\\). So \\(-4\\), \\(\\frac{3}{5}\\) and \\(0.25\\) are rational. Every integer is rational, because \\(-4 = \\frac{-4}{1}\\)."
+   ],
+   [
+    "Irrational",
+    "An irrational number cannot be written as a fraction of integers. Its decimal never ends and never repeats. Examples are \\(\\pi\\) and \\(\\sqrt{2}\\)."
+   ],
+   [
+    "Real",
+    "Rational and irrational numbers together make the real numbers. A number is never both. Some roots, such as \\(\\sqrt{9}\\), are rational, because they simplify to an integer: \\(\\sqrt{9} = 3\\)."
+   ]
+  ],
+  "remember": "Natural numbers sit inside integers, inside rationals. Add the irrationals to get the reals.",
+  "a": {
+   "q": "Which number cannot be written as a fraction of two integers?",
+   "opts": [
+    "\\(\\sqrt{7}\\)",
+    "\\(\\sqrt{16}\\)",
+    "\\(-\\frac{7}{2}\\)",
+    "\\(0.7\\)"
+   ],
+   "why": "\\(\\sqrt{7}\\) does not simplify to an integer, and its decimal never ends or repeats, so it cannot be a fraction of integers. \\(\\sqrt{16} = 4\\) looks like a root but is rational. The other two are fractions of integers already.",
+   "clue": "Check which options are fractions of integers in disguise."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement about the number \\(-6\\) is true?",
+   "opts": [
+    "It is an integer and a rational number",
+    "It is a natural number and an integer",
+    "It is a rational number but not an integer",
+    "It is an integer but not a rational number"
+   ],
+   "why": "\\(-6\\) is a negative whole number, so it is an integer. It equals \\(\\frac{-6}{1}\\), so it is also rational. It is not natural, because natural numbers are the counting numbers, which are positive.",
+   "clue": "Every integer can be written over 1."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:54Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Roots such as \\(\\sqrt{9}\\) are rational\" can be read as saying roots in general are rational, which clashes with \\(\\sqrt{2}\\) being irrational two lines earlier. It should say that some roots, such as \\(\\sqrt{9}\\), are rational because they simplify to an integer."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"Roots such as \\(\\sqrt{9}\\) are rational\" can be read as saying roots in general are rational, which clashes with \\(\\sqrt{2}\\) being irrational two lines earlier. It should say that some roots, such as \\(\\sqrt{9}\\), are rational because they simplify to an integer."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "The real number system",
+  "card": [
+   [
+    "Integers",
+    "Natural numbers are the counting numbers \\(1, 2, 3\\) and so on. Integers add zero and the negative whole numbers, such as \\(-4\\)."
+   ],
+   [
+    "Rational",
+    "A rational number can be written as a fraction \\(\\frac{a}{b}\\) of two integers, with \\(b \\ne 0\\). So \\(-4\\), \\(\\frac{3}{5}\\) and \\(0.25\\) are rational. Every integer is rational, because \\(-4 = \\frac{-4}{1}\\)."
+   ],
+   [
+    "Irrational",
+    "An irrational number cannot be written as a fraction of integers. Its decimal never ends and never repeats. Examples are \\(\\pi\\) and \\(\\sqrt{2}\\)."
+   ],
+   [
+    "Real",
+    "Rational and irrational numbers together make the real numbers. A number is never both. Some roots, such as \\(\\sqrt{9}\\), are rational, because they simplify to an integer: \\(\\sqrt{9} = 3\\)."
+   ]
+  ],
+  "remember": "Natural numbers sit inside integers, inside rationals. Add the irrationals to get the reals.",
+  "a": {
+   "q": "Which number cannot be written as a fraction of two integers?",
+   "opts": [
+    "\\(\\sqrt{7}\\)",
+    "\\(\\sqrt{16}\\)",
+    "\\(-\\frac{7}{2}\\)",
+    "\\(0.7\\)"
+   ],
+   "why": "\\(\\sqrt{7}\\) does not simplify to an integer, and its decimal never ends or repeats, so it cannot be a fraction of integers. \\(\\sqrt{16} = 4\\) looks like a root but is rational. The other two are fractions of integers already.",
+   "clue": "Check which options are fractions of integers in disguise."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement about the number \\(-6\\) is true?",
+   "opts": [
+    "It is an integer and a rational number",
+    "It is a natural number and an integer",
+    "It is a rational number but not an integer",
+    "It is an integer but not a rational number"
+   ],
+   "why": "\\(-6\\) is a negative whole number, so it is an integer. It equals \\(\\frac{-6}{1}\\), so it is also rational. It is not natural, because natural numbers are the counting numbers, which are positive.",
+   "clue": "Every integer can be written over 1."
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix says 'Some roots, such as √9, are rational', so it no longer suggests every root is rational. Every fact and both answers are right, and the fix adds no new problem.",
+   "item": "714ce83f25229a3d",
+   "result": "decided",
+   "saved": {
+    "id": "mat-real-number-system-vic",
+    "title": "The real number system",
+    "brief": "78c1f32aa465",
+    "shortlist": [
+     [
+      "mat-real-number-system",
+      0.646
+     ],
+     [
+      "mat-rational-irrational-numbers",
+      0.377
+     ],
+     [
+      "mat-number-systems-sets",
+      0.352
+     ],
+     [
+      "mat-scientific-notation-small-numbers",
+      0.237
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "confirm": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1
+    },
+    "usd": {
+     "match": 0.00018,
+     "confirm": 0.01236,
+     "write": 0.01558,
+     "check": 0.01054,
+     "fix": 0.01826
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-real-number-system",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank card teaches rational, irrational and real numbers, which is the same idea as the new point, but it does not show the nesting of natural numbers inside integers inside rationals inside reals that the brief asks for, so the match is close rather than exact.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The closest bank point, mat-real-number-system, teaches rational versus irrational classification but never shows the nesting of natural numbers inside integers inside rationals, which is the core of this brief; Number systems and sets covers that nesting but goes much broader, into set operations and complex numbers, for a senior course.",
+     "model": "claude-opus-5-5"
+    },
+    "draft": {
+     "title": "The real number system",
+     "card": [
+      [
+       "Natural and integers",
+       "Natural numbers are the counting numbers \\(1, 2, 3\\) and so on. Integers add zero and the negative whole numbers, such as \\(-4\\)."
+      ],
+      [
+       "Rational",
+       "A rational number can be written as a fraction \\(\\frac{a}{b}\\) of two integers, with \\(b \\ne 0\\). So \\(-4\\), \\(\\frac{3}{5}\\) and \\(0.25\\) are rational. Every integer is rational, because \\(-4 = \\frac{-4}{1}\\)."
+      ],
+      [
+       "Irrational",
+       "An irrational number cannot be written as a fraction of integers. Its decimal never ends and never repeats. Examples are \\(\\pi\\) and \\(\\sqrt{2}\\)."
+      ],
+      [
+       "Real",
+       "Rational and irrational numbers together make the real numbers. A number is never both. Roots such as \\(\\sqrt{9}\\) are rational, because \\(\\sqrt{9} = 3\\)."
+      ]
+     ],
+     "remember": "Natural numbers sit inside integers, inside rationals. Add the irrationals to get the reals.",
+     "a": {
+      "q": "Which number cannot be written as a fraction of two integers?",
+      "opts": [
+       "\\(\\sqrt{7}\\)",
+       "\\(\\sqrt{16}\\)",
+       "\\(-\\frac{7}{2}\\)",
+       "\\(0.7\\)"
+      ],
+      "why": "\\(\\sqrt{7}\\) is not a whole number and its decimal never ends or repeats, so it cannot be a fraction of integers. \\(\\sqrt{16} = 4\\) looks like a root but is rational. The other two are fractions of integers.",
+      "clue": "Check which options are fractions of integers in disguise."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which statement about the number \\(-6\\) is true?",
+      "opts": [
+       "It is an integer and a rational number",
+       "It is a natural number and an integer",
+       "It is a rational number but not an integer",
+       "It is an integer but not a rational number"
+      ],
+      "why": "\\(-6\\) is a negative whole number, so it is an integer. It equals \\(\\frac{-6}{1}\\), so it is also rational. It is not natural, because natural numbers are the counting numbers, which are positive.",
+      "clue": "Every integer can be written over 1."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(\\sqrt{7}\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "It is an integer and a rational number",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "\"Roots such as \\(\\sqrt{9}\\) are rational\" can be read as saying roots in general are rational, which clashes with \\(\\sqrt{2}\\) being irrational two lines earlier. It should say that some roots, such as \\(\\sqrt{9}\\), are rational because they simplify to an integer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions and explanations are correct. The card's line \"Roots such as \\(\\sqrt{9}\\) are rational\" could suggest all roots are rational and should say \"some roots\"."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, wording: \"Roots such as \\(\\sqrt{9}\\) are rational\" can be read as saying roots in general are rational, which clashes with \\(\\sqrt{2}\\) being irrational two lines earlier. It should say that some roots, such as \\(\\sqrt{9}\\), are rational because they simplify to an integer."
+    ],
+    "proposal": {
+     "title": "The real number system",
+     "card": [
+      [
+       "Integers",
+       "Natural numbers are the counting numbers \\(1, 2, 3\\) and so on. Integers add zero and the negative whole numbers, such as \\(-4\\)."
+      ],
+      [
+       "Rational",
+       "A rational number can be written as a fraction \\(\\frac{a}{b}\\) of two integers, with \\(b \\ne 0\\). So \\(-4\\), \\(\\frac{3}{5}\\) and \\(0.25\\) are rational. Every integer is rational, because \\(-4 = \\frac{-4}{1}\\)."
+      ],
+      [
+       "Irrational",
+       "An irrational number cannot be written as a fraction of integers. Its decimal never ends and never repeats. Examples are \\(\\pi\\) and \\(\\sqrt{2}\\)."
+      ],
+      [
+       "Real",
+       "Rational and irrational numbers together make the real numbers. A number is never both. Some roots, such as \\(\\sqrt{9}\\), are rational, because they simplify to an integer: \\(\\sqrt{9} = 3\\)."
+      ]
+     ],
+     "remember": "Natural numbers sit inside integers, inside rationals. Add the irrationals to get the reals.",
+     "a": {
+      "q": "Which number cannot be written as a fraction of two integers?",
+      "opts": [
+       "\\(\\sqrt{7}\\)",
+       "\\(\\sqrt{16}\\)",
+       "\\(-\\frac{7}{2}\\)",
+       "\\(0.7\\)"
+      ],
+      "why": "\\(\\sqrt{7}\\) does not simplify to an integer, and its decimal never ends or repeats, so it cannot be a fraction of integers. \\(\\sqrt{16} = 4\\) looks like a root but is rational. The other two are fractions of integers already.",
+      "clue": "Check which options are fractions of integers in disguise."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which statement about the number \\(-6\\) is true?",
+      "opts": [
+       "It is an integer and a rational number",
+       "It is a natural number and an integer",
+       "It is a rational number but not an integer",
+       "It is an integer but not a rational number"
+      ],
+      "why": "\\(-6\\) is a negative whole number, so it is an integer. It equals \\(\\frac{-6}{1}\\), so it is also rational. It is not natural, because natural numbers are the counting numbers, which are positive.",
+      "clue": "Every integer can be written over 1."
+     }
+    },
+    "proposal_problems": [],
+    "auto": {
+     "at": "2026-11-12T16:19:54Z",
+     "rules": 1,
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "\"Roots such as \\(\\sqrt{9}\\) are rational\" can be read as saying roots in general are rational, which clashes with \\(\\sqrt{2}\\) being irrational two lines earlier. It should say that some roots, such as \\(\\sqrt{9}\\), are rational because they simplify to an integer."
+      }
+     ],
+     "flags": [
+      "Card, wording: \"Roots such as \\(\\sqrt{9}\\) are rational\" can be read as saying roots in general are rational, which clashes with \\(\\sqrt{2}\\) being irrational two lines earlier. It should say that some roots, such as \\(\\sqrt{9}\\), are rational because they simplify to an integer."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "604a68b835439da9"
+  }
+ ]
+}

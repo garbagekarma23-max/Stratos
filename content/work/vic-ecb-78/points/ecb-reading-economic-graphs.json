@@ -1,0 +1,1345 @@
+{
+ "id": "ecb-reading-economic-graphs",
+ "title": "Reading economic graphs",
+ "brief": "9d27e1821593",
+ "shortlist": [
+  [
+   "mat-reading-graphs-real-data",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:32Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:25:55Z write: done",
+  "2026-11-12T15:35:02Z check: flagged",
+  "2026-11-12T15:59:42Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:14Z claude-code review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01154,
+  "check": 0.01141,
+  "fix": 0.03206,
+  "recheck": 0.01007
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point only teaches reading line graphs of real data (rising, falling, flat, axis crossings), while the new point also covers bar graphs comparing amounts and supply and demand models showing how two things affect each other, so it is broader and no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Reading economic graphs",
+  "card": [
+   [
+    "Line graph",
+    "A line graph shows how something changes over time. Time runs along the bottom axis, so you can see a rise, a fall or a steady trend."
+   ],
+   [
+    "Bar graph",
+    "A bar graph compares amounts across different groups or categories. A taller bar means a larger amount."
+   ],
+   [
+    "Supply and demand",
+    "A supply and demand model shows how price and quantity affect each other. The demand line slopes down: a higher price means buyers want less. The supply line slopes up: a higher price means sellers offer more."
+   ],
+   "Before you read a graph, check the title, the labels on both axes and the units. Then pick the graph that suits the question you are asking."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A line graph of the price of a loaf of bread in a town from 2019 to 2023. The price rises from 3 dollars in 2019 to 5 dollars in 2023.",
+    "x": {
+     "min": 2018,
+     "max": 2024,
+     "label": "Year",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 6,
+     "label": "Price ($)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "P",
+      "points": [
+       [
+        2019,
+        3
+       ],
+       [
+        2020,
+        3.5
+       ],
+       [
+        2021,
+        4
+       ],
+       [
+        2022,
+        4.5
+       ],
+       [
+        2023,
+        5
+       ]
+      ],
+      "label": "Bread price",
+      "pos": "above-left"
+     }
+    ]
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar graph of money spent by four students in a week. Ali spent 12 dollars, Bella 20 dollars, Chen 8 dollars and Dana 15 dollars.",
+    "bars": [
+     [
+      "Ali",
+      12
+     ],
+     [
+      "Bella",
+      20
+     ],
+     [
+      "Chen",
+      8
+     ],
+     [
+      "Dana",
+      15
+     ]
+    ],
+    "y": {
+     "min": 0,
+     "max": 25,
+     "step": 5,
+     "label": "Dollars spent"
+    },
+    "x": {
+     "label": "Student"
+    }
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "A supply and demand model. Demand D slopes down and supply S slopes up. They cross at price P* and quantity Q*.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        0,
+        10
+       ],
+       [
+        10,
+        0
+       ]
+      ],
+      "label": "D",
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        10,
+        10
+       ]
+      ],
+      "label": "S",
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       5,
+       5
+      ],
+      "xLabel": "Q*",
+      "yLabel": "P*"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       5
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Line graphs show change over time, bar graphs compare amounts, and supply and demand show how price and quantity affect each other.",
+  "a": {
+   "q": "Which graph is best for showing how a shop's monthly sales changed over one year?",
+   "opts": [
+    "A line graph, with months along the bottom",
+    "A bar graph, with one bar for each shop",
+    "A supply and demand model",
+    "A graph with no labels on its axes"
+   ],
+   "why": "Sales are changing over time, so a line graph with months on the bottom axis shows the trend. A bar graph with one bar for each shop compares different shops at one point, not change across a year.",
+   "clue": "Which graph has time along the bottom?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A bar graph shows the number of tickets sold by four school fundraisers: Cake stall 40, Raffle 65, Car wash 30, Book sale 50. Which fundraiser sold the most?",
+   "opts": [
+    "Raffle",
+    "Book sale",
+    "Cake stall",
+    "Car wash"
+   ],
+   "why": "A bar graph compares amounts, and the tallest bar is the largest. The raffle bar is the tallest, at 65 tickets. The book sale is second, at 50.",
+   "clue": "Look for the tallest bar.",
+   "fig": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar graph of tickets sold: Cake stall 40, Raffle 65, Car wash 30, Book sale 50.",
+    "bars": [
+     [
+      "Cake stall",
+      40
+     ],
+     [
+      "Raffle",
+      65
+     ],
+     [
+      "Car wash",
+      30
+     ],
+     [
+      "Book sale",
+      50
+     ]
+    ],
+    "y": {
+     "min": 0,
+     "max": 70,
+     "step": 10,
+     "label": "Tickets sold"
+    },
+    "x": {
+     "label": "Fundraiser"
+    }
+   }
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A line graph, with months along the bottom",
+   "also_right": []
+  },
+  "b": {
+   "best": "Raffle",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question text lists every value (Raffle 65, etc.), so students can find the answer by comparing numbers without reading the bar graph. It does not test the graph-reading skill the card teaches. Remove the numbers from the stem so students must read the chart."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, graphs and question a are accurate. Question b states all the values in its text, so students can answer without reading the bar graph; the numbers should be removed from the stem."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The question text lists every value (Raffle 65, etc.), so students can find the answer by comparing numbers without reading the bar graph. It does not test the graph-reading skill the card teaches. Remove the numbers from the stem so students must read the chart."
+ ],
+ "proposal": {
+  "title": "Reading economic graphs",
+  "card": [
+   [
+    "Line graph",
+    "A line graph shows how something changes over time. Time runs along the bottom axis, so you can see a rise, a fall or a steady trend."
+   ],
+   [
+    "Bar graph",
+    "A bar graph compares amounts across different groups or categories. A taller bar means a larger amount."
+   ],
+   [
+    "Supply and demand",
+    "A supply and demand model shows how price and quantity affect each other. The demand line slopes down: a higher price means buyers want less. The supply line slopes up: a higher price means sellers offer more."
+   ],
+   "Before you read a graph, check the title, the labels on both axes and the units. Then pick the graph that suits the question you are asking."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A line graph of the price of a loaf of bread in a town from 2019 to 2023. The price rises from 3 dollars in 2019 to 5 dollars in 2023.",
+    "x": {
+     "min": 2018,
+     "max": 2024,
+     "label": "Year",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 6,
+     "label": "Price ($)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "P",
+      "points": [
+       [
+        2019,
+        3
+       ],
+       [
+        2020,
+        3.5
+       ],
+       [
+        2021,
+        4
+       ],
+       [
+        2022,
+        4.5
+       ],
+       [
+        2023,
+        5
+       ]
+      ],
+      "label": "Bread price",
+      "pos": "above-left"
+     }
+    ]
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar graph of money spent by four students in a week. Ali spent 12 dollars, Bella 20 dollars, Chen 8 dollars and Dana 15 dollars.",
+    "bars": [
+     [
+      "Ali",
+      12
+     ],
+     [
+      "Bella",
+      20
+     ],
+     [
+      "Chen",
+      8
+     ],
+     [
+      "Dana",
+      15
+     ]
+    ],
+    "y": {
+     "min": 0,
+     "max": 25,
+     "step": 5,
+     "label": "Dollars spent"
+    },
+    "x": {
+     "label": "Student"
+    }
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "A supply and demand model. Demand D slopes down and supply S slopes up. They cross at price P* and quantity Q*.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        0,
+        10
+       ],
+       [
+        10,
+        0
+       ]
+      ],
+      "label": "D",
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        10,
+        10
+       ]
+      ],
+      "label": "S",
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       5,
+       5
+      ],
+      "xLabel": "Q*",
+      "yLabel": "P*"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       5
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Line graphs show change over time, bar graphs compare amounts, and supply and demand show how price and quantity affect each other.",
+  "a": {
+   "q": "Which graph is best for showing how a shop's monthly sales changed over one year?",
+   "opts": [
+    "A line graph, with months along the bottom",
+    "A bar graph, with one bar for each product",
+    "A supply and demand model, with price up the side",
+    "A graph with no labels on either of its axes"
+   ],
+   "why": "Sales are changing over time, so a line graph with months on the bottom axis shows the trend. A bar graph with one bar for each product compares products, not change across a year.",
+   "clue": "Which graph has time along the bottom?"
+  },
+  "b": {
+   "d": 2,
+   "q": "The bar graph shows the tickets sold by four school fundraisers. Which fundraiser sold the most tickets?",
+   "opts": [
+    "Raffle",
+    "Book sale",
+    "Cake stall",
+    "Car wash"
+   ],
+   "why": "A bar graph compares amounts, and the tallest bar shows the largest amount. The raffle bar is the tallest, reaching 65 tickets. The book sale bar is the next tallest, at 50, so it sold fewer.",
+   "clue": "Look for the tallest bar.",
+   "fig": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar graph of tickets sold by four fundraisers: Cake stall 40, Raffle 65, Car wash 30, Book sale 50.",
+    "bars": [
+     [
+      "Cake stall",
+      40
+     ],
+     [
+      "Raffle",
+      65
+     ],
+     [
+      "Car wash",
+      30
+     ],
+     [
+      "Book sale",
+      50
+     ]
+    ],
+    "y": {
+     "min": 0,
+     "max": 70,
+     "step": 10,
+     "label": "Tickets sold"
+    },
+    "x": {
+     "label": "Fundraiser"
+    }
+   }
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A line graph, with months along the bottom",
+    "also_right": []
+   },
+   "b": {
+    "best": "Raffle",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question text lists every value (Raffle 65, etc.), so students can find the answer by comparing numbers without reading the bar graph. It does not test the graph-reading skill the card teaches. Remove the numbers from the stem so students must read the chart."
+   }
+  ],
+  "flags": [
+   "Question b, level: The question text lists every value (Raffle 65, etc.), so students can find the answer by comparing numbers without reading the bar graph. It does not test the graph-reading skill the card teaches. Remove the numbers from the stem so students must read the chart."
+  ],
+  "claude_code": "fix"
+ },
+ "final": {
+  "title": "Reading economic graphs",
+  "card": [
+   [
+    "Line graph",
+    "A line graph shows how something changes over time. Time runs along the bottom axis, so you can see a rise, a fall or a steady trend."
+   ],
+   [
+    "Bar graph",
+    "A bar graph compares amounts across different groups or categories. A taller bar means a larger amount."
+   ],
+   [
+    "Supply and demand",
+    "A supply and demand model shows how price and quantity affect each other. The demand line slopes down: a higher price means buyers want less. The supply line slopes up: a higher price means sellers offer more."
+   ],
+   "Before you read a graph, check the title, the labels on both axes and the units. Then pick the graph that suits the question you are asking."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A line graph of the price of a loaf of bread in a town from 2019 to 2023. The price rises from 3 dollars in 2019 to 5 dollars in 2023.",
+    "x": {
+     "min": 2018,
+     "max": 2024,
+     "label": "Year",
+     "step": 1
+    },
+    "y": {
+     "min": 0,
+     "max": 6,
+     "label": "Price ($)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "curve",
+      "id": "P",
+      "points": [
+       [
+        2019,
+        3
+       ],
+       [
+        2020,
+        3.5
+       ],
+       [
+        2021,
+        4
+       ],
+       [
+        2022,
+        4.5
+       ],
+       [
+        2023,
+        5
+       ]
+      ],
+      "label": "Bread price",
+      "pos": "above-left"
+     }
+    ]
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar graph of money spent by four students in a week. Ali spent 12 dollars, Bella 20 dollars, Chen 8 dollars and Dana 15 dollars.",
+    "bars": [
+     [
+      "Ali",
+      12
+     ],
+     [
+      "Bella",
+      20
+     ],
+     [
+      "Chen",
+      8
+     ],
+     [
+      "Dana",
+      15
+     ]
+    ],
+    "y": {
+     "min": 0,
+     "max": 25,
+     "step": 5,
+     "label": "Dollars spent"
+    },
+    "x": {
+     "label": "Student"
+    }
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "A supply and demand model. Demand D slopes down and supply S slopes up. They cross at price P* and quantity Q*.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        0,
+        10
+       ],
+       [
+        10,
+        0
+       ]
+      ],
+      "label": "D",
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        0,
+        0
+       ],
+       [
+        10,
+        10
+       ]
+      ],
+      "label": "S",
+      "pos": "above-left"
+     },
+     {
+      "type": "guide",
+      "at": [
+       5,
+       5
+      ],
+      "xLabel": "Q*",
+      "yLabel": "P*"
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       5
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Line graphs show change over time, bar graphs compare amounts, and supply and demand show how price and quantity affect each other.",
+  "a": {
+   "q": "Which graph is best for showing how a shop's monthly sales changed over one year?",
+   "opts": [
+    "A line graph, with months along the bottom",
+    "A bar graph, with one bar for each product",
+    "A supply and demand model, with price up the side",
+    "A graph with no labels on either of its axes"
+   ],
+   "why": "Sales are changing over time, so a line graph with months on the bottom axis shows the trend. A bar graph with one bar for each product compares products, not change across a year.",
+   "clue": "Which graph has time along the bottom?"
+  },
+  "b": {
+   "d": 2,
+   "q": "The bar graph shows the tickets sold by four school fundraisers. Which fundraiser sold the most tickets?",
+   "opts": [
+    "Raffle",
+    "Book sale",
+    "Cake stall",
+    "Car wash"
+   ],
+   "why": "A bar graph compares amounts, and the tallest bar shows the largest amount. The raffle bar is the tallest, reaching 65 tickets. The book sale bar is the next tallest, at 50, so it sold fewer.",
+   "clue": "Look for the tallest bar.",
+   "fig": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar graph of tickets sold by four fundraisers: Cake stall 40, Raffle 65, Car wash 30, Book sale 50.",
+    "bars": [
+     [
+      "Cake stall",
+      40
+     ],
+     [
+      "Raffle",
+      65
+     ],
+     [
+      "Car wash",
+      30
+     ],
+     [
+      "Book sale",
+      50
+     ]
+    ],
+    "y": {
+     "min": 0,
+     "max": 70,
+     "step": 10,
+     "label": "Tickets sold"
+    },
+    "x": {
+     "label": "Fundraiser"
+    }
+   }
+  }
+ },
+ "cleared_by": "claude-code",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix takes the numbers out of question b's stem, so the student must read the bar chart, where the raffle bar at 65 is the tallest. The graphs match their lines and descriptions, and question a's options are now even in length.",
+   "item": "0cc527d0d6e58161",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-reading-economic-graphs",
+    "title": "Reading economic graphs",
+    "brief": "9d27e1821593",
+    "shortlist": [
+     [
+      "mat-reading-graphs-real-data",
+      0.236
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00016,
+     "write": 0.01154,
+     "check": 0.01141,
+     "fix": 0.03206,
+     "recheck": 0.01007
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "The closest bank point only teaches reading line graphs of real data (rising, falling, flat, axis crossings), while the new point also covers bar graphs comparing amounts and supply and demand models showing how two things affect each other, so it is broader and no bank point teaches the same idea.",
+     "model": "claude-haiku-5-5"
+    },
+    "alone": true,
+    "draft": {
+     "title": "Reading economic graphs",
+     "card": [
+      [
+       "Line graph",
+       "A line graph shows how something changes over time. Time runs along the bottom axis, so you can see a rise, a fall or a steady trend."
+      ],
+      [
+       "Bar graph",
+       "A bar graph compares amounts across different groups or categories. A taller bar means a larger amount."
+      ],
+      [
+       "Supply and demand",
+       "A supply and demand model shows how price and quantity affect each other. The demand line slopes down: a higher price means buyers want less. The supply line slopes up: a higher price means sellers offer more."
+      ],
+      "Before you read a graph, check the title, the labels on both axes and the units. Then pick the graph that suits the question you are asking."
+     ],
+     "cardFigs": {
+      "1": {
+       "kind": "graph",
+       "alt": "A line graph of the price of a loaf of bread in a town from 2019 to 2023. The price rises from 3 dollars in 2019 to 5 dollars in 2023.",
+       "x": {
+        "min": 2018,
+        "max": 2024,
+        "label": "Year",
+        "step": 1
+       },
+       "y": {
+        "min": 0,
+        "max": 6,
+        "label": "Price ($)",
+        "step": 1
+       },
+       "grid": true,
+       "items": [
+        {
+         "type": "curve",
+         "id": "P",
+         "points": [
+          [
+           2019,
+           3
+          ],
+          [
+           2020,
+           3.5
+          ],
+          [
+           2021,
+           4
+          ],
+          [
+           2022,
+           4.5
+          ],
+          [
+           2023,
+           5
+          ]
+         ],
+         "label": "Bread price",
+         "pos": "above-left"
+        }
+       ]
+      },
+      "2": {
+       "kind": "chart",
+       "chart": "bar",
+       "alt": "A bar graph of money spent by four students in a week. Ali spent 12 dollars, Bella 20 dollars, Chen 8 dollars and Dana 15 dollars.",
+       "bars": [
+        [
+         "Ali",
+         12
+        ],
+        [
+         "Bella",
+         20
+        ],
+        [
+         "Chen",
+         8
+        ],
+        [
+         "Dana",
+         15
+        ]
+       ],
+       "y": {
+        "min": 0,
+        "max": 25,
+        "step": 5,
+        "label": "Dollars spent"
+       },
+       "x": {
+        "label": "Student"
+       }
+      },
+      "3": {
+       "kind": "graph",
+       "alt": "A supply and demand model. Demand D slopes down and supply S slopes up. They cross at price P* and quantity Q*.",
+       "x": {
+        "min": 0,
+        "max": 10,
+        "label": "Quantity"
+       },
+       "y": {
+        "min": 0,
+        "max": 10,
+        "label": "Price"
+       },
+       "items": [
+        {
+         "type": "curve",
+         "id": "D",
+         "points": [
+          [
+           0,
+           10
+          ],
+          [
+           10,
+           0
+          ]
+         ],
+         "label": "D",
+         "pos": "above-right"
+        },
+        {
+         "type": "curve",
+         "id": "S",
+         "points": [
+          [
+           0,
+           0
+          ],
+          [
+           10,
+           10
+          ]
+         ],
+         "label": "S",
+         "pos": "above-left"
+        },
+        {
+         "type": "guide",
+         "at": [
+          5,
+          5
+         ],
+         "xLabel": "Q*",
+         "yLabel": "P*"
+        },
+        {
+         "type": "point",
+         "at": [
+          5,
+          5
+         ],
+         "on": [
+          "D",
+          "S"
+         ],
+         "is": "intersection"
+        }
+       ]
+      }
+     },
+     "remember": "Line graphs show change over time, bar graphs compare amounts, and supply and demand show how price and quantity affect each other.",
+     "a": {
+      "q": "Which graph is best for showing how a shop's monthly sales changed over one year?",
+      "opts": [
+       "A line graph, with months along the bottom",
+       "A bar graph, with one bar for each shop",
+       "A supply and demand model",
+       "A graph with no labels on its axes"
+      ],
+      "why": "Sales are changing over time, so a line graph with months on the bottom axis shows the trend. A bar graph with one bar for each shop compares different shops at one point, not change across a year.",
+      "clue": "Which graph has time along the bottom?"
+     },
+     "b": {
+      "d": 2,
+      "q": "A bar graph shows the number of tickets sold by four school fundraisers: Cake stall 40, Raffle 65, Car wash 30, Book sale 50. Which fundraiser sold the most?",
+      "opts": [
+       "Raffle",
+       "Book sale",
+       "Cake stall",
+       "Car wash"
+      ],
+      "why": "A bar graph compares amounts, and the tallest bar is the largest. The raffle bar is the tallest, at 65 tickets. The book sale is second, at 50.",
+      "clue": "Look for the tallest bar.",
+      "fig": {
+       "kind": "chart",
+       "chart": "bar",
+       "alt": "A bar graph of tickets sold: Cake stall 40, Raffle 65, Car wash 30, Book sale 50.",
+       "bars": [
+        [
+         "Cake stall",
+         40
+        ],
+        [
+         "Raffle",
+         65
+        ],
+        [
+         "Car wash",
+         30
+        ],
+        [
+         "Book sale",
+         50
+        ]
+       ],
+       "y": {
+        "min": 0,
+        "max": 70,
+        "step": 10,
+        "label": "Tickets sold"
+       },
+       "x": {
+        "label": "Fundraiser"
+       }
+      }
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A line graph, with months along the bottom",
+      "also_right": []
+     },
+     "b": {
+      "best": "Raffle",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "The question text lists every value (Raffle 65, etc.), so students can find the answer by comparing numbers without reading the bar graph. It does not test the graph-reading skill the card teaches. Remove the numbers from the stem so students must read the chart."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, graphs and question a are accurate. Question b states all the values in its text, so students can answer without reading the bar graph; the numbers should be removed from the stem."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, level: The question text lists every value (Raffle 65, etc.), so students can find the answer by comparing numbers without reading the bar graph. It does not test the graph-reading skill the card teaches. Remove the numbers from the stem so students must read the chart."
+    ],
+    "proposal": {
+     "title": "Reading economic graphs",
+     "card": [
+      [
+       "Line graph",
+       "A line graph shows how something changes over time. Time runs along the bottom axis, so you can see a rise, a fall or a steady trend."
+      ],
+      [
+       "Bar graph",
+       "A bar graph compares amounts across different groups or categories. A taller bar means a larger amount."
+      ],
+      [
+       "Supply and demand",
+       "A supply and demand model shows how price and quantity affect each other. The demand line slopes down: a higher price means buyers want less. The supply line slopes up: a higher price means sellers offer more."
+      ],
+      "Before you read a graph, check the title, the labels on both axes and the units. Then pick the graph that suits the question you are asking."
+     ],
+     "cardFigs": {
+      "1": {
+       "kind": "graph",
+       "alt": "A line graph of the price of a loaf of bread in a town from 2019 to 2023. The price rises from 3 dollars in 2019 to 5 dollars in 2023.",
+       "x": {
+        "min": 2018,
+        "max": 2024,
+        "label": "Year",
+        "step": 1
+       },
+       "y": {
+        "min": 0,
+        "max": 6,
+        "label": "Price ($)",
+        "step": 1
+       },
+       "grid": true,
+       "items": [
+        {
+         "type": "curve",
+         "id": "P",
+         "points": [
+          [
+           2019,
+           3
+          ],
+          [
+           2020,
+           3.5
+          ],
+          [
+           2021,
+           4
+          ],
+          [
+           2022,
+           4.5
+          ],
+          [
+           2023,
+           5
+          ]
+         ],
+         "label": "Bread price",
+         "pos": "above-left"
+        }
+       ]
+      },
+      "2": {
+       "kind": "chart",
+       "chart": "bar",
+       "alt": "A bar graph of money spent by four students in a week. Ali spent 12 dollars, Bella 20 dollars, Chen 8 dollars and Dana 15 dollars.",
+       "bars": [
+        [
+         "Ali",
+         12
+        ],
+        [
+         "Bella",
+         20
+        ],
+        [
+         "Chen",
+         8
+        ],
+        [
+         "Dana",
+         15
+        ]
+       ],
+       "y": {
+        "min": 0,
+        "max": 25,
+        "step": 5,
+        "label": "Dollars spent"
+       },
+       "x": {
+        "label": "Student"
+       }
+      },
+      "3": {
+       "kind": "graph",
+       "alt": "A supply and demand model. Demand D slopes down and supply S slopes up. They cross at price P* and quantity Q*.",
+       "x": {
+        "min": 0,
+        "max": 10,
+        "label": "Quantity"
+       },
+       "y": {
+        "min": 0,
+        "max": 10,
+        "label": "Price"
+       },
+       "items": [
+        {
+         "type": "curve",
+         "id": "D",
+         "points": [
+          [
+           0,
+           10
+          ],
+          [
+           10,
+           0
+          ]
+         ],
+         "label": "D",
+         "pos": "above-right"
+        },
+        {
+         "type": "curve",
+         "id": "S",
+         "points": [
+          [
+           0,
+           0
+          ],
+          [
+           10,
+           10
+          ]
+         ],
+         "label": "S",
+         "pos": "above-left"
+        },
+        {
+         "type": "guide",
+         "at": [
+          5,
+          5
+         ],
+         "xLabel": "Q*",
+         "yLabel": "P*"
+        },
+        {
+         "type": "point",
+         "at": [
+          5,
+          5
+         ],
+         "on": [
+          "D",
+          "S"
+         ],
+         "is": "intersection"
+        }
+       ]
+      }
+     },
+     "remember": "Line graphs show change over time, bar graphs compare amounts, and supply and demand show how price and quantity affect each other.",
+     "a": {
+      "q": "Which graph is best for showing how a shop's monthly sales changed over one year?",
+      "opts": [
+       "A line graph, with months along the bottom",
+       "A bar graph, with one bar for each product",
+       "A supply and demand model, with price up the side",
+       "A graph with no labels on either of its axes"
+      ],
+      "why": "Sales are changing over time, so a line graph with months on the bottom axis shows the trend. A bar graph with one bar for each product compares products, not change across a year.",
+      "clue": "Which graph has time along the bottom?"
+     },
+     "b": {
+      "d": 2,
+      "q": "The bar graph shows the tickets sold by four school fundraisers. Which fundraiser sold the most tickets?",
+      "opts": [
+       "Raffle",
+       "Book sale",
+       "Cake stall",
+       "Car wash"
+      ],
+      "why": "A bar graph compares amounts, and the tallest bar shows the largest amount. The raffle bar is the tallest, reaching 65 tickets. The book sale bar is the next tallest, at 50, so it sold fewer.",
+      "clue": "Look for the tallest bar.",
+      "fig": {
+       "kind": "chart",
+       "chart": "bar",
+       "alt": "A bar graph of tickets sold by four fundraisers: Cake stall 40, Raffle 65, Car wash 30, Book sale 50.",
+       "bars": [
+        [
+         "Cake stall",
+         40
+        ],
+        [
+         "Raffle",
+         65
+        ],
+        [
+         "Car wash",
+         30
+        ],
+        [
+         "Book sale",
+         50
+        ]
+       ],
+       "y": {
+        "min": 0,
+        "max": 70,
+        "step": 10,
+        "label": "Tickets sold"
+       },
+       "x": {
+        "label": "Fundraiser"
+       }
+      }
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:10Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "A line graph, with months along the bottom",
+       "also_right": []
+      },
+      "b": {
+       "best": "Raffle",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-12T17:07:10Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 11,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "The question text lists every value (Raffle 65, etc.), so students can find the answer by comparing numbers without reading the bar graph. It does not test the graph-reading skill the card teaches. Remove the numbers from the stem so students must read the chart."
+      }
+     ],
+     "flags": [
+      "Question b, level: The question text lists every value (Raffle 65, etc.), so students can find the answer by comparing numbers without reading the bar graph. It does not test the graph-reading skill the card teaches. Remove the numbers from the stem so students must read the chart."
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "4d8a8b4db22a300b"
+  }
+ ]
+}

@@ -1,0 +1,250 @@
+{
+ "id": "mat-multiplying-fractions",
+ "title": "Multiplying fractions",
+ "brief": "84309b3dff92",
+ "shortlist": [
+  [
+   "mat-multiplying-dividing-fractions",
+   0.601
+  ],
+  [
+   "mat-adding-subtracting-fractions",
+   0.472
+  ],
+  [
+   "mat-equivalent-fractions-simplest-form",
+   0.297
+  ],
+  [
+   "mat-converting-fractions-decimals-percentages",
+   0.287
+  ],
+  [
+   "mat-operations-with-negative-fractions",
+   0.286
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-multiplying-dividing-fractions, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:50Z write: done",
+  "2026-11-12T15:26:05Z check: flagged",
+  "2026-11-12T15:35:10Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "confirm": 0.00765,
+  "write": 0.01407,
+  "check": 0.01499,
+  "fix": 0.02666,
+  "recheck": 0.00879
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-multiplying-dividing-fractions",
+  "changes": [
+   "Add a step for changing mixed numbers to improper fractions before multiplying, since the brief requires it and the bank card does not cover it.",
+   "Replace the division example and the pizza question focus with the brief's emphasis on multiplication only, or keep division as a separate point not required by this brief.",
+   "Simplify the final answer as a stated step at the end, which the bank card does not mention."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches multiplying fractions by multiplying tops and bottoms, but it does not cover converting mixed numbers to improper fractions first or the simplifying-at-the-end step the brief asks for, so it needs changes rather than reuse.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers both multiplying and dividing fractions and never converts mixed numbers to improper fractions, so it is broader than this multiplication-only point and misses the mixed-number step the brief asks for.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Multiplying fractions",
+  "card": [
+   "To multiply fractions, multiply the numerators (the top numbers) and multiply the denominators (the bottom numbers). \\(\\frac{a}{b} \\times \\frac{c}{d} = \\frac{a \\times c}{b \\times d}\\).",
+   "Example: \\(\\frac{2}{3} \\times \\frac{4}{5} = \\frac{2 \\times 4}{3 \\times 5} = \\frac{8}{15}\\).",
+   "Change a mixed number to an improper fraction first. \\(1\\frac{1}{2}\\) is \\(\\frac{3}{2}\\), because \\(1 = \\frac{2}{2}\\) and \\(\\frac{2}{2} + \\frac{1}{2} = \\frac{3}{2}\\).",
+   "Simplify at the end by dividing the top and bottom by a common factor. \\(\\frac{3}{2} \\times \\frac{4}{9} = \\frac{12}{18} = \\frac{2}{3}\\)."
+  ],
+  "remember": "Top times top, bottom times bottom. Mixed numbers become improper fractions first.",
+  "a": {
+   "q": "What is \\(\\frac{3}{4} \\times \\frac{2}{5}\\) in simplest form?",
+   "opts": [
+    "\\(\\frac{3}{10}\\)",
+    "\\(\\frac{6}{9}\\)",
+    "\\(\\frac{5}{20}\\)",
+    "\\(\\frac{15}{8}\\)"
+   ],
+   "why": "Multiply the tops: \\(3 \\times 2 = 6\\). Multiply the bottoms: \\(4 \\times 5 = 20\\). So \\(\\frac{6}{20}\\), which simplifies to \\(\\frac{3}{10}\\). Adding the tops and bottoms gives \\(\\frac{5}{9}\\)-style errors, which is not multiplying.",
+   "clue": "Multiply across the top, then across the bottom, then simplify."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia uses \\(1\\frac{1}{2}\\) cups of flour for one batch of muffins. How much flour does \\(\\frac{2}{3}\\) of a batch need?",
+   "opts": [
+    "1 cup",
+    "\\(\\frac{3}{5}\\) cup",
+    "\\(\\frac{4}{3}\\) cups",
+    "\\(2\\frac{1}{6}\\) cups"
+   ],
+   "why": "Write \\(1\\frac{1}{2}\\) as \\(\\frac{3}{2}\\). Then \\(\\frac{3}{2} \\times \\frac{2}{3} = \\frac{6}{6} = 1\\) cup. Multiplying the whole numbers and fractions separately, such as \\(1 \\times \\frac{2}{3}\\), is a tempting mistake that skips the improper fraction step.",
+   "clue": "Change the mixed number to an improper fraction first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{3}{10}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "1 cup",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why names a '5/9-style' error from adding tops and bottoms, but 5/9 is not an option. The nearby distractor 6/9 comes from multiplying the tops but adding the bottoms, so the explanation does not match the options a student saw."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why calls 'multiplying the whole numbers and fractions separately, such as 1 × 2/3' a mistake, but it leads to none of the options. Done fully (1 × 2/3 + 1/2 × 2/3 = 1), splitting the whole number and the fraction is actually valid, so the why could mislead students into thinking a correct method is wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: 3/10 for (a) and 1 cup for (b). Both explanations describe errors that do not match the options given, and the why for (b) wrongly suggests that splitting the whole number from the fraction is a mistake."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why names a '5/9-style' error from adding tops and bottoms, but 5/9 is not an option. The nearby distractor 6/9 comes from multiplying the tops but adding the bottoms, so the explanation does not match the options a student saw.",
+  "Question b, other: The why calls 'multiplying the whole numbers and fractions separately, such as 1 × 2/3' a mistake, but it leads to none of the options. Done fully (1 × 2/3 + 1/2 × 2/3 = 1), splitting the whole number and the fraction is actually valid, so the why could mislead students into thinking a correct method is wrong."
+ ],
+ "proposal": {
+  "title": "Multiplying fractions",
+  "card": [
+   "To multiply fractions, multiply the numerators (the top numbers) and multiply the denominators (the bottom numbers). \\(\\frac{a}{b} \\times \\frac{c}{d} = \\frac{a \\times c}{b \\times d}\\).",
+   "Example: \\(\\frac{2}{3} \\times \\frac{4}{5} = \\frac{2 \\times 4}{3 \\times 5} = \\frac{8}{15}\\).",
+   "Change a mixed number to an improper fraction first. \\(1\\frac{1}{2}\\) is \\(\\frac{3}{2}\\), because \\(1 = \\frac{2}{2}\\) and \\(\\frac{2}{2} + \\frac{1}{2} = \\frac{3}{2}\\).",
+   "Simplify at the end by dividing the top and bottom by a common factor. \\(\\frac{3}{2} \\times \\frac{4}{9} = \\frac{12}{18} = \\frac{2}{3}\\)."
+  ],
+  "remember": "Top times top, bottom times bottom. Mixed numbers become improper fractions first, and simplify at the end.",
+  "a": {
+   "q": "What is \\(\\frac{3}{4} \\times \\frac{2}{5}\\) in simplest form?",
+   "opts": [
+    "\\(\\frac{3}{10}\\)",
+    "\\(\\frac{6}{9}\\)",
+    "\\(\\frac{5}{20}\\)",
+    "\\(\\frac{15}{8}\\)"
+   ],
+   "why": "Multiply the tops: \\(3 \\times 2 = 6\\). Multiply the bottoms: \\(4 \\times 5 = 20\\). So the answer is \\(\\frac{6}{20}\\), which simplifies to \\(\\frac{3}{10}\\). The answer \\(\\frac{6}{9}\\) comes from multiplying the tops but adding the bottoms, and the bottoms must be multiplied too.",
+   "clue": "Multiply across the top, then across the bottom, then simplify."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia uses \\(1\\frac{1}{2}\\) cups of flour for one batch of muffins. How much flour does \\(\\frac{2}{3}\\) of a batch need?",
+   "opts": [
+    "1 cup",
+    "\\(\\frac{1}{3}\\) cup",
+    "\\(1\\frac{1}{3}\\) cups",
+    "\\(2\\frac{1}{6}\\) cups"
+   ],
+   "why": "Write \\(1\\frac{1}{2}\\) as \\(\\frac{3}{2}\\). Then \\(\\frac{3}{2} \\times \\frac{2}{3} = \\frac{6}{6} = 1\\) cup. The answer \\(1\\frac{1}{3}\\) comes from keeping the whole number 1 and multiplying only \\(\\frac{1}{2}\\) by \\(\\frac{2}{3}\\), but the 1 needs to be multiplied by \\(\\frac{2}{3}\\) as well.",
+   "clue": "Change the mixed number to an improper fraction first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(\\frac{3}{10}\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "1 cup",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why names a '5/9-style' error from adding tops and bottoms, but 5/9 is not an option. The nearby distractor 6/9 comes from multiplying the tops but adding the bottoms, so the explanation does not match the options a student saw."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why calls 'multiplying the whole numbers and fractions separately, such as 1 × 2/3' a mistake, but it leads to none of the options. Done fully (1 × 2/3 + 1/2 × 2/3 = 1), splitting the whole number and the fraction is actually valid, so the why could mislead students into thinking a correct method is wrong."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why names a '5/9-style' error from adding tops and bottoms, but 5/9 is not an option. The nearby distractor 6/9 comes from multiplying the tops but adding the bottoms, so the explanation does not match the options a student saw.",
+   "Question b, other: The why calls 'multiplying the whole numbers and fractions separately, such as 1 × 2/3' a mistake, but it leads to none of the options. Done fully (1 × 2/3 + 1/2 × 2/3 = 1), splitting the whole number and the fraction is actually valid, so the why could mislead students into thinking a correct method is wrong."
+  ]
+ },
+ "final": {
+  "title": "Multiplying fractions",
+  "card": [
+   "To multiply fractions, multiply the numerators (the top numbers) and multiply the denominators (the bottom numbers). \\(\\frac{a}{b} \\times \\frac{c}{d} = \\frac{a \\times c}{b \\times d}\\).",
+   "Example: \\(\\frac{2}{3} \\times \\frac{4}{5} = \\frac{2 \\times 4}{3 \\times 5} = \\frac{8}{15}\\).",
+   "Change a mixed number to an improper fraction first. \\(1\\frac{1}{2}\\) is \\(\\frac{3}{2}\\), because \\(1 = \\frac{2}{2}\\) and \\(\\frac{2}{2} + \\frac{1}{2} = \\frac{3}{2}\\).",
+   "Simplify at the end by dividing the top and bottom by a common factor. \\(\\frac{3}{2} \\times \\frac{4}{9} = \\frac{12}{18} = \\frac{2}{3}\\)."
+  ],
+  "remember": "Top times top, bottom times bottom. Mixed numbers become improper fractions first, and simplify at the end.",
+  "a": {
+   "q": "What is \\(\\frac{3}{4} \\times \\frac{2}{5}\\) in simplest form?",
+   "opts": [
+    "\\(\\frac{3}{10}\\)",
+    "\\(\\frac{6}{9}\\)",
+    "\\(\\frac{5}{20}\\)",
+    "\\(\\frac{15}{8}\\)"
+   ],
+   "why": "Multiply the tops: \\(3 \\times 2 = 6\\). Multiply the bottoms: \\(4 \\times 5 = 20\\). So the answer is \\(\\frac{6}{20}\\), which simplifies to \\(\\frac{3}{10}\\). The answer \\(\\frac{6}{9}\\) comes from multiplying the tops but adding the bottoms, and the bottoms must be multiplied too.",
+   "clue": "Multiply across the top, then across the bottom, then simplify."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia uses \\(1\\frac{1}{2}\\) cups of flour for one batch of muffins. How much flour does \\(\\frac{2}{3}\\) of a batch need?",
+   "opts": [
+    "1 cup",
+    "\\(\\frac{1}{3}\\) cup",
+    "\\(1\\frac{1}{3}\\) cups",
+    "\\(2\\frac{1}{6}\\) cups"
+   ],
+   "why": "Write \\(1\\frac{1}{2}\\) as \\(\\frac{3}{2}\\). Then \\(\\frac{3}{2} \\times \\frac{2}{3} = \\frac{6}{6} = 1\\) cup. The answer \\(1\\frac{1}{3}\\) comes from keeping the whole number 1 and multiplying only \\(\\frac{1}{2}\\) by \\(\\frac{2}{3}\\), but the 1 needs to be multiplied by \\(\\frac{2}{3}\\) as well.",
+   "clue": "Change the mixed number to an improper fraction first."
+  }
+ },
+ "cleared_by": "recheck"
+}

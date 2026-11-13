@@ -1,0 +1,328 @@
+{
+ "id": "mat-five-number-summary-box-vic",
+ "title": "Five-number summary and box plots",
+ "brief": "c54c3adca07d",
+ "shortlist": [
+  [
+   "mat-box-plots",
+   0.668
+  ],
+  [
+   "mat-five-number-summary-interquartile",
+   0.424
+  ],
+  [
+   "mat-five-number-summary-boxplots",
+   0.318
+  ],
+  [
+   "mat-spread-box-plots",
+   0.309
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 may adapt mat-box-plots, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:47Z confirm: Claude Opus 5.5 may adapt mat-box-plots, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z claude-code review: match rejected, to be written",
+  "2026-11-13T13:04:53Z write: failed the content check, writing again",
+  "2026-11-13T13:11:25Z write: done",
+  "2026-11-13T13:13:38Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "confirm": 0.01291,
+  "write": 0.05417,
+  "check": 0.00942
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-box-plots",
+  "changes": [
+   "Use the Victorian Curriculum 2.0 Level 10 wording for the five-number summary and box plot, which may differ from the Queensland-style card.",
+   "Replace the Darwin bus-route question with a Victorian example set locally, such as Melbourne tram or train travel times."
+  ],
+  "sure": "medium",
+  "reason": "The bank's box plot card teaches the same five-number summary idea at the right depth, but its examples and question context are set in other states and would need local adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-box-plots",
+  "changes": [
+   "Change the Darwin bus routes in question b to a Victorian place, such as Melbourne bus routes."
+  ],
+  "sure": "medium",
+  "reason": "The Year 10 box plots card already draws the five-number summary as a box plot and reads centre, spread and shape at the right depth, and only the Darwin example in question b could be made local to Victoria.",
+  "model": "claude-opus-5-5"
+ },
+ "match_rejected": true,
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "new",
+   "sure": "high",
+   "reason": "The bank point covers a wider idea: half its card and question b compare two box plots on one scale, which is the chapter's own parallel box plots point. It also never says what the five-number summary is, which this point's brief needs.",
+   "item": "65e05f942e1d2273",
+   "result": "decided",
+   "saved": {
+    "id": "mat-five-number-summary-box-vic",
+    "title": "Five-number summary and box plots",
+    "brief": "c54c3adca07d",
+    "shortlist": [
+     [
+      "mat-box-plots",
+      0.668
+     ],
+     [
+      "mat-five-number-summary-interquartile",
+      0.424
+     ],
+     [
+      "mat-five-number-summary-boxplots",
+      0.318
+     ],
+     [
+      "mat-spread-box-plots",
+      0.309
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00025,
+     "confirm": 0.01291
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-box-plots",
+     "changes": [
+      "Use the Victorian Curriculum 2.0 Level 10 wording for the five-number summary and box plot, which may differ from the Queensland-style card.",
+      "Replace the Darwin bus-route question with a Victorian example set locally, such as Melbourne tram or train travel times."
+     ],
+     "sure": "medium",
+     "reason": "The bank's box plot card teaches the same five-number summary idea at the right depth, but its examples and question context are set in other states and would need local adjustment.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-box-plots",
+     "changes": [
+      "Change the Darwin bus routes in question b to a Victorian place, such as Melbourne bus routes."
+     ],
+     "sure": "medium",
+     "reason": "The Year 10 box plots card already draws the five-number summary as a box plot and reads centre, spread and shape at the right depth, and only the Darwin example in question b could be made local to Victoria.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "967e8b1a2a4d6c7f"
+  }
+ ],
+ "draft": {
+  "title": "Five-number summary and box plots",
+  "card": [
+   "The five-number summary lists five values in order: the minimum, Q1, the median, Q3 and the maximum. Together they show where the data starts, centres and ends.",
+   "A box plot draws these five values above a number line. The box runs from Q1 to Q3, a line inside the box marks the median, and whiskers reach out to the minimum and the maximum.",
+   "Example: 4, 6, 7, 9, 12, 13, 15. The median is 9. Q1 is the middle of the lower half, 6, and Q3 is the middle of the upper half, 13. The summary is 4, 6, 9, 13, 15.",
+   "The plot has four sections: the left whisker, the two parts of the box and the right whisker. Each holds about a quarter of the values, so a longer section means those values are more spread out."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot for the data 4, 6, 7, 9, 12, 13, 15. The left whisker starts at 4, the box runs from 6 to 13 with the median line at 9, and the right whisker ends at 15.",
+    "x": {
+     "min": 0,
+     "max": 16,
+     "step": 4,
+     "label": "Value"
+    },
+    "sets": [
+     {
+      "label": "",
+      "data": [
+       4,
+       6,
+       7,
+       9,
+       12,
+       13,
+       15
+      ]
+     }
+    ],
+    "stats": {
+     "median": 9,
+     "q1": 6,
+     "q3": 13
+    }
+   }
+  },
+  "remember": "A box plot is the five-number summary drawn on a number line: whiskers to the minimum and maximum, a box from Q1 to Q3, and a median line.",
+  "a": {
+   "q": "The box plot shows time spent on homework in minutes. What value is at the right end of the box?",
+   "opts": [
+    "60 minutes",
+    "90 minutes",
+    "40 minutes",
+    "30 minutes"
+   ],
+   "why": "The box runs from Q1 to Q3, so its right end is Q3, which is 60. The 90 is the right end of the whisker, which marks the maximum, not the box.",
+   "clue": "The box ends at the quartiles, not at the maximum.",
+   "fig": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot of homework time in minutes. The left whisker starts at 10, the box runs from 30 to 60 with the median line at 40, and the right whisker ends at 90.",
+    "x": {
+     "min": 0,
+     "max": 100,
+     "step": 20,
+     "label": "Minutes"
+    },
+    "sets": [
+     {
+      "label": "",
+      "five": [
+       10,
+       30,
+       40,
+       60,
+       90
+      ]
+     }
+    ]
+   }
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi's quiz scores have the five-number summary 4, 11, 14, 17, 20. In his box plot, which two values are the ends of the left whisker?",
+   "opts": [
+    "4 and 11",
+    "11 and 14",
+    "4 and 14",
+    "17 and 20"
+   ],
+   "why": "The left whisker runs from the minimum, 4, to Q1, 11. The values 11 and 14 are the ends of the left part of the box, which is a different section.",
+   "clue": "The whisker joins the minimum to the start of the box."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "60 minutes",
+   "also_right": []
+  },
+  "b": {
+   "best": "4 and 11",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The example's summary (4, 6, 9, 13, 15) and both box plots match their data and alts, and both intended answers are correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Five-number summary and box plots",
+  "card": [
+   "The five-number summary lists five values in order: the minimum, Q1, the median, Q3 and the maximum. Together they show where the data starts, centres and ends.",
+   "A box plot draws these five values above a number line. The box runs from Q1 to Q3, a line inside the box marks the median, and whiskers reach out to the minimum and the maximum.",
+   "Example: 4, 6, 7, 9, 12, 13, 15. The median is 9. Q1 is the middle of the lower half, 6, and Q3 is the middle of the upper half, 13. The summary is 4, 6, 9, 13, 15.",
+   "The plot has four sections: the left whisker, the two parts of the box and the right whisker. Each holds about a quarter of the values, so a longer section means those values are more spread out."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot for the data 4, 6, 7, 9, 12, 13, 15. The left whisker starts at 4, the box runs from 6 to 13 with the median line at 9, and the right whisker ends at 15.",
+    "x": {
+     "min": 0,
+     "max": 16,
+     "step": 4,
+     "label": "Value"
+    },
+    "sets": [
+     {
+      "label": "",
+      "data": [
+       4,
+       6,
+       7,
+       9,
+       12,
+       13,
+       15
+      ]
+     }
+    ],
+    "stats": {
+     "median": 9,
+     "q1": 6,
+     "q3": 13
+    }
+   }
+  },
+  "remember": "A box plot is the five-number summary drawn on a number line: whiskers to the minimum and maximum, a box from Q1 to Q3, and a median line.",
+  "a": {
+   "q": "The box plot shows time spent on homework in minutes. What value is at the right end of the box?",
+   "opts": [
+    "60 minutes",
+    "90 minutes",
+    "40 minutes",
+    "30 minutes"
+   ],
+   "why": "The box runs from Q1 to Q3, so its right end is Q3, which is 60. The 90 is the right end of the whisker, which marks the maximum, not the box.",
+   "clue": "The box ends at the quartiles, not at the maximum.",
+   "fig": {
+    "kind": "chart",
+    "chart": "box",
+    "alt": "A box plot of homework time in minutes. The left whisker starts at 10, the box runs from 30 to 60 with the median line at 40, and the right whisker ends at 90.",
+    "x": {
+     "min": 0,
+     "max": 100,
+     "step": 20,
+     "label": "Minutes"
+    },
+    "sets": [
+     {
+      "label": "",
+      "five": [
+       10,
+       30,
+       40,
+       60,
+       90
+      ]
+     }
+    ]
+   }
+  },
+  "b": {
+   "d": 2,
+   "q": "Ravi's quiz scores have the five-number summary 4, 11, 14, 17, 20. In his box plot, which two values are the ends of the left whisker?",
+   "opts": [
+    "4 and 11",
+    "11 and 14",
+    "4 and 14",
+    "17 and 20"
+   ],
+   "why": "The left whisker runs from the minimum, 4, to Q1, 11. The values 11 and 14 are the ends of the left part of the box, which is a different section.",
+   "clue": "The whisker joins the minimum to the start of the box."
+  }
+ }
+}

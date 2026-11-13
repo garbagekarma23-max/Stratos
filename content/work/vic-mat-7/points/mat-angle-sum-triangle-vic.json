@@ -1,0 +1,149 @@
+{
+ "id": "mat-angle-sum-triangle-vic",
+ "title": "Angle sum of a triangle",
+ "brief": "5f7871c178e5",
+ "shortlist": [
+  [
+   "mat-angle-sum-triangle",
+   0.891
+  ],
+  [
+   "mat-angle-sum-polygons",
+   0.682
+  ],
+  [
+   "mat-classifying-triangles",
+   0.659
+  ],
+  [
+   "mat-corresponding-alternate-angles",
+   0.373
+  ],
+  [
+   "mat-co-interior-angles",
+   0.327
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 says adapt mat-angle-sum-triangle (1 change)",
+  "2026-11-12T15:06:00Z adapt: done",
+  "2026-11-12T15:15:50Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "adapt": 0.0099,
+  "check": 0.00792
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-angle-sum-triangle",
+  "changes": [
+   "Change the location in question b from Hobart (Tasmania) to a Victorian place, such as Melbourne, so the example is local to the course."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same triangle angle-sum idea at the right Year 7 depth, and only its Tasmanian example needs localising for Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-angle-sum-triangle",
+  "changes": [
+   "Change the location in question b from Hobart (Tasmania) to a Victorian place, such as Melbourne, so the example is local to the course."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Angle sum of a triangle",
+  "card": [
+   "The three angles inside any triangle add to 180°. This is true for every triangle, whatever its shape or size.",
+   "To find a missing angle, add the two angles you know. Then subtract that total from 180°.",
+   "Example: a triangle has angles of 50° and 65°. Add them: \\(50^{\\circ} + 65^{\\circ} = 115^{\\circ}\\). The third angle is \\(180^{\\circ} - 115^{\\circ} = 65^{\\circ}\\).",
+   "A right angle is 90°. If a triangle has a right angle, the other two angles add to 90°."
+  ],
+  "remember": "Add the two known angles, then take the total away from 180°.",
+  "a": {
+   "q": "Two angles inside a triangle are 70° and 45°. What size is the third angle?",
+   "opts": [
+    "65°",
+    "115°",
+    "135°",
+    "110°"
+   ],
+   "why": "\\(70^{\\circ} + 45^{\\circ} = 115^{\\circ}\\), and \\(180^{\\circ} - 115^{\\circ} = 65^{\\circ}\\). The answer 115° is wrong because it is only the sum of the two known angles, and the step of subtracting from 180° was skipped.",
+   "clue": "Add the two angles you know, then subtract from 180°."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia cuts a triangle of card in Melbourne. One angle is a right angle and another is 38°. What is the size of the third angle?",
+   "opts": [
+    "52°",
+    "142°",
+    "128°",
+    "90°"
+   ],
+   "why": "A right angle is 90°, so \\(90^{\\circ} + 38^{\\circ} = 128^{\\circ}\\). Then \\(180^{\\circ} - 128^{\\circ} = 52^{\\circ}\\). The answer 142° comes from subtracting 38° from 180° and forgetting the right angle.",
+   "clue": "A right angle is 90°, so use it as one of the known angles."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "65°",
+   "also_right": []
+  },
+  "b": {
+   "best": "52°",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Angle sum of a triangle",
+  "card": [
+   "The three angles inside any triangle add to 180°. This is true for every triangle, whatever its shape or size.",
+   "To find a missing angle, add the two angles you know. Then subtract that total from 180°.",
+   "Example: a triangle has angles of 50° and 65°. Add them: \\(50^{\\circ} + 65^{\\circ} = 115^{\\circ}\\). The third angle is \\(180^{\\circ} - 115^{\\circ} = 65^{\\circ}\\).",
+   "A right angle is 90°. If a triangle has a right angle, the other two angles add to 90°."
+  ],
+  "remember": "Add the two known angles, then take the total away from 180°.",
+  "a": {
+   "q": "Two angles inside a triangle are 70° and 45°. What size is the third angle?",
+   "opts": [
+    "65°",
+    "115°",
+    "135°",
+    "110°"
+   ],
+   "why": "\\(70^{\\circ} + 45^{\\circ} = 115^{\\circ}\\), and \\(180^{\\circ} - 115^{\\circ} = 65^{\\circ}\\). The answer 115° is wrong because it is only the sum of the two known angles, and the step of subtracting from 180° was skipped.",
+   "clue": "Add the two angles you know, then subtract from 180°."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia cuts a triangle of card in Melbourne. One angle is a right angle and another is 38°. What is the size of the third angle?",
+   "opts": [
+    "52°",
+    "142°",
+    "128°",
+    "90°"
+   ],
+   "why": "A right angle is 90°, so \\(90^{\\circ} + 38^{\\circ} = 128^{\\circ}\\). Then \\(180^{\\circ} - 128^{\\circ} = 52^{\\circ}\\). The answer 142° comes from subtracting 38° from 180° and forgetting the right angle.",
+   "clue": "A right angle is 90°, so use it as one of the known angles."
+  }
+ },
+ "cleared_by": "checker"
+}

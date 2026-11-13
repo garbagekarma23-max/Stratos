@@ -1,0 +1,226 @@
+{
+ "id": "eng-summarising-vic",
+ "title": "Summarising",
+ "brief": "2cba28f9472f",
+ "shortlist": [
+  [
+   "eng-summarising",
+   0.761
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:46Z new, match",
+  "2026-11-12T12:44:16Z match: Claude Haiku 5.5 says adapt eng-summarising (2 changes)",
+  "2026-11-12T15:15:37Z adapt: failed the content check, writing again",
+  "2026-11-12T15:25:57Z adapt: done",
+  "2026-11-12T15:35:04Z check: flagged",
+  "2026-11-12T15:42:22Z fix: suggested",
+  "2026-11-12T17:07:10Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "adapt": 0.00769,
+  "check": 0.00986,
+  "fix": 0.01494,
+  "recheck": 0.00649
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eng-summarising",
+  "changes": [
+   "In question b, the Tasmanian orchard example should be replaced with an orchard or place in Victoria so it is local to this course.",
+   "In question b's distractor option, 'The article has a story about an orchard in Tasmania' should be changed to match the new Victorian example."
+  ],
+  "sure": "high",
+  "reason": "The bank card teaches the same idea of summarising at the right Year 7 depth, and only the Tasmanian example in question b needs to be made local to Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "eng-summarising",
+  "changes": [
+   "In question b, the Tasmanian orchard example should be replaced with an orchard or place in Victoria so it is local to this course.",
+   "In question b's distractor option, 'The article has a story about an orchard in Tasmania' should be changed to match the new Victorian example."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q",
+   "b.opt2",
+   "b.opt4"
+  ]
+ },
+ "draft": {
+  "title": "Summarising",
+  "card": [
+   "A summary gives the main ideas of a text briefly. It is shorter than the original text.",
+   "Write a summary in your own words. Do not copy whole sentences from the text.",
+   "Leave out minor details and examples. They support a main idea but are not the main idea itself.",
+   "To find the main ideas, ask what each paragraph is mostly about. Then join those points in a few clear sentences."
+  ],
+  "remember": "A summary is short, in your own words, and keeps only the main ideas.",
+  "a": {
+   "q": "Which option best describes a good summary of a news article?",
+   "opts": [
+    "A short account of the main ideas in your own words",
+    "A short copy of the article's most interesting sentences",
+    "A list of every example the writer gives, in order",
+    "A retelling of the article that keeps all its details"
+   ],
+   "why": "A summary keeps the main ideas and puts them in your own words. Copying sentences is the tempting mistake, but a summary is not made of the writer's words, even if they are shortened.",
+   "clue": "Think about what you keep, and whose words you use."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jai reads an article about how bees help farms. It says bees carry pollen between flowers so crops grow fruit. It tells a story about one orchard near Shepparton. Which sentence is best for his summary?",
+   "opts": [
+    "Bees move pollen between flowers, which helps crops grow",
+    "One Shepparton orchard had a good year after bees arrived",
+    "Bees are small insects that are black and yellow in colour",
+    "The article has a story about an orchard near Shepparton"
+   ],
+   "why": "The first option states the main idea of the article in plain words. The orchard story is an example that supports the main idea, so a summary leaves it out, even though it is in the article.",
+   "clue": "Choose the main idea, not the example that backs it up."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A short account of the main ideas in your own words",
+   "also_right": []
+  },
+  "b": {
+   "best": "Bees move pollen between flowers, which helps crops grow",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The first option states the main idea', but options are shown in random order, so the first option may be the orchard example and the why would point students to the wrong answer. It should name the sentence about bees moving pollen instead of a position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and suit Year 7. Why (b) refers to 'the first option', which will not match the shuffled order, so it should name the bees-and-pollen sentence instead."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says 'The first option states the main idea', but options are shown in random order, so the first option may be the orchard example and the why would point students to the wrong answer. It should name the sentence about bees moving pollen instead of a position."
+ ],
+ "proposal": {
+  "title": "Summarising",
+  "card": [
+   "A summary gives the main ideas of a text briefly. It is shorter than the original text.",
+   "Write a summary in your own words. Do not copy whole sentences from the text.",
+   "Leave out minor details and examples. They support a main idea but are not the main idea itself.",
+   "To find the main ideas, ask what each paragraph is mostly about. Then join those points in a few clear sentences."
+  ],
+  "remember": "A summary is short, in your own words, and keeps only the main ideas.",
+  "a": {
+   "q": "Which option best describes a good summary of a news article?",
+   "opts": [
+    "A short account of the main ideas in your own words",
+    "A short copy of the article's most interesting sentences",
+    "A list of every example the writer gives, in order",
+    "A retelling of the article that keeps all its details"
+   ],
+   "why": "A summary keeps the main ideas and puts them in your own words. Copying sentences is the tempting mistake, but a summary is not made of the writer's words, even if they are shortened.",
+   "clue": "Think about what you keep, and whose words you use."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jai reads an article about how bees help farms. It says bees carry pollen between flowers so crops grow fruit. It tells a story about one orchard near Shepparton. Which sentence is best for his summary?",
+   "opts": [
+    "Bees move pollen between flowers, which helps crops grow",
+    "One Shepparton orchard had a good year after bees arrived",
+    "Bees are small insects that are black and yellow in colour",
+    "The article has a story about an orchard near Shepparton"
+   ],
+   "why": "The sentence about bees moving pollen to help crops grow states the main idea of the article in plain words. The orchard story is an example that supports that idea, so a summary leaves it out, even though it is in the article.",
+   "clue": "Choose the main idea, not the example that backs it up."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:10Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A short account of the main ideas in your own words",
+    "also_right": []
+   },
+   "b": {
+    "best": "Bees move pollen between flowers, which helps crops grow",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:10Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'The first option states the main idea', but options are shown in random order, so the first option may be the orchard example and the why would point students to the wrong answer. It should name the sentence about bees moving pollen instead of a position."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says 'The first option states the main idea', but options are shown in random order, so the first option may be the orchard example and the why would point students to the wrong answer. It should name the sentence about bees moving pollen instead of a position."
+  ]
+ },
+ "final": {
+  "title": "Summarising",
+  "card": [
+   "A summary gives the main ideas of a text briefly. It is shorter than the original text.",
+   "Write a summary in your own words. Do not copy whole sentences from the text.",
+   "Leave out minor details and examples. They support a main idea but are not the main idea itself.",
+   "To find the main ideas, ask what each paragraph is mostly about. Then join those points in a few clear sentences."
+  ],
+  "remember": "A summary is short, in your own words, and keeps only the main ideas.",
+  "a": {
+   "q": "Which option best describes a good summary of a news article?",
+   "opts": [
+    "A short account of the main ideas in your own words",
+    "A short copy of the article's most interesting sentences",
+    "A list of every example the writer gives, in order",
+    "A retelling of the article that keeps all its details"
+   ],
+   "why": "A summary keeps the main ideas and puts them in your own words. Copying sentences is the tempting mistake, but a summary is not made of the writer's words, even if they are shortened.",
+   "clue": "Think about what you keep, and whose words you use."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jai reads an article about how bees help farms. It says bees carry pollen between flowers so crops grow fruit. It tells a story about one orchard near Shepparton. Which sentence is best for his summary?",
+   "opts": [
+    "Bees move pollen between flowers, which helps crops grow",
+    "One Shepparton orchard had a good year after bees arrived",
+    "Bees are small insects that are black and yellow in colour",
+    "The article has a story about an orchard near Shepparton"
+   ],
+   "why": "The sentence about bees moving pollen to help crops grow states the main idea of the article in plain words. The orchard story is an example that supports that idea, so a summary leaves it out, even though it is in the article.",
+   "clue": "Choose the main idea, not the example that backs it up."
+  }
+ },
+ "cleared_by": "recheck"
+}

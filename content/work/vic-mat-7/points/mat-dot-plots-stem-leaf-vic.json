@@ -1,0 +1,505 @@
+{
+ "id": "mat-dot-plots-stem-leaf-vic",
+ "title": "Dot plots and stem-and-leaf plots",
+ "brief": "398f284f02a6",
+ "shortlist": [
+  [
+   "mat-stem-leaf-plots",
+   0.662
+  ],
+  [
+   "mat-comparing-data-sets-2",
+   0.24
+  ],
+  [
+   "mat-histograms-dot-plots",
+   0.236
+  ],
+  [
+   "mat-shape-distribution-2",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T12:53:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:08Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:06:00Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:50Z write: failed the content check, writing again",
+  "2026-11-12T15:26:05Z write: done",
+  "2026-11-12T15:35:10Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T16:19:54Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.04657,
+  "check": 0.01315,
+  "fix": 0.02875
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers only reading stem-and-leaf plots, while the new point also needs dot plots, making both plot types, and finding the median and range, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Dot plots and stem-and-leaf plots",
+  "card": [
+   [
+    "Dot plot",
+    "A dot plot puts one dot above a number line for each value. Equal values stack up. Here, 9 students were asked how many pets they have."
+   ],
+   [
+    "Stem-and-leaf plot",
+    "A stem-and-leaf plot splits each value into a stem (the tens) and a leaf (the ones digit). The leaves are written in order. A note below the plot shows how to read it."
+   ],
+   "To find the median, count the values and go to the middle one. Each dot or leaf is a value. With 9 values the median is the 5th, so it is 4 in the dot plot and 23 in the stem-and-leaf plot. With an even count, the median is halfway between the two middle values.",
+   "The range is the highest value minus the lowest. In the dot plot it is \\(6 - 2 = 4\\). In the stem-and-leaf plot it is \\(41 - 12 = 29\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of pets per student: one dot at 2, two at 3, three at 4, two at 5 and one at 6.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Pets"
+    },
+    "data": [
+     2,
+     3,
+     3,
+     4,
+     4,
+     4,
+     5,
+     5,
+     6
+    ],
+    "stats": {
+     "median": 4
+    }
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot with stem 1 leaves 2 and 5, stem 2 leaves 1, 3, 3 and 8, stem 3 leaves 4 and 7, and stem 4 leaf 1. The note says 2 | 3 means 23.",
+    "data": [
+     12,
+     15,
+     21,
+     23,
+     23,
+     28,
+     34,
+     37,
+     41
+    ],
+    "leaf": 1,
+    "key": "2 | 3 means 23",
+    "stats": {
+     "median": 23
+    }
+   }
+  },
+  "remember": "Every dot or leaf is one value. Count to the middle for the median, and subtract the lowest from the highest for the range.",
+  "a": {
+   "q": "The dot plot shows how many siblings each of 9 students has. What is the median?",
+   "opts": [
+    "2",
+    "1",
+    "5",
+    "4.5"
+   ],
+   "why": "There are 9 dots, so the median is the 5th value in order. The values in order are 0, 1, 1, 1, 2, 3, 3, 4, 5, and the 5th is 2. The value 1 has the tallest stack, but that does not make it the middle value.",
+   "clue": "Count the dots from the left until you reach the 5th.",
+   "fig": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of siblings per student: one dot at 0, three at 1, one at 2, two at 3, one at 4 and one at 5.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Siblings"
+    },
+    "data": [
+     0,
+     1,
+     1,
+     1,
+     2,
+     3,
+     3,
+     4,
+     5
+    ],
+    "stats": {
+     "median": 2
+    }
+   }
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom recorded his reading time, in minutes, on 10 days. What is the median reading time?",
+   "opts": [
+    "22.5 minutes",
+    "21 minutes",
+    "24 minutes",
+    "27 minutes"
+   ],
+   "why": "With 10 values there are two middle values, the 5th and 6th. They are 21 and 24, and the median is halfway between them, which is 22.5. Choosing just 21 or 24 ignores the other middle value. The 27 is the range, not the median.",
+   "clue": "With an even count, there is no single middle value.",
+   "fig": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot of reading times. Stem 0 leaf 8, stem 1 leaves 2, 5 and 9, stem 2 leaves 1, 4 and 4, stem 3 leaves 0, 3 and 5. The note says 1 | 2 means 12.",
+    "data": [
+     8,
+     12,
+     15,
+     19,
+     21,
+     24,
+     24,
+     30,
+     33,
+     35
+    ],
+    "leaf": 1,
+    "key": "1 | 2 means 12",
+    "stats": {
+     "median": 22.5
+    }
+   }
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2",
+   "also_right": []
+  },
+  "b": {
+   "best": "22.5 minutes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "22.5 minutes is the only non-whole-number option, and the clue says there is no single middle value. A student could pick it without working out the median. A whole-number or other decimal distractor (for example 23 or 27.5) would remove this cue."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, charts, alts, answers and explanations are all correct: medians 4, 23, 2 and 22.5, and ranges 4, 29 and 27. The one minor issue is in question b, where the right answer is the only decimal option, so with the clue it stands out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: 22.5 minutes is the only non-whole-number option, and the clue says there is no single middle value. A student could pick it without working out the median. A whole-number or other decimal distractor (for example 23 or 27.5) would remove this cue."
+ ],
+ "proposal": {
+  "title": "Dot plots and stem-and-leaf plots",
+  "card": [
+   [
+    "Dot plot",
+    "A dot plot puts one dot above a number line for each value. Equal values stack up. Here, 9 students were asked how many pets they have."
+   ],
+   [
+    "Stem-and-leaf plot",
+    "A stem-and-leaf plot splits each value into a stem (the tens) and a leaf (the ones digit). The leaves are written in order. A note below the plot shows how to read it."
+   ],
+   "To find the median, count the values and go to the middle one. Each dot or leaf is a value. With 9 values the median is the 5th, so it is 4 in the dot plot and 23 in the stem-and-leaf plot. With an even count, the median is halfway between the two middle values.",
+   "The range is the highest value minus the lowest. In the dot plot it is \\(6 - 2 = 4\\). In the stem-and-leaf plot it is \\(41 - 12 = 29\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of pets per student: one dot at 2, two at 3, three at 4, two at 5 and one at 6.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Pets"
+    },
+    "data": [
+     2,
+     3,
+     3,
+     4,
+     4,
+     4,
+     5,
+     5,
+     6
+    ],
+    "stats": {
+     "median": 4
+    }
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot with stem 1 leaves 2 and 5, stem 2 leaves 1, 3, 3 and 8, stem 3 leaves 4 and 7, and stem 4 leaf 1. The note says 2 | 3 means 23.",
+    "data": [
+     12,
+     15,
+     21,
+     23,
+     23,
+     28,
+     34,
+     37,
+     41
+    ],
+    "leaf": 1,
+    "key": "2 | 3 means 23",
+    "stats": {
+     "median": 23
+    }
+   }
+  },
+  "remember": "Every dot or leaf is one value. Count to the middle for the median, and subtract the lowest from the highest for the range.",
+  "a": {
+   "q": "The dot plot shows how many siblings each of 9 students has. What is the median?",
+   "opts": [
+    "2",
+    "1",
+    "5",
+    "4.5"
+   ],
+   "why": "There are 9 dots, so the median is the 5th value in order. The values in order are 0, 1, 1, 1, 2, 3, 3, 4, 5, and the 5th is 2. The value 1 has the tallest stack, but that does not make it the middle value.",
+   "clue": "Count the dots from the left until you reach the 5th.",
+   "fig": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of siblings per student: one dot at 0, three at 1, one at 2, two at 3, one at 4 and one at 5.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Siblings"
+    },
+    "data": [
+     0,
+     1,
+     1,
+     1,
+     2,
+     3,
+     3,
+     4,
+     5
+    ],
+    "stats": {
+     "median": 2
+    }
+   }
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom recorded his reading time, in minutes, on 10 days. What is the median reading time?",
+   "opts": [
+    "22.5 minutes",
+    "21.5 minutes",
+    "24 minutes",
+    "27 minutes"
+   ],
+   "why": "With 10 values the median is halfway between the 5th and 6th values, 21 and 24, which is 22.5. The 21.5 is halfway between the lowest and highest values, 8 and 35, which is not the median. The 24 is only the 6th value, and 27 is the range.",
+   "clue": "Count all the leaves first, then find the middle of the list.",
+   "fig": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot of reading times. Stem 0 leaf 8, stem 1 leaves 2, 5 and 9, stem 2 leaves 1, 4 and 4, stem 3 leaves 0, 3 and 5. The note says 1 | 2 means 12.",
+    "data": [
+     8,
+     12,
+     15,
+     19,
+     21,
+     24,
+     24,
+     30,
+     33,
+     35
+    ],
+    "leaf": 1,
+    "key": "1 | 2 means 12",
+    "stats": {
+     "median": 22.5
+    }
+   }
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:54Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "22.5 minutes is the only non-whole-number option, and the clue says there is no single middle value. A student could pick it without working out the median. A whole-number or other decimal distractor (for example 23 or 27.5) would remove this cue."
+   }
+  ],
+  "flags": [
+   "Question b, wording: 22.5 minutes is the only non-whole-number option, and the clue says there is no single middle value. A student could pick it without working out the median. A whole-number or other decimal distractor (for example 23 or 27.5) would remove this cue."
+  ]
+ },
+ "final": {
+  "title": "Dot plots and stem-and-leaf plots",
+  "card": [
+   [
+    "Dot plot",
+    "A dot plot puts one dot above a number line for each value. Equal values stack up. Here, 9 students were asked how many pets they have."
+   ],
+   [
+    "Stem-and-leaf plot",
+    "A stem-and-leaf plot splits each value into a stem (the tens) and a leaf (the ones digit). The leaves are written in order. A note below the plot shows how to read it."
+   ],
+   "To find the median, count the values and go to the middle one. Each dot or leaf is a value. With 9 values the median is the 5th, so it is 4 in the dot plot and 23 in the stem-and-leaf plot. With an even count, the median is halfway between the two middle values.",
+   "The range is the highest value minus the lowest. In the dot plot it is \\(6 - 2 = 4\\). In the stem-and-leaf plot it is \\(41 - 12 = 29\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of pets per student: one dot at 2, two at 3, three at 4, two at 5 and one at 6.",
+    "x": {
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "label": "Pets"
+    },
+    "data": [
+     2,
+     3,
+     3,
+     4,
+     4,
+     4,
+     5,
+     5,
+     6
+    ],
+    "stats": {
+     "median": 4
+    }
+   },
+   "2": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot with stem 1 leaves 2 and 5, stem 2 leaves 1, 3, 3 and 8, stem 3 leaves 4 and 7, and stem 4 leaf 1. The note says 2 | 3 means 23.",
+    "data": [
+     12,
+     15,
+     21,
+     23,
+     23,
+     28,
+     34,
+     37,
+     41
+    ],
+    "leaf": 1,
+    "key": "2 | 3 means 23",
+    "stats": {
+     "median": 23
+    }
+   }
+  },
+  "remember": "Every dot or leaf is one value. Count to the middle for the median, and subtract the lowest from the highest for the range.",
+  "a": {
+   "q": "The dot plot shows how many siblings each of 9 students has. What is the median?",
+   "opts": [
+    "2",
+    "1",
+    "5",
+    "4.5"
+   ],
+   "why": "There are 9 dots, so the median is the 5th value in order. The values in order are 0, 1, 1, 1, 2, 3, 3, 4, 5, and the 5th is 2. The value 1 has the tallest stack, but that does not make it the middle value.",
+   "clue": "Count the dots from the left until you reach the 5th.",
+   "fig": {
+    "kind": "chart",
+    "chart": "dot",
+    "alt": "A dot plot of siblings per student: one dot at 0, three at 1, one at 2, two at 3, one at 4 and one at 5.",
+    "x": {
+     "min": 0,
+     "max": 6,
+     "step": 1,
+     "label": "Siblings"
+    },
+    "data": [
+     0,
+     1,
+     1,
+     1,
+     2,
+     3,
+     3,
+     4,
+     5
+    ],
+    "stats": {
+     "median": 2
+    }
+   }
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom recorded his reading time, in minutes, on 10 days. What is the median reading time?",
+   "opts": [
+    "22.5 minutes",
+    "21.5 minutes",
+    "24 minutes",
+    "27 minutes"
+   ],
+   "why": "With 10 values the median is halfway between the 5th and 6th values, 21 and 24, which is 22.5. The 21.5 is halfway between the lowest and highest values, 8 and 35, which is not the median. The 24 is only the 6th value, and 27 is the range.",
+   "clue": "Count all the leaves first, then find the middle of the list.",
+   "fig": {
+    "kind": "chart",
+    "chart": "stem",
+    "alt": "A stem-and-leaf plot of reading times. Stem 0 leaf 8, stem 1 leaves 2, 5 and 9, stem 2 leaves 1, 4 and 4, stem 3 leaves 0, 3 and 5. The note says 1 | 2 means 12.",
+    "data": [
+     8,
+     12,
+     15,
+     19,
+     21,
+     24,
+     24,
+     30,
+     33,
+     35
+    ],
+    "leaf": 1,
+    "key": "1 | 2 means 12",
+    "stats": {
+     "median": 22.5
+    }
+   }
+  }
+ },
+ "cleared_by": "auto"
+}

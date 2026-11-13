@@ -1,0 +1,204 @@
+{
+ "id": "mat-misleading-surveys-graphs",
+ "title": "Misleading surveys and graphs",
+ "brief": "e978b8c0814b",
+ "shortlist": [
+  [
+   "mat-misleading-graphs",
+   0.381
+  ],
+  [
+   "mat-reading-survey-reports-critically",
+   0.371
+  ],
+  [
+   "mat-sampling-methods-bias",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T12:53:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:08Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:06:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:06Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01441,
+  "check": 0.0097
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point covers the whole brief: mat-misleading-graphs covers axes and pictures but not biased samples or leading questions, and mat-reading-survey-reports-critically covers samples and questions but not graphs, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Misleading surveys and graphs",
+  "card": [
+   [
+    "Biased sample",
+    "A sample that does not fairly represent the whole group. Asking only gym members about fitness will not show what everyone thinks."
+   ],
+   [
+    "Leading question",
+    "A question worded to push people towards one answer, such as \"Don't you agree that homework is pointless?\""
+   ],
+   [
+    "Axis not from zero",
+    "If a column graph's axis starts above zero, a small difference can look huge. Here Shop B's column looks twice as tall as Shop A's, but 54 is only slightly more than 52."
+   ],
+   "Before trusting a result, ask who was surveyed, how the question was worded, and where the graph's axis starts."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar chart of customers per hour. Shop A is 52 and Shop B is 54. The vertical axis starts at 50, so Shop B's bar looks twice as tall as Shop A's.",
+    "bars": [
+     [
+      "Shop A",
+      52
+     ],
+     [
+      "Shop B",
+      54
+     ]
+    ],
+    "y": {
+     "min": 50,
+     "max": 56,
+     "step": 2,
+     "label": "Customers"
+    },
+    "x": {
+     "label": "Shop"
+    },
+    "truncated": true
+   }
+  },
+  "remember": "Check the sample, the wording and the axis before believing a result.",
+  "a": {
+   "q": "Mia surveys only students waiting in the canteen line about whether the canteen food is good. What is the main problem?",
+   "opts": [
+    "The sample is biased towards people who use the canteen",
+    "The question is a leading question",
+    "The graph axis does not start at zero",
+    "Students in the line will answer in a random way"
+   ],
+   "why": "Students in the canteen line are not a fair picture of all students, so the sample is biased. Nothing in the scenario says the question was worded to push an answer.",
+   "clue": "Who was left out of the survey?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Bendigo surveys residents about a new park. Which question is most likely to be a leading question?",
+   "opts": [
+    "Don't you agree the new park is a great idea?",
+    "How would you rate the new park, from 1 to 5?",
+    "Which feature of the new park would you use most?",
+    "Would you visit the new park in a typical month?"
+   ],
+   "why": "The first question pushes people to agree, so it is leading. The last one asks for a yes or no, but its wording does not push towards either answer.",
+   "clue": "Look for wording that tells people what to say."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The sample is biased towards people who use the canteen",
+   "also_right": []
+  },
+  "b": {
+   "best": "Don't you agree the new park is a great idea?",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The bar chart data matches the text: from an axis starting at 50, Shop B's bar (4 units) is twice as tall as Shop A's (2 units). Both questions have one clearly right answer, and the explanations agree with the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Misleading surveys and graphs",
+  "card": [
+   [
+    "Biased sample",
+    "A sample that does not fairly represent the whole group. Asking only gym members about fitness will not show what everyone thinks."
+   ],
+   [
+    "Leading question",
+    "A question worded to push people towards one answer, such as \"Don't you agree that homework is pointless?\""
+   ],
+   [
+    "Axis not from zero",
+    "If a column graph's axis starts above zero, a small difference can look huge. Here Shop B's column looks twice as tall as Shop A's, but 54 is only slightly more than 52."
+   ],
+   "Before trusting a result, ask who was surveyed, how the question was worded, and where the graph's axis starts."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "chart",
+    "chart": "bar",
+    "alt": "A bar chart of customers per hour. Shop A is 52 and Shop B is 54. The vertical axis starts at 50, so Shop B's bar looks twice as tall as Shop A's.",
+    "bars": [
+     [
+      "Shop A",
+      52
+     ],
+     [
+      "Shop B",
+      54
+     ]
+    ],
+    "y": {
+     "min": 50,
+     "max": 56,
+     "step": 2,
+     "label": "Customers"
+    },
+    "x": {
+     "label": "Shop"
+    },
+    "truncated": true
+   }
+  },
+  "remember": "Check the sample, the wording and the axis before believing a result.",
+  "a": {
+   "q": "Mia surveys only students waiting in the canteen line about whether the canteen food is good. What is the main problem?",
+   "opts": [
+    "The sample is biased towards people who use the canteen",
+    "The question is a leading question",
+    "The graph axis does not start at zero",
+    "Students in the line will answer in a random way"
+   ],
+   "why": "Students in the canteen line are not a fair picture of all students, so the sample is biased. Nothing in the scenario says the question was worded to push an answer.",
+   "clue": "Who was left out of the survey?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A council in Bendigo surveys residents about a new park. Which question is most likely to be a leading question?",
+   "opts": [
+    "Don't you agree the new park is a great idea?",
+    "How would you rate the new park, from 1 to 5?",
+    "Which feature of the new park would you use most?",
+    "Would you visit the new park in a typical month?"
+   ],
+   "why": "The first question pushes people to agree, so it is leading. The last one asks for a yes or no, but its wording does not push towards either answer.",
+   "clue": "Look for wording that tells people what to say."
+  }
+ },
+ "cleared_by": "checker"
+}

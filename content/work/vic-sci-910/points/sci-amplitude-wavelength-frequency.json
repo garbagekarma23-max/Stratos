@@ -1,0 +1,491 @@
+{
+ "id": "sci-amplitude-wavelength-frequency",
+ "title": "Amplitude, wavelength and frequency",
+ "brief": "74107a256129",
+ "shortlist": [
+  [
+   "sci-parts-wave",
+   0.696
+  ],
+  [
+   "sci-electromagnetic-spectrum",
+   0.444
+  ],
+  [
+   "phys-waves-their-properties",
+   0.318
+  ],
+  [
+   "phys-electromagnetic-spectrum-2",
+   0.235
+  ],
+  [
+   "phys-electromagnetic-spectrum",
+   0.22
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:56Z new, match",
+  "2026-11-12T12:44:23Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:53Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:08Z write: failed the content check, writing again",
+  "2026-11-12T15:35:12Z write: done (still fails the content check)",
+  "2026-11-12T15:42:26Z check: flagged",
+  "2026-11-12T15:45:44Z fix: suggested",
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "write": 0.02388,
+  "check": 0.01428,
+  "fix": 0.03818
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Parts of a wave, teaches the same parts at the right depth but lacks the wave speed relationship (speed = frequency × wavelength), and adding that step is more than a small change, so a new point is the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Amplitude, wavelength and frequency",
+  "card": [
+   [
+    "Amplitude",
+    "the height of a wave above its rest position. A bigger amplitude means the wave carries more energy."
+   ],
+   [
+    "Wavelength",
+    "the distance from one peak to the next peak. It is measured in metres (m)."
+   ],
+   [
+    "Frequency",
+    "the number of waves that pass a point each second. It is measured in hertz (Hz), where 1 Hz is one wave per second."
+   ],
+   "Wave speed = frequency × wavelength. So a wave with a frequency of 5 Hz and a wavelength of 2 m travels at 10 m/s."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A wave with amplitude 2 and wavelength 4. The wave rises 2 units above the rest line at x = 1 and falls 2 units below it at x = 3. The distance between two neighbouring peaks, at x = 1 and x = 5, is marked as the wavelength. The amplitude is marked from the rest line down to the trough at x = 3.",
+    "x": {
+     "min": 0,
+     "max": 9,
+     "label": "Distance",
+     "labelUnder": true
+    },
+    "y": {
+     "min": -3.5,
+     "max": 3.5,
+     "label": "Height"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "w",
+      "expr": "2\\sin(\\frac{\\pi}{2}x)",
+      "domain": [
+       0,
+       8
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "w"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       2
+      ],
+      "on": [
+       "w"
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       2.8
+      ],
+      "to": [
+       5,
+       2.8
+      ],
+      "label": "wavelength",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       0
+      ],
+      "to": [
+       3,
+       -2
+      ],
+      "label": "amplitude",
+      "pos": "below"
+     }
+    ]
+   }
+  },
+  "remember": "Amplitude is height, wavelength is peak to peak, frequency is waves per second, and speed = frequency × wavelength.",
+  "a": {
+   "q": "Two waves travel along the same rope. Wave X has a larger amplitude than wave Y. What does this tell you about wave X?",
+   "opts": [
+    "Its peaks rise higher above the rest position",
+    "Its peaks are further apart",
+    "More of its waves pass a point each second",
+    "It travels faster along the rope"
+   ],
+   "why": "Amplitude is the height of a wave above its rest position, so a larger amplitude means higher peaks. Wavelength is the distance between peaks, which is a different measure, so it does not describe amplitude.",
+   "clue": "Amplitude is about height, not distance along the rope."
+  },
+  "b": {
+   "d": 3,
+   "q": "Waves pass a jetty in Lorne at a frequency of 0.5 Hz. The distance between neighbouring wave peaks is 8 m. What is the speed of the waves?",
+   "opts": [
+    "4 m/s",
+    "16 m/s",
+    "8.5 m/s",
+    "0.06 m/s"
+   ],
+   "why": "Wave speed = frequency × wavelength = 0.5 × 8 = 4 m/s. Dividing the wavelength by the frequency gives 16 m/s, which is a tempting mistake, but the card says to multiply.",
+   "clue": "The distance between neighbouring peaks is the wavelength."
+  }
+ },
+ "redone": true,
+ "local": [
+  "sci-amplitude-wavelength-frequency the figure on card line 1 has the label amplitude on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "check": {
+  "a": {
+   "best": "Its peaks rise higher above the rest position",
+   "also_right": []
+  },
+  "b": {
+   "best": "4 m/s",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines amplitude as 'the height of a wave above its rest position', but the graph marks amplitude from the rest line down to the trough at x = 3. A student may be confused about whether amplitude is measured up or down. Either mark it from the rest line up to a peak, or define amplitude as the maximum distance from the rest position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct: the answers are 'Its peaks rise higher above the rest position' and 4 m/s, and the graph's wave, peaks and wavelength match the text. The one problem is that the graph marks amplitude down to a trough while the card defines it as height above the rest position."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines amplitude as 'the height of a wave above its rest position', but the graph marks amplitude from the rest line down to the trough at x = 3. A student may be confused about whether amplitude is measured up or down. Either mark it from the rest line up to a peak, or define amplitude as the maximum distance from the rest position.",
+  "Content check: sci-amplitude-wavelength-frequency the figure on card line 1 has the label amplitude on a curve. Move it with pos or labelAt, or move the curve"
+ ],
+ "proposal": {
+  "title": "Amplitude, wavelength and frequency",
+  "card": [
+   [
+    "Amplitude",
+    "the greatest distance a wave moves from its rest position, measured from the rest line up to a peak. A bigger amplitude means the wave carries more energy."
+   ],
+   [
+    "Wavelength",
+    "the distance from one peak to the next peak. It is measured in metres (m)."
+   ],
+   [
+    "Frequency",
+    "the number of waves that pass a point each second. It is measured in hertz (Hz), where 1 Hz is one wave per second."
+   ],
+   "Wave speed = frequency × wavelength. So a wave with a frequency of 5 Hz and a wavelength of 2 m travels at 10 m/s."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A wave with amplitude 2 and wavelength 4. The wave has peaks 2 units above the rest line at x = 1, x = 5 and x = 9. The distance between the neighbouring peaks at x = 1 and x = 5 is marked as the wavelength. The amplitude is marked from the rest line up to the peak at x = 9.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Distance",
+     "labelUnder": true
+    },
+    "y": {
+     "min": -3.5,
+     "max": 4,
+     "label": "Height"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "w",
+      "expr": "2\\sin(\\frac{\\pi}{2}x)",
+      "domain": [
+       0,
+       9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "w"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       2
+      ],
+      "on": [
+       "w"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       9,
+       2
+      ],
+      "on": [
+       "w"
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       2.8
+      ],
+      "to": [
+       5,
+       2.8
+      ],
+      "label": "wavelength",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       9,
+       0
+      ],
+      "to": [
+       9,
+       2
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       8.7,
+       2.7
+      ],
+      "label": "amplitude",
+      "pos": "left"
+     }
+    ]
+   }
+  },
+  "remember": "Amplitude is height, wavelength is peak to peak, frequency is waves per second, and speed = frequency × wavelength.",
+  "a": {
+   "q": "Two waves travel along the same rope. Wave X has a larger amplitude than wave Y. What does this tell you about wave X?",
+   "opts": [
+    "Its peaks rise higher above the rest position",
+    "Its peaks are further apart",
+    "More of its waves pass a point each second",
+    "It travels faster along the rope"
+   ],
+   "why": "Amplitude is the greatest distance from the rest position to a peak, so a larger amplitude means higher peaks. Wavelength is the distance between peaks, which is a different measure, so it does not describe amplitude.",
+   "clue": "Amplitude is about height, not distance along the rope."
+  },
+  "b": {
+   "d": 3,
+   "q": "Waves pass a jetty in Lorne at a frequency of 0.5 Hz. The distance between neighbouring wave peaks is 8 m. What is the speed of the waves?",
+   "opts": [
+    "4 m/s",
+    "16 m/s",
+    "8.5 m/s",
+    "0.06 m/s"
+   ],
+   "why": "Wave speed = frequency × wavelength = 0.5 × 8 = 4 m/s. Dividing the wavelength by the frequency gives 16 m/s, which is a tempting mistake, but the card says to multiply.",
+   "clue": "The distance between neighbouring peaks is the wavelength."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:55Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines amplitude as 'the height of a wave above its rest position', but the graph marks amplitude from the rest line down to the trough at x = 3. A student may be confused about whether amplitude is measured up or down. Either mark it from the rest line up to a peak, or define amplitude as the maximum distance from the rest position."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines amplitude as 'the height of a wave above its rest position', but the graph marks amplitude from the rest line down to the trough at x = 3. A student may be confused about whether amplitude is measured up or down. Either mark it from the rest line up to a peak, or define amplitude as the maximum distance from the rest position.",
+   "Content check: sci-amplitude-wavelength-frequency the figure on card line 1 has the label amplitude on a curve. Move it with pos or labelAt, or move the curve"
+  ]
+ },
+ "final": {
+  "title": "Amplitude, wavelength and frequency",
+  "card": [
+   [
+    "Amplitude",
+    "the greatest distance a wave moves from its rest position, measured from the rest line up to a peak. A bigger amplitude means the wave carries more energy."
+   ],
+   [
+    "Wavelength",
+    "the distance from one peak to the next peak. It is measured in metres (m)."
+   ],
+   [
+    "Frequency",
+    "the number of waves that pass a point each second. It is measured in hertz (Hz), where 1 Hz is one wave per second."
+   ],
+   "Wave speed = frequency × wavelength. So a wave with a frequency of 5 Hz and a wavelength of 2 m travels at 10 m/s."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "A wave with amplitude 2 and wavelength 4. The wave has peaks 2 units above the rest line at x = 1, x = 5 and x = 9. The distance between the neighbouring peaks at x = 1 and x = 5 is marked as the wavelength. The amplitude is marked from the rest line up to the peak at x = 9.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Distance",
+     "labelUnder": true
+    },
+    "y": {
+     "min": -3.5,
+     "max": 4,
+     "label": "Height"
+    },
+    "items": [
+     {
+      "type": "fn",
+      "id": "w",
+      "expr": "2\\sin(\\frac{\\pi}{2}x)",
+      "domain": [
+       0,
+       9
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       1,
+       2
+      ],
+      "on": [
+       "w"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       5,
+       2
+      ],
+      "on": [
+       "w"
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       9,
+       2
+      ],
+      "on": [
+       "w"
+      ]
+     },
+     {
+      "type": "arrow",
+      "from": [
+       1,
+       2.8
+      ],
+      "to": [
+       5,
+       2.8
+      ],
+      "label": "wavelength",
+      "pos": "above"
+     },
+     {
+      "type": "arrow",
+      "from": [
+       9,
+       0
+      ],
+      "to": [
+       9,
+       2
+      ]
+     },
+     {
+      "type": "text",
+      "at": [
+       8.7,
+       2.7
+      ],
+      "label": "amplitude",
+      "pos": "left"
+     }
+    ]
+   }
+  },
+  "remember": "Amplitude is height, wavelength is peak to peak, frequency is waves per second, and speed = frequency × wavelength.",
+  "a": {
+   "q": "Two waves travel along the same rope. Wave X has a larger amplitude than wave Y. What does this tell you about wave X?",
+   "opts": [
+    "Its peaks rise higher above the rest position",
+    "Its peaks are further apart",
+    "More of its waves pass a point each second",
+    "It travels faster along the rope"
+   ],
+   "why": "Amplitude is the greatest distance from the rest position to a peak, so a larger amplitude means higher peaks. Wavelength is the distance between peaks, which is a different measure, so it does not describe amplitude.",
+   "clue": "Amplitude is about height, not distance along the rope."
+  },
+  "b": {
+   "d": 3,
+   "q": "Waves pass a jetty in Lorne at a frequency of 0.5 Hz. The distance between neighbouring wave peaks is 8 m. What is the speed of the waves?",
+   "opts": [
+    "4 m/s",
+    "16 m/s",
+    "8.5 m/s",
+    "0.06 m/s"
+   ],
+   "why": "Wave speed = frequency × wavelength = 0.5 × 8 = 4 m/s. Dividing the wavelength by the frequency gives 16 m/s, which is a tempting mistake, but the card says to multiply.",
+   "clue": "The distance between neighbouring peaks is the wavelength."
+  }
+ },
+ "cleared_by": "auto"
+}

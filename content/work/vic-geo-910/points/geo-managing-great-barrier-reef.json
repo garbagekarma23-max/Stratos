@@ -1,0 +1,468 @@
+{
+ "id": "geo-managing-great-barrier-reef",
+ "title": "Managing the Great Barrier Reef",
+ "brief": "79745dfd9bbe",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:49Z new, write",
+  "2026-11-12T12:44:18Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T14:38:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:05:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:15:43Z write: failed the content check, writing again",
+  "2026-11-12T15:26:01Z write: done (still fails the content check)",
+  "2026-11-12T15:35:07Z check: flagged",
+  "2026-11-12T15:59:43Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:14Z claude-code review: rejected, to be written again with a note (a spot check)",
+  "2026-11-13T12:49:04Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T12:55:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T12:55:54Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01418,
+  "check": 0.01279,
+  "fix": 0.04641,
+  "recheck": 0.00827
+ },
+ "note": "Keep the card and the fix's question b. In question a, the right option 'To allow some uses in one area but limit them in another' is 56 characters while the wrong ones are 48 to 51, so it stands out as the longest. Make all four options about the same length and detail, and keep each one short enough to pass the content check. Keep the clue from giving the answer away by repeating words from the right option.",
+ "rejected": {
+  "title": "Managing the Great Barrier Reef",
+  "card": [
+   [
+    "Marine park",
+    "The Great Barrier Reef is protected as a marine park. The Great Barrier Reef Marine Park Authority, a federal government body, manages it with the Queensland Government."
+   ],
+   [
+    "Zoning",
+    "The park is split into zones with different rules. Some zones limit or ban fishing so that fish and coral can recover. Other zones allow more uses."
+   ],
+   [
+    "Local actions",
+    "Managers work with farmers to cut the soil and fertiliser that wash onto the reef. They also control crown-of-thorns starfish, which eat coral."
+   ],
+   [
+    "Global limit",
+    "These actions reduce local pressures. Warming seas come from global greenhouse gas emissions, so the reef's future depends most on cutting emissions worldwide."
+   ]
+  ],
+  "remember": "Local actions ease some pressures on the reef, but cutting global emissions matters most for its future.",
+  "a": {
+   "q": "What is the main purpose of the different zones in the Great Barrier Reef Marine Park?",
+   "opts": [
+    "To set different rules for different areas, such as fishing limits",
+    "To keep all people out of the whole reef area",
+    "To mark which areas farmers may use for crops",
+    "To stop the seas from warming in each area"
+   ],
+   "why": "Zones give different areas different rules, and some limit or ban fishing so that fish and coral can recover. Zones do not keep everyone out, because other zones allow more uses.",
+   "clue": "Think about what a zone does to rules in each area."
+  },
+  "b": {
+   "d": 3,
+   "q": "Reef managers cut farm runoff and control starfish for years, but sea temperatures keep rising. Why does the reef's future still depend most on global action?",
+   "opts": [
+    "Warming comes from global emissions, which reef managers cannot cut",
+    "Runoff and starfish are not a threat to the reef",
+    "Marine park zones cannot limit any fishing",
+    "Governments are not allowed to manage the reef"
+   ],
+   "why": "Warming seas come from global greenhouse gas emissions, and local managers cannot cut those. Local actions still help by easing other pressures, so the tempting idea that they are pointless is wrong.",
+   "clue": "Where does the cause of warming seas come from?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "reject",
+   "sure": "high",
+   "reason": "The original fails the content check on option length and its clue for question a gives the answer away. The fix deals with those, but its right option in question a is now clearly the longest (56 characters against 48 to 51).",
+   "item": "e43381622c5b1980",
+   "note": "Keep the card and the fix's question b. In question a, the right option 'To allow some uses in one area but limit them in another' is 56 characters while the wrong ones are 48 to 51, so it stands out as the longest. Make all four options about the same length and detail, and keep each one short enough to pass the content check. Keep the clue from giving the answer away by repeating words from the right option.",
+   "result": "decided",
+   "saved": {
+    "id": "geo-managing-great-barrier-reef",
+    "title": "Managing the Great Barrier Reef",
+    "brief": "79745dfd9bbe",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 3,
+     "check": 1,
+     "fix": 1,
+     "recheck": 1
+    },
+    "alone": true,
+    "usd": {
+     "write": 0.01418,
+     "check": 0.01279,
+     "fix": 0.04641,
+     "recheck": 0.00827
+    },
+    "draft": {
+     "title": "Managing the Great Barrier Reef",
+     "card": [
+      [
+       "Marine park",
+       "The Great Barrier Reef is protected as a marine park. The Great Barrier Reef Marine Park Authority, a federal government body, manages it with the Queensland Government."
+      ],
+      [
+       "Zoning",
+       "The park is split into zones with different rules. Some zones limit or ban fishing so that fish and coral can recover. Other zones allow more uses."
+      ],
+      [
+       "Local actions",
+       "Managers work with farmers to cut the soil and fertiliser that wash onto the reef. They also control crown-of-thorns starfish, which eat coral."
+      ],
+      [
+       "Global limit",
+       "These actions reduce local pressures. Warming seas come from global greenhouse gas emissions, so the reef's future depends most on cutting emissions worldwide."
+      ]
+     ],
+     "remember": "Local actions ease some pressures on the reef, but cutting global emissions matters most for its future.",
+     "a": {
+      "q": "What is the main purpose of the different zones in the Great Barrier Reef Marine Park?",
+      "opts": [
+       "To set different rules for different areas, such as fishing limits",
+       "To keep all people out of the whole reef area",
+       "To mark which areas farmers may use for crops",
+       "To stop the seas from warming in each area"
+      ],
+      "why": "Zones give different areas different rules, and some limit or ban fishing so that fish and coral can recover. Zones do not keep everyone out, because other zones allow more uses.",
+      "clue": "Think about what a zone does to rules in each area."
+     },
+     "b": {
+      "d": 3,
+      "q": "Reef managers cut farm runoff and control starfish for years, but sea temperatures keep rising. Why does the reef's future still depend most on global action?",
+      "opts": [
+       "Warming comes from global emissions, which reef managers cannot cut",
+       "Runoff and starfish are not a threat to the reef",
+       "Marine park zones cannot limit any fishing",
+       "Governments are not allowed to manage the reef"
+      ],
+      "why": "Warming seas come from global greenhouse gas emissions, and local managers cannot cut those. Local actions still help by easing other pressures, so the tempting idea that they are pointless is wrong.",
+      "clue": "Where does the cause of warming seas come from?"
+     }
+    },
+    "redone": true,
+    "local": [
+     "geo-managing-great-barrier-reefa option is 66 characters: To set different rules for different areas, such as fishing limits",
+     "geo-managing-great-barrier-reefb option is 67 characters: Warming comes from global emissions, which reef managers cannot cut"
+    ],
+    "check": {
+     "a": {
+      "best": "To set different rules for different areas, such as fishing limits",
+      "also_right": []
+     },
+     "b": {
+      "best": "Warming comes from global emissions, which reef managers cannot cut",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue ('what a zone does to rules in each area') points straight to the only option that mentions rules, so a student can match words without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the longest and the only plausible one. The distractors ('cannot limit any fishing', 'not a threat', 'not allowed to manage') are plainly false from the card, so the answer stands out without understanding."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Facts check out: GBRMPA is a federal body that manages the park jointly with Queensland, and the zoning, runoff, starfish and emissions points are right. Question a's clue gives the answer away by echoing 'rules', and question b's right option stands out against obviously false distractors."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question a, other: The clue ('what a zone does to rules in each area') points straight to the only option that mentions rules, so a student can match words without knowing the idea.",
+     "Question b, wording: The right option is the longest and the only plausible one. The distractors ('cannot limit any fishing', 'not a threat', 'not allowed to manage') are plainly false from the card, so the answer stands out without understanding.",
+     "Content check: geo-managing-great-barrier-reefa option is 66 characters: To set different rules for different areas, such as fishing limits",
+     "Content check: geo-managing-great-barrier-reefb option is 67 characters: Warming comes from global emissions, which reef managers cannot cut"
+    ],
+    "proposal": {
+     "title": "Managing the Great Barrier Reef",
+     "card": [
+      [
+       "Marine park",
+       "The Great Barrier Reef is protected as a marine park. The Great Barrier Reef Marine Park Authority, a federal government body, manages it with the Queensland Government."
+      ],
+      [
+       "Zoning",
+       "The park is split into zones with different rules. Some zones limit or ban fishing so that fish and coral can recover. Other zones allow more uses."
+      ],
+      [
+       "Local actions",
+       "Managers work with farmers to cut the soil and fertiliser that wash onto the reef. They also control crown-of-thorns starfish, which eat coral."
+      ],
+      [
+       "Global limit",
+       "These actions reduce local pressures. Warming seas come from global greenhouse gas emissions, so the reef's future depends most on cutting emissions worldwide."
+      ]
+     ],
+     "remember": "Local actions ease some pressures on the reef, but cutting global emissions matters most for its future.",
+     "a": {
+      "q": "What is the main purpose of the different zones in the Great Barrier Reef Marine Park?",
+      "opts": [
+       "To allow some uses in one area but limit them in another",
+       "To keep all people out of every part of the reef",
+       "To show farmers which coastal areas they may plant",
+       "To stop the sea from warming in the protected areas"
+      ],
+      "why": "Each zone has its own rules, so some limit or ban fishing while others allow more uses. Zones do not keep everyone out of the whole reef, and they cannot stop warming, which comes from global emissions.",
+      "clue": "Can you do the same things in every part of the park?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Reef managers cut farm runoff and control starfish for years, but sea temperatures keep rising. Why does the reef's future still depend most on global action?",
+      "opts": [
+       "Warming seas come from emissions made around the world",
+       "Local actions do nothing to reduce pressure on the reef",
+       "Farm runoff from Queensland is what warms the sea",
+       "Stricter fishing zones could stop the sea from warming"
+      ],
+      "why": "Warming seas are caused by greenhouse gas emissions from all over the world, so local work cannot fix them. It is tempting to think local actions are pointless, but they do ease other pressures such as runoff and starfish.",
+      "clue": "Where do the gases that warm the sea come from?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-12T17:07:11Z",
+     "result": "spot check",
+     "why": [],
+     "check": {
+      "a": {
+       "best": "To allow some uses in one area but limit them in another",
+       "also_right": []
+      },
+      "b": {
+       "best": "Warming seas come from emissions made around the world",
+       "also_right": []
+      },
+      "problems": [],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "No problems found."
+     },
+     "flags": []
+    },
+    "auto": {
+     "at": "2026-11-12T17:07:11Z",
+     "rules": 1,
+     "by": "recheck",
+     "n": 1,
+     "decision": "used the fix",
+     "spot": true,
+     "sure": "high",
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue ('what a zone does to rules in each area') points straight to the only option that mentions rules, so a student can match words without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the longest and the only plausible one. The distractors ('cannot limit any fishing', 'not a threat', 'not allowed to manage') are plainly false from the card, so the answer stands out without understanding."
+      }
+     ],
+     "flags": [
+      "Question a, other: The clue ('what a zone does to rules in each area') points straight to the only option that mentions rules, so a student can match words without knowing the idea.",
+      "Question b, wording: The right option is the longest and the only plausible one. The distractors ('cannot limit any fishing', 'not a threat', 'not allowed to manage') are plainly false from the card, so the answer stands out without understanding.",
+      "Content check: geo-managing-great-barrier-reefa option is 66 characters: To set different rules for different areas, such as fishing limits",
+      "Content check: geo-managing-great-barrier-reefb option is 67 characters: Warming comes from global emissions, which reef managers cannot cut"
+     ]
+    },
+    "rewrites": 0
+   },
+   "after": "449dc89565325e35"
+  },
+  {
+   "at": "2026-11-13T12:49:04Z",
+   "step": "write",
+   "version": {
+    "title": "Managing the Great Barrier Reef",
+    "card": [
+     [
+      "Marine park",
+      "The Great Barrier Reef is protected as a marine park. The Great Barrier Reef Marine Park Authority, a federal government body, manages it with the Queensland Government."
+     ],
+     [
+      "Zoning",
+      "The park is split into zones with different rules. Some zones limit or ban fishing so that fish and coral can recover. Other zones allow more uses."
+     ],
+     [
+      "Local actions",
+      "Managers work with farmers to cut the soil and fertiliser that wash onto the reef. They also control crown-of-thorns starfish, which eat coral."
+     ],
+     [
+      "Global limit",
+      "These actions reduce local pressures. Warming seas come from global greenhouse gas emissions, so the reef's future depends most on cutting emissions worldwide."
+     ]
+    ],
+    "remember": "Local actions ease some pressures on the reef, but cutting global emissions matters most for its future.",
+    "a": {
+     "q": "What is the main purpose of the different zones in the Great Barrier Reef Marine Park?",
+     "opts": [
+      "To set different rules on fishing and other uses by area",
+      "To close every part of the reef to all boats and visitors",
+      "To track where crown-of-thorns starfish are spreading",
+      "To cool the water in each area so that coral can recover"
+     ],
+     "why": "Zones give different parts of the park different rules. Some limit or ban fishing so fish and coral can recover, while others allow more uses. Zones do not close the whole reef, and they cannot cool the water, because warming comes from global emissions.",
+     "clue": "Think about what changes as you move from one zone to the next."
+    },
+    "b": {
+     "d": 3,
+     "q": "Reef managers cut farm runoff and control starfish for years, but sea temperatures keep rising. Why does the reef's future still depend most on global action?",
+     "opts": [
+      "Warming seas come from emissions made all over the world",
+      "Runoff and starfish cause most of the warming in the sea",
+      "Local actions have made the reef's other threats worse",
+      "Australia's own emissions are the only cause of warming"
+     ],
+     "why": "Warming seas come from greenhouse gas emissions around the world, so reef managers cannot fix them locally. Cutting runoff and controlling starfish ease other pressures, but they do not cause or stop the warming.",
+     "clue": "Ask whether reef managers can reach the cause of the heat."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T12:55:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "To set different rules on fishing and other uses by area",
+     "also_right": []
+    },
+    "b": {
+     "best": "Warming seas come from emissions made all over the world",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Managing the Great Barrier Reef",
+  "card": [
+   [
+    "Marine park",
+    "The Great Barrier Reef is protected as a marine park. The Great Barrier Reef Marine Park Authority, a federal government body, manages it with the Queensland Government."
+   ],
+   [
+    "Zoning",
+    "The park is split into zones with different rules. Some zones limit or ban fishing so that fish and coral can recover. Other zones allow more uses."
+   ],
+   [
+    "Local actions",
+    "Managers work with farmers to cut the soil and fertiliser that wash onto the reef. They also control crown-of-thorns starfish, which eat coral."
+   ],
+   [
+    "Global limit",
+    "These actions reduce local pressures. Warming seas come from global greenhouse gas emissions, so the reef's future depends most on cutting emissions worldwide."
+   ]
+  ],
+  "remember": "Local actions ease some pressures on the reef, but cutting global emissions matters most for its future.",
+  "a": {
+   "q": "What is the main purpose of the different zones in the Great Barrier Reef Marine Park?",
+   "opts": [
+    "To set different rules on fishing and other uses by area",
+    "To close every part of the reef to all boats and visitors",
+    "To track where crown-of-thorns starfish are spreading",
+    "To cool the water in each area so that coral can recover"
+   ],
+   "why": "Zones give different parts of the park different rules. Some limit or ban fishing so fish and coral can recover, while others allow more uses. Zones do not close the whole reef, and they cannot cool the water, because warming comes from global emissions.",
+   "clue": "Think about what changes as you move from one zone to the next."
+  },
+  "b": {
+   "d": 3,
+   "q": "Reef managers cut farm runoff and control starfish for years, but sea temperatures keep rising. Why does the reef's future still depend most on global action?",
+   "opts": [
+    "Warming seas come from emissions made all over the world",
+    "Runoff and starfish cause most of the warming in the sea",
+    "Local actions have made the reef's other threats worse",
+    "Australia's own emissions are the only cause of warming"
+   ],
+   "why": "Warming seas come from greenhouse gas emissions around the world, so reef managers cannot fix them locally. Cutting runoff and controlling starfish ease other pressures, but they do not cause or stop the warming.",
+   "clue": "Ask whether reef managers can reach the cause of the heat."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To set different rules on fishing and other uses by area",
+   "also_right": []
+  },
+  "b": {
+   "best": "Warming seas come from emissions made all over the world",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Managing the Great Barrier Reef",
+  "card": [
+   [
+    "Marine park",
+    "The Great Barrier Reef is protected as a marine park. The Great Barrier Reef Marine Park Authority, a federal government body, manages it with the Queensland Government."
+   ],
+   [
+    "Zoning",
+    "The park is split into zones with different rules. Some zones limit or ban fishing so that fish and coral can recover. Other zones allow more uses."
+   ],
+   [
+    "Local actions",
+    "Managers work with farmers to cut the soil and fertiliser that wash onto the reef. They also control crown-of-thorns starfish, which eat coral."
+   ],
+   [
+    "Global limit",
+    "These actions reduce local pressures. Warming seas come from global greenhouse gas emissions, so the reef's future depends most on cutting emissions worldwide."
+   ]
+  ],
+  "remember": "Local actions ease some pressures on the reef, but cutting global emissions matters most for its future.",
+  "a": {
+   "q": "What is the main purpose of the different zones in the Great Barrier Reef Marine Park?",
+   "opts": [
+    "To set different rules on fishing and other uses by area",
+    "To close every part of the reef to all boats and visitors",
+    "To track where crown-of-thorns starfish are spreading",
+    "To cool the water in each area so that coral can recover"
+   ],
+   "why": "Zones give different parts of the park different rules. Some limit or ban fishing so fish and coral can recover, while others allow more uses. Zones do not close the whole reef, and they cannot cool the water, because warming comes from global emissions.",
+   "clue": "Think about what changes as you move from one zone to the next."
+  },
+  "b": {
+   "d": 3,
+   "q": "Reef managers cut farm runoff and control starfish for years, but sea temperatures keep rising. Why does the reef's future still depend most on global action?",
+   "opts": [
+    "Warming seas come from emissions made all over the world",
+    "Runoff and starfish cause most of the warming in the sea",
+    "Local actions have made the reef's other threats worse",
+    "Australia's own emissions are the only cause of warming"
+   ],
+   "why": "Warming seas come from greenhouse gas emissions around the world, so reef managers cannot fix them locally. Cutting runoff and controlling starfish ease other pressures, but they do not cause or stop the warming.",
+   "clue": "Ask whether reef managers can reach the cause of the heat."
+  }
+ },
+ "checked_by": "claude-code"
+}

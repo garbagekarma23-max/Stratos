@@ -1,0 +1,510 @@
+{
+ "id": "mat-graphs-sine-cosine-2-vic",
+ "title": "Graphs of sine and cosine",
+ "brief": "d64c103b4b60",
+ "shortlist": [
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.545
+  ],
+  [
+   "mat-graphs-sine-cosine",
+   0.391
+  ],
+  [
+   "mat-sine-cosine-rules",
+   0.346
+  ],
+  [
+   "mat-sine-cosine-rules-three",
+   0.321
+  ],
+  [
+   "mat-cosine-rule",
+   0.245
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:49Z write: failed the content check, writing again",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:09Z check: flagged",
+  "2026-11-12T15:59:44Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00047,
+  "write": 0.03766,
+  "check": 0.01567,
+  "fix": 0.06224,
+  "recheck": 0.01102
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points teach sine and cosine graphs but go beyond this point: one adds tangent and is written for Year 11 NSW, and the other covers general amplitude, period and mean-value transformations with radians and questions that go past the basic graphs in the brief, so neither matches this Year 10 point exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Graphs of sine and cosine",
+  "card": [
+   [
+    "Sine",
+    "The graph of \\(y = \\sin x\\) is a wave. It starts at \\(0\\) when \\(x = 0^{\\circ}\\), rises to \\(1\\) at \\(90^{\\circ}\\), is back to \\(0\\) at \\(180^{\\circ}\\), falls to \\(-1\\) at \\(270^{\\circ}\\) and returns to \\(0\\) at \\(360^{\\circ}\\)."
+   ],
+   [
+    "Cosine",
+    "The graph of \\(y = \\cos x\\) has the same wave shape, but it starts at its highest point. It is \\(1\\) at \\(0^{\\circ}\\), \\(0\\) at \\(90^{\\circ}\\), \\(-1\\) at \\(180^{\\circ}\\), \\(0\\) at \\(270^{\\circ}\\) and \\(1\\) again at \\(360^{\\circ}\\)."
+   ],
+   "Both waves stay between \\(-1\\) and \\(1\\), so their highest value is \\(1\\) and their lowest is \\(-1\\).",
+   "Both waves repeat every \\(360^{\\circ}\\). So the value at \\(x\\) is the same as the value at \\(x + 360^{\\circ}\\). For example, \\(\\sin 400^{\\circ} = \\sin 40^{\\circ}\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\sin x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). It starts at \\(0\\), peaks at \\(1\\) when \\(x = 90^{\\circ}\\), crosses \\(0\\) at \\(180^{\\circ}\\), reaches its lowest value of \\(-1\\) at \\(270^{\\circ}\\) and returns to \\(0\\) at \\(360^{\\circ}\\).",
+    "x": {
+     "min": -90,
+     "max": 450,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "\\(y\\)",
+     "step": 0.5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\sin(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "label": "\\(y = \\sin x\\)",
+      "labelAt": 315,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       90,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       270,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
+  "remember": "Sine and cosine are waves between \\(-1\\) and \\(1\\) that repeat every \\(360^{\\circ}\\). Sine starts at \\(0\\), cosine starts at \\(1\\).",
+  "a": {
+   "q": "What is the value of \\(\\sin 450^{\\circ}\\)?",
+   "opts": [
+    "\\(1\\)",
+    "\\(0\\)",
+    "\\(-1\\)",
+    "\\(0.5\\)"
+   ],
+   "why": "The wave repeats every \\(360^{\\circ}\\), so \\(\\sin 450^{\\circ} = \\sin 90^{\\circ} = 1\\). The value \\(0\\) comes from forgetting to subtract \\(360^{\\circ}\\) and treating the angle as a multiple of \\(180^{\\circ}\\).",
+   "clue": "Take away one full turn first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = \\cos x\\) for \\(x\\) from \\(0^{\\circ}\\) to \\(720^{\\circ}\\). How many times does her graph reach its highest value?",
+   "opts": [
+    "3 times",
+    "2 times",
+    "4 times",
+    "1 time"
+   ],
+   "why": "Cosine starts at its highest value, \\(1\\), when \\(x = 0^{\\circ}\\). The wave repeats every \\(360^{\\circ}\\), so it is at \\(1\\) again at \\(360^{\\circ}\\) and \\(720^{\\circ}\\), which is 3 times. Counting only 2 leaves out the starting point.",
+   "clue": "Cosine starts at its highest point. Count that one too."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(1\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "3 times",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says the wrong answer 0 comes from 'treating the angle as a multiple of 180°', but 450° is not a multiple of 180°. This could confuse students. Say instead that a student might wrongly think sin 450° is 0, as it is at 180° or 360°."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: sin 450° = 1, and cos x reaches 1 three times from 0° to 720°. The only issue is the why for (a), which confusingly says 450° is treated as a multiple of 180° when it is not one."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why says the wrong answer 0 comes from 'treating the angle as a multiple of 180°', but 450° is not a multiple of 180°. This could confuse students. Say instead that a student might wrongly think sin 450° is 0, as it is at 180° or 360°."
+ ],
+ "proposal": {
+  "title": "Graphs of sine and cosine",
+  "card": [
+   [
+    "Sine",
+    "The graph of \\(y = \\sin x\\) is a wave. It starts at \\(0\\) when \\(x = 0^{\\circ}\\), rises to \\(1\\) at \\(90^{\\circ}\\), is back to \\(0\\) at \\(180^{\\circ}\\), falls to \\(-1\\) at \\(270^{\\circ}\\) and returns to \\(0\\) at \\(360^{\\circ}\\)."
+   ],
+   [
+    "Cosine",
+    "The graph of \\(y = \\cos x\\) has the same wave shape, but it starts at its highest point. It is \\(1\\) at \\(0^{\\circ}\\), \\(0\\) at \\(90^{\\circ}\\), \\(-1\\) at \\(180^{\\circ}\\), \\(0\\) at \\(270^{\\circ}\\) and \\(1\\) again at \\(360^{\\circ}\\)."
+   ],
+   "Both waves stay between \\(-1\\) and \\(1\\), so their highest value is \\(1\\) and their lowest is \\(-1\\).",
+   "Both waves repeat every \\(360^{\\circ}\\). So the value at \\(x\\) is the same as the value at \\(x + 360^{\\circ}\\). For example, \\(\\sin 400^{\\circ} = \\sin 40^{\\circ}\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\sin x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). It starts at \\(0\\), peaks at \\(1\\) when \\(x = 90^{\\circ}\\), crosses \\(0\\) at \\(180^{\\circ}\\), reaches its lowest value of \\(-1\\) at \\(270^{\\circ}\\) and returns to \\(0\\) at \\(360^{\\circ}\\).",
+    "x": {
+     "min": -90,
+     "max": 450,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "\\(y\\)",
+     "step": 0.5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\sin(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "label": "\\(y = \\sin x\\)",
+      "labelAt": 315,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       90,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       270,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
+  "remember": "Sine and cosine are waves between \\(-1\\) and \\(1\\) that repeat every \\(360^{\\circ}\\). Sine starts at \\(0\\), cosine starts at \\(1\\).",
+  "a": {
+   "q": "What is the value of \\(\\sin 450^{\\circ}\\)?",
+   "opts": [
+    "\\(1\\)",
+    "\\(0\\)",
+    "\\(-1\\)",
+    "\\(0.5\\)"
+   ],
+   "why": "The wave repeats every \\(360^{\\circ}\\), so \\(\\sin 450^{\\circ} = \\sin 90^{\\circ} = 1\\). A student might wrongly think \\(\\sin 450^{\\circ}\\) is \\(0\\), as it is at \\(180^{\\circ}\\) or \\(360^{\\circ}\\), but taking away one full turn leaves \\(90^{\\circ}\\), where sine is at its highest.",
+   "clue": "Take away one full turn first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = \\cos x\\) for \\(x\\) from \\(0^{\\circ}\\) to \\(720^{\\circ}\\). How many times does her graph reach its highest value?",
+   "opts": [
+    "3 times",
+    "2 times",
+    "4 times",
+    "1 time"
+   ],
+   "why": "Cosine starts at its highest value, \\(1\\), when \\(x = 0^{\\circ}\\). The wave repeats every \\(360^{\\circ}\\), so it is at \\(1\\) again at \\(360^{\\circ}\\) and \\(720^{\\circ}\\), which is 3 times. Counting only 2 leaves out the starting point.",
+   "clue": "Cosine starts at its highest point. Count that one too."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(1\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "3 times",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says the wrong answer 0 comes from 'treating the angle as a multiple of 180°', but 450° is not a multiple of 180°. This could confuse students. Say instead that a student might wrongly think sin 450° is 0, as it is at 180° or 360°."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why says the wrong answer 0 comes from 'treating the angle as a multiple of 180°', but 450° is not a multiple of 180°. This could confuse students. Say instead that a student might wrongly think sin 450° is 0, as it is at 180° or 360°."
+  ]
+ },
+ "final": {
+  "title": "Graphs of sine and cosine",
+  "card": [
+   [
+    "Sine",
+    "The graph of \\(y = \\sin x\\) is a wave. It starts at \\(0\\) when \\(x = 0^{\\circ}\\), rises to \\(1\\) at \\(90^{\\circ}\\), is back to \\(0\\) at \\(180^{\\circ}\\), falls to \\(-1\\) at \\(270^{\\circ}\\) and returns to \\(0\\) at \\(360^{\\circ}\\)."
+   ],
+   [
+    "Cosine",
+    "The graph of \\(y = \\cos x\\) has the same wave shape, but it starts at its highest point. It is \\(1\\) at \\(0^{\\circ}\\), \\(0\\) at \\(90^{\\circ}\\), \\(-1\\) at \\(180^{\\circ}\\), \\(0\\) at \\(270^{\\circ}\\) and \\(1\\) again at \\(360^{\\circ}\\)."
+   ],
+   "Both waves stay between \\(-1\\) and \\(1\\), so their highest value is \\(1\\) and their lowest is \\(-1\\).",
+   "Both waves repeat every \\(360^{\\circ}\\). So the value at \\(x\\) is the same as the value at \\(x + 360^{\\circ}\\). For example, \\(\\sin 400^{\\circ} = \\sin 40^{\\circ}\\)."
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The graph of \\(y = \\sin x\\) from \\(0^{\\circ}\\) to \\(360^{\\circ}\\). It starts at \\(0\\), peaks at \\(1\\) when \\(x = 90^{\\circ}\\), crosses \\(0\\) at \\(180^{\\circ}\\), reaches its lowest value of \\(-1\\) at \\(270^{\\circ}\\) and returns to \\(0\\) at \\(360^{\\circ}\\).",
+    "x": {
+     "min": -90,
+     "max": 450,
+     "label": "\\(x\\)",
+     "step": 90,
+     "nums": false
+    },
+    "y": {
+     "min": -1.5,
+     "max": 1.5,
+     "label": "\\(y\\)",
+     "step": 0.5
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\sin(\\frac{\\pi x}{180})",
+      "domain": [
+       0,
+       360
+      ],
+      "label": "\\(y = \\sin x\\)",
+      "labelAt": 315,
+      "pos": "below-right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       90,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       180,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     },
+     {
+      "type": "point",
+      "at": [
+       270,
+       -1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     },
+     {
+      "type": "point",
+      "at": [
+       360,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "x-intercept"
+     }
+    ]
+   }
+  },
+  "remember": "Sine and cosine are waves between \\(-1\\) and \\(1\\) that repeat every \\(360^{\\circ}\\). Sine starts at \\(0\\), cosine starts at \\(1\\).",
+  "a": {
+   "q": "What is the value of \\(\\sin 450^{\\circ}\\)?",
+   "opts": [
+    "\\(1\\)",
+    "\\(0\\)",
+    "\\(-1\\)",
+    "\\(0.5\\)"
+   ],
+   "why": "The wave repeats every \\(360^{\\circ}\\), so \\(\\sin 450^{\\circ} = \\sin 90^{\\circ} = 1\\). A student might wrongly think \\(\\sin 450^{\\circ}\\) is \\(0\\), as it is at \\(180^{\\circ}\\) or \\(360^{\\circ}\\), but taking away one full turn leaves \\(90^{\\circ}\\), where sine is at its highest.",
+   "clue": "Take away one full turn first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sketches \\(y = \\cos x\\) for \\(x\\) from \\(0^{\\circ}\\) to \\(720^{\\circ}\\). How many times does her graph reach its highest value?",
+   "opts": [
+    "3 times",
+    "2 times",
+    "4 times",
+    "1 time"
+   ],
+   "why": "Cosine starts at its highest value, \\(1\\), when \\(x = 0^{\\circ}\\). The wave repeats every \\(360^{\\circ}\\), so it is at \\(1\\) again at \\(360^{\\circ}\\) and \\(720^{\\circ}\\), which is 3 times. Counting only 2 leaves out the starting point.",
+   "clue": "Cosine starts at its highest point. Count that one too."
+  }
+ },
+ "cleared_by": "recheck"
+}

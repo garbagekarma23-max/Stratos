@@ -1,0 +1,245 @@
+{
+ "id": "mat-tree-diagrams-two-steps",
+ "title": "Tree diagrams for two steps",
+ "brief": "f8bcb6f5d060",
+ "shortlist": [
+  [
+   "mat-tree-diagrams-two-events",
+   0.617
+  ],
+  [
+   "mat-listing-outcomes-compound-events",
+   0.42
+  ],
+  [
+   "mat-sample-spaces-probability-2",
+   0.314
+  ],
+  [
+   "mat-venn-diagrams",
+   0.257
+  ],
+  [
+   "mat-two-way-tables-2",
+   0.256
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-tree-diagrams-two-events, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:58Z confirm: Claude Opus 5.5 may reuse mat-tree-diagrams-two-events, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-tree-diagrams-two-events (2 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-tree-diagrams-two-events on the next run",
+  "2026-11-13T13:04:54Z adapt: done",
+  "2026-11-13T13:11:26Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00048,
+  "confirm": 0.01127,
+  "adapt": 0.00566,
+  "check": 0.00911
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-tree-diagrams-two-events",
+  "changes": [
+   "Add that each combined outcome's probability can be counted from its path when the outcomes are equally likely, since the brief's purpose is probability and the card only covers listing outcomes."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same two-step tree diagram idea at the right Year 8 depth, but it does not mention counting probabilities of combined outcomes, which the brief names as its purpose.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-tree-diagrams-two-events",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point already teaches Year 8 students to use a two-step tree diagram to list and count every combined outcome, matching the same Australian content used in Victoria, and its terms and questions suit a Victorian course as they are.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-tree-diagrams-two-events",
+  "changes": [
+   "Add a card line saying that when every path is equally likely, each combined outcome's probability is 1 over the number of paths, such as P(HH) = 1/4 for two coin tosses, written in LaTeX.",
+   "Make one question ask for the probability of a combined outcome counted from the tree."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4",
+   "card3",
+   "card4 label",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches listing every outcome of two steps with a tree diagram, but it only counts outcomes. The brief asks for each combined outcome's probability to be found from the tree.",
+   "item": "6cde5baaa213406b",
+   "result": "decided",
+   "saved": {
+    "id": "mat-tree-diagrams-two-steps",
+    "title": "Tree diagrams for two steps",
+    "brief": "f8bcb6f5d060",
+    "shortlist": [
+     [
+      "mat-tree-diagrams-two-events",
+      0.617
+     ],
+     [
+      "mat-listing-outcomes-compound-events",
+      0.42
+     ],
+     [
+      "mat-sample-spaces-probability-2",
+      0.314
+     ],
+     [
+      "mat-venn-diagrams",
+      0.257
+     ],
+     [
+      "mat-two-way-tables-2",
+      0.256
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00048,
+     "confirm": 0.01127
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-tree-diagrams-two-events",
+     "changes": [
+      "Add that each combined outcome's probability can be counted from its path when the outcomes are equally likely, since the brief's purpose is probability and the card only covers listing outcomes."
+     ],
+     "sure": "medium",
+     "reason": "The bank card teaches the same two-step tree diagram idea at the right Year 8 depth, but it does not mention counting probabilities of combined outcomes, which the brief names as its purpose.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "mat-tree-diagrams-two-events",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point already teaches Year 8 students to use a two-step tree diagram to list and count every combined outcome, matching the same Australian content used in Victoria, and its terms and questions suit a Victorian course as they are.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "cfb03c3a119ebe63"
+  }
+ ],
+ "draft": {
+  "title": "Tree diagrams for two events",
+  "card": [
+   "A tree diagram shows the outcomes of one step as branches. Each outcome then splits into new branches for the second step.",
+   "Follow one path from the start to the end of the branches. That path is one combined outcome, such as red then blue.",
+   "To list every combined outcome, follow every path. The number of paths is the number of outcomes in the first step \\(\\times\\) the number in the second.",
+   [
+    "Example",
+    "When every path is equally likely, each combined outcome has probability \\(\\frac{1}{\\text{number of paths}}\\). For two coin tosses there are 4 paths, so \\(P(HH) = \\frac{1}{4}\\)."
+   ]
+  ],
+  "remember": "Each path through the branches is one combined outcome.",
+  "a": {
+   "q": "A fair coin is tossed twice. Counting the paths on the tree diagram, what is \\(P(HT)\\)?",
+   "opts": [
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{1}{2}\\)",
+    "\\(\\frac{1}{3}\\)",
+    "\\(\\frac{3}{4}\\)"
+   ],
+   "why": "The tree has \\(2 \\times 2 = 4\\) equally likely paths: HH, HT, TH and TT. HT is one of them, so \\(P(HT) = \\frac{1}{4}\\). Using \\(\\frac{1}{2}\\) counts only the first toss.",
+   "clue": "Count all the paths, then count the paths that match."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam picks one of three cards marked A, B and C, then tosses a coin. Which list shows every outcome on the tree?",
+   "opts": [
+    "AH, AT, BH, BT, CH, CT",
+    "AH, AT, BH, BT",
+    "AH, BT, CH",
+    "AA, BB, CC, HH, TT, HT"
+   ],
+   "why": "Each of the 3 cards splits into heads and tails, giving \\(3 \\times 2 = 6\\) paths. The list with only 4 outcomes leaves out card C. Each path must have one card result then one coin result.",
+   "clue": "Follow each card's branches to both coin results."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{1}{4}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "AH, AT, BH, BT, CH, CT",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Tree diagrams for two events",
+  "card": [
+   "A tree diagram shows the outcomes of one step as branches. Each outcome then splits into new branches for the second step.",
+   "Follow one path from the start to the end of the branches. That path is one combined outcome, such as red then blue.",
+   "To list every combined outcome, follow every path. The number of paths is the number of outcomes in the first step \\(\\times\\) the number in the second.",
+   [
+    "Example",
+    "When every path is equally likely, each combined outcome has probability \\(\\frac{1}{\\text{number of paths}}\\). For two coin tosses there are 4 paths, so \\(P(HH) = \\frac{1}{4}\\)."
+   ]
+  ],
+  "remember": "Each path through the branches is one combined outcome.",
+  "a": {
+   "q": "A fair coin is tossed twice. Counting the paths on the tree diagram, what is \\(P(HT)\\)?",
+   "opts": [
+    "\\(\\frac{1}{4}\\)",
+    "\\(\\frac{1}{2}\\)",
+    "\\(\\frac{1}{3}\\)",
+    "\\(\\frac{3}{4}\\)"
+   ],
+   "why": "The tree has \\(2 \\times 2 = 4\\) equally likely paths: HH, HT, TH and TT. HT is one of them, so \\(P(HT) = \\frac{1}{4}\\). Using \\(\\frac{1}{2}\\) counts only the first toss.",
+   "clue": "Count all the paths, then count the paths that match."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam picks one of three cards marked A, B and C, then tosses a coin. Which list shows every outcome on the tree?",
+   "opts": [
+    "AH, AT, BH, BT, CH, CT",
+    "AH, AT, BH, BT",
+    "AH, BT, CH",
+    "AA, BB, CC, HH, TT, HT"
+   ],
+   "why": "Each of the 3 cards splits into heads and tails, giving \\(3 \\times 2 = 6\\) paths. The list with only 4 outcomes leaves out card C. Each path must have one card result then one coin result.",
+   "clue": "Follow each card's branches to both coin results."
+  }
+ }
+}

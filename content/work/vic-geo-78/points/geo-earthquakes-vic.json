@@ -1,0 +1,367 @@
+{
+ "id": "geo-earthquakes-vic",
+ "title": "Earthquakes",
+ "brief": "41b73ee5ab7d",
+ "shortlist": [
+  [
+   "geo-earthquakes",
+   0.484
+  ],
+  [
+   "geo-reducing-geomorphological-hazard-s",
+   0.277
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:48Z new, match",
+  "2026-11-12T12:44:17Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:41Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:00Z write: failed the content check, writing again",
+  "2026-11-12T15:35:06Z write: done",
+  "2026-11-12T15:59:42Z check: flagged",
+  "2026-11-12T16:02:55Z fix: suggested",
+  "2026-11-12T17:07:11Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (b other)",
+  "2026-11-13T09:32:52Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01398,
+  "check": 0.01117,
+  "fix": 0.01886,
+  "recheck": 0.00803
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's Earthquakes point covers how stress builds and releases along a fault but not the impacts (collapsed buildings, landslides, fires) or why vulnerable, dense populations suffer most, which the new brief asks for, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: Why (b) says 'only the first town has both', but options are shown in random order, and here the right town (poorly built homes, many people packed close) is listed second. A student could be confused about which town is meant. Name the town by its features instead of its position.",
+ "rejected": {
+  "title": "Earthquakes",
+  "card": [
+   "An earthquake is a shaking of the ground. It happens when rock along a fault, a crack in the Earth's crust, slips suddenly.",
+   "Stress builds up as rock on each side of a fault is pushed or pulled. When the rock finally gives way, the stored energy is released as waves that shake the ground.",
+   "Impacts can include collapsed buildings, landslides on steep slopes and fires from broken gas pipes and power lines.",
+   "Harm is usually worst where buildings are weak and many people live close together. The same shaking can cause far less damage where buildings are strong and fewer people live."
+  ],
+  "remember": "A sudden slip along a fault causes an earthquake. Weak buildings and dense populations make the harm worse.",
+  "a": {
+   "q": "Stress has built up in the crust near a fault. Which event then shakes the ground?",
+   "opts": [
+    "The rock along the fault slips suddenly",
+    "The rock along the fault slowly wears away",
+    "Heavy rain loosens soil on a nearby slope",
+    "Waves from the ocean hit the coast"
+   ],
+   "why": "When the stressed rock gives way and slips, the stored energy is released as waves that shake the ground. Slow wearing away of rock is erosion, which does not suddenly release energy.",
+   "clue": "Think about what happens along a crack in the crust."
+  },
+  "b": {
+   "d": 3,
+   "q": "One earthquake shakes four towns equally hard. Which town is likely to suffer the most harm?",
+   "opts": [
+    "Poorly built homes, with many people packed close",
+    "Well-built homes, with many people packed close",
+    "Poorly built homes, with a few farms spread apart",
+    "Well-built homes, with a few farms spread apart"
+   ],
+   "why": "Harm is usually worst where buildings are weak and many people live close together, and only the first town has both. A town with poorly built homes but few people spread apart has fewer people near each building that might fall, so less harm is likely.",
+   "clue": "The card names two things that make harm worse."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: Why (b) says 'only the first town has both', but options are shown in random order, and here the right town (poorly built homes, many people packed close) is listed second. A student could be confused about which town is meant. Name the town by its features instead of its position."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Earthquakes",
+     "card": [
+      "An earthquake is a shaking of the ground. It happens when rock along a fault, a crack in the Earth's crust, slips suddenly.",
+      "Stress builds up as rock on each side of a fault is pushed or pulled. When the rock finally gives way, the stored energy is released as waves that shake the ground.",
+      "Impacts can include collapsed buildings, landslides on steep slopes and fires from broken gas pipes and power lines.",
+      "Harm is usually worst where buildings are weak and many people live close together. The same shaking can cause far less damage where buildings are strong and fewer people live."
+     ],
+     "remember": "A sudden slip along a fault causes an earthquake. Weak buildings and dense populations make the harm worse.",
+     "a": {
+      "q": "Stress has built up in the crust near a fault. Which event then shakes the ground?",
+      "opts": [
+       "The rock along the fault slips suddenly",
+       "The rock along the fault slowly wears away",
+       "Heavy rain loosens soil on a nearby slope",
+       "Waves from the ocean hit the coast"
+      ],
+      "why": "When the stressed rock gives way and slips, the stored energy is released as waves that shake the ground. Slow wearing away of rock is erosion, which does not suddenly release energy.",
+      "clue": "Think about what happens along a crack in the crust."
+     },
+     "b": {
+      "d": 3,
+      "q": "Two towns in different countries have the same strong earthquake. Town A has weak buildings and crowded streets. Town B has strong buildings and fewer people. Why is Town A likely to suffer more harm?",
+      "opts": [
+       "Weak buildings and dense population increase the damage",
+       "Its earthquake releases more energy than Town B's",
+       "Fires only start in towns that have crowded streets",
+       "Landslides only happen in towns with weak buildings"
+      ],
+      "why": "The earthquake is the same, so the difference comes from how well buildings stand up and how many people are close by. The energy released is not the reason, because the shaking was the same in both towns.",
+      "clue": "The earthquake was the same size in both towns."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The rock along the fault slips suddenly",
+      "also_right": []
+     },
+     "b": {
+      "best": "Weak buildings and dense population increase the damage",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Two distractors use 'only' ('Landslides only happen…', 'Fires only start…'), absolute claims that are easy to rule out. The right option also restates the stem's 'weak buildings and crowded streets', and the clue rules out the energy option. A student can pick the answer without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and question a are accurate. In question b, two 'only' distractors and a right option that echoes the stem make the answer too easy to pick without understanding."
+    },
+    "flags": [
+     "Question b, wording: Two distractors use 'only' ('Landslides only happen…', 'Fires only start…'), absolute claims that are easy to rule out. The right option also restates the stem's 'weak buildings and crowded streets', and the clue rules out the energy option. A student can pick the answer without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Earthquakes",
+     "card": [
+      "An earthquake is a shaking of the ground. It happens when rock along a fault, a crack in the Earth's crust, slips suddenly.",
+      "Stress builds up as rock on each side of a fault is pushed or pulled. When the rock finally gives way, the stored energy is released as waves that shake the ground.",
+      "Impacts can include collapsed buildings, landslides on steep slopes and fires from broken gas pipes and power lines.",
+      "Harm is usually worst where buildings are weak and many people live close together. The same shaking can cause far less damage where buildings are strong and fewer people live."
+     ],
+     "remember": "A sudden slip along a fault causes an earthquake. Weak buildings and dense populations make the harm worse.",
+     "a": {
+      "q": "Stress has built up in the crust near a fault. Which event then shakes the ground?",
+      "opts": [
+       "The rock along the fault slips suddenly",
+       "The rock along the fault slowly wears away",
+       "Heavy rain loosens soil on a nearby slope",
+       "Waves from the ocean hit the coast"
+      ],
+      "why": "When the stressed rock gives way and slips, the stored energy is released as waves that shake the ground. Slow wearing away of rock is erosion, which does not suddenly release energy.",
+      "clue": "Think about what happens along a crack in the crust."
+     },
+     "b": {
+      "d": 3,
+      "q": "One earthquake shakes four towns equally hard. Which town is likely to suffer the most harm?",
+      "opts": [
+       "Poorly built homes, with many people packed close",
+       "Well-built homes, with many people packed close",
+       "Poorly built homes, with a few farms spread apart",
+       "Well-built homes, with a few farms spread apart"
+      ],
+      "why": "Harm is usually worst where buildings are weak and many people live close together, and only the first town has both. A town with poorly built homes but few people spread apart has fewer people near each building that might fall, so less harm is likely.",
+      "clue": "The card names two things that make harm worse."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-12T17:07:11Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The rock along the fault slips suddenly",
+       "also_right": []
+      },
+      "b": {
+       "best": "Poorly built homes, with many people packed close",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "Why (b) says 'only the first town has both', but options are shown in random order, and here the right town (poorly built homes, many people packed close) is listed second. A student could be confused about which town is meant. Name the town by its features instead of its position."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate and suit Years 7–8. The only problem is that Why (b) calls the right answer 'the first town', which won't match the shuffled option order."
+     },
+     "flags": [
+      "Question b, other: Why (b) says 'only the first town has both', but options are shown in random order, and here the right town (poorly built homes, many people packed close) is listed second. A student could be confused about which town is meant. Name the town by its features instead of its position."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:52Z",
+   "step": "write",
+   "version": {
+    "title": "Earthquakes",
+    "card": [
+     "An earthquake is a shaking of the ground. It happens when rock along a fault, a crack in the Earth's crust, slips suddenly.",
+     "Stress builds up as rock on each side of a fault is pushed or pulled. When the rock finally gives way, the stored energy is released as waves that shake the ground.",
+     "Impacts can include collapsed buildings, landslides on steep slopes and fires from broken gas pipes and power lines.",
+     "Harm is usually worst where buildings are weak and many people live close together. The same shaking can cause far less damage where buildings are strong and fewer people live."
+    ],
+    "remember": "A sudden slip along a fault causes an earthquake. Weak buildings and dense populations make the harm worse.",
+    "a": {
+     "q": "Stress has built up in the crust near a fault. Which event then shakes the ground?",
+     "opts": [
+      "The rock along the fault slips suddenly",
+      "The rock along the fault slowly wears away",
+      "Heavy rain loosens soil on a nearby slope",
+      "Waves from the ocean hit the coast"
+     ],
+     "why": "When the stressed rock gives way and slips, the stored energy is released as waves that shake the ground. Slow wearing away of rock is erosion, which does not suddenly release energy.",
+     "clue": "Think about what happens along a crack in the crust."
+    },
+    "b": {
+     "d": 3,
+     "q": "One earthquake shakes four towns equally hard. Which town is likely to suffer the most harm?",
+     "opts": [
+      "Poorly built homes, with many people packed close",
+      "Well-built homes, with many people packed close",
+      "Poorly built homes, with a few farms spread apart",
+      "Well-built homes, with a few farms spread apart"
+     ],
+     "why": "Harm is usually worst where buildings are weak and many people live close together, and the town with poorly built homes and many people packed close has both. The town with poorly built homes but a few farms spread apart has fewer people near each building that might fall, so less harm is likely.",
+     "clue": "The card names two things that make harm worse."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The rock along the fault slips suddenly",
+     "also_right": []
+    },
+    "b": {
+     "best": "Poorly built homes, with many people packed close",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Earthquakes",
+  "card": [
+   "An earthquake is a shaking of the ground. It happens when rock along a fault, a crack in the Earth's crust, slips suddenly.",
+   "Stress builds up as rock on each side of a fault is pushed or pulled. When the rock finally gives way, the stored energy is released as waves that shake the ground.",
+   "Impacts can include collapsed buildings, landslides on steep slopes and fires from broken gas pipes and power lines.",
+   "Harm is usually worst where buildings are weak and many people live close together. The same shaking can cause far less damage where buildings are strong and fewer people live."
+  ],
+  "remember": "A sudden slip along a fault causes an earthquake. Weak buildings and dense populations make the harm worse.",
+  "a": {
+   "q": "Stress has built up in the crust near a fault. Which event then shakes the ground?",
+   "opts": [
+    "The rock along the fault slips suddenly",
+    "The rock along the fault slowly wears away",
+    "Heavy rain loosens soil on a nearby slope",
+    "Waves from the ocean hit the coast"
+   ],
+   "why": "When the stressed rock gives way and slips, the stored energy is released as waves that shake the ground. Slow wearing away of rock is erosion, which does not suddenly release energy.",
+   "clue": "Think about what happens along a crack in the crust."
+  },
+  "b": {
+   "d": 3,
+   "q": "One earthquake shakes four towns equally hard. Which town is likely to suffer the most harm?",
+   "opts": [
+    "Poorly built homes, with many people packed close",
+    "Well-built homes, with many people packed close",
+    "Poorly built homes, with a few farms spread apart",
+    "Well-built homes, with a few farms spread apart"
+   ],
+   "why": "Harm is usually worst where buildings are weak and many people live close together, and the town with poorly built homes and many people packed close has both. The town with poorly built homes but a few farms spread apart has fewer people near each building that might fall, so less harm is likely.",
+   "clue": "The card names two things that make harm worse."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The rock along the fault slips suddenly",
+   "also_right": []
+  },
+  "b": {
+   "best": "Poorly built homes, with many people packed close",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Earthquakes",
+  "card": [
+   "An earthquake is a shaking of the ground. It happens when rock along a fault, a crack in the Earth's crust, slips suddenly.",
+   "Stress builds up as rock on each side of a fault is pushed or pulled. When the rock finally gives way, the stored energy is released as waves that shake the ground.",
+   "Impacts can include collapsed buildings, landslides on steep slopes and fires from broken gas pipes and power lines.",
+   "Harm is usually worst where buildings are weak and many people live close together. The same shaking can cause far less damage where buildings are strong and fewer people live."
+  ],
+  "remember": "A sudden slip along a fault causes an earthquake. Weak buildings and dense populations make the harm worse.",
+  "a": {
+   "q": "Stress has built up in the crust near a fault. Which event then shakes the ground?",
+   "opts": [
+    "The rock along the fault slips suddenly",
+    "The rock along the fault slowly wears away",
+    "Heavy rain loosens soil on a nearby slope",
+    "Waves from the ocean hit the coast"
+   ],
+   "why": "When the stressed rock gives way and slips, the stored energy is released as waves that shake the ground. Slow wearing away of rock is erosion, which does not suddenly release energy.",
+   "clue": "Think about what happens along a crack in the crust."
+  },
+  "b": {
+   "d": 3,
+   "q": "One earthquake shakes four towns equally hard. Which town is likely to suffer the most harm?",
+   "opts": [
+    "Poorly built homes, with many people packed close",
+    "Well-built homes, with many people packed close",
+    "Poorly built homes, with a few farms spread apart",
+    "Well-built homes, with a few farms spread apart"
+   ],
+   "why": "Harm is usually worst where buildings are weak and many people live close together, and the town with poorly built homes and many people packed close has both. The town with poorly built homes but a few farms spread apart has fewer people near each building that might fall, so less harm is likely.",
+   "clue": "The card names two things that make harm worse."
+  }
+ },
+ "checked_by": "claude-code"
+}

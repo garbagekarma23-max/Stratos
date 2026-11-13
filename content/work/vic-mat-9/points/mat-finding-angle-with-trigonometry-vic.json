@@ -1,0 +1,149 @@
+{
+ "id": "mat-finding-angle-with-trigonometry-vic",
+ "title": "Finding an angle with trigonometry",
+ "brief": "ad42ce9c9a52",
+ "shortlist": [
+  [
+   "mat-finding-angle-with-trigonometry",
+   0.762
+  ],
+  [
+   "mat-finding-side-with-trigonometry",
+   0.496
+  ],
+  [
+   "mat-trigonometric-ratios",
+   0.387
+  ],
+  [
+   "mat-right-angled-trigonometry",
+   0.291
+  ],
+  [
+   "mat-proofs-with-angle-properties",
+   0.281
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 says adapt mat-finding-angle-with-trigonometry (1 change)",
+  "2026-11-12T15:06:02Z adapt: done",
+  "2026-11-12T15:15:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "adapt": 0.03585,
+  "check": 0.01186
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-finding-angle-with-trigonometry",
+  "changes": [
+   "Replace the Hobart driveway in question b with a driveway or ramp in a Victorian place, such as Melbourne, so the example is local to Victoria."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at the same depth, and only its Hobart example needs to be made local to Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-finding-angle-with-trigonometry",
+  "changes": [
+   "Replace the Hobart driveway in question b with a driveway or ramp in a Victorian place, such as Melbourne, so the example is local to Victoria."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Finding an angle with trigonometry",
+  "card": [
+   "When you know two sides of a right-angled triangle, you can find an angle. Start by naming the two known sides from the angle you want: opposite, adjacent or hypotenuse.",
+   "Choose sin, cos or tan, whichever ratio uses both of your known sides. Divide one side by the other to get a number.",
+   "Then use the inverse function on a calculator (\\(\\sin^{-1}\\), \\(\\cos^{-1}\\) or \\(\\tan^{-1}\\)) to turn that number into the angle. It must match the ratio you chose.",
+   "Example: opposite \\(= 3\\) and adjacent \\(= 4\\), so use tan. \\(\\tan \\theta = \\frac{3}{4} = 0.75\\), so \\(\\theta = \\tan^{-1}(0.75) \\approx 36.9^{\\circ}\\)."
+  ],
+  "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
+  "a": {
+   "q": "A 10 m ladder leans against a wall and reaches 5 m up the wall. What angle does the ladder make with the ground?",
+   "opts": [
+    "30°",
+    "60°",
+    "26.6°",
+    "63.4°"
+   ],
+   "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. \\(\\sin \\theta = \\frac{5}{10} = 0.5\\), so \\(\\theta = \\sin^{-1}(0.5) = 30^{\\circ}\\). Using \\(\\tan^{-1}(0.5)\\) gives 26.6°, but tan needs the adjacent side, which is not given.",
+   "clue": "Which two sides do you know, seen from the angle at the ground?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A steep driveway in Melbourne rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
+   "opts": [
+    "13.5°",
+    "13.9°",
+    "76.5°",
+    "76.1°"
+   ],
+   "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. \\(\\tan \\theta = \\frac{1.2}{5} = 0.24\\), so \\(\\theta = \\tan^{-1}(0.24) \\approx 13.5^{\\circ}\\). Using \\(\\sin^{-1}(0.24)\\) gives 13.9°, but the 5 m is not the hypotenuse.",
+   "clue": "The rise and the flat distance are opposite and adjacent."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "30°",
+   "also_right": []
+  },
+  "b": {
+   "best": "13.5°",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: sin⁻¹(0.5) = 30° and tan⁻¹(0.24) ≈ 13.5°, the card example tan⁻¹(0.75) ≈ 36.9° is correct, and the distractors match common wrong-ratio or complementary-angle errors."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Finding an angle with trigonometry",
+  "card": [
+   "When you know two sides of a right-angled triangle, you can find an angle. Start by naming the two known sides from the angle you want: opposite, adjacent or hypotenuse.",
+   "Choose sin, cos or tan, whichever ratio uses both of your known sides. Divide one side by the other to get a number.",
+   "Then use the inverse function on a calculator (\\(\\sin^{-1}\\), \\(\\cos^{-1}\\) or \\(\\tan^{-1}\\)) to turn that number into the angle. It must match the ratio you chose.",
+   "Example: opposite \\(= 3\\) and adjacent \\(= 4\\), so use tan. \\(\\tan \\theta = \\frac{3}{4} = 0.75\\), so \\(\\theta = \\tan^{-1}(0.75) \\approx 36.9^{\\circ}\\)."
+  ],
+  "remember": "Divide the two known sides, then use the matching inverse function to get the angle.",
+  "a": {
+   "q": "A 10 m ladder leans against a wall and reaches 5 m up the wall. What angle does the ladder make with the ground?",
+   "opts": [
+    "30°",
+    "60°",
+    "26.6°",
+    "63.4°"
+   ],
+   "why": "The wall height is opposite the angle and the ladder is the hypotenuse, so use sin. \\(\\sin \\theta = \\frac{5}{10} = 0.5\\), so \\(\\theta = \\sin^{-1}(0.5) = 30^{\\circ}\\). Using \\(\\tan^{-1}(0.5)\\) gives 26.6°, but tan needs the adjacent side, which is not given.",
+   "clue": "Which two sides do you know, seen from the angle at the ground?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A steep driveway in Melbourne rises 1.2 m over a flat distance of 5 m. What is its angle of slope, to one decimal place?",
+   "opts": [
+    "13.5°",
+    "13.9°",
+    "76.5°",
+    "76.1°"
+   ],
+   "why": "The rise is opposite the angle and the flat distance is adjacent, so use tan. \\(\\tan \\theta = \\frac{1.2}{5} = 0.24\\), so \\(\\theta = \\tan^{-1}(0.24) \\approx 13.5^{\\circ}\\). Using \\(\\sin^{-1}(0.24)\\) gives 13.9°, but the 5 m is not the hypotenuse.",
+   "clue": "The rise and the flat distance are opposite and adjacent."
+  }
+ },
+ "cleared_by": "checker"
+}

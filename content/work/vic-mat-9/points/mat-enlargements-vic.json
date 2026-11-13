@@ -1,0 +1,157 @@
+{
+ "id": "mat-enlargements-vic",
+ "title": "Enlargements",
+ "brief": "4134f3284523",
+ "shortlist": [
+  [
+   "mat-changes-enlargement",
+   0.669
+  ],
+  [
+   "mat-enlargements",
+   0.572
+  ],
+  [
+   "mat-similar-shapes-scale-factor",
+   0.259
+  ],
+  [
+   "mat-similarity-scale-factors",
+   0.209
+  ],
+  [
+   "mat-finding-sides-similar-triangles",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 may adapt mat-enlargements, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:59Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:51Z write: failed the content check, writing again",
+  "2026-11-12T15:26:06Z write: done",
+  "2026-11-12T15:35:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00049,
+  "confirm": 0.01132,
+  "write": 0.01745,
+  "check": 0.00925
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-enlargements",
+  "changes": [
+   "State explicitly that the angles of the shape stay the same in an enlargement, since the brief requires this and the card only says the shape stays the same."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches enlargement with a centre and scale factor, which matches the new point's idea, but it does not explicitly say angles are preserved, so one small wording addition is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points are each different from this brief: 'What changes in an enlargement' also teaches that area is multiplied by k², which is broader than lengths and angles alone, and 'Enlargements' is about distances from a centre of enlargement, so neither teaches this idea as written.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Enlargements",
+  "card": [
+   "An enlargement changes the size of a shape but not its shape. Every length is multiplied by the same number, called the scale factor.",
+   "Angles stay the same. Only lengths change, so the new shape has the same look as the original, just bigger or smaller.",
+   "A scale factor above 1 makes the shape bigger. A scale factor between 0 and 1 makes it smaller.",
+   [
+    "Example",
+    "A rectangle is 4 cm by 6 cm. Enlarge it with scale factor 3. The new sides are \\(4 \\times 3 = 12\\) cm and \\(6 \\times 3 = 18\\) cm, and every corner is still \\(90^{\\circ}\\)."
+   ]
+  ],
+  "remember": "Multiply every length by the scale factor. Angles do not change.",
+  "a": {
+   "q": "A triangle has angles of \\(40^{\\circ}\\), \\(60^{\\circ}\\) and \\(80^{\\circ}\\). It is enlarged with scale factor 2. What are the angles of the new triangle?",
+   "opts": [
+    "\\(40^{\\circ}\\), \\(60^{\\circ}\\) and \\(80^{\\circ}\\)",
+    "\\(80^{\\circ}\\), \\(120^{\\circ}\\) and \\(160^{\\circ}\\)",
+    "\\(42^{\\circ}\\), \\(62^{\\circ}\\) and \\(82^{\\circ}\\)",
+    "\\(20^{\\circ}\\), \\(30^{\\circ}\\) and \\(40^{\\circ}\\)"
+   ],
+   "why": "An enlargement keeps every angle the same, so the angles are still \\(40^{\\circ}\\), \\(60^{\\circ}\\) and \\(80^{\\circ}\\). Doubling them would give angles that add to \\(360^{\\circ}\\), which is impossible for a triangle.",
+   "clue": "Does an enlargement change angles or only lengths?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's photo is 8 cm wide and 5 cm tall. She enlarges it with scale factor 2.5. What are the new width and height?",
+   "opts": [
+    "20 cm wide and 12.5 cm tall",
+    "10.5 cm wide and 7.5 cm tall",
+    "20 cm wide and 5 cm tall",
+    "3.2 cm wide and 2 cm tall"
+   ],
+   "why": "Every length is multiplied by 2.5: \\(8 \\times 2.5 = 20\\) and \\(5 \\times 2.5 = 12.5\\). Adding 2.5 to each side is tempting, but that changes the shape, because the lengths are not all scaled by the same multiple.",
+   "clue": "Multiply both sides by the scale factor."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(40^{\\circ}\\), \\(60^{\\circ}\\) and \\(80^{\\circ}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "20 cm wide and 12.5 cm tall",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Enlargements",
+  "card": [
+   "An enlargement changes the size of a shape but not its shape. Every length is multiplied by the same number, called the scale factor.",
+   "Angles stay the same. Only lengths change, so the new shape has the same look as the original, just bigger or smaller.",
+   "A scale factor above 1 makes the shape bigger. A scale factor between 0 and 1 makes it smaller.",
+   [
+    "Example",
+    "A rectangle is 4 cm by 6 cm. Enlarge it with scale factor 3. The new sides are \\(4 \\times 3 = 12\\) cm and \\(6 \\times 3 = 18\\) cm, and every corner is still \\(90^{\\circ}\\)."
+   ]
+  ],
+  "remember": "Multiply every length by the scale factor. Angles do not change.",
+  "a": {
+   "q": "A triangle has angles of \\(40^{\\circ}\\), \\(60^{\\circ}\\) and \\(80^{\\circ}\\). It is enlarged with scale factor 2. What are the angles of the new triangle?",
+   "opts": [
+    "\\(40^{\\circ}\\), \\(60^{\\circ}\\) and \\(80^{\\circ}\\)",
+    "\\(80^{\\circ}\\), \\(120^{\\circ}\\) and \\(160^{\\circ}\\)",
+    "\\(42^{\\circ}\\), \\(62^{\\circ}\\) and \\(82^{\\circ}\\)",
+    "\\(20^{\\circ}\\), \\(30^{\\circ}\\) and \\(40^{\\circ}\\)"
+   ],
+   "why": "An enlargement keeps every angle the same, so the angles are still \\(40^{\\circ}\\), \\(60^{\\circ}\\) and \\(80^{\\circ}\\). Doubling them would give angles that add to \\(360^{\\circ}\\), which is impossible for a triangle.",
+   "clue": "Does an enlargement change angles or only lengths?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's photo is 8 cm wide and 5 cm tall. She enlarges it with scale factor 2.5. What are the new width and height?",
+   "opts": [
+    "20 cm wide and 12.5 cm tall",
+    "10.5 cm wide and 7.5 cm tall",
+    "20 cm wide and 5 cm tall",
+    "3.2 cm wide and 2 cm tall"
+   ],
+   "why": "Every length is multiplied by 2.5: \\(8 \\times 2.5 = 20\\) and \\(5 \\times 2.5 = 12.5\\). Adding 2.5 to each side is tempting, but that changes the shape, because the lengths are not all scaled by the same multiple.",
+   "clue": "Multiply both sides by the scale factor."
+  }
+ },
+ "cleared_by": "checker"
+}

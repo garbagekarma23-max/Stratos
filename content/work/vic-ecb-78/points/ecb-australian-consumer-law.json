@@ -1,0 +1,234 @@
+{
+ "id": "ecb-australian-consumer-law",
+ "title": "The Australian Consumer Law",
+ "brief": "7fd4d5c61b97",
+ "shortlist": [
+  [
+   "ecb-consumer-guarantees",
+   0.468
+  ],
+  [
+   "ecb-business-responsibilities-consumers",
+   0.343
+  ],
+  [
+   "ecb-rights-responsibilities",
+   0.259
+  ],
+  [
+   "ecb-ethical-consumer-decisions",
+   0.218
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 may adapt ecb-consumer-guarantees, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:32Z confirm: Claude Opus 5.5 may adapt ecb-consumer-guarantees, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:14Z claude-code review: match rejected, to be written",
+  "2026-11-13T13:04:51Z write: done",
+  "2026-11-13T13:11:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "confirm": 0.00874,
+  "write": 0.01739,
+  "check": 0.00848
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-consumer-guarantees",
+  "changes": [
+   "The card and questions refer to Australian Consumer Law as a national law that applies automatically; the brief says it protects buyers across the country, so the card should state it applies nationally, including Victoria, and the Hobart example should be replaced with a Victorian location such as Melbourne.",
+   "The card should name the Victorian Curriculum consumer context and use a Victorian example in question b, since the existing example is set in Hobart in a course that uses other states' content."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers the same idea of consumer guarantees at a suitable Year 7 depth, but it lists the states and territories excluding Victoria and uses a Hobart example, so it needs local adjustment for this Victorian course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-consumer-guarantees",
+  "changes": [
+   "In question b, change the place from Hobart to a Victorian place such as Melbourne so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches that the Australian Consumer Law guarantees products are safe, work as described and match their description, at a Year 7–8 depth, so only its Tasmanian example needs to become Victorian.",
+  "model": "claude-opus-5-5"
+ },
+ "match_rejected": true,
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "new",
+   "sure": "high",
+   "reason": "The bank point is wider than this brief: its last card line and question b teach repair, replacement or refund, which is its own point in this chapter with the major and minor fault rules. Its simple answer would not fit that point.",
+   "item": "0d61c6118c6b0c5f",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-australian-consumer-law",
+    "title": "The Australian Consumer Law",
+    "brief": "7fd4d5c61b97",
+    "shortlist": [
+     [
+      "ecb-consumer-guarantees",
+      0.468
+     ],
+     [
+      "ecb-business-responsibilities-consumers",
+      0.343
+     ],
+     [
+      "ecb-rights-responsibilities",
+      0.259
+     ],
+     [
+      "ecb-ethical-consumer-decisions",
+      0.218
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00019,
+     "confirm": 0.00874
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-consumer-guarantees",
+     "changes": [
+      "The card and questions refer to Australian Consumer Law as a national law that applies automatically; the brief says it protects buyers across the country, so the card should state it applies nationally, including Victoria, and the Hobart example should be replaced with a Victorian location such as Melbourne.",
+      "The card should name the Victorian Curriculum consumer context and use a Victorian example in question b, since the existing example is set in Hobart in a course that uses other states' content."
+     ],
+     "sure": "medium",
+     "reason": "The bank point covers the same idea of consumer guarantees at a suitable Year 7 depth, but it lists the states and territories excluding Victoria and uses a Hobart example, so it needs local adjustment for this Victorian course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-consumer-guarantees",
+     "changes": [
+      "In question b, change the place from Hobart to a Victorian place such as Melbourne so the example is local to the course."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches that the Australian Consumer Law guarantees products are safe, work as described and match their description, at a Year 7–8 depth, so only its Tasmanian example needs to become Victorian.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "d7f82d7d28a9fa27"
+  }
+ ],
+ "draft": {
+  "title": "The Australian Consumer Law",
+  "card": [
+   "The Australian Consumer Law (ACL) is a set of rules that protects buyers in every state and territory. It applies to businesses that sell goods and services to consumers.",
+   [
+    "Safe",
+    "Products must be safe to use in the ways they are meant to be used."
+   ],
+   [
+    "Work as they should",
+    "Products must do the job they are made for and last a reasonable time."
+   ],
+   [
+    "Match the description",
+    "Products must be as they were described, such as in an advertisement, on the packaging or by a salesperson."
+   ]
+  ],
+  "remember": "The ACL protects buyers everywhere in Australia: products must be safe, work properly and match their description.",
+  "a": {
+   "q": "Jai buys a torch labelled \"waterproof\". It stops working after one splash. Which part of the ACL does this break?",
+   "opts": [
+    "The product does not match its description",
+    "The product is not sold in his state",
+    "The product is not safe to hold",
+    "The product is not made in Australia"
+   ],
+   "why": "The label said waterproof, but the torch failed in water, so it did not match its description. The ACL does not ask where a product is made, and nothing here suggests the torch was unsafe.",
+   "clue": "Compare what the label promised with what happened."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya buys a hair dryer in Geelong. It overheats and gives her a burn when she uses it normally. Which guarantee has the seller failed to meet?",
+   "opts": [
+    "The product must be safe to use",
+    "The product must match its description",
+    "The product must be sold at a fair price",
+    "The product must come with a free repair"
+   ],
+   "why": "A hair dryer that burns someone during normal use is not safe. It may also not work as it should, but the main failure is safety. The ACL does not set prices or promise free repairs.",
+   "clue": "Think about what harmed Priya when she used it normally."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The product does not match its description",
+   "also_right": []
+  },
+  "b": {
+   "best": "The product must be safe to use",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The Australian Consumer Law",
+  "card": [
+   "The Australian Consumer Law (ACL) is a set of rules that protects buyers in every state and territory. It applies to businesses that sell goods and services to consumers.",
+   [
+    "Safe",
+    "Products must be safe to use in the ways they are meant to be used."
+   ],
+   [
+    "Work as they should",
+    "Products must do the job they are made for and last a reasonable time."
+   ],
+   [
+    "Match the description",
+    "Products must be as they were described, such as in an advertisement, on the packaging or by a salesperson."
+   ]
+  ],
+  "remember": "The ACL protects buyers everywhere in Australia: products must be safe, work properly and match their description.",
+  "a": {
+   "q": "Jai buys a torch labelled \"waterproof\". It stops working after one splash. Which part of the ACL does this break?",
+   "opts": [
+    "The product does not match its description",
+    "The product is not sold in his state",
+    "The product is not safe to hold",
+    "The product is not made in Australia"
+   ],
+   "why": "The label said waterproof, but the torch failed in water, so it did not match its description. The ACL does not ask where a product is made, and nothing here suggests the torch was unsafe.",
+   "clue": "Compare what the label promised with what happened."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya buys a hair dryer in Geelong. It overheats and gives her a burn when she uses it normally. Which guarantee has the seller failed to meet?",
+   "opts": [
+    "The product must be safe to use",
+    "The product must match its description",
+    "The product must be sold at a fair price",
+    "The product must come with a free repair"
+   ],
+   "why": "A hair dryer that burns someone during normal use is not safe. It may also not work as it should, but the main failure is safety. The ACL does not set prices or promise free repairs.",
+   "clue": "Think about what harmed Priya when she used it normally."
+  }
+ }
+}

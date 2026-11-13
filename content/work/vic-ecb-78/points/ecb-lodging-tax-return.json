@@ -1,0 +1,248 @@
+{
+ "id": "ecb-lodging-tax-return",
+ "title": "Lodging a tax return",
+ "brief": "6d0700ee6217",
+ "shortlist": [
+  [
+   "ecb-young-people-tax",
+   0.735
+  ],
+  [
+   "ecb-governments-collect-tax",
+   0.435
+  ],
+  [
+   "ecb-income-tax",
+   0.412
+  ],
+  [
+   "ecb-goods-services-tax",
+   0.307
+  ],
+  [
+   "bus-taxation-business",
+   0.254
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 may adapt ecb-young-people-tax, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:32Z confirm: Claude Opus 5.5 may adapt ecb-young-people-tax, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:14Z match: claude-code says adapt ecb-young-people-tax (3 changes)",
+  "2026-11-13T12:13:14Z claude-code review: adapting ecb-young-people-tax on the next run",
+  "2026-11-13T13:04:51Z adapt: done",
+  "2026-11-13T13:11:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.01136,
+  "adapt": 0.00491,
+  "check": 0.0122
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-young-people-tax",
+  "changes": [
+   "Change the Perth bakery example in question b to a Victorian workplace or town, since the course is for students in Victoria.",
+   "Add a sentence to the card explaining that if too little tax was taken from pay, the worker owes the difference when they lodge their return, as the brief requires."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of lodging a yearly tax return after 30 June at a suitable depth, but it needs a Victorian example and a note that workers may owe tax as well as get a refund.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-young-people-tax",
+  "changes": [
+   "Name the tax office as the Australian Taxation Office (ATO), as the brief does, rather than just 'the tax office'.",
+   "Add to the refund line that if too little tax was taken from pay, the worker may have to pay the difference to the ATO.",
+   "Optionally move Noah's bakery in question b from Perth to a Victorian town such as Melbourne or Geelong."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches the same idea at a Year 8 depth: getting a TFN, lodging a return after 30 June and finding out whether too much tax was paid. It needs small touches to name the ATO, cover paying too little, and use a local example.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "ecb-young-people-tax",
+  "changes": [
+   "Name the tax office as the Australian Taxation Office (ATO) everywhere it appears, in the card and the options.",
+   "Add to the refund line, and the remember line, that if too little tax was taken from pay, the worker may have to pay the difference to the ATO.",
+   "Move Noah's bakery in question b from Perth to a Victorian place, such as Geelong."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "b.q",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the tax file number, lodging a return after 30 June and getting a refund at the right depth. It needs to name the Australian Taxation Office and cover paying too little, as the brief does.",
+   "item": "fc14a2be9e140262",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-lodging-tax-return",
+    "title": "Lodging a tax return",
+    "brief": "6d0700ee6217",
+    "shortlist": [
+     [
+      "ecb-young-people-tax",
+      0.735
+     ],
+     [
+      "ecb-governments-collect-tax",
+      0.435
+     ],
+     [
+      "ecb-income-tax",
+      0.412
+     ],
+     [
+      "ecb-goods-services-tax",
+      0.307
+     ],
+     [
+      "bus-taxation-business",
+      0.254
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00036,
+     "confirm": 0.01136
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-young-people-tax",
+     "changes": [
+      "Change the Perth bakery example in question b to a Victorian workplace or town, since the course is for students in Victoria.",
+      "Add a sentence to the card explaining that if too little tax was taken from pay, the worker owes the difference when they lodge their return, as the brief requires."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea of lodging a yearly tax return after 30 June at a suitable depth, but it needs a Victorian example and a note that workers may owe tax as well as get a refund.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-young-people-tax",
+     "changes": [
+      "Name the tax office as the Australian Taxation Office (ATO), as the brief does, rather than just 'the tax office'.",
+      "Add to the refund line that if too little tax was taken from pay, the worker may have to pay the difference to the ATO.",
+      "Optionally move Noah's bakery in question b from Perth to a Victorian town such as Melbourne or Geelong."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches the same idea at a Year 8 depth: getting a TFN, lodging a return after 30 June and finding out whether too much tax was paid. It needs small touches to name the ATO, cover paying too little, and use a local example.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "d081191088f0cbb8"
+  }
+ ],
+ "draft": {
+  "title": "Young people and tax",
+  "card": [
+   "A young person who starts a job needs a tax file number (TFN). It is a personal number that the Australian Taxation Office (ATO) uses to keep track of their tax.",
+   "When they start the job, the worker gives their TFN to their employer. The employer then takes tax out of each pay and sends it to the government.",
+   "The tax year ends on 30 June. After that date, the worker lodges their own tax return, which tells the ATO what they earned and what tax was paid.",
+   "If the tax taken from their pay was more than they owed, the worker may get a refund. If too little tax was taken, they may have to pay the difference to the ATO."
+  ],
+  "remember": "Your employer takes tax from each pay. Your tax return after 30 June shows if you paid too much (refund) or too little (pay the ATO the difference).",
+  "a": {
+   "q": "A teenager works part time and lodges a tax return. Why might they get a refund?",
+   "opts": [
+    "More tax came out of their pay than they owed for the year",
+    "Their employer took no tax at all out of their pay that year",
+    "They gave their employer their tax file number when hired",
+    "They lodged their tax return early, before the 30 June date"
+   ],
+   "why": "A refund is the difference when the tax taken from pay is more than the tax owed. If no tax was taken out, there would be nothing to give back. Giving a TFN to an employer is a normal step, not a reason for a refund.",
+   "clue": "Compare what was taken from pay with what was owed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Noah, aged 15, gets a job at a bakery in Geelong. What should he do with his tax file number when he starts?",
+   "opts": [
+    "Give it to the bakery so tax can be taken from his pay",
+    "Keep it to himself until he lodges a tax return in July",
+    "Use it to pay his own tax to the ATO each week",
+    "Give it to the bakery so it can lodge his tax return"
+   ],
+   "why": "A new worker gives their TFN to their employer, and the employer takes tax from each pay. The bakery does not lodge Noah's return for him: he lodges his own after 30 June.",
+   "clue": "Who takes the tax out of each pay, and who lodges the return?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "More tax came out of their pay than they owed for the year",
+   "also_right": []
+  },
+  "b": {
+   "best": "Give it to the bakery so tax can be taken from his pay",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Young people and tax",
+  "card": [
+   "A young person who starts a job needs a tax file number (TFN). It is a personal number that the Australian Taxation Office (ATO) uses to keep track of their tax.",
+   "When they start the job, the worker gives their TFN to their employer. The employer then takes tax out of each pay and sends it to the government.",
+   "The tax year ends on 30 June. After that date, the worker lodges their own tax return, which tells the ATO what they earned and what tax was paid.",
+   "If the tax taken from their pay was more than they owed, the worker may get a refund. If too little tax was taken, they may have to pay the difference to the ATO."
+  ],
+  "remember": "Your employer takes tax from each pay. Your tax return after 30 June shows if you paid too much (refund) or too little (pay the ATO the difference).",
+  "a": {
+   "q": "A teenager works part time and lodges a tax return. Why might they get a refund?",
+   "opts": [
+    "More tax came out of their pay than they owed for the year",
+    "Their employer took no tax at all out of their pay that year",
+    "They gave their employer their tax file number when hired",
+    "They lodged their tax return early, before the 30 June date"
+   ],
+   "why": "A refund is the difference when the tax taken from pay is more than the tax owed. If no tax was taken out, there would be nothing to give back. Giving a TFN to an employer is a normal step, not a reason for a refund.",
+   "clue": "Compare what was taken from pay with what was owed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Noah, aged 15, gets a job at a bakery in Geelong. What should he do with his tax file number when he starts?",
+   "opts": [
+    "Give it to the bakery so tax can be taken from his pay",
+    "Keep it to himself until he lodges a tax return in July",
+    "Use it to pay his own tax to the ATO each week",
+    "Give it to the bakery so it can lodge his tax return"
+   ],
+   "why": "A new worker gives their TFN to their employer, and the employer takes tax from each pay. The bakery does not lodge Noah's return for him: he lodges his own after 30 June.",
+   "clue": "Who takes the tax out of each pay, and who lodges the return?"
+  }
+ }
+}

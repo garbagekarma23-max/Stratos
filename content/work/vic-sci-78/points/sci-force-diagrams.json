@@ -1,0 +1,238 @@
+{
+ "id": "sci-force-diagrams",
+ "title": "Force diagrams",
+ "brief": "c5fd8d6c4e87",
+ "shortlist": [
+  [
+   "sci-force",
+   0.635
+  ],
+  [
+   "sci-energy-flow-diagrams",
+   0.405
+  ],
+  [
+   "sci-balanced-unbalanced-forces",
+   0.394
+  ],
+  [
+   "sci-mass-effect-force",
+   0.334
+  ],
+  [
+   "sci-efficiency-sankey-diagrams",
+   0.265
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:07Z write: done",
+  "2026-11-12T15:35:11Z check: flagged",
+  "2026-11-12T15:42:25Z fix: suggested",
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (remember wording, card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00658,
+  "check": 0.01231,
+  "fix": 0.01785
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, sci-force, explains that a force arrow's length and direction show a single force, but it does not teach combining several arrows to show the overall force on an object, which is the new point's main idea and would need a new step.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Force diagrams",
+  "card": [
+   "A force diagram shows the forces on one object. Each force is drawn as an arrow that starts on the object.",
+   "The arrow points the way the force acts. A longer arrow shows a bigger force, and a shorter arrow shows a smaller one.",
+   "Forces that act in opposite directions work against each other. Forces that act the same way add together.",
+   "The overall force is what is left after all the forces are combined. It points the way the bigger force pulls. If the arrows are equal and opposite, there is no overall force."
+  ],
+  "remember": "Arrow direction shows where a force acts, arrow length shows its size, and together they give the overall force.",
+  "a": {
+   "q": "On a force diagram, what does a longer arrow show?",
+   "opts": [
+    "A bigger force",
+    "A faster object",
+    "A heavier object",
+    "A force that acts for longer"
+   ],
+   "why": "The length of an arrow shows the size of the force, so a longer arrow means a bigger force. It does not show speed or mass, because the diagram is about forces only.",
+   "clue": "Think about what arrow length is used to compare."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia pushes a box to the right with a long arrow of force. Friction pushes left with a shorter arrow. Which describes the overall force on the box?",
+   "opts": [
+    "It points right, as the push is bigger than friction",
+    "It points left, as friction always opposes motion",
+    "It is zero, as both forces act on the box",
+    "It points right, as the push comes first"
+   ],
+   "why": "The right arrow is longer, so the push is bigger than friction. Taking the smaller force from the bigger one leaves an overall force to the right. Having two forces does not make the overall force zero, as that only happens when they are equal and opposite.",
+   "clue": "Compare the lengths of the two arrows."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A box on a flat surface. A long arrow labelled push points right from the box, and a shorter arrow labelled friction points left from the box. A third label shows the overall force as a medium arrow pointing right.",
+    "why": "Seeing arrows of different lengths combine helps students understand the overall force."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A bigger force",
+   "also_right": []
+  },
+  "b": {
+   "best": "It points right, as the push is bigger than friction",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Arrow direction shows where a force acts\" could be read as the point where the force is applied, not the direction it acts in. \"Which way a force acts\" would match the card."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"It points the way the bigger force pulls\" only mentions pulls, but question b's bigger force is a push. \"Acts\" would avoid confusing students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and fair. There are two small wording issues: the remember line says arrow direction shows \"where\" a force acts, and the card says the overall force points the way the bigger force \"pulls\" when it can also be a push."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"Arrow direction shows where a force acts\" could be read as the point where the force is applied, not the direction it acts in. \"Which way a force acts\" would match the card.",
+  "Card, wording: \"It points the way the bigger force pulls\" only mentions pulls, but question b's bigger force is a push. \"Acts\" would avoid confusing students."
+ ],
+ "proposal": {
+  "title": "Force diagrams",
+  "card": [
+   "A force diagram shows the forces on one object. Each force is drawn as an arrow that starts on the object.",
+   "The arrow points the way the force acts. A longer arrow shows a bigger force, and a shorter arrow shows a smaller one.",
+   "Forces that act in opposite directions work against each other. Forces that act the same way add together.",
+   "The overall force is what is left after all the forces are combined. It points the way the bigger force acts. If the arrows are equal and opposite, there is no overall force."
+  ],
+  "remember": "Arrow direction shows which way a force acts, arrow length shows its size, and together they give the overall force.",
+  "a": {
+   "q": "On a force diagram, what does a longer arrow show?",
+   "opts": [
+    "A bigger force",
+    "A faster object",
+    "A heavier object",
+    "A force that acts for longer"
+   ],
+   "why": "The length of an arrow shows the size of the force, so a longer arrow means a bigger force. It does not show speed or mass, because the diagram is about forces only.",
+   "clue": "Think about what arrow length is used to compare."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a force diagram of a box, Mia's push is a long arrow to the right. Friction is a shorter arrow to the left. Which describes the overall force on the box?",
+   "opts": [
+    "It points right, as the push is bigger than friction",
+    "It points left, as friction always opposes motion",
+    "It is zero, as both forces act on the box",
+    "It points right, as the push comes first"
+   ],
+   "why": "The right arrow is longer, so the push is bigger than friction. Combining the two opposite forces leaves an overall force to the right. Having two forces does not make the overall force zero, as that only happens when they are equal and opposite.",
+   "clue": "Compare the lengths of the two arrows."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A box on a flat surface. A long arrow labelled push points right from the box, and a shorter arrow labelled friction points left from the box. Beside the box, drawn separately, a shorter arrow pointing right is labelled overall force.",
+    "why": "Seeing arrows of different lengths combine helps students understand the overall force."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:55Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Arrow direction shows where a force acts\" could be read as the point where the force is applied, not the direction it acts in. \"Which way a force acts\" would match the card."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"It points the way the bigger force pulls\" only mentions pulls, but question b's bigger force is a push. \"Acts\" would avoid confusing students."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"Arrow direction shows where a force acts\" could be read as the point where the force is applied, not the direction it acts in. \"Which way a force acts\" would match the card.",
+   "Card, wording: \"It points the way the bigger force pulls\" only mentions pulls, but question b's bigger force is a push. \"Acts\" would avoid confusing students."
+  ]
+ },
+ "final": {
+  "title": "Force diagrams",
+  "card": [
+   "A force diagram shows the forces on one object. Each force is drawn as an arrow that starts on the object.",
+   "The arrow points the way the force acts. A longer arrow shows a bigger force, and a shorter arrow shows a smaller one.",
+   "Forces that act in opposite directions work against each other. Forces that act the same way add together.",
+   "The overall force is what is left after all the forces are combined. It points the way the bigger force acts. If the arrows are equal and opposite, there is no overall force."
+  ],
+  "remember": "Arrow direction shows which way a force acts, arrow length shows its size, and together they give the overall force.",
+  "a": {
+   "q": "On a force diagram, what does a longer arrow show?",
+   "opts": [
+    "A bigger force",
+    "A faster object",
+    "A heavier object",
+    "A force that acts for longer"
+   ],
+   "why": "The length of an arrow shows the size of the force, so a longer arrow means a bigger force. It does not show speed or mass, because the diagram is about forces only.",
+   "clue": "Think about what arrow length is used to compare."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a force diagram of a box, Mia's push is a long arrow to the right. Friction is a shorter arrow to the left. Which describes the overall force on the box?",
+   "opts": [
+    "It points right, as the push is bigger than friction",
+    "It points left, as friction always opposes motion",
+    "It is zero, as both forces act on the box",
+    "It points right, as the push comes first"
+   ],
+   "why": "The right arrow is longer, so the push is bigger than friction. Combining the two opposite forces leaves an overall force to the right. Having two forces does not make the overall force zero, as that only happens when they are equal and opposite.",
+   "clue": "Compare the lengths of the two arrows."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "A box on a flat surface. A long arrow labelled push points right from the box, and a shorter arrow labelled friction points left from the box. Beside the box, drawn separately, a shorter arrow pointing right is labelled overall force.",
+    "why": "Seeing arrows of different lengths combine helps students understand the overall force."
+   }
+  ]
+ },
+ "cleared_by": "auto"
+}

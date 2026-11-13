@@ -1,0 +1,158 @@
+{
+ "id": "ecb-making-budget",
+ "title": "Making a budget",
+ "brief": "722e1270a5d7",
+ "shortlist": [
+  [
+   "ecb-making-personal-budget",
+   0.689
+  ],
+  [
+   "ecb-budgeting-before-you-buy",
+   0.392
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 says adapt ecb-making-personal-budget (2 changes)",
+  "2026-11-12T15:15:32Z adapt: done",
+  "2026-11-12T15:25:55Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "adapt": 0.00475,
+  "check": 0.00845
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-making-personal-budget",
+  "changes": [
+   "Use the term variable costs instead of changing costs, to match the wording of the new point's brief.",
+   "Replace the bus fares example with a Victorian public transport example, such as a myki top-up."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same budgeting idea at a suitable Year 8 depth, and it needs only a terminology change and a local example to suit this Victorian course.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "ecb-making-personal-budget",
+  "changes": [
+   "Use the term variable costs instead of changing costs, to match the wording of the new point's brief.",
+   "Replace the bus fares example with a Victorian public transport example, such as a myki top-up."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card3 label",
+   "card3",
+   "remember",
+   "a.q",
+   "a.opt3",
+   "a.why",
+   "b.q",
+   "b.opt4",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Making a personal budget",
+  "card": [
+   "A budget is a plan that lists the money you expect to receive (income) and the money you expect to spend (expenses) over a period, such as a month.",
+   [
+    "Fixed costs",
+    "expenses that stay the same each time, such as a phone plan or a gym fee."
+   ],
+   [
+    "Variable costs",
+    "expenses that can go up or down, such as snacks, clothes or a myki top-up."
+   ],
+   "Subtract total expenses from income to see what is left to save. If expenses are higher than income, the budget shows a shortfall, and you need to cut costs or earn more."
+  ],
+  "remember": "Income minus all expenses, fixed and variable, shows what is left to save.",
+  "a": {
+   "q": "Mia checks what she spent on four things in March and April. Which one is a fixed cost?",
+   "opts": [
+    "Music app: $12 in March, $12 in April",
+    "Snacks: $18 in March, $25 in April",
+    "Myki top-up: $30 in March, $22 in April",
+    "Clothes: $0 in March, $45 in April"
+   ],
+   "why": "The music app cost the same amount in both months, so it is a fixed cost. Snacks, myki top-ups and clothes went up or down between months, so they are variable costs, even though a myki is used often.",
+   "clue": "Compare the two months for each item."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaden earns $200 a month from a weekend job. His fixed costs are $60 and his variable costs are $150. What does his budget show?",
+   "opts": [
+    "A shortfall of $10, so he needs to cut costs or earn more",
+    "$10 left over, so he can save $10 a month from his job",
+    "$140 left over, because only fixed costs are counted",
+    "$50 left over, because only variable costs are counted"
+   ],
+   "why": "Total expenses are $60 + $150 = $210, which is $10 more than his income of $200, so the budget shows a shortfall. The $140 and $50 answers each subtract only one kind of cost, but a budget counts both fixed and variable costs.",
+   "clue": "Add both kinds of cost before comparing with income."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Music app: $12 in March, $12 in April",
+   "also_right": []
+  },
+  "b": {
+   "best": "A shortfall of $10, so he needs to cut costs or earn more",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Making a personal budget",
+  "card": [
+   "A budget is a plan that lists the money you expect to receive (income) and the money you expect to spend (expenses) over a period, such as a month.",
+   [
+    "Fixed costs",
+    "expenses that stay the same each time, such as a phone plan or a gym fee."
+   ],
+   [
+    "Variable costs",
+    "expenses that can go up or down, such as snacks, clothes or a myki top-up."
+   ],
+   "Subtract total expenses from income to see what is left to save. If expenses are higher than income, the budget shows a shortfall, and you need to cut costs or earn more."
+  ],
+  "remember": "Income minus all expenses, fixed and variable, shows what is left to save.",
+  "a": {
+   "q": "Mia checks what she spent on four things in March and April. Which one is a fixed cost?",
+   "opts": [
+    "Music app: $12 in March, $12 in April",
+    "Snacks: $18 in March, $25 in April",
+    "Myki top-up: $30 in March, $22 in April",
+    "Clothes: $0 in March, $45 in April"
+   ],
+   "why": "The music app cost the same amount in both months, so it is a fixed cost. Snacks, myki top-ups and clothes went up or down between months, so they are variable costs, even though a myki is used often.",
+   "clue": "Compare the two months for each item."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jaden earns $200 a month from a weekend job. His fixed costs are $60 and his variable costs are $150. What does his budget show?",
+   "opts": [
+    "A shortfall of $10, so he needs to cut costs or earn more",
+    "$10 left over, so he can save $10 a month from his job",
+    "$140 left over, because only fixed costs are counted",
+    "$50 left over, because only variable costs are counted"
+   ],
+   "why": "Total expenses are $60 + $150 = $210, which is $10 more than his income of $200, so the budget shows a shortfall. The $140 and $50 answers each subtract only one kind of cost, but a budget counts both fixed and variable costs.",
+   "clue": "Add both kinds of cost before comparing with income."
+  }
+ },
+ "cleared_by": "checker"
+}

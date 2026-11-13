@@ -1,0 +1,235 @@
+{
+ "id": "mat-solving-equations-by-guess",
+ "title": "Solving equations by guess, check and refine",
+ "brief": "264b57431f0d",
+ "shortlist": [
+  [
+   "mat-simultaneous-equations-by-graphing",
+   0.278
+  ],
+  [
+   "mat-solving-equations-with-graphs",
+   0.252
+  ],
+  [
+   "mat-newton-s-method",
+   0.25
+  ],
+  [
+   "mat-solving-simple-equations",
+   0.244
+  ],
+  [
+   "mat-simultaneous-equations-by-substitution",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: done",
+  "2026-11-12T15:26:03Z check: flagged",
+  "2026-11-12T15:35:09Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.01801,
+  "check": 0.01572,
+  "fix": 0.02521,
+  "recheck": 0.00822
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches guess, check and refine as a method for solving equations; the closest, Newton's method, is a different and more advanced iterative technique at a different depth, and the graphing and substitution cards solve systems rather than narrowing in on a root by testing values.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Solving equations by guess, check and refine",
+  "card": [
+   "When algebra is hard, guess a value and substitute it into the equation. Compare the result with the target: it is either too high or too low.",
+   "Use the result to choose a better guess. Keep two values, one too low and one too high, and try a value between them.",
+   "Example: \\(x^{3} + x = 20\\). When \\(x = 2\\) the result is 10, too low. When \\(x = 3\\) it is 30, too high. When \\(x = 2.5\\) it is 18.125, too low. When \\(x = 2.6\\) it is 20.176, too high. So \\(x \\approx 2.6\\) to one decimal place.",
+   "Stop when you reach the accuracy asked for. Also check for other solutions: some equations, such as quadratics, can have more than one, so try negative values too."
+  ],
+  "remember": "Test, judge too high or too low, narrow in, then check for other solutions.",
+  "a": {
+   "q": "For \\(x^{2} + 2x = 20\\), \\(x = 3\\) gives 15 and \\(x = 4\\) gives 24. What is the best next step?",
+   "opts": [
+    "Try a value between 3 and 4, such as 3.5",
+    "Try a value below 3, such as 2",
+    "Try a value above 4, such as 5",
+    "Stop and give \\(x = 4\\) as the solution"
+   ],
+   "why": "15 is too low and 24 is too high, so the solution lies between 3 and 4. Choosing 4 because it is closer is tempting, but 24 is not 20, so 4 does not solve the equation.",
+   "clue": "One result is below the target and one is above it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zoe tests \\(x^{2} + x = 12\\) and finds that \\(x = 3\\) works. What is the sound next step?",
+   "opts": [
+    "Test negative values too, as there may be a second solution",
+    "Stop, since the first value that works is the only one",
+    "Test only values above 3, since they are larger",
+    "Test decimals between 3 and 4 to refine the answer"
+   ],
+   "why": "A quadratic can have two solutions. Testing \\(x = -4\\) gives \\(16 - 4 = 12\\), so it also works. Stopping at the first solution is tempting, but it can miss the other one.",
+   "clue": "Could a negative number also give 12?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Try a value between 3 and 4, such as 3.5",
+   "also_right": []
+  },
+  "b": {
+   "best": "Test negative values too, as there may be a second solution",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example concludes x ≈ 2.6 to one decimal place from 2.5 (too low) and 2.6 (too high) alone. That only shows the solution lies between 2.5 and 2.6. To round to one decimal place you must test 2.55 (it gives 19.131..., too low). The answer happens to be right, but the card teaches an incomplete method for deciding the rounding."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Could a negative number also give 12?' points straight at the only option about negative values, so it gives the answer away. The right option is also the longest and the only one with a hedge ('may'), which makes it stand out."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's worked example rounds to 2.6 without testing the midpoint 2.55, so it models an incomplete rounding method. Question b's clue, and its longest, hedged right option, give the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The example concludes x ≈ 2.6 to one decimal place from 2.5 (too low) and 2.6 (too high) alone. That only shows the solution lies between 2.5 and 2.6. To round to one decimal place you must test 2.55 (it gives 19.131..., too low). The answer happens to be right, but the card teaches an incomplete method for deciding the rounding.",
+  "Question b, wording: The clue 'Could a negative number also give 12?' points straight at the only option about negative values, so it gives the answer away. The right option is also the longest and the only one with a hedge ('may'), which makes it stand out."
+ ],
+ "proposal": {
+  "title": "Solving equations by guess, check and refine",
+  "card": [
+   "When algebra is hard, substitute a guess and compare the result with the target: it is too high or too low. Keep one value that is too low and one that is too high, and test a value between them.",
+   "Example: \\(x^{3} + x = 20\\). \\(x = 2\\) gives 10, too low, and \\(x = 3\\) gives 30, too high. \\(x = 2.5\\) gives 18.125, too low, and \\(x = 2.6\\) gives 20.176, too high.",
+   "To round to one decimal place, test the halfway value. \\(x = 2.55\\) gives about 19.13, too low, so the solution is between 2.55 and 2.6, and \\(x \\approx 2.6\\).",
+   "Stop when you reach the accuracy asked for. Also check for other solutions: some equations, such as quadratics, can have more than one, so try negative values too."
+  ],
+  "remember": "Test, judge too high or too low, narrow in, then check for other solutions.",
+  "a": {
+   "q": "For \\(x^{2} + 2x = 20\\), \\(x = 3\\) gives 15 and \\(x = 4\\) gives 24. What is the best next step?",
+   "opts": [
+    "Try a value between 3 and 4, such as 3.5",
+    "Try a value below 3, such as 2",
+    "Try a value above 4, such as 5",
+    "Stop and give \\(x = 4\\) as the solution"
+   ],
+   "why": "15 is too low and 24 is too high, so the solution lies between 3 and 4. Choosing 4 because it is closer is tempting, but 24 is not 20, so 4 does not solve the equation.",
+   "clue": "One result is below the target and one is above it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zoe finds that \\(x = 3\\) solves \\(x^{2} + x = 12\\). Which other value of \\(x\\) also solves it?",
+   "opts": [
+    "\\(x = -4\\)",
+    "\\(x = -3\\)",
+    "\\(x = 4\\)",
+    "\\(x = 2\\)"
+   ],
+   "why": "Substituting \\(x = -4\\) gives \\(16 - 4 = 12\\), so it works. Just changing the sign of 3 is tempting, but \\(x = -3\\) gives \\(9 - 3 = 6\\), which is too low.",
+   "clue": "Substitute each value and compare the result with 12."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Try a value between 3 and 4, such as 3.5",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(x = -4\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example concludes x ≈ 2.6 to one decimal place from 2.5 (too low) and 2.6 (too high) alone. That only shows the solution lies between 2.5 and 2.6. To round to one decimal place you must test 2.55 (it gives 19.131..., too low). The answer happens to be right, but the card teaches an incomplete method for deciding the rounding."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Could a negative number also give 12?' points straight at the only option about negative values, so it gives the answer away. The right option is also the longest and the only one with a hedge ('may'), which makes it stand out."
+   }
+  ],
+  "flags": [
+   "Card, fact: The example concludes x ≈ 2.6 to one decimal place from 2.5 (too low) and 2.6 (too high) alone. That only shows the solution lies between 2.5 and 2.6. To round to one decimal place you must test 2.55 (it gives 19.131..., too low). The answer happens to be right, but the card teaches an incomplete method for deciding the rounding.",
+   "Question b, wording: The clue 'Could a negative number also give 12?' points straight at the only option about negative values, so it gives the answer away. The right option is also the longest and the only one with a hedge ('may'), which makes it stand out."
+  ]
+ },
+ "final": {
+  "title": "Solving equations by guess, check and refine",
+  "card": [
+   "When algebra is hard, substitute a guess and compare the result with the target: it is too high or too low. Keep one value that is too low and one that is too high, and test a value between them.",
+   "Example: \\(x^{3} + x = 20\\). \\(x = 2\\) gives 10, too low, and \\(x = 3\\) gives 30, too high. \\(x = 2.5\\) gives 18.125, too low, and \\(x = 2.6\\) gives 20.176, too high.",
+   "To round to one decimal place, test the halfway value. \\(x = 2.55\\) gives about 19.13, too low, so the solution is between 2.55 and 2.6, and \\(x \\approx 2.6\\).",
+   "Stop when you reach the accuracy asked for. Also check for other solutions: some equations, such as quadratics, can have more than one, so try negative values too."
+  ],
+  "remember": "Test, judge too high or too low, narrow in, then check for other solutions.",
+  "a": {
+   "q": "For \\(x^{2} + 2x = 20\\), \\(x = 3\\) gives 15 and \\(x = 4\\) gives 24. What is the best next step?",
+   "opts": [
+    "Try a value between 3 and 4, such as 3.5",
+    "Try a value below 3, such as 2",
+    "Try a value above 4, such as 5",
+    "Stop and give \\(x = 4\\) as the solution"
+   ],
+   "why": "15 is too low and 24 is too high, so the solution lies between 3 and 4. Choosing 4 because it is closer is tempting, but 24 is not 20, so 4 does not solve the equation.",
+   "clue": "One result is below the target and one is above it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zoe finds that \\(x = 3\\) solves \\(x^{2} + x = 12\\). Which other value of \\(x\\) also solves it?",
+   "opts": [
+    "\\(x = -4\\)",
+    "\\(x = -3\\)",
+    "\\(x = 4\\)",
+    "\\(x = 2\\)"
+   ],
+   "why": "Substituting \\(x = -4\\) gives \\(16 - 4 = 12\\), so it works. Just changing the sign of 3 is tempting, but \\(x = -3\\) gives \\(9 - 3 = 6\\), which is too low.",
+   "clue": "Substitute each value and compare the result with 12."
+  }
+ },
+ "cleared_by": "recheck"
+}

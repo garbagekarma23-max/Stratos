@@ -1,0 +1,210 @@
+{
+ "id": "mat-estimating-probability-by-simulation",
+ "title": "Estimating probability by simulation",
+ "brief": "dd9b19d4a82c",
+ "shortlist": [
+  [
+   "mat-estimating-probability-from-relative",
+   0.455
+  ],
+  [
+   "mat-expected-relative-frequency",
+   0.228
+  ],
+  [
+   "mat-simulation",
+   0.221
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 says reuse mat-simulation, so to the Opus match check, as every reuse is",
+  "2026-11-12T12:53:58Z confirm: Claude Opus 5.5 may reuse mat-simulation, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-simulation (1 change)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-simulation on the next run",
+  "2026-11-13T13:04:54Z adapt: done",
+  "2026-11-13T13:11:26Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.00873,
+  "adapt": 0.01268,
+  "check": 0.00733
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-simulation",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point mat-simulation teaches the same idea as the new point, repeating a device that matches the chances and estimating probability as successes divided by trials, at a basic level that suits Year 9, though it was written for a Victorian Units 1 and 2 course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "mat-simulation",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point 'Simulation' teaches the same idea: build a model that matches the chances, run many trials and use successes divided by trials as the estimate. It is pitched simply enough for Year 9, and both of its questions are fair for this course.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-simulation",
+  "changes": [
+   "Add to the first card line that a simulation is used when a probability is hard or impossible to work out exactly, with a short example."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches the same method, model the chances, run many trials and divide successes by trials, and its answers are right. It never says why simulation is used, which the brief leads with: when a probability cannot be worked out exactly.",
+   "item": "0223c740db7ef88a",
+   "result": "decided",
+   "saved": {
+    "id": "mat-estimating-probability-by-simulation",
+    "title": "Estimating probability by simulation",
+    "brief": "dd9b19d4a82c",
+    "shortlist": [
+     [
+      "mat-estimating-probability-from-relative",
+      0.455
+     ],
+     [
+      "mat-expected-relative-frequency",
+      0.228
+     ],
+     [
+      "mat-simulation",
+      0.221
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00032,
+     "confirm": 0.00873
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "mat-simulation",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point mat-simulation teaches the same idea as the new point, repeating a device that matches the chances and estimating probability as successes divided by trials, at a basic level that suits Year 9, though it was written for a Victorian Units 1 and 2 course.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "reuse",
+     "same": "mat-simulation",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The bank point 'Simulation' teaches the same idea: build a model that matches the chances, run many trials and use successes divided by trials as the estimate. It is pitched simply enough for Year 9, and both of its questions are fair for this course.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "1df8d67bed51bc11"
+  }
+ ],
+ "draft": {
+  "title": "Simulation",
+  "card": [
+   "A simulation is used when a probability is hard or impossible to work out exactly, such as the chance a bus is late on a given day. It copies the random experiment with a device that is easier to run, such as a coin, die, spinner or random number generator.",
+   "The device must match the chances in the real experiment. A fair coin has two equally likely outcomes, so it can stand in for any yes or no event with probability \\(\\frac{1}{2}\\).",
+   "Run the simulation many times. The estimated probability is the number of trials with the event divided by the total number of trials.",
+   "Example: a spinner has 5 equal sectors. Let 1 stand for rain and 2 to 5 for no rain. In 40 spins, 1 comes up 9 times. The estimate for rain is \\(\\frac{9}{40} = 0.225\\). The true value is \\(\\frac{1}{5} = 0.2\\). More trials usually bring the estimate closer."
+  ],
+  "remember": "Match the device to the chances, run many trials, then divide successes by trials.",
+  "a": {
+   "q": "A fair die is rolled 50 times in a simulation. A 6 comes up on 7 of the rolls. What is the estimated probability of rolling a 6?",
+   "opts": [
+    "\\(\\frac{7}{50}\\)",
+    "\\(\\frac{1}{6}\\)",
+    "\\(\\frac{7}{43}\\)",
+    "\\(\\frac{43}{50}\\)"
+   ],
+   "why": "The estimate is the number of trials with the event divided by all trials, so \\(7 \\div 50 = 0.14\\). The value \\(\\frac{1}{6}\\) is the theoretical probability, not the result of this simulation.",
+   "clue": "Divide the count of 6s by the total number of rolls."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya models a bus being late, which has chance \\(\\frac{1}{4}\\). Which device could she use for her simulation?",
+   "opts": [
+    "A spinner with 4 equal sectors, one marked late",
+    "A fair coin, with heads meaning late",
+    "A fair die, with 1 meaning late",
+    "A spinner with 3 equal sectors, one marked late"
+   ],
+   "why": "One of 4 equal sectors gives a chance of \\(\\frac{1}{4}\\). A coin gives \\(\\frac{1}{2}\\), a die gives \\(\\frac{1}{6}\\) for a single face, and a 3-sector spinner gives \\(\\frac{1}{3}\\).",
+   "clue": "Find the device where the late outcome has chance \\(\\frac{1}{4}\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{7}{50}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "A spinner with 4 equal sectors, one marked late",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Simulation",
+  "card": [
+   "A simulation is used when a probability is hard or impossible to work out exactly, such as the chance a bus is late on a given day. It copies the random experiment with a device that is easier to run, such as a coin, die, spinner or random number generator.",
+   "The device must match the chances in the real experiment. A fair coin has two equally likely outcomes, so it can stand in for any yes or no event with probability \\(\\frac{1}{2}\\).",
+   "Run the simulation many times. The estimated probability is the number of trials with the event divided by the total number of trials.",
+   "Example: a spinner has 5 equal sectors. Let 1 stand for rain and 2 to 5 for no rain. In 40 spins, 1 comes up 9 times. The estimate for rain is \\(\\frac{9}{40} = 0.225\\). The true value is \\(\\frac{1}{5} = 0.2\\). More trials usually bring the estimate closer."
+  ],
+  "remember": "Match the device to the chances, run many trials, then divide successes by trials.",
+  "a": {
+   "q": "A fair die is rolled 50 times in a simulation. A 6 comes up on 7 of the rolls. What is the estimated probability of rolling a 6?",
+   "opts": [
+    "\\(\\frac{7}{50}\\)",
+    "\\(\\frac{1}{6}\\)",
+    "\\(\\frac{7}{43}\\)",
+    "\\(\\frac{43}{50}\\)"
+   ],
+   "why": "The estimate is the number of trials with the event divided by all trials, so \\(7 \\div 50 = 0.14\\). The value \\(\\frac{1}{6}\\) is the theoretical probability, not the result of this simulation.",
+   "clue": "Divide the count of 6s by the total number of rolls."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya models a bus being late, which has chance \\(\\frac{1}{4}\\). Which device could she use for her simulation?",
+   "opts": [
+    "A spinner with 4 equal sectors, one marked late",
+    "A fair coin, with heads meaning late",
+    "A fair die, with 1 meaning late",
+    "A spinner with 3 equal sectors, one marked late"
+   ],
+   "why": "One of 4 equal sectors gives a chance of \\(\\frac{1}{4}\\). A coin gives \\(\\frac{1}{2}\\), a die gives \\(\\frac{1}{6}\\) for a single face, and a 3-sector spinner gives \\(\\frac{1}{3}\\).",
+   "clue": "Find the device where the late outcome has chance \\(\\frac{1}{4}\\)."
+  }
+ }
+}

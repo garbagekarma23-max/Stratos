@@ -1,0 +1,254 @@
+{
+ "id": "ecb-economic-growth-gdp-vic",
+ "title": "Economic growth and GDP",
+ "brief": "0af8f64f3bfa",
+ "shortlist": [
+  [
+   "ecb-economic-growth-gdp",
+   0.82
+  ],
+  [
+   "e-gdp",
+   0.614
+  ],
+  [
+   "eco-business-cycle",
+   0.344
+  ],
+  [
+   "eco-material-living-standards",
+   0.301
+  ],
+  [
+   "eco-limits-gdp",
+   0.301
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 may adapt ecb-economic-growth-gdp, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:34Z confirm: Claude Opus 5.5 may adapt ecb-economic-growth-gdp, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:14Z match: claude-code says adapt ecb-economic-growth-gdp (1 change)",
+  "2026-11-13T12:13:14Z claude-code review: adapting ecb-economic-growth-gdp on the next run",
+  "2026-11-13T13:04:51Z adapt: done",
+  "2026-11-13T13:11:25Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.01045,
+  "adapt": 0.00383,
+  "check": 0.00724
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "ecb-economic-growth-gdp",
+  "changes": [
+   "Add the word 'final' to the GDP definition so it reads 'the value of all final goods and services made in a country in a year', matching the owner's brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same GDP and real growth idea at a Year 10 depth, but its GDP definition omits the word 'final' that the brief specifies, so it needs that small wording change.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-economic-growth-gdp",
+  "changes": [
+   "Define GDP as the value of all final goods and services made in a country in a year, adding the word 'final' as the brief does."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches GDP and growth as rising real GDP at a Year 10 Australian depth, but it needs the brief's 'final goods and services' wording.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "ecb-economic-growth-gdp",
+  "changes": [
+   "Define GDP as the value of all final goods and services made in a country in a year, adding the word final."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card1",
+   "card4",
+   "a.q",
+   "a.why",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches GDP, real GDP and growth at the right depth. It only needs the word final in the definition of GDP, as the brief asks.",
+   "item": "d144a03418aabcee",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-economic-growth-gdp-vic",
+    "title": "Economic growth and GDP",
+    "brief": "0af8f64f3bfa",
+    "shortlist": [
+     [
+      "ecb-economic-growth-gdp",
+      0.82
+     ],
+     [
+      "e-gdp",
+      0.614
+     ],
+     [
+      "eco-business-cycle",
+      0.344
+     ],
+     [
+      "eco-material-living-standards",
+      0.301
+     ],
+     [
+      "eco-limits-gdp",
+      0.301
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00035,
+     "confirm": 0.01045
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "ecb-economic-growth-gdp",
+     "changes": [
+      "Add the word 'final' to the GDP definition so it reads 'the value of all final goods and services made in a country in a year', matching the owner's brief."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same GDP and real growth idea at a Year 10 depth, but its GDP definition omits the word 'final' that the brief specifies, so it needs that small wording change.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-economic-growth-gdp",
+     "changes": [
+      "Define GDP as the value of all final goods and services made in a country in a year, adding the word 'final' as the brief does."
+     ],
+     "sure": "medium",
+     "reason": "The bank point already teaches GDP and growth as rising real GDP at a Year 10 Australian depth, but it needs the brief's 'final goods and services' wording.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "c045bf2ad9b535b8"
+  }
+ ],
+ "draft": {
+  "title": "Economic growth and GDP",
+  "card": [
+   [
+    "GDP",
+    "Gross domestic product is the value of all final goods and services made in a country in a year."
+   ],
+   [
+    "Economic growth",
+    "Economic growth is GDP rising over time. It is usually shown as a percentage change from one year to the next."
+   ],
+   [
+    "Real GDP",
+    "GDP measured after removing the effect of price rises. Growth is measured with real GDP, so it shows more being made, not just higher prices."
+   ],
+   "Only final goods and services count, those sold to their end user. GDP counts what is made inside the country, whoever owns the business. It includes services such as haircuts as well as goods such as cars."
+  ],
+  "remember": "Growth means real GDP rising: more goods and services made, not just higher prices.",
+  "a": {
+   "q": "Which statement best describes economic growth in a country?",
+   "opts": [
+    "More goods and services being made in the country",
+    "More people being born or moving into the country",
+    "Higher average prices for goods and services sold",
+    "More businesses opening up in the country"
+   ],
+   "why": "Economic growth is real GDP rising, which means more final goods and services are made. Higher prices alone do not count, because real GDP removes the effect of price rises.",
+   "clue": "Think about what real GDP measures once price rises are removed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Real GDP in a country was $900 billion in one year. The next year it was $936 billion. What does this show?",
+   "opts": [
+    "The economy grew",
+    "The economy shrank",
+    "Prices rose in general",
+    "Unemployment fell"
+   ],
+   "why": "Real GDP rose from $900 billion to $936 billion, so more goods and services were made and the economy grew. Real GDP has the effect of price rises removed, so it cannot show that prices rose, and it says nothing about jobs.",
+   "clue": "Real figures have already had price rises taken out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "More goods and services being made in the country",
+   "also_right": []
+  },
+  "b": {
+   "best": "The economy grew",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Economic growth and GDP",
+  "card": [
+   [
+    "GDP",
+    "Gross domestic product is the value of all final goods and services made in a country in a year."
+   ],
+   [
+    "Economic growth",
+    "Economic growth is GDP rising over time. It is usually shown as a percentage change from one year to the next."
+   ],
+   [
+    "Real GDP",
+    "GDP measured after removing the effect of price rises. Growth is measured with real GDP, so it shows more being made, not just higher prices."
+   ],
+   "Only final goods and services count, those sold to their end user. GDP counts what is made inside the country, whoever owns the business. It includes services such as haircuts as well as goods such as cars."
+  ],
+  "remember": "Growth means real GDP rising: more goods and services made, not just higher prices.",
+  "a": {
+   "q": "Which statement best describes economic growth in a country?",
+   "opts": [
+    "More goods and services being made in the country",
+    "More people being born or moving into the country",
+    "Higher average prices for goods and services sold",
+    "More businesses opening up in the country"
+   ],
+   "why": "Economic growth is real GDP rising, which means more final goods and services are made. Higher prices alone do not count, because real GDP removes the effect of price rises.",
+   "clue": "Think about what real GDP measures once price rises are removed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Real GDP in a country was $900 billion in one year. The next year it was $936 billion. What does this show?",
+   "opts": [
+    "The economy grew",
+    "The economy shrank",
+    "Prices rose in general",
+    "Unemployment fell"
+   ],
+   "why": "Real GDP rose from $900 billion to $936 billion, so more goods and services were made and the economy grew. Real GDP has the effect of price rises removed, so it cannot show that prices rose, and it says nothing about jobs.",
+   "clue": "Real figures have already had price rises taken out."
+  }
+ }
+}

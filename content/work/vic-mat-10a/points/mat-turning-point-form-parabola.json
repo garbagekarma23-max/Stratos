@@ -1,0 +1,379 @@
+{
+ "id": "mat-turning-point-form-parabola",
+ "title": "Turning point form of a parabola",
+ "brief": "e8599393a8f8",
+ "shortlist": [
+  [
+   "mat-changing-parabola",
+   0.387
+  ],
+  [
+   "mat-completing-square",
+   0.374
+  ],
+  [
+   "mat-graphing-parabolas",
+   0.313
+  ],
+  [
+   "mat-quadratic-graphs",
+   0.312
+  ],
+  [
+   "mat-quadratic-functions",
+   0.246
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done",
+  "2026-11-12T15:59:43Z check: flagged",
+  "2026-11-12T16:02:56Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-13T09:32:53Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00049,
+  "write": 0.02828,
+  "check": 0.0106,
+  "fix": 0.02294,
+  "recheck": 0.00979
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Quadratic graphs, reads the vertex from turning point form but does not teach completing the square to reach that form, and the brief needs that step, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The completing-the-square step ('take half the number in front of x, square it, then add and subtract it') only works when the coefficient of x² is 1. The card does not say so, and a student could apply it wrongly to something like 2x² + 8x + 1.",
+ "rejected": {
+  "title": "Turning point form of a parabola",
+  "card": [
+   "The form \\(y = a(x - h)^{2} + k\\) shows the turning point at once: it is \\((h, k)\\). The parabola is concave up if \\(a > 0\\) and concave down if \\(a < 0\\).",
+   "Read \\(h\\) with the opposite sign to the one in the bracket. So \\(y = (x + 2)^{2} - 5\\) has \\(h = -2\\) and \\(k = -5\\), giving the turning point \\((-2, -5)\\).",
+   "To complete the square, take half the number in front of \\(x\\), square it, then add and subtract it. For \\(y = x^{2} + 6x + 2\\), half of 6 is 3, so \\(y = (x + 3)^{2} - 9 + 2\\).",
+   "Tidy the numbers: \\(y = (x + 3)^{2} - 7\\). The turning point is \\((-3, -7)\\)."
+  ],
+  "remember": "Turning point form shows \\((h, k)\\) directly. Completing the square gets a quadratic into that form.",
+  "a": {
+   "q": "What is the turning point of \\(y = 2(x - 3)^{2} + 4\\)?",
+   "opts": [
+    "\\((3, 4)\\)",
+    "\\((-3, 4)\\)",
+    "\\((-3, -4)\\)",
+    "\\((4, 3)\\)"
+   ],
+   "why": "Compare with \\(y = a(x - h)^{2} + k\\): \\(x - 3\\) means \\(h = 3\\), and \\(k = 4\\). The 2 in front changes the shape, not the turning point. The tempting \\((-3, 4)\\) flips the sign of \\(h\\) when the bracket already shows \\(x - h\\).",
+   "clue": "The bracket already matches \\(x - h\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia completes the square on \\(y = x^{2} - 8x + 3\\). What is the turning point?",
+   "opts": [
+    "\\((4, -13)\\)",
+    "\\((-4, -13)\\)",
+    "\\((4, 19)\\)",
+    "\\((4, -5)\\)"
+   ],
+   "why": "Half of \\(-8\\) is \\(-4\\), so \\(y = (x - 4)^{2} - 16 + 3\\), which is \\(y = (x - 4)^{2} - 13\\). The turning point is \\((4, -13)\\). The option \\((4, 19)\\) adds 16 instead of taking it away.",
+   "clue": "Whatever you add to make the square, take away again."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The completing-the-square step ('take half the number in front of x, square it, then add and subtract it') only works when the coefficient of x² is 1. The card does not say so, and a student could apply it wrongly to something like 2x² + 8x + 1."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Turning point form of a parabola",
+     "card": [
+      "The form \\(y = a(x - h)^{2} + k\\) shows the turning point at once. It is \\((h, k)\\), and the axis of symmetry is \\(x = h\\).",
+      "Read \\(h\\) with the opposite sign to the one in the bracket. So \\(y = (x + 2)^{2} - 5\\) has \\(h = -2\\) and \\(k = -5\\). If \\(a > 0\\) the parabola is concave up. If \\(a < 0\\) it is concave down.",
+      "To complete the square, take half the number in front of \\(x\\), square it, then add and subtract it. For \\(y = x^{2} + 6x + 2\\), half of 6 is 3, so \\(y = (x + 3)^{2} - 9 + 2\\).",
+      "Tidy the numbers: \\(y = (x + 3)^{2} - 7\\). The turning point is \\((-3, -7)\\)."
+     ],
+     "remember": "In \\(y = a(x - h)^{2} + k\\), the turning point is \\((h, k)\\). Completing the square gets you there.",
+     "a": {
+      "q": "What is the turning point of \\(y = (x + 2)^{2} - 5\\)?",
+      "opts": [
+       "\\((-2, -5)\\)",
+       "\\((2, -5)\\)",
+       "\\((-2, 5)\\)",
+       "\\((-5, -2)\\)"
+      ],
+      "why": "Compare with \\(y = (x - h)^{2} + k\\): \\(x + 2\\) means \\(h = -2\\), and \\(k = -5\\). The tempting \\((2, -5)\\) reads \\(h\\) with the sign shown in the bracket.",
+      "clue": "Write \\(x + 2\\) as \\(x - (-2)\\)."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia completes the square on \\(y = x^{2} - 8x + 3\\). What is the turning point?",
+      "opts": [
+       "\\((4, -13)\\)",
+       "\\((-4, -13)\\)",
+       "\\((4, 19)\\)",
+       "\\((4, -5)\\)"
+      ],
+      "why": "Half of \\(-8\\) is \\(-4\\), so \\(y = (x - 4)^{2} - 16 + 3\\), which is \\(y = (x - 4)^{2} - 13\\). The turning point is \\((4, -13)\\). The option \\((4, 19)\\) adds 16 instead of subtracting it.",
+      "clue": "Whatever you add inside the bracket's square, you must take away again."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\((-2, -5)\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\((4, -13)\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a uses the card's own worked example, y = (x + 2)^2 - 5 with h = -2 and k = -5. A student can answer from memory of the card without applying the idea. Use a different equation."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The maths is correct and both intended answers are right. Question a repeats the card's worked example word for word, so it tests recall rather than understanding; use a fresh equation."
+    },
+    "flags": [
+     "Question a, level: Question a uses the card's own worked example, y = (x + 2)^2 - 5 with h = -2 and k = -5. A student can answer from memory of the card without applying the idea. Use a different equation."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Turning point form of a parabola",
+     "card": [
+      "The form \\(y = a(x - h)^{2} + k\\) shows the turning point at once: it is \\((h, k)\\). The parabola is concave up if \\(a > 0\\) and concave down if \\(a < 0\\).",
+      "Read \\(h\\) with the opposite sign to the one in the bracket. So \\(y = (x + 2)^{2} - 5\\) has \\(h = -2\\) and \\(k = -5\\), giving the turning point \\((-2, -5)\\).",
+      "To complete the square, take half the number in front of \\(x\\), square it, then add and subtract it. For \\(y = x^{2} + 6x + 2\\), half of 6 is 3, so \\(y = (x + 3)^{2} - 9 + 2\\).",
+      "Tidy the numbers: \\(y = (x + 3)^{2} - 7\\). The turning point is \\((-3, -7)\\)."
+     ],
+     "remember": "Turning point form shows \\((h, k)\\) directly. Completing the square gets a quadratic into that form.",
+     "a": {
+      "q": "What is the turning point of \\(y = 2(x - 3)^{2} + 4\\)?",
+      "opts": [
+       "\\((3, 4)\\)",
+       "\\((-3, 4)\\)",
+       "\\((-3, -4)\\)",
+       "\\((4, 3)\\)"
+      ],
+      "why": "Compare with \\(y = a(x - h)^{2} + k\\): \\(x - 3\\) means \\(h = 3\\), and \\(k = 4\\). The 2 in front changes the shape, not the turning point. The tempting \\((-3, 4)\\) flips the sign of \\(h\\) when the bracket already shows \\(x - h\\).",
+      "clue": "The bracket already matches \\(x - h\\)."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia completes the square on \\(y = x^{2} - 8x + 3\\). What is the turning point?",
+      "opts": [
+       "\\((4, -13)\\)",
+       "\\((-4, -13)\\)",
+       "\\((4, 19)\\)",
+       "\\((4, -5)\\)"
+      ],
+      "why": "Half of \\(-8\\) is \\(-4\\), so \\(y = (x - 4)^{2} - 16 + 3\\), which is \\(y = (x - 4)^{2} - 13\\). The turning point is \\((4, -13)\\). The option \\((4, 19)\\) adds 16 instead of taking it away.",
+      "clue": "Whatever you add to make the square, take away again."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-12T17:07:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "\\((3, 4)\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\((4, -13)\\)",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The completing-the-square step ('take half the number in front of x, square it, then add and subtract it') only works when the coefficient of x² is 1. The card does not say so, and a student could apply it wrongly to something like 2x² + 8x + 1."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both answers and explanations are correct: (3, 4) and (4, −13). The only issue is that the card's completing-the-square method does not say it applies only when the x² coefficient is 1."
+     },
+     "flags": [
+      "Card, wording: The completing-the-square step ('take half the number in front of x, square it, then add and subtract it') only works when the coefficient of x² is 1. The card does not say so, and a student could apply it wrongly to something like 2x² + 8x + 1."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:53Z",
+   "step": "write",
+   "version": {
+    "title": "Turning point form of a parabola",
+    "card": [
+     "The form \\(y = a(x - h)^{2} + k\\) shows the turning point at once: it is \\((h, k)\\). The parabola is concave up if \\(a > 0\\) and concave down if \\(a < 0\\).",
+     "Read \\(h\\) with the opposite sign to the one in the bracket. So \\(y = (x + 2)^{2} - 5\\) has \\(h = -2\\) and \\(k = -5\\), giving the turning point \\((-2, -5)\\).",
+     "When the number in front of \\(x^{2}\\) is 1, complete the square: take half the number in front of \\(x\\), square it, then add and subtract it. For \\(y = x^{2} + 6x + 2\\), half of 6 is 3, so \\(y = (x + 3)^{2} - 9 + 2\\).",
+     "Tidy the numbers: \\(y = (x + 3)^{2} - 7\\). The turning point is \\((-3, -7)\\)."
+    ],
+    "remember": "Turning point form shows \\((h, k)\\) directly. Completing the square gets a quadratic into that form.",
+    "a": {
+     "q": "What is the turning point of \\(y = 2(x - 3)^{2} + 4\\)?",
+     "opts": [
+      "\\((3, 4)\\)",
+      "\\((-3, 4)\\)",
+      "\\((-3, -4)\\)",
+      "\\((4, 3)\\)"
+     ],
+     "why": "Compare with \\(y = a(x - h)^{2} + k\\): \\(x - 3\\) means \\(h = 3\\), and \\(k = 4\\). The 2 in front changes the shape, not the turning point. The tempting \\((-3, 4)\\) flips the sign of \\(h\\) when the bracket already shows \\(x - h\\).",
+     "clue": "The bracket already matches \\(x - h\\)."
+    },
+    "b": {
+     "d": 3,
+     "q": "Mia completes the square on \\(y = x^{2} - 8x + 3\\). What is the turning point?",
+     "opts": [
+      "\\((4, -13)\\)",
+      "\\((-4, -13)\\)",
+      "\\((4, 19)\\)",
+      "\\((4, -5)\\)"
+     ],
+     "why": "Half of \\(-8\\) is \\(-4\\), so \\(y = (x - 4)^{2} - 16 + 3\\), which is \\(y = (x - 4)^{2} - 13\\). The turning point is \\((4, -13)\\). The option \\((4, 19)\\) adds 16 instead of taking it away.",
+     "clue": "Whatever you add to make the square, take away again."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "\\((3, 4)\\)",
+     "also_right": []
+    },
+    "b": {
+     "best": "\\((4, -13)\\)",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Turning point form of a parabola",
+  "card": [
+   "The form \\(y = a(x - h)^{2} + k\\) shows the turning point at once: it is \\((h, k)\\). The parabola is concave up if \\(a > 0\\) and concave down if \\(a < 0\\).",
+   "Read \\(h\\) with the opposite sign to the one in the bracket. So \\(y = (x + 2)^{2} - 5\\) has \\(h = -2\\) and \\(k = -5\\), giving the turning point \\((-2, -5)\\).",
+   "When the number in front of \\(x^{2}\\) is 1, complete the square: take half the number in front of \\(x\\), square it, then add and subtract it. For \\(y = x^{2} + 6x + 2\\), half of 6 is 3, so \\(y = (x + 3)^{2} - 9 + 2\\).",
+   "Tidy the numbers: \\(y = (x + 3)^{2} - 7\\). The turning point is \\((-3, -7)\\)."
+  ],
+  "remember": "Turning point form shows \\((h, k)\\) directly. Completing the square gets a quadratic into that form.",
+  "a": {
+   "q": "What is the turning point of \\(y = 2(x - 3)^{2} + 4\\)?",
+   "opts": [
+    "\\((3, 4)\\)",
+    "\\((-3, 4)\\)",
+    "\\((-3, -4)\\)",
+    "\\((4, 3)\\)"
+   ],
+   "why": "Compare with \\(y = a(x - h)^{2} + k\\): \\(x - 3\\) means \\(h = 3\\), and \\(k = 4\\). The 2 in front changes the shape, not the turning point. The tempting \\((-3, 4)\\) flips the sign of \\(h\\) when the bracket already shows \\(x - h\\).",
+   "clue": "The bracket already matches \\(x - h\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia completes the square on \\(y = x^{2} - 8x + 3\\). What is the turning point?",
+   "opts": [
+    "\\((4, -13)\\)",
+    "\\((-4, -13)\\)",
+    "\\((4, 19)\\)",
+    "\\((4, -5)\\)"
+   ],
+   "why": "Half of \\(-8\\) is \\(-4\\), so \\(y = (x - 4)^{2} - 16 + 3\\), which is \\(y = (x - 4)^{2} - 13\\). The turning point is \\((4, -13)\\). The option \\((4, 19)\\) adds 16 instead of taking it away.",
+   "clue": "Whatever you add to make the square, take away again."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\((3, 4)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\((4, -13)\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Turning point form of a parabola",
+  "card": [
+   "The form \\(y = a(x - h)^{2} + k\\) shows the turning point at once: it is \\((h, k)\\). The parabola is concave up if \\(a > 0\\) and concave down if \\(a < 0\\).",
+   "Read \\(h\\) with the opposite sign to the one in the bracket. So \\(y = (x + 2)^{2} - 5\\) has \\(h = -2\\) and \\(k = -5\\), giving the turning point \\((-2, -5)\\).",
+   "When the number in front of \\(x^{2}\\) is 1, complete the square: take half the number in front of \\(x\\), square it, then add and subtract it. For \\(y = x^{2} + 6x + 2\\), half of 6 is 3, so \\(y = (x + 3)^{2} - 9 + 2\\).",
+   "Tidy the numbers: \\(y = (x + 3)^{2} - 7\\). The turning point is \\((-3, -7)\\)."
+  ],
+  "remember": "Turning point form shows \\((h, k)\\) directly. Completing the square gets a quadratic into that form.",
+  "a": {
+   "q": "What is the turning point of \\(y = 2(x - 3)^{2} + 4\\)?",
+   "opts": [
+    "\\((3, 4)\\)",
+    "\\((-3, 4)\\)",
+    "\\((-3, -4)\\)",
+    "\\((4, 3)\\)"
+   ],
+   "why": "Compare with \\(y = a(x - h)^{2} + k\\): \\(x - 3\\) means \\(h = 3\\), and \\(k = 4\\). The 2 in front changes the shape, not the turning point. The tempting \\((-3, 4)\\) flips the sign of \\(h\\) when the bracket already shows \\(x - h\\).",
+   "clue": "The bracket already matches \\(x - h\\)."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia completes the square on \\(y = x^{2} - 8x + 3\\). What is the turning point?",
+   "opts": [
+    "\\((4, -13)\\)",
+    "\\((-4, -13)\\)",
+    "\\((4, 19)\\)",
+    "\\((4, -5)\\)"
+   ],
+   "why": "Half of \\(-8\\) is \\(-4\\), so \\(y = (x - 4)^{2} - 16 + 3\\), which is \\(y = (x - 4)^{2} - 13\\). The turning point is \\((4, -13)\\). The option \\((4, 19)\\) adds 16 instead of taking it away.",
+   "clue": "Whatever you add to make the square, take away again."
+  }
+ },
+ "checked_by": "claude-code"
+}

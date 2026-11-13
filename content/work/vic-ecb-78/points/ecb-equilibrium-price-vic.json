@@ -1,0 +1,360 @@
+{
+ "id": "ecb-equilibrium-price-vic",
+ "title": "Equilibrium price",
+ "brief": "6c1e7319ecbc",
+ "shortlist": [
+  [
+   "ecb-equilibrium-price",
+   0.705
+  ],
+  [
+   "ecb-supply",
+   0.503
+  ],
+  [
+   "ecb-changes-price",
+   0.48
+  ],
+  [
+   "ecb-demand",
+   0.449
+  ],
+  [
+   "ecb-market",
+   0.336
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:44Z new, match",
+  "2026-11-12T12:44:14Z match: Claude Haiku 5.5 says reuse ecb-equilibrium-price, so to the Opus match check, as every reuse is",
+  "2026-11-12T15:15:32Z confirm: Claude Opus 5.5 may adapt ecb-equilibrium-price, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:14Z claude-code review: match rejected, to be written",
+  "2026-11-13T13:04:51Z write: done",
+  "2026-11-13T13:11:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "confirm": 0.01493,
+  "write": 0.01379,
+  "check": 0.01098
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "ecb-equilibrium-price",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches equilibrium as the price where quantity demanded equals quantity supplied, with the demand and supply graph, at a depth suited to Year 8 and with fair questions.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "ecb-equilibrium-price",
+  "changes": [
+   "Change the Bowen, Queensland mango stall in question b to a Victorian setting, such as a stall at the Queen Victoria Market in Melbourne."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at the same Year 8 depth: the price where buyers' and sellers' amounts match, shown where the curves cross, and how the market settles there. Only its Queensland example should be made local to Victoria.",
+  "model": "claude-opus-5-5"
+ },
+ "match_rejected": true,
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:14Z",
+   "step": "review",
+   "decision": "new",
+   "sure": "high",
+   "reason": "The bank point is wider than this brief: most of its card and both questions teach shortages and surpluses, which is its own point in this chapter. The brief is only about where buyers' and sellers' amounts match and the curves cross.",
+   "item": "fa4a3b64384ef816",
+   "result": "decided",
+   "saved": {
+    "id": "ecb-equilibrium-price-vic",
+    "title": "Equilibrium price",
+    "brief": "6c1e7319ecbc",
+    "shortlist": [
+     [
+      "ecb-equilibrium-price",
+      0.705
+     ],
+     [
+      "ecb-supply",
+      0.503
+     ],
+     [
+      "ecb-changes-price",
+      0.48
+     ],
+     [
+      "ecb-demand",
+      0.449
+     ],
+     [
+      "ecb-market",
+      0.336
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00025,
+     "confirm": 0.01493
+    },
+    "match": {
+     "verdict": "reuse",
+     "same": "ecb-equilibrium-price",
+     "changes": [],
+     "sure": "high",
+     "reason": "The bank point teaches equilibrium as the price where quantity demanded equals quantity supplied, with the demand and supply graph, at a depth suited to Year 8 and with fair questions.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "ecb-equilibrium-price",
+     "changes": [
+      "Change the Bowen, Queensland mango stall in question b to a Victorian setting, such as a stall at the Queen Victoria Market in Melbourne."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same idea at the same Year 8 depth: the price where buyers' and sellers' amounts match, shown where the curves cross, and how the market settles there. Only its Queensland example should be made local to Victoria.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "059b6876ccd43145"
+  }
+ ],
+ "draft": {
+  "title": "Equilibrium price",
+  "card": [
+   "Buyers want a certain amount at each price. Sellers offer a certain amount at each price. The two amounts only match at one price.",
+   "That price is the equilibrium price. At it, the amount buyers want equals the amount sellers offer. The amount traded is the equilibrium quantity.",
+   "On a graph, the demand curve (D) and the supply curve (S) cross at the equilibrium. Price is on the vertical axis and quantity is on the horizontal axis.",
+   "Prices in a market tend to move towards the equilibrium price and settle there, unless something changes what buyers want or sellers offer."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Demand D slopes down and supply S slopes up. They cross at the equilibrium. A dashed line from the crossing point meets the price axis at P* and the quantity axis at Q*.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        0,
+        10
+       ],
+       [
+        10,
+        0
+       ]
+      ],
+      "label": "D",
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        0,
+        2
+       ],
+       [
+        8,
+        10
+       ]
+      ],
+      "label": "S",
+      "pos": "right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       6
+      ],
+      "xLabel": "Q*",
+      "yLabel": "P*"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Equilibrium is the price where buyers' demand and sellers' supply match, shown where the curves cross.",
+  "a": {
+   "q": "What is the equilibrium price in a market?",
+   "opts": [
+    "The price where the amount wanted equals the amount offered",
+    "The lowest price that sellers are willing to accept",
+    "The price that the government says sellers must charge",
+    "The price where sellers make the most profit possible"
+   ],
+   "why": "At the equilibrium price, buyers want exactly the amount that sellers offer. Sellers may accept lower prices than this, but that does not make them the equilibrium, since the amounts only match at one price.",
+   "clue": "Think about when buyers and sellers want the same amount."
+  },
+  "b": {
+   "d": 2,
+   "q": "At a school fete in Bendigo, the demand and supply curves for lemonade cross at $3 and 80 cups. What do these numbers show?",
+   "opts": [
+    "Buyers want 80 cups and sellers offer 80 cups at $3",
+    "Buyers want 80 cups and sellers offer 3 cups at $3",
+    "Sellers offer 80 cups at any price above $3",
+    "Buyers want 80 cups at any price below $3"
+   ],
+   "why": "The crossing point shows the price and the quantity where wanted and offered amounts are equal. So at $3, buyers want 80 cups and sellers offer 80 cups. The options about any price are wrong because the amounts only match at that one price.",
+   "clue": "Where the curves cross, the two amounts are the same."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The price where the amount wanted equals the amount offered",
+   "also_right": []
+  },
+  "b": {
+   "best": "Buyers want 80 cups and sellers offer 80 cups at $3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The graph's curves (D: y = 10 − x, S: y = 2 + x) cross at (4, 6), matching the guide and the labels P* and Q*."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Equilibrium price",
+  "card": [
+   "Buyers want a certain amount at each price. Sellers offer a certain amount at each price. The two amounts only match at one price.",
+   "That price is the equilibrium price. At it, the amount buyers want equals the amount sellers offer. The amount traded is the equilibrium quantity.",
+   "On a graph, the demand curve (D) and the supply curve (S) cross at the equilibrium. Price is on the vertical axis and quantity is on the horizontal axis.",
+   "Prices in a market tend to move towards the equilibrium price and settle there, unless something changes what buyers want or sellers offer."
+  ],
+  "cardFigs": {
+   "3": {
+    "kind": "graph",
+    "alt": "Demand D slopes down and supply S slopes up. They cross at the equilibrium. A dashed line from the crossing point meets the price axis at P* and the quantity axis at Q*.",
+    "x": {
+     "min": 0,
+     "max": 10,
+     "label": "Quantity"
+    },
+    "y": {
+     "min": 0,
+     "max": 10,
+     "label": "Price"
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "D",
+      "points": [
+       [
+        0,
+        10
+       ],
+       [
+        10,
+        0
+       ]
+      ],
+      "label": "D",
+      "pos": "above-right"
+     },
+     {
+      "type": "curve",
+      "id": "S",
+      "points": [
+       [
+        0,
+        2
+       ],
+       [
+        8,
+        10
+       ]
+      ],
+      "label": "S",
+      "pos": "right"
+     },
+     {
+      "type": "guide",
+      "at": [
+       4,
+       6
+      ],
+      "xLabel": "Q*",
+      "yLabel": "P*"
+     },
+     {
+      "type": "point",
+      "at": [
+       4,
+       6
+      ],
+      "on": [
+       "D",
+       "S"
+      ],
+      "is": "intersection"
+     }
+    ]
+   }
+  },
+  "remember": "Equilibrium is the price where buyers' demand and sellers' supply match, shown where the curves cross.",
+  "a": {
+   "q": "What is the equilibrium price in a market?",
+   "opts": [
+    "The price where the amount wanted equals the amount offered",
+    "The lowest price that sellers are willing to accept",
+    "The price that the government says sellers must charge",
+    "The price where sellers make the most profit possible"
+   ],
+   "why": "At the equilibrium price, buyers want exactly the amount that sellers offer. Sellers may accept lower prices than this, but that does not make them the equilibrium, since the amounts only match at one price.",
+   "clue": "Think about when buyers and sellers want the same amount."
+  },
+  "b": {
+   "d": 2,
+   "q": "At a school fete in Bendigo, the demand and supply curves for lemonade cross at $3 and 80 cups. What do these numbers show?",
+   "opts": [
+    "Buyers want 80 cups and sellers offer 80 cups at $3",
+    "Buyers want 80 cups and sellers offer 3 cups at $3",
+    "Sellers offer 80 cups at any price above $3",
+    "Buyers want 80 cups at any price below $3"
+   ],
+   "why": "The crossing point shows the price and the quantity where wanted and offered amounts are equal. So at $3, buyers want 80 cups and sellers offer 80 cups. The options about any price are wrong because the amounts only match at that one price.",
+   "clue": "Where the curves cross, the two amounts are the same."
+  }
+ }
+}

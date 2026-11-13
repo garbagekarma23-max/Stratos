@@ -1,0 +1,332 @@
+{
+ "id": "his-communist-china",
+ "title": "Communist China",
+ "brief": "22d2d436bd50",
+ "shortlist": [
+  [
+   "mod-civil-war-1949",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:51Z new, match",
+  "2026-11-12T12:44:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:46Z write: failed the content check, writing again",
+  "2026-11-12T15:26:03Z write: done",
+  "2026-11-12T15:35:08Z check: for review (other-sensitive)",
+  "2026-11-13T15:25:05Z review: rejected, to be written again",
+  "2026-11-13T15:37:12Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T15:44:54Z claude-code check: answered by a separate subagent",
+  "2026-11-13T15:44:54Z check: flagged",
+  "2026-11-13T16:08:25Z fix: suggested",
+  "2026-11-13T16:11:32Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01462,
+  "check": 0.01118,
+  "fix": 0.02005
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only covers the civil war and the 1949 proclamation, while the new point also requires the Great Leap Forward, the Cultural Revolution, and the market reforms from 1978, so it is broader and needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Communist China",
+  "card": [
+   [
+    "1949",
+    "After years of civil war against the Nationalists, Mao Zedong's Communist Party won control of mainland China. Mao declared the People's Republic of China in 1949."
+   ],
+   [
+    "Great Leap Forward",
+    "From 1958 Mao tried to build industry and farming very fast, using huge farming communes. Poor planning and false reports of harvests helped cause a famine in which millions died."
+   ],
+   [
+    "Cultural Revolution",
+    "From 1966 Mao urged young people to attack his rivals and old ideas, customs and culture. Many people were hurt, jailed or forced from their jobs, and schools and universities were disrupted."
+   ],
+   [
+    "Reform",
+    "Mao died in 1976. From 1978 the leadership began market reforms, which let farmers and businesses make profits, and the economy grew."
+   ]
+  ],
+  "remember": "Communist rule began in 1949. Mao's campaigns caused great suffering. Market reforms began in 1978.",
+  "a": {
+   "q": "What best describes the Great Leap Forward from 1958?",
+   "opts": [
+    "A rushed plan to grow industry and farming, ending in famine",
+    "A war that gave the Communists control of mainland China",
+    "A campaign against old ideas and customs led by young people",
+    "A set of market reforms that let farmers keep profits"
+   ],
+   "why": "The Great Leap Forward was Mao's push for fast growth through communes. Poor planning and false harvest reports helped cause famine. The campaign against old ideas describes the Cultural Revolution, which began later, in 1966.",
+   "clue": "Think about farming communes and the famine that followed."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1980 a farmer in Anhui province is allowed to sell extra crops for profit. Which change in China does this show?",
+   "opts": [
+    "Market reforms that began in 1978",
+    "The Communist victory in the civil war",
+    "The Cultural Revolution's attack on old customs",
+    "The Great Leap Forward's farming communes"
+   ],
+   "why": "Letting farmers make a profit was part of the market reforms that began in 1978. The communes of the Great Leap Forward did the opposite, as farming was run collectively. The Cultural Revolution was a political campaign from 1966, not a change to farm profits.",
+   "clue": "Which change let farmers and businesses make profits?"
+  }
+ },
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-13T15:37:12Z",
+   "step": "write",
+   "version": {
+    "title": "Communist China",
+    "card": [
+     [
+      "Civil war",
+      "Mao Zedong's Communist Party fought the Nationalists for control of China and won in 1949. Mao set up the People's Republic of China, and the Nationalists retreated to Taiwan."
+     ],
+     [
+      "Great Leap Forward",
+      "From 1958 Mao pushed farmers into huge communes and set impossible targets for grain and steel. Officials reported harvests far bigger than real ones, the state took too much grain, and tens of millions died in the famine that followed."
+     ],
+     [
+      "Cultural Revolution",
+      "From 1966 Mao urged young Red Guards to attack old ideas and anyone called an enemy of the revolution. Teachers, officials and many others were beaten, jailed or sent to labour on farms, many died, and schools and universities closed for years."
+     ],
+     [
+      "Reform",
+      "Mao died in 1976, and by 1978 Deng Xiaoping led China. From 1978 his market reforms let farmers sell extra crops and people run businesses for profit, and the economy grew fast, but the Communist Party kept full control of government."
+     ]
+    ],
+    "remember": "Mao's campaigns cost millions of lives. From 1978 the economy opened up, but the party kept its grip on power.",
+    "a": {
+     "q": "Why did so many people die during the Great Leap Forward?",
+     "opts": [
+      "False harvest reports let the state take too much grain",
+      "Red Guards shut down farms and attacked the farmers",
+      "The civil war with the Nationalists destroyed the crops",
+      "Market reforms let farmers sell their grain overseas"
+     ],
+     "why": "Officials claimed harvests that did not exist, so the state took grain that villages needed to eat, and famine followed. Red Guards belong to the Cultural Revolution, which began in 1966, after the famine.",
+     "clue": "Think about what happened to the grain that was grown."
+    },
+    "b": {
+     "d": 3,
+     "q": "In the 1980s China's economy grew fast, but people still could not vote the Communist Party out of power. What does this show about the reforms?",
+     "opts": [
+      "They changed the economy but kept party control",
+      "They brought back the farming communes of 1958",
+      "They ended the Communist Party's rule of China",
+      "They brought free elections but no new markets"
+     ],
+     "why": "The reforms let people farm and run businesses for profit, which changed the economy, but the Communist Party kept full control of government. They did not end party rule, since people could not vote it out, and they moved away from the communes, not back to them.",
+     "clue": "Separate what changed in the economy from what changed in government."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T15:44:54Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "False harvest reports let the state take too much grain",
+     "also_right": []
+    },
+    "b": {
+     "best": "They changed the economy but kept party control",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "b",
+      "kind": "wording",
+      "detail": "The question stem already states both halves of the answer (the economy grew fast; people could not vote the party out), so the right option only restates the stem and the stem rules out two wrong options on its own. A student can answer without knowing the reforms. Consider a stem that gives a fact for the student to interpret, such as farmers selling extra crops while protests were still put down."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "other-sensitive",
+    "summary": "Facts on the civil war, Great Leap Forward, Cultural Revolution and 1978 reforms check out. Question b gives its answer away because the stem states both parts of the right option; the topic involves mass death and violence."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Communist China",
+  "card": [
+   [
+    "Civil war",
+    "Mao Zedong's Communist Party fought the Nationalists for control of China and won in 1949. Mao set up the People's Republic of China, and the Nationalists retreated to Taiwan."
+   ],
+   [
+    "Great Leap Forward",
+    "From 1958 Mao pushed farmers into huge communes and set impossible targets for grain and steel. Officials reported harvests far bigger than real ones, the state took too much grain, and tens of millions died in the famine that followed."
+   ],
+   [
+    "Cultural Revolution",
+    "From 1966 Mao urged young Red Guards to attack old ideas and anyone called an enemy of the revolution. Teachers, officials and many others were beaten, jailed or sent to labour on farms, many died, and schools and universities closed for years."
+   ],
+   [
+    "Reform",
+    "Mao died in 1976, and by 1978 Deng Xiaoping led China. From 1978 his market reforms let farmers sell extra crops and people run businesses for profit, and the economy grew fast, but the Communist Party kept full control of government."
+   ]
+  ],
+  "remember": "Mao's campaigns cost millions of lives. From 1978 the economy opened up, but the party kept its grip on power.",
+  "a": {
+   "q": "Why did so many people die during the Great Leap Forward?",
+   "opts": [
+    "False harvest reports let the state take too much grain",
+    "Red Guards shut down farms and attacked the farmers",
+    "The civil war with the Nationalists destroyed the crops",
+    "Market reforms let farmers sell their grain overseas"
+   ],
+   "why": "Officials claimed harvests that did not exist, so the state took grain that villages needed to eat, and famine followed. Red Guards belong to the Cultural Revolution, which began in 1966, after the famine.",
+   "clue": "Think about what happened to the grain that was grown."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1980s China's economy grew fast, but people still could not vote the Communist Party out of power. What does this show about the reforms?",
+   "opts": [
+    "They changed the economy but kept party control",
+    "They brought back the farming communes of 1958",
+    "They ended the Communist Party's rule of China",
+    "They brought free elections but no new markets"
+   ],
+   "why": "The reforms let people farm and run businesses for profit, which changed the economy, but the Communist Party kept full control of government. They did not end party rule, since people could not vote it out, and they moved away from the communes, not back to them.",
+   "clue": "Separate what changed in the economy from what changed in government."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "False harvest reports let the state take too much grain",
+   "also_right": []
+  },
+  "b": {
+   "best": "They changed the economy but kept party control",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question stem already states both halves of the answer (the economy grew fast; people could not vote the party out), so the right option only restates the stem and the stem rules out two wrong options on its own. A student can answer without knowing the reforms. Consider a stem that gives a fact for the student to interpret, such as farmers selling extra crops while protests were still put down."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "Facts on the civil war, Great Leap Forward, Cultural Revolution and 1978 reforms check out. Question b gives its answer away because the stem states both parts of the right option; the topic involves mass death and violence."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [
+  "Question b, wording: The question stem already states both halves of the answer (the economy grew fast; people could not vote the party out), so the right option only restates the stem and the stem rules out two wrong options on its own. A student can answer without knowing the reforms. Consider a stem that gives a fact for the student to interpret, such as farmers selling extra crops while protests were still put down."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Communist China",
+  "card": [
+   [
+    "Civil war",
+    "Mao Zedong's Communist Party fought the Nationalists for control of China and won in 1949. Mao set up the People's Republic of China, and the Nationalists retreated to Taiwan."
+   ],
+   [
+    "Great Leap Forward",
+    "From 1958 Mao pushed farmers into huge communes and set impossible targets for grain and steel. Officials reported harvests far bigger than real ones, the state took too much grain, and tens of millions died in the famine that followed."
+   ],
+   [
+    "Cultural Revolution",
+    "From 1966 Mao urged young Red Guards to attack old ideas and anyone called an enemy of the revolution. Teachers, officials and many others were beaten, jailed or sent to labour on farms, many died, and schools and universities closed for years."
+   ],
+   [
+    "Reform",
+    "Mao died in 1976, and by 1978 Deng Xiaoping led China. From 1978 his market reforms let farmers sell extra crops and people run businesses for profit, and the economy grew fast, but the Communist Party kept full control of government."
+   ]
+  ],
+  "remember": "Mao's campaigns cost millions of lives. From 1978 the economy opened up, but the party kept its grip on power.",
+  "a": {
+   "q": "Why did so many people die during the Great Leap Forward?",
+   "opts": [
+    "False harvest reports let the state take too much grain",
+    "Red Guards shut down farms and attacked the farmers",
+    "The civil war with the Nationalists destroyed the crops",
+    "Market reforms let farmers sell their grain overseas"
+   ],
+   "why": "Officials claimed harvests that did not exist, so the state took grain that villages needed to eat, and famine followed. Red Guards belong to the Cultural Revolution, which began in 1966, after the famine.",
+   "clue": "Think about what happened to the grain that was grown."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1980s, Li, a farmer in Sichuan, sells his extra rice at market and opens a small noodle shop. Protests calling for free elections are put down. What does this show about the reforms?",
+   "opts": [
+    "They changed the economy but kept party control",
+    "They brought back the farming communes of 1958",
+    "They ended the Communist Party's rule of China",
+    "They opened up politics but kept the economy closed"
+   ],
+   "why": "Li can sell extra crops and run a business for profit, so the economy has changed. The protests being put down shows the Communist Party still controls government, so the reforms did not end party rule. The last option reverses this: the economy opened, not politics.",
+   "clue": "Look at what Li can do with his rice, then at what happens to the protests."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Communist China",
+  "card": [
+   [
+    "Civil war",
+    "Mao Zedong's Communist Party fought the Nationalists for control of China and won in 1949. Mao set up the People's Republic of China, and the Nationalists retreated to Taiwan."
+   ],
+   [
+    "Great Leap Forward",
+    "From 1958 Mao pushed farmers into huge communes and set impossible targets for grain and steel. Officials reported harvests far bigger than real ones, the state took too much grain, and tens of millions died in the famine that followed."
+   ],
+   [
+    "Cultural Revolution",
+    "From 1966 Mao urged young Red Guards to attack old ideas and anyone called an enemy of the revolution. Teachers, officials and many others were beaten, jailed or sent to labour on farms, many died, and schools and universities closed for years."
+   ],
+   [
+    "Reform",
+    "Mao died in 1976, and by 1978 Deng Xiaoping led China. From 1978 his market reforms let farmers sell extra crops and people run businesses for profit, and the economy grew fast, but the Communist Party kept full control of government."
+   ]
+  ],
+  "remember": "Mao's campaigns cost millions of lives. From 1978 the economy opened up, but the party kept its grip on power.",
+  "a": {
+   "q": "Why did so many people die during the Great Leap Forward?",
+   "opts": [
+    "False harvest reports let the state take too much grain",
+    "Red Guards shut down farms and attacked the farmers",
+    "The civil war with the Nationalists destroyed the crops",
+    "Market reforms let farmers sell their grain overseas"
+   ],
+   "why": "Officials claimed harvests that did not exist, so the state took grain that villages needed to eat, and famine followed. Red Guards belong to the Cultural Revolution, which began in 1966, after the famine.",
+   "clue": "Think about what happened to the grain that was grown."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the 1980s, Li, a farmer in Sichuan, sells his extra rice at market and opens a small noodle shop. Protests calling for free elections are put down. What does this show about the reforms?",
+   "opts": [
+    "They changed the economy but kept party control",
+    "They brought back the farming communes of 1958",
+    "They ended the Communist Party's rule of China",
+    "They opened up politics but kept the economy closed"
+   ],
+   "why": "Li can sell extra crops and run a business for profit, so the economy has changed. The protests being put down shows the Communist Party still controls government, so the reforms did not end party rule. The last option reverses this: the economy opened, not politics.",
+   "clue": "Look at what Li can do with his rice, then at what happens to the protests."
+  }
+ },
+ "cleared_by": "owner"
+}

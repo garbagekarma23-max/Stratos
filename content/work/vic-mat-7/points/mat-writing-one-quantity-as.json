@@ -1,0 +1,223 @@
+{
+ "id": "mat-writing-one-quantity-as",
+ "title": "Writing one quantity as a percentage of another",
+ "brief": "9a8b920e87d8",
+ "shortlist": [
+  [
+   "mat-percentage-quantity",
+   0.666
+  ],
+  [
+   "mat-converting-fractions-decimals-percentages",
+   0.463
+  ],
+  [
+   "mat-percentage-increase-decrease-2-ac",
+   0.318
+  ],
+  [
+   "mat-dividing-quantity-ratio",
+   0.308
+  ],
+  [
+   "mat-discounts-price-increases",
+   0.257
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:00Z write: done",
+  "2026-11-12T15:15:50Z check: flagged",
+  "2026-11-12T15:26:05Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.03612,
+  "check": 0.00947,
+  "fix": 0.01651,
+  "recheck": 0.00657
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches writing one quantity as a percentage of another; the closest, converting fractions to percentages, covers the same division-by-100 step but not comparing a part to a whole with matching units, so a new point is safer.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "One quantity as a percentage",
+  "card": [
+   "To write one quantity as a percentage of another, write the part as a fraction of the whole. Divide the part by the whole.",
+   "Then multiply by 100 to turn the result into a percentage.",
+   "Both quantities must use the same units. Change one first if they do not, such as minutes and hours.",
+   "Example: 18 out of 24. \\(18 \\div 24 = 0.75\\), and \\(0.75 \\times 100 = 75\\), so the answer is 75%."
+  ],
+  "remember": "Part divided by whole, times 100, with matching units.",
+  "a": {
+   "q": "Sam scored 14 out of 20 on a quiz. What percentage is this?",
+   "opts": [
+    "70%",
+    "14%",
+    "6%",
+    "143%"
+   ],
+   "why": "\\(14 \\div 20 = 0.7\\), and \\(0.7 \\times 100 = 70\\), so the score is 70%. Writing 14% only uses the part and does not divide by the whole.",
+   "clue": "Divide the part by the whole first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya rides for 45 minutes of a 3 hour trip to Bendigo. What percentage of the trip is this?",
+   "opts": [
+    "25%",
+    "15%",
+    "1.5%",
+    "75%"
+   ],
+   "why": "Change 3 hours to 180 minutes. \\(45 \\div 180 = 0.25\\), and \\(0.25 \\times 100 = 25\\), so it is 25%. Using 45 and 3 together without matching units gives 15 and then 1500%, which is wrong.",
+   "clue": "Put both times in minutes first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "70%",
+   "also_right": []
+  },
+  "b": {
+   "best": "25%",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why describes the mismatched-units mistake as giving 1500%, which is not an option. The 15% option (45 ÷ 3 without multiplying by 100) goes unexplained, so the why does not match the distractor a student may have picked."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (70% and 25%), and the card is accurate. The only issue is minor: why (b) explains a 1500% error that is not an option and does not address the 15% distractor."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why describes the mismatched-units mistake as giving 1500%, which is not an option. The 15% option (45 ÷ 3 without multiplying by 100) goes unexplained, so the why does not match the distractor a student may have picked."
+ ],
+ "proposal": {
+  "title": "One quantity as a percentage",
+  "card": [
+   "To write one quantity as a percentage of another, write the part as a fraction of the whole. Divide the part by the whole.",
+   "Then multiply by 100 to turn the result into a percentage.",
+   "Both quantities must use the same units. Change one first if they do not, such as minutes and hours.",
+   "Example: 18 out of 24. \\(18 \\div 24 = 0.75\\), and \\(0.75 \\times 100 = 75\\), so the answer is 75%."
+  ],
+  "remember": "Part divided by whole, times 100, with matching units.",
+  "a": {
+   "q": "Sam scored 14 out of 20 on a quiz. What percentage is this?",
+   "opts": [
+    "70%",
+    "14%",
+    "6%",
+    "143%"
+   ],
+   "why": "\\(14 \\div 20 = 0.7\\), and \\(0.7 \\times 100 = 70\\), so the score is 70%. Writing 14% only uses the part and does not divide by the whole.",
+   "clue": "Divide the part by the whole first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya rides for 45 minutes of a 3 hour trip to Bendigo. What percentage of the trip is this?",
+   "opts": [
+    "25%",
+    "15%",
+    "75%",
+    "400%"
+   ],
+   "why": "Change 3 hours to 180 minutes. \\(45 \\div 180 = 0.25\\), and \\(0.25 \\times 100 = 25\\), so it is 25%. The answer 15% comes from \\(45 \\div 3\\), which mixes minutes with hours, and 75% uses only one hour, 60 minutes, as the whole.",
+   "clue": "Put both times in minutes first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "70%",
+    "also_right": []
+   },
+   "b": {
+    "best": "25%",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why describes the mismatched-units mistake as giving 1500%, which is not an option. The 15% option (45 ÷ 3 without multiplying by 100) goes unexplained, so the why does not match the distractor a student may have picked."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why describes the mismatched-units mistake as giving 1500%, which is not an option. The 15% option (45 ÷ 3 without multiplying by 100) goes unexplained, so the why does not match the distractor a student may have picked."
+  ]
+ },
+ "final": {
+  "title": "One quantity as a percentage",
+  "card": [
+   "To write one quantity as a percentage of another, write the part as a fraction of the whole. Divide the part by the whole.",
+   "Then multiply by 100 to turn the result into a percentage.",
+   "Both quantities must use the same units. Change one first if they do not, such as minutes and hours.",
+   "Example: 18 out of 24. \\(18 \\div 24 = 0.75\\), and \\(0.75 \\times 100 = 75\\), so the answer is 75%."
+  ],
+  "remember": "Part divided by whole, times 100, with matching units.",
+  "a": {
+   "q": "Sam scored 14 out of 20 on a quiz. What percentage is this?",
+   "opts": [
+    "70%",
+    "14%",
+    "6%",
+    "143%"
+   ],
+   "why": "\\(14 \\div 20 = 0.7\\), and \\(0.7 \\times 100 = 70\\), so the score is 70%. Writing 14% only uses the part and does not divide by the whole.",
+   "clue": "Divide the part by the whole first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya rides for 45 minutes of a 3 hour trip to Bendigo. What percentage of the trip is this?",
+   "opts": [
+    "25%",
+    "15%",
+    "75%",
+    "400%"
+   ],
+   "why": "Change 3 hours to 180 minutes. \\(45 \\div 180 = 0.25\\), and \\(0.25 \\times 100 = 25\\), so it is 25%. The answer 15% comes from \\(45 \\div 3\\), which mixes minutes with hours, and 75% uses only one hour, 60 minutes, as the whole.",
+   "clue": "Put both times in minutes first."
+  }
+ },
+ "cleared_by": "recheck"
+}

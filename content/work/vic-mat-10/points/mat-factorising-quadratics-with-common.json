@@ -1,0 +1,223 @@
+{
+ "id": "mat-factorising-quadratics-with-common",
+ "title": "Factorising quadratics with a common factor first",
+ "brief": "a3ba283523bb",
+ "shortlist": [
+  [
+   "mat-solving-quadratics-by-factorising",
+   0.454
+  ],
+  [
+   "mat-factorising-monic-quadratics",
+   0.378
+  ],
+  [
+   "mat-expanding-factorising-as-reverse",
+   0.348
+  ],
+  [
+   "mat-expanding-factorising",
+   0.338
+  ],
+  [
+   "mat-quadratic-functions",
+   0.317
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: done",
+  "2026-11-12T15:26:03Z check: flagged",
+  "2026-11-12T15:35:09Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "write": 0.01801,
+  "check": 0.01178,
+  "fix": 0.01988,
+  "recheck": 0.00773
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Expanding and factorising, covers taking out a common factor but not factorising the trinomial left inside, which is the main step of the new point, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Factorising quadratics with a common factor",
+  "card": [
+   "Look for a common factor first. Find the highest common factor (HCF) of all the terms and write it outside the brackets.",
+   "Then factorise what is left inside the brackets. For \\(x^{2} + bx + c\\), find two numbers that multiply to \\(c\\) and add to \\(b\\).",
+   "Example: \\(2x^{2} + 10x + 12 = 2(x^{2} + 5x + 6)\\). The numbers 2 and 3 multiply to 6 and add to 5, so the answer is \\(2(x + 2)(x + 3)\\).",
+   "Keep the common factor in the final answer. To check, expand the brackets and see that you get the original expression."
+  ],
+  "remember": "Take out the common factor first, then factorise inside, and keep the factor in your answer.",
+  "a": {
+   "q": "Which is the fully factorised form of \\(3x^{2} + 15x + 18\\)?",
+   "opts": [
+    "\\(3(x + 2)(x + 3)\\)",
+    "\\(3(x + 1)(x + 6)\\)",
+    "\\((x + 2)(x + 3)\\)",
+    "\\(3(x + 5)(x + 1)\\)"
+   ],
+   "why": "The common factor is 3, which leaves \\(x^{2} + 5x + 6 = (x + 2)(x + 3)\\). The option without the 3 is tempting, but it expands to \\(x^{2} + 5x + 6\\), not the original.",
+   "clue": "Take out the HCF, then find two numbers that multiply to 6 and add to 5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam writes the area of a paved rectangle as \\(4x^{2} - 4x - 24\\) square metres. Which is its fully factorised form?",
+   "opts": [
+    "\\(4(x - 3)(x + 2)\\)",
+    "\\(4(x + 3)(x - 2)\\)",
+    "\\((x - 3)(x + 2)\\)",
+    "\\(4(x - 6)(x + 4)\\)"
+   ],
+   "why": "Taking out 4 leaves \\(x^{2} - x - 6\\). The numbers \\(-3\\) and 2 multiply to \\(-6\\) and add to \\(-1\\). Swapping the signs gives a middle term of \\(+x\\), which is wrong.",
+   "clue": "After taking out 4, the numbers must multiply to \\(-6\\) and add to \\(-1\\)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(3(x + 2)(x + 3)\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(4(x - 3)(x + 2)\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "After the common factor comes out, question a leaves x² + 5x + 6, the same quadratic as the card's worked example. Its clue then names the same 'multiply to 6, add to 5' pair. A student can copy the card's answer, swapping 2 for 3, rather than apply the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct and the card, remember line and explanations are accurate. The only issue is that question a reuses the card's worked example quadratic (x² + 5x + 6), so it mostly tests copying rather than understanding."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: After the common factor comes out, question a leaves x² + 5x + 6, the same quadratic as the card's worked example. Its clue then names the same 'multiply to 6, add to 5' pair. A student can copy the card's answer, swapping 2 for 3, rather than apply the idea."
+ ],
+ "proposal": {
+  "title": "Factorising quadratics with a common factor first",
+  "card": [
+   "Look for a common factor first. Find the highest common factor (HCF) of all the terms and write it outside the brackets.",
+   "Then factorise what is left inside the brackets. For \\(x^{2} + bx + c\\), find two numbers that multiply to \\(c\\) and add to \\(b\\).",
+   "Example: \\(2x^{2} + 10x + 12 = 2(x^{2} + 5x + 6)\\). The numbers 2 and 3 multiply to 6 and add to 5, so the answer is \\(2(x + 2)(x + 3)\\).",
+   "Keep the common factor in the final answer. To check, expand the brackets and see that you get the original expression."
+  ],
+  "remember": "Take out the common factor first, then factorise inside, and keep the factor in your answer.",
+  "a": {
+   "q": "Which is the fully factorised form of \\(5x^{2} + 35x + 50\\)?",
+   "opts": [
+    "\\(5(x + 2)(x + 5)\\)",
+    "\\((x + 2)(x + 5)\\)",
+    "\\(5(x + 1)(x + 10)\\)",
+    "\\(5(x - 2)(x - 5)\\)"
+   ],
+   "why": "The HCF is 5, which leaves \\(x^{2} + 7x + 10\\). The numbers 2 and 5 multiply to 10 and add to 7, so it is \\(5(x + 2)(x + 5)\\). The option without the 5 is tempting, but it expands to \\(x^{2} + 7x + 10\\), not the original.",
+   "clue": "What is the largest number that divides 5, 35 and 50?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam writes the area of a paved rectangle as \\(4x^{2} - 4x - 24\\) square metres. Which is its fully factorised form?",
+   "opts": [
+    "\\(4(x - 3)(x + 2)\\)",
+    "\\(4(x + 3)(x - 2)\\)",
+    "\\((x - 3)(x + 2)\\)",
+    "\\(4(x - 6)(x + 4)\\)"
+   ],
+   "why": "Taking out 4 leaves \\(x^{2} - x - 6\\). The numbers \\(-3\\) and 2 multiply to \\(-6\\) and add to \\(-1\\). Swapping the signs gives a middle term of \\(+x\\), which is wrong.",
+   "clue": "After taking out 4, the numbers must multiply to \\(-6\\) and add to \\(-1\\)."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(5(x + 2)(x + 5)\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(4(x - 3)(x + 2)\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "After the common factor comes out, question a leaves x² + 5x + 6, the same quadratic as the card's worked example. Its clue then names the same 'multiply to 6, add to 5' pair. A student can copy the card's answer, swapping 2 for 3, rather than apply the idea."
+   }
+  ],
+  "flags": [
+   "Question a, level: After the common factor comes out, question a leaves x² + 5x + 6, the same quadratic as the card's worked example. Its clue then names the same 'multiply to 6, add to 5' pair. A student can copy the card's answer, swapping 2 for 3, rather than apply the idea."
+  ]
+ },
+ "final": {
+  "title": "Factorising quadratics with a common factor first",
+  "card": [
+   "Look for a common factor first. Find the highest common factor (HCF) of all the terms and write it outside the brackets.",
+   "Then factorise what is left inside the brackets. For \\(x^{2} + bx + c\\), find two numbers that multiply to \\(c\\) and add to \\(b\\).",
+   "Example: \\(2x^{2} + 10x + 12 = 2(x^{2} + 5x + 6)\\). The numbers 2 and 3 multiply to 6 and add to 5, so the answer is \\(2(x + 2)(x + 3)\\).",
+   "Keep the common factor in the final answer. To check, expand the brackets and see that you get the original expression."
+  ],
+  "remember": "Take out the common factor first, then factorise inside, and keep the factor in your answer.",
+  "a": {
+   "q": "Which is the fully factorised form of \\(5x^{2} + 35x + 50\\)?",
+   "opts": [
+    "\\(5(x + 2)(x + 5)\\)",
+    "\\((x + 2)(x + 5)\\)",
+    "\\(5(x + 1)(x + 10)\\)",
+    "\\(5(x - 2)(x - 5)\\)"
+   ],
+   "why": "The HCF is 5, which leaves \\(x^{2} + 7x + 10\\). The numbers 2 and 5 multiply to 10 and add to 7, so it is \\(5(x + 2)(x + 5)\\). The option without the 5 is tempting, but it expands to \\(x^{2} + 7x + 10\\), not the original.",
+   "clue": "What is the largest number that divides 5, 35 and 50?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam writes the area of a paved rectangle as \\(4x^{2} - 4x - 24\\) square metres. Which is its fully factorised form?",
+   "opts": [
+    "\\(4(x - 3)(x + 2)\\)",
+    "\\(4(x + 3)(x - 2)\\)",
+    "\\((x - 3)(x + 2)\\)",
+    "\\(4(x - 6)(x + 4)\\)"
+   ],
+   "why": "Taking out 4 leaves \\(x^{2} - x - 6\\). The numbers \\(-3\\) and 2 multiply to \\(-6\\) and add to \\(-1\\). Swapping the signs gives a middle term of \\(+x\\), which is wrong.",
+   "clue": "After taking out 4, the numbers must multiply to \\(-6\\) and add to \\(-1\\)."
+  }
+ },
+ "cleared_by": "recheck"
+}

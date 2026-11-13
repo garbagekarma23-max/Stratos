@@ -1,0 +1,239 @@
+{
+ "id": "mat-conditional-probability-from-two-vic",
+ "title": "Conditional probability from a two-way table",
+ "brief": "f214e59be7fb",
+ "shortlist": [
+  [
+   "mat-conditional-probability-from-two",
+   0.796
+  ],
+  [
+   "mat-language-conditional-probability",
+   0.53
+  ],
+  [
+   "mat-conditional-probability",
+   0.511
+  ],
+  [
+   "mat-conditional-probability-2",
+   0.509
+  ],
+  [
+   "mat-conditional-probability-from-tree",
+   0.364
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 may adapt mat-conditional-probability-from-two, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:47Z confirm: Claude Opus 5.5 may adapt mat-conditional-probability-from-two, but is not highly sure, so it is for you to review",
+  "2026-11-13T12:13:15Z match: claude-code says adapt mat-conditional-probability-from-two (2 changes)",
+  "2026-11-13T12:13:15Z claude-code review: adapting mat-conditional-probability-from-two on the next run",
+  "2026-11-13T13:04:53Z adapt: failed the content check, writing again",
+  "2026-11-13T13:11:25Z adapt: done",
+  "2026-11-13T13:13:38Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "confirm": 0.01102,
+  "adapt": 0.01834,
+  "check": 0.00794
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-conditional-probability-from-two",
+  "changes": [
+   "Question b describes a school in Perth, which is in Western Australia, so it should be changed to a Victorian place such as Melbourne or Geelong."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches exactly the same idea at the right depth, but its question b uses a Perth school, so the place should be made local to Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-conditional-probability-from-two",
+  "changes": [
+   "Write probabilities as Pr(...) instead of P(...), the notation used in Victoria.",
+   "Change the Perth school in question b to a school in Victoria, such as Melbourne."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Year 10 idea, using the condition's row or column as the total. It only needs Victoria's Pr notation and a local place in one question.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-conditional-probability-from-two",
+  "changes": [
+   "Write every probability as Pr(...) in place of P(...), as Victorian courses do.",
+   "Change the Perth school in question b to a school in Victoria, such as one in Ballarat."
+  ],
+  "by": "claude-code",
+  "parts": [
+   "card4",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "adapt",
+   "sure": "high",
+   "reason": "The bank point teaches using the condition's row or column as the total at Year 10 depth, and its answers 12/18 and 8/23 check out. It writes P(...) where Victoria writes Pr(...), and question b is set in Perth.",
+   "item": "dbec3e70a99a117e",
+   "result": "decided",
+   "saved": {
+    "id": "mat-conditional-probability-from-two-vic",
+    "title": "Conditional probability from a two-way table",
+    "brief": "f214e59be7fb",
+    "shortlist": [
+     [
+      "mat-conditional-probability-from-two",
+      0.796
+     ],
+     [
+      "mat-language-conditional-probability",
+      0.53
+     ],
+     [
+      "mat-conditional-probability",
+      0.511
+     ],
+     [
+      "mat-conditional-probability-2",
+      0.509
+     ],
+     [
+      "mat-conditional-probability-from-tree",
+      0.364
+     ]
+    ],
+    "stage": "match-review",
+    "sent": {
+     "match": 1,
+     "confirm": 1
+    },
+    "usd": {
+     "match": 0.00031,
+     "confirm": 0.01102
+    },
+    "match": {
+     "verdict": "adapt",
+     "same": "mat-conditional-probability-from-two",
+     "changes": [
+      "Question b describes a school in Perth, which is in Western Australia, so it should be changed to a Victorian place such as Melbourne or Geelong."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches exactly the same idea at the right depth, but its question b uses a Perth school, so the place should be made local to Victoria.",
+     "model": "claude-haiku-5-5"
+    },
+    "confirm": {
+     "verdict": "adapt",
+     "same": "mat-conditional-probability-from-two",
+     "changes": [
+      "Write probabilities as Pr(...) instead of P(...), the notation used in Victoria.",
+      "Change the Perth school in question b to a school in Victoria, such as Melbourne."
+     ],
+     "sure": "medium",
+     "reason": "The bank point teaches the same Year 10 idea, using the condition's row or column as the total. It only needs Victoria's Pr notation and a local place in one question.",
+     "model": "claude-opus-5-5"
+    },
+    "rewrites": 0
+   },
+   "after": "485ce2bd7abe0751"
+  }
+ ],
+ "draft": {
+  "title": "Conditional probability from a two-way table",
+  "card": [
+   "A two-way table sorts people or things by two features at once. Each cell counts those with both features.",
+   "When a condition is given, only the row or column for that condition counts. That row or column total becomes the new total.",
+   "Probability given the condition \\(=\\) number with both features \\(\\div\\) total for the condition. Do not use the grand total.",
+   "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. \\(\\text{Pr}(\\text{Year 7 given bus}) = \\frac{6}{24} = \\frac{1}{4}\\)."
+  ],
+  "remember": "Given a condition, shrink the total to that row or column.",
+  "a": {
+   "q": "A table sorts 30 club members. 18 are juniors, and 12 of the juniors play netball. Find \\(\\text{Pr}(\\text{plays netball given junior})\\).",
+   "opts": [
+    "\\(\\frac{12}{18}\\)",
+    "\\(\\frac{12}{30}\\)",
+    "\\(\\frac{18}{30}\\)",
+    "\\(\\frac{6}{18}\\)"
+   ],
+   "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving \\(\\frac{12}{18}\\). Using 30 would divide by everyone, which ignores the condition.",
+   "clue": "Which group are we told about?"
+  },
+  "b": {
+   "d": 3,
+   "q": "At a Ballarat school, 50 students were asked about sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. Find \\(\\text{Pr}(\\text{football given cricket})\\).",
+   "opts": [
+    "\\(\\frac{8}{23}\\)",
+    "\\(\\frac{8}{20}\\)",
+    "\\(\\frac{8}{50}\\)",
+    "\\(\\frac{15}{23}\\)"
+   ],
+   "why": "Cricket players are \\(8 + 15 = 23\\), so that is the total. Of them, 8 play football, giving \\(\\frac{8}{23}\\). The tempting \\(\\frac{8}{20}\\) uses the football total, which reverses the condition.",
+   "clue": "Find the total for the group named after the word given."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{12}{18}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{8}{23}\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card, the worked example and both questions use the condition's total correctly, and the explanations match the right answers."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Conditional probability from a two-way table",
+  "card": [
+   "A two-way table sorts people or things by two features at once. Each cell counts those with both features.",
+   "When a condition is given, only the row or column for that condition counts. That row or column total becomes the new total.",
+   "Probability given the condition \\(=\\) number with both features \\(\\div\\) total for the condition. Do not use the grand total.",
+   "Example: 40 students, 24 take the bus and 16 do not. Of the 24 bus riders, 6 are in Year 7. \\(\\text{Pr}(\\text{Year 7 given bus}) = \\frac{6}{24} = \\frac{1}{4}\\)."
+  ],
+  "remember": "Given a condition, shrink the total to that row or column.",
+  "a": {
+   "q": "A table sorts 30 club members. 18 are juniors, and 12 of the juniors play netball. Find \\(\\text{Pr}(\\text{plays netball given junior})\\).",
+   "opts": [
+    "\\(\\frac{12}{18}\\)",
+    "\\(\\frac{12}{30}\\)",
+    "\\(\\frac{18}{30}\\)",
+    "\\(\\frac{6}{18}\\)"
+   ],
+   "why": "The condition is junior, so the total is the 18 juniors. 12 of them play netball, giving \\(\\frac{12}{18}\\). Using 30 would divide by everyone, which ignores the condition.",
+   "clue": "Which group are we told about?"
+  },
+  "b": {
+   "d": 3,
+   "q": "At a Ballarat school, 50 students were asked about sport. 20 play football, and 8 of those also play cricket. 15 play cricket but not football. Find \\(\\text{Pr}(\\text{football given cricket})\\).",
+   "opts": [
+    "\\(\\frac{8}{23}\\)",
+    "\\(\\frac{8}{20}\\)",
+    "\\(\\frac{8}{50}\\)",
+    "\\(\\frac{15}{23}\\)"
+   ],
+   "why": "Cricket players are \\(8 + 15 = 23\\), so that is the total. Of them, 8 play football, giving \\(\\frac{8}{23}\\). The tempting \\(\\frac{8}{20}\\) uses the football total, which reverses the condition.",
+   "clue": "Find the total for the group named after the word given."
+  }
+ }
+}

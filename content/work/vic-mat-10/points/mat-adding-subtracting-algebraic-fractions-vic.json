@@ -1,0 +1,758 @@
+{
+ "id": "mat-adding-subtracting-algebraic-fractions-vic",
+ "title": "Adding and subtracting algebraic fractions",
+ "brief": "da307ac26ccc",
+ "shortlist": [
+  [
+   "mat-equations-with-algebraic-fractions",
+   0.502
+  ],
+  [
+   "mat-partial-fractions",
+   0.285
+  ],
+  [
+   "mat-partial-fractions-unit-3",
+   0.242
+  ],
+  [
+   "mat-adding-subtracting-fractions",
+   0.223
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:47Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:04Z write: done",
+  "2026-11-12T15:35:08Z check: flagged",
+  "2026-11-12T15:42:24Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-13T06:06:33Z autoreject: rejected, to be written again (card wording, card level)",
+  "2026-11-13T09:32:53Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-13T10:40:35Z claude-code check: answered by a separate subagent",
+  "2026-11-13T10:40:35Z check: flagged",
+  "2026-11-13T11:34:11Z fix: suggested",
+  "2026-11-13T12:13:15Z claude-code review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.008,
+  "check": 0.01339,
+  "fix": 0.08288,
+  "recheck": 0.01473
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches adding or subtracting algebraic fractions as expressions: the closest cards solve equations with fractions, decompose fractions into partial fractions, or add numeric fractions at Year 7 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The line 'take away the whole new numerator' matters only when a numerator has more than one term, such as (x+1)/3. The example given has single-term numerators, so students never see why 'whole' matters, and the warning may confuse them.\n- Card, level: Every example and question uses single-term numerators like x/2 + x/5, which is closer to Year 8 skill. Level 10 work on algebraic fractions would normally include binomial numerators or different algebraic denominators.",
+ "rejected": {
+  "title": "Adding and subtracting algebraic fractions",
+  "card": [
+   "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+   "Rewrite each fraction with that denominator. Multiply the top and bottom of each fraction by the same number.",
+   "Then add or subtract the numerators and keep the denominator. Worked example: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+   "With subtraction, take away the whole new numerator. For \\(\\frac{x}{2} - \\frac{x}{5}\\), the common denominator is 10, so it is \\(\\frac{5x}{10} - \\frac{2x}{10} = \\frac{3x}{10}\\)."
+  ],
+  "remember": "Match the denominators first, then combine only the numerators.",
+  "a": {
+   "q": "What is \\(\\frac{x}{2} + \\frac{x}{5}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{7x}{10}\\)",
+    "\\(\\frac{2x}{7}\\)",
+    "\\(\\frac{2x}{10}\\)",
+    "\\(\\frac{7x}{7}\\)"
+   ],
+   "why": "The common denominator is 10, so the sum is \\(\\frac{5x}{10} + \\frac{2x}{10} = \\frac{7x}{10}\\). Adding the tops and the bottoms to get \\(\\frac{2x}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+   "clue": "Rewrite both fractions over 10 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia simplifies \\(\\frac{x}{3} - \\frac{x}{6}\\). Which answer is correct?",
+   "opts": [
+    "\\(\\frac{x}{6}\\)",
+    "\\(-\\frac{x}{6}\\)",
+    "\\(0\\)",
+    "\\(\\frac{3x}{6}\\)"
+   ],
+   "why": "The common denominator is 6, so \\(\\frac{x}{3}\\) becomes \\(\\frac{2x}{6}\\). Then \\(\\frac{2x}{6} - \\frac{x}{6} = \\frac{x}{6}\\). Writing \\(\\frac{x}{3}\\) as \\(\\frac{x}{6}\\), changing the bottom but not the top, gives 0, which is wrong because the top and bottom must be multiplied by the same number.",
+   "clue": "Rewrite \\(\\frac{x}{3}\\) with a denominator of 6."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "claude-code",
+ "autoreject": [
+  {
+   "at": "2026-11-13T06:06:33Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The line 'take away the whole new numerator' matters only when a numerator has more than one term, such as (x+1)/3. The example given has single-term numerators, so students never see why 'whole' matters, and the warning may confuse them.",
+    "Card, level: Every example and question uses single-term numerators like x/2 + x/5, which is closer to Year 8 skill. Level 10 work on algebraic fractions would normally include binomial numerators or different algebraic denominators."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Adding and subtracting algebraic fractions",
+     "card": [
+      "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+      "Rewrite each fraction with that denominator. Multiply the top and bottom of each fraction by the same number.",
+      "Then add or subtract the numerators and keep the denominator. Worked example: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+      "With subtraction, take away the whole new numerator. For \\(\\frac{x}{2} - \\frac{x}{5}\\), the common denominator is 10, so it is \\(\\frac{5x}{10} - \\frac{2x}{10} = \\frac{3x}{10}\\)."
+     ],
+     "remember": "Match the denominators first, then combine only the numerators.",
+     "a": {
+      "q": "What is \\(\\frac{x}{2} + \\frac{x}{5}\\) as a single fraction?",
+      "opts": [
+       "\\(\\frac{7x}{10}\\)",
+       "\\(\\frac{2x}{7}\\)",
+       "\\(\\frac{2x}{10}\\)",
+       "\\(\\frac{7x}{7}\\)"
+      ],
+      "why": "The common denominator is 10, so the sum is \\(\\frac{5x}{10} + \\frac{2x}{10} = \\frac{7x}{10}\\). Adding the denominators as well, to get \\(\\frac{2x}{7}\\), is wrong because the denominator stays the same once the fractions match.",
+      "clue": "Rewrite both fractions over 10 first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia simplifies \\(\\frac{x}{3} - \\frac{x}{6}\\). Which answer is correct?",
+      "opts": [
+       "\\(\\frac{x}{6}\\)",
+       "\\(\\frac{x}{3}\\)",
+       "\\(\\frac{3x}{6}\\)",
+       "\\(\\frac{x}{18}\\)"
+      ],
+      "why": "The common denominator is 6, so \\(\\frac{x}{3}\\) becomes \\(\\frac{2x}{6}\\). Then \\(\\frac{2x}{6} - \\frac{x}{6} = \\frac{x}{6}\\). Using 3 and 6 to get \\(\\frac{x}{3}\\) by subtracting denominators is tempting but wrong, because the fractions must be rewritten over one denominator.",
+      "clue": "Rewrite \\(\\frac{x}{3}\\) with a denominator of 6."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(\\frac{7x}{10}\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(\\frac{x}{6}\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says subtracting the denominators gives \\(\\frac{x}{3}\\). That error would also subtract the numerators, giving \\(x - x = 0\\) over \\(6 - 3 = 3\\), so it gives 0, not \\(\\frac{x}{3}\\). The account of the distractor is muddled and could confuse students."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are correct: (a) is \\(\\frac{7x}{10}\\) and (b) is \\(\\frac{x}{6}\\). The only issue is that Why (b) wrongly says subtracting denominators gives \\(\\frac{x}{3}\\); that error would give 0."
+    },
+    "flags": [
+     "Question b, other: Why (b) says subtracting the denominators gives \\(\\frac{x}{3}\\). That error would also subtract the numerators, giving \\(x - x = 0\\) over \\(6 - 3 = 3\\), so it gives 0, not \\(\\frac{x}{3}\\). The account of the distractor is muddled and could confuse students."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Adding and subtracting algebraic fractions",
+     "card": [
+      "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+      "Rewrite each fraction with that denominator. Multiply the top and bottom of each fraction by the same number.",
+      "Then add or subtract the numerators and keep the denominator. Worked example: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+      "With subtraction, take away the whole new numerator. For \\(\\frac{x}{2} - \\frac{x}{5}\\), the common denominator is 10, so it is \\(\\frac{5x}{10} - \\frac{2x}{10} = \\frac{3x}{10}\\)."
+     ],
+     "remember": "Match the denominators first, then combine only the numerators.",
+     "a": {
+      "q": "What is \\(\\frac{x}{2} + \\frac{x}{5}\\) as a single fraction?",
+      "opts": [
+       "\\(\\frac{7x}{10}\\)",
+       "\\(\\frac{2x}{7}\\)",
+       "\\(\\frac{2x}{10}\\)",
+       "\\(\\frac{7x}{7}\\)"
+      ],
+      "why": "The common denominator is 10, so the sum is \\(\\frac{5x}{10} + \\frac{2x}{10} = \\frac{7x}{10}\\). Adding the tops and the bottoms to get \\(\\frac{2x}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+      "clue": "Rewrite both fractions over 10 first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia simplifies \\(\\frac{x}{3} - \\frac{x}{6}\\). Which answer is correct?",
+      "opts": [
+       "\\(\\frac{x}{6}\\)",
+       "\\(-\\frac{x}{6}\\)",
+       "\\(0\\)",
+       "\\(\\frac{3x}{6}\\)"
+      ],
+      "why": "The common denominator is 6, so \\(\\frac{x}{3}\\) becomes \\(\\frac{2x}{6}\\). Then \\(\\frac{2x}{6} - \\frac{x}{6} = \\frac{x}{6}\\). Writing \\(\\frac{x}{3}\\) as \\(\\frac{x}{6}\\), changing the bottom but not the top, gives 0, which is wrong because the top and bottom must be multiplied by the same number.",
+      "clue": "Rewrite \\(\\frac{x}{3}\\) with a denominator of 6."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-12T17:07:12Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "\\(\\frac{7x}{10}\\)",
+       "also_right": []
+      },
+      "b": {
+       "best": "\\(\\frac{x}{6}\\)",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The line 'take away the whole new numerator' matters only when a numerator has more than one term, such as (x+1)/3. The example given has single-term numerators, so students never see why 'whole' matters, and the warning may confuse them."
+       },
+       {
+        "part": "card",
+        "kind": "level",
+        "detail": "Every example and question uses single-term numerators like x/2 + x/5, which is closer to Year 8 skill. Level 10 work on algebraic fractions would normally include binomial numerators or different algebraic denominators."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one correct answer (7x/10 and x/6), and the explanations are accurate. The content is quite easy for Level 10, and the 'whole numerator' warning is never shown by an example where it matters."
+     },
+     "flags": [
+      "Card, wording: The line 'take away the whole new numerator' matters only when a numerator has more than one term, such as (x+1)/3. The example given has single-term numerators, so students never see why 'whole' matters, and the warning may confuse them.",
+      "Card, level: Every example and question uses single-term numerators like x/2 + x/5, which is closer to Year 8 skill. Level 10 work on algebraic fractions would normally include binomial numerators or different algebraic denominators."
+     ]
+    }
+   }
+  }
+ ],
+ "claude_code": [
+  {
+   "at": "2026-11-13T09:32:53Z",
+   "step": "write",
+   "version": {
+    "title": "Adding and subtracting algebraic fractions",
+    "card": [
+     "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+     "Rewrite each fraction over it by multiplying its top and bottom by the same number. Then combine the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+     "Put a numerator with more than one term in brackets, so every term is multiplied. \\(\\frac{x + 1}{2} + \\frac{x - 3}{5}\\) becomes \\(\\frac{5(x + 1) + 2(x - 3)}{10}\\), which is \\(\\frac{7x - 1}{10}\\).",
+     "With subtraction, the minus sign applies to the whole second numerator. \\(\\frac{x + 4}{3} - \\frac{x - 2}{6}\\) becomes \\(\\frac{2(x + 4) - (x - 2)}{6}\\). That is \\(\\frac{2x + 8 - x + 2}{6}\\), which is \\(\\frac{x + 10}{6}\\)."
+    ],
+    "remember": "Match the denominators, bracket each numerator, then combine. A minus sign changes every term after it.",
+    "a": {
+     "q": "What is \\(\\frac{x + 2}{3} + \\frac{x - 1}{4}\\) as a single fraction?",
+     "opts": [
+      "\\(\\frac{7x + 5}{12}\\)",
+      "\\(\\frac{2x + 1}{7}\\)",
+      "\\(\\frac{7x + 1}{12}\\)",
+      "\\(\\frac{7x + 11}{12}\\)"
+     ],
+     "why": "The common denominator is 12, so the numerator is \\(4(x + 2) + 3(x - 1)\\), which is \\(4x + 8 + 3x - 3 = 7x + 5\\). Adding the tops and the bottoms to get \\(\\frac{2x + 1}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+     "clue": "Rewrite both fractions over 12 first."
+    },
+    "b": {
+     "d": 3,
+     "q": "Mia simplifies \\(\\frac{x + 3}{2} - \\frac{x - 1}{3}\\). Which answer is correct?",
+     "opts": [
+      "\\(\\frac{x + 11}{6}\\)",
+      "\\(\\frac{x + 7}{6}\\)",
+      "\\(\\frac{x + 4}{6}\\)",
+      "\\(\\frac{5x + 7}{6}\\)"
+     ],
+     "why": "The common denominator is 6, so the numerator is \\(3(x + 3) - 2(x - 1)\\). The minus sign applies to the whole second numerator, so it is \\(3x + 9 - 2x + 2 = x + 11\\). The option \\(\\frac{x + 7}{6}\\) writes \\(-2\\) where it should be \\(+2\\), as if the minus changed only the \\(x\\) term.",
+     "clue": "Put the second numerator in brackets before you subtract."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-13T10:40:35Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "\\(\\frac{7x + 5}{12}\\)",
+     "also_right": []
+    },
+    "b": {
+     "best": "\\(\\frac{x + 11}{6}\\)",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "remember",
+      "kind": "wording",
+      "detail": "\"A minus sign changes every term after it\" is broader than the card, which says the minus applies to the whole second numerator. Read literally it is false: in a - b + c the minus does not change c. Better: \"A minus sign in front of a fraction changes every term in its numerator.\""
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "The card, both questions and both whys are correct: (a) is (7x + 5)/12 and (b) is (x + 11)/6. The only problem is the remember line, which says a minus sign changes every term after it. That is broader than the card's rule and false in general."
+   }
+  },
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The fix narrows the remember line to the minus sign in front of a fraction, which matches the card and is true. All the working checks out: (7x + 5)/12 and (x + 11)/6 are right, and every other option, including the new (x + 2)/6, is wrong.",
+   "item": "55da581956c0bcd4",
+   "result": "decided",
+   "saved": {
+    "id": "mat-adding-subtracting-algebraic-fractions-vic",
+    "title": "Adding and subtracting algebraic fractions",
+    "brief": "da307ac26ccc",
+    "shortlist": [
+     [
+      "mat-equations-with-algebraic-fractions",
+      0.502
+     ],
+     [
+      "mat-partial-fractions",
+      0.285
+     ],
+     [
+      "mat-partial-fractions-unit-3",
+      0.242
+     ],
+     [
+      "mat-adding-subtracting-fractions",
+      0.223
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 2,
+     "check": 1,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00024,
+     "write": 0.008,
+     "check": 0.01339,
+     "fix": 0.08288,
+     "recheck": 0.01473
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "high",
+     "reason": "No bank point teaches adding or subtracting algebraic fractions as expressions: the closest cards solve equations with fractions, decompose fractions into partial fractions, or add numeric fractions at Year 7 depth.",
+     "model": "claude-haiku-5-5"
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The line 'take away the whole new numerator' matters only when a numerator has more than one term, such as (x+1)/3. The example given has single-term numerators, so students never see why 'whole' matters, and the warning may confuse them.\n- Card, level: Every example and question uses single-term numerators like x/2 + x/5, which is closer to Year 8 skill. Level 10 work on algebraic fractions would normally include binomial numerators or different algebraic denominators.",
+    "rejected": {
+     "title": "Adding and subtracting algebraic fractions",
+     "card": [
+      "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+      "Rewrite each fraction with that denominator. Multiply the top and bottom of each fraction by the same number.",
+      "Then add or subtract the numerators and keep the denominator. Worked example: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+      "With subtraction, take away the whole new numerator. For \\(\\frac{x}{2} - \\frac{x}{5}\\), the common denominator is 10, so it is \\(\\frac{5x}{10} - \\frac{2x}{10} = \\frac{3x}{10}\\)."
+     ],
+     "remember": "Match the denominators first, then combine only the numerators.",
+     "a": {
+      "q": "What is \\(\\frac{x}{2} + \\frac{x}{5}\\) as a single fraction?",
+      "opts": [
+       "\\(\\frac{7x}{10}\\)",
+       "\\(\\frac{2x}{7}\\)",
+       "\\(\\frac{2x}{10}\\)",
+       "\\(\\frac{7x}{7}\\)"
+      ],
+      "why": "The common denominator is 10, so the sum is \\(\\frac{5x}{10} + \\frac{2x}{10} = \\frac{7x}{10}\\). Adding the tops and the bottoms to get \\(\\frac{2x}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+      "clue": "Rewrite both fractions over 10 first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia simplifies \\(\\frac{x}{3} - \\frac{x}{6}\\). Which answer is correct?",
+      "opts": [
+       "\\(\\frac{x}{6}\\)",
+       "\\(-\\frac{x}{6}\\)",
+       "\\(0\\)",
+       "\\(\\frac{3x}{6}\\)"
+      ],
+      "why": "The common denominator is 6, so \\(\\frac{x}{3}\\) becomes \\(\\frac{2x}{6}\\). Then \\(\\frac{2x}{6} - \\frac{x}{6} = \\frac{x}{6}\\). Writing \\(\\frac{x}{3}\\) as \\(\\frac{x}{6}\\), changing the bottom but not the top, gives 0, which is wrong because the top and bottom must be multiplied by the same number.",
+      "clue": "Rewrite \\(\\frac{x}{3}\\) with a denominator of 6."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-13T06:06:33Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Card, wording: The line 'take away the whole new numerator' matters only when a numerator has more than one term, such as (x+1)/3. The example given has single-term numerators, so students never see why 'whole' matters, and the warning may confuse them.",
+       "Card, level: Every example and question uses single-term numerators like x/2 + x/5, which is closer to Year 8 skill. Level 10 work on algebraic fractions would normally include binomial numerators or different algebraic denominators."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Adding and subtracting algebraic fractions",
+        "card": [
+         "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+         "Rewrite each fraction with that denominator. Multiply the top and bottom of each fraction by the same number.",
+         "Then add or subtract the numerators and keep the denominator. Worked example: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+         "With subtraction, take away the whole new numerator. For \\(\\frac{x}{2} - \\frac{x}{5}\\), the common denominator is 10, so it is \\(\\frac{5x}{10} - \\frac{2x}{10} = \\frac{3x}{10}\\)."
+        ],
+        "remember": "Match the denominators first, then combine only the numerators.",
+        "a": {
+         "q": "What is \\(\\frac{x}{2} + \\frac{x}{5}\\) as a single fraction?",
+         "opts": [
+          "\\(\\frac{7x}{10}\\)",
+          "\\(\\frac{2x}{7}\\)",
+          "\\(\\frac{2x}{10}\\)",
+          "\\(\\frac{7x}{7}\\)"
+         ],
+         "why": "The common denominator is 10, so the sum is \\(\\frac{5x}{10} + \\frac{2x}{10} = \\frac{7x}{10}\\). Adding the denominators as well, to get \\(\\frac{2x}{7}\\), is wrong because the denominator stays the same once the fractions match.",
+         "clue": "Rewrite both fractions over 10 first."
+        },
+        "b": {
+         "d": 3,
+         "q": "Mia simplifies \\(\\frac{x}{3} - \\frac{x}{6}\\). Which answer is correct?",
+         "opts": [
+          "\\(\\frac{x}{6}\\)",
+          "\\(\\frac{x}{3}\\)",
+          "\\(\\frac{3x}{6}\\)",
+          "\\(\\frac{x}{18}\\)"
+         ],
+         "why": "The common denominator is 6, so \\(\\frac{x}{3}\\) becomes \\(\\frac{2x}{6}\\). Then \\(\\frac{2x}{6} - \\frac{x}{6} = \\frac{x}{6}\\). Using 3 and 6 to get \\(\\frac{x}{3}\\) by subtracting denominators is tempting but wrong, because the fractions must be rewritten over one denominator.",
+         "clue": "Rewrite \\(\\frac{x}{3}\\) with a denominator of 6."
+        }
+       },
+       "local": [],
+       "check": {
+        "a": {
+         "best": "\\(\\frac{7x}{10}\\)",
+         "also_right": []
+        },
+        "b": {
+         "best": "\\(\\frac{x}{6}\\)",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "b",
+          "kind": "other",
+          "detail": "Why (b) says subtracting the denominators gives \\(\\frac{x}{3}\\). That error would also subtract the numerators, giving \\(x - x = 0\\) over \\(6 - 3 = 3\\), so it gives 0, not \\(\\frac{x}{3}\\). The account of the distractor is muddled and could confuse students."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "Both questions are correct: (a) is \\(\\frac{7x}{10}\\) and (b) is \\(\\frac{x}{6}\\). The only issue is that Why (b) wrongly says subtracting denominators gives \\(\\frac{x}{3}\\); that error would give 0."
+       },
+       "flags": [
+        "Question b, other: Why (b) says subtracting the denominators gives \\(\\frac{x}{3}\\). That error would also subtract the numerators, giving \\(x - x = 0\\) over \\(6 - 3 = 3\\), so it gives 0, not \\(\\frac{x}{3}\\). The account of the distractor is muddled and could confuse students."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Adding and subtracting algebraic fractions",
+        "card": [
+         "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+         "Rewrite each fraction with that denominator. Multiply the top and bottom of each fraction by the same number.",
+         "Then add or subtract the numerators and keep the denominator. Worked example: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+         "With subtraction, take away the whole new numerator. For \\(\\frac{x}{2} - \\frac{x}{5}\\), the common denominator is 10, so it is \\(\\frac{5x}{10} - \\frac{2x}{10} = \\frac{3x}{10}\\)."
+        ],
+        "remember": "Match the denominators first, then combine only the numerators.",
+        "a": {
+         "q": "What is \\(\\frac{x}{2} + \\frac{x}{5}\\) as a single fraction?",
+         "opts": [
+          "\\(\\frac{7x}{10}\\)",
+          "\\(\\frac{2x}{7}\\)",
+          "\\(\\frac{2x}{10}\\)",
+          "\\(\\frac{7x}{7}\\)"
+         ],
+         "why": "The common denominator is 10, so the sum is \\(\\frac{5x}{10} + \\frac{2x}{10} = \\frac{7x}{10}\\). Adding the tops and the bottoms to get \\(\\frac{2x}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+         "clue": "Rewrite both fractions over 10 first."
+        },
+        "b": {
+         "d": 3,
+         "q": "Mia simplifies \\(\\frac{x}{3} - \\frac{x}{6}\\). Which answer is correct?",
+         "opts": [
+          "\\(\\frac{x}{6}\\)",
+          "\\(-\\frac{x}{6}\\)",
+          "\\(0\\)",
+          "\\(\\frac{3x}{6}\\)"
+         ],
+         "why": "The common denominator is 6, so \\(\\frac{x}{3}\\) becomes \\(\\frac{2x}{6}\\). Then \\(\\frac{2x}{6} - \\frac{x}{6} = \\frac{x}{6}\\). Writing \\(\\frac{x}{3}\\) as \\(\\frac{x}{6}\\), changing the bottom but not the top, gives 0, which is wrong because the top and bottom must be multiplied by the same number.",
+         "clue": "Rewrite \\(\\frac{x}{3}\\) with a denominator of 6."
+        }
+       },
+       "proposal_problems": [],
+       "alone": true,
+       "recheck": {
+        "at": "2026-11-12T17:07:12Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "\\(\\frac{7x}{10}\\)",
+          "also_right": []
+         },
+         "b": {
+          "best": "\\(\\frac{x}{6}\\)",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "card",
+           "kind": "wording",
+           "detail": "The line 'take away the whole new numerator' matters only when a numerator has more than one term, such as (x+1)/3. The example given has single-term numerators, so students never see why 'whole' matters, and the warning may confuse them."
+          },
+          {
+           "part": "card",
+           "kind": "level",
+           "detail": "Every example and question uses single-term numerators like x/2 + x/5, which is closer to Year 8 skill. Level 10 work on algebraic fractions would normally include binomial numerators or different algebraic denominators."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "Both questions have one correct answer (7x/10 and x/6), and the explanations are accurate. The content is quite easy for Level 10, and the 'whole numerator' warning is never shown by an example where it matters."
+        },
+        "flags": [
+         "Card, wording: The line 'take away the whole new numerator' matters only when a numerator has more than one term, such as (x+1)/3. The example given has single-term numerators, so students never see why 'whole' matters, and the warning may confuse them.",
+         "Card, level: Every example and question uses single-term numerators like x/2 + x/5, which is closer to Year 8 skill. Level 10 work on algebraic fractions would normally include binomial numerators or different algebraic denominators."
+        ]
+       }
+      }
+     }
+    ],
+    "written_by": "claude-code",
+    "draft": {
+     "title": "Adding and subtracting algebraic fractions",
+     "card": [
+      "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+      "Rewrite each fraction over it by multiplying its top and bottom by the same number. Then combine the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+      "Put a numerator with more than one term in brackets, so every term is multiplied. \\(\\frac{x + 1}{2} + \\frac{x - 3}{5}\\) becomes \\(\\frac{5(x + 1) + 2(x - 3)}{10}\\), which is \\(\\frac{7x - 1}{10}\\).",
+      "With subtraction, the minus sign applies to the whole second numerator. \\(\\frac{x + 4}{3} - \\frac{x - 2}{6}\\) becomes \\(\\frac{2(x + 4) - (x - 2)}{6}\\). That is \\(\\frac{2x + 8 - x + 2}{6}\\), which is \\(\\frac{x + 10}{6}\\)."
+     ],
+     "remember": "Match the denominators, bracket each numerator, then combine. A minus sign changes every term after it.",
+     "a": {
+      "q": "What is \\(\\frac{x + 2}{3} + \\frac{x - 1}{4}\\) as a single fraction?",
+      "opts": [
+       "\\(\\frac{7x + 5}{12}\\)",
+       "\\(\\frac{2x + 1}{7}\\)",
+       "\\(\\frac{7x + 1}{12}\\)",
+       "\\(\\frac{7x + 11}{12}\\)"
+      ],
+      "why": "The common denominator is 12, so the numerator is \\(4(x + 2) + 3(x - 1)\\), which is \\(4x + 8 + 3x - 3 = 7x + 5\\). Adding the tops and the bottoms to get \\(\\frac{2x + 1}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+      "clue": "Rewrite both fractions over 12 first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia simplifies \\(\\frac{x + 3}{2} - \\frac{x - 1}{3}\\). Which answer is correct?",
+      "opts": [
+       "\\(\\frac{x + 11}{6}\\)",
+       "\\(\\frac{x + 7}{6}\\)",
+       "\\(\\frac{x + 4}{6}\\)",
+       "\\(\\frac{5x + 7}{6}\\)"
+      ],
+      "why": "The common denominator is 6, so the numerator is \\(3(x + 3) - 2(x - 1)\\). The minus sign applies to the whole second numerator, so it is \\(3x + 9 - 2x + 2 = x + 11\\). The option \\(\\frac{x + 7}{6}\\) writes \\(-2\\) where it should be \\(+2\\), as if the minus changed only the \\(x\\) term.",
+      "clue": "Put the second numerator in brackets before you subtract."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "\\(\\frac{7x + 5}{12}\\)",
+      "also_right": []
+     },
+     "b": {
+      "best": "\\(\\frac{x + 11}{6}\\)",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "\"A minus sign changes every term after it\" is broader than the card, which says the minus applies to the whole second numerator. Read literally it is false: in a - b + c the minus does not change c. Better: \"A minus sign in front of a fraction changes every term in its numerator.\""
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, both questions and both whys are correct: (a) is (7x + 5)/12 and (b) is (x + 11)/6. The only problem is the remember line, which says a minus sign changes every term after it. That is broader than the card's rule and false in general."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Remember, wording: \"A minus sign changes every term after it\" is broader than the card, which says the minus applies to the whole second numerator. Read literally it is false: in a - b + c the minus does not change c. Better: \"A minus sign in front of a fraction changes every term in its numerator.\""
+    ],
+    "checked_by": "claude-code",
+    "proposal": {
+     "title": "Adding and subtracting algebraic fractions",
+     "card": [
+      "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+      "Rewrite each fraction over it by multiplying its top and bottom by the same number. Then combine the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+      "Put a numerator with more than one term in brackets, so every term is multiplied. \\(\\frac{x + 1}{2} + \\frac{x - 3}{5}\\) becomes \\(\\frac{5(x + 1) + 2(x - 3)}{10}\\), which is \\(\\frac{7x - 1}{10}\\).",
+      "With subtraction, the minus sign applies to the whole second numerator, so it changes the sign of every term in it. \\(\\frac{x + 4}{3} - \\frac{x - 2}{6}\\) becomes \\(\\frac{2(x + 4) - (x - 2)}{6}\\). That is \\(\\frac{2x + 8 - x + 2}{6}\\), which is \\(\\frac{x + 10}{6}\\)."
+     ],
+     "remember": "Match the denominators, bracket each numerator, then combine. A minus sign in front of a fraction changes every term in its numerator.",
+     "a": {
+      "q": "What is \\(\\frac{x + 2}{3} + \\frac{x - 1}{4}\\) as a single fraction?",
+      "opts": [
+       "\\(\\frac{7x + 5}{12}\\)",
+       "\\(\\frac{2x + 1}{7}\\)",
+       "\\(\\frac{7x + 1}{12}\\)",
+       "\\(\\frac{7x + 11}{12}\\)"
+      ],
+      "why": "The common denominator is 12, so the numerator is \\(4(x + 2) + 3(x - 1)\\), which is \\(4x + 8 + 3x - 3 = 7x + 5\\). Adding the tops and the bottoms to get \\(\\frac{2x + 1}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+      "clue": "Rewrite both fractions over 12 first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia simplifies \\(\\frac{x + 3}{2} - \\frac{x - 1}{3}\\). Which answer is correct?",
+      "opts": [
+       "\\(\\frac{x + 11}{6}\\)",
+       "\\(\\frac{x + 7}{6}\\)",
+       "\\(\\frac{x + 2}{6}\\)",
+       "\\(\\frac{5x + 7}{6}\\)"
+      ],
+      "why": "The common denominator is 6, so the numerator is \\(3(x + 3) - 2(x - 1)\\). The minus sign applies to the whole second numerator, so it is \\(3x + 9 - 2x + 2 = x + 11\\). The option \\(\\frac{x + 7}{6}\\) writes \\(-2\\) where it should be \\(+2\\), as if the minus changed only the \\(x\\) term.",
+      "clue": "Put the second numerator in brackets before you subtract."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "b90f8ead22ec4d58"
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Adding and subtracting algebraic fractions",
+  "card": [
+   "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+   "Rewrite each fraction over it by multiplying its top and bottom by the same number. Then combine the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+   "Put a numerator with more than one term in brackets, so every term is multiplied. \\(\\frac{x + 1}{2} + \\frac{x - 3}{5}\\) becomes \\(\\frac{5(x + 1) + 2(x - 3)}{10}\\), which is \\(\\frac{7x - 1}{10}\\).",
+   "With subtraction, the minus sign applies to the whole second numerator. \\(\\frac{x + 4}{3} - \\frac{x - 2}{6}\\) becomes \\(\\frac{2(x + 4) - (x - 2)}{6}\\). That is \\(\\frac{2x + 8 - x + 2}{6}\\), which is \\(\\frac{x + 10}{6}\\)."
+  ],
+  "remember": "Match the denominators, bracket each numerator, then combine. A minus sign changes every term after it.",
+  "a": {
+   "q": "What is \\(\\frac{x + 2}{3} + \\frac{x - 1}{4}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{7x + 5}{12}\\)",
+    "\\(\\frac{2x + 1}{7}\\)",
+    "\\(\\frac{7x + 1}{12}\\)",
+    "\\(\\frac{7x + 11}{12}\\)"
+   ],
+   "why": "The common denominator is 12, so the numerator is \\(4(x + 2) + 3(x - 1)\\), which is \\(4x + 8 + 3x - 3 = 7x + 5\\). Adding the tops and the bottoms to get \\(\\frac{2x + 1}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+   "clue": "Rewrite both fractions over 12 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia simplifies \\(\\frac{x + 3}{2} - \\frac{x - 1}{3}\\). Which answer is correct?",
+   "opts": [
+    "\\(\\frac{x + 11}{6}\\)",
+    "\\(\\frac{x + 7}{6}\\)",
+    "\\(\\frac{x + 4}{6}\\)",
+    "\\(\\frac{5x + 7}{6}\\)"
+   ],
+   "why": "The common denominator is 6, so the numerator is \\(3(x + 3) - 2(x - 1)\\). The minus sign applies to the whole second numerator, so it is \\(3x + 9 - 2x + 2 = x + 11\\). The option \\(\\frac{x + 7}{6}\\) writes \\(-2\\) where it should be \\(+2\\), as if the minus changed only the \\(x\\) term.",
+   "clue": "Put the second numerator in brackets before you subtract."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(\\frac{7x + 5}{12}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(\\frac{x + 11}{6}\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"A minus sign changes every term after it\" is broader than the card, which says the minus applies to the whole second numerator. Read literally it is false: in a - b + c the minus does not change c. Better: \"A minus sign in front of a fraction changes every term in its numerator.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, both questions and both whys are correct: (a) is (7x + 5)/12 and (b) is (x + 11)/6. The only problem is the remember line, which says a minus sign changes every term after it. That is broader than the card's rule and false in general."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"A minus sign changes every term after it\" is broader than the card, which says the minus applies to the whole second numerator. Read literally it is false: in a - b + c the minus does not change c. Better: \"A minus sign in front of a fraction changes every term in its numerator.\""
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "Adding and subtracting algebraic fractions",
+  "card": [
+   "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+   "Rewrite each fraction over it by multiplying its top and bottom by the same number. Then combine the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+   "Put a numerator with more than one term in brackets, so every term is multiplied. \\(\\frac{x + 1}{2} + \\frac{x - 3}{5}\\) becomes \\(\\frac{5(x + 1) + 2(x - 3)}{10}\\), which is \\(\\frac{7x - 1}{10}\\).",
+   "With subtraction, the minus sign applies to the whole second numerator, so it changes the sign of every term in it. \\(\\frac{x + 4}{3} - \\frac{x - 2}{6}\\) becomes \\(\\frac{2(x + 4) - (x - 2)}{6}\\). That is \\(\\frac{2x + 8 - x + 2}{6}\\), which is \\(\\frac{x + 10}{6}\\)."
+  ],
+  "remember": "Match the denominators, bracket each numerator, then combine. A minus sign in front of a fraction changes every term in its numerator.",
+  "a": {
+   "q": "What is \\(\\frac{x + 2}{3} + \\frac{x - 1}{4}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{7x + 5}{12}\\)",
+    "\\(\\frac{2x + 1}{7}\\)",
+    "\\(\\frac{7x + 1}{12}\\)",
+    "\\(\\frac{7x + 11}{12}\\)"
+   ],
+   "why": "The common denominator is 12, so the numerator is \\(4(x + 2) + 3(x - 1)\\), which is \\(4x + 8 + 3x - 3 = 7x + 5\\). Adding the tops and the bottoms to get \\(\\frac{2x + 1}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+   "clue": "Rewrite both fractions over 12 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia simplifies \\(\\frac{x + 3}{2} - \\frac{x - 1}{3}\\). Which answer is correct?",
+   "opts": [
+    "\\(\\frac{x + 11}{6}\\)",
+    "\\(\\frac{x + 7}{6}\\)",
+    "\\(\\frac{x + 2}{6}\\)",
+    "\\(\\frac{5x + 7}{6}\\)"
+   ],
+   "why": "The common denominator is 6, so the numerator is \\(3(x + 3) - 2(x - 1)\\). The minus sign applies to the whole second numerator, so it is \\(3x + 9 - 2x + 2 = x + 11\\). The option \\(\\frac{x + 7}{6}\\) writes \\(-2\\) where it should be \\(+2\\), as if the minus changed only the \\(x\\) term.",
+   "clue": "Put the second numerator in brackets before you subtract."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Adding and subtracting algebraic fractions",
+  "card": [
+   "To add or subtract fractions, the denominators must match. Find a common denominator, such as the lowest common multiple of the denominators.",
+   "Rewrite each fraction over it by multiplying its top and bottom by the same number. Then combine the numerators and keep the denominator: \\(\\frac{x}{3} + \\frac{x}{4} = \\frac{4x}{12} + \\frac{3x}{12} = \\frac{7x}{12}\\).",
+   "Put a numerator with more than one term in brackets, so every term is multiplied. \\(\\frac{x + 1}{2} + \\frac{x - 3}{5}\\) becomes \\(\\frac{5(x + 1) + 2(x - 3)}{10}\\), which is \\(\\frac{7x - 1}{10}\\).",
+   "With subtraction, the minus sign applies to the whole second numerator, so it changes the sign of every term in it. \\(\\frac{x + 4}{3} - \\frac{x - 2}{6}\\) becomes \\(\\frac{2(x + 4) - (x - 2)}{6}\\). That is \\(\\frac{2x + 8 - x + 2}{6}\\), which is \\(\\frac{x + 10}{6}\\)."
+  ],
+  "remember": "Match the denominators, bracket each numerator, then combine. A minus sign in front of a fraction changes every term in its numerator.",
+  "a": {
+   "q": "What is \\(\\frac{x + 2}{3} + \\frac{x - 1}{4}\\) as a single fraction?",
+   "opts": [
+    "\\(\\frac{7x + 5}{12}\\)",
+    "\\(\\frac{2x + 1}{7}\\)",
+    "\\(\\frac{7x + 1}{12}\\)",
+    "\\(\\frac{7x + 11}{12}\\)"
+   ],
+   "why": "The common denominator is 12, so the numerator is \\(4(x + 2) + 3(x - 1)\\), which is \\(4x + 8 + 3x - 3 = 7x + 5\\). Adding the tops and the bottoms to get \\(\\frac{2x + 1}{7}\\) is wrong, because the fractions must be rewritten over one denominator, which then stays the same.",
+   "clue": "Rewrite both fractions over 12 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia simplifies \\(\\frac{x + 3}{2} - \\frac{x - 1}{3}\\). Which answer is correct?",
+   "opts": [
+    "\\(\\frac{x + 11}{6}\\)",
+    "\\(\\frac{x + 7}{6}\\)",
+    "\\(\\frac{x + 2}{6}\\)",
+    "\\(\\frac{5x + 7}{6}\\)"
+   ],
+   "why": "The common denominator is 6, so the numerator is \\(3(x + 3) - 2(x - 1)\\). The minus sign applies to the whole second numerator, so it is \\(3x + 9 - 2x + 2 = x + 11\\). The option \\(\\frac{x + 7}{6}\\) writes \\(-2\\) where it should be \\(+2\\), as if the minus changed only the \\(x\\) term.",
+   "clue": "Put the second numerator in brackets before you subtract."
+  }
+ }
+}

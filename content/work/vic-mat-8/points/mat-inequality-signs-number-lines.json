@@ -1,0 +1,356 @@
+{
+ "id": "mat-inequality-signs-number-lines",
+ "title": "Inequality signs and number lines",
+ "brief": "c123f7bb77a1",
+ "shortlist": [
+  [
+   "mat-solving-one-variable-inequalities",
+   0.529
+  ],
+  [
+   "mat-graphing-linear-relations-2",
+   0.239
+  ],
+  [
+   "mat-multiplying-dividing-integers",
+   0.233
+  ],
+  [
+   "mat-inequalities-cartesian-plane",
+   0.228
+  ],
+  [
+   "mat-real-number-system",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:01Z write: failed the content check, writing again",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:05Z check: flagged",
+  "2026-11-12T15:35:10Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-13T12:13:15Z claude-code review: left for you (it chose to leave it)",
+  "2026-11-13T15:26:26Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.07129,
+  "check": 0.00925,
+  "fix": 0.02049,
+  "recheck": 0.00667
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Solving one-variable inequalities, is broader: it teaches solving inequalities, including the sign-flip rule, while the new point covers only what the symbols mean and how to show x > 3 on a number line with open or closed circles.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Inequality signs and number lines",
+  "card": [
+   "The sign \\(<\\) means less than and \\(>\\) means greater than. So \\(x < 5\\) means \\(x\\) is any number below 5.",
+   "The sign \\(\\le\\) means less than or equal to and \\(\\ge\\) means greater than or equal to. \"At least\" means \\(\\ge\\) and \"at most\" means \\(\\le\\).",
+   "On a number line, draw an open circle when the number itself is not included (\\(<\\) or \\(>\\)). Draw a closed circle when it is included (\\(\\le\\) or \\(\\ge\\)). Then shade towards the values that work.",
+   "Example: \\(x > 3\\) has an open circle at 3, because 3 does not work, and is shaded to the right."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A number line from \\(-1\\) to 8. An open circle at 3 with a line shaded to the right, showing \\(x > 3\\).",
+    "x": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 1,
+     "label": ""
+    },
+    "items": [
+     {
+      "type": "curve",
+      "id": "L",
+      "points": [
+       [
+        3,
+        0
+       ],
+       [
+        7.5,
+        0
+       ]
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "open": true
+     }
+    ]
+   }
+  },
+  "remember": "Open circle: the number is left out. Closed circle: the number is in. Shade the side that works.",
+  "a": {
+   "q": "Which description matches \\(x \\le 2\\) on a number line?",
+   "opts": [
+    "Closed circle at 2, shaded to the left",
+    "Open circle at 2, shaded to the left",
+    "Closed circle at 2, shaded to the right",
+    "Open circle at 2, shaded to the right"
+   ],
+   "why": "The sign \\(\\le\\) includes 2, so the circle is closed. Values less than 2 are to the left, so the shading goes left. An open circle would leave 2 out, which suits only \\(x < 2\\).",
+   "clue": "Does 2 itself work, and are the other answers bigger or smaller?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A ride at a Ballarat fun park needs riders to be at least 120 cm tall. Which inequality shows the height \\(h\\) that is allowed?",
+   "opts": [
+    "\\(h \\ge 120\\)",
+    "\\(h > 120\\)",
+    "\\(h \\le 120\\)",
+    "\\(h < 120\\)"
+   ],
+   "why": "At least 120 cm means 120 cm or taller, so 120 is included and the sign is \\(\\ge\\). The sign \\(>\\) is tempting, but it would leave out a rider who is exactly 120 cm.",
+   "clue": "Can a rider who is exactly 120 cm go on?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Closed circle at 2, shaded to the left",
+   "also_right": []
+  },
+  "b": {
+   "best": "\\(h \\ge 120\\)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "In the example graph, the shaded line runs only from 3 to 7.5 and ends there, with no arrow. A student could read this as the solution stopping before 8, when x > 3 goes on forever. The shading should end in an arrow at the right edge."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct. The one problem is the example number line: its shading stops at 7.5 with no arrow, so it can look as though the solutions to x > 3 end there."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: In the example graph, the shaded line runs only from 3 to 7.5 and ends there, with no arrow. A student could read this as the solution stopping before 8, when x > 3 goes on forever. The shading should end in an arrow at the right edge."
+ ],
+ "proposal": {
+  "title": "Inequality signs and number lines",
+  "card": [
+   "The sign \\(<\\) means less than and \\(>\\) means greater than. So \\(x < 5\\) means \\(x\\) is any number below 5.",
+   "The sign \\(\\le\\) means less than or equal to and \\(\\ge\\) means greater than or equal to. \"At least\" means \\(\\ge\\) and \"at most\" means \\(\\le\\).",
+   "On a number line, draw an open circle when the number itself is not included (\\(<\\) or \\(>\\)). Draw a closed circle when it is included (\\(\\le\\) or \\(\\ge\\)). Then shade towards the values that work.",
+   "Example: \\(x > 3\\) has an open circle at 3, because 3 does not work, and is shaded to the right. The arrow at the end shows the values go on forever."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A number line from \\(-1\\) to 8. An open circle at 3 with a shaded line to the right that ends in an arrow at the right edge, showing \\(x > 3\\) goes on forever.",
+    "x": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 1,
+     "label": ""
+    },
+    "items": [
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       0
+      ],
+      "to": [
+       7.9,
+       0
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "open": true
+     }
+    ]
+   }
+  },
+  "remember": "Open circle: the number is left out. Closed circle: the number is in. Shade the side that works.",
+  "a": {
+   "q": "Which description matches \\(x \\le 2\\) on a number line?",
+   "opts": [
+    "Closed circle at 2, shaded to the left",
+    "Open circle at 2, shaded to the left",
+    "Closed circle at 2, shaded to the right",
+    "Open circle at 2, shaded to the right"
+   ],
+   "why": "The sign \\(\\le\\) includes 2, so the circle is closed. Values less than 2 are to the left, so the shading goes left. An open circle would leave 2 out, which suits only \\(x < 2\\).",
+   "clue": "Does 2 itself work, and are the other answers bigger or smaller?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A ride at a Ballarat fun park needs riders to be at least 120 cm tall. Which inequality shows the height \\(h\\) that is allowed?",
+   "opts": [
+    "\\(h \\ge 120\\)",
+    "\\(h > 120\\)",
+    "\\(h \\le 120\\)",
+    "\\(h < 120\\)"
+   ],
+   "why": "At least 120 cm means 120 cm or taller, so 120 is included and the sign is \\(\\ge\\). The sign \\(>\\) is tempting, but it would leave out a rider who is exactly 120 cm.",
+   "clue": "Can a rider who is exactly 120 cm go on?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Closed circle at 2, shaded to the left",
+    "also_right": []
+   },
+   "b": {
+    "best": "\\(h \\ge 120\\)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "In the example graph, the shaded line runs only from 3 to 7.5 and ends there, with no arrow. A student could read this as the solution stopping before 8, when x > 3 goes on forever. The shading should end in an arrow at the right edge."
+   }
+  ],
+  "flags": [
+   "Card, fact: In the example graph, the shaded line runs only from 3 to 7.5 and ends there, with no arrow. A student could read this as the solution stopping before 8, when x > 3 goes on forever. The shading should end in an arrow at the right edge."
+  ],
+  "owner": "fix"
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-13T12:13:15Z",
+   "step": "review",
+   "decision": "leave",
+   "sure": "medium",
+   "reason": "The arrow fix is right in principle, but in the app an arrow is drawn as a thin line on top of the x-axis, so the solution set may be hard to tell from the axis, and its head sits just before the axis's own arrowhead. The figure also draws a y-axis at 0 with no 0 label, so the owner should look at it drawn.",
+   "item": "3fe02d5b9c3c220b",
+   "result": "left"
+  }
+ ],
+ "final": {
+  "title": "Inequality signs and number lines",
+  "card": [
+   "The sign \\(<\\) means less than and \\(>\\) means greater than. So \\(x < 5\\) means \\(x\\) is any number below 5.",
+   "The sign \\(\\le\\) means less than or equal to and \\(\\ge\\) means greater than or equal to. \"At least\" means \\(\\ge\\) and \"at most\" means \\(\\le\\).",
+   "On a number line, draw an open circle when the number itself is not included (\\(<\\) or \\(>\\)). Draw a closed circle when it is included (\\(\\le\\) or \\(\\ge\\)). Then shade towards the values that work.",
+   "Example: \\(x > 3\\) has an open circle at 3, because 3 does not work, and is shaded to the right. The arrow at the end shows the values go on forever."
+  ],
+  "cardFigs": {
+   "4": {
+    "kind": "graph",
+    "alt": "A number line from \\(-1\\) to 8. An open circle at 3 with a shaded line to the right that ends in an arrow at the right edge, showing \\(x > 3\\) goes on forever.",
+    "x": {
+     "min": -1,
+     "max": 8,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 1,
+     "label": ""
+    },
+    "items": [
+     {
+      "type": "arrow",
+      "from": [
+       3,
+       0
+      ],
+      "to": [
+       7.9,
+       0
+      ]
+     },
+     {
+      "type": "point",
+      "at": [
+       3,
+       0
+      ],
+      "open": true
+     }
+    ]
+   }
+  },
+  "remember": "Open circle: the number is left out. Closed circle: the number is in. Shade the side that works.",
+  "a": {
+   "q": "Which description matches \\(x \\le 2\\) on a number line?",
+   "opts": [
+    "Closed circle at 2, shaded to the left",
+    "Open circle at 2, shaded to the left",
+    "Closed circle at 2, shaded to the right",
+    "Open circle at 2, shaded to the right"
+   ],
+   "why": "The sign \\(\\le\\) includes 2, so the circle is closed. Values less than 2 are to the left, so the shading goes left. An open circle would leave 2 out, which suits only \\(x < 2\\).",
+   "clue": "Does 2 itself work, and are the other answers bigger or smaller?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A ride at a Ballarat fun park needs riders to be at least 120 cm tall. Which inequality shows the height \\(h\\) that is allowed?",
+   "opts": [
+    "\\(h \\ge 120\\)",
+    "\\(h > 120\\)",
+    "\\(h \\le 120\\)",
+    "\\(h < 120\\)"
+   ],
+   "why": "At least 120 cm means 120 cm or taller, so 120 is included and the sign is \\(\\ge\\). The sign \\(>\\) is tempting, but it would leave out a rider who is exactly 120 cm.",
+   "clue": "Can a rider who is exactly 120 cm go on?"
+  }
+ },
+ "cleared_by": "owner"
+}

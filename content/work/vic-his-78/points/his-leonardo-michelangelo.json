@@ -1,0 +1,188 @@
+{
+ "id": "his-leonardo-michelangelo",
+ "title": "Leonardo and Michelangelo",
+ "brief": "64de5945deec",
+ "shortlist": [
+  [
+   "his-leonardo-da-vinci",
+   0.531
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:50Z new, match",
+  "2026-11-12T12:44:19Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:44Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:02Z write: failed the content check, writing again",
+  "2026-11-12T15:35:08Z write: done",
+  "2026-11-12T15:42:23Z check: flagged",
+  "2026-11-12T15:45:42Z fix: suggested",
+  "2026-11-12T16:19:53Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01457,
+  "check": 0.01164,
+  "fix": 0.02244
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only Leonardo da Vinci, while the new point also teaches Michelangelo's Sistine Chapel ceiling and his statue of David, so it is broader and needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Leonardo and Michelangelo",
+  "card": [
+   "Leonardo da Vinci (1452 to 1519) was an artist who also studied science. He dissected bodies to learn how they work, and he drew plans for machines such as flying devices.",
+   "Leonardo painted the Mona Lisa. His notebooks show that he treated art, science and invention as linked ways of understanding the world.",
+   "Michelangelo Buonarroti (1475 to 1564) was a sculptor and painter. He carved the marble statue of David, which shows the human body in great detail.",
+   "Michelangelo also painted the ceiling of the Sistine Chapel in Rome. Both men are seen as Renaissance masters because their work showed what human skill could do."
+  ],
+  "remember": "Leonardo joined art with science and invention. Michelangelo is known for the Sistine Chapel ceiling and the statue of David.",
+  "a": {
+   "q": "Which description best fits Leonardo da Vinci's work?",
+   "opts": [
+    "He joined art with science and invention",
+    "He was known mainly for carving marble statues",
+    "He ran a bank that paid for other artists' work",
+    "He invented the printing press used for books"
+   ],
+   "why": "Leonardo painted, but he also studied bodies and designed machines, so his work linked art with science and invention. Carving marble is the best known work of Michelangelo, not Leonardo.",
+   "clue": "Think about his notebooks of bodies and machines."
+  },
+  "b": {
+   "d": 2,
+   "q": "A museum in Melbourne shows a huge marble statue of a young man, carved in Florence, and a painted ceiling in a chapel in Rome. Whose work are these?",
+   "opts": [
+    "Michelangelo, who carved David and painted a chapel ceiling",
+    "Leonardo, who carved David and painted a chapel ceiling",
+    "Michelangelo, who painted the Mona Lisa and drew machines",
+    "Leonardo, who painted the Mona Lisa and drew machines"
+   ],
+   "why": "The statue of David and the Sistine Chapel ceiling are both works by Michelangelo. Leonardo is the one who painted the Mona Lisa and drew machines, so the options that name him for David are wrong.",
+   "clue": "Which man was a sculptor as well as a painter?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "He joined art with science and invention",
+   "also_right": []
+  },
+  "b": {
+   "best": "Michelangelo, who carved David and painted a chapel ceiling",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The scenario says a museum in Melbourne shows the marble statue and a painted chapel ceiling in Rome. The real David is in Florence, and a Melbourne museum cannot hold the Sistine Chapel ceiling. Students may be confused about where these works actually are. Say the museum shows copies or photographs, or drop the museum framing."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. Question b's setup wrongly suggests a Melbourne museum holds the real David and the Sistine Chapel ceiling, so it should say these are copies or photos."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The scenario says a museum in Melbourne shows the marble statue and a painted chapel ceiling in Rome. The real David is in Florence, and a Melbourne museum cannot hold the Sistine Chapel ceiling. Students may be confused about where these works actually are. Say the museum shows copies or photographs, or drop the museum framing."
+ ],
+ "proposal": {
+  "title": "Leonardo and Michelangelo",
+  "card": [
+   "Leonardo da Vinci (1452 to 1519) was an artist who also studied science. He dissected bodies to learn how they work, and he drew plans for machines such as flying devices.",
+   "Leonardo painted the Mona Lisa. His notebooks show that he treated art, science and invention as linked ways of understanding the world.",
+   "Michelangelo Buonarroti (1475 to 1564) was a sculptor and painter. He carved the marble statue of David in Florence, which shows the human body in great detail.",
+   "Michelangelo also painted the ceiling of the Sistine Chapel in Vatican City, inside Rome. Both men are seen as Renaissance masters because their work showed what human skill could do."
+  ],
+  "remember": "Leonardo joined art with science and invention. Michelangelo is known for the Sistine Chapel ceiling and the statue of David.",
+  "a": {
+   "q": "Which description best fits Leonardo da Vinci's work?",
+   "opts": [
+    "He joined art with science and invention",
+    "He was known mainly for carving marble statues",
+    "He ran a bank that paid for other artists' work",
+    "He invented the printing press used for books"
+   ],
+   "why": "Leonardo painted, but he also studied bodies and designed machines, so his work linked art with science and invention. Carving marble is the best known work of Michelangelo, not Leonardo.",
+   "clue": "Think about his notebooks of bodies and machines."
+  },
+  "b": {
+   "d": 2,
+   "q": "On a school trip to Italy, Ava sees a huge marble statue of a young man in Florence. Later, in Vatican City, she looks up at a famous painted chapel ceiling. Who made both works?",
+   "opts": [
+    "Michelangelo, who carved David and painted a chapel ceiling",
+    "Leonardo, who carved David and painted a chapel ceiling",
+    "Michelangelo, who painted the Mona Lisa and drew machines",
+    "Leonardo, who painted the Mona Lisa and drew machines"
+   ],
+   "why": "The statue is Michelangelo's David, and the ceiling is the Sistine Chapel, which Michelangelo also painted. Leonardo is the one who painted the Mona Lisa and drew machines, so the options that name him for David are wrong.",
+   "clue": "Which man was a sculptor as well as a painter?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:53Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The scenario says a museum in Melbourne shows the marble statue and a painted chapel ceiling in Rome. The real David is in Florence, and a Melbourne museum cannot hold the Sistine Chapel ceiling. Students may be confused about where these works actually are. Say the museum shows copies or photographs, or drop the museum framing."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The scenario says a museum in Melbourne shows the marble statue and a painted chapel ceiling in Rome. The real David is in Florence, and a Melbourne museum cannot hold the Sistine Chapel ceiling. Students may be confused about where these works actually are. Say the museum shows copies or photographs, or drop the museum framing."
+  ]
+ },
+ "final": {
+  "title": "Leonardo and Michelangelo",
+  "card": [
+   "Leonardo da Vinci (1452 to 1519) was an artist who also studied science. He dissected bodies to learn how they work, and he drew plans for machines such as flying devices.",
+   "Leonardo painted the Mona Lisa. His notebooks show that he treated art, science and invention as linked ways of understanding the world.",
+   "Michelangelo Buonarroti (1475 to 1564) was a sculptor and painter. He carved the marble statue of David in Florence, which shows the human body in great detail.",
+   "Michelangelo also painted the ceiling of the Sistine Chapel in Vatican City, inside Rome. Both men are seen as Renaissance masters because their work showed what human skill could do."
+  ],
+  "remember": "Leonardo joined art with science and invention. Michelangelo is known for the Sistine Chapel ceiling and the statue of David.",
+  "a": {
+   "q": "Which description best fits Leonardo da Vinci's work?",
+   "opts": [
+    "He joined art with science and invention",
+    "He was known mainly for carving marble statues",
+    "He ran a bank that paid for other artists' work",
+    "He invented the printing press used for books"
+   ],
+   "why": "Leonardo painted, but he also studied bodies and designed machines, so his work linked art with science and invention. Carving marble is the best known work of Michelangelo, not Leonardo.",
+   "clue": "Think about his notebooks of bodies and machines."
+  },
+  "b": {
+   "d": 2,
+   "q": "On a school trip to Italy, Ava sees a huge marble statue of a young man in Florence. Later, in Vatican City, she looks up at a famous painted chapel ceiling. Who made both works?",
+   "opts": [
+    "Michelangelo, who carved David and painted a chapel ceiling",
+    "Leonardo, who carved David and painted a chapel ceiling",
+    "Michelangelo, who painted the Mona Lisa and drew machines",
+    "Leonardo, who painted the Mona Lisa and drew machines"
+   ],
+   "why": "The statue is Michelangelo's David, and the ceiling is the Sistine Chapel, which Michelangelo also painted. Leonardo is the one who painted the Mona Lisa and drew machines, so the options that name him for David are wrong.",
+   "clue": "Which man was a sculptor as well as a painter?"
+  }
+ },
+ "cleared_by": "auto"
+}

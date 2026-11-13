@@ -1,0 +1,262 @@
+{
+ "id": "sci-plant-animal-cells-compared",
+ "title": "Plant and animal cells compared",
+ "brief": "924231dbb3a5",
+ "shortlist": [
+  [
+   "sci-parts-plant-cell",
+   0.815
+  ],
+  [
+   "sci-parts-animal-cell",
+   0.508
+  ],
+  [
+   "sci-cells-as-building-blocks",
+   0.467
+  ],
+  [
+   "sci-specialised-cells",
+   0.332
+  ],
+  [
+   "mat-two-way-tables-2",
+   0.235
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:55Z new, match",
+  "2026-11-12T12:44:22Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:52Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-12T15:26:07Z write: done",
+  "2026-11-12T15:35:11Z check: flagged",
+  "2026-11-12T15:42:26Z fix: suggested",
+  "2026-11-12T16:19:55Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.0071,
+  "check": 0.01202,
+  "fix": 0.01896
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point compares plant and animal cells: the plant card covers only plant-specific parts, the animal card covers only animal parts, and neither mentions mitochondria, so the comparison needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Plant and animal cells compared",
+  "card": [
+   [
+    "Both",
+    "Plant and animal cells each have a nucleus, a cell membrane, cytoplasm and mitochondria. These parts do the same jobs in both."
+   ],
+   [
+    "Cell wall",
+    "Plant cells have a stiff cell wall outside the cell membrane. It gives the cell support and shape. Animal cells have no cell wall."
+   ],
+   [
+    "Chloroplasts",
+    "Plant cells that carry out photosynthesis have chloroplasts, which capture light energy to make food. Animal cells have no chloroplasts."
+   ],
+   [
+    "Large vacuole",
+    "A mature plant cell has a large vacuole filled with fluid. It stores water and other substances. Animal cells lack a large vacuole like this."
+   ]
+  ],
+  "remember": "Plant cells have all the animal cell parts plus a cell wall, chloroplasts and a large vacuole.",
+  "a": {
+   "q": "Which structure is found in plant cells but not in animal cells?",
+   "opts": [
+    "Chloroplasts",
+    "Mitochondria",
+    "Nucleus",
+    "Cytoplasm"
+   ],
+   "why": "Chloroplasts capture light energy for photosynthesis, and animal cells do not have them. Mitochondria are tempting, but both plant and animal cells have them.",
+   "clue": "Which part is used for photosynthesis?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Under a microscope, Leila sees a cell with a nucleus, a cell membrane, cytoplasm and mitochondria, but no cell wall and no chloroplasts. What can she say about the cell?",
+   "opts": [
+    "It could be an animal cell",
+    "It must be a plant cell",
+    "It cannot be a living cell",
+    "It is a plant cell without a nucleus"
+   ],
+   "why": "Animal cells have exactly these parts and lack a cell wall and chloroplasts, so it could be an animal cell. It cannot be said to be a plant cell, because plant cells have a cell wall.",
+   "clue": "Check which parts are shared and which only plants have."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "Two labelled cell diagrams side by side. Plant cell: cell wall, cell membrane, cytoplasm, nucleus, mitochondria, chloroplasts, large vacuole. Animal cell: cell membrane, cytoplasm, nucleus, mitochondria.",
+    "why": "Seeing both cells together shows which parts are shared and which only the plant cell has."
+   }
+  ]
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Chloroplasts",
+   "also_right": []
+  },
+  "b": {
+   "best": "It could be an animal cell",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says plant cells have chloroplasts and a large vacuole without qualification. The card says only plant cells that carry out photosynthesis have chloroplasts, and only mature plant cells have a large vacuole. Root cells, for example, have no chloroplasts, so the remember line overstates what the card teaches."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and their intended answers are correct. The remember line overgeneralises: it implies every plant cell has chloroplasts and a large vacuole, while the card limits these to photosynthesising and mature plant cells."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says plant cells have chloroplasts and a large vacuole without qualification. The card says only plant cells that carry out photosynthesis have chloroplasts, and only mature plant cells have a large vacuole. Root cells, for example, have no chloroplasts, so the remember line overstates what the card teaches."
+ ],
+ "proposal": {
+  "title": "Plant and animal cells compared",
+  "card": [
+   [
+    "Both",
+    "Plant and animal cells each have a nucleus, a cell membrane, cytoplasm and mitochondria. These parts do the same jobs in both."
+   ],
+   [
+    "Cell wall",
+    "Plant cells have a stiff cell wall outside the cell membrane. It gives the cell support and shape. Animal cells have no cell wall."
+   ],
+   [
+    "Chloroplasts",
+    "Plant cells that carry out photosynthesis have chloroplasts, which capture light energy to make food. Animal cells have no chloroplasts."
+   ],
+   [
+    "Large vacuole",
+    "A mature plant cell has a large vacuole filled with fluid. It stores water and other substances. Animal cells lack a large vacuole like this."
+   ]
+  ],
+  "remember": "Plant cells add a cell wall to the shared parts. Many also have chloroplasts and a large vacuole.",
+  "a": {
+   "q": "Which structure is found in plant cells but not in animal cells?",
+   "opts": [
+    "Chloroplasts",
+    "Mitochondria",
+    "Nucleus",
+    "Cytoplasm"
+   ],
+   "why": "Chloroplasts capture light energy for photosynthesis, and animal cells do not have them. Mitochondria are tempting, but both plant and animal cells have them.",
+   "clue": "Which part is used for photosynthesis?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Under a microscope, Leila sees a cell with a nucleus, a cell membrane, cytoplasm and mitochondria, but no cell wall and no chloroplasts. What can she say about the cell?",
+   "opts": [
+    "It could be an animal cell",
+    "It must be a plant cell",
+    "It cannot be a living cell",
+    "It is a plant cell without a nucleus"
+   ],
+   "why": "Animal cells have exactly these parts and lack a cell wall and chloroplasts, so it could be an animal cell. It cannot be said to be a plant cell, because plant cells have a cell wall.",
+   "clue": "Check which parts are shared and which only plants have."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "Two labelled cell diagrams side by side. Plant cell (a mature leaf cell): cell wall, cell membrane, cytoplasm, nucleus, mitochondria, chloroplasts, large vacuole. Animal cell: cell membrane, cytoplasm, nucleus, mitochondria.",
+    "why": "Seeing both cells together shows which parts are shared and which only the plant cell has."
+   }
+  ]
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:55Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says plant cells have chloroplasts and a large vacuole without qualification. The card says only plant cells that carry out photosynthesis have chloroplasts, and only mature plant cells have a large vacuole. Root cells, for example, have no chloroplasts, so the remember line overstates what the card teaches."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says plant cells have chloroplasts and a large vacuole without qualification. The card says only plant cells that carry out photosynthesis have chloroplasts, and only mature plant cells have a large vacuole. Root cells, for example, have no chloroplasts, so the remember line overstates what the card teaches."
+  ]
+ },
+ "final": {
+  "title": "Plant and animal cells compared",
+  "card": [
+   [
+    "Both",
+    "Plant and animal cells each have a nucleus, a cell membrane, cytoplasm and mitochondria. These parts do the same jobs in both."
+   ],
+   [
+    "Cell wall",
+    "Plant cells have a stiff cell wall outside the cell membrane. It gives the cell support and shape. Animal cells have no cell wall."
+   ],
+   [
+    "Chloroplasts",
+    "Plant cells that carry out photosynthesis have chloroplasts, which capture light energy to make food. Animal cells have no chloroplasts."
+   ],
+   [
+    "Large vacuole",
+    "A mature plant cell has a large vacuole filled with fluid. It stores water and other substances. Animal cells lack a large vacuole like this."
+   ]
+  ],
+  "remember": "Plant cells add a cell wall to the shared parts. Many also have chloroplasts and a large vacuole.",
+  "a": {
+   "q": "Which structure is found in plant cells but not in animal cells?",
+   "opts": [
+    "Chloroplasts",
+    "Mitochondria",
+    "Nucleus",
+    "Cytoplasm"
+   ],
+   "why": "Chloroplasts capture light energy for photosynthesis, and animal cells do not have them. Mitochondria are tempting, but both plant and animal cells have them.",
+   "clue": "Which part is used for photosynthesis?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Under a microscope, Leila sees a cell with a nucleus, a cell membrane, cytoplasm and mitochondria, but no cell wall and no chloroplasts. What can she say about the cell?",
+   "opts": [
+    "It could be an animal cell",
+    "It must be a plant cell",
+    "It cannot be a living cell",
+    "It is a plant cell without a nucleus"
+   ],
+   "why": "Animal cells have exactly these parts and lack a cell wall and chloroplasts, so it could be an animal cell. It cannot be said to be a plant cell, because plant cells have a cell wall.",
+   "clue": "Check which parts are shared and which only plants have."
+  },
+  "wants": [
+   {
+    "at": "card 4",
+    "kind": "diagram",
+    "brief": "Two labelled cell diagrams side by side. Plant cell (a mature leaf cell): cell wall, cell membrane, cytoplasm, nucleus, mitochondria, chloroplasts, large vacuole. Animal cell: cell membrane, cytoplasm, nucleus, mitochondria.",
+    "why": "Seeing both cells together shows which parts are shared and which only the plant cell has."
+   }
+  ]
+ },
+ "cleared_by": "auto"
+}

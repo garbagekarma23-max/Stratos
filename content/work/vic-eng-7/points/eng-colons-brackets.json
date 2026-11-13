@@ -1,0 +1,208 @@
+{
+ "id": "eng-colons-brackets",
+ "title": "Colons and brackets",
+ "brief": "372e3e22ca5c",
+ "shortlist": [
+  [
+   "eng-using-colons",
+   0.638
+  ],
+  [
+   "eng-using-brackets",
+   0.485
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:46Z new, match",
+  "2026-11-12T12:44:16Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:37Z write: failed the content check, writing again",
+  "2026-11-12T15:25:57Z write: done",
+  "2026-11-12T15:35:04Z check: flagged",
+  "2026-11-12T15:42:22Z fix: suggested",
+  "2026-11-12T16:19:52Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.0175,
+  "check": 0.00885,
+  "fix": 0.01646
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point teaches colons and brackets together, but each bank point covers only one of those marks, so no single bank point is the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Colons and brackets",
+  "card": [
+   [
+    "Colon",
+    "A colon (:) introduces a list, an example or an explanation. It comes after a complete main clause, such as \"We need three things:\" before the list."
+   ],
+   "A colon can also lead into an explanation. \"Sam was happy: his team had won.\" The words after the colon explain the first part.",
+   [
+    "Brackets",
+    "Brackets ( ) hold extra information. \"The museum (built in 1890) is near the station.\""
+   ],
+   "Take out the brackets and the words inside them, and the sentence must still make sense: \"The museum is near the station.\""
+  ],
+  "remember": "A colon introduces what follows. Brackets hold extra information that can be removed.",
+  "a": {
+   "q": "Which sentence uses brackets correctly?",
+   "opts": [
+    "Our school (founded in 1950) has a big oval",
+    "Our school (has a big) oval founded in 1950",
+    "Our (school founded in) 1950 has a big oval",
+    "Our school has a (big oval founded in 1950"
+   ],
+   "why": "The words inside the brackets are extra, and the sentence still works without them. In the other options, removing the bracketed words leaves a broken sentence.",
+   "clue": "Cross out the bracketed words and reread."
+  },
+  "b": {
+   "d": 2,
+   "q": "Zara packed three snacks an apple, a muesli bar and some grapes. Where does the colon belong?",
+   "opts": [
+    "After snacks",
+    "After packed",
+    "After three",
+    "After apple"
+   ],
+   "why": "A colon goes after the complete main clause \"Zara packed three snacks\", to introduce the list. Putting it after apple would split the list.",
+   "clue": "The colon comes before the list starts."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Our school (founded in 1950) has a big oval",
+   "also_right": []
+  },
+  "b": {
+   "best": "After snacks",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says removing the bracketed words breaks the other sentences. But 'Our school has a (big oval founded in 1950' has no closing bracket, so its real fault is the unclosed bracket. The why should name this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct and match the chapter. The only issue is that why (a) does not mention that one wrong option is missing its closing bracket."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says removing the bracketed words breaks the other sentences. But 'Our school has a (big oval founded in 1950' has no closing bracket, so its real fault is the unclosed bracket. The why should name this."
+ ],
+ "proposal": {
+  "title": "Colons and brackets",
+  "card": [
+   [
+    "Colon",
+    "A colon (:) introduces a list, an example or an explanation. It comes after a complete main clause, such as \"We need three things:\" before the list."
+   ],
+   "A colon can also lead into an explanation. \"Sam was happy: his team had won.\" The words after the colon explain the first part.",
+   [
+    "Brackets",
+    "Brackets ( ) come in pairs, an opening one and a closing one, and hold extra information. \"The museum (built in 1890) is near the station.\""
+   ],
+   "Take out the brackets and the words inside them, and the sentence must still make sense: \"The museum is near the station.\""
+  ],
+  "remember": "A colon introduces what follows. Brackets hold extra information that can be removed.",
+  "a": {
+   "q": "Which sentence uses brackets correctly?",
+   "opts": [
+    "Our school (founded in 1950) has a big oval",
+    "Our school (has a big) oval founded in 1950",
+    "Our (school founded in) 1950 has a big oval",
+    "Our school has a (big oval founded in 1950"
+   ],
+   "why": "The words inside the brackets are extra, and the sentence still works without them. Taking out \"has a big\" or \"school founded in\" leaves a broken sentence. The sentence that opens a bracket before \"big\" never closes it, and brackets must come in pairs.",
+   "clue": "Check for a pair of brackets, then cross out the words inside and reread."
+  },
+  "b": {
+   "d": 2,
+   "q": "Zara packed three snacks an apple, a muesli bar and some grapes. Where does the colon belong?",
+   "opts": [
+    "After snacks",
+    "After packed",
+    "After three",
+    "After apple"
+   ],
+   "why": "A colon goes after the complete main clause \"Zara packed three snacks\", to introduce the list. Putting it after apple would split the list.",
+   "clue": "The colon comes before the list starts."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:52Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says removing the bracketed words breaks the other sentences. But 'Our school has a (big oval founded in 1950' has no closing bracket, so its real fault is the unclosed bracket. The why should name this."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says removing the bracketed words breaks the other sentences. But 'Our school has a (big oval founded in 1950' has no closing bracket, so its real fault is the unclosed bracket. The why should name this."
+  ]
+ },
+ "final": {
+  "title": "Colons and brackets",
+  "card": [
+   [
+    "Colon",
+    "A colon (:) introduces a list, an example or an explanation. It comes after a complete main clause, such as \"We need three things:\" before the list."
+   ],
+   "A colon can also lead into an explanation. \"Sam was happy: his team had won.\" The words after the colon explain the first part.",
+   [
+    "Brackets",
+    "Brackets ( ) come in pairs, an opening one and a closing one, and hold extra information. \"The museum (built in 1890) is near the station.\""
+   ],
+   "Take out the brackets and the words inside them, and the sentence must still make sense: \"The museum is near the station.\""
+  ],
+  "remember": "A colon introduces what follows. Brackets hold extra information that can be removed.",
+  "a": {
+   "q": "Which sentence uses brackets correctly?",
+   "opts": [
+    "Our school (founded in 1950) has a big oval",
+    "Our school (has a big) oval founded in 1950",
+    "Our (school founded in) 1950 has a big oval",
+    "Our school has a (big oval founded in 1950"
+   ],
+   "why": "The words inside the brackets are extra, and the sentence still works without them. Taking out \"has a big\" or \"school founded in\" leaves a broken sentence. The sentence that opens a bracket before \"big\" never closes it, and brackets must come in pairs.",
+   "clue": "Check for a pair of brackets, then cross out the words inside and reread."
+  },
+  "b": {
+   "d": 2,
+   "q": "Zara packed three snacks an apple, a muesli bar and some grapes. Where does the colon belong?",
+   "opts": [
+    "After snacks",
+    "After packed",
+    "After three",
+    "After apple"
+   ],
+   "why": "A colon goes after the complete main clause \"Zara packed three snacks\", to introduce the list. Putting it after apple would split the list.",
+   "clue": "The colon comes before the list starts."
+  }
+ },
+ "cleared_by": "auto"
+}

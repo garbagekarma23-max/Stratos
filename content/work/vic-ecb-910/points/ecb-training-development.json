@@ -1,0 +1,233 @@
+{
+ "id": "ecb-training-development",
+ "title": "Training and development",
+ "brief": "2f1864af64ae",
+ "shortlist": [
+  [
+   "bus-development",
+   0.475
+  ],
+  [
+   "bus-training-development",
+   0.433
+  ],
+  [
+   "ecb-ways-raise-productivity",
+   0.29
+  ],
+  [
+   "bus-managing-change-well",
+   0.249
+  ],
+  [
+   "bus-staffing-needs",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:45Z new, match",
+  "2026-11-12T12:44:15Z match: Claude Haiku 5.5 may adapt bus-training-development, but is not highly sure, so to the Opus match check",
+  "2026-11-12T15:15:34Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:25:56Z write: failed the content check, writing again",
+  "2026-11-12T15:35:03Z write: done",
+  "2026-11-12T15:42:21Z check: flagged",
+  "2026-11-12T15:45:41Z fix: suggested",
+  "2026-11-12T16:19:51Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "confirm": 0.00923,
+  "write": 0.01324,
+  "check": 0.00917,
+  "fix": 0.0157
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-training-development",
+  "changes": [
+   "Add to the card that both training and development raise productivity and help keep good staff, which the brief requires but the card does not mention."
+  ],
+  "sure": "medium",
+  "reason": "The bank card matches the training versus development idea at a suitable depth, but it omits the productivity and staff retention benefits that the brief includes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points are Year 12 NSW cards that also teach induction and on-the-job versus off-the-job training, with a question built on them. That makes them broader than this brief, which asks only for training versus development and how both raise productivity and help keep staff, so a simpler new point suits Levels 9 and 10.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Training and development",
+  "card": [
+   [
+    "Training",
+    "builds the skills a worker needs for the job they do now, such as learning to use a new machine or a safety procedure."
+   ],
+   [
+    "Development",
+    "prepares a worker for future roles and wider responsibility, such as a leadership course for someone who may become a manager."
+   ],
+   "Both can raise productivity, which is the output made for each hour worked. Skilled staff often work faster and make fewer mistakes.",
+   "Both can also help a business keep good staff. Workers who see a business investing in them may be less likely to leave."
+  ],
+  "remember": "Training is for the job now. Development is for roles to come. Both can lift output and keep staff.",
+  "a": {
+   "q": "A shop pays for four cashiers to do different courses. Which course is aimed at development, not training?",
+   "opts": [
+    "A course to prepare for a supervisor role",
+    "A lesson on using a new card machine",
+    "A session on the shop's refund rules",
+    "A drill on safe lifting of stock"
+   ],
+   "why": "A course that prepares a cashier for a supervisor role builds skills for a future job, which is development. The other three build skills for the job the cashier does now, so they are training.",
+   "clue": "Which course looks ahead to a different role?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bakery in Ballarat. She pays for a new baker, Tom, to learn the safe use of a new oven. Which describes this best?",
+   "opts": [
+    "Training, because it builds a skill Tom needs in his job now",
+    "Development, because it makes Tom more skilled than before",
+    "Training, because it prepares Tom to run the bakery later",
+    "Development, because the business paid for the course"
+   ],
+   "why": "Using the new oven is a skill Tom needs in his current job, so it is training. Development is about preparing for future roles, and more skill alone does not make something development.",
+   "clue": "Ask whether the skill is for Tom's job now or a later role."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A course to prepare for a supervisor role",
+   "also_right": []
+  },
+  "b": {
+   "best": "Training, because it builds a skill Tom needs in his job now",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines productivity ('the output made for each hour worked'). That definition belongs to point 5 (Productivity and competitiveness). This point should only mention that training and development can raise productivity."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear answer each. The only issue is that the card defines productivity, which belongs to point 5; it should only be mentioned here."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines productivity ('the output made for each hour worked'). That definition belongs to point 5 (Productivity and competitiveness). This point should only mention that training and development can raise productivity."
+ ],
+ "proposal": {
+  "title": "Training and development",
+  "card": [
+   [
+    "Training",
+    "builds the skills a worker needs for the job they do now, such as learning to use a new machine or a safety procedure."
+   ],
+   [
+    "Development",
+    "prepares a worker for future roles and wider responsibility, such as a leadership course for someone who may become a manager."
+   ],
+   "Both can raise productivity. Skilled staff often work faster and make fewer mistakes.",
+   "Both can also help a business keep good staff. Workers who see a business investing in them may be less likely to leave."
+  ],
+  "remember": "Training is for the job now. Development is for roles to come. Both can lift output and keep staff.",
+  "a": {
+   "q": "A shop pays for four cashiers to do different courses. Which course is aimed at development, not training?",
+   "opts": [
+    "A course to prepare for a supervisor role",
+    "A lesson on using a new card machine",
+    "A session on the shop's refund rules",
+    "A drill on safe lifting of stock"
+   ],
+   "why": "A course that prepares a cashier for a supervisor role builds skills for a future job, which is development. The other three build skills for the job the cashier does now, so they are training.",
+   "clue": "Which course looks ahead to a different role?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bakery in Ballarat. She pays for a new baker, Tom, to learn the safe use of a new oven. Which describes this best?",
+   "opts": [
+    "Training, because it builds a skill Tom needs in his job now",
+    "Development, because it makes Tom more skilled than before",
+    "Training, because it prepares Tom to run the bakery later",
+    "Development, because the business paid for the course"
+   ],
+   "why": "Using the new oven is a skill Tom needs in his current job, so it is training. Development is about preparing for future roles, and more skill alone does not make something development.",
+   "clue": "Ask whether the skill is for Tom's job now or a later role."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-12T16:19:51Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines productivity ('the output made for each hour worked'). That definition belongs to point 5 (Productivity and competitiveness). This point should only mention that training and development can raise productivity."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines productivity ('the output made for each hour worked'). That definition belongs to point 5 (Productivity and competitiveness). This point should only mention that training and development can raise productivity."
+  ]
+ },
+ "final": {
+  "title": "Training and development",
+  "card": [
+   [
+    "Training",
+    "builds the skills a worker needs for the job they do now, such as learning to use a new machine or a safety procedure."
+   ],
+   [
+    "Development",
+    "prepares a worker for future roles and wider responsibility, such as a leadership course for someone who may become a manager."
+   ],
+   "Both can raise productivity. Skilled staff often work faster and make fewer mistakes.",
+   "Both can also help a business keep good staff. Workers who see a business investing in them may be less likely to leave."
+  ],
+  "remember": "Training is for the job now. Development is for roles to come. Both can lift output and keep staff.",
+  "a": {
+   "q": "A shop pays for four cashiers to do different courses. Which course is aimed at development, not training?",
+   "opts": [
+    "A course to prepare for a supervisor role",
+    "A lesson on using a new card machine",
+    "A session on the shop's refund rules",
+    "A drill on safe lifting of stock"
+   ],
+   "why": "A course that prepares a cashier for a supervisor role builds skills for a future job, which is development. The other three build skills for the job the cashier does now, so they are training.",
+   "clue": "Which course looks ahead to a different role?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bakery in Ballarat. She pays for a new baker, Tom, to learn the safe use of a new oven. Which describes this best?",
+   "opts": [
+    "Training, because it builds a skill Tom needs in his job now",
+    "Development, because it makes Tom more skilled than before",
+    "Training, because it prepares Tom to run the bakery later",
+    "Development, because the business paid for the course"
+   ],
+   "why": "Using the new oven is a skill Tom needs in his current job, so it is training. Development is about preparing for future roles, and more skill alone does not make something development.",
+   "clue": "Ask whether the skill is for Tom's job now or a later role."
+  }
+ },
+ "cleared_by": "auto"
+}

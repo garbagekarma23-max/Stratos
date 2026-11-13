@@ -1,0 +1,450 @@
+{
+ "id": "mat-recognising-non-linear-graphs",
+ "title": "Recognising non-linear graphs",
+ "brief": "b62b457abddd",
+ "shortlist": [
+  [
+   "mat-modelling-non-linear-data",
+   0.323
+  ],
+  [
+   "mat-hyperbolas",
+   0.218
+  ],
+  [
+   "mat-linear-growth-decay",
+   0.214
+  ],
+  [
+   "mat-choosing-linear-quadratic-or",
+   0.212
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:48Z write: failed the content check, writing again",
+  "2026-11-12T15:26:03Z write: done",
+  "2026-11-12T15:35:08Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.03423,
+  "check": 0.01211
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches recognising the shapes of parabola, hyperbola, circle and exponential curves from their equations: the closest cards cover power-rule data fitting, parabola focus and hyperbola asymptote details, or choosing a model from a table, which are different ideas or depths.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Recognising non-linear graphs",
+  "card": [
+   [
+    "Parabola",
+    "The equation \\(y = x^{2}\\) has an \\(x\\) squared and no other variable in a power. Its graph is a U-shaped curve, symmetric about the \\(y\\)-axis, with its lowest point at \\((0, 0)\\)."
+   ],
+   [
+    "Hyperbola",
+    "The equation \\(y = \\frac{1}{x}\\) has \\(x\\) in the denominator. Its graph has two separate branches, and it never touches either axis."
+   ],
+   [
+    "Circle",
+    "The equation \\(x^{2} + y^{2} = r^{2}\\) has both \\(x\\) and \\(y\\) squared and added. Its graph is a circle with centre \\((0, 0)\\) and radius \\(r\\)."
+   ],
+   [
+    "Exponential",
+    "The equation \\(y = 2^{x}\\) has the variable in the index. Its graph rises steeply to the right, crosses the \\(y\\)-axis at \\((0, 1)\\) and never goes below the \\(x\\)-axis."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2}\\), a U-shaped curve with its lowest point at the origin, passing through \\((2, 4)\\) and \\((-2, 4)\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2.6,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     }
+    ]
+   },
+   "2": {
+    "kind": "graph",
+    "alt": "The hyperbola \\(y = \\frac{1}{x}\\), with one branch in the top right and one in the bottom left, getting close to both axes but never touching them.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{1}{x}",
+      "breaks": [
+       0
+      ],
+      "label": "\\(y = \\frac{1}{x}\\)",
+      "labelAt": 2,
+      "pos": "above-right"
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "The circle \\(x^{2} + y^{2} = 9\\), with centre at the origin and radius 3.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 3,
+      "label": "\\(x^{2} + y^{2} = 9\\)",
+      "pos": "above-right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The exponential curve \\(y = 2^{x}\\), very close to the x-axis on the left, passing through \\((0, 1)\\) and rising steeply on the right.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.5,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Look at where \\(x\\) sits: squared, in a denominator, squared with \\(y^{2}\\), or in the index.",
+  "a": {
+   "q": "Which equation has a graph with two separate branches that never touch the axes?",
+   "opts": [
+    "\\(y = \\frac{1}{x}\\)",
+    "\\(y = x^{2}\\)",
+    "\\(y = 2^{x}\\)",
+    "\\(x^{2} + y^{2} = 4\\)"
+   ],
+   "why": "A variable in the denominator, as in \\(y = \\frac{1}{x}\\), gives a hyperbola with two branches. The exponential \\(y = 2^{x}\\) never goes below the \\(x\\)-axis, but it is one curve and it crosses the \\(y\\)-axis.",
+   "clue": "Look for the equation with \\(x\\) in the denominator."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots \\(x^{2} + y^{2} = 25\\) and \\(y = 5^{x}\\). What shapes does she get?",
+   "opts": [
+    "A circle of radius 5, then an exponential curve",
+    "A circle of radius 25, then an exponential curve",
+    "A parabola, then an exponential curve",
+    "A circle of radius 5, then a parabola"
+   ],
+   "why": "With \\(x^{2} + y^{2} = r^{2}\\) and \\(r^{2} = 25\\), the radius is 5, not 25. In \\(y = 5^{x}\\) the variable is in the index, so it is exponential, not a parabola.",
+   "clue": "The radius is \\(r\\), not \\(r^{2}\\)."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(y = \\frac{1}{x}\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "A circle of radius 5, then an exponential curve",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Recognising non-linear graphs",
+  "card": [
+   [
+    "Parabola",
+    "The equation \\(y = x^{2}\\) has an \\(x\\) squared and no other variable in a power. Its graph is a U-shaped curve, symmetric about the \\(y\\)-axis, with its lowest point at \\((0, 0)\\)."
+   ],
+   [
+    "Hyperbola",
+    "The equation \\(y = \\frac{1}{x}\\) has \\(x\\) in the denominator. Its graph has two separate branches, and it never touches either axis."
+   ],
+   [
+    "Circle",
+    "The equation \\(x^{2} + y^{2} = r^{2}\\) has both \\(x\\) and \\(y\\) squared and added. Its graph is a circle with centre \\((0, 0)\\) and radius \\(r\\)."
+   ],
+   [
+    "Exponential",
+    "The equation \\(y = 2^{x}\\) has the variable in the index. Its graph rises steeply to the right, crosses the \\(y\\)-axis at \\((0, 1)\\) and never goes below the \\(x\\)-axis."
+   ]
+  ],
+  "cardFigs": {
+   "1": {
+    "kind": "graph",
+    "alt": "The parabola \\(y = x^{2}\\), a U-shaped curve with its lowest point at the origin, passing through \\((2, 4)\\) and \\((-2, 4)\\).",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "x^{2}",
+      "label": "\\(y = x^{2}\\)",
+      "labelAt": 2.6,
+      "pos": "right"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       0
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "turning point"
+     }
+    ]
+   },
+   "2": {
+    "kind": "graph",
+    "alt": "The hyperbola \\(y = \\frac{1}{x}\\), with one branch in the top right and one in the bottom left, getting close to both axes but never touching them.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "\\frac{1}{x}",
+      "breaks": [
+       0
+      ],
+      "label": "\\(y = \\frac{1}{x}\\)",
+      "labelAt": 2,
+      "pos": "above-right"
+     }
+    ]
+   },
+   "3": {
+    "kind": "graph",
+    "alt": "The circle \\(x^{2} + y^{2} = 9\\), with centre at the origin and radius 3.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "equal": true,
+    "items": [
+     {
+      "type": "circle",
+      "centre": [
+       0,
+       0
+      ],
+      "r": 3,
+      "label": "\\(x^{2} + y^{2} = 9\\)",
+      "pos": "above-right"
+     }
+    ]
+   },
+   "4": {
+    "kind": "graph",
+    "alt": "The exponential curve \\(y = 2^{x}\\), very close to the x-axis on the left, passing through \\((0, 1)\\) and rising steeply on the right.",
+    "x": {
+     "min": -4,
+     "max": 4,
+     "label": "\\(x\\)",
+     "step": 1,
+     "nums": false
+    },
+    "y": {
+     "min": -1,
+     "max": 9,
+     "label": "\\(y\\)",
+     "step": 1,
+     "nums": false
+    },
+    "grid": true,
+    "items": [
+     {
+      "type": "fn",
+      "id": "f",
+      "expr": "2^{x}",
+      "label": "\\(y = 2^{x}\\)",
+      "labelAt": 2.5,
+      "pos": "left"
+     },
+     {
+      "type": "point",
+      "at": [
+       0,
+       1
+      ],
+      "on": [
+       "f"
+      ],
+      "is": "y-intercept",
+      "label": "\\((0, 1)\\)",
+      "pos": "above-left"
+     }
+    ]
+   }
+  },
+  "remember": "Look at where \\(x\\) sits: squared, in a denominator, squared with \\(y^{2}\\), or in the index.",
+  "a": {
+   "q": "Which equation has a graph with two separate branches that never touch the axes?",
+   "opts": [
+    "\\(y = \\frac{1}{x}\\)",
+    "\\(y = x^{2}\\)",
+    "\\(y = 2^{x}\\)",
+    "\\(x^{2} + y^{2} = 4\\)"
+   ],
+   "why": "A variable in the denominator, as in \\(y = \\frac{1}{x}\\), gives a hyperbola with two branches. The exponential \\(y = 2^{x}\\) never goes below the \\(x\\)-axis, but it is one curve and it crosses the \\(y\\)-axis.",
+   "clue": "Look for the equation with \\(x\\) in the denominator."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia plots \\(x^{2} + y^{2} = 25\\) and \\(y = 5^{x}\\). What shapes does she get?",
+   "opts": [
+    "A circle of radius 5, then an exponential curve",
+    "A circle of radius 25, then an exponential curve",
+    "A parabola, then an exponential curve",
+    "A circle of radius 5, then a parabola"
+   ],
+   "why": "With \\(x^{2} + y^{2} = r^{2}\\) and \\(r^{2} = 25\\), the radius is 5, not 25. In \\(y = 5^{x}\\) the variable is in the index, so it is exponential, not a parabola.",
+   "clue": "The radius is \\(r\\), not \\(r^{2}\\)."
+  }
+ },
+ "cleared_by": "checker"
+}

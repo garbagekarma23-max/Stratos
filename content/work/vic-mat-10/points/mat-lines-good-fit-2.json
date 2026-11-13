@@ -1,0 +1,141 @@
+{
+ "id": "mat-lines-good-fit-2",
+ "title": "Lines of good fit",
+ "brief": "80c1feb6e997",
+ "shortlist": [
+  [
+   "mat-lines-good-fit",
+   0.445
+  ],
+  [
+   "mat-modelling-non-linear-data",
+   0.307
+  ],
+  [
+   "mat-interpolation-extrapolation-2",
+   0.257
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:52Z new, match",
+  "2026-11-12T12:44:20Z match: Claude Haiku 5.5 says reuse mat-lines-good-fit, so to the Opus match check, as every reuse is",
+  "2026-11-12T15:15:47Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:26:03Z write: failed the content check, writing again",
+  "2026-11-12T15:35:09Z write: done",
+  "2026-11-12T15:42:24Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.01533,
+  "write": 0.01648,
+  "check": 0.00889
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-lines-good-fit",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches drawing a line of good fit by eye through a linear scatterplot and reading predictions from it, which matches the new point's brief at the same Year 10 depth in Victorian Mathematics.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card mat-lines-good-fit teaches drawing a line by eye and reading predictions at a suitable depth, but it says nothing about predictions being safer inside the data than beyond it; your brief includes that, and adding it would be a new step rather than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Lines of good fit",
+  "card": [
+   "A line of good fit is a straight line drawn through the middle of the points on a scatterplot. About half the points sit above it and half below, and it follows the overall direction.",
+   "Use the line to predict. To predict \\(y\\) for a given \\(x\\), go up from that \\(x\\) to the line, then across to the \\(y\\)-axis and read the value.",
+   "Example: a line passes through \\((2, 10)\\) and \\((6, 18)\\). Between them \\(x\\) rises by 4 and \\(y\\) rises by 8, so the gradient is \\(\\frac{8}{4} = 2\\). At \\(x = 4\\), the line gives \\(y = 14\\).",
+   "Predicting inside the range of the data is interpolation and is more reliable. Predicting beyond the data is extrapolation and is riskier, because the pattern may not continue."
+  ],
+  "remember": "Draw the line through the middle, read predictions off it, and trust it more inside the data than outside.",
+  "a": {
+   "q": "Which description best fits a line of good fit on a scatterplot?",
+   "opts": [
+    "It runs through the middle, with points on both sides",
+    "It joins the first point to the last point",
+    "It touches the most points, even if all the rest lie above",
+    "It must start at the origin and rise"
+   ],
+   "why": "A line of good fit follows the overall direction, with points spread on both sides of it. Joining the first and last points is tempting, but those two points may not be typical of the rest.",
+   "clue": "Think about where the points sit compared with the line."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's line of good fit for plants in Bendigo passes through \\((10, 30)\\) and \\((20, 50)\\). Her data has \\(x\\) from 8 to 24. Which prediction is the most reliable?",
+   "opts": [
+    "At \\(x = 15\\), the line gives \\(y = 40\\)",
+    "At \\(x = 40\\), the line gives \\(y = 90\\)",
+    "At \\(x = 50\\), the line gives \\(y = 110\\)",
+    "At \\(x = 60\\), the line gives \\(y = 130\\)"
+   ],
+   "why": "The gradient is \\(\\frac{20}{10} = 2\\), so \\(x = 15\\) gives \\(y = 40\\). It lies inside the data range 8 to 24, so it is interpolation. The other three use correct line values, but they are extrapolation, which is less reliable.",
+   "clue": "Which value of \\(x\\) lies within the range of the data?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It runs through the middle, with points on both sides",
+   "also_right": []
+  },
+  "b": {
+   "best": "At \\(x = 15\\), the line gives \\(y = 40\\)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Lines of good fit",
+  "card": [
+   "A line of good fit is a straight line drawn through the middle of the points on a scatterplot. About half the points sit above it and half below, and it follows the overall direction.",
+   "Use the line to predict. To predict \\(y\\) for a given \\(x\\), go up from that \\(x\\) to the line, then across to the \\(y\\)-axis and read the value.",
+   "Example: a line passes through \\((2, 10)\\) and \\((6, 18)\\). Between them \\(x\\) rises by 4 and \\(y\\) rises by 8, so the gradient is \\(\\frac{8}{4} = 2\\). At \\(x = 4\\), the line gives \\(y = 14\\).",
+   "Predicting inside the range of the data is interpolation and is more reliable. Predicting beyond the data is extrapolation and is riskier, because the pattern may not continue."
+  ],
+  "remember": "Draw the line through the middle, read predictions off it, and trust it more inside the data than outside.",
+  "a": {
+   "q": "Which description best fits a line of good fit on a scatterplot?",
+   "opts": [
+    "It runs through the middle, with points on both sides",
+    "It joins the first point to the last point",
+    "It touches the most points, even if all the rest lie above",
+    "It must start at the origin and rise"
+   ],
+   "why": "A line of good fit follows the overall direction, with points spread on both sides of it. Joining the first and last points is tempting, but those two points may not be typical of the rest.",
+   "clue": "Think about where the points sit compared with the line."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's line of good fit for plants in Bendigo passes through \\((10, 30)\\) and \\((20, 50)\\). Her data has \\(x\\) from 8 to 24. Which prediction is the most reliable?",
+   "opts": [
+    "At \\(x = 15\\), the line gives \\(y = 40\\)",
+    "At \\(x = 40\\), the line gives \\(y = 90\\)",
+    "At \\(x = 50\\), the line gives \\(y = 110\\)",
+    "At \\(x = 60\\), the line gives \\(y = 130\\)"
+   ],
+   "why": "The gradient is \\(\\frac{20}{10} = 2\\), so \\(x = 15\\) gives \\(y = 40\\). It lies inside the data range 8 to 24, so it is interpolation. The other three use correct line values, but they are extrapolation, which is less reliable.",
+   "clue": "Which value of \\(x\\) lies within the range of the data?"
+  }
+ },
+ "cleared_by": "checker"
+}

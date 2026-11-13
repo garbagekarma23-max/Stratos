@@ -1,0 +1,258 @@
+{
+ "id": "mat-laws-arithmetic",
+ "title": "The laws of arithmetic",
+ "brief": "328f64fb8a1a",
+ "shortlist": [
+  [
+   "mat-properties-operations-algebra",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:53Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:06:00Z write: done",
+  "2026-11-12T15:15:50Z check: flagged",
+  "2026-11-12T15:26:05Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.02352,
+  "check": 0.01264,
+  "fix": 0.0231,
+  "recheck": 0.0084
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers commutative, associative, identity and inverse properties in algebra but never teaches the distributive law or using regrouping for mental calculation like 7 × 98, which is the core of the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The laws of arithmetic",
+  "card": [
+   [
+    "Commutative",
+    "Order does not matter for adding or multiplying. \\(4 + 9 = 9 + 4\\) and \\(3 \\times 8 = 8 \\times 3\\). This does not work for subtracting or dividing."
+   ],
+   [
+    "Associative",
+    "Grouping does not matter when you only add, or only multiply. \\((2 + 7) + 3 = 2 + (7 + 3)\\), and the second is easier because \\(7 + 3 = 10\\)."
+   ],
+   [
+    "Distributive",
+    "Multiplying a sum is the same as multiplying each part and adding. \\(6 \\times (10 + 4) = 6 \\times 10 + 6 \\times 4\\). It also works with subtracting."
+   ],
+   "Use the laws to make a calculation easier. To find \\(7 \\times 98\\), write 98 as \\(100 - 2\\). Then \\(7 \\times 98 = 7 \\times 100 - 7 \\times 2 = 700 - 14 = 686\\)."
+  ],
+  "remember": "Regroup or split a calculation to make the numbers friendlier, as long as the answer stays the same.",
+  "a": {
+   "q": "Which line uses the distributive law to work out \\(6 \\times 52\\)?",
+   "opts": [
+    "\\(6 \\times 50 + 6 \\times 2\\)",
+    "\\(6 \\times 50 + 2\\)",
+    "\\(6 + 50 \\times 6 + 2\\)",
+    "\\(52 \\times 6 \\times 6\\)"
+   ],
+   "why": "The 6 multiplies both parts of \\(50 + 2\\), giving \\(300 + 12 = 312\\). In \\(6 \\times 50 + 2\\) the 6 multiplies only the 50, so the 2 is left out.",
+   "clue": "The 6 must multiply every part of 52 once it is split."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zoe works out \\(5 \\times 99\\) by writing it as \\(5 \\times 100 - 5\\). Why is this wrong?",
+   "opts": [
+    "The 5 must also multiply the 1 being taken away",
+    "The commutative law only works for adding",
+    "99 cannot be written as \\(100 - 1\\)",
+    "The answer should be found by adding, not subtracting"
+   ],
+   "why": "Writing 99 as \\(100 - 1\\) is fine, but the distributive law means \\(5 \\times (100 - 1) = 5 \\times 100 - 5 \\times 1\\). Here the 5 is taken away once, which is the same as \\(5 \\times 1\\), so her line gives 495, which is correct. Check: \\(5 \\times 99 = 495\\).",
+   "clue": "Work out both ways and compare the answers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "\\(6 \\times 50 + 6 \\times 2\\)",
+   "also_right": []
+  },
+  "b": {
+   "best": "The 5 must also multiply the 1 being taken away",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question's premise is false. Zoe's line \\(5 \\times 100 - 5\\) is correct, because \\(5 \\times 1 = 5\\), so it gives 495 = \\(5 \\times 99\\). Asking 'Why is this wrong?' teaches students that correct working is wrong."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "No option is right. The intended answer, 'The 5 must also multiply the 1 being taken away', is false because her 5 already is \\(5 \\times 1\\). The other three options are also false."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) contradicts the question. It says her line gives 495, 'which is correct', while the question asks why it is wrong. The clue ('Work out both ways and compare') would lead a student to find the answers match, which leaves them confused."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is broken. Zoe's working \\(5 \\times 100 - 5\\) is actually correct, so 'Why is this wrong?' has no right answer, and the why itself admits her line is correct. Rewrite b, for example by having Zoe write \\(5 \\times 100 - 1\\). The card and question a are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The question's premise is false. Zoe's line \\(5 \\times 100 - 5\\) is correct, because \\(5 \\times 1 = 5\\), so it gives 495 = \\(5 \\times 99\\). Asking 'Why is this wrong?' teaches students that correct working is wrong.",
+  "Question b, fact: No option is right. The intended answer, 'The 5 must also multiply the 1 being taken away', is false because her 5 already is \\(5 \\times 1\\). The other three options are also false.",
+  "Question b, other: Why (b) contradicts the question. It says her line gives 495, 'which is correct', while the question asks why it is wrong. The clue ('Work out both ways and compare') would lead a student to find the answers match, which leaves them confused."
+ ],
+ "proposal": {
+  "title": "The laws of arithmetic",
+  "card": [
+   [
+    "Commutative",
+    "Order does not matter for adding or multiplying. \\(4 + 9 = 9 + 4\\) and \\(3 \\times 8 = 8 \\times 3\\). This does not work for subtracting or dividing."
+   ],
+   [
+    "Associative",
+    "Grouping does not matter when you only add, or only multiply. \\((2 + 7) + 3 = 2 + (7 + 3)\\), and the second is easier because \\(7 + 3 = 10\\)."
+   ],
+   [
+    "Distributive",
+    "Multiplying a sum is the same as multiplying each part and adding. \\(6 \\times (10 + 4) = 6 \\times 10 + 6 \\times 4\\). It also works with subtracting."
+   ],
+   "Use the laws to make a calculation easier. To find \\(7 \\times 98\\), write 98 as \\(100 - 2\\). Then \\(7 \\times 98 = 7 \\times 100 - 7 \\times 2\\), which is \\(700 - 14 = 686\\)."
+  ],
+  "remember": "Regroup or split a calculation to make the numbers friendlier, as long as the answer stays the same.",
+  "a": {
+   "q": "Which line uses the distributive law to work out \\(6 \\times 52\\)?",
+   "opts": [
+    "\\(6 \\times 50 + 6 \\times 2\\)",
+    "\\(6 \\times 50 + 2\\)",
+    "\\(6 + 50 \\times 6 + 2\\)",
+    "\\(52 \\times 6 \\times 6\\)"
+   ],
+   "why": "The 6 multiplies both parts of \\(50 + 2\\), giving \\(300 + 12 = 312\\). In \\(6 \\times 50 + 2\\) the 6 multiplies only the 50, so the 2 is left out.",
+   "clue": "The 6 must multiply every part of 52 once it is split."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zoe works out \\(8 \\times 99\\) as \\(8 \\times 100 - 1\\) and gets 799. What went wrong?",
+   "opts": [
+    "The 8 must also multiply the 1 being taken away",
+    "The 1 should be added, not taken away",
+    "99 cannot be written as \\(100 - 1\\)",
+    "The distributive law only works with adding"
+   ],
+   "why": "By the distributive law, \\(8 \\times (100 - 1) = 8 \\times 100 - 8 \\times 1\\), which is \\(800 - 8 = 792\\). Zoe took away only 1, not 8. Adding the 1 would also be wrong: it gives 801, and the law works with subtracting too.",
+   "clue": "Once 99 is split, what does the 8 multiply?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\\(6 \\times 50 + 6 \\times 2\\)",
+    "also_right": []
+   },
+   "b": {
+    "best": "The 8 must also multiply the 1 being taken away",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question's premise is false. Zoe's line \\(5 \\times 100 - 5\\) is correct, because \\(5 \\times 1 = 5\\), so it gives 495 = \\(5 \\times 99\\). Asking 'Why is this wrong?' teaches students that correct working is wrong."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "No option is right. The intended answer, 'The 5 must also multiply the 1 being taken away', is false because her 5 already is \\(5 \\times 1\\). The other three options are also false."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) contradicts the question. It says her line gives 495, 'which is correct', while the question asks why it is wrong. The clue ('Work out both ways and compare') would lead a student to find the answers match, which leaves them confused."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The question's premise is false. Zoe's line \\(5 \\times 100 - 5\\) is correct, because \\(5 \\times 1 = 5\\), so it gives 495 = \\(5 \\times 99\\). Asking 'Why is this wrong?' teaches students that correct working is wrong.",
+   "Question b, fact: No option is right. The intended answer, 'The 5 must also multiply the 1 being taken away', is false because her 5 already is \\(5 \\times 1\\). The other three options are also false.",
+   "Question b, other: Why (b) contradicts the question. It says her line gives 495, 'which is correct', while the question asks why it is wrong. The clue ('Work out both ways and compare') would lead a student to find the answers match, which leaves them confused."
+  ]
+ },
+ "final": {
+  "title": "The laws of arithmetic",
+  "card": [
+   [
+    "Commutative",
+    "Order does not matter for adding or multiplying. \\(4 + 9 = 9 + 4\\) and \\(3 \\times 8 = 8 \\times 3\\). This does not work for subtracting or dividing."
+   ],
+   [
+    "Associative",
+    "Grouping does not matter when you only add, or only multiply. \\((2 + 7) + 3 = 2 + (7 + 3)\\), and the second is easier because \\(7 + 3 = 10\\)."
+   ],
+   [
+    "Distributive",
+    "Multiplying a sum is the same as multiplying each part and adding. \\(6 \\times (10 + 4) = 6 \\times 10 + 6 \\times 4\\). It also works with subtracting."
+   ],
+   "Use the laws to make a calculation easier. To find \\(7 \\times 98\\), write 98 as \\(100 - 2\\). Then \\(7 \\times 98 = 7 \\times 100 - 7 \\times 2\\), which is \\(700 - 14 = 686\\)."
+  ],
+  "remember": "Regroup or split a calculation to make the numbers friendlier, as long as the answer stays the same.",
+  "a": {
+   "q": "Which line uses the distributive law to work out \\(6 \\times 52\\)?",
+   "opts": [
+    "\\(6 \\times 50 + 6 \\times 2\\)",
+    "\\(6 \\times 50 + 2\\)",
+    "\\(6 + 50 \\times 6 + 2\\)",
+    "\\(52 \\times 6 \\times 6\\)"
+   ],
+   "why": "The 6 multiplies both parts of \\(50 + 2\\), giving \\(300 + 12 = 312\\). In \\(6 \\times 50 + 2\\) the 6 multiplies only the 50, so the 2 is left out.",
+   "clue": "The 6 must multiply every part of 52 once it is split."
+  },
+  "b": {
+   "d": 3,
+   "q": "Zoe works out \\(8 \\times 99\\) as \\(8 \\times 100 - 1\\) and gets 799. What went wrong?",
+   "opts": [
+    "The 8 must also multiply the 1 being taken away",
+    "The 1 should be added, not taken away",
+    "99 cannot be written as \\(100 - 1\\)",
+    "The distributive law only works with adding"
+   ],
+   "why": "By the distributive law, \\(8 \\times (100 - 1) = 8 \\times 100 - 8 \\times 1\\), which is \\(800 - 8 = 792\\). Zoe took away only 1, not 8. Adding the 1 would also be wrong: it gives 801, and the law works with subtracting too.",
+   "clue": "Once 99 is split, what does the 8 multiply?"
+  }
+ },
+ "cleared_by": "recheck"
+}

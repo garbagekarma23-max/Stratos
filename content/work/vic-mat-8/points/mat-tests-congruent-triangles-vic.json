@@ -1,0 +1,260 @@
+{
+ "id": "mat-tests-congruent-triangles-vic",
+ "title": "Tests for congruent triangles",
+ "brief": "8e2c17f09d68",
+ "shortlist": [
+  [
+   "mat-tests-congruent-triangles",
+   0.846
+  ],
+  [
+   "mat-properties-quadrilaterals",
+   0.542
+  ],
+  [
+   "mat-proving-triangles-congruent",
+   0.37
+  ],
+  [
+   "mat-classifying-triangles",
+   0.328
+  ],
+  [
+   "mat-finding-sides-similar-triangles",
+   0.268
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-12T12:22:54Z new, match",
+  "2026-11-12T12:44:21Z match: Claude Haiku 5.5 may adapt mat-tests-congruent-triangles, but is not highly sure, so to the Opus match check",
+  "2026-11-12T12:53:58Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-12T15:15:51Z write: done",
+  "2026-11-12T15:26:05Z check: flagged",
+  "2026-11-12T15:35:10Z fix: suggested",
+  "2026-11-12T17:07:12Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.01113,
+  "write": 0.00675,
+  "check": 0.01521,
+  "fix": 0.02858,
+  "recheck": 0.00997
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-tests-congruent-triangles",
+  "changes": [
+   "Add a sentence stating that two sides and a non-included angle (SSA) is not enough to prove triangles congruent, as the new point's brief requires; the bank card does not cover this."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same four congruence tests at the right Year 8 depth, but it lacks the brief's warning that two sides and a non-included angle do not prove congruence, so it needs that addition.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches the same four tests at Year 8 depth, but your brief also requires teaching that two sides and a non-included angle do not prove congruence, and adding that is a new step rather than a small change, so a new point is safer.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Tests for congruent triangles",
+  "card": [
+   [
+    "SSS",
+    "all three pairs of matching sides are equal."
+   ],
+   [
+    "SAS",
+    "two pairs of sides are equal, and the angles between those sides (the included angles) are equal."
+   ],
+   [
+    "AAS",
+    "two pairs of angles are equal, and a pair of matching sides is equal. The side can be anywhere, as long as it matches."
+   ],
+   [
+    "RHS",
+    "both triangles have a right angle, the hypotenuses are equal, and one other pair of sides is equal."
+   ]
+  ],
+  "remember": "Meeting one of SSS, SAS, AAS or RHS proves congruence. Two sides and a non-included angle does not.",
+  "a": {
+   "q": "Triangles ABC and DEF have \\(AB = DE\\), \\(BC = EF\\) and \\(\\angle B = \\angle E\\). Which test shows they are congruent?",
+   "opts": [
+    "SAS",
+    "SSS",
+    "AAS",
+    "RHS"
+   ],
+   "why": "The equal angle B lies between sides AB and BC, and angle E lies between DE and EF. So it is two sides and the included angle, which is SAS. It is not SSS, because only two pairs of sides are known to be equal.",
+   "clue": "Where does the equal angle sit compared with the two equal sides?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangles PQR and XYZ, \\(PQ = XY = 7\\) cm and \\(QR = YZ = 5\\) cm. Also \\(\\angle P = \\angle X = 40^{\\circ}\\). What can Mia say?",
+   "opts": [
+    "She cannot tell if they are congruent",
+    "They are congruent by SAS",
+    "They are congruent by SSS",
+    "They are congruent by AAS"
+   ],
+   "why": "Angle P is not between sides PQ and QR, so it is a non-included angle. Two sides and a non-included angle is not enough to prove congruence. SAS is the tempting wrong choice, because it needs the angle between the two sides.",
+   "clue": "Check which two sides meet at angle P."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "SAS",
+   "also_right": []
+  },
+  "b": {
+   "best": "She cannot tell if they are congruent",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option, 'She cannot tell if they are congruent', is the longest and the only one not in the form 'They are congruent by ...'. A student could pick it as the odd one out without knowing the idea."
+   },
+   {
+    "part": "card",
+    "kind": "level",
+    "detail": "The card's bullets never explain the two-sides-and-a-non-included-angle case. Only the remember line mentions it, yet question b depends on it. One card line saying why it fails would help."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: (a) is SAS, and (b) has a non-included angle, and these numbers really do allow two different triangles. The right option in (b) stands out from the others by its form and length, and the card's bullets don't teach the non-included-angle case that (b) relies on."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option, 'She cannot tell if they are congruent', is the longest and the only one not in the form 'They are congruent by ...'. A student could pick it as the odd one out without knowing the idea.",
+  "Card, level: The card's bullets never explain the two-sides-and-a-non-included-angle case. Only the remember line mentions it, yet question b depends on it. One card line saying why it fails would help."
+ ],
+ "proposal": {
+  "title": "Tests for congruent triangles",
+  "card": [
+   "SSS: all three pairs of matching sides are equal. SAS: two pairs of sides are equal, and so are the angles between them, called the included angles.",
+   "AAS: two pairs of angles are equal, and one pair of matching sides is equal. RHS: both have a right angle, equal hypotenuses and one other pair of equal sides.",
+   "Two sides and a non-included angle, an angle not between those sides, is not a test. The same three facts can fit two different triangles, so congruence is not proved.",
+   "To choose a test, mark the equal parts. Then check where each equal angle sits compared with the equal sides."
+  ],
+  "remember": "One of SSS, SAS, AAS or RHS proves congruence. Two sides and a non-included angle does not.",
+  "a": {
+   "q": "Triangles ABC and DEF have \\(AB = DE\\), \\(BC = EF\\), and angle B equals angle E. Which test shows they are congruent?",
+   "opts": [
+    "SAS",
+    "SSS",
+    "AAS",
+    "RHS"
+   ],
+   "why": "Angle B lies between sides AB and BC, and angle E lies between DE and EF. So it is two sides and the included angle, which is SAS. It is not SSS, because only two pairs of sides are known to be equal.",
+   "clue": "Where does the equal angle sit compared with the two equal sides?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangles PQR and XYZ, \\(PQ\\) and \\(XY\\) are both 7 cm, \\(QR\\) and \\(YZ\\) are both 5 cm, and angles P and X are both \\(40^{\\circ}\\). What should Mia conclude?",
+   "opts": [
+    "Not proved, as the angle is not between the sides",
+    "Congruent by SAS, as two sides and an angle match",
+    "Congruent by RHS, as two pairs of sides match",
+    "Not proved, as SAS only works with a right angle"
+   ],
+   "why": "Sides PQ and QR meet at Q, so angle P is not between them. Two sides and a non-included angle can fit two different triangles, so congruence is not proved. SAS is tempting, but it needs the angle between the two equal sides.",
+   "clue": "Check which two sides meet at angle P."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-12T17:07:12Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "SAS",
+    "also_right": []
+   },
+   "b": {
+    "best": "Not proved, as the angle is not between the sides",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. In question b the side opposite the 40° angle (5 cm) lies between 7 sin 40° (about 4.5 cm) and 7 cm, so two different triangles really do fit, which matches the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-12T17:07:12Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option, 'She cannot tell if they are congruent', is the longest and the only one not in the form 'They are congruent by ...'. A student could pick it as the odd one out without knowing the idea."
+   },
+   {
+    "part": "card",
+    "kind": "level",
+    "detail": "The card's bullets never explain the two-sides-and-a-non-included-angle case. Only the remember line mentions it, yet question b depends on it. One card line saying why it fails would help."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option, 'She cannot tell if they are congruent', is the longest and the only one not in the form 'They are congruent by ...'. A student could pick it as the odd one out without knowing the idea.",
+   "Card, level: The card's bullets never explain the two-sides-and-a-non-included-angle case. Only the remember line mentions it, yet question b depends on it. One card line saying why it fails would help."
+  ]
+ },
+ "final": {
+  "title": "Tests for congruent triangles",
+  "card": [
+   "SSS: all three pairs of matching sides are equal. SAS: two pairs of sides are equal, and so are the angles between them, called the included angles.",
+   "AAS: two pairs of angles are equal, and one pair of matching sides is equal. RHS: both have a right angle, equal hypotenuses and one other pair of equal sides.",
+   "Two sides and a non-included angle, an angle not between those sides, is not a test. The same three facts can fit two different triangles, so congruence is not proved.",
+   "To choose a test, mark the equal parts. Then check where each equal angle sits compared with the equal sides."
+  ],
+  "remember": "One of SSS, SAS, AAS or RHS proves congruence. Two sides and a non-included angle does not.",
+  "a": {
+   "q": "Triangles ABC and DEF have \\(AB = DE\\), \\(BC = EF\\), and angle B equals angle E. Which test shows they are congruent?",
+   "opts": [
+    "SAS",
+    "SSS",
+    "AAS",
+    "RHS"
+   ],
+   "why": "Angle B lies between sides AB and BC, and angle E lies between DE and EF. So it is two sides and the included angle, which is SAS. It is not SSS, because only two pairs of sides are known to be equal.",
+   "clue": "Where does the equal angle sit compared with the two equal sides?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In triangles PQR and XYZ, \\(PQ\\) and \\(XY\\) are both 7 cm, \\(QR\\) and \\(YZ\\) are both 5 cm, and angles P and X are both \\(40^{\\circ}\\). What should Mia conclude?",
+   "opts": [
+    "Not proved, as the angle is not between the sides",
+    "Congruent by SAS, as two sides and an angle match",
+    "Congruent by RHS, as two pairs of sides match",
+    "Not proved, as SAS only works with a right angle"
+   ],
+   "why": "Sides PQ and QR meet at Q, so angle P is not between them. Two sides and a non-included angle can fit two different triangles, so congruence is not proved. SAS is tempting, but it needs the angle between the two equal sides.",
+   "clue": "Check which two sides meet at angle P."
+  }
+ },
+ "cleared_by": "recheck"
+}
